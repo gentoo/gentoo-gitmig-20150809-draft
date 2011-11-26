@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.12.ebuild,v 1.4 2011/03/21 23:20:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-1.0.1.ebuild,v 1.1 2011/11/26 16:19:38 elvanor Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit autotools eutils gnome2
 
@@ -13,7 +13,9 @@ SRC_URI="http://www.elvanor.net/files/gentoo/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug gnome gsm networkmanager speex"
+IUSE="debug doxygen gnome gsm networkmanager speex static-libs"
+
+# USE="-iax" does not work. Upstream problem.
 
 CDEPEND="dev-cpp/commoncpp2
 	dev-libs/expat
@@ -42,7 +44,7 @@ CDEPEND="dev-cpp/commoncpp2
 		media-libs/freetype
 		media-libs/libart_lgpl
 		net-libs/libsoup:2.4
-		net-libs/webkit-gtk:2
+		net-libs/webkit-gtk:3
 		x11-libs/cairo
 		x11-libs/libICE
 		x11-libs/libnotify
@@ -55,8 +57,6 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
-
 	if ! use gnome; then
 		ewarn
 		ewarn "No clients selected. Use USE=gnome to get the gnome client."
@@ -67,7 +67,7 @@ src_prepare() {
 	fi
 
 	sed -i -e 's/unpad=paren/unpad-paren/' astylerc || die "sed failed."
-	cd sflphone-common
+	cd daemon
 	#remove "target" from lib-names, remove dep to shipped pjsip
 	sed -i -e 's/-$(target)//' \
 		-e '/^\t\t\t-L/ d' \
@@ -79,45 +79,45 @@ src_prepare() {
 	rm -r libs/pjproject
 	eautoreconf
 
-	#TODO: remove shipped dbus-c++ use system one (see #220767)
 	#TODO: remove shipped utilspp (from curlpp), use system one, see #55185
 
 	if use gnome; then
-		cd ../sflphone-client-gnome
+		cd ../gnome
 		#fix as-needed
-		sed -i -e "s/X11_LIBS)/X11_LIBS) -lebook-1.2 -lwebkit-1.0/" src/Makefile.am || die "sed failed."
+		sed -i -e "s/X11_LIBS)/X11_LIBS) -lebook-1.2/" src/Makefile.am || die "sed failed."
 		eautoreconf
 	fi
 }
 
 src_configure() {
-	cd sflphone-common
+	cd daemon
+	# $(use_with iax iax2) won't work (compilation failure)
 	econf --disable-dependency-tracking $(use_with debug) \
-		$(use_with gsm) $(use_with speex) $(use_with networkmanager)
+		$(use_with gsm) $(use_with networkmanager) $(use_with speex) $(use_enable static-libs static) $(use_enable doxygen)
 
 	if use gnome; then
-		cd ../sflphone-client-gnome
-		econf
+		cd ../gnome
+		econf $(use_enable static-libs static)
 	fi
 }
 
 src_compile() {
-	cd sflphone-common
+	cd daemon
 	emake || die "emake failed."
 
 	if use gnome; then
-		cd ../sflphone-client-gnome
+		cd ../gnome
 		emake || die "emake failed."
 	fi
 }
 
 src_install() {
-	cd sflphone-common
+	cd daemon
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 	dodoc test/sflphonedrc-sample
 
 	if use gnome; then
-		cd ../sflphone-client-gnome
+		cd ../gnome
 		gnome2_src_install
 	fi
 }

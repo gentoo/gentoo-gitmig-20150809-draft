@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/sflphone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.9 2011/03/21 23:20:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.10 2011/11/26 16:19:38 elvanor Exp $
+
+*sflphone-1.0.1 (26 Nov 2011)
+
+  26 Nov 2011; <elvanor@gentoo.org> +sflphone-1.0.1.ebuild:
+  Version bump to 1.0.1 along with various fixes.
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   sflphone-0.9.8.4.ebuild, sflphone-0.9.12.ebuild:
