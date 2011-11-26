@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.02.16.ebuild,v 1.2 2011/10/27 23:27:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.02.16.ebuild,v 1.3 2011/11/26 06:21:42 robbat2 Exp $
 
 EAPI="4"
 
@@ -22,9 +22,15 @@ DEPEND="app-arch/unzip
 
 S="${WORKDIR}"
 
-RESTRICT="mirror"
+RESTRICT="mirror fetch"
 
 QA_PRESTRIPPED="/opt/megacli/megacli"
+
+pkg_nofetch() {
+	einfo "Upstream has implement a mandatory clickthrough EULA for distfile download"
+	einfo "Please visit $SRC_URI"
+	einfo "And place $A in ${DISTDIR}"
+}
 
 src_unpack() {
 	unpack ${A}

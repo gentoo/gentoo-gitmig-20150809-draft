@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/megacli
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.11 2011/10/27 23:27:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.12 2011/11/26 06:21:42 robbat2 Exp $
+
+  26 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> megacli-8.02.16.ebuild:
+  No more direct download possible, upstream has implemented mandatory
+  clickthrough EULA for downloads.
 
   27 Oct 2011; Tim Harder <radhermit@gentoo.org> megacli-8.02.16.ebuild:
   Fix grammar.
