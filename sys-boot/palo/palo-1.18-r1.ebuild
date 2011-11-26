@@ -1,18 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.18-r1.ebuild,v 1.1 2011/04/21 20:47:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.18-r1.ebuild,v 1.2 2011/11/26 18:51:28 jer Exp $
 
 EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="PALO : PArisc Linux Loader"
-HOMEPAGE="http://parisc-linux.org/ http://packages.qa.debian.org/p/palo.html"
+HOMEPAGE="http://parisc-linux.org/"
 SRC_URI="mirror://debian/pool/main/p/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~hppa"
+KEYWORDS="-* hppa"
 IUSE=""
 
 src_prepare() {
