@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.98 2011/11/20 18:54:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.99 2011/11/26 10:36:17 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> freeradius-2.1.11.ebuild:
+  Stable on amd64 wrt bug #339389
 
 *freeradius-2.1.12 (20 Nov 2011)
 
