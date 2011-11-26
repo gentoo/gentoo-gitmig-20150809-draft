@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/pjsip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/ChangeLog,v 1.4 2011/02/22 10:59:09 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/ChangeLog,v 1.5 2011/11/26 16:26:08 elvanor Exp $
+
+*pjsip-1.12 (26 Nov 2011)
+
+  26 Nov 2011; <elvanor@gentoo.org> +pjsip-1.12.ebuild:
+  1.12 version bump.
 
 *pjsip-1.8.10 (22 Feb 2011)
 
