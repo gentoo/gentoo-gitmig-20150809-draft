@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/indicator-applet/indicator-applet-0.4.12.ebuild,v 1.1 2011/11/19 18:33:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/indicator-applet/indicator-applet-0.4.12.ebuild,v 1.2 2011/11/26 19:25:21 ssuominen Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.18:2
 	>=gnome-base/gnome-panel-2.32[bonobo]
-	>=dev-libs/libindicator-0.4
+	>=dev-libs/libindicator-0.4:0
 	x11-libs/libX11
 	>=x11-libs/gtk+-2.12:2"
 DEPEND="${RDEPEND}
