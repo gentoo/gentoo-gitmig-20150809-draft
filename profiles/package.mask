@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13283 2011/11/25 08:05:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13284 2011/11/26 15:13:25 rich0 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -271,10 +271,6 @@ games-strategy/dark-oberon
 # unmaintained upstream, obsolete in general. (bug #337657)
 # Masked for removal on 20 Nov 2011
 net-misc/x25_utils
-
-# Richard Freeman <rich0@gentoo.org> (19 Oct 2011)
-# Emulator in latest sdk does not yet work
->=dev-util/android-sdk-update-manager-14
 
 # Miroslav Šulc <fordfrog@gentoo.org> (19 Oct 2011)
 # Masked for removal on 19 Nov 2011
