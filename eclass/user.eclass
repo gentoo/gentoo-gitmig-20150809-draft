@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.11 2011/11/26 06:42:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.12 2011/11/26 06:45:38 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -222,8 +222,6 @@ enewuser() {
 	fi
 
 	# add the user
-	local oldsandbox=${SANDBOX_ON}
-	export SANDBOX_ON="0"
 	case ${CHOST} in
 	*-darwin*)
 		### Make the user
@@ -265,8 +263,6 @@ enewuser() {
 		chown ${euser} "${ROOT}/${ehome}"
 		chmod 755 "${ROOT}/${ehome}"
 	fi
-
-	export SANDBOX_ON=${oldsandbox}
 }
 
 # @FUNCTION: enewgroup
@@ -327,8 +323,6 @@ enewgroup() {
 	fi
 
 	# add the group
-	local oldsandbox="${SANDBOX_ON}"
-	export SANDBOX_ON="0"
 	case ${CHOST} in
 	*-darwin*)
 		# If we need the next available
@@ -367,7 +361,6 @@ enewgroup() {
 		groupadd -r ${opts} ${egroup} || die
 		;;
 	esac
-	export SANDBOX_ON="${oldsandbox}"
 }
 
 # @FUNCTION: egethome
