@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/denu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.11 2009/07/06 11:18:55 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.12 2011/11/26 17:15:21 floppym Exp $
+
+*denu-2.3.2-r1 (26 Nov 2011)
+
+  26 Nov 2011; Mike Gilbert <floppym@gentoo.org> +denu-2.3.2-r1.ebuild:
+  Python-related improvements by Ian Delaney. Bug 317005.
 
   06 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> denu-2.3.2.ebuild:
   Remove portage DEPEND wrt #263696 because by looking at the source it
