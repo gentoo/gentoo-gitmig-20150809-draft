@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.914 2011/11/24 03:39:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.915 2011/11/26 03:55:26 zmedico Exp $
+
+*portage-2.1.10.38 (26 Nov 2011)
+
+  26 Nov 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.38.ebuild:
+  2.1.10.38 version bump. This fixes bug #390965 (one-character messages from
+  the elog syslog module) and also fixes a regression in make.defaults
+  inheritance of variables from make.globals (such as PORTAGE_ELOG_CLASSES). Bug
+  #381649 tracks all bugs fixed since portage-2.1.10.11.
 
   24 Nov 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.36.ebuild,
   -portage-2.2.0_alpha76.ebuild:
