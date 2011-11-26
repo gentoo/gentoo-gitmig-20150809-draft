@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.17.0-r1.ebuild,v 1.1 2011/11/25 23:30:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.17.0-r2.ebuild,v 1.1 2011/11/26 15:32:22 chithanh Exp $
 
 EAPI=4
 
@@ -24,6 +24,10 @@ RDEPEND="x11-libs/libXext
 # Requires dri2proto-2.6 (unreleased)
 DEPEND="${RDEPEND}
 	>=x11-proto/dri2proto-2.6"
+
+PATCHES=(
+        "${FILESDIR}"/${PN}-2.17-sna-offsets.patch
+)
 
 pkg_setup() {
 	xorg-2_pkg_setup
