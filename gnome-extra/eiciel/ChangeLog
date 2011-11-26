@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/eiciel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/eiciel/ChangeLog,v 1.1 2011/11/26 03:55:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/eiciel/ChangeLog,v 1.2 2011/11/26 03:59:48 tetromino Exp $
+
+  26 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Committed the wrong metadata.xml by accident.
 
 *eiciel-0.9.8.1 (26 Nov 2011)
 
