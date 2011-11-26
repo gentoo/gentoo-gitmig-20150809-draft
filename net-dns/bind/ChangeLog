@@ -1,9 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.360 2011/11/26 12:47:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.361 2011/11/26 12:48:37 armin76 Exp $
 
   26 Nov 2011; Raúl Porcel <armin76@gentoo.org> bind-9.7.4_p1.ebuild:
-  alpha/ia64/s390/sh/sparc stable wrt #390753
+  alpha/arm/ia64/s390/sh/sparc stable wrt #390753
 
   22 Nov 2011; Jeroen Roovers <jer@gentoo.org> bind-9.7.4_p1.ebuild:
   Stable for HPPA (bug #390753).
