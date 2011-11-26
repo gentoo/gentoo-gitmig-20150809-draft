@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.12 2011/11/26 06:45:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.13 2011/11/26 06:50:27 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -155,21 +155,19 @@ enewuser() {
 			die "Pass '-1' as the shell parameter"
 		fi
 	else
-		for shell in /sbin/nologin /usr/sbin/nologin /bin/false /usr/bin/false /dev/null ; do
-			[[ -x ${ROOT}${shell} ]] && break
+		for eshell in /sbin/nologin /usr/sbin/nologin /bin/false /usr/bin/false /dev/null ; do
+			[[ -x ${ROOT}${eshell} ]] && break
 		done
 
-		if [[ ${shell} == "/dev/null" ]] ; then
+		if [[ ${eshell} == "/dev/null" ]] ; then
 			eerror "Unable to identify the shell to use, proceeding with userland default."
 			case ${USERLAND} in
-				GNU) shell="/bin/false" ;;
-				BSD) shell="/sbin/nologin" ;;
-				Darwin) shell="/usr/sbin/nologin" ;;
+				GNU)    eshell="/bin/false" ;;
+				BSD)    eshell="/sbin/nologin" ;;
+				Darwin) eshell="/usr/sbin/nologin" ;;
 				*) die "Unable to identify the default shell for userland ${USERLAND}"
 			esac
 		fi
-
-		eshell=${shell}
 	fi
 	einfo " - Shell: ${eshell}"
 	opts+=" -s ${eshell}"
