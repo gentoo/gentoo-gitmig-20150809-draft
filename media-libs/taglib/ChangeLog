@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.98 2011/04/20 21:16:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.99 2011/11/26 09:34:38 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> taglib-1.7.ebuild:
+  Stable on amd64 wrt bug #391653
 
 *taglib-1.7 (20 Apr 2011)
 
