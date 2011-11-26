@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.6 2011/11/25 02:23:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.7 2011/11/26 03:28:40 tetromino Exp $
 
 # Pulled in by net-im/telepathy-connection-managers[msn] (via dev-python/papyon
 # and net-voip/telepathy-butterfly)
@@ -9,6 +9,9 @@ net-libs/libproxy python
 
 # Required by net-misc/vinagre
 net-libs/gtk-vnc gtk3
+
+# Required by dev-libs/folks[libsocialweb]
+net-libs/libsocialweb vala
 
 # The following are required by ekiga-3
 net-libs/opal sip
