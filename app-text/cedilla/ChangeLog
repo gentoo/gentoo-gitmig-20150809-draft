@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cedilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.9 2011/10/20 13:05:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.10 2011/11/26 09:45:40 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> cedilla-0.6.ebuild:
+  Stable on amd64 wrt bug #391265
 
 *cedilla-0.6 (20 Oct 2011)
 
