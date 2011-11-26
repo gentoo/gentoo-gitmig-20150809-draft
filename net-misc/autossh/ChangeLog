@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/autossh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.32 2011/10/14 21:30:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.33 2011/11/26 16:37:51 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> autossh-1.4c.ebuild:
+  Stable on amd64 wrt bug #391949
 
 *autossh-1.4c (14 Oct 2011)
 
