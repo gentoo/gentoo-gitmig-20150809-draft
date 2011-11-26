@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.25 2011/11/02 21:40:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.26 2011/11/26 10:37:47 lu_zero Exp $
+
+*redis-2.4.3 (26 Nov 2011)
+
+  26 Nov 2011; Luca Barbato <lu_zero@gentoo.org> +redis-2.4.3.ebuild,
+  +files/redis-2.4.3-shared.patch:
+  New version, thanks to Dirkjan Ochtman <djc@gentoo.org> and
+  Johan Bergström <bugs@bergstroem.nu> in bug #378085 for the patches
+  and the updated ebuild.
 
   02 Nov 2011; Mike Frysinger <vapier@gentoo.org> redis-2.2.2.ebuild,
   redis-2.2.6.ebuild, redis-2.2.8.ebuild, redis-2.2.11.ebuild,
