@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.9.ebuild,v 1.1 2011/11/19 09:37:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.9.ebuild,v 1.2 2011/11/26 01:01:44 radhermit Exp $
 
 EAPI=4
 
@@ -14,6 +14,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE="debug"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
 	econf \
