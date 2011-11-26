@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.21.ebuild,v 1.1 2011/09/04 12:18:44 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.21.ebuild,v 1.2 2011/11/26 16:38:45 lxnay Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sabayon/${CATEGORY}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-util/intltool
