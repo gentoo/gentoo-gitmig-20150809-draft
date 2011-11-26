@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.10 2011/11/04 13:08:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.11 2011/11/26 06:42:07 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -18,7 +18,8 @@
 # @USAGE: <calling func name>
 _assert_pkg_ebuild_phase() {
 	case ${EBUILD_PHASE} in
-	unpack|prepare|configure|compile|test|install)
+	setup|preinst|postinst) ;;
+	*)
 		eerror "'$1()' called from '${EBUILD_PHASE}()' which is not a pkg_* function."
 		eerror "Package fails at QA and at life.  Please file a bug."
 		die "Bad package!  $1 is only for use in pkg_* functions!"
