@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.26 2011/11/24 20:05:01 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.27 2011/11/26 20:42:02 mgorny Exp $
+
+  26 Nov 2011; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Add failure handling for pushd/popd calls.
 
   24 Nov 2011; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
   set_java_env(): Substitute @SLOT@ in vm env files

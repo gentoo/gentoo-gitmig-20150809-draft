@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.25 2011/10/14 20:28:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.26 2011/11/26 20:42:02 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -256,9 +256,9 @@ autotools-utils_src_configure() {
 
 	_check_build_dir
 	mkdir -p "${AUTOTOOLS_BUILD_DIR}" || die "mkdir '${AUTOTOOLS_BUILD_DIR}' failed"
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
+	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
 	base_src_configure "${econfargs[@]}" "$@"
-	popd > /dev/null
+	popd > /dev/null || die
 }
 
 # @FUNCTION: autotools-utils_src_compile
@@ -268,9 +268,9 @@ autotools-utils_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
+	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
 	base_src_compile "$@"
-	popd > /dev/null
+	popd > /dev/null || die
 }
 
 # @FUNCTION: autotools-utils_src_install
@@ -285,9 +285,9 @@ autotools-utils_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
+	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
 	base_src_install "$@"
-	popd > /dev/null
+	popd > /dev/null || die
 
 	# Remove libtool files and unnecessary static libs
 	remove_libtool_files
@@ -300,8 +300,8 @@ autotools-utils_src_test() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
+	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
 	# Run default src_test as defined in ebuild.sh
 	default_src_test
-	popd > /dev/null
+	popd > /dev/null || die
 }
