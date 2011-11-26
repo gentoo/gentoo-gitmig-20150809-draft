@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.119 2011/11/03 19:06:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.120 2011/11/26 01:07:23 radhermit Exp $
+
+  26 Nov 2011; Tim Harder <radhermit@gentoo.org> libcdio-0.83.ebuild:
+  Build in the source tree.
 
   03 Nov 2011; Tim Harder <radhermit@gentoo.org> -libcdio-0.80.ebuild,
   -libcdio-0.80-r1.ebuild, -files/libcdio-0.80-fbsd.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.83.ebuild,v 1.1 2011/11/03 19:03:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.83.ebuild,v 1.2 2011/11/26 01:07:23 radhermit Exp $
 
 EAPI=4
 
@@ -20,6 +20,8 @@ RDEPEND="cddb? ( >=media-libs/libcddb-1.0.1 )
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS TODO )
 
