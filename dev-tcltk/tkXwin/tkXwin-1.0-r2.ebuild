@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r2.ebuild,v 1.2 2011/11/26 11:22:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r2.ebuild,v 1.3 2011/11/26 11:25:48 jlec Exp $
 
 EAPI="3"
 
@@ -43,7 +43,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS INSTALL README || die
 	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.la
 }
