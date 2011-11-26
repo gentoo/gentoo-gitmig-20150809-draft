@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lout
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.27 2010/02/20 17:58:07 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.28 2011/11/26 10:29:31 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> lout-3.38-r1.ebuild:
+  Stable on amd64 wrt bug #391485
 
   20 Feb 2010; Jonathan Callen <abcd@gentoo.org> lout-3.38-r1.ebuild:
   Transfer prefix keywords, bump EAPI
