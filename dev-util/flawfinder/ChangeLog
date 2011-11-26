@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/flawfinder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.14 2010/01/15 21:35:06 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.15 2011/11/26 01:38:02 floppym Exp $
+
+*flawfinder-1.27-r2 (26 Nov 2011)
+
+  26 Nov 2011; Mike Gilbert <floppym@gentoo.org> +flawfinder-1.27-r2.ebuild:
+  Python-related improvements by Ian Delaney. Bug 324393.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   flawfinder-1.27-r1.ebuild:
