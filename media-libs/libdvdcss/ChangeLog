@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.88 2011/11/15 22:15:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.89 2011/11/26 01:10:32 radhermit Exp $
+
+  26 Nov 2011; Tim Harder <radhermit@gentoo.org> libdvdcss-1.2.11.ebuild:
+  Build in the source tree.
 
 *libdvdcss-1.2.11 (15 Nov 2011)
 

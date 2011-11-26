@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.11.ebuild,v 1.1 2011/11/15 22:15:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.11.ebuild,v 1.2 2011/11/26 01:10:32 radhermit Exp $
 
 EAPI=4
 
@@ -22,6 +22,8 @@ DEPEND="doc? (
 		dev-texlive/texlive-latexextra
 	)"
 RDEPEND=""
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 DOCS=( AUTHORS ChangeLog NEWS README )
 
