@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/foremost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.23 2011/11/23 09:20:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.24 2011/11/26 10:38:37 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> foremost-1.5.7-r1.ebuild:
+  Stable on amd64 wrt bug #391467
 
   23 Nov 2011; Tim Harder <radhermit@gentoo.org> -foremost-1.5.5-r1.ebuild,
   -foremost-1.5.6-r1.ebuild:
