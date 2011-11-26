@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/rootstrap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.17 2010/03/30 00:15:04 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.18 2011/11/26 01:44:59 floppym Exp $
+
+*rootstrap-0.3.24_p5-r1 (26 Nov 2011)
+
+  26 Nov 2011; Mike Gilbert <floppym@gentoo.org> +rootstrap-0.3.24_p5-r1.ebuild:
+  Python-related improvements by Ian Delaney. Bug 326115.
 
 *rootstrap-0.3.24_p5 (30 Mar 2010)
 
