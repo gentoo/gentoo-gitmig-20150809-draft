@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mess822
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.13 2011/11/22 16:17:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.14 2011/11/26 10:48:02 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> mess822-0.58-r2.ebuild:
+  Stable on amd64 wrt bug #391227
 
   22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mess822-0.58-r2.ebuild:
   x86 stable wrt bug #391227
