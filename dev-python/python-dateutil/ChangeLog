@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.31 2011/06/07 11:22:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.32 2011/11/26 16:26:21 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> python-dateutil-1.5.ebuild:
+  Ignore failures of tests with Jython. Update DESCRIPTION and LICENSE. Use
+  SLOT="python-2". Add "examples" USE flag. Use sed instead of a patch. Patch by
+  Arfrever.
 
   07 Jun 2011; Naohiro Aota <naota@gentoo.org> python-dateutil-1.5.ebuild:
   Add ~x86-fbsd keyword
