@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.31 2011/11/24 18:59:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.32 2011/11/26 16:46:04 jer Exp $
+
+  26 Nov 2011; Jeroen Roovers <jer@gentoo.org> lft-3.33.ebuild:
+  Move from dodoc to DOCS / remove src_install() by ago.
 
 *lft-3.33 (24 Nov 2011)
 

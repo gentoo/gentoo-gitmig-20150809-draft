@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.33.ebuild,v 1.1 2011/11/24 18:59:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.33.ebuild,v 1.2 2011/11/26 16:46:04 jer Exp $
 
 EAPI="4"
 
@@ -16,12 +16,9 @@ IUSE=""
 DEPEND="net-libs/libpcap"
 RDEPEND="${DEPEND}"
 
+DOCS=( CHANGELOG README TODO )
+
 src_prepare() {
 cp -av Makefile.in{,.org}
 	sed -i Makefile.in -e '/[Ss]trip/d' || die
-}
-
-src_install() {
-	default
-	dodoc CHANGELOG README TODO
 }
