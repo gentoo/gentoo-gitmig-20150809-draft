@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gutenprint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.32 2011/11/02 14:49:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.33 2011/11/26 17:50:53 armin76 Exp $
+
+  26 Nov 2011; Raúl Porcel <armin76@gentoo.org> gutenprint-5.2.7-r1.ebuild:
+  alpha/ia64/sparc stable wrt #388639
 
   02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gutenprint-5.2.7-r1.ebuild:
