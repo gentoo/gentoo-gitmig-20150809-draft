@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/udunits
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.20 2011/11/23 10:06:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.21 2011/11/26 09:26:38 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> udunits-2.1.21.ebuild:
+  Stable on amd64 wrt bug #391605
 
   23 Nov 2011; Justin Lecher <jlec@gentoo.org> +udunits-2.1.21.ebuild:
   Restore udunits-2.1.21.ebuild
