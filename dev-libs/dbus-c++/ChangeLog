@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/dbus-c++
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-c++/ChangeLog,v 1.1 2011/11/26 14:24:53 elvanor Exp $
+
+*dbus-c++-0.6.0_p20111126 (26 Nov 2011)
+
+  26 Nov 2011; <elvanor@gentoo.org> +dbus-c++-0.6.0_p20111126.ebuild,
+  +metadata.xml:
+  Initial import.
+
