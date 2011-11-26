@@ -1,0 +1,43 @@
+06:21 < GitHub196> [raptor] dajobe pushed 1 new commit to master: http://git.io/-dmhKw
+06:21 < GitHub196> [raptor/master] Fix expat support - Dave Beckett
+
+http://github.com/dajobe/raptor/commit/2c4d76240b70e9c794d983ca856ceaea8fe7ee5b
+
+http://bugs.gentoo.org/show_bug.cgi?id=391737
+
+--- src/raptor_expat.c
++++ src/raptor_expat.c
+@@ -83,9 +83,9 @@
+ raptor_expat_update_document_locator(raptor_sax2* sax2,
+                                      raptor_locator* locator)
+ {
+-  locator->line = XML_GetCurrentLineNumber(sax2->xp);
+-  locator->column = XML_GetCurrentColumnNumber(sax2->xp);
+-  locator->byte = XML_GetCurrentByteIndex(sax2->xp);
++  locator->line = RAPTOR_BAD_CAST(int, XML_GetCurrentLineNumber(sax2->xp));
++  locator->column = RAPTOR_BAD_CAST(int, XML_GetCurrentColumnNumber(sax2->xp));
++  locator->byte = RAPTOR_BAD_CAST(int, XML_GetCurrentByteIndex(sax2->xp));
+ }
+ 
+ /* end if RAPTOR_XML_EXPAT */
+--- src/raptor_sax2.c
++++ src/raptor_sax2.c
+@@ -551,7 +551,7 @@
+ 
+ 
+ #ifdef RAPTOR_XML_EXPAT
+-  rc = XML_Parse(xp, (char*)buffer, len, is_end);
++  rc = XML_Parse(xp, (char*)buffer, RAPTOR_BAD_CAST(int, len), is_end);
+   if(!rc) /* expat: 0 is failure */
+     goto handle_error;
+   if(is_end)
+@@ -627,8 +627,7 @@
+     char *error_buffer;
+ 
+     error_length = strlen(error_message);
+-    error_buffer = (char*)RAPTOR_MALLOC(cstring, 
+-                                      ERROR_PREFIX_LEN + error_length+1);
++    error_buffer = RAPTOR_MALLOC(char*, ERROR_PREFIX_LEN + error_length + 1);
+     if(error_buffer) {
+       memcpy(error_buffer, error_prefix, ERROR_PREFIX_LEN);
+       memcpy(error_buffer + ERROR_PREFIX_LEN, error_message, error_length + 1);

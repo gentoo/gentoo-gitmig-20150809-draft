@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.113 2011/11/16 18:32:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.114 2011/11/26 17:43:36 ssuominen Exp $
+
+  26 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> raptor-2.0.5.ebuild,
+  +files/raptor-2.0.5-expat.patch:
+  Fix building with upstream expat patch (USE="-xml" to disable libxml2 usage)
+  wrt #391737 (Thanks to Hans for reporting)
 
   16 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> raptor-1.4.21-r1.ebuild:
   Reduce installed files to minimum in the obsolete raptor1 branch.
