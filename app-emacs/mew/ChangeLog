@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mew
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.75 2011/11/24 08:44:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.76 2011/11/26 13:13:11 ulm Exp $
+
+  26 Nov 2011; Ulrich Mueller <ulm@gentoo.org> mew-6.2.ebuild, mew-6.3.ebuild,
+  mew-6.4-r1.ebuild:
+  Add explicit dependency on sys-libs/zlib, bug 391633 comment #5.
 
 *mew-6.4-r1 (24 Nov 2011)
 

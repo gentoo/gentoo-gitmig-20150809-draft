@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.2.ebuild,v 1.5 2010/01/12 17:56:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.2.ebuild,v 1.6 2011/11/26 13:13:11 ulm Exp $
 
 inherit elisp
 
@@ -14,7 +14,9 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="ssl linguas_ja"
 RESTRICT="test"
 
-RDEPEND="ssl? ( net-misc/stunnel )"
+DEPEND="sys-libs/zlib"
+RDEPEND="${DEPEND}
+	ssl? ( net-misc/stunnel )"
 
 SITEFILE="50${PN}-gentoo.el"
 
