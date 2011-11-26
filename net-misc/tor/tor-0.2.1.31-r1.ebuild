@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.31.ebuild,v 1.1 2011/10/28 18:20:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.31-r1.ebuild,v 1.1 2011/11/26 15:44:00 blueness Exp $
 
 EAPI=4
 
@@ -60,7 +60,7 @@ src_install() {
 	# allow the tor user more open files to avoid errors, see bug 251171
 	newconfd "${FILESDIR}"/tor.confd tor
 
-	newinitd "${FILESDIR}"/tor.initd-r4 tor
+	newinitd "${FILESDIR}"/tor.initd-r6 tor
 	emake DESTDIR="${D}" install
 	keepdir /var/{lib,log,run}/tor
 
