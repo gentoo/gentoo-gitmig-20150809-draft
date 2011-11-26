@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.27 2011/11/26 20:42:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.28 2011/11/26 20:43:55 mgorny Exp $
+
+  26 Nov 2011; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Remove implicit IUSE=debug deprecation warning.
 
   26 Nov 2011; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Add failure handling for pushd/popd calls.
