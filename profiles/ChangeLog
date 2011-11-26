@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5960 2011/11/26 15:13:25 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5961 2011/11/26 16:24:49 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove obsolete networkmanagement / knetworkmanager mask, bug 391955
 
   26 Nov 2011; Richard Freeman <rich0@gentoo.org> package.mask:
   Unmask android-sdk-update-manager - can no longer reproduce issue and it may
