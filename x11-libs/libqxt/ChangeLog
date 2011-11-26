@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libqxt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.18 2011/11/12 16:22:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.19 2011/11/26 20:04:50 pesa Exp $
+
+*libqxt-0.6.2 (26 Nov 2011)
+
+  26 Nov 2011; Davide Pesavento <pesa@gentoo.org> -libqxt-0.6.1.ebuild,
+  +libqxt-0.6.2.ebuild:
+  Version bump, remove old.
 
 *libqxt-0.6.1 (12 Nov 2011)
 

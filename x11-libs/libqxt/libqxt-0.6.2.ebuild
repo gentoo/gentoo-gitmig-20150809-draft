@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.6.1.ebuild,v 1.1 2011/11/12 16:22:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.6.2.ebuild,v 1.1 2011/11/26 20:04:50 pesa Exp $
 
 EAPI=4
 
@@ -25,7 +25,6 @@ COMMON_DEPEND="
 		>=dev-libs/openssl-0.9.8
 		x11-libs/qt-core:4[ssl]
 	)
-	web? ( >=dev-libs/fcgi-2.4 )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 "
 DEPEND="${COMMON_DEPEND}
@@ -46,26 +45,27 @@ src_prepare() {
 	qt4-r2_src_prepare
 
 	# remove insecure runpath
-	sed -i -e '/-Wl,-rpath/d' src/qxtlibs.pri || die
+	sed -i -e '/^QMAKE_RPATHDIR /d' src/qxtlibs.pri || die
 }
 
 src_configure() {
 	# custom configure script
-	local myconf="./configure
-			-prefix '${EPREFIX}/usr'
-			-libdir '${EPREFIX}/usr/$(get_libdir)'
-			-docdir '${EPREFIX}/usr/share/doc/${PF}'
-			-qmake-bin '${EPREFIX}/usr/bin/qmake'
-			$(use debug && echo -debug || echo -release)
-			$(use berkdb || echo -no-db -nomake berkeley)
-			$(use doc || echo -nomake docs)
-			$(use sql || echo -nomake sql)
-			$(use ssl || echo -no-openssl)
-			$(use web || echo -nomake web)
-			$(use zeroconf || echo -no-zeroconf -nomake zeroconf)
-			-verbose"
-	echo ${myconf}
-	eval ${myconf} || die "./configure failed"
+	local myconf=(
+		./configure -verbose
+		-prefix "${EPREFIX}/usr"
+		-libdir "${EPREFIX}/usr/$(get_libdir)"
+		-docdir "${EPREFIX}/usr/share/doc/${PF}"
+		-qmake-bin "${EPREFIX}/usr/bin/qmake"
+		$(use debug && echo -debug || echo -release)
+		$(use berkdb || echo -no-db -nomake berkeley)
+		$(use doc || echo -nomake docs)
+		$(use sql || echo -nomake sql)
+		$(use ssl || echo -no-openssl)
+		$(use web || echo -nomake web)
+		$(use zeroconf || echo -no-zeroconf -nomake zeroconf)
+	)
+	echo "${myconf[@]}"
+	"${myconf[@]}" || die "./configure failed"
 
 	eqmake4 -recursive
 }
