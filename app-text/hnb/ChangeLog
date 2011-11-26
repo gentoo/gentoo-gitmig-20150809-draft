@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hnb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.24 2011/11/26 09:46:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.25 2011/11/26 10:45:13 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> hnb-1.9.18-r1.ebuild:
+  add missing sys-libs/ncurses dependency
 
   26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> hnb-1.9.18-r1.ebuild:
   Stable on amd64 wrt bug #391479

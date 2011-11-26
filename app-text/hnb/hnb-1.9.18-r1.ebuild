@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/hnb-1.9.18-r1.ebuild,v 1.4 2011/11/26 09:46:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/hnb-1.9.18-r1.ebuild,v 1.5 2011/11/26 10:45:13 hwoarang Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="sys-libs/ncurses"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-flags.patch" "${FILESDIR}/${P}-include.patch"
