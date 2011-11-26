@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/libpar2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.14 2011/10/24 10:26:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.15 2011/11/26 18:55:50 radhermit Exp $
+
+*libpar2-0.2-r3 (26 Nov 2011)
+
+  26 Nov 2011; Tim Harder <radhermit@gentoo.org> -libpar2-0.2-r2.ebuild,
+  +libpar2-0.2-r3.ebuild:
+  Revbump and remove old. Build in the source tree (fixes bug #391815).
 
   24 Oct 2011; Tim Harder <radhermit@gentoo.org> libpar2-0.2-r2.ebuild:
   Use $P in patch filename.

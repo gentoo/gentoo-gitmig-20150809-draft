@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/libpar2-0.2-r2.ebuild,v 1.2 2011/10/24 10:26:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/libpar2-0.2-r3.ebuild,v 1.1 2011/11/26 18:55:50 radhermit Exp $
 
 EAPI=4
 
@@ -22,3 +22,5 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}"/${P}-bugfixes.patch )
 
 DOCS=( AUTHORS ChangeLog README )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
