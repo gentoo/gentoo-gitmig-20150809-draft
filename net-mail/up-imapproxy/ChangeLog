@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/up-imapproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.26 2011/06/05 17:56:29 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.27 2011/11/26 10:25:07 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> up-imapproxy-1.2.7.ebuild:
+  Stable on amd64 wrt bug #391345
 
 *up-imapproxy-1.2.7 (05 Jun 2011)
 
