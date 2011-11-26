@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.2-r3.ebuild,v 1.7 2011/10/31 04:02:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.2-r3.ebuild,v 1.8 2011/11/26 16:50:52 floppym Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -383,13 +383,6 @@ pkg_postinst() {
 			echo -ne "\a"
 			sleep 1
 		done
-	fi
-
-	if [[ "${PV}" != *_pre* ]]; then
-		elog
-		elog "If you want to help in testing of recent changes in Python, then you can use"
-		elog "snapshots of Python from python overlay."
-		elog
 	fi
 }
 
