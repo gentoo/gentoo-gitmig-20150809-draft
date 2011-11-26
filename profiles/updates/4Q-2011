@@ -15,3 +15,4 @@ move dev-util/gtest dev-cpp/gtest
 move net-misc/get-flash-videos media-video/get_flash_videos
 move net-voip/telepathy-connection-managers net-im/telepathy-connection-managers
 move x11-misc/remind app-misc/remind
+slotmove dev-python/python-dateutil 0 python-2
