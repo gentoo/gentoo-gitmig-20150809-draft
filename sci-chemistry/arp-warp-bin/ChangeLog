@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/arp-warp-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.15 2011/10/16 12:24:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.16 2011/11/26 11:00:18 jlec Exp $
+
+*arp-warp-bin-7.1-r1 (26 Nov 2011)
+
+  26 Nov 2011; Justin Lecher <jlec@gentoo.org> arp-warp-bin-7.1.ebuild,
+  +arp-warp-bin-7.1-r1.ebuild:
+  Drop exit from source script; If present in the script, but package files are
+  not present, you cannot log in anymore.
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> arp-warp-bin-7.1.ebuild:
   amd64 restable

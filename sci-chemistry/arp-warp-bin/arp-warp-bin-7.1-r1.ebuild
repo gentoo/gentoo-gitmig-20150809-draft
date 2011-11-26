@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.13 2011/11/26 11:00:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1-r1.ebuild,v 1.1 2011/11/26 11:00:18 jlec Exp $
 
 EAPI=3
 
@@ -47,6 +47,7 @@ src_prepare() {
 	sed "s:PYVER:$(python_get_version):g" -i "${S}"/share/arpwarp_setup_base.*
 	python_convert_shebangs $(python_get_version) flex-wARP-src-354/*py
 	sed -e "s:/usr/:${EPREFIX}/usr/:g" -i flex-wARP-src-354/*py || die
+	sed -e '/exit/d' -i "${S}"/share/arpwarp_setup_base.* || die
 }
 
 src_install(){
