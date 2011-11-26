@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.153 2011/11/20 20:23:41 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.154 2011/11/26 20:01:20 robbat2 Exp $
+
+  26 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Bug 385719: upstream altered qt-everywhere-opensource-src-4.7.4.tar.gz, mass
+  fix for pesa.
 
   20 Nov 2011; Davide Pesavento <pesa@gentoo.org> qt-gui-4.6.3.ebuild,
   qt-gui-4.6.3-r2.ebuild, -files/qt-gui-4.7.0-qtreeview-regression-fix.patch,

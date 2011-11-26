@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.29 2011/09/08 09:19:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.30 2011/11/26 20:00:27 robbat2 Exp $
+
+  26 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Bug 385719: upstream altered qt-everywhere-opensource-src-4.7.4.tar.gz, mass
+  fix for pesa.
 
 *qt-declarative-4.7.4 (08 Sep 2011)
 

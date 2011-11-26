@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.124 2011/09/08 09:22:47 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.125 2011/11/26 20:05:14 robbat2 Exp $
+
+  26 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Bug 385719: upstream altered qt-everywhere-opensource-src-4.7.4.tar.gz, mass
+  fix for pesa.
 
 *qt-webkit-4.7.4 (08 Sep 2011)
 

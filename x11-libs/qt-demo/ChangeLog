@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.74 2011/09/14 10:44:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.75 2011/11/26 20:00:53 robbat2 Exp $
+
+  26 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Bug 385719: upstream altered qt-everywhere-opensource-src-4.7.4.tar.gz, mass
+  fix for pesa.
 
   14 Sep 2011; Alex Alexander <wired@gentoo.org> qt-demo-4.7.4.ebuild:
   hard-disable openvg until we get qt-openvg in the tree. bug #382363
