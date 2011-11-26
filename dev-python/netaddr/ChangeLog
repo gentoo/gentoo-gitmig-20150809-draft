@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/netaddr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.1 2011/11/04 21:23:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.2 2011/11/26 16:28:56 hwoarang Exp $
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> netaddr-0.7.6.ebuild:
+  Support Python 2.4, 2.5 and 3.*. Add src_test(). Patch by Arfrever. Backported
+  from Progress Overlay
 
 *netaddr-0.7.6 (04 Nov 2011)
 
