@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r6.ebuild,v 1.7 2011/06/21 16:05:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r6.ebuild,v 1.8 2011/11/26 09:44:36 hwoarang Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="cns"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="aria openmp"
 
 RDEPEND="
