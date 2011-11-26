@@ -1,22 +1,24 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r2.ebuild,v 1.1 2010/12/07 17:20:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r2.ebuild,v 1.2 2011/11/26 11:22:04 jlec Exp $
 
 EAPI="3"
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Tcl/Tk library to detect idle periods of an X session."
+DESCRIPTION="Tcl/Tk library to detect idle periods of an X session"
 HOMEPAGE="http://beepcore-tcl.sourceforge.net/"
 SRC_URI="http://beepcore-tcl.sourceforge.net/${P}.tgz"
 
-IUSE="debug threads"
 LICENSE="BSD"
 SLOT="0"
+IUSE="debug static-libs threads"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="
 	dev-lang/tk[threads?]
+	x11-libs/libX11
+	x11-libs/libXext
 	x11-proto/scrnsaverproto
 	x11-proto/xextproto"
 RDEPEND="${DEPEND}"
@@ -35,6 +37,7 @@ src_configure() {
 		--enable-gcc \
 		--with-x \
 		--enable-shared \
+		$(use_enable static-libs static) \
 		$(use_enable threads) \
 		$(use_enable debug symbols)
 }
@@ -42,4 +45,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR=${D} install || die
 	dodoc AUTHORS INSTALL README || die
+	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.la
 }
