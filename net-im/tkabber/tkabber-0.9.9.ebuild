@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.9 2010/12/07 11:51:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.10 2011/11/26 21:40:34 floppym Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ pkg_setup() {
 		ewarn "If you need that press Contrl-C now and activate it!"
 	fi
 	if has_version '>=dev-tcltk/tclxml-3.0' \
-		&& ! built_with_use dev-tcltk/tclxml expat ; then
+		&& ! built_with_use --missing true dev-tcltk/tclxml expat ; then
 		eerror "tclxml is missing expat support."
 		eerror "Please add 'expat' to your USE flags, and re-emerge tclxml."
 		die "tclxml needs expat support"
