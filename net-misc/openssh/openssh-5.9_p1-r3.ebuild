@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r3.ebuild,v 1.3 2011/11/03 01:00:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r3.ebuild,v 1.4 2011/11/26 07:33:38 vapier Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
@@ -242,10 +242,12 @@ src_test() {
 	fi
 }
 
-pkg_postinst() {
+pkg_preinst() {
 	enewgroup sshd 22
 	enewuser sshd 22 -1 /var/empty sshd
+}
 
+pkg_postinst() {
 	elog "Starting with openssh-5.8p1, the server will default to a newer key"
 	elog "algorithm (ECDSA).  You are encouraged to manually update your stored"
 	elog "keys list as servers update theirs.  See ssh-keyscan(1) for more info."
