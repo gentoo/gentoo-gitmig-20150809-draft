@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.297 2011/11/26 15:44:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.298 2011/11/26 16:50:24 xarthisius Exp $
+
+  26 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> tor-0.2.2.34.ebuild:
+  ppc64 stable wrt #388769
 
 *tor-0.2.1.31-r1 (26 Nov 2011)
 
