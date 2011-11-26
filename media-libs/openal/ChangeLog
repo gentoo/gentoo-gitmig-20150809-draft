@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.147 2011/11/06 16:56:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.148 2011/11/26 18:27:02 armin76 Exp $
+
+  26 Nov 2011; Raúl Porcel <armin76@gentoo.org> openal-1.13.ebuild:
+  alpha/ia64/sparc stable wrt #388577
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> openal-1.13.ebuild:
   arm stable, bug #388577
