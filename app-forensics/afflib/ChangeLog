@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/afflib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.15 2011/11/24 22:16:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.16 2011/11/26 00:24:57 radhermit Exp $
+
+  26 Nov 2011; Tim Harder <radhermit@gentoo.org> afflib-3.6.12.ebuild:
+  Build in the source tree.
 
   24 Nov 2011; Tim Harder <radhermit@gentoo.org> afflib-3.6.12.ebuild:
   Improve python related support (bug #311209).

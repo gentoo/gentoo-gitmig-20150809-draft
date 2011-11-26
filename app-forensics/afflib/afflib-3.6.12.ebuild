@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.6.12.ebuild,v 1.3 2011/11/24 22:16:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.6.12.ebuild,v 1.4 2011/11/26 00:24:57 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -24,6 +24,8 @@ RDEPEND="dev-libs/expat
 	readline? ( sys-libs/readline )
 	s3? ( net-misc/curl )"
 DEPEND="${RDEPEND}"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	if use python ; then
