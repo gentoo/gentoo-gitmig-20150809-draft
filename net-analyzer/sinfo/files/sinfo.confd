@@ -1,0 +1,4 @@
+# /etc/conf.d/sinfo: config file for /etc/init.d/sinfo
+
+# Various sinfod options
+SINFO_OPTS="--quiet"
