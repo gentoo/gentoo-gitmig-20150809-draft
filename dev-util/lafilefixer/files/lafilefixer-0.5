@@ -179,6 +179,9 @@ case "$1" in
 		declare files=()
 		declare arg=""
 
+		# Default to $PWD #276447
+		[[ $# -eq 0 ]] && set -- "${PWD}"
+
 		for arg in "${@}"
 		do
 			if [[ -d "${arg}" || -f "${arg}" ]]
