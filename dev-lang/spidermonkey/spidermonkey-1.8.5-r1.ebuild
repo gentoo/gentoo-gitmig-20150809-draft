@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.1 2011/11/14 21:01:07 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.2 2011/11/26 04:49:25 dirtyepic Exp $
 
 EAPI="3"
 inherit eutils toolchain-funcs multilib python versionator pax-utils
@@ -57,7 +57,7 @@ src_configure() {
 		--enable-readline \
 		--enable-threadsafe \
 		--with-system-nspr \
-		$(use enable debug) \
+		$(use_enable debug) \
 		$(use_enable static-libs static) \
 		$(use_enable test tests)
 }
