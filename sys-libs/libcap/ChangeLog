@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.115 2011/11/12 19:36:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.116 2011/11/26 12:38:54 armin76 Exp $
+
+  26 Nov 2011; Raúl Porcel <armin76@gentoo.org> libcap-2.22.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #389201
 
   12 Nov 2011; Mike Frysinger <vapier@gentoo.org> libcap-2.22.ebuild,
   +files/libcap-2.22-no-perl.patch:
