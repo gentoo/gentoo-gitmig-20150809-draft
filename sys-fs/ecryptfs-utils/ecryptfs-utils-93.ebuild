@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-93.ebuild,v 1.1 2011/11/23 22:42:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-93.ebuild,v 1.2 2011/11/27 03:43:36 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
@@ -35,6 +35,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.41.0
 	python? ( dev-lang/swig )"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	use python && python_pkg_setup
