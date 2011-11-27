@@ -1,5 +1,11 @@
 
 
+*elfix-0.4.0 (27 Nov 2011)
+
+  27 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.4.0.ebuild,
+  metadata.xml:
+  Version bump, makes XT_PAX support optional
+
   27 Nov 2011; Anthony G. Basile <blueness@gentoo.org> elfix-0.3.2.ebuild:
   Force dependency on =dev-python/pypax-0.3*
 
