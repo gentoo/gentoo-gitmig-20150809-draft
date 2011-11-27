@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.67 2011/11/05 21:29:00 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.68 2011/11/27 03:23:45 radhermit Exp $
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> libgsasl-1.6.1.ebuild:
+  Build in the source tree.
 
   05 Nov 2011; Eray Aslan <eras@gentoo.org> libgsasl-1.6.1.ebuild,
   files/libgsasl-gss-extra.patch:
