@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2.ebuild,v 1.1 2011/06/25 13:30:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r1.ebuild,v 1.1 2011/11/27 19:44:24 idl0r Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit perl-module toolchain-funcs eutils
 
 MY_P=Mail-SpamAssassin-${PV//_/-}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="SpamAssassin is an extensible email filter which is used to identify spam."
+DESCRIPTION="SpamAssassin is an extensible email filter which is used to identify spam"
 HOMEPAGE="http://spamassassin.apache.org/"
 SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
@@ -60,6 +60,19 @@ DEPEND=">=dev-lang/perl-5.8.8-r8
 RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
+
+src_prepare() {
+	# http://old.nabble.com/Migrating-bayes-to-mysql-fails-with-parsing-errors-td31889789i20.html
+
+	# https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6624
+	epatch "${FILESDIR}/${P}-mysql_count_rows.patch"
+
+	#https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6625
+	epatch "${FILESDIR}/${P}-binary_token.patch"
+
+	# https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6626
+	epatch "${FILESDIR}/${P}-innodb.patch"
+}
 
 src_configure() {
 	# - Set SYSCONFDIR explicitly so we can't get bitten by bug 48205 again
@@ -129,13 +142,21 @@ src_install () {
 	newinitd "${FILESDIR}"/3.3.1-spamd.init spamd
 	newconfd "${FILESDIR}"/3.0.0-spamd.conf spamd
 
-	use postgres && \
-		sed -i -e 's:@USEPOSTGRES@::' "${D}/etc/init.d/spamd" || \
-		sed -i -e '/@USEPOSTGRES@/d' "${D}/etc/init.d/spamd"
+	if use postgres; then
+		sed -i -e 's:@USEPOSTGRES@::' "${D}/etc/init.d/spamd"
 
-	use mysql && \
-		sed -i -e 's:@USEMYSQL@::' "${D}/etc/init.d/spamd" || \
+		dodoc sql/*_pg.sql
+	else
+		sed -i -e '/@USEPOSTGRES@/d' "${D}/etc/init.d/spamd"
+	fi
+
+	if use mysql; then
+		sed -i -e 's:@USEMYSQL@::' "${D}/etc/init.d/spamd"
+
+		dodoc sql/*_mysql.sql
+	else
 		sed -i -e '/@USEMYSQL@/d' "${D}/etc/init.d/spamd"
+	fi
 
 	dodoc NOTICE TRADEMARK CREDITS INSTALL.VMS UPGRADE USAGE \
 		sql/README.bayes sql/README.awl procmailrc.example sample-nonspam.txt \
