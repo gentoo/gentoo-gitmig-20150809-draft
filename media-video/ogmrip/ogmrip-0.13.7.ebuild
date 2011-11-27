@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.7.ebuild,v 1.1 2011/11/18 11:07:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.7.ebuild,v 1.2 2011/11/27 04:21:22 radhermit Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -49,6 +49,8 @@ DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext
 		dev-util/intltool )
 	dev-util/pkgconfig"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog README TODO"
