@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.3 2011/11/27 15:54:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.4 2011/11/27 15:58:44 radhermit Exp $
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> sinfo-0.0.43.ebuild:
+  Remove multiple static-libs settings.
 
   27 Nov 2011; Tim Harder <radhermit@gentoo.org> sinfo-0.0.43.ebuild:
   Remove forgotten in source build setting.
