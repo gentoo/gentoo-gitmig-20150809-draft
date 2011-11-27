@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.8 2011/10/19 21:28:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.9 2011/11/27 18:09:26 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -17,9 +17,7 @@ KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus doc exif jpeg lcms python svg tiff xmp"
 
 RDEPEND=">=x11-libs/gtk+-2.18:2
-	|| (
-		x11-libs/gtk+:2[jpeg?,tiff?]
-		x11-libs/gdk-pixbuf:2[jpeg?,tiff?] )
+	x11-libs/gdk-pixbuf:2[jpeg?,tiff?]
 	>=dev-libs/glib-2.25.9:2
 	>=dev-libs/libxml2-2
 	>=gnome-base/gconf-2.31.1
