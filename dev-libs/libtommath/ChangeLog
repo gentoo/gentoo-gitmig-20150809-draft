@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtommath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.46 2011/11/27 03:58:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.47 2011/11/27 23:08:27 jer Exp $
+
+  27 Nov 2011; Jeroen Roovers <jer@gentoo.org> libtommath-0.42.0-r1.ebuild:
+  Do not use autotools-utils.eclass (bug #392097).
 
   27 Nov 2011; Tim Harder <radhermit@gentoo.org> libtommath-0.42.0-r1.ebuild:
   Build in the source tree.

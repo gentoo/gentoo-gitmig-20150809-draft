@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.42.0-r1.ebuild,v 1.2 2011/11/27 03:58:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.42.0-r1.ebuild,v 1.3 2011/11/27 23:08:27 jer Exp $
 
 EAPI=4
 
-inherit autotools-utils eutils multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="highly optimized and portable routines for integer based number theoretic applications"
 HOMEPAGE="http://www.libtom.org/"
@@ -16,8 +16,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-
 IUSE="doc examples static-libs"
 
 DEPEND="sys-devel/libtool"
-
-AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
@@ -46,5 +44,5 @@ src_install() {
 		dodoc demo/*.c
 	fi
 
-	use static-libs || remove_libtool_files
+	use static-libs || find "${ED}" \( -name '*.a' -or -name '*.la' \) -delete
 }
