@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.10.ebuild,v 1.1 2011/11/19 05:03:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.10.ebuild,v 1.2 2011/11/27 04:38:16 radhermit Exp $
 
 EAPI=4
 
@@ -40,6 +40,8 @@ DEPEND="${RDEPEND}
 # This needs RECORD extension from X.org server which isn't necessarily
 # enabled. Xlib: extension "RECORD" missing on display ":0.0".
 RESTRICT="test"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
 	local myconf=""
