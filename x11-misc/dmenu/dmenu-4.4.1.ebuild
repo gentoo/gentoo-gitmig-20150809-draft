@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.4.1.ebuild,v 1.4 2011/11/17 18:52:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.4.1.ebuild,v 1.5 2011/11/27 23:54:36 jer Exp $
 
 EAPI="4"
 
@@ -18,7 +18,6 @@ IUSE="xinerama"
 DEPEND="x11-libs/libX11
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${DEPEND}
-	!app-misc/lsx
 	!net-dialup/lrzsz"
 
 src_prepare() {
