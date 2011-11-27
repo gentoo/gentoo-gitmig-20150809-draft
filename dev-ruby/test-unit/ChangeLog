@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.44 2011/10/12 17:45:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.45 2011/11/27 09:30:59 graaff Exp $
+
+*test-unit-2.4.2 (27 Nov 2011)
+
+  27 Nov 2011; Hans de Graaff <graaff@gentoo.org> +test-unit-2.4.2.ebuild:
+  Version bump.
 
   12 Oct 2011; Hans de Graaff <graaff@gentoo.org> test-unit-2.4.0.ebuild:
   Fix USE=-doc, based on fixes by Shunsuke Shimizu in bug 386849.
