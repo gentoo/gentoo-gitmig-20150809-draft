@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.32 2011/11/23 13:03:02 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.33 2011/11/27 22:46:13 jer Exp $
+
+  27 Nov 2011; Jeroen Roovers <jer@gentoo.org> idnkit-1.0-r2.ebuild:
+  Do not use autotools-utils.eclass (bug #392159).
 
   23 Nov 2011; Naohiro Aota <naota@gentoo.org> idnkit-1.0-r2.ebuild:
   Add ~x86-fbsd. Depends on virtual/iconv instead of glibc; Specify
