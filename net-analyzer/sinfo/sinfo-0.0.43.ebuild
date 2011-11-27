@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/sinfo-0.0.43.ebuild,v 1.1 2011/11/26 11:18:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/sinfo-0.0.43.ebuild,v 1.2 2011/11/27 15:51:42 radhermit Exp $
 
 EAPI=4
 
-inherit eutils autotools-utils
+inherit autotools-utils
 
 DESCRIPTION="A monitoring tool for networked computers"
 HOMEPAGE="http://www.ant.uni-bremen.de/whomes/rinas/sinfo/"
@@ -20,23 +20,29 @@ RDEPEND="dev-libs/boost
 DEPEND="${RDEPEND}
 	dev-cpp/asio"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+#AUTOTOOLS_IN_SOURCE_BUILD=1
+DOCS=( AUTHORS ChangeLog README )
+
+PATCHES=(
+	"${FILESDIR}"/${P}-librpc-linking.patch
+	"${FILESDIR}"/${P}-ncurses-m4.patch
+)
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-librpc-linking.patch
-	epatch "${FILESDIR}"/${P}-ncurses-m4.patch
+	autotools-utils_src_prepare
 	eautoreconf
 }
 
 src_configure() {
-	econf \
-		--with-ncurses \
+	local myeconfargs=(
+		--with-ncurses
 		$(use_enable static-libs static)
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	default
-	remove_libtool_files
+	autotools-utils_src_install
 
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
