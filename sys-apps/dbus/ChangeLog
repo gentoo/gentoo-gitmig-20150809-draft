@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.315 2011/11/12 16:40:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.316 2011/11/27 19:03:43 armin76 Exp $
+
+  27 Nov 2011; Raúl Porcel <armin76@gentoo.org> dbus-1.4.16.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #387257
 
   12 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> dbus-1.4.16-r2.ebuild:
   Fix missing SLOT in glib block by Jeroen Roovers
