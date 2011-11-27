@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.3.0.ebuild,v 1.1 2011/10/23 16:04:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.3.2.ebuild,v 1.1 2011/11/27 02:37:47 blueness Exp $
 
 EAPI=3
 
@@ -21,5 +21,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/elfutils
-	>=sys-devel/binutils-2.14.90.0.8-r1"
+	sys-devel/binutils
+	sys-apps/attr"
 RDEPEND=""

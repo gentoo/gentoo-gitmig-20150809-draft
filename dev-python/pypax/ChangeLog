@@ -1,5 +1,11 @@
 
 
+*pypax-0.3.2 (27 Nov 2011)
+
+  27 Nov 2011; Anthony G. Basile <blueness@gentoo.org> -pypax-0.2.5.ebuild,
+  -pypax-0.3.0.ebuild, +pypax-0.3.2.ebuild:
+  Remove 0.2 branch, bump 0.3 branch to latest
+
 *pypax-0.4.0 (27 Nov 2011)
 
   27 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +pypax-0.4.0.ebuild,
