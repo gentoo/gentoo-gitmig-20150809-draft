@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.6.1.ebuild,v 1.10 2011/11/27 03:23:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.6.1.ebuild,v 1.11 2011/11/27 22:49:28 jer Exp $
 
 EAPI="3"
 
-inherit autotools-utils
+inherit autotools eutils
 
 DESCRIPTION="The GNU SASL library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
@@ -25,8 +25,6 @@ DEPEND="
 RDEPEND="${DEPEND}
 	!net-misc/gsasl"
 
-AUTOTOOLS_IN_SOURCE_BUILD="1"
-
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-gss-extra.patch"
 	eautoreconf
@@ -45,6 +43,8 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "installation failed"
-	use static-libs || remove_libtool_files
+	if ! use static-libs; then
+		rm -f "${D}"/usr/lib*/lib*.la
+	fi
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 }
