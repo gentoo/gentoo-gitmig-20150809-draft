@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-2.10.ebuild,v 1.1 2011/10/25 23:07:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-2.10.ebuild,v 1.2 2011/11/27 03:54:49 radhermit Exp $
 
 EAPI=4
 
@@ -19,6 +19,8 @@ DEPEND=">=dev-lang/perl-5.6
 	sys-devel/bison"
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure(){
 	local myconf

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.42.0-r1.ebuild,v 1.1 2011/08/02 05:18:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.42.0-r1.ebuild,v 1.2 2011/11/27 03:58:24 radhermit Exp $
 
 EAPI=4
 
@@ -16,6 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-
 IUSE="doc examples static-libs"
 
 DEPEND="sys-devel/libtool"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch

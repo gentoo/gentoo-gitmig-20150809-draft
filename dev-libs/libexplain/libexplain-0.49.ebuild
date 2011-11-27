@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.49.ebuild,v 1.1 2011/11/10 19:32:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.49.ebuild,v 1.2 2011/11/27 03:52:25 radhermit Exp $
 
 EAPI=4
 inherit autotools-utils eutils
@@ -25,6 +25,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"/${MY_P}
 
 DOCS=( README )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	# Portage incompatible test
