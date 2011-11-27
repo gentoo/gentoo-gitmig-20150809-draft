@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.106 2011/09/29 22:05:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.107 2011/11/27 19:41:02 voyageur Exp $
+
+  27 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-base-1.20.1.ebuild, -gnustep-base-1.22.0.ebuild,
+  gnustep-base-1.22.1.ebuild:
+  Use ssl USE-flag instead of gnutls
 
 *gnustep-base-1.22.1 (29 Sep 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.20.1.ebuild,v 1.6 2010/08/13 17:29:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.20.1.ebuild,v 1.7 2011/11/27 19:41:02 voyageur Exp $
 
 EAPI="3"
 
@@ -14,14 +14,14 @@ KEYWORDS="~alpha amd64 ppc ~ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~s
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
-IUSE="+libffi gnutls zeroconf"
+IUSE="+libffi ssl zeroconf"
 
 RDEPEND="${GNUSTEP_CORE_DEPEND}
 	>=gnustep-base/gnustep-make-2.0.8
 	!libffi? ( dev-libs/ffcall
 		gnustep-base/gnustep-make[-native-exceptions] )
 	libffi? ( virtual/libffi )
-	gnutls? ( net-libs/gnutls )
+	ssl? ( net-libs/gnutls )
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/libxslt-1.1
 	>=dev-libs/gmp-4.1
@@ -44,7 +44,7 @@ src_configure() {
 		myconf="--disable-libffi --enable-ffcall"
 	fi
 
-	myconf="$myconf $(use_enable gnutls tls)"
+	myconf="$myconf $(use_enable ssl tls)"
 	myconf="$myconf $(use_enable zeroconf)"
 	myconf="$myconf --with-xml-prefix=${EPREFIX}/usr"
 	myconf="$myconf --with-gmp-include=${EPREFIX}/usr/include --with-gmp-library=${EPREFIX}/usr/lib"
