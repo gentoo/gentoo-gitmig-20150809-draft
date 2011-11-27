@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/libdebian-installer-0.79.ebuild,v 1.1 2011/08/22 09:34:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/libdebian-installer-0.79.ebuild,v 1.2 2011/11/27 23:02:24 jer Exp $
 
 EAPI=2
 
-inherit autotools-utils eutils multilib
+inherit eutils multilib
 
 DESCRIPTION="Library of common debian-installer functions"
 HOMEPAGE="http://packages.qa.debian.org/libd/libdebian-installer.html"
@@ -48,5 +48,7 @@ src_install() {
 
 	dodoc HACKING debian/changelog
 
-	use static-libs || remove_libtool_files
+	if ! use static-libs; then
+		rm -f "${D}"/usr/lib*/lib*.la
+	fi
 }

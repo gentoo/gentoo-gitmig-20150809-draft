@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdebian-installer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/ChangeLog,v 1.10 2011/08/22 09:34:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/ChangeLog,v 1.11 2011/11/27 23:02:24 jer Exp $
+
+  27 Nov 2011; Jeroen Roovers <jer@gentoo.org> libdebian-installer-0.78.ebuild,
+  libdebian-installer-0.79.ebuild:
+  Do not use autotools-utils.eclass (bug #392091).
 
 *libdebian-installer-0.79 (22 Aug 2011)
 
