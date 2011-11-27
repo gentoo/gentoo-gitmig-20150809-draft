@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsoundtouch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.47 2011/11/02 14:52:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.48 2011/11/27 04:17:19 radhermit Exp $
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> libsoundtouch-1.6.0.ebuild:
+  Build in the source tree.
 
   02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libsoundtouch-1.6.0.ebuild:

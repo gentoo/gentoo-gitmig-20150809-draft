@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsmf/libsmf-1.3.ebuild,v 1.1 2011/10/01 07:57:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsmf/libsmf-1.3.ebuild,v 1.2 2011/11/27 04:14:40 radhermit Exp $
 
 EAPI=4
 
@@ -20,6 +20,8 @@ RDEPEND=">=dev-libs/glib-2.2:2
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	dev-util/pkgconfig"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
 	econf \

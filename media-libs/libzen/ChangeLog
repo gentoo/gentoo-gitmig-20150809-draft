@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.24 2011/11/13 18:16:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.25 2011/11/27 04:07:20 radhermit Exp $
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> libzen-0.4.23.ebuild:
+  Build in the source tree.
 
   13 Nov 2011; Tim Harder <radhermit@gentoo.org> -libzen-0.4.20.ebuild,
   -files/libzen-0.4.20-gcc46.patch, -libzen-0.4.21-r1.ebuild:

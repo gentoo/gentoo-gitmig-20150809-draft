@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.3.ebuild,v 1.1 2011/10/26 21:27:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.3.ebuild,v 1.2 2011/11/27 04:12:14 radhermit Exp $
 
 EAPI="4"
 
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 DOCS=( Changelog.txt README )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.13.4-docs.patch

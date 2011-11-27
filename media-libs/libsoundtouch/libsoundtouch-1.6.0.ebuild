@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo FoundationOU
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.6.0.ebuild,v 1.6 2011/11/02 14:52:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.6.0.ebuild,v 1.7 2011/11/27 04:17:19 radhermit Exp $
 
 EAPI=4
 inherit autotools-utils eutils flag-o-matic
@@ -17,6 +17,8 @@ KEYWORDS="amd64 hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="sse2 static-libs"
 
 S=${WORKDIR}/${MY_PN}
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-flags.patch
