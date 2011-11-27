@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/blohg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.10 2011/11/17 00:38:16 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.11 2011/11/27 22:48:23 rafaelmartins Exp $
+
+  27 Nov 2011; Rafael G. Martins <rafaelmartins@gentoo.org> blohg-9999.ebuild:
+  live ebuild now depends on frozen-flask.
 
 *blohg-0.8 (17 Nov 2011)
 
