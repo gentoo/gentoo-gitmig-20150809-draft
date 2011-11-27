@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/potrace-1.10-r1.ebuild,v 1.4 2011/11/20 16:54:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/potrace-1.10-r1.ebuild,v 1.5 2011/11/27 04:03:24 radhermit Exp $
 
 EAPI="4"
 
@@ -19,6 +19,8 @@ DOCS=( AUTHORS ChangeLog NEWS README )
 
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
 	econf \
