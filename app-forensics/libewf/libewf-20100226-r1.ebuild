@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20100226-r1.ebuild,v 1.3 2011/11/24 22:31:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20100226-r1.ebuild,v 1.4 2011/11/27 03:48:05 radhermit Exp $
 
 EAPI="4"
 
@@ -22,6 +22,8 @@ DEPEND="
 	sys-libs/zlib
 	dev-libs/openssl"
 RDEPEND="${DEPEND}"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
 	econf \
