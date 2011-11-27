@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.9.1.ebuild,v 1.1 2011/05/23 10:31:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.9.1.ebuild,v 1.2 2011/11/27 04:57:39 radhermit Exp $
 
 EAPI="3"
 
@@ -17,6 +17,8 @@ IUSE="static-libs"
 
 DEPEND=">=net-libs/libnfnetlink-1.0.0"
 RDEPEND=${DEPEND}
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	linux-info_pkg_setup
