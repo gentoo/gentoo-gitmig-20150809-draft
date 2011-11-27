@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.8 2011/11/25 18:15:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.9 2011/11/27 07:18:00 tetromino Exp $
+
+*colord-0.1.15 (27 Nov 2011)
+
+  27 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -colord-0.1.14.ebuild, +colord-0.1.15.ebuild,
+  +files/colord-0.1.15-fix-automagic-libgusb.patch, metadata.xml:
+  Bump, drop vulnerable version. 0.1.15 includes fixes for CVE-2011-4349 (same
+  as in 0.1.14-r1), adds support for ColorHug, fixes assorted bugs. Dropped
+  hppa keywords due to new optional libgusb dependency (bug #392057).
 
 *colord-0.1.14-r1 (25 Nov 2011)
 
@@ -8,9 +17,9 @@
   -colord-0.1.12.ebuild, -colord-0.1.13.ebuild, +colord-0.1.14-r1.ebuild,
   +files/colord-0.1.14-sql-injections.patch,
   +files/colord-0.1.14-sql-injections-2.patch:
-  Add patches to fix SQL injections (bug #391879, thanks to Agostino Sarubbo for
-  reporting). Allow building against freebsd's libusb (bug #387959, thanks to
-  Naohiro Aota). Drop old versions.
+  Add patches to fix SQL injections (CVE-2011-4349, bug #391879, thanks to
+  Agostino Sarubbo for reporting). Allow building against freebsd's libusb
+  (bug #387959, thanks to Naohiro Aota). Drop old versions.
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> colord-0.1.14.ebuild:
   add ~arm, bug #387959

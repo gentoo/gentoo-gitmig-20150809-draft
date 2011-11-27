@@ -3,8 +3,10 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
+		<flag name="gusb">Enable <pkg>dev-libs/libgusb</pkg> support in drivers;
+			required for some colorimeter models, e.g. ColorHug</flag>
 		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
 			for introspection</flag>
-		<flag name='vala'>Generate bindings for <pkg>dev-lang/vala</pkg></flag>
+		<flag name="vala">Generate bindings for <pkg>dev-lang/vala</pkg></flag>
 	</use>
 </pkgmetadata>
