@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numexpr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.6 2011/11/25 09:31:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.7 2011/11/27 12:13:16 xarthisius Exp $
+
+*numexpr-2.0 (27 Nov 2011)
+
+  27 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> +numexpr-2.0.ebuild:
+  Version bump
 
   25 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> numexpr-1.4.2.ebuild:
   Add prefix love
