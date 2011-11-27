@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/dnsruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/ChangeLog,v 1.3 2011/11/11 13:59:50 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/ChangeLog,v 1.4 2011/11/27 14:37:54 mschiff Exp $
+
+*dnsruby-1.53 (27 Nov 2011)
+
+  27 Nov 2011; <mschiff@gentoo.org> +dnsruby-1.53.ebuild:
+  Version bump. Thanks to Tom Hendrikx. Fixes bug #391901.
 
   11 Nov 2011; Marc Schiffbauer <mschiff@gentoo.org> metadata.xml:
   Added me as maintainer.
