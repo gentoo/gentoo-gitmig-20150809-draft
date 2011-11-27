@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20110726-r5.ebuild,v 1.1 2011/10/23 11:00:19 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20110726-r5.ebuild,v 1.2 2011/11/27 18:12:39 swift Exp $
 
 EAPI="4"
 IUSE="+peer_perms +open_perms +ubac doc"
@@ -14,7 +14,7 @@ SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND=">=sys-apps/policycoreutils-1.30.30
 	>=sys-fs/udev-151"
@@ -83,8 +83,6 @@ src_configure() {
 		then
 			echo "unconfined = base" >> "${S}/${i}/policy/modules.conf"
 		fi
-		# Add xdg support
-		echo "xdg = base" >> "${S}/${i}/policy/modules.conf"
 
 		sed -i -e '/^QUIET/s/n/y/' -e "/^NAME/s/refpolicy/$i/" \
 			"${S}/${i}/build.conf" || die "build.conf setup failed."

@@ -1,5 +1,8 @@
 
 
+  27 Nov 2011; <swift@gentoo.org> selinux-pan-2.20110726-r2.ebuild:
+  Stable on x86/amd64
+
   12 Nov 2011; <swift@gentoo.org> -files/fix-apps-pan-r1.patch,
   -selinux-pan-2.20101213-r1.ebuild:
   Removing old policies
