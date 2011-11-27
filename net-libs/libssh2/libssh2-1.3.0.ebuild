@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.3.0.ebuild,v 1.5 2011/11/23 06:08:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.3.0.ebuild,v 1.6 2011/11/27 04:27:56 radhermit Exp $
 
 EAPI="4"
 
@@ -19,6 +19,8 @@ DEPEND="!gcrypt? ( dev-libs/openssl )
 	gcrypt? ( dev-libs/libgcrypt )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
 	local myconf
