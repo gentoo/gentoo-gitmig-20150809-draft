@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.18.0.ebuild,v 1.1 2011/11/24 21:08:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.19.0.ebuild,v 1.1 2011/11/27 00:06:08 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ IUSE="ffmpeg"
 RDEPEND=">=x11-libs/gtk+-2.16:2
 	>=dev-python/pygtk-2.16
 	>=media-video/mplayer-1.0_rc1
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg[mp3] )
 	media-video/dvdauthor
 	media-video/vcdimager
 	virtual/cdrtools"
