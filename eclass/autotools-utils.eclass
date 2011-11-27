@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.27 2011/11/26 20:43:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.28 2011/11/27 09:17:35 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -11,7 +11,11 @@
 # autotools-utils.eclass is autotools.eclass(5) and base.eclass(5) wrapper
 # providing all inherited features along with econf arguments as Bash array,
 # out of source build with overridable build dir location, static archives
-# handling, libtool files removal, enable/disable debug handling.
+# handling, libtool files removal.
+#
+# Please note note that autotools-utils does not support mixing of its phase
+# functions with regular econf/emake calls. If necessary, please call
+# autotools-utils_src_compile instead of the latter.
 #
 # @EXAMPLE:
 # Typical ebuild using autotools-utils.eclass:
