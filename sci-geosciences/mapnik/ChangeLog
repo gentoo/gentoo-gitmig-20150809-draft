@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.28 2011/11/13 02:19:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.29 2011/11/27 16:05:08 swegener Exp $
+
+  27 Nov 2011; Sven Wegener <swegener@gentoo.org> mapnik-0.7.1-r1.ebuild,
+  mapnik-2.0.0.ebuild, metadata.xml:
+  Build geos input plugin with USE="geos", only build postgis input plugin with
+  USE="postgres".
 
 *mapnik-2.0.0 (13 Nov 2011)
 

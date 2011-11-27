@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.1 2011/11/13 02:19:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.2 2011/11/27 16:05:07 swegener Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="bidi cairo debug doc gdal nobfonts postgres python sqlite"
+IUSE="bidi cairo debug doc gdal geos nobfonts postgres python sqlite"
 
 RDEPEND="dev-libs/boost
 	net-misc/curl
@@ -28,13 +28,10 @@ RDEPEND="dev-libs/boost
 	dev-libs/libxml2
 	dev-libs/icu
 	x11-libs/agg[truetype]
-	postgres? (
-		>=dev-db/postgresql-base-8.3
-		>=dev-db/postgis-1.5.2
-		sci-libs/geos
-	)
+	postgres? ( >=dev-db/postgresql-base-8.3 )
 	python? ( dev-libs/boost[python] )
 	gdal? ( sci-libs/gdal )
+	geos? ( sci-libs/geos )
 	python? ( dev-lang/python )
 	bidi? ( dev-libs/fribidi )
 	cairo? (
@@ -56,7 +53,9 @@ src_prepare() {
 }
 
 src_configure() {
-	local PLUGINS=shape,raster,postgis,osm
+	local PLUGINS=shape,raster,osm
+	use geos && PLUGINS+=,geos
+	use postgres && PLUGINS+=,postgis
 	use sqlite && PLUGINS+=,sqlite
 
 	SCONOPTS="
