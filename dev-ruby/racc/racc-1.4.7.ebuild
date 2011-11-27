@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.7.ebuild,v 1.1 2011/10/20 06:09:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.7.ebuild,v 1.2 2011/11/27 19:24:55 graaff Exp $
 
 EAPI=4
 
 USE_RUBY="ree18 ruby18 ruby19 jruby"
 
-RUBY_FAKEGEM_TASK_DOC=""
+RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc README.ja.rdoc TODO ChangeLog"
 
 inherit multilib ruby-fakegem
@@ -20,14 +20,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-ruby_add_bdepend "dev-ruby/rake"
+ruby_add_bdepend "dev-ruby/rake
+	doc? ( dev-ruby/hoe )"
 
 all_ruby_prepare() {
-	# for Ruby 1.9.2 compatibility
-	sed -i -e '1i $: << "."' Rakefile || die
-
-	sed -i -e '/tasks\/email/s:^:#:' Rakefile || die "rakefile fix failed"
 	sed -i -e 's|/tmp/out|${TMPDIR:-/tmp}/out|' test/helper.rb || die "tests fix failed"
+
+	# Avoid depending on rake-compiler since we don't use it to compile
+	# the extension.
+	sed -i -e '/rake-compiler/ s:^:#:' -e '/extensiontask/ s:^:#:' Rakefile
+	sed -i -e '/ExtensionTask/,/^  end/ s:^:#:' Rakefile
 }
 
 each_ruby_prepare() {
