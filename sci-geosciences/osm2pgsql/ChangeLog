@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/osm2pgsql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.7 2011/06/01 11:48:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.8 2011/11/27 13:54:45 swegener Exp $
+
+  27 Nov 2011; Sven Wegener <swegener@gentoo.org> osm2pgsql-20100413.ebuild,
+  osm2pgsql-99999999.ebuild:
+  postgis is not required by osm2pgsql itself, it's only required on the
+  server side.
 
   01 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   osm2pgsql-20100413.ebuild, osm2pgsql-99999999.ebuild:
