@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.77 2011/10/31 19:44:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.78 2011/11/27 19:07:37 armin76 Exp $
+
+  27 Nov 2011; Raúl Porcel <armin76@gentoo.org> dbus-python-0.84.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #387257
 
   31 Oct 2011; Markos Chandras <hwoarang@gentoo.org> dbus-python-0.84.0.ebuild:
   Restrict PyPy ABIs. Disable tests with 2.4 and 2.5 Python ABIs. Clean ebuild.
