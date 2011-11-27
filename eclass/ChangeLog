@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.29 2011/11/27 09:17:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.30 2011/11/27 09:57:20 mgorny Exp $
+
+  27 Nov 2011; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Revert making pushd/popd fatal due to humongous breakage. Add a warning
+  message instead.
 
   27 Nov 2011; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Denote that autotools-utils must not be mixed with econf/emake.
