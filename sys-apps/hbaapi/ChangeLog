@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hbaapi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hbaapi/ChangeLog,v 1.3 2009/02/09 00:35:36 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hbaapi/ChangeLog,v 1.4 2011/11/27 07:28:24 radhermit Exp $
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> hbaapi-2.2.ebuild,
+  +files/hbaapi-2.2-qa.patch:
+  Update to EAPI 4, respect CFLAGS (bug #241988), restrict test phase (bug
+  #320357), respect LDFLAGS (bug #336558), and fix various qa warnings.
 
   09 Feb 2009; Mike Frysinger <vapier@gentoo.org> hbaapi-2.2.ebuild:
   Cleanup ebuild a bit.
