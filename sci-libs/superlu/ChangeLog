@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/superlu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.12 2011/09/01 16:28:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.13 2011/11/27 04:14:47 bicatali Exp $
+
+*superlu-4.3 (27 Nov 2011)
+
+  27 Nov 2011; Sébastien Fabbro <bicatali@gentoo.org> +superlu-4.3.ebuild:
+  Version bump
 
 *superlu-4.2 (01 Sep 2011)
 
