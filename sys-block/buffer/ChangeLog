@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/buffer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/buffer/ChangeLog,v 1.6 2011/01/08 11:31:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/buffer/ChangeLog,v 1.7 2011/11/27 06:44:26 radhermit Exp $
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> buffer-1.19-r2.ebuild:
+  Update to EAPI 4 and respect LDFLAGS (bug #335378).
 
   08 Jan 2011; Michael Weber <xmw@gentoo.org> buffer-1.19-r2.ebuild:
   arm/sparc stable
