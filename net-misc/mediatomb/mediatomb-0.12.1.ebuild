@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1.ebuild,v 1.7 2011/11/17 03:40:31 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1.ebuild,v 1.8 2011/11/27 04:55:10 radhermit Exp $
 
 EAPI=2
 inherit autotools-utils eutils linux-info
@@ -32,6 +32,8 @@ DEPEND="
 	sys-libs/zlib
 	virtual/libiconv"
 RDEPEND="${DEPEND}"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	if use inotify; then

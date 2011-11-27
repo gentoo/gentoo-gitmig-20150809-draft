@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.23 2011/11/17 03:40:31 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.24 2011/11/27 04:55:10 radhermit Exp $
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> mediatomb-0.12.1.ebuild:
+  Build in the source tree.
 
   17 Nov 2011; Ian Stakenvicius <axs@gentoo.org> mediatomb-0.12.1.ebuild,
   +files/mediatomb-0.12.1-mozjs185.patch:
