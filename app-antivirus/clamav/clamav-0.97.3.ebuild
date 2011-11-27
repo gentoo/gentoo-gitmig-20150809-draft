@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.3.ebuild,v 1.6 2011/10/23 08:24:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.3.ebuild,v 1.7 2011/11/27 03:37:41 radhermit Exp $
 
 EAPI=4
 
@@ -30,6 +30,8 @@ RDEPEND="${CDEPEND}
 RESTRICT="test"
 
 DOCS=( AUTHORS BUGS ChangeLog FAQ INSTALL NEWS README UPGRADE )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	enewgroup clamav
