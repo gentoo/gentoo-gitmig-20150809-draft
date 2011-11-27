@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.63 2011/11/09 13:01:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.64 2011/11/27 14:53:00 aballier Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
 IUSE="
-	aac aacplus alsa amr bindist +bzip2 cdio celt cpudetection debug dirac doc
+	aac aacplus alsa amr ass bindist +bzip2 cdio celt cpudetection debug dirac doc
 	+encode faac frei0r gnutls gsm +hardcoded-tables ieee1394 jack jpeg2k libv4l
 	modplug mp3 network openal openssl oss pic pulseaudio qt-faststart rtmp
 	schroedinger sdl speex static-libs test theora threads truetype v4l vaapi
@@ -47,6 +47,7 @@ done
 RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
+	ass? ( media-libs/libass )
 	bzip2? ( app-arch/bzip2 )
 	cdio? ( dev-libs/libcdio )
 	celt? ( >=media-libs/celt-0.11.1 )
@@ -163,6 +164,7 @@ src_configure() {
 	# libavfilter options
 	use frei0r && myconf="${myconf} --enable-frei0r"
 	use truetype && myconf="${myconf} --enable-libfreetype"
+	use ass && myconf="${myconf} --enable-libass"
 
 	# Threads; we only support pthread for now but ffmpeg supports more
 	use threads && myconf="${myconf} --enable-pthreads"

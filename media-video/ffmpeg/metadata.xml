@@ -11,6 +11,7 @@
       instruction set, present in modern AMD CPUs.  (Check for
       3dnowext in /proc/cpuinfo to know whether your CPU supports it).
     </flag>
+	<flag name="ass">Enables <pkg>media-libs/libass</pkg> based subtitle renderer.</flag>
     <flag name="aacplus">AAC+ encoding via <pkg>media-libs/libaacplus</pkg>.</flag>
     <flag name="amr">Enables Adaptive Multi-Rate Audio support</flag>
     <flag name="avx">Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)</flag>
