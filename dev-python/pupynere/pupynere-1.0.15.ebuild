@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pupynere/pupynere-1.0.13.ebuild,v 1.3 2010/12/26 15:09:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pupynere/pupynere-1.0.15.ebuild,v 1.1 2011/11/27 03:56:41 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
