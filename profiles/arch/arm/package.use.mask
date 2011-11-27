@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.66 2011/11/25 08:00:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.67 2011/11/27 07:16:48 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Nov 2011)
+# Missing keywords on dev-libs/libgusb, bug #392057
+x11-misc/colord gusb
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;

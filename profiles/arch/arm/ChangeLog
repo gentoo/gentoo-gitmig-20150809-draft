@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.144 2011/11/25 08:00:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.145 2011/11/27 07:16:48 tetromino Exp $
+
+  27 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  package.use.masked colord[gusb], needs libgusb keyworded (bug #392057).
 
   25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask USE flags on gnome-3.2 packages due to missing keywords on deps; bug
