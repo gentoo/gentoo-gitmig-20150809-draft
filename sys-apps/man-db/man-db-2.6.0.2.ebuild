@@ -1,55 +1,51 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.0.2.ebuild,v 1.8 2011/07/09 16:41:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.0.2.ebuild,v 1.9 2011/11/27 18:35:39 vapier Exp $
 
 EAPI="2"
 
-inherit autotools-utils eutils
+inherit eutils
 
 DESCRIPTION="a man replacement that utilizes berkdb instead of flat files"
 HOMEPAGE="http://www.nongnu.org/man-db/"
-SRC_URI="http://download.savannah.nongnu.org/releases/man-db/${P}.tar.gz"
+SRC_URI="mirror://nongnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="berkdb +gdbm nls static-libs"
+IUSE="berkdb +gdbm nls static-libs zlib"
 
-RDEPEND="
-	dev-libs/libpipeline
+RDEPEND="dev-libs/libpipeline
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
 	!berkdb? ( !gdbm? ( sys-libs/gdbm ) )
 	|| ( sys-apps/groff >=app-doc/heirloom-doctools-080407-r2 )
-	!sys-apps/man
-"
-DEPEND="
-	${RDEPEND}
-	nls? ( sys-devel/gettext )
-"
+	zlib? ( sys-libs/zlib )
+	!sys-apps/man"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
+	# Create user now as Makefile in src_install does setuid/chown
 	enewgroup man 15
 	enewuser man 13 -1 /usr/share/man man
 }
 
 src_prepare() {
-	# bug #371937
-	epatch "${FILESDIR}"/${PN}-2.6.0.2-flock.h.patch
+	epatch "${FILESDIR}"/${PN}-2.6.0.2-flock.h.patch #371937
 }
 
 src_configure() {
-	local db="gdbm"
-	use berkdb && ! use gdbm && db="db"
+	export ac_cv_lib_z_gzopen=$(usex zlib)
 	econf \
 		--with-sections="1 1p 8 2 3 3p 4 5 6 7 9 0p tcl n l p o 1x 2x 3x 4x 5x 6x 7x 8x" \
 		$(use_enable nls) \
 		$(use_enable static-libs static) \
-		--with-db=${db}
+		--with-db=$(usex gdbm gdbm $(usex berkdb db gdbm))
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc README ChangeLog NEWS docs/{HACKING,TODO}
-	use static-libs || remove_libtool_files
+	use static-libs || find "${D}"/usr/lib* -name '*.la' -delete
 }
