@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.7.ebuild,v 1.2 2011/10/05 18:41:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.9.ebuild,v 1.1 2011/11/27 05:55:07 bicatali Exp $
 
-EAPI=2
-inherit elisp-common bash-completion autotools
+EAPI=4
+inherit elisp-common bash-completion-r1 autotools
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
@@ -15,28 +15,28 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc emacs examples"
 
 DEPEND="virtual/latex-base
-		dev-texlive/texlive-pstricks
-		dev-texlive/texlive-pictures
-		dev-texlive/texlive-latexextra
-		dev-tex/xcolor
-		emacs? ( virtual/emacs )"
+	dev-texlive/texlive-pstricks
+	dev-texlive/texlive-pictures
+	dev-texlive/texlive-latexextra
+	dev-tex/xcolor
+	emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}"
 SITEFILE=50${PN}-gentoo.el
 
 src_prepare() {
 	# disable automatic install of doc and examples
-	epatch "${FILESDIR}"/${P}-doc-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-1.2.7-doc-gentoo.patch
 	eautoreconf
 }
 
 src_configure() {
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-epix-el
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	default
 	if use emacs; then
 		# do compilation here as the make install target will
 		# create the .el file
@@ -44,16 +44,15 @@ src_install() {
 		elisp-install ${PN} *.elc *.el || die "elisp-install failed!"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
-	dobashcompletion bash_completions \
-		|| die "install of bash completions failed"
+	dobashcomp bash_completions
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins doc/*gz || die
+		doins doc/*gz
 	fi
 	if use examples; then
 		cd samples
 		insinto /usr/share/doc/${PF}/examples
-		doins *.xp *.flx *c *h README || die
+		doins *.xp *.flx *c *h README
 	fi
 }
 
