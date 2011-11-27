@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gsnmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.2 2011/06/05 13:11:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.3 2011/11/27 04:51:35 radhermit Exp $
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> gsnmp-0.3.0.ebuild:
+  Build in the source tree.
 
   05 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> gsnmp-0.3.0.ebuild:
   Marked ~ppc wrt #369595
