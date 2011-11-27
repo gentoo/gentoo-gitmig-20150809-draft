@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-rdoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.3 2011/07/15 17:35:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.4 2011/11/27 19:27:39 graaff Exp $
+
+  27 Nov 2011; Hans de Graaff <graaff@gentoo.org> ruby-rdoc-3.ebuild:
+  Mark stable since the underlying ruby-enterprise implementation is also
+  marked stable. Fixes bug 391525.
 
   15 Jul 2011; Matt Turner <mattst88@gentoo.org> ruby-rdoc-1.ebuild:
   Added ~mips, bug 332593
