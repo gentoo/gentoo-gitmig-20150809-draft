@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.0.1.ebuild,v 1.1 2011/05/27 17:34:23 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.0.2.ebuild,v 1.1 2011/11/27 21:09:29 ottxor Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit autotools-utils savedconfig
 
@@ -12,28 +12,32 @@ HOMEPAGE="http://www.espressomd.org"
 if [ "${PV%9999}" != "${PV}" ]; then
 	EGIT_REPO_URI="git://git.savannah.nongnu.org/espressomd.git"
 	EGIT_BRANCH="master"
-	inherit git
+	inherit git-2
 else
 	SRC_URI="mirror://nongnu/${PN}md/${P}.tar.gz"
 fi
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE="X doc examples fftw mpi packages test -tk"
 REQUIRED_USE="tk? ( X )"
 
 RESTRICT="tk? ( test )"
 
-RDEPEND="dev-lang/tcl
-	X? ( x11-libs/libX11 )
+RDEPEND="
+	dev-lang/tcl
 	fftw? ( sci-libs/fftw:3.0 )
 	mpi? ( virtual/mpi )
-	tk? ( >=dev-lang/tk-8.4.18-r1 )"
+	tk? ( >=dev-lang/tk-8.4.18-r1 )
+	X? ( x11-libs/libX11 )"
 
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen[-nodot]
+	doc? (
+		app-doc/doxygen[-nodot]
 		virtual/latex-base )"
+
+DOCS=( AUTHORS NEWS README ChangeLog )
 
 src_prepare() {
 	autotools-utils_src_prepare
@@ -53,15 +57,11 @@ src_configure() {
 
 src_compile() {
 	autotools-utils_src_compile
-	if use doc; then
-		autotools-utils_src_compile doc || die "emake doc failed"
-	fi
+	use doc && autotools-utils_src_compile doc
 }
 
 src_install() {
 	autotools-utils_src_install
-
-	dodoc AUTHORS NEWS README ChangeLog
 
 	insinto /usr/share/${PN}
 	doins ${AUTOTOOLS_BUILD_DIR}/myconfig-sample.h
