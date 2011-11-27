@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.127 2011/11/27 04:40:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.128 2011/11/27 22:33:48 jer Exp $
+
+  27 Nov 2011; Jeroen Roovers <jer@gentoo.org> geoip-1.4.8.ebuild:
+  Do not use autotools-utils.eclass (bug #392067).
 
   27 Nov 2011; Tim Harder <radhermit@gentoo.org> geoip-1.4.8.ebuild:
   Build in the source tree.

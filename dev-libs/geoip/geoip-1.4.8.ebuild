@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.8.ebuild,v 1.8 2011/11/27 04:40:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.8.ebuild,v 1.9 2011/11/27 22:33:48 jer Exp $
 
 EAPI=4
 
-inherit autotools autotools-utils
+inherit autotools
 
 MY_P=${P/geoip/GeoIP}
 
@@ -28,8 +28,6 @@ RDEPEND="
 	)
 "
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
@@ -49,7 +47,9 @@ src_install() {
 	use perl-geoipupdate && dobin apps/geoipupdate-pureperl.pl
 	dodoc AUTHORS ChangeLog README TODO conf/GeoIP.conf.default
 	rm "${ED}/etc/GeoIP.conf.default"
-	use static-libs || remove_libtool_files
+	if ! use static-libs; then
+		rm -f "${D}"/usr/lib*/lib*.la
+	fi
 
 	if use ipv6; then
 		insinto /usr/share/GeoIP
