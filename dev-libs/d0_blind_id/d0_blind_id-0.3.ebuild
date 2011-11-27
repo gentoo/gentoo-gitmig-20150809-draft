@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/d0_blind_id-0.3.ebuild,v 1.4 2011/10/19 20:46:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/d0_blind_id-0.3.ebuild,v 1.5 2011/11/27 04:43:17 radhermit Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -19,6 +19,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS=( d0_blind_id.txt )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
 	econf \

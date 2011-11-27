@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.8.ebuild,v 1.7 2011/08/02 15:00:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.8.ebuild,v 1.8 2011/11/27 04:40:49 radhermit Exp $
 
 EAPI=4
 
@@ -27,6 +27,8 @@ RDEPEND="
 		dev-perl/libwww-perl
 	)
 "
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 S=${WORKDIR}/${MY_P}
 
