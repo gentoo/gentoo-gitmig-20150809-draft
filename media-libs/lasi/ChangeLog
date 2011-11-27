@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/lasi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.21 2011/01/10 20:56:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.22 2011/11/27 04:05:57 bicatali Exp $
+
+*lasi-1.1.1 (27 Nov 2011)
+
+  27 Nov 2011; Sébastien Fabbro <bicatali@gentoo.org> -lasi-1.1.0-r1.ebuild,
+  +lasi-1.1.1.ebuild:
+  Version bump
 
   10 Jan 2011; Brent Baude <ranger@gentoo.org> lasi-1.1.0-r2.ebuild:
   stable ppc, bug 343521
