@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.10.ebuild,v 1.2 2011/11/27 04:38:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.10.ebuild,v 1.3 2011/11/27 23:17:24 jer Exp $
 
 EAPI=4
 
-inherit autotools-utils eutils
+inherit eutils
 
 DESCRIPTION="Program suite to record, replay and distribute user actions."
 HOMEPAGE="http://www.sandklef.com/xnee/"
@@ -70,5 +70,7 @@ src_install() {
 	default
 	dodoc AUTHORS BUGS ChangeLog FAQ NEWS README TODO
 	use gnome && make_desktop_entry gnee Gnee ${PN} "Utility;GTK"
-	use static-libs || remove_libtool_files
+	if ! use static-libs; then
+		rm -f "${D}"/usr/lib*/lib*.la
+	fi
 }
