@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/drwright
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.18 2011/11/25 06:34:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.19 2011/11/27 19:13:45 eva Exp $
+
+*drwright-3.2.2 (27 Nov 2011)
+
+  27 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org> +drwright-3.2.2.ebuild:
+  Version bump. Fix build issues.
 
   25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   -drwright-3.0.2.ebuild:
