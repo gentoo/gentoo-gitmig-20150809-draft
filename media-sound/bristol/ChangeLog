@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bristol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/ChangeLog,v 1.9 2011/11/27 03:45:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/ChangeLog,v 1.10 2011/11/27 06:05:02 radhermit Exp $
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> bristol-0.60.9.ebuild:
+  Ignore currently installed versions (bug #390731 by suchtmonster).
 
   27 Nov 2011; Tim Harder <radhermit@gentoo.org> bristol-0.60.9.ebuild:
   Build in the source tree.
