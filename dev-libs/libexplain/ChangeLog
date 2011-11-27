@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libexplain
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.10 2011/11/27 03:52:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.11 2011/11/27 17:01:06 jlec Exp $
+
+  27 Nov 2011; Justin Lecher <jlec@gentoo.org> libexplain-0.45.ebuild,
+  files/libexplain-0.45-configure.patch, libexplain-0.46.ebuild,
+  libexplain-0.47.ebuild, libexplain-0.49.ebuild:
+  Remove mixing of default phase functions with autotool-utils ones, #392177
 
   27 Nov 2011; Tim Harder <radhermit@gentoo.org> libexplain-0.49.ebuild:
   Build in the source tree.

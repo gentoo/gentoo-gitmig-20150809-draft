@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.46.ebuild,v 1.1 2011/08/31 02:39:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.46.ebuild,v 1.2 2011/11/27 17:01:06 jlec Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -31,8 +31,8 @@ src_prepare() {
 		-e '/t0363a/d' \
 		-i Makefile.in || die
 
-	epatch "${FILESDIR}"/${PN}-0.45-configure.patch
 	cp "${S}"/etc/configure.ac "${S}"
+	epatch "${FILESDIR}"/${PN}-0.45-configure.patch
 	eautoreconf
 }
 

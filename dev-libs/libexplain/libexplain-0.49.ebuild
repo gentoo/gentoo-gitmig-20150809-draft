@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.49.ebuild,v 1.2 2011/11/27 03:52:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.49.ebuild,v 1.3 2011/11/27 17:01:06 jlec Exp $
 
 EAPI=4
-inherit autotools-utils eutils
+inherit autotools-utils eutils multilib
 
 MY_P="${P}.D001"
 
@@ -28,6 +28,10 @@ DOCS=( README )
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.45-configure.patch
+	)
+
 src_prepare() {
 	# Portage incompatible test
 	sed \
@@ -35,13 +39,12 @@ src_prepare() {
 		-e '/t0363a/d' \
 		-i Makefile.in || die
 
-	epatch "${FILESDIR}"/${PN}-0.45-configure.patch
-
 	cp "${S}"/etc/configure.ac "${S}"
-	eautoreconf
+
+	autotools-utils_src_prepare
 }
 
-src_configure() {
-	econf \
-		$(use_enable static-libs static)
+src_install() {
+	autotools-utils_src_install
+	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.a
 }
