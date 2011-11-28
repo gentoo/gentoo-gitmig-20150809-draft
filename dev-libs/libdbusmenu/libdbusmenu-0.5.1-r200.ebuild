@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.5.1-r200.ebuild,v 1.2 2011/11/28 16:54:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.5.1-r200.ebuild,v 1.3 2011/11/28 22:37:34 zmedico Exp $
 
 EAPI=4
 
@@ -23,7 +23,8 @@ RDEPEND=">=dev-libs/glib-2.26
 	dev-libs/libxml2
 	gtk? ( >=x11-libs/gtk+-2.16:2 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
-	${CATEGORY}/${PN}:3"
+	${CATEGORY}/${PN}:3
+	!<${CATEGORY}/${PN}-0.5.1-r200"
 DEPEND="${RDEPEND}
 	test? (
 		dev-libs/json-glib[introspection?]
@@ -32,8 +33,7 @@ DEPEND="${RDEPEND}
 	dev-lang/vala:${PN_vala_version}[vapigen]
 	app-text/gnome-doc-utils
 	dev-util/intltool
-	dev-util/pkgconfig
-	!<${CATEGORY}/${PN}-0.5.1-r200"
+	dev-util/pkgconfig"
 
 src_prepare() {
 	# Drop DEPRECATED flags, bug #391103
