@@ -5,8 +5,4 @@
 <maintainer>
   <email>hattya@gentoo.org</email>
 </maintainer>
-<use>
-  <flag name='kakasi'>Enable kakasi support
-    (<pkg>dev-perl/Text-Kakasi</pkg>)</flag>
-</use>
 </pkgmetadata>
