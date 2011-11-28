@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.7 2011/10/05 17:42:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.8 2011/11/28 18:38:09 tetromino Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ IUSE="branding debug doc libnotify opengl pam $KERNEL_IUSE"
 RDEPEND=">=gnome-base/gconf-2.6.1:2
 	>=x11-libs/gtk+-2.14.0:2
 	>=gnome-base/gnome-desktop-2.29.0:2
-	>=gnome-base/gnome-menus-2.12
+	>=gnome-base/gnome-menus-2.12:0
 	>=dev-libs/glib-2.15:2
 	>=gnome-base/libgnomekbd-0.1
 	>=dev-libs/dbus-glib-0.71
