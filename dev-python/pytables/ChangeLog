@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytables
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.39 2011/11/25 09:39:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.40 2011/11/28 20:09:23 hwoarang Exp $
+
+  28 Nov 2011; Markos Chandras <hwoarang@gentoo.org> pytables-2.3.1.ebuild:
+  Don't inherit unused eclass. Patch by Arfrever.
 
 *pytables-2.3.1 (25 Nov 2011)
 
