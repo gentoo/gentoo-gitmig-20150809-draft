@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-2.2.3.ebuild,v 1.2 2011/11/23 08:10:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-2.2.3.ebuild,v 1.3 2011/11/28 11:54:28 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 
 DEPEND="dev-lang/perl"
 RDEPEND=""
