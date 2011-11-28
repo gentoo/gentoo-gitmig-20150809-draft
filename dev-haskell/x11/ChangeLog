@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/x11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.22 2011/05/11 21:07:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.23 2011/11/28 12:31:14 slyfox Exp $
+
+*x11-1.5.0.0-r1 (28 Nov 2011)
+
+  28 Nov 2011; Sergei Trofimovich <slyfox@gentoo.org> +x11-1.5.0.0-r1.ebuild:
+  Enable USE=xinerama by default.
 
 *x11-1.5.0.0 (11 May 2011)
 
