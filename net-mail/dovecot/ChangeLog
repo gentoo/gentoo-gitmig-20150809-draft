@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.329 2011/11/28 10:20:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.330 2011/11/28 10:56:14 eras Exp $
+
+  28 Nov 2011; Eray Aslan <eras@gentoo.org> dovecot-2.0.16.ebuild,
+  dovecot-2.0.16-r1.ebuild:
+  Add missing prefix to rm
 
   28 Nov 2011; Eray Aslan <eras@gentoo.org> dovecot-2.0.16.ebuild,
   dovecot-2.0.16-r1.ebuild:

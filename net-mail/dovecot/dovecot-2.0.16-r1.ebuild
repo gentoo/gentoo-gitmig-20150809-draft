@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.16-r1.ebuild,v 1.3 2011/11/28 10:20:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.16-r1.ebuild,v 1.4 2011/11/28 10:56:14 eras Exp $
 
 EAPI=4
 
@@ -253,7 +253,7 @@ src_install () {
 		doman doc/man/*.{1,7}
 	fi
 
-	use static-libs || find "${D}"/usr/lib* -name '*.la' -delete
+	use static-libs || find "${ED}"/usr/lib* -name '*.la' -delete
 }
 
 pkg_preinst() {
