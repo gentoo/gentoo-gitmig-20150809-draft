@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libexplain
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.11 2011/11/27 17:01:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.12 2011/11/28 01:53:50 radhermit Exp $
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> libexplain-0.49.ebuild:
+  Re-add the eautoreconf call and other minor fixes.
 
   27 Nov 2011; Justin Lecher <jlec@gentoo.org> libexplain-0.45.ebuild,
   files/libexplain-0.45-configure.patch, libexplain-0.46.ebuild,

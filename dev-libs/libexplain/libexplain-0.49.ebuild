@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.49.ebuild,v 1.3 2011/11/27 17:01:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.49.ebuild,v 1.4 2011/11/28 01:53:50 radhermit Exp $
 
 EAPI=4
-inherit autotools-utils eutils multilib
+inherit autotools-utils
 
 MY_P="${P}.D001"
 
@@ -22,7 +22,7 @@ DEPEND="
 	>=sys-libs/glibc-2.11"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 DOCS=( README )
 
@@ -30,7 +30,7 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.45-configure.patch
-	)
+)
 
 src_prepare() {
 	# Portage incompatible test
@@ -42,9 +42,5 @@ src_prepare() {
 	cp "${S}"/etc/configure.ac "${S}"
 
 	autotools-utils_src_prepare
-}
-
-src_install() {
-	autotools-utils_src_install
-	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.a
+	eautoreconf
 }
