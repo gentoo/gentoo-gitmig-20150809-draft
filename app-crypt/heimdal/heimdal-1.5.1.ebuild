@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1.ebuild,v 1.4 2011/11/14 13:00:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1.ebuild,v 1.5 2011/11/28 10:05:08 eras Exp $
 
 EAPI=2
 # PYTHON_BDEPEND="2"
 VIRTUALX_REQUIRED="manual"
 
-inherit autotools-utils db-use eutils libtool python toolchain-funcs virtualx flag-o-matic
+inherit autotools db-use eutils libtool python toolchain-funcs virtualx flag-o-matic
 
 MY_P="${P}"
 DESCRIPTION="Kerberos 5 implementation from KTH"
@@ -121,7 +121,7 @@ src_install() {
 		doins "${S}/lib/hdb/hdb.schema"
 	fi
 
-	use static-libs || remove_libtool_files
+	use static-libs || find "${D}"/usr/lib* -name '*.la' -delete
 
 	# default database dir
 	keepdir /var/heimdal
