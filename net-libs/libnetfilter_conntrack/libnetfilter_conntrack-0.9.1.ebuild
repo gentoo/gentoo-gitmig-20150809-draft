@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.9.1.ebuild,v 1.2 2011/11/27 04:57:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.9.1.ebuild,v 1.3 2011/11/28 06:05:20 radhermit Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit autotools-utils linux-info
 
@@ -18,7 +18,7 @@ IUSE="static-libs"
 DEPEND=">=net-libs/libnfnetlink-1.0.0"
 RDEPEND=${DEPEND}
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+DOCS=( README )
 
 pkg_setup() {
 	linux-info_pkg_setup
@@ -35,13 +35,4 @@ pkg_setup() {
 	fi
 
 	check_extra_config
-}
-
-src_configure() {
-	econf $(use_enable static-libs static)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	use static-libs || remove_libtool_files
 }
