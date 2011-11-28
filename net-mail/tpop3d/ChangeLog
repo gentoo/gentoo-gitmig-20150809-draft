@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.32 2011/08/24 07:14:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.33 2011/11/28 11:41:00 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tpop3d-1.5.5.ebuild:
+  x86 stable wrt bug #391343
 
 *tpop3d-1.5.5 (24 Aug 2011)
 

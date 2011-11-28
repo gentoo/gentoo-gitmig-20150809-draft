@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.5.ebuild,v 1.1 2011/08/24 07:14:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.5.ebuild,v 1.2 2011/11/28 11:41:00 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/tpop3d/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="authexternal debug drac flatfile gdbm ldap maildir mbox mysql offensive
 	pam passwd perl postgres +sha1 shadow ssl tcpd"
 
