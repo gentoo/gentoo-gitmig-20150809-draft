@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.98.4.ebuild,v 1.14 2011/07/10 15:09:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.98.4.ebuild,v 1.15 2011/11/28 17:59:49 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils
 
 DESCRIPTION="LAME Ain't an MP3 Encoder"
 HOMEPAGE="http://lame.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz -> ${P}-r1.tar.gz" #346155
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -19,6 +19,8 @@ RDEPEND=">=sys-libs/ncurses-5.2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	mmx? ( dev-lang/nasm )"
+
+RESTRICT="mirror" #346155
 
 src_prepare() {
 	epatch \
