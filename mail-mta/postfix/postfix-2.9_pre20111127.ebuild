@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111126.ebuild,v 1.1 2011/11/26 21:00:59 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111127.ebuild,v 1.1 2011/11/28 12:00:11 eras Exp $
 
 EAPI=4
 
@@ -83,46 +83,46 @@ src_configure() {
 
 	use pam && mylibs="${mylibs} -lpam"
 
-	if use ldap ; then
+	if use ldap; then
 		mycc="${mycc} -DHAS_LDAP"
 		mylibs="${mylibs} -lldap -llber"
 	fi
 
-	if use mysql ; then
+	if use mysql; then
 		mycc="${mycc} -DHAS_MYSQL $(mysql_config --include)"
 		mylibs="${mylibs} $(mysql_config --libs)"
 	fi
 
-	if use postgres ; then
+	if use postgres; then
 		mycc="${mycc} -DHAS_PGSQL -I$(pg_config --includedir)"
 		mylibs="${mylibs} -lpq -L$(pg_config --libdir)"
 	fi
 
-	if use sqlite ; then
+	if use sqlite; then
 		mycc="${mycc} -DHAS_SQLITE"
 		mylibs="${mylibs} -lsqlite3"
 	fi
 
-	if use ssl ; then
+	if use ssl; then
 		mycc="${mycc} -DUSE_TLS"
 		mylibs="${mylibs} -lssl -lcrypto"
 	fi
 
-	if use sasl ; then
-		if use dovecot-sasl ; then
+	if use sasl; then
+		if use dovecot-sasl; then
 			# Set dovecot as default.
 			mycc="${mycc} -DDEF_SASL_SERVER=\\\"dovecot\\\""
 		fi
-		if use ldap-bind ; then
+		if use ldap-bind; then
 			mycc="${mycc} -DUSE_LDAP_SASL"
 		fi
 		mycc="${mycc} -DUSE_SASL_AUTH -DUSE_CYRUS_SASL -I/usr/include/sasl"
 		mylibs="${mylibs} -lsasl2"
-	elif use dovecot-sasl ; then
+	elif use dovecot-sasl; then
 		mycc="${mycc} -DUSE_SASL_AUTH -DDEF_SERVER_SASL_TYPE=\\\"dovecot\\\""
 	fi
 
-	if ! use nis ; then
+	if ! use nis; then
 		sed -i -e "s|#define HAS_NIS|//#define HAS_NIS|g" \
 			src/util/sys_defs.h || die "sed failed"
 	fi
@@ -173,7 +173,7 @@ src_configure() {
 	filter-lfs-flags
 
 	# Workaround for bug #76512
-	if use hardened ; then
+	if use hardened; then
 		[[ "$(gcc-version)" == "3.4" ]] && replace-flags -O? -Os
 	fi
 
@@ -226,7 +226,7 @@ src_install () {
 	fperms 02711 /usr/sbin/post{drop,queue}
 
 	keepdir /etc/postfix
-	if use mbox ; then
+	if use mbox; then
 		mypostconf="mail_spool_directory=/var/spool/mail"
 	else
 		mypostconf="home_mailbox=.maildir/"
@@ -250,7 +250,7 @@ src_install () {
 
 	pamd_mimic_system smtp auth account
 
-	if use sasl ; then
+	if use sasl; then
 		insinto /etc/sasl2
 		newins "${FILESDIR}"/smtp.sasl smtpd.conf
 	fi
