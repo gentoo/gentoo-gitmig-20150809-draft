@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.4 2011/11/23 23:06:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.5 2011/11/28 08:07:51 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -24,8 +24,7 @@ RDEPEND=">=media-libs/fontconfig-1.0.1
 	>=x11-libs/pango-1.10
 	>=dev-libs/libxml2-2.4.7:2
 	>=dev-libs/libcroco-0.6.1
-	|| ( x11-libs/gdk-pixbuf:2
-		x11-libs/gtk+:2 )
+	x11-libs/gdk-pixbuf:2[introspection?]
 	gtk? ( >=x11-libs/gtk+-2.16:2 )
 	gtk3? ( >=x11-libs/gtk+-2.90.0:3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.8 )"
