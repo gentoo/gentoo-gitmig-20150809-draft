@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.38 2011/11/28 23:39:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.39 2011/11/28 23:41:30 ssuominen Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils python waf-utils git-2
@@ -25,7 +25,7 @@ RDEPEND="dev-db/sqlite:3
 	x11-libs/libXScrnSaver
 	gnome? ( net-libs/libsoup-gnome:2.4 )
 	libnotify? ( x11-libs/libnotify )
-	unique? ( dev-libs/libunique:1 )"
+	unique? ( dev-libs/libunique:3 )"
 DEPEND="${RDEPEND}
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
 	dev-lang/vala:${PV_vala_version}
