@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3-r1.ebuild,v 1.12 2011/11/28 05:30:57 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3-r1.ebuild,v 1.13 2011/11/28 08:41:45 ulm Exp $
 
 EAPI=3
 
-inherit elisp-common multilib wxwidgets
+inherit eutils elisp-common multilib wxwidgets
 
 DESCRIPTION="Command-line driven interactive plotting program"
 HOMEPAGE="http://www.gnuplot.info/"
