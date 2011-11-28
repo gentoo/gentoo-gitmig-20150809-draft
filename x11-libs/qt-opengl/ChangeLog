@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.94 2011/11/26 20:02:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.95 2011/11/28 23:50:40 pesa Exp $
+
+  28 Nov 2011; Davide Pesavento <pesa@gentoo.org> -qt-opengl-4.7.3.ebuild:
+  Remove Qt 4.7.3
 
   26 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Bug 385719: upstream altered qt-everywhere-opensource-src-4.7.4.tar.gz, mass
