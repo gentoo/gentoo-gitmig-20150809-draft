@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.9.2.0.ebuild,v 1.1 2011/11/25 04:09:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.9.2.0.ebuild,v 1.2 2011/11/28 20:14:53 pacho Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
@@ -29,6 +29,14 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/intltool
 	dev-util/pkgconfig"
+
+src_prepare() {
+	# Drop DEPRECATED flags, bug #385503
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		auth-dialog/Makefile.am auth-dialog/Makefile.in \
+		properties/Makefile.am properties/Makefile.in \
+		src/Makefile.am src/Makefile.in || die
+}
 
 src_configure() {
 	ECONF="--disable-more-warnings
