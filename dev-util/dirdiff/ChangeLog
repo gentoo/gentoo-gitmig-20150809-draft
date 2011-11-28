@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dirdiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.10 2011/11/25 23:37:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.11 2011/11/28 11:34:04 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dirdiff-2.1-r1.ebuild:
+  x86 stable wrt bug #391617
 
   25 Nov 2011; Markos Chandras <hwoarang@gentoo.org> dirdiff-2.1-r1.ebuild:
   Stable on amd64 wrt bug #391617
