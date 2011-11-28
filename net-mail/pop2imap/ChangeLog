@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pop2imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.8 2011/07/18 15:22:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.9 2011/11/28 11:57:59 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pop2imap-1.18.ebuild:
+  x86 stable wrt bug #391295
 
   18 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pop2imap-1.18.ebuild:
   keyworded for amd64. Bug #371003
