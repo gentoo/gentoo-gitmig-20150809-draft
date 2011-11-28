@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libecap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.14 2011/08/16 23:33:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.15 2011/11/28 02:38:48 radhermit Exp $
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> libecap-0.0.3.ebuild,
+  libecap-0.2.0.ebuild:
+  Fix autotools-utils usage (bug #392165).
 
 *libecap-0.2.0 (16 Aug 2011)
 *libecap-0.0.3 (16 Aug 2011)
