@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/sslh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.4 2011/11/05 23:02:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.5 2011/11/28 08:39:50 radhermit Exp $
+
+*sslh-1.10 (28 Nov 2011)
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> -sslh-1.7a.ebuild,
+  +sslh-1.10.ebuild:
+  Version bump and remove old.
 
   05 Nov 2011; Mike Frysinger <vapier@gentoo.org> sslh-1.9.ebuild:
   Stabilize for amd64/x86.
