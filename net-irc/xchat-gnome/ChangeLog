@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.64 2011/05/17 22:41:30 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.65 2011/11/28 19:16:11 ssuominen Exp $
+
+  28 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xchat-gnome-0.26.1-r1.ebuild, xchat-gnome-0.26.1-r2.ebuild:
+  Fix HOMEPAGE from non-existing site to http://live.gnome.org/Xchat-Gnome
 
   17 May 2011; Nathan Phillip Brink <binki@gentoo.org>
   xchat-gnome-0.26.1-r2.ebuild:

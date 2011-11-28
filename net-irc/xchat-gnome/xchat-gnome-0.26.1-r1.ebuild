@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r1.ebuild,v 1.8 2011/03/09 16:18:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r1.ebuild,v 1.9 2011/11/28 19:16:11 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="yes"
@@ -9,7 +9,7 @@ PYTHON_DEPEND="python? 2"
 inherit eutils gnome2 python
 
 DESCRIPTION="GNOME frontend for the popular X-Chat IRC client"
-HOMEPAGE="http://xchat-gnome.navi.cx/"
+HOMEPAGE="http://live.gnome.org/Xchat-Gnome"
 
 LICENSE="GPL-2"
 SLOT="0"
