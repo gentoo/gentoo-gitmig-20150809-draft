@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/glipper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.20 2011/11/19 14:42:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.21 2011/11/28 15:06:38 ssuominen Exp $
+
+  28 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> glipper-2.1.ebuild:
+  Pull in old SLOT of libappindicator for GTK+ 2.0 python binding.
 
 *glipper-2.1 (19 Nov 2011)
 
