@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fuse-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.13 2011/11/26 16:40:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.14 2011/11/28 11:45:07 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fuse-python-0.2.1.ebuild:
+  x86 stable wrt bug #391619
 
   26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> fuse-python-0.2.1.ebuild:
   Stable on amd64 wrt bug #391619
