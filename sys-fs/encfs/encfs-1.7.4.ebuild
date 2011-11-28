@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.7.4.ebuild,v 1.1 2011/11/22 23:05:54 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.7.4.ebuild,v 1.2 2011/11/28 00:00:10 blueness Exp $
 
 EAPI=2
 inherit eutils multilib versionator
@@ -17,7 +17,8 @@ IUSE="xattr"
 RDEPEND=">=dev-libs/boost-1.34
 	>=dev-libs/openssl-0.9.7
 	>=dev-libs/rlog-1.4
-	>=sys-fs/fuse-2.7.0"
+	>=sys-fs/fuse-2.7.0
+	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-util/pkgconfig
