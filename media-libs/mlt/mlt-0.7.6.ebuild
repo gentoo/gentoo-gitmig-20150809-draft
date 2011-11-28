@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6.ebuild,v 1.1 2011/10/31 21:55:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6.ebuild,v 1.2 2011/11/28 13:35:24 aballier Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -60,7 +60,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.7.2-ruby-link.patch
+	epatch "${FILESDIR}"/${PN}-0.7.2-ruby-link.patch \
+		"${FILESDIR}"/${PN}-0.7.6-ffmpeg.patch
 	# respect CFLAGS LDFLAGS when building shared libraries. Bug #308873
 	for x in python lua; do
 		sed -i "/mlt.so/s: -lmlt++ :& ${CFLAGS} ${LDFLAGS} :" src/swig/$x/build

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.74 2011/10/31 21:55:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.75 2011/11/28 13:35:24 aballier Exp $
+
+  28 Nov 2011; Alexis Ballier <aballier@gentoo.org> mlt-0.7.6.ebuild,
+  +files/mlt-0.7.6-ffmpeg.patch:
+  fix build with ffmpeg git: do not use internal symbols
 
 *mlt-0.7.6 (31 Oct 2011)
 
