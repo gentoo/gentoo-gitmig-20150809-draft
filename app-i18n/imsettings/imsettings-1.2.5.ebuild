@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.2.5.ebuild,v 1.1 2011/11/24 02:11:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.2.5.ebuild,v 1.2 2011/11/28 13:53:30 naota Exp $
 
 EAPI=3
 
 DESCRIPTION="Delivery framework for general Input Method configuration"
-HOMEPAGE="http://code.google.com/p/imsettings/"
+HOMEPAGE="http://tagoh.github.com/imsettings/"
 SRC_URI="http://imsettings.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
