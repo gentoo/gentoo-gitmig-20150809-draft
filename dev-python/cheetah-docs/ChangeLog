@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cheetah-docs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/ChangeLog,v 1.10 2007/02/19 17:05:26 nixnut Exp $
+# Copyright 2002-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/ChangeLog,v 1.11 2011/11/28 20:10:54 hwoarang Exp $
+
+  28 Nov 2011; Markos Chandras <hwoarang@gentoo.org>
+  cheetah-docs-0.9.16_alpha1.ebuild:
+  Fix LICENSE. Patch by Arfrever
 
   19 Feb 2007; nixnut <nixnut@gentoo.org> cheetah-docs-0.9.16_alpha1.ebuild:
   Stable on ppc wrt bug 167554
