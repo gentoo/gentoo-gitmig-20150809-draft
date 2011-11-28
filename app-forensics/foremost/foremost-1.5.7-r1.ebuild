@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.5.7-r1.ebuild,v 1.4 2011/11/26 10:38:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.5.7-r1.ebuild,v 1.5 2011/11/28 11:40:34 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://foremost.sourceforge.net/"
 # starting to hate sf.net ...
 SRC_URI="http://foremost.sourceforge.net/pkg/${P}.tar.gz"
 
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 LICENSE="public-domain"
 SLOT="0"
