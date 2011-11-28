@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13286 2011/11/26 16:24:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13287 2011/11/28 12:39:55 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -677,10 +677,6 @@ dev-tex/pdftex
 # Only avalable version isn't in the tree.
 # Mask until it is bumped
 sci-chemistry/webmo
-
-# Alexis Ballier <aballier@gentoo.org> (23 Jun 2011)
-# Breaks API/ABI and has the same features as 0.7.1
->=media-video/ffmpeg-0.8
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (18 Jun 2011)
 # Mask cups-1.5, too new and still needs a lot of testing
