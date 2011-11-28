@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.38 2011/11/05 08:48:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.39 2011/11/28 05:45:54 radhermit Exp $
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> varnish-3.0.2.ebuild:
+  Fix autotools-utils usage (bug #392131).
 
 *varnish-3.0.2 (05 Nov 2011)
 

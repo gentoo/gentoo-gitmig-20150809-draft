@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.2.ebuild,v 1.1 2011/11/05 08:48:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.2.ebuild,v 1.2 2011/11/28 05:45:54 radhermit Exp $
 
 EAPI="4"
 
@@ -21,11 +21,10 @@ DEPEND="dev-python/docutils"
 
 RESTRICT="test" #315725
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+DOCS=( README doc/changes.rst )
 
 src_install() {
-	emake DESTDIR="${D}" install
-	remove_libtool_files all
+	autotools-utils_src_install
 
 	newinitd "${FILESDIR}"/varnishd.initd varnishd
 	newconfd "${FILESDIR}"/varnishd.confd varnishd
