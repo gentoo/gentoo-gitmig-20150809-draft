@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.23.ebuild,v 1.1 2011/11/27 23:29:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.23.ebuild,v 1.2 2011/11/28 07:54:37 jer Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ COMMON_DEPEND="emacs? ( virtual/emacs )
 DEPEND="${COMMON_DEPEND}
 	nls? ( >=sys-devel/gettext-0.17 )
 	java? (
-		virtual/jdk
+		>=virtual/jdk-1.4
 		doc? ( dev-java/gjdoc )
 	)"
 RDEPEND="${COMMON_DEPEND}
