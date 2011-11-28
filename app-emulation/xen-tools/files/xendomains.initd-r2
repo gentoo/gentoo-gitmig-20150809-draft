@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.2 2011/09/10 17:22:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.3 2011/11/28 18:29:19 alexxy Exp $
 
 opts="start stop status restart"
 
 depend() {
-	need xenstored xenconsoled xend
-	after dhcp
+	need xenstored xenconsoled
+	after dhcp xend
 }
 
 get_domname() {
