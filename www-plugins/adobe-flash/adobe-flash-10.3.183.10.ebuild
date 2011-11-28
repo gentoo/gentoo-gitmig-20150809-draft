@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.183.10.ebuild,v 1.3 2011/09/25 14:41:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.183.10.ebuild,v 1.4 2011/11/28 16:27:00 lack Exp $
 
 EAPI=4
 inherit nsplugins rpm multilib toolchain-funcs
 
-MY_32B_URI="http://fpdownload.macromedia.com/get/flashplayer/current/flash-plugin-${PV}-release.i386.rpm"
+MY_32B_URI="http://fpdownload.macromedia.com/get/flashplayer/pdc/${PV}/flash-plugin-${PV}-release.i386.rpm"
 
 DESCRIPTION="Adobe Flash Player"
 SRC_URI="${MY_32B_URI}"

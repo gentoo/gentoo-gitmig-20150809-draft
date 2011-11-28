@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.1.102.55.ebuild,v 1.1 2011/11/28 15:54:34 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.1.102.55.ebuild,v 1.2 2011/11/28 16:27:00 lack Exp $
 
 EAPI=4
-inherit nsplugins multilib toolchain-funcs versionator rpm
+inherit nsplugins multilib toolchain-funcs versionator
 
-MY_32B_URI="http://fpdownload.macromedia.com/get/flashplayer/pdc/${PV}/flash-plugin-${PV}-release.i386.rpm -> ${P}.i386.rpm"
-MY_64B_URI="http://fpdownload.macromedia.com/get/flashplayer/pdc/${PV}/flash-plugin-${PV}-release.x86_64.rpm -> ${P}.x86_64.rpm"
+MY_32B_URI="http://fpdownload.macromedia.com/get/flashplayer/pdc/${PV}/install_flash_player_$(get_major_version)_linux.i386.tar.gz -> ${P}.i386.tar.gz"
+MY_64B_URI="http://fpdownload.macromedia.com/get/flashplayer/pdc/${PV}/install_flash_player_$(get_major_version)_linux.x86_64.tar.gz -> ${P}.x86_64.tar.gz"
 
 DESCRIPTION="Adobe Flash Player"
 SRC_URI="x86? ( ${MY_32B_URI} )
@@ -99,14 +99,14 @@ src_unpack() {
 		local my_32b_src=${MY_32B_URI##*>}
 		local my_64b_src=${MY_64B_URI##*>}
 		if [[ $native_install ]]; then
-			rpm_unpack $my_64b_src
+			unpack $my_64b_src
 		fi
 		mkdir 32bit
 		pushd 32bit >/dev/null
-		rpm_unpack $my_32b_src
+		unpack $my_32b_src
 		popd >/dev/null
 	else
-		rpm_src_unpack
+		default_src_unpack
 	fi
 }
 
@@ -123,24 +123,21 @@ src_compile() {
 src_install() {
 	if [[ $native_install ]]; then
 		if use x86; then
-			local RPMLIB="lib"
+			local PKGLIB=lib
 		else
-			local RPMLIB="lib64"
+			local PKGLIB=lib64
 		fi
 		local BASE=${INSTALL_BASE}
 
 		# The plugin itself
 		exeinto /${BASE}/flash-plugin
-		doexe usr/${RPMLIB}/flash-plugin/libflashplayer.so
+		doexe libflashplayer.so
 		inst_plugin /${BASE}/flash-plugin/libflashplayer.so
-
-		# Also install the 'homecleanup' script:
-		doexe usr/${RPMLIB}/flash-plugin/homecleanup
 
 		# The optional KDE4 KCM plugin
 		if use kde; then
-			exeinto /${BASE}/kde4/
-			doexe usr/${RPMLIB}/kde4/kcm_adobe_flash_player.so
+			exeinto /${BASE}/kde4
+			doexe usr/${PKGLIB}/kde4/kcm_adobe_flash_player.so
 			dosym /${BASE}/kde4/kcm_adobe_flash_player.so \
 				/usr/$(get_libdir)/kde4/kcm_adobe_flash_player.so
 			insinto /usr/share/kde4/services
@@ -160,13 +157,12 @@ src_install() {
 			insinto /$(dirname $icon)
 			doins $icon
 		done
+		dosym ../icons/hicolor/48x48/apps/flash-player-properties.png \
+			  usr/share/pixmaps/flash-player-properties.png
 		insinto usr/share/applications
 		sed -i usr/share/applications/flash-player-properties.desktop \
 			-e "s:^Exec=:Exec=/${BASE}/bin/:" || die "sed of .desktop file failed"
 		doins usr/share/applications/flash-player-properties.desktop
-
-		# Documentation:
-		dodoc usr/${RPMLIB}/flash-plugin/README
 	fi
 
 	if [[ $need_lahf_wrapper ]]; then
@@ -185,7 +181,7 @@ src_install() {
 		# 32b plugin
 		pushd "${S}/32bit"
 			exeinto /${INSTALL_BASE}32
-			doexe usr/lib/flash-plugin/libflashplayer.so
+			doexe libflashplayer.so
 			inst_plugin /${INSTALL_BASE}32/libflashplayer.so
 		popd
 
