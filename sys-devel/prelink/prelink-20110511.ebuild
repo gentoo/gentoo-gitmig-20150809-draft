@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20110511.ebuild,v 1.1 2011/06/15 03:54:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20110511.ebuild,v 1.2 2011/11/28 23:40:19 chainsaw Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 -arm ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="amd64 -arm ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/elfutils-0.100
