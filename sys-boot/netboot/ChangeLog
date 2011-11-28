@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/netboot
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/ChangeLog,v 1.7 2010/02/08 23:57:04 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/ChangeLog,v 1.8 2011/11/28 11:54:00 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> netboot-0.10.2.ebuild:
+  x86 stable wrt bug #391521
 
 *netboot-0.10.2 (08 Feb 2010)
 
