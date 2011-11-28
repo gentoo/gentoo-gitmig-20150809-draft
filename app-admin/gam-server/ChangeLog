@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gam-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.11 2011/09/25 16:17:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.12 2011/11/28 22:27:52 ssuominen Exp $
+
+  28 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Maintained now by freedesktop-bugs@ which include prev. gnome@, kde@ and
+  xfce@.
 
   25 Sep 2011; Pacho Ramos <pacho@gentoo.org> gam-server-0.1.10.ebuild,
   +files/gam-server-0.1.10-G_CONST_RETURN-removal.patch,
