@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.6.12.ebuild,v 1.7 2011/11/28 05:41:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.6.12.ebuild,v 1.8 2011/11/28 10:25:08 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
 
-inherit eutils autotools-utils python
+inherit autotools-utils python
 
 DESCRIPTION="Library that implements the AFF image standard"
 HOMEPAGE="http://www.afflib.org/"
