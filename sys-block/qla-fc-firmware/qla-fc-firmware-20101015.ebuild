@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/qla-fc-firmware-20101015.ebuild,v 1.1 2010/11/30 20:48:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/qla-fc-firmware-20101015.ebuild,v 1.2 2011/11/28 11:38:40 phajdan.jr Exp $
 
 DESCRIPTION="QLogic Linux Fibre Channel HBA Firmware for ql2xxx cards"
 HOMEPAGE="ftp://ftp.qlogic.com/outgoing/linux/firmware/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="qlogic-fibre-channel-firmware"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 # really depends on absolutely nothing
