@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/saku
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/saku/ChangeLog,v 1.1 2011/11/01 13:19:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/saku/ChangeLog,v 1.2 2011/11/28 07:55:48 naota Exp $
+
+*saku-3.11.0 (28 Nov 2011)
+
+  28 Nov 2011; Naohiro Aota <naota@gentoo.org> +saku-3.11.0.ebuild:
+  Version bumped.
 
 *saku-3.10.1 (01 Nov 2011)
 
