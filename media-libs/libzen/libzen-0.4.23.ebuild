@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.23.ebuild,v 1.3 2011/11/28 03:03:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.23.ebuild,v 1.4 2011/11/28 03:05:25 radhermit Exp $
 
 EAPI="4"
 
@@ -33,7 +33,7 @@ src_prepare() {
 }
 
 src_configure() {
-	myeconfargs=(
+	local myeconfargs=(
 		--enable-unicode
 	)
 	autotools-utils_src_configure
