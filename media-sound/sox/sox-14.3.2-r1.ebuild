@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.2-r1.ebuild,v 1.8 2011/10/23 16:17:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.2-r1.ebuild,v 1.9 2011/11/28 18:01:39 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic
@@ -18,7 +18,7 @@ IUSE="alsa amr ao debug encode ffmpeg flac id3tag ladspa mad ogg openmp oss png 
 RDEPEND=">=sys-devel/libtool-2.2.6b
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
-	encode? ( media-sound/lame )
+	encode? ( >=media-sound/lame-3.98.4 )
 	flac? ( media-libs/flac )
 	mad? ( media-libs/libmad )
 	sndfile? ( media-libs/libsndfile )
