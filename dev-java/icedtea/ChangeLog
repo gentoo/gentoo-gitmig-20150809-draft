@@ -1,6 +1,22 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.55 2011/11/25 18:19:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.56 2011/11/28 15:29:59 sera Exp $
+
+*icedtea-7.2.0-r2 (28 Nov 2011)
+*icedtea-6.1.10.4-r2 (28 Nov 2011)
+
+  28 Nov 2011; Ralph Sennhauser <sera@gentoo.org> +icedtea-6.1.10.4-r2.ebuild,
+  +icedtea-7.2.0-r2.ebuild, +files/fontconfig.Gentoo.properties.src,
+  files/icedtea.env, metadata.xml:
+  Install Gentoo specific fontconfig properties file. #390663
+  Add missing dependency on pkgconfig. #391987
+  Add use flag X and cjk to install expected fonts. #349916
+  Add use flag source and install src.zip conditionally.
+  Add use flag jbootstrap and make bootstrap optional where possible.
+  Remove use flag xrender and require libXrender for icedtea:6, icedtea:7 does
+  this already. #382867
+  Use @SLOT@ substitution in set_java_env.
+  Prefixify.
 
   25 Nov 2011; Vlastimil Babka <caster@gentoo.org> ChangeLog:
   Restore Changelog truncated by mistake, bug #391253.
