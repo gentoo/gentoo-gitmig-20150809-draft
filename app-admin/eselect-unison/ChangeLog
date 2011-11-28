@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-unison
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.11 2011/11/26 10:35:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.12 2011/11/28 11:48:28 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  eselect-unison-0.3.ebuild:
+  x86 stable wrt bug #391507
 
   26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> eselect-unison-0.3.ebuild:
   Stable on amd64 wrt bug #391507
