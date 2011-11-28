@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.73 2011/11/11 16:35:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.74 2011/11/28 23:39:09 ssuominen Exp $
+
+  28 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> midori-9999.ebuild:
+  Change to GTK+ 3.x and Vala 0.14.
 
 *midori-0.4.2 (10 Nov 2011)
 

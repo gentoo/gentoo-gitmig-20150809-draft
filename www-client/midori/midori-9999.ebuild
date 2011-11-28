@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.37 2011/11/11 16:35:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.38 2011/11/28 23:39:09 ssuominen Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils python waf-utils git-2
+
+PV_vala_version=0.14
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
@@ -14,19 +16,21 @@ SLOT="0"
 KEYWORDS=""
 IUSE="doc gnome libnotify nls +unique"
 
-RDEPEND="dev-libs/libxml2:2
-	dev-db/sqlite:3
+RDEPEND="dev-db/sqlite:3
+	>=dev-libs/glib-2.22
+	dev-libs/libxml2
 	net-libs/libsoup:2.4
-	net-libs/webkit-gtk:2
-	x11-libs/gtk+:2
+	net-libs/webkit-gtk:3
+	x11-libs/gtk+:3
 	x11-libs/libXScrnSaver
 	gnome? ( net-libs/libsoup-gnome:2.4 )
 	libnotify? ( x11-libs/libnotify )
 	unique? ( dev-libs/libunique:1 )"
 DEPEND="${RDEPEND}
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
-	dev-lang/vala:0.10
+	dev-lang/vala:${PV_vala_version}
 	dev-util/intltool
+	gnome-base/librsvg
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )"
 
@@ -41,14 +45,15 @@ pkg_setup() {
 src_configure() {
 	strip-linguas -i po
 
-	VALAC="$(type -p valac-0.10)" \
+	VALAC="$(type -P valac-${PV_vala_version})" \
 	waf-utils_src_configure \
 		--disable-docs \
+		 $(use_enable doc apidocs) \
+		 $(use_enable unique) \
+		 $(use_enable libnotify) \
 		--enable-addons \
-		$(use_enable doc apidocs) \
-		$(use_enable libnotify) \
 		$(use_enable nls) \
-		$(use_enable unique)
+		--enable-gtk3
 }
 
 pkg_preinst() {
