@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/afflib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.20 2011/11/26 10:50:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.21 2011/11/28 05:41:56 radhermit Exp $
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> afflib-3.6.12.ebuild,
+  +files/afflib-3.6.12-pyaff-header.patch,
+  files/afflib-3.6.12-python-module.patch:
+  Fix autotools-utils usage (bug #392137). Fix python module CFLAGS handling.
 
   26 Nov 2011; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Improve s3 use flag description.
