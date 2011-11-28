@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-3.0.0.ebuild,v 1.1 2011/11/28 22:55:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-3.0.0.ebuild,v 1.2 2011/11/28 23:05:13 ssuominen Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -34,8 +34,6 @@ DEPEND="${RDEPEND}
 
 PDEPEND="hddtemp? ( udev? ( sys-fs/udisks ) )"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 pkg_setup() {
 	G2CONF="--disable-static
 		$(use_enable udev udisks)
@@ -50,6 +48,8 @@ pkg_setup() {
 	else
 		G2CONF+=" --disable-udisks"
 	fi
+
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }
 
 src_prepare() {
