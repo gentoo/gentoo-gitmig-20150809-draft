@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.68 2011/11/22 19:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.69 2011/11/28 23:04:38 chainsaw Exp $
+
+  28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> postgrey-1.34.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #391135.
 
   22 Nov 2011; Jeroen Roovers <jer@gentoo.org> postgrey-1.34.ebuild:
   Stable for HPPA (bug #391135).
