@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.4-r1.ebuild,v 1.1 2011/11/28 21:01:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.4-r1.ebuild,v 1.2 2011/11/28 22:52:01 pesa Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -43,7 +43,7 @@ RDEPEND="${RDEPEND}
 	!~x11-themes/qgtkstyle-4.7.2"
 PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,debug=] )"
 
-PATCHES=( 
+PATCHES=(
 	"${FILESDIR}/${PN}-4.7.3-cups.patch"
 	"${FILESDIR}/${P}-fix-libreoffice-crash.patch"
 )
@@ -143,13 +143,6 @@ src_install() {
 			$(use xinerama && echo QT_XINERAMA) QT_XFIXES QT_XKB QT_XRANDR QT_XRENDER"
 
 	qt4-build_src_install
-
-	# remove unnecessary Windows headers
-	rm -f "${D}${QTHEADERDIR}"/{Qt,QtGui}/qwindowdefs_win.h
-	# remove Mac OS X headers
-	use aqua || rm -f \
-		"${D}${QTHEADERDIR}"/{Qt,QtGui}/qmacstyle_mac.h \
-		"${D}${QTHEADERDIR}"/QtGui/QMacStyle
 
 	# qt-creator
 	# some qt-creator headers are located
