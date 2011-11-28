@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/potrace-1.10-r1.ebuild,v 1.5 2011/11/27 04:03:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/potrace-1.10-r1.ebuild,v 1.6 2011/11/28 02:16:13 radhermit Exp $
 
 EAPI="4"
 
@@ -15,19 +15,18 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="metric static-libs"
 
-DOCS=( AUTHORS ChangeLog NEWS README )
-
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+DOCS=( AUTHORS ChangeLog NEWS README )
 
 src_configure() {
-	econf \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--enable-zlib \
-		--with-libpotrace \
-		$(use_enable metric a4) \
-		$(use_enable metric) \
-		$(use_enable static-libs static)
+	local myeconfargs=(
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--enable-zlib
+		--with-libpotrace
+		$(use_enable metric a4)
+		$(use_enable metric)
+	)
+	autotools-utils_src_configure
 }
