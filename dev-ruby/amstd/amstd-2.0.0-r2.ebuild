@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/amstd-2.0.0-r2.ebuild,v 1.1 2010/06/12 20:26:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/amstd-2.0.0-r2.ebuild,v 1.2 2011/11/28 11:51:49 phajdan.jr Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -13,7 +13,7 @@ SRC_URI="http://www.loveruby.net/archive/amstd/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amstd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.27 2010/10/19 05:45:12 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.28 2011/11/28 11:51:49 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> amstd-2.0.0-r2.ebuild:
+  x86 stable wrt bug #391625
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> amstd-2.0.0-r1.ebuild:
   Drop to ~mips
