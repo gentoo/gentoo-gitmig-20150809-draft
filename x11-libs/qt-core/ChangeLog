@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.145 2011/11/26 19:59:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.146 2011/11/28 20:48:24 tampakrap Exp $
+
+*qt-core-4.7.4-r1 (28 Nov 2011)
+
+  28 Nov 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  +qt-core-4.7.4-r1.ebuild, +files/qt-core-4.7.4-fix-libreoffice-crash.patch:
+  Backport patch from Qt 4.8 to fix crash in LibreOffice, as pointed out by
+  scarabeus. FreeDesktop bug 40298
 
   26 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Bug 385719: upstream altered qt-everywhere-opensource-src-4.7.4.tar.gz, mass
