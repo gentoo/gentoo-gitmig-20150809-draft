@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20100226-r1.ebuild,v 1.4 2011/11/27 03:48:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20100226-r1.ebuild,v 1.5 2011/11/28 07:15:58 radhermit Exp $
 
 EAPI="4"
 
@@ -25,19 +25,20 @@ RDEPEND="${DEPEND}"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
+DOCS=( AUTHORS ChangeLog NEWS README documents/header.txt documents/header2.txt )
+
 src_configure() {
-	econf \
-		$(use_enable debug debug-output) \
-		$(use_enable debug verbose-output) \
-		$(use_enable ewf2 v2-api) \
-		$(use_enable rawio low-level-functions) \
-		$(use_enable static-libs static) \
+	local myeconfargs=(
+		$(use_enable debug debug-output)
+		$(use_enable debug verbose-output)
+		$(use_enable ewf2 v2-api)
+		$(use_enable rawio low-level-functions)
 		$(use_enable unicode wide-character-type)
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
-	dodoc AUTHORS ChangeLog NEWS README documents/*.txt
+	autotools-utils_src_install
 	doman manuals/*.1 manuals/*.3
-	remove_libtool_files all
 }
