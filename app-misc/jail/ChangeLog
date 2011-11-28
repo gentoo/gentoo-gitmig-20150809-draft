@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.27 2011/11/25 23:33:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.28 2011/11/28 11:36:33 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> jail-1.9-r3.ebuild:
+  x86 stable wrt bug #391579
 
   25 Nov 2011; Markos Chandras <hwoarang@gentoo.org> jail-1.9-r3.ebuild:
   Add missing die statements. Stable on amd64 wrt bug #391579
