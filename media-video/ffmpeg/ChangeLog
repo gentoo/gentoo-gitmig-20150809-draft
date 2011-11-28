@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.494 2011/11/28 12:39:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.495 2011/11/28 22:56:41 chainsaw Exp $
+
+  28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> ffmpeg-0.7.8.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in security bug #391421.
 
   28 Nov 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.8.7.ebuild:
   drop keyword before unmasking 0.8, bug #392269
