@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.361 2011/11/26 12:48:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.362 2011/11/28 10:19:03 chainsaw Exp $
+
+  28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> bind-9.7.4_p1.ebuild:
+  Marked stable on AMD64 based on arch testing by Tomáš "Mepho" Pružina &
+  Agostino "ago" Sarubbo in security bug #390753.
 
   26 Nov 2011; Raúl Porcel <armin76@gentoo.org> bind-9.7.4_p1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #390753
