@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/catdvi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.8 2011/11/21 19:33:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.9 2011/11/28 11:56:19 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> catdvi-0.14-r1.ebuild:
+  x86 stable wrt bug #391289
 
   21 Nov 2011; Ulrich Mueller <ulm@gentoo.org> catdvi-0.14-r1.ebuild:
   Bump to EAPI=4.
