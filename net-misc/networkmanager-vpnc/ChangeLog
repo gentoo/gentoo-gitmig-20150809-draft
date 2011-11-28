@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager-vpnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.17 2011/11/25 04:28:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.18 2011/11/28 20:11:40 pacho Exp $
+
+  28 Nov 2011; Pacho Ramos <pacho@gentoo.org>
+  networkmanager-vpnc-0.9.2.0.ebuild:
+  Drop DEPRECATED flags, bug #384987
 
 *networkmanager-vpnc-0.9.2.0 (25 Nov 2011)
 

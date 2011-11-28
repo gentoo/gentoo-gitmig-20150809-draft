@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.9.2.0.ebuild,v 1.1 2011/11/25 04:28:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.9.2.0.ebuild,v 1.2 2011/11/28 20:11:40 pacho Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
@@ -33,6 +33,12 @@ src_prepare() {
 	# Test will fail if the machine doesn't have a particular locale installed
 	sed '/test_non_utf8_import (plugin/ d' \
 		-i properties/tests/test-import-export.c || die "sed failed"
+
+	# Drop DEPRECATED flags, bug #384987
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		auth-dialog/Makefile.am auth-dialog/Makefile.in \
+		properties/Makefile.am properties/Makefile.in \
+		src/Makefile.am src/Makefile.in || die
 }
 
 src_configure() {
