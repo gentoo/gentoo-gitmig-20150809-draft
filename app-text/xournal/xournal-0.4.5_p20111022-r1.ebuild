@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.5_p20111022-r1.ebuild,v 1.2 2011/11/16 23:40:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.5_p20111022-r1.ebuild,v 1.3 2011/11/28 23:45:11 dilfridge Exp $
 
 EAPI=4
 
@@ -42,6 +42,7 @@ PATCHES=(
 	"${DISTDIR}"/${P}-sjg-image-rev7.patch.gz
 	"${FILESDIR}"/${P}-gtk-recent.patch
 	"${FILESDIR}"/${P}-aspectratio.patch
+	"${FILESDIR}"/${P}-underlinking.patch
 )
 
 src_prepare() {

@@ -1,0 +1,24 @@
+From 619691e135630c79f45e61a4126804c51ea52d42 Mon Sep 17 00:00:00 2001
+From: Andreas K. Huettel (dilfridge) <mail@akhuettel.de>
+Date: Mon, 28 Nov 2011 23:36:16 +0100
+Subject: [PATCH] Add xournal_0.4.5-3.debian patch 1 (add_ldflags), should fix Gentoo bug 372119
+
+---
+ src/Makefile.am |    3 +--
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index ba52740..3dea178 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -30,6 +30,5 @@ if WIN32
+   xournal_LDFLAGS = -mwindows
+   xournal_LDADD = win32/xournal.res ttsubset/libttsubset.a @PACKAGE_LIBS@ $(INTLLIBS) -lz
+ else
+-  xournal_LDADD = ttsubset/libttsubset.a @PACKAGE_LIBS@ $(INTLLIBS)
++  xournal_LDADD = ttsubset/libttsubset.a @PACKAGE_LIBS@ $(INTLLIBS) -lX11 -lz
+ endif
+-
+-- 
+1.7.3.4
+
