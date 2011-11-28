@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13287 2011/11/28 12:39:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13288 2011/11/28 18:39:01 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -243,13 +243,6 @@ x11-themes/polyester
 ~x11-libs/qt-test-4.8.0_rc1
 ~x11-libs/qt-webkit-4.8.0_rc1
 ~x11-libs/qt-xmlpatterns-4.8.0_rc1
-
-# Samuli Suominen <ssuominen@gentoo.org> (31 Oct 2011)
-# Fails to compile with libpng15 and replaced by
-# dev-scheme/racket
-# See bugs 389041 and 324161
-# Removal in 30 days
-dev-scheme/plt-scheme
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Oct 2011)
 # Working on more reliable versioning, consider experimental for now.
