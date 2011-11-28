@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.166 2011/11/25 06:02:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.167 2011/11/28 23:27:23 chainsaw Exp $
+
+  28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> rtorrent-0.8.9.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #389817.
 
   25 Nov 2011; Jeroen Roovers <jer@gentoo.org> rtorrent-0.8.9.ebuild:
   Stable for HPPA (bug #389817).
