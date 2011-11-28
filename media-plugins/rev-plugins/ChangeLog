@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/rev-plugins
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.17 2010/08/27 05:21:01 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.18 2011/11/28 11:36:55 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  rev-plugins-0.3.1-r1.ebuild:
+  x86 stable wrt bug #391483
 
   27 Aug 2010; Jeroen Roovers <jer@gentoo.org> rev-plugins-0.3.1.ebuild,
   rev-plugins-0.3.1-r1.ebuild:
