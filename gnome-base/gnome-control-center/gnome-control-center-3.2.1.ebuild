@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.2.1.ebuild,v 1.1 2011/10/29 06:53:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.2.1.ebuild,v 1.2 2011/11/28 17:34:55 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -67,10 +67,11 @@ RDEPEND="${COMMON_DEPEND}
 	sys-apps/accountsservice
 	cups? ( net-print/cups-pk-helper )
 
+	!<gnome-base/gdm-2.91.94
+	!<gnome-base/gnome-settings-daemon-2.91.90
 	!<gnome-extra/gnome-color-manager-3.1.2
 	!gnome-extra/gnome-media[pulseaudio]
-	!<gnome-extra/gnome-media-2.32.0-r300
-	!<gnome-base/gdm-2.91.94"
+	!<gnome-extra/gnome-media-2.32.0-r300"
 # PDEPEND to avoid circular dependency
 PDEPEND=">=gnome-base/gnome-session-2.91.6-r1"
 DEPEND="${COMMON_DEPEND}
