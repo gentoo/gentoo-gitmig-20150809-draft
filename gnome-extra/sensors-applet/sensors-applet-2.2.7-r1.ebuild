@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.7 2011/11/24 14:34:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.8 2011/11/28 22:58:52 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE="+dbus hddtemp libnotify lm_sensors video_cards_fglrx video_cards_nvidia"
 RDEPEND="
 	>=dev-libs/glib-2.14:2
 	>=x11-libs/gtk+-2.14:2
-	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
+	gnome-base/gnome-panel[bonobo]
 	>=gnome-base/libgnome-2.8
 	>=gnome-base/libgnomeui-2.8
 	>=x11-libs/cairo-1.0.4
@@ -73,6 +73,5 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-
-	find "${D}" -name "*.la" -delete || die "failed to delete *.la"
+	find "${D}"usr -name '*.la' -exec rm -f {} +
 }
