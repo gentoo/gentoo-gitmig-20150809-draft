@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.77 2011/11/17 04:45:44 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.78 2011/11/28 02:13:39 naota Exp $
+
+*newt-0.52.14 (28 Nov 2011)
+
+  28 Nov 2011; Naohiro Aota <naota@gentoo.org> +newt-0.52.14.ebuild:
+  Version bumped.
 
 *newt-0.52.13 (17 Nov 2011)
 
