@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r5.ebuild,v 1.1 2011/11/22 14:17:57 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r5.ebuild,v 1.2 2011/11/28 22:14:18 axs Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -115,6 +115,7 @@ src_compile() {
 		--enable-svg \
 		--enable-pic \
 		--disable-amr \
+		--use-js=no \
 		$(use_enable debug) \
 		$(use_enable opengl) \
 		$(use_enable oss oss-audio) \

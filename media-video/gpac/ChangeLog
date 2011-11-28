@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.96 2011/11/22 14:17:57 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.97 2011/11/28 22:14:18 axs Exp $
+
+  28 Nov 2011; Ian Stakenvicius <axs@gentoo.org> gpac-0.4.5-r5.ebuild:
+  added explicit javascript disable to econf, bug 391887
 
 *gpac-0.4.5-r5 (22 Nov 2011)
 
