@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/plruby
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.14 2010/06/27 07:38:03 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.15 2011/11/28 11:37:21 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> plruby-0.5.4.ebuild:
+  x86 stable wrt bug #391325
 
 *plruby-0.5.4 (27 Jun 2010)
 
