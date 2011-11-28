@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/smstools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.16 2011/07/27 10:41:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.17 2011/11/28 22:36:01 chainsaw Exp $
+
+*smstools-3.1.14-r2 (28 Nov 2011)
+
+  28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> +smstools-3.1.14-r2.ebuild:
+  CFLAGS respect & die statements by Agostino "ago" Sarubbo in bug #385273.
 
 *smstools-3.1.14-r1 (27 Jul 2011)
 
