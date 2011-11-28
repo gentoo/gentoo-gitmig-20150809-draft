@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.61 2011/11/27 22:41:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.62 2011/11/28 07:01:38 radhermit Exp $
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> libnl-3.2.3.ebuild:
+  Remove unused autotools setting.
 
   27 Nov 2011; Jeroen Roovers <jer@gentoo.org> libnl-3.2.3.ebuild:
   Do not inherit autotools-utils.eclass (bug #392143).
