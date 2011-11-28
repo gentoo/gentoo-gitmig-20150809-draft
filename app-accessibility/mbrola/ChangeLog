@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.53 2011/11/23 02:04:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.54 2011/11/28 11:52:23 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mbrola-3.0.1h-r6.ebuild:
+  x86 stable wrt bug #391419
 
   23 Nov 2011; Jeroen Roovers <jer@gentoo.org> mbrola-3.0.1h-r6.ebuild:
   Stable for HPPA (bug #391419).
