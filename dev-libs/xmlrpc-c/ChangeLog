@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.99 2011/11/24 12:37:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.100 2011/11/28 13:17:31 naota Exp $
+
+  28 Nov 2011; Naohiro Aota <naota@gentoo.org> xmlrpc-c-1.28.03.ebuild:
+  Add ~x86-fbsd. Bug #267616
 
   24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #220219
