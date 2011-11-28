@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.51 2011/09/24 16:25:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.52 2011/11/28 10:53:54 aidecoe Exp $
+
+  28 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> pyro-4.4.ebuild,
+  pyro-4.8.ebuild:
+  Updated Pyro4 homepage URI-s.
 
 *pyro-3.15 (24 Sep 2011)
 
