@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/bookmarksync-0.3.4-r2.ebuild,v 1.1 2010/09/28 17:43:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/bookmarksync-0.3.4-r2.ebuild,v 1.2 2011/11/28 11:36:05 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/booksync/"
 SRC_URI="mirror://sourceforge/booksync/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 SLOT="0"
 
 IUSE="perl"
