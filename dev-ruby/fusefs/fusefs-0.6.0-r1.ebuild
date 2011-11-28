@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fusefs/fusefs-0.6.0-r1.ebuild,v 1.2 2010/06/27 04:33:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fusefs/fusefs-0.6.0-r1.ebuild,v 1.3 2011/11/28 11:49:55 phajdan.jr Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -13,7 +13,7 @@ HOMEPAGE="http://rubyforge.org/projects/fusefs/"
 SRC_URI="http://rubyforge.org/frs/download.php/7830/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc64 x86"
 
 DEPEND="${DEPEND} >=sys-fs/fuse-2.3"
 
