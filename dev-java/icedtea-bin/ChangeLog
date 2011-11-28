@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.8 2011/11/21 11:07:41 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.9 2011/11/28 14:01:54 sera Exp $
+
+*icedtea-bin-7.2.0-r2 (28 Nov 2011)
+*icedtea-bin-6.1.10.4-r1 (28 Nov 2011)
+
+  28 Nov 2011; Ralph Sennhauser <sera@gentoo.org>
+  +icedtea-bin-6.1.10.4-r1.ebuild, files/icedtea-bin-6.env,
+  +icedtea-bin-7.2.0-r2.ebuild, files/icedtea-bin-7.env,
+  +files/fontconfig.Gentoo.properties.src:
+  Install Gentoo specific fontconfig properties file. #390663
+  Depend on dejavu font with use X and others with use cjk. #349916
+  Require use X for use nsplugin.
+  Prefixify.
 
   21 Nov 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-bin-6.1.10.4.ebuild,
   icedtea-bin-7.2.0-r1.ebuild:
