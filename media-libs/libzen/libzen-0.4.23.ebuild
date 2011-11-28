@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.23.ebuild,v 1.2 2011/11/27 04:07:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.23.ebuild,v 1.3 2011/11/28 03:03:00 radhermit Exp $
 
 EAPI="4"
 
-inherit autotools-utils multilib eutils
+inherit autotools-utils multilib
 
 MY_PN="ZenLib"
 DESCRIPTION="Shared library for libmediainfo and mediainfo"
@@ -22,35 +22,37 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_PN}/Project/GNU/Library"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.4.21-no-tinyxml.patch
+)
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.4.21-no-tinyxml.patch
+	autotools-utils_src_prepare
 	sed -i -e "s:-O2::" configure.ac
 	eautoreconf
 }
 
 src_configure() {
-	econf \
-		--enable-unicode \
-		--enable-shared \
-		$(use_enable static-libs static)
+	myeconfargs=(
+		--enable-unicode
+	)
+	autotools-utils_src_configure
 }
 
 src_compile() {
-	default
+	autotools-utils_src_compile
 
-	if use doc; then
+	if use doc ; then
 		cd "${WORKDIR}"/${MY_PN}/Source/Doc
 		doxygen Doxyfile || die
 	fi
 }
 
 src_install() {
-	default
+	autotools-utils_src_install
 
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins "${S}"/${PN}.pc
+	doins "${AUTOTOOLS_BUILD_DIR}"/${PN}.pc
 
 	for x in ./ Base64 Format/Html Format/Http HTTP_Client ; do
 		insinto /usr/include/${MY_PN}/${x}
@@ -58,9 +60,7 @@ src_install() {
 	done
 
 	dodoc "${WORKDIR}"/${MY_PN}/History.txt
-	if use doc; then
+	if use doc ; then
 		dohtml "${WORKDIR}"/${MY_PN}/Doc/*
 	fi
-
-	remove_libtool_files all
 }
