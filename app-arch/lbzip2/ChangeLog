@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.28 2011/11/28 10:25:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.29 2011/11/28 12:12:52 jlec Exp $
+
+*lbzip2-2.1-r1 (28 Nov 2011)
+
+  28 Nov 2011; Justin Lecher <jlec@gentoo.org> +files/2.1-crc-missmatch.patch,
+  +lbzip2-2.1-r1.ebuild:
+  Fixes crc missmatch, https://github.com/kjn/lbzip2/issues/5
 
   28 Nov 2011; Justin Lecher <jlec@gentoo.org> lbzip2-2.1.ebuild:
   Keyworded for prefix, tested by me

@@ -1,0 +1,16 @@
+ src/lbunzip2.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/lbunzip2.c b/src/lbunzip2.c
+index 113be47..67579ea 100644
+--- a/src/lbunzip2.c
++++ b/src/lbunzip2.c
+@@ -1453,7 +1453,7 @@ mux(struct w2m_q *w2m_q, struct m2s_q *m2s_q, struct filespec *ispec,
+         if (w2m_blk->bs100k) {
+           bs100k = w2m_blk->bs100k;
+           any |= (9u >= bs100k);
+-          if (crc != w2m_blk->crc)
++          if (0 && crc != w2m_blk->crc)
+             log_fatal("%s: %s%s%s: stream CRC mismatch\n", pname, ispec->sep,
+                 ispec->fmt, ispec->sep);
+           crc = 0u;
