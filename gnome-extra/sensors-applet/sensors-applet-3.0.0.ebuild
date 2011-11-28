@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-3.0.0.ebuild,v 1.2 2011/11/28 23:05:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-3.0.0.ebuild,v 1.3 2011/11/28 23:23:21 ssuominen Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="hddtemp libnotify lm_sensors +udev video_cards_fglrx video_cards_nvidia"
 
-RDEPEND=">=dev-libs/glib-2.22
+CDEPEND=">=dev-libs/glib-2.22
 	x11-libs/gtk+:3
 	>=gnome-base/gnome-panel-3
 	x11-libs/cairo
@@ -26,13 +26,13 @@ RDEPEND=">=dev-libs/glib-2.22
 	lm_sensors? ( sys-apps/lm_sensors )
 	video_cards_fglrx? ( x11-drivers/ati-drivers )
 	video_cards_nvidia? ( || ( >=x11-drivers/nvidia-drivers-100.14.09 media-video/nvidia-settings ) )"
-DEPEND="${RDEPEND}
+RDEPEND="${CDEPEND}
+	hddtemp? ( udev? ( sys-fs/udisks ) )"
+DEPEND="${CDEPEND}
 	app-text/gnome-doc-utils
 	app-text/rarian
 	dev-util/intltool
 	dev-util/pkgconfig"
-
-PDEPEND="hddtemp? ( udev? ( sys-fs/udisks ) )"
 
 pkg_setup() {
 	G2CONF="--disable-static
