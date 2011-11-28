@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.35 2011/11/07 03:25:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.36 2011/11/28 00:22:12 jer Exp $
+
+  28 Nov 2011; Jeroen Roovers <jer@gentoo.org> libconfig-1.4.7.ebuild,
+  libconfig-1.4.8.ebuild:
+  Do not inherit autotools-utils.eclass (bug #392089).
 
   07 Nov 2011; Jeroen Roovers <jer@gentoo.org> -libconfig-1.3.2.ebuild:
   ^

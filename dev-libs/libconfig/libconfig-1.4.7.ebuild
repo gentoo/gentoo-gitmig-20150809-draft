@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.4.7.ebuild,v 1.8 2011/11/06 17:26:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.4.7.ebuild,v 1.9 2011/11/28 00:22:12 jer Exp $
 
 EAPI="2"
-
-inherit autotools-utils
 
 DESCRIPTION="Libconfig is a simple library for manipulating structured configuration files"
 HOMEPAGE="http://www.hyperrealm.com/libconfig/libconfig.html"
@@ -33,7 +31,9 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	use static-libs || remove_libtool_files
+	if ! use static-libs; then
+		rm -f "${D}"/usr/lib*/lib*.la
+	fi
 	if use examples; then
 		local dir
 		for dir in examples/c examples/c++; do
