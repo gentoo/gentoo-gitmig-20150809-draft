@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.16.1.ebuild,v 1.1 2011/10/25 11:43:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.16.3.ebuild,v 1.1 2011/11/28 20:06:09 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -18,10 +18,10 @@ IUSE="debug +introspection +vala"
 
 RDEPEND=">=dev-libs/glib-2.28.0:2
 	>=dev-libs/dbus-glib-0.82
-	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
+	introspection? ( >=dev-libs/gobject-introspection-1.30 )
 	vala? (
-		dev-lang/vala:0.14[vapigen]
-		>=dev-libs/gobject-introspection-0.9.6 )"
+		>=dev-lang/vala-0.14.0:0.14[vapigen]
+		>=dev-libs/gobject-introspection-1.30 )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	>=dev-util/pkgconfig-0.21"
@@ -53,12 +53,12 @@ src_configure() {
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	# Needs dbus for tests (auto-launched)
-	Xemake -j1 check || die
+	Xemake -j1 check
 }
 
 src_install() {
 	emake install DESTDIR="${D}"
 	dodoc AUTHORS ChangeLog NEWS README
 
-	find "${D}" -name '*.la' -exec rm -f '{}' + || die
+	find "${D}" -name '*.la' -exec rm -f '{}' +
 }
