@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkXwin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.24 2011/11/26 16:44:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.25 2011/11/28 11:44:44 phajdan.jr Exp $
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tkXwin-1.0-r2.ebuild:
+  x86 stable wrt bug #391489
 
   26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> tkXwin-1.0-r2.ebuild:
   Stable on amd64 wrt bug #391489
