@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9.2.0.ebuild,v 1.1 2011/11/25 04:00:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9.2.0.ebuild,v 1.2 2011/11/28 20:21:59 pacho Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
@@ -34,6 +34,14 @@ src_prepare() {
 	# FAIL: (tls-import-data) unexpected 'ca' secret value
 	sed '/test_non_utf8_import (plugin, test_dir)/ d' \
 		-i properties/tests/test-import-export.c || die "sed failed"
+
+	# Drop DEPRECATED flags, bug #385597
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		auth-dialog/Makefile.am auth-dialog/Makefile.in \
+		common/Makefile.am common/Makefile.in \
+		properties/Makefile.am properties/Makefile.in \
+		src/Makefile.am src/Makefile.in \
+		configure.ac configure || die
 }
 
 src_configure() {
