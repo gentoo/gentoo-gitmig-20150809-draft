@@ -1,0 +1,16 @@
+--- src/app-indicator.c
++++ src/app-indicator.c
+@@ -33,8 +33,13 @@
+ 
+ #include <libdbusmenu-glib/menuitem.h>
+ #include <libdbusmenu-glib/server.h>
++#ifdef HAVE_GTK3
++#include <libdbusmenu-gtk3/client.h>
++#include <libdbusmenu-gtk3/parser.h>
++#else
+ #include <libdbusmenu-gtk/client.h>
+ #include <libdbusmenu-gtk/parser.h>
++#endif
+ 
+ #include <libindicator/indicator-desktop-shortcuts.h>
+ 
