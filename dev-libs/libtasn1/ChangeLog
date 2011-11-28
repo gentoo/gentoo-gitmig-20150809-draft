@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.149 2011/11/28 19:54:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.150 2011/11/28 21:22:24 radhermit Exp $
+
+*libtasn1-2.11 (28 Nov 2011)
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> +libtasn1-2.11.ebuild:
+  Version bump.
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org> libtasn1-2.10.ebuild:
   Use array for myeconfargs.
