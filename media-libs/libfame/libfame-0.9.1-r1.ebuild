@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.29 2011/11/27 04:05:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.30 2011/11/28 03:26:54 radhermit Exp $
 
 EAPI=4
 
-inherit eutils autotools-utils
+inherit autotools-utils
 
 PATCHLEVEL="2"
 DESCRIPTION="MPEG-1 and MPEG-4 video encoding library"
@@ -17,23 +17,21 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="mmx static-libs"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+PATCHES=( "${FILESDIR}"/${P}-gcc43.patch )
+
+DOCS=( AUTHORS BUGS CHANGES README TODO )
 
 src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/${PV}
 
 	# Do not add -march=i586, bug #41770.
 	sed -i -e 's:-march=i[345]86 ::g' configure
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+	autotools-utils_src_prepare
 }
 
 src_configure() {
-	econf \
-		$(use_enable mmx) \
-		$(use_enable static-libs static)
-}
-
-src_install() {
-	default
-	remove_libtool_files
+	local myeconfargs=(
+		$(use_enable mmx)
+	)
+	autotools-utils_src_configure
 }
