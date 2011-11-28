@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.32.1-r2.ebuild,v 1.7 2011/10/30 16:06:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.32.1-r2.ebuild,v 1.8 2011/11/28 18:18:26 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -23,7 +23,7 @@ KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~am
 IUSE="debug libnotify policykit pulseaudio smartcard"
 
 # libgnomekbd-2.91 breaks API/ABI
-RDEPEND=">=dev-libs/dbus-glib-0.74
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.74
 	>=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.21.2:2
 	>=gnome-base/gconf-2.6.1:2
@@ -51,7 +51,11 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 		>=media-libs/gst-plugins-base-0.10.1.2:0.10 )
 	smartcard? ( >=dev-libs/nss-3.11.2 )"
 
-DEPEND="${RDEPEND}
+# 50-accessibility.xml moved to gnome-control-center in gnome-3
+RDEPEND="${COMMON_DEPEND}
+	!>=gnome-base/gnome-control-center-2.91.90"
+
+DEPEND="${COMMON_DEPEND}
 	!<gnome-base/gnome-control-center-2.22
 	sys-devel/gettext
 	>=dev-util/intltool-0.40

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.2.ebuild,v 1.1 2011/11/13 18:02:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.2.ebuild,v 1.2 2011/11/28 18:18:26 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="+colord +cups debug packagekit policykit short-touchpad-timeout smartcard +udev"
+IUSE="+colord +cups debug packagekit policykit +short-touchpad-timeout smartcard +udev"
 
 # Latest gsettings-desktop-schemas is needed due to commit e8d1de92
 # Latest gnome-desktop needed to fix the DPMS timeout bug #385063
