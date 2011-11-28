@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.16.ebuild,v 1.8 2011/11/26 12:54:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.16.ebuild,v 1.9 2011/11/28 10:20:19 eras Exp $
 
 EAPI=4
 
-inherit eutils versionator ssl-cert autotools-utils
+inherit eutils versionator ssl-cert
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
@@ -253,7 +253,7 @@ src_install () {
 		doman doc/man/*.{1,7}
 	fi
 
-	use static-libs || remove_libtool_files
+	use static-libs || find "${D}"/usr/lib* -name '*.la' -delete
 }
 
 pkg_preinst() {
