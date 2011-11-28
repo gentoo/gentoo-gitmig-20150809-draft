@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/sinfo-0.0.43.ebuild,v 1.4 2011/11/27 15:58:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/sinfo-0.0.43-r1.ebuild,v 1.1 2011/11/28 22:20:23 radhermit Exp $
 
 EAPI=4
 
@@ -42,6 +42,6 @@ src_configure() {
 src_install() {
 	autotools-utils_src_install
 
-	newconfd "${FILESDIR}"/${PN}.confd ${PN}
-	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	newconfd "${FILESDIR}"/sinfod.confd sinfod
+	newinitd "${FILESDIR}"/sinfod.initd sinfod
 }
