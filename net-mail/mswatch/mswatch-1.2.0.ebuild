@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mswatch/mswatch-1.2.0.ebuild,v 1.2 2011/11/27 03:35:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mswatch/mswatch-1.2.0.ebuild,v 1.3 2011/11/28 02:30:44 radhermit Exp $
 
 EAPI="4"
 
@@ -22,15 +22,11 @@ DEPEND="${RDEPEND}
 CONFIG_CHECK="~INOTIFY_USER"
 ERROR_INOTIFY_USER="${P} requires in-kernel inotify support."
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+DOCS=( AUTHORS NEWS README THANKS TODO )
 
 src_configure() {
-	econf \
-		--with-notify=inotify \
-		$(use_enable static-libs static)
-}
-
-src_install() {
-	default
-	remove_libtool_files
+	local myeconfargs=(
+		--with-notify=inotify
+	)
+	autotools-utils_src_configure
 }
