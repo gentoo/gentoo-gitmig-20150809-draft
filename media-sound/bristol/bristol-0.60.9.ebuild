@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.60.9.ebuild,v 1.4 2011/11/28 02:04:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.60.9.ebuild,v 1.5 2011/11/28 02:14:21 radhermit Exp $
 
 EAPI="4"
 
@@ -35,7 +35,7 @@ src_prepare() {
 }
 
 src_configure() {
-	myeconfargs=(
+	local myeconfargs=(
 		--disable-version-check
 		$(use_enable alsa)
 		$(use_enable oss)

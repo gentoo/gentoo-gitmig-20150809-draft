@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bristol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/ChangeLog,v 1.11 2011/11/28 02:04:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/ChangeLog,v 1.12 2011/11/28 02:14:21 radhermit Exp $
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> bristol-0.60.9.ebuild:
+  Add local scope for myeconfargs.
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org> bristol-0.60.9.ebuild:
   Fix autotools-utils usage (bug #392185).
