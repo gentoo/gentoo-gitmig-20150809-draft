@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.47 2011/11/14 15:02:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.48 2011/11/28 10:56:02 voyageur Exp $
+
+*clang-3.0_rc4 (28 Nov 2011)
+
+  28 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org> -clang-3.0_rc3.ebuild,
+  +clang-3.0_rc4.ebuild:
+  Final rc bump
 
   14 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org> clang-2.8-r3.ebuild,
   clang-2.9-r1.ebuild, clang-3.0_rc3.ebuild, clang-9999.ebuild:

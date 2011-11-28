@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0_rc3.ebuild,v 1.3 2011/11/24 08:56:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0_rc4.ebuild,v 1.1 2011/11/28 10:54:12 voyageur Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic multilib toolchain-funcs
