@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libpar2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.15 2011/11/26 18:55:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.16 2011/11/28 06:31:17 radhermit Exp $
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> libpar2-0.2-r3.ebuild:
+  Add comment to explain the in source build requirement.
 
 *libpar2-0.2-r3 (26 Nov 2011)
 
