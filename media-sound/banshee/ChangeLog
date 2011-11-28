@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.144 2011/11/21 11:50:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.145 2011/11/28 21:04:58 pacho Exp $
+
+  28 Nov 2011; Pacho Ramos <pacho@gentoo.org> banshee-2.2.1.ebuild:
+  Fix dependencies: drop old GVER stuff that didn't make any sense with the way
+  we provide gst plugins, gnomevfs was replaced by gio time ago, gvfs[ios] is
+  needed with USE 'ios', rename 'ipod' to 'ios' USE flag. Thanks a lot to leio
+  for his help.
 
 *banshee-2.2.1 (21 Nov 2011)
 

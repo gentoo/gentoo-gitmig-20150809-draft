@@ -1,12 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.2.1.ebuild,v 1.1 2011/11/21 11:50:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.2.1.ebuild,v 1.2 2011/11/28 21:04:58 pacho Exp $
 
 EAPI="4"
 
 inherit eutils autotools mono gnome2-utils fdo-mime versionator gnome.org
-
-GVER=0.10.7
 
 DESCRIPTION="Import, organize, play, and share your music using a simple and powerful interface."
 HOMEPAGE="http://banshee.fm/"
@@ -14,7 +12,7 @@ HOMEPAGE="http://banshee.fm/"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+aac +cdda +bpm boo daap doc +encode ipod karma mtp test udev +web youtube"
+IUSE="+aac +cdda +bpm boo daap doc +encode ios karma mtp test udev +web youtube"
 
 RDEPEND=">=dev-lang/mono-2.4.3
 	gnome-base/gnome-settings-daemon
@@ -25,16 +23,16 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	>=dev-dotnet/notify-sharp-0.4.0_pre20080912-r1
 	>=media-libs/gstreamer-0.10.21-r3:0.10
 	>=media-libs/gst-plugins-base-0.10.25.2:0.10
-	>=media-libs/gst-plugins-bad-${GVER}
-	>=media-libs/gst-plugins-good-${GVER}:0.10
-	>=media-libs/gst-plugins-ugly-${GVER}:0.10
+	media-libs/gst-plugins-bad
+	media-libs/gst-plugins-good:0.10
+	media-libs/gst-plugins-ugly:0.10
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
-	>=media-plugins/gst-plugins-gnomevfs-${GVER}:0.10
-	>=media-plugins/gst-plugins-gconf-${GVER}:0.10
+	media-plugins/gst-plugins-gio:0.10
+	media-plugins/gst-plugins-gconf:0.10
 	cdda? (
 		|| (
-			>=media-plugins/gst-plugins-cdparanoia-${GVER}:0.10
-			>=media-plugins/gst-plugins-cdio-${GVER}:0.10
+			media-plugins/gst-plugins-cdparanoia:0.10
+			media-plugins/gst-plugins-cdio:0.10
 		)
 	)
 	media-libs/musicbrainz:1
@@ -44,24 +42,21 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	>=dev-dotnet/taglib-sharp-2.0.3.7
 	>=dev-db/sqlite-3.4:3
 	karma? ( >=media-libs/libkarma-0.1.0-r1 )
-	aac? ( >=media-plugins/gst-plugins-faad-${GVER}:0.10 )
-	boo? (
-		>=dev-lang/boo-0.8.1
-	)
-	bpm? ( >=media-plugins/gst-plugins-soundtouch-${GVER}:0.10 )
-	daap? (
-		>=dev-dotnet/mono-zeroconf-0.8.0-r1
-	)
+	aac? ( media-plugins/gst-plugins-faad:0.10 )
+	boo? ( >=dev-lang/boo-0.8.1 )
+	bpm? ( media-plugins/gst-plugins-soundtouch:0.10 )
+	daap? (	>=dev-dotnet/mono-zeroconf-0.8.0-r1 )
 	doc? (
 		virtual/monodoc
 		>=app-text/gnome-doc-utils-0.17.3
 	)
 	encode? (
-		>=media-plugins/gst-plugins-lame-${GVER}:0.10
-		>=media-plugins/gst-plugins-taglib-${GVER}:0.10
+		media-plugins/gst-plugins-lame:0.10
+		media-plugins/gst-plugins-taglib:0.10
 	)
-	ipod? (
+	ios? (
 		>=media-libs/libgpod-0.7.95[mono]
+		gnome-base/gvfs[ios]
 	)
 	mtp? (
 		>=media-libs/libmtp-0.3.0
@@ -123,7 +118,7 @@ src_configure() {
 		$(use_enable boo) \
 		$(use_enable mtp) \
 		$(use_enable daap) \
-		$(use_enable ipod appledevice) \
+		$(use_enable ios appledevice) \
 		$(use_enable karma) \
 		$(use_enable web webkit) \
 		$(use_enable youtube) \
