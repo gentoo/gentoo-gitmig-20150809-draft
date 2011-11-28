@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.3.2.ebuild,v 1.4 2011/08/07 14:28:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.3.2.ebuild,v 1.5 2011/11/28 19:24:33 graaff Exp $
 
 EAPI=2
 
@@ -22,9 +22,15 @@ IUSE=""
 
 RUBY_PATCHES=( "${P}-thread_id.patch" )
 
-ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
+ruby_add_bdepend "test? ( virtual/ruby-test-unit dev-ruby/nokogiri )"
 ruby_add_rdepend ">=dev-ruby/builder-2.0.0"
 
 # Tests fail when markaby is not new enough, but it's optional.
 DEPEND="${DEPEND} !!<dev-ruby/markaby-0.6.9-r1"
 RDEPEND="${RDEPEND}"
+
+all_ruby_prepare() {
+	# Remove rdoc template tests since these are no longer compatible
+	# with newer versions.
+	rm test/tilt_rdoctemplate_test.rb || die
+}
