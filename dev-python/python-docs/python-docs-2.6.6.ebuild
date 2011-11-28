@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.6.6.ebuild,v 1.2 2011/02/20 16:36:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.6.6.ebuild,v 1.3 2011/11/28 19:52:06 hwoarang Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ DESCRIPTION="HTML documentation for Python"
 HOMEPAGE="http://www.python.org/doc/"
 SRC_URI="http://www.python.org/ftp/python/doc/${PV}/python-${PV}-docs-html.tar.bz2"
 
-LICENSE="PSF-2.2"
+LICENSE="PSF-2"
 SLOT="2.6"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""

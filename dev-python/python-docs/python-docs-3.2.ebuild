@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-3.2.ebuild,v 1.2 2011/08/27 21:22:56 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-3.2.ebuild,v 1.3 2011/11/28 19:52:06 hwoarang Exp $
 
 EAPI="3"
 
@@ -17,12 +17,6 @@ DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/python-${PV}-docs-html"
-
-pkg_setup() {
-	if has_version "=dev-lang/python-3.2_pre*[doc]"; then
-		rm -f "${EROOT}etc/env.d/60python-docs-3.2"
-	fi
-}
 
 src_install() {
 	docinto html
