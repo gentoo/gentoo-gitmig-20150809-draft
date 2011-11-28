@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.1.ebuild,v 1.1 2011/08/14 16:31:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.1.ebuild,v 1.2 2011/11/28 10:31:59 jlec Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ SRC_URI="http://www.xm1math.net/texmaker/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
