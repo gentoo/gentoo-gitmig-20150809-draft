@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r201.ebuild,v 1.1 2011/11/28 15:04:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r201.ebuild,v 1.2 2011/11/28 15:10:04 ssuominen Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ IUSE="+introspection"
 RDEPEND="dev-libs/dbus-glib
 	>=dev-libs/glib-2.26
 	dev-libs/libdbusmenu[gtk,-gtk3]
-	>=dev-libs/libindicator-0.4
+	>=dev-libs/libindicator-0.4:0
 	dev-python/pygobject:2
 	>=dev-python/pygtk-2.14:2
 	>=x11-libs/gtk+-2.18:2
