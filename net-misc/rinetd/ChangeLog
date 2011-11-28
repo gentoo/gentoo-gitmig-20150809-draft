@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rinetd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rinetd/ChangeLog,v 1.7 2010/08/31 12:48:15 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rinetd/ChangeLog,v 1.8 2011/11/28 22:50:03 chainsaw Exp $
+
+  28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> rinetd-0.62-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #391623.
 
 *rinetd-0.62-r1 (31 Aug 2010)
 
