@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/eiciel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/eiciel/ChangeLog,v 1.3 2011/11/26 13:43:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/eiciel/ChangeLog,v 1.4 2011/11/28 06:04:22 tetromino Exp $
+
+  28 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  eiciel-0.9.8.1.ebuild:
+  The tarball on the upstream website has been restored.
 
   26 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   eiciel-0.9.8.1.ebuild:
