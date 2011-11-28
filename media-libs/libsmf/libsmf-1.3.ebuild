@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsmf/libsmf-1.3.ebuild,v 1.2 2011/11/27 04:14:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsmf/libsmf-1.3.ebuild,v 1.3 2011/11/28 03:09:50 radhermit Exp $
 
 EAPI=4
 
@@ -21,16 +21,17 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	dev-util/pkgconfig"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+DOCS=( NEWS TODO )
 
 src_configure() {
-	econf \
-		$(use_with readline) \
-		$(use_enable static-libs static)
+	local myeconfargs=(
+		$(use_with readline)
+	)
+	autotools-utils_src_configure
 }
 
 src_compile() {
-	default
+	autotools-utils_src_compile
 
 	if use doc ; then
 		doxygen doxygen.cfg || die
@@ -38,7 +39,6 @@ src_compile() {
 }
 
 src_install() {
-	default
-	remove_libtool_files all
+	autotools-utils_src_install
 	use doc && dohtml -r api
 }
