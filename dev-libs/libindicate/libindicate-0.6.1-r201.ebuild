@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.6.1-r201.ebuild,v 1.1 2011/11/26 18:10:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.6.1-r201.ebuild,v 1.2 2011/11/28 16:51:16 ssuominen Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ IUSE="+introspection"
 # note: pull in SLOT="3" to install headers and libs (see rm -rf in src_install)
 RDEPEND=">=dev-libs/dbus-glib-0.76
 	>=dev-libs/glib-2.18:2
-	>=dev-libs/libdbusmenu-0.3.97[introspection?]
+	>=dev-libs/libdbusmenu-0.3.97:0[introspection?]
 	dev-libs/libxml2:2
 	dev-python/pygtk:2
 	>=x11-libs/gtk+-2.12:2

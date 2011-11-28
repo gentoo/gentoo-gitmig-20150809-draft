@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r300.ebuild,v 1.1 2011/11/28 15:04:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r300.ebuild,v 1.2 2011/11/28 16:49:48 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -19,7 +19,7 @@ IUSE="+introspection"
 # FIXME: Missing dev-lang/mono handling!
 RDEPEND="dev-libs/dbus-glib
 	>=dev-libs/glib-2.26
-	dev-libs/libdbusmenu[gtk,gtk3]
+	dev-libs/libdbusmenu:3[gtk]
 	>=dev-libs/libindicator-0.4:3
 	x11-libs/gtk+:3
 	introspection? ( >=dev-libs/gobject-introspection-0.10 )"

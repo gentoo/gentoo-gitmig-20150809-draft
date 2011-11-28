@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libappindicator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.5 2011/11/28 15:05:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.6 2011/11/28 16:49:48 ssuominen Exp $
+
+  28 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  libappindicator-0.4.1-r201.ebuild, libappindicator-0.4.1-r300.ebuild:
+  Fix libdbusmenu SLOT dependencies.
 
   28 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   -libappindicator-0.4.1-r200.ebuild:
