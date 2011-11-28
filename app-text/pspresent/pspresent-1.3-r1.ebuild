@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.3-r1.ebuild,v 1.2 2011/11/25 23:48:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.3-r1.ebuild,v 1.3 2011/11/28 11:39:38 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 IUSE="xinerama"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND="x11-libs/libX11
 	xinerama? ( x11-libs/libXinerama )
