@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.4_p1.ebuild,v 1.6 2011/11/28 10:19:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.4_p1.ebuild,v 1.7 2011/11/29 16:27:10 chainsaw Exp $
 
 EAPI="3"
 
@@ -55,7 +55,7 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	use threads && {
 		ewarn
-		ewarn "If you're in vserver enviroment, you're probably want to"
+		ewarn "If you're in vserver environment, you'll probably want to"
 		ewarn "disable threads support because of linux capabilities dependency"
 		ewarn
 	}
