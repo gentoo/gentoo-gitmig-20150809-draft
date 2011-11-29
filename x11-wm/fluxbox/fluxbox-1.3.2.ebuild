@@ -1,16 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.10 2011/11/29 14:08:31 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.2.ebuild,v 1.1 2011/11/29 14:08:31 lack Exp $
 
 EAPI=4
-inherit eutils git-2 prefix
+inherit eutils prefix
 
 IUSE="nls xinerama bidi +truetype +imlib +slit +toolbar vim-syntax"
 
 DESCRIPTION="Fluxbox is an X11 window manager featuring tabs and an iconbar"
 
-EGIT_REPO_URI="git://git.fluxbox.org/fluxbox.git"
-SRC_URI=""
+SRC_URI="mirror://sourceforge/fluxbox/${P}.tar.bz2"
 HOMEPAGE="http://www.fluxbox.org"
 
 RDEPEND="x11-libs/libXpm
@@ -33,16 +32,16 @@ DEPEND="nls? ( sys-devel/gettext )
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
 
 src_prepare() {
-	./autogen.sh
-
 	# We need to be able to include directories rather than just plain
 	# files in menu [include] items. This patch will allow us to do clever
 	# things with style ebuilds.
 	epatch "${FILESDIR}/gentoo_style_location-1.1.x.patch"
 	eprefixify util/fluxbox-generate_menu.in
+
+	epatch "${FILESDIR}"/osx-has-otool.patch
 
 	# Add in the Gentoo -r number to fluxbox -version output.
 	if [[ "${PR}" == "r0" ]] ; then
@@ -57,21 +56,20 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable nls) \
 		$(use_enable xinerama) \
 		$(use_enable truetype xft) \
 		$(use_enable imlib imlib2) \
+		$(use_enable bidi fribidi ) \
 		$(use_enable slit ) \
 		$(use_enable toolbar ) \
-		$(use_enable bidi fribidi ) \
 		--sysconfdir="${EPREFIX}"/etc/X11/${PN} \
 		--with-style="${EPREFIX}"/usr/share/fluxbox/styles/Emerge \
 		${myconf}
 }
 
 src_compile() {
-	emake || die "make failed"
+	default
 
 	ebegin "Creating a menu file (may take a while)"
 	mkdir -p "${T}/home/.fluxbox" || die "mkdir home failed"
@@ -84,7 +82,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/fluxbox
-	emake DESTDIR="${D}" STRIP="" install || die "install failed"
+	emake DESTDIR="${D}" STRIP="" install
 	dodoc README* AUTHORS TODO* ChangeLog NEWS
 
 	dodir /usr/share/xsessions
@@ -99,7 +97,7 @@ src_install() {
 	# Styles menu framework
 	dodir /usr/share/fluxbox/menu.d/styles
 	insinto /usr/share/fluxbox/menu.d/styles
-	doins "${FILESDIR}/styles-menu-fluxbox" || die
-	doins "${FILESDIR}/styles-menu-commonbox" || die
-	doins "${FILESDIR}/styles-menu-user" || die
+	doins "${FILESDIR}/styles-menu-fluxbox"
+	doins "${FILESDIR}/styles-menu-commonbox"
+	doins "${FILESDIR}/styles-menu-user"
 }
