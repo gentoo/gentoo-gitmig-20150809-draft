@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.157 2011/11/26 10:45:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.158 2011/11/29 12:04:19 naota Exp $
+
+  29 Nov 2011; Naohiro Aota <naota@gentoo.org> zile-2.4.2.ebuild:
+  Add ~x86-fbsd. Bug #384445
 
   26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> zile-2.4.2.ebuild:
   Stable on amd64 wrt bug #391699
