@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/restkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.4 2011/02/04 14:13:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.5 2011/11/29 20:22:15 floppym Exp $
+
+  29 Nov 2011; Mike Gilbert <floppym@gentoo.org> restkit-3.0.2.ebuild:
+  Restrict python 2.4, fixes bug 366357.
 
 *restkit-3.0.2 (04 Feb 2011)
 

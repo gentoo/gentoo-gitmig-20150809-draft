@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-3.0.2.ebuild,v 1.1 2011/02/04 14:13:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-3.0.2.ebuild,v 1.2 2011/11/29 20:22:15 floppym Exp $
 
 EAPI=3
 
 DISTUTILS_SRC_TEST="nosetests"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 inherit distutils
 
