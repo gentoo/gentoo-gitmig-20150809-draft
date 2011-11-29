@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/NaturalDocs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.33 2011/11/28 11:50:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.34 2011/11/29 15:32:48 jer Exp $
+
+  29 Nov 2011; Jeroen Roovers <jer@gentoo.org> NaturalDocs-1.52.ebuild:
+  Stable for HPPA (bug #391263).
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> NaturalDocs-1.52.ebuild:
   x86 stable wrt bug #391263
