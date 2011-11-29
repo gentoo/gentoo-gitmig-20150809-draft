@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/chrpath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.18 2011/10/11 18:19:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.19 2011/11/29 18:37:49 grobian Exp $
+
+  29 Nov 2011; Fabian Groffen <grobian@gentoo.org> chrpath-0.13-r2.ebuild:
+  Cleanup static-libs code, thanks Kacper Kowalik and Agostino Sarubbo.  The
+  produced shared libraries are only dlopened by the main chrpath program to
+  work around a duplicate names issue, it are in fact just ordinary shared
+  libraries, so we should retain .la files for them if we want static libs.
 
   11 Oct 2011; Fabian Groffen <grobian@gentoo.org> chrpath-0.13-r2.ebuild:
   Fix odd double docs dir installation, remove libtool archives, install static

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.4 2011/10/11 18:19:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.5 2011/11/29 18:37:49 grobian Exp $
 
 EAPI="2"
 
@@ -25,9 +25,12 @@ src_prepare() {
 	eautoreconf
 }
 
+src_configure() {
+	econf $(use_enable static_libs static) || die
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog AUTHORS NEWS README
-	find "${D}" -name "*.la" -exec rm '{}' +
-	use static-libs || find "${D}" -name "*.a" -exec rm '{}' +
+	use static-libs || find "${D}" -name "*.la" -exec rm '{}' +
 }
