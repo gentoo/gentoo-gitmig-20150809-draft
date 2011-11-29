@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.210 2011/10/10 17:13:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.211 2011/11/29 18:21:19 grobian Exp $
+
+  29 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  +files/exim-4.77-as-needed-ldflags.patch, exim-4.77.ebuild:
+  Fix building of helper apps respecting LDFLAGS (bug #391279) and for --as-
+  needed.
 
   10 Oct 2011; Fabian Groffen <grobian@gentoo.org> exim-4.77.ebuild:
   Add USE=doc to install HTML documentation, bug #331737

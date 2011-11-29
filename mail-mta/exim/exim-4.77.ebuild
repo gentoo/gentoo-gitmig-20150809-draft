@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.77.ebuild,v 1.3 2011/10/10 17:13:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.77.ebuild,v 1.4 2011/11/29 18:21:19 grobian Exp $
 
 EAPI="3"
 
@@ -75,8 +75,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/exim-4.74-localscan_dlopen.patch
 	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
 	epatch "${FILESDIR}"/exim-4.74-radius-db-ENV-clash.patch # 287426
-	epatch "${FILESDIR}"/exim-4.77-makefile-freebsd.patch
-	epatch "${FILESDIR}"/exim-4.76-as-needed.patch # 352265
+	epatch "${FILESDIR}"/exim-4.77-makefile-freebsd.patch # 235785
+	epatch "${FILESDIR}"/exim-4.77-as-needed-ldflags.patch # 352265, 391279
 	epatch "${FILESDIR}"/exim-4.76-crosscompile.patch # 266591
 
 	use maildir && epatch "${FILESDIR}"/exim-4.20-maildir.patch
