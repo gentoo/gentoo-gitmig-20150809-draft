@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.43 2011/11/15 13:23:23 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.44 2011/11/29 22:58:10 chainsaw Exp $
+
+  29 Nov 2011; Tony Vroon <chainsaw@gentoo.org> thunderbird-bin-8.0.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo,
+  Elijah "Armageddon" El Lazkani, Michael "n0idx80" Harrison & Tomáš "Mepho"
+  Pružina in security bug #389923.
 
   15 Nov 2011; Jory A. Pratt <anarchy@gentoo.org> thunderbird-bin-8.0.ebuild:
   pax-mark thunderbird-bin for hardened, fix crashreporter dep when requested
