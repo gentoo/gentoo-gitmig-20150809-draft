@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.5 2011/11/29 18:37:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.6 2011/11/29 18:39:55 grobian Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable static_libs static) || die
+	econf $(use_enable static-libs static) || die
 }
 
 src_install() {
