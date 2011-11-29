@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.15 2011/11/29 19:01:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.16 2011/11/29 19:31:20 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -183,13 +183,12 @@ enewuser() {
 
 	# handle groups
 	local egroups=$1; shift
-	if [[ ! -z ${egroups} ]] ; then
-		local oldifs=${IFS}
-		local defgroup="" exgroups=""
-
-		export IFS=","
-		for g in ${egroups} ; do
-			export IFS=${oldifs}
+	local g egroups_arr
+	IFS="," read -r -a egroups_arr <<<"${egroups}"
+	shift
+	if [[ ${#egroups_arr[@]} -gt 0 ]] ; then
+		local defgroup exgroups
+		for g in "${egroups_arr[@]}" ; do
 			if [[ -z $(egetent group "${g}") ]] ; then
 				eerror "You must add group ${g} to the system first"
 				die "${g} is not a valid GID"
@@ -197,20 +196,15 @@ enewuser() {
 			if [[ -z ${defgroup} ]] ; then
 				defgroup=${g}
 			else
-				exgroups="${exgroups},${g}"
+				exgroups+=",${g}"
 			fi
-			export IFS=","
 		done
-		export IFS=${oldifs}
-
 		opts+=( -g "${defgroup}" )
 		if [[ ! -z ${exgroups} ]] ; then
 			opts+=( -G "${exgroups:1}" )
 		fi
-	else
-		egroups="(none)"
 	fi
-	einfo " - Groups: ${egroups}"
+	einfo " - Groups: ${egroups:-(none)}"
 
 	# handle extra args
 	if [[ $# -gt 0 ]] ; then
@@ -230,12 +224,9 @@ enewuser() {
 		dscl . create "/users/${euser}" home "${ehome}"
 		dscl . create "/users/${euser}" realname "added by portage for ${PN}"
 		### Add the user to the groups specified
-		local g oldifs=${IFS}
-		export IFS=","
-		for g in ${egroups} ; do
+		for g in "${egroups_arr[@]}" ; do
 			dscl . merge "/groups/${g}" users "${euser}"
 		done
-		export IFS=${oldifs}
 		;;
 
 	*-freebsd*|*-dragonfly*)
