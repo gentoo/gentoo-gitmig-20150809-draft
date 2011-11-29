@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.63 2011/09/14 23:58:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.64 2011/11/29 15:27:16 vapier Exp $
+
+*nbd-2.9.25 (29 Nov 2011)
+
+  29 Nov 2011; Mike Frysinger <vapier@gentoo.org> +nbd-2.9.25.ebuild:
+  Version bump.
 
 *nbd-2.9.24 (14 Sep 2011)
 
