@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.16 2011/11/29 19:31:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.17 2011/11/29 19:32:23 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -303,7 +303,7 @@ enewgroup() {
 	# Some targets need to find the next available GID manually
 	_enewgroup_next_gid() {
 		if [[ ${egid} == *[!0-9]* ]] ; then
-			 # Non numeric
+			# Non numeric
 			for ((egid = 101; egid <= 999; egid++)) ; do
 				[[ -z $(egetent group ${egid}) ]] && break
 			done
@@ -331,7 +331,7 @@ enewgroup() {
 	*)
 		local opts
 		if [[ ${egid} == *[!0-9]* ]] ; then
-			 # Non numeric; let groupadd figure out a GID for us
+			# Non numeric; let groupadd figure out a GID for us
 			opts=""
 		else
 			opts="-g ${egid}"
