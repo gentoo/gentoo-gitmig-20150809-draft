@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.1-r300.ebuild,v 1.1 2011/09/30 13:52:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.1-r300.ebuild,v 1.2 2011/11/29 19:01:02 grobian Exp $
 
 EAPI="4"
 
@@ -69,14 +69,6 @@ src_prepare() {
 	# FIXME: Fix unaligned accesses on ARM, IA64 and SPARC
 	# https://bugs.webkit.org/show_bug.cgi?id=19775
 	use sparc && epatch "${FILESDIR}"/${PN}-1.2.3-fix-pool-sparc.patch
-
-	# intermediate MacPorts hack while upstream bug is not fixed properly
-	# https://bugs.webkit.org/show_bug.cgi?id=28727
-	use aqua && epatch "${FILESDIR}"/${PN}-1.2.5-darwin-quartz.patch
-
-	# Fix build on Darwin8 (10.4 Tiger)
-	# XXX: Fails to apply
-	#epatch "${FILESDIR}"/${PN}-1.2.5-darwin8.patch
 
 	# Don't force -O2
 	sed -i 's/-O2//g' "${S}"/configure.ac

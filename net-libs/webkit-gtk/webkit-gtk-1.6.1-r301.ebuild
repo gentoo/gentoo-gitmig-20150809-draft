@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.1-r301.ebuild,v 1.1 2011/11/29 13:25:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.1-r301.ebuild,v 1.2 2011/11/29 19:01:02 grobian Exp $
 
 EAPI="4"
 
@@ -16,8 +16,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
-~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 # geoclue
 IUSE="aqua coverage debug doc +gstreamer +introspection +jit spell webgl"
 
@@ -83,8 +82,7 @@ src_prepare() {
 
 	# intermediate MacPorts hack while upstream bug is not fixed properly
 	# https://bugs.webkit.org/show_bug.cgi?id=28727
-	# TODO: FAILS TO APPLY!
-	#use aqua && epatch "${FILESDIR}"/${PN}-1.2.5-darwin-quartz.patch
+	use aqua && epatch "${FILESDIR}"/${P}-darwin-quartz.patch
 
 	# Drop DEPRECATED flags
 	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' GNUmakefile.am || die

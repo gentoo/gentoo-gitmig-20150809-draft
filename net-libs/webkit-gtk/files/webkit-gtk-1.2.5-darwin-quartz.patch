@@ -1,8 +1,8 @@
 http://trac.macports.org/browser/trunk/dports/www/webkit-gtk/files/patch-quartz-WebCore-plugins-gtk-gtkxtbin.c.diff?format=txt
 http://trac.macports.org/browser/trunk/dports/www/webkit-gtk/files/patch-quartz-WebCore-plugins-gtk-PluginViewGtk.cpp.diff?format=txt
 
---- WebCore/plugins/gtk/gtk2xtbin.c.orig	2010-09-10 06:20:33.000000000 -0700
-+++ WebCore/plugins/gtk/gtk2xtbin.c	2010-10-06 09:45:37.000000000 -0700
+--- Source/WebCore/plugins/gtk/gtk2xtbin.c
++++ Source/WebCore/plugins/gtk/gtk2xtbin.c
 @@ -41,7 +41,7 @@
   * The GtkXtBin widget allows for Xt toolkit code to be used
   * inside a GTK application.  
@@ -17,8 +17,8 @@ http://trac.macports.org/browser/trunk/dports/www/webkit-gtk/files/patch-quartz-
    return;
  }
 +#endif
---- WebCore/plugins/gtk/PluginViewGtk.cpp.orig	2010-09-10 06:20:33.000000000 -0700
-+++ WebCore/plugins/gtk/PluginViewGtk.cpp	2010-10-06 09:45:37.000000000 -0700
+--- Source/WebCore/plugins/gtk/PluginViewGtk.cpp
++++ Source/WebCore/plugins/gtk/PluginViewGtk.cpp
 @@ -60,10 +60,13 @@
  #include "runtime_root.h"
  #include <runtime/JSLock.h>

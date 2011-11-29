@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.131 2011/11/29 13:25:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.132 2011/11/29 19:01:02 grobian Exp $
+
+  29 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  +files/webkit-gtk-1.6.1-darwin-quartz.patch, webkit-gtk-1.6.1-r300.ebuild,
+  webkit-gtk-1.6.1-r301.ebuild, webkit-gtk-1.6.1-r201.ebuild,
+  files/webkit-gtk-1.2.5-darwin-quartz.patch:
+  Fix darwin-quartz patch, drop darwin8 patch from ebuild, bug #392385
 
 *webkit-gtk-1.6.1-r301 (29 Nov 2011)
 *webkit-gtk-1.6.1-r201 (29 Nov 2011)
