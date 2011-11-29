@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.3.ebuild,v 1.6 2011/11/26 18:02:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.3.ebuild,v 1.7 2011/11/29 00:07:15 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -49,6 +49,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e '/IconThemeName/s:Rodent:Tango:' xfsettingsd/xsettings.xml || die
+	local theme=Hicolor
+	has_version x11-themes/tango-icon-theme && theme=Tango
+	has_version x11-themes/gnome-icon-theme && theme=GNOME
+	has_version x11-themes/faenza-icon-theme && theme=Faenza
+	sed -i -e "/IconThemeName/s:Rodent:${theme}:" xfsettingsd/xsettings.xml || die
+
 	xfconf_src_prepare
 }
