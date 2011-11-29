@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.140 2011/10/04 16:59:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.141 2011/11/29 19:33:08 grobian Exp $
+
+  29 Nov 2011; Fabian Groffen <grobian@gentoo.org> tcl-8.5.10.ebuild:
+  Fix installation on FreeMiNT (bug #390545), use get_libname for shared library
+  extension, keyworded ~x64-macos
 
 *tcl-8.5.10 (04 Oct 2011)
 
