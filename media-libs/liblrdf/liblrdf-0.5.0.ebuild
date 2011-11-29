@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.5.0.ebuild,v 1.2 2011/11/25 23:41:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.5.0.ebuild,v 1.3 2011/11/29 16:30:02 ssuominen Exp $
 
 EAPI=4
 inherit autotools
@@ -28,11 +28,16 @@ src_unpack() {
 }
 
 src_prepare() {
+	sed -i -e 's:usr/local:usr:' examples/{instances,remove}_test.c || die #392221
 	eautoreconf
 }
 
 src_configure() {
 	econf $(use_enable static-libs static)
+}
+
+src_test() {
+	has_version media-plugins/swh-plugins && default #392221
 }
 
 src_install() {
