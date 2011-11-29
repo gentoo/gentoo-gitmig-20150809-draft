@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/spamass-milter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.29 2011/11/23 10:32:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.30 2011/11/29 21:52:06 eras Exp $
+
+*spamass-milter-0.3.2 (29 Nov 2011)
+
+  29 Nov 2011; Eray Aslan <eras@gentoo.org> +spamass-milter-0.3.2.ebuild,
+  +files/spamass-milter.rc4, -files/spamass-milter.conf2,
+  -files/spamass-milter.rc2, -files/spamass-milter-popen.patch:
+  Version bump. Create piddir if necessary in init script and remove bashism.
+  Remove unused patch files.
 
   23 Nov 2011; Eray Aslan <eras@gentoo.org> -spamass-milter-0.3.1-r4.ebuild:
   remove old
