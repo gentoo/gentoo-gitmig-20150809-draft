@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.6.ebuild,v 1.6 2011/03/26 15:15:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.6.ebuild,v 1.7 2011/11/29 22:00:51 dilfridge Exp $
 
 EAPI=3
 
@@ -17,6 +17,8 @@ else
 	ESVN_PROJECT="k9copy"
 fi
 
+KDE_HANDBOOK="optional"
+
 inherit kde4-base
 
 DESCRIPTION="k9copy is a DVD backup utility which allows the copy of one or more titles from a DVD9 to a DVD5."
@@ -25,7 +27,7 @@ HOMEPAGE="http://k9copy.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="amd64 x86"
-IUSE="debug +handbook"
+IUSE="debug"
 
 DEPEND="
 	media-libs/libdvdread
