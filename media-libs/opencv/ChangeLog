@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.61 2011/11/29 23:29:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.62 2011/11/29 23:43:45 dilfridge Exp $
+
+  29 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.3.1a.ebuild:
+  Does not need fortran anymore, bug 392297
 
   29 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.3.1a.ebuild:
   Properly compare gcc version, bug 390983
