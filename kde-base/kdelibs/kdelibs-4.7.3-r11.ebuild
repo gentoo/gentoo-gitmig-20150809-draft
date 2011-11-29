@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.3.ebuild,v 1.1 2011/11/02 20:48:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.3-r11.ebuild,v 1.1 2011/11/29 21:39:30 dilfridge Exp $
 
 EAPI=4
 
@@ -126,6 +126,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.4.90-xslt.patch"
 	"${FILESDIR}/${PN}-4.6.3-no_suid_kdeinit.patch"
 	"${FILESDIR}/${PN}-4.6.3-bytecode.patch"
+	"${FILESDIR}/${PN}-4.7.3-customcont.patch"
 )
 
 pkg_pretend() {
