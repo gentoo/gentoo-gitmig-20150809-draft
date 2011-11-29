@@ -8,7 +8,5 @@ app-misc/pax-utils
 -*sys-apps/man-pages
 # this will be added by nls
 -*sys-devel/gettext
-# added by readline
--*sys-libs/readline
 
 -*sys-apps/hdparm
