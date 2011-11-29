@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.122 2011/11/28 11:57:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.123 2011/11/29 15:28:42 jer Exp $
+
+  29 Nov 2011; Jeroen Roovers <jer@gentoo.org> cscope-15.7a-r1.ebuild:
+  Stable for HPPA (bug #391291).
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> cscope-15.7a-r1.ebuild:
   x86 stable wrt bug #391291
