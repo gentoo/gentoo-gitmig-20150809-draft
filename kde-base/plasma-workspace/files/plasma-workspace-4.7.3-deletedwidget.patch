@@ -1,0 +1,40 @@
+commit 2d1deb4234aa3d43e2a7cc48fc1f6936bd2ff97c
+Author: Aaron Seigo <aseigo@kde.org>
+Date:   Wed Nov 9 17:11:50 2011 +0100
+
+    since the widget is being deleted, remove it from the collection
+    
+    BUG:286197
+    BUG:286195
+    BUG:264750
+    BUG:277367
+    BUG:280326
+    BUG:280072
+    BUG:282552
+    BUG:283061
+    BUG:284603
+    BUG:286177
+    BUG:286181
+
+diff --git a/plasma/generic/applets/systemtray/core/task.cpp b/plasma/generic/applets/systemtray/core/task.cpp
+index 5793102..1a02c24 100644
+--- a/plasma/generic/applets/systemtray/core/task.cpp
++++ b/plasma/generic/applets/systemtray/core/task.cpp
+@@ -101,7 +101,7 @@ QHash<Plasma::Applet *, QGraphicsWidget *> Task::widgetsByHost() const
+ 
+ void Task::abandon(Plasma::Applet *host)
+ {
+-    QGraphicsWidget *widget = d->widgetsByHost.value(host);
++    QGraphicsWidget *widget = d->widgetsByHost.take(host);
+     if (widget) {
+         widget->deleteLater();
+     }
+@@ -116,7 +116,7 @@ void Task::widgetDeleted()
+ {
+     bool wasEmbeddable = isEmbeddable();
+ 
+-    QGraphicsWidget * w = static_cast<QGraphicsWidget*>(sender());
++    QGraphicsWidget *w = static_cast<QGraphicsWidget*>(sender());
+     QMutableHashIterator<Plasma::Applet *, QGraphicsWidget *> it(d->widgetsByHost);
+     while (it.hasNext()) {
+         it.next();
