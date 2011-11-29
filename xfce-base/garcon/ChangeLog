@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.35 2011/11/26 17:50:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.36 2011/11/29 00:17:25 ssuominen Exp $
+
+  29 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -garcon-0.1.8.ebuild:
+  old
 
   26 Nov 2011; Raúl Porcel <armin76@gentoo.org> garcon-0.1.9.ebuild:
   alpha/ia64/sh/sparc stable wrt #386963
