@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.10.ebuild,v 1.1 2011/11/11 19:29:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.11.ebuild,v 1.1 2011/11/29 12:01:13 scarabeus Exp $
 
 EAPI=4
 
