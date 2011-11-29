@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycxx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.34 2011/06/23 14:48:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.35 2011/11/29 11:04:25 naota Exp $
+
+  29 Nov 2011; Naohiro Aota <naota@gentoo.org> pycxx-6.2.3-r2.ebuild:
+  Add ~x86-fbsd
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   -files/pycxx-6.1.0-C_compatible_headers.patch, -pycxx-6.2.3-r1.ebuild:
