@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.103 2011/11/29 20:10:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.104 2011/11/29 22:45:31 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -223,7 +223,7 @@ toolchain-binutils_src_compile() {
 
 	if in_iuse zlib ; then
 		# older versions did not have an explicit configure flag
-		export ac_cv_search_zlibVersion=$(usex zlib)
+		export ac_cv_search_zlibVersion=$(usex zlib -lz no)
 		set -- "$@" $(use_with zlib)
 	fi
 
