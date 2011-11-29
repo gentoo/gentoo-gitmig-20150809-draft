@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.72 2011/11/14 15:45:23 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.73 2011/11/29 22:51:59 chainsaw Exp $
+
+  29 Nov 2011; Tony Vroon <chainsaw@gentoo.org> firefox-bin-8.0.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo,
+  Elijah "Armageddon" El Lazkani, Michael "n0idx80" Harrison & Tomáš "Mepho"
+  Pružina in security bug #389923.
 
   14 Nov 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-bin-8.0.ebuild:
   Ensure firefox-bin can be used with hardened system
