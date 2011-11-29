@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.81 2011/11/28 21:40:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.82 2011/11/29 13:18:09 darkside Exp $
+
+*viewvc-1.1.12-r1 (29 Nov 2011)
+
+  29 Nov 2011; Jeremy Olexa <darkside@gentoo.org> -viewvc-1.1.12.ebuild,
+  +viewvc-1.1.12-r1.ebuild:
+  Fix pygments and mime-type issue, bug 382959 by Alon Bar-Lev
 
 *viewvc-1.1.12 (28 Nov 2011)
 

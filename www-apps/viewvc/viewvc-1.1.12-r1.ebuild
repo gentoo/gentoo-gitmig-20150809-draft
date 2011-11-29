@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.12.ebuild,v 1.1 2011/11/28 21:40:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.12-r1.ebuild,v 1.1 2011/11/29 13:18:09 darkside Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -32,7 +32,10 @@ RDEPEND="
 
 	cvsgraph? ( >=dev-vcs/cvsgraph-1.5.0 )
 	mysql? ( >=dev-python/mysql-python-0.9.0 )
-	pygments? ( dev-python/pygments )
+	pygments? (
+		dev-python/pygments
+		app-misc/mime-types
+	)
 "
 
 pkg_setup() {
@@ -51,9 +54,9 @@ src_prepare() {
 		lib/config.py
 
 	sed -i -e "s|^template_dir.*|#&|" conf/viewvc.conf.dist
+	sed -i -e "s|^#mime_types_files =.*|mime_types_files = /etc/mime.types|" conf/viewvc.conf.dist
 	mv conf/viewvc.conf{.dist,}
 	mv conf/cvsgraph.conf{.dist,}
-	mv conf/mimetypes.conf{.dist,}
 
 	python_convert_shebangs -r 2 .
 }
@@ -81,7 +84,7 @@ src_install() {
 	fi
 
 	insinto "${MY_HOSTROOTDIR}/conf"
-	doins conf/{viewvc,cvsgraph,mimetypes}.conf
+	doins conf/{viewvc,cvsgraph}.conf
 
 	if use mod_python; then
 		insinto "${MY_HTDOCSDIR}"
