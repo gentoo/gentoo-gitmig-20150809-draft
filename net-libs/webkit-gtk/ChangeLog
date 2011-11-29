@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.130 2011/11/05 13:21:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.131 2011/11/29 13:25:45 pacho Exp $
+
+*webkit-gtk-1.6.1-r301 (29 Nov 2011)
+*webkit-gtk-1.6.1-r201 (29 Nov 2011)
+
+  29 Nov 2011; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-1.6.1-double-conversion.patch,
+  +files/webkit-gtk-1.6.1-pkgconfig-fix.patch, +webkit-gtk-1.6.1-r201.ebuild,
+  +webkit-gtk-1.6.1-r301.ebuild:
+  Apply upstream patches to fix pkgconfig file and arches that use 64-bit double
+  type, use gnome2_environment_reset, drop DEPRECATED flags (they were passed
+  with USE debug), skip flacky tests after reporting failures to upstream.
 
   05 Nov 2011; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-1.2.7.ebuild,
   -webkit-gtk-1.4.2-r200.ebuild, -webkit-gtk-1.4.2-r300.ebuild,
