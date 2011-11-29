@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.14 2011/11/26 07:20:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.15 2011/11/29 19:01:28 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -20,9 +20,10 @@ _assert_pkg_ebuild_phase() {
 	case ${EBUILD_PHASE} in
 	setup|preinst|postinst) ;;
 	*)
-		eerror "'$1()' called from '${EBUILD_PHASE}()' which is not a pkg_* function."
+		eerror "'$1()' called from '${EBUILD_PHASE}' phase which is not OK:"
+		eerror "You may only call from pkg_{setup,preinst,postinst} functions."
 		eerror "Package fails at QA and at life.  Please file a bug."
-		die "Bad package!  $1 is only for use in pkg_* functions!"
+		die "Bad package!  $1 is only for use in some pkg_* functions!"
 	esac
 }
 
@@ -103,7 +104,7 @@ egetent() {
 # Default uid is (pass -1 for this) next available, default shell is
 # /bin/false, default homedir is /dev/null, and there are no default groups.
 enewuser() {
-	_assert_pkg_ebuild_phase enewuser
+	_assert_pkg_ebuild_phase ${FUNCNAME}
 
 	# get the username
 	local euser=$1; shift
@@ -272,7 +273,7 @@ enewuser() {
 # do the rest.  You may specify the gid for the group or allow the group to
 # allocate the next available one.
 enewgroup() {
-	_assert_pkg_ebuild_phase enewgroup
+	_assert_pkg_ebuild_phase ${FUNCNAME}
 
 	# get the group
 	local egroup=$1; shift
