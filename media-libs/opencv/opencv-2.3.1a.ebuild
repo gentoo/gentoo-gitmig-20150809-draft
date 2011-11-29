@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a.ebuild,v 1.4 2011/11/22 22:38:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a.ebuild,v 1.5 2011/11/29 23:29:07 dilfridge Exp $
 
 EAPI=3
 
@@ -114,7 +114,7 @@ src_configure() {
 	)
 
 	if use cuda; then
-		if [ "$(gcc-version)" > "4.4" ]; then
+		if [[ "$(gcc-version)" > "4.4" ]]; then
 			ewarn "CUDA and >=sys-devel/gcc-4.5 do not play well together. Disabling CUDA support."
 			mycmakeargs+=( "-DWITH_CUDA=OFF" )
 		else
