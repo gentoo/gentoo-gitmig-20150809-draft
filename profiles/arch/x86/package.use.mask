@@ -1,8 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.70 2011/11/25 08:00:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.71 2011/11/29 23:49:46 pesa Exp $
 
 # This file requires >=portage-2.1.1
+
+# Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
+# JavaScriptCore JIT is supported only on amd64/arm/x86,
+# so it's masked in base profile and unmasked here
+>=x11-libs/qt-webkit-4.7 -jit
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;

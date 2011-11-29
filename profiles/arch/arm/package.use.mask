@@ -1,6 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.67 2011/11/27 07:16:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.68 2011/11/29 23:48:09 pesa Exp $
+
+# Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
+# JavaScriptCore JIT is supported only on amd64/arm/x86,
+# so it's masked in base profile and unmasked here
+>=x11-libs/qt-webkit-4.7 -jit
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Nov 2011)
 # Missing keywords on dev-libs/libgusb, bug #392057
