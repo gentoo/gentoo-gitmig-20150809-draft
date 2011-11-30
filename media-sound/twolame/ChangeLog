@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/twolame
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.42 2011/04/07 12:12:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.43 2011/11/30 14:10:04 grobian Exp $
+
+  30 Nov 2011; Fabian Groffen <grobian@gentoo.org> twolame-0.3.13.ebuild:
+  Work around bad configure script (uses bash features) for Solaris hosts, bug
+  #388885
 
 *twolame-0.3.13 (07 Apr 2011)
 

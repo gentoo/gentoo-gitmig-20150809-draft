@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/twolame-0.3.13.ebuild,v 1.1 2011/04/07 12:12:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/twolame-0.3.13.ebuild,v 1.2 2011/11/30 14:10:04 grobian Exp $
 
 EAPI=3
 inherit libtool
@@ -24,6 +24,9 @@ src_prepare() {
 	if [[ ${CHOST} == *solaris* ]]; then
 		# libsndfile doesn't like -std=c99 on Solaris
 		sed -i -e '/CFLAGS/s:-std=c99::' configure || die
+		# configure isn't really bourne shell (comment 0) or dash (comment 6)
+		# compatible, bug #388885
+		export CONFIG_SHELL=${BASH}
 	fi
 
 	elibtoolize
