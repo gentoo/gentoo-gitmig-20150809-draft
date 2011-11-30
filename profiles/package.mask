@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13292 2011/11/29 20:26:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13293 2011/11/30 16:29:23 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (30 Nov 2011)
+# Everything is (or should be) using slotted vala by now
+# Remove the old unslotted copy in 30 days
+<dev-lang/vala-0.10
 
 # Tim Harder <radhermit@gentoo.org> (29 Nov 2011)
 # Masked until gcc-4.6 is unmasked
