@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eclean-kernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.8 2011/11/26 20:00:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.9 2011/11/30 08:27:51 mgorny Exp $
+
+*eclean-kernel-0.2.1 (30 Nov 2011)
+
+  30 Nov 2011; Michał Górny <mgorny@gentoo.org> -eclean-kernel-0.2.ebuild,
+  +eclean-kernel-0.2.1.ebuild:
+  Version bump. The new version fixes missing import on bootloader probing (bug
+  #392043).
 
 *eclean-kernel-0.2 (26 Nov 2011)
 
