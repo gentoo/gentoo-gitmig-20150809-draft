@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.77 2011/11/18 09:51:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.78 2011/11/30 15:28:48 pacho Exp $
+
+*vala-0.14.1 (30 Nov 2011)
+
+  30 Nov 2011; Pacho Ramos <pacho@gentoo.org> +vala-0.14.1.ebuild,
+  -vala-0.10.3.ebuild, -vala-0.13.4.ebuild:
+  Version bump, remove old.
 
   18 Nov 2011; Naohiro Aota <naota@gentoo.org> vala-0.14.0.ebuild:
   Add ~x86-fbsd
