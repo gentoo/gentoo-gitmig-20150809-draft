@@ -1,10 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.1.ebuild,v 1.7 2011/07/10 11:13:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.1.ebuild,v 1.8 2011/11/30 04:03:53 vapier Exp $
+
+EAPI="4"
+
+inherit toolchain-funcs
 
 DESCRIPTION="port of the OpenBSD TFTP server"
 HOMEPAGE="http://www.kernel.org/pub/software/network/tftp/"
-SRC_URI="mirror://kernel/software/network/tftp/${P}.tar.bz2"
+SRC_URI="mirror://kernel/software/network/tftp/${PN}/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -12,23 +16,25 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ipv6 readline selinux tcpd"
 
 RDEPEND="selinux? ( sec-policy/selinux-tftpd )
+	readline? ( sys-libs/readline )
+	tcpd? ( sys-apps/tcp-wrappers )
 	!net-ftp/atftp
 	!net-ftp/netkit-tftp"
-DEPEND="${RDEPEND}
-	readline? ( sys-libs/readline )
-	tcpd? ( sys-apps/tcp-wrappers )"
+DEPEND="${RDEPEND}"
 
-src_compile() {
+src_prepare() {
+	sed -i "/^AR/s:ar:$(tc-getAR):" MCONFIG.in || die
+}
+
+src_configure() {
 	econf \
 		$(use_with ipv6) \
 		$(use_with tcpd tcpwrappers) \
-		$(use_with readline) \
-		|| die
-	emake || die
+		$(use_with readline)
 }
 
 src_install() {
-	emake INSTALLROOT="${D}" install || die
+	emake INSTALLROOT="${D}" install
 	dodoc README* CHANGES tftpd/sample.rules
 
 	# iputils installs this
