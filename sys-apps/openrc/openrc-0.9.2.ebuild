@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.9.2.ebuild,v 1.2 2011/11/07 12:57:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.9.2.ebuild,v 1.3 2011/11/30 16:15:15 vapier Exp $
 
 EAPI=4
 
@@ -26,7 +26,10 @@ RDEPEND="virtual/init
 	ncurses? ( sys-libs/ncurses )
 	pam? ( virtual/pam )
 	>=sys-apps/baselayout-2.0.0
-	kernel_linux? ( !<sys-apps/module-init-tools-3.2.2-r2 )
+	kernel_linux? (
+		!<sys-apps/module-init-tools-3.2.2-r2
+		sys-process/psmisc
+	)
 	!<sys-fs/udev-133
 	!<sys-apps/sysvinit-2.86-r11"
 DEPEND="${RDEPEND}
