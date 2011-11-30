@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.0.1.ebuild,v 1.1 2011/11/30 18:48:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.0.1.ebuild,v 1.2 2011/11/30 19:05:10 nelchael Exp $
 
 EAPI="4"
 
@@ -66,14 +66,14 @@ src_install() {
 	dodir /usr/bin
 	dodir /usr/share/{pixmaps,applications}
 
-	emake prefix="${D}/usr" install
+	emake prefix="${ED}/usr" install
 
 	# we have to keep this because otherwise it'll break upgrading
-	mv "${D}/usr/bin/SciTE" "${D}/usr/bin/scite" || die
+	mv "${ED}/usr/bin/SciTE" "${ED}/usr/bin/scite" || die
 	dosym /usr/bin/scite /usr/bin/SciTE
 
 	# replace .desktop file with our own working version
-	rm -f "${D}/usr/share/applications/SciTE.desktop"
+	rm -f "${ED}/usr/share/applications/SciTE.desktop"
 	insinto /usr/share/applications
 	doins "${FILESDIR}/scite.desktop"
 
