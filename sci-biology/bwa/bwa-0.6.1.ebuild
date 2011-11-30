@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/bwa-0.5.8a.ebuild,v 1.1 2010/10/09 20:15:55 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/bwa-0.6.1.ebuild,v 1.1 2011/11/30 08:44:21 weaver Exp $
 
 EAPI=2
 
