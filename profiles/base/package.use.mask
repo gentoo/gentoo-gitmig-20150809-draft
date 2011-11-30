@@ -1,9 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.285 2011/11/25 08:06:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.286 2011/11/30 00:08:08 pesa Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
+# JavaScriptCore JIT is supported only on amd64/arm/x86, so
+# mask USE="jit" here and unmask it in the relevant arch profiles
+>=x11-libs/qt-webkit-4.7 jit
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Nov 2011)
 # Expose USE="suid" for USE="svga" only for x86 users,
