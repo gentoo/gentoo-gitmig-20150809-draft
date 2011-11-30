@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.9 2011/11/30 10:21:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.10 2011/11/30 10:29:23 scarabeus Exp $
 
 EAPI=4
 
@@ -56,6 +56,7 @@ unset DEV_URI
 # Really required addons
 # These are bundles that can't be removed for now due to huge patchsets.
 # If you want them gone, patches are welcome.
+ADDONS_SRC+=" ${ADDONS_URI}/ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz"
 ADDONS_SRC+=" xmlsec? ( ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip )"
@@ -167,7 +168,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/mdds
 	>=dev-util/pkgconfig-0.26
 	media-libs/sampleicc
-	>=media-libs/vigra-1.7
 	>=net-misc/curl-7.21.4
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
@@ -313,8 +313,12 @@ src_configure() {
 
 	# sane: just sane.h header that is used for scan in writer, not
 	#       linked or anything else, worthless to depend on
+	# vigra: just uses templates from there
+	#        it is serious pain in the ass for packaging
+	#        should be replaced by boost::gil if someone interested
 	internal_libs+="
 		--without-system-sane
+		--without-system-vigra
 	"
 
 	if use java; then
@@ -346,8 +350,6 @@ src_configure() {
 	fi
 
 	# system headers/libs/...: enforce using system packages
-	#   only expections are mozilla and odbc/sane/xrender-header(s).
-	#   for jars the exception is db.jar controlled by --with-system-db
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
 	# --enable-cairo: ensure that cairo is always required
 	# --enable-*-link: link to the library rather than just dlopen on runtime
