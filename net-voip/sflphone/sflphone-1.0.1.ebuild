@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-1.0.1.ebuild,v 1.1 2011/11/26 16:19:38 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-1.0.1.ebuild,v 1.2 2011/11/30 22:38:34 elvanor Exp $
 
 EAPI="3"
 
@@ -18,6 +18,7 @@ IUSE="debug doxygen gnome gsm networkmanager speex static-libs"
 # USE="-iax" does not work. Upstream problem.
 
 CDEPEND="dev-cpp/commoncpp2
+	dev-libs/dbus-c++
 	dev-libs/expat
 	dev-libs/openssl
 	dev-libs/libpcre
