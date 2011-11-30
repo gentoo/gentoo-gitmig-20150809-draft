@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.131 2011/11/30 07:59:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.132 2011/11/30 15:55:25 mr_bones_ Exp $
+
+  30 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  files/freeciv-2.3.1-clean-man.patch:
+  update the man-page cleanup patch (bug #392601)
 
 *freeciv-2.3.1 (30 Nov 2011)
 
