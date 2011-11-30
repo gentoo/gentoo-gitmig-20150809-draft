@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.151 2011/11/02 12:32:44 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.152 2011/11/30 14:30:27 grobian Exp $
+
+  30 Nov 2011; Fabian Groffen <grobian@gentoo.org> PEAR-PEAR-1.9.4.ebuild:
+  Marked ~x64-macos, bug #388257
 
 *PEAR-PEAR-1.9.4 (02 Nov 2011)
 
