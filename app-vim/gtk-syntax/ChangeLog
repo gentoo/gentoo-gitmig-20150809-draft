@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.43 2011/11/28 11:46:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.44 2011/11/30 03:54:21 jer Exp $
+
+  30 Nov 2011; Jeroen Roovers <jer@gentoo.org> gtk-syntax-20110214-r1.ebuild:
+  Stable for HPPA (bug #391473).
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gtk-syntax-20110214-r1.ebuild:
