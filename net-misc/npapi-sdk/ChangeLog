@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/npapi-sdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.4 2011/09/13 16:34:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.5 2011/11/30 12:43:00 xarthisius Exp $
+
+  30 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> npapi-sdk-0.27.ebuild:
+  Marked ~ppc wrt #392585
 
 *npapi-sdk-0.27 (13 Sep 2011)
 
