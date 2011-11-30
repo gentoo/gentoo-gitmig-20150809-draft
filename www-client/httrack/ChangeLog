@@ -1,6 +1,13 @@
 # ChangeLog for www-client/httrack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.31 2011/11/22 18:21:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.32 2011/11/30 11:23:20 flameeyes Exp $
+
+*httrack-3.44.1-r1 (30 Nov 2011)
+
+  30 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/httrack-3.44.1+zlib-1.2.5.1.patch, +httrack-3.44.1-r1.ebuild:
+  Add patch to fix building with recent zlib, thanks to Lars Wendler in bug
+  #383805. Bump to EAPI=4.
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> -httrack-3.43.7.ebuild,
   -httrack-3.43.9.ebuild, metadata.xml:
