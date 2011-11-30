@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.89 2011/02/06 18:23:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.90 2011/11/30 19:22:25 nelchael Exp $
+
+*hibernate-script-2.0-r4 (30 Nov 2011)
+
+  30 Nov 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  +hibernate-script-2.0-r4.ebuild:
+  Version bump, changes opts to extra_started_commands in init.d script, see
+  bug #385643.
 
 *hibernate-script-2.0-r3 (06 Feb 2011)
 
