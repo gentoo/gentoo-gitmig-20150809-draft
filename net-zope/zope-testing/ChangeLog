@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-testing
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testing/ChangeLog,v 1.14 2010/12/06 02:10:02 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testing/ChangeLog,v 1.15 2011/11/30 14:55:19 djc Exp $
+
+  30 Nov 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python from maintainers.
 
 *zope-testing-3.10.2 (06 Dec 2010)
 
