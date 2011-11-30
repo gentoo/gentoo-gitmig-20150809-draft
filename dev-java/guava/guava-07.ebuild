@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/guava-07.ebuild,v 1.2 2011/11/15 20:01:07 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/guava-07.ebuild,v 1.3 2011/11/30 12:00:35 grobian Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://guava-libraries.googlecode.com/files/${MY_P}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 COMMON_DEP="
