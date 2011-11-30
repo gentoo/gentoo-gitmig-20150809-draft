@@ -1,11 +1,11 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc.new,v 1.10 2008/05/21 18:45:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc.new,v 1.11 2011/11/30 08:40:51 eras Exp $
 
 conf="/etc/conf.d/postgrey"
 
-opts="${opts} reload"
+extra_started_commands="reload"
 
 depend() {
 	need net
