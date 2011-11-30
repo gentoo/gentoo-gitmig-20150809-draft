@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/tinyscheme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/ChangeLog,v 1.10 2011/02/28 16:45:17 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/ChangeLog,v 1.11 2011/11/30 14:51:15 grobian Exp $
+
+  30 Nov 2011; Fabian Groffen <grobian@gentoo.org> tinyscheme-1.40.ebuild:
+  Fix build for Darwin, fix for Prefix, marked ~ppc-macos and ~x64-macos, bug
+  #388231
 
 *tinyscheme-1.40 (28 Feb 2011)
 
