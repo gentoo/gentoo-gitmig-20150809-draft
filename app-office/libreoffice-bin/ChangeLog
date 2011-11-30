@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.41 2011/11/30 10:02:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.42 2011/11/30 10:17:57 scarabeus Exp $
+
+  30 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.4.3.2-r1.ebuild:
+  Fix lingua dep for bug #390437.
 
   30 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-bin-3.4.3.2-r1.ebuild:
