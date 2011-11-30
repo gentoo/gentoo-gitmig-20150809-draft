@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.482 2011/11/22 15:20:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.483 2011/11/30 23:53:57 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -973,6 +973,14 @@ toolchain_src_unpack() {
 			"${S}"/configure || die
 	fi
 
+	# install the libstdc++ python into the right location
+	# http://gcc.gnu.org/PR51368
+	if tc_version_is_at_least 4.5 ; then
+		sed -i \
+			'/^pythondir =/s:=.*:= $(datadir)/python:' \
+			"${S}"/libstdc++-v3/python/Makefile.in || die
+	fi
+
 	# protoize don't build on FreeBSD, skip it
 	## removed in 4.5, bug #270558 --de.
 	if [[ ${GCCMAJOR}.${GCCMINOR} < 4.5 ]]; then
@@ -1126,10 +1134,10 @@ gcc-compiler-configure() {
 		# bug #279252
 		#
 		#  --with-python-dir=DIR
-		#    Specifies where to install the Python modules used for aot-compile. DIR
+		#  Specifies where to install the Python modules used for aot-compile. DIR
 		#  should not include the prefix used in installation. For example, if the
 		#  Python modules are to be installed in /usr/lib/python2.5/site-packages,
-		#  then –with-python-dir=/lib/python2.5/site-packages should be passed.
+		#  then --with-python-dir=/lib/python2.5/site-packages should be passed.
 		#
 		# This should translate into "/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}/python"
 		if tc_version_is_at_least "4.4" ; then
@@ -1825,16 +1833,16 @@ toolchain_src_install() {
 	chown -R root:0 "${D}"${LIBPATH}
 
 	# Move pretty-printers to gdb datadir to shut ldconfig up
-	gdbdir=/usr/share/gdb/auto-load${LIBPATH/\/lib\//\/$(get_libdir)\/}
-	for i in "${D}"${LIBPATH}{,/32}/*-gdb.py; do
-		if [[ -e ${i} ]]; then
-			basedir="$(dirname ${i/${D}${LIBPATH}/})"
-			sed -i -e "s:^\(libdir = \).*:\1'${LIBPATH}${basedir}':" "${i}" #348128
-			insinto "${gdbdir}${basedir}"
-			doins "${i}"
-			rm "${i}"
-		fi
+	local py gdbdir=/usr/share/gdb/auto-load${LIBPATH/\/lib\//\/$(get_libdir)\/}
+	pushd "${D}"${LIBPATH} >/dev/null
+	for py in $(find . -name '*-gdb.py') ; do
+		local multidir=${py%/*}
+		insinto "${gdbdir}/${multidir}"
+		sed -i "/^libdir =/s:=.*:= '${LIBPATH}/${multidir}':" "${py}" || die #348128
+		doins "${py}" || die
+		rm "${py}" || die
 	done
+	popd >/dev/null
 
 	# Don't scan .gox files for executable stacks - false positives
 	export QA_EXECSTACK="usr/lib*/go/*/*.gox"
