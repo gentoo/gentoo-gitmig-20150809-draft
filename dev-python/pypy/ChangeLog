@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.2 2011/06/24 09:18:38 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.3 2011/11/30 08:49:18 djc Exp $
+
+*pypy-1.7 (30 Nov 2011)
+
+  30 Nov 2011; Dirkjan Ochtman <djc@gentoo.org> +files/1.7-patches.patch,
+  +files/1.7-scripts-location.patch, +pypy-1.7.ebuild:
+  Version bump to 1.7 (bugs fixed: 379791, 383063, 373487).
 
   24 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> pypy-1.5.ebuild:
   Fix bug 372641, bug 372639, bug 372517.
