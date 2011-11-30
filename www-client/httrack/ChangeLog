@@ -1,6 +1,10 @@
 # ChangeLog for www-client/httrack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.32 2011/11/30 11:23:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.33 2011/11/30 17:20:30 ssuominen Exp $
+
+  30 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> httrack-3.44.1-r1.ebuild:
+  Raise sys-libs/zlib depend since httrack-3.44.1+zlib-1.2.5.1.patch is not
+  backwards compatible.
 
 *httrack-3.44.1-r1 (30 Nov 2011)
 

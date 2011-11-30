@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.44.1-r1.ebuild,v 1.1 2011/11/30 11:23:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.44.1-r1.ebuild,v 1.2 2011/11/30 17:20:30 ssuominen Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
-RDEPEND="sys-libs/zlib"
+RDEPEND=">=sys-libs/zlib-1.2.5.1-r1"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
