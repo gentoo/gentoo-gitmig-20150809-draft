@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7.ebuild,v 1.1 2011/11/30 08:49:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7.ebuild,v 1.2 2011/11/30 11:42:55 djc Exp $
 
 EAPI="3"
 
@@ -52,7 +52,7 @@ src_compile() {
 		conf+=" --stackless"
 	fi
 
-	conf+=" ./pypy-pypy-release-${PV}/pypy/translator/goal/targetpypystandalone.py"
+	conf+=" ./pypy/translator/goal/targetpypystandalone.py"
 	# Avoid linking against libraries disabled by use flags
 	optional_use=("bzip2" "ncurses" "xml" "ssl")
 	optional_mod=("bz2" "_minimal_curses" "pyexpat" "_ssl")
@@ -64,7 +64,7 @@ src_compile() {
 		fi
 	done
 
-	translate_cmd="$(PYTHON -2) ./pypy-pypy-release-${PV}/pypy/translator/goal/translate.py $conf"
+	translate_cmd="$(PYTHON -2) ./pypy/translator/goal/translate.py $conf"
 	echo ${_BOLD}"${translate_cmd}"${_NORMAL}
 	${translate_cmd} || die "compile error"
 }
