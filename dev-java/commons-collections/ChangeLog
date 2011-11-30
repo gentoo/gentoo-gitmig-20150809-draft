@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-collections
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.57 2010/03/20 13:07:46 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.58 2011/11/30 12:09:47 grobian Exp $
+
+  30 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  commons-collections-3.2.1.ebuild:
+  Marked ~x64-macos
 
   20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
   commons-collections-3.2.1.ebuild:

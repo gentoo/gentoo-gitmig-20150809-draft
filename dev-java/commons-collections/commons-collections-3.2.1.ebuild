@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.2.1.ebuild,v 1.9 2010/03/20 13:07:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.2.1.ebuild,v 1.10 2011/11/30 12:09:47 grobian Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/${PN/-//}/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="test-framework"
 
 COMMON_DEP="test-framework? ( =dev-java/junit-3.8* )"
