@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.28 2011/11/01 20:20:23 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.29 2011/11/30 04:49:34 lu_zero Exp $
+
+*mplayer2-2.0_p20111126 (30 Nov 2011)
+
+  30 Nov 2011; Luca Barbato <lu_zero@gentoo.org>
+  +mplayer2-2.0_p20111126.ebuild:
+  New snapshot, thanks to Nikoli <nikoli@lavabit.com> for the updated ebuild in
+  bug #385115
 
   01 Nov 2011; Matt Turner <mattst88@gentoo.org> mplayer2-2.0.ebuild:
   Add ~alpha, bug 365953.
