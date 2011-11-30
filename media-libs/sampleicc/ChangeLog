@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sampleicc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sampleicc/ChangeLog,v 1.1 2011/09/24 14:09:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sampleicc/ChangeLog,v 1.2 2011/11/30 12:39:50 xarthisius Exp $
+
+  30 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> sampleicc-1.6.4.ebuild:
+  Marked ~ppc wrt #392585
 
 *sampleicc-1.6.4 (24 Sep 2011)
 
