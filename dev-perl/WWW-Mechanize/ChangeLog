@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.80 2011/09/04 11:24:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.81 2011/11/30 18:58:42 tove Exp $
+
+*WWW-Mechanize-1.710.0 (30 Nov 2011)
+
+  30 Nov 2011; Torsten Veller <tove@gentoo.org> +WWW-Mechanize-1.710.0.ebuild:
+  Version bump. Drop Test-LongString, add HTML-Tree and enable the tests again.
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -WWW-Mechanize-1.680.0.ebuild:
   Cleanup
