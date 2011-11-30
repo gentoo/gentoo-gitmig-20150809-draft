@@ -1,6 +1,20 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.232 2011/11/06 20:44:41 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.233 2011/11/30 15:49:28 eras Exp $
+
+*cyrus-sasl-2.1.25 (30 Nov 2011)
+
+  30 Nov 2011; Eray Aslan <eras@gentoo.org> +cyrus-sasl-2.1.25.ebuild,
+  +files/cyrus-sasl-2.1.25-as_needed.patch,
+  +files/cyrus-sasl-2.1.25-autotools_fixes.patch,
+  +files/cyrus-sasl-2.1.25-avoid_pic_overwrite.patch,
+  +files/cyrus-sasl-2.1.25-fix_heimdal.patch,
+  +files/cyrus-sasl-2.1.25-gssapi.patch,
+  +files/cyrus-sasl-2.1.25-lib_before_plugin.patch,
+  +files/cyrus-sasl-2.1.25-missing_header.patch,
+  +files/cyrus-sasl-2.1.25-saslauthd_libtool.patch,
+  +files/cyrus-sasl-2.1.25-sasldb_al.patch:
+  Version bump. Add ldapdb USE flag - bug #320893
 
 *cyrus-sasl-2.1.23-r6 (06 Nov 2011)
 
