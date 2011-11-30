@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.12 2011/11/20 19:19:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.13 2011/11/30 19:51:15 mr_bones_ Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -47,7 +47,7 @@ src_configure() {
 			-e '/FLAGS = /s|-O[23]|-O1|g' \
 			gst/audioconvert/Makefile \
 			gst/volume/Makefile || die
-	fi  
+	fi
 }
 
 src_install() {
