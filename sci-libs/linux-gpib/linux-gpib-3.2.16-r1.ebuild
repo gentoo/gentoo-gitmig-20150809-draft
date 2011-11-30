@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r1.ebuild,v 1.1 2011/08/14 11:22:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r1.ebuild,v 1.2 2011/11/30 01:18:46 dilfridge Exp $
 
 EAPI=4
 PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -41,13 +41,7 @@ pkg_setup () {
 	perl-module_pkg_setup
 	linux-mod_pkg_setup
 
-	case ${KV_MINOR} in
-		4) die "This version of Linux-GPIB requires a version 2.6.x of the Linux kernel. 2.4.x kernels are supported by Linux-GPIB versions 3.1.x." ;;
-		6) ;;
-		*) die "Unsupported kernel version '${KV_FULL}'." ;;
-	esac
-
-	if [ ${KV_PATCH} -lt 8 ] ; then
+	if kernel_is -lt 2 6 8 ; then
 		die "Kernel versions older than 2.6.8 are not supported."
 	fi
 }
