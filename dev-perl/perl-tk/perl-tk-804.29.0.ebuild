@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.29.0.ebuild,v 1.3 2011/09/03 21:05:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.29.0.ebuild,v 1.4 2011/11/30 18:41:29 grobian Exp $
 
 EAPI=4
 
@@ -28,9 +28,16 @@ SRC_TEST="skip"
 PATCHES=( "${FILESDIR}"/xorg.patch
 	"${FILESDIR}"/804.028-path.patch
 	"${FILESDIR}"/804.029-X11_XLIB_H.patch )
-#	"${FILESDIR}"/${PN}-804.027-interix-x11.patch )
 
 myconf="X11ROOT=${EPREFIX}/usr XFT=1 -I${EPREFIX}/usr/include/ -l${EPREFIX}/usr/$(get_libdir)"
 mydoc="ToDo VERSIONS"
 
 MAKEOPTS+=" -j1" #333049
+
+src_prepare() {
+	perl-module_src_prepare
+	# fix detection logic for Prefix, bug #385621
+	sed -i -e "s:/usr:${EPREFIX}/usr:g" myConfig || die
+	# having this around breaks with perl-module and a case-IN-sensitive fs
+	rm build || die
+}
