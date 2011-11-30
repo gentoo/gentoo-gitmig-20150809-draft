@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.77 2011/11/04 21:00:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.78 2011/11/30 19:39:10 hwoarang Exp $
+
+  30 Nov 2011; Markos Chandras <hwoarang@gentoo.org> qmmp-0.5.2.ebuild,
+  qmmp-9999.ebuild:
+  allow media-video/mplayer2 for mplayer useflag
 
   04 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
   qmmp-9999.ebuild, qmmp-0.5.2.ebuild:

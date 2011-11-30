@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.5.2.ebuild,v 1.4 2011/11/04 21:00:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.5.2.ebuild,v 1.5 2011/11/30 19:39:10 hwoarang Exp $
 
 EAPI="2"
 
@@ -40,7 +40,9 @@ RDEPEND="x11-libs/qt-qt3support:4
 	mad? ( media-libs/libmad )
 	midi? ( media-sound/wildmidi )
 	mms? ( media-libs/libmms )
-	mplayer? ( media-video/mplayer )
+	mplayer? ( || ( media-video/mplayer 
+		media-video/mplayer2 ) 
+	)
 	musepack? ( >=media-sound/musepack-tools-444 )
 	modplug? ( >=media-libs/libmodplug-0.8.4 )
 	vorbis? ( media-libs/libvorbis
