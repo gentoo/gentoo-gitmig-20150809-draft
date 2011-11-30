@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.37 2011/08/06 08:12:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.38 2011/11/30 04:30:50 vapier Exp $
+
+*multipath-tools-0.4.9-r3 (30 Nov 2011)
+
+  30 Nov 2011; Mike Frysinger <vapier@gentoo.org>
+  +multipath-tools-0.4.9-r3.ebuild, files/multipath-tools-0.4.9-build.patch:
+  Add missing readline depepend, and drop ncurses linkage since it's only
+  there for readline.
 
   06 Aug 2011; Samuli Suominen <ssuominen@gentoo.org>
   multipath-tools-0.4.8.ebuild, multipath-tools-0.4.8-r1.ebuild,

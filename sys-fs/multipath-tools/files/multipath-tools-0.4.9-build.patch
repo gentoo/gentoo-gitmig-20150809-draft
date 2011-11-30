@@ -107,7 +107,7 @@
  CFLAGS += -I$(multipathdir)
 -LDFLAGS += -lpthread -ldevmapper -lreadline -lncurses -ldl \
 -	   -lmultipath -L$(multipathdir)
-+LIBS = -lpthread -ldevmapper -lreadline -lncurses -ldl \
++LIBS = -lpthread -ldevmapper -lreadline -ldl \
 +	   -L$(multipathdir) -lmultipath
  
  #
