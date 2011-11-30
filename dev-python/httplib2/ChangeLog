@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/httplib2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.26 2011/09/24 13:38:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.27 2011/11/30 15:56:32 neurogeek Exp $
+
+*httplib2-0.7.2 (30 Nov 2011)
+
+  30 Nov 2011; Jesus Rivero <neurogeek@gentoo.org> +httplib2-0.7.2.ebuild:
+  Version bump. Dropped support for Py3.
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> httplib2-0.7.1.ebuild:
   Marked ~x64-macos
