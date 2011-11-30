@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.248 2011/11/22 00:48:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.249 2011/11/30 15:13:19 pacho Exp $
+
+*gnucash-2.4.8 (30 Nov 2011)
+
+  30 Nov 2011; Pacho Ramos <pacho@gentoo.org>
+  +files/gnucash-2.4.8-python-detection.patch, +gnucash-2.4.8.ebuild:
+  Version bump, bug #392317 by José Romildo Malaquias.
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org>
   -files/gnucash-2.4.5-link-system-libs.patch, -gnucash-2.4.5.ebuild,
