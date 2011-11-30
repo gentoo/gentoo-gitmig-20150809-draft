@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.211 2011/06/06 08:53:33 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.212 2011/11/30 15:50:14 djc Exp $
+
+*erlang-14.2.4 (30 Nov 2011)
+
+  30 Nov 2011; Dirkjan Ochtman <djc@gentoo.org> +erlang-14.2.4.ebuild:
+  Version bump to 14.2.4, fix bug 383697, remove blocker.
 
 *erlang-14.2.3 (06 Jun 2011)
 

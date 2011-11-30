@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.2.2-r1.ebuild,v 1.2 2011/11/30 15:50:14 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.2.4.ebuild,v 1.1 2011/11/30 15:50:14 djc Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -48,6 +48,9 @@ SITEFILE=50${PN}-gentoo.el
 
 pkg_setup() {
 	use wxwidgets && wxwidgets_pkg_setup
+	if use halfword ; then
+		use amd64 || die "halfword support is limited to amd64"
+	fi
 }
 
 src_prepare() {
@@ -63,12 +66,14 @@ src_prepare() {
 
 	# Nasty workaround, reported upstream
 	cp "${S}"/lib/configure.in.src "${S}"/lib/configure.in || die
-	epatch "${FILESDIR}/${P}-interface.patch" || die
 
 	# prevent configure from injecting -m32 by default on Darwin, bug #334155
 	# Nasty hack
 	sed -i -e 's/Darwin-i386/Darwin-NO/' configure.in || die
 	sed -i -e '/\<\(LD\|C\)FLAGS="-m32/s/-m32//' erts/configure.in || die
+
+	# bug 383697
+	sed -i '1i#define OF(x) x' erts/emulator/drivers/common/gzio.c || die
 }
 
 src_configure() {
