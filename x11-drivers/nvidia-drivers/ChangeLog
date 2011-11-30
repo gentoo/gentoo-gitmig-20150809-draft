@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.310 2011/11/30 16:35:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.311 2011/11/30 16:59:57 cardoe Exp $
+
+*nvidia-drivers-290.10 (30 Nov 2011)
+*nvidia-drivers-275.36 (30 Nov 2011)
+
+  30 Nov 2011; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-275.36.ebuild, +nvidia-drivers-290.10.ebuild:
+  Add new long lived version and official versions
 
   30 Nov 2011; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-270.41.19.ebuild, -nvidia-drivers-285.05.09.ebuild:
