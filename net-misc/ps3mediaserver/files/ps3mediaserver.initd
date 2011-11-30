@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/files/ps3mediaserver.initd,v 1.1 2011/11/30 07:28:28 floppym Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting ${RC_SVCNAME}"
+	start-stop-daemon --start --exec /usr/bin/ps3mediaserver \
+		--user "${PMS_USER}" --group "${PMS_GROUP}" \
+		--background --make-pidfile --pidfile "${PMS_PIDFILE}" \
+		-- console
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ${RC_SVCNAME}"
+	start-stop-daemon --stop --pidfile "${PMS_PIDFILE}"
+	eend $?
+}

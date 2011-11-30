@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.50.0.ebuild,v 1.1 2011/11/30 06:38:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.50.0.ebuild,v 1.2 2011/11/30 07:28:28 floppym Exp $
 
 EAPI="4"
 
@@ -75,6 +75,9 @@ src_install() {
 	newins icon-256.png ${PN}.png
 
 	domenu ${PN}.desktop
+
+	newconfd "${FILESDIR}/${PN}.confd" ${PN}
+	newinitd "${FILESDIR}/${PN}.initd" ${PN}
 }
 
 pkg_postinst() {
