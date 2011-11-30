@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-3.0.1.ebuild,v 1.1 2011/11/26 15:51:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-3.0.1.ebuild,v 1.2 2011/11/30 19:52:12 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	# Fix configure, 
+	# Fix configure,
 	# https://sourceforge.net/tracker/?func=detail&aid=3414011&group_id=11638&atid=111638
 	epatch "${FILESDIR}/${P}-fix-configure.patch"
 	eautoreconf
