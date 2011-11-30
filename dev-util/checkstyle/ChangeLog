@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.43 2011/11/20 14:13:58 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.44 2011/11/30 12:13:34 grobian Exp $
+
+  30 Nov 2011; Fabian Groffen <grobian@gentoo.org> checkstyle-5.5.ebuild:
+  Add back Prefix keywords for bug #390017
 
 *checkstyle-5.5 (20 Nov 2011)
 
