@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/thaifonts-scalable/thaifonts-scalable-0.4.13.ebuild,v 1.2 2009/09/07 21:47:32 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/thaifonts-scalable/thaifonts-scalable-0.4.13.ebuild,v 1.3 2011/12/01 19:53:29 phajdan.jr Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://linux.thai.net/pub/thailinux/software/thai-ttf/thai-ttf-${PV}.tar
 
 LICENSE="|| ( GPL-2-with-font-exception GPL-3-with-font-exception )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=""
