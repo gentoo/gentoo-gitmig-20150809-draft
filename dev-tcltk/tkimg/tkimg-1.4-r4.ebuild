@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r4.ebuild,v 1.1 2011/11/20 11:08:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r4.ebuild,v 1.2 2011/12/01 08:23:21 jlec Exp $
 
 EAPI=3
 
@@ -40,7 +40,9 @@ RESTRICT="test"
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-gentoo+bundled-tiff.patch
+	epatch \
+		"${WORKDIR}"/${P}-gentoo+bundled-tiff.patch \
+		"${FILESDIR}"/${P}-jbig.patch
 	find compat/{libjpeg,libpng,zlib} -delete
 	sed \
 		-e 's:-O2 -fomit-frame-pointer::g' \

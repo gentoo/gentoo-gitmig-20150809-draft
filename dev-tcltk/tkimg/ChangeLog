@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.40 2011/11/20 11:08:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.41 2011/12/01 08:23:21 jlec Exp $
+
+  01 Dec 2011; Justin Lecher <jlec@gentoo.org> tkimg-1.4-r4.ebuild,
+  +files/tkimg-1.4-jbig.patch:
+  Remove automagic detection of jbig present on the system, #392675
 
 *tkimg-1.4-r4 (20 Nov 2011)
 
