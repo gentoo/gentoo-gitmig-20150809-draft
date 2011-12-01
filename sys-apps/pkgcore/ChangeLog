@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.132 2011/11/30 23:03:31 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.133 2011/12/01 09:21:28 ferringb Exp $
+
+*pkgcore-0.7.6.1 (01 Dec 2011)
+
+  01 Dec 2011; Brian Harring <ferringb@gentoo.org> -pkgcore-0.7.6.ebuild,
+  +pkgcore-0.7.6.1.ebuild:
+  Fix rather user visible bug in portage configuration introduced in 0.7.6.
 
 *pkgcore-0.7.6 (30 Nov 2011)
 
