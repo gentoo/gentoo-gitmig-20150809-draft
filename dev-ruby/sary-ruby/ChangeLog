@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sary-ruby
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.41 2010/05/27 15:54:34 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.42 2011/12/01 19:52:59 phajdan.jr Exp $
+
+  01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  sary-ruby-1.2.0-r2.ebuild:
+  x86 stable wrt bug #391587
 
 *sary-ruby-1.2.0-r2 (27 May 2010)
 
