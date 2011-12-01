@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.340.0.ebuild,v 1.2 2011/09/03 21:04:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.340.0.ebuild,v 1.3 2011/12/01 14:25:56 dev-zero Exp $
 
 EAPI=4
 
@@ -32,6 +32,7 @@ DEPEND="
 	dev-perl/Crypt-OpenSSL-RSA
 	dev-perl/crypt-rsa
 	dev-perl/digest-bubblebabble"
+RDEPEND="${DEPEND}"
 
 #src_compile() {
 #	echo "" | perl-module_src_compile
