@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.3.0.ebuild,v 1.1 2011/11/12 19:22:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.3.0.ebuild,v 1.2 2011/12/01 22:18:34 dilfridge Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ DEPEND="
 	>=dev-libs/boost-1.41
 	>=dev-libs/qjson-0.7.1
 	>=media-libs/libechonest-1.1.10
-	>=media-libs/phonon-4.5.0[gstreamer]
+	>=media-libs/phonon-4.5.0
 	media-libs/taglib
 	>=x11-libs/qt-core-${QT_MINIMAL}:4
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4
