@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.2.2.ebuild,v 1.2 2011/06/11 08:37:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.2.2.ebuild,v 1.3 2011/12/01 19:35:15 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.jfc.org.uk/software/lwm.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libSM

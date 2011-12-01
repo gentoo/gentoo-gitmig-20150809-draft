@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/lwm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.23 2011/06/11 08:37:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.24 2011/12/01 19:35:15 phajdan.jr Exp $
+
+  01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> lwm-1.2.2.ebuild:
+  x86 stable wrt bug #391561
 
   11 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> lwm-1.2.2.ebuild:
   Fix underlinking wrt #370127, bump to EAPI4, don't install useless docs
