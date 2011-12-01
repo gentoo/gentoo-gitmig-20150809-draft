@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.3 2011/10/31 04:02:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.4 2011/12/01 13:58:42 djc Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -135,7 +135,8 @@ src_prepare() {
 		sed -e "s/\(-DSVNVERSION=\).*\( -o\)/\1\\\\\"${ESVN_REVISION}\\\\\"\2/" -i Makefile.pre.in || die "sed failed"
 	fi
 
-	eautoreconf
+	eautoconf
+	eautoheader
 }
 
 src_configure() {

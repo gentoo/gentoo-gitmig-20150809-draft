@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.4-r3.ebuild,v 1.6 2011/11/26 16:50:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.4-r3.ebuild,v 1.7 2011/12/01 13:58:42 djc Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -127,7 +127,8 @@ src_prepare() {
 		Modules/getpath.c \
 		setup.py || die "sed failed to replace @@GENTOO_LIBDIR@@"
 
-	eautoreconf
+	eautoconf
+	eautoheader
 }
 
 src_configure() {
