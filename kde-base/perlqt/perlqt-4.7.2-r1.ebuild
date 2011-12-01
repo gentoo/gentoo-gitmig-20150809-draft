@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/perlqt-4.7.2-r1.ebuild,v 1.1 2011/10/18 23:09:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/perlqt-4.7.2-r1.ebuild,v 1.2 2011/12/01 22:07:39 dilfridge Exp $
 
 EAPI=4
 
@@ -14,15 +14,14 @@ inherit kde4-base
 
 DESCRIPTION="Qt Perl bindings"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug phonon qimageblitz qscintilla qwt test webkit"
+IUSE="debug phonon qimageblitz qscintilla qwt webkit"
 
 RDEPEND="
 	>=dev-lang/perl-5.10.1
+	dev-perl/List-MoreUtils
 	$(add_kdebase_dep smokeqt 'declarative?,multimedia?,opengl?,phonon?,qimageblitz?,qscintilla?,qthelp?,qwt?,webkit?')
 "
-DEPEND="${RDEPEND}
-	test? ( dev-perl/List-MoreUtils )
-"
+DEPEND=${RDEPEND}
 
 # Split from kdebindings-perl in 4.7
 add_blocker kdebindings-perl
