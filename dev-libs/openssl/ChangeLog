@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.410 2011/12/01 05:32:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.411 2011/12/01 05:35:47 vapier Exp $
+
+*openssl-1.0.0e-r1 (01 Dec 2011)
+
+  01 Dec 2011; Mike Frysinger <vapier@gentoo.org> +openssl-1.0.0e-r1.ebuild,
+  +files/openssl-1.0.0e-parallel-build.patch,
+  +files/openssl-1.0.0e-pkg-config.patch:
+  Remove CROSS_COMPILE from the env since we setup all the tools explicitly
+  #311473 by Thomas Sachau. Add USE=static-libs support #378259 by Agostino
+  Sarubbo. Try and fix up parallel build yet again #196554 by Duncan. Clean up
+  the pkg-config files to keep --libs clean (not include --static output).
 
   01 Dec 2011; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Document USE=bindist specifics #369245 by Donald.
