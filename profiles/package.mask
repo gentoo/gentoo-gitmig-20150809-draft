@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13295 2011/12/01 18:25:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13296 2011/12/01 20:49:59 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (01 Dec 2011)
+# Mask dev-perl/Test-SimpleUnit for removal
+# It was removed from CPAN. Test-SimpleUnit was added seven years ago for a
+# package that never made it into the tree
+dev-perl/Test-SimpleUnit
 
 # Samuli Suominen <ssuominen@gentoo.org> (30 Nov 2011)
 # Everything is (or should be) using slotted vala by now
