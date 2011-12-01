@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/nabi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.29 2011/09/30 00:49:36 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.30 2011/12/01 23:04:46 naota Exp $
+
+*nabi-0.99.10 (01 Dec 2011)
+
+  01 Dec 2011; Naohiro Aota <naota@gentoo.org> +nabi-0.99.10.ebuild:
+  Version bump. Updated by MyeongCheol Kim
 
   30 Sep 2011; Naohiro Aota <naota@gentoo.org> nabi-0.15.ebuild,
   +files/nabi-0.15-asneeded.patch, nabi-0.17.ebuild:
