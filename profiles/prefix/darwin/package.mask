@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.27 2011/05/11 18:34:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.28 2011/12/01 22:50:18 darkside Exp $
 
 
 # Fabian Groffen <grobian@gentoo.org> (11 May 2011)
@@ -18,10 +18,6 @@
 # preferred
 media-libs/mesa
 
-# Fabian Groffen <grobian@gentoo.org> (03 Feb 2010)
-# ld: duplicate symbol mylist<....> caused by implementation code in
-# mylist.h file
-~dev-vcs/cssc-1.2.0
 
 # Fabian Groffen <grobian@gentoo.org> (27 Oct 2009)
 # Fails compiling due to some missing dwarf symbols and internal

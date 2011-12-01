@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.32 2011/08/25 19:44:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.33 2011/12/01 22:50:19 darkside Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (25 Aug 2011)
 # Fails to compile, and not worth fixing, bug #379723
@@ -28,7 +28,6 @@
 
 # Fabian Groffen <grobian@gentoo.org> (29 Nov 2009)
 # segfaults during compilation, bug #294479
-~app-editors/emacs-23.2
 =virtual/emacs-23
 
 # Fabian Groffen <grobian@gentoo.org> (02 Oct 2008)
