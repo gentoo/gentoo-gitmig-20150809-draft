@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.262 2011/11/08 01:05:22 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.263 2011/12/01 23:32:41 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -1306,6 +1306,8 @@ kernel-2_pkg_setup() {
 }
 
 kernel-2_pkg_postrm() {
+	# This warning only makes sense for kernel sources.
+	[[ ${ETYPE} == headers ]] && return 0
 	echo
 	ewarn "Note: Even though you have successfully unmerged "
 	ewarn "your kernel package, directories in kernel source location: "
@@ -1314,4 +1316,3 @@ kernel-2_pkg_postrm() {
 	ewarn "will not remove these modified files and the directories they reside in."
 	echo
 }
-
