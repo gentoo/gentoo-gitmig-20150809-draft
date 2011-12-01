@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/mpc-0.9-r1.ebuild,v 1.1 2011/11/15 03:35:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/mpc-0.9-r1.ebuild,v 1.2 2011/12/01 16:44:02 darkside Exp $
 
 # Unconditional dependency of gcc.  Keep this set to 0.
 EAPI="0"
@@ -36,6 +36,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	use static-libs || rm "${D}"/usr/lib*/libmpc.la
+	use static-libs || rm "${ED:-${D}}"/usr/lib*/libmpc.la
 	dodoc ChangeLog NEWS README TODO
 }

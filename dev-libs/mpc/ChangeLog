@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.30 2011/11/15 03:35:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.31 2011/12/01 16:44:02 darkside Exp $
+
+  01 Dec 2011; Jeremy Olexa <darkside@gentoo.org> mpc-0.9-r1.ebuild:
+  Proper rm call for Gentoo Prefix, signed off by vapier
 
 *mpc-0.9-r1 (15 Nov 2011)
 
