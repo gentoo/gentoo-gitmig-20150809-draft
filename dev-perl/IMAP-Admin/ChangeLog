@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IMAP-Admin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IMAP-Admin/ChangeLog,v 1.7 2009/09/07 09:00:57 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IMAP-Admin/ChangeLog,v 1.8 2011/12/01 19:42:52 phajdan.jr Exp $
+
+  01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> IMAP-Admin-1.6.7.ebuild:
+  x86 stable wrt bug #391583
 
   07 Sep 2009; Torsten Veller <tove@gentoo.org> -IMAP-Admin-1.6.6.ebuild:
   Cleanup
