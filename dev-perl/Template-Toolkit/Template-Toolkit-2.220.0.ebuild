@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.220.0.ebuild,v 1.1 2011/08/28 16:59:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.220.0.ebuild,v 1.2 2011/12/01 20:28:42 tove Exp $
 
 EAPI=4
 
@@ -14,10 +14,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-solaris"
 IUSE="xml gd mysql postgres latex vim-syntax"
 
-DEPEND="dev-perl/text-autoformat
+RDEPEND="dev-perl/text-autoformat
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
 	>=dev-perl/AppConfig-1.56"
+DEPEND="${RDEPEND}"
 PDEPEND="dev-perl/text-autoformat
 	vim-syntax? ( app-vim/tt2-syntax )
 	xml? ( dev-perl/Template-XML )
@@ -36,14 +37,5 @@ myconf="TT_XS_ENABLE=y TT_ACCEPT=y TT_QUIET=y
 	TT_IMAGES=/usr/share/template-toolkit2/images"
 
 mydoc="README"
-
-src_unpack() {
-	perl-module_src_unpack
-
-	# uncomment these functions
-	# do we really want this?
-	# splash_images(); html_docs(); html_docstyle();html_examples();
-	sed -i 's/^#\(splash_images\|html_\)/\1/' "${S}"/Makefile.PL || die
-}
 
 SRC_TEST=do
