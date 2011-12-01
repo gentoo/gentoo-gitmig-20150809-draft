@@ -1,6 +1,10 @@
 # ChangeLog for virtual/freedesktop-icon-theme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/freedesktop-icon-theme/ChangeLog,v 1.4 2011/10/19 09:45:15 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/freedesktop-icon-theme/ChangeLog,v 1.5 2011/12/01 17:35:08 darkside Exp $
+
+  01 Dec 2011; Jeremy Olexa <darkside@gentoo.org>
+  freedesktop-icon-theme-0.ebuild:
+  add some prefix keywords
 
   19 Oct 2011; Markus Duft <mduft@gentoo.org> freedesktop-icon-theme-0.ebuild:
   added ~x86-interix prefix keyword
