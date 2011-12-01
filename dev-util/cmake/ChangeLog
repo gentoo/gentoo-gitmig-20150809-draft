@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.179 2011/11/25 06:07:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.180 2011/12/01 19:33:14 phajdan.jr Exp $
+
+  01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> cmake-2.8.6-r4.ebuild:
+  x86 stable wrt bug #391425
 
   25 Nov 2011; Jeroen Roovers <jer@gentoo.org> cmake-2.8.6-r4.ebuild:
   Stable for HPPA (bug #391425).
