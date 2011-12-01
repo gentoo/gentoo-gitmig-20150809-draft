@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.3.0.ebuild,v 1.1 2011/11/27 00:15:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.3.0.ebuild,v 1.2 2011/12/01 20:51:38 vapier Exp $
 
 EAPI="2"
 
@@ -45,6 +45,11 @@ src_compile()   { multi_eclass ${FUNCNAME} ; }
 src_install() {
 	dobin bin/phantomjs || die
 	dodoc ChangeLog README.md
+
+	if use examples ; then
+		docinto examples
+		dodoc examples/* || die
+	fi
 
 	multi_eclass ${FUNCNAME}
 }
