@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/mtl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.40 2011/06/05 13:12:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.41 2011/12/01 19:52:19 phajdan.jr Exp $
+
+  01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mtl-1.1.1.1.ebuild:
+  x86 stable wrt bug #391591
 
   05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -mtl-1.0.ebuild,
   -mtl-1.0-r1.ebuild, -mtl-1.0.1.ebuild, -mtl-1.1.0.0.ebuild:
