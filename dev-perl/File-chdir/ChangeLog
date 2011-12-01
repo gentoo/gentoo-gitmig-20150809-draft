@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-chdir
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.25 2011/11/05 10:07:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.26 2011/12/01 19:49:58 phajdan.jr Exp $
+
+  01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  File-chdir-0.100.300.ebuild:
+  x86 stable wrt bug #391519
 
 *File-chdir-0.100.600 (05 Nov 2011)
 
