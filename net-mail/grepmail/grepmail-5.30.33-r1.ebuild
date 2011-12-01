@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-5.30.33-r1.ebuild,v 1.1 2011/02/15 18:51:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-5.30.33-r1.ebuild,v 1.2 2011/12/01 19:50:45 phajdan.jr Exp $
 
 inherit versionator perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/grepmail/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-perl/Inline
