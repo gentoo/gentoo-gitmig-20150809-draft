@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.2 2011/11/03 04:16:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.3 2011/12/01 17:31:42 darkside Exp $
+
+  01 Dec 2011; Jeremy Olexa <darkside@gentoo.org> libpeas-1.2.0-r1.ebuild:
+  add some prefix keywords as tested
 
 *libpeas-1.2.0-r1 (03 Nov 2011)
 
