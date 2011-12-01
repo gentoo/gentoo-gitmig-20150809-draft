@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.580.0.ebuild,v 1.1 2011/08/31 13:52:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.580.0.ebuild,v 1.2 2011/12/01 20:31:26 tove Exp $
 
 EAPI=4
 
@@ -20,8 +20,9 @@ IUSE=""
 # for this though.
 SRC_TEST="do"
 
-DEPEND=">=dev-libs/openssl-0.9.7c
+RDEPEND=">=dev-libs/openssl-0.9.7c
 	virtual/perl-MIME-Base64"
+DEPEND="${RDEPEND}"
 # PDEPEND: circular dependencies bug #144761
 PDEPEND="dev-perl/libwww-perl"
 
