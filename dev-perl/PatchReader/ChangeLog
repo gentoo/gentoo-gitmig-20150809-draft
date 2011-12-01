@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PatchReader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.25 2011/05/12 16:03:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.26 2011/12/01 19:36:15 phajdan.jr Exp $
+
+  01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  PatchReader-0.9.6.ebuild:
+  x86 stable wrt bug #391571
 
 *PatchReader-0.9.6 (12 May 2011)
 
