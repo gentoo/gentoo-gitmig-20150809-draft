@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.263 2011/12/01 23:32:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.264 2011/12/01 23:34:18 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -1287,7 +1287,7 @@ kernel-2_pkg_postinst() {
 
 kernel-2_pkg_setup() {
 	if kernel_is 2 4; then
-		if [ "$( gcc-major-version )" -eq "4" ] ; then
+		if [[ $(gcc-major-version) -ge 4 ]] ; then
 			echo
 			ewarn "Be warned !! >=sys-devel/gcc-4.0.0 isn't supported with linux-2.4!"
 			ewarn "Either switch to another gcc-version (via gcc-config) or use a"
