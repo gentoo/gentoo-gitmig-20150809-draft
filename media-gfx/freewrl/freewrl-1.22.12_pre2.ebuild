@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.12_pre2.ebuild,v 1.3 2011/11/22 19:53:15 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.12_pre2.ebuild,v 1.4 2011/12/01 04:43:54 axs Exp $
 
 EAPI="2"
 
@@ -88,10 +88,12 @@ src_configure() {
 		export JAVASCRIPT_ENGINE_CFLAGS
 		export JAVASCRIPT_ENGINE_LIBS
 	fi
+	if ! use expat; then
+		myconf="${myconf} --without-expat"
+	fi
 	econf	${myconf} \
 		$(use_enable curl libcurl) \
 		$(use_with glew) \
-		$(use_with expat) \
 		$(use_enable debug) $(use_enable debug thread_colorized) \
 		$(use_enable libeai) \
 		$(use_enable java) \
@@ -105,9 +107,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if use java; then
-		java-pkg_dojar src/java/vrml.jar
 		insinto /usr/share/${PN}/lib
 		doins src/java/java.policy
+		java-pkg_regjar src/java/vrml.jar
 		# install vrml.jar as a JRE extension
 		dodir /usr/java/packages/lib/ext
 		dosym /usr/share/${PN}/lib/vrml.jar /usr/java/packages/lib/ext/vrml.jar
