@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.287 2011/12/01 22:17:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.288 2011/12/01 22:24:30 dilfridge Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (1 Dec 2011)
 # The phonon xine backend is unmaintained and makes trouble
->=media-libs/phonon-4.5.0 xine
+media-libs/phonon xine
+kde-base/phonon-kde xine
 
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
 # JavaScriptCore JIT is supported only on amd64/arm/x86, so
