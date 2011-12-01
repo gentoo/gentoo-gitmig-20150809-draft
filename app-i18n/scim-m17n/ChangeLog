@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-m17n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.36 2011/02/13 19:16:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.37 2011/12/01 19:38:36 phajdan.jr Exp $
+
+  01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> scim-m17n-0.2.3.ebuild:
+  x86 stable wrt bug #391557
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> scim-m17n-0.2.2.ebuild,
   scim-m17n-0.2.3.ebuild:
