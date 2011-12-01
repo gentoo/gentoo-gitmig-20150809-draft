@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.2.ebuild,v 1.5 2011/10/28 23:34:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.2.ebuild,v 1.6 2011/12/01 21:55:03 dilfridge Exp $
 
 EAPI=4
 
@@ -33,6 +33,8 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-libav.patch" )
 
 S=${WORKDIR}/${MY_P}
 
