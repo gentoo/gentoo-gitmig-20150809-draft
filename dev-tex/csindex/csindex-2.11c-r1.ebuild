@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/csindex-2.11c-r1.ebuild,v 1.1 2010/11/08 00:07:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/csindex-2.11c-r1.ebuild,v 1.2 2011/12/01 19:51:38 phajdan.jr Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://math.feld.cvut.cz/pub/cstex/base/${MY_P}.tar.gz"
 
 LICENSE="MakeIndex"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=""

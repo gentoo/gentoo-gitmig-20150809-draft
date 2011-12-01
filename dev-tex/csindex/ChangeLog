@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/csindex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.8 2010/11/08 00:07:21 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.9 2011/12/01 19:51:38 phajdan.jr Exp $
+
+  01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> csindex-2.11c-r1.ebuild:
+  x86 stable wrt bug #391621
 
 *csindex-2.11c-r1 (08 Nov 2010)
 
