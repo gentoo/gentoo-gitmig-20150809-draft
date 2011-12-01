@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/perftest/perftest-1.3.0.ebuild,v 1.2 2011/07/02 20:30:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/perftest/perftest-1.3.0.ebuild,v 1.3 2011/12/01 12:19:20 alexxy Exp $
 
 EAPI="4"
 
@@ -23,4 +23,5 @@ RDEPEND="${DEPEND}"
 src_install() {
 	dodoc README runme
 	dobin ib_*
+	dobin rdma_*
 }
