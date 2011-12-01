@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.9.4.ebuild,v 1.4 2011/03/20 17:44:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.9.4.ebuild,v 1.5 2011/12/01 12:37:46 fordfrog Exp $
 
 EAPI="3"
 JAVA_PKG_IUSE="doc source test"
@@ -18,13 +18,13 @@ LICENSE="Apache-2.0"
 SLOT="2.9"
 KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
-DEPEND=">=virtual/jdk-1.4
+DEPEND=">=virtual/jdk-1.5
 	dev-java/ant-nodeps:0
 	dev-java/javacc:0
 	dev-java/junit:0
 	test? ( dev-java/ant-junit )"
 # junit is needed for compilation because tests are compiled for javacc target even when not requested
-RDEPEND=">=virtual/jdk-1.4"
+RDEPEND=">=virtual/jdk-1.5"
 
 java_prepare() {
 	sed -i -e '/-Xmax/ d' common-build.xml

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.81 2011/10/18 23:18:57 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.82 2011/12/01 12:37:46 fordfrog Exp $
+
+  01 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org> lucene-2.9.4.ebuild:
+  It fails to build with source 1.4 because of annotations and generics
 
 *lucene-2.1.0-r2 (18 Oct 2011)
 
