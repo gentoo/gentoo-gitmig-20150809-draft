@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.149 2011/12/01 12:53:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.150 2011/12/01 16:53:04 vapier Exp $
+
+  01 Dec 2011; Mike Frysinger <vapier@gentoo.org> wget-1.13.4-r1.ebuild:
+  Fix the static-libs logic the right way #392713 by Piotr Karbowski.
 
   01 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> wget-1.13.4-r1.ebuild:
   QA: do not try to be smart about setting dependencies, when the tricks don't
