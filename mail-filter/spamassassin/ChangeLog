@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.203 2011/11/27 19:44:24 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.204 2011/12/01 19:25:10 vapier Exp $
+
+  01 Dec 2011; Mike Frysinger <vapier@gentoo.org> spamassassin-3.3.1-r4.ebuild,
+  spamassassin-3.3.2-r1.ebuild:
+  Add s390/sh love #376587 by Eray Aslan.
 
 *spamassassin-3.3.2-r1 (27 Nov 2011)
 
