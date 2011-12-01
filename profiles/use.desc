@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.469 2011/11/14 20:15:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.470 2011/12/01 18:42:06 mr_bones_ Exp $
 
 # Keep them sorted
 
@@ -52,7 +52,6 @@ cdinstall - Copies files from the CD rather than asking the user to copy them, m
 cdparanoia - Enables cdparanoia (audio CD ripper) support
 cdr - Adds support for CD writer hardware
 cgi - Add CGI script support
-chasen - Enable chasen (Japanese Morphological Analysis System) support
 cjk - Adds support for Multi-byte character languages (Chinese, Japanese, Korean)
 clamav - Adds support for Clam AntiVirus software (usually with a plugin)
 coreaudio - Build the CoreAudio driver on Mac OS X systems
@@ -130,7 +129,6 @@ gmp - Adds support for dev-libs/gmp (GNU MP library)
 gnome - Adds GNOME support
 gnome-keyring - Enable support for storing passwords via gnome-keyring
 gnuplot - Enable support for gnuplot (data and function plotting)
-gnustep - Adds integration with GNUstep environment
 gnutls - Adds support for net-libs/gnutls (TLS 1.0 and SSL 3.0 support)
 gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
