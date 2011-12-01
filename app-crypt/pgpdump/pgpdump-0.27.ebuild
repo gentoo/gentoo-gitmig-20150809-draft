@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/pgpdump-0.27.ebuild,v 1.1 2011/05/10 15:49:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/pgpdump-0.27.ebuild,v 1.2 2011/12/01 19:55:56 phajdan.jr Exp $
 
 EAPI="3"
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.mew.org/~kazu/proj/pgpdump/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib
