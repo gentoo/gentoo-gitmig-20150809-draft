@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pop-before-smtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/ChangeLog,v 1.22 2011/11/28 11:54:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/ChangeLog,v 1.23 2011/12/01 12:12:06 eras Exp $
+
+  01 Dec 2011; Eray Aslan <eras@gentoo.org> -pop-before-smtp-1.41.ebuild:
+  remove old
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pop-before-smtp-1.42.ebuild:

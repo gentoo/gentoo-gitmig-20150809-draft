@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pop2imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.9 2011/11/28 11:57:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.10 2011/12/01 12:13:46 eras Exp $
+
+  01 Dec 2011; Eray Aslan <eras@gentoo.org> -pop2imap-1.12.ebuild:
+  remove old
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pop2imap-1.18.ebuild:
   x86 stable wrt bug #391295
