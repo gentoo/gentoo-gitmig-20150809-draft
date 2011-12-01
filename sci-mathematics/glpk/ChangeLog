@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.50 2011/11/28 11:50:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.51 2011/12/01 17:22:17 jer Exp $
+
+  01 Dec 2011; Jeroen Roovers <jer@gentoo.org> glpk-4.45.ebuild:
+  Stable for HPPA (bug #391517).
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> glpk-4.45.ebuild:
   x86 stable wrt bug #391517
