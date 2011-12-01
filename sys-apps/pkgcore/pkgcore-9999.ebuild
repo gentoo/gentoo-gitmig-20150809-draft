@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.3 2011/09/20 02:53:25 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.4 2011/12/01 12:55:24 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -52,23 +52,4 @@ src_install() {
 pkg_postinst() {
 	distutils_pkg_postinst
 	pplugincache
-
-	if [[ -d "${ROOT}etc/pkgcore/plugins" ]]; then
-		elog "You still have an /etc/pkgcore/plugins from pkgcore 0.1."
-		elog "It is unused by pkgcore >= 0.2, remove it now."
-		die "remove /etc/pkgcore/plugins from pkgcore 0.1"
-	fi
-
-	# This is left behind by pkgcore 0.2.
-	rm -f "${ROOT}"$(python_get_sitedir)/pkgcore/plugins/plugincache
-}
-
-pkg_postrm() {
-	# Careful not to remove this on up/downgrades.
-	local sitep="${ROOT}"$(python_get_sitedir)/site-packages
-	if [[ -e "${sitep}/pkgcore/plugins/plugincache2" ]] &&
-		! [[ -e "${sitep}/pkgcore/plugin.py" ]]; then
-		rm "${sitep}/pkgcore/plugins/plugincache2"
-	fi
-	distutils_pkg_postrm
 }
