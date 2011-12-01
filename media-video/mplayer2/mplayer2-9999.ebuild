@@ -1,19 +1,22 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.18 2011/11/30 04:49:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.19 2011/12/01 20:13:49 lu_zero Exp $
 
 EAPI=4
 
-EGIT_REPO_URI="git://git.mplayer2.org/mplayer2.git"
-[[ ${PV} = *9999* ]] && VCS_ECLASS="git-2"
-NAMESUF=${PN/mplayer/}
+[[ ${PV} = *9999* ]] && VCS_ECLASS="git-2" || VCS_ECLASS=""
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${VCS_ECLASS}
 
+NAMESUF="${PN/mplayer/}"
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayer2.org/"
-[[ ${PV} == *9999* ]] || \
-	RELEASE_URI="http://ftp.${PN}.org/pub/release/${P}.tar.xz"
+
+if [[ ${PV} == *9999* ]]; then
+	EGIT_REPO_URI="git://git.mplayer2.org/mplayer2.git"
+else
+	RELEASE_URI="http://dev.gentoo.org/~lu_zero/${PN}/${P}.tar.xz"
+fi
 SRC_URI="${RELEASE_URI}
 	!truetype? (
 		mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
@@ -24,16 +27,23 @@ SRC_URI="${RELEASE_URI}
 
 LICENSE="GPL-3"
 SLOT="0"
-[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~x86 ~amd64-linux"
-IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
-bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts custom-cflags debug dga
-directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca esd +faad fbcon
-ftp gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa
-libcaca lirc +live mad md5sum +mmx mmxext mng +mp3 nas
-+network nut +opengl oss png pnm pulseaudio pvr +quicktime
-radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3
-tga +theora +truetype +unicode v4l vdpau
-+vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvid"
+if [[ ${PV} == *9999* ]]; then
+	KEYWORDS=""
+else
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux "
+fi
+IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
+bluray bs2b +bzip2 cddb +cdio cdparanoia cpudetection custom-cpuopts
+custom-cflags debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav
+dxr3 +enca esd +faad fbcon ftp gif ggi gsm +iconv ipv6 jack joystick
+jpeg jpeg2k kernel_linux ladspa libcaca lirc +live mad md5sum +mmx
+mmxext mng +mp3 nas +network nut amr +opengl oss png pnm pulseaudio
+pvr +quicktime radio +rar +real +rtc rtmp samba +shm +schroedinger
+sdl +speex sse sse2 ssse3 tga +theora threads +truetype +unicode
+v4l vdpau +vorbis vpx win32codecs +X xanim xinerama +xscreensaver
++xv xvid
+"
+IUSE+=" symlink"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
 for x in ${VIDEO_CARDS}; do
@@ -41,7 +51,20 @@ for x in ${VIDEO_CARDS}; do
 done
 
 # bindist does not cope with win32codecs, which are nonfree
-REQUIRED_USE="bindist? ( !win32codecs )"
+REQUIRED_USE="bindist? ( !win32codecs )
+	cdio? ( !cdparanoia )
+	cddb? ( || ( cdio cdparanoia ) network )
+	dvdnav? ( dvd )
+	radio? ( || ( dvb v4l ) )
+	dga? ( X )
+	dxr3? ( X )
+	ggi? ( X )
+	opengl? ( X )
+	vdpau? ( X )
+	xinerama? ( X )
+	xscreensaver? ( X )
+	xv? ( X )
+"
 
 FONT_RDEPS="
 	virtual/ttf-fonts
@@ -50,8 +73,9 @@ FONT_RDEPS="
 "
 # Rar: althrought -gpl version is nice, it cant do most functions normal rars can
 #	nemesi? ( net-libs/libnemesi )
+# virtual/ffmpeg does not have all USE
+LIBAV_USE="[amr?,bzip2?,dirac?,gsm?,jpeg2k?,rtmp?,schroedinger?,threads?,vpx?]"
 RDEPEND+="
-	virtual/ffmpeg
 	sys-libs/ncurses
 	sys-libs/zlib
 	!bindist? (
@@ -125,6 +149,11 @@ RDEPEND+="
 	vorbis? ( media-libs/libvorbis )
 	xanim? ( media-video/xanim )
 	xvid? ( media-libs/xvid )
+	|| (
+		>=media-video/libav-0.6.2${LIBAV_USE}
+		>=media-video/ffmpeg-0.6_p25423${LIBAV_USE}
+	)
+	symlink? ( !media-video/mplayer )
 "
 ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
@@ -190,32 +219,17 @@ pkg_setup() {
 	einfo "    media-video/libav or media-video/ffmpeg"
 }
 
-src_unpack() {
-	if [[ ${PV} = *9999* ]]; then
-		git-2_src_unpack
-	else
-		default
-	fi
-
-	if ! use truetype; then
-		unpack font-arial-iso-8859-1.tar.bz2 \
-			font-arial-iso-8859-2.tar.bz2 \
-			font-arial-cp1250.tar.bz2
-	fi
-}
-
 src_prepare() {
 	# fix path to bash executable in configure scripts
 	local bash_scripts="configure version.sh"
-	sed -i \
-		-e "1c\#!${EPREFIX}/bin/bash" \
+	sed -i -e "1c\#!${EPREFIX}/bin/bash" \
 		${bash_scripts} || die
 
 	if [[ -n ${NAMESUF} ]]; then
 		sed -e "/elif linux ; then/a\  _exesuf=\"${NAMESUF}\"" \
 			-i configure || die
-		sed -e "/ -m 644 DOCS\/man\/en\/mplayer/i\	mv DOCS\/man\/en\/mplayer.1 DOCS\/man\/en\/${PN}.1" \
-			-e "/ -m 644 DOCS\/man\/\$(lang)\/mplayer/i\	mv DOCS\/man\/\$(lang)\/mplayer.1 DOCS\/man\/\$(lang)\/${PN}.1" \
+		sed -e "\, -m 644 DOCS/man/en/mplayer,i\	mv DOCS/man/en/mplayer.1 DOCS/man/en/${PN}.1" \
+			-e "\, -m 644 DOCS/man/\$(lang)/mplayer,i\	mv DOCS/man/\$(lang)/mplayer.1 DOCS/man/\$(lang)/${PN}.1" \
 			-e "s/er.1/er${NAMESUF}.1/g" \
 			-i Makefile || die
 		sed -e "s/mplayer/${PN}/" \
@@ -251,11 +265,12 @@ src_configure() {
 		$(use_enable network networking)
 		$(use_enable joystick)
 	"
-	uses="ass bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
+	uses="bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
 	myconf+=" --disable-nemesi" # nemesi automagic disable
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
+	use ass || myconf+=" --disable-libass"
 	use bidi || myconf+=" --disable-fribidi"
 	use ipv6 || myconf+=" --disable-inet6"
 	use nut || myconf+=" --disable-libnut"
@@ -269,15 +284,12 @@ src_configure() {
 		"
 	fi
 
-	# libcdio support: prefer libcdio over cdparanoia
-	# don't check for cddb w/cdio
-	if use cdio; then
-		myconf+=" --disable-cdparanoia"
-	else
-		myconf+=" --disable-libcdio"
-		use cdparanoia || myconf+=" --disable-cdparanoia"
-		use cddb || myconf+=" --disable-cddb"
-	fi
+	########
+	# CDDA #
+	########
+	use cddb || myconf+=" --disable-cddb"
+	use cdio || myconf+=" --disable-libcdio"
+	use cdparanoia || myconf+=" --disable-cdparanoia"
 
 	################################
 	# DVD read, navigation support #
@@ -426,6 +438,7 @@ src_configure() {
 	################
 	# Audio Output #
 	################
+	myconf+=" --disable-rsound" # media-sound/rsound is in pro-audio overlay only
 	uses="alsa esd jack ladspa nas"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
@@ -495,10 +508,6 @@ src_configure() {
 			--disable-xv
 			--disable-x11
 		"
-		uses="dga dxr3 ggi opengl vdpau xinerama xscreensaver xv"
-		for i in ${uses}; do
-			use ${i} && elog "Useflag \"${i}\" require \"X\" useflag enabled to work."
-		done
 	fi
 
 	############################
@@ -600,4 +609,9 @@ _EOF_
 	dosym ../../../etc/${PN}/mplayer.conf /usr/share/${PN}/mplayer.conf
 
 	newbin "${S}/TOOLS/midentify.sh" midentify${NAMESUF}
+
+	if [[ -n ${NAMESUF} ]] && use symlink; then
+		dosym "${PN}" /usr/bin/mplayer
+		dosym "midentify${NAMESUF}" /usr/bin/midentify
+	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20111126.ebuild,v 1.1 2011/11/30 04:49:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20111126.ebuild,v 1.2 2011/12/01 20:13:49 lu_zero Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ SLOT="0"
 if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux "
 fi
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
 bluray bs2b +bzip2 cddb +cdio cdparanoia cpudetection custom-cpuopts
@@ -102,6 +102,7 @@ RDEPEND+="
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
+	ass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?,fontconfig] )
 	bidi? ( dev-libs/fribidi )
 	bluray? ( media-libs/libbluray )
 	bs2b? ( media-libs/libbs2b )
@@ -123,7 +124,6 @@ RDEPEND+="
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( virtual/jpeg )
 	ladspa? ( media-libs/ladspa-sdk )
-	ass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?,fontconfig] )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
 	live? ( media-plugins/live )
@@ -265,11 +265,12 @@ src_configure() {
 		$(use_enable network networking)
 		$(use_enable joystick)
 	"
-	uses="ass bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
+	uses="bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
 	myconf+=" --disable-nemesi" # nemesi automagic disable
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
+	use ass || myconf+=" --disable-libass"
 	use bidi || myconf+=" --disable-fribidi"
 	use ipv6 || myconf+=" --disable-inet6"
 	use nut || myconf+=" --disable-libnut"
