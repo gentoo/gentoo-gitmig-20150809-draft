@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.9 2011/11/04 09:37:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.10 2011/12/01 16:59:31 graaff Exp $
+
+*childprocess-0.2.3 (01 Dec 2011)
+
+  01 Dec 2011; Hans de Graaff <graaff@gentoo.org> +childprocess-0.2.3.ebuild:
+  Version bump.
 
   04 Nov 2011; Hans de Graaff <graaff@gentoo.org> childprocess-0.2.2.ebuild:
   Keyword for x86.
