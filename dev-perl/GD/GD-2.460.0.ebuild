@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.460.0.ebuild,v 1.1 2011/05/02 18:49:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.460.0.ebuild,v 1.2 2011/12/01 20:18:20 tove Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-solaris"
 IUSE="animgif gif jpeg png truetype xpm"
 
-DEPEND=">=media-libs/gd-2.0.33
+RDEPEND=">=media-libs/gd-2.0.33
 	png? (
 		media-libs/gd[png]
 		media-libs/libpng
@@ -34,6 +34,7 @@ DEPEND=">=media-libs/gd-2.0.33
 		x11-libs/libXpm
 	)
 	gif? ( media-libs/giflib )"
+DEPEND="${RDEPEND}"
 
 SRC_TEST=do
 
@@ -45,12 +46,12 @@ src_prepare(){
 
 src_configure() {
 	myconf=""
-	use gif && use animgif && myconf="${myconf},ANIMGIF"
-	use jpeg && myconf="${myconf},JPEG"
-	use truetype && myconf="${myconf},FREETYPE"
-	use png && myconf="${myconf},PNG"
-	use xpm && myconf="${myconf},XPM"
-	use gif && myconf="${myconf},GIF"
+	use gif && use animgif && myconf+=",ANIMGIF"
+	use jpeg && myconf+=",JPEG"
+	use truetype && myconf+=",FREETYPE"
+	use png && myconf+=",PNG"
+	use xpm && myconf+=",XPM"
+	use gif && myconf+=",GIF"
 	myconf="-options \"${myconf:1}\""
 	perl-module_src_configure
 }
