@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.409 2011/10/31 20:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.410 2011/12/01 05:32:56 vapier Exp $
+
+  01 Dec 2011; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Document USE=bindist specifics #369245 by Donald.
 
   31 Oct 2011; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8r.ebuild:
   Update to EAPI=2 to keep down differences with newer openssl ebuilds, and fix
