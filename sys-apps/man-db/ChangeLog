@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.24 2011/11/27 18:35:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.25 2011/12/01 17:03:25 vapier Exp $
+
+  01 Dec 2011; Mike Frysinger <vapier@gentoo.org> man-db-2.6.0.2.ebuild:
+  Pull in pkg-config for building #392733 by Nikoli.
 
   27 Nov 2011; Mike Frysinger <vapier@gentoo.org> man-db-2.6.0.2.ebuild:
   Drop autotools-utils, fix up SRC_URI mirror, add USE=zlib, and touch up

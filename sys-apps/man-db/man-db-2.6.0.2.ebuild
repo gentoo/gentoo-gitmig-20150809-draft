@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.0.2.ebuild,v 1.9 2011/11/27 18:35:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.0.2.ebuild,v 1.10 2011/12/01 17:03:25 vapier Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ RDEPEND="dev-libs/libpipeline
 	zlib? ( sys-libs/zlib )
 	!sys-apps/man"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
