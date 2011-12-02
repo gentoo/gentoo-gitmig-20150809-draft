@@ -1,9 +1,9 @@
 # ChangeLog for media-video/aacskeys
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/ChangeLog,v 1.7 2011/12/02 12:46:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/ChangeLog,v 1.8 2011/12/02 12:47:23 aballier Exp $
 
   02 Dec 2011; Alexis Ballier <aballier@gentoo.org> aacskeys-0.4.0c-r1.ebuild:
-  works fine with icedtea7, depend on jdk >= 1.7
+  works fine with icedtea7, depend on jdk >= 1.6
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   aacskeys-0.4.0c-r1.ebuild:
