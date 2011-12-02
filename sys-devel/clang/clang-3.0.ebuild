@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0_rc4.ebuild,v 1.1 2011/11/28 10:56:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0.ebuild,v 1.1 2011/12/02 13:20:51 voyageur Exp $
 
 EAPI=3
 
@@ -12,8 +12,8 @@ inherit eutils multilib python
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
 # Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.0_}/llvm-${PV/_}.src.tar.gz
-	http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.0_}/${P/_}.src.tar.gz"
+SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tar.gz
+	http://llvm.org/releases/${PV}/${P}.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -23,10 +23,10 @@ IUSE="debug multitarget +static-analyzer +system-cxx-headers test"
 DEPEND="static-analyzer? ( dev-lang/perl )"
 RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
 
-S=${WORKDIR}/llvm-${PV/_}.src
+S=${WORKDIR}/llvm-${PV}.src
 
 src_prepare() {
-	mv "${WORKDIR}"/clang-${PV/_}.src "${S}"/tools/clang || die "clang source directory move failed"
+	mv "${WORKDIR}"/clang-${PV}.src "${S}"/tools/clang || die "clang source directory move failed"
 
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch

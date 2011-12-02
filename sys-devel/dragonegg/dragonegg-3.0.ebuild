@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.0_rc4.ebuild,v 1.2 2011/11/30 10:35:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.0.ebuild,v 1.1 2011/12/02 13:21:27 voyageur Exp $
 
 EAPI=4
 inherit multilib
 
 DESCRIPTION="GCC plugin that uses LLVM for optimization and code generation"
 HOMEPAGE="http://dragonegg.llvm.org/"
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.0_}/${P/_}.src.tar.gz"
+SRC_URI="http://llvm.org/releases/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +22,8 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${P/_}.src
 
 src_prepare() {
-	# Remove in final 3.0
-	sed -e "s/\(^REVISION:=\).*/\1${P}/" \
+	# Replace svnversion call 
+	sed -e "s/\(^REVISION:=\).*/\1${PV}/" \
 		-i Makefile || die "Setting revision failed"
 }
 

@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.54 2011/11/28 23:35:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.55 2011/12/02 13:20:14 voyageur Exp $
+
+*llvm-3.0 (02 Dec 2011)
+
+  02 Dec 2011; Bernard Cafarelli <voyageur@gentoo.org> -llvm-3.0_rc4.ebuild,
+  +llvm-3.0.ebuild:
+  Final release bump, remove rc
 
   28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> llvm-2.9-r2.ebuild:
   Marked stable on AMD64 based on arch testing by Michael Orlitzky, Agostino
