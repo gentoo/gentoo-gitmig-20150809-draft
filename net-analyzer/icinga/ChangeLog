@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.5 2011/11/22 19:53:37 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.6 2011/12/02 22:09:06 prometheanfire Exp $
+
+*icinga-1.6.1 (02 Dec 2011)
+
+  02 Dec 2011; mthode <mthode@gentoo.org> +icinga-1.6.1.ebuild,
+  files/icinga-init.d-2, files/icinga-apache.conf:
+  moved /var/icinga to /var/lib/icinga; init updated to remove redundant config
+  check (done by default now); add icinga to nagios group all the time; moved
+  loging around; removed api use flag
 
   22 Nov 2011; mthode <mthode@gentoo.org> -icinga-1.5.1-r2.ebuild:
   removed icinga-1.5.1-r2.ebuild for init.d error (fix is in r3)

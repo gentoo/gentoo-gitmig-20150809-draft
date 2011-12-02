@@ -16,16 +16,7 @@ reload()
 	eend $?
 }
 
-checkconfig() {
-	# Silent Check
-	/usr/sbin/icinga -v /etc/icinga/icinga.cfg &>/dev/null && return 0
-	# Now we know there's problem - run again and display errors
-	/usr/sbin/icinga -v /etc/icinga/icinga.cfg
-	eend $? "Configuration Error. Please fix your configfile"
-}
-
 start() {
-	checkconfig || return 1
 	ebegin "Starting icinga"
 	checkpath -d -o icinga:icinga /tmp/icinga /var/run/icinga /var/log/icinga /var/lib/icinga
 	checkpath -f -o icinga:icinga /var/log/icinga/icinga.log
