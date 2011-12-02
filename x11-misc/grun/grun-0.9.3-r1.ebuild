@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.3-r1.ebuild,v 1.3 2011/03/02 17:07:49 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.3-r1.ebuild,v 1.4 2011/12/02 23:44:49 hwoarang Exp $
 
 EAPI=2
 inherit eutils
@@ -11,10 +11,12 @@ SRC_URI="http://grun.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="nls"
 
-RDEPEND="x11-libs/gtk+:2"
+RDEPEND="dev-libs/glib
+	x11-libs/gtk+:2
+	x11-libs/gdk-pixbuf"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
