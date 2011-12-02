@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.1-r1.ebuild,v 1.1 2011/10/30 23:22:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.1-r1.ebuild,v 1.2 2011/12/02 19:22:19 dilfridge Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ SLOT="0"
 IUSE="aqua debug +gstreamer pulseaudio vlc xine"
 
 COMMON_DEPEND="
-	!x11-libs/qt-phonon:4
+	!!x11-libs/qt-phonon:4
 	>=x11-libs/qt-core-4.6.0:4
 	>=x11-libs/qt-dbus-4.6.0:4
 	>=x11-libs/qt-gui-4.6.0:4

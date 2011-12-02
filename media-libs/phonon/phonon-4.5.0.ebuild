@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.0.ebuild,v 1.9 2011/10/20 20:22:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.0.ebuild,v 1.10 2011/12/02 19:22:19 dilfridge Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ COMMON_DEPEND="
 		dev-libs/glib:2
 		>=media-sound/pulseaudio-0.9.21[glib]
 	)
-	!x11-libs/qt-phonon:4
+	!!x11-libs/qt-phonon:4
 "
 # directshow? ( media-sound/phonon-directshow )
 # mmf? ( media-sound/phonon-mmf )

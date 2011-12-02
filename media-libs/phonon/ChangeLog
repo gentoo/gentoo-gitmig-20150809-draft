@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.25 2011/11/30 23:02:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.26 2011/12/02 19:22:19 dilfridge Exp $
+
+  02 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> phonon-4.4.2.ebuild,
+  phonon-4.4.3.ebuild, phonon-4.5.0.ebuild, phonon-4.5.1-r1.ebuild:
+  Make the qt-phonon blocker a hard one...
 
   30 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> phonon-4.4.2.ebuild,
   phonon-4.4.3.ebuild:
