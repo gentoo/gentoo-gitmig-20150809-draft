@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.16 2011/11/15 10:35:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.17 2011/12/02 21:21:14 swift Exp $
 
 # Zac Medico <zmedico@gentoo.org> (09 Aug 2011)
 # Bug #377907 - Use package.mask for compatibility with PMS section 5.2.7, and
@@ -81,6 +81,7 @@
 -sec-policy/selinux-dcc
 -sec-policy/selinux-ddclient
 -sec-policy/selinux-ddcprobe
+-sec-policy/selinux-denyhosts
 -sec-policy/selinux-desktop
 -sec-policy/selinux-dhcp
 -sec-policy/selinux-dictd
@@ -90,6 +91,7 @@
 -sec-policy/selinux-dmidecode
 -sec-policy/selinux-dnsmasq
 -sec-policy/selinux-dovecot
+-sec-policy/selinux-dpkg
 -sec-policy/selinux-entropyd
 -sec-policy/selinux-evolution
 -sec-policy/selinux-exim
@@ -111,6 +113,7 @@
 -sec-policy/selinux-gpsd
 -sec-policy/selinux-haveged
 -sec-policy/selinux-hddtemp
+-sec-policy/selinux-howl
 -sec-policy/selinux-icecast
 -sec-policy/selinux-ifplugd
 -sec-policy/selinux-imaze
@@ -144,12 +147,14 @@
 -sec-policy/selinux-modemmanager
 -sec-policy/selinux-mono
 -sec-policy/selinux-mozilla
+-sec-policy/selinux-mpd
 -sec-policy/selinux-mplayer
 -sec-policy/selinux-mrtg
 -sec-policy/selinux-munin
 -sec-policy/selinux-mutt
 -sec-policy/selinux-mysql
 -sec-policy/selinux-nagios
+-sec-policy/selinux-ncftool
 -sec-policy/selinux-nessus
 -sec-policy/selinux-networkmanager
 -sec-policy/selinux-nfs
@@ -165,6 +170,7 @@
 -sec-policy/selinux-pan
 -sec-policy/selinux-pcmcia
 -sec-policy/selinux-perdition
+-sec-policy/selinux-plymouthd
 -sec-policy/selinux-podsleuth
 -sec-policy/selinux-policykit
 -sec-policy/selinux-portmap
@@ -192,6 +198,7 @@
 -sec-policy/selinux-roundup
 -sec-policy/selinux-rpc
 -sec-policy/selinux-rpcbind
+-sec-policy/selinux-rpm
 -sec-policy/selinux-rssh
 -sec-policy/selinux-rtkit
 -sec-policy/selinux-samba
@@ -228,10 +235,12 @@
 -sec-policy/selinux-tripwire
 -sec-policy/selinux-tvtime
 -sec-policy/selinux-ucspi-tcp
+-sec-policy/selinux-ucspitcp
 -sec-policy/selinux-ulogd
 -sec-policy/selinux-uml
 -sec-policy/selinux-uptime
 -sec-policy/selinux-usbmuxd
+-sec-policy/selinux-uucp
 -sec-policy/selinux-uwimap
 -sec-policy/selinux-varnishd
 -sec-policy/selinux-vbetool
@@ -239,14 +248,17 @@
 -sec-policy/selinux-virt
 -sec-policy/selinux-vlock
 -sec-policy/selinux-vmware
+-sec-policy/selinux-vnstatd
 -sec-policy/selinux-vpn
 -sec-policy/selinux-watchdog
 -sec-policy/selinux-webalizer
 -sec-policy/selinux-wine
 -sec-policy/selinux-wireshark
+-sec-policy/selinux-wm
 -sec-policy/selinux-xen
 -sec-policy/selinux-xfce4
 -sec-policy/selinux-xfs
+-sec-policy/selinux-xprint
 -sec-policy/selinux-xscreensaver
 -sec-policy/selinux-xserver
 -sec-policy/selinux-zabbix
