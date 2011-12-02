@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.84 2011/11/28 11:47:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.85 2011/12/02 22:34:35 hwoarang Exp $
+
+  02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> ccache-3.1.6.ebuild:
+  Stable on amd64 wrt bug #390989
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ccache-3.1.6.ebuild:
   x86 stable wrt bug #390989
