@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.173 2011/10/29 18:46:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.174 2011/12/02 19:29:33 beandog Exp $
+
+  02 Dec 2011; Steve Dibb <beandog@gentoo.org> -apache-2.2.14-r1.ebuild,
+  -apache-2.2.15.ebuild, -apache-2.2.16.ebuild, -apache-2.2.16-r1.ebuild,
+  -apache-2.2.17.ebuild, -apache-2.2.20.ebuild, -apache-2.2.21.ebuild:
+  Remove old versions with security vulns.
 
   29 Oct 2011; Raúl Porcel <armin76@gentoo.org> apache-2.2.21-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #385859
