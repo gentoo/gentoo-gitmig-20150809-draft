@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.69 2011/10/22 12:35:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.70 2011/12/02 06:59:16 graaff Exp $
+
+*json-1.6.3 (02 Dec 2011)
+
+  02 Dec 2011; Hans de Graaff <graaff@gentoo.org> +json-1.6.3.ebuild:
+  Version bump.
 
   22 Oct 2011; Hans de Graaff <graaff@gentoo.org> json-1.6.1.ebuild:
   Use gemspec file instead of metadata.
