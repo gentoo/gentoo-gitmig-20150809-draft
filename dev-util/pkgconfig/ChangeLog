@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.103 2011/10/30 02:50:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.104 2011/12/02 17:48:28 grobian Exp $
+
+  02 Dec 2011; Fabian Groffen <grobian@gentoo.org> pkgconfig-0.26.ebuild:
+  Pass correct include and library paths for Prefix, bug #392619
 
   30 Oct 2011; Jonathan Callen <abcd@gentoo.org> pkgconfig-0.26.ebuild:
   -m Fix typo ($(libdir) -> $(get_libdir)) (bug 388925)

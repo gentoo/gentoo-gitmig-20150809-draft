@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.26.ebuild,v 1.9 2011/10/30 02:50:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.26.ebuild,v 1.10 2011/12/02 17:48:28 grobian Exp $
 
 EAPI=4
 inherit flag-o-matic multilib libtool
@@ -43,6 +43,8 @@ src_configure() {
 
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		--with-system-include-path="${EPREFIX}"/usr/include \
+		--with-system-library-path="${EPREFIX}"/usr/$(get_libdir) \
 		--with-installed-popt \
 		${myconf}
 }
