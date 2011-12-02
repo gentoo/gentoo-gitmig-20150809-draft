@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ttaenc-3.4.1-r1.ebuild,v 1.1 2010/10/19 20:34:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ttaenc-3.4.1-r1.ebuild,v 1.2 2011/12/02 23:45:07 radhermit Exp $
 
-EAPI=2
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -15,20 +15,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
 DEPEND="sys-apps/sed"
 
 S=${WORKDIR}/${P}-src
 
 src_prepare() {
-	sed -i -e "s:gcc:$(tc-getCC):g" Makefile \
-		|| die "Unable to set compiler"
-	sed -i -e "s:-o:${LDFLAGS} -o:g" Makefile \
-		|| die "Unable to set LDFLAGS"
+	sed -i -e "s:gcc:$(tc-getCC):g" \
+		-e "s:-o:${LDFLAGS} -o:g" \
+		Makefile || die
 }
 
 src_compile () {
-	emake CFLAGS="${CFLAGS}" || die "emake failed."
+	emake CFLAGS="${CFLAGS}"
 }
 
 src_install () {
