@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-4.0.0.0b.ebuild,v 1.1 2011/08/07 13:42:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-4.0.0.0b.ebuild,v 1.2 2011/12/02 20:30:00 ssuominen Exp $
 
 EAPI=4
 
@@ -22,7 +22,6 @@ RDEPEND="x11-libs/libXinerama
 	>=x11-libs/gtk+-2:2"
 DEPEND=""
 
-PROPERTIES="interactive"
 RESTRICT="strip mirror test"
 CONFIG_CHECK="~CHR_DEV_SG"
 QA_TEXTRELS="opt/${PN}/$(get_libdir)/${PN}/*
@@ -36,10 +35,6 @@ QA_PREBUILT="opt/${PN}/${PN}.*
 	usr/share/${PN}/helpers/splash/nerosplash"
 
 S=${WORKDIR}
-
-pkg_setup() {
-	check_license
-}
 
 src_install() {
 	insinto /etc
