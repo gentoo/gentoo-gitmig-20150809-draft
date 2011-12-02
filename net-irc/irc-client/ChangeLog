@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/irc-client
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/ChangeLog,v 1.14 2009/09/23 18:44:17 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/ChangeLog,v 1.15 2011/12/02 01:14:31 binki Exp $
+
+  02 Dec 2011; Nathan Phillip Brink <binki@gentoo.org>
+  irc-client-2.10.3_p7.ebuild, +files/irc-client-2.10.3_p7-amd64-chost.patch:
+  Add blocker against net-irc/ircii for bug #247987. Add missing `|| die', misc
+  shell style change (remove backticks). Fix compilation error caused by
+  disagreement between ${CHOST} and ./config.guess with patch.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   irc-client-2.10.3_p7.ebuild:

@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p7.ebuild,v 1.6 2009/09/23 18:44:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p7.ebuild,v 1.7 2011/12/02 01:14:31 binki Exp $
+
+inherit eutils
 
 MY_P=irc${PV/_/}
 DESCRIPTION="A simplistic RFC compliant IRC client"
@@ -14,12 +16,22 @@ IUSE="ipv6"
 
 DEPEND="sys-libs/ncurses
 	sys-libs/zlib"
+# This and irc-client both install /usr/bin/irc #247987
+RDEPEND="${DEPEND}
+	!net-irc/irc-client"
 
 S=${WORKDIR}/${MY_P}
 
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}" || die
+	epatch "${FILESDIR}"/${P}-amd64-chost.patch
+}
+
 src_compile () {
 	econf \
-		`use_with ipv6 ip6` \
+		$(use_with ipv6 ip6) \
 		--sysconfdir=/etc/ircd \
 		--localstatedir=/var/run/ircd \
 		|| die "econf failed"
@@ -31,5 +43,5 @@ src_install() {
 		prefix=${D}/usr \
 		client_man_dir=${D}/usr/share/man/man1 \
 		install-client || die "client installed failed"
-	dodoc doc/Etiquette doc/alt-irc-faq doc/rfc*
+	dodoc doc/Etiquette doc/alt-irc-faq doc/rfc* || die
 }
