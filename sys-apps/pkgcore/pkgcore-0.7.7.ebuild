@@ -1,27 +1,26 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.5 2011/12/02 08:50:07 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.7.ebuild,v 1.1 2011/12/02 08:50:07 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
 
-EGIT_REPO_URI="https://code.google.com/p/pkgcore/"
-inherit distutils git-2
+inherit distutils eutils
 
 DESCRIPTION="pkgcore package manager"
 HOMEPAGE="http://pkgcore.googlecode.com/"
-SRC_URI=""
+SRC_URI="http://pkgcore.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="doc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="-doc build"
 
 RDEPEND=">=dev-lang/python-2.4
-	>=dev-python/snakeoil-0.4.1
+	>=dev-python/snakeoil-0.4.4
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
-	doc? ( >=dev-python/docutils-0.4 dev-python/pyparsing )"
+	doc? ( dev-python/sphinx dev-python/pyparsing )"
 
 DOCS="AUTHORS NEWS"
 
@@ -35,8 +34,7 @@ src_compile() {
 	distutils_src_compile
 
 	if use doc; then
-		python setup.py build_docs || die "doc generation failed"
-		python setup.py build_man || die "man generation failed"
+		python setup.py build_docs || die "doc building failed"
 	fi
 }
 

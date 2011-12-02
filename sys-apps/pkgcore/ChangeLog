@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.134 2011/12/01 12:55:24 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.135 2011/12/02 08:50:07 ferringb Exp $
+
+*pkgcore-0.7.7 (02 Dec 2011)
+
+  02 Dec 2011; Brian Harring <ferringb@gentoo.org> +pkgcore-0.7.7.ebuild,
+  pkgcore-9999.ebuild:
+  5x faster regen, bugfixes, search by repo_id
 
   01 Dec 2011; Brian Harring <ferringb@gentoo.org> pkgcore-9999.ebuild:
   drop old plugincache wiping code that now is causing issues
