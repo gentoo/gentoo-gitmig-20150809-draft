@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.69 2011/11/26 02:24:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.70 2011/12/02 19:26:32 beandog Exp $
+
+  02 Dec 2011; Steve Dibb <beandog@gentoo.org> gnash-0.8.9-r2.ebuild:
+  amd64 stable, bug 391283
 
   26 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.9-r2.ebuild, +files/gnash-0.8.9-cygnal-sshclient.patch:
