@@ -1,14 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.2.ebuild,v 1.30 2011/11/09 19:22:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.2.ebuild,v 1.31 2011/12/02 23:43:54 vapier Exp $
 
 PATCH_VER="1.3"
 UCLIBC_VER="1.0"
 D_VER="0.24"
-
-# whether we should split out specs files for multiple {PIE,SSP}-by-default
-# and vanilla configurations.
-SPLIT_SPECS=no #${SPLIT_SPECS-true} hard disable until #106690 is fixed
 
 inherit toolchain
 

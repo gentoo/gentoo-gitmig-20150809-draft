@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.28 2011/11/09 19:22:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.29 2011/12/02 23:43:54 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.6"
@@ -13,27 +13,6 @@ PP_GCC_VER="3.4.6"
 HTB_VER="1.00.1"
 HTB_GCC_VER="3.4.4"
 D_VER="0.24"
-
-GCC_LIBSSP_SUPPORT="true"
-
-# arch/libc configurations known to be stable with {PIE,SSP}-by-default
-SSP_STABLE="x86 sparc amd64 ppc ppc64 ia64"
-SSP_UCLIBC_STABLE="arm mips ppc x86"
-PIE_GLIBC_STABLE="x86 sparc amd64 ppc ppc64 ia64"
-PIE_UCLIBC_STABLE="x86 mips ppc"
-
-# arch/libc configurations known to be broken with {PIE,SSP}-by-default
-SSP_UNSUPPORTED="hppa sh"
-SSP_UCLIBC_UNSUPPORTED="${SSP_UNSUPPORTED}"
-PIE_UCLIBC_UNSUPPORTED="alpha amd64 arm hppa ia64 m68k ppc64 s390 sh sparc"
-PIE_GLIBC_UNSUPPORTED="hppa"
-
-# whether we should split out specs files for multiple {PIE,SSP}-by-default
-# and vanilla configurations.
-SPLIT_SPECS=${SPLIT_SPECS-true}
-
-#GENTOO_PATCH_EXCLUDE=""
-#PIEPATCH_EXCLUDE=""
 
 inherit toolchain eutils
 
