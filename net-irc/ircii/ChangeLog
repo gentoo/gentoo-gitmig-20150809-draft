@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/ircii
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.28 2011/06/30 03:00:37 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.29 2011/12/02 00:17:56 binki Exp $
+
+*ircii-20111115 (02 Dec 2011)
+
+  02 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> +ircii-20111115.ebuild:
+  Bump to ircii-20111115, which was released to address the glibc
+  incompatibility.
 
   30 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> ircii-20110228.ebuild:
   Import modifications necessary for prefix from prefix-overlay, add some
