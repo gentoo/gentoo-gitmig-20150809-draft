@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/angst-0.4b-r2.ebuild,v 1.2 2011/12/01 19:43:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/angst-0.4b-r2.ebuild,v 1.3 2011/12/02 01:31:02 radhermit Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
@@ -16,12 +16,12 @@ KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap
-	<net-libs/libnet-1.1
-	>=net-libs/libnet-1.0.2a-r3"
+	net-libs/libnet:1.0"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
-cp -av Makefile.linux{,.orig}
-	epatch ${FILESDIR}/${PV}-libnet-1.0.patch
+	cp -av Makefile.linux{,.orig}
+	epatch "${FILESDIR}"/${PV}-libnet-1.0.patch
 	sed -i Makefile.linux \
 		-e 's|^CC =|CC ?=|g' \
 		-e '/ -o angst /s|$(OBJS)|$(LDFLAGS) &|g' \
@@ -33,11 +33,11 @@ src_compile() {
 		CFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
 		CC="$(tc-getCC)" \
-		-f Makefile.linux || die
+		-f Makefile.linux
 }
 
 src_install() {
 	dosbin angst
 	doman angst.8
-	dodoc README LICENSE TODO ChangeLog
+	dodoc README TODO ChangeLog
 }

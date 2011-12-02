@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/angst
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/ChangeLog,v 1.12 2011/12/02 01:18:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/ChangeLog,v 1.13 2011/12/02 01:31:02 radhermit Exp $
+
+  02 Dec 2011; Tim Harder <radhermit@gentoo.org> angst-0.4b-r2.ebuild:
+  Update to EAPI 4, simplify libnet dep, and other minor cleanups.
 
   02 Dec 2011; Tim Harder <radhermit@gentoo.org> -angst-0.4b-r1.ebuild:
   Remove old.
