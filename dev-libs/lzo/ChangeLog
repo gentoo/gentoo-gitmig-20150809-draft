@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.60 2011/08/20 18:22:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.61 2011/12/02 02:44:18 binki Exp $
+
+  02 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> lzo-2.06.ebuild:
+  Fix files wrongly installed into /usr/share/doc/${PN}, reported by jdhore.
 
 *lzo-2.06 (20 Aug 2011)
 
