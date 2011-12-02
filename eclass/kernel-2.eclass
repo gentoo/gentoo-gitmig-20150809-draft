@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.265 2011/12/02 00:15:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.266 2011/12/02 01:54:09 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -118,10 +118,8 @@ handle_genpatches() {
 	[[ -z ${K_WANT_GENPATCHES} || -z ${K_GENPATCHES_VER} ]] && return 1
 
 	debug-print "Inside handle_genpatches"
-	local oldifs=${IFS}
-	export IFS="."
-	local OKV_ARRAY=( $OKV )
-	export IFS=${oldifs}
+	local OKV_ARRAY
+	IFS="." read -r -a OKV_ARRAY <<<"${OKV}"
 
 	# for > 3.0 kernels, handle genpatches tarball name
 	# genpatches for 3.0 and 3.0.1 might be named
@@ -172,10 +170,8 @@ detect_version() {
 
 	KV_MAJOR=$(get_version_component_range 1 ${OKV})
 	# handle if OKV is X.Y or X.Y.Z (e.g. 3.0 or 3.0.1)
-	local oldifs=${IFS}
-	export IFS="."
-	local OKV_ARRAY=( $OKV )
-	export IFS=${oldifs}
+	local OKV_ARRAY
+	IFS="." read -r -a OKV_ARRAY <<<"${OKV}"
 
 	# if KV_MAJOR >= 3, then we have no more KV_MINOR
 	#if [[ ${KV_MAJOR} -lt 3 ]]; then
@@ -572,10 +568,8 @@ unpack_2_6() {
 universal_unpack() {
 	debug-print "Inside universal_unpack"
 
-	local oldifs=${IFS}
-	export IFS="."
-	local OKV_ARRAY=( $OKV )
-	export IFS=${oldifs}
+	local OKV_ARRAY
+	IFS="." read -r -a OKV_ARRAY <<<"${OKV}"
 
 	cd "${WORKDIR}"
 	if [[ ${#OKV_ARRAY[@]} -ge 3 ]] && [[ ${KV_MAJOR} -ge 3 ]]; then
