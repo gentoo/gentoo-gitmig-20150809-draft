@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13297 2011/12/01 22:17:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13298 2011/12/02 13:59:22 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -196,12 +196,6 @@ net-p2p/bittornado
 # Masked for removal on 20111210
 # It's dead Jim.
 games-fps/fuhquake-bin
-
-# Bernard Cafarelli <voyageur@gentoo.org> (9 Nov 2011)
-# Mask release candidates
-=sys-devel/llvm-3.0_rc*
-=sys-devel/clang-3.0_rc*
-=sys-devel/dragonegg-3.0_rc*
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (8 Nov 2011)
 # Dead project, and has started crashing KDE apps, see bug 388261 and
