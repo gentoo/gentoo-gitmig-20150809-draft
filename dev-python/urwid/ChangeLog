@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.45 2011/11/04 22:30:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.46 2011/12/02 01:07:30 radhermit Exp $
+
+*urwid-1.0.1 (02 Dec 2011)
+
+  02 Dec 2011; Tim Harder <radhermit@gentoo.org> +urwid-1.0.1.ebuild:
+  Version bump.
 
   04 Nov 2011; Markos Chandras <hwoarang@gentoo.org> urwid-1.0.0.ebuild:
   Fix dependencies. Restrict Jython ABIs. Ignore tests failures with Python 3.1.
