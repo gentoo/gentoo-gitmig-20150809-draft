@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.66 2011/11/09 16:31:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.67 2011/12/02 22:18:37 hwoarang Exp $
+
+  02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> unetbootin-563.ebuild:
+  Stable on amd64 wrt bug #392431
 
   09 Nov 2011; Jeroen Roovers <jer@gentoo.org> unetbootin-563.ebuild:
   Remove unneeded die().
