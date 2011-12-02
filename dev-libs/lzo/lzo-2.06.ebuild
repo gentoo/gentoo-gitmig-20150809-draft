@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.06.ebuild,v 1.4 2011/12/02 07:31:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.06.ebuild,v 1.5 2011/12/02 19:06:12 ssuominen Exp $
 
 EAPI=4
 
@@ -16,7 +16,6 @@ IUSE="examples static-libs"
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--disable-dependency-tracking \
 		--enable-shared \
 		$(use_enable static-libs static)
 }
@@ -32,5 +31,5 @@ src_install() {
 		dodoc examples/*.{c,h}
 	fi
 
-	find "${D}" -name '*.la' -exec rm -f '{}' +
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
