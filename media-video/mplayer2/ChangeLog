@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.30 2011/12/01 20:13:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.31 2011/12/02 08:10:36 scarabeus Exp $
+
+  02 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  mplayer2-2.0_p20111126.ebuild, mplayer2-9999.ebuild:
+  Do not provide useflags for pure runtime deps. If you want some codec feature
+  just enable it on the libav/ffmpeg.
 
   01 Dec 2011; Luca Barbato <lu_zero@gentoo.org> mplayer2-2.0_p20111126.ebuild,
   mplayer2-9999.ebuild, metadata.xml:

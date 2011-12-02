@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.19 2011/12/01 20:13:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.20 2011/12/02 08:10:36 scarabeus Exp $
 
 EAPI=4
 
@@ -33,16 +33,13 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux "
 fi
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
-bluray bs2b +bzip2 cddb +cdio cdparanoia cpudetection custom-cpuopts
-custom-cflags debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav
-dxr3 +enca esd +faad fbcon ftp gif ggi gsm +iconv ipv6 jack joystick
-jpeg jpeg2k kernel_linux ladspa libcaca lirc +live mad md5sum +mmx
-mmxext mng +mp3 nas +network nut amr +opengl oss png pnm pulseaudio
-pvr +quicktime radio +rar +real +rtc rtmp samba +shm +schroedinger
-sdl +speex sse sse2 ssse3 tga +theora threads +truetype +unicode
-v4l vdpau +vorbis vpx win32codecs +X xanim xinerama +xscreensaver
-+xv xvid
-"
+bluray bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts custom-cflags
+debug dga directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca esd +faad fbcon ftp
+gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc +live
+mad md5sum +mmx mmxext mng +mp3 nas +network nut +opengl oss png pnm pulseaudio
+pvr +quicktime radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3 tga
++theora +truetype +unicode v4l vdpau +vorbis win32codecs +X xanim xinerama
++xscreensaver +xv xvid"
 IUSE+=" symlink"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
@@ -73,8 +70,6 @@ FONT_RDEPS="
 "
 # Rar: althrought -gpl version is nice, it cant do most functions normal rars can
 #	nemesi? ( net-libs/libnemesi )
-# virtual/ffmpeg does not have all USE
-LIBAV_USE="[amr?,bzip2?,dirac?,gsm?,jpeg2k?,rtmp?,schroedinger?,threads?,vpx?]"
 RDEPEND+="
 	sys-libs/ncurses
 	sys-libs/zlib
@@ -149,10 +144,7 @@ RDEPEND+="
 	vorbis? ( media-libs/libvorbis )
 	xanim? ( media-video/xanim )
 	xvid? ( media-libs/xvid )
-	|| (
-		>=media-video/libav-0.6.2${LIBAV_USE}
-		>=media-video/ffmpeg-0.6_p25423${LIBAV_USE}
-	)
+	>=virtual/ffmpeg-0.6
 	symlink? ( !media-video/mplayer )
 "
 ASM_DEP="dev-lang/yasm"
