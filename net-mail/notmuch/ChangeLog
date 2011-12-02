@@ -1,6 +1,19 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.16 2011/11/25 10:40:23 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.17 2011/12/02 08:38:53 aidecoe Exp $
+
+*notmuch-0.10.1 (02 Dec 2011)
+
+  02 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.10.1-fix-test-build.patch, +notmuch-0.10.1.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  Fix --help argument
+
+  Argument processing changes in 0.10 introduced a bug where "notmuch --help"
+  crashed while "notmuch help" worked fine.
 
   25 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -files/0.9-emacsetcdir.patch, -files/0.9-fix-lib-makefile-local.patch,
