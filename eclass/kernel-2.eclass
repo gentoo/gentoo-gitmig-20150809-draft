@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.267 2011/12/02 02:28:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.268 2011/12/02 02:37:50 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -1122,67 +1122,6 @@ detect_arch() {
 			done
 		fi
 	done
-}
-
-# sparc nastiness
-#==============================================================
-# This script generates the files in /usr/include/asm for sparc systems
-# during installation of sys-kernel/linux-headers.
-# Will no longer be needed when full 64 bit support is used on sparc64
-# systems.
-#
-# Shamefully ripped from Debian
-# ----------------------------------------------------------------------
-
-# Idea borrowed from RedHat's kernel package
-
-# This is gonna get replaced by something in multilib.eclass soon...
-# --eradicator
-generate_sparc_asm() {
-	local name
-
-	cd $1 || die
-	mkdir asm
-
-	for h in `( ls asm-sparc; ls asm-sparc64 ) | grep '\.h$' | sort -u`; do
-		name="$(echo $h | tr a-z. A-Z_)"
-		# common header
-		echo "/* All asm/ files are generated and point to the corresponding
- * file in asm-sparc or asm-sparc64.
- */
-
-#ifndef __SPARCSTUB__${name}__
-#define __SPARCSTUB__${name}__
-" > asm/${h}
-
-		# common for sparc and sparc64
-		if [ -f asm-sparc/$h -a -f asm-sparc64/$h ]; then
-			echo "#ifdef __arch64__
-#include <asm-sparc64/$h>
-#else
-#include <asm-sparc/$h>
-#endif
-" >> asm/${h}
-
-		# sparc only
-		elif [ -f asm-sparc/$h ]; then
-echo "#ifndef __arch64__
-#include <asm-sparc/$h>
-#endif
-" >> asm/${h}
-
-		# sparc64 only
-		else
-echo "#ifdef __arch64__
-#include <asm-sparc64/$h>
-#endif
-" >> asm/${h}
-		fi
-
-		# common footer
-		echo "#endif /* !__SPARCSTUB__${name}__ */" >> asm/${h}
-	done
-	return 0
 }
 
 headers___fix() {
