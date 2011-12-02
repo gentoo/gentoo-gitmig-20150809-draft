@@ -1,0 +1,111 @@
+From 5c362279c739ff4c6b2cd0e54e8c978462809e28 Mon Sep 17 00:00:00 2001
+From: Brian Harring <ferringb@gmail.com>
+Date: Fri, 2 Dec 2011 02:06:07 -0800
+Subject: [PATCH] shift IFS manipulation into isolated-functions, since has
+ relies on it.
+
+---
+ pkgcore/ebuild/eapi-bash/ebuild-daemon.bash     |   30 ++++------------------
+ pkgcore/ebuild/eapi-bash/ebuild.lib             |    1 -
+ pkgcore/ebuild/eapi-bash/isolated-functions.lib |   25 ++++++++++++++++++-
+ 3 files changed, 30 insertions(+), 26 deletions(-)
+
+diff --git a/pkgcore/ebuild/eapi-bash/ebuild-daemon.bash b/pkgcore/ebuild/eapi-bash/ebuild-daemon.bash
+index 2260fa0..0a1c4be 100755
+--- a/pkgcore/ebuild/eapi-bash/ebuild-daemon.bash
++++ b/pkgcore/ebuild/eapi-bash/ebuild-daemon.bash
+@@ -3,30 +3,6 @@
+ # Copyright 2004-2011 Brian Harring <ferringb@gmail.com>
+ # License: BSD/GPL2
+ 
+-declare -a PKGCORE_SAVED_IFS
+-
+-pkgcore_push_IFS()
+-{
+-	PKGCORE_SAVED_IFS[${#PKGCORE_SAVED_IFS[@]}]="${IFS-unset}"
+-	if [[ $1 == unset ]]; then
+-		unset IFS
+-	else
+-		IFS="$1"
+-	fi
+-	:
+-}
+-
+-pkgcore_pop_IFS()
+-{
+-	if [[ ${#PKGCORE_SAVED_IFS[@]} == 0 ]]; then
+-		die "pkgcore_pop_IFS invoked with nothing on the stack..."
+-	fi
+-	IFS=${PKGCORE_SAVED_IFS[$(( ${#PKGCORE_SAVED_IFS[@]} -1 ))]}
+-	[[ ${IFS} == unset ]] && unset IFS
+-	unset PKGCORE_SAVED_IFS[$(( ${#PKGCORE_SAVED_IFS[@]} -1 ))]
+-	:
+-}
+-
+ # use ebd_read/ebd_write for talking to the running portage instance instead of echo'ing to the fd yourself.
+ # this allows us to move the open fd's w/out issues down the line.
+ ebd_read_line()
+@@ -131,6 +107,12 @@ pkgcore_ebd_exec_main()
+ 		exit 2;
+ 	fi
+ 
++	# get our die functionality now.
++	if ! source "${PKGCORE_BIN_PATH}/isolated-functions.lib"; then
++		ebd_write_line "failed sourcing isolated-functions.lib"
++		exit 2;
++	fi
++
+ 	ebd_read_line PKGCORE_PYTHON_BINARY
+ 	[ -z "$PKGCORE_PYTHON_BINARY" ] && die "empty PKGCORE_PYTHON_BINARY, bailing"
+ 	ebd_read_line PKGCORE_PYTHONPATH
+diff --git a/pkgcore/ebuild/eapi-bash/ebuild.lib b/pkgcore/ebuild/eapi-bash/ebuild.lib
+index 0ae3ed5..ff13300 100644
+--- a/pkgcore/ebuild/eapi-bash/ebuild.lib
++++ b/pkgcore/ebuild/eapi-bash/ebuild.lib
+@@ -234,7 +234,6 @@ load_ebuild()
+ # note that exit-handling loads the die functions, thus the custom failure there.
+ source "${PKGCORE_BIN_PATH}/exit-handling.lib" >&2 || { echo "ERROR: failed sourcing exit-handling.lib"; exit -1; }
+ source "${PKGCORE_BIN_PATH}/ebuild-default-functions.lib" >&2 || die "failed sourcing ebuild-default-functions.lib"
+-source "${PKGCORE_BIN_PATH}/isolated-functions.lib" >&2 || die "failed sourcing stripped down functions.lib"
+ source "${PKGCORE_BIN_PATH}/ebuild-env-utils.lib" >&2 || die "failed sourcing ebuild-env-utils.lib"
+ 
+ pkgcore_run_ebuild_phase()
+diff --git a/pkgcore/ebuild/eapi-bash/isolated-functions.lib b/pkgcore/ebuild/eapi-bash/isolated-functions.lib
+index faee73d..b589dfb 100644
+--- a/pkgcore/ebuild/eapi-bash/isolated-functions.lib
++++ b/pkgcore/ebuild/eapi-bash/isolated-functions.lib
+@@ -126,7 +126,30 @@ pkgcore_shopt_pop()
+ 	:
+ } &> /dev/null
+ 
++declare -a PKGCORE_SAVED_IFS
++
++pkgcore_push_IFS()
++{
++    PKGCORE_SAVED_IFS[${#PKGCORE_SAVED_IFS[@]}]="${IFS-unset}"
++    if [[ $1 == unset ]]; then
++        unset IFS
++    else
++        IFS="$1"
++    fi
++    :
++}
++
++pkgcore_pop_IFS()
++{
++    if [[ ${#PKGCORE_SAVED_IFS[@]} == 0 ]]; then
++        die "pkgcore_pop_IFS invoked with nothing on the stack..."
++    fi
++    IFS=${PKGCORE_SAVED_IFS[$(( ${#PKGCORE_SAVED_IFS[@]} -1 ))]}
++    [[ ${IFS} == unset ]] && unset IFS
++    unset PKGCORE_SAVED_IFS[$(( ${#PKGCORE_SAVED_IFS[@]} -1 ))]
++    :
++}
++
+ unset_colors
+-DONT_EXPORT_VARS="${DONT_EXPORT_VARS} PKGCORE_RC_.* PKGCORE_ESHOPT_STATE"
+ 
+ :
+-- 
+1.7.8.rc3
+
