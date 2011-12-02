@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.484 2011/12/02 21:03:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.485 2011/12/02 23:39:03 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -498,11 +498,6 @@ want_pie() {
 }
 want_ssp() { _want_stuff PP_VER !nossp ; }
 
-# SPLIT_SPECS are deprecated for >=GCC 4.4
-want_split_specs() {
-	tc_version_is_at_least 4.4 && return 1
-	[[ ${SPLIT_SPECS} == "true" ]] && want_pie
-}
 want_minispecs() {
 	if tc_version_is_at_least 4.3.2 && use hardened ; then
 		if ! want_pie ; then
@@ -609,52 +604,6 @@ make_gcc_hard() {
 
 	# rebrand to make bug reports easier
 	BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/Gentoo/Gentoo Hardened}
-}
-
-# now we generate different spec files so that the user can select a compiler
-# that enforces certain features in gcc itself and so we don't have to worry
-# about a certain package ignoring CFLAGS/LDFLAGS
-_create_specs_file() {
-	# Usage: _create_specs_file <USE flag> <specs name> <CFLAGS>
-	local uflag=$1 name=$2 flags=${*:3}
-	ebegin "Creating a ${name} gcc specs file"
-	pushd "${WORKDIR}"/build/gcc > /dev/null
-	if [[ -z ${uflag} ]] || use ${uflag} ; then
-		# backup the compiler first
-		cp Makefile Makefile.orig
-		sed -i -e '/^HARD_CFLAGS/s:=.*:='"${flags}"':' Makefile
-		mv xgcc xgcc.foo
-		mv gcc.o gcc.o.foo
-		emake -s xgcc
-		$(XGCC) -dumpspecs > "${WORKDIR}"/build/${name}.specs
-		# restore everything to normal
-		mv gcc.o.foo gcc.o
-		mv xgcc.foo xgcc
-		mv Makefile.orig Makefile
-	else
-		$(XGCC) -dumpspecs > "${WORKDIR}"/build/${name}.specs
-	fi
-	popd > /dev/null
-	eend $([[ -s ${WORKDIR}/build/${name}.specs ]] ; echo $?)
-}
-create_vanilla_specs_file()			 { _create_specs_file hardened vanilla ; }
-create_hardened_specs_file()		 { _create_specs_file !hardened hardened  ${gcc_common_hard} -DEFAULT_PIE_SSP ; }
-create_hardenednossp_specs_file()	 { _create_specs_file "" hardenednossp	  ${gcc_common_hard} -DEFAULT_PIE ; }
-create_hardenednopie_specs_file()	 { _create_specs_file "" hardenednopie	  ${gcc_common_hard} -DEFAULT_SSP ; }
-create_hardenednopiessp_specs_file() { _create_specs_file "" hardenednopiessp ${gcc_common_hard} ; }
-
-split_out_specs_files() {
-	local s spec_list="hardenednopiessp vanilla"
-	if hardened_gcc_works ; then
-		spec_list="${spec_list} hardened hardenednossp hardenednopie"
-	elif hardened_gcc_works pie ; then
-		spec_list="${spec_list} hardenednossp"
-	elif hardened_gcc_works ssp ; then
-		spec_list="${spec_list} hardenednopie"
-	fi
-	for s in ${spec_list} ; do
-		create_${s}_specs_file || return 1
-	done
 }
 
 create_gcc_env_entry() {
@@ -1664,12 +1613,6 @@ toolchain_src_compile() {
 	einfo "Compiling ${PN} ..."
 	gcc_do_make ${GCC_MAKE_TARGET}
 
-	# Do not create multiple specs files for PIE+SSP if boundschecking is in
-	# USE, as we disable PIE+SSP when it is.
-	if want_split_specs && ! want_minispecs; then
-		split_out_specs_files || die "failed to split out specs"
-	fi
-
 	popd > /dev/null
 }
 
@@ -1711,22 +1654,6 @@ toolchain_src_install() {
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry
 
-	if want_split_specs ; then
-		if use hardened ; then
-			create_gcc_env_entry vanilla
-		fi
-		! use hardened && hardened_gcc_works && create_gcc_env_entry hardened
-		if hardened_gcc_works || hardened_gcc_works pie ; then
-			create_gcc_env_entry hardenednossp
-		fi
-		if hardened_gcc_works || hardened_gcc_works ssp ; then
-			create_gcc_env_entry hardenednopie
-		fi
-		create_gcc_env_entry hardenednopiessp
-
-		insinto ${LIBPATH}
-		doins "${WORKDIR}"/build/*.specs || die "failed to install specs"
-	fi
 	# Setup the gcc_env_entry for hardened gcc 4 with minispecs
 	if want_minispecs ; then
 		copy_minispecs_gcc_specs
@@ -2021,24 +1948,12 @@ gcc_quick_unpack() {
 #
 #	GENTOO_PATCH_EXCLUDE
 #			List of filenames, relative to ${WORKDIR}/patch/
-#
-#	PIEPATCH_EXCLUDE
-#			List of filenames, relative to ${WORKDIR}/piepatch/
-#
-# Travis Tilley <lv@gentoo.org> (03 Sep 2004)
-#
 exclude_gcc_patches() {
 	local i
 	for i in ${GENTOO_PATCH_EXCLUDE} ; do
 		if [[ -f ${WORKDIR}/patch/${i} ]] ; then
 			einfo "Excluding patch ${i}"
 			rm -f "${WORKDIR}"/patch/${i} || die "failed to delete ${i}"
-		fi
-	done
-	for i in ${PIEPATCH_EXCLUDE} ; do
-		if [[ -f ${WORKDIR}/piepatch/${i} ]] ; then
-			einfo "Excluding piepatch ${i}"
-			rm -f "${WORKDIR}"/piepatch/${i} || die "failed to delete ${i}"
 		fi
 	done
 }
