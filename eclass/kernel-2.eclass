@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.264 2011/12/01 23:34:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.265 2011/12/02 00:15:46 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -504,11 +504,7 @@ elif [[ ${ETYPE} == headers ]]; then
 	# lets unset it here.
 	unset KBUILD_OUTPUT
 
-	if [[ ${CTARGET} = ${CHOST} ]]; then
-		SLOT="0"
-	else
-		SLOT="${CTARGET}"
-	fi
+	SLOT="0"
 else
 	eerror "Unknown ETYPE=\"${ETYPE}\", must be \"sources\" or \"headers\""
 	die "Unknown ETYPE=\"${ETYPE}\", must be \"sources\" or \"headers\""
