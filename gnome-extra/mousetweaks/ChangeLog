@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/mousetweaks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.63 2011/11/06 04:43:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.64 2011/12/02 22:41:52 tetromino Exp $
+
+*mousetweaks-3.2.1-r10 (02 Dec 2011)
+
+  02 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +mousetweaks-3.2.1-r10.ebuild:
+  Revbump with applet USE flag removed to prevent gnome-panel-2 from being
+  accidentally pulled in under gnome-3, as suggested by ssuominen; -r10 in case
+  it will be necessary to revbump the applet-supported ebuild in the future.
+  (Note that moustweaks-3.2.1 is compatible with both gnome-2 and 3.)
 
 *mousetweaks-3.2.1 (06 Nov 2011)
 
