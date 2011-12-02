@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.269 2011/12/02 04:19:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.270 2011/12/02 04:34:59 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -406,8 +406,8 @@ kernel_is() {
 	esac
 	[[ $# -gt 3 ]] && die "Error in kernel-2_kernel_is(): too many parameters"
 
-	: $(( value = (KV_MAJOR << 16) + (KV_MINOR << 8) + KV_PATCH ))
-	: $(( test = (${1:-${KV_MAJOR}} << 16) + (${2:-${KV_MINOR}} << 8) + ${3:-${KV_PATCH}} ))
+	: $(( test = (KV_MAJOR << 16) + (KV_MINOR << 8) + KV_PATCH ))
+	: $(( value = (${1:-${KV_MAJOR}} << 16) + (${2:-${KV_MINOR}} << 8) + ${3:-${KV_PATCH}} ))
 	[ ${test} ${operator} ${value} ]
 }
 
