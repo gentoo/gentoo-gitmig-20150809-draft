@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.0.ebuild,v 1.1 2011/12/01 21:37:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.0.ebuild,v 1.2 2011/12/02 19:36:13 dilfridge Exp $
 
 EAPI=4
 
@@ -15,16 +15,15 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~x86"
 
-IUSE=""
+IUSE="gnome"
 
-RDEPEND="
+COMMONDEPEND="
 	app-cdr/cdrkit
 	app-i18n/enca
 	app-cdr/dvd+rw-tools
 	dev-cpp/gtkmm:2.4
 	dev-cpp/libxmlpp:2.6
 	>=dev-libs/boost-1.47
-	gnome-base/gvfs
 	media-libs/libdvdread
 	media-sound/twolame
 	media-video/dvdauthor
@@ -32,8 +31,12 @@ RDEPEND="
 	>=media-video/mjpegtools-1.8.0
 	x11-libs/gtk+:2
 "
-DEPEND=">=dev-util/scons-0.96.1
-	${RDEPEND}"
+RDEPEND="${COMMONDEPEND}
+	gnome?	( gnome-base/gvfs )
+"
+DEPEND="${COMMONDEPEND}
+	>=dev-util/scons-0.96.1
+"
 
 PATCHES=( "${FILESDIR}/${PN}-1.0.1-cflags.patch" )
 

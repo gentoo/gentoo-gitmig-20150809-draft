@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.18 2011/12/01 21:37:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.19 2011/12/02 19:36:13 dilfridge Exp $
+
+  02 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  bombono-dvd-1.2.0.ebuild, metadata.xml:
+  Add useflag gnome to control gvfs integration
 
 *bombono-dvd-1.2.0 (01 Dec 2011)
 
