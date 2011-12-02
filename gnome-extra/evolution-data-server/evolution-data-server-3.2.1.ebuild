@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.1.ebuild,v 1.2 2011/11/15 08:54:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.1.ebuild,v 1.3 2011/12/02 17:58:17 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools db-use eutils flag-o-matic gnome2 versionator virtualx
+inherit db-use eutils flag-o-matic gnome2 versionator virtualx
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 LICENSE="LGPL-2 BSD DB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
-IUSE="doc +gnome-online-accounts +introspection ipv6 ldap kerberos ssl vala +weather"
+IUSE="doc +gnome-online-accounts +introspection ipv6 ldap kerberos vala +weather"
 
 # GNOME3: How do we slot libedataserverui-3.0.so?
 # Also, libedata-cal-1.2.so and libecal-1.2.so use gtk-3, but aren't slotted
@@ -27,6 +27,8 @@ RDEPEND=">=dev-libs/glib-2.28:2
 	>=dev-libs/libical-0.43
 	>=net-libs/libsoup-2.31.2:2.4
 	>=dev-libs/libxml2-2
+	>=dev-libs/nspr-4.4
+	>=dev-libs/nss-3.9
 	>=sys-libs/db-4
 	sys-libs/zlib
 	virtual/libiconv
@@ -36,9 +38,6 @@ RDEPEND=">=dev-libs/glib-2.28:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-2 )
-	ssl? (
-		>=dev-libs/nspr-4.4
-		>=dev-libs/nss-3.9 )
 	weather? ( >=dev-libs/libgweather-2.90.0:2 )
 "
 DEPEND="${RDEPEND}
@@ -64,6 +63,7 @@ RESTRICT="test"
 pkg_setup() {
 	DOCS="ChangeLog MAINTAINERS NEWS TODO"
 	# Uh, what to do about dbus-call-timeout ?
+	# Fails to build with --disable-ssl; bug #392679, https://bugzilla.gnome.org/show_bug.cgi?id=642984
 	G2CONF="${G2CONF}
 		VALAC=$(type -P valac-0.14)
 		VAPIGEN=$(type -P vapigen-0.14)
@@ -72,13 +72,13 @@ pkg_setup() {
 		$(use_enable ipv6)
 		$(use_with kerberos krb5 ${EPREFIX}/usr)
 		$(use_with ldap openldap)
-		$(use_enable ssl ssl)
-		$(use_enable ssl smime)
 		$(use_enable vala vala-bindings)
 		$(use_enable weather)
 		--enable-calendar
-		--enable-nntp
 		--enable-largefile
+		--enable-nntp
+		--enable-ssl
+		--enable-smime
 		--with-libdb=${EPREFIX}/usr"
 }
 
