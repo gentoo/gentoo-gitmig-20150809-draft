@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xnee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.19 2011/11/28 06:58:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.20 2011/12/02 22:15:57 ssuominen Exp $
+
+  02 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -files/xnee-3.05-asneeded.patch, -xnee-3.07.ebuild, -xnee-3.08.ebuild,
+  -xnee-3.09.ebuild:
+  old
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org> xnee-3.09.ebuild,
   xnee-3.10.ebuild:
