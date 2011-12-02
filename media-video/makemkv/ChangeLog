@@ -1,0 +1,10 @@
+# ChangeLog for media-video/makemkv
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.1 2011/12/02 20:32:19 beandog Exp $
+
+*makemkv-1.6.16 (02 Dec 2011)
+
+  02 Dec 2011; Steve Dibb <beandog@gentoo.org> +makemkv-1.6.16.ebuild,
+  +metadata.xml:
+  Initial commit to portage tree, bug 280347
+
