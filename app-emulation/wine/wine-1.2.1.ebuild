@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.1.ebuild,v 1.12 2011/09/18 09:08:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.1.ebuild,v 1.13 2011/12/02 23:32:04 vapier Exp $
 
 EAPI="2"
 
@@ -25,8 +25,7 @@ GV="1.0.0-x86"
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
-	gecko? ( mirror://sourceforge/wine/wine_gecko-${GV}.cab )
-	pulseaudio? ( `pulse_patches http://art.ified.ca/downloads/winepulse` )"
+	gecko? ( mirror://sourceforge/wine/wine_gecko-${GV}.cab )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
