@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.1.ebuild,v 1.1 2011/12/02 20:03:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.1.ebuild,v 1.2 2011/12/02 22:21:05 beandog Exp $
 
 EAPI=4
 
@@ -53,7 +53,7 @@ src_configure() {
 		myconf="--with-jdk=${JDK_HOME}"
 	fi
 
-	use xml && myconf+="--enable-libxml2"
+	use xml && myconf+=" --enable-libxml2"
 
 	econf \
 		--disable-debug \
