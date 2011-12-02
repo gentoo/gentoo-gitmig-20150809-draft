@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.38 2011/08/25 20:24:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.39 2011/12/02 03:33:38 binki Exp $
+
+  02 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
+  Commandeer this package, setting myself (binki) as maintainer.
 
   25 Aug 2011; Matt Turner <mattst88@gentoo.org> lzop-1.03.ebuild:
   Added ~mips
