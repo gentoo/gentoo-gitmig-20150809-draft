@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.10.ebuild,v 1.4 2011/11/28 06:58:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.10.ebuild,v 1.5 2011/12/02 22:20:09 ssuominen Exp $
 
 EAPI=4
 
@@ -27,7 +27,6 @@ RDEPEND="
 		x11-libs/gtk+:2
 		>=gnome-base/libgnomeui-2
 		>=gnome-base/gconf-2
-		gnome-base/gnome-panel[bonobo]
 	)
 "
 DEPEND="${RDEPEND}
@@ -42,7 +41,7 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_configure() {
-	local myconf=""
+	local myconf
 
 	if use xosd; then
 		myconf="--enable-xosd --enable-verbose --enable-buffer_verbose"
@@ -52,7 +51,7 @@ src_configure() {
 
 	econf \
 		$(use_enable gnome gui) \
-		$(use_enable gnome gnome-applet) \
+		--disable-gnome-applet \
 		$(use_enable static-libs static) \
 		--enable-cli \
 		--enable-lib \
@@ -61,14 +60,12 @@ src_configure() {
 }
 
 src_test() {
-	Xemake check || die
+	Xemake check
 }
 
 src_install() {
 	default
 	dodoc AUTHORS BUGS ChangeLog FAQ NEWS README TODO
 	use gnome && make_desktop_entry gnee Gnee ${PN} "Utility;GTK"
-	if ! use static-libs; then
-		rm -f "${D}"/usr/lib*/lib*.la
-	fi
+	use static-libs || rm -f "${ED}"usr/lib*/lib*.la
 }
