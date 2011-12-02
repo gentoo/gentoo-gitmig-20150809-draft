@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.268 2011/12/02 02:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.269 2011/12/02 04:19:45 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -394,9 +394,9 @@ kernel_is() {
 	unset v n
 
 	# Now we can continue
-	local operator test value x=0 y=0 z=0
+	local operator test value
 
-	case ${1} in
+	case $1 in
 	  lt) operator="-lt"; shift;;
 	  gt) operator="-gt"; shift;;
 	  le) operator="-le"; shift;;
@@ -404,24 +404,11 @@ kernel_is() {
 	  eq) operator="-eq"; shift;;
 	   *) operator="-eq";;
 	esac
+	[[ $# -gt 3 ]] && die "Error in kernel-2_kernel_is(): too many parameters"
 
-	for x in ${@}; do
-		for((y=0; y<$((3 - ${#x})); y++)); do value="${value}0"; done
-		value="${value}${x}"
-		z=$((${z} + 1))
-
-		case ${z} in
-		  1) for((y=0; y<$((3 - ${#KV_MAJOR})); y++)); do test="${test}0"; done;
-			 test="${test}${KV_MAJOR}";;
-		  2) for((y=0; y<$((3 - ${#KV_MINOR})); y++)); do test="${test}0"; done;
-			 test="${test}${KV_MINOR}";;
-		  3) for((y=0; y<$((3 - ${#KV_PATCH})); y++)); do test="${test}0"; done;
-			 test="${test}${KV_PATCH}";;
-		  *) die "Error in kernel-2_kernel_is(): Too many parameters.";;
-		esac
-	done
-
-	[ ${test} ${operator} ${value} ] && return 0 || return 1
+	: $(( value = (KV_MAJOR << 16) + (KV_MINOR << 8) + KV_PATCH ))
+	: $(( test = (${1:-${KV_MAJOR}} << 16) + (${2:-${KV_MINOR}} << 8) + ${3:-${KV_PATCH}} ))
+	[ ${test} ${operator} ${value} ]
 }
 
 kernel_is_2_4() {
