@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.63 2011/12/02 03:28:20 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.64 2011/12/02 07:31:25 grobian Exp $
+
+  02 Dec 2011; Fabian Groffen <grobian@gentoo.org> lzo-2.06.ebuild:
+  Migrate from Prefix overlay, add Prefix keywords (migration makes ~amd64-linux
+  keyword visible)
 
   02 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
   Commandeer this package, setting myself (binki) as maintainer.
