@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.18.ebuild,v 1.6 2011/04/30 17:42:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.18.ebuild,v 1.7 2011/12/02 22:05:32 ssuominen Exp $
 
-EAPI=2
-inherit elisp-common
+EAPI=4
+inherit elisp-common eutils
 
 DESCRIPTION="Command line utilities to work with desktop menu entries"
 HOMEPAGE="http://freedesktop.org/wiki/Software/desktop-file-utils"
@@ -21,29 +21,28 @@ DEPEND="${RDEPEND}
 
 SITEFILE=50${PN}-gentoo.el
 
+DOCS=( AUTHORS ChangeLog HACKING NEWS README )
+
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-unity.patch
 	sed -i -e '/SUBDIRS =/s:misc::' Makefile.in || die
 }
 
 src_configure() {
-	econf \
-		"$(use_with emacs lispdir "${SITELISP}"/${PN})"
+	econf "$(use_with emacs lispdir "${SITELISP}"/${PN})"
 }
 
 src_compile() {
-	emake || die
+	default
 	use emacs && elisp-compile misc/desktop-entry-mode.el
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-
+	default
 	if use emacs; then
 		elisp-install ${PN} misc/*.el misc/*.elc || die
 		elisp-site-file-install "${FILESDIR}"/${SITEFILE} || die
 	fi
-
-	dodoc AUTHORS ChangeLog HACKING NEWS README
 }
 
 pkg_postinst() {
