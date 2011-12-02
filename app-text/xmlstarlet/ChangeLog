@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlstarlet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.29 2011/12/01 19:47:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.30 2011/12/02 22:20:14 hwoarang Exp $
+
+  02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> xmlstarlet-1.0.6.ebuild:
+  Stable on amd64 wrt bug #391637
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xmlstarlet-1.0.6.ebuild:
   x86 stable wrt bug #391637
