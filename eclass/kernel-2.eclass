@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.266 2011/12/02 01:54:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.267 2011/12/02 02:28:16 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -83,20 +83,18 @@ if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY} ]]; then
 fi
 
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ ${HOMEPAGE}"
-[[ -z ${LICENSE} ]] && \
-	LICENSE="GPL-2"
+: ${LICENSE:="GPL-2"}
 
 # This is the latest KV_PATCH of the deblob tool available from the
 # libre-sources upstream. If you bump this, you MUST regenerate the Manifests
 # for ALL kernel-2 consumer packages where deblob is available.
-[[ -z ${DEBLOB_MAX_VERSION} ]] && DEBLOB_MAX_VERSION=38
+: ${DEBLOB_MAX_VERSION:=38}
 
 # No need to run scanelf/strip on kernel sources/headers (bug #134453).
 RESTRICT="binchecks strip"
 
 # set LINUX_HOSTCFLAGS if not already set
-[[ -z ${LINUX_HOSTCFLAGS} ]] && \
-	LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
+: ${LINUX_HOSTCFLAGS:="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"}
 
 # debugging functions
 #==============================================================
