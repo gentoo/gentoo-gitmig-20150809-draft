@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.114 2011/11/23 22:47:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.115 2011/12/02 12:17:41 floppym Exp $
+
+*v8-3.6.6.9 (02 Dec 2011)
+
+  02 Dec 2011; Mike Gilbert <floppym@gentoo.org> +v8-3.6.6.9.ebuild,
+  -v8-3.6.6.5.ebuild:
+  Version bump to match chromium beta channel.
 
   23 Nov 2011; Mike Gilbert <floppym@gentoo.org> v8-3.7.7.ebuild,
   v8-9999.ebuild:

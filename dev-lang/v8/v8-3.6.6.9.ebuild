@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.6.5.ebuild,v 1.7 2011/11/23 19:27:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.6.9.ebuild,v 1.1 2011/12/02 12:17:41 floppym Exp $
 
 EAPI="4"
 
