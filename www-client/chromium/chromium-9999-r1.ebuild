@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.81 2011/12/02 07:47:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.82 2011/12/02 12:53:45 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -80,7 +80,8 @@ gclient_config() {
 
 gclient_sync() {
 	einfo "gclient sync -->"
-	"${WORKDIR}/depot_tools/gclient" sync --nohooks --jobs=16 \
+	# Only use a single job to prevent hangs.
+	"${WORKDIR}/depot_tools/gclient" sync --nohooks --jobs=1 \
 		--delete_unversioned_trees || die
 }
 
