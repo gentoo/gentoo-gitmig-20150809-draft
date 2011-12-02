@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.289 2011/12/01 22:59:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.290 2011/12/02 19:53:53 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -19,11 +19,6 @@ kde-base/phonon-kde xine
 # Expose USE="suid" for USE="svga" only for x86 users,
 # see arch/x86/package.use.mask
 www-client/links suid
-
-# Samuli Suominen <ssuominen@gentoo.org> (12 Nov 2011)
-# This entry can be removed once tovid-0.31 has left the building
-# That means you!
-<media-video/tovid-0.34 wxwidgets
 
 # Kacper Kowalik <xarthisius@gentoo.org> (09 Nov 2011)
 # pathdb works only as a SIGSEGV generator, mask until upstream
