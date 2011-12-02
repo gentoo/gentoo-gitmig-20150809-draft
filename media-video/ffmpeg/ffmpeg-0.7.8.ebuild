@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.7.8.ebuild,v 1.4 2011/12/01 19:57:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.7.8.ebuild,v 1.5 2011/12/02 18:22:15 beandog Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ fi
 IUSE="
 	+3dnow +3dnowext aac alsa altivec amr avx bindist +bzip2 celt cpudetection
 	custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables
-	ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp
+	ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic +qt-faststart rtmp
 	schroedinger sdl speex +ssse3 static-libs test theora threads truetype
 	v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"

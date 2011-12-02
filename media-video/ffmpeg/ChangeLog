@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.497 2011/12/01 19:57:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.498 2011/12/02 18:22:15 beandog Exp $
+
+  02 Dec 2011; Steve Dibb <beandog@gentoo.org> ffmpeg-0.7.7.ebuild,
+  ffmpeg-0.7.8.ebuild, ffmpeg-0.8.7.ebuild, ffmpeg-9999.ebuild:
+  Build qt-faststart by default
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ffmpeg-0.7.8.ebuild:
   x86 stable wrt bug #391421
