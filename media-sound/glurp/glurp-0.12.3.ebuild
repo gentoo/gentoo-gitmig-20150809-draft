@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/glurp-0.12.3.ebuild,v 1.1 2011/04/19 19:15:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/glurp-0.12.3.ebuild,v 1.2 2011/12/02 20:50:49 radhermit Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Glurp is a GTK2 based graphical client for the Music Player Daemon"
@@ -14,10 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
-RDEPEND=">=x11-libs/gtk+-2:2
+RDEPEND="x11-libs/gtk+:2
+	>=dev-libs/glib-2.4:2
+	x11-libs/gdk-pixbuf:2
+	x11-libs/pango
 	>=media-libs/libmpd-0.17"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+DOCS=( AUTHORS ChangeLog )
 
 src_configure() {
 	econf \
@@ -25,8 +30,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog || die
-	doicon "${FILESDIR}"/${PN}.svg || die
+	default
+	doicon "${FILESDIR}"/${PN}.svg
 	make_desktop_entry glurp Glurp glurp AudioVideo
 }
