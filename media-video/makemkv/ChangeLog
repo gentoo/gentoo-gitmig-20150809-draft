@@ -1,6 +1,10 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.1 2011/12/02 20:32:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.2 2011/12/03 00:32:00 beandog Exp $
+
+  03 Dec 2011; Steve Dibb <beandog@gentoo.org> makemkv-1.6.16.ebuild,
+  files/makemkv-1.6.16-makefile.linux.patch:
+  Add sys-libs/zlib dependency, cleanup QA variables, install into /opt
 
 *makemkv-1.6.16 (02 Dec 2011)
 

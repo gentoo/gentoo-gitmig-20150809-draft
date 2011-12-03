@@ -1,5 +1,5 @@
 --- makemkv_v1.6.16_oss/makefile.linux.orig	2011-12-02 15:26:10.997323145 -0700
-+++ makemkv_v1.6.16_oss/makefile.linux	2011-12-02 16:28:26.966323351 -0700
++++ makemkv_v1.6.16_oss/makefile.linux	2011-12-02 17:24:34.058323537 -0700
 @@ -8,7 +8,7 @@
  MOC=moc
  endif
