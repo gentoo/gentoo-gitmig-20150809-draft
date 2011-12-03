@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.3 2011/10/18 03:24:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.4 2011/12/03 04:00:22 floppym Exp $
+
+*flexget-1.0_beta2484 (03 Dec 2011)
+
+  03 Dec 2011; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta2484.ebuild:
+  Version bump.
 
 *flexget-1.0_beta2435 (18 Oct 2011)
 
