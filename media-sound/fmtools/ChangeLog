@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fmtools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.12 2010/10/19 20:05:00 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.13 2011/12/03 11:15:47 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> fmtools-1.0.2-r1.ebuild:
+  Stable on amd64 wrt bug #392805
 
 *fmtools-1.0.2-r1 (19 Oct 2010)
 
