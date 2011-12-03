@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.28.ebuild,v 1.1 2011/08/13 15:55:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.28.ebuild,v 1.2 2011/12/03 11:12:22 hwoarang Exp $
 
 EAPI="1"
 
@@ -13,10 +13,14 @@ SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
 LICENSE="Scintilla"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="lua"
 
-RDEPEND="x11-libs/gtk+:2
+RDEPEND="dev-libs/glib
+	x11-libs/cairo
+	x11-libs/gtk+:2
+	x11-libs/gdk-pixbuf
+	x11-libs/pango
 	lua? ( >=dev-lang/lua-5 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
