@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.372 2011/11/30 01:11:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.373 2011/12/03 22:57:19 chithanh Exp $
+
+  03 Dec 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -mesa-7.10.2.ebuild, -mesa-7.10.2-r1.ebuild, mesa-7.10.3.ebuild,
+  mesa-7.11.ebuild, -mesa-7.11.1.ebuild, mesa-7.11.2.ebuild:
+  Add patches to build against llvm-3 to unstable ebuild, depend on earlier
+  versions for stable ebuilds, bug #375847. Clean up some old ebuilds.
 
 *mesa-7.11.2 (30 Nov 2011)
 
