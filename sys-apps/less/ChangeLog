@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.137 2011/11/17 16:24:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.138 2011/12/03 17:37:20 armin76 Exp $
+
+  03 Dec 2011; Raúl Porcel <armin76@gentoo.org> less-444.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #389995
 
   17 Nov 2011; Ulrich Mueller <ulm@gentoo.org> less-445-r1.ebuild:
   Fix dependency on app-misc/editor-wrapper.
