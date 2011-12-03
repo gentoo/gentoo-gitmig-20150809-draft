@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB_DataObject
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.43 2011/11/22 16:12:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.44 2011/12/03 18:20:24 armin76 Exp $
+
+  03 Dec 2011; Raúl Porcel <armin76@gentoo.org>
+  PEAR-DB_DataObject-1.9.6.ebuild:
+  alpha/ia64/sparc stable wrt #390857
 
   22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   PEAR-DB_DataObject-1.9.6.ebuild:
