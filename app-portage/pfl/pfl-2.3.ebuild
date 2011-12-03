@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3.ebuild,v 1.1 2011/10/19 17:46:21 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3.ebuild,v 1.2 2011/12/03 19:44:37 grobian Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ src_install() {
 
 	# create wrapper script to run pfl manually
 	cat > "${T}/${PN}" <<- EOF
-	#!/bin/sh
+	#!${EPREFIX}/bin/sh
 	${cmd}
 	EOF
 	dosbin "${T}/${PN}"
@@ -66,10 +66,10 @@ src_install() {
 pkg_postinst() {
 	python_mod_optimize ${PN}
 
-	if [[ ! -e "${ROOT%/}/var/lib/${PN}/pfl.info" ]]; then
-		touch "${ROOT%/}/var/lib/${PN}/pfl.info"
-		chown -R 0:portage "${ROOT%/}/var/lib/${PN}"
-		chmod 775 "${ROOT%/}/var/lib/${PN}"
+	if [[ ! -e "${EROOT%/}/var/lib/${PN}/pfl.info" ]]; then
+		touch "${EROOT%/}/var/lib/${PN}/pfl.info"
+		chown -R 0:portage "${EROOT%/}/var/lib/${PN}"
+		chmod 775 "${EROOT%/}/var/lib/${PN}"
 	fi
 }
 
