@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bubblemon/bubblemon-1.46-r2.ebuild,v 1.1 2011/12/03 16:01:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bubblemon/bubblemon-1.46-r2.ebuild,v 1.2 2011/12/03 16:03:06 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.ne.jp/asahi/linux/timecop/software/${PN}-dockapp-${PV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~x64-solaris"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
