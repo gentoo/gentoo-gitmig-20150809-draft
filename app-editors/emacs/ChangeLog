@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.440 2011/11/28 11:06:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.441 2011/12/03 15:16:24 ulm Exp $
+
+  03 Dec 2011; Ulrich Mueller <ulm@gentoo.org> emacs-23.3-r2.ebuild:
+  New patchset, fixes dumping on macos, bug 388817. Call epatch_user to allow
+  for user patches.
 
   28 Nov 2011; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Update longdescription.
