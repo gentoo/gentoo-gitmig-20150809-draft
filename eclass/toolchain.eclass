@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.485 2011/12/02 23:39:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.486 2011/12/03 01:04:35 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -928,15 +928,6 @@ toolchain_src_unpack() {
 		sed -i \
 			'/^pythondir =/s:=.*:= $(datadir)/python:' \
 			"${S}"/libstdc++-v3/python/Makefile.in || die
-	fi
-
-	# protoize don't build on FreeBSD, skip it
-	## removed in 4.5, bug #270558 --de.
-	if [[ ${GCCMAJOR}.${GCCMINOR} < 4.5 ]]; then
-		if ! is_crosscompile && ! use elibc_FreeBSD ; then
-			# enable protoize / unprotoize
-			sed -i -e '/^LANGUAGES =/s:$: proto:' "${S}"/gcc/Makefile.in
-		fi
 	fi
 
 	# No idea when this first started being fixed, but let's go with 4.3.x for now
