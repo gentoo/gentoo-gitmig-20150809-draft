@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.158 2011/11/13 20:30:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.159 2011/12/03 17:34:35 armin76 Exp $
+
+  03 Dec 2011; Raúl Porcel <armin76@gentoo.org> sandbox-2.5.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #389981
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org> sandbox-2.5.ebuild:
   arm stable, bug #389981
