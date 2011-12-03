@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.125 2011/12/03 16:25:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.126 2011/12/03 16:31:55 ssuominen Exp $
+
+  03 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gtk-engines-xfce-2.8.1.ebuild, gtk-engines-xfce-2.9.0.ebuild:
+  Change license from GPL-3 to GPL-2 (as per COPYING). Mention GTK+-2.x in
+  description (to specify there is no GTK+-3.x support yet).
 
 *gtk-engines-xfce-2.9.0 (03 Dec 2011)
 
