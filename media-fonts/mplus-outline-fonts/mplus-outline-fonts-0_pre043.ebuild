@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre043.ebuild,v 1.1 2011/09/30 15:17:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre043.ebuild,v 1.2 2011/12/03 13:53:21 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 inherit font
 
 MY_P="mplus-${PV/0_pre/TESTFLIGHT-}"
@@ -30,7 +30,7 @@ DOCS="README_J README_E"
 
 RESTRICT="strip binchecks"
 
-IPAFONT_DIR="/usr/share/fonts/ja-ipafonts"
+IPAFONT_DIR="${EPREFIX}/usr/share/fonts/ja-ipafonts"
 
 src_prepare() {
 	if use ipafont ; then

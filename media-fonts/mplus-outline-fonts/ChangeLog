@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mplus-outline-fonts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/ChangeLog,v 1.33 2011/09/30 15:17:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/ChangeLog,v 1.34 2011/12/03 13:53:21 grobian Exp $
+
+  03 Dec 2011; Fabian Groffen <grobian@gentoo.org>
+  mplus-outline-fonts-0_pre043.ebuild:
+  Fix USE=ipafont for Prefix, bump to EAPI=3, by MATSUI Tetsushi in bug #393001
 
 *mplus-outline-fonts-0_pre043 (30 Sep 2011)
 
