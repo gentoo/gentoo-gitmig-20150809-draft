@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.288 2011/12/03 16:13:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.289 2011/12/03 18:19:41 aballier Exp $
+
+  03 Dec 2011; Alexis Ballier <aballier@gentoo.org> transcode-1.1.5-r2.ebuild:
+  depend on ffmpeg for postproc, it doesnt build with libav, bug #369513
 
   03 Dec 2011; Alexis Ballier <aballier@gentoo.org> transcode-1.1.5-r2.ebuild:
   depend on virtual/libiconv
