@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/smixer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.14 2011/12/03 11:50:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.15 2011/12/03 20:16:50 jer Exp $
+
+  03 Dec 2011; Jeroen Roovers <jer@gentoo.org> smixer-1.0.4.ebuild:
+  Stable for HPPA (bug #392847).
 
   03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> smixer-1.0.4.ebuild:
   Stable on amd64 wrt bug #392847
