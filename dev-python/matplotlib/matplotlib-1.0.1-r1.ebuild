@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1-r1.ebuild,v 1.8 2011/10/06 20:09:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1-r1.ebuild,v 1.9 2011/12/03 18:06:01 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,7 +21,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 IUSE="cairo doc excel examples fltk gtk latex qt4 traits tk wxwidgets"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-LICENSE="PYTHON BSD"
+# Main license: matplotlib
+# Some modules: BSD
+# matplotlib/backends/qt4_editor: MIT
+# Fonts: BitstreamVera, OFL-1.1
+LICENSE="BitstreamVera BSD matplotlib MIT OFL-1.1"
 
 CDEPEND="dev-python/numpy
 	dev-python/python-dateutil
