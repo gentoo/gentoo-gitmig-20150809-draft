@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.63 2010/07/16 21:24:07 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.64 2011/12/03 19:36:58 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> pyxml-0.8.4-r2.ebuild:
+  Update LICENSE. Patch by Arfrever.
 
   16 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyxml-0.8.4-r2.ebuild:
