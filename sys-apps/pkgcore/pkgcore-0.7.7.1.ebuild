@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.7-r1.ebuild,v 1.1 2011/12/02 10:11:43 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.7.1.ebuild,v 1.1 2011/12/03 00:11:17 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -28,10 +28,6 @@ pkg_setup() {
 	# disable snakeoil 2to3 caching...
 	unset PY2TO3_CACHEDIR
 	python_pkg_setup
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-${PV}-IFS-manipulation.patch"
 }
 
 src_compile() {
