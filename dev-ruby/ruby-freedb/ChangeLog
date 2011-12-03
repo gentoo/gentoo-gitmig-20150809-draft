@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-freedb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.19 2011/12/01 19:37:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.20 2011/12/03 11:56:59 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> ruby-freedb-0.5-r1.ebuild:
+  Stable on amd64 wrt bug #391631
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ruby-freedb-0.5-r1.ebuild:
