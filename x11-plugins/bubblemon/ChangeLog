@@ -1,13 +1,13 @@
 # ChangeLog for x11-plugins/bubblemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bubblemon/ChangeLog,v 1.1 2011/12/03 16:01:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bubblemon/ChangeLog,v 1.2 2011/12/03 16:13:19 ssuominen Exp $
 
   03 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
   +bubblemon-1.46-r2.ebuild, +files/bubblemon-1.46-asneeded.patch,
   +files/bubblemon-1.46-gtk.patch, +files/bubblemon-1.46-no_display.patch,
   -bubblemon-2.0.14.ebuild:
   Move from x11-misc to x11-plugins. Delete the SLOT with dependency of 
-  (conflicting) libpanelapplet-2.0.
+  (conflicting) libpanelapplet-2.0. These are tracked in bug 357783.
 
   06 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   files/bubblemon-1.46-no_display.patch:
