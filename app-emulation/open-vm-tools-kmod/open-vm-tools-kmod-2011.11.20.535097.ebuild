@@ -1,15 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-0.0.20110124.354108.ebuild,v 1.1 2011/02/06 13:48:54 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2011.11.20.535097.ebuild,v 1.1 2011/12/03 18:33:48 vadimk Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit linux-mod versionator
 
-MY_DATE="$(get_version_component_range 3)"
-MY_BUILD="$(get_version_component_range 4)"
 MY_PN="${PN/-kmod}"
-MY_PV="${MY_DATE:0:4}.${MY_DATE:4:2}.${MY_DATE:6:2}-${MY_BUILD}"
+MY_PV="$(replace_version_separator 3 '-')"
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Opensourced tools for VMware guests"
@@ -59,9 +57,20 @@ src_configure() {
 	:				# do nothing at all
 }
 
+src_install() {
+	linux-mod_src_install
+
+	local udevrules="${T}/60-vmware.rules"
+	cat > "${udevrules}" <<-EOF
+		KERNEL=="vsock", GROUP="vmware", MODE=660
+	EOF
+	insinto /etc/udev/rules.d/
+	doins "${udevrules}"
+}
+
 pkg_postinst() {
 	linux-mod_pkg_postinst
 	elog "vmxnet3 for Linux is now upstream (as of Linux 2.6.32)"
-	elog "pvscsi for Linux is now upstream (as of Linux 2.6.33)"
-	elog "vmmemctl for Linux is now upstream (as of Linux 2.6.34)"
+	elog "pvscsi for Linux is now upstream (vmw_pvscsi) (as of Linux 2.6.33)"
+	elog "vmmemctl for Linux is now upstream (vmw_balloon) (as of Linux 2.6.34)"
 }

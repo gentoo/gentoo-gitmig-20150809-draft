@@ -1,14 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20110821.471295.ebuild,v 1.1 2011/09/04 17:43:32 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-8.8.1.528969.ebuild,v 1.1 2011/12/03 18:34:42 vadimk Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils pam versionator
 
-MY_DATE="$(get_version_component_range 3)"
-MY_BUILD="$(get_version_component_range 4)"
-MY_PV="${MY_DATE:0:4}.${MY_DATE:4:2}.${MY_DATE:6:2}-${MY_BUILD}"
+MY_PV="$(replace_version_separator 3 '-')"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Opensourced tools for VMware guests"
@@ -40,7 +38,7 @@ RDEPEND="app-emulation/open-vm-tools-kmod
 	icu? ( dev-libs/icu )
 	unity? (
 		dev-libs/uriparser
-		media-libs/libpng
+		media-libs/libpng:1.2
 		x11-libs/libXScrnSaver
 	)
 	xinerama? ( x11-libs/libXinerama )
@@ -63,9 +61,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/default-scripts.patch"
-	#epatch "${FILESDIR}/checkvm-pie-safety.patch"
-	#sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
 	# Do not filter out Werror
 	# Upstream Bug  http://sourceforge.net/tracker/?func=detail&aid=2959749&group_id=204462&atid=989708
 	# sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
@@ -91,12 +86,8 @@ src_configure() {
 	find ./ -name Makefile | xargs sed -i -e 's/-Werror//g'  || die "sed out Werror failed"
 }
 
-src_compile() {
-	emake || die "failed to compile"
-}
-
 src_install() {
-	emake DESTDIR="${D}" install || die "failed to install"
+	default
 
 	rm "${D}"/etc/pam.d/vmtoolsd
 	pamd_mimic_system vmtoolsd auth account
@@ -104,17 +95,20 @@ src_install() {
 	rm "${D}"/usr/$(get_libdir)/*.la
 	rm "${D}"/usr/$(get_libdir)/open-vm-tools/plugins/common/*.la
 
-	newinitd "${FILESDIR}/open-vm-tools.initd" vmware-tools || die "failed to newinitd"
-	newconfd "${FILESDIR}/open-vm.confd" vmware-tools || die "failed to newconfd"
+	newinitd "${FILESDIR}/open-vm-tools.initd" vmware-tools
+	newconfd "${FILESDIR}/open-vm-tools.confd" vmware-tools
+
+	exeinto /etc/vmware-tools/scripts/vmware/
+	doexe "${FILESDIR}"/network
 
 	if use X;
 	then
-		fperms 4755 "/usr/bin/vmware-user-suid-wrapper" || die
+		fperms 4755 "/usr/bin/vmware-user-suid-wrapper"
 
 		dobin "${S}"/scripts/common/vmware-xdg-detect-de
 
 		insinto /etc/xdg/autostart
-		doins "${FILESDIR}/open-vm-tools.desktop" || die "failed to install .desktop"
+		doins "${FILESDIR}/open-vm-tools.desktop"
 
 		elog "To be able to use the drag'n'drop feature of VMware for file"
 		elog "exchange, please add the users to the 'vmware' group."

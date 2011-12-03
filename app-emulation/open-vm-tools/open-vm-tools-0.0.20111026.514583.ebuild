@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20111026.514583.ebuild,v 1.1 2011/11/11 14:20:19 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20111026.514583.ebuild,v 1.2 2011/12/03 18:34:42 vadimk Exp $
 
 EAPI="2"
 
@@ -51,16 +51,10 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	#use unity && ! use X && die 'The Unity USE flag requires "X" USE flag as well'
-	#use unity && ! use xinerama && die 'The Unity USE flag requires xinerame USE="xinerama" as well'
-
 	enewgroup vmware
 }
 
 src_prepare() {
-	#epatch "${FILESDIR}/default-scripts.patch"
-	#epatch "${FILESDIR}/checkvm-pie-safety.patch"
-	#sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
 	# Do not filter out Werror
 	# Upstream Bug  http://sourceforge.net/tracker/?func=detail&aid=2959749&group_id=204462&atid=989708
 	# sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
@@ -99,7 +93,7 @@ src_install() {
 	rm "${D}"/usr/$(get_libdir)/open-vm-tools/plugins/common/*.la
 
 	newinitd "${FILESDIR}/open-vm-tools.initd" vmware-tools || die "failed to newinitd"
-	newconfd "${FILESDIR}/open-vm.confd" vmware-tools || die "failed to newconfd"
+	newconfd "${FILESDIR}/open-vm-tools.confd" vmware-tools || die "failed to newconfd"
 
 	exeinto /etc/vmware-tools/scripts/vmware/
 	doexe "${FILESDIR}"/network

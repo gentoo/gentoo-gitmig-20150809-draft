@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.57 2011/11/15 15:19:41 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.58 2011/12/03 18:34:42 vadimk Exp $
+
+*open-vm-tools-2011.11.20.535097 (03 Dec 2011)
+*open-vm-tools-8.8.1.528969 (03 Dec 2011)
+
+  03 Dec 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -open-vm-tools-0.0.20110124.354108.ebuild,
+  -open-vm-tools-0.0.20110223.368700.ebuild,
+  -open-vm-tools-0.0.20110328.387002-r2.ebuild,
+  -open-vm-tools-0.0.20110627.437995.ebuild,
+  -open-vm-tools-0.0.20110821.471295.ebuild,
+  -open-vm-tools-0.0.20110923.491607.ebuild,
+  open-vm-tools-0.0.20111026.514583.ebuild, +open-vm-tools-8.8.1.528969.ebuild,
+  +open-vm-tools-2011.11.20.535097.ebuild, +files/open-vm-tools.confd,
+  -files/checkvm-pie-safety.patch, -files/default-scripts.patch,
+  -files/open-vm.confd, -files/vmguestlib-pkg-config.patch:
+  version bump and cleanup.
+  8.8.1 is matching the Workstation 8.0.1 release
 
   15 Nov 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   -open-vm-tools-0.0.20100616.268169-r1.ebuild,
