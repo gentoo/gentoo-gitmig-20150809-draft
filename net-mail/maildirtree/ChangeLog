@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/maildirtree
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildirtree/ChangeLog,v 1.9 2011/11/22 16:12:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildirtree/ChangeLog,v 1.10 2011/12/03 11:03:57 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> maildirtree-0.6-r1.ebuild:
+  Stable on amd64 wrt bug #391223
 
   22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   maildirtree-0.6-r1.ebuild:
