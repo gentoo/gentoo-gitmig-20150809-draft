@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-DBI
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.47 2011/12/01 19:38:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.48 2011/12/03 12:01:20 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> Class-DBI-3.0.17.ebuild:
+  Stable on amd64 wrt bug #391581
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> Class-DBI-3.0.17.ebuild:
   x86 stable wrt bug #391581
