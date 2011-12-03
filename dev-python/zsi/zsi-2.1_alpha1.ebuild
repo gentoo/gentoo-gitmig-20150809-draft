@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1.ebuild,v 1.9 2011/07/09 22:06:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1.ebuild,v 1.10 2011/12/03 19:37:53 hwoarang Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2"
 
 inherit distutils
 
@@ -14,16 +14,21 @@ DESCRIPTION="Web Services for Python"
 HOMEPAGE="http://pywebsvcs.sourceforge.net/zsi.html"
 SRC_URI="mirror://sourceforge/pywebsvcs/${MY_P}.tar.gz"
 
-KEYWORDS="amd64 ppc x86"
+LICENSE="BSD MIT"
 SLOT="0"
-LICENSE="PYTHON"
-IUSE="examples doc twisted"
+KEYWORDS="amd64 ppc x86"
+IUSE="doc examples twisted"
 
-DEPEND=">=dev-python/setuptools-0.6_rc7-r1
-	twisted? ( >=dev-python/twisted-2
-		>=dev-python/twisted-web-0.5 )"
+DEPEND="dev-python/setuptools
+	twisted? (
+		dev-python/twisted
+		dev-python/twisted-web
+	)"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+DOCS="CHANGES README"
 PYTHON_MODNAME="${MY_PN}"
 
 pkg_setup() {
@@ -52,5 +57,3 @@ src_install() {
 		doins -r doc/examples/* samples/*
 	fi
 }
-
-DOCS="CHANGES README"
