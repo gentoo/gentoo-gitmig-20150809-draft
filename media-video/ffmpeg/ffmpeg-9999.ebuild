@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.65 2011/12/02 18:22:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.66 2011/12/03 15:41:02 aballier Exp $
 
 EAPI="4"
 
@@ -158,7 +158,7 @@ src_configure() {
 	use pulseaudio && myconf="${myconf} --enable-libpulse"
 	use libv4l && myconf="${myconf} --enable-libv4l2"
 	# Outdevs
-	for i in alsa oss ; do
+	for i in alsa oss sdl ; do
 		use ${i} || myconf="${myconf} --disable-outdev=${i}"
 	done
 	# libavfilter options
