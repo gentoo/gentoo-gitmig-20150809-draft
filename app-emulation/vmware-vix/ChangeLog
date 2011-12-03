@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-vix
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/ChangeLog,v 1.4 2009/08/26 14:59:25 vadimk Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/ChangeLog,v 1.5 2011/12/03 20:15:57 vadimk Exp $
+
+*vmware-vix-1.11.1.528992 (03 Dec 2011)
+
+  03 Dec 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  +vmware-vix-1.11.1.528992.ebuild:
+  version bump
 
 *vmware-vix-1.6.2.156745-r2 (26 Aug 2009)
 
