@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Mail_mimeDecode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_mimeDecode/ChangeLog,v 1.19 2011/11/13 20:48:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_mimeDecode/ChangeLog,v 1.20 2011/12/03 17:53:00 armin76 Exp $
+
+  03 Dec 2011; Raúl Porcel <armin76@gentoo.org>
+  PEAR-Mail_mimeDecode-1.5.1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #388763
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org>
   PEAR-Mail_mimeDecode-1.5.1.ebuild:
