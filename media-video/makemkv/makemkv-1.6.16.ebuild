@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.6.16.ebuild,v 1.4 2011/12/03 00:32:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.6.16.ebuild,v 1.5 2011/12/03 00:44:41 beandog Exp $
 
 EAPI=3
 
@@ -46,7 +46,9 @@ src_install() {
 	dolib.so out/libdriveio.so.0 || die "dolib.so out/libdriveio.so.0 died"
 	dolib.so out/libmakemkv.so.1 || die "dolib.so out/libmakemkv.so.1 died"
 	dosym libdriveio.so.0 /usr/$(get_libdir)/libdriveio.so.0.${PV} || die "dosym libdriveio.so.0 died "
+	dosym libdriveio.so.0 /usr/$(get_libdir)/libdriveio.so || die "dosym libdriveio.so.0 died "
 	dosym libmakemkv.so.1 /usr/$(get_libdir)/libmakemkv.so.1.${PV} || die "dosym libmakemkv.so.1 died"
+	dosym libmakemkv.so.1 /usr/$(get_libdir)/libmakemkv.so || die "dosym libmakemkv.so.1 died"
 	into /opt
 	dobin out/makemkv || die "dobin makemkv died"
 
