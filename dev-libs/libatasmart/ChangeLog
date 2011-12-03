@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatasmart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.22 2011/11/30 03:41:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.23 2011/12/03 12:03:21 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> libatasmart-0.18.ebuild:
+  Stable on amd64 wrt bug #392313
 
   30 Nov 2011; Jeroen Roovers <jer@gentoo.org> libatasmart-0.18.ebuild:
   Stable for HPPA (bug #392313).
