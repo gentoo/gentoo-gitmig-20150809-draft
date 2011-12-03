@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mftrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.63 2011/11/17 18:38:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.64 2011/12/03 18:10:59 armin76 Exp $
+
+  03 Dec 2011; Raúl Porcel <armin76@gentoo.org> mftrace-1.2.13.ebuild,
+  mftrace-1.2.13-r1.ebuild, mftrace-1.2.16.ebuild, mftrace-1.2.17.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mftrace-1.2.17.ebuild:
   x86 stable wrt bug #390661

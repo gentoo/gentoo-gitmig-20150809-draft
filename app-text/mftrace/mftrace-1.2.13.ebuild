@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.11 2010/06/11 20:04:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.12 2011/12/03 18:10:59 armin76 Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="traces TeX fonts to PFA or PFB fonts (formerly pktrace)"
 HOMEPAGE="http://lilypond.org/mftrace/"
 SRC_URI="http://lilypond.org/download/sources/mftrace/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 # SLOT 1 was used in pktrace ebuild
 SLOT="1"
 IUSE="truetype"
