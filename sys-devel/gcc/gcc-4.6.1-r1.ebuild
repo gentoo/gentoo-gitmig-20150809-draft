@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.6.1-r1.ebuild,v 1.3 2011/11/09 19:22:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.6.1-r1.ebuild,v 1.4 2011/12/03 20:28:07 vapier Exp $
 
 PATCH_VER="1.0"
 UCLIBC_VER="1.0"
@@ -36,6 +36,12 @@ if [[ ${CATEGORY} != cross-* ]] ; then
 fi
 
 src_unpack() {
+	if has_version '<sys-libs/glibc-2.12' ; then
+		ewarn "Your host glibc is too old; disabling automatic fortify."
+		ewarn "Please rebuild gcc after upgrading to >=glibc-2.12 #362315"
+		EPATCH_EXCLUDE+=" 10_all_default-fortify-source.patch"
+	fi
+
 	toolchain_src_unpack
 
 	use vanilla && return 0
