@@ -1,6 +1,10 @@
 # ChangeLog for media-video/motion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.36 2011/11/14 03:46:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.37 2011/12/03 15:58:14 aballier Exp $
+
+  03 Dec 2011; Alexis Ballier <aballier@gentoo.org> +files/ffmpeg08.patch,
+  motion-3.2.12-r1.ebuild:
+  fix build with ffmpeg 0.8, bug #392695
 
   14 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -motion-3.2.11.1.ebuild,
   -motion-3.2.12.ebuild, -files/motion.init-r1, -files/motion.initd:
