@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.836 2011/12/03 20:28:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.837 2011/12/03 20:48:13 vapier Exp $
+
+  03 Dec 2011; Mike Frysinger <vapier@gentoo.org>
+  -files/stubs/gcc-3.3-htb-stub.patch, -files/stubs/gcc-3.3-ssp-stub.patch,
+  -files/stubs/gcc-3.4-htb-stub.patch, -files/stubs/gcc-3.4-ssp-stub.patch,
+  -files/stubs/gcc-4.0-htb-stub.patch, -files/stubs/gcc-4.0-ssp-stub.patch:
+  Drop now unused stub patches.
 
   03 Dec 2011; Mike Frysinger <vapier@gentoo.org> gcc-4.6.0.ebuild,
   gcc-4.6.1-r1.ebuild, gcc-4.6.2.ebuild:
