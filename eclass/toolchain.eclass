@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.486 2011/12/03 01:04:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.487 2011/12/03 02:06:31 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -942,14 +942,14 @@ toolchain_src_unpack() {
 	setup_multilib_osdirnames
 
 	gcc_version_patch
-	if [[ ${GCCMAJOR}.${GCCMINOR} > 4.0 ]] ; then
+	if tc_version_is_at_least 4.1 ; then
 		if [[ -n ${SNAPSHOT} || -n ${PRERELEASE} || -n ${GCC_SVN} ]] ; then
 			echo ${PV/_/-} > "${S}"/gcc/BASE-VER
 		fi
 	fi
 
 	# >= gcc-4.3 doesn't bundle ecj.jar, so copy it
-	if [[ ${GCCMAJOR}.${GCCMINOR} > 4.2 ]] && use gcj ; then
+	if tc_version_is_at_least 4.3 && use gcj ; then
 		if tc_version_is_at_least "4.5" ; then
 			einfo "Copying ecj-4.5.jar"
 			cp -pPR "${DISTDIR}/ecj-4.5.jar" "${S}/ecj.jar" || die
@@ -968,9 +968,7 @@ toolchain_src_unpack() {
 
 	# In gcc 3.3.x and 3.4.x, rename the java bins to gcc-specific names
 	# in line with gcc-4.
-	if [[ ${GCCMAJOR} == 3 ]] &&
-	   [[ ${GCCMINOR} -ge 3 ]]
-	then
+	if tc_version_is_at_least 3.3 && ! tc_version_is_at_least 4.0 ; then
 		do_gcc_rename_java_bins
 	fi
 
@@ -1318,9 +1316,7 @@ gcc_do_configure() {
 			fi
 		fi
 
-		if [[ ${GCCMAJOR}.${GCCMINOR} > 4.1 ]] ; then
-			confgcc+=" --disable-bootstrap"
-		fi
+		tc_version_is_at_least 4.2 && confgcc+=" --disable-bootstrap"
 	else
 		if tc-is-static-only ; then
 			confgcc+=" --disable-shared"
@@ -1340,7 +1336,7 @@ gcc_do_configure() {
 	*-uclibc*)
 		confgcc+=" --disable-__cxa_atexit --enable-target-optspace $(use_enable nptl tls)"
 		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && confgcc+=" --enable-sjlj-exceptions"
-		if tc_version_is_at_least 3.4 && [[ ${GCCMAJOR}.${GCCMINOR} < 4.3 ]] ; then
+		if tc_version_is_at_least 3.4 && ! tc_version_is_at_least 4.3 ; then
 			confgcc+=" --enable-clocale=uclibc"
 		fi
 		;;
@@ -1358,13 +1354,13 @@ gcc_do_configure() {
 		confgcc+=" --enable-__cxa_atexit"
 		;;
 	esac
-	[[ ${GCCMAJOR}.${GCCMINOR} < 3.4 ]] && confgcc+=" --disable-libunwind-exceptions"
+	tc_version_is_at_least 3.4 || confgcc+=" --disable-libunwind-exceptions"
 
 	# create a sparc*linux*-{gcc,g++} that can handle -m32 and -m64 (biarch)
 	if [[ ${CTARGET} == sparc*linux* ]] \
 		&& is_multilib \
 		&& ! is_crosscompile \
-		&& [[ ${GCCMAJOR}.${GCCMINOR} > 4.2 ]]
+		&& tc_version_is_at_least 4.3
 	then
 		confgcc+=" --enable-targets=all"
 	fi
@@ -2283,7 +2279,7 @@ fix_libtool_libdir_paths() {
 }
 
 is_multilib() {
-	[[ ${GCCMAJOR} < 3 ]] && return 1
+	tc_version_is_at_least 3 || return 1
 	use multilib
 }
 
