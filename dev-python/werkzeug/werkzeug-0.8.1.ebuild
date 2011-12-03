@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.8.1.ebuild,v 1.1 2011/12/03 21:39:52 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.8.1.ebuild,v 1.2 2011/12/03 23:05:52 mr_bones_ Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -37,4 +37,3 @@ src_prepare() {
 	# https://github.com/mitsuhiko/werkzeug/issues/120
 	sed -e "s/import redis/redis = None/" -i werkzeug/testsuite/contrib/cache.py
 }
-
