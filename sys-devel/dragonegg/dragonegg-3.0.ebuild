@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.0.ebuild,v 1.1 2011/12/02 13:21:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.0.ebuild,v 1.2 2011/12/03 08:55:36 mr_bones_ Exp $
 
 EAPI=4
 inherit multilib
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${P/_}.src
 
 src_prepare() {
-	# Replace svnversion call 
+	# Replace svnversion call
 	sed -e "s/\(^REVISION:=\).*/\1${PV}/" \
 		-i Makefile || die "Setting revision failed"
 }
