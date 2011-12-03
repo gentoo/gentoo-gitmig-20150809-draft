@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nepomuk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.103 2011/11/02 20:47:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.104 2011/12/03 16:38:22 dilfridge Exp $
+
+  03 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> nepomuk-4.7.3.ebuild:
+  Restrict tests, bug 392989
 
 *nepomuk-4.7.3 (02 Nov 2011)
 
