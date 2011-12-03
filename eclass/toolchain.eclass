@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.487 2011/12/03 02:06:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.488 2011/12/03 20:43:51 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1945,27 +1945,8 @@ exclude_gcc_patches() {
 	done
 }
 
-# Try to apply some stub patches so that gcc won't error out when
-# passed parameters like -fstack-protector but no ssp is found
-do_gcc_stub() {
-	local v stub_patch=""
-	for v in ${GCC_RELEASE_VER} ${GCC_BRANCH_VER} ; do
-		stub_patch=${GCC_FILESDIR}/stubs/gcc-${v}-$1-stub.patch
-		if [[ -e ${stub_patch} ]] && ! use vanilla ; then
-			EPATCH_SINGLE_MSG="Applying stub patch for $1 ..." \
-			epatch "${stub_patch}"
-			return 0
-		fi
-	done
-}
-
 do_gcc_HTB_patches() {
-	if ! want_boundschecking || \
-	   (want_ssp && [[ ${HTB_EXCLUSIVE} == "true" ]])
-	then
-		do_gcc_stub htb
-		return 0
-	fi
+	want_boundschecking || return 0
 
 	# modify the bounds checking patch with a regression patch
 	epatch "${WORKDIR}/bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch"
@@ -1975,11 +1956,7 @@ do_gcc_HTB_patches() {
 # patch in ProPolice Stack Smashing protection
 do_gcc_SSP_patches() {
 	# PARISC has no love ... it's our stack :(
-	if [[ $(tc-arch) == "hppa" ]] || \
-	   ! want_ssp || \
-	   (want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]])
-	then
-		do_gcc_stub ssp
+	if [[ $(tc-arch) == "hppa" ]] || ! want_ssp ; then
 		return 0
 	fi
 
@@ -2062,11 +2039,7 @@ update_gcc_for_libssp() {
 
 # do various updates to PIE logic
 do_gcc_PIE_patches() {
-	if ! want_pie || \
-	   (want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]])
-	then
-		return 0
-	fi
+	want_pie || return 0
 
 	want_boundschecking \
 		&& rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-no.patch* \
