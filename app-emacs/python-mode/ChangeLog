@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.54 2011/11/29 15:29:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.55 2011/12/03 23:47:54 ulm Exp $
+
+  03 Dec 2011; Ulrich Mueller <ulm@gentoo.org> python-mode-5.2.0.ebuild,
+  python-mode-6.0.3-r1.ebuild:
+  Make use of new elisp.eclass variable for removal of files.
 
   29 Nov 2011; Jeroen Roovers <jer@gentoo.org> python-mode-5.2.0.ebuild:
   Stable for HPPA (bug #391725).

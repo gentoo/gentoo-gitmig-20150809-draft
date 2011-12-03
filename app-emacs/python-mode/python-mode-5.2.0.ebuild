@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-5.2.0.ebuild,v 1.3 2011/11/29 15:29:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-5.2.0.ebuild,v 1.4 2011/12/03 23:47:54 ulm Exp $
 
 EAPI=3
 
@@ -16,14 +16,10 @@ KEYWORDS="amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~x86 ~x86-fbsd ~x86-freebs
 IUSE=""
 
 S="${WORKDIR}/${PN}"
+# doctest-mode has its own package, pycomplete is not yet ready for production
+ELISP_REMOVE="doctest-mode.el pycomplete.el"
 SITEFILE="50${PN}-gentoo.el"
 DOCS="NEWS"
-
-src_prepare() {
-	# doctest-mode has its own package,
-	# pycomplete is not yet ready for production.
-	rm doctest-mode.el pycomplete.el || die
-}
 
 pkg_postinst() {
 	elisp-site-regen
