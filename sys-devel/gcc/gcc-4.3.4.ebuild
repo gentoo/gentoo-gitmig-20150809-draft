@@ -1,11 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.4.ebuild,v 1.20 2011/12/02 23:43:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.4.ebuild,v 1.21 2011/12/03 02:36:35 vapier Exp $
 
-GENTOO_PATCH_EXCLUDE="69_all_gcc43-pr39013.patch \
-02_all_gcc-4.3-alpha-PR42113.patch" #262567 #309279
-
-PATCH_VER="1.3"
+PATCH_VER="1.4"
 UCLIBC_VER="1.0"
 
 # Hardened gcc 4 stuff
