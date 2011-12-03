@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.91 2011/10/20 18:08:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.92 2011/12/03 00:57:25 vapier Exp $
+
+*make-3.82-r4 (03 Dec 2011)
+
+  03 Dec 2011; Mike Frysinger <vapier@gentoo.org> +make-3.82-r4.ebuild,
+  +files/make-3.82-copy-on-expand.patch, +files/make-3.82-long-cmdline.patch,
+  +files/make-3.82-oneshell.patch, +files/make-3.82-parallel-remake.patch:
+  Add some more fixes from upstream, and forward port the long cmdline patch
+  from 3.81 #300867 by Alexander Vershilov.
 
   20 Oct 2011; Brent Baude <ranger@gentoo.org> make-3.82-r1.ebuild:
   Marking make-3.82-r1 ppc for bug 381199
