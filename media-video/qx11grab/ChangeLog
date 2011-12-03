@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qx11grab
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.8 2011/11/24 12:52:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.9 2011/12/03 16:06:23 aballier Exp $
+
+  03 Dec 2011; Alexis Ballier <aballier@gentoo.org> qx11grab-0.2.2.ebuild,
+  +files/qx11grab-0.2.2-ffmpeg.patch:
+  fix build with ffmpeg 0.8, bug #378001
 
   24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #290906
