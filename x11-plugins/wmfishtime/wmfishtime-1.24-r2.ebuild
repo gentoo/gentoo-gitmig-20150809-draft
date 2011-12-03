@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.24-r2.ebuild,v 1.3 2011/03/28 14:41:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.24-r2.ebuild,v 1.4 2011/12/03 10:51:04 hwoarang Exp $
 
-EAPI=3
+EAPI=4
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A fun clock applet for your desktop featuring swimming fish"
@@ -11,7 +11,7 @@ SRC_URI="http://www.ne.jp/asahi/linux/timecop/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
@@ -26,7 +26,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed."
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
