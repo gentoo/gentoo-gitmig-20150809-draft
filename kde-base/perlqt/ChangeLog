@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/perlqt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.11 2011/12/01 22:07:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.12 2011/12/03 16:00:04 dilfridge Exp $
+
+  03 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> perlqt-4.7.3.ebuild:
+  Restrict tests, bug 392991
 
   01 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   perlqt-4.7.2-r1.ebuild, perlqt-4.7.3.ebuild:
