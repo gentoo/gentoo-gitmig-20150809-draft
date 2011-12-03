@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.157 2011/11/28 23:49:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.158 2011/12/03 20:26:41 grobian Exp $
+
+  03 Dec 2011; Fabian Groffen <grobian@gentoo.org> qt-gui-4.7.4-r1.ebuild:
+  Disable ssse3 on Darwin to fix compilation, thanks Paul, bug #367045
 
   28 Nov 2011; Davide Pesavento <pesa@gentoo.org> -qt-gui-4.7.3-r1.ebuild,
   -qt-gui-4.7.3.ebuild:
