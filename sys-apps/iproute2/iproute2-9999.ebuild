@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-9999.ebuild,v 1.17 2011/12/02 22:24:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-9999.ebuild,v 1.18 2011/12/03 10:28:48 vapier Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="kernel routing and traffic control utilities"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2"
-[[ ${PV} == "9999" ]] || SRC_URI="mirror://kernel/linux/utils/networking/${PN}/${P}.tar.bz2"
+[[ ${PV} == "9999" ]] || SRC_URI="mirror://kernel/linux/utils/net/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
