@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/primer3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.28 2011/12/02 22:12:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.29 2011/12/03 10:58:16 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> primer3-2.2.3.ebuild:
+  convert test statement to if;fi block because || die does not work on a
+  subshell
 
   02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> primer3-2.2.3.ebuild:
   add missing sed. stable on amd64. bug #391531
