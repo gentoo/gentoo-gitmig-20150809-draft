@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.488 2011/12/03 20:43:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.489 2011/12/03 20:45:45 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -883,7 +883,6 @@ toolchain_src_unpack() {
 	[[ -z ${UCLIBC_VER} ]] && [[ ${CTARGET} == *-uclibc* ]] && die "Sorry, this version does not support uClibc"
 
 	[[ -z ${GCC_SVN} ]] && gcc_quick_unpack
-	exclude_gcc_patches
 
 	cd "${S}"
 
@@ -1929,20 +1928,6 @@ gcc_quick_unpack() {
 		unpack "bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
 
 	popd > /dev/null
-}
-
-# Exclude any unwanted patches, as specified by the following variables:
-#
-#	GENTOO_PATCH_EXCLUDE
-#			List of filenames, relative to ${WORKDIR}/patch/
-exclude_gcc_patches() {
-	local i
-	for i in ${GENTOO_PATCH_EXCLUDE} ; do
-		if [[ -f ${WORKDIR}/patch/${i} ]] ; then
-			einfo "Excluding patch ${i}"
-			rm -f "${WORKDIR}"/patch/${i} || die "failed to delete ${i}"
-		fi
-	done
 }
 
 do_gcc_HTB_patches() {
