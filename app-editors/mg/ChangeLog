@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.40 2011/10/17 13:53:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.41 2011/12/03 17:14:14 armin76 Exp $
+
+  03 Dec 2011; Raúl Porcel <armin76@gentoo.org> mg-20110905.ebuild:
+  alpha/sparc stable wrt #386689
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> mg-20110905.ebuild:
   Stable for HPPA (bug #386689).
