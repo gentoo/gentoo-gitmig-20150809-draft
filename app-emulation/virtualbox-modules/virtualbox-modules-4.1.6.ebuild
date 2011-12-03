@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.1.6.ebuild,v 1.2 2011/11/06 13:16:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.1.6.ebuild,v 1.3 2011/12/03 17:36:18 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -35,6 +35,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# bug #389953
+	epatch "${FILESDIR}"/${PN}-4.1.6-kernel-3.2-vboxpci.patch
+
 	if kernel_is -ge 2 6 33 ; then
 		# evil patch for new kernels - header moved
 		grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:'
