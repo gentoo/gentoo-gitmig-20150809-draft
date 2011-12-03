@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/zenburn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenburn/ChangeLog,v 1.3 2010/05/22 15:55:53 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenburn/ChangeLog,v 1.4 2011/12/03 08:41:41 ulm Exp $
+
+*zenburn-20110907 (03 Dec 2011)
+
+  03 Dec 2011; Ulrich Mueller <ulm@gentoo.org> +zenburn-20110907.ebuild:
+  New snapshot, bug 392299. Updated HOMEPAGE.
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> zenburn-20090708.ebuild:
   stable amd64, bug 304181
