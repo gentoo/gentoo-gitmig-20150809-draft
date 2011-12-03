@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.19 2011/09/26 20:30:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.20 2011/12/03 18:18:05 hwoarang Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ HOMEPAGE="http://docutils.sourceforge.net/ http://pypi.python.org/pypi/docutils"
 SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz
 	glep? ( mirror://gentoo/glep-0.4-r1.tbz2 )"
 
-LICENSE="public-domain PYTHON BSD"
+LICENSE="BSD PSF-2 public-domain"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="glep"

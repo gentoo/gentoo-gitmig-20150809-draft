@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamazon/pyamazon-0.65.ebuild,v 1.3 2010/06/04 21:33:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamazon/pyamazon-0.65.ebuild,v 1.4 2011/12/03 18:18:42 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ DESCRIPTION="A Python wrapper for the Amazon web API."
 HOMEPAGE="http://www.josephson.org/projects/pyamazon"
 SRC_URI="http://www.josephson.org/projects/${PN}/files/${P}.zip"
 
-LICENSE="PYTHON"
+LICENSE="PSF-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""

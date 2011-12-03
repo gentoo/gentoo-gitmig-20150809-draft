@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.144 2011/10/31 19:55:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.145 2011/12/03 18:18:05 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> docutils-0.7.ebuild:
+  Update LICENSE. Patch by Arfrever.
 
   31 Oct 2011; Markos Chandras <hwoarang@gentoo.org> docutils-0.8.1.ebuild:
   Ignore tests failures with Jython. Patch by Arfrever.

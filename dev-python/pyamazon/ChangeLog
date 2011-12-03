@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyamazon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamazon/ChangeLog,v 1.2 2010/06/04 21:33:51 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamazon/ChangeLog,v 1.3 2011/12/03 18:18:42 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> pyamazon-0.65.ebuild:
+  Update LICENSE. Patch by Arfrever.
 
   04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyamazon-0.65.ebuild:
