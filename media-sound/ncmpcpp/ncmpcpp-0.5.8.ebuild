@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.8.ebuild,v 1.1 2011/10/16 21:42:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.8.ebuild,v 1.2 2011/12/03 11:55:04 hwoarang Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://unkart.ovh.org/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 IUSE="bash-completion clock curl fftw iconv outputs taglib unicode visualizer"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 
 RDEPEND="
 	sys-libs/ncurses[unicode?]
