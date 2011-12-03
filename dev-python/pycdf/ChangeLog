@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycdf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.10 2010/07/23 22:22:52 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.11 2011/12/03 19:18:00 hwoarang Exp $
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> pycdf-0.6.3.ebuild:
+  Update LICENSE. Patch by Arfrever.
 
   23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pycdf-0.6.3.ebuild:
