@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.55 2011/10/05 16:36:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.56 2011/12/03 12:00:54 pacho Exp $
+
+  03 Dec 2011; Pacho Ramos <pacho@gentoo.org> -farsight2-0.0.20.ebuild,
+  metadata.xml:
+  Add as co-maintainers as we are 'de facto' needing to bump it and fix from
+  time to time due telepathy-farsight requirements.
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> farsight2-0.0.26.ebuild:
   ppc/ppc64 stable wrt #373393
