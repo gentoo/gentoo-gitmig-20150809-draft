@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.298 2011/11/26 16:50:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.299 2011/12/04 10:31:39 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/tor.initd-r6:
+  reload is extra_started_commands
 
   26 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> tor-0.2.2.34.ebuild:
   ppc64 stable wrt #388769

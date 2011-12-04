@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tinc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.25 2011/09/26 03:23:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.26 2011/12/04 10:30:32 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/tincd, files/tincd.1,
+  files/tincd.lo, files/tincd.lo.1:
+  reload is extra_started_commands
 
 *tinc-1.0.16-r1 (26 Sep 2011)
 

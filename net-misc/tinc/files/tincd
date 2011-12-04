@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/files/tincd,v 1.5 2008/04/01 14:08:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/files/tincd,v 1.6 2011/12/04 10:30:33 swegener Exp $
 
-opts="reload"
+extra_started_commands="reload"
 
 depend() {
 	use logger dns
