@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xmountains
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.17 2010/03/15 10:23:47 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.18 2011/12/04 07:38:46 jer Exp $
+
+*xmountains-2.9 (04 Dec 2011)
+
+  04 Dec 2011; Jeroen Roovers <jer@gentoo.org> +xmountains-2.9.ebuild:
+  Version bump.
 
 *xmountains-2.8 (15 Mar 2010)
 
