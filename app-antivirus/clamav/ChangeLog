@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.410 2011/11/28 05:26:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.411 2011/12/04 11:51:46 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/clamd.rc:
+  Replace opts with extra_commands
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org> clamav-0.97.3.ebuild:
   Fix autotools-utils usage (bug #392135).
