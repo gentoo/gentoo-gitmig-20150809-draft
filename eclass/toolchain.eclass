@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.492 2011/12/04 22:54:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.493 2011/12/04 22:59:31 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -265,14 +265,6 @@ S=$(gcc_get_s_dir)
 #			for an older gcc version with a new gcc, make sure you set
 #			HTB_GCC_VER to that version of gcc.
 #
-#	MAN_VER
-#			The version of gcc for which we will download manpages. This will
-#			default to ${GCC_RELEASE_VER}, but we may not want to pre-generate man pages
-#			for prerelease test ebuilds for example. This allows you to
-#			continue using pre-generated manpages from the last stable release.
-#			If set to "none", this will prevent the downloading of manpages,
-#			which is useful for individual library targets.
-#
 gentoo_urls() {
 	local devspace="HTTP~lv/GCC/URI HTTP~eradicator/gcc/URI HTTP~vapier/dist/URI
 	HTTP~halcy0n/patches/URI HTTP~zorry/patches/gcc/URI HTTP~dirtyepic/dist/URI"
@@ -316,11 +308,6 @@ get_gcc_src_uri() {
 	# uclibc lovin
 	[[ -n ${UCLIBC_VER} ]] && \
 		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2)"
-
-	# PERL cannot be present at bootstrap, and is used to build the man pages.
-	# So... lets include some pre-generated ones, shall we?
-	[[ -n ${MAN_VER} ]] && \
-		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${MAN_VER}-manpages.tar.bz2)"
 
 	# various gentoo patches
 	[[ -n ${PATCH_VER} ]] && \
@@ -1567,10 +1554,6 @@ toolchain_src_compile() {
 	# Build in a separate build tree
 	mkdir -p "${WORKDIR}"/build
 	pushd "${WORKDIR}"/build > /dev/null
-
-	# Install our pre generated manpages if we do not have perl ...
-	[[ ! -x /usr/bin/perl ]] && [[ -n ${MAN_VER} ]] && \
-		unpack gcc-${MAN_VER}-manpages.tar.bz2
 
 	einfo "Configuring ${PN} ..."
 	gcc_do_configure
