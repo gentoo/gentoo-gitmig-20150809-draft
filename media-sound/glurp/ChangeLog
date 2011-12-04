@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glurp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.30 2011/12/02 20:50:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.31 2011/12/04 14:57:02 hwoarang Exp $
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> glurp-0.12.3.ebuild:
+  Stable on amd64 wrt bug #392867
 
   02 Dec 2011; Tim Harder <radhermit@gentoo.org> glurp-0.12.3.ebuild:
   Update to EAPI 4 and fix dependencies.
