@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/catdvi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.10 2011/12/04 14:39:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.11 2011/12/04 20:59:27 ulm Exp $
+
+  04 Dec 2011; Ulrich Mueller <ulm@gentoo.org> -catdvi-0.14.ebuild:
+  Remove old.
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> catdvi-0.14-r1.ebuild:
   Stable on amd64 wrt bug #391289
