@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.103 2011/11/02 20:48:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.104 2011/12/04 15:47:33 dilfridge Exp $
+
+  04 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> kalgebra-4.7.3.ebuild:
+  Restrict tests, bug 382561
 
 *kalgebra-4.7.3 (02 Nov 2011)
 

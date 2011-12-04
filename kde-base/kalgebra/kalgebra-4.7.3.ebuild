@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.7.3.ebuild,v 1.1 2011/11/02 20:48:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.7.3.ebuild,v 1.2 2011/12/04 15:47:33 dilfridge Exp $
 
 EAPI=4
 
@@ -25,6 +25,9 @@ KMEXTRACTONLY="
 KMEXTRA="
 	libkdeedu/qtmmlwidget/
 "
+
+RESTRICT="test"
+# bug 382561
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.5.73-solaris-graph2d.patch
