@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-2.0.8.ebuild,v 1.3 2011/12/01 19:43:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-2.0.8.ebuild,v 1.4 2011/12/04 14:38:05 hwoarang Exp $
 
 inherit eutils versionator
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://wifi-radar.berlios.de/"
 SRC_URI="mirror://berlios/wifi-radar/wifi-radar-${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="svg"
 
 RDEPEND=">=dev-python/pygtk-2.16.0-r1

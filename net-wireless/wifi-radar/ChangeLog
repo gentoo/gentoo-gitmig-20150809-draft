@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wifi-radar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.24 2011/12/01 19:43:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.25 2011/12/04 14:38:05 hwoarang Exp $
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> wifi-radar-2.0.8.ebuild:
+  Stable on amd64 wrt bug #391487
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> wifi-radar-2.0.8.ebuild:
   x86 stable wrt bug #391487
