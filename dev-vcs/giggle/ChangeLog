@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/giggle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.9 2011/12/04 16:34:44 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.10 2011/12/04 20:59:34 ikelos Exp $
+
+  04 Dec 2011; Mike Auty <ikelos@gentoo.org> giggle-0.6.1.ebuild:
+  Fix up missing dependencies, closes bug 393171.
 
 *giggle-0.6.1 (04 Dec 2011)
 
