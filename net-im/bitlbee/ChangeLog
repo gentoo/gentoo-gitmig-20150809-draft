@@ -1,6 +1,12 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.148 2011/11/14 23:31:48 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.149 2011/12/04 21:18:10 radhermit Exp $
+
+*bitlbee-3.0.4 (04 Dec 2011)
+
+  04 Dec 2011; Tim Harder <radhermit@gentoo.org> +bitlbee-3.0.4.ebuild,
+  files/bitlbee.initd:
+  Version bump. Update init script to fix deprecated flag usage.
 
 *bitlbee-3.0.3-r1 (14 Nov 2011)
 
