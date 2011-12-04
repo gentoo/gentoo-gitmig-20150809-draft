@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.7.3.ebuild,v 1.2 2011/11/05 19:56:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.7.3.ebuild,v 1.3 2011/12/04 20:50:06 dilfridge Exp $
 
 EAPI=4
 
@@ -21,6 +21,9 @@ DEPEND="
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep ktimezoned)
 "
+
+RESTRICT="test"
+# bug 393135
 
 KMLOADLIBS="kdepim-common-libs"
 
