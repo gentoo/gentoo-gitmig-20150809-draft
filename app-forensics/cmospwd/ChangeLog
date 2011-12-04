@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/cmospwd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.16 2011/12/02 04:11:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.17 2011/12/04 12:42:42 hwoarang Exp $
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> cmospwd-5.1.ebuild:
+  Stable on amd64 wrt bug #392779
 
   02 Dec 2011; Tim Harder <radhermit@gentoo.org> cmospwd-5.1.ebuild:
   Remove empty (R)DEPEND.
