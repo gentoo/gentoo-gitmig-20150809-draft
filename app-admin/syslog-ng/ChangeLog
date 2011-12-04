@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.312 2011/11/28 21:24:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.313 2011/12/04 09:53:39 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/syslog-ng.rc6.3:
+  move reload to extra_started_commands in 3.2 init script
 
 *syslog-ng-3.3.3 (28 Nov 2011)
 
