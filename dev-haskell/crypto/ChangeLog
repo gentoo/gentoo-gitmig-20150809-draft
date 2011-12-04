@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/crypto
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/ChangeLog,v 1.1 2011/12/04 17:22:41 slyfox Exp $
+
+*crypto-4.2.4 (04 Dec 2011)
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> +crypto-4.2.4.ebuild,
+  +metadata.xml:
+  Initial version. Haskell cryptographic functions (dev-haskell/hs3 depend)
+
