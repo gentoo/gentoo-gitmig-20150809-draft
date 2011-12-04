@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-HiRes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.70 2011/11/30 03:49:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.71 2011/12/04 21:14:59 maekke Exp $
+
+  04 Dec 2011; Markus Meier <maekke@gentoo.org> Time-HiRes-1.972.200.ebuild:
+  arm stable, bug #391567
 
   30 Nov 2011; Jeroen Roovers <jer@gentoo.org> Time-HiRes-1.972.200.ebuild:
   Stable for HPPA (bug #391567).
