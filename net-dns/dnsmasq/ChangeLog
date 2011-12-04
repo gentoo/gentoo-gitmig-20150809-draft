@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.210 2011/11/09 01:32:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.211 2011/12/04 10:28:47 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/dnsmasq-init,
+  files/dnsmasq-init-r1:
+  reload is extra_started_commands
 
 *dnsmasq-2.59 (09 Nov 2011)
 
