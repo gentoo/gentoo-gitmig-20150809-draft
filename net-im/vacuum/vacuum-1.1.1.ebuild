@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-1.1.1.ebuild,v 1.1 2011/09/03 14:49:57 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-1.1.1.ebuild,v 1.2 2011/12/04 22:09:03 maksbotan Exp $
 
 EAPI="4"
 LANGS="de pl ru uk"
@@ -47,6 +47,13 @@ DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS CHANGELOG README TRANSLATORS"
 
+src_prepare() {
+	default
+
+	epatch "${FILESDIR}"/${P}-minizip.patch
+	epatch "${FILESDIR}"/${P}-zlib.patch
+}
+
 src_configure() {
 	# linguas
 	local langs="none;"
@@ -59,6 +66,7 @@ src_configure() {
 		-DINSTALL_SDK=ON
 		-DLANGS="${langs}"
 		-DINSTALL_DOCS=OFF
+		-DFORCE_BUNDLED_MINIZIP=ON
 	)
 
 	for x in ${PLUGINS}; do
