@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.60 2011/11/28 11:43:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.61 2011/12/04 16:43:32 hwoarang Exp $
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> encfs-1.7.4.ebuild:
+  Stable on amd64 wrt bug #346299
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> encfs-1.7.4.ebuild:
   x86 stable wrt bug #346299

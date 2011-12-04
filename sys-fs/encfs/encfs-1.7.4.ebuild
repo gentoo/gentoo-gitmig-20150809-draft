@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.7.4.ebuild,v 1.3 2011/11/28 11:43:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.7.4.ebuild,v 1.4 2011/12/04 16:43:32 hwoarang Exp $
 
 EAPI=2
 inherit eutils multilib versionator
@@ -11,7 +11,7 @@ SRC_URI="http://encfs.googlecode.com/files/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="xattr"
 
 RDEPEND=">=dev-libs/boost-1.34
