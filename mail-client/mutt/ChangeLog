@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.220 2011/08/26 18:04:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.221 2011/12/04 21:05:40 grobian Exp $
+
+  04 Dec 2011; Fabian Groffen <grobian@gentoo.org> mutt-1.5.21-r7.ebuild:
+  Add USE=selinux and depend on sec-policy/selinux-mutt following -dev ML
+  request
 
 *mutt-1.5.21-r7 (26 Aug 2011)
 
