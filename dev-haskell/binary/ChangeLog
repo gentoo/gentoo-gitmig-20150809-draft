@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.14 2011/08/01 20:24:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.15 2011/12/04 16:24:20 slyfox Exp $
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> -binary-0.4.1.ebuild,
+  -binary-0.4.2.ebuild, binary-0.5.0.2.ebuild, metadata.xml:
+  Removed old. While at it extended metadata description.
 
   01 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> binary-0.5.0.2.ebuild,
   +files/binary-0.5.0.2-ghc-7.patch:
