@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vlock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.44 2011/12/02 16:07:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.45 2011/12/04 18:12:06 armin76 Exp $
+
+  04 Dec 2011; Raúl Porcel <armin76@gentoo.org> vlock-2.2.3.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #392351
 
   02 Dec 2011; Jeroen Roovers <jer@gentoo.org> vlock-2.2.3.ebuild:
   Stable for HPPA (bug #392351).
