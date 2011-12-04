@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.198 2011/11/05 19:55:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.199 2011/12/04 20:33:21 dilfridge Exp $
+
+  04 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kaddressbook-4.7.3.ebuild:
+  Restrict tests, bug 393127
 
   05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
   kaddressbook-4.7.3.ebuild:
