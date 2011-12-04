@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.5.7.ebuild,v 1.1 2011/12/04 10:53:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.5.7.ebuild,v 1.2 2011/12/04 22:23:17 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ src_install() {
 	insinto "/${MY_HTDOCSDIR}"
 	doins -r * || die "Could not copy the files to ${MY_HTDOCSDIR}."
 	keepdir "/${MY_HTDOCSDIR}"/feed-icons
-	
+
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}"/ttrssd.logrotated ttrssd || die "Installing ttrssd logrotate config failed."
 
