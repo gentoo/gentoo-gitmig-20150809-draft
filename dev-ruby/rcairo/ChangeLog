@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.67 2011/11/24 07:11:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.68 2011/12/04 14:07:44 armin76 Exp $
+
+  04 Dec 2011; Raúl Porcel <armin76@gentoo.org> rcairo-1.10.2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #391759
 
 *rcairo-1.10.2 (24 Nov 2011)
 
