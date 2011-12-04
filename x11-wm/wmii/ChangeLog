@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/wmii
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.39 2011/05/29 08:36:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.40 2011/12/04 21:40:47 ssuominen Exp $
+
+*wmii-3.9.2-r2 (04 Dec 2011)
+
+  04 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +wmii-3.9.2-r2.ebuild:
+  Use system copy of sys-libs/libixp wrt #323037
 
   29 May 2011; Kacper Kowalik <xarthisius@gentoo.org> wmii-3.9.2-r1.ebuild:
   Fix underlinking wrt #369115
