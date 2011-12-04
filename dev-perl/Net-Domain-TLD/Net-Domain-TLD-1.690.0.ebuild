@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/Net-Domain-TLD-1.690.0.ebuild,v 1.4 2011/12/04 14:51:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/Net-Domain-TLD-1.690.0.ebuild,v 1.5 2011/12/04 18:02:16 armin76 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Current list of available top level domain names including new ICANN additions and ccTLDs"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 hppa ~mips ~ppc ~ppc64 x86"
 IUSE="test"
 
 RDEPEND=""
