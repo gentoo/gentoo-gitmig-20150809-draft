@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pynut
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynut/ChangeLog,v 1.2 2009/11/14 22:52:00 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynut/ChangeLog,v 1.3 2011/12/04 14:04:53 jlec Exp $
+
+*pynut-1.2 (04 Dec 2011)
+
+  04 Dec 2011; Justin Lecher <jlec@gentoo.org> +pynut-1.2.ebuild, metadata.xml:
+  Version Bump
 
   14 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pynut-1.1.ebuild:
