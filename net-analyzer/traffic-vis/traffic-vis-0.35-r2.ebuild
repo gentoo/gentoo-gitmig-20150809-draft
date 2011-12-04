@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35-r2.ebuild,v 1.3 2011/07/08 11:09:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35-r2.ebuild,v 1.4 2011/12/04 11:24:35 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mindrot.org/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 IUSE="gif"
 DEPEND="net-libs/libpcap
@@ -20,6 +20,8 @@ DEPEND="net-libs/libpcap
 		app-text/ghostscript-gpl
 		dev-lang/perl )
 	=dev-libs/glib-1.2*"
+
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
@@ -29,13 +31,14 @@ src_prepare() {
 	sed -i frontends/traffic-togif \
 		-e "s:/usr/sbin/traffic-tops:/usr/bin/traffic-tops:g" \
 		|| die "sed frontends/traffic-togif"
-
+	# drop DEBUG flags
+	sed -i -e "/^DEBUGFLAGS/d" Makefile || die
 	tc-export CC
 }
 
 src_install() {
-	dosbin collector/traffic-collector
-	doman collector/traffic-collector.8
+	dosbin collector/traffic-collector || die
+	doman collector/traffic-collector.8 || die
 
 	for mybin in $(use gif && echo frontends/traffic-togif) \
 			frontends/traffic-tohtml \
@@ -45,12 +48,12 @@ src_install() {
 			utils/traffic-exclude \
 			utils/traffic-resolve ; do
 
-		dobin ${mybin}
-		doman ${mybin}.8
+		dobin ${mybin} || die
+		doman ${mybin}.8 || die
 	done
 
-	newinitd "${FILESDIR}"/traffic-vis.init.d traffic-vis
-	newconfd "${FILESDIR}"/traffic-vis.conf.d traffic-vis
+	newinitd "${FILESDIR}"/traffic-vis.init.d traffic-vis || die
+	newconfd "${FILESDIR}"/traffic-vis.conf.d traffic-vis || die
 
-	dodoc TODO README BUGS CHANGELOG
+	dodoc TODO README BUGS CHANGELOG || die
 }

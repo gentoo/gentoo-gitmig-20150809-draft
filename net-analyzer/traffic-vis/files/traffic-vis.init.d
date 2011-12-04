@@ -1,9 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/files/traffic-vis.init.d,v 1.3 2004/07/14 23:13:45 agriffis Exp $
-
-opts="depend start stop"
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/files/traffic-vis.init.d,v 1.4 2011/12/04 11:24:35 hwoarang Exp $
 
 depend() {
 	need net
