@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.5_p20110208-r2.ebuild,v 1.1 2011/12/04 21:38:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.5_p20110208-r2.ebuild,v 1.2 2011/12/04 21:40:10 ssuominen Exp $
 
 # hg clone http://hg.suckless.org/libixp
 
@@ -37,11 +37,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake "${myixpconf[@]}" || die
+	emake "${myixpconf[@]}"
 }
 
 src_install() {
-	emake "${myixpconf[@]}" DESTDIR="${D}" install || die
-	dolib.so lib/libixp{,_pthread}.so || die
+	emake "${myixpconf[@]}" DESTDIR="${D}" install
+	dolib.so lib/libixp{,_pthread}.so
 	dodoc NEWS
 }
