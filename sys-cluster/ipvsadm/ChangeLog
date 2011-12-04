@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ipvsadm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.56 2011/10/27 16:15:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.57 2011/12/04 10:40:20 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/ipvsadm-init:
+  replace opts with extra_commands
 
   27 Oct 2011; Jeroen Roovers <jer@gentoo.org> ipvsadm-1.26-r2.ebuild:
   Fix libnl dependency (bug #382475).
