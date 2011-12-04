@@ -2,12 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-	<email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
-	</maintainer>
-	<maintainer>
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
+	</maintainer>
+	<maintainer>
+	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
 	</maintainer>
 	<longdescription>FreeRDP is a fork of the rdesktop project that intends to rapidly start moving forward and implement features that rdesktop lacks the most.</longdescription>
 <use>
