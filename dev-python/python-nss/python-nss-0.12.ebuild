@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/python-nss-0.12.ebuild,v 1.1 2011/12/04 12:42:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/python-nss-0.12.ebuild,v 1.2 2011/12/04 22:22:49 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}"
 DOCS="README doc/ChangeLog"
 
 src_prepare() {
-	# RHB #754750 ; bgo #390869	
+	# RHB #754750 ; bgo #390869
 	epatch "${FILESDIR}/python-nss-0.12-rsapssparams.patch"
 }
 
