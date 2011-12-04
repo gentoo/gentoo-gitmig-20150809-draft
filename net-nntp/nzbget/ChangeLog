@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.36 2011/08/30 21:41:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.37 2011/12/04 10:44:19 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/nzbget.initd:
+  replace opts with extra_started_commands
 
 *nzbget-0.8.0_pre394 (30 Aug 2011)
 

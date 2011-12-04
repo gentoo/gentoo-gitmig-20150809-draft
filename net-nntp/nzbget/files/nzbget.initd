@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/files/nzbget.initd,v 1.1 2008/06/07 21:19:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/files/nzbget.initd,v 1.2 2011/12/04 10:44:19 swegener Exp $
 
-opts="pause unpause"
+extra_started_commands="pause unpause"
 
 depend() {
 	need net
