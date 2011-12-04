@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/hxt-unicode
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-unicode/ChangeLog,v 1.1 2011/12/04 16:49:29 slyfox Exp $
+
+*hxt-unicode-9.0.1 (04 Dec 2011)
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +hxt-unicode-9.0.1.ebuild, +metadata.xml:
+  Initial version. Unicode en-/decoding functions for utf8, iso-latin-* and
+  other encodings (dev-haskell/hxt depend)
+
