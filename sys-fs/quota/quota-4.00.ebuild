@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.00.ebuild,v 1.1 2011/09/14 04:58:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.00.ebuild,v 1.2 2011/12/04 16:48:58 vapier Exp $
 
 EAPI="2"
 
@@ -16,7 +16,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ldap netlink nls rpc tcpd"
 
 RDEPEND="ldap? ( >=net-nds/openldap-2.3.35 )
-	netlink? ( sys-apps/dbus dev-libs/libnl )
+	netlink? (
+		sys-apps/dbus
+		dev-libs/libnl:1.1
+	)
 	rpc? ( net-nds/rpcbind )
 	tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${RDEPEND}
