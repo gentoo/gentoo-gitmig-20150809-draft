@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20101015-r1.ebuild,v 1.4 2011/11/28 11:47:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20101015-r1.ebuild,v 1.5 2011/12/04 16:44:57 hwoarang Exp $
 
 # Use svn snapshots:
 # https://sourceforge.net/tracker/?func=detail&atid=603423&aid=3041832&group_id=93175
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/linux-sources"
