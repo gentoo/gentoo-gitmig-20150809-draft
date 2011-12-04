@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.75 2011/11/14 02:23:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.76 2011/12/04 10:14:13 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/radvd.init:
+  reload is extra_started_commands
 
 *radvd-1.8.3 (14 Nov 2011)
 
