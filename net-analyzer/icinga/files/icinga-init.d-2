@@ -1,11 +1,11 @@
 #!/sbin/runscript
 
-opts="${opts} reload checkconfig"
+extra_commands="${extra_commands} reload checkconfig"
 
 depend() {
 	need net
 	use dns logger firewall
-	after mysql postgresql
+	after mysql postgresql ido2db
 }
 
 reload()
