@@ -1,9 +1,10 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/nut-2.2.2-init.d-upsd,v 1.1 2008/06/25 02:29:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/nut-2.2.2-init.d-upsd,v 1.2 2011/12/04 10:43:19 swegener Exp $
 
-opts="reload"
+extra_started_commands="reload"
+
 pidfile=/var/lib/nut/upsd.pid
 bin=/usr/sbin/upsd
 
