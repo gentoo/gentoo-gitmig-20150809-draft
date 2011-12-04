@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/seed-3.2.0.ebuild,v 1.1 2011/11/03 03:24:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/seed-3.2.0-r1.ebuild,v 1.1 2011/12/04 05:11:51 tetromino Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="1.11"
@@ -56,7 +56,8 @@ pkg_setup() {
 		--enable-dbus-module
 		--enable-mpfr-module
 		--enable-sqlite-module
-		--enable-libxml-module"
+		--enable-libxml-module
+		--docdir=${EPREFIX}/usr/share/doc/${PF}/html"
 
 	# configure behaves very strangely and enables profiling if we pass either
 	# --disable-profile or --enable-profile
@@ -86,4 +87,10 @@ src_prepare() {
 
 src_test() {
 	Xemake check
+}
+
+src_install() {
+	gnome2_src_install
+	# Don't install two copies of standard doc files
+	rm "${ED}/usr/share/doc/${PF}/html/"{AUTHORS,ChangeLog,COPYING,INSTALL,README} || die
 }

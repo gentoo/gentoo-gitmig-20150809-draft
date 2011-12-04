@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/seed
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/ChangeLog,v 1.5 2011/11/24 19:49:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/ChangeLog,v 1.6 2011/12/04 05:11:51 tetromino Exp $
+
+*seed-3.2.0-r1 (04 Dec 2011)
+
+  04 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> -seed-3.2.0.ebuild,
+  +seed-3.2.0-r1.ebuild:
+  Fix docs directory (bug #392445, thanks to Chris Mayo <aklhfex@gmail.com> for
+  reporting).
 
   24 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   -files/seed-2.31.5-cleanup-autotools.patch, -seed-3.0.0.ebuild:
