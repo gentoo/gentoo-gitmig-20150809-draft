@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/i855crt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/ChangeLog,v 1.7 2007/04/08 11:43:31 blubb Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/ChangeLog,v 1.8 2011/12/04 16:55:22 jer Exp $
+
+  04 Dec 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove meaningless maintainer tag.
 
   08 Apr 2007; Simon Stelling <blubb@gentoo.org> metadata.xml:
   reassign to maintainer-needed
