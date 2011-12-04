@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.5 2011/06/14 17:08:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.6 2011/12/04 13:55:27 grobian Exp $
 
 EAPI=3
 
@@ -52,6 +52,9 @@ src_prepare() {
 		sbin/rc-services.sh
 	# add the host OS MANPATH
 	echo 'MANPATH="/usr/share/man"' > etc/env.d/99basic || die "can't make file"
+
+	# avoid a re-automake run
+	touch -r gnulib/configure.ac gnulib/Makefile.in gnulib/aclocal.m4 || die
 }
 
 src_configure() {
