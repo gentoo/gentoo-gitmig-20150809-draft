@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.24 2011/10/27 15:08:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.25 2011/12/04 20:23:45 rajiv Exp $
+
+  04 Dec 2011; Rajiv Aaron Manglani <rajiv@gentoo.org> -ack-1.92.ebuild:
+  cleanup.
 
   27 Oct 2011; Tony Vroon <chainsaw@gentoo.org> ack-1.94-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
