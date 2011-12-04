@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.13 2011/09/10 11:45:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.14 2011/12/04 09:58:39 hwoarang Exp $
 
 EAPI=3
 
@@ -30,8 +30,8 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	intltoolize --force --copy --automake || die
-	# drop -O0. Bug #382265
-	sed -i -e "s:-O0::" "${S}"/configure.ac
+	# drop -O0 -g. Bug #382265 and #382265
+	sed -i -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" "${S}"/configure.ac || die
 	eautoreconf
 }
 
