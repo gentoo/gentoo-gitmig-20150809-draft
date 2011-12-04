@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.66 2011/07/02 10:27:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.67 2011/12/04 10:10:49 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/ulogd-0.98,
+  files/ulogd:
+  move reload to extra_started_commands
 
   02 Jul 2011; Diego E. Pettenò <flameeyes@gentoo.org> ulogd-1.23-r1.ebuild,
   ulogd-1.24-r2.ebuild:

@@ -5,8 +5,7 @@
 #
 # config:  /etc/ulogd.conf
 
-
-opts="${opts} reload"
+extra_started_commands="reload"
 
 depend() {
 	need net

@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/files/ulogd,v 1.3 2009/08/10 06:01:18 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/files/ulogd,v 1.4 2011/12/04 10:10:49 swegener Exp $
 
-opts="reload"
+extra_started_commands="reload"
 
 depend() {
 	need net
