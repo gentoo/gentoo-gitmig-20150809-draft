@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.33 2011/12/03 20:43:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.34 2011/12/04 06:52:39 ferringb Exp $
+
+  04 Dec 2011; Brian Harring <ferringb@gentoo.org> java-vm-2.eclass:
+  Fix IFS=: bleeding out from java-vm_sandbox-predict invocations.
 
   03 Dec 2011; Ulrich Mueller <ulm@gentoo.org> elisp.eclass,
   elisp-common.eclass:
