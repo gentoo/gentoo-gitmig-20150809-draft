@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hslogger
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.8 2011/08/02 17:51:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.9 2011/12/04 17:29:21 slyfox Exp $
+
+*hslogger-1.1.5 (04 Dec 2011)
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> +hslogger-1.1.5.ebuild:
+  Version bump.
 
   02 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> -hslogger-1.0.1.ebuild,
   -hslogger-1.0.2.ebuild, -hslogger-1.0.7.ebuild:
