@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.491 2011/12/04 22:23:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.492 2011/12/04 22:54:59 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -2187,17 +2187,15 @@ setup_multilib_osdirnames() {
 }
 
 disable_multilib_libjava() {
-	if is_gcj ; then
-		# We dont want a multilib libjava, so lets use this hack taken from fedora
-		pushd "${S}" > /dev/null
-		sed -i -e 's/^all: all-redirect/ifeq (\$(MULTISUBDIR),)\nall: all-redirect\nelse\nall:\n\techo Multilib libjava build disabled\nendif/' libjava/Makefile.in
-		sed -i -e 's/^install: install-redirect/ifeq (\$(MULTISUBDIR),)\ninstall: install-redirect\nelse\ninstall:\n\techo Multilib libjava install disabled\nendif/' libjava/Makefile.in
-		sed -i -e 's/^check: check-redirect/ifeq (\$(MULTISUBDIR),)\ncheck: check-redirect\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
-		sed -i -e 's/^all: all-recursive/ifeq (\$(MULTISUBDIR),)\nall: all-recursive\nelse\nall:\n\techo Multilib libjava build disabled\nendif/' libjava/Makefile.in
-		sed -i -e 's/^install: install-recursive/ifeq (\$(MULTISUBDIR),)\ninstall: install-recursive\nelse\ninstall:\n\techo Multilib libjava install disabled\nendif/' libjava/Makefile.in
-		sed -i -e 's/^check: check-recursive/ifeq (\$(MULTISUBDIR),)\ncheck: check-recursive\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
-		popd > /dev/null
-	fi
+	# We dont want a multilib libjava, so lets use this hack taken from fedora
+	sed -i -r \
+		-e 's/^((all:) all-redirect)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
+		-e 's/^((install:) install-redirect)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
+		-e 's/^((check:) check-redirect)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
+		-e 's/^((all:) all-recursive)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
+		-e 's/^((install:) install-recursive)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
+		-e 's/^((check:) check-recursive)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
+		"${S}"/libjava/Makefile.in || die
 }
 
 # make sure the libtool archives have libdir set to where they actually
