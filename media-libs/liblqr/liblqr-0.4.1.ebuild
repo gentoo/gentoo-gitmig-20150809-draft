@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/liblqr-0.4.1.ebuild,v 1.14 2009/12/10 18:11:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/liblqr-0.4.1.ebuild,v 1.15 2011/12/04 00:49:32 hwoarang Exp $
 
 EAPI="2"
 
@@ -14,7 +14,8 @@ KEYWORDS="alpha amd64 arm hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="dev-libs/glib"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=$WORKDIR/${PN}-1-${PV}
 
