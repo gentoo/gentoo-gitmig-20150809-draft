@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.17.ebuild,v 1.1 2011/10/25 17:57:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.17.ebuild,v 1.2 2011/12/04 09:56:00 hwoarang Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	sed -ie '/SUBDIRS=/s#docs##' "${S}"/Makefile.am || die "sed failed"
-	sed -i -e '/^[[:space:]]*docs/d' -e "s:-O0::" \
+	sed -i -e '/^[[:space:]]*docs/d' -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" \
 		configure.ac || die "sed failed"
 	eautoreconf
 }

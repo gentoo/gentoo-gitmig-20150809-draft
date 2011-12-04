@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.18 2011/09/10 11:43:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.19 2011/12/04 09:56:00 hwoarang Exp $
 
 EAPI=3
 
@@ -45,7 +45,7 @@ src_prepare() {
 		progress;do
 		echo "data/ui/"${trans}.ui >> po/POTFILES.in
 	done
-	sed -i -e "s:-O0::" "${S}"/configure.ac || die
+	sed -i -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" "${S}"/configure.ac || die
 	eautoreconf
 }
 
