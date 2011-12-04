@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/crack-0.3.1.ebuild,v 1.2 2011/12/04 18:41:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/crack-0.3.1.ebuild,v 1.3 2011/12/04 18:46:36 graaff Exp $
 
 EAPI="2"
 
@@ -32,4 +32,16 @@ all_ruby_prepare() {
 	# works fine with the mcmire gem that we package as
 	# dev-ruby/matchy.
 	sed -i -e 's:jnunemaker-matchy:mcmire-matchy:' test/test_helper.rb || die
+}
+
+each_ruby_prepare() {
+	case ${RUBY} in
+		*ruby19)
+			# Remove test suite that is broken for ruby19.
+			# Github Issues 26, 29, 32, 33.
+			rm test/json_test.rb || die
+			;;
+		*)
+			;;
+	esac
 }
