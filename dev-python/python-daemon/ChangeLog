@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-daemon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.5 2010/06/28 08:46:35 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.6 2011/12/04 21:18:14 hwoarang Exp $
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> python-daemon-1.6.ebuild:
+  Update LICENSE. Patch by Arfrever.
 
   28 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   python-daemon-1.6.ebuild:
