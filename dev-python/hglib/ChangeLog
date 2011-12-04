@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/hglib
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hglib/ChangeLog,v 1.1 2011/12/04 12:14:33 maksbotan Exp $
+
+*hglib-0.1 (04 Dec 2011)
+
+  04 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +hglib-0.1.ebuild,
+  +metadata.xml:
+  Added dev-python/hglib-0.1, thanks to Arne Babenhauserheide. Bug #392387
+
