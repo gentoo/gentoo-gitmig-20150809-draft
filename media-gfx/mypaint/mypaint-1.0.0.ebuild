@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.0.0.ebuild,v 1.1 2011/12/04 10:13:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.0.0.ebuild,v 1.2 2011/12/04 21:19:59 hwoarang Exp $
 
 EAPI=2
 
@@ -23,7 +23,8 @@ RDEPEND="dev-python/pygtk
 	dev-libs/protobuf[python]"
 DEPEND="${RDEPEND}
 	>=dev-util/scons-1.0
-	dev-lang/swig"
+	dev-lang/swig
+	dev-util/pkgconfig"
 
 src_prepare() {
 	# multilib support
