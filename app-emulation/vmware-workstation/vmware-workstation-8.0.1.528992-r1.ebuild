@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.1.528992.ebuild,v 1.1 2011/12/03 20:14:02 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.1.528992-r1.ebuild,v 1.1 2011/12/04 13:30:14 vadimk Exp $
 
 EAPI="4"
 
@@ -209,7 +209,7 @@ src_install() {
 		doins -r lib/*
 
 		into "${VM_INSTALL_DIR}"
-		for tool in  vmware-{hostd,vim-cmd,adminTool} ; do
+		for tool in  vmware-{hostd,vim-cmd,wssc-adminTool} ; do
 			cat > "${T}/${tool}" <<-EOF
 				#!/usr/bin/env bash
 				set -e
