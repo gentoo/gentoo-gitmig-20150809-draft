@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.18 2011/11/30 03:55:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.19 2011/12/04 17:48:29 armin76 Exp $
+
+  04 Dec 2011; Raúl Porcel <armin76@gentoo.org> gmm-3.1.ebuild,
+  gmm-4.1.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   30 Nov 2011; Jeroen Roovers <jer@gentoo.org> gmm-4.1.ebuild:
   Stable for HPPA (bug #391651).
