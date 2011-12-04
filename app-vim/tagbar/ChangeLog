@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/tagbar
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tagbar/ChangeLog,v 1.1 2011/12/04 20:25:41 radhermit Exp $
+
+*tagbar-2.2 (04 Dec 2011)
+
+  04 Dec 2011; Tim Harder <radhermit@gentoo.org> +tagbar-2.2.ebuild,
+  +metadata.xml:
+  Initial import.
+
