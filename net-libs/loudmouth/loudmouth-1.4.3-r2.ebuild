@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r2.ebuild,v 1.1 2011/11/02 02:56:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r2.ebuild,v 1.2 2011/12/04 20:23:43 tetromino Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -17,7 +17,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~ppc-macos"
 
 IUSE="asyncns debug doc ssl static-libs test"
 
+# Automagic libidn dependency
 RDEPEND=">=dev-libs/glib-2.4
+	net-dns/libidn
 	ssl? ( >=net-libs/gnutls-1.4.0 )
 	asyncns? ( net-libs/libasyncns )"
 # FIXME:

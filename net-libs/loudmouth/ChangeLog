@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.98 2011/11/02 02:56:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.99 2011/12/04 20:23:43 tetromino Exp $
+
+  04 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  loudmouth-1.4.3.ebuild, loudmouth-1.4.3-r1.ebuild, loudmouth-1.4.3-r2.ebuild:
+  Add missing libidn dep, reported by Agostino Sarubbo.
 
 *loudmouth-1.4.3-r2 (02 Nov 2011)
 
