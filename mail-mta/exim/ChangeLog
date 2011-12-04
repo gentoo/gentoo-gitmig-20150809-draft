@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.211 2011/11/29 18:21:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.212 2011/12/04 10:03:10 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/exim.rc6,
+  files/exim.rc7:
+  drop --oknodo from start-stop-daemon
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/exim.rc6,
+  files/exim.rc7:
+  move reload to extra_started_commands
 
   29 Nov 2011; Fabian Groffen <grobian@gentoo.org>
   +files/exim-4.77-as-needed-ldflags.patch, exim-4.77.ebuild:

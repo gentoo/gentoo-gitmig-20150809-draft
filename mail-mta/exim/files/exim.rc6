@@ -1,8 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/files/exim.rc6,v 1.8 2010/01/16 10:46:47 grobian Exp $
-opts="${opts} reload"
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/files/exim.rc6,v 1.9 2011/12/04 10:03:10 swegener Exp $
+
+extra_started_commands="reload"
 
 depend() {
 	need logger
@@ -24,6 +25,6 @@ stop() {
 
 reload() {
 	ebegin "Reloading exim"
-	start-stop-daemon --stop --signal HUP --oknodo --quiet --pidfile /var/run/exim.pid --name exim
+	start-stop-daemon --signal HUP --pidfile /var/run/exim.pid --name exim
 	eend $?
 }
