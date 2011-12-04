@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.73 2011/11/22 19:12:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.74 2011/12/04 14:46:26 hwoarang Exp $
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> offlineimap-6.3.4.ebuild:
+  Stable on amd64 wrt bug #389703
 
   22 Nov 2011; Thomas Kahle <tomka@gentoo.org> offlineimap-6.4.0.ebuild:
   Add elog to warn about config changes
