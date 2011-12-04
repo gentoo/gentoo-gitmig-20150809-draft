@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.4.0.ebuild,v 1.1 2011/11/27 03:29:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.4.1.ebuild,v 1.1 2011/12/04 22:07:17 blueness Exp $
 
-EAPI=4
+EAPI="4"
 
 DESCRIPTION="Tools to fix ELF binaries to work on Hardened Gentoo"
 HOMEPAGE="http://dev.gentoo.org/~blueness/elfix/"

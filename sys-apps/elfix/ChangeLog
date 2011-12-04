@@ -1,5 +1,12 @@
 
 
+*elfix-0.4.1 (04 Dec 2011)
+
+  04 Dec 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.4.0.ebuild,
+  +elfix-0.4.1.ebuild:
+  Version bump 0.4 branch, fixes -e flag and adds exception handling for
+  setting pax flags 
+
 *elfix-0.4.0 (27 Nov 2011)
 
   27 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.4.0.ebuild,
