@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/svk-1.08.ebuild,v 1.3 2010/06/22 18:51:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/svk-1.08.ebuild,v 1.4 2011/12/04 17:58:18 armin76 Exp $
 
 inherit eutils perl-module bash-completion
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.elixus.org/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="crypt nls pager patch"
 
 DEPEND="

@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/svk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/ChangeLog,v 1.4 2011/02/26 08:43:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/ChangeLog,v 1.5 2011/12/04 17:58:18 armin76 Exp $
+
+  04 Dec 2011; Raúl Porcel <armin76@gentoo.org> svk-1.08.ebuild,
+  svk-2.0.2.ebuild:
+  Drop ia64/sparc keywords
 
   26 Feb 2011; Torsten Veller <tove@gentoo.org> svk-2.0.2.ebuild:
   Change Algorithm-Diff version scheme
