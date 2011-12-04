@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.8.ebuild,v 1.1 2011/11/30 15:13:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.8.ebuild,v 1.2 2011/12/04 20:11:34 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -88,6 +88,7 @@ pkg_setup() {
 
 	if use python ; then
 		python_set_active_version 2
+		python_pkg_setup
 	fi
 }
 
