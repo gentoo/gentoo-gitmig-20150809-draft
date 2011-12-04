@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.10 2011/11/30 10:29:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.11 2011/12/04 15:51:14 scarabeus Exp $
 
 EAPI=4
 
@@ -69,7 +69,7 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer +gtk
+IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer +gtk gtk3
 +jemalloc kde mysql +nsplugin odk opengl pdfimport postgres svg test +vba
 +webdav +xmlsec"
 LICENSE="LGPL-3"
@@ -117,10 +117,8 @@ COMMON_DEPEND="
 		gnome-base/gconf:2
 		gnome-base/orbit
 	)
-	gtk? (
-		>=x11-libs/gtk+-2.24:2
-		>=x11-libs/gtk+-3.2:3
-	)
+	gtk? ( >=x11-libs/gtk+-2.24:2 )
+	gtk3? ( >=x11-libs/gtk+-3.2:3 )
 	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
@@ -434,7 +432,7 @@ src_configure() {
 		$(use_enable graphite) \
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
-		$(use_enable gtk gtk3) \
+		$(use_enable gtk3) \
 		$(use_enable gtk systray) \
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
