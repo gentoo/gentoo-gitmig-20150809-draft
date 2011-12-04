@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.7.4.ebuild,v 1.4 2011/03/02 17:44:48 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.7.4.ebuild,v 1.5 2011/12/04 16:38:00 jer Exp $
 
 EAPI=2
 DESCRIPTION="MaCoPiX (Mascot Constructive Pilot for X) is a desktop mascot application on UNIX / X Window system."
@@ -42,6 +42,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
+	export LIBS="-lX11"
 	econf \
 		--with-gtk2 \
 		$(use_enable nls) \
