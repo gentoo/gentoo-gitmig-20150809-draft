@@ -14,5 +14,7 @@
     <flag name="sdbox">Add sdbox storage support</flag>
     <flag name="sieve">Add sieve support</flag>
     <flag name="vpopmail">Add vpopmail support</flag>
+    <flag name="imapc">Add imap client storage support</flag>
+    <flag name="lucene">Add lucene full text search (FTS) support using <pkg>dev-cpp/clucene</pkg></flag>
   </use>
 </pkgmetadata>
