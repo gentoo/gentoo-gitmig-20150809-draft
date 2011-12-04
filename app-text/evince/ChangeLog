@@ -1,6 +1,11 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.234 2011/11/26 02:45:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.235 2011/12/04 04:34:41 tetromino Exp $
+
+  04 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> evince-3.2.1.ebuild,
+  evince-3.2.1-r1.ebuild:
+  evince-3.x uses docbook-xml-dtd:4.3, not 4.1.2 (bug #392263, thanks to
+  markus.heuberger@gmx.net for reporting).
 
   26 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> evince-3.2.1.ebuild,
   evince-3.2.1-r1.ebuild:
