@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.11.ebuild,v 1.2 2011/11/30 12:38:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.11.ebuild,v 1.3 2011/12/04 15:59:31 scarabeus Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ RDEPEND="
 	app-text/libwpg:0.2
 "
 DEPEND="${DEPEND}
+	dev-util/pkgconfig
 	sys-devel/libtool
 	doc? ( app-doc/doxygen )
 "
