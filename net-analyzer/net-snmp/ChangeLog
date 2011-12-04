@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.222 2011/04/19 23:38:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.223 2011/12/04 10:17:16 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/snmpd.init:
+  move reload to extra_started_commands
 
 *net-snmp-5.6.1 (19 Apr 2011)
 
