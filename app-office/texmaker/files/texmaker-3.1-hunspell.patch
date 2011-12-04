@@ -1,25 +1,28 @@
- configdialog.cpp   |    2 +-
+ configdialog.cpp   |    4 ++--
  latexeditor.h      |    2 +-
  latexeditorview.h  |    2 +-
  latexhighlighter.h |    2 +-
  spellerdialog.h    |    2 +-
  texmaker.h         |    2 +-
- texmaker.pro       |   36 +++---------------------------------
- 7 files changed, 9 insertions(+), 39 deletions(-)
+ texmaker.pro       |   42 ++++++------------------------------------
+ 7 files changed, 13 insertions(+), 43 deletions(-)
 
 diff --git a/configdialog.cpp b/configdialog.cpp
-index 136072d..1ead573 100644
+index 136072d..550db58 100644
 --- a/configdialog.cpp
 +++ b/configdialog.cpp
-@@ -122,7 +122,7 @@ void ConfigDialog::browseAspell()
+@@ -122,9 +122,9 @@ void ConfigDialog::browseAspell()
  QDir spelldir(QCoreApplication::applicationDirPath());
  #else
  #ifdef DEBIAN_SPELLDIR
 -QDir spelldir(PREFIX"/share/myspell/dicts");
-+QDir spelldir(PREFIX"/share/myspell");
++QDir spelldir("@GENTOO_PORTAGE_EPREFIX@/usr/share/myspell");
  #else
- QDir spelldir(PREFIX"/share/texmaker");
+-QDir spelldir(PREFIX"/share/texmaker");
++QDir spelldir("@GENTOO_PORTAGE_EPREFIX@/usr/share/texmaker");
  #endif
+ #endif
+ 
 diff --git a/latexeditor.h b/latexeditor.h
 index b9b8d75..a9ec1ef 100644
 --- a/latexeditor.h
@@ -86,7 +89,7 @@ index fa56129..4b1367e 100644
  #include "pdfviewerwidget.h"
  #include "pdfviewer.h"
 diff --git a/texmaker.pro b/texmaker.pro
-index 5c90e44..9ed3123 100644
+index 5c90e44..4513937 100644
 --- a/texmaker.pro
 +++ b/texmaker.pro
 @@ -4,7 +4,8 @@ TARGET	 = texmaker
@@ -144,7 +147,16 @@ index 5c90e44..9ed3123 100644
  	singleapp/qtlocalpeer.cpp \
  	singleapp/qtlockedfile.cpp \
  	singleapp/qtsingleapplication.cpp \
-@@ -268,7 +238,7 @@ LIBS         += -L/usr/lib -lz
+@@ -262,13 +232,13 @@ isEmpty( ICONDIR ) {
+     ICONDIR=/usr/share/pixmaps
+ }
+ 
+-INCLUDEPATH  += /usr/include/poppler/qt4
+-LIBS         += -L/usr/lib -lpoppler-qt4
+-LIBS         += -L/usr/lib -lz
++INCLUDEPATH  += @GENTOO_PORTAGE_EPREFIX@/usr/include/poppler/qt4
++LIBS         += -lpoppler-qt4
++LIBS         += -lz
  DEFINES += PREFIX=\\\"$${PREFIX}\\\"
  target.path = $${PREFIX}/bin
  

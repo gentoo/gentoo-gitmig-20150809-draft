@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.1.ebuild,v 1.2 2011/11/28 10:31:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.1.ebuild,v 1.3 2011/12/04 10:10:03 jlec Exp $
 
 EAPI="3"
 
-inherit base qt4-r2 versionator
+inherit base prefix qt4-r2 versionator
 
 # The upstream version numbering is bad, so we have to remove a dot in the
 # minor version number
@@ -48,8 +48,13 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=( "${FILESDIR}/${P}-hunspell.patch" )
 
+src_prepare() {
+	qt4-r2_src_prepare
+	eprefixify ${PN}.pro configdialog.cpp
+}
+
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "make install failed"
+	emake INSTALL_ROOT="${ED}" install || die "make install failed"
 
 	insinto /usr/share/pixmaps/texmaker
 	doins utilities/texmaker*.png || die "doins failed."
@@ -60,5 +65,5 @@ src_install() {
 
 pkg_postinst() {
 	elog "A user manual with many screenshots is available at:"
-	elog "/usr/share/${PN}/usermanual_en.html"
+	elog "${EPREFIX}/usr/share/${PN}/usermanual_en.html"
 }

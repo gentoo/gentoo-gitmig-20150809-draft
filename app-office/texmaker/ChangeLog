@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.86 2011/11/28 10:31:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.87 2011/12/04 10:10:03 jlec Exp $
+
+  04 Dec 2011; Justin Lecher <jlec@gentoo.org> texmaker-3.1.ebuild,
+  files/texmaker-3.1-hunspell.patch:
+  Respect EPREFIX in all places, fixes poppler-qt4.h: No such file or directory
 
   28 Nov 2011; Justin Lecher <jlec@gentoo.org> texmaker-3.1.ebuild:
   Keyworded for prefix, tested by me
