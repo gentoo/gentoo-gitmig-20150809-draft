@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batmand/batmand-0.3.2.ebuild,v 1.1 2009/11/15 14:55:25 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batmand/batmand-0.3.2-r1.ebuild,v 1.1 2011/12/04 13:58:49 cedk Exp $
 
-inherit eutils toolchain-funcs
+EAPI=2
+
+inherit toolchain-funcs
 
 MY_P=${P/batmand/batman}
 DESCRIPTION="Better approach to mobile Ad-Hoc networking"
@@ -19,24 +21,23 @@ RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
+		-e "/^CFLAGS/s: -O[^[:space:]]* : :" \
+		-e "/^CFLAGS/s: -g[^[:space:]]* : :" \
 		-e "s/-j \$(NUM_CPUS)//" \
-		Makefile || die "sed failed"
+		Makefile || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" V=1 || die
 }
 
 src_install() {
-	dosbin batmand
+	emake INSTALL_PREFIX="${D}" install || die
 
-	newinitd "${FILESDIR}"/batmand-init.d batmand
-	newconfd "${FILESDIR}"/batmand-conf.d batmand
+	newinitd "${FILESDIR}"/batmand-init.d batmand || die
+	newconfd "${FILESDIR}"/batmand-conf.d batmand || die
 
 	doman man/*.8 || die
 
