@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.167 2011/11/25 23:39:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.168 2011/12/04 22:07:32 maekke Exp $
+
+  04 Dec 2011; Markus Meier <maekke@gentoo.org> strace-4.6.ebuild:
+  arm stable, bug #391655
 
   25 Nov 2011; Markos Chandras <hwoarang@gentoo.org> strace-4.6.ebuild:
   Stable on amd64 wrt bug #391655
