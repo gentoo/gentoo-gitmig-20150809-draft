@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.77.ebuild,v 1.4 2011/11/29 18:21:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.77.ebuild,v 1.5 2011/12/04 10:38:17 grobian Exp $
 
 EAPI="3"
 
@@ -327,12 +327,18 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "${EROOT}etc/exim/system_filter.exim is a sample system_filter."
-	einfo "${EROOT}etc/exim/auth_conf.sub contains the configuration sub for using smtp auth."
-	einfo "Please create ${EROOT}etc/exim/exim.conf from ${EROOT}etc/exim/exim.conf.dist."
+	if [[ ! -f ${EROOT}etc/exim/exim.conf ]] ; then
+		einfo "${EROOT}etc/exim/system_filter.exim is a sample system_filter."
+		einfo "${EROOT}etc/exim/auth_conf.sub contains the configuration sub for using smtp auth."
+		einfo "Please create ${EROOT}etc/exim/exim.conf from ${EROOT}etc/exim/exim.conf.dist."
+	fi
 	if use dcc ; then
 		einfo "DCC support is experimental, you can find some limited"
 		einfo "documentation at the bottom of this prerelease message:"
 		einfo "http://article.gmane.org/gmane.mail.exim.devel/3579"
 	fi
+	einfo "Exim maintains some db files under its spool directory that need"
+	einfo "cleaning from time to time.  (${EROOT}var/spool/exim/db)"
+	einfo "Please use the exim_tidydb tool as documented in the Exim manual:"
+	einfo "http://www.exim.org/exim-html-current/doc/html/spec_html/ch50.html#SECThindatmai"
 }
