@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.489 2011/12/03 20:45:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.490 2011/12/04 19:24:04 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -516,17 +516,6 @@ want_minispecs() {
 	fi
 	return 1
 }
-# This function checks whether or not glibc has the support required to build
-# Position Independant Executables with gcc.
-glibc_have_pie() {
-	if [[ ! -f ${ROOT}/usr/$(get_libdir)/Scrt1.o ]] ; then
-		echo
-		ewarn "Your glibc does not have support for pie, the file Scrt1.o is missing"
-		ewarn "Please update your glibc to a proper version or disable hardened"
-		echo
-		return 1
-	fi
-}
 
 # This function determines whether or not libc has been patched with stack
 # smashing protection support.
@@ -903,10 +892,6 @@ toolchain_src_unpack() {
 	do_gcc_SSP_patches
 	do_gcc_PIE_patches
 	epatch_user
-
-	# fail if using pie patches, building hardened, and glibc doesnt have
-	# the necessary support
-	want_pie && use hardened && glibc_have_pie
 
 	if use hardened ; then
 		einfo "updating configuration to build hardened GCC"
