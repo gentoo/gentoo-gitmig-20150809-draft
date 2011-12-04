@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/base-unicode-symbols
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/ChangeLog,v 1.1 2011/12/04 18:04:10 slyfox Exp $
+
+*base-unicode-symbols-0.2.2.2 (04 Dec 2011)
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +base-unicode-symbols-0.2.2.2.ebuild, +metadata.xml:
+  Initial version. Unicode alternatives for common functions and operators (dev-
+  haskell/monad-control depend)
+
