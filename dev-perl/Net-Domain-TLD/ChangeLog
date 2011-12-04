@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Domain-TLD
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/ChangeLog,v 1.24 2011/12/01 19:54:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/ChangeLog,v 1.25 2011/12/04 14:51:00 hwoarang Exp $
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
+  Net-Domain-TLD-1.690.0.ebuild:
+  Stable on amd64 wrt bug #391635
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Net-Domain-TLD-1.690.0.ebuild:
