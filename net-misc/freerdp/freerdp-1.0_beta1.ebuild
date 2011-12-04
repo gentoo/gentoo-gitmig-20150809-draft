@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0_beta1.ebuild,v 1.3 2011/11/14 19:09:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0_beta1.ebuild,v 1.4 2011/12/04 05:10:47 floppym Exp $
 
 EAPI="4"
 
@@ -13,8 +13,7 @@ SRC_URI="https://github.com/downloads/FreeRDP/FreeRDP/FreeRDP-${PV/_/-}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+alsa +cups directfb ffmpeg pulseaudio smartcard sse2 test +X +xcursor
-	+xext +xinerama +xkbfile +xv"
+IUSE="alsa cups directfb doc ffmpeg pulseaudio smartcard sse2 test X xinerama xv"
 
 FREERDP_DEBUG="transport chanman svc dvc kbd nla nego certificate license gdi
 	rfx x11 rail xv scard orders redir"
@@ -31,15 +30,20 @@ RDEPEND="
 	smartcard? ( sys-apps/pcsc-lite )
 	X? (
 		x11-libs/libX11
-		xcursor? ( x11-libs/libXcursor )
-		xext? ( x11-libs/libXext )
+		x11-libs/libXcursor
+		x11-libs/libXext
+		x11-libs/libxkbfile
 		xinerama? ( x11-libs/libXinerama )
 		xv? ( x11-libs/libXv )
 	)
-	xkbfile? ( x11-libs/libxkbfile )
 "
 DEPEND="${RDEPEND}
-	app-text/xmlto
+	doc? (
+		X? (
+			app-text/docbook-xml-dtd:4.1.2
+			app-text/xmlto
+		)
+	)
 	test? ( dev-util/cunit )
 "
 
@@ -57,9 +61,9 @@ CMAKE_VERBOSE=1
 
 src_configure() {
 	local mycmakeargs=(
-		-DWITH_MANPAGES=ON
 		$(cmake-utils_use_with alsa ALSA)
 		$(cmake-utils_use_with cups CUPS)
+		$(cmake-utils_use_with doc MANPAGES)
 		$(cmake-utils_use_with directfb DIRECTFB)
 		$(cmake-utils_use_with ffmpeg FFMPEG)
 		$(cmake-utils_use_with pulseaudio PULSEAUDIO)
@@ -67,10 +71,10 @@ src_configure() {
 		$(cmake-utils_use_with sse2 SSE2)
 		$(cmake-utils_use_with test CUNIT)
 		$(cmake-utils_use_with X X11)
-		$(cmake-utils_use_with xcursor XCURSOR)
-		$(cmake-utils_use_with xext XEXT)
+		$(cmake-utils_use_with X XCURSOR)
+		$(cmake-utils_use_with X XEXT)
+		$(cmake-utils_use_with X XKBFILE)
 		$(cmake-utils_use_with xinerama XINERAMA)
-		$(cmake-utils_use_with xkbfile XKBFILE)
 		$(cmake-utils_use_with xv XV)
 	)
 	for i in ${FREERDP_DEBUG}; do
