@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.238 2011/11/06 23:25:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.239 2011/12/04 20:21:56 mgorny Exp $
+
+  04 Dec 2011; Michał Górny <mgorny@gentoo.org> gentoolkit-9999.ebuild,
+  metadata.xml:
+  Pull in a few of my portage tools as external gentoolkit apps with
+  USE=-minimal.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> gentoolkit-0.3.0.4-r4.ebuild:
   Marking gentoolkit-0.3.0.4-r4 ppc for bug 386679

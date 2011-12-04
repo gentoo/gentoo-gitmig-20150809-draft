@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.17 2011/07/18 21:27:16 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.18 2011/12/04 20:21:56 mgorny Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -21,7 +21,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="minimal"
 
 KEYWORDS=""
 
@@ -31,7 +31,14 @@ RDEPEND="${DEPEND}
 	dev-python/argparse
 	|| ( app-misc/realpath sys-freebsd/freebsd-bin )
 	sys-apps/gawk
-	sys-apps/grep"
+	sys-apps/grep
+	!minimal? (
+		app-portage/diffmask
+		app-portage/eclean-kernel
+		app-portage/flaggie
+		app-portage/install-mask
+		app-portage/smart-live-rebuild
+	)"
 
 distutils_src_compile_pre_hook() {
 	echo VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
