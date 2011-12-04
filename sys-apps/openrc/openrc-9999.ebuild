@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.95 2011/11/30 16:15:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.96 2011/12/04 23:38:53 williamh Exp $
 
 EAPI=4
 
@@ -234,9 +234,6 @@ pkg_preinst() {
 
 	# termencoding was added in 0.2.1 and needed in boot
 	has_version ">=sys-apps/openrc-0.2.1" || add_boot_init termencoding
-
-	# migrate-run was added in 0.9.6 and is needed in boot
-	use kernel_linux && add_boot_init migrate-run
 
 	# set default interactive shell to sulogin if it exists
 	set_config /etc/rc.conf rc_shell /sbin/sulogin "#" test -e /sbin/sulogin
