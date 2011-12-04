@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.2.4.ebuild,v 1.2 2011/12/04 19:03:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.2.4-r1.ebuild,v 1.1 2011/12/04 19:03:22 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="ChangeLog KNOWN-ISSUES README SPEC"
 inherit ruby-fakegem eutils versionator
 
 DESCRIPTION="A modular Ruby webserver interface"
-HOMEPAGE="https://github.com/rack/rack"
+HOMEPAGE="http://rubyforge.org/projects/rack"
 SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
@@ -35,6 +35,10 @@ RDEPEND="${RDEPEND} !<dev-ruby/rack-1.1.0-r1:0"
 
 all_ruby_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.1-gentoo.patch
+
+	# Add missing require for Mutex use. This may show up in the tests
+	# depending on load order.
+	sed -i -e '1 irequire "thread"' lib/rack/lock.rb || die
 }
 
 each_ruby_test() {
