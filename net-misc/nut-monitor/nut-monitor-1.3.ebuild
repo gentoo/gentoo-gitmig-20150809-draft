@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut-monitor/nut-monitor-1.3.ebuild,v 1.1 2011/12/04 14:09:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut-monitor/nut-monitor-1.3.ebuild,v 1.2 2011/12/04 14:29:55 jlec Exp $
 
 EAPI=4
 
@@ -19,6 +19,10 @@ RDEPEND="
 	dev-python/pygtk
 	dev-python/pynut"
 DEPEND=""
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-glade.patch
+}
 
 src_install() {
 	dobin NUT-Monitor
