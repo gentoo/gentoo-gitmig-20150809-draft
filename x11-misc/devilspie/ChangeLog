@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/devilspie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.48 2011/03/21 22:35:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.49 2011/12/04 17:20:18 jer Exp $
+
+  04 Dec 2011; Jeroen Roovers <jer@gentoo.org> devilspie-0.22.ebuild:
+  Add missing R/DEPEND, fix underlinking (bug #370103).
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> devilspie-0.22.ebuild:
   Fix slot-deps on gnome libs
