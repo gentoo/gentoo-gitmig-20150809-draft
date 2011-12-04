@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/posix-spawn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/ChangeLog,v 1.1 2011/04/24 20:57:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/ChangeLog,v 1.2 2011/12/04 11:08:36 graaff Exp $
+
+  04 Dec 2011; Hans de Graaff <graaff@gentoo.org> posix-spawn-0.3.6.ebuild:
+  Merge the ebuild from my overlay. Fix USE=doc, run tests since they work for
+  me.
 
 *posix-spawn-0.3.6 (24 Apr 2011)
 
