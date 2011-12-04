@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.7.3.ebuild,v 1.2 2011/11/05 19:57:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.7.3.ebuild,v 1.3 2011/12/04 17:54:05 dilfridge Exp $
 
 EAPI=4
 
@@ -32,6 +32,9 @@ add_blocker libkpgp
 add_blocker kaddressbook '<4.4.90'
 add_blocker kmail '<4.4.80'
 add_blocker korganizer '<4.5.67'
+
+RESTRICT="test"
+# bug 393131
 
 KMEXTRA="
 	akonadi_next/
