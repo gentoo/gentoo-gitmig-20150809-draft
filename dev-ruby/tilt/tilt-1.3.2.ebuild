@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.3.2.ebuild,v 1.5 2011/11/28 19:24:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.3.2.ebuild,v 1.6 2011/12/04 16:47:52 hwoarang Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://github.com/rtomayko/tilt"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RUBY_PATCHES=( "${P}-thread_id.patch" )
