@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.490 2011/12/04 19:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.491 2011/12/04 22:23:15 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1768,16 +1768,18 @@ gcc_slot_java() {
 		rm -rf "${D}"${PREFIX}/lib*/security
 	fi
 
-	# Move libgcj.spec to compiler-specific directories
-	[[ -f ${D}${PREFIX}/lib/libgcj.spec ]] && \
-		mv -f "${D}"${PREFIX}/lib/libgcj.spec "${D}"${LIBPATH}/libgcj.spec
+	# Move random gcj files to compiler-specific directories
+	for x in libgcj.spec logging.properties ; do
+		x="${D}${PREFIX}/lib/${x}"
+		[[ -f ${x} ]] && mv -f "${x}" "${D}"${LIBPATH}/
+	done
 
-	# SLOT up libgcj.pc (and let gcc-config worry about links)
-	local libgcj=$(find "${D}"${PREFIX}/lib/pkgconfig/ -name 'libgcj*.pc')
-	if [[ -n ${libgcj} ]] ; then
-		sed -i "/^libdir=/s:=.*:=${LIBPATH}:" "${libgcj}"
-		mv "${libgcj}" "${D}"/usr/lib/pkgconfig/libgcj-${GCC_PV}.pc || die
-	fi
+	# SLOT up libgcj.pc if it's available (and let gcc-config worry about links)
+	for x in "${D}"${PREFIX}/lib*/pkgconfig/libgcj*.pc ; do
+		[[ -f ${x} ]] || continue
+		sed -i "/^libdir=/s:=.*:=${LIBPATH}:" "${x}"
+		mv "${x}" "${D}"/usr/lib/pkgconfig/libgcj-${GCC_PV}.pc || die
+	done
 
 	# Rename jar because it could clash with Kaffe's jar if this gcc is
 	# primary compiler (aka don't have the -<version> extension)
