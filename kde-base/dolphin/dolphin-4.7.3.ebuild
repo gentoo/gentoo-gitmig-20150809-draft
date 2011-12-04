@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.7.3.ebuild,v 1.1 2011/11/02 20:48:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.7.3.ebuild,v 1.2 2011/12/04 17:44:28 dilfridge Exp $
 
 EAPI=4
 
@@ -31,6 +31,9 @@ PDEPEND="
 "
 
 KMLOADLIBS="libkonq"
+
+RESTRICT="test"
+# bug 393129
 
 src_configure() {
 	mycmakeargs=(
