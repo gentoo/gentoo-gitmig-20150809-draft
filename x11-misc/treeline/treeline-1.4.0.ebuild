@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.4.0.ebuild,v 1.1 2011/10/11 20:59:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.4.0.ebuild,v 1.2 2011/12/04 11:46:32 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="spell"
 
 LANGS="de fr"
@@ -46,13 +46,13 @@ src_prepare() {
 	# Let's leave compiling to python_mod_optimize().
 	epatch "${FILESDIR}"/${PN}-1.2.3-nocompile.patch
 
-	rm doc/LICENSE
+	rm doc/LICENSE || die
 
 	python_copy_sources
 
 	preparation() {
 		# install into proper python site-packages dir
-		sed -i "s;prefixDir, 'lib;'$(python_get_sitedir);" install.py
+		sed -i "s;prefixDir, 'lib;'$(python_get_sitedir);" install.py || die
 	}
 	python_execute_function -s preparation
 }

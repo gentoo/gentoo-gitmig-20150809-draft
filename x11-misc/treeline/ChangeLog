@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.45 2011/10/14 03:43:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.46 2011/12/04 11:46:32 hwoarang Exp $
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> treeline-1.4.0.ebuild:
+  Add missing die statements. stable on amd64. bug #391511
 
   14 Oct 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove extraneous maintainer tag.
