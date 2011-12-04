@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/rnv-1.7.10.ebuild,v 1.1 2011/01/07 18:55:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/rnv-1.7.10-r1.ebuild,v 1.1 2011/12/04 10:45:00 hwoarang Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
@@ -18,3 +18,8 @@ IUSE=""
 RDEPEND="dev-libs/expat"
 DEPEND="${RDEPEND}
 		app-arch/unzip"
+
+src_install() {
+	dobin rnv rvp arx
+	dodoc readme.txt
+}
