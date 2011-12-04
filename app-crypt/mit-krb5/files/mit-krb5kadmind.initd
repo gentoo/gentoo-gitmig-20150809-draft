@@ -4,10 +4,8 @@
 # This script starts/stops the MIT Kerberos 5 Admin daemon
 #---------------------------------------------------------------------------
 
-daemon="MIT Kerberos 5 Admin daemon"	
+daemon="MIT Kerberos 5 Admin daemon"
 exec="/usr/sbin/kadmind"
-
-opts="start stop restart"
 
 depend() {
 	need net mit-krb5kdc 
@@ -23,9 +21,4 @@ stop() {
         ebegin "Stopping $daemon"
         start-stop-daemon --stop --quiet --oknodo --exec ${exec} 1>&2
         eend $? "Error stopping $daemon"
-}
-
-restart() {
-   svc_stop
-   svc_start
 }

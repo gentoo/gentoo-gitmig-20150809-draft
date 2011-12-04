@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.300 2011/11/05 13:08:11 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.301 2011/12/04 10:38:22 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/mit-krb5kadmind.initd,
+  files/mit-krb5kdc.initd, files/mit-krb5kpropd.initd:
+  drop opts from init script
 
 *mit-krb5-1.9.2 (05 Nov 2011)
 *mit-krb5-1.8.5 (05 Nov 2011)

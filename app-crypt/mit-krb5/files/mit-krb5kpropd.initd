@@ -4,10 +4,8 @@
 # This script starts/stops the MIT Kerberos 5 kpropd
 #---------------------------------------------------------------------------
 
-daemon="MIT Kerberos 5 kpropd"	
+daemon="MIT Kerberos 5 kpropd"
 exec="/usr/sbin/kpropd"
-
-opts="start stop restart"
 
 depend() {
 	need net
