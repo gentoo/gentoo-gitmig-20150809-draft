@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/files/haproxy.initd,v 1.3 2007/10/27 10:42:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/files/haproxy.initd,v 1.4 2011/12/04 10:32:32 swegener Exp $
 
-opts="${opts} reload"
+extra_started_commands="reload"
 
 CONFFILE=/etc/${SVCNAME}.cfg
 PIDFILE=/var/run/${SVCNAME}.pid

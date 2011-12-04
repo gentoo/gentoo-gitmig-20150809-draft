@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/haproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.57 2011/11/22 16:08:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.58 2011/12/04 10:32:32 swegener Exp $
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/haproxy.initd,
+  files/haproxy.initd-r1:
+  reload is extra_started_commands
 
   22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   haproxy-1.4.18-r1.ebuild:
