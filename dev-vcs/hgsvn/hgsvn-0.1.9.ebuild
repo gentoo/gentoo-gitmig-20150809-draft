@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsvn/hgsvn-0.1.8.ebuild,v 1.2 2010/12/26 15:53:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsvn/hgsvn-0.1.9.ebuild,v 1.1 2011/12/04 13:47:40 cedk Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
