@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/keditbookmarks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.98 2011/11/02 20:47:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.99 2011/12/04 15:59:29 dilfridge Exp $
+
+  04 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  keditbookmarks-4.7.3.ebuild:
+  Restrict tests, bug 392703
 
 *keditbookmarks-4.7.3 (02 Nov 2011)
 
