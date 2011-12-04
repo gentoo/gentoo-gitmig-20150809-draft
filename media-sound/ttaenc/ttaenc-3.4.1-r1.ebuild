@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ttaenc-3.4.1-r1.ebuild,v 1.2 2011/12/02 23:45:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ttaenc-3.4.1-r1.ebuild,v 1.3 2011/12/04 12:46:20 hwoarang Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tta/${P}-src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-apps/sed"
