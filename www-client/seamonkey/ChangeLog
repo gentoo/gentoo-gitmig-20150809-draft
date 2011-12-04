@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.346 2011/11/23 22:59:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.347 2011/12/04 01:15:25 polynomial-c Exp $
+
+*seamonkey-2.5-r1 (04 Dec 2011)
+
+  04 Dec 2011; Lars Wendler <polynomial-c@gentoo.org> +seamonkey-2.5-r1.ebuild:
+  Revbump for new enigmail version.
 
   23 Nov 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.5.ebuild:
   Use nsplugins.eclass to handle the plugins directory.
