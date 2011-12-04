@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.4 2011/11/02 21:43:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.5 2011/12/04 10:53:46 hwoarang Exp $
+
+*tt-rss-1.5.7 (04 Dec 2011)
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.7.ebuild,
+  -tt-rss-1.5.5.ebuild, -tt-rss-1.5.4.ebuild, files/postinstall-en.txt,
+  files/ttrssd.initd, files/postinstall-en-with-daemon.txt:
+  version bump. Bug #390395. Thanks to Patrick <mail@patrick-nagel.net>
 
   02 Nov 2011; Mike Frysinger <vapier@gentoo.org> tt-rss-1.5.5.ebuild:
   Drop "die" from enew{user,group} since these have always taken care of

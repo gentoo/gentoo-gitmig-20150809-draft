@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.5.5.ebuild,v 1.2 2011/11/02 21:43:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.5.7.ebuild,v 1.1 2011/12/04 10:53:46 hwoarang Exp $
 
 EAPI="2"
 
@@ -23,8 +23,10 @@ use daemon && need_php_cli
 
 pkg_setup() {
 	webapp_pkg_setup
+
 	use mysql && require_php_with_use mysql
 	use postgres && require_php_with_use postgres
+
 	if use daemon; then
 		require_php_with_use pcntl
 		enewgroup ttrssd
@@ -36,9 +38,11 @@ src_prepare() {
 	# Customize config.php so that the right 'DB_TYPE' is already set (according to the USE flag)
 	einfo "Customizing config.php..."
 	mv config.php{-dist,} || die "Could not rename config.php-dist to config.php."
+
 	if use mysql && ! use postgres; then
 		sed -e "/define('DB_TYPE',/{s:pgsql:mysql:}" -i config.php || die "sed failed"
 	fi
+
 	sed -e "/define('DB_TYPE',/{s:// \(or mysql\):// pgsql \1:}" -i config.php \
 		|| die "sed failed"
 }
@@ -48,14 +52,15 @@ src_install() {
 
 	insinto "/${MY_HTDOCSDIR}"
 	doins -r * || die "Could not copy the files to ${MY_HTDOCSDIR}."
-	keepdir "/${MY_HTDOCSDIR}"/icons
-
+	keepdir "/${MY_HTDOCSDIR}"/feed-icons
+	
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}"/ttrssd.logrotated ttrssd || die "Installing ttrssd logrotate config failed."
 
-	for DIR in cache cache/htmlpurifier cache/magpie cache/simplepie lock icons; do
+	for DIR in cache cache/htmlpurifier cache/magpie cache/simplepie lock feed-icons; do
 		webapp_serverowned "${MY_HTDOCSDIR}/${DIR}"
 	done
+
 	webapp_configfile "${MY_HTDOCSDIR}"/config.php
 	if use daemon; then
 		webapp_postinst_txt en "${FILESDIR}"/postinstall-en-with-daemon.txt

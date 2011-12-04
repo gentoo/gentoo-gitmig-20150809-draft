@@ -12,3 +12,7 @@ so that it gets launched after a system restart:
 
   rc-update add ttrssd default
 
+
+Note on update from 1.5.6 or earlier: The directory containing the
+feed icons has been renamed from 'icons' to 'feed-icons'. Please
+move your *.ico files over, and then remove the old 'icons' dir.
