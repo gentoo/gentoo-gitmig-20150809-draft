@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/files/acpid-2.0.11-init.d,v 1.6 2011/08/05 08:47:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/files/acpid-2.0.11-init.d,v 1.7 2011/12/04 10:33:21 swegener Exp $
 
-extra_commands="reload"
+extra_started_commands="reload"
 command="/usr/sbin/acpid"
 command_args="${ACPID_OPTIONS}"
 start_stop_daemon_args="--quiet"
