@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.32 2011/10/19 17:57:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.33 2011/12/05 00:56:48 naota Exp $
+
+  05 Dec 2011; Naohiro Aota <naota@gentoo.org> ruby_parser-2.3.1.ebuild:
+  Add ~x86-fbsd.
 
 *ruby_parser-2.3.1 (19 Oct 2011)
 
