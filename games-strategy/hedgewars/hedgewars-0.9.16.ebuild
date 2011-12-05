@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.16.ebuild,v 1.4 2011/11/11 09:17:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.16.ebuild,v 1.5 2011/12/05 14:34:55 tomka Exp $
 
 EAPI=2
 CMAKE_BUILD_TYPE=Release
@@ -13,7 +13,7 @@ SRC_URI="http://download.gna.org/hedgewars/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 Apache-2.0 FDL-1.3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 QA_DT_HASH=${GAMES_BINDIR}/hwengine # pascal sucks
 
