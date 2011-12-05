@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/fakeroot-1.18.1.ebuild,v 1.3 2011/12/05 10:10:57 radhermit Exp $
 
 EAPI=4
 
