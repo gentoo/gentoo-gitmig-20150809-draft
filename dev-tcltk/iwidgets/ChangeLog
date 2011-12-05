@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/iwidgets
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.22 2011/06/23 15:16:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.23 2011/12/05 17:49:15 jlec Exp $
+
+  05 Dec 2011; Justin Lecher <jlec@gentoo.org> iwidgets-4.0.1.ebuild,
+  iwidgets-4.0.1-r3.ebuild, metadata.xml:
+  Fix for real multilib without symlink lib -> /usr/lib64, #392947; ebuild
+  cleaning
 
 *iwidgets-4.0.1-r3 (23 Jun 2011)
 

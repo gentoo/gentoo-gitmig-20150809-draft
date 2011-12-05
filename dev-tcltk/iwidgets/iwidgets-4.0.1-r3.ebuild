@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r3.ebuild,v 1.1 2011/06/23 15:16:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r3.ebuild,v 1.2 2011/12/05 17:49:15 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils multilib
 
@@ -11,7 +11,8 @@ ITCL_MY_P="itcl3.2.1"
 
 DESCRIPTION="Widget collection for incrTcl/incrTk"
 HOMEPAGE="http://incrtcl.sourceforge.net/itcl/"
-SRC_URI="mirror://sourceforge/incrtcl/${MY_P}.tar.gz
+SRC_URI="
+	mirror://sourceforge/incrtcl/${MY_P}.tar.gz
 	mirror://sourceforge/incrtcl/${ITCL_MY_P}_src.tgz"
 
 LICENSE="as-is BSD"
@@ -28,16 +29,19 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-path.patch
-	sed -i -e "/^\(LIB\|SCRIPT\)_INSTALL_DIR =/s|lib|$(get_libdir)|" \
-		Makefile.in || die
+	sed \
+		-e "/^\(LIB\|SCRIPT\)_INSTALL_DIR =/s|lib|$(get_libdir)|" \
+		-i Makefile.in || die
 
 	# Bug 115470
 	rm doc/panedwindow.n
 }
 
 src_configure() {
-	econf --with-itcl="${WORKDIR}/${ITCL_MY_P}" || die "configure failed"
-	# we don't need to compile anything
+	econf \
+		--with-itcl="${WORKDIR}/${ITCL_MY_P}" \
+		--with-tcl="${EPREFIX}"/usr/$(get_libdir) \
+		--with-tk="${EPREFIX}"/usr/$(get_libdir)
 }
 
 src_compile() {
@@ -46,7 +50,7 @@ src_compile() {
 
 src_install() {
 	# parallel borks #177088
-	emake -j1 INSTALL_ROOT="${D}" install || die "emake install failed"
+	emake -j1 INSTALL_ROOT="${D}" install
 
 	dodoc CHANGES ChangeLog README
 
