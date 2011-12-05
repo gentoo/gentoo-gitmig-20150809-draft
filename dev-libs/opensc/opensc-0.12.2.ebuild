@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2.ebuild,v 1.2 2011/09/14 19:42:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2.ebuild,v 1.3 2011/12/05 16:13:09 vapier Exp $
 
 EAPI="4"
 
 inherit eutils autotools
 
-DESCRIPTION="Libraries and applications to access smartcards."
+DESCRIPTION="Libraries and applications to access smartcards"
 HOMEPAGE="http://www.opensc-project.org/opensc/"
 SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
 
@@ -35,7 +35,6 @@ src_prepare() {
 	eautoreconf
 }
 
-usex() { use $1 && echo ${2:-yes} || echo ${3:-no} ; }
 src_configure() {
 	# disable everything, enable selectively
 	local myconf="--disable-pcsc --disable-openct --disable-ctapi"
