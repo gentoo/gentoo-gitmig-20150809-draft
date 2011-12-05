@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8.ebuild,v 1.3 2011/12/05 10:17:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8.ebuild,v 1.4 2011/12/05 16:56:26 xarthisius Exp $
 
 EAPI=4
 
@@ -14,7 +14,9 @@ LICENSE="NCSA-HDF"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="cxx debug examples fortran fortran2003 mpi static-libs szip threads zlib"
-REQUIRED_USE="fortran2003? ( fortran )"
+REQUIRED_USE="cxx? ( !mpi ) mpi? ( !cxx )
+	threads? ( !cxx !mpi !fortran )
+	fortran2003? ( fortran )"
 
 RDEPEND="
 	fortran? ( virtual/fortran )
@@ -24,9 +26,6 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool:2"
-
-REQUIRED_USE="cxx? ( !mpi ) mpi? ( !cxx )
-	threads? ( !cxx !mpi !fortran )"
 
 pkg_setup() {
 	tc-export CXX CC FC # workaround for bug 285148
