@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/syntax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.32 2011/09/14 17:18:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.33 2011/12/05 13:00:37 naota Exp $
+
+  05 Dec 2011; Naohiro Aota <naota@gentoo.org> syntax-1.0.0-r3.ebuild:
+  Add ~x86-fbsd.
 
   14 Sep 2011; Jeroen Roovers <jer@gentoo.org> syntax-1.0.0-r2.ebuild:
   Stable for HPPA (bug #369573).
