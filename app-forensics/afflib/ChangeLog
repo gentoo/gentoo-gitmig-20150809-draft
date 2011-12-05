@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/afflib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.23 2011/11/30 03:38:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.24 2011/12/05 10:31:39 radhermit Exp $
+
+*afflib-3.6.15 (05 Dec 2011)
+
+  05 Dec 2011; Tim Harder <radhermit@gentoo.org> +afflib-3.6.15.ebuild:
+  Version bump.
 
   30 Nov 2011; Jeroen Roovers <jer@gentoo.org> afflib-3.6.12.ebuild:
   Stable for HPPA (bug #391821).
