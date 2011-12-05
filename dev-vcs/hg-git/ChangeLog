@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.30 2011/11/10 10:36:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.31 2011/12/05 19:15:18 grobian Exp $
+
+  05 Dec 2011; Fabian Groffen <grobian@gentoo.org> hg-git-0.3.1.ebuild:
+  Marked ~sparc-solaris, ~sparc64-solaris
 
   10 Nov 2011; Fabian Groffen <grobian@gentoo.org> hg-git-0.3.1.ebuild:
   Marked ~x86-linux
