@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.5.ebuild,v 1.2 2011/11/23 23:01:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.5.ebuild,v 1.3 2011/12/05 22:01:56 polynomial-c Exp $
 
 EAPI="4"
 
-inherit eutils mozilla-launcher multilib mozextension pax-utils nsplugins
+inherit eutils mozilla-launcher multilib mozextension pax-utils nsplugins fdo-mime gnome2-utils
 
 LANGS=(be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it
 ja lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN)
@@ -141,4 +141,18 @@ EOF
 
 	# Required in order to use plugins and even run seamonkey on hardened.
 	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin,plugin-container}
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	# Update mimedb for the new .desktop file
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

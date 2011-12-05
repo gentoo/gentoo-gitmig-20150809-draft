@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-8.0.ebuild,v 1.3 2011/11/29 22:51:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-8.0.ebuild,v 1.4 2011/12/05 22:03:41 polynomial-c Exp $
 
 EAPI="3"
 
-inherit eutils mozilla-launcher multilib mozextension pax-utils
+inherit eutils mozilla-launcher multilib mozextension pax-utils fdo-mime gnome2-utils
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 LANGS=(af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de el en en-GB en-US
@@ -154,6 +154,10 @@ src_install() {
 	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
 	if ! has_version 'gnome-base/gconf' || ! has_version 'gnome-base/orbit' \
 		|| ! has_version 'net-misc/curl'; then
@@ -168,8 +172,13 @@ pkg_postinst() {
 		einfo "if you have curl emerged with the nss USE-flag"
 		einfo
 	fi
+
+	# Update mimedb for the new .desktop file
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
 	update_mozilla_launcher_symlinks
+	gnome2_icon_cache_update
 }
