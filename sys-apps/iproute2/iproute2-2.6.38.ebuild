@@ -1,29 +1,26 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.38.ebuild,v 1.3 2011/10/18 21:41:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.38.ebuild,v 1.4 2011/12/05 20:59:41 vapier Exp $
 
-EAPI=4
+EAPI="4"
 
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git"
-[[ ${PV} == "9999" ]] && SCM_ECLASS="git-2"
+inherit eutils toolchain-funcs flag-o-matic
 
-if [[ ${PV} == *.*.*.* ]] ; then
-	MY_PV=${PV%.*}-${PV##*.}
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git"
+	inherit git-2
+	SRC_URI=""
+	#KEYWORDS=""
 else
-	MY_PV=${PV}
+	SRC_URI="mirror://kernel/linux/utils/net/${PN}/${P}.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
-MY_P="${PN}-${MY_PV}"
-
-inherit eutils toolchain-funcs flag-o-matic base ${SCM_ECLASS}
-unset SCM_ECLASS
 
 DESCRIPTION="kernel routing and traffic control utilities"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2"
-[[ ${PV} == "9999" ]] || SRC_URI="http://developer.osdl.org/dev/iproute2/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-[[ ${PV} == "9999" ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="atm berkdb minimal"
 
 RDEPEND="!net-misc/arpd
@@ -35,15 +32,9 @@ DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.27
 	elibc_glibc? ( >=sys-libs/glibc-2.7 )"
 
-S=${WORKDIR}/${MY_P}
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-2.6.29.1-hfsc.patch #291907
-	"${FILESDIR}"/${PN}-2.6.38-parallel-build.patch
-)
-
 src_prepare() {
-	base_src_prepare
+	epatch "${FILESDIR}"/${PN}-2.6.29.1-hfsc.patch #291907
+	epatch "${FILESDIR}"/${PN}-2.6.38-parallel-build.patch
 
 	sed -i \
 		-e "/^LIBDIR/s:=.*:=/$(get_libdir):" \

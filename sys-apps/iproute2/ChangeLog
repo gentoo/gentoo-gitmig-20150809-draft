@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.176 2011/12/03 10:28:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.177 2011/12/05 20:59:41 vapier Exp $
+
+  05 Dec 2011; Mike Frysinger <vapier@gentoo.org> iproute2-2.6.38.ebuild,
+  iproute2-3.1.0.ebuild, iproute2-9999.ebuild:
+  Clean up code a bit and drop MY_P handling which hopefully should no longer
+  be needed.
 
   03 Dec 2011; Mike Frysinger <vapier@gentoo.org> iproute2-3.1.0.ebuild,
   iproute2-9999.ebuild:
