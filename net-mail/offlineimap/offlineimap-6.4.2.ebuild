@@ -1,19 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.4.0.ebuild,v 1.2 2011/11/22 19:12:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.4.2.ebuild,v 1.1 2011/12/05 14:08:19 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads ssl?"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
-MY_PV="6.3.4"
 
 inherit eutils distutils
 
 DESCRIPTION="Powerful IMAP/Maildir synchronization and reader support"
 HOMEPAGE="http://offlineimap.org"
-SRC_URI="https://github.com/nicolas33/offlineimap/tarball/v${MY_PV} -> ${P}.tar.gz"
+SRC_URI="http://offlineimap.org/downloads/${PN}-v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,7 +30,6 @@ src_unpack() {
 src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}"/offlineimap-6.3.2-darwin10.patch
-	epatch "${FILESDIR}/${PN}"-6.3.4-fix-manpage-headings.patch
 }
 
 src_compile() {
