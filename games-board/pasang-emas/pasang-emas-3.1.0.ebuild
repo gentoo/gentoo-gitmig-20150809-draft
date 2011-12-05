@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pasang-emas/pasang-emas-3.1.0.ebuild,v 1.1 2011/12/05 17:32:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pasang-emas/pasang-emas-3.1.0.ebuild,v 1.2 2011/12/05 17:50:05 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -9,7 +9,8 @@ DESCRIPTION="A traditional game of Brunei"
 HOMEPAGE="http://pasang-emas.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	extras? ( mirror://sourceforge/${PN}/pasang-emas-themes-1.0.tar.bz2
-	          mirror://sourceforge/${PN}/pet-marble.tar.bz2 )"
+	          mirror://sourceforge/${PN}/pet-marble.tar.bz2
+	          mirror://sourceforge/${PN}/pet-fragrance.tar.bz2 )"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -47,7 +48,8 @@ src_install() {
 		insinto "${GAMES_DATADIR}/${PN}"/themes
 		doins -r \
 			"${WORKDIR}"/marble \
-			"${WORKDIR}"/pasang-emas-themes-1.0/{conteng,kaca} || die
+			"${WORKDIR}"/pasang-emas-themes-1.0/{conteng,kaca} \
+			"${WORKDIR}"/fragrance || die
 	fi
 	use nls || rm -rf "${D}"usr/share/locale
 	prepgamesdirs
