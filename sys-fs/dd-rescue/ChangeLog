@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/dd-rescue
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.17 2010/11/19 18:53:47 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.18 2011/12/05 10:22:04 radhermit Exp $
+
+*dd-rescue-1.24 (05 Dec 2011)
+
+  05 Dec 2011; Tim Harder <radhermit@gentoo.org> +dd-rescue-1.24.ebuild:
+  Version bump. Update to EAPI 4.
 
   19 Nov 2010; Justin Lecher <jlec@gentoo.org> dd-rescue-1.23.ebuild:
   Import Prefix Changes
