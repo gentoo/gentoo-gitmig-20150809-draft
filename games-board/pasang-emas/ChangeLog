@@ -1,6 +1,13 @@
 # ChangeLog for games-board/pasang-emas
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pasang-emas/ChangeLog,v 1.4 2010/08/12 14:14:16 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pasang-emas/ChangeLog,v 1.5 2011/12/05 17:32:17 mr_bones_ Exp $
+
+*pasang-emas-3.1.0 (05 Dec 2011)
+
+  05 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  files/pasang-emas-3.0.0-build.patch, +pasang-emas-3.1.0.ebuild,
+  +files/pasang-emas-3.1.0-build.patch:
+  version bump (bug #393237)
 
   12 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   pasang-emas-3.0.0.ebuild:
