@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13303 2011/12/05 11:15:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13304 2011/12/05 11:46:10 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -37,7 +37,7 @@
 
 # Eray Aslan <eras@gentoo.org> (04 Dec 2011)
 # Masking rc release
-~net-mail/dovecot-2.1_rc
+=net-mail/dovecot-2.1_rc*
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Dec 2011)
 # Still using deprecated thunar-vfs compability library.
