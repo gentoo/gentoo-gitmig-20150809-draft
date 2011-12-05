@@ -1,0 +1,10 @@
+# ChangeLog for media-video/mkvalidator
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvalidator/ChangeLog,v 1.1 2011/12/05 22:30:24 sbriesen Exp $
+
+*mkvalidator-0.3.7 (05 Dec 2011)
+
+  05 Dec 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  +mkvalidator-0.3.7.ebuild, +metadata.xml:
+  initial commit
+
