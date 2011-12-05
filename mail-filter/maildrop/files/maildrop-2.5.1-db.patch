@@ -8,7 +8,7 @@
 -	AC_CHECK_LIB(db, db_open, [ LIBDB=-ldb ; LIBS="-ldb $LIBS"],
 -	AC_CHECK_LIB(db, db_env_create, [ LIBDB=-ldb; LIBS="-ldb $LIBS"])
 -	))
-+for dbname in db-5.0 db-4.8 db-4.7 db-4.6 db-4.5 db-4.4 db-4.3 db-4.2 db4.2 db42 db-4.1 db4.1 db41 db-4.0 db4.0 db-4 db40 db4 db
++for dbname in db-5.2 db-5.1 db-5.0 db-4.8 db-4.7 db-4.6 db-4.5 db-4.4 db-4.3 db-4.2 db4.2 db42 db-4.1 db4.1 db41 db-4.0 db4.0 db-4 db40 db4 db
 +  do
 +        AC_CHECK_LIB($dbname, db_create_4002, [ LIBDB=-l$dbname ; LIBS="-l$dbname $LIBS"; break ],
 +          AC_CHECK_LIB($dbname, db_create_4001, [ LIBDB=-l$dbname ; LIBS="-l$dbname $LIBS"; break ],
