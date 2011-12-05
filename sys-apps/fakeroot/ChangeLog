@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.75 2011/12/05 10:10:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.76 2011/12/05 10:12:45 radhermit Exp $
+
+*fakeroot-1.18.2 (05 Dec 2011)
+
+  05 Dec 2011; Tim Harder <radhermit@gentoo.org> +fakeroot-1.18.2.ebuild:
+  Version bump.
 
   05 Dec 2011; Tim Harder <radhermit@gentoo.org> fakeroot-1.18.1.ebuild:
   Fix header.
