@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.34 2011/12/04 06:52:39 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.35 2011/12/05 07:07:44 floppym Exp $
+
+  05 Dec 2011; Mike Gilbert <floppym@gentoo.org> java-vm-2.eclass:
+  Add semicolon to fix ferringb's last change.
 
   04 Dec 2011; Brian Harring <ferringb@gentoo.org> java-vm-2.eclass:
   Fix IFS=: bleeding out from java-vm_sandbox-predict invocations.

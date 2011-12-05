@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.41 2011/12/04 06:52:39 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.42 2011/12/05 07:07:44 floppym Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -252,7 +252,7 @@ java-vm_sandbox-predict() {
 	local path path_arr=("$@")
 	# subshell this to prevent IFS bleeding out dependant on bash version.
 	# could use local, which *should* work, but that requires a lot of testing.
-	path=$(IFS=":" echo "${path_arr[*]}")
+	path=$(IFS=":"; echo "${path_arr[*]}")
 	dodir /etc/sandbox.d
 	echo "SANDBOX_PREDICT=\"${path}\"" > "${ED}/etc/sandbox.d/20${VMHANDLE}" \
 		|| die "Failed to write sandbox control file"
