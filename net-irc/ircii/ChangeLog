@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ircii
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.30 2011/12/02 00:35:24 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.31 2011/12/05 16:46:27 binki Exp $
+
+  05 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> ircii-20110228.ebuild,
+  ircii-20111115.ebuild:
+  Ensure that ${CHOST}-gcc is called instead of `gcc', fixing bug #393109 by
+  ago.
 
   02 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> ircii-20060725.ebuild:
   Address bug #247987 by adding blocker on net-irc/irc-client to

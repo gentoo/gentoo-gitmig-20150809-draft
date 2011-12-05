@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20111115.ebuild,v 1.1 2011/12/02 00:17:56 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20111115.ebuild,v 1.2 2011/12/05 16:46:27 binki Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="An IRC and ICB client that runs under most UNIX platforms"
 SRC_URI="ftp://ircii.warped.com/pub/ircII/${P}.tar.bz2
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}
 	!!net-irc/irc-client"
 
 src_configure() {
+	tc-export CC
 	use elibc_glibc || append-libs -liconv
 	econf $(use_enable ipv6)
 }
