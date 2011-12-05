@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.99 2011/09/14 17:05:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.100 2011/12/05 00:35:14 naota Exp $
+
+  05 Dec 2011; Naohiro Aota <naota@gentoo.org> zentest-4.6.2.ebuild:
+  Add ~x86-fbsd.
 
   14 Sep 2011; Jeroen Roovers <jer@gentoo.org> zentest-4.4.2.ebuild:
   Stable for HPPA (bug #369573).

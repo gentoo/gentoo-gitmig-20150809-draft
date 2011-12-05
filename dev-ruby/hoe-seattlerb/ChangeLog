@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.33 2011/10/16 07:36:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.34 2011/12/05 00:32:53 naota Exp $
+
+  05 Dec 2011; Naohiro Aota <naota@gentoo.org> hoe-seattlerb-1.2.7.ebuild:
+  Add ~x86-fbsd.
 
 *hoe-seattlerb-1.2.7 (16 Oct 2011)
 
