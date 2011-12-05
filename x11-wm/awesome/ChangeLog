@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.126 2011/07/23 14:43:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.127 2011/12/05 22:48:57 wired Exp $
+
+*awesome-3.4.11 (05 Dec 2011)
+
+  05 Dec 2011; Alex Alexander <wired@gentoo.org> +awesome-3.4.11.ebuild:
+  version bump
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> awesome-3.4.9-r1.ebuild:
   ppc64 stable wrt #372799
