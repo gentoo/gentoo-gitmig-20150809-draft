@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8.ebuild,v 1.2 2011/11/21 17:33:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8.ebuild,v 1.3 2011/12/05 10:17:24 xarthisius Exp $
 
 EAPI=4
 
-inherit autotools eutils fortran-2
+inherit autotools eutils fortran-2 toolchain-funcs
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
@@ -25,7 +25,11 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-devel/libtool:2"
 
+REQUIRED_USE="cxx? ( !mpi ) mpi? ( !cxx )
+	threads? ( !cxx !mpi !fortran )"
+
 pkg_setup() {
+	tc-export CXX CC FC # workaround for bug 285148
 	if use fortran; then
 		use fortran2003 && FORTRAN_STANDARD=2003
 		fortran-2_pkg_setup
@@ -34,10 +38,6 @@ pkg_setup() {
 		if has_version 'sci-libs/hdf5[-mpi]'; then
 			ewarn "Installing hdf5 with mpi enabled with a previous hdf5 with mpi disabled may fail."
 			ewarn "Try to uninstall the current hdf5 prior to enabling mpi support."
-		fi
-		if use cxx; then
-			ewarn "Simultaneous mpi and cxx is not supported by ${PN}"
-			ewarn "Will disable cxx interface"
 		fi
 		export CC=mpicc
 		use fortran && export FC=mpif90
@@ -64,24 +64,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# threadsafe incompatible with many options
-	local myconf="--disable-threadsafe"
-	use debug && myconf="${myconf} --enable-codestack"
-	use threads && ! use fortran && ! use cxx && ! use mpi \
-		&& myconf="--enable-threadsafe"
-
-	if use mpi; then
-		myconf="${myconf} --disable-cxx"
-	else
-	# workaround for bug 285148
-		if use cxx; then
-			myconf="${myconf} $(use_enable cxx) CXX=$(tc-getCXX)"
-		fi
-		if use fortran; then
-			myconf="${myconf} FC=$(tc-getFC)"
-		fi
-	fi
-
 	econf \
 		--disable-sharedlib-rpath \
 		--enable-production \
@@ -91,9 +73,12 @@ src_configure() {
 		--disable-silent-rules \
 		$(use_enable static-libs static) \
 		$(use_enable debug debug all) \
+		$(use_enable debug codestack) \
+		$(use_enable cxx) \
 		$(use_enable fortran) \
 		$(use_enable fortran2003) \
 		$(use_enable mpi parallel) \
+		$(use_enable threads threadsafe) \
 		$(use_with szip szlib) \
 		$(use_with threads pthread) \
 		$(use_with zlib) \
