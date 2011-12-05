@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/ffmpegsource
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.2 2011/09/18 12:24:59 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.3 2011/12/05 09:47:00 maksbotan Exp $
+
+*ffmpegsource-2.16.2.1_pre587 (05 Dec 2011)
+
+  05 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +ffmpegsource-2.16.2.1_pre587.ebuild:
+  Bump to snaphot version to fix compilation with latest libav. Thanks to
+  Nikoli
 
   18 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
   Fix herd to be proxy-maintainers
