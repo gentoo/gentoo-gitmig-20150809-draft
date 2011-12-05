@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.13.0.ebuild,v 1.2 2011/11/20 06:47:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.13.0.ebuild,v 1.3 2011/12/05 19:05:33 vapier Exp $
 
 EAPI="2"
 
@@ -23,8 +23,7 @@ SLOT="0"
 KEYWORDS="-* s390"
 IUSE="fuse snmp zfcpdump"
 
-RDEPEND="sys-fs/sysfsutils
-	fuse? ( sys-fs/fuse )
+RDEPEND="fuse? ( sys-fs/fuse )
 	snmp? ( net-analyzer/net-snmp )"
 DEPEND="${RDEPEND}
 	dev-util/indent
@@ -32,6 +31,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.13.0-build.patch
+	epatch "${FILESDIR}"/${PN}-1.13.0-larl.patch #391433
 
 	use snmp || sed -i -e 's:osasnmpd::' Makefile
 	use fuse || { sed -i -e 's:cmsfs-fuse::' Makefile; export WITHOUT_FUSE=1; }
