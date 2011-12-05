@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.108 2011/10/10 02:10:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.109 2011/12/05 10:36:38 radhermit Exp $
+
+*mtr-0.82 (05 Dec 2011)
+
+  05 Dec 2011; Tim Harder <radhermit@gentoo.org> +mtr-0.82.ebuild:
+  Version bump.
 
 *mtr-0.81 (10 Oct 2011)
 
