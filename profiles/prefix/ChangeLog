@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.304 2011/12/01 22:50:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.305 2011/12/05 21:17:31 darkside Exp $
+
+  05 Dec 2011; Jeremy Olexa <darkside@gentoo.org> +linux/profile.bashrc:
+  Disable the automatic fortify patch for some older linux hosts, bug 289757
 
   01 Dec 2011; Jeremy Olexa <darkside@gentoo.org> darwin/package.mask,
   linux/package.use.mask, sunos/solaris/package.mask:
