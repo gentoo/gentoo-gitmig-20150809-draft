@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.17 2011/11/24 08:56:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.18 2011/12/05 11:05:18 voyageur Exp $
 
 EAPI="3"
 inherit subversion eutils flag-o-matic multilib toolchain-funcs
@@ -13,7 +13,7 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/llvm/trunk"
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug +libffi multitarget ocaml test udis86 vim-syntax"
+IUSE="debug gold +libffi multitarget ocaml test udis86 vim-syntax"
 
 DEPEND="dev-lang/perl
 	>=sys-devel/make-3.79
@@ -21,6 +21,7 @@ DEPEND="dev-lang/perl
 	>=sys-devel/bison-1.875d
 	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 )
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
+	gold? ( >=sys-devel/binutils-2.22 )
 	libffi? ( dev-util/pkgconfig
 		virtual/libffi )
 	ocaml? ( dev-lang/ocaml )
@@ -72,13 +73,15 @@ src_prepare() {
 		-e 's,^PROJ_etcdir.*,PROJ_etcdir := '"${EPREFIX}"'/etc/llvm,' \
 		-e 's,^PROJ_libdir.*,PROJ_libdir := $(PROJ_prefix)/'$(get_libdir)/${PN}, \
 		-i Makefile.config.in || die "Makefile.config sed failed"
-	sed -e 's,$ABS_RUN_DIR/lib,'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
-		-i tools/llvm-config/llvm-config.in.in || die "llvm-config sed failed"
 
 	einfo "Fixing rpath and CFLAGS"
 	sed -e 's,\$(RPATH) -Wl\,\$(\(ToolDir\|LibDir\)),$(RPATH) -Wl\,'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
 		-e '/OmitFramePointer/s/-fomit-frame-pointer//' \
 		-i Makefile.rules || die "rpath sed failed"
+	if use gold; then
+		sed -e 's,\$(SharedLibDir),'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
+			-i tools/gold/Makefile || die "gold rpath sed failed"
+	fi
 
 	epatch "${FILESDIR}"/${PN}-2.6-commandguide-nops.patch
 	epatch "${FILESDIR}"/${PN}-2.9-nodoctargz.patch
@@ -101,6 +104,9 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
 	fi
 
+	if use gold; then
+		CONF_FLAGS="${CONF_FLAGS} --with-binutils-include=${EPREFIX}/usr/include/"
+	fi
 	if use ocaml; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-bindings=ocaml"
 	else
