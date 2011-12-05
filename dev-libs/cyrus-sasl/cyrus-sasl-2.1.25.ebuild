@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.25.ebuild,v 1.1 2011/11/30 15:49:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.25.ebuild,v 1.2 2011/12/05 10:39:46 eras Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib autotools pam java-pkg-opt-2 db-use
@@ -185,6 +185,10 @@ src_install() {
 	use static-libs || find "${D}"/usr/lib*/sasl2 -name 'lib*.la' -delete
 }
 
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libsasl2.so.2.0.23
+}
+
 pkg_postinst () {
 	# Generate an empty sasldb2 with correct permissions.
 	if ( use berkdb || use gdbm ) && [[ ! -f "${ROOT}/etc/sasl2/sasldb2" ]] ; then
@@ -205,4 +209,6 @@ pkg_postinst () {
 		elog "	gpasswd -a postfix mail"
 		elog "to add the 'postfix' user to the 'mail' group."
 	fi
+
+	preserve_old_lib_notify /usr/$(get_libdir)/libsasl2.so.2.0.23
 }
