@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/samuel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.10 2011/08/07 17:58:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.11 2011/12/05 14:29:11 naota Exp $
+
+  05 Dec 2011; Naohiro Aota <naota@gentoo.org> samuel-0.3.2.ebuild:
+  Add ~x86-fbsd.
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> samuel-0.3.2.ebuild:
   Add ~ia64/~sparc wrt #351835
