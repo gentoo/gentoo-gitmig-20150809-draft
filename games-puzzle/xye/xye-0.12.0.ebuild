@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.11.2.ebuild,v 1.1 2011/10/29 23:57:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.12.0.ebuild,v 1.1 2011/12/05 06:39:56 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
