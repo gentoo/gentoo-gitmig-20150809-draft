@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0.ebuild,v 1.1 2011/12/02 13:20:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0.ebuild,v 1.2 2011/12/05 18:39:36 voyageur Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -88,6 +88,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-2.6-commandguide-nops.patch
 	epatch "${FILESDIR}"/${PN}-2.9-nodoctargz.patch
+	epatch "${FILESDIR}"/${P}-ocaml_install.patch
 }
 
 src_configure() {
