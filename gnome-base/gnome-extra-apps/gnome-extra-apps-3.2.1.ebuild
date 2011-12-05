@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.2.1.ebuild,v 1.1 2011/11/07 07:49:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.2.1.ebuild,v 1.2 2011/12/05 03:40:17 tetromino Exp $
 
 EAPI="4"
 
@@ -22,7 +22,6 @@ RDEPEND="
 
 	>=app-arch/file-roller-${PV}
 	>=games-board/aisleriot-${PV}
-	>=gnome-extra/bug-buddy-2.32.0:2
 	>=gnome-extra/gcalctool-6.2.0
 	>=gnome-extra/gconf-editor-3.0.0
 	>=gnome-extra/gnome-games-${PV}
