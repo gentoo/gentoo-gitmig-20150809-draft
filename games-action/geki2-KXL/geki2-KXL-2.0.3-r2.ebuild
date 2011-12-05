@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/geki2-KXL-2.0.3-r2.ebuild,v 1.3 2009/06/03 13:20:58 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/geki2-KXL-2.0.3-r2.ebuild,v 1.4 2011/12/05 08:46:26 mr_bones_ Exp $
 
 inherit autotools eutils games
 
 DESCRIPTION="2D length scroll shooting game"
-HOMEPAGE="http://kxl.hn.org/"
-SRC_URI="http://kxl.hn.org/download/${P}.tar.gz
+HOMEPAGE="http://triring.net/ps2linux/games/kxl/kxlgames.html"
+SRC_URI="mirror://gentoo/${P}.tar.gz
 	mirror://gentoo/${PN}.png"
 
 LICENSE="GPL-2"
