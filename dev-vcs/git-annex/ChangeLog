@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.1 2011/12/04 18:36:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.2 2011/12/05 19:02:11 slyfox Exp $
+
+  05 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  git-annex-3.20111203.ebuild:
+  Raise minimal required dev-haskell/mtl version to make it compile.
 
 *git-annex-3.20111203 (04 Dec 2011)
 
