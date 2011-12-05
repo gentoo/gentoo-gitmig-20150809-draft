@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.224 2011/11/06 04:23:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.225 2011/12/05 11:29:40 pacho Exp $
+
+  05 Dec 2011; Pacho Ramos <pacho@gentoo.org> -gnome-utils-2.32.0-r1.ebuild,
+  gnome-utils-3.2.1.ebuild:
+  Drop old and fix description, bug #393143 by Justin Lecher.
 
 *gnome-utils-3.2.1 (06 Nov 2011)
 
