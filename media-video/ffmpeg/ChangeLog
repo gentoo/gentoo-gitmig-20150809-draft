@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.502 2011/12/06 13:13:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.503 2011/12/06 20:30:14 jer Exp $
+
+  06 Dec 2011; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.8.7.ebuild:
+  Marked ~hppa (bug #392269).
 
   06 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   tests are now run with the fate makefile target

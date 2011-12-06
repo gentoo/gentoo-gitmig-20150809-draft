@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.8.7.ebuild,v 1.3 2011/12/02 18:22:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.8.7.ebuild,v 1.4 2011/12/06 20:30:14 jer Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ FFMPEG_REVISION="${PV#*_p}"
 LICENSE="GPL-2 amr? ( GPL-3 ) encode? ( aac? ( GPL-3 ) )"
 SLOT="0"
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~amd64 ~x86-fbsd"
+	KEYWORDS="~amd64 ~hppa ~x86-fbsd"
 fi
 IUSE="
 	aac aacplus alsa amr bindist +bzip2 celt cpudetection debug dirac doc
