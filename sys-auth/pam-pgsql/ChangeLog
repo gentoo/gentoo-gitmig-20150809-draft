@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam-pgsql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/ChangeLog,v 1.5 2011/03/21 14:48:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/ChangeLog,v 1.6 2011/12/06 10:04:29 flameeyes Exp $
+
+*pam-pgsql-0.7.3.1 (06 Dec 2011)
+
+  06 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pam-pgsql-0.7.3.1.ebuild:
+  Version bump.
 
 *pam-pgsql-0.7.3 (21 Mar 2011)
 
