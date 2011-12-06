@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.85 2011/08/20 20:35:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.86 2011/12/06 04:16:10 radhermit Exp $
+
+*socat-1.7.2.0 (06 Dec 2011)
+
+  06 Dec 2011; Tim Harder <radhermit@gentoo.org> +socat-1.7.2.0.ebuild:
+  Version bump. Update to EAPI 4.
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove useless maintainer tag.
