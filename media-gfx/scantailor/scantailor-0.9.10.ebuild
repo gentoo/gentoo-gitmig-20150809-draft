@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/scantailor-0.9.10.ebuild,v 1.1 2011/07/31 18:31:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/scantailor-0.9.10.ebuild,v 1.2 2011/12/06 21:14:25 radhermit Exp $
 
 EAPI=4
 inherit cmake-utils eutils
@@ -24,7 +24,17 @@ RDEPEND=">=media-libs/libpng-1.2.43
 DEPEND="${RDEPEND}
 	dev-libs/boost"
 
-PATCHES=( "${FILESDIR}/${PN}-0.9.9-environment_flags.patch" )
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.9.9-environment_flags.patch
+	"${FILESDIR}"/${PN}-gcc46.patch
+)
+
+src_prepare() {
+	# Skip image processing tests that require X
+	sed -i -e "/^ADD_TEST(ImageProcTests/d" CMakeLists.txt || die
+
+	base_src_prepare
+}
 
 src_configure() {
 	mycmakeargs=(

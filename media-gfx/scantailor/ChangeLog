@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/scantailor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/ChangeLog,v 1.4 2011/07/31 18:31:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/ChangeLog,v 1.5 2011/12/06 21:14:25 radhermit Exp $
+
+  06 Dec 2011; Tim Harder <radhermit@gentoo.org> +files/scantailor-gcc46.patch,
+  scantailor-0.9.10.ebuild:
+  Fix build issue with gcc-4.6 and newer boost versions (bug #391427 by
+  Oschtan) and skip tests requiring X (bug #325813).
 
 *scantailor-0.9.10 (31 Jul 2011)
 
