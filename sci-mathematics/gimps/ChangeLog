@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.44 2011/07/15 20:09:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.45 2011/12/06 16:42:52 tomka Exp $
+
+*gimps-26.6-r1 (06 Dec 2011)
+
+  06 Dec 2011; Thomas Kahle <tomka@gentoo.org> gimps-26.6.ebuild,
+  +gimps-26.6-r1.ebuild, +files/gimps-26.6-r1-init.d:
+  Don't use deprecated options of start-stop-daemon (Bug 393353). Thanks
+  Paolo Pedroni.
 
   15 Jul 2011; Markus Meier <maekke@gentoo.org> gimps-26.6.ebuild:
   x86 stable, bug #372669
