@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.502 2011/12/06 05:22:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.503 2011/12/06 20:11:50 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -468,39 +468,21 @@ create_gcc_env_entry() {
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${gcc_envd_file}
 	echo "GCC_PATH=\"${BINPATH}\"" >> ${gcc_envd_file}
 
-	if is_multilib ; then
-		LDPATH="${LIBPATH}"
-		for path in 32 64 ; do
-			[[ -d ${D}${LIBPATH}/${path} ]] && LDPATH="${LDPATH}:${LIBPATH}/${path}"
-		done
-	else
-		local MULTIDIR
-		LDPATH="${LIBPATH}"
+	# We want to list the default ABI's LIBPATH first so libtool
+	# searches that directory first.  This is a temporary
+	# workaround for libtool being stupid and using .la's from
+	# conflicting ABIs by using the first one in the search path
+	local abi=${DEFAULT_ABI}
+	local MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+	local LDPATH=${LIBPATH}
+	[[ ${MULTIDIR} != "." ]] && LDPATH+=/${MULTIDIR}
+	for abi in $(get_all_abis) ; do
+		[[ ${abi} == ${DEFAULT_ABI} ]] && continue
 
-		# We want to list the default ABI's LIBPATH first so libtool
-		# searches that directory first.  This is a temporary
-		# workaround for libtool being stupid and using .la's from
-		# conflicting ABIs by using the first one in the search path
-
-		local abi=${DEFAULT_ABI}
-		local MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-		if [[ ${MULTIDIR} == "." ]] ; then
-			LDPATH=${LIBPATH}
-		else
-			LDPATH=${LIBPATH}/${MULTIDIR}
-		fi
-
-		for abi in $(get_all_abis) ; do
-			[[ ${abi} == ${DEFAULT_ABI} ]] && continue
-
-			MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-			if [[ ${MULTIDIR} == "." ]] ; then
-				LDPATH=${LDPATH}:${LIBPATH}
-			else
-				LDPATH=${LDPATH}:${LIBPATH}/${MULTIDIR}
-			fi
-		done
-	fi
+		MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+		LDPATH+=:${LIBPATH}
+		[[ ${MULTIDIR} != "." ]] && LDPATH+=/${MULTIDIR}
+	done
 
 	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
@@ -1381,6 +1363,7 @@ gcc_do_filter_flags() {
 }
 
 toolchain_src_compile() {
+	multilib_env ${CTARGET}
 	gcc_do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
