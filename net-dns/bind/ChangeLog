@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.363 2011/11/29 16:27:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.364 2011/12/06 12:45:32 naota Exp $
+
+  06 Dec 2011; Naohiro Aota <naota@gentoo.org> bind-9.8.1_p1.ebuild:
+  Add ~x86-fbsd; Add alternativa depend sys-process/fuser-bsd for
+  sys-process/psmisc; Make it include db.h from proper path
 
   29 Nov 2011; Tony Vroon <chainsaw@gentoo.org> bind-9.7.3_p3.ebuild,
   bind-9.7.4.ebuild, bind-9.7.4_p1.ebuild:

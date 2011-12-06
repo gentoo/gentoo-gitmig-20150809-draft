@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.2 2011/11/17 18:12:20 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.3 2011/12/06 12:45:32 naota Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -13,7 +13,7 @@
 
 EAPI="4"
 
-inherit eutils autotools toolchain-funcs flag-o-matic multilib
+inherit eutils autotools toolchain-funcs flag-o-matic multilib db-use
 
 MY_PV="${PV/_p/-P}"
 MY_PV="${MY_PV/_rc/rc}"
@@ -40,7 +40,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb caps dlz doc geoip gost gssapi idn ipv6 ldap mysql odbc pkcs11 postgres rpz sdb-ldap
 selinux ssl threads urandom xml"
 
@@ -67,7 +67,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
-	sys-process/psmisc"
+	|| ( sys-process/psmisc sys-process/fuser-bsd )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -139,6 +139,9 @@ src_configure() {
 
 	# bug #158664
 #	gcc-specs-ssp && replace-flags -O[23s] -O
+
+	# To include db.h from proper path
+	use berkdb && append-flags "-I$(db_includedir)"
 
 	export BUILD_CC=$(tc-getBUILD_CC)
 	econf \
