@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/cachefilesd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/ChangeLog,v 1.4 2011/12/01 13:04:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/ChangeLog,v 1.5 2011/12/06 16:14:52 jlec Exp $
+
+*cachefilesd-0.10.5 (06 Dec 2011)
+
+  06 Dec 2011; Justin Lecher <jlec@gentoo.org> +cachefilesd-0.10.5.ebuild:
+  Version Bump
 
 *cachefilesd-0.10.4 (01 Dec 2011)
 
