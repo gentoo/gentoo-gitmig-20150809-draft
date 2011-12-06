@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13307 2011/12/06 13:17:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13308 2011/12/06 16:02:33 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -43,10 +43,6 @@ app-text/lyx2html
 # integrated in sec-policy/selinux-xserver. Proper dependencies are already in
 # place so no user change necessary anymore. Removal ETA end of december.
 sec-policy/selinux-xfce4
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (19 Nov 2011)
-# Keep masked until the distfile is published somewhere sane.
-=media-libs/netpbm-10.56.00
 
 # Eray Aslan <eras@gentoo.org> (04 Dec 2011)
 # Masking rc release
