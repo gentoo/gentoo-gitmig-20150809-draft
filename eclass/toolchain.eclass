@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.504 2011/12/06 21:30:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.505 2011/12/06 22:12:41 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1542,9 +1542,10 @@ toolchain_src_install() {
 		doexe "${GCC_FILESDIR}"/c{89,99} || die
 	fi
 
-	# use gid of 0 because some stupid ports don't have
-	# the group 'root' set to gid 0
-	chown -R root:0 "${D}"${LIBPATH}
+	# Use gid of 0 because some stupid ports don't have
+	# the group 'root' set to gid 0.  Send to /dev/null
+	# for people who are testing as non-root.
+	chown -R root:0 "${D}"${LIBPATH} 2>/dev/null
 
 	# Move pretty-printers to gdb datadir to shut ldconfig up
 	local py gdbdir=/usr/share/gdb/auto-load${LIBPATH/\/lib\//\/$(get_libdir)\/}
