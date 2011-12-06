@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.495 2011/12/06 04:15:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.496 2011/12/06 04:50:32 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -343,24 +343,14 @@ hardened_gcc_works() {
 		[[ ${CTARGET} == *-freebsd* ]] && return 1
 
 		want_pie || return 1
-		tc_version_is_at_least 4.3.2 && use nopie && return 1
-		hardened_gcc_is_stable pie && return 0
-		if has "~$(tc-arch)" ${ACCEPT_KEYWORDS} ; then
-			hardened_gcc_check_unsupported pie && return 1
-			ewarn "Allowing pie-by-default for an unstable arch ($(tc-arch))"
-			return 0
-		fi
-		return 1
+		use_if_iuse nopie && return 1
+		hardened_gcc_is_stable pie
+		return $?
 	elif [[ $1 == "ssp" ]] ; then
 		[[ -n ${SPECS_VER} ]] || return 1
-		tc_version_is_at_least 4.3.2 && use nossp && return 1
-		hardened_gcc_is_stable ssp && return 0
-		if has "~$(tc-arch)" ${ACCEPT_KEYWORDS} ; then
-			hardened_gcc_check_unsupported ssp && return 1
-			ewarn "Allowing ssp-by-default for an unstable arch ($(tc-arch))"
-			return 0
-		fi
-		return 1
+		use_if_iuse no$1 && return 1
+		hardened_gcc_is_stable ssp
+		return $?
 	else
 		# laziness ;)
 		hardened_gcc_works pie || return 1
@@ -388,36 +378,6 @@ hardened_gcc_is_stable() {
 		fi
 	else
 		die "hardened_gcc_stable needs to be called with pie or ssp"
-	fi
-
-	has $(tc-arch) ${tocheck} && return 0
-	return 1
-}
-
-hardened_gcc_check_unsupported() {
-	local tocheck=""
-	# if a variable is unset, we assume that all archs are unsupported. since
-	# this function is never called if hardened_gcc_is_stable returns true,
-	# this shouldn't cause problems... however, allowing this logic to work
-	# even with the variables unset will break older ebuilds that dont use them.
-	if [[ $1 == "pie" ]] ; then
-		if [[ ${CTARGET} == *-uclibc* ]] ; then
-			[[ -z ${PIE_UCLIBC_UNSUPPORTED} ]] && return 0
-			tocheck="${tocheck} ${PIE_UCLIBC_UNSUPPORTED}"
-		else
-			[[ -z ${PIE_GLIBC_UNSUPPORTED} ]] && return 0
-			tocheck="${tocheck} ${PIE_GLIBC_UNSUPPORTED}"
-		fi
-	elif [[ $1 == "ssp" ]] ; then
-		if [[ ${CTARGET} == *-uclibc* ]] ; then
-			[[ -z ${SSP_UCLIBC_UNSUPPORTED} ]] && return 0
-			tocheck="${tocheck} ${SSP_UCLIBC_UNSUPPORTED}"
-		else
-			[[ -z ${SSP_UNSUPPORTED} ]] && return 0
-			tocheck="${tocheck} ${SSP_UNSUPPORTED}"
-		fi
-	else
-		die "hardened_gcc_check_unsupported needs to be called with pie or ssp"
 	fi
 
 	has $(tc-arch) ${tocheck} && return 0
