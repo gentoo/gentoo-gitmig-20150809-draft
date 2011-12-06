@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.2.1.ebuild,v 1.1 2011/11/07 07:50:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.2.1.ebuild,v 1.2 2011/12/06 19:06:33 tetromino Exp $
 
 EAPI="4"
 
@@ -45,7 +45,7 @@ PDEPEND=">=gnome-base/gvfs-1.10.1"
 S=${WORKDIR}
 
 pkg_pretend() {
-	if ! use fallback && ! use shell; then
+	if ! use fallback && ! use gnome-shell; then
 		# Users probably want to use e16, sawfish, etc
 		ewarn "You're installing neither GNOME Shell nor GNOME Fallback!"
 		ewarn "You will have to install and manage a window manager by yourself"

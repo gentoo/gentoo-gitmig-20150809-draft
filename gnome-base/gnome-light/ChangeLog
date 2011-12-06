@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.149 2011/11/07 07:50:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.150 2011/12/06 19:06:33 tetromino Exp $
+
+  06 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-light-3.2.1.ebuild:
+  s/use shell/use gnome-shell/ (bug #393399, thanks to Rafael Antonio Porras
+  <SpOeK@DistroBit.Net> for reporting).
 
 *gnome-light-3.2.1 (07 Nov 2011)
 
