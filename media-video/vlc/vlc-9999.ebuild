@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.152 2011/12/06 12:29:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.153 2011/12/06 13:27:15 aballier Exp $
 
 EAPI="4"
 
@@ -67,7 +67,7 @@ RDEPEND="
 		avcodec? ( virtual/ffmpeg )
 		avformat? ( virtual/ffmpeg )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
-		bluray? ( media-libs/libbluray >=dev-libs/libxml2-2.6:2 )
+		bluray? ( >=media-libs/libbluray-0.2.1 )
 		cddb? ( >=media-libs/libcddb-1.2.0 )
 		dbus? ( >=sys-apps/dbus-1.0.2 )
 		dc1394? ( >=sys-libs/libraw1394-2.0.1 >=media-libs/libdc1394-2.0.2 )
