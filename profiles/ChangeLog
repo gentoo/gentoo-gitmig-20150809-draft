@@ -1,13 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5987 2011/12/06 13:29:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5988 2011/12/06 13:56:58 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   06 Dec 2011; Ulrich Mueller <ulm@gentoo.org> license_groups:
-  Add Emacs-23-CEDET-grammars to FSF-APPROVED license group.
+  Add Emacs-23-CEDET-grammars to FSF-APPROVED license group. Add mplus-fonts
+  and vlgothic to MISC-FREE, bugs 393303 and 393305.
 
   06 Dec 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask for removal lyx2html, bug #388987
