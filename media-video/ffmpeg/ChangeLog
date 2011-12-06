@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.501 2011/12/06 12:36:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.502 2011/12/06 13:13:02 aballier Exp $
+
+  06 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  tests are now run with the fate makefile target
 
   06 Dec 2011; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   improve vdpau usedesc, by Raúl Porcel

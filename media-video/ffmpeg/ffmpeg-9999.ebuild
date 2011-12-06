@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.66 2011/12/03 15:41:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.67 2011/12/06 13:13:02 aballier Exp $
 
 EAPI="4"
 
@@ -281,7 +281,7 @@ src_install() {
 src_test() {
 	if use encode ; then
 		LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
-			emake test
+			emake fate
 	else
 		ewarn "Tests fail without USE=encode, skipping"
 	fi
