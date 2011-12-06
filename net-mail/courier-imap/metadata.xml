@@ -6,10 +6,6 @@
 		<email>chutzpah@gentoo.org</email>
 		<name>Patrick McLean</name>
 	</maintainer>
-	<maintainer>
-		<email>voyageur@gentoo.org</email>
-		<name>Bernard Cafarelli</name>
-	</maintainer>
 	<use>
 		<flag name="trashquota">include deleted messages, and the Trash folder, in the estimated quota usage for maildirs</flag>
 	</use>
