@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/system-config-printer-common
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.53 2011/10/30 14:40:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.54 2011/12/06 13:02:34 pacho Exp $
+
+  06 Dec 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add gnome to metadata as -gnome is really a split from here.
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org>
   system-config-printer-common-1.3.6.ebuild:
