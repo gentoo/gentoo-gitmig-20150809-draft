@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.498 2011/12/06 04:54:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.499 2011/12/06 04:59:41 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -429,31 +429,32 @@ gcc-lang-supported() {
 
 #---->> specs + env.d logic <<----
 
-# defaults to enable for all hardened toolchains
-gcc_common_hard="-DEFAULT_RELRO -DEFAULT_BIND_NOW"
-
 # configure to build with the hardened GCC specs as the default
 make_gcc_hard() {
+	# defaults to enable for all hardened toolchains
+	local gcc_hard_flags="-DEFAULT_RELRO -DEFAULT_BIND_NOW"
+
 	if hardened_gcc_works ; then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
-		sed -e "s|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE_SSP ${gcc_common_hard} |" \
-			-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
+		gcc_hard_flags+=" -DEFAULT_PIE_SSP"
 	elif hardened_gcc_works pie ; then
 		einfo "Updating gcc to use automatic PIE building ..."
 		ewarn "SSP has not been enabled by default"
-		sed -e "s|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard} |" \
-			-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
+		gcc_hard_flags+=" -DEFAULT_PIE"
 	elif hardened_gcc_works ssp ; then
 		einfo "Updating gcc to use automatic SSP building ..."
 		ewarn "PIE has not been enabled by default"
-		sed -e "s|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard} |" \
-			-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
+		gcc_hard_flags+=" -DEFAULT_SSP"
 	else
 		# do nothing if hardened isnt supported, but dont die either
 		ewarn "hardened is not supported for this arch in this gcc version"
 		ebeep
 		return 0
 	fi
+
+	sed -i \
+		-e "/^HARD_CFLAGS = /s|=|= ${gcc_hard_flags} |" \
+		"${S}"/gcc/Makefile.in || die
 
 	# rebrand to make bug reports easier
 	BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/Gentoo/Gentoo Hardened}
