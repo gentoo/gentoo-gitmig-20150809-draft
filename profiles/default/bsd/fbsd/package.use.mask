@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.14 2011/11/08 11:49:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.15 2011/12/06 12:38:47 naota Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -99,3 +99,7 @@ net-fs/samba ads cluster
 # capi require Linux features
 # hardened require prelink which depends on glibc
 app-emulation/wine capi
+
+# Naohiro Aota <naota@gentoo.org> (24 Nov 2011)
+# Masked because kerberos is masked
+net-dns/bind gssapi
