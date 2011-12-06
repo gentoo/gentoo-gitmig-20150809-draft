@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.1 2011/12/06 15:54:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.2 2011/12/06 16:04:36 scarabeus Exp $
 
 EAPI=4
 
@@ -149,7 +149,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="
-	=app-office/libreoffice-l10n-$(get_version_component_range 1-3)*
+	>=app-office/libreoffice-l10n-3.5.0
 "
 
 # FIXME: cppunit should be moved to test conditional
