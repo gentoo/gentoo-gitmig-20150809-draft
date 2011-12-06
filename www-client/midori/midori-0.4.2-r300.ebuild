@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.2-r300.ebuild,v 1.1 2011/11/28 23:48:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.2-r300.ebuild,v 1.2 2011/12/06 03:47:13 ssuominen Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils python waf-utils
@@ -40,6 +40,10 @@ pkg_setup() {
 
 	DOCS=( AUTHORS ChangeLog HACKING INSTALL TODO TRANSLATE )
 	HTML_DOCS=( data/faq.html data/faq.css )
+}
+
+src_prepare() {
+	sed -i -e '/javascriptcoregtk/s:1.0:3.0:' wscript || die #392919
 }
 
 src_configure() {
