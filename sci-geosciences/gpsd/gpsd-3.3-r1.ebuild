@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.3-r1.ebuild,v 1.1 2011/12/06 22:01:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.3-r1.ebuild,v 1.2 2011/12/06 22:39:04 vapier Exp $
 
 EAPI="4"
 
@@ -94,13 +94,13 @@ src_configure() {
 		$(use_scons bluetooth bluez)
 		$(use_scons cxx libgpsmm)
 		$(use_scons debug)
-		$(use_scons dbus dbus-export)
+		$(use_scons dbus dbus_export)
 		$(use_scons ipv6)
 		$(use_scons ncurses)
 		$(use_scons ntp ntpshm)
 		$(use_scons ntp pps)
-		$(use_scons shm shm-export)
-		$(use_scons sockets sockets-export)
+		$(use_scons shm shm_export)
+		$(use_scons sockets sockets_export)
 		$(use_scons qt4 libQgpsmm)
 		$(use_scons usb)
 	)
