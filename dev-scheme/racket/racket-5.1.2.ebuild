@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/racket-5.1.2.ebuild,v 1.1 2011/08/11 13:17:06 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/racket-5.1.2.ebuild,v 1.2 2011/12/06 09:03:02 hkbst Exp $
 
 EAPI="4"
 
 # for live ebuilds uncomment inherit git, comment SRC_URI and empty KEYWORDS
 
 inherit eutils
-#inherit git
+#inherit git-2
 
 DESCRIPTION="Racket is a general-purpose programming language with strong support for domain-specific languages."
 HOMEPAGE="http://racket-lang.org/"
@@ -24,7 +24,7 @@ RDEPEND="X? ( x11-libs/cairo[X] ) virtual/libffi"
 
 DEPEND="${RDEPEND} !dev-tex/slatex"
 
-EGIT_UNPACK_DIR="${WORKDIR}/${P}"
+EGIT_SOURCEDIR="${WORKDIR}/${P}"
 S="${WORKDIR}/${P}/src"
 
 src_prepare() {
