@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111129.ebuild,v 1.1 2011/11/30 07:31:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111205.ebuild,v 1.1 2011/12/06 08:12:40 eras Exp $
 
 EAPI=4
 
@@ -66,7 +66,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if use vda ; then
+	if use vda; then
 		epatch "${DISTDIR}"/${VDA_P}.patch
 	fi
 
