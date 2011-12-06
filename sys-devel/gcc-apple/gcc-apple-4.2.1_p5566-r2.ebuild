@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5566-r2.ebuild,v 1.5 2011/11/13 19:14:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5566-r2.ebuild,v 1.6 2011/12/06 19:57:09 grobian Exp $
 
 EAPI="3"
-
-ETYPE="gcc-compiler"
 
 inherit eutils toolchain flag-o-matic autotools prefix
 
