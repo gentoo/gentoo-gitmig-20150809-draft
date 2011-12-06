@@ -18,3 +18,4 @@ move x11-misc/remind app-misc/remind
 slotmove dev-python/python-dateutil 0 python-2
 move x11-misc/bubblemon x11-plugins/bubblemon
 move app-misc/dsgui app-misc/datovka
+move dev-php5/pecl-gearman dev-php/pecl-gearman
