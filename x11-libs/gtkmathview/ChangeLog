@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.37 2011/03/06 13:13:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.38 2011/12/06 21:45:55 tetromino Exp $
+
+*gtkmathview-0.8.0-r1 (06 Dec 2011)
+
+  06 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtkmathview-0.8.0-r1.ebuild, +files/gtkmathview-0.8.0-underlinking.patch,
+  +files/binreloc.m4:
+  Fix underlinking (bug #369117, thanks to flameeyes and Oschtan), and move to
+  EAPI4 and drop .la files.
 
   06 Mar 2011; Pacho Ramos <pacho@gentoo.org> gtkmathview-0.8.0.ebuild,
   +files/gtkmathview-0.8.0-fix-template.patch:
