@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.523 2011/11/25 09:10:47 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.524 2011/12/06 12:27:26 olemarkus Exp $
+
+  06 Dec 2011; Ole Markus With <olemarkus@gentoo.org> -files/php-fpm.init,
+  files/php-fpm-r4.init:
+  Migrated changes from issue 390307
 
 *php-5.4.0_rc2 (25 Nov 2011)
 *php-5.3.9_rc2 (25 Nov 2011)
