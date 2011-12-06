@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.108 2011/11/29 22:55:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.109 2011/12/06 04:10:56 anarchy Exp $
+
+  06 Dec 2011; <anarchy@gentoo.org> metadata.xml:
+  Clarify crypt useflag, bug #392489
 
   29 Nov 2011; Tony Vroon <chainsaw@gentoo.org> thunderbird-8.0-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo,
