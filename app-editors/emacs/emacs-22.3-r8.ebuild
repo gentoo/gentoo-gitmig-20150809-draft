@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r8.ebuild,v 1.3 2011/09/28 05:35:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r8.ebuild,v 1.4 2011/12/06 13:44:27 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -45,7 +45,6 @@ DEPEND="${RDEPEND}
 	gzip-el? ( app-arch/gzip )"
 
 RDEPEND="${RDEPEND}
-	!<app-editors/emacs-vcs-22.1
 	>=app-emacs/emacs-common-gentoo-1[X?]"
 
 # FULL_VERSION keeps the full version number, which is needed in order to
@@ -89,10 +88,8 @@ src_configure() {
 	local myconf
 
 	if use alsa && ! use sound; then
-		echo
 		einfo "Although sound USE flag is disabled you chose to have alsa,"
 		einfo "so sound is switched on anyway."
-		echo
 		myconf="${myconf} --with-sound"
 	else
 		myconf="${myconf} $(use_with sound)"
@@ -238,13 +235,12 @@ pkg_postinst() {
 	eselect emacs update ifunset
 
 	if use X; then
-		echo
 		elog "You need to install some fonts for Emacs."
 		elog "Installing media-fonts/font-adobe-{75,100}dpi on the X server's"
 		elog "machine would satisfy basic Emacs requirements under X11."
+		elog
 	fi
 
-	echo
 	elog "You can set the version to be started by /usr/bin/emacs through"
 	elog "the Emacs eselect module, which also redirects man and info pages."
 	elog "Therefore, several Emacs versions can be installed at the same time."

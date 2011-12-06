@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r23.ebuild,v 1.4 2011/09/28 05:35:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r23.ebuild,v 1.5 2011/12/06 13:44:27 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -171,7 +171,6 @@ pkg_postinst() {
 	fi
 
 	if use X; then
-		echo
 		elog "You need to install some fonts for Emacs."
 		elog "Installing media-fonts/font-adobe-{75,100}dpi on the X server's"
 		elog "machine would satisfy basic Emacs requirements under X11."
