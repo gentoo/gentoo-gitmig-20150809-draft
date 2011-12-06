@@ -1,6 +1,10 @@
 # ChangeLog for app-text/nfoview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.19 2011/12/06 03:36:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.20 2011/12/06 03:37:08 ssuominen Exp $
+
+  06 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> -nfoview-1.9.2.ebuild,
+  -nfoview-1.9.5.ebuild:
+  old
 
 *nfoview-1.10 (06 Dec 2011)
 
