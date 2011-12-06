@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7.ebuild,v 1.1 2011/12/06 07:39:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7.ebuild,v 1.2 2011/12/06 13:21:48 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool multilib
@@ -12,7 +12,7 @@ SRC_URI="http://bitbucket.org/france/${PN}-tcforge/downloads/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="3dnow a52 aac alsa altivec dv dvd +iconv imagemagick jpeg lzo mjpeg mmx mp3 mpeg nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l vorbis X x264 xml xvid"
+IUSE="3dnow a52 aac alsa altivec dv dvd +iconv imagemagick jpeg lzo mjpeg mmx mp3 mpeg nuv ogg oss pic postproc quicktime sdl sse sse2 theora truetype v4l vorbis X x264 xml xvid"
 
 RDEPEND="
 	virtual/ffmpeg
@@ -50,9 +50,8 @@ DEPEND="
 
 REQUIRED_USE="
 	sse? ( mmx )
-	sse2? ( mmx )
+	sse2? ( mmx sse )
 	3dnow? ( mmx )
-	sse2? ( sse )
 	nuv? ( lzo )
 	"
 
@@ -62,6 +61,9 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
+	use x86 && myconf="$(use_enable !pic x86-textrels)" #271476
+
 	econf \
 		$(use_enable mmx) \
 		$(use_enable 3dnow) \
@@ -99,7 +101,8 @@ src_configure() {
 		$(use_enable iconv) \
 		$(use_enable nuv) \
 		$(use_with X x) \
-		--with-mod-path=/usr/$(get_libdir)/transcode
+		--with-mod-path=/usr/$(get_libdir)/transcode \
+		${myconf}
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.290 2011/12/06 07:39:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.291 2011/12/06 13:21:48 ssuominen Exp $
+
+  06 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> transcode-1.1.7.ebuild,
+  metadata.xml:
+  USE="pic" to control text relocation(s) in aclib wrt #271476 by Rafał
+  Mużyło
 
 *transcode-1.1.7 (06 Dec 2011)
 
