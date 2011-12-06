@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.497 2011/12/06 04:52:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.498 2011/12/06 04:54:39 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -403,7 +403,7 @@ want_minispecs() {
 			ewarn "You will not get hardened features if you have the vanilla USE-flag."
 		elif use nopie && use nossp ; then
 			ewarn "You will not get hardened features if you have the nopie and nossp USE-flag."
-		elif ! hardened_gcc_works pie && ! hardened_gcc_works ssp && ! use nopie ; then
+		elif ! hardened_gcc_works ; then
 			ewarn "Your $(tc-arch) arch is not supported."
 		else
 			return 0
