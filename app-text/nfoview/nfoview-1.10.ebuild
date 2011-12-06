@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-1.10.ebuild,v 1.1 2011/12/06 03:36:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-1.10.ebuild,v 1.2 2011/12/06 06:42:20 ssuominen Exp $
 
 EAPI=3
 
-PYTHON_DEPEND="3"
+PYTHON_DEPEND="3:3.2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.*"
 
