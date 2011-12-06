@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/superiotool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/superiotool/ChangeLog,v 1.4 2011/12/05 17:53:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/superiotool/ChangeLog,v 1.5 2011/12/06 17:55:48 vapier Exp $
+
+  06 Dec 2011; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add myself as maintainer behind Christian.
 
 *superiotool-99999999 (05 Dec 2011)
 *superiotool-6637 (05 Dec 2011)

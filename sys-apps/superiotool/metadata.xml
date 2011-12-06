@@ -5,6 +5,9 @@
 		<email>idl0r@gentoo.org</email>
 		<name>Christian Ruppert</name>
 	</maintainer>
+	<maintainer>
+		<email>vapier@gentoo.org</email>
+	</maintainer>
 	<use>
 		<flag name="pci">Support for PCI-attached "Super I/Os" (e.g. in VIA VT82686A/B).</flag>
 	</use>
