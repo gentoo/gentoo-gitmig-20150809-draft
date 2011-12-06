@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r6.ebuild,v 1.1 2009/11/11 08:02:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r6.ebuild,v 1.2 2011/12/06 19:33:32 robbat2 Exp $
 
 inherit eutils libtool autotools toolchain-funcs
 
@@ -32,13 +32,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.1-ansi.patch # 273752
 	eautoreconf
 	elibtoolize
-
-	# Ensure that the documentation actually finds the DTD it needs
-	docbookdtd="/usr/share/sgml/docbook/sgml-dtd-4.2/docbook.dtd"
-	sysid='"-//OASIS//DTD DocBook V4.2//EN"'
-	sed -r -i -e \
-		"s,(${sysid}) \[\$,\1 \"${docbookdtd}\" \[,g" \
-		"${S}"/doc/manual.sgml
 }
 
 src_compile() {

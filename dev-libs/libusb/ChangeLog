@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.120 2011/12/03 18:26:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.121 2011/12/06 19:33:32 robbat2 Exp $
+
+  06 Dec 2011; Robin H. Johnson <robbat2@gentoo.org> libusb-0.1.12-r5.ebuild,
+  libusb-0.1.12-r6.ebuild, libusb-0.1.12-r7.ebuild:
+  Drop the DTD reference mangling. I introduced it myself in 0.1.12-r1, in
+  April 2007, when the SGML catalog was in much worse shape. Fixes bug #390509
+  that was causing network access for fetching the DTD otherwise.
 
   03 Dec 2011; Raúl Porcel <armin76@gentoo.org> libusb-0.1.12-r7.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #390441

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r7.ebuild,v 1.10 2011/12/03 18:26:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r7.ebuild,v 1.11 2011/12/06 19:33:32 robbat2 Exp $
 
 EAPI="3"
 
@@ -31,11 +31,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.1.12-no-infinite-bulk.patch
 	epatch "${FILESDIR}"/${PN}-0.1-ansi.patch # 273752
 	eautoreconf
-
-	# Ensure that the documentation actually finds the DTD it needs
-	sed -i \
-		-e '1s|\[$|"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [|' \
-		doc/manual.sgml || die
 }
 
 src_configure() {
