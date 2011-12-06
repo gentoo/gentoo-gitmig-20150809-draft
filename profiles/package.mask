@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13306 2011/12/06 13:08:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13307 2011/12/06 13:17:11 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (06 Dec 2011)
+# lyx2html is unmaintained for almost 10 years, won't work with current lyx
+# formats, morevoer from lyx 2.0 there is lyx internal html export.
+# Bug #388987
+# Masked for removal on 06 Jan 2012
+app-text/lyx2html
 
 # Sven Vermeulen <swift@gentoo.org> (06 Dec 2011)
 # Package does not contain a SELinux module anymore, changes have been
