@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.287 2011/11/07 00:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.288 2011/12/06 23:30:43 vapier Exp $
+
+*busybox-1.19.3-r1 (06 Dec 2011)
+
+  06 Dec 2011; Mike Frysinger <vapier@gentoo.org> +busybox-1.19.3-r1.ebuild,
+  +files/busybox-1.19.3-kernel-nfs.patch:
+  Add patch from upstream which allows us to mount nfs shares w/out needing
+  libtirpc or C library RPC symbols #379481 by Andriy Baranskyy.
 
 *busybox-1.19.3 (07 Nov 2011)
 
