@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.501 2011/12/06 05:10:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.502 2011/12/06 05:22:24 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -984,45 +984,34 @@ gcc-compiler-configure() {
 			;;
 	esac
 
-	GCC_LANG="c"
-	is_cxx && GCC_LANG="${GCC_LANG},c++"
-	is_d   && GCC_LANG="${GCC_LANG},d"
-	is_gcj && GCC_LANG="${GCC_LANG},java"
-	is_go  && GCC_LANG="${GCC_LANG},go"
+	local GCC_LANG="c"
+	is_cxx && GCC_LANG+=",c++"
+	is_d   && GCC_LANG+=",d"
+	is_gcj && GCC_LANG+=",java"
+	is_go  && GCC_LANG+=",go"
 	if is_objc || is_objcxx ; then
-		GCC_LANG="${GCC_LANG},objc"
+		GCC_LANG+=",objc"
 		if tc_version_is_at_least "4.0" ; then
 			use objc-gc && confgcc+=" --enable-objc-gc"
 		fi
-		is_objcxx && GCC_LANG="${GCC_LANG},obj-c++"
+		is_objcxx && GCC_LANG+=",obj-c++"
 	fi
-	is_treelang && GCC_LANG="${GCC_LANG},treelang"
+	is_treelang && GCC_LANG+=",treelang"
 
 	# fortran support just got sillier! the lang value can be f77 for
 	# fortran77, f95 for fortran95, or just plain old fortran for the
 	# currently supported standard depending on gcc version.
-	is_fortran && GCC_LANG="${GCC_LANG},fortran"
-	is_f77 && GCC_LANG="${GCC_LANG},f77"
-	is_f95 && GCC_LANG="${GCC_LANG},f95"
+	is_fortran && GCC_LANG+=",fortran"
+	is_f77 && GCC_LANG+=",f77"
+	is_f95 && GCC_LANG+=",f95"
 
 	# We do NOT want 'ADA support' in here!
-	# is_ada && GCC_LANG="${GCC_LANG},ada"
+	# is_ada && GCC_LANG+=",ada"
 
 	einfo "configuring for GCC_LANG: ${GCC_LANG}"
+	confgcc+=" --enable-languages=${GCC_LANG}"
 }
 
-# Other than the variables described for gcc_setup_variables, the following
-# will alter tha behavior of gcc_do_configure:
-#
-#	CTARGET
-#	CBUILD
-#			Enable building for a target that differs from CHOST
-#
-#	GCC_LANG
-#			Enable support for ${GCC_LANG} languages. defaults to just "c"
-#
-# Travis Tilley <lv@gentoo.org> (04 Sep 2004)
-#
 gcc_do_configure() {
 	local confgcc
 
@@ -1114,11 +1103,6 @@ gcc_do_configure() {
 		--enable-secureplt"
 
 	gcc-compiler-configure || die
-
-	# if not specified, assume we are building for a target that only
-	# requires C support
-	GCC_LANG=${GCC_LANG:-c}
-	confgcc+=" --enable-languages=${GCC_LANG}"
 
 	if is_crosscompile ; then
 		# When building a stage1 cross-compiler (just C compiler), we have to
