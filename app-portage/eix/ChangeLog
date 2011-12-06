@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.382 2011/12/06 19:55:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.383 2011/12/06 19:59:28 darkside Exp $
+
+*eix-0.23.3-r1 (06 Dec 2011)
+
+  06 Dec 2011; Jeremy Olexa <darkside@gentoo.org> -eix-0.22.5.ebuild,
+  -eix-0.23.1.ebuild, -eix-0.23.2.ebuild, -eix-0.23.3.ebuild,
+  +eix-0.23.3-r1.ebuild:
+  Fix automagic bzip2 dep. Remove ald versions
 
   06 Dec 2011; Jeremy Olexa <darkside@gentoo.org> eix-0.22.11.ebuild:
   mark ppc64, bug 379603
