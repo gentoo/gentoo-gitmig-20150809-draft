@@ -1,6 +1,10 @@
 # ChangeLog for app-text/webgen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/ChangeLog,v 1.12 2010/08/14 07:17:46 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/ChangeLog,v 1.13 2011/12/06 19:14:25 graaff Exp $
+
+  06 Dec 2011; Hans de Graaff <graaff@gentoo.org> -webgen-0.4.7.ebuild,
+  -webgen-0.5.13.ebuild:
+  Remove old versions.
 
 *webgen-0.5.14 (14 Aug 2010)
 
