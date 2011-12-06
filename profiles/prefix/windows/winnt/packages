@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/packages,v 1.6 2011/11/29 19:41:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/packages,v 1.7 2011/12/06 16:03:10 vapier Exp $
 
 # those are packages not available/required on winnt, since
 # winnt can be a child EPREFIX only, which tears it's DEPENDS
@@ -19,7 +19,6 @@
 -*sys-apps/texinfo
 -*sys-apps/file
 -*app-arch/bzip2
--*sys-libs/ncurses
 -*net-misc/rsync
 -*sys-devel/automake
 -*virtual/editor
