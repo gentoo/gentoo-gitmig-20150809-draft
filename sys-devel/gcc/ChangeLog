@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.842 2011/12/06 16:28:10 vapier Exp $  
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.843 2011/12/06 21:40:28 vapier Exp $
+
+  06 Dec 2011; Mike Frysinger <vapier@gentoo.org> gcc-4.6.2.ebuild:
+  Add x32 ABI backport (for x86-64 targets) from gcc-4.7.
 
   06 Dec 2011; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add description for new USE=libssp flag.
