@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.10 2011/11/30 03:29:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.11 2011/12/06 17:51:45 tetromino Exp $
+
+  06 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  colord-0.1.15.ebuild:
+  Fix freebsd USB_CFLAGS/USB_LIBS (bug #387959 comment 13).
 
   30 Nov 2011; Jeroen Roovers <jer@gentoo.org> colord-0.1.15.ebuild:
   Marked ~hppa (bug #392057).

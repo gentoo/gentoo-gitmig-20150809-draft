@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.15.ebuild,v 1.2 2011/11/30 03:29:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.15.ebuild,v 1.3 2011/12/06 17:51:45 tetromino Exp $
 
 EAPI="4"
 
@@ -69,9 +69,8 @@ src_prepare() {
 src_configure() {
 	#  bug #387959#c6
 	if use elibc_FreeBSD; then
-		USB_CFLAGS="-I${EPREFIX}/usr/include"
-		USB_LIBS="-lusb"
-		echo "$USB_CFLAGS $USB_LIBS"
+		export USB_CFLAGS="-I${EPREFIX}/usr/include"
+		export USB_LIBS="-lusb"
 	fi
 
 	# Disable polkit to allow registering devices when colord is running as
