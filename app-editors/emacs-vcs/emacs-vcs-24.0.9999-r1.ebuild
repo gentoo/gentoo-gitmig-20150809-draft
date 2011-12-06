@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.20 2011/11/06 18:46:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.21 2011/12/06 13:50:55 ulm Exp $
 
 EAPI=4
 
@@ -93,13 +93,11 @@ src_prepare() {
 		FULL_VERSION=$(sed -n 's/^AC_INIT(emacs,[ \t]*\([^ \t,)]*\).*/\1/p' \
 			configure.in)
 		[[ ${FULL_VERSION} ]] || die "Cannot determine current Emacs version"
-		echo
 		einfo "Emacs branch: ${EBZR_BRANCH}"
 		einfo "Revision: ${EBZR_REVISION:-${EBZR_REVNO}}"
 		einfo "Emacs version number: ${FULL_VERSION}"
 		[[ ${FULL_VERSION} =~ ^${PV%.*}(\..*)?$ ]] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
-		echo
 	fi
 
 	if ! use alsa; then
@@ -134,10 +132,8 @@ src_configure() {
 	local myconf
 
 	if use alsa && ! use sound; then
-		echo
 		einfo "Although sound USE flag is disabled you chose to have alsa,"
 		einfo "so sound is switched on anyway."
-		echo
 		myconf="${myconf} --with-sound"
 	else
 		myconf="${myconf} $(use_with sound)"
@@ -211,6 +207,7 @@ src_configure() {
 		--with-crt-dir="${crtdir}" \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
 		--without-compress-info \
+		--disable-maintainer-mode \
 		$(use_with hesiod) \
 		$(use_with kerberos) $(use_with kerberos kerberos5) \
 		$(use_with gpm) \
@@ -310,20 +307,19 @@ pkg_postinst() {
 	eselect emacs update ifunset
 
 	if use X; then
-		echo
 		elog "You need to install some fonts for Emacs."
 		elog "Installing media-fonts/font-adobe-{75,100}dpi on the X server's"
 		elog "machine would satisfy basic Emacs requirements under X11."
 		elog "See also http://www.gentoo.org/proj/en/lisp/emacs/xft.xml"
 		elog "for how to enable anti-aliased fonts."
+		elog
 	fi
 
-	echo
 	elog "You can set the version to be started by /usr/bin/emacs through"
 	elog "the Emacs eselect module, which also redirects man and info pages."
 	elog "Therefore, several Emacs versions can be installed at the same time."
 	elog "\"man emacs.eselect\" for details."
-	echo
+	elog
 	elog "If you upgrade from a previous major version of Emacs, then it is"
 	elog "strongly recommended that you use app-admin/emacs-updater to rebuild"
 	elog "all byte-compiled elisp files of the installed Emacs packages."
