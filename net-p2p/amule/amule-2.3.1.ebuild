@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.1 2011/12/06 18:27:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.2 2011/12/06 18:40:34 armin76 Exp $
 
 EAPI="2"
 
@@ -26,6 +26,7 @@ DEPEND=">=x11-libs/wxGTK-2.8.12
 	upnp? ( >=net-libs/libupnp-1.6.6 )
 	remote? ( >=media-libs/libpng-1.2.0
 	unicode? ( >=media-libs/gd-2.0.26 ) )"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if use stats && ! use X; then
