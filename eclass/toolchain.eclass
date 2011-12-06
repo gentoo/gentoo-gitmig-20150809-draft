@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.499 2011/12/06 04:59:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.500 2011/12/06 05:02:05 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -755,10 +755,7 @@ toolchain_src_unpack() {
 	do_gcc_PIE_patches
 	epatch_user
 
-	if use hardened ; then
-		einfo "updating configuration to build hardened GCC"
-		make_gcc_hard || die "failed to make gcc hard"
-	fi
+	use hardened && make_gcc_hard
 
 	if is_libffi ; then
 		# move the libffi target out of gcj and into all
