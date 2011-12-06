@@ -1,6 +1,12 @@
 # ChangeLog for app-text/nfoview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.18 2011/09/20 22:46:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.19 2011/12/06 03:36:19 ssuominen Exp $
+
+*nfoview-1.10 (06 Dec 2011)
+
+  06 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +nfoview-1.10.ebuild,
+  nfoview-9999.ebuild:
+  Version bump (and update 9999 ebuild) to GTK+-3.x and Python 3.x version.
 
   20 Sep 2011; Michał Górny <mgorny@gentoo.org> nfoview-9999.ebuild:
   Migrate to git-2.
