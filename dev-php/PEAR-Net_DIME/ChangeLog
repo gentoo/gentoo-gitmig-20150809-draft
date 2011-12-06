@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Net_DIME
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DIME/ChangeLog,v 1.25 2009/08/22 19:42:43 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DIME/ChangeLog,v 1.26 2011/12/06 12:14:27 olemarkus Exp $
+
+*PEAR-Net_DIME-1.0.2 (06 Dec 2011)
+
+  06 Dec 2011; Ole Markus With <olemarkus@gentoo.org>
+  +PEAR-Net_DIME-1.0.2.ebuild:
+  Version bump
 
 *PEAR-Net_DIME-1.0.1 (22 Aug 2009)
 
