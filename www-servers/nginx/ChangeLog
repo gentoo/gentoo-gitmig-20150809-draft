@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.299 2011/11/24 07:14:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.300 2011/12/06 21:13:29 swegener Exp $
+
+  06 Dec 2011; Sven Wegener <swegener@gentoo.org> files/nginx.init-r2:
+  Switch from opts to extra_started_commands.
 
   24 Nov 2011; Benedikt Böhm <hollow@gentoo.org> -nginx-1.0.6.ebuild,
   -nginx-1.0.8.ebuild, nginx-1.0.10.ebuild, -nginx-1.1.4.ebuild,
