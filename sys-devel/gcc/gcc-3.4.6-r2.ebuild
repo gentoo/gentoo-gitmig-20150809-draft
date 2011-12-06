@@ -1,14 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.30 2011/12/04 23:00:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.31 2011/12/06 04:05:49 vapier Exp $
 
 PATCH_VER="1.6"
 UCLIBC_VER="1.1"
 UCLIBC_GCC_VER="3.4.5"
-PIE_VER="8.7.10"
-PIE_GCC_VER="3.4.6"
-PP_VER="1.0"
-PP_GCC_VER="3.4.6"
 HTB_VER="1.00.1"
 HTB_GCC_VER="3.4.4"
 D_VER="0.24"
@@ -34,11 +30,6 @@ src_unpack() {
 
 	# misc patches that havent made it into a patch tarball yet
 	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
-
-	# nothing in the tree provides libssp.so, so nothing will ever trigger this
-	# logic, but having the patch in the tree makes life so much easier for me
-	# since I dont have to also have an overlay for this.
-	want_libssp && epatch "${FILESDIR}"/3.4.3/libssp.patch
 
 	# Anything useful and objc will require libffi. Seriously. Lets just force
 	# libffi to install with USE="objc", even though it normally only installs
