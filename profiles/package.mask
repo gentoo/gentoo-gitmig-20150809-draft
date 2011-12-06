@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13305 2011/12/06 10:51:59 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13306 2011/12/06 13:08:40 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -361,12 +361,6 @@ app-admin/mon
 # Anthony G. Basile <blueness@gentoo.org> (08 Oct 2011)
 # Masked while testing potentially dangerous utility
 dev-python/pypax
-
-# Hans de Graaff <graaff@gentoo.org> (04 Oct 2011)
-# Mask stable version of ruby-activeldap since the sole version
-# of rails that it works with no longer in the tree. A new
-# version of ruby-activeldap should be stable soon, bug 384827.
-=dev-ruby/ruby-activeldap-1.2.1
 
 # Michael Sterrett <mr_bones_@gentoo.org> (29 Sep 2011)
 # This version is added for ebuild testing only.

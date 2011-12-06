@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5984 2011/12/06 10:21:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5985 2011/12/06 13:08:40 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Dec 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove ruby-activeldap mask since the problematic version has been removed.
 
   06 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> thirdpartymirrors:
   Remove unused mirror://transcode with only listing 404's.
