@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.293 2011/12/06 13:33:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.294 2011/12/06 13:44:46 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -323,6 +323,8 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 media-video/vlc direct2d directx dshow dxva2 waveout wingdi
 # Mac OSX / iPhone OS specific useflags
 media-video/vlc audioqueue ios-vout macosx macosx-audio macosx-dialog-provider macosx-eyetv macosx-quartztext macosx-qtcapture macosx-qtkit macosx-vout
+# media-library does not build
+media-video/vlc media-library
 
 # Alexis Ballier <aballier@gentoo.org> <28 Apr 2011>
 # Requires masked libcelt

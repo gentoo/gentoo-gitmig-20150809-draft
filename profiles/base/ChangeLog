@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.324 2011/12/06 13:33:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.325 2011/12/06 13:44:46 aballier Exp $
+
+  06 Dec 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  usemask vlc media-library useflag: does not build
 
   06 Dec 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask vlc macosx-qtkit useflag too
