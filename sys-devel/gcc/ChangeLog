@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.838 2011/12/04 23:00:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.839 2011/12/06 01:04:08 dirtyepic Exp $
+
+  06 Dec 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-4.6.2.ebuild:
+  Bump to patchset 1.1. Fixes compile issues on arm (bug #366253), and enable
+  fortification by default using builtin defines instead of spec rules as the
+  latter may become unsupportable in the future.
 
   04 Dec 2011; Mike Frysinger <vapier@gentoo.org> gcc-3.3.6-r1.ebuild,
   gcc-3.4.6-r2.ebuild:
