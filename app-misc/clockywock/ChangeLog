@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/clockywock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.10 2011/02/21 16:04:58 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.11 2011/12/06 01:07:42 vapier Exp $
+
+  06 Dec 2011; Mike Frysinger <vapier@gentoo.org> clockywock-0.2.3f.ebuild:
+  Fix building with glibc-2.14 #371383 by Diego Elio Pettenò.
 
   21 Feb 2011; Kevin McCarthy <signals@gentoo.org> metadata.xml:
   Update metadata. Take direct maintainership and remove proxy maintainers.
