@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.503 2011/12/06 20:11:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.504 2011/12/06 21:30:01 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -825,7 +825,14 @@ gcc-multilib-configure() {
 	# translate our notion of multilibs into gcc's
 	local abi map=() list
 	case ${CTARGET} in
-	x86_64*) tc_version_is_at_least 4.7 && map=(amd64:m64 x86:m32 x32:mx32) ;;
+	x86_64*)
+		# drop the 4.6.2 stuff once 4.7 goes stable
+		if tc_version_is_at_least 4.7 ||
+		   ( tc_version_is_at_least 4.6.2 && has x32 $(get_all_abis) )
+		then
+			map=(amd64:m64 x86:m32 x32:mx32)
+		fi
+		;;
 	esac
 	for abi in $(get_all_abis) ; do
 		local m a l
@@ -1887,7 +1894,10 @@ setup_multilib_osdirnames() {
 
 	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
 		einfo "updating multilib directories to be: ${libdirs}"
-		if tc_version_is_at_least 4.7 && [[ ${CTARGET} == x86_64*-linux* ]] ; then
+		# drop the 4.6.2 stuff once 4.7 goes stable
+		if tc_version_is_at_least 4.7 ||
+		   ( tc_version_is_at_least 4.6.2 && has x32 $(get_all_abis) )
+		then
 			set -- -e '/^MULTILIB_OSDIRNAMES.*lib32/s:[$][(]if.*):../lib32:'
 		else
 			set -- -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:"
