@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.496 2011/12/06 04:50:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.497 2011/12/06 04:52:25 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -348,7 +348,7 @@ hardened_gcc_works() {
 		return $?
 	elif [[ $1 == "ssp" ]] ; then
 		[[ -n ${SPECS_VER} ]] || return 1
-		use_if_iuse no$1 && return 1
+		use_if_iuse nossp && return 1
 		hardened_gcc_is_stable ssp
 		return $?
 	else
@@ -360,21 +360,18 @@ hardened_gcc_works() {
 }
 
 hardened_gcc_is_stable() {
+	local tocheck
 	if [[ $1 == "pie" ]] ; then
-		# HARDENED_* variables are deprecated and here for compatibility
-		local tocheck="${HARDENED_PIE_WORKS} ${HARDENED_GCC_WORKS}"
 		if [[ ${CTARGET} == *-uclibc* ]] ; then
-			tocheck="${tocheck} ${PIE_UCLIBC_STABLE}"
+			tocheck=${PIE_UCLIBC_STABLE}
 		else
-			tocheck="${tocheck} ${PIE_GLIBC_STABLE}"
+			tocheck=${PIE_GLIBC_STABLE}
 		fi
 	elif [[ $1 == "ssp" ]] ; then
-		# ditto
-		local tocheck="${HARDENED_SSP_WORKS} ${HARDENED_GCC_WORKS}"
 		if [[ ${CTARGET} == *-uclibc* ]] ; then
-			tocheck="${tocheck} ${SSP_UCLIBC_STABLE}"
+			tocheck=${SSP_UCLIBC_STABLE}
 		else
-			tocheck="${tocheck} ${SSP_STABLE}"
+			tocheck=${SSP_STABLE}
 		fi
 	else
 		die "hardened_gcc_stable needs to be called with pie or ssp"
