@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.70 2011/10/04 15:56:27 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.71 2011/12/06 13:53:04 maksbotan Exp $
+
+*enca-1.13-r2 (06 Dec 2011)
+
+  06 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +enca-1.13-r2.ebuild:
+  Completely port ebuild to autotools-utils.eclass, bug 392085. Thanks to Stas
 
 *enca-1.13-r1 (04 Oct 2011)
 
