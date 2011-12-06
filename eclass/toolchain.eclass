@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.494 2011/12/06 04:07:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.495 2011/12/06 04:15:10 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -94,7 +94,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 		IUSE+=" bootstrap doc gcj gtk hardened libffi multilib objc"
 
 		tc_version_is_at_least "4.0" && IUSE+=" objc-gc mudflap"
-		tc_version_is_at_least "4.1" && IUSE+=" objc++"
+		tc_version_is_at_least "4.1" && IUSE+=" libssp objc++"
 		tc_version_is_at_least "4.2" && IUSE+=" openmp"
 		tc_version_is_at_least "4.3" && IUSE+=" fixed-point"
 		tc_version_is_at_least "4.4" && IUSE+=" graphite"
@@ -424,18 +424,6 @@ hardened_gcc_check_unsupported() {
 	return 1
 }
 
-has_libssp() {
-	[[ -e /$(get_libdir)/libssp.so ]] && return 0
-	return 1
-}
-
-want_libssp() {
-	[[ ${GCC_LIBSSP_SUPPORT} == "true" ]] || return 1
-	has_libssp || return 1
-	[[ -n ${PP_VER} ]] || return 1
-	return 0
-}
-
 _want_stuff() {
 	local var=$1 flag=$2
 	[[ -z ${!var} ]] && return 1
@@ -467,39 +455,6 @@ want_minispecs() {
 		return 0
 	fi
 	return 1
-}
-
-# This function determines whether or not libc has been patched with stack
-# smashing protection support.
-libc_has_ssp() {
-	[[ ${ROOT} != "/" ]] && return 0
-
-	# lib hacks taken from sandbox configure
-	echo 'int main(){}' > "${T}"/libctest.c
-	LC_ALL=C gcc "${T}"/libctest.c -lc -o libctest -Wl,-verbose &> "${T}"/libctest.log || return 1
-	local libc_file=$(awk '/attempt to open/ { if (($4 ~ /\/libc\.so/) && ($5 == "succeeded")) LIBC = $4; }; END {print LIBC}' "${T}"/libctest.log)
-
-	[[ -z ${libc_file} ]] && die "Unable to find a libc !?"
-
-	# Check for gcc-4.x style ssp support
-	if	[[ -n $(readelf -s "${libc_file}" 2>/dev/null | \
-				grep 'FUNC.*GLOBAL.*__stack_chk_fail') ]]
-	then
-		return 0
-	else
-		# Check for gcc-3.x style ssp support
-		if	[[ -n $(readelf -s "${libc_file}" 2>/dev/null | \
-					grep 'OBJECT.*GLOBAL.*__guard') ]] && \
-			[[ -n $(readelf -s "${libc_file}" 2>/dev/null | \
-					grep 'FUNC.*GLOBAL.*__stack_smash_handler') ]]
-		then
-			return 0
-		elif is_crosscompile ; then
-			die "'${libc_file}' was detected w/out ssp, that sucks (a lot)"
-		else
-			return 1
-		fi
-	fi
 }
 
 # This is to make sure we don't accidentally try to enable support for a
@@ -672,8 +627,6 @@ toolchain_pkg_setup() {
 		use_if_iuse gcj && ewarn 'GCJ requires a C++ compiler, disabled due to USE="-cxx"'
 	fi
 
-	want_libssp && libc_has_ssp && \
-		die "libssp cannot be used with a glibc that has been patched to provide ssp symbols"
 	want_minispecs
 
 	unset LANGUAGES #265283
@@ -971,7 +924,7 @@ gcc-compiler-configure() {
 			confgcc+=" --disable-libmudflap"
 		fi
 
-		if want_libssp ; then
+		if use_if_iuse libssp ; then
 			confgcc+=" --enable-libssp"
 		else
 			export gcc_cv_libc_provides_ssp=yes
