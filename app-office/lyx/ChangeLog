@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.239 2011/12/06 12:47:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.240 2011/12/06 12:50:49 aballier Exp $
+
+  06 Dec 2011; Alexis Ballier <aballier@gentoo.org> lyx-1.6.8.ebuild,
+  lyx-1.6.10.ebuild, lyx-2.0.1.ebuild:
+  fix subversion deps to force <1.7, it doesnt work with 1.7, bug #388981 by
+  pavel sanda
 
   06 Dec 2011; Alexis Ballier <aballier@gentoo.org> -lyx-2.0.0.ebuild:
   remove old
