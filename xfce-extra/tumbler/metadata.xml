@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>xfce</herd>
+  <use>
+    <flag name='odf'>Enable support for .odf thumbnailers by using <pkg>gnome-extra/libgsf</pkg></flag>
+  </use>
 </pkgmetadata>
