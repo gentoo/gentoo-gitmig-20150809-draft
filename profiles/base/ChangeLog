@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.326 2011/12/06 16:01:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.327 2011/12/06 16:05:56 vapier Exp $
+
+  06 Dec 2011; Mike Frysinger <vapier@gentoo.org> packages:
+  Drop zlib dep from system since pkgs pull it in as needed.
 
   06 Dec 2011; Mike Frysinger <vapier@gentoo.org> packages:
   Drop ncurses dep from system since pkgs pull it in as needed.
