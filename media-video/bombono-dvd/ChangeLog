@@ -1,6 +1,13 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.19 2011/12/02 19:36:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.20 2011/12/06 20:40:26 dilfridge Exp $
+
+*bombono-dvd-1.2.0-r1 (06 Dec 2011)
+
+  06 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -bombono-dvd-1.2.0.ebuild, +bombono-dvd-1.2.0-r1.ebuild,
+  +files/bombono-dvd-1.2.0-cdrtools.patch:
+  With patch from Ilya, allow using both cdrtools and cdrkit
 
   02 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   bombono-dvd-1.2.0.ebuild, metadata.xml:
