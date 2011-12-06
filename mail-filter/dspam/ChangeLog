@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.142 2011/11/25 23:45:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.143 2011/12/06 05:44:01 radhermit Exp $
+
+  06 Dec 2011; Tim Harder <radhermit@gentoo.org> files/dspam.initd:
+  Replace opts with extra_commands (bug #393113 by Sven Schwyn) and remove
+  extra whitespace.
 
   25 Nov 2011; Markos Chandras <hwoarang@gentoo.org> dspam-3.10.1-r1.ebuild:
   Stable on amd64 wrt bug #391121

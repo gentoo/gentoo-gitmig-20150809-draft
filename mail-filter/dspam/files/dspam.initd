@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/files/dspam.initd,v 1.3 2011/09/10 10:17:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/files/dspam.initd,v 1.4 2011/12/06 05:44:02 radhermit Exp $
 
-opts="${opts} reload"
+extra_started_commands="reload"
 PIDFILE=${PID_FILE:-/var/run/dspam/dspam.pid}
 
 depend() {
@@ -40,6 +40,6 @@ stop() {
 
 reload() {
 	ebegin "Reloading dspam"
-	start-stop-daemon --signal SIGHUP /usr/bin/dspam 
+	start-stop-daemon --signal SIGHUP /usr/bin/dspam
 	eend $?
 }
