@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/capybara
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/ChangeLog,v 1.5 2011/11/20 14:12:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/ChangeLog,v 1.6 2011/12/06 14:41:51 graaff Exp $
+
+*capybara-1.1.2 (06 Dec 2011)
+
+  06 Dec 2011; Hans de Graaff <graaff@gentoo.org> +capybara-1.1.2.ebuild:
+  Version bump.
 
   20 Nov 2011; Hans de Graaff <graaff@gentoo.org> -capybara-1.0.0.ebuild,
   -capybara-1.0.1.ebuild:
