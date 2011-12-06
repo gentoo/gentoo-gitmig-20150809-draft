@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.84 2011/03/28 21:25:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.85 2011/12/06 09:09:58 radhermit Exp $
+
+*ettercap-0.7.4 (06 Dec 2011)
+
+  06 Dec 2011; Tim Harder <radhermit@gentoo.org> +ettercap-0.7.4.ebuild,
+  +files/ettercap-0.7.4-autotools.patch, +files/ettercap-0.7.4-flags.patch:
+  Version bump. Update to EAPI 4 and add pcre use flag.
 
   28 Mar 2011; Tim Harder <radhermit@gentoo.org> -ettercap-0.7.3-r2.ebuild,
   -ettercap-0.7.3-r3.ebuild, ettercap-0.7.3-r4.ebuild:
