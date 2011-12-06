@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.493 2011/12/04 22:59:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.494 2011/12/06 04:07:16 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -88,7 +88,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	[[ -n ${PIE_VER} ]] && IUSE+=" nopie"
 	[[ -n ${HTB_VER} ]] && IUSE+=" boundschecking"
 	[[ -n ${D_VER}   ]] && IUSE+=" d"
-	[[ -n ${PP_VER}${SPECS_VER} ]] && IUSE+=" nossp"
+	[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
 
 	if tc_version_is_at_least 3 ; then
 		IUSE+=" bootstrap doc gcj gtk hardened libffi multilib objc"
@@ -216,18 +216,15 @@ S=$(gcc_get_s_dir)
 #
 #	PIE_VER
 #	PIE_GCC_VER
-#	obsoleted: PIE_CORE
 #			These variables control patching in various updates for the logic
 #			controlling Position Independant Executables. PIE_VER is expected
-#			to be the version of this patch, PIE_GCC_VER the gcc version of
-#			the patch, and PIE_CORE (obsoleted) the actual filename of the patch.
+#			to be the version of this patch, and PIE_GCC_VER the gcc version of
+#			the patch:
 #			An example:
 #					PIE_VER="8.7.6.5"
 #					PIE_GCC_VER="3.4.0"
 #			The resulting filename of this tarball will be:
 #			gcc-${PIE_GCC_VER:-${GCC_RELEASE_VER}}-piepatches-v${PIE_VER}.tar.bz2
-#				old syntax (do not define PIE_CORE anymore):
-#					PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 #
 #	SPECS_VER
 #	SPECS_GCC_VER
@@ -240,23 +237,6 @@ S=$(gcc_get_s_dir)
 #					SPECS_GCC_VER="3.4.0"
 #			The resulting filename of this tarball will be:
 #			gcc-${SPECS_GCC_VER:-${GCC_RELEASE_VER}}-specs-${SPECS_VER}.tar.bz2
-#
-#	PP_VER
-#	PP_GCC_VER
-#	obsoleted: PP_FVER
-#			These variables control patching in stack smashing protection
-#			support. They both control the version of ProPolice to download.
-#
-#		PP_VER / PP_GCC_VER
-#			Used to roll our own custom tarballs of ssp.
-#		PP_FVER / PP_VER
-#			Used for mirroring ssp straight from IBM.
-#			PP_VER sets the version of the directory in which to find the
-#			patch, and PP_FVER sets the version of the patch itself. For
-#			example:
-#					PP_VER="3_4"
-#					PP_FVER="${PP_VER//_/.}-2"
-#			would download gcc3_4/protector-3.4-2.tar.gz
 #
 #	HTB_VER
 #	HTB_GCC_VER
@@ -275,7 +255,6 @@ get_gcc_src_uri() {
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
 	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
 	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
-	export PP_GCC_VER=${PP_GCC_VER:-${GCC_RELEASE_VER}}
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 	export SPECS_GCC_VER=${SPECS_GCC_VER:-${GCC_RELEASE_VER}}
 
@@ -290,19 +269,6 @@ get_gcc_src_uri() {
 		# we want all branch updates to be against the main release
 		[[ -n ${BRANCH_UPDATE} ]] && \
 			GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2)"
-	fi
-
-	# propolice aka stack smashing protection
-	if [[ -n ${PP_VER} ]] ; then
-		if [[ -n ${PP_FVER} ]] ; then
-			GCC_SRC_URI="${GCC_SRC_URI}
-				!nossp? (
-					http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz
-					$(gentoo_urls protector-${PP_FVER}.tar.gz)
-				)"
-		else
-			GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${PP_GCC_VER}-ssp-${PP_VER}.tar.bz2)"
-		fi
 	fi
 
 	# uclibc lovin
@@ -386,7 +352,7 @@ hardened_gcc_works() {
 		fi
 		return 1
 	elif [[ $1 == "ssp" ]] ; then
-		[[ -n ${PP_VER} ]] || [[ -n ${SPECS_VER} ]] || return 1
+		[[ -n ${SPECS_VER} ]] || return 1
 		tc_version_is_at_least 4.3.2 && use nossp && return 1
 		hardened_gcc_is_stable ssp && return 0
 		if has "~$(tc-arch)" ${ACCEPT_KEYWORDS} ; then
@@ -483,7 +449,6 @@ want_pie() {
 	tc_version_is_at_least 4.3.2 && return 1
 	_want_stuff PIE_VER !nopie
 }
-want_ssp() { _want_stuff PP_VER !nossp ; }
 
 want_minispecs() {
 	if tc_version_is_at_least 4.3.2 && use hardened ; then
@@ -876,7 +841,6 @@ toolchain_src_unpack() {
 		fi
 	fi
 	do_gcc_HTB_patches
-	do_gcc_SSP_patches
 	do_gcc_PIE_patches
 	epatch_user
 
@@ -1832,7 +1796,6 @@ gcc_quick_unpack() {
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
 	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
 	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
-	export PP_GCC_VER=${PP_GCC_VER:-${GCC_RELEASE_VER}}
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 	export SPECS_GCC_VER=${SPECS_GCC_VER:-${GCC_RELEASE_VER}}
 
@@ -1873,17 +1836,6 @@ gcc_quick_unpack() {
 	[[ -n ${UCLIBC_VER} ]] && \
 		unpack gcc-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
 
-	if want_ssp ; then
-		if [[ -n ${PP_FVER} ]] ; then
-			# The gcc 3.4 propolice versions are meant to be unpacked to ${S}
-			pushd "${S}" > /dev/null
-			unpack protector-${PP_FVER}.tar.gz
-			popd > /dev/null
-		else
-			unpack gcc-${PP_GCC_VER}-ssp-${PP_VER}.tar.bz2
-		fi
-	fi
-
 	if want_pie ; then
 		if [[ -n ${PIE_CORE} ]] ; then
 			unpack ${PIE_CORE}
@@ -1906,90 +1858,6 @@ do_gcc_HTB_patches() {
 	# modify the bounds checking patch with a regression patch
 	epatch "${WORKDIR}/bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch"
 	BRANDING_GCC_PKGVERSION="${BRANDING_GCC_PKGVERSION}, HTB-${HTB_GCC_VER}-${HTB_VER}"
-}
-
-# patch in ProPolice Stack Smashing protection
-do_gcc_SSP_patches() {
-	# PARISC has no love ... it's our stack :(
-	if [[ $(tc-arch) == "hppa" ]] || ! want_ssp ; then
-		return 0
-	fi
-
-	local ssppatch
-	local sspdocs
-
-	if [[ -n ${PP_FVER} ]] ; then
-		# Etoh keeps changing where files are and what the patch is named
-		if tc_version_is_at_least 3.4.1 ; then
-			# >3.4.1 uses version in patch name, and also includes docs
-			ssppatch="${S}/gcc_${PP_VER}.dif"
-			sspdocs="yes"
-		elif tc_version_is_at_least 3.4.0 ; then
-			# >3.4 put files where they belong and 3_4 uses old patch name
-			ssppatch="${S}/protector.dif"
-			sspdocs="no"
-		elif tc_version_is_at_least 3.2.3 ; then
-			# earlier versions have no directory structure or docs
-			mv "${S}"/protector.{c,h} "${S}"/gcc
-			ssppatch="${S}/protector.dif"
-			sspdocs="no"
-		fi
-	else
-		# Just start packaging the damn thing ourselves
-		mv "${WORKDIR}"/ssp/protector.{c,h} "${S}"/gcc/
-		ssppatch=${WORKDIR}/ssp/gcc-${PP_GCC_VER}-ssp.patch
-		# allow boundschecking and ssp to get along
-		(want_boundschecking && [[ -e ${WORKDIR}/ssp/htb-ssp.patch ]]) \
-			&& patch -s "${ssppatch}" "${WORKDIR}"/ssp/htb-ssp.patch
-	fi
-
-	[[ -z ${ssppatch} ]] && die "Sorry, SSP is not supported in this version"
-	epatch ${ssppatch}
-
-	if [[ ${PN} == "gcc" && ${sspdocs} == "no" ]] ; then
-		epatch "${GCC_FILESDIR}"/pro-police-docs.patch
-	fi
-
-	# Don't build crtbegin/end with ssp
-	sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector |'\
-		-i gcc/Makefile.in || die "Failed to update crtstuff!"
-
-	# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
-	# the build fails building timevar.o w/:
-	# cc1: stack smashing attack in function ix86_split_to_parts()
-	if use build && tc_version_is_at_least 3.4.0 ; then
-		if gcc -dumpspecs | grep -q "fno-stack-protector:" ; then
-			epatch "${GCC_FILESDIR}"/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
-		fi
-	fi
-
-	BRANDING_GCC_PKGVERSION="${BRANDING_GCC_PKGVERSION}, ssp-${PP_FVER:-${PP_GCC_VER}-${PP_VER}}"
-	if want_libssp ; then
-		update_gcc_for_libssp
-	else
-		update_gcc_for_libc_ssp
-	fi
-
-	# Don't build libgcc with ssp
-	sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector|' \
-		-i gcc/Makefile.in || die "Failed to update gcc!"
-}
-
-# If glibc or uclibc has been patched to provide the necessary symbols itself,
-# then lets use those for SSP instead of libgcc.
-update_gcc_for_libc_ssp() {
-	if libc_has_ssp ; then
-		einfo "Updating gcc to use SSP from libc ..."
-		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -D_LIBC_PROVIDES_SSP_|' \
-			-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
-	fi
-}
-
-# a split out non-libc non-libgcc ssp requires additional spec logic changes
-update_gcc_for_libssp() {
-	einfo "Updating gcc to use SSP from libssp..."
-	sed -e 's|^\(INTERNAL_CFLAGS.*\)$|\1 -D_LIBSSP_PROVIDES_SSP_|' \
-		-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
 }
 
 # do various updates to PIE logic
