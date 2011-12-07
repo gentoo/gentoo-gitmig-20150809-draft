@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.185 2011/11/02 20:48:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.186 2011/12/07 10:23:23 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kbounce-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
 *kbounce-4.7.3 (02 Nov 2011)
 

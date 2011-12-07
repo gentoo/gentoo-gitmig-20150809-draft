@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.113 2011/12/04 17:44:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.114 2011/12/07 10:12:23 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dolphin-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
   04 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> dolphin-4.7.3.ebuild:
   Restrict tests, bug 393129

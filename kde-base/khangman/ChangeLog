@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khangman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/ChangeLog,v 1.191 2011/11/02 20:48:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/ChangeLog,v 1.192 2011/12/07 11:03:18 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> khangman-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
 *khangman-4.7.3 (02 Nov 2011)
 

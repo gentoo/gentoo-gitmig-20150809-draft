@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.114 2011/11/03 10:52:25 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.115 2011/12/07 11:56:31 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> marble-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
   03 Nov 2011; Theo Chatzimichos <tampakrap@gentoo.org> marble-4.7.2-r1.ebuild,
   marble-4.7.3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-desktoptheme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.89 2011/11/02 20:48:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.90 2011/12/07 10:36:38 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kdebase-desktoptheme-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
 *kdebase-desktoptheme-4.7.3 (02 Nov 2011)
 

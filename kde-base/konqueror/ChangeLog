@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.220 2011/11/02 20:47:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.221 2011/12/07 11:19:58 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> konqueror-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
 *konqueror-4.7.3 (02 Nov 2011)
 

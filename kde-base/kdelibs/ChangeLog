@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.804 2011/11/29 21:39:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.805 2011/12/07 10:44:23 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kdelibs-4.7.3-r1.ebuild:
+  x86 stable wrt bug #388279
 
 *kdelibs-4.7.3-r11 (29 Nov 2011)
 

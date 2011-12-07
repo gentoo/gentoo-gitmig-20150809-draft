@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akonadiconsole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.12 2011/11/05 19:51:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.13 2011/12/07 12:12:41 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  akonadiconsole-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
   05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
   akonadiconsole-4.7.3.ebuild:

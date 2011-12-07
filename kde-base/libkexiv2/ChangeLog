@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkexiv2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.92 2011/11/02 20:48:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.93 2011/12/07 11:50:28 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libkexiv2-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
 *libkexiv2-4.7.3 (02 Nov 2011)
 

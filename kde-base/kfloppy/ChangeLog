@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.177 2011/11/02 20:48:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.178 2011/12/07 10:58:58 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kfloppy-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
 *kfloppy-4.7.3 (02 Nov 2011)
 

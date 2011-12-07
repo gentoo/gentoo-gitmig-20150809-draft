@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.192 2011/12/04 16:14:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.193 2011/12/07 10:25:05 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kcalc-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
   04 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> kcalc-4.7.3.ebuild:
   Restrict tests, bug 393093

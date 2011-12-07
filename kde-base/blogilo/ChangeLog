@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.49 2011/11/05 19:53:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.50 2011/12/07 12:13:37 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> blogilo-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
   05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> blogilo-4.7.3.ebuild:
   Marked ~ppc/~ppc64 wrt #379471

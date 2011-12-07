@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.203 2011/11/02 20:48:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.204 2011/12/07 10:29:20 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kde-meta-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
 *kde-meta-4.7.3 (02 Nov 2011)
 
