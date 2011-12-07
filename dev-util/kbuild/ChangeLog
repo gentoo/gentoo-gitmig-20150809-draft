@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.23 2011/11/01 11:01:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.24 2011/12/07 17:29:44 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kbuild-0.1.9998_pre20110817.ebuild:
+  x86 stable wrt bug #386317
 
   01 Nov 2011; Tony Vroon <chainsaw@gentoo.org>
   kbuild-0.1.9998_pre20110817.ebuild:
