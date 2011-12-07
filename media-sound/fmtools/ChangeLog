@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fmtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.14 2011/12/07 07:34:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.15 2011/12/07 07:56:21 radhermit Exp $
+
+  07 Dec 2011; Tim Harder <radhermit@gentoo.org> -fmtools-0.99.1.ebuild,
+  -fmtools-1.0.2.ebuild:
+  Remove old.
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> fmtools-1.0.2-r1.ebuild:
   x86 stable wrt bug #392805
