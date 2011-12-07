@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-4.0.1.528992-r1.ebuild,v 1.1 2011/12/03 20:07:45 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-4.0.1.528992-r2.ebuild,v 1.1 2011/12/07 16:33:04 vadimk Exp $
 
 EAPI="4"
 
@@ -168,9 +168,10 @@ src_install() {
 	dosym "${VM_INSTALL_DIR}"/lib/vmware/bin/vmplayer "${VM_INSTALL_DIR}"/bin/vmplayer
 	dosym "${VM_INSTALL_DIR}"/lib/vmware/icu /etc/vmware/icu
 
-	# fix up permissions
-	fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/{bin/*,lib/wrapper-gtk24.sh,lib/libgksu2.so.0/gksu-run-helper}
-	fperms 4711 "${VM_INSTALL_DIR}"/lib/vmware/bin/vmware-vmx*
+	# fix permissions
+	fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/bin/{appLoader,fusermount,launcher.sh,mkisofs,vmware-remotemks}
+	fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/lib/{wrapper-gtk24.sh,libgksu2.so.0/gksu-run-helper}
+	fperms 4711 "${VM_INSTALL_DIR}"/lib/vmware/bin/vmware-vmx{,-debug,-stats}
 
 	# create the environment
 	local envd="${T}/90vmware"
