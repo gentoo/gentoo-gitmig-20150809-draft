@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0-r2.ebuild,v 1.1 2011/05/26 23:12:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0-r2.ebuild,v 1.2 2011/12/07 14:19:27 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -22,8 +22,9 @@ RDEPEND=">=app-i18n/tomoe-0.6.0[python?]
 		dev-python/pygtk:2
 		dev-python/pygobject:2
 	)
-	gucharmap? ( >=gnome-extra/gucharmap-1.4.0 )"
+	gucharmap? ( gnome-extra/gucharmap:0 )"
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	dev-util/pkgconfig
 	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1.4 )"
@@ -39,6 +40,7 @@ pkg_setup() {
 src_prepare() {
 	# Fix compilation with gucharmap-2.24, bug #243160
 	epatch "${FILESDIR}/${P}-gucharmap2.patch"
+	epatch "${FILESDIR}/${P}-underlinking.patch"
 
 	eautoreconf
 }
