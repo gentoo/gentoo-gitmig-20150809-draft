@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.155 2011/11/29 23:44:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.156 2011/12/07 19:23:45 vapier Exp $
+
+  07 Dec 2011; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Add settings for x32 ABI, and make amd64 explicit in case it is not the
+  default ABI.
 
   29 Nov 2011; Davide Pesavento <pesa@gentoo.org> package.use.mask:
   Unmask USE="jit" for qt-webkit.
