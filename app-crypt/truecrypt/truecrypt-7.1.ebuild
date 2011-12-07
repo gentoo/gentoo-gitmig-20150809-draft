@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r5.ebuild,v 1.2 2011/07/15 13:10:37 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1.ebuild,v 1.1 2011/12/07 17:06:56 c1pher Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit flag-o-matic linux-info multilib toolchain-funcs wxwidgets eutils \
 	pax-utils
@@ -23,7 +23,6 @@ RDEPEND="|| ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper )
 	x11-libs/wxGTK:2.8[X?]
 	app-admin/sudo"
 DEPEND="${RDEPEND}
-	|| ( dev-libs/pkcs11-helper dev-libs/opensc )
 	!ppc? ( dev-lang/nasm )"
 
 S="${WORKDIR}/${P}-source"
@@ -55,26 +54,14 @@ src_prepare() {
 
 	epatch "${FILESDIR}/makefile-archdetect.diff"
 	epatch "${FILESDIR}/execstack-fix.diff"
-	if ! has_version dev-libs/pkcs11-helper && \
-		has_version "=dev-libs/opensc-0.12*"; then
-		mkdir pkcs11 || die
-		cp "${WORKDIR}"/truecrypt-pkcs11.h pkcs11/pkcs11.h || die
-	fi
+	mkdir "${T}"/pkcs11 || die
+	ln -s "${WORKDIR}"/truecrypt-pkcs11.h "${T}"/pkcs11/pkcs11.h || die
 }
 
 src_compile() {
-	local EXTRA pkcs11_include_directory
+	local EXTRA
 
 	use X || EXTRA+=" NOGUI=1"
-
-	if has_version dev-libs/pkcs11-helper; then
-		pkcs11_include_directory="/usr/include/pkcs11-helper-1.0"
-	elif has_version "=dev-libs/opensc-0.12*"; then
-		pkcs11_include_directory="/usr/include/opensc"
-		append-flags -I"${S}"/pkcs11
-	else
-		pkcs11_include_directory="/usr/include/opensc"
-	fi
 	append-flags -DCKR_NEW_PIN_MODE=0x000001B0 -DCKR_NEXT_OTP=0x000001B1
 
 	emake \
@@ -90,8 +77,7 @@ src_compile() {
 		TC_EXTRA_CXXFLAGS="${CXXFLAGS}" \
 		TC_EXTRA_LFLAGS="${LDFLAGS}" \
 		WX_CONFIG="${WX_CONFIG}" \
-		PKCS11_INC="${pkcs11_include_directory}" \
-		|| die "emake failed"
+		PKCS11_INC="${T}/pkcs11/"
 }
 
 src_test() {
@@ -99,19 +85,19 @@ src_test() {
 }
 
 src_install() {
-	dobin Main/truecrypt || die
-	dodoc Readme.txt "Release/Setup Files/TrueCrypt User Guide.pdf" || die
+	dobin Main/truecrypt
+	dodoc Readme.txt "Release/Setup Files/TrueCrypt User Guide.pdf"
 	exeinto "/$(get_libdir)/rcscripts/addons"
-	newexe "${FILESDIR}/${PN}-stop.sh" "${PN}-stop.sh" || die
+	newexe "${FILESDIR}/${PN}-stop.sh" "${PN}-stop.sh"
 
-	newinitd "${FILESDIR}/${PN}.init" ${PN} || die
+	newinitd "${FILESDIR}/${PN}.init" ${PN}
 
 	if use X; then
-		newicon Resources/Icons/TrueCrypt-48x48.xpm truecrypt.xpm || die
-		make_desktop_entry ${PN} "TrueCrypt" ${PN} "System" || die
+		newicon Resources/Icons/TrueCrypt-48x48.xpm truecrypt.xpm
+		make_desktop_entry ${PN} "TrueCrypt" ${PN} "System"
 	fi
 
-	pax-mark -m "${D}/usr/bin/truecrypt" || die
+	pax-mark -m "${D}/usr/bin/truecrypt"
 }
 
 pkg_postinst() {

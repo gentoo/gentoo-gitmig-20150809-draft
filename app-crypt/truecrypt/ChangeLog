@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.66 2011/07/15 17:53:07 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.67 2011/12/07 17:06:56 c1pher Exp $
+
+*truecrypt-7.1 (07 Dec 2011)
+
+  07 Dec 2011; Dane Smith <c1pher@gentoo.org> -truecrypt-7.0a-r2.ebuild,
+  -truecrypt-7.0a-r5.ebuild, -truecrypt-7.0a-r6.ebuild, +truecrypt-7.1.ebuild:
+  Version bump wrt bug 381717. Drop old wrt bug 382663.
 
 *truecrypt-7.0a-r6 (15 Jul 2011)
 
