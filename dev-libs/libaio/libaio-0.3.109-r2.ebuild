@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r2.ebuild,v 1.8 2011/10/03 16:55:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r2.ebuild,v 1.9 2011/12/07 15:45:57 vapier Exp $
 
 EAPI="3"
 
@@ -23,6 +23,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.3.106-build.patch
 	epatch "${FILESDIR}"/${PN}-0.3.107-ar-ranlib.patch
 	epatch "${FILESDIR}"/${PN}-0.3.109-install.patch
+	epatch "${FILESDIR}"/${PN}-0.3.109-x32.patch
 	sed -i \
 		-e "/^libdir=/s:lib$:$(get_libdir):" \
 		-e "/^prefix=/s:/usr:${EPREFIX}/usr:" \

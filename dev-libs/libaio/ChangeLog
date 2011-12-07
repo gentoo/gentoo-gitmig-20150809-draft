@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.60 2011/10/03 16:55:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.61 2011/12/07 15:45:57 vapier Exp $
+
+  07 Dec 2011; Mike Frysinger <vapier@gentoo.org> libaio-0.3.109-r2.ebuild,
+  +files/libaio-0.3.109-x32.patch:
+  Add fix for x32 ABIs.
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> libaio-0.3.109-r2.ebuild:
   Marked ppc/ppc64 stable for bug #379991.
