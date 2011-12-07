@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.138 2011/12/03 17:37:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.139 2011/12/07 20:29:24 vapier Exp $
+
+  07 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
+  Also check for `7zr` when processing 7z archives.
 
   03 Dec 2011; Raúl Porcel <armin76@gentoo.org> less-444.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #389995
