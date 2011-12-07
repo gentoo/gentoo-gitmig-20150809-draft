@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.95.ebuild,v 1.7 2011/12/07 02:28:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.95.ebuild,v 1.8 2011/12/07 09:49:09 jlec Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ PYTHON_MODNAME="terminatorlib"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils eutils
+inherit gnome2 distutils eutils
 
 DESCRIPTION="Multiple GNOME terminals in one window"
 HOMEPAGE="http://www.tenshu.net/p/terminator.html"
@@ -35,4 +35,18 @@ src_prepare() {
 	epatch "${FILESDIR}"/0.90-without-icon-cache.patch
 	epatch "${FILESDIR}"/0.94-session.patch
 	distutils_src_prepare
+}
+
+src_configure() {
+:
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	distutils_pkg_postrm
 }
