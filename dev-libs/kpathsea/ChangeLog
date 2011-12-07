@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.22 2011/12/03 11:09:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.23 2011/12/07 07:39:12 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kpathsea-6.0.1_p20110705.ebuild:
+  x86 stable wrt bug #392617
 
   03 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
   kpathsea-6.0.1_p20110705.ebuild:
