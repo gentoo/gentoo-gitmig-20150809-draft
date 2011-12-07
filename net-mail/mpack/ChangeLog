@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/mpack
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.14 2010/03/29 20:03:48 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.15 2011/12/07 23:34:59 sping Exp $
+
+*mpack-1.6-r1 (07 Dec 2011)
+
+  07 Dec 2011; Sebastian Pipping <sping@gentoo.org> +mpack-1.6-r1.ebuild,
+  +files/mpack-1.6-compile.patch, +files/mpack-1.6-paths.patch:
+  The s/mktemp/mkstemp/ from <mpack-1.6-gentoo.patch> is broken: it does not
+  fully fix the TOCTTOU vulnerability but breaks sending of e-mails (bug
+  #171075). So I extracted the parts of (1) missing include, (2) wrong
+  prototypes and (3) system path corrections from that patch, made dedicated
+  files and added missing bits to each of these, and ripped the
+  s/mktemp/mkstemp/ part out. A proper TOCTTOU fix is left todo. It's not
+  trivial to do.
 
   29 Mar 2010; Fabian Groffen <grobian@gentoo.org> mpack-1.6.ebuild:
   Marked ~ppc-macos, ~x86-solaris and ~sparc-solaris, bug #310751
