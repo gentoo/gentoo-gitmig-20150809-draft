@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.212 2011/11/30 15:50:14 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.213 2011/12/07 17:44:39 ulm Exp $
+
+  07 Dec 2011; Ulrich Mueller <ulm@gentoo.org> erlang-13.2.4.ebuild,
+  erlang-14.2.2-r1.ebuild, erlang-14.2.3.ebuild, erlang-14.2.4.ebuild:
+  The Erlang Public License file has been renamed from EPL to ErlPL-1.1,
+  in order to avoid confusion with the Eclipse Public License, bug 389705.
 
 *erlang-14.2.4 (30 Nov 2011)
 
