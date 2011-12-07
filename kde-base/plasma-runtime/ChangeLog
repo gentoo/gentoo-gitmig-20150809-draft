@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.76 2011/12/07 22:13:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.77 2011/12/07 23:07:30 dilfridge Exp $
+
+  07 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -plasma-runtime-4.7.2.ebuild:
+  Drop KDE 4.7.2
 
   07 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
   plasma-runtime-4.7.3.ebuild:
