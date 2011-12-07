@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/grantlee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.4 2011/11/05 19:32:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.5 2011/12/07 09:35:07 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> grantlee-0.1.8.ebuild:
+  x86 stable wrt bug #388279
 
   05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> grantlee-0.1.8.ebuild:
   Marked ~ppc/~ppc64 wrt #379471
