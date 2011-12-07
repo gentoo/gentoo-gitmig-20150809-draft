@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.23.ebuild,v 1.4 2011/11/28 03:05:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.23.ebuild,v 1.5 2011/12/07 19:36:24 radhermit Exp $
 
 EAPI="4"
 
@@ -25,6 +25,8 @@ S="${WORKDIR}/${MY_PN}/Project/GNU/Library"
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.4.21-no-tinyxml.patch
 )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	autotools-utils_src_prepare
