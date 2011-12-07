@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>tomka@gentoo.org</email>
-  <name>Thomas Kahle</name>
+	<email>tomka@gentoo.org</email>
+	<name>Thomas Kahle</name>
 </maintainer>
 <maintainer>
 	<email>c1pher@gentoo.org</email>
