@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.230 2011/12/05 16:05:04 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.231 2011/12/07 15:26:02 vadimk Exp $
+
+  07 Dec 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -vmware-workstation-8.0.1.528992-r1.ebuild,
+  +vmware-workstation-8.0.1.528992-r2.ebuild:
+  fixed fperms star issue. Bug 393225
+
+*vmware-workstation-8.0.1.528992-r2 (07 Dec 2011)
 
   05 Dec 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   -files/vmware-workstation-6.5.5.328052-installer.patch,
