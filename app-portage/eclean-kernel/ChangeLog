@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eclean-kernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.9 2011/11/30 08:27:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.10 2011/12/07 17:03:31 naota Exp $
+
+  07 Dec 2011; Naohiro Aota <naota@gentoo.org> eclean-kernel-0.2.1.ebuild:
+  Add ~x86-fbsd #393179
 
 *eclean-kernel-0.2.1 (30 Nov 2011)
 
