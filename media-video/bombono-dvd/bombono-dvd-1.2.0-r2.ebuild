@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.0-r2.ebuild,v 1.1 2011/12/06 22:34:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.0-r2.ebuild,v 1.2 2011/12/07 16:12:42 mr_bones_ Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="0.96.1"
@@ -46,7 +46,7 @@ PATCHES=(
 )
 
 src_configure() {
-	append-flags -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_FILESYSTEM_VERSION=2 
+	append-flags -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_FILESYSTEM_VERSION=2
 	myesconsargs=(
 		CC="$(tc-getCC)"
 		CXX="$(tc-getCXX)"
