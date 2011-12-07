@@ -1,9 +1,6 @@
 # ChangeLog for dev-php5/pecl-mongo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mongo/ChangeLog,v 1.10 2011/12/07 03:03:27 zmedico Exp $
-
-  07 Dec 2011; Zac Medico <zmedico@gentoo.org> Manifest:
-  Remove Manifest entry for non-existent pecl-mongo-1.2.4-r1.ebuild.
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mongo/ChangeLog,v 1.11 2011/12/07 03:04:36 zmedico Exp $
 
 *pecl-mongo-1.2.4 (30 Aug 2011)
 
