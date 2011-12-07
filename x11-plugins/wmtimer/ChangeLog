@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtimer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.26 2011/12/02 22:14:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.27 2011/12/07 07:54:52 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> wmtimer-2.92-r1.ebuild:
+  x86 stable wrt bug #391539
 
   02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> wmtimer-2.92-r1.ebuild:
   add missing dependencies. stable on amd64. bug #391539
