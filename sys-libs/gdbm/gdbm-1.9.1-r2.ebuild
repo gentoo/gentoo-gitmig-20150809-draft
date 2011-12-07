@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.9.1-r2.ebuild,v 1.2 2011/11/01 14:54:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.9.1-r2.ebuild,v 1.3 2011/12/07 20:32:55 zmedico Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils libtool flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/gdbm/${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-linux"
 IUSE="+berkdb exporter static-libs"
 
 EX_S="${WORKDIR}"/${EX_P}
@@ -36,7 +36,7 @@ src_configure() {
 	fi
 
 	econf \
-		--includedir=/usr/include/gdbm \
+		--includedir="${EPREFIX}"/usr/include/gdbm \
 		--with-gdbm183-libdir="${EX_S}/.libs" \
 		--with-gdbm183-includedir="${EX_S}" \
 		$(use_enable berkdb libgdbm-compat) \
@@ -54,8 +54,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	use static-libs || find "${D}" -name '*.la' -delete
-	mv "${D}"/usr/include/gdbm/gdbm.h "${D}"/usr/include/ || die
+	use static-libs || find "${ED}" -name '*.la' -delete
+	mv "${ED}"/usr/include/gdbm/gdbm.h "${ED}"/usr/include/ || die
 	dodoc ChangeLog NEWS README
 }
 
