@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/policyd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/ChangeLog,v 1.8 2011/06/09 12:56:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/ChangeLog,v 1.9 2011/12/07 07:42:00 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> policyd-1.82-r1.ebuild:
+  x86 stable wrt bug #323895
 
   09 Jun 2011; Eray Aslan <eras@gentoo.org> policyd-1.82-r1.ebuild,
   +files/policyd-post182.patch, files/policyd-makefile.patch:
