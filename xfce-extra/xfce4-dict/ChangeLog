@@ -1,10 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-dict
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.50 2011/12/07 15:28:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.51 2011/12/07 15:30:31 ssuominen Exp $
 
   07 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> xfce4-dict-0.6.0.ebuild,
   +files/xfce4-dict-0.6.0-underlinking.patch:
-  Fix underlinking of libdict as reported by Jeremy Olexa.
+  Fix underlinking of libdict as reported by Jeremy Olexa. Remove USE="debug"
+  because the package is still using libxfcegui4 and won't pass with the
+  -DXFCE_DISABLE_DEPRECATED flag.
 
   14 Apr 2010; Jeroen Roovers <jer@gentoo.org> xfce4-dict-0.6.0.ebuild:
   Stable for HPPA (bug #305657).
