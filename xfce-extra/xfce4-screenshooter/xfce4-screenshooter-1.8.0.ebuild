@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/xfce4-screenshooter-1.8.0.ebuild,v 1.6 2011/11/26 18:14:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/xfce4-screenshooter-1.8.0.ebuild,v 1.7 2011/12/07 15:53:35 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -31,7 +31,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	XFCONF=( $(xfconf_use_debug) --enable-xfixes )
+	PATCHES=( "${FILESDIR}"/${P}-underlinking.patch )
+
+	XFCONF=(
+		$(xfconf_use_debug)
+		--enable-xfixes
+		)
+
 	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }
 
