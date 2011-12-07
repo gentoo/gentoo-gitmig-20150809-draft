@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.6.0.ebuild,v 1.8 2011/11/17 22:23:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.6.0.ebuild,v 1.9 2011/12/07 16:00:03 vapier Exp $
 
 EAPI=4
 inherit toolchain-funcs flag-o-matic bash-completion-r1
@@ -22,10 +22,10 @@ src_prepare() {
 }
 
 src_compile() {
-	append-cflags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+	append-lfs-flags
 	emake \
 		CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS}" \
+		CFLAGS="${CFLAGS} ${CPPFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
 		XOBJS="$(use elibc_uclibc && echo strverscmp.o)"
 }
