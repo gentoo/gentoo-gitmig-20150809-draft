@@ -1,6 +1,10 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.62 2011/10/19 21:48:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.63 2011/12/07 09:34:43 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  akonadi-server-1.6.2.ebuild:
+  x86 stable wrt bug #388279
 
   19 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -akonadi-server-1.5.3.ebuild, -akonadi-server-1.6.0.ebuild,
