@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/apwal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.13 2011/12/02 22:21:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.14 2011/12/07 07:43:54 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> apwal-0.4.5-r1.ebuild:
+  x86 stable wrt bug #391613
 
   02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> apwal-0.4.5-r1.ebuild:
   add missing gdk-pixbuf and glib dependencies. Stable on amd64. Bug #391613
