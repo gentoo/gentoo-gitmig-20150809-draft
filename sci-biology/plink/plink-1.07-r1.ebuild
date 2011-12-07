@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.07-r1.ebuild,v 1.1 2010/11/26 13:57:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.07-r1.ebuild,v 1.2 2011/12/07 06:55:10 jlec Exp $
 
 EAPI="2"
 
@@ -16,7 +16,9 @@ IUSE="lapack -webcheck R"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/unzip"
-RDEPEND="lapack? ( virtual/lapack )"
+RDEPEND="
+	sys-libs/zlib
+	lapack? ( virtual/lapack )"
 
 S="${WORKDIR}/${P}-src"
 

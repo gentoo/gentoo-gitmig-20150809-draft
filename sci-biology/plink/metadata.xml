@@ -7,10 +7,10 @@
 	</maintainer>
 	<herd>sci-biology</herd>
 	<use>
-		<flag name='webcheck'>
+		<flag name="webcheck">
 			add support for online update checking every time the program starts
 		</flag>
-		<flag name='R'>
+		<flag name="R">
 			add support R language
 		</flag>
 	</use>
