@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.25 2011/11/28 05:51:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.26 2011/12/07 16:59:52 je_fro Exp $
+
+*mediatomb-0.12.1-r1 (07 Dec 2011)
+
+  07 Dec 2011; Jeff Gardner <je_fro@gentoo.org> +mediatomb-0.12.1-r1.ebuild,
+  +files/mediatomb-0.12.1-libav7.patch:
+  Add libav-0.7 support, thanks to Daniel van Vugt (vanvugt)
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org> mediatomb-0.12.1.ebuild:
   Revert to autotools eclass (fixes bug #392119).
