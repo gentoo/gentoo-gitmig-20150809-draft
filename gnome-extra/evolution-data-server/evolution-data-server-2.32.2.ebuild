@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.2.ebuild,v 1.8 2011/11/16 00:32:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.2.ebuild,v 1.9 2011/12/07 07:33:02 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -33,7 +33,9 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	ssl? (
 		>=dev-libs/nspr-4.4
 		>=dev-libs/nss-3.9 )
-	weather? ( >=dev-libs/libgweather-2.25.4:2 )
+	weather? (
+		>=dev-libs/libgweather-2.25.4:2
+		<dev-libs/libgweather-2.91:2 )
 "
 DEPEND="${RDEPEND}
 	dev-util/gperf
