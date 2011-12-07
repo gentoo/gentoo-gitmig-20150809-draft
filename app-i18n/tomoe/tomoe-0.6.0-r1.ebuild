@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0-r1.ebuild,v 1.1 2011/05/26 22:44:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0-r1.ebuild,v 1.2 2011/12/07 13:57:00 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -30,6 +30,8 @@ RDEPEND=">=dev-libs/glib-2.4
 #	test? ( app-dicts/uconv )
 
 DEPEND="${DEPEND}
+	dev-util/gtk-doc-am
+	dev-util/intltool
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
