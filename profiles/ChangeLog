@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5991 2011/12/06 23:08:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5992 2011/12/07 17:35:44 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Dec 2011; Ulrich Mueller <ulm@gentoo.org> license_groups:
+  Rename EPL to ErlPL-1.1, in order to avoid confusion with the Eclipse Public
+  License, bug 389705.
 
   06 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Unmask calligra-2.3.84
