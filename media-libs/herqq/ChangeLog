@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/herqq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.8 2011/11/05 20:17:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.9 2011/12/07 22:08:19 hwoarang Exp $
+
+  07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> herqq-1.0.0-r1.ebuild:
+  Stable on amd64 wrt bug #388279
 
   05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> herqq-1.0.0-r1.ebuild:
   Marked ~ppc/~ppc64 for KDE SC 4.7.3
