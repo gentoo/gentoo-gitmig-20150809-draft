@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.19 2011/12/04 09:56:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.20 2011/12/07 18:52:22 hwoarang Exp $
 
 EAPI=3
 
@@ -24,6 +24,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-misc/shared-mime-info
 	udev? ( sys-fs/udisks )"
 DEPEND="${COMMON_DEPEND}
+	>=dev-lang/vala-0.14.0
 	dev-util/gtk-doc-am
 	doc? (
 		dev-util/gtk-doc
@@ -46,6 +47,10 @@ src_prepare() {
 		echo "data/ui/"${trans}.ui >> po/POTFILES.in
 	done
 	sed -i -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" "${S}"/configure.ac || die
+	myvalaver="$(best_version dev-lang/vala | sed -e's@dev-lang/vala-\([0-9]*\.[0-9]*\)\..*@\1@g')"
+	myvalac="$(type -p valac-${myvalaver})"
+	[[ -x "${myvalac}" ]] || die "Vala compiler ${myvalac} not found"
+	export VALAC=${myvalac}
 	eautoreconf
 }
 

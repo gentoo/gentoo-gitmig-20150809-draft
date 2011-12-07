@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.57 2011/12/07 07:40:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.58 2011/12/07 18:52:22 hwoarang Exp $
+
+  07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
+  depend on vala and workaround broken configure script
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libfm-0.1.17.ebuild:
   x86 stable wrt bug #382255
