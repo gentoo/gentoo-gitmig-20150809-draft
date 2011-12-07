@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-javamail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.25 2011/05/03 18:18:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.26 2011/12/07 14:19:41 grobian Exp $
+
+  07 Dec 2011; Fabian Groffen <grobian@gentoo.org> sun-javamail-1.4.3.ebuild:
+  Marked ~sparc64-solaris
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org> sun-javamail-1.4.3.ebuild:
   Marked ~x64-freebsd
