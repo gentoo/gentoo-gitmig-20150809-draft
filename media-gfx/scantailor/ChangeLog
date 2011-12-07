@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/scantailor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/ChangeLog,v 1.6 2011/12/06 21:18:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/ChangeLog,v 1.7 2011/12/07 03:13:10 radhermit Exp $
+
+  07 Dec 2011; Tim Harder <radhermit@gentoo.org> scantailor-0.9.10.ebuild:
+  Use virtualx eclass for tests requiring X.
 
   06 Dec 2011; Tim Harder <radhermit@gentoo.org> -scantailor-0.9.9.ebuild,
   -scantailor-0.9.9.2.ebuild, metadata.xml:
