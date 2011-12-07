@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.67 2011/11/29 22:00:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.68 2011/12/07 07:43:26 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> k9copy-2.3.7.ebuild:
+  x86 stable wrt bug #391611
 
   29 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> k9copy-2.3.6.ebuild,
   k9copy-2.3.7.ebuild:
