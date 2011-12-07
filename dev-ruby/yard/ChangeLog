@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.20 2011/10/18 05:46:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.21 2011/12/07 10:36:35 graaff Exp $
+
+*yard-0.7.4 (07 Dec 2011)
+
+  07 Dec 2011; Hans de Graaff <graaff@gentoo.org> +yard-0.7.4.ebuild:
+  Version bump. Drop ruby19 for now since the test suite crashes ruby19.
 
 *yard-0.7.3 (18 Oct 2011)
 
