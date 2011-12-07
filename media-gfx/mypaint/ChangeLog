@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mypaint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/ChangeLog,v 1.13 2011/12/05 10:14:04 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/ChangeLog,v 1.14 2011/12/07 20:40:09 maksbotan Exp $
+
+  07 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> mypaint-1.0.0-r1.ebuild:
+  Swap python_pkg_setup and python_set_active_version, thanks to Arfrever
 
   05 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> mypaint-1.0.0-r1.ebuild:
   Add python_pkg_setup call

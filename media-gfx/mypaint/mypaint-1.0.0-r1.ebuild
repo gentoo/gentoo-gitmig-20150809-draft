@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.0.0-r1.ebuild,v 1.2 2011/12/05 10:14:04 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.0.0-r1.ebuild,v 1.3 2011/12/07 20:40:09 maksbotan Exp $
 
 EAPI=4
 
@@ -26,8 +26,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup(){
-	python_pkg_setup
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
