@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.505 2011/12/06 22:12:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.506 2011/12/07 00:29:38 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -243,11 +243,12 @@ S=$(
 #			HTB_GCC_VER to that version of gcc.
 #
 gentoo_urls() {
-	local devspace="HTTP~lv/GCC/URI HTTP~eradicator/gcc/URI HTTP~vapier/dist/URI
-	HTTP~halcy0n/patches/URI HTTP~zorry/patches/gcc/URI HTTP~dirtyepic/dist/URI"
+	local devspace="HTTP~vapier/dist/URI HTTP~dirtyepic/dist/URI
+	HTTP~halcy0n/patches/URI HTTP~zorry/patches/gcc/URI"
 	devspace=${devspace//HTTP/http:\/\/dev.gentoo.org\/}
 	echo mirror://gentoo/$1 ${devspace//URI/$1}
 }
+
 get_gcc_src_uri() {
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
 	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
