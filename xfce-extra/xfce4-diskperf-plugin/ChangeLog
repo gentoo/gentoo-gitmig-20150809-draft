@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-diskperf-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/ChangeLog,v 1.10 2011/04/23 17:35:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/ChangeLog,v 1.11 2011/12/07 15:43:53 ssuominen Exp $
+
+  07 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-diskperf-plugin-2.3.0.ebuild,
+  +files/xfce4-diskperf-plugin-2.3.0-underlinking.patch:
+  Explicitely link against -lm (as reported by Jeremy Olexa). Remove
+  USE="debug" because the package is still using libxfcegui4 and doesn't pass
+  with -DXFCE_DISABLE_DEPRECATED flag.
 
   23 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-diskperf-plugin-2.3.0.ebuild:
