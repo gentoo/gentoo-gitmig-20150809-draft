@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5992 2011/12/07 17:35:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5993 2011/12/07 18:25:17 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  spidermonkey-1.9.2.x was renamed to 1.8.2.x; mask 1.9.2.x for bug #393473.
 
   07 Dec 2011; Ulrich Mueller <ulm@gentoo.org> license_groups:
   Rename EPL to ErlPL-1.1, in order to avoid confusion with the Eclipse Public
