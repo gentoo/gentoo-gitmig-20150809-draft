@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.55 2011/11/28 19:34:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.56 2011/12/07 16:20:37 jer Exp $
+
+*opera-next-12.00.1191 (07 Dec 2011)
+
+  07 Dec 2011; Jeroen Roovers <jer@gentoo.org> -opera-next-12.00.1105.ebuild,
+  -opera-next-12.00.1116.ebuild, -opera-next-12.00.1155.ebuild,
+  +opera-next-12.00.1191.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/12/07/wahoo-tunny
 
 *opera-next-12.00.1174 (28 Nov 2011)
 
