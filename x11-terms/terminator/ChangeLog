@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.17 2011/09/24 05:47:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.18 2011/12/07 02:28:12 jer Exp $
+
+  07 Dec 2011; Jeroen Roovers <jer@gentoo.org> terminator-0.95.ebuild,
+  terminator-0.96.ebuild:
+  Update HOMEPAGE.
 
 *terminator-0.96 (24 Sep 2011)
 
