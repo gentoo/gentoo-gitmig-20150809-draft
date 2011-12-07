@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lv2core
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2core/ChangeLog,v 1.7 2010/10/10 17:11:47 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2core/ChangeLog,v 1.8 2011/12/07 13:15:36 aballier Exp $
+
+*lv2core-6.0 (07 Dec 2011)
+
+  07 Dec 2011; Alexis Ballier <aballier@gentoo.org> +lv2core-6.0.ebuild:
+  version bump
 
 *lv2core-4.0 (10 Oct 2010)
 
