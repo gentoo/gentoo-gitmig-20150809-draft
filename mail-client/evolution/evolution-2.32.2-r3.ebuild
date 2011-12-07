@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r3.ebuild,v 1.8 2011/11/16 00:33:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r3.ebuild,v 1.9 2011/12/07 07:33:05 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -33,6 +33,7 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=dev-libs/libunique-1.1.2:1
 	>=gnome-base/gnome-desktop-2.26:2
 	>=dev-libs/libgweather-2.25.3:2
+	<dev-libs/libgweather-2.91:2
 	media-libs/libcanberra[gtk]
 	>=x11-libs/libnotify-0.3
 	>=gnome-extra/evolution-data-server-${PV}[weather]
