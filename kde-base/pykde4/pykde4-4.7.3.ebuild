@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.7.3.ebuild,v 1.2 2011/12/07 12:04:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.7.3.ebuild,v 1.3 2011/12/07 22:13:52 hwoarang Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ KDE_SCM="git"
 inherit python portability kde4-base
 
 DESCRIPTION="Python bindings for KDE4"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc examples semantic-desktop"
 
 # blocker added due to compatibility issues and error during compile time

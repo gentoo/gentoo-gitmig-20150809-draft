@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.203 2011/12/07 10:13:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.204 2011/12/07 22:13:57 hwoarang Exp $
+
+  07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> drkonqi-4.7.3.ebuild:
+  Stable on amd64 wrt bug #388279
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> drkonqi-4.7.3.ebuild:
   x86 stable wrt bug #388279

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/keditfiletype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.74 2011/12/07 10:55:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.75 2011/12/07 22:13:31 hwoarang Exp $
+
+  07 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
+  keditfiletype-4.7.3.ebuild:
+  Stable on amd64 wrt bug #388279
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   keditfiletype-4.7.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/printer-applet-4.7.3.ebuild,v 1.2 2011/12/07 12:03:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/printer-applet-4.7.3.ebuild,v 1.3 2011/12/07 22:13:43 hwoarang Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ fi
 inherit python ${kde_eclass}
 
 DESCRIPTION="KDE printer system tray utility"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="
