@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/afflib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.25 2011/12/07 07:35:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.26 2011/12/07 07:38:40 radhermit Exp $
+
+  07 Dec 2011; Tim Harder <radhermit@gentoo.org> -afflib-3.3.4.ebuild,
+  -files/afflib-3.3.4-glibc-2.10.patch, -afflib-3.5.2.ebuild,
+  -afflib-3.5.8.ebuild, -afflib-3.6.8.ebuild:
+  Remove old.
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> afflib-3.6.12.ebuild:
   x86 stable wrt bug #391821
