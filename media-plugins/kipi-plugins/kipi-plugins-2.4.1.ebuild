@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.2.0-r1.ebuild,v 1.1 2011/11/05 19:26:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.4.1.ebuild,v 1.1 2011/12/07 21:51:18 dilfridge Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod +mediawiki mjpeg panorama redeyes scanner vkontakte"
+IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mjpeg panorama redeyes scanner vkontakte"
 
 DEPEND="
 	$(add_kdebase_dep libkipi)
@@ -38,7 +38,6 @@ DEPEND="
 	dev-libs/libxslt
 	dev-libs/qjson
 	gpssync?	( >=media-libs/libkgeomap-${PV} )
-	mediawiki?	( >=media-libs/libmediawiki-${PV} )
 	media-libs/libpng
 	media-libs/tiff
 	virtual/jpeg
@@ -53,7 +52,7 @@ DEPEND="
 			  $(add_kdebase_dep libksane)
 			  media-gfx/sane-backends
 			)
-	vkontakte?	( net-libs/libkvkontakte )
+	vkontakte?	( >=net-libs/libkvkontakte-${PV} )
 "
 RDEPEND="${DEPEND}
 	cdr? 		( app-cdr/k3b )
@@ -104,7 +103,6 @@ src_configure() {
 		$(cmake-utils_use_with ipod Gdk)
 		$(cmake-utils_use_with ipod Gpod)
 		$(cmake-utils_use_with calendar KdepimLibs)
-		$(cmake-utils_use_with mediawiki Mediawiki)
 		$(cmake-utils_use_with gpssync KGeoMap)
 		$(cmake-utils_use_with redeyes OpenCV)
 		$(cmake-utils_use_with opengl OpenGL)
