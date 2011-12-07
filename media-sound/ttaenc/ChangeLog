@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ttaenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ChangeLog,v 1.8 2011/12/04 12:46:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ChangeLog,v 1.9 2011/12/07 07:51:27 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ttaenc-3.4.1-r1.ebuild:
+  x86 stable wrt bug #392829
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> ttaenc-3.4.1-r1.ebuild:
   Stable on amd64 wrt bug #392829
