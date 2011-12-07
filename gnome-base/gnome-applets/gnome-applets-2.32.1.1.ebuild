@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.15 2011/11/24 15:09:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.16 2011/12/07 07:32:41 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -31,6 +31,7 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=dev-libs/libxml2-2.5.0:2
 	>=x11-themes/gnome-icon-theme-2.15.91
 	>=dev-libs/libgweather-2.22.1:2
+	<dev-libs/libgweather-2.91:2
 	x11-libs/libX11
 
 	gnome?	(

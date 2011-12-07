@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r1.ebuild,v 1.12 2011/11/16 00:38:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r1.ebuild,v 1.13 2011/12/07 07:32:03 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -22,6 +22,7 @@ RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 	>=dev-libs/glib-2.25.12:2
 	>=x11-libs/gtk+-2.22:2[introspection?]
 	>=dev-libs/libgweather-2.27.90:2
+	<dev-libs/libgweather-2.90.1:2
 	dev-libs/libxml2:2
 	>=gnome-base/gconf-2.6.1:2[introspection?]
 	>=media-libs/libcanberra-0.23[gtk]
