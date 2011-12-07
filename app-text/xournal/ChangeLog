@@ -1,6 +1,13 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.27 2011/12/07 20:24:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.28 2011/12/07 21:09:49 dilfridge Exp $
+
+*xournal-0.4.5_p20111022-r2 (07 Dec 2011)
+
+  07 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +xournal-0.4.5_p20111022-r2.ebuild:
+  Add some more handpicked feature patches: page scrolling, buffer length,
+  localized paper (Timo Kluck)
 
   07 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -xournal-0.4.5-r2.ebuild, -files/xournal-0.4.5-xoprint-len.patch:
