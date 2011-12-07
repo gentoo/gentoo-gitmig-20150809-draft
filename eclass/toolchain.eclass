@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.506 2011/12/07 00:29:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.507 2011/12/07 16:11:17 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1516,9 +1516,7 @@ toolchain_src_install() {
 			|| prepman "${DATAPATH}"
 	fi
 	# prune empty dirs left behind
-	for x in 1 2 3 4 ; do
-		find "${D}" -type d -exec rmdir "{}" \; >& /dev/null
-	done
+	find "${D}" -depth -type d -delete 2>/dev/null
 
 	# install testsuite results
 	if use test; then
