@@ -1,6 +1,9 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.81 2011/12/03 11:53:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.82 2011/12/07 07:37:53 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> taskcoach-1.2.31.ebuild:
+  x86 stable wrt bug #392605
 
   03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> taskcoach-1.2.31.ebuild:
   Stable on amd64 wrt bug #392605
