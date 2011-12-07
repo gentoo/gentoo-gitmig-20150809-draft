@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.8.0.ebuild,v 1.2 2011/12/03 18:55:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.8.0.ebuild,v 1.3 2011/12/07 07:33:44 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/basenji/trunk/$(get_version_component_range 1-2)/+
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 CDEPEND="dev-dotnet/gio-sharp
