@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.103 2011/11/25 08:00:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.104 2011/12/07 21:27:03 xarthisius Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
@@ -36,10 +36,6 @@ media-video/x264-encoder ffmpegsource
 # Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
 # Remove this for your arch after you keyword dev-utils/google-perftools (bug #381737
 dev-libs/libmemcached tcmalloc
-
-# Alexey Shvetsov <alexxy@gentoo.org> (31 Aug 2011)
-# Mask numa use flag per bug #381313
-sys-apps/hwloc numa
 
 # Kacper Kowalik <xarthisius@gentoo.org> (10 Aug 2011)
 # mask cuda dep for opencv bug 365451
