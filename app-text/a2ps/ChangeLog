@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.101 2011/12/03 10:56:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.102 2011/12/07 07:47:36 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> a2ps-4.14-r2.ebuild:
+  x86 stable wrt bug #391501
 
   03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> a2ps-4.14-r2.ebuild:
   drop mktemp dependency. Add libpaper dependency. Stable on amd64. Bug #391501
