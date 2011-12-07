@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/shared-desktop-ontologies-0.7.0.ebuild,v 1.2 2011/12/07 09:35:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/shared-desktop-ontologies-0.7.0.ebuild,v 1.3 2011/12/07 22:08:05 hwoarang Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ DESCRIPTION="Shared OSCAF desktop ontologies"
 HOMEPAGE="http://sourceforge.net/projects/oscaf"
 if [[ ${PV} != *9999 ]]; then
 	SRC_URI="mirror://sourceforge/oscaf/${PN}/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 
 LICENSE="|| ( BSD CCPL-Attribution-ShareAlike-3.0 )"
