@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.95 2011/12/03 17:36:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.96 2011/12/07 17:26:06 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  virtualbox-modules-4.1.4.ebuild:
+  x86 stable wrt bug #386317
 
   03 Dec 2011; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-modules-4.1.6.ebuild,

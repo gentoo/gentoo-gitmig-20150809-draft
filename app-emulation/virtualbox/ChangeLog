@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.93 2011/11/25 10:25:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.94 2011/12/07 17:28:17 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> virtualbox-4.1.4.ebuild:
+  x86 stable wrt bug #386317
 
   25 Nov 2011; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-4.1.6-r1.ebuild, +files/virtualbox-4.1.6-yasm120-fix.patch:
