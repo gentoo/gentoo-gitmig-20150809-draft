@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpgf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.8 2011/09/11 20:03:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.9 2011/12/07 12:23:35 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libpgf-6.11.32.ebuild:
+  x86 stable wrt bug #388279
 
 *libpgf-6.11.32 (11 Sep 2011)
 
