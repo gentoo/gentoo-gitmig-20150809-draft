@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mhwaveedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.45 2011/12/02 23:53:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.46 2011/12/07 07:34:28 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mhwaveedit-1.4.21.ebuild:
+  x86 stable wrt bug #392839
 
   02 Dec 2011; Tim Harder <radhermit@gentoo.org> mhwaveedit-1.4.21.ebuild:
   Simplify gtk+ dep and add pango dep.
