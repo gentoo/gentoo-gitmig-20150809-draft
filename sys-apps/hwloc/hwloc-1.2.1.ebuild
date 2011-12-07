@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.2.1.ebuild,v 1.2 2011/09/01 16:20:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.2.1.ebuild,v 1.3 2011/12/07 22:01:17 binki Exp $
 
 EAPI="4"
 
@@ -23,6 +23,11 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	numa? ( sys-process/numactl )"
+
+pkg_setup() {
+	# Fix bug #393467, hwloc ignores PKG_CONFIG environment variable.
+	[[ ${PKG_CONFIG} ]] && export HWLOC_PKG_CONFIG=${PKG_CONFIG}
+}
 
 src_configure() {
 	econf \
