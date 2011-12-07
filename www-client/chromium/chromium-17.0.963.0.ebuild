@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.0.ebuild,v 1.1 2011/12/07 04:49:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.0.ebuild,v 1.2 2011/12/07 04:51:20 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -54,7 +54,7 @@ RDEPEND="app-arch/bzip2
 	x11-libs/libXtst
 	kerberos? ( virtual/krb5 )"
 DEPEND="${RDEPEND}
-	dev-lang/nacl-toolchain-newlib
+	>=dev-lang/nacl-toolchain-newlib-0_p7311
 	dev-lang/perl
 	dev-lang/yasm
 	dev-python/simplejson
