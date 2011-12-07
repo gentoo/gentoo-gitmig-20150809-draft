@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.938.0.ebuild,v 1.3 2011/11/16 01:55:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.0.ebuild,v 1.1 2011/12/07 04:49:29 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -30,7 +30,7 @@ RDEPEND="app-arch/bzip2
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.6.5.1
+	>=dev-lang/v8-3.7.6
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
@@ -193,6 +193,7 @@ src_prepare() {
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jsoncpp/*' \
+		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/leveldb/*' \
 		\! -path 'third_party/leveldatabase/*' \
