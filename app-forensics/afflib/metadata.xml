@@ -6,7 +6,6 @@
   <email>forensics@gentoo.org</email>
 </maintainer>
 <use>
-	<flag name="ewf">Enable libewf extra formats</flag>
  	<flag name="fuse">Enable extra fuse thingies</flag>
  	<flag name="qemu">Enable qemu stuff</flag>
 	<flag name="s3">Enable support for Amazon S3</flag>
