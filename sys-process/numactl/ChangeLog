@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/numactl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.19 2011/11/06 13:53:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.20 2011/12/07 21:25:40 xarthisius Exp $
+
+  07 Dec 2011; Kacper Kowalik <xarthisius@gentoo.org> numactl-2.0.7-r1.ebuild:
+  Marked ~ppc64 wrt #381313
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> numactl-2.0.7.ebuild:
   Marking numactl-2.0.7 ppc for bug 379807
