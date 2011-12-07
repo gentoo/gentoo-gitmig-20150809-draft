@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.236 2011/11/06 13:28:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.237 2011/12/07 16:51:08 vapier Exp $
+
+*e2fsprogs-1.42 (07 Dec 2011)
+
+  07 Dec 2011; Mike Frysinger <vapier@gentoo.org>
+  -e2fsprogs-1.42_pre0702.ebuild, +e2fsprogs-1.42.ebuild,
+  +files/e2fsprogs-1.42-no-quota.patch:
+  Bump to final 1.42 release #392637 by Christian Inci. Add half-assed
+  USE=static-libs support #377537 by Agostino Sarubbo.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> e2fsprogs-1.41.14.ebuild:
   Marking e2fsprogs-1.41.14 ppc for bug 378039
