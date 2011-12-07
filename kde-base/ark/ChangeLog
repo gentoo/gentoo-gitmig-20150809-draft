@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.205 2011/11/02 20:48:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.206 2011/12/07 09:37:20 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ark-4.7.3.ebuild:
+  x86 stable wrt bug #388279
 
 *ark-4.7.3 (02 Nov 2011)
 
