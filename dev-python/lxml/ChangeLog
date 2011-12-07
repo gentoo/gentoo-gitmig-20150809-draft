@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.108 2011/12/02 22:17:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.109 2011/12/07 07:44:26 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> lxml-2.3.1.ebuild:
+  x86 stable wrt bug #392629
 
   02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> lxml-2.3.1.ebuild:
   Stable on amd64 wrt bug #392629
