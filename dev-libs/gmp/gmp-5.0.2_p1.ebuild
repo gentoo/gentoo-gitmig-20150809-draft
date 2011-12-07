@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.0.2_p1.ebuild,v 1.3 2011/11/13 20:03:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.0.2_p1.ebuild,v 1.4 2011/12/07 06:40:51 vapier Exp $
 
 inherit flag-o-matic eutils libtool toolchain-funcs
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.1.4-noexecstack.patch
 	epatch "${FILESDIR}"/${PN}-5.0.0-s390.diff
 	epatch "${FILESDIR}"/${MY_P}-unnormalised-dividends.patch
+	has x32 $(get_all_abis) && epatch "${FILESDIR}"/${PN}-5.0.2*x32*.patch
 
 	# disable -fPIE -pie in the tests for x86  #236054
 	if use x86 && gcc-specs-pie ; then
@@ -59,7 +60,7 @@ src_compile() {
 	case ${ABI} in
 		32|x86)       GMPABI=32;;
 		64|amd64|n64) GMPABI=64;;
-		o32|n32)      GMPABI=${ABI};;
+		[onx]32)      GMPABI=${ABI};;
 	esac
 	export GMPABI
 
