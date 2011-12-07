@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/clapack-3.2.1-r6.ebuild,v 1.2 2011/08/02 14:23:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/clapack-3.2.1-r6.ebuild,v 1.3 2011/12/07 12:23:56 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.netlib.org/${PN}/${P}-CMAKE.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~ppc x86 ~amd64-linux"
 IUSE="test"
 
 RDEPEND=">=dev-libs/libf2c-20090407-r1
