@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.39 2011/12/05 23:30:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.40 2011/12/07 07:48:11 phajdan.jr Exp $
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> SGMLSpm-1.03-r6.ebuild:
+  x86 stable wrt bug #391505
 
   05 Dec 2011; Tony Vroon <chainsaw@gentoo.org> SGMLSpm-1.03-r6.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
