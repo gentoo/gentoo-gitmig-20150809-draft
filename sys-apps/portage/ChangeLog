@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.920 2011/11/29 06:53:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.921 2011/12/08 22:44:01 zmedico Exp $
+
+  08 Dec 2011; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  Add support for prefix installs.
 
   29 Nov 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.38.ebuild,
   -portage-2.2.0_alpha78.ebuild:
