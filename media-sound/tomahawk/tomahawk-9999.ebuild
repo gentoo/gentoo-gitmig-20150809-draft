@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.3 2011/12/01 22:18:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.4 2011/12/08 13:07:27 johu Exp $
 
 EAPI=4
 
@@ -48,7 +48,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-0.3.2-clucene.patch"
 	"${FILESDIR}/${PN}-0.3.2-remove-quazip.patch"
 )
 

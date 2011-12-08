@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/tomahawk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.4 2011/12/08 00:58:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.5 2011/12/08 13:07:27 johu Exp $
+
+  08 Dec 2011; Johannes Huber <johu@gentoo.org>
+  -files/tomahawk-0.3.2-clucene.patch, tomahawk-0.3.3.ebuild,
+  tomahawk-9999.ebuild:
+  Removed not needed patch anymore. Cause was bug #361385
 
 *tomahawk-0.3.3 (08 Dec 2011)
 
