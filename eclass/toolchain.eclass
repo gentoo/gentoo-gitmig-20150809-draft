@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.508 2011/12/08 18:11:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.509 2011/12/08 22:38:33 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -965,8 +965,16 @@ gcc-compiler-configure() {
 			fi
 			;;
 		# Add --with-abi flags to set default ABI
-		amd64|mips)
+		mips)
 			confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
+			;;
+		amd64)
+			# drop the 4.6.2 stuff once 4.7 goes stable
+			if tc_version_is_at_least 4.7 ||
+			   ( tc_version_is_at_least 4.6.2 && has x32 $(get_all_abis) )
+			then
+				confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
+			fi
 			;;
 		# Default arch for x86 is normally i386, lets give it a bump
 		# since glibc will do so based on CTARGET anyways
