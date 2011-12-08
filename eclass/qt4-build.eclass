@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.101 2011/11/19 20:52:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.102 2011/12/08 17:21:45 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -14,7 +14,7 @@ inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 MY_PV=${PV/_/-}
 MY_P=qt-everywhere-opensource-src-${MY_PV}
 
-HOMEPAGE="http://qt.nokia.com/"
+HOMEPAGE="http://qt.nokia.com/ http://qt-project.org/"
 SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
 
