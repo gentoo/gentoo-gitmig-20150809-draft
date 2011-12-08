@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p11.ebuild,v 1.6 2011/12/03 18:03:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p11.ebuild,v 1.7 2011/12/08 06:23:58 vapier Exp $
 
 EAPI="2"
 
@@ -41,6 +41,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2.3-noproc.patch
 	epatch "${FILESDIR}"/${PN}-3.2.8-toprc-fixup.patch
 	epatch "${FILESDIR}"/${PN}-3.2.8-r1-forest-prefix.patch
+	epatch "${FILESDIR}"/${PN}-3.2.8-time_t.patch
 
 	# Clean up the makefile
 	#  - we do stripping ourselves

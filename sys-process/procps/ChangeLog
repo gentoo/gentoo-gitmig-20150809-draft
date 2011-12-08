@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.58 2011/12/03 18:03:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.59 2011/12/08 06:23:58 vapier Exp $
+
+  08 Dec 2011; Mike Frysinger <vapier@gentoo.org> procps-3.2.8_p11.ebuild,
+  +files/procps-3.2.8-time_t.patch:
+  Fix ps segfault on x32 ABI.
 
   03 Dec 2011; Raúl Porcel <armin76@gentoo.org> procps-3.2.8_p11.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #390003
