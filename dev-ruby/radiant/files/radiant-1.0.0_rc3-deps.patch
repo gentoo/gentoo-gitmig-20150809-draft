@@ -2,13 +2,15 @@ Index: radiant/Gemfile
 ===================================================================
 --- radiant.orig/Gemfile
 +++ radiant/Gemfile
-@@ -7,8 +7,8 @@ source :rubygems
+@@ -7,8 +7,10 @@ source :rubygems
  # requires radiant and therefore pulls in every 
  # dependency mentioned in radiant.gemspec.
  #
 -gem 'rails', '2.3.14'
 -gem 'sqlite3', '1.3.4'
-+gem 'rails', '~> 2.3.14'
++%w{rails activesupport activerecord activeresource actionpack actionmailer}.each do |g|
++  gem g, '~> 2.3.14'
++end
 +gem 'sqlite3', '~> 1.3.4'
  
  # When radiant is installed as a gem you can run all of

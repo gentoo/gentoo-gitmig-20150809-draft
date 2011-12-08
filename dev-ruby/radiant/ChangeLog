@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/radiant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.22 2011/12/05 20:52:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.23 2011/12/08 19:41:44 flameeyes Exp $
+
+*radiant-1.0.0_rc3-r1 (08 Dec 2011)
+
+  08 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +radiant-1.0.0_rc3-r1.ebuild, -radiant-1.0.0_rc3.ebuild,
+  files/radiant-1.0.0_rc3-deps.patch:
+  Version bump; add a dependency over the new revision of activesupport so that
+  it actually works (and force a rebuild due to bundler).
 
 *radiant-1.0.0_rc3 (05 Dec 2011)
 
