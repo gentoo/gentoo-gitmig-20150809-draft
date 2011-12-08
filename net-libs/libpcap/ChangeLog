@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.156 2011/12/07 07:49:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.157 2011/12/08 20:49:28 maekke Exp $
+
+  08 Dec 2011; Markus Meier <maekke@gentoo.org> libpcap-1.1.1-r1.ebuild:
+  arm stable, bug #385875
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libpcap-1.1.1-r1.ebuild:
   x86 stable wrt bug #385875
