@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.8.1.ebuild,v 1.8 2011/06/01 23:58:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.8.1.ebuild,v 1.9 2011/12/08 17:54:59 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -33,13 +33,15 @@ src_prepare() {
 src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
+		--docdir=/usr/share/doc/${PF} \
+		--localedir=/usr/share/locale \
 		$(use_with svg rsvg)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	prepalldocs
-	rm -f "${D}"/usr/share/doc/${PF}/{COPYING,INSTALL}*
+	rm -f "${D}"/usr/share/doc/${PF}/{COPYING,INSTALL,ABOUT-NLS}*
 	doicon ${PN}.ico
 	make_desktop_entry ${PN} TuxTyping /usr/share/pixmaps/${PN}.ico
 	prepgamesdirs
