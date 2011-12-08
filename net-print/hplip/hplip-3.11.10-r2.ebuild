@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10-r1.ebuild,v 1.3 2011/11/16 19:16:53 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10-r2.ebuild,v 1.1 2011/12/08 23:35:32 billie Exp $
 
 EAPI=4
 
@@ -101,7 +101,7 @@ src_prepare() {
 	python_convert_shebangs -q -r 2 .
 
 	# Fix for Gentoo bug #345725
-	sed -i -e "s|/etc/udev/rules.d|/$(get_libdir)/udev/rules.d|" \
+	sed -i -e "s|/etc/udev/rules.d|/lib/udev/rules.d|" \
 		$(find ./ -type f -exec grep -l '/etc/udev/rules.d' '{}' '+') \
 		|| die
 

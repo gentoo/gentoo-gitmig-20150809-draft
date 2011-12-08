@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.203 2011/12/08 23:31:00 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.204 2011/12/08 23:35:32 billie Exp $
+
+*hplip-3.11.10-r2 (08 Dec 2011)
+
+  08 Dec 2011; Daniel Pielmeier <billie@gentoo.org> -hplip-3.11.10-r1.ebuild,
+  +hplip-3.11.10-r2.ebuild:
+  Install udev rules into /lib/udev/rules.d. This fixes bug #393339. Thanks to
+  Jonathan Callen for the report.
 
   08 Dec 2011; Daniel Pielmeier <billie@gentoo.org>
   -files/hplip-3.11.5-cups-1.5.patch, -hplip-3.11.7.ebuild,
