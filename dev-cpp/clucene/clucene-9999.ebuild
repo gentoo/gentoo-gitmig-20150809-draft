@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-9999.ebuild,v 1.3 2011/04/26 16:03:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-9999.ebuild,v 1.4 2011/12/08 12:41:18 johu Exp $
 
 EAPI=4
 
@@ -19,10 +19,6 @@ RDEPEND=""
 DEPEND="
 	doc? ( >=app-doc/doxygen-1.4.2 )
 "
-
-PATCHES=(
-	"${FILESDIR}/${P}-cmake.patch"
-)
 
 DOCS=(AUTHORS ChangeLog README README.PACKAGE REQUESTS)
 
