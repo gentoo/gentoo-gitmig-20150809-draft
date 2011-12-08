@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.16.ebuild,v 1.2 2011/11/27 22:14:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.16.ebuild,v 1.3 2011/12/08 19:05:26 vapier Exp $
 
 EAPI="2"
 
-inherit libtool
+inherit eutils autotools
 
 MY_P="${P}-stable"
 
@@ -26,16 +26,21 @@ RDEPEND="
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	# Once we updated to 2.0.17, this can be dropped, and we
+	# can move back to calling just `elibtoolize`.
+	epatch "${FILESDIR}"/${P}-sysctl.patch
+	eautoreconf
+
 	# don't waste time building tests/samples
 	sed -i \
 		-e 's|^\(SUBDIRS =.*\)sample test\(.*\)$|\1\2|' \
 		Makefile.in || die "sed Makefile.in failed"
-
-	elibtoolize
 }
 
 src_configure() {
-	econf $(use_enable static-libs static) $(use_enable ssl openssl) || die
+	econf \
+		$(use_enable static-libs static) \
+		$(use_enable ssl openssl)
 }
 
 src_test() {
