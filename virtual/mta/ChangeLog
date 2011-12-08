@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mta/ChangeLog,v 1.5 2011/04/24 06:40:34 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mta/ChangeLog,v 1.6 2011/12/08 19:49:59 grobian Exp $
+
+  08 Dec 2011; Fabian Groffen <grobian@gentoo.org> mta-0.ebuild:
+  Marked ~sparc64-solaris
 
   24 Apr 2011; Eray Aslan <eras@gentoo.org> mta-0.ebuild:
   add note that citadel is from sunrise
