@@ -1,12 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyliblzma/pyliblzma-0.5.3.ebuild,v 1.1 2011/12/08 04:31:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyliblzma/pyliblzma-0.5.3.ebuild,v 1.2 2011/12/08 04:46:15 radhermit Exp $
 
 EAPI="4"
+
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="setup.py"
+PYTHON_MODNAME="liblzma.py"
 
 inherit distutils
 
