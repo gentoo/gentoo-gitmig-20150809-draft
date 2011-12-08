@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.5.2.ebuild,v 1.1 2011/08/04 21:04:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.5.2.ebuild,v 1.2 2011/12/08 20:42:47 slyfox Exp $
 
 EAPI="3"
 CABAL_FEATURES="bin lib profile haddock hscolour"
@@ -57,6 +57,7 @@ src_prepare() {
 
 	# hlint tests tend to break on every newly released hlint
 	rm "${S}/tests/haskell_policy.sh"
+	rm "${S}/tests/external.sh" || die # relies on example.com layout bug #392647
 
 	# use a more recent API, and thus depend on a more recent package
 	sed -i -e "s/findBy/find/" "${S}/src/Darcs/Test/Patch/Info.hs" || die "sed s/findBy/find/ not necessary"

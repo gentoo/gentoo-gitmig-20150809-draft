@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.22 2011/08/04 21:04:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.23 2011/12/08 20:42:47 slyfox Exp $
+
+  08 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.4.4-r1.ebuild,
+  darcs-2.5.2.ebuild:
+  Drop tests/external.sh from tests as it reloes on ecample.com layout.
+  Partially fixes bug #392647 by Paweł Hajdan, Jr.
 
 *darcs-2.5.2 (04 Aug 2011)
 

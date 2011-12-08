@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.4.4-r1.ebuild,v 1.13 2011/06/05 12:10:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.4.4-r1.ebuild,v 1.14 2011/12/08 20:42:47 slyfox Exp $
 
 EAPI="3"
-CABAL_FEATURES="bin lib profile haddock"
+CABAL_FEATURES="bin lib profile haddock hscolour"
 inherit haskell-cabal eutils bash-completion
 
 DESCRIPTION="a distributed, interactive, smart revision control system"
@@ -28,8 +28,8 @@ COMMONDEPS=">=dev-lang/ghc-6.8
 		=dev-haskell/html-1.0*
 		=dev-haskell/mmap-0.4*
 		<dev-haskell/mtl-1.2
-		=dev-haskell/network-2.2*
-		dev-haskell/parsec:0
+		>=dev-haskell/network-2.2
+		>=dev-haskell/parsec-2.0
 		<dev-haskell/regex-compat-0.94
 		=dev-haskell/terminfo-0.3*
 		=dev-haskell/utf8-string-0.3*
@@ -72,8 +72,18 @@ src_prepare() {
 		"${S}/${PN}.cabal" \
 		|| die "Could not loosen deps on hashed-storage"
 
+	# Loosen dependency on parsec
+	sed -i -e "s/parsec       >= 2.0 && < 3.1/parsec       >= 2.0/" \
+		"${S}/${PN}.cabal" \
+		|| die "Could not loosen deps on parsec"
+
+	# and on network
+	sed -i -e 's/network == 2\.2\.\*/network >= 2.2/' \
+		"${S}/${PN}.cabal"
+
 	# hlint tests tend to break on every newly released hlint
-	rm "${S}/tests/haskell_policy.sh"
+	rm "${S}/tests/haskell_policy.sh" || die
+	rm "${S}/tests/external.sh" || die # relies on example.com layout bug #392647
 }
 
 src_configure() {
