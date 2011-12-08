@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-8.0.ebuild,v 1.3 2011/11/29 22:58:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-8.0.ebuild,v 1.4 2011/12/08 14:48:30 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 HOMEPAGE="http://www.mozilla.com/thunderbird"
 RESTRICT="strip"
 
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+crashreporter"
