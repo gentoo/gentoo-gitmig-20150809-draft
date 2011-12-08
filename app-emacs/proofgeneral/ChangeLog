@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/proofgeneral
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.32 2010/12/07 01:50:23 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.33 2011/12/08 13:21:03 ulm Exp $
+
+*proofgeneral-4.1 (08 Dec 2011)
+
+  08 Dec 2011; Ulrich Mueller <ulm@gentoo.org> +proofgeneral-4.1.ebuild,
+  +files/proofgeneral-4.1-emacs-24.patch:
+  Version bump, bug 386465.
 
   07 Dec 2010; Ulrich Mueller <ulm@gentoo.org> proofgeneral-4.0.ebuild:
   Require Emacs version 23 at least. Don't compile and install bundled
