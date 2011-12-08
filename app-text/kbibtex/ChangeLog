@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.40 2011/09/09 20:19:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.41 2011/12/08 12:01:56 johu Exp $
+
+*kbibtex-0.4 (08 Dec 2011)
+
+  08 Dec 2011; Johannes Huber <johu@gentoo.org> +kbibtex-0.4.ebuild:
+  Version bump
 
   09 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> kbibtex-0.3.ebuild:
   Add missing poppler dependency, bug 382203
