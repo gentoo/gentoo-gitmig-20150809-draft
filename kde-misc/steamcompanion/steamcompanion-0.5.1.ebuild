@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/steamcompanion/steamcompanion-0.2.2.ebuild,v 1.2 2011/08/09 22:27:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/steamcompanion/steamcompanion-0.5.1.ebuild,v 1.1 2011/12/08 10:56:49 johu Exp $
 
 EAPI=4
 
@@ -10,11 +10,11 @@ inherit kde4-base
 
 DESCRIPTION="Connector for web Steam service from Valve."
 HOMEPAGE="http://kde-look.org/content/show.php/Steam+Companion?content=141713"
-SRC_URI="http://kde-look.org/CONTENT/content-files/141713-${PN}.tar.gz"
+SRC_URI="http://kde-look.org/CONTENT/content-files/141713-${PN}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="debug"
 
 S=${WORKDIR}/${PN}
