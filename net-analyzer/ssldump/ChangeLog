@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ssldump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.21 2011/01/18 18:19:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.22 2011/12/08 18:13:12 jer Exp $
+
+  08 Dec 2011; Jeroen Roovers <jer@gentoo.org> ssldump-0.9-r1.ebuild:
+  Fix broken configure hack looking for libpcap.a by Benjamin Peterson (bug
+  #393645).
 
   18 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> ssldump-0.9-r1.ebuild:
   Fix LICENSE from GPL-2 to openssl. Fix econf argument --without-crypto to
