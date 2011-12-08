@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/ChangeLog,v 1.1 2011/04/06 21:01:35 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/ChangeLog,v 1.2 2011/12/08 17:40:47 pesa Exp $
+
+  08 Dec 2011; Davide Pesavento <pesa@gentoo.org> metadata.xml,
+  qt-meta-4.6.ebuild, qt-meta-4.7.ebuild:
+  Update HOMEPAGE.
 
 *qt-meta-4.7 (06 Apr 2011)
 *qt-meta-4.6 (06 Apr 2011)

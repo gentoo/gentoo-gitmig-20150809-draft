@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/qt-meta-4.7.ebuild,v 1.1 2011/04/06 21:01:35 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/qt-meta-4.7.ebuild,v 1.2 2011/12/08 17:40:47 pesa Exp $
 
 EAPI=2
+
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework"
-HOMEPAGE="http://qt.nokia.com/"
+HOMEPAGE="http://qt.nokia.com/ http://qt-project.org/"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
 SLOT="4"
@@ -28,7 +29,8 @@ RDEPEND="
 	>=x11-libs/qt-test-${PV}
 	>=x11-libs/qt-multimedia-${PV}
 	>=x11-libs/qt-declarative-${PV}
-	>=x11-libs/qt-assistant-${PV}"
+	>=x11-libs/qt-assistant-${PV}
+"
 
 pkg_postinst() {
 	echo

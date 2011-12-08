@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>qt</herd>
 <use>
-  <flag name='kde'>Select <pkg>media-sound/phonon</pkg> as phonon variant
-    needed for kde</flag>
-  <flag name='qt3support'>Enable the Qt3Support libraries for Qt4</flag>
+	<flag name="kde">Select <pkg>media-sound/phonon</pkg> as phonon variant,
+		needed for KDE</flag>
+	<flag name="qt3support">Enable the Qt3Support library for Qt4</flag>
 </use>
 </pkgmetadata>
