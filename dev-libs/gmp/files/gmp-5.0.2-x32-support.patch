@@ -8,7 +8,7 @@ Signed Off By: Nitin A Kamble <nitin.a.kamble@intel.com> 2011/11/21
 
 --- gmp-4.3.2/configure
 +++ gmp-4.3.2/configure
-@@ -1499,6 +1499,25 @@ case $host in
+@@ -1499,6 +1499,21 @@
  	    path_64="x86_64/atom x86_64"
  	    ;;
  	esac
@@ -16,8 +16,6 @@ Signed Off By: Nitin A Kamble <nitin.a.kamble@intel.com> 2011/11/21
 +	# X32 support.
 +	case x"$path_64" in
 +	  xx86_64*)
-+	    case x"$CC $CFLAGS" in
-+	      x*-mx32*)
 +		abilist="x32 64 32"
 +		path_x32="$path_64"
 +		limb_x32=longlong
@@ -27,14 +25,12 @@ Signed Off By: Nitin A Kamble <nitin.a.kamble@intel.com> 2011/11/21
 +		CALLING_CONVENTIONS_OBJS_x32='amd64call.lo amd64check$U.lo'
 +		SPEED_CYCLECOUNTER_OBJ_x32=x86_64.lo
 +		cyclecounter_size_x32=2
-+		;;
-+	    esac
 +	    ;;
 +	esac
  	;;
      esac
      ;;
-@@ -3039,7 +3058,7 @@ if test "$gmp_asm_syntax_testing" != no;
+@@ -3039,7 +3058,7 @@
   ;;
  	  esac
            ;;
