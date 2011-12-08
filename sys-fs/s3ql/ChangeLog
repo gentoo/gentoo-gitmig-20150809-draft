@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/s3ql
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.1 2011/12/08 10:04:41 radhermit Exp $
+
+*s3ql-1.8.1 (08 Dec 2011)
+
+  08 Dec 2011; Tim Harder <radhermit@gentoo.org> +s3ql-1.8.1.ebuild,
+  +metadata.xml:
+  Initial import (bug #336283). Ebuild by me.
+
