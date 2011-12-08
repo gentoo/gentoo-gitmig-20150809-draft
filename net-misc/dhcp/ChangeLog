@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.198 2011/12/04 22:45:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.199 2011/12/08 15:57:30 vapier Exp $
+
+*dhcp-4.2.3_p1 (08 Dec 2011)
+
+  08 Dec 2011; Mike Frysinger <vapier@gentoo.org> +dhcp-4.2.3_p1.ebuild:
+  Version bump #393617 by Agostino Sarubbo.
 
 *dhcp-4.2.2-r3 (04 Dec 2011)
 
