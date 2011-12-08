@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.507 2011/12/07 16:11:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.508 2011/12/08 18:11:32 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -814,6 +814,21 @@ toolchain_src_unpack() {
 	disable_multilib_libjava || die "failed to disable multilib java"
 }
 
+gcc-abi-map() {
+	# Convert the ABI name we use in Gentoo to what gcc uses
+	local map=()
+	case ${CTARGET} in
+	mips*)   map=("o32 32" "n32 n32" "n64 64") ;;
+	x86_64*) map=("amd64 m64" "x86 m32" "x32 mx32") ;;
+	esac
+
+	local m
+	for m in "${map[@]}" ; do
+		l=( ${m} )
+		[[ $1 == ${l[0]} ]] && echo ${l[1]} && break
+	done
+}
+
 gcc-multilib-configure() {
 	# if multilib is disabled, get out quick!
 	if ! is_multilib ; then
@@ -824,26 +839,23 @@ gcc-multilib-configure() {
 	fi
 
 	# translate our notion of multilibs into gcc's
-	local abi map=() list
-	case ${CTARGET} in
-	x86_64*)
-		# drop the 4.6.2 stuff once 4.7 goes stable
-		if tc_version_is_at_least 4.7 ||
-		   ( tc_version_is_at_least 4.6.2 && has x32 $(get_all_abis) )
-		then
-			map=(amd64:m64 x86:m32 x32:mx32)
-		fi
-		;;
-	esac
+	local abi list
 	for abi in $(get_all_abis) ; do
-		local m a l
-		for m in "${map[@]}" ; do
-			a=${m%:*}
-			l=${m#*:}
-			[[ ${abi} == ${a} ]] && list=",${l}${list}"
-		done
+		local l=$(gcc-abi-map ${abi})
+		[[ -n ${l} ]] && list+=",${l}"
 	done
-	[[ -n ${list} ]] && confgcc+=" --with-multilib-list=${list:1}"
+	if [[ -n ${list} ]] ; then
+		case ${CTARGET} in
+		x86_64*)
+			# drop the 4.6.2 stuff once 4.7 goes stable
+			if tc_version_is_at_least 4.7 ||
+			   ( tc_version_is_at_least 4.6.2 && has x32 $(get_all_abis) )
+			then
+				confgcc+=" --with-multilib-list=${list:1}"
+			fi
+			;;
+		esac
+	fi
 }
 
 gcc-compiler-configure() {
@@ -932,6 +944,7 @@ gcc-compiler-configure() {
 		confgcc+=" --disable-libquadmath"
 	fi
 
+	local with_abi_map=()
 	case $(tc-arch) in
 		arm)	#264534
 			local arm_arch="${CTARGET%%-*}"
@@ -951,12 +964,9 @@ gcc-compiler-configure() {
 			        confgcc+=" --with-float=hard"
 			fi
 			;;
-		# Add --with-abi flags to set default MIPS ABI
-		mips)
-			local mips_abi=""
-			[[ ${DEFAULT_ABI} == n64 ]] && mips_abi="--with-abi=64"
-			[[ ${DEFAULT_ABI} == n32 ]] && mips_abi="--with-abi=n32"
-			[[ -n ${mips_abi} ]] && confgcc+=" ${mips_abi}"
+		# Add --with-abi flags to set default ABI
+		amd64|mips)
+			confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
 			;;
 		# Default arch for x86 is normally i386, lets give it a bump
 		# since glibc will do so based on CTARGET anyways
