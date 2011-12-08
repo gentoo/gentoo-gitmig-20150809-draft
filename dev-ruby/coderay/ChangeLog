@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.41 2011/10/03 20:02:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.42 2011/12/08 19:50:44 flameeyes Exp $
+
+*coderay-1.0.4 (08 Dec 2011)
+
+  08 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> +coderay-1.0.4.ebuild,
+  -coderay-0.9.7.ebuild, coderay-0.9.8.ebuild, coderay-1.0.0.ebuild:
+  Version bump, remove JRuby support due to the known-broken tests; drop ruby
+  1.9 support from coderay 0.9.8 so that we can ask stable. Replace the old
+  syntax for ruby_add_bdepend.
 
   03 Oct 2011; Jeroen Roovers <jer@gentoo.org> coderay-0.9.6.ebuild:
   Stable for HPPA (bug #385149).

@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-0.9.8.ebuild,v 1.1 2011/05/01 07:30:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-0.9.8.ebuild,v 1.2 2011/12/08 19:50:44 flameeyes Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -25,6 +25,4 @@ IUSE=""
 # dependency to ensure that we get at least a version that works: bug
 # 330621. We use this convoluted way because redcloth isn't available
 # yet for jruby.
-USE_RUBY=ruby18 ruby_add_bdepend "ruby_targets_ruby18 test" ">=dev-ruby/redcloth-4.2.2"
-USE_RUBY=ruby19 ruby_add_bdepend "ruby_targets_ruby19 test" ">=dev-ruby/redcloth-4.2.2"
-USE_RUBY=ree18 ruby_add_bdepend "ruby_targets_ree18 test" ">=dev-ruby/redcloth-4.2.2"
+USE_RUBY="${USE_RUBY/jruby/}" ruby_add_bdepend "test? ( >=dev-ruby/redcloth-4.2.2 )"
