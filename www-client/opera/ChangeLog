@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.675 2011/12/06 14:03:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.676 2011/12/08 17:03:01 phajdan.jr Exp $
+
+  08 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> opera-11.60.1185.ebuild:
+  x86 stable wrt bug #393395
 
 *opera-11.60.1185 (06 Dec 2011)
 
