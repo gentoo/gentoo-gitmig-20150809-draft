@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.95 2011/12/07 18:06:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.96 2011/12/08 21:58:55 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -60,5 +60,5 @@ BINARY-REDISTRIBUTABLE @FREE Adaptec adobe-ps atheros-hal intel-psb intel-ucode 
 
 # Local Variables:
 # mode: conf-space
-# eval: (visual-line-mode 1)
+# mode: visual-line
 # End:
