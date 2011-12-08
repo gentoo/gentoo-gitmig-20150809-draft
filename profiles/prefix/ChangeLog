@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.306 2011/12/08 08:11:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.307 2011/12/08 08:13:56 grobian Exp $
+
+  08 Dec 2011; Fabian Groffen <grobian@gentoo.org> package.use.mask:
+  Mask USE=vanilla for gcc, since that results in a broken compiler on Prefix
 
   08 Dec 2011; Fabian Groffen <grobian@gentoo.org>
   +sunos/solaris/package.use.force, sunos/solaris/package.use.mask:

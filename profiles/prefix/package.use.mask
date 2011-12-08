@@ -1,6 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.16 2011/04/07 18:47:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.17 2011/12/08 08:13:56 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (08 Dec 2011)
+# USE=vanilla produces a broken compiler for Prefix.  Only use this flag
+# when you're absolutely sure what you're doing.  Do NOT report bugs
+# about failing packages when using a vanilla compiler!
+sys-devel/gcc vanilla
 
 # Fabian Groffen <grobian@gentoo.org> (23 Oct 2010)
 # IPC relies on pipes, selects, polls, and more stuff that Python is
