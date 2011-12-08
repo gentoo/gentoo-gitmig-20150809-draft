@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_IDNA2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IDNA2/ChangeLog,v 1.4 2011/11/25 18:07:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IDNA2/ChangeLog,v 1.5 2011/12/08 21:06:50 maekke Exp $
+
+  08 Dec 2011; Markus Meier <maekke@gentoo.org> PEAR-Net_IDNA2-0.1.1.ebuild:
+  add ~arm, bug #385255
 
   25 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
   PEAR-Net_IDNA2-0.1.1.ebuild:
