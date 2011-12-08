@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.305 2011/12/05 21:17:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.306 2011/12/08 08:11:38 grobian Exp $
+
+  08 Dec 2011; Fabian Groffen <grobian@gentoo.org>
+  +sunos/solaris/package.use.force, sunos/solaris/package.use.mask:
+  Unmask and force sys-devel/gcc libssp on Solaris, to get a non-broken
+  -fstack-protector(-all).
 
   05 Dec 2011; Jeremy Olexa <darkside@gentoo.org> +linux/profile.bashrc:
   Disable the automatic fortify patch for some older linux hosts, bug 289757
