@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.157 2011/11/19 10:53:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.158 2011/12/08 19:38:36 flameeyes Exp $
+
+*activesupport-2.3.14-r1 (08 Dec 2011)
+
+  08 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +activesupport-2.3.14-r1.ebuild,
+  +files/activesupport-2.3.14-unvendorize.patch, activesupport-3.0.11.ebuild:
+  Fix specifications so that they can be used with bundler (required for
+  radiant-1). Also add mocha to the list of test dependencies for 3.0, found
+  while installing the wrong slot.
 
 *activesupport-3.0.11 (19 Nov 2011)
 

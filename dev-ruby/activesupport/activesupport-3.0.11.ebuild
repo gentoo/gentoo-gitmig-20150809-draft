@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-3.0.11.ebuild,v 1.1 2011/11/19 10:53:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-3.0.11.ebuild,v 1.2 2011/12/08 19:38:36 flameeyes Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ ruby_add_rdepend ">=dev-ruby/memcache-client-1.5.8"
 
 # libxml-ruby and nokogiri are not strictly needed, but there are tests
 # using this code.
-ruby_add_bdepend "test? ( virtual/ruby-test-unit >=dev-ruby/libxml-2.0.0 dev-ruby/nokogiri )"
+ruby_add_bdepend "test? ( virtual/ruby-test-unit >=dev-ruby/libxml-2.0.0 dev-ruby/nokogiri dev-ruby/mocha )"
 
 all_ruby_prepare() {
 	# don't support older mocha versions as the optional codepath
