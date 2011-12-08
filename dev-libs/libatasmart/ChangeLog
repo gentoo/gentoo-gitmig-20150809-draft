@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatasmart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.24 2011/12/07 07:55:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.25 2011/12/08 20:38:46 maekke Exp $
+
+  08 Dec 2011; Markus Meier <maekke@gentoo.org> libatasmart-0.18.ebuild:
+  arm stable, bug #392313
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libatasmart-0.18.ebuild:
   x86 stable wrt bug #392313
