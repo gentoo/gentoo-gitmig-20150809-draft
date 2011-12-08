@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.57 2011/12/05 14:04:24 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.58 2011/12/08 19:27:29 flameeyes Exp $
+
+  08 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> libxml-2.2.2.ebuild:
+  Add missing virtual/ruby-test-unit dependency to stay on the safe side; fix
+  tests with Ruby 1.9, both in the call and by replacing an ulimit call from
+  within Ruby.
 
   05 Dec 2011; Naohiro Aota <naota@gentoo.org> libxml-2.2.2.ebuild:
   Add ~x86-fbsd.
