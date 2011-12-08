@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/bashburn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.42 2010/10/15 12:50:01 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.43 2011/12/08 20:14:44 ssuominen Exp $
+
+*bashburn-3.1.0 (08 Dec 2011)
+
+  08 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +bashburn-3.1.0.ebuild:
+  Version bump.
 
   15 Oct 2010; Jeremy Olexa <darkside@gentoo.org> -bashburn-2.1.2.ebuild,
   -bashburn-3.0.ebuild:
