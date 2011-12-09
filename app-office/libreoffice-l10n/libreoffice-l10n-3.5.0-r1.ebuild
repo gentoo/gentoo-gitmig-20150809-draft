@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.0.ebuild,v 1.1 2011/11/30 10:15:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.0-r1.ebuild,v 1.1 2011/12/09 18:39:34 scarabeus Exp $
 
 EAPI=4
 
-[[ ${PV} == 9999 ]] && MY_PV="3.4.4" || MY_PV="3.4.4"
+MY_PV="3.5.0beta0"
 
-RC_VERSION="rc2" # CHECK ME WITH EVERY BUMP!
-BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/${MY_PV}/rpm/"
+RC_VERSION="" # CHECK ME WITH EVERY BUMP!
+BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/testing/3.5.0-beta0/rpm"
 
 OO_EXTENSIONS=(
 	"472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.libreoffice.org"
 
 LICENSE="LGPL-3"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="offlinehelp templates"
 
 LANGUAGES_HELP="bg bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA eo es et eu
@@ -140,7 +140,7 @@ src_configure() { :; }
 src_compile() { :; }
 
 src_install() {
-	local dir="${S}"/opt/${PN/-l10n/}$(get_version_component_range 1-2 ${MY_PV})/basis$(get_version_component_range 1-2 ${MY_PV})/
+	local dir="${S}"/opt/${PN/-l10n/}$(get_version_component_range 1-2 ${MY_PV})/
 	# Condition required for people that do not install anything eg no linguas
 	# or just english with no offlinehelp.
 	if [[ -d "${dir}" ]] ; then
