@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.17 2011/11/16 16:07:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.18 2011/12/09 04:53:23 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -80,11 +80,11 @@ toolchain-glibc_src_install() {
 	if [[ ${SYMLINK_LIB} == "yes" ]] && has_multilib_profile ; then
 		case $(tc-arch) in
 			amd64)
-				[[ ! -e ${D}/lib ]] && dosym $(get_abi_LIBDIR amd64) /lib
+				[[ ! -e ${D}/lib ]] && dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /lib
 				dosym ../$(get_abi_LIBDIR x86)/ld-linux.so.2 /lib/ld-linux.so.2
 				;;
 			ppc64)
-				[[ ! -e ${D}/lib ]] && dosym $(get_abi_LIBDIR ppc64) /lib
+				[[ ! -e ${D}/lib ]] && dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /lib
 				dosym ../$(get_abi_LIBDIR ppc)/ld.so.1 /lib/ld.so.1
 				;;
 		esac
