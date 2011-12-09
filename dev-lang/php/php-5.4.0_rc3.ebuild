@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_rc3.ebuild,v 1.1 2011/12/09 09:45:13 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_rc3.ebuild,v 1.2 2011/12/09 20:19:24 olemarkus Exp $
 
 EAPI=4
 
@@ -329,4 +329,62 @@ src_configure() { eblit-run src_configure v3 ; }
 src_compile() { eblit-run src_compile v2 ; }
 src_install() { eblit-run src_install v3 ; }
 src_test() { eblit-run src_test v1 ; }
-pkg_postinst() { eblit-run pkg_postinst v2 ; }
+
+#Do not use eblit for this because it will not get sourced when installing from
+#binary package (bug #380845)
+pkg_postinst() {
+	# Output some general info to the user
+	if use apache2 ; then
+		APACHE2_MOD_DEFINE="PHP5"
+		APACHE2_MOD_CONF="70_mod_php5"
+		apache-module_pkg_postinst
+	fi
+
+	# Create the symlinks for php
+	for m in ${SAPIS}; do
+		[[ ${m} == 'embed' ]] && continue;
+		if use $m ; then
+			local ci=$(eselect php show $m)
+			if [[ -z $ci ]]; then
+				eselect php set $m php${SLOT}
+				einfo "Switched ${m} to use php:${SLOT}"
+				einfo
+			elif [[ $ci != "php${SLOT}" ]] ; then
+				elog "To switch $m to use php:${SLOT}, run"
+				elog "    eselect php set $m php${SLOT}"
+				elog
+			fi
+		fi
+	done
+
+	elog "Make sure that PHP_TARGETS in /etc/make.conf includes php${SLOT/./-} in order"
+	elog "to compile extensions for the ${SLOT} ABI"
+	elog
+	if ! use readline && use cli ; then
+		ewarn "Note that in order to use php interactivly, you need to enable"
+		ewarn "the readline USE flag or php -a will hang"
+	fi
+	elog
+	elog "This ebuild installed a version of php.ini based on php.ini-${PHP_INI_VERSION} version."
+	elog "You can chose which version of php.ini to install by default by setting PHP_INI_VERSION to either"
+	elog "'production' or 'development' in /etc/make.conf"
+	ewarn "Both versions of php.ini can be found in /usr/share/doc/${PF}"
+
+	# check for not yet migrated old style config dirs
+	ls "${ROOT}"/etc/php/*-php5 &>/dev/null
+	if [[ $? -eq 0 ]]; then
+		ewarn "Make sure to migrate your config files, starting with php-5.3.4 and php-5.2.16 config"
+		ewarn "files are now kept at ${ROOT}etc/php/{apache2,cli,cgi,fpm}-php5.x"
+	fi
+	elog
+	elog "For more details on how minor version slotting works (PHP_TARGETS) please read the upgrade guide:"
+	elog "http://www.gentoo.org/proj/en/php/php-upgrading.xml"
+	elog
+
+	if ( [[ -z SUHOSIN_VERSION ]] && use suhosin && version_is_at_least 5.3.6_rc1 ) ; then
+		ewarn "The suhosin USE flag now only installs the suhosin patch!"
+		ewarn "If you want the suhosin extension, make sure you install"
+		ewarn " dev-php5/suhosin"
+		ewarn
+	fi
+}
