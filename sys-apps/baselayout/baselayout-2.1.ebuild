@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1.ebuild,v 1.5 2011/11/21 22:36:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1.ebuild,v 1.6 2011/12/09 03:48:47 vapier Exp $
 
 inherit eutils multilib
 
@@ -209,7 +209,7 @@ pkg_postinst() {
 	fi
 
 	# baselayout leaves behind a lot of .keep files, so let's clean them up
-	find "${ROOT}"/lib*/rcscripts/ -name .keep -exec rm -f {} +
+	find "${ROOT}"/lib*/rcscripts/ -name .keep -exec rm -f {} + 2>/dev/null
 	find "${ROOT}"/lib*/rcscripts/ -depth -type d -exec rmdir {} + 2>/dev/null
 
 	# whine about users with invalid shells #215698
