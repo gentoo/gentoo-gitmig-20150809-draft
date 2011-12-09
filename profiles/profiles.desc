@@ -16,6 +16,7 @@ alpha           default/linux/alpha/10.0/server                 stable
 
 # AMD64 Profiles
 amd64           default/linux/amd64/10.0                        stable
+amd64           default/linux/amd64/10.0/selinux                dev
 amd64           default/linux/amd64/10.0/desktop                stable
 amd64           default/linux/amd64/10.0/desktop/gnome          stable
 amd64           default/linux/amd64/10.0/desktop/kde            stable
@@ -143,6 +144,7 @@ sparc           default/linux/sparc/10.0/server                 stable
 
 # x86 Profiles
 x86             default/linux/x86/10.0                          stable
+x86             default/linux/x86/10.0/selinux                  dev
 x86             default/linux/x86/10.0/desktop                  stable
 x86             default/linux/x86/10.0/desktop/gnome            stable
 x86             default/linux/x86/10.0/desktop/kde              stable

@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5997 2011/12/09 00:10:53 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5998 2011/12/09 03:22:31 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  +default/linux/amd64/10.0/selinux/eapi,
+  +default/linux/amd64/10.0/selinux/parent,
+  +default/linux/x86/10.0/selinux/eapi, +default/linux/x86/10.0/selinux/parent,
+  profiles.desc:
+  Stack features/selinux on default/linux/{amd64,x86}/10.0 profiles
 
   09 Dec 2011; Daniel Pielmeier <billie@gentoo.org> package.mask:
   Mask net-print/cupsddk for removal.
