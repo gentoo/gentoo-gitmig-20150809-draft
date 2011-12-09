@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.0.1_p4-r1.ebuild,v 1.1 2011/08/25 19:44:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.0.1_p4-r1.ebuild,v 1.2 2011/12/09 20:49:07 aballier Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="static-libs"
 
-RDEPEND=">=dev-libs/gmp-4.1.4-r2[static-libs=]"
+RDEPEND=">=dev-libs/gmp-4.1.4-r2[static-libs?]"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
