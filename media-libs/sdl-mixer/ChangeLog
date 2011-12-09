@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.82 2011/07/30 17:03:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.83 2011/12/09 21:16:44 tupone Exp $
+
+  09 Dec 2011; Tupone Alfredo <tupone@gentoo.org> sdl-mixer-1.2.11-r1.ebuild,
+  metadata.xml:
+  Installing playmus/playwave. Bug #46656 by Gerry
 
   30 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org>
   sdl-mixer-1.2.11-r1.ebuild, +files/sdl-mixer-1.2.11-multilib.patch:

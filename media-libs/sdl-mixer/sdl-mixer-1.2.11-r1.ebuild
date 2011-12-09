@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.11-r1.ebuild,v 1.9 2011/07/30 17:03:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.11-r1.ebuild,v 1.10 2011/12/09 21:16:44 tupone Exp $
 
 EAPI=2
 inherit eutils
@@ -13,7 +13,7 @@ SRC_URI="http://www.libsdl.org/projects/SDL_mixer/release/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
-IUSE="flac mad +midi mikmod mp3 static-libs timidity vorbis +wav"
+IUSE="flac mad +midi mikmod mp3 playtools static-libs timidity vorbis +wav"
 
 DEPEND=">=media-libs/libsdl-1.2.10
 	flac? ( media-libs/flac )
@@ -49,6 +49,9 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
+	if use playtools; then
+		emake DESTDIR="${D}" install-bin || die "make install-bin failed"
+	fi
 	dodoc CHANGES README
 	if ! use static-libs ; then
 		find "${D}" -type f -name '*.la' -exec rm {} + \
