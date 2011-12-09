@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.14 2011/08/22 13:42:39 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.15 2011/12/09 18:23:44 olemarkus Exp $
 
 EAPI=2
 
@@ -306,7 +306,7 @@ eblit-run-maybe() {
 # Usage: <function> [version]
 # Runs a function defined in an eblit
 eblit-run() {
-	eblit-include --skip common "${*:2}"
+	eblit-include --skip common "v2"
 	eblit-include "$@"
 	eblit-run-maybe eblit-$1-pre
 	eblit-${PN}-$1
