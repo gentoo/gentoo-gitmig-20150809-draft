@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.4 2011/12/01 13:58:42 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.5 2011/12/09 03:10:09 vapier Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -119,6 +119,8 @@ src_prepare() {
 		Modules/Setup.dist \
 		Modules/getpath.c \
 		setup.py || die "sed failed to replace @@GENTOO_LIBDIR@@"
+	# The setup.py file hardcodes /usr/lib64!
+	sed -i -e "s:/lib64:/$(get_libdir):g" setup.py || die
 
 	if ! use wininst; then
 		# Remove Microsoft Windows executables.
