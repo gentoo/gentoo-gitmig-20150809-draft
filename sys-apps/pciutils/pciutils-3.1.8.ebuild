@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.8.ebuild,v 1.1 2011/10/20 00:33:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.8.ebuild,v 1.2 2011/12/09 20:46:50 vapier Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils multilib toolchain-funcs
 
@@ -34,12 +34,12 @@ pemake() {
 		CROSS_COMPILE="${CHOST}-" \
 		CC="$(tc-getCC)" \
 		DNS="yes" \
-		IDSDIR="/usr/share/misc" \
-		MANDIR="/usr/share/man" \
-		PREFIX="/usr" \
+		IDSDIR='$(SHAREDIR)/misc' \
+		MANDIR='$(SHAREDIR)/man' \
+		PREFIX="${EPREFIX}/usr" \
 		SHARED="yes" \
 		STRIP="" \
-		ZLIB=$(usex zlib yes no) \
+		ZLIB=$(usex zlib) \
 		LIBDIR="\${PREFIX}/$(get_libdir)" \
 		"$@" || die
 }
