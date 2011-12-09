@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pgpdump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.19 2011/12/01 19:55:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.20 2011/12/09 21:42:18 hwoarang Exp $
+
+  09 Dec 2011; Markos Chandras <hwoarang@gentoo.org> pgpdump-0.27.ebuild:
+  Stable on amd64 wrt bug #391547
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pgpdump-0.27.ebuild:
   x86 stable wrt bug #391547
