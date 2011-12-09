@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/libatomic_ops-1.2-r1.ebuild,v 1.18 2011/09/26 17:30:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/libatomic_ops-1.2-r1.ebuild,v 1.19 2011/12/09 18:36:31 vapier Exp $
 
 inherit eutils autotools
 
@@ -13,9 +13,6 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
-
 src_unpack(){
 	unpack ${A}
 	cd "${S}"
@@ -23,6 +20,7 @@ src_unpack(){
 	epatch "${FILESDIR}"/${P}-ppc-asm.patch
 	epatch "${FILESDIR}"/${P}-sh4.patch
 	epatch "${FILESDIR}"/${P}-fix-makefile-am-generic.patch
+	epatch "${FILESDIR}"/${P}-x32.patch
 	eautoreconf
 }
 
