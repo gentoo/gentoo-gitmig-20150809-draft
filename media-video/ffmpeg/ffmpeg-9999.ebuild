@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.67 2011/12/06 13:13:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.68 2011/12/09 13:59:29 aballier Exp $
 
 EAPI="4"
 
@@ -81,7 +81,7 @@ RDEPEND="
 	vaapi? ( >=x11-libs/libva-0.32 )
 	vdpau? ( x11-libs/libvdpau )
 	vpx? ( >=media-libs/libvpx-0.9.6 )
-	X? ( x11-libs/libX11 x11-libs/libXext )
+	X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes )
 	zlib? ( sys-libs/zlib )
 	!media-video/qt-faststart
 "
