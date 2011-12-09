@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/bdelta-0.2.3.ebuild,v 1.1 2011/12/07 19:07:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/bdelta-0.2.3.ebuild,v 1.2 2011/12/09 07:24:27 slyfox Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://deltup.org/request.php?10 -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-linux"
 IUSE=""
 
 src_prepare() {
@@ -31,6 +31,6 @@ src_compile() {
 }
 
 src_install() {
-	make -C src DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" install || die "make install failed"
+	emake -C src DESTDIR="${ED}" LIBDIR="/usr/$(get_libdir)" install || die "make install failed"
 	dodoc README
 }
