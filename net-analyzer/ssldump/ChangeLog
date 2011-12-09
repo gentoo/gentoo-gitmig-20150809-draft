@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ssldump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.22 2011/12/08 18:13:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.23 2011/12/09 16:15:55 jer Exp $
+
+  09 Dec 2011; Jeroen Roovers <jer@gentoo.org> ssldump-0.9-r1.ebuild:
+  sed must die().
 
   08 Dec 2011; Jeroen Roovers <jer@gentoo.org> ssldump-0.9-r1.ebuild:
   Fix broken configure hack looking for libpcap.a by Benjamin Peterson (bug
