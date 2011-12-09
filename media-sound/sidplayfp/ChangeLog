@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/sidplayfp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplayfp/ChangeLog,v 1.1 2011/12/09 18:15:23 ssuominen Exp $
+
+*sidplayfp-0.3.0 (09 Dec 2011)
+
+  09 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +sidplayfp-0.3.0.ebuild:
+  Initial commit.
+
