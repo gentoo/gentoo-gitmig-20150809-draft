@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.10 2011/10/30 17:58:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.11 2011/12/09 01:08:20 tetromino Exp $
+
+  09 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild, gnome-themes-standard-3.2.1.ebuild:
+  icon-naming-utils not needed (bug #393545, thanks to Cedric for reporting).
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org>
   gnome-themes-standard-3.0.2.ebuild:

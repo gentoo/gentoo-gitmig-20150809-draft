@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.0.2.ebuild,v 1.8 2011/10/30 17:58:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.0.2.ebuild,v 1.9 2011/12/09 01:08:20 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,6 @@ KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freeb
 COMMON_DEPEND=">=x11-libs/gtk+-3.0.8:3
 	>=x11-themes/gtk-engines-2.15.3:2"
 DEPEND="${COMMON_DEPEND}
-	>=x11-misc/icon-naming-utils-0.8.7
 	>=dev-util/pkgconfig-0.19
 	>=dev-util/intltool-0.40
 	sys-devel/gettext"
