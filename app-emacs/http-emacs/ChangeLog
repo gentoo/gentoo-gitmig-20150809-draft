@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/http-emacs
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/ChangeLog,v 1.11 2008/08/28 06:43:44 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/ChangeLog,v 1.12 2011/12/09 00:40:08 ulm Exp $
+
+  09 Dec 2011; Ulrich Mueller <ulm@gentoo.org> -files/51http-emacs-gentoo.el,
+  files/50http-emacs-gentoo.el, -http-emacs-1.1.ebuild,
+  http-emacs-1.1-r1.ebuild:
+  Drop keywords to unstable and remove old, bug 394027.
 
   28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> files/51http-emacs-gentoo.el,
   http-emacs-1.1.ebuild, http-emacs-1.1-r1.ebuild:

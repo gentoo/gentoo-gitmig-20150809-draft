@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/http-emacs-1.1-r1.ebuild,v 1.2 2008/08/28 06:43:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/http-emacs-1.1-r1.ebuild,v 1.3 2011/12/09 00:40:08 ulm Exp $
 
 inherit elisp
 
@@ -15,5 +15,4 @@ IUSE=""
 
 S="${WORKDIR}/${PN}"
 DOCS="CONTRIBUTORS"
-
-SITEFILE=51${PN}-gentoo.el
+SITEFILE="50${PN}-gentoo.el"
