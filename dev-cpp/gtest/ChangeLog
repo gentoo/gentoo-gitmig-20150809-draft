@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.1 2011/11/11 20:09:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.2 2011/12/09 12:29:08 naota Exp $
+
+  09 Dec 2011; Naohiro Aota <naota@gentoo.org> gtest-1.5.0.ebuild:
+  Add ~x86-fbsd
 
   11 Nov 2011; Mike Frysinger <vapier@gentoo.org>:
   Migrate categories from dev-util as this is a C++ testing framework #387155.
