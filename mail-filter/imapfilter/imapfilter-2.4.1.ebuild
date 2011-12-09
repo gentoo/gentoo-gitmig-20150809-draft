@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-2.4.ebuild,v 1.1 2011/12/06 22:50:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-2.4.1.ebuild,v 1.1 2011/12/09 02:24:07 radhermit Exp $
 
 EAPI=4
 
