@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.616 2011/11/11 19:34:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.617 2011/12/09 18:01:32 williamh Exp $
+
+*udev-175-r1 (09 Dec 2011)
+*udev-171-r3 (09 Dec 2011)
+
+  09 Dec 2011; William Hubbs <williamh@gentoo.org> +udev-171-r3.ebuild,
+  +udev-175-r1.ebuild:
+  Rev bumps for #380929. All scripts should now be /run aware.
 
   11 Nov 2011; Mike Frysinger <vapier@gentoo.org> udev-171-r2.ebuild,
   udev-175.ebuild, udev-9999.ebuild:
