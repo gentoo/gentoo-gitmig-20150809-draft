@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.27 2011/11/16 15:36:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.28 2011/12/09 12:52:53 naota Exp $
+
+  09 Dec 2011; Naohiro Aota <naota@gentoo.org> dvisvgm-1.0.9-r1.ebuild:
+  Add ~x86-fbsd
 
   16 Nov 2011; Jeroen Roovers <jer@gentoo.org> dvisvgm-1.0.9-r1.ebuild:
   Marked ~hppa (bug #390671).
