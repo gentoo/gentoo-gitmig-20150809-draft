@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5998 2011/12/09 03:22:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5999 2011/12/09 15:47:12 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove mask entry for wxGTK/wxpython 2.6 and remaining reverse dependencies
+  wrt #330683 since they are no longer in tree.
 
   09 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
   +default/linux/amd64/10.0/selinux/eapi,

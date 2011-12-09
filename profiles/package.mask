@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13313 2011/12/09 00:10:53 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13314 2011/12/09 15:47:12 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -216,19 +216,6 @@ net-mail/vmailmgr-tools
 # Steve Arnold <nerdboy@gentoo.org> (12 Nov 2011)
 # Masked until gpsdrive is updated to work with the newer mapnik.
 >=sci-geosciences/mapnik-2.0.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (12 Nov 2011)
-# Masked for removal in 30 days wrt bug 330683.  Use at least 2.8.
-=dev-python/wxpython-2.6*
-=dev-python/wxpython-docs-2.6*
-=x11-libs/wxGTK-2.6*
-games-util/mattricks
-
-# Samuli Suominen <ssuominen@gentoo.org> (12 Nov 2011)
-# Masked for removal in 30 days since wxpython-2.6 is going away wrt bug 330683
-dev-python/pythoncard
-dev-util/boa-constructor
-net-p2p/bittornado
 
 # Michael Sterrett <mr_bones_@gentoo.org> (10 Nov 2011)
 # Masked for removal on 20111210
