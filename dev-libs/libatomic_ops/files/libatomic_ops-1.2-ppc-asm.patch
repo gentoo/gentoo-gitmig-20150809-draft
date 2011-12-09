@@ -1,4 +1,4 @@
---- ../libatomic-ops-1.2/src/atomic_ops/sysdeps/gcc/powerpc.h	2006-03-29 09:49:14.000000000 +1100
+--- src/atomic_ops/sysdeps/gcc/powerpc.h	2006-03-29 09:49:14.000000000 +1100
 +++ src/atomic_ops/sysdeps/gcc/powerpc.h	2007-08-27 10:51:00.000000000 +1000
 @@ -72,7 +72,7 @@
    /* registers.  I always got "impossible constraint" when I	*/
