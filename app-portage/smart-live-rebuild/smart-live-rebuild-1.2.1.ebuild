@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.2.1.ebuild,v 1.1 2011/11/25 20:34:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.2.1.ebuild,v 1.2 2011/12/09 11:29:22 naota Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=app-portage/gentoopm-0.2.1"

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.31 2011/11/25 20:34:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.32 2011/12/09 11:29:22 naota Exp $
+
+  09 Dec 2011; Naohiro Aota <naota@gentoo.org> smart-live-rebuild-1.2.1.ebuild:
+  Add ~x86-fbsd. Bug #393185
 
 *smart-live-rebuild-1.2.1 (25 Nov 2011)
 
