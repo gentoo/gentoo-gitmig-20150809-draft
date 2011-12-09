@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.199 2011/12/08 15:57:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.200 2011/12/09 17:18:11 jer Exp $
+
+  09 Dec 2011; Jeroen Roovers <jer@gentoo.org> dhcp-4.2.3_p1.ebuild:
+  Stable for HPPA (bug #393617).
 
 *dhcp-4.2.3_p1 (08 Dec 2011)
 
