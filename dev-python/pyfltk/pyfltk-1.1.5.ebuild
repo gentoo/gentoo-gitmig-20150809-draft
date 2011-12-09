@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.5.ebuild,v 1.10 2011/05/05 15:17:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.5.ebuild,v 1.11 2011/12/09 17:13:29 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="doc"
 
-RDEPEND="x11-libs/fltk:1[opengl]"
+RDEPEND="<x11-libs/fltk-1.3.0:1[opengl]"
 DEPEND="${RDEPEND}
 	>=dev-lang/swig-1.3.38"
 
@@ -37,7 +37,9 @@ src_prepare() {
 	# move docs because the swig stuff will remove them
 	use doc && cp -r fltk fltk.docs
 
-	epatch "${FILESDIR}/${P}-swig-2.patch"
+	epatch \
+		"${FILESDIR}"/${P}-swig-2.patch \
+		"${FILESDIR}"/${PN}-1.3.0-linux-3.x-detection.patch
 }
 
 src_compile() {
