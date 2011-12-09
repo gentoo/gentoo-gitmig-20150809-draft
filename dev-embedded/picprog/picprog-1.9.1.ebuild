@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/picprog-1.9.1.ebuild,v 1.3 2011/12/05 23:36:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/picprog-1.9.1.ebuild,v 1.4 2011/12/09 05:09:33 radhermit Exp $
 
 EAPI=4
 
@@ -15,10 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND=""
-
 src_compile() {
-	emake CXX=$(tc-getCXX) CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
+	emake CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {

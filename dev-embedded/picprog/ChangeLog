@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/picprog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/ChangeLog,v 1.24 2011/12/09 05:07:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/ChangeLog,v 1.25 2011/12/09 05:09:33 radhermit Exp $
+
+  09 Dec 2011; Tim Harder <radhermit@gentoo.org> picprog-1.9.1.ebuild:
+  Remove empty DEPEND and quote toolchain prefix.
 
   09 Dec 2011; Tim Harder <radhermit@gentoo.org> -picprog-1.8.3.ebuild:
   Remove old.
