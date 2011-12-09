@@ -1,0 +1,18 @@
+# HG changeset patch
+# User Brad Smith <brad@comstyle.com>
+# Date 1321165080 0
+# Node ID 2dfa82f9ff3526e7c22dc4c316af9b1c49f67851
+# Parent  1ba56a221c164082c69180aa41e5a6b88d520f72
+Need sys/stat.h for file audio output code to build on OpenBSD
+
+diff -r 1ba56a221c16 -r 2dfa82f9ff35 src/audio_out/audio_file_out.c
+--- a/src/audio_out/audio_file_out.c	Sun Nov 13 01:52:30 2011 +0000
++++ b/src/audio_out/audio_file_out.c	Sun Nov 13 06:18:00 2011 +0000
+@@ -30,6 +30,7 @@
+ #include <math.h>
+ #include <unistd.h>
+ #include <inttypes.h>
++#include <sys/stat.h>
+ 
+ #include "xine_internal.h"
+ #include "xineutils.h"
