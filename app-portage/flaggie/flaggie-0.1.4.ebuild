@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.1.4.ebuild,v 1.5 2011/11/02 14:57:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.1.4.ebuild,v 1.6 2011/12/09 03:11:15 naota Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 ~arm x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=sys-apps/portage-2.1.8.3"
