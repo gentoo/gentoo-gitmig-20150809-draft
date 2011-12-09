@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.278 2011/12/09 04:32:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.279 2011/12/09 04:40:06 dirtyepic Exp $
+
+*wxGTK-2.8.12.1 (09 Dec 2011)
+
+  09 Dec 2011; Ryan Hill <dirtyepic@gentoo.org> +wxGTK-2.8.12.1.ebuild:
+  Version bump.
 
   09 Dec 2011; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.8.12.0.ebuild:
   Prefix should pay more attention when they ignore metadata.xml (bug
