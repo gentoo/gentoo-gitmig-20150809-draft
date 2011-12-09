@@ -1,6 +1,12 @@
 # ChangeLog for games-mud/trebuchet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/trebuchet/ChangeLog,v 1.6 2010/06/01 11:50:02 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/trebuchet/ChangeLog,v 1.7 2011/12/09 19:04:45 mr_bones_ Exp $
+
+*trebuchet-1.075 (09 Dec 2011)
+
+  09 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org> trebuchet-1.052.ebuild,
+  +trebuchet-1.075.ebuild:
+  version bump with patch from Michael (kensington) (bug #394173)
 
   01 Jun 2010; Tupone Alfredo <tupone@gentoo.org> trebuchet-1.052.ebuild:
   make check depends on procheck, not in the tree. test restricted
