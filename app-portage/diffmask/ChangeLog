@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/diffmask
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.7 2011/01/05 13:59:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.8 2011/12/09 02:50:49 naota Exp $
+
+  09 Dec 2011; Naohiro Aota <naota@gentoo.org> diffmask-0.3.3.ebuild:
+  Add ~x86-fbsd #342443
 
   05 Jan 2011; Michał Górny <mgorny@gentoo.org> diffmask-0.3.3.ebuild:
   EAPI bump.
