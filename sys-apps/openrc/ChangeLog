@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.187 2011/12/04 23:38:53 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.188 2011/12/09 20:37:55 vapier Exp $
+
+  09 Dec 2011; Mike Frysinger <vapier@gentoo.org> openrc-0.9.4.ebuild:
+  Mark alpha/ia64/s390/sh stable #391271 by Christian Ruppert.
 
   04 Dec 2011; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   migrate-run service was dropped from git, so we can remove it here.
