@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.85 2011/12/06 09:09:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.86 2011/12/09 20:14:11 radhermit Exp $
+
+  09 Dec 2011; Tim Harder <radhermit@gentoo.org>
+  files/ettercap-0.7.4-autotools.patch:
+  Use DESTDIR to remove la files from the correct location.
 
 *ettercap-0.7.4 (06 Dec 2011)
 
