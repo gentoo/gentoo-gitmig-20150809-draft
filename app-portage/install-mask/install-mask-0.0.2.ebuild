@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/install-mask-0.0.2.ebuild,v 1.1 2011/11/04 20:04:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/install-mask-0.0.2.ebuild,v 1.2 2011/12/09 04:44:13 naota Exp $
 
 EAPI=4
 PYTHON_DEPEND='2:2.6 3:3.2'
@@ -15,7 +15,7 @@ SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="app-portage/flaggie
