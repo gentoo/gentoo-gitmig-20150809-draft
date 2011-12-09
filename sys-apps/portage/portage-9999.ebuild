@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.36 2011/12/09 17:59:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.37 2011/12/09 20:29:45 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -140,6 +140,10 @@ src_prepare() {
 					die "sed failed"
 			fi
 		done
+
+		einfo "Setting SYNC in make.globals ..."
+		sed -e 's|^SYNC=.*|SYNC="rsync://rsync.prefix.freens.org/gentoo-portage-prefix"|' \
+			-i cnf/make.globals || die "sed failed"
 
 		einfo "Adding FEATURES=force-prefix to make.globals ..."
 		echo -e '\nFEATURES="${FEATURES} force-prefix"' >> cnf/make.globals \
