@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.2.2.ebuild,v 1.1 2011/11/14 15:34:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.2.2.ebuild,v 1.2 2011/12/09 11:57:12 flameeyes Exp $
 
 EAPI="3"
 USE_RUBY="ruby18"
-inherit eutils confutils depend.apache ruby-ng
+inherit eutils depend.apache ruby-ng
 
 DESCRIPTION="Redmine is a flexible project management web application written using Ruby on Rails framework"
 HOMEPAGE="http://www.redmine.org/"
@@ -14,22 +14,23 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 #IUSE="bazaar cvs darcs fastcgi git imagemagick mercurial mysql openid passenger postgres sqlite3 subversion"
-IUSE="fastcgi imagemagick mysql openid passenger postgres sqlite3"
+IUSE="fastcgi imagemagick openid passenger"
 
 RDEPEND="$(ruby_implementation_depend ruby18 '>=' -1.8.6)[ssl]"
 
-ruby_add_rdepend "~dev-ruby/coderay-0.9.7
-	>=dev-ruby/rubygems-1.3.7
+ruby_add_rdepend "virtual/ruby-ssl
+	virtual/rubygems
+	=dev-ruby/coderay-0.9*
 	>=dev-ruby/ruby-net-ldap-0.0.4
 	~dev-ruby/i18n-0.4.2
 	~dev-ruby/rack-1.1.0
-	dev-ruby/rake"
-ruby_add_rdepend dev-ruby/rails:2.3
-ruby_add_rdepend dev-ruby/activerecord:2.3[mysql?,postgres?,sqlite3?]
-ruby_add_rdepend fastcgi dev-ruby/ruby-fcgi
-ruby_add_rdepend imagemagick dev-ruby/rmagick
-ruby_add_rdepend openid dev-ruby/ruby-openid
-ruby_add_rdepend passenger www-apache/passenger
+	dev-ruby/rake
+	dev-ruby/rails:2.3
+	dev-ruby/activerecord:2.3
+	fastcgi? ( dev-ruby/ruby-fcgi )
+	imagemagick? ( dev-ruby/rmagick )
+	openid? ( dev-ruby/ruby-openid )
+	passenger? ( www-apache/passenger )"
 
 #RDEPEND="${RDEPEND}
 #	bazaar ( dev-vcs/bazaar )
@@ -42,7 +43,6 @@ ruby_add_rdepend passenger www-apache/passenger
 REDMINE_DIR="/var/lib/${PN}"
 
 pkg_setup() {
-	confutils_require_any mysql postgres sqlite3
 	enewgroup redmine
 	# home directory is required for SCM.
 	enewuser redmine -1 -1 "${REDMINE_DIR}" redmine
