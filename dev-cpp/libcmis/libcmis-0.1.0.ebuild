@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.1.0.ebuild,v 1.3 2011/11/30 12:34:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.1.0.ebuild,v 1.4 2011/12/09 13:28:55 scarabeus Exp $
 
 EAPI=4
 
@@ -10,12 +10,12 @@ inherit autotools ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="C++ client library for the CMIS interface"
-HOMEPAGE="http://gitorious.org/libcmis"
-[[ ${PV} == 9999 ]] || SRC_URI="http://people.freedesktop.org/~cbosdo/${PN}/${P}.tar.gz"
+HOMEPAGE="https://sourceforge.net/projects/libcmis/"
+[[ ${PV} == 9999 ]] || SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 MPL-1.1 )"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs test"
 
 RDEPEND="

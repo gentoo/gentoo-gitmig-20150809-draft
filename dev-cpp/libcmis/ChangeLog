@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libcmis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.4 2011/11/30 12:34:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.5 2011/12/09 13:28:55 scarabeus Exp $
+
+  09 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.1.0.ebuild,
+  libcmis-9999.ebuild:
+  Project moved to sf.net.
 
   30 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> libcmis-0.1.0.ebuild:
   Marked ~ppc wrt #392585
