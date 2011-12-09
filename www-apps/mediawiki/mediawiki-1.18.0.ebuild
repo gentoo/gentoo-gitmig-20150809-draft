@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.18.0.ebuild,v 1.1 2011/12/09 09:19:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.18.0.ebuild,v 1.2 2011/12/09 22:09:03 radhermit Exp $
 
-EAPI="3"
+EAPI="4"
 inherit webapp depend.php versionator eutils
 
 MY_BRANCH=$(get_version_component_range 1-2)
@@ -30,10 +30,10 @@ RDEPEND="${DEPEND}
 	sqlite? ( dev-db/sqlite:3[fts3]
 		|| ( >=dev-lang/php-5.3[sqlite3,pdo] <dev-lang/php-5.3[sqlite,pdo] ) )"
 
-RESTRICT="test"
-
 need_httpd_cgi
 need_php_httpd
+
+RESTRICT="test"
 
 src_compile() {
 	if use math; then
@@ -44,7 +44,7 @@ src_compile() {
 				-e "s/cmxa/cma/" \
 				-e "s/cmx/cmo/g" -i Makefile || die
 		fi
-		emake || die
+		emake
 	else
 		einfo "Math support not enabled. Skipping."
 	fi
@@ -65,7 +65,7 @@ src_install() {
 	if use math; then
 		einfo "Installing math support"
 		exeinto "${MY_HTDOCSDIR}"/math
-		doexe math/texvc || die "Failed to create math support executable."
+		doexe math/texvc
 
 		docinto math
 		dodoc math/{README,TODO}
@@ -78,7 +78,7 @@ src_install() {
 		webapp_serverowned "${MY_HTDOCSDIR}"/images/tmp
 	fi
 
-	local DOCS="FAQ HISTORY INSTALL README RELEASE-NOTES UPGRADE"
+	local DOCS="FAQ HISTORY INSTALL README RELEASE-NOTES-1.18 UPGRADE"
 	dodoc ${DOCS} docs/*.txt
 	docinto php-memcached
 	dodoc docs/php-memcached/*
