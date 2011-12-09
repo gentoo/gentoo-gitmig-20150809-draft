@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.37 2011/12/09 19:58:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.12-r1.ebuild,v 1.1 2011/12/09 19:58:47 aballier Exp $
 
 EAPI="3"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then
-	SCM=git-2
+	SCM=git
 	EGIT_BOOTSTRAP="bootstrap"
+	EGIT_BRANCH=master
+	EGIT_PROJECT=${P}
 	if [ "${PV%.9999}" != "${PV}" ] ; then
 		EGIT_REPO_URI="git://git.videolan.org/vlc/vlc-${PV%.9999}.git"
 	else
@@ -22,7 +24,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
-PATCHLEVEL="99"
+PATCHLEVEL="102"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
@@ -185,9 +187,9 @@ pkg_setup() {
 	vlc_use_force vaapi ffmpeg
 	vlc_use_force nsplugin xcb
 	has_version '<media-sound/pulseaudio-0.9.22' && vlc_use_force pulseaudio X
-	vlc_use_force xosd X
 	vlc_use_force sdl X
 	vlc_use_force aalib X
+	vlc_use_force xosd X
 
 	# Useflags that will be automagically discarded if deps are not met
 	vlc_use_needs bidi truetype
@@ -209,11 +211,14 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	if [ "${PV%9999}" != "${PV}" ] ; then
-		git-2_src_unpack
+		git_src_unpack
 	fi
 }
 
 src_prepare() {
+	if [ "${PV%9999}" != "${PV}" ] ; then
+		git_src_prepare
+	fi
 	# Make it build with libtool 1.5
 	rm -f m4/lt* m4/libtool.m4
 

@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.757 2011/12/09 13:32:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.758 2011/12/09 19:58:47 aballier Exp $
+
+*vlc-1.1.12-r1 (09 Dec 2011)
+
+  09 Dec 2011; Alexis Ballier <aballier@gentoo.org> +vlc-1.1.12-r1.ebuild,
+  vlc-1.1.9999.ebuild, vlc-1.2.9999.ebuild, vlc-9999.ebuild:
+  Force using and initialising libX11 for threads in the xosd module. This
+  should fix bug #393439
 
   09 Dec 2011; Alexis Ballier <aballier@gentoo.org> vlc-1.2.9999.ebuild,
   vlc-9999.ebuild:
