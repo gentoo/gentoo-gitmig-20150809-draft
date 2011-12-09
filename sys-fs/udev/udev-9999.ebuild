@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.62 2011/11/11 19:34:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.63 2011/12/09 22:12:00 williamh Exp $
 
 EAPI=4
 
 KV_min=2.6.34
 # patchversion=1
-scriptversion=5
+scriptversion=6
 udev_rules_md5=7a7180a394e5bdea9011f68582b94fe8
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
@@ -62,7 +62,7 @@ else
 fi
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils )
+	hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils[-zlib] )
 	acl? ( sys-apps/coreutils[acl] )
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
