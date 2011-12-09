@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13314 2011/12/09 15:47:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13315 2011/12/09 20:48:28 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -785,11 +785,6 @@ sys-kernel/usermode-sources
 # Ryan Hill <dirtyepic@gentoo.org> (02 Apr 2011)
 # Masked for testing
 >=sys-devel/gcc-4.6.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Mar 2011)
-# Masked temporarily until bug 360849 is solved so people
-# can emerge udev. Also duplicate bug 388027.
->=sys-apps/pciutils-3.1.7-r1
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (18 Sep 2011)
 # Mask latest revisions using dev-libs/nettle and app-crypt/p11-kit

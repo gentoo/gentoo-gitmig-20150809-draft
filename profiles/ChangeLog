@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5999 2011/12/09 15:47:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6000 2011/12/09 20:48:28 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2011; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Drop pciutils mask now that udev depends on things sanely #360849.
 
   09 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Remove mask entry for wxGTK/wxpython 2.6 and remaining reverse dependencies
