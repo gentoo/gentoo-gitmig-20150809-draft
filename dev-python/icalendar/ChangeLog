@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.15 2011/09/02 20:47:12 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.16 2011/12/09 09:39:40 naota Exp $
+
+  09 Dec 2011; Naohiro Aota <naota@gentoo.org> icalendar-2.2.ebuild:
+  Add ~x86-fbsd
 
   02 Sep 2011; Joe Sapp <nixphoeni@gentoo.org> icalendar-2.2.ebuild:
   Removed eutils inherit
