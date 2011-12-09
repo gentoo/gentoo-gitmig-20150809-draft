@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gfan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/ChangeLog,v 1.7 2011/11/14 11:28:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/ChangeLog,v 1.8 2011/12/09 16:33:15 tomka Exp $
+
+  09 Dec 2011; Thomas Kahle <tomka@gentoo.org> gfan-0.5.ebuild:
+  amd64 stable per bug 393785
 
   14 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> gfan-0.4-r1.ebuild,
   gfan-0.5.ebuild:
