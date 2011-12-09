@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pymazon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/ChangeLog,v 1.6 2011/02/11 18:47:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/ChangeLog,v 1.7 2011/12/09 14:38:36 lack Exp $
+
+*pymazon-0.9.1 (09 Dec 2011)
+
+  09 Dec 2011; Jim Ramsay <jim_ramsay@gentoo.org> +pymazon-0.9.1.ebuild:
+  Version 0.9.1 is released
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> pymazon-0.9-r1.ebuild:
   Stable on amd64 wrt bug #354005
