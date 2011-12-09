@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.24 2011/09/25 19:44:37 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.25 2011/12/09 16:30:50 tomka Exp $
+
+  09 Dec 2011; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.4-r1.ebuild:
+  correct dep on normaliz, amd64 stable per bug 394157
 
 *Macaulay2-1.4-r1 (25 Sep 2011)
 
