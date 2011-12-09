@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.275 2011/11/12 13:55:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.276 2011/12/09 03:42:26 dirtyepic Exp $
+
+  09 Dec 2011; Ryan Hill <dirtyepic@gentoo.org> -wxGTK-2.8.10.1-r5.ebuild,
+  -files/wxGTK-2.8.10-collision.patch:
+  Remove old.
 
   12 Nov 2011; Justin Lecher <jlec@gentoo.org> wxGTK-2.6.4.0-r6.ebuild,
   wxGTK-2.8.10.1-r5.ebuild, wxGTK-2.8.11.0.ebuild, wxGTK-2.8.12.0.ebuild,
