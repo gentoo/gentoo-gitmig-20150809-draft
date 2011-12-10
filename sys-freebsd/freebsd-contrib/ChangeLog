@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-contrib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.31 2011/12/09 13:19:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.32 2011/12/10 02:39:01 naota Exp $
+
+  10 Dec 2011; Naohiro Aota <naota@gentoo.org> freebsd-contrib-8.0.ebuild,
+  freebsd-contrib-8.2.ebuild:
+  Block dev-util/diaglog. Bug #352455
 
 *freebsd-contrib-9.0_rc3 (09 Dec 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-8.0.ebuild,v 1.1 2010/03/19 11:50:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-8.0.ebuild,v 1.2 2011/12/10 02:39:01 naota Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -16,7 +16,8 @@ SRC_URI="mirror://gentoo/${GNU}.tar.bz2
 
 RDEPEND=""
 DEPEND="=sys-freebsd/freebsd-sources-${RV}*
-	=sys-freebsd/freebsd-mk-defs-${RV}*"
+	=sys-freebsd/freebsd-mk-defs-${RV}*
+	!dev-util/dialog"
 
 S="${WORKDIR}/gnu"
 
