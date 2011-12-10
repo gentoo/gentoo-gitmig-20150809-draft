@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-0.9.4.ebuild,v 1.1 2011/12/10 11:01:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-0.9.4-r1.ebuild,v 1.1 2011/12/10 19:09:40 ulm Exp $
 
 EAPI=4
 
@@ -34,23 +34,22 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/lib/${PN}
+	insinto /usr/share/${PN}
 	doins -r branding chrome components content defaults help locale modules \
 		search-engines style tests
 	doins application.ini chrome.manifest Info.plist
 
-	exeinto /usr/lib/${PN}
+	exeinto /usr/libexec/${PN}
 	doexe conkeror-spawn-helper
-	exeinto /usr/lib/${PN}/contrib
-	doexe contrib/run-conkeror
-	dosym /usr/lib/${PN}/contrib/run-conkeror /usr/bin/conkeror
+	dosym ../../libexec/${PN}/conkeror-spawn-helper \
+		/usr/share/${PN}/conkeror-spawn-helper
+
+	newbin "${FILESDIR}/conkeror.sh" conkeror
 	domenu "${FILESDIR}/conkeror.desktop"
 	doicon "${WORKDIR}/conkeror.png"
 
 	doman contrib/man/conkeror.1
 	dodoc CREDITS
-	# Use the XULRunner found in the Prefix, not the system's one
-	sed -e "s:/etc/gre.d:\"${EPREFIX}/etc/gre.d\":g" -i "${ED}"/usr/lib/conkeror/contrib/run-conkeror
 }
 
 pkg_postinst() {
