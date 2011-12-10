@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.5.ebuild,v 1.12 2011/06/02 19:14:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.5.ebuild,v 1.13 2011/12/10 14:12:17 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=net-print/cups-1.1.14
-	x11-libs/fltk:1
+	<x11-libs/fltk-1.3.0:1
 	virtual/jpeg
 	>=media-libs/libpng-1.4
 	sys-libs/zlib
