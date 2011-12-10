@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.904 2011/11/30 13:16:09 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.905 2011/12/10 11:27:36 psomas Exp $
+
+*gentoo-sources-3.1.5 (10 Dec 2011)
+*gentoo-sources-3.0.13 (10 Dec 2011)
+*gentoo-sources-2.6.32-r39 (10 Dec 2011)
+
+  10 Dec 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +gentoo-sources-2.6.32-r39.ebuild, +gentoo-sources-3.0.13.ebuild,
+  +gentoo-sources-3.1.5.ebuild:
+  Version bump
 
 *gentoo-sources-3.1.4 (30 Nov 2011)
 
