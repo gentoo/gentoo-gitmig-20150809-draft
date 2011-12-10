@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.72 2011/05/18 18:05:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.73 2011/12/10 16:59:10 swift Exp $
+
+  10 Dec 2011; <swift@gentoo.org> fail2ban-0.8.4-r3.ebuild:
+  Add selinux use flag support
 
   18 May 2011; Markos Chandras <hwoarang@gentoo.org> fail2ban-0.8.4-r3.ebuild,
   +files/fail2ban-0.8.4-gentoo-init.patch:

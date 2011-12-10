@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.4-r3.ebuild,v 1.7 2011/05/19 05:22:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.4-r3.ebuild,v 1.8 2011/12/10 16:59:10 swift Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,11 +14,13 @@ SRC_URI="mirror://sourceforge/fail2ban/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 hppa ppc ppc64 ~sparc x86 ~x86-fbsd"
-IUSE=""
+IUSE="selinux"
 
+DEPEND="selinux? ( sec-policy/selinux-fail2ban )"
 RDEPEND="net-misc/whois
 	virtual/mta
-	net-firewall/iptables"
+	net-firewall/iptables
+	selinux? ( sec-policy/selinux-fail2ban )"
 
 pkg_setup() {
 	python_set_active_version 2
