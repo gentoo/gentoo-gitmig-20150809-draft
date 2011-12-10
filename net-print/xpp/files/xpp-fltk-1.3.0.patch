@@ -1,0 +1,44 @@
+http://bugs.gentoo.org/351894
+
+--- mainwindow.fl
++++ mainwindow.fl
+@@ -70,7 +70,7 @@
+   fileList->value(print->filelist);
+ }}
+           private xywh {440 75 65 25} down_box DOWN_BOX shortcut 0x80062 align 16
+-          code0 {\#include <FL/fl_file_chooser.H>}
++          code0 {\#include <FL/Fl_File_Chooser.H>}
+           code1 {\#include "xpp.h"}
+         }
+         Fl_Scroll printerList {
+--- xpp.cxx
++++ xpp.cxx
+@@ -2500,7 +2500,7 @@
+     // Redraw the destination menu in the main window
+ 
+     printerPack->parent()->redraw();
+-    printerPack->draw();
++    ((Fl_Widget*)printerPack)->draw();
+   
+   }
+ 
+@@ -2674,7 +2674,7 @@
+   // Redraw the destination menu in the main window
+ 
+   printerPack->parent()->redraw();
+-  printerPack->draw();
++  ((Fl_Widget*)printerPack)->draw();
+   
+   return(dest_index);
+ }
+--- xppmain.cxx
++++ xppmain.cxx
+@@ -32,7 +32,7 @@
+  */
+ 
+ #include "mainwindow.h"
+-#include <Fl/Fl_Shared_Image.h>
++#include <FL/Fl_Shared_Image.H>
+ 
+ /*
+  * 'main()' - Do all what xpp should do

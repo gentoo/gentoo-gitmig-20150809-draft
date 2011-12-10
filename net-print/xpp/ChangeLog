@@ -1,6 +1,13 @@
 # ChangeLog for net-print/xpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/ChangeLog,v 1.23 2011/06/02 19:14:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/ChangeLog,v 1.24 2011/12/10 14:10:53 ssuominen Exp $
+
+*xpp-1.5-r1 (10 Dec 2011)
+
+  10 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +files/xpp-fltk-1.3.0.patch, +xpp-1.5-r1.ebuild:
+  Fix compability with fltk-1.3.0 wrt #351894 by Peter Ruskin and Yury
+  Fedorchenko
 
   02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> xpp-1.5.ebuild:
   Make build again, EAPI bump, no prestripped files (bug 252030)
