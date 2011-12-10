@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/libdisasm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libdisasm/ChangeLog,v 1.1 2011/12/10 10:59:25 hwoarang Exp $
+
+*libdisasm-0.23 (10 Dec 2011)
+
+  10 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +libdisasm-0.23.ebuild,
+  +metadata.xml:
+  Initial commit of libdisasm package
+
