@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.4 2011/04/12 05:55:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.5 2011/12/10 19:22:38 vapier Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -70,9 +70,10 @@ gst-plugins10_remove_unversioned_binaries() {
 	# remove the unversioned binaries gstreamer provide
 	# this is to prevent these binaries to be owned by several SLOTs
 
-	cd ${D}/usr/bin
-	for gst_bins in `ls *-${PV_MAJ_MIN}`
-	do
+	cd "${D}"/usr/bin
+	local gst_bins
+	for gst_bins in *-${PV_MAJ_MIN}; do
+		[[ -e ${gst_bins} ]] || continue
 		rm ${gst_bins/-${PV_MAJ_MIN}/}
 		einfo "Removed ${gst_bins/-${PV_MAJ_MIN}/}"
 	done
