@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/msp430-binutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-binutils/ChangeLog,v 1.1 2011/12/10 22:40:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-binutils/ChangeLog,v 1.2 2011/12/10 22:50:54 radhermit Exp $
+
+  10 Dec 2011; Tim Harder <radhermit@gentoo.org>
+  msp430-binutils-2.21.1_p20111205.ebuild:
+  Drop empty IUSE since it's defined by the toolchain-binutils eclass.
 
 *msp430-binutils-2.21.1_p20111205 (10 Dec 2011)
 
