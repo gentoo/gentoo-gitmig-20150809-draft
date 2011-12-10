@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.1.ebuild,v 1.10 2010/11/07 15:51:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.1.ebuild,v 1.11 2011/12/10 01:53:22 floppym Exp $
 
 EAPI=2
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="TOra - Toolkit For Oracle"
 HOMEPAGE="http://tora.sourceforge.net"
@@ -44,6 +44,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-2.1.2-qt47.patch"
+
 	sed -i \
 		-e "/COPYING/ d" \
 		CMakeLists.txt || die "Removal of COPYING file failed"
