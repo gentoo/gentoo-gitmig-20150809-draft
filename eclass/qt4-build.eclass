@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.102 2011/12/08 17:21:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.103 2011/12/10 17:28:16 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -490,14 +490,14 @@ standard_configure_options() {
 	# ARCH is set on Gentoo. Qt now falls back to generic on an unsupported
 	# $(tc-arch). Therefore we convert it to supported values.
 	case "$(tc-arch)" in
-		amd64|x64-*) myconf+=" -arch x86_64" ;;
-		ppc-macos) myconf+=" -arch ppc" ;;
-		ppc|ppc64|ppc-*) myconf+=" -arch powerpc" ;;
-		sparc|sparc-*) myconf+=" -arch sparc" ;;
-		x86-macos) myconf+=" -arch x86" ;;
-		x86|x86-*) myconf+=" -arch i386" ;;
-		alpha|arm|ia64|mips|s390|sparc) myconf+=" -arch $(tc-arch)" ;;
-		hppa|sh) myconf+=" -arch generic" ;;
+		amd64|x64-*)		  myconf+=" -arch x86_64" ;;
+		ppc-macos)		  myconf+=" -arch ppc" ;;
+		ppc|ppc64|ppc-*)	  myconf+=" -arch powerpc" ;;
+		sparc|sparc-*|sparc64-*)  myconf+=" -arch sparc" ;;
+		x86-macos)		  myconf+=" -arch x86" ;;
+		x86|x86-*)		  myconf+=" -arch i386" ;;
+		alpha|arm|ia64|mips|s390) myconf+=" -arch $(tc-arch)" ;;
+		hppa|sh)		  myconf+=" -arch generic" ;;
 		*) die "$(tc-arch) is unsupported by this eclass. Please file a bug." ;;
 	esac
 
