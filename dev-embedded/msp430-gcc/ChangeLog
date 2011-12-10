@@ -1,0 +1,11 @@
+# ChangeLog for dev-embedded/msp430-gcc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gcc/ChangeLog,v 1.1 2011/12/10 22:57:41 radhermit Exp $
+
+*msp430-gcc-4.6.1_p20111205 (10 Dec 2011)
+
+  10 Dec 2011; Tim Harder <radhermit@gentoo.org>
+  +msp430-gcc-4.6.1_p20111205.ebuild, +files/gcc-configure-texinfo.patch,
+  +metadata.xml:
+  Initial import. Ebuild by me.
+
