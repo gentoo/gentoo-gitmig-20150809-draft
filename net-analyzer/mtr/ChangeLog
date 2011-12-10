@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.112 2011/12/10 01:35:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.113 2011/12/10 05:56:36 radhermit Exp $
+
+  10 Dec 2011; Tim Harder <radhermit@gentoo.org> mtr-0.81.ebuild,
+  mtr-0.82.ebuild:
+  Remove glib and gdk-pixbuf deps as they aren't explicitly required and gtk
+  pulls them in.
 
   10 Dec 2011; Tim Harder <radhermit@gentoo.org> mtr-0.81.ebuild,
   mtr-0.82.ebuild:
