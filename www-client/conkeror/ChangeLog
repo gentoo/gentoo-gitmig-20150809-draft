@@ -1,6 +1,12 @@
 # ChangeLog for www-client/conkeror
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.20 2011/04/26 09:40:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.21 2011/12/10 11:01:06 ulm Exp $
+
+*conkeror-0.9.4 (10 Dec 2011)
+
+  10 Dec 2011; Ulrich Mueller <ulm@gentoo.org> -conkeror-0.9.2.ebuild,
+  +conkeror-0.9.4.ebuild:
+  Version bump, bug 394221. Remove old.
 
   26 Apr 2011; Thomas Kahle <tomka@gentoo.org> conkeror-0.9.3-r1.ebuild:
   x86 stable per bug 361225
