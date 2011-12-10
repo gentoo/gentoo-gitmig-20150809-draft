@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.95 2011/10/27 05:50:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.96 2011/12/10 19:41:51 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -10,8 +10,10 @@
 # @DESCRIPTION:
 # This eclass is for all functions pertaining to handling multilib configurations.
 
-___ECLASS_RECUR_MULTILIB="yes"
-[[ -z ${___ECLASS_RECUR_TOOLCHAIN_FUNCS} ]] && inherit toolchain-funcs
+if [[ ${___ECLASS_ONCE_MULTILIB} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_MULTILIB="recur -_+^+_- spank"
+
+inherit toolchain-funcs
 
 # Defaults:
 export MULTILIB_ABIS=${MULTILIB_ABIS:-"default"}
@@ -406,3 +408,5 @@ multilib_toolchain_setup() {
 		export CBUILD=$(get_abi_CHOST $1)
 	fi
 }
+
+fi
