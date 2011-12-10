@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13318 2011/12/10 14:44:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13319 2011/12/10 19:57:24 maksbotan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Maxim Koltsov <maksbotan@gentoo.org> (10 Dec 2011)
+# Mask until big testing by proxy maintainer is finished
+dev-util/febootstrap
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (10 Dec 2011)
 # Not released yet
