@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ffmpegsource
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.3 2011/12/05 09:47:00 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.4 2011/12/10 15:17:59 maksbotan Exp $
+
+  10 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  ffmpegsource-2.16.2.1_pre587.ebuild:
+  Change virtual/ffmpeg depend to >=media-video/libav-0.8_pre20111116 as
+  ffmpegsource doesn't compile with older libav or any ffmpeg. Bug 393313
 
 *ffmpegsource-2.16.2.1_pre587 (05 Dec 2011)
 
