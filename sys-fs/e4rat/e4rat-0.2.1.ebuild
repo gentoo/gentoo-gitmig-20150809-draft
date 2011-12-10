@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/e4rat-0.2.1.ebuild,v 1.1 2011/12/10 11:48:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/e4rat-0.2.1.ebuild,v 1.2 2011/12/10 16:57:59 hwoarang Exp $
 
 EAPI=4
 
@@ -23,9 +23,3 @@ DEPEND="dev-lang/perl
 RDEPEND="${DEPEND}"
 
 CMAKE_BUILD_TYPE=release
-
-src_prepare() {
-	# do not hardcore boost version
-	sed -i -e "/Boost/s:1.41:1.47:" CMakeLists.txt || die
-	cmake-utils_src_prepare
-}
