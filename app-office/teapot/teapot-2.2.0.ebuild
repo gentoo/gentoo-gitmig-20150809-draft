@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/teapot-2.2.0.ebuild,v 1.2 2011/03/21 18:34:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/teapot-2.2.0.ebuild,v 1.3 2011/12/10 14:18:53 ssuominen Exp $
 
 EAPI=4
 inherit cmake-utils flag-o-matic
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc fltk"
 
 RDEPEND="sys-libs/ncurses
-	fltk? ( >=x11-libs/fltk-1.3.0_rc:1 )"
+	fltk? ( >=x11-libs/fltk-1.3.0:1 )"
 DEPEND="${RDEPEND}
 	doc? (
 		app-office/lyx
@@ -41,8 +41,8 @@ src_configure() {
 			-DFLTK_DIR=/usr/share/cmake/Modules
 			-DFLTK_FLUID_EXECUTABLE=/usr/bin/fluid
 		)
-		append-cxxflags -I/usr/include/fltk-1.1
-		append-ldflags -L/usr/$(get_libdir)/fltk-1.1
+		append-cxxflags -I/usr/include/fltk-1
+		append-ldflags -L/usr/$(get_libdir)/fltk-1
 	fi
 
 	cmake-utils_src_configure
