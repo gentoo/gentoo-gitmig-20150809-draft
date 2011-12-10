@@ -1,12 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.21 2011/11/03 00:59:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.22 2011/12/10 20:03:17 vapier Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
 # This eclass is created to avoid using non-portable GNUisms inside ebuilds
 #
 # NB:  If you add anything, please comment it!
+
+if [[ ${___ECLASS_ONCE_PORTABILITY} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_PORTABILITY="recur -_+^+_- spank"
 
 # treecopy orig1 orig2 orig3 .... dest
 #
@@ -130,3 +133,5 @@ get_mounts() {
 
 _dead_portability_user_funcs() { die "if you really need this, please file a bug for base-system@gentoo.org"; }
 is-login-disabled() { _dead_portability_user_funcs; }
+
+fi
