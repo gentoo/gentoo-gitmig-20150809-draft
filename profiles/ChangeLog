@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6001 2011/12/10 14:26:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6002 2011/12/10 14:44:10 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask not-yet-released calligra
 
   10 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite x11-wm/flwm
