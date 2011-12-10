@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.325 2011/10/24 11:25:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.326 2011/12/10 16:56:48 jer Exp $
+
+  10 Dec 2011; Jeroen Roovers <jer@gentoo.org> lftp-4.3.3.ebuild:
+  Add missing sys-libs/expat dependency by Ago (bug #393513 comment #1).
 
 *lftp-4.3.3 (24 Oct 2011)
 

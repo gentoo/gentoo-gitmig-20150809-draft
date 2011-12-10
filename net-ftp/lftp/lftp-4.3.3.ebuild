@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.3.ebuild,v 1.1 2011/10/24 11:25:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.3.ebuild,v 1.2 2011/12/10 16:56:48 jer Exp $
 
 EAPI="3"
 
@@ -16,6 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~sp
 IUSE="ssl gnutls socks5 nls"
 
 RDEPEND="
+	dev-libs/expat
 	>=sys-libs/ncurses-5.1
 	socks5? (
 		>=net-proxy/dante-1.1.12
