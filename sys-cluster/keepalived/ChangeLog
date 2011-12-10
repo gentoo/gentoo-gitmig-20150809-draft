@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.82 2011/10/27 16:18:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.83 2011/12/10 23:51:00 robbat2 Exp $
+
+*keepalived-1.2.2-r2 (10 Dec 2011)
+
+  10 Dec 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +keepalived-1.2.2-r2.ebuild, +files/keepalived-1.2.2-bind-afunspec.patch:
+  Bug #394257: Add patch needed for correct functioning on 3.x kernels where
+  binding to AF_UNSPEC sockets fails.
 
   27 Oct 2011; Jeroen Roovers <jer@gentoo.org> keepalived-1.2.2.ebuild,
   keepalived-1.2.2-r1.ebuild:
