@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.8.1.ebuild,v 1.1 2010/10/06 19:57:35 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.8.1.ebuild,v 1.2 2011/12/10 17:46:54 pesa Exp $
 
 EAPI=2
+
 inherit multilib cmake-utils
 
 DESCRIPTION="QScintilla-based tabbed text editor with syntax highlighting"
@@ -20,13 +21,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${P/_/-}
 
+DOCS=( ChangeLog README )
+
 src_prepare() {
 	sed -i -e \
 		"s:\${CMAKE_INSTALL_PREFIX}/lib:\${CMAKE_INSTALL_PREFIX}/$(get_libdir):" \
 		CMakeLists.txt || die "sed failed"
-}
-
-src_install() {
-	cmake-utils_src_install
-	dodoc ChangeLog README || die "dodoc failed"
 }
