@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.37 2011/12/09 20:29:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.38 2011/12/10 00:50:04 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS=""
 SLOT="0"
-IUSE="build doc epydoc +ipc python2 python3 selinux"
+IUSE="build doc epydoc +ipc python2 python3 selinux xattr"
 
 # Import of the io module in python-2.6 raises ImportError for the
 # thread module if threading is disabled.
@@ -27,6 +27,10 @@ DEPEND="${python_dep}
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 !<=dev-python/pysqlite-2.4.1 )"
 # Require sandbox-2.2 for bug #288863.
+# For xattr, we can spawn getfattr and setfattr from sys-apps/attr, but that's
+# quite slow, so it's not considered in the dependencies as an alternative to
+# to python-3.3 / pyxattr. Also, xattr support is only tested with Linux, so
+# for now, don't pull in xattr deps for other kernels.
 RDEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17
@@ -35,6 +39,7 @@ RDEPEND="${python_dep}
 	elibc_glibc? ( >=sys-apps/sandbox-2.2 )
 	elibc_uclibc? ( >=sys-apps/sandbox-2.2 )
 	>=app-misc/pax-utils-0.1.17
+	xattr? ( kernel_linux? ( || ( >=dev-lang/python-3.3_pre20110902 dev-python/pyxattr ) ) )
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
 	!<app-shells/bash-3.2_p17
 	!<app-admin/logrotate-3.8.0"
@@ -116,6 +121,12 @@ src_prepare() {
 		sed -e "s:_enable_ipc_daemon = True:_enable_ipc_daemon = False:" \
 			-i pym/_emerge/AbstractEbuildProcess.py || \
 			die "failed to patch AbstractEbuildProcess.py"
+	fi
+
+	if use xattr && use kernel_linux ; then
+		einfo "Adding FEATURES=xattr to make.globals ..."
+		echo -e '\nFEATURES="${FEATURES} xattr"' >> cnf/make.globals \
+			|| die "failed to append to make.globals"
 	fi
 
 	if use python3; then
