@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.509 2011/12/08 22:38:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.510 2011/12/10 08:55:37 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1178,14 +1178,14 @@ gcc_do_configure() {
 	esac
 	tc_version_is_at_least 3.4 || confgcc+=" --disable-libunwind-exceptions"
 
-	# create a sparc*linux*-{gcc,g++} that can handle -m32 and -m64 (biarch)
-	if [[ ${CTARGET} == sparc*linux* ]] \
-		&& is_multilib \
-		&& ! is_crosscompile \
-		&& tc_version_is_at_least 4.3
-	then
-		confgcc+=" --enable-targets=all"
-	fi
+	# if the target can do biarch (-m32/-m64), enable it.  overhead should
+	# be small, and should simplify building of 64bit kernels in a 32bit
+	# userland by not needing sys-devel/kgcc64.  #349405
+	case $(tc-arch) in
+	ppc|ppc64) tc_version_is_at_least 3.4 && confgcc+=" --enable-targets=all" ;;
+	sparc)     tc_version_is_at_least 4.4 && confgcc+=" --enable-targets=all" ;;
+	amd64|x86) tc_version_is_at_least 4.3 && confgcc+=" --enable-targets=all" ;;
+	esac
 
 	tc_version_is_at_least 4.3 && set -- "$@" \
 		--with-bugurl=http://bugs.gentoo.org/ \
