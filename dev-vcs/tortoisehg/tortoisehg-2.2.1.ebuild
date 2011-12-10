@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.1.4.ebuild,v 1.1 2011/10/11 15:23:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.2.1.ebuild,v 1.1 2011/12/10 04:41:55 floppym Exp $
 
-EAPI=3
+EAPI=4
 
 SUPPORT_PYTHON_ABIS=1
 PYTHON_DEPEND="2:2.5"
@@ -10,13 +10,21 @@ RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 inherit distutils eutils multilib
 
+if [[ ${PV} != *9999* ]]; then
+	KEYWORDS="~amd64 ~x86"
+	SRC_URI="https://bitbucket.org/${PN}/targz/downloads/${P}.tar.gz"
+else
+	inherit mercurial
+	EHG_REPO_URI="https://bitbucket.org/tortoisehg/thg"
+	KEYWORDS=""
+	SRC_URI=""
+fi
+
 DESCRIPTION="Set of graphical tools for Mercurial"
 HOMEPAGE="http://tortoisehg.bitbucket.org"
-SRC_URI="http://bitbucket.org/${PN}/targz/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="doc nautilus"
 
 RDEPEND="dev-python/iniparse
@@ -31,6 +39,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# make the install respect multilib.
 	sed -i -e "s:lib/nautilus:$(get_libdir)/nautilus:" setup.py || die
+
 	distutils_src_prepare
 }
 
@@ -38,21 +47,21 @@ src_compile() {
 	distutils_src_compile
 
 	if use doc ; then
-		emake -C doc html || die
+		emake -C doc html
 	fi
 }
 
 src_install() {
 	distutils_src_install
-	dodoc doc/ReadMe*.txt doc/TODO || die
+	dodoc doc/ReadMe*.txt doc/TODO
 
 	if use doc ; then
 		dohtml -r doc/build/html || die
 	fi
 
 	insinto /usr/share/icons/hicolor/scalable/apps
-	newins icons/scalable/apps/thg-logo.svg tortoisehg_logo.svg || die
-	domenu contrib/${PN}.desktop || die
+	newins icons/scalable/apps/thg-logo.svg tortoisehg_logo.svg
+	domenu contrib/${PN}.desktop
 
 	if ! use nautilus; then
 		rm -r "${ED}usr/$(get_libdir)/nautilus" || die
