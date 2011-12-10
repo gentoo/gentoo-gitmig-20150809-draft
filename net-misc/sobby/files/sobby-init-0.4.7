@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/files/sobby-init-0.4.7,v 1.1 2010/06/18 07:50:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/files/sobby-init-0.4.7,v 1.2 2011/12/10 09:30:34 xarthisius Exp $
 
 depend() {
 	use avahi
@@ -10,7 +10,7 @@ depend() {
 start() {
 	ebegin "Starting obby dedicated server"
 	start-stop-daemon -b --quiet --start  --make-pidfile \
-		--pidfile /var/run/sobby.pid --chuid ${SOBBY_USER}:${SOBBY_GROUP} \
+		--pidfile /var/run/sobby.pid -u ${SOBBY_USER} -g ${SOBBY_GROUP} \
 		--exec /usr/bin/sobby -- ${SOBBY_OPTS}
 	eend $? "Failed to start sobby"
 }
