@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/e4rat
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/ChangeLog,v 1.1 2011/12/10 11:48:12 hwoarang Exp $
+
+*e4rat-0.2.1 (10 Dec 2011)
+
+  10 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +e4rat-0.2.1.ebuild,
+  +metadata.xml:
+  Initial commit. Bug #363207. Thanks to Michael Orlitzky
+  <michael@orlitzky.com>
+
