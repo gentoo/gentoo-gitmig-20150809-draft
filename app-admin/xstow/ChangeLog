@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/xstow
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.10 2008/04/28 21:22:20 drac Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.11 2011/12/10 15:14:22 maksbotan Exp $
+
+*xstow-1.0.0 (10 Dec 2011)
+
+  10 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +files/99xstow,
+  +xstow-1.0.0.ebuild, metadata.xml:
+  Bumped to 1.0.0, added new maintainer. Bug 273346 is fixed. Thanks to Erik
+  Falor.
 
   28 Apr 2008; Samuli Suominen <drac@gentoo.org>
   +files/xstow-0.5.1-gcc43.patch, xstow-0.5.1.ebuild:
