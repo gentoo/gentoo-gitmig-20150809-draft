@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/pax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.15 2010/11/24 02:19:37 mattst88 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.16 2011/12/10 08:53:54 vapier Exp $
+
+*pax-3.4.12.16 (10 Dec 2011)
+
+  10 Dec 2011; Mike Frysinger <vapier@gentoo.org> +files/pax-3.4-x32.patch,
+  +pax-3.4.12.16.ebuild:
+  Version bump, and add x32 patch.
 
   24 Nov 2010; <mattst88@gentoo.org> pax-3.3.4.ebuild:
   Remove redundant dependency on rpm2targz, bug #345225.
