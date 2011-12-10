@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/giggle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.10 2011/12/04 20:59:34 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.11 2011/12/10 15:37:35 ikelos Exp $
+
+  10 Dec 2011; Mike Auty <ikelos@gentoo.org> giggle-0.6.1.ebuild:
+  Removed the eautoreconf since it would have needed yelp-tools, which isn't
+  yet keyworded for ppc. Thanks to Rafał Mużyło for the speedy diagnosis.
+  Fixes bug 393271.
 
   04 Dec 2011; Mike Auty <ikelos@gentoo.org> giggle-0.6.1.ebuild:
   Fix up missing dependencies, closes bug 393171.
