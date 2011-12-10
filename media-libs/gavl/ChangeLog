@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gavl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.15 2011/06/26 14:55:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.16 2011/12/10 23:21:55 ssuominen Exp $
+
+  10 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> gavl-1.2.0.ebuild:
+  Use autotools-utils.eclass in order to drop libtool archive(s).
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> gavl-1.1.0.ebuild:
   Marking gavl-1.1.0 ppc for bug 365273

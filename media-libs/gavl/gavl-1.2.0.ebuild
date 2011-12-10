@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-1.2.0.ebuild,v 1.1 2011/05/04 17:18:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-1.2.0.ebuild,v 1.2 2011/12/10 23:21:55 ssuominen Exp $
 
-EAPI=2
-inherit autotools
+EAPI=4
+inherit autotools-utils
 
 DESCRIPTION="library for handling uncompressed audio and video data"
 HOMEPAGE="http://gmerlin.sourceforge.net"
@@ -17,25 +17,26 @@ IUSE="doc"
 RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
+DOCS=( AUTHORS README TODO )
+
 src_prepare() {
-	sed -e 's:-mfpmath=387::g' \
+	sed -i \
+		-e 's:-mfpmath=387::g' \
 		-e 's:-O3 -funroll-all-loops -fomit-frame-pointer -ffast-math::g' \
 		-e '/LDFLAGS=/d' \
-		-i configure.ac || die "sed failed"
+		configure.ac || die
+
 	AT_M4DIR="m4" eautoreconf
 }
 
 src_configure() {
 	# --disable-libpng because it's only used for tests
-	econf \
-		--docdir=/usr/share/doc/${PF}/html \
-		--disable-dependency-tracking \
-		--disable-libpng \
-		$(use_with doc doxygen) \
+	local myeconfargs=(
+		--docdir=/usr/share/doc/${PF}/html
+		--disable-libpng
+		$(use_with doc doxygen)
 		--without-cpuflags
-}
+		)
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS README TODO
+	autotools-utils_src_configure
 }
