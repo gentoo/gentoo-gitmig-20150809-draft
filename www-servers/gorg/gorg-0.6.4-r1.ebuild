@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.4-r1.ebuild,v 1.1 2011/12/04 10:12:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.4-r1.ebuild,v 1.2 2011/12/10 10:10:12 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 inherit ruby-ng eutils
 
