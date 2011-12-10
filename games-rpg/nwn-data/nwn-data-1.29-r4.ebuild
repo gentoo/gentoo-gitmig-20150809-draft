@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r4.ebuild,v 1.6 2010/12/16 19:17:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r4.ebuild,v 1.7 2011/12/10 21:51:16 calchan Exp $
 
 inherit eutils games
 
@@ -126,7 +126,7 @@ get_nwn_set() {
 	# to figure out what we have to work from.
 	else
 		local mline=
-		for mline in $(mount | egrep -e '(iso|cdrom|udf)' | awk '{print $3}')
+		for mline in $(cat /etc/mtab | egrep -e '(iso|cdrom|udf)' | awk '{print $2}')
 		do
 			if [[ -f "${mline}"/data5.cab ]]
 			then

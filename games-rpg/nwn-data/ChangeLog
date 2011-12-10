@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn-data
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.42 2010/12/16 19:17:10 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.43 2011/12/10 21:51:16 calchan Exp $
+
+  10 Dec 2011; Denis Dupeyron <calchan@gentoo.org> nwn-data-1.29-r4.ebuild:
+  Fixed sandbox access-violation, bug #355581. Thanks to Christian.
 
   16 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org>
   nwn-data-1.29-r4.ebuild:
