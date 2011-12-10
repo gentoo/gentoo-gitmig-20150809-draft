@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.16.0.ebuild,v 1.2 2011/11/14 21:18:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.16.1.ebuild,v 1.1 2011/12/10 10:21:51 hwoarang Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ RDEPEND="
 	msdoc? ( app-text/antiword )
 	msxls? ( app-text/catdoc )
 	msppt? ( app-text/catdoc )
-	wordperfect? ( app-text/libwpd )
+	wordperfect? ( app-text/libwpd:0.9 )
 	rtf? ( app-text/unrtf )
 	tex? ( dev-tex/detex )
 	dvi? ( virtual/tex-base )
