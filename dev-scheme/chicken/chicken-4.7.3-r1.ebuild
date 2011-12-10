@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-4.7.3.ebuild,v 1.1 2011/12/07 19:31:03 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-4.7.3-r1.ebuild,v 1.1 2011/12/10 13:41:55 maksbotan Exp $
 
 EAPI="3"
 
@@ -26,13 +26,15 @@ src_prepare() {
 	fi
 
 	#Because chicken's Upstream is in the habit of using variables that
-	#portage also uses :( eg. $ARCH in this case
+	#portage also uses :( eg. $ARCH and $A
 	for f in defaults.make Makefile.bsd Makefile.cross-linux-mingw Makefile.cygwin \
 		Makefile.linux Makefile.macosx Makefile.mingw-msys Makefile.solaris \
 		rules.make
-		do
-			sed "s,ARCH,zARCH," -i ${f} || die "sed failed"
-		done
+	do
+		sed "s,ARCH,zARCH," -i ${f} || die "sed failed"
+		# bug #393561: installs /usr/lib/libchickenchicken-4.7.3.tar.gz (portage pollutes ${A} variable)
+		sed 's,A\(\s?=\|)\),chicken&,p' -i ${f} || die "sed failed"
+	done
 
 	sed "s,\$(PREFIX)/lib,\$(PREFIX)/$(get_libdir)," -i defaults.make || die "sed failed"
 	sed "s,\$(DATADIR)/doc,\$(SHAREDIR)/doc/${P}," -i defaults.make || die "sed failed"
@@ -42,7 +44,7 @@ src_compile() {
 	OPTIONS="PLATFORM=linux PREFIX=/usr"
 	if use "parallel-build"
 	then
-		ewarn "You enabled parralel-build use flag. This future is still"
+		ewarn "You enabled parralel-build use flag. This feature is still"
 		ewarn "in testing, try without it before filing bugs"
 		emake ${OPTIONS} C_COMPILER_OPTIMIZATION_OPTIONS="${CFLAGS}" \
 			HOSTSYSTEM="${CBUILD}" || die "emake failed"

@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.43 2011/12/07 19:31:03 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.44 2011/12/10 13:41:55 maksbotan Exp $
+
+*chicken-4.7.3-r1 (10 Dec 2011)
+
+  10 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> -chicken-4.5.0.ebuild,
+  -chicken-4.7.3.ebuild, +chicken-4.7.3-r1.ebuild:
+  Fix bug #393561 with variable. Delete some old versions. Thanks to Erik Falor
+  <ewfalor@gmail.com>
 
 *chicken-4.7.3 (07 Dec 2011)
 
