@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.20 2011/11/22 18:42:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.21 2011/12/10 08:36:31 vapier Exp $
 
 # @ECLASS: versionator.eclass
 # @MAINTAINER:
@@ -25,6 +25,9 @@
 # There's also:
 #     version_is_at_least             want      have
 #  which may be buggy, so use with caution.
+
+if [[ ${___ECLASS_ONCE_VERSIONATOR} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_VERSIONATOR="recur -_+^+_- spank"
 
 inherit eutils
 
@@ -692,3 +695,5 @@ __versionator__test_version_compare() {
 
 	eshopts_pop
 }
+
+fi
