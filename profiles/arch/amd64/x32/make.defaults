@@ -1,0 +1,9 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/x32/make.defaults,v 1.1 2011/12/10 07:35:21 vapier Exp $
+
+DEFAULT_ABI="x32"
+ABI="x32"
+MULTILIB_ABIS="amd64 x86 x32"
+
+FEATURES="collision-protect multilib-strict"
