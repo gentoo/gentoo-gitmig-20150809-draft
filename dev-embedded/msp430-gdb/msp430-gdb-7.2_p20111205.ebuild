@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gdb/msp430-gdb-7.2_p20111205.ebuild,v 1.1 2011/12/10 23:00:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gdb/msp430-gdb-7.2_p20111205.ebuild,v 1.2 2011/12/10 23:03:04 radhermit Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ fi
 is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
 
 MY_PV="${PV%_p*}"
-DESCRIPTION="GNU debugger for MSP430"
+DESCRIPTION="GNU debugger for MSP430 microcontrollers"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://ftp.gnu.org/gnu/gdb/gdb-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/gdb/releases/gdb-${MY_PV}.tar.bz2
