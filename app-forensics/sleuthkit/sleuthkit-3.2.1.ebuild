@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.2.1.ebuild,v 1.6 2011/10/11 17:10:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.2.1.ebuild,v 1.7 2011/12/10 22:15:38 radhermit Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SLOT=0
 KEYWORDS="amd64 hppa ~ppc x86"
 IUSE="aff ewf"
 
-DEPEND="ewf? ( app-forensics/libewf )
+DEPEND="ewf? ( app-forensics/libewf[-ewf2] )
 	aff? ( app-forensics/afflib )"
 RDEPEND="${DEPEND}
 	dev-perl/DateManip"
