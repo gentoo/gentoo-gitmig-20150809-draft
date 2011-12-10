@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-1.0.ebuild,v 1.1 2011/09/03 04:21:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-1.0.ebuild,v 1.2 2011/12/10 21:33:30 radhermit Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit elisp-common python
 
@@ -30,13 +30,12 @@ pkg_setup() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		--enable-shared \
 		$(use_enable static-libs static)
 }
 
 src_compile() {
-	emake || die "emake failed"
+	default
 
 	if use emacs ; then
 		elisp-compile contrib/tpl-mode.el || die "elisp-compile failed"
@@ -44,7 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	# Installs just every piece
 	rm -rf "${ED}/usr/share/doc"

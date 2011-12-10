@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/ctemplate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.14 2011/11/26 09:51:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.15 2011/12/10 21:33:30 radhermit Exp $
+
+  10 Dec 2011; Tim Harder <radhermit@gentoo.org> ctemplate-1.0.ebuild:
+  Update to EAPI 4.
 
   26 Nov 2011; Tim Harder <radhermit@gentoo.org> -ctemplate-0.99.ebuild,
   -files/ctemplate-0.99-gcc-4.6.patch:
