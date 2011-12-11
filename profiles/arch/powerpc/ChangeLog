@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.149 2011/12/07 21:27:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.150 2011/12/11 18:27:35 alexxy Exp $
+
+  11 Dec 2011; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Also mask KDE SC 4.7.4 on ppc
 
   07 Dec 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Drop mask on sys-apps/hwloc[numa] wrt #381313
