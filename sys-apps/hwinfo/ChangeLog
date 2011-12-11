@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.23 2011/07/29 04:29:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.24 2011/12/11 09:00:23 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> hwinfo-18.5.ebuild:
+  x86 stable wrt bug #392833
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> hwinfo-18.5.ebuild:
   Add ~x86-linux keyword.
