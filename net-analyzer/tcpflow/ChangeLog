@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpflow
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.19 2011/12/05 10:28:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.20 2011/12/11 09:05:23 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tcpflow-1.0.2.ebuild:
+  x86 stable wrt bug #393239
 
 *tcpflow-1.0.6 (05 Dec 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.0.2.ebuild,v 1.1 2011/10/01 08:27:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.0.2.ebuild,v 1.2 2011/12/11 09:05:23 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://afflib.org/"
 SRC_URI="http://afflib.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 SLOT="0"
 IUSE="test"
 
