@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.72 2011/12/08 20:46:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.73 2011/12/11 09:17:32 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> check-0.9.8-r1.ebuild:
+  x86 stable wrt bug #392773
 
   08 Dec 2011; Markus Meier <maekke@gentoo.org> check-0.9.8-r1.ebuild:
   arm stable, bug #392773
