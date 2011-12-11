@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exif
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.45 2011/11/16 19:32:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.46 2011/12/11 21:56:42 maekke Exp $
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org> exif-0.6.20.ebuild:
+  x86 stable, bug #390249
 
   16 Nov 2011; Markos Chandras <hwoarang@gentoo.org> exif-0.6.20.ebuild:
   Stable on amd64 wrt bug #390249
