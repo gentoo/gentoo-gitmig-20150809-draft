@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6003 2011/12/10 19:57:24 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6004 2011/12/11 11:14:23 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite media-sound/gamix.
 
   10 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
   Mask dev-util/febootstrap before testing ends
