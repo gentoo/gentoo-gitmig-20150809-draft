@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmbscan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.10 2009/11/21 17:35:52 wschlich Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.11 2011/12/11 09:30:21 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> nmbscan-1.2.5.ebuild:
+  x86 stable wrt bug #392831
 
 *nmbscan-1.2.5 (21 Nov 2009)
 
