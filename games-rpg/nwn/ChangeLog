@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.76 2010/12/16 19:17:52 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.77 2011/12/11 01:16:01 calchan Exp $
+
+  11 Dec 2011; Denis Dupeyron <calchan@gentoo.org> nwn-1.68-r5.ebuild,
+  nwn-1.69-r1.ebuild:
+  Fix libsdl dependency, thanks to John Moe (bug #373527).
 
   16 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org> nwn-1.68-r5.ebuild:
   GAMES_LICENSE_CHECK is deprecated. The license checking is handled by the
