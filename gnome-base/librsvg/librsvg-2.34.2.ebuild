@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.5 2011/11/28 08:07:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.6 2011/12/11 11:48:08 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="no"
+PYTHON_DEPEND="2"
 
-inherit gnome2 multilib eutils autotools
+inherit gnome2 multilib eutils autotools python
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="http://librsvg.sourceforge.net/"
@@ -49,6 +50,9 @@ pkg_setup() {
 	! use gtk && use gtk3 && G2CONF+=" --with-gtk=3.0 --enable-gtk-theme"
 
 	DOCS="AUTHORS ChangeLog README NEWS TODO"
+
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -62,6 +66,8 @@ src_prepare() {
 	mv "${WORKDIR}/introspection.m4" "${S}"/ || die
 
 	AT_M4DIR="." eautoreconf
+
+	python_convert_shebangs -r 2 .
 
 	gnome2_src_prepare
 }
