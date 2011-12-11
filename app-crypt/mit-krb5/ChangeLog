@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.305 2011/12/11 14:40:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.306 2011/12/11 16:38:05 ago Exp $
+
+  11 Dec 2011; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.9.2-r1.ebuild:
+  Stable for AMD64, wrt security bug #393429
 
   11 Dec 2011; Raúl Porcel <armin76@gentoo.org> mit-krb5-1.9.2-r1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #393429
