@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/utidylib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.12 2011/06/08 16:22:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.13 2011/12/11 22:03:18 maekke Exp $
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org> utidylib-0.2-r1.ebuild:
+  x86 stable, bug #386673
 
   08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> utidylib-0.2-r1.ebuild:
   Marked ~ppc wrt #366541
