@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.127 2011/12/07 23:07:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.128 2011/12/11 18:52:41 alexxy Exp $
+
+*konq-plugins-4.7.4 (11 Dec 2011)
+
+  11 Dec 2011; Alexey Shvetsov <alexxy@gentoo.org> +konq-plugins-4.7.4.ebuild:
+  Version bump KDE SC 4.7.4
 
   07 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -konq-plugins-4.7.2.ebuild:

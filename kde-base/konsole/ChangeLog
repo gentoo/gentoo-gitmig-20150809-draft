@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.211 2011/12/07 23:07:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.212 2011/12/11 18:52:27 alexxy Exp $
+
+*konsole-4.7.4 (11 Dec 2011)
+
+  11 Dec 2011; Alexey Shvetsov <alexxy@gentoo.org> +konsole-4.7.4.ebuild:
+  Version bump KDE SC 4.7.4
 
   07 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> -konsole-4.7.2.ebuild:
   Drop KDE 4.7.2
