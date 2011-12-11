@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gdb/msp430-gdb-7.2_p20111205.ebuild,v 1.2 2011/12/10 23:03:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gdb/msp430-gdb-7.2_p20111205.ebuild,v 1.3 2011/12/11 08:42:32 radhermit Exp $
 
 EAPI="4"
 
@@ -22,9 +22,11 @@ SRC_URI="http://ftp.gnu.org/gnu/gdb/gdb-${MY_PV}.tar.bz2
 	http://dev.gentoo.org/~radhermit/distfiles/${P}.patch.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-SLOT="${CTARGET}"
+is_cross \
+	&& SLOT="${CTARGET}" \
+	|| SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="expat nls python test"
+IUSE="expat multitarget nls python test"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2
 	sys-libs/readline
@@ -50,14 +52,15 @@ src_prepare() {
 src_configure() {
 	strip-unsupported-flags
 	econf \
+		--with-pkgversion="Gentoo MSP430 ${PV}" \
 		--with-bugurl='http://bugs.gentoo.org/' \
 		--disable-werror \
 		--enable-64-bit-bfd \
 		--with-system-readline \
-		--target=msp430 \
-		--with-sysroot="${EPREFIX}"/usr/${CTARGET} \
+		$(is_cross && echo --with-sysroot="${EPREFIX}"/usr/${CTARGET}) \
 		$(use_with expat) \
 		$(use_enable nls) \
+		$(use multitarget && echo --enable-targets=all) \
 		$(use_with python python "${EPREFIX}/usr/bin/python2")
 }
 
