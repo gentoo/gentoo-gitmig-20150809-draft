@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.13 2011/12/06 16:04:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.14 2011/12/11 12:34:45 scarabeus Exp $
 
 EAPI=4
 
@@ -102,6 +102,7 @@ COMMON_DEPEND="
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
 	>=media-libs/libpng-1.4
+	media-libs/libcdr
 	media-libs/libvisio
 	net-print/cups
 	sci-mathematics/lpsolve
@@ -375,6 +376,7 @@ src_configure() {
 		--with-system-libs \
 		--with-system-jars \
 		--with-system-dicts \
+		--with-system-libcdr \
 		--enable-cairo-canvas \
 		--enable-largefile \
 		--enable-python=system \
