@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/libguestfs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.1 2011/12/11 19:34:22 maksbotan Exp $
+
+*libguestfs-1.8.15 (11 Dec 2011)
+
+  11 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/1.8/1.8.15/configure_ac_automagic.patch, +libguestfs-1.8.15.ebuild,
+  +files/1.8/1.8.15/disable_php_in_makefile.patch, +metadata.xml:
+  Add app-emulation/libguestfs, bug 302614. Thanks to slepnoga
+
