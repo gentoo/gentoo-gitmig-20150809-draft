@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.113 2011/12/10 05:56:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.114 2011/12/11 09:27:31 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mtr-0.81.ebuild:
+  x86 stable wrt bug #393241
 
   10 Dec 2011; Tim Harder <radhermit@gentoo.org> mtr-0.81.ebuild,
   mtr-0.82.ebuild:
