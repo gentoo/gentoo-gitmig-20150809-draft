@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitolite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.12 2011/12/09 21:31:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.13 2011/12/11 09:23:24 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gitolite-2.1.0.ebuild:
+  x86 stable wrt bug #393151
 
   09 Dec 2011; Markos Chandras <hwoarang@gentoo.org> gitolite-2.1.0.ebuild:
   Stable on amd64 wrt bug #393151
