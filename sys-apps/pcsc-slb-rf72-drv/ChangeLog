@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcsc-slb-rf72-drv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.12 2010/12/10 19:22:51 c1pher Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.13 2011/12/11 14:30:27 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pcsc-slb-rf72-drv-1.1.0-r1.ebuild:
+  Drop x86 stable keywords, revert to ~x86, bug #392803.
 
 *pcsc-slb-rf72-drv-1.1.0-r2 (10 Dec 2010)
 
