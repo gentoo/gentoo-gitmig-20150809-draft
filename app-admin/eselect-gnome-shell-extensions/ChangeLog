@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-gnome-shell-extensions
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnome-shell-extensions/ChangeLog,v 1.1 2011/11/06 01:42:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnome-shell-extensions/ChangeLog,v 1.2 2011/12/11 23:44:12 tetromino Exp $
+
+*eselect-gnome-shell-extensions-20111211 (11 Dec 2011)
+
+  11 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +eselect-gnome-shell-extensions-20111211.ebuild:
+  Bump. Handle the *.gnome.org → *.gcampax.github.com renaming in
+  gnome-shell-extensions-3.2.2.
 
 *eselect-gnome-shell-extensions-20110911 (06 Nov 2011)
 
