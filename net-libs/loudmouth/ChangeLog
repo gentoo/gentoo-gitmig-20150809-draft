@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.101 2011/12/11 09:02:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.102 2011/12/11 17:32:01 armin76 Exp $
+
+  11 Dec 2011; Raúl Porcel <armin76@gentoo.org> loudmouth-1.4.3-r2.ebuild:
+  alpha/ia64/sparc stable wrt #393169
 
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   loudmouth-1.4.3-r2.ebuild:
