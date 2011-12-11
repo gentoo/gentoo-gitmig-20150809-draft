@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mythes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/ChangeLog,v 1.6 2011/11/13 11:28:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/ChangeLog,v 1.7 2011/12/11 21:53:50 maekke Exp $
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org> mythes-1.2.1.ebuild:
+  x86 stable, bug #387187
 
   28 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> mythes-1.2.1.ebuild:
   Depend on pkgconfig wrt bug #388731.

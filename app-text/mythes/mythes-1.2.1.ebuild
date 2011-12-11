@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/mythes-1.2.1.ebuild,v 1.4 2011/10/28 08:19:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/mythes-1.2.1.ebuild,v 1.5 2011/12/11 21:53:50 maekke Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/hunspell/MyThes/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND="app-text/hunspell"
