@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/amb-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/amb-plugins/ChangeLog,v 1.5 2011/01/24 12:00:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/amb-plugins/ChangeLog,v 1.6 2011/12/11 09:21:25 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  amb-plugins-0.8.1.ebuild:
+  x86 stable wrt bug #392795
 
 *amb-plugins-0.8.1 (24 Jan 2011)
 
