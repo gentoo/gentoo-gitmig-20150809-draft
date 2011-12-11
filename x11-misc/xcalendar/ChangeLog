@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.24 2011/12/05 23:29:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.25 2011/12/11 09:08:19 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xcalendar-4.0-r1.ebuild:
+  x86 stable wrt bug #391577
 
   05 Dec 2011; Tony Vroon <chainsaw@gentoo.org> xcalendar-4.0-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo,
