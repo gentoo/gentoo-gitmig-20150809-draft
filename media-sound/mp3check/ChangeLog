@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3check
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/ChangeLog,v 1.14 2011/12/02 23:58:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/ChangeLog,v 1.15 2011/12/11 09:13:29 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mp3check-0.8.4.ebuild:
+  x86 stable wrt bug #392877
 
   02 Dec 2011; Tim Harder <radhermit@gentoo.org> mp3check-0.8.4.ebuild:
   Update to EAPI 4 and remove default debug flag.
