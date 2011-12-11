@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rzip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.36 2010/08/26 21:44:56 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.37 2011/12/11 09:07:19 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> rzip-2.1-r2.ebuild:
+  x86 stable wrt bug #392835
 
   26 Aug 2010; Jeroen Roovers <jer@gentoo.org> +rzip-2.1-r2.ebuild,
   files/rzip-2.1-darwin.patch:
