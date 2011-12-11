@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.2.ebuild,v 1.1 2011/11/05 17:59:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.2-r1.ebuild,v 1.1 2011/12/11 19:53:43 mgorny Exp $
 
-EAPI="2"
+EAPI=4
+
+inherit systemd
 
 DESCRIPTION="Distribute hardware interrupts across processors on a multiprocessor system"
 HOMEPAGE="http://www.irqbalance.org/"
@@ -27,7 +29,8 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	newinitd "${FILESDIR}"/irqbalance.init irqbalance || die
+	default
+	newinitd "${FILESDIR}"/irqbalance.init irqbalance
 	newconfd "${FILESDIR}"/irqbalance.confd-1 irqbalance
+	systemd_dounit "${FILESDIR}"/irqbalance.service
 }
