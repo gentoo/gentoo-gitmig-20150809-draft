@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.163 2011/11/28 23:25:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.164 2011/12/11 22:09:41 maekke Exp $
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org> libtorrent-0.12.9.ebuild:
+  x86 stable, bug #389817
 
   28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> libtorrent-0.12.9.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
