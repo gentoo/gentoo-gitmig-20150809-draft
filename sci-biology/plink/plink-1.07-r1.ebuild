@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.07-r1.ebuild,v 1.2 2011/12/07 06:55:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.07-r1.ebuild,v 1.3 2011/12/11 09:19:10 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://pngu.mgh.harvard.edu/~purcell/plink/dist/${P}-src.zip"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="lapack -webcheck R"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND="
