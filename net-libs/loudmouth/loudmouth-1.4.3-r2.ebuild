@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r2.ebuild,v 1.3 2011/12/05 19:41:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r2.ebuild,v 1.4 2011/12/11 09:02:14 phajdan.jr Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/engineyard/loudmouth"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~ppc-macos"
 
 IUSE="asyncns debug doc ssl static-libs test"
 
