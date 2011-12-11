@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/wxperl-0.990.200.ebuild,v 1.2 2011/12/04 17:37:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/wxperl-0.990.200.ebuild,v 1.3 2011/12/11 22:06:56 maekke Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ DESCRIPTION="Perl bindings for wxGTK"
 HOMEPAGE="http://wxperl.sourceforge.net/"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

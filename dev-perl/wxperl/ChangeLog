@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/wxperl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/ChangeLog,v 1.46 2011/12/04 17:37:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/ChangeLog,v 1.47 2011/12/11 22:06:56 maekke Exp $
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org> wxperl-0.990.200.ebuild:
+  x86 stable, bug #388765
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> wxperl-0.990.200.ebuild:
   Stable on amd64 wrt bug #388765
