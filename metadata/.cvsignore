@@ -1,0 +1,9 @@
+# These are added during tree generation only
+cache
+dtd
+glsa
+news
+herds.xml
+timestamp
+timestamp.chk
+timestamp.x
