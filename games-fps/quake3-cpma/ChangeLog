@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-cpma
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.22 2011/11/10 16:05:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.23 2011/12/11 14:45:11 mr_bones_ Exp $
+
+  11 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  -quake3-cpma-1.46.ebuild, quake3-cpma-1.48.ebuild:
+  stable for x86; drop old
 
   10 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> quake3-cpma-1.46.ebuild,
   quake3-cpma-1.48.ebuild:
