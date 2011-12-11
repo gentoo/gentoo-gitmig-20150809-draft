@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbdate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.19 2011/04/16 17:24:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.20 2011/12/11 09:04:57 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bbdate-0.2.4-r1.ebuild:
+  x86 stable wrt bug #392841
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> bbdate-0.2.4.ebuild,
   bbdate-0.2.4-r1.ebuild:
