@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/audacious-dumb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.40 2011/11/27 00:01:06 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.41 2011/12/11 19:32:07 joker Exp $
+
+*audacious-dumb-0.74 (11 Dec 2011)
+
+  11 Dec 2011; Christian Birchinger <joker@gentoo.org>
+  +audacious-dumb-0.74.ebuild:
+  New version that requires Audacious 3.1 final, not alpha.
 
 *audacious-dumb-0.73 (26 Nov 2011)
 
