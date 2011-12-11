@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.101 2011/12/07 16:33:04 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.102 2011/12/11 14:20:32 vadimk Exp $
+
+  11 Dec 2011; Vadim Kuznetsov <vadimk@gentoo.org> -files/90vmware-player,
+  -files/vmware-player.xml:
+  removed old files
 
 *vmware-player-4.0.1.528992-r2 (07 Dec 2011)
 
