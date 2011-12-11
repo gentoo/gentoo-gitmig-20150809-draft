@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13321 2011/12/11 14:26:09 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13322 2011/12/11 15:01:49 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -234,11 +234,6 @@ net-mail/vmailmgr-tools
 # Steve Arnold <nerdboy@gentoo.org> (12 Nov 2011)
 # Masked until gpsdrive is updated to work with the newer mapnik.
 >=sci-geosciences/mapnik-2.0.0
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (8 Nov 2011)
-# Dead project, and has started crashing KDE apps, see bug 388261 and
-# the comments on its homepage. Masked for lastriting
-x11-themes/polyester
 
 # Nathan Phillip Brink <binki@gentoo.org> (8 Nov 2011)
 # Masking alpha release series.
