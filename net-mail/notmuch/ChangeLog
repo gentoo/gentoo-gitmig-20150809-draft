@@ -1,6 +1,19 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.18 2011/12/02 08:40:56 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.19 2011/12/11 20:51:27 aidecoe Exp $
+
+*notmuch-0.10.2 (11 Dec 2011)
+
+  11 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.10.2-fix-test-build.patch, +notmuch-0.10.2.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  Fix crash in python bindings.
+
+  The python bindings did not call g_type_init, which caused crashes for some,
+  but not all users.
 
   02 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -files/0.10-fix-test-build.patch, -notmuch-0.10.ebuild:
