@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.167 2011/10/20 20:17:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.168 2011/12/11 12:56:39 dilfridge Exp $
+
+  11 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> kword-2.3.3-r1.ebuild:
+  Add missing dependency, needed for MSWord import
 
   20 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> kword-2.3.3.ebuild,
   kword-2.3.3-r1.ebuild:
