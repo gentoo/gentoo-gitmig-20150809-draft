@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.5 2011/12/04 15:59:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.6 2011/12/11 12:29:07 scarabeus Exp $
 
 EAPI=4
 
@@ -30,6 +30,7 @@ DEPEND="${DEPEND}
 
 src_prepare() {
 	base_src_prepare
+	[[ -d m4 ]] || mkdir "m4"
 	[[ ${PV} == 9999 ]] && eautoreconf
 }
 
