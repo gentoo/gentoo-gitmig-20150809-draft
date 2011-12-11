@@ -1,4 +1,5 @@
-http://bugs.gentoo.org/392001
+http://bugzilla.xfce.org/show_bug.cgi?id=8194
+http://bugs.gentoo.org/show_bug.cgi?id=392001
 
 This is http://pkgs.fedoraproject.org/gitweb/?p=libxfce4ui.git;a=blob_plain;f=libxfce4ui-4.7.6-keyboard-shortcuts.patch;hb=HEAD
 BUT without the xfhelp4 keyboard shortcut.
