@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.38 2011/12/10 00:50:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.39 2011/12/11 20:18:53 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -139,7 +139,13 @@ src_prepare() {
 
 	if [[ -n ${EPREFIX} ]] ; then
 		einfo "Setting portage.const.EPREFIX ..."
-		sed -e "s|^EPREFIX=.*|EPREFIX=\"${EPREFIX}\"|" -i pym/portage/const.py || \
+		sed -e "s|^\(SANDBOX_BINARY[[:space:]]*=[[:space:]]*\"\)\(/usr/bin/sandbox\"\)|\\1${EPREFIX}\\2|" \
+			-e "s|^\(FAKEROOT_BINARY[[:space:]]*=[[:space:]]*\"\)\(/usr/bin/fakeroot\"\)|\\1${EPREFIX}\\2|" \
+			-e "s|^\(BASH_BINARY[[:space:]]*=[[:space:]]*\"\)\(/bin/bash\"\)|\\1${EPREFIX}\\2|" \
+			-e "s|^\(MOVE_BINARY[[:space:]]*=[[:space:]]*\"\)\(/bin/mv\"\)|\\1${EPREFIX}\\2|" \
+			-e "s|^\(PRELINK_BINARY[[:space:]]*=[[:space:]]*\"\)\(/usr/sbin/prelink\"\)|\\1${EPREFIX}\\2|" \
+			-e "s|^\(EPREFIX[[:space:]]*=[[:space:]]*\"\).*|\\1${EPREFIX}\"|" \
+			-i pym/portage/const.py || \
 			die "Failed to patch portage.const.EPREFIX"
 
 		einfo "Prefixing shebangs ..."
