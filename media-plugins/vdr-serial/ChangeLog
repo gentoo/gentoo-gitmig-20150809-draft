@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-serial
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/ChangeLog,v 1.4 2008/08/01 13:18:49 zzam Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/ChangeLog,v 1.5 2011/12/11 09:09:46 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  vdr-serial-0.0.6a-r1.ebuild:
+  x86 stable wrt bug #392865
 
   01 Aug 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-serial-0.0.6a-r1.ebuild:
