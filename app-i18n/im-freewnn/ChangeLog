@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/im-freewnn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/ChangeLog,v 1.11 2011/12/06 14:29:47 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/ChangeLog,v 1.12 2011/12/11 09:13:01 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  im-freewnn-0.0.2-r1.ebuild:
+  x86 stable wrt bug #392875
 
   06 Dec 2011; Naohiro Aota <naota@gentoo.org> im-freewnn-0.0.2-r1.ebuild,
   +files/im-freewnn-0.0.2-implicit-declaration.patch:
