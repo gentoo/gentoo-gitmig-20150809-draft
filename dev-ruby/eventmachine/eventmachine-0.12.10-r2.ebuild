@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-0.12.10-r2.ebuild,v 1.5 2010/12/27 20:13:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-0.12.10-r2.ebuild,v 1.6 2011/12/11 08:43:12 graaff Exp $
 
 EAPI="2"
 # jruby → has shims for Java handling but tests fail badly, remaining
@@ -52,6 +52,10 @@ each_ruby_compile() {
 		popd
 		cp $extdir/*.so lib/ || die "Unable to copy extensions for ${extdir}"
 	done
+}
+
+each_ruby_test() {
+	${RUBY} -Ilib -S testrb tests/test_*.rb || die
 }
 
 all_ruby_install() {
