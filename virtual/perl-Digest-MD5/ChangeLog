@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Digest-MD5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.44 2011/12/11 13:23:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.45 2011/12/11 21:58:15 maekke Exp $
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org>
+  perl-Digest-MD5-2.510.0-r1.ebuild:
+  arm stable, bug #392845
 
   11 Dec 2011; Torsten Veller <tove@gentoo.org>
   perl-Digest-MD5-2.510.0-r1.ebuild:
