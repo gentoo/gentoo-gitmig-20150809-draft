@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gperiodic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.16 2011/11/20 12:27:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.17 2011/12/11 09:21:03 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gperiodic-2.0.10-r2.ebuild:
+  x86 stable wrt bug #392791
 
   20 Nov 2011; Pacho Ramos <pacho@gentoo.org>
   files/gperiodic-2.0.10-makefile.patch:
