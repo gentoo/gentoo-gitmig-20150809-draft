@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.35 2011/11/07 11:30:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.36 2011/12/11 19:05:42 robbat2 Exp $
+
+*iasl-20111123 (11 Dec 2011)
+
+  11 Dec 2011; Robin H. Johnson <robbat2@gentoo.org> +iasl-20111123.ebuild:
+  Bug #394305: version bump.
 
   07 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> iasl-20110922.ebuild,
   +files/iasl-20110922-parallelmake-003.patch:
