@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.101 2011/12/11 08:22:35 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.102 2011/12/11 10:21:18 tomka Exp $
+
+  11 Dec 2011; Thomas Kahle <tomka@gentoo.org> wicd-1.7.1_pre20111210.ebuild:
+  ewarn updated again. Thanks to Jeff Kowalczyk and Nikolaj Sjujskij for
+  research
 
   11 Dec 2011; Thomas Kahle <tomka@gentoo.org> wicd-1.7.1_pre20111210.ebuild:
   Add warning about potential loss of saved passwords
