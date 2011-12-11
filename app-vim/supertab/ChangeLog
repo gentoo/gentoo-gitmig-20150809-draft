@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/supertab
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.36 2011/12/09 21:40:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.37 2011/12/11 15:54:14 armin76 Exp $
+
+  11 Dec 2011; Raúl Porcel <armin76@gentoo.org> supertab-1.1.ebuild,
+  supertab-1.5.ebuild, supertab-1.6.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   09 Dec 2011; Markos Chandras <hwoarang@gentoo.org> supertab-1.6.ebuild:
   Stable on amd64 wrt bug #393563

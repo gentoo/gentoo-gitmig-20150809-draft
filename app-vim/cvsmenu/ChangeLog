@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/cvsmenu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/ChangeLog,v 1.14 2010/06/19 00:40:25 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/ChangeLog,v 1.15 2011/12/11 15:58:12 armin76 Exp $
+
+  11 Dec 2011; Raúl Porcel <armin76@gentoo.org> cvsmenu-1.80.ebuild,
+  cvsmenu-1.147.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> cvsmenu-1.147.ebuild:
   Moving dev-util/cvs* to dev-vcs/cvs*
