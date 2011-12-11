@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.23 2011/12/09 18:39:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.24 2011/12/11 21:59:58 maekke Exp $
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org>
+  libreoffice-l10n-3.4.3-r3.ebuild:
+  x86 stable, bug #387187
 
 *libreoffice-l10n-3.5.0-r1 (09 Dec 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3-r3.ebuild,v 1.5 2011/11/02 09:27:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3-r3.ebuild,v 1.6 2011/12/11 21:59:58 maekke Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.libreoffice.org"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="offlinehelp"
 
 LANGUAGES="af ar as ast be bg bn bo br brx bs ca ca_XV cs cy da de dgo dz el
