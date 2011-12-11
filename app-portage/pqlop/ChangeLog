@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/pqlop
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pqlop/ChangeLog,v 1.1 2011/12/11 20:07:59 maksbotan Exp $
+
+*pqlop-0.02 (11 Dec 2011)
+
+  11 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +pqlop-0.02.ebuild,
+  +metadata.xml:
+  Add app-portage/pqlop-0.02, thanks to lk4d4. Bug 363889
+
