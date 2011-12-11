@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/mp3fs-0.30.ebuild,v 1.1 2011/02/05 18:23:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/mp3fs-0.30.ebuild,v 1.2 2011/12/11 09:18:47 phajdan.jr Exp $
 
 DESCRIPTION="a read-only FUSE filesystem which transcodes FLAC audio files to MP3 when read"
 HOMEPAGE="http://mp3fs.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="sys-fs/fuse
