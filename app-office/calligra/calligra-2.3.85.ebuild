@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.85.ebuild,v 1.1 2011/12/10 14:46:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.85.ebuild,v 1.2 2011/12/11 01:23:12 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -107,6 +107,10 @@ RDEPEND="
 	calligra_features_kexi? ( >=dev-db/sqlite-3.7.3 )
 "
 DEPEND="${RDEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-asneeded.patch"
+)
 
 src_configure() {
 	local cal_ft
