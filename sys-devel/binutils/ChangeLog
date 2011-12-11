@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.431 2011/12/05 15:22:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.432 2011/12/11 14:28:36 armin76 Exp $
+
+  11 Dec 2011; Raúl Porcel <armin76@gentoo.org> binutils-2.21.1-r1.ebuild:
+  sparc stable wrt #378485
 
   05 Dec 2011; Mike Frysinger <vapier@gentoo.org> Manifest:
   Update patch tarball digests to match published one #393233 by Jerome Kurtz.
