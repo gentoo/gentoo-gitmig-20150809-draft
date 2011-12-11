@@ -1,6 +1,11 @@
 # ChangeLog for media-video/bangarang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.6 2011/05/10 21:32:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.7 2011/12/11 13:34:40 johu Exp $
+
+*bangarang-2.1 (11 Dec 2011)
+
+  11 Dec 2011; Johannes Huber <johu@gentoo.org> +bangarang-2.1.ebuild:
+  Version bump. Thanks Elias Probs <mail@eliasprobst.eu>. bug #392207
 
   10 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> bangarang-2.0.1.ebuild:
   Add back wrongly dropped keywords.
