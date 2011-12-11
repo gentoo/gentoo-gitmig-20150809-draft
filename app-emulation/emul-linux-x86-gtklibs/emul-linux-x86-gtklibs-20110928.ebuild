@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110928.ebuild,v 1.4 2011/10/16 12:09:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110928.ebuild,v 1.5 2011/12/11 13:31:43 pacho Exp $
 
 EAPI="4"
 
@@ -14,6 +14,20 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-xlibs-${PV}
 	~app-emulation/emul-linux-x86-opengl-${PV}"
 # RDEPEND on opengl stuff shouldn't be needed, but add it anyway until bug #354943 is properly solved
+
+my_gdk_pixbuf_query_loaders() {
+	# causes segfault if set
+	unset __GL_NO_DSO_FINALIZER
+
+	tmp_file=$(mktemp --suffix=gdk_pixbuf_ebuild)
+	# be atomic!
+	if gdk-pixbuf-query-loaders32 > "${tmp_file}"; then
+		cat "${tmp_file}" > "${ROOT}usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+	else
+		ewarn "Warning, gdk-pixbuf-query-loaders32 failed."
+	fi
+	rm "${tmp_file}"
+}
 
 src_prepare() {
 	query_tools="${S}/usr/bin/gtk-query-immodules-2.0|${S}/usr/bin/gdk-pixbuf-query-loaders|${S}/usr/bin/pango-querymodules"
@@ -35,17 +49,15 @@ pkg_preinst() {
 
 pkg_postinst() {
 	PANGO_CONFDIR="/etc/pango/i686-pc-linux-gnu"
-	if [[ ${ROOT} == "/" ]] ; then
-		einfo "Generating pango modules listing..."
-		mkdir -p ${PANGO_CONFDIR}
-		pango-querymodules32 > ${PANGO_CONFDIR}/pango.modules
-	fi
+	einfo "Generating pango modules listing..."
+	mkdir -p ${PANGO_CONFDIR}
+	pango-querymodules32 > ${PANGO_CONFDIR}/pango.modules || die
 
 	GTK2_CONFDIR="/etc/gtk-2.0/i686-pc-linux-gnu"
 	einfo "Generating gtk+ immodules/gdk-pixbuf loaders listing..."
 	mkdir -p ${GTK2_CONFDIR}
 	gtk-query-immodules-2.0-32 > "${ROOT}${GTK2_CONFDIR}/gtk.immodules"
-	gdk-pixbuf-query-loaders32 > "${ROOT}usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+	my_gdk_pixbuf_query_loaders
 
 	# gdk-pixbuf.loaders should be in their CHOST directories respectively.
 	if [[ -e ${ROOT}/etc/gtk-2.0/gdk-pixbuf.loaders ]] ; then
