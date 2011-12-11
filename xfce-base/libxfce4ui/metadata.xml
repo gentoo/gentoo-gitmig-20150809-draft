@@ -3,6 +3,7 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <use>
-    <flag name="glade">Build support for Glade 3's GtkBuilder implementation</flag>
+    <flag name='glade'>Build support for Glade 3's GtkBuilder implementation</flag>
+    <flag name='vanilla'>Don't apply extra keyboard shortcuts patch from Fedora</flag>
   </use>
 </pkgmetadata>
