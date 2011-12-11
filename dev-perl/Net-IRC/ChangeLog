@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-IRC
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.30 2011/09/03 08:44:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.31 2011/12/11 09:15:06 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> Net-IRC-0.79.ebuild:
+  x86 stable wrt bug #392851
 
   03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> -Net-IRC-0.76.ebuild,
   Net-IRC-0.79.ebuild:
