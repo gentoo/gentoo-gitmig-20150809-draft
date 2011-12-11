@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/cfg-update-1.8.7.ebuild,v 1.1 2011/11/12 20:11:38 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/cfg-update-1.8.7.ebuild,v 1.2 2011/12/11 15:01:39 rich0 Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/rich0/cfg-update/tarball/${PV} -> ${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~sparc ~x86"
 IUSE="X"
 
 RDEPEND="X? ( >=x11-misc/sux-1.0
