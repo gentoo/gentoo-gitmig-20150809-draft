@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.ebuild,v 1.1 2011/11/21 17:58:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.ebuild,v 1.2 2011/12/11 00:16:01 idl0r Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
-IUSE="debug elibc_FreeBSD kernel_linux openvz unicode vserver"
+IUSE="elibc_FreeBSD kernel_linux openvz unicode vserver"
 
 RDEPEND="sys-libs/ncurses[unicode?]"
 DEPEND="${RDEPEND}"
@@ -42,7 +42,6 @@ src_prepare() {
 }
 
 src_configure() {
-	use debug && append-flags -DDEBUG
 
 	econf \
 		$(use_enable openvz) \
