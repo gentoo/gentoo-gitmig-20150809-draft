@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20111211.ebuild,v 1.1 2011/12/11 04:25:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20111211.ebuild,v 1.2 2011/12/11 04:26:59 ssuominen Exp $
 
 EAPI=4
 inherit autotools
@@ -71,6 +71,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	dodoc AUTHORS NEWS TODO # The rest is installed by doc_DATA from "${S}"/Makefile.am 
+	dodoc AUTHORS NEWS TODO # The rest is installed by doc_DATA from "${S}"/Makefile.am
 	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
 }
