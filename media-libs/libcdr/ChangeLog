@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libcdr
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.1 2011/12/11 12:32:20 scarabeus Exp $
+
+*libcdr-9999 (08 Dec 2011)
+
+  08 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libcdr-9999.ebuild,
+  +metadata.xml:
+  Intial commit of cdr parser. For libreoffice-3.6
+
