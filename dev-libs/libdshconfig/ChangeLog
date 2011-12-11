@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdshconfig
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/ChangeLog,v 1.17 2010/05/12 22:06:15 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/ChangeLog,v 1.18 2011/12/11 09:18:26 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libdshconfig-0.20.12.ebuild:
+  x86 stable wrt bug #392823
 
   12 May 2010; Jeremy Olexa <darkside@gentoo.org>
   libdshconfig-0.20.12.ebuild:
