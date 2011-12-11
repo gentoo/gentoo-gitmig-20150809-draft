@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.78 2011/11/26 15:32:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.79 2011/12/11 16:00:28 chithanh Exp $
+
+*xf86-video-intel-2.17.0-r3 (11 Dec 2011)
+
+  11 Dec 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xf86-video-intel-2.17.0-r2.ebuild, +xf86-video-intel-2.17.0-r3.ebuild,
+  +files/xf86-video-intel-2.17-sna-pipeline-flush.patch:
+  Add patch for bug #393427
 
 *xf86-video-intel-2.17.0-r2 (26 Nov 2011)
 
