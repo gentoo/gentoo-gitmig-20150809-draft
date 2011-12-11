@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/aboot-1.0_pre20040408-r3.ebuild,v 1.3 2011/04/02 12:00:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/aboot-1.0_pre20040408-r3.ebuild,v 1.4 2011/12/11 17:22:34 armin76 Exp $
 
 inherit eutils
 
@@ -31,6 +31,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/aboot-gcc-3.4.patch"
 	epatch "${FILESDIR}/aboot-pt_note.patch"
+	# Bug 364697
+	epatch "${FILESDIR}/aboot-define_stat_only_in_userspace.patch"
+
 	# Modified patch from Debian to add netboot support
 	epatch "${WORKDIR}"/aboot_gentoo.diff
 }
