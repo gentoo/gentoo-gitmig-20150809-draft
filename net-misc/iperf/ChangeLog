@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iperf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.40 2010/10/10 18:48:12 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.41 2011/12/11 21:51:04 maekke Exp $
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org> iperf-2.0.5.ebuild:
+  add ~arm, bug #389451
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> iperf-2.0.5.ebuild:
   sparc stable wrt #336656
