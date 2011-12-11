@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/libgnomekbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.97 2011/11/25 05:30:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.98 2011/12/11 21:24:55 tetromino Exp $
+
+*libgnomekbd-3.2.0-r1 (11 Dec 2011)
+
+  11 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgnomekbd-3.2.0-r1.ebuild, +files/libgnomekbd-3.2.0-fg-color.patch:
+  Patch to fix gnome-settings-daemon crash in gnome-3 fallback mode.
 
   25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   -libgnomekbd-3.0.0.1.ebuild:
