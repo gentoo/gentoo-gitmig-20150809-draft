@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.619 2011/12/09 22:12:00 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.620 2011/12/11 04:48:14 williamh Exp $
+
+*udev-171-r4 (11 Dec 2011)
+
+  11 Dec 2011; William Hubbs <williamh@gentoo.org> +files/shell-compat-KV.sh,
+  +udev-171-r4.ebuild:
+  rev bump for #338257.
 
   09 Dec 2011; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   sync live ebuild
