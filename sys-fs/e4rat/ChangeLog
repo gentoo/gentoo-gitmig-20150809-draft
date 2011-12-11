@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/e4rat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/ChangeLog,v 1.2 2011/12/10 16:57:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/ChangeLog,v 1.3 2011/12/11 21:58:42 mgorny Exp $
+
+*e4rat-0.2.1-r1 (11 Dec 2011)
+
+  11 Dec 2011; Michał Górny <mgorny@gentoo.org> +e4rat-0.2.1-r1.ebuild,
+  +files/e4rat-libdir.patch, +files/e4rat-shared-build.patch:
+  Patch the buildsystem to build against shared libraries, and build shared
+  library as well.
 
   10 Dec 2011; Markos Chandras <hwoarang@gentoo.org> e4rat-0.2.1.ebuild:
   Drop erroneous src_prepare function. Bug #394255
