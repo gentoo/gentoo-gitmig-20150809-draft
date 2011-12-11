@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/twill-0.9.ebuild,v 1.4 2011/11/16 10:35:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/twill-0.9.ebuild,v 1.5 2011/12/11 21:49:56 maekke Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SRC_URI="http://darcs.idyll.org/~t/projects/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc"
 
 S="${WORKDIR}/${MY_P}"
