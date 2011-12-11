@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-piston
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-piston/ChangeLog,v 1.1 2010/08/27 17:04:15 dev-zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-piston/ChangeLog,v 1.2 2011/12/11 07:11:27 floppym Exp $
+
+*django-piston-0.2.3 (11 Dec 2011)
+
+  11 Dec 2011; Mike Gilbert <floppym@gentoo.org> +django-piston-0.2.3.ebuild:
+  Version bump for security bug 389317. Use pypi tarballs, and drop examples
+  support.
 
 *django-piston-9999 (27 Aug 2010)
 *django-piston-0.2.2 (27 Aug 2010)
