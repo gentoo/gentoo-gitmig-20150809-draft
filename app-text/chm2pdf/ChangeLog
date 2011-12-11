@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chm2pdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.9 2011/12/03 11:51:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.10 2011/12/11 09:11:04 phajdan.jr Exp $
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> chm2pdf-0.9.1-r1.ebuild:
+  x86 stable wrt bug #392871
 
   03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> chm2pdf-0.9.1-r1.ebuild:
   Stable on amd64 wrt bug #392871
