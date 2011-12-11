@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>kde</herd>
-	<longdescription>Polyester is a kde widget style and a kwin decoration both aimed to be a good balance between eye candy and simplicity.</longdescription>
-</pkgmetadata>
