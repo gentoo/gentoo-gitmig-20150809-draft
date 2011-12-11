@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.105 2011/12/11 00:16:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.106 2011/12/11 14:43:32 armin76 Exp $
+
+  11 Dec 2011; Raúl Porcel <armin76@gentoo.org> htop-0.9-r2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #390969
 
   11 Dec 2011; Christian Ruppert <idl0r@gentoo.org> htop-1.0.ebuild:
   Remove debug useflag as it still causes a lot of trouble, bug 393653.
