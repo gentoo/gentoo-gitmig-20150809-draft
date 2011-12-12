@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/microcode-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.15 2011/09/22 20:26:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.16 2011/12/12 21:34:38 vapier Exp $
+
+*microcode-data-20110915-r1 (12 Dec 2011)
+
+  12 Dec 2011; Mike Frysinger <vapier@gentoo.org>
+  +files/intel-microcode2ucode.c, +microcode-data-20110915-r1.ebuild:
+  Split up microcode files for the kernel to autoload (using util from Fedora).
 
 *microcode-data-20110915 (22 Sep 2011)
 
