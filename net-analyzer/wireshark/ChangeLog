@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.319 2011/10/08 16:27:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.320 2011/12/12 06:42:36 pva Exp $
+
+*wireshark-1.6.4 (12 Dec 2011)
+
+  12 Dec 2011; Peter Volkov <pva@gentoo.org> +wireshark-1.6.4.ebuild,
+  +files/wireshark-1.6.4-build.patch:
+  Version bump, fixes security bug #389255 thank Sean Amoss for report. Silent
+  warnings during build, bug #365295 wrt Agostino Sarubbo. Update fcaps()
+  message for recent kernels, bug 390901 wrt Alexandre Rostovtsev.
 
   08 Oct 2011; Peter Volkov <pva@gentoo.org>
   -files/wireshark-0.99.7-asneeded.patch,
