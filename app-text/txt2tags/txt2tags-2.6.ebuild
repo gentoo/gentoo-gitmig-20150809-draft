@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.6.ebuild,v 1.4 2011/11/17 18:53:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.6.ebuild,v 1.5 2011/12/12 22:55:28 eva Exp $
 
 EAPI="2"
 PYTHON_USE_WITH="tk"
@@ -38,6 +38,7 @@ src_compile() {
 }
 
 src_install() {
+	python_convert_shebangs 2 txt2tags
 	dobin txt2tags || die
 
 	dodoc README ChangeLog* || die
