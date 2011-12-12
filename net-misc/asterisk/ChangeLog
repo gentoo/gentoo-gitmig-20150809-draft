@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.359 2011/12/05 13:16:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.360 2011/12/12 11:18:00 chainsaw Exp $
+
+*asterisk-10.0.0_rc3 (12 Dec 2011)
+
+  12 Dec 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-10.0.0_rc2.ebuild,
+  -asterisk-10.0.0_rc2-r1.ebuild, +asterisk-10.0.0_rc3.ebuild:
+  Security update addresses AST-2011-013 (disparate general/peer NAT settings
+  exposing valid usernames) and AST-2011-014 (null pointer derefence in INFO
+  command reply if automon feature is enabled). Cull the 10 branch by removing
+  vulnerable ebuilds. For security bug #394095.
 
 *asterisk-10.0.0_rc2-r1 (05 Dec 2011)
 
