@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.73 2011/11/30 21:03:32 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.74 2011/12/12 18:44:28 fuzzyray Exp $
+
+*esearch-1.0-r1 (12 Dec 2011)
+
+  12 Dec 2011; Paul Varner <fuzzyray@gentoo.org>
+  +files/1.0-fix-EPREFIX-capability.patch, +esearch-1.0-r1.ebuild:
+  Revison bump to remove hardcoded /usr/lib/portage/pym path. Bug #394209
 
 *esearch-1.0 (30 Nov 2011)
 
