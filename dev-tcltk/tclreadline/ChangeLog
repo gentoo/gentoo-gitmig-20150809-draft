@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclreadline
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.14 2010/12/07 13:24:20 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.15 2011/12/12 08:53:38 jlec Exp $
+
+  12 Dec 2011; Justin Lecher <jlec@gentoo.org> tclreadline-2.1.0.ebuild,
+  tclreadline-2.1.0-r1.ebuild, metadata.xml:
+  Moved to EAPI=4 and autotools-utils.eclass
 
 *tclreadline-2.1.0-r1 (07 Dec 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/tclreadline-2.1.0.ebuild,v 1.16 2010/12/07 13:25:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/tclreadline-2.1.0.ebuild,v 1.17 2011/12/12 08:53:38 jlec Exp $
 
 DESCRIPTION="Readline extension to TCL"
 HOMEPAGE="http://tclreadline.sf.net/"
@@ -22,5 +22,5 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 }
