@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/qbzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.24 2011/11/06 16:20:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.25 2011/12/12 16:12:58 pva Exp $
+
+*qbzr-0.21.2 (12 Dec 2011)
+
+  12 Dec 2011; Peter Volkov <pva@gentoo.org> +qbzr-0.21.2.ebuild:
+  Version bump.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> qbzr-0.21.1.ebuild:
   Marking qbzr-0.21.1 ppc stable for bug 
