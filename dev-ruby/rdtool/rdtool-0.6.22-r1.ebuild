@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.22-r1.ebuild,v 1.1 2010/06/30 19:44:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.22-r1.ebuild,v 1.2 2011/12/12 17:16:30 ago Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -12,7 +12,7 @@ HOMEPAGE="http://raa.ruby-lang.org/project/rdtool"
 SRC_URI="http://www.moonwolf.com/ruby/archive/${P}.tar.gz"
 LICENSE="Ruby GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="emacs"
 
 RDEPEND="${RDEPEND} emacs? ( virtual/emacs )"
