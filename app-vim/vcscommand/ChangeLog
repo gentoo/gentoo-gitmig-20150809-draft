@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vcscommand
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.24 2011/12/11 15:34:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.25 2011/12/12 20:42:02 ago Exp $
+
+  12 Dec 2011; Agostino Sarubbo <ago@gentoo.org> vcscommand-1.99.45.ebuild:
+  Stable for AMD64, wrt bug #393569
 
   11 Dec 2011; Raúl Porcel <armin76@gentoo.org> vcscommand-1.99.42.ebuild,
   vcscommand-1.99.43.ebuild, vcscommand-1.99.44.ebuild,
