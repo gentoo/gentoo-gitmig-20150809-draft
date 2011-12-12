@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/ck
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.7 2009/08/11 23:10:28 mescalinum Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.8 2011/12/12 09:10:27 jlec Exp $
+
+*ck-8.0-r3 (12 Dec 2011)
+
+  12 Dec 2011; Justin Lecher <jlec@gentoo.org> ck-8.0.ebuild,
+  -ck-8.0-r1.ebuild, ck-8.0-r2.ebuild, +ck-8.0-r3.ebuild,
+  +files/ck-8.0-gentoo.patch, metadata.xml:
+  Moved to EAPI=4, respect EPREFIX and multitb
 
 *ck-8.0-r2 (11 Aug 2009)
 
