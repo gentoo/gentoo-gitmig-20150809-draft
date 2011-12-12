@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/edox-data
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/ChangeLog,v 1.13 2009/01/06 10:55:48 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/ChangeLog,v 1.14 2011/12/12 19:50:54 ago Exp $
+
+  12 Dec 2011; Agostino Sarubbo <ago@gentoo.org> edox-data-0.16.8.0.2.ebuild:
+  Stable for AMD64, wrt bug #393927
 
 *edox-data-0.16.8.0.2 (06 Jan 2009)
 
