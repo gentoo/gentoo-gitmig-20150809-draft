@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltuner/mysqltuner-1.2.0.ebuild,v 1.1 2011/04/19 08:06:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltuner/mysqltuner-1.2.0.ebuild,v 1.2 2011/12/12 18:48:26 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="https://github.com/rackerhacker/MySQLTuner-perl/tarball/05813a1faa447fe
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=""

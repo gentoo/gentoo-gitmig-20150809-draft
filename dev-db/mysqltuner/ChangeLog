@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysqltuner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltuner/ChangeLog,v 1.6 2011/04/19 08:12:14 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltuner/ChangeLog,v 1.7 2011/12/12 18:48:26 ago Exp $
+
+  12 Dec 2011; Agostino Sarubbo <ago@gentoo.org> mysqltuner-1.2.0.ebuild:
+  Stable for AMD64, wrt bug #394073
 
   19 Apr 2011; Benedikt Böhm <hollow@gentoo.org> -mysqltuner-0_p49.ebuild:
   remove old version
