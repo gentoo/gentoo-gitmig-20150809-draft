@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Cache
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.39 2009/08/22 18:08:07 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.40 2011/12/12 10:48:16 olemarkus Exp $
+
+*PEAR-Cache-1.5.6 (12 Dec 2011)
+
+  12 Dec 2011; Ole Markus With <olemarkus@gentoo.org> +PEAR-Cache-1.5.6.ebuild:
+  Version bump
 
 *PEAR-Cache-1.5.5 (22 Aug 2009)
 

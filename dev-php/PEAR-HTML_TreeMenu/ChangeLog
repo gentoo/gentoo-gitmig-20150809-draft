@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-HTML_TreeMenu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_TreeMenu/ChangeLog,v 1.18 2009/08/22 22:49:05 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_TreeMenu/ChangeLog,v 1.19 2011/12/12 10:41:40 olemarkus Exp $
+
+*PEAR-HTML_TreeMenu-1.2.2 (12 Dec 2011)
+
+  12 Dec 2011; Ole Markus With <olemarkus@gentoo.org>
+  +PEAR-HTML_TreeMenu-1.2.2.ebuild:
+  Version bump
 
 *PEAR-HTML_TreeMenu-1.2.1 (22 Aug 2009)
 

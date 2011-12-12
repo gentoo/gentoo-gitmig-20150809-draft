@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-HTML_Template_Flexy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_Flexy/ChangeLog,v 1.51 2009/08/26 20:57:49 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_Flexy/ChangeLog,v 1.52 2011/12/12 10:39:21 olemarkus Exp $
+
+*PEAR-HTML_Template_Flexy-1.3.12 (12 Dec 2011)
+
+  12 Dec 2011; Ole Markus With <olemarkus@gentoo.org>
+  +PEAR-HTML_Template_Flexy-1.3.12.ebuild:
+  Version bump
 
 *PEAR-HTML_Template_Flexy-1.3.9 (26 Aug 2009)
 
