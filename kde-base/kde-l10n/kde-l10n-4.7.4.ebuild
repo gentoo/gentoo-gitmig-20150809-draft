@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.7.4.ebuild,v 1.1 2011/12/11 18:52:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.7.4.ebuild,v 1.2 2011/12/12 08:05:42 johu Exp $
 
 EAPI="4"
 
@@ -20,8 +20,8 @@ IUSE="+handbook"
 
 # /usr/portage/distfiles $ ls -1 kde-l10n-*-${PV}.* |sed -e 's:-${PV}.tar.bz2::' -e 's:kde-l10n-::' |tr '\n' ' '
 MY_LANGS="ar bg bs ca ca@valencia cs da de el en_GB es et eu fi fr ga gl he hr
-hu ia id is it ja kk km kn ko lt lv nb nds nl nn pa pl pt pt_BR ro ru sk sl sr
-sv th tr ug uk wa zh_CN zh_TW"
+hu ia id is it ja kk km kn ko lt lv nb nds nl nn pa pl pt pt_BR ro ru sk si sk
+sl sr sv th tr ug uk wa zh_CN zh_TW"
 
 URI_BASE="${SRC_URI/-${PV}.tar.bz2/}"
 SRC_URI=""
