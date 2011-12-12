@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glurp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.33 2011/12/11 21:23:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.34 2011/12/12 22:08:00 radhermit Exp $
+
+  12 Dec 2011; Tim Harder <radhermit@gentoo.org> glurp-0.12.3.ebuild:
+  Remove deps that aren't explicitly required that gtk pulls in.
 
   11 Dec 2011; Tim Harder <radhermit@gentoo.org> -glurp-0.11.6-r2.ebuild,
   -files/glurp-0.11.6-system_libmpd.patch:
