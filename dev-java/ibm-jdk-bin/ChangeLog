@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.246 2011/11/23 18:51:46 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.247 2011/12/12 13:49:10 sera Exp $
+
+  12 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  ibm-jdk-bin-1.6.0.9_p2-r1.ebuild:
+  Fix USE=-nsplugin. Bug 394421.
 
 *ibm-jdk-bin-1.6.0.9_p2-r1 (23 Nov 2011)
 *ibm-jdk-bin-1.5.0.12_p5-r1 (23 Nov 2011)

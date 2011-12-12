@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.9_p2-r1.ebuild,v 1.1 2011/11/23 19:00:00 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.9_p2-r1.ebuild,v 1.2 2011/12/12 13:54:03 sera Exp $
 
 EAPI="4"
 
@@ -171,8 +171,8 @@ src_install() {
 	cp -pR jre/* "${ED}"/opt/${P} || die
 
 	if use x86 || use ppc; then
+		local plugin="/opt/${P}/plugin/$(get_system_arch)/ns7/libjavaplugin_oji.so"
 		if use nsplugin; then
-			local plugin="/opt/${P}/plugin/$(get_system_arch)/ns7/libjavaplugin_oji.so"
 			install_mozilla_plugin "${plugin}"
 		else
 			rm "${ED}"/${plugin} || die
