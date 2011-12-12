@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libaacs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.1 2011/12/12 22:21:05 radhermit Exp $
+
+*libaacs-0.3.0 (12 Dec 2011)
+
+  12 Dec 2011; Tim Harder <radhermit@gentoo.org> +libaacs-0.3.0.ebuild,
+  +metadata.xml:
+  Initial import (bug #352031). Ebuild by me.
+
