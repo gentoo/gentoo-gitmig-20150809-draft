@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.186 2011/12/12 23:21:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.187 2011/12/12 23:24:20 radhermit Exp $
+
+  12 Dec 2011; Tim Harder <radhermit@gentoo.org> libpcre-8.20.ebuild:
+  Use correct readline configure flag.
 
 *libpcre-8.21 (12 Dec 2011)
 
