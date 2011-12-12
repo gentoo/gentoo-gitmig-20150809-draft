@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.183 2011/11/13 14:50:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.184 2011/12/12 08:27:34 pva Exp $
+
+  12 Dec 2011; Peter Volkov <pva@gentoo.org> +cacti-0.8.7i.ebuild:
+  Version bump. Plugin architecture is now includded, bug #346741 wrt Jens Ott
+  and Alon Bar-Lev.
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org> cacti-0.8.7h.ebuild:
   x86 stable, bug #387661
