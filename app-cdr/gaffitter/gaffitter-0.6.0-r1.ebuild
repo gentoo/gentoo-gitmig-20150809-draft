@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/gaffitter-0.6.0-r1.ebuild,v 1.2 2011/05/01 20:22:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/gaffitter-0.6.0-r1.ebuild,v 1.3 2011/12/12 20:06:11 ago Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="scripts"
 
 src_prepare() {
