@@ -1,9 +1,6 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.102 2011/12/12 15:46:41 pva Exp $
-
-  12 Dec 2011; Peter Volkov <pva@gentoo.org> xmlrpc-c-1.28.03.ebuild:
-  dropped trailing whitespace
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.103 2011/12/12 15:48:24 pva Exp $
 
   12 Dec 2011; Peter Volkov <pva@gentoo.org> xmlrpc-c-1.28.00.ebuild,
   xmlrpc-c-1.28.03.ebuild:
