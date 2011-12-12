@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.104 2011/11/29 22:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.105 2011/12/12 22:23:10 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -250,6 +250,7 @@ toolchain-binutils_src_compile() {
 		--enable-64-bit-bfd \
 		--enable-shared \
 		--disable-werror \
+		--with-bugurl=http://bugs.gentoo.org/ \
 		$(use_enable static-libs static) \
 		${EXTRA_ECONF}
 	echo ./configure "$@"
