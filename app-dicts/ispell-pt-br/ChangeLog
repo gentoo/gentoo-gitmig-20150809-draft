@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-pt-br
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt-br/ChangeLog,v 1.9 2009/10/18 01:02:39 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt-br/ChangeLog,v 1.10 2011/12/12 12:59:13 jer Exp $
+
+  12 Dec 2011; Jeroen Roovers <jer@gentoo.org> ispell-pt-br-2.4-r3.ebuild:
+  Stable for HPPA (bug #393731).
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> ispell-pt-br-2.4-r2.ebuild:
   QA fixes; unquoted variables
