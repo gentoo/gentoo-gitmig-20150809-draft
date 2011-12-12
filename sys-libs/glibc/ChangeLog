@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.804 2011/12/11 17:27:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.805 2011/12/12 17:33:10 vapier Exp $
+
+  12 Dec 2011; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_compile.eblit, files/eblits/src_install.eblit:
+  Install all the same files with the cross-compiler so people can re-use it
+  with native installs.
 
   11 Dec 2011; Raúl Porcel <armin76@gentoo.org> glibc-2.13-r4.ebuild:
   alpha/ia64/sparc stable wrt #382377

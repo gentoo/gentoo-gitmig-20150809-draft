@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.19 2011/10/11 21:20:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.20 2011/12/12 17:33:10 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -102,10 +102,6 @@ glibc_do_configure() {
 	cd "${GBUILDDIR}"
 	echo "${S}"/configure ${myconf}
 	"${S}"/configure ${myconf} || die "failed to configure glibc"
-
-	# since we'll be punting them for cross-compilers, and they can cause
-	# problems (ia64+static), we'll just skip building altogether
-	is_crosscompile && sed -i '1ibuild-programs = no' config.make
 }
 
 toolchain-glibc_src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.18 2011/12/09 04:53:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.19 2011/12/12 17:33:10 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -20,12 +20,6 @@ toolchain-glibc_src_install() {
 		einfo "Installing GLIBC ${ABI} with NPTL ..."
 	fi
 	emake install_root="${install_root}" install || die
-
-	if is_crosscompile ; then
-		# punt all the junk not needed by a cross-compiler
-		cd "${D}"/usr/${CTARGET} || die
-		rm -rf ./{,usr/}{bin,etc,sbin,share} ./{,usr/}*/{gconv,misc}
-	fi
 
 	if want_linuxthreads && want_nptl ; then
 		einfo "Installing NPTL to $(alt_libdir)/tls/..."
