@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/mksh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.26 2011/08/01 15:49:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.27 2011/12/12 03:23:17 patrick Exp $
+
+*mksh-40d (12 Dec 2011)
+
+  12 Dec 2011; Patrick Lauer <patrick@gentoo.org> +mksh-40d.ebuild,
+  -mksh-36b.ebuild, -mksh-38c.ebuild, -mksh-39.ebuild, -mksh-39b.ebuild,
+  -mksh-40.ebuild:
+  Bump, remove old
 
   01 Aug 2011; Patrick Lauer <patrick@gentoo.org> mksh-40b.ebuild:
   Adding lto and build system fix as suggested by upstream
