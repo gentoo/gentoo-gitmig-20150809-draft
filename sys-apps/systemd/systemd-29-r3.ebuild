@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-37.ebuild,v 1.2 2011/11/06 15:19:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r3.ebuild,v 1.1 2011/12/12 08:17:37 mgorny Exp $
 
 EAPI=4
 
-inherit autotools-utils bash-completion-r1 linux-info pam systemd
+inherit autotools-utils bash-completion linux-info pam systemd
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -13,13 +13,12 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="acl audit cryptsetup gtk pam plymouth selinux tcpd"
+IUSE="audit cryptsetup gtk pam plymouth selinux tcpd"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10
+	>=sys-fs/udev-171
 	>=sys-apps/util-linux-2.19
-	>=sys-fs/udev-172
 	sys-libs/libcap
-	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
 	cryptsetup? ( sys-fs/cryptsetup )
 	gtk? (
@@ -33,7 +32,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	tcpd? ( sys-apps/tcp-wrappers )"
 
 # Vala-0.10 doesn't work with libnotify 0.7.1
-VALASLOT="0.12"
+VALASLOT="0.14"
 # A little higher than upstream requires
 # but I had real trouble with 2.6.37 and systemd.
 MINKV="2.6.38"
@@ -44,8 +43,6 @@ MINKV="2.6.38"
 RDEPEND="${COMMON_DEPEND}
 	!<sys-apps/openrc-0.8.3"
 DEPEND="${COMMON_DEPEND}
-	dev-util/gperf
-	dev-util/intltool
 	gtk? ( dev-lang/vala:${VALASLOT} )
 	>=sys-kernel/linux-headers-${MINKV}"
 
@@ -64,17 +61,18 @@ src_configure() {
 	local myeconfargs=(
 		--with-distro=gentoo
 		--with-rootdir=
-		--with-rootlibdir=/$(get_libdir)
 		--localstatedir=/var
 		--docdir=/tmp/docs
-		$(use_enable acl)
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
 		$(use_enable gtk)
 		$(use_enable pam)
-		$(use_enable plymouth)
 		$(use_enable selinux)
 		$(use_enable tcpd tcpwrap)
+
+		# right now it is enabled on per-distro basis
+		# let's just hack into the check
+		$(use plymouth && echo have_plymouth=true)
 	)
 
 	if use gtk; then
@@ -89,7 +87,7 @@ src_install() {
 		bashcompletiondir=/tmp
 
 	# move files as necessary
-	newbashcomp "${D}"/tmp/systemctl-bash-completion.sh ${PN}
+	dobashcompletion "${D}"/tmp/systemctl-bash-completion.sh
 	dodoc "${D}"/tmp/docs/*
 	rm -rf "${D}"/tmp || die
 
@@ -99,6 +97,10 @@ src_install() {
 	done
 
 	keepdir /run
+
+	# Create /run/lock as required by new baselay/OpenRC compat.
+	insinto /usr/lib/tmpfiles.d
+	doins "${FILESDIR}"/gentoo-run.conf
 }
 
 pkg_preinst() {

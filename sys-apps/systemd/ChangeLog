@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.15 2011/11/06 15:19:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.16 2011/12/12 08:17:37 mgorny Exp $
+
+*systemd-37-r1 (12 Dec 2011)
+*systemd-29-r3 (12 Dec 2011)
+
+  12 Dec 2011; Michał Górny <mgorny@gentoo.org> -systemd-29-r2.ebuild,
+  +systemd-29-r3.ebuild, -systemd-37.ebuild, +systemd-37-r1.ebuild,
+  +files/gentoo-run.conf:
+  Create /run/lock as enforced by new OpenRC.
 
   06 Nov 2011; Michał Górny <mgorny@gentoo.org> systemd-37.ebuild:
   Re-introduce keywords to the systemd ebuild as package.mask entry was
