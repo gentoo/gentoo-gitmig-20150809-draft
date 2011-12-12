@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.158 2011/05/29 17:55:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.159 2011/12/12 11:40:27 jer Exp $
+
+  12 Dec 2011; Jeroen Roovers <jer@gentoo.org> dejavu-2.33.ebuild:
+  Stable for HPPA (bug #393753).
 
   29 May 2011; Fabian Groffen <grobian@gentoo.org> dejavu-2.33.ebuild:
   Marked ~m68k-mint, bug #365205
