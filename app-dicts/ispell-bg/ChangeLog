@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-bg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-bg/ChangeLog,v 1.11 2009/10/17 23:04:45 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-bg/ChangeLog,v 1.12 2011/12/12 13:00:07 jer Exp $
+
+  12 Dec 2011; Jeroen Roovers <jer@gentoo.org> ispell-bg-4.1.ebuild:
+  Stable for HPPA (bug #394001).
 
   17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> ispell-bg-4.0.ebuild:
   QA fixes; unquoted variables
