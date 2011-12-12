@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Numbers_Words
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Words/ChangeLog,v 1.28 2010/02/16 04:58:30 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Words/ChangeLog,v 1.29 2011/12/12 10:19:20 olemarkus Exp $
+
+*PEAR-Numbers_Words-0.16.2 (12 Dec 2011)
+
+  12 Dec 2011; Ole Markus With <olemarkus@gentoo.org>
+  +PEAR-Numbers_Words-0.16.2.ebuild:
+  Version bump
 
 *PEAR-Numbers_Words-0.16.1 (16 Feb 2010)
 
