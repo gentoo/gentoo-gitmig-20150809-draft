@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.84.0.ebuild,v 1.8 2011/11/27 19:07:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.84.0.ebuild,v 1.9 2011/12/12 08:22:53 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -34,6 +34,11 @@ src_prepare() {
 
 	# Workaround testsuite issues
 	epatch "${FILESDIR}/${PN}-0.83.1-workaround-broken-test.patch"
+
+	# Simple sed to avoid an eautoreconf
+	# bug #363679, https://bugs.freedesktop.org/show_bug.cgi?id=43735
+	sed -e 's/\(RST2HTMLFLAGS=\)$/\1--input-encoding=UTF-8/' \
+		-i configure || die "sed failed"
 
 	python_src_prepare
 }
