@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6013 2011/12/12 22:31:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6014 2011/12/12 22:57:38 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> thirdpartymirrors:
+  ibiblio KDE mirror is broken atm
 
   12 Dec 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
   Spelling.
