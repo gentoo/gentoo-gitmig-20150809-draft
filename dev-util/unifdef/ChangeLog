@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.19 2011/12/12 11:59:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.20 2011/12/12 18:51:37 ago Exp $
+
+  12 Dec 2011; Agostino Sarubbo <ago@gentoo.org> unifdef-2.6.ebuild:
+  Stable for AMD64, wrt bug #394069
 
   12 Dec 2011; Jeroen Roovers <jer@gentoo.org> unifdef-2.6.ebuild:
   Stable for HPPA (bug #394069).
