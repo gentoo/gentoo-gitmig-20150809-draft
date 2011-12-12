@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.2.2.ebuild,v 1.1 2011/12/11 23:47:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.2.2.ebuild,v 1.2 2011/12/12 19:56:13 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -50,6 +50,10 @@ src_prepare() {
 	epatch ../patch/*.patch
 
 	gnome2_src_prepare
+
+	# Work around intltool-0.50.0's intltool.m4 backwards incompat; bug #394445
+	sed -e 's:\($(INTLTOOL_MERGE) -x -u \)--no-translations:\1/tmp:' \
+		-i configure || die "sed failed"
 }
 
 src_install() {
