@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.11.ebuild,v 1.3 2011/11/24 15:40:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.11.ebuild,v 1.4 2011/12/12 00:42:41 chithanh Exp $
 
 EAPI=4
 
@@ -579,6 +579,10 @@ pkg_postinst() {
 	elog
 	elog "Some cards need acpid running to handle events"
 	elog "Please add it to boot runlevel with rc-update add acpid boot"
+	elog
+	ewarn "This release of ati-drivers has a crashing bug when using Xv video."
+	ewarn "To avoid this problem, configure your video playback software for"
+	ewarn "OpenGL output. See https://bugs.gentoo.org/show_bug.cgi?id=391193"
 
 	use modules && linux-mod_pkg_postinst
 	"${ROOT}"/usr/bin/eselect opengl set --use-old ati
