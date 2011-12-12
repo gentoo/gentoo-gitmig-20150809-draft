@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.7.2.ebuild,v 1.1 2011/12/12 11:25:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.7.2.ebuild,v 1.2 2011/12/12 18:36:59 ago Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/${MY_P}.tar.gz
 	 mirror://gentoo/gentoo-asterisk-patchset-1.5.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE="ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex sqlite sqlite3 srtp static syslog usb vorbis"
 
