@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.17 2011/12/12 21:11:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.18 2011/12/12 22:27:34 radhermit Exp $
+
+*libbluray-0.2.1-r1 (12 Dec 2011)
+
+  12 Dec 2011; Tim Harder <radhermit@gentoo.org> +libbluray-0.2.1-r1.ebuild:
+  Revision bump to pull in libaacs when aacs supported is enabled.
 
   12 Dec 2011; Tim Harder <radhermit@gentoo.org>
   libbluray-0.0.1_pre20110210-r1.ebuild, libbluray-0.0.1_pre20110819.ebuild,
