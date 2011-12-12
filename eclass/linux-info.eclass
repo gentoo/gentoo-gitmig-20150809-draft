@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.90 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.91 2011/12/12 22:01:37 vapier Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -359,40 +359,27 @@ linux_chkconfig_string() {
 # kernel_is 2 6 9 returns true
 # @CODE
 
-# got the jist yet?
-
+# Note: duplicated in kernel-2.eclass
 kernel_is() {
 	# if we haven't determined the version yet, we need to.
 	linux-info_get_any_version
 
-	local operator testagainst value x=0 y=0 z=0
+	# Now we can continue
+	local operator test value
 
-	case ${1} in
-	  -lt|lt) operator="-lt"; shift;;
-	  -gt|gt) operator="-gt"; shift;;
-	  -le|le) operator="-le"; shift;;
-	  -ge|ge) operator="-ge"; shift;;
-	  -eq|eq) operator="-eq"; shift;;
-	       *) operator="-eq";;
+	case ${1#-} in
+	  lt) operator="-lt"; shift;;
+	  gt) operator="-gt"; shift;;
+	  le) operator="-le"; shift;;
+	  ge) operator="-ge"; shift;;
+	  eq) operator="-eq"; shift;;
+	   *) operator="-eq";;
 	esac
+	[[ $# -gt 3 ]] && die "Error in kernel-2_kernel_is(): too many parameters"
 
-	for x in ${@}; do
-		for((y=0; y<$((3 - ${#x})); y++)); do value="${value}0"; done
-		value="${value}${x}"
-		z=$((${z} + 1))
-
-		case ${z} in
-		  1) for((y=0; y<$((3 - ${#KV_MAJOR})); y++)); do testagainst="${testagainst}0"; done;
-		     testagainst="${testagainst}${KV_MAJOR}";;
-		  2) for((y=0; y<$((3 - ${#KV_MINOR})); y++)); do testagainst="${testagainst}0"; done;
-		     testagainst="${testagainst}${KV_MINOR}";;
-		  3) for((y=0; y<$((3 - ${#KV_PATCH})); y++)); do testagainst="${testagainst}0"; done;
-		     testagainst="${testagainst}${KV_PATCH}";;
-		  *) die "Error in kernel-2_kernel_is(): Too many parameters.";;
-		esac
-	done
-
-	[ "${testagainst}" ${operator} "${value}" ] && return 0 || return 1
+	: $(( test = (KV_MAJOR << 16) + (KV_MINOR << 8) + KV_PATCH ))
+	: $(( value = (${1:-${KV_MAJOR}} << 16) + (${2:-${KV_MINOR}} << 8) + ${3:-${KV_PATCH}} ))
+	[ ${test} ${operator} ${value} ]
 }
 
 get_localversion() {
