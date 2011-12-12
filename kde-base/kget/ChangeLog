@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.210 2011/12/11 18:52:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.211 2011/12/12 01:16:53 abcd Exp $
+
+  12 Dec 2011; Jonathan Callen <abcd@gentoo.org>
+  -files/kget-4.6.2-metalinker.patch:
+  rm old files
 
 *kget-4.7.4 (11 Dec 2011)
 

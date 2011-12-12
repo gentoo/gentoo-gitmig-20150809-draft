@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.118 2011/12/11 18:52:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.119 2011/12/12 01:30:30 abcd Exp $
+
+  12 Dec 2011; Jonathan Callen <abcd@gentoo.org> -files/marble-4.7-magic.patch:
+  rm old files
 
 *marble-4.7.4 (11 Dec 2011)
 

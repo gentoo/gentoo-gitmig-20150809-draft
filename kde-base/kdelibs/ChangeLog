@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.808 2011/12/11 18:52:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.809 2011/12/12 01:08:49 abcd Exp $
+
+  12 Dec 2011; Jonathan Callen <abcd@gentoo.org>
+  -files/kdelibs-4.3.80-module-suffix.patch,
+  -files/kdelibs-4.4.66-macos-unbundle.patch,
+  -files/kdelibs-4.6.0-kateacc.patch, -files/kdelibs-4.7.1-clearbutton.patch,
+  -files/kdelibs-4.7.1-qlabel-1.patch, -files/kdelibs-4.7.1-qlabel-2.patch,
+  -files/kdelibs-4.7.2-nepomuk-unicode.patch:
+  rm old files
 
 *kdelibs-4.7.4 (11 Dec 2011)
 
