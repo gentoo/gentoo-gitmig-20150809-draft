@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.8.15.ebuild,v 1.1 2011/12/11 19:34:22 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.8.15.ebuild,v 1.2 2011/12/12 03:24:01 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -127,7 +127,7 @@ src_configure() {
 	# i.e: not loaded module in __build__ time,
 	# build server not supported kvm, etc. ...
 	#
-	# In fact, this feature is virtio support and requires 
+	# In fact, this feature is virtio support and requires
 	# configured kernel.
 	export vmchannel_test=no
 
