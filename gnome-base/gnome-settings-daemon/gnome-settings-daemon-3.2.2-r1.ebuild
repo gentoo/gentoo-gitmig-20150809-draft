@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.1.ebuild,v 1.1 2011/10/29 02:11:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.2-r1.ebuild,v 1.1 2011/12/12 00:37:28 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="+colord +cups debug packagekit policykit short-touchpad-timeout smartcard +udev"
+IUSE="+colord +cups debug packagekit policykit +short-touchpad-timeout smartcard +udev"
 
 # Latest gsettings-desktop-schemas is needed due to commit e8d1de92
 # Latest gnome-desktop needed to fix the DPMS timeout bug #385063
@@ -95,9 +95,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Upstream patch to fix undefined symbol, will be in next release
-	epatch "${FILESDIR}/${P}-WEXITSTATUS.patch"
-
 	# Backport patch from git master branch (not in gnome-3-2 branch yet)
 	# fixing loading color profiles at startup
 	epatch "${FILESDIR}/${PN}-3.2.0-color-unbreak-loading-profiles.patch"
@@ -111,6 +108,13 @@ src_prepare() {
 
 	# Make colord optional; requires eautoreconf
 	epatch "${FILESDIR}/${PN}-3.2.1-optional-colord.patch"
+
+	# Fix inability to add displays without EDID data; in next release
+	epatch "${FILESDIR}/${P}-color-unavailable-edid.patch"
+
+	# Fix crash with cups-1.5.0; will be in next release
+	epatch "${FILESDIR}/${P}-print-notifications-malformed-dbus.patch"
+
 	eautoreconf
 
 	gnome2_src_prepare
