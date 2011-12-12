@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.805 2011/12/12 17:33:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.806 2011/12/12 17:47:28 vapier Exp $
+
+  12 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/pkg_setup.eblit,
+  files/eblits/src_compile.eblit, files/eblits/src_unpack.eblit:
+  Run scanelf on systems when upgrading to look for old __guard symbols #394453
+  by morlix.
 
   12 Dec 2011; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit, files/eblits/src_install.eblit:
