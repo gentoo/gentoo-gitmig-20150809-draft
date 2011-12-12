@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.4.4.ebuild,v 1.1 2011/12/11 23:42:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.4.4.ebuild,v 1.2 2011/12/12 23:40:50 radhermit Exp $
 
 EAPI=4
 
@@ -42,15 +42,6 @@ src_unpack() {
 
 src_prepare() {
 	find "${WORKDIR}" -name Makefile -exec sed -i -e 's/ -Xs / /g' {} + || die
-
-	# Use default configuration (minus stripping) unless specifically requested otherwise
-	if ! test ${PPC_CONFIG_PATH+set}; then
-		local FPCVER="${PV}"
-		export PPC_CONFIG_PATH="${WORKDIR}"
-		sed -e 's/^FPBIN=/#&/' /usr/lib/fpc/${FPCVER}/samplecfg |
-			sh -s /usr/lib/fpc/${FPCVER} "${PPC_CONFIG_PATH}" || die
-		sed -i -e '/^-Xs/d' "${PPC_CONFIG_PATH}"/fpc.cfg || die
-	fi
 }
 
 set_pp() {

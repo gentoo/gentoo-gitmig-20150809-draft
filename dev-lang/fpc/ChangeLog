@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.55 2011/12/11 23:42:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.56 2011/12/12 23:40:50 radhermit Exp $
+
+  12 Dec 2011; Tim Harder <radhermit@gentoo.org> fpc-2.4.4.ebuild:
+  Remove deprecated external fpc-ide related setup (fixes bug #394475).
 
 *fpc-2.4.4 (11 Dec 2011)
 
