@@ -1,0 +1,13 @@
+# ChangeLog for gnome-extra/evolution-groupwise
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-groupwise/ChangeLog,v 1.1 2011/12/12 05:25:58 tetromino Exp $
+
+*evolution-groupwise-3.2.1 (12 Dec 2011)
+
+  12 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +evolution-groupwise-3.2.1.ebuild,
+  +files/evolution-groupwise-3.2.1-timezone.patch, +metadata.xml:
+  New ebuild for evolution groupwise support; formerly this was part of
+  mail-client/evolution, split off into a separate package in 3.2 (bug #394327,
+  thanks to anaximander).
+
