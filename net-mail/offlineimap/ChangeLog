@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.76 2011/12/10 17:47:45 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.77 2011/12/12 08:42:47 tomka Exp $
+
+  12 Dec 2011; Thomas Kahle <tomka@gentoo.org> offlineimap-6.4.2.ebuild:
+  Set python abi to not build for 2.[45]
 
   10 Dec 2011; Thomas Kahle <tomka@gentoo.org> offlineimap-6.4.2.ebuild:
   Restrict to >=python-2.6
