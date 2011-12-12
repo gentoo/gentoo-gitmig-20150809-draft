@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_setup.eblit,v 1.8 2011/12/12 17:47:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_setup.eblit,v 1.9 2011/12/12 23:22:33 vapier Exp $
 
 glibc_compile_test() {
 	local ret save_cflags=${CFLAGS}
@@ -97,7 +97,9 @@ eblit-glibc-pkg_setup() {
 		ewarn "PIE hardening not applied, as your compiler doesn't default to PIE"
 
 	# Make sure host system is up to date #394453
-	if has_version '<sys-libs/glibc-2.15' ; then
+	if has_version '<sys-libs/glibc-2.13' && \
+	   [[ -n $(scanelf -qys__guard -F'#s%F' "${ROOT}"/lib*/l*-*.so) ]]
+	then
 		ebegin "Scanning system for __guard to see if you need to rebuild first ..."
 		local files=$(
 			scanelf -qys__guard -F'#s%F' \
@@ -105,7 +107,9 @@ eblit-glibc-pkg_setup() {
 				"${ROOT}"/lib* \
 				"${ROOT}"/usr/*bin/ \
 				"${ROOT}"/usr/lib* | \
-				grep -v '^/lib.*/libc-2.*.so$'
+				grep -v \
+					-e "^${ROOT}/lib.*/libc-2.*.so$" \
+					-e "^${ROOT}/lib.*/ld-2.*.so$"
 		)
 		[[ -z ${files} ]]
 		if ! eend $? ; then
