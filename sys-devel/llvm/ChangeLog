@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.57 2011/12/05 18:39:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.58 2011/12/12 18:23:27 grobian Exp $
+
+  12 Dec 2011; Fabian Groffen <grobian@gentoo.org> llvm-3.0.ebuild,
+  llvm-9999.ebuild:
+  Fix install_name of renamed profile_rt.dylib library (to libprofile_rt.dylib).
 
   05 Dec 2011; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.0.ebuild,
   +files/llvm-3.0-ocaml_install.patch:
