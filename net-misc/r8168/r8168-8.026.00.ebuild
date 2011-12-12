@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/r8168-8.026.00.ebuild,v 1.1 2011/11/13 21:44:04 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/r8168-8.026.00.ebuild,v 1.2 2011/12/12 01:28:09 joker Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ ERROR_R8169="${P} requires Realtek 8169 PCI Gigabit Ethernet adapter (CONFIG_R81
 
 pkg_setup() {
 	linux-mod_pkg_setup
-	BUILD_PARAMS="KDIR=${KV_DIR}"
+	BUILD_PARAMS="KERNELDIR=${KV_DIR}"
 }
 
 src_install() {

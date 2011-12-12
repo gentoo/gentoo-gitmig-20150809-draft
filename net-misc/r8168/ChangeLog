@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/r8168
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.1 2011/11/13 21:44:04 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.2 2011/12/12 01:28:09 joker Exp $
+
+  12 Dec 2011; Christian Birchinger <joker@gentoo.org> r8168-8.026.00.ebuild:
+  Fix typo make it use the /usr/src/linux kernel and not the current running
+  one
 
 *r8168-8.026.00 (13 Nov 2011)
 
