@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docx2txt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docx2txt/ChangeLog,v 1.1 2011/02/06 02:53:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docx2txt/ChangeLog,v 1.2 2011/12/12 23:02:39 radhermit Exp $
+
+*docx2txt-1.1 (12 Dec 2011)
+
+  12 Dec 2011; Tim Harder <radhermit@gentoo.org> +docx2txt-1.1.ebuild,
+  +files/docx2txt-1.1-paragraph-newline.patch:
+  Version bump.
 
 *docx2txt-1.0 (06 Feb 2011)
 
