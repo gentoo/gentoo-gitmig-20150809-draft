@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.21 2011/12/11 18:52:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.22 2011/12/12 23:44:28 dilfridge Exp $
+
+  12 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-l10n-4.7.4.ebuild:
+  Fix SRC_URI, remove not-yet-existing si, fix manifest; bug 394495 and others
 
 *kdepim-l10n-4.7.4 (11 Dec 2011)
 

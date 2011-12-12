@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.7.4.ebuild,v 1.2 2011/12/12 03:24:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.7.4.ebuild,v 1.3 2011/12/12 23:44:28 dilfridge Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+handbook"
 
 MY_LANGS="ar bg bs ca ca@valencia cs da de el en_GB es et eu fi fr ga gl he hr
-hu ia id is it ja kk km kn ko lt lv nb nds nl nn pa pl pt pt_BR ro ru si sk sl
+hu ia id is it ja kk km kn ko lt lv nb nds nl nn pa pl pt pt_BR ro ru sk sl
 sr sv th tr ug uk wa zh_CN zh_TW"
 
 URI_BASE="${SRC_URI/-${PV}.tar.bz2/}"
@@ -27,7 +27,7 @@ SRC_URI=""
 
 for MY_LANG in ${MY_LANGS} ; do
 	IUSE="${IUSE} linguas_${MY_LANG}"
-	SRC_URI="${SRC_URI} linguas_${MY_LANG}? ( ${URI_BASE}/kde-l10n-${MY_LANG}-${PV}.tar.bz2 )"
+	SRC_URI="${SRC_URI} linguas_${MY_LANG}? ( ${URI_BASE/kdepim/kde}/kde-l10n-${MY_LANG}-${PV}.tar.bz2 )"
 done
 
 S="${WORKDIR}"
