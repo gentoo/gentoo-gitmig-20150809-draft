@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>dotnet</herd>
-<maintainer restrict="&gt;=dev-dotnet/pe-format-2">
-	<email>mgorny@gentoo.org</email>
-	<name>Michał Górny</name>
-</maintainer>
-<upstream>
-	<maintainer restrict="&gt;=dev-dotnet/pe-format-2" status="active">
+	<herd>dotnet</herd>
+	<maintainer>
 		<email>mgorny@gentoo.org</email>
 		<name>Michał Górny</name>
 	</maintainer>
-	<bugs-to>http://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&amp;component=Applications&amp;short_desc=dev-dotnet/pe-format:%20</bugs-to>
-</upstream>
+	<upstream>
+		<maintainer status="active">
+			<email>mgorny@gentoo.org</email>
+			<name>Michał Górny</name>
+		</maintainer>
+		<bugs-to>https://github.com/mgorny/pe-format2/issues/</bugs-to>
+	</upstream>
 </pkgmetadata>
