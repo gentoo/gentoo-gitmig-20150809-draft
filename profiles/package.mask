@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13325 2011/12/11 19:23:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13326 2011/12/12 10:09:51 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -616,11 +616,6 @@ net-zope/zpsycopgda
 net-zope/zsqlmethods
 net-zope/zsyncer
 net-zope/zwiki
-
-# Ole Markus With <olemarkus@gentoo.org> (07 Sep 2011)
-# Masked for removal 7 Oct 2011.
-# Multiple bugs (315721,341685) and dead upstream
-dev-php/roadsend-php
 
 # Sebastian Pipping <sping@gentoo.org> (31 Aug 2011)
 # Upcoming bump, afraid of ~arch for now (bug #283152)
