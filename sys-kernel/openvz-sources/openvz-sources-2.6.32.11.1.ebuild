@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.32.11.1.ebuild,v 1.2 2011/04/01 18:19:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.32.11.1.ebuild,v 1.3 2011/12/12 05:24:44 pva Exp $
 
 inherit versionator
 
@@ -23,6 +23,7 @@ if [[ ${PR} != r0 ]]; then
 	KV_FULL+=-${PR}
 	EXTRAVERSION+=-${PR}
 fi
+S=${WORKDIR}/linux-${KV_FULL}
 
 # ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} should succeed.
 KV_MAJOR=$(get_version_component_range 1 ${OKV})
@@ -32,7 +33,6 @@ KV_PATCH=$(get_version_component_range 3 ${OKV})
 KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 
 inherit kernel-2
-detect_version
 
 SLOT=${CKV}-${OVZ_KV}
 if [[ ${PR} != r0 ]]; then
