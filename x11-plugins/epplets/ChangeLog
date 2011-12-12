@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/epplets
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.15 2010/09/16 17:37:29 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.16 2011/12/12 20:00:55 ago Exp $
+
+  12 Dec 2011; Agostino Sarubbo <ago@gentoo.org> epplets-0.12.ebuild:
+  Stable for AMD64, wrt bug #393909
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> epplets-0.10.ebuild,
   epplets-0.11.ebuild, epplets-0.12.ebuild:
