@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.320 2011/12/12 06:42:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.321 2011/12/12 16:10:29 pva Exp $
+
+  12 Dec 2011; Peter Volkov <pva@gentoo.org> wireshark-1.6.4.ebuild,
+  +files/wireshark-1.6.4-doc-build.patch:
+  Fix validity error in release-notes.xml, bug #394433 wrt Juergen Rose.
 
 *wireshark-1.6.4 (12 Dec 2011)
 

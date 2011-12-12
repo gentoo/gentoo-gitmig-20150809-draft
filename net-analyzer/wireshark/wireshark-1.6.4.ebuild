@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.4.ebuild,v 1.1 2011/12/12 06:42:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.4.ebuild,v 1.2 2011/12/12 16:10:29 pva Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -104,6 +104,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-build.patch"
+	epatch "${FILESDIR}/${P}-doc-build.patch"
 }
 
 src_configure() {
