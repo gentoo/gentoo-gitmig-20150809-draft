@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/converseen-0.4.7.ebuild,v 1.1 2011/12/07 20:31:27 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/converseen-0.4.7.ebuild,v 1.2 2011/12/12 19:11:23 maksbotan Exp $
 
 EAPI="4"
 LANGSLONG="cs_CZ de_DE fr_FR hu_HU it_IT pl_PL pt_BR tr_TR"
@@ -16,6 +16,12 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
+for x in ${LANGS}; do
+	IUSE="${IUSE} linguas_${x}"
+done
+for x in ${LANGSLONG}; do
+	IUSE="${IUSE} linguas_${x%_*}"
+done
 
 RDEPEND="
 	x11-libs/qt-gui:4
