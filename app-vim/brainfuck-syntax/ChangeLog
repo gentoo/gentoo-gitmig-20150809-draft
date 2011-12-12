@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/brainfuck-syntax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/brainfuck-syntax/ChangeLog,v 1.13 2011/12/11 17:08:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/brainfuck-syntax/ChangeLog,v 1.14 2011/12/12 19:32:40 ago Exp $
+
+  12 Dec 2011; Agostino Sarubbo <ago@gentoo.org> brainfuck-syntax-1.0.2.ebuild:
+  Stable for AMD64, wrt bug #393963
 
   11 Dec 2011; Raúl Porcel <armin76@gentoo.org> brainfuck-syntax-1.0.1.ebuild,
   brainfuck-syntax-1.0.2.ebuild:
