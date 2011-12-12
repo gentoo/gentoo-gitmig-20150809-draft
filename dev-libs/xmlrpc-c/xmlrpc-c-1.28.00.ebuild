@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.28.00.ebuild,v 1.1 2011/10/01 21:44:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.28.00.ebuild,v 1.2 2011/12/12 15:43:41 pva Exp $
 
 EAPI="4"
 
@@ -29,7 +29,8 @@ IUSE="abyss +cgi +curl +cxx +libxml2 libwww static-libs threads tools"
 REQUIRED_USE="test? ( static-libs abyss curl cxx )"
 
 DEPEND="
-	tools? ( dev-perl/frontier-rpc )
+	tools? ( dev-perl/frontier-rpc
+		sys-libs/readline )
 	curl? ( net-misc/curl )
 	libwww? ( net-libs/libwww[ssl] )
 	libxml2? ( dev-libs/libxml2 )"
