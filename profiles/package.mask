@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13326 2011/12/12 10:09:51 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13327 2011/12/12 10:58:40 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ole Markus With <olemarkus@gentoo.org> (12 Dec 2011)
+# Masked due to dead upstream or being superseded
+# Bugs 394067, 393979, 393893, 392853
+dev-php/PEAR-Net_LDAP
+app-admin/php-toolkit
+dev-php/PEAR-Text_Diff
+dev-php/PEAR-DB_Table
 
 # Maxim Koltsov <maksbotan@gentoo.org> (11 Dec 2011)
 # Mask until big testing by proxy maintainer is finished

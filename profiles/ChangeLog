@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6010 2011/12/12 10:09:51 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6011 2011/12/12 10:58:40 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Dec 2011; Ole Markus With <olemarkus@gentoo.org> package.mask:
+  Masked due to dead upstream or being superseded.
+  Bugs 394067, 393979, 393893, 392853
 
   12 Dec 2011; Ole Markus With <olemarkus@gentoo.org> package.mask:
   Removed mask of roadsend-php. Package removed from tree
