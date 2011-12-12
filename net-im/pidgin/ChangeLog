@@ -1,6 +1,12 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.261 2011/10/27 08:28:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.262 2011/12/12 18:28:21 pva Exp $
+
+  12 Dec 2011; Peter Volkov <pva@gentoo.org>
+  +files/pidgin-2.10.0-networkmanager-0.9.patch:
+  Version bump, security bug #394239 by Agostino Sarubbo. Install pietray.py,
+  bug #393549 by Randy Barlow. Detect network with networkmanager-0.9, bug
+  #392193 by Pacho Ramos.
 
 *pidgin-2.10.0-r2 (27 Oct 2011)
 
