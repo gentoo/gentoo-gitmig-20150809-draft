@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.91 2011/11/27 18:43:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.92 2011/12/12 12:11:06 pacho Exp $
+
+  12 Dec 2011; Pacho Ramos <pacho@gentoo.org> -xsane-0.997.ebuild:
+  Drop old.
 
   27 Nov 2011; nixnut <nixnut@gentoo.org> xsane-0.998.ebuild:
   ppc stable #380917
