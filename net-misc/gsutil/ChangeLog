@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gsutil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.3 2011/11/29 16:49:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.4 2011/12/13 19:55:27 vapier Exp $
+
+*gsutil-2011.21.11-r1 (13 Dec 2011)
+
+  13 Dec 2011; Mike Frysinger <vapier@gentoo.org> -gsutil-2011.21.11.ebuild,
+  +gsutil-2011.21.11-r1.ebuild:
+  Install VERSION file since gsutil sometimes wants to read it #394471 by
+  Janusz.
 
   28 Nov 2011; Mike Frysinger <vapier@gentoo.org> gsutil-2011.21.11.ebuild:
   Force newer version of boto to match what upstream expects.
