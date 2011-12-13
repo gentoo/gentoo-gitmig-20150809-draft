@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.15 2011/12/13 13:23:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.16 2011/12/13 14:48:36 scarabeus Exp $
 
 EAPI=4
 
@@ -251,7 +251,7 @@ src_unpack() {
 			if [[ ${mod} == binfilter ]] && ! use binfilter; then
 				continue
 			fi
-			unpack "${PN}-${mod}-${PV}.tar.bz2"
+			unpack "${PN}-${mod}-${PV}.tar.xz"
 			if [[ ${mod} != core ]]; then
 				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}"
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
