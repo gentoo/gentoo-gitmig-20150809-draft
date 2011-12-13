@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.845 2011/12/08 18:14:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.846 2011/12/13 17:53:24 zorry Exp $
+
+*gcc-4.5.3-r2 (13 Dec 2011)
+
+  13 Dec 2011; Magnus Granberg <zorry@gentoo.org> +gcc-4.5.3-r2.ebuild:
+  Bump piepatchset to 0.4.6 and fix bug 393321
 
   08 Dec 2011; Mike Frysinger <vapier@gentoo.org> gcc-4.6.2.ebuild:
   Update x32 snapshot for native x32 support.
