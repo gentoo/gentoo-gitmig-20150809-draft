@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7.ebuild,v 1.2 2011/11/30 11:42:55 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7.ebuild,v 1.3 2011/12/13 18:50:56 nirbheek Exp $
 
 EAPI="3"
 
@@ -14,8 +14,8 @@ SLOTVER=$(get_version_component_range 1-2 ${PV})
 LICENSE="MIT"
 SLOT="${SLOTVER}"
 PYTHON_ABI="2.7-pypy-${SLOTVER}"
-KEYWORDS="~amd64"
-IUSE="doc examples +jit sandbox stackless test bzip2 ncurses xml ssl"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc examples +jit sandbox test bzip2 ncurses xml ssl"
 
 RDEPEND=">=sys-libs/zlib-1.1.3
 		virtual/libffi
@@ -47,9 +47,6 @@ src_compile() {
 	fi
 	if use sandbox; then
 		conf+=" --sandbox"
-	fi
-	if use stackless; then
-		conf+=" --stackless"
 	fi
 
 	conf+=" ./pypy/translator/goal/targetpypystandalone.py"

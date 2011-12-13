@@ -4,9 +4,11 @@
   <maintainer>
     <email>djc@gentoo.org</email>
   </maintainer>
+  <maintainer>
+    <email>nirbheek@gentoo.org</email>
+  </maintainer>
   <use>
     <flag name="jit">Enable the JIT compiler</flag>
     <flag name="sandbox">Enable sandboxing functionality</flag>
-    <flag name="stackless">Run in stackless mode</flag>
   </use>
 </pkgmetadata>
