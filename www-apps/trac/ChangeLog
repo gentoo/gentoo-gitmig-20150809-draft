@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.120 2011/03/22 10:17:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.121 2011/12/13 12:35:09 naota Exp $
+
+  13 Dec 2011; Naohiro Aota <naota@gentoo.org> trac-0.12.2.ebuild:
+  Add ~x86-fbsd wrt #336211
 
   22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -trac-0.12.1.ebuild:
