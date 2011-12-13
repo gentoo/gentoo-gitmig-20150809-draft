@@ -1,6 +1,16 @@
 # ChangeLog for games-arcade/rocksndiamonds
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.42 2011/08/12 18:57:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.43 2011/12/13 04:15:12 mr_bones_ Exp $
+
+*rocksndiamonds-3.3.0.1-r1 (13 Dec 2011)
+
+  13 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  -rocksndiamonds-3.2.6.1.ebuild,
+  -files/rocksndiamonds-3.2.6.1-parallel-build.patch,
+  -rocksndiamonds-3.3.0.1.ebuild, +rocksndiamonds-3.3.0.1-r1.ebuild,
+  +files/rocksndiamonds-3.3.0.1-perms.patch:
+  Add patch from Redhat bugzilla to make sure that ~/.rocksndiamonds is created
+  writable only by the user (bug #394499)
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   rocksndiamonds-3.3.0.1.ebuild:
