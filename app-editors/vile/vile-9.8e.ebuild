@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8e.ebuild,v 1.2 2011/10/17 07:22:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8e.ebuild,v 1.3 2011/12/13 21:57:44 radhermit Exp $
 
 EAPI=4
-
-inherit eutils
 
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
 HOMEPAGE="http://invisible-island.net/vile/"
