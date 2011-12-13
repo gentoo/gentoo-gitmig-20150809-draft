@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.8e.ebuild,v 1.1 2011/04/30 20:53:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.8e.ebuild,v 1.2 2011/12/13 22:07:53 radhermit Exp $
 
 EAPI=4
 
-inherit eutils versionator
+inherit versionator
 
 MY_P="${PN/x/}-${PV}"
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
