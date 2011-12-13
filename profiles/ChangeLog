@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6015 2011/12/13 04:31:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6016 2011/12/13 18:52:14 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Dec 2011; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Mask app-editors/emacs:21 and :22 for removal.
 
   13 Dec 2011; Tim Harder <radhermit@gentoo.org> package.mask:
   Unmask wordpress-3.3.

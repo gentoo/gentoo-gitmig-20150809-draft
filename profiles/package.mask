@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13330 2011/12/13 04:31:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13331 2011/12/13 18:52:14 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (13 Dec 2011)
+# SLOTs 21 and 22 of app-editors/emacs, corresponding to
+# GNU Emacs versions 21.4 and 22.3. These versions were
+# released in February 2005 and September 2008, respectively.
+# Please upgrade to app-editors/emacs-23.3 and update your
+# Emacs Lisp packages with emacs-updater.
+# Masked for removal in 60 days, or after the release of
+# GNU Emacs 24.1, whatever will occur later. Bug 394589.
+=app-editors/emacs-21*
+=app-editors/emacs-22*
+<virtual/emacs-23
 
 # Ole Markus With <olemarkus@gentoo.org> (12 Dec 2011)
 # Masked due to dead upstream or being superseded
