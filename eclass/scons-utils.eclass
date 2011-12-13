@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.9 2011/11/18 20:51:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.10 2011/12/13 18:37:25 mgorny Exp $
 
 # @ECLASS: scons-utils.eclass
 # @MAINTAINER:
@@ -105,7 +105,7 @@ escons() {
 	"${@}"
 	ret=${?}
 
-	[[ ${ret} -ne 0 && ${EAPI:-0} -ge 4 ]] && die "escons failed."
+	[[ ${ret} -ne 0 && ${EAPI} == 4 ]] && die "escons failed."
 	return ${ret}
 }
 
