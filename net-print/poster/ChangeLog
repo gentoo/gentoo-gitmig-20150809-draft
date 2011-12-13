@@ -1,6 +1,9 @@
 # ChangeLog for net-print/poster
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.12 2011/12/11 09:24:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.13 2011/12/13 23:26:30 ago Exp $
+
+  13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> poster-20060221.ebuild:
+  Stable for AMD64, wrt bug #392809
 
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> poster-20060221.ebuild:
   x86 stable wrt bug #392809
