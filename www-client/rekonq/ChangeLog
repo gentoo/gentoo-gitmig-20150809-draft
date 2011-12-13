@@ -1,6 +1,11 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.34 2011/12/12 20:35:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.35 2011/12/13 15:51:19 mschiff Exp $
+
+*rekonq-0.8.1 (13 Dec 2011)
+
+  13 Dec 2011; Marc Schiffbauer <mschiff@gentoo.org> +rekonq-0.8.1.ebuild:
+  Version bump. Thanks to Matteo Modesti. Fixes bug #394541.
 
   12 Dec 2011; Johannes Huber <johu@gentoo.org> -rekonq-0.7.0.ebuild:
   Remove old. Newer version stable on all keyworded arches.
