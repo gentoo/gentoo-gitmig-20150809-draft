@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.26 2011/12/11 09:22:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.27 2011/12/13 23:29:45 ago Exp $
+
+  13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> giftui-0.4.1-r2.ebuild:
+  Stable for AMD64, wrt bug #392801
 
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> giftui-0.4.1-r2.ebuild:
   x86 stable wrt bug #392801

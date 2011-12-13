@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.4.1-r2.ebuild,v 1.3 2011/12/11 09:22:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.4.1-r2.ebuild,v 1.4 2011/12/13 23:29:45 ago Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/giftui/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4.3:2
