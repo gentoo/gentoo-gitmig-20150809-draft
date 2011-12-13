@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-Bignum
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Bignum/ChangeLog,v 1.31 2011/09/04 11:23:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Bignum/ChangeLog,v 1.32 2011/12/13 09:08:06 naota Exp $
+
+  13 Dec 2011; Naohiro Aota <naota@gentoo.org>
+  Crypt-OpenSSL-Bignum-0.40.0.ebuild:
+  Add ~x86-fbsd
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -Crypt-OpenSSL-Bignum-0.04.ebuild:
