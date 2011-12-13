@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/alexandria
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.45 2010/10/25 12:33:32 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.46 2011/12/13 19:26:15 fauli Exp $
+
+*alexandria-0.6.7 (13 Dec 2011)
+
+  13 Dec 2011; Christian Faulhammer <fauli@gentoo.org>
+  +alexandria-0.6.7.ebuild:
+  version bump to fix Amazon search provider
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   -files/alexandria-rakefile.patch:
