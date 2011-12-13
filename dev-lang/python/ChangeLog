@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.561 2011/12/09 03:10:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.562 2011/12/13 18:10:35 djc Exp $
+
+  13 Dec 2011; Dirkjan Ochtman <djc@gentoo.org> files/linux2.patch:
+  Prune back linux2.patch to prevent race conditions (bug 394547).
 
   09 Dec 2011; Mike Frysinger <vapier@gentoo.org> python-3.2.2.ebuild:
   Replace hardcoded /lib64 searching with /<abi_libdir> paths.
