@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/prosite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.111 2011/12/11 09:28:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.112 2011/12/13 23:20:18 ago Exp $
+
+  13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> prosite-20.72.ebuild:
+  Stable for AMD64, wrt bug #392825
 
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> prosite-20.72.ebuild:
   x86 stable wrt bug #392825
