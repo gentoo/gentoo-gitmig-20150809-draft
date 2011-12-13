@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.3 2011/09/24 05:48:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.4 2011/12/13 01:40:02 joker Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic games
+inherit eutils flag-o-matic games toolchain-funcs
 
 MY_P="Mupen64Plus-${PV/./-}-src"
 
@@ -89,8 +89,9 @@ get_opts() {
 }
 
 src_compile() {
+	tc-export CC CXX
 	use x86 && use sse && append-flags -fomit-frame-pointer
-	emake $(get_opts) DBGSYM=1 all || die "make failed"
+	emake $(get_opts) DBGSYM=1 CC="${CC}" CXX="${CXX}" LD="${CC}" all || die "make failed"
 }
 
 src_install() {

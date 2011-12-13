@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/mupen64plus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.15 2011/09/24 05:48:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.16 2011/12/13 01:40:02 joker Exp $
+
+  13 Dec 2011; Christian Birchinger <joker@gentoo.org>
+  mupen64plus-1.5-r2.ebuild:
+  Make it use the user configured CC (also needed as linker because the args
+  are not LD compatible) and CXX. However, this will not cause it to build
+  cleanly with non-gcc compilers like clang
 
   24 Sep 2011; Mike Frysinger <vapier@gentoo.org> mupen64plus-1.5-r2.ebuild,
   +files/mupen64plus-1.5-minizip.patch:
