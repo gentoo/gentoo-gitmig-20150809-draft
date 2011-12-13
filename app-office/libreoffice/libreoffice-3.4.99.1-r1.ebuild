@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.99.1.ebuild,v 1.1 2011/12/12 17:44:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.99.1-r1.ebuild,v 1.1 2011/12/13 13:23:53 scarabeus Exp $
 
 EAPI=4
 
@@ -42,9 +42,9 @@ if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
 		for mod in ${MODULES}; do
 			if [[ ${mod} == binfilter ]]; then
-				SRC_URI+=" binfilter? ( ${i}/${PN}-${mod}-${PV}.tar.bz2 )"
+				SRC_URI+=" binfilter? ( ${i}/${PN}-${mod}-${PV}.tar.xz )"
 			else
-				SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.bz2"
+				SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.xz"
 			fi
 		done
 		unset mod
