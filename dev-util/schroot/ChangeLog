@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.30 2011/11/25 23:39:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.31 2011/12/13 22:24:32 abcd Exp $
+
+*schroot-1.4.23-r1 (13 Dec 2011)
+
+  13 Dec 2011; Jonathan Callen <abcd@gentoo.org> +schroot-1.4.23-r1.ebuild,
+  schroot-1.4.14.ebuild, schroot-1.4.23.ebuild:
+  Remove btrfs support from stable version (requires unstable btrfs-progs), bump
+  new unstable version that depends on the correct version of btrfs-progs (fixes
+  bug 394529)
 
   25 Nov 2011; Markos Chandras <hwoarang@gentoo.org> schroot-1.4.23.ebuild:
   Stable on amd64 wrt bug #391787

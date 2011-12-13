@@ -1,32 +1,30 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.14.ebuild,v 1.7 2011/12/13 22:24:32 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.23-r1.ebuild,v 1.1 2011/12/13 22:24:32 abcd Exp $
 
-EAPI="3"
-WANT_AUTOMAKE="1.11"
+EAPI="4"
 
-inherit autotools base flag-o-matic pam
+inherit autotools base pam versionator
 
 MY_P=${PN}_${PV}
 
 DESCRIPTION="Utility to execute commands in a chroot environment"
 HOMEPAGE="http://packages.debian.org/source/sid/schroot"
-SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${MY_P}.orig.tar.gz"
+SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${MY_P}.orig.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
-#IUSE="btrfs +dchroot debug doc lvm nls pam test"
-IUSE="+dchroot debug doc lvm nls pam test"
+KEYWORDS="~amd64 ~x86"
+IUSE="btrfs +dchroot debug doc lvm nls pam test"
 
 COMMON_DEPEND="
 	>=dev-libs/boost-1.42.0
 	dev-libs/lockdev
 	>=sys-apps/util-linux-2.16
+	btrfs? ( >=sys-fs/btrfs-progs-0.19-r2 )
 	lvm? ( sys-fs/lvm2 )
 	pam? ( sys-libs/pam )
 "
-#	btrfs? ( >=sys-fs/btrfs-progs-0.19-r2 )
 
 DEPEND="${COMMON_DEPEND}
 	doc? (
@@ -44,13 +42,10 @@ RDEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.4.7-tests.patch"
-	"${FILESDIR}/${P}-debug.patch"
 )
 
 src_prepare() {
 	base_src_prepare
-
-	append-flags -DBOOST_FILESYSTEM_VERSION=2
 
 	# Don't depend on cppunit unless we are testing
 	use test || sed -i '/AM_PATH_CPPUNIT/d' configure.ac
@@ -62,7 +57,7 @@ src_configure() {
 	root_tests=no
 	use test && (( EUID == 0 )) && root_tests=yes
 	econf \
-		--disable-btrfs-snapshot \
+		$(use_enable btrfs btrfs-snapshot) \
 		$(use_enable doc doxygen) \
 		$(use_enable dchroot) \
 		$(use_enable dchroot dchroot-dsa) \
@@ -78,11 +73,10 @@ src_configure() {
 		--disable-static \
 		--localstatedir="${EPREFIX}"/var \
 		--with-bash-completion-dir="${EPREFIX}"/usr/share/bash-completion
-#		$(use_enable btrfs btrfs-snapshot) \
 }
 
 src_compile() {
-	emake all $(usev doc) || die "emake failed"
+	emake all $(usev doc)
 }
 
 src_test() {
@@ -94,21 +88,19 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
 	insinto /usr/share/doc/${PF}/contrib/setup.d
-	doins contrib/setup.d/09fsck contrib/setup.d/10mount-ssh || die "installation of contrib scripts failed"
+	doins contrib/setup.d/09fsck contrib/setup.d/10mount-ssh
 
-	newinitd "${FILESDIR}"/schroot.initd schroot || die "installation of init.d script failed"
-	newconfd "${FILESDIR}"/schroot.confd schroot || die "installation of conf.d file failed"
-
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die "installation of docs failed"
+	newinitd "${FILESDIR}"/schroot.initd schroot
+	newconfd "${FILESDIR}"/schroot.confd schroot
 
 	if use doc; then
 		docinto html/sbuild
-		dohtml doc/sbuild/html/* || die "installation of html docs failed"
+		dohtml doc/sbuild/html/*
 		docinto html/schroot
-		dohtml doc/schroot/html/* || die "installation of html docs failed"
+		dohtml doc/schroot/html/*
 	fi
 
 	if use pam; then
@@ -121,9 +113,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	export had_older_1_4_1=false
-	has_version "<dev-util/schroot-1.4.1" && had_older_1_4_1=true
-	if ${had_older_1_4_1}; then
+	if [[ ${REPLACING_VERSIONS} == 1.2* || ${REPLACING_VERSIONS} == 1.4.0* ]]; then
 		einfo "Moving config files to new location..."
 		mkdir "${EROOT}etc/schroot/default"
 		mv_conffile etc/schroot/script-defaults etc/schroot/default/config
@@ -166,7 +156,7 @@ mv_conffile() {
 
 pkg_postinst() {
 	local x
-	if ${had_older_1_4_1}; then
+	if [[ ${REPLACING_VERSIONS} == 1.2* || ${REPLACING_VERSIONS} == 1.4.0* ]]; then
 		for x in script:config mount:fstab copyfiles nssdatabases; do
 			if [[ ! -e ${EROOT}etc/schroot/${x%:*}-defaults && -f ${EROOT}etc/schroot/default/${x#*:} ]]; then
 				einfo "Creating compatibility symlink for ${x%:*}-defaults"
