@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.01.ebuild,v 1.9 2010/06/15 18:12:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.01.ebuild,v 1.10 2011/12/13 12:52:16 naota Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
