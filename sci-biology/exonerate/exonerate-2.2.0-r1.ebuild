@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/exonerate/exonerate-2.2.0-r1.ebuild,v 1.3 2011/06/22 18:00:15 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/exonerate/exonerate-2.2.0-r1.ebuild,v 1.4 2011/12/13 14:56:55 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit autotools eutils
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Generic tool for pairwise sequence comparison"
 HOMEPAGE="http://www.ebi.ac.uk/~guy/exonerate/"
@@ -19,6 +19,10 @@ DEPEND="dev-libs/glib:2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	tc-export CC
+	sed \
+		-e 's: -O3 -finline-functions::g' \
+		-i configure.in || die
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	eautoreconf
 }
