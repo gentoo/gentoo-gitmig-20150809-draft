@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/giggle-0.6.1.ebuild,v 1.3 2011/12/10 15:37:35 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/giggle-0.6.1.ebuild,v 1.4 2011/12/13 23:10:31 ikelos Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://live.gnome.org/giggle"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="eds"
 
 RDEPEND=">=dev-vcs/git-1.5
@@ -23,6 +23,7 @@ RDEPEND=">=dev-vcs/git-1.5
 		 >=x11-libs/vte-0.26:2.90"
 DEPEND="${RDEPEND}
 		  sys-devel/gettext
+		  app-text/yelp-tools
 		>=dev-util/pkgconfig-0.15
 		>=dev-util/intltool-0.35
 		>=sys-devel/autoconf-2.64
