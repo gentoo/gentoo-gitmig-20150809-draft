@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Javascript
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Javascript/ChangeLog,v 1.27 2011/12/01 19:45:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Javascript/ChangeLog,v 1.28 2011/12/13 23:41:05 ago Exp $
+
+  13 Dec 2011; Agostino Sarubbo <ago@gentoo.org>
+  PEAR-HTML_Javascript-1.1.2.ebuild:
+  Stable for AMD64, wrt bug #391603
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   PEAR-HTML_Javascript-1.1.2.ebuild:
