@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.66 2011/12/06 12:38:47 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.67 2011/12/13 13:16:18 naota Exp $
+
+  13 Dec 2011; Naohiro Aota <naota@gentoo.org> fbsd/package.use.mask:
+  Mask j2me for dev-java/proguard
 
   06 Dec 2011; Naohiro Aota <naota@gentoo.org> fbsd/package.use.mask:
   mask gssapi for net-dns/bind
