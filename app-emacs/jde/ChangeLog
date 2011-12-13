@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/jde
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.42 2010/10/14 16:29:11 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.43 2011/12/13 17:29:40 ulm Exp $
+
+*jde-2.4.1_pre20110622 (13 Dec 2011)
+
+  13 Dec 2011; Ulrich Mueller <ulm@gentoo.org> +jde-2.4.1_pre20110622.ebuild,
+  +files/jde-2.4.1-doc-directory.patch,
+  +files/jde-2.4.1-semantic-emacs-24.patch:
+  Version bump, bug 394365. This version depends on CEDET included with
+  >=emacs-23.2. Thanks to Alex Bennee <alex@bennee.com>.
 
   14 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -files/70jde-gentoo-2.3.5.1.el:
   More cleanup.
