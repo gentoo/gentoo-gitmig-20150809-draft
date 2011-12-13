@@ -1,6 +1,13 @@
 # ChangeLog for app-text/rfcutil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.26 2011/07/20 13:52:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.27 2011/12/13 20:22:37 jer Exp $
+
+*rfcutil-3.2.3-r1 (13 Dec 2011)
+
+  13 Dec 2011; Jeroen Roovers <jer@gentoo.org> +rfcutil-3.2.3-r1.ebuild,
+  +files/rfc-3.2.3-index.patch, files/rfc-3.2.3.diff:
+  Fix building rfc-index by Hartmut Figge, and thanks to Victor for the patch
+  (bug #335152). Clean up old patch.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
