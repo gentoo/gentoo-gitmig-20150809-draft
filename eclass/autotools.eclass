@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.111 2011/12/13 21:27:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.112 2011/12/13 21:44:22 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -352,36 +352,23 @@ autotools_check_macro() {
 	return 0
 }
 
+# Internal function to look for a macro and extract its value
+autotools_check_macro_val() {
+	local macro=$1 scan_out
+
+	autotools_check_macro "${macro}" | \
+		gawk -v macro="${macro}" \
+			'($0 !~ /^[[:space:]]*(#|dnl)/) {
+				if (match($0, macro ":(.*)$", res))
+					print res[1]
+			}' | uniq
+
+	return 0
+}
+
 # Internal function to get additional subdirs to configure
-autotools_get_subdirs() {
-	local subdirs_scan_out
-
-	subdirs_scan_out=$(autotools_check_macro "AC_CONFIG_SUBDIRS")
-	[[ -n ${subdirs_scan_out} ]] || return 0
-
-	echo "${subdirs_scan_out}" | gawk \
-	'($0 !~ /^[[:space:]]*(#|dnl)/) {
-		if (match($0, /AC_CONFIG_SUBDIRS:(.*)$/, res))
-			print res[1]
-	}' | uniq
-
-	return 0
-}
-
-autotools_get_auxdir() {
-	local auxdir_scan_out
-
-	auxdir_scan_out=$(autotools_check_macro "AC_CONFIG_AUX_DIR")
-	[[ -n ${auxdir_scan_out} ]] || return 0
-
-	echo ${auxdir_scan_out} | gawk \
-	'($0 !~ /^[[:space:]]*(#|dnl)/) {
-		if (match($0, /AC_CONFIG_AUX_DIR:(.*)$/, res))
-			print res[1]
-	}' | uniq
-
-	return 0
-}
+autotools_get_subdirs() { autotools_check_macro_val AC_CONFIG_SUBDIRS ; }
+autotools_get_auxdir() { autotools_check_macro_val AC_CONFIG_AUX_DIR ; }
 
 autotools_m4dir_include() {
 	[[ -n ${AT_M4DIR} ]] || return
