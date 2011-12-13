@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.252 2011/10/30 15:48:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.253 2011/12/13 04:34:53 ford_prefect Exp $
+
+*pulseaudio-1.1-r1 (13 Dec 2011)
+
+  13 Dec 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  +pulseaudio-1.1-r1.ebuild, +files/pulseaudio-1.1-machine-id-fix.patch:
+  Add a patch to read /etc/machine-id as a fallback to the version in
+  /var/lib/dbus. (fixes bug #390287)
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> pulseaudio-1.1.ebuild:
   Add ~alpha/~ia64/~sh/~sparc wrt #384635
