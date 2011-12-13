@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.1-r1.ebuild,v 1.2 2011/11/13 10:07:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.1-r1.ebuild,v 1.3 2011/12/13 15:56:48 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -131,5 +131,11 @@ pkg_postinst() {
 		ewarn "you need to either install >=media-libs/gst-plugins-good-0.10.23"
 		ewarn "and media-plugins/gst-plugins-vp8, or use dconf-editor to change"
 		ewarn "apps.gnome-shell.recorder/pipeline to what you want to use."
+	fi
+
+	if ! has_version ">=x11-base/xorg-server-1.11"; then
+		ewarn "If you use multiple screens, it is highly recommended that you"
+		ewarn "upgrade to >=x11-base/xorg-server-1.11 to be able to make use of"
+		ewarn "pointer barriers which will make it easier to use hot corners."
 	fi
 }
