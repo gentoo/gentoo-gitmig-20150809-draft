@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-1.11-r1.ebuild,v 1.2 2011/08/08 18:24:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.1.ebuild,v 1.1 2011/12/13 17:47:42 ultrabug Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
