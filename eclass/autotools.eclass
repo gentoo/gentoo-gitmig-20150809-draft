@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.110 2011/11/14 17:08:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.111 2011/12/13 21:27:38 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -9,6 +9,9 @@
 # @DESCRIPTION:
 # This eclass is for safely handling autotooled software packages that need to
 # regenerate their build scripts.  All functions will abort in case of errors.
+
+if [[ ${___ECLASS_ONCE_AUTOTOOLS} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_AUTOTOOLS="recur -_+^+_- spank"
 
 inherit eutils libtool
 
@@ -399,3 +402,5 @@ autotools_m4dir_include() {
 
 	echo $include_opts
 }
+
+fi
