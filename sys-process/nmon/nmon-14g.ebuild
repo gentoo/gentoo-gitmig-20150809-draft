@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/nmon/nmon-13g.ebuild,v 1.1 2010/08/04 03:24:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/nmon/nmon-14g.ebuild,v 1.1 2011/12/13 18:39:00 jer Exp $
+
+EAPI=4
 
 inherit toolchain-funcs flag-o-matic
 
@@ -24,12 +26,9 @@ src_unpack() {
 
 src_compile() {
 	append-cppflags -DJFS -DGETUSER -DLARGEMEM
-	emake \
-		CC="$(tc-getCC)" \
-		LDLIBS="-lncurses" \
-		nmon || die
+	emake CC="$(tc-getCC)" LDLIBS="-lncurses" nmon
 }
 
 src_install() {
-	dobin nmon || die
+	dobin nmon
 }
