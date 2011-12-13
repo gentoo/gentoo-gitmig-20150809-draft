@@ -1,0 +1,96 @@
+commit 1ac5ebe482f633295fb4a79eb1c5236561e9ca70
+Author: Andriy Rysin <arysin@gmail.com>
+Date:   Fri Nov 18 23:12:14 2011 -0500
+
+    Fix keyboard layout global shortcuts
+    BUG: 286302
+
+diff --git a/kcontrol/keyboard/bindings.cpp b/kcontrol/keyboard/bindings.cpp
+index 6f5af7b..ac20dd9 100644
+--- a/kcontrol/keyboard/bindings.cpp
++++ b/kcontrol/keyboard/bindings.cpp
+@@ -103,8 +103,11 @@ void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit>& layou
+ {
+ 	for (QList<LayoutUnit>::iterator i = layoutUnits.begin(); i != layoutUnits.end(); ++i) {
+ 		LayoutUnit& layoutUnit = *i;
+-		createLayoutShortcutActon(layoutUnit, rules, false);
++		if( ! layoutUnit.getShortcut().isEmpty() ) {
++			createLayoutShortcutActon(layoutUnit, rules, false);
++		}
+ 	}
++	kDebug() << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
+ }
+ 
+ void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit>& layoutUnits, const Rules* rules)
+@@ -112,19 +115,27 @@ void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit>& layo
+ 	for (QList<LayoutUnit>::iterator i = layoutUnits.begin(); i != layoutUnits.end(); ++i) {
+ 		LayoutUnit& layoutUnit = *i;
+ 		KAction* action = createLayoutShortcutActon(layoutUnit, rules, true);
+-		layoutUnit.setShortcut(action->globalShortcut(KAction::ActiveShortcut).primary());	// shortcut was restored
++		QKeySequence shortcut = action->globalShortcut(KAction::ActiveShortcut).primary();	// shortcut was restored
++		if( ! shortcut.isEmpty() ) {
++			kDebug() << "Restored shortcut for" << layoutUnit.toString() << shortcut;
++			layoutUnit.setShortcut(shortcut);
++		}
++		else {
++			kDebug() << "Skipping empty shortcut for" << layoutUnit.toString();
++			removeAction(action);
++		}
+ 	}
+ 	kDebug() << "Cleaning component shortcuts on load" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
+ }
+ 
+-KAction* KeyboardLayoutActionCollection::getAction(const LayoutUnit& layoutUnit)
+-{
+-	for(int i=1; i<actions().size(); i++) {
+-		if( action(i)->data() == layoutUnit.toString() )
+-			return static_cast<KAction*>(action(i));
+-	}
+-	return NULL;
+-}
++//KAction* KeyboardLayoutActionCollection::getAction(const LayoutUnit& layoutUnit)
++//{
++//	for(int i=1; i<actions().size(); i++) {
++//		if( action(i)->data() == layoutUnit.toString() )
++//			return static_cast<KAction*>(action(i));
++//	}
++//	return NULL;
++//}
+ 
+ void KeyboardLayoutActionCollection::resetLayoutShortcuts()
+ {
+diff --git a/kcontrol/keyboard/bindings.h b/kcontrol/keyboard/bindings.h
+index f60656b..09a9bdc 100644
+--- a/kcontrol/keyboard/bindings.h
++++ b/kcontrol/keyboard/bindings.h
+@@ -36,7 +36,7 @@ public:
+ 	virtual ~KeyboardLayoutActionCollection();
+ 
+ 	KAction* getToggeAction();
+-	KAction* getAction(const LayoutUnit& layoutUnit);
++//	KAction* getAction(const LayoutUnit& layoutUnit);
+ 	KAction* createLayoutShortcutActon(const LayoutUnit& layoutUnit, const Rules* rules, bool autoload);
+ //	KAction* setShortcut(LayoutUnit& layoutUnit, const QKeySequence& keySequence, const Rules* rules);
+ 	void setLayoutShortcuts(QList<LayoutUnit>& layoutUnits, const Rules* rules);
+diff --git a/kcontrol/keyboard/keyboard_daemon.cpp b/kcontrol/keyboard/keyboard_daemon.cpp
+index 1618d2a..7126268 100644
+--- a/kcontrol/keyboard/keyboard_daemon.cpp
++++ b/kcontrol/keyboard/keyboard_daemon.cpp
+@@ -214,12 +214,16 @@ void KeyboardDaemon::layoutMapChanged()
+ 
+ void KeyboardDaemon::switchToNextLayout()
+ {
++	kDebug() << "Toggling layout";
+ 	X11Helper::switchToNextLayout();
+ }
+ 
+ bool KeyboardDaemon::setLayout(QAction* action)
+ {
+-	LayoutUnit layoutUnit(LayoutUnit(action->data().toString()));
++	if( action == actionCollection->getToggeAction() )
++		return false;
++
++	LayoutUnit layoutUnit(action->data().toString());
+ 	return LayoutsMenu::switchToLayout(layoutUnit, keyboardConfig);	// need this to be able to switch to spare layouts
+ //	return X11Helper::setLayout(LayoutUnit(action->data().toString()));
+ }
