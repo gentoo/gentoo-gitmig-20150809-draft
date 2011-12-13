@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.112 2011/12/13 21:44:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.113 2011/12/13 21:57:05 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -107,6 +107,14 @@ unset _automake_atom _autoconf_atom
 # @DESCRIPTION:
 # Additional director(y|ies) aclocal should search
 : ${AT_M4DIR:=${M4DIR}}
+
+# @ECLASS-VARIABLE: AT_SYS_M4DIR
+# @INTERNAL
+# @DESCRIPTION:
+# For system integrators, a list of additional aclocal search paths.
+# This variable gets eval-ed, so you can use variables in the definition
+# that may not be valid until eautoreconf & friends are run.
+: ${AT_SYS_M4DIR:=}
 
 # @FUNCTION: eautoreconf
 # @DESCRIPTION:
@@ -371,23 +379,21 @@ autotools_get_subdirs() { autotools_check_macro_val AC_CONFIG_SUBDIRS ; }
 autotools_get_auxdir() { autotools_check_macro_val AC_CONFIG_AUX_DIR ; }
 
 autotools_m4dir_include() {
-	[[ -n ${AT_M4DIR} ]] || return
+	local x include_opts
 
-	local include_opts=
-
-	for x in ${AT_M4DIR} ; do
+	for x in ${AT_M4DIR} $(eval echo ${AT_SYS_M4DIR}) ; do
 		case "${x}" in
 			"-I")
 				# We handle it below
 				;;
 			*)
 				[[ ! -d ${x} ]] && ewarn "autotools.eclass: '${x}' does not exist"
-				include_opts="${include_opts} -I ${x}"
+				include_opts+=" -I ${x}"
 				;;
 		esac
 	done
 
-	echo $include_opts
+	echo ${include_opts}
 }
 
 fi
