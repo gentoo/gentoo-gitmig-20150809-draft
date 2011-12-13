@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/vdr-serial-0.0.6a-r1.ebuild,v 1.4 2011/12/11 09:09:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/vdr-serial-0.0.6a-r1.ebuild,v 1.5 2011/12/13 22:56:23 ago Exp $
 
 inherit vdr-plugin
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.lf-klueber.de/vdr.htm"
 SRC_URI="http://www.lf-klueber.de/${P}.tgz
 		mirror://vdrfiles/${PN}/${P}.tgz"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
