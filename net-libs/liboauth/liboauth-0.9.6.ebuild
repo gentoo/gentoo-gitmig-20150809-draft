@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.4.ebuild,v 1.2 2011/09/24 15:10:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.6.ebuild,v 1.1 2011/12/13 17:28:51 flameeyes Exp $
 
-EAPI=3
+EAPI=4
 
 DESCRIPTION="C library implementing the OAuth secure authentication protocol"
 HOMEPAGE="http://liboauth.sourceforge.net/"
@@ -14,19 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE="curl doc bindist +nss"
 
+REQUIRED_USE="bindist? ( nss )"
+
 CDEPEND="
 	nss? ( dev-libs/nss
 		curl? ( || ( net-misc/curl[ssl,nss,-gnutls] net-misc/curl[-ssl] ) )
 	)
 
-	bindist? ( dev-libs/nss
-		curl? ( || ( net-misc/curl[ssl,nss,-gnutls] net-misc/curl[-ssl] ) )
-	)
-
-	!bindist? (
-		!nss? ( dev-libs/openssl
-			curl? ( || ( net-misc/curl[ssl,-nss,-gnutls] net-misc/curl[-ssl] ) )
-		)
+	!nss? ( dev-libs/openssl
+		curl? ( || ( net-misc/curl[ssl,-nss,-gnutls] net-misc/curl[-ssl] ) )
 	)
 
 	net-misc/curl
@@ -61,28 +57,26 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 
 	if use doc ; then
 		# make sure fonts are found
 		export DOTFONTPATH="${EPREFIX}"/usr/share/fonts/freefont-ttf
-		emake dox || die "emake dox failed"
+		emake dox
 	fi
 }
 
 src_test() {
 	# explicitly allow parallel test build
-	emake check || die "emake check failed"
+	emake check
 }
 
+DOCS=( AUTHORS ChangeLog LICENSE.OpenSSL NEWS README )
+
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-
-	find "${D}" -name '*.la' -delete || die
-
-	dodoc AUTHORS ChangeLog LICENSE.OpenSSL NEWS README || die "dodoc failed"
+	default
 
 	if use doc; then
-		dohtml -r doc/html/* || die "dohtml failed"
+		dohtml -r doc/html/*
 	fi
 }
