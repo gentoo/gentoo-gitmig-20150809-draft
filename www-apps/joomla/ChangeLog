@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.56 2011/10/23 10:53:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.57 2011/12/13 19:44:49 fauli Exp $
+
+*joomla-1.7.3 (13 Dec 2011)
+*joomla-1.5.25 (13 Dec 2011)
+
+  13 Dec 2011; Christian Faulhammer <fauli@gentoo.org> -joomla-1.5.23.ebuild,
+  +joomla-1.5.25.ebuild, -joomla-1.7.2.ebuild, +joomla-1.7.3.ebuild:
+  version bump for security bug 390787
 
 *joomla-1.7.2 (23 Oct 2011)
 
