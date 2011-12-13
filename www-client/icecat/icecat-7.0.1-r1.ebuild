@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-7.0.1.ebuild,v 1.2 2011/12/13 17:20:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-7.0.1-r1.ebuild,v 1.1 2011/12/13 17:20:18 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -12,7 +12,7 @@ MAJ_FF_PV="$(get_version_component_range 1-2)" # 3.5, 3.6, 4.0, etc.
 FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
-PATCH="firefox-7.0-patches-0.5"
+PATCH="firefox-8.0-patches-0.2"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
@@ -24,7 +24,8 @@ IUSE="+crashreporter +ipc pgo system-sqlite +webm"
 
 # More URIs appended below...
 SRC_URI="mirror://gnu/gnuzilla/${FF_PV}/${PN}-${FF_PV}.tar.bz2
-	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz"
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
+	http://dev.gentoo.org/~polynomial-c/mozilla/ff80.diff.xz"
 LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/${FF_PV}"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
@@ -132,6 +133,9 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Make this a 8.0 version
+	epatch "${DISTDIR}"/ff80.diff.xz
+
 	# Fix preferences location
 	sed -i 's|defaults/pref/|defaults/preferences/|' browser/installer/packages-static || die "sed failed"
 
@@ -142,8 +146,7 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
 
-	epatch "${FILESDIR}"/2000-icecat-6_gentoo_install_dirs.patch \
-		"${FILESDIR}"/${PN}-5.0-curl7217-includes-fix.patch
+	epatch "${FILESDIR}"/2000-icecat-6_gentoo_install_dirs.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
