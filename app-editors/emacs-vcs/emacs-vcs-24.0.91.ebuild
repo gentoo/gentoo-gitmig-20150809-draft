@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.91.ebuild,v 1.4 2011/12/06 13:50:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.91.ebuild,v 1.5 2011/12/13 22:20:56 ulm Exp $
 
 EAPI=4
 
@@ -83,7 +83,7 @@ DEPEND="${RDEPEND}
 	gzip-el? ( app-arch/gzip )"
 
 RDEPEND="${RDEPEND}
-	>=app-emacs/emacs-common-gentoo-1[X?]"
+	>=app-emacs/emacs-common-gentoo-1.3[X?]"
 
 EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
@@ -204,6 +204,7 @@ src_configure() {
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
+		--enable-locallisppath="/etc/emacs:${SITELISP}" \
 		--with-crt-dir="${crtdir}" \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
 		--without-compress-info \
@@ -255,6 +256,9 @@ src_install () {
 	rm -rf "${ED}"/usr/share/{applications,icons}
 	rm "${ED}"/var/lib/games/emacs/{snake,tetris}-scores
 	keepdir /var/lib/games/emacs
+
+	# remove unused <version>/site-lisp dir
+	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp
 
 	local c=";;"
 	if use source; then

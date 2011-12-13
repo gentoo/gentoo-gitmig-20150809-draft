@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.15 2011/11/03 12:49:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.16 2011/12/13 22:20:56 ulm Exp $
 EAPI=4
 WANT_AUTOMAKE="none"
 
@@ -75,7 +75,7 @@ DEPEND="${RDEPEND}
 	gzip-el? ( app-arch/gzip )"
 
 RDEPEND="${RDEPEND}
-	>=app-emacs/emacs-common-gentoo-1[X?]"
+	>=app-emacs/emacs-common-gentoo-1.3[X?]"
 
 EMACS_SUFFIX="emacs-${SLOT}-vcs"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
@@ -85,13 +85,11 @@ src_prepare() {
 		FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
 			| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
 		[[ ${FULL_VERSION} ]] || die "Cannot determine current Emacs version"
-		echo
 		einfo "Emacs branch: ${EBZR_BRANCH}"
 		einfo "Revision: ${EBZR_REVISION:-${EBZR_REVNO}}"
 		einfo "Emacs version number: ${FULL_VERSION}"
 		[[ ${FULL_VERSION} =~ ^${PV%.*}(\..*)?$ ]] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
-		echo
 	fi
 
 	sed -i \
@@ -133,10 +131,8 @@ src_configure() {
 	local myconf
 
 	if use alsa && ! use sound; then
-		echo
 		einfo "Although sound USE flag is disabled you chose to have alsa,"
 		einfo "so sound is switched on anyway."
-		echo
 		myconf="${myconf} --with-sound"
 	else
 		myconf="${myconf} $(use_with sound)"
@@ -206,6 +202,7 @@ src_configure() {
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
+		--enable-locallisppath="/etc/emacs:${SITELISP}" \
 		--with-crt-dir="${crtdir}" \
 		$(use_with hesiod) \
 		$(use_with kerberos) $(use_with kerberos kerberos5) \
@@ -253,6 +250,9 @@ src_install () {
 	rm "${ED}"/var/lib/games/emacs/{snake,tetris}-scores
 	keepdir /var/lib/games/emacs
 
+	# remove unused <version>/site-lisp dir
+	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp
+
 	local c=";;"
 	if use source; then
 		insinto /usr/share/emacs/${FULL_VERSION}/src
@@ -290,20 +290,8 @@ src_install () {
 
 pkg_preinst() {
 	# move Info dir file to correct name
-	local infodir=/usr/share/info/${EMACS_SUFFIX} f
-	if [[ -f ${ED}${infodir}/dir.orig ]]; then
-		mv "${ED}"${infodir}/dir{.orig,} || die "moving info dir failed"
-	else
-		# this should not happen in EAPI 4
-		ewarn "Regenerating Info directory index in ${infodir} ..."
-		rm -f "${ED}"${infodir}/dir{,.*}
-		for f in "${ED}"${infodir}/*; do
-			if [[ ${f##*/} != *-[0-9]* && -e ${f} ]]; then
-				install-info --info-dir="${ED}"${infodir} "${f}" \
-					|| die "install-info failed"
-			fi
-		done
-	fi
+	mv "${ED}"/usr/share/info/${EMACS_SUFFIX}/dir{.orig,} \
+		|| die "moving info dir failed"
 }
 
 pkg_postinst() {
@@ -317,20 +305,19 @@ pkg_postinst() {
 	eselect emacs update ifunset
 
 	if use X; then
-		echo
 		elog "You need to install some fonts for Emacs."
 		elog "Installing media-fonts/font-adobe-{75,100}dpi on the X server's"
 		elog "machine would satisfy basic Emacs requirements under X11."
 		elog "See also http://www.gentoo.org/proj/en/lisp/emacs/xft.xml"
 		elog "for how to enable anti-aliased fonts."
+		elog
 	fi
 
-	echo
 	elog "You can set the version to be started by /usr/bin/emacs through"
 	elog "the Emacs eselect module, which also redirects man and info pages."
 	elog "Therefore, several Emacs versions can be installed at the same time."
 	elog "\"man emacs.eselect\" for details."
-	echo
+	elog
 	elog "If you upgrade from a previous major version of Emacs, then it is"
 	elog "strongly recommended that you use app-admin/emacs-updater to rebuild"
 	elog "all byte-compiled elisp files of the installed Emacs packages."
