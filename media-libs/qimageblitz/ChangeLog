@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/qimageblitz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qimageblitz/ChangeLog,v 1.4 2011/12/11 09:22:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qimageblitz/ChangeLog,v 1.5 2011/12/13 23:31:27 ago Exp $
+
+  13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> qimageblitz-0.0.6.ebuild:
+  Stable for AMD64, wrt bug #392799
 
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   qimageblitz-0.0.6.ebuild:
