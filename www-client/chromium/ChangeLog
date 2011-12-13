@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.520 2011/12/13 18:32:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.521 2011/12/13 20:14:18 ago Exp $
+
+  13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> chromium-16.0.912.63.ebuild:
+  Stable for AMD64, wrt security bug #394587
 
   13 Dec 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
   Keep third_party/libyuv. Thanks to Julien Sanchez.
