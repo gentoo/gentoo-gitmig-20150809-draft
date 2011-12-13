@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libkpass
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libkpass/ChangeLog,v 1.1 2011/12/13 17:31:34 joker Exp $
+
+*libkpass-3 (13 Dec 2011)
+
+  13 Dec 2011; Christian Birchinger <joker@gentoo.org> +libkpass-3.ebuild,
+  +metadata.xml:
+  Initial release
+
