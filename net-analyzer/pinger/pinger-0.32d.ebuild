@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32d.ebuild,v 1.2 2011/12/14 09:13:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32d.ebuild,v 1.3 2011/12/14 23:24:28 ago Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://aa.vslib.cz/silk/projekty/pinger/download/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="gtk nls"
 
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.4:2 )
