@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rwho
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.25 2011/12/14 09:02:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.26 2011/12/14 23:27:32 maekke Exp $
+
+  14 Dec 2011; Markus Meier <maekke@gentoo.org> netkit-rwho-0.17-r4.ebuild:
+  arm stable, bug #393691
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   netkit-rwho-0.17-r4.ebuild:
