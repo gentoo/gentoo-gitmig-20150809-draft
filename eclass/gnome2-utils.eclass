@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.24 2011/11/14 06:10:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.25 2011/12/14 19:47:54 tetromino Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -326,10 +326,10 @@ gnome2_schemas_savelist() {
 }
 
 # @FUNCTION: gnome2_schemas_update
-# @USAGE: gnome2_schemas_update [--uninstall]
+# @USAGE: gnome2_schemas_update
 # @DESCRIPTION:
 # Updates GSettings schemas if GNOME2_ECLASS_GLIB_SCHEMAS has some.
-# This function should be called from pkg_postinst and pkg_postrm with --uninstall.
+# This function should be called from pkg_postinst and pkg_postrm.
 gnome2_schemas_update() {
 	has ${EAPI:-0} 0 1 2 && ! use prefix && EROOT="${ROOT}"
 	local updater="${EROOT}${GLIB_COMPILE_SCHEMAS}"
