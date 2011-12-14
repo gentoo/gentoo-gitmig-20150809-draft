@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.2.8.ebuild,v 1.2 2011/09/12 21:05:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.2.8.ebuild,v 1.3 2011/12/14 22:53:05 mabi Exp $
 
 EAPI="2"
 
@@ -18,8 +18,8 @@ RDEPEND="
 	virtual/httpd-php
 	virtual/httpd-cgi
 	|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )
-	>=dev-php5/ezc-Base-1.8
-	>=dev-php5/ezc-Graph-1.5
+	>=dev-php/ezc-Base-1.8
+	>=dev-php/ezc-Graph-1.5
 	>=dev-php/adodb-5.10"
 
 src_prepare() {
