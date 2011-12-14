@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.807 2011/12/12 23:22:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.808 2011/12/14 16:42:46 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/pkg_setup.eblit:
+  Also filter out glibc binaries when looking for __guard #394453#5 by Michael
+  Haubenwallner.
 
   12 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/pkg_setup.eblit:
   Reduce the scope of the __guard checking, and filter out more files w/ROOT
