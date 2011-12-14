@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.18 2010/11/21 12:17:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.19 2011/12/14 10:33:31 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -50,7 +50,7 @@ src_install () {
 
 	dodoc AUTHORS ChangeLog CREDITS README NEWS RELEASE-1.0 SUCCESS TODO
 	docinto doc
-	dodoc doc/*
+	dodoc doc/python-taylor.txt doc/README
 	insinto /usr/share/doc/${PF}/examples
 	doins doc/examples/*
 }
