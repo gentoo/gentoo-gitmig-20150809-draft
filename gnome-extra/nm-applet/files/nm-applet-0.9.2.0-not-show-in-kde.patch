@@ -1,0 +1,41 @@
+From 7f2466edf036721844ddfd91eea3dfb0ead8e7d7 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Wed, 14 Dec 2011 02:05:21 -0500
+Subject: [PATCH] Add NotShowIn=KDE to .desktop files
+
+We do not want to autostart nm-applet in KDE, it has native tools for
+network configuration. But we still want to auto-start in other DEs like
+XFCE, and if we auto-start there, then we should show the connection
+editor there.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=660046
+---
+ nm-applet.desktop.in            |    1 +
+ nm-connection-editor.desktop.in |    2 +-
+ 2 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/nm-applet.desktop.in b/nm-applet.desktop.in
+index 4eb669a..0cda7e1 100644
+--- a/nm-applet.desktop.in
++++ b/nm-applet.desktop.in
+@@ -6,6 +6,7 @@ Exec=nm-applet
+ Terminal=false
+ Type=Application
+ NoDisplay=true
++NotShowIn=KDE;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=NetworkManager
+ X-GNOME-Bugzilla-Component=general
+diff --git a/nm-connection-editor.desktop.in b/nm-connection-editor.desktop.in
+index 664200e..b3e469f 100644
+--- a/nm-connection-editor.desktop.in
++++ b/nm-connection-editor.desktop.in
+@@ -10,4 +10,4 @@ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=NetworkManager
+ X-GNOME-Bugzilla-Component=general
+ Categories=GNOME;GTK;Settings;X-GNOME-NetworkSettings;
+-OnlyShowIn=GNOME;
++NotShowIn=KDE;
+-- 
+1.7.8
+

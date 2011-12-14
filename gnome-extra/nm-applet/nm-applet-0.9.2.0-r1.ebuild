@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.1.95.ebuild,v 1.1 2011/11/07 18:28:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.2.0-r1.ebuild,v 1.1 2011/12/14 07:40:04 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 GNOME_ORG_MODULE="network-manager-applet"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="GNOME applet for NetworkManager"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
@@ -47,7 +47,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Fix building with glib-2.31, will be in next release
-	epatch "${FILESDIR}/${P}-glib-2.31.patch"
+	# bug #394379, https://bugzilla.gnome.org/show_bug.cgi?id=660046
+	epatch "${FILESDIR}/${PN}-0.9.2.0-not-show-in-kde.patch"
+
 	gnome2_src_prepare
 }
