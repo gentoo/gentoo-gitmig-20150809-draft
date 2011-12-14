@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.102 2011/10/22 00:17:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.103 2011/12/14 08:43:43 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pdnsd-1.2.8-r2.ebuild:
+  x86 stable wrt bug #393737
 
   22 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Remove myself from metadata.
