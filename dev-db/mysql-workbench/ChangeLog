@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.45 2011/12/14 19:30:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.46 2011/12/14 19:34:14 graaff Exp $
+
+  14 Dec 2011; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.36.ebuild:
+  Drop autotools since we no longer need it.
 
 *mysql-workbench-5.2.36 (14 Dec 2011)
 
