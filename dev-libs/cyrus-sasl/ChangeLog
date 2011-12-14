@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.236 2011/12/12 22:05:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.237 2011/12/14 08:56:38 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  cyrus-sasl-2.1.23-r6.ebuild:
+  x86 stable wrt bug #393387
 
   12 Dec 2011; Agostino Sarubbo <ago@gentoo.org> cyrus-sasl-2.1.23-r6.ebuild:
   Stable for AMD64, wrt bug #393387
