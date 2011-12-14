@@ -1,0 +1,27 @@
+--- src/compress/Makefile.am.inc.old	2011-12-13 10:29:48.462857200 +0100
++++ src/compress/Makefile.am.inc	2011-12-13 10:30:13.252857319 +0100
+@@ -1 +1 @@
+-mednafen_SOURCES	+=	compress/minilzo.c compress/quicklz.cpp compress/blz.cpp compress/ioapi.c compress/unzip.c
++mednafen_SOURCES	+=	compress/minilzo.c compress/quicklz.cpp compress/blz.cpp
+--- src/Makefile.am.old	2011-12-13 10:29:07.702857010 +0100
++++ src/Makefile.am	2011-12-13 10:34:21.062858500 +0100
+@@ -5,7 +5,7 @@
+ 
+ bin_PROGRAMS	=	mednafen
+ mednafen_SOURCES 	= 	debug.cpp error.cpp mempatcher.cpp settings.cpp Blip_Buffer.cpp Stereo_Buffer.cpp endian.cpp mednafen.cpp file.cpp general.cpp md5.cpp memory.cpp netplay.cpp state.cpp movie.cpp wave.cpp player.cpp psf.cpp tests.cpp
+-mednafen_LDADD = @LIBINTL@ @LIBICONV@ trio/libtrio.a @SDL_LIBS@
++mednafen_LDADD = @LIBINTL@ @LIBICONV@ trio/libtrio.a @SDL_LIBS@ -lminizip
+ mednafen_DEPENDENCIES	=	trio/libtrio.a
+ 
+ if WANT_DEBUGGER
+--- src/file.cpp.old	2011-12-13 10:26:06.622856149 +0100
++++ src/file.cpp	2011-12-13 10:26:24.122856234 +0100
+@@ -32,7 +32,7 @@
+ 
+ 
+ #include <zlib.h>
+-#include "compress/unzip.h"
++#include <minizip/unzip.h>
+ 
+ #include "file.h"
+ #include "endian.h"
