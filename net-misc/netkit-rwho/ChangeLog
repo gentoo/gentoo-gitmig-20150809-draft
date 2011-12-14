@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-rwho
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.24 2010/10/18 13:39:05 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.25 2011/12/14 09:02:25 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  netkit-rwho-0.17-r4.ebuild:
+  x86 stable wrt bug #393691
 
   18 Oct 2010; Mart Raudsepp <leio@gentoo.org> netkit-rwho-0.17-r3.ebuild:
   Drop to ~mips
