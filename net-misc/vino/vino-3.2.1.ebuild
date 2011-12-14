@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-3.2.1.ebuild,v 1.1 2011/11/07 05:02:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-3.2.1.ebuild,v 1.2 2011/12/14 04:51:37 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -51,6 +51,9 @@ DEPEND="${RDEPEND}
 		gnome-base/libgnome-keyring
 		<gnome-base/gnome-keyring-2.29.4 )"
 # keyring is always required at build time per bug 322763
+
+# bug #394611; tight encoding requires zlib encoding
+REQUIRED_USE="jpeg? ( zlib )"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
