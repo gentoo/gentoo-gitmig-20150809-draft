@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.13.ebuild,v 1.1 2011/11/11 19:33:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.13.ebuild,v 1.2 2011/12/14 22:33:24 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -28,6 +28,7 @@ RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.9.3-darwin.patch"
+	sed -i 's/-O2//g' specs/* || die
 	python_copy_sources
 }
 

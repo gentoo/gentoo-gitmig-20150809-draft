@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.203 2011/11/11 19:33:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.204 2011/12/14 22:33:24 floppym Exp $
+
+  14 Dec 2011; Mike Gilbert <floppym@gentoo.org> sip-4.13.ebuild:
+  Remove -O2 from build specs. Resolves bug 360771.
 
 *sip-4.13 (11 Nov 2011)
 
