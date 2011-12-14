@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.113 2011/12/13 21:57:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.114 2011/12/14 18:33:59 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -9,6 +9,9 @@
 # @DESCRIPTION:
 # This eclass is for safely handling autotooled software packages that need to
 # regenerate their build scripts.  All functions will abort in case of errors.
+
+# Note: We require GNU m4, as does autoconf.  So feel free to use any features
+# from the GNU version of m4 without worrying about other variants (i.e. BSD).
 
 if [[ ${___ECLASS_ONCE_AUTOTOOLS} != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_AUTOTOOLS="recur -_+^+_- spank"
@@ -102,11 +105,10 @@ unset _automake_atom _autoconf_atom
 # useful when elibtoolize needs to be ran with
 # particular options
 
-# XXX: M4DIR should be deprecated
 # @ECLASS-VARIABLE: AT_M4DIR
 # @DESCRIPTION:
 # Additional director(y|ies) aclocal should search
-: ${AT_M4DIR:=${M4DIR}}
+: ${AT_M4DIR:=}
 
 # @ECLASS-VARIABLE: AT_SYS_M4DIR
 # @INTERNAL
