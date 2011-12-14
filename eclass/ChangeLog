@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.40 2011/12/14 14:55:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.41 2011/12/14 18:15:09 slyfox Exp $
+
+  14 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> multilib.eclass:
+  Added -m32 to CFLAGS_sparc32. Allows to build sparc64-* multilib toolchain
+  without additional tuning.
 
   14 Dec 2011; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Drop base.eclass inherit and thus src_unpack() export.
