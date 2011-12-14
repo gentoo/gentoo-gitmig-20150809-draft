@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-005.ebuild,v 1.1 2011/12/13 17:38:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-005.ebuild,v 1.2 2011/12/14 17:21:59 ssuominen Exp $
 
 EAPI="4"
 
 PYTHON_DEPEND="python? 2:2.6"
 
-inherit autotools python
+inherit autotools eutils python
 
 DESCRIPTION="USB enumeration utilities"
 HOMEPAGE="http://linux-usb.sourceforge.net/"
@@ -31,6 +31,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-missing-includes.patch
+
 	eautoreconf
 
 	if use python; then
