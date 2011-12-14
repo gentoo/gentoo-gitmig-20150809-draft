@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.8 2011/05/18 03:22:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.9 2011/12/14 17:13:02 vapier Exp $
 
 inherit eutils multilib games
 
@@ -28,8 +28,6 @@ RDEPEND="virtual/opengl
 	)"
 
 S=${WORKDIR}
-
-GAMES_CHECK_LICENSE="yes"
 
 src_unpack() {
 	cdrom_get_cds bin/x86/glibc-2.1/${PN}

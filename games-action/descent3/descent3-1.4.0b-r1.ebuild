@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.15 2009/04/14 07:23:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.16 2011/12/14 17:12:16 vapier Exp $
 
 inherit eutils multilib games
 
@@ -30,7 +30,6 @@ RDEPEND="sys-libs/glibc
 		app-emulation/emul-linux-x86-sdl
 		>=sys-libs/lib-compat-loki-0.2 )"
 
-GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
