@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unifont
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.32 2010/02/02 17:04:39 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.33 2011/12/14 08:54:16 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  unifont-5.1.20080914.ebuild:
+  x86 stable wrt bug #393767
 
   02 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   unifont-5.1.20080914.ebuild:
