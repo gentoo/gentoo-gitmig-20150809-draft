@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.19-r3.ebuild,v 1.2 2011/08/25 18:52:04 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.19-r3.ebuild,v 1.3 2011/12/14 09:28:52 phajdan.jr Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/people/mason/btrfs/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc64 x86"
 IUSE="acl debug-utils"
 
 DEPEND="debug-utils? ( dev-python/matplotlib )
