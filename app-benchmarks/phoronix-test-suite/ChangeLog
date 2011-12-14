@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/phoronix-test-suite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.15 2011/08/27 10:25:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.16 2011/12/14 22:55:55 mabi Exp $
+
+  14 Dec 2011; Matti Bickel <mabi@gentoo.org>
+  phoronix-test-suite-2.8.1-r1.ebuild, phoronix-test-suite-3.2.1.ebuild:
+  Merging categories dev-php5 and dev-php (bug #324665)
 
 *phoronix-test-suite-3.2.1 (27 Aug 2011)
 

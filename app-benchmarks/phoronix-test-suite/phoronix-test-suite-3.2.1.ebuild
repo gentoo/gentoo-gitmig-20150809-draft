@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-3.2.1.ebuild,v 1.1 2011/08/27 10:25:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-3.2.1.ebuild,v 1.2 2011/12/14 22:55:55 mabi Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ DEPEND=""
 
 # php 5.3 doesn't have pcre and reflection useflags anymore
 RDEPEND="dev-lang/php:5.3[cli,curl,gd,posix,pcntl,truetype,zip]
-	dev-php5/pecl-ps"
+	dev-php/pecl-ps"
 
 S="${WORKDIR}/${PN}"
 

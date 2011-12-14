@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.8.1-r1.ebuild,v 1.3 2011/08/31 06:41:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.8.1-r1.ebuild,v 1.4 2011/12/14 22:55:55 mabi Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ DEPEND=""
 # php 5.3 doesn't have pcre useflag anymore
 RDEPEND=">=dev-lang/php-5.2[cli,curl,gd,posix,pcntl,pcre(+),truetype]
 		app-arch/unzip
-		dev-php5/pecl-ps"
+		dev-php/pecl-ps"
 
 S="${WORKDIR}/${PN}"
 
