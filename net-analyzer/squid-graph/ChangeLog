@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/squid-graph
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.22 2009/12/23 03:05:29 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.23 2011/12/14 09:29:54 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  squid-graph-3.2-r1.ebuild:
+  x86 stable wrt bug #393877
 
 *squid-graph-3.2-r1 (23 Dec 2009)
 
