@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netpipes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.7 2010/09/16 15:19:53 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.8 2011/12/14 08:58:43 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> netpipes-4.2-r1.ebuild:
+  x86 stable wrt bug #393907
 
 *netpipes-4.2-r1 (16 Sep 2010)
 
