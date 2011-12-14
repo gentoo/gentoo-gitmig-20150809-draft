@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.430 2011/12/04 10:08:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.431 2011/12/14 19:52:12 mgorny Exp $
+
+  14 Dec 2011; Michał Górny <mgorny@gentoo.org> openssh-5.9_p1-r3.ebuild,
+  +files/sshd.service, +files/sshd.socket, +files/sshd_at.service:
+  Install systemd unit files.
 
   04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/sshd.rc6,
   files/sshd.rc6.1, files/sshd.rc6.2:

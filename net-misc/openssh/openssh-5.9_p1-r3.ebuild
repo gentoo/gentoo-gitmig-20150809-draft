@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r3.ebuild,v 1.4 2011/11/26 07:33:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r3.ebuild,v 1.5 2011/12/14 19:52:12 mgorny Exp $
 
 EAPI="2"
-inherit eutils flag-o-matic multilib autotools pam
+inherit eutils flag-o-matic multilib autotools pam systemd
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -206,6 +206,9 @@ src_install() {
 
 	diropts -m 0700
 	dodir /etc/skel/.ssh
+
+	systemd_dounit "${FILESDIR}"/sshd.{service,socket} || die
+	systemd_newunit "${FILESDIR}"/sshd_at.service 'sshd@.service' || die
 }
 
 src_test() {
