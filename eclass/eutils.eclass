@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.370 2011/12/02 10:22:41 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.371 2011/12/14 17:27:16 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -14,6 +14,9 @@
 #
 # Due to the nature of this eclass, some functions may have maintainers
 # different from the overall eclass!
+
+if [[ ${___ECLASS_ONCE_EUTILS} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_EUTILS="recur -_+^+_- spank"
 
 inherit multilib portability user
 
@@ -1685,3 +1688,5 @@ use_if_iuse() {
 # If USE flag is set, echo [true output][true suffix] (defaults to "yes"),
 # otherwise echo [false output][false suffix] (defaults to "no").
 usex() { use "$1" && echo "${2-yes}$4" || echo "${3-no}$5" ; } #382963
+
+fi
