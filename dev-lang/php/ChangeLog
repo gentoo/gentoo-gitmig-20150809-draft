@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.527 2011/12/09 20:19:24 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.528 2011/12/14 22:48:49 mabi Exp $
+
+  14 Dec 2011; Matti Bickel <mabi@gentoo.org> php-5.2.17.ebuild,
+  php-5.3.8.ebuild, php-5.3.9_rc1.ebuild, php-5.3.9_rc2.ebuild,
+  php-5.4.0_rc3.ebuild:
+  Merging categories dev-php5 and dev-php (bug #324665)
 
   09 Dec 2011; Ole Markus With <olemarkus@gentoo.org>
   -files/eblits/pkg_postinst-v2.eblit, php-5.2.17.ebuild, php-5.3.8.ebuild,

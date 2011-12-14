@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.16 2011/12/09 20:19:24 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.17 2011/12/14 22:48:49 mabi Exp $
 
 EAPI=2
 
@@ -383,7 +383,7 @@ pkg_postinst() {
 	if ( [[ -z SUHOSIN_VERSION ]] && use suhosin && version_is_at_least 5.3.6_rc1 ) ; then
 		ewarn "The suhosin USE flag now only installs the suhosin patch!"
 		ewarn "If you want the suhosin extension, make sure you install"
-		ewarn " dev-php5/suhosin"
+		ewarn " dev-php/suhosin"
 		ewarn
 	fi
 }

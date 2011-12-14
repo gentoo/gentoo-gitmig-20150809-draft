@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9_rc1.ebuild,v 1.3 2011/12/09 18:23:44 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9_rc1.ebuild,v 1.4 2011/12/14 22:48:49 mabi Exp $
 
 EAPI=4
 
@@ -247,12 +247,12 @@ REQUIRED_USE="
 	!cli? ( !cgi? ( !fpm? ( !apache2? ( !embed? ( cli ) ) ) ) )"
 
 DEPEND="${DEPEND}
-	enchant? ( !dev-php5/pecl-enchant )
-	fileinfo? ( !<dev-php5/pecl-fileinfo-1.0.4-r2 )
-	filter? ( !dev-php5/pecl-filter )
-	json? ( !dev-php5/pecl-json )
-	phar? ( !dev-php5/pecl-phar )
-	zip? ( !dev-php5/pecl-zip )"
+	enchant? ( !dev-php/pecl-enchant )
+	fileinfo? ( !<dev-php/pecl-fileinfo-1.0.4-r2 )
+	filter? ( !dev-php/pecl-filter )
+	json? ( !dev-php/pecl-json )
+	phar? ( !dev-php/pecl-phar )
+	zip? ( !dev-php/pecl-zip )"
 
 [[ -n $SUHOSIN_VERSION ]] && RDEPEND="${RDEPEND} suhosin? (
 =${CATEGORY}/${PN}-${SLOT}*[unicode] )"
@@ -408,7 +408,7 @@ pkg_postinst() {
 	if ( [[ -z SUHOSIN_VERSION ]] && use suhosin && version_is_at_least 5.3.6_rc1 ) ; then
 		ewarn "The suhosin USE flag now only installs the suhosin patch!"
 		ewarn "If you want the suhosin extension, make sure you install"
-		ewarn " dev-php5/suhosin"
+		ewarn " dev-php/suhosin"
 		ewarn
 	fi
 }
