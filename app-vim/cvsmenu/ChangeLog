@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cvsmenu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/ChangeLog,v 1.17 2011/12/12 19:27:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/ChangeLog,v 1.18 2011/12/14 09:24:38 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> cvsmenu-1.147.ebuild:
+  x86 stable wrt bug #393967
 
   12 Dec 2011; Agostino Sarubbo <ago@gentoo.org> cvsmenu-1.147.ebuild:
   Stable for AMD64, wrt bug 393967
