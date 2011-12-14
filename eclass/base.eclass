@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.54 2011/08/22 04:46:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.55 2011/12/14 23:38:09 vapier Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
@@ -11,6 +11,9 @@
 # @DESCRIPTION:
 # The base eclass defines some default functions and variables. Nearly
 # everything else inherits from here.
+
+if [[ ${___ECLASS_ONCE_BASE} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_BASE="recur -_+^+_- spank"
 
 inherit eutils
 
@@ -184,3 +187,5 @@ base_src_install_docs() {
 
 	popd > /dev/null
 }
+
+fi
