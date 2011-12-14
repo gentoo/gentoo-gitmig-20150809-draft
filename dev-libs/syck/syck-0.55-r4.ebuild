@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.16 2011/04/12 22:46:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.17 2011/12/14 22:56:49 mabi Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -20,7 +20,7 @@ IUSE="php python"
 
 DEPEND="python? ( !dev-python/pysyck )"
 RDEPEND="${DEPEND}"
-PDEPEND="php? ( dev-php5/pecl-syck
+PDEPEND="php? ( dev-php/pecl-syck
 		    !=dev-libs/syck-0.55-r1 )"
 
 DISTUTILS_SETUP_FILES=("ext/python|setup.py")
