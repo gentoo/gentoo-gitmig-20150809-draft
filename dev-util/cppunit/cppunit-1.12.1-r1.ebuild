@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.1-r1.ebuild,v 1.1 2011/12/14 10:56:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.1-r1.ebuild,v 1.2 2011/12/14 10:58:46 scarabeus Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -21,7 +21,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.10.2-asneeded.patch" \
-		"${FILESDIR}/${P}-add_missing_include.patch"
+		"${FILESDIR}/${P}-add_missing_include.patch" \
+		"${FILESDIR}/${P}-warnings.patch"
 	eautoreconf
 }
 
