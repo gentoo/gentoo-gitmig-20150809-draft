@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.28.ebuild,v 1.5 2011/12/12 20:15:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.28.ebuild,v 1.6 2011/12/14 09:21:02 phajdan.jr Exp $
 
 EAPI="3"
 inherit eutils multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ssvnc/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~x86-linux"
+KEYWORDS="amd64 x86 ~x86-linux"
 IUSE="java"
 
 RDEPEND="sys-libs/zlib
