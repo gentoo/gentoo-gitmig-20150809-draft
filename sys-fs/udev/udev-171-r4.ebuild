@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r4.ebuild,v 1.1 2011/12/11 04:48:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r4.ebuild,v 1.2 2011/12/14 20:53:06 vapier Exp $
 
 EAPI=4
 
@@ -191,9 +191,8 @@ src_prepare() {
 	fi
 }
 
+use_extras() { use extras && echo "--enable-${2:-$1}" || use_enable "$@" ; }
 src_configure() {
-	if ! use extras
-	then
 	econf \
 		--prefix="${EPREFIX}/usr" \
 		--sysconfdir="${EPREFIX}/etc" \
@@ -205,43 +204,18 @@ src_configure() {
 		--enable-static \
 		$(use_with selinux) \
 		$(use_enable debug) \
-		$(use_enable rule_generator) \
-		$(use_enable hwdb) \
+		$(use_extras rule_generator) \
+		$(use_extras hwdb) \
 		--with-pci-ids-path="${EPREFIX}/usr/share/misc/pci.ids" \
 		--with-usb-ids-path="${EPREFIX}/usr/share/misc/usb.ids" \
-		$(use_enable acl udev_acl) \
-		$(use_enable gudev) \
-		$(use_enable introspection) \
-		$(use_enable keymap) \
-		$(use_enable floppy) \
-		$(use_enable edd) \
-		$(use_enable action_modeswitch) \
+		$(use_extras acl udev_acl) \
+		$(use_extras gudev) \
+		$(use_extras introspection) \
+		$(use_extras keymap) \
+		$(use_extras floppy) \
+		$(use_extras edd) \
+		$(use_extras action_modeswitch) \
 		$(systemd_with_unitdir)
-	else
-	econf \
-		--prefix="${EPREFIX}/usr" \
-		--sysconfdir="${EPREFIX}/etc" \
-		--sbindir="${EPREFIX}/sbin" \
-		--libdir="${EPREFIX}/usr/$(get_libdir)" \
-		--with-rootlibdir="${EPREFIX}/$(get_libdir)" \
-		--libexecdir="${EPREFIX}/lib/udev" \
-		--enable-logging \
-		--enable-static \
-		$(use_with selinux) \
-		$(use_enable debug) \
-		--enable-rule_generator \
-		--enable-hwdb \
-		--with-pci-ids-path="${EPREFIX}/usr/share/misc/pci.ids" \
-		--with-usb-ids-path="${EPREFIX}/usr/share/misc/usb.ids" \
-		--enable-udev_acl \
-		--enable-gudev \
-		--enable-introspection \
-		--enable-keymap \
-		--enable-floppy \
-		--enable-edd \
-		--enable-action_modeswitch \
-		$(systemd_with_unitdir)
-	fi
 }
 
 src_compile() {
