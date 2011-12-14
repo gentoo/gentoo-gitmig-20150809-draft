@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.313 2011/12/04 09:53:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.314 2011/12/14 22:46:02 mr_bones_ Exp $
+
+  14 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.2.5.ebuild:
+  remove upstream-unsupported static linking (bug #394703)
 
   04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/syslog-ng.rc6.3:
   move reload to extra_started_commands in 3.2 init script

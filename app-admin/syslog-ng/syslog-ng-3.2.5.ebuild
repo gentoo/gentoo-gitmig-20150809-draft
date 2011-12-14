@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.2.5.ebuild,v 1.1 2011/11/07 21:33:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.2.5.ebuild,v 1.2 2011/12/14 22:46:02 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools fixheadtails eutils multilib
@@ -13,25 +13,19 @@ SRC_URI="http://www.balabit.com/downloads/files/syslog-ng/sources/${PV}/source/s
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="caps hardened ipv6 +pcre selinux spoof-source sql ssl static tcpd"
+IUSE="caps hardened ipv6 +pcre selinux spoof-source sql ssl tcpd"
 RESTRICT="test"
 
-LIBS_DEPEND="
-	spoof-source? ( net-libs/libnet )
-	ssl? ( dev-libs/openssl )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	!static? ( >=dev-libs/eventlog-0.2.12 )
-	>=dev-libs/glib-2.10.1:2
-	caps? ( sys-libs/libcap )
-	sql? ( >=dev-db/libdbi-0.8.3 )"
 RDEPEND="
-	!static? (
 		pcre? ( dev-libs/libpcre )
-		${LIBS_DEPEND}
-	)"
+		spoof-source? ( net-libs/libnet )
+		ssl? ( dev-libs/openssl )
+		tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+		>=dev-libs/eventlog-0.2.12
+		>=dev-libs/glib-2.10.1:2
+		caps? ( sys-libs/libcap )
+		sql? ( >=dev-db/libdbi-0.8.3 )"
 DEPEND="${RDEPEND}
-	${LIBS_DEPEND}
-	static? ( >=dev-libs/eventlog-0.2.12[static-libs] )
 	dev-util/pkgconfig
 	sys-devel/flex"
 
@@ -41,19 +35,9 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-
-	if use static ; then
-		myconf="${myconf} --enable-static-linking"
-		if use pcre ; then
-			ewarn "USE=pcre is incompatible with static linking"
-			myconf="${myconf} --disable-pcre"
-		fi
-	else
-			myconf="${myconf} --enable-dynamic-linking"
-	fi
 	econf \
 		--disable-dependency-tracking \
+		--enable-dynamic-linking \
 		--sysconfdir=/etc/syslog-ng \
 		--localstatedir=/var/lib/misc \
 		--with-pidfile-dir=/var/run \
@@ -64,8 +48,7 @@ src_configure() {
 		$(use_enable spoof-source) \
 		$(use_enable sql) \
 		$(use_enable ssl) \
-		$(use_enable tcpd tcp-wrapper) \
-		${myconf}
+		$(use_enable tcpd tcp-wrapper)
 }
 
 src_install() {
