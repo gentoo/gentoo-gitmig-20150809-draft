@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.16.ebuild,v 1.3 2011/01/15 15:30:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.16.ebuild,v 1.4 2011/12/14 10:27:49 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,7 +24,7 @@ DEPEND="dev-python/docutils
 	>=dev-python/reportlab-2.4"
 RDEPEND="${DEPEND}"
 
-DOCS="Contributors.txt CHANGES.txt README.txt doc/*"
+DOCS="Contributors.txt CHANGES.txt README.txt"
 
 src_install() {
 	distutils_src_install
