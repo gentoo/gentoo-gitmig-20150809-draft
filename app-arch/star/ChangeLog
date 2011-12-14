@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/star
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.94 2011/12/12 12:20:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.95 2011/12/14 08:58:08 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> star-1.5.1-r1.ebuild:
+  x86 stable wrt bug #393905
 
   12 Dec 2011; Jeroen Roovers <jer@gentoo.org> star-1.5.1-r1.ebuild:
   Stable for HPPA (bug #393905).
