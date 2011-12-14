@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.4 2011/12/13 14:48:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.5 2011/12/14 16:43:38 scarabeus Exp $
 
 EAPI=4
 
@@ -382,6 +382,7 @@ src_configure() {
 		--enable-randr-link \
 		--enable-release-build \
 		--enable-unix-qstart-libpng \
+		--disable-ccache \
 		--disable-crashdump \
 		--disable-dependency-tracking \
 		--disable-epm \

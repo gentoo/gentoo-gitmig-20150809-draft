@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.218 2011/12/13 14:48:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.219 2011/12/14 16:43:38 scarabeus Exp $
+
+  14 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.99.1-r1.ebuild, libreoffice-3.5.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Disable internal handling of ccache, we manage it ourselves in gentoo.
 
   13 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.99.1-r1.ebuild, libreoffice-3.5.9999.ebuild,
