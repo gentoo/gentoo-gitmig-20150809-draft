@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6017 2011/12/14 06:36:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6018 2011/12/14 17:35:21 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Dec 2011; Ulrich Mueller <ulm@gentoo.org> license_groups:
+  Add Texinfo-manual to FREE-DOCUMENTS license group.
 
   14 Dec 2011; Peter Volkov <pva@gentoo.org> package.mask:
   mask net-libs/wt: broken, unmaintained, see #378617, pending removal on

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.96 2011/12/08 21:58:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.97 2011/12/14 17:35:21 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -38,7 +38,7 @@ FSF-APPROVED-OTHER Arphic CCPL-Attribution-2.0 CCPL-Attribution-ShareAlike-2.0 D
 
 # Licenses for free documents, following the definition at
 # http://freedomdefined.org/
-FREE-DOCUMENTS @FSF-APPROVED-OTHER BitstreamVera CC-PD CCPL-Attribution-2.5 CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 CCPL-ShareAlike-1.0 LDP-1 LDP-1a man-pages-posix MaxMind2 myspell-en_CA-KevinAtkinson
+FREE-DOCUMENTS @FSF-APPROVED-OTHER BitstreamVera CC-PD CCPL-Attribution-2.5 CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 CCPL-ShareAlike-1.0 LDP-1 LDP-1a man-pages-posix MaxMind2 myspell-en_CA-KevinAtkinson Texinfo-manual
 
 # Collection of all licenses with the freedom to use, share, modify
 # and share modifications
