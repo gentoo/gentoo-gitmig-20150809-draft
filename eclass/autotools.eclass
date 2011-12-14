@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.115 2011/12/14 19:15:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.116 2011/12/14 20:46:36 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -316,10 +316,6 @@ autotools_env_setup() {
 	[[ ${WANT_AUTOCONF} == "latest" ]] && export WANT_AUTOCONF=2.5
 }
 autotools_run_tool() {
-	if [[ ${EBUILD_PHASE} != "unpack" && ${EBUILD_PHASE} != "prepare" ]]; then
-		ewarn "QA Warning: running $1 in ${EBUILD_PHASE} phase"
-	fi
-
 	# Process our own internal flags first
 	local autofail=true m4flags=false
 	while [[ -n $1 ]] ; do
@@ -331,6 +327,10 @@ autotools_run_tool() {
 		esac
 		shift
 	done
+
+	if [[ ${EBUILD_PHASE} != "unpack" && ${EBUILD_PHASE} != "prepare" ]]; then
+		ewarn "QA Warning: running $1 in ${EBUILD_PHASE} phase"
+	fi
 
 	autotools_env_setup
 
@@ -347,7 +347,7 @@ autotools_run_tool() {
 	fi
 
 	if ${m4flags} ; then
-		set -- $(autotools_m4dir_include) "$@" $(autotools_m4sysdir_include)
+		set -- "${1}" $(autotools_m4dir_include) "${@:2}" $(autotools_m4sysdir_include)
 	fi
 
 	printf "***** $1 *****\n***** PWD: ${PWD}\n***** $*\n\n" > "${STDERR_TARGET}"
