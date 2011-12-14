@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.2.2.ebuild,v 1.2 2011/12/08 06:36:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.2.2.ebuild,v 1.3 2011/12/14 18:49:16 graaff Exp $
 
 EAPI=4
 
@@ -51,4 +51,8 @@ each_ruby_prepare() {
 		*)
 			;;
 	esac
+}
+
+each_ruby_test() {
+	${RUBY} -Ilib -S testrb test/test_*.rb || die
 }
