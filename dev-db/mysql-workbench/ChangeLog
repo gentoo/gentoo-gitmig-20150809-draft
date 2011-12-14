@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.44 2011/10/04 01:35:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.45 2011/12/14 19:30:38 graaff Exp $
+
+*mysql-workbench-5.2.36 (14 Dec 2011)
+
+  14 Dec 2011; Hans de Graaff <graaff@gentoo.org>
+  +mysql-workbench-5.2.36.ebuild:
+  Version bump. Drop python patch since the new code works for us as well. Fix
+  compatibility with newer paramiko versions.
 
   04 Oct 2011; Joseph Jezak <josejx@gentoo.org> mysql-workbench-5.2.34.ebuild,
   mysql-workbench-5.2.35.ebuild:
