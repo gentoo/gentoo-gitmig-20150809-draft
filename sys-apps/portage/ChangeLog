@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.929 2011/12/14 23:19:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.930 2011/12/14 23:43:56 zmedico Exp $
+
+  14 Dec 2011; Zac Medico <zmedico@gentoo.org> portage-2.1.10.41.ebuild:
+  Remove obsolete elog message about --quiet-build.
 
 *portage-2.2.0_alpha81 (14 Dec 2011)
 
