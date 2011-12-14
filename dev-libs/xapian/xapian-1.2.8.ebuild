@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.2.8.ebuild,v 1.1 2011/12/14 11:19:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.2.8.ebuild,v 1.2 2011/12/14 21:08:05 blueness Exp $
 
 EAPI=4
-
-inherit multilib
 
 MY_P="${PN}-core-${PV}"
 
@@ -53,7 +51,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	rm -rf "${D}usr/$(get_libdir)/libxapian.la"
 
 	mv "${D}usr/share/doc/xapian-core" "${D}usr/share/doc/${PF}"
 	use doc || rm -rf "${D}usr/share/doc/${PF}"

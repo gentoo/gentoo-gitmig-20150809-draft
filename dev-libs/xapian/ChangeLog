@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.68 2011/12/14 11:19:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.69 2011/12/14 21:08:05 blueness Exp $
+
+  14 Dec 2011; Anthony G. Basile <blueness@gentoo.org> xapian-1.2.8.ebuild:
+  Restored libxapian.la, needed for xapian-bindings' xapian-config, thanks
+  Arfrever
 
 *xapian-1.2.8 (14 Dec 2011)
 
