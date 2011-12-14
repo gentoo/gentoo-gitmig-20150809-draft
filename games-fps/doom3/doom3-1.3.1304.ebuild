@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1304.ebuild,v 1.3 2009/07/24 18:20:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1304.ebuild,v 1.4 2011/12/14 17:19:31 vapier Exp $
 
 inherit eutils games
 
@@ -16,7 +16,6 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="alsa cdinstall dedicated opengl roe"
 RESTRICT="strip"
-PROPERTIES="interactive"
 
 DEPEND="app-arch/bzip2
 	app-arch/tar"
@@ -36,8 +35,6 @@ RDEPEND="sys-libs/glibc
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
-
-GAMES_CHECK_LICENSE="yes"
 
 QA_TEXTRELS="${dir:1}/pb/pbcl.so
 	${dir:1}/pb/pbcls.so

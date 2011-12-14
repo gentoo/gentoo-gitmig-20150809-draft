@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-demo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.28 2008/09/26 18:01:27 zmedico Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.29 2011/12/14 17:18:59 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> doom3-demo-1.1.1286.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
   26 Sep 2008; Zac Medico <zmedico@gentoo.org> doom3-demo-1.1.1286.ebuild:
   Set PROPERTIES=interactive since GAMES_CHECK_LICENSE=yes is set.

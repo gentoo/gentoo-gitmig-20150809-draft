@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-data/etqw-data-1.0.ebuild,v 1.5 2010/07/13 14:32:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-data/etqw-data-1.0.ebuild,v 1.6 2011/12/14 17:20:29 vapier Exp $
 
 inherit eutils games
 
@@ -15,8 +15,6 @@ IUSE="videos"
 PROPERTIES="interactive"
 
 S=${WORKDIR}
-
-GAMES_CHECK_LICENSE="yes"
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/etqw

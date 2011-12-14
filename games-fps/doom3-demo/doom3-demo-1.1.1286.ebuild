@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.22 2008/09/26 18:01:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.23 2011/12/14 17:18:59 vapier Exp $
 
 inherit eutils games
 
@@ -14,7 +14,6 @@ LICENSE="DOOM3"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="opengl dedicated"
-PROPERTIES="interactive"
 RESTRICT="strip mirror"
 QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/*"
 
@@ -31,7 +30,6 @@ RDEPEND="opengl? ( virtual/opengl )
 
 S=${WORKDIR}
 
-GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 

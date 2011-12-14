@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/postal2mp-demo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/ChangeLog,v 1.13 2009/09/26 11:28:44 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/ChangeLog,v 1.14 2011/12/14 17:21:04 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> postal2mp-demo-1407.ebuild,
+  postal2mp-demo-1407-r1.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
 *postal2mp-demo-1407-r1 (26 Sep 2009)
 

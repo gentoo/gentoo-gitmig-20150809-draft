@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/etqw-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-data/ChangeLog,v 1.4 2011/11/17 19:01:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-data/ChangeLog,v 1.5 2011/12/14 17:20:29 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> etqw-data-1.0.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
   17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Change developer's email

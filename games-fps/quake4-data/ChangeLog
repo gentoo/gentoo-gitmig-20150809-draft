@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake4-data
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-data/ChangeLog,v 1.10 2010/07/14 18:06:34 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-data/ChangeLog,v 1.11 2011/12/14 17:24:17 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org>
+  quake4-data-1.0.2147.12.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
   14 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
   quake4-data-1.0.2147.12.ebuild:

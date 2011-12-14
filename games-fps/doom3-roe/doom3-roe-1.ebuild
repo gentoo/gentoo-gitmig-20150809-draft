@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.12 2011/08/04 22:31:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.13 2011/12/14 17:20:00 vapier Exp $
 
 inherit eutils games
 
@@ -19,7 +19,6 @@ RDEPEND=">=games-fps/doom3-1.3.1302-r2"
 
 S=${WORKDIR}
 
-GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/doom3
 Ddir=${D}/${dir}
 

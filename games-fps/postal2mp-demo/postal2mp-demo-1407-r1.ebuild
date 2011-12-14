@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407-r1.ebuild,v 1.1 2009/09/26 11:28:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407-r1.ebuild,v 1.2 2011/12/14 17:21:04 vapier Exp $
 
 EAPI=2
 inherit eutils multilib games
@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror strip"
-PROPERTIES="interactive"
 
 RDEPEND="virtual/opengl
 	sys-libs/glibc
@@ -26,8 +25,6 @@ RDEPEND="virtual/opengl
 DEPEND=""
 
 S=${WORKDIR}/data
-
-GAMES_CHECK_LICENSE="yes"
 
 src_unpack() {
 	unpack_makeself

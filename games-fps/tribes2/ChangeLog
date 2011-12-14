@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tribes2
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/ChangeLog,v 1.20 2008/07/28 16:40:56 wolf31o2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/ChangeLog,v 1.21 2011/12/14 17:27:48 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> tribes2-25034.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.

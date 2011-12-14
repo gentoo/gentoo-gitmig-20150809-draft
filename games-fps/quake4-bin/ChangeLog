@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake4-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.38 2010/03/09 12:12:16 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.39 2011/12/14 17:23:43 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> quake4-bin-1.3.2.ebuild,
+  quake4-bin-1.4.2.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> quake4-bin-1.3.2.ebuild:
   QA: When not using an absolute path, you MUST NOT use a file extension

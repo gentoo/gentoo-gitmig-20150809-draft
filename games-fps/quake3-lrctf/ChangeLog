@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-lrctf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-lrctf/ChangeLog,v 1.3 2009/10/07 04:26:31 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-lrctf/ChangeLog,v 1.4 2011/12/14 17:23:13 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> quake3-lrctf-1.1.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
   07 Oct 2009; Tristan Heaven <nyhm@gentoo.org> quake3-lrctf-1.1.ebuild:
   EAPI=2

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.66 2009/10/12 00:54:03 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.67 2011/12/14 17:28:54 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> ut2004-3369.3-r1.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
 *ut2004-3369.3-r1 (12 Oct 2009)
 

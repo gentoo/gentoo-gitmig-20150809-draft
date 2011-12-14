@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.4.2.ebuild,v 1.4 2008/09/26 18:54:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.4.2.ebuild,v 1.5 2011/12/14 17:23:43 vapier Exp $
 
 inherit eutils games
 
@@ -12,7 +12,6 @@ LICENSE="QUAKE4"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="alsa cdinstall dedicated linguas_cs linguas_fr linguas_it linguas_pl linguas_ru opengl"
-PROPERTIES="interactive"
 RESTRICT="strip"
 
 UIDEPEND="virtual/opengl
@@ -42,8 +41,6 @@ RDEPEND="sys-libs/glibc
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/quake4
 Ddir=${D}/${dir}
-
-GAMES_CHECK_LICENSE="yes"
 
 QA_TEXTRELS="${dir:1}/pb/pbag.so
 	${dir:1}/pb/pbags.so

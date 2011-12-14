@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407.ebuild,v 1.11 2009/04/14 07:27:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407.ebuild,v 1.12 2011/12/14 17:21:04 vapier Exp $
 
 inherit eutils games
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror strip"
-PROPERTIES="interactive"
 
 RDEPEND="x11-libs/libXext
 	sys-libs/glibc
@@ -28,7 +27,6 @@ DEPEND=">=sys-apps/portage-2.1"
 
 S=${WORKDIR}
 
-GAMES_CHECK_LICENSE="yes"
 dir="${GAMES_PREFIX_OPT}/${PN}"
 Ddir="${D}/${dir}"
 

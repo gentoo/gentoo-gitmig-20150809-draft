@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.12 2010/08/17 07:13:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.13 2011/12/14 17:25:45 vapier Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,6 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="opengl dedicated"
 RESTRICT="strip mirror"
-PROPERTIES="interactive"
 QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/rtcw/pb/pbag.so
 	${GAMES_PREFIX_OPT:1}/rtcw/pb/pbsv.so
 	${GAMES_PREFIX_OPT:1}/rtcw/pb/pbcl.so"
@@ -38,7 +37,6 @@ RDEPEND="sys-libs/glibc
 
 S=${WORKDIR}
 
-GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 

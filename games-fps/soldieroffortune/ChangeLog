@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/soldieroffortune
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.25 2011/07/12 17:45:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.26 2011/12/14 17:27:16 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org>
+  soldieroffortune-1.06a.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
   12 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org>
   soldieroffortune-1.06a.ebuild:
