@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.26 2011/09/23 14:10:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.27 2011/12/14 23:40:18 vapier Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -248,7 +248,7 @@ git-2_prepare_storedir() {
 	if [[ ! -d ${EGIT_STORE_DIR} ]]; then
 		debug-print "${FUNCNAME}: Creating git main storage directory"
 		addwrite /
-		mkdir -p "${EGIT_STORE_DIR}" \
+		mkdir -m 775 -p "${EGIT_STORE_DIR}" \
 			|| die "${FUNCNAME}: can't mkdir \"${EGIT_STORE_DIR}\""
 	fi
 
