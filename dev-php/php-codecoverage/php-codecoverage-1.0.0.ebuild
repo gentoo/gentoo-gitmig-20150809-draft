@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codecoverage/php-codecoverage-1.0.0.ebuild,v 1.4 2011/09/18 10:55:36 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codecoverage/php-codecoverage-1.0.0.ebuild,v 1.5 2011/12/14 22:58:36 mabi Exp $
 
 inherit php-pear-r1 depend.php eutils
 
@@ -12,7 +12,7 @@ IUSE=""
 SRC_URI="http://pear.phpunit.de/get/PHP_CodeCoverage-${PV}.tgz"
 
 RDEPEND="${RDEPEND}
-	>=dev-php5/ezc-ConsoleTools-1.6
+	>=dev-php/ezc-ConsoleTools-1.6
 	>=dev-php/file-iterator-1.2.2
 	dev-php/php-tokenstream
 	dev-php/php-texttemplate
