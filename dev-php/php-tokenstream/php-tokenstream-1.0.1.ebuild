@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/php-tokenstream-1.0.1.ebuild,v 1.5 2011/06/28 07:34:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/php-tokenstream-1.0.1.ebuild,v 1.6 2011/12/14 22:50:25 mabi Exp $
 
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
 PHP_PEAR_URI="pear.phpunit.de"
@@ -13,5 +13,5 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 RDEPEND="${RDEPEND}
-	>=dev-php5/ezc-ConsoleTools-1.6"
+	>=dev-php/ezc-ConsoleTools-1.6"
 HOMEPAGE="http://pear.phpunit.de"

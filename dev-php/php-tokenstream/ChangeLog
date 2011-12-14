@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-tokenstream
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/ChangeLog,v 1.8 2011/11/12 17:23:39 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/ChangeLog,v 1.9 2011/12/14 22:50:25 mabi Exp $
+
+  14 Dec 2011; Matti Bickel <mabi@gentoo.org> php-tokenstream-1.0.1.ebuild,
+  php-tokenstream-1.1.0.ebuild:
+  Merging categories dev-php5 and dev-php (bug #324665)
 
   12 Nov 2011; Ole Markus With <olemarkus@gentoo.org>
   php-tokenstream-1.1.0.ebuild:

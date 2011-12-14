@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phploc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phploc/ChangeLog,v 1.1 2011/03/25 13:53:02 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phploc/ChangeLog,v 1.2 2011/12/14 22:51:26 mabi Exp $
+
+  14 Dec 2011; Matti Bickel <mabi@gentoo.org> phploc-1.6.1.ebuild:
+  Merging categories dev-php5 and dev-php (bug #324665)
 
 *phploc-1.6.1 (25 Mar 2011)
 

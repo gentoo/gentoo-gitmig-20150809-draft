@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/dbunit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/ChangeLog,v 1.6 2011/06/28 07:28:03 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/ChangeLog,v 1.7 2011/12/14 22:51:00 mabi Exp $
+
+  14 Dec 2011; Matti Bickel <mabi@gentoo.org> dbunit-1.0.1.ebuild:
+  Merging categories dev-php5 and dev-php (bug #324665)
 
   28 Jun 2011; Ole Markus With <olemarkus@gentoo.org> dbunit-1.0.1.ebuild:
   Added missing PHP_PEAR_URI
