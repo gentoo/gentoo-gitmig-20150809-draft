@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nepenthes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.20 2009/08/07 14:02:48 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.21 2011/12/14 15:28:47 jer Exp $
+
+  14 Dec 2011; Jeroen Roovers <jer@gentoo.org> nepenthes-0.2.2.ebuild:
+  Fix gcc: error: unrecognized option -R (bug #365115).
 
   07 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   nepenthes-0.2.2.ebuild, -files/nepenthes-0.2.2-gcc44.patch:
