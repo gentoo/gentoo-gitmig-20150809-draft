@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.620 2011/12/11 04:48:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.621 2011/12/14 20:11:33 williamh Exp $
+
+  14 Dec 2011; William Hubbs <williamh@gentoo.org> -udev-171-r1.ebuild,
+  -udev-171-r2.ebuild, -udev-171-r3.ebuild, -udev-175.ebuild:
+  remove old versions
 
 *udev-171-r4 (11 Dec 2011)
 
