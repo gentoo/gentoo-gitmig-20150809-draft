@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Metadata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.13 2011/12/07 01:56:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.14 2011/12/14 23:41:37 maekke Exp $
+
+  14 Dec 2011; Markus Meier <maekke@gentoo.org> Module-Metadata-1.0.6.ebuild:
+  arm stable, bug #393397
 
   07 Dec 2011; Jeroen Roovers <jer@gentoo.org> Module-Metadata-1.0.6.ebuild:
   Stable for HPPA (bug #393397).
