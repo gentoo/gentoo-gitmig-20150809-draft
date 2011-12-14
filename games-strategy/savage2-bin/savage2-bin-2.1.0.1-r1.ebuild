@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage2-bin/savage2-bin-2.1.0.1-r1.ebuild,v 1.4 2010/03/10 19:36:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage2-bin/savage2-bin-2.1.0.1-r1.ebuild,v 1.5 2011/12/14 17:34:27 vapier Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror strip"
-PROPERTIES="interactive"
 QA_TEXTRELS_x86="
 	${GAMES_PREFIX_OPT:1}/savage2/vid_gl2.so
 	${GAMES_PREFIX_OPT:1}/savage2/editor/cgame.so
@@ -46,8 +45,6 @@ RDEPEND="virtual/opengl
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/data
-
-GAMES_CHECK_LICENSE="yes"
 
 src_unpack() {
 	if use x86 ; then
