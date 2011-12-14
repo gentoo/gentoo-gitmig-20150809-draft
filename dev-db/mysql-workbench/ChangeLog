@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.46 2011/12/14 19:34:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.47 2011/12/14 19:39:07 graaff Exp $
+
+  14 Dec 2011; Hans de Graaff <graaff@gentoo.org>
+  -files/mysql-workbench-5.2.17-as-needed-modules.patch,
+  -files/mysql-workbench-5.2.17-python-libs.patch,
+  -files/mysql-workbench-5.2.33-cpp.patch,
+  -files/mysql-workbench-5.2.33-gtkmm.patch:
+  Drop old patches.
 
   14 Dec 2011; Hans de Graaff <graaff@gentoo.org>
   mysql-workbench-5.2.36.ebuild:
