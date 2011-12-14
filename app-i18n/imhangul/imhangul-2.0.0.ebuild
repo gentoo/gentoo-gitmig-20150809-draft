@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-2.0.0.ebuild,v 1.3 2011/10/20 22:47:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-2.0.0.ebuild,v 1.4 2011/12/14 16:34:59 ago Exp $
 
 EAPI="3"
 inherit multilib
@@ -11,7 +11,7 @@ SRC_URI="http://kldp.net/frs/download.php/5924/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=app-i18n/libhangul-0.0.12
