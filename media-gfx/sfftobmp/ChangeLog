@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sfftobmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.19 2011/12/12 20:03:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.20 2011/12/14 09:19:28 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sfftobmp-3.1.2.ebuild:
+  x86 stable wrt bug #393901
 
   12 Dec 2011; Agostino Sarubbo <ago@gentoo.org> sfftobmp-3.1.2.ebuild:
   Stable for AMD64, wrt bug #393901

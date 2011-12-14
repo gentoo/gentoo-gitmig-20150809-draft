@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/sfftobmp-3.1.2.ebuild,v 1.5 2011/12/12 20:03:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/sfftobmp-3.1.2.ebuild,v 1.6 2011/12/14 09:19:28 phajdan.jr Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/sfftools/${MY_P}_src.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-libs/boost
