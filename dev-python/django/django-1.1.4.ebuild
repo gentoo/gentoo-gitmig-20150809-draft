@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.4.ebuild,v 1.1 2011/02/09 04:01:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.4.ebuild,v 1.2 2011/12/14 10:39:53 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-DOCS="docs/* AUTHORS"
+DOCS="docs/README AUTHORS"
 WEBAPP_MANUAL_SLOT="yes"
 
 pkg_setup() {
