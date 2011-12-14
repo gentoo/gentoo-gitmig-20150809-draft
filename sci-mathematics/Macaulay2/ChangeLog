@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.26 2011/12/13 21:29:04 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.27 2011/12/14 08:44:52 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> Macaulay2-1.4-r1.ebuild:
+  x86 stable wrt bug #394157
 
   13 Dec 2011; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.4-r1.ebuild:
   Restrict tests as per bug 366711
