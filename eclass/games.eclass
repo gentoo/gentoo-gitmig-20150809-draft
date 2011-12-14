@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.145 2011/12/14 16:33:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.146 2011/12/14 16:38:47 vapier Exp $
 
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -126,7 +126,6 @@ gamesenv() {
 
 games_pkg_setup() {
 	tc-export CC CXX
-	[[ ${GAMES_CHECK_LICENSE} == "yes" ]] && check_license ${LICENSE}
 
 	enewgroup "${GAMES_GROUP}" 35
 	[[ ${GAMES_USER} != "root" ]] \
