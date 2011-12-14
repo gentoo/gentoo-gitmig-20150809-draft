@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.16-r1.ebuild,v 1.1 2011/07/30 04:39:42 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.16-r1.ebuild,v 1.2 2011/12/14 09:38:42 floppym Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
@@ -30,13 +30,6 @@ src_prepare() {
 	distutils_src_prepare
 
 	epatch "${FILESDIR}/${P}_docutils-0.8.patch"
-}
-
-src_install() {
-	distutils_src_install
-
-	insinto /usr/share/doc/${PF}/examples
-	doins doc/montecristo/* || die "doins failed"
 }
 
 pkg_postinst() {
