@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.180 2011/12/01 19:33:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.181 2011/12/14 00:20:03 ago Exp $
+
+  14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.6-r4.ebuild:
+  Stable for AMD64, wrt bug #391425
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> cmake-2.8.6-r4.ebuild:
   x86 stable wrt bug #391425
