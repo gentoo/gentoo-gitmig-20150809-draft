@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.1.5.ebuild,v 1.2 2011/12/14 20:09:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.1.5.ebuild,v 1.3 2011/12/14 22:48:29 radhermit Exp $
 
 EAPI="3"
 
@@ -13,9 +13,13 @@ LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
+
+CDEPEND="dev-libs/libpcre"
 #varnish compiles stuff at run time
-RDEPEND="sys-devel/gcc"
-DEPEND="dev-python/docutils
+RDEPEND="${CDEPEND}
+	sys-devel/gcc"
+DEPEND="${CDEPEND}
+	dev-python/docutils
 	dev-util/pkgconfig"
 
 RESTRICT="test" #315725
