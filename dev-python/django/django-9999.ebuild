@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.10 2011/12/14 10:23:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.11 2011/12/14 22:16:14 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -61,7 +61,7 @@ src_test() {
 src_install() {
 	distutils_src_install
 
-	dobashcomp extras/django_bash_completion ${PN}
+	newbashcomp extras/django_bash_completion ${PN} || die
 
 	if use doc; then
 		rm -fr docs/_build/html/_sources

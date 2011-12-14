@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.74 2011/12/14 10:39:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.75 2011/12/14 22:16:14 floppym Exp $
+
+  14 Dec 2011; Mike Gilbert <floppym@gentoo.org> django-9999.ebuild:
+  Call newbashcomp.
 
   14 Dec 2011; Mike Gilbert <floppym@gentoo.org> django-1.1.4.ebuild,
   django-1.2.5.ebuild, django-1.3.1.ebuild:
