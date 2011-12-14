@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.1.ebuild,v 1.1 2011/09/02 04:11:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.1.ebuild,v 1.2 2011/12/14 20:09:42 radhermit Exp $
 
 EAPI="4"
 
@@ -15,7 +15,8 @@ IUSE="doc static-libs"
 
 #varnish compiles stuff at run time
 RDEPEND="sys-devel/gcc"
-DEPEND="dev-python/docutils"
+DEPEND="dev-python/docutils
+	dev-util/pkgconfig"
 
 RESTRICT="test" #315725
 
