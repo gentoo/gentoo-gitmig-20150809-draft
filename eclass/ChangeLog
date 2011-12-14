@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.39 2011/12/13 14:42:39 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.40 2011/12/14 14:55:03 mgorny Exp $
+
+  14 Dec 2011; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Drop base.eclass inherit and thus src_unpack() export.
 
   13 Dec 2011; Ralph Sennhauser <sera@gentoo.org> java-utils-2.eclass:
   No longer require JDK for installing java binpkg. #206024

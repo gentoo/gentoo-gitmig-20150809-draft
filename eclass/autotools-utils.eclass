@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.29 2011/11/27 09:57:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.30 2011/12/14 14:55:03 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -93,24 +93,28 @@ case ${EAPI:-0} in
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
-inherit autotools base eutils libtool
+inherit autotools eutils libtool
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 
 # @ECLASS-VARIABLE: AUTOTOOLS_BUILD_DIR
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Build directory, location where all autotools generated files should be
 # placed. For out of source builds it defaults to ${WORKDIR}/${P}_build.
 
 # @ECLASS-VARIABLE: AUTOTOOLS_IN_SOURCE_BUILD
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Set to enable in-source build.
 
 # @ECLASS-VARIABLE: ECONF_SOURCE
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Specify location of autotools' configure script. By default it uses ${S}.
 
 # @ECLASS-VARIABLE: myeconfargs
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Optional econf arguments as Bash array. Should be defined before calling src_configure.
 # @CODE
@@ -123,6 +127,36 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # 	)
 # 	autotools-utils_src_configure
 # }
+# @CODE
+
+# @ECLASS-VARIABLE: DOCS
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Array containing documents passed to dodoc command.
+#
+# Example:
+# @CODE
+# DOCS=( NEWS README )
+# @CODE
+
+# @ECLASS-VARIABLE: HTML_DOCS
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Array containing documents passed to dohtml command.
+#
+# Example:
+# @CODE
+# HTML_DOCS=( doc/html/ )
+# @CODE
+
+# @ECLASS-VARIABLE: PATCHES
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# PATCHES array variable containing all various patches to be applied.
+#
+# Example:
+# @CODE
+# PATCHES=( "${FILESDIR}"/${P}-mypatch.patch )
 # @CODE
 
 # Determine using IN or OUT source build
@@ -224,7 +258,9 @@ remove_libtool_files() {
 autotools-utils_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	base_src_prepare
+	[[ ${PATCHES} ]] && epatch "${PATCHES[@]}"
+	epatch_user
+
 	elibtoolize --patch-only
 }
 
@@ -260,7 +296,7 @@ autotools-utils_src_configure() {
 	_check_build_dir
 	mkdir -p "${AUTOTOOLS_BUILD_DIR}" || die "mkdir '${AUTOTOOLS_BUILD_DIR}' failed"
 	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
-	base_src_configure "${econfargs[@]}" "$@"
+	econf "${econfargs[@]}" "$@"
 	popd > /dev/null
 }
 
@@ -272,7 +308,7 @@ autotools-utils_src_compile() {
 
 	_check_build_dir
 	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
-	base_src_compile "$@"
+	emake "$@" || die 'emake failed'
 	popd > /dev/null
 }
 
@@ -289,8 +325,16 @@ autotools-utils_src_install() {
 
 	_check_build_dir
 	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
-	base_src_install "$@"
+	emake DESTDIR="${D}" "$@" install || die "emake install failed"
 	popd > /dev/null
+
+	# XXX: support installing them from builddir as well?
+	if [[ ${DOCS} ]]; then
+		dodoc "${DOCS[@]}" || die "dodoc failed"
+	fi
+	if [[ ${HTML_DOCS} ]]; then
+		dohtml -r "${HTML_DOCS[@]}" || die "dohtml failed"
+	fi
 
 	# Remove libtool files and unnecessary static libs
 	remove_libtool_files
