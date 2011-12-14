@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.552 2011/11/17 03:15:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.553 2011/12/14 19:58:13 tetromino Exp $
+
+  14 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gtk+-3.0.12.ebuild,
+  gtk+-3.0.12-r1.ebuild, gtk+-3.2.1.ebuild, gtk+-3.2.2.ebuild,
+  gtk+-3.2.2-r1.ebuild:
+  Do not use gnome2_schemas_update --uninstall; --uninstall has no effect since
+  glib-2.25.11, and has been removed in 2.31.x (bug #394501, thanks to
+  Marc-Antoine Perennou for reporting).
 
 *gtk+-2.24.8-r1 (17 Nov 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.1.ebuild,v 1.5 2011/10/28 05:09:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.1.ebuild,v 1.6 2011/12/14 19:58:13 tetromino Exp $
 
 EAPI="4"
 
@@ -191,5 +191,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	gnome2_schemas_update --uninstall
+	gnome2_schemas_update
 }
