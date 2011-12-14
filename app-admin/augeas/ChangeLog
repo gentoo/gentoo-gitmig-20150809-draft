@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.27 2011/12/14 09:10:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.28 2011/12/14 20:40:05 ago Exp $
+
+  14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> augeas-0.9.0.ebuild:
+  Stable for AMD64, wrt bug #391565
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> augeas-0.9.0.ebuild:
   x86 stable wrt bug #391565
