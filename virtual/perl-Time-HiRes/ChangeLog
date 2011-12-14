@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-HiRes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.69 2011/12/09 13:15:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.70 2011/12/14 08:46:18 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  perl-Time-HiRes-1.972.200.ebuild:
+  x86 stable wrt bug #391567
 
   09 Dec 2011; Naohiro Aota <naota@gentoo.org>
   perl-Time-HiRes-1.972.400.ebuild:
