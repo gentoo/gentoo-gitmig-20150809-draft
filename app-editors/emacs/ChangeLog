@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.443 2011/12/13 22:20:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.444 2011/12/14 13:14:31 ulm Exp $
+
+  14 Dec 2011; Ulrich Mueller <ulm@gentoo.org> emacs-23.3-r3.ebuild:
+  Remove Emacs-23-CEDET-grammars from LICENSE because we distribute the grammar
+  files in our patchball.
 
 *emacs-23.3-r3 (13 Dec 2011)
 
