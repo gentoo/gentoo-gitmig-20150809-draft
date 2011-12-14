@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.102 2011/12/13 16:47:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.103 2011/12/14 09:01:42 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pycairo-1.10.0-r2.ebuild:
+  x86 stable wrt bug #393403
 
   13 Dec 2011; Jeroen Roovers <jer@gentoo.org> pycairo-1.10.0-r2.ebuild:
   Stable for HPPA (bug #393403).
