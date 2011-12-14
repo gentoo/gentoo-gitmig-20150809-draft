@@ -1,0 +1,17 @@
+# ChangeLog for dev-php5/Savant3
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Savant3/ChangeLog,v 1.1 2011/12/14 22:56:40 mabi Exp $
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> Savant3-3.0.0.ebuild:
+  Update IUSE
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +Savant3-3.0.0.ebuild:
+  Port from project overlay
+
+*Savant3-3.0.0 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +Savant3-3.0.0.ebuild:
+  Port from project overlay
+

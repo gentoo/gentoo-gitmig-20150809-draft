@@ -1,0 +1,28 @@
+# ChangeLog for dev-php5/libvirt-php
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/ChangeLog,v 1.1 2011/12/14 22:30:25 mabi Exp $
+
+  13 Jul 2011; Tiziano Müller <dev-zero@gentoo.org> libvirt-php-9999.ebuild:
+  Migrated to new git-2.eclass.
+
+*libvirt-php-0.4.2 (10 Jul 2011)
+
+  10 Jul 2011; Tiziano Müller <dev-zero@gentoo.org> +libvirt-php-0.4.2.ebuild,
+  libvirt-php-9999.ebuild:
+  Version bump.
+
+  06 Jun 2011; Mark Loeser <halcy0n@gentoo.org> libvirt-php-9999.ebuild:
+  Live ebuilds don't get keywords; bug #370235
+
+  11 Apr 2011; Tiziano Müller <dev-zero@gentoo.org> libvirt-php-0.4.1.ebuild,
+  libvirt-php-9999.ebuild:
+  Removed examples USE flag.
+
+*libvirt-php-9999 (11 Apr 2011)
+*libvirt-php-0.4.1 (11 Apr 2011)
+
+  11 Apr 2011; Tiziano Müller <dev-zero@gentoo.org> +libvirt-php-0.4.1.ebuild,
+  +libvirt-php-9999.ebuild, +metadata.xml:
+  Initial commit (ebuild written by me). Added php as herd as discussed with
+  Ole Markus.
+
