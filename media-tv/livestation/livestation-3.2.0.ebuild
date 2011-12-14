@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-3.2.0.ebuild,v 1.1 2011/03/13 15:20:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-3.2.0.ebuild,v 1.2 2011/12/14 17:29:13 vapier Exp $
 
 inherit eutils
 
@@ -26,13 +26,8 @@ QA_DT_HASH="opt/${MY_PN}/${MY_PN}.bin opt/${MY_PN}/lib/.* opt/${MY_PN}/plugins/i
 QA_PRESTRIPPED="opt/${MY_PN}/${MY_PN}.bin opt/${MY_PN}/lib/.* opt/${MY_PN}/plugins/imageformats/.*"
 
 RESTRICT="mirror"
-PROPERTIES="interactive"
 
 S=${WORKDIR}/i386
-
-pkg_setup() {
-	check_license Livestation-EULA
-}
 
 src_unpack() {
 	unpack_makeself
