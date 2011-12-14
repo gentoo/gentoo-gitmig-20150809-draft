@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libhx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.35 2011/09/04 13:49:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.36 2011/12/14 20:44:17 mattst88 Exp $
+
+*libhx-3.12 (14 Dec 2011)
+
+  14 Dec 2011; Matt Turner <mattst88@gentoo.org> +libhx-3.12.ebuild:
+  Version bump, bug 394115.
 
   04 Sep 2011; Markus Meier <maekke@gentoo.org> libhx-3.11.ebuild:
   x86 stable, bug #380783
