@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13331 2011/12/13 18:52:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13332 2011/12/14 06:36:01 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (13 Dec 2011)
+# Broken, unmaintained, see #378617
+# Pending removal on 2012-01-14
+net-libs/wt
 
 # Ulrich Mueller <ulm@gentoo.org> (13 Dec 2011)
 # SLOTs 21 and 22 of app-editors/emacs, corresponding to
@@ -694,7 +699,7 @@ dev-tex/pdftex
 =dev-db/mariadb-5.3*
 =virtual/mysql-5.3*
 
-# Peter Volkov <pva@gentoo.org> (23 Jul 2001)
+# Peter Volkov <pva@gentoo.org> (23 Jul 2011)
 # Mask release candidates
 =dev-libs/guiloader-2.99.0
 =dev-libs/guiloader-c++-2.99.0
