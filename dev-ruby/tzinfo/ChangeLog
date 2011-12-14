@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.90 2011/12/14 07:22:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.91 2011/12/14 09:05:23 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tzinfo-0.3.31.ebuild:
+  x86 stable wrt bug #393667
 
   14 Dec 2011; Hans de Graaff <graaff@gentoo.org> tzinfo-0.3.31.ebuild:
   Fix incompatibility with rake 0.9 by skipping documentation building and
