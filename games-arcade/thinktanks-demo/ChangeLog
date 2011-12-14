@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/thinktanks-demo
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.7 2008/06/25 16:33:42 ken69267 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.8 2011/12/14 17:32:57 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org>
+  thinktanks-demo-1.1-r1.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
   25 Jun 2008; Kenneth Prugh <ken69267@gentoo.org>
   thinktanks-demo-1.1-r1.ebuild:

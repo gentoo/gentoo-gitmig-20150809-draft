@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/marbleblast-demo
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblast-demo/ChangeLog,v 1.5 2009/02/01 21:40:28 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblast-demo/ChangeLog,v 1.6 2011/12/14 17:32:52 vapier Exp $
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> marbleblast-demo-1.3.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
 
   01 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
   marbleblast-demo-1.3.ebuild:
