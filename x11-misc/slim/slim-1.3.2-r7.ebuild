@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r5.ebuild,v 1.1 2011/08/19 19:55:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r7.ebuild,v 1.1 2011/12/14 20:23:55 axs Exp $
 
-EAPI=2
+EAPI=4
 
 inherit toolchain-funcs pam eutils
 
@@ -13,7 +13,8 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="branding pam"
+IUSE="branding pam consolekit"
+REQUIRED_USE="consolekit? ( pam )"
 
 RDEPEND="x11-libs/libXmu
 	x11-libs/libX11
@@ -22,6 +23,8 @@ RDEPEND="x11-libs/libXmu
 	>=media-libs/libpng-1.4
 	virtual/jpeg
 	x11-apps/sessreg
+	consolekit? ( sys-auth/consolekit
+		sys-apps/dbus )
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -29,6 +32,7 @@ DEPEND="${RDEPEND}
 PDEPEND="branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )"
 
 src_prepare() {
+
 	# respect C[XX]FLAGS, fix crosscompile,
 	# fix linking order for --as-needed"
 	sed -i -e "s:^CXX=.*:CXX=$(tc-getCXX) ${CXXFLAGS}:" \
@@ -40,7 +44,7 @@ src_prepare() {
 		-r -e "s:^LDFLAGS=(.*):LDFLAGS=\1 ${LDFLAGS}:" \
 		Makefile || die "sed failed in Makefile"
 	# Our Gentoo-specific config changes
-	epatch "${FILESDIR}"/${PN}-1.3.2-r2-config.diff
+	epatch "${FILESDIR}"/${PN}-1.3.2-r3-config.diff
 
 	if use elibc_FreeBSD; then
 		sed -i -e "s/CUSTOM=-DHAVE_SHADOW/CUSTOM=-DNEEDS_BASENAME/" Makefile \
@@ -64,29 +68,39 @@ src_prepare() {
 	epatch "${FILESDIR}"/346037-stop_setting_host_for_pam_ck_connector_so.patch
 	# Gentoo bug 378505
 	epatch "${FILESDIR}"/${P}-libpng15.patch
+	# Gentoo bug 252280
+	epatch "${FILESDIR}"/252280-fix-default_user-focus_passwd.patch
+	# Native consolekit support
+	epatch "${FILESDIR}"/${P}-ck.patch
 }
 
 src_compile() {
-	if use pam ; then
-		emake USE_PAM=1 || die "emake failed."
+	if use consolekit && use pam ; then
+		emake USE_PAM=1 USE_CONSOLEKIT=1
+	elif use pam ; then
+		emake USE_PAM=1
 	else
-		emake || die "emake failed."
+		emake
 	fi
 }
 
 src_install() {
 	if use pam ; then
-		emake USE_PAM=1 DESTDIR="${D}" install || die "emake install failed."
+		if use consolekit ; then
+			emake USE_PAM=1 USE_CONSOLEKIT=1 DESTDIR="${D}" install
+		else
+			emake USE_PAM=1 DESTDIR="${D}" install
+		fi
 		pamd_mimic system-local-login slim auth account session
 	else
-		emake DESTDIR="${D}" install || die "emake install failed."
+		emake DESTDIR="${D}" install
 	fi
 
 	insinto /usr/share/slim
-	newins "${FILESDIR}/Xsession-r2" Xsession || die "newins failed"
+	newins "${FILESDIR}/Xsession-r3" Xsession
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/slim.logrotate" slim || die "newins failed"
+	newins "${FILESDIR}/slim.logrotate" slim
 
 	dodoc xinitrc.sample ChangeLog README TODO THEMES
 }
@@ -111,14 +125,8 @@ pkg_postinst() {
 	elog "accordingly."
 	elog
 	ewarn "Please note that the slim session start script now supports consolekit"
-	ewarn "directly, via xinitrc.d scripts.  Please remove any existing work-arounds to"
-	ewarn "avoid multiple calls to ck-launch-session."
-	if has_version "<=sys-auth/pambase-20101024[consolekit]" ; then
-		ewarn
-		ewarn "You should also remove the 'nox11' flag from the pam_ck_connector.so module "
-		ewarn "in /etc/pam.d/system-login if you have not already done so."
-		ewarn "(this is safe, it will be default in the next version of pambase)"
-	fi
+	ewarn "directly.  Please remove any existing work-arounds to avoid multiple calls "
+	ewarn "to ck-launch-session, and enable USE=\"consolekit\""
 	elog
 	if ! use pam; then
 		elog "You have merged ${PN} without USE=pam, this will cause ${PN} to fall back to"
