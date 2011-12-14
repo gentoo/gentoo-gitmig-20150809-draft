@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/tree
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/ChangeLog,v 1.8 2011/04/08 13:43:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/ChangeLog,v 1.9 2011/12/14 09:50:28 jlec Exp $
+
+*tree-2.81 (14 Dec 2011)
+
+  14 Dec 2011; Justin Lecher <jlec@gentoo.org> +tree-2.81.ebuild:
+  Version Bump
 
 *tree-2.65-r1 (08 Apr 2011)
 
