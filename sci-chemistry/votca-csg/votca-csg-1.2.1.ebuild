@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.1.ebuild,v 1.3 2011/11/05 02:46:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.1.ebuild,v 1.4 2011/12/14 17:18:09 ago Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ HOMEPAGE="http://www.votca.org"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 
 RDEPEND="=sci-libs/votca-tools-${PV}[system-boost=]
 	gromacs? ( sci-chemistry/gromacs )
