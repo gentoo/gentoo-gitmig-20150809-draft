@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/vdr-bitstreamout-0.89c.ebuild,v 1.3 2011/12/07 07:55:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/vdr-bitstreamout-0.89c.ebuild,v 1.4 2011/12/14 16:50:40 ago Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ inherit vdr-plugin
 DESCRIPTION="VDR Plugin: play ac3 sound over SPDIF-port of an alsa-compatible soundcard"
 HOMEPAGE="http://bitstreamout.sourceforge.net"
 SRC_URI="mirror://sourceforge/bitstreamout/${P}.tar.bz2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 
