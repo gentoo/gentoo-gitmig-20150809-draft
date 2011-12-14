@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/ldapfuse
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ldapfuse/ChangeLog,v 1.1 2011/12/14 23:10:46 radhermit Exp $
+
+*ldapfuse-1.0 (14 Dec 2011)
+
+  14 Dec 2011; Tim Harder <radhermit@gentoo.org> +ldapfuse-1.0.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild by me.
+
