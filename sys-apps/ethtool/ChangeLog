@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.75 2011/12/14 09:11:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.76 2011/12/14 23:19:54 maekke Exp $
+
+  14 Dec 2011; Markus Meier <maekke@gentoo.org> ethtool-3.0.ebuild:
+  arm stable, bug #393553
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ethtool-3.0.ebuild:
   x86 stable wrt bug #393553
