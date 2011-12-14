@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/dbext
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.26 2011/12/14 09:18:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.27 2011/12/14 09:26:34 radhermit Exp $
+
+  14 Dec 2011; Tim Harder <radhermit@gentoo.org> -dbext-12.00.ebuild:
+  Remove old.
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dbext-13.00.ebuild:
   x86 stable wrt bug #393571
