@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/imdbpy-4.7.ebuild,v 1.3 2011/03/12 13:13:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/imdbpy-4.7.ebuild,v 1.4 2011/12/14 10:30:40 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,7 +26,7 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
-DOCS="docs/*"
+DOCS="docs/AUTHOR.txt docs/FAQS.txt docs/imdbpy47.dtd docs/imdbpy.cfg docs/README*"
 PYTHON_MODNAME="imdb"
 
 set_global_options() {
