@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>perl</herd>
-	<maintainer>
-		<email>ian@gentoo.org</email>
-		<name>Christian Hartmann</name>
-	</maintainer>
 </pkgmetadata>

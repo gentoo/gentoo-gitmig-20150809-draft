@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/autounmask
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.46 2011/01/18 22:21:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.47 2011/12/14 22:57:39 pacho Exp $
+
+  14 Dec 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due move to staffer, bug #99016
 
   18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   autounmask-0.27.ebuild:
