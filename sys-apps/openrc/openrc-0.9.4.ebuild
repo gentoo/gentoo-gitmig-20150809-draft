@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.9.4.ebuild,v 1.11 2011/12/09 20:37:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.9.4.ebuild,v 1.12 2011/12/14 17:18:20 williamh Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/init
 	kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
 	elibc_glibc? ( >=sys-libs/glibc-2.5 )
 	ncurses? ( sys-libs/ncurses )
-	pam? ( virtual/pam )
+	pam? ( sys-auth/pambase )
 	>=sys-apps/baselayout-2.0.0
 	kernel_linux? (
 		!<sys-apps/module-init-tools-3.2.2-r2
