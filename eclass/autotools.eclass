@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.114 2011/12/14 18:33:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.115 2011/12/14 19:15:13 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -201,7 +201,7 @@ eaclocal_amflags() {
 # Respects AT_M4DIR for additional directories to search for macro's.
 eaclocal() {
 	[[ ! -f aclocal.m4 || -n $(grep -e 'generated.*by aclocal' aclocal.m4) ]] && \
-		autotools_run_tool aclocal $(autotools_m4dir_include) "$@" $(eaclocal_amflags)
+		autotools_run_tool --at-m4flags aclocal "$@" $(eaclocal_amflags)
 }
 
 # @FUNCTION: _elibtoolize
@@ -230,7 +230,7 @@ _elibtoolize() {
 eautoheader() {
 	# Check if we should run autoheader
 	[[ -n $(autotools_check_macro "AC_CONFIG_HEADERS") ]] || return 0
-	NO_FAIL=1 autotools_run_tool autoheader $(autotools_m4dir_include) "$@"
+	autotools_run_tool --at-no-fail --at-m4flags autoheader "$@"
 }
 
 # @FUNCTION: eautoconf
@@ -244,7 +244,7 @@ eautoconf() {
 		die "No configure.{ac,in} present!"
 	fi
 
-	autotools_run_tool autoconf $(autotools_m4dir_include) "$@"
+	autotools_run_tool --at-m4flags autoconf "$@"
 }
 
 # @FUNCTION: eautomake
@@ -320,6 +320,18 @@ autotools_run_tool() {
 		ewarn "QA Warning: running $1 in ${EBUILD_PHASE} phase"
 	fi
 
+	# Process our own internal flags first
+	local autofail=true m4flags=false
+	while [[ -n $1 ]] ; do
+		case $1 in
+		--at-no-fail) autofail=false;;
+		--at-m4flags) m4flags=true;;
+		# whatever is left goes to the actual tool
+		*) break;;
+		esac
+		shift
+	done
+
 	autotools_env_setup
 
 	local STDERR_TARGET="${T}/$1.out"
@@ -334,13 +346,15 @@ autotools_run_tool() {
 		done
 	fi
 
+	if ${m4flags} ; then
+		set -- $(autotools_m4dir_include) "$@" $(autotools_m4sysdir_include)
+	fi
+
 	printf "***** $1 *****\n***** PWD: ${PWD}\n***** $*\n\n" > "${STDERR_TARGET}"
 
 	ebegin "Running $@"
 	"$@" >> "${STDERR_TARGET}" 2>&1
-	eend $?
-
-	if [[ $? != 0 && ${NO_FAIL} != 1 ]] ; then
+	if ! eend $? && ${autofail} ; then
 		echo
 		eerror "Failed Running $1 !"
 		eerror
@@ -380,14 +394,13 @@ autotools_check_macro_val() {
 autotools_get_subdirs() { autotools_check_macro_val AC_CONFIG_SUBDIRS ; }
 autotools_get_auxdir() { autotools_check_macro_val AC_CONFIG_AUX_DIR ; }
 
-autotools_m4dir_include() {
+_autotools_m4dir_include() {
 	local x include_opts
 
-	for x in ${AT_M4DIR} $(eval echo ${AT_SYS_M4DIR}) ; do
-		case "${x}" in
-			"-I")
-				# We handle it below
-				;;
+	for x in "$@" ; do
+		case ${x} in
+			# We handle it below
+			-I) ;;
 			*)
 				[[ ! -d ${x} ]] && ewarn "autotools.eclass: '${x}' does not exist"
 				include_opts+=" -I ${x}"
@@ -397,5 +410,7 @@ autotools_m4dir_include() {
 
 	echo ${include_opts}
 }
+autotools_m4dir_include()    { _autotools_m4dir_include ${AT_M4DIR} ; }
+autotools_m4sysdir_include() { _autotools_m4dir_include $(eval echo ${AT_SYS_M4DIR}) ; }
 
 fi
