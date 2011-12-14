@@ -1,30 +1,36 @@
+From eb88a598f46f835782ba93bfbde68761cb159f4c Mon Sep 17 00:00:00 2001
+Message-Id: <eb88a598f46f835782ba93bfbde68761cb159f4c.1323853429.git.jlec@gentoo.org>
+From: Justin Lecher <jlec@gentoo.org>
+Date: Wed, 14 Dec 2011 09:50:42 +0100
+Subject: [PATCH 1/2] gentoo.patch
+
+Conflicts:
+
+	Makefile
+---
+ Makefile |   30 +++++++++++++++---------------
+ 1 files changed, 15 insertions(+), 15 deletions(-)
+
 diff --git a/Makefile b/Makefile
-index 10e9ba2..a992ea6 100644
+index 5c92d8b..859363e 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -42,17 +42,17 @@
- 
- # Version string
- VERSION = 3:0:0
--RELEASE = 2.1.3
-+RELEASE = 2.1.4
- 
- 
- #
- # Compiler and compilation flags
+@@ -52,11 +52,10 @@ RELEASE = 3.1
  #
 -CC	= gcc
-+CC	?= gcc
  ifneq ($(MSYSTEM),MINGW32)
 -CFLAGS  = -g -O2  -Wall  -ansi -pedantic -DCNEARTREE_SAFE_TRIANG=1
 +CFLAGS  += -ansi -DCNEARTREE_SAFE_TRIANG=1
+ TIME = time
  else
 -CFLAGS  = -g -O2 -Wall  -DCNEARTREE_SAFE_TRIANG=1
+-TIME = 
 +CFLAGS  += -DCNEARTREE_SAFE_TRIANG=1
++TIME =
  endif
  
  #
-@@ -72,8 +72,8 @@ endif
+@@ -76,8 +76,8 @@ endif
  # Uncomment the next two lines if CVector is installed locally in $(HOME)/include
  # and $(HOME)/lib
  #
@@ -35,7 +41,7 @@ index 10e9ba2..a992ea6 100644
  
  #
  # Directories
-@@ -86,7 +86,7 @@ INC      = $(ROOT)
+@@ -90,7 +90,7 @@ INC      = $(ROOT)
  EXAMPLES = $(ROOT)
  TESTDATA = $(ROOT)
  ifndef INSTALL_PREFIX
@@ -44,22 +50,31 @@ index 10e9ba2..a992ea6 100644
  #INSTALL_PREFIX  = $(HOME)
  endif
  
-@@ -112,7 +112,7 @@ CLIBRARIES = $(CVECTOR_LIBLOC) -lCVector -lm
+@@ -115,10 +115,10 @@ CPPLIBRARIES = -lm
+ CLIBRARIES = $(CVECTOR_LIBLOC) -lCVector -lm
  
  COMPILE_COMMAND        =  $(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(INCLUDES) $(WARNINGS) -c
- CPPCOMPILE_COMMAND     =  $(LIBTOOL) --mode=compile $(CXX) $(CFLAGS) $(INCLUDES) $(WARNINGS) -c
--LIBRARY_LINK_COMMAND   =  $(LIBTOOL) --mode=link  $(CC) -version-info $(VERSION) -release $(RELEASE) -no-undefined -rpath $(INSTALL_PREFIX)/lib
+-CPPCOMPILE_COMMAND     =  $(LIBTOOL) --mode=compile $(CXX) $(CFLAGS) $(INCLUDES) $(WARNINGS) -c
+-LIBRARY_LINK_COMMAND   =  $(LIBTOOL) --mode=link $(CC) -version-info $(VERSION) -no-undefined -rpath $(INSTALL_PREFIX)/lib
++CPPCOMPILE_COMMAND     =  $(LIBTOOL) --mode=compile $(CXX) $(CXXFLAGS) $(INCLUDES) $(WARNINGS) -c
 +LIBRARY_LINK_COMMAND   =  $(LIBTOOL) --mode=link  $(CC) -version-info $(VERSION) -release $(RELEASE) -no-undefined -rpath $(INSTALL_PREFIX)/GENTOOLIBDIR $(LDFLAGS)
  BUILD_COMMAND_LOCAL    =  $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(INCLUDES)
- CPPBUILD_COMMAND_LOCAL =  $(LIBTOOL) --mode=link $(CXX) -no-undefined $(CFLAGS) $(INCLUDES)
+-CPPBUILD_COMMAND_LOCAL =  $(LIBTOOL) --mode=link $(CXX) -no-undefined $(CFLAGS) $(INCLUDES)
++CPPBUILD_COMMAND_LOCAL =  $(LIBTOOL) --mode=link $(CXX) -no-undefined $(CXXFLAGS) $(INCLUDES)
  BUILD_COMMAND_DYNAMIC  =  $(LIBTOOL) --mode=link $(CC) -no-undefined $(CFLAGS) -shared -I$(INSTALL_PREFIX)/include
-@@ -221,10 +221,10 @@ all:	$(LIB) $(BIN) $(SOURCE) $(HEADERS) \
+ BUILD_COMMAND_STATIC   =  $(LIBTOOL) --mode=link $(CC) $(CFLAGS) -static-libtool-libs -I$(INSTALL_PREFIX)/include
+ INSTALL_COMMAND        =  $(LIBTOOL) --mode=install cp
+@@ -223,13 +223,13 @@ endif
+ #
+ all:	$(LIB) $(BIN) $(SOURCE) $(HEADERS) \
  		$(LIB)/libCNearTree.$(LIB_EXT) \
- 		$(BIN)/CPPMain $(BIN)/CMain $(BIN)/CPPNearTreeTest $(BIN)/CNearTreeTest
+-		$(BIN)/CPPMain $(BIN)/CMain $(BIN)/CPPNearTreeTest $(BIN)/CNearTreeTest $(BIN)/CNearTreeTestInst 
++		$(BIN)/CPPMain $(BIN)/CMain $(BIN)/CPPNearTreeTest $(BIN)/CNearTreeTest
  		
 -install:  all $(INSTALL_PREFIX) $(INSTALL_PREFIX)/lib $(INSTALL_PREFIX)/include \
 +install:  all $(INSTALL_PREFIX) $(INSTALL_PREFIX)/GENTOOLIBDIR $(INSTALL_PREFIX)/include \
-           $(INC) $(LIB)/libCNearTree.$(LIB_EXT)  $(INC)/TNear.h $(INC)/CNearTree.h $(INC)/rhrand.h
+           $(INC) $(LIB)/libCNearTree.$(LIB_EXT)  $(INC)/TNear.h $(INC)/CNearTree.h \
+ 		  $(INC)/rhrand.h $(INC)/triple.h
 -		  $(INSTALL_COMMAND) $(LIB)/libCNearTree.$(LIB_EXT) $(INSTALL_PREFIX)/lib/libCNearTree.$(LIB_EXT)
 -		  $(INSTALL_FINISH_COMMAND) $(INSTALL_PREFIX)/lib/libCNearTree.$(LIB_EXT)
 +		  $(INSTALL_COMMAND) $(LIB)/libCNearTree.$(LIB_EXT) $(INSTALL_PREFIX)/GENTOOLIBDIR/libCNearTree.$(LIB_EXT)
@@ -67,22 +82,7 @@ index 10e9ba2..a992ea6 100644
  		  -cp $(INSTALL_PREFIX)/include/TNear.h $(INSTALL_PREFIX)/include/TNear_old.h
  		  -cp $(INSTALL_PREFIX)/include/CNearTree.h $(INSTALL_PREFIX)/include/CNearTree_old.h
  		  cp $(INC)/TNear.h $(INSTALL_PREFIX)/include/TNear.h
-@@ -233,14 +233,6 @@ install:  all $(INSTALL_PREFIX) $(INSTALL_PREFIX)/lib $(INSTALL_PREFIX)/include
- 		  chmod 644 $(INSTALL_PREFIX)/include/TNear.h
- 		  chmod 644 $(INSTALL_PREFIX)/include/CNearTree.h
- 		  chmod 644 $(INSTALL_PREFIX)/include/rhrand.h
--		  echo "Testing final install dynamic"
--		  $(BUILD_COMMAND_DYNAMIC) $(INCLUDES) $(EXAMPLES)/CNearTreeTest.c \
--		  -L$(INSTALL_PREFIX)/lib -lCNearTree $(CLIBRARIES) -o $(BIN)/CNearTreeTest_dynamic
--		  $(BIN)/CNearTreeTest_dynamic 
--		  echo "Testing final install static"
--		  $(BUILD_COMMAND_STATIC) $(INCLUDES) $(EXAMPLES)/CNearTreeTest.c \
--		  -L$(INSTALL_PREFIX)/lib -lCNearTree $(CLIBRARIES) -o $(BIN)/CNearTreeTest_static
--		  $(BIN)/CNearTreeTest_static 
- 			
- 		  
- 		  
-@@ -250,8 +242,8 @@ install:  all $(INSTALL_PREFIX) $(INSTALL_PREFIX)/lib $(INSTALL_PREFIX)/include
+@@ -257,8 +257,8 @@ install:  all $(INSTALL_PREFIX) $(INSTALL_PREFIX)/lib $(INSTALL_PREFIX)/include
  $(INSTALL_PREFIX):
  	mkdir -p $(INSTALL_PREFIX)
  
@@ -93,3 +93,6 @@ index 10e9ba2..a992ea6 100644
  
  $(INSTALL_PREFIX)/bin:  $(INSTALL_PREFIX)
  	mkdir -p $(INSTALL_PREFIX)/bin
+-- 
+1.7.8
+

@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/neartree
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.12 2011/05/09 15:07:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.13 2011/12/14 09:20:30 jlec Exp $
+
+*neartree-3.1.1 (14 Dec 2011)
+
+  14 Dec 2011; Justin Lecher <jlec@gentoo.org> +files/3.1.1-gentoo.patch,
+  +files/3.1.1-notest.patch, +files/3.1.1-test.patch,
+  -files/2.1.4-gcc4.3.patch, -files/2.1.4-gentoo.patch,
+  -files/2.1.4-iterator.patch, -neartree-2.1.4-r2.ebuild,
+  -neartree-2.3.1.ebuild, +neartree-3.1.1.ebuild:
+  Version Bump
 
   09 May 2011; Justin Lecher <jlec@gentoo.org> +files/2.3.2-notest.patch,
   neartree-2.3.2.ebuild:
