@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r10.ebuild,v 1.8 2011/12/14 12:20:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.1 2011/12/14 12:20:17 jlec Exp $
 
 EAPI=3
 
@@ -33,7 +33,7 @@ done
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
@@ -41,7 +41,7 @@ RDEPEND="
 	!<sci-chemistry/ccp4-apps-${PVR}
 	app-shells/tcsh
 	dev-lang/tcl
-	<sci-libs/cbflib-0.9.2.2
+	>=sci-libs/cbflib-0.9.2.2
 	sci-libs/fftw:2.1
 	sci-libs/mmdb
 	sci-libs/monomer-db
@@ -105,6 +105,9 @@ src_prepare() {
 
 	# use pkg-config to detect BLAS/LAPACK
 	ccp_patch "${FILESDIR}"/${PV}-lapack.patch
+
+	# proto type changing in version 0.9.2.2
+	ccp_patch "${FILESDIR}"/${PV}-cbf.patch
 
 	einfo "Done." # done applying Gentoo patches
 	echo
