@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.72 2011/09/16 12:03:23 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.73 2011/12/14 10:23:36 floppym Exp $
+
+*django-1.3.1-r1 (14 Dec 2011)
+
+  14 Dec 2011; Mike Gilbert <floppym@gentoo.org> +django-1.3.1-r1.ebuild,
+  django-9999.ebuild:
+  Don't call dodoc on directory; bug 367547. Migrate to bash-completion-r1.
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> django-1.3.1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian

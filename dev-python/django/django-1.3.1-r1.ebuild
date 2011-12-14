@@ -1,21 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.10 2011/12/14 10:23:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.3.1-r1.ebuild,v 1.1 2011/12/14 10:23:36 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit bash-completion-r1 distutils subversion webapp
+inherit bash-completion-r1 distutils versionator webapp
+
+MY_P="Django-${PV}"
 
 DESCRIPTION="High-level Python web framework"
 HOMEPAGE="http://www.djangoproject.com/ http://pypi.python.org/pypi/Django"
-SRC_URI=""
+SRC_URI="http://media.djangoproject.com/releases/$(get_version_component_range 1-2)/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc mysql postgres sqlite test"
 
 RDEPEND="dev-python/imaging
@@ -26,9 +28,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.3 )
 	test? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) )"
 
-S="${WORKDIR}"
-
-ESVN_REPO_URI="http://code.djangoproject.com/svn/django/trunk/"
+S="${WORKDIR}/${MY_P}"
 
 DOCS="docs/README AUTHORS"
 WEBAPP_MANUAL_SLOT="yes"
@@ -61,7 +61,7 @@ src_test() {
 src_install() {
 	distutils_src_install
 
-	dobashcomp extras/django_bash_completion ${PN}
+	newbashcomp extras/django_bash_completion ${PN} || die
 
 	if use doc; then
 		rm -fr docs/_build/html/_sources
