@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r4.ebuild,v 1.30 2011/10/27 13:56:55 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r4.ebuild,v 1.31 2011/12/14 23:05:44 floppym Exp $
 
 EAPI="1"
 
@@ -101,6 +101,9 @@ src_unpack() {
 		# Remove Microsoft Windows executables.
 		rm Lib/distutils/command/wininst-*.exe
 	fi
+
+	# Linux-3 compat. Bug #374579 (upstream issue12571)
+	cp -r "${S}/Lib/plat-linux2" "${S}/Lib/plat-linux3" || die
 
 	eautoreconf
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.562 2011/12/13 18:10:35 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.563 2011/12/14 23:05:44 floppym Exp $
+
+  14 Dec 2011; Mike Gilbert <floppym@gentoo.org> python-2.5.4-r4.ebuild:
+  Apply linux3 platform workaround. Fixes bug 394143.
 
   13 Dec 2011; Dirkjan Ochtman <djc@gentoo.org> files/linux2.patch:
   Prune back linux2.patch to prevent race conditions (bug 394547).
