@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.27 2011/12/14 09:26:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.28 2011/12/14 22:31:16 ago Exp $
+
+  14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> rasmol-2.7.5.1.ebuild:
+  Stable for AMD64, wrt bug #394085
 
 *rasmol-2.7.5.2 (14 Dec 2011)
 
