@@ -1,10 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.31.ebuild,v 1.1 2011/12/08 19:55:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.31.ebuild,v 1.2 2011/12/14 07:22:22 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
 
+# No longer compatible with rake 0.9 starting with 0.3.31.
+RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGES README"
 
@@ -31,4 +33,8 @@ all_ruby_prepare() {
 	sed -i \
 		-e '/^    def test_get_tainted_not_loaded/, /^    end/ s:^:#:' \
 		"${S}"/test/tc_timezone.rb || die "unable to sed out the test"
+}
+
+each_ruby_test() {
+	TZ='America/Los_Angeles' ${RUBY} -I. -S testrb test/tc_*.rb || die
 }
