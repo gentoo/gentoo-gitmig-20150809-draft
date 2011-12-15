@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.61 2011/09/01 18:42:33 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.62 2011/12/15 09:01:06 tomjbe Exp $
+
+  15 Dec 2011; Thomas Beierlein <tomjbe@gentoo.org> hamlib-1.2.14.ebuild:
+  Use only autotools-utils functions. Bug #392101
 
 *hamlib-1.2.14 (01 Sep 2011)
 
