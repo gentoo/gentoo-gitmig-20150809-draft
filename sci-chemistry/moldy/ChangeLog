@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/moldy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.19 2011/06/26 08:39:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.20 2011/12/15 21:24:01 jlec Exp $
+
+  15 Dec 2011; Justin Lecher <jlec@gentoo.org> -moldy-2.16e.ebuild,
+  moldy-2.16e-r2.ebuild:
+  Keyword for amd64-linux and removed old
 
   26 Jun 2011; Justin Lecher <jlec@gentoo.org> moldy-2.16e.ebuild,
   -moldy-2.16e-r1.ebuild, moldy-2.16e-r2.ebuild, metadata.xml:
