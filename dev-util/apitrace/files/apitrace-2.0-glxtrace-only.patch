@@ -8,16 +8,31 @@
  
  ##############################################################################
  # Find dependencies
-@@ -137,6 +138,8 @@
- # - on unices to prevent symbol collisions when tracing applications that link
- # against other versions of these libraries
- 
-+if (NOT BUILD_LIB_ONLY)
-+
- find_package (ZLIB REQUIRED)
+@@ -141,7 +142,13 @@
  include_directories (${ZLIB_INCLUDE_DIRS})
  link_libraries (${ZLIB_LIBRARIES})
-@@ -166,6 +169,8 @@
+ 
+-find_package (SNAPPY REQUIRED)
++if (BUILD_LIB_ONLY)
++	set (SNAPPY_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/snappy)
++	set (SNAPPY_LIBRARIES snappy_bundled)
++	add_subdirectory (thirdparty/snappy EXCLUDE_FROM_ALL)
++else (BUILD_LIB_ONLY)
++	find_package (SNAPPY REQUIRED)
++endif (BUILD_LIB_ONLY)
+ include_directories (${SNAPPY_INCLUDE_DIRS})
+ link_libraries (${SNAPPY_LIBRARIES})
+ 
+@@ -158,6 +165,8 @@
+ # By bundling the QJSON source, we make it much more easier to build the GUI on
+ # Windows and MacOSX.  But we only use the bundled sources when ENABLE_GUI is
+ # AUTO.
++if (NOT BUILD_LIB_ONLY)
++
+ if (QT4_FOUND AND NOT QJSON_FOUND AND (ENABLE_GUI STREQUAL "AUTO"))
+     add_subdirectory (thirdparty/qjson EXCLUDE_FROM_ALL)
+     set (QJSON_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/qjson)
+@@ -166,6 +175,8 @@
      set (QJSON_FOUND TRUE)
  endif ()
  
@@ -26,16 +41,12 @@
  # For glext headers
  include_directories (${CMAKE_CURRENT_SOURCE_DIR}/thirdparty)
  
-@@ -184,6 +189,8 @@
-     DEPENDS glproc.py dispatch.py specs/wglapi.py specs/glxapi.py specs/cglapi.py specs/glapi.py specs/gltypes.py specs/stdapi.py
- )
+@@ -215,9 +226,12 @@
+ 
+ link_libraries (common)
  
 +if (NOT BUILD_LIB_ONLY)
 +
- if (WIN32)
-     set (os os_win32.cpp)
-     set (glws glws_wgl.cpp)
-@@ -218,6 +225,7 @@
  add_executable (tracedump tracedump.cpp)
  install (TARGETS tracedump RUNTIME DESTINATION bin) 
  
@@ -43,7 +54,7 @@
  
  ##############################################################################
  # API tracers
-@@ -374,6 +382,8 @@
+@@ -374,6 +388,8 @@
  ##############################################################################
  # API retracers
  
@@ -52,7 +63,7 @@
  add_custom_command (
      OUTPUT glretrace_gl.cpp
      COMMAND ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/glretrace.py > ${CMAKE_CURRENT_BINARY_DIR}/glretrace_gl.cpp
-@@ -386,11 +396,15 @@
+@@ -386,11 +402,15 @@
      DEPENDS glstate.py specs/glparams.py specs/gltypes.py specs/stdapi.py
  )
  
@@ -68,7 +79,7 @@
  add_executable (glretrace
      glretrace_gl.cpp
      glretrace_cgl.cpp
-@@ -438,6 +452,7 @@
+@@ -438,6 +458,7 @@
      add_subdirectory(gui)
  endif ()
  

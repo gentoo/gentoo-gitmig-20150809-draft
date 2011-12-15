@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-2.0.ebuild,v 1.1 2011/10/01 23:44:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-2.0-r1.ebuild,v 1.1 2011/12/15 07:28:36 radhermit Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.6"
 
-inherit cmake-utils eutils python multilib
+inherit cmake-utils python multilib
 
 DESCRIPTION="A tool for tracing, analyzing, and debugging graphics APIs"
 HOMEPAGE="https://github.com/apitrace/apitrace"
@@ -32,6 +32,11 @@ DEPEND="${RDEPEND}"
 
 EMULTILIB_PKG="true"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-system-libs.patch
+	"${FILESDIR}"/${P}-glxtrace-only.patch
+)
+
 pkg_setup() {
 	python_set_active_version 2
 }
@@ -42,9 +47,10 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-system-libs.patch \
-		"${FILESDIR}"/${P}-glxtrace-only.patch
+	base_src_prepare
+
+	# Workaround NULL DT_RPATH issues
+	sed -i -e "s/install (TARGETS/#\0/" gui/CMakeLists.txt || die
 }
 
 src_configure() {
@@ -72,16 +78,16 @@ src_compile() {
 }
 
 src_install() {
-	dobin "${CMAKE_BUILD_DIR}"/{glretrace,tracedump} || die
-	use qt4 && { dobin "${CMAKE_BUILD_DIR}"/qapitrace || die ; }
+	dobin "${CMAKE_BUILD_DIR}"/{glretrace,tracedump}
+	use qt4 && dobin "${CMAKE_BUILD_DIR}"/qapitrace
 
 	for ABI in $(get_install_abis) ; do
 		CMAKE_BUILD_DIR="${WORKDIR}/${P}_build-${ABI}"
-		dolib.so "${CMAKE_BUILD_DIR}"/glxtrace.so || die
+		dolib.so "${CMAKE_BUILD_DIR}"/glxtrace.so
 	done
 
-	dodoc {BUGS,NEWS,README,TODO}.markdown || die
+	dodoc {BUGS,NEWS,README,TODO}.markdown
 
 	exeinto /usr/share/${PN}/scripts
-	doexe scripts/* || die
+	doexe scripts/*
 }

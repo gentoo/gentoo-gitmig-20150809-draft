@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/apitrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.5 2011/10/01 23:44:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.6 2011/12/15 07:28:36 radhermit Exp $
+
+*apitrace-2.0-r1 (15 Dec 2011)
+
+  15 Dec 2011; Tim Harder <radhermit@gentoo.org> -apitrace-2.0.ebuild,
+  +apitrace-2.0-r1.ebuild, files/apitrace-2.0-glxtrace-only.patch:
+  Revbump and remove old. Update to EAPI 4 and fix multilib missing symbols
+  issue.
 
 *apitrace-2.0 (01 Oct 2011)
 
