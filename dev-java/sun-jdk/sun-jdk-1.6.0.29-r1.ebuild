@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.29-r1.ebuild,v 1.1 2011/11/21 13:26:03 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.29-r1.ebuild,v 1.2 2011/12/15 21:02:02 grobian Exp $
 
 EAPI="4"
 
@@ -11,6 +11,10 @@ S_PV="$(replace_version_separator 3 '_')"
 
 X86_AT="jdk-${MY_PV}-linux-i586.bin"
 AMD64_AT="jdk-${MY_PV}-linux-x64.bin"
+SOL_X86_AT="jdk-${MY_PV}-solaris-i586.sh"
+SOL_AMD64_AT="jdk-${MY_PV}-solaris-x64.sh"
+SOL_SPARC_AT="jdk-${MY_PV}-solaris-sparc.sh"
+SOL_SPARCv9_AT="jdk-${MY_PV}-solaris-sparcv9.sh"
 
 # check the URIs when bumping, no idea about their stability yet
 JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk-${MY_PV}-download-513648.html"
@@ -18,10 +22,14 @@ JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk-${MY_PV}-do
 DESCRIPTION="Oracle's Java SE Development Kit"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
 SRC_URI="x86? ( ${X86_AT} )
-	amd64? ( ${AMD64_AT} )"
+	amd64? ( ${AMD64_AT} )
+	x86-solaris? ( ${SOL_X86_AT} )
+	x64-solaris? ( ${SOL_X86_AT} ${SOL_AMD64_AT} )
+	sparc-solaris? ( ${SOL_SPARC_AT} )
+	sparc64-solaris? ( ${SOL_SPARC_AT} ${SOL_SPARCv9_AT} )"
 
 LICENSE="Oracle-BCLA-JavaSE"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="1.6"
 IUSE="X alsa derby doc examples jce nsplugin"
 
@@ -34,6 +42,7 @@ QA_TEXTRELS_x86="
 RDEPEND="${DEPEND}
 	doc? ( dev-java/java-sdk-docs:1.6.0 )
 	!prefix? ( sys-libs/glibc )
+	kernel_Solaris? ( app-arch/unzip )
 	alsa? ( media-libs/alsa-lib )
 	X? (
 		x11-libs/libXext
@@ -51,6 +60,14 @@ pkg_nofetch() {
 		AT=${X86_AT}
 	elif use amd64; then
 		AT=${AMD64_AT}
+	elif use x86-solaris; then
+		AT=${SOL_X86_AT}
+	elif use x64-solaris; then
+		AT="${SOL_X86_AT} and ${SOL_AMD64_AT}"
+	elif use sparc-solaris; then
+		AT=${SOL_SPARC_AT}
+	elif use sparc64-solaris; then
+		AT="${SOL_SPARC_AT} and ${SOL_SPARCv9_AT}"
 	fi
 
 	einfo "Due to Oracle no longer providing the distro-friendly DLJ bundles, the package has become fetch restricted again."
@@ -62,7 +79,19 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	sh "${DISTDIR}"/${A} -noregister || die "Failed to unpack"
+	if [[ ${CHOST} == *-solaris* ]] ; then
+		for i in ${A}; do
+			rm -f "${S}"/jre/{LICENSE,README} "${S}"/LICENSE
+			# don't die on unzip, it always "fails"
+			unzip "${DISTDIR}"/${i}
+		done
+		for f in $(find "${S}" -name "*.pack") ; do
+			"${S}"/bin/unpack200 ${f} ${f%.pack}.jar
+			rm ${f}
+		done
+	else
+		sh "${DISTDIR}"/${A} -noregister || die "Failed to unpack"
+	fi
 }
 
 src_compile() {

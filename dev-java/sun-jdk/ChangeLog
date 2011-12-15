@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.313 2011/11/21 13:32:59 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.314 2011/12/15 21:02:02 grobian Exp $
+
+  15 Dec 2011; Fabian Groffen <grobian@gentoo.org> sun-jdk-1.6.0.29-r1.ebuild:
+  Add support for Solaris, transferred Prefix keywords
 
   21 Nov 2011; Ralph Sennhauser <sera@gentoo.org> -sun-jdk-1.6.0.26.ebuild,
   -sun-jdk-1.6.0.27.ebuild:
