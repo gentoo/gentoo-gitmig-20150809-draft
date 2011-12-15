@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.623 2011/12/14 22:06:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.624 2011/12/15 00:34:27 williamh Exp $
+
+  15 Dec 2011; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
+  Add a compatibility symlink for udevadm and use --exec-prefix to put the
+  binaries in the correct directory.
 
   14 Dec 2011; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   remove prefix support and use bindir to install udevadm in /bin.

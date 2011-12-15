@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.64 2011/12/14 22:06:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.65 2011/12/15 00:34:27 williamh Exp $
 
 EAPI=4
 
@@ -164,9 +164,7 @@ src_configure()
 {
 	filter-flags -fprefetch-loop-arrays
 	econf \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--bindir=/bin \
+		--exec-prefix=/ \
 		--libdir=/usr/$(get_libdir) \
 		--with-rootlibdir=/$(get_libdir) \
 		--libexecdir=/lib/udev \
@@ -200,8 +198,10 @@ src_install()
 		dodoc extras/keymap/README.keymap.txt
 	fi
 
-	# Upstream moved udevd to /lib/udev,, so symlnking it is the easiest option
-	dosym "../lib/udev/udevd" /sbin/udevd
+	# compatibility symlinks:
+	# udevadm is now in /bin and udevd is in /lib/udev.
+	dosym "/bin/udevadm" /sbin/udevadm
+	dosym "/lib/udev/udevd" /sbin/udevd
 
 	# create symlinks for these utilities to /sbin
 	# where multipath-tools expect them to be (Bug #168588)
