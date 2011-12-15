@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.70 2011/12/15 11:21:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.71 2011/12/15 11:25:11 aballier Exp $
 
 EAPI="4"
 
@@ -180,14 +180,12 @@ src_configure() {
 	for i in ${CPU_FEATURES}; do
 		use ${i%:*} || myconf="${myconf} --disable-${i#*:}"
 	done
-	# disable mmx accelerated code if PIC is required
-	# as the provided asm decidedly is not PIC for x86.
-	if use pic && use x86 ; then
-		myconf="${myconf} --disable-mmx --disable-mmx2"
+	if use pic ; then
+		myconf="${myconf} --enable-pic"
+		# disable asm code if PIC is required
+		# as the provided asm decidedly is not PIC for x86.
+		use x86 && myconf="${myconf} --disable-asm"
 	fi
-
-	# Option to force building pic
-	use pic && myconf="${myconf} --enable-pic"
 
 	# Try to get cpu type based on CFLAGS.
 	# Bug #172723

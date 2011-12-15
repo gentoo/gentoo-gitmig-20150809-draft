@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.506 2011/12/15 11:21:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.507 2011/12/15 11:25:11 aballier Exp $
+
+  15 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  disable all asm on x86 with pic, this should be much slower but, at least,
+  pic
 
   15 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   remove x86 special handling, this should be handled automagically by the
