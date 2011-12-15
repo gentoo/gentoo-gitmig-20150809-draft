@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/tomcat-native
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.29 2010/05/26 19:09:42 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.30 2011/12/15 18:08:11 fordfrog Exp $
+
+*tomcat-native-1.1.22 (15 Dec 2011)
+
+  15 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  +tomcat-native-1.1.22.ebuild:
+  Version bump
 
   26 May 2010; Pacho Ramos <pacho@gentoo.org> tomcat-native-1.1.20.ebuild:
   stable amd64, bug 316551
