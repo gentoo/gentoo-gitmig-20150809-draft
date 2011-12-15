@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20110803.ebuild,v 1.1 2011/08/20 22:45:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20110803.ebuild,v 1.2 2011/12/15 12:28:20 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://kavli.nano.tudelft.nl/~gsteele/${PN}/versions/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="
