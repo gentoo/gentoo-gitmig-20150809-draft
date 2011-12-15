@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.10 2011/11/05 18:24:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.11 2011/12/15 16:52:33 vapier Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="fontconfig jpeg png static-libs truetype xpm zlib"
 
 RDEPEND="fontconfig? ( media-libs/fontconfig )
 	jpeg? ( virtual/jpeg )
-	png? ( >=media-libs/libpng-1.5:0 )
+	png? ( >=media-libs/libpng-1.2:0 )
 	truetype? ( >=media-libs/freetype-2.1.5 )
 	xpm? ( x11-libs/libXpm x11-libs/libXt )
 	zlib? ( sys-libs/zlib )"
@@ -27,29 +27,17 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-libpng14.patch #305101
 	epatch "${FILESDIR}"/${P}-maxcolors.patch #292130
 	epatch "${FILESDIR}"/${P}-fontconfig.patch #363367
-
-	# Try libpng15 first, then fallback to plain libpng
-	sed -i -e 's:png12:png15:' configure.ac || die
+	epatch "${FILESDIR}"/${P}-libpng-pkg-config.patch
 
 	# Avoid programs we never install
-	sed -i '/^noinst_PROGRAMS/s:=:=\n___fooooo =:' Makefile.in || die
+	local make_sed=( -e '/^noinst_PROGRAMS/s:noinst:check:' )
+	use png || make_sed+=( -e '/_PROGRAMS/s:(gdparttopng|gdtopng|gd2topng|pngtogd|pngtogd2|webpng)::g' )
+	use zlib || make_sed+=( -e '/_PROGRAMS/s:(gd2topng|gd2copypal|gd2togif|giftogd2|gdparttopng|pngtogd2)::g' )
+	sed -i "${make_sed[@]}" Makefile.am || die
 
-	if ! use png ; then
-		sed -i -r \
-			-e '/^bin_PROGRAMS/,/^noinst_PROGRAMS/s:(gdparttopng|gdtopng|gd2topng|pngtogd|pngtogd2|webpng)..EXEEXT.::g' \
-			Makefile.in || die
-	fi
-	if ! use zlib ; then
-		sed -i -r \
-			-e '/^bin_PROGRAMS/,/^noinst_PROGRAMS/s:(gd2topng|gd2copypal|gd2togif|giftogd2|gdparttopng|pngtogd2)..EXEEXT.::g' \
-			Makefile.in || die
-	fi
-
-	eautoconf
-	find . -type f -print0 | xargs -0 touch -r configure
+	eautoreconf
 }
 
-usex() { use $1 && echo ${2:-yes} || echo ${3:-no} ; }
 src_configure() {
 	export ac_cv_lib_z_deflate=$(usex zlib)
 	econf \
