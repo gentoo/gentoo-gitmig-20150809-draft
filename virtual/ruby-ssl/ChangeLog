@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-ssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.4 2011/11/23 07:03:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.5 2011/12/15 09:55:27 graaff Exp $
+
+  15 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-ssl-2.ebuild:
+  Mark stable for amd64 and x86 since the underlying provider is already
+  stable.
 
   23 Nov 2011; Hans de Graaff <graaff@gentoo.org> ruby-ssl-3.ebuild:
   Mark ruby-ssl-3 stable since the underlying implementation is marked stable.

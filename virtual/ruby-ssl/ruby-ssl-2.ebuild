@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ruby-ssl-2.ebuild,v 1.1 2010/08/13 23:37:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ruby-ssl-2.ebuild,v 1.2 2011/12/15 09:55:27 graaff Exp $
 
 EAPI=2
 USE_RUBY="jruby"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="${USE_RUBY}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-ruby/jruby-openssl"
