@@ -1,5 +1,5 @@
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: profile.bashrc,v 1.2 2009/07/22 16:29:50 haubi Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Id: profile.bashrc,v 1.3 2011/12/15 20:50:52 grobian Exp $
 
 # Hack to avoid every package that uses libiconv/gettext
 # install a charset.alias that will collide with libiconv's one
@@ -20,3 +20,10 @@ prefix-post_src_install() {
 # until there is the registration mechanism.
 profile-post_src_install() { prefix-post_src_install ; }
         post_src_install() { prefix-post_src_install ; }
+
+# Always add ${EPREFIX}/usr/share/aclocal to accommodate situations where
+# aclocal comes from another EPREFIX (for example cross-EPREFIX builds).
+# Note: AT_SYS_M4DIR gets eval-ed
+[[ -d ${EPREFIX}/usr/share/aclocal ]] && \
+	AT_SYS_M4DIR+=' -I ${EPREFIX}/usr/share/aclocal'
+
