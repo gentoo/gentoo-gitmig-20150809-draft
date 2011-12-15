@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.9 2011/11/20 09:51:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.10 2011/12/15 17:07:46 jlec Exp $
 
 EAPI="3"
 
@@ -12,7 +12,9 @@ DESCRIPTION="Extension to Tk, adding new widgets, geometry managers, and misc co
 HOMEPAGE="
 	http://blt.sourceforge.net/
 	http://jos.decoster.googlepages.com/bltfortk8.5.2"
-SRC_URI="http://jos.decoster.googlepages.com/${PN}${PV}${MY_V_SUFFIX}.tar.gz"
+SRC_URI="
+	http://dev.gentoo.org/~jlec/distfiles/${PN}${PV}${MY_V_SUFFIX}.tar.gz
+	http://jos.decoster.googlepages.com/${PN}${PV}${MY_V_SUFFIX}.tar.gz"
 
 IUSE="jpeg static-libs X"
 SLOT="0"

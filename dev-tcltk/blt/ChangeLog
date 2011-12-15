@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.58 2011/11/20 09:51:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.59 2011/12/15 17:07:46 jlec Exp $
+
+  15 Dec 2011; Justin Lecher <jlec@gentoo.org> blt-2.4z-r10.ebuild:
+  Mirror the sources, #394797
 
   20 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> -blt-2.4z-r5.ebuild,
   -blt-2.4z-r8.ebuild, -blt-2.4z-r9.ebuild, blt-2.4z-r10.ebuild:
