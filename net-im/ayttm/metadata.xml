@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>net-im</herd>
-	<maintainer>
-		<email>signals@gentoo.org</email>
-		<name>Kevin McCarthy</name>
-	</maintainer>
 	<longdescription lang="en">
 		Ayttm is a multi-protocol instant messaging client with some novel features
 		such as the ability to connect to livejournal.com and the ability to send
