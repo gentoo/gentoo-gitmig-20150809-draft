@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.11 2011/12/15 16:52:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.12 2011/12/15 17:08:03 vapier Exp $
 
 EAPI="2"
 
@@ -40,7 +40,11 @@ src_prepare() {
 
 src_configure() {
 	export ac_cv_lib_z_deflate=$(usex zlib)
+	# we aren't actually {en,dis}abling X here ... the configure
+	# script uses it just to add explicit -I/-L paths which we
+	# don't care about on Gentoo systems.
 	econf \
+		--without-x \
 		$(use_enable static-libs static) \
 		$(use_with fontconfig) \
 		$(use_with png) \
