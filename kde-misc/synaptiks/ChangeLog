@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.20 2011/11/04 23:17:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.21 2011/12/15 14:26:34 johu Exp $
+
+  15 Dec 2011; Johannes Huber <johu@gentoo.org> synaptiks-0.8.0.ebuild:
+  Use python 2, fixes bug #387533 thanks floppym. Use appropiate eclass for
+  test, fixes bug #394575. Fix SRC_URI, uses now mirror, thanks repoman.
 
   04 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   synaptiks-0.8.0.ebuild:
