@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.3.ebuild,v 1.3 2011/12/14 22:01:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.3.ebuild,v 1.4 2011/12/15 08:33:30 jlec Exp $
 
 EAPI=4
 
-inherit autotools eutils
+inherit autotools-utils eutils
 
 MY_PN=COLAMD
 DESCRIPTION="Column approximate minimum degree ordering algorithm"
@@ -18,15 +18,16 @@ IUSE="static-libs"
 
 DEPEND="sci-libs/ufconfig"
 RDEPEND="${DEPEND}"
-DOCS="README.txt Doc/ChangeLog"
+
+DOCS=( README.txt Doc/ChangeLog )
 
 S="${WORKDIR}/${MY_PN}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.7.1-autotools.patch
-	eautoreconf
-}
+PATCHES=(
+	"${FILESDIR}"/${PN}-2.7.1-autotools.patch
+)
 
-src_configure() {
-	econf $(use_enable static-libs static)
+src_prepare() {
+	autotools-utils_src_prepare
+	eautoreconf
 }
