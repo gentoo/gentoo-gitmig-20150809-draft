@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6021 2011/12/15 20:04:42 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6022 2011/12/15 20:54:07 mpagano Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Dec 2011; Michael Pagano <mpagano@gentoo.org> package.mask:
+  Bump masked portpeek version
 
   15 Dec 2011; Michael Pagano <mpagano@gentoo.org> package.mask:
   Mask new version of portpeek for testing

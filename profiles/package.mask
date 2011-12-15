@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13335 2011/12/15 20:04:42 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13336 2011/12/15 20:54:07 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,7 +33,7 @@
 
 # Mike Pagano <mpagano@gentoo.org> (15 Dec 2011)
 # Masked for a bit for testing 
-=app-portage/portpeek-1.9.80
+=app-portage/portpeek-1.9.81
 
 # Hanno Boeck <hanno@gentoo.org> (15 Dec 2011)
 # Breaks pam_mount, which is its only user in the tree.
