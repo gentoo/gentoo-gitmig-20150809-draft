@@ -43,3 +43,38 @@ index 45cb88a..15c4d7d 100644
 -- 
 1.7.6.1
 
+From a3e300ce4cde7e326ecffe1035017874d85d796e Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Thu, 15 Dec 2011 15:00:37 -0500
+Subject: [PATCH] let compiler handle ISPEED_OFFSET when cross-compiling
+
+While I can't devise a compile-only test that'll calculate the offset
+(which doesn't involve inspecting the compiled object file), at least
+gcc is good enough with a offsetof()-like value.  So use that in the
+cross-compile fallback case.
+
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ configure.in |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 15c4d7d..87e1029 100644
+--- a/configure.in
++++ b/configure.in
+@@ -918,11 +918,11 @@ AC_CACHE_VAL(ac_cv_ispeed_offset,
+  ],
+  [ac_cv_ispeed_offset=`cat $conftestspeedoff`],
+  [ac_cv_ispeed_offset=-1],
+- [ac_cv_ispeed_offset=-1]	#!
++ [ac_cv_ispeed_offset="((unsigned long)&((struct termios *)0)->c_ispeed / sizeof(speed_t))"]	#!
+ )])
+ LIBS="$LIBS1"
+ AC_MSG_RESULT($ac_cv_ispeed_offset)
+- if test $ac_cv_ispeed_offset -ge 0; then
++ if test "$ac_cv_ispeed_offset" != "-1"; then
+    AC_DEFINE_UNQUOTED(ISPEED_OFFSET, $ac_cv_ispeed_offset)
+  fi
+ fi
+-- 
+1.7.6.1
