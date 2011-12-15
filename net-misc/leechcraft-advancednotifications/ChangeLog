@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/leechcraft-advancednotifications
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-advancednotifications/ChangeLog,v 1.2 2011/09/14 17:01:03 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-advancednotifications/ChangeLog,v 1.3 2011/12/15 19:37:01 maksbotan Exp $
+
+*leechcraft-advancednotifications-0.4.96 (15 Dec 2011)
+
+  15 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-advancednotifications-0.4.96.ebuild:
+  Bump net-misc/leechcraft-advancednotifications to 0.4.96, thanks to
+  0xd34df00d
 
 *leechcraft-advancednotifications-0.4.90 (14 Sep 2011)
 

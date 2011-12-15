@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leechcraft-tabsessmanager
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-tabsessmanager/ChangeLog,v 1.1 2011/12/15 19:44:19 maksbotan Exp $
+
+*leechcraft-tabsessmanager-9999 (15 Dec 2011)
+
+  15 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-tabsessmanager-9999.ebuild, +metadata.xml:
+  Add net-misc/leechcraft-tabsessmanager, thanks to 0xd34df00d
+
