@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-colors-themes/gnome-colors-themes-5.5.1.ebuild,v 1.1 2010/02/09 13:21:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-colors-themes/gnome-colors-themes-5.5.1.ebuild,v 1.2 2011/12/15 17:43:12 ago Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -13,7 +13,7 @@ SRC_URI="http://gnome-colors.googlecode.com/files/gnome-colors-${PV}.tar.gz
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-themes/gnome-colors-common"

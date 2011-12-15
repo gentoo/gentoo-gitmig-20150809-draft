@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/shiki-colors/shiki-colors-4.6.ebuild,v 1.2 2011/03/22 07:38:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/shiki-colors/shiki-colors-4.6.ebuild,v 1.3 2011/12/15 17:40:53 ago Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://gnome-colors.googlecode.com/files/${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="|| ( x11-wm/metacity xfce-base/xfwm4 )
