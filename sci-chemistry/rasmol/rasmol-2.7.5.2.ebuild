@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5.2.ebuild,v 1.1 2011/12/14 09:26:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5.2.ebuild,v 1.2 2011/12/15 08:33:05 jlec Exp $
 
 EAPI=4
 
@@ -48,12 +48,12 @@ src_prepare() {
 		echo "#define _LONGLONG"|cat - rasmol_amd64_save.h > rasmol.h
 	fi
 
-	mv Imakefile_base Imakefile
+	mv Imakefile_base Imakefile || die
 	epatch "${FILESDIR}"/2.7.5-bundled-lib.patch
 
 	eprefixify Imakefile
 
-	xmkmf -DGTKWIN ${myconf}|| die "xmkmf failed with ${myconf}"
+	xmkmf -DGTKWIN ${myconf} || die "xmkmf failed with ${myconf}"
 }
 
 src_compile() {
