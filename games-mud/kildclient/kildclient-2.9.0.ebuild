@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.5 2011/10/27 06:25:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.6 2011/12/15 15:35:52 ago Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -11,12 +11,13 @@ SRC_URI="mirror://sourceforge/kildclient/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc gnutls spell"
 
 RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade
 	dev-lang/perl
+	sys-libs/zlib
 	virtual/libintl
 	spell? ( app-text/gtkspell:2 )
 	gnutls? ( net-libs/gnutls )"
