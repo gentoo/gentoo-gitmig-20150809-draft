@@ -3,10 +3,10 @@ diff -r ce6b6bcedb6d files/gentoo-initd
 +++ b/files/gentoo-initd	Tue May 17 13:36:56 2011 -0600
 @@ -19,7 +19,7 @@
  # 
- # $Revision: 1.1 $
+ # $Revision: 1.2 $
  
 -opts="start stop restart reload showlog"
-+opts="reload showlog"
++extra_started_commands="reload showlog"
  
  FAIL2BAN="/usr/bin/fail2ban-client ${FAIL2BAN_OPTIONS}"
  
