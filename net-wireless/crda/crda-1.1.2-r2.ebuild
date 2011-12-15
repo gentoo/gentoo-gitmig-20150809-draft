@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r2.ebuild,v 1.3 2011/11/14 13:12:17 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r2.ebuild,v 1.4 2011/12/15 22:17:59 gurligebis Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs python
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/libgcrypt
+RDEPEND="dev-libs/openssl
 	dev-libs/libnl:1.1
 	net-wireless/wireless-regdb"
 DEPEND="${RDEPEND}
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_test() {
-	emake CC="$(tc-getCC)" verify
+	emake USE_OPENSSL=1 CC="$(tc-getCC)" verify
 }
 
 src_install() {

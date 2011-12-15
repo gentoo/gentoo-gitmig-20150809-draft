@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.32 2011/11/14 13:12:17 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.33 2011/12/15 22:17:59 gurligebis Exp $
+
+  15 Dec 2011; <gurligebis@gentoo.org> crda-1.1.2-r2.ebuild:
+  Changing dependency from libgcrypt to openssl, and fixing test phase, fixing
+  bug #394489
 
   14 Nov 2011; <gurligebis@gentoo.org> crda-1.1.2-r2.ebuild:
   Adding dependency for python2
