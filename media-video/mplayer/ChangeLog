@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.810 2011/12/15 12:29:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.811 2011/12/15 12:30:44 aballier Exp $
+
+  15 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  depend on ffmpeg 0.9, bug #392405
 
   15 Dec 2011; Alexis Ballier <aballier@gentoo.org> files/prepare_mplayer.sh:
   update the prepare_mplayer script to use ffmpeg instead of libav and use
