@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-bg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.21 2011/12/14 08:50:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.22 2011/12/15 14:41:33 ago Exp $
+
+  15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> myspell-bg-20071211-r1.ebuild:
+  Stable for AMD64, wrt bug #394001
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   myspell-bg-20071211-r1.ebuild:
