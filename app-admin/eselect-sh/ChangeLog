@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/eselect-sh
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/ChangeLog,v 1.1 2011/12/15 19:07:40 mgorny Exp $
+
+*eselect-sh-0.2 (15 Dec 2011)
+
+  15 Dec 2011; Michał Górny <mgorny@gentoo.org> +eselect-sh-0.2.ebuild,
+  +metadata.xml:
+  Add an ebuild for /bin/sh eselect module per bug #214817.
+
