@@ -1,0 +1,10 @@
+# ChangeLog for virtual/leechcraft-trayarea
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-trayarea/ChangeLog,v 1.1 2011/12/15 19:47:48 maksbotan Exp $
+
+*leechcraft-trayarea-9999 (15 Dec 2011)
+
+  15 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-trayarea-9999.ebuild, +metadata.xml:
+  Add virtual/leechcraft-trayarea, thanks to 0xd34df00d
+
