@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.1.24.ebuild,v 1.1 2011/06/27 23:55:00 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.1.24.ebuild,v 1.2 2011/12/15 15:19:02 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://achurch.org/services/"
 SRC_URI="http://achurch.org/services/tarballs/${P}.tar.gz"
 LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 pkg_setup() {
