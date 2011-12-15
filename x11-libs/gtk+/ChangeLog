@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.553 2011/12/14 19:58:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.554 2011/12/15 23:46:04 tetromino Exp $
+
+*gtk+-3.2.2-r2 (15 Dec 2011)
+
+  15 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtk+-3.2.2-r2.ebuild:
+  Add upstream patches to fix various crashes, including the segfault in file
+  open dialog (bug #394681, thanks to ByrneG and Marien Zwart). Should also fix
+  disappearing mouse pointer in fluxbox. Includes the gtktoolbutton fix from
+  3.2.2-r1.
 
   14 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gtk+-3.0.12.ebuild,
   gtk+-3.0.12-r1.ebuild, gtk+-3.2.1.ebuild, gtk+-3.2.2.ebuild,
