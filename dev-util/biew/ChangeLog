@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/biew
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.30 2011/12/15 22:49:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.31 2011/12/15 22:50:28 pacho Exp $
+
+  15 Dec 2011; Pacho Ramos <pacho@gentoo.org> -files/biew-570-configure.patch,
+  -files/biew-570-makefile.patch:
+  Drop orphan files.
 
   15 Dec 2011; Pacho Ramos <pacho@gentoo.org> -biew-5.6.2-r1.ebuild,
   -biew-5.7.0.ebuild, -biew-6.1.0.ebuild, metadata.xml:
