@@ -26,7 +26,7 @@ jc=5
 # failed test counter
 failed=0
 
-ebegin "Testing scons_clean_makeopts()"
+tbegin "scons_clean_makeopts()"
 
 # sane MAKEOPTS
 test-scons_clean_makeopts '--jobs=14 -k'
@@ -56,4 +56,6 @@ test-scons_clean_makeopts '--jobs funnystuff -k' "--jobs=${jc} -k"
 test-scons_clean_makeopts '--jobs -l3' "--jobs=${jc}"
 test-scons_clean_makeopts '-j -l3' "-j ${jc}"
 
-eend ${failed}
+tend ${failed}
+
+texit

@@ -5,11 +5,11 @@ source tests-common.sh
 inherit autotools
 
 test-it() {
-	ebegin "Testing eaclocal_amflags $1: $2"
+	tbegin "eaclocal_amflags $1: $2"
 	printf "ACLOCAL_AMFLAGS = %b\n" "$2" > Makefile.am
 	local flags=$(eaclocal_amflags) exp=${3:-$2}
 	[[ "${flags}" == "${exp}" ]]
-	if ! eend $? ; then
+	if ! tend $? ; then
 		printf '### INPUT:\n%s\n' "$2"
 		printf '### FILE:\n%s\n' "$(<Makefile.am)"
 		printf '### EXPECTED:\n%s\n' "${exp}"
@@ -25,3 +25,5 @@ test-it shell-exec '`echo hi`' "hi"
 test-it shell-exec '`echo {0..3}`' "0 1 2 3"
 
 test-it multiline '-I oneline \\\n\t-I twoline' "-I oneline -I twoline"
+
+texit

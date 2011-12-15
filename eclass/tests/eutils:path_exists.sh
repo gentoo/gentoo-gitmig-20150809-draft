@@ -4,15 +4,12 @@ source tests-common.sh
 
 inherit eutils
 
-tret=0
-
 test-path_exists() {
 	local exp=$1; shift
-	ebegin "Testing path_exists($*) == ${exp}"
+	tbegin "path_exists($*) == ${exp}"
 	path_exists "$@"
 	[[ ${exp} -eq $? ]]
-	eend $?
-	: $(( tret |= $? ))
+	tend $?
 }
 
 test-path_exists 1
@@ -33,4 +30,4 @@ test-path_exists 1 ${good} ${bad}
 test-path_exists 1 -a ${good} ${bad}
 test-path_exists 0 -o ${good} ${bad}
 
-(exit ${tret})
+texit

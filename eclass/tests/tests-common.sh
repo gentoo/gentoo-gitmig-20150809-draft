@@ -87,3 +87,15 @@ KV_to_int() {
 
 	return 1
 }
+
+tret=0
+tbegin() {
+	ebegin "Testing $*"
+}
+texit() {
+	exit ${tret}
+}
+tend() {
+	eend "$@"
+	: $(( tret |= $? ))
+}
