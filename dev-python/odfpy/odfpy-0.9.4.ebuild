@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/odfpy/odfpy-0.9.4.ebuild,v 1.1 2011/12/15 02:29:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/odfpy/odfpy-0.9.4.ebuild,v 1.2 2011/12/15 02:34:59 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -29,15 +29,14 @@ src_prepare() {
 }
 
 src_test() {
+	cd tests || die
 	testing() {
-		pushd tests > /dev/null || die
 		local exit_status=0 test
 		for test in test*.py; do
 			einfo "Running ${test} ..."
 			PYTHONPATH="../build-${PYTHON_ABI}/lib" "$(PYTHON)" "${test}"
 			[[ $? -ne 0 ]] && exit_status=1
 		done
-		popd > /dev/null || die
 		return ${exit_status}
 	}
 	python_execute_function testing
