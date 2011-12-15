@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.45 2011/12/15 07:36:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.46 2011/12/15 16:02:44 matsuu Exp $
+
+  15 Dec 2011; MATSUU Takuto <matsuu@gentoo.org> facter-1.6.4.ebuild:
+  Added sys-apps/lsb-release and sys-apps/pciutils to RDEPEND.
 
 *facter-1.6.4 (15 Dec 2011)
 
