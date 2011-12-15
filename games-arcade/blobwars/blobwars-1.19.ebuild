@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.19.ebuild,v 1.2 2011/12/15 11:58:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.19.ebuild,v 1.3 2011/12/15 12:18:12 ago Exp $
 
 EAPI="3"
 
@@ -20,6 +20,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/sdl-ttf
 	media-libs/sdl-image
 	media-libs/sdl-net
+	sys-libs/zlib
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
