@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.811 2011/12/15 12:30:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.812 2011/12/15 12:37:11 aballier Exp $
+
+*mplayer-1.0_rc4_p20111215 (15 Dec 2011)
+
+  15 Dec 2011; Alexis Ballier <aballier@gentoo.org>
+  +mplayer-1.0_rc4_p20111215.ebuild:
+  bump a new snapshot using system ffmpeg
 
   15 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   depend on ffmpeg 0.9, bug #392405
