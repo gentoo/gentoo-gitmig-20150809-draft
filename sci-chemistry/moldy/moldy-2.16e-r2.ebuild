@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e-r2.ebuild,v 1.4 2011/12/15 21:32:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e-r2.ebuild,v 1.5 2011/12/15 21:51:34 jlec Exp $
 
 EAPI=4
 
@@ -22,6 +22,10 @@ S="${WORKDIR}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-as-needed.patch
+	sed \
+		-e 's:-O2::g' \
+		-e 's:-ffast-math::g' \
+		-i configure* || die
 }
 
 src_configure() {
