@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.307 2011/12/08 08:13:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.308 2011/12/15 18:35:49 darkside Exp $
+
+  15 Dec 2011; Jeremy Olexa <darkside@gentoo.org> linux/profile.bashrc:
+  Fix bug 289757 (again). Use ldd, use EPATCH_EXCLUDE, match new patch name as
+  well
 
   08 Dec 2011; Fabian Groffen <grobian@gentoo.org> package.use.mask:
   Mask USE=vanilla for gcc, since that results in a broken compiler on Prefix
