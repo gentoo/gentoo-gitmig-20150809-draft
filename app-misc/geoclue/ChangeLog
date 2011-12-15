@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geoclue
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.4 2011/12/10 10:26:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.5 2011/12/15 22:42:29 pacho Exp $
+
+  15 Dec 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #353461
 
   10 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
   geoclue-0.12.0_p20110307.ebuild:
