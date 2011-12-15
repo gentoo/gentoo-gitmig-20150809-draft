@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.7 2011/11/21 10:28:26 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.8 2011/12/15 21:03:53 grobian Exp $
+
+  15 Dec 2011; Fabian Groffen <grobian@gentoo.org>
+  oracle-jdk-bin-1.7.0.1-r2.ebuild:
+  Add support for Solaris, added Prefix keywords
 
   21 Nov 2011; Ralph Sennhauser <sera@gentoo.org>
   oracle-jdk-bin-1.7.0.1-r1.ebuild, oracle-jdk-bin-1.7.0.1-r2.ebuild:
