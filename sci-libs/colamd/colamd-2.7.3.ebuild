@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.3.ebuild,v 1.5 2011/12/15 17:14:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.3.ebuild,v 1.6 2011/12/15 20:41:24 jlec Exp $
 
 EAPI=4
 
@@ -25,6 +25,8 @@ RESTRICT="test"
 DOCS=( README.txt Doc/ChangeLog )
 
 S="${WORKDIR}/${MY_PN}"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.7.1-autotools.patch

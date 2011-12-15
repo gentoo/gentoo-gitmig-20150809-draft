@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/colamd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.20 2011/12/15 17:14:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.21 2011/12/15 20:41:24 jlec Exp $
+
+  15 Dec 2011; Justin Lecher <jlec@gentoo.org> colamd-2.7.3.ebuild:
+  AUTOTOOLS_IN_SOURCE_BUILD=1 in order to avoid fatal error: colamd.h: No such
+  file or directory, #394079
 
   15 Dec 2011; Justin Lecher <jlec@gentoo.org> colamd-2.7.3.ebuild:
   Restrict test, useless any ways, because it needs manual inspection, #394795
