@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpeg-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.27 2011/01/19 21:22:55 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.28 2011/12/15 19:36:23 grobian Exp $
+
+  15 Dec 2011; Fabian Groffen <grobian@gentoo.org>
+  files/mpeg-tools-1.5b-powerpc.patch, mpeg-tools-1.5b-r4.ebuild:
+  Fix powerpc patch for Darwin, replace malloc.h with stdlib.h for Darwin and
+  BSD-ish systems, keyworded ~ppc-macos and ~x64-macos
 
   19 Jan 2011; Dror Levin <spatz@gentoo.org> mpeg-tools-1.5b-r3.ebuild,
   mpeg-tools-1.5b-r4.ebuild:
