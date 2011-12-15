@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-3.1.1.ebuild,v 1.1 2011/12/14 09:20:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-3.1.1.ebuild,v 1.2 2011/12/15 21:39:19 jlec Exp $
 
 EAPI=4
 
@@ -16,19 +16,21 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/${MY_P}/${MY_P}.tar.gz -> ${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND="dev-libs/cvector"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}
 
-src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PV}-test.patch \
-		"${FILESDIR}"/${PV}-gentoo.patch \
-		"${FILESDIR}"/${PV}-notest.patch
+PATCHES=(
+	"${FILESDIR}"/${PV}-test.patch
+	"${FILESDIR}"/${PV}-gentoo.patch
+	"${FILESDIR}"/${PV}-notest.patch
+	)
 
+src_prepare() {
+	base_src_prepare
 	sed \
 		-e "s:GENTOOLIBDIR:$(get_libdir):g" \
 		-e "s:/usr:${EPREFIX}/usr:g" \
@@ -43,6 +45,10 @@ src_compile() {
 
 src_install() {
 	default
+
+	if ! use static-libs; then
+		rm "${ED}"/usr/$(get_libdir)/*.{a,la} || die
+	fi
 
 	dodoc README_NearTree.txt
 	dohtml *.html
