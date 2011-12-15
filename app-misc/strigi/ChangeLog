@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.78 2011/12/07 22:06:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.79 2011/12/15 10:34:06 johu Exp $
+
+*strigi-0.7.7 (15 Dec 2011)
+
+  15 Dec 2011; Johannes Huber <johu@gentoo.org> +strigi-0.7.7.ebuild:
+  Version bump. Thanks Elias Probst <mail@eliasprobst.eu>. Bug #394527
 
   07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> strigi-0.7.6-r1.ebuild:
   Stable on amd64 wrt bug #388279
