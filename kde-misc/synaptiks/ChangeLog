@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.23 2011/12/15 22:47:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.24 2011/12/15 22:52:33 dilfridge Exp $
+
+  15 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  synaptiks-0.8.0.ebuild:
+  setuptools is also DEPEND, thx abcd \& arfrever
 
   15 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   synaptiks-0.8.0.ebuild:
