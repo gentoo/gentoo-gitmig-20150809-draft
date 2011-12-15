@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/google-musicmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/ChangeLog,v 1.5 2011/12/14 15:48:16 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/ChangeLog,v 1.6 2011/12/15 04:02:38 ottxor Exp $
+
+  15 Dec 2011; Christoph Junghans <ottxor@gentoo.org>
+  google-musicmanager-1.0.22.3409_beta.ebuild:
+  added fetch restriction
 
 *google-musicmanager-1.0.23.1334_beta (14 Dec 2011)
 
