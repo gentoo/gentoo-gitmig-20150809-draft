@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.43 2011/12/14 19:57:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.44 2011/12/15 20:04:03 maksbotan Exp $
+
+  15 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> leechcraft.eclass:
+  Update leechcraft eclass to new filename suffix
 
   14 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gnome2-utils.eclass,
   gnome2.eclass:

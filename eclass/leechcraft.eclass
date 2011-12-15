@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.2 2011/08/22 18:20:34 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.3 2011/12/15 20:04:03 maksbotan Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
@@ -27,7 +27,7 @@ case ${EAPI:-0} in
 	*) die "Unknown EAPI, bug eclass maintainers" ;;
 esac
 
-inherit cmake-utils
+inherit cmake-utils versionator
 
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://github.com/0xd34df00d/leechcraft.git"
@@ -35,7 +35,13 @@ if [[ ${PV} == 9999 ]]; then
 
 	inherit git-2
 else
-	SRC_URI="mirror://sourceforge/leechcraft/leechcraft-${PV}.tar.bz2"
+	local suffix
+	if version_is_at_least 0.4.95; then
+		suffix="xz"
+	else
+		suffix="bz2"
+	fi
+	SRC_URI="mirror://sourceforge/leechcraft/leechcraft-${PV}.tar.${suffix}"
 	S="${WORKDIR}/leechcraft-${PV}"
 fi
 
