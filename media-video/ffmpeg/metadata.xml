@@ -17,7 +17,7 @@
 	<flag name="avconv">Build and install avconv, an alternative command line tool to ffmpeg from <pkg>media-video/libav</pkg>.</flag>
     <flag name="avx">Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)</flag>
     <flag name="cdio">Enables audio CD grabbing with <pkg>dev-libs/libcdio</pkg>.</flag>
-	<flag name="celt">Adds Xiph CELT/Opus audio decoding support via <pkg>media-libs/celt</pkg></flag>
+	<flag name="celt">Adds Xiph CELT audio decoding support via <pkg>media-libs/celt</pkg></flag>
     <flag name="cpudetection">Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)</flag>
     <flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
 	<flag name="faac">Use external faac library for AAC encoding</flag>
