@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13333 2011/12/14 23:05:21 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13334 2011/12/15 10:09:35 hanno Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hanno Boeck <hanno@gentoo.org> (15 Dec 2011)
+# Breaks pam_mount, which is its only user in the tree.
+# Can be unmasked when a new pam_mount version is released.
+=sys-libs/libhx-3.12
 
 # Peter Volkov <pva@gentoo.org> (13 Dec 2011)
 # Broken, unmaintained, see #378617
