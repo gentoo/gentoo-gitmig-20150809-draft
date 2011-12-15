@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.510 2011/12/15 11:39:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.511 2011/12/15 11:43:51 aballier Exp $
+
+  15 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  feed configure with cxx and ar too
 
   15 Dec 2011; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   fix celt usedesc
