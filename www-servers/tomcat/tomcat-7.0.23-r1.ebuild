@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.23.ebuild,v 1.1 2011/11/29 13:00:21 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.23-r1.ebuild,v 1.1 2011/12/15 21:31:15 fordfrog Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"
@@ -165,7 +165,9 @@ src_install() {
 	dosym /etc/${TOMCAT_NAME} ${CATALINA_BASE}/conf
 	dosym /var/log/${TOMCAT_NAME} ${CATALINA_BASE}/logs
 	dosym /var/tmp/${TOMCAT_NAME} ${CATALINA_BASE}/temp
-	dosym /var/run/${TOMCAT_NAME} ${CATALINA_BASE}/work
+	# we cannot symlink work directory because that breaks saving session data
+	# because session file cannot be saved to symlinked location by default
+	#dosym /var/run/${TOMCAT_NAME} ${CATALINA_BASE}/work
 
 	dodoc  "${S}"/{RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/tomcat-users.xml
@@ -183,6 +185,7 @@ pkg_postinst() {
 
 	# bug #180519
 	if [[ -e "${ROOT}var/lib/${TOMCAT_NAME}/webapps/manager" ]] ; then
+		elog
 		elog "The latest webapp has NOT been installed into"
 		elog "${ROOT}var/lib/${TOMCAT_NAME}/webapps/ because directory already exists"
 		elog "and we do not want to overwrite any files you have put there."
@@ -199,6 +202,15 @@ pkg_postinst() {
 		# link the manager's context to the right position
 		dosym ${TOMCAT_HOME}/webapps/host-manager/META-INF/context.xml /etc/${TOMCAT_NAME}/Catalina/localhost/host-manager.xml
 		dosym ${TOMCAT_HOME}/webapps/manager/META-INF/context.xml /etc/${TOMCAT_NAME}/Catalina/localhost/manager.xml
+	fi
+
+	# bug with storing SESSIONS.ser file to path with symlink
+	if [[ -L "${ROOT}var/lib/${TOMCAT_NAME}/work" ]] ; then
+		elog
+		ewarn "${ROOT}var/lib/${TOMCAT_NAME}/work is symbolic link which breaks"
+		ewarn "storing of SESSIONS.ser files in work directory when allowLinking"
+		ewarn "is disabled (the default). Remove the symbolic link (while Tomcat is"
+		ewarn "not running) to fix the issue."
 	fi
 
 	elog

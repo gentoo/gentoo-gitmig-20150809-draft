@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.270 2011/12/14 18:56:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.271 2011/12/15 21:31:15 fordfrog Exp $
+
+*tomcat-7.0.23-r1 (15 Dec 2011)
+
+  15 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org> -tomcat-7.0.23.ebuild,
+  +tomcat-7.0.23-r1.ebuild:
+  Fixed bug with storing SESSIONS.ser in work directory. It cannot be symlink
+  because tomcat by default does not allow working with symlink paths.
 
   14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> tomcat-7.0.22-r1.ebuild:
   Stable for AMD64, wrt bug #392393
