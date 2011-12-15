@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.62 2011/12/08 21:09:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.63 2011/12/15 10:19:53 radhermit Exp $
+
+*roundcube-0.7 (15 Dec 2011)
+
+  15 Dec 2011; Tim Harder <radhermit@gentoo.org> +roundcube-0.7.ebuild:
+  Version bump (bug #394705). Update to EAPI 4 and remove bundled php libs to
+  use system versions.
 
   08 Dec 2011; Markus Meier <maekke@gentoo.org> roundcube-0.6.ebuild:
   add ~arm, bug #385255
