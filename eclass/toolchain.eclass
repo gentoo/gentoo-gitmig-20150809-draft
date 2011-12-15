@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.511 2011/12/13 00:21:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.512 2011/12/15 05:58:47 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -369,18 +369,13 @@ hardened_gcc_is_stable() {
 	return 1
 }
 
-_want_stuff() {
-	local var=$1 flag=$2
-	[[ -z ${!var} ]] && return 1
-	use ${flag} && return 0
-	return 1
-}
-want_boundschecking() { _want_stuff HTB_VER boundschecking ; }
 want_pie() {
 	! use hardened && [[ -n ${PIE_VER} ]] && use nopie && return 1
 	[[ -n ${PIE_VER} ]] && [[ -n ${SPECS_VER} ]] && return 0
 	tc_version_is_at_least 4.3.2 && return 1
-	_want_stuff PIE_VER !nopie
+	[[ -z ${PIE_VER} ]] && return 1
+	use !nopie && return 0
+	return 1
 }
 
 want_minispecs() {
@@ -1265,10 +1260,12 @@ gcc_do_make() {
 
 	# the gcc docs state that parallel make isnt supported for the
 	# profiledbootstrap target, as collisions in profile collecting may occur.
-	[[ ${GCC_MAKE_TARGET} == "profiledbootstrap" ]] && export MAKEOPTS="${MAKEOPTS} -j1"
-
-	# boundschecking seems to introduce parallel build issues
-	want_boundschecking && export MAKEOPTS="${MAKEOPTS} -j1"
+	# boundschecking also seems to introduce parallel build issues.
+	if [[ ${GCC_MAKE_TARGET} == "profiledbootstrap" ]] ||
+	   use_if_iuse boundschecking
+	then
+		export MAKEOPTS="${MAKEOPTS} -j1"
+	fi
 
 	if [[ ${GCC_MAKE_TARGET} == "all" ]] ; then
 		STAGE1_CFLAGS=${STAGE1_CFLAGS-"${CFLAGS}"}
@@ -1743,14 +1740,13 @@ gcc_quick_unpack() {
 			unpack gcc-${SPECS_GCC_VER}-specs-${SPECS_VER}.tar.bz2
 	fi
 
-	want_boundschecking && \
-		unpack "bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
+	use_if_iuse boundschecking && unpack "bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
 
 	popd > /dev/null
 }
 
 do_gcc_HTB_patches() {
-	want_boundschecking || return 0
+	use_if_iuse boundschecking || return 0
 
 	# modify the bounds checking patch with a regression patch
 	epatch "${WORKDIR}/bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch"
@@ -1760,10 +1756,6 @@ do_gcc_HTB_patches() {
 # do various updates to PIE logic
 do_gcc_PIE_patches() {
 	want_pie || return 0
-
-	want_boundschecking \
-		&& rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-no.patch* \
-		|| rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-yes.patch*
 
 	use vanilla && return 0
 
