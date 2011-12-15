@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.3.ebuild,v 1.1 2011/12/13 22:20:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.3.ebuild,v 1.2 2011/12/15 07:22:59 ulm Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="X emacs22icons"
 PDEPEND="virtual/emacs"
 
 pkg_setup() {
-	if [ -e "${EROOT}${SITELISP}/subdirs.el" ] \
+	if [[ -e ${EROOT}${SITELISP}/subdirs.el ]] \
 		&& ! has_version ">=${CATEGORY}/${PN}-1"
 	then
 		ewarn "Removing orphan subdirs.el (installed by old Emacs ebuilds)"
@@ -27,8 +27,8 @@ pkg_setup() {
 }
 
 src_install() {
-	keepdir "${SITELISP}"
-	elisp-install . subdirs.el || die
+	insinto "${SITELISP}"
+	doins subdirs.el
 
 	keepdir /etc/emacs
 	insinto /etc/emacs
