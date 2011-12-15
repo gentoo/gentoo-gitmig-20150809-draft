@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/pipes-1.16.1.ebuild,v 1.2 2011/04/22 16:19:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/pipes-1.16.1.ebuild,v 1.3 2011/12/15 16:23:31 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://bisqwit.iki.fi/src/arch/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~s390 ~x86"
+KEYWORDS="~amd64 ~ppc ~s390 ~x86"
 IUSE=""
 
 RDEPEND=""
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	#sed -i Makefile -e 's:-O2:$(CFLAGS):' || die
 	# Prevent the build system from looking for dependencies
-	touch .depend
+	touch .depend || die
 }
 
 src_compile() {
