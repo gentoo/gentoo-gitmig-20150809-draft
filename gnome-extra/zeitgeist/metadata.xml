@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>desktop-misc</herd>
-  <maintainer>
-    <email>signals@gentoo.org</email>
-    <name>Kevin McCarthy</name>
-  </maintainer>
   <use>
     <flag name="fts">Enable the full text search extension</flag>
   </use>
