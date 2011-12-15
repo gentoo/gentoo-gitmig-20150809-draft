@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.18 2011/12/12 22:27:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.19 2011/12/15 23:14:37 ago Exp $
+
+  15 Dec 2011; Agostino Sarubbo <ago@gentoo.org>
+  libbluray-0.0.1_pre20110819.ebuild:
+  Stable for AMD64, wrt bug #390593
 
 *libbluray-0.2.1-r1 (12 Dec 2011)
 
