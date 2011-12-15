@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.141 2011/12/09 05:45:11 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.142 2011/12/15 00:51:52 ferringb Exp $
+
+*pkgcore-0.7.7.4 (15 Dec 2011)
+
+  15 Dec 2011; Brian Harring <ferringb@gentoo.org> -pkgcore-0.7.7.2.ebuild,
+  +pkgcore-0.7.7.4.ebuild:
+  Minor functionality relase; remove older verison that is no longer used.
 
 *pkgcore-0.7.7.3 (09 Dec 2011)
 
