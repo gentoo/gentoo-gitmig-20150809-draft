@@ -1,34 +1,32 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.96.1.ebuild,v 1.5 2010/09/13 14:04:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.103.0.ebuild,v 1.1 2011/12/15 17:00:33 johu Exp $
 
-EAPI="2"
-
-inherit cmake-utils
+EAPI=4
 
 MY_P="${P/qt/qt-1}"
 
+inherit cmake-utils
+
 DESCRIPTION="PolicyKit Qt4 API wrapper library."
-HOMEPAGE="http://kde.org/"
+HOMEPAGE="http://www.kde.org/"
 SRC_URI="mirror://kde/stable/apps/KDE4.x/admin/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
-KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE="debug examples"
 
 COMMON_DEPEND="
 	dev-libs/glib:2
-	>=sys-auth/polkit-0.96
-	x11-libs/qt-core
-	x11-libs/qt-gui[dbus]
+	>=sys-auth/polkit-0.99
+	x11-libs/qt-core[glib]
+	x11-libs/qt-gui[dbus,glib]
 "
 DEPEND="${COMMON_DEPEND}
 	dev-util/automoc
 "
-RDEPEND="${COMMON_DEPEND}
-	examples? ( !sys-auth/policykit-qt[examples] )
-"
+RDEPEND="${COMMON_DEPEND}"
 
 DOCS=(AUTHORS README README.porting TODO)
 
