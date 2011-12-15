@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ZendFramework-1.11.10.ebuild,v 1.1 2011/09/25 14:21:32 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ZendFramework-1.11.10.ebuild,v 1.2 2011/12/15 22:03:55 gurligebis Exp $
 
 EAPI="2"
 
@@ -44,7 +44,7 @@ src_install() {
 	php-lib-r1_src_install library/Zend $(cd library/Zend ; find . -type f -print)
 
 	if ! use minimal ; then
-		insinto /usr/share/php5
+		insinto /usr/share/php
 		doins -r externals/dojo
 	fi
 

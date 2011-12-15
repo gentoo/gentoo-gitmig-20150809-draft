@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/ZendFramework
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.11 2011/09/25 14:21:32 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.12 2011/12/15 22:03:55 gurligebis Exp $
+
+  15 Dec 2011; <gurligebis@gentoo.org> ZendFramework-1.11.6.ebuild,
+  ZendFramework-1.11.10.ebuild:
+  Changed install location to /usr/share/php, fixing bug #394561
 
 *ZendFramework-1.11.10 (25 Sep 2011)
 
