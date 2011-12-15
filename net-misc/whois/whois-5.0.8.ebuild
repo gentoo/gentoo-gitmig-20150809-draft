@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.0.8.ebuild,v 1.7 2011/03/01 00:33:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.0.8.ebuild,v 1.8 2011/12/15 20:26:58 grobian Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -28,6 +28,9 @@ src_prepare() {
 	else
 		sed -i -e '/ENABLE_NLS/s:define:undef:' config.h
 	fi
+
+	echo "int main() {}" | $(tc-getCC) ${CFLAGS} ${LDFLAGS} -xc -o /dev/null - -lcrypt >& /dev/null \
+		|| sed -i -e 's/-lcrypt//' Makefile
 }
 
 src_configure() { :;} # expected no-op
@@ -41,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	emake BASEDIR="${ED}" prefix=/usr install || die
+	emake BASEDIR="${D}" prefix="${EPREFIX}"/usr install || die
 	insinto /etc
 	doins whois.conf
 	dodoc README debian/changelog
