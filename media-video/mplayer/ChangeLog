@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.809 2011/11/02 14:20:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.810 2011/12/15 12:29:06 aballier Exp $
+
+  15 Dec 2011; Alexis Ballier <aballier@gentoo.org> files/prepare_mplayer.sh:
+  update the prepare_mplayer script to use ffmpeg instead of libav and use
+  dump_ffmpeg.sh for dumping unused files
 
   02 Nov 2011; Alexis Ballier <aballier@gentoo.org> files/dump_ffmpeg.sh:
   riff.h isnt needed anymore
