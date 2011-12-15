@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/leechcraft-poshuku-9999.ebuild,v 1.2 2011/12/15 19:48:36 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/leechcraft-poshuku-0.4.96.ebuild,v 1.1 2011/12/15 19:48:36 maksbotan Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit confutils leechcraft
 DESCRIPTION="Poshuku, the full-featured web browser plugin for LeechCraft."
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug +cleanweb +fatape +filescheme +fua +idn +keywords +onlinebookmarks
 		wyfv +sqlite postgres pogooglue"
 

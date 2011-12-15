@@ -1,6 +1,17 @@
 # ChangeLog for www-client/leechcraft-poshuku
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.2 2011/09/14 17:09:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.3 2011/12/15 19:48:36 maksbotan Exp $
+
+*leechcraft-poshuku-0.4.96 (15 Dec 2011)
+
+  15 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-poshuku-0.4.96.ebuild, leechcraft-poshuku-9999.ebuild,
+  metadata.xml:
+  Bump www-client/leechcraft-poshuku to 0.4.96, thanks to 0xd34df00d
+
+  15 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-poshuku-9999.ebuild, metadata.xml:
+  Add pogooglye plugin to poshuku-9999
 
 *leechcraft-poshuku-0.4.90 (14 Sep 2011)
 
