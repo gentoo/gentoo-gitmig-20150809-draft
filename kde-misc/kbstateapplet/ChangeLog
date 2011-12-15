@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kbstateapplet
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbstateapplet/ChangeLog,v 1.1 2011/12/15 22:25:54 dilfridge Exp $
+
+*kbstateapplet-0_p1268845 (15 Dec 2011)
+
+  15 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kbstateapplet-0_p1268845.ebuild, +metadata.xml:
+  New plasmoid, bug 375033
+
