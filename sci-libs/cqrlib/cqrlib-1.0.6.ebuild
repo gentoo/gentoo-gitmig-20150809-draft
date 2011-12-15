@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.6.ebuild,v 1.2 2011/12/15 08:21:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.6.ebuild,v 1.3 2011/12/15 09:43:17 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-libs/cvector"
