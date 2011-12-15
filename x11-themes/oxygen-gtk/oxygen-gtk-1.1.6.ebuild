@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.1.4.ebuild,v 1.1 2011/10/18 07:20:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.1.6.ebuild,v 1.1 2011/12/15 16:28:49 johu Exp $
 
 EAPI=4
 
