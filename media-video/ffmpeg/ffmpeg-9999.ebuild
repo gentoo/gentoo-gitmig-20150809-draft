@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.68 2011/12/09 13:59:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.69 2011/12/15 11:15:54 aballier Exp $
 
 EAPI="4"
 
@@ -251,7 +251,9 @@ src_configure() {
 		--mandir="${EPREFIX}/usr/share/man" \
 		--enable-shared \
 		--cc="$(tc-getCC)" \
-		--disable-optimizations \
+		--optflags="" \
+		--extra-cflags="${CFLAGS}" \
+		--extra-cxxflags="${CXXFLAGS}" \
 		$(use_enable static-libs static) \
 		${myconf} || die
 }
