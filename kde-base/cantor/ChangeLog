@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cantor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.51 2011/12/11 18:52:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.52 2011/12/15 22:58:23 dilfridge Exp $
+
+  15 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> cantor-4.7.4.ebuild:
+  Tests have gained sanity, re-enable
 
 *cantor-4.7.4 (11 Dec 2011)
 
