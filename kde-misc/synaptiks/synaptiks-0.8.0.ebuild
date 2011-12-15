@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.0.ebuild,v 1.5 2011/12/15 22:42:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.0.ebuild,v 1.6 2011/12/15 22:47:05 dilfridge Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6"
@@ -28,6 +28,7 @@ RDEPEND="|| ( >=dev-lang/python-2.7 dev-python/argparse )
 	upower? ( dev-python/dbus-python sys-power/upower )"
 DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
+	dev-python/setuptools
 	sys-devel/gettext"
 
 pkg_setup() {
