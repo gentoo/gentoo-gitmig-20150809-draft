@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3.ebuild,v 1.19 2009/06/02 18:01:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3.ebuild,v 1.20 2011/12/15 16:16:19 jer Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -23,7 +23,7 @@ doecho() {
 }
 
 src_compile() {
-	append-flags -I "${S}"/include -D__THREADS
+	append-flags -I"${S}"/include -D__THREADS
 
 	doecho $(tc-getCC) -o ${PN} \
 		${CFLAGS} ${LDFLAGS} \
