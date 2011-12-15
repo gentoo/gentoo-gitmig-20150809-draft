@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/hcalc-1.0-r1.ebuild,v 1.1 2011/02/23 07:32:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/hcalc-1.0-r1.ebuild,v 1.2 2011/12/15 21:05:34 jlec Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -28,7 +28,7 @@ src_prepare() {
 }
 
 src_install() {
-	dobin hcalc || die
+	dobin ${PN}
 }
 
 pkg_postinst() {
