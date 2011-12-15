@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>leechcraft</herd>
 <use>
+	<flag name="astrality">Build Astrality, support for protocols provided by Telepathy</flag>
 	<flag name="acetamide">Build Acetamide, the IRC protocol support</flag>
 	<flag name="adiumstyles">Build support for Adium styles</flag>
 	<flag name="autoidler">Build support for automatic status changing according to user idle time</flag>

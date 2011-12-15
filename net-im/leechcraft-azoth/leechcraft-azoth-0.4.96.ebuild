@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.5 2011/12/15 19:36:38 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-0.4.96.ebuild,v 1.1 2011/12/15 19:36:38 maksbotan Exp $
 
 EAPI="2"
 
@@ -9,8 +9,8 @@ inherit leechcraft
 DESCRIPTION="Azoth, the modular IM client for LeechCraft."
 
 SLOT="0"
-KEYWORDS=""
-IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
+KEYWORDS="~amd64 ~x86"
+IUSE="debug +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
 		+depester +embedmedia +herbicide +hili +isterique +juick +lastseen
 		+metacontacts +modnok +nativeemoticons +otroid +p100q +rosenthal
 		+standardstyles +xoox +xtazy"
@@ -18,9 +18,8 @@ IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +chathistory
 DEPEND="=net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit
 		x11-libs/qt-multimedia
-		astrality? ( net-libs/telepathy-qt4 )
 		otroid? ( net-libs/libotr )
-		xoox? ( =net-libs/qxmpp-9999[extras] media-libs/speex )
+		xoox? ( net-libs/qxmpp[extras] media-libs/speex )
 		xtazy? ( x11-libs/qt-dbus )
 		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
 RDEPEND="${DEPEND}
