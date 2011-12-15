@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.6.ebuild,v 1.1 2011/05/05 16:18:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.6.ebuild,v 1.2 2011/12/15 08:21:59 jlec Exp $
 
 EAPI=4
 
@@ -34,6 +34,7 @@ src_compile() {
 		CC=$(tc-getCC) \
 		CXX=$(tc-getCXX) \
 		CFLAGS="${CFLAGS}" \
+		CPPFLAGS="${CXXFLAGS} -DCQR_NOCCODE=1" \
 		all
 }
 
