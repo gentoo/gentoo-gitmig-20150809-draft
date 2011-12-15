@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.511 2011/12/15 11:43:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.512 2011/12/15 11:46:01 aballier Exp $
+
+  15 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  no need to prebuild version.h these days
 
   15 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   feed configure with cxx and ar too

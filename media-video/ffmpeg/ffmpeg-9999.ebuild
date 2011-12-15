@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.73 2011/12/15 11:43:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.74 2011/12/15 11:46:01 aballier Exp $
 
 EAPI="4"
 
@@ -246,8 +246,6 @@ src_configure() {
 }
 
 src_compile() {
-	#252269
-	emake version.h
 	emake
 
 	if use qt-faststart; then
