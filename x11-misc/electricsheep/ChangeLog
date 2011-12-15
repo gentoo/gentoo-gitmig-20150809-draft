@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.50 2011/07/20 15:07:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.51 2011/12/15 12:16:01 aballier Exp $
+
+  15 Dec 2011; Alexis Ballier <aballier@gentoo.org>
+  electricsheep-2.7_beta11.ebuild, +files/electricsheep-ffmpeg.patch:
+  fix build with latest ffmpeg, bug #394213
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
