@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.21 2011/12/15 14:26:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.22 2011/12/15 22:42:36 dilfridge Exp $
+
+  15 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  synaptiks-0.8.0.ebuild:
+  Removing --single-version-externally-managed, thx arfrever
 
   15 Dec 2011; Johannes Huber <johu@gentoo.org> synaptiks-0.8.0.ebuild:
   Use python 2, fixes bug #387533 thanks floppym. Use appropiate eclass for
