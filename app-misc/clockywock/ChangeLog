@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/clockywock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.12 2011/12/15 22:40:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.13 2011/12/15 23:05:01 ago Exp $
+
+  15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> clockywock-0.2.3f.ebuild:
+  Stable for AMD64, wrt bug #393453
 
   15 Dec 2011; Pacho Ramos <pacho@gentoo.org> -clockywock-0.2.3d.ebuild,
   metadata.xml:
