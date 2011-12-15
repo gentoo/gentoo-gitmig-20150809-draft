@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r4.ebuild,v 1.3 2011/12/14 23:27:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r4.ebuild,v 1.4 2011/12/15 15:59:03 ago Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~mips ~ppc ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm ~mips ~ppc ~s390 ~sh ~sparc x86"
 IUSE=""
 
 src_prepare() {
