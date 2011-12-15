@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/maq-0.7.1-r1.ebuild,v 1.1 2011/04/14 07:46:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/maq-0.7.1-r1.ebuild,v 1.2 2011/12/15 22:01:03 jlec Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit autotools eutils
 
@@ -15,22 +15,22 @@ SRC_URI="
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
-
-DEPEND=""
-RDEPEND=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 src_prepare() {
 	epatch \
-	"${FILESDIR}"/${P}-flags.patch \
-	"${FILESDIR}"/${P}-bfr-overfl.patch
+		"${FILESDIR}"/${P}-flags.patch \
+		"${FILESDIR}"/${P}-bfr-overfl.patch
+	sed \
+		-e '/ext_CFLAGS/s:-m64::g' \
+		-i configure* || die
 	eautoreconf
 }
 
 src_install() {
 	default
 	insinto /usr/share/maq
-	doins "${WORKDIR}"/*.dat || die
+	doins "${WORKDIR}"/*.dat
 	doman maq.1
 	dodoc ${PN}.pdf
 }

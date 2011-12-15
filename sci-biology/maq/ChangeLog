@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/maq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/ChangeLog,v 1.5 2011/04/14 07:46:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/ChangeLog,v 1.6 2011/12/15 22:01:03 jlec Exp $
+
+  15 Dec 2011; Justin Lecher <jlec@gentoo.org> maq-0.7.1-r1.ebuild:
+  Respect multilib, keyworded for prefix linux, remove additionally die
 
 *maq-0.7.1-r1 (14 Apr 2011)
 
