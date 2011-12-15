@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.1.3.ebuild,v 1.6 2010/08/07 15:57:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.1.3.ebuild,v 1.7 2011/12/15 19:33:19 vapier Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -23,6 +23,11 @@ DEPEND="
 	tcpd? ( sys-apps/tcp-wrappers )
 "
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cross-compile.patch
+	eautoreconf
+}
 
 src_configure() {
 	filter-flags -Wno-error*

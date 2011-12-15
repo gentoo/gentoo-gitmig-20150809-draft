@@ -1,0 +1,45 @@
+already sent upstream
+
+From ceff276b495884e0b6904814f2bcc93dc98da132 Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Thu, 15 Dec 2011 14:16:50 -0500
+Subject: [PATCH] add compile-only tests for shift sizes
+
+We can take advantage of array limits to calculate the shift size
+required for constants.  If we compile to a value we don't like,
+then the array limit will be -1 and trigger a compile error.
+
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ configure.in |   15 ++++++++++++++-
+ 1 files changed, 14 insertions(+), 1 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 45cb88a..15c4d7d 100644
+--- a/configure.in
++++ b/configure.in
+@@ -1331,7 +1331,20 @@ AC_CACHE_CHECK(shift offset of $1, $2,
+  ],
+  [$2=`cat $conftestoffset`],
+  [$2=-1],
+- [$2=-1]
++ [
++  i=0
++  $2=-1
++  while test $i -lt 64 -a $$2 -eq -1; do
++   AC_TRY_COMPILE([
++   #include <errno.h>
++   #include <stdio.h>
++   #include <termios.h>
++   #include <string.h>
++   ],[char c[(($1 >> $i) & 1) - 1];],
++   [$2=$i])
++   i=$(( $i + 1 ))
++  done
++ ]
+ )
+  LIBS="$LIBS1"])
+ AC_DEFINE_UNQUOTED($1_SHIFT, ${$2})
+-- 
+1.7.6.1
+
