@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/bas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bas/ChangeLog,v 1.3 2011/04/19 20:23:31 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bas/ChangeLog,v 1.4 2011/12/15 22:46:21 pacho Exp $
+
+  15 Dec 2011; Pacho Ramos <pacho@gentoo.org> -bas-2.1.ebuild, metadata.xml:
+  Drop maintainer due retirement, bug #353461; drop old.
 
 *bas-2.2 (19 Apr 2011)
 
