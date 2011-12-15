@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.69 2011/12/15 11:15:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.70 2011/12/15 11:21:08 aballier Exp $
 
 EAPI="4"
 
@@ -227,21 +227,6 @@ src_configure() {
 
 	# Misc stuff
 	use hardcoded-tables && myconf="${myconf} --enable-hardcoded-tables"
-
-	# Specific workarounds for too-few-registers arch...
-	if [[ $(tc-arch) == "x86" ]]; then
-		filter-flags -fforce-addr -momit-leaf-frame-pointer
-		append-flags -fomit-frame-pointer
-		is-flag -O? || append-flags -O2
-		if (use debug); then
-			# no need to warn about debug if not using debug flag
-			ewarn ""
-			ewarn "Debug information will be almost useless as the frame pointer is omitted."
-			ewarn "This makes debugging harder, so crashes that has no fixed behavior are"
-			ewarn "difficult to fix. Please have that in mind."
-			ewarn ""
-		fi
-	fi
 
 	cd "${S}"
 	./configure \
