@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.4.ebuild,v 1.4 2011/12/14 17:21:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.4.ebuild,v 1.5 2011/12/15 19:15:05 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -167,7 +167,7 @@ src_configure() {
 		$(use_with pcap dumpcap-group wireshark) \
 		$(use pcap && use_enable caps setcap-install) \
 		$(use pcap && use_enable !caps setuid-install) \
-		--sysconfdir=/etc/wireshark \
+		--sysconfdir="${EPREFIX}"/etc/wireshark \
 		--disable-extra-gcc-checks \
 		${myconf}
 }
@@ -208,7 +208,7 @@ src_install() {
 
 pkg_postinst() {
 	if use caps && use pcap; then
-		fcaps 0:wireshark 550 cap_net_raw,cap_net_admin "${ROOT}"/usr/bin/dumpcap
+		fcaps 0:wireshark 550 cap_net_raw,cap_net_admin "${EROOT}"/usr/bin/dumpcap
 	fi
 	echo
 	ewarn "NOTE: To run wireshark as normal user you have to add yourself to"
