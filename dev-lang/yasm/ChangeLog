@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.48 2011/11/20 00:04:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.49 2011/12/15 07:42:44 ulm Exp $
+
+  15 Dec 2011; Ulrich Mueller <ulm@gentoo.org> yasm-1.1.0-r1.ebuild,
+  yasm-1.2.0.ebuild:
+  Fix LICENSE, bug 360501 comment #12.
 
   20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> yasm-1.1.0-r1.ebuild,
   yasm-1.2.0.ebuild:
