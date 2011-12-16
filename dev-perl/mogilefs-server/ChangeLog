@@ -1,6 +1,18 @@
 # ChangeLog for dev-perl/mogilefs-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.26 2011/11/14 23:45:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.27 2011/12/16 19:53:22 swegener Exp $
+
+  16 Dec 2011; Sven Wegener <swegener@gentoo.org> files/mogstored-conf.d-2.30,
+  mogilefs-server-2.37.ebuild, mogilefs-server-2.43.ebuild,
+  mogilefs-server-2.46.ebuild, files/mogstored-init.d-2.50,
+  mogilefs-server-2.50.ebuild, mogilefs-server-2.51.ebuild,
+  mogilefs-server-2.53.ebuild, mogilefs-server-2.530.0.ebuild,
+  mogilefs-server-2.540.0.ebuild, mogilefs-server-2.550.0.ebuild:
+  Don't keepdir /mnt/mogilefs, it's a place for temporary user mounts.
+
+  16 Dec 2011; Sven Wegener <swegener@gentoo.org> files/mogstored-conf.d-2.30,
+  files/mogstored-init.d-2.50:
+  Move --daemonize to init script, pass --pidfile to mogstored.
 
 *mogilefs-server-2.550.0 (14 Nov 2011)
 

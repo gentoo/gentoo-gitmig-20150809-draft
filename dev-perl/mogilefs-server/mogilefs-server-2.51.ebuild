@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.51.ebuild,v 1.1 2011/06/27 19:28:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.51.ebuild,v 1.2 2011/12/16 19:53:22 swegener Exp $
 
 EAPI=2
 MODULE_AUTHOR="DORMANDO"
@@ -86,7 +86,6 @@ src_install() {
 	diropts -m 700 -o ${MOGILE_USER}
 	keepdir /var/run/mogile
 	keepdir /var/mogdata
-	keepdir /mnt/mogilefs
 	diropts -m 755 -o root
 
 	dodir /etc/mogilefs

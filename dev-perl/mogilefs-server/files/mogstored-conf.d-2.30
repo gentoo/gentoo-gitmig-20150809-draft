@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/files/mogstored-conf.d-2.30,v 1.1 2009/02/23 09:59:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/files/mogstored-conf.d-2.30,v 1.2 2011/12/16 19:53:23 swegener Exp $
 PIDFILE="/var/run/mogile/mogstored.pid"
-MOGSTORED_OPTS="--daemonize"
+MOGSTORED_OPTS=""
 # vim: ft=gentoo-conf-d:
