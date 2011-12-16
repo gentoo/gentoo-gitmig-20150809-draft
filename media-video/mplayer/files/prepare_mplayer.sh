@@ -11,7 +11,7 @@ pushd ${PACKAGE} > /dev/null
 	git clone git://git.videolan.org/ffmpeg.git ffmpeg/
         sh "$DUMP_FFMPEG"
 	STORE_VERSION=$(svn log -r HEAD -q |grep ^r |cut -d' ' -f1)
-	echo "*** Remember to adjust mplayer ebuild with revision: \"SVN-${STORE_VERSION}\" ***"
+	echo "$STORE_VERSION" > snapshot_version
 popd > /dev/null
 
 find "${PACKAGE}" -type d -name '.svn' -prune -print0 | xargs -0 rm -rf
