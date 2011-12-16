@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.109 2011/11/20 19:30:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.110 2011/12/16 16:28:12 kumba Exp $
+
+*fwbuilder-5.0.0.3568 (16 Dec 2011)
+
+  16 Dec 2011; Joshua Kinard <kumba@gentoo.org>
+  -files/3.0.7-secure-mktemp.patch, fwbuilder-4.2.2.3541.ebuild,
+  +fwbuilder-5.0.0.3568.ebuild, +files/fwbuilder-5.0.0.3568-ldflags.patch,
+  -files/4.x-qmake-use-LDFLAGS.patch:
+  Add 5.0.0.3568, remove old files no longer used, and remove uneeded dep on
+  libfwbuilder, which no longer exists. Closes #387759.
 
   20 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -fwbuilder-3.0.7.ebuild:

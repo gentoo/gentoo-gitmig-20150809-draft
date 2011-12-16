@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.2.2.3541.ebuild,v 1.7 2011/12/16 16:28:12 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.0.3568.ebuild,v 1.1 2011/12/16 16:28:12 kumba Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.fwbuilder.org/"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.3
@@ -21,8 +21,7 @@ DEPEND=">=x11-libs/qt-gui-4.3
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${P}-flags.patch"
-	"${FILESDIR}/${P}-ccache.patch"
+	"${FILESDIR}/${P}-ldflags.patch"
 )
 
 src_prepare() {
@@ -36,7 +35,8 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --with-ccache=no --with-distcc=no
+	eqmake4
+	econf
 }
 
 src_install() {
