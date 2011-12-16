@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.817 2011/12/16 13:36:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.818 2011/12/16 13:52:53 aballier Exp $
+
+  16 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  use libmpg123 for mp3 decoding and remove internal mp3lib, bug #384849 by
+  Samuli Suominen
 
   16 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   generate on the fly a snapshot version for live ebuilds and use that file for
