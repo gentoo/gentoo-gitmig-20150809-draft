@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/eden
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.13 2010/09/18 15:53:18 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.14 2011/12/16 12:59:33 jlec Exp $
+
+  16 Dec 2011; Justin Lecher <jlec@gentoo.org> eden-5.3-r1.ebuild:
+  Add missing die, use pkg-config for gsl detection.
 
 *eden-5.3-r1 (18 Sep 2010)
 
