@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4b-r3.ebuild,v 1.2 2011/03/21 22:38:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4b-r3.ebuild,v 1.3 2011/12/16 20:28:05 ago Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
