@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-1.0.18-r1.ebuild,v 1.3 2011/12/16 12:55:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-1.0.18-r1.ebuild,v 1.4 2011/12/16 13:01:21 jlec Exp $
 
 EAPI=4
 
@@ -17,8 +17,9 @@ SLOT="0"
 IUSE="-doc"
 KEYWORDS="amd64 ~x86"
 
-DEPEND="doc? ( virtual/latex-base )"
-RDEPEND=""
+RDEPEND="sys-libs/zlib"
+DEPEND="${RDEPEND}
+	doc? ( virtual/latex-base )"
 
 S="${WORKDIR}"/${MY_P}
 
