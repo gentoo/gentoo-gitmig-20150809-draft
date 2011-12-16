@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r6.ebuild,v 1.4 2011/11/28 16:45:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r6.ebuild,v 1.5 2011/12/16 08:58:52 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -47,8 +47,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix automagic lzma support, bug #266128
 	epatch "${FILESDIR}/${PN}-2.26.0-automagic-lzma.patch"
 
@@ -73,11 +71,16 @@ src_prepare() {
 	# Fix small freezes when moving window
 	epatch "${FILESDIR}/${P}-freeze-move.patch"
 
+	# Fix -ldl linking problems with xulrunner-2.0 (bug #392367)
+	epatch "${FILESDIR}/${P}-mozilla-glue-libs.patch"
+
 	# Ensure schema is regenerated properly to prevent warnings
 	rm -f data/yelp.schemas || die
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+
+	gnome2_src_prepare
 
 	# strip stupid options in configure, see bug #196621
 	sed -i 's|$AM_CFLAGS -pedantic -ansi|$AM_CFLAGS|' configure || die "sed	failed"

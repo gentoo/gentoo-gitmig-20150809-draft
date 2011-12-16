@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.272 2011/11/28 16:45:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.273 2011/12/16 08:58:52 tetromino Exp $
+
+  16 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  yelp-2.30.2-r6.ebuild, +files/yelp-2.30.2-mozilla-glue-libs.patch:
+  Fix -ldl linking problems with xulrunner-2.0 (bug #392367, thanks to Peter
+  Alfredsen and Alex Maclean). Also, gnome2_src_prepare should be after
+  eautoreconf.
 
   28 Nov 2011; Pacho Ramos <pacho@gentoo.org> -yelp-2.30.2-r1.ebuild,
   yelp-2.30.2-r6.ebuild:
