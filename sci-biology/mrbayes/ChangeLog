@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mrbayes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/ChangeLog,v 1.21 2011/03/06 16:53:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/ChangeLog,v 1.22 2011/12/16 13:08:49 jlec Exp $
+
+  16 Dec 2011; Justin Lecher <jlec@gentoo.org> mrbayes-3.1.2-r1.ebuild:
+  Add missing dep on sys-libs/ncurses, keyworded for ~amd64-linux
 
 *mrbayes-3.1.2-r1 (06 Mar 2011)
 

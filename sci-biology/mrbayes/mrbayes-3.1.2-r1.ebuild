@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.1.2-r1.ebuild,v 1.1 2011/03/06 16:53:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.1.2-r1.ebuild,v 1.2 2011/12/16 13:08:49 jlec Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -13,9 +13,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug mpi readline"
-KEYWORDS="~amd64 ~x86 ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 
 DEPEND="
+	sys-libs/ncurses
 	mpi? ( virtual/mpi )
 	readline? ( sys-libs/readline )"
 RDEPEND="${DEPEND}"
