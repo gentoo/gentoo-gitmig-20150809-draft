@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mftrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.65 2011/12/09 12:04:34 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.66 2011/12/16 05:46:03 radhermit Exp $
+
+*mftrace-1.2.18 (16 Dec 2011)
+
+  16 Dec 2011; Tim Harder <radhermit@gentoo.org> +mftrace-1.2.18.ebuild:
+  Version bump.
 
   09 Dec 2011; Naohiro Aota <naota@gentoo.org> mftrace-1.2.17.ebuild:
   Add ~x86-fbsd
