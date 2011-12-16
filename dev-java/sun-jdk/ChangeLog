@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.314 2011/12/15 21:02:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.315 2011/12/16 07:26:39 sera Exp $
+
+  16 Dec 2011; Ralph Sennhauser <sera@gentoo.org> sun-jdk-1.6.0.29-r1.ebuild,
+  metadata.xml:
+  Add missing kernel_Solaris to IUSE.
 
   15 Dec 2011; Fabian Groffen <grobian@gentoo.org> sun-jdk-1.6.0.29-r1.ebuild:
   Add support for Solaris, transferred Prefix keywords
