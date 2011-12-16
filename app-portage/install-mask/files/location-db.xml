@@ -18,4 +18,8 @@
 			All localizations.
 		</description>
 	</location>
+
+	<location id="logrotate">
+		<path>/etc/logrotate.d</path>
+	</location>
 </install-mask>

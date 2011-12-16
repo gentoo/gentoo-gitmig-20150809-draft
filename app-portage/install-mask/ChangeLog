@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/install-mask
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.3 2011/12/09 04:44:13 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.4 2011/12/16 16:55:18 mgorny Exp $
+
+  16 Dec 2011; Michał Górny <mgorny@gentoo.org> files/location-db.xml:
+  Add logrotate to supported install-mask methods.
 
   09 Dec 2011; Naohiro Aota <naota@gentoo.org> install-mask-0.0.2.ebuild:
   Add ~x86-fbsd #393181
