@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.4.ebuild,v 1.1 2011/12/11 18:52:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.4.ebuild,v 1.2 2011/12/16 22:26:44 dilfridge Exp $
 
 EAPI=4
 
@@ -118,6 +118,9 @@ PDEPEND="
 
 # Force the upgrade of plasma-workspace to a version that explicitly depends on kactivities
 add_blocker plasma-workspace 4.7.1
+
+# file collision, bug 394991
+add_blocker kcontrol 4.4.50
 
 PATCHES=(
 	"${FILESDIR}/dist/01_gentoo_set_xdg_menu_prefix-1.patch"

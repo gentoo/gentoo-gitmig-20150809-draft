@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.809 2011/12/12 01:08:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.810 2011/12/16 22:26:44 dilfridge Exp $
+
+  16 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdelibs-4.7.3-r1.ebuild, kdelibs-4.7.3-r11.ebuild, kdelibs-4.7.4.ebuild:
+  Add a blocker for kcontrol-4.4 because of file collisions, bug 394991
 
   12 Dec 2011; Jonathan Callen <abcd@gentoo.org>
   -files/kdelibs-4.3.80-module-suffix.patch,
