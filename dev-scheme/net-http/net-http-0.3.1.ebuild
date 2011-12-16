@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/net-http-0.3.1.ebuild,v 1.6 2010/09/24 13:17:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/net-http-0.3.1.ebuild,v 1.7 2011/12/16 14:50:48 jlec Exp $
 
 DESCRIPTION="Library for doing HTTP client-side programming in Guile"
 HOMEPAGE="http://evan.prodromou.name/software/net-http/"
@@ -21,6 +21,6 @@ src_compile() {
 src_install() {
 	local GUILE_DIR="/usr/share/guile/site"
 	dodir ${GUILE_DIR}
-	cp -R "${S}"/net ${D}${GUILE_DIR}
+	cp -R "${S}"/net "${D}"${GUILE_DIR}
 	dodoc "${S}"/README
 }

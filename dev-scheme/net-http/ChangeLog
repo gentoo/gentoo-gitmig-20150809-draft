@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/net-http
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/ChangeLog,v 1.10 2011/11/21 15:31:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/ChangeLog,v 1.11 2011/12/16 14:50:48 jlec Exp $
+
+  16 Dec 2011; Justin Lecher <jlec@gentoo.org> net-http-0.3.1.ebuild,
+  net-http-0.3.1-r1.ebuild:
+  Moved to EAPI=4, Unquoted Variable on line: 24
 
   21 Nov 2011; Justin Lecher <jlec@gentoo.org> net-http-0.3.1-r1.ebuild:
   keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
