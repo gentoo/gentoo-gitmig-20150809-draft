@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.103 2011/12/10 17:28:16 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.104 2011/12/16 20:02:48 abcd Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -451,6 +451,7 @@ setqtenv() {
 	QTDOCDIR=${EPREFIX}/usr/share/doc/qt-${PV}
 	QTHEADERDIR=${EPREFIX}/usr/include/qt4
 	QTPLUGINDIR=${QTLIBDIR}/plugins
+	QTIMPORTDIR=${QTLIBDIR}/imports
 	QTSYSCONFDIR=${EPREFIX}/etc/qt4
 	QTTRANSDIR=${QTDATADIR}/translations
 	QTEXAMPLESDIR=${QTDATADIR}/examples
@@ -517,7 +518,7 @@ standard_configure_options() {
 		-datadir ${QTDATADIR} -docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR}
 		-plugindir ${QTPLUGINDIR} -sysconfdir ${QTSYSCONFDIR}
 		-translationdir ${QTTRANSDIR} -examplesdir ${QTEXAMPLESDIR}
-		-demosdir ${QTDEMOSDIR} -silent -fast -opensource
+		-demosdir ${QTDEMOSDIR} -importdir ${QTIMPORTDIR} -silent -fast -opensource
 		${exceptions}
 		-nomake examples -nomake demos"
 
@@ -536,7 +537,10 @@ prepare_directories() {
 		{
 			echo "${S}"/mkspecs/common/*.conf
 			find "${S}" -name '*.pr[io]'
-		} | xargs sed -i -e "s:\$\$\[QT_INSTALL_LIBS\]:${EPREFIX}/usr/$(get_libdir)/qt4:g" || die
+		} | xargs sed -i \
+			-e "s:\$\$\[QT_INSTALL_LIBS\]:${QTLIBDIR}:g" \
+			-e "s:\$\$\[QT_INSTALL_PLUGINS\]:${QTPLUGINDIR}:g" \
+			|| die
 		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" || die "qmake failed"
 		popd >/dev/null
 	done
