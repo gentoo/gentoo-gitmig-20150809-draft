@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.43 2011/12/14 09:03:17 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.44 2011/12/16 15:04:14 grobian Exp $
+
+  16 Dec 2011; Fabian Groffen <grobian@gentoo.org> jdk-1.7.0.ebuild:
+  Add Prefix keywords (now oracle-jdk-bin has them too)
 
 *jdk-1.6.0-r1 (14 Dec 2011)
 
