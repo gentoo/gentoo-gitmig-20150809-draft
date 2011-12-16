@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-1.0.18-r1.ebuild,v 1.2 2011/12/16 12:43:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-1.0.18-r1.ebuild,v 1.3 2011/12/16 12:55:19 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.ebi.ac.uk/~zerbino/velvet/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="-doc"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND="doc? ( virtual/latex-base )"
 RDEPEND=""
