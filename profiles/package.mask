@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13336 2011/12/15 20:54:07 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13337 2011/12/16 11:18:00 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Johannes Huber <johu@gentoo.org> (16 Dec 2011)
+# Masked for removal in 30 days. Dead upstream. Package
+# is not full functional. Last release was on 2010-01-14.
+# See bug #394881
+kde-misc/kcheckgmail
 
 # Mike Pagano <mpagano@gentoo.org> (15 Dec 2011)
 # Masked for a bit for testing 

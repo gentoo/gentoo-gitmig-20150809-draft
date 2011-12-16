@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6022 2011/12/15 20:54:07 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6023 2011/12/16 11:18:00 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Dec 2011; Johannes Huber <johu@gentoo.org> package.mask:
+  kde-misc/kcheckgmail masked for removal
 
   15 Dec 2011; Michael Pagano <mpagano@gentoo.org> package.mask:
   Bump masked portpeek version
