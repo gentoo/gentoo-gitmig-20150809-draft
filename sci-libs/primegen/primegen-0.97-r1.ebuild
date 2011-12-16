@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97-r1.ebuild,v 1.2 2010/09/29 05:19:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97-r1.ebuild,v 1.3 2011/12/16 10:55:00 tomka Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://cr.yp.to/primegen/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
