@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.262 2011/09/03 09:13:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.263 2011/12/16 21:53:12 vapier Exp $
+
+  16 Dec 2011; Mike Frysinger <vapier@gentoo.org> shadow-4.1.4.3.ebuild:
+  Enable ttySAC secure logins by default. 
 
   03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   shadow-4.1.4.2-r6.ebuild, shadow-4.1.4.3.ebuild, metadata.xml:
