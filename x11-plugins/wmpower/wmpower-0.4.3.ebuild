@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/wmpower-0.4.3.ebuild,v 1.1 2008/11/25 10:57:57 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/wmpower-0.4.3.ebuild,v 1.2 2011/12/16 15:32:39 ago Exp $
 
 DESCRIPTION="a dockapp to get/set power management status for laptops (APM, ACPI
 and CPUfreq)"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/wmpower/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
