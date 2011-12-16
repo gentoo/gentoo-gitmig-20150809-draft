@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/leechcraft-eiskaltdcpp-9999.ebuild,v 1.2 2011/10/11 16:20:18 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/leechcraft-eiskaltdcpp-9999.ebuild,v 1.3 2011/12/16 18:48:26 maksbotan Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit leechcraft
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug +emoticons examples javascript lua pcre spell sqlite upnp"
 
-RDEPEND="=net-misc/leechcraft-core-${PV}
+RDEPEND="~net-misc/leechcraft-core-${PV}
 		app-arch/bzip2
 		sys-libs/zlib
 		>=dev-libs/openssl-0.9.8
@@ -29,7 +29,7 @@ RDEPEND="=net-misc/leechcraft-core-${PV}
 		pcre? ( >=dev-libs/libpcre-4.2 )
 		virtual/leechcraft-task-show
 		!!net-p2p/eiskaltdcpp"
-DEPEND="=net-misc/leechcraft-core-${PV}
+DEPEND="~net-misc/leechcraft-core-${PV}
 		dev-util/pkgconfig"
 
 src_configure() {
