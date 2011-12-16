@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.234 2011/12/16 10:16:30 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.235 2011/12/16 13:17:35 wired Exp $
+
+  16 Dec 2011; Alex Alexander <wired@gentoo.org> mc-4.8.1-r1.ebuild,
+  metadata.xml:
+  new use flag: xdg - toggles mc's config dir location between
+  $XDG_CONFIG_HOME/mc and $HOME/.mc
 
 *mc-4.8.1-r1 (16 Dec 2011)
 *mc-4.7.5.6-r1 (16 Dec 2011)
