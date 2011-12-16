@@ -1,6 +1,9 @@
 # ChangeLog for net-im/jabberd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.124 2011/09/13 18:26:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.125 2011/12/16 11:14:19 naota Exp $
+
+  16 Dec 2011; Naohiro Aota <naota@gentoo.org> jabberd-1.6.1.1-r1.ebuild:
+  Add ~x86-fbsd wrt 171198
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #225633
