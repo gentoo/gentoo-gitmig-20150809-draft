@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.309 2011/12/15 20:50:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.310 2011/12/16 22:20:44 darkside Exp $
+
+  16 Dec 2011; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  lift net-proxy/dante mask, bug 389423
 
   15 Dec 2011; Fabian Groffen <grobian@gentoo.org> profile.bashrc:
   Define AT_SYS_M4DIR for autotools.eclass to always have
