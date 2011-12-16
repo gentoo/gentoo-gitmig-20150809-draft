@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.129 2011/12/15 20:52:10 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.130 2011/12/16 18:02:04 mpagano Exp $
+
+*portpeek-2.0.15 (16 Dec 2011)
+*portpeek-1.9.82 (16 Dec 2011)
+
+  16 Dec 2011; Michael Pagano <mpagano@gentoo.org> -portpeek-1.9.81.ebuild,
+  +portpeek-1.9.82.ebuild, +portpeek-2.0.15.ebuild:
+  Add use flag checking to 2.0.X series. Bug fixes in 1.9.82
 
 *portpeek-1.9.81 (15 Dec 2011)
 
