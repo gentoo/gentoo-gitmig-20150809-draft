@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/proguard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.23 2010/08/01 11:45:42 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.24 2011/12/16 08:36:15 naota Exp $
+
+  16 Dec 2011; Naohiro Aota <naota@gentoo.org> proguard-4.5.ebuild:
+  Add ~x86-fbsd wrt 182475
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> proguard-4.5.ebuild:
   Stable on amd64 wrt bug #329769

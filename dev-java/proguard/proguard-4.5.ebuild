@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-4.5.ebuild,v 1.3 2010/08/01 11:45:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-4.5.ebuild,v 1.4 2011/12/16 08:36:15 naota Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc examples source"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/proguard/${MY_P}.tar.gz"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="ant j2me"
 
 DEPEND=">=virtual/jdk-1.4
