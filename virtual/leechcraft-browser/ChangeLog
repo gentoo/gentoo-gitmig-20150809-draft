@@ -1,6 +1,13 @@
 # ChangeLog for virtual/leechcraft-browser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/ChangeLog,v 1.3 2011/12/15 19:46:20 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/ChangeLog,v 1.4 2011/12/16 18:48:51 maksbotan Exp $
+
+*leechcraft-browser-0.4.96-r1 (16 Dec 2011)
+
+  16 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  -leechcraft-browser-0.4.96.ebuild, +leechcraft-browser-0.4.96-r1.ebuild,
+  leechcraft-browser-9999.ebuild:
+  Bump to eapi4, fix bug 394935
 
 *leechcraft-browser-0.4.96 (15 Dec 2011)
 
