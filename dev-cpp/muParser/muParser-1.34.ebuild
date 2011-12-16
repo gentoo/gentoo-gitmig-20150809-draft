@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-1.34.ebuild,v 1.2 2011/12/16 14:45:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-1.34.ebuild,v 1.3 2011/12/16 14:48:42 jlec Exp $
 
 EAPI=4
 
@@ -24,6 +24,9 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.32-build.patch \
 		"${FILESDIR}"/${PN}-1.32-parallel-build.patch
+	sed \
+		-e 's:-O2::g' \
+		-i configure || die
 }
 
 src_configure() {
