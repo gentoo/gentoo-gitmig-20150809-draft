@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit-qt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.21 2011/12/15 17:00:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.22 2011/12/16 23:20:46 johu Exp $
+
+  16 Dec 2011; Johannes Huber <johu@gentoo.org> polkit-qt-0.103.0.ebuild:
+  Bump polkit dep.
 
 *polkit-qt-0.103.0 (15 Dec 2011)
 
