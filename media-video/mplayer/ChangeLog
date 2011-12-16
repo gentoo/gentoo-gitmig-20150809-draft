@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.813 2011/12/15 12:48:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.814 2011/12/16 12:19:54 aballier Exp $
+
+  16 Dec 2011; Alexis Ballier <aballier@gentoo.org>
+  mplayer-1.0_rc4_p20111215.ebuild, mplayer-9999.ebuild:
+  bump libbluray dep, bug #387935
 
   15 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   sync with snapshot
