@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.146 2011/11/10 13:22:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.147 2011/12/16 17:35:10 jer Exp $
+
+*tcpdump-4.2.0 (16 Dec 2011)
+
+  16 Dec 2011; Jeroen Roovers <jer@gentoo.org>
+  -tcpdump-4.0.1_pre20090709.ebuild, +tcpdump-4.2.0.ebuild,
+  +files/tcpdump-4.2.0-ppi.h:
+  Version bump (bug #393085).
 
   10 Nov 2011; Naohiro Aota <naota@gentoo.org> tcpdump-4.1.1.ebuild:
   Add fall-back dependency sys-freebsd/freebsd-ubin. It should work with
