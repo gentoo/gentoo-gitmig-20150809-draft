@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/lgrind
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.14 2010/10/21 20:27:50 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.15 2011/12/16 14:03:33 ago Exp $
+
+  16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> lgrind-3.67-r3.ebuild:
+  Stable for AMD64, wrt bug #393993
 
 *lgrind-3.67-r3 (21 Oct 2010)
 

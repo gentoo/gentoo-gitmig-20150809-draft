@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/lgrind-3.67-r3.ebuild,v 1.1 2010/10/21 20:27:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/lgrind-3.67-r3.ebuild,v 1.2 2011/12/16 14:03:33 ago Exp $
 
 inherit latex-package toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ LICENSE="as-is"
 
 IUSE="examples"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 S=${WORKDIR}/${PN}
 
 src_unpack() {
