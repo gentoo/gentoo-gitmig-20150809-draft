@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.523 2011/12/14 08:11:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.524 2011/12/16 22:53:50 floppym Exp $
+
+*chromium-17.0.963.12 (16 Dec 2011)
+
+  16 Dec 2011; Mike Gilbert <floppym@gentoo.org> +chromium-17.0.963.12.ebuild,
+  -chromium-17.0.963.0.ebuild, -chromium-17.0.963.2.ebuild:
+  Version bump for dev channel release.
 
   14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> chromium-16.0.912.63.ebuild:
   Stable for X86, wrt bug #394587
