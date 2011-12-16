@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.48 2011/12/16 07:19:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.49 2011/12/16 07:38:27 graaff Exp $
+
+  16 Dec 2011; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.36.ebuild:
+  Remove hardcoded CXXFLAGS in various places. Fixes bug 394743.
 
   16 Dec 2011; Hans de Graaff <graaff@gentoo.org>
   mysql-workbench-5.2.36.ebuild:

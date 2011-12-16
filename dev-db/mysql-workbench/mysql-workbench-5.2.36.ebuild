@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.36.ebuild,v 1.3 2011/12/16 07:19:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.36.ebuild,v 1.4 2011/12/16 07:38:27 graaff Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -63,6 +63,10 @@ src_prepare() {
 	# paramiko 1.7.7.1 is newer, update version range check:
 	# http://bugs.mysql.com/bug.php?id=63750
 	sed -i -e 's/4,5,6/4,5,6,7/' plugins/wb.admin/backend/wb_admin_ssh.py || die
+
+	# Remove hardcoded CXXFLAGS
+	sed -i -e 's/debug_flags="-ggdb3 /debug_flags="/' configure || die
+	sed -i -e 's/-O0 -g3//' ext/scintilla/gtk/Makefile.in ext/scintilla/gtk/Makefile.am || die
 
 	# Remove bundled ctemplate version to make sure we use the system
 	# version, but leave a directory to avoid confusing configure, bug
