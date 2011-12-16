@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jpeginfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.22 2011/12/16 15:43:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.23 2011/12/16 15:50:47 ssuominen Exp $
+
+  16 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Move the package from maintainer-needed to graphics herd.
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> jpeginfo-1.6.1.ebuild:
   Stable for AMD64, wrt bug #393717
