@@ -1,12 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_rc3.ebuild,v 1.4 2011/12/16 09:02:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9_rc3.ebuild,v 1.1 2011/12/16 09:02:43 olemarkus Exp $
 
 EAPI=4
 
+PHPCONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob interbase oci8 sapdb solid"
+
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool
 
-SUHOSIN_VERSION=""
+SUHOSIN_VERSION="5.3.7-0.9.10"
 FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
@@ -15,9 +17,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 function php_get_uri ()
 {
 	case "${1}" in
-		"php-stas")
-			echo "http://downloads.php.net/stas/${2}"
-		;;
 		"php-pre")
 			echo "http://downloads.php.net/johannes/${2}"
 		;;
@@ -44,9 +43,7 @@ PHP_MV="$(get_major_version)"
 # alias, so we can handle different types of releases (finals, rcs, alphas,
 # betas, ...) w/o changing the whole ebuild
 PHP_PV="${PV/_rc/RC}"
-PHP_PV="${PHP_PV/_alpha/alpha}"
-PHP_PV="${PHP_PV/_beta/beta}"
-PHP_RELEASE="php-stas"
+PHP_RELEASE="php-pre"
 PHP_P="${PN}-${PHP_PV}"
 
 PHP_PATCHSET_LOC="olemarkus"
@@ -108,7 +105,7 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	mssql mysql mysqlnd mysqli nls
 	oci8-instant-client odbc pcntl pdo +phar pic +posix postgres qdbm
 	readline recode +session sharedmem
-	+simplexml snmp soap sockets spell sqlite3 ssl
+	+simplexml snmp soap sockets spell sqlite sqlite3 ssl
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
 	+xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
 
@@ -118,8 +115,10 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 DEPEND="!dev-lang/php:5
 	>=app-admin/eselect-php-0.6.2
 	>=dev-libs/libpcre-8.12[unicode]
+	adabas? ( >=dev-db/unixODBC-1.8.13 )
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
+	birdstep? ( >=dev-db/unixODBC-1.8.13 )
 	bzip2? ( app-arch/bzip2 )
 	cdb? ( || ( dev-db/cdb dev-db/tinycdb ) )
 	cjk? ( !gd? (
@@ -129,7 +128,11 @@ DEPEND="!dev-lang/php:5
 	) )
 	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	curl? ( >=net-misc/curl-7.10.5 )
+	dbmaker? ( >=dev-db/unixODBC-1.8.13 )
+	empress? ( >=dev-db/unixODBC-1.8.13 )
+	empress-bcs? ( >=dev-db/unixODBC-1.8.13 )
 	enchant? ( app-text/enchant )
+	esoob? ( >=dev-db/unixODBC-1.8.13 )
 	exif? ( !gd? (
 		virtual/jpeg
 		media-libs/libpng
@@ -165,7 +168,8 @@ DEPEND="!dev-lang/php:5
 	snmp? ( >=net-analyzer/net-snmp-5.2 )
 	soap? ( >=dev-libs/libxml2-2.6.8 )
 	spell? ( >=app-text/aspell-0.50 )
-	sqlite3? ( >=dev-db/sqlite-3.7.6.3 )
+	sqlite? ( =dev-db/sqlite-2* pdo? ( >=dev-db/sqlite-3.7.7.1 ) )
+	sqlite3? ( >=dev-db/sqlite-3.7.7.1 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase-ct? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
@@ -197,7 +201,7 @@ php="=${CATEGORY}/${PF}"
 REQUIRED_USE="
 	truetype? ( gd )
 	cjk? ( gd )
-	exif? ( gd )
+	exif? ( gd  )
 
 	xpm? ( gd )
 	gd? ( zlib )
@@ -208,6 +212,7 @@ REQUIRED_USE="
 	xmlreader? ( xml )
 	xsl? ( xml )
 	ldap-sasl? ( ldap )
+	birdstep? ( odbc )
 	kolab? ( imap )
 	mhash? ( hash )
 	phar? ( hash )
@@ -225,15 +230,17 @@ REQUIRED_USE="
 	!cli? ( !cgi? ( !fpm? ( !apache2? ( !embed? ( cli ) ) ) ) )"
 
 DEPEND="${DEPEND}
-	enchant? ( !dev-php/pecl-enchant )
-	fileinfo? ( !<dev-php/pecl-fileinfo-1.0.4-r2 )
-	filter? ( !dev-php/pecl-filter )
-	json? ( !dev-php/pecl-json )
-	phar? ( !dev-php/pecl-phar )
-	zip? ( !dev-php/pecl-zip )"
+	enchant? ( !dev-php5/pecl-enchant )
+	fileinfo? ( !<dev-php5/pecl-fileinfo-1.0.4-r2 )
+	filter? ( !dev-php5/pecl-filter )
+	json? ( !dev-php5/pecl-json )
+	phar? ( !dev-php5/pecl-phar )
+	zip? ( !dev-php5/pecl-zip )"
 
 [[ -n $SUHOSIN_VERSION ]] && RDEPEND="${RDEPEND} suhosin? (
 =${CATEGORY}/${PN}-${SLOT}*[unicode] )"
+
+RDEPEND="${DEPEND}"
 
 DEPEND="${DEPEND}
 	sys-devel/flex
@@ -307,7 +314,7 @@ eblit-run-maybe() {
 # Usage: <function> [version]
 # Runs a function defined in an eblit
 eblit-run() {
-	eblit-include --skip common v2
+	eblit-include --skip common "v2"
 	eblit-include "$@"
 	eblit-run-maybe eblit-$1-pre
 	eblit-${PN}-$1
@@ -324,9 +331,9 @@ eblit-pkg() {
 
 eblit-pkg pkg_setup v3
 
-src_prepare() { eblit-run src_prepare v4 ; }
-src_configure() { eblit-run src_configure v3 ; }
-src_compile() { eblit-run src_compile v2 ; }
+src_prepare() { eblit-run src_prepare v3 ; }
+src_configure() { eblit-run src_configure v53 ; }
+src_compile() { eblit-run src_compile v1 ; }
 src_install() { eblit-run src_install v3 ; }
 src_test() { eblit-run src_test v1 ; }
 
@@ -384,7 +391,7 @@ pkg_postinst() {
 	if ( [[ -z SUHOSIN_VERSION ]] && use suhosin && version_is_at_least 5.3.6_rc1 ) ; then
 		ewarn "The suhosin USE flag now only installs the suhosin patch!"
 		ewarn "If you want the suhosin extension, make sure you install"
-		ewarn " dev-php/suhosin"
+		ewarn " dev-php5/suhosin"
 		ewarn
 	fi
 }
