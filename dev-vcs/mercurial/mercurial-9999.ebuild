@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.10 2011/09/09 16:50:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.11 2011/12/16 21:31:43 ago Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -42,12 +42,12 @@ src_compile() {
 	distutils_src_compile
 
 	if use emacs; then
-		cd "${S}"/contrib
+		cd "${S}"/contrib || die
 		elisp-compile mercurial.el || die "elisp-compile failed!"
 	fi
 
 	rm -rf contrib/{win32,macosx}
-	make doc
+	make doc || die
 }
 
 src_install() {
@@ -57,27 +57,27 @@ src_install() {
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
-		newins contrib/zsh_completion _hg
+		newins contrib/zsh_completion _hg || die
 	fi
 
 	rm -f doc/*.?.txt
-	dodoc CONTRIBUTORS README doc/*.txt
-	cp hgweb*.cgi "${ED}"/usr/share/doc/${PF}/
+	dodoc CONTRIBUTORS README doc/*.txt || die
+	cp hgweb*.cgi "${ED}"/usr/share/doc/${PF}/ || die
 
-	dobin hgeditor
-	dobin contrib/hgk
-	dobin contrib/hg-ssh
+	dobin hgeditor || die
+	dobin contrib/hgk || die
+	dobin contrib/hg-ssh || die
 
 	rm -f contrib/hgk contrib/hg-ssh
 
 	rm -f contrib/bash_completion
-	cp -r contrib "${ED}"/usr/share/doc/${PF}/
-	doman doc/*.?
+	cp -r contrib "${ED}"/usr/share/doc/${PF}/ || die
+	doman doc/*.? || die
 
 	cat > "${T}/80mercurial" <<-EOF
 HG="${EPREFIX}/usr/bin/hg"
 EOF
-	doenvd "${T}/80mercurial"
+	doenvd "${T}/80mercurial" || die
 
 	if use emacs; then
 		elisp-install ${PN} contrib/mercurial.el* || die "elisp-install failed!"
@@ -86,7 +86,7 @@ EOF
 }
 
 src_test() {
-	cd "${S}/tests/"
+	cd "${S}/tests/" || die
 	rm -rf *svn*				# Subversion tests fail with 1.5
 	rm -f test-archive			# Fails due to verbose tar output changes
 	rm -f test-convert-baz*		# GNU Arch baz
