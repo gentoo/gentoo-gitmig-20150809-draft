@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ocurl-0.5.3.ebuild,v 1.1 2010/04/09 13:15:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ocurl-0.5.3.ebuild,v 1.2 2011/12/16 14:23:23 ago Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE="examples"
 DEPEND=">=net-misc/curl-7.9.8
 dev-libs/openssl"
 RDEPEND="$DEPEND"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 S=${WORKDIR}/${PN}
 
