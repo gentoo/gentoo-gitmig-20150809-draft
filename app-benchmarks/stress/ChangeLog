@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/stress
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.45 2011/02/06 05:24:34 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.46 2011/12/16 21:24:19 ago Exp $
+
+  16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> stress-1.0.4.ebuild:
+  Stable for AMD64, wrt bug #393701
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> stress-0.18.6.ebuild:
   Drop to ~mips
