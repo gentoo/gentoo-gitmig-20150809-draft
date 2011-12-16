@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.513 2011/12/15 20:42:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.514 2011/12/16 18:44:34 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -964,10 +964,9 @@ gcc-compiler-configure() {
 			confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
 			;;
 		amd64)
-			# drop the 4.6.2 stuff once 4.7 goes stable
-			if tc_version_is_at_least 4.7 ||
-			   ( tc_version_is_at_least 4.6.2 && has x32 $(get_all_abis) )
-			then
+			# drop the older/ABI checks once this get's merged into some
+			# version of gcc upstream
+			if [[ ${PV} == "4.6.2" ]] && has x32 $(get_all_abis) ; then
 				confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
 			fi
 			;;
