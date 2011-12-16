@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellsun
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/ChangeLog,v 1.29 2010/08/11 13:59:11 lack Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/ChangeLog,v 1.30 2011/12/16 15:01:19 ago Exp $
+
+  16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> gkrellsun-1.0.0-r3.ebuild:
+  Stable for AMD64, wrt bug #393997
 
 *gkrellsun-1.0.0-r3 (11 Aug 2010)
 
