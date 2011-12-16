@@ -1,5 +1,5 @@
---- SConstruct.old	2010-10-06 15:54:11.000000000 +0200
-+++ SConstruct	2010-10-06 15:59:55.000000000 +0200
+--- SConstruct.old
++++ SConstruct
 @@ -141,6 +141,7 @@
          LINKFLAGS = ['-pthread'],
          CC = 'gcc', CXX = 'g++',
