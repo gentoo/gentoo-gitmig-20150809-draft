@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/kalign/kalign-2.03-r1.ebuild,v 1.1 2010/09/04 18:16:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/kalign/kalign-2.03-r1.ebuild,v 1.2 2011/12/16 12:05:10 jlec Exp $
 
-EAPI=2
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -15,18 +15,19 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}
 
 src_prepare() {
-	sed -e "s/\$(CFLAGS) \$(OBJECTS)/\$(LDFLAGS) &/" \
+	sed \
+		-e "s/\$(CFLAGS) \$(OBJECTS)/\$(LDFLAGS) &/" \
 		-i Makefile.in || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}"
 }
 
 src_install() {
-	dobin kalign || die
-	dodoc README || die
+	dobin ${PN}
+	dodoc README
 }
