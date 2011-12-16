@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.5 2011/12/16 11:55:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.6 2011/12/16 12:00:46 jlec Exp $
 
 EAPI=4
 
@@ -32,6 +32,9 @@ PATCHES=(
 src_prepare() {
 	# turn off performance critical debug code
 	use debug || append-flags -DNDEBUG
+	sed \
+		-e 's:-pipe::g' \
+		-i configure* || die
 	autotools-utils_src_prepare
 	eautoreconf
 }
