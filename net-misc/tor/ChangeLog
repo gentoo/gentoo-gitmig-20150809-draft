@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.303 2011/12/16 20:58:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.304 2011/12/16 21:16:13 blueness Exp $
+
+*tor-0.2.2.35 (16 Dec 2011)
+
+  16 Dec 2011; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.2.35.ebuild:
+  Version bump upstream stable 0.2.2
 
   16 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
   -files/torrc.sample-0.1.2.6.patch, -files/tor-0.2.1.19-logrotate.patch,
