@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.3 2011/12/15 20:04:03 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.4 2011/12/16 16:40:46 maksbotan Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
@@ -37,6 +37,7 @@ if [[ ${PV} == 9999 ]]; then
 else
 	local suffix
 	if version_is_at_least 0.4.95; then
+		DEPEND="app-arch/xz-utils"
 		suffix="xz"
 	else
 		suffix="bz2"
