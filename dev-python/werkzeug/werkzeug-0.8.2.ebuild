@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.8.1.ebuild,v 1.2 2011/12/03 23:05:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.8.2.ebuild,v 1.1 2011/12/16 21:42:39 rafaelmartins Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -24,8 +24,7 @@ IUSE="test"
 
 RDEPEND="dev-python/simplejson"
 DEPEND="dev-python/setuptools
-        test? ( dev-python/lxml )"
-
+	test? ( dev-python/lxml )"
 S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGES"
