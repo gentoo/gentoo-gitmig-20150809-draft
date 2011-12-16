@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/kdesdk-scripts-4.7.4.ebuild,v 1.1 2011/12/11 18:52:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/kdesdk-scripts-4.7.4.ebuild,v 1.2 2011/12/16 22:16:55 dilfridge Exp $
 
 EAPI=4
 
@@ -15,7 +15,6 @@ IUSE="debug"
 
 RDEPEND="
 	app-arch/advancecomp
-	media-gfx/optipng
 "
 
 src_prepare() {

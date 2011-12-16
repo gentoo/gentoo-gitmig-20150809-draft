@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.177 2011/12/11 18:52:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.178 2011/12/16 22:16:55 dilfridge Exp $
+
+  16 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdesdk-scripts-4.6.3.ebuild, kdesdk-scripts-4.6.5.ebuild,
+  kdesdk-scripts-4.7.3.ebuild, kdesdk-scripts-4.7.4.ebuild:
+  Remove optipng dependency so optipng can be lastrited, bug 386851
 
 *kdesdk-scripts-4.7.4 (11 Dec 2011)
 
