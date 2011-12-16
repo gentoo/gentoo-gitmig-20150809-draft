@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mosml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.14 2011/01/13 13:50:45 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.15 2011/12/16 17:10:05 ago Exp $
+
+  16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> mosml-2.01-r1.ebuild:
+  Stable for AMD64, wrt bug #393891
 
   13 Jan 2011; Dane Smith <c1pher@gentoo.org> mosml-2.01-r1.ebuild:
   QA: Fix LDFLAGS respect wrt bug 351040.
