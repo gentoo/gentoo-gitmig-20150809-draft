@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.5.6.ebuild,v 1.1 2011/12/15 17:17:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.5.6-r1.ebuild,v 1.1 2011/12/16 10:16:30 wired Exp $
 
 EAPI=4
 
@@ -57,7 +57,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS README
+	dodoc AUTHORS README NEWS
 
 	# fix bug #334383
 	if use kernel_linux && [[ ${EUID} == 0 ]] ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.1.ebuild,v 1.1 2011/12/15 17:17:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.1-r1.ebuild,v 1.1 2011/12/16 10:16:30 wired Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.midnight-commander.org/downloads/${MY_P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
-IUSE="+edit gpm +ncurses nls samba slang test X"
+IUSE="+edit gpm mclib +ncurses nls samba slang test X"
 
 REQUIRED_USE="^^ ( ncurses slang )"
 
@@ -55,12 +55,13 @@ src_configure() {
 		$(use_with gpm gpm-mouse) \
 		--with-screen=${myscreen} \
 		$(use_with edit) \
+		$(use_enable mclib) \
 		$(use_enable test tests)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS README
+	dodoc AUTHORS README NEWS
 
 	# fix bug #334383
 	if use kernel_linux && [[ ${EUID} == 0 ]] ; then

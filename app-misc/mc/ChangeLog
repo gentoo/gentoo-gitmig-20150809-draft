@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.233 2011/12/15 17:20:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.234 2011/12/16 10:16:30 wired Exp $
+
+*mc-4.8.1-r1 (16 Dec 2011)
+*mc-4.7.5.6-r1 (16 Dec 2011)
+
+  16 Dec 2011; Alex Alexander <wired@gentoo.org> -mc-4.7.5.6.ebuild,
+  +mc-4.7.5.6-r1.ebuild, -mc-4.8.1.ebuild, +mc-4.8.1-r1.ebuild:
+  re-added NEWS file dodoc and mclib USE flag
 
   15 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> -mc-4.7.5.3.ebuild,
   -mc-4.8.0-r1.ebuild, -mc-4.8.0.ebuild:
