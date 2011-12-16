@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.17.2.ebuild,v 1.3 2011/06/10 15:31:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.17.2.ebuild,v 1.4 2011/12/16 15:24:57 ssuominen Exp $
 
 EAPI=4
 
@@ -57,6 +57,7 @@ src_configure() {
 	myconf+=" LIBPROXY=$(${PN}_use libproxy)"
 	myconf+=" NODEBUG=$(use debug && echo "0" || echo "1")" # inverse logic
 	myconf+=" NOUSEWEBKIT=0" # fails to link if disabled, upstream needs to fix
+	myconf+=" TRANSDIR_MERKAARTOR=/usr/share/${PN}/translations TRANSDIR_SYSTEM=/usr/share/qt4/translations" #385671
 
 	if use nls; then
 		lrelease src/src.pro || die "lrelease failed"
