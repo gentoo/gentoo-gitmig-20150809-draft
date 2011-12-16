@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.102 2011/08/05 22:41:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.103 2011/12/16 10:54:28 jlec Exp $
+
+  16 Dec 2011; Justin Lecher <jlec@gentoo.org> itpp-4.2-r1.ebuild:
+  Moved to autotools-utils.eclass in order to handle .a/.la correctly
 
   05 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> itpp-4.2-r1.ebuild:
   added autotools eclass
