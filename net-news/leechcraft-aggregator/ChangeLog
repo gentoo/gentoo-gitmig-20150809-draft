@@ -1,6 +1,13 @@
 # ChangeLog for net-news/leechcraft-aggregator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/ChangeLog,v 1.3 2011/12/15 19:45:09 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/ChangeLog,v 1.4 2011/12/16 18:47:36 maksbotan Exp $
+
+*leechcraft-aggregator-0.4.96-r1 (16 Dec 2011)
+
+  16 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  -leechcraft-aggregator-0.4.96.ebuild,
+  +leechcraft-aggregator-0.4.96-r1.ebuild:
+  Bump to eapi4, fix bug 394935
 
 *leechcraft-aggregator-0.4.96 (15 Dec 2011)
 
