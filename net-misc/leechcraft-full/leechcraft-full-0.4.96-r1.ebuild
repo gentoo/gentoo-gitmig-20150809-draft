@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.5 2011/12/16 18:41:59 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-0.4.96-r1.ebuild,v 1.1 2011/12/16 18:41:59 maksbotan Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Metapackage containing all ready-to-use LeechCraft plugins"
 HOMEPAGE="http://leechcraft.org/"
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
 IUSE="kde"
 
@@ -29,15 +29,12 @@ RDEPEND="
 		~net-misc/leechcraft-kinotify-${PV}
 		~net-misc/leechcraft-knowhow-${PV}
 		~net-misc/leechcraft-lackman-${PV}
-		~net-misc/leechcraft-liznoo-${PV}
 		~net-misc/leechcraft-newlife-${PV}
 		~net-misc/leechcraft-qrosp-${PV}
 		~net-misc/leechcraft-secman-${PV}
-		~net-misc/leechcraft-sidebar-${PV}
 		~net-misc/leechcraft-summary-${PV}
 		~net-misc/leechcraft-tabpp-${PV}
 		~net-misc/leechcraft-tabslist-${PV}
-		~net-misc/leechcraft-tabsessmanager-${PV}
 		~net-news/leechcraft-aggregator-${PV}
 		~net-p2p/leechcraft-bittorrent-${PV}
 		~www-client/leechcraft-deadlyrics-${PV}

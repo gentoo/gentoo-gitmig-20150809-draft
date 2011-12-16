@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.5 2011/12/15 19:39:20 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.6 2011/12/16 18:41:59 maksbotan Exp $
+
+*leechcraft-full-0.4.96-r1 (16 Dec 2011)
+
+  16 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  -leechcraft-full-0.4.96.ebuild, +leechcraft-full-0.4.96-r1.ebuild,
+  leechcraft-full-9999.ebuild:
+  Bump to eapi4, fix bug 394935
 
 *leechcraft-full-0.4.96 (15 Dec 2011)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-9999.ebuild,v 1.1 2011/08/22 18:28:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-9999.ebuild,v 1.2 2011/12/16 18:40:47 maksbotan Exp $
 
-EAPI="2"
+EAPI="4"
 
 EGIT_REPO_URI="git://github.com/0xd34df00d/leechcraft.git"
 EGIT_PROJECT="leechcraft-${PV}"
