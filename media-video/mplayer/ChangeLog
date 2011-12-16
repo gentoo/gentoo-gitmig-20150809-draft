@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.815 2011/12/16 13:05:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.816 2011/12/16 13:24:10 aballier Exp $
+
+  16 Dec 2011; Alexis Ballier <aballier@gentoo.org> files/prepare_mplayer.sh:
+  generate snapshot_version the same way as upstream version.sh and use printf
+  which should be more portable
 
   16 Dec 2011; Alexis Ballier <aballier@gentoo.org> files/prepare_mplayer.sh:
   create a snapshot_version file in snapshots to get svn revision
