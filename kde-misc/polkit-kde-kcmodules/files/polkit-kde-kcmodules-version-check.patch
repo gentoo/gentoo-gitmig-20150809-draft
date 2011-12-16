@@ -1,0 +1,26 @@
+ cmake/modules/FindPolkitQt-1.cmake |    6 ++++--
+ 1 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/cmake/modules/FindPolkitQt-1.cmake b/cmake/modules/FindPolkitQt-1.cmake
+index 0bc86d5..5f51535 100644
+--- a/cmake/modules/FindPolkitQt-1.cmake
++++ b/cmake/modules/FindPolkitQt-1.cmake
+@@ -47,14 +47,16 @@ if(POLKITQT-1_VERSION_FILE)
+   
+   if(POLKITQT-1_VERSION_MATCH)
+     string(REGEX REPLACE "POLKITQT1_VERSION_STRING \"(.*)\"\n" "\\1" POLKITQT-1_VERSION ${POLKITQT-1_VERSION_MATCH})
+-    if(POLKITQT-1_VERSION STRLESS "${POLKITQT-1_MIN_VERSION}")
++    if(POLKITQT-1_VERSION VERSION_LESS "${POLKITQT-1_MIN_VERSION}")
+       set(POLKITQT-1_VERSION_OK FALSE)
+       if(PolkitQt-1_FIND_REQUIRED)
+         message(FATAL_ERROR "PolkitQt-1 version ${POLKITQT-1_VERSION} was found, but it is too old. Please install ${POLKITQT-1_MIN_VERSION} or newer.")
+       else(PolkitQt-1_FIND_REQUIRED)
+         message(STATUS "PolkitQt-1 version ${POLKITQT-1_VERSION} is too old. Please install ${POLKITQT-1_MIN_VERSION} or newer.")
+       endif(PolkitQt-1_FIND_REQUIRED)
+-    endif(POLKITQT-1_VERSION STRLESS "${POLKITQT-1_MIN_VERSION}")
++    else(POLKITQT-1_VERSION VERSION_LESS "${POLKITQT-1_MIN_VERSION}")
++      message(STATUS "Found PolkitQt-1: version ${POLKITQT-1_VERSION}")
++    endif(POLKITQT-1_VERSION VERSION_LESS "${POLKITQT-1_MIN_VERSION}")
+   endif(POLKITQT-1_VERSION_MATCH)
+ elseif(POLKITQT-1_INCLUDE_DIR)
+   # The version is so old that it does not even have the file

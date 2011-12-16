@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/polkit-kde-kcmodules-0.98_pre20101127.ebuild,v 1.5 2011/11/05 20:19:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/polkit-kde-kcmodules-0.98_pre20101127.ebuild,v 1.6 2011/12/16 14:46:08 johu Exp $
 
 EAPI="3"
 
@@ -29,3 +29,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 [[ ${PV} = *9999* ]] || S="${WORKDIR}/${MY_P}"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-version-check.patch"
+)
