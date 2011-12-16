@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/wm2-4-r1.ebuild,v 1.1 2010/08/26 20:25:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/wm2-4-r1.ebuild,v 1.2 2011/12/16 19:36:03 ago Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 src_unpack() {
