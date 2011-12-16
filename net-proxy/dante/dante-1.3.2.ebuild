@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.3.2.ebuild,v 1.1 2011/08/04 16:33:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.3.2.ebuild,v 1.2 2011/12/16 22:18:28 darkside Exp $
 
 EAPI="4"
 
@@ -32,8 +32,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.3.1-flags.patch
 
 	sed -i \
-		-e 's:/etc/socks\.conf:/etc/socks/socks.conf:' \
-		-e 's:/etc/sockd\.conf:/etc/socks/sockd.conf:' \
+		-e 's:/etc/socks\.conf:"${EPREFIX}"/etc/socks/socks.conf:' \
+		-e 's:/etc/sockd\.conf:"${EPREFIX}"/etc/socks/sockd.conf:' \
 		doc/{socksify.1,socks.conf.5,sockd.conf.5,sockd.8} \
 		|| die
 	eautoreconf
@@ -41,8 +41,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-socks-conf=/etc/socks/socks.conf \
-		--with-sockd-conf=/etc/socks/sockd.conf \
+		--with-socks-conf="${EPREFIX}"/etc/socks/socks.conf \
+		--with-sockd-conf="${EPREFIX}"/etc/socks/sockd.conf \
 		--without-upnp \
 		$(use_enable debug) \
 		$(use_with kerberos gssapi) \
@@ -57,7 +57,7 @@ src_install() {
 	# default configuration files
 	insinto /etc/socks
 	doins "${FILESDIR}"/sock?.conf
-	pushd "${D}/etc/socks" > /dev/null
+	pushd "${ED}/etc/socks" > /dev/null
 	use pam && epatch "${FILESDIR}/sockd.conf-with-pam.patch"
 	use tcpd && epatch "${FILESDIR}/sockd.conf-with-libwrap.patch"
 	popd > /dev/null
