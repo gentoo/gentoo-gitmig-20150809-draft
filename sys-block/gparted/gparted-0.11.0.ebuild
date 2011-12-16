@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.11.0.ebuild,v 1.1 2011/12/16 17:48:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.11.0.ebuild,v 1.2 2011/12/16 17:49:59 ssuominen Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -63,7 +63,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e "s:Exec=@gksuprog@ :Exec=:" gparted.desktop.in.in || die
+	sed -i -e 's:Exec=@gksuprog@ :Exec=:' gparted.desktop.in.in || die
 
 	gnome2_src_prepare
 }
@@ -71,16 +71,16 @@ src_prepare() {
 src_install() {
 	gnome2_src_install
 
-	local _ddir="${D}/usr/share/applications"
+	local _ddir="${D}"/usr/share/applications
 
 	if use kde; then
 		cp "${_ddir}"/gparted{,-kde}.desktop
-		sed -i 's:Exec=:Exec=kdesu :' "${_ddir}"/gparted-kde.desktop
+		sed -i -e 's:Exec=:Exec=kdesu :' "${_ddir}"/gparted-kde.desktop
 		echo 'OnlyShowIn=KDE;' >> "${_ddir}"/gparted-kde.desktop
 	fi
 
 	if use gtk; then
-		sed -i 's:Exec=:Exec=gksu :' "${_ddir}"/gparted.desktop
+		sed -i -e 's:Exec=:Exec=gksu :' "${_ddir}"/gparted.desktop
 		echo 'NotShowIn=KDE;' >> "${_ddir}"/gparted.desktop
 	else
 		echo 'OnlyShowIn=X-NeverShowThis;' >> "${_ddir}"/gparted.desktop
