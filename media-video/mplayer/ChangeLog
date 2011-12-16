@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.816 2011/12/16 13:24:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.817 2011/12/16 13:36:05 aballier Exp $
+
+  16 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  generate on the fly a snapshot version for live ebuilds and use that file for
+  generating a VERSION file that advertises it is a Gentoo build as suggested
+  by Reimar Döffinger in bug #328817
 
   16 Dec 2011; Alexis Ballier <aballier@gentoo.org> files/prepare_mplayer.sh:
   generate snapshot_version the same way as upstream version.sh and use printf

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.109 2011/12/16 12:19:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.110 2011/12/16 13:36:05 aballier Exp $
 
 EAPI=4
 
@@ -9,9 +9,6 @@ ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 [[ ${PV} = *9999* ]] && SVN_ECLASS="subversion git-2" || SVN_ECLASS=""
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
-
-# BUMP ME PLZ, NO COOKIES OTHERWISE
-[[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r33094
 
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
 bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga
@@ -252,14 +249,15 @@ src_unpack() {
 }
 
 src_prepare() {
+	local svf=snapshot_version
 	if [[ ${PV} = *9999* ]]; then
 		# Set SVN version manually
 		subversion_wc_info
-		sed -i -e "s/UNKNOWN/${ESVN_WC_REVISION}/" "${S}/version.sh" || die
-	else
-		# Set version #
-		sed -i -e "s/UNKNOWN/${MPLAYER_REVISION}/" "${S}/version.sh" || die
+		printf "${ESVN_WC_REVISION}" > $svf
 	fi
+	[ -f "$svf" ] || die "Missing ${svf}. Did you generate your snapshot with prepare_mplayer.sh?"
+	local sv=$(<$svf)
+	printf "SVN-r${sv} (Gentoo)" > VERSION
 
 	# fix path to bash executable in configure scripts
 	sed -i -e "1c\#!${EPREFIX}/bin/bash" configure version.sh || die
