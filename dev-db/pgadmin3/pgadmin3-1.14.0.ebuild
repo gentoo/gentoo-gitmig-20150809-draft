@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.14.0.ebuild,v 1.1 2011/11/12 15:36:39 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.14.0.ebuild,v 1.2 2011/12/16 16:28:18 titanofold Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE="debug"
 
-DEPEND="x11-libs/wxGTK:2.8[X]
+DEPEND="x11-libs/wxGTK:2.8[X,debug=]
 	>=dev-db/postgresql-base-8.4.0
 	>=dev-libs/libxml2-2.6.18
 	>=dev-libs/libxslt-1.1"
