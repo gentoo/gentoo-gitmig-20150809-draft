@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rhyme
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.14 2010/09/28 17:28:44 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.15 2011/12/16 12:19:57 ago Exp $
+
+  16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> rhyme-0.9-r1.ebuild:
+  Stable for AMD64, wrt bug #394061
 
 *rhyme-0.9-r1 (28 Sep 2010)
 
