@@ -14,8 +14,8 @@
 		<name>Mu Qiao</name>
 	</maintainer>
 	<maintainer>
-		<email>steev@gentoo.org</email>
-		<name>Stephen Klimaszewski</name>
+		<email>tetromino@gentoo.org</email>
+		<name>Alexandre Rostovtsev</name>
 	</maintainer>
 	<use>
 		<flag name="connection-sharing">Use <pkg>net-dns/dnsmasq</pkg> and
