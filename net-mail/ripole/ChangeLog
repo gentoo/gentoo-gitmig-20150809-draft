@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/ripole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.14 2011/12/01 12:01:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.15 2011/12/16 05:37:14 radhermit Exp $
+
+*ripole-0.2.2 (16 Dec 2011)
+
+  16 Dec 2011; Tim Harder <radhermit@gentoo.org> +ripole-0.2.2.ebuild:
+  Version bump.
 
   01 Dec 2011; Eray Aslan <eras@gentoo.org> -ripole-0.2.0.ebuild:
   remove old
