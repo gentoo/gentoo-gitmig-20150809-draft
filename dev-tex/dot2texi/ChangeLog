@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2texi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.18 2011/10/16 17:25:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.19 2011/12/16 09:27:15 naota Exp $
+
+  16 Dec 2011; Naohiro Aota <naota@gentoo.org> dot2texi-3.0.ebuild:
+  Add ~x86-fbsd
 
   16 Oct 2011; Fabian Groffen <grobian@gentoo.org> dot2texi-3.0.ebuild:
   Marked ~x86-macos
