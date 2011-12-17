@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r5.ebuild,v 1.1 2011/12/04 11:46:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r5.ebuild,v 1.2 2011/12/17 11:27:02 grobian Exp $
 
-EAPI=2
+EAPI="3"
 
 inherit gnome2 multilib flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ DESCRIPTION="A GNOME trayicon which checks for email, with support for many onli
 HOMEPAGE="http://www.nongnu.org/mailnotify/"
 SRC_URI="http://savannah.nongnu.org/download/mailnotify/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-linux"
 SLOT="0"
 LICENSE="GPL-3"
 
@@ -79,10 +79,10 @@ src_prepare() {
 }
 
 src_configure() {
-	./jb configure destdir="${D}" prefix="/usr" libdir=/usr/$(get_libdir) \
-		sysconfdir="/etc" localstatedir="/var" cc="$(tc-getCC)" \
+	./jb configure destdir="${D}" prefix="${EPREFIX}/usr" libdir="${EPREFIX}/usr/$(get_libdir)" \
+		sysconfdir="${EPREFIX}/etc" localstatedir="${EPREFIX}/var" cc="$(tc-getCC)" \
 		cflags="${CFLAGS}" cppflags="${CXXFLAGS}" ldflags="${LDFLAGS}" \
-		scrollkeeper-dir="/var/lib/scrollkeeper" \
+		scrollkeeper-dir="${EPREFIX}/var/lib/scrollkeeper" \
 		$(use_var evo evolution) \
 		$(use_var gmail) \
 		$(use_var imap) \
@@ -106,5 +106,5 @@ src_install() {
 
 	dodoc NEWS README AUTHORS TODO TRANSLATING
 
-	rm -rf "${D}/var/lib/scrollkeeper"
+	rm -rf "${ED}/var/lib/scrollkeeper"
 }

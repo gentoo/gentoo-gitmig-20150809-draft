@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.108 2011/12/04 11:46:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.109 2011/12/17 11:27:02 grobian Exp $
+
+  17 Dec 2011; Fabian Groffen <grobian@gentoo.org>
+  mail-notification-5.4-r5.ebuild:
+  Fixed for Prefix, marked ~x86-linux, thanks Aaron Kaplan in bug #302330
 
 *mail-notification-5.4-r5 (04 Dec 2011)
 
