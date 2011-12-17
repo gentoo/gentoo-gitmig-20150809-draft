@@ -96,6 +96,11 @@ texit() {
 	exit ${tret}
 }
 tend() {
-	eend "$@"
-	: $(( tret |= $? ))
+	t eend "$@"
+}
+t() {
+	"$@"
+	local ret=$?
+	: $(( tret |= ${ret} ))
+	return ${ret}
 }
