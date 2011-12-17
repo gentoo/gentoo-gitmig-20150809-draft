@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.19 2011/12/15 21:24:48 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.20 2011/12/17 03:46:01 binki Exp $
+
+  17 Dec 2011; Nathan Phillip Brink <binki@gentoo.org>
+  files/atheme-services.initd:
+  Use ${extra_commands} in initscript instead of ${opts}, reported by ago.
 
   15 Dec 2011; Nathan Phillip Brink <binki@gentoo.org>
   -atheme-services-7.0.0_alpha8.ebuild:
