@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.8.ebuild,v 1.1 2011/12/14 11:21:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.8.ebuild,v 1.2 2011/12/17 18:51:08 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -12,7 +12,7 @@ PHP_EXT_NAME="xapian"
 PHP_EXT_INI="yes"
 PHP_EXT_OPTIONAL_USE="php"
 
-inherit java-pkg-opt-2 mono php-ext-source-r2 python
+inherit java-pkg-opt-2 mono php-ext-source-r2 python autotools
 
 DESCRIPTION="SWIG and JNI bindings for Xapian"
 HOMEPAGE="http://www.xapian.org/"
@@ -43,6 +43,11 @@ pkg_setup() {
 }
 
 src_prepare() {
+	if use lua; then
+		epatch "${FILESDIR}"/fix-LUA_LIB-envvar.patch
+		eautoreconf
+	fi
+
 	java-pkg-opt-2_src_prepare
 	if use java; then
 		sed \
@@ -66,6 +71,10 @@ src_configure() {
 	if use perl; then
 		export PERL_ARCH="$(perl -MConfig -e 'print $Config{installvendorarch}')"
 		export PERL_LIB="$(perl -MConfig -e 'print $Config{installvendorlib}')"
+	fi
+
+	if use lua; then
+		export LUA_LIB="$(pkg-config --variable=INSTALL_CMOD lua)"
 	fi
 
 	econf \
