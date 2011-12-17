@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/hashit-0.9.7.ebuild,v 1.1 2010/06/10 14:06:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/hashit-0.9.7.ebuild,v 1.2 2011/12/17 18:54:18 ago Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.pleyades.net/david/projects/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug"
 
 DEPEND=""
