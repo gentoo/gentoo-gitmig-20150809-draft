@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/files/atheme-services.initd,v 1.3 2011/12/17 03:46:01 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/files/atheme-services.initd,v 1.4 2011/12/17 04:12:05 binki Exp $
 
-extra_commands="reload"
+extra_started_commands="reload"
 
 depend() {
 	need net
