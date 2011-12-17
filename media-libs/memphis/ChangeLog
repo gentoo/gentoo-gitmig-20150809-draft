@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/memphis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.9 2011/07/14 11:02:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.10 2011/12/17 14:13:39 jlec Exp $
+
+  17 Dec 2011; Justin Lecher <jlec@gentoo.org> memphis-0.2.3.ebuild,
+  +files/memphis-0.2.3-link_gobject.patch:
+  Add patch for correct linking with USE=vala, thanks Attila Tóth finding the
+  patch, #394945; moved to autotools-utils.eclass in order to handle .a/.la
+  files correctly
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> memphis-0.2.3.ebuild:
   x86 stable per bug 369909
