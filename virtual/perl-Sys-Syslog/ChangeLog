@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Sys-Syslog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.45 2011/07/30 12:01:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.46 2011/12/17 17:01:45 ago Exp $
+
+  17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> perl-Sys-Syslog-0.290.0.ebuild:
+  Stable for AMD64, wrt bug #393937
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org>
   perl-Sys-Syslog-0.270.0-r1.ebuild, perl-Sys-Syslog-0.280.0.ebuild,
