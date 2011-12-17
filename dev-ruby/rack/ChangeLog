@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.62 2011/12/05 13:30:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.63 2011/12/17 14:53:47 graaff Exp $
+
+  17 Dec 2011; Hans de Graaff <graaff@gentoo.org> rack-1.2.4-r1.ebuild:
+  Avoid broken specs for ruby19. These appear to be related to changes in newer
+  ruby19 versions.
 
   05 Dec 2011; Naohiro Aota <naota@gentoo.org> rack-1.1.2.ebuild:
   Add ~x86-fbsd.
