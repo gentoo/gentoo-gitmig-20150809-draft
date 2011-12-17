@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.76 2011/11/07 05:04:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.77 2011/12/17 00:28:08 tetromino Exp $
+
+*vinagre-3.2.2 (17 Dec 2011)
+
+  17 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +vinagre-3.2.2.ebuild:
+  Version bump. Includes upstream patch to build plugins into the executable to
+  make RDP and SSH usable (bug #394817, thanks to Philipp Reinkemeier for
+  reporting).
 
 *vinagre-3.2.1 (07 Nov 2011)
 
