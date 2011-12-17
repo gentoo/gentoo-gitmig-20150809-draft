@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-2.1.0.ebuild,v 1.2 2011/12/16 14:48:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-2.1.0.ebuild,v 1.3 2011/12/17 05:57:47 grozin Exp $
 
 EAPI=4
 
@@ -48,9 +48,9 @@ src_test() {
 
 src_install() {
 	default
-	dodoc Changes.txt  Credits.txt || die "dodoc failed"
+	dodoc Changes.txt
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins -r docs/html || die
+		doins -r docs/html
 	fi
 }
