@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.363 2011/12/17 20:07:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.364 2011/12/17 20:19:40 chainsaw Exp $
+
+*asterisk-10.0.0 (17 Dec 2011)
+
+  17 Dec 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-10.0.0.ebuild:
+  First release on the long-term support 10 branch. If you have not tried this
+  on your production deployment yet, please set aside time now. This will be a
+  stable candidate early in the new year. Patch by Jaco Kroon addresses bug
+  #394459 by Agostino "ago" Sarubbo.
 
 *asterisk-1.8.8.0 (17 Dec 2011)
 
