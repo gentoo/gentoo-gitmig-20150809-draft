@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fssm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.11 2011/11/13 16:15:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.12 2011/12/17 18:42:37 armin76 Exp $
+
+  17 Dec 2011; Raúl Porcel <armin76@gentoo.org> fssm-0.2.7-r1.ebuild:
+  Add ~ia64/~sparc wrt #379131
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org> fssm-0.2.7-r1.ebuild:
   add ~x86, bug #379131
