@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.306 2011/12/16 21:29:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.307 2011/12/17 00:06:13 blueness Exp $
+
+  17 Dec 2011; Anthony G. Basile <blueness@gentoo.org> tor-0.2.1.32.ebuild,
+  tor-0.2.2.35.ebuild:
+  Minor cleanup to ebuilds
 
   16 Dec 2011; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.2.34-r1.ebuild,
   -files/tor-0.2.2.34_disable-stats-requiring-geoip.patch,
