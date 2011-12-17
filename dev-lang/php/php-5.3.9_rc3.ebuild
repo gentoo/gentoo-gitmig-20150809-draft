@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9_rc3.ebuild,v 1.2 2011/12/17 19:08:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9_rc3.ebuild,v 1.3 2011/12/17 19:25:19 olemarkus Exp $
 
 EAPI=4
 
@@ -115,7 +115,6 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 DEPEND="!dev-lang/php:5
 	>=app-admin/eselect-php-0.6.2
 	>=dev-libs/libpcre-8.12[unicode]
-	adabas? ( >=dev-db/unixODBC-1.8.13 )
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
 	bzip2? ( app-arch/bzip2 )
@@ -127,11 +126,7 @@ DEPEND="!dev-lang/php:5
 	) )
 	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	curl? ( >=net-misc/curl-7.10.5 )
-	dbmaker? ( >=dev-db/unixODBC-1.8.13 )
-	empress? ( >=dev-db/unixODBC-1.8.13 )
-	empress-bcs? ( >=dev-db/unixODBC-1.8.13 )
 	enchant? ( app-text/enchant )
-	esoob? ( >=dev-db/unixODBC-1.8.13 )
 	exif? ( !gd? (
 		virtual/jpeg
 		media-libs/libpng
