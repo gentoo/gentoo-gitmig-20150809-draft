@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Tree
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.67 2011/12/13 23:35:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.68 2011/12/17 18:49:07 armin76 Exp $
+
+  17 Dec 2011; Raúl Porcel <armin76@gentoo.org> HTML-Tree-4.200.0.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #392789
 
   13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> HTML-Tree-4.200.0.ebuild:
   Stable for AMD64, wrt bug #392789
