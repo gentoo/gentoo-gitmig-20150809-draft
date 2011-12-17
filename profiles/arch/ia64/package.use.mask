@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.61 2011/11/25 08:00:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.62 2011/12/17 21:59:56 alexxy Exp $
+
+# Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
+# Mask use numa for openmpi
+sys-cluster/openmpi numa
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
