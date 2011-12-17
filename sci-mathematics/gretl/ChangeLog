@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.33 2011/11/25 18:15:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.34 2011/12/17 06:25:21 bicatali Exp $
+
+*gretl-1.9.6-r1 (17 Dec 2011)
+
+  17 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org> -gretl-1.9.6.ebuild,
+  +gretl-1.9.6-r1.ebuild:
+  Added gtk3, sse2 flags. Removed gtksourceview flag, mandatory dependency when
+  gui is installed
 
 *gretl-1.9.6 (25 Nov 2011)
 

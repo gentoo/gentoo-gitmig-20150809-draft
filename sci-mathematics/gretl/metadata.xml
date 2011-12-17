@@ -17,6 +17,7 @@
 <use>
   <flag name='sourceview'>Enable support for <pkg>x11-libs/gtksourceview</pkg>
     </flag>
+  <flag name='gtk3'>Use GTK+3 frontend instead of GTK+2 </flag>
   <flag name='R'>Enable support for <pkg>dev-lang/R</pkg></flag>
 </use>
 </pkgmetadata>

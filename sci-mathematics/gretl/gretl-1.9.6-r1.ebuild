@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.6.ebuild,v 1.1 2011/11/25 18:15:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.6-r1.ebuild,v 1.1 2011/12/17 06:25:22 bicatali Exp $
 
 USE_EINSTALL=true
 EAPI=4
@@ -14,10 +14,9 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="accessibility emacs gnome gtk nls odbc openmp readline R sourceview static-libs"
+IUSE="accessibility emacs gnome gtk gtk3 nls odbc openmp readline sse2 R static-libs"
 
-RDEPEND="
-	dev-libs/libxml2:2
+RDEPEND="dev-libs/libxml2:2
 	dev-libs/glib:2
 	>=sci-visualization/gnuplot-4.2
 	virtual/lapack
@@ -29,13 +28,17 @@ RDEPEND="
 	accessibility? ( app-accessibility/flite )
 	gtk?  ( sci-visualization/gnuplot[gd]
 			media-libs/gd[png]
-			x11-libs/gtk+:2 )
+			x11-libs/gtk+:2
+			x11-libs/gtksourceview:2.0 )
+	gtk3? ( sci-visualization/gnuplot[gd]
+			media-libs/gd[png]
+			x11-libs/gtk+:3
+			x11-libs/gtksourceview:3.0 )
 	gnome? ( sci-visualization/gnuplot[gd]
 			 media-libs/gd[png]
 			 gnome-base/libgnomeui
 			 gnome-base/gconf:2 )
 	R? ( dev-lang/R )
-	sourceview? ( x11-libs/gtksourceview:2.0 )
 	odbc? ( dev-db/unixODBC )
 	emacs? ( virtual/emacs )"
 
@@ -56,25 +59,20 @@ pkg_setup() {
 }
 
 src_configure() {
-	local myconf
-	if use gtk; then
-		myconf="--enable-gui"
-		myconf="${myconf} $(use_with sourceview gtksourceview)"
-		myconf="${myconf} $(use_with gnome)"
-	else
-		myconf="--disable-gui --without-gnome --without-gtksourceview"
-	fi
-
 	econf \
 		--disable-rpath \
 		--enable-shared \
 		--with-mpfr \
+		$(use_enable gtk gui) \
+		$(use_enable gtk3) \
 		$(use_enable nls) \
 		$(use_enable openmp) \
+		$(use_enable sse2) \
 		$(use_enable static-libs static) \
-		$(use_with readline) \
-		$(use_with odbc) \
 		$(use_with accessibility audio) \
+		$(use_with gnome) \
+		$(use_with odbc) \
+		$(use_with readline) \
 		$(use_with R libR) \
 		${myconf} \
 		LAPACK_LIBS="$(pkg-config --libs lapack)"
@@ -93,7 +91,7 @@ src_install() {
 	else
 		einstall svprefix="${ED}usr"
 	fi
-	if use gtk && ! use gnome; then
+	if use gtk || use gtk3 && ! use gnome; then
 		doicon gnome/gretl.png
 		make_desktop_entry gretl_x11 gretl
 	fi
