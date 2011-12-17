@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/charva
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.16 2010/03/20 16:46:52 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.17 2011/12/17 16:09:41 sera Exp $
+
+*charva-1.1.4-r1 (17 Dec 2011)
+
+  17 Dec 2011; Ralph Sennhauser <sera@gentoo.org> +charva-1.1.4-r1.ebuild,
+  +files/charva-respect-flags.patch:
+  Bump EAPI.
+  Restrict tests. #314131
+  Respect C/LDFLAGS, don't call gcc directly. #337313
+  Add missing DEPEND on app-arch/unzip #371479
 
 *charva-1.1.4 (20 Mar 2010)
 
