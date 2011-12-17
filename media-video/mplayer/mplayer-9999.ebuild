@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.115 2011/12/17 15:57:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.116 2011/12/17 17:47:36 aballier Exp $
 
 EAPI=4
 
@@ -82,7 +82,7 @@ RDEPEND+="
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	ass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?] )
+	ass? ( >=media-libs/libass-0.9.10[enca?] )
 	bidi? ( dev-libs/fribidi )
 	bluray? ( >=media-libs/libbluray-0.2.1 )
 	bs2b? ( media-libs/libbs2b )
@@ -183,7 +183,9 @@ fi
 # libvorbis require external tremor to work
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
-REQUIRED_USE="bindist? ( !faac !win32codecs )"
+REQUIRED_USE="bindist? ( !faac !win32codecs )
+	ass? ( truetype )
+	truetype? ( iconv )"
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then
@@ -324,15 +326,8 @@ src_configure() {
 	# SRT/ASS/SSA (subtitles) requires freetype support
 	# freetype support requires iconv
 	# iconv optionally can use unicode
-	if ! use ass && ! use truetype; then
-		myconf+=" --disable-freetype"
-		if ! use iconv; then
-			myconf+="
-				--disable-iconv
-				--charset=noconv
-			"
-		fi
-	fi
+	use truetype || myconf+=" --disable-freetype"
+	use iconv || myconf+=" --disable-iconv --charset=noconv"
 	use iconv && use unicode && myconf+=" --charset=UTF-8"
 
 	#####################################
@@ -643,7 +638,7 @@ src_install() {
 		dohtml -r "${S}"/DOCS/HTML/*
 	fi
 
-	if ! use ass && ! use truetype; then
+	if ! use truetype; then
 		dodir /usr/share/mplayer/fonts
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
@@ -667,7 +662,7 @@ _EOF_
 		doins "${S}/etc/menu.conf"
 	fi
 
-	if use ass || use truetype; then
+	if use truetype; then
 		cat >> "${ED}/etc/mplayer/mplayer.conf" << _EOF_
 fontconfig=1
 subfont-osd-scale=4

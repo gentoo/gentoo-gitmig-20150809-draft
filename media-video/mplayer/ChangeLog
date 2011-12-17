@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.822 2011/12/17 15:57:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.823 2011/12/17 17:47:36 aballier Exp $
+
+  17 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  reflect some inter use flag dependencies by REQUIRED_USE
 
   17 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   cosmetics
