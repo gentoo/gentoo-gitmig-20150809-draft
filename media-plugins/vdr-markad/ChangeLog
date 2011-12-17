@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-markad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/ChangeLog,v 1.8 2011/04/06 17:13:37 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/ChangeLog,v 1.9 2011/12/17 14:26:49 aballier Exp $
+
+  17 Dec 2011; Alexis Ballier <aballier@gentoo.org> vdr-markad-0.1.2.ebuild,
+  +files/vdr-markad-0.1.2-ffmpeg.patch:
+  fix build with latest ffmpeg
 
   06 Apr 2011; Christian Ruppert <idl0r@gentoo.org> vdr-markad-0.0.8-r1.ebuild,
   vdr-markad-0.0.9.ebuild, vdr-markad-0.1.0.ebuild, vdr-markad-0.1.1.ebuild,

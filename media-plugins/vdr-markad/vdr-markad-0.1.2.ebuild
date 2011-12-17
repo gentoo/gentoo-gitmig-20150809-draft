@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.1.2.ebuild,v 1.2 2011/04/06 17:13:37 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.1.2.ebuild,v 1.3 2011/12/17 14:26:49 aballier Exp $
 
 EAPI="3"
 
-inherit vdr-plugin
+inherit vdr-plugin eutils
 
 VERSION="578" # every bump, new version
 
@@ -35,6 +35,7 @@ src_prepare() {
 	if has_version ">=media-video/vdr-1.7.15"; then
 		sed -e "s:2001:6419:" -i markad-standalone.cpp
 	fi
+	epatch "${FILESDIR}/${P}-ffmpeg.patch"
 }
 
 src_compile() {
