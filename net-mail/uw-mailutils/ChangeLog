@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-mailutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.36 2011/11/28 11:42:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.37 2011/12/17 18:26:49 armin76 Exp $
+
+  17 Dec 2011; Raúl Porcel <armin76@gentoo.org> uw-mailutils-2007f.ebuild:
+  alpha/ia64/sparc stable wrt #391353
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   uw-mailutils-2007f.ebuild:
