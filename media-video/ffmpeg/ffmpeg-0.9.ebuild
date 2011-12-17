@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.9.ebuild,v 1.2 2011/12/15 12:07:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.9.ebuild,v 1.3 2011/12/17 13:42:47 aballier Exp $
 
 EAPI="4"
 
@@ -102,7 +102,8 @@ DEPEND="${RDEPEND}
 "
 # faac is license-incompatible with ffmpeg
 REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
-	libv4l? ( v4l )"
+	libv4l? ( v4l )
+	test? ( encode zlib )"
 
 S=${WORKDIR}/${P/_/-}
 
@@ -264,10 +265,6 @@ src_install() {
 }
 
 src_test() {
-	if use encode ; then
-		LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
-			emake fate
-	else
-		ewarn "Tests fail without USE=encode, skipping"
-	fi
+	LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
+		emake fate
 }
