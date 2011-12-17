@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/cgal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.11 2011/11/25 18:40:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.12 2011/12/17 03:31:49 bicatali Exp $
+
+  17 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org> cgal-3.9.ebuild:
+  Added mpfi support, thanks Martin von Gagern, bug #393651. Switched to EAPI4
 
 *cgal-3.9 (25 Nov 2011)
 

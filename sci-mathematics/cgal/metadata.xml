@@ -15,4 +15,7 @@
   * the Support Library which offers interfaces to other packages,
     e.g., for visualisation, and I/O, and other support facilities.
 </longdescription>
+<use>
+  <flag name='mpfi'>Enable support for multiple recision interval arithmetic via <pkg>sci-mathematics/mpfi</pkg></flag>
+</use>
 </pkgmetadata>

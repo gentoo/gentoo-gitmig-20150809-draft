@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.9.ebuild,v 1.1 2011/11/25 18:40:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.9.ebuild,v 1.2 2011/12/17 03:31:49 bicatali Exp $
 
-EAPI=3
+EAPI=4
 CMAKE_BUILD_TYPE=Release
 inherit base multilib cmake-utils
 
@@ -18,7 +18,7 @@ SRC_URI="http://gforge.inria.fr/frs/download.php/${PID}/${MY_P}.tar.xz
 LICENSE="LGPL-2.1 MIT QPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+cxx doc examples +gmp lapack qt4"
+IUSE="+cxx doc examples +gmp lapack mpfi qt4"
 
 RDEPEND="dev-libs/boost
 	dev-libs/mpfr
@@ -28,7 +28,8 @@ RDEPEND="dev-libs/boost
 	gmp? ( dev-libs/gmp[cxx=] )
 	lapack? ( virtual/lapack )
 	qt4? ( x11-libs/qt-gui:4
-		x11-libs/qt-opengl:4 )"
+		x11-libs/qt-opengl:4 )
+	mpfi? ( sci-libs/mpfi )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-util/pkgconfig"
@@ -60,17 +61,16 @@ src_configure() {
 		$(cmake-utils_use_with gmp)
 		$(cmake-utils_use_with lapack CPACK)
 		$(cmake-utils_use_with qt4 CGAL_Qt4)
+		$(cmake-utils_use_with mpfi)
 	)
 	cmake-utils_src_configure
 }
 
 src_install() {
 	cmake-utils_src_install
-	if use doc; then
-		dohtml -r "${WORKDIR}"/doc_html/cgal_manual/*
-	fi
+	use doc && dohtml -r "${WORKDIR}"/doc_html/cgal_manual/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die
+		doins -r examples
 	fi
 }
