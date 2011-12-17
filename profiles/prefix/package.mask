@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.96 2011/12/16 22:20:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.97 2011/12/17 17:01:23 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -80,12 +80,6 @@ net-wireless/aircrack-ng
 # Reported to work. However, you will need to package.provide some deps. 
 # See bug 248809 for more details.
 net-fs/openafs
-
-# Jeremy Olexa <darkside@gentoo.org> (16 May 2008)
-# distcc-config --install is rather 'interesting' in prefix and I am not 
-# convinced that it works correctly. Also, you will have to add CHOST=<...> to
-# your make.conf. bug #210268
-sys-devel/distcc
 
 # Markus Duft <mduft@gentoo.org> (17 Apr 2008)
 # Breaks things like gettext and fastjar because it introduces some
