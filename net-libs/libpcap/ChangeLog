@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.160 2011/12/16 18:00:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.161 2011/12/17 12:32:14 jer Exp $
+
+  17 Dec 2011; Jeroen Roovers <jer@gentoo.org> libpcap-1.1.1-r1.ebuild:
+  Restore old version (bug #395033).
 
   16 Dec 2011; Jeroen Roovers <jer@gentoo.org> libpcap-1.2.0.ebuild:
   Restore libnl:1.1 dependency.
