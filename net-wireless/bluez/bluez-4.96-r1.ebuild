@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96-r1.ebuild,v 1.1 2011/08/01 09:49:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96-r1.ebuild,v 1.2 2011/12/17 15:55:31 mgorny Exp $
 
 EAPI="4"
 
@@ -44,7 +44,10 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	!net-wireless/bluez-libs
 	!net-wireless/bluez-utils
-	consolekit? ( sys-auth/consolekit )
+	consolekit? (
+		|| ( sys-auth/consolekit
+			>=sys-apps/systemd-37 )
+	)
 	test-programs? (
 		dev-python/dbus-python
 		dev-python/pygobject:2
