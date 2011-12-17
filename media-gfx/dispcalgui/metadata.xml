@@ -2,14 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-<description>Proxy maintainer. CC him on bugs</description>
-</maintainer>
-<maintainer>
 <email>opensource@andmarios.com</email>
 <name>Marios Andreopoulos</name>
-<description>Maintainer. Assign bugs to him</description>
+<description>Maintainer.</description>
+</maintainer>
+<maintainer>
+<email>hwoarang@gentoo.org</email>
+<name>Markos Chandras</name>
+<description>Proxy maintainer.</description>
 </maintainer>
 <longdescription lang="en">
 </longdescription>
