@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.19 2011/12/16 12:46:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.20 2011/12/17 13:22:05 jlec Exp $
+
+  17 Dec 2011; Justin Lecher <jlec@gentoo.org> ccolamd-2.7.3.ebuild:
+  DOCS needs to be an array, #395045
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> ccolamd-2.7.3.ebuild:
   Stable for AMD64, wrt bug #393945

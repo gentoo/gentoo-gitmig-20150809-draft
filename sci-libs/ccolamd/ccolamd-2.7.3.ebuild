@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ccolamd-2.7.3.ebuild,v 1.4 2011/12/16 12:46:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ccolamd-2.7.3.ebuild,v 1.5 2011/12/17 13:22:05 jlec Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ IUSE="static-libs"
 DEPEND="sci-libs/ufconfig"
 RDEPEND="${DEPEND}"
 
-DOCS="README.txt Doc/ChangeLog"
+DOCS=( README.txt Doc/ChangeLog )
 
 S="${WORKDIR}/${MY_PN}"
 
