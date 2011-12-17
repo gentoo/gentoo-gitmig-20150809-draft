@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.759 2011/12/16 12:48:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.760 2011/12/17 13:24:57 aballier Exp $
+
+*vlc-1.1.12-r2 (17 Dec 2011)
+
+  17 Dec 2011; Alexis Ballier <aballier@gentoo.org> +vlc-1.1.12-r2.ebuild:
+  fix pulseaudio automagic, bug #394249
 
   16 Dec 2011; Alexis Ballier <aballier@gentoo.org> vlc-1.2.9999.ebuild,
   vlc-9999.ebuild:
