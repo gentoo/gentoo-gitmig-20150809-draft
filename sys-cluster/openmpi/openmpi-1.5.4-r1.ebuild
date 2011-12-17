@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.4-r1.ebuild,v 1.1 2011/12/17 12:52:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.4-r1.ebuild,v 1.2 2011/12/17 13:01:31 grobian Exp $
 
 EAPI=4
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs
@@ -113,7 +113,7 @@ src_configure() {
 src_install () {
 	emake DESTDIR="${D}" install || die "make install failed"
 	# From USE=vt see #359917
-	rm "${D}"/usr/share/libtool &> /dev/null
+	rm "${ED}"/usr/share/libtool &> /dev/null
 	dodoc README AUTHORS NEWS VERSION || die
 }
 
