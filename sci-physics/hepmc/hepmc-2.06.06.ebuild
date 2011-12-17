@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.04.ebuild,v 1.4 2011/06/08 15:15:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.06.ebuild,v 1.1 2011/12/17 16:55:13 bicatali Exp $
 
 EAPI=4
 
@@ -24,7 +24,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc46.patch
+  sed -i \
+	  -e 's/2\.06\.05/2\.06\.06/g' \
+	  test/test*.dat test/test*.output || die
 }
 
 src_configure() {
@@ -56,7 +58,7 @@ src_install() {
 
 	insinto /usr/share/doc/${PF}
 	if use doc; then
-		doins -r doc/html doc/*.pdf || die
+		doins -r doc/html doc/*.pdf
 	else
 		rm -f "${ED}"/usr/share/doc/${PF}/*pdf
 	fi
