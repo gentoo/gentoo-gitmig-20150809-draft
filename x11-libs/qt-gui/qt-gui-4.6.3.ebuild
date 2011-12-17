@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.3.ebuild,v 1.13 2011/11/20 20:23:41 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.3.ebuild,v 1.14 2011/12/17 19:37:35 chithanh Exp $
 
 EAPI="2"
 inherit confutils eutils qt4-build
@@ -44,6 +44,8 @@ RDEPEND="${RDEPEND}
 	!x11-themes/qgtkstyle
 "
 PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,debug=] )"
+
+PATCHES=( "${FILESDIR}/${PN}-4.6-libpng-1.5.patch" )
 
 pkg_setup() {
 	if ! use qt3support; then
