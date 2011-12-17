@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/guppy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.13 2011/02/11 18:59:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.14 2011/12/17 08:40:20 maksbotan Exp $
+
+*guppy-0.1.9-r1 (17 Dec 2011)
+
+  17 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +guppy-0.1.9-r1.ebuild:
+  Fix issue with python 2.7, bug 354403. Thanks to Ian Delaney
 
   11 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   guppy-0.1.9.ebuild:
