@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32d.ebuild,v 1.3 2011/12/14 23:24:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32d.ebuild,v 1.4 2011/12/17 01:50:20 pva Exp $
 
 EAPI=2
 
-inherit autotools eutils flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Cyclic multi ping utility for selected adresses using GTK/ncurses."
 HOMEPAGE="http://aa.vslib.cz/silk/projekty/pinger/index.php"
