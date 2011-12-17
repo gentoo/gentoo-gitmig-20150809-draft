@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.112 2011/12/17 13:01:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.113 2011/12/17 15:52:03 aballier Exp $
 
 EAPI=4
 
@@ -99,7 +99,7 @@ RDEPEND+="
 	encode? (
 		!twolame? ( toolame? ( media-sound/toolame ) )
 		twolame? ( media-sound/twolame )
-		faac? ( !bindist? ( media-libs/faac ) )
+		faac? ( media-libs/faac )
 		mp3? ( media-sound/lame )
 		x264? ( >=media-libs/x264-0.0.20100423 )
 		xvid? ( media-libs/xvid )
@@ -434,10 +434,6 @@ src_configure() {
 		for i in ${uses}; do
 			use ${i} || myconf+=" --disable-${i}"
 		done
-		if use bindist && use faac; then
-			ewarn "faac is nonfree and cannot be distributed; disabling faac support."
-			myconf+=" --disable-faac"
-		fi
 	else
 		myconf+=" --disable-mencoder"
 		for i in ${uses}; do
