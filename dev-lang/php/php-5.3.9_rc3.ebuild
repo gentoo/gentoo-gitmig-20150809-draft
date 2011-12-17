@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9_rc3.ebuild,v 1.1 2011/12/16 09:02:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9_rc3.ebuild,v 1.2 2011/12/17 19:08:17 zmedico Exp $
 
 EAPI=4
 
@@ -118,7 +118,6 @@ DEPEND="!dev-lang/php:5
 	adabas? ( >=dev-db/unixODBC-1.8.13 )
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
-	birdstep? ( >=dev-db/unixODBC-1.8.13 )
 	bzip2? ( app-arch/bzip2 )
 	cdb? ( || ( dev-db/cdb dev-db/tinycdb ) )
 	cjk? ( !gd? (
@@ -212,7 +211,6 @@ REQUIRED_USE="
 	xmlreader? ( xml )
 	xsl? ( xml )
 	ldap-sasl? ( ldap )
-	birdstep? ( odbc )
 	kolab? ( imap )
 	mhash? ( hash )
 	phar? ( hash )
