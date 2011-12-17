@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.121 2011/12/15 23:59:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.122 2011/12/17 00:17:19 dilfridge Exp $
+
+*kdepimlibs-4.7.3-r1 (17 Dec 2011)
+
+  17 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepimlibs-4.7.3-r1.ebuild:
+  Also add 4.7.3 revision of the imap4 protocol regression fix, bug 382411.
 
 *kdepimlibs-4.7.4-r1 (15 Dec 2011)
 
