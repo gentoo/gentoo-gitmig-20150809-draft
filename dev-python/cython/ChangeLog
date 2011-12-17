@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.70 2011/07/08 07:30:21 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.71 2011/12/17 06:30:50 bicatali Exp $
+
+*cython-0.15.1 (17 Dec 2011)
+
+  17 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/0.15.1-test.patch, +cython-0.15.1.ebuild:
+  Bump. Patch for test submitted by Ian Delanay, bug #393679
 
   08 Jul 2011; Dirkjan Ochtman <djc@gentoo.org> Manifest:
   Update manifest to match new tarball (bug 361579).
