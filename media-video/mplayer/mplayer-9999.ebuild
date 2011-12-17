@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.116 2011/12/17 17:47:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.117 2011/12/17 17:59:34 aballier Exp $
 
 EAPI=4
 
@@ -184,6 +184,7 @@ fi
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
 REQUIRED_USE="bindist? ( !faac !win32codecs )
+	dvdnav? ( dvd )
 	ass? ( truetype )
 	truetype? ( iconv )"
 
@@ -310,14 +311,8 @@ src_configure() {
 	#
 	# use external libdvdcss, dvdread and dvdnav
 	myconf+=" --disable-dvdread-internal --disable-libdvdcss-internal"
-	if use dvd; then
-		use dvdnav || myconf+=" --disable-dvdnav"
-	else
-		myconf+="
-			--disable-dvdnav
-			--disable-dvdread
-		"
-	fi
+	use dvd || myconf+=" --disable-dvdread"
+	use dvdnav || myconf+=" --disable-dvdnav"
 
 	#############
 	# Subtitles #
