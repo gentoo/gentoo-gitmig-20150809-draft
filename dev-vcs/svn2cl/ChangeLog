@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/svn2cl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2cl/ChangeLog,v 1.1 2011/02/10 21:36:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2cl/ChangeLog,v 1.2 2011/12/17 16:38:13 ago Exp $
+
+  17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> svn2cl-0.12.ebuild:
+  Stable for AMD64, wrt bug #393957
 
   10 Feb 2011; Ulrich Mueller <ulm@gentoo.org> +files/0.9-wrapper.patch,
   +svn2cl-0.9.ebuild, +svn2cl-0.12.ebuild, +metadata.xml:
