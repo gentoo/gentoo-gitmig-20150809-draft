@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-sudoku
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sudoku/ChangeLog,v 1.19 2010/04/07 19:46:22 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sudoku/ChangeLog,v 1.20 2011/12/17 18:59:13 ago Exp $
+
+  17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> vdr-sudoku-0.3.5.ebuild:
+  Stable for AMD64, wrt bug #393925
 
 *vdr-sudoku-0.3.5 (07 Apr 2010)
 
