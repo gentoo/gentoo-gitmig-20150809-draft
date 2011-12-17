@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/shmux
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.25 2009/01/03 13:54:10 swegener Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.26 2011/12/17 19:06:38 ago Exp $
+
+  17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> shmux-1.0.2.ebuild:
+  Stable for AMD64, wrt bug #393875
 
 *shmux-1.0.2 (03 Jan 2009)
 
