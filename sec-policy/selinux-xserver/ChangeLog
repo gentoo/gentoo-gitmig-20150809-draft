@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-xserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-xserver/ChangeLog,v 1.6 2011/11/12 20:53:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-xserver/ChangeLog,v 1.7 2011/12/17 10:39:17 swift Exp $
+
+*selinux-xserver-2.20110726-r1 (17 Dec 2011)
+
+  17 Dec 2011; <swift@gentoo.org> +selinux-xserver-2.20110726-r1.ebuild:
+  Introduce context for lxdm and slim
 
   12 Nov 2011; <swift@gentoo.org> -files/fix-services-xserver-r1.patch,
   -files/fix-services-xserver-r2.patch, -selinux-xserver-2.20101213-r2.ebuild,

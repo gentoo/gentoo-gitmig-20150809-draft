@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-oidentd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-oidentd/ChangeLog,v 1.5 2011/11/12 20:53:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-oidentd/ChangeLog,v 1.6 2011/12/17 10:39:16 swift Exp $
+
+  17 Dec 2011; <swift@gentoo.org> selinux-oidentd-2.20110726.ebuild:
+  Fix build failure (referred to wrong module), switch to selinux-oident
 
   12 Nov 2011; <swift@gentoo.org> -selinux-oidentd-2.20101213.ebuild:
   Removing old policies
