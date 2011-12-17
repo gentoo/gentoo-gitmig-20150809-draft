@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.171 2011/12/14 04:51:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.172 2011/12/17 01:11:14 tetromino Exp $
+
+*vino-3.2.2 (17 Dec 2011)
+
+  17 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> +vino-3.2.2.ebuild:
+  Bump. Translation updates only.
 
   14 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> vino-3.2.1.ebuild:
   Build fails if USE="jpeg -zlib" (bug #394611, thanks to Ben Kohler for
