@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.92 2011/08/31 17:26:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.93 2011/12/17 12:52:12 alexxy Exp $
+
+*openmpi-1.5.4-r1 (17 Dec 2011)
+
+  17 Dec 2011; Alexey Shvetsov <alexxy@gentoo.org> +openmpi-1.5.4-r1.ebuild:
+  Add some prefix related fixes
 
   31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> +openmpi-1.5.4.ebuild:
   Version bump
