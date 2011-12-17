@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-20070811-r1.ebuild,v 1.1 2009/05/29 19:00:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-20070811-r1.ebuild,v 1.2 2011/12/17 16:26:31 ago Exp $
 
 inherit eutils
 
@@ -72,7 +72,7 @@ DEPEND="app-arch/unzip"
 SLOT="0"
 LICENSE="CCPL-Attribution-NonCommercial-NoDerivs-2.0 CCPL-Attribution-2.0 GPL-2
 LGPL-2.1 public-domain"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 src_unpack() {
