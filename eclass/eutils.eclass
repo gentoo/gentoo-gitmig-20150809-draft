@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.373 2011/12/16 23:38:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.374 2011/12/17 03:57:38 reavertm Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -174,14 +174,15 @@ estack_pop() {
 eshopts_push() {
 	# have to assume __ESHOPTS_SAVE__ isn't screwed with
 	# as a `declare -a` here will reset its value
+	local i=${#__ESHOPTS_SAVE__[@]}
 	if [[ $1 == -[su] ]] ; then
-		estack_push eshopts "$(shopt -p)"
+		__ESHOPTS_SAVE__[$i]=$(shopt -p)
 		[[ $# -eq 0 ]] && return 0
-		shopt "$@" || die "${FUNCNAME}: bad options to shopt: $*"
+		shopt "$@" || die "eshopts_push: bad options to shopt: $*"
 	else
-		estack_push eshopts $-
+		__ESHOPTS_SAVE__[$i]=$-
 		[[ $# -eq 0 ]] && return 0
-		set "$@" || die "${FUNCNAME}: bad options to set: $*"
+		set "$@" || die "eshopts_push: bad options to set: $*"
 	fi
 }
 
@@ -191,13 +192,16 @@ eshopts_push() {
 # Restore the shell options to the state saved with the corresponding
 # eshopts_push call.  See that function for more details.
 eshopts_pop() {
-	local s
-	estack_pop eshopts s || die "${FUNCNAME}: unbalanced push"
+	[[ $# -ne 0 ]] && die "eshopts_pop takes no arguments"
+	local i=$(( ${#__ESHOPTS_SAVE__[@]} - 1 ))
+	[[ ${i} -eq -1 ]] && die "eshopts_{push,pop}: unbalanced pair"
+	local s=${__ESHOPTS_SAVE__[$i]}
+	unset __ESHOPTS_SAVE__[$i]
 	if [[ ${s} == "shopt -"* ]] ; then
-		eval "${s}" || die "${FUNCNAME}: sanity: invalid shopt options: ${s}"
+		eval "${s}" || die "eshopts_pop: sanity: invalid shopt options: ${s}"
 	else
-		set +$-     || die "${FUNCNAME}: sanity: invalid shell settings: $-"
-		set -${s}   || die "${FUNCNAME}: sanity: unable to restore saved shell settings: ${s}"
+		set +$-     || die "eshopts_pop: sanity: invalid shell settings: $-"
+		set -${s}   || die "eshopts_pop: sanity: unable to restore saved shell settings: ${s}"
 	fi
 }
 

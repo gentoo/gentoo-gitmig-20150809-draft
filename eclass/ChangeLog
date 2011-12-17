@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.46 2011/12/16 20:02:48 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.47 2011/12/17 03:57:38 reavertm Exp $
+
+  17 Dec 2011; Maciej Mrozowski <reavertm@gentoo.org> eutils.eclass:
+  Revert old eshopts_{pop,push} implementations until new ones pass unit tests.
+  Bug 395025.
 
   16 Dec 2011; Jonathan Callen <abcd@gentoo.org> qt4-build.eclass:
   Set importdir to be /usr/$(get_libdir)/qt4/imports instead of the
