@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r2.ebuild,v 1.9 2011/11/16 10:56:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.1 2011/12/17 11:07:21 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
+GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit eutils gnome2 autotools
 
@@ -12,7 +14,7 @@ HOMEPAGE="http://projects.gnome.org/evince/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 
 IUSE="dbus debug djvu doc dvi gnome gnome-keyring +introspection nautilus t1lib tiff"
 
@@ -70,7 +72,6 @@ pkg_setup() {
 		--with-platform=gnome
 		--with-gtk=2.0
 		--enable-help
-		--disable-maintainer-mode
 		$(use_enable dbus)
 		$(use_enable djvu)
 		$(use_enable dvi)
@@ -102,6 +103,18 @@ src_prepare() {
 	# Update poppler api
 	epatch "${FILESDIR}"/${P}-update-poppler.patch
 
+	# Stop the GtkSpinner when the loading window is hidden, upstream bug #637390
+	epatch "${FILESDIR}"/${P}-stop-spinner.patch
+
+	# Use a popup window instead of a toplevel for loading window, upstream bug #633475
+	epatch "${FILESDIR}"/${P}-use-popup.patch
+
+	# document: create_thumbnail_frame should return NULL when  
+	epatch "${FILESDIR}"/${P}-create_thumbnail_frame-null.patch
+
+	# Fix .desktop categories, upstream bug #666346
+	epatch "${FILESDIR}"/${P}-desktop-categories.patch
+
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "intltoolize sed failed"
@@ -117,12 +130,10 @@ src_prepare() {
 		cp "${FILESDIR}/gconf-2.m4" m4/ || die "Copying gconf-2.m4 failed!"
 	fi
 
+	# Fix underlinking with gold
+	epatch "${FILESDIR}"/${P}-gold.patch
+
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 	gnome2_src_prepare
-}
-
-src_install() {
-	gnome2_src_install
-	find "${ED}" -name "*.la" -delete || die "remove of lafiles failed"
 }
