@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.154 2011/10/27 17:21:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.155 2011/12/17 05:36:54 bicatali Exp $
+
+  17 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org> numpy-1.6.1-r1.ebuild,
+  +files/numpy-1.6.1-import_umath.patch:
+  Added patch for python-3, thanks Johan Bergström, bug #393679
 
   27 Oct 2011; Justin Lecher <jlec@gentoo.org> numpy-1.6.1-r1.ebuild,
   files/numpy-1.6.1-atlas.patch:

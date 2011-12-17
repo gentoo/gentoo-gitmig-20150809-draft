@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.1-r1.ebuild,v 1.2 2011/10/27 17:21:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.1-r1.ebuild,v 1.3 2011/12/17 05:36:54 bicatali Exp $
 
 EAPI=3
 
@@ -72,6 +72,7 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-atlas.patch
+	epatch "${FILESDIR}"/${P}-import_umath.patch
 
 	if use lapack; then
 		append-ldflags "$(pkg-config --libs-only-other cblas lapack)"
