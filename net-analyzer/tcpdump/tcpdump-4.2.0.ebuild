@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.2.0.ebuild,v 1.1 2011/12/16 17:35:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.2.0.ebuild,v 1.2 2011/12/17 14:22:46 jer Exp $
 
 EAPI="4"
-inherit flag-o-matic toolchain-funcs eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="http://www.tcpdump.org/"
@@ -48,6 +48,7 @@ src_prepare() {
 	# http://sourceforge.net/tracker/?func=detail&aid=3444149&group_id=53066&atid=469573
 	# bug #393085
 	cp "${FILESDIR}"/${P}-ppi.h "${S}/ppi.h" || die
+	epatch "${FILESDIR}"/${P}-ipv6.patch
 }
 
 src_configure() {
