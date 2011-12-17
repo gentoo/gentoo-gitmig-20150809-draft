@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.375 2011/12/17 04:55:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.376 2011/12/17 06:13:50 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -137,15 +137,15 @@ estack_pop() {
 	# bit harder to read.
 	local __estack_name="__ESTACK_$1__" ; shift
 	local __estack_retvar=$1 ; shift
-	eval local __estack_i=\${#${__estack_name}[@]}
+	eval local __estack_i=\${#${__estack_name}\[@\]}
 	# Don't warn -- let the caller interpret this as a failure
 	# or as normal behavior (akin to `shift`)
 	[[ $(( --__estack_i )) -eq -1 ]] && return 1
 
 	if [[ -n ${__estack_retvar} ]] ; then
-		eval ${__estack_retvar}=\"\${${__estack_name}[${__estack_i}]}\"
+		eval ${__estack_retvar}=\"\${${__estack_name}\[${__estack_i}\]}\"
 	fi
-	eval unset ${__estack_name}[${__estack_i}]
+	eval unset ${__estack_name}\[${__estack_i}\]
 }
 
 # @FUNCTION: eshopts_push
@@ -162,7 +162,7 @@ estack_pop() {
 # A common example is to disable shell globbing so that special meaning/care
 # may be used with variables/arguments to custom functions.  That would be:
 # @CODE
-#		eshopts_push -o noglob
+#		eshopts_push -s noglob
 #		for x in ${foo} ; do
 #			if ...some check... ; then
 #				eshopts_pop
@@ -172,15 +172,12 @@ estack_pop() {
 #		eshopts_pop
 # @CODE
 eshopts_push() {
-	# have to assume __ESHOPTS_SAVE__ isn't screwed with
-	# as a `declare -a` here will reset its value
-	local i=${#__ESHOPTS_SAVE__[@]}
 	if [[ $1 == -[su] ]] ; then
-		__ESHOPTS_SAVE__[$i]=$(shopt -p)
+		estack_push eshopts "$(shopt -p)"
 		[[ $# -eq 0 ]] && return 0
 		shopt "$@" || die "${FUNCNAME}: bad options to shopt: $*"
 	else
-		__ESHOPTS_SAVE__[$i]=$-
+		estack_push eshopts $-
 		[[ $# -eq 0 ]] && return 0
 		set "$@" || die "${FUNCNAME}: bad options to set: $*"
 	fi
@@ -192,11 +189,8 @@ eshopts_push() {
 # Restore the shell options to the state saved with the corresponding
 # eshopts_push call.  See that function for more details.
 eshopts_pop() {
-	[[ $# -ne 0 ]] && die "${FUNCNAME} takes no arguments"
-	local i=$(( ${#__ESHOPTS_SAVE__[@]} - 1 ))
-	[[ ${i} -eq -1 ]] && die "eshopts_{push,pop}: unbalanced pair"
-	local s=${__ESHOPTS_SAVE__[$i]}
-	unset __ESHOPTS_SAVE__[$i]
+	local s
+	estack_pop eshopts s || die "${FUNCNAME}: unbalanced push"
 	if [[ ${s} == "shopt -"* ]] ; then
 		eval "${s}" || die "${FUNCNAME}: sanity: invalid shopt options: ${s}"
 	else
