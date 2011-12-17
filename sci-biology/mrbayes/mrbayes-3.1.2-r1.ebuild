@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.1.2-r1.ebuild,v 1.2 2011/12/16 13:08:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.1.2-r1.ebuild,v 1.3 2011/12/17 13:45:03 jlec Exp $
 
 EAPI=4
 
@@ -23,17 +23,25 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	use readline && epatch "${FILESDIR}"/mb_readline_312.patch
+	sed -e 's:-ggdb::g' -i Makefile || die
 }
 
 src_compile() {
-	local myconf
+	local myconf mycc
+
+	if use mpi; then
+		mycc=mpicc
+	else
+		mycc=$(tc-getCC)
+	fi
+
 	use mpi && myconf="MPI=yes"
 	use readline || myconf="${myconf} USEREADLINE=no"
 	use debug && myconf="${myconf} DEBUG=yes"
 	emake \
 		OPTFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
-		CC=$(tc-getCC) \
+		CC=${mycc} \
 		${myconf}
 }
 
