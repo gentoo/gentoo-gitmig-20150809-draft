@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.16 2011/12/17 04:23:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.17 2011/12/17 04:23:53 vapier Exp $
 
 # @ECLASS: pax-utils.eclass
 # @MAINTAINER:
@@ -20,6 +20,9 @@
 # contain either "PT" or "none".  If PAX_MARKINGS is set to "PT", and the
 # necessary utility is installed, the PT_PAX_FLAGS markings will be made.  If
 # PAX_MARKINGS is set to "none", no markings will be made.
+
+if [[ ${___ECLASS_ONCE_PAX_UTILS} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_PAX_UTILS="recur -_+^+_- spank"
 
 # Default to PT markings.
 PAX_MARKINGS=${PAX_MARKINGS:="PT"}
@@ -149,3 +152,4 @@ _pax_list_files() {
 	done
 }
 
+fi
