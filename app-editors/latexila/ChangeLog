@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/latexila
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.1 2011/12/17 09:06:16 tetromino Exp $
+
+*latexila-2.2.2 (17 Dec 2011)
+
+  17 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +latexila-2.2.2.ebuild, +metadata.xml:
+  New ebuild for a LaTeX IDE for bug #380779, thanks to Sébastien Wilmet.
+
