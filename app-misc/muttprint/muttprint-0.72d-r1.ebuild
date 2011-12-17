@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72d-r1.ebuild,v 1.8 2009/12/03 18:38:17 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72d-r1.ebuild,v 1.9 2011/12/17 19:20:36 armin76 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/muttprint/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="virtual/latex-base
