@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.106 2011/09/24 09:39:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.107 2011/12/17 09:03:53 maksbotan Exp $
+
+*pycrypto-2.4.1 (17 Dec 2011)
+
+  17 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +pycrypto-2.4.1.ebuild:
+  Bump to 2.4.1, bug 362763 is present no more
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> pycrypto-2.3.ebuild:
   Marked ~x64-macos
