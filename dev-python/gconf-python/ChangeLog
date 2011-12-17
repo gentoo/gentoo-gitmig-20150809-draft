@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gconf-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gconf-python/ChangeLog,v 1.38 2011/02/26 13:26:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gconf-python/ChangeLog,v 1.39 2011/12/17 18:41:19 tetromino Exp $
+
+  17 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gconf-python-2.28.1.ebuild:
+  Add missing pygobject dependency (bug #395077, thanks to flameeyes for
+  reporting) and bump to EAPI1 for slot dep support.
 
   26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -gconf-python-2.28.0.ebuild, gconf-python-2.28.1.ebuild:
