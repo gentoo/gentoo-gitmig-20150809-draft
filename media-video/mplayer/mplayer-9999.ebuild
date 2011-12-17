@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.114 2011/12/17 15:56:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.115 2011/12/17 15:57:56 aballier Exp $
 
 EAPI=4
 
@@ -184,9 +184,6 @@ fi
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
 REQUIRED_USE="bindist? ( !faac !win32codecs )"
-
-PATCHES=(
-)
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then
