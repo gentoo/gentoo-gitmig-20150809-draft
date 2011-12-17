@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.1 2011/12/17 11:07:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.2 2011/12/17 16:29:29 mr_bones_ Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -109,7 +109,7 @@ src_prepare() {
 	# Use a popup window instead of a toplevel for loading window, upstream bug #633475
 	epatch "${FILESDIR}"/${P}-use-popup.patch
 
-	# document: create_thumbnail_frame should return NULL when  
+	# document: create_thumbnail_frame should return NULL when
 	epatch "${FILESDIR}"/${P}-create_thumbnail_frame-null.patch
 
 	# Fix .desktop categories, upstream bug #666346
