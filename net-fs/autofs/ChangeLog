@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.139 2011/11/01 05:54:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.140 2011/12/17 03:45:15 pva Exp $
+
+*autofs-5.0.6-r5 (17 Dec 2011)
+
+  17 Dec 2011; Peter Volkov <pva@gentoo.org> +autofs-5.0.6-r5.ebuild,
+  +files/autofs-5.0.6-respect-user-flags-and-fix-asneeded-r2.patch:
+  Bump upstream patchset, bug #394865 thank Dustin Polke for this job.
 
   01 Nov 2011; Markus Meier <maekke@gentoo.org> autofs-5.0.6-r3.ebuild:
   arm stable, bug #379569
