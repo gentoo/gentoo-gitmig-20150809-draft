@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.213 2011/11/22 00:15:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.214 2011/12/17 01:55:23 tetromino Exp $
+
+*gtksourceview-2.10.5-r2 (17 Dec 2011)
+
+  17 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtksourceview-2.10.5-r2.ebuild,
+  +files/gtksourceview-2.10.5-G_CONST_RETURN.patch:
+  Add patch from gtksourceview-3.x to not use G_CONST_RETURN in public headers
+  (bug #394925, thanks to Rion for reporting).
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> gtksourceview-2.10.5-r1.ebuild,
   -gtksourceview-3.2.2.ebuild:
