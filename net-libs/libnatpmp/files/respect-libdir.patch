@@ -1,0 +1,20 @@
+diff -Naur libnatpmp-20110808.orig//Makefile libnatpmp-20110808/Makefile
+--- libnatpmp-20110808.orig//Makefile	2011-12-17 06:58:13.000000000 -0500
++++ libnatpmp-20110808/Makefile	2011-12-17 06:58:54.000000000 -0500
+@@ -6,6 +6,7 @@
+ 
+ GENTOO_CFLAGS := $(CFLAGS)
+ GENTOO_LDFLAGS := $(LDFLAGS)
++GENTOO_LIBDIR ?= "lib"
+ 
+ OS = $(shell uname -s)
+ CC ?= gcc
+@@ -36,7 +37,7 @@
+ 
+ INSTALLPREFIX ?= $(PREFIX)/usr
+ INSTALLDIRINC = $(INSTALLPREFIX)/include
+-INSTALLDIRLIB = $(INSTALLPREFIX)/lib
++INSTALLDIRLIB = $(INSTALLPREFIX)/$(GENTOO_LIBDIR)
+ INSTALLDIRBIN = $(INSTALLPREFIX)/bin
+ 
+ .PHONY:	all clean depend install cleaninstall installpythonmodule

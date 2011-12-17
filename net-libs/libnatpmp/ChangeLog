@@ -1,5 +1,12 @@
 
 
+*libnatpmp-20110808-r1 (17 Dec 2011)
+
+  17 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  -libnatpmp-20110808.ebuild, +libnatpmp-20110808-r1.ebuild,
+  +files/respect-libdir.patch, files/respect-FLAGS.patch:
+  Rev bump, bugs 395039, 395041, 395043
+
   17 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
   -libnatpmp-20110715-r1.ebuild:
   Removed older version
