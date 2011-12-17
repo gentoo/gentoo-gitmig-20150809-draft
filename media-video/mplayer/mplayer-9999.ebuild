@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.117 2011/12/17 17:59:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.118 2011/12/17 18:02:24 aballier Exp $
 
 EAPI=4
 
@@ -279,18 +279,12 @@ src_configure() {
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
-	use bidi || myconf+=" --disable-fribidi"
-	use ipv6 || myconf+=" --disable-inet6"
-	use nut || myconf+=" --disable-libnut"
-	use rar || myconf+=" --disable-unrarexec"
+	use bidi  || myconf+=" --disable-fribidi"
+	use ipv6  || myconf+=" --disable-inet6"
+	use nut   || myconf+=" --disable-libnut"
+	use rar   || myconf+=" --disable-unrarexec"
 	use samba || myconf+=" --disable-smb"
-	if ! use lirc; then
-		myconf+="
-			--disable-lirc
-			--disable-lircc
-			--disable-apple-ir
-		"
-	fi
+	use lirc  || myconf+=" --disable-lirc --disable-lircc --disable-apple-ir"
 
 	# libcdio support: prefer libcdio over cdparanoia
 	# don't check for cddb w/cdio
