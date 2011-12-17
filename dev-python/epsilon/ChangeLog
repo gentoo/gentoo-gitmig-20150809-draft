@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.26 2011/03/05 17:25:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.27 2011/12/17 10:00:15 maksbotan Exp $
+
+*epsilon-0.6.0-r1 (17 Dec 2011)
+
+  17 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +epsilon-0.6.0-r1.ebuild:
+  Fixed tests, bug 357157. Thanks to Ian Delaney
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org> epsilon-0.6.0.ebuild:
   Drop ia64 keywords
