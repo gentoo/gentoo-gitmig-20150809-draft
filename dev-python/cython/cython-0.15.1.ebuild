@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.15.1.ebuild,v 1.1 2011/12/17 06:30:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.15.1.ebuild,v 1.2 2011/12/17 22:04:22 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython *-pypy"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="Cython"
 MY_P="${MY_PN}-${PV/_/}"
