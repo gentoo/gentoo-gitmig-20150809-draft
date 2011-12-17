@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.624 2011/12/15 00:34:27 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.625 2011/12/17 18:16:48 armin76 Exp $
+
+  17 Dec 2011; Raúl Porcel <armin76@gentoo.org> udev-164-r2.ebuild:
+  s390 stable wrt #352827
 
   15 Dec 2011; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   Add a compatibility symlink for udevadm and use --exec-prefix to put the
