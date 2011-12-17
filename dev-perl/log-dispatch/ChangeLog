@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/log-dispatch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.64 2011/07/29 11:00:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.65 2011/12/17 18:43:36 ago Exp $
+
+  17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> log-dispatch-2.290.0.ebuild:
+  Stable for AMD64, wrt bug #393725
 
   29 Jul 2011; Torsten Veller <tove@gentoo.org> -log-dispatch-2.280.ebuild:
   Cleanup
