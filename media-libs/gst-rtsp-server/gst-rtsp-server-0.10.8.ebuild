@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/gst-rtsp-server-0.10.8.ebuild,v 1.6 2011/12/14 21:46:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/gst-rtsp-server-0.10.8.ebuild,v 1.7 2011/12/18 20:04:12 phajdan.jr Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="http://people.freedesktop.org/~wtay/${P/-server/}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug doc +introspection nls static-libs vala"
 S="${WORKDIR}/${P/-server/}"
 
