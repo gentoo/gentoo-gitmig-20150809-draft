@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1-r3.ebuild,v 1.2 2011/12/18 12:17:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1-r3.ebuild,v 1.3 2011/12/18 12:28:54 sera Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -39,8 +39,8 @@ src_compile() {
 		--enable-nntp \
 		--enable-ftp \
 		--enable-gopher \
-		--with-jsse-jar=${S}/ext \
-		--with-javax-security-jar=${S}/ext \
+		--with-jsse-jar="${S}"/ext \
+		--with-javax-security-jar="${S}"/ext \
 		|| die
 	# https://bugs.gentoo.org/show_bug.cgi?id=179897
 	emake JAVACFLAGS="${JAVACFLAGS}" -j1 || die
@@ -51,7 +51,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	rm -rf ${D}/usr/share/java
+	rm -rf "${D}"/usr/share/java
 	java-pkg_dojar inetlib.jar
 	use doc && java-pkg_dojavadoc docs
 	dodoc AUTHORS NEWS README || die
