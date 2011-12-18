@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.11.0_pre705082.ebuild,v 1.3 2008/12/14 12:42:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.11.0_pre705082.ebuild,v 1.4 2011/12/18 17:26:24 armin76 Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/Xalan-C_r${PV#*_pre}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/xerces-c-2.7.0"
