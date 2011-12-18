@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/uulib-0.9.12.ebuild,v 1.1 2010/06/14 17:43:01 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/uulib-0.9.12.ebuild,v 1.2 2011/12/18 19:02:55 ago Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -11,7 +11,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.8.1"
