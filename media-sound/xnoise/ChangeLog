@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xnoise
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.14 2011/10/14 16:46:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.15 2011/12/18 10:26:44 angelos Exp $
+
+*xnoise-0.1.30 (18 Dec 2011)
+
+  18 Dec 2011; Christoph Mende <angelos@gentoo.org> +xnoise-0.1.30.ebuild,
+  -files/xnoise-0.1.29-disable-deprecated.patch, -xnoise-0.1.28.ebuild,
+  -xnoise-0.1.29.ebuild, metadata.xml, xnoise-9999.ebuild:
+  Version bump, remove old
 
 *xnoise-0.1.29 (14 Oct 2011)
 
