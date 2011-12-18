@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.136 2011/12/16 15:49:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.137 2011/12/18 15:25:09 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> lcms-2.2-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #390781
 
   16 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> -lcms-2.1.ebuild,
   -lcms-2.2.ebuild:
