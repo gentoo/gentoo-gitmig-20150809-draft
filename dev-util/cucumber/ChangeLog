@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.44 2011/09/30 06:21:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.45 2011/12/18 12:18:16 graaff Exp $
+
+*cucumber-1.1.4 (18 Dec 2011)
+
+  18 Dec 2011; Hans de Graaff <graaff@gentoo.org> +cucumber-1.1.4.ebuild:
+  Version bump.
 
 *cucumber-1.0.6 (30 Sep 2011)
 
