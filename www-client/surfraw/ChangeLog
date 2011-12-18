@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surfraw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.67 2011/11/26 17:21:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.68 2011/12/18 18:10:11 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> surfraw-2.2.8.ebuild:
+  sparc stable wrt #389333
 
   26 Nov 2011; Jeroen Roovers <jer@gentoo.org> surfraw-2.2.8.ebuild:
   Require dev-lang/perl at runtime.
