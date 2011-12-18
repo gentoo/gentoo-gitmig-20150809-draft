@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.324 2011/12/15 19:15:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.325 2011/12/18 19:47:16 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> wireshark-1.6.4.ebuild:
+  x86 stable wrt bug #389255
 
   15 Dec 2011; Fabian Groffen <grobian@gentoo.org> wireshark-1.6.4.ebuild:
   Use EPREFIX/EROOT, bug #321309
