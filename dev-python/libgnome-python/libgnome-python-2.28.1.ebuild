@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnome-python/libgnome-python-2.28.1.ebuild,v 1.9 2011/02/26 13:20:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnome-python/libgnome-python-2.28.1.ebuild,v 1.10 2011/12/18 02:45:10 tetromino Exp $
 
+EAPI="1"
 GCONF_DEBUG="no"
 
 G_PY_PN="gnome-python"
@@ -20,6 +21,7 @@ IUSE="examples"
 
 RDEPEND=">=gnome-base/libgnome-2.24.1
 	>=gnome-base/libgnomeui-2.24.0
+	dev-python/pygobject:2
 	>=dev-python/pyorbit-2.24.0
 	>=dev-python/libbonobo-python-${PV}
 	>=dev-python/gnome-vfs-python-${PV}
