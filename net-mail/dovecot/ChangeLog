@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.332 2011/12/05 11:24:12 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.333 2011/12/18 21:56:27 halcy0n Exp $
+
+  18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> dovecot-2.0.16.ebuild:
+  Stable for ppc/ppc64; bug #390887
 
   05 Dec 2011; Eray Aslan <eras@gentoo.org> dovecot-2.1_rc1.ebuild:
   Fix sieve SRC_URI and directories - bug #393173
