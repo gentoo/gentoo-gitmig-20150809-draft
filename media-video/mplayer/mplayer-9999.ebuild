@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.118 2011/12/17 18:02:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.119 2011/12/18 15:06:04 aballier Exp $
 
 EAPI=4
 
@@ -494,15 +494,6 @@ src_configure() {
 	if use x86 && gcc-specs-pie; then
 		filter-flags -fPIC -fPIE
 		append-ldflags -nopie
-	fi
-
-	is-flag -O? || append-flags -O2
-
-	# workaround bug, x86 just has too few registers, see c.f.
-	# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=402950#44
-	# and 32-bits OSX, bug 329861
-	if [[ ${CHOST} == i?86-* ]] ; then
-		use debug || append-flags -fomit-frame-pointer
 	fi
 
 	###########################

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.826 2011/12/18 14:56:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.827 2011/12/18 15:06:04 aballier Exp $
+
+  18 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  mp3lib failed to build on x86 with -O0 and frame-pointer, since we dropped
+  internal mp3lib we can also avoid messing with CFLAGS and let people build
+  with the -O flag they wish.
 
   18 Dec 2011; Alexis Ballier <aballier@gentoo.org> files/dump_ffmpeg.sh:
   allfilters.c is also checked, inlude it too
