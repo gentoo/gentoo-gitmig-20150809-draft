@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfishsound
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/ChangeLog,v 1.10 2010/03/11 11:33:22 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/ChangeLog,v 1.11 2011/12/18 18:14:29 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> libfishsound-1.0.0.ebuild:
+  Stable for AMD64, wrt bug #393779
 
   11 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   libfishsound-1.0.0.ebuild, +files/libfishsound-1.0.0-pc.patch:
