@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.195 2011/12/03 10:45:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.196 2011/12/18 16:29:54 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> ncurses-5.9.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #377631
 
   03 Dec 2011; Markus Meier <maekke@gentoo.org> ncurses-5.9.ebuild:
   arm stable, bug #377631
