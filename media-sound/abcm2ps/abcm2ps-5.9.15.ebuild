@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-5.9.15.ebuild,v 1.4 2010/08/27 17:02:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-5.9.15.ebuild,v 1.5 2011/12/18 17:49:39 armin76 Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="http://moinejf.free.fr/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 src_unpack() {
