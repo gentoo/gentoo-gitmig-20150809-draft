@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mairix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.37 2011/11/01 05:43:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.38 2011/12/18 17:55:10 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> mairix-0.22.ebuild,
+  mairix-0.23.ebuild:
+  Drop arm/s390/sh/sparc keywords
 
   01 Nov 2011; Markus Meier <maekke@gentoo.org> mairix-0.23.ebuild:
   arm stable, bug #388023
