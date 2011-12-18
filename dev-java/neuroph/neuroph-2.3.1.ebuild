@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/neuroph/neuroph-2.3.1.ebuild,v 1.1 2009/12/04 09:38:36 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/neuroph/neuroph-2.3.1.ebuild,v 1.2 2011/12/18 12:34:20 ago Exp $
 
 JAVA_PKG_IUSE="doc source"
 EAPI="2"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_nb.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE=""
 
