@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/babel-1.6-r1.ebuild,v 1.4 2011/12/16 13:04:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/babel-1.6-r1.ebuild,v 1.5 2011/12/18 13:48:45 jlec Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_install () {
-	default
+	emake DESTDIR="${D}"/usr/bin install
 
 	insinto /usr/share/${PN}
 	doins *.lis

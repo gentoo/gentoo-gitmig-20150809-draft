@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/babel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/ChangeLog,v 1.9 2011/12/16 13:04:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/ChangeLog,v 1.10 2011/12/18 13:48:45 jlec Exp $
+
+  18 Dec 2011; Justin Lecher <jlec@gentoo.org> babel-1.6-r1.ebuild:
+  Don't install binaries in /
 
   16 Dec 2011; Justin Lecher <jlec@gentoo.org> babel-1.6-r1.ebuild:
   Restructured to fit commen-sense
