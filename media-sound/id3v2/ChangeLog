@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/id3v2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.30 2011/11/13 14:47:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.31 2011/12/18 18:17:49 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> id3v2-0.1.11.ebuild,
+  id3v2-0.1.12.ebuild:
+  Drop alpha/sparc keywords
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org> id3v2-0.1.12.ebuild:
   x86 stable, bug #380721
