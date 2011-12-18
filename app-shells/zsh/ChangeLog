@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.173 2011/12/15 09:57:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.174 2011/12/18 07:09:16 radhermit Exp $
+
+*zsh-4.3.15 (18 Dec 2011)
+
+  18 Dec 2011; Tim Harder <radhermit@gentoo.org> +zsh-4.3.15.ebuild:
+  Version bump.
 
   15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> zsh-4.3.12.ebuild:
   Stable for AMD64, wrt bug #394409
