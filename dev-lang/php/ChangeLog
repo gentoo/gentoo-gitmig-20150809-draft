@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.531 2011/12/17 19:25:19 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.532 2011/12/18 09:00:26 olemarkus Exp $
+
+  18 Dec 2011; Ole Markus With <olemarkus@gentoo.org>
+  +files/eblits/src_configure-v54.eblit, -files/eblits/src_configure-v3.eblit,
+  php-5.4.0_rc3.ebuild:
+  Changed src_config eblit versions to make it easier to figure out which eblit
+  is used where
 
   17 Dec 2011; Ole Markus With <olemarkus@gentoo.org> php-5.3.9_rc3.ebuild:
   Removed other REQUIRED_USE entries referencing USE flags not in IUSE
