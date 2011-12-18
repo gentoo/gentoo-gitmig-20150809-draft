@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/sjsxp-1.0.1-r1.ebuild,v 1.2 2009/05/02 14:34:11 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/sjsxp-1.0.1-r1.ebuild,v 1.3 2011/12/18 12:03:34 ago Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="bea.ri.jsr173"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 
 IUSE=""
 
