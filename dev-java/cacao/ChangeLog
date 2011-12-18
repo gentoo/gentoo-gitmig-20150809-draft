@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/cacao
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.20 2010/05/23 14:18:49 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.21 2011/12/18 08:08:44 sera Exp $
+
+  18 Dec 2011; Ralph Sennhauser <sera@gentoo.org> cacao-0.99.4.ebuild:
+  Fix dependency on ecj, eselect-ecj's PDEPEND doesn't guarantee it's
+  availability at build time.
 
   23 May 2010; Petteri Räty <betelgeuse@gentoo.org> cacao-0.99.4.ebuild:
   Fix tests to find junit4. They still fail. See bug #321189.

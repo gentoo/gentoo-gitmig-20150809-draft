@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.99.4.ebuild,v 1.5 2010/05/23 14:18:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.99.4.ebuild,v 1.6 2011/12/18 08:08:44 sera Exp $
 
 EAPI=2
 AUTOTOOLS_AUTO_DEPEND="no"
@@ -17,7 +17,7 @@ IUSE="test"
 CLASSPATH_SLOT=0.98
 COMMON_DEPEND="
 	dev-java/gnu-classpath:${CLASSPATH_SLOT}
-	app-admin/eselect-ecj
+	|| ( dev-java/eclipse-ecj dev-java/ecj-gcj )
 "
 RDEPEND="${COMMON_DEPEND}"
 DEPEND="${COMMON_DEPEND}
