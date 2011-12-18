@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.35 2011/12/16 11:59:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.36 2011/12/18 19:44:59 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bsdiff-4.3-r2.ebuild:
+  x86 stable wrt bug #393707
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> bsdiff-4.3-r2.ebuild:
   Stable for AMD64, wrt bug #393707
