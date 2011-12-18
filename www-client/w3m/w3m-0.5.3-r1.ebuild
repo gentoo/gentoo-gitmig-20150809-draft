@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r1.ebuild,v 1.4 2011/05/18 03:44:20 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r1.ebuild,v 1.5 2011/12/18 06:31:00 naota Exp $
 
 EAPI="3"
 inherit eutils
@@ -31,7 +31,8 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch \
 		"${FILESDIR}/${PN}-0.5.2-gc72.patch" \
-		"${FILESDIR}/${PN}-0.5.3-parallel-make.patch"
+		"${FILESDIR}/${PN}-0.5.3-parallel-make.patch" \
+		"${FILESDIR}/${PN}-0.5.3-glibc214.patch"
 	find . -name CVS -type d | xargs rm -r
 }
 
