@@ -1,3 +1,6 @@
+[Unit]
+Description=CPU Interrupt Balancer
+
 [Service]
 ExecStart=/sbin/irqbalance --debug
 # --debug implies a lot of cruft
