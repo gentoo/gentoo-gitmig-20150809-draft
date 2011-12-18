@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/modsecurity-crs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.14 2011/10/17 21:58:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.15 2011/12/18 17:28:54 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> modsecurity-crs-2.1.2.ebuild:
+  sparc stable wrt #383315
 
 *modsecurity-crs-2.2.2 (17 Oct 2011)
 
