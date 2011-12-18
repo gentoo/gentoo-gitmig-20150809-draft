@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.6 2011/12/11 21:52:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.7 2011/12/18 20:43:22 halcy0n Exp $
+
+  18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> mdds-0.5.3-r1.ebuild:
+  Stable for ppc; bug #387187
 
   11 Dec 2011; Markus Meier <maekke@gentoo.org> mdds-0.5.3-r1.ebuild:
   x86 stable, bug #387187
