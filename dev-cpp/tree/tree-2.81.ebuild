@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/tree-2.81.ebuild,v 1.1 2011/12/14 09:50:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/tree-2.81.ebuild,v 1.2 2011/12/18 16:48:29 jlec Exp $
 
 EAPI=4
 
@@ -37,6 +37,6 @@ src_install() {
 	doins tree.hh tree_util.hh
 	dodoc tree_example.cc
 	if use doc; then
-		dohtml "${WORKDIR}"/doc/*
+		dohtml "${S}"/../doc/*
 	fi
 }
