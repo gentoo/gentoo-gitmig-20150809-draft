@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/psmon
-# Copyright 2000-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.17 2011/12/18 11:47:16 ago Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.18 2011/12/18 20:02:02 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> psmon-1.39.ebuild:
+  x86 stable wrt bug #393853
 
   18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> psmon-1.39.ebuild:
   Stable for AMD64, wrt bug #393853
