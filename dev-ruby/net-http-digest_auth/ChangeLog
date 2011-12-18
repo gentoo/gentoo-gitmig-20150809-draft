@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/net-http-digest_auth
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/ChangeLog,v 1.1 2011/12/18 17:50:26 graaff Exp $
+
+*net-http-digest_auth-1.2 (18 Dec 2011)
+
+  18 Dec 2011; Hans de Graaff <graaff@gentoo.org>
+  +net-http-digest_auth-1.2.ebuild, +metadata.xml:
+  Initial import. New dependency for dev-ruby/mechanize.
+
