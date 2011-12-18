@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.19 2011/08/03 08:38:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.20 2011/12/18 12:29:58 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> xhtml-3000.2.0.1.ebuild:
+  Stable for AMD64, wrt bug #393933
 
   03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> xhtml-3000.2.0.1.ebuild:
   Disable USE=haddock for upcoming haddock.
