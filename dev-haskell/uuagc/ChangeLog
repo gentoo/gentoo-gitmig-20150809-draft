@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/uuagc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.16 2010/07/12 13:41:29 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.17 2011/12/18 12:39:59 slyfox Exp $
+
+  18 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/uuagc-0.9.1-split-base.patch, uuagc-0.9.1.ebuild:
+  Fix build failure against modern ghc. Fixes bug #257888 by Laszlo Papp and
+  others.
 
   12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> uuagc-0.9.5.ebuild:
   Fixed bug #227517 (missing dev-haskell/mtl dep). Thanks to Evil Compile

@@ -1,9 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/uuagc-0.9.1.ebuild,v 1.12 2007/10/31 13:10:21 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/uuagc-0.9.1.ebuild,v 1.13 2011/12/18 12:39:59 slyfox Exp $
+
+EAPI="4"
 
 CABAL_FEATURES="bin"
-inherit haskell-cabal
+inherit base haskell-cabal
 
 DESCRIPTION="The Utrecht University Attribute Grammar system"
 HOMEPAGE="http://www.cs.uu.nl/wiki/HUT/AttributeGrammarSystem"
@@ -16,3 +18,6 @@ IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.2.2
 		>=dev-haskell/uulib-0.9.1"
+RDEPEND=""
+
+PATCHES=("${FILESDIR}"/${PN}-0.9.1-split-base.patch)
