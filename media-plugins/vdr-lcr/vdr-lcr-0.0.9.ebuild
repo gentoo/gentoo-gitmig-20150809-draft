@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcr/vdr-lcr-0.0.9.ebuild,v 1.1 2008/08/14 10:59:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcr/vdr-lcr-0.0.9.ebuild,v 1.2 2011/12/18 11:41:02 ago Exp $
 
 inherit vdr-plugin
 
@@ -10,7 +10,7 @@ SRC_URI="http://lcr.vdr-developer.org/downloads/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.5.7
