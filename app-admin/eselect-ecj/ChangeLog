@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/eselect-ecj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.13 2011/10/19 22:01:32 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.14 2011/12/18 08:44:55 sera Exp $
+
+*eselect-ecj-0.7 (18 Dec 2011)
+
+  18 Dec 2011; Ralph Sennhauser <sera@gentoo.org> +eselect-ecj-0.7.ebuild,
+  +files/ecj-0.7.eselect:
+  Version and EAPI bump.
+  Drop PDEPEND as it doesn't guarantee packages DEPENDing on eselect-ecj the
+  availability of a usable ecj. Packages must DEPEND on ecj for themself.
+  Make update action always barf on invalid input.
+  Make update action check for ecj.jar link as well.
+  Make set action always link valid targets. #354097
 
 *eselect-ecj-0.6-r1 (19 Oct 2011)
 
