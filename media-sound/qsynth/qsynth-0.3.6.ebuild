@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.6.ebuild,v 1.2 2011/12/16 17:02:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.6.ebuild,v 1.3 2011/12/18 20:17:37 phajdan.jr Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="debug jack alsa pulseaudio"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 
 DEPEND=">=x11-libs/qt-core-4.2:4
 	>=x11-libs/qt-gui-4.2:4
