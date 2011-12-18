@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lib765
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lib765/ChangeLog,v 1.10 2010/09/28 21:00:32 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lib765/ChangeLog,v 1.11 2011/12/18 20:11:58 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> lib765-0.4.2.ebuild:
+  x86 stable wrt bug #393693
 
   28 Sep 2010; Jeroen Roovers <jer@gentoo.org> lib765-0.4.2.ebuild,
   metadata.xml:
