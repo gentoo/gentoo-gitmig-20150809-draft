@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/kstreamripper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.26 2011/10/28 23:33:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.27 2011/12/18 19:22:11 dilfridge Exp $
+
+*kstreamripper-0.7.100-r1 (18 Dec 2011)
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kstreamripper-0.7.100-r1.ebuild,
+  +files/kstreamripper-0.7.100-nodebuglog.patch:
+  Disable debug log, bug 394887
 
   28 Oct 2011; Jonathan Callen <abcd@gentoo.org> -kstreamripper-0.7.74.ebuild:
   remove old
