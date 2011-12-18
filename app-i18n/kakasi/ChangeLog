@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/kakasi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/ChangeLog,v 1.17 2011/12/18 11:43:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/ChangeLog,v 1.18 2011/12/18 20:12:27 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kakasi-2.3.4-r1.ebuild:
+  x86 stable wrt bug #393695
 
   18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> kakasi-2.3.4-r1.ebuild:
   Stable for AMD64, wrt bug #393695
