@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2x
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.25 2011/12/16 19:14:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.26 2011/12/18 20:00:31 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> x2x-1.27-r3.ebuild:
+  x86 stable wrt bug #393781
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> x2x-1.27-r3.ebuild:
   Stable for AMD64, wrt bug #393781
