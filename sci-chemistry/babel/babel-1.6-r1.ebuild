@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/babel-1.6-r1.ebuild,v 1.5 2011/12/18 13:48:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/babel-1.6-r1.ebuild,v 1.6 2011/12/18 18:10:42 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://smog.com/chem/babel/files/${P}.tar.Z"
 SLOT="0"
 LICENSE="as-is"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 #Doesn't really seem to depend on anything (?)
 DEPEND="!sci-chemistry/openbabel"
