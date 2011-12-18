@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/bchunk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bchunk/ChangeLog,v 1.21 2010/09/02 20:37:39 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bchunk/ChangeLog,v 1.22 2011/12/18 11:29:37 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> bchunk-1.2.0-r1.ebuild:
+  Stable for AMD64, wrt bug #394053
 
 *bchunk-1.2.0-r1 (02 Sep 2010)
 
