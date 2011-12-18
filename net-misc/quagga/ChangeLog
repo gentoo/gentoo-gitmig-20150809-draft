@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.130 2011/11/01 05:46:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.131 2011/12/18 17:56:30 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> quagga-0.99.20-r1.ebuild:
+  alpha/s390/sparc stable wrt #387375
 
   01 Nov 2011; Markus Meier <maekke@gentoo.org> quagga-0.99.20-r1.ebuild:
   arm stable, bug #387375
