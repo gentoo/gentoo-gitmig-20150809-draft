@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.7 2011/05/02 21:24:52 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.8 2011/12/18 18:03:53 armin76 Exp $
 
 EAPI=2
 VIRTUALX_REQUIRED="always"
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~sparc x86"
+KEYWORDS="amd64 x86"
 IUSE="cli flac +gtk +mp3 normalize +vorbis wav"
 
 ILINGUAS="de es fr hu nl ru"

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rubyripper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.36 2011/11/05 09:59:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.37 2011/12/18 18:03:53 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> rubyripper-0.5.5-r1.ebuild,
+  rubyripper-0.6.1.ebuild:
+  Drop sparc keywords
 
   05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> rubyripper-0.6.1.ebuild:
   Stable on amd64 wrt bug #388985
