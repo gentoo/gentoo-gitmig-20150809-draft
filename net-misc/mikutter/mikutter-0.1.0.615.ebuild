@@ -1,22 +1,28 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.0.4.592.ebuild,v 1.1 2011/11/20 07:59:53 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.1.0.615.ebuild,v 1.1 2011/12/18 01:03:30 naota Exp $
 
 EAPI=3
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 inherit ruby-ng
 
-MY_P="${PN}.${PV}"
+if [ "${PV}" = "9999" ]; then
+	ESVN_REPO_URI="svn://toshia.dip.jp/mikutter/trunk"
+	inherit subversion
+	KEYWORDS=""
+else
+	MY_P="${PN}.${PV}"
+	SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 DESCRIPTION="mikutter is simple, powerful and moeful twitter client"
 HOMEPAGE="http://mikutter.hachune.net/"
-SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="+libnotify sound"
 
 DEPEND=""

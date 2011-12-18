@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-9999.ebuild,v 1.2 2011/10/28 22:51:07 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-9999.ebuild,v 1.3 2011/12/18 01:03:30 naota Exp $
 
 EAPI=3
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 inherit ruby-ng
 

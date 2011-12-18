@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mikutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.22 2011/11/20 07:59:53 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.23 2011/12/18 01:03:30 naota Exp $
+
+  18 Dec 2011; Naohiro Aota <naota@gentoo.org> mikutter-9999.ebuild:
+  Drop ruby18 support from -9999
 
 *mikutter-0.0.4.592 (20 Nov 2011)
 *mikutter-0.0.3.592 (20 Nov 2011)
