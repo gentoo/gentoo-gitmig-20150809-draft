@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10-r2.ebuild,v 1.1 2011/12/08 23:35:32 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.12.ebuild,v 1.1 2011/12/18 10:52:55 billie Exp $
 
 EAPI=4
 
@@ -126,9 +126,9 @@ src_prepare() {
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/335662
 	epatch "${FILESDIR}"/${PN}-3.9.12-systray.patch
 
-	# SYSFS deprecated but kept upstream for compatibility reasons
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/346390
-	epatch "${FILESDIR}"/${PN}-3.11.10-udev-attrs.patch
+	# Let 56-hpmud_support.rules call hp-mkuri to make it work with newer udev
+	# Upstream bug: None
+	epatch "${FILESDIR}"/${P}-udev-rules.patch
 
 	# CVE-2010-4267 SNMP Response Processing Buffer Overflow Vulnerability
 	# http://secunia.com/advisories/42956/
@@ -243,8 +243,8 @@ src_install() {
 	# Gentoo Bug: #201023
 	rm -f "${D}"/etc/sane.d/dll.conf || die
 
-	rm -f "${D}"/usr/share/doc/hplip-3.11.10-r1/{copyright,README_LIBJPG,COPYING} || die
-	rmdir "${D}"/usr/share/doc/hplip-3.11.10-r1/ >/dev/null
+	rm -f "${D}"/usr/share/doc/${P}/{copyright,README_LIBJPG,COPYING} || die
+	rmdir "${D}"/usr/share/doc/${P}/ >/dev/null
 
 	# Remove hal fdi files
 	rm -rf "${D}"/usr/share/hal  || die
