@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.58 2011/10/29 15:07:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.59 2011/12/18 00:00:45 dilfridge Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -556,6 +556,9 @@ kde4-meta_change_cmakelists() {
 				sed -e '/startkde/s/^/#DONOTINSTALL /' \
 					-i CMakeLists.txt || die "${LINENO}: sed died in the kdebase-startkde collision prevention section"
 			fi
+			# Remove workspace target prefix in order to get direct linking to workspace libs
+			sed -e '/set(KDE4WORKSPACE_TARGET_PREFIX/s/^/#OVERRIDE /' \
+				-i CMakeLists.txt || die "${LINENO}: sed died in KDE4WORKSPACE_TARGET_PREFIX removal section"
 			# Strip EXPORT feature section from workspace for KDE4 versions > 4.1.82
 			if [[ ${PN} != libkworkspace ]]; then
 				sed -e '/install(FILES ${CMAKE_CURRENT_BINARY_DIR}\/KDE4WorkspaceConfig.cmake/,/^[[:space:]]*FILE KDE4WorkspaceLibraryTargets.cmake )[[:space:]]*^/d' \

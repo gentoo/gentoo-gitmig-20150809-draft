@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.110 2011/10/29 15:07:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.111 2011/12/18 00:00:45 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -12,6 +12,13 @@
 #
 # NOTE: KDE 4 ebuilds currently support EAPI "3".  This will be reviewed
 # over time as new EAPI versions are approved.
+
+# @ECLASS-VARIABLE: KDE_SELINUX_MODULE
+# @DESCRIPTION:
+# If set to "none", do nothing.
+# For any other value, add selinux to IUSE, and depending on that useflag
+# add a dependency on sec-policy/selinux-${KDE_SELINUX_MODULE} to (R)DEPEND
+: ${KDE_SELINUX_MODULE:=none}
 
 # @ECLASS-VARIABLE: VIRTUALX_REQUIRED
 # @DESCRIPTION:
@@ -192,10 +199,10 @@ esac
 # @ECLASS-VARIABLE: QT_MINIMAL
 # @DESCRIPTION:
 # Determine version of qt we enforce as minimal for the package.
-if version_is_at_least 4.5.50 "${KDE_MINIMAL}"; then
-	QT_MINIMAL="${QT_MINIMAL:-4.7.0}"
+if version_is_at_least 4.7.80 "${KDE_MINIMAL}"; then
+	QT_MINIMAL="${QT_MINIMAL:-4.7.4}"
 else
-	QT_MINIMAL="${QT_MINIMAL:-4.6.3}"
+	QT_MINIMAL="${QT_MINIMAL:-4.7.0}"
 fi
 
 # Declarative dependencies
@@ -381,6 +388,14 @@ case ${KDE_HANDBOOK} in
 esac
 unset kdehandbookdepend kdehandbookrdepend
 
+case ${KDE_SELINUX_MODULE} in
+	none)	;;
+	*)
+		IUSE+=" selinux"
+		kdecommondepend+=" selinux? ( sec-policy/selinux-${KDE_SELINUX_MODULE} )"
+		;;
+esac
+
 case ${KDE_REQUIRED} in
 	always)
 		IUSE+=" aqua"
@@ -437,7 +452,7 @@ _calculate_src_uri() {
 	case ${KDEBASE} in
 		kde-base)
 			case ${PV} in
-				4.[456].8[05] | 4.[456].9[023568])
+				4.[456789].8[05] | 4.[456789].9[023568])
 					# Unstable KDE SC releases
 					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2"
 					if ! version_is_at_least 4.6.80 ${PV}
@@ -600,6 +615,11 @@ debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: SRC_URI is ${SRC_URI}"
 kde4-base_pkg_setup() {
 	debug-print-function ${FUNCNAME} "$@"
 
+	if has handbook ${IUSE} || has "+handbook" ${IUSE} && [ "${KDE_HANDBOOK}" != optional ] ; then
+		eqawarn "Handbook support is enabled via KDE_HANDBOOK=optional in the ebuild."
+		eqawarn "Please do not just set IUSE=handbook, as this leads to dependency errors."
+	fi
+
 	if use_if_iuse kdeprefix; then
 		eerror "Sorry, kdeprefix support has been removed."
 		eerror "Please remove kdeprefix from your USE variable."
@@ -720,27 +740,6 @@ kde4-base_src_prepare() {
 	if [[ -n ${KMLOADLIBS} ]] ; then
 		load_library_dependencies
 	fi
-
-	# Replace KDE4Workspace library targets
-	find "${S}" -name CMakeLists.txt \
-		-exec sed -i -r \
-			-e 's/\$\{KDE4WORKSPACE_TASKMANAGER_(LIBRARY|LIBS)\}/taskmanager/g' \
-			-e 's/\$\{KDE4WORKSPACE_KWORKSPACE_(LIBRARY|LIBS)\}/kworkspace/g' \
-			-e 's/\$\{KDE4WORKSPACE_SOLIDCONTROLIFACES_(LIBRARY|LIBS)\}/solidcontrolifaces/g' \
-			-e 's/\$\{KDE4WORKSPACE_SOLIDCONTROL_(LIBRARY|LIBS)\}/solidcontrol/g' \
-			-e 's/\$\{KDE4WORKSPACE_PROCESSUI_(LIBRARY|LIBS)\}/processui/g' \
-			-e 's/\$\{KDE4WORKSPACE_LSOFUI_(LIBRARY|LIBS)\}/lsofui/g' \
-			-e 's/\$\{KDE4WORKSPACE_PLASMACLOCK_(LIBRARY|LIBS)\}/plasmaclock/g' \
-			-e 's/\$\{KDE4WORKSPACE_NEPOMUKQUERYCLIENT_(LIBRARY|LIBS)\}/nepomukqueryclient/g' \
-			-e 's/\$\{KDE4WORKSPACE_NEPOMUKQUERY_(LIBRARY|LIBS)\}/nepomukquery/g' \
-			-e 's/\$\{KDE4WORKSPACE_KSCREENSAVER_(LIBRARY|LIBS)\}/kscreensaver/g' \
-			-e 's/\$\{KDE4WORKSPACE_WEATHERION_(LIBRARY|LIBS)\}/weather_ion/g' \
-			-e 's/\$\{KDE4WORKSPACE_KWINEFFECTS_(LIBRARY|LIBS)\}/kwineffects/g' \
-			-e 's/\$\{KDE4WORKSPACE_KDECORATIONS_(LIBRARY|LIBS)\}/kdecorations/g' \
-			-e 's/\$\{KDE4WORKSPACE_KSGRD_(LIBRARY|LIBS)\}/ksgrd/g' \
-			-e 's/\$\{KDE4WORKSPACE_KEPHAL_(LIBRARY|LIBS)\}/kephal/g' \
-			{} + \
-		|| die 'failed to replace KDE4Workspace library targets'
 
 	# Hack for manuals relying on outdated DTD, only outside kde-base/koffice/...
 	if [[ -z ${KDEBASE} ]]; then

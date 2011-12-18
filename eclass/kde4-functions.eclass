@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.57 2011/10/06 14:13:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.58 2011/12/18 00:00:45 dilfridge Exp $
 
 inherit versionator
 
@@ -417,11 +417,6 @@ add_kdebase_dep() {
 	fi
 
 	[[ -z ${1} ]] && die "Missing parameter"
-
-	# There will be no kdelibs 4.8+ (the next kdelibs will be a non-BC 5.0, apparently)
-	if [[ ${1} == kdelibs ]] && version_is_at_least 4.7.50 ${ver}; then
-		ver=4.7.1
-	fi
 
 	echo " >=kde-base/${1}-${ver}:4[aqua=${2:+,${2}}]"
 }
