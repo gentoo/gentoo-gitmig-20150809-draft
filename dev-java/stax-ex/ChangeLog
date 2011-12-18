@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/stax-ex
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stax-ex/ChangeLog,v 1.7 2008/10/11 17:54:25 serkan Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stax-ex/ChangeLog,v 1.8 2011/12/18 19:29:23 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> stax-ex-1.0-r1.ebuild:
+  Stable for AMD64, wrt bug #393955
 
 *stax-ex-1.0-r1 (11 Oct 2008)
 
