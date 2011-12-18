@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/syslog-summary-1.14.ebuild,v 1.4 2011/10/09 17:08:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/syslog-summary-1.14.ebuild,v 1.5 2011/12/18 17:44:35 armin76 Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="mirror://github/dpaleino/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 DEPEND=""
