@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.21 2011/12/14 09:12:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.22 2011/12/18 17:05:07 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> unifdef-2.6.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #394069
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> unifdef-2.6.ebuild:
   x86 stable wrt bug #394069
