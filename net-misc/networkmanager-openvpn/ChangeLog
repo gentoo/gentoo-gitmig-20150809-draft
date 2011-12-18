@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager-openvpn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.26 2011/12/15 14:31:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.27 2011/12/18 20:15:51 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  networkmanager-openvpn-0.8.2-r1.ebuild:
+  x86 stable wrt bug #386923
 
   15 Dec 2011; Agostino Sarubbo <ago@gentoo.org>
   networkmanager-openvpn-0.8.2-r1.ebuild:
