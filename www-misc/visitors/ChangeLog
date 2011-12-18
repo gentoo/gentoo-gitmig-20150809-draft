@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/visitors
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.12 2010/09/28 19:30:26 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.13 2011/12/18 19:05:29 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> visitors-0.7-r1.ebuild:
+  Stable for AMD64, wrt bug #394003
 
 *visitors-0.7-r1 (28 Sep 2010)
 
