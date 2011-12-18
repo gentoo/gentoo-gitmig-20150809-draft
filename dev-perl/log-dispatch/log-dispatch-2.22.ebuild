@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/log-dispatch-2.22.ebuild,v 1.7 2009/12/10 09:46:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/log-dispatch-2.22.ebuild,v 1.8 2011/12/18 16:13:24 armin76 Exp $
 
 MODULE_AUTHOR=DROLSKY
 MY_PN=Log-Dispatch
@@ -12,7 +12,7 @@ DESCRIPTION="Dispatches messages to multiple Log::Dispatch::* objects"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 SRC_TEST="do"
