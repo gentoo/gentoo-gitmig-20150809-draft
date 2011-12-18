@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/maq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/ChangeLog,v 1.8 2011/12/15 22:37:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/ChangeLog,v 1.9 2011/12/18 19:53:20 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> maq-0.7.1-r1.ebuild:
+  x86 stable wrt bug #393759
 
   15 Dec 2011; Justin Lecher <jlec@gentoo.org> maq-0.7.1-r1.ebuild:
   Add missing dependency on sys-libs/zlib

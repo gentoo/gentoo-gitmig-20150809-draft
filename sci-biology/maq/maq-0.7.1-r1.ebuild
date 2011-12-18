@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/maq-0.7.1-r1.ebuild,v 1.4 2011/12/15 22:37:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/maq-0.7.1-r1.ebuild,v 1.5 2011/12/18 19:53:20 phajdan.jr Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}"
