@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raul
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.11 2011/01/13 08:55:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.12 2011/12/18 19:23:42 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> raul-0.8.0.ebuild:
+  Stable for AMD64, wrt bug #393869
 
 *raul-0.8.0 (13 Jan 2011)
 
