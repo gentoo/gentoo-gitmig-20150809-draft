@@ -1,6 +1,16 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.54 2011/08/02 05:50:11 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.55 2011/12/18 07:13:04 bicatali Exp $
+
+*geant-4.9.5 (18 Dec 2011)
+*geant-4.9.4_p03 (18 Dec 2011)
+
+  18 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  -geant-4.9.3_p02-r1.ebuild, -geant-4.9.4_p01.ebuild, +geant-4.9.4_p03.ebuild,
+  +files/geant-4.9.4-trajectory.patch, files/geant-4.9.4-zlib.patch,
+  +geant-4.9.5.ebuild:
+  Version bumps. Re-introduced some older flags and fixed linking of
+  zlib. Added patch for source trajectory example (bug #365171), thanks	Matthias Nagl.
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> geant-4.9.2_p02.ebuild,
   geant-4.9.3_p02-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p01.ebuild,v 1.6 2011/06/28 13:34:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5.ebuild,v 1.1 2011/12/18 07:13:04 bicatali Exp $
 
 EAPI=4
 
@@ -16,12 +16,12 @@ HOMEPAGE="http://geant4.cern.ch/"
 SRC_COM="http://geant4.cern.ch/support/source"
 SRC_URI="${SRC_COM}/${MYP}.tar.gz"
 GEANT4_DATA="
-	G4NDL.3.14
-	G4EMLOW.6.19
-	G4RadioactiveDecay.3.3
-	G4NEUTRONXS.1.0
-	G4PII.1.2
-	G4PhotonEvaporation.2.1
+	G4NDL.4.0
+	G4EMLOW.6.23
+	G4RadioactiveDecay.3.4
+	G4NEUTRONXS.1.1
+	G4PII.1.3
+	G4PhotonEvaporation.2.2
 	G4ABLA.3.0
 	RealSurface.1.0"
 for d in ${GEANT4_DATA}; do
@@ -31,30 +31,41 @@ done
 LICENSE="geant4"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="+data dawn examples gdml geant3 granular qt4 static-libs vrml zlib"
+IUSE="+data dawn examples gdml geant3 granular motif opengl openinventor
+	raytracerx qt4 static-libs test vrml zlib"
 
-RDEPEND="
-	virtual/fortran
-	>=sci-physics/clhep-2.1
-	qt4? ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 )
+RDEPEND="virtual/fortran
+	>=sci-physics/clhep-2.1.1
+	dawn? ( media-gfx/dawn )
 	gdml? ( dev-libs/xerces-c )
 	geant3? ( sci-physics/geant:3 )
-	dawn? ( media-gfx/dawn )
+	motif? ( x11-libs/openmotif:0 )
+	openinventor? ( media-libs/openinventor )
+	raytracerx? ( x11-libs/libX11 x11-libs/libXmu )
+	qt4? ( x11-libs/qt-gui:4 opengl? ( x11-libs/qt-opengl:4 ) )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MYP}"
 
-PATCHES=( "${FILESDIR}"/${PN}-4.9.4-{no-benchmarks,zlib,libdir,datadir,no-examples}.patch )
+PATCHES=( "${FILESDIR}"/${PN}-4.9.4-zlib.patch )
 
 src_configure() {
 	mycmakeargs=(
+		-DGEANT4_USE_SYSTEM_CLHEP=ON
+		-DCMAKE_SKIP_RPATH=ON
 		$(cmake-utils_use dawn GEANT4_USE_NETWORKDAWN)
 		$(cmake-utils_use gdml GEANT4_USE_GDML)
 		$(cmake-utils_use geant3 GEANT4_USE_GEANT3TOGEANT4)
 		$(cmake-utils_use granular GEANT4_BUILD_GRANULAR_BUILD)
-		$(cmake-utils_use vrml GEANT4_USE_NETWORKVRML)
+		$(cmake-utils_use dawn GEANT4_USE_NETWORKDAWN)
+		$(cmake-utils_use motif GEANT4_USE_XM)
+		$(cmake-utils_use opengl GEANT4_USE_OPENGL_X11)
+		$(cmake-utils_use openinventor GEANT4_USE_INVENTOR)
 		$(cmake-utils_use qt4 GEANT4_USE_QT)
+		$(cmake-utils_use raytracerx GEANT4_USE_RAYTRACER_X11)
+		$(cmake-utils_use test GEANT4_ENABLE_TESTING)
+		$(cmake-utils_use vrml GEANT4_USE_NETWORKVRML)
 		$(cmake-utils_use zlib GEANT4_USE_SYSTEM_ZLIB)
 		$(cmake-utils_use_build static-libs STATIC_LIBS)
 	)
