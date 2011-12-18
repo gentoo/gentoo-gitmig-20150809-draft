@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.118 2011/12/12 16:20:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.119 2011/12/18 19:46:13 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kde-l10n-4.6.5.ebuild, -kde-l10n-4.6.5-r1.ebuild:
+  Drop KDE 4.6.5
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kde-l10n-4.6.5.ebuild, -kde-l10n-4.6.5-r1.ebuild:
+  Drop KDE 4.6.5
 
   12 Dec 2011; Johannes Huber <johu@gentoo.org> kde-l10n-4.7.4.ebuild:
   Remove double defined lang si. Thanks Avfrever to point that out.

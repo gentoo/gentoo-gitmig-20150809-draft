@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstartperf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.84 2011/12/11 18:52:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.85 2011/12/18 19:46:13 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kstartperf-4.6.5.ebuild:
+  Drop KDE 4.6.5
 
 *kstartperf-4.7.4 (11 Dec 2011)
 

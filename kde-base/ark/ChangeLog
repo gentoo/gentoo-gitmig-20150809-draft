@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.209 2011/12/11 18:52:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.210 2011/12/18 19:46:36 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> -ark-4.6.5.ebuild,
+  -ark-4.6.5-r1.ebuild:
+  Drop KDE 4.6.5
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> -ark-4.6.5.ebuild,
+  -ark-4.6.5-r1.ebuild:
+  Drop KDE 4.6.5
 
 *ark-4.7.4 (11 Dec 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konquest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.190 2011/12/11 18:52:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.191 2011/12/18 19:46:35 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -konquest-4.6.5.ebuild:
+  Drop KDE 4.6.5
 
 *konquest-4.7.4 (11 Dec 2011)
 

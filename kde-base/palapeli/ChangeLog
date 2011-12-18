@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/palapeli
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.48 2011/12/11 18:52:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.49 2011/12/18 19:46:35 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -palapeli-4.6.5.ebuild:
+  Drop KDE 4.6.5
 
 *palapeli-4.7.4 (11 Dec 2011)
 

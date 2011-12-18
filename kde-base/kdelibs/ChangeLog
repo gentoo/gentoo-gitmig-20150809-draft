@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.810 2011/12/16 22:26:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.811 2011/12/18 19:46:19 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdelibs-4.6.5-r2.ebuild:
+  Drop KDE 4.6.5
 
   16 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kdelibs-4.7.3-r1.ebuild, kdelibs-4.7.3-r11.ebuild, kdelibs-4.7.4.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.113 2011/12/12 01:12:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.114 2011/12/18 19:46:25 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdeplasma-addons-4.6.5.ebuild:
+  Drop KDE 4.6.5
 
   12 Dec 2011; Jonathan Callen <abcd@gentoo.org>
   -files/kdeplasma-addons-4.4.3-cmake.patch,

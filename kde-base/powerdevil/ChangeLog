@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.95 2011/12/12 01:34:01 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.96 2011/12/18 19:46:30 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -powerdevil-4.6.5.ebuild:
+  Drop KDE 4.6.5
 
   12 Dec 2011; Jonathan Callen <abcd@gentoo.org>
   -files/powerdevil-4.4.3-fix-sleep-205453.patch,

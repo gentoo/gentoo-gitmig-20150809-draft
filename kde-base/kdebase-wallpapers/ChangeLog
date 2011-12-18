@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-wallpapers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.69 2011/08/15 19:03:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.70 2011/12/18 19:46:11 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdebase-wallpapers-4.6.5.ebuild:
+  Drop KDE 4.6.5
 
   15 Aug 2011; Markus Meier <maekke@gentoo.org>
   kdebase-wallpapers-4.6.5.ebuild:

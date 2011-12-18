@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-csharp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.68 2011/12/12 01:01:31 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.69 2011/12/18 19:46:20 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdebindings-csharp-4.6.5.ebuild:
+  Drop KDE 4.6.5
 
   12 Dec 2011; Jonathan Callen <abcd@gentoo.org>
   -files/kdebindings-csharp-4.4.1-make-stuff-optional.patch:

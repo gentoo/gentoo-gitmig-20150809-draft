@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.109 2011/12/12 00:48:24 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.110 2011/12/18 19:46:39 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kalgebra-4.6.5.ebuild:
+  Drop KDE 4.6.5
 
   12 Dec 2011; Jonathan Callen <abcd@gentoo.org>
   -files/kalgebra-4.3.2-solaris-graph2d.patch:

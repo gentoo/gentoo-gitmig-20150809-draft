@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.115 2011/12/18 00:03:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.116 2011/12/18 19:46:32 dilfridge Exp $
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkworkspace-4.6.5-r1.ebuild:
+  Drop KDE 4.6.5
 
 *libkworkspace-4.7.4-r1 (18 Dec 2011)
 *libkworkspace-4.7.3-r1 (18 Dec 2011)
