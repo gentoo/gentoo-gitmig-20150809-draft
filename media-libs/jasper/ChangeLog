@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.60 2011/12/17 20:51:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.61 2011/12/18 01:30:46 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> jasper-1.900.1-r4.ebuild:
+  Stable for X86/AMD64, wrt security bug #394879
 
 *jasper-1.900.1-r4 (17 Dec 2011)
 
