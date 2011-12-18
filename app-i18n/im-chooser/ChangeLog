@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-chooser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-chooser/ChangeLog,v 1.4 2011/11/28 08:10:06 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-chooser/ChangeLog,v 1.5 2011/12/18 10:05:55 naota Exp $
+
+  18 Dec 2011; Naohiro Aota <naota@gentoo.org> im-chooser-1.5.2.ebuild:
+  Re-apply imchooserui.patch
 
 *im-chooser-1.5.2 (28 Nov 2011)
 
