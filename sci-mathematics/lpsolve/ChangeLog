@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/lpsolve
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/lpsolve/ChangeLog,v 1.4 2011/12/11 21:52:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/lpsolve/ChangeLog,v 1.5 2011/12/18 20:40:56 halcy0n Exp $
+
+  18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> lpsolve-5.5.2.0.ebuild:
+  Stable for ppc; bug #387187
 
   11 Dec 2011; Markus Meier <maekke@gentoo.org> lpsolve-5.5.2.0.ebuild:
   x86 stable, bug #387187
