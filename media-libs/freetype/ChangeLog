@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.319 2011/11/26 12:53:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.320 2011/12/18 21:50:05 halcy0n Exp $
+
+  18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> freetype-2.4.8.ebuild:
+  Stable for ppc/ppc64; bug #390623
 
   26 Nov 2011; Raúl Porcel <armin76@gentoo.org> freetype-2.4.8.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #390623
