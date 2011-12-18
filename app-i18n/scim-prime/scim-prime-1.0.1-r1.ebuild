@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/scim-prime-1.0.1-r1.ebuild,v 1.1 2011/12/02 00:42:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/scim-prime-1.0.1-r1.ebuild,v 1.2 2011/12/18 20:03:09 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/scim-imengine/29156/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="static-libs"
 
 RDEPEND=">=app-i18n/scim-1.0
