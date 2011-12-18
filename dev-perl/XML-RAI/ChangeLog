@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-RAI
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/ChangeLog,v 1.17 2011/12/18 16:15:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/ChangeLog,v 1.18 2011/12/18 19:51:46 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  XML-RAI-1.303.100.ebuild:
+  x86 stable wrt bug #393751
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> XML-RAI-1.301.ebuild,
   XML-RAI-1.302.200.ebuild, XML-RAI-1.303.100.ebuild:
