@@ -1,10 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.2.ebuild,v 1.1 2011/12/18 09:42:39 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.2.ebuild,v 1.2 2011/12/18 19:23:13 sera Exp $
 
 EAPI="4"
 
 inherit java-vm-2 eutils prefix versionator
+
+# This URIs need to be updated when bumping!
+JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u2-download-1377129.html"
+JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 
 UPDATE="$(get_version_component_range 4)"
 UPDATE="${UPDATE#0}"
@@ -18,21 +22,55 @@ SOL_AMD64_AT="jdk-${MY_PV}-solaris-x64.tar.gz"
 SOL_SPARC_AT="jdk-${MY_PV}-solaris-sparc.tar.gz"
 SOL_SPARCv9_AT="jdk-${MY_PV}-solaris-sparcv9.tar.gz"
 
-# This URIs need to be updated when bumping!
-JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u2-download-1377129.html"
-JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
+X86_DEMOS="jdk-${MY_PV}-linux-i586-demos.tar.gz"
+AMD64_DEMOS="jdk-${MY_PV}-linux-x64-demos.tar.gz"
+SOL_X86_DEMOS="jdk-${MY_PV}-solaris-i586-demos.tar.gz"
+SOL_AMD64_DEMOS="jdk-${MY_PV}-solaris-x64-demos.tar.gz"
+SOL_SPARC_DEMOS="jdk-${MY_PV}-solaris-sparc-demos.tar.gz"
+SOL_SPARCv9_DEMOS="jdk-${MY_PV}-solaris-sparcv9-demos.tar.gz"
 
 JCE_DIR="UnlimitedJCEPolicy"
 JCE_FILE="${JCE_DIR}JDK7.zip"
 
 DESCRIPTION="Oracle's Java SE Development Kit"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
-SRC_URI="x86? ( ${X86_AT} )
-	amd64? ( ${AMD64_AT} )
-	x86-solaris? ( ${SOL_X86_AT} )
-	x64-solaris? ( ${SOL_X86_AT} ${SOL_AMD64_AT} )
-	sparc-solaris? ( ${SOL_SPARC_AT} )
-	sparc64-solaris? ( ${SOL_SPARC_AT} ${SOL_SPARCv9_AT} )
+SRC_URI="
+	x86? (
+		${X86_AT}
+		examples? (
+			${X86_DEMOS}
+		)
+	)
+	amd64? (
+		${AMD64_AT}
+		examples? (
+			${AMD64_DEMOS}
+		)
+	)
+	x86-solaris? (
+		${SOL_X86_AT}
+		examples? (
+			${SOL_X86_DEMOS}
+		)
+	)
+	x64-solaris? (
+		${SOL_X86_AT} ${SOL_AMD64_AT}
+		examples? (
+			${SOL_X86_DEMOS} ${SOL_AMD64_DEMOS}
+		)
+	)
+	sparc-solaris? (
+		${SOL_SPARC_AT}
+		examples? (
+			${SOL_SPARC_DEMOS}
+		)
+	)
+	sparc64-solaris? (
+		${SOL_SPARC_AT} ${SOL_SPARCv9_AT}
+		examples? (
+			${SOL_SPARC_DEMOS} ${SOL_SPARCv9_DEMOS}
+		)
+	)
 	jce? ( ${JCE_FILE} )"
 
 LICENSE="Oracle-BCLA-JavaSE"
@@ -75,9 +113,29 @@ pkg_nofetch() {
 		AT="${SOL_SPARC_AT} and ${SOL_SPARCv9_AT}"
 	fi
 
+	if use x86; then
+		DEMOS=${X86_DEMOS}
+	elif use amd64; then
+		DEMOS=${AMD64_DEMOS}
+	elif use x86-solaris; then
+		DEMOS=${SOL_X86_DEMOS}
+	elif use x64-solaris; then
+		DEMOS="${SOL_X86_DEMOS} and ${SOL_AMD64_DEMOS}"
+	elif use sparc-solaris; then
+		DEMOS=${SOL_SPARC_AT}
+	elif use sparc64-solaris; then
+		DEMOS="${SOL_SPARC_AT_DEMOS} and ${SOL_SPARCv9_DEMOS}"
+	fi
+
 	einfo "Please download ${AT} from:"
 	einfo "${JDK_URI}"
 	einfo "and move it to ${DISTDIR}"
+
+	if use examples; then
+		einfo "Also download ${DEMOS} from:"
+		einfo ${JDK_URI}
+		einfo "and move it to ${DISTDIR}"
+	fi
 
 	if use jce; then
 		einfo "Also download ${JCE_FILE} from:"
