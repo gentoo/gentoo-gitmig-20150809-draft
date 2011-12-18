@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.43 2011/10/24 18:20:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.44 2011/12/18 21:33:50 flameeyes Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -283,10 +283,6 @@ ruby_get_use_targets() {
 	echo $t
 }
 
-if [[ ${EAPI:-0} -ge 4 && ${RUBY_OPTIONAL} != "yes" ]]; then
-	REQUIRED_USE=" || ( $(ruby_get_use_targets) )"
-fi
-
 # @FUNCTION: ruby_implementations_depend
 # @RETURN: Dependencies suitable for injection into DEPEND and RDEPEND.
 # @DESCRIPTION:
@@ -311,14 +307,14 @@ ruby_implementations_depend() {
 	echo "${depend}"
 }
 
-for _ruby_implementation in ${USE_RUBY}; do
-	IUSE="${IUSE} ruby_targets_${_ruby_implementation}"
-done
+IUSE+=" $(ruby_get_use_targets)"
 # If you specify RUBY_OPTIONAL you also need to take care of
 # ruby useflag and dependency.
 if [[ ${RUBY_OPTIONAL} != yes ]]; then
 	DEPEND="${DEPEND} $(ruby_implementations_depend)"
 	RDEPEND="${RDEPEND} $(ruby_implementations_depend)"
+
+	[[ ${EAPI:-0} -ge 4 ]] && REQUIRED_USE+=" || ( $(ruby_get_use_targets) )"
 fi
 
 _ruby_invoke_environment() {
