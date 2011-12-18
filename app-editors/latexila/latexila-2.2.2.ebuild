@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.2.2.ebuild,v 1.1 2011/12/17 09:06:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.2.2.ebuild,v 1.2 2011/12/18 03:24:42 tetromino Exp $
 
 EAPI="4"
 CMAKE_MIN_VERSION="2.6.4"
@@ -19,7 +19,7 @@ IUSE="gnome +latexmk rubber"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.28:2
-	dev-libs/libgee
+	dev-libs/libgee:0
 	dev-libs/libunique:1
 	>=x11-libs/gtk+-2.16:2
 	>=x11-libs/gtksourceview-2.10:2.0
