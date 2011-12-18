@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musescore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.23 2011/11/13 07:31:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.24 2011/12/18 18:14:52 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> musescore-0.9.4.ebuild:
+  Drop sparc keywords
 
 *musescore-1.1 (13 Nov 2011)
 
