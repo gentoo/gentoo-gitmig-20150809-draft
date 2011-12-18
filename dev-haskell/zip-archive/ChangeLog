@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/zip-archive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/ChangeLog,v 1.10 2011/04/23 11:11:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/ChangeLog,v 1.11 2011/12/18 20:05:41 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  zip-archive-0.1.1.7.ebuild:
+  x86 stable wrt bug #393799
 
 *zip-archive-0.1.1.7 (23 Apr 2011)
 
