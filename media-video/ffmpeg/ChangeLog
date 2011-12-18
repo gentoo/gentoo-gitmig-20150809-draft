@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.515 2011/12/17 14:08:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.516 2011/12/18 22:11:07 halcy0n Exp $
+
+  18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> ffmpeg-0.7.8.ebuild:
+  Stable for ppc/ppc64; bug #391421
 
   17 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.9.ebuild,
   ffmpeg-9999.ebuild:
