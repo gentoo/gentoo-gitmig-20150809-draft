@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/clockywock-0.2.3f.ebuild,v 1.4 2011/12/15 23:05:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/clockywock-0.2.3f.ebuild,v 1.5 2011/12/18 20:16:17 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="https://dentar.com/opensource/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses"
