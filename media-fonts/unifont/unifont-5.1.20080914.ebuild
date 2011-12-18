@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-5.1.20080914.ebuild,v 1.5 2011/12/15 15:12:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-5.1.20080914.ebuild,v 1.6 2011/12/18 15:49:37 armin76 Exp $
 
 inherit eutils font toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://unifoundry.com/pub/debian/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-lang/perl"
