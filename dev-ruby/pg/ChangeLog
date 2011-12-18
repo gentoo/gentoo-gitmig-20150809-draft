@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.41 2011/12/13 00:57:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.42 2011/12/18 21:13:51 flameeyes Exp $
+
+*pg-0.12.0-r1 (18 Dec 2011)
+
+  18 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> +pg-0.12.0-r1.ebuild,
+  -pg-0.12.0.ebuild:
+  Fix dependency over rake-compiler that was declared a runtime dependency in
+  the spec file; bump to EAPI=4 to be on the safe side (with REQUIRE_USE).
 
 *pg-0.12.0 (13 Dec 2011)
 

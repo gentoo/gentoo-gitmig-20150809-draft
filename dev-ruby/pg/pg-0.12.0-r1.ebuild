@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.12.0.ebuild,v 1.1 2011/12/13 00:57:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.12.0-r1.ebuild,v 1.1 2011/12/18 21:13:51 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_TEST_TASK=""
@@ -34,16 +34,20 @@ ruby_add_bdepend "
 		|| ( >=dev-ruby/yard-0.6.1 dev-ruby/rdoc ) )
 	test? ( dev-ruby/rspec:2 )"
 
+all_ruby_prepare() {
+	# this is required to make rake-compiler a build-time only
+	# dependency rather than a runtime one. Without this, bundler will
+	# fail to load pg if rake-compiler is not installed as well (which
+	# is silly).
+	sed -i -e 's|:runtime|:development|' ../metadata || die
+}
+
 each_ruby_configure() {
-	pushd ext
-	${RUBY} extconf.rb || die "extconf.rb failed"
-	popd
+	${RUBY} -C ext extconf.rb || die "extconf.rb failed"
 }
 
 each_ruby_compile() {
-	pushd ext
-	emake CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}" || die "emake failed"
-	popd
+	emake -C ext CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}"
 	cp ext/*.so lib || die
 }
 
