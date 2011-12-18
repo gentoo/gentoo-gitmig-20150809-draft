@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2-r1.ebuild,v 1.5 2011/12/14 16:36:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2-r1.ebuild,v 1.6 2011/12/18 05:29:48 naota Exp $
 
 EAPI="1"
 
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.4:2
+RDEPEND="dev-libs/glib
+	x11-libs/pango
+	>=x11-libs/gtk+-2.4:2
 	>=app-i18n/freewnn-1.1.1_alpha21-r1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

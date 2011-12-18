@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-freewnn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/ChangeLog,v 1.13 2011/12/14 16:36:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/ChangeLog,v 1.14 2011/12/18 05:29:48 naota Exp $
+
+  18 Dec 2011; Naohiro Aota <naota@gentoo.org> im-freewnn-0.0.2-r1.ebuild:
+  Add missing dependecies.
 
   14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> im-freewnn-0.0.2-r1.ebuild:
   Stable for AMD64, wrt bug #392875
@@ -8,6 +11,9 @@
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   im-freewnn-0.0.2-r1.ebuild:
   x86 stable wrt bug #392875
+
+  18 Dec 2011; Naohiro Aota <naota@gentoo.org> im-freewnn-0.0.2-r1.ebuild:
+  Add missing dependecies.
 
   06 Dec 2011; Naohiro Aota <naota@gentoo.org> im-freewnn-0.0.2-r1.ebuild,
   +files/im-freewnn-0.0.2-implicit-declaration.patch:
