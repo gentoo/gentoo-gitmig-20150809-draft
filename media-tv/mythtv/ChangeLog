@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.334 2011/07/28 21:10:59 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.335 2011/12/18 04:15:55 rich0 Exp $
+
+*mythtv-0.24.1_p20110524 (17 Dec 2011)
+
+  17 Dec 2011; Richard Freeman <rich0@gentoo.org> +files/ffmpeg-sync.patch,
+  +files/fixLdconfSandbox.patch, +files/mythtv-v4l2-fix.2.patch,
+  +mythtv-0.24.1_p20110524.ebuild:
+  Introduce mythtv 0.24.1
 
   28 Jul 2011; Jesus Rivero <neurogeek@gentoo.org>
   mythtv-0.23.1_p27077.ebuild:

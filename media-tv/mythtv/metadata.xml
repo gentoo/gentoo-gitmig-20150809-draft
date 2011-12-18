@@ -19,6 +19,7 @@
 		experience with MythTV since its early versions and discussed with
 		other MythTV maintainers and users. Does not rely on KDE being installed
 		like most methods do.</flag>
+	<flag name="bluray">Pulls in libbluray for BluRay support.</flag>
 	<flag name="debug">Instructs Qt to use the 'debug' target instead of
 		'release' target. If your MythTV is crashing or you need a backtrace,
 		you need to compile it with this option otherwise the debugging data is
