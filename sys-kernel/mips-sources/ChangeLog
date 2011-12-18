@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.141 2011/09/04 11:18:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.142 2011/12/18 03:54:19 kumba Exp $
+
+*mips-sources-3.1.5 (17 Dec 2011)
+*mips-sources-3.0.9 (17 Dec 2011)
+
+  17 Dec 2011; Joshua Kinard <kumba@gentoo.org> -mips-sources-3.0.4.ebuild,
+  +mips-sources-3.0.9.ebuild, +mips-sources-3.1.5.ebuild:
+  Bump to 3.0.9 and add 3.1.5. Include new patchsets for both that fix an issue
+  in SGI IP32 where ICMPv6 neighbor discovery didn't work.
 
 *mips-sources-3.0.4 (04 Sep 2011)
 
