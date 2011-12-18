@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.60 2011/11/30 12:50:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.61 2011/12/18 17:33:47 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> camlp5-5.14.ebuild,
+  camlp5-6.02.3.ebuild, camlp5-6.02.3_p1.ebuild:
+  Drop sparc keywords
 
 *camlp5-6.02.3_p1 (30 Nov 2011)
 
