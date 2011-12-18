@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.80 2011/07/13 08:47:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.81 2011/12/18 23:22:01 chithanh Exp $
+
+*syslinux-4.05 (18 Dec 2011)
+
+  18 Dec 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +syslinux-4.05.ebuild, +files/syslinux-4.05-asneeded-linking-order.patch,
+  +files/syslinux-4.05-nopie.patch:
+  Version bump.
 
   13 Jul 2011; Thomas Kahle <tomka@gentoo.org> syslinux-4.04.ebuild:
   x86 stable per bug 369791
