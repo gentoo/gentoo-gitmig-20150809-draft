@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.49 2011/12/18 21:33:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.50 2011/12/18 23:38:11 robbat2 Exp $
+
+  18 Dec 2011; Robin H. Johnson <robbat2@gentoo.org> python.eclass:
+  Bug #390691: Be careful about cp call to coreutils with --no-preserve option
+  that might not be available until later in an upgrade.
 
   18 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> ruby-ng.eclass:
   Reorder setting of REQUIRED_USE to stay near IUSE setting; also use

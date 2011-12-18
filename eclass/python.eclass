@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.141 2011/11/30 08:55:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.142 2011/12/18 23:38:11 robbat2 Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1592,8 +1592,14 @@ for file in sorted(files_set):
 
 		popd > /dev/null || die "popd failed"
 
-		if ROOT="/" has_version sys-apps/coreutils; then
+		# This is per bug #390691, without the duplication refactor, and with
+		# the 3-way structure per comment #6. This enable users with old
+		# coreutils to upgrade a lot easier (you need to upgrade python+portage
+		# before coreutils can be upgraded).
+		if ROOT="/" has_version >=sys-apps/coreutils-6.9.90; then
 			cp -fr --preserve=all --no-preserve=context "${intermediate_installation_images_directory}/${PYTHON_ABI}/"* "${D}" || die "Merging of intermediate installation image for Python ABI '${PYTHON_ABI} into installation image failed"
+		elif ROOT="/" has_version sys-apps/coreutils; then
+			cp -fr --preserve=all "${intermediate_installation_images_directory}/${PYTHON_ABI}/"* "${D}" || die "Merging of intermediate installation image for Python ABI '${PYTHON_ABI} into installation image failed"
 		else
 			cp -fpr "${intermediate_installation_images_directory}/${PYTHON_ABI}/"* "${D}" || die "Merging of intermediate installation image for Python ABI '${PYTHON_ABI} into installation image failed"
 		fi
