@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.93 2011/11/03 03:31:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.94 2011/12/18 18:02:17 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> feh-1.16.2.ebuild:
+  alpha/sparc stable wrt #388471
 
 *feh-2.1 (03 Nov 2011)
 
