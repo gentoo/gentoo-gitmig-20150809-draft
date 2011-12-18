@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Task-Weaken
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Task-Weaken/ChangeLog,v 1.18 2011/12/17 18:49:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Task-Weaken/ChangeLog,v 1.19 2011/12/18 19:44:27 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Task-Weaken-1.40.0.ebuild:
+  x86 stable wrt bug #393729
 
   17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> Task-Weaken-1.40.0.ebuild:
   Stable for AMD64, wrt bug #393729
