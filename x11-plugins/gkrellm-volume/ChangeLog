@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-volume
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.32 2010/08/11 13:50:11 lack Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.33 2011/12/18 20:03:43 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gkrellm-volume-2.1.13-r2.ebuild:
+  x86 stable wrt bug #393793
 
 *gkrellm-volume-2.1.13-r2 (11 Aug 2010)
 
