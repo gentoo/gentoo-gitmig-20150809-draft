@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.20 2011/06/07 17:11:15 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.21 2011/12/18 11:16:26 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> vdradmin-am-3.6.8.ebuild:
+  Stable for AMD64, wrt bug #393975
 
 *vdradmin-am-3.6.8 (07 Jun 2011)
 
