@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.62 2011/12/16 21:31:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.63 2011/12/18 17:21:45 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> mercurial-2.0.ebuild:
+  alpha/ia64/sparc stable wrt #393265
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> mercurial-9999.ebuild:
   Added die also to 9999 ebuild, thanks Arfrever for the hint bug #393287
