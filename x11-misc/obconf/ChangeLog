@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.91 2011/10/18 21:52:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.92 2011/12/18 17:44:07 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org>
+  obconf-2.0.3_p20110314-r1.ebuild:
+  alpha/sparc stable wrt #383475
 
 *obconf-2.0.3_p20111019 (18 Oct 2011)
 
