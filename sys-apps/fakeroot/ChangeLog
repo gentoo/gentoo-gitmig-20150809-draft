@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.77 2011/12/18 17:47:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.78 2011/12/18 20:01:16 radhermit Exp $
+
+  18 Dec 2011; Tim Harder <radhermit@gentoo.org> -fakeroot-1.14.4.ebuild:
+  Remove old.
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> fakeroot-1.18.ebuild:
   alpha/sparc stable wrt #386739
