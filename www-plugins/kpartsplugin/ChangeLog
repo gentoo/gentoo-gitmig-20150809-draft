@@ -1,6 +1,12 @@
 # ChangeLog for www-plugins/kpartsplugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/ChangeLog,v 1.3 2011/02/13 20:21:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/ChangeLog,v 1.4 2011/12/18 22:55:13 dilfridge Exp $
+
+*kpartsplugin-20110823 (18 Dec 2011)
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kpartsplugin-20110823.ebuild:
+  Version bump
 
   13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -kpartsplugin-20100723.ebuild, kpartsplugin-20101216.ebuild:
