@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pure-sfv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.14 2010/08/27 05:43:29 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.15 2011/12/18 19:52:17 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pure-sfv-0.3-r1.ebuild:
+  x86 stable wrt bug #393755
 
 *pure-sfv-0.3-r1 (27 Aug 2010)
 
