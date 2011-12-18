@@ -64,7 +64,7 @@ FILES=" libavutil/x86_cpu.h \
         libavformat/internal.h "
 # Files that are sed'ed but not compiled, used to check for availability of
 # some codecs
-FILES="${FILES} libavcodec/allcodecs.c libavformat/allformats.c"
+FILES="${FILES} libavcodec/allcodecs.c libavformat/allformats.c libavfilter/allfilters.c"
 
 for i in ${FILES} ; do
         move_file $i

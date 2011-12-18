@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.825 2011/12/17 18:02:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.826 2011/12/18 14:56:59 aballier Exp $
+
+  18 Dec 2011; Alexis Ballier <aballier@gentoo.org> files/dump_ffmpeg.sh:
+  allfilters.c is also checked, inlude it too
 
   17 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   cosmetics
