@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Encode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.34 2011/11/19 19:35:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.35 2011/12/18 21:26:49 halcy0n Exp $
+
+  18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> perl-Encode-2.40.ebuild:
+  Stable for ppc64; bug #386309
 
   19 Nov 2011; Raúl Porcel <armin76@gentoo.org> perl-Encode-2.40.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable
