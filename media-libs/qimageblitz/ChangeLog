@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qimageblitz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qimageblitz/ChangeLog,v 1.6 2011/12/16 15:36:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qimageblitz/ChangeLog,v 1.7 2011/12/18 16:07:12 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> qimageblitz-0.0.4.ebuild,
+  qimageblitz-0.0.6.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   16 Dec 2011; Jeroen Roovers <jer@gentoo.org> qimageblitz-0.0.6.ebuild:
   Stable for HPPA (bug #392799).
