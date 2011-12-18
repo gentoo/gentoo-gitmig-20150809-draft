@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.73 2011/11/02 15:00:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.74 2011/12/18 18:00:50 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> cyrus-imap-dev-2.4.12.ebuild:
+  sparc stable wrt #388341
 
   02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   cyrus-imap-dev-2.4.12.ebuild:
