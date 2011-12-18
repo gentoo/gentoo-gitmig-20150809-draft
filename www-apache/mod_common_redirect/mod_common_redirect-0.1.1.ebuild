@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_common_redirect/mod_common_redirect-0.1.1.ebuild,v 1.3 2011/12/18 18:18:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_common_redirect/mod_common_redirect-0.1.1.ebuild,v 1.4 2011/12/18 20:08:07 phajdan.jr Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://nodeload.github.com/${GITHUB_AUTHOR}/${GITHUB_PROJECT}/tarball/v
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
