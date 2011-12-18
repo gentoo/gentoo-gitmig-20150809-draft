@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ddd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.64 2011/12/18 01:55:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.65 2011/12/18 20:14:43 phajdan.jr Exp $
+
+  18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ddd-3.3.12-r2.ebuild:
+  x86 stable wrt bug #393831
 
   18 Dec 2011; Maciej Mrozowski <reavertm@gentoo.org> ddd-3.3.12-r2.ebuild:
   Added missing ncurses and X11 dependencies.
