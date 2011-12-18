@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-mlist
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mlist/ChangeLog,v 1.9 2009/03/15 14:18:26 zzam Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mlist/ChangeLog,v 1.10 2011/12/18 18:40:37 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> vdr-mlist-1.0.1.ebuild:
+  Stable for AMD64, wrt bug #393923
 
 *vdr-mlist-1.0.1 (15 Mar 2009)
 
