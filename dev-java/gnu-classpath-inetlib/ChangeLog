@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath-inetlib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.26 2009/11/03 18:41:08 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.27 2011/12/18 12:17:22 ago Exp $
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org>
+  gnu-classpath-inetlib-1.1-r3.ebuild:
+  Stable for AMD64, wrt bug #393915
 
   03 Nov 2009; Vlastimil Babka <caster@gentoo.org>
   -gnu-classpath-inetlib-1.0-r2.ebuild,
