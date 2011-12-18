@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/libkworkspace-4.6.3.ebuild,v 1.4 2011/06/26 01:54:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/libkworkspace-4.6.5-r1.ebuild,v 1.1 2011/12/18 00:03:00 dilfridge Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KMMODULE="libs/kworkspace"
 inherit kde4-meta
 
 DESCRIPTION="A library for KDE desktop applications"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 KMEXTRACTONLY="

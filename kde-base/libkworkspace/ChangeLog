@@ -1,6 +1,19 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.114 2011/12/11 18:52:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.115 2011/12/18 00:03:00 dilfridge Exp $
+
+*libkworkspace-4.7.4-r1 (18 Dec 2011)
+*libkworkspace-4.7.3-r1 (18 Dec 2011)
+*libkworkspace-4.6.5-r1 (18 Dec 2011)
+*libkworkspace-4.6.3-r1 (18 Dec 2011)
+
+  18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkworkspace-4.6.3.ebuild, +libkworkspace-4.6.3-r1.ebuild,
+  -libkworkspace-4.6.5.ebuild, +libkworkspace-4.6.5-r1.ebuild,
+  -libkworkspace-4.7.3.ebuild, +libkworkspace-4.7.3-r1.ebuild,
+  -libkworkspace-4.7.4.ebuild, +libkworkspace-4.7.4-r1.ebuild:
+  Unchanged revision bump for all libkworkspace versions, to force rebuild
+  after eclass changes. See bug 332829 for the details.
 
 *libkworkspace-4.7.4 (11 Dec 2011)
 
