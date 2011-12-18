@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.63 2011/11/11 11:36:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.64 2011/12/18 18:13:15 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> munin-1.4.5-r3.ebuild,
+  munin-1.4.6-r2.ebuild, munin-1.4.6-r4.ebuild:
+  Drop sparc keywords
 
 *munin-1.4.6-r4 (11 Nov 2011)
 
