@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>desktop-misc</herd>
+  <maintainer>
+    <email>eva@gentoo.org</email>
+    <name>Gilles Dartiguelongue</name>
+  </maintainer>
 </pkgmetadata>
