@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.128 2011/11/11 13:53:32 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.129 2011/12/18 09:04:46 grobian Exp $
 
 # nvidia-cuda-toolkit is amd64/x86 only
 opencl
@@ -141,7 +141,6 @@ elibc_DragonFly
 elibc_FreeBSD
 elibc_HPUX
 elibc_Interix
-elibc_IRIX
 elibc_mintlib
 elibc_NetBSD
 elibc_OpenBSD
@@ -154,7 +153,6 @@ kernel_FreeBSD
 kernel_freemint
 kernel_HPUX
 kernel_Interix
-kernel_IRIX
 kernel_NetBSD
 kernel_OpenBSD
 kernel_SunOS

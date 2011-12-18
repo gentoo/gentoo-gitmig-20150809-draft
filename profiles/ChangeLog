@@ -1,10 +1,21 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6027 2011/12/18 08:51:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6028 2011/12/18 09:04:46 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Dec 2011; Fabian Groffen <grobian@gentoo.org>
+  -prefix/irix/6.5/mips/make.defaults, -prefix/irix/6.5/mips/parent,
+  -prefix/irix/6.5/package.provided, -prefix/irix/6.5/parent,
+  -prefix/irix/make.defaults, -prefix/irix/package.mask,
+  -prefix/irix/package.use.force, -prefix/irix/package.use.mask,
+  -prefix/irix/packages, -prefix/irix/parent, -prefix/irix/profile.bashrc,
+  -prefix/irix/use.force, -prefix/irix/use.mask, arch.list, base/use.mask,
+  desc/elibc.desc, desc/kernel.desc, profiles.desc:
+  Drop mips-irix, it never reached a state where keywords could be added to the
+  tree, it is unlikely it ever will.
 
   18 Dec 2011; Fabian Groffen <grobian@gentoo.org> profiles.desc:
   Add OSX Lion profiles, bug #395119
