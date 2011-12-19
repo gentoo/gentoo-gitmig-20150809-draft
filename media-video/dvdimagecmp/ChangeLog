@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdimagecmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdimagecmp/ChangeLog,v 1.10 2011/12/18 19:56:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdimagecmp/ChangeLog,v 1.11 2011/12/19 17:53:25 radhermit Exp $
+
+  19 Dec 2011; Tim Harder <radhermit@gentoo.org> -dvdimagecmp-0.2.ebuild,
+  -dvdimagecmp-0.3.ebuild:
+  Remove old.
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   dvdimagecmp-0.3-r1.ebuild:
