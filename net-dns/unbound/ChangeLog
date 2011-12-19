@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.30 2011/09/23 00:50:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.31 2011/12/19 15:09:39 matsuu Exp $
+
+*unbound-1.4.13_p2 (19 Dec 2011)
+
+  19 Dec 2011; MATSUU Takuto <matsuu@gentoo.org> +unbound-1.4.13_p2.ebuild:
+  Version bumped. The ebuild is submitted by TANABE Ken-ichi.
 
 *unbound-1.4.13 (23 Sep 2011)
 
