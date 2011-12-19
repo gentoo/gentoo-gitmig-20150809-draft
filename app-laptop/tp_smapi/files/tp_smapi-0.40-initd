@@ -4,7 +4,7 @@
 #
 # Distributed under the terms of the GNU General Public License, v2 or later
 
-opts="low high info"
+extra_started_commands="low high info"
 
 SMAPI_SYSFS="/sys/devices/platform/smapi"
 BATS="BAT0 BAT1"

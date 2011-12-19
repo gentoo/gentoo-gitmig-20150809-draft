@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/tp_smapi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.41 2011/06/18 15:54:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.42 2011/12/19 23:53:58 ottxor Exp $
+
+  19 Dec 2011; Christoph Junghans <ottxor@gentoo.org>
+  files/tp_smapi-0.40-initd:
+  move info,low,high to extra_started_commands
 
   18 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   files/tp_smapi-0.40-initd:
