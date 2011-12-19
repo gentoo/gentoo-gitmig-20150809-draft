@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.2.7.9.ebuild,v 1.5 2007/05/06 09:33:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.2.7.9.ebuild,v 1.6 2011/12/19 11:42:47 sera Exp $
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="JCS is a distributed caching system written in java for server-side java applications"
-HOMEPAGE="http://jakarta.apache.org/jcs/"
+HOMEPAGE="http://commons.apache.org/jcs/"
 # Yes, it's a checkout from JCS SVN...
 #  http://svn.apache.org/repos/asf/jakarta/jcs/tags/
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
@@ -49,7 +49,7 @@ src_unpack() {
 		ewarn "JCS Admin is disabled, if you want it hit Ctrl-C and add"
 		ewarn "\"admin\" USE flag."
 		ewarn
-		rm -fr ${S}/src/java/org/apache/jcs/admin
+		rm -fr "${S}"/src/java/org/apache/jcs/admin
 	fi
 
 	cat > build.properties <<-END

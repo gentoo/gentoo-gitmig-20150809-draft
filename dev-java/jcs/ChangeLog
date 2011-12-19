@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jcs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.23 2008/05/08 22:19:15 ken69267 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.24 2011/12/19 11:42:47 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> jcs-1.2.7.9.ebuild,
+  jcs-1.2.7.9-r1.ebuild, jcs-1.3.ebuild, jcs-1.3-r1.ebuild:
+  Fix homepage wrt #202445. Fix unquoted variables to please repoman.
 
   08 May 2008; Kenneth Prugh <ken69267@gentoo.org> jcs-1.2.7.9-r1.ebuild,
   jcs-1.3-r1.ebuild:
