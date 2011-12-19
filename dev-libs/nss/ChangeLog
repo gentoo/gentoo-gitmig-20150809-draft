@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.229 2011/11/25 17:31:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.230 2011/12/19 14:13:10 anarchy Exp $
+
+*nss-3.13.1-r1 (19 Dec 2011)
+
+  19 Dec 2011; Jory A. Pratt <anarchy@gentoo.org> -nss-3.13.1.ebuild,
+  +nss-3.13.1-r1.ebuild, +files/nss-3.13.1-pkcs11n-header-fix.patch:
+  Fix pkcs11n header, fix mulitlib portage compilation
 
   25 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> nss-3.12.11-r1.ebuild:
   ppc64 stable wrt #388045

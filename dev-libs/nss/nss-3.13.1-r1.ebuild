@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.1.ebuild,v 1.2 2011/11/21 17:43:40 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.1-r1.ebuild,v 1.1 2011/12/19 14:13:10 anarchy Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -13,11 +13,10 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="utils"
 
-DEPEND="dev-util/pkgconfig
-	${RDEPEND}"
+DEPEND="dev-util/pkgconfig"
 RDEPEND=">=dev-libs/nspr-${NSPR_VER}
 	>=dev-db/sqlite-3.5"
 
@@ -25,6 +24,7 @@ src_prepare() {
 	# Custom changes for gentoo
 	epatch "${FILESDIR}/${PN}-3.12.5-gentoo-fixups.diff"
 	epatch "${FILESDIR}/${PN}-3.12.6-gentoo-fixup-warnings.patch"
+	epatch "${FILESDIR}/nss-3.13.1-pkcs11n-header-fix.patch"
 
 	cd "${S}"/mozilla/security/coreconf
 	# hack nspr paths
@@ -43,20 +43,10 @@ src_prepare() {
 
 	# Fix pkgconfig file for Prefix
 	sed -i -e "/^PREFIX =/s:= /usr:= ${EPREFIX}/usr:" \
-		"${S}"/mozilla/security/nss/config/Makefile || die
-	if [[ ${CHOST} == *-darwin* ]] ; then
-		# Fix pkgconfig for Darwin (no RPATH stuff)
-		sed -i -e 's/-Wl,-R${\?libdir}\?//' \
-			"${S}"/mozilla/security/nss/config/nss-config.in \
-			"${S}"/mozilla/security/nss/config/nss.pc.in || die
-	fi
+		"${S}"/mozilla/security/nss/config/Makefile
 
-	# Avoid install_name_tooling post install
-	sed -i -e "s:@executable_path:${EPREFIX}/usr/$(get_libdir):" \
-		"${S}"/mozilla/security/coreconf/Darwin.mk \
-		"${S}"/mozilla/security/nss/lib/freebl/config.mk || die
+	epatch "${FILESDIR}/nss-3.13.1-solaris-gcc.patch"
 
-	epatch "${FILESDIR}"/${PN}-3.13.1-solaris-gcc.patch  # breaks non-gnu tools
 	# dirty hack
 	cd "${S}"/mozilla/security/nss
 	sed -i -e "/CRYPTOLIB/s:\$(SOFTOKEN_LIB_DIR):../freebl/\$(OBJDIR):" \
@@ -84,6 +74,7 @@ src_compile() {
 	export NSS_ENABLE_ECC=1
 	export XCFLAGS="${CFLAGS}"
 	export FREEBL_NO_DEPEND=1
+	export ASFLAGS=""
 
 	cd "${S}"/mozilla/security/coreconf
 	emake -j1 CC="$(tc-getCC)" || die "coreconf make failed"
@@ -115,7 +106,7 @@ generate_chk() {
 	einfo "Resigning core NSS libraries for FIPS validation"
 	shift 2
 	for i in ${NSS_CHK_SIGN_LIBS} ; do
-		local libname=lib${i}$(get_libname)
+		local libname=lib${i}.so
 		local chkname=lib${i}.chk
 		"${shlibsign}" \
 			-i "${libdir}"/${libname} \
@@ -131,7 +122,7 @@ cleanup_chk() {
 	local libdir="$1"
 	shift 1
 	for i in ${NSS_CHK_SIGN_LIBS} ; do
-		local libfname="${libdir}/lib${i}$(get_libname)"
+		local libfname="${libdir}/lib${i}.so"
 		# If the major version has changed, then we have old chk files.
 		[ ! -f "${libfname}" -a -f "${libfname}.chk" ] \
 			&& rm -f "${libfname}.chk"
@@ -163,6 +154,9 @@ src_install () {
 		n=${file%$(get_libname)}$(get_libname ${MINOR_VERSION})
 		mv ${file} ${n}
 		ln -s ${n} ${file}
+		if [[ ${CHOST} == *-darwin* ]]; then
+			install_name_tool -id "${EPREFIX}/usr/$(get_libdir)/${n}" ${n} || die
+		fi
 	done
 
 	local nssutils
@@ -187,7 +181,7 @@ src_install () {
 	# shlibsign after prelink.
 	declare -a libs
 	for l in ${NSS_CHK_SIGN_LIBS} ; do
-		libs+=("${EPREFIX}/usr/$(get_libdir)/lib${l}$(get_libname)")
+		libs+=("${EPREFIX}/usr/$(get_libdir)/lib${l}.so")
 	done
 	OLD_IFS="${IFS}" IFS=":" ; liblist="${libs[*]}" ; IFS="${OLD_IFS}"
 	echo -e "PRELINK_PATH_MASK=${liblist}" >"${T}/90nss"
@@ -197,14 +191,13 @@ src_install () {
 
 pkg_postinst() {
 	elog "We have reverted back to using upstreams soname."
-	elog "Please run revdep-rebuild --library libnss3$(get_libname 12) , this"
+	elog "Please run revdep-rebuild --library libnss3.so.12 , this"
 	elog "will correct most issues. If you find a binary that does"
 	elog "not run please re-emerge package to ensure it properly"
-	elog "links after upgrade."
+	elog " links after upgrade."
 	elog
-	# We must re-sign the ELF libraries AFTER they are stripped.
-	[[ ${CHOST} != *-darwin* ]] && \
-		generate_chk "${EROOT}"/usr/bin/shlibsign "${EROOT}"/usr/$(get_libdir)
+	# We must re-sign the libraries AFTER they are stripped.
+	generate_chk "${EROOT}"/usr/bin/shlibsign "${EROOT}"/usr/$(get_libdir)
 }
 
 pkg_postrm() {
