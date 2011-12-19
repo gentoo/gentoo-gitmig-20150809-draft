@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-1.0-r1.ebuild,v 1.1 2011/12/12 18:44:28 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-1.0-r2.ebuild,v 1.1 2011/12/19 20:51:38 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -23,7 +23,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 DEPEND="sys-apps/portage"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}"/${PV}-fix-EPREFIX-capability.patch )
+PATCHES=("${FILESDIR}"/${PV}-fix-EPREFIX-capability.patch
+	"${FILESDIR}"/${PV}-fix-portage-eprefix-compatibility.patch )
 
 distutils_src_compile_pre_hook() {
 	echo VERSION="${PVR}" "$(PYTHON)" setup.py set_version
