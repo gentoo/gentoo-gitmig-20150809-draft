@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/echoe-4.6.3.ebuild,v 1.1 2011/12/17 15:54:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/echoe-4.6.3.ebuild,v 1.2 2011/12/19 18:33:35 graaff Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~pp
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/allison )"
-ruby_add_rdepend "dev-ruby/rubyforge dev-ruby/allison"
+ruby_add_rdepend "dev-ruby/rubyforge dev-ruby/allison >=dev-ruby/rake-0.9.2"
 
 all_ruby_prepare() {
 	# gemcutter is an optional dependency that is not important for
