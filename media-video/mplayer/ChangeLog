@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.827 2011/12/18 15:06:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.828 2011/12/19 15:23:54 aballier Exp $
+
+  19 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  some new formats have been added after ffmpeg 0.9 which mplayer trunk now
+  requires, bump ffmpeg dep
 
   18 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   mp3lib failed to build on x86 with -O0 and frame-pointer, since we dropped
