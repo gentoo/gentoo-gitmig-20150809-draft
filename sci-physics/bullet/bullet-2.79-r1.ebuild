@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.79.ebuild,v 1.1 2011/11/28 22:25:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.79-r1.ebuild,v 1.1 2011/12/19 18:38:48 bicatali Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ src_configure() {
 }
 
 src_install() {
-	default
+	cmake-utils_src_install
 	use doc && dodoc *.pdf
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
