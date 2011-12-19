@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.2.1.ebuild,v 1.5 2009/07/04 14:24:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.2.1.ebuild,v 1.6 2011/12/19 12:44:30 sera Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="A Java library for adding robust, high-performance, file upload capability to your servlets and web applications."
-HOMEPAGE="http://hc.apache.org"
+HOMEPAGE="http://commons.apache.org/fileupload/"
 SRC_URI="mirror://apache/commons/fileupload/source/${P}-src.tar.gz"
 COMMON_DEPEND=">=dev-java/commons-io-1.3
 	=dev-java/portletapi-1*

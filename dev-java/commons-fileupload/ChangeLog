@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-fileupload
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.53 2009/07/04 14:24:16 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.54 2011/12/19 12:44:30 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  commons-fileupload-1.2.ebuild, commons-fileupload-1.2-r1.ebuild,
+  commons-fileupload-1.2.1.ebuild:
+  Fix homepage wrt #202445.
 
   04 Jul 2009; Brent Baude <ranger@gentoo.org>
   commons-fileupload-1.2.1.ebuild:
