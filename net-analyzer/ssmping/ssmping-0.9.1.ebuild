@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssmping/ssmping-0.9.1.ebuild,v 1.2 2011/12/14 09:22:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssmping/ssmping-0.9.1.ebuild,v 1.3 2011/12/19 18:32:27 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.venaas.no/multicast/ssmping/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 src_prepare() {
