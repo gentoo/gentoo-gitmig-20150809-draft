@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.9.ebuild,v 1.1 2011/11/19 15:16:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.9.ebuild,v 1.2 2011/12/19 08:59:01 nirbheek Exp $
 
 EAPI=4
 
@@ -15,7 +15,6 @@ IUSE="gtk static-libs test"
 
 RDEPEND="virtual/jpeg
 	dev-libs/libxml2
-	media-libs/exempi
 	gtk? (
 		>=dev-libs/glib-2
 		>=x11-libs/gdk-pixbuf-2.24.0:2
