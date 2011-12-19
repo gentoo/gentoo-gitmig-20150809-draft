@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.387 2011/12/15 02:26:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.388 2011/12/19 17:11:53 tetromino Exp $
+
+*nautilus-2.32.2.1-r2 (19 Dec 2011)
+
+  19 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +nautilus-2.32.2.1-r2.ebuild:
+  Revbump with no changes to get a gnome-2 version in ~arch with an unmasked
+  introspection USE flag, needed for evince-2.32.0-r4 (thanks to Allan Gottlieb
+  for reporting).
 
 *nautilus-3.2.1-r1 (15 Dec 2011)
 
