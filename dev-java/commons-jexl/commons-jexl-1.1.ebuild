@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.1.ebuild,v 1.5 2007/06/10 10:23:53 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.1.ebuild,v 1.6 2011/12/19 12:22:54 sera Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Expression language engine, can be embedded in applications and frameworks."
-HOMEPAGE="http://jakarta.apache.org/commons/jexl"
+HOMEPAGE="http://commons.apache.org/jexl/"
 SRC_URI="mirror://apache/jakarta/commons/jexl/source/${P}-src.tar.gz"
 
 CDEPEND="dev-java/commons-logging
@@ -28,7 +28,7 @@ S="${WORKDIR}/${P}-src"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# https://issues.apache.org/jira/browse/JEXL-31
 	epatch "${FILESDIR}/1.1-test-target.patch"
@@ -48,5 +48,5 @@ src_install() {
 	dodoc RELEASE-NOTES.txt || die
 
 	use doc && java-pkg_dojavadoc dist/docs/api
-	use source && java-pkg_dosrc ${S}/src/java/*
+	use source && java-pkg_dosrc "${S}"/src/java/*
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-jexl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/ChangeLog,v 1.9 2007/06/10 10:26:34 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/ChangeLog,v 1.10 2011/12/19 12:22:54 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> commons-jexl-1.1.ebuild:
+  Fix homepage wrt #202445. Fix unquoted variables to please repoman.
 
   10 Jun 2007; Vlastimil Babka <caster@gentoo.org>
   -files/commons-jexl-1.0-gentoo.diff, -commons-jexl-1.0.ebuild,
