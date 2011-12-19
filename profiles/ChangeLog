@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6029 2011/12/19 01:38:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6030 2011/12/19 18:27:59 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Dec 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove dev-ruby/rake mask, it seems to work fine.
 
   19 Dec 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

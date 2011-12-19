@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13339 2011/12/19 01:38:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13340 2011/12/19 18:27:59 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -314,10 +314,6 @@ net-mail/vmailmgr-tools
 # Mask v8 versions used for www-client/chromium dev channel releases.
 # Currently v8-3.7 versions are used for chromium-17.x versions.
 >=dev-lang/v8-3.7
-
-# Hans de Graaff <graaff@gentoo.org> (3 Nov 2011)
-# Mask for testing and until we can add all ruby targets again.
-=dev-ruby/rake-0.9*
 
 # Markos Chandras <hwoarang@gentoo.org> (31 Oct 2011)
 # Masking 4.8 rc release. The ebuilds are still work in
