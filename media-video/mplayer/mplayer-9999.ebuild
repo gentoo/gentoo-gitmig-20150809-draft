@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.121 2011/12/19 16:43:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.122 2011/12/19 16:44:45 aballier Exp $
 
 EAPI=4
 
@@ -77,10 +77,8 @@ RDEPEND+="
 	dts? ( media-libs/libdca )
 	dv? ( media-libs/libdv )
 	dvb? ( media-tv/linuxtv-dvb-headers )
-	dvd? (
-		>=media-libs/libdvdread-4.1.3
-		dvdnav? ( >=media-libs/libdvdnav-4.1.3 )
-	)
+	dvd? ( >=media-libs/libdvdread-4.1.3 )
+	dvdnav? ( >=media-libs/libdvdnav-4.1.3 )
 	encode? (
 		!twolame? ( toolame? ( media-sound/toolame ) )
 		twolame? ( media-sound/twolame )
