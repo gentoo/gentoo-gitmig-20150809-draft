@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-httpclient
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.63 2010/01/03 20:25:49 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.64 2011/12/19 12:33:32 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  commons-httpclient-2.0.2-r1.ebuild:
+  Fix homepage wrt #202445.
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   commons-httpclient-3.1.ebuild:
