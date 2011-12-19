@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/tmpreaper-1.6.13.ebuild,v 1.3 2011/12/19 01:48:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/tmpreaper-1.6.13.ebuild,v 1.4 2011/12/19 15:28:38 ago Exp $
 
 EAPI="3"
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/t/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ppc ~sparc ~x86"
+KEYWORDS="amd64 ~arm ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
