@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.628 2011/11/24 13:09:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.629 2011/12/19 01:40:00 chithanh Exp $
+
+*xorg-server-1.11.99.2 (19 Dec 2011)
+*xorg-server-1.11.3 (19 Dec 2011)
+
+  19 Dec 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xorg-server-1.11.3.ebuild, +xorg-server-1.11.99.2.ebuild,
+  +files/xorg-server-1.12-disable-acpi.patch:
+  Version bumps.
 
 *xorg-server-1.11.2-r2 (24 Nov 2011)
 
