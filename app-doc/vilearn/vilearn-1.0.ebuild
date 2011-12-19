@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.10 2011/12/19 13:27:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.11 2011/12/19 14:41:53 darkside Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://vilearn.org/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="app-editors/vim"

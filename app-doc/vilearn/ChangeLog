@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/vilearn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/ChangeLog,v 1.11 2011/12/19 13:27:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/ChangeLog,v 1.12 2011/12/19 14:41:53 darkside Exp $
+
+  19 Dec 2011; Jeremy Olexa <darkside@gentoo.org> vilearn-1.0.ebuild:
+  add -macos keywords as tested in bug 319845
 
   19 Dec 2011; Akinori Hattori <hattya@gentoo.org> vilearn-1.0.ebuild:
   fixes bug #319845.
