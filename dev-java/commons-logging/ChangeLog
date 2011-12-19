@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.69 2011/05/03 18:21:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.70 2011/12/19 12:09:29 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> commons-logging-1.1.1.ebuild:
+  Fix homepage wrt #202445.
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org>
   commons-logging-1.1.1.ebuild:
