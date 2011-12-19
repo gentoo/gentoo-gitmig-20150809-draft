@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.62 2011/10/19 16:26:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.63 2011/12/19 17:16:55 aballier Exp $
+
+*x264-0.0.20111218 (19 Dec 2011)
+
+  19 Dec 2011; Alexis Ballier <aballier@gentoo.org> +x264-0.0.20111218.ebuild:
+  new snapshot
 
 *x264-0.0.20111017 (19 Oct 2011)
 
