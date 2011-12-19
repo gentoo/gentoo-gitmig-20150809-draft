@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-3.0.0.ebuild,v 1.5 2011/01/31 21:19:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-3.0.0.ebuild,v 1.6 2011/12/19 11:35:15 sera Exp $
 
 EAPI="3"
 JAVA_PKG_IUSE="doc source test"
@@ -10,7 +10,7 @@ JAVA_PKG_BSFIX_NAME="build.xml common-build.xml"
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="High-performance, full-featured text search engine written entirely in Java"
-HOMEPAGE="http://jakarta.apache.org/lucene"
+HOMEPAGE="http://lucene.apache.org"
 # when doing version bump, SRC_URI of the previous version should most probably
 # be changed to java/archive/ !
 SRC_URI="mirror://apache/lucene/java/${P}-src.tar.gz"
