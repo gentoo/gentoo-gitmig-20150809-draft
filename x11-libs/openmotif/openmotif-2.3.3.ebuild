@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.17 2011/03/07 11:04:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.18 2011/12/19 08:43:01 ulm Exp $
 
 EAPI=3
 
@@ -32,8 +32,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	x11-misc/xbitmaps"
 RDEPEND="${RDEPEND}
-	!x11-libs/motif-config
-	!x11-libs/lesstif
 	doc? ( app-doc/openmotif-manual )"
 
 pkg_nofetch() {
@@ -49,32 +47,6 @@ pkg_nofetch() {
 	${SRC_URI}
 	and place it in ${DISTDIR}.
 	EOF
-}
-
-pkg_setup() {
-	# clean up orphaned cruft left over by motif-config
-	local i l count=0
-	for i in "${EROOT}"/usr/bin/{mwm,uil,xmbind} \
-		"${EROOT}"/usr/include/{Xm,uil,Mrm} \
-		"${EROOT}"/usr/$(get_libdir)/lib{Xm,Uil,Mrm}.*; do
-		[[ -L "${i}" ]] || continue
-		l=$(readlink "${i}")
-		if [[ ${l} == *openmotif-* || ${l} == *lesstif-* ]]; then
-			einfo "Cleaning up orphaned ${i} symlink ..."
-			rm -f "${i}"
-		fi
-	done
-
-	cd "${EROOT}"/usr/share/man
-	for i in $(find . -type l); do
-		l=$(readlink "${i}")
-		if [[ ${l} == *-openmotif-* || ${l} == *-lesstif-* ]]; then
-			(( count++ ))
-			rm -f "${i}"
-		fi
-	done
-	[[ ${count} -ne 0 ]] && \
-		einfo "Cleaned up ${count} orphaned symlinks in ${EROOT}/usr/share/man"
 }
 
 src_prepare() {

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.262 2011/08/20 05:20:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.263 2011/12/19 08:43:01 ulm Exp $
+
+  19 Dec 2011; Ulrich Mueller <ulm@gentoo.org> openmotif-2.2.3-r11.ebuild,
+  openmotif-2.3.2-r2.ebuild, openmotif-2.3.3.ebuild:
+  Remove old blockers and cleanup code, motif-config is gone since > 3 years.
 
   20 Aug 2011; Ulrich Mueller <ulm@gentoo.org> openmotif-2.3.2-r2.ebuild:
   Call dosym with proper second argument. Add static-libs USE flag.

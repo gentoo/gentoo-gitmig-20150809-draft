@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r11.ebuild,v 1.5 2011/03/07 11:04:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r11.ebuild,v 1.6 2011/12/19 08:43:01 ulm Exp $
 
 EAPI=3
 
@@ -17,9 +17,7 @@ SLOT="2.2"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="!x11-libs/motif-config
-	!x11-libs/lesstif
-	x11-libs/libXmu
+RDEPEND="x11-libs/libXmu
 	x11-libs/libXp"
 
 DEPEND="${RDEPEND}
