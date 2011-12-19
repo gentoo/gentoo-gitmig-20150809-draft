@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.4.ebuild,v 1.6 2008/01/21 13:27:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.4.ebuild,v 1.7 2011/12/19 12:52:20 sera Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Commons Discovery: Service Discovery component"
-HOMEPAGE="http://jakarta.apache.org/commons/discovery"
+HOMEPAGE="http://commons.apache.org/discovery/"
 SRC_URI="mirror://apache/jakarta/commons/discovery/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"

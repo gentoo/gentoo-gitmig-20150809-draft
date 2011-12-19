@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.56 2011/05/03 18:22:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.57 2011/12/19 12:58:16 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> bsf-2.4.0-r1.ebuild:
+  Fix homepage wrt #202445.
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org> bsf-2.4.0-r1.ebuild:
   Marked ~x64-freebsd

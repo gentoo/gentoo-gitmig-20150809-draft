@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.4.0-r1.ebuild,v 1.12 2011/05/03 18:22:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.4.0-r1.ebuild,v 1.13 2011/12/19 12:58:16 sera Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 eutils java-ant-2
 
 DESCRIPTION="Bean Script Framework"
-HOMEPAGE="http://jakarta.apache.org/bsf/"
+HOMEPAGE="http://commons.apache.org/bsf/"
 SRC_URI="mirror://apache/jakarta/bsf/source/${PN}-src-${PV}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="2.3"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.54 2011/11/30 12:10:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.55 2011/12/19 12:55:22 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  commons-beanutils-1.6.1-r3.ebuild:
+  Fix homepage wrt #202445.
 
   30 Nov 2011; Fabian Groffen <grobian@gentoo.org>
   commons-beanutils-1.8.3.ebuild:

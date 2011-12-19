@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r3.ebuild,v 1.13 2010/01/03 21:23:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r3.ebuild,v 1.14 2011/12/19 12:55:22 sera Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Provides easy-to-use wrappers around Reflection and Introspection APIs"
-HOMEPAGE="http://jakarta.apache.org/commons/beanutils/"
+HOMEPAGE="http://commons.apache.org/beanutils/"
 SRC_URI="mirror://apache/jakarta/commons/beanutils/source/${P}-src.tar.gz"
 
 LICENSE="Apache-1.1"

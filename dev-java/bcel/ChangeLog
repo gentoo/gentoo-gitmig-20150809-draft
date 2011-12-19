@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bcel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.60 2011/07/17 14:51:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.61 2011/12/19 13:01:47 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> bcel-5.2.ebuild,
+  bcel-5.2-r1.ebuild, bcel-5.2-r2.ebuild:
+  Fix homepage wrt #202445.
 
   17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> bcel-5.2-r2.ebuild:
   ppc64 stable wrt #368239
