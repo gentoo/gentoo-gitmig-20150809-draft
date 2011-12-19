@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.333 2011/12/18 21:56:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.334 2011/12/19 15:22:57 eras Exp $
+
+  19 Dec 2011; Eray Aslan <eras@gentoo.org> -files/dovecot-2.0.12-sdbox.patch,
+  -dovecot-2.0.13.ebuild, -dovecot-2.0.14.ebuild, -dovecot-2.0.14-r1.ebuild,
+  -files/dovecot.init-r2:
+  remove old
 
   18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> dovecot-2.0.16.ebuild:
   Stable for ppc/ppc64; bug #390887
