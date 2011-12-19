@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.56 2011/11/30 04:03:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.57 2011/12/19 20:18:18 radhermit Exp $
+
+*tftp-hpa-5.2 (19 Dec 2011)
+
+  19 Dec 2011; Tim Harder <radhermit@gentoo.org> +tftp-hpa-5.2.ebuild:
+  Version bump.
 
   30 Nov 2011; Mike Frysinger <vapier@gentoo.org> tftp-hpa-5.1.ebuild:
   Respect $(AR), update to EAPI=4, and make sure readline/tcp-wrappers are in
