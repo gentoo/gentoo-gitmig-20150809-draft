@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-el
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.27 2011/04/14 20:28:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.28 2011/12/19 12:49:28 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> commons-el-1.0-r1.ebuild,
+  commons-el-1.0-r2.ebuild:
+  Fix homepage wrt #202445. Add missing IUSE to please repoman.
 
   14 Apr 2011; Brent Baude <ranger@gentoo.org> commons-el-1.0-r2.ebuild:
   Marking commons-el-1.0-r2 ppc for bug 334211
