@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.57 2011/12/19 20:18:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.58 2011/12/19 20:21:21 radhermit Exp $
+
+  19 Dec 2011; Tim Harder <radhermit@gentoo.org> tftp-hpa-5.1.ebuild,
+  tftp-hpa-5.2.ebuild:
+  Add explicit dep on xz-utils for unpacking.
 
 *tftp-hpa-5.2 (19 Dec 2011)
 
