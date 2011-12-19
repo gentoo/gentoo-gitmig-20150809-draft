@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-net
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.47 2011/05/03 18:40:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.48 2011/12/19 12:05:32 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> commons-net-1.4.1-r1.ebuild:
+  Fix homepage wrt #202445. Add missing IUSE to please repoman.
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org> commons-net-1.4.1-r1.ebuild:
   Marked ~x64-freebsd
