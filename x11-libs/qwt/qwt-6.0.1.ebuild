@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0_rc5-r2.ebuild,v 1.1 2011/03/08 06:04:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.1.ebuild,v 1.1 2011/12/19 22:02:32 jlec Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ MY_P="${PN}-${PV/_/-}"
 
 DESCRIPTION="2D plotting library for Qt4"
 HOMEPAGE="http://qwt.sourceforge.net/"
-SRC_URI="mirror://sourceforge/project/${PN}/${PN}-beta/${PV/_/-}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV/_/-}/${MY_P}.tar.bz2"
 
 LICENSE="qwt"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-macos"
