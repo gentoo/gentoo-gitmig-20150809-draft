@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/isic-0.07-r1.ebuild,v 1.3 2011/12/19 18:37:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/isic-0.07-r1.ebuild,v 1.4 2011/12/19 23:50:17 radhermit Exp $
 
 EAPI="3"
+
+inherit toolchain-funcs
 
 DESCRIPTION="IP Stack Integrity Checker"
 HOMEPAGE="http://isic.sourceforge.net/"
@@ -23,6 +25,8 @@ src_prepare() {
 
 	# Install man pages in /usr/share/man
 	sed -i Makefile.in -e 's|/man/man1|/share&|g' || die
+
+	tc-export CC
 }
 
 src_configure() {
