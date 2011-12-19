@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r7.ebuild,v 1.3 2011/12/19 21:07:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r7.ebuild,v 1.4 2011/12/19 23:27:30 ulm Exp $
 
 EAPI=4
 
@@ -128,7 +128,8 @@ pkg_preinst() {
 		ewarn "Removing old symlink /usr/share/info/emacs-${SLOT}"
 		rm "${ROOT}"/usr/share/info/emacs-${SLOT} || die
 	fi
-	if [[ -d "${ROOT}"/usr/share/emacs/${PV}/info ]]; then
+	if [[ -d "${ROOT}"/usr/share/emacs/${PV}/info \
+		&& ! -L "${ROOT}"/usr/share/emacs/${PV}/info ]]; then
 		ewarn "Removing old directory /usr/share/emacs/${PV}/info"
 		rm -r "${ROOT}"/usr/share/emacs/${PV}/info || die
 	fi
