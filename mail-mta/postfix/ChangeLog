@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.314 2011/12/19 15:16:54 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.315 2011/12/19 20:41:51 ago Exp $
+
+  19 Dec 2011; Agostino Sarubbo <ago@gentoo.org> postfix-2.8.7.ebuild:
+  Stable for AMD64, wrt bug #395289
 
 *postfix-2.9_pre20111218 (19 Dec 2011)
 
