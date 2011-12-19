@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/metamail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.45 2010/01/06 19:28:11 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.46 2011/12/19 20:33:25 eras Exp $
+
+  19 Dec 2011; Eray Aslan <eras@gentoo.org> -metamail-2.7.45.3-r1.ebuild:
+  remove old
 
   06 Jan 2010; Brent Baude <ranger@gentoo.org> metamail-2.7.53.3.ebuild:
   Marking metamail-2.7.53.3 ppc64 for bug 289535
