@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.65 2011/07/17 20:21:38 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.66 2011/12/19 12:18:25 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> commons-lang-2.0-r2.ebuild:
+  Fix homepage wrt #202445.
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> commons-lang-2.6.ebuild:
   Stable for ppc/ppc64; bug #371349
