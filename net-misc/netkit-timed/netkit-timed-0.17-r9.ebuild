@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r9.ebuild,v 1.3 2011/12/18 19:52:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r9.ebuild,v 1.4 2011/12/19 20:00:39 ago Exp $
 
 EAPI="2"
 
@@ -10,11 +10,12 @@ IUSE=""
 DESCRIPTION="Netkit - timed"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~mips ~ppc ~ppc64 ~sparc x86"
 LICENSE="BSD"
 SLOT="0"
 
 DEPEND=""
+RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/0.17-CFLAG-DEF-fix.patch
@@ -31,11 +32,11 @@ src_configure() {
 }
 
 src_install() {
-	dosbin timed/timed/timed
-	doman  timed/timed/timed.8
-	dosbin timed/timedc/timedc
-	doman  timed/timedc/timedc.8
-	dodoc  README ChangeLog BUGS
+	dosbin timed/timed/timed || die
+	doman  timed/timed/timed.8 || die
+	dosbin timed/timedc/timedc || die
+	doman  timed/timedc/timedc.8 || die
+	dodoc  README ChangeLog BUGS || die
 
-	newinitd "${FILESDIR}"/timed.rc6 timed
+	newinitd "${FILESDIR}"/timed.rc6 timed || die
 }
