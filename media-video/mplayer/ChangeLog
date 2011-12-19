@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.828 2011/12/19 15:23:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.829 2011/12/19 16:43:12 aballier Exp $
+
+  19 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  Simplify X checks in ebuild: use REQUIRED_USE instead of silently disabling
+  features, people enabling X related features should know they will require X.
+  Remove video_cards_vesa useflag that does nothing.
 
   19 Dec 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   some new formats have been added after ffmpeg 0.9 which mplayer trunk now
