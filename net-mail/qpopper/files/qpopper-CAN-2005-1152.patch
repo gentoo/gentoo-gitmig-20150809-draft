@@ -1,9 +1,0 @@
---- qpopper-4.0.4.orig/popper/popauth.c
-+++ qpopper-4.0.4/popper/popauth.c
-@@ -669,6 +695,7 @@
- 
-     memset  ( &pop_pw, 0, sizeof(pop_pw) );
-     memset  ( &my_pw,  0, sizeof(my_pw)  );
-+    umask   ( 0077 ); /* make sure we don't create group- or world-writable files */
-     srandom ( (unsigned int) time ( (TIME_T *) 0) );   /* seed random with the
-                                                           current time */ 
