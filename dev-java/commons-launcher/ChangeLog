@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-launcher
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.28 2008/03/18 01:18:09 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.29 2011/12/19 12:14:25 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  commons-launcher-1.1-r1.ebuild:
+  Fix homepage wrt #202445. Add missing IUSE to please repoman.
 
   18 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
   commons-launcher-1.1-r1.ebuild:
