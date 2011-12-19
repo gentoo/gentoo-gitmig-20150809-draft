@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r7.ebuild,v 1.2 2011/12/19 19:15:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r7.ebuild,v 1.3 2011/12/19 21:07:55 ulm Exp $
 
 EAPI=4
 
@@ -76,9 +76,8 @@ src_install() {
 		install
 
 	rmdir "${D}"${basedir}/lock || die
-	find "${D}"${basedir} -type f \
-		\( -name ChangeLog -o -name COPYING -o -name "*.c" \) \
-		-exec rm "{}" + || die
+	find "${D}"${basedir} -type f \( -name "*.c" -o -name ChangeLog \
+		-o -name COPYING ! -path "*/etc/COPYING" \) -exec rm "{}" + || die
 	fperms -R go-w ${basedir}
 
 	# move executables to the correct place

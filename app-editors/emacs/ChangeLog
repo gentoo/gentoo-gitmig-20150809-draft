@@ -1,9 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.447 2011/12/19 19:15:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.448 2011/12/19 21:07:55 ulm Exp $
 
   19 Dec 2011; Ulrich Mueller <ulm@gentoo.org> emacs-18.59-r7.ebuild:
   Updated patchset, including a fix for the LDFLAGS issue.
+  Keep etc/COPYING because C-h C-c needs it.
 
 *emacs-18.59-r7 (19 Dec 2011)
 
