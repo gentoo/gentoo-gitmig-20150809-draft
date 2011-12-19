@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.31 2011/09/11 04:09:05 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.32 2011/12/19 22:13:16 grobian Exp $
+
+  19 Dec 2011; Fabian Groffen <grobian@gentoo.org> jre-1.7.0.ebuild:
+  Add Prefix keywords (same as virtual/jdk)
 
   11 Sep 2011; Serkan Kaba <serkan@gentoo.org> jre-1.7.0.ebuild:
   Add oracle-jre-bin:1.7 to JRE virtual.
