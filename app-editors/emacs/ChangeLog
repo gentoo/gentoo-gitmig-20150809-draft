@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.445 2011/12/14 18:31:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.446 2011/12/19 07:38:20 ulm Exp $
+
+*emacs-18.59-r7 (19 Dec 2011)
+
+  19 Dec 2011; Ulrich Mueller <ulm@gentoo.org> +emacs-18.59-r7.ebuild:
+  Fix linking failure on amd64, bug 395223. Respect LDFLAGS. Move binaries
+  from /usr/share to /usr/libexec. Move GNU Info files to /usr/share/info.
+  Don't install C source files in etc.
 
   14 Dec 2011; Fabian Groffen <grobian@gentoo.org> emacs-23.3-r3.ebuild:
   Fix out-of-prefix issue due to locallisppath, thanks MATSUI Tetsushi in bug
