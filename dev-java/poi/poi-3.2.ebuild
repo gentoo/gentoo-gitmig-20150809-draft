@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.2.ebuild,v 1.5 2009/09/06 16:39:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.2.ebuild,v 1.6 2011/12/19 11:08:31 sera Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Java API To Access Microsoft Format Files"
-HOMEPAGE="http://jakarta.apache.org/poi/"
+HOMEPAGE="http://poi.apache.org/"
 RELEASE_DATE="20081019"
 SRC_URI="mirror://apache/poi/release/src/${PN}-src-${PV}-FINAL-${RELEASE_DATE}.tar.gz"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/poi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.53 2009/09/06 16:39:55 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.54 2011/12/19 11:08:31 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> poi-3.0.2-r1.ebuild,
+  poi-3.2.ebuild:
+  Fix homepage wrt #202445
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> poi-3.2.ebuild:
   Marking poi-3.2 ppc64 for bug 274052
