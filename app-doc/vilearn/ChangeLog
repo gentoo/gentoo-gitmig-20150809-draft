@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/vilearn
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/ChangeLog,v 1.10 2007/02/09 07:11:09 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/ChangeLog,v 1.11 2011/12/19 13:27:33 hattya Exp $
+
+  19 Dec 2011; Akinori Hattori <hattya@gentoo.org> vilearn-1.0.ebuild:
+  fixes bug #319845.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

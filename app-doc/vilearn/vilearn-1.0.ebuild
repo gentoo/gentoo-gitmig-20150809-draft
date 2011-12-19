@@ -1,33 +1,30 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.9 2006/02/18 14:45:20 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.10 2011/12/19 13:27:33 hattya Exp $
 
-IUSE=""
+EAPI="4"
 
 DESCRIPTION="vilearn is an interactive vi tutorial comprised of 5 tutorials for the vi-impaired."
 HOMEPAGE="http://vilearn.org/"
 SRC_URI="http://vilearn.org/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="amd64 ppc x86"
 SLOT="0"
+KEYWORDS="amd64 ppc x86"
+IUSE=""
 
 RDEPEND="app-editors/vim"
+DEPEND="${RDEPEND}"
 
-src_compile() {
-
-	sed -i "s:/usr/local:/usr:" Makefile
-	emake || die "emake failed. :("
-
+src_prepare() {
+	sed -i "s:/usr/local:${EPREFIX}/usr:" Makefile
 }
 
 src_install() {
-
 	dobin vilearn
 	doman vilearn.1
 	dodoc README outline
 
 	insinto /usr/lib/vilearn
 	doins [0-9]*
-
 }
