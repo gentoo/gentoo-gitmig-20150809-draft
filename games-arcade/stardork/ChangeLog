@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/stardork
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stardork/ChangeLog,v 1.8 2008/05/05 20:20:05 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stardork/ChangeLog,v 1.9 2011/12/19 22:09:35 mr_bones_ Exp $
+
+*stardork-0.7 (19 Dec 2011)
+
+  19 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org> +stardork-0.7.ebuild:
+  version bump (bug #394673)
 
   05 May 2008; Tristan Heaven <nyhm@gentoo.org> stardork-0.6.ebuild:
   Respect CFLAGS/LDFLAGS; add ~amd64 keyword
