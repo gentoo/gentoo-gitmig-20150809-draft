@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/libSM-1.2.0.ebuild,v 1.13 2011/08/28 12:05:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/libSM-1.2.0.ebuild,v 1.14 2011/12/19 09:13:17 grobian Exp $
 
 EAPI=3
 inherit xorg-2
@@ -13,9 +13,9 @@ IUSE="doc ipv6 +uuid"
 RDEPEND=">=x11-libs/libICE-1.0.5
 	x11-libs/xtrans
 	x11-proto/xproto
-	!elibc_FreeBSD? ( !elibc_IRIX? ( !elibc_SunOS? (
+	!elibc_FreeBSD? ( !elibc_SunOS? (
 		uuid? ( >=sys-apps/util-linux-2.16 )
-	) ) )"
+	) )"
 DEPEND="${RDEPEND}
 	doc? ( app-text/xmlto )"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.90 2011/08/28 12:05:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.91 2011/12/19 09:13:17 grobian Exp $
+
+  19 Dec 2011; Fabian Groffen <grobian@gentoo.org> libSM-1.2.0.ebuild:
+  Drop no longer existing elibc_IRIX flag
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> libSM-1.2.0.ebuild:
   Fix compilation with USE=uuid on Solaris and Darwin, bug #353787
