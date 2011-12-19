@@ -1,18 +1,19 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/commons-vfs-1.0.ebuild,v 1.12 2010/01/23 14:19:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/commons-vfs-1.0.ebuild,v 1.13 2011/12/19 11:54:47 sera Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="a single API for accessing various different file systems"
-HOMEPAGE="http://jakarta.apache.org/commons/vfs/"
+HOMEPAGE="http://commons.apache.org/vfs/"
 SRC_URI="mirror://apache/jakarta/${PN/-//}/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+IUSE=""
 
 COMMON_DEP="
 	dev-java/commons-logging
