@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.64 2011/10/10 10:22:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.65 2011/12/19 13:04:42 jer Exp $
+
+  19 Dec 2011; Jeroen Roovers <jer@gentoo.org> hydra-7.0.ebuild,
+  hydra-7.1.ebuild:
+  Use virtual/mysql not dev-db/mysql by jannis (bug #395261).
 
 *hydra-7.1 (10 Oct 2011)
 
