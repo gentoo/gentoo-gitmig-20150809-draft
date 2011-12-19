@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpreaper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/ChangeLog,v 1.25 2011/01/03 01:14:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/ChangeLog,v 1.26 2011/12/19 01:48:07 xmw Exp $
+
+  19 Dec 2011; Michael Weber <xmw@gentoo.org> tmpreaper-1.6.13.ebuild:
+  ppc stable (bug 379493)
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> tmpreaper-1.6.13.ebuild:
   add ~arm keyword
