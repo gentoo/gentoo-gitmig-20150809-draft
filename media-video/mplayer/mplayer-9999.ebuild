@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.122 2011/12/19 16:44:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.123 2011/12/19 16:47:17 aballier Exp $
 
 EAPI=4
 
@@ -402,7 +402,7 @@ src_configure() {
 		myconf+=" --disable-mencoder"
 		for i in ${uses}; do
 			myconf+=" --disable-${i}"
-			use ${i} && elog "Useflag \"${i}\" require \"encode\" useflag enabled to work."
+			use ${i} && elog "Useflag \"${i}\" will only be useful for encoding, i.e., with \"encode\" useflag enabled."
 		done
 	fi
 
