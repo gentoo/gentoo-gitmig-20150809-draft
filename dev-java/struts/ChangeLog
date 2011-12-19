@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/struts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.48 2009/09/20 18:47:09 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.49 2011/12/19 11:01:26 sera Exp $
+
+  19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> struts-1.2.9-r2.ebuild,
+  struts-1.2.9-r3.ebuild:
+  Fix homepage wrt #202445
 
   20 Sep 2009; nixnut <nixnut@gentoo.org> struts-1.2.9-r3.ebuild:
   ppc stable #267081

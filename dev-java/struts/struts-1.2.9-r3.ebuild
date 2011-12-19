@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r3.ebuild,v 1.4 2009/09/20 18:47:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r3.ebuild,v 1.5 2011/12/19 11:01:26 sera Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc examples source"
@@ -11,7 +11,7 @@ inherit java-pkg-2 java-ant-2
 MY_P="${P}-src"
 DESCRIPTION="A powerful Model View Controller Framework for JSP/Servlets"
 SRC_URI="mirror://apache/struts/source/${MY_P}.tar.gz"
-HOMEPAGE="http://jakarta.apache.org/struts/index.html"
+HOMEPAGE="http://struts.apache.org/index.html"
 LICENSE="Apache-2.0"
 SLOT="1.2"
 COMMON_DEPS="
