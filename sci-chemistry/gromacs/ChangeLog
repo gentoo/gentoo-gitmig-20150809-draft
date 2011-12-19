@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.98 2011/12/14 16:45:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.99 2011/12/19 20:56:27 ottxor Exp $
+
+*gromacs-4.5.5-r1 (19 Dec 2011)
+
+  19 Dec 2011; Christoph Junghans <ottxor@gentoo.org> +gromacs-4.5.5-r1.ebuild,
+  +files/gromacs-4.5.5-cmake-cpp-asm.patch,
+  +files/gromacs-4.5.5-enable-see.patch:
+  bring back sse2 kernels
 
   14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> gromacs-4.5.5.ebuild:
   Stable for AMD64, wrt bug #391147
