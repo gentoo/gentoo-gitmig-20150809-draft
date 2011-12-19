@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.14 2011/12/19 10:25:25 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.15 2011/12/19 15:45:22 ago Exp $
+
+  19 Dec 2011; Agostino Sarubbo <ago@gentoo.org> pyzmq-2.1.10.ebuild:
+  Stable for AMD64, wrt bug #386049
 
 *pyzmq-2.1.11 (19 Dec 2011)
 
