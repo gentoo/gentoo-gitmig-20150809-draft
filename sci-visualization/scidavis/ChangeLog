@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/scidavis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/ChangeLog,v 1.17 2011/03/06 09:10:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/ChangeLog,v 1.18 2011/12/19 22:58:58 jlec Exp $
+
+  19 Dec 2011; Justin Lecher <jlec@gentoo.org> scidavis-0.2.4.ebuild:
+  Merged zlib fixes from sci-visualization/qtiplot, #395139
 
   06 Mar 2011; Justin Lecher <jlec@gentoo.org> scidavis-0.2.3.ebuild,
   scidavis-0.2.4.ebuild:

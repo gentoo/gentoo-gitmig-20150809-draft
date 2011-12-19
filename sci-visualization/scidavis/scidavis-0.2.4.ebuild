@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.4.ebuild,v 1.4 2011/03/06 09:10:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.4.ebuild,v 1.5 2011/12/19 22:58:58 jlec Exp $
 
 EAPI="3"
 
@@ -20,13 +20,14 @@ for l in ${LANGS}; do
 	IUSE="${IUSE} linguas_${l}"
 done
 
-CDEPEND="sys-libs/zlib
+CDEPEND="
+	dev-cpp/muParser
+	sci-libs/gsl
+	sys-libs/zlib
 	x11-libs/qwt:5[svg]
 	>=x11-libs/qwtplot3d-0.2.7
 	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
-	x11-libs/qt-qt3support:4
-	>=dev-cpp/muParser-1.30
-	>=sci-libs/gsl-1.8"
+	x11-libs/qt-qt3support:4"
 # remove because unsupported for now
 #	sci-libs/liborigin:2"
 
@@ -56,6 +57,12 @@ src_prepare() {
 	sed -i \
 		-e '/^include( python.pri )$/d' \
 		${PN}/${PN}.pro || die "sed python failed"
+	sed \
+		-e '1i#define OF(x) x' \
+		-i 3rdparty/minigzip/minigzip.c || die
+#	sed \
+#		-e "/minigzip.c/s:^.*$:LIBS += -lminizip:g" \
+#		-i scidavis/sourcefiles.pri || die
 }
 
 src_install() {
