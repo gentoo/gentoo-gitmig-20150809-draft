@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/udns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.22 2011/12/18 18:14:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.23 2011/12/20 09:58:45 naota Exp $
+
+  20 Dec 2011; Naohiro Aota <naota@gentoo.org> udns-0.1.ebuild:
+  Add ~x86-fbsd
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> udns-0.0.9.ebuild,
   udns-0.1.ebuild:

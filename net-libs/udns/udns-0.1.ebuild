@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/udns-0.1.ebuild,v 1.4 2011/12/18 18:14:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/udns-0.1.ebuild,v 1.5 2011/12/20 09:58:45 naota Exp $
 
 EAPI="4"
 inherit eutils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://www.corpit.ru/mjt/udns/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc sparc x86 ~x86-fbsd"
 IUSE="ipv6 static"
 
 # Yes, this doesn't depend on any other library beside "system" set
