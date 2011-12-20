@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Memoize
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.10 2011/12/17 18:03:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.11 2011/12/20 20:40:23 jer Exp $
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org> perl-Memoize-1.20.0-r1.ebuild:
+  Stable for HPPA (bug #394041).
 
   17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> perl-Memoize-1.20.0-r1.ebuild:
   Stable for AMD64, wrt bug #394041
