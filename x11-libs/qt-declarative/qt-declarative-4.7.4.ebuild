@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.7.4.ebuild,v 1.1 2011/09/08 09:19:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.7.4.ebuild,v 1.2 2011/12/20 23:13:00 ago Exp $
 
 EAPI="3"
 inherit qt4-build
 
 DESCRIPTION="The Declarative module for the Qt toolkit"
 SLOT="4"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="private-headers qt3support webkit"
 
 DEPEND="~x11-libs/qt-core-${PV}[aqua=,qt3support=]

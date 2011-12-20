@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.100 2011/11/28 23:51:38 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.101 2011/12/20 23:13:32 ago Exp $
+
+  20 Dec 2011; Agostino Sarubbo <ago@gentoo.org> qt-phonon-4.7.4.ebuild:
+  Stable for AMD64, wrt bug #390963
 
   28 Nov 2011; Davide Pesavento <pesa@gentoo.org> -qt-phonon-4.7.3.ebuild:
   Remove Qt 4.7.3
