@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/qrupdate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.22 2011/12/19 09:54:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.23 2011/12/20 17:21:27 bicatali Exp $
+
+  20 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org> qrupdate-1.1.0.ebuild:
+  Fixed soname linking
 
   19 Dec 2011; Kacper Kowalik <xarthisius@gentoo.org> qrupdate-1.1.1.ebuild:
   Mark ~amd64-linux

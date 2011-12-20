@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.0.ebuild,v 1.11 2011/06/21 14:46:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.0.ebuild,v 1.12 2011/12/20 17:21:27 bicatali Exp $
 
 EAPI="2"
 
-inherit eutils fortran-2 toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs versionator
 
 DESCRIPTION="A library for fast updating of QR and Cholesky decompositions"
 HOMEPAGE="http://sourceforge.net/projects/qrupdate"
@@ -41,8 +41,8 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so libqrupdate.so \
-		|| die "Failed to install libqrupdate.so"
-
+	newlib.so libqrupdate.so libqrupdate.so.1 \
+		|| die "Failed to install libqrupdate.so.1"
+	dosym libqrupdate.so.1 /usr/$(get_libdir)/libqrupdate.so
 	dodoc README ChangeLog || die "dodoc failed"
 }
