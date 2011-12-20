@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.6-r1.ebuild,v 1.2 2011/11/25 10:25:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.6-r1.ebuild,v 1.3 2011/12/20 13:14:14 polynomial-c Exp $
 
 EAPI=4
 
@@ -183,8 +183,8 @@ src_prepare() {
 	if use java ; then
 		sed "s:/usr/lib/jvm/java-6-sun:$(java-config -O):" \
 			-i "${S}"/Config.kmk || die
+		java-pkg-opt-2_src_prepare
 	fi
-	java-pkg-opt-2_src_prepare
 }
 
 src_configure() {

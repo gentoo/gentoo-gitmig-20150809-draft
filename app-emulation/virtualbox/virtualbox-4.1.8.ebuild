@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.12.ebuild,v 1.6 2011/10/24 21:57:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.8.ebuild,v 1.1 2011/12/20 13:14:14 polynomial-c Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+additions alsa doc extensions headless java pam pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
@@ -50,7 +50,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	vnc? ( >=net-libs/libvncserver-0.9.7 )
 	java? ( >=virtual/jre-1.5 )"
 DEPEND="${RDEPEND}
-	=dev-util/kbuild-0.1.5*
+	>=dev-util/kbuild-0.1.999
 	>=dev-lang/yasm-0.6.2
 	sys-devel/bin86
 	sys-devel/dev86
@@ -156,7 +156,7 @@ src_prepare() {
 		"${FILESDIR}/${PN}-4-mkisofs-check.patch"
 
 	# fix build with --as-needed (bug #249295 and bug #350907)
-	epatch "${FILESDIR}/${PN}-4-asneeded.patch"
+	epatch "${FILESDIR}/${PN}-4.1.4-asneeded.patch"
 
 	# Respect LDFLAGS
 	sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
@@ -164,6 +164,9 @@ src_prepare() {
 
 	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
 	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
+
+	# Don't build vboxpci.ko module (D'oh!)
+	epatch "${FILESDIR}"/${PN}-4.1.2-vboxpci-build.patch
 
 	# Use PAM only when pam USE flag is enbaled (bug #376531)
 	if ! use pam ; then
@@ -177,8 +180,8 @@ src_prepare() {
 	if use java ; then
 		sed "s:/usr/lib/jvm/java-6-sun:$(java-config -O):" \
 			-i "${S}"/Config.kmk || die
+		java-pkg-opt-2_src_prepare
 	fi
-	java-pkg-opt-2_src_prepare
 }
 
 src_configure() {
