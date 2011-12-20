@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/acr38u
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/ChangeLog,v 1.1 2011/03/17 00:26:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/ChangeLog,v 1.2 2011/12/20 19:30:19 flameeyes Exp $
+
+*acr38u-1.7.11 (20 Dec 2011)
+
+  20 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> +acr38u-1.7.11.ebuild,
+  +files/1.7.11.rules:
+  Version bump, thanks to proxy maintainer Vincent Hardy.
 
 *acr38u-1.7.10-r1 (17 Mar 2011)
 
