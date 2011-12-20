@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.373 2011/12/03 22:57:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.374 2011/12/20 15:41:54 ago Exp $
+
+  20 Dec 2011; Agostino Sarubbo <ago@gentoo.org> mesa-7.11.2.ebuild:
+  Stable for AMD64, wrt bug #394393
 
   03 Dec 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -mesa-7.10.2.ebuild, -mesa-7.10.2-r1.ebuild, mesa-7.10.3.ebuild,
