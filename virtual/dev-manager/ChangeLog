@@ -1,6 +1,9 @@
 # ChangeLog for virtual/dev-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/dev-manager/ChangeLog,v 1.3 2011/12/20 15:55:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/dev-manager/ChangeLog,v 1.4 2011/12/20 23:46:58 vapier Exp $
+
+  20 Dec 2011; Mike Frysinger <vapier@gentoo.org> dev-manager-0.ebuild:
+  Make sure we prefer udev over busybox #395409 by Grzegorz Krzystek.
 
   20 Dec 2011; Mike Frysinger <vapier@gentoo.org> dev-manager-0.ebuild:
   Add busybox[mdev] as a provider #395319 by Walter Dnes.
