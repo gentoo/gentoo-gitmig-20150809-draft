@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-7.0.1.ebuild,v 1.3 2011/11/13 14:45:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-9.0.ebuild,v 1.1 2011/12/20 13:49:18 polynomial-c Exp $
 
 EAPI="3"
 
-inherit eutils mozilla-launcher multilib mozextension
+inherit eutils mozilla-launcher multilib mozextension pax-utils fdo-mime gnome2-utils
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 LANGS=(af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de el en en-GB en-US
@@ -18,14 +18,14 @@ MY_PN="${PN/-bin}"
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Firefox Web Browser"
-FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
+FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MY_PN}/releases"
 SRC_URI="
 	amd64? ( ${FTP_URI}/${MY_PV}/linux-x86_64/en-US/${MY_P}.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
 	x86? ( ${FTP_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="startup-notification"
@@ -149,6 +149,13 @@ src_install() {
 
 	ln -sfn "/usr/$(get_libdir)/nsbrowser/plugins" \
 			"${D}${MOZILLA_FIVE_HOME}/plugins" || die
+
+	# Required in order to use plugins and even run firefox on hardened.
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
@@ -165,8 +172,13 @@ pkg_postinst() {
 		einfo "if you have curl emerged with the nss USE-flag"
 		einfo
 	fi
+
+	# Update mimedb for the new .desktop file
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
 	update_mozilla_launcher_symlinks
+	gnome2_icon_cache_update
 }
