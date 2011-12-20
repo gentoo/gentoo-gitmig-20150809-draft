@@ -1,29 +1,27 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.ebuild,v 1.10 2011/12/20 09:22:09 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.5.0.ebuild,v 1.1 2011/12/20 09:22:10 jmbsvicetto Exp $
 
-EAPI="3"
+EAPI=4
 
-# Translations are only in the tarballs, not the git repo
-if [[ ${PV} != *9999* ]]; then
-	KDE_LINGUAS="bg ca cs da de en_GB es et eu fi fr it ja km nb nds nl
-	pa pl pt pt_BR ru sl sr sr@latin sv th tr uk wa zh_TW"
-	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
-	KEYWORDS="amd64 ppc x86"
-else
-	KDE_SCM="git"
-	KEYWORDS=""
-fi
-
+KDE_LINGUAS="bg ca cs da de en_GB es et eu fi fr it ja km nb nds nl pa
+pl pt pt_BR ru sl sr sr@latin sv th tr uk wa zh_TW"
+KDE_SCM="git"
 KDE_REQUIRED="never"
 inherit flag-o-matic kde4-base
 
 DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
+if [[ ${PV} != *9999* ]]; then
+	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
+	KEYWORDS="~amd64 ~ppc ~x86"
+else
+	KEYWORDS=""
+fi
 
 LICENSE="GPL-2"
 SLOT="4"
-IUSE="cdda daap debug +embedded handbook ipod lastfm mp3tunes mtp opengl +player semantic-desktop +utils"
+IUSE="cdda daap debug +embedded ipod lastfm mp3tunes mtp opengl +player semantic-desktop +utils"
 
 # Tests require gmock - http://code.google.com/p/gmock/
 # It's not in the tree yet
@@ -35,7 +33,7 @@ COMMONDEPEND="
 	>=media-libs/taglib-extras-1.0.1
 	player? (
 		app-crypt/qca:2
-		>=app-misc/strigi-0.5.7[dbus,qt4]
+		>=app-misc/strigi-0.5.7
 		$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop?')
 		$(add_kdebase_dep kdebase-kioslaves)
 		sys-libs/zlib
@@ -92,6 +90,7 @@ src_prepare() {
 src_configure() {
 	# Append minimal-toc cflag for ppc64, see bug 280552 and 292707
 	use ppc64 && append-flags -mminimal-toc
+	local mycmakeargs
 
 	if use player; then
 		mycmakeargs=(
@@ -136,7 +135,7 @@ pkg_postinst() {
 			elog "You've disabled the amarok support for embedded mysql DBs."
 			elog "You'll have to configure amarok to use an external db server."
 			echo
-			elog "Please read http://amaroklive.com/wiki/MySQL_Server for details on how"
+			elog "Please read http://amarok.kde.org/wiki/MySQL_Server for details on how"
 			elog "to configure the external db and migrate your data from the embedded database."
 			echo
 

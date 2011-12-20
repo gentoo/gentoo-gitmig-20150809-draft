@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.413 2011/11/08 20:16:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.414 2011/12/20 09:22:09 jmbsvicetto Exp $
+
+*amarok-2.5.0 (20 Dec 2011)
+
+  20 Dec 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.4.0.ebuild, amarok-2.4.3.ebuild, +amarok-2.5.0.ebuild:
+  [media-sound/amarok] Bump to the 2.5.0 release.
+  Dropped ~ppc64 keywords as all KDE versions are masked on the ppc64 arch.
 
   08 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> amarok-2.4.3.ebuild:
   No use-deps on strigi, bug 386259
