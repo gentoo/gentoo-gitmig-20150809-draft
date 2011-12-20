@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.9.ebuild,v 1.1 2011/11/20 20:34:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.9.ebuild,v 1.2 2011/12/20 23:16:07 bicatali Exp $
 
 EAPI=3
 inherit eutils autotools
@@ -33,19 +33,29 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
+	if use jpeg2k; then
+		myconf="--enable-jpeg"
+		if hasv media-libs/jasper; then
+			myconf="${myconf} --with-jasper=system --without-openjpeg"
+		elif hasv media-libs/openjpeg; then
+			myconf="${myconf} --without-jasper --with-openjpeg=system"
+		fi
+	else
+		myconf="--disable-jpeg --without-jasper --without-openjpeg"
+	fi
 	econf \
 		--enable-install-system-perl \
-		--with-perl-options=INSTALLDIRS=vendor \
+		--with-perl-options="INSTALLDIRS=vendor" \
 		$(use_enable fortran) \
-		$(use_enable jpeg2k jpeg) \
 		$(use_enable openmp omp-packing) \
 		$(use_enable python) \
 		$(use_enable python numpy) \
 		$(use_enable static-libs static) \
-		$(use_with netcdf netcdf "${EPRFIX}"/usr) \
+		$(use_with netcdf netcdf "${EPREFIX}"/usr) \
 		$(use_with perl) \
-		$(use_with png png-support)
-
+		$(use_with png png-support) \
+		${myconf}
 }
 
 src_install() {
