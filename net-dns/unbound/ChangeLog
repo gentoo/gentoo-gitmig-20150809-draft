@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.31 2011/12/19 15:09:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.32 2011/12/20 14:37:45 ago Exp $
+
+  20 Dec 2011; Agostino Sarubbo <ago@gentoo.org> unbound-1.4.13_p2.ebuild:
+  Stable for AMD64, wrt security bug #395287
 
 *unbound-1.4.13_p2 (19 Dec 2011)
 
