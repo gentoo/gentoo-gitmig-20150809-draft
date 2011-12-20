@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.56 2011/12/16 22:26:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.57 2011/12/20 20:45:49 jer Exp $
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org> libp11-0.2.8.ebuild:
+  Stable for HPPA (bug #393865).
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> libp11-0.2.8.ebuild:
   Stable for AMD64, wrt bug #393865
