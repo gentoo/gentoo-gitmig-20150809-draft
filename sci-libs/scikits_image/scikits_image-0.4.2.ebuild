@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.2.2.ebuild,v 1.2 2011/01/08 19:32:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.4.2.ebuild,v 1.1 2011/12/20 06:34:06 bicatali Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -10,24 +10,28 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-MY_P="${P/scikits_/scikits.}"
+MYPN="${PN/scikits_/scikits-}"
 
 DESCRIPTION="Image processing routines for SciPy"
-HOMEPAGE="http://stefanv.github.com/scikits.image"
-SRC_URI="mirror://pypi/${PN:0:1}/scikits.image/${MY_P}.tar.gz"
+HOMEPAGE="http://scikits-image.org/"
+SRC_URI="mirror://pypi/${PN:0:1}/${MYPN}/${MYPN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc gtk qt4"
 
-RDEPEND="dev-python/numpy
-	sci-libs/scikits"
-DEPEND="${RDEPEND}
+RDEPEND="sci-libs/scipy
+	sci-libs/scikits
+	gtk? ( dev-python/pygtk )
+	qt4? ( dev-python/PyQt4 )"
+DEPEND="dev-python/numpy
+	dev-python/cython
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MYPN}-${PV}"
+PYTHON_MODNAME="skimage"
 
 src_compile() {
 	distutils_src_compile
