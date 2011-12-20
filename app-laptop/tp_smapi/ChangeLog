@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/tp_smapi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.42 2011/12/19 23:53:58 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.43 2011/12/20 02:56:49 ottxor Exp $
+
+*tp_smapi-0.41 (20 Dec 2011)
+
+  20 Dec 2011; Christoph Junghans <ottxor@gentoo.org> +tp_smapi-0.41.ebuild:
+  Version bump: fixes bug #375697 and bug #384735
 
   19 Dec 2011; Christoph Junghans <ottxor@gentoo.org>
   files/tp_smapi-0.40-initd:
