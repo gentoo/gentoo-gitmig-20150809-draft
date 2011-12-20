@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.59 2011/12/20 15:51:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.60 2011/12/20 21:03:24 jer Exp $
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org> xorg-drivers-1.11.ebuild:
+  Stable for HPPA (bug #394393).
 
   20 Dec 2011; Lars Wendler <polynomial-c@gentoo.org> xorg-drivers-1.10.ebuild:
   Dropped input_devices_virtualbox from 1.10, too. (acked by chithead)
