@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.12.ebuild,v 1.3 2011/07/22 16:57:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.1.8.ebuild,v 1.1 2011/12/20 12:40:26 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-72916
+MY_PV=${PV}-75467
 SDK_PV=${MY_PV}
-EXTP_PV=${MY_PV}
+EXTP_PV=${SDK_PV}
 MY_P=VirtualBox-${MY_PV}-Linux
 EXTP_PN=Oracle_VM_VirtualBox_Extension_Pack
 
@@ -21,7 +21,7 @@ SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.
 
 LICENSE="GPL-2 PUEL"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+additions +chm headless python sdk vboxwebsrv rdesktop-vrdp"
 RESTRICT="mirror"
 
