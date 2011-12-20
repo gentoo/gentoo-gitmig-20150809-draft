@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.90 2011/12/20 08:57:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.91 2011/12/20 08:59:52 radhermit Exp $
+
+  20 Dec 2011; Tim Harder <radhermit@gentoo.org> libdvdcss-1.2.10.ebuild,
+  libdvdcss-1.2.11.ebuild:
+  Drop unused eutils eclass.
 
   20 Dec 2011; Tim Harder <radhermit@gentoo.org> libdvdcss-1.2.11.ebuild:
   Revert to autotools eclass.
