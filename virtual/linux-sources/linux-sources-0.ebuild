@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-0.ebuild,v 1.1 2011/08/09 06:31:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-0.ebuild,v 1.2 2011/12/20 20:32:56 blueness Exp $
 
 EAPI=2
 
@@ -26,6 +26,7 @@ RDEPEND="|| (
 		sys-kernel/mm-sources
 		sys-kernel/openvz-sources
 		sys-kernel/pf-sources
+		sys-kernel/rt-sources
 		sys-kernel/sparc-sources
 		sys-kernel/tuxonice-sources
 		sys-kernel/usermode-sources
