@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.4.ebuild,v 1.11 2011/02/20 09:27:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.4.ebuild,v 1.12 2011/12/20 23:47:46 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -58,7 +58,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="debug ipv6 make-symlinks +mdev -pam selinux static elibc_glibc"
+IUSE="debug ipv6 make-symlinks mdev -pam selinux static elibc_glibc"
 RESTRICT="test"
 
 DEPEND="selinux? ( sys-libs/libselinux )
