@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-0.9.3.ebuild,v 1.2 2011/11/14 21:15:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-0.9.3.ebuild,v 1.3 2011/12/20 22:04:32 vapier Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 
-inherit gnome2 cmake-utils toolchain-funcs
+inherit gnome2 eutils cmake-utils toolchain-funcs
 
 DESCRIPTION="A virtual lighttable and darkroom for photographers"
 HOMEPAGE="http://darktable.sf.net/"
@@ -13,8 +13,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="debug flickr gnome gphoto2 kde nls opencl openmp +rawspeed +slideshow video_cards_nvidia"
 KEYWORDS="~amd64 ~x86"
+IUSE="debug flickr gnome gphoto2 kde nls opencl openmp +rawspeed +slideshow video_cards_nvidia"
 
 RDEPEND="
 	dev-db/sqlite:3
@@ -35,10 +35,7 @@ RDEPEND="
 	media-libs/openexr
 	media-libs/tiff
 	net-misc/curl
-	opencl? ( video_cards_nvidia? (
-		x11-drivers/nvidia-drivers
-		>=dev-util/nvidia-cuda-toolkit-3.1
-	) )
+	opencl? ( virtual/opencl )
 	slideshow? (
 		media-libs/libsdl
 		virtual/opengl
@@ -72,17 +69,8 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-	if use gnome ; then
-		myconf="-DDONT_INSTALL_GCONF_SCHEMAS=OFF"
-	else
-		myconf="-DDONT_INSTALL_GCONF_SCHEMAS=ON"
-	fi
-
-	if use opencl && use video_cards_nvidia ; then
-		myconf+=" -DUSE_OPENCL=ON"
-	else
-		myconf+=" -DUSE_OPENCL=OFF"
-	fi
+	myconf="-DDONT_INSTALL_GCONF_SCHEMAS=$(usex gnome OFF ON)"
+	myconf+=" -DUSE_OPENCL=$(usex opencl ON OFF)"
 
 	use debug && CMAKE_BUILD_TYPE=Debug
 

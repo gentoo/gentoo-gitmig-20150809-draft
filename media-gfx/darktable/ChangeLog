@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.12 2011/11/14 21:15:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.13 2011/12/20 22:04:32 vapier Exp $
+
+  20 Dec 2011; Mike Frysinger <vapier@gentoo.org> darktable-0.9.3.ebuild:
+  Switch to new virtual/opencl #392179 by Michal Pytasz.
 
   14 Nov 2011; Tim Harder <radhermit@gentoo.org> darktable-0.9.3.ebuild:
   Add xmp use dep for exiv2 (bug #390301 by Kanstantsin Shautsou).
