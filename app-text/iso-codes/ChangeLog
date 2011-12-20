@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.113 2011/11/19 13:54:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.114 2011/12/20 21:18:07 jer Exp $
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org> iso-codes-3.30.ebuild:
+  Stable for HPPA (bug #393007).
 
 *iso-codes-3.30 (19 Nov 2011)
 
