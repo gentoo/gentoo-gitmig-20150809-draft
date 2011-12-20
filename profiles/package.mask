@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13340 2011/12/19 18:27:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13341 2011/12/20 15:20:34 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -41,11 +41,6 @@
 # is not full functional. Last release was on 2010-01-14.
 # See bug #394881
 kde-misc/kcheckgmail
-
-# Mike Pagano <mpagano@gentoo.org> (15 Dec 2011)
-# Masked for a bit for testing 
-=app-portage/portpeek-1.9.8*
->=app-portage/portpeek-2.0.15
 
 # Hanno Boeck <hanno@gentoo.org> (15 Dec 2011)
 # Breaks pam_mount, which is its only user in the tree.
