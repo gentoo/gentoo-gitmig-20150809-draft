@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.1_p110629.ebuild,v 1.2 2011/10/07 19:29:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p111220.ebuild,v 1.1 2011/12/20 08:39:39 jlec Exp $
 
 EAPI="3"
 
@@ -15,9 +15,9 @@ MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
-SRC_URI="http://www.bio.cam.ac.uk/ccpn/download/${MY_PN}/analysis${MY_PV}.tar.gz"
-	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.bz2"
 HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
+SRC_URI="http://www.bio.cam.ac.uk/ccpn/download/${MY_PN}/analysis${MY_PV}.tar.gz"
+	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.xz"
 
 SLOT="0"
 LICENSE="|| ( CCPN LGPL-2.1 )"
@@ -29,6 +29,8 @@ RDEPEND="
 	>=dev-python/numpy-1.4
 	>=dev-tcltk/tix-8.4.3
 	=sci-libs/ccpn-data-"${MY_MAJOR}"*
+	>=sci-libs/ccpn-data-2.1.5_p111011
+	sci-biology/psipred
 	x11-libs/libXext
 	x11-libs/libX11
 	opengl? (
@@ -39,7 +41,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 PDEPEND="
 	extendnmr? (
-		>=sci-chemistry/aria-2.3.2-r1
+		<=sci-chemistry/aria-2.3.2
 		sci-chemistry/prodecomp )"
 
 RESTRICT="mirror"
@@ -55,6 +57,11 @@ src_prepare() {
 		epatch "${WORKDIR}"/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch
 
 	epatch "${FILESDIR}"/${MY_PV}-parallel.patch
+
+	sed \
+		-e "/PSIPRED_DIR/s:'data':'share/psipred/data':g" \
+		-e "s:weights_s:weights:g" \
+		-i python/ccpnmr/analysis/wrappers/Psipred.py || die
 
 	local tk_ver
 	local myconf
@@ -115,7 +122,7 @@ src_install() {
 	libdir=$(get_libdir)
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 
-	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara xeasy2azara"
+	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara"
 	use extendnmr && _wrapper="${_wrapper} extendNmr"
 	for wrapper in ${_wrapper}; do
 		sed \
@@ -124,6 +131,7 @@ src_install() {
 			-e "s|gentootk|${EPREFIX}/usr/${libdir}/tk${tkver}|g" \
 			-e "s|gentootcl|${EPREFIX}/usr/${libdir}/tclk${tkver}|g" \
 			-e "s|gentoopython|${EPREFIX}/usr/bin/python|g" \
+			-e "s|gentoousr|${EPREFIX}/usr|g" \
 			-e "s|//|/|g" \
 			"${FILESDIR}"/${wrapper} > "${T}"/${wrapper} || die "Fail fix ${wrapper}"
 		dobin "${T}"/${wrapper} || die "Failed to install ${wrapper}"
@@ -151,13 +159,6 @@ src_install() {
 	ebegin "Installing main files"
 		doins -r python || die "main files installation failed"
 	eend
-		dosym ../../../..//share/doc/ccpn-data-${MY_MAJOR}/html ${in_path}/doc || die
-	for i in ${pydocs}; do
-		dosym /usr/share/doc/ccpn-data-${MY_MAJOR}/html/${i} ${in_path}/${i}
-	done
-
-	dosym /usr/share/ccpn/data ${in_path}/data
-	dosym /usr/share/ccpn/model ${in_path}/model
 
 	einfo "Adjusting permissions"
 
