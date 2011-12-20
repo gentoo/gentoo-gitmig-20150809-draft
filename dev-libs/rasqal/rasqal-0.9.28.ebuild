@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.28.ebuild,v 1.1 2011/11/18 11:41:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.28.ebuild,v 1.2 2011/12/20 16:40:44 ssuominen Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos"
 IUSE="+crypt doc gmp +mhash pcre static-libs test xml"
 
-RDEPEND="media-libs/raptor:2
+RDEPEND=">=media-libs/raptor-2.0.6:2
 	pcre? ( dev-libs/libpcre )
 	xml? ( dev-libs/libxml2 )
 	!gmp? ( dev-libs/mpfr )
