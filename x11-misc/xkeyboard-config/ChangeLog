@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.146 2011/12/20 15:30:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.147 2011/12/20 21:09:22 jer Exp $
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org>
+  xkeyboard-config-2.4.1-r2.ebuild:
+  Stable for HPPA (bug #394393).
 
   20 Dec 2011; Agostino Sarubbo <ago@gentoo.org>
   xkeyboard-config-2.4.1-r2.ebuild:
