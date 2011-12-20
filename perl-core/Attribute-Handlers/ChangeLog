@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Attribute-Handlers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.19 2011/12/19 19:21:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.20 2011/12/20 20:38:48 jer Exp $
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org>
+  Attribute-Handlers-0.910.0.ebuild:
+  Stable for HPPA (bug #394039).
 
 *Attribute-Handlers-0.930.0 (19 Dec 2011)
 
