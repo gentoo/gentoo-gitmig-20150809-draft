@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6031 2011/12/20 15:20:34 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6032 2011/12/20 22:39:17 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Dec 2011; Davide Pesavento <pesa@gentoo.org> package.mask:
+  x11-libs/qt is no longer in the tree, remove mask.
 
   20 Dec 2011; Michael Pagano <mpagano@gentoo.org> package.mask:
   Remove portpeek masks
