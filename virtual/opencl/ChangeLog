@@ -1,0 +1,10 @@
+# ChangeLog for virtual/opencl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.1 2011/12/20 19:32:33 vapier Exp $
+
+*opencl-0 (20 Dec 2011)
+
+  20 Dec 2011; Mike Frysinger <vapier@gentoo.org> +opencl-0.ebuild,
+  +metadata.xml:
+  Initial ebuild by me for #392179 by Michal Pytasz.
+
