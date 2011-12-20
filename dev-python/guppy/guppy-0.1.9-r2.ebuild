@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.9-r1.ebuild,v 1.1 2011/12/17 08:40:20 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.9-r2.ebuild,v 1.1 2011/12/20 15:16:14 maksbotan Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
 inherit distutils
 
@@ -26,17 +27,22 @@ PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 DOCS="ANNOUNCE ChangeLog"
 
 src_prepare() {
-	sed -e 's:_PyLong_AsScaledDouble:_PyLong_Frexp:' -i src/sets/bitset.c || die
+	distutils_src_prepare
+	preparation() {
+		if [[ ${PYTHON_ABI} == "2.7" ]]; then
+			sed -e 's:_PyLong_AsScaledDouble:_PyLong_Frexp:' -i src/sets/bitset.c || die
+		fi
+	}
+	python_execute_function -s preparation
 }
 
 src_test() {
 	testing() {
-		cd "${S}"
 		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --home="${T}/test-${PYTHON_ABI}" || die "Installation of tests failed with Python ${PYTHON_ABI}"
 		cd "${T}/test-${PYTHON_ABI}/lib/python"
-		PYTHONPATH="$(ls -d "${S}/build-${PYTHON_ABI}/"lib*):." "$(PYTHON)" guppy/heapy/test/test_all.py || return 1
+		PYTHONPATH="$(ls -d "${BUILDDIR}/build-${PYTHON_ABI}/"lib*):." "$(PYTHON)" guppy/heapy/test/test_all.py || return 1
 	}
-	python_execute_function testing
+	python_execute_function -s testing
 }
 
 src_install() {
