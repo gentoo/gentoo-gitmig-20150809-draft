@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.2.5.ebuild,v 1.1 2011/01/29 05:35:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.2.5-r1.ebuild,v 1.1 2011/12/20 18:13:55 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
-IPV6_P="ncftp-323-v6-20091109"
+#IPV6_P="ncftp-323-v6-20091109"
 DESCRIPTION="An extremely configurable ftp client"
 HOMEPAGE="http://www.ncftp.com/"
-SRC_URI="ftp://ftp.${PN}.com/${PN}/${P}-src.tar.bz2"
+SRC_URI="ftp://ftp.${PN}.com/${PN}/${P}-src.tar.bz2 -> ${P}.474.tar.bz2"
 #	ipv6? ( ftp://ftp.kame.net/pub/kame/misc/${IPV6_P}.diff.gz )"
 
 LICENSE="Clarified-Artistic"
@@ -20,7 +20,7 @@ IUSE="pch"
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${P/.1/}"
+S=${WORKDIR}/${P/.474}
 
 src_prepare() {
 	#use ipv6 && epatch "${DISTDIR}"/${IPV6_P}.diff.gz
@@ -32,11 +32,11 @@ src_prepare() {
 		-i Makefile.in */Makefile.in || die
 }
 src_configure() {
-	LC_ALL="C" econf --disable-universal $(use_enable pch precomp ) || die
+	LC_ALL="C" econf --disable-universal $(use_enable pch precomp )
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	default
 	dodoc README.txt doc/*.txt
 	dohtml doc/html/*.html
 }
