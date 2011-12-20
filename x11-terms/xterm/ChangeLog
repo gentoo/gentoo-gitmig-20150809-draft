@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.341 2011/10/21 17:08:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.342 2011/12/20 15:28:28 ago Exp $
+
+  20 Dec 2011; Agostino Sarubbo <ago@gentoo.org> xterm-276.ebuild:
+  Stable for AMD64, wrt bug #394393
 
   21 Oct 2011; Jeremy Olexa <darkside@gentoo.org> xterm-276.ebuild:
   fix bsd dep from last commit
