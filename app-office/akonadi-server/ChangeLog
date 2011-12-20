@@ -1,6 +1,16 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.64 2011/12/07 22:06:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.65 2011/12/20 23:43:57 johu Exp $
+
+*akonadi-server-1.6.2-r1 (20 Dec 2011)
+*akonadi-server-1.5.2-r1 (20 Dec 2011)
+
+  20 Dec 2011; Johannes Huber <johu@gentoo.org> +akonadi-server-1.5.2-r1.ebuild,
+  +akonadi-server-1.6.2-r1.ebuild, -akonadi-server-1.3.1.ebuild,
+  -files/akonadi-server-1.6.0_Fix_crash_on_agent_launcher_exit.patch,
+  metadata.xml:
+  Remove old. Rev bump fix available driver array fill, bug #395165. Thanks to
+  jer to show the root path of the solution.
 
   07 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
   akonadi-server-1.6.2.ebuild:
