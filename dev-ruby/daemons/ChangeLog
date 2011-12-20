@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.64 2011/08/20 12:43:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.65 2011/12/20 06:38:24 graaff Exp $
+
+*daemons-1.1.5 (20 Dec 2011)
+
+  20 Dec 2011; Hans de Graaff <graaff@gentoo.org> +daemons-1.1.5.ebuild:
+  Version bump: handle empty pid file.
 
   20 Aug 2011; Hans de Graaff <graaff@gentoo.org> -daemons-1.0.10.ebuild,
   -daemons-1.1.0.ebuild:
