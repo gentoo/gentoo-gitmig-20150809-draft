@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.301 2011/11/22 16:17:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.302 2011/12/20 21:37:46 jer Exp $
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org> vte-0.28.2-r202.ebuild:
+  Stable for HPPA (bug #393007).
 
   22 Nov 2011; Zac Medico <zmedico@gentoo.org> vte-0.28.2-r202.ebuild:
   Add ~x86-linux keyword.
