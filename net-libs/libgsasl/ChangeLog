@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.69 2011/11/27 22:49:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.70 2011/12/20 11:53:39 naota Exp $
+
+  20 Dec 2011; Naohiro Aota <naota@gentoo.org> libgsasl-1.6.1.ebuild:
+  Add ~x86-fbsd
 
   27 Nov 2011; Jeroen Roovers <jer@gentoo.org> libgsasl-1.6.1.ebuild:
   Inherit eutils properly. Do not use autotools-utils.eclass (bug # 392109).
