@@ -1,20 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.4.1.ebuild,v 1.1 2011/11/16 08:51:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.6.ebuild,v 1.1 2011/12/20 08:31:09 polynomial-c Exp $
 
 EAPI="4"
 
-inherit eutils mozilla-launcher multilib mozextension pax-utils
+inherit eutils mozilla-launcher multilib mozextension pax-utils nsplugins fdo-mime gnome2-utils
 
 LANGS=(be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it
 ja lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN)
 
 MY_PV="${PV/_alpha/a}"
 MY_P="${PN}-${MY_PV}"
+MY_PN="${PN/-bin}"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
-HTTP_URI="http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/${MY_PV}/"
-SRC_URI="${HTTP_URI}/linux-i686/en-US/seamonkey-${MY_PV}.tar.bz2"
+FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
+SRC_URI="
+	amd64? ( ${FTP_URI}/${MY_PV}/contrib/seamonkey-${MY_PV}.en-US.linux-x86_64.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
+	x86? ( ${FTP_URI}/${MY_PV}/linux-i686/en-US/seamonkey-${MY_PV}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip"
 QA_EXECSTACK="opt/seamonkey/*"
@@ -26,18 +29,11 @@ IUSE="startup-notification"
 
 DEPEND="app-arch/unzip"
 RDEPEND="dev-libs/dbus-glib
+	>=media-libs/alsa-lib-1.0.16
+	>=x11-libs/gtk+-2.10:2
 	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu
-	x86? (
-		>=x11-libs/gtk+-2.2:2
-		>=media-libs/alsa-lib-1.0.16
-	)
-	amd64? (
-		>=app-emulation/emul-linux-x86-baselibs-20081109
-		>=app-emulation/emul-linux-x86-gtklibs-20081109
-		>=app-emulation/emul-linux-x86-soundlibs-20081109
-	)
 	!<www-client/seamonkey-bin-2"
 
 S="${WORKDIR}/seamonkey"
@@ -47,7 +43,7 @@ for X in "${LANGS[@]}" ; do
 	if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
 		SRC_URI="${SRC_URI}
 			linguas_${X/-/_}? (
-			${HTTP_URI}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
+			${FTP_URI}/${MY_PV}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# Install all the specific locale xpis if there's no generic locale xpi
@@ -55,7 +51,7 @@ for X in "${LANGS[@]}" ; do
 	if ! has ${X%%-*} "${LANGS[@]}"; then
 		SRC_URI="${SRC_URI}
 			linguas_${X%%-*}? (
-			${HTTP_URI}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
+			${FTP_URI}/${MY_PV}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X%%-*}"
 	fi
 done
@@ -85,13 +81,6 @@ linguas() {
 		fi
 		ewarn "Sorry, but ${P} does not support the ${LINGUA} locale"
 	done
-}
-
-pkg_setup() {
-	# This is a binary x86 package => ABI=x86
-	# Please keep this in future versions
-	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
-	has_multilib_profile && ABI="x86"
 }
 
 src_unpack() {
@@ -148,13 +137,23 @@ EOF
 	insinto /etc/revdep-rebuild
 	doins "${FILESDIR}"/10${PN} || die
 
-	ln -sfn "/usr/$(get_libdir)/nsbrowser/plugins" \
-	            "${D}${MOZILLA_FIVE_HOME}/plugins" || die
+	# Handle plugins dir through nsplugins.eclass
+	share_plugins_dir
 
 	# Required in order to use plugins and even run seamonkey on hardened.
 	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin,plugin-container}
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
-	use amd64 && einfo "NB: You just installed a 32-bit seamonkey"
+	# Update mimedb for the new .desktop file
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

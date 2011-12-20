@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.5.ebuild,v 1.3 2011/12/05 22:01:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.5.ebuild,v 1.4 2011/12/20 08:31:09 polynomial-c Exp $
 
 EAPI="4"
 
@@ -11,12 +11,13 @@ ja lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN)
 
 MY_PV="${PV/_alpha/a}"
 MY_P="${PN}-${MY_PV}"
+MY_PN="${PN/-bin}"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
-HTTP_URI="http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/${MY_PV}/"
+FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
 SRC_URI="
-	amd64? ( ${HTTP_URI}/contrib/seamonkey-${MY_PV}.en-US.linux-x86_64.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
-	x86? ( ${HTTP_URI}/linux-i686/en-US/seamonkey-${MY_PV}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
+	amd64? ( ${FTP_URI}/${MY_PV}/contrib/seamonkey-${MY_PV}.en-US.linux-x86_64.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
+	x86? ( ${FTP_URI}/${MY_PV}/linux-i686/en-US/seamonkey-${MY_PV}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip"
 QA_EXECSTACK="opt/seamonkey/*"
@@ -42,7 +43,7 @@ for X in "${LANGS[@]}" ; do
 	if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
 		SRC_URI="${SRC_URI}
 			linguas_${X/-/_}? (
-			${HTTP_URI}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
+			${FTP_URI}/${MY_PV}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# Install all the specific locale xpis if there's no generic locale xpi
@@ -50,7 +51,7 @@ for X in "${LANGS[@]}" ; do
 	if ! has ${X%%-*} "${LANGS[@]}"; then
 		SRC_URI="${SRC_URI}
 			linguas_${X%%-*}? (
-			${HTTP_URI}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
+			${FTP_URI}/${MY_PV}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X%%-*}"
 	fi
 done
