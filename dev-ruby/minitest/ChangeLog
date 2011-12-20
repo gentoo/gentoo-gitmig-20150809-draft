@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.62 2011/12/15 10:03:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.63 2011/12/20 21:48:40 jer Exp $
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org> minitest-2.6.2.ebuild:
+  Stable for HPPA (bug #394781).
 
   15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> minitest-2.6.2.ebuild:
   Stable for AMD64, wrt bug #394781
