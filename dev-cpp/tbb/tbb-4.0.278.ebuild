@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.196.ebuild,v 1.1 2011/05/31 21:34:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.278.ebuild,v 1.1 2011/12/20 06:54:47 bicatali Exp $
 
-EAPI=3
+EAPI=4
 inherit eutils versionator toolchain-funcs
 
 # those 2 below change pretty much every release
 # url number
-MYU="78/170"
+MYU="78/179"
 # release update
-MYR="%20update%20"7
+MYR="%20update%202"
 
 PV1="$(get_version_component_range 1)"
 PV2="$(get_version_component_range 2)"
@@ -31,7 +31,6 @@ S="${WORKDIR}/${MYP}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0.104-tests.patch
-	epatch "${FILESDIR}"/${PN}-3.0.174-gcc46.patch
 	# use fully qualified compilers. do not force pentium4 for x86 users
 	local CC="$(tc-getCC)"
 	sed -i \
@@ -63,7 +62,7 @@ src_compile() {
 	if use debug || use examples; then
 		ccconf="${ccconf} tbb_debug tbbmalloc_debug"
 	fi
-	emake -C src ${ccconf} tbb_release tbbmalloc_release || die "emake failed"
+	emake -C src ${ccconf} tbb_release tbbmalloc_release
 }
 
 src_test() {
@@ -71,27 +70,25 @@ src_test() {
 	if use debug || use examples; then
 		${ccconf}="${myconf} test_debug tbbmalloc_test_debug"
 	fi
-	emake -C src ${ccconf} test_release || die "emake test failed"
+	emake -C src ${ccconf} test_release
 }
 
 src_install(){
 	for l in $(find build -name lib\*.so.\*); do
-		dolib.so ${l} || die
+		dolib.so ${l}
 		local bl=$(basename ${l})
 		dosym ${bl} /usr/$(get_libdir)/${bl%.*}
 	done
 	insinto /usr
-	doins -r include || die
+	doins -r include
 
 	dodoc README CHANGES doc/Release_Notes.txt
-	if use doc ; then
-		insinto /usr/share/doc/${PF}
-		doins -r doc/html || die
-	fi
+	use doc && dohtml -r doc/html/*
+
 	if use examples ; then
 		insinto /usr/share/doc/${PF}/examples/build
-		doins build/*.inc || die
+		doins build/*.inc
 		insinto /usr/share/doc/${PF}/examples
-		doins -r examples || die
+		doins -r examples
 	fi
 }
