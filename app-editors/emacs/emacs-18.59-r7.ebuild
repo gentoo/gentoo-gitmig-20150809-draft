@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r7.ebuild,v 1.4 2011/12/19 23:27:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r7.ebuild,v 1.5 2011/12/20 12:16:51 ulm Exp $
 
 EAPI=4
 
@@ -34,11 +34,11 @@ src_configure() {
 	case ${ARCH} in
 		amd64) arch=intel386; multilib_toolchain_setup x86 ;;
 		x86)   arch=intel386 ;;
-		*)	   die "Architecture ${arch} not supported" ;;
+		*)	   die "Architecture ${ARCH} not yet supported" ;;
 	esac
 	local cmd="s/\"s-.*\.h\"/\"s-linux.h\"/;s/\"m-.*\.h\"/\"m-${arch}.h\"/"
 	#use X && cmd="${cmd};s/.*\(#define HAVE_X_WINDOWS\).*/\1/"
-	sed -e "${cmd}" src/config.h-dist >src/config.h
+	sed -e "${cmd}" src/config.h-dist >src/config.h || die
 
 	cat <<-END >src/paths.h
 		#define PATH_LOADSEARCH "/usr/share/emacs/${PV}/lisp"
