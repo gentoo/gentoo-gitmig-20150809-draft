@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.288 2011/12/06 23:30:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.289 2011/12/20 15:46:47 vapier Exp $
+
+  20 Dec 2011; Mike Frysinger <vapier@gentoo.org> busybox-1.19.3-r1.ebuild:
+  Drop USE=mdev default so it can work with virtual/dev-manager #395319 by
+  Walter Dnes.
 
 *busybox-1.19.3-r1 (06 Dec 2011)
 
