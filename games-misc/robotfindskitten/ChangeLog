@@ -1,6 +1,13 @@
 # ChangeLog for games-misc/robotfindskitten
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.6 2007/02/08 21:07:44 wolf31o2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.7 2011/12/20 16:51:16 mr_bones_ Exp $
+
+*robotfindskitten-1.7320508.406 (20 Dec 2011)
+
+  20 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +robotfindskitten-1.7320508.406.ebuild:
+  Version bump with patch from Michael (kensington) (bug #395361)
+
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
