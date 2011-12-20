@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Perl-OSType
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Perl-OSType/ChangeLog,v 1.12 2011/12/14 23:39:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Perl-OSType/ChangeLog,v 1.13 2011/12/20 13:08:10 ago Exp $
+
+  20 Dec 2011; Agostino Sarubbo <ago@gentoo.org> perl-Perl-OSType-1.2.0.ebuild:
+  Stable for AMD64, wrt bug #393397
 
   14 Dec 2011; Markus Meier <maekke@gentoo.org> perl-Perl-OSType-1.2.0.ebuild:
   arm stable, bug #393397
