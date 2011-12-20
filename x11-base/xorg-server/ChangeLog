@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.629 2011/12/19 01:40:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.630 2011/12/20 15:44:56 ago Exp $
+
+  20 Dec 2011; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.11.2-r2.ebuild:
+  Stable for AMD64, wrt bug #394393
 
 *xorg-server-1.11.99.2 (19 Dec 2011)
 *xorg-server-1.11.3 (19 Dec 2011)
