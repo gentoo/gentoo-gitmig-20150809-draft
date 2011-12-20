@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.50 2011/10/30 15:11:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.51 2011/12/20 21:28:17 jer Exp $
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org> libunique-3.0.2.ebuild:
+  Stable for HPPA (bug #393007).
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> libunique-1.1.6-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #385699
