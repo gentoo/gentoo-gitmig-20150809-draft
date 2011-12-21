@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-mpost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mpost/ChangeLog,v 1.16 2011/12/20 20:31:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mpost/ChangeLog,v 1.17 2011/12/21 08:28:49 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  eselect-mpost-0.3.ebuild:
+  x86 stable wrt bug #393879
 
   20 Dec 2011; Jeroen Roovers <jer@gentoo.org> eselect-mpost-0.3.ebuild:
   Stable for HPPA (bug #393879).
