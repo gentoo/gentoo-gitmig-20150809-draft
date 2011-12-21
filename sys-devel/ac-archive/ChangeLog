@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/ac-archive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ac-archive/ChangeLog,v 1.14 2011/12/18 19:58:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ac-archive/ChangeLog,v 1.15 2011/12/21 08:33:38 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ac-archive-2007.0205.ebuild:
+  x86 stable wrt bug #394031
 
   18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> ac-archive-2007.0205.ebuild:
   Stable for AMD64, wrt bug #394031
