@@ -1,14 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r4.ebuild,v 1.5 2009/11/17 00:10:50 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r4.ebuild,v 1.6 2011/12/21 19:52:31 binki Exp $
 
 inherit flag-o-matic eutils
 
-MY_P=ircii-pana-${PV}-final
+MY_PN=ircii-pana
+MY_P=${MY_PN}-${PV}-final
 S=${WORKDIR}/BitchX
 DESCRIPTION="An IRC Client"
 HOMEPAGE="http://www.bitchx.org/"
-SRC_URI="http://www.bitchx.org/files/source/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_PN}/${MY_PN}-${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
