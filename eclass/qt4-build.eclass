@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.105 2011/12/21 22:36:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.106 2011/12/21 22:47:35 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -501,6 +501,9 @@ standard_configure_options() {
 	# exceptions USE flag
 	local exceptions="-exceptions"
 	in_iuse exceptions && exceptions="$(qt_use exceptions)"
+
+	# bug 380415
+	version_is_at_least 4.8 && myconf+=" -no-rpath"
 
 	# note about -reduce-relocations:
 	# That flag seems to introduce major breakage to applications,

@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.51 2011/12/21 22:36:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.52 2011/12/21 22:47:35 pesa Exp $
+
+  21 Dec 2011; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Disable rpath for Qt 4.8 and later (bug #380415). Thanks to dilfridge for
+  testing.
 
   21 Dec 2011; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Remove obsolete workaround.
