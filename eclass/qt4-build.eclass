@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.106 2011/12/21 22:47:35 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.107 2011/12/21 23:38:45 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -463,24 +463,40 @@ setqtenv() {
 # Sets up some standard configure options, like libdir (if necessary), whether
 # debug info is wanted or not.
 standard_configure_options() {
-	local myconf=
+	local myconf="-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
+		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR}
+		-importdir ${QTIMPORTDIR} -datadir ${QTDATADIR} -translationdir ${QTTRANSDIR}
+		-sysconfdir ${QTSYSCONFDIR} -examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR}
+		-opensource -confirm-license -shared -fast -largefile -stl -verbose
+		-platform $(qt_mkspecs_dir) -nomake examples -nomake demos"
 
 	[[ $(get_libdir) != lib ]] && myconf+=" -L${EPREFIX}/usr/$(get_libdir)"
 
-	# Disable visibility explicitly if gcc version isn't 4
-	if [[ $(gcc-major-version) -lt 4 ]]; then
-		myconf+=" -no-reduce-exports"
-	fi
-
-	# precompiled headers doesn't work on hardened, where the flag is masked.
-	myconf+=" $(qt_use pch)"
-
+	# debug/release
 	if use debug; then
 		myconf+=" -debug"
 	else
 		myconf+=" -release"
 	fi
 	myconf+=" -no-separate-debug-info"
+
+	# exceptions USE flag
+	local exceptions="-exceptions"
+	in_iuse exceptions && exceptions="$(qt_use exceptions)"
+	myconf+=" ${exceptions}"
+
+	# disable RPATH on Qt >= 4.8 (bug 380415)
+	version_is_at_least 4.8 && myconf+=" -no-rpath"
+
+	# precompiled headers don't work on hardened, where the flag is masked
+	myconf+=" $(qt_use pch)"
+
+	# -reduce-relocations
+	# This flag seems to introduce major breakage to applications,
+	# mostly to be seen as a core dump with the message "QPixmap: Must
+	# construct a QApplication before a QPaintDevice" on Solaris.
+	#   -- Daniel Vergien
+	[[ ${CHOST} != *-solaris* ]] && myconf+=" -reduce-relocations"
 
 	use aqua && myconf+=" -no-framework"
 
@@ -497,29 +513,6 @@ standard_configure_options() {
 		hppa|sh)		  myconf+=" -arch generic" ;;
 		*) die "$(tc-arch) is unsupported by this eclass. Please file a bug." ;;
 	esac
-
-	# exceptions USE flag
-	local exceptions="-exceptions"
-	in_iuse exceptions && exceptions="$(qt_use exceptions)"
-
-	# bug 380415
-	version_is_at_least 4.8 && myconf+=" -no-rpath"
-
-	# note about -reduce-relocations:
-	# That flag seems to introduce major breakage to applications,
-	# mostly to be seen as a core dump with the message "QPixmap: Must
-	# construct a QApplication before a QPaintDevice" on Solaris
-	#   -- Daniel Vergien
-	[[ ${CHOST} != *-solaris* ]] && myconf+=" -reduce-relocations"
-
-	myconf+=" -platform $(qt_mkspecs_dir) -stl -verbose -largefile -confirm-license
-		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
-		-datadir ${QTDATADIR} -docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR}
-		-plugindir ${QTPLUGINDIR} -sysconfdir ${QTSYSCONFDIR}
-		-translationdir ${QTTRANSDIR} -examplesdir ${QTEXAMPLESDIR}
-		-demosdir ${QTDEMOSDIR} -importdir ${QTIMPORTDIR} -silent -fast -opensource
-		${exceptions}
-		-nomake examples -nomake demos"
 
 	echo "${myconf}"
 }
