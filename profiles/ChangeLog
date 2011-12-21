@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6032 2011/12/20 22:39:17 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6033 2011/12/21 17:30:06 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  +default/linux/arm/10.0/package.use.mask,
+  +default/linux/sparc/10.0/package.use.mask:
+  Use mask vde flag for net-misc/tinc on arm and sparc
 
   20 Dec 2011; Davide Pesavento <pesa@gentoo.org> package.mask:
   x11-libs/qt is no longer in the tree, remove mask.
