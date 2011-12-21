@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.106 2011/12/12 22:47:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.107 2011/12/21 21:01:22 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -42,11 +42,8 @@ git)
 snap)
 	BVER=${PV/9999_pre}
 	;;
-rel)
-	BVER=${PV}
-	;;
 *)
-	BVER=${BINUTILS_VER}
+	BVER=${BINUTILS_VER:-${PV}}
 	;;
 esac
 
@@ -68,11 +65,11 @@ case ${BTYPE} in
 	cvs|git) SRC_URI="" ;;
 	snap) SRC_URI="ftp://gcc.gnu.org/pub/binutils/snapshots/binutils-${BVER}.tar.bz2";;
 	rel)
-		SRC_URI="mirror://kernel/linux/devel/binutils/binutils-${PV}.tar.bz2
-			mirror://kernel/linux/devel/binutils/test/binutils-${PV}.tar.bz2
-			mirror://gnu/binutils/binutils-${PV}.tar.bz2"
+		SRC_URI="mirror://kernel/linux/devel/binutils/binutils-${BVER}.tar.bz2
+			mirror://kernel/linux/devel/binutils/test/binutils-${BVER}.tar.bz2
+			mirror://gnu/binutils/binutils-${BVER}.tar.bz2"
 		# disable kernel mirrors until kernel.org is back up #383579
-		SRC_URI="mirror://gnu/binutils/binutils-${PV}.tar.bz2"
+		SRC_URI="mirror://gnu/binutils/binutils-${BVER}.tar.bz2"
 esac
 add_src_uri() {
 	[[ -z $2 ]] && return
@@ -80,8 +77,8 @@ add_src_uri() {
 	set -- mirror://gentoo http://dev.gentoo.org/~vapier/dist
 	SRC_URI="${SRC_URI} ${@/%//${a}}"
 }
-add_src_uri binutils-${PV}-patches-${PATCHVER}.tar.bz2 ${PATCHVER}
-add_src_uri binutils-${PV}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2 ${UCLIBC_PATCHVER}
+add_src_uri binutils-${BVER}-patches-${PATCHVER}.tar.bz2 ${PATCHVER}
+add_src_uri binutils-${BVER}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2 ${UCLIBC_PATCHVER}
 add_src_uri elf2flt-${ELF2FLT_VER}.tar.bz2 ${ELF2FLT_VER}
 
 if version_is_at_least 2.18 ; then
@@ -135,6 +132,9 @@ tc-binutils_unpack() {
 	[[ -d ${WORKDIR}/patch ]] && mkdir "${WORKDIR}"/patch/skip
 }
 
+# In case the ebuild wants to add a few of their own.
+PATCHES=()
+
 tc-binutils_apply_patches() {
 	cd "${S}"
 
@@ -165,6 +165,7 @@ tc-binutils_apply_patches() {
 				die "sorry, but this binutils doesn't yet support uClibc :("
 			fi
 		fi
+		[[ ${PATCHES[@]} -gt 0 ]] && epatch "${PATCHES[@]}"
 		epatch_user
 	fi
 
