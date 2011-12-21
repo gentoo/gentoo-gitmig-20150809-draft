@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/freevo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.71 2011/03/24 09:42:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.72 2011/12/21 08:26:35 floppym Exp $
+
+  21 Dec 2011; Mike Gilbert <floppym@gentoo.org> freevo-1.9.0.ebuild:
+  Depend on dev-python/beautifulsoup:python-2. Should resolve bug 377409.
 
   24 Mar 2011; Thomas Kahle <tomka@gentoo.org> freevo-1.9.0.ebuild:
   x86 stable per bug 358455
