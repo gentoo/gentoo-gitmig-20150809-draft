@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-11.09.ebuild,v 1.2 2011/11/11 21:11:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-11.12.ebuild,v 1.1 2011/12/21 07:21:29 mr_bones_ Exp $
 
 EAPI=2
 
