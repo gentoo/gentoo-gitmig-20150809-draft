@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.86 2011/12/21 21:04:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.87 2011/12/21 21:07:11 vapier Exp $
+
+*crossdev-20111221 (21 Dec 2011)
+
+  21 Dec 2011; Mike Frysinger <vapier@gentoo.org> +crossdev-20111221.ebuild:
+  Add support for msp430 targets by Tim Harder.
 
   21 Dec 2011; Mike Frysinger <vapier@gentoo.org> crossdev-20111018.ebuild,
   crossdev-20111118.ebuild:
