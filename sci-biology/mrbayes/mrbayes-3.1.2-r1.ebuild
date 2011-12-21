@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.1.2-r1.ebuild,v 1.4 2011/12/17 15:19:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.1.2-r1.ebuild,v 1.5 2011/12/21 08:59:32 phajdan.jr Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug mpi readline"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 
 DEPEND="
 	sys-libs/ncurses
