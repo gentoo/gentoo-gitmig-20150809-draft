@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.194 2011/12/18 11:07:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.195 2011/12/21 09:05:05 grobian Exp $
+
+  21 Dec 2011; Fabian Groffen <grobian@gentoo.org> gdb-7.3.1.ebuild:
+  Add Prefix keywords
 
   18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> gdb-7.3.1.ebuild:
   Stable for AMD64, wrt bug #395017
