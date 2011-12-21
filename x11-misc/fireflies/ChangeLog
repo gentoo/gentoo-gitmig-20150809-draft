@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fireflies
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.25 2011/12/17 15:24:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.26 2011/12/21 08:45:15 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fireflies-2.07-r1.ebuild:
+  x86 stable wrt bug #394021
 
   17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> fireflies-2.07-r1.ebuild:
   Stable for AMD64, wrt bug #394021
