@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.2.4.ebuild,v 1.2 2011/11/28 17:39:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.2.4.ebuild,v 1.3 2011/12/21 08:44:17 floppym Exp $
 
 EAPI=4
 
-inherit autotools elisp-common eutils multilib versionator
+PYTHON_DEPEND="2"
+inherit autotools elisp-common eutils multilib python versionator
 
 DESCRIPTION="GlusterFS is a powerful network/cluster filesystem"
 HOMEPAGE="http://www.gluster.org/"
@@ -24,6 +25,11 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 SITEFILE="50${PN}-mode-gentoo.el"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.1.0-parallel-build.patch" \
@@ -79,6 +85,8 @@ src_install() {
 
 	keepdir /var/log/${PN}
 	keepdir /var/lib/glusterd
+
+	python_convert_shebangs -r 2 "${ED}"
 }
 
 pkg_postinst() {
