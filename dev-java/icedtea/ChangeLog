@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.58 2011/12/02 14:48:18 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.59 2011/12/21 10:15:05 sera Exp $
+
+  21 Dec 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-7.2.0-r3.ebuild:
+  Fix dosym usage. #395391
 
   02 Dec 2011; Ralph Sennhauser <sera@gentoo.org> ChangeLog:
   Restore ChangeLog truncated by mistake, bug #391253.
