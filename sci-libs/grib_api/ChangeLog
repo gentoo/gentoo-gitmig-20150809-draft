@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/grib_api
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.7 2011/12/20 23:16:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.8 2011/12/21 07:55:03 jlec Exp $
+
+  21 Dec 2011; Justin Lecher <jlec@gentoo.org> grib_api-1.9.9.ebuild:
+  Fix for linker failure, #391797
 
   20 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org> grib_api-1.9.9.ebuild:
   Fixed automagic and jpeg2k support, bug #391797
