@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.21-r1.ebuild,v 1.1 2011/10/23 19:42:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.21-r1.ebuild,v 1.2 2011/12/21 19:33:24 vapier Exp $
 
 EAPI="3"
 
@@ -28,6 +28,7 @@ DEPEND=">=sys-apps/texinfo-4.7-r1
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.19.2-man-unicode-dashes.patch #16108 #17580 #121502
+	epatch "${FILESDIR}"/${PN}-1.20.1-pdfmark-parallel.patch
 
 	# Make sure we can cross-compile this puppy
 	if tc-is-cross-compiler ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.20.1-r3.ebuild,v 1.9 2011/02/24 22:13:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.20.1-r3.ebuild,v 1.10 2011/12/21 19:33:24 vapier Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-tmac-ec.patch #263524
 	epatch "${FILESDIR}"/${P}-Thtml-mem-leak.patch #294045
 	epatch "${FILESDIR}"/${P}-double-frees-mem-leaks.patch #294045
+	epatch "${FILESDIR}"/${PN}-1.20.1-pdfmark-parallel.patch
 
 	# put the docs in the Gentoo-specific spot
 	sed -i \

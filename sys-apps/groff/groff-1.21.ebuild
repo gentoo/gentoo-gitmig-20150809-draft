@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.21.ebuild,v 1.8 2011/05/07 18:02:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.21.ebuild,v 1.9 2011/12/21 19:33:24 vapier Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -29,6 +29,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-1.19.2-man-unicode-dashes.patch #16108 #17580 #121502
+	epatch "${FILESDIR}"/${PN}-1.20.1-pdfmark-parallel.patch
 
 	# Make sure we can cross-compile this puppy
 	if tc-is-cross-compiler ; then
