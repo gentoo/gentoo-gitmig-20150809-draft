@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.107 2011/12/21 21:01:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.108 2011/12/21 21:44:18 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -165,7 +165,7 @@ tc-binutils_apply_patches() {
 				die "sorry, but this binutils doesn't yet support uClibc :("
 			fi
 		fi
-		[[ ${PATCHES[@]} -gt 0 ]] && epatch "${PATCHES[@]}"
+		[[ ${#PATCHES[@]} -gt 0 ]] && epatch "${PATCHES[@]}"
 		epatch_user
 	fi
 
