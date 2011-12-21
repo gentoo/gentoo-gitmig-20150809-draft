@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/hwdata-redhat-0.217.ebuild,v 1.1 2008/07/15 17:05:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/hwdata-redhat-0.217.ebuild,v 1.2 2011/12/21 08:16:22 floppym Exp $
 
-inherit flag-o-matic rpm
+inherit eutils flag-o-matic rpm
 
 # Tag for which Fedora Core version it's from
 FCVER="9"
@@ -29,6 +29,7 @@ src_unpack() {
 
 	cd "${S}"
 	sed -i -e "s:\(/sbin\/lspci\):/usr\1:g" Makefile || die
+	epatch "${FILESDIR}/${P}-python-3.patch"
 }
 
 src_install() {

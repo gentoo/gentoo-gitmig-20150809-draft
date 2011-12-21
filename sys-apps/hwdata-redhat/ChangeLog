@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwdata-redhat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/ChangeLog,v 1.5 2009/01/31 07:46:18 dberkholz Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/ChangeLog,v 1.6 2011/12/21 08:16:22 floppym Exp $
+
+  21 Dec 2011; Mike Gilbert <floppym@gentoo.org>
+  +files/hwdata-redhat-0.217-python-3.patch, hwdata-redhat-0.217.ebuild:
+  Fix tests with python 3; bug 377459. Patch by Arfrever, tested by Ian Delaney.
 
   31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Give up maintainership; reassign to maintainer-needed.
