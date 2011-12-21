@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.13.ebuild,v 1.1 2011/09/06 12:42:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.13.ebuild,v 1.2 2011/12/21 17:59:43 floppym Exp $
 
 EAPI=3
 
@@ -47,4 +47,12 @@ src_configure() {
 src_test() {
 	VIRTUALX_COMMAND="cmake-utils_src_test"
 	virtualmake
+}
+
+pkg_postinst() {
+	python_mod_optimize pysideuic
+}
+
+pkg_postrm() {
+	python_mod_cleanup pysideuic
 }
