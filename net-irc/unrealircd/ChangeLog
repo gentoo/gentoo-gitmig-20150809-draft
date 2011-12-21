@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.89 2011/11/09 18:13:51 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.90 2011/12/21 18:25:03 binki Exp $
+
+  21 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> files/unrealircd.initd,
+  files/unrealircd.rc:
+  Fix bug #393661 reported by kensington by replacing ${opts} in initscript
+  with ${extra_started_options}, sans revbumps.
 
   09 Nov 2011; Nathan Phillip Brink <binki@gentoo.org>
   unrealircd-3.2.9_rc2.ebuild, unrealircd-3.2.9.ebuild,
