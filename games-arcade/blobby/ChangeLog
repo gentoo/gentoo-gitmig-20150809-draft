@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/blobby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/ChangeLog,v 1.1 2011/11/18 16:05:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/ChangeLog,v 1.2 2011/12/21 18:37:14 ago Exp $
+
+  21 Dec 2011; Agostino Sarubbo <ago@gentoo.org> blobby-0.9c.ebuild:
+  Stable for AMD64, wrt bug #395449
 
 *blobby-0.9c (18 Nov 2011)
 
