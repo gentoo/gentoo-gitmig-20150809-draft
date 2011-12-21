@@ -7,8 +7,6 @@
     <use>
 	<flag name='mod_irc'>Build irc gateway </flag>
 	<flag name='mod_muc'>Build Multi User Chat module</flag>
-	<flag name='mod_srl'>Build LDAP shared roster module
-	(https://alioth.debian.org/projects/ejabberd-msrl/)</flag>
 	<flag name='mod_pubsub'>Build Pubsub module</flag>
 	<flag name='web'>Enable web admin interface</flag>
 	<flag name="captcha">Support for CAPTCHA Forms (XEP-158)</flag>
