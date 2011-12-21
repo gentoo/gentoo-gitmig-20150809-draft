@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.85 2011/11/18 20:54:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.86 2011/12/21 21:04:46 vapier Exp $
+
+  21 Dec 2011; Mike Frysinger <vapier@gentoo.org> crossdev-20111018.ebuild,
+  crossdev-20111118.ebuild:
+  Mark stable for gcc cxx/nocxx changes #394665 by Andrey Hippo.
 
 *crossdev-20111118 (18 Nov 2011)
 
