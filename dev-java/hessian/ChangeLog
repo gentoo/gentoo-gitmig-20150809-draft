@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/hessian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.22 2011/12/19 16:15:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.23 2011/12/21 08:52:20 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> hessian-4.0.3.ebuild:
+  x86 stable wrt bug #393943
 
   19 Dec 2011; Agostino Sarubbo <ago@gentoo.org> hessian-4.0.3.ebuild:
   Stable for AMD64, wrt bug #393943
