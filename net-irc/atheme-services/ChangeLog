@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.21 2011/12/17 04:12:05 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.22 2011/12/21 01:58:13 binki Exp $
+
+  21 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
+  Add jdhore as co-maintainer.
 
   17 Dec 2011; Nathan Phillip Brink <binki@gentoo.org>
   files/atheme-services.initd:

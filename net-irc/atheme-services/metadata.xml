@@ -6,6 +6,11 @@
     <email>binki@gentoo.org</email>
     <name>Nathan Phillip Brink</name>
   </maintainer>
+  <maintainer>
+    <email>jdhore1@gmail.com</email>
+    <name>Jeff Horelick</name>
+    <description>Co-maintainer</description>
+  </maintainer>
 	<use>
 		<flag name='largenet'>Enable support/tweaks for large networks</flag>
 		<flag name='ldap'>Enable ldap-backed authentication module</flag>
