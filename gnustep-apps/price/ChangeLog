@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/price
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.23 2011/12/18 18:43:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.24 2011/12/21 08:47:43 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> price-1.0.0.ebuild:
+  x86 stable wrt bug #393935
 
   18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> price-1.0.0.ebuild:
   Stable for AMD64, wrt bug #393935
