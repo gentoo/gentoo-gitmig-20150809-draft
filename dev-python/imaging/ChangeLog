@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.64 2011/07/07 23:26:15 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.65 2011/12/21 07:32:38 maksbotan Exp $
+
+*imaging-1.1.7-r1 (21 Dec 2011)
+
+  21 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +imaging-1.1.7-r1.ebuild,
+  +files/imaging-1.1.7-nolcms.patch:
+  Revision bump, add lcms depend and use flag, bug 381689. Thanks to Chris Mayo
 
   07 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> imaging-1.1.7.ebuild:
   Fixed shebang in Scripts/pilfont.py wrt bug #371117
