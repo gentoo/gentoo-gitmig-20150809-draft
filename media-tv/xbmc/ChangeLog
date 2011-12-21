@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.104 2011/10/12 22:53:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.105 2011/12/21 03:42:04 vapier Exp $
+
+  21 Dec 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Require simplejson for the weather plugin #395365 by Pertti Kosunen.
 
   12 Oct 2011; Mike Frysinger <vapier@gentoo.org> xbmc-10.1.ebuild,
   xbmc-9999.ebuild:
