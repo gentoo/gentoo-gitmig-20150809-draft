@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/ChangeLog,v 1.18 2011/12/16 19:28:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/ChangeLog,v 1.19 2011/12/21 08:25:19 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xkbd-0.8.15-r1.ebuild:
+  x86 stable wrt bug #394009
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> xkbd-0.8.15-r1.ebuild:
   Stable for AMD64, wrt bug #394009
