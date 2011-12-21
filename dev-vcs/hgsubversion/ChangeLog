@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hgsubversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.19 2011/12/21 22:16:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.20 2011/12/21 22:58:33 floppym Exp $
+
+  21 Dec 2011; Mike Gilbert <floppym@gentoo.org> hgsubversion-1.3.ebuild:
+  Add dependency on setuptools. Spotted by Arfrever.
 
   21 Dec 2011; Mike Gilbert <floppym@gentoo.org> hgsubversion-1.3.ebuild:
   Depend on subvertpy or subversion[python]. Bug 393269 by Micha Glave.
