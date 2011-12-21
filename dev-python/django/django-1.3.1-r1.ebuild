@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.3.1-r1.ebuild,v 1.2 2011/12/14 23:44:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.3.1-r1.ebuild,v 1.3 2011/12/21 07:06:46 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit bash-completion-r1 distutils versionator webapp
+inherit bash-completion-r1 distutils eutils versionator webapp
 
 MY_P="Django-${PV}"
 
@@ -36,6 +36,22 @@ WEBAPP_MANUAL_SLOT="yes"
 pkg_setup() {
 	python_pkg_setup
 	webapp_pkg_setup
+}
+
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-djangodocs_extension.patch"
+
+	# Disable tests requiring network connection.
+	sed \
+		-e "s/test_correct_url_value_passes/_&/" \
+		-e "s/test_correct_url_with_redirect/_&/" \
+		-i tests/modeltests/validation/tests.py
+	sed \
+		-e "s/test_urlfield_3/_&/" \
+		-e "s/test_urlfield_4/_&/" \
+		-e "s/test_urlfield_10/_&/" \
+		-i tests/regressiontests/forms/tests/fields.py
 }
 
 src_compile() {
