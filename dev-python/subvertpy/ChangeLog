@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/subvertpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.33 2011/10/11 14:56:10 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.34 2011/12/21 22:08:52 floppym Exp $
+
+*subvertpy-0.8.9 (21 Dec 2011)
+
+  21 Dec 2011; Mike Gilbert <floppym@gentoo.org> +subvertpy-0.8.9.ebuild:
+  Version bump.
 
 *subvertpy-0.8.8 (11 Oct 2011)
 
