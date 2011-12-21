@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/velvet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.17 2011/12/16 13:01:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.18 2011/12/21 09:02:55 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> velvet-1.0.18-r1.ebuild:
+  x86 stable wrt bug #393981
 
   16 Dec 2011; Justin Lecher <jlec@gentoo.org> velvet-1.0.18-r1.ebuild:
   Added missing dep on sys-libs/zlib requested by ago, #393981
