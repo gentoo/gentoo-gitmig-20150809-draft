@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/prints
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.27 2011/12/18 11:59:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.28 2011/12/21 08:44:24 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> prints-39.0.ebuild:
+  x86 stable wrt bug #393929
 
   18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> prints-39.0.ebuild:
   Stable for AMD64, wrt bug #393929
