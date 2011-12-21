@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-talk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.35 2011/12/16 15:35:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.36 2011/12/21 08:50:58 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  netkit-talk-0.17-r5.ebuild:
+  x86 stable wrt bug #394019
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> netkit-talk-0.17-r5.ebuild:
   Stable for AMD64, wrt bug #394019
