@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.0.ebuild,v 1.4 2011/09/28 10:59:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.1-r1.ebuild,v 1.1 2011/12/21 17:39:41 matsuu Exp $
 
-EAPI="3"
-inherit autotools eutils multilib elisp-common flag-o-matic toolchain-funcs
+EAPI="4"
+inherit autotools eutils multilib elisp-common flag-o-matic
 
 DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://code.google.com/p/uim/"
@@ -15,6 +15,8 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="+anthy canna curl eb emacs libffi gnome gtk gtk3 kde libedit libnotify m17n-lib ncurses nls prime qt4 skk sqlite ssl static-libs test unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RESTRICT="test"
+
+REQUIRED_USE="gtk? ( X ) qt4? ( X )"
 
 RDEPEND="X? (
 		x11-libs/libX11
@@ -110,9 +112,9 @@ update_gtk3_immodules() {
 
 src_prepare() {
 	epatch \
+		"${FILESDIR}"/${PN}-1.7.1-qt4.patch \
 		"${FILESDIR}"/${PN}-1.6.0-gentoo.patch \
-		"${FILESDIR}"/${PN}-1.5.4-zhTW.patch \
-		"${FILESDIR}"/${PN}-1.6.1-canna.patch
+		"${FILESDIR}"/${PN}-1.5.4-zhTW.patch
 
 	# bug 275420
 	sed -i -e "s:\$libedit_path/lib:/$(get_libdir):g" configure.ac || die
@@ -156,6 +158,7 @@ src_configure() {
 	#	myconf="${myconf} $(use_enable gtk gnome-applet)"
 	#	myconf="${myconf} $(use_enable gtk3 gnome3-applet)"
 	#fi
+
 	econf $(use_with X x) \
 		$(use_with canna) \
 		$(use_with curl) \
@@ -177,13 +180,13 @@ src_configure() {
 		--without-qt-immodule \
 		$(use_with qt4 qt4) \
 		$(use_with qt4 qt4-immodule) \
+		$(use_enable qt4 qt4-qt3support) \
 		$(use_with skk) \
 		$(use_with sqlite sqlite3) \
 		$(use_enable ssl openssl) \
 		$(use_enable static-libs static) \
 		$(use_with xft) \
 		${myconf}
-		# $(use_enable qt4 qt4-qt3support) \
 }
 
 src_compile() {
