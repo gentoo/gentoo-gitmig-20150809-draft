@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.2.1.ebuild,v 1.5 2011/02/13 12:30:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.4.0.ebuild,v 1.1 2011/12/21 22:50:07 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -9,9 +9,9 @@ DESCRIPTION="Reimplementation of the SCUMM game engine used in Lucasarts adventu
 HOMEPAGE="http://scummvm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/scummvm/${P/_/}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="alsa debug flac fluidsynth mp3 ogg vorbis"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
@@ -42,7 +42,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="--backend=sdl" # x11 backend no worky (bug #83502)
+	local myconf
 
 	if use vorbis || use ogg ; then
 		myconf="${myconf} --enable-vorbis"
@@ -56,8 +56,8 @@ src_configure() {
 	use x86 && append-ldflags -Wl,-z,noexecstack
 
 	# NOT AN AUTOCONF SCRIPT SO DONT CALL ECONF
-	# mpeg2 support needs vorbis (bug #79149) so turn it off if -oggvorbis
 	./configure \
+		--backend=sdl \
 		--host=$CHOST \
 		--enable-verbose-build \
 		--prefix=/usr \
@@ -74,7 +74,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS NEWS README TODO
 	doicon icons/scummvm.svg
 	make_desktop_entry scummvm ScummVM scummvm "Game;AdventureGame"
