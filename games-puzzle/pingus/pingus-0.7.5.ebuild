@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.5.ebuild,v 1.1 2011/10/27 05:54:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.5.ebuild,v 1.2 2011/12/21 18:36:03 ago Exp $
 
 EAPI=2
 inherit eutils scons-utils toolchain-funcs games
@@ -11,7 +11,7 @@ SRC_URI="http://pingus.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="opengl"
 
 DEPEND="media-libs/libsdl[joystick,opengl?,video]
