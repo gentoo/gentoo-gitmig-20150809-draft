@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpreaper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/ChangeLog,v 1.27 2011/12/19 15:28:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/ChangeLog,v 1.28 2011/12/21 08:57:36 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tmpreaper-1.6.13.ebuild:
+  x86 stable wrt bug #379493
 
   19 Dec 2011; Agostino Sarubbo <ago@gentoo.org> tmpreaper-1.6.13.ebuild:
   Stable for AMD64, wrt bug #379493
