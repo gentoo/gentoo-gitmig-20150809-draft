@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/rbtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rbtools/ChangeLog,v 1.1 2011/07/14 21:37:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rbtools/ChangeLog,v 1.2 2011/12/21 16:52:11 johu Exp $
+
+*rbtools-0.3.4 (21 Dec 2011)
+
+  21 Dec 2011; Johannes Huber <johu@gentoo.org> +rbtools-0.3.4.ebuild,
+  -rbtools-0.3.2.ebuild:
+  Version bump. Remove old.
 
   14 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> +metadata.xml,
   +rbtools-0.3.2.ebuild

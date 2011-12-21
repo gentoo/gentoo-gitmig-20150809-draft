@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rbtools/rbtools-0.3.2.ebuild,v 1.1 2011/07/14 21:37:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rbtools/rbtools-0.3.4.ebuild,v 1.1 2011/12/21 16:52:11 johu Exp $
 
-EAPI=3
+EAPI=4
 PYTHON_DEPEND=2
-RESTRICT_PYTHON_ABIS="3.*"
 
 inherit versionator distutils
 
@@ -17,7 +16,17 @@ SRC_URI="http://downloads.reviewboard.org/releases/${MY_PN}/$(get_version_compon
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+DEPEND=""
+RDEPEND="${DEPEND}"
+
+DOCS=(AUTHORS NEWS README)
+
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
