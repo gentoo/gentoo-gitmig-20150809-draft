@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libieee1284
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.29 2011/12/17 18:26:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.30 2011/12/21 08:31:16 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libieee1284-0.2.11-r2.ebuild:
+  x86 stable wrt bug #393889
 
   17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> libieee1284-0.2.11-r2.ebuild:
   Stable for AMD64, wrt bug #393889
