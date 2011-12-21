@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.110 2011/12/11 14:33:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.111 2011/12/21 16:11:05 polynomial-c Exp $
+
+*firefox-9.0 (21 Dec 2011)
+
+  21 Dec 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +files/gentoo-default-prefs.js-1, -firefox-3.6.12.ebuild,
+  -firefox-3.6.21.ebuild, -firefox-7.0.1-r1.ebuild, +firefox-9.0.ebuild:
+  Version bump. Removed old.
 
   11 Dec 2011; Raúl Porcel <armin76@gentoo.org> firefox-3.6.22.ebuild:
   sparc stable

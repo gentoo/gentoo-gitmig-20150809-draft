@@ -1,24 +1,24 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-7.0.1-r1.ebuild,v 1.4 2011/11/20 20:51:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-9.0.ebuild,v 1.1 2011/12/21 16:11:05 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension versionator python virtualx
+inherit flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension versionator python virtualx nsplugins
 
 MAJ_FF_PV="$(get_version_component_range 1-2)" # 3.5, 3.6, 4.0, etc.
 FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
 CHANGESET="e56ecd8b3a68"
-PATCH="${PN}-7.0-patches-0.5"
+PATCH="${PN}-9.0-patches-0.4"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist +crashreporter +ipc pgo system-sqlite +webm"
@@ -32,13 +32,13 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.10
+	>=dev-libs/nss-3.13.1
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	virtual/libffi
-	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,unlock-notify,debug=] )
 	webm? ( media-libs/libvpx
 		media-libs/alsa-lib )
 	crashreporter? ( net-misc/curl )"
@@ -147,6 +147,15 @@ pkg_setup() {
 		ewarn "You will do a double build for profile guided optimization."
 		ewarn "This will result in your build taking at least twice as long as before."
 	fi
+
+	# Ensure we have enough disk space to compile
+	if use pgo ; then
+		CHECKREQS_DISK_BUILD="8G"
+		check-reqs_pkg_setup
+	else
+		CHECKREQS_DISK_BUILD="4G"
+		check-reqs_pkg_setup
+	fi
 }
 
 src_unpack() {
@@ -197,9 +206,6 @@ src_prepare() {
 		-i "${S}"/config/system-headers \
 		-i "${S}"/js/src/config/system-headers || die "Sed failed"
 
-	eautoreconf
-
-	cd js/src
 	eautoreconf
 }
 
@@ -285,7 +291,7 @@ src_install() {
 	pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
 
 	# Add our default prefs for firefox + xulrunner
-	cp "${FILESDIR}"/gentoo-default-prefs.js \
+	cp "${FILESDIR}"/gentoo-default-prefs.js-1 \
 		"${S}/${obj_dir}/dist/bin/defaults/pref/all-gentoo.js" || die
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
@@ -331,11 +337,10 @@ src_install() {
 	fi
 
 	# Required in order to use plugins and even run firefox on hardened.
-	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
+	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
 
 	# Plugins dir
-	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins \
-		|| die "failed to symlink"
+	share_plugins_dir
 
 	# very ugly hack to make firefox not sigbus on sparc
 	# FIXME: is this still needed??
