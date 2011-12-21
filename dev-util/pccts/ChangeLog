@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pccts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.32 2011/12/19 16:20:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.33 2011/12/21 08:40:52 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pccts-1.33.33-r1.ebuild:
+  x86 stable wrt bug #393917
 
   19 Dec 2011; Agostino Sarubbo <ago@gentoo.org> pccts-1.33.33-r1.ebuild:
   Stable for AMD64, wrt bug #393917
