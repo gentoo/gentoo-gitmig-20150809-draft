@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.9.2.ebuild,v 1.1 2011/02/22 21:54:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.12.1.ebuild,v 1.1 2011/12/21 22:59:54 eva Exp $
 
-EAPI=3
+EAPI=4
+
+inherit eutils gnome.org multilib
 
 DESCRIPTION="A GObject-based API for handling resource discovery and announcement over SSDP."
 HOMEPAGE="http://gupnp.org/"
-SRC_URI="http://gupnp.org/sites/all/files/sources/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -16,7 +17,7 @@ IUSE="+introspection +gtk"
 RDEPEND=">=dev-libs/glib-2.22:2
 	>=net-libs/libsoup-2.26.1:2.4[introspection?]
 	gtk? ( >=x11-libs/gtk+-2.12:2 )
-	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
@@ -26,11 +27,20 @@ src_configure() {
 		$(use_enable introspection) \
 		$(use_with gtk) \
 		--disable-dependency-tracking \
-		--disable-gtk-doc \
-		--with-html-dir=/usr/share/doc/${PF}/html
+		--disable-static \
+		--disable-gtk-doc
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	default
+	# Remove pointless .la files
+	find "${D}" -name '*.la' -delete
+}
+
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libgssdp-1.0.so.2
+}
+
+pkg_postinst() {
+	preserve_old_lib_notify /usr/$(get_libdir)/libgssdp-1.0.so.2
 }
