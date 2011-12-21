@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.3 2011/12/20 15:41:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.4 2011/12/21 18:06:39 mattst88 Exp $
 
 EAPI=3
 
@@ -222,7 +222,6 @@ src_configure() {
 		"
 	fi
 
-	# --with-driver=dri|xlib|osmesa || do we need osmesa?
 	econf \
 		--disable-option-checking \
 		--with-driver=dri \
@@ -234,7 +233,7 @@ src_configure() {
 		$(use_enable motif glw) \
 		$(use_enable motif) \
 		$(use_enable nptl glx-tls) \
-		$(use_enable osmesa) \
+		$(use_enable osmesa gl-osmesa) \
 		$(use_enable !pic asm) \
 		$(use_enable shared-dricore) \
 		$(use_enable shared-glapi) \
