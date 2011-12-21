@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/mini_magick-1.2.5.ebuild,v 1.2 2010/05/22 15:25:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/mini_magick-1.3.3-r1.ebuild,v 1.1 2011/12/21 10:31:47 flameeyes Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ EAPI=2
 # sounds like a bug in JRuby itself, or the code not being compatible.
 USE_RUBY="ruby18 ruby19"
 
-RUBY_FAKEGEM_DOCDIR="doc"
+RUBY_FAKEGEM_DOCDIR="rdoc"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
 inherit ruby-fakegem eutils
@@ -29,11 +29,19 @@ DEPEND="test? ( media-gfx/imagemagick[tiff,jpeg] )"
 
 # tests are known to fail under imagemagick 6.5 at least, reported upstream:
 # http://github.com/probablycorey/mini_magick/issues/#issue/2
+# update: still fails with imagemagick 6.6.
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
+
+ruby_add_rdepend ">=dev-ruby/subexec-0.0.4"
 
 all_ruby_prepare() {
 	# remove executable bit from all files
 	find "${S}" -type f -exec chmod -x {} +
 
-	epatch "${FILESDIR}"/${P}-tests-tempdir.patch
+	# Remove spec definition part because the gemspec file is not included
+	sed -i -e '/gemspec/,$ d' Rakefile || die
+
+	# fix dependency over subexec, so that 0.1.x is also accepted (tests
+	# pass just fine, package works).
+	sed -i -e 's:~>:>=:' ../metadata || die
 }
