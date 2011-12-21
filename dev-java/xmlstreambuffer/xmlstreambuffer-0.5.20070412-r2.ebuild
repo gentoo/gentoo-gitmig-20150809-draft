@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/xmlstreambuffer-0.5.20070412-r2.ebuild,v 1.2 2011/12/18 12:24:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/xmlstreambuffer-0.5.20070412-r2.ebuild,v 1.3 2011/12/21 08:41:53 phajdan.jr Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -13,7 +13,7 @@ SRC_URI="https://xmlstreambuffer.dev.java.net/files/documents/4258/55235/StreamB
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="java-virtuals/stax-api
