@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.1.ebuild,v 1.1 2011/11/03 05:01:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.5.ebuild,v 1.1 2011/12/21 23:00:58 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -83,12 +83,16 @@ src_prepare() {
 	# disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
+
+	# Fix missing file in POTFILES.in
+	echo "plugins/quickopen/quickopen/__init__.py" >> po/POTFILES.in
 }
 
 src_test() {
 	# FIXME: this should be handled at eclass level
 	"${EROOT}${GLIB_COMPILE_SCHEMAS}" --allow-any-name "${S}/data" || die
 
+	unset DBUS_SESSION_BUS_ADDRESS
 	GSETTINGS_SCHEMA_DIR="${S}/data" Xemake check
 }
 
