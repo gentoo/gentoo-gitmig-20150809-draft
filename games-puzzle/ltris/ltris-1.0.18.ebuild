@@ -1,17 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ltris-1.0.15.ebuild,v 1.5 2011/03/04 01:28:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ltris-1.0.18.ebuild,v 1.1 2011/12/21 18:50:20 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="very polished Tetris clone"
-HOMEPAGE="http://lgames.sourceforge.net/"
+HOMEPAGE="http://lgames.sourceforge.net/index.php?project=LTris"
 SRC_URI="mirror://sourceforge/lgames/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
 
 RDEPEND="media-libs/libsdl[video]
