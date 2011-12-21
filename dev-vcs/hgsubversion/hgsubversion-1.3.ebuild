@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/hgsubversion-1.3.ebuild,v 1.1 2011/11/15 03:12:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/hgsubversion-1.3.ebuild,v 1.2 2011/12/21 22:16:34 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,11 @@ KEYWORDS="~amd64 ~x86 ~ppc-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND=">=dev-vcs/mercurial-1.4
-		>=dev-vcs/subversion-1.5[python]"
+	|| (
+		dev-python/subvertpy
+		>=dev-vcs/subversion-1.5[python]
+	)
+"
 DEPEND="test? ( dev-python/nose )"
 
 DOCS="README"
