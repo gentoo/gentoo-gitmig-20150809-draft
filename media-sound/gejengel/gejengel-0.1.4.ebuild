@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4.ebuild,v 1.7 2011/11/11 20:26:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4.ebuild,v 1.8 2011/12/21 12:55:10 aballier Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -36,7 +36,8 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog README TODO )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch \
+		"${FILESDIR}"/${P}-ffmpeg.patch
 }
 
 src_configure() {
