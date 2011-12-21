@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.4 2011/12/03 04:00:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.5 2011/12/21 16:32:52 floppym Exp $
+
+  21 Dec 2011; Mike Gilbert <floppym@gentoo.org> -flexget-1.0_beta2435.ebuild,
+  flexget-1.0_beta2484.ebuild, flexget-9999.ebuild:
+  Add slot to beautifulsoup dep.
 
 *flexget-1.0_beta2484 (03 Dec 2011)
 

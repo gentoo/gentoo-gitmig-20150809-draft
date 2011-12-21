@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta2484.ebuild,v 1.1 2011/12/03 04:00:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta2484.ebuild,v 1.2 2011/12/21 16:32:52 floppym Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-python/feedparser
 	>=dev-python/sqlalchemy-0.7
 	dev-python/pyyaml
-	dev-python/beautifulsoup
+	dev-python/beautifulsoup:python-2
 	dev-python/html5lib
 	dev-python/jinja
 	dev-python/PyRSS2Gen
