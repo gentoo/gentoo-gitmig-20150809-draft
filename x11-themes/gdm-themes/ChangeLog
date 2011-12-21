@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gdm-themes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.36 2011/12/17 16:26:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.37 2011/12/21 08:55:59 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gdm-themes-20070811-r1.ebuild:
+  x86 stable wrt bug #394007
 
   17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> gdm-themes-20070811-r1.ebuild:
   Stable for AMD64, wrt bug #394007
