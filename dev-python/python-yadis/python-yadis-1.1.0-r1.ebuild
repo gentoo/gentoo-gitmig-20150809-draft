@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0.ebuild,v 1.4 2010/07/08 17:05:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0-r1.ebuild,v 1.1 2011/12/21 11:23:47 maksbotan Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -33,6 +33,9 @@ src_prepare() {
 
 src_test() {
 	testing() {
+		if [[ ${PYTHON_ABI} != "2.7" ]]; then
+			ewarn "Tests are known to fail on ${PYTHON_ABI}"
+		fi
 		./admin/runtests
 	}
 	python_execute_function testing
