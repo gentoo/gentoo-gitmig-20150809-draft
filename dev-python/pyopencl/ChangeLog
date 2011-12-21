@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyopencl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.8 2011/09/21 08:48:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.9 2011/12/21 18:35:11 vapier Exp $
+
+  21 Dec 2011; Mike Frysinger <vapier@gentoo.org> pyopencl-0.92.ebuild,
+  pyopencl-9999.ebuild:
+  Depend on virtual/opencl so we get the headers/libraries we need #352006 by
+  Diego Elio Pettenò.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> pyopencl-9999.ebuild:
   Migrate to git-2. Simplify.

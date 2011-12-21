@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-9999.ebuild,v 1.6 2011/09/21 08:48:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-9999.ebuild,v 1.7 2011/12/21 18:35:11 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ IUSE="examples opengl"
 
 RDEPEND=">=dev-python/numpy-1.0.4
 	=dev-python/pytools-9999
-	>=dev-util/nvidia-cuda-toolkit-3.0"
+	virtual/opencl"
 DEPEND="${RDEPEND}
 	dev-libs/boost[python]"
 
