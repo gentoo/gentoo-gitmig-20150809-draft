@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.311 2011/12/17 17:01:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.312 2011/12/21 13:25:55 heroxbd Exp $
+
+  21 Dec 2011: XU, Benda <heroxbd@gentoo.org> linux/profile.bashrc:
+  Fix bug 289757 (again). fix grep pattern, add category to rule out cross gcc.
 
   17 Dec 2011; Fabian Groffen <grobian@gentoo.org> package.mask:
   Drop mask for distcc, the --install option to distcc-config no longer exists
