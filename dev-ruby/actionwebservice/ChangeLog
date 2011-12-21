@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/actionwebservice
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.78 2010/06/12 19:06:56 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.79 2011/12/21 10:38:28 flameeyes Exp $
+
+*actionwebservice-2.3.5-r1 (21 Dec 2011)
+
+  21 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +actionwebservice-2.3.5-r1.ebuild, -actionwebservice-2.3.5.ebuild:
+  Bump EAPI and fix gem specification to accept more than just 2.3.5 versions of
+  Rails gems (in the 2.3 slot).
 
   12 Jun 2010; Hans de Graaff <graaff@gentoo.org>
   -actionwebservice-2.3.2.ebuild, -actionwebservice-2.3.3.ebuild,
