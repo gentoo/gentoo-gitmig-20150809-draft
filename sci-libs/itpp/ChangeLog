@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.105 2011/12/16 12:00:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.106 2011/12/21 08:38:25 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> itpp-4.2-r1.ebuild:
+  x86 stable wrt bug #394037
 
   16 Dec 2011; Justin Lecher <jlec@gentoo.org> itpp-4.2-r1.ebuild:
   Drop -pipe request by ago, #394037
