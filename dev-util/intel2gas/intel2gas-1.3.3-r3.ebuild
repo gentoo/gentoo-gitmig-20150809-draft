@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel2gas/intel2gas-1.3.3-r3.ebuild,v 1.2 2011/12/16 14:10:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel2gas/intel2gas-1.3.3-r3.ebuild,v 1.3 2011/12/21 08:30:18 phajdan.jr Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.niksula.cs.hut.fi/~mtiihone/intel2gas/"
 SRC_URI="http://www.niksula.cs.hut.fi/~mtiihone/intel2gas/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 src_unpack() {
