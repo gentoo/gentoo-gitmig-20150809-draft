@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/vanessa-logger
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.29 2011/12/18 18:46:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.30 2011/12/21 08:58:56 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  vanessa-logger-0.0.8.ebuild:
+  x86 stable wrt bug #394025
 
   18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> vanessa-logger-0.0.8.ebuild:
   Stable for AMD64, wrt bug #394025
