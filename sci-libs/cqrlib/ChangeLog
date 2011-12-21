@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cqrlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.14 2011/12/21 08:34:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.15 2011/12/21 08:41:59 jlec Exp $
+
+  21 Dec 2011; Justin Lecher <jlec@gentoo.org> -cqrlib-1.0.5.ebuild:
+  Cleaned old
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> cqrlib-1.0.6.ebuild:
   x86 stable wrt bug #394023
