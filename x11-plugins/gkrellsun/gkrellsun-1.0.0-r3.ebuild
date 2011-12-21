@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-1.0.0-r3.ebuild,v 1.2 2011/12/16 15:01:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-1.0.0-r3.ebuild,v 1.3 2011/12/21 08:32:18 phajdan.jr Exp $
 
 EAPI="3"
 inherit gkrellm-plugin eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gkrellsun/${P}.tar.gz"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 
 DEPEND="nls? ( sys-devel/gettext )"
 
