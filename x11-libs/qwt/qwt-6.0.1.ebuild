@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.1.ebuild,v 1.1 2011/12/19 22:02:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.1.ebuild,v 1.2 2011/12/21 15:45:53 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils qt4-r2
 
@@ -73,17 +73,17 @@ src_prepare() {
 
 src_compile() {
 	# split compilation to allow parallel building
-	emake sub-src || die "emake library failed"
-	emake || die "emake failed"
+	emake sub-src
+	emake
 }
 
 src_install () {
 	qt4-r2_src_install
 	if use doc; then
-		dohtml -r doc/html/* || die
+		dohtml -r doc/html/*
 	fi
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die
+		doins -r examples
 	fi
 }
