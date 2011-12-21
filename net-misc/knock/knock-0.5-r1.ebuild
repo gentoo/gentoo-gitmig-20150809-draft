@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.5-r1.ebuild,v 1.3 2011/12/16 13:27:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.5-r1.ebuild,v 1.4 2011/12/21 08:39:56 phajdan.jr Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.zeroflux.org/proj/knock/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="+server"
 
 DEPEND="server? ( net-libs/libpcap )"

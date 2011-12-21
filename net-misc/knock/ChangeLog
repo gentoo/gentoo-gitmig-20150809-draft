@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.40 2011/12/16 13:27:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.41 2011/12/21 08:39:56 phajdan.jr Exp $
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> knock-0.5-r1.ebuild:
+  x86 stable wrt bug #393985
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> knock-0.5-r1.ebuild:
   Stable for AMD64, wrt bug #393985
