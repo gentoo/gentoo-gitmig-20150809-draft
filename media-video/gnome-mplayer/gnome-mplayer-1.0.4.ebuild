@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.4.ebuild,v 1.5 2011/10/23 12:06:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.4.ebuild,v 1.6 2011/12/22 13:01:38 ssuominen Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils
@@ -79,5 +79,5 @@ pkg_postrm() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
-	gnome2_schemas_update --uninstall
+	gnome2_schemas_update
 }
