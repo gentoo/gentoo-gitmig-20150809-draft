@@ -1,46 +1,37 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.5.ebuild,v 1.6 2011/09/14 19:15:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.5.ebuild,v 1.7 2011/12/22 23:14:08 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="ssl? xml"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils distutils
+inherit distutils
 
 MY_PN="SOAPpy"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="SOAP implementation for Python"
-HOMEPAGE="http://pywebsvcs.sourceforge.net/"
+DESCRIPTION="SOAP Services for Python"
+HOMEPAGE="http://pywebsvcs.sourceforge.net/ http://pypi.python.org/pypi/SOAPpy"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~s390 ~sh ~sparc ~x86 ~x86-macos"
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~s390 ~sh ~sparc ~x86 ~x86-macos"
 IUSE="examples ssl"
 
-DEPEND=">=dev-python/fpconst-0.7.1
-		dev-python/pyxml
-		dev-python/wstools"
-RDEPEND="${DEPEND}
-		ssl? ( dev-python/m2crypto )"
+RDEPEND="dev-python/fpconst
+	dev-python/wstools
+	ssl? ( dev-python/m2crypto )"
+DEPEND="${RDEPEND}
+	dev-python/setuptools"
 
 S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGES.txt README.txt docs/*"
 PYTHON_MODNAME="${MY_PN}"
-
-pkg_setup() {
-	python_pkg_setup
-	if use ssl && ! has_version "=dev-lang/python-2*[ssl]"; then
-		ewarn "The 'ssl' USE-flag is enabled, but dev-lang/python is"
-		ewarn "not compiled with it. You'll only get server-side SSL support."
-		ewarn "Just emerge dev-lang/python afterwards with the ssl USE-flag to"
-		ewarn "get client-side encryption."
-	fi
-}
 
 src_prepare() {
 	distutils_src_prepare
@@ -49,7 +40,7 @@ src_prepare() {
 
 src_install() {
 	distutils_src_install
-	dodoc docs/*
+
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins -r bid contrib tools validate
