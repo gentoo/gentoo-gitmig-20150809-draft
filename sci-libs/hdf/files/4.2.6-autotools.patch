@@ -1,0 +1,140 @@
+diff -Nur hdf-4.2.6.orig/configure.ac hdf-4.2.6/configure.ac
+--- hdf-4.2.6.orig/configure.ac	2011-12-21 23:40:35.000000000 +0000
++++ hdf-4.2.6/configure.ac	2011-12-22 00:36:53.000000000 +0000
+@@ -199,20 +199,6 @@
+ dnl Build static libraries by default. Furthermore, fortran shared libraries
+ dnl are unsupported. Disallow a user from enabling both shared libraries and
+ dnl fortran.
+-if test "X${enable_shared}" != "Xyes"; then
+-    enable_shared="no"
+-fi
+-
+-if test "X${enable_shared}" = "Xyes"; then
+-    if test "X${BUILD_FORTRAN}" = "Xyes"; then
+-        AC_MSG_ERROR([Cannot build shared fortran libraries. Please configure with --disable-fortran flag.])
+-    fi
+-fi
+-
+-AC_PROG_INSTALL
+-AC_PROG_LN_S
+-
+-AC_CHECK_PROGS([AR], [ar xar], [:], [$PATH])
+ 
+ AC_CHECK_PROGS([YACC], ['bison -y' byacc yacc], [none], [])
+ 
+@@ -389,7 +375,7 @@
+ 
+ dnl ----------------------------------------------------------------------
+ dnl Is the szip library present?
+-AC_SUBST(USE_COMP_SZIP) USE_COMP_SZIP="no"
++AC_SUBST([USE_COMP_SZIP]) USE_COMP_SZIP="no"
+ AC_ARG_WITH([szlib],
+             [AC_HELP_STRING([--with-szlib=DIR],
+                             [Use szlib library [default=no]])],,
+@@ -445,14 +431,13 @@
+     fi
+ 
+     AC_CHECK_LIB([sz], [SZ_BufftoBuffCompress],, [unset HAVE_SZIP])
+-
++    ;;
++esac
+     if test -z "$HAVE_SZIP"; then
+       AC_MSG_ERROR([couldn't find szlib library])
+     else
+       USE_COMP_SZIP="yes"
+     fi
+-    ;;
+-esac
+ 
+ dnl Check to see if SZIP has encoder 
+ if test "X$HAVE_SZIP" = "Xyes"; then
+@@ -702,7 +687,7 @@
+ dnl ======================================================================
+ dnl Libtool initialization
+ dnl ======================================================================
+-LT_INIT(dlopen disable-shared) 
++LT_INIT(dlopen) 
+ LT_OUTPUT
+ 
+ dnl ======================================================================
+@@ -780,11 +765,6 @@
+ dnl ------------------------------------------------------------------------
+ dnl Check to see if libtool has enabled shared libraries. Set a conditional
+ dnl as some Makefiles will build based on availability of shared libraries.
+-if (./libtool --features | grep '^enable shared libraries' > /dev/null); then
+-  enable_shared=yes
+-else
+-  enable_shared=no
+-fi
+ 
+ dnl ------------------------------------------------------------------------
+ dnl Specify shared library extension the host machine should recognize.
+@@ -841,26 +821,7 @@
+ dnl Strip anything that looks like a flag off of $F77
+ dnl Report anything stripped as a flag in RFLAGS and 
+ dnl only the compiler in F77_VERSION.
+-F77_NOFLAGS=`echo $F77 | sed 's/ -.*//'`
+-FFLAGS_TO_ADD=`echo $F77 | grep - | sed 's/.* -/-/'`
+-if test -n $FFLAGS_TO_ADD; then
+- FFLAGS="$FFLAGS_TO_ADD$FFLAGS"
+-fi
+-
+-if `echo $F77_NOFLAGS | grep ^/ >/dev/null 2>&1`; then
+-  F77_VERSION="$F77_NOFLAGS"
+-else
+-  F77_VERSION="$F77";
+-  for x in `echo $PATH | sed -e 's/:/ /g'`; do
+-    if test -x $x/$F77_NOFLAGS; then
+-      F77_VERSION="$x/$F77_NOFLAGS"
+-      break
+-    fi
+-  done
+-fi
+-if test -n "$fc_version_info"; then
+-  F77_VERSION="$F77_VERSION ( $fc_version_info)"
+-fi
++F77_VERSION="$F77";
+ 
+ 
+ dnl This part doesn't work yet since HDF4 config files do not contain
+diff -Nur hdf-4.2.6.orig/hdf/test/fortestF.f hdf-4.2.6/hdf/test/fortestF.f
+--- hdf-4.2.6.orig/hdf/test/fortestF.f	2011-12-21 23:40:35.000000000 +0000
++++ hdf-4.2.6/hdf/test/fortestF.f	2011-12-21 23:47:04.000000000 +0000
+@@ -203,7 +203,7 @@
+ 
+ 	if (cmd .NE. 'Test' .AND. cmd .NE. 'test') then
+ 	 print *, 'Unknown Command: ', cmd, param
+-	 print *, 'Try one of "Skip", "Test", "Verbosity" or "Cleanup"'
++	 print *, 'Try one of Skip, Test, Verbosity or Cleanup'
+ 	 retcode = -1
+ 	 return
+ 	endif
+diff -Nur hdf-4.2.6.orig/mfhdf/libsrc/Makefile.am hdf-4.2.6/mfhdf/libsrc/Makefile.am
+--- hdf-4.2.6.orig/mfhdf/libsrc/Makefile.am	2011-12-21 23:40:35.000000000 +0000
++++ hdf-4.2.6/mfhdf/libsrc/Makefile.am	2011-12-21 23:48:07.000000000 +0000
+@@ -32,10 +32,11 @@
+ else
+ libmfhdf_la_SOURCES = $(CSOURCES)
+ endif
++libmfhdf_la_LIBADD = $(top_builddir)/hdf/src/libdf.la
+ 
+ if HDF_BUILD_XDR
+ XDRLIB = ../xdr/libxdr.la
+-libmfhdf_la_LIBADD = $(XDRLIB)
++libmfhdf_la_LIBADD += $(XDRLIB)
+ endif
+ 
+ if HDF_BUILD_NETCDF
+@@ -50,11 +51,7 @@
+ # fortran has been disabled in configure. The Fortran linker gets confused 
+ # when shared libraries are enabled, so when Fortran is not enabled,
+ # this replaces the Fortran link macro with the C link macro.
+-if HDF_BUILD_FORTRAN
+-    # do nothing
+-else
+-    F77LINK = $(LINK)
+-endif
++
+ 
+ #############################################################################
+ ##                          And the cleanup                                ##

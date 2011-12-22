@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.21 2011/06/21 15:17:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.22 2011/12/22 17:36:28 bicatali Exp $
+
+*hdf-4.2.6 (22 Dec 2011)
+
+  22 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/4.2.6-autotools.patch, +hdf-4.2.6.ebuild:
+  Version bump
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> hdf-4.2_p4.ebuild:
   Add dependency on virtual/fortran
