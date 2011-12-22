@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.30 2011/12/14 14:55:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.31 2011/12/22 18:01:12 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -255,6 +255,9 @@ remove_libtool_files() {
 # The src_prepare function.
 #
 # Supporting PATCHES array and user patches. See base.eclass(5) for reference.
+#
+# This function calls elibtoolize implicitly. If you need to call eautoreconf
+# afterwards, please use AT_NOELIBTOOLIZE=yes to avoid it being called twice.
 autotools-utils_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 
