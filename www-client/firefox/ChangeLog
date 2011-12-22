@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.111 2011/12/21 16:11:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.112 2011/12/22 08:36:53 polynomial-c Exp $
+
+  22 Dec 2011; Lars Wendler <polynomial-c@gentoo.org> firefox-9.0.ebuild:
+  Fixed usage of check-reqs (bug #395601). Thanks to Alphat-PC for report and
+  patch.
 
 *firefox-9.0 (21 Dec 2011)
 
