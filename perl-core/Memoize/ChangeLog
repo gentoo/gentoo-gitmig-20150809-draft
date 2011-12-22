@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Memoize
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/ChangeLog,v 1.8 2011/12/20 20:40:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/ChangeLog,v 1.9 2011/12/22 22:14:05 maekke Exp $
+
+  22 Dec 2011; Markus Meier <maekke@gentoo.org> Memoize-1.20.0.ebuild:
+  x86 stable, bug #394041
 
   20 Dec 2011; Jeroen Roovers <jer@gentoo.org> Memoize-1.20.0.ebuild:
   Stable for HPPA (bug #394041).
