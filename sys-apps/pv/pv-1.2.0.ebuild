@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.2.0.ebuild,v 1.10 2011/03/24 17:53:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.2.0.ebuild,v 1.11 2011/12/22 14:35:56 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit toolchain-funcs
 
@@ -15,19 +15,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris ~x86-solaris"
 IUSE="nls"
 
+DOCS=( README doc/NEWS doc/TODO )
+
 src_configure() {
 	econf $(use_enable nls)
 }
 
 src_compile() {
-	emake \
-		CC="$(tc-getCC)" \
-		LD="$(tc-getLD)" \
-		|| die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-
-	dodoc README doc/NEWS doc/TODO || die
+	emake LD="$(tc-getLD)"
 }
