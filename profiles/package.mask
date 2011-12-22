@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13343 2011/12/22 13:29:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13344 2011/12/22 16:16:52 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -195,13 +195,6 @@ mail-filter/libdomainkeys
 # Masking rc release
 ~dev-util/qt-creator-2.4.0_rc
 
-# Samuli Suominen <ssuominen@gentoo.org> (19 Nov 2011)
-# Incompatible with security bumped fmod wrt #390919
-# Fails to fetch game files wrt #308883
-# Broken permission handling wrt #300284
-# Removal in 30 days
-games-strategy/savage2-bin
-
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
 =www-plugins/google-talkplugin-9999
@@ -295,6 +288,7 @@ games-puzzle/candycrisis
 games-simulation/stoned-bin
 games-sports/racer-bin
 games-strategy/dark-oberon
+games-strategy/savage-bin
 
 # Doug Goldstein <cardoe@gentoo.org> (27 Oct 2011)
 # Beta release (breaks Flash / YouTube )
