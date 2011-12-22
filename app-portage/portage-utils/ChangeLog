@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.119 2011/12/20 21:46:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.120 2011/12/22 20:46:03 vapier Exp $
+
+*portage-utils-0.9 (22 Dec 2011)
+
+  22 Dec 2011; Mike Frysinger <vapier@gentoo.org> +portage-utils-0.9.ebuild:
+  Version bump to fix a few more bugs.
 
   20 Dec 2011; Jeroen Roovers <jer@gentoo.org> portage-utils-0.8.ebuild:
   Stable for HPPA (bug #395317).
