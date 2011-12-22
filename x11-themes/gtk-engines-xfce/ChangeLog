@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.127 2011/12/22 17:07:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.128 2011/12/22 17:12:37 ssuominen Exp $
+
+  22 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -gtk-engines-xfce-2.9.0.ebuild:
+  old
 
 *gtk-engines-xfce-2.99.0-r300 (22 Dec 2011)
 *gtk-engines-xfce-2.99.0-r200 (22 Dec 2011)
