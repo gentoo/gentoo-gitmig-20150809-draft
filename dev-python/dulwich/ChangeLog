@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.41 2011/12/05 19:14:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.42 2011/12/22 19:57:01 grobian Exp $
+
+*dulwich-0.8.2 (22 Dec 2011)
+
+  22 Dec 2011; Fabian Groffen <grobian@gentoo.org> +dulwich-0.8.2.ebuild:
+  Version bump to 0.8.2
 
   05 Dec 2011; Fabian Groffen <grobian@gentoo.org> dulwich-0.8.1.ebuild:
   Marked ~sparc-solaris, ~sparc64-solaris
