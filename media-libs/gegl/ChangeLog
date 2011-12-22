@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.57 2011/05/20 20:20:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.58 2011/12/22 10:33:39 scarabeus Exp $
+
+  22 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> -gegl-0.0.22.ebuild:
+  remove old
 
   20 May 2011; Kacper Kowalik <xarthisius@gentoo.org> gegl-0.1.6.ebuild:
   ppc/ppc64 stable wrt #360595
