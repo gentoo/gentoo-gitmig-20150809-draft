@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.2.0.ebuild,v 1.3 2011/02/13 12:33:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.4.0.ebuild,v 1.1 2011/12/22 00:09:35 mr_bones_ Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -12,8 +12,9 @@ SRC_URI="mirror://sourceforge/scummvm/${P/_/}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="flac iconv mad png vorbis"
+RESTRICT="test" # some tests require external files
 
 RDEPEND="png? ( media-libs/libpng )
 	mad? ( media-libs/libmad )
@@ -28,7 +29,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_/}
 
 src_prepare() {
-	rm -f *.bat
+	rm -rf *.bat dists/win32
 	sed -ri \
 		-e '/^(CC|CXX)\b/d' \
 		Makefile \
