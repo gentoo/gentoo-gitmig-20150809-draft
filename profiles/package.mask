@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13344 2011/12/22 16:16:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13345 2011/12/22 22:23:10 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -76,10 +76,6 @@ dev-php/PEAR-DB_Table
 # Mask until big testing by proxy maintainer is finished
 dev-util/febootstrap
 app-emulation/libguestfs
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (10 Dec 2011)
-# Not released yet
-~app-office/calligra-2.3.85
 
 # Daniel Pielmeier <billie@gentoo.org> (09 Dec 2011)
 # Masked for removal in 30 days. Not needed anymore as cups-1.4
