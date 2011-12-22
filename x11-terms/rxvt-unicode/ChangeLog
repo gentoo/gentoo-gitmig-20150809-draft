@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.192 2011/10/11 20:54:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.193 2011/12/22 14:56:58 jer Exp $
+
+*rxvt-unicode-9.14 (22 Dec 2011)
+
+  22 Dec 2011; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.11.ebuild,
+  rxvt-unicode-9.12.ebuild, rxvt-unicode-9.12-r1.ebuild,
+  +rxvt-unicode-9.14.ebuild, metadata.xml:
+  Version bump thanks to Justin Lecher (bug #395647). Fix older SRC_URI.
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.10.ebuild,
   rxvt-unicode-9.11.ebuild, rxvt-unicode-9.12.ebuild,

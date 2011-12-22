@@ -12,7 +12,7 @@
 <use>
 <flag name='256-color'>Enable 256 color support</flag>
 <flag name='afterimage'>Enable transparency support using
-<pkg>media-libs/libafterimage</pkg></flag>
+<pkg>media-libs/libafterimage</pkg> (deprecated in 9.14)</flag>
 <flag name='alt-font-width'>Calculate the font width using a different method</flag>
 <flag name='blink'>Enable blinking text</flag>
 <flag name='fading-colors'>Enable colors fading when off focus</flag>
