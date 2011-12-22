@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.442 2011/12/21 16:16:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.443 2011/12/22 08:25:27 polynomial-c Exp $
+
+  22 Dec 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +xulrunner-1.9.2.21.ebuild:
+  Re-added 1.9.2.21 version for icecat-3.6.16-r4.
 
   21 Dec 2011; Lars Wendler <polynomial-c@gentoo.org>
   -xulrunner-1.9.2.12.ebuild, -xulrunner-1.9.2.21.ebuild:
