@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.19 2011/12/12 17:33:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.20 2011/12/22 01:09:58 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -10,8 +10,7 @@ toolchain-glibc_src_install() {
 		GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-nptl
 	fi
 
-	local install_root=${D}
-	is_crosscompile && install_root="${install_root}/usr/${CTARGET}"
+	local install_root="${D}$(alt_prefix)"
 	if want_linuxthreads ; then
 		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-linuxthreads
 		einfo "Installing GLIBC ${ABI} with linuxthreads ..."
@@ -72,16 +71,15 @@ toolchain-glibc_src_install() {
 
 	# Make sure the non-native interp can be found on multilib systems
 	if [[ ${SYMLINK_LIB} == "yes" ]] && has_multilib_profile ; then
+		local abi32 ldso
 		case $(tc-arch) in
-			amd64)
-				[[ ! -e ${D}/lib ]] && dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /lib
-				dosym ../$(get_abi_LIBDIR x86)/ld-linux.so.2 /lib/ld-linux.so.2
-				;;
-			ppc64)
-				[[ ! -e ${D}/lib ]] && dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /lib
-				dosym ../$(get_abi_LIBDIR ppc)/ld.so.1 /lib/ld.so.1
-				;;
+		amd64) abi32="x86" ldso="ld-linux.so.2" ;;
+		ppc64) abi32="ppc" ldso="ld.so.1" ;;
 		esac
+		if [[ -n ${ldso} ]] ; then
+			[[ ! -e ${D}/lib ]] && dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) $(alt_prefix)/lib
+			dosym ../$(get_abi_LIBDIR ${abi32})/${ldso} $(alt_prefix)/lib/${ldso}
+		fi
 	fi
 
 	#################################################################
@@ -99,7 +97,7 @@ toolchain-glibc_src_install() {
 		cd "${D}"$(alt_usrlibdir)/..
 		[[ -e lib ]] || mkdir lib
 
-		dosym usr/include /usr/${CTARGET}/sys-include
+		dosym usr/include $(alt_prefix)/sys-include
 		return 0
 	fi
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.808 2011/12/14 16:42:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.809 2011/12/22 01:09:58 vapier Exp $
+
+  22 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit,
+  files/eblits/src_install.eblit:
+  Pull out the cross-compiler prefix handling into alt_prefix to simplify
+  places that need to mess with paths under it.
 
   14 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/pkg_setup.eblit:
   Also filter out glibc binaries when looking for __guard #394453#5 by Michael
