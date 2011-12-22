@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.19 2011/12/22 08:42:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.20 2011/12/22 11:55:56 aballier Exp $
+
+  22 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.9.ebuild:
+  remove keywords that do not have their matching in ffmpeg-0.9 so that itll
+  not force a switch to libav
 
 *ffmpeg-0.9 (22 Dec 2011)
 
