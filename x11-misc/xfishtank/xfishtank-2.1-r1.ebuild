@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1-r1.ebuild,v 1.3 2011/12/16 15:18:07 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1-r1.ebuild,v 1.4 2011/12/22 22:16:18 maekke Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/X11/demos/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-linux"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
