@@ -1,6 +1,13 @@
 # ChangeLog for app-office/calligra-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.5 2011/11/20 17:58:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.6 2011/12/22 22:29:11 dilfridge Exp $
+
+*calligra-l10n-2.3.85 (22 Dec 2011)
+
+  22 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -calligra-l10n-2.3.83.ebuild, calligra-l10n-2.3.84.ebuild,
+  +calligra-l10n-2.3.85.ebuild:
+  Version bump; remove old; drop arches where calligra is not keyworded
 
 *calligra-l10n-2.3.84 (20 Nov 2011)
 
