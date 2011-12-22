@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2.ebuild,v 1.1 2011/12/22 17:36:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2.ebuild,v 1.2 2011/12/22 17:37:55 ssuominen Exp $
 
 EAPI=4
 
@@ -66,18 +66,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Fix compilation in a gnome environment, bug #159831
-	epatch "${FILESDIR}"/${PN}-0.97.0-gnome-doc.patch
+	epatch "${FILESDIR}"/${PN}-0.97.0-gnome-doc.patch #159831
 
-	# Fix compilation with USE="python", bug #271855
 	if use python; then
 		python_convert_shebangs -r 2 .
-		# use proper shared lib extension, #298232
-		sed -i -e "s/\.so/$(get_libname)/" acinclude.m4 || die
+		sed -i -e "s/\.so/$(get_libname)/" acinclude.m4 || die #298232
 	fi
 
-	# Skip man generation
 	if ! use doc; then
+		# Skip man generation
 		sed -i -e '/if HAVE_DB2MAN/,/endif/d' doc/*/Makefile.am || die
 	fi
 
