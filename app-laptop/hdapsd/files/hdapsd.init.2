@@ -49,7 +49,7 @@ start() {
 
     local DISKOPTS DISK
     for DISK in ${DISKLIST}; do
-	DISKOPTS="-d ${DISK} "
+	DISKOPTS="${DISKOPTS} -d ${DISK}"
     done
 
     ebegin "Starting Hard Drive Active Protection System daemon"
