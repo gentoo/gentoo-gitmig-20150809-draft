@@ -1,6 +1,13 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.39 2011/12/02 18:19:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.40 2011/12/22 09:57:56 scarabeus Exp $
+
+*libav-0.8_pre20111222 (22 Dec 2011)
+
+  22 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libav-0.8_pre20111222.ebuild:
+  Add new snapshot to build mplayer1 and provide something for ffmpeg-0.9
+  virtual.
 
   02 Dec 2011; Steve Dibb <beandog@gentoo.org> libav-0.6.2.ebuild,
   libav-0.6.9999.ebuild, libav-0.7.2.ebuild, libav-0.7.9999.ebuild,
