@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.28 2011/12/09 12:52:53 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.29 2011/12/22 12:59:11 aballier Exp $
+
+*dvisvgm-1.0.10 (22 Dec 2011)
+
+  22 Dec 2011; Alexis Ballier <aballier@gentoo.org> +dvisvgm-1.0.10.ebuild:
+  version bump
 
   09 Dec 2011; Naohiro Aota <naota@gentoo.org> dvisvgm-1.0.9-r1.ebuild:
   Add ~x86-fbsd
