@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.94.ebuild,v 1.2 2011/10/29 00:46:44 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.96.ebuild,v 1.1 2011/12/22 19:48:21 johu Exp $
 
 EAPI=4
-KDE_LINGUAS="da de en_GB es et fr km nds pl pt ru sv tr uk"
-KDE_LINGUAS_DIR=( applet/po containment/po )
+KDE_LINGUAS="de en_GB es et fr km nds pl pt ru sv tr uk"
+KDE_LINGUAS_DIR=( applet/locale containment/locale )
 inherit kde4-base
 
 DESCRIPTION="Task and launch representation plasmoid"
@@ -18,7 +18,6 @@ IUSE="debug"
 
 DEPEND="
 	$(add_kdebase_dep plasma-workspace)
-	media-libs/qimageblitz
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXext
