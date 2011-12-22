@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>desktop-wm</herd>
-	<longdescription>
-	Flwm is an attempt to combine the best ideas from several window managers.
-	The primary influence and code base is from wm2.
-	</longdescription>	
-</pkgmetadata>
