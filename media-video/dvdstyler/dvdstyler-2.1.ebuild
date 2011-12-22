@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.1.ebuild,v 1.1 2011/12/22 21:21:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.1.ebuild,v 1.2 2011/12/22 21:27:18 ssuominen Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ WX_GTK_VER=2.8
 inherit wxwidgets
 
 DESCRIPTION="A cross-platform free DVD authoring application"
-HOMEPAGE="http://www.dvdstyler.de/"
+HOMEPAGE="http://www.dvdstyler.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
