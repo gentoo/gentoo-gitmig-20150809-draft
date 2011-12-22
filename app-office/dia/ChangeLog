@@ -1,6 +1,11 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.133 2011/11/15 23:30:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.134 2011/12/22 17:36:04 ssuominen Exp $
+
+*dia-0.97.2 (22 Dec 2011)
+
+  22 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +dia-0.97.2.ebuild:
+  Version bump.
 
   15 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> dia-0.97.1.ebuild:
   QA: eautoreconf should be before gnome2_src_prepare.
