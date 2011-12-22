@@ -1,6 +1,7 @@
 Fix build of swedish help after 33915
 Patch by larkang@gmail.com
 https://bugs.gentoo.org/show_bug.cgi?id=395677
+Applied as r34453 upstream.
 
 Index: help/help_mp-sv.h
 ===================================================================
