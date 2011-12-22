@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.129 2011/11/26 10:26:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.130 2011/12/22 22:00:26 maekke Exp $
+
+  22 Dec 2011; Markus Meier <maekke@gentoo.org> uw-imap-2007f.ebuild:
+  x86 stable, bug #391349
 
   26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> uw-imap-2007f.ebuild:
   Stable on amd64 wrt bug #391349
