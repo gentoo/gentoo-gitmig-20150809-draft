@@ -1,8 +1,7 @@
 From: Magnus Granberg <zorry@ume.nu>
-https://bugs.gentoo.org/show_bug.cgi?id=232100
+https://bugs.gentoo.org/232100
 Remove nonsense O_CREAT flag
 
-diff -Nur /var/tmp/portage/sys-fs/udftools-1.0.0b-r7/work/udftools-1.0.0b3/pktsetup/pktsetup.c /root/hardened/udftools-1.0.0b3/pktsetup/pktsetup.c
 --- pktsetup/pktsetup.c	2008-06-19 00:27:08.000000000 +0200
 +++ pktsetup/pktsetup.c	2008-06-19 00:20:31.000000000 +0200
 @@ -85,7 +85,7 @@

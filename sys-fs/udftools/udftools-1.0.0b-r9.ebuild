@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/udftools-1.0.0b-r9.ebuild,v 1.5 2011/07/29 08:36:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/udftools-1.0.0b-r9.ebuild,v 1.6 2011/12/22 16:27:57 vapier Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -16,27 +18,18 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86 ~x86-linux"
 IUSE=""
 
+RDEPEND="sys-libs/readline"
+DEPEND="${RDEPEND}"
+
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# For new kernel packet writing driver
 	epatch "${WORKDIR}"/${MY_P}.patch
-
-	# Fix CD blanking for 2.6.8 and newer
 	epatch "${FILESDIR}"/cdrwtool-linux2.6-fix-v2.patch
-
-	# gcc4 compat, bug #112122
-	epatch "${FILESDIR}"/${P}-gcc4.patch
-
-	# BE fix, bug #120245
-	epatch "${FILESDIR}"/${P}-bigendian.patch
-
-	# gcc 4.3 fix, bug #232100
-	epatch "${FILESDIR}"/${P}-openflags.patch
-
+	epatch "${FILESDIR}"/${P}-gcc4.patch #112122
+	epatch "${FILESDIR}"/${P}-bigendian.patch #120245
+	epatch "${FILESDIR}"/${P}-openflags.patch #232100
 	epatch "${FILESDIR}"/${P}-limits_h.patch
 }
 

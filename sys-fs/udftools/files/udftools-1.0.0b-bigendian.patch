@@ -1,3 +1,7 @@
+http://bugs.gentoo.org/120245
+
+BE fix
+
 ===================================================================
 RCS file: /cvsroot/linux-udf/udftools/mkudffs/mkudffs.c,v
 retrieving revision 1.3
