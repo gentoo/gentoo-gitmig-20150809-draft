@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.35.ebuild,v 1.4 2011/12/17 14:50:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.35.ebuild,v 1.5 2011/12/22 22:04:54 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.torproject.org/dist/${PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="doc tor-hardening +transparent-proxy threads"
 
 DEPEND="dev-libs/openssl
