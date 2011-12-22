@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.24 2011/09/21 20:12:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.25 2011/12/22 20:29:38 ulm Exp $
 
 EAPI=2
 
@@ -29,8 +29,6 @@ RDEPEND="|| ( app-editors/nano
 	app-editors/emact
 	app-editors/ersatz-emacs
 	app-editors/fe
-	app-editors/vim
-	app-editors/gvim
 	app-editors/jasspa-microemacs
 	app-editors/jed
 	app-editors/joe
@@ -46,6 +44,8 @@ RDEPEND="|| ( app-editors/nano
 	app-editors/teco
 	app-editors/uemacs-pk
 	app-editors/vile
+	app-editors/vim
+	app-editors/gvim
 	app-editors/xemacs
 	app-editors/zile
 	app-misc/mc[edit]

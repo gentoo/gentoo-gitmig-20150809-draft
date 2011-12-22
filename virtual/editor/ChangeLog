@@ -1,6 +1,9 @@
 # ChangeLog for virtual/editor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.22 2011/09/21 20:12:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.23 2011/12/22 20:29:38 ulm Exp $
+
+  22 Dec 2011; Ulrich Mueller <ulm@gentoo.org> editor-0.ebuild:
+  Dependencies should be kept in alphabetical order (except for nano).
 
   21 Sep 2011; Mike Gilbert <floppym@gentoo.org> editor-0.ebuild:
   Prefer vim over gvim to reduce the size of emerge -e @system.
