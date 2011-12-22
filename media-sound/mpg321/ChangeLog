@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.76 2011/08/31 20:33:54 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.77 2011/12/22 13:57:11 ssuominen Exp $
+
+*mpg321-0.3.0 (22 Dec 2011)
+
+  22 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +mpg321-0.3.0.ebuild:
+  Version bump wrt #395625 by Ivan S. Titov
 
   31 Aug 2011; Matt Turner <mattst88@gentoo.org> mpg321-0.2.12-r1.ebuild:
   Added ~mips.
