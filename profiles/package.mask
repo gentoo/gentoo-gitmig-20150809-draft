@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13342 2011/12/20 22:39:18 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13343 2011/12/22 13:29:17 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -77,19 +77,9 @@ dev-php/PEAR-DB_Table
 dev-util/febootstrap
 app-emulation/libguestfs
 
-# Samuli Suominen <ssuominen@gentoo.org> (11 Dec 2011)
-# Outdated build system and problems selecting GTK+-2.x wrt bug 377829
-# Masked for removal in 30 days
-media-sound/gamix
-
 # Andreas K. Huettel <dilfridge@gentoo.org> (10 Dec 2011)
 # Not released yet
 ~app-office/calligra-2.3.85
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 Dec 2011)
-# Incompatible with fltk-1.3.0 wrt bug 378775
-# Removal in 30 days unless patch is provided
-x11-wm/flwm
 
 # Daniel Pielmeier <billie@gentoo.org> (09 Dec 2011)
 # Masked for removal in 30 days. Not needed anymore as cups-1.4
@@ -117,13 +107,6 @@ sec-policy/selinux-xfce4
 # Masking rc release
 =net-mail/dovecot-2.1_rc*
 
-# Samuli Suominen <ssuominen@gentoo.org> (02 Dec 2011)
-# Still using deprecated thunar-vfs compability library.
-# Masking for removal in 30 days per advise from upstream.
-# Use file-roller as replacement, or use squeeze from Xfce git
-# and help upstream with development by providing patches.
-app-arch/squeeze
-
 # Bernard Cafarelli <voyageur@gentoo.Org> (02 Dec 2011)
 # Last rites, no longer supported upstream, multiple Gentoo bugs open
 # Replacements: sys-devel/dragonegg, sys-devel/clang
@@ -144,11 +127,6 @@ media-libs/phonon-xine
 # package that never made it into the tree
 dev-perl/Test-SimpleUnit
 
-# Samuli Suominen <ssuominen@gentoo.org> (30 Nov 2011)
-# Everything is (or should be) using slotted vala by now
-# Remove the old unslotted copy in 30 days
-<dev-lang/vala-0.10
-
 # Tim Harder <radhermit@gentoo.org> (29 Nov 2011)
 # Masked until gcc-4.6 is unmasked
 >=media-video/mkvtoolnix-5.1.0
@@ -159,18 +137,6 @@ dev-perl/Test-SimpleUnit
 dev-util/cdebootstrap
 # Nothing uses libdebian-installer except cdebootstrap, remove as well
 dev-libs/libdebian-installer
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Nov 2011)
-# Masked for removal in 30 days. Still requiring gnome-panel 2.x
-# with bonobo, as well as old SLOT of libindicator
-# The effort to get ayatana libs in tree is targetting GTK+ 3.x,
-# not 2.x (anymore)
-<=gnome-extra/indicator-applet-0.4.12
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Nov 2011)
-# Masked for removal in 30 days because of bugs 380193 and 381227
-dev-perl/Gtk2-Sexy
-net-misc/twitux
 
 # Christian Ruppert <idl0r@gentoo.org> (26 Nov 2011)
 # bug 391945
@@ -235,18 +201,6 @@ mail-filter/libdomainkeys
 # Broken permission handling wrt #300284
 # Removal in 30 days
 games-strategy/savage2-bin
-
-# Samuli Suominen <ssuominen@gentoo.org> (19 Nov 2011)
-# Start masking and removing low hanging reverse dependencies 
-# of (obsolete) gnome-base/gnome-vfs package
-#
-# Removal in 30 days
-app-cdr/serpentine
-gnome-extra/gcursor
-x11-misc/gtodo
-x11-libs/libelysium
-x11-libs/libelysiumui
-net-misc/emphetamine
 
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
