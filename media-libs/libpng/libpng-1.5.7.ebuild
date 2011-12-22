@@ -1,0 +1,58 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.7.ebuild,v 1.1 2011/12/22 18:49:45 ssuominen Exp $
+
+# WARNING: media-gfx/optipng is shipping internal copy of libpng14. Look out for
+# security.
+
+EAPI=4
+
+inherit eutils libtool multilib
+
+DESCRIPTION="Portable Network Graphics library"
+HOMEPAGE="http://www.libpng.org/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
+	apng? ( mirror://sourceforge/${PN}-apng/${P}-apng.patch.gz )"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+IUSE="apng neon static-libs"
+
+RDEPEND="sys-libs/zlib"
+DEPEND="${RDEPEND}
+	!<x11-libs/gdk-pixbuf-2.24.0-r1
+	!<x11-libs/libsexy-0.1.11-r3
+	app-arch/xz-utils"
+
+DOCS=( ANNOUNCE CHANGES libpng-manual.txt README TODO )
+
+src_prepare() {
+	if use apng; then
+		epatch "${WORKDIR}"/${P}-apng.patch
+		# Don't execute symbols check with apng patch wrt #378111
+		sed -i -e '/^check/s:scripts/symbols.chk::' Makefile.in || die
+	fi
+	elibtoolize
+}
+
+src_configure() {
+	econf \
+		$(use_enable static-libs static) \
+		$(use_enable neon arm-neon)
+}
+
+src_install() {
+	default
+	find "${ED}" -name '*.la' -exec rm -f {} +
+}
+
+pkg_preinst() {
+	has_version ${CATEGORY}/${PN}:1.4 && return 0
+	preserve_old_lib /usr/$(get_libdir)/libpng14$(get_libname 14)
+}
+
+pkg_postinst() {
+	has_version ${CATEGORY}/${PN}:1.4 && return 0
+	preserve_old_lib_notify /usr/$(get_libdir)/libpng14$(get_libname 14)
+}
