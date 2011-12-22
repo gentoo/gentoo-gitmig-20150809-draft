@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-JSON-PP
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.17 2011/12/20 13:02:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.18 2011/12/22 22:15:43 maekke Exp $
+
+  22 Dec 2011; Markus Meier <maekke@gentoo.org> perl-JSON-PP-2.272.0.ebuild:
+  x86 stable, bug #393397
 
   20 Dec 2011; Agostino Sarubbo <ago@gentoo.org> perl-JSON-PP-2.272.0.ebuild:
   Stable for AMD64, wrt bug #393397
