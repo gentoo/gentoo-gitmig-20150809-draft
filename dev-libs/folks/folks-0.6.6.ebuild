@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.6.4.1.ebuild,v 1.1 2011/11/04 04:07:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.6.6.ebuild,v 1.1 2011/12/22 23:16:03 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -37,7 +37,7 @@ RDEPEND="${COMMON_DEPEND}
 # folks socialweb backend requires that libsocialweb be built with USE=vala,
 # even when building folks with --disable-vala.
 DEPEND="${COMMON_DEPEND}
-	>=dev-libs/gobject-introspection-0.9.12
+	>=dev-libs/gobject-introspection-1.30
 	>=dev-util/intltool-0.35.0
 	>=dev-util/pkgconfig-0.21
 	sys-devel/gettext
@@ -45,15 +45,12 @@ DEPEND="${COMMON_DEPEND}
 	socialweb? ( >=net-libs/libsocialweb-0.25.15[vala] )
 	test? ( sys-apps/dbus )
 	vala? (
-		>=dev-lang/vala-0.13.4:0.14[vapigen]
+		>=dev-lang/vala-0.14:0.14[vapigen]
 		>=net-libs/telepathy-glib-0.13.1[vala]
 		eds? ( >=gnome-extra/evolution-data-server-3.0.1[vala] ) )"
 
 # the inspect tool requires --enable-vala
 REQUIRED_USE="utils? ( vala )"
-
-# XXX: tests appear to use installed version of folks
-RESTRICT="test"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
@@ -69,16 +66,14 @@ pkg_setup() {
 		--disable-Werror"
 	if use vala; then
 		G2CONF="${G2CONF}
-		VALAC=$(type -p valac-0.14)
-		VAPIGEN=$(type -p vapigen-0.14)"
+			VALAC=$(type -p valac-0.14)
+			VAPIGEN=$(type -p vapigen-0.14)"
 	fi
 }
 
 src_test() {
-	# FIXME: several eds backend tests fail
+	# FIXME: eds tests often fails for no good reason
 	sed -e 's/check: .*/check: /' \
 		-i tests/eds/Makefile || die "sed failed"
-	# Don't run make check in po/
-	cd tests
-	dbus-launch emake check
+	default
 }
