@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.27 2011/10/03 20:29:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.28 2011/12/22 12:27:04 aballier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -8,6 +8,10 @@
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
 # profile have a USE flag associated with (such as altivec, mmx, etc).
+
+# 2011/12/22 - Alexis Ballier <aballier@gentoo.org>
+# Unmask vdpau as its supported here
+-vdpau
 
 # 2011/07/11 - Samuli Suominen <ssuominen@gentoo.org>
 # Unmask amd64/x86 only opencl support for nvidia-cuda-toolkit

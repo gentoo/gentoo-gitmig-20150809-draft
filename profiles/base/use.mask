@@ -1,6 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.129 2011/12/18 09:04:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.130 2011/12/22 12:27:04 aballier Exp $
+
+# vdpau is currently only available with binary nvidia-drivers, thus amd64/x86*
+vdpau
 
 # nvidia-cuda-toolkit is amd64/x86 only
 opencl

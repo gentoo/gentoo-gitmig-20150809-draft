@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.73 2011/12/06 13:29:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.74 2011/12/22 12:27:04 aballier Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -59,7 +59,7 @@ sci-mathematics/fricas -cmucl
 
 # Luca Barbato <lu_zero@gentoo.org> (28 Feb 2011)
 # # Masked in base, unmask for amd64/x86
-media-video/mplayer2 -bluray -vdpau
+media-video/mplayer2 -bluray
 
 # Tim Harder <radhermit@gentoo.org> (13 Feb 2011)
 # Masked in base, unmask for amd64/x86
@@ -150,4 +150,4 @@ dev-java/ibm-jdk-bin -alsa
 dev-java/ibm-jre-bin -alsa
 
 # Steve Dibb <beandog@gentoo.org> (29 Sept 2008)
-media-video/mplayer -cpudetection -custom-cpuopts -win32codecs -bindist -vdpau
+media-video/mplayer -cpudetection -custom-cpuopts -win32codecs -bindist

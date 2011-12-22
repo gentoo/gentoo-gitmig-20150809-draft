@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6033 2011/12/21 17:30:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6034 2011/12/22 12:27:03 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Dec 2011; Alexis Ballier <aballier@gentoo.org>
+  arch/amd64/package.use.mask, arch/amd64/use.mask, arch/x86/package.use.mask,
+  arch/x86/use.mask, base/package.use.mask, base/use.mask:
+  mask vdpau globally and unmask on x86/amd64 as requested in bug #392269
 
   21 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
   +default/linux/arm/10.0/package.use.mask,
