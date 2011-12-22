@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.3.ebuild,v 1.7 2011/12/17 14:13:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.3.ebuild,v 1.8 2011/12/22 07:36:39 jlec Exp $
 
 EAPI=4
 
@@ -36,7 +36,8 @@ PATCHES=(
 
 src_prepare() {
 	autotools-utils_src_prepare
-	eautoreconf
+#	bug 395497, no elibtoolize
+	AT_NOELIBTOOLIZE="yes" eautoreconf
 }
 
 src_configure() {

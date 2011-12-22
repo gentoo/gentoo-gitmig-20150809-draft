@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/memphis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.10 2011/12/17 14:13:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.11 2011/12/22 07:36:39 jlec Exp $
+
+  22 Dec 2011; Justin Lecher <jlec@gentoo.org> memphis-0.2.3.ebuild:
+  Do not run elibtolize as it is already done by autotools-utils.eclass,
+  #395497
 
   17 Dec 2011; Justin Lecher <jlec@gentoo.org> memphis-0.2.3.ebuild,
   +files/memphis-0.2.3-link_gobject.patch:
