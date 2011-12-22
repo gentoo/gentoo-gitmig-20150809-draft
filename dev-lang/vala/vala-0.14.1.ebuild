@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.14.1.ebuild,v 1.2 2011/12/20 21:22:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.14.1.ebuild,v 1.3 2011/12/22 13:12:09 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -18,6 +18,7 @@ IUSE="test +vapigen"
 
 RDEPEND=">=dev-libs/glib-2.16:2"
 DEPEND="${RDEPEND}
+	!${CATEGORY}/${PN}:0
 	sys-devel/flex
 	|| ( sys-devel/bison dev-util/byacc dev-util/yacc )
 	dev-util/pkgconfig
