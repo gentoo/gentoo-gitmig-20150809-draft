@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.55 2011/09/05 07:09:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.56 2011/12/22 01:11:13 radhermit Exp $
+
+*when-1.1.29 (22 Dec 2011)
+
+  22 Dec 2011; Tim Harder <radhermit@gentoo.org> +when-1.1.29.ebuild:
+  Version bump.
 
   05 Sep 2011; Tim Harder <radhermit@gentoo.org> -when-1.1.23.ebuild:
   Remove old.
