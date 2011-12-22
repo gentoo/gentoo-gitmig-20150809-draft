@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.8.9.ebuild,v 1.1 2011/12/21 22:08:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.8.9.ebuild,v 1.2 2011/12/22 07:39:43 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,8 +19,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-vcs/subversion-1.4"
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-vcs/subversion-1.4"
+DEPEND="${RDEPEND}
+	test? ( || ( dev-lang/python:2.7 dev-python/unittest2 ) )"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
