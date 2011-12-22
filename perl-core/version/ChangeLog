@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/version
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.45 2011/12/20 12:53:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.46 2011/12/22 22:25:21 maekke Exp $
+
+  22 Dec 2011; Markus Meier <maekke@gentoo.org> version-0.940.0.ebuild:
+  x86 stable, bug #393397
 
   20 Dec 2011; Agostino Sarubbo <ago@gentoo.org> version-0.940.0.ebuild:
   Stable for AMD64, wrt bug #393397
