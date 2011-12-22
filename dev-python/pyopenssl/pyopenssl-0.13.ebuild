@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13.ebuild,v 1.2 2011/09/20 23:47:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13.ebuild,v 1.3 2011/12/22 20:24:16 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -49,7 +49,7 @@ src_compile() {
 		addwrite /var/cache/fonts
 
 		pushd doc > /dev/null
-		emake html ps dvi || die "Generation of documentation failed"
+		emake -j1 html ps dvi || die "Generation of documentation failed"
 		popd > /dev/null
 	fi
 }
