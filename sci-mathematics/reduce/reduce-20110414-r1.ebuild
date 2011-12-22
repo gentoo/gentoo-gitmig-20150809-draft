@@ -1,19 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/reduce-20101007-r1.ebuild,v 1.1 2011/03/29 21:02:40 grozin Exp $
-EAPI="2"
-inherit elisp-common
-MY_PN=${PN}-algebra
-MY_P=${MY_PN}-${PV}
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/reduce-20110414-r1.ebuild,v 1.1 2011/12/22 12:23:04 grozin Exp $
+EAPI=4
+inherit elisp-common multilib
 
 DESCRIPTION="A general-purpose computer algebra system"
 HOMEPAGE="http://reduce-algebra.sourceforge.net/
 	http://reduce-algebra.com/"
 IUSE="doc emacs gnuplot X"
-SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}-algebra/${PN}-src-${PV}.tar.bz2"
 LICENSE="BSD-2 X? ( LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="X? ( x11-libs/libXrandr
 		x11-libs/libXcursor
@@ -22,8 +20,6 @@ RDEPEND="X? ( x11-libs/libXrandr
 	emacs? ( virtual/emacs )"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}"
-
 src_configure() {
 	# If you pass --prefix to this damn configure,
 	# make (not make install!) will try to install stuff
@@ -31,13 +27,13 @@ src_configure() {
 	# Therefore, I cannot use econf here
 	# Also, make calls configure in maintainer mode in subdirs *by design*
 	# The trunk sucks less => WONTFIX until the next release
-	./configure --with-csl $(use_with X fox)
+	./configure --with-csl $(use_with X gui)
 	# psl build requires Internet connection at build time
 	# we cannot support it
 }
 
 src_compile() {
-	emake STRIP=true || die "emake failed"
+	emake -j1 STRIP=true
 
 	pushd cslbuild/*/csl/reduce.doc > /dev/null
 	rm -f *.txt *.tex
@@ -50,28 +46,39 @@ src_compile() {
 }
 
 src_test() {
-	emake testall || die "emake testall failed"
+	emake -j1 testall || die "emake testall failed"
 }
 
 src_install() {
+	local lib="$(get_libdir)"
+	dodoc README BUILDING DEPENDENCY_TRACKING
+	pushd bin > /dev/null
+	cp "${FILESDIR}"/redcsl "${FILESDIR}"/csl .
+	sed -e "s/lib/${lib}/" -i redcsl
+	sed -e "s/lib/${lib}/" -i csl
+	exeinto /usr/bin
+	doexe redcsl csl
+	popd > /dev/null
+
 	pushd cslbuild/*/csl > /dev/null
-	exeinto /usr/lib/${PN}
+	exeinto /usr/${lib}/${PN}
 	doexe reduce csl
-	insinto /usr/lib/${PN}
+	insinto /usr/$(get_libdir)/${PN}
 	doins reduce.img csl.img
-	doins -r reduce.doc
+	insinto /usr/share/${PN}
+	doins -r ${PN}.doc
+	mv "${D}"usr/share/${PN}/${PN}.doc "${D}"usr/share/${PN}/doc
+	dosym /usr/share/${PN}/doc /usr/${lib}/${PN}/${PN}.doc
 	if use X; then
-		doins -r reduce.fonts
+		doins -r ${PN}.fonts
+		mv "${D}"usr/share/${PN}/${PN}.fonts "${D}"usr/share/${PN}/fonts
+		dosym /usr/share/${PN}/fonts /usr/${lib}/${PN}/${PN}.fonts
 	fi
 	popd > /dev/null
-	exeinto /usr/bin
-	doexe "${FILESDIR}/redcsl" "${FILESDIR}/csl"
-	dodoc README BUILDING DEPENDENCY_TRACKING
-	dosym /usr/lib/${PN}/${PN}.doc /usr/share/doc/${PF}/html
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins -r doc/util/r38.pdf
+		doins doc/util/r38.pdf
 	fi
 
 	if use emacs; then
