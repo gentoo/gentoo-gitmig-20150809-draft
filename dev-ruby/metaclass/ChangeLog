@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/metaclass
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.1 2011/12/22 18:36:55 graaff Exp $
+
+*metaclass-0.0.1 (22 Dec 2011)
+
+  22 Dec 2011; Hans de Graaff <graaff@gentoo.org> +metaclass-0.0.1.ebuild,
+  +metadata.xml:
+  Initial import. New dependency of dev-ruby/mocha.
+
