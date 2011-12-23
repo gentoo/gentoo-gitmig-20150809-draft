@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6039 2011/12/23 15:54:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6040 2011/12/23 16:02:17 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Dec 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Actually, let's just have one mask entry for both opera and opera-next.
 
   23 Dec 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask www-client/opera-11.61* snapshots.

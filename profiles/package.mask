@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13347 2011/12/23 15:54:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13348 2011/12/23 16:02:17 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,8 +32,9 @@
 #--- END OF EXAMPLES ---
 
 # Jeroen Roovers <jer@gentoo.org> (23 Dec 2011)
-# Opera snapshots are not supported
+# Opera Next and Opera snapshots are unsupported and eternally unstable.
 # <http://my.opera.com/desktopteam/blog>
+www-client/opera-next
 =www-client/opera-11.61*
 
 # Samuli Suominen <ssuominen@gentoo.org> (23 Dec 2011)
@@ -723,11 +724,6 @@ sci-chemistry/webmo
 # Michael Sterrett <mr_bones_@gentoo.org> (25 May 2011)
 # Needs an old version of bison that isn't in the tree anymore.
 dev-lang/open64
-
-# Jeroen Roovers <jer@gentoo.org> (24 May 2011)
-# Opera Next is forever unstable and unsupported.
-# <http://my.opera.com/desktopteam/blog>
-www-client/opera-next
 
 # Hans de Graaff <graaff@gentoo.org> (15 May 2011)
 # Mask new versions until thread-related crashes have been fixed.
