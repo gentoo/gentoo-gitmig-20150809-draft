@@ -1,13 +1,13 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.460 2011/12/23 21:39:50 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.461 2011/12/23 21:41:02 a3li Exp $
 
 *phpmyadmin-3.4.9 (23 Dec 2011)
 
   23 Dec 2011; Alex Legler <a3li@gentoo.org> -phpmyadmin-3.4.5.ebuild,
   -phpmyadmin-3.4.7.ebuild, +phpmyadmin-3.4.9.ebuild:
   Version bump for security bugs 389427 and 395715. Removing unnneeded and
-  vulnerable versions.
+  vulnerable versions. The setup script is now disabled by default.
 
   05 Nov 2011; Raúl Porcel <armin76@gentoo.org> phpmyadmin-3.4.6.ebuild:
   alpha/sparc stable wrt #387413
