@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libdmtx
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdmtx/ChangeLog,v 1.1 2011/12/23 18:09:21 johu Exp $
+
+*libdmtx-0.7.4 (23 Dec 2011)
+
+  23 Dec 2011; Johannes Huber <johu@gentoo.org> +libdmtx-0.7.4.ebuild,
+  +metadata.xml:
+  New package.
+
