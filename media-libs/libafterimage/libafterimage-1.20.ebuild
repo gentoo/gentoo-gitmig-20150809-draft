@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.11 2011/11/16 10:19:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.12 2011/12/23 07:53:11 ssuominen Exp $
 
 EAPI=3
 inherit eutils autotools
@@ -28,7 +28,7 @@ RDEPEND="x11-libs/libSM
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xextproto
-	!x11-wm/afterstep"
+	!!x11-wm/afterstep"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.41 2011/11/16 10:19:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.42 2011/12/23 07:53:11 ssuominen Exp $
+
+  23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
+  libafterimage-1.20.ebuild:
+  Change from soft to hard block wrt #374907
 
   16 Nov 2011; Justin Lecher <jlec@gentoo.org> libafterimage-1.20.ebuild:
   Corrected Slotting of media-libs/tiff and media-libs/libpng
