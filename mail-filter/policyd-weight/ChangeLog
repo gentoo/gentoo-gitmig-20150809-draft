@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/policyd-weight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/ChangeLog,v 1.20 2011/12/21 09:04:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/ChangeLog,v 1.21 2011/12/23 08:46:44 eras Exp $
+
+  23 Dec 2011; Eray Aslan <eras@gentoo.org> -policyd-weight-0.1.14.17.ebuild:
+  remove old
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   policyd-weight-0.1.15.1.ebuild:
