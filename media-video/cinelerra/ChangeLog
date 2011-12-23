@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.48 2011/12/23 03:03:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.49 2011/12/23 03:17:04 ssuominen Exp $
+
+  23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
+  cinelerra-20111223.ebuild, +files/cinelerra-underlinking.patch:
+  Fix underlinking (missing -ldl as used by pluginserver.C) wrt #367509 by
+  Diego Elio Pettenò
 
 *cinelerra-20111223 (23 Dec 2011)
 

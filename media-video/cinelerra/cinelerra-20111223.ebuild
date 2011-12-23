@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20111223.ebuild,v 1.1 2011/12/23 03:03:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20111223.ebuild,v 1.2 2011/12/23 03:17:04 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils multilib flag-o-matic
@@ -53,7 +53,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-entry.patch \
-		"${FILESDIR}"/${PN}-ffmpeg.patch
+		"${FILESDIR}"/${PN}-ffmpeg.patch \
+		"${FILESDIR}"/${PN}-underlinking.patch
 
 	eautoreconf
 }
