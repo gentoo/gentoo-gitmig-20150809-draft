@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/adplay
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/adplay/ChangeLog,v 1.21 2011/12/22 22:01:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/adplay/ChangeLog,v 1.22 2011/12/23 00:36:46 ssuominen Exp $
+
+  23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> adplay-1.7.ebuild:
+  amd64 stable wrt #391597
 
   22 Dec 2011; Markus Meier <maekke@gentoo.org> adplay-1.7.ebuild:
   x86 stable, bug #391597
