@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.15.ebuild,v 1.1 2011/10/21 15:17:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.15.ebuild,v 1.2 2011/12/23 05:03:05 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib pam
@@ -32,7 +32,7 @@ RDEPEND="x11-libs/libXmu
 	jpeg? ( virtual/jpeg )
 	opengl? ( virtual/opengl )
 	xinerama? ( x11-libs/libXinerama )
-	new-login? ( || ( gnome-base/gdm kde-base/kdm ) )"
+	new-login? ( || ( x11-misc/lightdm gnome-base/gdm kde-base/kdm ) )"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
 	x11-proto/xextproto
@@ -48,6 +48,12 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
+	if use new-login && has_version x11-misc/lightdm; then #392967
+		sed -i \
+			-e "/default_l.*1/s:gdmflexiserver -ls:${EPREFIX}/usr/libexec/lightdm/&:" \
+			configure{,.in} || die
+	fi
+
 	epatch \
 		"${FILESDIR}"/${PN}-5.15-gentoo.patch \
 		"${FILESDIR}"/${PN}-5.05-interix.patch
@@ -57,14 +63,13 @@ src_prepare() {
 
 src_configure() {
 	if use ppc || use ppc64; then
-		filter-flags -mabi=altivec
-		filter-flags -maltivec
+		filter-flags -maltivec -mabi=altivec
 		append-flags -U__VEC__
 	fi
 
 	unset LINGUAS #113681
 	unset BC_ENV_ARGS #24568
-	export RPM_PACKAGE_VERSION="no" #368025
+	export RPM_PACKAGE_VERSION=no #368025
 
 	econf \
 		--x-includes="${EPREFIX}"/usr/include \

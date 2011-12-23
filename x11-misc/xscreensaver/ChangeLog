@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.296 2011/10/21 15:17:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.297 2011/12/23 05:03:05 ssuominen Exp $
+
+  23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> xscreensaver-5.15.ebuild:
+  Use x11-misc/lightdm for USE="new-login" by default if it's installed since
+  it's the most generic one out of lightdm, gdm and kdm wrt #392967 by
+  "Small_Penguin"
 
 *xscreensaver-5.15 (21 Oct 2011)
 
