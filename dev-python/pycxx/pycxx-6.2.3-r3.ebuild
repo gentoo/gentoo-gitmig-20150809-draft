@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/pycxx-6.2.3-r3.ebuild,v 1.1 2011/12/23 05:30:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/pycxx-6.2.3-r3.ebuild,v 1.2 2011/12/23 05:59:45 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -25,6 +25,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-python-3.2.patch"
 
 	# Bug 369329.
+	# https://sourceforge.net/tracker/?func=detail&aid=3464317&group_id=3180&atid=303180
 	epatch "${FILESDIR}/${P}-python-3.2-Py_hash_t.patch"
 
 	sed -e "/^#include/s:/Python[23]/:/:" -i CXX/*/*.hxx || die "sed failed"
