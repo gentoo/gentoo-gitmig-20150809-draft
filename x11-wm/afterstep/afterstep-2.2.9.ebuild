@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.19 2011/12/23 07:49:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.20 2011/12/23 07:54:11 ssuominen Exp $
 
 EAPI=4
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto
 	xinerama? ( x11-proto/xineramaproto )
-	!media-libs/libafterimage"
+	!!media-libs/libafterimage"
 
 S=${WORKDIR}/AfterStep-${PV}
 
