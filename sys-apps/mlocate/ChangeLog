@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.87 2011/05/06 22:36:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.88 2011/12/23 21:17:54 swift Exp $
+
+  23 Dec 2011; <swift@gentoo.org> mlocate-0.24.ebuild:
+  Add use_selinux dependency on selinux-slocate SELinux policy
 
 *mlocate-0.24 (06 May 2011)
 

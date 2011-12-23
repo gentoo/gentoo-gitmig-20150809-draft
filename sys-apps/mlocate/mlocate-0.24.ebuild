@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.24.ebuild,v 1.1 2011/05/06 22:36:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.24.ebuild,v 1.2 2011/12/23 21:17:54 swift Exp $
 
 EAPI="3"
 
@@ -13,12 +13,14 @@ SRC_URI="https://fedorahosted.org/releases/m/l/mlocate/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="nls"
+IUSE="nls selinux"
 
 RDEPEND="!sys-apps/slocate
-	!sys-apps/rlocate"
+	!sys-apps/rlocate
+	selinux? ( sec-policy/selinux-slocate )"
 DEPEND="app-arch/xz-utils
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	selinux? ( sec-policy/selinux-slocate )"
 
 pkg_setup() {
 	enewgroup locate
