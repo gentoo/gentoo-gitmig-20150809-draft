@@ -1,0 +1,11 @@
+
+
+*bitcoind-0.5.1 (23 Dec 2011)
+*bitcoind-0.4.2 (23 Dec 2011)
+
+  23 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.4.2-Makefile.gentoo, +bitcoind-0.4.2.ebuild, +bitcoind-0.5.1.ebuild,
+  +files/bitcoin.conf, +files/bitcoin.confd, +files/bitcoin.initd,
+  +metadata.xml:
+  Initial commit, proxy maintaining for Luke Dashjr, bug #328391
+

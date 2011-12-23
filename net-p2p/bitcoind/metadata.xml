@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>blueness@gentoo.org</email>
+		<name>Anthony G. Basile</name>
+	</maintainer>
+	<maintainer>
+		<email>luke_gentoo_bitcoin@dashjr.org</email>
+		<name>Luke Dashjr</name>
+	</maintainer>
+	<use>
+		<flag name='eligius'>Enable using lower fees accepted by Eligius</flag>
+		<flag name='upnp'>Enable Universal Plug and Play</flag>
+	</use>
+</pkgmetadata>
