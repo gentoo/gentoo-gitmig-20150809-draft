@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13348 2011/12/23 16:02:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13349 2011/12/23 19:43:31 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -191,13 +191,6 @@ net-print/gnome-cups-manager
 dev-python/gnome-python
 dev-python/gnome-python-desktop
 dev-python/gnome-python-extras
-
-# Eray Aslan <eras@gentoo.org> (20 Nov 2011)
-# Abandoned project. Historical standard. Use one of the DKIM
-# implementations, which provide domainkeys verification as well, instead.
-# mail-filter/opendkim is a good alternative. bug #391127
-# Removal in 30 days.
-mail-filter/libdomainkeys
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Nov 2011)
 # Masking rc release
