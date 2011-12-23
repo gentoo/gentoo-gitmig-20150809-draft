@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.6.ebuild,v 1.2 2011/12/20 20:23:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.6.1.ebuild,v 1.1 2011/12/23 00:29:50 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension versionator python nsplugins
 
-PATCH="${PN}-2.6-patches-01"
+PATCH="${PN}-2.6.1-patches-01"
 EMVER="1.3.4"
 
 MY_PV="${PV/_pre*}"
