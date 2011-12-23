@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.75 2011/11/06 23:09:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.76 2011/12/23 01:44:46 jer Exp $
+
+*dwm-6.0 (23 Dec 2011)
+
+  23 Dec 2011; Jeroen Roovers <jer@gentoo.org> +dwm-6.0.ebuild:
+  Version bump by Dmitry Potapov (bug #395707).
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> dwm-5.9.ebuild:
   Marking dwm-5.9 ppc for bug 386083
