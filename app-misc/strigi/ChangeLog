@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.79 2011/12/15 10:34:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.80 2011/12/23 23:32:40 johu Exp $
+
+  23 Dec 2011; Johannes Huber <johu@gentoo.org> strigi-0.7.6-r1.ebuild,
+  strigi-0.7.7.ebuild:
+  Use dev-libs/boost only at build time, fix bug #394119.
 
 *strigi-0.7.7 (15 Dec 2011)
 

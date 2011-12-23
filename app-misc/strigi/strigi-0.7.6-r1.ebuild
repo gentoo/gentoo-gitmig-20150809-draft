@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.6-r1.ebuild,v 1.3 2011/12/07 22:01:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.6-r1.ebuild,v 1.4 2011/12/23 23:32:40 johu Exp $
 
 EAPI=4
 
@@ -25,7 +25,6 @@ IUSE="clucene +dbus debug exif fam ffmpeg hyperestraier inotify log +qt4 test"
 
 COMMONDEPEND="
 	app-arch/bzip2:0
-	dev-libs/boost
 	dev-libs/libxml2:2
 	sys-libs/zlib:0
 	virtual/libiconv
@@ -45,8 +44,9 @@ COMMONDEPEND="
 	)
 "
 DEPEND="${COMMONDEPEND}
+	dev-libs/boost
 	test? ( dev-util/cppunit )"
-RDEPEND="${COMMONDEPEND}"
+RDEPEND=${COMMONDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-0.7.5-no-qt4.patch"
