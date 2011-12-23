@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pycxx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.35 2011/11/29 11:04:25 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.36 2011/12/23 05:30:44 floppym Exp $
+
+*pycxx-6.2.3-r3 (23 Dec 2011)
+
+  23 Dec 2011; Mike Gilbert <floppym@gentoo.org>
+  +files/pycxx-6.2.3-python-3.2-Py_hash_t.patch, +pycxx-6.2.3-r3.ebuild:
+  Add patch to fix the hash_handler prototype under python-3.2. Should resolve
+  bug 369329.
 
   29 Nov 2011; Naohiro Aota <naota@gentoo.org> pycxx-6.2.3-r2.ebuild:
   Add ~x86-fbsd
