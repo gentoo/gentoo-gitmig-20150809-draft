@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ffmpegsource-9999.ebuild,v 1.1 2011/09/03 18:14:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ffmpegsource-9999.ebuild,v 1.2 2011/12/23 21:01:05 maksbotan Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="postproc static-libs"
 
 RDEPEND="
 	sys-libs/zlib
-	virtual/ffmpeg
+	>=virtual/ffmpeg-0.9
 "
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
