@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bashmount/bashmount-1.6.0.ebuild,v 1.1 2011/11/24 18:39:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bashmount/bashmount-1.6.0.ebuild,v 1.2 2011/12/23 19:29:30 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="app-shells/bash
