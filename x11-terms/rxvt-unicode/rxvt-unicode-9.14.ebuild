@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.14.ebuild,v 1.1 2011/12/22 14:56:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.14.ebuild,v 1.2 2011/12/23 17:37:18 jer Exp $
 
 EAPI="4"
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
 IUSE="
 	256-color alt-font-width afterimage blink +focused-urgency fading-colors
-	+font-styles force-hints iso14755 +mousewheel +perl pixbuf
-	startup-notification truetype unicode3 +vanilla wcwidth
+	+font-styles iso14755 +mousewheel +perl pixbuf startup-notification truetype
+	unicode3 +vanilla wcwidth
 "
 
 RDEPEND="
@@ -37,7 +37,7 @@ DEPEND="
 	x11-proto/xproto
 "
 
-REQUIRED_USE="vanilla? ( !alt-font-width focused-urgency !force-hints !wcwidth )"
+REQUIRED_USE="vanilla? ( !alt-font-width focused-urgency !wcwidth )"
 
 src_prepare() {
 	# fix for prefix not installing properly
@@ -58,9 +58,6 @@ src_prepare() {
 
 		# bug #263638
 		epatch "${FILESDIR}"/${PN}-9.06-popups-hangs.patch
-
-		# bug #346553
-		use force-hints && epatch "${FILESDIR}"/${PN}-9.10-force-hints.patch
 
 		# bug #237271
 		epatch "${FILESDIR}"/${PN}-9.05_no-MOTIF-WM-INFO.patch
