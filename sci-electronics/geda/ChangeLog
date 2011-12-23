@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.69 2011/04/25 13:44:57 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.70 2011/12/23 11:24:20 ssuominen Exp $
+
+  23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> geda-1.6.2.ebuild,
+  +files/geda-1.6.2-correct_glib_include.patch:
+  Fix building with dev-libs/glib >= 2.30 wrt #395795 by Priit Laes
 
   25 Apr 2011; Thomas Beierlein <tomjbe@gentoo.org> geda-1.6.1.ebuild,
   geda-1.6.2.ebuild:
