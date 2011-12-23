@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.937 2011/12/23 18:35:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.938 2011/12/23 18:54:48 zmedico Exp $
+
+*portage-2.1.10.42 (23 Dec 2011)
+
+  23 Dec 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.42.ebuild:
+  2.1.10.42 version bump. This fixes bug #390489 (export COLUMNS variable so
+  java-utils-2.eclass doesn't die in java-pkg_init when stdin is not a tty), bug
+  #394091 (export valid COLUMNS variable so perl doesn't die when output is
+  redirected), bug #394995 (InvalidDependString triggered by REQUIRED_USE
+  containing a flag not in IUSE), and bug #395705 (OSError: [Errno 121] Remote
+  I/O error when PORTAGE_RO_DISTDIRS refers to NFS). Bug #395831 tracks all bugs
+  fixed since portage-2.1.10.41.
 
   23 Dec 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.42.ebuild,
   -portage-2.2.0_alpha51.ebuild:
