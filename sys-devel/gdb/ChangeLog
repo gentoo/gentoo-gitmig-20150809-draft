@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.196 2011/12/22 22:08:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.197 2011/12/23 02:45:24 mattst88 Exp $
+
+  23 Dec 2011; Matt Turner <mattst88@gentoo.org> gdb-7.3.1.ebuild:
+  alpha stable, bug #395017.
 
   22 Dec 2011; Markus Meier <maekke@gentoo.org> gdb-7.3.1.ebuild:
   arm stable, bug #395017
