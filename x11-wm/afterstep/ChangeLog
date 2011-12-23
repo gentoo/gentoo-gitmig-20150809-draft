@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.99 2011/11/12 10:39:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.100 2011/12/23 07:49:43 ssuominen Exp $
+
+*afterstep-2.2.11 (23 Dec 2011)
+
+  23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +afterstep-2.2.11.ebuild:
+  Version bump.
 
   12 Nov 2011; Justin Lecher <jlec@gentoo.org> afterstep-2.2.9.ebuild:
   Corrected slotting for png and tiff

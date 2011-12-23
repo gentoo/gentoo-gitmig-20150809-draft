@@ -1,27 +1,25 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.19 2011/12/23 07:49:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.11.ebuild,v 1.1 2011/12/23 07:49:43 ssuominen Exp $
 
 EAPI=4
-
-inherit autotools flag-o-matic eutils
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="A feature rich NeXTish window manager"
 HOMEPAGE="http://www.afterstep.org/"
-SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2"
+SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2
+	mirror://sourceforge/${PN}/AfterStep-${PV}.tar.bz2"
 
-# libAfterBase/libAfterImage are LGPL
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa debug dbus gif gtk jpeg mmx nls png svg tiff xinerama"
 
-RDEPEND="
-	media-libs/freetype
+RDEPEND="media-libs/freetype
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( sys-apps/dbus )
 	jpeg? ( virtual/jpeg )
-	gif?  ( >=media-libs/giflib-4.1.0 )
+	gif? ( >=media-libs/giflib-4.1.0 )
 	gtk? ( x11-libs/gtk+:2 )
 	png? ( media-libs/libpng:0 )
 	svg? ( gnome-base/librsvg:2 )
@@ -35,39 +33,27 @@ RDEPEND="
 	x11-libs/libXpm
 	x11-libs/libXrender
 	xinerama? ( x11-libs/libXinerama )"
-
 DEPEND="${RDEPEND}
+	!media-libs/libafterimage
 	x11-proto/xextproto
 	x11-proto/xproto
-	xinerama? ( x11-proto/xineramaproto )
-	!media-libs/libafterimage"
+	xinerama? ( x11-proto/xineramaproto )"
 
 S=${WORKDIR}/AfterStep-${PV}
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/no-alternatives-${PV}.patch \
-		"${FILESDIR}"/${P}-make_session_data_file.patch \
-		"${FILESDIR}"/${P}-alpha.patch \
-		"${FILESDIR}"/${P}-ldflags.patch \
-		"${FILESDIR}"/${P}-libpng15.patch
+	epatch "${FILESDIR}"/${PN}-2.2.9-{alpha,ldflags,libpng15}.patch
 
-	sed -i \
-		-e '/CFLAGS="-O3"/d' \
-		libAfter{Base,Image}/configure || die
+	sed -i -e '/^install:/s:install.alternative ::' Makefile.in || die
+	sed -i -e '/CFLAGS="-O3"/d' libAfter{Base,Image}/configure || die
+	sed -i -e '/STRIP_BINARIES/s:-s::' autoconf/configure.in || die #252119
+	sed -i -e '/--with-builtin-gif/s/$with_gif/no/' autoconf/configure.in || die #253259
 
-	sed -i \
-		-e "/STRIP_BINARIES/s/-s//" \
-		autoconf/configure.in || die #252119
-
-	sed -i \
-		-e '/--with-builtin-gif/s/$with_gif/no/' \
-		autoconf/configure.in || die #253259
-
-	cd "${S}"/autoconf || die
+	pushd autoconf >/dev/null
 	eautoreconf
-	cp "${S}"/autoconf/autoconf/config.h.in "${S}"/autoconf || die
-	cp "${S}"/autoconf/configure "${S}" || die
+	cp autoconf/config.h.in ./ || die
+	cp configure ../ || die
+	popd >/dev/null
 }
 
 src_configure() {
@@ -75,9 +61,6 @@ src_configure() {
 
 	use debug && myconf="--enable-gdb --enable-warn --enable-gprof
 		--enable-audit --enable-trace --enable-trace-x"
-
-	#implied intent of debug means you need the frame pointers.
-	use debug && filter-flags -fomit-frame-pointer
 
 	# Explanation of configure options
 	# ================================
@@ -121,15 +104,15 @@ src_install() {
 
 	# Handle the documentation
 	dodoc ChangeLog INSTALL NEW* README* TEAM UPGRADE
-	cp -pPR "${S}"/TODO "${D}"/usr/share/doc/${PF}/
+	cp -pPR TODO "${D}"/usr/share/doc/${PF}/
 	dodir /usr/share/doc/${PF}/html
-	cp -pPR "${S}"/doc/* "${D}"/usr/share/doc/${PF}/html
+	cp -pPR doc/* "${D}"/usr/share/doc/${PF}/html
 	rm "${D}"/usr/share/doc/${PF}/html/{Makefile*,afterstepdoc.in}
 
 	insinto /usr/share/xsessions
-	newins "${S}"/AfterStep.desktop.final AfterStep.desktop
+	newins AfterStep.desktop.final AfterStep.desktop
 
 	# For desktop managers like GDM or KDE
 	exeinto /etc/X11/Sessions
-	doexe "${FILESDIR}"/afterstep
+	doexe "${FILESDIR}"/${PN}
 }
