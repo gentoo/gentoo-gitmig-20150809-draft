@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.157 2011/12/20 20:50:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.158 2011/12/23 01:46:35 mattst88 Exp $
+
+  23 Dec 2011; Matt Turner <mattst88@gentoo.org> gmp-5.0.2_p1.ebuild:
+  alpha stable, bug #395193.
 
   20 Dec 2011; Jeroen Roovers <jer@gentoo.org> gmp-5.0.2_p1.ebuild:
   Stable for HPPA (bug #395193).
