@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.4.7.ebuild,v 1.1 2011/11/02 18:56:06 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.4.9.ebuild,v 1.1 2011/12/23 21:39:50 a3li Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="+setup"
+IUSE="setup"
 
 RDEPEND="
 	dev-lang/php[crypt,ctype,filter,json,session,unicode]
@@ -46,7 +46,8 @@ src_install() {
 
 	if ! use setup; then
 		rm -rf setup || die "Cannot remove setup utility"
-		elog "The phpmyadmin setup utility has been removed."
+		elog "The phpMyAdmin setup utility has been removed."
+		elog "It is a regular target of various exploits. If you need it, set USE=setup."
 	else
 		elog "You should consider disabling the setup USE flag"
 		elog "to exclude the setup utility if you don't use it."
