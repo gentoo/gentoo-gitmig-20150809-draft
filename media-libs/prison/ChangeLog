@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/prison
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/prison/ChangeLog,v 1.1 2011/12/23 18:22:12 johu Exp $
+
+*prison-1.0 (23 Dec 2011)
+
+  23 Dec 2011; Johannes Huber <johu@gentoo.org> +metadata.xml,
+  +prison-1.0.ebuild:
+  New package.
+
