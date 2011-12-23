@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.21 2011/12/21 08:53:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.22 2011/12/23 02:04:34 jer Exp $
+
+  23 Dec 2011; Jeroen Roovers <jer@gentoo.org> ccolamd-2.7.3.ebuild:
+  Stable for HPPA (bug #393945).
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ccolamd-2.7.3.ebuild:
   x86 stable wrt bug #393945
