@@ -1,5 +1,8 @@
 
 
+  23 Dec 2011; Anthony G. Basile <blueness@gentoo.org> bitcoin-qt-0.5.1.ebuild:
+  Added md2k7-asyouwish license for icons
+
 *bitcoin-qt-0.5.1 (23 Dec 2011)
 
   23 Dec 2011; Anthony G. Basile <blueness@gentoo.org>

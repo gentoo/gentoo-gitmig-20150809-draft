@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.5.1.ebuild,v 1.1 2011/12/23 19:38:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.5.1.ebuild,v 1.2 2011/12/23 19:44:03 blueness Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/bitcoin/bitcoin/tarball/v${PV/_/} -> bitcoin-v${PV}.
 	eligius? ( http://luke.dashjr.org/programs/bitcoin/files/0.5-eligius_sendfee.patch )
 "
 
-LICENSE="MIT ISC GPL-3 LGPL-2.1 public-domain"
+LICENSE="MIT ISC GPL-3 md2k7-asyouwish LGPL-2.1 public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="$IUSE dbus +eligius ssl upnp"
