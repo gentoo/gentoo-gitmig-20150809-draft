@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r7.ebuild,v 1.5 2011/12/20 12:16:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.1 2011/12/23 22:20:50 ulm Exp $
 
 EAPI=4
 
@@ -80,6 +80,9 @@ src_install() {
 		-o -name COPYING ! -path "*/etc/COPYING" \) -exec rm "{}" + || die
 	fperms -R go-w ${basedir}
 
+	# remove duplicate DOC file
+	rm "${D}"${basedir}/etc/DOC || die
+
 	# move executables to the correct place
 	mv "${D}"/usr/bin/emacs{,-${SLOT}} || die
 	for i in etags ctags emacsclient; do
@@ -87,13 +90,12 @@ src_install() {
 		rm "${D}"${basedir}/etc/${i} || die
 	done
 
-	dodir /usr/libexec/emacs/${PV}/${CHOST}
+	dodir /usr/libexec/emacs/${PV}
 	for i in wakeup digest-doc sorted-doc movemail cvtmail fakemail \
 		yow env server
 	do
-		mv "${D}"${basedir}/etc/${i} \
-			"${D}"/usr/libexec/emacs/${PV}/${CHOST}/${i} || die
-		dosym ../../../../libexec/emacs/${PV}/${CHOST}/${i} ${basedir}/etc/${i}
+		mv "${D}"${basedir}/etc/${i} "${D}"/usr/libexec/emacs/${PV}/${i} || die
+		dosym ../../../../libexec/emacs/${PV}/${i} ${basedir}/etc/${i}
 	done
 	for i in test-distrib make-docfile; do
 		rm "${D}"${basedir}/etc/${i} || die
