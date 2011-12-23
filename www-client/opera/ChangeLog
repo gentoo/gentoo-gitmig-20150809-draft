@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.679 2011/12/17 13:52:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.680 2011/12/23 15:54:15 jer Exp $
+
+*opera-11.61.1222 (23 Dec 2011)
+
+  23 Dec 2011; Jeroen Roovers <jer@gentoo.org> +opera-11.61.1222.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/12/23/lillejulaften
 
   17 Dec 2011; Jeroen Roovers <jer@gentoo.org> opera-11.60.1185.ebuild:
   Revert LD_PRELOAD hack (bug #394963).
