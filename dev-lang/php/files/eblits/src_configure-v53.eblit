@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v53.eblit,v 1.1 2011/12/16 09:02:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v53.eblit,v 1.2 2011/12/23 17:16:42 olemarkus Exp $
 
 eblit-php-src_configure() {
     addpredict /usr/share/snmp/mibs/.index
@@ -10,11 +10,10 @@ eblit-php-src_configure() {
 	# This is a global variable and should be in caps. It isn't because the
 	# phpconfutils eclass relies on exactly this name...
 	# for --with-libdir see bug #327025
-	my_conf="
-		--prefix="${PHP_DESTDIR}"
-		--mandir="${PHP_DESTDIR}"/man
-		--infodir="${PHP_DESTDIR}"/info
-		--libdir="${PHP_DESTDIR}"/lib
+	my_conf="--prefix=${PHP_DESTDIR}
+		--mandir=${PHP_DESTDIR}/man
+		--infodir=${PHP_DESTDIR}/info
+		--libdir=${PHP_DESTDIR}/lib
 		--with-libdir=$(get_libdir)
 		--without-pear
 		$(use_enable threads maintainer-zts)"
@@ -63,7 +62,7 @@ eblit-php-src_configure() {
 	$(use_enable sockets sockets )
 	$(use_with sqlite sqlite /usr)"
     use sqlite && my_conf+=" $(use_enable unicode sqlite-utf8)"
-    $my_conf="
+    my_conf+="
 	$(use_with sqlite3 sqlite3 /usr)
 	$(use_with sybase-ct sybase-ct /usr)
 	$(use_enable sysvipc sysvmsg )
