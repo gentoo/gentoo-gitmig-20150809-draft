@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.186 2011/12/16 14:36:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.187 2011/12/23 00:04:10 halcy0n Exp $
+
+  23 Dec 2011; Mark Loeser <halcy0n@gentoo.org> cacti-0.8.7g.ebuild:
+  Drop stable ppc/ppc64
 
   16 Dec 2011; Jeroen Roovers <jer@gentoo.org> cacti-0.8.7i.ebuild:
   Stable for HPPA (bug #394595).
