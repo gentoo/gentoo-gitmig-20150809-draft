@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/qwtpolar-1.0.0.ebuild,v 1.1 2011/12/19 21:54:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/qwtpolar-1.0.0.ebuild,v 1.2 2011/12/23 07:01:15 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/qwt:5[svg]"
+RDEPEND="x11-libs/qwt:6[svg]"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
