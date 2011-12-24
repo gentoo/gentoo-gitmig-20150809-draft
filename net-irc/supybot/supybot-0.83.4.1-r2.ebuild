@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.83.4.1-r1.ebuild,v 1.9 2011/07/11 12:23:47 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.83.4.1-r2.ebuild,v 1.1 2011/12/24 16:20:42 maksbotan Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/supybot/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="twisted"
 
 DEPEND="twisted? (
@@ -26,7 +26,8 @@ DEPEND="twisted? (
 		>=dev-python/twisted-names-8.1.0
 	)
 	!<net-irc/supybot-plugins-20060723-r1"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-python/pysqlite:0"
 
 S="${WORKDIR}/${MY_P}"
 
