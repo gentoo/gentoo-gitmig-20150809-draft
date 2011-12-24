@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.63 2011/12/17 14:53:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.64 2011/12/24 08:03:02 graaff Exp $
+
+*rack-1.3.5 (24 Dec 2011)
+*rack-1.2.4-r2 (24 Dec 2011)
+
+  24 Dec 2011; Hans de Graaff <graaff@gentoo.org> +rack-1.2.4-r2.ebuild,
+  +rack-1.3.5.ebuild:
+  Version bump. Make sure only the latest testing version installs rackup.
 
   17 Dec 2011; Hans de Graaff <graaff@gentoo.org> rack-1.2.4-r1.ebuild:
   Avoid broken specs for ruby19. These appear to be related to changes in newer
