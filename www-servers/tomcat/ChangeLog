@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.272 2011/12/24 18:25:38 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.273 2011/12/24 19:43:50 fordfrog Exp $
+
+*tomcat-6.0.35 (24 Dec 2011)
+
+  24 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org> +files/6/tomcat.init.4,
+  +tomcat-6.0.35.ebuild:
+  Version bump. This release fixes CVE-2011-3190. Also fixed issue with
+  documentation installation (bug #357437, thanks to Matt O
+  <locke105@gmail.com> for the fix). Also fixed warnings from init script.
 
 *tomcat-7.0.23-r2 (24 Dec 2011)
 
