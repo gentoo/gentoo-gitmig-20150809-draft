@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.8.1.ebuild,v 1.7 2011/12/11 14:53:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.8.1.ebuild,v 1.8 2011/12/24 22:39:19 idl0r Exp $
 
 EAPI="4"
 
@@ -49,8 +49,10 @@ src_configure() {
 	# bug 344029
 	append-cflags "-DDIG_SIGCHASE"
 
+	# localstatedir for nsupdate -l, bug 395785
 	tc-export BUILD_CC
 	econf \
+		--localstatedir=/var \
 		$(use_enable ipv6) \
 		$(use_with idn) \
 		$(use_with ssl openssl) \
