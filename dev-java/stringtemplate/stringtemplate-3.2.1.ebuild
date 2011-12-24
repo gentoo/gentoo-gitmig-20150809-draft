@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/stringtemplate-3.2.1.ebuild,v 1.1 2011/03/15 20:00:07 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/stringtemplate-3.2.1.ebuild,v 1.2 2011/12/24 09:41:39 grobian Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.stringtemplate.org/"
 SRC_URI="http://www.stringtemplate.org/download/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 COMMON_DEPEND=">=dev-java/antlr-2.7.7:0[java]"
