@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/supybot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.40 2011/12/24 16:20:42 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.41 2011/12/24 21:19:38 maksbotan Exp $
+
+  24 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> supybot-0.83.4.1-r2.ebuild:
+  Restore stable keywords and add sqlite use flag. I'm really sorry for
+  deleting
+  stable ebuild.
 
 *supybot-0.83.4.1-r2 (24 Dec 2011)
 
