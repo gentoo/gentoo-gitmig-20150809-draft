@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.68 2011/09/11 20:11:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.69 2011/12/24 09:48:00 patrick Exp $
+
+*sqlalchemy-0.7.4 (24 Dec 2011)
+
+  24 Dec 2011; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-0.7.4.ebuild:
+  Bump for #394311
 
   11 Sep 2011; Markus Meier <maekke@gentoo.org> sqlalchemy-0.7.2.ebuild:
   add ~arm, bug #381709
