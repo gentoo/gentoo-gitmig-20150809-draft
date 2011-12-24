@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.6.0.ebuild,v 1.1 2011/12/23 13:17:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.6.0-r1.ebuild,v 1.1 2011/12/24 13:19:11 johu Exp $
 
 EAPI=4
 
@@ -54,7 +54,10 @@ DEPEND="${COMMON_DEPEND}
 
 REQUIRED_USE="|| ( aqua gstreamer vlc xine )"
 
-PATCHES=( "${FILESDIR}/${PN}-4.5.1-qmakeworkaround.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-4.5.1-qmakeworkaround.patch"
+	"${FILESDIR}/${PN}-4.6.0-rpath.patch"
+)
 
 src_configure() {
 	local mycmakeargs=(
