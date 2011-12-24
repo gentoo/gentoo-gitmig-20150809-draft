@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.365 2011/12/22 22:33:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.366 2011/12/24 22:45:39 idl0r Exp $
+
+  24 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -bind-9.7.3_p3.ebuild,
+  -bind-9.7.4.ebuild, -files/named.init-r10:
+  Cleanup.
 
   22 Dec 2011; Mark Loeser <halcy0n@gentoo.org> bind-9.7.4_p1.ebuild:
   Stable for ppc/ppc64; bug #390753
