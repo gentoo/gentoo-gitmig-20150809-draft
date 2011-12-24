@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.939 2011/12/23 18:55:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.940 2011/12/24 12:33:56 zmedico Exp $
+
+*portage-2.1.10.43 (24 Dec 2011)
+
+  24 Dec 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.43.ebuild,
+  -portage-2.1.10.42.ebuild:
+  2.1.10.43 version bump. This fixes bug #395877 (false positive results in
+  CFLAGS ignorance check) and bug #395879 (emerge AttributeError triggered by
+  ambiguous atom argument, a regression in portage-2.1.10.42 and 2.2.0_alpha82).
+  Also included is a new config-protect-if-modified FEATURES setting (see the
+  make.conf man page). Bug #395831 tracks all bugs fixed since
+  portage-2.1.10.41.
 
 *portage-2.2.0_alpha82 (23 Dec 2011)
 
