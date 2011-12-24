@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.4.0.ebuild,v 1.1 2011/08/03 13:37:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.4.3.ebuild,v 1.1 2011/12/24 09:08:06 hwoarang Exp $
 
 EAPI=4
 
