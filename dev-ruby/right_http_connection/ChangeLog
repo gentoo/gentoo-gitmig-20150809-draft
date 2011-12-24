@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/right_http_connection
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_http_connection/ChangeLog,v 1.9 2011/12/05 14:22:42 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_http_connection/ChangeLog,v 1.10 2011/12/24 15:08:11 graaff Exp $
+
+*right_http_connection-1.3.0 (24 Dec 2011)
+
+  24 Dec 2011; Hans de Graaff <graaff@gentoo.org>
+  +right_http_connection-1.3.0.ebuild:
+  Version bump. Run cucumber features for ruby18/ree18 since we don't have it
+  yet for the others and we didn't run anything before.
 
   05 Dec 2011; Naohiro Aota <naota@gentoo.org>
   right_http_connection-1.2.4-r1.ebuild:
