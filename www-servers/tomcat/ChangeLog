@@ -1,6 +1,18 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.274 2011/12/24 19:50:24 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.275 2011/12/24 20:21:51 fordfrog Exp $
+
+  24 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/5.5/26-main_tomcat_catalina_jasper_build_xml.patch,
+  -tomcat-5.5.27-r5.ebuild, -files/5.5/5.5.27-dynamic-JSSE13Factory.patch,
+  -files/5.5/build-jspc-classpath.patch, -files/5.5/catalina.policy,
+  -files/5.5/examples-cal.patch,
+  -files/5.5/jsr152_jsr154_examples_build_xml.patch, -files/5.5/tomcat.conf.2,
+  -files/5.5/tomcat.init.2, -tomcat-5.5.27-r4.ebuild, metadata.xml:
+  Tomcat 5.5 moved from main tree to java-overlay because it's heading towards
+  its EOL in 2012-09-30. Also the current version (5.5.27) is affected by
+  several security issues and it is unmaintained in our main tree. If you need
+  to use Tomcat 5.5, please use the ebuilds from java-overlay.
 
 *tomcat-7.0.23-r3 (24 Dec 2011)
 

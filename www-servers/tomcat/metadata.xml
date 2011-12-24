@@ -8,7 +8,4 @@
 	The Java Servlet and JavaServer Pages specifications are developed by
 	Sun under the Java Community Process.
 	</longdescription>
-	<use>
-		<flag name='admin'>Enable Tomcat admin webapp</flag>
-	</use>
 </pkgmetadata>
