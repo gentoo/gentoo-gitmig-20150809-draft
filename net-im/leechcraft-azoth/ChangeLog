@@ -1,6 +1,10 @@
 # ChangeLog for net-im/leechcraft-azoth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.7 2011/12/16 18:39:13 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.8 2011/12/24 18:58:22 maksbotan Exp $
+
+  24 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-azoth-9999.ebuild, metadata.xml:
+  Add zheet use flag to 9999
 
 *leechcraft-azoth-0.4.96-r1 (16 Dec 2011)
 

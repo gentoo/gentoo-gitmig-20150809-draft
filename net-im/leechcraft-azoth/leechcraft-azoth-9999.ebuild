@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.6 2011/12/16 18:39:13 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.7 2011/12/24 18:58:22 maksbotan Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ KEYWORDS=""
 IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
 		+depester +embedmedia +herbicide +hili +isterique +juick +lastseen
 		+metacontacts +modnok +nativeemoticons +otroid +p100q +rosenthal
-		+standardstyles +xoox +xtazy"
+		+standardstyles +xoox +xtazy +zheet"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit
@@ -22,7 +22,8 @@ DEPEND="~net-misc/leechcraft-core-${PV}
 		otroid? ( net-libs/libotr )
 		xoox? ( =net-libs/qxmpp-9999[extras] media-libs/speex )
 		xtazy? ( x11-libs/qt-dbus )
-		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
+		crypt? ( app-crypt/qca app-crypt/qca-gnupg )
+		zheet? ( net-libs/libmsn )"
 RDEPEND="${DEPEND}
 	modnok? (
 		|| (
@@ -55,7 +56,8 @@ src_configure() {
 		$(cmake-utils_use_enable rosenthal AZOTH_ROSENTHAL)
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)
 		$(cmake-utils_use_enable xoox AZOTH_XOOX)
-		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)"
+		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)
+		$(cmake-utils_use_enable zheet AZOTH_ZHEET)"
 
 	cmake-utils_src_configure
 }
