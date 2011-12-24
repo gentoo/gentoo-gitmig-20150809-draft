@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pydb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.5 2011/12/24 13:21:05 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.6 2011/12/24 15:41:51 maksbotan Exp $
+
+*pydb-1.26-r1 (24 Dec 2011)
+
+  24 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +pydb-1.26-r1.ebuild:
+  Pythonize ebuild, add support for multiple python ABIs
 
   24 Dec 2011; Andrey Grozin <grozin@gentoo.org> pydb-1.26.ebuild:
   Bug #379193 fixed, thanks to Ulrich Müller <ulm@gentoo.org>
