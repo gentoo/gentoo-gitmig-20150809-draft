@@ -1,6 +1,9 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.46 2011/10/30 22:47:01 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.47 2011/12/24 08:44:29 jlec Exp $
+
+  24 Dec 2011; Justin Lecher <jlec@gentoo.org> uzbl-2011.10.01.ebuild:
+  Added prefix offset fixes and keyworded for ~-linux, tested by me
 
 *uzbl-2011.10.01 (30 Oct 2011)
 
