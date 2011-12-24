@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rack-cache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-cache/ChangeLog,v 1.4 2011/12/17 18:19:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-cache/ChangeLog,v 1.5 2011/12/24 10:38:36 graaff Exp $
+
+*rack-cache-1.1 (24 Dec 2011)
+
+  24 Dec 2011; Hans de Graaff <graaff@gentoo.org> +rack-cache-1.1.ebuild:
+  Version bump.
 
   17 Dec 2011; Raúl Porcel <armin76@gentoo.org> rack-cache-1.0.3.ebuild:
   Add ~ia64/~sparc wrt #385887
