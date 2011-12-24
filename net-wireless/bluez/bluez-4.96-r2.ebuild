@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96-r2.ebuild,v 1.1 2011/12/24 10:26:08 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96-r2.ebuild,v 1.2 2011/12/24 15:46:40 maksbotan Exp $
 
 EAPI="4"
 
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="test-programs? 2"
 
 inherit multilib eutils systemd python
 

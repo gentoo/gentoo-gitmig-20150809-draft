@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.108 2011/12/24 10:26:08 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.109 2011/12/24 15:46:40 maksbotan Exp $
+
+  24 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> bluez-4.96-r2.ebuild:
+  Make bluez depend on python only when USE=test-programs
 
 *bluez-4.96-r2 (24 Dec 2011)
 
