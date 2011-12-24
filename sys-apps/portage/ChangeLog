@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.940 2011/12/24 12:33:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.941 2011/12/24 12:34:47 zmedico Exp $
+
+*portage-2.2.0_alpha83 (24 Dec 2011)
+
+  24 Dec 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha83.ebuild,
+  -portage-2.2.0_alpha82.ebuild:
+  2.2.0_alpha83 version bump. This includes all of the fixes in
+  portage-2.1.10.43. Bug #210077 tracks all bugs fixed since portage-2.1.x.
 
 *portage-2.1.10.43 (24 Dec 2011)
 
