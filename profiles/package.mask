@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13350 2011/12/23 20:58:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13351 2011/12/24 18:30:27 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1098,10 +1098,6 @@ net-irc/bitchx
 # Vlastimil Babka <caster@gentoo.org> (20 May 2008)
 # Masked for testing
 =app-arch/rpm-5*
-
-# Rémi Cardona <remi@gentoo.org> (16 Apr 2008)
-# Masked until somebody picks it up
-dev-cpp/bakery
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (3 Mar 2008)
 # Masking due to security bug #194607 and security bug #204067
