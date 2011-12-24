@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.276 2011/12/24 22:47:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.277 2011/12/24 22:52:49 ago Exp $
+
+  24 Dec 2011; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.35.ebuild:
+  Stable for AMD64, wrt bug #395933
 
   24 Dec 2011; Agostino Sarubbo <ago@gentoo.org> tomcat-7.0.23-r3.ebuild:
   Stable for AMD64, wrt bug #395923
