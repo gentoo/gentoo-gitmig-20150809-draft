@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.23-r1.ebuild,v 1.1 2011/12/15 21:31:15 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.23-r2.ebuild,v 1.1 2011/12/24 18:25:38 fordfrog Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"
@@ -143,7 +143,8 @@ src_install() {
 	cp -pR host-manager "${D}"/usr/share/${TOMCAT_NAME}/webapps || die
 	cp -pR manager "${D}"/usr/share/${TOMCAT_NAME}/webapps || die
 	if use doc; then
-		cp -pR docs "${D}"/usr/share/${TOMCAT_NAME}/webapps || die
+		cp -pR "${S}"/output/build/webapps/docs "${D}"/usr/share/${TOMCAT_NAME}/webapps || die
+		dosym /usr/share/${TOMCAT_NAME}/webapps/docs /var/lib/${TOMCAT_NAME}/webapps/docs || die
 	fi
 	if use examples; then
 		cd "${S}"/webapps/examples/WEB-INF/lib
