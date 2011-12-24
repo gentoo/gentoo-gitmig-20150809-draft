@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/arp-warp-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.16 2011/11/26 11:00:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.17 2011/12/24 09:01:24 jlec Exp $
+
+  24 Dec 2011; Justin Lecher <jlec@gentoo.org> arp-warp-bin-7.1.ebuild,
+  arp-warp-bin-7.1-r1.ebuild:
+  Correct dep from sci-chemistry/ccp4 to sci-chemistry/refmac
 
 *arp-warp-bin-7.1-r1 (26 Nov 2011)
 

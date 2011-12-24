@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.13 2011/11/26 11:00:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.14 2011/12/24 09:01:24 jlec Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ IUSE=""
 
 RDEPEND="
 	app-shells/tcsh
-	>=sci-chemistry/ccp4-6.1.3
+	sci-chemistry/refmac
 	sys-apps/gawk
 	virtual/jre
 	virtual/opengl
