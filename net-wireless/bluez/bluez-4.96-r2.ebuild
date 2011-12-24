@@ -1,10 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96-r1.ebuild,v 1.2 2011/12/17 15:55:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96-r2.ebuild,v 1.1 2011/12/24 10:26:08 maksbotan Exp $
 
 EAPI="4"
 
-inherit multilib eutils systemd
+PYTHON_DEPEND="2"
+
+inherit multilib eutils systemd python
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org/"
@@ -59,6 +61,9 @@ DOCS=( AUTHORS ChangeLog README )
 pkg_setup() {
 	if ! use consolekit; then
 		enewgroup plugdev
+	fi
+	if use test-programs; then
+		python_pkg_setup
 	fi
 }
 
@@ -120,6 +125,7 @@ src_install() {
 		insinto /usr/share/doc/${PF}/test-services
 		doins service-*
 
+		python_convert_shebangs -r 2 "${ED}"
 		cd "${S}"
 	fi
 
