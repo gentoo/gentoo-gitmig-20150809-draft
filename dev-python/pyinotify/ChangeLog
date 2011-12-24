@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.44 2011/07/28 20:33:39 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.45 2011/12/24 11:23:26 jlec Exp $
+
+  24 Dec 2011; Justin Lecher <jlec@gentoo.org> pyinotify-0.9.2.ebuild:
+  Keyworded for ~x86-linux, tested by me
 
   28 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> pyinotify-0.9.2.ebuild:
   Changed license to MIT
