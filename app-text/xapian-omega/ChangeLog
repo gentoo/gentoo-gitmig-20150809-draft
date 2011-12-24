@@ -1,0 +1,8 @@
+
+
+*xapian-omega-1.2.8 (24 Dec 2011)
+
+  24 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.2.8.ebuild, +metadata.xml:
+  Initial commit, bug #255157
+
