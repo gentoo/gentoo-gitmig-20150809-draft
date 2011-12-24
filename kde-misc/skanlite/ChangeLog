@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/skanlite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.16 2011/07/09 08:00:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.17 2011/12/24 11:57:45 johu Exp $
+
+*skanlite-0.8 (24 Dec 2011)
+
+  24 Dec 2011; Johannes Huber <johu@gentoo.org> +skanlite-0.8.ebuild:
+  Version bump.
 
   09 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> skanlite-0.7.ebuild:
   Fix handbook useflag usage and missing deps. FIxes bug #374459.
