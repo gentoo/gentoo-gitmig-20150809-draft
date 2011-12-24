@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon-vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.13 2011/10/20 09:50:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.14 2011/12/24 12:21:12 johu Exp $
+
+  24 Dec 2011; Johannes Huber <johu@gentoo.org> phonon-vlc-0.4.0.ebuild,
+  phonon-vlc-0.4.1.ebuild:
+  Restrict dep range for media-libs/phonon to 2.5, fix bug #395885.
 
   20 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   phonon-vlc-0.4.0.ebuild, phonon-vlc-0.4.1.ebuild, phonon-vlc-9999.ebuild:
