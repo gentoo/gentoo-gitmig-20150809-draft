@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/ChangeLog,v 1.1 2011/08/23 05:23:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/ChangeLog,v 1.2 2011/12/24 13:26:05 graaff Exp $
+
+*rash-0.3.2 (24 Dec 2011)
+
+  24 Dec 2011; Hans de Graaff <graaff@gentoo.org> +rash-0.3.2.ebuild:
+  Version bump.
 
 *rash-0.3.0 (23 Aug 2011)
 
