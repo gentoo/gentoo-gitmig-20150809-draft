@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.366 2011/12/24 22:45:39 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.367 2011/12/24 22:58:36 idl0r Exp $
+
+  24 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -bind-9.8.1.ebuild,
+  bind-9.8.1_p1.ebuild:
+  Using threads also requires caps, bug 395783.
 
   24 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -bind-9.7.3_p3.ebuild,
   -bind-9.7.4.ebuild, -files/named.init-r10:
