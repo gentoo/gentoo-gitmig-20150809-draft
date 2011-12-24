@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.15 2011/12/09 11:09:58 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.16 2011/12/24 10:46:43 mgorny Exp $
+
+*gentoopm-0.2.4 (24 Dec 2011)
+
+  24 Dec 2011; Michał Górny <mgorny@gentoo.org> -gentoopm-0.2.3.ebuild,
+  +gentoopm-0.2.4.ebuild, metadata.xml:
+  Version bump. The new version fixes tests on *BSD, supports Paludis API
+  changes and fixes environment* file sorting.
 
   09 Dec 2011; Naohiro Aota <naota@gentoo.org> gentoopm-0.2.3.ebuild:
   Add ~x86-fbsd. Bug #393183
