@@ -1,6 +1,6 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.211 2011/12/18 22:19:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.212 2011/12/24 17:03:27 maksbotan Exp $
 
   18 Dec 2011; Markus Meier <maekke@gentoo.org> avahi-0.6.30-r1.ebuild:
   arm stable, bug #393009
@@ -10,6 +10,13 @@
 
   16 Dec 2011; Jeroen Roovers <jer@gentoo.org> avahi-0.6.30-r1.ebuild:
   Stable for HPPA (bug #393009).
+
+*avahi-0.6.30-r2 (24 Dec 2011)
+*avahi-0.6.29-r1 (24 Dec 2011)
+
+  24 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> -avahi-0.6.29.ebuild,
+  +avahi-0.6.29-r1.ebuild, -avahi-0.6.30.ebuild, +avahi-0.6.30-r2.ebuild:
+  Fix shebangs, bug 383773. Clean old versions
 
   15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> avahi-0.6.30-r1.ebuild:
   Stable for AMD64, wrt bug #393009
