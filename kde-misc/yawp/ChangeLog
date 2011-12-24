@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/yawp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/ChangeLog,v 1.8 2011/11/15 23:23:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/ChangeLog,v 1.9 2011/12/24 12:58:17 johu Exp $
+
+*yawp-0.4.1 (24 Dec 2011)
+
+  24 Dec 2011; Johannes Huber <johu@gentoo.org> +yawp-0.4.1.ebuild:
+  Version bump.
 
 *yawp-0.4.0 (16 Nov 2011)
 
