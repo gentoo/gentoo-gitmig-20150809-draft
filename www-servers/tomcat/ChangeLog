@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.275 2011/12/24 20:21:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.276 2011/12/24 22:47:45 ago Exp $
+
+  24 Dec 2011; Agostino Sarubbo <ago@gentoo.org> tomcat-7.0.23-r3.ebuild:
+  Stable for AMD64, wrt bug #395923
 
   24 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org>
   -files/5.5/26-main_tomcat_catalina_jasper_build_xml.patch,
