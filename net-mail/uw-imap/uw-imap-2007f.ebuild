@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007f.ebuild,v 1.4 2011/12/22 22:00:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007f.ebuild,v 1.5 2011/12/24 10:27:02 eras Exp $
 
 EAPI=4
 
@@ -47,6 +47,9 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2004c-amd64-so-fix.patch
 	epatch "${FILESDIR}/${PN}-ldflags.patch"
+
+	# no interactive build
+	sed -i -e "/read x; case/s/^/#/" Makefile || die
 
 	# Now we must make all the individual Makefiles use different CFLAGS,
 	# otherwise they would all use -fPIC
