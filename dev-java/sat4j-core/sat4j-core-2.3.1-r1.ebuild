@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-core/sat4j-core-2.3.1.ebuild,v 1.1 2011/12/25 22:14:11 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-core/sat4j-core-2.3.1-r1.ebuild,v 1.1 2011/12/25 22:19:42 fordfrog Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.sat4j.org/"
 SRC_URI="http://download.forge.objectweb.org/sat4j/${PN}-v${MY_PV}.zip
 	http://download.forge.objectweb.org/sat4j/build-${BUILD_PV}.xml -> ${P}-build.xml"
 LICENSE="LGPL-2.1"
-SLOT="2"
+SLOT="2.3"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
