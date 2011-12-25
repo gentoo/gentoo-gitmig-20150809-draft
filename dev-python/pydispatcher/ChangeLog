@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pydispatcher
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/ChangeLog,v 1.10 2010/05/30 21:12:55 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/ChangeLog,v 1.11 2011/12/25 11:03:54 patrick Exp $
+
+*pydispatcher-2.0.3 (25 Dec 2011)
+
+  25 Dec 2011; Patrick Lauer <patrick@gentoo.org> +pydispatcher-2.0.3.ebuild:
+  Bump for #393613
 
 *pydispatcher-2.0.2 (30 May 2010)
 
