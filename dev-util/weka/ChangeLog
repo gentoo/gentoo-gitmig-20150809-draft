@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/weka
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.43 2011/12/25 22:42:24 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.44 2011/12/25 22:52:32 fordfrog Exp $
+
+*weka-3.6.6-r1 (25 Dec 2011)
+
+  25 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org> -weka-3.6.6.ebuild,
+  +weka-3.6.6-r1.ebuild:
+  Added icon and desktop entry (bug #389877, thanks to Randall Wald
+  <rdwald@gmail.com>)
 
 *weka-3.6.6 (25 Dec 2011)
 

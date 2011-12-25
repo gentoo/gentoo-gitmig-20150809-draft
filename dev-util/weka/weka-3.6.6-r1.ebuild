@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.6.6.ebuild,v 1.1 2011/12/25 22:42:24 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.6.6-r1.ebuild,v 1.1 2011/12/25 22:52:32 fordfrog Exp $
 
 EAPI="3"
 
@@ -65,4 +65,7 @@ src_install() {
 	dodir /usr/share/${PN}/data/
 	insinto /usr/share/${PN}/data/
 	doins data/*
+
+	newicon "${S}/weka.gif" "${PN}".png
+	make_desktop_entry "${PN}" "Waikato Environment for Knowledge Analysis" "${PN}" "Education;Science;ArtificialIntelligence;" "Comment=Start Weka"
 }
