@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.59 2011/12/25 12:49:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.60 2011/12/25 12:51:03 graaff Exp $
+
+  25 Dec 2011; Hans de Graaff <graaff@gentoo.org> libxml-2.2.1.ebuild:
+  Drop ruby19 to create a new stable candidate.
 
   25 Dec 2011; Hans de Graaff <graaff@gentoo.org> -libxml-1.1.3.ebuild,
   -libxml-2.1.1.ebuild, -libxml-2.2.0.ebuild:
