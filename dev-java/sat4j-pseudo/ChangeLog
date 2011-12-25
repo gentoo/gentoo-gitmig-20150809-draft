@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sat4j-pseudo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-pseudo/ChangeLog,v 1.10 2010/10/17 12:32:35 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-pseudo/ChangeLog,v 1.11 2011/12/25 22:23:30 fordfrog Exp $
+
+*sat4j-pseudo-2.3.1 (25 Dec 2011)
+
+  25 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org> +sat4j-pseudo-2.3.1.ebuild:
+  Version bump in new slot
 
   17 Oct 2010; Vlastimil Babka <caster@gentoo.org> -sat4j-pseudo-2.1.ebuild,
   -sat4j-pseudo-2.1.1.ebuild:
