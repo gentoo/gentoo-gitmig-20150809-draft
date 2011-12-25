@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/amqplib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/ChangeLog,v 1.1 2011/07/06 21:38:06 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/ChangeLog,v 1.2 2011/12/25 14:54:35 patrick Exp $
+
+*amqplib-1.0.2 (25 Dec 2011)
+
+  25 Dec 2011; Patrick Lauer <patrick@gentoo.org> +amqplib-1.0.2.ebuild:
+  Bump for #391875
 
 *amqplib-0.6.1 (06 Jul 2011)
 
