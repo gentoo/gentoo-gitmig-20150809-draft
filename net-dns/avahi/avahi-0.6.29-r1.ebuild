@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.29-r1.ebuild,v 1.1 2011/12/24 17:03:27 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.29-r1.ebuild,v 1.2 2011/12/25 08:56:42 maksbotan Exp $
 
 EAPI="3"
 
@@ -178,7 +178,7 @@ src_install() {
 		insinto /usr/share/devhelp/books/avahi
 		doins avahi.devhelp || die
 	fi
-	python_convert_shebangs 2 "${ED}"usr/bin/avahi-discover || die
+	use python && python_convert_shebangs 2 "${ED}"usr/bin/avahi-discover || die
 }
 
 pkg_postrm() {
