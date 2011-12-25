@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>mgorny@gentoo.org</email>
+		<name>Michał Górny</name>
+	</maintainer>
+
+	<use>
+		<flag name='rootfs-install'>Install the library into rootfs,
+			to satisfy dependencies of udev when using separate /usr.</flag>
+		<flag name='tools'>Install module loading/unloading tools.</flag>
+	</use>
+</pkgmetadata>
