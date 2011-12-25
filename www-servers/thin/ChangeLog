@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.17 2011/06/12 17:13:51 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.18 2011/12/25 11:41:08 graaff Exp $
+
+  25 Dec 2011; Hans de Graaff <graaff@gentoo.org> -thin-1.2.5-r1.ebuild:
+  Remove old version.
 
 *thin-1.2.11 (12 Jun 2011)
 
