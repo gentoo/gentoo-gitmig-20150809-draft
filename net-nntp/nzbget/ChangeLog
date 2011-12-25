@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.37 2011/12/04 10:44:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.38 2011/12/25 07:42:35 radhermit Exp $
+
+  25 Dec 2011; Tim Harder <radhermit@gentoo.org> files/nzbget.initd:
+  Replace chuid with user for init script (bug #395881).
 
   04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/nzbget.initd:
   replace opts with extra_started_commands
