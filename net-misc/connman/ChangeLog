@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.42 2011/12/25 12:33:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.43 2011/12/25 12:34:20 chainsaw Exp $
+
+  25 Dec 2011; Tony Vroon <chainsaw@gentoo.org> metadata.xml:
+  Taking maintainership whilst dagger is away.
 
 *connman-0.78 (25 Dec 2011)
 
