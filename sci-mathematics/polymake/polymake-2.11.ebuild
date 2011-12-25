@@ -1,23 +1,25 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.9.9-r1.ebuild,v 1.2 2011/03/02 21:08:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.11.ebuild,v 1.1 2011/12/25 15:21:49 tomka Exp $
 
 EAPI=2
 
 inherit eutils flag-o-matic
 
+MY_PV=${PV}_rc2
+
 DESCRIPTION="research tool for polyhedral geometry and combinatorics"
-SRC_URI="http://www.opt.tu-darmstadt.de/polymake/lib/exe/fetch.php/download/${P}.tar.bz2"
+SRC_URI="http://polymake.org/lib/exe/fetch.php/download/${PN}-${MY_PV}.tar.bz2"
+HOMEPAGE="http://polymake.org"
 
-HOMEPAGE="http://www.opt.tu-darmstadt.de/polymake"
-
-IUSE=""
+IUSE="libpolymake"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-libs/gmp
+	dev-libs/boost
 	dev-libs/libxml2:2
 	dev-perl/XML-LibXML
 	dev-libs/libxslt
@@ -27,9 +29,10 @@ DEPEND="dev-libs/gmp
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	# Upstream provided patch. Remove in version 3.0!
-	epatch "${FILESDIR}/${PV}-gentoo-binutils.patch"
-	epatch "${FILESDIR}/${PV}-drop-jreality.patch"
+	# embedded jreality is a precompiled desaster (bug #346073)
+	epatch "${FILESDIR}/${P}"-drop-jreality.patch
+	# Assign a soname (reported upstream, no answer)
+	epatch "${FILESDIR}/2.10"-soname.patch
 	rm -rf java_build/jreality
 
 	# Don't strip
@@ -41,15 +44,24 @@ src_prepare() {
 }
 
 src_configure () {
-
 	export CXXOPT=$(get-flag -O)
+	local myconf
+	if use libpolymake ; then
+		# WTF: If we leave myconf as the empty string here
+		# then configure will fail.
+		myconf="--without-prereq"
+	else
+		# --with-callable is not supported :(
+		myconf="--without-callable"
+	fi
+	echo ${myconf}
 	# Configure does not accept --host, therefore econf cannot be used
-	# Note 'libdir' does not mean where to put .so files!
-	# --libdir=/usr/$(get_libdir) \
 	./configure --prefix=/usr \
 		--without-java \
 		--without-prereq \
-		${myconf} || die
+		--libdir=/usr/$(get_libdir) \
+		--libexecdir=/usr/$(get_libdir) \
+		"${myconf}" || die
 }
 
 src_install(){
