@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.16 2011/10/23 12:03:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.17 2011/12/25 13:30:35 flameeyes Exp $
+
+*yajl-2.0.3 (25 Dec 2011)
+
+  25 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> +yajl-2.0.3.ebuild:
+  Version bump, thanks to Johan Bergström in bug #394985. Also shorten src_test
+  and avoid setting S which is supposedly read-only in phases in EAPI=4 and
+  later.
 
   23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> yajl-2.0.2.ebuild:
   Make static libs optional
