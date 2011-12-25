@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/tins
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.1 2011/12/25 09:59:05 graaff Exp $
+
+*tins-0.3.6 (25 Dec 2011)
+
+  25 Dec 2011; Hans de Graaff <graaff@gentoo.org> +tins-0.3.6.ebuild,
+  +metadata.xml:
+  Initial import. Successor to dev-ruby/spruz.
+
