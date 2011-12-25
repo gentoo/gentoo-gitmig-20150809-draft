@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/stomp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/ChangeLog,v 1.7 2011/09/19 21:53:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/ChangeLog,v 1.8 2011/12/25 08:25:13 graaff Exp $
+
+*stomp-1.2.0 (25 Dec 2011)
+
+  25 Dec 2011; Hans de Graaff <graaff@gentoo.org> +stomp-1.2.0.ebuild:
+  Version bump.
 
   19 Sep 2011; Markus Meier <maekke@gentoo.org> stomp-1.1.7.ebuild:
   x86 stable, bug #368825
