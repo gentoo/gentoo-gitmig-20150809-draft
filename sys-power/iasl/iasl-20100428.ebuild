@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20100428.ebuild,v 1.2 2011/09/30 16:56:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20100428.ebuild,v 1.3 2011/12/25 22:45:59 robbat2 Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -24,8 +24,7 @@ RDEPEND=""
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	if use test
-	then
+	if use test && has test ${FEATURES}; then
 		ewarn 'You have selected USE="test". This will install the test results'
 		ewarn "into /usr/share/${PF}/, compressed as a tarball."
 		ewarn 'The tests themselves will only rarely die, but the test results'
@@ -83,7 +82,7 @@ src_install() {
 		dobin "${T}"/${bin}
 	done
 	dodoc README changes.txt
-	if use test ; then
+	if use test && has test ${FEATURES}; then
 		tb="${T}"/testresults.tar.bz2
 		export ASLTSDIR="$(<"${T}"/asltdir)"
 		ebegin "Creating Test Tarball"

@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.36 2011/12/11 19:05:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.37 2011/12/25 22:45:59 robbat2 Exp $
+
+  25 Dec 2011; Robin H. Johnson <robbat2@gentoo.org> iasl-20080514.ebuild,
+  iasl-20080701.ebuild, iasl-20090123.ebuild, iasl-20090521.ebuild,
+  iasl-20090903.ebuild, iasl-20091013.ebuild, iasl-20100428.ebuild,
+  iasl-20100528.ebuild, iasl-20110922.ebuild, iasl-20111123.ebuild:
+  Bug #288144: check both features and use for test, so we get the correct
+  result with FEATURES=-test USE=test.
 
 *iasl-20111123 (11 Dec 2011)
 
