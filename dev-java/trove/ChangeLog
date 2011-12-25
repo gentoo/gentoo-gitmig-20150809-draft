@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/trove
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.13 2010/01/15 20:40:39 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.14 2011/12/25 21:35:18 fordfrog Exp $
+
+*trove-3.0.2 (25 Dec 2011)
+
+  25 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org> +trove-3.0.2.ebuild:
+  Version bump in new slot (thanks to Günther Hutzl <ghutzl@web.de> for the
+  ebuild)
 
   15 Jan 2010; Jonathan Callen <abcd@gentoo.org> trove-1.0.2-r1.ebuild,
   trove-2.1.0.ebuild:
