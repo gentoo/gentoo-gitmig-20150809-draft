@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.7.2-r1.ebuild,v 1.1 2011/12/24 16:50:02 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.7.2-r1.ebuild,v 1.2 2011/12/25 09:03:50 maksbotan Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="2"
 
