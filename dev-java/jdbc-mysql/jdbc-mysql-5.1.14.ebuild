@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.1.14.ebuild,v 1.4 2011/03/24 19:25:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.1.14.ebuild,v 1.5 2011/12/25 20:27:28 fordfrog Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ COMMON_DEP="
 	dev-java/commons-logging"
 RDEPEND=">=virtual/jre-1.6
 	${COMMON_DEP}"
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	${COMMON_DEP}"
 
 S="${WORKDIR}/${MY_P}"
