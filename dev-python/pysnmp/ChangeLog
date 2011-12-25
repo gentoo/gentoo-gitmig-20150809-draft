@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.49 2011/08/20 21:16:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.50 2011/12/25 10:31:48 patrick Exp $
+
+*pysnmp-4.2.1 (25 Dec 2011)
+
+  25 Dec 2011; Patrick Lauer <patrick@gentoo.org> +pysnmp-4.2.1.ebuild:
+  Bump for #393615
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> pysnmp-4.1.16a.ebuild:
   Fix DEPEND in stable too.
