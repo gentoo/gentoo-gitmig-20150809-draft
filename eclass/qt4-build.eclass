@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.107 2011/12/21 23:38:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.108 2011/12/25 18:49:52 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -177,13 +177,6 @@ qt4-build_src_unpack() {
 qt4-build_src_prepare() {
 	setqtenv
 	cd "${S}"
-
-	# fix qt 4.7 regression that skips -fvisibility=hidden
-	if version_is_at_least "4.7.0_beta1"; then
-		sed -e "s/^gcc|g++)/*gcc|*g++)/" \
-			-i config.tests/unix/fvisibility.test ||
-				die "visibility fixing sed failed"
-	fi
 
 	if version_is_at_least "4.7"; then
 		# fix libX11 dependency on non X packages
