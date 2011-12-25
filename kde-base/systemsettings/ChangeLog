@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.127 2011/12/18 19:46:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.128 2011/12/25 13:44:59 dilfridge Exp $
+
+  25 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  systemsettings-4.7.3-r1.ebuild,
+  +files/systemsettings-4.7.3-enablefinal.patch, systemsettings-4.7.4.ebuild:
+  Fix kdeenablefinal build, bug 395979
 
   18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -systemsettings-4.6.5.ebuild:
