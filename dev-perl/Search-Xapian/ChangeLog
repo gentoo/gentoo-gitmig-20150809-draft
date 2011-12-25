@@ -1,0 +1,8 @@
+
+
+*Search-Xapian-1.2.8 (25 Dec 2011)
+
+  25 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  +Search-Xapian-1.2.8.ebuild, +metadata.xml:
+  Initial commit
+
