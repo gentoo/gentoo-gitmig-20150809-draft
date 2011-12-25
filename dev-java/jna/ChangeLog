@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jna
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.9 2011/12/13 17:05:49 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.10 2011/12/25 14:23:57 fordfrog Exp $
+
+*jna-3.4.0 (25 Dec 2011)
+
+  25 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/3.4.0-build.xml.patch, +jna-3.4.0.ebuild,
+  +files/3.4.0-makefile-flags.patch, metadata.xml:
+  Version bump. Added new USE flags, awt and nio-buffers. awt USE flag should
+  require X USE flag on used JDK/JRE but we do not have this flag on virtuals
+  yet.
 
 *jna-3.3.0 (13 Dec 2011)
 
