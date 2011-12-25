@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.42 2011/03/13 09:26:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.43 2011/12/25 10:55:10 patrick Exp $
+
+*kchmviewer-6.0 (25 Dec 2011)
+
+  25 Dec 2011; Patrick Lauer <patrick@gentoo.org> +kchmviewer-6.0.ebuild:
+  Bump for #395589
 
 *kchmviewer-5.3 (13 Mar 2011)
 
