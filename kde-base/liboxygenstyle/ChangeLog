@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/liboxygenstyle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.36 2011/12/18 19:46:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.37 2011/12/25 17:03:27 dilfridge Exp $
+
+  25 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  liboxygenstyle-4.7.4.ebuild, +files/liboxygenstyle-4.7.4-enablefinal.patch:
+  Fix kdeenablefinal build, bug 395993
 
   18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -liboxygenstyle-4.6.5.ebuild:
