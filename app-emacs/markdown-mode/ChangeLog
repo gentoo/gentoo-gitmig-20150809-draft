@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/markdown-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/markdown-mode/ChangeLog,v 1.4 2011/09/26 16:43:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/markdown-mode/ChangeLog,v 1.5 2011/12/26 14:17:33 ulm Exp $
+
+  26 Dec 2011; Ulrich Mueller <ulm@gentoo.org> markdown-mode-1.8.1.ebuild:
+  Add app-arch/xz-utils to DEPEND.
 
   26 Sep 2011; Ulrich Mueller <ulm@gentoo.org> markdown-mode-1.8.1.ebuild:
   Source snapshot is on Gentoo mirrors now, instead of live ebuild. Bug 383181.
