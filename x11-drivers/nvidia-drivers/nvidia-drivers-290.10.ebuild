@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-290.10.ebuild,v 1.2 2011/12/16 08:47:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-290.10.ebuild,v 1.3 2011/12/26 14:44:38 maekke Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${PV}/${X86_NV_P
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86 ~x86-fbsd"
+KEYWORDS="-* amd64 x86 ~x86-fbsd"
 IUSE="acpi custom-cflags gtk multilib kernel_linux"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
