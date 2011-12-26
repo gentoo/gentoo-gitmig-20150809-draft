@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.46 2011/05/12 06:29:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.47 2011/12/26 18:59:38 eras Exp $
+
+*pam_krb5-4.5 (26 Dec 2011)
+
+  26 Dec 2011; Eray Aslan <eras@gentoo.org> +pam_krb5-4.5.ebuild:
+  version bump
 
   12 May 2011; Eray Aslan <eras@gentoo.org> pam_krb5-4.3.ebuild:
   Fix SRC_URI
