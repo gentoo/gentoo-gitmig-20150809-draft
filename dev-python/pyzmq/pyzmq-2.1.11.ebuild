@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.1.11.ebuild,v 1.1 2011/12/19 10:25:25 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.1.11.ebuild,v 1.2 2011/12/26 10:34:58 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 *-jython"
+RESTRICT_PYTHON_ABIS="2.4 *-jython *pypy*"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils eutils
