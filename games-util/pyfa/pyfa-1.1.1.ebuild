@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.0.6.ebuild,v 1.1 2011/11/02 23:59:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.1.ebuild,v 1.1 2011/12/26 03:40:41 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
 PYTHON_USE_WITH="sqlite threads"
 
-inherit eutils python
+inherit eutils gnome2-utils python
 
 if [[ ${PV/_rc*/} == ${PV} ]] ; then
-	MY_PV=${PV}-incarna-src
+	MY_PV=${PV}-crucible-src
 	FOLDER=stable/${PV}
 else
 	MY_PV=${PV/_rc/-stable-RC}-src
@@ -39,7 +39,7 @@ pkg_setup() {
 
 src_prepare() {
 	# make staticPath settable from configforced again
-	epatch "${FILESDIR}/${PN}-1.0.3-staticPath.patch"
+	epatch "${FILESDIR}/${PN}-1.1-staticPath.patch"
 
 	python_convert_shebangs -r -x 2 .
 	sed -e "s:%%SITEDIR%%:$(python_get_sitedir):" \
@@ -57,14 +57,23 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins -r staticdata
 	dodoc readme.txt
-	doicon icons/${PN}.png
+	insinto /usr/share/icons/hicolor/32x32/apps
+	doins icons/pyfa.png
+	insinto /usr/share/icons/hicolor/64x64/apps
+	newins icons/pyfa64.png pyfa.png
 	domenu "${FILESDIR}/${PN}.desktop"
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
+	gnome2_icon_cache_update
 	python_mod_optimize ${PN}
 }
 
 pkg_postrm() {
+	gnome2_icon_cache_update
 	python_mod_cleanup ${PN}
 }
