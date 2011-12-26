@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hashie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.13 2011/10/16 07:31:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.14 2011/12/26 10:38:10 graaff Exp $
+
+  26 Dec 2011; Hans de Graaff <graaff@gentoo.org> -hashie-0.4.0.ebuild,
+  -hashie-1.0.0.ebuild:
+  Remove old versions.
 
 *hashie-1.2.0 (16 Oct 2011)
 
