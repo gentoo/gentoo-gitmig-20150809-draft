@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.109 2011/12/26 00:11:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.110 2011/12/26 11:59:19 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -150,13 +150,17 @@ qt4-build_src_unpack() {
 }
 
 # @ECLASS-VARIABLE: PATCHES
+# @DEFAULT_UNSET
 # @DESCRIPTION:
-# In case you have patches to apply, specify them in PATCHES variable. Make sure
-# to specify the full path. This variable is necessary for src_prepare phase.
-# Example:
-# PATCHES="${FILESDIR}"/mypatch.patch
-#   ${FILESDIR}"/mypatch2.patch"
+# PATCHES array variable containing all various patches to be applied.
+# This variable is expected to be defined in global scope of ebuild.
+# Make sure to specify the full path. This variable is utilised in
+# src_unpack/src_prepare phase, based on EAPI.
 #
+# @CODE
+#   PATCHES=( "${FILESDIR}/mypatch.patch"
+#             "${FILESDIR}/patches_folder/" )
+# @CODE
 
 # @FUNCTION: qt4-build_src_prepare
 # @DESCRIPTION:
@@ -417,6 +421,7 @@ qt4-build_src_install() {
 }
 
 # @FUNCTION: setqtenv
+# @INTERNAL
 setqtenv() {
 	# Set up installation directories
 	QTPREFIXDIR=${EPREFIX}/usr
@@ -441,6 +446,7 @@ setqtenv() {
 }
 
 # @FUNCTION: standard_configure_options
+# @INTERNAL
 # @DESCRIPTION:
 # Sets up some standard configure options, like libdir (if necessary), whether
 # debug info is wanted or not.
@@ -501,6 +507,7 @@ standard_configure_options() {
 
 # @FUNCTION: prepare_directories
 # @USAGE: < directories >
+# @INTERNAL
 # @DESCRIPTION:
 # Generates Makefiles for the given list of directories.
 prepare_directories() {
@@ -523,6 +530,7 @@ prepare_directories() {
 
 # @FUNCTION: build_directories
 # @USAGE: < directories >
+# @INTERNAL
 # @DESCRIPTION:
 # Compiles the code in the given list of directories.
 build_directories() {
@@ -537,6 +545,7 @@ build_directories() {
 
 # @FUNCTION: install_directories
 # @USAGE: < directories >
+# @INTERNAL
 # @DESCRIPTION:
 # Runs emake install in the given directories, which are separated by spaces.
 install_directories() {
@@ -563,6 +572,7 @@ install_directories() {
 : ${QCONFIG_DEFINE:=}
 
 # @FUNCTION: install_qconfigs
+# @INTERNAL
 # @DESCRIPTION:
 # Install gentoo-specific mkspecs configurations.
 install_qconfigs() {
@@ -585,6 +595,7 @@ install_qconfigs() {
 }
 
 # @FUNCTION: generate_qconfigs
+# @INTERNAL
 # @DESCRIPTION:
 # Generates gentoo-specific qconfig.{h,pri}.
 generate_qconfigs() {
@@ -659,6 +670,7 @@ qt4-build_pkg_postinst() {
 }
 
 # @FUNCTION: skip_qmake_build
+# @INTERNAL
 # @DESCRIPTION:
 # Patches configure to skip qmake compilation, as it's already installed by qt-core.
 skip_qmake_build() {
@@ -666,6 +678,7 @@ skip_qmake_build() {
 }
 
 # @FUNCTION: skip_project_generation
+# @INTERNAL
 # @DESCRIPTION:
 # Exit the script early by throwing in an exit before all of the .pro files are scanned.
 skip_project_generation() {
@@ -673,6 +686,7 @@ skip_project_generation() {
 }
 
 # @FUNCTION: symlink_binaries_to_buildtree
+# @INTERNAL
 # @DESCRIPTION:
 # Symlinks generated binaries to buildtree, so they can be used during compilation time.
 symlink_binaries_to_buildtree() {
@@ -682,6 +696,7 @@ symlink_binaries_to_buildtree() {
 }
 
 # @FUNCTION: fix_library_files
+# @INTERNAL
 # @DESCRIPTION:
 # Fixes the paths in *.la, *.prl, *.pc, as they are wrong due to sandbox and
 # moves the *.pc files into the pkgconfig directory.
@@ -786,6 +801,7 @@ qt_mkspecs_dir() {
 }
 
 # @FUNCTION: qt_assistant_cleanup
+# @INTERNAL
 # @DESCRIPTION:
 # Tries to clean up tools.pro for qt-assistant ebuilds.
 # Meant to be called in src_prepare().
@@ -815,6 +831,7 @@ qt_assistant_cleanup() {
 }
 
 # @FUNCTION: qt_nolibx11
+# @INTERNAL
 # @DESCRIPTION:
 # Ignore X11 tests for packages that don't need X libraries installed.
 qt_nolibx11() {
