@@ -1,6 +1,46 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.190 2011/12/18 18:07:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.191 2011/12/26 10:08:22 fauli Exp $
+
+*claws-mail-3.8.0 (26 Dec 2011)
+
+  26 Dec 2011; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-3.8.0.ebuild:
+  version bump for bug 395381 by Justin
+
+  GnuTLS 2.2 is now a minimum requirement if encrypted connections to
+
+  servers are required.
+
+  The list displays have been updated to use newer GTK+ functions,
+
+  this means that the expanders look different and the optional
+
+  dotted
+
+  lines have been dropped.
+
+  A hidden option, 'summary_from_show', which controls the display
+
+  in
+
+  the From column of the Message List: 0 (default): show name,
+
+  1: show address, 2: show name + address
+
+  The image viewer now uses the EXIF Orientation.
+
+  'Generate X-Mailer header' has been added as an Account option.
+
+  /View/Message scroll has been added, allowing keyboard shortcuts
+
+  to
+
+  be added and used for message scrolling.
+
+  Home and End keys now function in the Message View.
+
+  /Message/Print has been added to the Compose window.
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> claws-mail-3.7.10.ebuild:
   alpha/sparc stable wrt #387547
