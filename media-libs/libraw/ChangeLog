@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libraw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.17 2011/12/13 22:29:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.18 2011/12/26 22:09:30 radhermit Exp $
+
+*libraw-0.14.5 (26 Dec 2011)
+
+  26 Dec 2011; Tim Harder <radhermit@gentoo.org> +libraw-0.14.5.ebuild:
+  Version bump.
 
 *libraw-0.14.4 (13 Dec 2011)
 
