@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.4-r1.ebuild,v 1.3 2011/12/16 17:14:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.4-r1.ebuild,v 1.4 2011/12/26 12:34:27 maekke Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.swanson.ukfsn.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="session"
 
 RDEPEND="x11-libs/gtk+:2
