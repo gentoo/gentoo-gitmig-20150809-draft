@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/spectromatic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.9 2011/12/26 12:43:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.10 2011/12/26 13:22:38 jlec Exp $
+
+  26 Dec 2011; Justin Lecher <jlec@gentoo.org> -spectromatic-1.0.ebuild:
+  Cleaned old
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> spectromatic-1.0-r2.ebuild:
   x86 stable, bug #394065
