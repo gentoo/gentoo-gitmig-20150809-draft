@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubigen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/ChangeLog,v 1.10 2011/02/14 19:43:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/ChangeLog,v 1.11 2011/12/26 09:26:20 graaff Exp $
+
+  26 Dec 2011; Hans de Graaff <graaff@gentoo.org> -rubigen-1.5.5.ebuild:
+  Remove old version.
 
 *rubigen-1.5.6 (14 Feb 2011)
 
