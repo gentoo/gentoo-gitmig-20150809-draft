@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.65 2011/06/23 14:55:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.66 2011/12/26 05:51:16 weaver Exp $
+
+  26 Dec 2011; Andrey Kislyuk <weaver@gentoo.org> +biopython-1.58.ebuild:
+  Version bump
+
+*biopython-1.58 (26 Dec 2011)
+
+  26 Dec 2011; Andrey Kislyuk <weaver@gentoo.org> +biopython-1.58.ebuild:
+  Version bump
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -biopython-1.56.ebuild:
   Remove old ebuilds. Requested by Arfrever
