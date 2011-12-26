@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.166 2011/12/15 20:28:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.167 2011/12/26 21:59:45 radhermit Exp $
+
+*whois-5.0.14 (26 Dec 2011)
+
+  26 Dec 2011; Tim Harder <radhermit@gentoo.org> +whois-5.0.14.ebuild:
+  Version bump. Update to EAPI 4.
 
   15 Dec 2011; Fabian Groffen <grobian@gentoo.org> whois-5.0.8.ebuild:
   Fix compilation on platforms not needing -lcrypt, bug #330235.  Call emake
