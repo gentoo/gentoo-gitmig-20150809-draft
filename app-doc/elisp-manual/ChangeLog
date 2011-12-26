@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/elisp-manual
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.38 2011/12/14 17:41:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.39 2011/12/26 14:22:35 ulm Exp $
+
+  26 Dec 2011; Ulrich Mueller <ulm@gentoo.org> elisp-manual-23.3.ebuild:
+  Add app-arch/xz-utils to DEPEND.
 
   14 Dec 2011; Ulrich Mueller <ulm@gentoo.org> elisp-manual-18.1.03.ebuild,
   elisp-manual-19.2.4.2.ebuild, elisp-manual-20.2.5.ebuild:
