@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.19 2011/12/11 12:01:30 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.20 2011/12/26 13:08:31 swift Exp $
 
 # Zac Medico <zmedico@gentoo.org> (09 Aug 2011)
 # Bug #377907 - Use package.mask for compatibility with PMS section 5.2.7, and
@@ -258,7 +258,6 @@
 -sec-policy/selinux-wireshark
 -sec-policy/selinux-wm
 -sec-policy/selinux-xen
--sec-policy/selinux-xfce4
 -sec-policy/selinux-xfs
 -sec-policy/selinux-xprint
 -sec-policy/selinux-xscreensaver
