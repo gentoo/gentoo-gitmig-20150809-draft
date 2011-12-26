@@ -7,8 +7,6 @@ using the DKIM standard. This is a fork of Sendmail's DKIM-milter</longdescripti
 <use>
 	<flag name='asyncdns'>Use inbuilt asynchronous DNS library for
 	queries</flag>
-	<flag name='db'>Include features like stats, querycache, popauth, report
-	intervals and bodylengthdb that include berkdb</flag>
 	<!--flag name='diffheaders'>On verification failure, compare the
 	original and the received headers to look for possible munging</flag-->
 	<flag name='unbound'>Use the unbound dnssec library to perform DKIM DNS
