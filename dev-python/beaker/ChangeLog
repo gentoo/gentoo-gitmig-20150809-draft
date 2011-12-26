@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/beaker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.33 2011/08/06 16:20:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.34 2011/12/26 08:59:47 patrick Exp $
+
+*beaker-1.6.2 (26 Dec 2011)
+
+  26 Dec 2011; Patrick Lauer <patrick@gentoo.org> +beaker-1.6.2.ebuild:
+  Bump for #388315
 
   06 Aug 2011; Markos Chandras <hwoarang@gentoo.org> beaker-1.5.4-r1.ebuild:
   Ignore test failures with Jython. Simplify src_test(). Fix license. Patch by
