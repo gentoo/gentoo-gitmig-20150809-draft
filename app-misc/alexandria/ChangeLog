@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.46 2011/12/13 19:26:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.47 2011/12/26 10:56:58 fauli Exp $
+
+*alexandria-0.6.8 (26 Dec 2011)
+
+  26 Dec 2011; Christian Faulhammer <fauli@gentoo.org>
+  +alexandria-0.6.8.ebuild, +files/alexandria-0.6.8-set_status_label.patch:
+  version bump for newer Ruby GTK versions, patch and information provided
+  by Tomoh K. in bug 395117.
 
 *alexandria-0.6.7 (13 Dec 2011)
 
