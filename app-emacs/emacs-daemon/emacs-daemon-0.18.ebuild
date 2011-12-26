@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.18.ebuild,v 1.8 2011/08/24 20:39:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.18.ebuild,v 1.9 2011/12/26 00:49:55 ulm Exp $
 
 inherit elisp
 
@@ -30,7 +30,6 @@ pkg_setup() {
 		Use "eselect emacs" to select an Emacs version >= 23.
 		EOF
 	elif [[ ${has_gtk} == t ]]; then
-		echo
 		while read line; do ewarn "${line}"; done <<-EOF
 		Your current Emacs is compiled with GTK+. There is a long-standing
 		bug in GTK+ that prevents Emacs from recovering from X disconnects:
@@ -38,7 +37,6 @@ pkg_setup() {
 		If you run Emacs as a daemon, then it is strongly recommended that
 		you compile it with the Lucid toolkit, i.e. with USE="Xaw3d -gtk".
 		EOF
-		echo
 	fi
 }
 
