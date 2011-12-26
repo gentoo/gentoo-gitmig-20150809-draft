@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/rdiscount-1.6.8.ebuild,v 1.5 2011/12/04 23:28:34 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/rdiscount-1.6.8.ebuild,v 1.6 2011/12/26 15:09:05 graaff Exp $
 
 EAPI=2
 
 # Has a native extension without jruby support.
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_TEST="test:unit"
 
@@ -30,6 +30,9 @@ all_ruby_prepare() {
 
 	# Remove rule that will force a rebuild when running tests.
 	sed -i -e "/task 'test:unit' => \[:build\]/d" Rakefile || die
+
+	# Provide RUBY variable no longer provided by rake.
+	sed -i -e "1 iRUBY=${RUBY}" Rakefile || die
 }
 
 each_ruby_configure() {

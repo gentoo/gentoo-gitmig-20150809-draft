@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdiscount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.7 2011/12/26 15:00:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.8 2011/12/26 15:09:05 graaff Exp $
+
+  26 Dec 2011; Hans de Graaff <graaff@gentoo.org> rdiscount-1.6.8.ebuild:
+  Fix compilation with rake 0.9. Add ruby19.
 
   26 Dec 2011; Hans de Graaff <graaff@gentoo.org> -rdiscount-1.6.5.ebuild:
   Remove old version.
