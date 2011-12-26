@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.811 2011/12/18 19:46:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.812 2011/12/26 16:12:48 dilfridge Exp $
+
+  26 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdelibs-4.6.3-r3.ebuild:
+  Revert my own stupidity and re-add ~ppc64
 
   18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdelibs-4.6.5-r2.ebuild:

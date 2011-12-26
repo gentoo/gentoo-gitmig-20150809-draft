@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r3.ebuild,v 1.7 2011/10/14 21:53:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r3.ebuild,v 1.8 2011/12/26 16:12:48 dilfridge Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ inherit kde4-base fdo-mime toolchain-funcs
 DESCRIPTION="KDE libraries needed by all KDE programs."
 HOMEPAGE="http://www.kde.org/"
 
-KEYWORDS="ppc"
+KEYWORDS="ppc ~ppc64"
 LICENSE="LGPL-2.1"
 IUSE="3dnow acl alsa altivec bindist +bzip2 debug doc fam +handbook jpeg2k kerberos
 lzma mmx nls openexr +policykit semantic-desktop spell sse sse2 ssl +udev zeroconf"
