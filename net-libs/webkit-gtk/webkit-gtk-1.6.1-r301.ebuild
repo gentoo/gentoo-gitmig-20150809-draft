@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.1-r301.ebuild,v 1.2 2011/11/29 19:01:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.1-r301.ebuild,v 1.3 2011/12/26 16:39:39 jlec Exp $
 
 EAPI="4"
 
@@ -96,6 +96,9 @@ src_prepare() {
 	# We need to reset some variables to prevent permissions problems and failures
 	# like https://bugs.webkit.org/show_bug.cgi?id=35471 and bug #323669
 	gnome2_environment_reset
+
+	# Respect CC, otherwise fails on prefix #395875
+	tc-export CC
 
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf
