@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.49 2011/12/25 23:50:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.50 2011/12/26 12:37:18 ago Exp $
+
+  26 Dec 2011; Agostino Sarubbo <ago@gentoo.org> ocaml-mode-3.12.1.ebuild:
+  Stable for AMD64, wrt bug #396019
 
   25 Dec 2011; Ulrich Mueller <ulm@gentoo.org> -ocaml-mode-3.12.0.ebuild:
   Remove intermediate version.
