@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.72 2011/12/17 22:04:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.73 2011/12/26 12:01:39 patrick Exp $
+
+  26 Dec 2011; Patrick Lauer <patrick@gentoo.org> cython-0.15.1.ebuild:
+  Fixing deps for #388411
 
   17 Dec 2011; Mike Gilbert <floppym@gentoo.org> cython-0.15.1.ebuild:
   Add missing eutils.
