@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.2.ebuild,v 1.1 2011/12/26 12:04:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.2.ebuild,v 1.2 2011/12/26 22:39:11 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -103,12 +103,11 @@ src_install() {
 		touch "${ED}${SITELISP}/${PN}/.nosearch"
 	fi
 
-	dobashcompletion contrib/bash/bzr
+	dobashcomp contrib/bash/bzr
 }
 
 pkg_postinst() {
 	distutils_pkg_postinst
-	bash-completion_pkg_postinst
 
 	if use emacs; then
 		elisp-site-regen

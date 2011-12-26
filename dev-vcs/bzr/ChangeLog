@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.42 2011/12/26 12:04:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.43 2011/12/26 22:39:11 floppym Exp $
+
+  26 Dec 2011; Mike Gilbert <floppym@gentoo.org> bzr-2.4.2.ebuild:
+  Fix usage of bash-completion-r1 eclass.
 
 *bzr-2.4.2 (26 Dec 2011)
 
