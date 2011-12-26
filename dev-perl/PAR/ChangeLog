@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.20 2011/12/17 17:30:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.21 2011/12/26 12:49:53 maekke Exp $
+
+  26 Dec 2011; Markus Meier <maekke@gentoo.org> PAR-1.5.0.ebuild:
+  x86 stable, bug #394203
 
   17 Dec 2011; Agostino Sarubbo <ago@gentoo.org> PAR-1.5.0.ebuild:
   Stable for AMD64, wrt security bug #394203
