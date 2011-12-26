@@ -21,5 +21,8 @@ if [ -d ${HOME}/.jxplorer ]; then
 		[[ ! -e "${home}/${subdir}" ]] && \
 			ln -vs "${jxplorer_home}/${subdir}" "${home}/${subdir}"
 	done
+	if [ ! -e "${home}/security" ] ; then
+		cp -Rv "${jxplorer_home}/security" "${home}"
+	fi
 fi
 
