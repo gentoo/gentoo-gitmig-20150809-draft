@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/virtuoso-odbc-6.1.4.ebuild,v 1.1 2011/11/24 00:47:19 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/virtuoso-odbc-6.1.4.ebuild,v 1.2 2011/12/26 14:36:07 maekke Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit virtuoso
 
 DESCRIPTION="ODBC driver for OpenLink Virtuoso Open-Source Edition"
 
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
