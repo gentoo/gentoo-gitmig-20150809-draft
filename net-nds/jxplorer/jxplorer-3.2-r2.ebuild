@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.2-r1.ebuild,v 1.2 2011/11/23 11:29:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.2-r2.ebuild,v 1.1 2011/12/26 15:59:47 fordfrog Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source"
