@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.14 2011/11/12 20:46:39 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.15 2011/12/26 11:47:47 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -11,8 +11,8 @@
 # dealing with packages using Qt4 libraries. Requires EAPI=2 or later.
 
 case ${EAPI} in
-	2|3|4) : ;;
-	*) die "EAPI=${EAPI} is not supported by ${ECLASS} eclass." ;;
+	2|3|4)	: ;;
+	*)	die "EAPI=${EAPI} is not supported by ${ECLASS} eclass." ;;
 esac
 
 inherit base eutils multilib toolchain-funcs
@@ -20,19 +20,24 @@ inherit base eutils multilib toolchain-funcs
 export XDG_CONFIG_HOME="${T}"
 
 # @ECLASS-VARIABLE: LANGS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # In case your Qt4 application provides various translations, use this variable
 # to specify them in order to populate "linguas_*" IUSE automatically. Make sure
-# that you set this variable BEFORE inheriting qt4-r2 eclass.
-# example: LANGS="en el de"
+# that you set this variable before inheriting qt4-r2 eclass.
+# Example:
+# @CODE
+#   LANGS="en el de"
+# @CODE
 for x in ${LANGS}; do
 	IUSE="${IUSE} linguas_${x}"
 done
 
 # @ECLASS-VARIABLE: LANGSLONG
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Same as above, but this variable is for LINGUAS that must be in long format.
-# Remember to set this variable BEFORE inheriting qt4-r2 eclass.
+# Remember to set this variable before inheriting qt4-r2 eclass.
 # Look at ${PORTDIR}/profiles/desc/linguas.desc for details.
 for x in ${LANGSLONG}; do
 	IUSE="${IUSE} linguas_${x%_*}"
@@ -63,12 +68,15 @@ qt4-r2_src_unpack() {
 }
 
 # @ECLASS-VARIABLE: PATCHES
+# @DEFAULT_UNSET
 # @DESCRIPTION:
-# In case you have patches to apply, specify them in PATCHES variable. Make sure
-# to specify the full path. This variable is used in src_prepare phase.
-# example:
-# PATCHES=( "${FILESDIR}"/mypatch.patch
-# 	"${FILESDIR}"/mypatch2.patch )
+# In case you have patches to apply, specify them here. Make sure to
+# specify the full path. This variable is used in src_prepare phase.
+# Example:
+# @CODE
+#   PATCHES=( "${FILESDIR}"/mypatch.patch
+#             "${FILESDIR}"/mypatch2.patch )
+# @CODE
 
 # @FUNCTION: qt4-r2_src_prepare
 # @DESCRIPTION:
@@ -109,32 +117,33 @@ qt4-r2_src_compile() {
 }
 
 # @ECLASS-VARIABLE: DOCS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Use this variable if you want to install any documentation.
-# example: DOCS="README AUTHORS"
+# Example:
+# @CODE
+#   DOCS="README AUTHORS"
+# @CODE
 
 # @ECLASS-VARIABLE: DOCSDIR
 # @DESCRIPTION:
-# Directory containing documentation. If not specified, ${S} will be used
-# instead.
+# Directory containing documentation, defaults to ${S}.
+DOCSDIR="${DOCSDIR:-${S}}"
 
 # @FUNCTION: qt4-r2_src_install
 # @DESCRIPTION:
-# Default src_install function for qt4-based packages. Installs compiled code,
-# documentation (via DOCS variable) and translations (via LANGS and
-# LANGSLONG variables).
+# Default src_install function for qt4-based packages. Installs compiled code
+# and misc documentation (via DOCS variable).
 qt4-r2_src_install() {
 	debug-print-function $FUNCNAME "$@"
 
 	emake INSTALL_ROOT="${D}" DESTDIR="${D}" install || die "emake install failed"
 
 	# install documentation
-	if [[ -n ${DOCS} ]]; then
-		local dir=${DOCSDIR:-${S}}
-		for doc in ${DOCS}; do
-			dodoc "${dir}/${doc}" || die "dodoc failed"
-		done
-	fi
+	local doc
+	for doc in ${DOCS}; do
+		dodoc "${DOCSDIR}/${doc}" || die "dodoc failed"
+	done
 }
 
 # Internal function, used by eqmake4 and qt4-r2_src_configure
@@ -167,19 +176,19 @@ _find_project_file() {
 }
 
 # @FUNCTION: eqmake4
-# @USAGE: [project file] [parameters to qmake]
+# @USAGE: [project_file] [parameters to qmake]
 # @DESCRIPTION:
-# Wrapper for Qt4's qmake. If project file isn't specified eqmake4 will
-# look for it in current directory (${S}, non-recursively). If more than
-# one project file is found, the ${PN}.pro is processed, provided that it
-# exists. Otherwise eqmake4 fails.
-# All the arguments are appended unmodified to qmake command line. For
+# Wrapper for Qt4's qmake. If project_file isn't specified, eqmake4 will
+# look for it in the current directory (${S}, non-recursively). If more
+# than one project file are found, then ${PN}.pro is processed, provided
+# that it exists. Otherwise eqmake4 fails.
+#
+# All other arguments are appended unmodified to qmake command line. For
 # recursive build systems, i.e. those based on the subdirs template, you
 # should run eqmake4 on the top-level project file only, unless you have
 # strong reasons to do things differently. During the building, qmake
 # will be automatically re-invoked with the right arguments on every
-# directory specified inside the top-level project file by the SUBDIRS
-# variable.
+# directory specified inside the top-level project file.
 eqmake4() {
 	ebegin "Running qmake"
 
