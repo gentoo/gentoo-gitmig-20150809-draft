@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.62 2011/12/17 21:59:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.63 2011/12/26 11:00:16 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (26 Dec 2011)
+# Fails to build
+www-client/firefox crashreporter
 
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # Mask use numa for openmpi
