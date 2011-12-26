@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/net-ssh-gateway-1.0.1-r1.ebuild,v 1.10 2011/07/22 20:55:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/net-ssh-gateway-1.0.1-r1.ebuild,v 1.11 2011/12/26 10:42:44 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18"
@@ -26,5 +26,5 @@ ruby_add_bdepend "
 	test? (
 		dev-ruby/echoe
 		virtual/ruby-test-unit
-		!dev-ruby/test-unit:2
+		!!dev-ruby/test-unit:2
 	)"
