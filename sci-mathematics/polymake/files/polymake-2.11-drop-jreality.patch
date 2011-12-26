@@ -6,12 +6,12 @@ diff -U 3 -dHrN polymake-2.11.orig/Makefile polymake-2.11/Makefile
  	 *linux*|*Linux*) \
  	   for d in linux32 linux64; do \
 -	     ${PERL} ${INSTALL_PL} -m ${DirMask} -U external/jreality/jni/$$d ${InstallArch}/lib/jreality/jni/$$d; \
-+		;; \
++		true; \
  	   done; \
  	   ;; \
           Darwin*|darwin*) \
 -	   ${PERL} ${INSTALL_PL} -m ${DirMask} -U external/jreality/jni/macosx ${InstallArch}/lib/jreality/jni/macosx; \
-+		;; \
++		true; \
  	   ;; \
  	 esac
  	[ -d ${InstallBin} ] || $(call _CreateDir,${InstallBin})

@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/polymake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.7 2011/12/25 15:21:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.8 2011/12/26 08:32:49 tomka Exp $
+
+  26 Dec 2011; Thomas Kahle <tomka@gentoo.org> polymake-2.11.ebuild,
+  files/polymake-2.11-drop-jreality.patch:
+  Fix drop-jreality-patch and libexecdir, thanks Benjamin Lorenz
 
 *polymake-2.11 (25 Dec 2011)
 

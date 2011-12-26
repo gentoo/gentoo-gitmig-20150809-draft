@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.11.ebuild,v 1.1 2011/12/25 15:21:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.11.ebuild,v 1.2 2011/12/26 08:32:49 tomka Exp $
 
 EAPI=2
 
@@ -31,7 +31,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# embedded jreality is a precompiled desaster (bug #346073)
 	epatch "${FILESDIR}/${P}"-drop-jreality.patch
-	# Assign a soname (reported upstream, no answer)
+	# Assign a soname
 	epatch "${FILESDIR}/2.10"-soname.patch
 	rm -rf java_build/jreality
 
@@ -60,7 +60,7 @@ src_configure () {
 		--without-java \
 		--without-prereq \
 		--libdir=/usr/$(get_libdir) \
-		--libexecdir=/usr/$(get_libdir) \
+		--libexecdir=/usr/$(get_libdir)/polymake \
 		"${myconf}" || die
 }
 
