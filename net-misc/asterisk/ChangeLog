@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.364 2011/12/17 20:19:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.365 2011/12/26 14:31:15 maekke Exp $
+
+  26 Dec 2011; Markus Meier <maekke@gentoo.org> asterisk-1.8.7.2.ebuild:
+  x86 stable, bug #394095
 
 *asterisk-10.0.0 (17 Dec 2011)
 
