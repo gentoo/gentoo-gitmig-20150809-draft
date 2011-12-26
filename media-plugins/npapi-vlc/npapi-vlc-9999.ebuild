@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/npapi-vlc-9999.ebuild,v 1.2 2011/09/21 08:43:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/npapi-vlc-9999.ebuild,v 1.3 2011/12/26 10:28:05 aballier Exp $
 
 EAPI=3
 
@@ -28,7 +28,7 @@ fi
 IUSE=""
 
 RDEPEND=">=media-video/vlc-1.1
-	>=net-libs/xulrunner-1.9.2
+	>=net-misc/npapi-sdk-0.27
 	x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXt

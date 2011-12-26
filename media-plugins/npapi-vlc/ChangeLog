@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/npapi-vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.2 2011/09/21 08:43:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.3 2011/12/26 10:28:05 aballier Exp $
+
+  26 Dec 2011; Alexis Ballier <aballier@gentoo.org> npapi-vlc-9999.ebuild:
+  depend on npapi-sdk, by Guillaume Castagnino, bug #395841
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> npapi-vlc-9999.ebuild:
   Migrate to git-2.
