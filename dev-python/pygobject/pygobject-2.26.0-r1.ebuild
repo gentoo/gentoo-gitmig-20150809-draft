@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.14 2011/11/15 05:40:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.15 2011/12/26 06:29:55 tetromino Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.5"
-RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython *-pypy-*"
 PYTHON_USE_WITH="threads="
 
 inherit alternatives autotools gnome2 python virtualx

@@ -1,6 +1,20 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.131 2011/12/24 11:35:43 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.132 2011/12/26 06:29:55 tetromino Exp $
+
+*pygobject-3.0.3 (26 Dec 2011)
+
+  26 Dec 2011; Alexandre Rostovtsev (tetromino) <tetromino@gmail.com>
+  pygobject-2.26.0-r1.ebuild, pygobject-2.28.6.ebuild,
+  pygobject-2.28.6-r50.ebuild, pygobject-2.28.6-r51.ebuild,
+  pygobject-3.0.1.ebuild, pygobject-3.0.2.ebuild, +pygobject-3.0.3.ebuild,
+  +files/pygobject-3.0.3-disable-new-gi-tests.patch,
+  +files/pygobject-3.0.3-gobject-property-min-max.patch,
+  +files/pygobject-3.0.3-tests-python3.patch:
+  Version bump with assorted bugfixes. Fix example installation directory (bug
+  #392449 comment 3, thanks to Arfrever). Also, restrict pypy for all versions
+  of pygobject and improve use of python eclass in 3.0.3 (bug #321879 comment
+  8, thanks to Arfrever).
 
 *pygobject-2.28.6-r51 (24 Dec 2011)
 

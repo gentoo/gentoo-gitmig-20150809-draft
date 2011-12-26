@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.1.ebuild,v 1.3 2011/12/26 06:29:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.3.ebuild,v 1.1 2011/12/26 06:29:55 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
-GNOME_TARBALL_SUFFIX="xz"
 GNOME2_LA_PUNT="yes"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.6 3:3.1"
@@ -54,6 +53,8 @@ pkg_setup() {
 		--with-ffi
 		$(use_enable cairo)
 		$(use_enable threads thread)"
+
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -65,6 +66,15 @@ src_prepare() {
 
 	# Disable tests that fail
 	#epatch "${FILESDIR}/${PN}-2.28.3-disable-failing-tests.patch"
+
+	# FIXME: disable tests that require >=gobject-introspection-1.31
+	epatch "${FILESDIR}/${P}-disable-new-gi-tests.patch"
+
+	# Upstream patch to fix GObject.property min/max values; in next release
+	epatch "${FILESDIR}/${P}-gobject-property-min-max.patch"
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=666852 
+	epatch "${FILESDIR}/${PN}-3.0.3-tests-python3.patch"
 
 	# disable pyc compiling
 	ln -sfn $(type -P true) py-compile
@@ -80,18 +90,21 @@ src_configure() {
 }
 
 src_compile() {
-	python_execute_function -d -s
+	python_src_compile
 }
 
 # FIXME: With python multiple ABI support, tests return 1 even when they pass
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
+	export GIO_USE_VFS="local" # prevents odd issues with deleting ${T}/.gvfs
 
 	testing() {
-		XDG_CACHE_HOME="${T}/$(PYTHON --ABI)"
+		export XDG_CACHE_HOME="${T}/$(PYTHON --ABI)"
 		Xemake check PYTHON=$(PYTHON -a)
+		unset XDG_CACHE_HOME
 	}
 	python_execute_function -s testing
+	unset GIO_USE_VFS
 }
 
 src_install() {
@@ -99,8 +112,8 @@ src_install() {
 	python_clean_installation_image
 
 	if use examples; then
-		insinto /usr/share/doc/${P}
-		doins -r examples || die "doins failed"
+		insinto /usr/share/doc/${PF}
+		doins -r examples
 	fi
 }
 
