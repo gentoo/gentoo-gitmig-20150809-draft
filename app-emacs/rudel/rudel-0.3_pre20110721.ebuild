@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rudel/rudel-0.3_pre20110721.ebuild,v 1.2 2011/08/23 17:14:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rudel/rudel-0.3_pre20110721.ebuild,v 1.3 2011/12/26 14:09:04 ulm Exp $
 
 EAPI=4
 NEED_EMACS=23
@@ -18,8 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="virtual/emacs-cedet"
-RDEPEND="${DEPEND}"
+RDEPEND="virtual/emacs-cedet"
+DEPEND="${RDEPEND}
+	app-arch/xz-utils"
 
 S="${WORKDIR}/${PN}"
 SITEFILE="60${PN}-gentoo.el"
