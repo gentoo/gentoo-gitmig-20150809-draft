@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64plus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.16 2011/12/13 01:40:02 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.17 2011/12/26 01:53:10 joker Exp $
+
+  26 Dec 2011; Christian Birchinger <joker@gentoo.org>
+  mupen64plus-1.5-r2.ebuild:
+  Added a check for CC=gcc. Other compilers are not supported at this point
 
   13 Dec 2011; Christian Birchinger <joker@gentoo.org>
   mupen64plus-1.5-r2.ebuild:
