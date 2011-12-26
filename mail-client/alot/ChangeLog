@@ -1,0 +1,10 @@
+# ChangeLog for mail-client/alot
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.1 2011/12/26 17:01:42 aidecoe Exp $
+
+*alot-0.21 (26 Dec 2011)
+
+  26 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +alot-0.21.ebuild,
+  +metadata.xml:
+  Initial ebuild.
+
