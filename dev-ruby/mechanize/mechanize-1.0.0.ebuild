@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/mechanize-1.0.0.ebuild,v 1.4 2011/08/02 16:32:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/mechanize-1.0.0.ebuild,v 1.5 2011/12/26 14:32:09 graaff Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86
 IUSE=""
 
 ruby_add_bdepend ">=dev-ruby/hoe-2.3.3"
-ruby_add_rdepend ">=dev-ruby/nokogiri-1.2.1"
+ruby_add_rdepend ">=dev-ruby/nokogiri-1.4.4-r1"
 
 all_ruby_install() {
 	all_fakegem_install
