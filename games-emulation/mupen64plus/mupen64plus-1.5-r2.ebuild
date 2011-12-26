@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.5 2011/12/26 01:53:10 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.6 2011/12/26 02:28:24 joker Exp $
 
 EAPI="2"
 
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if [[ ! $(tc-getCC) =~ icc ]]; then
+	if [[ ! $(tc-getCC) =~ gcc ]]; then
 		eerror
 		eerror "Compilers like clang and icc are not supported at this point"
 		eerror
