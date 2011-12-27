@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.55 2011/07/17 11:01:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.56 2011/12/27 07:06:25 floppym Exp $
+
+*twisted-lore-11.1.0 (27 Dec 2011)
+
+  27 Dec 2011; Mike Gilbert <floppym@gentoo.org> +twisted-lore-11.1.0.ebuild:
+  Version bump.
 
   17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   twisted-lore-11.0.0.ebuild:
