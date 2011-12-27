@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.310 2011/12/22 22:04:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.311 2011/12/27 00:31:12 halcy0n Exp $
+
+  27 Dec 2011; Mark Loeser <halcy0n@gentoo.org> tor-0.2.2.35.ebuild:
+  Stable for ppc/ppc64; bug #394969
 
   22 Dec 2011; Markus Meier <maekke@gentoo.org> tor-0.2.2.35.ebuild:
   arm stable, bug #394969
