@@ -1,0 +1,21 @@
+From 3130c3c5f96e3ddcff1a6e25598d0d2afe823090 Mon Sep 17 00:00:00 2001
+From: Nick Schermer <nick@xfce.org>
+Date: Mon, 12 Dec 2011 19:52:10 +0000
+Subject: Add shortcuts for XF86WWW and XF86Mail.
+
+---
+diff --git a/libxfce4kbd-private/xfce4-keyboard-shortcuts.xml b/libxfce4kbd-private/xfce4-keyboard-shortcuts.xml
+index 2ea386e..60b3b3c 100644
+--- a/libxfce4kbd-private/xfce4-keyboard-shortcuts.xml
++++ b/libxfce4kbd-private/xfce4-keyboard-shortcuts.xml
+@@ -10,6 +10,8 @@
+       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
+       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
+       <property name="&lt;Control&gt;Escape" type="string" value="xfdesktop --menu"/>
++      <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
++      <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
+     </property>
+   </property>
+   <property name="xfwm4" type="empty">
+--
+cgit v0.9.0.2
