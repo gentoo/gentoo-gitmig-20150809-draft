@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-DB
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.65 2010/04/27 16:17:56 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.66 2011/12/27 19:45:00 olemarkus Exp $
+
+*PEAR-DB-1.7.14 (27 Dec 2011)
+
+  27 Dec 2011; Ole Markus With <olemarkus@gentoo.org> +PEAR-DB-1.7.14.ebuild:
+  Version bump (bug 396229)
 
   27 Apr 2010; Steve Dibb <beandog@gentoo.org> PEAR-DB-1.7.12.ebuild,
   PEAR-DB-1.7.14_rc1.ebuild:
