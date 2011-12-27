@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/faenza-icon-theme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/ChangeLog,v 1.14 2011/12/24 09:54:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/ChangeLog,v 1.15 2011/12/27 07:58:10 hwoarang Exp $
+
+*faenza-icon-theme-1.2-r1 (27 Dec 2011)
+
+  27 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
+  +faenza-icon-theme-1.2-r1.ebuild, -faenza-icon-theme-1.2.ebuild:
+  Install missing Faenza folder. Bug #396035. Thanks to Nikolay S. Rybaloff
+  <dairinin@gmail.com>
 
 *faenza-icon-theme-1.2 (24 Dec 2011)
 

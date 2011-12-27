@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/faenza-icon-theme-1.2.ebuild,v 1.1 2011/12/24 09:54:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/faenza-icon-theme-1.2-r1.ebuild,v 1.1 2011/12/27 07:58:10 hwoarang Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -39,7 +39,7 @@ src_prepare() {
 
 src_install() {
 	insinto /usr/share/icons
-	doins -r Faenza{-Ambiance,-Dark,-Darker,-Darkest,-dockmanager,-emesene,-Radiance,-rhythmbox}
+	doins -r Faenza{,-Ambiance,-Dark,-Darker,-Darkest,-dockmanager,-emesene,-Radiance,-rhythmbox}
 }
 
 pkg_preinst() { gnome2_icon_savelist; }
