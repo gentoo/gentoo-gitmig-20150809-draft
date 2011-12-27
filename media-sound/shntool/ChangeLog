@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/shntool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shntool/ChangeLog,v 1.25 2011/12/26 14:39:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shntool/ChangeLog,v 1.26 2011/12/27 21:28:04 radhermit Exp $
+
+  27 Dec 2011; Tim Harder <radhermit@gentoo.org> -shntool-3.0.8.ebuild,
+  -shntool-3.0.10.ebuild:
+  Remove old.
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> shntool-3.0.10-r1.ebuild:
   x86 stable, bug #394359
