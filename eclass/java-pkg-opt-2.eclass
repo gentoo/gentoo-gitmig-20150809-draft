@@ -1,7 +1,7 @@
 # Eclass for optional Java packages
 #
 # Copyright (c) 2004-2005, Thomas Matthijs <axxo@gentoo.org>
-# Copyright (c) 2004-2005, Gentoo Foundation
+# Copyright (c) 2004-2011, Gentoo Foundation
 #
 # Licensed under the GNU General Public License, v2
 #
@@ -10,7 +10,7 @@
 #       Removed phase hooks because Portage does proper env saving now.
 #       <betelgeuse@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-opt-2.eclass,v 1.14 2010/02/01 09:38:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-opt-2.eclass,v 1.15 2011/12/27 17:55:12 fauli Exp $
 
 inherit java-utils-2
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.10 2007/04/23 19:35:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.11 2011/12/27 17:55:12 fauli Exp $
 #
 # Original Author:    Jeffrey Yasskin <jyasskin@mail.utexas.edu>
 #

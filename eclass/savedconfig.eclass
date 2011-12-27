@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.15 2011/07/26 17:35:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.16 2011/12/27 17:55:12 fauli Exp $
 
 # @ECLASS: savedconfig.eclass
 # @MAINTAINER:
@@ -32,7 +32,7 @@ save_config() {
 	[[ -z "${ED}" ]] && ED=${D}
 	case $# in
 		0) die "Tell me what to save"
-		    ;;
+			;;
 		1) if [[ -f "$1" ]]; then
 				dodir /etc/portage/savedconfig/${CATEGORY}
 				cp "$1" "${ED}"/etc/portage/savedconfig/${CATEGORY}/${PF} \

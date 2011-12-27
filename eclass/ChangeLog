@@ -1,6 +1,29 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.58 2011/12/27 07:37:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.59 2011/12/27 17:55:12 fauli Exp $
+
+  27 Dec 2011; Christian Faulhammer <fauli@gentoo.org> rox-0install.eclass,
+  apache-2.eclass, common-lisp-common-2.eclass, gnustep-2.eclass,
+  java-ant-2.eclass, java-pkg-2.eclass, java-pkg-opt-2.eclass,
+  java-utils-2.eclass, java-virtuals-2.eclass, common-lisp-common-3.eclass,
+  tetex-3.eclass, ant-tasks.eclass, apache-module.eclass, bsdmk.eclass,
+  common-lisp.eclass, common-lisp-common.eclass, darcs.eclass, db.eclass,
+  db-use.eclass, embassy.eclass, emul-linux-x86.eclass, enlightenment.eclass,
+  font-ebdftopcf.eclass, fox.eclass, freebsd.eclass, games.eclass,
+  games-mods.eclass, gnat.eclass, gnatbuild.eclass, gnome-python-common.eclass,
+  gst-plugins-bad.eclass, gst-plugins-base.eclass, gst-plugins-good.eclass,
+  gst-plugins10.eclass, horde.eclass, java-mvn-src.eclass, java-osgi.eclass,
+  java-pkg-simple.eclass, mercurial.eclass, mozextension.eclass,
+  myspell.eclass, mysql_fx.eclass, nsplugins.eclass, pam.eclass,
+  perl-app.eclass, php-common-r1.eclass, php-ezc.eclass, portability.eclass,
+  rox.eclass, rpm.eclass, savedconfig.eclass, scsh.eclass, sgml-catalog.eclass,
+  stardict.eclass, sword-module.eclass, tetex.eclass, tla.eclass,
+  vdr-plugin.eclass, versionator.eclass, vim-doc.eclass, vim-plugin.eclass,
+  vim-spell.eclass, vmware.eclass, vmware-mod.eclass, webapp.eclass,
+  wxwidgets.eclass, x-modular.eclass, xemacs-elisp.eclass,
+  xemacs-elisp-common.eclass, xemacs-packages.eclass, xfconf.eclass,
+  zproduct.eclass:
+  Update copyright years in headers
 
   27 Dec 2011; Robin H. Johnson <robbat2@gentoo.org> mysql-cmake.eclass,
   mysql-v2.eclass:

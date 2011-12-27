@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ezc.eclass,v 1.6 2011/12/14 23:10:51 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ezc.eclass,v 1.7 2011/12/27 17:55:12 fauli Exp $
 
 # @ECLASS: php-ezc.eclass
 # @MAINTAINER:

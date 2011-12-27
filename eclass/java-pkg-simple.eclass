@@ -1,10 +1,10 @@
 # Eclass for simple bare-source Java packages
 #
-# Copyright (c) 2004-2009, Gentoo Foundation
+# Copyright (c) 2004-2011, Gentoo Foundation
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-simple.eclass,v 1.2 2011/07/08 11:35:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-simple.eclass,v 1.3 2011/12/27 17:55:12 fauli Exp $
 
 inherit java-utils-2
 

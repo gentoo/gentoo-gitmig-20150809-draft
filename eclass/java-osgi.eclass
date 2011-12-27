@@ -1,11 +1,11 @@
 # Base eclass for Java packages that needs to be OSGi compliant
 #
 # Copyright (c) 2007, Jean-Noël Rivasseau <elvanor@gmail.com>
-# Copyright (c) 2007, Gentoo Foundation
+# Copyright (c) 2007-2011, Gentoo Foundation
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-osgi.eclass,v 1.6 2011/08/29 01:28:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-osgi.eclass,v 1.7 2011/12/27 17:55:12 fauli Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin

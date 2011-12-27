@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.22 2011/12/10 20:03:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.23 2011/12/27 17:55:12 fauli Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #

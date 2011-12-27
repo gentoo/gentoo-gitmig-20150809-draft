@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.16 2010/06/16 03:36:06 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.17 2011/12/27 17:55:12 fauli Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 
