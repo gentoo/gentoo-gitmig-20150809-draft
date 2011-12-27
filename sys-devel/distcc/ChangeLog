@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.211 2011/10/28 05:41:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.212 2011/12/27 16:09:23 ultrabug Exp $
+
+  27 Dec 2011; Ultrabug <ultrabug@gentoo.org> files/3.1/init:
+  Fix 3.1 series init script wrt #390063 thanks to André-Sebastian Liebe.
 
 *distcc-3.2_rc1 (28 Oct 2011)
 
