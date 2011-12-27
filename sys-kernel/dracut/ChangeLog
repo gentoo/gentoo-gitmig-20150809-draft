@@ -1,6 +1,56 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.35 2011/11/16 14:32:29 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.36 2011/12/27 14:01:05 aidecoe Exp $
+
+*dracut-014 (27 Dec 2011)
+
+  27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-014.ebuild,
+  +files/dracut-014-multipath-udev-rules.patch:
+  Version bump.
+
+  This version provides new modules:
+  - usrmount
+  - securityfs
+
+  Following modules were removed:
+  - xen
+
+
+  NEWS
+  ~~~~
+  From Dracut NEWS file:
+
+  - new dracut arguments:
+    --lvmconf
+    --nolvmconf
+    --fscks [LIST]
+    --nofscks
+  - new .conf options:
+    install_items
+    fscks
+    nofscks
+  - new kernel options:
+    rd.md.ddf
+    rd.md.waitclean
+    plymouth.enable
+  - dracut move from /sbin to /usr/bin
+  - dracut modules dir moved from /usr/share/dracut to /usr/lib/dracut
+  - profiling with "dracut --profile"
+  - speedup of initramfs creation
+  - ask_for_password fallback to CLI
+  - mdraid completely switched to incremental assembly
+  - no more cdrom polling
+  - "switch_root" breakpoint is now very late
+  - /dev/live is gone
+  - /dev/root is gone
+  - fs-lib dracut module for fscks added
+  - usb mass storage kernel drivers now included
+  - usrmount dracut module added:
+    mount /usr if found in /sysroot/etc/fstab
+  - only include fsck helper needed for hostonly
+  - support iSCSI drivers: qla4xxx, cxgb3i, cxgb4i, bnx2i, be2iscsi
+  - add install_items to dracut.conf
+    install_items+=" <file>[ <file> ...] "
 
   16 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-010-r3.ebuild,
   -files/dracut-010-empty-etc-ld.so.conf.d.patch,
