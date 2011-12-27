@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-4.7.4.ebuild,v 1.1 2011/12/11 18:52:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-4.7.4.ebuild,v 1.2 2011/12/27 21:35:45 dilfridge Exp $
 
 EAPI=4
 
@@ -18,11 +18,15 @@ inherit kde4-base ruby-ng
 
 DESCRIPTION="KDE Ruby bindings"
 KEYWORDS="~amd64 ~x86"
-IUSE="akonadi debug kate okular semantic-desktop"
+IUSE="akonadi debug kate okular"
+
+# unfortunately single modules cannot be disabled with cmake defines
+# possible more useflags have no effect... does anyone actually build this stuff?
+# may need some hacking, for now semantic-desktop just becomes a hard dependency
 
 DEPEND="
 	$(add_kdebase_dep qtruby)
-	$(add_kdebase_dep smokekde 'akonadi?,kate?,okular?,semantic-desktop=')
+	$(add_kdebase_dep smokekde 'akonadi?,kate?,okular?,semantic-desktop')
 	$(add_kdebase_dep smokeqt)
 "
 RDEPEND="${DEPEND}
@@ -59,8 +63,6 @@ each_ruby_configure() {
 		$(cmake-utils_use_with akonadi KdepimLibs)
 		$(cmake-utils_use_disable kate)
 		$(cmake-utils_use_with okular)
-		$(cmake-utils_use_with semantic-desktop Nepomuk)
-		$(cmake-utils_use_with semantic-desktop Soprano)
 	)
 	kde4-base_src_configure
 }
