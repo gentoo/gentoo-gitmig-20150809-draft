@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.1 2011/12/23 01:44:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.2 2011/12/27 20:33:12 jer Exp $
 
 EAPI="4"
 
@@ -32,14 +32,10 @@ src_prepare() {
 		-e "s@/usr/X11R6/lib@/usr/lib@" \
 		config.mk || die "sed failed"
 
-	if use savedconfig; then
-		restore_config config.h
-	fi
+	restore_config config.h
 }
 
 src_compile() {
-	local msg
-	use savedconfig && msg=", please check the configfile"
 	if use xinerama; then
 		emake CC=$(tc-getCC)
 	else
