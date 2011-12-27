@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.37 2011/12/27 14:03:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.38 2011/12/27 14:10:30 aidecoe Exp $
+
+  27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-014.ebuild:
+  Removed dracut_modules_xen from ebuild modules list and dependencies.
 
   27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-013.ebuild,
   -dracut-013-r1.ebuild:

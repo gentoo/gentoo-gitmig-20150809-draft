@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014.ebuild,v 1.1 2011/12/27 14:01:05 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014.ebuild,v 1.2 2011/12/27 14:10:30 aidecoe Exp $
 
 EAPI=4
 
@@ -29,7 +29,6 @@ COMMON_MODULES="
 	dracut_modules_multipath
 	dracut_modules_plymouth
 	dracut_modules_syslog
-	dracut_modules_xen
 	"
 NETWORK_MODULES="
 	dracut_modules_iscsi
@@ -79,7 +78,6 @@ RDEPEND="
 	dracut_modules_nfs? ( net-fs/nfs-utils net-nds/rpcbind ${NETWORK_DEPS} )
 	dracut_modules_plymouth? ( >=sys-boot/plymouth-0.8.3-r1 )
 	dracut_modules_syslog? ( || ( app-admin/syslog-ng app-admin/rsyslog ) )
-	dracut_modules_xen? ( app-emulation/xen )
 	"
 DEPEND="
 	>=dev-libs/libxslt-1.1.26
