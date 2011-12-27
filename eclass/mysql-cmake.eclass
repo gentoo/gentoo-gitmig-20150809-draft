@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.2 2011/09/30 02:10:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.3 2011/12/27 07:34:18 robbat2 Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -123,13 +123,8 @@ configure_cmake_standard() {
 		-DWITHOUT_LIBWRAP=1
 	)
 
-	if use static ; then
-		mycmakeargs+=( -DDISABLE_SHARED=1 )
-	else
-		mycmakeargs+=( -DDISABLED_SHARED=0 )
-	fi
-
 	mycmakeargs+=(
+		$(cmake-utils_use_disable !static SHARED)
 		$(cmake-utils_use_with debug)
 		$(cmake-utils_use_with embedded EMBEDDED_SERVER)
 		$(cmake-utils_use_with profiling)
