@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.89 2011/11/16 09:50:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.90 2011/12/27 18:52:54 jlec Exp $
+
+*vtk-5.8.0 (27 Dec 2011)
+
+  27 Dec 2011; Justin Lecher <jlec@gentoo.org> +vtk-5.8.0.ebuild,
+  +files/vtk-5.8.0-R.patch:
+  Version Bump, #396119
 
   16 Nov 2011; Justin Lecher <jlec@gentoo.org> vtk-5.6.1.ebuild,
   +files/vtk-5.6.1-libav-0.8.patch, metadata.xml:
