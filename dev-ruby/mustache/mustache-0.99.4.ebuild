@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/mustache-0.99.4.ebuild,v 1.5 2011/12/04 23:23:34 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/mustache-0.99.4.ebuild,v 1.6 2011/12/27 12:38:02 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_TEST=""
 
@@ -24,7 +24,7 @@ IUSE=""
 ruby_add_bdepend "doc? ( app-text/ronn )"
 
 each_ruby_test() {
-	${RUBY} -Ilib -e "Dir['test/*.rb'].each{|f| require f}"
+	${RUBY} -Ilib:. -e "Dir['test/*.rb'].each{|f| require f}"
 }
 
 all_ruby_install() {
