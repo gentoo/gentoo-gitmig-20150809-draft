@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.63 2011/12/19 12:40:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.64 2011/12/27 00:48:38 halcy0n Exp $
+
+  27 Dec 2011; Mark Loeser <halcy0n@gentoo.org> jasper-1.900.1-r4.ebuild:
+  Stable for ppc/ppc64; bug #394879
 
   19 Dec 2011; Jeroen Roovers <jer@gentoo.org> jasper-1.900.1-r4.ebuild:
   Stable for HPPA (bug #394879).
