@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.50 2011/11/17 23:27:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.51 2011/12/27 17:04:28 caster Exp $
+
+*vuze-4.7.0.0-r1 (27 Dec 2011)
+
+  27 Dec 2011; Vlastimil Babka <caster@gentoo.org> +vuze-4.7.0.0-r1.ebuild:
+  Revbump to actually use swt-3.7 instead of 3.6, bug #390921.
 
 *vuze-4.7.0.0 (17 Nov 2011)
 
