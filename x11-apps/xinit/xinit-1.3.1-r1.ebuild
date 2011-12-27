@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.3.1-r1.ebuild,v 1.4 2011/12/21 21:46:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.3.1-r1.ebuild,v 1.5 2011/12/27 20:55:01 maekke Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit xorg-2
 DESCRIPTION="X Window System initializer"
 
 LICENSE="${LICENSE} GPL-2"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="+minimal"
 
 RDEPEND="
