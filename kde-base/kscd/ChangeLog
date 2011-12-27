@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kscd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.198 2011/12/18 19:46:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.199 2011/12/27 12:23:55 dilfridge Exp $
+
+  27 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> kscd-4.7.3.ebuild,
+  +files/kscd-4.7.3-underlinking.patch, kscd-4.7.4.ebuild:
+  Fix test build problem, bug 393099
 
   18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kscd-4.6.5.ebuild:
   Drop KDE 4.6.5
