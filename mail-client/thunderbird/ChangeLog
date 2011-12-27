@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.110 2011/12/08 14:48:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.111 2011/12/27 00:14:18 halcy0n Exp $
+
+  27 Dec 2011; Mark Loeser <halcy0n@gentoo.org> thunderbird-7.0.1-r1.ebuild,
+  thunderbird-8.0-r1.ebuild:
+  Drop ppc/ppc64; bug #381245
 
   08 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   thunderbird-8.0-r1.ebuild:
