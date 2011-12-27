@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/apiextractor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/ChangeLog,v 1.14 2011/09/13 19:09:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/ChangeLog,v 1.15 2011/12/27 08:33:26 patrick Exp $
+
+*apiextractor-0.10.9 (27 Dec 2011)
+
+  27 Dec 2011; Patrick Lauer <patrick@gentoo.org> +apiextractor-0.10.9.ebuild:
+  Bump
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #278944
