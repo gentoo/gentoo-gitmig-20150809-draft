@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.7 2011/03/01 06:34:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.8 2011/12/27 21:08:56 xmw Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/viewglob/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="
