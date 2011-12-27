@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.174 2011/11/19 11:06:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.175 2011/12/27 07:42:55 graaff Exp $
+
+  27 Dec 2011; Hans de Graaff <graaff@gentoo.org> activerecord-2.3.14.ebuild:
+  Also require rdoc for tests. Fixes bug 379551.
 
 *activerecord-3.0.11 (19 Nov 2011)
 

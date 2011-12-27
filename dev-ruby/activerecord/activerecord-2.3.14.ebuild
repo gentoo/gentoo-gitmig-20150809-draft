@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.14.ebuild,v 1.5 2011/08/27 18:51:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.14.ebuild,v 1.6 2011/12/27 07:42:55 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -32,6 +32,7 @@ USE_RUBY=ruby18 \
 
 ruby_add_bdepend "
 	test? (
+		dev-ruby/rdoc
 		>=dev-ruby/mocha-0.9.5
 		virtual/ruby-test-unit
 	)"
