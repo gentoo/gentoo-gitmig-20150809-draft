@@ -1,4 +1,11 @@
 
+
+*torsocks-1.2-r1 (27 Dec 2011)
+
+  27 Dec 2011; Anthony G. Basile <blueness@gentoo.org> +torsocks-1.2-r1.ebuild,
+  +files/fix-docdir.patch:
+  Put doc files in proper docdir, bug #395951
+
   19 Dec 2011; Agostino Sarubbo <ago@gentoo.org> torsocks-1.2.ebuild:
   Stable for AMD64, wrt bug #395215
 
