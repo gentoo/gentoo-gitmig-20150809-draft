@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.181 2011/11/28 10:05:08 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.182 2011/12/27 21:15:10 eras Exp $
+
+*heimdal-1.5.1-r1 (27 Dec 2011)
+
+  27 Dec 2011; Eray Aslan <eras@gentoo.org> +heimdal-1.5.1-r1.ebuild,
+  +files/CVE-2011-4862.patch, +files/heimdal_missing-include.patch:
+  security bump - bug #396105
 
   28 Nov 2011; Eray Aslan <eras@gentoo.org> heimdal-1.5.1.ebuild:
   Drop autotools-utils - bug #392081
