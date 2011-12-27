@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.4.ebuild,v 1.5 2011/12/20 13:14:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.4.ebuild,v 1.6 2011/12/27 21:53:21 polynomial-c Exp $
 
 EAPI=4
 
@@ -167,6 +167,9 @@ src_prepare() {
 
 	# Don't build vboxpci.ko module (D'oh!)
 	epatch "${FILESDIR}"/${PN}-4.1.2-vboxpci-build.patch
+
+	# Fixed compilation with yasm-1.2.0 (bug #391189)
+	epatch "${FILESDIR}"/${PN}-4.1.6-yasm120-fix.patch
 
 	# Use PAM only when pam USE flag is enbaled (bug #376531)
 	if ! use pam ; then
