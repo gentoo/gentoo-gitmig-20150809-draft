@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.10 2011/11/17 16:04:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.11 2011/12/27 07:37:20 robbat2 Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -227,6 +227,9 @@ IUSE="${IUSE} berkdb"
 && mysql_version_is_at_least "5.2.5" \
 && IUSE="${IUSE} sphinx"
 
+mysql_version_is_at_least "5.5.7" \
+&& IUSE="${IUSE} systemtap"
+
 
 #
 # DEPENDENCIES:
@@ -278,6 +281,9 @@ mysql_version_is_at_least "5.5.8" \
 [[ "${PN}" == "mariadb" ]] \
 && mysql_version_is_at_least "5.2.5" \
 && DEPEND="${DEPEND} sphinx? ( app-misc/sphinx )"
+
+mysql_version_is_at_least "5.5.7" \
+&& DEPEND="${DEPEND} systemtap? ( >=dev-util/systemtap-1.3 )"
 
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
 PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"

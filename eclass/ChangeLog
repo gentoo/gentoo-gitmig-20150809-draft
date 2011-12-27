@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.57 2011/12/27 06:54:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.58 2011/12/27 07:37:20 robbat2 Exp $
+
+  27 Dec 2011; Robin H. Johnson <robbat2@gentoo.org> mysql-cmake.eclass,
+  mysql-v2.eclass:
+  Bug #396089: Avoid automagic systemtap/dtrace in MySQL 5.5.
 
   27 Dec 2011; Mike Gilbert <floppym@gentoo.org> twisted.eclass:
   Only call doman on manpages in twisted_src_install. Credit to Arfrever.
