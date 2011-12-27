@@ -1,6 +1,6 @@
-# Copyright 2005-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.8 2010/10/10 19:39:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.9 2011/12/27 05:36:48 floppym Exp $
 
 # @ECLASS: twisted.eclass
 # @MAINTAINER:
@@ -24,7 +24,8 @@ if [[ "${CATEGORY}/${PN}" == "dev-python/twisted"* ]]; then
 	MY_P="Twisted${MY_PACKAGE}-${MY_PV}"
 
 	HOMEPAGE="http://www.twistedmatrix.com/"
-	SRC_URI="http://tmrc.mit.edu/mirror/twisted/${MY_PACKAGE}/$(get_version_component_range 1-2 ${MY_PV})/${MY_P}.tar.bz2"
+	#SRC_URI="http://tmrc.mit.edu/mirror/twisted/${MY_PACKAGE}/$(get_version_component_range 1-2 ${MY_PV})/${MY_P}.tar.bz2"
+	SRC_URI="http://twistedmatrix.com/Releases/${MY_PACKAGE}/$(get_version_component_range 1-2 ${MY_PV})/${MY_P}.tar.bz2"
 
 	LICENSE="MIT"
 	SLOT="0"

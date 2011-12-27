@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.55 2011/12/26 00:11:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.56 2011/12/27 05:36:48 floppym Exp $
+
+  27 Dec 2011; Mike Gilbert <floppym@gentoo.org> twisted.eclass:
+  Use twistedmatrix.com/Releases in SRC_URI; tmrc.mit.edu does not have
+  tarballs past 10.2.
 
   26 Dec 2011; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Misc cleanups, add a few missing "|| die", fix description of some functions.
