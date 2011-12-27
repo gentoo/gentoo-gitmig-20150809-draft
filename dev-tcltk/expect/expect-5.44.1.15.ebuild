@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.16 2010/12/17 22:56:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.17 2011/12/27 08:16:11 jlec Exp $
 
 EAPI="3"
 
@@ -25,7 +25,8 @@ src_prepare() {
 	sed -i "s#/usr/local/bin#${EPREFIX}/usr/bin#" expect{,k}.man || die
 	# stops any example scripts being installed by default
 	sed -i \
-		-e '/^install:/s/install-libraries //' \
+		-e 's/^SCRIPT_LIST/_&/' \
+		-e 's/^SCRIPTS/_&/' \
 		-e 's/^SCRIPTS_MANPAGES = /_&/' \
 		Makefile.in
 

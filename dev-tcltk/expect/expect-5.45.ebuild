@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.45.ebuild,v 1.1 2010/12/17 23:23:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.45.ebuild,v 1.2 2011/12/27 08:16:11 jlec Exp $
 
 EAPI="3"
 
@@ -27,7 +27,8 @@ src_prepare() {
 	sed -i "s:/usr/local/bin:${EPREFIX}/usr/bin:" expect.man || die
 	# stops any example scripts being installed by default
 	sed -i \
-		-e '/^install:/s/install-libraries //' \
+		-e 's/^SCRIPT_LIST/_&/' \
+		-e 's/^SCRIPTS/_&/' \
 		-e 's/^SCRIPTS_MANPAGES = /_&/' \
 		Makefile.in
 
@@ -43,7 +44,7 @@ src_configure() {
 	# the 64bit flag is useless ... it only adds 64bit compiler flags
 	# (like -m64) which the target toolchain should already handle
 	econf \
-		--with-tcl=${EPREFIX}/usr/$(get_libdir) \
+		--with-tcl="${EPREFIX}/usr/$(get_libdir)" \
 		--disable-64bit \
 		--enable-shared \
 		$(use_enable threads) \

@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.86 2011/11/04 12:38:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.87 2011/12/27 08:16:11 jlec Exp $
+
+  27 Dec 2011; Justin Lecher <jlec@gentoo.org> expect-5.44.1.15.ebuild,
+  expect-5.45.ebuild:
+  Install header files, #396099; thanks Michael (kensington) for the patch
 
   04 Nov 2011; Justin Lecher <jlec@gentoo.org> files/expect-5.45-gfbsd.patch,
   files/expect-5.45-headers.patch, metadata.xml:
