@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.49 2011/11/02 21:52:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.50 2011/12/27 04:31:58 patrick Exp $
+
+*otrs-3.0.11 (27 Dec 2011)
+
+  27 Dec 2011; Patrick Lauer <patrick@gentoo.org> +otrs-3.0.11.ebuild:
+  Bump
 
   02 Nov 2011; Mike Frysinger <vapier@gentoo.org> otrs-3.0.10.ebuild:
   Drop superfluous -c usage.
