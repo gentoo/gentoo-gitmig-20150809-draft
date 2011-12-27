@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CDDB_get
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.43 2011/11/19 09:45:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.44 2011/12/27 15:05:32 tove Exp $
+
+  27 Dec 2011; Torsten Veller <tove@gentoo.org> -CDDB_get-2.27.ebuild:
+  Cleanup
 
   19 Nov 2011; Torsten Veller <tove@gentoo.org> CDDB_get-2.270.0.ebuild:
   Merge KEYWORDS from 2.27
