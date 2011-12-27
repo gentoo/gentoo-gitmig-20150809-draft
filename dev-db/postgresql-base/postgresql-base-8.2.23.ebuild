@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.2.23.ebuild,v 1.1 2011/12/08 02:08:33 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.2.23.ebuild,v 1.2 2011/12/27 13:58:25 titanofold Exp $
 
 EAPI="4"
 
@@ -54,7 +54,7 @@ RDEPEND=">=app-admin/eselect-postgresql-1.0.10
 		 zlib? ( >=sys-libs/zlib-1.1.3 )"
 
 DEPEND="${RDEPEND}
-		>=sys-apps/sandbox-2.0
+		!!<sys-apps/sandbox-2.0
 		>=sys-devel/bison-1.875
 		sys-devel/flex
 		nls? ( sys-devel/gettext )"
