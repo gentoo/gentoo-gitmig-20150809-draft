@@ -21,6 +21,7 @@ dev-db/mysql-cluster (upcoming)
   <flag name='pbxt'>Add experimental support for PBXT storage engine</flag>
   <flag name='profiling'>Add support for statement profiling (requires USE=community).</flag>
   <flag name='raid'>Deprecated option, removed in the 5.0 series</flag>
+  <flag name="systemtap">Build support for profiling and tracing using <pkg>dev-util/systemtap</pkg></flag>
   <flag name='test'>Install upstream testsuites for end use.</flag>
   <flag name='xtradb'>Add experimental support for Percona's InnoDB replacement: XtraDB</flag>
 </use>
