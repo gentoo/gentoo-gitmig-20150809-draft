@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/twisted-pair
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/ChangeLog,v 1.14 2011/12/27 07:52:16 floppym Exp $
+
+*twisted-pair-11.1.0 (27 Dec 2011)
+
+  27 Dec 2011; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +twisted-pair-11.1.0.ebuild:
+  New package to fill in the twisted suite.
+
