@@ -1,6 +1,20 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.25 2011/07/20 16:52:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.26 2011/12/27 08:01:38 bicatali Exp $
+
+*gdl-0.9.2 (27 Dec 2011)
+
+  27 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/0.9.2-antlr.patch, -files/gdl-0.9_rc2-gcc4.4.patch,
+  +files/0.9.2-include.patch, -files/gdl-0.9_rc4-gcc4.3.patch,
+  +files/0.9.2-numpy.patch, -gdl-0.9-r1.ebuild, +gdl-0.9.2.ebuild,
+  +files/0.9.2-proj4.patch, -files/gdl-0.9_rc4-gcc4.5.patch, -gdl-0.9.1.ebuild,
+  +files/0.9.2-tests.patch, -files/gdl-0.9.1-antlr.patch,
+  -files/gdl-0.9-configure.patch, -files/gdl-0.9-numpy.patch, metadata.xml:
+  Version bump. Rewrote from scratch and switched to cmake since the configure
+  scripts are not well maintained. Added a few patches to allow projections
+  from gshhs and proj. Added a few more use flags. Fix bug #380323, bug
+  #391667, and bug #393193.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #105599

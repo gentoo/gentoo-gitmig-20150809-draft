@@ -1,0 +1,9 @@
+--- gdl-0.9.2.orig/src/CFMTLexer.cpp	2011-12-22 20:18:17.000000000 +0000
++++ gdl-0.9.2/src/CFMTLexer.cpp	2011-12-24 06:35:24.000000000 +0000
+@@ -1,5 +1,6 @@
+ /* $ANTLR 2.7.7 (20091222): "cformat.g" -> "CFMTLexer.cpp"$ */
+ 
++#include <cstdlib>
+ #include "includefirst.hpp"
+ 
+ #include "CFMTLexer.hpp"

@@ -8,8 +8,12 @@
   Information Solutions.
 </longdescription>
 <use>
-  <flag name='hdf'>Adds support for the Hierarchical Data Format</flag>
-  <flag name='grib'>Adds support for the meteorological GRIB format</flag>
-  <flag name='udunits'>Support for manipulating units of physical quantities</flag>
+  <flag name='hdf'>Add support for the Hierarchical Data Format v.4</flag>
+  <flag name='gshhs'>Add support for projection adn continent maps with <pkg>sci-geosciences/gshhs-data</pkg></flag>
+
+  <flag name='grib'>Add support for the meteorological GRIB format with <pkg>sci-libs/grib_api</pkg></flag>
+  <flag name="proj">Add support for <pkg>sci-libs/proj</pkg> (geographic projections)</flag>
+  <flag name="ps">Add support for Postscript with <pkg>dev-libs/pslib</pkg></flag>
+  <flag name='udunits'>Add support for manipulating units of physical quantities</flag>
 </use>
 </pkgmetadata>
