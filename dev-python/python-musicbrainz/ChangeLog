@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-musicbrainz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.11 2011/06/23 15:08:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.12 2011/12/27 05:17:16 patrick Exp $
+
+*python-musicbrainz-0.7.4 (27 Dec 2011)
+
+  27 Dec 2011; Patrick Lauer <patrick@gentoo.org>
+  +python-musicbrainz-0.7.4.ebuild:
+  Bump for #395673
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   -python-musicbrainz-0.7.2.ebuild:
