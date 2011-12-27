@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javahelp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.19 2011/03/11 18:50:00 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.20 2011/12/27 18:46:17 halcy0n Exp $
+
+  27 Dec 2011; Mark Loeser <halcy0n@gentoo.org> javahelp-2.0.02_p46.ebuild,
+  javahelp-2.0.05_p63.ebuild:
+  Stable for ppc, drop ppc64; bug #356183
 
   11 Mar 2011; Thomas Kahle <tomka@gentoo.org> javahelp-2.0.05_p63.ebuild:
   x86 stable per bug 356183
