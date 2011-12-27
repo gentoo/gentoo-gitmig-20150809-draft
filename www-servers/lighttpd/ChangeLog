@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.266 2011/12/26 12:30:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.267 2011/12/27 00:37:32 halcy0n Exp $
+
+  27 Dec 2011; Mark Loeser <halcy0n@gentoo.org> lighttpd-1.4.30.ebuild:
+  Stable for ppc/ppc64; bug #392581
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> lighttpd-1.4.30.ebuild:
   x86 stable, bug #392581
