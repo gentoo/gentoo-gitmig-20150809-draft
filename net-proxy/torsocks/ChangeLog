@@ -1,5 +1,8 @@
 
 
+  27 Dec 2011; Anthony G. Basile <blueness@gentoo.org> torsocks-1.2-r1.ebuild:
+  Added README TODO INSTALL ChangeLog to docs
+
 *torsocks-1.2-r1 (27 Dec 2011)
 
   27 Dec 2011; Anthony G. Basile <blueness@gentoo.org> +torsocks-1.2-r1.ebuild,
