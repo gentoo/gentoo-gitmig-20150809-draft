@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/sysbench-0.4.12.ebuild,v 1.1 2011/08/27 09:07:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/sysbench-0.4.12-r1.ebuild,v 1.1 2011/12/27 05:08:40 patrick Exp $
 
 EAPI="2"
 
@@ -19,8 +19,13 @@ DEPEND="mysql? ( virtual/mysql )
 	aio? ( dev-libs/libaio )"
 RDEPEND="${DEPEND}"
 
-src_configure() {
+src_prepare() {
+	# fix for bug #297590
+	sed -e 's/SUBDIRS \= doc sysbench/SUBDIRS \= sysbench/' -i Makefile.am || die "sed of makefile failed"
 	eautoreconf
+}
+
+src_configure() {
 	if ! use aio; then my_econf="--disable-aio"; fi
 	econf $(use_with mysql mysql /usr) $my_econf || die "econf failed"
 }

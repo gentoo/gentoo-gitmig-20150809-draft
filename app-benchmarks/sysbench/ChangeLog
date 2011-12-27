@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/sysbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/ChangeLog,v 1.4 2011/08/27 09:07:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/ChangeLog,v 1.5 2011/12/27 05:08:40 patrick Exp $
+
+*sysbench-0.4.12-r1 (27 Dec 2011)
+
+  27 Dec 2011; Patrick Lauer <patrick@gentoo.org> +sysbench-0.4.12-r1.ebuild,
+  -sysbench-0.4.12.ebuild:
+  Fix for #297590
 
 *sysbench-0.4.12 (27 Aug 2011)
 
