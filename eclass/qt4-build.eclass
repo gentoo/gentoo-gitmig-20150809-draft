@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.110 2011/12/26 11:59:19 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.111 2011/12/27 16:04:27 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -726,23 +726,12 @@ fix_library_files() {
 # @FUNCTION: qt_use
 # @USAGE: < flag > [ feature ] [ enableval ]
 # @DESCRIPTION:
-# This will echo "${enableval}-${feature}" if <flag> is enabled, or
-# "-no-${feature} if the flag is disabled. If [feature] is not specified <flag>
+# This will echo "-${enableval}-${feature}" if <flag> is enabled, or
+# "-no-${feature}" if it's disabled. If [feature] is not specified, <flag>
 # will be used for that. If [enableval] is not specified, it omits the
-# assignment part.
+# "-${enableval}" part.
 qt_use() {
-	local flag=$1
-	local feature=$1
-	local enableval=
-
-	[[ -n $2 ]] && feature=$2
-	[[ -n $3 ]] && enableval=-$3
-
-	if use ${flag}; then
-		echo "${enableval}-${feature}"
-	else
-		echo "-no-${feature}"
-	fi
+	use "$1" && echo "${3:+-$3}-${2:-$1}" || echo "-no-${2:-$1}"
 }
 
 # @FUNCTION: qt_mkspecs_dir
