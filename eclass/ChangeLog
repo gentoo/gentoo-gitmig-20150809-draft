@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.59 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.60 2011/12/27 22:40:50 neurogeek Exp $
+
+  27 Dec 2011; Jesus Rivero <neurogeek@gentoo.org> subversion.eclass:
+  Handle UUID mismatch by deleting working copy and checking out it again.
+  Patch by Arfrever.
 
   27 Dec 2011; Christian Faulhammer <fauli@gentoo.org> rox-0install.eclass,
   apache-2.eclass, common-lisp-common-2.eclass, gnustep-2.eclass,

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.71 2011/12/14 23:40:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.72 2011/12/27 22:40:50 neurogeek Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -283,7 +283,25 @@ subversion_fetch() {
 		fi
 
 		if [[ -z ${esvn_up_freq} ]]; then
-			if [[ ${ESVN_WC_URL} != $(subversion__get_repository_uri "${repo_uri}") ]]; then
+			if [[ ${ESVN_WC_UUID} != $(subversion__svn_info "${repo_uri}" "Repository UUID") ]]; then
+				# UUID mismatch. Delete working copy and check out it again.
+				einfo "subversion recheck out start -->"
+				einfo "     old UUID: ${ESVN_WC_UUID}"
+				einfo "     new UUID: $(subversion__svn_info "${repo_uri}" "Repository UUID")"
+				einfo "     repository: ${repo_uri}${revision:+@}${revision}"
+
+				rm -fr "${ESVN_PROJECT}" || die
+
+				debug-print "${FUNCNAME}: ${ESVN_FETCH_CMD} ${options} ${repo_uri}"
+
+				mkdir -m 775 -p "${ESVN_PROJECT}" || die "${ESVN}: can't mkdir ${ESVN_PROJECT}."
+				cd "${ESVN_PROJECT}" || die "${ESVN}: can't chdir to ${ESVN_PROJECT}"
+				if [[ -n "${ESVN_USER}" ]]; then
+					${ESVN_FETCH_CMD} ${options} --username "${ESVN_USER}" --password "${ESVN_PASSWORD}" "${repo_uri}" || die "${ESVN}: can't fetch to ${wc_path} from ${repo_uri}."
+				else
+					${ESVN_FETCH_CMD} ${options} "${repo_uri}" || die "${ESVN}: can't fetch to ${wc_path} from ${repo_uri}."
+				fi
+			elif [[ ${ESVN_WC_URL} != $(subversion__get_repository_uri "${repo_uri}") ]]; then
 				einfo "subversion switch start -->"
 				einfo "     old repository: ${ESVN_WC_URL}@${ESVN_WC_REVISION}"
 				einfo "     new repository: ${repo_uri}${revision:+@}${revision}"
