@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-3.11.0.ebuild,v 1.1 2011/12/27 05:35:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-3.11.0-r1.ebuild,v 1.1 2011/12/27 06:42:23 patrick Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils multilib
 
@@ -26,6 +26,8 @@ RDEPEND="sys-libs/readline
 
 DEPEND="dev-lang/perl[doc?]
 	${RDEPEND}"
+
+REQUIRED_USE="opengl? ( pcre )"
 
 src_configure() {
 	myconf="--disable-rpath"
