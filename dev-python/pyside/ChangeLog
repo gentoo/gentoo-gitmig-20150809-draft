@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.21 2011/09/13 19:11:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.22 2011/12/27 11:59:32 patrick Exp $
+
+*pyside-1.0.9 (27 Dec 2011)
+
+  27 Dec 2011; Patrick Lauer <patrick@gentoo.org> +pyside-1.0.9.ebuild:
+  Bump for #385053
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #278944
