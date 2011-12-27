@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/simplyhtml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/simplyhtml/ChangeLog,v 1.22 2010/02/28 10:36:37 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/simplyhtml/ChangeLog,v 1.23 2011/12/27 18:45:58 halcy0n Exp $
+
+  27 Dec 2011; Mark Loeser <halcy0n@gentoo.org> simplyhtml-0.13.1.ebuild:
+  Drop ppc64 simplyhtml-0.13.1.ebuild
 
   28 Feb 2010; Vlastimil Babka <caster@gentoo.org>
   -simplyhtml-0.12.3.ebuild, -simplyhtml-0.12.5.ebuild:
