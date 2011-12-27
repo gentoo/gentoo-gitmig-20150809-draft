@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r2.ebuild,v 1.3 2011/12/25 10:49:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r2.ebuild,v 1.4 2011/12/27 23:55:16 neurogeek Exp $
 
 EAPI="3"
 
@@ -189,7 +189,7 @@ src_install() {
 		doins avahi.devhelp || die
 	fi
 	if use python; then
-		python_convert_shebangs 2 "${ED}"usr/bin/avahi-discover || die
+		python_convert_shebangs 2 "${ED}usr/bin/avahi-discover"
 	fi
 
 	# Remove .la files
