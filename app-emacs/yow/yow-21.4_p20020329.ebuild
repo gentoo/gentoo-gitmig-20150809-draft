@@ -1,33 +1,33 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.8 2011/09/10 10:48:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.9 2011/12/27 13:38:35 ulm Exp $
 
 EAPI=4
 
 inherit elisp
 
-MY_P="emacs-${PV%_p*}"
+XE_PV="1.15"
 DESCRIPTION="Zippy the pinhead data base"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI="mirror://gnu/emacs/${MY_P}a.tar.gz"
+# We used to take the file from the GNU Emacs 21.4 tarball, but 20 MB for one
+# 53 kB file is wasteful. So we take it from app-xemacs/cookie and patch it.
+SRC_URI="http://ftp.xemacs.org/pub/xemacs/packages/cookie-${XE_PV}-pkg.tar.gz
+	mirror://gentoo/${PN}-${XE_PV}-${PV}.patch.gz"
 
-# A slightly different version of yow.lines is also included with
-# app-xemacs/cookie, and also with games-misc/fortune-mod which is
-# under a BSD licence.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-S="${WORKDIR}/${MY_P}/etc"
-ELISP_PATCHES="${PN}-fix-misspellings.patch"
+S="${WORKDIR}"
+ELISP_PATCHES="${PN}-${XE_PV}-${PV}.patch"
 SITEFILE="50${PN}-gentoo.el"
 
 src_compile() { :; }
 
 src_install() {
 	insinto "${SITEETC}/${PN}"
-	doins yow.lines
+	doins etc/yow.lines
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }
 
