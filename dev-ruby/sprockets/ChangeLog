@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/sprockets
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.1 2011/12/27 09:04:31 graaff Exp $
+
+*sprockets-2.0.3 (27 Dec 2011)
+
+  27 Dec 2011; Hans de Graaff <graaff@gentoo.org> +sprockets-2.0.3.ebuild,
+  +metadata.xml:
+  Initial import for rails 3.1.
+
