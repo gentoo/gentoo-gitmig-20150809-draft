@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dstat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.36 2011/12/25 09:03:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.37 2011/12/27 23:43:38 neurogeek Exp $
+
+  27 Dec 2011; Jesus Rivero <neurogeek@gentoo.org> dstat-0.7.2-r1.ebuild:
+  Removed die from python_convert_shebangs. Patch by Arfrever
 
   25 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> dstat-0.7.2-r1.ebuild:
   Bump to eapi 3, bug 395935

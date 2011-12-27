@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.7.2-r1.ebuild,v 1.2 2011/12/25 09:03:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.7.2-r1.ebuild,v 1.3 2011/12/27 23:43:38 neurogeek Exp $
 
 EAPI=3
 
@@ -30,7 +30,7 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "make install failed"
-	python_convert_shebangs 2 "${ED}"/usr/bin/dstat || die
+	python_convert_shebangs 2 "${ED}usr/bin/dstat"
 
 	dodoc \
 		AUTHORS ChangeLog README TODO \
