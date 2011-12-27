@@ -1,20 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-9999.ebuild,v 1.2 2011/12/27 21:07:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-1.6.ebuild,v 1.1 2011/12/27 21:07:12 xmw Exp $
 
 EAPI=3
 
-EGIT_REPO_URI="git://g.blicky.net/ncdc.git"
-
-inherit autotools base git-2
+inherit base
 
 DESCRIPTION="ncurses directconnect client"
 HOMEPAGE="http://dev.yorhel.nl/ncdc"
-SRC_URI=""
+SRC_URI="http://dev.yorhel.nl/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2
@@ -24,11 +22,6 @@ RDEPEND="app-arch/bzip2
 	sys-libs/gdbm
 	sys-libs/ncurses:5"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	dev-util/makeheaders"
+	dev-util/pkgconfig"
 
 DOCS=( ChangeLog README )
-
-src_prepare() {
-	eautoreconf
-}
