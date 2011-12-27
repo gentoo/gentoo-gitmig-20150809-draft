@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.11.ebuild,v 1.5 2011/12/20 15:37:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.11.ebuild,v 1.6 2011/12/27 21:01:56 maekke Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ fi
 IUSE="debug +modules multilib opencl qt4"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="1"
 
 RDEPEND="

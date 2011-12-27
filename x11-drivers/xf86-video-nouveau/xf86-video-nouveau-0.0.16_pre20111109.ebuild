@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.16_pre20111109.ebuild,v 1.2 2011/12/20 15:34:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.16_pre20111109.ebuild,v 1.3 2011/12/27 21:07:16 maekke Exp $
 
 EAPI=4
 XORG_EAUTORECONF="yes"
@@ -11,7 +11,7 @@ DESCRIPTION="Accelerated Open Source driver for nVidia cards"
 HOMEPAGE="http://nouveau.freedesktop.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/libdrm-2.4.24[video_cards_nouveau]"
