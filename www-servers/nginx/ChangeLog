@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.301 2011/12/25 14:48:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.302 2011/12/27 07:40:00 patrick Exp $
+
+*nginx-1.1.12 (27 Dec 2011)
+
+  27 Dec 2011; Patrick Lauer <patrick@gentoo.org> +nginx-1.1.12.ebuild:
+  Bump
 
 *nginx-1.1.11 (25 Dec 2011)
 
