@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.31 2011/10/20 17:38:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.32 2011/12/27 13:25:02 graaff Exp $
+
+  27 Dec 2011; Hans de Graaff <graaff@gentoo.org> bundler-1.0.21.ebuild:
+  Add ruby19.
 
   20 Oct 2011; Hans de Graaff <graaff@gentoo.org> bundler-1.0.18.ebuild,
   bundler-1.0.21.ebuild:
