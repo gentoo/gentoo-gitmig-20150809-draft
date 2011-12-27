@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.ebuild,v 1.1 2011/12/24 08:55:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.ebuild,v 1.2 2011/12/27 18:10:31 maksbotan Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -53,6 +53,8 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.7.2-configure.py.patch"
 )
 
+PYTHON_VERSIONED_EXECUTABLES=("/usr/bin/pyuic4")
+
 src_prepare() {
 	if ! use dbus; then
 		sed -e "s/^\([[:blank:]]\+\)check_dbus()/\1pass/" -i configure.py || die "sed configure.py failed"
@@ -69,7 +71,7 @@ src_prepare() {
 	python_copy_sources
 
 	preparation() {
-		if [[ "$(python_get_version --major)" == "3" ]]; then
+		if [[ "$(python_get_version -l --major)" == "3" ]]; then
 			rm -fr pyuic/uic/port_v2
 		else
 			rm -fr pyuic/uic/port_v3
@@ -123,7 +125,7 @@ src_configure() {
 		"${myconf[@]}" || return 1
 
 		local mod
-		for mod in QtCore $(use X && echo QtDesigner QtGui) $(use declarative && echo QtDeclarative) $(use opengl && echo QtOpenGL); do
+		for mod in QtCore $(use X && echo QtDesigner QtGui) $(use dbus && echo QtDBus) $(use declarative && echo QtDeclarative) $(use opengl && echo QtOpenGL); do
 			# Run eqmake4 inside the qpy subdirectories to respect CC, CXX, CFLAGS, CXXFLAGS and LDFLAGS and avoid stripping.
 			pushd qpy/${mod} > /dev/null || return 1
 			eqmake4 $(ls w_qpy*.pro)
@@ -149,10 +151,11 @@ src_compile() {
 
 src_install() {
 	installation() {
-		# INSTALL_ROOT is needed for the QtDesigner module, other Makefiles use DESTDIR.
-		emake DESTDIR="${D}" INSTALL_ROOT="${D}" install
+		# INSTALL_ROOT is used by designer/Makefile, other Makefiles use DESTDIR.
+		emake DESTDIR="${T}/images/${PYTHON_ABI}" INSTALL_ROOT="${T}/images/${PYTHON_ABI}" install
 	}
 	python_execute_function -s installation
+	python_merge_intermediate_installation_images "${T}/images"
 
 	dodoc NEWS THANKS || die "dodoc failed"
 

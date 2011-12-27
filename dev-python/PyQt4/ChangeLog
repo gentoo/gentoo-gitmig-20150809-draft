@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.162 2011/12/24 08:55:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.163 2011/12/27 18:10:31 maksbotan Exp $
+
+  27 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> PyQt4-4.9.ebuild:
+  Enable versioning of /usr/bin/pyuic4. Run eqmake4() in qpy/QtDBus directory.
+  Fixes backported from Progress Overlay. Patch by Arfrever.
 
 *PyQt4-4.9 (24 Dec 2011)
 
