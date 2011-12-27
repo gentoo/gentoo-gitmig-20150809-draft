@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/arel-2.2.1.ebuild,v 1.1 2011/08/19 07:09:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/arel-2.2.1-r1.ebuild,v 1.1 2011/12/27 09:33:49 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18 jruby"
@@ -27,3 +27,8 @@ ruby_add_bdepend "
 		>=dev-ruby/hoe-2.10
 		virtual/ruby-minitest
 	)"
+
+all_ruby_prepare() {
+	# Put the proper version number in the gemspec.
+	sed -i -e 's/2.2.0.20110809140134/2.2.1/' arel.gemspec || die
+}
