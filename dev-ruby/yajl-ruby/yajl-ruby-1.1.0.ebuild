@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/yajl-ruby-1.1.0.ebuild,v 1.1 2011/12/25 10:48:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/yajl-ruby-1.1.0.ebuild,v 1.2 2011/12/27 10:56:40 flameeyes Exp $
 
 EAPI=2
 
 USE_RUBY="ruby18 ruby19 ree18"
 
-RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.rdoc"
+RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
 
 RUBY_FAKEGEM_TASK_TEST=""
 
