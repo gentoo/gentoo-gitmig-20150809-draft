@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/ucsc-genome-browser
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ChangeLog,v 1.4 2010/02/24 21:43:32 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ChangeLog,v 1.5 2011/12/27 09:39:04 jlec Exp $
+
+*ucsc-genome-browser-260 (27 Dec 2011)
+
+  27 Dec 2011; Justin Lecher <jlec@gentoo.org> +ucsc-genome-browser-260.ebuild,
+  metadata.xml:
+  Version Bump, move to EAPI=4, handled static-libs, respect mostly everywhere
+  LDFALGS
 
   24 Feb 2010; Andrey Kislyuk <weaver@gentoo.org>
   ucsc-genome-browser-223.ebuild:
