@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.0.4.ebuild,v 1.3 2011/08/23 18:08:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.0.4.ebuild,v 1.4 2011/12/28 08:47:34 josejx Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -43,7 +43,7 @@ arch_binaries="$arch_binaries alpha? ( http://code.haskell.org/~slyfox/ghc-alpha
 arch_binaries="$arch_binaries arm? ( http://code.haskell.org/~slyfox/ghc-arm/ghc-bin-${PV}-arm.tbz2 )"
 arch_binaries="$arch_binaries amd64? ( http://code.haskell.org/~slyfox/ghc-amd64/ghc-bin-${PV}-amd64.tbz2 )"
 #arch_binaries="$arch_binaries ia64?  ( http://code.haskell.org/~slyfox/ghc-ia64/ghc-bin-${PV}-ia64-fixed-fiw.tbz2 )"
-#arch_binaries="$arch_binaries ppc? ( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )"
+arch_binaries="$arch_binaries ppc? ( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )"
 #arch_binaries="$arch_binaries ppc64? ( mirror://gentoo/ghc-bin-${PV}-ppc64.tbz2 )"
 arch_binaries="$arch_binaries sparc? ( http://code.haskell.org/~slyfox/ghc-sparc/ghc-bin-${PV}-sparc.tbz2 )"
 arch_binaries="$arch_binaries x86? ( http://code.haskell.org/~slyfox/ghc-x86/ghc-bin-${PV}-x86.tbz2 )"
@@ -68,6 +68,9 @@ yet_binary() {
 			return 0
 			;;
 		x86)
+			return 0
+			;;
+		ppc)
 			return 0
 			;;
 		*)
@@ -364,6 +367,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-7.0.4-darwin8.patch
 		epatch "${FILESDIR}"/${PN}-6.12.3-mach-o-relocation-limit.patch
 		epatch "${FILESDIR}"/${PN}-7.0.4-nxstack.patch
+		epatch "${FILESDIR}/ghc-7.0.4-fix-ppc-linker.patch"
 
 		if use prefix; then
 			# Make configure find docbook-xsl-stylesheets from Prefix

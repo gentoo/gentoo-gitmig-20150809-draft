@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.209 2011/08/23 18:08:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.210 2011/12/28 08:47:34 josejx Exp $
+
+  28 Dec 2011; Joseph Jezak <josejx@gentoo.org> ghc-7.0.4.ebuild,
+  +files/ghc-7.0.4-fix-ppc-linker.patch:
+  Added patch for compilation on ppc32 and added binary build.
 
   23 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.0.4.ebuild,
   +files/ghc-7.0.4-nxstack.patch:
