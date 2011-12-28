@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.183 2011/12/28 06:50:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.184 2011/12/28 08:17:37 ago Exp $
+
+  28 Dec 2011; Agostino Sarubbo <ago@gentoo.org> heimdal-1.5.1-r1.ebuild:
+  Stable for AMD64, wrt security bug #396105
 
   28 Dec 2011; Eray Aslan <eras@gentoo.org> heimdal-1.5.1-r1.ebuild:
   Add blocker against mit-krb5-appl - bug #396245
