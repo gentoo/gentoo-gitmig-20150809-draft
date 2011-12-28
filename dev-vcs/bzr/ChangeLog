@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.44 2011/12/26 22:41:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.45 2011/12/28 14:29:30 fauli Exp $
+
+  28 Dec 2011; Christian Faulhammer <fauli@gentoo.org> bzr-2.4.2.ebuild:
+  drop Emacs support as Emacs 23 and above ship it directly, see bug 396103
 
   26 Dec 2011; Mike Gilbert <floppym@gentoo.org> bzr-2.4.2.ebuild:
   Add || die.

@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.2.ebuild,v 1.3 2011/12/26 22:41:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.2.ebuild,v 1.4 2011/12/28 14:29:30 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.*"
 
-inherit bash-completion-r1 distutils elisp-common eutils versionator
+inherit bash-completion-r1 distutils eutils versionator
 
 MY_P=${PN}-${PV}
 SERIES=$(get_version_component_range 1-2)
@@ -20,14 +20,13 @@ SRC_URI="http://launchpad.net/bzr/${SERIES}/${PV}/+download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
-IUSE="curl doc emacs +sftp test"
+IUSE="curl doc +sftp test"
 
 RDEPEND="|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-python/celementtree )
 	curl? ( dev-python/pycurl )
 	sftp? ( dev-python/paramiko )"
 
-DEPEND="emacs? ( virtual/emacs )
-	test? (
+DEPEND="test? (
 		${RDEPEND}
 		|| ( dev-python/pyftpdlib dev-python/medusa )
 		dev-python/subunit
@@ -40,21 +39,12 @@ PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 DOCS="doc/*.txt"
 PYTHON_MODNAME="bzrlib"
-SITEFILE="71bzr-gentoo.el"
 
 src_prepare() {
 	distutils_src_prepare
 
 	# Don't regenerate .c files from .pyx when pyrex is found.
 	epatch "${FILESDIR}/${PN}-2.4.2-no-pyrex-citon.patch"
-}
-
-src_compile() {
-	distutils_src_compile
-
-	if use emacs; then
-		elisp-compile contrib/emacs/bzr-mode.el || die
-	fi
 }
 
 src_test() {
@@ -94,32 +84,5 @@ src_install() {
 		done
 	fi
 
-	if use emacs; then
-		elisp-install ${PN} contrib/emacs/*.el* || die
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
-
-		# don't add automatically to the load-path, so the sitefile
-		# can do a conditional loading
-		touch "${ED}${SITELISP}/${PN}/.nosearch"
-	fi
-
 	dobashcomp contrib/bash/bzr || die
-}
-
-pkg_postinst() {
-	distutils_pkg_postinst
-
-	if use emacs; then
-		elisp-site-regen
-		elog "If you are using a GNU Emacs version greater than 22.1, bzr support"
-		elog "is already included.  This ebuild does not automatically activate bzr support"
-		elog "in versions below, but prepares it in a way you can load it from your ~/.emacs"
-		elog "file by adding"
-		elog "       (load \"bzr-mode\")"
-	fi
-}
-
-pkg_postrm() {
-	distutils_pkg_postrm
-	use emacs && elisp-site-regen
 }
