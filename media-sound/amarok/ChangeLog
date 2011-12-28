@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.414 2011/12/20 09:22:09 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.415 2011/12/28 01:39:32 jmbsvicetto Exp $
+
+*amarok-2.5.0-r1 (28 Dec 2011)
+*amarok-2.4.3-r1 (28 Dec 2011)
+
+  28 Dec 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-2.4.3-r1.ebuild, +amarok-2.5.0-r1.ebuild, metadata.xml:
+  [media-sound/amarok] Drop the player use flag until upstream allows to
+  disable the player again. Apply Matěj Laitl's patch to amarok-2.5.0.
 
 *amarok-2.5.0 (20 Dec 2011)
 
