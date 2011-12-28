@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.52 2011/12/28 14:41:56 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.53 2011/12/28 14:47:06 scarabeus Exp $
+
+  28 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> ifplugd-0.28-r9.ebuild:
+  Cleanup a bit to eapi4
 
   28 Dec 2011; Fabio Erculiani <lxnay@gentoo.org> ifplugd-0.28-r9.ebuild:
   seems to work on ~arm

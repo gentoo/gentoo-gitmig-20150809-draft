@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.6 2011/12/28 14:41:56 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.7 2011/12/28 14:47:06 scarabeus Exp $
+
+EAPI=4
 
 inherit eutils
 
@@ -19,33 +21,29 @@ DEPEND="dev-util/pkgconfig
 RDEPEND=">=dev-libs/libdaemon-0.5
 	>=sys-apps/baselayout-1.12"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-nlapi.diff"
 	epatch "${FILESDIR}/${P}-interface.patch"
 	epatch "${FILESDIR}/${P}-strictalias.patch"
 	epatch "${FILESDIR}/${P}-noip.patch"
 }
 
-src_compile() {
-	econf $(use_enable doc lynx) \
+src_configure() {
+	econf \
+		$(use_enable doc lynx) \
 		--with-initdir=/etc/init.d \
 		--disable-xmltoman \
-		--disable-subversion \
-		|| die "econf failed"
-	emake || die "emake failed"
+		--disable-subversion
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	default
 
 	# Remove init.d configuration as we no longer use it
 	rm -rf "${D}/etc/ifplugd" "${D}/etc/init.d/${PN}"
 
-	dodir "/etc/${PN}"
 	exeinto "/etc/${PN}"
-	newexe "${FILESDIR}/${PN}.action" "${PN}.action" || die
+	newexe "${FILESDIR}/${PN}.action" "${PN}.action"
 
 	cd "${S}/doc"
 	dodoc README SUPPORTED_DRIVERS
