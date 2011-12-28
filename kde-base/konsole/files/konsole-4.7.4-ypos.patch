@@ -1,0 +1,12 @@
+diff -Naur a/src/TerminalDisplay.cpp b/src/TerminalDisplay.cpp
+--- a/src/TerminalDisplay.cpp	2011-10-28 10:44:03.000000000 +0300
++++ b/src/TerminalDisplay.cpp	2011-12-28 02:32:02.686667954 +0200
+@@ -718,7 +718,7 @@
+         if (_bidiEnabled)
+             painter.drawText(rect,0,text);
+         else
+-            painter.drawText(rect,0,LTR_OVERRIDE_CHAR+text);
++            painter.drawText(rect,Qt::AlignBottom,LTR_OVERRIDE_CHAR+text);
+     }
+ }
+ 

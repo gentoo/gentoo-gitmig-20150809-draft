@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.213 2011/12/18 19:46:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.214 2011/12/28 17:26:43 dilfridge Exp $
+
+*konsole-4.7.4-r1 (28 Dec 2011)
+
+  28 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> -konsole-4.7.4.ebuild,
+  +konsole-4.7.4-r1.ebuild, +files/konsole-4.7.4-ypos.patch:
+  Fix rendering with qt-4.8, bug 396259
 
   18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> -konsole-4.6.5.ebuild:
   Drop KDE 4.6.5
