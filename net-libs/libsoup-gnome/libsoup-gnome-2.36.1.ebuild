@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.36.1.ebuild,v 1.1 2011/10/30 02:38:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.36.1.ebuild,v 1.2 2011/12/28 16:41:30 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -49,9 +49,8 @@ src_configure() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Use lib present on the system
 	epatch "${FILESDIR}"/${PN}-2.36.1-system-lib.patch
 	eautoreconf
+	gnome2_src_prepare
 }

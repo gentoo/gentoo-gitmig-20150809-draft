@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.62 2011/10/30 02:38:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.63 2011/12/28 16:41:30 pacho Exp $
+
+  28 Dec 2011; Pacho Ramos <pacho@gentoo.org> -libsoup-gnome-2.32.2.ebuild,
+  -libsoup-gnome-2.34.2.ebuild, libsoup-gnome-2.36.1.ebuild:
+  Move gnome2_src_prepare to proper place. Drop old.
 
 *libsoup-gnome-2.36.1 (30 Oct 2011)
 
