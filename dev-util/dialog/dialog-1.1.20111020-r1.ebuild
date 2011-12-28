@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20111020.ebuild,v 1.1 2011/12/27 03:19:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20111020-r1.ebuild,v 1.1 2011/12/28 16:44:25 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit multilib
 
@@ -44,16 +44,20 @@ src_configure() {
 
 src_install() {
 	if use minimal; then
-		emake DESTDIR="${D}" install || die "install failed"
+		emake DESTDIR="${D}" install
 	else
-		emake DESTDIR="${D}" install-full || die "install failed"
+		emake DESTDIR="${D}" install-full
 	fi
 
 	dodoc CHANGES README VERSION
 
 	if use examples; then
 		docinto samples
-		dodoc samples/*
+		dodoc $( find samples -maxdepth 1 -type f )
+		docinto samples/copifuncs
+		dodoc $( find samples/copifuncs -maxdepth 1 -type f )
+		docinto samples/install
+		dodoc $( find samples/install -type f )
 	fi
 
 	if ! use static-libs; then
