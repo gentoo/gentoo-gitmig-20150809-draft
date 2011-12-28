@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/nautilus-tracker-tags-0.12.7.ebuild,v 1.1 2011/11/02 16:24:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/nautilus-tracker-tags-0.12.9.ebuild,v 1.1 2011/12/28 05:39:27 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="tracker"
