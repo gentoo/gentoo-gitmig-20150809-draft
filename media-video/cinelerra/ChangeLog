@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.50 2011/12/23 03:46:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.51 2011/12/28 17:36:34 ago Exp $
+
+  28 Dec 2011; Agostino Sarubbo <ago@gentoo.org> cinelerra-20101104.ebuild:
+  Stable for AMD64, wrt bug #333471
 
   23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
   cinelerra-20111223.ebuild:
