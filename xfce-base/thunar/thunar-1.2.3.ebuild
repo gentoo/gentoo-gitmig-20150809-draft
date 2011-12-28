@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.2.3.ebuild,v 1.5 2011/11/26 17:54:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.2.3.ebuild,v 1.6 2011/12/28 12:47:10 ssuominen Exp $
 
 EAPI=4
 inherit virtualx xfconf
@@ -29,8 +29,7 @@ COMMON_DEPEND=">=xfce-base/exo-0.6
 	pcre? ( >=dev-libs/libpcre-6 )
 	startup-notification? ( x11-libs/startup-notification )
 	udev? ( || ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] ) )
-	xfce_plugins_trash? ( >=dev-libs/dbus-glib-0.88
-		>=xfce-base/xfce4-panel-4.8 )"
+	xfce_plugins_trash? ( >=xfce-base/xfce4-panel-4.8 )"
 RDEPEND="${COMMON_DEPEND}
 	x11-misc/shared-mime-info
 	dev-util/desktop-file-utils
@@ -41,6 +40,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext"
+REQUIRED_USE="xfce_plugins_trash? ( dbus )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -57,11 +57,7 @@ pkg_setup() {
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 		)
 
-	if use xfce_plugins_trash; then
-		XFCONF+=( --enable-dbus )
-	else
-		XFCONF+=( --disable-tpa-plugin )
-	fi
+	use xfce_plugins_trash || XFCONF+=( --disable-tpa-plugin )
 
 	DOCS=( AUTHORS ChangeLog FAQ HACKING NEWS README THANKS TODO )
 }

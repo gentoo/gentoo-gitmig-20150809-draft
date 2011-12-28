@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.130 2011/11/29 00:18:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.131 2011/12/28 12:47:10 ssuominen Exp $
+
+  28 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> thunar-1.2.3.ebuild:
+  Convert to REQUIRED_USE for xfce_plugins_trash and dbus.
 
   29 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -thunar-1.2.2.ebuild,
   -thunar-1.2.2-r1.ebuild, -files/thunar-1.2.2-locale.patch:
