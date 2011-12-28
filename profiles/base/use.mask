@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.130 2011/12/22 12:27:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.131 2011/12/28 12:49:55 graaff Exp $
 
 # vdpau is currently only available with binary nvidia-drivers, thus amd64/x86*
 vdpau
@@ -259,9 +259,7 @@ kdeprefix
 pvm
 
 # Alex Legler <a3li@gentoo.org> (7 Dec 2009)
-# Ruby 1.9 is hardmasked
 # JRuby, REE18, and Rubinius are whitelisted on supported arches
-ruby_targets_ruby19
 ruby_targets_jruby
 ruby_targets_ree18
 ruby_targets_rbx

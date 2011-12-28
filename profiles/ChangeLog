@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6045 2011/12/26 12:21:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6046 2011/12/28 12:49:55 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> base/use.mask, package.mask:
+  Unmask ruby 1.9 and associated use flag.
 
   26 Dec 2011; Christian Faulhammer <fauli@gentoo.org> package.mask:
   Lift temporary mask of Claws Mail
