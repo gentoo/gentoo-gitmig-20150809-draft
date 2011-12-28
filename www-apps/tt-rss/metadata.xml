@@ -3,14 +3,14 @@
 <pkgmetadata>
 <herd>proxy-maintainers</herd>
 <maintainer>
-     <email>hwoarang@gentoo.org</email>
-     <name>Markos Chandras</name>
-     <description>Proxy maintainer. CC him on bugs</description>
-</maintainer>
-<maintainer>
      <email>mail@patrick-nagel.net</email>
      <name>Patrick Nagel</name>
-     <description>Maintainer. Assign bugs to him</description>
+     <description>Maintainer</description>
+</maintainer>
+<maintainer>
+<email>hwoarang@gentoo.org</email>
+<name>Markos Chandras</name>
+<description>Proxy maintainer</description>
 </maintainer>
 <use>
 	<flag name="daemon">Install additional init scripts for automated RSS updates</flag>
