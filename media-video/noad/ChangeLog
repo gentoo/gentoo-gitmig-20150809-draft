@@ -1,6 +1,12 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.49 2011/04/06 17:33:09 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.50 2011/12/28 21:38:26 hd_brummy Exp $
+
+*noad-0.7.3 (28 Dec 2011)
+
+  28 Dec 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/patches-0.7.x/noad-0.7.3-hangcheck.diff, +noad-0.7.3.ebuild:
+  version bump, fix for newer ffmpeg, bug #394741; thx to E.Seifert
 
   06 Apr 2011; Christian Ruppert <idl0r@gentoo.org> noad-0.6.0-r9.ebuild,
   noad-0.7.2-r2.ebuild:
