@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langhungarian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhungarian/ChangeLog,v 1.39 2011/10/05 16:14:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhungarian/ChangeLog,v 1.40 2011/12/28 05:49:26 jer Exp $
+
+  28 Dec 2011; Jeroen Roovers <jer@gentoo.org>
+  texlive-langhungarian-2011.ebuild:
+  Stable for HPPA (bug #395735).
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
   -texlive-langhungarian-2008.ebuild, -texlive-langhungarian-2009.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-fontsrecommended
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsrecommended/ChangeLog,v 1.45 2011/10/05 17:48:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsrecommended/ChangeLog,v 1.46 2011/12/28 04:39:16 jer Exp $
+
+  28 Dec 2011; Jeroen Roovers <jer@gentoo.org>
+  texlive-fontsrecommended-2011.ebuild:
+  Stable for HPPA (bug #395735).
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
   -texlive-fontsrecommended-2008.ebuild, -texlive-fontsrecommended-2009.ebuild:

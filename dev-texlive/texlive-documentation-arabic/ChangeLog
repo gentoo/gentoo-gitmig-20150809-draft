@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-arabic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-arabic/ChangeLog,v 1.14 2011/10/04 18:05:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-arabic/ChangeLog,v 1.15 2011/12/28 05:21:01 jer Exp $
+
+  28 Dec 2011; Jeroen Roovers <jer@gentoo.org>
+  texlive-documentation-arabic-2011.ebuild:
+  Stable for HPPA (bug #395735).
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org>
   texlive-documentation-arabic-2010.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-pictures
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.52 2011/12/13 10:44:48 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.53 2011/12/28 04:55:39 jer Exp $
+
+  28 Dec 2011; Jeroen Roovers <jer@gentoo.org> texlive-pictures-2011.ebuild:
+  Stable for HPPA (bug #395735).
 
   13 Dec 2011; Naohiro Aota <naota@gentoo.org> texlive-pictures-2010-r1.ebuild:
   Add ~x86-fbsd wrt #352300

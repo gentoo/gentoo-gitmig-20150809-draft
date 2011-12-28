@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langindic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langindic/ChangeLog,v 1.41 2011/10/05 15:45:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langindic/ChangeLog,v 1.42 2011/12/28 05:49:47 jer Exp $
+
+  28 Dec 2011; Jeroen Roovers <jer@gentoo.org> texlive-langindic-2011.ebuild:
+  Stable for HPPA (bug #395735).
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
   -texlive-langindic-2008-r1.ebuild, -texlive-langindic-2009.ebuild:

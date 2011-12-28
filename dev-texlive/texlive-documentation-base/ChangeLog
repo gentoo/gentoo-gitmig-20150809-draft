@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-base/ChangeLog,v 1.43 2011/11/07 13:51:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-base/ChangeLog,v 1.44 2011/12/28 04:34:46 jer Exp $
+
+  28 Dec 2011; Jeroen Roovers <jer@gentoo.org>
+  texlive-documentation-base-2011.ebuild:
+  Stable for HPPA (bug #395735).
 
   07 Nov 2011; Alexis Ballier <aballier@gentoo.org>
   -texlive-documentation-base-2008.ebuild,
