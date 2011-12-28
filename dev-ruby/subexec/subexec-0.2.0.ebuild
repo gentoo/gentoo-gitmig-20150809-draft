@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/subexec-0.2.0.ebuild,v 1.1 2011/11/04 07:15:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/subexec-0.2.0.ebuild,v 1.2 2011/12/28 11:13:01 graaff Exp $
 
 EAPI=4
 
@@ -27,7 +27,6 @@ IUSE=""
 RUBY_S="${GITHUB_USER}-${PN}-*"
 
 ruby_add_bdepend "test? (
-	dev-ruby/ruby-debug
 	dev-ruby/shoulda
 	dev-ruby/rspec:2 )"
 
