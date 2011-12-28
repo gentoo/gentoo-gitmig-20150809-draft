@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.46 2011/12/15 16:02:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.47 2011/12/28 08:37:52 graaff Exp $
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> facter-1.6.0.ebuild:
+  Drop ruby19 from stable version.
 
   15 Dec 2011; MATSUU Takuto <matsuu@gentoo.org> facter-1.6.4.ebuild:
   Added sys-apps/lsb-release and sys-apps/pciutils to RDEPEND.
