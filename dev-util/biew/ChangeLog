@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/biew
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.31 2011/12/15 22:50:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.32 2011/12/28 08:08:40 xmw Exp $
+
+  28 Dec 2011; Michael Weber <xmw@gentoo.org> metadata.xml:
+  taking maint
 
   15 Dec 2011; Pacho Ramos <pacho@gentoo.org> -files/biew-570-configure.patch,
   -files/biew-570-makefile.patch:
