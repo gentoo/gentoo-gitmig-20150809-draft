@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.191 2011/12/08 05:53:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.192 2011/12/28 15:41:21 swift Exp $
+
+  28 Dec 2011; <swift@gentoo.org> nfs-utils-1.2.4.ebuild:
+  Add selinux triggered dependencies on selinux-rpc and selinux-rpcbind
 
   08 Dec 2011; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.4.ebuild,
   +files/nfs-utils-1.2.4-no-nfsctl.patch:

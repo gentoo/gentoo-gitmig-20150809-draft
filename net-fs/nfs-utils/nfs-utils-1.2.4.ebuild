@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.4.ebuild,v 1.6 2011/12/08 05:53:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.4.ebuild,v 1.7 2011/12/28 15:41:21 swift Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/nfs/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="caps ipv6 kerberos nfsidmap +nfsv3 +nfsv4 nfsv41 tcpd elibc_glibc"
+IUSE="caps ipv6 kerberos nfsidmap +nfsv3 +nfsv4 nfsv41 selinux tcpd elibc_glibc"
 RESTRICT="test" #315573
 
 # kth-krb doesn't provide the right include
@@ -38,6 +38,10 @@ DEPEND_COMMON="tcpd? ( sys-apps/tcp-wrappers )
 			>=net-libs/libnfsidmap-0.24
 			sys-apps/keyutils
 		)
+	)
+	selinux? (
+		sec-policy/selinux-rpc
+		sec-policy/selinux-rpcbind
 	)"
 RDEPEND="${DEPEND_COMMON} !net-nds/portmap"
 # util-linux dep is to prevent man-page collision
