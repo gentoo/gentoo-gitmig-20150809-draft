@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.1.3.ebuild,v 1.2 2011/12/27 09:10:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.1.3.ebuild,v 1.3 2011/12/28 11:18:33 graaff Exp $
 
 EAPI=4
 
@@ -33,9 +33,7 @@ ruby_add_rdepend "
 
 ruby_add_bdepend "
 	test? (
-		dev-ruby/ruby-debug
 		>=dev-ruby/mocha-0.9.5
-		virtual/ruby-test-unit
 	)"
 
 all_ruby_prepare() {
