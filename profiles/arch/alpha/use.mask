@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.52 2011/10/28 05:04:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.53 2011/12/28 16:24:20 graaff Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -169,3 +169,7 @@ topal
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # We don't have sys-devel/llvm
 llvm
+
+# Hans de Graaff <graaff@gentoo.org> (28 Dec 2011)
+# Temporarily masking since ruby 1.9 isn't fully keyworded yet, bug 332593
+ruby_targets_ruby19
