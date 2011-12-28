@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.48 2011/12/26 12:35:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.49 2011/12/28 15:47:58 fauli Exp $
+
+  28 Dec 2011; Christian Faulhammer <fauli@gentoo.org> alexandria-0.6.7.ebuild:
+  fix some Ruby 1.9 install issues as reported by Tomoh K. in bug 267483
 
   26 Dec 2011; Agostino Sarubbo <ago@gentoo.org> alexandria-0.6.7.ebuild:
   Stable for AMD64, wrt bug #396061

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.7.ebuild,v 1.2 2011/12/26 12:35:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.7.ebuild,v 1.3 2011/12/28 15:47:58 fauli Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -40,8 +40,8 @@ each_ruby_compile() {
 }
 
 each_ruby_install() {
-	export DESTDIR="${D}" PREFIX=/usr
-	rake install_package_staging || die
+	export DESTDIR="${D}" PREFIX=/usr RUBYLIBDIR="$(ruby_rbconfig_value 'sitelibdir')"
+	${RUBY} -S rake install_package_staging || die
 }
 
 all_ruby_install() {
