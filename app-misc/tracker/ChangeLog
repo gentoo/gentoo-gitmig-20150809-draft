@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.119 2011/11/26 19:27:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.120 2011/12/28 05:39:02 tetromino Exp $
+
+*tracker-0.12.9 (28 Dec 2011)
+
+  28 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -tracker-0.12.7.ebuild, +tracker-0.12.9.ebuild:
+  Version bump. Notable changes: fixes crashes and memory leaks, improves
+  glib-2.31 compatibility, adds support for TRACKER_USE_CONFIG_FILES env
+  variable (makes tracker store settings in text files in ~/.config/tracker/
+  instead of using gsettings). Drop old.
 
 *tracker-0.12.8 (26 Nov 2011)
 
