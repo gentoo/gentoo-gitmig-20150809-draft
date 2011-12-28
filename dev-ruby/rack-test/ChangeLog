@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-test
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.17 2011/09/09 08:00:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.18 2011/12/28 12:34:15 graaff Exp $
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> rack-test-0.6.1.ebuild:
+  Add ruby19. Require bundler to handle loading the proper rack version.
 
   09 Sep 2011; Fabian Groffen <grobian@gentoo.org> rack-test-0.5.7.ebuild:
   Marked ~sparc-solaris

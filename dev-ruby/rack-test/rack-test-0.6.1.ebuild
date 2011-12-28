@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/rack-test-0.6.1.ebuild,v 1.1 2011/07/29 05:04:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/rack-test-0.6.1.ebuild,v 1.2 2011/12/28 12:34:15 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ruby19 ree18"
 
 # no documentation is generable, it needs hanna, which is broken
 RUBY_FAKEGEM_TASK_DOC=""
@@ -23,9 +23,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_rdepend '>=dev-ruby/rack-1.0'
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 >=dev-ruby/sinatra-1.2.6 )"
+ruby_add_bdepend "test? ( dev-ruby/rspec:2 dev-ruby/bundler >=dev-ruby/sinatra-1.2.6 )"
 
 all_ruby_prepare() {
-	# Remove Bundler related code.
-	rm Gemfile Gemfile.lock || die "Unable to clean unneeded Bundler items."
+	rm Gemfile.lock
 }
