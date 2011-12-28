@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nqp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.2 2011/12/27 07:28:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.3 2011/12/28 04:07:09 patrick Exp $
+
+  28 Dec 2011; Patrick Lauer <patrick@gentoo.org> nqp-2011.12.ebuild:
+  Restrict makeopts to fix #396183
 
 *nqp-2011.12 (27 Dec 2011)
 
