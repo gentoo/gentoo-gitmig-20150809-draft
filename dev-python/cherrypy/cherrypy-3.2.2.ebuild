@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.2.1.ebuild,v 1.2 2011/12/28 22:44:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.2.2.ebuild,v 1.1 2011/12/28 22:44:07 floppym Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="*:2.5"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4"
@@ -49,6 +49,6 @@ src_install() {
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins -r cherrypy/tutorial || die "Installation of documentation failed"
+		doins -r cherrypy/tutorial
 	fi
 }
