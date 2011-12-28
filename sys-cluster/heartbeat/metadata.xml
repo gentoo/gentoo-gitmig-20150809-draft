@@ -6,9 +6,4 @@
   <longdescription>
     Heartbeat is a cluster manager to handle failover of 2 nodes.
   </longdescription>
-  <use>
-  	<flag name='ldirectord'>Adds support for ldiretord, use enabled because it
-	has a lot of deps</flag>
-  	<flag name='management'>Adds support for management GUI</flag>
-  </use>
 </pkgmetadata>

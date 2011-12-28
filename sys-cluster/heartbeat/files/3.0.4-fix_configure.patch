@@ -97,3 +97,14 @@
  
  dnl *************************************************************************
  PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin"
+--- work/Heartbeat-3-0-STABLE-3.0.5/configure.in	2011-12-28 11:51:05.601673071 +0100
++++ work2/Heartbeat-3-0-STABLE-3.0.5/configure.in	2011-12-28 11:54:34.223094385 +0100
+@@ -2002,7 +2002,7 @@
+ fi
+ 
+ if test "$GCC" = yes; then
+-  CFLAGS="$CFLAGS -ggdb3"
++  CFLAGS="$CFLAGS"
+   if
+     cc_supports_flag -funsigned-char
+   then

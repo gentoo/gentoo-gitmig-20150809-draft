@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.101 2011/10/18 17:27:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.102 2011/12/28 11:06:55 ultrabug Exp $
+
+  28 Dec 2011; Ultrabug <ultrabug@gentoo.org> files/3.0.4-fix_configure.patch,
+  heartbeat-3.0.5.ebuild, metadata.xml:
+  Ebuild cleanup, fix #387025, #387027 thanks to ago.
 
   18 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> -heartbeat-1.2.5.ebuild,
   -heartbeat-1.2.5-r1.ebuild, -heartbeat-2.0.7-r2.ebuild,
