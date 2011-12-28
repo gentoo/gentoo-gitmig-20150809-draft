@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-0.10.8.ebuild,v 1.11 2011/10/17 16:11:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-0.10.8.ebuild,v 1.12 2011/12/28 16:29:44 pacho Exp $
 
 EAPI="2"
 
@@ -31,8 +31,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix build with USE=introspection, bug #350061
 	epatch "${FILESDIR}/${PN}-0.10.8-fix-introspection-build.patch"
 
@@ -44,4 +42,5 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gold.patch
 
 	eautoreconf
+	gnome2_src_prepare
 }
