@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/bzr-git-0.6.2.ebuild,v 1.2 2011/10/30 11:46:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/bzr-git-0.6.2.ebuild,v 1.3 2011/12/28 16:07:00 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -33,5 +33,5 @@ RESTRICT="test"
 # Check info.py for dulwich and bzr version dependency info.
 # The file should be fairly straightforward to understand.
 DEPEND=""
-RDEPEND=">=dev-python/dulwich-0.5.0
+RDEPEND=">=dev-python/dulwich-0.8.0
 	>=dev-vcs/bzr-2.3.0"
