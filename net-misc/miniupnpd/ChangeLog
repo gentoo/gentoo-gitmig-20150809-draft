@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/miniupnpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.21 2011/10/17 12:03:01 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.22 2011/12/28 14:58:45 gurligebis Exp $
+
+*miniupnpd-1.7_pre20111118 (28 Dec 2011)
+
+  28 Dec 2011; <gurligebis@gentoo.org> +miniupnpd-1.7_pre20111118.ebuild,
+  +files/miniupnpd-nettools_newoutput.patch:
+  Bumping to 1.7_pre20111118 and adding support for new ifconfig output format.
 
   17 Oct 2011; <gurligebis@gentoo.org> files/miniupnpd-init.d:
   Adding use minissdpd to depend section in init.d script, fixing bug #387337.

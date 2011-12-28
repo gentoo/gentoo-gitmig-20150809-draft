@@ -1,0 +1,36 @@
+diff -aurp netfilter/iptables_init_and_clean.sh netfilter/iptables_init_and_clean.sh
+--- netfilter/iptables_init_and_clean.sh	2011-12-28 14:48:58.207334111 +0000
++++ netfilter/iptables_init_and_clean.sh	2011-12-28 14:50:31.982327230 +0000
+@@ -5,7 +5,7 @@
+ 
+ EXTIF=eth0
+ IPTABLES=/sbin/iptables
+-EXTIP="`LC_ALL=C /sbin/ifconfig $EXTIF | grep 'inet addr' | awk '{print $2}' | sed -e 's/.*://'`"
++EXTIP="`LC_ALL=C /sbin/ifconfig $EXTIF | grep 'inet ' | awk '{print $2}' | sed -e 's/.*://'`"
+ NDIRTY="`LC_ALL=C /sbin/iptables -t nat -L -n | grep 'MINIUPNPD' | awk '{printf $1}'`"
+ FDIRTY="`LC_ALL=C /sbin/iptables -t filter -L -n | grep 'MINIUPNPD' | awk '{printf $1}'`"
+ echo "External IP = $EXTIP"
+diff -aurp netfilter/iptables_init.sh netfilter/iptables_init.sh
+--- netfilter/iptables_init.sh	2011-12-28 14:48:58.207334111 +0000
++++ netfilter/iptables_init.sh	2011-12-28 14:50:41.214329654 +0000
+@@ -4,7 +4,7 @@ IPTABLES=/sbin/iptables
+ 
+ #change this parameters :
+ EXTIF=eth0
+-EXTIP="`LC_ALL=C /sbin/ifconfig $EXTIF | grep 'inet addr' | awk '{print $2}' | sed -e 's/.*://'`"
++EXTIP="`LC_ALL=C /sbin/ifconfig $EXTIF | grep 'inet ' | awk '{print $2}' | sed -e 's/.*://'`"
+ echo "External IP = $EXTIP"
+ 
+ #adding the MINIUPNPD chain for nat
+diff -aurp netfilter/iptables_removeall.sh netfilter/iptables_removeall.sh
+--- netfilter/iptables_removeall.sh	2011-12-28 14:48:58.207334111 +0000
++++ netfilter/iptables_removeall.sh	2011-12-28 14:50:47.822327499 +0000
+@@ -4,7 +4,7 @@ IPTABLES=/sbin/iptables
+ 
+ #change this parameters :
+ EXTIF=eth0
+-EXTIP="`LC_ALL=C /sbin/ifconfig $EXTIF | grep 'inet addr' | awk '{print $2}' | sed -e 's/.*://'`"
++EXTIP="`LC_ALL=C /sbin/ifconfig $EXTIF | grep 'inet ' | awk '{print $2}' | sed -e 's/.*://'`"
+ 
+ #removing the MINIUPNPD chain for nat
+ $IPTABLES -t nat -F MINIUPNPD
