@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.518 2011/12/28 15:55:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.519 2011/12/28 17:33:12 graaff Exp $
+
+*ruby-1.8.7_p357 (28 Dec 2011)
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> +ruby-1.8.7_p357.ebuild:
+  Version bump for security bug 396301.
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p0.ebuild:
   Drop alpha, arm, hppa for now since each missing a dependency, bug 332593.
