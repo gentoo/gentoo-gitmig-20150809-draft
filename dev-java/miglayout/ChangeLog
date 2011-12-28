@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/miglayout
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/miglayout/ChangeLog,v 1.1 2011/12/28 16:24:33 sera Exp $
+
+*miglayout-4.0 (28 Dec 2011)
+
+  27 Dec 2011; Ralph Sennhauser <sera@gentoo.org> +miglayout-4.0.ebuild,
+  +metadata.xml:
+  New package. Thanks to Johannes Rauh <jarauh@hotmail.com> #301493
+
