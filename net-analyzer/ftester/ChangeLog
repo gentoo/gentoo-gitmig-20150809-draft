@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ftester
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ChangeLog,v 1.15 2008/03/12 17:18:53 phreak Exp $
+# Copyright 2002-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ChangeLog,v 1.16 2011/12/28 17:18:30 ago Exp $
+
+  28 Dec 2011; Agostino Sarubbo <ago@gentoo.org> ftester-1.0.ebuild:
+  Add ~amd64, wrt bug #308715
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrea Barisani (lcars, #94632) from metadata.xml.
