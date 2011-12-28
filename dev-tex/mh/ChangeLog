@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.25 2011/10/11 14:02:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.26 2011/12/28 04:58:31 jer Exp $
+
+  28 Dec 2011; Jeroen Roovers <jer@gentoo.org> mh-20111011.ebuild:
+  Stable for HPPA (bug #395735).
 
 *mh-20111011 (11 Oct 2011)
 
