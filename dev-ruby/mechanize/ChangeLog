@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/mechanize
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.30 2011/12/26 14:32:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.31 2011/12/28 08:35:42 graaff Exp $
+
+*mechanize-1.0.0-r1 (28 Dec 2011)
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> mechanize-1.0.0.ebuild,
+  +mechanize-1.0.0-r1.ebuild:
+  Revision bump to drop ruby19 from stable version.
 
   26 Dec 2011; Hans de Graaff <graaff@gentoo.org> mechanize-1.0.0.ebuild:
   Update nokogiri dependency to fix bug 365931.

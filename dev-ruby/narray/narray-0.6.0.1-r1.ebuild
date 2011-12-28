@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.6.0.1.ebuild,v 1.6 2011/12/28 08:31:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.6.0.1-r1.ebuild,v 1.1 2011/12/28 08:31:08 graaff Exp $
 
 EAPI=4
 
 # jruby → native extension
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
@@ -22,7 +22,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P/_/}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 hppa ~mips ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~x86"
 
 IUSE=""
 

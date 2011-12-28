@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mkrf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.20 2011/01/15 11:59:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.21 2011/12/28 08:32:16 graaff Exp $
+
+*mkrf-0.2.3-r2 (28 Dec 2011)
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> +mkrf-0.2.3-r2.ebuild:
+  Revision bump to drop ruby19 from stable version.
 
   15 Jan 2011; Hans de Graaff <graaff@gentoo.org> -mkrf-0.2.3.ebuild:
   Remove old version.
