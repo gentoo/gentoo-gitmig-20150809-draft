@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.9 2011/10/28 05:31:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.10 2011/12/28 19:21:41 alexxy Exp $
 
 EAPI=4
 
@@ -18,12 +18,7 @@ IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wimax wps k
 RDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
 		eap-sim? ( sys-apps/pcsc-lite )
-		madwifi? (
-			|| (
-				>net-wireless/madwifi-ng-tools-0.9.3
-				net-wireless/madwifi-old
-			)
-		)
+		madwifi? ( >net-wireless/madwifi-ng-tools-0.9.3 )
 		dev-libs/libnl:1.1
 	)
 	!kernel_linux? ( net-libs/libpcap )
