@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.12.9.ebuild,v 1.1 2011/12/28 05:39:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.12.9.ebuild,v 1.2 2011/12/28 17:23:08 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils gnome2 linux-info multilib python versionator
@@ -202,6 +201,7 @@ pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -227,7 +227,7 @@ src_prepare() {
 
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
-	Xemake check XDG_DATA_HOME="${T}" XDG_CONFIG_HOME="${T}" || die "tests failed"
+	Xemake check XDG_DATA_HOME="${T}" XDG_CONFIG_HOME="${T}"
 }
 
 src_install() {
@@ -236,12 +236,12 @@ src_install() {
 	# Manually symlink extensions for {firefox,thunderbird}-bin
 	if use firefox-bookmarks; then
 		dosym /usr/share/xul-ext/trackerfox \
-			/usr/$(get_libdir)/firefox-bin/extensions/trackerfox@bustany.org || die
+			/usr/$(get_libdir)/firefox-bin/extensions/trackerfox@bustany.org
 	fi
 
 	if use thunderbird; then
 		dosym /usr/share/xul-ext/trackerbird \
-			/usr/$(get_libdir)/thunderbird-bin/extensions/trackerbird@bustany.org || die
+			/usr/$(get_libdir)/thunderbird-bin/extensions/trackerbird@bustany.org
 	fi
 }
 
