@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1-r1.ebuild,v 1.1 2011/12/27 21:15:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1-r1.ebuild,v 1.2 2011/12/28 06:50:14 eras Exp $
 
 EAPI=2
 # PYTHON_BDEPEND="2"
@@ -26,7 +26,8 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	>=sys-libs/e2fsprogs-libs-1.41.11
 	afs? ( net-fs/openafs )
 	hdb-ldap? ( >=net-nds/openldap-2.3.0 )
-	!!app-crypt/mit-krb5"
+	!!app-crypt/mit-krb5
+	!!app-crypt/mit-krb5-appl"
 
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*
