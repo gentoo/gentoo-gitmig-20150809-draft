@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.451 2011/12/26 22:44:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.452 2011/12/28 17:35:19 ago Exp $
+
+  28 Dec 2011; Agostino Sarubbo <ago@gentoo.org> emacs-18.59-r8.ebuild:
+  Stable for AMD64, wrt bug #396139
 
   24 Dec 2011; Ulrich Mueller <ulm@gentoo.org> emacs-18.59-r8.ebuild:
   Updated patchset, properly includes the sys/wait.h header file.
