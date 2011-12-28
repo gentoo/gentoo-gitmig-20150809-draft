@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.161 2011/12/15 05:23:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.162 2011/12/28 05:48:28 dirtyepic Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -34,7 +34,7 @@ inherit eutils toolchain-funcs multilib
 setup-allowed-flags() {
 	if [[ -z ${ALLOWED_FLAGS} ]] ; then
 		export ALLOWED_FLAGS="-pipe"
-		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -O -O0 -O1 -O2 -mcpu -march -mtune"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -O -O1 -O2 -Os -mcpu -march -mtune"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fstack-protector -fstack-protector-all"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fbounds-checking -fno-strict-overflow"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-PIE -fno-pie -fno-unit-at-a-time"
@@ -64,9 +64,6 @@ setup-allowed-flags() {
 	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mno-fsgsbase -mno-rdrnd -mno-f16c \
 		-mno-bmi -mno-tbm"
 
-	# {C,CXX,F,FC}FLAGS that we are think is ok, but needs testing
-	# NOTE:  currently -Os have issues with gcc3 and K6* arch's
-	export UNSTABLE_FLAGS="-Os -O3 -freorder-blocks"
 	return 0
 }
 
@@ -337,11 +334,6 @@ strip-flags() {
 	local NEW_CXXFLAGS=""
 	local NEW_FFLAGS=""
 	local NEW_FCFLAGS=""
-
-	# Allow unstable C[XX]FLAGS if we are using unstable profile ...
-	if has "~$(tc-arch)" ${ACCEPT_KEYWORDS} ; then
-		ALLOWED_FLAGS="${ALLOWED_FLAGS} ${UNSTABLE_FLAGS}"
-	fi
 
 	set -f	# disable pathname expansion
 

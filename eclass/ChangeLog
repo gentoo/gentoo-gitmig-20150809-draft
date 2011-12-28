@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.60 2011/12/27 22:40:50 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.61 2011/12/28 05:48:28 dirtyepic Exp $
+
+  28 Dec 2011; Ryan Hill <dirtyepic@gentoo.org> flag-o-matic.eclass:
+  Remove UNSTABLE_FLAGS. Keyword status should not determine what flags are
+  used. Move -Os to allowed flags as it's been stable since 4.0ish and drop -O0
+  because it breaks things a lot.
 
   27 Dec 2011; Jesus Rivero <neurogeek@gentoo.org> subversion.eclass:
   Handle UUID mismatch by deleting working copy and checking out it again.
