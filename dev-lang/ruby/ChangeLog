@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.515 2011/12/18 18:09:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.516 2011/12/28 07:53:53 graaff Exp $
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> -ruby-1.8.7_p334-r1.ebuild,
+  -ruby-1.8.7_p334-r2.ebuild, -ruby-1.9.2_p290.ebuild, -ruby-1.9.3_rc1.ebuild:
+  Remove old versions.
 
 *ruby-1.9.3_p0 (18 Dec 2011)
 
