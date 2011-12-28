@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/rubygems-4.ebuild,v 1.1 2011/10/20 17:32:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/rubygems-4.ebuild,v 1.2 2011/12/28 14:54:08 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby19"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="${USE_RUBY}"
-KEYWORDS="~amd64 ~hppa ~mips ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-ruby/rubygems[ruby_targets_ruby19]"

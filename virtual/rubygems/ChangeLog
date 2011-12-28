@@ -1,6 +1,10 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.27 2011/10/21 07:11:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.28 2011/12/28 14:54:08 graaff Exp $
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> rubygems-4.ebuild:
+  Add missing keywords in accordance with dev-ruby/rubygems and
+  dev-lang/ruby:1.9.
 
   21 Oct 2011; Hans de Graaff <graaff@gentoo.org> rubygems-1.ebuild:
   Add missing stable keyword for x86.
