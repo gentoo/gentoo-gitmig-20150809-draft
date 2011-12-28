@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.15 2011/12/26 11:47:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.16 2011/12/28 10:57:38 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -128,7 +128,6 @@ qt4-r2_src_compile() {
 # @ECLASS-VARIABLE: DOCSDIR
 # @DESCRIPTION:
 # Directory containing documentation, defaults to ${S}.
-DOCSDIR="${DOCSDIR:-${S}}"
 
 # @FUNCTION: qt4-r2_src_install
 # @DESCRIPTION:
@@ -140,9 +139,9 @@ qt4-r2_src_install() {
 	emake INSTALL_ROOT="${D}" DESTDIR="${D}" install || die "emake install failed"
 
 	# install documentation
-	local doc
+	local doc dir="${DOCSDIR:-${S}}"
 	for doc in ${DOCS}; do
-		dodoc "${DOCSDIR}/${doc}" || die "dodoc failed"
+		dodoc "${dir}/${doc}" || die "dodoc failed"
 	done
 }
 
