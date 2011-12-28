@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbc-oracle-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/ChangeLog,v 1.6 2009/03/20 18:59:20 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/ChangeLog,v 1.7 2011/12/28 16:36:46 sera Exp $
+
+  28 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  jdbc-oracle-bin-10.2.0.3.ebuild, jdbc-oracle-bin-10.2.0.4.ebuild:
+  Fix download location, thanks to Adam Feldman <navysealltblue@gmail.com>
+  #396215
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org>
   jdbc-oracle-bin-10.2.0.3.ebuild:

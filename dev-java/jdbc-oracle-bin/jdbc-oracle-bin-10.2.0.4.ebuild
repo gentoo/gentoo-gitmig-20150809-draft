@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/jdbc-oracle-bin-10.2.0.4.ebuild,v 1.1 2008/09/06 13:07:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/jdbc-oracle-bin-10.2.0.4.ebuild,v 1.2 2011/12/28 16:36:46 sera Exp $
 
 inherit java-pkg-2
 
@@ -26,7 +26,7 @@ file_ons="${PN}-10.2.0.3-${file_ons_orig}"
 
 DESCRIPTION="JDBC 3.0 Drivers for Oracle"
 HOMEPAGE="http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html"
-DOWNLOAD_PAGE="http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html"
+DOWNLOAD_PAGE="http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html"
 SRC_URI="
 	!dms? (
 		!debug? ( ${file_main} )
