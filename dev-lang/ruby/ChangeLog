@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.517 2011/12/28 07:57:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.518 2011/12/28 15:55:30 graaff Exp $
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p0.ebuild:
+  Drop alpha, arm, hppa for now since each missing a dependency, bug 332593.
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p0.ebuild:
+  Drop alpha keyword for now because alpha doesn't have a new enough rubygems
+  keyworded, bug 332593.
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p0.ebuild:
   Block older versions of packages that are no longer compatible. Remove
