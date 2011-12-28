@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.6.ebuild,v 1.1 2011/12/13 21:36:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.12-r1.ebuild,v 1.1 2011/12/28 19:01:34 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -176,6 +176,9 @@ src_prepare() {
 	sed -i '1i#define OF(x) x' \
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
 		chrome/common/zip*.cc || die
+
+	# Revert WebKit changeset responsible for Gentoo bug #393471.
+	epatch "${FILESDIR}/${PN}-revert-jpeg-swizzle-r0.patch"
 
 	epatch_user
 
