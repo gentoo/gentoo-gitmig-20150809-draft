@@ -1,20 +1,31 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.2-r1.ebuild,v 1.6 2011/11/28 05:30:57 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.4-r1.ebuild,v 1.1 2011/12/28 10:34:38 ulm Exp $
 
-EAPI=3
+EAPI=4
 
 inherit elisp-common multilib wxwidgets
 
-MY_P="${P/_/-}"
-
 DESCRIPTION="Command-line driven interactive plotting program"
 HOMEPAGE="http://www.gnuplot.info/"
-SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
+
+if [[ -z ${PV%%*9999} ]]; then
+	inherit autotools cvs
+	ECVS_SERVER="gnuplot.cvs.sourceforge.net:/cvsroot/gnuplot"
+	ECVS_MODULE="gnuplot"
+	ECVS_BRANCH="branch-4-4-stable"
+	ECVS_USER="anonymous"
+	ECVS_CVS_OPTIONS="-dP"
+	MY_P="${PN}"
+	SRC_URI=""
+else
+	MY_P="${P/_/-}"
+	SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
+fi
 
 LICENSE="gnuplot GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="cairo doc emacs examples +gd ggi latex lua plotutils readline svga thin-splines wxwidgets X xemacs"
 
 RDEPEND="
@@ -46,6 +57,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
 		virtual/latex-base
+		dev-texlive/texlive-latexextra
 		app-text/ghostscript-gpl )
 	!emacs? ( xemacs? ( app-xemacs/texinfo ) )"
 
@@ -58,6 +70,16 @@ E_SITEFILE="50${PN}-gentoo.el"
 TEXMF="${EPREFIX}/usr/share/texmf-site"
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-tikz.patch"
+
+	if [[ -z ${PV%%*9999} ]]; then
+		local dir
+		for dir in config demo m4 term tutorial; do
+			emake -C "$dir" -f Makefile.am.in Makefile.am
+		done
+		eautoreconf
+	fi
+
 	# Add special version identification as required by provision 2
 	# of the gnuplot license
 	sed -i -e "1s/.*/& (Gentoo revision ${PR})/" PATCHLEVEL || die
@@ -92,7 +114,9 @@ src_configure() {
 		&& myconf="${myconf} --with-readline=gnu" \
 		|| myconf="${myconf} --with-readline=builtin"
 
-	econf ${myconf} DIST_CONTACT="http://bugs.gentoo.org/"
+	econf ${myconf} \
+		DIST_CONTACT="http://bugs.gentoo.org/" \
+		EMACS=$(usev emacs || usev xemacs || echo no)
 
 	if use xemacs; then
 		einfo "Configuring gnuplot-mode for XEmacs ..."
@@ -117,44 +141,44 @@ src_compile() {
 	# example plots.
 	addwrite /dev/svga:/dev/mouse:/dev/tts/0
 
-	emake all info || die
+	emake all info
 
 	if use xemacs; then
 		cd "${S}/lisp-xemacs"
-		emake || die
+		emake
 	fi
 
 	if use emacs; then
 		cd "${S}/lisp"
-		emake || die
+		emake
 	fi
 
 	if use doc; then
 		# Avoid sandbox violation in epstopdf/ghostscript
 		addpredict /var/cache/fontconfig
 		cd "${S}/docs"
-		emake pdf || die
+		emake pdf
 		cd "${S}/tutorial"
-		emake pdf || die
+		emake pdf
 
 		if use emacs || use xemacs; then
 			cd "${S}/lisp"
-			emake pdf || die
+			emake pdf
 		fi
 	fi
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	if use xemacs; then
 		cd "${S}/lisp-xemacs"
-		emake DESTDIR="${D}" install || die
+		emake DESTDIR="${D}" install
 	fi
 
 	if use emacs; then
 		cd "${S}/lisp"
-		emake DESTDIR="${D}" install || die
+		emake DESTDIR="${D}" install
 		# info-look* is included with >=emacs-21
 		rm -f "${ED}${SITELISP}/${PN}"/info-look*
 
@@ -173,7 +197,7 @@ src_install () {
 	if use examples; then
 		# Demo files
 		insinto /usr/share/${PN}/${GP_VERSION}
-		doins -r demo || die
+		doins -r demo
 		rm -f "${ED}"/usr/share/${PN}/${GP_VERSION}/demo/Makefile*
 		rm -f "${ED}"/usr/share/${PN}/${GP_VERSION}/demo/binary*
 	fi
@@ -200,23 +224,23 @@ pkg_postinst() {
 	use emacs && elisp-site-regen
 	use latex && texmf-update
 
-	einfo "Gnuplot no longer links against pdflib, see the ChangeLog for"
-	einfo "details. You can use the \"pdfcairo\" terminal for PDF output."
-	use cairo || einfo "It is available with USE=\"cairo\"."
+	elog "Gnuplot no longer links against pdflib, see the ChangeLog for"
+	elog "details. You can use the \"pdfcairo\" terminal for PDF output."
+	use cairo || elog "It is available with USE=\"cairo\"."
 
 	if use svga; then
 		echo
-		einfo "In order to enable ordinary users to use SVGA console graphics"
-		einfo "gnuplot needs to be set up as setuid root.  Please note that"
-		einfo "this is usually considered to be a security hazard."
-		einfo "As root, manually \"chmod u+s /usr/bin/gnuplot\"."
+		elog "In order to enable ordinary users to use SVGA console graphics"
+		elog "gnuplot needs to be set up as setuid root. Please note that"
+		elog "this is usually considered to be a security hazard."
+		elog "As root, manually \"chmod u+s /usr/bin/gnuplot\"."
 	fi
 	if use gd; then
 		echo
-		einfo "For font support in png/jpeg/gif output, you may have to"
-		einfo "set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT environment"
-		einfo "variables. See the FAQ file in /usr/share/doc/${PF}/"
-		einfo "for more information."
+		elog "For font support in png/jpeg/gif output, you may have to"
+		elog "set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT environment"
+		elog "variables. See the FAQ file in /usr/share/doc/${PF}/"
+		elog "for more information."
 	fi
 }
 

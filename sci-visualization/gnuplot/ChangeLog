@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.170 2011/11/28 08:41:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.171 2011/12/28 10:34:38 ulm Exp $
+
+*gnuplot-4.4.4-r1 (28 Dec 2011)
+
+  28 Dec 2011; Ulrich Mueller <ulm@gentoo.org> -gnuplot-4.4.2-r1.ebuild,
+  +gnuplot-4.4.4-r1.ebuild, +files/gnuplot-4.4.4-tikz.patch:
+  Fix tikz support, bug 396251, patch from upstream bug tracker. Update ebuild
+  to EAPI 4. Remove old.
 
   28 Nov 2011; Ulrich Mueller <ulm@gentoo.org>
   -files/gnuplot-4.2.2-disable_texi_generation.patch,
