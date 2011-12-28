@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.167 2011/12/18 17:17:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.168 2011/12/28 19:14:10 halcy0n Exp $
+
+  28 Dec 2011; Mark Loeser <halcy0n@gentoo.org> icu-4.8.1-r2.ebuild:
+  Stable for ppc/ppc64; bug #387259
 
   18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> icu-4.8.1-r1.ebuild:
   Stable for ppc; bug #387259
