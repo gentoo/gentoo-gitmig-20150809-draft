@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/rpcbind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.16 2011/09/21 08:18:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.17 2011/12/28 15:56:31 swift Exp $
+
+  28 Dec 2011; <swift@gentoo.org> rpcbind-0.2.0.ebuild:
+  Add selinux dependency for selinux-rpcbind
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> rpcbind-9999.ebuild:
   Migrate to git-2.

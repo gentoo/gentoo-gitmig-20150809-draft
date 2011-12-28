@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0.ebuild,v 1.11 2011/09/02 20:10:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0.ebuild,v 1.12 2011/12/28 15:56:31 swift Exp $
 
 EAPI="2"
 
@@ -20,9 +20,10 @@ HOMEPAGE="http://sourceforge.net/projects/rpcbind/"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE=""
+IUSE="selinux"
 
-RDEPEND="net-libs/libtirpc"
+RDEPEND="net-libs/libtirpc
+	selinux? ( sec-policy/selinux-rpcbind )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
