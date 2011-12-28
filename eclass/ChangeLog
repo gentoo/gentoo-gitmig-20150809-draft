@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.62 2011/12/28 06:28:55 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.63 2011/12/28 13:38:05 psomas Exp $
+
+  28 Dec 2011; Stratos Psomadakis <psomas@gentoo.org> kernel-2.eclass:
+  Fix URIs for longterm kernels
 
   28 Dec 2011; Ryan Hill <dirtyepic@gentoo.org> flag-o-matic.eclass:
   Clean up setup-allowed-flags().
