@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.8.0.ebuild,v 1.1 2011/12/26 14:30:28 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.8.0.ebuild,v 1.2 2011/12/28 14:01:19 swift Exp $
 
 EAPI=3
 
@@ -15,11 +15,12 @@ SRC_URI="http://www.open-scap.org/download/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion doc nss perl python sql"
+IUSE="bash-completion doc nss perl python rpm sql"
 RESTRICT="test"
 
 RDEPEND="!nss? ( dev-libs/libgcrypt )
 	nss? ( dev-libs/nss )
+	rpm? ( >=app-arch/rpm-4.9 )
 	sql? ( dev-db/opendbx )
 	dev-libs/libpcre
 	dev-libs/libxml2
@@ -32,6 +33,18 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	sed -i 's/uname -p/uname -m/' tests/probes/uname/test_probes_uname.xml.sh || die
+	sed -i 's,/etc/rc.d/init.d,/etc/init.d,' src/OVAL/probes/unix/runlevel.c || die
+	if ! use rpm ; then
+		sed -i 's,probe_rpminfo_req_deps_ok=yes,probe_rpminfo_req_deps_ok=no,' configure || die
+		sed -i 's,probe_rpminfo_opt_deps_ok=yes,probe_rpminfo_opt_deps_ok=no,' configure || die
+		sed -i 's,probe_rpmverify_req_deps_ok=yes,probe_rpmverify_req_deps_ok=no,' configure || die
+		sed -i 's,probe_rpmverify_opt_deps_ok=yes,probe_rpmverify_opt_deps_ok=no,' configure || die
+		sed -i 's,^probe_rpm.*_deps_missing=,&disabled by USE flag,' configure || die
+	fi
 }
 
 src_configure() {
