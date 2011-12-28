@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6047 2011/12/28 16:24:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6048 2011/12/28 16:30:31 a3li Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Dec 2011; Alex Legler <a3li@gentoo.org> package.mask:
+  Mask www-apps/tikiwiki for security
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> arch/alpha/use.mask:
   Mask ruby_targets_ruby19 USE flag for now on alpha until bug 332593 is fixed.
