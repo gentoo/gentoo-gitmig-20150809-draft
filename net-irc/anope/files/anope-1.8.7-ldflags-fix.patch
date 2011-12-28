@@ -34,3 +34,14 @@ diff -aurp a/src/protocol/Makefile b/src/protocol/Makefile
  	@$(TOUCH) $*.s
  
  subs:
+--- a/src/tools/Makefile	2011-12-28 20:00:00.646427623 +0000
++++ b/src/tools/Makefile	2011-12-28 20:00:41.030430806 +0000
+@@ -10,7 +10,7 @@ MAKEARGS = 'CFLAGS=${CFLAGS}' 'CC=${CC}'
+    	   'RUNGROUP=${RUNGROUP}' 
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) -I../include/ $< -o $*
++	$(CC) $(LDFLAGS) $(CFLAGS) -I../include/ $< -o $*
+ 
+ all: ${OBJS}
+ 
