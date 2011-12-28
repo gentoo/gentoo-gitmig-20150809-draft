@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.11.0.ebuild,v 1.5 2011/11/27 15:17:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.11.0.ebuild,v 1.6 2011/12/28 08:28:23 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby18 ree18"
 
 RUBY_FAKEGEM_TEST_TASK=""
 
