@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.231 2011/10/20 16:39:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.232 2011/12/28 19:23:01 halcy0n Exp $
+
+  28 Dec 2011; Mark Loeser <halcy0n@gentoo.org> boost-1.46.1-r1.ebuild:
+  Stable for ppc64; bug #377805
 
   20 Oct 2011; Brent Baude <ranger@gentoo.org> boost-1.46.1-r1.ebuild:
   Marking boost-1.46.1-r1 ppc for bug 377805

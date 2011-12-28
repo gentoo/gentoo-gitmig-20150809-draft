@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1-r1.ebuild,v 1.5 2011/10/20 16:39:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1-r1.ebuild,v 1.6 2011/12/28 19:23:01 halcy0n Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ LICENSE="Boost-1.0"
 SLOT="$(get_version_component_range 1-2)"
 IUSE="debug doc +eselect icu mpi python static-libs test tools"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.3 )
 	mpi? ( || ( sys-cluster/openmpi[cxx] sys-cluster/mpich2[cxx,threads] ) )
