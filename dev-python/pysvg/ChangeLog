@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysvg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/ChangeLog,v 1.8 2011/12/26 07:14:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/ChangeLog,v 1.9 2011/12/29 04:07:51 floppym Exp $
+
+  29 Dec 2011; Mike Gilbert <floppym@gentoo.org> -pysvg-0.2.0.ebuild,
+  pysvg-0.2.1.ebuild:
+  Drop eutils and update HOMEPAGE, as suggested by arfrever. Remove old.
 
 *pysvg-0.2.1 (26 Dec 2011)
 
