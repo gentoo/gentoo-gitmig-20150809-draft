@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.92 2011/12/18 05:39:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.93 2011/12/29 21:52:30 halcy0n Exp $
+
+  29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> tree-1.6.0.ebuild:
+  Stable for ppc/ppc64; bug #380175
 
   18 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org> tree-1.6.0.ebuild:
   make bash completion file naming consistent (bug #395101)
