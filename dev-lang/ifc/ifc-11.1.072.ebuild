@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.072.ebuild,v 1.5 2011/11/03 16:14:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.072.ebuild,v 1.6 2011/12/29 12:44:32 jlec Exp $
 
 EAPI=4
 
@@ -45,17 +45,24 @@ QA_DT_HASH="
 	${EDESTINATION}/mkl/benchmarks/mp_linpack/bin_intel/*/.*
 	${EDESTINATION}/idb/*/*/.*"
 
+CHECKREQS_MEMORY=1024M
+CHECKREQS_DISK_BUILD=1536M
+
 pkg_pretend() {
-	CHECKREQS_MEMORY=1024M
-	CHECKREQS_DISK_BUILD=1536M
 	use idb && use mkl && CHECKREQS_DISK_BUILD=2048M
 	check-reqs_pkg_pretend
+}
+
+pkg_setup() {
+	use idb && use mkl && CHECKREQS_DISK_BUILD=2048M
+	check-reqs_pkg_setup
 }
 
 src_prepare() {
 	IARCH=ia32
 	use amd64 && IARCH=intel64
 	use ia64 && IARCH=ia64
+	check-reqs_pkg_pretend
 }
 
 src_unpack() {

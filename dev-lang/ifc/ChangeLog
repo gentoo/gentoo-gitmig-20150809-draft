@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.62 2011/11/03 16:14:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.63 2011/12/29 12:44:32 jlec Exp $
+
+  29 Dec 2011; Justin Lecher <jlec@gentoo.org> ifc-10.0.026-r1.ebuild,
+  ifc-11.1.072.ebuild:
+  Run check-reqs_pkg_setup
 
   03 Nov 2011; Justin Lecher <jlec@gentoo.org> ifc-11.1.072.ebuild:
   Fixed again the usage of check-reqs.eclass at EAPI=4, #389401

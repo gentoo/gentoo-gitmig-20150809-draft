@@ -1,33 +1,32 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.16 2011/10/17 20:40:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.17 2011/12/29 12:44:32 jlec Exp $
 
 inherit rpm eutils
 
 PID=787
 PB=fc
 PEXEC=ifort
+PACKAGEID="l_${PB}_c_${PV}"
+
 DESCRIPTION="Intel FORTRAN 77/95 optimized compiler for Linux"
 HOMEPAGE="http://software.intel.com/en-us/articles/fortran-compilers/"
-
-###
-# everything below common to ifc and icc
-# no eclass: very likely to change for next versions
-###
-PACKAGEID="l_${PB}_c_${PV}"
-KEYWORDS="~amd64 ~ia64 ~x86"
-SRC_URI="amd64? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_intel64.tar.gz )
+SRC_URI="
+	amd64? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_intel64.tar.gz )
 	ia64? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_ia64.tar.gz )
 	x86?  ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_ia32.tar.gz )"
 
 LICENSE="Intel-SDP"
 SLOT="0"
+KEYWORDS="~amd64 ~ia64 ~x86"
+IUSE=""
+
+DEPEND=""
+RDEPEND="
+	~virtual/libstdc++-3.3
+	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 RESTRICT="test strip mirror"
-IUSE=""
-DEPEND=""
-RDEPEND="~virtual/libstdc++-3.3
-	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 pkg_setup() {
 	if has_version "<dev-lang/${P}"; then
@@ -52,7 +51,7 @@ src_unpack() {
 
 	for x in data/intel*.rpm; do
 		einfo "Extracting $(basename ${x})..."
-		rpm_unpack "${S}/${x}" || die "rpm_unpack ${x} failed"
+		rpm_unpack "${x}" || die "rpm_unpack ${x} failed"
 	done
 
 	einfo "Fixing paths and tagging"
