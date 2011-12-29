@@ -1,6 +1,10 @@
-# ChangeLog for dev-php5/PEAR-PHP_Timer
+# ChangeLog for dev-php/php-timer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-timer/ChangeLog,v 1.3 2011/11/03 09:35:13 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-timer/ChangeLog,v 1.4 2011/12/29 15:15:22 olemarkus Exp $
+
+  29 Dec 2011; Ole Markus With <olemarkus@gentoo.org> php-timer-1.0.0.ebuild,
+  php-timer-1.0.2.ebuild:
+  Fixed HOMEPAGE (bug 396373)
 
 *php-timer-1.0.2 (03 Nov 2011)
 
