@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-mount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.18 2011/12/29 15:04:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.19 2011/12/29 15:31:16 graaff Exp $
+
+  29 Dec 2011; Hans de Graaff <graaff@gentoo.org> rack-mount-0.8.3.ebuild:
+  Add ruby19. Avoid fragile test.
 
   29 Dec 2011; Hans de Graaff <graaff@gentoo.org> -rack-mount-0.7.3.ebuild,
   -rack-mount-0.8.1.ebuild, -rack-mount-0.8.2.ebuild:

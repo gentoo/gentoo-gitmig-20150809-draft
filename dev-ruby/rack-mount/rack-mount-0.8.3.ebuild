@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/rack-mount-0.8.3.ebuild,v 1.1 2011/09/16 18:51:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/rack-mount-0.8.3.ebuild,v 1.2 2011/12/29 15:31:16 graaff Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
@@ -23,3 +23,8 @@ IUSE=""
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 ruby_add_rdepend ">=dev-ruby/rack-1.0.0"
+
+all_ruby_prepare() {
+	# Avoid fragile test depending on hash ordering.
+	sed -i -e '/foo=1&bar=2/ s:#:^:' test/test_utils.rb || die
+}
