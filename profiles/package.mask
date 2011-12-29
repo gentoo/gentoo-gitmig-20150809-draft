@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13358 2011/12/29 19:47:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13359 2011/12/29 21:09:45 williamh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -148,10 +148,6 @@ dev-perl/Test-SimpleUnit
 dev-util/cdebootstrap
 # Nothing uses libdebian-installer except cdebootstrap, remove as well
 dev-libs/libdebian-installer
-
-# Christian Ruppert <idl0r@gentoo.org> (26 Nov 2011)
-# bug 391945
-=sys-apps/openrc-0.9.6
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Development release, not quite ready for general consumption
