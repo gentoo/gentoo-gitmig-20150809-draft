@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.43 2011/09/13 20:03:33 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.44 2011/12/29 20:35:02 grobian Exp $
+
+  29 Dec 2011; Fabian Groffen <grobian@gentoo.org> telnet-bsd-1.2-r1.ebuild:
+  Marked ~x64-macos, bug #396107
 
   13 Sep 2011; Marc Schiffbauer <mschiff@gentoo.org> metadata.xml:
   Added myself as maintainer
