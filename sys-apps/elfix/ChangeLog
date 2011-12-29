@@ -1,5 +1,12 @@
 
 
+*elfix-0.4.2 (29 Dec 2011)
+
+  29 Dec 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.4.1.ebuild,
+  +elfix-0.4.2.ebuild:
+  Version bump 0.4 branch, intelligently migrate pax flags when binary
+  and library have conflicting flags, thanks klondike
+
 *elfix-0.4.1 (04 Dec 2011)
 
   04 Dec 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.4.0.ebuild,
