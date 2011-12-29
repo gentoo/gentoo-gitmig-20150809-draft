@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.12.ebuild,v 1.3 2011/02/25 22:26:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.12.ebuild,v 1.4 2011/12/29 16:21:17 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools eutils gnome2
 
@@ -38,8 +39,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix compilation with USE="-dbus", bug #247519, upstream bug #628614
 	epatch "${FILESDIR}/${PN}-0.9-dbus.patch"
 
@@ -48,4 +47,5 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
