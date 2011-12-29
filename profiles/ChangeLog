@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6049 2011/12/29 06:44:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6050 2011/12/29 19:47:02 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Dec 2011; Torsten Veller <tove@gentoo.org> package.mask:
+  Unmask dev-perl/DBD-SQLite
 
   29 Dec 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask old obsolete slot of rack for removal.

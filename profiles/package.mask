@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13357 2011/12/29 06:44:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13358 2011/12/29 19:47:03 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -127,10 +127,6 @@ app-text/lyx2html
 # Replacements: sys-devel/dragonegg, sys-devel/clang
 # Removal in 30 days, bug #392951
 sys-devel/llvm-gcc
-
-# Torsten Veller <tove@gentoo.org> (02 Dec 2011)
-# Mask DBD-SQLite for testing
-=dev-perl/DBD-SQLite-1.350.0
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (1 Dec 2011)
 # The phonon xine backend is unmaintained and makes trouble 
