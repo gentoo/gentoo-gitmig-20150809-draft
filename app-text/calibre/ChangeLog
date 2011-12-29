@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.176 2011/12/23 19:24:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.177 2011/12/29 00:18:37 zmedico Exp $
+
+  29 Dec 2011; Zac Medico <zmedico@gentoo.org> calibre-0.8.31.ebuild,
+  calibre-0.8.32.ebuild:
+  Require imagemagick[jpeg] for bug #395027.
 
 *calibre-0.8.32 (23 Dec 2011)
 
