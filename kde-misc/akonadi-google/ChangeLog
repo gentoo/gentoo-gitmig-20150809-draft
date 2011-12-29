@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/akonadi-google
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.1 2011/12/06 02:15:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.2 2011/12/29 22:41:55 dilfridge Exp $
+
+*akonadi-google-0.2_p20111229 (29 Dec 2011)
+
+  29 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +akonadi-google-0.2_p20111229.ebuild:
+  Add newer snapshot
 
 *akonadi-google-0.2_p20111130 (06 Dec 2011)
 
