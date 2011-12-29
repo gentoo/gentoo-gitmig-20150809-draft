@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.7.0.ebuild,v 1.4 2011/09/09 08:17:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.7.0.ebuild,v 1.5 2011/12/29 14:55:17 graaff Exp $
 
 EAPI="2"
 
@@ -41,5 +41,13 @@ each_ruby_prepare() {
 }
 
 each_ruby_test() {
-	PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} test/test.rb || die
+	case ${RUBY} in
+		# http://rubyforge.org/tracker/index.php?func=detail&aid=29484&group_id=1320&atid=5201
+		*ruby19)
+			einfo "Tests are not compatible with ruby 1.9.3 with Psych as YAML module."
+			;;
+		*)
+			PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} -I. test/test.rb || die
+			;;
+	esac
 }
