@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xpad
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.69 2010/07/18 11:08:19 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.70 2011/12/29 18:07:05 jer Exp $
+
+*xpad-4.1 (29 Dec 2011)
+
+  29 Dec 2011; Jeroen Roovers <jer@gentoo.org> +xpad-4.1.ebuild:
+  Version bump.
 
   18 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> -xpad-2.14.ebuild,
   -xpad-3.0.ebuild, xpad-4.0.ebuild:
