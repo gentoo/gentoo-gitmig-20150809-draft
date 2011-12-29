@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.0.1.ebuild,v 1.1 2011/11/16 01:50:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.0.1.ebuild,v 1.2 2011/12/29 18:13:52 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="https://fedorahosted.org/libosinfo/"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 SRC_URI="https://fedorahosted.org/releases/l/i/${PN}/${P}.tar.gz"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc +introspection +vala test"
 
 REQUIRED_USE="vala? ( introspection )"
