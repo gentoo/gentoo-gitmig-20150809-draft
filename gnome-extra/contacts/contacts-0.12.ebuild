@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.12.ebuild,v 1.4 2011/12/29 16:21:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.12.ebuild,v 1.5 2011/12/29 17:43:02 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://pimlico-project.org/contacts.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="dbus gnome"
 
 RDEPEND=">=gnome-extra/evolution-data-server-1.8

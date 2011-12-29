@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.5.ebuild,v 1.1 2011/10/20 01:10:05 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.5.ebuild,v 1.2 2011/12/29 17:44:46 pacho Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://live.gnome.org/DVBDaemon"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="nls totem vala"
 
 RDEPEND=">=dev-libs/glib-2.28.5
