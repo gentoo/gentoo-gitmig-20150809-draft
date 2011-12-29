@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2011.4.12.ebuild,v 1.6 2011/08/21 13:37:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2011.4.12.ebuild,v 1.7 2011/12/29 20:37:13 halcy0n Exp $
 
 EAPI=2
 inherit linux-info
@@ -14,7 +14,7 @@ SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~arm ppc ppc64 ~sparc x86"
 IUSE="acl crypt debug ntfsprogs suid static-libs xattr +udev +external-fuse"
 
 RDEPEND="external-fuse? ( >=sys-fs/fuse-2.8.0 )

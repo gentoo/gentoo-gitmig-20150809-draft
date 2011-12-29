@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.119 2011/08/21 13:37:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.120 2011/12/29 20:37:13 halcy0n Exp $
+
+  29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> ntfs3g-2011.4.12.ebuild:
+  Stable for ppc64; bug #378829
 
   21 Aug 2011; nixnut <nixnut@gentoo.org> ntfs3g-2011.4.12.ebuild:
   ppc stable #378829
