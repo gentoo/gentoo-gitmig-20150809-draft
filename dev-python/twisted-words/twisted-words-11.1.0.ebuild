@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-11.1.0.ebuild,v 1.1 2011/12/27 07:18:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-11.1.0.ebuild,v 1.2 2011/12/29 04:55:27 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 MY_PACKAGE="Words"
 
-inherit twisted
+inherit twisted versionator
 
 DESCRIPTION="Twisted Words contains Instant Messaging implementations."
 

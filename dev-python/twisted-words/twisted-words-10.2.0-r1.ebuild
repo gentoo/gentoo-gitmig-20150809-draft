@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-10.2.0-r1.ebuild,v 1.3 2011/01/25 17:06:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-10.2.0-r1.ebuild,v 1.4 2011/12/29 04:55:27 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 MY_PACKAGE="Words"
 
-inherit eutils twisted
+inherit eutils twisted versionator
 
 DESCRIPTION="Twisted Words contains Instant Messaging implementations."
 
