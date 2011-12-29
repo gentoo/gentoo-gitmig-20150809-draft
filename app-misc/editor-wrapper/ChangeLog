@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/editor-wrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.11 2011/12/29 20:51:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.12 2011/12/29 21:37:29 ulm Exp $
+
+  29 Dec 2011; Ulrich Mueller <ulm@gentoo.org> -editor-wrapper-2.ebuild,
+  -files/editor-wrapper-2.sh, -editor-wrapper-3.ebuild,
+  -files/editor-wrapper-3.sh, editor-wrapper-4.ebuild:
+  Remove old. Drop backwards compatibility symlink.
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> editor-wrapper-4.ebuild:
   Stable for ppc/ppc64; bug #379095
