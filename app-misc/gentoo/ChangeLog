@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.101 2011/11/07 00:30:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.102 2011/12/29 18:22:24 jer Exp $
+
+  29 Dec 2011; Jeroen Roovers <jer@gentoo.org> gentoo-0.15.6.ebuild,
+  -gentoo-0.19.9.ebuild:
+  Remove old.
 
   07 Nov 2011; Brent Baude <ranger@gentoo.org> gentoo-0.19.10.ebuild:
   Marking gentoo-0.19.10 ppc for bug 386639
