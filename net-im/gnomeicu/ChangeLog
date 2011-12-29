@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.53 2011/10/27 06:37:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.54 2011/12/29 16:31:15 pacho Exp $
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> -gnomeicu-0.99.14.ebuild,
+  gnomeicu-0.99.16.ebuild:
+  Use proper configure option, drop old.
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnomeicu-0.99.12.ebuild, gnomeicu-0.99.14.ebuild, gnomeicu-0.99.16.ebuild:

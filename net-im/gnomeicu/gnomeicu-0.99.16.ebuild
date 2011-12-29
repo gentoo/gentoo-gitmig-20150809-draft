@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.16.ebuild,v 1.2 2011/10/27 06:37:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.16.ebuild,v 1.3 2011/12/29 16:31:15 pacho Exp $
 
-EAPI=2
+EAPI="4"
+GCONF_DEBUG="yes"
+
 inherit gnome2
 
 DESCRIPTION="Gnome ICQ Client"
@@ -32,8 +34,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	x11-proto/scrnsaverproto"
 
-DOCS="AUTHORS ChangeLog CREDITS HACKING MAINTAINERS NEWS README README.SOCKS TODO"
-
 pkg_setup() {
-	G2CONF="${GCONF} --disable-schemas-install $(use_enable spell)"
+	DOCS="AUTHORS ChangeLog CREDITS HACKING MAINTAINERS NEWS README README.SOCKS TODO"
+	G2CONF="${GCONF} --disable-schemas-install $(use_enable spell gtkspell)"
 }
