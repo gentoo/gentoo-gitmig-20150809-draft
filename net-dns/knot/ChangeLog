@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/knot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.1 2011/12/29 11:06:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.2 2011/12/29 11:08:19 scarabeus Exp $
+
+  29 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> knot-0.8.1.ebuild:
+  Also want pkgconfig.
 
 *knot-0.8.1 (29 Dec 2011)
 
