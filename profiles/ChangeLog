@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6048 2011/12/28 16:30:31 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6049 2011/12/29 06:44:02 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Dec 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask old obsolete slot of rack for removal.
 
   28 Dec 2011; Alex Legler <a3li@gentoo.org> package.mask:
   Mask www-apps/tikiwiki for security
