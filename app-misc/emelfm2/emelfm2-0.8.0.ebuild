@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.4.ebuild,v 1.3 2011/10/27 05:53:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.8.0.ebuild,v 1.1 2011/12/29 20:10:20 jer Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="A file manager that implements the popular two-pane design"
@@ -14,15 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="acl fam gimp kernel_linux nls policykit spell udev"
 
-RDEPEND=">=dev-libs/glib-2.22:2
+COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	>=x11-libs/gtk+-2.12:2
 	acl? ( sys-apps/acl )
 	gimp? ( media-gfx/gimp )
 	policykit? ( sys-auth/polkit )
-	spell? ( app-text/gtkspell:2 )
-	udev? ( sys-fs/udisks
-		dev-libs/dbus-glib )"
-DEPEND="${RDEPEND}
+	spell? ( >=app-text/gtkspell-2.0.14:2 )"
+RDEPEND="${COMMON_DEPEND}
+	udev? ( sys-fs/udisks )"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
@@ -33,7 +33,9 @@ pkg_setup() {
 		use ${1} && echo "${2}=1" || echo "${2}=0"
 	}
 
+	#363813
 	myemelconf=(
+		GTK3=0
 		DOCS_VERSION=1
 		$(emel_use nls I18N)
 		WITH_TRANSPARENCY=1
@@ -47,15 +49,18 @@ pkg_setup() {
 		)
 }
 
+src_prepare() {
+	sed -i Makefile -e 's:dbus-glib-1::' || die
+}
+
 src_compile() {
 	tc-export CC
 	emake LIB_DIR="/usr/$(get_libdir)" PREFIX="/usr" \
-		${myemelconf[@]} || die
+		${myemelconf[@]}
 }
 
 src_install() {
 	emake LIB_DIR="${D}/usr/$(get_libdir)" PREFIX="${D}/usr" \
-		${myemelconf[@]} install || die
+		${myemelconf[@]} install $( use nls && echo install_i18n )
 	newicon icons/${PN}_48.png ${PN}.png
-	prepalldocs
 }
