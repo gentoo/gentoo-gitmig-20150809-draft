@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-11.1.0.ebuild,v 1.1 2011/12/27 06:39:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-11.1.0.ebuild,v 1.2 2011/12/29 04:15:26 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -46,7 +46,8 @@ src_prepare(){
 src_test() {
 	testing() {
 		local exit_status="0"
-		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${T}/tests" --no-compile || die "Installation of tests failed with $(python_get_implementation) $(python_get_version)"
+		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install
+		--root="${T}/tests" --no-compile || die "Installation of tests failed with $(python_get_implementation_and_version)"
 
 		pushd "${T}/tests${EPREFIX}$(python_get_sitedir)" > /dev/null || die
 
@@ -64,7 +65,7 @@ src_test() {
 
 		if ! PYTHONPATH="." "${T}/tests${EPREFIX}/usr/bin/trial" twisted; then
 			if [[ -n "${TWISTED_DEBUG_TESTS}" ]]; then
-				die "Tests failed with $(python_get_implementation) $(python_get_version)"
+				die "Tests failed with $(python_get_implementation_and_version)"
 			else
 				exit_status="1"
 			fi
