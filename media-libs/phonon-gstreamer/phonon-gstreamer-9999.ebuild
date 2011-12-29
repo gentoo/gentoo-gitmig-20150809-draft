@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-9999.ebuild,v 1.6 2011/07/17 08:46:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-9999.ebuild,v 1.7 2011/12/29 20:25:05 dilfridge Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 SLOT="0"
-IUSE="alsa debug"
+IUSE="alsa debug +network"
 
 RDEPEND="
 	media-libs/gstreamer
@@ -33,6 +33,7 @@ RDEPEND="
 	>=x11-libs/qt-gui-4.6.0:4[glib]
 	>=x11-libs/qt-opengl-4.6.0:4
 	virtual/opengl
+	network? ( media-plugins/gst-plugins-soup )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/automoc-0.9.87
