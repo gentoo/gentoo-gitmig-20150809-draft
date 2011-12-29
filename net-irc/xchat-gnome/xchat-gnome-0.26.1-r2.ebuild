@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.3 2011/11/28 19:16:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.4 2011/12/29 16:38:05 pacho Exp $
 
-EAPI=3
+EAPI="4"
 GCONF_DEBUG="yes"
+GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 PYTHON_DEPEND="python? 2"
 
 inherit autotools eutils multilib gnome2 python
@@ -43,7 +45,6 @@ pkg_setup() {
 	# Per configure.ac, shm is disable because of upstream bug #565958
 	# --enable-shm
 	G2CONF="${G2CONF}
-		--enable-gnomefe
 		--enable-canberra
 		--disable-schemas-install
 		--disable-scrollkeeper
@@ -60,7 +61,10 @@ pkg_setup() {
 
 	DOCS="AUTHORS ChangeLog NEWS"
 
-	use python && python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -84,8 +88,5 @@ src_install() {
 
 	# install plugin development header
 	insinto /usr/include/xchat-gnome
-	doins src/common/xchat-plugin.h || die
-
-	# Not needed for plugins
-	find "${D}" -type f -name "*.la" -delete || die "la files removal failed"
+	doins src/common/xchat-plugin.h
 }
