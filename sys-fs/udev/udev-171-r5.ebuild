@@ -1,103 +1,136 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175-r1.ebuild,v 1.3 2011/12/29 19:32:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.1 2011/12/29 19:32:46 williamh Exp $
 
 EAPI=4
 
-KV_min=2.6.34
-# patchversion=1
-scriptversion=6
-udev_rules_md5=7a7180a394e5bdea9011f68582b94fe8
+KV_min=2.6.32
+KV_reliable=2.6.32
+PATCHSET=${P}-gentoo-patchset-v1
+scriptversion=7
+scriptname=udev-gentoo-scripts
+[[ -n "${scriptversion}" ]] && scriptname="${scriptname}-${scriptversion}"
 
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
+if [[ ${PV} == "9999" ]]
+then
+	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
+	EGIT_BRANCH="master"
+	vcs="git-2 autotools"
+fi
 
-[[ ${PV} == "9999" ]] && vcs="git-2 autotools"
 inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd libtool
 
-scriptname=${PN}-gentoo-scripts
 if [[ ${PV} != "9999" ]]
 then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
-	SRC_URI="http://people.freedesktop.org/~kay/${PN}/${P}.tar.bz2"
-	if [[ -n "${patchversion}" ]]
+	# please update testsys-tarball whenever udev-xxx/test/sys/ is changed
+	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
+			 test? ( mirror://gentoo/${PN}-171-testsys.tar.bz2 )"
+	if [[ -n "${PATCHSET}" ]]
 	then
-		patchset=${P}-patchset-${patchversion}
-		SRC_URI="${SRC_URI} mirror://gentoo/${patchset}.tar.bz2"
+		SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
 	fi
-	scriptname="${scriptname}-${scriptversion}"
-	SRC_URI="${SRC_URI} mirror://gentoo/${scriptname}.tar.bz2"
 fi
+SRC_URI="${SRC_URI} mirror://gentoo/${scriptname}.tar.bz2"
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="build selinux debug +rule_generator hwdb acl gudev introspection
-	keymap floppy edd doc"
+IUSE="build selinux test debug +rule_generator hwdb acl gudev introspection
+	keymap floppy edd action_modeswitch extras"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
+	extras? ( sys-apps/acl
+		dev-libs/glib:2
+		dev-libs/gobject-introspection
+		virtual/libusb:0 )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
 	gudev? ( dev-libs/glib:2 )
 	introspection? ( dev-libs/gobject-introspection )
+	action_modeswitch? ( virtual/libusb:0 )
 	>=sys-apps/util-linux-2.16
 	>=sys-libs/glibc-2.10"
 
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
+	extras? ( dev-util/gperf )
 	dev-util/pkgconfig
 	virtual/os-headers
-	!<sys-kernel/linux-headers-2.6.34"
-
-if [[ $PV == "9999" ]]
-then
-	RESTRICT="test? ( userpriv )"
-	IUSE="${IUSE} test"
-	DEPEND="${DEPEND}
-		dev-util/gtk-doc
-		test? ( app-text/tree )"
-else
-	DEPEND="${DEPEND}
-		doc? ( dev-util/gtk-doc )"
-fi
+	!<sys-kernel/linux-headers-2.6.34
+	test? ( app-text/tree )"
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils[-zlib] )
-	acl? ( sys-apps/coreutils[acl] )
+	hwdb?
+	(
+		>=sys-apps/usbutils-0.82
+		sys-apps/pciutils[-zlib]
+	)
+	extras?
+	(
+		>=sys-apps/usbutils-0.82
+		sys-apps/pciutils
+	)
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
 	>=sys-apps/baselayout-1.12.5"
 
+if [[ ${PV} == "9999" ]]
+then
+	# for documentation processing with xsltproc
+	DEPEND="${DEPEND}
+		app-text/docbook-xsl-stylesheets
+		app-text/docbook-xml-dtd
+		dev-util/gtk-doc"
+fi
+
 # required kernel options
 CONFIG_CHECK="~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
-	~!IDE ~BLK_DEV_BSG ~TMPFS_POSIX_ACL"
+	~!IDE ~BLK_DEV_BSG"
 
-udev_check_KV()
-{
-	if kernel_is lt ${KV_min//./ }
+# Return values:
+# 2 - reliable
+# 1 - unreliable
+# 0 - too old
+udev_check_KV() {
+	local ok=0
+	if kernel_is -ge ${KV_reliable//./ }
 	then
-		return 1
+		ok=2
+	elif kernel_is -ge ${KV_min//./ }
+	then
+		ok=1
 	fi
-	return 0
+	return $ok
 }
 
-pkg_setup()
-{
+pkg_setup() {
 	linux-info_pkg_setup
 
 	# always print kernel version requirements
 	ewarn
 	ewarn "${P} does not support Linux kernel before version ${KV_min}!"
-
-	if ! udev_check_KV
+	if [[ ${KV_min} != ${KV_reliable} ]]
 	then
-		eerror "Your kernel version (${KV_FULL}) is too old to run ${P}"
+		ewarn "For a reliable udev, use at least kernel ${KV_reliable}"
 	fi
+
+	udev_check_KV
+	case "$?" in
+		2)	einfo "Your kernel version (${KV_FULL}) is new enough to run ${P} reliably." ;;
+		1)	ewarn "Your kernel version (${KV_FULL}) is new enough to run ${P},"
+			ewarn "but it may be unreliable in some cases."
+			;;
+		0)	eerror "Your kernel version (${KV_FULL}) is too old to run ${P}"
+			;;
+	esac
 
 	KV_FULL_SRC=${KV_FULL}
 	get_running_version
-	if ! udev_check_KV
+	udev_check_KV
+	if [[ "$?" = "0" ]]
 	then
 		eerror
 		eerror "udev cannot be restarted after emerging,"
@@ -107,29 +140,27 @@ pkg_setup()
 	fi
 }
 
-if [[ $PV == 9999 ]]
-then
-	src_unpack()
-	{
-		git-2_src_unpack
-		unset EGIT_BRANCH
-		unset EGIT_COMMIT
-		unset EGIT_DIR
-		unset EGIT_MASTER
-		EGIT_PROJECT="${scriptname}"
-		EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${scriptname}.git"
-		EGIT_SOURCEDIR="${WORKDIR}/${scriptname}"
-		git-2_src_unpack
-	}
-fi
-
-src_prepare()
-{
-	# backport some patches
-	if [[ -n "${patchset}" ]]
+src_unpack() {
+	unpack ${A}
+	if [[ ${PV} == "9999" ]]
 	then
-		EPATCH_SOURCE="${WORKDIR}/${patchset}" EPATCH_SUFFIX="patch" \
-			EPATCH_FORCE="yes" epatch
+		git-2_src_unpack
+	fi
+}
+
+src_prepare() {
+	if use test && [[ -d "${WORKDIR}"/test/sys ]]
+	then
+		mv "${WORKDIR}"/test/sys "${S}"/test/
+	fi
+
+	# patches go here...
+
+	# backport some patches
+	if [[ -n "${PATCHSET}" ]]
+	then
+		EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" \
+			  EPATCH_FORCE="yes" epatch
 	fi
 
 	# change rules back to group uucp instead of dialout for now
@@ -143,7 +174,7 @@ src_prepare()
 		# (more for my own needs than anything else ...)
 		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
 		MD5=${MD5/  -/}
-		if [[ ${MD5} != ${udev_rules_md5} ]]
+		if [[ ${MD5} != a9954d57e97aa0ad2e0ed53899d9559a ]]
 		then
 			eerror "50-udev-default.rules has been updated, please validate!"
 			eerror "md5sum: ${MD5}"
@@ -160,9 +191,8 @@ src_prepare()
 	fi
 }
 
-src_configure()
-{
-	filter-flags -fprefetch-loop-arrays
+use_extras() { use extras && echo "--enable-${2:-$1}" || use_enable "$@" ; }
+src_configure() {
 	econf \
 		--prefix="${EPREFIX}/usr" \
 		--sysconfdir="${EPREFIX}/etc" \
@@ -174,34 +204,33 @@ src_configure()
 		--enable-static \
 		$(use_with selinux) \
 		$(use_enable debug) \
-		$(use_enable rule_generator) \
-		$(use_enable hwdb) \
+		$(use_extras rule_generator) \
+		$(use_extras hwdb) \
 		--with-pci-ids-path="${EPREFIX}/usr/share/misc/pci.ids" \
 		--with-usb-ids-path="${EPREFIX}/usr/share/misc/usb.ids" \
-		$(use_enable acl udev_acl) \
-		$(use_enable gudev) \
-		$(use_enable introspection) \
-		$(use_enable keymap) \
-		$(use_enable floppy) \
-		$(use_enable edd) \
-		$(use_enable doc gtk-doc) \
+		$(use_extras acl udev_acl) \
+		$(use_extras gudev) \
+		$(use_extras introspection) \
+		$(use_extras keymap) \
+		$(use_extras floppy) \
+		$(use_extras edd) \
+		$(use_extras action_modeswitch) \
 		$(systemd_with_unitdir)
 }
 
-src_install()
-{
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${P}" install
+src_compile() {
+	filter-flags -fprefetch-loop-arrays
 
-	# documentation
-	dodoc ChangeLog README TODO
+	emake
+}
 
-	if use keymap
-	then
-		dodoc extras/keymap/README.keymap.txt
-	fi
+src_install() {
+	into /
+	emake DESTDIR="${D}" install
 
-	# Upstream moved udevd to /lib/udev,, so symlnking it is the easiest option
-	dosym "../lib/udev/udevd" /sbin/udevd
+	exeinto /lib/udev
+	keepdir /lib/udev/state
+	keepdir /lib/udev/devices
 
 	# create symlinks for these utilities to /sbin
 	# where multipath-tools expect them to be (Bug #168588)
@@ -211,22 +240,43 @@ src_install()
 	echo "# If you need to change mount-options, do it in /etc/fstab" \
 	>> "${ED}"/etc/udev/udev.conf
 
-	# Now install rules
+	# let the dir exist at least
+	keepdir /etc/udev/rules.d
+
+	# Now installing rules
+	cd "${S}"/rules
 	insinto /lib/udev/rules.d/
 
 	# support older kernels
-	doins rules/misc/30-kernel-compat.rules
+	doins misc/30-kernel-compat.rules
 
-	# add arch specific rules
-	if [[ -f rules/arch/40-${ARCH}.rules ]]
+	# Adding arch specific rules
+	if [[ -f arch/40-${ARCH}.rules ]]
 	then
-		doins "rules/arch/40-${ARCH}.rules"
+		doins "arch/40-${ARCH}.rules"
+	fi
+	cd "${S}"
+
+	insinto /etc/modprobe.d
+	newins "${FILESDIR}"/blacklist-146 blacklist.conf
+	newins "${FILESDIR}"/pnp-aliases pnp-aliases.conf
+
+	# documentation
+	dodoc ChangeLog README TODO
+
+	# keep doc in just one directory, Bug #281137
+	rm -rf "${ED}/usr/share/doc/${PN}"
+	if use keymap
+	then
+		dodoc extras/keymap/README.keymap.txt
 	fi
 
 	cd "${WORKDIR}/${scriptname}"
+	sed -i -e 's/2.6.34/2.6.32/' init.d/udev
 	doconfd conf.d/*
 	exeinto /lib/udev
 	doexe helpers/*
+doexe "${FILESDIR}"/shell-compat-KV.sh
 	doinitd init.d/*
 	insinto /etc/modprobe.d
 	doins modprobe.d/*
@@ -234,9 +284,75 @@ src_install()
 	doins rules.d/*
 }
 
+src_test() {
+	local emake_cmd="${MAKE:-make} ${MAKEOPTS} ${EXTRA_EMAKE}"
+
+	cd "${S}"
+	vecho ">>> Test phase [udev:check]: ${CATEGORY}/${PF}"
+	has userpriv $FEATURES && einfo "Disable FEATURES userpriv to run the udev tests"
+	if ! $emake_cmd -j1 check
+	then
+		has test $FEATURES && die "udev: Make test failed. See above for details."
+		has test $FEATURES || eerror "udev: Make test failed. See above for details."
+	fi
+}
+
+pkg_preinst() {
+	# moving old files to support newer modprobe, 12 May 2009
+	local f dir=${EROOT}/etc/modprobe.d/
+	for f in pnp-aliases blacklist; do
+		if [[ -f $dir/$f && ! -f $dir/$f.conf ]]
+		then
+			elog "Moving $dir/$f to $f.conf"
+			mv -f "$dir/$f" "$dir/$f.conf"
+		fi
+	done
+
+	if [[ -d ${EROOT}/lib/udev-state ]]
+	then
+		mv -f "${EROOT}"/lib/udev-state/* "${ED}"/lib/udev/state/
+		rm -r "${EROOT}"/lib/udev-state
+	fi
+
+	if [[ -f ${EROOT}/etc/udev/udev.config &&
+		 ! -f ${EROOT}/etc/udev/udev.rules ]]
+	then
+		mv -f "${EROOT}"/etc/udev/udev.config "${EROOT}"/etc/udev/udev.rules
+	fi
+
+	# delete the old udev.hotplug symlink if it is present
+	if [[ -h ${EROOT}/etc/hotplug.d/default/udev.hotplug ]]
+	then
+		rm -f "${EROOT}"/etc/hotplug.d/default/udev.hotplug
+	fi
+
+	# delete the old wait_for_sysfs.hotplug symlink if it is present
+	if [[ -h ${EROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug ]]
+	then
+		rm -f "${EROOT}"/etc/hotplug.d/default/05-wait_for_sysfs.hotplug
+	fi
+
+	# delete the old wait_for_sysfs.hotplug symlink if it is present
+	if [[ -h ${EROOT}/etc/hotplug.d/default/10-udev.hotplug ]]
+	then
+		rm -f "${EROOT}"/etc/hotplug.d/default/10-udev.hotplug
+	fi
+
+	has_version "=${CATEGORY}/${PN}-103-r3"
+	previous_equal_to_103_r3=$?
+
+	has_version "<${CATEGORY}/${PN}-104-r5"
+	previous_less_than_104_r5=$?
+
+	has_version "<${CATEGORY}/${PN}-106-r5"
+	previous_less_than_106_r5=$?
+
+	has_version "<${CATEGORY}/${PN}-113"
+	previous_less_than_113=$?
+}
+
 # 19 Nov 2008
-fix_old_persistent_net_rules()
-{
+fix_old_persistent_net_rules() {
 	local rules=${EROOT}/etc/udev/rules.d/70-persistent-net.rules
 	[[ -f ${rules} ]] || return
 
@@ -253,8 +369,7 @@ fix_old_persistent_net_rules()
 }
 
 # See Bug #129204 for a discussion about restarting udevd
-restart_udevd()
-{
+restart_udevd() {
 	if [[ ${NO_RESTART} = "1" ]]
 	then
 		ewarn "Not restarting udevd, as your kernel is too old!"
@@ -292,8 +407,7 @@ restart_udevd()
 	fi
 }
 
-postinst_init_scripts()
-{
+postinst_init_scripts() {
 	local enable_postmount=false
 
 	# FIXME: inconsistent handling of init-scripts here
@@ -350,18 +464,7 @@ postinst_init_scripts()
 	fi
 }
 
-# This function determines if a directory is a mount point.
-# It was lifted from dracut.
-ismounted()
-{
-	while read a m a; do
-		[ "$m" = "$1" ] && return 0
-	done < "${EROOT}"/proc/mounts
-	return 1
-}
-
-pkg_postinst()
-{
+pkg_postinst() {
 	fix_old_persistent_net_rules
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
@@ -380,10 +483,33 @@ pkg_postinst()
 	# people want reminders, I'll give them reminders.  Odds are they will
 	# just ignore them anyway...
 
+	# delete 40-scsi-hotplug.rules, it is integrated in 50-udev.rules, 19 Jan 2007
+	if [[ $previous_equal_to_103_r3 = 0 ]] &&
+		[[ -e ${EROOT}/etc/udev/rules.d/40-scsi-hotplug.rules ]]
+	then
+		ewarn "Deleting stray 40-scsi-hotplug.rules"
+		ewarn "installed by sys-fs/udev-103-r3"
+		rm -f "${EROOT}"/etc/udev/rules.d/40-scsi-hotplug.rules
+	fi
+
 	# Removing some device-nodes we thought we need some time ago, 25 Jan 2007
 	if [[ -d ${EROOT}/lib/udev/devices ]]
 	then
 		rm -f "${EROOT}"/lib/udev/devices/{null,zero,console,urandom}
+	fi
+
+	# Removing some old file, 29 Jan 2007
+	if [[ $previous_less_than_104_r5 = 0 ]]
+	then
+		rm -f "${EROOT}"/etc/dev.d/net/hotplug.dev
+		rmdir --ignore-fail-on-non-empty "${EROOT}"/etc/dev.d/net 2>/dev/null
+	fi
+
+	# 19 Mar 2007
+	if [[ $previous_less_than_106_r5 = 0 ]] &&
+		[[ -e ${EROOT}/etc/udev/rules.d/95-net.rules ]]
+	then
+		rm -f "${EROOT}"/etc/udev/rules.d/95-net.rules
 	fi
 
 	# Try to remove /etc/dev.d as that is obsolete, 23 Apr 2007
@@ -399,7 +525,8 @@ pkg_postinst()
 
 	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
 	# remove it if user don't has sys-fs/device-mapper installed, 27 Jun 2007
-	if [[ -f ${EROOT}/etc/udev/rules.d/64-device-mapper.rules ]] &&
+	if [[ $previous_less_than_113 = 0 ]] &&
+		[[ -f ${EROOT}/etc/udev/rules.d/64-device-mapper.rules ]] &&
 		! has_version sys-fs/device-mapper
 	then
 			rm -f "${EROOT}"/etc/udev/rules.d/64-device-mapper.rules
@@ -408,11 +535,11 @@ pkg_postinst()
 
 	# requested in Bug #225033:
 	elog
-	elog "persistent-net assigns fixed names to network devices."
+	elog "persistent-net does assigning fixed names to network devices."
 	elog "If you have problems with the persistent-net rules,"
 	elog "just delete the rules file"
 	elog "\trm ${EROOT}etc/udev/rules.d/70-persistent-net.rules"
-	elog "then reboot."
+	elog "and then reboot."
 	elog
 	elog "This may however number your devices in a different way than they are now."
 
@@ -437,22 +564,6 @@ pkg_postinst()
 	ewarn
 	ewarn "Rules for /dev/hd* devices have been removed"
 	ewarn "Please migrate to libata."
-
-	ewarn
-	ewarn "action_modeswitch has been removed by upstream."
-	ewarn "Please use sys-apps/usb_modeswitch."
-
-	if ismounted /usr
-	then
-		ewarn
-		ewarn "Your system has /usr on a separate partition. This means"
-		ewarn "you will need to use an initramfs to pre-mount /usr before"
-		ewarn "udev runs."
-		ewarn "This must be set up before your next reboot, or you may"
-		ewarn "experience failures which are very difficult to troubleshoot."
-		ewarn "For a more detailed explanation, see the following URL:"
-		ewarn "http://www.freedesktop.org/wiki/Software/systemd/separate-usr-is-broken"
-	fi
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"

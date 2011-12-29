@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.66 2011/12/25 04:59:48 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.67 2011/12/29 19:32:46 williamh Exp $
 
 EAPI=4
 
@@ -357,7 +357,7 @@ ismounted()
 	while read a m a; do
 		[ "$m" = "$1" ] && return 0
 	done < "${ROOT}"/proc/mounts
-    return 1
+	return 1
 }
 
 pkg_postinst()

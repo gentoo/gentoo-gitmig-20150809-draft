@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-141.ebuild,v 1.10 2011/04/15 21:55:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-141.ebuild,v 1.11 2011/12/29 19:32:46 williamh Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 	EGIT_BRANCH="master"
-	inherit git autotools
+	inherit git-2 autotools
 else
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 fi
