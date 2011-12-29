@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.336 2011/12/24 10:33:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.337 2011/12/29 17:35:31 jer Exp $
+
+  29 Dec 2011; Jeroen Roovers <jer@gentoo.org> squid-3.1.18.ebuild,
+  +files/squid-3.1.18-ecap.patch:
+  Apply upstream patch by Adam Carter (bug #396163).
 
 *squid-3.1.18 (24 Dec 2011)
 

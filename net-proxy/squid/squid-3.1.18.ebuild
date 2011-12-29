@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.18.ebuild,v 1.1 2011/12/24 10:33:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.18.ebuild,v 1.2 2011/12/29 17:35:31 jer Exp $
 
 EAPI=4
 
@@ -66,7 +66,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.1.15-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-3.1.15-gentoo.patch \
+		"${FILESDIR}"/${PN}-3.1.18-ecap.patch
 	eautoreconf
 }
 

@@ -1,0 +1,50 @@
+------------------------------------------------------------
+revno: 10415
+revision-id: squid3@treenet.co.nz-20111206123135-sm3zauds1twjh9ls
+parent: squid3@treenet.co.nz-20111203061825-aslncq2igkzd88hy
+fixes bug(s): http://bugs.squid-cache.org/show_bug.cgi?id=3440
+author: Joshua Root <josh+squid@root.id.au>
+committer: Amos Jeffries <squid3@treenet.co.nz>
+branch nick: SQUID_3_1
+timestamp: Tue 2011-12-06 05:31:35 -0700
+message:
+  Bug 3440: compile error in Adaptation
+------------------------------------------------------------
+# Bazaar merge directive format 2 (Bazaar 0.90)
+# revision_id: squid3@treenet.co.nz-20111206123135-sm3zauds1twjh9ls
+# target_branch: http://bzr.squid-cache.org/bzr/squid3/branches\
+#   /SQUID_3_1/
+# testament_sha1: 42421665894427e4edfaa3f8bfcee9a9a3ce9dab
+# timestamp: 2011-12-06 12:33:05 +0000
+# source_branch: http://bzr.squid-cache.org/bzr/squid3/branches\
+#   /SQUID_3_1
+# base_revision_id: squid3@treenet.co.nz-20111203061825-\
+#   aslncq2igkzd88hy
+# 
+# Begin patch
+=== modified file 'src/Store.h'
+--- a/src/Store.h	2011-12-02 12:17:07 +0000
++++ b/src/Store.h	2011-12-06 12:31:35 +0000
+@@ -191,7 +191,7 @@
+ 
+ #if USE_ADAPTATION
+     /// call back producer when more buffer space is available
+-    void deferProducer(const AsyncCall::Pointer &producer);
++    void deferProducer(AsyncCall::Pointer &producer);
+     /// calls back producer registered with deferProducer
+     void kickProducer();
+ #endif
+
+=== modified file 'src/store.cc'
+--- a/src/store.cc	2011-12-02 12:17:07 +0000
++++ b/src/store.cc	2011-12-06 12:31:35 +0000
+@@ -368,7 +368,7 @@
+ 
+ #if USE_ADAPTATION
+ void
+-StoreEntry::deferProducer(const AsyncCall::Pointer &producer)
++StoreEntry::deferProducer(AsyncCall::Pointer &producer)
+ {
+     if (!deferredProducer)
+         deferredProducer = producer;
+
