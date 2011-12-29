@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.20.20090520.ebuild,v 1.2 2010/11/19 05:41:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.23.ebuild,v 1.1 2011/12/29 09:04:19 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils elisp-common toolchain-funcs versionator
 
 CPV=($(get_version_components ${PV}))
-CMT_PV=v${CPV[0]}r${CPV[1]}p${CPV[2]}
+CMT_PV=v${CPV[0]}r${CPV[1]}
 
 DESCRIPTION="Cross platform configuration management environment"
 HOMEPAGE="http://www.cmtsite.org/"
@@ -23,6 +23,10 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/CMT/${CMT_PV}"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.22-limits.patch
+}
+
 src_configure() {
 	cd "${S}"/mgr
 	./INSTALL
@@ -34,10 +38,9 @@ src_compile() {
 	emake -j1 \
 		cpp="$(tc-getCXX)" \
 		cppflags="${CXXFLAGS}" \
-		cpplink="$(tc-getCXX) ${LDFLAGS}" \
-		|| die "emake failed"
+		cpplink="$(tc-getCXX) ${LDFLAGS}"
 
-	sed -i -e "s:${WORKDIR}:/usr/$(get_libdir):g" setup.*sh || die
+	sed -i -e "s:${WORKDIR}:${EPREFIX}/usr/$(get_libdir):g" setup.*sh || die
 	cd "${S}"
 	mv src/demo .
 	rm -f ${CMTBIN}/*.o
@@ -48,9 +51,9 @@ src_compile() {
 }
 
 src_install() {
-	CMTDIR=/usr/$(get_libdir)/CMT/${CMT_PV}
+	CMTDIR="${EPREFIX}"/usr/$(get_libdir)/CMT/${CMT_PV}
 	dodir ${CMTDIR}
-	cp -pPR mgr src ${CMTBIN} "${D}"/${CMTDIR} || die
+	cp -pPR mgr src ${CMTBIN} "${ED}"/${CMTDIR} || die
 	dodir /usr/bin
 	dosym ${CMTDIR}/${CMTBIN}/cmt.exe /usr/bin/cmt
 
@@ -60,26 +63,23 @@ src_install() {
 		 CMTCONFIG="$(${CMTROOT}/mgr/cmt_system.sh)"
 	EOF
 	if use java; then
-		cp -pPR java "${D}"/${CMTDIR}
-		echo "#!/bin/sh" > jcmt
+		cp -pPR java "${ED}"/${CMTDIR}
+		echo "#!${EPREFIX}/bin/sh" > jcmt
 		echo "java cmt_parser" >> jcmt
 		exeinto /usr/bin
-		doexe jcmt || die "doexe failed"
+		doexe jcmt
 		echo "CLASSPATH=\"${CMTDIR}/java/cmt.jar\"" >> 99cmt
 	fi
 
-	doenvd 99cmt || die "doenvd failed"
-	dodoc ChangeLog doc/*.txt || die "dodoc failed"
-	dohtml doc/{ChangeLog,ReleaseNotes}.html || die "dohtml failed"
+	doenvd 99cmt
+	dodoc ChangeLog doc/*.txt
+	dohtml doc/{ChangeLog,ReleaseNotes}.html
 
 	if use doc; then
-		cd "${S}"/mgr
-		emake gendoc || die "emake gendoc failed"
+		emake -C mgr gendoc
 		insinto /usr/share/doc/${PF}
-		cd "${S}"/doc
-		doins -r {CMTDoc,CMTFAQ}.{html,pdf} Images || die "doc install failed"
-		cd "${S}"
-		doins -r demo || die "doins demo failed"
+		doins -r doc/{CMTDoc,CMTFAQ}.{html,pdf} doc/Images
+		doins -r demo
 	fi
 
 	if use emacs; then
