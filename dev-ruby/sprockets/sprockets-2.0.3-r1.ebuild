@@ -1,11 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.0.3.ebuild,v 1.1 2011/12/27 09:04:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.0.3-r1.ebuild,v 1.1 2011/12/29 16:22:17 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_DOC=""
+
+RUBY_FAKEGEM_GEMSPEC="sprockets.gemspec"
 
 inherit ruby-fakegem versionator
 
