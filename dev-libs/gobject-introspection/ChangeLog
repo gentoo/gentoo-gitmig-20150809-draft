@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.48 2011/12/20 21:26:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.49 2011/12/29 17:26:19 pacho Exp $
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org>
+  gobject-introspection-1.30.0-r1.ebuild:
+  amd64 stable, bug 393007
 
   20 Dec 2011; Jeroen Roovers <jer@gentoo.org>
   gobject-introspection-1.30.0-r1.ebuild:
