@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.17.ebuild,v 1.2 2011/03/12 21:52:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.17.ebuild,v 1.3 2011/12/29 16:26:34 pacho Exp $
 
-EAPI="2"
+EAPI="4"
+GCONF_DEBUG="yes"
+
 inherit autotools eutils gnome2
 
 DESCRIPTION="A frontend for gPhoto 2"
@@ -15,7 +17,6 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="gimp gnome nls"
 
 # FIXME: why is exif not optional ?
-
 RDEPEND="x11-libs/gtk+:2
 	>media-libs/libgphoto2-2.4
 	>=media-libs/libexif-0.3.2
@@ -30,9 +31,8 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	nls? ( >=sys-devel/gettext-0.14.1 )"
 
-DOCS="AUTHORS CHANGES NEWS README TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS CHANGES NEWS README TODO"
 	G2CONF="${G2CONF}
 		$(use_with gimp)
 		$(use_with gnome)
@@ -43,13 +43,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix .desktop validity, bug #271569
 	epatch "${FILESDIR}/${PN}-0.1.16.1-desktop-validation.patch"
 
 	intltoolize --automake --force --copy || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {
