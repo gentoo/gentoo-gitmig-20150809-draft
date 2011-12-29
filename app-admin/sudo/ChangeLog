@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.288 2011/12/29 20:55:14 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.289 2011/12/29 21:33:54 ulm Exp $
+
+  29 Dec 2011; Ulrich Mueller <ulm@gentoo.org> sudo-1.7.4_p5.ebuild:
+  Update dependency on app-misc/editor-wrapper.
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> sudo-1.8.1_p2.ebuild:
   Stable for ppc64; bug #379743

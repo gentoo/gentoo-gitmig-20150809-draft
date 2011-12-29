@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.4_p5.ebuild,v 1.8 2011/08/11 10:58:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.4_p5.ebuild,v 1.9 2011/12/29 21:33:54 ulm Exp $
 
 inherit eutils pam
 
@@ -35,7 +35,7 @@ DEPEND="pam? ( virtual/pam )
 		dev-libs/cyrus-sasl
 	)
 	!pam? ( skey? ( >=sys-auth/skey-1.1.5-r1 ) )
-	app-misc/editor-wrapper
+	>=app-misc/editor-wrapper-3
 	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )
@@ -168,7 +168,7 @@ src_compile() {
 	# audit: somebody got to explain me how I can test this before I
 	# enable it.. — Diego
 	econf --with-secure-path="${ROOTPATH}" \
-		--with-editor=/usr/libexec/gentoo-editor \
+		--with-editor=/usr/libexec/editor \
 		--with-env-editor \
 		$(use_with offensive insults) \
 		$(use_with offensive all-insults) \
