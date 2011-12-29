@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.1 2011/12/27 18:52:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.2 2011/12/29 11:39:17 jlec Exp $
 
 EAPI=3
 
@@ -24,44 +24,57 @@ SLOT="0"
 IUSE="boost cg doc examples ffmpeg java mpi mysql odbc patented postgres python qt4 tk theora tk threads video_cards_nvidia R X"
 
 RDEPEND="
+	dev-libs/expat
+	dev-libs/libxml2:2
+	media-libs/freetype
+	media-libs/libpng
+	media-libs/mesa
+	media-libs/tiff
+	sci-libs/hdf5
+	sys-libs/zlib
+	virtual/jpeg
+	virtual/opengl
+	x11-libs/libX11
+	x11-libs/libXmu
+	x11-libs/libXt
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	examples? (
-			x11-libs/qt-core:4[qt3support]
-			x11-libs/qt-gui:4[qt3support] )
+		x11-libs/qt-core:4[qt3support]
+		x11-libs/qt-gui:4[qt3support] )
 	ffmpeg? ( virtual/ffmpeg )
 	java? ( >=virtual/jre-1.5 )
 	mpi? ( virtual/mpi[cxx,romio] )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	postgres? ( dev-db/postgresql-base )
+	python? ( dev-python/sip )
 	qt4? (
-			x11-libs/qt-core:4
-			x11-libs/qt-gui:4
-			x11-libs/qt-opengl:4
-			x11-libs/qt-sql:4
-			x11-libs/qt-webkit:4 )
+		x11-libs/qt-core:4
+		x11-libs/qt-gui:4
+		x11-libs/qt-opengl:4
+		x11-libs/qt-sql:4
+		x11-libs/qt-webkit:4
+		python? ( dev-python/PyQt4	)
+		)
 	tk? ( dev-lang/tk )
 	theora? ( media-libs/libtheora )
 	tk? ( dev-lang/tk )
-	R? ( dev-lang/R )
-	dev-libs/expat
-	dev-libs/libxml2:2
-	media-libs/freetype
-	virtual/jpeg
-	media-libs/libpng
-	media-libs/mesa
-	media-libs/tiff
-	sys-libs/zlib
-	virtual/opengl
-	x11-libs/libX11
-	x11-libs/libXmu
-	x11-libs/libXt"
+	R? ( dev-lang/R )"
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
 		boost? ( >=dev-libs/boost-1.40.0[mpi?] )
 		dev-util/cmake"
 
 S="${WORKDIR}"/VTK
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-5.6.0-cg-path.patch
+	"${FILESDIR}"/${PN}-5.2.0-tcl-install.patch
+	"${FILESDIR}"/${P}-R.patch
+	"${FILESDIR}"/${PN}-5.6.0-odbc.patch
+	"${FILESDIR}"/${PN}-5.6.1-ffmpeg.patch
+	"${FILESDIR}"/${PN}-5.6.1-libav-0.8.patch
+	)
 
 pkg_setup() {
 	echo
@@ -74,21 +87,6 @@ pkg_setup() {
 
 	use python && python_set_active_version 2
 	append-cppflags -D__STDC_CONSTANT_MACROS
-}
-
-src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-5.6.0-cg-path.patch \
-		"${FILESDIR}"/${PN}-5.2.0-tcl-install.patch \
-		"${FILESDIR}"/${P}-R.patch \
-		"${FILESDIR}"/${PN}-5.6.0-odbc.patch \
-		"${FILESDIR}"/${PN}-5.6.1-ffmpeg.patch \
-		"${FILESDIR}"/${PN}-5.6.1-libav-0.8.patch
-
-	# Fix sure buffer overflow on some processors as reported by Flameyes in #338819
-	sed -e "s:CHIPNAME_STRING_LENGTH    (48 + 1):CHIPNAME_STRING_LENGTH    (79 + 1):" \
-		-i Utilities/kwsys/SystemInformation.cxx \
-		|| die "Failed to fix SystemInformation.cxx buffer overflow"
 }
 
 src_configure() {
@@ -142,12 +140,12 @@ src_configure() {
 
 	use tk &&
 	mycmakeargs+=(
-		VTK_WRAP_TCL
-		VTK_WRAP_TK
-		VTK_TCL_INCLUDE_DIR="${EPREFIX}"/usr/include
-		VTK_TCL_LIBRARY="${EPREFIX}"/usr/$(get_libdir)
-		VTK_TK_INCLUDE_DIR="${EPREFIX}"/usr/include
-		VTK_TK_LIBRARY="${EPREFIX}"/usr/$(get_libdir)
+		-DVTK_WRAP_TCL=ON
+		-DVTK_WRAP_TK=ON
+		-DVTK_TCL_INCLUDE_DIR="${EPREFIX}"/usr/include
+		-DVTK_TCL_LIBRARY="${EPREFIX}"/usr/$(get_libdir)
+		-DVTK_TK_INCLUDE_DIR="${EPREFIX}"/usr/include
+		-DVTK_TK_LIBRARY="${EPREFIX}"/usr/$(get_libdir)
 	)
 
 	use theora &&
