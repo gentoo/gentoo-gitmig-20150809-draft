@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.0.ebuild,v 1.1 2010/03/16 11:59:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.0.ebuild,v 1.2 2011/12/29 22:10:34 ulm Exp $
 
 inherit elisp eutils
 
@@ -21,7 +21,7 @@ RDEPEND="!app-emacs/u-vm-color
 	ssl? ( net-misc/stunnel )"
 
 S="${WORKDIR}/${MY_P}"
-SITEFILE="50${PN}-gentoo.el"
+SITEFILE="50${PN}-gentoo-8.0.el"
 
 src_unpack() {
 	unpack ${A}

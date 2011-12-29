@@ -1,10 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.1.ebuild,v 1.3 2011/12/29 22:10:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.2.0_beta.ebuild,v 1.1 2011/12/29 22:10:34 ulm Exp $
+
+EAPI=4
 
 inherit elisp eutils
 
-MY_PV="${PV/_/-}"
+MY_PV="${PV/_beta/b}"
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="The VM mail reader for Emacs"
 HOMEPAGE="http://www.nongnu.org/viewmail/"
@@ -21,28 +23,40 @@ RDEPEND="!app-emacs/u-vm-color
 	ssl? ( net-misc/stunnel )"
 
 S="${WORKDIR}/${MY_P}"
-SITEFILE="50${PN}-gentoo-8.0.el"
+SITEFILE="50${PN}-gentoo.el"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-datadir.patch"
 
 	if ! use bbdb; then
 		elog "Excluding vm-pcrisis.el since the \"bbdb\" USE flag is not set."
-		epatch "${FILESDIR}/vm-8.0-no-pcrisis.patch"
+		epatch "${FILESDIR}/${PN}-8.0-no-pcrisis.patch"
 	fi
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--with-emacs="emacs" \
-		--with-pixmapdir="${SITEETC}/${PN}" \
+		--with-lispdir="${SITELISP}/${PN}" \
+		--with-etcdir="${SITEETC}/${PN}" \
+		--with-docdir="/usr/share/doc/${PF}" \
 		$(use bbdb && echo "--with-other-dirs=${SITELISP}/bbdb")
-	emake -j1 || die "emake failed"
+}
+
+src_compile() {
+	emake -j1
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" install
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
-	dodoc CHANGES NEWS README TODO example.vm || die "dodoc failed"
+
+	# delete duplicate documentation
+	find "${D}/${SITEETC}/${PN}" -type d -name pixmaps -prune \
+		-o -type f -exec rm '{}' '+' || die
+	rm "${D}/usr/share/doc/${PF}/COPYING" || die
+
+	dodoc example.vm
+	# NEWS is accessed from lisp and must not be compressed
+	docompress -x /usr/share/doc/${PF}/NEWS
 }
