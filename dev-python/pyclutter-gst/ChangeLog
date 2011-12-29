@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyclutter-gst
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter-gst/ChangeLog,v 1.4 2011/10/24 05:35:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter-gst/ChangeLog,v 1.5 2011/12/29 17:32:34 pacho Exp $
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> pyclutter-gst-1.0.0-r1.ebuild:
+  amd64 stable, bug 393007
 
   24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   pyclutter-gst-1.0.0-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter-gst/pyclutter-gst-1.0.0-r1.ebuild,v 1.3 2011/10/24 05:35:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter-gst/pyclutter-gst-1.0.0-r1.ebuild,v 1.4 2011/12/29 17:32:34 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -9,7 +9,7 @@ inherit python clutter
 
 DESCRIPTION="Python bindings for Clutter"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="examples"
 
 SLOT="1.0"
