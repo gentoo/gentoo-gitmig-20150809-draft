@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/spork
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.4 2010/10/09 07:52:21 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.5 2011/12/29 09:25:12 graaff Exp $
+
+  29 Dec 2011; Hans de Graaff <graaff@gentoo.org> spork-0.8.4-r1.ebuild:
+  Add x86 keyword.
 
   09 Oct 2010; Hans de Graaff <graaff@gentoo.org> spork-0.8.4-r1.ebuild:
   Depend on rspec-1.
