@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.67 2011/11/26 04:49:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.68 2011/12/29 17:49:12 axs Exp $
+
+*spidermonkey-1.8.2.15-r1 (29 Dec 2011)
+
+  29 Dec 2011; Ian Stakenvicius <axs@gentoo.org>
+  +spidermonkey-1.8.2.15-r1.ebuild:
+  Added js shell to spidermonkey-1.8.2.15, as per user request in bug 377291
 
   26 Nov 2011; Ryan Hill <dirtyepic@gentoo.org> spidermonkey-1.8.5-r1.ebuild:
   Fix typo (committed as obvious).
