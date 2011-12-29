@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.2 2011/12/29 11:39:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.3 2011/12/29 13:28:51 jlec Exp $
 
 EAPI=3
 
@@ -135,6 +135,7 @@ src_configure() {
 		$(cmake-utils_use threads VTK_USE_PARALLEL)
 		$(cmake-utils_use video_cards_nvidia VTK_USE_NVCONTROL)
 		$(cmake-utils_use X VTK_USE_X)
+		$(cmake-utils_use X VTK_USE_GUISUPPORT)
 		$(cmake-utils_use R VTK_USE_GNU_R)
 	)
 
@@ -179,7 +180,7 @@ src_configure() {
 			-DSIP_INCLUDE_DIR="${EPREFIX}$(python_get_includedir)"
 			-DVTK_PYTHON_INCLUDE_DIR="${EPREFIX}"$(python_get_includedir)
 			-DVTK_PYTHON_LIBRARY="${EPREFIX}$(python_get_library)"
-			-DPYTHON_SETUP_ARGS:STRING=--root="${D}")
+			-DVTK_PYTHON_SETUP_ARGS:STRING=--root="${D}")
 	fi
 
 	if use qt4 ; then
