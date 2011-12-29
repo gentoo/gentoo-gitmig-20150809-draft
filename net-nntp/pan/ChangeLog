@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.91 2011/12/20 21:39:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.92 2011/12/29 18:08:29 pacho Exp $
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> pan-0.135.ebuild:
+  amd64 stable, bug 393007
 
   20 Dec 2011; Jeroen Roovers <jer@gentoo.org> pan-0.135.ebuild:
   Stable for HPPA (bug #393007).
