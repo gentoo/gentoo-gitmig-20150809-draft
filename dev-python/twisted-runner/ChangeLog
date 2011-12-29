@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.54 2011/12/27 07:15:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.55 2011/12/29 04:23:01 floppym Exp $
+
+  29 Dec 2011; Mike Gilbert <floppym@gentoo.org> twisted-runner-11.1.0.ebuild:
+  Call python_clean_installation_image. Another arfrever tip.
 
 *twisted-runner-11.1.0 (27 Dec 2011)
 
