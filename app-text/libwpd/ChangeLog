@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.90 2011/12/20 21:18:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.91 2011/12/29 17:18:47 pacho Exp $
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> libwpd-0.9.4.ebuild:
+  amd64 stable, bug 393007
 
   20 Dec 2011; Jeroen Roovers <jer@gentoo.org> libwpd-0.9.4.ebuild:
   Stable for HPPA (bug #393007).
