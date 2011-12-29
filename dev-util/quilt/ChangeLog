@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/quilt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.50 2011/12/29 23:00:52 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.51 2011/12/29 23:43:14 mpagano Exp $
+
+  29 Dec 2011; Michael Pagano <mpagano@gentoo.org> -quilt-0.42-r1.ebuild,
+  -files/quilt-0.42-no-graphviz.patch,
+  -files/quilt-0.42-prevent-stripping.patch, -quilt-0.45-r1.ebuild,
+  -files/quilt-0.45-no-graphviz.patch, -quilt-0.46.ebuild,
+  -files/quilt-0.46-no-graphviz.patch, -quilt-0.47.ebuild,
+  -quilt-0.47-r1.ebuild, -files/quilt-0.47-no-graphviz.patch:
+  Drop old versions
 
 *quilt-0.50 (29 Dec 2011)
 
