@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.521 2011/12/29 14:16:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.522 2011/12/29 17:07:46 jer Exp $
+
+  29 Dec 2011; Jeroen Roovers <jer@gentoo.org> ruby-1.9.3_p0.ebuild:
+  Marked ~hppa (bug #332593).
 
   29 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p0.ebuild:
   Add back ~alpha keyword now that rubygems is keyworded.
