@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-1.1.0.ebuild,v 1.2 2011/09/03 14:49:58 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-1.1.2.ebuild,v 1.1 2011/12/29 08:18:49 maksbotan Exp $
 
 EAPI="4"
 LANGS="de pl ru uk"
@@ -40,11 +40,18 @@ RDEPEND="
 	>=x11-libs/qt-gui-4.5:4
 	>=dev-libs/openssl-0.9.8k
 	adiummessagestyle? ( >=x11-libs/qt-webkit-4.5:4 )
+	net-dns/libidn
 	x11-libs/libXScrnSaver
 "
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS CHANGELOG README TRANSLATORS"
+
+src_prepare() {
+	default
+
+	epatch "${FILESDIR}"/${PN}-1.1.1-zlib.patch
+}
 
 src_configure() {
 	# linguas
@@ -58,6 +65,7 @@ src_configure() {
 		-DINSTALL_SDK=ON
 		-DLANGS="${langs}"
 		-DINSTALL_DOCS=OFF
+		-DFORCE_BUNDLED_MINIZIP=ON
 	)
 
 	for x in ${PLUGINS}; do
