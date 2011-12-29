@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.28 2011/12/28 14:54:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.29 2011/12/29 14:18:57 graaff Exp $
+
+  29 Dec 2011; Hans de Graaff <graaff@gentoo.org> rubygems-4.ebuild:
+  Add back alpha keywords now that rubygems is keyworded.
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> rubygems-4.ebuild:
   Add missing keywords in accordance with dev-ruby/rubygems and
