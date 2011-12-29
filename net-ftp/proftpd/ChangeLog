@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.286 2011/12/22 22:46:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.287 2011/12/29 23:30:13 voyageur Exp $
+
+  29 Dec 2011; Bernard Cafarelli <voyageur@gentoo.org> proftpd-1.3.4a.ebuild,
+  +files/proftpd-1.3.4a-ubug-3682.patch, +files/proftpd-1.3.4a-ubug-3728.patch:
+  Fixes USE=nls and build failure(sparc) on Gentoo/FreeBSD. Thanks to Dmitri
+  Bogomolov and Naohiro Aota (bug #354295) and Tibor Vago (bug #393189)
 
   22 Dec 2011; Mark Loeser <halcy0n@gentoo.org> proftpd-1.3.3g.ebuild:
   Stable for ppc/ppc64; bug #390075
