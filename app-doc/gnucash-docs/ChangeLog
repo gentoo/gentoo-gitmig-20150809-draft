@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gnucash-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.10 2011/11/30 15:10:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.11 2011/12/29 17:14:21 pacho Exp $
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> gnucash-docs-2.4.1.ebuild:
+  amd64 stable, bug 393007
 
 *gnucash-docs-2.4.1 (30 Nov 2011)
 
