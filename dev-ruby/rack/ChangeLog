@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.64 2011/12/24 08:03:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.65 2011/12/29 06:52:38 graaff Exp $
+
+  29 Dec 2011; Hans de Graaff <graaff@gentoo.org> rack-1.1.0-r1.ebuild,
+  rack-1.1.2.ebuild:
+  Drop unneeded test-unit dependency for ruby 1.9 since it is not keyworded on
+  all arches and ruby 1.9.3's implementation is compatible.
 
 *rack-1.3.5 (24 Dec 2011)
 *rack-1.2.4-r2 (24 Dec 2011)
