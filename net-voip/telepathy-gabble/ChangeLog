@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.92 2011/11/26 16:03:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.93 2011/12/29 18:09:15 pacho Exp $
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> telepathy-gabble-0.14.1.ebuild:
+  amd64 stable, bug 393007
 
 *telepathy-gabble-0.14.1 (26 Nov 2011)
 
