@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.58 2011/10/30 15:28:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.59 2011/12/29 18:11:03 tetromino Exp $
+
+  29 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  mDNSResponder-212.1.ebuild, mDNSResponder-212.1-r1.ebuild:
+  Non-maintainer commit: add flex and bison build-time dependencies (bug
+  #396405, thanks to Kobboi for reporting); limit avahi blocker to runtime and
+  USE=mdnsresponder-compat; add missing nss-mdns blocker.
 
   30 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> files/dnsextd.init.d:
   non-maintainer commit: Fixed typo in dnsextd init script caused by my
