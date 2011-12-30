@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_pre20111210-r1.ebuild,v 1.1 2011/12/30 09:42:08 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_pre20111210-r1.ebuild,v 1.2 2011/12/30 09:43:31 tomka Exp $
 
 EAPI=3
 
@@ -113,9 +113,4 @@ pkg_postinst() {
 			ewarn "Wicd-1.6 and newer requires your user to be in the 'users' group. If"
 			ewarn "you are not in that group, then modify /etc/dbus-1/system.d/wicd.conf"
 	fi
-	ewarn "If you upgrade from earlier versions, then be sure to check"
-	ewarn "your connection settings.  New versions parse old settings"
-	ewarn "differently, so your DHCP hostname and passphrase could appear"
-	ewarn "enclosed in ['square brackets in quotes']. In this case just"
-	ewarn "remove the offending brackets and quotes."
 }
