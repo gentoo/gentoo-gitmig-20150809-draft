@@ -1,0 +1,18 @@
+From: Nathan Phillip Brink <binki@gentoo.org>
+Subject: Fix missing call to PKG_PROG_PKG_CONFIG caused by conditional
+	invokation of the first PKG_CHECK_MODULES call.
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -561,6 +561,10 @@
+ [],
+ [with_mowgli2=no])
+ 
++dnl If the first PKG_CHECK_MODULES invokation is conditional, we must
++dnl manually invoke PKG_PROG_PKG_CONFIG:
++PKG_PROG_PKG_CONFIG
++
+ if test "x$with_mowgli2" = "xyes"; then
+ 	PKG_CHECK_MODULES(MOWGLI, [libmowgli-2 >= 0.9.90],
+ 		[MOWGLI_SOURCE="system"], [
+

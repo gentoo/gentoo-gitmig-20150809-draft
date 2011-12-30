@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.23 2011/12/26 14:42:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.24 2011/12/30 22:42:37 binki Exp $
+
+  30 Dec 2011; Nathan Phillip Brink <binki@gentoo.org>
+  atheme-services-7.0.0_alpha9.ebuild,
+  +files/atheme-services-7.0.0_alpha9-pkg-config.patch:
+  Fix ./configure failure of atheme-services-7.0.0_alpha9 caused by missing
+  PKG_PROG_PKG_CONFIG call.
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> atheme-services-6.0.9.ebuild:
   x86 stable, bug #394385

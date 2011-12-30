@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.0_alpha9.ebuild,v 1.1 2011/11/08 02:47:43 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.0_alpha9.ebuild,v 1.2 2011/12/30 22:42:37 binki Exp $
 
 EAPI=4
 
-inherit flag-o-matic perl-module
+inherit autotools eutils flag-o-matic perl-module
 
 MY_P=${P/_/-}
 
@@ -45,6 +45,11 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# The first PKG_CHECK_MODULES call is conditional, causing
+	# PKG_PROG_PKG_CONFIG expansion to fail.
+	epatch "${FILESDIR}"/${P}-pkg-config.patch
+	eautoconf
+
 	# fix docdir
 	sed -i -e 's/\(^DOCDIR.*=.\)@DOCDIR@/\1@docdir@/' extra.mk.in || die
 
