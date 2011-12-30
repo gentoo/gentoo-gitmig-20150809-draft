@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-2.2.ebuild,v 1.9 2011/09/24 16:44:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-2.2.ebuild,v 1.10 2011/12/30 16:03:24 halcy0n Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/fuse/${P}.tar.gz"
 HOMEPAGE="http://fuse.sourceforge.net/sshfs.html"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~arm ~hppa ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
