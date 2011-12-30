@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fssm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.13 2011/12/27 07:29:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.14 2011/12/30 14:35:16 graaff Exp $
+
+  30 Dec 2011; Hans de Graaff <graaff@gentoo.org> fssm-0.2.7.ebuild,
+  fssm-0.2.7-r1.ebuild:
+  Add ruby19.
 
   27 Dec 2011; Hans de Graaff <graaff@gentoo.org> -fssm-0.2.5.ebuild:
   Remove old version.

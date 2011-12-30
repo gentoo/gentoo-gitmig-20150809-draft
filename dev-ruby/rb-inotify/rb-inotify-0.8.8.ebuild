@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.8.8.ebuild,v 1.3 2011/12/17 18:37:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.8.8.ebuild,v 1.4 2011/12/30 14:33:39 graaff Exp $
 
 EAPI=4
 
-USE_RUBY="ruby18 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_TEST=""
 
