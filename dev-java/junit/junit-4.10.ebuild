@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.10.ebuild,v 1.1 2011/12/25 21:42:29 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.10.ebuild,v 1.2 2011/12/30 12:14:33 fordfrog Exp $
 
 # WARNING: JUNIT.JAR IS _NOT_ SYMLINKED TO ANT-CORE LIB FOLDER AS JUNIT3 IS
 
@@ -67,7 +67,7 @@ src_test() {
 	mkdir classes || die "Unable to create build directory for tests"
 
 	local cp=$(java-pkg_getjars hamcrest-core):${S}/${PN}${PV}/${PN}-dep-${PV}.jar
-	ejavac -classpath ${cp} -d classes $(find junit/tests -name "*.java")
+	ejavac -classpath ${cp} -d classes $(find junit/tests org/junit/tests -name "*.java")
 
 	java -classpath ${cp}:classes org.junit.runner.JUnitCore junit.tests.AllTests \
 		|| die "Tests failed."
