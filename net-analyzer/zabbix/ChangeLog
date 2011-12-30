@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.69 2011/12/16 23:14:31 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.70 2011/12/30 08:26:50 polynomial-c Exp $
+
+*zabbix-1.8.10 (30 Dec 2011)
+
+  30 Dec 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -zabbix-1.8.10_rc1.ebuild, +zabbix-1.8.10.ebuild:
+  non-maintainer commit: Version bump (with kind permission from bonsaikitten).
+  Removed old. This fixes bug #395975 and should help solving bug #396495.
 
 *zabbix-1.8.10_rc1 (16 Dec 2011)
 
