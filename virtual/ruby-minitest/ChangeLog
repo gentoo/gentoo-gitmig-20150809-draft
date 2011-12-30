@@ -1,6 +1,12 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.25 2011/12/05 00:22:12 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.26 2011/12/30 19:27:22 graaff Exp $
+
+*ruby-minitest-0-r2 (30 Dec 2011)
+
+  30 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-minitest-0-r1.ebuild,
+  +ruby-minitest-0-r2.ebuild:
+  Add revision and drop ruby19 from stable ebuild.
 
   05 Dec 2011; Naohiro Aota <naota@gentoo.org> ruby-minitest-0-r1.ebuild:
   Add ~x86-fbsd.
