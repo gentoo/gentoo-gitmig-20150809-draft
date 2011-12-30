@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/jquery-rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.10 2011/12/13 03:00:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.11 2011/12/30 12:05:11 graaff Exp $
+
+  30 Dec 2011; Hans de Graaff <graaff@gentoo.org> -jquery-rails-1.0.14.ebuild,
+  -jquery-rails-1.0.16.ebuild, jquery-rails-1.0.19.ebuild:
+  Add ruby19.
 
 *jquery-rails-1.0.19 (13 Dec 2011)
 
