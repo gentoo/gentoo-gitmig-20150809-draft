@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.9 2011/02/09 18:59:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.10 2011/12/30 15:49:34 grobian Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (30 Oct 2009)
-# X only
+# X and linux only
 media-video/mplayer xvmc xv dga X xinerama
+media-video/mplayer dvb esd lirc svga jack joystick matrox
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Feb 2009)
 # Doesn't work with python support, bug 257572
@@ -15,6 +16,10 @@ gnome-extra/libgsf python
 # that's fixed it still doesn't work)
 dev-vcs/subversion dso
 
-# Elias Pipping <pipping@gentoo.org> (25 Nov 2007)
-# there's no (official) java6 on macosx
-dev-util/checkstyle test
+# Elias Pipping <pipping@gentoo.org> (13 Sep 2007)
+# mc fails to compile with USE=slang (unicode implies slang)
+app-misc/mc unicode slang
+
+# Elias Pipping <pipping@gentoo.org> (27 Aug 2007)
+# elinks does not compile with USE=perl (tested with 0.11.{2,3})
+www-client/elinks perl

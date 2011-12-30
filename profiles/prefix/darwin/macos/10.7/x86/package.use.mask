@@ -1,15 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.7/x86/package.use.mask,v 1.1 2011/07/04 08:27:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.7/x86/package.use.mask,v 1.2 2011/12/30 15:49:35 grobian Exp $
 
-# Jeremy Olexa <darkside@gentoo.org> (29 Jul 2010)
-# Issues on 32bit osx, bug 329859
-media-sound/mpg123 mmx sse
 
-# Elias Pipping <pipping@gentoo.org> (13 Sep 2007)
-# mc fails to compile with USE=slang (unicode implies slang)
-app-misc/mc unicode slang
-
-# Elias Pipping <pipping@gentoo.org> (27 Aug 2007)
-# elinks does not compile with USE=perl (tested with 0.11.{2,3})
-www-client/elinks perl
