@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.24 2011/12/30 22:42:37 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.25 2011/12/30 22:47:37 binki Exp $
+
+  30 Dec 2011; Nathan Phillip Brink <binki@gentoo.org>
+  -atheme-services-6.0.8-r2.ebuild:
+  Drop old atheme-services-6.0.8-r2.
 
   30 Dec 2011; Nathan Phillip Brink <binki@gentoo.org>
   atheme-services-7.0.0_alpha9.ebuild,
