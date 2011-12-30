@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.909 2011/12/30 00:04:13 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.910 2011/12/30 09:51:27 hwoarang Exp $
+
+  30 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
+  gentoo-sources-3.1.6.ebuild:
+  Stable on amd64 wrt bug #396469
 
   30 Dec 2011; Michael Pagano <mpagano@gentoo.org>
   -gentoo-sources-3.0.7.ebuild, -gentoo-sources-3.0.9.ebuild,
