@@ -1,0 +1,9 @@
+# ChangeLog for sys-fs/ext4magic
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ChangeLog,v 1.1 2011/12/30 12:40:33 ssuominen Exp $
+
+*ext4magic-0.2.4 (30 Dec 2011)
+
+  30 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +ext4magic-0.2.4.ebuild:
+  Initial commit wrt #374741 by Marcel Partap
+
