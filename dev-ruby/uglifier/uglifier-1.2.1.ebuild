@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-1.2.1.ebuild,v 1.1 2011/12/30 12:46:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-1.2.1.ebuild,v 1.2 2011/12/30 18:15:18 mr_bones_ Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18"
@@ -23,7 +23,6 @@ IUSE="test"
 
 # Tests requires additional uglifyjs test code in a vendored git submodule.
 RESTRICT="test"
-
 
 ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
 
