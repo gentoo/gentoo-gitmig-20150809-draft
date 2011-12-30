@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.102 2011/12/11 10:21:18 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.103 2011/12/30 09:42:08 tomka Exp $
+
+*wicd-1.7.1_pre20111210-r1 (30 Dec 2011)
+
+  30 Dec 2011; Thomas Kahle <tomka@gentoo.org> wicd-1.7.1_pre20111210.ebuild,
+  +wicd-1.7.1_pre20111210-r1.ebuild,
+  +files/wicd-1.7.1_pre20111210-fix-config-reading.patch:
+  Fix bug 394309 and download URI
 
   11 Dec 2011; Thomas Kahle <tomka@gentoo.org> wicd-1.7.1_pre20111210.ebuild:
   ewarn updated again. Thanks to Jeff Kowalczyk and Nikolaj Sjujskij for

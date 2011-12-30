@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_pre20111210.ebuild,v 1.4 2011/12/30 09:42:08 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_pre20111210-r1.ebuild,v 1.1 2011/12/30 09:42:08 tomka Exp $
 
 EAPI=3
 
@@ -62,6 +62,8 @@ DOCS="CHANGES NEWS AUTHORS README"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.7.1_beta2-init.patch
 	epatch "${FILESDIR}"/${PN}-init-sve-start.patch
+	# Fix bug 394309
+	epatch "${FILESDIR}"/${P}-fix-config-reading.patch
 	# Add a template for hex psk's and wpa (Bug 306423)
 	epatch "${FILESDIR}"/${P}-wpa-psk-hex-template.patch
 	# get rid of opts variable to fix bug 381885
