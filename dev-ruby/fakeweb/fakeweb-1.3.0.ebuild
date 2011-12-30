@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.3.0.ebuild,v 1.3 2011/08/07 18:01:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.3.0.ebuild,v 1.4 2011/12/30 11:03:34 graaff Exp $
 
 EAPI=2
 
@@ -23,7 +23,6 @@ ruby_add_bdepend "
 	test? (
 		>=dev-ruby/mocha-0.9.5
 		virtual/ruby-test-unit
-		!dev-ruby/test-unit:2
 		dev-ruby/samuel
 		dev-ruby/right_http_connection
 	)"
