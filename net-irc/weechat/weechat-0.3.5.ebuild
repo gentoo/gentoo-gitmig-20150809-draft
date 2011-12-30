@@ -1,10 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.5.ebuild,v 1.5 2011/09/19 02:05:50 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.5.ebuild,v 1.6 2011/12/30 21:34:35 binki Exp $
 
 EAPI=3
 
-USE_RUBY="ruby18 ruby19"
+# Can only add ruby19 support when ruby:1.9 is keyworded.
+#USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 RUBY_OPTIONAL="yes"
 
 PYTHON_DEPEND="python? 2"
