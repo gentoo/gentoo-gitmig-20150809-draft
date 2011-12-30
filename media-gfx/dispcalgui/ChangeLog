@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/dispcalgui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.4 2011/12/17 13:39:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.5 2011/12/30 09:16:57 hwoarang Exp $
+
+*dispcalgui-0.8.1.9 (30 Dec 2011)
+
+  30 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +dispcalgui-0.8.1.9.ebuild:
+  Version bump. Bug #394967. Thanks to Marios Andreopoulos
+  <opensource@andmarios.com> for the ebuild
 
   17 Dec 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix tag order to match description, remove assignment instructions from
