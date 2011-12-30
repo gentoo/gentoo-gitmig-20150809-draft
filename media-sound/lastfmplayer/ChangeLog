@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.65 2011/08/07 12:38:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.66 2011/12/30 09:49:31 hwoarang Exp $
+
+*lastfmplayer-1.5.4.27091-r2 (30 Dec 2011)
+
+  30 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
+  +lastfmplayer-1.5.4.27091-r2.ebuild:
+  Allow arguments when launching lastfm from desktop file. Bug #395277
 
   07 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
   -lastfmplayer-1.5.4.26862-r3.ebuild, -lastfmplayer-1.5.4.27091.ebuild:
