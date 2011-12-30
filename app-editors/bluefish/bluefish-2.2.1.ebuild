@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.3.ebuild,v 1.1 2011/06/05 09:33:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.1.ebuild,v 1.1 2011/12/30 13:44:14 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="python? 2"
 
@@ -17,19 +17,27 @@ HOMEPAGE="http://bluefish.openoffice.nl/"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE="gucharmap nls python spell"
+IUSE="gtk3 nls python spell"
 
 RDEPEND="
-	>=x11-libs/gtk+-2.12:2
+	gtk3? (
+		x11-libs/gtk+:3
+		gnome-extra/gucharmap:2.90
+	)
+	!gtk3? (
+		>=x11-libs/gtk+-2.12:2
+		gnome-extra/gucharmap:0
+	)
 	spell? ( app-text/enchant )"
-
 DEPEND="${RDEPEND}
 	>=dev-libs/glib-2.16:2
 	dev-libs/libxml2:2
 	dev-util/pkgconfig
 	x11-libs/pango
-	gucharmap? ( gnome-extra/gucharmap )
-	nls? ( sys-devel/gettext dev-util/intltool )"
+	nls? (
+		sys-devel/gettext
+		dev-util/intltool
+	)"
 
 S=${WORKDIR}/${MY_P}
 
@@ -40,32 +48,23 @@ pkg_setup() {
 	fi
 }
 
-src_prepare () {
-	intltoolize --copy --force || die "intltoolize failed"
-	for po_dir in src/plugin_*/po ; do
-		cp po/Makefile.in.in ${po_dir}
-	done
-
-	# Fixes automagic installation of charmap plugin
-	# Upstream bug: https://bugzilla.gnome.org/show_bug.cgi?id=570990
-	epatch "${FILESDIR}"/${PN}-2.0.0-gucharmap-automagic.patch
-	eautoreconf
-}
+# Never eautoreconf this package as gettext breaks completely (no translations
+# even if it compiles afterwards)!
 
 src_configure() {
 	econf \
-		--docdir="/usr/share/doc/${PF}" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--disable-dependency-tracking \
 		--disable-update-databases \
 		--disable-xml-catalog-update \
 		$(use_enable nls) \
 		$(use_enable spell spell-check) \
-		$(use_enable gucharmap charmap) \
+		$(use_with !gtk3 gtk2) \
 		$(use_enable python)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
