@@ -1,6 +1,32 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.315 2011/12/30 15:49:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.316 2011/12/30 16:20:16 grobian Exp $
+
+  30 Dec 2011; Fabian Groffen <grobian@gentoo.org>
+  +sunos/solaris/5.9/package.mask, +sunos/solaris/arch/sparc/package.mask,
+  +sunos/solaris/arch/sparc/package.use.mask,
+  +sunos/solaris/arch/sparc64/package.mask,
+  +sunos/solaris/arch/sparc64/package.use.mask,
+  +sunos/solaris/arch/sparc64/parent, +sunos/solaris/arch/x64/package.mask,
+  +sunos/solaris/arch/x64/package.use.mask, +sunos/solaris/arch/x64/parent,
+  +sunos/solaris/arch/x86/package.mask,
+  +sunos/solaris/arch/x86/package.use.mask,
+  sunos/solaris/5.9/sparc/package.mask, sunos/solaris/5.9/sparc/parent,
+  sunos/solaris/5.9/sparc64/package.mask, sunos/solaris/5.9/sparc64/parent,
+  sunos/solaris/5.10/sparc/package.mask,
+  sunos/solaris/5.10/sparc/package.use.mask, sunos/solaris/5.10/sparc/parent,
+  sunos/solaris/5.10/sparc64/package.mask,
+  sunos/solaris/5.10/sparc64/package.use.mask,
+  sunos/solaris/5.10/sparc64/parent, sunos/solaris/5.10/x64/parent,
+  sunos/solaris/5.10/x86/package.use.mask, sunos/solaris/5.10/x86/parent,
+  sunos/solaris/5.11/sparc/package.mask,
+  sunos/solaris/5.11/sparc/package.use.mask, sunos/solaris/5.11/sparc/parent,
+  sunos/solaris/5.11/sparc64/package.mask,
+  sunos/solaris/5.11/sparc64/package.use.mask,
+  sunos/solaris/5.11/sparc64/parent, sunos/solaris/5.11/x64/parent,
+  sunos/solaris/5.11/x86/package.use.mask, sunos/solaris/5.11/x86/parent,
+  sunos/solaris/package.use.mask:
+  Inherit Solaris arch-specific masks through arch sub-tree
 
   30 Dec 2011; Fabian Groffen <grobian@gentoo.org>
   +darwin/macos/10.4/package.use.mask, +darwin/macos/arch/ppc/package.mask,
