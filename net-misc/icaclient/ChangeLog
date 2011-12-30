@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.82 2011/12/29 11:51:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.83 2011/12/30 15:19:57 fauli Exp $
+
+  30 Dec 2011; Christian Faulhammer <fauli@gentoo.org> Manifest:
+  Fix manifest; bug 396499
 
   29 Dec 2011; Christian Faulhammer <fauli@gentoo.org> icaclient-12.0.0.ebuild:
   Sign Manifest
