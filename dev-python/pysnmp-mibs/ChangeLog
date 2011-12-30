@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp-mibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp-mibs/ChangeLog,v 1.7 2011/12/25 10:19:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp-mibs/ChangeLog,v 1.8 2011/12/30 18:14:48 mr_bones_ Exp $
+
+  30 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org> pysnmp-mibs-0.1.2.ebuild:
+  whitespace
 
 *pysnmp-mibs-0.1.2 (25 Dec 2011)
 

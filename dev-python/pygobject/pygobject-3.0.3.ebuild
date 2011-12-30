@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.3.ebuild,v 1.1 2011/12/26 06:29:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.3.ebuild,v 1.2 2011/12/30 18:14:18 mr_bones_ Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -73,7 +73,7 @@ src_prepare() {
 	# Upstream patch to fix GObject.property min/max values; in next release
 	epatch "${FILESDIR}/${P}-gobject-property-min-max.patch"
 
-	# https://bugzilla.gnome.org/show_bug.cgi?id=666852 
+	# https://bugzilla.gnome.org/show_bug.cgi?id=666852
 	epatch "${FILESDIR}/${PN}-3.0.3-tests-python3.patch"
 
 	# disable pyc compiling
