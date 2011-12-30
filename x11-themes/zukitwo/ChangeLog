@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/zukitwo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.3 2011/12/11 07:18:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.4 2011/12/30 08:39:38 tetromino Exp $
+
+*zukitwo-2011.12.29 (30 Dec 2011)
+
+  30 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -zukitwo-0_pre20111023.ebuild, -zukitwo-0_pre20111110.ebuild,
+  +zukitwo-2011.12.29.ebuild:
+  Version bump, now includes themes for xfwm4. Drop old.
 
 *zukitwo-2011.12.05 (11 Dec 2011)
 
