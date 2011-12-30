@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/libbeagle-0.3.9-r1.ebuild,v 1.1 2011/11/25 20:05:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/libbeagle-0.3.9-r1.ebuild,v 1.2 2011/12/30 19:25:53 floppym Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -17,7 +17,7 @@ IUSE="debug doc +python"
 RDEPEND=">=dev-libs/glib-2.6
 	>=dev-libs/libxml2-2.6.19
 	python? ( >=dev-python/pygtk-2.6 )
-	>=app-misc/beagle-0.2.18"
+	!<=app-misc/beagle-0.2.18"
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
