@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.111 2011/12/27 16:04:27 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.112 2011/12/30 14:39:26 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -138,15 +138,18 @@ qt4-build_pkg_setup() {
 # Unpacks the sources.
 qt4-build_src_unpack() {
 	setqtenv
-	local target targets=
+
+	local tarball="${MY_P}.tar.gz" target= targets=
 	for target in configure LICENSE.GPL3 LICENSE.LGPL projects.pro \
-		src/{qbase,qt_targets,qt_install}.pri bin config.tests mkspecs qmake \
-		${QT4_EXTRACT_DIRECTORIES}; do
-			targets+=" ${MY_P}/${target}"
+		src/{qbase,qt_targets,qt_install}.pri bin config.tests \
+		mkspecs qmake ${QT4_EXTRACT_DIRECTORIES}
+	do
+		targets+="${MY_P}/${target} "
 	done
 
-	echo tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets}
-	tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets} || die
+	ebegin "Unpacking parts of ${tarball}:" ${targets//${MY_P}\/}
+	tar -xzf "${DISTDIR}/${tarball}" ${targets}
+	eend $? || die "failed to unpack"
 }
 
 # @ECLASS-VARIABLE: PATCHES
