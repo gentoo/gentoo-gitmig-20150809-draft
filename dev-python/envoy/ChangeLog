@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/envoy
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envoy/ChangeLog,v 1.1 2011/12/30 06:50:30 patrick Exp $
+
+*envoy-0.0.2 (30 Dec 2011)
+
+  30 Dec 2011; Patrick Lauer <patrick@gentoo.org> +envoy-0.0.2.ebuild,
+  +metadata.xml:
+  Initial import for #396287, ebuild by jbergstroem
+
