@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/mcomix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.4 2011/11/15 03:27:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.5 2011/12/30 07:44:04 dirtyepic Exp $
+
+*mcomix-0.96 (30 Dec 2011)
+
+  30 Dec 2011; Ryan Hill <dirtyepic@gentoo.org> -mcomix-0.94.ebuild,
+  +mcomix-0.96.ebuild, metadata.xml:
+  Version bump. Fix destruction of cbr archives when opened w/ p7zip, fix hang
+  when opening passworded cbr archives, do not reset file permissions to 0600
+  after editing an archive, and do not reopen last open archive after a crash.
+  Adds finer-grained control over double-page view for title and wide pages.
+  Remove old.
 
 *mcomix-0.95 (15 Nov 2011)
 
