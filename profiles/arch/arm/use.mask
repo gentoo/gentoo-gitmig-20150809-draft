@@ -4,6 +4,10 @@
 # Unmask arm arch specific flags
 -iwmmxt
 
+# Hans de Graaff <graaff@gentoo.org> (30 Dec 2010)
+# Mask ruby19 until bug 332593 is fully fixed.
+ruby_targets_ruby19
+
 # Markus Meier <maekke@gentoo.org> (22 Aug 2010)
 # net-wireless/wimax not tested
 wimax
