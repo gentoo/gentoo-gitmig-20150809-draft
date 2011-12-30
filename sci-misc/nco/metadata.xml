@@ -12,6 +12,7 @@
   climate data, though it works on any netCDF format datasets.
 </longdescription>
 <use>
+  <flag name="dap">Support for remote data access with the NETCDF DAP client</flag>
   <flag name='ncap2'>Build next generation netcdf arithmetic processor
     (needs <pkg>dev-java/antlr</pkg>)</flag>
   <flag name='udunits'>Add <pkg>sci-libs/udunits</pkg> files support</flag>
