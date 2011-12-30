@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.846 2011/12/13 17:53:24 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.847 2011/12/30 20:16:38 zorry Exp $
+
+  30 Dec 2011; Magnus Granberg <zorry@gentoo.org> gcc-4.5.3-r2.ebuild:
+  Bump the piepatchset to 0.4.7 to fix 394821
 
 *gcc-4.5.3-r2 (13 Dec 2011)
 
