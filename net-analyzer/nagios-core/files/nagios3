@@ -1,9 +1,18 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/files/nagios3,v 1.1 2008/04/27 18:41:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/files/nagios3,v 1.2 2011/12/30 15:34:02 polynomial-c Exp $
 
-opts="${opts} reload checkconfig"
+extra_commands="checkconfig"
+extra_started_commands="reload"
+
+nagios_config="/etc/nagios/nagios.cfg"
+nagios_cmdfile="/var/nagios/rw/nagios.cmd"
+
+command="/usr/sbin/nagios"
+command_args="-d ${nagios_config}"
+pidfile="/var/nagios/nagios.lock"
+start_stop_daemon_args="-e HOME=/var/nagios/home"
 
 depend() {
 	need net
@@ -15,43 +24,30 @@ reload()
 {
 	checkconfig || return 1
 	ebegin "Reloading configuration"
-	killall -HUP nagios &>/dev/null
+	start-stop-daemon --signal HUP --pidfile ${pidfile}
 	eend $?
 }
 
 checkconfig() {
+	ebegin "Verifiyng config files"
+
 	# Silent Check
-	/usr/sbin/nagios -v /etc/nagios/nagios.cfg &>/dev/null && return 0
+	/usr/sbin/nagios -v ${nagios_config} &>/dev/null && return 0
 
 	# Now we know there's problem - run again and display errors
-	/usr/sbin/nagios -v /etc/nagios/nagios.cfg
+	/usr/sbin/nagios -v ${nagios_config}
 	eend $? "Configuration Error. Please fix your configfile"
 }
 
-start() {
+start_pre() {
 	checkconfig || return 1
-	ebegin "Starting nagios"
+
 	touch /var/nagios/nagios.log /var/nagios/status.sav
 	chown nagios:nagios /var/nagios/nagios.log /var/nagios/status.sav
-	rm -f /var/nagios/rw/nagios.cmd
-	start-stop-daemon --quiet --start --startas /usr/sbin/nagios \
-		-e HOME="/var/nagios/home" --pidfile /var/nagios/nagios.lock \
-		-- -d /etc/nagios/nagios.cfg
-	eend $?
+	rm -f ${nagios_cmdfile}
 }
 
-stop() {
-	ebegin "Stopping nagios"
-	start-stop-daemon --quiet --stop --pidfile /var/nagios/nagios.lock
-	rm -f /var/nagios/status.log /var/nagios/nagios.tmp /var/nagios/nagios.lock /var/nagios/rw/nagios.cmd
-	eend $?
+stop_post() {
+	rm -f /var/nagios/status.log /var/nagios/nagios.tmp ${pidfile} \
+		${nagios_cmdfile}
 }
-
-svc_restart() {
-	checkconfig || return 1
-	ebegin "Restarting nagios"
-	svc_stop
-	svc_start
-	eend $?
-}
-

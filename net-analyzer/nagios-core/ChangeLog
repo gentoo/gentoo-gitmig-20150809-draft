@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.181 2011/08/27 17:38:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.182 2011/12/30 15:34:02 polynomial-c Exp $
+
+  30 Dec 2011; Lars Wendler <polynomial-c@gentoo.org> files/nagios3:
+  non-maintainer commit: Massively rewrote init script with help from idl0r.
+  Fixed deprecated s-s-d options. Let reload function use s-s-d as well. Thanks
+  to Michael Kensington for reporting this in bug #392929 and providing a
+  patch.
 
   27 Aug 2011; Raúl Porcel <armin76@gentoo.org> nagios-core-3.3.1.ebuild:
   alpha/sparc stable wrt #371302
