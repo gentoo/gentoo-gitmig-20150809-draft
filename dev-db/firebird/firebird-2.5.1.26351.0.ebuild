@@ -1,11 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.0.26074.0-r1.ebuild,v 1.1 2011/05/12 18:42:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.1.26351.0.ebuild,v 1.1 2011/12/30 06:25:04 patrick Exp $
+
+EAPI=4
 
 inherit flag-o-matic eutils autotools multilib versionator
 
-MY_P=Firebird-$(replace_version_separator 4 -)
-#MY_P=Firebird-${PV/_rc/-ReleaseCandidate}
+MY_P=${PN/f/F}-$(replace_version_separator 4 -)
+#MY_P=${PN/f/F}-${PV/_rc/-ReleaseCandidate}
 
 DESCRIPTION="A relational database offering many ANSI SQL:2003 and some SQL:2008 features"
 HOMEPAGE="http://www.firebirdsql.org/"
@@ -21,7 +23,7 @@ RESTRICT="userpriv"
 RDEPEND="dev-libs/libedit
 	dev-libs/icu"
 DEPEND="${RDEPEND}
-	dev-util/btyacc
+	>=dev-util/btyacc-3.0-r2
 	doc? ( app-arch/unzip )"
 RDEPEND="${RDEPEND}
 	xinetd? ( virtual/inetd )
@@ -29,7 +31,7 @@ RDEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
+pkg_pretend() {
 	if use client && use superserver ; then
 		die "Use flags client and superserver cannot be used together"
 	fi
@@ -39,6 +41,9 @@ pkg_setup() {
 	if use superserver && use xinetd ; then
 		die "Use flags superserver and xinetd cannot be used together"
 	fi
+}
+
+pkg_setup() {
 	enewgroup firebird 450
 	enewuser firebird 450 /bin/bash /usr/$(get_libdir)/firebird firebird
 }
@@ -57,15 +62,19 @@ src_unpack() {
 		unpack ib_b60_doc.zip
 		cd "${WORKDIR}"
 	fi
-
 	unpack "${MY_P}.tar.bz2"
-
 	cd "${S}"
+}
 
+src_prepare() {
 	# This patch might be portable, and not need to be duplicated per version
 	# also might no longer be necessary to patch deps or libs, just flags
-	epatch "${FILESDIR}/${P}-deps-flags-libs.patch"
+	epatch "${FILESDIR}/${P}-deps-flags.patch"
+
 	use client && epatch "${FILESDIR}/${P}-client.patch"
+	if ! use superserver ; then
+		epatch "${FILESDIR}/${P}-superclassic.patch"
+	fi
 
 	# Rename references to isql to fbsql
 	# sed vs patch for portability and addtional location changes
@@ -79,18 +88,19 @@ src_unpack() {
 		src/msgs/messages2.sql | wc -l)" "6" "src/msgs/messages2.sql" # 6 lines
 
 	find "${S}" -name \*.sh -print0 | xargs -0 chmod +x
-	rm -rf "${S}"/extern/{editline,icu}
+	rm -rf "${S}"/extern/{btyacc,editline,icu}
 
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	filter-flags -fprefetch-loop-arrays
 	filter-mfpmath sse
 
 	econf --prefix=/usr/$(get_libdir)/firebird \
 		$(use_enable superserver superserver) \
 		$(use_enable debug) \
+		--with-editline \
 		--with-system-editline \
 		--with-system-icu \
 		--with-fbbin=/usr/bin \
@@ -110,8 +120,13 @@ src_compile() {
 		--with-fblog=/var/log/${PN}/ \
 		--with-fbglock=/var/run/${PN} \
 		--with-fbplugins=/usr/$(get_libdir)/${PN}/plugins \
-		${myconf} || die "econf failed"
-	emake -j1 || die "error during make"
+		--with-gnu-ld \
+		${myconf}
+}
+
+src_compile() {
+	MAKEOPTS="${MAKEOPTS/-j*/-j1} ${MAKEOPTS/-j/CPU=}"
+	emake
 }
 
 src_install() {
@@ -135,6 +150,9 @@ src_install() {
 	dosym libfbclient.so /usr/$(get_libdir)/libgds.so.0
 	dosym libfbclient.so /usr/$(get_libdir)/libfbclient.so.1
 
+	insinto /usr/$(get_libdir)/${PN}
+	doins *.msg
+
 	use client && return
 
 	einfo "Renaming isql -> fbsql"
@@ -155,21 +173,21 @@ src_install() {
 	# SuperClassic
 	else
 		dosbin bin/{fbguard,fb_smp_server}
+
+		#Temp should not be necessary, need to patch/fix
+		dosym "${D}"/usr/$(get_libdir)/libib_util.so /usr/$(get_libdir)/${PN}/lib/libib_util.so
 	fi
 
 	exeinto /usr/bin/${PN}
 	exeopts -m0755
 	doexe bin/{changeRunUser,restoreRootRunUser,changeDBAPassword}.sh
 
-	insinto /usr/$(get_libdir)/${PN}
-	doins *.msg
-
 	insinto /usr/$(get_libdir)/${PN}/help
 	doins help/help.fdb
 
 	exeinto /usr/$(get_libdir)/firebird/intl
 	dolib.so intl/libfbintl.so
-	dosym "${D}"/usr/$(get_libdir)/libfbintl.so /usr/$(get_libdir)/${PN}/intl/fbintl.so
+	dosym "${D}"/usr/$(get_libdir)/libfbintl.so /usr/$(get_libdir)/${PN}/intl/fbintl
 	dosym "${D}"/etc/firebird/fbintl.conf /usr/$(get_libdir)/${PN}/intl/fbintl.conf
 
 	exeinto /usr/$(get_libdir)/${PN}/plugins
@@ -190,7 +208,7 @@ src_install() {
 
 	if use xinetd ; then
 		insinto /etc/xinetd.d
-		newins "${FILESDIR}/${PN}.xinetd.2" ${PN} || die "newins xinetd file failed"
+		newins "${FILESDIR}/${PN}.xinetd" ${PN}
 	else
 		newinitd "${FILESDIR}/${PN}.init.d.2.5" ${PN}
 		newconfd "${FILESDIR}/${PN}.conf.d.2.5" ${PN}
