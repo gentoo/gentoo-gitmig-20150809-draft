@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.74 2011/11/28 13:06:19 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.75 2011/12/30 08:44:25 ago Exp $
+
+  30 Dec 2011; Agostino Sarubbo <ago@gentoo.org> libpqxx-4.0.ebuild:
+  Stable for AMD64, wrt bug #396483
 
 *libpqxx-4.0 (28 Nov 2011)
 
