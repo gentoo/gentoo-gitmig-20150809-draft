@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/librouteros
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librouteros/ChangeLog,v 1.1 2011/12/30 20:16:49 maksbotan Exp $
+
+*librouteros-1.1.2 (30 Dec 2011)
+
+  30 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +librouteros-1.1.2.ebuild,
+  +files/disable_werror.patch, +metadata.xml:
+  Add net-libs/librouteros-1.1.2. Thanks to slepnoga
+
