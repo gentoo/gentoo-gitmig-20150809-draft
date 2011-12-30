@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.6 2011/12/28 16:48:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.7 2011/12/30 09:19:39 hwoarang Exp $
+
+*tt-rss-1.5.8.1 (30 Dec 2011)
+
+  30 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.8.1.ebuild:
+  Version bump. Bug #396267
 
   28 Dec 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix maintainer tag order, remove bug assignment instructions from description
