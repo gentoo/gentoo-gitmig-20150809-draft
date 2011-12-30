@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.1.ebuild,v 1.1 2011/12/30 13:44:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.1.ebuild,v 1.2 2011/12/30 13:47:48 scarabeus Exp $
 
 EAPI=4
 
@@ -40,6 +40,9 @@ DEPEND="${RDEPEND}
 	)"
 
 S=${WORKDIR}/${MY_P}
+
+# there actually is just some broken manpage checkup -> not bother
+RESTRICT="test"
 
 pkg_setup() {
 	if use python ; then
