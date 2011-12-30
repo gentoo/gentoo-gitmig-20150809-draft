@@ -1,7 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.28 2011/12/01 22:50:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.29 2011/12/30 14:52:19 grobian Exp $
 
+
+# Fabian Groffen <grobian@gentoo.org> (30 Dec 2011)
+# Does not support Darwin, http://mj.ucw.cz/pciutils.html
+sys-apps/pciutils
 
 # Fabian Groffen <grobian@gentoo.org> (11 May 2011)
 # Uses the horribly broken build-system waf.  When hacked far enough,

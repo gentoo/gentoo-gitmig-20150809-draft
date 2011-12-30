@@ -1,6 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/5.9/sparc/package.mask,v 1.1 2009/06/06 03:55:05 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/5.9/sparc/package.mask,v 1.2 2011/12/30 14:52:19 grobian Exp $
+
+
+# Fabian Groffen <grobian@gentoo.org> (30 Dec 2011)
+# Does not support Solaris/SPARC, http://mj.ucw.cz/pciutils.html
+sys-apps/pciutils
 
 # Jeremy Olexa <darkside@gentoo.org> (26 Aug 2008)
 # Requires that pthread.h defines pthread_atfork() but it doesn't on Solaris 9
