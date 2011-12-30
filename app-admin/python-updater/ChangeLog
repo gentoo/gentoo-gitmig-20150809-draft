@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.66 2011/08/29 10:28:31 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.67 2011/12/30 17:29:55 maksbotan Exp $
+
+*python-updater-0.10 (30 Dec 2011)
+
+  30 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +python-updater-0.10.ebuild:
+  Version bump. Add support for PyPy. Add support for PYTHON_UPDATER_IGNORE.
+  Fix indentation of output (regression introduced in 0.9-r1).
 
 *python-updater-0.9-r1 (29 Aug 2011)
 
