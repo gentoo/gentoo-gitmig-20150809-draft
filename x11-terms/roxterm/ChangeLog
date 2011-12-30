@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.54 2011/12/06 05:37:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.55 2011/12/30 13:57:20 ssuominen Exp $
+
+*roxterm-2.3.4 (30 Dec 2011)
+
+  30 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +roxterm-2.3.4.ebuild:
+  Version bump.
 
 *roxterm-2.3.1 (06 Dec 2011)
 
