@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/jimtcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.3 2011/08/04 12:15:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.4 2011/12/30 09:54:46 hwoarang Exp $
+
+  30 Dec 2011; Markos Chandras <hwoarang@gentoo.org> jimtcl-9999.ebuild:
+  Drop --with-jim-ext configuration option. Bug #394649. Thanks to Alexander
+  Stein <alexander.stein@informatik.tu-chemnitz.de>
 
   04 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> jimtcl-9999.ebuild,
   -files/jimtcl-9999-more-autobits.patch:

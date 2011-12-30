@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-9999.ebuild,v 1.3 2011/08/04 12:15:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-9999.ebuild,v 1.4 2011/12/30 09:54:46 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,8 +17,7 @@ IUSE="static-libs"
 
 src_configure() {
 	! use static-libs && myconf=--with-jim-shared
-	econf ${myconf} \
-		--with-jim-ext=nvp
+	econf ${myconf}
 }
 
 src_compile() {
