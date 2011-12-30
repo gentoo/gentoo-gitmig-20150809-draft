@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/files/1.6.6/init.d/zabbix-agentd,v 1.1 2009/10/05 15:55:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/files/1.6.6/init.d/zabbix-agentd,v 1.2 2011/12/30 09:46:32 polynomial-c Exp $
 
 depend() {
 	need net
@@ -11,7 +11,7 @@ depend() {
 
 start() {
 	ebegin "Starting Zabbix agent"
-	start-stop-daemon --start -c zabbix:zabbix --exec /usr/sbin/zabbix_agentd
+	start-stop-daemon --start -u zabbix:zabbix --exec /usr/sbin/zabbix_agentd
 	eend $?
 }
 
