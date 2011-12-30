@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.175 2011/12/27 07:42:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.176 2011/12/30 19:46:56 graaff Exp $
+
+*activerecord-3.1.3 (30 Dec 2011)
+
+  30 Dec 2011; Hans de Graaff <graaff@gentoo.org> +activerecord-3.1.3.ebuild:
+  Version bump. Add ruby19. Drop arches due to bug 396547.
 
   27 Dec 2011; Hans de Graaff <graaff@gentoo.org> activerecord-2.3.14.ebuild:
   Also require rdoc for tests. Fixes bug 379551.
