@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/stgit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.10 2011/10/12 17:48:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.11 2011/12/30 15:43:10 halcy0n Exp $
+
+  30 Dec 2011; Mark Loeser <halcy0n@gentoo.org> stgit-0.14.3.ebuild:
+  Revert to ~ppc/~ppc64; bug #381127
 
   12 Oct 2011; Michał Górny <mgorny@gentoo.org> stgit-0.15-r1.ebuild:
   Migrate to bash-completion-r1.
