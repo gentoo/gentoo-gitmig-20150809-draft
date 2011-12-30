@@ -1,6 +1,16 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/mint/package.use.mask,v 1.2 2010/06/13 12:58:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/mint/package.use.mask,v 1.3 2011/12/30 17:33:08 grobian Exp $
 
-# MiNT is static only, these flags hence won't work
-dev-db/sqlite extensions threadsafe
+
+# Alan Hourihane <alanh@fairlite.co.uk> (30 Dec 2011)
+# doesn't work, bug #394791
+app-arch/xz-utils threads
+
+# Alan Hourihane <alanh@fairlite.co.uk> (15 Dec 2011)
+# MiNT is static only, this flag hence won't work
+dev-db/sqlite extensions
+
+# Alan Hourihane <alanh@fairlite.co.uk> (15 Dec 2011)
+# MiNT doesn't have mmap, and jit requires it.
+dev-libs/libpcre jit
