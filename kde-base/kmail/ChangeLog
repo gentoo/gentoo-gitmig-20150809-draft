@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.269 2011/12/30 22:18:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.270 2011/12/31 19:36:23 dilfridge Exp $
+
+  31 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> kmail-4.7.4-r1.ebuild:
+  Restored keywords after positive user feedback
 
 *kmail-4.7.4-r1 (30 Dec 2011)
 
