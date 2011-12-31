@@ -1,6 +1,15 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.54 2011/07/12 20:41:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.55 2011/12/31 21:25:29 idl0r Exp $
+
+*laptop-mode-tools-1.55-r4 (31 Dec 2011)
+*laptop-mode-tools-1.55-r3 (31 Dec 2011)
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org>
+  -laptop-mode-tools-1.55-r1.ebuild, -laptop-mode-tools-1.55-r2.ebuild,
+  +laptop-mode-tools-1.55-r3.ebuild, +laptop-mode-tools-1.55-r4.ebuild,
+  files/laptop_mode.init-1.4:
+  Revbump. Don't use the deprecated $opts variable, bug 393523.
 
 *laptop-mode-tools-1.55-r2 (12 Jul 2011)
 
