@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/cfs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.12 2010/08/10 22:30:13 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.13 2011/12/31 19:54:19 idl0r Exp $
+
+*cfs-1.4.1.17-r3 (31 Dec 2011)
+*cfs-1.4.1.17-r2 (31 Dec 2011)
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -cfs-1.4.1.14.ebuild,
+  -cfs-1.4.1.17.ebuild, -cfs-1.4.1.17-r1.ebuild, +cfs-1.4.1.17-r2.ebuild,
+  +cfs-1.4.1.17-r3.ebuild, files/cfsd.init:
+  Revbump. Don't use deprecated start-stop-daemon options, bug 377843.
 
 *cfs-1.4.1.17-r1 (10 Aug 2010)
 
