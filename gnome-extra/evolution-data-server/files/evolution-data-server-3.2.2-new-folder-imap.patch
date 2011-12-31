@@ -1,0 +1,26 @@
+From 0e421dfb0d9fd1e36a28d8bb47c0ae46ca4925f5 Mon Sep 17 00:00:00 2001
+From: Milan Crha <mcrha@redhat.com>
+Date: Fri, 16 Dec 2011 09:15:03 +0100
+Subject: [PATCH] Bug #665253 - "New folder" dialog does not show IMAP
+ accounts
+
+---
+ camel/providers/imap/camel-imap-store.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/camel/providers/imap/camel-imap-store.c b/camel/providers/imap/camel-imap-store.c
+index c46e575..b5ddf93 100644
+--- a/camel/providers/imap/camel-imap-store.c
++++ b/camel/providers/imap/camel-imap-store.c
+@@ -1226,7 +1226,7 @@ imap_store_initable_init (GInitable *initable,
+ 		CAMEL_STORE (service)->flags &= ~CAMEL_STORE_VJUNK;
+ 		CAMEL_STORE (service)->flags |= CAMEL_STORE_REAL_JUNK_FOLDER;
+ 	} else {
+-		CAMEL_STORE (service)->flags &= CAMEL_STORE_REAL_JUNK_FOLDER;
++		CAMEL_STORE (service)->flags &= ~CAMEL_STORE_REAL_JUNK_FOLDER;
+ 		CAMEL_STORE (service)->flags |= CAMEL_STORE_VJUNK;
+ 	}
+ 
+-- 
+1.7.8.1
+
