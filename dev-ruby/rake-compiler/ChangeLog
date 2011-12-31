@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.42 2011/12/31 07:36:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.43 2011/12/31 18:50:20 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> rake-compiler-0.7.9.ebuild:
+  Add Prefix keywords, bug #396547
 
   31 Dec 2011; Hans de Graaff <graaff@gentoo.org> rake-compiler-0.7.8.ebuild,
   +rake-compiler-0.7.9.ebuild:
