@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.2.1.1-r1.ebuild,v 1.2 2011/12/31 08:34:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.2.1.1-r2.ebuild,v 1.1 2011/12/31 08:34:36 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -15,13 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sh ~x86"
 
-IUSE="accessibility +consolekit fprint +gnome-shell ipv6 gnome-keyring +introspection selinux smartcard tcpd test xinerama +xklavier"
-
-# Name of the tarball with gentoo specific files
-GDM_EXTRA="${PN}-3.2.1.1-gentoo-files"
-
-SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~tetromino/distfiles/gdm/${GDM_EXTRA}.tar.xz"
+IUSE="accessibility +consolekit +fallback fprint +gnome-shell ipv6 gnome-keyring +introspection selinux smartcard tcpd test xinerama +xklavier"
 
 # NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686
 # nspr used by smartcard extension
@@ -91,6 +85,7 @@ RDEPEND="${COMMON_DEPEND}
 		app-accessibility/orca
 		gnome-extra/at-spi:1 )
 	consolekit? ( gnome-extra/polkit-gnome )
+	fallback? ( x11-wm/metacity )
 	fprint? (
 		sys-auth/fprintd
 		sys-auth/pam_fprint )
@@ -143,8 +138,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# remove unneeded linker directive for selinux, bug #41022
 	epatch "${FILESDIR}/${PN}-2.32.0-selinux-remove-attr.patch"
 
@@ -163,6 +156,9 @@ src_prepare() {
 	# fix libxklavier automagic support
 	epatch "${FILESDIR}/${PN}-2.32.0-automagic-libxklavier-support.patch"
 
+	# fixes for logging in with slow pam modules from git master branch
+	epatch "${FILESDIR}/${PN}-3.2.1.1-pam-fix-"{1,2}.patch
+
 	# don't load accessibility support at runtime when USE=-accessibility
 	use accessibility || epatch "${FILESDIR}/${PN}-3.2.1.1-disable-accessibility.patch"
 
@@ -175,15 +171,15 @@ src_prepare() {
 	mkdir -p "${S}"/m4
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+
+	gnome2_src_prepare
 }
 
 src_install() {
 	gnome2_src_install
 
-	local gentoodir="${WORKDIR}/${GDM_EXTRA}"
-
 	# Install the systemd unit file
-	systemd_dounit "${gentoodir}/gdm@.service"
+	systemd_dounit "${FILESDIR}/3.2.1.1/gdm.service"
 
 	# gdm-binary should be gdm to work with our init (#5598)
 	rm -f "${ED}/usr/sbin/gdm"
@@ -196,16 +192,19 @@ src_install() {
 
 	# add xinitrc.d scripts
 	exeinto /etc/X11/xinit/xinitrc.d
-	doexe "${FILESDIR}/49-keychain" || die "doexe 2 failed"
-	doexe "${FILESDIR}/50-ssh-agent" || die "doexe 3 failed"
+	doexe "${FILESDIR}/49-keychain"
+	doexe "${FILESDIR}/50-ssh-agent"
 
 	# install XDG_DATA_DIRS gdm changes
 	echo 'XDG_DATA_DIRS="/usr/share/gdm"' > 99xdg-gdm
-	doenvd 99xdg-gdm || die "doenvd failed"
+	doenvd 99xdg-gdm
 
 	# install PAM files
-	use gnome-keyring && sed -i "s:#Keyring=::g" "${gentoodir}"/pam.d/*
-	dopamd "${gentoodir}"/pam.d/gdm{,-autologin,-password,-fingerprint,-smartcard,-welcome}
+	mkdir "${T}/pam.d" || die "mkdir failed"
+	cp "${FILESDIR}/3.2.1.1"/gdm{,-autologin,-password,-fingerprint,-smartcard,-welcome} \
+		"${T}/pam.d" || die "cp failed"
+	use gnome-keyring && sed -i "s:#Keyring=::g" "${T}/pam.d"/*
+	dopamd "${T}/pam.d"/*
 }
 
 pkg_postinst() {

@@ -1,6 +1,23 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.348 2011/11/05 08:19:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.349 2011/12/31 08:34:36 tetromino Exp $
+
+*gdm-3.2.1.1-r2 (31 Dec 2011)
+
+  31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/gdm-3.2.1.1-pam-fix-1.patch, +files/3.2.1.1/gdm-fingerprint,
+  +files/gdm-3.2.1.1-pam-fix-2.patch, +files/3.2.1.1/gdm,
+  +files/3.2.1.1/gdm.service, +files/3.2.1.1/gdm-autologin,
+  +files/3.2.1.1/gdm-welcome, gdm-3.2.1.1-r1.ebuild, +gdm-3.2.1.1-r2.ebuild,
+  +files/3.2.1.1/gdm-password, +files/3.2.1.1/gdm-smartcard, metadata.xml:
+  Add upstream patches to fix login problems with slow pam modules. Add
+  default-enabled fallback USE flag to pull in metacity (bug #395295, thanks to
+  Octavio Ruiz (Ta^3) for reporting). Use a better systemd service file (bug
+  #396317, thanks to Michał Górny). Ship systemd service file and pam.d files
+  in FILESDIR instead of a separate tarball; these are small files and unlikely
+  to change (bug #396317, comment 8). Punt unused elibc_glibc from IUSE. Move
+  gnome2_src_prepare after eautoreconf.
+  Forced to drop arm keyword due to gnome-session dependency (bug #390345).
 
 *gdm-3.2.1.1-r1 (05 Nov 2011)
 
