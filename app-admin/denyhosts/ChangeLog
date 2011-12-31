@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.46 2011/11/05 07:46:40 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.47 2011/12/31 15:46:16 idl0r Exp $
+
+*denyhosts-2.6-r5 (31 Dec 2011)
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -denyhosts-2.6-r4.ebuild,
+  +denyhosts-2.6-r5.ebuild, files/denyhosts.init:
+  Revbump. Don't use the deprecated $opts variable, bug 393657.
 
   05 Nov 2011; Fabio Erculiani <lxnay@gentoo.org> denyhosts-2.6-r4.ebuild:
   doesn't work with Python 3, restrict dependency
