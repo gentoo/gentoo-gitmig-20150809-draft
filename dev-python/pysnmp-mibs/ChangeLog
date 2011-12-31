@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pysnmp-mibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp-mibs/ChangeLog,v 1.9 2011/12/31 21:45:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp-mibs/ChangeLog,v 1.10 2011/12/31 21:46:18 floppym Exp $
+
+*pysnmp-mibs-0.1.2 (31 Dec 2011)
+
+  31 Dec 2011; Mike Gilbert <floppym@gentoo.org> +pysnmp-mibs-0.1.2.ebuild:
+  Re-add ebuild
 
   31 Dec 2011; Mike Gilbert <floppym@gentoo.org> -pysnmp-mibs-0.1.2.ebuild:
   Remove file to fix header
