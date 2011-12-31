@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.192 2011/10/12 21:10:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.193 2011/12/31 18:33:39 idl0r Exp $
+
+*webmin-1.570-r1 (31 Dec 2011)
+*webmin-1.560-r1 (31 Dec 2011)
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -webmin-1.560.ebuild,
+  +webmin-1.560-r1.ebuild, -webmin-1.570.ebuild, +webmin-1.570-r1.ebuild,
+  files/init.d.webmin:
+  Revbump. Don't use deprecated start-stop-daemon options, bug 377843 and bug
+  381895.
 
 *webmin-1.570 (12 Oct 2011)
 

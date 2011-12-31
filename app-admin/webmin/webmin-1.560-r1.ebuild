@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.570.ebuild,v 1.1 2011/10/12 21:10:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.560-r1.ebuild,v 1.1 2011/12/31 18:33:39 idl0r Exp $
 
 EAPI="3"
 
