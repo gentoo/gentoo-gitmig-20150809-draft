@@ -1,54 +1,59 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.1 2011/12/31 08:08:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.2 2011/12/31 23:57:23 williamh Exp $
 
-EAPI="4"
+EAPI=4
 
-inherit autotools-utils toolchain-funcs
+EGIT_REPO_URI="git://git.profusion.mobi/${PN}.git"
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://git.profusion.mobi/kmod.git"
-	inherit git-2 autotools
-else
+[[ "${PV}" == "9999" ]] && vcs=git-2
+inherit ${vcs}  autotools eutils toolchain-funcs
+unset vcs
+
+if [[ "${PV}" != "9999" ]] ; then
 	SRC_URI="http://packages.profusion.mobi/kmod/${P}.tar.xz"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
 
-DESCRIPTION="Library and utilities for kernel module loading"
-HOMEPAGE="http://git.profusion.mobi/cgit.cgi/kmod.git/" # XXX
+DESCRIPTION="library and tools for managing linux kernel modules"
+HOMEPAGE="http://git.profusion.mobi/cgit.cgi/kmod.git"
 
 LICENSE="LGPL-2"
 SLOT="0"
 IUSE="debug lzma static-libs +tools zlib"
 
-RDEPEND="zlib? ( sys-libs/zlib )
+DEPEND="zlib? ( sys-libs/zlib )
 	lzma? ( app-arch/xz-utils )"
-DEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
-src_prepare() {
-	if [[ ! -e configure ]] ; then
+src_prepare()
+{
+	# Apply patches with epatch if necessary.
+
+	# Allow user patches to be applied without modifying the ebuild.
+	epatch_user
+
+	if [ ! -e configure ]; then
 		eautoreconf
-		AT_NOELIBTOOLIZE=yes # autotools-utils calls this
+	else
+		elibtoolize
 	fi
-	autotools-utils_src_prepare
 }
 
-src_configure() {
-	myeconfargs=(
-		$(use_enable debug)
-		$(use_with lzma xz)
-		$(use_enable tools)
+src_configure()
+{
+	econf \
+		--bindir=/sbin \
+		--with-rootprefix=/ \
+		$(use_enable debug) \
+		$(use_with lzma xz) \
+	$(use_enable static-libs static) \
+		$(use_enable tools) \
 		$(use_with zlib)
-		--bindir=/bin
-		--with-rootprefix=/
-	)
-
-	autotools-utils_src_configure
 }
 
-src_install() {
-	autotools-utils_src_install
+src_install()
+{
+	default
 	gen_usr_ldscript -a kmod
-	dodir /sbin
-	mv "${D}"/bin/kmod-{{ins,rm}mod,modprobe} "${D}"/sbin/ || die
 }
