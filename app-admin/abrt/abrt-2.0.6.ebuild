@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.6.ebuild,v 1.3 2011/12/31 16:20:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.6.ebuild,v 1.4 2011/12/31 18:35:49 tetromino Exp $
 
 PYTHON_DEPEND="2:2.6"
 EAPI="4"
@@ -65,7 +65,7 @@ src_prepare() {
 	mkdir m4
 	eautoreconf
 
-	echo -e '#!'$(type -P sh)'\n:' > py-compile
+	echo '#!/bin/sh' > py-compile
 	python_convert_shebangs -r 2 src
 }
 
