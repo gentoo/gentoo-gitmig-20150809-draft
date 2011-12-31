@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.62 2011/11/29 23:43:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.63 2011/12/31 22:17:19 dilfridge Exp $
+
+*opencv-2.3.1a-r1 (31 Dec 2011)
+
+  31 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +opencv-2.3.1a-r1.ebuild, +files/opencv-2.3.1a-True-False.patch:
+  Added the True/False patch, kinda makes sense. Let's hope upstream follows.
+  Bug 393685.
 
   29 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.3.1a.ebuild:
   Does not need fortran anymore, bug 392297
