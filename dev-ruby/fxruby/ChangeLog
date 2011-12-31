@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.87 2011/01/15 12:12:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.88 2011/12/31 16:40:32 graaff Exp $
+
+*fxruby-1.6.20-r1 (31 Dec 2011)
+
+  31 Dec 2011; Hans de Graaff <graaff@gentoo.org> +fxruby-1.6.20-r1.ebuild:
+  Revision bump to fix bugs #396541, #396279, #396277.
 
   15 Jan 2011; Hans de Graaff <graaff@gentoo.org> -fxruby-1.6.19.ebuild:
   Remove old version.
