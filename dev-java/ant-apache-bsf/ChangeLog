@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-apache-bsf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ChangeLog,v 1.34 2011/07/18 06:24:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ChangeLog,v 1.35 2011/12/31 11:42:43 sera Exp $
+
+  31 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  ant-apache-bsf-1.7.1-r1.ebuild, ant-apache-bsf-1.8.0.ebuild,
+  ant-apache-bsf-1.8.1.ebuild:
+  Drop ia64 support #345433
 
   18 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   ant-apache-bsf-1.8.1.ebuild:
