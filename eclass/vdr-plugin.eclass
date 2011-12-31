@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.76 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.77 2011/12/31 01:01:56 hd_brummy Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -265,7 +265,11 @@ plugin_has_gettext() {
 }
 
 vdr_i18n_convert_to_gettext() {
-	local i18n_tool="${ROOT}/usr/share/vdr/bin/i18n-to-gettext.pl"
+	if has_version ">=media-video/vdr-1.7.22"; then
+		local i18n_tool="${ROOT}/usr/share/vdr/bin/i18n-to-gettext"
+	else
+		local i18n_tool="${ROOT}/usr/share/vdr/bin/i18n-to-gettext.pl"
+	fi
 
 	if [[ ${NO_GETTEXT_HACK} == "1" ]]; then
 		ewarn "Conversion to gettext disabled in ebuild"
