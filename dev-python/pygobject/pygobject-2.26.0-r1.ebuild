@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.15 2011/12/26 06:29:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.16 2011/12/31 16:23:58 tetromino Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -66,7 +66,7 @@ src_prepare() {
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	echo -e '#!'$(type -P sh)'\n:' > py-compile
 
 	eautoreconf
 	gnome2_src_prepare

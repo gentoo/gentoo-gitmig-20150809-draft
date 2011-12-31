@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.2.ebuild,v 1.6 2011/12/29 17:34:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.2.ebuild,v 1.7 2011/12/31 16:23:58 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -71,7 +71,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-disable-new-gi-tests.patch"
 
 	# disable pyc compiling
-	ln -sfn $(type -P true) py-compile
+	echo -e '#!'$(type -P sh)'\n:' > py-compile
 
 	eautoreconf
 	gnome2_src_prepare
