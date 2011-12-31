@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.98 2011/12/30 21:34:35 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.99 2011/12/31 18:12:20 binki Exp $
+
+  31 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> weechat-0.3.5.ebuild,
+  weechat-0.3.6.ebuild, weechat-9999.ebuild:
+  Fix wording of elogs pointing to the weeget.py weechat script, thanks jdhore.
 
   30 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> weechat-0.3.5.ebuild:
   Drop USE_RUBY=ruby19 from weechat-0.3.5 because it has stable keywords and

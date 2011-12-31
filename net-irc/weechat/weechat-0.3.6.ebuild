@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.6.ebuild,v 1.1 2011/10/22 10:09:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.6.ebuild,v 1.2 2011/12/31 18:12:20 binki Exp $
 
 EAPI=3
 
@@ -97,8 +97,8 @@ src_configure() {
 
 pkg_postinst() {
 	if use scripts && use python; then
-		elog "You can use handy script from upstream to manage your scripts:"
-		elog "    http://www.weechat.org/scripts/source/stable/weeget.py/"
-		elog "This thing downloads and updates all other scripts for you."
+		elog "You may use the following script from upstream to manage your scripts."
+		elog "It helps with downloading and updating other scripts:"
+		elog "  http://www.weechat.org/scripts/source/stable/weeget.py/"
 	fi
 }
