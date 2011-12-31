@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.58 2011/11/30 12:09:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.59 2011/12/31 13:25:22 sera Exp $
+
+  31 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  commons-collections-3.2.1.ebuild:
+  Drop ia64 support #345433
 
   30 Nov 2011; Fabian Groffen <grobian@gentoo.org>
   commons-collections-3.2.1.ebuild:

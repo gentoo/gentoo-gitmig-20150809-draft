@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.57 2011/12/19 12:58:16 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.58 2011/12/31 13:27:47 sera Exp $
+
+  31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> bsf-2.4.0-r1.ebuild:
+  Drop ia64 support #345433
 
   19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> bsf-2.4.0-r1.ebuild:
   Fix homepage wrt #202445.
