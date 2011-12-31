@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/lucene-analyzers-2.3.2.ebuild,v 1.5 2010/02/13 16:41:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/lucene-analyzers-2.3.2.ebuild,v 1.6 2011/12/31 13:59:31 sera Exp $
 
 JAVA_PKG_IUSE="source"
 inherit java-pkg-2 java-ant-2 java-osgi
@@ -13,7 +13,7 @@ HOMEPAGE="http://lucene.apache.org/java"
 SRC_URI="mirror://apache/lucene/java/${MY_P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="2.3"
-KEYWORDS="amd64 ~ia64 ppc x86 ~x86-fbsd ~x86-linux ~amd64-linux ~ppc-macos"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd ~x86-linux ~amd64-linux ~ppc-macos"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
