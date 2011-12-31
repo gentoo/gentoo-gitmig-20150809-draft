@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-vgrabber/leechcraft-vgrabber-0.4.90.ebuild,v 1.1 2011/09/14 17:09:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-vgrabber/leechcraft-vgrabber-0.4.97.ebuild,v 1.1 2011/12/31 12:21:42 maksbotan Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit leechcraft
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="=net-misc/leechcraft-core-${PV}"
+DEPEND="~net-misc/leechcraft-core-${PV}"
 RDEPEND="${DEPEND}
 		virtual/leechcraft-downloader-http"
 
