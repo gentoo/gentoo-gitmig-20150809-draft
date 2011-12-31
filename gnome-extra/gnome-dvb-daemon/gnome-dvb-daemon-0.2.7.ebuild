@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.6 2011/10/20 01:14:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.7.ebuild,v 1.1 2011/12/31 19:05:25 pacho Exp $
 
-EAPI="3"
+EAPI="4"
+GCONF_DEBUG="no"
+PYTHON_DEPEND="2:2.5"
 
 inherit eutils python gnome2 multilib
 
@@ -22,12 +24,11 @@ RDEPEND=">=dev-libs/glib-2.28.5
 	>=dev-db/sqlite-3.4
 	>=media-libs/gst-rtsp-server-0.10.7
 	media-plugins/gst-plugins-dvb
-	>=dev-lang/python-2.5
 	dev-python/gst-python
-	>=dev-python/pygobject-2.28.4:2
+	dev-python/pygobject:3
 	>=dev-libs/gobject-introspection-0.10.8
 	|| ( sys-fs/udev[gudev] sys-fs/udev[extras] )
-	vala? ( >=dev-lang/vala-0.12 )
+	vala? ( >=dev-lang/vala-0.14:0.14 )
 	totem? ( media-video/totem )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
@@ -42,16 +43,19 @@ pkg_setup() {
 		$(use_enable totem totem-plugin)"
 	use totem && G2CONF="${G2CONF} \
 		--with-totem-plugin-dir=/usr/$(get_libdir)/totem/plugins"
+	# configure looks for 'valac', but we have 'valac-<version>'
+	use vala && G2CONF="${G2CONF} \
+		VALAC=${EPREFIX}/usr/bin/valac-0.14"
+
 	python_set_active_version 2
 	python_pkg_setup
 }
 
 src_prepare() {
 	# Disable byte-compilation of Python modules.
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile || die
-
+	echo '#!/bin/sh' > py-compile
 	gnome2_src_prepare
+	python_convert_shebangs -r 2 .
 }
 
 pkg_postinst() {
