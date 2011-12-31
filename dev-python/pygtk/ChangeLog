@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.266 2011/12/29 17:35:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.267 2011/12/31 16:25:55 tetromino Exp $
+
+  31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pygtk-2.24.0-r1.ebuild, pygtk-2.24.0-r2.ebuild:
+  Fix py-compile idiom for automake-1.11.2 compatibility.
 
   29 Dec 2011; Pacho Ramos <pacho@gentoo.org> pygtk-2.24.0-r2.ebuild:
   amd64 stable, bug 393007
