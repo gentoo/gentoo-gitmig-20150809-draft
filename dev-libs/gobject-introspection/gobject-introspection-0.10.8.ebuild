@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.8.ebuild,v 1.16 2011/09/20 19:53:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.8.ebuild,v 1.17 2011/12/31 21:58:21 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ src_prepare() {
 	use doc && MAKEOPTS="-j1"
 
 	# Don't pre-compile .py
-	ln -sf $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	# tests: build tests only on make check
 	epatch "${FILESDIR}/${P}-build-tests.patch"

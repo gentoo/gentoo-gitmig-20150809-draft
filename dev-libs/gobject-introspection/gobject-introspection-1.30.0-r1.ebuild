@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.30.0-r1.ebuild,v 1.4 2011/12/29 17:26:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.30.0-r1.ebuild,v 1.5 2011/12/31 21:58:21 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -50,8 +50,8 @@ src_prepare() {
 	use doc && MAKEOPTS="-j1"
 
 	# Don't pre-compile .py
-	ln -sf $(type -P true) py-compile
-	ln -sf $(type -P true) build-aux/py-compile
+	echo '#!/bin/sh' > py-compile
+	echo '#!/bin/sh' > build-aux/py-compile
 
 	gnome2_src_prepare
 }
