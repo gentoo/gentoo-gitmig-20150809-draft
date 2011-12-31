@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.44 2011/10/28 22:16:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.45 2011/12/31 19:19:17 tetromino Exp $
+
+*clutter-1.8.2-r1 (31 Dec 2011)
+
+  31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +clutter-1.8.2-r1.ebuild,
+  +files/clutter-1.8.2-cogl-fallback-to-non-transparent.patch,
+  +files/clutter-1.8.2-default-resolution.patch,
+  +files/clutter-1.8.2-em-computation.patch,
+  +files/clutter-1.8.2-offscreen-effect-actor-size.patch:
+  Add useful patches from upstream; fixes totem on old video cards (thanks to
+  Rafał Mużyło for reporting), font rendering, offscreen effect efficiency.
 
 *clutter-1.8.2 (28 Oct 2011)
 
