@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.0.ebuild,v 1.1 2011/12/23 20:56:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.0.ebuild,v 1.2 2011/12/31 12:14:39 hwoarang Exp $
 
 EAPI="4"
 LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
@@ -26,10 +26,10 @@ CDEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
 	debug? ( >=x11-libs/qt-test-${QTVER} )
 	!qml? ( >=x11-libs/qt-gui-${QTVER} )
 	qml? (
-		>=x11-libs/qt-declarative-${QTVER}[private-headers]
-		>=x11-libs/qt-core-${QTVER}[private-headers]
-		>=x11-libs/qt-gui-${QTVER}[private-headers]
-		>=x11-libs/qt-script-${QTVER}[private-headers]
+		>=x11-libs/qt-declarative-${QTVER}[private-headers(+)]
+		>=x11-libs/qt-core-${QTVER}[private-headers(+)]
+		>=x11-libs/qt-gui-${QTVER}[private-headers(+)]
+		>=x11-libs/qt-script-${QTVER}[private-headers(+)]
 	)
 	qtscript? ( >=x11-libs/qt-script-${QTVER} )
 	!botan-bundled? ( =dev-libs/botan-1.8* )"
