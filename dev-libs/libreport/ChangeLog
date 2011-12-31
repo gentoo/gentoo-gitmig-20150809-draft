@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libreport
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.3 2011/12/31 16:18:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.4 2011/12/31 18:33:52 tetromino Exp $
+
+  31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libreport-2.0.7.ebuild:
+  Simplify py-compile fix.
 
   31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   libreport-2.0.7.ebuild:
