@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.rc6.1,v 1.1 2010/03/09 15:39:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.rc6.1,v 1.2 2011/12/31 21:22:49 idl0r Exp $
 
-opts="reload"
+extra_started_commands="reload"
 
 depend() {
 	need net

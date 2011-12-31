@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.106 2011/12/17 19:36:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.107 2011/12/31 21:22:49 idl0r Exp $
+
+*pdnsd-1.2.8-r4 (31 Dec 2011)
+*pdnsd-1.2.8-r3 (31 Dec 2011)
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -pdnsd-1.2.8.ebuild,
+  -pdnsd-1.2.8-r2.ebuild, +pdnsd-1.2.8-r3.ebuild, +pdnsd-1.2.8-r4.ebuild,
+  files/pdnsd.rc6.1:
+  Revbump. Don't use the deprecated $opts variable, bug 395631.
 
   17 Dec 2011; Raúl Porcel <armin76@gentoo.org> pdnsd-1.2.8-r2.ebuild:
   alpha/ia64/s390/sparc stable wrt #393737

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.8-r2.ebuild,v 1.5 2011/12/17 19:36:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.8-r3.ebuild,v 1.1 2011/12/31 21:22:49 idl0r Exp $
 
 EAPI="2"
 
@@ -12,10 +12,10 @@ SRC_URI="http://www.phys.uu.nl/~rombouts/pdnsd/releases/${P}-par.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~ppc s390 sparc x86"
+KEYWORDS="alpha amd64 arm ~ia64 ppc s390 sparc x86"
 IUSE="debug ipv6 isdn +urandom test"
 
-RDEPEND="sys-apps/openrc"
+RDEPEND=""
 DEPEND="test? ( net-dns/bind-tools )"
 
 pkg_setup() {
@@ -49,18 +49,17 @@ src_install() {
 	newdoc doc/pdnsd.conf pdnsd.conf.sample || die
 
 	newinitd "${FILESDIR}/pdnsd.rc6.1" pdnsd || die
-	newinitd "${FILESDIR}/pdnsd.online.1" pdnsd-online || die
+	newinitd "${FILESDIR}/pdnsd.online" pdnsd-online || die
 
 	mkdir "${T}"/confd
 
 	cat - > "${T}"/confd/pdnsd-online <<EOF
-# Make sure to change the rc_need variable to the service for the
-# interface that connects you to the dns servers.
+# Enter the interface that connects you to the dns servers
+# This will correspond to /etc/init.d/net.\${IFACE}
 #
-# For instance if you use a PPP connection on ppp0 to connect, set
-#   rc_need="net.ppp0"
-
-rc_need="net.lo"
+# IMPORTANT: Be sure to run depscan.sh after modifiying the
+# IFACE variable
+IFACE=ppp0
 EOF
 
 	# Don't try to do the smart thing and add the --help output here:
