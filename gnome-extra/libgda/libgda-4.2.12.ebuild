@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.10.ebuild,v 1.1 2011/11/01 11:29:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.12.ebuild,v 1.1 2011/12/31 19:18:28 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -12,12 +12,7 @@ DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2 LGPL-2"
 
-# MDB support currently works with CVS only, so disable it in the meantime
-# and use libgda:5 for that support then
-#
-# vala support doesn't build, see upstream bug #663153
-IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json ldap mysql oci8 postgres sourceview ssl"
-# vala
+IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres sourceview ssl"
 
 SLOT="4"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -44,11 +39,10 @@ RDEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.6.5 )
 	json?	( dev-libs/json-glib )
 	ldap?	( net-nds/openldap )
+	mdb?	( >app-office/mdbtools-0.5 )
 	mysql?	( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	ssl?	( dev-libs/openssl )"
-#	vala?	( >=dev-lang/vala-0.14:0.14 )
-#	mdb?	( >app-office/mdbtools-0.5 )
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
@@ -76,11 +70,13 @@ pkg_setup() {
 		fi
 	fi
 
+	# Disable vala bindings, they collide with dev-lang/vala's libgda-4.0.vapi
 	G2CONF="${G2CONF}
 		--with-unique
 		--disable-scrollkeeper
 		--disable-static
 		--enable-system-sqlite
+		--disable-vala
 		$(use_with berkdb bdb /usr)
 		$(use_with gnome-keyring)
 		$(use_with gtk ui)
@@ -91,13 +87,10 @@ pkg_setup() {
 		$(use_with java java $JAVA_HOME)
 		$(use_enable json)
 		$(use_with ldap)
+		$(use_with mdb mdb /usr)
 		$(use_with mysql mysql /usr)
 		$(use_with postgres postgres /usr)
-		$(use_enable ssl crypto)
-		--disable-vala
-		--without-mdb"
-#		VALAC=$(type -p valac-0.14)"
-#		$(use_with mdb mdb /usr)
+		$(use_enable ssl crypto)"
 
 	if use bindist; then
 		# firebird license is not GPL compatible
@@ -112,8 +105,6 @@ pkg_setup() {
 	# Not in portage
 	G2CONF="${G2CONF}
 		--disable-default-binary"
-
-	export XDG_DATA_HOME="${T}/.local"
 }
 
 src_prepare() {
