@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.120 2011/12/25 11:26:15 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.121 2011/12/31 08:47:40 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> jpeg-8c-r1.ebuild:
+  Marked ~m68k-mint, bug #394955
 
 *jpeg-8c-r1 (25 Dec 2011)
 
