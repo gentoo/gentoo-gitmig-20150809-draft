@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.4.ebuild,v 1.2 2010/01/07 15:55:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.2-r1.ebuild,v 1.1 2011/12/31 20:36:19 idl0r Exp $
 
 EAPI=2
 inherit eutils autotools flag-o-matic
@@ -14,12 +14,11 @@ SRC_URI="http://memcached.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="test slabs-reassign debug sasl" # hugetlbfs later
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+IUSE="test slabs-reassign debug" # hugetlbfs later
 
 RDEPEND=">=dev-libs/libevent-1.4
-		 dev-lang/perl
-		 sasl? ( dev-libs/cyrus-sasl )"
+		 dev-lang/perl"
 DEPEND="${RDEPEND}
 		test? ( virtual/perl-Test-Harness >=dev-perl/Cache-Memcached-1.24 )"
 
@@ -30,16 +29,13 @@ src_prepare() {
 	# Handled different upstream
 	#epatch "${FILESDIR}/${PN}-1.3.3-gcc4-slab-fixup.patch"
 	epatch "${FILESDIR}/${PN}-1.4.0-fix-as-needed-linking.patch"
-	epatch "${FILESDIR}/${PN}-1.4.4-as-needed.patch"
 	sed -i -e 's,-Werror,,g' configure.ac || die "sed failed"
 	eautoreconf
 	use slabs-reassign && append-flags -DALLOW_SLABS_REASSIGN
 }
 
 src_configure() {
-	econf \
-		--disable-docs \
-		$(use_enable sasl)
+	econf --disable-docs
 	# The xml2rfc tool to build the additional docs requires TCL :-(
 	# `use_enable doc docs`
 }

@@ -1,19 +1,19 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.6.ebuild,v 1.7 2008/12/07 11:07:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.8-r1.ebuild,v 1.1 2011/12/31 20:36:19 idl0r Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_PV="${PV/_rc/-rc}"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="High-performance, distributed memory object caching system"
-HOMEPAGE="http://www.danga.com/memcached/"
-SRC_URI="http://www.danga.com/memcached/dist/${MY_P}.tar.gz"
+HOMEPAGE="http://code.google.com/p/memcached/"
+SRC_URI="http://memcached.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="nptl test"
 
 RDEPEND=">=dev-libs/libevent-1.4
@@ -28,6 +28,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-1.2.2-fbsd.patch"
+	sed -i -e 's,-Werror,,g' configure.ac || die "sed failed"
+	eautoreconf
 }
 
 src_compile() {

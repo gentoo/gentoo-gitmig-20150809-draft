@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.2.4/init,v 1.1 2007/11/27 01:22:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.2.4/init,v 1.2 2011/12/31 20:36:21 idl0r Exp $
 
 CONF="${SVCNAME#*.}"
 CONFBASE="/etc/conf.d/memcached"
@@ -29,7 +29,6 @@ checkconfig() {
           ewarn "You should edit $CONFSRC and specify an address to listen on."
           ewarn "Listening on any address (check your firewall!)"
         fi
-
 }
 
 start() {
@@ -57,8 +56,7 @@ start() {
         fi
 
         /sbin/start-stop-daemon --start --pidfile "${PIDFILE}" \
-                --exec "${MEMCACHED_BINARY}" \
-				--startas "${MEMCACHED_BINARY}" -- \
+                --exec "${MEMCACHED_BINARY}" -- \
                 -d -p ${PORT} ${c_LISTENON} -m ${MEMUSAGE} \
                 -c ${MAXCONN} -u ${MEMCACHED_RUNAS} -P "${PIDFILE}" \
 				${MISC_OPTS}

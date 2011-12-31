@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.5.ebuild,v 1.8 2008/09/27 16:35:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.3.0-r1.ebuild,v 1.1 2011/12/31 20:36:19 idl0r Exp $
 
 inherit eutils
 
@@ -13,10 +13,10 @@ SRC_URI="http://www.danga.com/memcached/dist/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="nptl test"
 
-RDEPEND=">=dev-libs/libevent-0.6
+RDEPEND=">=dev-libs/libevent-1.4
 		 dev-lang/perl"
 DEPEND="${RDEPEND}
 		test? ( virtual/perl-Test-Harness >=dev-perl/Cache-Memcached-1.24 )"
@@ -41,8 +41,8 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/{CONTRIBUTORS,*.txt}
 
-	newconfd "${FILESDIR}"/1.2.5/conf memcached
-	newinitd "${FILESDIR}"/1.2.5/init memcached
+	newconfd "${FILESDIR}"/1.2.6/conf memcached
+	newinitd "${FILESDIR}"/1.2.6/init memcached
 }
 
 pkg_postinst() {
