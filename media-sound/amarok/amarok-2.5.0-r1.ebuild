@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.5.0-r1.ebuild,v 1.1 2011/12/28 01:39:32 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.5.0-r1.ebuild,v 1.2 2011/12/31 05:56:08 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -57,6 +57,7 @@ COMMONDEPEND="
 		x11-libs/qt-core[glib]
 	)
 	mtp? ( >=media-libs/libmtp-1.0.0 )
+	ofa? ( >=media-libs/libofa-0.9.0 )
 	opengl? ( virtual/opengl )
 "
 DEPEND="${COMMONDEPEND}
@@ -96,6 +97,7 @@ src_configure() {
 		$(cmake-utils_use_with lastfm LibLastFm)
 		$(cmake-utils_use_with mtp)
 		$(cmake-utils_use_with mp3tunes MP3Tunes)
+		$(cmake-utils_use_with ofa LibOFA)
 	)
 
 	mycmakeargs+=(

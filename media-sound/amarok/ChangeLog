@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.416 2011/12/28 10:08:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.417 2011/12/31 05:56:08 jmbsvicetto Exp $
+
+  31 Dec 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.5.0-r1.ebuild:
+  [media-sound/amarok-2.5.0-r1] Added missing libofa dependency and configure
+  switch. Thanks to Matěj Laitl again - bug 395369.
 
   28 Dec 2011; Agostino Sarubbo <ago@gentoo.org> amarok-2.4.3-r1.ebuild:
   Stable for AMD64, wrt bug #389997
