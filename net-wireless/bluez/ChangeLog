@@ -1,6 +1,38 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.109 2011/12/24 15:46:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.110 2011/12/31 21:09:18 pacho Exp $
+
+*bluez-4.97-r1 (31 Dec 2011)
+*bluez-4.97 (31 Dec 2011)
+
+  31 Dec 2011; Pacho Ramos <pacho@gentoo.org> +files/bluez-4.67-udev.script,
+  -bluez-4.96-r2.ebuild, +bluez-4.97.ebuild, +bluez-4.97-r1.ebuild,
+  +files/rfcomm-conf.d, +files/rfcomm-init.d:
+  Version bump that also includes IMPORTANT changes:
+  - old-daemons were dropped because they are poorly maintained and I am unable
+    to test them. Also have some problems and look to not work at all in default
+    setups (bug #381355 by Agostino Sarubbo and Rafał Mużyło). If you think you
+    still need some of them, please open a new bug report explaining your needs
+    to let us find a replacement or, if none is available, readd only needed old
+    daemons.
+  - 'bluetooth' init.d script has been completely removed as it was only
+    calling "udevadm trigger --subsystem-match=bluetooth --action=add" at startup. 
+    This instruction is now called directly by /lib/udev/bluetooth.sh (the one that
+    was previously calling init.d script and causing problems on systemd setups as 
+    reported by mgorny and others (bug #396403), this should also solve bug #389531.
+    Due this change, it's possible that you will start to see how your bluetooth
+    device is not properly detected just after booting if not manually running
+    "udevadm trigger --subsystem-match=bluetooth --action=add", if this is your case,
+    please report a bug to readd a bluetooth init.d script for that (even without
+    getting it automatically started by udev to not hurt systemd users).
+  - Because of previous change, 'rfcomm' part of old bluetooth init.d script has been
+    moved to its own script under /etc/init.d and conf.d.
+  - Due bug 392879 (by Otamay) I have rethink the way some plugins were being 
+    installed or not to simply always build and install them. This adds no additional
+    dependencies, also simplifies ebuild preventing it from growing forever with a
+    lot of USE flags and, probably the most important one, makes bluez to simply 
+    support and work with more devices.
+  Also remove old.
 
   24 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> bluez-4.96-r2.ebuild:
   Make bluez depend on python only when USE=test-programs
