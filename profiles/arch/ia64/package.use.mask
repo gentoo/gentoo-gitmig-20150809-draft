@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.63 2011/12/26 11:00:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.64 2011/12/31 15:26:26 sera Exp $
+
+# Ralph Sennhauser <sera@gentoo.org> (31 Dec 2011)
+# Needs dev-java/fop which is not available for ia64 due to missing JVM #345433
+net-analyzer/wireshark doc-pdf
 
 # Raúl Porcel <armin76@gentoo.org> (26 Dec 2011)
 # Fails to build
