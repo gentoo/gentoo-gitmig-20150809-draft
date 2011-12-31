@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.107 2011/11/26 19:01:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.108 2011/12/31 16:38:34 grobian Exp $
+
+*tcsh-6.17.06 (31 Dec 2011)
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> +tcsh-6.17.06.ebuild,
+  -files/tcsh-6.14-r2.patch, -files/tcsh-6.14-r4.patch, -tcsh-6.14-r5.ebuild,
+  -tcsh-6.15-r2.ebuild:
+  Cleanup old, version bump to beta version with ebuild cleanup.
 
   26 Nov 2011; Raúl Porcel <armin76@gentoo.org> tcsh-6.17-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #389013
