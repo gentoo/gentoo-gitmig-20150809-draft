@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.43 2011/11/13 11:52:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.44 2011/12/31 18:24:32 pacho Exp $
+
+*gdk-pixbuf-2.24.1 (31 Dec 2011)
+
+  31 Dec 2011; Pacho Ramos <pacho@gentoo.org> +gdk-pixbuf-2.24.1.ebuild,
+  -files/gdk-pixbuf-2.22.1-CVE-2011-2485.patch,
+  -files/gdk-pixbuf-2.22.1-fix-libpng15.patch, -gdk-pixbuf-2.22.1-r2.ebuild:
+  Version bump, add missing DEPEND on proper coreutils version (bug #395103 by
+  arnaud), remove old.
 
   13 Nov 2011; Justin Lecher <jlec@gentoo.org> gdk-pixbuf-2.22.1-r2.ebuild,
   gdk-pixbuf-2.24.0-r1.ebuild:
