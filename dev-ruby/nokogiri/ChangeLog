@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.66 2011/11/21 20:31:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.67 2011/12/31 18:59:23 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> nokogiri-1.5.0-r2.ebuild:
+  Add Prefix keywords, bug #396547
 
   21 Nov 2011; Hans de Graaff <graaff@gentoo.org> nokogiri-1.5.0-r2.ebuild:
   Always require rdoc since the hoe-based build system requires it. Thanks for

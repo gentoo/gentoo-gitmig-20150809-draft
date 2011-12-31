@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.63 2011/12/20 21:48:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.64 2011/12/31 18:56:17 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> minitest-2.8.1.ebuild:
+  Add Prefix keywords, bug #396547
 
   20 Dec 2011; Jeroen Roovers <jer@gentoo.org> minitest-2.6.2.ebuild:
   Stable for HPPA (bug #394781).
