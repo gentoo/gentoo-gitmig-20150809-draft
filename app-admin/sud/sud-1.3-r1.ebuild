@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/sud-1.3.ebuild,v 1.8 2009/08/29 11:47:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/sud-1.3-r1.ebuild,v 1.1 2011/12/31 18:19:38 idl0r Exp $
 
 EAPI=2
 
