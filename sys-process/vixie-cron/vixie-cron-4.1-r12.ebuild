@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r11.ebuild,v 1.4 2011/09/04 17:30:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r12.ebuild,v 1.1 2011/12/31 14:58:21 idl0r Exp $
 
 inherit cron toolchain-funcs pam
 
@@ -68,7 +68,7 @@ src_install() {
 
 	keepdir /etc/cron.d
 	newpamd ${FILESDIR}/pamd.compatible cron
-	newinitd ${FILESDIR}/vixie-cron.rc6 vixie-cron
+	newinitd ${FILESDIR}/vixie-cron.rc7 vixie-cron
 
 	# doc stuff
 	doman crontab.1 crontab.5 cron.8
