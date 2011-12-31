@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/monit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.60 2011/05/28 12:21:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.61 2011/12/31 16:25:27 idl0r Exp $
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -monit-4.10.1.ebuild,
+  -monit-5.2.1.ebuild, -monit-5.2.2.ebuild, -monit-5.2.3-r1.ebuild,
+  -files/monit.initd-4.10.1:
+  Some cleanup.
 
   28 May 2011; Brent Baude <ranger@gentoo.org> monit-5.2.3.ebuild:
   Marking monit-5.2.3 ppc for bug 355567
