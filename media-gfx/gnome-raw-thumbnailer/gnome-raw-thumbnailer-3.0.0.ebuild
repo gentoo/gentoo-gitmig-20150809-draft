@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-3.0.0.ebuild,v 1.1 2011/12/31 17:49:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-3.0.0.ebuild,v 1.2 2011/12/31 18:50:41 mr_bones_ Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -32,4 +32,3 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 DOCS="AUTHORS ChangeLog NEWS"
-
