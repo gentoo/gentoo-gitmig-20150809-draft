@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.35 2011/12/28 09:25:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.36 2011/12/31 18:01:46 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> ruby_parser-2.3.1.ebuild:
+  Add Prefix keywords, bug #396547
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby_parser-2.3.1.ebuild:
   Add ruby19. Bump sexp-processor dependency to avoid many test failures with

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.125 2011/12/18 13:32:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.126 2011/12/31 17:59:38 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> hoe-2.12.4.ebuild:
+  Add Prefix keywords, bug #396547
 
 *hoe-2.12.4 (18 Dec 2011)
 

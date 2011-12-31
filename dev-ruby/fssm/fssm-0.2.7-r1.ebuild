@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/fssm-0.2.7-r1.ebuild,v 1.4 2011/12/30 14:35:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/fssm-0.2.7-r1.ebuild,v 1.5 2011/12/31 18:04:39 grobian Exp $
 
 EAPI=4
 
@@ -18,12 +18,12 @@ HOMEPAGE="http://github.com/ttilley/fssm"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 # rb-inotify is a Linux-specific extension, so we will need to make this
 # conditional when keywords are added that are not linux-specific.
-ruby_add_rdepend ">=dev-ruby/rb-inotify-0.8.6-r1"
+ruby_add_rdepend "kernel_linux? ( >=dev-ruby/rb-inotify-0.8.6-r1 )"
 
 ruby_add_bdepend "test? ( >=dev-ruby/rspec-2.4.0:2 )"
 
