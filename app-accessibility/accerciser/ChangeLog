@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/accerciser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.24 2011/11/20 23:42:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.25 2011/12/31 22:16:21 tetromino Exp $
+
+  31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  accerciser-1.12.1.ebuild, accerciser-3.2.1.ebuild:
+  Fix py-compile idiom for automake-1.11.2 compatibility (bug #396585).
 
   20 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   accerciser-3.2.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-3.2.1.ebuild,v 1.2 2011/11/20 23:42:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-3.2.1.ebuild,v 1.3 2011/12/31 22:16:21 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -46,8 +46,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	mv "${S}"/py-compile "${S}"/py-compile.orig
-	ln -s $(type -P true) "${S}"/py-compile
+	echo '#!/bin/sh' > py-compile
 
 	python_convert_shebangs -r 2 .
 }
