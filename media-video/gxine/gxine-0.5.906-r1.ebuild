@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.906-r1.ebuild,v 1.1 2011/11/25 18:13:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.906-r1.ebuild,v 1.2 2011/12/31 12:39:21 ago Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils multilib nsplugins
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="gnome lirc nls nsplugin udev xcb xinerama"
 
 RDEPEND=">=media-libs/xine-lib-1.1.17
