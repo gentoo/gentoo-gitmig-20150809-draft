@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.63 2011/12/24 11:53:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.64 2011/12/31 18:39:56 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> builder-3.0.0.ebuild:
+  Add Prefix keywords, bug #396547
 
 *builder-2.1.2-r3 (24 Dec 2011)
 
