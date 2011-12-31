@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/erubis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.15 2011/12/31 17:46:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.16 2011/12/31 17:55:11 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> erubis-2.7.0.ebuild:
+  Marked ~sparc64-solaris
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> erubis-2.7.0.ebuild:
   Add Prefix keywords, bug #396547

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/maruku
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.14 2011/12/31 17:49:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.15 2011/12/31 17:55:52 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> maruku-0.6.0-r2.ebuild:
+  Marked ~sparc64-solaris
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> maruku-0.6.0-r2.ebuild:
   Add Prefix keywords, bug #396547
