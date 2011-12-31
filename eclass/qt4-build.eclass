@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.112 2011/12/30 14:39:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.113 2011/12/31 00:46:04 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -240,13 +240,15 @@ qt4-build_src_prepare() {
 		LDFLAGS='${LDFLAGS}'\n" \
 		-i configure || die "sed SYSTEM_VARIABLES failed"
 
-	# Bug 321335
-	find config.tests/unix -name '*.test' -type f -exec grep -lZ \$MAKE '{}' \; | xargs -0 \
-		sed -e "s:\(\$MAKE\):\1 CC='$(tc-getCC)' CXX='$(tc-getCXX)' LINK='$(tc-getCXX)':g" \
-			-i || die "sed test compilers failed"
+	# Respect CC, CXX, LINK and *FLAGS in config.tests
+	find config.tests/unix -name '*.test' -type f -print0 | xargs -0 \
+		sed -i -e "/bin\/qmake/ s: \"QT_BUILD_TREE=: \
+			'QMAKE_CC=$(tc-getCC)'    'QMAKE_CXX=$(tc-getCXX)'      'QMAKE_LINK=$(tc-getCXX)' \
+			'QMAKE_CFLAGS+=${CFLAGS}' 'QMAKE_CXXFLAGS+=${CXXFLAGS}' 'QMAKE_LFLAGS+=${LDFLAGS}'&:" \
+		|| die "sed config.tests failed"
 
 	# Bug 172219
-	sed -e "s:X11R6/::" -i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
+	sed -e 's:/X11R6/:/:' -i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 
 	if [[ ${CHOST} == *-darwin* ]]; then
 		# Set FLAGS *and* remove -arch, since our gcc-apple is multilib
@@ -298,8 +300,9 @@ qt4-build_src_prepare() {
 	# don't flirt with non-Prefix stuff, we're quite possessive
 	sed -i -e '/^QMAKE_\(LIB\|INC\)DIR\(_X11\|_OPENGL\|\)\t/s/=.*$/=/' \
 		mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
-	# strip predefined CFLAGS from qmake ( bug #312689 )
-	sed -i '/^QMAKE_CFLAGS_RELEASE/s:+=.*:+=:' mkspecs/common/g++.conf
+
+	# strip predefined CFLAGS from mkspecs (bug 312689)
+	sed -i -e '/^QMAKE_CFLAGS_RELEASE/s:+=.*:+=:' mkspecs/common/g++.conf
 
 	base_src_prepare
 }
