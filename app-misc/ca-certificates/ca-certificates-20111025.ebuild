@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20111025.ebuild,v 1.5 2011/12/26 11:32:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20111025.ebuild,v 1.6 2011/12/31 08:26:32 vapier Exp $
 
 EAPI="3"
 
@@ -17,7 +17,8 @@ KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x
 IUSE=""
 
 # platforms like AIX don't have a good ar
-DEPEND="kernel_AIX? ( app-arch/deb2targz )"
+DEPEND="kernel_AIX? ( app-arch/deb2targz )
+	!<sys-apps/portage-2.1.10.41"
 # openssl: we run `c_rehash`
 # debianutils: we run `run-parts`
 RDEPEND="${DEPEND}

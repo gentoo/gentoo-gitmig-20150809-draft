@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.62 2011/12/26 11:32:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.63 2011/12/31 08:26:32 vapier Exp $
+
+  31 Dec 2011; Mike Frysinger <vapier@gentoo.org>
+  ca-certificates-20111025.ebuild:
+  Block older portages which do not handle unicode filenames in non-unicode
+  locales #394223.
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org>
   ca-certificates-20111025.ebuild:
