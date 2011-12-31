@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.17 2011/11/24 18:27:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.18 2011/12/31 09:41:07 ago Exp $
+
+  31 Dec 2011; Agostino Sarubbo <ago@gentoo.org> pam_mysql-0.7_rc1-r4.ebuild:
+  Stable for AMD64, wrt bug #396515
 
 *pam_mysql-0.7_rc1-r4 (24 Nov 2011)
 
