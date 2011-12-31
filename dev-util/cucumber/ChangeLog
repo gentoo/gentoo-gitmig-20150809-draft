@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.45 2011/12/18 12:18:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.46 2011/12/31 19:14:21 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> cucumber-0.7.3-r1.ebuild:
+  Add Prefix keywords, bug #396547
 
 *cucumber-1.1.4 (18 Dec 2011)
 
