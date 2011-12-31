@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/alleyoop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.21 2011/07/20 14:05:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.22 2011/12/31 18:07:06 pacho Exp $
+
+*alleyoop-0.9.8 (31 Dec 2011)
+
+  31 Dec 2011; Pacho Ramos <pacho@gentoo.org> +alleyoop-0.9.8.ebuild:
+  Version bump.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
