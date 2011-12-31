@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-task-show/leechcraft-task-show-0.4.90.ebuild,v 1.1 2011/09/14 17:08:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-search-show/leechcraft-search-show-0.4.97.ebuild,v 1.1 2011/12/31 12:20:06 maksbotan Exp $
 
-EAPI="2"
+EAPI="4"
 
-DESCRIPTION="Virtual for plugins that can show IDownloads and IJobHolders"
+DESCRIPTION="Virtual for LeechCraft plugins providing UI for search plugins."
 HOMEPAGE=""
 SRC_URI=""
 
