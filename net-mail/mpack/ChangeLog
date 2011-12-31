@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mpack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.15 2011/12/07 23:34:59 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.16 2011/12/31 22:45:11 sping Exp $
+
+*mpack-1.6-r2 (31 Dec 2011)
+
+  31 Dec 2011; Sebastian Pipping <sping@gentoo.org> +mpack-1.6-r2.ebuild,
+  +files/mpack-1.6-cve-2011-4919.patch:
+  Apply patch for CVE-2011-4919 (information disclosure) (bug #171075)
 
 *mpack-1.6-r1 (07 Dec 2011)
 
