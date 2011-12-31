@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/eggdrop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.86 2010/06/17 21:52:12 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.87 2011/12/31 13:41:41 binki Exp $
+
+*eggdrop-1.6.21 (31 Dec 2011)
+
+  31 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> +eggdrop-1.6.21.ebuild:
+  Bump to eggdrop-1.6.21 (bug #338211) including fixes for LDFLAGS (bug
+  #335230) and most parallel make issues (bug #295302). Many thanks to Adam
+  (from Anope) for updating the patches tarball and the SSL patch and adding
+  fixes for bug #196337.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> eggdrop-1.6.18-r3.ebuild,
   eggdrop-1.6.19.ebuild:
