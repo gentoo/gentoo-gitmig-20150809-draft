@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.3-r1.ebuild,v 1.5 2011/12/28 17:05:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.3-r1.ebuild,v 1.6 2011/12/31 07:21:06 vapier Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -64,7 +64,8 @@ RESTRICT="test"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	pam? ( sys-libs/pam )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=sys-kernel/linux-headers-2.6.39"
 
 S=${WORKDIR}/${MY_P}
 
