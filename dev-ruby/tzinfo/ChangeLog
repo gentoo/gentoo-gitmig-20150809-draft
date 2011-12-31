@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.96 2011/12/28 10:59:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.97 2011/12/31 20:26:19 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> tzinfo-0.3.31-r1.ebuild:
+  Add Prefix keywords, bug #396547
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> tzinfo-0.3.27.ebuild:
   Drop ruby19 from stable version.
