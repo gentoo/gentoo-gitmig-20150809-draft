@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.5.0.ebuild,v 1.2 2011/08/14 12:57:34 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.5-r2.ebuild,v 1.1 2011/12/31 20:14:06 idl0r Exp $
 
-EAPI="4"
+EAPI="2"
 
 inherit eutils
 
 DESCRIPTION="Network performance benchmark including tests for TCP, UDP, sockets, ATM and more."
-SRC_URI="ftp://ftp.netperf.org/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.netperf.org/netperf/${P}.tar.gz"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 HOMEPAGE="http://www.netperf.org/"
@@ -19,12 +19,9 @@ DEPEND=">=sys-apps/sed-4"
 RDEPEND=""
 
 src_prepare() {
-	sed -i src/netserver.c \
-		-e '/^#define DEBUG_LOG_FILE_DIR/s:"/tmp/":"/var/log/":' \
-		-e 's:sizeof(netperf_response) - 7:MAXSPECDATA:g' \
-		|| die
-
-	epatch "${FILESDIR}"/${PN}-fix-scripts.patch
+	epatch \
+		"${FILESDIR}"/${PN}-fix-scripts.patch \
+		"${FILESDIR}"/${P}-netserver.patch
 
 	# Fixing paths in scripts
 	sed -i -e 's:^\(NETHOME=\).*:\1"/usr/bin":' \
@@ -37,7 +34,7 @@ src_prepare() {
 }
 
 src_install () {
-	default
+	einstall || die
 
 	# move netserver into sbin as we had it before 2.4 was released with its
 	# autoconf goodness
