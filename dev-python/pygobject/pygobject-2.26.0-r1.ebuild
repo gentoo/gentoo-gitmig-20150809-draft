@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.17 2011/12/31 18:47:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.18 2011/12/31 21:57:44 tetromino Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -65,7 +65,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.26.0-disabled-threads.patch"
 
 	# disable pyc compiling
-	mv py-compile py-compile.orig
 	echo '#!/bin/sh' > py-compile
 
 	eautoreconf

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r2.ebuild,v 1.6 2011/12/31 18:37:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r2.ebuild,v 1.7 2011/12/31 22:01:22 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -46,7 +46,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.14.1-libdir-pc.patch"
 
 	# Disable pyc compiling
-	mv "${S}"/py-compile "${S}"/py-compile.orig
 	echo '#!/bin/sh' > py-compile
 
 	AT_M4DIR="m4" eautoreconf
