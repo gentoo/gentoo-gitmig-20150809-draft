@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.68 2011/12/30 15:55:17 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.69 2011/12/31 19:37:40 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> rack-1.4.0.ebuild:
+  Add Prefix keywords, bug #396547
 
   30 Dec 2011; Mark Loeser <halcy0n@gentoo.org> rack-1.1.3.ebuild:
   Stable for ppc/ppc64; bug #396455

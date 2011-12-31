@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-test
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.18 2011/12/28 12:34:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.19 2011/12/31 19:39:11 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> rack-test-0.6.1.ebuild:
+  Add Prefix keywords, bug #396547
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> rack-test-0.6.1.ebuild:
   Add ruby19. Require bundler to handle loading the proper rack version.
