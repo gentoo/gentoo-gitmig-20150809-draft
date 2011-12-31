@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.111 2011/12/24 19:46:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.112 2011/12/31 09:13:37 vapier Exp $
+
+  31 Dec 2011; Mike Frysinger <vapier@gentoo.org> fwbuilder-5.0.0.3568.ebuild,
+  fwbuilder-5.0.1.3592.ebuild:
+  Disable forced ccache/distcc handling (since portage has FEATURES for this),
+  and drop the gnuconfig manual update since eautoreconf takes care of this for
+  us.
 
 *fwbuilder-5.0.1.3592 (24 Dec 2011)
 

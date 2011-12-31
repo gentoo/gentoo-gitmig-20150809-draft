@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.0.3568.ebuild,v 1.1 2011/12/16 16:28:12 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.0.3568.ebuild,v 1.2 2011/12/31 09:13:37 vapier Exp $
 
-EAPI=4
+EAPI="4"
 
 inherit eutils base qt4-r2 multilib autotools
 
@@ -16,8 +16,7 @@ IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.3
 	dev-libs/openssl
-	dev-libs/elfutils
-	sys-devel/gnuconfig"
+	dev-libs/elfutils"
 RDEPEND="${DEPEND}"
 
 PATCHES=(
@@ -27,16 +26,12 @@ PATCHES=(
 src_prepare() {
 	qt4-r2_src_prepare
 	eautoreconf
-
-	# This package fundamentally changed its build system.  We have to
-	# manually copy config.{sub,guess} from /usr/share/gnuconfig/.
-	cp /usr/share/gnuconfig/config.{sub,guess} "${WORKDIR}/${P}/"	\
-		|| die "failed to copy config.{sub,guess}"
 }
 
 src_configure() {
 	eqmake4
-	econf
+	# portage handles ccache/distcc itself
+	econf --without-{ccache,distcc}
 }
 
 src_install() {
