@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.1-r1.ebuild,v 1.1 2010/10/14 18:34:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.1-r1.ebuild,v 1.2 2011/12/31 07:33:57 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -51,7 +51,7 @@ src_compile() {
 		bindir=/usr/bin
 	fi
 
-	use selinux || export ac_cv_{search_setfilecon,header_selinux_{context,selinux}_h}=no
+	export ac_cv_{search_setfilecon,header_selinux_{context,selinux}_h}=$(usex selinux)
 	use static && append-ldflags -static
 	econf \
 		--bindir=${bindir} \
