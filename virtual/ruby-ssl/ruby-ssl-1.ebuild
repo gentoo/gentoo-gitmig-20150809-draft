@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ruby-ssl-1.ebuild,v 1.5 2011/12/31 14:52:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ruby-ssl-1.ebuild,v 1.6 2011/12/31 17:39:26 grobian Exp $
 
 EAPI=2
 USE_RUBY="ruby19"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="${USE_RUBY}"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND="dev-lang/ruby:1.9[ssl]"
