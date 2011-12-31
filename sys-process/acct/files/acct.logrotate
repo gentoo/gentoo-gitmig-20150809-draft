@@ -1,5 +1,5 @@
 # Logrotate file for acct
- 
+
 /var/account/pacct {
 	compress
 	delaycompress
@@ -9,6 +9,6 @@
 	create 0600 root root
 	missingok
 	postrotate
-		/etc/init.d/acct reload > /dev/null 2>&1	
+		/etc/init.d/acct --quiet --ifstarted restart
 	endscript
-}	 
+}

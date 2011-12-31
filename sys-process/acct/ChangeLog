@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.52 2011/10/20 05:07:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.53 2011/12/31 07:26:18 vapier Exp $
+
+  31 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/acct.logrotate:
+  Do not always restart acct init.d when rotating logs #395867 by Eugeny
+  Shkrigunov.
 
 *acct-6.5.5-r2 (20 Oct 2011)
 
