@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/monit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.61 2011/12/31 16:25:27 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.62 2011/12/31 16:28:50 idl0r Exp $
+
+*monit-5.2.5-r1 (31 Dec 2011)
+*monit-5.2.3-r2 (31 Dec 2011)
+*monit-5.1.1-r1 (31 Dec 2011)
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -monit-5.1.1.ebuild,
+  +monit-5.1.1-r1.ebuild, -monit-5.2.3.ebuild, +monit-5.2.3-r2.ebuild,
+  -monit-5.2.5.ebuild, +monit-5.2.5-r1.ebuild, files/monit.initd-5.0,
+  files/monit.initd-5.0-r1:
+  Revbump. Don't use the deprecated $opts variable, bug 381895.
 
   31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -monit-4.10.1.ebuild,
   -monit-5.2.1.ebuild, -monit-5.2.2.ebuild, -monit-5.2.3-r1.ebuild,

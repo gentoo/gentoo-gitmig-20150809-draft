@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.1.1.ebuild,v 1.6 2010/12/22 01:43:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.2.3-r2.ebuild,v 1.1 2011/12/31 16:28:50 idl0r Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ src_install() {
 	dohtml -r doc/*
 
 	insinto /etc; insopts -m700; doins monitrc || die "doins monitrc failed"
-	newinitd "${FILESDIR}"/monit.initd-5.0 monit || die "newinitd failed"
+	newinitd "${FILESDIR}"/monit.initd-5.0-r1 monit || die "newinitd failed"
 }
 
 pkg_postinst() {
