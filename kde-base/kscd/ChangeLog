@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kscd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.199 2011/12/27 12:23:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.200 2011/12/31 15:43:51 johu Exp $
+
+*kscd-4.7.4-r1 (31 Dec 2011)
+
+  31 Dec 2011; Johannes Huber <johu@gentoo.org>
+  +files/kscd-4.7.4-fix-no-cd-crash.patch, +kscd-4.7.4-r1.ebuild,
+  -kscd-4.7.4.ebuild:
+  Revision bump. Adds patch to fix crash with no cd inserted. Thanks Andrea
+  Grazioli <grazioli_andrea@yahoo.it>. Fix bug #396573.
 
   27 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> kscd-4.7.3.ebuild,
   +files/kscd-4.7.3-underlinking.patch, kscd-4.7.4.ebuild:

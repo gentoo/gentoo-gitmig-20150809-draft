@@ -1,0 +1,14 @@
+--- kscd/kscd.cpp	2011-12-02 00:56:20.000000000 +0100
++++ kscd/kscd.cpp	2011-12-30 22:26:26.793971589 +0100
+@@ -69,8 +69,10 @@
+ 
+ 	/** Music Brainz initialisation	*/
+ 	m_MBManager = new MBManager();
++	if (devices->getMedia())
++	{
+ 	m_MBManager->discLookup(devices->getMedia()->currentSource().deviceName());
+-
++	}
+ 	setupActions();
+ 	setupContextMenu();
+ }
