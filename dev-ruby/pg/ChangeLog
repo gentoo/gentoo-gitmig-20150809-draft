@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.44 2011/12/28 08:28:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.45 2011/12/31 20:46:49 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> pg-0.12.0-r1.ebuild:
+  Add Prefix keywords, bug #396547
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> pg-0.11.0.ebuild:
   Drop ruby19 from stable version.

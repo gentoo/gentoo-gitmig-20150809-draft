@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.3.4.ebuild,v 1.1 2011/12/05 20:49:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.3.4.ebuild,v 1.2 2011/12/31 20:53:07 grobian Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19"
@@ -17,7 +17,7 @@ DESCRIPTION="An extension library to access a SQLite database from Ruby"
 HOMEPAGE="http://rubyforge.org/projects/sqlite-ruby/"
 LICENSE="BSD"
 
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.14 2011/12/22 18:59:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.15 2011/12/31 20:48:44 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> mysql2-0.3.7.ebuild:
+  Add Prefix keywords, bug #396547
 
 *mysql2-0.3.11 (22 Dec 2011)
 
