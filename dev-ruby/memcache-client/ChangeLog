@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/memcache-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.10 2011/12/10 13:33:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.11 2011/12/31 21:34:08 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> memcache-client-1.8.5.ebuild:
+  Add Prefix keywords, bug #396547
 
   10 Dec 2011; Hans de Graaff <graaff@gentoo.org> memcache-client-1.8.5.ebuild:
   Add ruby19.

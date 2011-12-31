@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.197 2011/12/30 19:47:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.198 2011/12/31 21:38:55 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> actionpack-3.1.3.ebuild:
+  Add Prefix keywords, bug #396547
 
 *actionpack-3.1.3 (30 Dec 2011)
 
