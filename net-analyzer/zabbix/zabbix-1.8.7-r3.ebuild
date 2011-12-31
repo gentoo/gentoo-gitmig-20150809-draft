@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.10.ebuild,v 1.1 2011/12/30 08:26:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.7-r3.ebuild,v 1.1 2011/12/31 20:47:13 idl0r Exp $
 
 EAPI="2"
 
@@ -10,12 +10,11 @@ inherit eutils flag-o-matic webapp depend.php autotools
 
 DESCRIPTION="ZABBIX is software for monitoring of your applications, network and servers."
 HOMEPAGE="http://www.zabbix.com/"
-MY_P=${P/_/}
-SRC_URI="http://prdownloads.sourceforge.net/zabbix/${MY_P}.tar.gz"
+SRC_URI="http://prdownloads.sourceforge.net/zabbix/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="agent curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server -ssh snmp +sqlite3"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
@@ -46,7 +45,7 @@ DEPEND="${COMMON_DEPEND}
 use frontend && need_php_httpd
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.8.9-as-needed.patch"
+	epatch "${FILESDIR}/${PN}-1.8.3-as-needed.patch"
 	eautoreconf
 }
 

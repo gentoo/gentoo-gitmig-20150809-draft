@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.9-r1.ebuild,v 1.1 2011/11/29 00:08:44 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.9.4-r1.ebuild,v 1.1 2011/12/31 20:47:13 idl0r Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://prdownloads.sourceforge.net/zabbix/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="agent curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server -ssh snmp +sqlite3"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
@@ -26,7 +26,6 @@ COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	mysql? ( virtual/mysql )
 	sqlite3? ( =dev-db/sqlite-3* )
 	postgres? ( dev-db/postgresql-base )
-	oracle? ( dev-db/oracle-instantclient-basic )
 	jabber? ( dev-libs/iksemel )
 	curl? ( net-misc/curl )
 	openipmi? ( sys-libs/openipmi )
@@ -45,7 +44,7 @@ DEPEND="${COMMON_DEPEND}
 use frontend && need_php_httpd
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.8.9-as-needed.patch"
+	epatch "${FILESDIR}/${PN}-1.8.3-as-needed.patch"
 	eautoreconf
 }
 
@@ -199,7 +198,7 @@ src_configure() {
 		$(use_with ldap) \
 		$(use_with snmp net-snmp) \
 		$(use_with mysql) \
-		$(use_with postgres pgsql) \
+		$(use_with postgres postgresql) \
 		$(use_with oracle) \
 		$(use_with sqlite3) \
 		$(use_with jabber) \
