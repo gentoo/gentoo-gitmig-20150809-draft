@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.3.0.ebuild,v 1.5 2011/11/23 10:14:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.3.0.ebuild,v 1.6 2011/12/31 21:24:32 tetromino Exp $
 
 EAPI="3"
 
@@ -40,8 +40,7 @@ pkg_setup() {
 
 src_prepare() {
 	# disable compilation of python modules
-	rm py-compile && \
-	ln -s "$(type -P true)" py-compile || die
+	echo '#!/bin/sh' > py-compile || die
 	python_convert_shebangs 2 src/gcdemu
 }
 

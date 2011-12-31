@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.2.0.ebuild,v 1.5 2011/11/23 10:14:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.2.0.ebuild,v 1.6 2011/12/31 21:22:20 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -30,8 +30,7 @@ pkg_setup() {
 
 src_prepare() {
 	# disable compilation of python modules
-	rm py-compile && \
-	ln -s "$(type -P true)" py-compile || die
+	echo '#!/bin/sh' > py-compile || die
 }
 
 src_install() {

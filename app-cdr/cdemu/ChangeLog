@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.28 2011/11/23 10:14:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.29 2011/12/31 21:22:20 tetromino Exp $
+
+  31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> cdemu-1.2.0.ebuild,
+  cdemu-1.3.0.ebuild:
+  Fix py-compile idiom for automake-1.11.2 compatibility (bug #396585).
 
 *cdemu-1.4.0 (23 Nov 2011)
 
