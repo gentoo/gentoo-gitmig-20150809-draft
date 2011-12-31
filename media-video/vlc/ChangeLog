@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.765 2011/12/27 17:17:29 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.766 2011/12/31 11:37:24 aballier Exp $
+
+*vlc-1.2.0_pre3 (31 Dec 2011)
+
+  31 Dec 2011; Alexis Ballier <aballier@gentoo.org> -vlc-1.2.0_pre1.ebuild,
+  +vlc-1.2.0_pre3.ebuild:
+  bump to pre3
 
   27 Dec 2011; Mark Loeser <halcy0n@gentoo.org> vlc-1.1.13.ebuild:
   Stable for ppc/ppc64; bug #395543
