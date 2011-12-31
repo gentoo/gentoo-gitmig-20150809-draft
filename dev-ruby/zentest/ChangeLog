@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.100 2011/12/05 00:35:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.101 2011/12/31 18:22:53 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> zentest-4.6.2.ebuild:
+  Add Prefix keywords, bug #396547
 
   05 Dec 2011; Naohiro Aota <naota@gentoo.org> zentest-4.6.2.ebuild:
   Add ~x86-fbsd.
