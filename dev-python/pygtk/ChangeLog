@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.267 2011/12/31 16:25:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.268 2011/12/31 18:37:59 tetromino Exp $
+
+  31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pygtk-2.24.0-r1.ebuild, pygtk-2.24.0-r2.ebuild:
+  Simplify py-compile fix.
 
   31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   pygtk-2.24.0-r1.ebuild, pygtk-2.24.0-r2.ebuild:
