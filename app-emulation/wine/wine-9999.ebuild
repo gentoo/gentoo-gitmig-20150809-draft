@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.98 2011/12/20 19:35:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.99 2011/12/31 06:42:09 tetromino Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa capi cups custom-cflags dbus fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap mp3 ncurses nls openal opencl +opengl +oss +perl png samba scanner ssl test +threads +truetype v4l +win32 +win64 +X xcomposite xinerama xml"
+IUSE="alsa capi cups custom-cflags fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap mp3 ncurses nls openal opencl +opengl +oss +perl png samba scanner ssl test +threads +truetype udisks v4l +win32 +win64 +X xcomposite xinerama xml"
 RESTRICT="test" #72375
 
 MLIB_DEPS="amd64? (
@@ -53,7 +53,10 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	fontconfig? ( media-libs/fontconfig )
 	gphoto2? ( media-libs/libgphoto2 )
 	openal? ( media-libs/openal )
-	dbus? ( sys-apps/dbus )
+	udisks? (
+		sys-apps/dbus
+		sys-fs/udisks
+	)
 	gnutls? ( net-libs/gnutls )
 	gstreamer? ( media-libs/gstreamer media-libs/gst-plugins-base )
 	X? (
@@ -128,6 +131,7 @@ do_configure() {
 		$(use_with lcms cms) \
 		$(use_with cups) \
 		$(use_with ncurses curses) \
+		$(use_with udisks dbus) \
 		$(use_with fontconfig) \
 		$(use_with gnutls) \
 		$(use_with gphoto2 gphoto) \
