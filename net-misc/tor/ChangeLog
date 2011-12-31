@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.312 2011/12/30 15:29:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.313 2011/12/31 01:32:24 blueness Exp $
+
+  31 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  -tor-0.2.3.10_alpha-r1.ebuild:
+  Still problems with dependency on =net-libs/miniupnpc-1.6
 
 *tor-0.2.3.10_alpha-r1 (30 Dec 2011)
 
