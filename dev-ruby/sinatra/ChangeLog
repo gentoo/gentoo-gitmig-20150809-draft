@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sinatra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.26 2011/12/28 12:32:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.27 2011/12/31 14:44:15 graaff Exp $
+
+  31 Dec 2011; Hans de Graaff <graaff@gentoo.org> sinatra-1.2.7.ebuild:
+  Keep ruby19 only on latest release since that has the appropriate keywords.
 
 *sinatra-1.3.1 (28 Dec 2011)
 
