@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gmic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.7 2011/12/29 17:46:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.8 2011/12/31 22:31:19 radhermit Exp $
+
+  31 Dec 2011; Tim Harder <radhermit@gentoo.org> gmic-1.5.0.7.ebuild,
+  gmic-1.5.0.8.ebuild:
+  Update opencv dep (fixes bug #393555).
 
 *gmic-1.5.0.8 (29 Dec 2011)
 
