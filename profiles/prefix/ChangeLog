@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.318 2011/12/30 17:33:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.319 2011/12/31 09:13:00 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> mint/make.defaults:
+  Add static-libs to USE, bug #394853
 
   30 Dec 2011; Fabian Groffen <grobian@gentoo.org> mint/package.use.mask:
   Update USE-masks for MiNT, bug #394791
