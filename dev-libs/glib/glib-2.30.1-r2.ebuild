@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.1-r2.ebuild,v 1.1 2011/11/11 17:35:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.1-r2.ebuild,v 1.2 2011/12/31 21:26:59 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -115,7 +115,7 @@ src_prepare() {
 	sed -i -e '/g_file_get_contents/s:/var/lib/dbus/machine-id:/etc/machine-id:' gio/gdbusprivate.c || die
 
 	# disable pyc compiling
-	ln -sfn $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	# Needed for the punt-python-check patch, disabling timeout test
 	# Also needed to prevent croscompile failures, see bug #267603

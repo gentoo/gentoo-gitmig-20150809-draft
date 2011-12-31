@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2.ebuild,v 1.4 2011/12/29 17:24:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2.ebuild,v 1.5 2011/12/31 21:26:59 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -116,7 +116,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.30.2-machine-id.patch"
 
 	# disable pyc compiling
-	ln -sfn $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	# Needed for the punt-python-check patch, disabling timeout test
 	# Also needed to prevent croscompile failures, see bug #267603
