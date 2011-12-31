@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.64 2011/06/20 08:11:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.65 2011/12/31 10:46:40 ago Exp $
+
+  31 Dec 2011; Agostino Sarubbo <ago@gentoo.org> dump-0.4.44-r1.ebuild:
+  Stable for AMD64, wrt bug #395883
 
 *dump-0.4.44-r1 (20 Jun 2011)
 
