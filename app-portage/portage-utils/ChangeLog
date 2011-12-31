@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.120 2011/12/22 20:46:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.121 2011/12/31 11:39:07 grobian Exp $
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> portage-utils-0.9.ebuild:
+  Added Prefix changes, bug #395827.  Added Prefix keywords.
 
 *portage-utils-0.9 (22 Dec 2011)
 
