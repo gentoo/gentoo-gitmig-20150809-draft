@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.52 2011/05/10 10:38:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.53 2011/12/31 11:00:19 ago Exp $
+
+  31 Dec 2011; Agostino Sarubbo <ago@gentoo.org> hping-3_pre20051105-r3.ebuild:
+  Stable for AMD64, wrt bug #396501
 
   10 May 2011; Michael Weber <xmw@gentoo.org> hping-2.0.0_rc3-r2.ebuild,
   hping-3_pre20051105-r3.ebuild, files/bytesex.h.patch:
