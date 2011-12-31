@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.8.3-r5.ebuild,v 1.7 2011/10/24 13:44:20 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9.2-r2.ebuild,v 1.1 2011/12/31 20:01:30 idl0r Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils flag-o-matic versionator
 
-MY_P=${P/mit-}
+MY_P="${P/mit-}"
 P_DIR=$(get_version_component_range 1-2)
 DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
@@ -14,18 +14,19 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="m68k"
-IUSE="doc openldap test xinetd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="doc +keyutils openldap +pkinit +threads test xinetd"
 
 RDEPEND="!!app-crypt/heimdal
 	>=sys-libs/e2fsprogs-libs-1.41.0
-	sys-apps/keyutils
+	keyutils? ( sys-apps/keyutils )
 	openldap? ( net-nds/openldap )
 	xinetd? ( sys-apps/xinetd )"
 DEPEND="${RDEPEND}
+	virtual/yacc
 	doc? ( virtual/latex-base )
-	test? (	dev-lang/tcl
-			dev-lang/perl
+	test? ( dev-lang/tcl
+	        dev-lang/python
 			dev-util/dejagnu )"
 
 S=${WORKDIR}/${MY_P}/src
@@ -36,26 +37,27 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/CVE-2010-1322.patch"
-	epatch "${FILESDIR}/CVE-2010-1323.1324.4020.patch"
-	epatch "${FILESDIR}/CVE-2010-4022.patch"
-	epatch "${FILESDIR}/${P}-CVE-2011-0281.0282.0283.patch"
-	epatch "${FILESDIR}/CVE-2011-0284.patch"
-	epatch "${FILESDIR}/${P}-CVE-2011-0285.patch"
-	epatch "${FILESDIR}/mit-krb5_testsuite.patch"
+	epatch "${FILESDIR}/${PN}-kprop_exit_on_error.patch"
+	epatch "${FILESDIR}/CVE-2011-1530.patch"
 }
 
 src_configure() {
-	append-flags "-I/usr/include/et"
+	append-flags "-I${EPREFIX}/usr/include/et"
+	# QA
+	append-flags -fno-strict-aliasing
+	append-flags -fno-strict-overflow
+	use keyutils || export ac_cv_header_keyutils_h=no
 	econf \
 		$(use_with openldap ldap) \
-		$(use_with test tcl /usr) \
-		--without-krb4 \
+		"$(use_with test tcl "${EPREFIX}/usr")" \
+		$(use_enable pkinit) \
+		$(use_enable threads thread-support) \
+		--without-hesiod \
 		--enable-shared \
 		--with-system-et \
 		--with-system-ss \
 		--enable-dns-for-realm \
-		--enable-kdc-replay-cache \
+		--enable-kdc-lookaside-cache \
 		--disable-rpath
 }
 
@@ -73,14 +75,14 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		EXAMPLEDIR="/usr/share/doc/${PF}/examples" \
+		EXAMPLEDIR="${EPREFIX}/usr/share/doc/${PF}/examples" \
 		install || die "install failed"
 
 	# default database dir
 	keepdir /var/lib/krb5kdc
 
 	cd ..
-	dodoc README
+	dodoc NOTICE README
 	dodoc doc/*.{ps,txt}
 	doinfo doc/*.info*
 	dohtml -r doc/*.html
@@ -92,11 +94,12 @@ src_install() {
 
 	newinitd "${FILESDIR}"/mit-krb5kadmind.initd mit-krb5kadmind || die
 	newinitd "${FILESDIR}"/mit-krb5kdc.initd mit-krb5kdc || die
+	newinitd "${FILESDIR}"/mit-krb5kpropd.initd mit-krb5kpropd || die
 
 	insinto /etc
-	newins "${D}/usr/share/doc/${PF}/examples/krb5.conf" krb5.conf.example
+	newins "${ED}/usr/share/doc/${PF}/examples/krb5.conf" krb5.conf.example
 	insinto /var/lib/krb5kdc
-	newins "${D}/usr/share/doc/${PF}/examples/kdc.conf" kdc.conf.example
+	newins "${ED}/usr/share/doc/${PF}/examples/kdc.conf" kdc.conf.example
 
 	if use openldap ; then
 		insinto /etc/openldap/schema

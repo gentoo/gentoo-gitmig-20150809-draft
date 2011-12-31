@@ -1,6 +1,19 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.308 2011/12/23 08:43:57 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.309 2011/12/31 20:01:30 idl0r Exp $
+
+*mit-krb5-1.9.2-r2 (31 Dec 2011)
+*mit-krb5-1.8.5-r1 (31 Dec 2011)
+*mit-krb5-1.8.4-r2 (31 Dec 2011)
+*mit-krb5-1.8.3-r6 (31 Dec 2011)
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -mit-krb5-1.8.3-r5.ebuild,
+  +mit-krb5-1.8.3-r6.ebuild, -mit-krb5-1.8.4-r1.ebuild,
+  +mit-krb5-1.8.4-r2.ebuild, -mit-krb5-1.8.5.ebuild, +mit-krb5-1.8.5-r1.ebuild,
+  -mit-krb5-1.9.2-r1.ebuild, +mit-krb5-1.9.2-r2.ebuild,
+  files/mit-krb5kadmind.initd, files/mit-krb5kdc.initd,
+  files/mit-krb5kpropd.initd:
+  Revbump. Don't use deprecated start-stop-daemon options, bug 377843.
 
   23 Dec 2011; Eray Aslan <eras@gentoo.org>
   -mit-krb5-1.9.1-r2.ebuild, -files/mit-krb5-1.9.1-fd-leak.patch,

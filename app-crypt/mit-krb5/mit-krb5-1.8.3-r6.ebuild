@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.8.5.ebuild,v 1.1 2011/11/05 13:08:11 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.8.3-r6.ebuild,v 1.1 2011/12/31 20:01:30 idl0r Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="m68k"
 IUSE="doc openldap test xinetd"
 
 RDEPEND="!!app-crypt/heimdal
@@ -35,13 +35,22 @@ src_unpack() {
 	unpack ./"${MY_P}".tar.gz
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/CVE-2010-1322.patch"
+	epatch "${FILESDIR}/CVE-2010-1323.1324.4020.patch"
+	epatch "${FILESDIR}/CVE-2010-4022.patch"
+	epatch "${FILESDIR}/${P}-CVE-2011-0281.0282.0283.patch"
+	epatch "${FILESDIR}/CVE-2011-0284.patch"
+	epatch "${FILESDIR}/${P}-CVE-2011-0285.patch"
+	epatch "${FILESDIR}/mit-krb5_testsuite.patch"
+}
+
 src_configure() {
 	append-flags "-I/usr/include/et"
-	append-flags "-fno-strict-aliasing"
-	append-flags "-fno-strict-overflow"
 	econf \
 		$(use_with openldap ldap) \
 		$(use_with test tcl /usr) \
+		--without-krb4 \
 		--enable-shared \
 		--with-system-et \
 		--with-system-ss \

@@ -17,8 +17,8 @@ start() {
 	eend $? "Error starting $daemon"
 }
 
-stop() { 
-        ebegin "Stopping $daemon"
-        start-stop-daemon --stop --quiet --oknodo --exec ${exec} 1>&2
-        eend $? "Error stopping $daemon"
+stop() {
+	ebegin "Stopping $daemon"
+	start-stop-daemon --stop --quiet --exec ${exec} 1>&2
+	eend $? "Error stopping $daemon"
 }
