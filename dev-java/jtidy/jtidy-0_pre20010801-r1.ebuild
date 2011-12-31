@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801-r1.ebuild,v 1.7 2011/02/08 23:48:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801-r1.ebuild,v 1.8 2011/12/31 12:45:30 sera Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://jtidy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-dev.zip"
 LICENSE="HTML-Tidy W3C"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
