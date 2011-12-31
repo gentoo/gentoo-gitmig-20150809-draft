@@ -50,13 +50,6 @@ echo "MANDIR:    $MANDIR"
 echo "Press enter to continue, or Ctrl-C to cancel."
 read
 
-# Apply patch if still needed
-(
-cd $HTMLDIR
-patch -F0 -p2 --dry-run < ../../ntpdc.html.patch -sf || exit 0
-patch -F0 -p2 < ../../ntpdc.html.patch
-) || exit 1
-
 # Process HTML files
 rm -rf ${MANDIR}
 mkdir ${MANDIR}
