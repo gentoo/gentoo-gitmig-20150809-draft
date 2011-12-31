@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.2.0.ebuild,v 1.2 2011/11/06 02:49:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.2.0.ebuild,v 1.3 2011/12/31 20:50:06 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -17,12 +17,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=gnome-base/gconf-2.6:2
+COMMON_DEPEND=">=gnome-base/gconf-2.6:2
 	>=dev-libs/glib-2.25.11:2
 	>=x11-libs/gtk+-3.0.2:3
 	x11-libs/libwnck:3
 	net-libs/webkit-gtk:3"
-DEPEND="${RDEPEND}
+# libgnome is needed for /desktop/gnome/interface/* gconf keys
+RDEPEND="${COMMON_DEPEND}
+	gnome-base/libgnome"
+DEPEND="${COMMON_DEPEND}
 	>=sys-devel/gettext-0.17
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.9"
@@ -41,7 +44,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	ln -sfn $(type -P true) build-aux/py-compile
+	echo '#!/bin/sh' > build-aux/py-compile
 }
 
 pkg_preinst() {
