@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/chef-solr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/ChangeLog,v 1.6 2011/07/25 09:19:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/ChangeLog,v 1.7 2011/12/31 20:07:50 idl0r Exp $
+
+*chef-solr-0.10.2-r1 (31 Dec 2011)
+*chef-solr-0.9.12-r1 (31 Dec 2011)
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -chef-solr-0.9.12.ebuild,
+  +chef-solr-0.9.12-r1.ebuild, -chef-solr-0.10.2.ebuild,
+  +chef-solr-0.10.2-r1.ebuild, files/initd/chef-solr,
+  files/initd/chef-solr-indexer:
+  Revbump. Don't use deprecated start-stop-daemon options, bug 392777.
 
 *chef-solr-0.10.2 (25 Jul 2011)
 
