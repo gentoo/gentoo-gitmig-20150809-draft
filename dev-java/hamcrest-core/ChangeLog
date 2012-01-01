@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/hamcrest-core
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-core/ChangeLog,v 1.10 2010/01/23 12:50:56 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-core/ChangeLog,v 1.11 2012/01/01 22:31:49 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> hamcrest-core-1.1.ebuild:
+  Drop ia64 support #345433
 
   23 Jan 2010; Alexis Ballier <aballier@gentoo.org>
   hamcrest-core-1.1.ebuild:
