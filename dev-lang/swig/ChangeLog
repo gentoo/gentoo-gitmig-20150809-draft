@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/swig
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.158 2011/11/13 12:04:42 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.159 2012/01/01 21:36:00 pchrist Exp $
+
+  01 Jan 2012; Panagiotis Christopoulos <pchrist@gentoo.org>
+  swig-2.0.4-r1.ebuild:
+  Add zlib dependency when ccache USE flag is ON, minor change requested by
+  Agostino Sarubbo (ago at gentoo dot org), as this version is going stable,
+  bug #395843
 
 *swig-2.0.4-r1 (13 Nov 2011)
 
