@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/babl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.31 2011/12/22 10:38:01 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.32 2012/01/01 12:37:53 sping Exp $
+
+*babl-0.1.6 (01 Jan 2012)
+
+  01 Jan 2012; Sebastian Pipping <sping@gentoo.org> +babl-0.1.6.ebuild,
+  +files/babl-0.1.6-introspection.patch:
+  Bump to 0.1.6: bump dependency version, port patch
 
   22 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> -babl-0.0.22.ebuild:
   remove old
