@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.15.ebuild,v 1.7 2010/12/17 15:50:55 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.15.ebuild,v 1.8 2012/01/01 16:13:42 slyfox Exp $
 
 inherit eutils autotools
 
@@ -15,13 +15,14 @@ IUSE="gmp ssl"
 
 DEPEND="gmp? ( dev-libs/gmp )
 	ssl? ( dev-libs/openssl )
-	!<dev-libs/lsh-1.4.3-r1"
+	"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-1.14-make-as-needed.patch"
+	epatch "${FILESDIR}"/${PN}-2.0-binutils-2.22.patch #bug 396659
 	sed -i \
 		-e '/CFLAGS/s:-ggdb3::' \
 		configure.ac || die

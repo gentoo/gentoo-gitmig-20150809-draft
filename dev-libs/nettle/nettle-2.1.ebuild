@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.1.ebuild,v 1.12 2011/07/24 10:29:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.1.ebuild,v 1.13 2012/01/01 16:13:42 slyfox Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -16,7 +16,7 @@ IUSE="gmp ssl"
 
 DEPEND="gmp? ( dev-libs/gmp )
 	ssl? ( dev-libs/openssl )
-	!<dev-libs/lsh-1.4.3-r1"
+	"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
