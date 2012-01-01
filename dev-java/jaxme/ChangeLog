@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxme
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.38 2010/06/30 20:42:01 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.39 2012/01/01 18:08:18 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jaxme-0.3.1-r4.ebuild:
+  Drop ia64 support #345433
 
   30 Jun 2010; Vlastimil Babka <caster@gentoo.org> jaxme-0.3.1-r4.ebuild:
   Keywords cleanup.
