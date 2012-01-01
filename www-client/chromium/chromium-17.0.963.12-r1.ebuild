@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.12-r1.ebuild,v 1.1 2011/12/28 19:01:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.12-r1.ebuild,v 1.2 2012/01/01 09:48:59 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio"
+IUSE="bindist cups custom-cflags gnome gnome-keyring kerberos pulseaudio"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
 LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he hi hr
@@ -325,8 +325,10 @@ src_configure() {
 	myconf+=" -Dwerror="
 
 	# Avoid CFLAGS problems, bug #352457, bug #390147.
-	replace-flags "-Os" "-O2"
-	strip-flags
+	if ! use custom-cflags; then
+		replace-flags "-Os" "-O2"
+		strip-flags
+	fi
 
 	egyp ${myconf} || die
 }
