@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.216 2011/12/28 17:50:21 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.217 2012/01/01 15:35:36 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> avahi-0.6.30-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #393009
 
   28 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> avahi-0.6.30-r2.ebuild:
   QA: do not try to convert the shebang of avahi-discover if gtk and/or dbus are
