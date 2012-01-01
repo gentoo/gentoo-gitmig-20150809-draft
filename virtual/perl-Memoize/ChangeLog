@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Memoize
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.12 2011/12/22 22:15:07 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.13 2012/01/01 17:52:24 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> perl-Memoize-1.20.0-r1.ebuild:
+  alpha/ia64/sparc stable wrt #394041
 
   22 Dec 2011; Markus Meier <maekke@gentoo.org> perl-Memoize-1.20.0-r1.ebuild:
   x86 stable, bug #394041
