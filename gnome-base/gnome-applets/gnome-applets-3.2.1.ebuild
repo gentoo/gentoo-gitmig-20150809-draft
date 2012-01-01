@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.2.1.ebuild,v 1.1 2011/11/06 02:05:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.2.1.ebuild,v 1.2 2012/01/01 00:33:20 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -84,8 +84,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	# Invest applet tests need gconf/proxy/...
 	# Note: for now, invest tests are commented out by upstream

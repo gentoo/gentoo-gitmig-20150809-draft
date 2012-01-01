@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.0.1-r1.ebuild,v 1.1 2011/10/29 01:58:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.0.1-r1.ebuild,v 1.2 2012/01/01 00:36:46 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -52,8 +52,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	mv py-compile py-compile-disabled
-	ln -s $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	python_copy_sources
 }

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-menus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.172 2011/10/29 01:58:08 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.173 2012/01/01 00:36:46 tetromino Exp $
+
+  01 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-menus-2.30.5.ebuild, gnome-menus-3.0.1-r1.ebuild,
+  gnome-menus-3.2.0.1.ebuild:
+  Fix py-compile idiom for automake-1.11.2 compatibility (bug #396585).
 
 *gnome-menus-3.2.0.1 (29 Oct 2011)
 *gnome-menus-3.0.1-r1 (29 Oct 2011)

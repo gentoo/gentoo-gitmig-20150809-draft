@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.16 2011/12/07 07:32:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.17 2012/01/01 00:33:20 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -90,8 +90,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-dbus-fix.patch
 
 	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	# Invest applet tests need gconf/proxy/...
 	sed 's/^TESTS.*/TESTS=/g' -i invest-applet/invest/Makefile.am \
