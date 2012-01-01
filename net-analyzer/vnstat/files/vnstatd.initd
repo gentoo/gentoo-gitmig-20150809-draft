@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/files/vnstatd.initd,v 1.5 2012/01/01 01:18:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/files/vnstatd.initd,v 1.6 2012/01/01 01:19:16 idl0r Exp $
 
 extra_started_commands="reload"
 
@@ -31,12 +31,6 @@ stop() {
 }
 
 reload() {
-	if [ ! -f ${VNSTATD_PIDFILE} ]; then
-		eerror "Cannot reload configuration, vnstatd is not running"
-		eend 1
-		return 1
-	fi
-
 	ebegin "Reloading vnstatd configuration"
 	kill -HUP $(< "${VNSTATD_PIDFILE}") &>/dev/null
 	eend $?
