@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxpanel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.35 2011/10/09 16:44:30 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.36 2012/01/01 13:39:25 vostorga Exp $
+
+*lxpanel-0.5.8-r1 (01 Jan 2012)
+
+  01 Jan 2012; Victor Ostorga +lxpanel-0.5.8-r1.ebuild,
+  +files/lxpanel-0.5.8-battery-meter.patch:
+  Fixes battery metter always showing 100 percent charge, patch thanks to
+  Robert Meyer <r.meyer@net-wizard.org> bug #389581
 
   09 Oct 2011; Markus Meier <maekke@gentoo.org> lxpanel-0.5.8.ebuild:
   arm stable, bug #385189
