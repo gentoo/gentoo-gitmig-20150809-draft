@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.47 2011/12/28 08:37:52 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.48 2012/01/01 21:06:08 grobian Exp $
+
+  01 Jan 2012; Fabian Groffen <grobian@gentoo.org> facter-1.6.4.ebuild:
+  Drop Prefix keywords, the dependencies are too non-Prefix and non-Linux
+  incompatible
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> facter-1.6.0.ebuild:
   Drop ruby19 from stable version.
