@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Base
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.62 2011/12/21 22:13:41 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.63 2012/01/01 17:33:11 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> Test-Base-0.600.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #393833
 
   21 Dec 2011; Markus Meier <maekke@gentoo.org> Test-Base-0.600.0.ebuild:
   arm stable, bug #393833
