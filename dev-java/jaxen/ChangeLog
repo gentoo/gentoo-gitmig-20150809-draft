@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.52 2010/04/24 16:51:01 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.53 2012/01/01 14:47:09 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jaxen-1.1.1.ebuild:
+  Drop ia64 support #345433
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org> jaxen-1.1.1.ebuild:
   Marked ~sparc-solaris ~x86-solaris, bug #314093
