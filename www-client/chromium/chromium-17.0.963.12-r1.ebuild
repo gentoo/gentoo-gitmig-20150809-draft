@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.12-r1.ebuild,v 1.2 2012/01/01 09:48:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.12-r1.ebuild,v 1.3 2012/01/01 10:57:38 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -126,6 +126,14 @@ chromium-pkg_die() {
 		ewarn
 		ewarn "You have enabled ccache. Please try disabling ccache"
 		ewarn "before reporting a bug."
+		ewarn
+	fi
+
+	# No ricer bugs.
+	if use custom-cflags; then
+		ewarn
+		ewarn "You have enabled the custom-cflags USE flag."
+		ewarn "Please disable it before reporting a bug."
 		ewarn
 	fi
 
