@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.1-r1.ebuild,v 1.1 2011/12/31 09:43:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.1-r1.ebuild,v 1.2 2012/01/01 19:45:57 grobian Exp $
 
 EAPI="3"
 
@@ -124,7 +124,7 @@ src_test() {
 src_install() {
 	use server && ! use client && cd gdb/gdbserver
 	emake DESTDIR="${D}" install || die
-	use client && { rm "${D}"/usr/lib*/libiberty.a || die ; }
+	use client && { rm "${ED}"/usr/lib*/libiberty.a || die ; }
 	cd "${S}"
 
 	# Don't install docs when building a cross-gdb
@@ -158,7 +158,7 @@ src_install() {
 
 pkg_postinst() {
 	# portage sucks and doesnt unmerge files in /etc
-	rm -vf "${ROOT}"/etc/skel/.gdbinit
+	rm -vf "${EROOT}"/etc/skel/.gdbinit
 
 	if use prefix && [[ ${CHOST} == *-darwin* ]] ; then
 		ewarn "gdb is unable to get a mach task port when installed by Prefix"

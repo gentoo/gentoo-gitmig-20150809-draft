@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.199 2011/12/31 09:43:19 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.200 2012/01/01 19:45:57 grobian Exp $
+
+  01 Jan 2012; Fabian Groffen <grobian@gentoo.org> gdb-7.3.1-r1.ebuild:
+  Remove/check existing files (wrt Prefix offset)
 
 *gdb-7.3.1-r1 (31 Dec 2011)
 
