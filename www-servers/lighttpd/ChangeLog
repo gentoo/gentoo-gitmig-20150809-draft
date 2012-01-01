@@ -1,6 +1,30 @@
 # ChangeLog for www-servers/lighttpd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.268 2011/12/27 20:39:29 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.269 2012/01/01 00:03:46 idl0r Exp $
+
+*lighttpd-1.4.30-r1 (01 Jan 2012)
+*lighttpd-1.4.29-r4 (01 Jan 2012)
+*lighttpd-1.4.28-r5 (01 Jan 2012)
+*lighttpd-1.4.28-r4 (01 Jan 2012)
+*lighttpd-1.4.28-r3 (01 Jan 2012)
+*lighttpd-1.4.26-r2 (01 Jan 2012)
+*lighttpd-1.4.25-r3 (01 Jan 2012)
+*lighttpd-1.4.25-r2 (01 Jan 2012)
+*lighttpd-1.4.23-r1 (01 Jan 2012)
+
+  01 Jan 2012; Christian Ruppert <idl0r@gentoo.org> -lighttpd-1.4.23.ebuild,
+  +lighttpd-1.4.23-r1.ebuild, -lighttpd-1.4.25.ebuild,
+  -lighttpd-1.4.25-r1.ebuild, +lighttpd-1.4.25-r2.ebuild,
+  +lighttpd-1.4.25-r3.ebuild, -lighttpd-1.4.26.ebuild,
+  -lighttpd-1.4.26-r1.ebuild, +lighttpd-1.4.26-r2.ebuild,
+  -lighttpd-1.4.28.ebuild, -lighttpd-1.4.28-r1.ebuild,
+  -lighttpd-1.4.28-r2.ebuild, +lighttpd-1.4.28-r3.ebuild,
+  +lighttpd-1.4.28-r4.ebuild, +lighttpd-1.4.28-r5.ebuild,
+  -lighttpd-1.4.29-r3.ebuild, +lighttpd-1.4.29-r4.ebuild,
+  -lighttpd-1.4.30.ebuild, +lighttpd-1.4.30-r1.ebuild,
+  files/lighttpd.initd-1.4.13-r3, files/lighttpd.initd:
+  Revbump. Don't use deprecated start-stop-daemon options and deprecated $opts
+  variable, bug 395945.
 
   27 Dec 2011; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.30.ebuild:
   Stable for HPPA (bug #392581).
