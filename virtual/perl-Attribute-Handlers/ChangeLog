@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Attribute-Handlers
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.25 2011/12/22 22:07:18 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.26 2012/01/01 17:49:01 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org>
+  perl-Attribute-Handlers-0.910.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #394039
 
   22 Dec 2011; Markus Meier <maekke@gentoo.org>
   perl-Attribute-Handlers-0.910.0.ebuild:
