@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/markaby
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.30 2011/12/27 18:51:00 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.31 2012/01/01 10:38:06 graaff Exp $
+
+  01 Jan 2012; Hans de Graaff <graaff@gentoo.org> -markaby-0.5.ebuild:
+  Remove old version.
 
   27 Dec 2011; Mark Loeser <halcy0n@gentoo.org> markaby-0.5.ebuild:
   Revert back to ~ppc64; bug #368723
