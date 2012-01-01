@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.32 2012/01/01 12:37:53 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.33 2012/01/01 14:24:24 sping Exp $
+
+  01 Jan 2012; Sebastian Pipping <sping@gentoo.org> babl-0.1.4.ebuild,
+  babl-0.1.4-r2.ebuild, babl-0.1.6.ebuild:
+  Add missing depedency on dev-util/pkgconfig reported by nzgr (bug #384183)
 
 *babl-0.1.6 (01 Jan 2012)
 
