@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/egenix-mx-base
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.61 2011/12/26 12:37:08 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.62 2012/01/01 18:48:24 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org>
+  egenix-mx-base-3.2.1-r1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #392749
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> egenix-mx-base-3.2.1-r1.ebuild:
   x86 stable, bug #392749
