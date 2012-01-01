@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.99.2.ebuild,v 1.1 2011/12/19 01:40:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.99.901.ebuild,v 1.1 2012/01/01 14:28:32 chithanh Exp $
 
 EAPI=4
 
@@ -64,7 +64,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/fixesproto-5.0
 	>=x11-proto/fontsproto-2.0.2
 	>=x11-proto/glproto-1.4.14
-	>=x11-proto/inputproto-2.0.99.1
+	>=x11-proto/inputproto-2.1.99.3
 	>=x11-proto/kbproto-1.0.3
 	>=x11-proto/randrproto-1.2.99.3
 	>=x11-proto/recordproto-1.13.99.1
