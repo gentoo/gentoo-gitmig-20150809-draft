@@ -1,6 +1,14 @@
 # ChangeLog for games-mud/kmuddy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.30 2011/01/31 02:12:07 tampakrap Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.31 2012/01/01 12:22:57 dilfridge Exp $
+
+*kmuddy-1.0.1-r1 (01 Jan 2012)
+
+  01 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> -kmuddy-1.0.1.ebuild,
+  +kmuddy-1.0.1-r1.ebuild, +files/kmuddy-1.0.1-tempnam.patch,
+  +files/kmuddy-1.0.1-underlinking.patch:
+  Fix underlinking and tempnam failure so pkgmask can be lifted again; bug
+  371451
 
   31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml:
   add kde herd to metadata.xml
