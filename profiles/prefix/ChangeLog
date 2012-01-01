@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.319 2011/12/31 09:13:00 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.320 2012/01/01 19:39:29 grobian Exp $
+
+  01 Jan 2012; Fabian Groffen <grobian@gentoo.org> darwin/package.use.mask:
+  Mask USE=server for sys-devel/gdb, since it's not supported on Darwin
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> mint/make.defaults:
   Add static-libs to USE, bug #394853
