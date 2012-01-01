@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.114 2012/01/01 18:12:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.115 2012/01/01 19:01:11 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -462,8 +462,9 @@ setqtenv() {
 standard_configure_options() {
 	local myconf="-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
 		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR}
-		-importdir ${QTIMPORTDIR} -datadir ${QTDATADIR} -translationdir ${QTTRANSDIR}
-		-sysconfdir ${QTSYSCONFDIR} -examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR}
+		$(version_is_at_least 4.7 && echo -importdir ${QTIMPORTDIR})
+		-datadir ${QTDATADIR} -translationdir ${QTTRANSDIR} -sysconfdir ${QTSYSCONFDIR}
+		-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR}
 		-opensource -confirm-license -shared -fast -largefile -stl -verbose
 		-platform $(qt_mkspecs_dir) -nomake examples -nomake demos"
 
