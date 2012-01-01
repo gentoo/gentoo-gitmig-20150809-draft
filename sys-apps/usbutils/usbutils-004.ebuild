@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-004.ebuild,v 1.4 2011/12/21 21:36:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-004.ebuild,v 1.5 2012/01/01 15:57:10 armin76 Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/linux/utils/usb/usbutils/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="network-cron python zlib"
 
 RDEPEND="virtual/libusb:1

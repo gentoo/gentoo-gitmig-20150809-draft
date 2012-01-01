@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.129 2011/12/21 21:36:39 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.130 2012/01/01 15:57:10 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> usbutils-004.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #394577
 
   21 Dec 2011; Markus Meier <maekke@gentoo.org> usbutils-004.ebuild:
   arm stable, bug #394577
