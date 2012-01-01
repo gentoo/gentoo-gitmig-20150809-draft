@@ -5,10 +5,6 @@
 	<maintainer>
 		<email>udev-bugs@gentoo.org></email>
 	</maintainer>
-	<maintainer>
-		<email>mgorny@gentoo.org</email>
-		<name>Michał Górny</name>
-	</maintainer>
 
 	<use>
 		<flag name='rootfs-install'>Install the library into rootfs,

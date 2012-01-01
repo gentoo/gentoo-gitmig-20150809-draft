@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.5 2011/12/31 23:57:23 williamh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.6 2012/01/01 09:49:32 mgorny Exp $
+
+  01 Jan 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Removing myself.
 
   31 Dec 2011; William Hubbs <williamh@gentoo.org> kmod-9999.ebuild:
   Live ebuild updates: - Remove the usage of autotools-utils from the live
