@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13364 2012/01/01 12:36:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13365 2012/01/01 14:43:17 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (01 Jan 2012)
+# Mask until dependencies are keyworded, bug #396669
+>=x11-drivers/xf86-input-evdev-2.6.99
 
 # Sebastien Fabbro <bicatali@gentoo.org> (29 Dec 2011)
 # current version very broken (bug #239254 and bug #296770)
