@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mpack
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.16 2011/12/31 22:45:11 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.17 2012/01/01 19:40:51 sping Exp $
+
+  01 Jan 2012; Sebastian Pipping <sping@gentoo.org> mpack-1.6-r2.ebuild:
+  Run autoreconf, use emake (bug #396715, bug #396717)
 
 *mpack-1.6-r2 (31 Dec 2011)
 
