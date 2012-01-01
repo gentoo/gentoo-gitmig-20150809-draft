@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13363 2012/01/01 12:25:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13364 2012/01/01 12:36:25 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -79,7 +79,9 @@ media-radio/fldigi
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (19 Dec 2011)
 # Mask prerelease x11 packages
 =x11-base/xorg-server-1.11.99*
+=x11-libs/libXi-1.5.99*
 =x11-libs/libpciaccess-0.12.902
+=x11-proto/inputproto-2.1.99*
 
 # Johannes Huber <johu@gentoo.org> (16 Dec 2011)
 # Masked for removal in 30 days. Dead upstream. Package
