@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvtm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.8 2011/10/27 01:10:54 chithanh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.9 2012/01/01 17:08:16 ago Exp $
+
+  01 Jan 2012; Agostino Sarubbo <ago@gentoo.org> dvtm-0.7.ebuild:
+  Stable for AMD64, wrt bug #396671
 
 *dvtm-0.7 (27 Oct 2011)
 
