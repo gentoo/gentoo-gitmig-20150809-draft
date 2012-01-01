@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.1-r1.ebuild,v 1.3 2011/12/13 15:56:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.1-r1.ebuild,v 1.4 2012/01/01 21:51:38 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -137,5 +137,29 @@ pkg_postinst() {
 		ewarn "If you use multiple screens, it is highly recommended that you"
 		ewarn "upgrade to >=x11-base/xorg-server-1.11 to be able to make use of"
 		ewarn "pointer barriers which will make it easier to use hot corners."
+	fi
+
+	if has_version "<x11-drivers/ati-drivers-12"; then
+		ewarn "GNOME Shell has been reported to show graphical corruption under"
+		ewarn "x11-drivers/ati-drivers-11.*; you may want to use GNOME in"
+		ewarn "fallback mode, or switch to open-source drivers."
+	fi
+
+	if has_version "media-libs/mesa[video_cards_radeon]"; then
+		elog "GNOME Shell is unstable under classic-mode r300/r600 mesa drivers."
+		elog "Make sure that gallium architecture for r300 and r600 drivers is"
+		elog "selected using 'eselect mesa'."
+		if ! has_version "media-libs/mesa[gallium]"; then
+			ewarn "You will need to emerge media-libs/mesa with USE=gallium."
+		fi
+	fi
+
+	if has_version "media-libs/mesa[video_cards_intel]"; then
+		elog "GNOME Shell is unstable under gallium-mode i915/i965 mesa drivers."
+		elog "Make sure that classic architecture for i915 and i965 drivers is"
+		elog "selected using 'eselect mesa'."
+		if ! has_version "media-libs/mesa[classic]"; then
+			ewarn "You will need to emerge media-libs/mesa with USE=classic."
+		fi
 	fi
 }
