@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xpp3
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.26 2010/04/24 17:10:56 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.27 2012/01/01 15:44:43 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> xpp3-1.1.4c.ebuild,
+  xpp3-1.1.4c-r1.ebuild:
+  Drop ia64 support #345433
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org> xpp3-1.1.4c-r1.ebuild:
   Marked ~sparc-solaris ~x86-solaris, bug #314093

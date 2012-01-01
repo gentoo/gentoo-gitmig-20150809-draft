@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.15 2011/12/16 09:24:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.16 2012/01/01 15:36:44 sera Exp $
 
 JAVA_PKG_IUSE="doc test source"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.clarkware.com/software/${P}.zip"
 HOMEPAGE="http://www.clarkware.com/software/JUnitPerf.html"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 
 IUSE=""
 

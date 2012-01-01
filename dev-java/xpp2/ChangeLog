@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xpp2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/ChangeLog,v 1.24 2010/04/24 17:08:09 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/ChangeLog,v 1.25 2012/01/01 15:42:47 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> xpp2-2.1.10-r1.ebuild:
+  Drop ia64 support #345433
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org> xpp2-2.1.10-r1.ebuild:
   Marked ~sparc-solaris ~x86-solaris, bug #314093
