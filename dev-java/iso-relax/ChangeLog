@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/iso-relax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/ChangeLog,v 1.24 2010/04/24 17:38:04 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/ChangeLog,v 1.25 2012/01/01 16:58:51 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> iso-relax-20050331-r1.ebuild,
+  iso-relax-20050331-r2.ebuild:
+  Drop ia64 support #345433
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org>
   iso-relax-20050331-r2.ebuild:

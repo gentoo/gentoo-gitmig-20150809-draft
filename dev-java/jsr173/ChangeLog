@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr173
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.22 2010/04/24 17:13:54 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.23 2012/01/01 17:02:05 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jsr173-1.0-r1.ebuild:
+  Drop ia64 support #345433
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org> jsr173-1.0-r1.ebuild:
   Marked ~sparc-solaris ~x86-solaris, bug #314093
