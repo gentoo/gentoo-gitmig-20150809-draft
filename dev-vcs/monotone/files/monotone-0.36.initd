@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 2006 Gentoo Foundation
+# Copyright 2006-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/files/monotone-0.36.initd,v 1.1 2010/03/05 16:49:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/files/monotone-0.36.initd,v 1.2 2012/01/01 01:13:34 idl0r Exp $
 
-opts="import"
+extra_commands="import"
 
 depend() {
 	need net
@@ -27,7 +27,7 @@ dbexists() {
 	if [ ! -e ${MTN_DB:-/var/lib/monotone/default.mtn} ]; then
 		ebegin "Creating monotone database"
 		start-stop-daemon --start \
-			--chuid ${MTN_USER}:${MTN_GROUP}  \
+			--user ${MTN_USER} --group ${MTN_GROUP}  \
 			--exec /usr/bin/mtn -- ${MTN_COMMON} db init
 		eend $?
 	fi
@@ -36,9 +36,9 @@ dbexists() {
 		export MTN_PWD=${RANDOM}
 		yes "${MTN_PWD}" | \
 			start-stop-daemon --start \
-			--chuid ${MTN_USER}:${MTN_GROUP}  \
+			--user ${MTN_USER} --group ${MTN_GROUP}  \
 			--exec /usr/bin/mtn -- ${MTN_COMMON} genkey ${MTN_KEY}
-			
+
 		eend $?
 		# Update the password lua hook
 		cat > ${MTN_CONFDIR}/passphrase.lua <<EOF
@@ -62,7 +62,7 @@ start() {
 
 	ebegin "Starting monotone server"
 	start-stop-daemon --start --background \
-		--chuid ${MTN_USER}:${MTN_GROUP}  \
+		--user ${MTN_USER} --group ${MTN_GROUP}  \
 		--exec /usr/bin/mtn -- ${MTN_COMMON} --pid-file=${MTN_PIDFILE} \
 		--key=${MTN_KEY} --bind=${MTN_ADDRESS:-0.0.0.0} serve
 	eend $?

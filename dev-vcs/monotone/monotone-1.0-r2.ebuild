@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0.ebuild,v 1.2 2011/09/11 11:26:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0-r2.ebuild,v 1.1 2012/01/01 01:13:34 idl0r Exp $
 
 # QA failiures reported in https://code.monotone.ca/p/monotone/issues/181/
 EAPI="4"
