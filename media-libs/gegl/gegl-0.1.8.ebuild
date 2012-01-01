@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.1 2012/01/01 13:33:37 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.2 2012/01/01 20:53:51 sping Exp $
 
 EAPI=4
 
@@ -91,7 +91,7 @@ src_configure() {
 		$(use_with svg librsvg) \
 		$(use_with umfpack) \
 		$(use_with v4l libv4l) \
-		$(use_with introspection) \
+		$(use_enable introspection) \
 		$(use_with lensfun)
 	# TODO expose --without-vala ?
 }
