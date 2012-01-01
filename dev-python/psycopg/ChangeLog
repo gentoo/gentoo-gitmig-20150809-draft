@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.136 2011/12/26 12:35:38 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.137 2012/01/01 18:45:14 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> psycopg-2.4.2.ebuild:
+  alpha/ia64/sparc stable wrt #392749
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> psycopg-2.4.2.ebuild:
   x86 stable, bug #392749
