@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.43.ebuild,v 1.1 2011/12/31 20:09:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.43.ebuild,v 1.2 2012/01/01 19:03:43 jlec Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf \
-		--disable-debug
+		--disable-debug \
 		$(use_with eds phonebook ebook) \
 		$(use_enable nokia pcsuite) \
 		$(use_enable server) \
