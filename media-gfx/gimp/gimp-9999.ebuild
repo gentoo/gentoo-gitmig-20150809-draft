@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.40 2011/11/16 10:45:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.41 2012/01/01 14:04:38 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -19,11 +19,11 @@ KEYWORDS=""
 
 IUSE="alsa aalib altivec curl dbus debug doc exif gnome jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
 
-RDEPEND=">=dev-libs/glib-2.28.1:2
-	>=x11-libs/gtk+-2.24.3:2
-	>=x11-libs/gdk-pixbuf-2.22.1:2
+RDEPEND=">=dev-libs/glib-2.30.2:2
+	>=x11-libs/gtk+-2.24.7:2
+	>=x11-libs/gdk-pixbuf-2.24:2
 	>=x11-libs/cairo-1.10.2
-	>=x11-libs/pango-1.22.0
+	>=x11-libs/pango-1.29.4
 	xpm? ( x11-libs/libXpm )
 	>=media-libs/freetype-2.1.7
 	>=media-libs/fontconfig-2.2.0
@@ -32,14 +32,14 @@ RDEPEND=">=dev-libs/glib-2.28.1:2
 	dev-libs/libxslt
 	x11-misc/xdg-utils
 	x11-themes/hicolor-icon-theme
-	>=media-libs/babl-0.1.4
-	>=media-libs/gegl-0.1.6
+	>=media-libs/babl-0.1.6
+	>=media-libs/gegl-0.1.8
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	curl? ( net-misc/curl )
 	dbus? ( dev-libs/dbus-glib )
 	gnome? ( gnome-base/gvfs )
-	webkit? ( net-libs/webkit-gtk:2 )
+	webkit? ( >=net-libs/webkit-gtk-1.6.1:2 )
 	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/jasper )
 	exif? ( >=media-libs/libexif-0.6.15 )
@@ -49,7 +49,7 @@ RDEPEND=">=dev-libs/glib-2.28.1:2
 	png? ( >=media-libs/libpng-1.2.37:0 )
 	python?	( >=dev-python/pygtk-2.10.4:2 )
 	tiff? ( >=media-libs/tiff-3.5.7:0 )
-	svg? ( >=gnome-base/librsvg-2.14.0:2 )
+	svg? ( >=gnome-base/librsvg-2.34.2:2 )
 	wmf? ( >=media-libs/libwmf-0.2.8 )
 	x11-libs/libXcursor
 	udev? ( sys-fs/udev[gudev] )"
@@ -58,9 +58,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.1
 	>=sys-devel/gettext-0.17
 	doc? ( >=dev-util/gtk-doc-1 )
-	>=sys-devel/libtool-1.5
+	>=sys-devel/libtool-2.2
 	>=sys-devel/autoconf-2.54
-	>=sys-devel/automake-1.10"
+	>=sys-devel/automake-1.11"
 
 DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
 

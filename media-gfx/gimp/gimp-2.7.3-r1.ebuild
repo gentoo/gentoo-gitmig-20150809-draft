@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.7.3-r1.ebuild,v 1.4 2011/11/29 23:51:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.7.3-r1.ebuild,v 1.5 2012/01/01 14:04:38 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -56,6 +56,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.1
 	>=sys-devel/gettext-0.17
 	doc? ( >=dev-util/gtk-doc-1 )
+	>=sys-devel/automake-1.11
 	dev-util/gtk-doc-am"  # due to our call to eautoreconf below (bug #386453)
 
 DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
