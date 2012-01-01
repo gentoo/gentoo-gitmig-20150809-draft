@@ -1,12 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.1-r1.ebuild,v 1.1 2011/08/29 18:08:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.1-r1.ebuild,v 1.2 2012/01/01 07:34:31 vapier Exp $
 
 EAPI="3"
-inherit eutils
+
+inherit eutils autotools
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="svn://svn.savannah.gnu.org/nano/trunk/nano"
-	inherit subversion
+	inherit subversion autotools
 else
 	MY_P=${PN}-${PV/_}
 	SRC_URI="http://www.nano-editor.org/dist/v${PV:0:3}/${MY_P}.tar.gz"
@@ -20,16 +21,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug justify minimal ncurses nls slang spell unicode"
 
-DEPEND=">=sys-libs/ncurses-5.2[unicode?]
+RDEPEND=">=sys-libs/ncurses-5.9-r1[unicode?]
 	nls? ( sys-devel/gettext )
 	!ncurses? ( slang? ( sys-libs/slang ) )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_prepare() {
-	if [[ ! -e configure ]] ; then
-		./autogen.sh || die
-	fi
-	# Prefix fix for odd ncursesw logic, bug #361251
-	sed -i -e "s:-I\(/usr/include/ncursesw\):-I${EPREFIX}\1:" configure || die
+	epatch "${FILESDIR}"/${PN}-2.3.1-ncurses-pkg-config.patch
+	eautoreconf
 }
 
 src_configure() {
@@ -63,14 +63,6 @@ src_install() {
 
 	dodir /usr/bin
 	dosym /bin/nano /usr/bin/nano
-
-	insinto /usr/share/nano
-	local f
-	for f in "${FILESDIR}"/*.nanorc ; do
-		[[ -e ${ED}/usr/share/nano/${f##*/} ]] && continue
-		doins "${f}" || die
-		echo "# include \"${EPREFIX}/usr/share/nano/${f##*/}\"" >> "${ED}"/etc/nanorc
-	done
 }
 
 pkg_postinst() {

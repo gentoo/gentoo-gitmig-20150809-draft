@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nano
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.265 2011/08/29 18:08:00 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.266 2012/01/01 07:34:31 vapier Exp $
+
+  01 Jan 2012; Mike Frysinger <vapier@gentoo.org> nano-2.3.1-r1.ebuild,
+  +files/nano-2.3.1-ncurses-pkg-config.patch:
+  Search for ncurses via pkg-config files.
 
 *nano-2.3.1-r1 (29 Aug 2011)
 
