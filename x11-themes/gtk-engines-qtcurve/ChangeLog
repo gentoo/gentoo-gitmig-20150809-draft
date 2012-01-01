@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.108 2011/11/01 04:01:46 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.109 2012/01/01 21:56:46 pesa Exp $
+
+*gtk-engines-qtcurve-1.8.12 (01 Jan 2012)
+
+  01 Jan 2012; Davide Pesavento <pesa@gentoo.org>
+  +gtk-engines-qtcurve-1.8.12.ebuild, -gtk-engines-qtcurve-0.69.2.ebuild,
+  -gtk-engines-qtcurve-1.8.5.ebuild, -gtk-engines-qtcurve-1.8.7.ebuild:
+  Version bump, #395723 by Ivan S. Titov. Allow www-client/icecat to satisfy the
+  mozilla dependency (bug #370165 by Matija "hook" Šuklje). Remove old.
 
   01 Nov 2011; Jeroen Roovers <jer@gentoo.org>
   gtk-engines-qtcurve-0.69.2.ebuild, gtk-engines-qtcurve-1.6.4.ebuild,
