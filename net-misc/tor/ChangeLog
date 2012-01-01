@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.313 2011/12/31 01:32:24 blueness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.314 2012/01/01 15:23:21 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> tor-0.2.2.35.ebuild:
+  sparc stable wrt #394969
 
   31 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
   -tor-0.2.3.10_alpha-r1.ebuild:
