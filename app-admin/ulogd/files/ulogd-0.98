@@ -27,18 +27,18 @@ start() {
 	ebegin "Starting ulogd"
 	start-stop-daemon --start --quiet --exec /usr/sbin/ulogd -- -d >/dev/null 2>&1
 	eend $?
-}	
+}
 
 stop() {
 	initService
 	ebegin "Stopping ulogd"
 	start-stop-daemon --stop --quiet --exec /usr/sbin/ulogd >/dev/null 2>&1
 	eend $?
-}	
+}
 
 reload() {
 	initService
 	ebegin "Reloading ulogd.conf file"
 	killall -HUP ulogd
 	eend $?
-}	
+}
