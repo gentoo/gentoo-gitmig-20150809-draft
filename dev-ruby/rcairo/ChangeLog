@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/rcairo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.68 2011/12/04 14:07:44 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.69 2012/01/01 09:01:19 graaff Exp $
+
+*rcairo-1.10.2-r1 (01 Jan 2012)
+
+  01 Jan 2012; Hans de Graaff <graaff@gentoo.org> -rcairo-1.10.0-r4.ebuild,
+  -rcairo-1.10.1.ebuild, rcairo-1.10.2.ebuild, +rcairo-1.10.2-r1.ebuild:
+  Create new revision for ruby19. Drop old versions and remove ruby19 from
+  fully keyworded version due to missing dependencies.
+
+  31 Dec 2011; Hans de Graaff <graaff@gentoo.org> -rcairo-1.10.0-r4.ebuild,
+  -rcairo-1.10.1.ebuild:
+  Remove old versions.
 
   04 Dec 2011; Raúl Porcel <armin76@gentoo.org> rcairo-1.10.2.ebuild:
   Add ~alpha/~ia64/~sparc wrt #391759

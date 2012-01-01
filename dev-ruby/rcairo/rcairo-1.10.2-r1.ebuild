@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.1.ebuild,v 1.1 2011/10/30 10:39:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.2-r1.ebuild,v 1.1 2012/01/01 09:01:19 graaff Exp $
 
 EAPI=2
 
@@ -28,15 +28,15 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Ruby GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="${RDEPEND}
 	>=x11-libs/cairo-1.2.0[svg]"
 DEPEND="${DEPEND}
-	>=x11-libs/cairo-1.2.0[svg]
-	dev-util/pkgconfig"
+	>=x11-libs/cairo-1.2.0[svg]"
 
 ruby_add_bdepend "
+	dev-ruby/pkg-config
 	dev-ruby/ruby-glib2
 	test? ( >=dev-ruby/test-unit-2.1.0-r1:2 )"
 
