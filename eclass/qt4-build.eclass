@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.113 2011/12/31 00:46:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.114 2012/01/01 18:12:03 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -238,7 +238,8 @@ qt4-build_src_prepare() {
 		CFLAGS='${CFLAGS}'\n\
 		CXXFLAGS='${CXXFLAGS}'\n\
 		LDFLAGS='${LDFLAGS}'\n" \
-		-i configure || die "sed SYSTEM_VARIABLES failed"
+		-i configure \
+		|| die "sed SYSTEM_VARIABLES failed"
 
 	# Respect CC, CXX, LINK and *FLAGS in config.tests
 	find config.tests/unix -name '*.test' -type f -print0 | xargs -0 \
@@ -247,17 +248,22 @@ qt4-build_src_prepare() {
 			'QMAKE_CFLAGS+=${CFLAGS}' 'QMAKE_CXXFLAGS+=${CXXFLAGS}' 'QMAKE_LFLAGS+=${LDFLAGS}'&:" \
 		|| die "sed config.tests failed"
 
+	# Strip predefined CFLAGS from mkspecs (bug 312689)
+	sed -i -e '/^QMAKE_CFLAGS_RELEASE/s:+=.*:+=:' mkspecs/common/g++.conf || die
+
 	# Bug 172219
 	sed -e 's:/X11R6/:/:' -i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 
 	if [[ ${CHOST} == *-darwin* ]]; then
 		# Set FLAGS *and* remove -arch, since our gcc-apple is multilib
 		# crippled (by design) :/
-		sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
+		sed \
+			-e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 			-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 			-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=-headerpad_max_install_names ${LDFLAGS}:" \
 			-e "s:-arch\s\w*::g" \
-			-i mkspecs/common/mac-g++.conf || die "sed mkspecs/common/mac-g++.conf failed"
+			-i mkspecs/common/mac-g++.conf \
+			|| die "sed mkspecs/common/mac-g++.conf failed"
 
 		# Fix configure's -arch settings that appear in qmake/Makefile and also
 		# fix arch handling (automagically duplicates our -arch arg and breaks
@@ -272,37 +278,34 @@ qt4-build_src_prepare() {
 			-e "s:CFG_MAC_XARCH=yes:CFG_MAC_XARCH=no:g" \
 			-e "s:-Xarch_x86_64::g" \
 			-e "s:-Xarch_ppc64::g" \
-			-i configure mkspecs/common/mac-g++.conf || die "sed -arch/-Xarch failed"
+			-i configure mkspecs/common/mac-g++.conf \
+			|| die "sed -arch/-Xarch failed"
 
 		# On Snow Leopard don't fall back to 10.5 deployment target.
 		if [[ ${CHOST} == *-apple-darwin10 ]] ; then
 			sed -e "s:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET.*:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET 10.6:g" \
 				-e "s:-mmacosx-version-min=10.[0-9]:-mmacosx-version-min=10.6:g" \
-				-i configure mkspecs/common/mac-g++.conf || die "sed deployment target failed"
+				-i configure mkspecs/common/mac-g++.conf \
+				|| die "sed deployment target failed"
 		fi
 	fi
 
 	# this one is needed for all systems with a separate -liconv, apart from
 	# Darwin, for which the sources already cater for -liconv
 	if use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] ; then
-		sed \
-			-e "s|mac:LIBS += -liconv|LIBS += -liconv|g" \
+		sed -e 's|mac:\(LIBS += -liconv\)|\1|g' \
 			-i config.tests/unix/iconv/iconv.pro \
-			|| die "sed on iconv.pro failed"
+			|| die "sed iconv.pro failed"
 	fi
 
 	# we need some patches for Solaris
-	sed -i \
-		-e '/^QMAKE_LFLAGS_THREAD/a\QMAKE_LFLAGS_DYNAMIC_LIST = -Wl,--dynamic-list,' \
+	sed -i -e '/^QMAKE_LFLAGS_THREAD/a\QMAKE_LFLAGS_DYNAMIC_LIST = -Wl,--dynamic-list,' \
 		mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 	# use GCC over SunStudio
 	sed -i -e '/PLATFORM=solaris-cc/s/cc/g++/' configure || die
-	# don't flirt with non-Prefix stuff, we're quite possessive
+	# do not flirt with non-Prefix stuff, we're quite possessive
 	sed -i -e '/^QMAKE_\(LIB\|INC\)DIR\(_X11\|_OPENGL\|\)\t/s/=.*$/=/' \
 		mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
-
-	# strip predefined CFLAGS from mkspecs (bug 312689)
-	sed -i -e '/^QMAKE_CFLAGS_RELEASE/s:+=.*:+=:' mkspecs/common/g++.conf
 
 	base_src_prepare
 }
@@ -344,7 +347,7 @@ qt4-build_src_configure() {
 			# We are crazy and build cocoa + qt3support :-)
 			if use qt3support; then
 				sed -e "/case \"\$PLATFORM,\$CFG_MAC_COCOA\" in/,/;;/ s|CFG_QT3SUPPORT=\"no\"|CFG_QT3SUPPORT=\"yes\"|" \
-					-i configure
+					-i configure || die
 			fi
 
 			# We need the source's headers, not the installed ones.
@@ -394,7 +397,7 @@ fix_includes() {
 		dodir "${QTHEADERDIR#${EPREFIX}}"/Qt
 
 		# Fake normal headers when frameworks are installed... eases life later on
-		local dest f
+		local dest f h
 		for frw in "${D}${QTLIBDIR}"/*.framework; do
 			[[ -e "${frw}"/Headers ]] || continue
 			f=$(basename ${frw})
@@ -423,7 +426,7 @@ qt4-build_src_install() {
 	fix_includes
 
 	# remove .la files since we are building only shared Qt libraries
-	find "${D}"${QTLIBDIR} -name "*.la" -print0 | xargs -0 rm
+	find "${D}"${QTLIBDIR} -type f -name '*.la' -print0 | xargs -0 rm -f
 }
 
 # @FUNCTION: setqtenv
