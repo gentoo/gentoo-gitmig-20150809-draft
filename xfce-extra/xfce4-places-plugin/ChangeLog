@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-places-plugin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/ChangeLog,v 1.17 2011/12/26 11:51:14 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/ChangeLog,v 1.18 2012/01/01 18:41:48 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org>
+  xfce4-places-plugin-1.2.0-r1.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #395727
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org>
   xfce4-places-plugin-1.2.0-r1.ebuild:
