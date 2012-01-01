@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.347 2012/01/01 00:33:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.348 2012/01/01 23:43:54 tetromino Exp $
+
+  01 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-applets-2.32.1.1.ebuild:
+  Move gnome2_src_prepare after eautoreconf (bug #396713, thanks to Julian W.
+  for reporting).
 
   01 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-applets-2.32.1.1.ebuild, gnome-applets-3.2.1.ebuild:

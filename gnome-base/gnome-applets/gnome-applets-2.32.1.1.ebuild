@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.17 2012/01/01 00:33:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.18 2012/01/01 23:43:54 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -80,8 +80,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	epatch \
 		"${FILESDIR}"/${P}-libnotify-0.7.patch \
 		"${FILESDIR}"/${P}-underlinking.patch
@@ -100,6 +98,8 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+
+	gnome2_src_prepare
 }
 
 src_test() {
