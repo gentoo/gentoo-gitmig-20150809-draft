@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-1.0.8.ebuild,v 1.11 2011/09/28 13:03:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-1.0.8.ebuild,v 1.12 2012/01/01 18:27:53 grobian Exp $
 
 EAPI="2"
 
@@ -14,6 +14,11 @@ IUSE="debug doc static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
+
+src_prepare() {
+	# fix bashism in configure script
+	sed -i -e 's/test \(.*\) ==/test \1 =/' configure || die
+}
 
 src_configure() {
 	econf \

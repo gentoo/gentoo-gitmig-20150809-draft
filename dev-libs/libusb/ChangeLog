@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.121 2011/12/06 19:33:32 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.122 2012/01/01 18:27:53 grobian Exp $
+
+  01 Jan 2012; Fabian Groffen <grobian@gentoo.org> libusb-1.0.8.ebuild:
+  Fix bashism in configure script causing build-failure when using non-bash
+  CONFIG_SHELL.
 
   06 Dec 2011; Robin H. Johnson <robbat2@gentoo.org> libusb-0.1.12-r5.ebuild,
   libusb-0.1.12-r6.ebuild, libusb-0.1.12-r7.ebuild:
