@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cgikit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/ChangeLog,v 1.17 2010/06/13 07:28:52 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/ChangeLog,v 1.18 2012/01/01 18:27:44 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> cgikit-1.2.1-r1.ebuild:
+  alpha/ia64/x86 stable wrt ##395981
 
 *cgikit-1.2.1-r1 (13 Jun 2010)
 
