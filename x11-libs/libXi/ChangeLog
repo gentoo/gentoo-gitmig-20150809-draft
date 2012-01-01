@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.131 2011/12/27 21:09:21 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.132 2012/01/01 14:27:08 chithanh Exp $
+
+*libXi-1.5.99.2 (01 Jan 2012)
+*libXi-1.5.0 (01 Jan 2012)
+
+  01 Jan 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXi-1.5.0.ebuild, +libXi-1.5.99.2.ebuild:
+  Version bump.
 
   27 Dec 2011; Markus Meier <maekke@gentoo.org> libXi-1.4.3-r1.ebuild:
   x86 stable, bug #394393
