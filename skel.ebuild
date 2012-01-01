@@ -13,7 +13,7 @@
 
 # The EAPI variable tells the ebuild format in use.
 # Defaults to 0 if not specified.
-# It is suggested that you the latest EAPI approved by the Council.
+# It is suggested that you use the latest EAPI approved by the Council.
 # The PMS contains specifications for all EAPIs. Eclasses will test for this
 # variable if they need to use EAPI > 0 features.
 EAPI=4
