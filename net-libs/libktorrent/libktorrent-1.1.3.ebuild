@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.1.3.ebuild,v 1.1 2011/12/30 22:58:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.1.3.ebuild,v 1.2 2012/01/01 18:05:20 dilfridge Exp $
 
 EAPI=4
 
@@ -38,11 +38,14 @@ IUSE="debug"
 RDEPEND="
 	app-crypt/qca:2
 	dev-libs/gmp
+	$(add_kdebase_dep solid)
 "
 DEPEND="${RDEPEND}
 	dev-libs/boost
 	sys-devel/gettext
 "
+
+PATCHES=( "${FILESDIR}/${P}-underlinking.patch" )
 
 src_prepare() {
 	kde4-base_src_prepare
