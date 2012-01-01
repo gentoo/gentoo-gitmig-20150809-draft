@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r5.ebuild,v 1.3 2011/10/23 11:37:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r5.ebuild,v 1.4 2012/01/01 14:00:54 sera Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -11,7 +11,7 @@ DESCRIPTION="Easy-to-use Java logging toolkit"
 HOMEPAGE="http://avalon.apache.org/"
 SRC_URI="mirror://apache/excalibur/excalibur-logkit/source/${P}-src.tar.gz"
 
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 LICENSE="Apache-2.0"
 SLOT="2.0"
 IUSE=""

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-framework
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.26 2010/04/24 16:36:12 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.27 2012/01/01 13:57:56 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
+  avalon-framework-4.1.5-r1.ebuild, avalon-framework-4.2.0-r1.ebuild:
+  Drop ia64 support #345433
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org>
   avalon-framework-4.2.0-r1.ebuild:
