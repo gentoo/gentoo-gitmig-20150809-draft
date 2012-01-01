@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7i.ebuild,v 1.3 2011/12/16 14:36:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7i.ebuild,v 1.4 2012/01/01 15:12:25 armin76 Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ if [[ -n ${UPSTREAM_PATCHES} ]]; then
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ~ppc ~ppc64 sparc x86"
 IUSE="snmp doc"
 
 DEPEND=""
