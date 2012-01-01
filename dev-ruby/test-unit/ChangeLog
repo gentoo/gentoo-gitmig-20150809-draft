@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/test-unit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.48 2011/12/13 06:52:11 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.49 2012/01/01 10:10:16 graaff Exp $
+
+  01 Jan 2012; Hans de Graaff <graaff@gentoo.org> test-unit-1.2.3.ebuild,
+  test-unit-2.1.2-r1.ebuild:
+  Add ppc64 keyword for bug 332593. Non-arch commit but the code in question is
+  quite similar to that in ruby 1.8 and the lack of this keyword currently
+  breaks dependencies.
+
+  01 Jan 2012; Hans de Graaff <graaff@gentoo.org> test-unit-2.4.3.ebuild:
+  Add back ~hppa keyword which seems to have gotten lost around 2.0.5/2.0.6
+  without any clear indication why. The lack of it currently also breaks
+  dependencies.
 
 *test-unit-2.4.3 (13 Dec 2011)
 
