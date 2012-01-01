@@ -5,6 +5,9 @@
 <maintainer>
 <email>leio@gentoo.org</email>
 </maintainer>
+<use>
+<flag name="ztv">Enable building the V4L2 ZTV driver</flag>
+</use>
 <longdescription lang="en">
 	X.Org driver for AMD Geode GX and Geode LX platforms.
 </longdescription>
