@@ -1,9 +1,9 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.122 2012/01/01 15:48:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.123 2012/01/01 15:50:12 armin76 Exp $
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> portage-utils-0.8.ebuild:
-  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #395317
+  alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #395317
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> portage-utils-0.9.ebuild:
   Added Prefix changes, bug #395827.  Added Prefix keywords.
