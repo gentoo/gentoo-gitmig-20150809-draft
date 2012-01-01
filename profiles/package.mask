@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13362 2011/12/30 06:49:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13363 2012/01/01 12:25:41 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -220,12 +220,6 @@ dev-python/gnome-python-extras
 # therefore with gnome-3.2). No upstream activity since early 2010.
 # Masked for removal in 30 days. Bug #389979
 app-accessibility/gnome-mousetrap
-
-# Markos Chandras <hwoarang@gentoo.org> (13 Nov 2011)
-# Fails to link with gold linker. Uses tempnam instead
-# of mkstemp which is a fatal error in recent gcc versions
-# Masked for removal in 30 days. Bug #371451
-games-mud/kmuddy
 
 # Alin Năstac <mrness@gentoo.org> (13 Nov 2011)
 # Dead project, masked for removal in 30 days

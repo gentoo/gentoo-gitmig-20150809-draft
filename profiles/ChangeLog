@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6055 2011/12/30 09:35:52 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6056 2012/01/01 12:25:41 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove package mask of kmuddy, bug 371451
 
   30 Dec 2011; Hans de Graaff <graaff@gentoo.org> arch/arm/use.mask:
   Mask ruby19 until bug 332593 is fully fixed.
