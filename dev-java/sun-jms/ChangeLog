@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jms
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/ChangeLog,v 1.16 2011/09/12 13:26:37 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/ChangeLog,v 1.17 2012/01/01 19:37:50 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> sun-jms-1.1-r2.ebuild:
+  Drop ia64 support #345433
 
   12 Sep 2011; Peter Volkov <pva@gentoo.org> sun-jms-1.1-r2.ebuild:
   Update DOWNLOAD_PAGE to point on oracle site, bug #380365 thank 'philipplewe

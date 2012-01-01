@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.115 2011/12/30 12:07:41 fordfrog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.116 2012/01/01 19:42:23 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> tomcat-servlet-api-3.ebuild,
+  tomcat-servlet-api-4.1.36.ebuild:
+  Drop ia64 support #345433
 
   30 Dec 2011; Miroslav Šulc <fordfrog@gentoo.org>
   -tomcat-servlet-api-7.0.22.ebuild:
