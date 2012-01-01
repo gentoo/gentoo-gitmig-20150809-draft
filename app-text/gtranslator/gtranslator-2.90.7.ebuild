@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.90.7.ebuild,v 1.1 2011/10/27 07:18:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.90.7.ebuild,v 1.2 2012/01/01 00:20:05 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -65,7 +65,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	ln -sfn $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 	if ! use gnome; then
 		# don't install charmap plugin, it requires gnome-extra/gucharmap
 		sed -e 's:\scharmap\s: :g' -i plugins/Makefile.* ||
