@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.225 2011/12/05 11:29:40 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.226 2012/01/01 23:47:32 tetromino Exp $
+
+  01 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-utils-2.32.0-r2.ebuild:
+  Move gnome2_src_prepare after eautoreconf (bug #396713, thanks to Julian W.
+  for reporting).
 
   05 Dec 2011; Pacho Ramos <pacho@gentoo.org> -gnome-utils-2.32.0-r1.ebuild,
   gnome-utils-3.2.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.32.0-r2.ebuild,v 1.6 2011/10/05 17:41:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.32.0-r2.ebuild,v 1.7 2012/01/01 23:47:32 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -54,8 +54,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix uninitialized variable preventing crashes (already fixed in master)
 	epatch "${FILESDIR}/${P}-fix-uninitialized.patch"
 
@@ -82,4 +80,6 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+
+	gnome2_src_prepare
 }
