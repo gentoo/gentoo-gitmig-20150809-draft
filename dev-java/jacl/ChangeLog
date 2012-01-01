@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jacl
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/ChangeLog,v 1.28 2009/01/07 19:29:56 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/ChangeLog,v 1.29 2012/01/01 12:21:10 sera Exp $
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jacl-1.3.3.ebuild,
+  jacl-1.4.1.ebuild:
+  Drop ia64 support #345433
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org> jacl-1.4.1.ebuild:
   stable ppc64, bug 243126
