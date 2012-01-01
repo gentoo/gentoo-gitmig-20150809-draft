@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-mount
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.19 2011/12/29 15:31:16 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.20 2012/01/01 17:31:47 grobian Exp $
+
+  01 Jan 2012; Fabian Groffen <grobian@gentoo.org> rack-mount-0.8.3.ebuild:
+  Add Prefix keywords
 
   29 Dec 2011; Hans de Graaff <graaff@gentoo.org> rack-mount-0.8.3.ebuild:
   Add ruby19. Avoid fragile test.
