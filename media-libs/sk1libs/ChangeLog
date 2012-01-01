@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sk1libs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.13 2011/10/21 16:45:19 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.14 2012/01/01 20:53:04 grobian Exp $
+
+  01 Jan 2012; Fabian Groffen <grobian@gentoo.org> sk1libs-0.9.1.ebuild:
+  Marked ~x86-solaris
 
   21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> sk1libs-0.9.1.ebuild:
   x86 stable wrt #387199
