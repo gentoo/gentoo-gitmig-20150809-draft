@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/spindown
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/ChangeLog,v 1.6 2009/11/21 15:01:55 wschlich Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/ChangeLog,v 1.7 2012/01/01 01:04:34 idl0r Exp $
+
+*spindown-0.4.0-r3 (01 Jan 2012)
+*spindown-0.4.0-r2 (01 Jan 2012)
+
+  01 Jan 2012; Christian Ruppert <idl0r@gentoo.org> -spindown-0.4.0.ebuild,
+  -spindown-0.4.0-r1.ebuild, +spindown-0.4.0-r2.ebuild,
+  +spindown-0.4.0-r3.ebuild, files/spindownd.initd, files/spindownd.initd-r1:
+  Revbump. Don't use the deprecated $opts variable, bug 386759.
 
 *spindown-0.4.0-r1 (21 Nov 2009)
 

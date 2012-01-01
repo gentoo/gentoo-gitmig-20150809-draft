@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 SPINDOWND_BIN="/usr/sbin/spindownd"
@@ -7,7 +7,7 @@ SPINDOWND_CFG=${SPINDOWND_CFG:-/etc/spindown.conf}
 SPINDOWND_PID=${SPINDOWND_PID:-/var/run/spindown.pid}
 SPINDOWND_FIFO=${SPINDOWND_FIFO:-/var/run/spindown.fifo}
 
-opts="reload"
+extra_started_commands="reload"
 
 depend() {
 	need localmount
@@ -55,7 +55,7 @@ stop() {
 
 reload() {
 	ebegin "Reloading spindownd configuration"
-	start-stop-daemon --stop --exec ${SPINDOWND_BIN} --pidfile ${SPINDOWND_PID} \
+	start-stop-daemon --exec ${SPINDOWND_BIN} --pidfile ${SPINDOWND_PID} \
 		--signal HUP
 	eend $?
 }
