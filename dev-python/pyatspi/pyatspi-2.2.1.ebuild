@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.2.1.ebuild,v 1.1 2011/11/05 04:51:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.2.1.ebuild,v 1.2 2012/01/01 00:24:58 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -50,8 +50,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	mv config/py-compile config/py-compile.orig
-	ln -s $(type -P true) config/py-compile
+	echo '#!/bin/sh' > config/py-compile
 
 	python_copy_sources
 }

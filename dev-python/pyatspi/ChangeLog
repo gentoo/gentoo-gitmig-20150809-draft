@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyatspi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.2 2011/11/05 04:51:38 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.3 2012/01/01 00:24:58 tetromino Exp $
+
+  01 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org> pyatspi-2.0.2.ebuild,
+  pyatspi-2.2.1.ebuild:
+  Fix py-compile idiom for automake-1.11.2 compatibility (bug #396585).
 
 *pyatspi-2.2.1 (05 Nov 2011)
 
