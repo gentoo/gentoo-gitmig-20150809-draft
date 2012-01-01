@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.76 2011/12/21 21:57:08 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.77 2012/01/01 15:58:06 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> id3lib-3.8.3-r8.ebuild:
+  alpha/ia64/sh/sparc stable wrt #393807
 
   21 Dec 2011; Markus Meier <maekke@gentoo.org> id3lib-3.8.3-r8.ebuild:
   arm stable, bug #393807
