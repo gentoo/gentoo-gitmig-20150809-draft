@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.88 2011/12/31 16:40:32 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.89 2012/01/01 08:13:20 graaff Exp $
+
+  01 Jan 2012; Hans de Graaff <graaff@gentoo.org> fxruby-1.6.20-r1.ebuild:
+  Avoid unneeded dependency on rake-compiler. Fixes bug 396633.
 
 *fxruby-1.6.20-r1 (31 Dec 2011)
 
