@@ -9,13 +9,15 @@
 # ===
 #
 # htbinit
-# 
+#
 # A shell-script wrapper for HTB.INIT designed for
 # use in the SysV-init system (/etc/init.d).
 #
 # usage: htbinit { start | clear | reload | recreate | stats }
 #
-opts="start clear reload recreate stats"
+
+extra_commands="clear recreate stats"
+extra_started_commands="reload"
 
 depend() {
 	need net

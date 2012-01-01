@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/htbinit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.15 2011/11/16 00:18:15 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.16 2012/01/01 00:56:46 idl0r Exp $
+
+*htbinit-0.8.5-r5 (01 Jan 2012)
+*htbinit-0.8.5-r4 (01 Jan 2012)
+*htbinit-0.8.5-r3 (01 Jan 2012)
+
+  01 Jan 2012; Christian Ruppert <idl0r@gentoo.org> -htbinit-0.8.5.ebuild,
+  -htbinit-0.8.5-r1.ebuild, -htbinit-0.8.5-r2.ebuild, +htbinit-0.8.5-r3.ebuild,
+  +htbinit-0.8.5-r4.ebuild, +htbinit-0.8.5-r5.ebuild, files/htbinit.rc,
+  files/rc_htbinit:
+  Revbump. Don't use the deprecated $opts variable, bug 386767.
 
   16 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> htbinit-0.8.5-r1.ebuild,
   htbinit-0.8.5-r2.ebuild:
