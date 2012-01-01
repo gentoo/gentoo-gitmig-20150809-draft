@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.810 2011/12/30 15:06:47 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.811 2012/01/01 09:47:27 vapier Exp $
+
+*glibc-2.14.1-r2 (01 Jan 2012)
+
+  01 Jan 2012; Mike Frysinger <vapier@gentoo.org> +glibc-2.14.1-r2.ebuild:
+  Workaround POSIX I/O issues #370413, and add fix for tzfile security issues
+  #393477, and a few other random fixes.
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> glibc-2.13-r4.ebuild:
   Stable for ppc/ppc64; bug #382377
