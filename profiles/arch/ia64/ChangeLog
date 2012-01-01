@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.118 2011/12/31 15:26:26 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.119 2012/01/01 15:29:50 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
+  Use.mask ladspa and remove it from p.use.mask
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> package.use.mask:
   Use mask net-analyzer/wireshark doc-pdf due to missing JVM #345433
