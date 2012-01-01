@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.464 2011/12/27 00:26:07 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.465 2012/01/01 15:15:14 armin76 Exp $
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> phpmyadmin-3.4.9.ebuild:
+  alpha/sparc/x86 stable wrt #395715
 
   26 Dec 2011; Mark Loeser <halcy0n@gentoo.org> phpmyadmin-3.4.9.ebuild:
   Stable for ppc/ppc64; bug #395715
