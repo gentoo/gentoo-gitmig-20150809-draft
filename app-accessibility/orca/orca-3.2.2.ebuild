@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.2.2.ebuild,v 1.1 2011/12/21 22:39:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.2.2.ebuild,v 1.2 2012/01/01 00:12:50 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -49,8 +49,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	# Workaround missing file in po files
 	echo "src/orca/scripts/toolkits/WebKitGtk/script.py" >> "${S}"/po/POTFILES.in

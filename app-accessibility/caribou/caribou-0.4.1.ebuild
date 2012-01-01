@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.1.ebuild,v 1.1 2011/11/05 04:52:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.1.ebuild,v 1.2 2012/01/01 00:09:43 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -64,8 +64,7 @@ src_prepare() {
 		die "sed failed"
 
 	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	gnome2_src_prepare
 }
