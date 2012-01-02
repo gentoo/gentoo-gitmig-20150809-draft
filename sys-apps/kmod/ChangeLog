@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.6 2012/01/01 09:49:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.7 2012/01/02 19:59:55 vapier Exp $
+
+  02 Jan 2012; Mike Frysinger <vapier@gentoo.org> kmod-9999.ebuild:
+  Always delete .la since we have a .pc file, and restore /bin and /sbin split.
 
   01 Jan 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Removing myself.
