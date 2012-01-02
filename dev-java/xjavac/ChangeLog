@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xjavac
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.36 2011/10/23 11:34:58 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.37 2012/01/02 09:02:00 sera Exp $
+
+  02 Jan 2012; Ralph Sennhauser <sera@gentoo.org> xjavac-20041208-r5.ebuild,
+  xjavac-20110814.ebuild:
+  Drop ia64 support #345433
 
   23 Oct 2011; Markus Meier <maekke@gentoo.org> xjavac-20110814.ebuild:
   x86 stable, bug #384611
