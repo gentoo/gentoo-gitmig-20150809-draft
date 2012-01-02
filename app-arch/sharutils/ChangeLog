@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/sharutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.77 2011/07/20 13:42:12 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.78 2012/01/02 09:14:56 ago Exp $
+
+  02 Jan 2012; Agostino Sarubbo <ago@gentoo.org> sharutils-4.11.ebuild:
+  Stable for AMD64, wrt bug #396763
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
