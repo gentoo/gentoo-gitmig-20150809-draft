@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.27.ebuild,v 1.1 2011/06/15 03:31:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.27.ebuild,v 1.2 2012/01/02 19:40:43 vapier Exp $
 
 EAPI="3"
 
@@ -20,9 +20,9 @@ src_prepare() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodir /sbin
-	mv "${D}"/usr/sbin/isapnp "${D}"/sbin/ || die "couldnt relocate isapnp"
+	mv "${D}"/usr/sbin/isapnp "${D}"/sbin/ || die
 
 	dodoc AUTHORS ChangeLog README NEWS
 	docinto txt
