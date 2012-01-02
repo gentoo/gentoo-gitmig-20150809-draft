@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/GBrowse/GBrowse-2.44.ebuild,v 1.1 2011/12/26 05:27:12 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/GBrowse/GBrowse-2.44-r1.ebuild,v 1.1 2012/01/02 21:19:46 weaver Exp $
 
 EAPI=4
 
@@ -12,7 +12,11 @@ HOMEPAGE="http://gmod.org/wiki/GBrowse"
 KEYWORDS="~amd64 ~x86"
 IUSE="-minimal mysql postgres +sqlite"
 
-CDEPEND=">=sci-biology/bioperl-1.6.9
+SLOT="0"
+WEBAPP_MANUAL_SLOT="yes"
+
+CDEPEND="!<sci-biology/GBrowse-2.44-r1
+	>=sci-biology/bioperl-1.6.9
 	>=dev-perl/Bio-Graphics-2.09
 	>=dev-perl/GD-2.07
 	>=dev-perl/CGI-Session-4.02
