@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/lzip-1.12.ebuild,v 1.1 2011/06/15 02:26:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/lzip-1.12.ebuild,v 1.2 2012/01/02 09:11:46 ago Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.gnu.org/releases-noredirect/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 src_prepare() {
