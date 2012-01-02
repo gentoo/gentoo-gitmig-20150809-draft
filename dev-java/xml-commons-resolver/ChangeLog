@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons-resolver
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.35 2011/05/03 18:45:53 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.36 2012/01/02 09:21:42 sera Exp $
+
+  02 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
+  xml-commons-resolver-1.2.ebuild:
+  Drop ia64 support #345433
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org>
   xml-commons-resolver-1.2.ebuild:

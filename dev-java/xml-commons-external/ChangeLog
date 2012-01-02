@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons-external
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/ChangeLog,v 1.27 2011/05/03 18:30:18 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/ChangeLog,v 1.28 2012/01/02 09:24:22 sera Exp $
+
+  02 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
+  xml-commons-external-1.3.02-r1.ebuild, xml-commons-external-1.3.04.ebuild:
+  Drop ia64 support #345433
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org>
   xml-commons-external-1.3.04.ebuild:
