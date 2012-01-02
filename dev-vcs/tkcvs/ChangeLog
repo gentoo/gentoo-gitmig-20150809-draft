@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/tkcvs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/ChangeLog,v 1.3 2010/06/22 18:52:18 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/ChangeLog,v 1.4 2012/01/02 23:52:49 jlec Exp $
+
+*tkcvs-8.2.3 (02 Jan 2012)
+
+  02 Jan 2012; Justin Lecher <jlec@gentoo.org> -tkcvs-8.2.ebuild,
+  tkcvs-8.2.2.ebuild, +tkcvs-8.2.3.ebuild, metadata.xml:
+  Moved to EAPI=4, Version Bump, added desktop entry creation, #300400
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   tkcvs-8.0.4.ebuild, tkcvs-8.2.ebuild, tkcvs-8.2.2.ebuild:
