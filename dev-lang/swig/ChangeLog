@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.159 2012/01/01 21:36:00 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.160 2012/01/02 00:18:38 ago Exp $
+
+  02 Jan 2012; Agostino Sarubbo <ago@gentoo.org> swig-2.0.4-r1.ebuild:
+  Stable for AMD64, wrt bug #395843
 
   01 Jan 2012; Panagiotis Christopoulos <pchrist@gentoo.org>
   swig-2.0.4-r1.ebuild:
