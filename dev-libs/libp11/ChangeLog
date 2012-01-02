@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.59 2012/01/01 15:55:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.60 2012/01/02 19:40:31 vapier Exp $
+
+*libp11-0.2.8-r1 (02 Jan 2012)
+
+  02 Jan 2012; Mike Frysinger <vapier@gentoo.org> +libp11-0.2.8-r1.ebuild,
+  +files/libp11-0.2.8-no-ltdl.patch:
+  Add patch from upstream to drop libtool requirement #394717.
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> libp11-0.2.8.ebuild:
   alpha/ia64/sparc stable wrt #393865
