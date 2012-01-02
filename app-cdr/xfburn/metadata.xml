@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>xfce</herd>
-<herd>media-optical</herd>
+  <herd>xfce</herd>
+  <herd>media-optical</herd>
   <upstream>
     <maintainer>
       <email>mario@xfce.org</email>
@@ -14,7 +14,4 @@
       <name>David Mohr</name>
     </maintainer>
   </upstream>
-  <use>
-    <flag name='thunar'>Use Thunar VFS layer for mimetype and icons support (WARNING: deprecated, will be replaced by GIO in future)</flag>
-  </use>
 </pkgmetadata>
