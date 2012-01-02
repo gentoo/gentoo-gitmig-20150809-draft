@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/feedparser
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.31 2011/11/16 19:10:07 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.32 2012/01/02 05:28:20 floppym Exp $
+
+  02 Jan 2012; Mike Gilbert <floppym@gentoo.org> Manifest:
+  Fix manifest
 
   16 Nov 2011; Markos Chandras <hwoarang@gentoo.org> feedparser-5.0.1.ebuild:
   Restrict tests with Jython. Update HOMEPAGE and LICENSE. Patch by Arfrever.
