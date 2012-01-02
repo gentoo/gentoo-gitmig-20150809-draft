@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/flexget
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.5 2011/12/21 16:32:52 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.6 2012/01/02 07:00:12 floppym Exp $
+
+  02 Jan 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Add dependency on dev-python/requests
 
   21 Dec 2011; Mike Gilbert <floppym@gentoo.org> -flexget-1.0_beta2435.ebuild,
   flexget-1.0_beta2484.ebuild, flexget-9999.ebuild:
