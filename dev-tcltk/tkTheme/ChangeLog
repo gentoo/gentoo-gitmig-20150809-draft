@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkTheme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.22 2012/01/02 23:30:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.23 2012/01/02 23:31:15 jlec Exp $
+
+  02 Jan 2012; Justin Lecher <jlec@gentoo.org> -tkTheme-1.0.ebuild:
+  Removed old
 
   02 Jan 2012; Justin Lecher <jlec@gentoo.org> +files/1.0-cflags.patch,
   tkTheme-1.0-r2.ebuild, files/1.0-Makefile.in.diff, metadata.xml:
