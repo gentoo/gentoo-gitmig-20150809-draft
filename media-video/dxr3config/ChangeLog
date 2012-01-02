@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dxr3config
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/ChangeLog,v 1.6 2008/07/07 14:42:38 zzam Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/ChangeLog,v 1.7 2012/01/02 09:24:15 ssuominen Exp $
+
+  02 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> dxr3config-0.3.2.ebuild:
+  Revert back to ~arch only wrt #397117 by Paweł Hajdan, Jr.
 
 *dxr3config-0.3.4 (07 Jul 2008)
 

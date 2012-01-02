@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/dxr3config-0.3.2.ebuild,v 1.5 2007/11/27 11:46:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/dxr3config-0.3.2.ebuild,v 1.6 2012/01/02 09:24:15 ssuominen Exp $
 
 MY_PV="${PV/./-}"
 MY_P="${PN}${MY_PV/./-}"
@@ -11,7 +11,7 @@ SRC_URI="http://free.pages.at/wicky4vdr/download/${MY_P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-util/dialog
