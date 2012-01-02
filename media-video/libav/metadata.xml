@@ -25,7 +25,6 @@
 	<flag name="openssl">Prefer <pkg>dev-libs/openssl</pkg> over <pkg>net-libs/gnutls</pkg> to provide SSL/TLS support (notice: the resulting binaries are unredistributable).</flag>
 	<flag name="hardcoded-tables">Use pre-calculated tables rather than calculating them on the fly.</flag>
 	<flag name="mmxext">Enable mmx2 support.</flag>
-    <flag name="neon">Enable NEON optimizations for arm processors.</flag>	
 	<flag name="network">Enable network streaming support.</flag>
 	<flag name="pulseaudio">Enable pulseaudio input support.</flag>
 	<flag name="pic">Force shared libraries to be built as PIC (this is slower).</flag>

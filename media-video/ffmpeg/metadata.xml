@@ -25,7 +25,6 @@
     <flag name="hardcoded-tables">Use pre-calculated tables rather than calculating them on the fly.</flag>
 	<flag name="libv4l">Uses <pkg>media-libs/libv4l</pkg> for video4linux instead of direct calls. Adds support for more devices via the userspace library.</flag>
     <flag name="mmxext">Enables mmx2 support</flag>
-    <flag name="neon">Enables NEON optimizations for arm processors.</flag>
     <flag name="network">Enables network streaming support</flag>
 	<flag name="openssl">Enables <pkg>dev-libs/openssl</pkg> support. Adds support for encrypted network protocols (TLS/HTTPS).</flag>
     <flag name="pic">Force shared libraries to be built as PIC (this is slower)</flag>
