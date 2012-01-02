@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13367 2012/01/02 13:36:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13368 2012/01/02 14:42:53 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (02 Jan 2012)
+# Parallel build does not work. Upstream report:
+# http://www.avidemux.org/smf/index.php?topic=10149.msg54692#msg54692
+=media-video/avidemux-2.5.6
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Jan 2012)
 # Unused backward compability library (for Xfce 4.6 packages in Xfce 4.8)
