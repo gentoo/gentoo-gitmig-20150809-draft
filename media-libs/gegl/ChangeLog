@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.62 2012/01/02 11:59:07 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.63 2012/01/02 17:05:25 sping Exp $
+
+  02 Jan 2012; Sebastian Pipping <sping@gentoo.org> gegl-0.1.8.ebuild:
+  Improve fix on gegl/gegl-0.1.deps (for USE=introspection)
 
   02 Jan 2012; Sebastian Pipping <sping@gentoo.org> gegl-0.1.8.ebuild:
   Fix remaining sandbox issues using gnome2_environment_reset of the

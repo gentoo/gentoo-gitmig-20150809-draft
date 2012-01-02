@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.4 2012/01/02 11:59:06 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.5 2012/01/02 17:05:25 sping Exp $
 
 EAPI=4
 
@@ -54,8 +54,9 @@ RESTRICT="test"
 DOCS=( ChangeLog INSTALL README NEWS )
 
 src_prepare() {
-	# Workaroung "No rule to make target `gegl-0.1.deps'"
-	touch "${S}/gegl/gegl-0.1.deps" || die
+	# Fix for upstream bug "gegl/gegl-0.1.deps missing from gegl-0.1.8 tarball"
+	# https://bugzilla.gnome.org/show_bug.cgi?id=666737
+	[ -f gegl/gegl-0.1.deps ] || echo 'Babl-0.1' > gegl/gegl-0.1.deps
 
 	# fix OSX loadable module filename extension
 	sed -i -e 's/\.dylib/.bundle/' configure.ac || die
