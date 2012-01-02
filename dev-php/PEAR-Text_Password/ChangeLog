@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Text_Password
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Password/ChangeLog,v 1.20 2009/08/22 19:06:20 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Password/ChangeLog,v 1.21 2012/01/02 14:17:42 ago Exp $
+
+  02 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  PEAR-Text_Password-1.1.1.ebuild:
+  Stable for AMD64, wrt bug #396997
 
 *PEAR-Text_Password-1.1.1 (22 Aug 2009)
 
