@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-regexp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.25 2010/01/03 20:38:54 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.26 2012/01/02 07:42:26 sera Exp $
+
+  02 Jan 2012; Ralph Sennhauser <sera@gentoo.org> gnu-regexp-1.1.4-r2.ebuild:
+  Drop ia64 support #345433
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   gnu-regexp-1.1.4-r2.ebuild:

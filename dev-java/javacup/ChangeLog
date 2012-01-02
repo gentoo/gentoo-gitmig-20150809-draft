@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javacup
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.30 2011/05/03 18:33:28 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.31 2012/01/02 07:47:03 sera Exp $
+
+  02 Jan 2012; Ralph Sennhauser <sera@gentoo.org> javacup-0.10k-r1.ebuild,
+  javacup-0.11a_beta20060608.ebuild:
+  Drop ia64 support #345433
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org>
   javacup-0.11a_beta20060608.ebuild:
