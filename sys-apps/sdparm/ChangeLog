@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.57 2011/08/11 02:45:18 zmedico Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.58 2012/01/02 09:49:20 ago Exp $
+
+  02 Jan 2012; Agostino Sarubbo <ago@gentoo.org> sdparm-1.06.ebuild:
+  Stable for AMD64, wrt bug #397213
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> sdparm-1.06.ebuild:
   Add ~x86-linux keyword.
