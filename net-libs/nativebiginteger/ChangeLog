@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/nativebiginteger
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/ChangeLog,v 1.8 2011/08/03 17:49:53 tommy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/ChangeLog,v 1.9 2012/01/02 15:57:17 sera Exp $
+
+  02 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
+  nativebiginteger-0.8.7.ebuild:
+  Drop ia64 support #345433
 
   03 Aug 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   nativebiginteger-0.8.7.ebuild:

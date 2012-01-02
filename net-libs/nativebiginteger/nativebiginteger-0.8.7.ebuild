@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/nativebiginteger-0.8.7.ebuild,v 1.2 2011/08/03 17:49:53 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/nativebiginteger-0.8.7.ebuild,v 1.3 2012/01/02 15:57:17 sera Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://mirror.i2p2.de/i2psource_${PV}.tar.bz2"
 
 LICENSE="|| ( public-domain BSD MIT )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ia64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="test"
 
