@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.470 2011/12/01 18:42:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.471 2012/01/02 13:41:21 ssuominen Exp $
 
 # Keep them sorted
 
@@ -240,6 +240,7 @@ mysqli - Adds support for the improved mySQL libraries
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
 neXt - Enable neXt toolkit
+neon - Enable optimization support for ARM NEON processors
 netboot - Enables network booting
 netcdf - Enable NetCDF data format support
 networkmanager - Enable net-misc/networkmanager support
