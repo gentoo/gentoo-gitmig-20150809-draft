@@ -1,38 +1,49 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0-r2.ebuild,v 1.3 2010/03/22 20:44:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0-r2.ebuild,v 1.4 2012/01/02 23:30:17 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit eutils toolchain-funcs
+inherit autotools-utils  eutils toolchain-funcs
 
-DESCRIPTION="Tcl/Tk Theming library."
+DESCRIPTION="Tcl/Tk Theming library"
 HOMEPAGE="http://www.xmission.com/~georgeps/Tk_Theme/other/"
 SRC_URI="http://www.xmission.com/~georgeps/Tk_Theme/other/${PN}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="debug examples static-libs threads"
 
 DEPEND="
-	>=dev-lang/tk-8.3.3
+	dev-lang/tk
+	x11-libs/libXext
+	x11-libs/libXmu
 	x11-libs/libXpm"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PV}-Makefile.in.diff
-	epatch "${FILESDIR}"/${PV}-configure.diff
-	tc-export CC
-}
+PATCHES=(
+	"${FILESDIR}"/${PV}-Makefile.in.diff
+	"${FILESDIR}"/${PV}-configure.diff
+	"${FILESDIR}"/${PV}-cflags.patch
+	)
 
 src_configure() {
-	econf --with-tcl="${EPREFIX}"/usr/$(get_libdir) --with-tk="${EPREFIX}"/usr/$(get_libdir)
+	tc-export CC
+	local myeconfargs=(
+		--with-tcl="${EPREFIX}/usr/$(get_libdir)"
+		--with-tk="${EPREFIX}/usr/$(get_libdir)"
+		--with-x
+		$(use_with debug symbols)
+		$(use_enable threads)
+		)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README TODO || die
+	autotools-utils_src_install
+	insinto /usr/share/${PN}
+	use examples && doins -r demo
 }
