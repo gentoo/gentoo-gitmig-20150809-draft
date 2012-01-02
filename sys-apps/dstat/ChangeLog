@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dstat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.37 2011/12/27 23:43:38 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.38 2012/01/02 13:58:28 jlec Exp $
+
+  02 Jan 2012; Justin Lecher <jlec@gentoo.org> dstat-0.6.9-r1.ebuild,
+  -dstat-0.7.2.ebuild, dstat-0.7.2-r1.ebuild, metadata.xml:
+  Dropped empty *DEPENDS, added support for wifi, keyworded for linux prefix,
+  #333383
 
   27 Dec 2011; Jesus Rivero <neurogeek@gentoo.org> dstat-0.7.2-r1.ebuild:
   Removed die from python_convert_shebangs. Patch by Arfrever
