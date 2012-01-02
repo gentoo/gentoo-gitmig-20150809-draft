@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.6 2011/12/02 21:08:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.7 2012/01/02 05:42:56 vapier Exp $
 
 EAPI="3"
 
@@ -48,15 +48,14 @@ HOMEPAGE="http://sourceware.org/gdb/"
 SRC_URI="${SRC_URI} ${PATCH_VER:+mirror://gentoo/${P}-patches-${PATCH_VER}.tar.xz}"
 
 LICENSE="GPL-2 LGPL-2"
-is_cross \
-	&& SLOT="${CTARGET}" \
-	|| SLOT="0"
+SLOT="0"
 if [[ ${PV} != 9999* ]] ; then
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
-IUSE="expat multitarget nls +python test vanilla"
+IUSE="+client expat multitarget nls +python +server test vanilla"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r2
+RDEPEND="!dev-util/gdbserver
+	>=sys-libs/ncurses-5.2-r2
 	sys-libs/readline
 	expat? ( dev-libs/expat )
 	python? ( =dev-lang/python-2* )"
@@ -85,18 +84,45 @@ gdb_branding() {
 
 src_configure() {
 	strip-unsupported-flags
-	econf \
-		--with-pkgversion="$(gdb_branding)" \
-		--with-bugurl='http://bugs.gentoo.org/' \
-		--disable-werror \
-		--enable-64-bit-bfd \
-		--with-system-readline \
-		--with-separate-debug-dir="${EPREFIX}"/usr/lib/debug \
-		$(is_cross && echo --with-sysroot="${EPREFIX}"/usr/${CTARGET}) \
-		$(use_with expat) \
-		$(use_enable nls) \
-		$(use multitarget && echo --enable-targets=all) \
-		$(use_with python python "${EPREFIX}/usr/bin/python2")
+
+	local myconf=(
+		--with-pkgversion="$(gdb_branding)"
+		--with-bugurl='http://bugs.gentoo.org/'
+		--disable-werror
+		$(is_cross && echo --with-sysroot="${EPREFIX}"/usr/${CTARGET})
+	)
+
+	if use server && ! use client ; then
+		# just configure+build in the gdbserver subdir to speed things up
+		cd gdb/gdbserver
+		myconf+=( --program-transform-name='' )
+	else
+		# gdbserver only works for native targets (CHOST==CTARGET).
+		# it also doesn't support all targets, so rather than duplicate
+		# the target list (which changes between versions), use the
+		# "auto" value when things are turned on.
+		is_cross \
+			&& myconf+=( --disable-gdbserver ) \
+			|| myconf+=( $(use_enable server gdbserver auto) )
+	fi
+
+	if ! ( use server && ! use client ) ; then
+		# if we are configuring in the top level, then use all
+		# the additional global options
+		myconf+=(
+			--enable-64-bit-bfd
+			--disable-install-libbfd
+			--disable-install-libiberty
+			--with-system-readline
+			--with-separate-debug-dir="${EPREFIX}"/usr/lib/debug
+			$(use_with expat)
+			$(use_enable nls)
+			$(use multitarget && echo --enable-targets=all)
+			$(use_with python python "${EPREFIX}/usr/bin/python2")
+		)
+	fi
+
+	econf "${myconf[@]}"
 }
 
 src_test() {
@@ -104,24 +130,34 @@ src_test() {
 }
 
 src_install() {
-	emake \
-		DESTDIR="${D}" \
-		{include,lib}dir=/nukeme/pretty/pretty/please \
-		install || die
-	rm -r "${D}"/nukeme || die
+	use server && ! use client && cd gdb/gdbserver
+	emake DESTDIR="${D}" install || die
+	use client && { rm "${ED}"/usr/lib*/libiberty.a || die ; }
+	cd "${S}"
 
 	# Don't install docs when building a cross-gdb
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		rm -r "${ED}"/usr/share
 		return 0
 	fi
+	# Install it by hand for now:
+	# http://sourceware.org/ml/gdb-patches/2011-12/msg00915.html
+	# Only install if it exists due to the twisted behavior (see
+	# notes in src_configure above).
+	[[ -e gdb/gdbserver/gdbreplay ]] && { dobin gdb/gdbserver/gdbreplay || die ; }
 
 	dodoc README
-	docinto gdb
-	dodoc gdb/CONTRIBUTE gdb/README gdb/MAINTAINERS \
-		gdb/NEWS gdb/ChangeLog gdb/PROBLEMS
+	if use client ; then
+		docinto gdb
+		dodoc gdb/CONTRIBUTE gdb/README gdb/MAINTAINERS \
+			gdb/NEWS gdb/ChangeLog gdb/PROBLEMS
+	fi
 	docinto sim
-	dodoc sim/ChangeLog sim/MAINTAINERS sim/README-HACKING
+	dodoc sim/{ChangeLog,MAINTAINERS,README-HACKING}
+	if use server ; then
+		docinto gdbserver
+		dodoc gdb/gdbserver/{ChangeLog,README}
+	fi
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		dodoc "${WORKDIR}"/extra/gdbinit.sample
@@ -133,7 +169,7 @@ src_install() {
 
 pkg_postinst() {
 	# portage sucks and doesnt unmerge files in /etc
-	rm -vf "${ROOT}"/etc/skel/.gdbinit
+	rm -vf "${EROOT}"/etc/skel/.gdbinit
 
 	if use prefix && [[ ${CHOST} == *-darwin* ]] ; then
 		ewarn "gdb is unable to get a mach task port when installed by Prefix"

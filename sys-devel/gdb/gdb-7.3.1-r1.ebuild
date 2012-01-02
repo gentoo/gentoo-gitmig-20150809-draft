@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.1-r1.ebuild,v 1.2 2012/01/01 19:45:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.1-r1.ebuild,v 1.3 2012/01/02 05:42:56 vapier Exp $
 
 EAPI="3"
 
@@ -48,9 +48,7 @@ HOMEPAGE="http://sourceware.org/gdb/"
 SRC_URI="${SRC_URI} ${PATCH_VER:+mirror://gentoo/${P}-patches-${PATCH_VER}.tar.xz}"
 
 LICENSE="GPL-2 LGPL-2"
-is_cross \
-	&& SLOT="${CTARGET}" \
-	|| SLOT="0"
+SLOT="0"
 if [[ ${PV} != 9999* ]] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
@@ -94,12 +92,23 @@ src_configure() {
 		$(is_cross && echo --with-sysroot="${EPREFIX}"/usr/${CTARGET})
 	)
 
-	if use server ; then
-		use client || cd gdb/gdbserver
+	if use server && ! use client ; then
+		# just configure+build in the gdbserver subdir to speed things up
+		cd gdb/gdbserver
 		myconf+=( --program-transform-name='' )
+	else
+		# gdbserver only works for native targets (CHOST==CTARGET).
+		# it also doesn't support all targets, so rather than duplicate
+		# the target list (which changes between versions), use the
+		# "auto" value when things are turned on.
+		is_cross \
+			&& myconf+=( --disable-gdbserver ) \
+			|| myconf+=( $(use_enable server gdbserver auto) )
 	fi
 
-	if use client ; then
+	if ! ( use server && ! use client ) ; then
+		# if we are configuring in the top level, then use all
+		# the additional global options
 		myconf+=(
 			--enable-64-bit-bfd
 			--disable-install-libbfd
@@ -110,7 +119,6 @@ src_configure() {
 			$(use_enable nls)
 			$(use multitarget && echo --enable-targets=all)
 			$(use_with python python "${EPREFIX}/usr/bin/python2")
-			$(use_enable server gdbserver)
 		)
 	fi
 
@@ -132,8 +140,11 @@ src_install() {
 		rm -r "${ED}"/usr/share
 		return 0
 	fi
+	# Install it by hand for now:
 	# http://sourceware.org/ml/gdb-patches/2011-12/msg00915.html
-	use server && { dobin gdb/gdbserver/gdbreplay || die ; }
+	# Only install if it exists due to the twisted behavior (see
+	# notes in src_configure above).
+	[[ -e gdb/gdbserver/gdbreplay ]] && { dobin gdb/gdbserver/gdbreplay || die ; }
 
 	dodoc README
 	if use client ; then
