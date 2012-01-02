@@ -1,0 +1,40 @@
+For bug 397333
+https://bugs.gentoo.org/show_bug.cgi?id=397333
+
+upstream patch pulled from:
+http://hg.libsdl.org/SDL_mixer/raw-diff/7a8f0018e23d/timidity/readmidi.c
+
+--- a/timidity/readmidi.c
++++ b/timidity/readmidi.c
+@@ -530,7 +530,7 @@
+ {
+   MidiEventList *meep;
+   MidiEventList *next, *new;
+-  int32 len;
++  int32 len, next_pos, pos;
+   char tmp[4];
+ 
+   meep=evlist;
+@@ -552,7 +552,7 @@
+       return -1;
+     }
+   len=BE_LONG(len);
+-
++  next_pos = SDL_RWtell(rw) + len;
+   if (memcmp(tmp, "MTrk", 4))
+     {
+       ctl->cmsg(CMSG_ERROR, VERB_NORMAL,
+@@ -567,6 +567,9 @@
+ 
+       if (new==MAGIC_EOT) /* End-of-track Hack. */
+ 	{
++          pos = SDL_RWtell(rw);
++          if (pos < next_pos)
++            SDL_RWseek(rw, next_pos - pos, RW_SEEK_CUR);
+ 	  return 0;
+ 	}
+ 
+
+
+
+
