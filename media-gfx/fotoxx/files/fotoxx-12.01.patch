@@ -1,0 +1,34 @@
+diff -r -U1 fotoxx-11.12.1.orig/Makefile fotoxx-11.12.1/Makefile
+--- fotoxx-11.12.1.orig/Makefile	2011-12-02 21:10:01.000000000 +0700
++++ fotoxx-11.12.1/Makefile	2011-12-04 15:26:12.000000000 +0700
+@@ -5,4 +5,4 @@
+ # defaults for parameters that may be pre-defined
+-CXXFLAGS ?= -O3 -g -Wall
+-LDFLAGS ?= -O3 -g -Wall -rdynamic
++CXXFLAGS += -Wall
++LDFLAGS += -rdynamic
+ PREFIX ?= /usr
+@@ -14,3 +14,3 @@
+ LOCALESDIR = $(SHAREDIR)/locales
+-DOCDIR = $(PREFIX)/share/doc/fotoxx
++DOCDIR = $(PREFIX)/share/doc/$(PF)
+ MANDIR = $(PREFIX)/share/man/man1
+@@ -18,3 +18,3 @@
+ 
+-CFLAGS = $(CXXFLAGS) -c `pkg-config --cflags gtk+-2.0`
++CFLAGS = $(CXXFLAGS) -c -DPF=\"$(PF)\" `pkg-config --cflags gtk+-2.0`
+ LIBS = `pkg-config --libs gtk+-2.0 gthread-2.0`
+@@ -75,5 +75,2 @@
+ 	rm -f fotoxx.1.gz
+-	# menu (desktop) file
+-	cp -f desktop $(DESTDIR)$(MENUFILE)
+-	xdg-desktop-menu install $(DESTDIR)$(MENUFILE)
+ 
+diff -r -U1 fotoxx-11.12.1.orig/zfuncs.cc fotoxx-11.12.1/zfuncs.cc
+--- fotoxx-11.12.1.orig/zfuncs.cc	2011-12-02 21:10:01.000000000 +0700
++++ fotoxx-11.12.1/zfuncs.cc	2011-12-04 15:28:27.000000000 +0700
+@@ -3123,3 +3123,3 @@
+    strncatv(zlocalesdir,199,work,"/share/",zappname,"/locales",null);      //  /prefix/share/appname/locales
+-   strncatv(zdocdir,199,work,"/share/doc/",zappname,null);                 //  /prefix/share/doc/appname
++   strncatv(zdocdir,199,work,"/share/doc/",PF,null);                       //  /prefix/share/doc/appname
+    
