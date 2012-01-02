@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r8.ebuild,v 1.13 2011/03/07 18:27:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r8.ebuild,v 1.14 2012/01/02 22:52:21 zmedico Exp $
 
 inherit eutils alternatives flag-o-matic toolchain-funcs multilib
 
@@ -195,6 +195,7 @@ src_configure() {
 	filter-flags "-fsched2-use-superblocks"
 
 	export LC_ALL="C"
+	[[ ${COLUMNS:-1} -ge 1 ]] || unset COLUMNS # bug #394091
 
 	case ${CHOST} in
 		*-freebsd*) osname="freebsd" ;;

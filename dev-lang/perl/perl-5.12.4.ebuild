@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.4.ebuild,v 1.1 2011/06/24 14:48:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.4.ebuild,v 1.2 2012/01/02 22:52:21 zmedico Exp $
 
 EAPI=4
 
@@ -150,6 +150,7 @@ src_configure() {
 	declare -a myconf
 
 	export LC_ALL="C"
+	[[ ${COLUMNS:-1} -ge 1 ]] || unset COLUMNS # bug #394091
 
 	# some arches and -O do not mix :)
 	use ppc && replace-flags -O? -O1

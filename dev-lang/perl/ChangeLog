@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/perl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.378 2011/11/07 17:45:03 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.379 2012/01/02 22:52:21 zmedico Exp $
+
+  02 Jan 2012; Zac Medico <zmedico@gentoo.org> perl-5.10.1.ebuild,
+  perl-5.12.3-r1.ebuild, perl-5.12.4-r1.ebuild, perl-5.12.4.ebuild,
+  perl-5.14.1-r1.ebuild, perl-5.14.1.ebuild, perl-5.14.2.ebuild,
+  perl-5.8.8-r8.ebuild:
+  Bug #394091 - Handle invalid COLUMNS.
 
   07 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> perl-5.12.4-r1.ebuild:
   ppc/ppc64 stable wrt #384593

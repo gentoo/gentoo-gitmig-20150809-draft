@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.22 2011/03/07 11:35:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.23 2012/01/02 22:52:21 zmedico Exp $
 
 EAPI=2
 
@@ -125,6 +125,7 @@ src_configure() {
 	use sparc && myconf -Ud_longdbl
 
 	export LC_ALL="C"
+	[[ ${COLUMNS:-1} -ge 1 ]] || unset COLUMNS # bug #394091
 
 	# 266337
 	export BUILD_BZIP2=0
