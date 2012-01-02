@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.7.4.ebuild,v 1.1 2012/01/01 15:36:55 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.7.4.ebuild,v 1.2 2012/01/02 18:49:04 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit versionator gnome2 fdo-mime multilib python
+inherit versionator autotools eutils gnome2 fdo-mime multilib python
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
@@ -57,7 +57,8 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17
 	doc? ( >=dev-util/gtk-doc-1 )
 	>=sys-devel/libtool-2.2
-	>=sys-devel/automake-1.11"
+	>=sys-devel/automake-1.11
+	dev-util/gtk-doc-am"  # due to our call to eautoreconf below (bug #386453)
 
 DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
 
@@ -97,6 +98,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-no-deprecation.patch  # bug 395695, comment 9 and 16
+	eautoreconf  # If you remove this: remove dev-util/gtk-doc-am from DEPEND, too
+
 	echo '#!/bin/sh' > py-compile
 	gnome2_src_prepare
 }
