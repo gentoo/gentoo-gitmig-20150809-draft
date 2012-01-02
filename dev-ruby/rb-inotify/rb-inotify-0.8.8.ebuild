@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.8.8.ebuild,v 1.4 2011/12/30 14:33:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.8.8.ebuild,v 1.5 2012/01/02 19:04:52 graaff Exp $
 
 EAPI=4
 
@@ -29,6 +29,11 @@ IUSE=""
 ruby_add_rdepend "virtual/ruby-ffi"
 
 ruby_add_bdepend "doc? ( dev-ruby/yard )"
+
+all_ruby_prepare() {
+	# Avoid unneeded dependency on jeweler.
+	sed -i -e '/:build/ s:^:#:' -e '/module Jeweler/,/^end/ s:^:#:' -e '/class Jeweler/,/^end/ s:^:#:' Rakefile || die
+}
 
 each_ruby_prepare() {
 	case ${RUBY} in
