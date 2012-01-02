@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.12.1-r1.ebuild,v 1.2 2011/12/30 12:01:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.12.1-r1.ebuild,v 1.3 2012/01/02 00:08:34 ago Exp $
 
 EAPI="4"
 
@@ -46,7 +46,7 @@ src_configure() {
 		--enable-devel \
 		--enable-libipq \
 		--enable-shared \
-		$(use-enable static-libs static) \
+		$(use_enable static-libs static) \
 		$(use_enable ipv6)
 }
 
