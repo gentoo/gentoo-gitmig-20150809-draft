@@ -1,6 +1,20 @@
 # ChangeLog for dev-lang/R
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.191 2011/11/21 16:22:52 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.192 2012/01/02 19:47:54 bicatali Exp $
+
+*R-2.14.1 (02 Jan 2012)
+
+  02 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  files/R-2.11.1-parallel.patch, files/R-2.12.1-ldflags.patch,
+  -R-2.13.0.ebuild, -R-2.13.1-r1.ebuild, files/R-2.13.1-zlib_header_fix.patch,
+  -R-2.14.0.ebuild, +R-2.14.1.ebuild, +files/R-2.14.1-rmath-shared.patch,
+  +files/R-2.14.1-tiff.patch:
+  Version bump. Fixed automagic dependencies on icu and tiff. Added required
+  dependency on pango when cairo is set. Fixed as-needed on standalone math
+  library. Added required use flags for graphics capabilities (bug #373649).
+  Removed glibc hacks, applied on glibc package. Commented patches for another
+  attempt to submit them upstream. Removed older unstable versions, fixing bugs
+  #353545, bug #357077, bug #382687, bug #384493, bug #384723.
 
 *R-2.14.0 (21 Nov 2011)
 
