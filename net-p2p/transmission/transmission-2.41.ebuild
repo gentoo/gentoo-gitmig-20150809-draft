@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.41.ebuild,v 1.3 2011/11/26 22:41:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.41.ebuild,v 1.4 2012/01/02 21:41:29 scarabeus Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils qt4-r2 autotools
@@ -17,22 +17,30 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk kde nls qt4 utp"
 
 RDEPEND="
-	sys-libs/zlib
 	>=dev-libs/libevent-2.0.10
 	>=dev-libs/openssl-0.9.4
-	|| ( >=net-misc/curl-7.16.3[ssl]
-		>=net-misc/curl-7.16.3[gnutls] )
+	>=net-misc/curl-7.16.3[ssl]
 	>=net-libs/miniupnpc-1.6
-	gtk? ( >=dev-libs/glib-2.28:2
+	sys-libs/zlib
+	gtk? (
+		>=dev-libs/dbus-glib-0.70
+		>=dev-libs/glib-2.28:2
 		>=x11-libs/gtk+-2.22:2
-		>=dev-libs/dbus-glib-0.70 )
+	)
 	qt4? ( x11-libs/qt-gui:4[dbus] )"
 DEPEND="${RDEPEND}
-	>=sys-devel/libtool-2.2.6b
-	nls? ( sys-devel/gettext
-		>=dev-util/intltool-0.40 )
+	dev-util/intltool
 	dev-util/pkgconfig
-	sys-apps/sed"
+	sys-apps/sed
+	sys-devel/gettext
+	>=sys-devel/libtool-2.2.6b
+	nls? (
+		>=dev-util/intltool-0.40
+		sys-devel/gettext
+	)"
+# Intltool/gettext are required as far as we eautoreconf for
+# its autotools macros.
+# If the source is not eautoreconfed we can keep it in nls.
 
 S="${WORKDIR}/${MY_P}"
 
@@ -94,7 +102,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	dodoc AUTHORS NEWS qt/README.txt
 	rm -f "${ED}"/usr/share/${PN}/web/LICENSE
