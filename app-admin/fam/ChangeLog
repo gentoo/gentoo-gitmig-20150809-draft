@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.66 2011/01/24 04:36:58 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.67 2012/01/02 13:48:38 ago Exp $
+
+  02 Jan 2012; Agostino Sarubbo <ago@gentoo.org> fam-2.7.0-r6.ebuild:
+  Stable for AMD64, wrt bug #396749
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org> files/fam-2.7.0-gcc41.patch,
   files/fam-2.7.0-gcc43.patch, files/fam-2.7.0-gcc44.patch,
