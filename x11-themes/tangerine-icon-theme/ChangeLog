@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tangerine-icon-theme
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.21 2010/05/30 14:18:47 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.22 2012/01/02 10:25:42 ago Exp $
+
+  02 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  tangerine-icon-theme-0.27.ebuild:
+  Stable for AMD64, wrt bug #397303
 
   30 May 2010; Markos Chandras <hwoarang@gentoo.org>
   tangerine-icon-theme-0.26.ebuild:
