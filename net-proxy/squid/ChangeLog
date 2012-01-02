@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/squid
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.337 2011/12/29 17:35:31 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.338 2012/01/02 20:05:26 polynomial-c Exp $
+
+  02 Jan 2012; Lars Wendler <polynomial-c@gentoo.org>
+  files/squid.initd-logrotate:
+  non-maintainer commit: Replaced deprecated opts variable in logrotate init
+  script (bug #397357).
 
   29 Dec 2011; Jeroen Roovers <jer@gentoo.org> squid-3.1.18.ebuild,
   +files/squid-3.1.18-ecap.patch:
