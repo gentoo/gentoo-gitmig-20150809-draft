@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.333 2011/12/31 19:47:05 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.334 2012/01/02 13:41:33 jer Exp $
+
+  02 Jan 2012; Jeroen Roovers <jer@gentoo.org> lftp-4.3.4.ebuild:
+  Add LINGUAS support (bug #396629).
 
 *lftp-4.3.4 (31 Dec 2011)
 
