@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.17 2012/01/01 19:40:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.18 2012/01/02 00:14:46 ago Exp $
+
+  02 Jan 2012; Agostino Sarubbo <ago@gentoo.org> mpack-1.6-r2.ebuild:
+  Stable for AMD64, wrt security bug #171075
 
   01 Jan 2012; Sebastian Pipping <sping@gentoo.org> mpack-1.6-r2.ebuild:
   Run autoreconf, use emake (bug #396715, bug #396717)
