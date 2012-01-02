@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-streamdev
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/ChangeLog,v 1.13 2011/02/11 14:00:26 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/ChangeLog,v 1.14 2012/01/02 17:58:38 hd_brummy Exp $
+
+  02 Jan 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-streamdev-0.3.4.ebuild, -vdr-streamdev-0.3.4-r1.ebuild,
+  -vdr-streamdev-0.5.0.ebuild, vdr-streamdev-0.5.1.ebuild:
+  cleanup, src_uri moved to thirdpartymirror; stabel amd64, x64 on bug #397987
 
 *vdr-streamdev-0.5.1 (11 Feb 2011)
 

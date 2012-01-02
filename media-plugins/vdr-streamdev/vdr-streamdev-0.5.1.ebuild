@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.5.1.ebuild,v 1.1 2011/02/11 14:00:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.5.1.ebuild,v 1.2 2012/01/02 17:58:38 hd_brummy Exp $
 
 EAPI="3"
 
@@ -10,11 +10,11 @@ VERSION="497" # every bump, new version !
 
 DESCRIPTION="VDR Plugin: Client/Server streaming plugin"
 HOMEPAGE="http://projects.vdr-developer.org/projects/plg-streamdev"
-SRC_URI="http://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
+SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE="client +server"
 
 DEPEND=">=media-video/vdr-1.5.9"
