@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/subexec
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/ChangeLog,v 1.5 2011/12/28 11:13:01 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/ChangeLog,v 1.6 2012/01/02 07:00:24 graaff Exp $
+
+*subexec-0.2.1 (02 Jan 2012)
+
+  02 Jan 2012; Hans de Graaff <graaff@gentoo.org> +subexec-0.2.1.ebuild:
+  Version bump.
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> subexec-0.2.0.ebuild:
   Drop ruby-debug dependency. It's not needed and not ruby19-ready.
