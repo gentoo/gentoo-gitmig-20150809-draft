@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/bedtools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bedtools/ChangeLog,v 1.1 2011/10/09 04:01:53 weaver Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bedtools/ChangeLog,v 1.2 2012/01/02 22:13:24 weaver Exp $
+
+*bedtools-2.15.0 (02 Jan 2012)
+
+  02 Jan 2012; Andrey Kislyuk <weaver@gentoo.org> +bedtools-2.15.0.ebuild:
+  Version bump
 
 *bedtools-2.13.3 (09 Oct 2011)
 
