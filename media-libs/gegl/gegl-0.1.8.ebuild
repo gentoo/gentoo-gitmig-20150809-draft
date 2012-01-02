@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.3 2012/01/01 21:54:45 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.4 2012/01/02 11:59:06 sping Exp $
 
 EAPI=4
 
-inherit eutils autotools
+inherit gnome2-utils eutils autotools
 
 DESCRIPTION="A graph based image processing framework"
 HOMEPAGE="http://www.gegl.org/"
@@ -97,16 +97,13 @@ src_configure() {
 }
 
 src_test() {
-	# set xdg dirs to not violate sandbox constrains
-	export XDG_CONFIG_HOME="${T}"
-	export XDG_CACHE_HOME="${T}"
-
+	gnome2_environment_reset  # sandbox issues
 	default
 }
 
 src_compile() {
-	# Sandbox workaround (bug #396687)
-	GI_SCANNER_DISABLE_CACHE=yes_please default
+	gnome2_environment_reset  # sandbox issues (bug #396687)
+	default
 }
 
 src_install() {
