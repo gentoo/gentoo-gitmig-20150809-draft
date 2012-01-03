@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/siphon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.15 2010/09/07 16:33:59 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.16 2012/01/03 17:53:27 jer Exp $
+
+  03 Jan 2012; Jeroen Roovers <jer@gentoo.org> siphon-666-r1.ebuild:
+  Set RDEPEND.
 
 *siphon-666-r1 (07 Sep 2010)
 
