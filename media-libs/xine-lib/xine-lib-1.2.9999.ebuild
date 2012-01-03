@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.6 2012/01/03 19:51:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.7 2012/01/03 20:04:18 ssuominen Exp $
 
 EAPI=4
 
@@ -21,12 +21,13 @@ HOMEPAGE="http://xine.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="1"
-IUSE="a52 aac aalib +alsa altivec bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack libcaca mad +mmap mng modplug musepack nls opengl oss pulseaudio real samba sdl speex theora truetype v4l vcd vdpau vdr vidix +vis vorbis wavpack win32codecs +X +xcb xinerama +xv xvmc"
+IUSE="a52 aac aalib +alsa altivec bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack libcaca mad +mmap mng modplug musepack opengl oss pulseaudio real samba sdl speex theora truetype v4l vcd vdpau vdr vidix +vis vorbis wavpack win32codecs +X +xcb xinerama +xv xvmc"
 
 RDEPEND="dev-libs/libxdg-basedir
 	sys-libs/zlib
 	virtual/ffmpeg
 	virtual/libiconv
+	virtual/libintl
 	a52? ( media-libs/a52dec )
 	aac? ( media-libs/faad2 )
 	aalib? ( media-libs/aalib )
@@ -46,7 +47,6 @@ RDEPEND="dev-libs/libxdg-basedir
 	mng? ( media-libs/libmng )
 	modplug? ( >=media-libs/libmodplug-0.8.8.1 )
 	musepack? ( >=media-sound/musepack-tools-444 )
-	nls? ( virtual/libintl )
 	opengl? (
 		virtual/glu
 		virtual/opengl
@@ -88,8 +88,8 @@ RDEPEND="dev-libs/libxdg-basedir
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-util/pkgconfig
+	sys-devel/gettext
 	>=sys-devel/libtool-2.2.6b
-	nls? ( sys-devel/gettext )
 	v4l? ( virtual/os-headers )
 	X? (
 		x11-libs/libXt
@@ -125,7 +125,6 @@ src_configure() {
 
 	econf \
 		$(use_enable ipv6) \
-		$(use_enable nls) \
 		$(use_enable altivec) \
 		$(use_enable vis) \
 		--disable-optimizations \
