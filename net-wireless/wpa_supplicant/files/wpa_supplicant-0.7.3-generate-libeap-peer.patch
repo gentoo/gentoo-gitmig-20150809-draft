@@ -205,7 +205,7 @@ index 3651056..58c067a 100644
 +#	copy the lib file to std lib location
 +	cp $(LIBEAP) $(DESTDIR)/usr/lib
 +	ln -fs $(LIBEAP_SO) $(DESTDIR)/usr/lib/$(LIBEAP_NAME).so
-+	ln -fs $(LIBEAP_NAME).so.0.0 $(DESTDIR)/usr/lib/$(LIBEAP_NAME).so.0
++	ln -fs $(LIBEAP_NAME).so.0.0.0 $(DESTDIR)/usr/lib/$(LIBEAP_NAME).so.0
 +
 +#	copy the headers reqd by apps using eap peer library in its own subfolder under /usr/include
 +	mkdir -p \
