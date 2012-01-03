@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.0.2_p1.ebuild,v 1.9 2012/01/01 18:37:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.0.2_p1.ebuild,v 1.10 2012/01/03 10:21:17 vapier Exp $
 
 inherit flag-o-matic eutils libtool toolchain-funcs
 
@@ -81,7 +81,10 @@ src_install() {
 	# should be a standalone lib
 	rm -f "${D}"/usr/$(get_libdir)/libgmp.la
 	# this requires libgmp
-	use static-libs || rm -f "${D}"/usr/$(get_libdir)/libgmpxx.la
+	local la="${D}/usr/$(get_libdir)/libgmpxx.la"
+	use static-libs \
+		&& sed -i 's:/[^ ]*/libgmp.la:-lgmp:' "${la}" \
+		|| rm -f "${la}"
 
 	dodoc AUTHORS ChangeLog NEWS README
 	dodoc doc/configuration doc/isa_abi_headache
