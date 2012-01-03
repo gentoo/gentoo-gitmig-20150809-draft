@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-141.ebuild,v 1.11 2011/12/29 19:32:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-141.ebuild,v 1.12 2012/01/03 00:22:10 williamh Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -79,7 +79,7 @@ sed_helper_dir() {
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		git_src_unpack
+		git-2_src_unpack
 	else
 		unpack ${A}
 	fi

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-141-r1.ebuild,v 1.6 2011/12/29 19:32:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-141-r1.ebuild,v 1.7 2012/01/03 00:22:10 williamh Exp $
 
 #
 # Please do not remove this version:
@@ -86,7 +86,7 @@ sed_helper_dir() {
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		git_src_unpack
+		git-2_src_unpack
 	else
 		unpack ${A}
 	fi
