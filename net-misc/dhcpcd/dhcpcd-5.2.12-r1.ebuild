@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.2.12-r1.ebuild,v 1.4 2011/08/02 21:16:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.2.12-r1.ebuild,v 1.5 2012/01/03 21:08:46 swift Exp $
 
 EAPI=4
 
@@ -19,10 +19,11 @@ LICENSE="BSD-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-linux"
 
 SLOT="0"
-IUSE="+zeroconf elibc_glibc"
+IUSE="selinux +zeroconf elibc_glibc"
 
-DEPEND=""
-RDEPEND="!<sys-apps/openrc-0.6.0"
+DEPEND="selinux? ( sec-policy/selinux-dhcp )"
+RDEPEND="!<sys-apps/openrc-0.6.0
+	selinux? ( sec-policy/selinux-dhcp )"
 
 src_prepare() {
 	if ! use zeroconf; then
