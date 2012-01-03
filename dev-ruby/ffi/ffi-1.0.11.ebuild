@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.0.11.ebuild,v 1.1 2011/12/18 09:11:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.0.11.ebuild,v 1.2 2012/01/03 18:36:35 graaff Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-maco
 RDEPEND="${RDEPEND} virtual/libffi"
 DEPEND="${DEPEND} virtual/libffi"
 
-ruby_add_bdepend "dev-ruby/rake-compiler
+ruby_add_bdepend "dev-ruby/rake-compiler dev-ruby/rdoc
 	test? ( dev-ruby/rspec:2 )"
 
 ruby_add_rdepend "virtual/ruby-threads"
