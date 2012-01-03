@@ -1,0 +1,10 @@
+# ChangeLog for media-radio/qsstv
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.6 2012/01/03 13:54:00 tomjbe Exp $
+
+*qsstv-7.1.6 (03 Jan 2012)
+
+  03 Jan 2012; Thomas Beierlein <tomjbe@gentoo.org> +qsstv-7.1.6.ebuild,
+  +metadata.xml:
+  Initial commit of new version working with Qt4
+
