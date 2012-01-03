@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk-g729
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.1 2011/09/02 13:00:51 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.2 2012/01/03 13:07:36 chainsaw Exp $
+
+*asterisk-g729-1.8.4.3.1.5-r1 (03 Jan 2012)
+
+  03 Jan 2012; Tony Vroon <chainsaw@gentoo.org>
+  -asterisk-g729-1.8.4.3.1.5.ebuild, +asterisk-g729-1.8.4.3.1.5-r1.ebuild:
+  Install shared library to correct location (multilib-aware) and simplify
+  versioning now that 1.6.2 is no longer in the tree. Patch by Jaco Kroon
+  closes bug #396413.
 
 *asterisk-g729-1.8.4.3.1.5 (02 Sep 2011)
 

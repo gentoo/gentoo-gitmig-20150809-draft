@@ -1,41 +1,19 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-1.8.4.3.1.5.ebuild,v 1.1 2011/09/02 13:00:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-1.8.4.3.1.5-r1.ebuild,v 1.1 2012/01/03 13:07:36 chainsaw Exp $
 
 EAPI="4"
 
-inherit versionator
+inherit versionator multilib
 
 DESCRIPTION="G.729 codec and supporting files for asterisk"
 HOMEPAGE="http://store.digium.com/productview.php?product_code=G729CODEC"
 
 BENCH_PV=1.0.8
-PV_C=($(get_version_components))
 
-case ${PV_C[1]} in
-	4)
-		AST_PV=1.4
-		MY_PV=$(replace_version_separator 2 _)
-	;;
-	6)
-		AST_DPV=1.6.${PV_C[2]}
-		case ${PV_C[2]} in
-			0|1)
-				AST_PV=1.6.${PV_C[2]}
-				MY_PV=$(replace_version_separator 3 _)
-			;;
-			2)
-				AST_PV=1.6.${PV_C[2]}.${PV_C[3]}
-				MY_PV=$(replace_version_separator 4 _)
-			;;
-		esac
-	;;
-	8)
-		AST_DPV=1.8
-		AST_PV=1.8.${PV_C[2]}
-		MY_PV=$(replace_version_separator 3 _)
-	;;
-esac
+AST_DPV=1.8.7
+AST_PV=1.8.7
+MY_PV=$(replace_version_separator 3 _)
 
 SRC_URI="x86? (
 	http://downloads.digium.com/pub/telephony/codec_g729/asterisk-${AST_PV}/x86-32/codec_g729a-${MY_PV}-athlon_32.tar.gz
@@ -86,9 +64,12 @@ QA_DT_HASH_x86="usr/lib/codec_g729a.so usr/sbin/benchg729"
 
 QA_EXECSTACK="usr/sbin/benchg729 usr/sbin/asthostid usr/sbin/astregister"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_prepare() {
+	local binsuffix
+	local b
+
 	if use x86; then
 		binsuffix=x86_32
 	elif use amd64; then
@@ -130,8 +111,8 @@ src_install() {
 
 	dodoc codec_g729a-${MY_PV}-${variant}_${size}/LICENSE
 	dodoc codec_g729a-${MY_PV}-${variant}_${size}/README
-	insinto /usr/lib/asterisk/modules/
-	dolib.so codec_g729a-${MY_PV}-${variant}_${size}/codec_g729a.so
+	insinto usr/$(get_libdir)/asterisk/modules/
+	doins "codec_g729a-${MY_PV}-${variant}_${size}/codec_g729a.so"
 }
 
 pkg_postinst() {
