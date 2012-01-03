@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/quadkonsole
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/ChangeLog,v 1.13 2011/09/24 15:56:55 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/ChangeLog,v 1.14 2012/01/03 19:41:30 johu Exp $
+
+*quadkonsole-0.4.4 (03 Jan 2012)
+
+  03 Jan 2012; Johannes Huber <johu@gentoo.org> +quadkonsole-0.4.4.ebuild,
+  -quadkonsole-0.2.1.ebuild, -quadkonsole-0.4.2.ebuild:
+  Version bump, remove old.
 
 *quadkonsole-0.4.2 (24 Sep 2011)
 
