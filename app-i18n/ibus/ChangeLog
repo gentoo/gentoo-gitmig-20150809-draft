@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.95 2011/12/23 07:59:07 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.96 2012/01/03 15:18:37 ssuominen Exp $
+
+  03 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> ibus-1.4.0-r1.ebuild:
+  Empty py-compile script instead of symlinking it wrt #397497 by "arnk"
 
 *ibus-1.4.0-r1 (23 Dec 2011)
 
