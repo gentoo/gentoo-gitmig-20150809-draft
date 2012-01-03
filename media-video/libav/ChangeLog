@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.41 2012/01/02 13:46:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.42 2012/01/03 03:41:40 lu_zero Exp $
+
+*libav-0.8_beta1 (02 Jan 2012)
+
+  02 Jan 2012; Luca Barbato <lu_zero@gentoo.org> +libav-0.8_beta1.ebuild:
+  New beta version
 
   02 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   USE description for flag "neon" is in use.desc now.
