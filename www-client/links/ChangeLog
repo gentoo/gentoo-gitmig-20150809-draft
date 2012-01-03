@@ -1,6 +1,11 @@
 # ChangeLog for www-client/links
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.146 2011/12/31 10:56:37 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.147 2012/01/03 09:41:23 ssuominen Exp $
+
+*links-2.5 (03 Jan 2012)
+
+  03 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +links-2.5.ebuild:
+  Version bump.
 
   31 Dec 2011; Agostino Sarubbo <ago@gentoo.org> links-2.4-r2.ebuild:
   Stable for AMD64, wrt bug #396519
