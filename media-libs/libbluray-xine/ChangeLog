@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libbluray-xine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray-xine/ChangeLog,v 1.9 2011/12/15 23:15:15 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray-xine/ChangeLog,v 1.10 2012/01/03 22:46:14 ssuominen Exp $
+
+  03 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libbluray-xine-0.2.1.ebuild, libbluray-xine-9999.ebuild:
+  Block media-libs/xine-lib with USE bluray because both provide plug-in
+  xineplug_inp_bluray.so
 
   15 Dec 2011; Agostino Sarubbo <ago@gentoo.org>
   libbluray-xine-0.0.1_pre20110819.ebuild:
