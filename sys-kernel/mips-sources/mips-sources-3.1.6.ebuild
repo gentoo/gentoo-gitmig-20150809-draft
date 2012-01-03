@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-3.0.9.ebuild,v 1.1 2011/12/18 03:54:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-3.1.6.ebuild,v 1.1 2012/01/03 02:36:08 kumba Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -15,7 +15,7 @@
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20110821"			# Date of diff between kernel.org and lmo GIT
+GITDATE="20111216"			# Date of diff between kernel.org and lmo GIT
 GENPATCHREV="2"				# Tarball revision for patches
 
 # Directories

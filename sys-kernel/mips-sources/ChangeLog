@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/mips-sources
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.142 2011/12/18 03:54:19 kumba Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.143 2012/01/03 02:36:08 kumba Exp $
+
+*mips-sources-3.1.6 (02 Jan 2012)
+*mips-sources-3.0.9-r1 (02 Jan 2012)
+
+  02 Jan 2012; Joshua Kinard <kumba@gentoo.org> -mips-sources-3.0.9.ebuild,
+  +mips-sources-3.0.9-r1.ebuild, -mips-sources-3.1.5.ebuild,
+  +mips-sources-3.1.6.ebuild:
+  Update the multicast patch in 3.0.9 to the one that was accepted by net-dev
+  and removed the cleanups patch. Ditto for 3.1.x, and update to 3.1.6.
 
 *mips-sources-3.1.5 (17 Dec 2011)
 *mips-sources-3.0.9 (17 Dec 2011)
