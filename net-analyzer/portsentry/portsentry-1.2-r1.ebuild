@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2-r1.ebuild,v 1.1 2010/09/10 14:27:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2-r1.ebuild,v 1.2 2012/01/03 17:50:04 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,6 +15,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
+RDEPEND=""
+
 S="${WORKDIR}"/${PN}_beta
 
 src_unpack() {
@@ -35,7 +37,7 @@ src_unpack() {
 	sed -i \
 		-e "s:^set SENTRYDIR.*:set SENTRYDIR=/etc/portsentry:g" \
 		ignore.csh || die "sed ignore.csh failed"
-	epatch ${FILESDIR}/gcc.patch
+	epatch "${FILESDIR}"/gcc.patch
 }
 
 src_compile() {
@@ -43,10 +45,10 @@ src_compile() {
 }
 
 src_install() {
-	doman ${FILESDIR}/{portsentry.8,portsentry.conf.5}
+	doman "${FILESDIR}"/{portsentry.8,portsentry.conf.5}
 
 	dobin portsentry ignore.csh
-	dodoc README* CHANGES LICENSE CREDITS
+	dodoc README* CHANGES CREDITS
 	newdoc portsentry.ignore portsentry.ignore.sample
 	newdoc portsentry.conf portsentry.conf.sample
 
