@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.104 2012/01/02 17:50:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.105 2012/01/03 22:17:42 pesa Exp $
+
+*qt-creator-2.4.0-r1 (03 Jan 2012)
+
+  03 Jan 2012; Davide Pesavento <pesa@gentoo.org> +qt-creator-2.4.0-r1.ebuild,
+  -qt-creator-2.4.0.ebuild, metadata.xml:
+  Revbump with major changes: remove USE=qml and always depend on qt-declarative
+  and qt-script (they're required by some core plugins); remove pointless and/or
+  obsolete USE flags; add madde and valgrind USE flags; move VCS packages to
+  PDEPEND; stop adding a custom rpath, the build system already takes care of
+  setting it; install a better icon; other misc cleanups. Also added myself as
+  maintainer.
 
   02 Jan 2012; Davide Pesavento <pesa@gentoo.org> -files/docs_gen.patch,
   -files/qt-creator-1.3.1-qt47.patch, metadata.xml:
