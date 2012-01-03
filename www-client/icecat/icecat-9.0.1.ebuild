@@ -1,18 +1,18 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-7.0.1.ebuild,v 1.2 2011/12/13 17:20:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-9.0.1.ebuild,v 1.1 2012/01/03 00:17:54 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension versionator python virtualx
+inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension versionator python virtualx nsplugins
 
 MAJ_FF_PV="$(get_version_component_range 1-2)" # 3.5, 3.6, 4.0, etc.
 FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
-PATCH="firefox-7.0-patches-0.5"
+PATCH="firefox-9.0-patches-0.4"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
@@ -23,7 +23,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+crashreporter +ipc pgo system-sqlite +webm"
 
 # More URIs appended below...
-SRC_URI="mirror://gnu/gnuzilla/${FF_PV}/${PN}-${FF_PV}.tar.bz2
+SRC_URI="mirror://gnu/gnuzilla/${FF_PV}/${PN}-${FF_PV}.tar.xz
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz"
 LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/${FF_PV}"
 
@@ -32,13 +32,13 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.10
+	>=dev-libs/nss-3.13.1
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	virtual/libffi
-	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,unlock-notify,debug=] )
 	webm? ( media-libs/libvpx
 		media-libs/alsa-lib )
 	crashreporter? ( net-misc/curl )"
@@ -54,25 +54,24 @@ DEPEND="${RDEPEND}
 # No language packs for alphas
 if ! [[ ${PV} =~ alpha|beta ]]; then
 	# This list can be updated with scripts/get_langs.sh from mozilla overlay
-	LANGS="af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de
+	LANGS=(af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de
 	el en eo es-ES et eu fa fi fr fy-NL ga-IE gd gl gu-IN
 	he hi-IN hr hu hy-AM id is it ja kk kn ko ku lg lt lv mai mk
 	ml mr nb-NO nl nn-NO nso or pa-IN pl pt-PT rm ro ru si sk sl
-	son sq sr sv-SE ta ta-LK te th tr uk vi zu"
-	NOSHORTLANGS="en-GB en-ZA es-AR es-CL es-MX pt-BR zh-CN zh-TW"
+	son sq sr sv-SE ta ta-LK te th tr uk vi zu)
 
-	for X in ${LANGS} ; do
-		if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
+	for X in "${LANGS[@]}" ; do
+		# en and en_US are handled internally
+		if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
 			SRC_URI="${SRC_URI}
 				linguas_${X/-/_}? ( ${LANGPACK_URI}/${X}.xpi -> ${P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X/-/_}"
-		# english is handled internally
-		if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
-			if [ "${X}" != "en-US" ]; then
-				SRC_URI="${SRC_URI}
-					linguas_${X%%-*}? ( ${LANGPACK_URI}/${X}.xpi -> ${P}-${X}.xpi )"
-			fi
+		# Install all the specific locale xpis if there's no generic locale xpi
+		# Example: there's no pt.xpi, so install all pt-*.xpi
+		if ! has ${X%%-*} "${LANGS[@]}"; then
+			SRC_URI="${SRC_URI}
+				linguas_${X%%-*}? ( ${LANGPACK_URI}/${X}.xpi -> ${P}-${X}.xpi )"
 			IUSE="${IUSE} linguas_${X%%-*}"
 		fi
 	done
@@ -80,25 +79,31 @@ fi
 
 QA_PRESTRIPPED="usr/$(get_libdir)/${PN}/${PN}"
 
+# TODO: Move all the linguas crap to an eclass
 linguas() {
-	local LANG SLANG
-	for LANG in ${LINGUAS}; do
-		if has ${LANG} en en_US; then
-			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
+	# Generate the list of language packs called "linguas"
+	# This list is used to install the xpi language packs
+	local LINGUA
+	for LINGUA in ${LINGUAS}; do
+		if has ${LINGUA} en en_US ; then
+			# For mozilla products, en and en_US are handled internally
 			continue
-		elif has ${LANG} ${LANGS//-/_}; then
-			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+		# If this language is supported by ${P},
+		elif has ${LINGUA} "${LANGS[@]//-/_}" ; then
+			# Add the language to linguas, if it isn't already there
+			has ${LINGUA//_/-} "${linguas[@]}" || linguas+=(${LINGUA//_/-})
 			continue
-		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
-			for X in ${LANGS}; do
-				if [[ "${X}" == "${LANG}-"* ]] && \
-					[[ " ${NOSHORTLANGS} " != *" ${X} "* ]]; then
-					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
+		# For each short LINGUA that isn't in LANGS,
+		# add *all* long LANGS to the linguas list
+		elif ! has ${LINGUA%%-*} "${LANGS[@]}" ; then
+			for LANG in "${LANGS[@]}" ; do
+				if [[ ${LANG} == ${LINGUA}-* ]] ; then
+					has ${LANG} "${linguas[@]}" || linguas+=(${LANG})
 					continue 2
 				fi
 			done
 		fi
-		ewarn "Sorry, but ${P} does not support the ${LANG} LINGUA"
+		ewarn "Sorry, but ${P} does not support the ${LINGUA} locale"
 	done
 }
 
@@ -119,15 +124,23 @@ pkg_setup() {
 		ewarn "You will do a double build for profile guided optimization."
 		ewarn "This will result in your build taking at least twice as long as before."
 	fi
+
+	# Ensure we have enough disk space to compile
+	if use pgo || use debug || use test ; then
+		CHECKREQS_DISK_BUILD="8G"
+	else
+		CHECKREQS_DISK_BUILD="4G"
+	fi
+	check-reqs_pkg_setup
 }
 
 src_unpack() {
 	unpack ${A}
 
 	linguas
-	for X in ${linguas}; do
+	for X in "${linguas[@]}" ; do
 		# FIXME: Add support for unpacking xpis to portage
-		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
+		xpi_unpack "${P}-${X}.xpi"
 	done
 }
 
@@ -137,13 +150,13 @@ src_prepare() {
 
 	# Apply our patches
 	#
-	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch" \
+	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch
+			5009_revert_bug_708572.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
 
-	epatch "${FILESDIR}"/2000-icecat-6_gentoo_install_dirs.patch \
-		"${FILESDIR}"/${PN}-5.0-curl7217-includes-fix.patch
+	epatch "${FILESDIR}"/2000-icecat-6_gentoo_install_dirs.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
@@ -173,9 +186,6 @@ src_prepare() {
 		-i "${S}"/nsprpub/configure{.in,} \
 		|| die
 
-	eautoreconf
-
-	cd js/src
 	eautoreconf
 }
 
@@ -213,6 +223,7 @@ src_configure() {
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --enable-safe-browsing
 	mozconfig_annotate '' --with-system-png
+	mozconfig_annotate '' --enable-system-ffi
 
 	# Other browser-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
@@ -271,15 +282,15 @@ src_install() {
 	pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
 
 	# Add our default prefs for firefox + xulrunner
-	cp "${FILESDIR}"/gentoo-default-prefs.js \
+	cp "${FILESDIR}"/gentoo-default-prefs.js-1 \
 		"${S}/${obj_dir}/dist/bin/defaults/pref/all-gentoo.js" || die
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	linguas
-	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}/${P}-${X}"
+	for X in "${linguas[@]}" ; do
+		xpi_install "${WORKDIR}/${P}-${X}"
 	done
 
 	local size sizes icon_path icon name
@@ -309,9 +320,7 @@ src_install() {
 	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{${PN},${PN}-bin,plugin-container}
 
 	# Plugins dir
-	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins \
-		|| die "failed to symlink"
-
+	share_plugins_dir
 }
 
 pkg_preinst() {
