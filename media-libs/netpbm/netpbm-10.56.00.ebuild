@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.56.00.ebuild,v 1.1 2011/12/05 00:03:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.56.00.ebuild,v 1.2 2012/01/03 01:36:12 vapier Exp $
 
 EAPI="3"
 
@@ -101,6 +101,9 @@ src_configure() {
 
 	# Gentoo build options
 	TIFFLIB = $(netpbm_config tiff)
+	# Let tiff worry about its own dependencies #395753
+	TIFFLIB_NEEDS_JPEG = N
+	TIFFLIB_NEEDS_Z = N
 	JPEGLIB = $(netpbm_config jpeg)
 	PNGLIB = $(netpbm_config png)
 	ZLIB = $(netpbm_config zlib z)

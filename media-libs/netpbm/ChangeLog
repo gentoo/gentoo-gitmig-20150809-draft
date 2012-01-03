@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.261 2011/12/05 00:03:07 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.262 2012/01/03 01:36:12 vapier Exp $
+
+  03 Jan 2012; Mike Frysinger <vapier@gentoo.org> netpbm-10.56.00.ebuild:
+  Disable internal jpeg/z depends on tiff #395753 by Diego Elio Pettenò.
 
 *netpbm-10.56.00 (05 Dec 2011)
 
