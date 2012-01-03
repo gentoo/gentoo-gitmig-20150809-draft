@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/yard
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.24 2011/12/31 17:56:46 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.25 2012/01/03 18:15:57 jer Exp $
+
+  03 Jan 2012; Jeroen Roovers <jer@gentoo.org> yard-0.7.3.ebuild,
+  yard-0.7.4.ebuild:
+  Marked ~hppa (bug #396663).
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> yard-0.7.4.ebuild:
   Marked ~sparc64-solaris

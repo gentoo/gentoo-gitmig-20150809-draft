@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.54 2011/11/02 06:47:26 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.55 2012/01/03 18:15:15 jer Exp $
+
+  03 Jan 2012; Jeroen Roovers <jer@gentoo.org> bluecloth-2.2.0.ebuild:
+  Marked ~hppa (bug #396663).
 
 *bluecloth-2.2.0 (02 Nov 2011)
 

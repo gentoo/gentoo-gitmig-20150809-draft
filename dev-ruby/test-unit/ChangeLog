@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.49 2012/01/01 10:10:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.50 2012/01/03 18:16:42 jer Exp $
+
+  03 Jan 2012; Jeroen Roovers <jer@gentoo.org> test-unit-2.4.0.ebuild,
+  test-unit-2.4.2.ebuild, test-unit-2.4.3.ebuild:
+  Marked ~hppa (bug #396663).
 
   01 Jan 2012; Hans de Graaff <graaff@gentoo.org> test-unit-1.2.3.ebuild,
   test-unit-2.1.2-r1.ebuild:

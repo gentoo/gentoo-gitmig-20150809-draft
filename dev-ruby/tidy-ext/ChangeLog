@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tidy-ext
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.7 2011/08/07 14:07:52 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.8 2012/01/03 18:14:33 jer Exp $
+
+  03 Jan 2012; Jeroen Roovers <jer@gentoo.org> tidy-ext-0.1.11.ebuild:
+  Marked ~hppa (bug #396663).
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> tidy-ext-0.1.11.ebuild:
   Add ~sparc
