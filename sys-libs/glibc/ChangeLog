@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.812 2012/01/02 16:02:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.813 2012/01/03 00:35:12 vapier Exp $
+
+  03 Jan 2012; Mike Frysinger <vapier@gentoo.org>
+  glibc-2.9_p20081201-r3.ebuild:
+  Push out a few updated patches.
 
   02 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2007:
   Split ChangeLog.
