@@ -1,33 +1,28 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.0_alpha9.ebuild,v 1.3 2012/01/03 05:43:07 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.9-r1.ebuild,v 1.1 2012/01/03 05:43:07 binki Exp $
 
 EAPI=4
 
-inherit autotools eutils flag-o-matic perl-module
-
-MY_P=${P/_/-}
+inherit autotools eutils flag-o-matic perl-module prefix
 
 DESCRIPTION="A portable and secure set of open-source and modular IRC services"
 HOMEPAGE="http://atheme.net/"
-SRC_URI="http://atheme.net/downloads/${MY_P}.tar.bz2"
+SRC_URI="http://atheme.net/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd ~amd64-linux"
 IUSE="cracklib largenet ldap nls +pcre perl profile ssl"
 
-RDEPEND=">=dev-libs/libmowgli-0.9.95
+RDEPEND="dev-libs/libmowgli
 	cracklib? ( sys-libs/cracklib )
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
-	perl? ( dev-lang/perl )
 	pcre? ( dev-libs/libpcre )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	# the dependency calculation puts all of the .c files together and
@@ -46,10 +41,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# The first PKG_CHECK_MODULES call is conditional, causing
-	# PKG_PROG_PKG_CONFIG expansion to fail.
-	epatch "${FILESDIR}"/${P}-pkg-config.patch
-	epatch "${FILESDIR}"/${PN}-7.0.0_alpha11-cracklib-automagic.patch
+	epatch "${FILESDIR}"/${PN}-6.0.8-configure-disable.patch
+	epatch "${FILESDIR}"/${P}-cracklib-automagic.patch
 	eautoconf
 
 	# fix docdir
@@ -59,7 +52,7 @@ src_prepare() {
 	sed -i -e '/^logfile/s;var/\(.*\.log\);'"${EPREFIX}"'/var/log/atheme/\1;g' dist/* || die
 
 	# QA against bundled libs
-	rm -rf libmowgli libmowgli-2 || die
+	rm -rf libmowgli || die
 
 	# Get useful information into build.log
 	sed -i -e '/^\.SILENT:$/d' buildsys.mk.in || die
@@ -67,19 +60,16 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		atheme_cv_c_gcc_w_error_implicit_function_declaration=no \
 		--sysconfdir="${EPREFIX}"/etc/${PN} \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--localstatedir="${EPREFIX}"/var \
 		--enable-fhs-paths \
-		--disable-warnings \
 		--enable-contrib \
 		$(use_enable largenet large-net) \
 		$(use_with cracklib) \
 		$(use_with ldap) \
 		$(use_with nls) \
 		$(use_enable profile) \
-		$(use_with perl) \
 		$(use_with pcre) \
 		$(use_enable ssl)
 }

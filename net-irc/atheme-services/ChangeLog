@@ -1,6 +1,16 @@
 # ChangeLog for net-irc/atheme-services
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.25 2011/12/30 22:47:37 binki Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.26 2012/01/03 05:43:07 binki Exp $
+
+*atheme-services-6.0.9-r1 (03 Jan 2012)
+
+  03 Jan 2012; Nathan Phillip Brink <binki@gentoo.org>
+  atheme-services-6.0.9.ebuild, +atheme-services-6.0.9-r1.ebuild,
+  +files/atheme-services-6.0.9-cracklib-automagic.patch,
+  atheme-services-7.0.0_alpha9.ebuild,
+  +files/atheme-services-7.0.0_alpha11-cracklib-automagic.patch, metadata.xml:
+  Add patch removing automagic dependence on sys-libs/cracklib, fixes bug
+  #397401 reported by kensington.
 
   30 Dec 2011; Nathan Phillip Brink <binki@gentoo.org>
   -atheme-services-6.0.8-r2.ebuild:
