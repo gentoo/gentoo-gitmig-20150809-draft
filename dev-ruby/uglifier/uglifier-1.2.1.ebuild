@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-1.2.1.ebuild,v 1.2 2011/12/30 18:15:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-1.2.1.ebuild,v 1.3 2012/01/03 18:11:26 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18"
@@ -8,7 +8,7 @@ USE_RUBY="ruby18 ruby19 ree18"
 # Avoid building documentation to avoid dependencies on bundler and jeweler
 RUBY_FAKEGEM_TASK_DOC=""
 
-RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
+RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
 inherit ruby-fakegem
 
