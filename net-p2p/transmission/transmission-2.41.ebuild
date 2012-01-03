@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.41.ebuild,v 1.4 2012/01/02 21:41:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.41.ebuild,v 1.5 2012/01/03 07:59:40 scarabeus Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils qt4-r2 autotools
@@ -45,6 +45,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 REQUIRED_USE="gtk? ( nls )"
+
+DOCS="AUTHORS NEWS qt/README.txt"
 
 pkg_setup() {
 	enewgroup transmission
@@ -104,7 +106,6 @@ src_compile() {
 src_install() {
 	default
 
-	dodoc AUTHORS NEWS qt/README.txt
 	rm -f "${ED}"/usr/share/${PN}/web/LICENSE
 
 	newinitd "${FILESDIR}"/${PN}-daemon.initd.8 ${PN}-daemon

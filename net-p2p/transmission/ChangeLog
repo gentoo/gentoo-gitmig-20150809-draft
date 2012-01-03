@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.161 2012/01/02 21:41:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.162 2012/01/03 07:59:40 scarabeus Exp $
+
+  03 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  transmission-2.41.ebuild:
+  Use doc array to make everyone happy.
 
   02 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   transmission-2.41.ebuild:
