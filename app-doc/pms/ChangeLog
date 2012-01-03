@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/pms
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.31 2011/09/13 18:21:26 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.32 2012/01/03 15:46:38 halcy0n Exp $
+
+  03 Jan 2012; Mark Loeser <halcy0n@gentoo.org> pms-2.ebuild, pms-3.ebuild,
+  pms-4_p20110118.ebuild:
+  Drop mips-irix as its no longer supported
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #225633
