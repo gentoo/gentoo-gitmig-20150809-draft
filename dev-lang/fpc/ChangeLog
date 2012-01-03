@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/fpc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.56 2011/12/12 23:40:50 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.57 2012/01/03 06:09:50 radhermit Exp $
+
+*fpc-2.6.0 (03 Jan 2012)
+
+  03 Jan 2012; Tim Harder <radhermit@gentoo.org> +fpc-2.6.0.ebuild:
+  Version bump (bug #396695 by Merlijn Wajer). Add arm keyword.
 
   12 Dec 2011; Tim Harder <radhermit@gentoo.org> fpc-2.4.4.ebuild:
   Remove deprecated external fpc-ide related setup (fixes bug #394475).
