@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/pkgcore
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.143 2011/12/26 20:32:06 ferringb Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.144 2012/01/03 14:02:38 ferringb Exp $
+
+*pkgcore-0.7.7.5-r1 (03 Jan 2012)
+
+  03 Jan 2012; Brian Harring <ferringb@gentoo.org> -pkgcore-0.7.5-r2.ebuild,
+  -files/pkgcore-0.7.5-dosym.patch,
+  -files/pkgcore-0.7.5-force-python-binary.patch, -pkgcore-0.7.7.4.ebuild,
+  +pkgcore-0.7.7.5-r1.ebuild, +files/pkgcore-0.7.7.5-NameError.patch:
+  Fix NameError in 0.7.7.5 that occurs when pkgcore commands have an uncaught
+  exception. Additionally, remove old versions in the process.
 
 *pkgcore-0.7.7.5 (26 Dec 2011)
 

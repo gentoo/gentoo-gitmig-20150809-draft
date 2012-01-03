@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.5-r2.ebuild,v 1.1 2011/11/18 04:04:58 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.7.5-r1.ebuild,v 1.1 2012/01/03 14:02:38 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="-doc build"
 
 RDEPEND=">=dev-lang/python-2.4
-	>=dev-python/snakeoil-0.4.4
+	>=dev-python/snakeoil-0.4.5
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx dev-python/pyparsing )"
@@ -31,8 +31,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "$FILESDIR/"$PN-$PV-force-python-binary.patch
-	epatch "$FILESDIR/"$PN-$PV-dosym.patch
+	epatch "${FILESDIR}/"${PN}-${PV}-NameError.patch
 }
 
 src_compile() {
@@ -54,23 +53,4 @@ src_install() {
 pkg_postinst() {
 	distutils_pkg_postinst
 	pplugincache
-
-	if [[ -d "${ROOT}etc/pkgcore/plugins" ]]; then
-		elog "You still have an /etc/pkgcore/plugins from pkgcore 0.1."
-		elog "It is unused by pkgcore >= 0.2, remove it now."
-		die "remove /etc/pkgcore/plugins from pkgcore 0.1"
-	fi
-
-	# This is left behind by pkgcore 0.2.
-	rm -f "${ROOT}"$(python_get_sitedir)/pkgcore/plugins/plugincache
-}
-
-pkg_postrm() {
-	# Careful not to remove this on up/downgrades.
-	local sitep="${ROOT}"$(python_get_sitedir)/site-packages
-	if [[ -e "${sitep}/pkgcore/plugins/plugincache2" ]] &&
-		! [[ -e "${sitep}/pkgcore/plugin.py" ]]; then
-		rm "${sitep}/pkgcore/plugins/plugincache2"
-	fi
-	distutils_pkg_postrm
 }
