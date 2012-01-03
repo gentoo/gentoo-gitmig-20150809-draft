@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.0.ebuild,v 1.3 2012/01/03 19:51:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.0.ebuild,v 1.4 2012/01/03 22:44:39 ssuominen Exp $
 
 EAPI=4
 
@@ -59,8 +59,14 @@ RDEPEND="dev-libs/libxdg-basedir
 		)
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl )
-	speex? ( media-libs/speex )
-	theora? ( media-libs/libtheora )
+	speex? (
+		media-libs/libogg
+		media-libs/speex
+		)
+	theora? (
+		media-libs/libogg
+		media-libs/libtheora
+		)
 	truetype? (
 		media-libs/fontconfig
 		media-libs/freetype:2
@@ -89,18 +95,19 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-util/pkgconfig
 	>=sys-devel/libtool-2.2.6b
+	bluray? ( !media-libs/libbluray-xine )
 	nls? ( sys-devel/gettext )
+	oss? ( virtual/os-headers )
 	v4l? ( virtual/os-headers )
 	X? (
 		x11-libs/libXt
-		x11-proto/videoproto
 		x11-proto/xf86vidmodeproto
 		x11-proto/xproto
 		)
+	xv? ( x11-proto/videoproto )
+	xvmc? ( x11-proto/videoproto )
 	xinerama? ( x11-proto/xineramaproto )"
-REQUIRED_USE="speex? ( vorbis )
-	theora? ( vorbis )
-	vidix? ( || ( X fbcon ) )
+REQUIRED_USE="vidix? ( || ( X fbcon ) )
 	xv? ( X )
 	xinerama? ( X )"
 
