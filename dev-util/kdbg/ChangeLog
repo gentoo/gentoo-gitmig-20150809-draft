@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdbg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.71 2011/10/26 23:29:11 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.72 2012/01/03 21:38:15 ssuominen Exp $
+
+  03 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Leave the package to the KDE herd.
 
   26 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> kdbg-2.5.1.ebuild:
   Restore dropped line that removed ChangeLog-pre* since kde4-base.eclass is
