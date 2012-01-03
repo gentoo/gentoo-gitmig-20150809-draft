@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-2.2.ebuild,v 1.1 2011/06/30 17:12:32 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-2.2.ebuild,v 1.2 2012/01/03 03:52:07 binki Exp $
 
 EAPI=4
+
+inherit eutils toolchain-funcs
 
 MY_P=ScrollZ-${PV}
 
@@ -28,6 +30,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cppflags.patch
+	epatch "${FILESDIR}"/${P}-make-install.patch
+}
+
 src_configure() {
 	local _myssl
 
@@ -39,6 +46,7 @@ src_configure() {
 		fi
 	fi
 
+	tc-export CC #397441, ancient autoconf
 	econf \
 		--with-default-server=irc.gentoo.org \
 		$(use_enable socks5) \
@@ -49,9 +57,10 @@ src_configure() {
 }
 
 src_install() {
-	einstall \
-		sharedir="${ED}/usr/share" \
-		mandir="${ED}/usr/share/man/man1"
+	emake \
+		DESTDIR="${D}" \
+		mandir="${EPREFIX}/usr/share/man/man1" \
+		install
 
 	dodoc ChangeLog* NEWS README* todo
 }
