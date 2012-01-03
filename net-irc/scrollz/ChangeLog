@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/scrollz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.34 2012/01/03 03:52:07 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.35 2012/01/03 04:33:31 binki Exp $
+
+*scrollz-2.2.1 (03 Jan 2012)
+
+  03 Jan 2012; Nathan Phillip Brink <binki@gentoo.org> +scrollz-2.2.1.ebuild:
+  Bump to scrollz-2.2.1.
 
   03 Jan 2012; Nathan Phillip Brink <binki@gentoo.org> scrollz-2.2.ebuild,
   +files/scrollz-2.2-cppflags.patch, +files/scrollz-2.2-make-install.patch:
