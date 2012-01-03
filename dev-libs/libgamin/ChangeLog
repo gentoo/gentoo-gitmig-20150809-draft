@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgamin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.27 2011/09/25 16:25:55 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.28 2012/01/03 13:22:45 ssuominen Exp $
+
+  03 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libgamin-0.1.10-r2.ebuild:
+  Empty py-compile script instead of symlinking it wrt #397487 by Billy
+  DeVincentis
 
   25 Sep 2011; Pacho Ramos <pacho@gentoo.org> libgamin-0.1.10-r2.ebuild,
   +files/libgamin-0.1.10-G_CONST_RETURN-removal.patch,

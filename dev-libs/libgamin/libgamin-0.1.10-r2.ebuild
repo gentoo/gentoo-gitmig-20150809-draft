@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r2.ebuild,v 1.14 2011/09/25 16:25:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r2.ebuild,v 1.15 2012/01/03 13:22:45 ssuominen Exp $
 
 EAPI="3"
 
@@ -70,8 +70,7 @@ src_prepare() {
 	AT_M4DIR="${WORKDIR}" eautoreconf
 
 	# disable pyc compiling
-	rm -f py-compile
-	ln -s $(type -P true) py-compile
+	>py-compile
 }
 
 src_configure() {
