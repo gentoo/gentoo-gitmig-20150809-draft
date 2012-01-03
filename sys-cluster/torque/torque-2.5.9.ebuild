@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.8.ebuild,v 1.1 2011/09/28 01:00:59 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.9.ebuild,v 1.1 2012/01/03 15:56:44 xarthisius Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info
