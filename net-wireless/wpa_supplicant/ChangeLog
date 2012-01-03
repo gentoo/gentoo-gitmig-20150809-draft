@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.173 2012/01/03 19:54:33 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.174 2012/01/03 21:05:45 swift Exp $
+
+  03 Jan 2012; <swift@gentoo.org> wpa_supplicant-0.7.3-r5.ebuild:
+  Add USE=selinux dependency on selinux-networkmanager
 
   03 Jan 2012; <gurligebis@gentoo.org>
   files/wpa_supplicant-0.7.3-generate-libeap-peer.patch:

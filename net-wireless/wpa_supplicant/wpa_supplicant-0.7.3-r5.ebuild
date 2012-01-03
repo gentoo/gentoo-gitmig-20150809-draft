@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.11 2011/12/28 23:15:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.12 2012/01/03 21:05:45 swift Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wimax wps kernel_linux kernel_FreeBSD"
+IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline selinux ssl wimax wps kernel_linux kernel_FreeBSD"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
@@ -32,7 +32,8 @@ RDEPEND="dbus? ( sys-apps/dbus )
 	)
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
-	!ssl? ( !gnutls? ( dev-libs/libtommath ) )"
+	!ssl? ( !gnutls? ( dev-libs/libtommath ) )
+	selinux? ( sec-policy/selinux-networkmanager )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
