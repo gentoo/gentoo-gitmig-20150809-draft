@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r3.ebuild,v 1.4 2011/12/13 23:25:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r3.ebuild,v 1.5 2012/01/03 23:38:52 ulm Exp $
 
 EAPI=2
 
@@ -32,7 +32,6 @@ src_compile() {
 
 src_install() {
 	dobin byacc || die
-	mv yacc.1 byacc.1 || die
-	doman byacc.1 || die
-	dodoc ACKNOWLEDGEMENTS MANIFEST NEW_FEATURES NOTES README || die
+	newman yacc.1 byacc.1 || die
+	dodoc ACKNOWLEDGEMENTS NEW_FEATURES NOTES README || die
 }
