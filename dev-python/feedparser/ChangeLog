@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/feedparser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.32 2012/01/02 05:28:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.33 2012/01/03 04:18:13 floppym Exp $
+
+*feedparser-5.1 (03 Jan 2012)
+
+  03 Jan 2012; Mike Gilbert <floppym@gentoo.org> +feedparser-5.1.ebuild,
+  +files/feedparser-5.1-sgmllib.patch:
+  Version bump for bug 393639. Thanks to Johan Bergström and Arfrever. Includes
+  patch by sping. Fails tests.
 
   02 Jan 2012; Mike Gilbert <floppym@gentoo.org> Manifest:
   Fix manifest
