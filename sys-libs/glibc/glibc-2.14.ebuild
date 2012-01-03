@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.14.ebuild,v 1.12 2011/11/22 16:38:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.14.ebuild,v 1.13 2012/01/03 20:09:54 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -100,6 +100,7 @@ DEPEND=">=sys-devel/gcc-3.4.4
 	nls? ( sys-devel/gettext )
 	!<sys-apps/sandbox-1.2.18.1-r2
 	!<sys-apps/portage-2.1.2
+	!<sys-devel/patch-2.6
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="!sys-kernel/ps3-sources
 	nls? ( sys-devel/gettext )
