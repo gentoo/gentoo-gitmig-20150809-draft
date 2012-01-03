@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify-cli/libtinynotify-cli-1.2.ebuild,v 1.1 2012/01/02 11:17:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify-cli/libtinynotify-cli-1.2.1.ebuild,v 1.1 2012/01/03 06:53:22 mgorny Exp $
 
 EAPI=4
 
