@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.4-r1.ebuild,v 1.4 2011/11/14 07:44:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.5.ebuild,v 1.1 2012/01/03 21:04:21 scarabeus Exp $
 
 EAPI=4
 
-[[ ${PV} == 9999 ]] && MY_PV="3.4.4" || MY_PV="${PV}"
+[[ ${PV} == 9999 ]] && MY_PV="3.4.4" || MY_PV="3.4.4"
 
 RC_VERSION="rc2" # CHECK ME WITH EVERY BUMP!
 BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/${MY_PV}/rpm/"
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.libreoffice.org"
 
 LICENSE="LGPL-3"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="offlinehelp templates"
 
 LANGUAGES_HELP="bg bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA eo es et eu
