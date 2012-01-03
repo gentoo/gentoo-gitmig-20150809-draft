@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.4.2-r1.ebuild,v 1.4 2011/11/30 10:21:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.5.2.ebuild,v 1.1 2012/01/03 21:04:24 scarabeus Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
 BRANDING="${PN}-branding-gentoo-0.3.tar.xz"
-PATCHSET="${P}-patchset-01.tar.xz"
+# PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
 inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins versionator ${SCM_ECLASS}
@@ -63,33 +63,16 @@ ADDONS_SRC+=" http://download.go-oo.org/extern/b4cae0700aa1c2aef7eb7f345365e6f1-
 ADDONS_SRC+=" http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-unowinreg.dll"
 SRC_URI+=" ${ADDONS_SRC}"
 
-TDEPEND="${EXT_URI}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
-TDEPEND+=" linguas_de? ( ${EXT_URI}/53ca5e56ccd4cab3693ad32c6bd13343-Sun-ODF-Template-Pack-de_1.0.0.oxt )"
-TDEPEND+=" linguas_en_GB? ( ${EXT_URI}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt )"
-TDEPEND+=" linguas_en_ZA? ( ${EXT_URI}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt )"
-TDEPEND+=" linguas_es? ( ${EXT_URI}/4ad003e7bbda5715f5f38fde1f707af2-Sun-ODF-Template-Pack-es_1.0.0.oxt )"
-TDEPEND+=" linguas_fr? ( ${EXT_URI}/a53080dc876edcddb26eb4c3c7537469-Sun-ODF-Template-Pack-fr_1.0.0.oxt )"
-TDEPEND+=" linguas_hu? ( ${EXT_URI}/09ec2dac030e1dcd5ef7fa1692691dc0-Sun-ODF-Template-Pack-hu_1.0.0.oxt )"
-TDEPEND+=" linguas_it? ( ${EXT_URI}/b33775feda3bcf823cad7ac361fd49a6-Sun-ODF-Template-Pack-it_1.0.0.oxt )"
-SRC_URI+=" templates? ( ${TDEPEND} )"
-
 unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding custom-cflags dbus debug eds gnome graphite
 gstreamer gtk jemalloc kde mysql nsplugin odk opengl pdfimport python
-templates test +vba webdav"
+test +vba webdav"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-
-# lingua for templates
-LANGUAGES="de en_GB en_ZA es fr hu it"
-for X in ${LANGUAGES} ; do
-	IUSE+=" linguas_${X}"
-done
-unset X
 
 COMMON_DEPEND="
 	app-arch/zip
@@ -158,7 +141,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="
-	=app-office/libreoffice-l10n-$(get_version_component_range 1-3)*
+	=app-office/libreoffice-l10n-$(get_version_component_range 1-2)*
 "
 
 DEPEND="${COMMON_DEPEND}
@@ -192,7 +175,6 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	"${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff"
 	"${FILESDIR}/${PN}-libdb5-fix-check.diff"
-	"${FILESDIR}/${PN}-3.4.1-salfix.diff"
 	"${FILESDIR}/sdext-presenter.diff"
 	"${FILESDIR}/${PN}-svx.patch"
 	"${FILESDIR}/${PN}-vbaobj-visibility-fix.patch"
@@ -272,6 +254,7 @@ pkg_setup() {
 src_unpack() {
 	local mod dest tmplfile tmplname mypv
 
+	[[ -n ${PATCHSET} ]] && unpack ${PATCHSET}
 	if use branding; then
 		unpack "${BRANDING}"
 	fi
@@ -300,26 +283,6 @@ src_unpack() {
 		done
 		unset EGIT_PROJECT EGIT_SOURCEDIR EGIT_REPO_URI EGIT_BRANCH
 	fi
-
-	[[ -n ${PATCHSET} ]] && unpack ${PATCHSET}
-
-	# copy extension templates; o what fun ...
-	if use templates; then
-		dest="${S}/extras/source/extensions"
-		mkdir -p "${dest}"
-
-		for template in ${TDEPEND}; do
-			if [[ ${template} == *.oxt ]]; then
-				tmplfile="${DISTDIR}/$(basename ${template})"
-				tmplname="$(echo "${template}" | \
-					cut -f 2- -s -d - | cut -f 1 -d _)"
-				echo ">>> Unpacking ${tmplfile/\*/} to ${dest}"
-				if [[ -f ${tmplfile} && ! -f "${dest}/${tmplname}.oxt" ]]; then
-					cp -v "${tmplfile}" "${dest}/${tmplname}.oxt" || die
-				fi
-			fi
-		done
-	fi
 }
 
 src_prepare() {
@@ -333,6 +296,7 @@ src_prepare() {
 	# silent miscompiles; LO/OOo adds -O2/1/0 where appropriate
 	filter-flags "-O*"
 
+	# patchset
 	if [[ -n ${PATCHSET} ]]; then
 		EPATCH_FORCE="yes" \
 		EPATCH_SOURCE="${WORKDIR}/${PATCHSET/.tar.xz/}" \
@@ -368,9 +332,9 @@ src_configure() {
 	# hsqldb: requires just 1.8.0 not 1.8.1 which we don't ship at all
 	# dmake: not worth of splitting out
 	# cppunit: patched not to run anything, just main() { return 0; }
-	#		  workaround to upstream running the tests during build
+	#          workaround to upstream running the tests during build
 	# sane: just sane.h header that is used for scan in writer, not
-	#	   linked or anything else, worthless to depend on
+	#       linked or anything else, worthless to depend on
 	internal_libs+="
 		--without-system-hsqldb
 		--without-system-cppunit
@@ -478,6 +442,7 @@ src_configure() {
 		--without-ppds \
 		--without-stlport \
 		--without-helppack-integration \
+		--without-sun-templates \
 		$(use_enable binfilter) \
 		$(use_enable dbus) \
 		$(use_enable debug crashdump) \
