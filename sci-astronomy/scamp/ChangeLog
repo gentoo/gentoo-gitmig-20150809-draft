@@ -1,6 +1,14 @@
 # ChangeLog for sci-astronomy/scamp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/ChangeLog,v 1.7 2011/08/04 18:32:22 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/ChangeLog,v 1.8 2012/01/03 02:43:12 bicatali Exp $
+
+*scamp-1.7.0-r1 (03 Jan 2012)
+
+  03 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/scamp-1.4.6-autotools.patch, -files/scamp-1.5.5-autotools.patch,
+  -scamp-1.6.2.ebuild, -scamp-1.7.0.ebuild, +scamp-1.7.0-r1.ebuild,
+  +files/scamp-1.7.0-plplot599.patch:
+  Added a patch for plplot-5.9.9, thanks Jan Kohnert, bug #396723
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
