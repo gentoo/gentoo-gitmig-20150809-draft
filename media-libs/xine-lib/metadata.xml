@@ -7,11 +7,8 @@
 	</maintainer>
 	<longdescription>An open source library for media applications</longdescription>
 	<use>
-		<flag name="antialiasing">
-			Enable anti-aliasing in OSD fonts
-		</flag>
-		<flag name="asf">
-			Provide support for Microsoft's advanced systems format media container
+		<flag name="bluray">
+			Enable playback of Blu-ray filesystems using <pkg>media-libs/libbluray</pkg>
 		</flag>
 		<flag name="dxr3">
 			Enable support for DXR3 mpeg acceleration cards.
@@ -25,25 +22,11 @@
 		<flag name="fusion">
 			Enable support for the Fusion audio sub system
 		</flag>
-		<flag name="glu">
-			Make use of the OpenGL Utility Toolkit (GLUT) library
-		</flag>
-		<flag name="gnome">
-			Build the <pkg>gnome-base/gnome-vfs</pkg> based input plugin. This plugin is
-			used to access any resource that can be accessed through Nautilus's (and
-			others') URLs.
-		</flag>
-		<flag name="gdk-pixbuf">
-			Build the gdkpixbuf-based image decoder plugin
-		</flag>
 		<flag name="gtk">
 			Build the gdkpixbuf-based image decoder plugin.
 		</flag>
 		<flag name="imagemagick">
 			Build the ImageMagick-based image decoder plugin.
-		</flag>
-		<flag name="libv4l">
-			Enables Libv4l Video4Linux support
 		</flag>
 		<flag name="mad">
 			Build the <pkg>media-libs/libmad</pkg> based mp3 decoder. This mp3 decoder
@@ -56,9 +39,6 @@
 			use more virtual memory space, but leaves to the Kernel the task of caching
 			the file's data. mmap() access should be faster, but might misbehave if the
 			device where the file resides in is removed during playback.
-		</flag>
-		<flag name="nosefart">
-			Enables support for NSF (Nintendo Entertainment System Sound Format)
 		</flag>
 		<flag name="real">
 			Enable support for loading and using RealPlayer binary codecs on x86 and
