@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.38.ebuild,v 1.1 2011/11/19 10:06:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.38.ebuild,v 1.2 2012/01/03 15:47:08 xarthisius Exp $
 
 EAPI="3"
 
@@ -44,7 +44,8 @@ src_prepare() {
 	sed -i "/^docdir =/d" src/Makefile.am || die #fix doc path
 	# disable testsnaps
 	sed -e '/testsnaps/d' -i src/Makefile.am || die
-	epatch "${FILESDIR}/${PN}-0.26-autotools.patch"
+	epatch "${FILESDIR}/${PN}-0.26-autotools.patch" \
+		"${FILESDIR}"/${PN}-issue1869.patch
 	eautoreconf
 }
 
