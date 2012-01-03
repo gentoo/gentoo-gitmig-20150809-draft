@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.5 2012/01/03 19:44:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.6 2012/01/03 19:51:57 ssuominen Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ RDEPEND="dev-libs/libxdg-basedir
 	aac? ( media-libs/faad2 )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	bluray? ( media-libs/libbluray )
+	bluray? ( >=media-libs/libbluray-0.2.1 )
 	css? ( >=media-libs/libdvdcss-1.2.10 )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdca )
@@ -188,5 +188,5 @@ src_install() {
 
 	rm -f \
 		"${ED}"usr/lib*/libxine*.la \
-		"${ED}"usr/share/doc/COPYING
+		"${ED}"usr/share/doc/${PF}/COPYING
 }
