@@ -1,6 +1,10 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.43 2012/01/04 19:02:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.44 2012/01/04 21:16:26 lu_zero Exp $
+
+  04 Jan 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8_beta1.ebuild,
+  libav-9999.ebuild:
+  Fix dodoc when html docs aren't being generated
 
   04 Jan 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8_beta1.ebuild,
   libav-9999.ebuild:
