@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10-r1.ebuild,v 1.2 2012/01/04 17:11:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10-r1.ebuild,v 1.3 2012/01/04 17:41:37 johu Exp $
 
 EAPI=3
 
@@ -15,6 +15,11 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="static-libs"
+
+DEPEND=""
+RDEPEND="${DEPEND}
+	sys-libs/zlib
+"
 
 DOCS=( NEWS README THANKS AUTHORS )
 
