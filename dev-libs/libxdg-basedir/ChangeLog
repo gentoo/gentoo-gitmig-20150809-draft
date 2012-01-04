@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxdg-basedir
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.27 2011/06/11 12:57:05 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.28 2012/01/04 04:18:14 jer Exp $
+
+  04 Jan 2012; Jeroen Roovers <jer@gentoo.org> libxdg-basedir-1.1.1.ebuild:
+  Marked ~hppa (bug #397531).
 
   11 Jun 2011; Markus Meier <maekke@gentoo.org> libxdg-basedir-1.1.1.ebuild:
   add ~arm, bug #359137
