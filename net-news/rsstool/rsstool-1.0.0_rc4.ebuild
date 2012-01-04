@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/rsstool-1.0.0_rc4.ebuild,v 1.7 2010/10/16 13:59:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/rsstool-1.0.0_rc4.ebuild,v 1.8 2012/01/04 09:12:43 radhermit Exp $
 
 inherit versionator eutils
 MY_PV=$(replace_version_separator 3 '')
 MY_P=${PN}-${MY_PV}
 S="${WORKDIR}/${MY_P}"-src/src
 DESCRIPTION="cmdline tool to read, parse, merge, and write RSS (and Atom) feeds"
-HOMEPAGE="http://rsstool.y7.ath.cx/"
+HOMEPAGE="http://rsstool.sourceforge.net/"
 SRC_URI="mirror://berlios/${PN}/${MY_P}-src.tar.gz"
 
 LICENSE="GPL-2"
