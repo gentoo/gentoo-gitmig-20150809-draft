@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/canny
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.9 2010/06/13 07:21:12 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.10 2012/01/04 18:05:05 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> canny-0.1.0-r1.ebuild:
+  x86 stable wrt bug #395977
 
 *canny-0.1.0-r1 (13 Jun 2010)
 
