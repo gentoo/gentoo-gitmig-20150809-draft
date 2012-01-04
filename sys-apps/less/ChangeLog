@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.139 2011/12/07 20:29:24 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.140 2012/01/04 22:34:21 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> less-444.ebuild:
+  Marking less-444 ppc for bug 389995
 
   07 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
   Also check for `7zr` when processing 7z archives.
