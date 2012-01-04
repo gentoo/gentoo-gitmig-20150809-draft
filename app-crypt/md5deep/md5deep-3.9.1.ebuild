@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-3.9.1.ebuild,v 1.1 2011/06/08 18:33:59 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-3.9.1.ebuild,v 1.2 2012/01/04 16:51:32 ago Exp $
 
 EAPI=4
 
@@ -10,5 +10,5 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="public-domain GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
