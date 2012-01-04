@@ -1,15 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.1.ebuild,v 1.6 2011/12/05 16:49:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.1.ebuild,v 1.7 2012/01/04 09:12:29 jlec Exp $
 
 EAPI=3
 
 WX_GTK_VER="2.8"
 
-inherit cmake-utils wxwidgets
+inherit cmake-utils eutils wxwidgets
 
 DESCRIPTION="Music management program designed for all music enthusiasts"
-HOMEPAGE="http://guayadeque.org"
+HOMEPAGE="http://guayadeque.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -67,7 +67,7 @@ src_prepare() {
 	base_src_prepare
 
 	# otherwise cmake checks for svn
-	find -type d -name .svn -exec rm -rf '{}' +
+	esvn_clean
 
 	sed 's:-O2::g' -i CMakeLists.txt || die
 }
