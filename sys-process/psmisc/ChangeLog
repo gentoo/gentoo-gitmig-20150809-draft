@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.117 2011/12/04 15:42:12 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.118 2012/01/04 22:37:49 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> psmisc-22.14.ebuild:
+  Marking psmisc-22.14 ppc for bug 392641
 
   04 Dec 2011; Raúl Porcel <armin76@gentoo.org> psmisc-22.14.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #392641
