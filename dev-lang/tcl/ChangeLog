@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.141 2011/11/29 19:33:08 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.142 2012/01/04 20:44:37 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> tcl-8.5.10.ebuild:
+  Marking tcl-8.5.10 ppc for bug 280934
 
   29 Nov 2011; Fabian Groffen <grobian@gentoo.org> tcl-8.5.10.ebuild:
   Fix installation on FreeMiNT (bug #390545), use get_libname for shared library
