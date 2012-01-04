@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dialog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.143 2011/12/30 04:09:02 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.144 2012/01/04 17:28:32 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  dialog-1.1.20110707-r1.ebuild:
+  x86 stable wrt bug #396161
 
   30 Dec 2011; Jeroen Roovers <jer@gentoo.org> dialog-1.1.20110707-r1.ebuild:
   Stable for HPPA (bug #396161).
