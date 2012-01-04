@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-2.22.0-r1.ebuild,v 1.7 2011/07/07 12:57:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-2.22.0-r1.ebuild,v 1.8 2012/01/04 21:43:17 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -8,7 +8,7 @@ GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools eutils gnome2
 
-DESCRIPTION="Additional themes for GNOME 2.2"
+DESCRIPTION="Additional themes for GNOME"
 HOMEPAGE="http://librsvg.sourceforge.net/theme.php"
 
 LICENSE="LGPL-2.1 GPL-2 DSL"
@@ -27,12 +27,11 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog MAINTAINERS"
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix tooltips references, bug #238138
 	epatch "${FILESDIR}/${P}-darklooks.patch"
 
 	# Respect LINGUAS, bug #182086
 	intltoolize --force || die "intloolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.63 2011/07/07 12:57:07 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.64 2012/01/04 21:43:17 pacho Exp $
+
+  04 Jan 2012; Pacho Ramos <pacho@gentoo.org>
+  gnome-themes-extras-2.22.0-r1.ebuild:
+  Run gnome2_src_prepare in proper place, bug #397699 by Julian W.
 
   07 Jul 2011; Pacho Ramos <pacho@gentoo.org>
   gnome-themes-extras-2.22.0-r1.ebuild:
