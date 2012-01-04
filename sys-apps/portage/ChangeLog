@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.945 2012/01/01 15:50:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.946 2012/01/04 18:26:34 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> portage-2.1.10.41.ebuild:
+  Marking portage-2.1.10.41 ppc for bug 394695
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> portage-2.1.10.41.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #394695
