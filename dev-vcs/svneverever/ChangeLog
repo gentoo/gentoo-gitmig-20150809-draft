@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/svneverever
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.6 2011/07/06 01:28:30 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.7 2012/01/04 02:36:49 sping Exp $
+
+*svneverever-1.2.1 (04 Jan 2012)
+
+  04 Jan 2012; Sebastian Pipping <sping@gentoo.org> +svneverever-1.2.1.ebuild:
+  Bump to 1.2.1
 
 *svneverever-1.2.0 (06 Jul 2011)
 
