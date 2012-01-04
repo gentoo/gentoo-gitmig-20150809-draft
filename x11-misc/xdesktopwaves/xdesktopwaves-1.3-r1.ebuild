@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/xdesktopwaves-1.3-r1.ebuild,v 1.4 2011/12/07 07:38:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/xdesktopwaves-1.3-r1.ebuild,v 1.5 2012/01/04 21:00:00 ranger Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"

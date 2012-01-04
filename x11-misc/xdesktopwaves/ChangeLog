@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdesktopwaves
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/ChangeLog,v 1.17 2011/12/07 07:38:37 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/ChangeLog,v 1.18 2012/01/04 21:00:00 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> xdesktopwaves-1.3-r1.ebuild:
+  Marking xdesktopwaves-1.3-r1 ppc for bug 391495
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   xdesktopwaves-1.3-r1.ebuild:
