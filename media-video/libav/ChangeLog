@@ -1,6 +1,10 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.42 2012/01/03 03:41:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.43 2012/01/04 19:02:35 lu_zero Exp $
+
+  04 Jan 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8_beta1.ebuild,
+  libav-9999.ebuild:
+  Fix dodoc invocation
 
 *libav-0.8_beta1 (02 Jan 2012)
 

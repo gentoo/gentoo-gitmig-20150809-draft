@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.23 2011/12/02 18:19:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.24 2012/01/04 19:02:35 lu_zero Exp $
 
 EAPI=4
 
@@ -276,7 +276,7 @@ src_install() {
 	emake DESTDIR="${D}" install install-man
 
 	dodoc Changelog README INSTALL
-	dodoc doc/*
+	dodoc doc/*.html doc/*.txt
 
 	if use qt-faststart; then
 		dobin tools/qt-faststart
