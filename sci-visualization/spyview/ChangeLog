@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/spyview
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.18 2011/12/15 12:28:20 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.19 2012/01/04 17:51:41 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> spyview-20110803.ebuild:
+  x86 stable wrt bug #394799
 
   15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> spyview-20110803.ebuild:
   Stable for AMD64, wrt bug #394799
