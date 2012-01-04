@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmmemload
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.19 2008/11/28 18:55:10 tcunha Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.20 2012/01/04 14:29:17 s4t4n Exp $
+
+*wmmemload-0.1.6-r1 (04 Jan 2012)
+
+  04 Jan 2012; Michele Noberasco <s4t4n@gentoo.org> wmmemload-0.1.6-r1.ebuild:
+  Revision bump, with patch to add support for kernel versions >= 3. Closes bug #394105.
 
   28 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmmemload-0.1.6.ebuild:
   stable sparc, bug 215651
