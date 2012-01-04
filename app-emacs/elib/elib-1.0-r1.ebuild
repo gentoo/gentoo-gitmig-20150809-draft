@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0-r1.ebuild,v 1.1 2010/02/01 22:06:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0-r1.ebuild,v 1.2 2012/01/04 16:56:27 ago Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://jdee.sunsite.dk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
 
 SITEFILE="50${PN}-gentoo.el"
