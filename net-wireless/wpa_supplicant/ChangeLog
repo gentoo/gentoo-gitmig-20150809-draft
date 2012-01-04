@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.174 2012/01/03 21:05:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.175 2012/01/04 18:07:43 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  wpa_supplicant-0.7.3-r5.ebuild:
+  x86 stable wrt bug #386129
 
   03 Jan 2012; <swift@gentoo.org> wpa_supplicant-0.7.3-r5.ebuild:
   Add USE=selinux dependency on selinux-networkmanager
