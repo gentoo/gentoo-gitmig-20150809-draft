@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-2.0.17.ebuild,v 1.1 2012/01/04 16:32:16 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-2.0.17.ebuild,v 1.2 2012/01/04 18:19:25 mpagano Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*:2.7"
 
 inherit python
 
-DESCRIPTION="Helper program for maintaining the package.accept_keywords, package.unmask and package.use files"
+DESCRIPTION="A helper program for maintaining the package.keyword and package.unmask files"
 HOMEPAGE="http://www.mpagano.com/blog/?page_id=3"
 SRC_URI="http://www.mpagano.com/downloads/${P}.tar.gz"
 
@@ -19,10 +19,6 @@ IUSE=""
 DEPEND=""
 RDEPEND=">=app-portage/gentoolkit-0.3.0.4-r5
 	>=sys-apps/portage-2.1.10.41"
-
-pkg_setup() {
-	python_pkg_setup
-}
 
 src_install() {
 	dobin ${PN} || die "dobin failed"
