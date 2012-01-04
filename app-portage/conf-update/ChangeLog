@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/conf-update
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.29 2011/12/14 09:20:13 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.30 2012/01/04 22:28:22 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> conf-update-1.0.1.ebuild:
+  Marking conf-update-1.0.1 ppc for bug 393703
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   conf-update-1.0.1.ebuild:
