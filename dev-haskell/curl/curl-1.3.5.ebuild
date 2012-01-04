@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/curl/curl-1.3.5.ebuild,v 1.3 2011/02/10 23:37:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/curl/curl-1.3.5.ebuild,v 1.4 2012/01/04 07:21:21 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
-inherit haskell-cabal
+inherit base haskell-cabal
 
 DESCRIPTION="Haskell binding to libcurl"
 HOMEPAGE="http://hackage.haskell.org/cgi-bin/hackage-scripts/package/curl"
@@ -17,3 +17,5 @@ IUSE=""
 DEPEND=">=dev-lang/ghc-6.6.1
 		>=dev-haskell/cabal-1.2
 		net-misc/curl"
+
+PATCHES=("${FILESDIR}"/${PN}-1.3.5-ghc-7.patch)

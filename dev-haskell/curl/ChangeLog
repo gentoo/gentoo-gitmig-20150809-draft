@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/curl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/curl/ChangeLog,v 1.4 2011/08/01 21:24:07 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/curl/ChangeLog,v 1.5 2012/01/04 07:21:21 slyfox Exp $
+
+  04 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/curl-1.3.5-ghc-7.patch, curl-1.3.5.ebuild:
+  Fix build failure against ghc-6.12+binutils-22.1 (bug #397565 reported by
+  Janusz)
 
 *curl-1.3.7 (01 Aug 2011)
 
