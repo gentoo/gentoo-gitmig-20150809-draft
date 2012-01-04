@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1.ebuild,v 1.2 2012/01/04 23:30:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1-r1.ebuild,v 1.1 2012/01/04 23:30:09 tetromino Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -87,6 +87,7 @@ pkg_setup() {
 
 	G2CONF="${G2CONF}
 		--disable-schemas-compile
+		--disable-static
 		--enable-sound
 		$(use_enable introspection)"
 
@@ -135,6 +136,12 @@ src_prepare() {
 
 	# Without this, --enable-staging enables all those games unconditionally
 	epatch "${FILESDIR}/${PN}-fix-staging-games.patch"
+
+	# gnome-sudoku patch, will be in next release
+	epatch "${FILESDIR}/${P}-sudoku-borders.patch"
+
+	# patch from upstream git master fixing sudoku with pygobject-3.0.3, #397501
+	epatch "${FILESDIR}/${P}-pygobject-3.0.3.patch"
 
 	eautoreconf
 

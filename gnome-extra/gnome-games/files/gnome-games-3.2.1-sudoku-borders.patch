@@ -1,0 +1,29 @@
+From a91b3962d121f4042e7029e30a5c1423dfb0c130 Mon Sep 17 00:00:00 2001
+From: Edward Sheldrake <ejsheldrake@gmail.com>
+Date: Sat, 8 Oct 2011 14:42:32 +0100
+Subject: [PATCH] sudoku: fix borders
+
+Fixes python traceback printed to terminal that ends with:
+TypeError: 'Color' object does not support indexing
+
+Fixes: https://bugzilla.gnome.org/show_bug.cgi?id=658519
+---
+ gnome-sudoku/src/lib/gsudoku.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/gnome-sudoku/src/lib/gsudoku.py b/gnome-sudoku/src/lib/gsudoku.py
+index 79a0e21..b222f95 100644
+--- a/gnome-sudoku/src/lib/gsudoku.py
++++ b/gnome-sudoku/src/lib/gsudoku.py
+@@ -56,7 +56,7 @@ class SudokuNumberGrid (Gtk.AspectFrame):
+     def set_bg_color (self, color):
+         try:
+             if type(color) == str:
+-                color = Gdk.color_parse(color)[1]
++                color = Gdk.color_parse(color)
+                 color = Gdk.RGBA(color.red/65535.0, color.green/65535.0, color.blue/65535.0)
+             else:
+                 color = Gdk.RGBA(*color)
+-- 
+1.7.8.1
+

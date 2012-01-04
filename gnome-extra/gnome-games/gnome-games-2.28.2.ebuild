@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.10 2011/04/25 21:17:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.11 2012/01/04 23:30:09 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -122,8 +122,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	echo > py-compile
 
 	# Fix implicit declaration of yylex.
 	epatch "${FILESDIR}/${PN}-2.26.3-implicit-declaration.patch"
