@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-9999.ebuild,v 1.1 2011/11/21 20:34:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-9999.ebuild,v 1.2 2012/01/04 21:17:41 vapier Exp $
 
 EAPI="3"
 
@@ -29,9 +29,9 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
 maint_pkg_create() {
-	cd /usr/local/src/net-tools/git
+	cd /usr/local/src/net-tools
 	#git-update
-	local stamp=$(git log -n1 --pretty=format:%ai master | sed -e 's:[- :]::g' -e 's:+.*::')
+	local stamp=$(date --date="$(git log -n1 --pretty=format:%ci master)" -u +%Y%m%d%H%M%S)
 	local pv="${PV/_p*}_p${stamp}"; pv=${pv/9999/1.60}
 	local p="${PN}-${pv}"
 	git archive --prefix="nt/" master | tar xf - -C "${T}"

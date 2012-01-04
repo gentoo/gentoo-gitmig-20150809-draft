@@ -1,19 +1,21 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p201111202031570500.ebuild,v 1.1 2011/11/21 20:34:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20111120203157.ebuild,v 1.1 2012/01/04 21:17:41 vapier Exp $
 
 EAPI="3"
 
 inherit flag-o-matic toolchain-funcs eutils
 
+# original release had a timestamp screwup
+MY_P="${P}0500"
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URL="git://net-tools.git.sourceforge.net/gitroot/net-tools/net-tools"
 	inherit git-2
 	KEYWORDS=""
 else
 	PATCH_VER="1"
-	SRC_URI="mirror://gentoo/${P}.tar.xz
-		mirror://gentoo/${P}-patches-${PATCH_VER}.tar.xz"
+	SRC_URI="mirror://gentoo/${MY_P}.tar.xz
+		mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.xz"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 fi
 
@@ -27,6 +29,8 @@ IUSE="nls old-output static"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
+
+S=${WORKDIR}/${MY_P}
 
 maint_pkg_create() {
 	cd /usr/local/src/net-tools/git
@@ -70,7 +74,7 @@ set_opt() {
 src_prepare() {
 	if [[ -n ${PATCH_VER} ]] ; then
 		use old-output || EPATCH_EXCLUDE="0001-revert-621a2f376334f8097604b9fee5783e0f1141e66d-for-.patch"
-		EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch "${WORKDIR}"/${P}-patches-${PATCH_VER}
+		EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch "${WORKDIR}"/${MY_P}-patches-${PATCH_VER}
 	fi
 }
 
