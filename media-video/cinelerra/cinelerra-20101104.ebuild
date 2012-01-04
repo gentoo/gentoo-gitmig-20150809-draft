@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20101104.ebuild,v 1.5 2011/12/28 17:36:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20101104.ebuild,v 1.6 2012/01/04 17:45:22 phajdan.jr Exp $
 
 EAPI=3
 inherit autotools eutils multilib flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="3dnow alsa altivec css ieee1394 mmx opengl oss"
 
 RDEPEND=">=media-libs/libpng-1.4.0
