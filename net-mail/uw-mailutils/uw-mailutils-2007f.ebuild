@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2007f.ebuild,v 1.6 2011/12/24 10:24:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2007f.ebuild,v 1.7 2012/01/04 22:05:54 ranger Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="pam ssl"
 
 DEPEND="pam? ( virtual/pam )

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-mailutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.38 2011/12/24 10:24:38 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.39 2012/01/04 22:05:54 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> uw-mailutils-2007f.ebuild:
+  Marking uw-mailutils-2007f ppc for bug 391353
 
   24 Dec 2011; Eray Aslan <eras@gentoo.org> uw-mailutils-2007f.ebuild:
   Fix building with -ssl USE flag - bug #395855
