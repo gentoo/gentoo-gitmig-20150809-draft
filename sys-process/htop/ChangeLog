@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.106 2011/12/11 14:43:32 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.107 2012/01/04 23:50:33 xmw Exp $
+
+  04 Jan 2012; Michael Weber <xmw@gentoo.org> htop-0.9-r2.ebuild:
+  ppc/ppc64 stable (bug 390969)
 
   11 Dec 2011; Raúl Porcel <armin76@gentoo.org> htop-0.9-r2.ebuild:
   alpha/ia64/sh/sparc stable wrt #390969
