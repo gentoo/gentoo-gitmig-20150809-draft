@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.19 2012/01/04 07:45:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.20 2012/01/04 08:23:51 vapier Exp $
 
 # @ECLASS: savedconfig.eclass
 # @MAINTAINER:
@@ -120,3 +120,20 @@ restore_config() {
 		ewarn "Your config file(s) will not be used this time"
 	fi
 }
+
+savedconfig_pkg_postinst() {
+	# If the user has USE=savedconfig, then chances are they
+	# are modifying these files, so keep them around.  #396169
+	# This might lead to cruft build up, but the alternatives
+	# are worse :/.
+
+	if use savedconfig ; then
+		# Be lazy in our EAPI compat
+		: ${EROOT:=${ROOT}}
+
+		find "${EROOT}/etc/portage/savedconfig/${CATEGORY}/${PF}" \
+			-exec touch {} + 2>/dev/null
+	fi
+}
+
+EXPORT_FUNCTIONS pkg_postinst
