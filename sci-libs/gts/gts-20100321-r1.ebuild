@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r1.ebuild,v 1.4 2011/06/21 15:18:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r1.ebuild,v 1.5 2012/01/04 17:35:17 jlec Exp $
 
 EAPI=2
 inherit eutils fortran-2 autotools
@@ -19,6 +19,7 @@ RDEPEND="
 
 	dev-libs/glib:2
 	!dev-vcs/rcs
+	!sci-chemistry/apbs[tools]
 	!<=sci-chemistry/ccp4-apps-6.1.3-r2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

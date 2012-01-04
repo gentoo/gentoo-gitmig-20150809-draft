@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.18 2011/07/20 16:59:45 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.19 2012/01/04 17:35:17 jlec Exp $
+
+*gts-20100321-r3 (04 Jan 2012)
+
+  04 Jan 2012; Justin Lecher <jlec@gentoo.org> -gts-20081607.ebuild,
+  -gts-20090909.ebuild, gts-20100321-r1.ebuild, gts-20100321-r2.ebuild,
+  +gts-20100321-r3.ebuild, metadata.xml:
+  Block sci-chemistry/apbs[tools] or rename smooth to gts-smooth, dropp old
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #105599
