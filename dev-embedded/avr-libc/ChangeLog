@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/avr-libc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.49 2011/09/04 23:57:48 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.50 2012/01/04 04:50:01 radhermit Exp $
+
+*avr-libc-1.8.0 (04 Jan 2012)
+
+  04 Jan 2012; Tim Harder <radhermit@gentoo.org> +avr-libc-1.8.0.ebuild:
+  Version bump.
 
   04 Sep 2011; Tim Harder <radhermit@gentoo.org> avr-libc-1.7.1.ebuild:
   Minor grammar fix.
