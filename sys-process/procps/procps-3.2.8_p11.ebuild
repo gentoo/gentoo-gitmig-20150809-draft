@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p11.ebuild,v 1.7 2011/12/08 06:23:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p11.ebuild,v 1.8 2012/01/04 22:36:04 ranger Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://procps.sourceforge.net/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86"
 IUSE="unicode"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2[unicode?]"

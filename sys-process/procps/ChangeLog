@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.59 2011/12/08 06:23:58 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.60 2012/01/04 22:36:04 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> procps-3.2.8_p11.ebuild:
+  Marking procps-3.2.8_p11 ppc for bug 390003
 
   08 Dec 2011; Mike Frysinger <vapier@gentoo.org> procps-3.2.8_p11.ebuild,
   +files/procps-3.2.8-time_t.patch:
