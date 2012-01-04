@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.115 2012/01/02 09:27:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.116 2012/01/04 20:46:25 nirbheek Exp $
+
+  04 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-9.0.ebuild:
+  Fix xpcshell infinite loop problems on hardened, bug 396275
 
   02 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2009:
   Split ChangeLog.
