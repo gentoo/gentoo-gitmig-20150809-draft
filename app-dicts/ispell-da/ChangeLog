@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-da
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.69 2011/12/16 15:07:20 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.70 2012/01/04 20:28:17 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> ispell-da-1.6.18.ebuild:
+  Marking ispell-da-1.6.18 ppc for bug 392837
 
   16 Dec 2011; Jeroen Roovers <jer@gentoo.org> ispell-da-1.6.18.ebuild:
   Stable for HPPA (bug #392837).
