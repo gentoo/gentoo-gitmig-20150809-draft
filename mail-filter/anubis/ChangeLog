@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/anubis
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.17 2011/11/22 16:03:48 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.18 2012/01/04 22:21:44 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> anubis-4.1.1.ebuild:
+  Marking anubis-4.1.1 ppc for bug 391111
 
   22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> anubis-4.1.1.ebuild:
   x86 stable wrt bug #391111
