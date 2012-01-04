@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.23 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.24 2012/01/04 05:57:19 vapier Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -15,11 +15,11 @@ ___ECLASS_ONCE_PORTABILITY="recur -_+^+_- spank"
 #
 # mimic cp --parents copy, but working on BSD userland as well
 treecopy() {
-	dest=${!#}
-	files_count=$#
+	local dest=${!#}
+	local files_count=$#
 
-	while(( $# > 1 )); do
-		dirstruct=$(dirname "$1")
+	while (( $# > 1 )); do
+		local dirstruct=$(dirname "$1")
 		mkdir -p "${dest}/${dirstruct}"
 		cp -pPR "$1" "${dest}/${dirstruct}"
 
@@ -38,6 +38,7 @@ seq() {
 		return $?
 	fi
 
+	local min max step
 	case $# in
 		1) min=1  max=$1 step=1  ;;
 		2) min=$1 max=$2 step=1  ;;
