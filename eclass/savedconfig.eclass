@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.18 2012/01/04 06:22:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.19 2012/01/04 07:45:16 vapier Exp $
 
 # @ECLASS: savedconfig.eclass
 # @MAINTAINER:
@@ -32,7 +32,7 @@ save_config() {
 	[[ $# -eq 0 ]] && die "Usage: save_config <files>"
 
 	# Be lazy in our EAPI compat
-	: ${ED:-${D}}
+	: ${ED:=${D}}
 
 	local dest="/etc/portage/savedconfig/${CATEGORY}"
 	if [[ $# -eq 1 && -f $1 ]] ; then
