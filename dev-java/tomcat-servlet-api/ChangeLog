@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.116 2012/01/01 19:42:23 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.117 2012/01/04 17:58:49 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  tomcat-servlet-api-6.0.35.ebuild:
+  x86 stable wrt bug #395933
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> tomcat-servlet-api-3.ebuild,
   tomcat-servlet-api-4.1.36.ebuild:
