@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfishtank
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.18 2011/12/22 22:16:18 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.19 2012/01/04 21:36:49 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> xfishtank-2.1-r1.ebuild:
+  Marking xfishtank-2.1-r1 ppc for bug 394045
 
   22 Dec 2011; Markus Meier <maekke@gentoo.org> xfishtank-2.1-r1.ebuild:
   x86 stable, bug #394045
