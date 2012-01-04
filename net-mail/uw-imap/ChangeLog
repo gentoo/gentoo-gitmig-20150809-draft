@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.132 2012/01/01 17:43:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.133 2012/01/04 22:07:32 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> uw-imap-2007f.ebuild:
+  Marking uw-imap-2007f ppc for bug 391349
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> uw-imap-2007f.ebuild:
   alpha/ia64/sparc stable wrt #391349
