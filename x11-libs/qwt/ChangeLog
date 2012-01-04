@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.94 2012/01/04 18:05:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.95 2012/01/04 18:06:16 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qwt-6.0.0.ebuild:
+  x86 stable wrt bug #395341
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qwt-5.2.1.ebuild:
   x86 stable wrt bug #395339
