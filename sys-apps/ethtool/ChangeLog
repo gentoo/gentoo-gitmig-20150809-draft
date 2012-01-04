@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.76 2011/12/14 23:19:54 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.77 2012/01/04 18:19:23 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> ethtool-3.0.ebuild:
+  Marking ethtool-3.0 ppc for bug 393553
 
   14 Dec 2011; Markus Meier <maekke@gentoo.org> ethtool-3.0.ebuild:
   arm stable, bug #393553
