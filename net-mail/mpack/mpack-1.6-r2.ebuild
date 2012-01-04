@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.6-r2.ebuild,v 1.3 2012/01/02 00:14:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.6-r2.ebuild,v 1.4 2012/01/04 18:00:43 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/mpack/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 ~sparc ~x86 ~ppc-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ~sparc x86 ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 src_prepare() {
