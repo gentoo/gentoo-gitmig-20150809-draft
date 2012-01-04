@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/polygon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.1 2012/01/04 21:49:17 bicatali Exp $
+
+*polygon-3.0.4 (04 Jan 2012)
+*polygon-2.0.4 (04 Jan 2012)
+
+  04 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +polygon-2.0.4.ebuild,
+  +polygon-3.0.4.ebuild, +metadata.xml:
+  Initial import
+
