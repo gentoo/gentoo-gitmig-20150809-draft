@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.3 2012/01/02 19:59:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.4 2012/01/04 23:55:50 williamh Exp $
 
 EAPI=4
 
@@ -26,7 +26,8 @@ DEPEND="zlib? ( sys-libs/zlib )
 	lzma? ( app-arch/xz-utils )"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
+src_prepare()
+{
 	if [ ! -e configure ]; then
 		eautoreconf
 	else
@@ -34,10 +35,9 @@ src_prepare() {
 	fi
 }
 
-src_configure() {
+src_configure()
+{
 	econf \
-		--bindir=/bin \
-		--with-rootprefix=/ \
 		$(use_enable debug) \
 		$(use_with lzma xz) \
 		$(use_enable static-libs static) \
@@ -45,13 +45,17 @@ src_configure() {
 		$(use_with zlib)
 }
 
-src_install() {
+src_install()
+{
 	default
 
-	dodir /sbin
-	mv "${D}"/bin/kmod-{{ins,rm}mod,modprobe} "${D}"/sbin/ || die
-
-	gen_usr_ldscript -a kmod
 	# we have a .pc file for people to use
 	find "${D}" -name libkmod.la -delete
+
+	# If the tools are installed, add compatibility symbolic links
+	if use tools; then
+		for cmd in depmod insmod lsmod modinfo modprobe rmmod; do
+			dosym kmod /usr/bin/$cmd
+		done
+	fi
 }
