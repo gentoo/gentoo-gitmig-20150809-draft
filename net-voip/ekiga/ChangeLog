@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/ekiga
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.26 2011/03/27 13:20:56 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.27 2012/01/04 01:24:51 nirbheek Exp $
+
+  04 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> ekiga-2.0.12.ebuild:
+  Add pulseaudio as an alternative to esound since esd is being last-rited. Not
+  sure if this works properly. Either someone will test this, or we'll
+  stabilize 3.x, or we'll remove ekiga.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> ekiga-2.0.12.ebuild:
   Fix slot-dep on gtk+

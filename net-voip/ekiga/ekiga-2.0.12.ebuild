@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-2.0.12.ebuild,v 1.3 2011/03/27 13:20:56 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-2.0.12.ebuild,v 1.4 2012/01/04 01:24:51 nirbheek Exp $
 
 EAPI="2"
 inherit gnome2 eutils flag-o-matic
@@ -27,7 +27,8 @@ RDEPEND="~dev-libs/pwlib-1.10.$[${PV##*.}-2][ldap]
 		>=gnome-base/gconf-2.2.0
 		>=gnome-base/orbit-2.5.0
 		gnome-extra/evolution-data-server
-		>=media-sound/esound-0.2.28 )"
+		|| ( media-sound/pulseaudio
+			 >=media-sound/esound-0.2.28 ) )"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
