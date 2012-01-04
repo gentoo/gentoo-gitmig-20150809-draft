@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jdk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.44 2011/12/16 15:04:14 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.45 2012/01/04 09:11:51 sera Exp $
+
+  04 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jdk-1.5.0.ebuild:
+  Drop ia64 support #345433
 
   16 Dec 2011; Fabian Groffen <grobian@gentoo.org> jdk-1.7.0.ebuild:
   Add Prefix keywords (now oracle-jdk-bin has them too)
