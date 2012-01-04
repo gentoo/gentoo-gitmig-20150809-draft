@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.1.ebuild,v 1.1 2011/02/24 00:56:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.2-r1.ebuild,v 1.1 2012/01/04 20:24:42 bicatali Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -20,22 +20,23 @@ LICENSE="MIT GPL-2"
 
 CDEPEND="sci-libs/shapelib
 	>=dev-python/matplotlib-0.98
-	>=sci-libs/geos-3.1.1"
+	>=sci-libs/geos-3.3.1"
 
 DEPEND="${CDEPEND}
 	dev-python/setuptools"
 
 RDEPEND="${CDEPEND}
 	>=dev-python/pupynere-1.0.8
+	dev-python/httplib2
 	dev-python/dap"
 
 DOCS="FAQ API_CHANGES"
 
 src_prepare() {
-	# use system libraries
-	epatch "${FILESDIR}"/${PN}-0.99.3-syslib.patch
-	epatch "${FILESDIR}"/${PN}-0.99.3-datadir.patch
-	rm -f lib/mpl_toolkits/basemap/pupynere.py || die
+	# use /usr/share/data
+	sed -i \
+		-e "/_datadir.*=.*join/s|\(.*datadir.*=\).*|\1'${EROOT}usr/share/${PN}'|g" \
+		"${S}"/lib/mpl_toolkits/basemap/*.py || die
 }
 
 src_install() {

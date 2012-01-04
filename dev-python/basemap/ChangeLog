@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/basemap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.22 2011/12/25 14:19:47 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.23 2012/01/04 20:24:41 bicatali Exp $
+
+*basemap-1.0.2-r1 (04 Jan 2012)
+
+  04 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/basemap-0.99.3-datadir.patch, -files/basemap-0.99.3-syslib.patch,
+  -basemap-1.0.1.ebuild, +basemap-1.0.2-r1.ebuild:
+  Fix for datadir, bug #396493. Added httplib2 required run dependency
 
 *basemap-1.0.2 (25 Dec 2011)
 
