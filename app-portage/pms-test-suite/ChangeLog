@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/pms-test-suite
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/ChangeLog,v 1.7 2011/10/23 22:15:08 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/ChangeLog,v 1.8 2012/01/04 16:48:14 mgorny Exp $
+
+*pms-test-suite-0.2 (04 Jan 2012)
+
+  04 Jan 2012; Michał Górny <mgorny@gentoo.org> +pms-test-suite-0.2.ebuild,
+  metadata.xml:
+  Version bump. The new version uses a private D-Bus session bus instead of
+  relying on the system one.
 
   23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   pms-test-suite-0.1.ebuild:
