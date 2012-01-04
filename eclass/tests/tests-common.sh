@@ -93,6 +93,7 @@ tbegin() {
 	ebegin "Testing $*"
 }
 texit() {
+	rm -rf "${tmpdir}"
 	exit ${tret}
 }
 tend() {
@@ -104,3 +105,20 @@ t() {
 	: $(( tret |= ${ret} ))
 	return ${ret}
 }
+
+tmpdir="${PWD}/tmp"
+D="${tmpdir}/$0/${RANDOM}"
+ED=${D}
+mkdir -p "${D}"
+
+dodir() {
+	mkdir -p "${@/#/${ED}/}"
+}
+
+elog() { einfo "$@" ; }
+
+CATEGORY="dev-eclass"
+PN="tests"
+PV="0"
+P="${PN}-${PV}"
+PF=${P}
