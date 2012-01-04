@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.2 2011/11/04 13:32:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.3 2012/01/04 05:35:09 vapier Exp $
 
 EAPI=3
 
@@ -34,9 +34,7 @@ src_prepare() {
 		-i config.mk || die
 	tc-export CC
 
-	if use savedconfig ; then
-		restore_config config.h
-	fi
+	restore_config config.h
 }
 
 src_install() {
@@ -44,7 +42,5 @@ src_install() {
 	tic -s -o "${ED}"/usr/share/terminfo st.info || die
 	dodoc README TODO || die
 
-	if use savedconfig ; then
-		save_config config.h
-	fi
+	save_config config.h
 }

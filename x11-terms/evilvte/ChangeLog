@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/evilvte
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.29 2011/12/23 04:25:24 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.30 2012/01/04 05:36:10 vapier Exp $
+
+  04 Jan 2012; Mike Frysinger <vapier@gentoo.org> evilvte-0.4.9.ebuild,
+  evilvte-0.5.0.ebuild:
+  Drop `use savedconfig` logic that the savedconfig eclass handles itself.
 
   23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> evilvte-0.5.0.ebuild:
   amd64/x86 stable
