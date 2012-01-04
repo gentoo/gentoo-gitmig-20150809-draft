@@ -8,6 +8,7 @@ inherit() {
 		source ../${e}.eclass
 	done
 }
+EXPORT_FUNCTIONS() { :; }
 
 debug-print() {
 	[[ ${#} -eq 0 ]] && return
@@ -37,6 +38,7 @@ has() {
 	done
 	return 1
 }
+use() { has "$1" ${IUSE} ; }
 
 die() {
 	echo "die: $*" 1>&2
@@ -107,9 +109,12 @@ t() {
 }
 
 tmpdir="${PWD}/tmp"
-D="${tmpdir}/$0/${RANDOM}"
+pkg_root="${tmpdir}/$0/${RANDOM}"
+T="${pkg_root}/temp"
+D="${pkg_root}/image"
+WORKDIR="${pkg_root}/work"
 ED=${D}
-mkdir -p "${D}"
+mkdir -p "${D}" "${T}" "${WORKDIR}"
 
 dodir() {
 	mkdir -p "${@/#/${ED}/}"
@@ -117,6 +122,7 @@ dodir() {
 
 elog() { einfo "$@" ; }
 
+IUSE=""
 CATEGORY="dev-eclass"
 PN="tests"
 PV="0"
