@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/cpptest-1.1.1.ebuild,v 1.2 2012/01/02 13:52:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/cpptest-1.1.1.ebuild,v 1.3 2012/01/04 03:18:40 sping Exp $
 
 EAPI=2
 inherit autotools
@@ -30,5 +30,7 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS BUGS NEWS README
+	dodoc AUTHORS BUGS NEWS README || die
+
+	find "${D}" -type f -name '*.la' -delete || die
 }
