@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.120 2012/01/04 09:04:04 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.121 2012/01/04 18:34:33 sera Exp $
+
+  04 Jan 2012; Ralph Sennhauser <sera@gentoo.org> package.use.mask:
+  Remove package.use.mask for ruby_targets_jruby as it's already masked in base
+  profile.
 
   04 Jan 2012; Ralph Sennhauser <sera@gentoo.org> package.use.mask:
   Package.use.mask dev-ruby/hpricot ruby_targets_jruby as it has direct
