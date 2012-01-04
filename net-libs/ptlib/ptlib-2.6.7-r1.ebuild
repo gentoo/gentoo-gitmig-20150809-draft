@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.7 2011/10/30 15:50:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.8 2012/01/04 20:07:00 nirbheek Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 # default enabled are features from 'minsize', the most used according to ptlib
 IUSE="alsa +asn +audio debug doc dtmf esd examples ffmpeg ftp http ipv6
 jabber ldap mail odbc oss pch qos remote sasl sdl serial shmvideo snmp soap
-socks ssl +stun telnet tts v4l +video vxml wav xml xmlrpc"
+socks ssl static-libs +stun telnet tts v4l +video vxml wav xml xmlrpc"
 
 CDEPEND="
 	audio? ( alsa? ( media-libs/alsa-lib )
@@ -219,6 +219,12 @@ src_install() {
 	use debug && makeopts="DEBUG=1"
 
 	emake DESTDIR="${D}" ${makeopts} install || die "emake install failed"
+
+	# Get rid of static libraries if not requested
+	# There seems to be no easy way to disable this in the build system
+	if ! use static-libs; then
+		rm -v "${D}"/usr/lib*/*.a || die
+	fi
 
 	if use doc; then
 		dohtml -r "${WORKDIR}"/html/* || die "dohtml failed"
