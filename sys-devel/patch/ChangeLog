@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/patch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.51 2011/12/18 16:47:33 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.52 2012/01/04 22:32:33 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> patch-2.6.1.ebuild:
+  Marking patch-2.6.1 ppc for bug 387471
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> patch-2.6.1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #387471
