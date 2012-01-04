@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.7.1.ebuild,v 1.1 2012/01/04 09:16:25 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.7.1.ebuild,v 1.2 2012/01/04 17:40:21 mr_bones_ Exp $
 
 EAPI=2
 inherit versionator autotools multilib
@@ -8,8 +8,6 @@ inherit versionator autotools multilib
 DESCRIPTION="a library for mp3splt to split mp3 and ogg files without decoding."
 HOMEPAGE="http://mp3splt.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN:3}/${P}.tar.gz"
-
-
 
 LICENSE="GPL-2"
 SLOT="0"
