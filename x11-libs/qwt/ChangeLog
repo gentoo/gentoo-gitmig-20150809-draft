@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.93 2011/12/21 15:45:53 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.94 2012/01/04 18:05:43 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qwt-5.2.1.ebuild:
+  x86 stable wrt bug #395339
 
   21 Dec 2011; Justin Lecher <jlec@gentoo.org> qwt-6.0.1.ebuild:
   Migrated to EAPI=4 noted by arfrever
