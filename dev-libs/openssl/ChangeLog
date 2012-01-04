@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.412 2011/12/07 16:03:05 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.413 2012/01/04 21:44:48 vapier Exp $
+
+*openssl-1.0.0f (04 Jan 2012)
+*openssl-0.9.8s (04 Jan 2012)
+
+  04 Jan 2012; Mike Frysinger <vapier@gentoo.org> +openssl-0.9.8s.ebuild,
+  +openssl-1.0.0f.ebuild:
+  Version bump #397695.
 
   07 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/gentoo.config-1.0.0,
   openssl-1.0.0e-r1.ebuild, +files/openssl-1.0.0e-x32.patch:
