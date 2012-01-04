@@ -1,6 +1,12 @@
 # ChangeLog for app-office/planner
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.62 2011/07/14 17:26:34 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.63 2012/01/04 19:55:14 pacho Exp $
+
+*planner-0.14.6 (04 Jan 2012)
+
+  04 Jan 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/planner-0.14.6-find-python.patch, +planner-0.14.6.ebuild:
+  Version bump.
 
   14 Jul 2011; Pacho Ramos <pacho@gentoo.org> -planner-0.14.4.ebuild:
   Remove old.
