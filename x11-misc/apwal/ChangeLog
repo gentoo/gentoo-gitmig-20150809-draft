@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/apwal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.14 2011/12/07 07:43:54 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.15 2012/01/04 21:31:43 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> apwal-0.4.5-r1.ebuild:
+  Marking apwal-0.4.5-r1 ppc for bug 391613
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> apwal-0.4.5-r1.ebuild:
   x86 stable wrt bug #391613
