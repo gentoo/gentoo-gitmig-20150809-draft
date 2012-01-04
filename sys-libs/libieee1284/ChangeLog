@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libieee1284
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.30 2011/12/21 08:31:16 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.31 2012/01/04 18:20:42 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> libieee1284-0.2.11-r2.ebuild:
+  Marking libieee1284-0.2.11-r2 ppc for bug 393889
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libieee1284-0.2.11-r2.ebuild:
