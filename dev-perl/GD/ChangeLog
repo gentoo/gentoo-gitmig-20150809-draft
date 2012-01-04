@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.103 2011/12/16 15:39:42 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.104 2012/01/04 18:10:41 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> GD-2.460.0.ebuild:
+  x86 stable wrt bug #394843
 
   16 Dec 2011; Jeroen Roovers <jer@gentoo.org> GD-2.460.0.ebuild:
   Stable for HPPA (bug #394843).
