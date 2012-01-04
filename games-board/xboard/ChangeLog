@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xboard
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.43 2011/11/02 01:10:36 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.44 2012/01/04 17:57:53 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xboard-4.5.3a.ebuild:
+  x86 stable wrt bug #395445
 
 *xboard-4.5.3a (02 Nov 2011)
 
