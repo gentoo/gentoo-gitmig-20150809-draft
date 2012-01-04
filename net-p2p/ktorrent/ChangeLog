@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.173 2011/12/30 23:14:15 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.174 2012/01/04 18:18:32 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ktorrent-4.1.2.ebuild:
+  x86 stable wrt bug #394867
 
 *ktorrent-4.1.3 (30 Dec 2011)
 
