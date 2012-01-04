@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grun
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/ChangeLog,v 1.34 2011/12/07 07:56:43 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/ChangeLog,v 1.35 2012/01/04 21:30:04 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> grun-0.9.3-r1.ebuild:
+  Marking grun-0.9.3-r1 ppc for bug 391549
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> grun-0.9.3-r1.ebuild:
   x86 stable wrt bug #391549
