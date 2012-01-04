@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.28.ebuild,v 1.2 2011/12/15 20:06:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.28.ebuild,v 1.3 2012/01/04 17:56:51 phajdan.jr Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.v2v.cc/~j/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug kate"
 
 RDEPEND="virtual/ffmpeg
