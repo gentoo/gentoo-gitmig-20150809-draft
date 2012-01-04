@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6069 2012/01/04 01:18:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6070 2012/01/04 10:01:51 sera Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jan 2012; Ralph Sennhauser <sera@gentoo.org> package.mask:
+  Package.mask dev-java/jrockit-jdk-bin for removal in 30 days.
+  Outdated Java version, fails to fetch, no upstream. #228929
 
   04 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> base/use.mask,
   package.mask:
