@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.78 2012/01/02 09:14:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.79 2012/01/04 19:31:44 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> sharutils-4.11.1.ebuild:
+  Marking sharutils-4.11.1 ppc for bug 396763
 
   02 Jan 2012; Agostino Sarubbo <ago@gentoo.org> sharutils-4.11.ebuild:
   Stable for AMD64, wrt bug #396763
