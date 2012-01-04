@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gummi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.28 2011/12/02 18:30:50 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.29 2012/01/04 16:09:25 jer Exp $
+
+  04 Jan 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix crappy tag order.
 
 *gummi-0.6.1 (02 Dec 2011)
 
