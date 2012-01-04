@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.5 2012/01/02 17:05:25 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.6 2012/01/04 06:12:57 sping Exp $
 
 EAPI=4
 
@@ -20,7 +20,6 @@ VALASLOT="0.14"
 
 RDEPEND=">=media-libs/babl-0.1.6
 	>=dev-libs/glib-2.28:2
-	x11-libs/gtk+:2
 	>=x11-libs/gdk-pixbuf-2.18:2
 	x11-libs/pango
 	sys-libs/zlib
