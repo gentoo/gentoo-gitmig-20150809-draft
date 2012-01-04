@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.50 2011/12/16 14:28:28 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.51 2012/01/04 18:13:56 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mysql-workbench-5.2.35.ebuild:
+  x86 stable wrt bug #394729
 
   16 Dec 2011; Agostino Sarubbo <ago@gentoo.org> mysql-workbench-5.2.35.ebuild:
   Stable for AMD64, wrt bug #394729
