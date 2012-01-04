@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-2.00.7.ebuild,v 1.2 2011/12/21 14:02:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-2.00.7.ebuild,v 1.3 2012/01/04 17:57:20 phajdan.jr Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tintin/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib
