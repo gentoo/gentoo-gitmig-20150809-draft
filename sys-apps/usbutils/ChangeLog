@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.130 2012/01/01 15:57:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.131 2012/01/04 23:15:25 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> usbutils-004.ebuild:
+  Marking usbutils-004 ppc for bug 394577
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> usbutils-004.ebuild:
   alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #394577
