@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.65 2012/01/01 15:29:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.66 2012/01/04 09:04:04 sera Exp $
+
+# Ralph Sennhauser <sera@gentoo.org> (4 Jan 2012)
+# ruby_targets_jruby triggers direct dependency on missing JVM #345433
+dev-ruby/hpricot ruby_targets_jruby
 
 # Ralph Sennhauser <sera@gentoo.org> (31 Dec 2011)
 # Needs dev-java/fop which is not available for ia64 due to missing JVM #345433
