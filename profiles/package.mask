@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13371 2012/01/04 16:08:17 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13372 2012/01/04 17:24:37 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -46,9 +46,11 @@ dev-java/jrockit-jdk-bin
 # In exceptional cases, you may use Pulseaudio's esound wrapper.
 media-sound/esound
 games-arcade/monkey-bubble
+gpe-base/libsoundgen
 media-plugins/gst-plugins-esd
 media-sound/extace
 x11-plugins/wmpop
+x11-plugins/wsoundserver
 
 # Markos Chandras <hwoarang@gentoo.org> (02 Jan 2012)
 # Parallel build does not work. Upstream report:

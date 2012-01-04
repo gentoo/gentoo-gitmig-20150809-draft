@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6071 2012/01/04 16:08:17 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6072 2012/01/04 17:24:37 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  Add two more packages that need esound, found by Mr_Bones_
 
   04 Jan 2012; Michael Pagano <mpagano@gentoo.org> package.mask:
   Mask portpeek >= 2.0.17 for testing
