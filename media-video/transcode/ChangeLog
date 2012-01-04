@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.293 2011/12/23 19:38:30 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.294 2012/01/04 18:08:37 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> transcode-1.1.7.ebuild:
+  x86 stable wrt bug #395729
 
   23 Dec 2011; Agostino Sarubbo <ago@gentoo.org> transcode-1.1.7.ebuild:
   Stable for AMD64, wrt bug #395729
