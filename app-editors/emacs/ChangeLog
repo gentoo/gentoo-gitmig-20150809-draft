@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.453 2012/01/04 17:30:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.454 2012/01/04 19:50:48 ulm Exp $
+
+  04 Jan 2012; Ulrich Mueller <ulm@gentoo.org> -emacs-18.59-r6.ebuild:
+  Remove old.
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> emacs-18.59-r8.ebuild:
   x86 stable wrt bug #396139
