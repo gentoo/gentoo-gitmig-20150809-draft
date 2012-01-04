@@ -1,9 +1,11 @@
 # ChangeLog for dev-libs/libical
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.56 2011/10/01 09:50:53 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.57 2012/01/04 14:53:02 s4t4n Exp $
 
-  01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> libical-0.44-r1.ebuild:
-  Remove libtool files.
+*libical-0.48 (04 Jan 2012)
+
+  04 Jan 2012; Michele Noberasco <s4t4n@gentoo.org> +libical-0.48.ebuild:
+  Version bump. Closes bug #347883.
 
 *libical-0.44-r1 (19 Aug 2010)
 
