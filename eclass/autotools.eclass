@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.116 2011/12/14 20:46:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.117 2012/01/04 22:00:27 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -256,14 +256,12 @@ eautomake() {
 
 	# Run automake if:
 	#  - a Makefile.am type file exists
-	#  - a Makefile.in type file exists and the configure
-	#    script is using the AM_INIT_AUTOMAKE directive
-	for makefile_name in {GNUmakefile,{M,m}akefile}.{am,in} "" ; do
+	#  - the configure script is using the AM_INIT_AUTOMAKE directive
+	for makefile_name in {GNUmakefile,{M,m}akefile}.am "" ; do
 		[[ -f ${makefile_name} ]] && break
 	done
-	[[ -z ${makefile_name} ]] && return 0
 
-	if [[ ${makefile_name} == *.in ]] ; then
+	if [[ -z ${makefile_name} ]] ; then
 		if ! grep -qs AM_INIT_AUTOMAKE configure.?? ; then
 			return 0
 		fi
