@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.201 2012/01/02 05:42:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.202 2012/01/04 17:32:49 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gdb-7.3.1.ebuild:
+  x86 stable wrt bug #395017
 
   02 Jan 2012; Mike Frysinger <vapier@gentoo.org> gdb-7.3.1-r1.ebuild,
   gdb-9999.ebuild:
