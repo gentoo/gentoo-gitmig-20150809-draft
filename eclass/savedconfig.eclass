@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.17 2012/01/04 06:19:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.18 2012/01/04 06:22:12 vapier Exp $
 
 # @ECLASS: savedconfig.eclass
 # @MAINTAINER:
@@ -76,12 +76,13 @@ save_config() {
 # ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CATEGORY}/${PN}
 # @CODE
 restore_config() {
-	use savedconfig || return
-
 	case ${EBUILD_PHASE} in
 		unpack|compile|configure|prepare) ;;
 		*) die "Bad package!  restore_config only for use in src_{unpack,compile,configure,prepare} functions!" ;;
 	esac
+
+	use savedconfig || return
+
 	local found check configfile
 	local base=${PORTAGE_CONFIGROOT}/etc/portage/savedconfig
 	for check in {${CATEGORY}/${PF},${CATEGORY}/${P},${CATEGORY}/${PN}}; do
