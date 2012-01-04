@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scikits_learn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.6 2011/11/25 22:13:57 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.7 2012/01/04 19:17:08 bicatali Exp $
+
+  04 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  scikits_learn-0.9.ebuild:
+  Fix for bug #397605 by adding -shared to LDFLAGS
 
 *scikits_learn-0.9 (25 Nov 2011)
 
