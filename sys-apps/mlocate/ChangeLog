@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mlocate
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.91 2011/12/28 20:25:46 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.92 2012/01/04 17:48:23 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mlocate-0.24.ebuild:
+  x86 stable wrt bug #396325
 
   28 Dec 2011; Michael Weber <xmw@gentoo.org> mlocate-0.24.ebuild:
   ppc stable (bug 396325)
