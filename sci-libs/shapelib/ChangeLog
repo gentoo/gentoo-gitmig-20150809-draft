@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/shapelib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.12 2010/05/21 21:04:06 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.13 2012/01/04 20:42:16 bicatali Exp $
+
+  04 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  shapelib-1.2.10-r1.ebuild:
+  Added static-libs. Switch to EAPI4
 
   21 May 2010; Pacho Ramos <pacho@gentoo.org> shapelib-1.2.10-r1.ebuild:
   stable amd64, bug 300734
