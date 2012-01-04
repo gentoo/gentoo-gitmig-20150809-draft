@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfmx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.62 2011/10/05 23:26:17 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.63 2012/01/04 17:16:52 ago Exp $
+
+  04 Jan 2012; Agostino Sarubbo <ago@gentoo.org> dvipdfmx-20110311.ebuild:
+  Stable for AMD64, wrt bug #396831
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> dvipdfmx-20110311.ebuild:
   keyword ~x86-fbsd, bug #376611
