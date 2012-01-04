@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw3945d
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.22 2008/03/21 12:52:20 lack Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.23 2012/01/04 17:01:26 ago Exp $
+
+  04 Jan 2012; Agostino Sarubbo <ago@gentoo.org> ipw3945d-1.7.22-r6.ebuild:
+  Stable for AMD64, wrt bug #397193
 
 *ipw3945d-1.7.22-r6 (21 Mar 2008)
 

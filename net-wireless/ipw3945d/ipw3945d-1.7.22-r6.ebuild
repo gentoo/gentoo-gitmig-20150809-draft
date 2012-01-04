@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r6.ebuild,v 1.1 2008/03/21 12:52:20 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r6.ebuild,v 1.2 2012/01/04 17:01:26 ago Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.bughost.org/ipw3945/daemon/${P}.tgz"
 
 LICENSE="ipw3945"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE=""
 DEPEND=""
