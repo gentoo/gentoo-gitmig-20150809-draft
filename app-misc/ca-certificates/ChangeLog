@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.64 2012/01/01 15:54:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.65 2012/01/04 18:28:43 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> ca-certificates-20111025.ebuild:
+  Marking ca-certificates-20111025 ppc for bug 394223
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org>
   ca-certificates-20111025.ebuild:
