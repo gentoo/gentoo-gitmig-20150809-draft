@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.12-r1.ebuild,v 1.6 2011/12/27 20:47:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.12-r1.ebuild,v 1.7 2012/01/04 18:02:50 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://dist.schmorp.de/rxvt-unicode/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
 IUSE="
 	256-color alt-font-width afterimage blink +focused-urgency fading-colors
 	+font-styles force-hints iso14755 +mousewheel +perl pixbuf truetype unicode3
