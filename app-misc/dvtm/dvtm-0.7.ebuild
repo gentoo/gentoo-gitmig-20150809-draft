@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/dvtm-0.7.ebuild,v 1.2 2012/01/01 17:08:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/dvtm-0.7.ebuild,v 1.3 2012/01/04 05:39:25 vapier Exp $
 
 EAPI=3
 
@@ -34,7 +34,7 @@ src_prepare() {
 		-e '/strip/d' \
 		Makefile || die "sed Makefile failed"
 
-	use savedconfig && restore_config config.h
+	restore_config config.h
 }
 
 src_compile() {

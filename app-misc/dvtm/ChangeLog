@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/dvtm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.9 2012/01/01 17:08:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.10 2012/01/04 05:39:25 vapier Exp $
+
+  04 Jan 2012; Mike Frysinger <vapier@gentoo.org> dvtm-0.6.ebuild,
+  dvtm-0.7.ebuild:
+  Drop `use savedconfig` logic that the savedconfig eclass handles itself.
 
   01 Jan 2012; Agostino Sarubbo <ago@gentoo.org> dvtm-0.7.ebuild:
   Stable for AMD64, wrt bug #396671
