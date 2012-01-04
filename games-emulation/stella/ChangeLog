@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/stella
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.64 2011/11/10 16:39:06 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.65 2012/01/04 04:53:39 mr_bones_ Exp $
+
+*stella-3.5 (04 Jan 2012)
+
+  04 Jan 2012; Michael Sterrett <mr_bones_@gentoo.org> +stella-3.5.ebuild:
+  version bump (bug #397551)
 
   10 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> stella-3.4.ebuild:
   build with newer zlib (bug #390093)
