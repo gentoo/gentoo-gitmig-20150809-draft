@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.8-r2.ebuild,v 1.2 2011/05/24 13:30:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.8-r2.ebuild,v 1.3 2012/01/04 20:35:06 nirbheek Exp $
 
 EAPI="4"
 
@@ -16,8 +16,8 @@ LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+audio capi celt debug doc dtmf examples fax ffmpeg h224 h281 h323 iax
-ilbc ipv6 ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl stats swig
-theora +video vpb vxml wav x264 x264-static xml"
+ilbc ipv6 ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl static-libs
+stats swig theora +video vpb vxml wav x264 x264-static xml"
 
 REQUIRED_USE="x264-static? ( x264 )
 	h281? ( h224 )"
@@ -26,7 +26,7 @@ RDEPEND=">=net-libs/ptlib-2.6.6[stun,debug=,audio?,dtmf?,ipv6?,ldap?,ssl?,video?
 	>=media-libs/speex-1.2_beta
 	fax? ( net-libs/ptlib[asn] )
 	h323? ( net-libs/ptlib[asn] )
-	ivr? ( net-libs/ptlib[xml,vxml] )
+	ivr? ( net-libs/ptlib[http,xml,vxml] )
 	java? ( >=virtual/jre-1.4 )
 	plugins? (
 		media-sound/gsm
@@ -39,7 +39,8 @@ RDEPEND=">=net-libs/ptlib-2.6.6[stun,debug=,audio?,dtmf?,ipv6?,ldap?,ssl?,video?
 		theora? ( media-libs/libtheora )
 		x264? (	virtual/ffmpeg
 			media-libs/x264 ) )
-	srtp? ( net-libs/libsrtp )"
+	srtp? ( net-libs/libsrtp )
+	vxml? ( net-libs/ptlib[http,vxml] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gcc-3
@@ -88,6 +89,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-build-fix.patch #343041
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-lid-plugins-ldflags.patch #397681
 
 	# h224 really needs h323 ?
 	# TODO: get a confirmation in ml
@@ -226,6 +228,12 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	# Get rid of static libraries if not requested
+	# There seems to be no easy way to disable this in the build system
+	if ! use static-libs; then
+		rm -v "${D}"/usr/lib*/*.a || die
+	fi
 
 	if use doc; then
 		dohtml -r "${WORKDIR}"/html/* docs/* || die "dohtml failed"
