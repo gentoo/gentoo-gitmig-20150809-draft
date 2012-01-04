@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175-r1.ebuild,v 1.4 2012/01/02 22:10:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175-r1.ebuild,v 1.5 2012/01/04 00:36:37 williamh Exp $
 
 EAPI=4
 
@@ -34,15 +34,14 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="build selinux debug +rule_generator hwdb acl gudev introspection
-	keymap floppy edd doc +zlib"
+	keymap floppy edd doc"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
 	gudev? ( dev-libs/glib:2 )
 	introspection? ( dev-libs/gobject-introspection )
 	>=sys-apps/util-linux-2.16
-	>=sys-libs/glibc-2.10
-	zlib? ( sys-libs/zlib )"
+	>=sys-libs/glibc-2.10"
 
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
@@ -63,7 +62,7 @@ else
 fi
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils )
+	hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils[-zlib] )
 	acl? ( sys-apps/coreutils[acl] )
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
@@ -132,7 +131,6 @@ src_prepare()
 		EPATCH_SOURCE="${WORKDIR}/${patchset}" EPATCH_SUFFIX="patch" \
 			EPATCH_FORCE="yes" epatch
 	fi
-	use zlib && epatch "${FILESDIR}"/${PN}-175-zlib.patch #360849
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
