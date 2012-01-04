@@ -1,6 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.131 2011/12/28 12:49:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.132 2012/01/04 01:18:40 nirbheek Exp $
+
+# esd is finally being purged from the tree
+esd
 
 # vdpau is currently only available with binary nvidia-drivers, thus amd64/x86*
 vdpau

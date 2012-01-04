@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6068 2012/01/02 19:23:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6069 2012/01/04 01:18:39 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> base/use.mask,
+  package.mask:
+  Last Rites for esound daemon as per mail to gentoo-dev
 
   02 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2007, 
   +ChangeLog-2008, +ChangeLog-2009, +ChangeLog-2010, +ChangeLog-2011:

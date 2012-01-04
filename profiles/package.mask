@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13368 2012/01/02 14:42:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13369 2012/01/04 01:18:39 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (04 Jan 2012)
+# Outdated and unused sound daemon. Why is this still in the tree?
+# Removal of esd and deps in 30 days.
+# In exceptional cases, you may use Pulseaudio's esound wrapper.
+media-sound/esound
+games-arcade/monkey-bubble
+media-plugins/gst-plugins-esd
+media-sound/extace
+x11-plugins/wmpop
 
 # Markos Chandras <hwoarang@gentoo.org> (02 Jan 2012)
 # Parallel build does not work. Upstream report:
