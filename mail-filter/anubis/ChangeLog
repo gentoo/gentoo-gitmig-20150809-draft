@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/anubis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.18 2012/01/04 22:21:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.19 2012/01/05 16:06:11 eras Exp $
+
+  05 Jan 2012; Eray Aslan <eras@gentoo.org> -files/3.9.95-authmode.c.patch,
+  -files/3.9.95-transmode.c.patch, -anubis-3.9.95.ebuild:
+  remove unused patches
+
+  05 Jan 2012; Eray Aslan <eras@gentoo.org> -anubis-3.9.95.ebuild:
+  remove old
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> anubis-4.1.1.ebuild:
   Marking anubis-4.1.1 ppc for bug 391111
