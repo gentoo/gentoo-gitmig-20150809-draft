@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.70 2012/01/03 12:18:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.71 2012/01/05 22:42:53 mgorny Exp $
+
+  05 Jan 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Add AUTOTOOLS_AUTORECONF for bug #392073.
 
   03 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnome-python-common.eclass:

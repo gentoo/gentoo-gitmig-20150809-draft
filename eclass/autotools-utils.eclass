@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.31 2011/12/22 18:01:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.32 2012/01/05 22:42:53 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -93,9 +93,27 @@ case ${EAPI:-0} in
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
+# @ECLASS-VARIABLE: AUTOTOOLS_AUTORECONF
+# @DEFAULT-UNSET
+# @DESCRIPTION:
+# Set to a non-empty value in order to enable running autoreconf
+# in src_prepare() and adding autotools dependencies.
+#
+# The eclass will try to determine the correct autotools to run including a few
+# external tools: gettext, glib-gettext, intltool, gtk-doc, gnome-doc-prepare.
+# If your tool is not supported, please open a bug and we'll add support for it.
+#
+# Note that dependencies are added for autoconf, automake and libtool only.
+# If your package needs one of the external tools listed above, you need to add
+# appropriate packages to DEPEND yourself.
+[[ ${AUTOTOOLS_AUTORECONF} ]] || _autotools_auto_dep=no
+
+AUTOTOOLS_AUTO_DEPEND=${_autotools_auto_dep} \
 inherit autotools eutils libtool
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
+
+unset _autotools_auto_dep
 
 # @ECLASS-VARIABLE: AUTOTOOLS_BUILD_DIR
 # @DEFAULT_UNSET
@@ -250,20 +268,96 @@ remove_libtool_files() {
 	fi
 }
 
+# @FUNCTION: autotools-utils_autoreconf
+# @DESCRIPTION:
+# Reconfigure the sources (like gnome-autogen.sh or eautoreconf).
+autotools-utils_autoreconf() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	# Override this func to not require unnecessary eaclocal calls.
+	autotools_check_macro() {
+		local x
+
+		# Add a few additional variants as we don't get expansions.
+		[[ ${1} = AC_CONFIG_HEADERS ]] && set -- "${@}" AC_CONFIG_HEADER
+
+		for x; do
+			grep -h "^${x}" configure.{ac,in} 2>/dev/null
+		done
+	}
+
+	einfo "Autoreconfiguring '${PWD}' ..."
+
+	local auxdir=$(sed -n -e 's/^AC_CONFIG_AUX_DIR(\(.*\))$/\1/p' \
+			configure.{ac,in} 2>/dev/null)
+	if [[ ${auxdir} ]]; then
+		auxdir=${auxdir%%]}
+		mkdir -p ${auxdir##[}
+	fi
+
+	# Support running additional tools like gnome-autogen.sh.
+	# Note: you need to add additional depends to the ebuild.
+
+	# gettext
+	if [[ $(autotools_check_macro AM_GLIB_GNU_GETTEXT) ]]; then
+		echo 'no' | autotools_run_tool glib-gettextize --copy
+	elif [[ $(autotools_check_macro AM_GNU_GETTEXT) ]]; then
+		eautopoint
+	fi
+
+	# intltool
+	if [[ $(autotools_check_macro AC_PROG_INTLTOOL IT_PROG_INTLTOOL) ]]
+	then
+		autotools_run_tool intltoolize --copy --automake
+	fi
+
+	# gtk-doc
+	if [[ $(autotools_check_macro GTK_DOC_CHECK) ]]; then
+		autotools_run_tool gtkdocize --copy
+	fi
+
+	# gnome-doc
+	if [[ $(autotools_check_macro GNOME_DOC_INIT) ]]; then
+		autotools_run_tool gnome-doc-prepare --copy
+	fi
+
+	# We need to perform the check twice to know whether to run eaclocal.
+	# (_elibtoolize does that itself)
+	if [[ $(autotools_check_macro AC_PROG_LIBTOOL AM_PROG_LIBTOOL LT_INIT) ]]
+	then
+		_elibtoolize --copy --force --install
+	else
+		eaclocal
+	fi
+
+	eautoconf
+	eautoheader
+	eautomake
+
+	local x
+	for x in $(autotools_get_subdirs); do
+		if [[ -d ${x} ]] ; then
+			pushd "${x}" >/dev/null
+			autotools-utils_eautoreconf
+			popd >/dev/null
+		fi
+	done
+}
+
 # @FUNCTION: autotools-utils_src_prepare
 # @DESCRIPTION:
 # The src_prepare function.
 #
 # Supporting PATCHES array and user patches. See base.eclass(5) for reference.
-#
-# This function calls elibtoolize implicitly. If you need to call eautoreconf
-# afterwards, please use AT_NOELIBTOOLIZE=yes to avoid it being called twice.
 autotools-utils_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	local want_autoreconf=${AUTOTOOLS_AUTORECONF}
 
 	[[ ${PATCHES} ]] && epatch "${PATCHES[@]}"
 	epatch_user
 
+	[[ ${want_autoreconf} ]] && autotools-utils_autoreconf
 	elibtoolize --patch-only
 }
 
