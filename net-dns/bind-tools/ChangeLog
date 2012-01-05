@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.204 2011/12/24 22:39:19 idl0r Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.205 2012/01/05 00:36:50 xmw Exp $
+
+  05 Jan 2012; Michael Weber <xmw@gentoo.org> bind-tools-9.8.1.ebuild:
+  ppc/ppc64 stable (bug 391411)
 
   24 Dec 2011; Christian Ruppert <idl0r@gentoo.org> bind-tools-9.8.1.ebuild:
   Define localstatedir for e.g. default sessions.key used by nsupdate, bug
