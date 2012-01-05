@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/aufs3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.3 2011/11/14 10:50:01 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.4 2012/01/05 16:17:27 jlec Exp $
+
+*aufs3-3_p20111205 (05 Jan 2012)
+
+  05 Jan 2012; Justin Lecher <jlec@gentoo.org> +files/aufs3-base-x-rcN.patch,
+  +files/aufs3-fix-export-__devcgroup_inode_permission.patch,
+  +files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20111205.ebuild:
+  Version Bump
 
 *aufs3-3_p20111114 (14 Nov 2011)
 
