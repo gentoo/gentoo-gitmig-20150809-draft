@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.208 2011/10/01 16:42:01 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.209 2012/01/05 06:38:12 tetromino Exp $
+
+  05 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  rhythmbox-0.12.8-r1.ebuild, rhythmbox-0.13.3.ebuild,
+  rhythmbox-2.90.1_pre20111001.ebuild:
+  Fix py-compile idiom for automake-1.11.2 compatibility (bug #396585).
 
 *rhythmbox-2.90.1_pre20111001 (01 Oct 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.17 2011/07/26 16:28:51 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.18 2012/01/05 06:38:12 tetromino Exp $
 
 EAPI="3"
 
@@ -145,8 +145,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	echo > py-compile
 
 	# Fix python initialization problems, bug #318333
 	epatch "${FILESDIR}/${PN}-0.12-python-initialization.patch"
