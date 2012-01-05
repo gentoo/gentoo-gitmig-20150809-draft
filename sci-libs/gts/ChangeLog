@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.19 2012/01/04 17:35:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.20 2012/01/05 18:58:00 jlec Exp $
+
+  05 Jan 2012; Justin Lecher <jlec@gentoo.org> gts-20100321-r1.ebuild,
+  gts-20100321-r2.ebuild, gts-20100321-r3.ebuild:
+  Fix for file collitions with apbs
 
 *gts-20100321-r3 (04 Jan 2012)
 
