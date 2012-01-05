@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/flphoto/flphoto-1.3.1-r2.ebuild,v 1.7 2011/09/14 13:34:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/flphoto/flphoto-1.3.1-r2.ebuild,v 1.8 2012/01/05 18:20:25 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -14,11 +14,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="cups debug gphoto2 nls"
 
-RDEPEND="dev-libs/openssl
+RDEPEND="dev-libs/openssl:0
 	virtual/jpeg
-	>=media-libs/libpng-1.4
+	>=media-libs/libpng-1.2:0
 	sys-libs/zlib
-	x11-libs/fltk:1
+	>=x11-libs/fltk-1.1:1
 	x11-libs/libX11
 	x11-misc/shared-mime-info
 	cups? ( net-print/cups )
