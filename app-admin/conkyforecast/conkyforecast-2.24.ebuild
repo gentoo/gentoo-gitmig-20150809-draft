@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conkyforecast/conkyforecast-2.12.ebuild,v 1.2 2011/01/01 21:00:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conkyforecast/conkyforecast-2.24.ebuild,v 1.1 2012/01/05 15:54:39 xmw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,8 +8,8 @@ PYTHON_DEPEND="2"
 inherit distutils
 
 DESCRIPTION="Conky weather forecast script with support for language files"
-HOMEPAGE="https://launchpad.net/~conkyhardcore"
-SRC_URI="https://launchpad.net/~conkyhardcore/+archive/ppa/+files/${PN}_${PV}.tar.gz"
+HOMEPAGE="https://launchpad.net/~conky-companions"
+SRC_URI="https://launchpad.net/~conky-companions/+archive/ppa/+files/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
