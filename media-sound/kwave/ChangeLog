@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kwave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.22 2012/01/03 14:48:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.23 2012/01/05 12:38:06 johu Exp $
+
+  05 Jan 2012; Johannes Huber <johu@gentoo.org> kwave-0.8.7.ebuild:
+  Fix imagemagick dependencies wrt bug #314325.
 
 *kwave-0.8.7 (03 Jan 2012)
 
