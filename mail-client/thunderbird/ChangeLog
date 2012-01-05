@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.113 2012/01/05 14:00:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.114 2012/01/05 23:33:34 anarchy Exp $
+
+  05 Jan 2012; Jory A. Pratt <anarchy@gentoo.org>
+  +files/thunderbird-gentoo-default-prefs-1.js-1:
+  Add missing file bug #397773, Remove ppc/ppc64 keywords as drop'd
+  by Mark Loeser.
 
   05 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> Manifest:
   fix gpg manifest problems
