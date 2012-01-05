@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.2.1.ebuild,v 1.1 2011/11/07 07:48:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.2.1.ebuild,v 1.2 2012/01/05 02:19:58 tetromino Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Sub-meta package for the core applications integrated with GNOME 3"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="as-is"
 SLOT="3.0"
-IUSE="+bluetooth +cdr cups"
+IUSE="+bluetooth +cdr cups +networkmanager"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
@@ -31,7 +31,6 @@ RDEPEND="
 	>=gnome-extra/evolution-data-server-${PV}
 	>=gnome-extra/gnome-power-manager-${PV}
 	>=gnome-extra/gnome-screensaver-3.2
-	>=gnome-extra/nm-applet-0.9.1.90[bluetooth?]
 
 	>=app-crypt/seahorse-${PV}
 	>=app-editors/gedit-${PV}
@@ -52,6 +51,7 @@ RDEPEND="
 
 	bluetooth? ( >=net-wireless/gnome-bluetooth-${PV} )
 	cdr? ( >=app-cdr/brasero-3.2 )
+	networkmanager? ( >=gnome-extra/nm-applet-0.9.1.90[bluetooth?] )
 "
 DEPEND=""
 S=${WORKDIR}
