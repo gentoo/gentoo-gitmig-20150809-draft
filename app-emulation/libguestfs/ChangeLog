@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libguestfs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.1 2011/12/11 19:34:22 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.2 2012/01/05 11:23:23 maksbotan Exp $
+
+*libguestfs-1.8.16 (05 Jan 2012)
+
+  05 Jan 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/1.8/1.8.16/0001-configure_ac_automagic_patch.patch,
+  +files/1.8/1.8.16/0002-disable_php_in_makefile.patch,
+  +files/1.8/1.8.16/0003-hivex_to_hard_error.patch, +libguestfs-1.8.16.ebuild:
+  Bump to 1.8.16, thanks to slepnoga
 
 *libguestfs-1.8.15 (11 Dec 2011)
 
