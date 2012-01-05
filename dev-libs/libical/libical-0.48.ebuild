@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.48.ebuild,v 1.1 2012/01/04 14:53:02 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.48.ebuild,v 1.2 2012/01/05 06:35:15 patrick Exp $
 
 EAPI=4
 
 DESCRIPTION="An implementation of basic iCAL protocols from citadel, previously known as aurore"
 HOMEPAGE="http://freeassociation.sourceforge.net"
-SRC_URI="mirror://sourceforge/freeassociation/files/${PN}/${P}/${P}.tar.gz"
+#SRC_URI="mirror://sourceforge/freeassociation/files/${PN}/${P}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/freeassociation/${PN}/${P}/${P}.tar.gz"
 
 LICENSE="|| ( MPL-1.1 LGPL-2 )"
 SLOT="0"
