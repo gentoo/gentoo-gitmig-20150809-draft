@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.33 2012/01/04 17:53:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.34 2012/01/05 22:30:13 mr_bones_ Exp $
+
+*pingus-0.7.6 (05 Jan 2012)
+
+  05 Jan 2012; Michael Sterrett <mr_bones_@gentoo.org> +pingus-0.7.6.ebuild:
+  version bump (bug #396451)
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pingus-0.7.5.ebuild:
   x86 stable wrt bug #395443
