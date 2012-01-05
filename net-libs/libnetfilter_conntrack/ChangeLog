@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.39 2012/01/05 06:19:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.40 2012/01/05 06:40:10 radhermit Exp $
+
+  05 Jan 2012; Tim Harder <radhermit@gentoo.org>
+  libnetfilter_conntrack-0.0.50.ebuild, libnetfilter_conntrack-0.0.75.ebuild,
+  libnetfilter_conntrack-0.0.80.ebuild, libnetfilter_conntrack-0.0.81.ebuild,
+  libnetfilter_conntrack-0.0.82.ebuild, libnetfilter_conntrack-0.0.89.ebuild,
+  libnetfilter_conntrack-0.0.94.ebuild, libnetfilter_conntrack-0.0.96.ebuild,
+  libnetfilter_conntrack-0.0.97.ebuild, libnetfilter_conntrack-0.0.98.ebuild,
+  libnetfilter_conntrack-0.0.99.ebuild, libnetfilter_conntrack-0.0.100.ebuild,
+  libnetfilter_conntrack-0.0.101.ebuild, libnetfilter_conntrack-0.9.1.ebuild,
+  libnetfilter_conntrack-1.0.0.ebuild:
+  Add pkgconfig build dep (bug #382981).
 
 *libnetfilter_conntrack-1.0.0 (05 Jan 2012)
 
