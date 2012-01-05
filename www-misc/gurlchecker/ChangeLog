@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/gurlchecker
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.33 2011/03/27 12:54:53 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.34 2012/01/05 22:28:04 pacho Exp $
+
+  05 Jan 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainership as talked with other team members by mail.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gurlchecker-0.10.5.ebuild:
