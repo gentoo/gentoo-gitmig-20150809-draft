@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.9 2012/01/05 09:57:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.0-r1.ebuild,v 1.1 2012/01/05 09:57:15 ssuominen Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999* ]]; then
 	EHG_REPO_URI="http://hg.debian.org/hg/xine-lib/xine-lib-1.2"
 	_live_inherits="autotools mercurial"
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+	KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 	SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 fi
 
@@ -21,14 +21,13 @@ HOMEPAGE="http://xine.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="1"
-IUSE="a52 aac aalib +alsa altivec bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack libcaca mad +mmap mng modplug musepack opengl oss pulseaudio real samba sdl speex theora truetype v4l vcd vdpau vdr vidix +vis vorbis wavpack win32codecs +X +xcb xinerama +xv xvmc"
+IUSE="a52 aac aalib +alsa altivec bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack libcaca mad +mmap mng modplug musepack nls opengl oss pulseaudio real samba sdl speex theora truetype v4l vcd vdpau vdr vidix +vis vorbis wavpack win32codecs +X +xcb xinerama +xv xvmc"
 
 RDEPEND="dev-libs/libxdg-basedir
 	media-libs/libdvdnav
 	sys-libs/zlib
 	virtual/ffmpeg
 	virtual/libiconv
-	virtual/libintl
 	a52? ( media-libs/a52dec )
 	aac? ( media-libs/faad2 )
 	aalib? ( media-libs/aalib )
@@ -48,6 +47,7 @@ RDEPEND="dev-libs/libxdg-basedir
 	mng? ( media-libs/libmng )
 	modplug? ( >=media-libs/libmodplug-0.8.8.1 )
 	musepack? ( >=media-sound/musepack-tools-444 )
+	nls? ( virtual/libintl )
 	opengl? (
 		virtual/glu
 		virtual/opengl
@@ -95,9 +95,9 @@ RDEPEND="dev-libs/libxdg-basedir
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-util/pkgconfig
-	sys-devel/gettext
 	>=sys-devel/libtool-2.2.6b
 	bluray? ( !media-libs/libbluray-xine )
+	nls? ( sys-devel/gettext )
 	oss? ( virtual/os-headers )
 	v4l? ( virtual/os-headers )
 	X? (
@@ -133,6 +133,7 @@ src_configure() {
 
 	econf \
 		$(use_enable ipv6) \
+		$(use_enable nls) \
 		$(use_enable altivec) \
 		$(use_enable vis) \
 		--disable-optimizations \
