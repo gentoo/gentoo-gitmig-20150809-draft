@@ -1,12 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.59 2012/01/05 06:35:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.60 2012/01/05 09:08:34 ssuominen Exp $
 
   05 Jan 2012; Patrick Lauer <patrick@gentoo.org> libical-0.48.ebuild:
   Fixing SRC_URI, see #350193
-
-  04 Jan 2012;  <s4t4n@gentoo.org> Manifest:
-  Version bump. Closes bug #347883.
 
 *libical-0.48 (04 Jan 2012)
 
