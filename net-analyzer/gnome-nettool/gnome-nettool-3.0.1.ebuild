@@ -1,17 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-3.0.0-r1.ebuild,v 1.2 2012/01/05 05:10:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-3.0.1.ebuild,v 1.1 2012/01/05 05:10:19 tetromino Exp $
 
 EAPI="4"
-GNOME_TARBALL_SUFFIX="bz2"
 GCONF_DEBUG="yes"
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Collection of network tools"
 HOMEPAGE="http://www.gnome.org/projects/gnome-network/"
-SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}-patches-1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -49,10 +46,4 @@ pkg_setup() {
 		$(use_enable debug)
 		--disable-schemas-compile
 		--disable-scrollkeeper"
-}
-
-src_prepare() {
-	# Useful upstream patches
-	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch
-	gnome2_src_prepare
 }
