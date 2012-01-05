@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.9 2011/09/17 13:48:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.10 2012/01/05 23:20:02 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -105,9 +105,10 @@ systemd_enable_service() {
 	local target=${1}
 	local service=${2}
 	local ud=$(_systemd_get_unitdir)
+	local destname=$(basename "${service}")
 
 	dodir "${ud}"/"${target}".wants && \
-	dosym ../"${service}" "${ud}"/"${target}".wants
+	dosym ../"${service}" "${ud}"/"${target}".wants/"${destname}"
 }
 
 # @FUNCTION: systemd_with_unitdir
