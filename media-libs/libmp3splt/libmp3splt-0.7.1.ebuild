@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.7.1.ebuild,v 1.2 2012/01/04 17:40:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.7.1.ebuild,v 1.3 2012/01/05 21:12:04 sping Exp $
 
 EAPI=2
 inherit versionator autotools multilib
@@ -34,6 +34,7 @@ src_configure() {
 		--disable-static \
 		$(use_enable pcre) \
 		$(use_enable doc doxygen_doc) \
+		--docdir=/usr/share/doc/${PF} \
 		--disable-cutter  # TODO package cutter <http://cutter.sourceforge.net/>
 }
 
