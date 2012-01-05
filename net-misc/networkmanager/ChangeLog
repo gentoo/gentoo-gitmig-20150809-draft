@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/networkmanager
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.123 2011/12/16 20:36:08 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.124 2012/01/05 01:56:32 qiaomuf Exp $
+
+*networkmanager-0.9.2.0-r2 (05 Jan 2012)
+
+  05 Jan 2012; Mu Qiao <qiaomuf@gentoo.org> -networkmanager-0.9.2.0-r1.ebuild,
+  +networkmanager-0.9.2.0-r2.ebuild,
+  +files/networkmanager-0.9.2.0-ifnet-ignore-user-connections.patch,
+  +files/networkmanager-0.9.2.0-ifnet-remove-system-prefix.patch:
+  Make ifnet ignore user connections (bug #392409)
+
+  Thanks to David Narvaez for his great help on this problem.
 
   16 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
   s/steev/tetromino/ in maintainers. Acked by Nirbheek and Steev.

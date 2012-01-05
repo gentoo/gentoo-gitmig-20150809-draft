@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.2.0-r1.ebuild,v 1.1 2011/12/07 03:08:53 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.2.0-r2.ebuild,v 1.1 2012/01/05 01:56:32 qiaomuf Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -97,6 +97,10 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9.1.95-force-libnl1.1.patch"
 	# Migrate to openrc style
 	epatch "${FILESDIR}/${P}-ifnet-openrc-style.patch"
+	# Ignore per-user connections
+	epatch "${FILESDIR}/${P}-ifnet-ignore-user-connections.patch"
+	# Remove system prefix
+	epatch "${FILESDIR}/${P}-ifnet-remove-system-prefix.patch"
 
 	eautoreconf
 	default
