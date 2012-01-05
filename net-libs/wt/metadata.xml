@@ -2,12 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
-	</maintainer>
-	<maintainer>
-		<email>nikoli@lavabit.com</email>
-		<name>Nikoli</name>
+		<email>mattm@gentoo.org</email>
+		<name>Matthew Marlowe</name>
 	</maintainer>
 	<use>
 		<flag name="extjs">Build Wt Ext library with JavaScript-only widgets (http://extjs.com/)</flag>

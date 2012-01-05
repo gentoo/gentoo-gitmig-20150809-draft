@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/wt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.3 2010/12/20 13:54:54 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.4 2012/01/05 10:09:21 mattm Exp $
+
+  05 Jan 2012; Matthew Marlowe <mattm@gentoo.org> wt-3.1.5.ebuild,
+  wt-3.1.6.ebuild, wt-3.1.7.ebuild, metadata.xml:
+  Moving package mask from profile to ebuilds in preparation for taking over
+  package - hope to bump to latest 3.2 release soon - will review all open bugs
 
 *wt-3.1.7 (20 Dec 2010)
 
