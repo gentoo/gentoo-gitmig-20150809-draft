@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdiskusage
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.23 2011/10/16 19:57:39 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.24 2012/01/05 17:21:51 ssuominen Exp $
+
+  05 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xdiskusage-1.48_p20111016.ebuild:
+  amd64/x86 stable wrt #395741
 
 *xdiskusage-1.48_p20111016 (16 Oct 2011)
 
