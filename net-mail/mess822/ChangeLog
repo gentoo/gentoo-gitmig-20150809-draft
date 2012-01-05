@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mess822
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.15 2012/01/04 22:14:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.16 2012/01/05 16:09:43 eras Exp $
+
+  05 Jan 2012; Eray Aslan <eras@gentoo.org> -mess822-0.58-r1.ebuild:
+  remove old
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> mess822-0.58-r2.ebuild:
   Marking mess822-0.58-r2 ppc for bug 391227
