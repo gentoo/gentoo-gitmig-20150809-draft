@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.24 2012/01/05 10:14:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.25 2012/01/05 10:15:14 ssuominen Exp $
+
+  05 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -unifdef-1.20.ebuild,
+  -unifdef-2.3.ebuild:
+  old
 
   05 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> unifdef-2.6.ebuild:
   ppc64 stable wrt #394069
