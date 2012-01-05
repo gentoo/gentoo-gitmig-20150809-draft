@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.8.03.ebuild,v 1.1 2012/01/04 12:59:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.8.03-r1.ebuild,v 1.1 2012/01/05 07:31:45 ulm Exp $
 
 EAPI=4
 NEED_EMACS=22

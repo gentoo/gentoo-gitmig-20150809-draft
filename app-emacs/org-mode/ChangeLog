@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.139 2012/01/04 18:11:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.140 2012/01/05 07:31:45 ulm Exp $
+
+*org-mode-7.8.03-r1 (05 Jan 2012)
+
+  05 Jan 2012; Ulrich Mueller <ulm@gentoo.org> -org-mode-7.8.02.ebuild,
+  -org-mode-7.8.03.ebuild, +org-mode-7.8.03-r1.ebuild,
+  files/50org-mode-gentoo-7.8.03.el:
+  Fix typo in site-init file, bug 397721. Remove old.
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> org-mode-7.7.ebuild:
   x86 stable wrt bug #396001
