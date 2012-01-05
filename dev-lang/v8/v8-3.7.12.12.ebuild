@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.7.7.ebuild,v 1.5 2011/11/23 22:47:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.7.12.12.ebuild,v 1.1 2012/01/05 17:00:47 floppym Exp $
 
 EAPI="4"
 
@@ -68,7 +68,16 @@ src_compile() {
 }
 
 src_test() {
+	local arg testjobs
+	for arg in ${MAKEOPTS}; do
+		case ${arg} in
+			-j*) testjobs=${arg#-j} ;;
+			--jobs=*) testjobs=${arg#--jobs=} ;;
+		esac
+	done
+
 	tools/test-wrapper-gypbuild.py \
+		-j${testjobs:-1} \
 		--arch-and-mode=${mytarget} \
 		--no-presubmit \
 		--progress=dots || die
