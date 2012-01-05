@@ -1,9 +1,12 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.23 2012/01/04 18:22:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.24 2012/01/05 10:14:22 ssuominen Exp $
+
+  05 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> unifdef-2.6.ebuild:
+  ppc64 stable wrt #394069
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> unifdef-2.6.ebuild:
-  Marking unifdef-2.6 ppc for bug 6394069
+  Marking unifdef-2.6 ppc for bug #394069
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> unifdef-2.6.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #394069
