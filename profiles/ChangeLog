@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6075 2012/01/05 16:13:48 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6076 2012/01/05 19:03:47 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jan 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Mask one more x11 prerelease package.
 
   05 Jan 2012; Thomas Beierlein <tomjbe@gentoo.org> package.mask:
   Drop mask for media-radio/fldigi as a version supporting fltk-1.3 is in the
