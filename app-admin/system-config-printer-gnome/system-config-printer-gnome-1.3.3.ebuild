@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.3.ebuild,v 1.6 2011/08/24 21:24:06 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.3.ebuild,v 1.7 2012/01/05 08:01:45 tetromino Exp $
 
 EAPI="3"
 
@@ -26,6 +26,7 @@ RESTRICT="test"
 RDEPEND="
 	~app-admin/system-config-printer-common-${PV}
 	dev-python/notify-python
+	>=dev-python/pycups-1.9.47
 	>=dev-python/pygtk-2.4
 	gnome-keyring? ( dev-python/gnome-keyring-python )
 "
