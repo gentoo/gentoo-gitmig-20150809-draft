@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/clementine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.46 2011/12/22 22:25:36 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.47 2012/01/05 12:12:37 maksbotan Exp $
+
+*clementine-1.0.0 (05 Jan 2012)
+
+  05 Jan 2012; Maxim Koltsov <maksbotan@gentoo.org> +clementine-1.0.0.ebuild:
+  Bump to 1.0.0, bug 396273. Thanks to Nikoli for patch
 
   22 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
   -clementine-0.7.1-r1.ebuild:

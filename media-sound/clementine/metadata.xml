@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <herd>proxy-maintainers</herd>
   <herd>sound</herd>
   <maintainer>
     <email>nikoli@lavabit.com</email>
@@ -12,6 +13,8 @@
   </maintainer> 
   <use>
     <flag name="ayatana">Build in support for Ayatana notification using the libindicate-qt plugin.</flag>
+	<flag name="kde">Enable plasma krunner global search</flag>
+	<flag name="ofa">Support for Open Fingerprint Architecture (OFA)</flag>
 	<flag name="lastfm">Enable Last.fm streaming services support through <pkg>media-libs/liblastfm</pkg></flag>
     <flag name='projectm'>Build with ProjectM visualization</flag>
     <flag name="wiimote">Enable support for Wii remote</flag>
