@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.301 2012/01/04 21:40:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.302 2012/01/05 13:24:57 xmw Exp $
+
+  05 Jan 2012; Michael Weber <xmw@gentoo.org> xscreensaver-5.15.ebuild:
+  sparc stable (bug 395765)
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> xscreensaver-5.15.ebuild:
   Marking xscreensaver-5.15 ppc for bug 395765
