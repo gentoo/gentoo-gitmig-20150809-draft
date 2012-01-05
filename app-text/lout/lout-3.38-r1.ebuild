@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.38-r1.ebuild,v 1.5 2011/12/07 07:53:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.38-r1.ebuild,v 1.6 2012/01/05 12:58:28 xmw Exp $
 
 EAPI=3
 
@@ -71,9 +71,6 @@ src_install() {
 
 	mv ${docdir}/README{,.docs}
 	dodoc README READMEPDF blurb blurb.short whatsnew
-
-	# stupid build system
-	fperms 755 /usr/share/doc/${PF}/doc/{design,expert,slides,user}
 
 	if use doc ; then
 		einfo "building postscript documentation (may take a while)"
