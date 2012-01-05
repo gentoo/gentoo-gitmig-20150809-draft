@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.44-r1.ebuild,v 1.3 2012/01/04 18:14:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.44-r1.ebuild,v 1.4 2012/01/05 13:09:59 ranger Exp $
 
 EAPI="4"
 inherit eutils autotools
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/dump/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE="debug ermt readline selinux static"
 
 RDEPEND=">=sys-fs/e2fsprogs-1.27

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.66 2012/01/04 18:14:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.67 2012/01/05 13:09:59 ranger Exp $
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> dump-0.4.44-r1.ebuild:
+  Marking dump-0.4.44-r1 ppc for bug 395883
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dump-0.4.44-r1.ebuild:
   x86 stable wrt bug #395883
