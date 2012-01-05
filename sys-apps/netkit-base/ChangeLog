@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/netkit-base
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.32 2011/06/17 06:04:24 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.33 2012/01/05 13:14:45 ranger Exp $
+
+  05 Jan 2012; Brent Baude <ranger@gentoo.org> netkit-base-0.17-r9.ebuild:
+  Marking netkit-base-0.17-r9 ppc for bug 397211
 
   17 Jun 2011; Mike Frysinger <vapier@gentoo.org> netkit-base-0.17-r9.ebuild,
   +files/005_all_netkit-base-0.17-no-rpc.patch:
