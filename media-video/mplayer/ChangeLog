@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.834 2012/01/02 15:53:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.835 2012/01/05 14:13:46 aballier Exp $
+
+*mplayer-1.0_rc4_p20120105 (05 Jan 2012)
+
+  05 Jan 2012; Alexis Ballier <aballier@gentoo.org>
+  +mplayer-1.0_rc4_p20120105.ebuild:
+  bump a new snapshot with accumulated fixes from 9999, working with ffmpeg
+  0.9.1 release
 
   02 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2008:
   Split ChangeLog.
