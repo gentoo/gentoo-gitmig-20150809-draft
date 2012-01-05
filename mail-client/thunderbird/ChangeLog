@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.112 2012/01/05 13:48:34 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.113 2012/01/05 14:00:43 nirbheek Exp $
+
+  05 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> Manifest:
+  fix gpg manifest problems
 
 *thunderbird-9.0 (05 Jan 2012)
 
