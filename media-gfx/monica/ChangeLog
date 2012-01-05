@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/monica
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.7 2011/03/20 20:14:46 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.8 2012/01/05 18:23:21 ssuominen Exp $
+
+  05 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -monica-3.6.ebuild:
+  old
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> monica-3.6.ebuild,
   monica-3.7.ebuild:
