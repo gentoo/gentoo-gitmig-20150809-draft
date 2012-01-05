@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/zynaddsubfx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.37 2011/03/20 20:06:18 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.38 2012/01/05 17:30:12 ssuominen Exp $
+
+  05 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> zynaddsubfx-2.4.1.ebuild:
+  amd64/x86 stable wrt #395745
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> zynaddsubfx-2.2.1-r2.ebuild,
   zynaddsubfx-2.2.1-r4.ebuild, zynaddsubfx-2.4.0.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.1.ebuild,v 1.2 2011/03/20 20:06:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.1.ebuild,v 1.3 2012/01/05 17:30:12 ssuominen Exp $
 
 EAPI=4
 inherit eutils cmake-utils
@@ -13,17 +13,15 @@ SRC_URI="mirror://sourceforge/zynaddsubfx/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa +fltk jack lash"
 
-RDEPEND="
+RDEPEND=">=dev-libs/mini-xml-2.2.1
 	sci-libs/fftw:3.0
-	fltk? ( x11-libs/fltk:1 )
-	jack? ( media-sound/jack-audio-connection-kit )
 	alsa? ( media-libs/alsa-lib )
-	lash? ( media-sound/lash )
-	>=dev-libs/mini-xml-2.2.1"
+	fltk? ( >=x11-libs/fltk-1.3:1 )
+	jack? ( media-sound/jack-audio-connection-kit )
+	lash? ( media-sound/lash )"
 #	portaudio? ( media-libs/portaudio )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -35,15 +33,15 @@ REQUIRED_USE="!alsa? ( jack )"
 S=${WORKDIR}/${MY_P}
 
 PATCHES=(
-	"${FILESDIR}/${P}-fltk.patch"
-	"${FILESDIR}/${P}-fltk13.patch"
-	"${FILESDIR}/${P}-docs.patch"
+	"${FILESDIR}"/${P}-fltk.patch
+	"${FILESDIR}"/${P}-fltk13.patch
+	"${FILESDIR}"/${P}-docs.patch
 )
 
 DOCS="ChangeLog FAQ.txt HISTORY.txt README.txt ZynAddSubFX.lsm bugs.txt"
 
 src_configure() {
-	use lash || sed -i -e 's/lash-1.0/lash_disabled/' "${S}/src/CMakeLists.txt"
+	use lash || sed -i -e 's/lash-1.0/lash_disabled/' "${S}"/src/CMakeLists.txt
 	mycmakeargs=(
 		`use fltk && echo "-DGuiModule=fltk" || echo "-DGuiModule=off"`
 		`use alsa && echo "-DOutputModule=alsa" || echo "-DOutputModule=jack"`
@@ -55,6 +53,6 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	insinto "/usr/share/${PN}"
-	doins -r "${S}/banks" "${S}/examples" || die
+	insinto /usr/share/${PN}
+	doins -r "${S}"/banks "${S}"/examples
 }
