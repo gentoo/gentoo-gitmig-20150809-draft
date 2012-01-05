@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.7.0.ebuild,v 1.1 2012/01/05 19:17:38 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.7.0.ebuild,v 1.2 2012/01/05 21:23:54 mr_bones_ Exp $
 
 PYTHON_DEPEND="2"
 EAPI=2
@@ -24,7 +24,6 @@ DEPEND="media-libs/freetype
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf
 	sys-libs/zlib"
-RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	python_set_active_version 2
