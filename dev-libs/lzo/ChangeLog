@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.70 2011/12/08 20:44:01 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.71 2012/01/05 15:23:46 ranger Exp $
+
+  05 Jan 2012; Brent Baude <ranger@gentoo.org> lzo-2.06.ebuild:
+  Marking lzo-2.06 ppc for bug 392765
 
   08 Dec 2011; Markus Meier <maekke@gentoo.org> lzo-2.06.ebuild:
   arm stable, bug #392765
