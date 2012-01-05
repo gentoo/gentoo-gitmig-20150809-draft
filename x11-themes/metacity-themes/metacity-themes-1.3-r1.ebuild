@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.3.ebuild,v 1.1 2011/12/18 14:38:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.3-r1.ebuild,v 1.1 2012/01/05 22:24:30 pacho Exp $
 
 EAPI="4"
 
@@ -126,6 +126,9 @@ src_prepare() {
 
 	# Remove all of the .xvpics directories, see bug #97368
 	find . -type d -iname ".xvpics" | xargs rm -rf
+
+	# Tactile index.theme is provided by x11-themes/tactile, bug #395525
+	rm -f Tactile/index.theme || die
 }
 
 src_install() {
