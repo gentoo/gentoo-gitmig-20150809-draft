@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6073 2012/01/05 10:18:12 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6074 2012/01/05 12:20:53 maksbotan Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jan 2012; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
+  Unmask app-emulation/libguestfs
 
   05 Jan 2012; Matthew Marlowe <mattm@gentoo.org> package.mask:
   Taking maintainership for net-libs/wt

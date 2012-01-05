@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13373 2012/01/05 10:18:12 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13374 2012/01/05 12:20:53 maksbotan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -152,7 +152,6 @@ dev-php/PEAR-DB_Table
 # Maxim Koltsov <maksbotan@gentoo.org> (11 Dec 2011)
 # Mask until big testing by proxy maintainer is finished
 dev-util/febootstrap
-app-emulation/libguestfs
 
 # Daniel Pielmeier <billie@gentoo.org> (09 Dec 2011)
 # Masked for removal in 30 days. Not needed anymore as cups-1.4
