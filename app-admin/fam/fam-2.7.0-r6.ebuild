@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r6.ebuild,v 1.4 2012/01/05 15:49:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r6.ebuild,v 1.5 2012/01/05 16:03:23 jer Exp $
 
 EAPI="2"
 
@@ -35,6 +35,9 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
+	if ! use static-libs; then
+		rm -f "${D}"/usr/lib*/libfam.la
+	fi
 
 	sed -i "${D}"/etc/fam.conf \
 		-e "s:local_only = false:local_only = true:g" \
