@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13372 2012/01/04 17:24:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13373 2012/01/05 10:18:12 mattm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -128,11 +128,6 @@ kde-misc/kcheckgmail
 # Breaks pam_mount, which is its only user in the tree.
 # Can be unmasked when a new pam_mount version is released.
 =sys-libs/libhx-3.12
-
-# Peter Volkov <pva@gentoo.org> (13 Dec 2011)
-# Broken, unmaintained, see #378617
-# Pending removal on 2012-01-14
-net-libs/wt
 
 # Ulrich Mueller <ulm@gentoo.org> (13 Dec 2011)
 # SLOTs 21 and 22 of app-editors/emacs, corresponding to
