@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.914 2012/01/03 21:21:37 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.915 2012/01/05 01:39:51 mpagano Exp $
+
+*gentoo-sources-3.2.0 (05 Jan 2012)
+
+  05 Jan 2012; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.2.0.ebuild:
+  Linux 3.2.0 and the fbcondecor patchset
 
 *gentoo-sources-3.1.7 (03 Jan 2012)
 *gentoo-sources-3.0.15 (03 Jan 2012)
