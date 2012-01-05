@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnetfilter_queue
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.15 2011/11/28 06:07:47 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.16 2012/01/05 07:08:27 radhermit Exp $
+
+*libnetfilter_queue-1.0.1 (05 Jan 2012)
+
+  05 Jan 2012; Tim Harder <radhermit@gentoo.org>
+  +libnetfilter_queue-1.0.1.ebuild:
+  Version bump.
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org>
   libnetfilter_queue-1.0.0.ebuild:
