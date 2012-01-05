@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.329 2011/12/31 11:38:28 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.330 2012/01/05 11:08:31 ssuominen Exp $
+
+  05 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="systemd" for sys-auth/polkit for keywording and testing.
 
   31 Dec 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   remove usemask for vlc useflag thats now gone

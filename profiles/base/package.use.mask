@@ -1,9 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.297 2011/12/31 11:38:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.298 2012/01/05 11:08:31 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Samuli Suominen <ssuominen@gentoo.org> (05 Jan 2012)
+# Masked for keywording AND testing. This mask entry can be
+# removed by the systemd maintainers when they think it's
+# ready.
+sys-auth/polkit systemd
 
 # Mike Frysinger <vapier@gentoo.org> (06 Dec 2011)
 # No one should be mucking with libssp unless they really know what they're
