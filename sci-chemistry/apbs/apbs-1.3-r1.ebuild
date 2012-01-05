@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r1.ebuild,v 1.9 2011/12/13 14:25:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r1.ebuild,v 1.10 2012/01/05 18:51:13 jlec Exp $
 
 EAPI="3"
 
@@ -26,7 +26,10 @@ DEPEND="
 	sys-libs/readline
 	virtual/fortran
 	arpack? ( sci-libs/arpack )
-	tools? ( !sci-libs/gts )
+	tools? (
+		!sci-libs/gts
+		!sci-chemistry/ccpn
+		)
 	fetk? (
 		sci-libs/fetk
 		sci-libs/amd

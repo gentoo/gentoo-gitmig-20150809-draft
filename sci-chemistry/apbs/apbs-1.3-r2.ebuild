@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r2.ebuild,v 1.1 2012/01/04 17:25:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r2.ebuild,v 1.2 2012/01/05 18:51:13 jlec Exp $
 
 EAPI=4
 
@@ -27,7 +27,6 @@ DEPEND="
 	sys-libs/readline
 	virtual/fortran
 	arpack? ( sci-libs/arpack )
-	tools? ( !sci-libs/gts )
 	fetk? (
 		sci-libs/fetk
 		sci-libs/amd
@@ -138,10 +137,22 @@ src_install() {
 		doins tools/python/*/{*.py,*.so}
 		python_clean_installation_image
 	fi
+
+	if use python || use tools; then
+		mv "${ED}"/usr/bin/analysis{,_apbs} || die
+		mv "${ED}"/usr/bin/smooth{,_apbs} || die
+	fi
 }
 
 pkg_postinst() {
 	use python && python_mod_optimize ${PN}
+	if use python || use tools; then
+		echo
+		elog "Following apps have been renamed"
+		elog "${EPREFIX}/usr/bin/analysis -> ${EPREFIX}/usr/bin/analysis_apbs"
+		elog "${EPREFIX}/usr/bin/smooth -> ${EPREFIX}/usr/bin/smooth_apbs"
+		echo
+	fi
 }
 
 pkg_postrm() {
