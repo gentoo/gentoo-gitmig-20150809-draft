@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qrencode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.13 2011/12/12 08:38:47 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.14 2012/01/05 10:34:38 xmw Exp $
+
+  05 Jan 2012; Michael Weber <xmw@gentoo.org> qrencode-3.1.1.ebuild:
+  ppc stable (bug 393415)
 
   12 Dec 2011; Justin Lecher <jlec@gentoo.org> qrencode-3.1.1.ebuild:
   Remove wrong dep on dev-python/imaging, #388359
