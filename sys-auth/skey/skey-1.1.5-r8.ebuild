@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r8.ebuild,v 1.1 2012/01/04 23:12:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r8.ebuild,v 1.2 2012/01/05 18:47:48 ulm Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit flag-o-matic eutils toolchain-funcs
 DESCRIPTION="Linux Port of OpenBSD Single-key Password System"
 HOMEPAGE="http://www.openbsd.org/faq/faq8.html#SKey"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
-	mirror://gentoo/skey-1.1.5-patches-1.tar.xz"
+	mirror://gentoo/skey-1.1.5-patches-2.tar.xz"
 
 LICENSE="BSD MIT RSA-MD4 RSA-MD5 BEER-WARE"
 SLOT="0"
@@ -31,6 +31,10 @@ src_configure() {
 }
 
 src_install() {
+	into /
+	dolib.so libskey.so{.${PV},.${PV%.*},.${PV%%.*},}
+
+	into /usr
 	dobin skey skeyinit skeyinfo
 	newbin skeyaudit.sh skeyaudit
 	newsbin skeyprune.pl skeyprune
@@ -39,13 +43,12 @@ src_install() {
 	dosym skey /usr/bin/otp-md5
 	dosym skey /usr/bin/otp-sha1
 
-	use static-libs && dolib.a libskey.a
+	if use static-libs; then
+		dolib.a libskey.a
+		gen_usr_ldscript libskey.so
+	fi
 
 	doman skey.1 skeyaudit.1 skeyinfo.1 skeyinit.1 skey.3 skeyprune.8
-
-	into /
-	dolib.so libskey.so.1.1.5 libskey.so.1.1 libskey.so.1 libskey.so
-	gen_usr_ldscript libskey.so
 
 	insinto /usr/include
 	doins skey.h
@@ -53,11 +56,11 @@ src_install() {
 	keepdir /etc/skey
 
 	# only root needs to have access to these files.
-	fperms g-rx,o-rx /etc/skey
+	fperms go-rx /etc/skey
 
 	# skeyinit and skeyinfo must be suid root so users
 	# can generate their passwords.
-	fperms u+s,og-r /usr/bin/skeyinit /usr/bin/skeyinfo
+	fperms u+s,go-r /usr/bin/skeyinit /usr/bin/skeyinfo
 
 	dodoc README CHANGES
 }
