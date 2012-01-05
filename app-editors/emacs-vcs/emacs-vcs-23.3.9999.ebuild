@@ -1,6 +1,7 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.17 2011/12/15 06:33:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.18 2012/01/05 23:43:15 ulm Exp $
+
 EAPI=4
 WANT_AUTOMAKE="none"
 
@@ -71,7 +72,9 @@ RDEPEND="sys-libs/ncurses
 	)"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	alsa? ( dev-util/pkgconfig )
+	dbus? ( dev-util/pkgconfig )
+	X? ( dev-util/pkgconfig )
 	gzip-el? ( app-arch/gzip )"
 
 RDEPEND="${RDEPEND}

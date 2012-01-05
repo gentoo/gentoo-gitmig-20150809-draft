@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r2.ebuild,v 1.2 2011/12/15 06:33:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r2.ebuild,v 1.3 2012/01/05 23:43:15 ulm Exp $
 
 EAPI=4
 
@@ -41,6 +41,7 @@ RDEPEND="sys-libs/ncurses
 	gpm? ( sys-libs/gpm )
 	dbus? ( sys-apps/dbus )
 	gnutls? ( net-libs/gnutls )
+	libxml2? ( >=dev-libs/libxml2-2.2.0 )
 	selinux? ( sys-libs/libselinux )
 	X? (
 		x11-libs/libXmu
@@ -48,7 +49,6 @@ RDEPEND="sys-libs/ncurses
 		x11-misc/xbitmaps
 		gconf? ( >=gnome-base/gconf-2.26.2 )
 		gsettings? ( >=dev-libs/glib-2.28.6 )
-		libxml2? ( >=dev-libs/libxml2-2.2.0 )
 		gif? ( media-libs/giflib )
 		jpeg? ( virtual/jpeg )
 		png? ( >=media-libs/libpng-1.4:0 )
@@ -79,7 +79,11 @@ RDEPEND="sys-libs/ncurses
 	)"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	alsa? ( dev-util/pkgconfig )
+	dbus? ( dev-util/pkgconfig )
+	gnutls? ( dev-util/pkgconfig )
+	libxml2? ( dev-util/pkgconfig )
+	X? ( dev-util/pkgconfig )
 	gzip-el? ( app-arch/gzip )"
 
 RDEPEND="${RDEPEND}
@@ -143,7 +147,6 @@ src_configure() {
 		myconf="${myconf} --with-x"
 		myconf="${myconf} $(use_with gconf)"
 		myconf="${myconf} $(use_with gsettings)"
-		myconf="${myconf} $(use_with libxml2 xml2)"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
 		myconf="${myconf} $(use_with wide-int)"
 		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
@@ -214,6 +217,7 @@ src_configure() {
 		$(use_with gpm) \
 		$(use_with dbus) \
 		$(use_with gnutls) \
+		$(use_with libxml2 xml2) \
 		$(use_with selinux) \
 		${myconf}
 }
