@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.454 2012/01/04 19:50:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.455 2012/01/05 23:51:53 ulm Exp $
+
+  05 Jan 2012; Ulrich Mueller <ulm@gentoo.org> emacs-23.3-r3.ebuild:
+  A build-time dependency on pkgconfig is needed only in some configurations.
 
   04 Jan 2012; Ulrich Mueller <ulm@gentoo.org> -emacs-18.59-r6.ebuild:
   Remove old.
