@@ -1,9 +1,26 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.22 2011/08/07 21:09:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.23 2012/01/05 22:31:29 williamh Exp $
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
+
+# William Hubbs <williamh@gentoo.org> (05 Jan 2012)
+# Udev does not support reading compressed hardware databases.
+# Upstream was approached about adding this functionality to udev;
+# however, the idea was rejected (see comment #28 of the bug below).
+# Since pciutils only stores the compressed database on disk when the
+# zlib use flag is on and usbutils is moving toward doing the same,
+# the udev maintainers (myself and Robin Johnson <robbat2@gentoo.org>)
+# agree that the best way forward for this bug is to package.use.mask
+# zlib for pciutils and usbutils until the upstreams agree or udev
+# upstream moves away from using the databases these packages provide.
+# This way, zlib support can be left on for everything else and neither
+# udev nor base-system needs to carry custom patches.
+# Please do not unmask without speaking to myself and Robin.
+# See bug #360849 for the details.
+sys-apps/pciutils zlib
+sys-apps/usbutils zlib
 
 # Markos Chandras <hwoarang@gentoo.org> (07 Aug 2011)
 # doc flag is not ready yet for media-video/mplayer2.

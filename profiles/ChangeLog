@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6077 2012/01/05 20:31:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6078 2012/01/05 22:31:29 williamh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jan 2012; William Hubbs <williamh@gentoo.org>
+  default/linux/package.use.mask:
+  Mask zlib for sys-apps/pciutils and sys-apps/usbutils; needed for bug #360849
 
   05 Jan 2012; Mike Gilbert <floppym@gentoo.org> package.mask:
   Update mask for chrome dev channel; 17.x is now the beta channel.
