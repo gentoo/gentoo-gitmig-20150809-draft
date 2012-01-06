@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.456 2012/01/06 10:24:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.457 2012/01/06 16:28:57 ranger Exp $
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> emacs-23.3-r2.ebuild:
+  Marking emacs-23.3-r2 ppc for bug 384297
 
 *emacs-22.3-r9 (06 Jan 2012)
 *emacs-21.4-r24 (06 Jan 2012)
