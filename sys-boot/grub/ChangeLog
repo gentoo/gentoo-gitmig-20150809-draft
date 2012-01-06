@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.173 2011/11/18 00:04:29 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.174 2012/01/06 04:57:12 vapier Exp $
+
+  06 Jan 2012; Mike Frysinger <vapier@gentoo.org> grub-0.97-r10.ebuild:
+  Fix building with newer automakes.
 
   18 Nov 2011; Mike Frysinger <vapier@gentoo.org> grub-1.99-r2.ebuild,
   grub-9999.ebuild:
