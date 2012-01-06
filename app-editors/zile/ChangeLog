@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.160 2011/12/22 11:10:49 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.161 2012/01/06 15:15:05 ranger Exp $
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> zile-2.3.24-r1.ebuild:
+  Marking zile-2.3.24-r1 ppc for bug 382597
 
 *zile-2.4.3 (22 Dec 2011)
 
