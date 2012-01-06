@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.3.ebuild,v 1.2 2012/01/02 22:13:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.3-r1.ebuild,v 1.1 2012/01/06 12:19:24 jlec Exp $
 
 EAPI=4
 
@@ -27,12 +27,17 @@ S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}/"${PN}-0.8.2.patch
-	"${FILESDIR}/"${PN}-0.8.2-soname.patch
+	"${FILESDIR}/"${P}-soname.patch
 	"${FILESDIR}/"${P}-expat.patch
 	"${FILESDIR}/"${PN}-0.8.2-tnc.patch
 	)
 
 src_prepare() {
+	sed \
+		-e 's:-O2::g' \
+		-e 's:-pipe::g' \
+		-e 's:-fomit-frame-pointer::g' \
+		-i {.,extensions/tnc}/configure tclconfig/tcl.m4 || die
 	epatch "${PATCHES[@]}"
 	eautoreconf
 }
