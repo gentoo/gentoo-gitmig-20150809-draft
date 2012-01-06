@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.458 2012/01/06 16:40:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.459 2012/01/06 21:15:28 ulm Exp $
+
+  06 Jan 2012; Ulrich Mueller <ulm@gentoo.org> -emacs-23.3-r1.ebuild:
+  Remove old.
 
   06 Jan 2012; Mark Loeser <halcy0n@gentoo.org> emacs-23.3-r2.ebuild:
   Stable for ppc64; bug #384297
