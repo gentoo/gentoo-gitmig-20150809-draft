@@ -1,17 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.8.2.ebuild,v 1.6 2011/12/23 08:45:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.8.2.ebuild,v 1.7 2012/01/06 10:39:52 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
 
 DESCRIPTION="Xfce's session manager"
 HOMEPAGE="http://www.xfce.org/projects/xfce4-session/"
-SRC_URI="mirror://xfce/src/xfce/${PN}/4.8/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/xfce/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="consolekit debug gnome gnome-keyring policykit udev +xfce_plugins_logout"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.92
