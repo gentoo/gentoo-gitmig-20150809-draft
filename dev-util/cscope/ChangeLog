@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.125 2011/12/11 14:50:07 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.126 2012/01/06 16:25:36 ranger Exp $
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> cscope-15.7a-r1.ebuild:
+  Marking cscope-15.7a-r1 ppc for bug 391291
 
   11 Dec 2011; Raúl Porcel <armin76@gentoo.org> cscope-15.7a-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #391291
