@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.1.1.ebuild,v 1.4 2012/01/06 21:25:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.1.1.ebuild,v 1.5 2012/01/06 23:04:17 hwoarang Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 WX_GTK_VER="2.9"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit alternatives eutils fdo-mime flag-o-matic python wxwidgets
+inherit alternatives distutils eutils fdo-mime wxwidgets
 
 MY_P="${P/wxpython-/wxPython-src-}"
 
@@ -23,22 +23,27 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="cairo examples opengl"
 
 RDEPEND="
-	dev-python/setuptools
 	>=x11-libs/wxGTK-${PV}:${WX_GTK_VER}[opengl?,tiff,X]
-	>=x11-libs/gtk+-2.4:2
-	>=x11-libs/pango-1.2
 	dev-libs/glib:2
-	media-libs/libpng
+	dev-python/setuptools
+	media-libs/libpng:0
+	media-libs/tiff:0
 	virtual/jpeg
-	media-libs/tiff
+	x11-libs/gtk+:2
+	x11-libs/pango[X]
 	cairo?	( >=dev-python/pycairo-1.8.4 )
-	opengl?	( >=dev-python/pyopengl-2.0.0.44 )"
+	opengl?	( dev-python/pyopengl )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}/wxPython"
 DOC_S="${WORKDIR}/wxPython-${PV}"
+
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+PYTHON_CXXFLAGS=("2.* + -fno-strict-aliasing")
+
+PYTHON_MODNAME="wx-2.9.1-gtk2 wxversion.py"
 
 src_prepare() {
 	sed -i "s:cflags.append('-O3'):pass:" config.py || die "sed failed"
@@ -58,46 +63,32 @@ src_prepare() {
 src_configure() {
 	need-wxwidgets unicode
 
-	append-flags -fno-strict-aliasing
-
-	use opengl \
-		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
-		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
-
-	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
-	mypyconf="${mypyconf} WXPORT=gtk2 UNICODE=1"
+	DISTUTILS_GLOBAL_OPTIONS=(
+		"* WX_CONFIG=${WX_CONFIG}"
+		"* WXPORT=gtk2"
+		"* UNICODE=1"
+		"* BUILD_GLCANVAS=$(use opengl && echo 1 || echo 0)"
+	)
 }
 
-src_compile() {
-	building() {
-		"$(PYTHON)" setup.py ${mypyconf} build
-	}
-	python_execute_function -s building
+distutils_src_install_post_hook() {
+	# Collision protection.
+	local file
+	for file in "$(distutils_get_intermediate_installation_image)${EPREFIX}/usr/bin/"*; do
+		mv "${file}" "${file}-${SLOT}"
+	done
 }
 
 src_install() {
-	local file mypyconf
+	local file x
 
-	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
-	use opengl \
-		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
-		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
-
-	mypyconf="${mypyconf} WXPORT=gtk2 UNICODE=1"
-
-	installation() {
-		"$(PYTHON)" setup.py ${mypyconf} install --root="${D}" --install-purelib $(python_get_sitedir)
-	}
-	python_execute_function -s installation
+	distutils_src_install
 
 	# this should be temporary
 	dobin "${S}"/scripts/pyslices || die
 	dobin "${S}"/scripts/pysliceshell || die
 
 	# Collision protection.
-	for file in "${D}"/usr/bin/*; do
-		mv "${file}" "${file}-${SLOT}" || die
-	done
 	rename_files() {
 		for file in "${D}$(python_get_sitedir)/"wx{version.*,.pth}; do
 			mv "${file}" "${file}-${SLOT}" || return 1
@@ -109,16 +100,16 @@ src_install() {
 
 	insinto /usr/share/applications
 	for x in {Py{AlaMode,Crust,Shell,Slices{,Shell}},XRCed}; do
-		newins "${S}"/distrib/${x}.desktop ${x}-${SLOT}.desktop || die
+		newins "${S}"/distrib/${x}.desktop ${x}-${SLOT}.desktop
 	done
 	insinto /usr/share/pixmaps
-	newins "${S}"/wx/py/PyCrust_32.png PyCrust-${SLOT}.png || die
-	newins "${S}"/wx/py/PySlices_32.png PySlices-${SLOT}.png || die
-	newins "${S}"/wx/tools/XRCed/XRCed_32.png XRCed-${SLOT}.png || die
+	newins "${S}"/wx/py/PyCrust_32.png PyCrust-${SLOT}.png
+	newins "${S}"/wx/py/PySlices_32.png PySlices-${SLOT}.png
+	newins "${S}"/wx/tools/XRCed/XRCed_32.png XRCed-${SLOT}.png
 
 	if use examples; then
-		dodir /usr/share/doc/${PF}/demo || die
-		dodir /usr/share/doc/${PF}/samples || die
+		dodir /usr/share/doc/${PF}/demo
+		dodir /usr/share/doc/${PF}/samples
 		cp -R "${DOC_S}"/demo/* "${D}"/usr/share/doc/${PF}/demo/ || die
 		cp -R "${DOC_S}"/samples/* "${D}"/usr/share/doc/${PF}/samples/ || die
 	fi
@@ -133,7 +124,7 @@ pkg_postinst() {
 	}
 	python_execute_function -q create_symlinks
 
-	python_mod_optimize wx-2.9.1-gtk2 wxversion.py
+	distutils_pkg_postinst
 
 	echo
 	elog "Gentoo uses the Multi-version method for SLOT'ing."
@@ -156,7 +147,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup wx-2.9.1-gtk2 wxversion.py
+	distutils_pkg_postrm
 	fdo-mime_desktop_database_update
 
 	create_symlinks() {
