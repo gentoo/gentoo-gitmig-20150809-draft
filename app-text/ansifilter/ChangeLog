@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ansifilter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ChangeLog,v 1.2 2011/07/05 10:36:41 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ChangeLog,v 1.3 2012/01/06 05:44:32 radhermit Exp $
+
+*ansifilter-1.7 (06 Jan 2012)
+
+  06 Jan 2012; Tim Harder <radhermit@gentoo.org> +ansifilter-1.7.ebuild:
+  Version bump.
 
   05 Jul 2011; Tim Harder <radhermit@gentoo.org> ansifilter-1.6.ebuild:
   Fix whitespace.
