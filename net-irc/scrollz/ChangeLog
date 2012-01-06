@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/scrollz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.35 2012/01/03 04:33:31 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.36 2012/01/06 10:48:57 ago Exp $
+
+  06 Jan 2012; Agostino Sarubbo <ago@gentoo.org> scrollz-2.2.ebuild:
+  Stable for AMD64, wrt bug #397155
 
 *scrollz-2.2.1 (03 Jan 2012)
 
