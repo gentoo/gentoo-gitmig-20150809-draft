@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/systemd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.16 2011/12/12 08:17:37 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.17 2012/01/06 10:19:43 mgorny Exp $
+
+*systemd-37-r2 (06 Jan 2012)
+*systemd-29-r4 (06 Jan 2012)
+
+  06 Jan 2012; Michał Górny <mgorny@gentoo.org> systemd-29-r3.ebuild,
+  +systemd-29-r4.ebuild, systemd-37-r1.ebuild, +systemd-37-r2.ebuild,
+  +files/update-etc-systemd-symlinks.path,
+  +files/update-etc-systemd-symlinks.service,
+  +files/update-etc-systemd-symlinks.sh:
+  Migrate to /usr.
 
 *systemd-37-r1 (12 Dec 2011)
 *systemd-29-r3 (12 Dec 2011)

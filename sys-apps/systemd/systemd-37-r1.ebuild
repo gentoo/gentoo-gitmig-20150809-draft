@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-37-r1.ebuild,v 1.1 2011/12/12 08:17:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-37-r1.ebuild,v 1.2 2012/01/06 10:19:43 mgorny Exp $
 
 EAPI=4
 
@@ -41,8 +41,10 @@ MINKV="2.6.38"
 # dbus, udev versions because of systemd units
 # blocker on old packages to avoid collisions with above
 # openrc blocker to avoid udev rules starting openrc scripts
+# systemd blocker due to /usr migration
 RDEPEND="${COMMON_DEPEND}
-	!<sys-apps/openrc-0.8.3"
+	!<sys-apps/openrc-0.8.3
+	!=sys-apps/systemd-29-r4"
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
 	dev-util/intltool

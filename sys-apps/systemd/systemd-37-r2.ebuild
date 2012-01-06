@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r3.ebuild,v 1.2 2012/01/06 10:19:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-37-r2.ebuild,v 1.1 2012/01/06 10:19:43 mgorny Exp $
 
 EAPI=4
 
-inherit autotools-utils bash-completion linux-info pam systemd
+inherit autotools-utils bash-completion-r1 linux-info pam systemd
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -13,12 +13,13 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="audit cryptsetup gtk pam plymouth selinux tcpd"
+IUSE="acl audit cryptsetup gtk pam plymouth selinux tcpd"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10
-	>=sys-fs/udev-171
 	>=sys-apps/util-linux-2.19
+	>=sys-fs/udev-172
 	sys-libs/libcap
+	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
 	cryptsetup? ( sys-fs/cryptsetup )
 	gtk? (
@@ -32,7 +33,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	tcpd? ( sys-apps/tcp-wrappers )"
 
 # Vala-0.10 doesn't work with libnotify 0.7.1
-VALASLOT="0.14"
+VALASLOT="0.12"
 # A little higher than upstream requires
 # but I had real trouble with 2.6.37 and systemd.
 MINKV="2.6.38"
@@ -40,13 +41,16 @@ MINKV="2.6.38"
 # dbus, udev versions because of systemd units
 # blocker on old packages to avoid collisions with above
 # openrc blocker to avoid udev rules starting openrc scripts
-# systemd blocker due to /usr migration
 RDEPEND="${COMMON_DEPEND}
-	!<sys-apps/openrc-0.8.3
-	!=sys-apps/systemd-29-r4"
+	!<sys-apps/openrc-0.8.3"
 DEPEND="${COMMON_DEPEND}
+	dev-util/gperf
+	dev-util/intltool
 	gtk? ( dev-lang/vala:${VALASLOT} )
 	>=sys-kernel/linux-headers-${MINKV}"
+
+# Due to vala being broken.
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	enewgroup lock # used by var-lock.mount
@@ -56,25 +60,28 @@ pkg_setup() {
 src_prepare() {
 	# Force the rebuild of .vala sources
 	touch src/*.vala || die
+
+	# Fix hardcoded path in .vala.
+	sed -i -e 's:/lib/systemd:/usr/lib/systemd:g' src/*.vala || die
+
 	autotools-utils_src_prepare
 }
 
 src_configure() {
 	local myeconfargs=(
 		--with-distro=gentoo
-		--with-rootdir=
+		--with-rootdir=/usr
+		--with-rootlibdir=/usr/$(get_libdir)
 		--localstatedir=/var
 		--docdir=/tmp/docs
+		$(use_enable acl)
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
 		$(use_enable gtk)
 		$(use_enable pam)
+		$(use_enable plymouth)
 		$(use_enable selinux)
 		$(use_enable tcpd tcpwrap)
-
-		# right now it is enabled on per-distro basis
-		# let's just hack into the check
-		$(use plymouth && echo have_plymouth=true)
 	)
 
 	if use gtk; then
@@ -88,21 +95,29 @@ src_install() {
 	autotools-utils_src_install \
 		bashcompletiondir=/tmp
 
-	# move files as necessary
-	dobashcompletion "${D}"/tmp/systemctl-bash-completion.sh
-	dodoc "${D}"/tmp/docs/*
-	rm -rf "${D}"/tmp || die
+	# compat for init= use
+	dosym ../usr/bin/systemd /bin/systemd
 
-	cd "${D}"/usr/share/man/man8/
-	for i in halt poweroff reboot runlevel shutdown telinit; do
-		mv ${i}.8 systemd.${i}.8 || die
-	done
+	# move files as necessary
+	newbashcomp "${D}"/tmp/systemctl-bash-completion.sh ${PN}
+	dodoc "${D}"/tmp/docs/*
+	rm -r "${D}"/tmp || die
+
+	# we just keep sysvinit tools, so no need for the mans
+	rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \
+		|| die
 
 	keepdir /run
 
 	# Create /run/lock as required by new baselay/OpenRC compat.
 	insinto /usr/lib/tmpfiles.d
 	doins "${FILESDIR}"/gentoo-run.conf
+
+	# Migration helpers.
+	exeinto /usr/libexec/systemd
+	doexe "${FILESDIR}"/update-etc-systemd-symlinks.sh
+	systemd_dounit "${FILESDIR}"/update-etc-systemd-symlinks.{service,path}
+	systemd_enable_service sysinit.target update-etc-systemd-symlinks.path
 }
 
 pkg_preinst() {
@@ -112,7 +127,7 @@ pkg_preinst() {
 }
 
 optfeature() {
-	elog "	[$(has_version ${1} && echo I || echo ' ')] ${1} (${2})"
+	elog "	[\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1} (${2})"
 }
 
 pkg_postinst() {
@@ -141,4 +156,15 @@ pkg_postinst() {
 	ewarn "responsibility. Please remember than you can pass:"
 	ewarn "	init=/sbin/init"
 	ewarn "to your kernel to boot using sysvinit / OpenRC."
+
+	# Don't run it if we're outta /
+	if [[ ! ${ROOT%/} ]]; then
+		# Update symlinks to moved units.
+		sh "${FILESDIR}"/update-etc-systemd-symlinks.sh
+
+		# Try to start migration unit.
+		ebegin "Trying to start migration helper path monitoring."
+		systemctl --system start update-etc-systemd-symlinks.path 2>/dev/null
+		eend ${?}
+	fi
 }
