@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/fakefs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.21 2011/12/05 13:04:28 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.22 2012/01/06 07:35:54 graaff Exp $
+
+*fakefs-0.4.0-r1 (06 Jan 2012)
+
+  06 Jan 2012; Hans de Graaff <graaff@gentoo.org> +fakefs-0.4.0-r1.ebuild,
+  +files/fakefs-0.4.0-ruby193-advise.patch,
+  +files/fakefs-0.4.0-ruby193-pathname.patch,
+  +files/fakefs-0.4.0-ruby193-ruby-pathname.patch,
+  +files/fakefs-0.4.0-ruby193.patch:
+  Add a host of patches from upstream's tracker for Ruby 1.9.3.
 
   05 Dec 2011; Naohiro Aota <naota@gentoo.org> fakefs-0.2.1-r1.ebuild:
   Add ~x86-fbsd.
