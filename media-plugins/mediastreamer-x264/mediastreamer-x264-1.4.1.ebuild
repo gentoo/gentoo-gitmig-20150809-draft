@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/mediastreamer-x264-1.4.1.ebuild,v 1.3 2011/05/14 09:37:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/mediastreamer-x264-1.4.1.ebuild,v 1.4 2012/01/06 15:07:46 ranger Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases-noredirect/linphone/plugin
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=">=media-libs/mediastreamer-2.7.0
