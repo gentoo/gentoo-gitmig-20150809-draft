@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.279 2012/01/04 17:59:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.280 2012/01/06 12:34:25 fordfrog Exp $
+
+  06 Jan 2012; Miroslav Šulc <fordfrog@gentoo.org> -tomcat-6.0.33.ebuild:
+  Removed old version
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tomcat-6.0.35.ebuild:
   x86 stable wrt bug #395933
