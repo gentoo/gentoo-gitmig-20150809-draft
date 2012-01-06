@@ -1,17 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.1.0.ebuild,v 1.5 2011/11/26 18:23:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.1.0.ebuild,v 1.6 2012/01/06 10:53:18 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
 
-DESCRIPTION="Image viewer and browser for Xfce4"
+DESCRIPTION="Image viewer and browser for Xfce"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/ristretto"
-SRC_URI="mirror://xfce/src/apps/${PN}/0.1/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="debug"
 
 RDEPEND="media-libs/libexif
@@ -23,8 +23,8 @@ RDEPEND="media-libs/libexif
 	>=xfce-base/xfconf-4.8
 	>=x11-libs/cairo-1.8"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
 	dev-util/intltool
+	dev-util/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {
