@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.123 2012/01/01 15:50:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.124 2012/01/06 20:13:18 vapier Exp $
+
+  06 Jan 2012; Mike Frysinger <vapier@gentoo.org> portage-utils-0.8.ebuild,
+  portage-utils-0.9.ebuild:
+  Use gnulib fall back for old crusty installs #397573 by Mark Wagner.
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> portage-utils-0.8.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #395317

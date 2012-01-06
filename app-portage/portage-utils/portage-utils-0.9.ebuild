@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.9.ebuild,v 1.2 2011/12/31 11:39:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.9.ebuild,v 1.3 2012/01/06 20:13:18 vapier Exp $
 
 EAPI="3"
 
@@ -19,7 +19,9 @@ src_configure() {
 	use static && append-ldflags -static
 
 	# Avoid slow configure+gnulib+make if on an up-to-date Linux system
-	if use prefix || ! use kernel_linux ; then
+	if use prefix || ! use kernel_linux || \
+	   has_version '<sys-libs/glibc-2.10'
+	then
 		econf --with-eprefix="${EPREFIX}"
 	else
 		tc-export CC
