@@ -1,13 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1.ebuild,v 1.1 2011/12/09 05:04:54 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1.ebuild,v 1.2 2012/01/06 21:25:12 hwoarang Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 WX_GTK_VER="2.8"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit alternatives eutils fdo-mime flag-o-matic multilib python wxwidgets
+inherit alternatives eutils fdo-mime flag-o-matic python wxwidgets
 
 MY_P="${P/wxpython-/wxPython-src-}"
 
@@ -37,8 +38,6 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 S="${WORKDIR}/${MY_P}/wxPython"
 DOC_S="${WORKDIR}/wxPython-${PV}"
@@ -84,7 +83,7 @@ src_compile() {
 }
 
 src_install() {
-	local docdir mypyconf
+	local docdir file mypyconf
 
 	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	use opengl \
