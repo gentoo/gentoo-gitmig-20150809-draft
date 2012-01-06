@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-do
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.28 2011/12/03 13:47:26 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.29 2012/01/06 16:03:54 pacho Exp $
+
+  06 Jan 2012; Pacho Ramos <pacho@gentoo.org> gnome-do-0.8.5.ebuild:
+  Drop DEPRECATED flags (bug #384779 comment #14 by Jeff) and -Werror.
 
   03 Dec 2011; Hans de Graaff <graaff@gentoo.org> -gnome-do-0.8.3.1.ebuild,
   -gnome-do-0.8.4.ebuild:

@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.5.ebuild,v 1.1 2011/06/22 06:09:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.5.ebuild,v 1.2 2012/01/06 16:03:54 pacho Exp $
 
 # TODO: GNOME Do defaults to a debug build; to disable, --enable-release must
 # be passed. However, when doing this the build fails; figure out why.
 
 EAPI=2
 
-inherit gnome2 mono versionator eutils
+inherit gnome2 mono versionator eutils autotools
 
 PVC=$(get_version_component_range 1-3)
 
@@ -42,9 +42,20 @@ DEPEND="${RDEPEND}
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
-#src_prepare() {
+src_prepare() {
 #	epatch "${FILESDIR}"/${P}-mono-2.8.patch
-#}
+
+	# Drop DEPRECATED flags
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED::g' \
+		configure.ac || die
+
+	# The same for -Werror
+	sed -i -e 's:-Werror::' configure.ac || die
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
+	gnome2_src_prepare
+}
 
 src_configure() {
 	gnome2_src_configure
