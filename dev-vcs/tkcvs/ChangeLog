@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/tkcvs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/ChangeLog,v 1.4 2012/01/02 23:52:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/ChangeLog,v 1.5 2012/01/06 11:53:49 ago Exp $
+
+  06 Jan 2012; Agostino Sarubbo <ago@gentoo.org> tkcvs-8.2.2.ebuild:
+  Stable for AMD64, wrt bug #397037
 
 *tkcvs-8.2.3 (02 Jan 2012)
 
