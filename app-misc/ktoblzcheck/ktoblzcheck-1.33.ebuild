@@ -1,11 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ktoblzcheck-1.33.ebuild,v 1.1 2011/08/21 16:09:23 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ktoblzcheck-1.33.ebuild,v 1.2 2012/01/06 08:45:18 ssuominen Exp $
 
-EAPI=3
-
+EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
-
 inherit python
 
 DESCRIPTION="Library to check account numbers and bank codes of German banks"
@@ -23,7 +21,9 @@ RDEPEND="app-text/recode
 	sys-apps/sed
 	|| ( net-misc/wget www-client/lynx )"
 DEPEND="${RDEPEND}
-	sys-devel/libtool"
+	>=sys-devel/libtool-2.2.6b"
+
+DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	if use python; then
@@ -33,21 +33,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	rm -f py-compile
-	ln -s $(type -P true) py-compile || die
+	>py-compile
 }
 
 src_configure() {
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable python)
+	econf $(use_enable python)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
-
-	find "${D}" -name '*.la' -exec rm -f {} +
+	default
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
