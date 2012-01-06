@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exif
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.47 2011/12/17 18:41:26 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.48 2012/01/06 20:29:54 ranger Exp $
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> exif-0.6.20.ebuild:
+  Marking exif-0.6.20 ppc for bug 390249
 
   17 Dec 2011; Raúl Porcel <armin76@gentoo.org> exif-0.6.20.ebuild:
   alpha/ia64/sparc stable wrt #390249
