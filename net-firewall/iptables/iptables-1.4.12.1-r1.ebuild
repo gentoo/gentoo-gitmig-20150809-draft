@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.12.1-r1.ebuild,v 1.3 2012/01/02 00:08:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.12.1-r1.ebuild,v 1.4 2012/01/06 23:16:38 vapier Exp $
 
 EAPI="4"
 
@@ -32,13 +32,16 @@ src_prepare() {
 		"${FILESDIR}/iptables-1.4.12.1-conntrack-v2-ranges.patch"
 	eautomake
 
+	# use the saner headers from the kernel
+	rm -f include/linux/{kernel,types}.h
+
 	# Only run autotools if user patched something
 	epatch_user && eautoreconf || elibtoolize
 }
 
 src_configure() {
 	sed -i \
-		-e "/nfnetlink=[01]/s:=[01]:=$(use netlink && echo 1 || echo 0):" \
+		-e "/nfnetlink=[01]/s:=[01]:=$(usex netlink 1 0):" \
 		configure || die
 	econf \
 		--sbindir=/sbin \
