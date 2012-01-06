@@ -1,6 +1,11 @@
 # ChangeLog for media-video/minitube
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.61 2011/11/02 14:45:46 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.62 2012/01/06 19:18:54 hwoarang Exp $
+
+*minitube-1.7 (06 Jan 2012)
+
+  06 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +minitube-1.7.ebuild:
+  Version bump. Bug #397783
 
   02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> minitube-1.6.ebuild:
   x86 stable wrt bug #388867
