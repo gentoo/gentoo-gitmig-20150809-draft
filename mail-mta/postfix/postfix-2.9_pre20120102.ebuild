@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111222.ebuild,v 1.1 2011/12/23 15:48:55 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20120102.ebuild,v 1.1 2012/01/06 11:12:04 eras Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 LICENSE="IBM"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="+berkdb cdb doc dovecot-sasl hardened ipv6 ldap ldap-bind mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
+IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=dev-libs/libpcre-3.4
 	dev-lang/perl
@@ -108,6 +108,12 @@ src_configure() {
 		mylibs="${mylibs} -lssl -lcrypto"
 	fi
 
+	# broken. and "in other words, not supported" by upstream.
+	# and I'd rather not patch. Use inet_protocols setting in main.cf
+	#if ! use ipv6; then
+	#	mycc="${mycc} -DNO_IPV6"
+	#fi
+
 	if use sasl; then
 		if use dovecot-sasl; then
 			# Set dovecot as default.
@@ -153,19 +159,19 @@ src_configure() {
 		mylibs="${mylibs} ${CDB_LIBS}"
 	fi
 
-	mycc="${mycc} -DDEF_DAEMON_DIR=\\\"/usr/$(get_libdir)/postfix\\\""
-	mycc="${mycc} -DDEF_CONFIG_DIR=\\\"/etc/postfix\\\""
-	mycc="${mycc} -DDEF_COMMAND_DIR=\\\"/usr/sbin\\\""
-	mycc="${mycc} -DDEF_SENDMAIL_PATH=\\\"/usr/sbin/sendmail\\\""
-	mycc="${mycc} -DDEF_NEWALIS_PATH=\\\"/usr/bin/newaliases\\\""
-	mycc="${mycc} -DDEF_MAILQ_PATH=\\\"/usr/bin/mailq\\\""
-	mycc="${mycc} -DDEF_MANPAGE_DIR=\\\"/usr/share/man\\\""
-	mycc="${mycc} -DDEF_README_DIR=\\\"/usr/share/doc/${PF}/readme\\\""
-	mycc="${mycc} -DDEF_HTML_DIR=\\\"/usr/share/doc/${PF}/html\\\""
-	mycc="${mycc} -DDEF_QUEUE_DIR=\\\"/var/spool/postfix\\\""
-	mycc="${mycc} -DDEF_DATA_DIR=\\\"/var/lib/postfix\\\""
-	mycc="${mycc} -DDEF_MAIL_OWNER=\\\"postfix\\\""
-	mycc="${mycc} -DDEF_SGID_GROUP=\\\"postdrop\\\""
+#	mycc="${mycc} -DDEF_DAEMON_DIR=\\\"/usr/$(get_libdir)/postfix\\\""
+#	mycc="${mycc} -DDEF_CONFIG_DIR=\\\"/etc/postfix\\\""
+#	mycc="${mycc} -DDEF_COMMAND_DIR=\\\"/usr/sbin\\\""
+#	mycc="${mycc} -DDEF_SENDMAIL_PATH=\\\"/usr/sbin/sendmail\\\""
+#	mycc="${mycc} -DDEF_NEWALIS_PATH=\\\"/usr/bin/newaliases\\\""
+#	mycc="${mycc} -DDEF_MAILQ_PATH=\\\"/usr/bin/mailq\\\""
+#	mycc="${mycc} -DDEF_MANPAGE_DIR=\\\"/usr/share/man\\\""
+#	mycc="${mycc} -DDEF_README_DIR=\\\"/usr/share/doc/${PF}/readme\\\""
+#	mycc="${mycc} -DDEF_HTML_DIR=\\\"/usr/share/doc/${PF}/html\\\""
+#	mycc="${mycc} -DDEF_QUEUE_DIR=\\\"/var/spool/postfix\\\""
+#	mycc="${mycc} -DDEF_DATA_DIR=\\\"/var/lib/postfix\\\""
+#	mycc="${mycc} -DDEF_MAIL_OWNER=\\\"postfix\\\""
+#	mycc="${mycc} -DDEF_SGID_GROUP=\\\"postdrop\\\""
 
 	# Robin H. Johnson <robbat2@gentoo.org> 17/Nov/2006
 	# Fix because infra boxes hit 2Gb .db files that fail a 32-bit fstat signed check.
@@ -264,6 +270,23 @@ src_install () {
 	rm -f "${D}"/etc/postfix/{header_checks,relocated,transport,virtual}
 }
 
+pkg_preinst() {
+	[[ -d ${ROOT}/etc/postfix ]] && {
+	# changed default for inet_protocols?
+	if [[ "$(${D}/usr/sbin/postconf -dh inet_protocols)" != "ipv4" ]]; then
+		if [[ ! -n "$(${D}/usr/sbin/postconf -c ${ROOT}/etc/postfix -nh inet_protocols)" ]];
+		then
+			ewarn "\nCOMPATIBILITY: adding inet_protocols=ipv4 to main.cf."
+			ewarn "That will keep the same behaviour as previous postfix versions."
+			ewarn "Specify inet_protocols explicitly if you want to enable IPv6.\n"
+		else
+			# delete inet_protocols setting. there is already one in /etc/postfix
+			sed -i -e /inet_protocols/d "${D}"/etc/postfix/main.cf || die
+		fi
+	fi
+	}
+}
+
 pkg_postinst() {
 	# Do not install server.{key,pem) SSL certificates if they already exist
 	if use ssl && [[ ! -f "${ROOT}"/etc/ssl/postfix/server.key \
@@ -281,14 +304,10 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	elog "See the RELEASE_NOTES file in /usr/share/doc/${PF}"
-	elog "for incompatibilities and other major changes between releases."
-
 	if [[ ${REPLACING_VERSIONS} < 2.9 ]]; then
 		elog "If you are using old style postfix instances by symlinking"
 		elog "startup scripts in ${ROOT}etc/init.d, please consider"
 		elog "upgrading your config for postmulti support. For more info:"
 		elog "http://www.postfix.org/MULTI_INSTANCE_README.html"
-		elog
 	fi
 }
