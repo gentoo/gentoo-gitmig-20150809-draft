@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.245 2012/01/01 15:52:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.246 2012/01/06 23:01:07 vapier Exp $
+
+  06 Jan 2012; Mike Frysinger <vapier@gentoo.org> gentoolkit-0.3.0.4-r5.ebuild,
+  gentoolkit-9999.ebuild:
+  Allow newer coreutils to provide realpath.
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> gentoolkit-0.3.0.4-r5.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #395303
