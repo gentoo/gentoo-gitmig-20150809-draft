@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.97.ebuild,v 1.1 2011/12/31 21:09:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.97.ebuild,v 1.2 2012/01/06 22:34:39 vapier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -40,7 +40,7 @@ CDEPEND="
 "
 DEPEND="${CDEPEND}
 	>=dev-util/pkgconfig-0.20
-	>=dev-libs/check-0.9.4
+	>=dev-libs/check-0.9.6
 	sys-devel/flex
 "
 RDEPEND="${CDEPEND}

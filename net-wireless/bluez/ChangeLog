@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.110 2011/12/31 21:09:18 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.111 2012/01/06 22:34:39 vapier Exp $
+
+  06 Jan 2012; Mike Frysinger <vapier@gentoo.org> bluez-4.97.ebuild,
+  bluez-4.97-r1.ebuild:
+  We need newer version of check to support ck_assert (patch sent upstream
+  already to reflect this).
 
 *bluez-4.97-r1 (31 Dec 2011)
 *bluez-4.97 (31 Dec 2011)
