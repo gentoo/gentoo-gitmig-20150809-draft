@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libosip
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.47 2011/05/14 09:33:01 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.48 2012/01/06 15:04:14 ranger Exp $
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> libosip-3.5.0.ebuild:
+  Marking libosip-3.5.0 ppc stable for bug 363311
 
   14 May 2011; Thomas Kahle <tomka@gentoo.org> libosip-3.5.0.ebuild:
   x86 stable per bug 363311
