@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/netbeans-nb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/ChangeLog,v 1.7 2011/10/25 00:17:45 fordfrog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/ChangeLog,v 1.8 2012/01/06 11:01:25 fordfrog Exp $
+
+*netbeans-nb-7.1 (06 Jan 2012)
+
+  06 Jan 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/7.1/keychain-support.patch, +netbeans-nb-7.1.ebuild:
+  Version bump
 
   25 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> netbeans-nb-7.0.1.ebuild:
   Filtering ecj compilers as the package does not compile using them
