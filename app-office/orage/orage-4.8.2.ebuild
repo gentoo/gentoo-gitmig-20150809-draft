@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.2.ebuild,v 1.8 2011/11/26 18:20:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.2.ebuild,v 1.9 2012/01/06 10:55:36 ssuominen Exp $
 
 EAPI=4
 inherit flag-o-matic xfconf
 
 DESCRIPTION="Xfce's calendar suite (with panel plug-in)"
 HOMEPAGE="http://www.xfce.org/projects/orage/"
-SRC_URI="mirror://xfce/src/apps/${PN}/4.8/${P}.tar.bz2
+SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2
 	http://dev.gentoo.org/~ssuominen/${P}-hr.po.bz2
 	http://dev.gentoo.org/~ssuominen/${P}-kk.po.bz2
 	http://dev.gentoo.org/~ssuominen/${P}-si.po.bz2
@@ -15,15 +15,15 @@ SRC_URI="mirror://xfce/src/apps/${PN}/4.8/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="berkdb dbus debug libnotify +xfce_plugins_clock"
 
 RDEPEND=">=dev-libs/libical-0.43
 	dev-libs/popt
 	>=x11-libs/gtk+-2.10:2
 	berkdb? ( >=sys-libs/db-4 )
-	dbus? ( >=dev-libs/dbus-glib-0.88 )
-	libnotify? ( >=x11-libs/libnotify-0.4.5 )
+	dbus? ( >=dev-libs/dbus-glib-0.90 )
+	libnotify? ( >=x11-libs/libnotify-0.7 )
 	xfce_plugins_clock? ( >=xfce-base/xfce4-panel-4.8 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
