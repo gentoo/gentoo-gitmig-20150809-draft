@@ -1,5 +1,12 @@
 
 
+*bitcoin-qt-0.5.2_rc1 (06 Jan 2012)
+*bitcoin-qt-0.5.0.3_rc1 (06 Jan 2012)
+
+  06 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.0.3_rc1.ebuild, +bitcoin-qt-0.5.2_rc1.ebuild:
+  Moved from luke-jr's bitcoin overlay
+
   23 Dec 2011; Anthony G. Basile <blueness@gentoo.org> bitcoin-qt-0.5.1.ebuild:
   Added md2k7-asyouwish license for icons
 
