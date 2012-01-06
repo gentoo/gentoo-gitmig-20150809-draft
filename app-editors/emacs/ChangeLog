@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.455 2012/01/05 23:51:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.456 2012/01/06 10:24:47 ulm Exp $
+
+*emacs-22.3-r9 (06 Jan 2012)
+*emacs-21.4-r24 (06 Jan 2012)
+
+  06 Jan 2012; Ulrich Mueller <ulm@gentoo.org> +emacs-21.4-r24.ebuild,
+  +emacs-22.3-r9.ebuild:
+  Add /etc/emacs to the lisp load-path; change from 13 Dec 2011 backported
+  to SLOTs 21 and 22.
 
   05 Jan 2012; Ulrich Mueller <ulm@gentoo.org> emacs-23.3-r3.ebuild:
   A build-time dependency on pkgconfig is needed only in some configurations.
