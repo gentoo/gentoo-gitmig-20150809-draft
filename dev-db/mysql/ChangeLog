@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.591 2012/01/06 19:27:22 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.592 2012/01/06 21:28:19 jmbsvicetto Exp $
+
+  06 Jan 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -mysql-5.0.54.ebuild, -mysql-5.0.91.ebuild, mysql-5.1.56-r1.ebuild,
+  mysql-5.1.57.ebuild, mysql-5.1.58-r1.ebuild, mysql-5.1.59.ebuild,
+  -mysql-5.5.14.ebuild, -mysql-5.5.16.ebuild, mysql-5.5.19.ebuild:
+  [dev-db/mysql] Bumped EAPI to 4 on ebuilds inheriting the mysql-v2 eclass as
+  I'm going to push the overlay eclasses with prefix support.
+  Dropped old versions.
 
   06 Jan 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   mysql-3.23.58-r1.ebuild:

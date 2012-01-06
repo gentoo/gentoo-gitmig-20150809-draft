@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.59.ebuild,v 1.2 2011/11/08 20:25:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.59.ebuild,v 1.3 2012/01/06 21:28:19 jmbsvicetto Exp $
 
-EAPI="2"
+EAPI="4"
 
 MY_EXTRAS_VER="20110721-0450Z"
 # PBXT
