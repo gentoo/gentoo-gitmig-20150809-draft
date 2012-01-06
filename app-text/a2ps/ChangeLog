@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.102 2011/12/07 07:47:36 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.103 2012/01/06 02:11:56 ottxor Exp $
+
+  06 Jan 2012; Christoph Junghans <ottxor@gentoo.org> a2ps-4.14-r2.ebuild:
+  keyword ~x86-macos
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> a2ps-4.14-r2.ebuild:
   x86 stable wrt bug #391501
