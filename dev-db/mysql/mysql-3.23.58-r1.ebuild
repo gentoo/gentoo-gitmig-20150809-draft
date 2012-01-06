@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.27 2008/01/25 23:23:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.28 2012/01/06 19:27:22 jmbsvicetto Exp $
 
 inherit flag-o-matic eutils
 
@@ -29,6 +29,12 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	dev-lang/perl
 	sys-process/procps"
 PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
+
+pkg_setup() {
+
+	enewgroup mysql 60 || die "problem adding 'mysql' group"
+	enewuser mysql 60 -1 /var/lib/mysql mysql || die "problem adding 'mysql' user"
+}
 
 src_unpack() {
 	use innodb || ewarn "InnoDB support is not selected to be compiled in."
@@ -181,14 +187,9 @@ pkg_config() {
 }
 
 pkg_preinst() {
-	if ! groupmod mysql; then
-		groupadd -g 60 mysql || die "problem adding group mysql"
-	fi
 
-	if ! id mysql; then
-		useradd -g mysql -s /bin/false -d /var/lib/mysql -c "mysql" mysql
-		assert "problem adding user mysql"
-	fi
+	enewgroup mysql 60 || die "problem adding 'mysql' group"
+	enewuser mysql 60 -1 /var/lib/mysql mysql || die "problem adding 'mysql' user"
 }
 
 pkg_postinst() {
