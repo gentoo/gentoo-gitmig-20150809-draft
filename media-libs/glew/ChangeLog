@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glew
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.75 2011/10/23 14:53:35 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.76 2012/01/06 21:37:35 halcy0n Exp $
+
+  06 Jan 2012; Mark Loeser <halcy0n@gentoo.org> glew-1.6.0-r1.ebuild:
+  Stable for ppc/ppc64; bug #382497
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> glew-1.6.0-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #382497
