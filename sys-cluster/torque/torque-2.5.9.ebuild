@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.9.ebuild,v 1.1 2012/01/03 15:56:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.9.ebuild,v 1.2 2012/01/06 02:54:54 jsbronder Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info
@@ -44,7 +44,7 @@ pkg_setup() {
 		fi
 	fi
 
-	USE_CPUSETS="--disable-cpusets"
+	USE_CPUSETS="--disable-cpuset"
 	if use cpusets; then
 		if ! use kernel_linux; then
 			einfo
@@ -63,7 +63,7 @@ pkg_setup() {
 				elog "your kernel with CONFIG_CPUSETS enabled."
 				einfo
 			fi
-			USE_CPUSETS="--enable-cpusets"
+			USE_CPUSETS="--enable-cpuset"
 		fi
 	fi
 }
@@ -87,8 +87,7 @@ src_configure() {
 		--disable-gcc-warnings \
 		--with-tcp-retry-limit=2 \
 		${USE_CPUSETS} \
-		${myconf} \
-		|| die "econf failed"
+		${myconf}
 }
 
 # WARNING
@@ -120,13 +119,13 @@ pbs_createspool() {
 		d="${a/*:}"
 		m="${a/:*}"
 		if [[ ! -d "${root}${d}" ]]; then
-			install -d -m${m} "${root}${d}"
+			install -d -m${m} "${root}${d}" || die
 		else
-			chmod ${m} "${root}${d}"
+			chmod ${m} "${root}${d}" || die
 		fi
 		# (#149226) If we're running in src_*, then keepdir
 		if [[ "${root}" = "${D}" ]]; then
-			keepdir ${d}
+			keepdir ${d} || die
 		fi
 	done
 }
@@ -135,7 +134,7 @@ src_install() {
 	# Make directories first
 	pbs_createspool "${D}"
 
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc CHANGELOG README.* Release_Notes || die "dodoc failed"
 	if use doc; then
@@ -146,27 +145,29 @@ src_install() {
 	# So we have to fix some hard-coded paths in tclIndex for xpbs* to work
 	for file in `find "${D}" -iname tclIndex`; do
 		sed -e "s/${D//\// }/ /" "${file}" > "${file}.new"
-		mv "${file}.new" "${file}"
+		mv "${file}.new" "${file}" || die
 	done
 
 	if use server; then
-		newinitd "${FILESDIR}"/pbs_server-init.d-munge pbs_server
-		newinitd "${FILESDIR}"/pbs_sched-init.d pbs_sched
+		newinitd "${FILESDIR}"/pbs_server-init.d-munge pbs_server || die
+		newinitd "${FILESDIR}"/pbs_sched-init.d pbs_sched || die
 	fi
-	newinitd "${FILESDIR}"/pbs_mom-init.d-munge pbs_mom
-	newconfd "${FILESDIR}"/torque-conf.d-munge torque
-	newenvd "${FILESDIR}"/torque-env.d 25torque
+	newinitd "${FILESDIR}"/pbs_mom-init.d-munge pbs_mom || die
+	newconfd "${FILESDIR}"/torque-conf.d-munge torque || die
+	newenvd "${FILESDIR}"/torque-env.d 25torque || die
 }
 
 pkg_preinst() {
 	if [[ -f "${ROOT}etc/pbs_environment" ]]; then
-		cp "${ROOT}etc/pbs_environment" "${D}"/etc/pbs_environment
+		cp "${ROOT}etc/pbs_environment" "${D}"/etc/pbs_environment || die
 	fi
 
-	echo "${PBS_SERVER_NAME}" > "${D}${PBS_SERVER_HOME}/server_name"
+	echo "${PBS_SERVER_NAME}" > "${D}${PBS_SERVER_HOME}/server_name" || die
 
 	# Fix up the env.d file to use our set server home.
-	sed -i "s:/var/spool/torque:${PBS_SERVER_HOME}:g" "${D}"/etc/env.d/25torque
+	sed -i \
+		"s:/var/spool/torque:${PBS_SERVER_HOME}:g" "${D}"/etc/env.d/25torque \
+		|| die
 
 	if use munge; then
 		sed -i 's,\(PBS_USE_MUNGE=\).*,\11,' "${D}"etc/conf.d/torque || die
@@ -196,35 +197,36 @@ pkg_config() {
 	if [ -e "${h}/server_priv/acl_svr/operators" ] \
 		|| [ -e "${h}/server_priv/nodes" ] \
 		|| [ -e "${h}/mom_priv/config" ]; then
-		ewarn "Previous Torque configuration detected.  Press any key to"
-		ewarn "continue or press Control-C to abort now"
+		ewarn "Previous Torque configuration detected.  Press Enter to"
+		ewarn "continue or Control-C to abort now"
 		read
 	fi
 
 	# pbs_mom configuration.
-	echo "\$pbsserver ${PBS_SERVER_NAME}" > "${h}/mom_priv/config"
-	echo "\$logevent 255" >> "${h}/mom_priv/config"
+	echo "\$pbsserver ${PBS_SERVER_NAME}" > "${h}/mom_priv/config" || die
+	echo "\$logevent 255" >> "${h}/mom_priv/config" || die
 
 	if use server; then
 		local qmgr="${ROOT}/usr/bin/qmgr -c"
 		# pbs_server bails on repeated backslashes.
-		if ! echo "y" | "${ROOT}"/usr/sbin/pbs_server -d "${h}" -t create; then
+		if ! "${ROOT}"/usr/sbin/pbs_server -f -d "${h}" -t create; then
 			eerror "Failed to start pbs_server"
 			rc=1
 		else
-			${qmgr} "set server operators = root@$(hostname -f)" ${PBS_SERVER_NAME}
-			${qmgr} "create queue batch" ${PBS_SERVER_NAME}
-			${qmgr} "set queue batch queue_type = Execution" ${PBS_SERVER_NAME}
-			${qmgr} "set queue batch started = True" ${PBS_SERVER_NAME}
-			${qmgr} "set queue batch enabled = True" ${PBS_SERVER_NAME}
-			${qmgr} "set server default_queue = batch" ${PBS_SERVER_NAME}
-			${qmgr} "set server resources_default.nodes = 1" ${PBS_SERVER_NAME}
-			${qmgr} "set server scheduling = True" ${PBS_SERVER_NAME}
+			${qmgr} "set server operators = root@$(hostname -f)" ${PBS_SERVER_NAME} \
+			&& ${qmgr} "create queue batch" ${PBS_SERVER_NAME} \
+			&& ${qmgr} "set queue batch queue_type = Execution" ${PBS_SERVER_NAME} \
+			&& ${qmgr} "set queue batch started = True" ${PBS_SERVER_NAME} \
+			&& ${qmgr} "set queue batch enabled = True" ${PBS_SERVER_NAME} \
+			&& ${qmgr} "set server default_queue = batch" ${PBS_SERVER_NAME} \
+			&& ${qmgr} "set server resources_default.nodes = 1" ${PBS_SERVER_NAME} \
+			&& ${qmgr} "set server scheduling = True" ${PBS_SERVER_NAME} \
+			|| die
 
 			"${ROOT}"/usr/bin/qterm -t quick ${PBS_SERVER_NAME} || rc=1
 
 			# Add the local machine as a node.
-			echo "$(hostname -f) np=1" > "${h}/server_priv/nodes"
+			echo "$(hostname -f) np=1" > "${h}/server_priv/nodes" || die
 		fi
 	fi
 	eend ${rc}

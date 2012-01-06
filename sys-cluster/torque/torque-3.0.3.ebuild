@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.3.ebuild,v 1.1 2012/01/06 01:54:36 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.3.ebuild,v 1.2 2012/01/06 02:54:54 jsbronder Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info autotools
@@ -212,8 +212,8 @@ pkg_config() {
 	if [ -e "${h}/server_priv/acl_svr/operators" ] \
 		|| [ -e "${h}/server_priv/nodes" ] \
 		|| [ -e "${h}/mom_priv/config" ]; then
-		ewarn "Previous Torque configuration detected.  Press any key to"
-		ewarn "continue or press Control-C to abort now"
+		ewarn "Previous Torque configuration detected.  Press Enter to"
+		ewarn "continue or Control-C to abort now"
 		read
 	fi
 
@@ -224,7 +224,7 @@ pkg_config() {
 	if use server; then
 		local qmgr="${ROOT}/usr/bin/qmgr -c"
 		# pbs_server bails on repeated backslashes.
-		if ! echo "y" | "${ROOT}"/usr/sbin/pbs_server -d "${h}" -t create; then
+		if ! "${ROOT}"/usr/sbin/pbs_server -f -d "${h}" -t create; then
 			eerror "Failed to start pbs_server"
 			rc=1
 		else
@@ -241,7 +241,7 @@ pkg_config() {
 			"${ROOT}"/usr/bin/qterm -t quick ${PBS_SERVER_NAME} || rc=1
 
 			# Add the local machine as a node.
-			echo "$(hostname -f) np=1" > "${h}/server_priv/nodes"
+			echo "$(hostname -f) np=1" > "${h}/server_priv/nodes" || die
 		fi
 	fi
 	eend ${rc}

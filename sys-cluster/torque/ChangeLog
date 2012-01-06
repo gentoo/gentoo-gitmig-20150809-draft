@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.128 2012/01/06 01:54:36 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.129 2012/01/06 02:54:54 jsbronder Exp $
+
+  06 Jan 2012; Justin Bronder <jsbronder@gentoo.org> torque-2.5.9.ebuild,
+  torque-3.0.3.ebuild, files/pbs_server-init.d, files/pbs_server-init.d-munge:
+  Update pbs_server initd to handle xml servers. Improve pkg_config. Misc fixes
+  (#397525).
 
 *torque-3.0.3 (06 Jan 2012)
 
