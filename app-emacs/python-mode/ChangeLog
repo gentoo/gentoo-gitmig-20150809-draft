@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.56 2011/12/04 15:49:44 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.57 2012/01/06 16:40:55 ranger Exp $
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> python-mode-5.2.0.ebuild:
+  Marking python-mode-5.2.0 ppc for bug 391725
 
   04 Dec 2011; Raúl Porcel <armin76@gentoo.org> python-mode-5.2.0.ebuild:
   arm/ia64/s390/sh/sparc/x86 stable wrt #391725
