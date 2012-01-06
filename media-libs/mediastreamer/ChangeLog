@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mediastreamer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.50 2011/11/06 12:37:14 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.51 2012/01/06 15:06:02 ranger Exp $
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> mediastreamer-2.7.3-r3.ebuild:
+  Marking mediastreamer-2.7.3-r3 ppc stable for bug 363311
 
   06 Nov 2011; Fabian Groffen <grobian@gentoo.org>
   mediastreamer-2.7.3-r3.ebuild:
