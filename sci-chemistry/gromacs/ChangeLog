@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.102 2012/01/06 02:16:45 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.103 2012/01/06 02:21:02 ottxor Exp $
+
+  06 Jan 2012; Christoph Junghans <ottxor@gentoo.org> -gromacs-4.5.4-r2.ebuild,
+  -gromacs-4.5.5.ebuild:
+  remove obsolete
 
   06 Jan 2012; Christoph Junghans <ottxor@gentoo.org> gromacs-4.5.5-r1.ebuild:
   keyword ~x86-macos
