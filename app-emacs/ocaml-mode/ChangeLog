@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.54 2012/01/04 17:55:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.55 2012/01/06 16:46:18 ranger Exp $
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> ocaml-mode-3.12.1.ebuild:
+  Marking ocaml-mode-3.12.1 ppc for bug 396019
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ocaml-mode-3.12.1.ebuild:
