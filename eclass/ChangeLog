@@ -1,6 +1,14 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.72 2012/01/05 23:20:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.73 2012/01/06 21:32:48 jmbsvicetto Exp $
+
+  06 Jan 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mysql.eclass, mysql-autotools.eclass, mysql-cmake.eclass, mysql-v2.eclass,
+  mysql_fx.eclass:
+  [mysql eclasses] Added prefix support for eclasses - fixes bug 348788 and bug
+  388125.
+  Bumped required EAPI to 3 due to the prefix support.
+  Fix -userpriv detection - fixes bug 312809.
 
   05 Jan 2012; Michał Górny <mgorny@gentoo.org> systemd.eclass:
   Fix use of dosym with directory destination.

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.4 2011/12/27 07:37:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.5 2012/01/06 21:32:48 jmbsvicetto Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -117,7 +117,7 @@ configure_cmake_standard() {
 		-DENABLED_LOCAL_INFILE=1
 		-DEXTRA_CHARSETS=all
 		-DMYSQL_USER=mysql
-		-DMYSQL_UNIX_ADDR=/var/run/mysqld/mysqld.sock
+		-DMYSQL_UNIX_ADDR=${EPREFIX}/var/run/mysqld/mysqld.sock
 		-DWITHOUT_READLINE=1
 		-DWITH_ZLIB=system
 		-DWITHOUT_LIBWRAP=1
@@ -191,9 +191,9 @@ mysql-cmake_src_configure() {
 	CMAKE_BUILD_TYPE="RelWithDebInfo"
 
 	mycmakeargs=(
-		-DCMAKE_INSTALL_PREFIX=/usr
-		-DMYSQL_DATADIR=/var/lib/mysql
-		-DSYSCONFDIR=/etc/mysql
+		-DCMAKE_INSTALL_PREFIX=${EPREFIX}/usr
+		-DMYSQL_DATADIR=${EPREFIX}/var/lib/mysql
+		-DSYSCONFDIR=${EPREFIX}/etc/mysql
 		-DINSTALL_BINDIR=bin
 		-DINSTALL_DOCDIR=share/doc/${P}
 		-DINSTALL_DOCREADMEDIR=share/doc/${P}
@@ -201,14 +201,14 @@ mysql-cmake_src_configure() {
 		-DINSTALL_INFODIR=share/info
 		-DINSTALL_LIBDIR=$(get_libdir)/mysql
 		-DINSTALL_MANDIR=share/man
-		-DINSTALL_MYSQLDATADIR=/var/lib/mysql
+		-DINSTALL_MYSQLDATADIR=${EPREFIX}/var/lib/mysql
 		-DINSTALL_MYSQLSHAREDIR=share/mysql
 		-DINSTALL_MYSQLTESTDIR=share/mysql/mysql-test
 		-DINSTALL_PLUGINDIR=$(get_libdir)/mysql/plugin
 		-DINSTALL_SBINDIR=sbin
 		-DINSTALL_SCRIPTDIR=share/mysql/scripts
 		-DINSTALL_SQLBENCHDIR=share/mysql
-		-DINSTALL_SUPPORTFILESDIR=/usr/share/mysql
+		-DINSTALL_SUPPORTFILESDIR=${EPREFIX}/usr/share/mysql
 		-DWITH_COMMENT="Gentoo Linux ${PF}"
 		-DWITHOUT_UNIT_TESTS=1
 	)
@@ -264,7 +264,7 @@ mysql-cmake_src_install() {
 	dosym "/usr/bin/mysqlcheck" "/usr/bin/mysqloptimize"
 
 	# INSTALL_LAYOUT=STANDALONE causes cmake to create a /usr/data dir
-	rm -Rf "${D}/usr/data"
+	rm -Rf "${ED}/usr/data"
 
 	# Various junk (my-*.cnf moved elsewhere)
 	einfo "Removing duplicate /usr/share/mysql files"
@@ -273,8 +273,8 @@ mysql-cmake_src_install() {
 #	if use minimal ; then
 #		einfo "Remove all extra content for minimal build"
 #		rm -Rf "${D}${MY_SHAREDSTATEDIR}"/{mysql-test,sql-bench}
-#		rm -f "${D}"/usr/bin/{mysql{_install_db,manager*,_secure_installation,_fix_privilege_tables,hotcopy,_convert_table_format,d_multi,_fix_extensions,_zap,_explain_log,_tableinfo,d_safe,_install,_waitpid,binlog,test},myisam*,isam*,pack_isam}
-#		rm -f "${D}/usr/sbin/mysqld"
+#		rm -f "${ED}"/usr/bin/{mysql{_install_db,manager*,_secure_installation,_fix_privilege_tables,hotcopy,_convert_table_format,d_multi,_fix_extensions,_zap,_explain_log,_tableinfo,d_safe,_install,_waitpid,binlog,test},myisam*,isam*,pack_isam}
+#		rm -f "${ED}/usr/sbin/mysqld"
 #		rm -f "${D}${MY_LIBDIR}"/lib{heap,merge,nisam,my{sys,strings,sqld,isammrg,isam},vio,dbug}.a
 #	fi
 
@@ -309,16 +309,16 @@ mysql-cmake_src_install() {
 		# Empty directories ...
 		diropts "-m0750"
 		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
-			dodir "${MY_DATADIR}"
-			keepdir "${MY_DATADIR}"
+			dodir "${MY_DATADIR#${EPREFIX}}"
+			keepdir "${MY_DATADIR#${EPREFIX}}"
 			chown -R mysql:mysql "${D}/${MY_DATADIR}"
 		fi
 
 		diropts "-m0755"
-		for folder in "${MY_LOGDIR}" "/var/run/mysqld" ; do
+		for folder in "${MY_LOGDIR#${EPREFIX}}" "/var/run/mysqld" ; do
 			dodir "${folder}"
 			keepdir "${folder}"
-			chown -R mysql:mysql "${D}/${folder}"
+			chown -R mysql:mysql "${ED}/${folder}"
 		done
 	fi
 
@@ -341,5 +341,5 @@ mysql-cmake_src_install() {
 
 	fi
 
-	mysql_lib_symlinks "${D}"
+	mysql_lib_symlinks "${ED}"
 }

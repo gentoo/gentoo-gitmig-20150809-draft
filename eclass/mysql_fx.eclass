@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.27 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.28 2012/01/06 21:32:48 jmbsvicetto Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer:
@@ -205,14 +205,32 @@ mysql_lib_symlinks() {
 			libnameln=${libname##*/}
 			# loop in version of the library to link it, similar to how
 			# libtool works
-			while [[ ${libnameln:0-3} != '${libsuffix}' ]] && [[ ${maxdots} -lt 6 ]] ; do
+			if [[ ${CHOST} == *-darwin* ]] ; then
+				# macho: libname.x.y.z.dylib
+				local libbasename=${libnameln%%.*}       # libname
+				local libver=${libnameln#${libbasename}} # .x.y.z.dylib
+				libver=${libver%${libsuffix}}            # .x.y.z
+				while [[ -n ${libver} ]] && [[ ${maxdots} -lt 6 ]] ; do
+					libnameln="${libbasename}${libver}${libsuffix}"
+					rm -f "${libnameln}"
+					ln -s "${libname}" "${libnameln}"
+					(( ++maxdots ))
+					libver=${libver%.*}
+				done
+				libnameln="${libbasename}${libsuffix}"
 				rm -f "${libnameln}"
 				ln -s "${libname}" "${libnameln}"
-				(( ++maxdots ))
-				libnameln="${libnameln%.*}"
-			done
-			rm -f "${libnameln}"
-			ln -s "${libname}" "${libnameln}"
+			else
+				# elf: libname.so.x.y.z
+				while [[ ${libnameln:0-3} != '${libsuffix}' ]] && [[ ${maxdots} -lt 6 ]] ; do
+					rm -f "${libnameln}"
+					ln -s "${libname}" "${libnameln}"
+					(( ++maxdots ))
+					libnameln="${libnameln%.*}"
+				done
+				rm -f "${libnameln}"
+				ln -s "${libname}" "${libnameln}"
+			fi
 		done
 	done
 
@@ -225,12 +243,12 @@ mysql_lib_symlinks() {
 # Initialize global variables
 # 2005-11-19 <vivo@gentoo.org>
 mysql_init_vars() {
-	MY_SHAREDSTATEDIR=${MY_SHAREDSTATEDIR="/usr/share/mysql"}
-	MY_SYSCONFDIR=${MY_SYSCONFDIR="/etc/mysql"}
-	MY_LOCALSTATEDIR=${MY_LOCALSTATEDIR="/var/lib/mysql"}
-	MY_LOGDIR=${MY_LOGDIR="/var/log/mysql"}
-	MY_INCLUDEDIR=${MY_INCLUDEDIR="/usr/include/mysql"}
-	MY_LIBDIR=${MY_LIBDIR="/usr/$(get_libdir)/mysql"}
+	MY_SHAREDSTATEDIR=${MY_SHAREDSTATEDIR="${EPREFIX}/usr/share/mysql"}
+	MY_SYSCONFDIR=${MY_SYSCONFDIR="${EPREFIX}/etc/mysql"}
+	MY_LOCALSTATEDIR=${MY_LOCALSTATEDIR="${EPREFIX}/var/lib/mysql"}
+	MY_LOGDIR=${MY_LOGDIR="${EPREFIX}/var/log/mysql"}
+	MY_INCLUDEDIR=${MY_INCLUDEDIR="${EPREFIX}/usr/include/mysql"}
+	MY_LIBDIR=${MY_LIBDIR="${EPREFIX}/usr/$(get_libdir)/mysql"}
 
 	if [[ -z "${MY_DATADIR}" ]] ; then
 		MY_DATADIR=""
@@ -272,7 +290,6 @@ mysql_init_vars() {
 				ewarn "MySQL MY_DATADIR has changed"
 				ewarn "from ${MY_DATADIR}"
 				ewarn "to ${new_MY_DATADIR}"
-				MY_DATADIR="${new_MY_DATADIR}"
 			fi
 		fi
 	fi

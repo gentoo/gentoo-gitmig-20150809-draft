@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.2 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.3 2012/01/06 21:32:48 jmbsvicetto Exp $
 
 # @ECLASS: mysql-autotools.eclass
 # @MAINTAINER:
@@ -108,7 +108,7 @@ mysql-autotools_configure_common() {
 	myconf="${myconf} --with-extra-charsets=all"
 	myconf="${myconf} --with-mysqld-user=mysql"
 	myconf="${myconf} --with-server"
-	myconf="${myconf} --with-unix-socket-path=/var/run/mysqld/mysqld.sock"
+	myconf="${myconf} --with-unix-socket-path=${EPREFIX}/var/run/mysqld/mysqld.sock"
 	myconf="${myconf} --without-libwrap"
 
 	if use static ; then
@@ -160,13 +160,13 @@ mysql-autotools_configure_51() {
 	# TODO: !!!! readd --without-readline
 	# the failure depend upon config/ac-macros/readline.m4 checking into
 	# readline.h instead of history.h
-	myconf="${myconf} $(use_with ssl ssl /usr)"
+	myconf="${myconf} $(use_with ssl ssl "${EPREFIX}"/usr)"
 	myconf="${myconf} --enable-assembler"
 	myconf="${myconf} --with-geometry"
 	myconf="${myconf} --with-readline"
-	myconf="${myconf} --with-zlib-dir=/usr/"
+	myconf="${myconf} --with-zlib-dir=${EPREFIX}/usr/"
 	myconf="${myconf} --without-pstack"
-	myconf="${myconf} --with-plugindir=/usr/$(get_libdir)/mysql/plugin"
+	myconf="${myconf} --with-plugindir=${EPREFIX}/usr/$(get_libdir)/mysql/plugin"
 
 	# This is an explict die here, because if we just forcibly disable it, then the
 	# user's data is not accessible.
@@ -320,7 +320,7 @@ pbxt_src_configure() {
 	eautoreconf
 
 	local myconf=""
-	myconf="${myconf} --with-mysql=${S} --libdir=/usr/$(get_libdir)"
+	myconf="${myconf} --with-mysql=${S} --libdir=${EPREFIX}/usr/$(get_libdir)"
 	use debug && myconf="${myconf} --with-debug=full"
 	econf ${myconf} || die "Problem configuring PBXT storage engine"
 }
@@ -477,7 +477,7 @@ mysql-autotools_src_configure() {
 		filter-flags -fomit-frame-pointer
 
 	econf \
-		--libexecdir="/usr/sbin" \
+		--libexecdir="${EPREFIX}/usr/sbin" \
 		--sysconfdir="${MY_SYSCONFDIR}" \
 		--localstatedir="${MY_LOCALSTATEDIR}" \
 		--sharedstatedir="${MY_SHAREDSTATEDIR}" \
@@ -539,7 +539,7 @@ mysql-autotools_src_install() {
 
 	# Various junk (my-*.cnf moved elsewhere)
 	einfo "Removing duplicate /usr/share/mysql files"
-	rm -Rf "${D}/usr/share/info"
+	rm -Rf "${ED}/usr/share/info"
 	for removeme in  "mysql-log-rotate" mysql.server* \
 		binary-configure* my-*.cnf mi_test_all*
 	do
@@ -550,8 +550,8 @@ mysql-autotools_src_install() {
 	if use minimal ; then
 		einfo "Remove all extra content for minimal build"
 		rm -Rf "${D}${MY_SHAREDSTATEDIR}"/{mysql-test,sql-bench}
-		rm -f "${D}"/usr/bin/{mysql{_install_db,manager*,_secure_installation,_fix_privilege_tables,hotcopy,_convert_table_format,d_multi,_fix_extensions,_zap,_explain_log,_tableinfo,d_safe,_install,_waitpid,binlog,test},myisam*,isam*,pack_isam}
-		rm -f "${D}/usr/sbin/mysqld"
+		rm -f "${ED}"/usr/bin/{mysql{_install_db,manager*,_secure_installation,_fix_privilege_tables,hotcopy,_convert_table_format,d_multi,_fix_extensions,_zap,_explain_log,_tableinfo,d_safe,_install,_waitpid,binlog,test},myisam*,isam*,pack_isam}
+		rm -f "${ED}/usr/sbin/mysqld"
 		rm -f "${D}${MY_LIBDIR}"/lib{heap,merge,nisam,my{sys,strings,sqld,isammrg,isam},vio,dbug}.a
 	fi
 
@@ -567,10 +567,13 @@ mysql-autotools_src_install() {
 		5.[1-9]|6*|7*) mysql_mycnf_version="5.1" ;;
 	esac
 	einfo "Building default my.cnf (${mysql_mycnf_version})"
-	insinto "${MY_SYSCONFDIR}"
+	insinto "${MY_SYSCONFDIR#${EPREFIX}}"
 	doins scripts/mysqlaccess.conf
 	mycnf_src="my.cnf-${mysql_mycnf_version}"
 	sed -e "s!@DATADIR@!${MY_DATADIR}!g" \
+		-e "s!/tmp!${EPREFIX}/tmp!" \
+		-e "s!/usr!${EPREFIX}/usr!" \
+		-e "s!= /var!= ${EPREFIX}/var!" \
 		"${FILESDIR}/${mycnf_src}" \
 		> "${TMPDIR}/my.cnf.ok"
 	if use latin1 ; then
@@ -586,16 +589,16 @@ mysql-autotools_src_install() {
 		# Empty directories ...
 		diropts "-m0750"
 		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
-			dodir "${MY_DATADIR}"
-			keepdir "${MY_DATADIR}"
+			dodir "${MY_DATADIR#${EPREFIX}}"
+			keepdir "${MY_DATADIR#${EPREFIX}}"
 			chown -R mysql:mysql "${D}/${MY_DATADIR}"
 		fi
 
 		diropts "-m0755"
-		for folder in "${MY_LOGDIR}" "/var/run/mysqld" ; do
+		for folder in "${MY_LOGDIR#${EPREFIX}}" "/var/run/mysqld" ; do
 			dodir "${folder}"
 			keepdir "${folder}"
-			chown -R mysql:mysql "${D}/${folder}"
+			chown -R mysql:mysql "${ED}/${folder}"
 		done
 	fi
 
@@ -625,5 +628,5 @@ mysql-autotools_src_install() {
 
 	fi
 
-	mysql_lib_symlinks "${D}"
+	mysql_lib_symlinks "${ED}"
 }
