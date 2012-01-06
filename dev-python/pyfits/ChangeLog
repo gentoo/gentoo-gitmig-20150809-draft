@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyfits
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.25 2011/03/22 10:54:02 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.26 2012/01/06 16:54:11 xarthisius Exp $
+
+*pyfits-3.0.4 (06 Jan 2012)
+
+  06 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/pyfits-3.0.4-tests_python3.patch, +pyfits-3.0.4.ebuild, metadata.xml:
+  Version bump with Python3 support. Claim for sci-astronomy
 
   22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -pyfits-2.3.1.ebuild:
