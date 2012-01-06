@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.84 2011/12/05 16:06:08 vadimk Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.85 2012/01/06 14:30:38 vadimk Exp $
+
+  06 Jan 2012; Vadim Kuznetsov <vadimk@gentoo.org> +files/264-3.2.0.patch,
+  vmware-modules-264.1.ebuild:
+  added patch for 3.2 kernel
 
   05 Dec 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   -files/1.0.0.25-autoconf-generated.patch,
