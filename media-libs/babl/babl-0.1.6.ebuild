@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.6.ebuild,v 1.3 2012/01/06 19:33:47 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.6.ebuild,v 1.4 2012/01/06 19:55:39 sping Exp $
 
 EAPI=3
+VALASLOT=0.14
 
 inherit autotools eutils
 
@@ -17,6 +18,8 @@ IUSE="altivec +introspection sse mmx vala"
 
 RDEPEND="introspection? ( >=dev-libs/gobject-introspection-0.10 )"
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.2
+	vala? ( dev-lang/vala:${VALASLOT}[vapigen] )
 	dev-util/pkgconfig"
 
 src_prepare() {
@@ -29,6 +32,7 @@ src_configure() {
 	#     so we don't need to fix it
 	# w3m is used for dist target thus no issue for us that it is automagically
 	#     detected
+	VAPIGEN="$(type -p vapigen-${VALASLOT})" \
 	econf \
 		--disable-static \
 		--disable-maintainer-mode \
