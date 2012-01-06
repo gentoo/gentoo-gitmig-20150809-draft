@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/amap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.47 2011/06/01 00:18:00 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.48 2012/01/06 12:20:52 ago Exp $
+
+  06 Jan 2012; Agostino Sarubbo <ago@gentoo.org> amap-5.4.ebuild:
+  Stable for AMD64, wrt bug #397121
 
 *amap-5.4 (01 Jun 2011)
 
