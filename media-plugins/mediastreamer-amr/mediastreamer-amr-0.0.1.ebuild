@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/mediastreamer-amr-0.0.1.ebuild,v 1.4 2011/05/16 18:27:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/mediastreamer-amr-0.0.1.ebuild,v 1.5 2012/01/06 15:03:29 ranger Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases-noredirect/linphone/plugin
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=">=media-libs/mediastreamer-2.0.0
