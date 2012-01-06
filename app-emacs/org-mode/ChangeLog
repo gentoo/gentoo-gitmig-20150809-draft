@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.141 2012/01/06 16:44:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.142 2012/01/06 21:19:49 ulm Exp $
+
+  06 Jan 2012; Ulrich Mueller <ulm@gentoo.org> -org-mode-7.5.ebuild:
+  Remove intermediate version.
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> org-mode-7.7.ebuild:
   Marking org-mode-7.7 ppc for bug 396001
