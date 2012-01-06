@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mariadb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.13 2011/09/30 02:53:07 jmbsvicetto Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.14 2012/01/06 20:27:23 jmbsvicetto Exp $
+
+  06 Jan 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mariadb-5.1.55.ebuild, -mariadb-5.2.7.ebuild, -mariadb-5.2.8.ebuild,
+  mariadb-5.2.9.ebuild:
+  [dev-db/mariadb] Bumped EAPI to 4 on ebuilds inheriting the mysql-v2 eclass
+  as I'm going to push the overlay eclasses with prefix support.
+  Dropped old 5.2 series versions.
 
 *mariadb-5.2.9 (30 Sep 2011)
 
