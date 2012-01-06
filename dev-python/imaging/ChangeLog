@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.65 2011/12/21 07:32:38 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.66 2012/01/06 21:27:47 hwoarang Exp $
+
+  06 Jan 2012; Markos Chandras <hwoarang@gentoo.org> imaging-1.1.7-r1.ebuild:
+  Fix dependencies (bug #381689). Patch by Arfrever.
 
 *imaging-1.1.7-r1 (21 Dec 2011)
 

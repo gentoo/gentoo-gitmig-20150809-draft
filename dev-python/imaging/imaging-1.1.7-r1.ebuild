@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r1.ebuild,v 1.1 2011/12/21 07:32:38 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r1.ebuild,v 1.2 2012/01/06 21:27:47 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,7 +24,7 @@ IUSE="doc examples lcms scanner tk X"
 
 DEPEND="virtual/jpeg
 	media-libs/freetype:2
-	lcms? ( media-libs/lcms:0[python] )
+	lcms? ( media-libs/lcms:0 )
 	scanner? ( media-gfx/sane-backends )
 	X? ( x11-misc/xdg-utils )"
 RDEPEND="${DEPEND}"
