@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-2.10.ebuild,v 1.2 2011/08/06 15:09:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-2.10.ebuild,v 1.3 2012/01/06 23:02:27 vapier Exp $
 
 DESCRIPTION="User land tool for cleaning up old perl installs"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -14,7 +14,7 @@ IUSE=""
 
 DEPEND="app-shells/bash"
 RDEPEND="${DEPEND}
-	|| ( app-misc/realpath sys-freebsd/freebsd-bin )
+	|| ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin )
 	dev-lang/perl"
 
 src_install() {
