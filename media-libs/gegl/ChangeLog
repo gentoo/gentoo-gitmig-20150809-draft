@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.64 2012/01/04 06:12:57 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.65 2012/01/06 19:40:53 sping Exp $
+
+  06 Jan 2012; Sebastian Pipping <sping@gentoo.org> gegl-0.1.8.ebuild,
+  metadata.xml:
+  Add use flag vala
 
   04 Jan 2012; Sebastian Pipping <sping@gentoo.org> gegl-0.1.8.ebuild:
   Remove dependency on GTK+ from GEGL 0.1.8
