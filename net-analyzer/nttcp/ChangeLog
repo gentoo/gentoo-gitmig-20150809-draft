@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nttcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.14 2012/01/03 17:43:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.15 2012/01/06 14:48:11 ago Exp $
+
+  06 Jan 2012; Agostino Sarubbo <ago@gentoo.org> nttcp-1.47-r1.ebuild:
+  Stable for AMD64, wrt bug #397135
 
   03 Jan 2012; Jeroen Roovers <jer@gentoo.org> nttcp-1.47-r1.ebuild:
   Remove empty DEPEND.
