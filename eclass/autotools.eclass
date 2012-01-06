@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.117 2012/01/04 22:00:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.118 2012/01/06 21:06:17 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -295,6 +295,25 @@ eautomake() {
 # Runs autopoint (from the gettext package).
 eautopoint() {
 	autotools_run_tool autopoint "$@"
+}
+
+# @FUNCTION: config_rpath_update
+# @USAGE: [destination]
+# @DESCRIPTION:
+# Some packages utilize the config.rpath helper script, but don't
+# use gettext directly.  So we have to copy it in manually since
+# we can't let `autopoint` do it for us.
+config_rpath_update() {
+	local dst src=$(type -P gettext | sed 's:bin/gettext:share/gettext/config.rpath:')
+
+	[[ $# -eq 0 ]] && set -- $(find -name config.rpath)
+	[[ $# -eq 0 ]] && return 0
+
+	einfo "Updating all config.rpath files"
+	for dst in "$@" ; do
+		einfo "   ${dst}"
+		cp "${src}" "${dst}" || die
+	done
 }
 
 # Internal function to run an autotools' tool
