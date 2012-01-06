@@ -1,29 +1,29 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.2.ebuild,v 1.8 2012/01/06 10:18:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.2.ebuild,v 1.9 2012/01/06 10:21:16 ssuominen Exp $
 
 EAPI=4
-PYTHON_DEPEND="python? 2"
+PYTHON_DEPEND="python? 2:2.6"
 inherit python xfconf
 
 DESCRIPTION="Extensions, widgets and framework library with session management support"
 HOMEPAGE="http://www.xfce.org/projects/exo/"
-SRC_URI="mirror://xfce/src/xfce/exo/0.6/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/xfce/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
 IUSE="debug python"
 
 RDEPEND=">=dev-lang/perl-5.6
+	>=dev-libs/glib-2.18
 	dev-perl/URI
-	>=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.14:2
 	>=xfce-base/libxfce4util-4.8
 	python? ( >=dev-python/pygtk-2.4 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
 	dev-util/intltool
+	dev-util/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {
@@ -40,7 +40,7 @@ pkg_setup() {
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 		)
 
-	[[ ${CHOST} == *-darwin* ]] && XFCONF+=( --disable-visibility ) # 366857
+	[[ ${CHOST} == *-darwin* ]] && XFCONF+=( --disable-visibility ) #366857
 
 	DOCS=( AUTHORS ChangeLog HACKING NEWS README THANKS TODO )
 }
