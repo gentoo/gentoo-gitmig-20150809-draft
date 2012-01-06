@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-settings
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.86 2011/11/29 00:16:26 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.87 2012/01/06 10:43:33 ssuominen Exp $
+
+  06 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-settings-4.8.3.ebuild:
+  ppc/ppc64 stable wrt #386963
 
   29 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   -xfce4-settings-4.8.2.ebuild:
