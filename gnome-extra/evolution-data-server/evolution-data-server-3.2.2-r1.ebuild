@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.2-r1.ebuild,v 1.1 2011/12/31 04:53:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.2-r1.ebuild,v 1.2 2012/01/06 06:43:02 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -90,6 +90,7 @@ src_prepare() {
 
 	# fix linking with glib-2.31, bug #395777
 	epatch "${FILESDIR}/${PN}-3.2.2-gmodule-explicit.patch"
+	epatch "${FILESDIR}/${PN}-3.2.2-g_thread_init.patch"
 
 	eautoreconf
 

@@ -1,0 +1,162 @@
+From d65649c665c129221a4510831eacb38f7a43a644 Mon Sep 17 00:00:00 2001
+From: Milan Crha <mcrha@redhat.com>
+Date: Mon, 24 Oct 2011 09:42:17 +0200
+Subject: [PATCH] Call g_thread_init() conditionally
+
+---
+ .../libedata-book/e-book-backend-sqlitedb-test.c   |    2 ++
+ calendar/backends/file/e-cal-backend-file.c        |    2 ++
+ camel/camel-index-control.c                        |    2 ++
+ camel/camel-text-index.c                           |    2 ++
+ camel/providers/imapx/test-imapx.c                 |    2 ++
+ camel/tests/lib/camel-test.c                       |    2 ++
+ tests/libebook/client/client-test-utils.c          |    2 ++
+ tests/libecal/client/client-test-utils.c           |    2 ++
+ tests/libedataserverui/test-client-examine-auth.c  |    2 ++
+ tests/libedataserverui/test-name-selector.c        |    2 ++
+ 10 files changed, 20 insertions(+), 0 deletions(-)
+
+diff --git a/addressbook/libedata-book/e-book-backend-sqlitedb-test.c b/addressbook/libedata-book/e-book-backend-sqlitedb-test.c
+index df39af2..e887abb 100644
+--- a/addressbook/libedata-book/e-book-backend-sqlitedb-test.c
++++ b/addressbook/libedata-book/e-book-backend-sqlitedb-test.c
+@@ -197,7 +197,9 @@ main (gint argc,
+       gchar *argv[])
+ {
+ 	g_type_init ();
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 
+ 	if (argc != 2) {
+ 		g_print ("Please enter a path to store the cache \n");
+diff --git a/calendar/backends/file/e-cal-backend-file.c b/calendar/backends/file/e-cal-backend-file.c
+index ba1fcf0..b2bee69 100644
+--- a/calendar/backends/file/e-cal-backend-file.c
++++ b/calendar/backends/file/e-cal-backend-file.c
+@@ -3800,7 +3800,9 @@ main (gint argc,
+ 	FILE * fin = NULL;
+ 
+ 	g_type_init ();
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 
+ 	context = g_option_context_new ("- test utility for e-d-s file backend");
+ 	g_option_context_add_main_entries (context, entries, GETTEXT_PACKAGE);
+diff --git a/camel/camel-index-control.c b/camel/camel-index-control.c
+index 87ae760..89ed82e 100644
+--- a/camel/camel-index-control.c
++++ b/camel/camel-index-control.c
+@@ -127,7 +127,9 @@ gint main (gint argc, gchar **argv)
+ 	if (argc < 2)
+ 		do_usage (argv[0]);
+ 
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 	camel_init (NULL, 0);
+ 
+ 	if (!strcmp(argv[1], "compress"))
+diff --git a/camel/camel-text-index.c b/camel/camel-text-index.c
+index 563a332..f5b69fe 100644
+--- a/camel/camel-text-index.c
++++ b/camel/camel-text-index.c
+@@ -1862,7 +1862,9 @@ main (gint argc,
+ 
+ 	printf ("Camel text index tester!\n");
+ 
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 	camel_init (NULL, 0);
+ 
+ 	idx = (CamelIndex *)camel_text_index_new ("textindex", O_CREAT|O_RDWR|O_TRUNC);
+diff --git a/camel/providers/imapx/test-imapx.c b/camel/providers/imapx/test-imapx.c
+index fe71d1c..de9a455 100644
+--- a/camel/providers/imapx/test-imapx.c
++++ b/camel/providers/imapx/test-imapx.c
+@@ -36,7 +36,9 @@ main (gint argc,
+ 	}
+ 
+ 	uri = argv[1];
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 	system ("rm -rf /tmp/test-camel-imapx");
+ 	camel_init ("/tmp/test-camel-imapx", TRUE);
+ 	camel_provider_init ();
+diff --git a/camel/tests/lib/camel-test.c b/camel/tests/lib/camel-test.c
+index 16caf79..743c658 100644
+--- a/camel/tests/lib/camel-test.c
++++ b/camel/tests/lib/camel-test.c
+@@ -103,8 +103,10 @@ camel_test_init (gint argc,
+ 	setup = 1;
+ 
+ 	g_type_init ();
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	/* yeah, we do need ot thread init, even though camel isn't compiled with enable threads */
+ 	g_thread_init (NULL);
++	#endif
+ 
+ 	path = g_strdup_printf ("/tmp/camel-test");
+ 	if (mkdir (path, 0700) == -1 && errno != EEXIST)
+diff --git a/tests/libebook/client/client-test-utils.c b/tests/libebook/client/client-test-utils.c
+index 710ba25..f778333 100644
+--- a/tests/libebook/client/client-test-utils.c
++++ b/tests/libebook/client/client-test-utils.c
+@@ -67,7 +67,9 @@ main_initialize (void)
+ 		return;
+ 
+ 	g_type_init ();
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 
+ 	initialized = TRUE;
+ }
+diff --git a/tests/libecal/client/client-test-utils.c b/tests/libecal/client/client-test-utils.c
+index c6f7062..a39c994 100644
+--- a/tests/libecal/client/client-test-utils.c
++++ b/tests/libecal/client/client-test-utils.c
+@@ -63,7 +63,9 @@ main_initialize (void)
+ 		return;
+ 
+ 	g_type_init ();
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 
+ 	initialized = TRUE;
+ }
+diff --git a/tests/libedataserverui/test-client-examine-auth.c b/tests/libedataserverui/test-client-examine-auth.c
+index a02fb04..e94e33b 100644
+--- a/tests/libedataserverui/test-client-examine-auth.c
++++ b/tests/libedataserverui/test-client-examine-auth.c
+@@ -413,7 +413,9 @@ main (gint argc,
+       gchar **argv)
+ {
+ 	g_type_init ();
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 	gtk_init (&argc, &argv);
+ 
+ 	e_passwords_init ();
+diff --git a/tests/libedataserverui/test-name-selector.c b/tests/libedataserverui/test-name-selector.c
+index 3173382..bab8e4c 100644
+--- a/tests/libedataserverui/test-name-selector.c
++++ b/tests/libedataserverui/test-name-selector.c
+@@ -81,7 +81,9 @@ main (gint argc,
+       gchar **argv)
+ {
+ 	gtk_init (&argc, &argv);
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 
+ 	camel_init (NULL, 0);
+ 
+-- 
+1.7.8.2
+
