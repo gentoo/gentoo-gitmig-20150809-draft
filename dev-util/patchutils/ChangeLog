@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/patchutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.65 2011/04/19 21:13:00 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.66 2012/01/06 11:23:57 ago Exp $
+
+  06 Jan 2012; Agostino Sarubbo <ago@gentoo.org> patchutils-0.3.2.ebuild:
+  Stable for AMD64, wrt bug #397023
 
 *patchutils-0.3.2 (19 Apr 2011)
 
