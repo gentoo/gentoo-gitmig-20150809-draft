@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.82-r3.ebuild,v 1.4 2011/09/20 09:51:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.82-r3.ebuild,v 1.5 2012/01/06 21:12:32 vapier Exp $
 
 EAPI="3"
 
@@ -23,9 +23,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	# taken from a nightly build (20100522)
-	cp "${FILESDIR}/config.rpath" "${S}"
-
+	config_rpath_update
 	sed -ie 's:with_iodbc/include":with_iodbc/include/iodbc":' configure.ac
 	eautoreconf
 }
