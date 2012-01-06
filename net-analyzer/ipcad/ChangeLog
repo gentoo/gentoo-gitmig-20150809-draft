@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipcad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.34 2011/10/04 16:20:21 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.35 2012/01/06 16:54:53 ranger Exp $
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> ipcad-3.7.3.ebuild:
+  Marking ipcad-3.7.3 ppc for bug 385355
 
   04 Oct 2011; Tony Vroon <chainsaw@gentoo.org> ipcad-3.7.3.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
