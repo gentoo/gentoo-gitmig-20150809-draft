@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/ws-commons-util
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ws-commons-util/ChangeLog,v 1.1 2012/01/06 10:55:01 fordfrog Exp $
+
+*ws-commons-util-1.0.1 (06 Jan 2012)
+
+  06 Jan 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  +ws-commons-util-1.0.1.ebuild, +metadata.xml:
+  New package, moved from java-overlay
+
