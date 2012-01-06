@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r9.ebuild,v 1.5 2012/01/06 12:03:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r9.ebuild,v 1.6 2012/01/06 23:07:46 vapier Exp $
 
-EAPI=2
+EAPI="4"
 
-inherit base
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Old-style inetd"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
@@ -15,13 +15,12 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
-
-EPATCH_SUFFIX="patch"
-PATCHES=( "${FILESDIR}" )
+src_prepare() {
+	epatch "${FILESDIR}"/*.patch
+}
 
 src_configure() {
+	tc-export CC
 	./configure || die
 	sed -i \
 		-e "/^CFLAGS=/s:=.*:=${CFLAGS} -Wall -Wbad-function-cast -Wcast-qual -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline:" \
@@ -34,10 +33,11 @@ src_install() {
 		-e 's:in\.telnetd$:in.telnetd -L /usr/sbin/telnetlogin:' \
 		etc.sample/inetd.conf
 
-	dosbin inetd/inetd || die
+	dosbin inetd/inetd
 	doman inetd/inetd.8
 	newinitd "${FILESDIR}"/inetd.rc6 inetd
 
 	dodoc BUGS ChangeLog README
-	docinto samples ; dodoc etc.sample/*
+	docinto samples
+	dodoc etc.sample/*
 }
