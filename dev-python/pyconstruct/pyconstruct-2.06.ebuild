@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyconstruct/pyconstruct-2.06.ebuild,v 1.1 2011/12/25 11:11:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyconstruct/pyconstruct-2.06.ebuild,v 1.2 2012/01/06 21:28:06 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -21,11 +21,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND="app-arch/unzip
+DEPEND="dev-python/setuptools
 	doc? ( dev-python/sphinx )"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
+
+PYTHON_MODNAME="construct"
 
 src_compile() {
 	distutils_src_compile
@@ -43,12 +45,4 @@ src_install() {
 	if use doc; then
 		dohtml -r docs/_build/html/* || die "Installation of documentation failed"
 	fi
-}
-
-pkg_postinst() {
-	python_mod_optimize construct
-}
-
-pkg_postrm() {
-	python_mod_cleanup construct
 }
