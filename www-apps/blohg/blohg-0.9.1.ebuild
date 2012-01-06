@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.9.ebuild,v 1.1 2011/12/24 02:48:42 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.9.1.ebuild,v 1.1 2012/01/06 00:53:09 rafaelmartins Exp $
 
 EAPI="3"
 
