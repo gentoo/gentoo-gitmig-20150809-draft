@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gst-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.103 2011/10/29 18:26:51 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.104 2012/01/06 12:37:56 ssuominen Exp $
+
+  06 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gst-python-0.10.22.ebuild:
+  Empty py-compile script instead of symlinking it to /path/to/true for
+  automake-1.11.2 compability wrt #396689 by Juergen Rose
 
 *gst-python-0.10.22 (29 Oct 2011)
 
