@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.2.ebuild,v 1.7 2011/11/26 17:47:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.2.ebuild,v 1.8 2012/01/06 10:18:12 ssuominen Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -46,8 +46,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	rm -f py-compile
-	ln -s $(type -P true) py-compile
+	>py-compile
 	xfconf_src_prepare
 }
 
