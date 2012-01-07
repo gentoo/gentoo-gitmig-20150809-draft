@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.2.ebuild,v 1.6 2012/01/07 16:05:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.2.ebuild,v 1.7 2012/01/07 16:19:30 ssuominen Exp $
 
 EAPI=3
 
@@ -19,16 +19,14 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="nls"
 
-COMMON_DEPEND=">=x11-libs/gtk+-2.10:2
+RDEPEND=">=x11-libs/gtk+-2.10:2
 	dev-python/pygtk
 	x11-libs/vte:0[python]
 	dev-python/notify-python
 	dev-python/gconf-python
 	dev-python/dbus-python
 	>=gnome-base/gconf-2"
-RDEPEND="${COMMON_DEPEND}
-	x11-misc/notification-daemon"  # bug 388129
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( dev-util/intltool )"
 

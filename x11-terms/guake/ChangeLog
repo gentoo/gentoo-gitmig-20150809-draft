@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/guake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.10 2012/01/07 16:05:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.11 2012/01/07 16:19:30 ssuominen Exp $
+
+  07 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> guake-0.4.2.ebuild:
+  Revert commit for bug 388129 because notify-pthon has depend on libnotify
+  which has depend on virtual for notification-daemon (and guake works fine
+  with any of them)
 
   07 Jan 2012; Sebastian Pipping <sping@gentoo.org> guake-0.4.2.ebuild:
   Add x11-misc/notification-daemon to runtime-only dependencies (bug #388129)
