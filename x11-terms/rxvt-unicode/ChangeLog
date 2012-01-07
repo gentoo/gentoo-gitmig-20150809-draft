@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.199 2012/01/04 18:02:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.200 2012/01/07 12:31:48 wired Exp $
+
+  07 Jan 2012; Alex Alexander <wired@gentoo.org> rxvt-unicode-9.14.ebuild,
+  metadata.xml:
+  made the clear patch optional (buffer-on-clear USE flag) because it seems to
+  break some prompts - bug #397829
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   rxvt-unicode-9.12-r1.ebuild:
