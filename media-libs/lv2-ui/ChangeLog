@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/lv2-ui
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2-ui/ChangeLog,v 1.1 2012/01/07 15:17:35 aballier Exp $
+
+*lv2-ui-2.4 (07 Jan 2012)
+
+  07 Jan 2012; Alexis Ballier <aballier@gentoo.org> +lv2-ui-2.4.ebuild,
+  +metadata.xml:
+  initial import, ebuild by Gavin Pryke
+
