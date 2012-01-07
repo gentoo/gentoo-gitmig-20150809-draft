@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-svg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.18 2010/07/11 08:58:19 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.19 2012/01/07 17:52:58 ago Exp $
+
+  07 Jan 2012; Agostino Sarubbo <ago@gentoo.org> ruby-svg-1.0.3-r2.ebuild:
+  Stable for AMD64, wrt bug #397977
 
 *ruby-svg-1.0.3-r2 (11 Jul 2010)
 
