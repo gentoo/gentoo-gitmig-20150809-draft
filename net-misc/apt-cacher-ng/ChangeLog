@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/apt-cacher-ng
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.6 2011/12/06 07:08:08 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.7 2012/01/07 17:22:35 jer Exp $
+
+*apt-cacher-ng-0.6.11 (07 Jan 2012)
+
+  07 Jan 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.6.5.ebuild,
+  -apt-cacher-ng-0.6.8.ebuild, +apt-cacher-ng-0.6.11.ebuild:
+  Version bump. Install more files into /etc/apt-cacher-ng by Bruce Guenter
+  (bug #396535).
 
 *apt-cacher-ng-0.6.10 (06 Dec 2011)
 
