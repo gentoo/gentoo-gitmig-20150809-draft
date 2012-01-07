@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.73 2012/01/06 21:32:48 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.74 2012/01/07 17:53:47 mgorny Exp $
+
+  07 Jan 2012; Michał Górny <mgorny@gentoo.org> systemd.eclass:
+  Install systemd units to /usr/lib.
 
   06 Jan 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   mysql.eclass, mysql-autotools.eclass, mysql-cmake.eclass, mysql-v2.eclass,

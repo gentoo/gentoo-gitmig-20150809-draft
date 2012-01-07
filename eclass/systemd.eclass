@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.10 2012/01/05 23:20:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.11 2012/01/07 17:53:47 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -30,12 +30,16 @@ case ${EAPI:-0} in
 	*) die "${ECLASS}.eclass API in EAPI ${EAPI} not yet established."
 esac
 
+# Block systemd version without the migration helper.
+DEPEND="!<sys-apps/systemd-29-r4
+	!=sys-apps/systemd-37-r1"
+
 # @FUNCTION: _systemd_get_unitdir
 # @INTERNAL
 # @DESCRIPTION:
 # Get unprefixed unitdir.
 _systemd_get_unitdir() {
-	echo -n /lib/systemd/system
+	echo -n /usr/lib/systemd/system
 }
 
 # @FUNCTION: systemd_get_unitdir
