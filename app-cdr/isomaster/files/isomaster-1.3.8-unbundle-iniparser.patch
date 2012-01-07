@@ -1,0 +1,61 @@
+From 598606c7b96e421ffbcb09ccd9aac61fa83cd0fe Mon Sep 17 00:00:00 2001
+From: Sebastian Pipping <sebastian@pipping.org>
+Date: Sat, 7 Jan 2012 17:42:13 +0100
+Subject: [PATCH] Unbundle iniparser, fix use of compile/link flags
+
+---
+ Makefile |   10 +++-------
+ 1 files changed, 3 insertions(+), 7 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 363a36a..c0434fb 100644
+--- a/Makefile
++++ b/Makefile
+@@ -65,21 +65,18 @@ OBJECTS = isomaster.o window.o browser.o fsbrowser.o isobrowser.o error.o about.
+ 
+ all: translations isomaster.desktop isomaster
+ 
+-isomaster: $(OBJECTS) lib iniparser
++isomaster: $(OBJECTS) lib
+ 	@echo 'Linking isomaster'
+-	@$(CC) $(OBJECTS) bk/bk.a iniparser-2.17/libiniparser.a $(LDFLAGS) $(CFLAGS) $(CPPFLAGS) `pkg-config --libs gtk+-2.0` -o isomaster
++	@$(CC) $(LDFLAGS) $(OBJECTS) bk/bk.a `pkg-config --libs gtk+-2.0` -liniparser -o isomaster
+ 
+ # static pattern rule
+ $(OBJECTS): %.o: %.c %.h bk/bk.h Makefile
+ 	@echo 'Compiling' $<
+-	@$(CC) $< $(CFLAGS) $(CPPFLAGS) -c -o $@
++	@$(CC) $(CFLAGS) $(CPPFLAGS) $< -c -o $@
+ 
+ lib:
+ 	cd bk && $(MAKE)
+ 
+-iniparser:
+-	cd iniparser-2.17 && $(MAKE)
+-
+ translations:
+ ifndef WITHOUT_NLS
+ 	cd po && $(MAKE)
+@@ -94,7 +91,6 @@ bk-doc:
+ 
+ clean: 
+ 	cd bk && $(MAKE) clean
+-	cd iniparser-2.17 && $(MAKE) clean
+ ifndef WITHOUT_NLS
+ 	cd po && $(MAKE) clean
+ endif
+diff --git a/settings.h b/settings.h
+index fda67b7..e619e0c 100644
+--- a/settings.h
++++ b/settings.h
+@@ -4,7 +4,7 @@
+ #include <stdbool.h>
+ 
+ #include "isomaster.h"
+-#include "iniparser-2.17/src/iniparser.h"
++#include <iniparser.h>
+ 
+ #define ISOMASTER_DEFAULT_WINDOW_WIDTH 500
+ #define ISOMASTER_DEFAULT_WINDOW_HEIGHT 550
+-- 
+1.7.8.3
