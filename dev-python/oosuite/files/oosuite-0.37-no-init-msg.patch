@@ -1,0 +1,72 @@
+diff -Nur PythonPackages.orig/FuncDesigner/FuncDesigner/__init__.py PythonPackages/FuncDesigner/FuncDesigner/__init__.py
+--- PythonPackages.orig/FuncDesigner/FuncDesigner/__init__.py	2011-12-15 15:43:56.000000000 +0000
++++ PythonPackages/FuncDesigner/FuncDesigner/__init__.py	2012-01-07 16:26:48.000000000 +0000
+@@ -15,31 +15,3 @@
+ from interpolate import scipy_UnivariateSpline as interpolator
+ from integrate import integrator
+ __version__ = '0.37'
+-
+-isE = False
+-try:
+-    import enthought
+-    isE = True
+-except ImportError:
+-    pass
+-try:
+-    import envisage
+-    import mayavi
+-    isE = True
+-except ImportError:
+-    pass
+-try:
+-    import xy
+-    isE = False
+-except ImportError:
+-    pass
+-  
+-if isE:
+-    s = """
+-    Seems like you are using OpenOpt from 
+-    commercial Enthought Python Distribution;
+-    consider using free GPL-licensed alternatives
+-    PythonXY (http://www.pythonxy.com) or
+-    Sage (http://sagemath.org) instead.
+-    """
+-    print(s)
+diff -Nur PythonPackages.orig/OpenOpt/openopt/__init__.py PythonPackages/OpenOpt/openopt/__init__.py
+--- PythonPackages.orig/OpenOpt/openopt/__init__.py	2011-10-23 19:17:28.000000000 +0100
++++ PythonPackages/OpenOpt/openopt/__init__.py	2012-01-07 16:26:19.000000000 +0000
+@@ -19,33 +19,6 @@
+ from mfa import MFA
+ 
+ 
+-isE = False
+-try:
+-    import enthought
+-    isE = True
+-except ImportError:
+-    pass
+-try:
+-    import envisage
+-    import mayavi
+-    isE = True
+-except ImportError:
+-    pass
+-try:
+-    import xy
+-    isE = False
+-except ImportError:
+-    pass
+-  
+-if isE:
+-    s = """
+-    Seems like you are using OpenOpt from 
+-    commercial Enthought Python Distribution;
+-    consider using free GPL-licensed alternatives
+-    PythonXY (http://www.pythonxy.com) or
+-    Sage (http://sagemath.org) instead.
+-    """
+-    print(s)
+ 
+     
+ #__all__ = filter(lambda s:not s.startswith('_'),dir())

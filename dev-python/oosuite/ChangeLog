@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/oosuite
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/ChangeLog,v 1.1 2012/01/07 20:39:27 bicatali Exp $
+
+*oosuite-0.37 (07 Jan 2012)
+
+  07 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +oosuite-0.37.ebuild,
+  +files/oosuite-0.37-no-init-msg.patch, +metadata.xml:
+  Initial import to the main tree
+
