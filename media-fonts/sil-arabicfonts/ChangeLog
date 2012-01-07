@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/sil-arabicfonts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-arabicfonts/ChangeLog,v 1.3 2009/03/20 13:41:47 jmbsvicetto Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-arabicfonts/ChangeLog,v 1.4 2012/01/07 23:03:12 dirtyepic Exp $
+
+*sil-arabicfonts-1.005 (07 Jan 2012)
+
+  07 Jan 2012; Ryan Hill <dirtyepic@gentoo.org> +sil-arabicfonts-1.005.ebuild:
+  Version bump. No font changes, just licencing.
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
