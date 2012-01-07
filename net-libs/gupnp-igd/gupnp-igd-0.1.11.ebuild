@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.1.11.ebuild,v 1.2 2011/10/24 06:08:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.1.11.ebuild,v 1.3 2012/01/07 03:39:24 tester Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -19,6 +19,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+introspection python"
 
 RDEPEND=">=net-libs/gupnp-0.13.2
+	!>=net-libs/gupnp-0.17
 	>=dev-libs/glib-2.16:2
 	introspection? ( >=dev-libs/gobject-introspection-0.10 )
 	python? ( >=dev-python/pygobject-2.16:2 )"
