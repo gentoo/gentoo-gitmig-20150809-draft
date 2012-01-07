@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/moodss
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.17 2011/05/23 07:19:23 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.18 2012/01/07 21:06:57 xarthisius Exp $
+
+  07 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> moodss-20.0.ebuild,
+  moodss-20.2.ebuild, moodss-21.5.ebuild:
+  Drop ~ppc keywords wrt #364825
 
   23 May 2011; Thomas Kahle <tomka@gentoo.org> moodss-21.5.ebuild:
   x86 stable per bug 364825
