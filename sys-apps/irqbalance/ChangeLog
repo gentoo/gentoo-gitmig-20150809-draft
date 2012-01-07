@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/irqbalance
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.36 2011/12/18 21:23:17 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.37 2012/01/07 22:04:49 vapier Exp $
+
+  07 Jan 2012; Mike Frysinger <vapier@gentoo.org> irqbalance-1.0.2-r1.ebuild,
+  files/irqbalance.init:
+  Move irqbalance to /usr #398065 by Michał Górny.
 
   18 Dec 2011; Michał Górny <mgorny@gentoo.org> files/irqbalance.service:
   Add Description= to the systemd unit.

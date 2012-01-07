@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.2-r1.ebuild,v 1.1 2011/12/11 19:53:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.2-r1.ebuild,v 1.2 2012/01/07 22:04:49 vapier Exp $
 
 EAPI=4
 
@@ -23,7 +23,6 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf \
-		--sbindir=/sbin \
 		$(use_with caps libcap-ng) \
 		$(use_enable numa)
 }
