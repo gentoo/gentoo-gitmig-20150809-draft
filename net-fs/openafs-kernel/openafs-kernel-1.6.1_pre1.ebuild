@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.0_pre7.ebuild,v 1.1 2011/08/07 20:20:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.1_pre1.ebuild,v 1.1 2012/01/07 21:45:17 vapier Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ PVER="1"
 DESCRIPTION="The OpenAFS distributed file system kernel module"
 HOMEPAGE="http://www.openafs.org/"
 # We always d/l the doc tarball as man pages are not USE=doc material
-SRC_URI="http://openafs.org/dl/candidate/${MY_PV}/${MY_P}-src.tar.bz2
+SRC_URI="http://openafs.org/dl/openafs/${MY_PV}/${MY_P}-src.tar.bz2
 	mirror://gentoo/${MY_P2}-patches-${PVER}.tar.bz2"
 
 LICENSE="IBM BSD openafs-krb5-a APSL-2 sun-rpc"

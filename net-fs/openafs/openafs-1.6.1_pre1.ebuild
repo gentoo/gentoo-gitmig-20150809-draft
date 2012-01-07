@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.0_pre7.ebuild,v 1.1 2011/08/07 20:19:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.1_pre1.ebuild,v 1.1 2012/01/07 21:44:17 vapier Exp $
 
 EAPI="2"
 
@@ -8,7 +8,6 @@ inherit flag-o-matic eutils autotools toolchain-funcs versionator pam
 
 MY_PV=$(delete_version_separator '_')
 MY_P="${PN}-${MY_PV}"
-S="${WORKDIR}/${MY_P}"
 PVER="1"
 DESCRIPTION="The OpenAFS distributed file system"
 HOMEPAGE="http://www.openafs.org/"
@@ -26,6 +25,8 @@ RDEPEND="~net-fs/openafs-kernel-${PV}
 	sys-libs/ncurses
 	pam? ( sys-libs/pam )
 	kerberos? ( virtual/krb5 )"
+
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	EPATCH_EXCLUDE="012_all_kbuild.patch" \
