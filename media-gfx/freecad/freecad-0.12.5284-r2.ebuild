@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r2.ebuild,v 1.1 2012/01/07 16:09:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r2.ebuild,v 1.2 2012/01/07 16:23:50 dilfridge Exp $
 
 EAPI=4
 PYTHON_DEPEND=2
@@ -55,6 +55,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-glu.patch"
 	"${FILESDIR}/${P}-nodir.patch"
 	"${FILESDIR}/${P}-nopivy.patch"
+	"${FILESDIR}/${P}-qt3support.patch"
 )
 
 pkg_setup() {
