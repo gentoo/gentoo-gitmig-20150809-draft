@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.81 2011/03/06 11:29:18 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.82 2012/01/07 00:38:25 ulm Exp $
+
+  07 Jan 2012; Ulrich Mueller <ulm@gentoo.org> faac-1.28-r1.ebuild:
+  Add MPEG-4 to LICENSE and change LGPL-2 to LGPL-2.1, bug 357779.
 
   06 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> faac-1.28-r1.ebuild,
   +files/faac-1.28-altivec.patch:
