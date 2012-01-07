@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccp4-libs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.44 2011/12/14 12:20:17 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.45 2012/01/07 15:58:44 jlec Exp $
+
+  07 Jan 2012; Justin Lecher <jlec@gentoo.org> ccp4-libs-6.1.3-r11.ebuild:
+  Corrected blocker
 
 *ccp4-libs-6.1.3-r11 (14 Dec 2011)
 

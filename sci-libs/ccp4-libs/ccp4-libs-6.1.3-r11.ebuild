@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.1 2011/12/14 12:20:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.2 2012/01/07 15:58:44 jlec Exp $
 
 EAPI=3
 
@@ -38,7 +38,7 @@ IUSE=""
 
 RDEPEND="
 	!<sci-chemistry/ccp4-6.1.3
-	!<sci-chemistry/ccp4-apps-${PVR}
+	!<sci-chemistry/ccp4-apps-${PV}-r10
 	app-shells/tcsh
 	dev-lang/tcl
 	>=sci-libs/cbflib-0.9.2.2
