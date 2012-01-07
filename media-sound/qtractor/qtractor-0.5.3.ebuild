@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.5.3.ebuild,v 1.1 2012/01/06 13:01:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.5.3.ebuild,v 1.2 2012/01/07 15:47:47 aballier Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="debug dssi libsamplerate mad osc rubberband vorbis sse zlib"
+IUSE="debug dssi libsamplerate mad osc rubberband vorbis suil sse zlib"
 
 RDEPEND=">=x11-libs/qt-core-4.2:4
 	|| (
@@ -31,6 +31,7 @@ RDEPEND=">=x11-libs/qt-core-4.2:4
 	media-libs/lilv
 	osc? ( media-libs/liblo )
 	rubberband? ( media-libs/rubberband )
+	suil? ( media-libs/suil )
 	vorbis? ( media-libs/libvorbis )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
@@ -49,6 +50,7 @@ src_configure() {
 		$(use_enable dssi) \
 		--enable-lilv \
 		$(use_enable rubberband librubberband) \
+		$(use suil || echo " --disable-suil") \
 		$(use_enable sse) \
 		$(use_enable zlib libz) \
 		$(use_enable debug)

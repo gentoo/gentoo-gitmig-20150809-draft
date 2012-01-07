@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qtractor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.38 2012/01/06 13:01:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.39 2012/01/07 15:47:47 aballier Exp $
+
+  07 Jan 2012; Alexis Ballier <aballier@gentoo.org> qtractor-0.5.3.ebuild,
+  metadata.xml:
+  add suil useflag
 
 *qtractor-0.5.3 (06 Jan 2012)
 
