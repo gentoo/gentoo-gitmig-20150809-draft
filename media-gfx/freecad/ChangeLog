@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/freecad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.5 2011/11/13 20:13:27 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.6 2012/01/07 16:09:21 dilfridge Exp $
+
+*freecad-0.12.5284-r2 (07 Jan 2012)
+
+  07 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +freecad-0.12.5284-r2.ebuild, +files/freecad-0.12.5284-gcc46.patch,
+  +files/freecad-0.12.5284-glu.patch, +files/freecad-0.12.5284-nodir.patch,
+  +files/freecad-0.12.5284-nopivy.patch,
+  +files/freecad-0.12.5284-removeoldswig.patch:
+  Version bump. Thanks to Maciej Szmigiero for patches.
 
   13 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   freecad-0.11.3729.ebuild:
