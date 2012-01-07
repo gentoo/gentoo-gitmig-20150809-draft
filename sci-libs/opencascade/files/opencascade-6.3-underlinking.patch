@@ -1,9 +1,0 @@
-diff -ruN OpenCASCADE6.3.0.orig/ros/adm/make/DRAWEXE/Makefile.am OpenCASCADE6.3.0/ros/adm/make/DRAWEXE/Makefile.am
---- OpenCASCADE6.3.0.orig/ros/adm/make/DRAWEXE/Makefile.am	2008-09-09 17:46:05.000000000 +0200
-+++ OpenCASCADE6.3.0/ros/adm/make/DRAWEXE/Makefile.am	2011-08-21 12:40:22.000000000 +0200
-@@ -22,4 +22,5 @@
- ../TKMath/libTKMath.la \
- ../TKG3d/libTKG3d.la \
- ../TKernel/libTKernel.la \
-+ $(X_LIBS) -ldl \
-  $(STLPort_LIB) $(CSF_TclLibs_LIB) $(CSF_TclTkLibs_LIB) $(CSF_gdi32_LIB) $(CSF_advapi32_LIB) $(CSF_user32_LIB) $(CSF_SOCKETLibs_LIB) $(CSF_FPELibs_LIB) $(CSF_ThreadLibs_LIB) $(CSF_kernel32_LIB)  
