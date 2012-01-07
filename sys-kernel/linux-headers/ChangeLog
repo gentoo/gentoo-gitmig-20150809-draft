@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.331 2012/01/06 16:59:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.332 2012/01/07 04:29:53 vapier Exp $
+
+*linux-headers-3.2 (07 Jan 2012)
+
+  07 Jan 2012; Mike Frysinger <vapier@gentoo.org> +linux-headers-3.2.ebuild:
+  Version bump.
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> linux-headers-2.6.39.ebuild:
   Marking linux-headers-2.6.39 ppc for bug 384733
