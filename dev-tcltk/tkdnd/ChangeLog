@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkdnd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdnd/ChangeLog,v 1.1 2012/01/06 17:49:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdnd/ChangeLog,v 1.2 2012/01/07 16:55:39 jlec Exp $
+
+  07 Jan 2012; Justin Lecher <jlec@gentoo.org> tkdnd-2.2.ebuild:
+  Adding keywords for ~amd64 ~amd64-linux ~x86-linux
 
 *tkdnd-2.2 (06 Jan 2012)
 

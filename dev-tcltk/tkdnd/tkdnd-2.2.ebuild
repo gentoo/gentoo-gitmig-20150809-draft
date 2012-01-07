@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdnd/tkdnd-2.2.ebuild,v 1.1 2012/01/06 17:49:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdnd/tkdnd-2.2.ebuild,v 1.2 2012/01/07 16:55:39 jlec Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}/${MY_PN}%20${PV}/${P/-/}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug threads X"
 
 RESTRICT="test"
