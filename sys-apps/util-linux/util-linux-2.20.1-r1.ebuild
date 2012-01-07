@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.27 2012/01/07 21:33:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.20.1-r1.ebuild,v 1.1 2012/01/07 21:33:35 vapier Exp $
 
 EAPI="3"
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
 inherit eutils toolchain-funcs libtool flag-o-matic
-[[ ${PV} == "9999" ]] && inherit git-2 autotools
+[[ ${PV} == "9999" ]] && inherit git autotools
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
@@ -19,7 +19,7 @@ if [[ ${PV} == "9999" ]] ; then
 	#KEYWORDS=""
 else
 	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.bz2
-		loop-aes? ( http://loop-aes.sourceforge.net/updates/util-linux-2.19.1-20110510.diff.bz2 )"
+		loop-aes? ( http://loop-aes.sourceforge.net/updates/util-linux-2.20-20110905.diff.bz2 )"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
 fi
 
@@ -98,6 +98,7 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die "install failed"
 	dodoc AUTHORS NEWS README* TODO docs/*
+	use ddate || find "${ED}"/usr/share/man -name 'ddate.1*' -delete
 
 	if ! use perl ; then #284093
 		rm "${ED}"/usr/bin/chkdupexe || die
