@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.7.ebuild,v 1.8 2010/10/14 19:16:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.7.ebuild,v 1.9 2012/01/07 01:01:26 ulm Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ DESCRIPTION="a configuration file parser library"
 HOMEPAGE="http://www.nongnu.org/confuse/"
 SRC_URI="mirror://nongnu/confuse/${P}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="ISC"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="nls static-libs"
