@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.16.ebuild,v 1.1 2011/09/28 01:24:48 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.16.ebuild,v 1.2 2012/01/07 13:37:02 ago Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info autotools
@@ -12,7 +12,7 @@ SRC_URI="http://www.clusterresources.com/downloads/${PN}/${P}.tar.gz"
 LICENSE="openpbs"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="tk +crypt drmaa server +syslog doc cpusets kernel_linux"
 
 # ed is used by makedepend-sh
