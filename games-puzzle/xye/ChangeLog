@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/xye
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.27 2011/12/05 06:39:56 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.28 2012/01/07 11:19:00 ago Exp $
+
+  07 Jan 2012; Agostino Sarubbo <ago@gentoo.org> xye-0.12.0.ebuild:
+  Stable for AMD64, wrt bug #397685
 
 *xye-0.12.0 (05 Dec 2011)
 
