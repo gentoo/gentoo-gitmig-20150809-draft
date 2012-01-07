@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cloog-ppl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.43 2011/08/20 09:13:54 chithanh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.44 2012/01/07 20:21:29 vapier Exp $
+
+  07 Jan 2012; Mike Frysinger <vapier@gentoo.org> cloog-ppl-0.15.10.ebuild:
+  Drop autotools-utils to avoid broken reconfigure logic #398039 by Nikoli.
 
   20 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   cloog-ppl-0.15.10.ebuild:
