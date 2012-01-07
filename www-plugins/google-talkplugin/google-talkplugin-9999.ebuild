@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.1 2011/11/16 03:12:59 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.2 2012/01/07 04:50:06 ottxor Exp $
 
 EAPI=4
 
-inherit nsplugins
+inherit eutils nsplugins
 
 if [ "${PV}" != "9999" ]; then
 	DEB_PATCH="1"
@@ -72,6 +72,14 @@ QA_DT_HASH="${INSTALL_BASE}/libnpg.*so
 
 S="${WORKDIR}"
 
+LANGS="ar cs en et fr hu lt ms pl ru sv tl vi bg da fa gu id ja lv nl
+sk ta tr bn de es fi hi is kn ml no sl te uk ca el fil hr it ko mr or
+ro sr th ur"
+
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
+
 # nofetch means upstream bumped and thus needs version bump
 pkg_nofetch() {
 	einfo "This version is no longer available from Google."
@@ -104,6 +112,16 @@ src_install() {
 	for i in "${INSTALL_BASE}"/libnpg*.so; do
 		doexe "${i}"
 		inst_plugin "/${i}"
+	done
+
+	#install screen-sharing stuff - bug #397463
+	insinto "/${INSTALL_BASE}"
+	doins "${INSTALL_BASE}"/windowpicker.glade
+
+	strip-linguas ${LANGS}
+	for l in ${LINGUAS}; do
+		insinto "/${INSTALL_BASE}"/locale/$l/LC_MESSAGES/
+		doins "${INSTALL_BASE}"/locale/$l/LC_MESSAGES/windowpicker.mo
 	done
 
 	#install bundled libCg

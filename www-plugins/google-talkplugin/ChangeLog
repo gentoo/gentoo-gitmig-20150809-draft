@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/google-talkplugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.20 2012/01/04 05:25:42 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.21 2012/01/07 04:50:06 ottxor Exp $
+
+  07 Jan 2012; Christoph Junghans <ottxor@gentoo.org>
+  google-talkplugin-9999.ebuild:
+  add screen sharing and LINGUAS support (bug #397463)
 
 *google-talkplugin-2.5.6.0-r1 (04 Jan 2012)
 
