@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.10 2011/05/03 21:29:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.11 2012/01/07 16:32:12 idl0r Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -74,6 +74,9 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-build-system.patch"
+
+	# Allow user patches to be applied without modifyfing the ebuild
+	epatch_user
 
 	vdr-plugin_src_prepare
 
