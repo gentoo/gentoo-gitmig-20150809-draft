@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.9 2010/11/16 21:02:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.10 2012/01/07 16:38:46 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils gnome2
@@ -21,8 +21,7 @@ RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/librsvg-2.0
 	>=gnome-base/gconf-2.0
 	media-libs/gstreamer:0.10
-	>=dev-libs/libxml2-2.6.7
-	media-sound/esound"
+	>=dev-libs/libxml2-2.6.7"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/intltool"
@@ -31,7 +30,8 @@ src_prepare() {
 	gnome2_src_prepare
 	epatch \
 		"${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-gnome-doc.patch
+		"${FILESDIR}"/${P}-gnome-doc.patch \
+		"${FILESDIR}"/${P}-noesound.patch
 	# bug 260895
 	sed -i \
 		-e 's/ -Werror//' \

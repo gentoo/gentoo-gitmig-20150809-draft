@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/monkey-bubble
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.28 2009/03/03 20:35:41 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.29 2012/01/07 16:38:46 mr_bones_ Exp $
+
+  07 Jan 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  monkey-bubble-0.4.0.ebuild, files/monkey-bubble-0.4.0-asneeded.patch,
+  +files/monkey-bubble-0.4.0-noesound.patch:
+  avoid esound dep with patch from Martin von Gagern (bug #397997)
 
   03 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
   monkey-bubble-0.4.0.ebuild:
