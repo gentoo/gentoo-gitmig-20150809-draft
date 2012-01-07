@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tbb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.14 2011/12/20 06:54:47 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.15 2012/01/07 20:47:39 bicatali Exp $
+
+  07 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> tbb-4.0.278.ebuild:
+  Remove html files from include directory, thanks a3li bug #398003
 
 *tbb-4.0.278 (20 Dec 2011)
 

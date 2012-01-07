@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.278.ebuild,v 1.1 2011/12/20 06:54:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.278.ebuild,v 1.2 2012/01/07 20:47:39 bicatali Exp $
 
 EAPI=4
 inherit eutils versionator toolchain-funcs
@@ -50,6 +50,7 @@ src_prepare() {
 		-e 's/^\t\$(shell \(.*\) >\$(NUL) 2>\$(NUL))\s*/\t\1/' \
 		-e 's!^\t@echo Created \$(work_dir)_\(debug\|release\).*$!&\n\t$(MAKE) -C "$(work_dir)_\1"  -r -f $(tbb_root)/build/Makefile.tbb cfg=\1 tbb_root=$(tbb_root) version_string.tmp!' \
 		src/Makefile || die
+	find include -name \*.html -delete
 }
 
 src_compile() {
