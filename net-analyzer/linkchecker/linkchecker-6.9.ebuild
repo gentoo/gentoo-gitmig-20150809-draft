@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-6.9.ebuild,v 1.4 2011/07/11 21:25:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-6.9.ebuild,v 1.5 2012/01/07 14:09:32 jlec Exp $
 
 EAPI="3"
 
@@ -69,7 +69,7 @@ src_install() {
 	if use doc; then
 		dohtml doc/html/* || die
 	fi
-	use bash-completion && dobashcompletion config/linkchecker-completion
+	use bash-completion && dobashcomp config/linkchecker-completion
 }
 
 pkg_postinst() {
