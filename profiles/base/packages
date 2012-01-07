@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.58 2011/12/06 16:05:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.59 2012/01/07 22:00:26 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -24,7 +24,7 @@
 # specific information in here. This file serves as a high level description
 # of the minimum set of packages needed for any Gentoo based system.
 
-*sys-apps/baselayout
+*>=sys-apps/baselayout-2
 *app-arch/bzip2
 *app-arch/gzip
 *app-arch/tar

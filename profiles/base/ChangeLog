@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.330 2012/01/05 11:08:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.331 2012/01/07 22:00:26 vapier Exp $
+
+  07 Jan 2012; Mike Frysinger <vapier@gentoo.org> packages:
+  Require baselayout-2 now so packages don't have to #396731.
 
   05 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE="systemd" for sys-auth/polkit for keywording and testing.
