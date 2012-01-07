@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.31 2012/01/04 22:28:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.32 2012/01/07 15:34:10 johu Exp $
+
+  07 Jan 2012; Johannes Huber <johu@gentoo.org> libzip-0.10-r1.ebuild:
+  Fix QA issues. Remove unused eclass. Add zlib to DEPEND too. Prevent
+  elibtoolize run twice bug #397751.
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> libzip-0.10-r1.ebuild:
   Marking libzip-0.10-r1 ppc for bug 396903
