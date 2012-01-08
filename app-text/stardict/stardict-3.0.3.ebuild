@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.3.ebuild,v 1.2 2012/01/08 17:43:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.3.ebuild,v 1.3 2012/01/08 17:46:01 ssuominen Exp $
 
 # NOTE: Even though the *.dict.dz are the same as dictd/freedict's files,
 #       their indexes seem to be in a different format. So we'll keep them
@@ -18,12 +18,17 @@ SRC_URI="http://${PN}-3.googlecode.com/files/${P}.tar.bz2
 LICENSE="CPL-1.0 GPL-3 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="espeak gnome gucharmap qqwry pronounce spell tools"
+IUSE="editor espeak gnome gucharmap qqwry pronounce spell"
 
 COMMON_DEPEND=">=dev-libs/glib-2.16
 	dev-libs/libsigc++:2
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.20:2
+	editor? (
+		dev-libs/libpcre
+		dev-libs/libxml2
+		virtual/mysql
+		)
 	gnome? (
 		>=gnome-base/libbonobo-2
 		>=gnome-base/libgnome-2
@@ -32,12 +37,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.16
 		>=gnome-base/orbit-2
 		)
 	gucharmap? ( >=gnome-extra/gucharmap-2.22.1:0 )
-	spell? ( >=app-text/enchant-1.2 )
-	tools? (
-		dev-libs/libpcre
-		dev-libs/libxml2
-		virtual/mysql
-		)"
+	spell? ( >=app-text/enchant-1.2 )"
 RDEPEND="${COMMON_DEPEND}
 	espeak? ( >=app-accessibility/espeak-1.29 )"
 DEPEND="${COMMON_DEPEND}
@@ -59,7 +59,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable tools) \
+		$(use_enable editor tools) \
 		--disable-scrollkeeper \
 		$(use_enable spell) \
 		$(use_enable gucharmap) \
