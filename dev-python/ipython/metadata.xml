@@ -40,4 +40,7 @@ Main features:
 * ä»ã®Pythonè¨èªãã­ã°ã©ã ãçµã¿è¾¼ãã®ãç°¡åã
 * pdbãããã¬ã¨profilerã¸ã®çµ±åã¢ã¯ã»ã¹ã
 </longdescription>
+<use>
+  <flag name="notebook">Install requirements for the web notebook based on <pkg>www-servers/tornado</pkg></flag>
+</use>
 </pkgmetadata>
