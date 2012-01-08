@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qmail.eclass,v 1.5 2011/11/24 00:04:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qmail.eclass,v 1.6 2012/01/08 03:38:03 vapier Exp $
 
 # @ECLASS: qmail.eclass
 # @MAINTAINER:
@@ -99,10 +99,10 @@ dosupervise() {
 # because a user supplied patch might apply changes to these files, too.
 # See bug #165981.
 qmail_set_cc() {
-	cc=$(head -n 1 ./conf-cc | sed -e "s#^g\?cc\s\+\(-O2\)\?#$(tc-getCC) #")
-	ld=$(head -n 1 ./conf-ld | sed -e "s#^g\?cc\s\+\(-s\)\?#$(tc-getCC) #")
+	local cc=$(head -n 1 ./conf-cc | sed -e "s#^g\?cc\s\+\(-O2\)\?#$(tc-getCC) #")
+	local ld=$(head -n 1 ./conf-ld | sed -e "s#^g\?cc\s\+\(-s\)\?#$(tc-getCC) #")
 
-	echo "${cc} ${CFLAGS}"  > ./conf-cc || die 'Patching conf-cc failed.'
+	echo "${cc} ${CFLAGS} ${CPPFLAGS}"  > ./conf-cc || die 'Patching conf-cc failed.'
 	echo "${ld} ${LDFLAGS}" > ./conf-ld || die 'Patching conf-ld failed.'
 }
 
