@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-1.0.0.ebuild,v 1.3 2012/01/08 22:02:26 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-1.0.0.ebuild,v 1.4 2012/01/08 22:10:50 spock Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="http://toxygen.net/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ao unicode"
+IUSE="ao"
 
 RDEPEND=">=app-dicts/libydpdict-${PV}
 	sys-libs/ncurses[unicode]
