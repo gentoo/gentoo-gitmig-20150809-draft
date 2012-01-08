@@ -1,6 +1,11 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.148 2012/01/03 12:38:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.149 2012/01/08 11:35:42 ssuominen Exp $
+
+  08 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> links-2.5.ebuild:
+  Insert 'MimeType=x-scheme-handler/http;x-scheme-handler/https;' to the
+  .desktop file so Links can be selected as default browser in, for example,
+  the Xfce desktop environment.
 
   03 Jan 2012; Jeroen Roovers <jer@gentoo.org> links-2.4-r2.ebuild:
   Stable for HPPA (bug #396519).
