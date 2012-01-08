@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ydpdict
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ChangeLog,v 1.14 2009/10/18 09:10:23 spock Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ChangeLog,v 1.15 2012/01/08 22:02:26 spock Exp $
+
+  08 Jan 2012; Michał Januszewski <spock@gentoo.org> ydpdict-1.0.0.ebuild:
+  Add a missing dependency on ncurses (bug #380855).
 
   18 Oct 2009; Michał Januszewski <spock@gentoo.org> ydpdict-1.0.0.ebuild:
   Make it possible to use ydpdict with new versions of libydpdict.
