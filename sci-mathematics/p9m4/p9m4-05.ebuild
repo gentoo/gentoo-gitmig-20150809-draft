@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/p9m4-05.ebuild,v 1.1 2012/01/08 14:48:52 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/p9m4-05.ebuild,v 1.2 2012/01/08 15:14:11 gienah Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -29,6 +29,8 @@ PATCHES=("${DISTDIR}/${MY_PN}05-64bit.patch.bz2"
 		"${FILESDIR}/${MY_PN}05-use-inst-paths.patch"
 		"${FILESDIR}/${MY_PN}05-package.patch"
 		"${FILESDIR}/${MY_PN}05-python2.6.patch")
+
+S="${WORKDIR}/${MY_P}/"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -68,7 +70,7 @@ src_install() {
 	dodir /usr/share/${PN}/Images
 	insinto /usr/share/${PN}/Images
 	cd "${S}/Images" \
-		die "Could not cd to Images"
+		|| die "Could not cd to Images"
 	doins *.gif *.ico
 	if use examples; then
 		dodir /usr/share/${PN}/Samples
@@ -106,5 +108,3 @@ src_install() {
 pkg_postinst() {
 	distutils_pkg_postinst
 }
-
-S="${WORKDIR}/${MY_P}/"
