@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/prover9
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prover9/ChangeLog,v 1.1 2012/01/08 13:57:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prover9/ChangeLog,v 1.2 2012/01/08 15:01:39 gienah Exp $
+
+  08 Jan 2012; Mark Wright <gienah@gentoo.org> prover9-2009.11a.ebuild:
+  Compress the mirrored patch, thanks to xarthisius for reviewing
 
 *prover9-2009.11a (08 Jan 2012)
 

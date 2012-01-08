@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prover9/prover9-2009.11a.ebuild,v 1.1 2012/01/08 13:57:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prover9/prover9-2009.11a.ebuild,v 1.2 2012/01/08 15:01:39 gienah Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ MY_P="${MY_PN}-${MY_PV}"
 DESCRIPTION="Prover9 is an automated theorem prover for first-order and equational logic"
 HOMEPAGE="http://www.cs.unm.edu/~mccune/mace4/"
 SRC_URI="http://www.cs.unm.edu/~mccune/mace4/download/${MY_P}.tar.gz
-		http://dev.gentoo.org/~gienah/2big4tree/sci-mathematics/prover9/${MY_PN}-2009-11A-makefile.patch"
+		http://dev.gentoo.org/~gienah/2big4tree/sci-mathematics/prover9/${MY_PN}-2009-11A-makefile.patch.bz2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -24,7 +24,7 @@ IUSE="examples"
 RDEPEND=""
 DEPEND="$RDEPEND"
 
-PATCHES=("${DISTDIR}/${MY_PN}-2009-11A-makefile.patch"
+PATCHES=("${DISTDIR}/${MY_PN}-2009-11A-makefile.patch.bz2"
 	"${FILESDIR}/${MY_PN}-2009-11A-manpages.patch")
 
 src_compile() {
