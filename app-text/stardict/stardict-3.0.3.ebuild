@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.3.ebuild,v 1.4 2012/01/08 17:54:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.3.ebuild,v 1.5 2012/01/08 18:31:37 ssuominen Exp $
 
 # NOTE: Even though the *.dict.dz are the same as dictd/freedict's files,
 #       their indexes seem to be in a different format. So we'll keep them
@@ -9,7 +9,11 @@
 # NOTE: Festival plugin crashes, bug 188684. Disable for now.
 
 EAPI=4
-inherit eutils
+
+GNOME2_LA_PUNT=yes
+GCONF_DEBUG=no
+
+inherit eutils gnome2
 
 DESCRIPTION="A international dictionary supporting fuzzy and glob style matching"
 HOMEPAGE="http://code.google.com/p/stardict-3/"
@@ -52,30 +56,31 @@ DEPEND="${COMMON_DEPEND}
 
 RESTRICT="test"
 
+pkg_setup() {
+	G2CONF="$(use_enable editor tools)
+		--disable-scrollkeeper
+		$(use_enable spell)
+		$(use_enable gucharmap)
+		--disable-festival
+		$(use_enable espeak)
+		$(use_enable qqwry)
+		--disable-updateinfo
+		$(use_enable gnome gnome-support)
+		--disable-gpe-support
+		--disable-schemas-install"
+}
+
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-correct-glib-include.patch \
 		"${FILESDIR}"/${P}-entry.patch \
 		"${FILESDIR}"/${P}-gcc46.patch
-}
 
-src_configure() {
-	econf \
-		$(use_enable editor tools) \
-		--disable-scrollkeeper \
-		$(use_enable spell) \
-		$(use_enable gucharmap) \
-		--disable-festival \
-		$(use_enable espeak) \
-		$(use_enable qqwry) \
-		--disable-updateinfo \
-		$(use_enable gnome gnome-support) \
-		--disable-gpe-support \
-		--disable-schemas-install
+	gnome2_src_prepare
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	gnome2_src_install
 
 	dodoc dict/doc/{Documentation,FAQ,HACKING,HowToCreateDictionary,Skins,StarDictFileFormat,Translation}
 
@@ -91,8 +96,6 @@ src_install() {
 		insinto /usr/share
 		doins -r ../WyabdcRealPeopleTTS
 	fi
-
-	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
@@ -105,4 +108,6 @@ pkg_postinst() {
 	elog "you have not, execute the below to get a list of dictionaries:"
 	elog
 	elog "  emerge -s stardict-"
+
+	gnome2_pkg_postinst
 }
