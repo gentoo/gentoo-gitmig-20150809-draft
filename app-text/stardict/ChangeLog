@@ -1,6 +1,6 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.12 2012/01/08 17:43:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.13 2012/01/08 17:47:32 ssuominen Exp $
 
   08 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> stardict-3.0.3.ebuild:
   Missing CPL-1.0 and LGPL-2 licenses as noted by top level README.
@@ -13,10 +13,9 @@
   metadata.xml:
   Version bump wrt #351416 by "zvasylvv". Remove unnecessary runtime depend for
   festival and resort to pkg_postinst() message wrt #330351 by Andrew
-  Savchenko. Fix building with GLIB >= 2.31 wrt #396219 by Oschtan. USE="tools"
-  to install utilities which have been moved to the main package since 3.0.3
-  wrt #292773 by "andcycle-gentoo.bugs". Punt any reference to esound wrt
-  #246174 by Yu Yuwei.
+  Savchenko. Fix building with GLIB >= 2.31 wrt #396219 by Oschtan. USE="editor"
+  to build and install the stardict-editor wrt #292773 by "andcycle-gentoo.bugs".
+  Punt any reference to esound wrt #246174 by Yu Yuwei.
 
   22 Sep 2011; Ryan Hill <dirtyepic@gentoo.org> stardict-3.0.1-r3.ebuild,
   +files/stardict-3.0.1-gcc46.patch:
