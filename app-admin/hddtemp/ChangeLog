@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.107 2012/01/08 14:18:02 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.108 2012/01/08 14:34:51 aidecoe Exp $
+
+  08 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
+  Added few Seagate Barracuda 7200.14 hard drives.  Fixes bug #392913.
+
+  Thanks to Paolo Pedroni <paolo.pedroni@iol.it>.
 
   08 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
   Added few more WD desktop hard drives.  Fixes bug #392917.
