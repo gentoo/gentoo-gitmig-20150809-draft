@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/yasat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/ChangeLog,v 1.5 2011/06/16 08:57:28 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/ChangeLog,v 1.6 2012/01/08 13:53:51 hwoarang Exp $
+
+*yasat-456 (08 Jan 2012)
+
+  08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +yasat-456.ebuild:
+  version bump
 
 *yasat-421 (16 Jun 2011)
 
