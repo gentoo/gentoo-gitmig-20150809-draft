@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/gobject-introspection
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.50 2011/12/31 21:58:21 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.51 2012/01/08 23:03:03 tetromino Exp $
+
+*gobject-introspection-1.30.0-r2 (08 Jan 2012)
+
+  08 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gobject-introspection-1.30.0-r2.ebuild,
+  +files/gobject-introspection-1.30.0-forced-cairo.patch:
+  Force building cairo-gobject support, and add a PDEPEND on cairo[glib]
+  (PDEPEND instead of RDEPEND to avoid circular dependencies). Fixes bug
+  #391213; thanks to Pacho Ramos, Rafał Mużyło, and the many helpful
+  testers.
 
   31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gobject-introspection-0.10.8.ebuild, gobject-introspection-1.30.0.ebuild,
