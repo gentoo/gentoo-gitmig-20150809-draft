@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.30.0-r2.ebuild,v 1.1 2012/01/08 23:03:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.30.0-r2.ebuild,v 1.2 2012/01/08 23:57:10 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.5"
 
-inherit autotools gnome2 python
+inherit gnome2 python
 
 DESCRIPTION="Introspection infrastructure for generating gobject library bindings for various languages"
 HOMEPAGE="http://live.gnome.org/GObjectIntrospection/"
@@ -47,9 +47,6 @@ src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=659824
 	sed -i -e '/^TAGS/s/[{}]//g' "${S}/giscanner/docbookdescription.py" || die
 
-	# Enable cairo-gobject support even if cairo is not installed, bug #391213
-	epatch "${FILESDIR}/${PN}-1.30.0-forced-cairo.patch"
-
 	# FIXME: Parallel compilation failure with USE=doc
 	use doc && MAKEOPTS="-j1"
 
@@ -57,17 +54,22 @@ src_prepare() {
 	echo > py-compile
 	echo > build-aux/py-compile
 
-	eautoreconf
 	gnome2_src_prepare
 
-	if use test && ! has_version "x11-libs/cairo[glib]"; then
+	skip_tests=
+	if ! has_version "x11-libs/cairo[glib]"; then
+		# Bug #391213: enable cairo-gobject support even if it's not installed
 		# We only PDEPEND on cairo to avoid circular dependencies
-		G2CONF="${G2CONF} --disable-tests"
-		skip_tests=yes
-		ewarn "Tests will be skipped because x11-libs/cairo[glib] is not present"
-		ewarn "on your system. Consider installing it to get tests to run."
-	else
-		skip_tests=
+		export CAIRO_LIBS="-lcairo"
+		export CAIRO_CFLAGS="-I${EPREFIX}/usr/include/cairo"
+		export CAIRO_GOBJECT_LIBS="-lcairo-gobject"
+		export CAIRO_GOBJECT_CFLAGS="-I${EPREFIX}/usr/include/cairo"
+		if use test; then
+			G2CONF="${G2CONF} --disable-tests"
+			skip_tests=yes
+			ewarn "Tests will be skipped because x11-libs/cairo[glib] is not present"
+			ewarn "on your system. Consider installing it to get tests to run."
+		fi
 	fi
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.51 2012/01/08 23:03:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.52 2012/01/08 23:57:10 tetromino Exp $
+
+  08 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gobject-introspection-1.30.0-r2.ebuild,
+  -files/gobject-introspection-1.30.0-forced-cairo.patch:
+  Update fix for bug #391213 to not use eautoreconf.
 
 *gobject-introspection-1.30.0-r2 (08 Jan 2012)
 
