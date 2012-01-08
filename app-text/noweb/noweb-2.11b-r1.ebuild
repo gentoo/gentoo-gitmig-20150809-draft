@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.11b-r1.ebuild,v 1.6 2010/01/06 20:35:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.11b-r1.ebuild,v 1.7 2012/01/08 22:43:06 ulm Exp $
 
 inherit eutils toolchain-funcs elisp-common
 
@@ -8,7 +8,7 @@ DESCRIPTION="a literate programming tool, lighter than web"
 HOMEPAGE="http://www.eecs.harvard.edu/~nr/noweb/"
 SRC_URI="http://www.eecs.harvard.edu/~nr/noweb/dist/${P}.tgz"
 
-LICENSE="freedist emacs? ( GPL-2 )"
+LICENSE="noweb emacs? ( GPL-2 )"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="emacs examples"
