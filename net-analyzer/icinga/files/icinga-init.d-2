@@ -8,6 +8,14 @@ depend() {
 	after mysql postgresql ido2db
 }
 
+checkconfig() {
+	# Silent Check
+	/usr/sbin/icinga -v /etc/icinga/icinga.cfg &>/dev/null && return 0
+	# Now we know there's problem - run again and display errors
+	/usr/sbin/icinga -v /etc/icinga/icinga.cfg
+	eend $? "Configuration Error. Please fix your configfile"
+}
+
 reload()
 {
 	checkconfig || return 1
