@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.6 2011/12/17 03:46:20 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.7 2012/01/08 13:50:14 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -10,6 +10,7 @@ RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
 EHG_REPO_URI="http://hg.rafaelmartins.eng.br/blohg/"
+EHG_REVISION="default"
 
 inherit mercurial distutils
 

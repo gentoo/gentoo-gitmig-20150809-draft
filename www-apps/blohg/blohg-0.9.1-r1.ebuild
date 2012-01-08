@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.9.1.ebuild,v 1.1 2012/01/06 00:53:09 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.9.1-r1.ebuild,v 1.1 2012/01/08 13:50:14 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A Mercurial-based blogging engine."
 HOMEPAGE="http://blohg.org/ http://pypi.python.org/pypi/blohg"
@@ -33,6 +33,11 @@ DEPEND=">=dev-python/docutils-0.7
 	doc? ( dev-python/sphinx )"
 
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-fix_tests.patch"
+	distutils_src_prepare
+}
 
 src_compile() {
 	distutils_src_compile
