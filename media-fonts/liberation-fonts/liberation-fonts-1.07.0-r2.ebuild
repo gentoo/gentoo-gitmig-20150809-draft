@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://fedorahosted.org/liberation-fonts"
 SRC_URI="!fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${PN}-ttf-${PV}.tar.gz )
 fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${P}.tar.gz )"
 
-KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2-with-exceptions"
 IUSE="fontforge X"

@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/liberation-fonts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.23 2011/11/06 23:30:22 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.24 2012/01/08 05:40:36 dirtyepic Exp $
+
+  08 Jan 2012; Ryan Hill <dirtyepic@gentoo.org> -liberation-fonts-1.04.ebuild,
+  -liberation-fonts-1.05.ebuild, -liberation-fonts-1.06.0.20100721-r1.ebuild,
+  -liberation-fonts-1.07.0.ebuild, liberation-fonts-1.07.0-r2.ebuild:
+  Mark ppc64 stable (bug #386887), remove old.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org>
   liberation-fonts-1.07.0-r2.ebuild:
