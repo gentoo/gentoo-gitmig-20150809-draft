@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3-r3.ebuild,v 1.4 2012/01/05 23:51:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3-r3.ebuild,v 1.5 2012/01/08 21:20:57 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -278,8 +278,20 @@ src_install () {
 
 pkg_preinst() {
 	# move Info dir file to correct name
-	mv "${ED}"/usr/share/info/${EMACS_SUFFIX}/dir{.orig,} \
-		|| die "moving info dir failed"
+	local infodir=/usr/share/info/${EMACS_SUFFIX} f
+	if [[ -f ${ED}${infodir}/dir.orig ]]; then
+		mv "${ED}"${infodir}/dir{.orig,} || die "moving info dir failed"
+	else
+		# this should not happen in EAPI 4
+		ewarn "Regenerating Info directory index in ${infodir} ..."
+		rm -f "${ED}"${infodir}/dir{,.*}
+		for f in "${ED}"${infodir}/*; do
+			if [[ ${f##*/} != *-[0-9]* && -e ${f} ]]; then
+				install-info --info-dir="${ED}"${infodir} "${f}" \
+					|| die "install-info failed"
+			fi
+		done
+	fi
 }
 
 pkg_postinst() {

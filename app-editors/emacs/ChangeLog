@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.459 2012/01/06 21:15:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.460 2012/01/08 21:20:57 ulm Exp $
+
+  08 Jan 2012; Ulrich Müller <ulm@gentoo.org> emacs-23.3-r3.ebuild:
+  Restore fallback code in pkg_preinst because of failures with paludis.
 
   06 Jan 2012; Ulrich Mueller <ulm@gentoo.org> -emacs-23.3-r1.ebuild:
   Remove old.
