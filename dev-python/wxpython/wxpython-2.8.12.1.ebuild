@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1.ebuild,v 1.3 2012/01/06 23:04:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1.ebuild,v 1.4 2012/01/08 21:04:55 hwoarang Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -45,7 +45,7 @@ DOC_S="${WORKDIR}/wxPython-${PV}"
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 PYTHON_CXXFLAGS=("2.* + -fno-strict-aliasing")
 
-PYTHON_MODULES="wx-${SLOT}-gtk2-unicode wxversion.py"
+PYTHON_MODNAME="wx-${SLOT}-gtk2-unicode wxversion.py"
 
 src_prepare() {
 	sed -i "s:cflags.append('-O3'):pass:" config.py || die "sed failed"

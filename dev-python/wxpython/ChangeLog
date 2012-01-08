@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.155 2012/01/06 23:04:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.156 2012/01/08 21:04:55 hwoarang Exp $
+
+  08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> wxpython-2.8.12.1.ebuild:
+  Fix a typo. Patch by Arfrever
 
   06 Jan 2012; Markos Chandras <hwoarang@gentoo.org> wxpython-2.8.12.1.ebuild,
   wxpython-2.9.1.1.ebuild:
