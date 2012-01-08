@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.201 2011/12/08 19:05:26 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.202 2012/01/08 02:00:14 hwoarang Exp $
+
+  08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> libevent-2.0.16.ebuild:
+  Stable on amd64 wrt bug #397483
 
   08 Dec 2011; Mike Frysinger <vapier@gentoo.org> libevent-2.0.16.ebuild,
   +files/libevent-2.0.16-sysctl.patch:
