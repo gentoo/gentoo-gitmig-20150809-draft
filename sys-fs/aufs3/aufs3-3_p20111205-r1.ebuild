@@ -1,13 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20111205.ebuild,v 1.1 2012/01/05 16:17:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20111205-r1.ebuild,v 1.1 2012/01/08 13:31:17 jlec Exp $
 
 EAPI=4
 
 inherit linux-mod multilib toolchain-funcs
 
 AUFS_VERSION="${PV%%_p*}"
-PATCH_VER=x-rcN
+PATCH_MAX_VER="1"
+UTIL_MAX_VER="0"
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
@@ -43,24 +44,37 @@ pkg_setup() {
 
 	linux-mod_pkg_setup
 
-	[[ -n ${PATCH_VER} ]] || PATCH_VER=${KV_MINOR}
+	if [[ "${KV_MINOR}" -gt "${PATCH_MAX_VER}" ]]; then
+		PATCH_BRANCH="x-rcN"
+	else
+		PATCH_BRANCH="${KV_MINOR}"
+	fi
 
-	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-standalone-${PATCH_VER}.patch >/dev/null && \
-		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-base-${PATCH_VER}.patch >/dev/null ); then
+	if [[ "${PATCH_BRANCH}" == "x-rcN" ]]; then
+		UTIL_BRANCH="x-rcN"
+	elif [[ "${KV_MINOR}" -gt "${UTIL_MAX_VER}" ]]; then
+		UTIL_BRANCH="${UTIL_MAX_VER}"
+	else
+		UTIL_BRANCH="${KV_MINOR}"
+	fi
+
+	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-standalone-${PATCH_BRANCH}.patch >/dev/null && \
+		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-base-${PATCH_BRANCH}.patch >/dev/null ); then
 		if use kernel-patch; then
 			cd ${KV_DIR}
 			ewarn "Patching your kernel..."
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-standalone-${PATCH_VER}.patch >/dev/null
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-base-${PATCH_VER}.patch >/dev/null
-			epatch "${FILESDIR}"/${PN}-{base,standalone}-${PATCH_VER}.patch
-			epatch "${FILESDIR}"/${PN}-fix-export-__devcgroup_inode_permission.patch
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-standalone-${PATCH_BRANCH}.patch >/dev/null
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-base-${PATCH_BRANCH}.patch >/dev/null
+			epatch "${FILESDIR}"/${PN}-{base,standalone}-${PATCH_BRANCH}.patch
+			[[ ${KV_MINOR} -gt ${PATCH_MAX_VER} ]] && \
+				epatch "${FILESDIR}"/${PN}-fix-export-__devcgroup_inode_permission.patch
 			ewarn "You need to compile your kernel with the applied patch"
 			ewarn "to be able to load and use the aufs kernel module"
 		else
 			eerror "You need to apply a patch to your kernel to compile and run the ${PN} module"
 			eerror "Either enable the kernel-patch useflag to do it with this ebuild"
-			eerror "or apply ${FILESDIR}/${PN}-base-${PATCH_VER}.patch and"
-			eerror "${FILESDIR}/${PN}-standalone-${PATCH_VER}.patch by hand"
+			eerror "or apply ${FILESDIR}/${PN}-base-${PATCH_BRANCH}.patch and"
+			eerror "${FILESDIR}/${PN}-standalone-${PATCH_BRANCH}.patch by hand"
 			die "missing kernel patch, please apply it first"
 		fi
 	fi
@@ -75,9 +89,11 @@ set_config() {
 }
 
 src_prepare() {
-	local branch=origin/${PN}.${PATCH_VER}
+	local module_branch=origin/${PN}.${PATCH_BRANCH}
+	local util_branch=origin/${PN}.${UTIL_BRANCH}
 
-	git checkout -q -b local-gentoo $branch || die
+	einfo "Using for module creation branch ${module_branch}"
+	git checkout -q -b local-gentoo ${module_branch} || die
 
 	# All config options to off
 	sed "s:= y:=:g" -i config.mk || die
@@ -98,8 +114,9 @@ src_prepare() {
 	sed -i "s:__user::g" include/linux/aufs_type.h || die
 
 	cd "${WORKDIR}"/${PN/3}-util
-#	PATCH_VER=0
-	git checkout -b local-gentoo origin/${PN}.${PATCH_VER}
+
+	einfo "Using for utils building branch ${util_branch}"
+	git checkout -b local-gentoo ${util_branch} || die
 	sed -i "/LDFLAGS += -static -s/d" Makefile || die
 	sed -i -e "s:m 644 -s:m 644:g" -e "s:/usr/lib:/usr/$(get_libdir):g" libau/Makefile || die
 }
