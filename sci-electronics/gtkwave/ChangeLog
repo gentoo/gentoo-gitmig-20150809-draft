@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gtkwave
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.65 2011/07/20 17:50:53 tomjbe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.66 2012/01/08 16:22:24 tomjbe Exp $
+
+*gtkwave-3.3.28 (08 Jan 2012)
+
+  08 Jan 2012; Thomas Beierlein <tomjbe@gentoo.org> +gtkwave-3.3.28.ebuild:
+  strip flags (bug #377935). Version bump. Drop old unstable versions
 
 *gtkwave-3.3.23 (20 Jul 2011)
 
