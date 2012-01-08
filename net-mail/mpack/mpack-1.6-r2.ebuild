@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.6-r2.ebuild,v 1.4 2012/01/04 18:00:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.6-r2.ebuild,v 1.5 2012/01/08 16:48:58 sping Exp $
 
 EAPI="3"
 
@@ -18,6 +18,9 @@ KEYWORDS="amd64 ~sparc x86 ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-filenames.patch
+	epatch "${FILESDIR}"/${P}-usage.patch
+
 	# NOTE: These three patches replace <mpack-1.6-gentoo.patch>
 	epatch "${FILESDIR}"/${P}-compile.patch
 	epatch "${FILESDIR}"/${P}-paths.patch
