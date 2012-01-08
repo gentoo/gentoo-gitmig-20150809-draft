@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13384 2012/01/08 01:32:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13385 2012/01/08 01:33:01 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -292,26 +292,6 @@ net-mail/vmailmgr-tools
 # Alexis Ballier <aballier@gentoo.org> (04 Nov 2011)
 # Pre-releases of vlc 1.2. Mask it until final version is out
 >=media-video/vlc-1.2_pre
-
-# Markos Chandras <hwoarang@gentoo.org> (31 Oct 2011)
-# Masking 4.8 rc release. The ebuilds are still work in
-# progress.
-~x11-libs/qt-assistant-4.8.0_rc1
-~x11-libs/qt-core-4.8.0_rc1
-~x11-libs/qt-declarative-4.8.0_rc1
-~x11-libs/qt-dbus-4.8.0_rc1
-~x11-libs/qt-demo-4.8.0_rc1
-~x11-libs/qt-gui-4.8.0_rc1
-~x11-libs/qt-multimedia-4.8.0_rc1
-~x11-libs/qt-opengl-4.8.0_rc1
-~x11-libs/qt-phonon-4.8.0_rc1
-~x11-libs/qt-qt3support-4.8.0_rc1
-~x11-libs/qt-script-4.8.0_rc1
-~x11-libs/qt-sql-4.8.0_rc1
-~x11-libs/qt-svg-4.8.0_rc1
-~x11-libs/qt-test-4.8.0_rc1
-~x11-libs/qt-webkit-4.8.0_rc1
-~x11-libs/qt-xmlpatterns-4.8.0_rc1
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Oct 2011)
 # Working on more reliable versioning, consider experimental for now.
