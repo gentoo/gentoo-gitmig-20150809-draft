@@ -19,5 +19,6 @@
 		 <flag name='qqwry'>Enable QQWry plugin, which provides information (in
 			 Chinese language) about geographical positions, owner, etc. for IP
 			 addresses</flag>
+		 <flag name='tools'>Build and install tools</flag>
 	</use>
 </pkgmetadata>
