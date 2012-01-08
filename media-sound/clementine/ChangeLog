@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.47 2012/01/05 12:12:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.48 2012/01/08 16:11:37 phajdan.jr Exp $
+
+  08 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  clementine-0.7.1-r2.ebuild, clementine-1.0.0.ebuild:
+  Add gsettings-desktop-schemas to dependencies wrt bug #392649.
 
 *clementine-1.0.0 (05 Jan 2012)
 
