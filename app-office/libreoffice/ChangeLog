@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.223 2012/01/03 21:04:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.224 2012/01/08 14:25:01 dilfridge Exp $
+
+  08 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/libreoffice-kde48.patch, libreoffice-3.4.5.2.ebuild,
+  libreoffice-3.4.99.2.ebuild:
+  Fix build with kde-4.8, bug 397775
 
 *libreoffice-3.4.5.2 (03 Jan 2012)
 

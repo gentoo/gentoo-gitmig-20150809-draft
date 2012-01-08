@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.5.2.ebuild,v 1.1 2012/01/03 21:04:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.5.2.ebuild,v 1.2 2012/01/08 14:25:01 dilfridge Exp $
 
 EAPI=4
 
@@ -190,6 +190,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-kill-cppunit.patch"
 	"${FILESDIR}/${PN}-honor-strip.patch"
 	"${FILESDIR}/${PN}-java.patch"
+	"${FILESDIR}/${PN}-kde48.patch"
 )
 
 REQUIRED_USE="
