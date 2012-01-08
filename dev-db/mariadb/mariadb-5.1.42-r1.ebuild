@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.1.42-r1.ebuild,v 1.2 2010/04/01 20:33:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.1.42-r1.ebuild,v 1.3 2012/01/08 23:55:47 jmbsvicetto Exp $
 
 MY_EXTRAS_VER="20100324-0235Z"
-EAPI=2
+EAPI="4"
 
 inherit toolchain-funcs mysql
 # only to make repoman happy. it is really set in the eclass
