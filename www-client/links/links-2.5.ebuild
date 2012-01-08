@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.5.ebuild,v 1.3 2012/01/08 11:44:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.5.ebuild,v 1.4 2012/01/08 11:47:19 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -118,5 +118,10 @@ src_install() {
 	use suid && fperms 4755 /usr/bin/links
 }
 
-pkg_postinst() { fdo-mime_desktop_database_update; }
-pkg_postrm() { fdo-mime_desktop_database_update; }
+pkg_postinst() {
+	use X && fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	use X && fdo-mime_desktop_database_update
+}
