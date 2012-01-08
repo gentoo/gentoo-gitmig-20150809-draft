@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unifont
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.36 2011/12/18 15:49:37 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.37 2012/01/08 04:30:18 dirtyepic Exp $
+
+  08 Jan 2012; Ryan Hill <dirtyepic@gentoo.org> -unifont-1.0-r4.ebuild,
+  unifont-5.1.20080914.ebuild:
+  Stabilize on ppc/ppc64 (bug #393767). Fix LICENCE (bug #395179). Remove old.
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> unifont-5.1.20080914.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #393767
