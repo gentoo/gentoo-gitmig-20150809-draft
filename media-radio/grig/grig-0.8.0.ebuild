@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/grig/grig-0.8.0.ebuild,v 1.1 2011/08/31 07:13:01 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/grig/grig-0.8.0.ebuild,v 1.2 2012/01/08 20:22:25 tomjbe Exp $
 
 EAPI=4
 
@@ -20,6 +20,10 @@ DEPEND="
 	x11-libs/gtk+:2
 	media-libs/hamlib"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	sed -i -e "s/-DG_DISABLE_DEPRECATED//" src/Makefile.in
+}
 
 src_configure() {
 	econf --enable-hardware
