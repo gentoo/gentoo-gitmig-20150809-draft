@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.2.2.ebuild,v 1.2 2011/12/31 19:18:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.2.2.ebuild,v 1.3 2012/01/08 06:29:36 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -23,7 +23,8 @@ IUSE="bash-completion doc"
 DEPEND="${DEPEND} app-arch/gzip"
 RDEPEND="${RDEPEND}"
 
-ruby_add_bdepend "test? ( dev-ruby/minitest )"
+ruby_add_bdepend "doc? ( dev-ruby/rdoc )
+	test? ( dev-ruby/minitest )"
 
 all_ruby_prepare() {
 	# Comment out unimportant test which failes on ruby18 at least.
