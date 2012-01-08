@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.103 2012/01/06 18:12:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.104 2012/01/08 21:30:49 maekke Exp $
+
+  08 Jan 2012; Markus Meier <maekke@gentoo.org> dillo-3.0.1.ebuild:
+  arm stable, bug #395917
 
   06 Jan 2012; Jeroen Roovers <jer@gentoo.org> dillo-3.0.1.ebuild:
   Stable for HPPA (bug #395917).
