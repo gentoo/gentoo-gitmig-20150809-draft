@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/exiftool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.102 2011/09/25 06:51:02 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.103 2012/01/08 18:18:58 graaff Exp $
+
+*exiftool-8.75 (08 Jan 2012)
+
+  08 Jan 2012; Hans de Graaff <graaff@gentoo.org> +exiftool-8.75.ebuild:
+  Version bump to next upstream production release.
 
 *exiftool-8.65 (25 Sep 2011)
 
