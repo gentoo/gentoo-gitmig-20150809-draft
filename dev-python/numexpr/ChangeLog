@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/numexpr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.7 2011/11/27 12:13:16 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.8 2012/01/08 16:51:27 xarthisius Exp $
+
+*numexpr-2.0.1 (08 Jan 2012)
+
+  08 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> +numexpr-2.0.1.ebuild,
+  -numexpr-1.4.2.ebuild, -numexpr-2.0.ebuild:
+  Version bump, drop old
 
 *numexpr-2.0 (27 Nov 2011)
 
