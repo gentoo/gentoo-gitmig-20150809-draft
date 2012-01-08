@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.202.ebuild,v 1.2 2011/10/30 22:35:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.202-r1.ebuild,v 1.1 2012/01/08 18:20:08 wired Exp $
 
 EAPI=2
 
@@ -38,6 +38,11 @@ pkg_setup() {
 		python_set_active_version 3
 		python_pkg_setup
 	fi
+}
+
+src_prepare() {
+	# security fix, bug #398159
+	epatch "${FILESDIR}"/"${P}"-bouncedcc-dos-fix.patch
 }
 
 src_configure() {
