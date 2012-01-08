@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/e4rat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/ChangeLog,v 1.3 2011/12/11 21:58:42 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/ChangeLog,v 1.4 2012/01/08 11:38:11 hwoarang Exp $
+
+*e4rat-0.2.1-r2 (08 Jan 2012)
+
+  08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +e4rat-0.2.1-r2.ebuild:
+  Check for CONFIG_AUDITSYSCALL (#394321). Add link to upstream documentation
+  (#394323). Add note about prelink (#394325). Move binaries to /sbin
 
 *e4rat-0.2.1-r1 (11 Dec 2011)
 
