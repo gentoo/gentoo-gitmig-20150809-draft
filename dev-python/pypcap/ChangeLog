@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypcap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/ChangeLog,v 1.9 2011/04/02 12:47:36 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/ChangeLog,v 1.10 2012/01/08 21:13:07 hwoarang Exp $
+
+  08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> pypcap-1.1-r1.ebuild:
+  Fix building with net-libs/libpcap[-static-libs] (bug #397647). Patch by
+  Arfrever
 
   02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> pypcap-1.1-r1.ebuild:
   Use net-libs/libpcap instead of virtual/libpcap wrt #358835.

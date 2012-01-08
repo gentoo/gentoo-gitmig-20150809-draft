@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1-r1.ebuild,v 1.5 2011/04/02 12:47:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1-r1.ebuild,v 1.6 2012/01/08 21:13:07 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -32,6 +32,9 @@ src_prepare() {
 	sed -e "s/raise exc\[0\], exc\[1\], exc\[2\]/raise NotImplementedError/" -i pcap.pyx || die "sed failed"
 
 	epatch "${FILESDIR}/include_path.patch"
+
+	# Check existence of shared library instead of static library.
+	sed -e "s/'libpcap.a'/'libpcap.so'/" -i setup.py || die "sed failed"
 
 	distutils_src_prepare
 }
