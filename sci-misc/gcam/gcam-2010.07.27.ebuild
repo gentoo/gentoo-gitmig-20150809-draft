@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/gcam-2010.07.27.ebuild,v 1.3 2010/10/23 06:52:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/gcam-2010.07.27.ebuild,v 1.4 2012/01/08 19:17:32 dilfridge Exp $
 
 EAPI="1"
 
@@ -15,6 +15,13 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/gtk+:2
-	x11-libs/gtkglext"
+DEPEND="
+	>=media-libs/libpng-1.5
+	x11-libs/gtk+:2
+	x11-libs/gtkglext
+"
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-libpng15.patch"
+)
