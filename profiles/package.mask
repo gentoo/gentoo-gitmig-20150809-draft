@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13387 2012/01/08 12:46:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13388 2012/01/08 12:48:15 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,10 +35,11 @@
 # Incompatible with upstream libdvdread without custom
 # patching the UDF symbols in again wrt bug #387813. 
 # Multiple other issues. Bugs 262084, 165700, 340739,
-# and 369775.   No upstream or hope for new releases 
+# 369775 and 339965. No upstream or hope for new releases 
 # anymore either.   Removal in 30 days.
 media-video/ogle
 media-video/ogle-gui
+media-video/goggles
 
 # Markos Chandras <hwoarang@gentoo.org> (08 Jan 2012)
 # Masking new boost release for testing
