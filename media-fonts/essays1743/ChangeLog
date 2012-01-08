@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/essays1743
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.14 2010/06/02 22:50:26 spatz Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.15 2012/01/08 05:34:58 dirtyepic Exp $
+
+*essays1743-2.000 (08 Jan 2012)
+
+  08 Jan 2012; Ryan Hill <dirtyepic@gentoo.org> +essays1743-2.000.ebuild:
+  Version bump (bug #393157).
 
 *essays1743-1.203.1 (02 Jun 2010)
 
