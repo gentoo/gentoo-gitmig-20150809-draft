@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.31.ebuild,v 1.10 2011/05/27 11:36:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.31.ebuild,v 1.11 2012/01/08 14:27:55 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic pam
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.tux.org/pub/tux/bagleyd/${PN}/${P}/${P}.tar.bz2"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86"
-IUSE="crypt debug esd gtk motif nas opengl pam truetype xinerama xlockrc"
+IUSE="crypt debug gtk motif nas opengl pam truetype xinerama xlockrc"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -24,7 +24,6 @@ RDEPEND="x11-libs/libX11
 	truetype? ( media-libs/freetype:2 )
 	pam? ( virtual/pam )
 	nas? ( media-libs/nas )
-	esd? ( media-sound/esound )
 	motif? ( >=x11-libs/openmotif-2.3:0 )
 	gtk? ( x11-libs/gtk+:2 )
 	xinerama? ( x11-libs/libXinerama )"
@@ -64,7 +63,7 @@ src_configure() {
 		$(use_with opengl) \
 		$(use_with opengl mesa) \
 		$(use_with xinerama) \
-		$(use_with esd esound) \
+		--without-esound \
 		$(use_with nas) \
 		$(use_with crypt) \
 		$(use_with gtk gtk2) \
