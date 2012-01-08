@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.270 2012/01/08 02:07:56 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.271 2012/01/08 02:17:36 sping Exp $
+
+  08 Jan 2012; Sebastian Pipping <sping@gentoo.org> genkernel-3.4.22.ebuild:
+  Emergency mask of just added 3.4.22
 
 *genkernel-3.4.22 (08 Jan 2012)
 
