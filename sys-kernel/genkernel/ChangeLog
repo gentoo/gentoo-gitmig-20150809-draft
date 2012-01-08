@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.271 2012/01/08 02:17:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.272 2012/01/08 02:34:04 robbat2 Exp $
+
+*genkernel-3.4.22.1 (08 Jan 2012)
+
+  08 Jan 2012; Robin H. Johnson <robbat2@gentoo.org> +genkernel-3.4.22.1.ebuild,
+  -genkernel-3.4.22.ebuild:
+  Fixed version of genkernel out, so that users do not trigger the /usr mount
+  code quite yet (OpenRC commits not ready yet, systemd is usable).
 
   08 Jan 2012; Sebastian Pipping <sping@gentoo.org> genkernel-3.4.22.ebuild:
   Emergency mask of just added 3.4.22
