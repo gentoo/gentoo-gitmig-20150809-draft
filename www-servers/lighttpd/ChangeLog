@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.270 2012/01/01 14:58:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.271 2012/01/08 20:45:47 hwoarang Exp $
+
+  08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> files/lighttpd.initd:
+  Check if /var/run/lighttpd exists. Bug #397897
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.30-r1.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #392581
