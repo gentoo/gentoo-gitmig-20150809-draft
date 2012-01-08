@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.4.2.ebuild,v 1.3 2011/12/12 08:42:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.5.1.2.ebuild,v 1.1 2012/01/08 14:02:13 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -12,7 +12,10 @@ inherit eutils distutils
 
 DESCRIPTION="Powerful IMAP/Maildir synchronization and reader support"
 HOMEPAGE="http://offlineimap.org"
-SRC_URI="http://offlineimap.org/downloads/${PN}-v${PV}.tar.gz -> ${P}.tar.gz"
+# SRC_URI="http://offlineimap.org/downloads/${PN}-v${PV}.tar.gz -> ${P}.tar.gz"
+# Lately only spaetz gitub:
+SRC_URI="https://github.com/downloads/spaetz/${PN}/${PN}-v${PV}.tar.gz -> ${P}.tar.gz"
+
 
 LICENSE="GPL-2"
 SLOT="0"
