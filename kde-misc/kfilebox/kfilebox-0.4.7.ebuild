@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kfilebox/kfilebox-0.4.7.ebuild,v 1.1 2011/09/11 10:16:14 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kfilebox/kfilebox-0.4.7.ebuild,v 1.2 2012/01/09 16:29:20 johu Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://kdropbox.deuteros.es/"
 SRC_URI="mirror://sourceforge/kdropbox/${P}.tar.gz"
 LICENSE="GPL-3"
 
-SLOT="0"
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
