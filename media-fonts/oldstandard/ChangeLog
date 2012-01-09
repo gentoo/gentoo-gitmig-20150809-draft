@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/oldstandard
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oldstandard/ChangeLog,v 1.5 2011/06/19 13:41:12 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oldstandard/ChangeLog,v 1.6 2012/01/09 13:18:49 ago Exp $
+
+  09 Jan 2012; Agostino Sarubbo <ago@gentoo.org> oldstandard-2.2.ebuild:
+  Stable for AMD64, wrt bug #397061
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> oldstandard-2.0.2.ebuild:
   x86 stable, bug #286235
