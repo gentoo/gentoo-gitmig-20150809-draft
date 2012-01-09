@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/gle
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.15 2011/06/10 12:07:38 grozin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.16 2012/01/09 07:05:24 grozin Exp $
+
+*gle-4.2.4 (09 Jan 2012)
+
+  09 Jan 2012; Andrey Grozin <grozin@gentoo.org> +gle-4.2.4.ebuild,
+  +files/gle-4.2.4-parallel.patch:
+  Version bump
 
   10 Jun 2011; Andrey Grozin <grozin@gentoo.org> gle-4.2.3b.ebuild:
   Fixed dependence with USE=qt4, thanks to fulvio ciriaco <oivulf@gmail.com>
