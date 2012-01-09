@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libvisio
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.14 2011/12/11 12:29:07 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.15 2012/01/09 16:08:05 scarabeus Exp $
+
+*libvisio-0.0.12 (09 Jan 2012)
+
+  09 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libvisio-0.0.11.ebuild,
+  +libvisio-0.0.12.ebuild:
+  Version bump to latest
 
   11 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> libvisio-9999.ebuild:
   Workaround aclocal bug.
