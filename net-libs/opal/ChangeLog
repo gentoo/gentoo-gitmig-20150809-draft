@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.74 2012/01/04 20:35:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.75 2012/01/09 13:09:10 ago Exp $
+
+  09 Jan 2012; Agostino Sarubbo <ago@gentoo.org> opal-3.6.8-r2.ebuild:
+  Stable for AMD64, wrt bug #397617
 
   04 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> opal-3.6.8-r2.ebuild,
   +files/opal-3.6.8-lid-plugins-ldflags.patch:

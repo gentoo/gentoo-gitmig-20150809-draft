@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.8-r2.ebuild,v 1.3 2012/01/04 20:35:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.8-r2.ebuild,v 1.4 2012/01/09 13:09:10 ago Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/opalvoip/${P}.tar.bz2
 
 LICENSE="MPL-1.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+audio capi celt debug doc dtmf examples fax ffmpeg h224 h281 h323 iax
 ilbc ipv6 ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl static-libs
 stats swig theora +video vpb vxml wav x264 x264-static xml"
