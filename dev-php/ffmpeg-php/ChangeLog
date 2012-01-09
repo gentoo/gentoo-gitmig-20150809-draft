@@ -1,6 +1,11 @@
-# ChangeLog for dev-php5/ffmpeg-php
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ChangeLog,v 1.1 2011/12/14 22:29:48 mabi Exp $
+# ChangeLog for dev-php/ffmpeg-php
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ChangeLog,v 1.2 2012/01/09 14:53:06 aballier Exp $
+
+  09 Jan 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-php-0.6.0-r1.ebuild,
+  +files/ffmpeg-php-0.6.0-ffmpeg.patch:
+  attempt to fix build and compatibility with latest ffmpeg releases, bug
+  #395563
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -ffmpeg-php-0.6.0.ebuild, ffmpeg-php-0.6.0-r1.ebuild:
