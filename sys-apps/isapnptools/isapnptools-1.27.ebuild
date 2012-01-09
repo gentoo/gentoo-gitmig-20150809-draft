@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.27.ebuild,v 1.2 2012/01/02 19:40:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.27.ebuild,v 1.3 2012/01/09 21:53:44 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/hardware/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE=""
 
 src_prepare() {
