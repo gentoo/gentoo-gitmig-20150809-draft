@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.77 2012/01/04 20:23:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.78 2012/01/09 13:04:37 jer Exp $
+
+*dmenu-4.5 (09 Jan 2012)
+
+  09 Jan 2012; Jeroen Roovers <jer@gentoo.org> +dmenu-4.5.ebuild:
+  Version bump.
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> dmenu-4.4.1.ebuild:
   Marking dmenu-4.4.1 ppc for bug 389219
