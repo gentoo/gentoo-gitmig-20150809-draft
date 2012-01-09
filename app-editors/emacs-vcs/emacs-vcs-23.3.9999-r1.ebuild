@@ -1,14 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.92.ebuild,v 1.6 2012/01/08 21:29:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999-r1.ebuild,v 1.1 2012/01/09 12:59:24 ulm Exp $
 
 EAPI=4
+WANT_AUTOMAKE="none"
 
 inherit autotools elisp-common eutils flag-o-matic multilib
 
 if [[ ${PV##*.} = 9999 ]]; then
 	EBZR_PROJECT="emacs"
-	EBZR_BRANCH="trunk"
+	EBZR_BRANCH="emacs-23"
 	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
 	# "Nosmart" is much faster for initial branching.
 	EBZR_INITIAL_URI="nosmart+${EBZR_REPO_URI}"
@@ -28,9 +29,9 @@ DESCRIPTION="The extensible, customizable, self-documenting real-time display ed
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 
 LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode PSF-2"
-SLOT="24"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="alsa athena dbus gconf gif gnutls gpm gsettings gtk gtk3 gzip-el hesiod imagemagick jpeg kerberos libxml2 m17n-lib motif png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm"
+SLOT="23"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="alsa athena dbus gconf gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
@@ -40,22 +41,17 @@ RDEPEND="sys-libs/ncurses
 	alsa? ( media-libs/alsa-lib )
 	gpm? ( sys-libs/gpm )
 	dbus? ( sys-apps/dbus )
-	gnutls? ( net-libs/gnutls )
-	libxml2? ( >=dev-libs/libxml2-2.2.0 )
-	selinux? ( sys-libs/libselinux )
 	X? (
 		x11-libs/libXmu
 		x11-libs/libXt
 		x11-misc/xbitmaps
 		gconf? ( >=gnome-base/gconf-2.26.2 )
-		gsettings? ( >=dev-libs/glib-2.28.6 )
 		gif? ( media-libs/giflib )
 		jpeg? ( virtual/jpeg )
 		png? ( >=media-libs/libpng-1.4:0 )
 		svg? ( >=gnome-base/librsvg-2.0 )
 		tiff? ( media-libs/tiff )
 		xpm? ( x11-libs/libXpm )
-		imagemagick? ( >=media-gfx/imagemagick-6.6.2 )
 		xft? (
 			media-libs/fontconfig
 			media-libs/freetype
@@ -65,10 +61,7 @@ RDEPEND="sys-libs/ncurses
 				>=dev-libs/m17n-lib-1.5.1
 			)
 		)
-		gtk? (
-			gtk3? ( x11-libs/gtk+:3 )
-			!gtk3? ( x11-libs/gtk+:2 )
-		)
+		gtk? ( x11-libs/gtk+:2 )
 		!gtk? (
 			Xaw3d? ( x11-libs/libXaw3d )
 			!Xaw3d? (
@@ -81,21 +74,19 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	alsa? ( dev-util/pkgconfig )
 	dbus? ( dev-util/pkgconfig )
-	gnutls? ( dev-util/pkgconfig )
-	libxml2? ( dev-util/pkgconfig )
 	X? ( dev-util/pkgconfig )
 	gzip-el? ( app-arch/gzip )"
 
 RDEPEND="${RDEPEND}
 	>=app-emacs/emacs-common-gentoo-1.3[X?]"
 
-EMACS_SUFFIX="emacs-${SLOT}"
+EMACS_SUFFIX="emacs-${SLOT}-vcs"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
 src_prepare() {
 	if [[ ${PV##*.} = 9999 ]]; then
-		FULL_VERSION=$(sed -n 's/^AC_INIT(emacs,[ \t]*\([^ \t,)]*\).*/\1/p' \
-			configure.in)
+		FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
+			| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
 		[[ ${FULL_VERSION} ]] || die "Cannot determine current Emacs version"
 		einfo "Emacs branch: ${EBZR_BRANCH}"
 		einfo "Revision: ${EBZR_REVISION:-${EBZR_REVNO}}"
@@ -103,6 +94,11 @@ src_prepare() {
 		[[ ${FULL_VERSION} =~ ^${PV%.*}(\..*)?$ ]] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
 	fi
+
+	sed -i \
+		-e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
+		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
+		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
 
 	if ! use alsa; then
 		# ALSA is detected even if not requested by its USE flag.
@@ -118,12 +114,14 @@ src_prepare() {
 			|| die "unable to sed configure.in"
 	fi
 
-	AT_M4DIR=m4 eautoreconf
+	eautoreconf
 }
 
 src_configure() {
 	ALLOWED_FLAGS=""
 	strip-flags
+	filter-flags -fstrict-aliasing
+	append-flags $(test-flags -fno-strict-aliasing)
 
 	if use sh; then
 		replace-flags -O[1-9] -O0		#262359
@@ -146,13 +144,10 @@ src_configure() {
 	if use X; then
 		myconf="${myconf} --with-x"
 		myconf="${myconf} $(use_with gconf)"
-		myconf="${myconf} $(use_with gsettings)"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
-		myconf="${myconf} $(use_with wide-int)"
 		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
 		myconf="${myconf} $(use_with png) $(use_with svg rsvg)"
 		myconf="${myconf} $(use_with tiff) $(use_with xpm)"
-		myconf="${myconf} $(use_with imagemagick)"
 
 		if use xft; then
 			myconf="${myconf} --with-xft"
@@ -165,9 +160,12 @@ src_configure() {
 				"USE flag \"m17n-lib\" has no effect if \"xft\" is not set."
 		fi
 
+		# GTK+ is the default toolkit if USE=gtk is chosen with other
+		# possibilities. Emacs upstream thinks this should be standard
+		# policy on all distributions
 		if use gtk; then
 			einfo "Configuring to build with GIMP Toolkit (GTK+)"
-			myconf="${myconf} --with-x-toolkit=$(usev gtk3 || echo gtk)"
+			myconf="${myconf} --with-x-toolkit=gtk"
 		elif use Xaw3d || use athena; then
 			einfo "Configuring to build with Athena/Lucid toolkit"
 			myconf="${myconf} --with-x-toolkit=lucid $(use_with Xaw3d xaw3d)"
@@ -209,16 +207,10 @@ src_configure() {
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
 		--enable-locallisppath="${EPREFIX}/etc/emacs:${EPREFIX}${SITELISP}" \
 		--with-crt-dir="${crtdir}" \
-		--with-gameuser="${GAMES_USER_DED:-games}" \
-		--without-compress-info \
-		--disable-maintainer-mode \
 		$(use_with hesiod) \
 		$(use_with kerberos) $(use_with kerberos kerberos5) \
 		$(use_with gpm) \
 		$(use_with dbus) \
-		$(use_with gnutls) \
-		$(use_with libxml2 xml2) \
-		$(use_with selinux) \
 		${myconf}
 }
 
@@ -271,6 +263,7 @@ src_install () {
 		# C source you might find via find-function
 		doins src/*.{c,h,m}
 		doins -r src/{m,s}
+		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/Makefile.c
 		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/{m,s}/README
 		c=""
 	fi
@@ -321,7 +314,7 @@ pkg_postinst() {
 	for f in "${EROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
 		[[ -e ${f} ]] || touch "${f}"
 	done
-	chown "${GAMES_USER_DED:-games}" "${EROOT}"/var/lib/games/emacs
+	chown games "${EROOT}"/var/lib/games/emacs
 
 	elisp-site-regen
 	eselect emacs update ifunset
