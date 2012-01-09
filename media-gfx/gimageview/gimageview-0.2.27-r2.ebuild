@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r2.ebuild,v 1.10 2012/01/09 16:12:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r2.ebuild,v 1.11 2012/01/09 16:17:00 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool
@@ -12,16 +12,16 @@ SRC_URI="mirror://sourceforge/gtkmmviewer/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ppc ppc64 x86"
-IUSE="nls wmf mng svg xine mplayer"
+IUSE="mng nls mplayer svg xine wmf"
 
 RDEPEND="app-arch/bzip2
 	x11-libs/gtk+:2
-	>=media-libs/libpng-1.4
+	>=media-libs/libpng-1.2:0
 	x11-libs/libXinerama
 	wmf? ( >=media-libs/libwmf-0.2.8 )
 	mng? ( media-libs/libmng )
 	svg? ( gnome-base/librsvg )
-	xine? ( media-libs/xine-lib )
+	xine? ( <media-libs/xine-lib-1.2.0 )
 	mplayer? ( media-video/mplayer )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
