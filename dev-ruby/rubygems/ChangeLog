@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.183 2012/01/09 06:45:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.184 2012/01/09 06:46:38 graaff Exp $
+
+  09 Jan 2012; Hans de Graaff <graaff@gentoo.org> -rubygems-1.8.13.ebuild:
+  Remove broken version.
 
 *rubygems-1.8.15 (09 Jan 2012)
 
