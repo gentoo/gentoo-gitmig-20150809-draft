@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.9 2012/01/09 14:27:36 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.10 2012/01/09 16:01:44 williamh Exp $
+
+  09 Jan 2012; William Hubbs <williamh@gentoo.org> kmod-3.ebuild,
+  kmod-9999.ebuild:
+  only install compatibility symlinks if compat and tools are in use.
 
   09 Jan 2012; William Hubbs <williamh@gentoo.org> kmod-3.ebuild,
   kmod-9999.ebuild, metadata.xml:
