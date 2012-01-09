@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.4.0_beta1.ebuild,v 1.2 2011/10/02 19:19:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.4.0_beta1.ebuild,v 1.3 2012/01/09 17:28:30 johu Exp $
 
 EAPI=4
 
@@ -18,11 +18,12 @@ LICENSE="GPL-2"
 
 SLOT="4"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="debug"
+IUSE="+bookmarks debug"
 
 RDEPEND="
 	$(add_kdebase_dep libkonq)
 	sys-libs/zlib
+	bookmarks? ( $(add_kdebase_dep keditbookmarks) )
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext
