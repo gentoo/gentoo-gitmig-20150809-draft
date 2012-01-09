@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-wallpapers
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.46 2011/12/11 18:52:28 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.47 2012/01/09 16:01:51 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kde-wallpapers-4.7.4.ebuild:
+  x86 stable wrt bug #396359
 
 *kde-wallpapers-4.7.4 (11 Dec 2011)
 

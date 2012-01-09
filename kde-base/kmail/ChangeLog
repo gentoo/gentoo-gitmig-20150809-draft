@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.270 2011/12/31 19:36:23 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.271 2012/01/09 16:51:26 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> kmail-4.7.4-r1.ebuild:
+  x86 stable wrt bug #396359
 
   31 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> kmail-4.7.4-r1.ebuild:
   Restored keywords after positive user feedback

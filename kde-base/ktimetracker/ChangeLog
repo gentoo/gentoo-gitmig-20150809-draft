@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktimetracker
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.94 2011/12/11 18:52:41 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.95 2012/01/09 17:23:08 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ktimetracker-4.7.4.ebuild:
+  x86 stable wrt bug #396359
 
 *ktimetracker-4.7.4 (11 Dec 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.7.4.ebuild,v 1.2 2011/12/25 13:44:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.7.4.ebuild,v 1.3 2012/01/09 17:55:18 phajdan.jr Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 
 DESCRIPTION="System settings utility"
 IUSE="debug gtk +usb xinerama"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 COMMONDEPEND="
 	dev-libs/glib:2

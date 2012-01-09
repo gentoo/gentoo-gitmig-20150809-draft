@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/liboxygenstyle
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.37 2011/12/25 17:03:27 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.38 2012/01/09 17:37:32 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  liboxygenstyle-4.7.4.ebuild:
+  x86 stable wrt bug #396359
 
   25 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   liboxygenstyle-4.7.4.ebuild, +files/liboxygenstyle-4.7.4-enablefinal.patch:

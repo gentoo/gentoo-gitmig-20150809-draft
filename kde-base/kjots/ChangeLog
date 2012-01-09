@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjots
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.191 2011/12/11 18:52:22 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.192 2012/01/09 16:46:27 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> kjots-4.7.4.ebuild:
+  x86 stable wrt bug #396359
 
 *kjots-4.7.4 (11 Dec 2011)
 

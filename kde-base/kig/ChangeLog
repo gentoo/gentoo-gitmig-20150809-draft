@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kig
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.200 2011/12/18 19:46:36 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.201 2012/01/09 16:42:00 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> kig-4.7.4.ebuild:
+  x86 stable wrt bug #396359
 
   18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kig-4.6.5.ebuild:
   Drop KDE 4.6.5

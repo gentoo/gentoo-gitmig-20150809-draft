@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kscd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.200 2011/12/31 15:43:51 johu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.201 2012/01/09 17:13:36 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> kscd-4.7.4-r1.ebuild:
+  x86 stable wrt bug #396359
 
 *kscd-4.7.4-r1 (31 Dec 2011)
 

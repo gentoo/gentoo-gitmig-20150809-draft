@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.7.4.ebuild,v 1.1 2011/12/11 18:52:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.7.4.ebuild,v 1.2 2012/01/09 17:51:41 phajdan.jr Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ CPPUNIT_REQUIRED="test"
 inherit kde4-meta
 
 DESCRIPTION="Solid: the KDE hardware library"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug bluetooth networkmanager wicd"
 
 DEPEND="

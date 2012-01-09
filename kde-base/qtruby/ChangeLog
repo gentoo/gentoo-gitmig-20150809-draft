@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.95 2011/12/11 18:52:26 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.96 2012/01/09 17:48:57 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qtruby-4.7.4.ebuild:
+  x86 stable wrt bug #396359
 
 *qtruby-4.7.4 (11 Dec 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/dragonplayer-4.7.4.ebuild,v 1.1 2011/12/11 18:52:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/dragonplayer-4.7.4.ebuild,v 1.2 2012/01/09 15:41:47 phajdan.jr Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 DESCRIPTION="Dragon Player is a simple video player for KDE 4"
 HOMEPAGE="http://www.dragonplayer.net/"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
 IUSE="debug xine"
 

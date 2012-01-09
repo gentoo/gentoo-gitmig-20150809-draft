@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konsole
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.214 2011/12/28 17:26:43 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.215 2012/01/09 17:02:16 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> konsole-4.7.4-r1.ebuild:
+  x86 stable wrt bug #396359
 
 *konsole-4.7.4-r1 (28 Dec 2011)
 

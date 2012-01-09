@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/katepart-4.7.4.ebuild,v 1.1 2011/12/11 18:52:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/katepart-4.7.4.ebuild,v 1.2 2012/01/09 15:52:26 phajdan.jr Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ KDE_SCM="git"
 inherit kde4-meta
 
 DESCRIPTION="KDE Editor KPart"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86"
 IUSE="debug"
 
 RESTRICT="test"

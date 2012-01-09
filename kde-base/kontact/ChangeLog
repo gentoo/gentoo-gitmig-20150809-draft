@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kontact
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.201 2011/12/12 01:20:17 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.202 2012/01/09 17:03:15 phajdan.jr Exp $
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> kontact-4.7.4.ebuild:
+  x86 stable wrt bug #396359
 
   12 Dec 2011; Jonathan Callen <abcd@gentoo.org>
   -files/kontact-4.4.10-asyncako.patch:
