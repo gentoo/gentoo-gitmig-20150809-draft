@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.143 2011/08/12 23:28:17 keri Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.144 2012/01/09 08:26:49 keri Exp $
+
+*mercury-11.07 (09 Jan 2012)
+
+  09 Jan 2012; <keri@gentoo.org> +mercury-11.07.ebuild:
+  Version bump
 
   12 Aug 2011; <keri@gentoo.org> -mercury-0.13.1-r2.ebuild,
   -files/mercury-0.13.1-docs.patch, -files/mercury-0.13.1-libgrades.patch,
