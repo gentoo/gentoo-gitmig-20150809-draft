@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.44 2011/11/17 18:57:24 reavertm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.45 2012/01/09 06:06:19 ssuominen Exp $
+
+  09 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  openscenegraph-3.0.1.ebuild, +files/openscenegraph-3.0.1-xinelib12x.patch:
+  Fix compability with xine-lib >= 1.2.x wrt #397643 by Martin von Gagern
 
   17 Nov 2011; Maciej Mrozowski <reavertm@gentoo.org>
   +files/openscenegraph-3.0.1-libav-0.7.patch, openscenegraph-3.0.1.ebuild:
