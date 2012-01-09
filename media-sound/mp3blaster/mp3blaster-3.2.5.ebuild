@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.5.ebuild,v 1.8 2010/11/01 01:53:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.5.ebuild,v 1.9 2012/01/09 17:13:54 ssuominen Exp $
 
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Text console based program for playing audio files"
@@ -11,33 +12,29 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="esd lirc oss sdl sid vorbis"
+IUSE="lirc oss sdl sid vorbis"
 
-RDEPEND=">=sys-libs/ncurses-5.2
+RDEPEND=">=sys-libs/ncurses-5.7-r7
 	lirc? ( app-misc/lirc )
-	vorbis? ( >=media-libs/libvorbis-1 )
+	sdl? ( media-libs/libsdl )
 	sid? ( =media-libs/libsidplay-1* )
-	esd? ( media-sound/esound )
-	sdl? ( media-libs/libsdl )"
+	vorbis? ( >=media-libs/libvorbis-1 )"
 DEPEND="${RDEPEND}
 	x11-misc/imake"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# File collision with media-sound/splay.
-	sed -i -e "s:splay.1:splay_mp3blaster.1:" Makefile.in
-	mv splay.1 splay_mp3blaster.1
+REQUIRED_USE="|| ( oss sdl )"
+
+DOCS="AUTHORS BUGS ChangeLog CREDITS FAQ NEWS README TODO"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+	# file collision with media-sound/splay
+	sed -i -e 's:splay.1:splay_mp3blaster.1:' Makefile.in || die
+	mv -vf splay.1 splay_mp3blaster.1 || die
 }
 
-src_compile() {
-	local myconf
-	if ! use esd && ! use sdl && ! use oss ; then
-		ewarn "You've disabled esd, sdl, and oss.  Enabling oss for you."
-		myconf="--with-oss"
-	fi
-
-	# newthreads and libpth support is broken.
+src_configure() {
+	# libpth and newthreads support are both broken
 	econf \
 		--disable-newthreads \
 		--without-pth \
@@ -45,16 +42,13 @@ src_compile() {
 		$(use_with lirc) \
 		$(use_with vorbis oggvorbis) \
 		$(use_with sid sidplay) \
-		$(use_with esd) \
+		--without-esd \
 		$(use_with sdl) \
-		$(use_with oss) \
-		${myconf}
-	emake || die "emake failed."
+		$(use_with oss)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	# File collision with media-sound/splay.
-	mv "${D}"/usr/bin/splay "${D}"/usr/bin/splay_mp3blaster || die
-	dodoc AUTHORS BUGS ChangeLog CREDITS FAQ NEWS README TODO
+	default
+	# file collision with media-sound/splay
+	mv -vf "${ED}"usr/bin/splay "${ED}"usr/bin/splay_mp3blaster || die
 }
