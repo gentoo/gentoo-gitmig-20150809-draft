@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80-r1.ebuild,v 1.7 2011/03/24 07:21:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80-r1.ebuild,v 1.8 2012/01/09 16:49:51 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="http://www.${PN}.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~mips ~ppc ~sparc x86"
-IUSE="alsa audiofile doc esd flac gtk id3tag jack mad nas nls ogg opengl oss vorbis xosd"
+IUSE="alsa audiofile doc flac gtk id3tag jack mad nas nls ogg opengl oss vorbis xosd"
 # mikmod is disabled wrt #279344
 
 RDEPEND="media-libs/libsndfile
@@ -21,7 +21,6 @@ RDEPEND="media-libs/libsndfile
 	gtk? ( >=x11-libs/gtk+-2.8:2 )
 	alsa? ( media-libs/alsa-lib )
 	audiofile? ( media-libs/audiofile )
-	esd? ( media-sound/esound )
 	flac? ( media-libs/flac )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.80 )
 	nas? ( media-libs/nas )
@@ -49,14 +48,14 @@ src_configure() {
 
 	local myconf
 
-	if ! use alsa && ! use oss && ! use esd && ! use jack && ! use nas; then
+	if ! use alsa && ! use oss && ! use jack && ! use nas; then
 		ewarn "You've disabled alsa, oss, esd, jack and nas. Enabling oss for you."
 		myconf="${myconf} --enable-oss"
 	fi
 
 	econf --disable-sgi \
 		$(use_enable audiofile) \
-		$(use_enable esd) \
+		--disable-esd \
 		$(use_enable flac) \
 		$(use_enable gtk gtk2) \
 		$(use_enable id3tag) \
