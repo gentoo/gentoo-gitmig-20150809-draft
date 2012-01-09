@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.5-r1.ebuild,v 1.1 2012/01/09 17:34:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.5-r1.ebuild,v 1.2 2012/01/09 18:33:54 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -51,6 +51,10 @@ src_configure() {
 
 src_install() {
 	default
+
+	mv -vf "${ED}"usr/share/${PN}/charmap/README \
+		"${ED}"usr/share/doc/${PF}/README.charmap || die
+
 	# file collision with media-sound/splay
 	mv -vf "${ED}"usr/bin/splay{,_mp3blaster} || die
 }
