@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jpeginfo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.24 2011/12/18 20:18:05 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.25 2012/01/09 21:02:17 ranger Exp $
+
+  09 Jan 2012; Brent Baude <ranger@gentoo.org> jpeginfo-1.6.1.ebuild:
+  Marking jpeginfo-1.6.1 ppc for bug 393717
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> jpeginfo-1.6.1.ebuild:
   x86 stable wrt bug #393717
