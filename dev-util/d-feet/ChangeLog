@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/d-feet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.11 2011/12/21 22:14:26 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.12 2012/01/09 10:27:56 nirbheek Exp $
+
+  09 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> d-feet-0.1.12.ebuild,
+  d-feet-0.1.14.ebuild:
+  Fix homepage
 
 *d-feet-0.1.14 (21 Dec 2011)
 
