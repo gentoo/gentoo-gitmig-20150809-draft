@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.3.2.ebuild,v 1.1 2012/01/09 07:27:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.3.2.ebuild,v 1.2 2012/01/09 15:57:42 ssuominen Exp $
 
 EAPI=4
 
-DESCRIPTION="A server and libraries for redirecting USB traffic"
+DESCRIPTION="A simple TCP daemon and set of libraries for the usbredir protocol (redirecting USB traffic)"
 HOMEPAGE="http://spice-space.org/page/UsbRedir"
 SRC_URI="http://spice-space.org/download/${PN}/${P}.tar.bz2"
 
