@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.5-r1.ebuild,v 1.3 2012/01/09 18:44:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.5-r1.ebuild,v 1.4 2012/01/09 18:47:03 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -51,6 +51,8 @@ src_configure() {
 
 src_install() {
 	default
+
+	doman "${WORKDIR}"/debian/manpages/mp3tag.1
 
 	# relocate everything except commands.txt because it's used by src/main.cc
 	mv -vf "${ED}"usr/share/${PN}/{charmap,sample.*} "${ED}"usr/share/doc/${PF} || die
