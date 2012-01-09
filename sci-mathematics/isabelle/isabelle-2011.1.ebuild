@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1.ebuild,v 1.1 2012/01/08 12:35:43 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1.ebuild,v 1.2 2012/01/09 13:49:21 gienah Exp $
 
 EAPI="4"
 
@@ -8,7 +8,6 @@ JAVA_PKG_OPT_USE="graphbrowsing"
 inherit eutils java-pkg-opt-2 multilib versionator
 
 MY_PN="Isabelle"
-typeset -u MY_PV
 MY_PV=$(replace_all_version_separators '-')
 MY_P="${MY_PN}${MY_PV}"
 
@@ -20,26 +19,19 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 ALL_LOGICS="Pure FOL +HOL ZF CCL CTT Cube FOLP LCF Sequents"
-IUSE="${ALL_LOGICS} doc graphbrowsing +pdf +proofgeneral"
+IUSE="${ALL_LOGICS} doc graphbrowsing +proofgeneral test"
 
 #upstream says
 #bash 2.x/3.x, Poly/ML 5.x, Perl 5.x,
 #for document preparation: complete LaTeX
 DEPEND=">=app-shells/bash-3.0
-		>=dev-lang/polyml-5.4.1
+		>=dev-lang/polyml-5.4.1[-portable]
 		>=dev-lang/perl-5.8.8-r2"
 
 RDEPEND="doc? (
 		virtual/latex-base
 		dev-tex/rail
 	)
-	pdf? ( || ( app-text/xpdf
-		app-text/gv
-		app-text/gsview
-		app-text/epdfview
-		app-text/acroread
-		app-text/zathura )
-		)
 	proofgeneral? (
 		app-emacs/proofgeneral
 	)
@@ -67,9 +59,11 @@ src_prepare() {
 		polymlver=$(poly -v | cut -d' ' -f2)
 		polymlarch=$(poly -v | cut -d' ' -f9 | cut -d'-' -f1)
 		sed -e "s@5.4.0@${polymlver}@g" \
-			-i "${S}/etc/settings" || die "Could not configure polyml version in etc/settings"
+			-i "${S}/etc/settings" \
+			|| die "Could not configure polyml version in etc/settings"
 		sed -e "s@x86_64@${polymlarch}@g" \
-			-i "${S}/etc/settings" || die "Could not configure polyml arch in etc/settings"
+			-i "${S}/etc/settings" \
+			|| die "Could not configure polyml arch in etc/settings"
 	fi
 	if use graphbrowsing; then
 		epatch "${FILESDIR}/${PN}-2011.1-graphbrowser.patch"
@@ -88,16 +82,18 @@ src_compile() {
 	./bin/isabelle makeall || die "isabelle makeall failed"
 	if use graphbrowsing
 	then
-		rm -f "${S}/lib/browser/GraphBrowser.jar" || die "failed cleaning graph browser directory"
-		cd "${S}/lib/browser"
+		rm -f "${S}/lib/browser/GraphBrowser.jar" \
+			|| die "failed cleaning graph browser directory"
+		pushd "${S}/lib/browser" \
+			|| die "Could not change directory to lib/browser"
 		./build || die "failed building the graph browser"
-		cd "${S}"
+		popd
 	fi
 }
 
 src_test() {
 	einfo "Running tests. A test run can take up to several hours!"
-	./build -b -t
+	./build -b -t || die "tests failed"
 }
 
 src_install() {
@@ -139,10 +135,8 @@ src_install() {
 
 pkg_postinst() {
 	elog "You will need to re-emerge Isabelle after emerging polyml."
-	if use pdf; then
-		einfo "Please configure your preferred pdf viewer by editing"
-		einfo "the PDF_VIEWER variable in the system settings file"
-		einfo "/etc/conf/isabelle and/or the user settings file"
-		einfo "\$HOME/.isabelle/${MY_P}"
-	fi
+	elog "Please configure your preferred pdf viewer by editing"
+	elog "the PDF_VIEWER variable in the system settings file"
+	elog "/etc/isabelle/settings and/or the user settings file"
+	elog "\$HOME/.isabelle/${MY_P}/etc/settings"
 }
