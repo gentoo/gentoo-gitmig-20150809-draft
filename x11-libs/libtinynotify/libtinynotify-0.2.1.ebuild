@@ -1,13 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/libtinynotify-0.2.ebuild,v 1.2 2011/09/18 09:28:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/libtinynotify-0.2.1.ebuild,v 1.1 2012/01/09 20:45:53 mgorny Exp $
 
 EAPI=4
+
 inherit autotools-utils
 
 DESCRIPTION="A lightweight implementation of Desktop Notification Spec"
 HOMEPAGE="https://github.com/mgorny/libtinynotify/"
-SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
