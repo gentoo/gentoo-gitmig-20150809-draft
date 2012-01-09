@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/atop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.36 2010/12/13 10:25:36 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.37 2012/01/09 21:45:56 sping Exp $
+
+*atop-1.26-r1 (09 Jan 2012)
+
+  09 Jan 2012; Sebastian Pipping <sping@gentoo.org> +atop-1.26-r1.ebuild,
+  +files/atop-1.26-cve-2011-3618.patch:
+  Integrate custom patch for CVE-2011-3618 (bug #363887)
 
 *atop-1.26 (13 Dec 2010)
 
