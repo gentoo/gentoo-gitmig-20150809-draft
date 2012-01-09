@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/polyml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.5 2012/01/08 15:25:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.6 2012/01/09 12:46:58 gienah Exp $
+
+  09 Jan 2012; Mark Wright <gienah@gentoo.org> polyml-5.4.1.ebuild,
+  +files/polyml-5.4.1-configure.patch:
+  Fix upstream bug: --without-portable was equivalent to --with-portable. Add
+  tests.
 
   08 Jan 2012; Mark Wright <gienah@gentoo.org> polyml-5.4.1.ebuild:
   Thanks to few_ and xarthisius for reviewing, remove econf repetition, - on
