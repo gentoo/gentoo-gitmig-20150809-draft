@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.7 2012/01/07 20:38:03 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.8 2012/01/09 15:33:10 nirbheek Exp $
+
+  09 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> spice-gtk-0.7.159.ebuild,
+  metadata.xml:
+  Add usbredir support, remove USE=cairo, + other minor ebuild changes. Update
+  vala use-description. Add myself to metadata.xml with dev-zero's permission.
 
 *spice-gtk-0.7.159 (07 Jan 2012)
 
