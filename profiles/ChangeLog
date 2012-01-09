@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6090 2012/01/08 23:46:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6091 2012/01/09 09:36:19 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite sys-fs/zfs-fuse.
 
   08 Jan 2012; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Update package.mask for vulnerable MySQL versions.
