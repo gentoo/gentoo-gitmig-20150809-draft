@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/i3lock-2.2.ebuild,v 1.1 2011/11/07 19:23:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/i3lock-2.2.ebuild,v 1.2 2012/01/09 13:12:16 xarthisius Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="virtual/pam
 	cairo? ( x11-libs/cairo[xcb] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-DOC=( README )
+DOCS=( README )
 
 pkg_setup() {
 	tc-export CC
