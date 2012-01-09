@@ -1,15 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.0.ebuild,v 1.1 2012/01/08 16:59:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.0.ebuild,v 1.2 2012/01/09 17:21:57 bicatali Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
 inherit eutils fortran-2 distutils flag-o-matic toolchain-funcs versionator
-
-DISTUTILS_SRC_TEST=nosetests
 
 DESCRIPTION="Scientific algorithms library for Python"
 HOMEPAGE="http://www.scipy.org/ http://pypi.python.org/pypi/scipy"
@@ -21,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="BSD LGPL-2"
 SLOT="0"
-IUSE="doc umfpack"
+IUSE="doc test umfpack"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 CDEPEND="dev-python/numpy
@@ -35,6 +33,7 @@ CDEPEND="dev-python/numpy
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-arch/unzip )
+	test? ( dev-python/nose )
 	umfpack? ( dev-lang/swig )"
 
 RDEPEND="virtual/fortran

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.73 2012/01/08 16:59:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.74 2012/01/09 17:21:57 bicatali Exp $
+
+  09 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> scipy-0.10.0.ebuild:
+  Restrict pypy, removed DISTUTILS_SRC_TEST
 
 *scipy-0.10.0 (08 Jan 2012)
 
