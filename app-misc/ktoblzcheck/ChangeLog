@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.77 2012/01/08 01:06:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.78 2012/01/09 19:16:51 ranger Exp $
+
+  09 Jan 2012; Brent Baude <ranger@gentoo.org> ktoblzcheck-1.33.ebuild:
+  Marking ktoblzcheck-1.33 ppc for bug 397841
 
   08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> ktoblzcheck-1.33.ebuild:
   Stable on amd64 wrt bug #397841
