@@ -1,8 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.74 2011/12/22 12:27:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.75 2012/01/09 04:36:34 tetromino Exp $
 
 # This file requires >=portage-2.1.1
+
+# Alexandre Rostovtsev <tetromono@gentoo.org> (09 Jan 2012)
+# jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
+# it's masked in base profile and unmasked here (bug #396313).
+net-libs/webkit-gtk -jit
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Dec 2011)
 # NuppelVideo support is x86 only
