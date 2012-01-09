@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20101212.ebuild,v 1.1 2010/12/12 13:23:07 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20101212.ebuild,v 1.2 2012/01/09 20:12:26 ago Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/fbsplash-theme-emergence-r2.tar.bz2
 IUSE=""
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 RDEPEND=">=media-gfx/splashutils-1.1.9.5[png]"
 DEPEND="${RDEPEND}"
 RESTRICT="binchecks strip"
