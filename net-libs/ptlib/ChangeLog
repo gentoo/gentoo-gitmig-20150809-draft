@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.28 2012/01/04 20:07:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.29 2012/01/09 12:14:19 ago Exp $
+
+  09 Jan 2012; Agostino Sarubbo <ago@gentoo.org> ptlib-2.6.7-r1.ebuild:
+  Stable for AMD64, wrt bug #397617
 
   04 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> ptlib-2.6.7-r1.ebuild:
   Make installation of static libraries optional, reported by ago
