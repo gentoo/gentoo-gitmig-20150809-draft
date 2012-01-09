@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.17.ebuild,v 1.5 2011/05/28 16:48:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.17.ebuild,v 1.6 2012/01/09 20:54:14 eras Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ DEPEND="berkdb? ( sys-libs/db )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( dev-db/postgresql-base !dev-db/postgresql-base[ldap,threads] )
 	sqlite? ( dev-db/sqlite )
 	ssl? ( dev-libs/openssl )
 	vpopmail? ( net-mail/vpopmail )"

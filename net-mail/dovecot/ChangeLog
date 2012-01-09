@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.336 2012/01/06 22:25:52 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.337 2012/01/09 20:54:14 eras Exp $
+
+  09 Jan 2012; Eray Aslan <eras@gentoo.org> dovecot-1.2.17.ebuild,
+  dovecot-2.0.15.ebuild, dovecot-2.0.16.ebuild, dovecot-2.0.16-r1.ebuild,
+  dovecot-2.0.17.ebuild, dovecot-2.1_rc3.ebuild:
+  block against postgresql-base[ldap,threads] - bug #396691
 
 *dovecot-2.1_rc3 (06 Jan 2012)
 
