@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.5.0.ebuild,v 1.1 2007/12/07 11:03:41 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.5.0.ebuild,v 1.2 2012/01/09 07:15:10 ssuominen Exp $
+
+EAPI=1
 
 DESCRIPTION="Temperature logging and reporting using Dallas Semiconductor's iButtons and 1-Wire protocol"
 HOMEPAGE="http://www.digitemp.com/ http://www.ibutton.com/"
@@ -11,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="ds2490? ( >=dev-libs/libusb-0.1.10a )"
+DEPEND="ds2490? ( virtual/libusb:0 )"
 
 targets() {
 	# default is to compile to the ds9097u.

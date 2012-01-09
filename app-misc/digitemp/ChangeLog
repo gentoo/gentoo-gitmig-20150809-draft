@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/digitemp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.17 2010/07/19 00:25:42 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.18 2012/01/09 07:15:10 ssuominen Exp $
+
+  09 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> digitemp-3.3.2.ebuild,
+  digitemp-3.5.0.ebuild, digitemp-3.5.0-r1.ebuild:
+  Fix libusb depend to pull in correct SLOT wrt #340100 by David Sveningsson
 
 *digitemp-3.5.0-r1 (19 Jul 2010)
 
