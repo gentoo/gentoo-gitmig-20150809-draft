@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20120102.ebuild,v 1.1 2012/01/06 11:12:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20120108.ebuild,v 1.1 2012/01/09 21:49:13 eras Exp $
 
 EAPI=4
 
@@ -109,7 +109,7 @@ src_configure() {
 	fi
 
 	# broken. and "in other words, not supported" by upstream.
-	# and I'd rather not patch. Use inet_protocols setting in main.cf
+	# Use inet_protocols setting in main.cf
 	#if ! use ipv6; then
 	#	mycc="${mycc} -DNO_IPV6"
 	#fi
