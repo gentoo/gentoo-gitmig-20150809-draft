@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircservices
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.51 2011/12/26 14:43:25 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.52 2012/01/09 19:49:51 ranger Exp $
+
+  09 Jan 2012; Brent Baude <ranger@gentoo.org> ircservices-5.1.24.ebuild:
+  Marking ircservices-5.1.24 ppc for bug 394387
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> ircservices-5.1.24.ebuild:
   x86 stable, bug #394387
