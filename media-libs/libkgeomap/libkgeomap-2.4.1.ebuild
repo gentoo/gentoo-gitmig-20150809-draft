@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-2.4.1.ebuild,v 1.1 2011/12/06 02:32:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-2.4.1.ebuild,v 1.2 2012/01/09 17:57:41 phajdan.jr Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.digikam.org/"
 SRC_URI="mirror://sourceforge/${DIGIKAMPN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 SLOT=4
 
