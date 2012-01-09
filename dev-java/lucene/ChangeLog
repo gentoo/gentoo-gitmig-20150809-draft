@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lucene
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.84 2011/12/31 13:57:16 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.85 2012/01/09 13:18:04 xmw Exp $
+
+  09 Jan 2012; Michael Weber <xmw@gentoo.org> lucene-2.9.4.ebuild:
+  ppc stable (bug 356807)
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> lucene-1.4.3-r3.ebuild,
   lucene-1.9.1.ebuild:
