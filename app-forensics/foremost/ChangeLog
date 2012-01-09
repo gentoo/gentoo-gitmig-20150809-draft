@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/foremost
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.25 2011/11/28 11:40:34 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.26 2012/01/09 19:02:59 ranger Exp $
+
+  09 Jan 2012; Brent Baude <ranger@gentoo.org> foremost-1.5.7-r1.ebuild:
+  Marking foremost-1.5.7-r1 ppc for bug 391467
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   foremost-1.5.7-r1.ebuild:
