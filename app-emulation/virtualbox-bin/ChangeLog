@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.122 2011/12/20 12:40:26 polynomial-c Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.123 2012/01/09 21:42:10 polynomial-c Exp $
+
+  09 Jan 2012; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-bin-4.1.8.ebuild:
+  Install better looking icons. Thanks to cpglsn from IRC for testing.
 
 *virtualbox-bin-4.1.8 (20 Dec 2011)
 

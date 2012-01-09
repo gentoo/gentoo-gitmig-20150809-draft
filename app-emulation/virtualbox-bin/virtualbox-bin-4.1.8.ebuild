@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.1.8.ebuild,v 1.1 2011/12/20 12:40:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.1.8.ebuild,v 1.2 2012/01/09 21:42:10 polynomial-c Exp $
 
 EAPI=2
 
-inherit eutils fdo-mime pax-utils
+inherit eutils fdo-mime gnome2 pax-utils
 
 MY_PV=${PV}-75467
 SDK_PV=${MY_PV}
@@ -171,13 +171,32 @@ src_unpack() {
 	fi
 }
 
+src_configure() {
+	:;
+}
+
+src_compile() {
+	:;
+}
+
 src_install() {
 	# create virtualbox configurations files
 	insinto /etc/vbox
 	newins "${FILESDIR}/${PN}-config" vbox.cfg
 
 	if ! use headless ; then
-		newicon VBox.png ${PN}.png
+		pushd "${S}"/icons &>/dev/null || die
+		for size in * ; do
+			if [ -f "${size}/virtualbox.png" ] ; then
+				insinto "/usr/share/icons/hicolor/${size}/apps"
+				newins "${size}/virtualbox.png" ${PN}.png
+			fi
+		done
+		dodir /usr/share/pixmaps
+		cp "48x48/virtualbox.png" "${D}/usr/share/pixmaps/${PN}.png" \
+			|| die
+		popd &>/dev/null || die
+
 		newmenu "${FILESDIR}"/${PN}.desktop-2 ${PN}.desktop
 	fi
 
@@ -302,6 +321,8 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+
+	gnome2_icon_cache_update
 
 	udevadm control --reload-rules && udevadm trigger --subsystem-match=usb
 
