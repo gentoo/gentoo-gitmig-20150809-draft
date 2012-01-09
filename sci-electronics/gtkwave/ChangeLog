@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.66 2012/01/08 16:22:24 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.67 2012/01/09 06:13:57 tomjbe Exp $
+
+  09 Jan 2012; Thomas Beierlein <tomjbe@gentoo.org> gtkwave-3.3.28.ebuild:
+  Revert flag stripping (bug #377935).
 
 *gtkwave-3.3.28 (08 Jan 2012)
 

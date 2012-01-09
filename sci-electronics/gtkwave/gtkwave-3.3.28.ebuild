@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.28.ebuild,v 1.1 2012/01/08 16:22:24 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.28.ebuild,v 1.2 2012/01/09 06:13:57 tomjbe Exp $
 
 EAPI="2"
-
-inherit flag-o-matic
 
 DESCRIPTION="A wave viewer for LXT, LXT2, VZT, GHW and standard Verilog VCD/EVCD files"
 HOMEPAGE="http://gtkwave.sourceforge.net/"
@@ -32,7 +30,6 @@ src_prepare(){
 }
 
 src_configure(){
-	strip-flags
 	econf --disable-local-libz \
 		--disable-local-libbz2 \
 		--disable-dependency-tracking \
