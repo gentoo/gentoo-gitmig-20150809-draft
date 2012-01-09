@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chrpath
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.23 2011/12/07 07:45:48 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.24 2012/01/09 19:51:17 ranger Exp $
+
+  09 Jan 2012; Brent Baude <ranger@gentoo.org> chrpath-0.13-r2.ebuild:
+  Marking chrpath-0.13-r2 ppc for bug 391239
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> chrpath-0.13-r2.ebuild:
   x86 stable wrt bug #391239
