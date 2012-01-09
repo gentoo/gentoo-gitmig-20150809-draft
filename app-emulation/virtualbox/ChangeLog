@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.96 2011/12/27 21:53:21 polynomial-c Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.97 2012/01/09 22:50:22 polynomial-c Exp $
+
+  09 Jan 2012; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.1.8.ebuild:
+  Install better looking icons.
 
   27 Dec 2011; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.1.4.ebuild:
   Added yasm-1.2.0 fix to stable package, too.

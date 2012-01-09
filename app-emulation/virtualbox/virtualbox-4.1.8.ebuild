@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.8.ebuild,v 1.1 2011/12/20 13:14:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.8.ebuild,v 1.2 2012/01/09 22:50:22 polynomial-c Exp $
 
 EAPI=4
 
@@ -303,7 +303,14 @@ src_install() {
 			newmenu "${FILESDIR}"/${PN}-ose.desktop-2 ${PN}.desktop
 		fi
 
-		newicon	"${S}"/src/VBox/Frontends/VirtualBox/images/OSE/VirtualBox_32px.png ${PN}.png
+		pushd "${S}"/src/VBox/Resources/OSE &>/dev/null || die
+		for size in 16 20 32 40 48 64 128 ; do
+			insinto /usr/share/icons/hicolor/${size}x${size}/apps
+			newins ${PN}-${size}px.png ${PN}.png
+		done
+		insinto /usr/share/pixmaps
+		newins ${PN}-48px.png ${PN}.png
+		popd &>/dev/null || die
 	else
 		doins VBoxHeadless || die
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/VBoxHeadless
@@ -311,6 +318,7 @@ src_install() {
 		pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxHeadless
 	fi
 
+	insinto /usr/$(get_libdir)/${PN}
 	# Install EFI Firmware files (bug #320757)
 	pushd "${S}"/src/VBox/Devices/EFI/FirmwareBin &>/dev/null || die
 	for fwfile in VBoxEFI{32,64}.fd ; do
