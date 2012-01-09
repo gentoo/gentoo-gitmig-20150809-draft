@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/distcc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.212 2011/12/27 16:09:23 ultrabug Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.213 2012/01/09 13:29:10 wired Exp $
+
+*distcc-3.1-r6 (09 Jan 2012)
+
+  09 Jan 2012; Alex Alexander <wired@gentoo.org> +distcc-3.1-r6.ebuild,
+  +files/distcc-3.1-argc-fix.patch:
+  added patch that increases argc properly, fixing virtualbox compilation.
+  acked by xarthisius and Ultrabug, bug #351979
 
   27 Dec 2011; Ultrabug <ultrabug@gentoo.org> files/3.1/init:
   Fix 3.1 series init script wrt #390063 thanks to André-Sebastian Liebe.
