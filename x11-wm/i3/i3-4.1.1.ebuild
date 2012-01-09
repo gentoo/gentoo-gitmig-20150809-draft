@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.1.1.ebuild,v 1.1 2011/12/24 19:59:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.1.1.ebuild,v 1.2 2012/01/09 13:06:11 xarthisius Exp $
 
 EAPI=4
 
@@ -30,10 +30,6 @@ DEPEND="${CDEPEND}
 	sys-devel/bison
 	x11-proto/xcb-proto"
 RDEPEND="${CDEPEND}
-	dev-perl/AnyEvent-I3
-	dev-perl/IPC-Run
-	dev-perl/Try-Tiny
-	virtual/perl-Getopt-Long
 	x11-apps/xmessage"
 
 DOCS=( RELEASE-NOTES-${PV} )
