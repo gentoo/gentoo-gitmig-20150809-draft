@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.10 2012/01/04 10:34:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.11 2012/01/09 13:24:15 nirbheek Exp $
 
 EAPI=3
 
@@ -140,6 +140,9 @@ src_prepare() {
 		sed -i -e "s:\(KDE_LIBS=.*\)\(-lkdeui\):\1-L${KDEDIR}/$(get_libdir) \2:" \
 			configure || die "sed failed"
 	fi
+
+	# Remove silly -D*_DISABLE_DEPRECATED CFLAGS
+	sed -e 's/-D[^\s\t]\+_DISABLE_DEPRECATED//g' -i configure || die
 }
 
 src_test() {

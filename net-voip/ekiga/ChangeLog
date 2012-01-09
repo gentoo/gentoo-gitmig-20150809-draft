@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.29 2012/01/04 10:34:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.30 2012/01/09 13:24:15 nirbheek Exp $
+
+  09 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> ekiga-3.2.7.ebuild:
+  Fix build failure due to DISABLE_DEPRECATED flags, bug 398245
 
   04 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> ekiga-3.2.7.ebuild:
   Add ldap? dep to ptlib, fixes bug 393059
