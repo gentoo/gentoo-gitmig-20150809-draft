@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.224 2012/01/05 23:32:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.225 2012/01/09 07:19:17 ssuominen Exp $
+
+  09 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> lirc-0.8.5.ebuild,
+  lirc-0.8.7_pre1.ebuild, lirc-0.8.7.ebuild, lirc-0.9.0.ebuild:
+  Fix libusb depend to pull in correct SLOT wrt #378385 by Luis Navarro
 
   05 Jan 2012; Michael Weber <xmw@gentoo.org> lirc-0.8.7.ebuild:
   ppc stable (bug 343659)

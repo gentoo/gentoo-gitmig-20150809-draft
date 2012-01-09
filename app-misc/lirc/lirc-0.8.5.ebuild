@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.5.ebuild,v 1.10 2010/11/01 09:00:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.5.ebuild,v 1.11 2012/01/09 07:19:17 ssuominen Exp $
+
+EAPI=1
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -77,7 +79,7 @@ LIBFTDI_USED_BY_DEV="
 	ftdi usbirboy userspace"
 
 for dev in ${LIBUSB_USED_BY_DEV}; do
-	DEPEND="${DEPEND} lirc_devices_${dev}? ( dev-libs/libusb )"
+	DEPEND="${DEPEND} lirc_devices_${dev}? ( virtual/libusb:0 )"
 done
 
 for dev in ${LIBFTDI_USED_BY_DEV}; do
