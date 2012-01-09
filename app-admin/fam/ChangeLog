@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.69 2012/01/05 16:03:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.70 2012/01/09 17:00:14 ranger Exp $
+
+  09 Jan 2012; Brent Baude <ranger@gentoo.org> fam-2.7.0-r6.ebuild:
+  Marking fam-2.7.0-r6 ppc for bug 396749
 
   05 Jan 2012; Jeroen Roovers <jer@gentoo.org> fam-2.7.0-r6.ebuild:
   Do not install libfam.la when USE=-static-libs.
