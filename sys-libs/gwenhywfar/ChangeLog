@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.93 2012/01/09 19:11:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.94 2012/01/09 21:41:27 ago Exp $
+
+  09 Jan 2012; Agostino Sarubbo <ago@gentoo.org> gwenhywfar-4.2.1.ebuild:
+  Stable for AMD64, wrt bug #397851
 
   09 Jan 2012; Brent Baude <ranger@gentoo.org> gwenhywfar-4.2.1.ebuild:
   Marking gwenhywfar-4.2.1 ppc for bug 397851
