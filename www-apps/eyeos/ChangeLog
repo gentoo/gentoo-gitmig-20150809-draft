@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/eyeos
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/ChangeLog,v 1.11 2011/05/23 08:36:57 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/ChangeLog,v 1.12 2012/01/09 18:07:44 voyageur Exp $
+
+  09 Jan 2012; Bernard Cafarelli <voyageur@gentoo.org> -eyeos-1.9.0.3.1.ebuild,
+  -files/postinstall-en.txt:
+  Drop 1.x ebuild, this series will go on as a separate project 'oneeye'
 
 *eyeos-2.5 (23 May 2011)
 
