@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/graphviz
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.240 2011/10/16 15:23:03 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.241 2012/01/09 11:22:14 jlec Exp $
+
+*graphviz-2.26.3-r4 (09 Jan 2012)
+
+  09 Jan 2012; Justin Lecher <jlec@gentoo.org> +graphviz-2.26.3-r4.ebuild,
+  +files/graphviz-2.26.3-automake-1.11.2.patch:
+  Non-maintainer fix: Adding compatibility patch for automake-1.11.2, #396741;
+  thanks Alphat-PC for the patch
 
   16 Oct 2011; Fabian Groffen <grobian@gentoo.org> graphviz-2.26.3-r3.ebuild:
   Marked/restored ~x86-macos
