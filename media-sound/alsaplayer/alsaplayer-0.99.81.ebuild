@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.3 2012/01/09 16:49:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.4 2012/01/09 16:56:05 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -32,7 +32,9 @@ RDEPEND="media-libs/libsndfile
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	oss? ( virtual/os-headers )"
+REQUIRED_USE="|| ( alsa jack nas oss )"
 
 src_prepare() {
 	sed -i \
@@ -50,11 +52,6 @@ src_configure() {
 	use doc || export ac_cv_prog_HAVE_DOXYGEN=false
 	use xosd || export ac_cv_lib_xosd_xosd_create=no
 
-	local myconf
-	if ! use alsa && ! use oss && ! use jack && ! use nas; then
-		myconf="--enable-oss"
-	fi
-
 	econf \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable nls) \
@@ -71,8 +68,7 @@ src_configure() {
 		--disable-esd \
 		$(use_enable oss) \
 		$(use_enable gtk gtk2) \
-		$(use_enable nas) \
-		${myconf}
+		$(use_enable nas)
 }
 
 src_install() {
