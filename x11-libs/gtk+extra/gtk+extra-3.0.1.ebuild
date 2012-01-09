@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-3.0.1.ebuild,v 1.3 2011/12/29 18:14:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-3.0.1.ebuild,v 1.4 2012/01/09 17:37:09 tetromino Exp $
 
 EAPI="4"
 
@@ -8,7 +8,8 @@ inherit autotools eutils
 
 DESCRIPTION="Useful Additional GTK+ widgets"
 HOMEPAGE="http://gtkextra.sourceforge.net"
-SRC_URI="mirror://sourceforge/gtkextra/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gtkextra/${P}.tar.gz
+	mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="FDL-1.1 LGPL-2"
 SLOT="0"
@@ -25,7 +26,13 @@ src_prepare() {
 	# Fix configure,
 	# https://sourceforge.net/tracker/?func=detail&aid=3414011&group_id=11638&atid=111638
 	epatch "${FILESDIR}/${P}-fix-configure.patch"
-	eautoreconf
+
+	# Upstream patch to fix building with >=glib-2.31
+	epatch "${FILESDIR}/${P}-gunicode.h.patch"
+
+	# eautoreconf needs introspection.m4
+	cp "${WORKDIR}"/introspection.m4 . || die
+	AT_M4DIR="." eautoreconf
 }
 
 src_configure() {

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+extra
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.37 2011/12/29 18:14:32 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.38 2012/01/09 17:37:09 tetromino Exp $
+
+  09 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk+extra-3.0.1.ebuild, +files/gtk+extra-3.0.1-gunicode.h.patch:
+  introspection.m4 is required for eautoreconf (bug #397761, thanks to Oleg for
+  reporting). Also, fix building with >=glib-2.31.
 
   29 Dec 2011; Pacho Ramos <pacho@gentoo.org> gtk+extra-3.0.1.ebuild:
   amd64 stable, bug 393007
