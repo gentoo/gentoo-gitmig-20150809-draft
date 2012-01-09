@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ffmpeg-php-0.6.0-r1.ebuild,v 1.2 2012/01/09 14:53:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ffmpeg-php-0.6.0-r1.ebuild,v 1.3 2012/01/09 15:26:53 aballier Exp $
 
 EAPI="3"
 
@@ -35,6 +35,7 @@ src_prepare() {
 		cd "${WORKDIR}/${slot}"
 		epatch "${FILESDIR}/${P}-avutil50.patch"
 		epatch "${FILESDIR}/${P}-ffmpeg.patch"
+		epatch "${FILESDIR}/${P}-log.patch"
 	done
 	php-ext-source-r2_src_prepare
 }

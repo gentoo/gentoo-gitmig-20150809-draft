@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/ffmpeg-php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ChangeLog,v 1.2 2012/01/09 14:53:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ChangeLog,v 1.3 2012/01/09 15:26:53 aballier Exp $
+
+  09 Jan 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-php-0.6.0-r1.ebuild,
+  files/ffmpeg-php-0.6.0-ffmpeg.patch, +files/ffmpeg-php-0.6.0-log.patch:
+  look for metadata closer to what the test suite expects, disable logging
+  outside of php so that most of the testsuite passes now
 
   09 Jan 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-php-0.6.0-r1.ebuild,
   +files/ffmpeg-php-0.6.0-ffmpeg.patch:

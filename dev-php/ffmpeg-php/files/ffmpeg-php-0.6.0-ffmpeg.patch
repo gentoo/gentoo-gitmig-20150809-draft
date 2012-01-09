@@ -131,7 +131,7 @@ Index: work/php5.3/ffmpeg_movie.c
  
 -    RETURN_STRINGL(ffmovie_ctx->fmt_ctx->album,
 -            strlen(ffmovie_ctx->fmt_ctx->album), 1);
-+    val = get_metadata(ffmovie_ctx->fmt_ctx->metadata, "ALBUMTITLE");
++    val = get_metadata(ffmovie_ctx->fmt_ctx->metadata, "ALBUM");
 +    RETURN_STRINGL(val, strlen(val), 1);
  }
  /* }}} */
@@ -174,7 +174,7 @@ Index: work/php5.3/ffmpeg_movie.c
      GET_MOVIE_RESOURCE(ffmovie_ctx);
      
 -    RETURN_LONG(ffmovie_ctx->fmt_ctx->year);
-+    val = get_metadata(ffmovie_ctx->fmt_ctx->metadata, "YEAR");
++    val = get_metadata(ffmovie_ctx->fmt_ctx->metadata, "DATE");
 +    RETURN_STRINGL(val, strlen(val), 1);
  }
  /* }}} */
