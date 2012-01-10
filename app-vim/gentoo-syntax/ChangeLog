@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/gentoo-syntax
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.127 2011/05/03 09:34:13 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.128 2012/01/10 04:37:33 radhermit Exp $
+
+*gentoo-syntax-20120109 (10 Jan 2012)
+
+  10 Jan 2012; Tim Harder <radhermit@gentoo.org>
+  +gentoo-syntax-20120109.ebuild:
+  Version bump.
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org>
   gentoo-syntax-20101212.ebuild:
