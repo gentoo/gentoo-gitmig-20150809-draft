@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qtscriptgenerator
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.13 2011/03/26 16:46:57 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.14 2012/01/10 09:07:20 johu Exp $
+
+*qtscriptgenerator-0.1.0-r1 (10 Jan 2012)
+
+  10 Jan 2012; Johannes Huber <johu@gentoo.org>
+  +files/qtscriptgenerator-0.1.0-qt48.patch, +qtscriptgenerator-0.1.0-r1.ebuild:
+  Revision bump. EAPI 4, use qt4-r2 eclass, add fedora patch to compile with Qt
+  4.8, fixes bug #397917.
 
   26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   qtscriptgenerator-0.1.0.ebuild:
