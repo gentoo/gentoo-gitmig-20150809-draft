@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/grantlee
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.6 2011/12/07 22:06:52 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.7 2012/01/10 20:40:04 ranger Exp $
+
+  10 Jan 2012; Brent Baude <ranger@gentoo.org> grantlee-0.1.8.ebuild:
+  Marking grantlee-0.1.8 ppc for bug 396359
 
   07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> grantlee-0.1.8.ebuild:
   Stable on amd64 wrt bug #388279
