@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nspr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.175 2011/11/25 17:25:27 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.176 2012/01/10 02:14:37 anarchy Exp $
+
+*nspr-4.8.9-r1 (10 Jan 2012)
+
+  10 Jan 2012; Jory A. Pratt <anarchy@gentoo.org> +nspr-4.8.9-r1.ebuild,
+  +files/nspr-4.8.9-link-flags.patch:
+  Ensure cflags are passed during linking, bug #365975
 
   25 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> nspr-4.8.9.ebuild:
   ppc64 stable wrt #388045
