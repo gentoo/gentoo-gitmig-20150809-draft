@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.0.ebuild,v 1.6 2011/11/26 18:09:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.0.ebuild,v 1.7 2012/01/10 00:17:52 vapier Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86"
-IUSE="+debug device-mapper nls readline selinux static-libs"
+IUSE="+debug device-mapper nls readline selinux static-libs test"
 
 # specific version for gettext needed
 # to fix bug 85999
@@ -30,6 +30,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	dev-util/pkgconfig
+	test? ( >=dev-libs/check-0.9.3 )
 "
 
 src_prepare() {
@@ -40,6 +41,9 @@ src_prepare() {
 		-e '/t4100-msdos-partition-limits.sh/d' \
 		-e '/t4100-dvh-partition-limits.sh/d' \
 		-e '/t6000-dm.sh/d' || die "sed failed"
+	# there is no configure flag for controlling the dev-libs/check test
+	sed -i configure.ac \
+		-e "s:have_check=[a-z]*:have_check=$(usex test):g" || die
 
 	eautoreconf
 }
@@ -52,8 +56,7 @@ src_configure() {
 		$(use_enable selinux) \
 		$(use_enable device-mapper) \
 		$(use_enable static-libs static) \
-		--disable-rpath \
-		|| die "Configure failed"
+		--disable-rpath
 }
 
 src_test() {
