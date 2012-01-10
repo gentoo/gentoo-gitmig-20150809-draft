@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/simplegeneric-0.8.ebuild,v 1.1 2012/01/10 17:05:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/simplegeneric-0.8.ebuild,v 1.2 2012/01/10 20:48:53 mr_bones_ Exp $
 
 EAPI=4
 
@@ -22,4 +22,3 @@ IUSE=""
 DEPEND="app-arch/unzip
 	dev-python/setuptools"
 RDEPEND=""
-
