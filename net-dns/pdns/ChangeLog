@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdns
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.70 2011/12/04 10:12:32 swegener Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.71 2012/01/10 20:37:48 swegener Exp $
+
+*pdns-3.0.1 (10 Jan 2012)
+
+  10 Jan 2012; Sven Wegener <swegener@gentoo.org> +pdns-3.0.1.ebuild:
+  Version bump, security bug #398403.
 
   04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/pdns:
   split opts to extra_commands
