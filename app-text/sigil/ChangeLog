@@ -1,0 +1,11 @@
+# ChangeLog for app-text/sigil
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.1 2012/01/10 03:11:52 sbriesen Exp $
+
+*sigil-0.4.905_beta1 (10 Jan 2012)
+*sigil-0.4.2 (10 Jan 2012)
+
+  10 Jan 2012; Stefan Briesenick <sbriesen@gentoo.org> +sigil-0.4.2.ebuild,
+  +sigil-0.4.905_beta1.ebuild, +metadata.xml:
+  initial commit. solving bug #285060.
+
