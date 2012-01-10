@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.0.ebuild,v 1.2 2012/01/09 17:21:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.0.ebuild,v 1.3 2012/01/10 16:47:48 bicatali Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 CDEPEND="dev-python/numpy
 	media-libs/qhull
 	sci-libs/arpack
-	sci-libs/superlu
+	>=sci-libs/superlu-4.3
 	virtual/cblas
 	virtual/lapack
 	umfpack? ( sci-libs/umfpack )"

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.74 2012/01/09 17:21:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.75 2012/01/10 16:47:48 bicatali Exp $
+
+  10 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> scipy-0.10.0.ebuild:
+  Required dependency on superlu version increased, bug #398289
 
   09 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> scipy-0.10.0.ebuild:
   Restrict pypy, removed DISTUTILS_SRC_TEST
