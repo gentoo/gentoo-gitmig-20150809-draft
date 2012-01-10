@@ -1,14 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/files/amavisd.initd,v 1.3 2012/01/06 11:38:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/files/amavisd.initd,v 1.4 2012/01/10 13:46:47 eras Exp $
 
 extra_started_commands="reload"
 extra_commands="debug debug_sa"
 
 prog="/usr/sbin/amavisd"
 progname="amavisd-new"
-conffile="/etc/amavisd.conf"
 
 depend() {
 	need net
@@ -16,23 +15,8 @@ depend() {
 	before mta
 }
 
-checkconfig() {
-	local piddir pidfile
-	if [ -r "${conffile}" ] ; then
-		pidfile=$(grep -m1 ^[^#].*pid_file "${conffile}"|sed -e 's/.*"\(.*\)".*/\1/')
-		piddir=${pidfile%/*}
-		if [ ! -d "${piddir:=/var/amavis}" ] ; then
-			checkpath -q -d -o root:amavis -m 0770 "${piddir}" || return 1
-		fi
-	else
-		eerror "Missing conf file."
-		return 1
-	fi
-}
-
 start() {
 	ebegin "Starting ${progname}"
-	checkconfig || return 1
 	"${prog}" start
 	eend $?
 }
@@ -59,14 +43,12 @@ restart() {
 
 debug() {
 	ebegin "Starting ${progname} in debug mode"
-	checkconfig || return 1
 	"${prog}" debug
 	eend $?
 }
 
 debug_sa() {
 	ebegin "Starting ${progname} in debug-sa mode"
-	checkconfig || return 1
 	"${prog}" debug-sa
 	eend $?
 }
