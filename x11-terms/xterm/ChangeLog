@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.345 2011/12/27 21:14:28 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.346 2012/01/10 14:28:49 ssuominen Exp $
+
+*xterm-277 (10 Jan 2012)
+
+  10 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +xterm-277.ebuild:
+  Version bump.
 
   27 Dec 2011; Markus Meier <maekke@gentoo.org> xterm-276.ebuild:
   x86 stable, bug #394393
