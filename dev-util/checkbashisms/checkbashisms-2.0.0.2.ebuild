@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkbashisms/checkbashisms-2.0.0.2.ebuild,v 1.1 2012/01/10 07:24:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkbashisms/checkbashisms-2.0.0.2.ebuild,v 1.2 2012/01/10 23:20:01 robbat2 Exp $
 
 EAPI=4
 
 DESCRIPTION="Perl script to check for commonly used bash features not defined by POSIX"
-HOMEPAGE="http://sourceforge.net/projects/checkbashisms/"
+# "checkbaskisms" is not a typo, it's the actual upstream SF project name.
+HOMEPAGE="http://sourceforge.net/projects/checkbaskisms/"
 SRC_URI="mirror://sourceforge/checkbaskisms/${PV}/${PN} -> ${P}"
 
 LICENSE="GPL-2"
