@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.45 2012/01/07 18:33:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.46 2012/01/10 17:06:04 ago Exp $
+
+  10 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libnids-1.18-r1.ebuild,
+  libnids-1.24-r1.ebuild:
+  Stable for AMD64, wrt bug #397159
 
   07 Jan 2012; Jeroen Roovers <jer@gentoo.org> files/libnids-1.18-elif.patch:
   Clean up patch.
