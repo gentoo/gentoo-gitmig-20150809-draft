@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/checkbashisms
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkbashisms/ChangeLog,v 1.1 2012/01/10 07:24:48 robbat2 Exp $
+
+*checkbashisms-2.0.0.2 (10 Jan 2012)
+
+  10 Jan 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +checkbashisms-2.0.0.2.ebuild, +metadata.xml:
+  Initial commit. Bug #398275, ebuild submitted by Michael
+  <gentoo@scribeofthenile.com>.
+
