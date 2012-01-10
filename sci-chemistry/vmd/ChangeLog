@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/vmd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.42 2011/07/20 16:58:14 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.43 2012/01/10 13:49:48 jlec Exp $
+
+  10 Jan 2012; Justin Lecher <jlec@gentoo.org> vmd-1.9.ebuild, metadata.xml:
+  Enhance nofetch msg, fix compilation with USE=cuda and gcc != 4.4*, thanks
+  xarthisius for the help
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #105599
