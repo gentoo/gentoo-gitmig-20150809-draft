@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.1-r1.ebuild,v 1.1 2011/12/19 14:13:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.1-r1.ebuild,v 1.2 2012/01/10 10:21:27 ago Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -18,7 +18,8 @@ IUSE="utils"
 
 DEPEND="dev-util/pkgconfig"
 RDEPEND=">=dev-libs/nspr-${NSPR_VER}
-	>=dev-db/sqlite-3.5"
+	>=dev-db/sqlite-3.5
+	sys-libs/zlib"
 
 src_prepare() {
 	# Custom changes for gentoo
@@ -26,29 +27,29 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.12.6-gentoo-fixup-warnings.patch"
 	epatch "${FILESDIR}/nss-3.13.1-pkcs11n-header-fix.patch"
 
-	cd "${S}"/mozilla/security/coreconf
+	cd "${S}"/mozilla/security/coreconf || die
 	# hack nspr paths
 	echo 'INCLUDES += -I'"${EPREFIX}"'/usr/include/nspr -I$(DIST)/include/dbm' \
 		>> headers.mk || die "failed to append include"
 
 	# modify install path
 	sed -e 's:SOURCE_PREFIX = $(CORE_DEPTH)/\.\./dist:SOURCE_PREFIX = $(CORE_DEPTH)/dist:' \
-		-i source.mk
+		-i source.mk || die
 
 	# Respect LDFLAGS
-	sed -i -e 's/\$(MKSHLIB) -o/\$(MKSHLIB) \$(LDFLAGS) -o/g' rules.mk
+	sed -i -e 's/\$(MKSHLIB) -o/\$(MKSHLIB) \$(LDFLAGS) -o/g' rules.mk || die
 
 	# Ensure we stay multilib aware
 	sed -i -e "s:gentoo\/nss:$(get_libdir):" "${S}"/mozilla/security/nss/config/Makefile || die "Failed to fix for multilib"
 
 	# Fix pkgconfig file for Prefix
 	sed -i -e "/^PREFIX =/s:= /usr:= ${EPREFIX}/usr:" \
-		"${S}"/mozilla/security/nss/config/Makefile
+		"${S}"/mozilla/security/nss/config/Makefile || die
 
 	epatch "${FILESDIR}/nss-3.13.1-solaris-gcc.patch"
 
 	# dirty hack
-	cd "${S}"/mozilla/security/nss
+	cd "${S}"/mozilla/security/nss || die
 	sed -i -e "/CRYPTOLIB/s:\$(SOFTOKEN_LIB_DIR):../freebl/\$(OBJDIR):" \
 		lib/ssl/config.mk || die
 	sed -i -e "/CRYPTOLIB/s:\$(SOFTOKEN_LIB_DIR):../../lib/freebl/\$(OBJDIR):" \
@@ -58,8 +59,8 @@ src_prepare() {
 src_compile() {
 	strip-flags
 
-	echo > "${T}"/test.c
-	$(tc-getCC) ${CFLAGS} -c "${T}"/test.c -o "${T}"/test.o
+	echo > "${T}"/test.c || die
+	$(tc-getCC) ${CFLAGS} -c "${T}"/test.c -o "${T}"/test.o || die
 	case $(file "${T}"/test.o) in
 	*64-bit*|*ppc64*|*x86_64*) export USE_64=1;;
 	*32-bit*|*ppc*|*i386*) ;;
@@ -76,11 +77,11 @@ src_compile() {
 	export FREEBL_NO_DEPEND=1
 	export ASFLAGS=""
 
-	cd "${S}"/mozilla/security/coreconf
+	cd "${S}"/mozilla/security/coreconf || die
 	emake -j1 CC="$(tc-getCC)" || die "coreconf make failed"
-	cd "${S}"/mozilla/security/dbm
+	cd "${S}"/mozilla/security/dbm || die
 	emake -j1 CC="$(tc-getCC)" || die "dbm make failed"
-	cd "${S}"/mozilla/security/nss
+	cd "${S}"/mozilla/security/nss || die
 	emake -j1 CC="$(tc-getCC)" || die "nss make failed"
 }
 
@@ -131,29 +132,29 @@ cleanup_chk() {
 
 src_install () {
 	MINOR_VERSION=12
-	cd "${S}"/mozilla/security/dist
+	cd "${S}"/mozilla/security/dist || die
 
-	dodir /usr/$(get_libdir)
+	dodir /usr/$(get_libdir) || die
 	cp -L */lib/*$(get_libname) "${ED}"/usr/$(get_libdir) || die "copying shared libs failed"
 	# We generate these after stripping the libraries, else they don't match.
 	#cp -L */lib/*.chk "${ED}"/usr/$(get_libdir) || die "copying chk files failed"
 	cp -L */lib/libcrmf.a "${ED}"/usr/$(get_libdir) || die "copying libs failed"
 
 	# Install nss-config and pkgconfig file
-	dodir /usr/bin
-	cp -L */bin/nss-config "${ED}"/usr/bin
-	dodir /usr/$(get_libdir)/pkgconfig
-	cp -L */lib/pkgconfig/nss.pc "${ED}"/usr/$(get_libdir)/pkgconfig
+	dodir /usr/bin || die
+	cp -L */bin/nss-config "${ED}"/usr/bin || die
+	dodir /usr/$(get_libdir)/pkgconfig || die
+	cp -L */lib/pkgconfig/nss.pc "${ED}"/usr/$(get_libdir)/pkgconfig || die
 
 	# all the include files
 	insinto /usr/include/nss
-	doins public/nss/*.h
-	cd "${ED}"/usr/$(get_libdir)
+	doins public/nss/*.h || die
+	cd "${ED}"/usr/$(get_libdir) || die
 	local n=
 	for file in *$(get_libname); do
 		n=${file%$(get_libname)}$(get_libname ${MINOR_VERSION})
-		mv ${file} ${n}
-		ln -s ${n} ${file}
+		mv ${file} ${n} || die
+		ln -s ${n} ${file} || die
 		if [[ ${CHOST} == *-darwin* ]]; then
 			install_name_tool -id "${EPREFIX}/usr/$(get_libdir)/${n}" ${n} || die
 		fi
@@ -172,9 +173,9 @@ src_install () {
 		pk12util pp rsaperf selfserv shlibsign signtool signver ssltap strsclnt
 		symkeyutil tstclnt vfychain vfyserv"
 	fi
-	cd "${S}"/mozilla/security/dist/*/bin/
+	cd "${S}"/mozilla/security/dist/*/bin/ || die
 	for f in $nssutils; do
-		dobin ${f}
+		dobin ${f} || die
 	done
 
 	# Prelink breaks the CHK files. We don't have any reliable way to run
@@ -184,9 +185,9 @@ src_install () {
 		libs+=("${EPREFIX}/usr/$(get_libdir)/lib${l}.so")
 	done
 	OLD_IFS="${IFS}" IFS=":" ; liblist="${libs[*]}" ; IFS="${OLD_IFS}"
-	echo -e "PRELINK_PATH_MASK=${liblist}" >"${T}/90nss"
+	echo -e "PRELINK_PATH_MASK=${liblist}" >"${T}/90nss" || die
 	unset libs liblist
-	doenvd "${T}/90nss"
+	doenvd "${T}/90nss" || die
 }
 
 pkg_postinst() {
