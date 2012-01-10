@@ -1,6 +1,10 @@
 # ChangeLog for virtual/pager
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.8 2011/11/14 22:31:48 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.9 2012/01/10 19:06:52 ulm Exp $
+
+  10 Jan 2012; Ulrich Müller <ulm@gentoo.org> pager-0.ebuild:
+  Drop USE dependency for prefix, since util-linux is no longer
+  package.provided in prefix/linux profiles. Bug 339854.
 
   14 Nov 2011; Christian Faulhammer <fauli@gentoo.org> pager-0.ebuild:
   Add app-editors/vim with vim-pagers USE flag as reported in bug 390465 by
