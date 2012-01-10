@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6092 2012/01/09 14:21:36 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6093 2012/01/10 15:27:57 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  default/linux/package.use.mask:
+  Unmask USE="e2fsprogs" for app-arch/libarchive as Linux -only feature wrt
+  #354923
 
   09 Jan 2012; William Hubbs <williamh@gentoo.org> package.mask:
   add sys-apps/kmod to the udev mask
