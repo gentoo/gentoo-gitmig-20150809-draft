@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipsec-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.78 2011/11/06 16:30:17 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.79 2012/01/10 22:34:34 ulm Exp $
+
+  10 Jan 2012; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  Patents on IDEA have expired, change USE flag description accordingly.
 
   06 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ipsec-tools-0.7.3-r1.ebuild:

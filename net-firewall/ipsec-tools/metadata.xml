@@ -7,7 +7,7 @@
 	<use>
 		<flag name='hybrid'>Makes available both mode-cfg and xauth
 			support</flag>
-		<flag name='idea'>Enable support for the patented IDEA algorithm</flag>
+		<flag name='idea'>Enable support for the IDEA algorithm</flag>
 		<flag name='nat'>Enable NAT-Traversal</flag>
 		<flag name='rc5'>Enable support for the patented RC5 algorithm</flag>
 	</use>
