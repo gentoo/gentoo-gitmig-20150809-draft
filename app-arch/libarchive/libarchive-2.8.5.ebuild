@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.8.5.ebuild,v 1.1 2011/09/06 03:17:49 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.8.5.ebuild,v 1.2 2012/01/10 15:45:53 ssuominen Exp $
 
 EAPI="2"
 
@@ -57,7 +57,7 @@ src_configure() {
 		$(use_with zlib) \
 		$(use_with bzip2 bz2lib) $(use_with lzma) \
 		$(use_enable static-libs static) \
-		$(use_with expat expat) \
+		$(use_with expat) \
 		$(use_with !expat xml2) \
 		--without-lzmadec \
 		${myconf} \
