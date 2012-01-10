@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.ebuild,v 1.7 2012/01/10 13:49:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.ebuild,v 1.8 2012/01/10 14:44:42 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="vmd"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="cuda msms povray static-libs tachyon xinerama"
+IUSE="cuda msms povray tachyon xinerama"
 
 RESTRICT="fetch"
 
@@ -80,8 +80,6 @@ src_prepare() {
 		-e "s:-ltcl8.5:-ltcl:" \
 		-i Make-arch || die "Failed to set up plugins Makefile"
 
-	use static-libs || sed 's:staticlibs::g' -i Make-arch
-
 	# prepare vmd itself
 	cd "${S}"
 
@@ -141,7 +139,6 @@ src_configure() {
 
 	use cuda && myconf+=" CUDA"
 #	use mpi && myconf+=" MPI"
-	use static-libs || myconf+=" NOSTATICPLUGINS"
 #	use tachion && myconf+=" LIBTACHYON"
 	use xinerama && myconf+=" XINERAMA"
 

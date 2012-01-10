@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.43 2012/01/10 13:49:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.44 2012/01/10 14:44:42 jlec Exp $
+
+  10 Jan 2012; Justin Lecher <jlec@gentoo.org> vmd-1.9.ebuild:
+  Remove USE=static-libs beacuse this breaks build, #365051
 
   10 Jan 2012; Justin Lecher <jlec@gentoo.org> vmd-1.9.ebuild, metadata.xml:
   Enhance nofetch msg, fix compilation with USE=cuda and gcc != 4.4*, thanks
