@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.2.1.ebuild,v 1.1 2011/11/05 06:08:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.2.2-r2.ebuild,v 1.1 2012/01/10 17:38:32 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -18,7 +18,7 @@ IUSE=""
 KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
-	>=gnome-base/gsettings-desktop-schemas-3.0.0
+	>=gnome-base/gsettings-desktop-schemas-3
 	>=dev-python/pygobject-2.90.0:3
 	gnome-base/gconf:2"
 # g-s-d, gnome-shell etc. needed at runtime for the gsettings schemas
@@ -46,9 +46,17 @@ src_prepare() {
 	# Add contents of Gentoo's cursor theme directory to cursor theme list
 	epatch "${FILESDIR}/${PN}-3.0.4-gentoo-cursor-themes.patch"
 
+	# Patch from upstream git master; user theme extension ID changed in 3.2.2
+	epatch "${FILESDIR}/${PN}-3.2.2-user-theme-ext-id.patch"
+
+	# From upstream git master; fix gnome-shell-3.2.1-r2 compat (bug #398385)
+	epatch "${FILESDIR}/${PN}-3.2.2-gnome-shell-3.2.1-r2.patch"
+
+	# From upstream git master; more useful error on missing schemas
+	epatch "${FILESDIR}/${PN}-3.2.2-missing-schemas-error.patch"
+
 	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	echo > py-compile
 
 	gnome2_src_prepare
 }
