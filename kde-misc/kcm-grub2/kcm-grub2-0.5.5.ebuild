@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Sabayon Promotion
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/kcm-grub2-0.5.5.ebuild,v 1.1 2012/01/10 12:17:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/kcm-grub2-0.5.5.ebuild,v 1.2 2012/01/10 13:09:12 johu Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 LICENSE="GPL-3"
 
 KEYWORDS="~amd64 ~x86"
-SLOT="0"
+SLOT="4"
 IUSE="+hwinfo imagemagick packagekit"
 
 COMMON_DEPEND="
