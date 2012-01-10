@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r4.ebuild,v 1.1 2012/01/06 10:19:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-37-r3.ebuild,v 1.1 2012/01/10 18:37:44 mgorny Exp $
 
 EAPI=4
 
@@ -13,12 +13,13 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="audit cryptsetup gtk pam plymouth selinux tcpd"
+IUSE="acl audit cryptsetup gtk pam plymouth selinux tcpd"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-apps/util-linux-2.19
-	>=sys-fs/udev-171
+	>=sys-fs/udev-172
 	sys-libs/libcap
+	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
 	cryptsetup? ( sys-fs/cryptsetup )
 	gtk? (
@@ -32,7 +33,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	tcpd? ( sys-apps/tcp-wrappers )"
 
 # Vala-0.10 doesn't work with libnotify 0.7.1
-VALASLOT="0.14"
+VALASLOT="0.12"
 # A little higher than upstream requires
 # but I had real trouble with 2.6.37 and systemd.
 MINKV="2.6.38"
@@ -43,6 +44,8 @@ MINKV="2.6.38"
 RDEPEND="${COMMON_DEPEND}
 	!<sys-apps/openrc-0.8.3"
 DEPEND="${COMMON_DEPEND}
+	dev-util/gperf
+	dev-util/intltool
 	gtk? ( dev-lang/vala:${VALASLOT} )
 	>=sys-kernel/linux-headers-${MINKV}"
 
@@ -68,18 +71,17 @@ src_configure() {
 	local myeconfargs=(
 		--with-distro=gentoo
 		--with-rootdir=/usr
+		--with-rootlibdir=/usr/$(get_libdir)
 		--localstatedir=/var
 		--docdir=/tmp/docs
+		$(use_enable acl)
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
 		$(use_enable gtk)
 		$(use_enable pam)
+		$(use_enable plymouth)
 		$(use_enable selinux)
 		$(use_enable tcpd tcpwrap)
-
-		# right now it is enabled on per-distro basis
-		# let's just hack into the check
-		$(use plymouth && echo have_plymouth=true)
 	)
 
 	if use gtk; then
@@ -95,6 +97,8 @@ src_install() {
 
 	# compat for init= use
 	dosym ../usr/bin/systemd /bin/systemd
+	# rsyslog.service depends on it...
+	dosym ../usr/bin/systemctl /bin/systemctl
 
 	# move files as necessary
 	newbashcomp "${D}"/tmp/systemctl-bash-completion.sh ${PN}

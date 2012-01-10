@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.17 2012/01/06 10:19:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.18 2012/01/10 18:37:44 mgorny Exp $
+
+*systemd-37-r3 (10 Jan 2012)
+*systemd-29-r5 (10 Jan 2012)
+
+  10 Jan 2012; Michał Górny <mgorny@gentoo.org> -systemd-29-r4.ebuild,
+  +systemd-29-r5.ebuild, -systemd-37-r2.ebuild, +systemd-37-r3.ebuild:
+  Add systemctl compatibility symlink.
 
 *systemd-37-r2 (06 Jan 2012)
 *systemd-29-r4 (06 Jan 2012)
