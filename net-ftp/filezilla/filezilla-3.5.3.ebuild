@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.5.3.ebuild,v 1.1 2012/01/09 18:08:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.5.3.ebuild,v 1.2 2012/01/10 22:09:47 voyageur Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ RDEPEND=">=app-admin/eselect-wxwidgets-0.7-r1
 	>=dev-libs/tinyxml-2.6.1-r1[stl]
 	net-dns/libidn
 	>=net-libs/gnutls-2.8.3
-	>=x11-libs/wxGTK-2.8.9:2.8[X]
+	>=x11-libs/wxGTK-2.8.12:2.8[X]
 	x11-misc/xdg-utils
 	dbus? ( sys-apps/dbus )"
 DEPEND="${RDEPEND}
