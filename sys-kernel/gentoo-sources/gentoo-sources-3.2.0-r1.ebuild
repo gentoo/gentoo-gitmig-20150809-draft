@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.2.0-r1.ebuild,v 1.1 2012/01/06 01:48:12 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.2.0-r1.ebuild,v 1.2 2012/01/10 17:06:12 mpagano Exp $
 
 EAPI="3"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="2"
-K_DEBLOB_AVAILABLE="0"
+K_DEBLOB_AVAILABLE="1"
 inherit kernel-2
 detect_version
 detect_arch
