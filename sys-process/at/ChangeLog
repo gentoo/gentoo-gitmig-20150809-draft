@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/at
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.31 2011/10/31 01:17:19 polynomial-c Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.32 2012/01/10 02:19:12 robbat2 Exp $
+
+*at-3.1.13-r1 (10 Jan 2012)
+
+  10 Jan 2012; Robin H. Johnson <robbat2@gentoo.org> +at-3.1.13-r1.ebuild,
+  +files/at.pamd-3.1.13-r1:
+  Bug #343537: refactor pam.d/atd to use system-services stack.
 
   31 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> at-3.1.10.2-r1.ebuild,
   at-3.1.10.2-r2.ebuild, at-3.1.13.ebuild:
