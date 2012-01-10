@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/toolame
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.31 2011/12/18 19:50:16 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.32 2012/01/10 10:30:46 ssuominen Exp $
+
+  10 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> toolame-02l-r3.ebuild:
+  ppc stable wrt #393851
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> toolame-02l-r3.ebuild:
   x86 stable wrt bug #393851
