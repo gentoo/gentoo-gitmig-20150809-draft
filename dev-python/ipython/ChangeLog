@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.88 2012/01/08 22:07:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.89 2012/01/10 22:14:58 bicatali Exp $
+
+*ipython-0.12-r1 (10 Jan 2012)
+
+  10 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> -ipython-0.12.ebuild,
+  +ipython-0.12-r1.ebuild, +files/ipython-0.12-globalpath.patch, metadata.xml:
+  Removed bundled libraries, added suggested dependencies and optional ones as
+  run depedencies. Propagate global patch prefix friendly. Fix tests, some
+  other modifications from Arfrever
 
 *ipython-0.12 (08 Jan 2012)
 

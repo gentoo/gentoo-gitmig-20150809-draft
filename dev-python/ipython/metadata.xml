@@ -41,6 +41,8 @@ Main features:
 * pdbãããã¬ã¨profilerã¸ã®çµ±åã¢ã¯ã»ã¹ã
 </longdescription>
 <use>
+  <flag name='matplotlib'>Add support for <pkg>dev-python/matplotlib</pkg></flag>
+  <flag name='mongodb'>Enable support for MongoDB via <pkg>dev-python/pymongo</pkg></flag>
   <flag name="notebook">Install requirements for the web notebook based on <pkg>www-servers/tornado</pkg></flag>
 </use>
 </pkgmetadata>
