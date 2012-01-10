@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.6 2012/01/09 16:01:44 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.7 2012/01/10 22:19:09 williamh Exp $
 
 EAPI=4
 
@@ -20,18 +20,26 @@ HOMEPAGE="http://git.profusion.mobi/cgit.cgi/kmod.git"
 
 LICENSE="LGPL-2"
 SLOT="0"
-IUSE="+compat debug lzma static-libs +tools zlib"
+IUSE="+compat doc debug lzma static-libs +tools zlib"
 
 REQUIRED_USE="compat? ( tools )"
 
-DEPEND="compat? ( !!sys-apps/module-init-tools )
+COMMON_DEPEND="compat? ( !!sys-apps/module-init-tools )
 	lzma? ( app-arch/xz-utils )
 	zlib? ( sys-libs/zlib )"
-RDEPEND="${DEPEND}"
+
+DEPEND="${COMMON_DEPEND}
+	doc? ( dev-util/gtk-doc )"
+RDEPEND="${COMMON_DEPEND}"
 
 src_prepare()
 {
 	if [ ! -e configure ]; then
+		if use doc; then
+			gtkdocize --copy --docdir libkmod/docs ||  die "gtkdocize failed"
+		else
+			touch libkmod/docs/gtk-doc.make
+		fi
 		eautoreconf
 	else
 		elibtoolize
@@ -42,6 +50,7 @@ src_configure()
 {
 	econf \
 		$(use_enable debug) \
+		$(use_enable doc gtk-doc) \
 		$(use_with lzma xz) \
 		$(use_enable static-libs static) \
 		$(use_enable tools) \
@@ -56,7 +65,7 @@ src_install()
 	find "${D}" -name libkmod.la -delete
 
 	if use compat && use tools; then
-	dodir /sbin
+		dodir /sbin
 		for cmd in depmod insmod lsmod modinfo modprobe rmmod; do
 			dosym /usr/bin/kmod /sbin/$cmd
 		done
