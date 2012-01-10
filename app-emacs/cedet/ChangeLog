@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.65 2012/01/09 21:05:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.66 2012/01/10 07:14:11 ulm Exp $
 
   09 Jan 2012; Agostino Sarubbo <ago@gentoo.org> cedet-1.0-r1.ebuild:
   Stable for AMD64, wrt security bug #398227
@@ -9,7 +9,8 @@
 
   09 Jan 2012; Ulrich Müller <ulm@gentoo.org> +cedet-1.0-r1.ebuild,
   +files/cedet-1.0-ede_security_fix.patch:
-  Fix security flaw in EDE, bug 398227. Update ebuild to EAPI 4.
+  Fix security flaw in EDE (CVE-2012-0035), bug 398227.
+  Update ebuild to EAPI 4.
 
   25 Jan 2011; Ulrich Mueller <ulm@gentoo.org> cedet-1.0.ebuild:
   Supply subdirectories of S in load-path, bug 349790.
