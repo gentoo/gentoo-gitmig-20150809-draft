@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/colibri
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/colibri/ChangeLog,v 1.1 2011/03/05 15:48:24 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/colibri/ChangeLog,v 1.2 2012/01/10 16:30:19 johu Exp $
+
+*colibri-0.2.2 (10 Jan 2012)
+
+  10 Jan 2012; Johannes Huber <johu@gentoo.org> +colibri-0.2.2.ebuild,
+  -colibri-0.2.1.ebuild:
+  Version bump, remove old.
 
 *colibri-0.2.1 (05 Mar 2011)
 
