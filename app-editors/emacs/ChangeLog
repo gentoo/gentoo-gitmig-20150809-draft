@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.462 2012/01/09 20:57:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.463 2012/01/10 07:15:40 ulm Exp $
 
   09 Jan 2012; Agostino Sarubbo <ago@gentoo.org> emacs-23.3-r4.ebuild:
   Stable for AMD64, wrt security bug #398239
@@ -9,7 +9,7 @@
 
   09 Jan 2012; Ulrich Müller <ulm@gentoo.org> -emacs-23.3-r3.ebuild,
   +emacs-23.3-r4.ebuild:
-  Fix security flaw in EDE, bug 398227.
+  Fix security flaw in EDE (CVE-2012-0035), bug 398227.
 
   08 Jan 2012; Ulrich Müller <ulm@gentoo.org> emacs-23.3-r3.ebuild:
   Restore fallback code in pkg_preinst because of failures with paludis.
