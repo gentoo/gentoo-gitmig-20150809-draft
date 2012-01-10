@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.55 2012/01/04 18:10:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.56 2012/01/10 20:16:08 ranger Exp $
+
+  10 Jan 2012; Brent Baude <ranger@gentoo.org> snes9x-1.53.ebuild:
+  Marking snes9x-1.53 ppc for bug 395479
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> snes9x-1.53.ebuild:
   x86 stable wrt bug #395479
