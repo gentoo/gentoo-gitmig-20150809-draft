@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mailx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.64 2011/01/22 20:58:36 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.65 2012/01/10 14:38:19 eras Exp $
+
+*mailx-8.1.2.20050715-r4 (10 Jan 2012)
+
+  10 Jan 2012; Eray Aslan <eras@gentoo.org> +mailx-8.1.2.20050715-r4.ebuild:
+  migrate mail command to /usr/bin - bug #398061
 
   22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   mailx-8.1.2.20050715-r3.ebuild:
