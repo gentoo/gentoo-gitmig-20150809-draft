@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/atari800
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.34 2011/08/07 17:15:47 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.35 2012/01/10 20:39:19 ranger Exp $
+
+  10 Jan 2012; Brent Baude <ranger@gentoo.org> atari800-2.2.1.ebuild:
+  Marking atari800-2.2.1 ppc for bug 375695
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> atari800-2.1.0.ebuild,
   atari800-2.2.1.ebuild:
