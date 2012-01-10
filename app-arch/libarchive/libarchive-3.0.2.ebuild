@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.0.2.ebuild,v 1.2 2012/01/10 12:56:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.0.2.ebuild,v 1.3 2012/01/10 15:19:44 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="acl +bzip2 expat +iconv kernel_linux +lzma nettle static-libs xattr +zlib"
+IUSE="acl +bzip2 +e2fsprogs expat +iconv kernel_linux +lzma nettle static-libs xattr +zlib"
 
 RDEPEND="!dev-libs/libarchive
 	dev-libs/openssl:0
@@ -21,19 +21,21 @@ RDEPEND="!dev-libs/libarchive
 	expat? ( dev-libs/expat )
 	!expat? ( dev-libs/libxml2 )
 	iconv? ( virtual/libiconv )
+	kernel_linux? (
+		xattr? ( sys-apps/attr )
+		)
 	lzma? ( app-arch/xz-utils )
 	nettle? ( dev-libs/nettle )
-	xattr? (
-		kernel_linux? ( sys-apps/attr )
-		)
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	kernel_linux? (
-		sys-fs/e2fsprogs
 		virtual/os-headers
+		e2fsprogs? ( sys-fs/e2fsprogs )
 		)"
 
 src_configure() {
+	use e2fsprogs || export ac_cv_header_ext2fs_ext2_fs_h=no #354923
+
 	# We disable lzmadec because we support the newer liblzma from xz-utils
 	# and not liblzmadec with this version.
 	econf \
