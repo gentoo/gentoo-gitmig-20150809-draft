@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.1.3.ebuild,v 1.1 2012/01/10 05:49:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.1.3.ebuild,v 1.2 2012/01/10 05:53:59 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -130,7 +130,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.1.3-xdg-open.patch"
 
 	# Gentoo uses /usr/libexec
-	sed -e "s:/usr/lib/gnome-session/gnome-session-check-accelerated:${EROOT}usr/libexec/gnome-session-check-accelerated:" \
+	sed -e "s:/usr/lib/gnome-session/gnome-session-check-accelerated:${EPREFIX}/usr/libexec/gnome-session-check-accelerated:" \
 		-i "${WORKDIR}/usr/share/gnome-session/sessions/cinnamon.session" || die "sed 1 failed"
 
 	eautoreconf
