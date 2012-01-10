@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/libarchive
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.97 2011/10/29 18:41:18 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.98 2012/01/10 12:52:25 ssuominen Exp $
+
+*libarchive-3.0.2 (10 Jan 2012)
+
+  10 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +libarchive-3.0.2.ebuild,
+  metadata.xml:
+  Version bump. Remove USE="static" and move everything back to /usr wrt #398047
+  by Michał Górny.
 
   29 Oct 2011; Raúl Porcel <armin76@gentoo.org> libarchive-2.8.4-r1.ebuild:
   s390 stable

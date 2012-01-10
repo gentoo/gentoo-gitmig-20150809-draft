@@ -13,7 +13,7 @@
     <flag name="static">
       Build bsdtar and bsdcpio as static archives, removing
       dependencies over the enabled compression libraries (lzma,
-      lzmadec, libbz2, zlib).
+      libbz2, zlib).
     </flag>
     <flag name="zlib">
       Allow accessing gzip-compressed archives through
@@ -28,5 +28,6 @@
       libarchive's native support: bsdtar will keep using bunzip2 as a
       filter if that's not built-in.
     </flag>
+    <flag name="nettle">Use dev-libs/nettle as crypto backend</flag>
   </use>
 </pkgmetadata>
