@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/tiff
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.178 2011/12/30 12:11:10 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.179 2012/01/10 18:53:49 ssuominen Exp $
+
+*tiff-4.0.0-r1 (10 Jan 2012)
+
+  10 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +tiff-4.0.0-r1.ebuild,
+  +files/tiff-4.0.0-missing_lzma_pkgconfig.patch:
+  Insert -llzma to the Libs.private: -line in the libtiff-4.pc for static
+  linking wrt #396531 by Alan Hourihane
 
   30 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
   -files/tiff-3.9.2-CVE-2009-2347.patch, -tiff-4.0.0_beta7.ebuild:
