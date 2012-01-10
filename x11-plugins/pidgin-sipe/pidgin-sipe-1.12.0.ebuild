@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.12.0.ebuild,v 1.1 2011/12/15 18:01:35 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.12.0.ebuild,v 1.2 2012/01/10 20:03:35 thev00d00 Exp $
 
 EAPI=4
 inherit autotools
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug kerberos voice"
 
-DEPEND="net-im/pidgin
+DEPEND="net-im/pidgin[gnutls]
 	dev-util/intltool
 	>=dev-libs/gmime-2.4.16
 	dev-libs/libxml2
