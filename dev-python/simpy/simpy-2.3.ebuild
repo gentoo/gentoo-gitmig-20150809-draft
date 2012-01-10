@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/simpy-2.3.ebuild,v 1.2 2012/01/07 00:17:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/simpy-2.3.ebuild,v 1.3 2012/01/10 16:02:53 jlec Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
-IUSE="doc test"
+IUSE="test"
 
 RDEPEND=""
 DEPEND="test? ( dev-python/pytest )"
@@ -39,8 +39,13 @@ src_test() {
 src_install() {
 	distutils_src_install
 
-	if use doc; then
-		dohtml -r SimPyDocs
-		dodoc SimPyModels/*
-	fi
+## fails with current sphinx
+#	cd docs
+#	emake man && doman build/man/*
+#
+#	if use doc; then
+#		emake dirhtml singlehtml && dohtml -r build/html/* build/singlehtml/*
+#		emake text changes && dodoc -r build/{text,changes}/*
+#		emake latexpdf && dodoc -r build/latex*/*
+#	fi
 }

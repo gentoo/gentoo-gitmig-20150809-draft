@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/ChangeLog,v 1.1 2012/01/06 16:04:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/ChangeLog,v 1.2 2012/01/10 16:02:53 jlec Exp $
+
+  10 Jan 2012; Justin Lecher <jlec@gentoo.org> simpy-2.3.ebuild:
+  Drop USE=doc, because doc building fails, #398165
 
 *simpy-2.3 (06 Jan 2012)
 
