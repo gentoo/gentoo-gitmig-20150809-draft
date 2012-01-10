@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.46 2012/01/10 17:06:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.47 2012/01/10 19:00:26 jer Exp $
+
+*libnids-1.24-r2 (10 Jan 2012)
+*libnids-1.18-r2 (10 Jan 2012)
+
+  10 Jan 2012; Jeroen Roovers <jer@gentoo.org> +libnids-1.18-r2.ebuild,
+  +libnids-1.24-r2.ebuild:
+  Add USE=static-libs by Maurizio Camisaschi (bug #398411).
 
   10 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libnids-1.18-r1.ebuild,
   libnids-1.24-r1.ebuild:
