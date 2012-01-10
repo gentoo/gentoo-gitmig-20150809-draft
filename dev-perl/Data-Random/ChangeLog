@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Data-Random
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.8 2011/09/04 11:21:28 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.9 2012/01/10 18:46:06 tove Exp $
+
+*Data-Random-0.60.0 (10 Jan 2012)
+
+  10 Jan 2012; Torsten Veller <tove@gentoo.org> +Data-Random-0.60.0.ebuild:
+  Version bump
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Data-Random-0.05.ebuild:
   Cleanup
