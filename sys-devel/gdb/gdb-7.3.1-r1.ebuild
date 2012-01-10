@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.1-r1.ebuild,v 1.4 2012/01/06 11:30:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.1-r1.ebuild,v 1.5 2012/01/10 11:33:50 grobian Exp $
 
 EAPI="3"
 
@@ -132,7 +132,17 @@ src_test() {
 src_install() {
 	use server && ! use client && cd gdb/gdbserver
 	emake DESTDIR="${D}" install || die
-	use client && { rm "${ED}"/usr/lib*/libiberty.a || die ; }
+	if use client; then
+		case ${CHOST} in
+			x86_64-*-solaris*|sparcv9-*-solaris*)
+				# usr/lib/64 -> usr/lib/{sparcv9,amd64} (no usr/lib64!)
+				rm "${ED}"/usr/lib/*/libiberty.a || die
+				;;
+			*)
+				rm "${ED}"/usr/lib*/libiberty.a || die
+				;;
+		esac
+	fi
 	cd "${S}"
 
 	# Don't install docs when building a cross-gdb
