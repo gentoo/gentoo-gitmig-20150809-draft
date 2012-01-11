@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/mtdev-1.1.0.ebuild,v 1.1 2011/05/11 05:24:13 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/mtdev-1.1.0.ebuild,v 1.2 2012/01/11 19:58:32 jer Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://bitmath.org/code/mtdev/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="static-libs"
 
 RDEPEND=">=sys-kernel/linux-headers-2.6"

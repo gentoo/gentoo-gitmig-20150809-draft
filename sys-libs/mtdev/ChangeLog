@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/mtdev
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.1 2011/05/11 05:24:13 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.2 2012/01/11 19:58:32 jer Exp $
+
+  11 Jan 2012; Jeroen Roovers <jer@gentoo.org> mtdev-1.1.0.ebuild:
+  Marked ~hppa (bug #396669).
 
 *mtdev-1.1.0 (11 May 2011)
 
