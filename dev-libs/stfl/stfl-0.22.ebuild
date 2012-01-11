@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22.ebuild,v 1.1 2011/11/01 07:37:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22.ebuild,v 1.2 2012/01/11 12:43:35 radhermit Exp $
 
-EAPI="3"
+EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils multilib perl-module python toolchain-funcs
@@ -63,9 +63,7 @@ src_prepare() {
 }
 
 src_compile() {
-	local targets="libstfl.so.${PV}"
-	use static-libs && targets+=" libstfl.a"
-	emake CC="$(tc-getCC)" ${targets} || die "emake failed"
+	emake CC="$(tc-getCC)"
 
 	if use python ; then
 		python_copy_sources python
@@ -82,7 +80,7 @@ src_compile() {
 }
 
 src_install() {
-	emake prefix="/usr" DESTDIR="${D}" libdir="$(get_libdir)" install || die "emake install failed"
+	emake prefix="/usr" DESTDIR="${D}" libdir="$(get_libdir)" install
 
 	if use python ; then
 		installation() {
