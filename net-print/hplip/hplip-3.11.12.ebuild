@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.12.ebuild,v 1.1 2011/12/18 10:52:55 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.12.ebuild,v 1.2 2012/01/11 19:21:40 billie Exp $
 
 EAPI=4
 
@@ -98,7 +98,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	python_convert_shebangs -q -r 2 .
+	use !minimal && python_convert_shebangs -q -r 2 .
 
 	# Fix for Gentoo bug #345725
 	sed -i -e "s|/etc/udev/rules.d|/lib/udev/rules.d|" \
