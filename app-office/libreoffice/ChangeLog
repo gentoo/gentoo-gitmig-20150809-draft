@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.226 2012/01/11 12:10:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.227 2012/01/11 14:52:14 scarabeus Exp $
+
+  11 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.5.2.ebuild:
+  Drop errornous templates useflag handling.
 
   11 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/generate_libreoffice_package.sh:

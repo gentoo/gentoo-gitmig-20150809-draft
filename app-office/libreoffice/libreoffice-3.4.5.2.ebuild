@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.5.2.ebuild,v 1.2 2012/01/08 14:25:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.5.2.ebuild,v 1.3 2012/01/11 14:52:14 scarabeus Exp $
 
 EAPI=4
 
@@ -469,7 +469,6 @@ src_configure() {
 		$(use_with java) \
 		$(use_with mysql system-mysql-cppconn) \
 		$(use_with nsplugin system-mozilla libxul) \
-		$(use_with templates sun-templates) \
 		${internal_libs} \
 		${java_opts} \
 		${extensions}
