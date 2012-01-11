@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-user-dirs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.22 2011/11/05 19:07:48 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.23 2012/01/11 20:33:52 ranger Exp $
+
+  11 Jan 2012; Brent Baude <ranger@gentoo.org> xdg-user-dirs-0.14.ebuild:
+  Marking xdg-user-dirs-0.14 ppc for bug 388011
 
   05 Nov 2011; Raúl Porcel <armin76@gentoo.org> xdg-user-dirs-0.14.ebuild:
   alpha/ia64/sparc stable wrt #388011
