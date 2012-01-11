@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.0-r1.ebuild,v 1.1 2011/12/09 18:39:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.0-r2.ebuild,v 1.1 2012/01/11 12:06:26 scarabeus Exp $
 
 EAPI=4
 
-MY_PV="3.5.0beta0"
+MY_PV="3.5.0beta2"
 
 RC_VERSION="" # CHECK ME WITH EVERY BUMP!
-BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/testing/3.5.0-beta0/rpm"
+BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/testing/3.5.0-beta2/rpm"
 
 OO_EXTENSIONS=(
 	"472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
@@ -28,8 +28,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="offlinehelp templates"
 
 LANGUAGES_HELP="bg bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA eo es et eu
-fi fr gl gu he hi hr hu id is it ja ka km ko mk nb ne nl nn om pl pt_BR pt ru si
-sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
+fi fr gl gu he hi hr hu id is it ja ka km ko lb mk nb ne nl nn om pl pt_BR pt
+ru si sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
 LANGUAGES="${LANGUAGES_HELP} af ar as ast be br brx cy dgo fa ga gd kk kn kok ks
 ku lo lt lv mai ml mn mni mr my nr nso oc or pa_IN ro rw sa_IN sat sd sh sr ss
 st sw_TZ ta te th tn ts uz ve xh zu"
@@ -39,10 +39,10 @@ for lang in ${LANGUAGES}; do
 	langpack=""
 	if [[ "${LANGUAGES_HELP}" =~ "${lang}" ]]; then
 		[[ ${lang} == en ]] && lang2=${lang/en/en_US} || lang2=${lang}
-		helppack=" offlinehelp? ( ${BASE_SRC_URI}/x86/LibO_${MY_PV}_Linux_x86_helppack-rpm_${lang2/_/-}.tar.gz ) "
+		helppack=" offlinehelp? ( ${BASE_SRC_URI}/x86/LibO-Dev_${MY_PV}_Linux_x86_helppack-rpm_${lang2/_/-}.tar.gz ) "
 	fi
 	[[ ${lang} == en ]] \
-		|| langpack=" ${BASE_SRC_URI}/x86/LibO_${MY_PV}_Linux_x86_langpack-rpm_${lang/_/-}.tar.gz "
+		|| langpack=" ${BASE_SRC_URI}/x86/LibO-Dev_${MY_PV}_Linux_x86_langpack-rpm_${lang/_/-}.tar.gz "
 	SRC_URI+=" linguas_${lang}? (
 		${langpack}
 		${helppack}
@@ -104,7 +104,7 @@ src_unpack() {
 
 		# for english we provide just helppack, as translation is always there
 		if [[ ${lang} != en ]]; then
-			rpmdir="LibO_${MY_PV}${RC_VERSION}_Linux_x86_langpack-rpm_${dir}/RPMS/"
+			rpmdir="LibO-Dev_${MY_PV}${RC_VERSION}_Linux_x86_langpack-rpm_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			# First remove dictionaries, we want to use system ones.
 			rm -rf "${S}/${rpmdir}/"*dict*.rpm
@@ -112,7 +112,7 @@ src_unpack() {
 		fi
 		if [[ "${LANGUAGES_HELP}" =~ "${lang}" ]] && use offlinehelp; then
 			[[ ${lang} == en ]] && dir="en-US"
-			rpmdir="LibO_${MY_PV}${RC_VERSION}_Linux_x86_helppack-rpm_${dir}/RPMS/"
+			rpmdir="LibO-Dev_${MY_PV}${RC_VERSION}_Linux_x86_helppack-rpm_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			rpm_unpack ./"${rpmdir}/"*.rpm
 		fi
@@ -140,7 +140,7 @@ src_configure() { :; }
 src_compile() { :; }
 
 src_install() {
-	local dir="${S}"/opt/${PN/-l10n/}$(get_version_component_range 1-2 ${MY_PV})/
+	local dir="${S}"/opt/lodev$(get_version_component_range 1-2 ${MY_PV})/
 	# Condition required for people that do not install anything eg no linguas
 	# or just english with no offlinehelp.
 	if [[ -d "${dir}" ]] ; then

@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.5.ebuild,v 1.1 2012/01/03 21:04:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.5-r1.ebuild,v 1.1 2012/01/11 12:06:26 scarabeus Exp $
 
 EAPI=4
 
-[[ ${PV} == 9999 ]] && MY_PV="3.4.4" || MY_PV="3.4.4"
+MY_PV="3.4.5rc2"
 
 RC_VERSION="rc2" # CHECK ME WITH EVERY BUMP!
-BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/${MY_PV}/rpm/"
+BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/testing/3.4.5-rc2/rpm/"
 
 OO_EXTENSIONS=(
 	"472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
