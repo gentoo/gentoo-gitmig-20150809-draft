@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9.ebuild,v 1.1 2012/01/11 06:35:28 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9.ebuild,v 1.2 2012/01/11 18:11:30 olemarkus Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PHPCONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob
 
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool
 
-SUHOSIN_VERSION="5.3.7-0.9.10"
+#SUHOSIN_VERSION="5.3.7-0.9.10"
 FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
