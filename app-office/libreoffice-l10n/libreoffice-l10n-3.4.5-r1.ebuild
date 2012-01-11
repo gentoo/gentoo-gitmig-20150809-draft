@@ -1,12 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.5-r1.ebuild,v 1.1 2012/01/11 12:06:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.5-r1.ebuild,v 1.2 2012/01/11 17:31:11 scarabeus Exp $
 
 EAPI=4
 
 MY_PV="3.4.5rc2"
 
-RC_VERSION="rc2" # CHECK ME WITH EVERY BUMP!
 BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/testing/3.4.5-rc2/rpm/"
 
 OO_EXTENSIONS=(
@@ -104,7 +103,7 @@ src_unpack() {
 
 		# for english we provide just helppack, as translation is always there
 		if [[ ${lang} != en ]]; then
-			rpmdir="LibO_${MY_PV}${RC_VERSION}_Linux_x86_langpack-rpm_${dir}/RPMS/"
+			rpmdir="LibO_${MY_PV}_Linux_x86_langpack-rpm_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			# First remove dictionaries, we want to use system ones.
 			rm -rf "${S}/${rpmdir}/"*dict*.rpm
@@ -112,7 +111,7 @@ src_unpack() {
 		fi
 		if [[ "${LANGUAGES_HELP}" =~ "${lang}" ]] && use offlinehelp; then
 			[[ ${lang} == en ]] && dir="en-US"
-			rpmdir="LibO_${MY_PV}${RC_VERSION}_Linux_x86_helppack-rpm_${dir}/RPMS/"
+			rpmdir="LibO_${MY_PV}_Linux_x86_helppack-rpm_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			rpm_unpack ./"${rpmdir}/"*.rpm
 		fi
