@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.18 2012/01/10 18:37:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.19 2012/01/11 07:56:35 mgorny Exp $
+
+*systemd-38 (11 Jan 2012)
+
+  11 Jan 2012; Michał Górny <mgorny@gentoo.org> +systemd-38.ebuild:
+  Version bump. This is the first release including systemd-journald for
+  logging.
 
 *systemd-37-r3 (10 Jan 2012)
 *systemd-29-r5 (10 Jan 2012)
