@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.85 2012/01/01 10:57:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.86 2012/01/11 17:38:00 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -418,9 +418,10 @@ src_test() {
 		die "Tests must be run as non-root. Please use FEATURES=userpriv."
 	fi
 
-	# For more info see bug #350347.
+	# ICUStringConversionsTest: bug #350347.
+	# MessagePumpLibeventTest: bug #398501.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
-		'--gtest_filter=-ICUStringConversionsTest.*'
+		'--gtest_filter=-ICUStringConversionsTest.*:MessagePumpLibeventTest.*'
 
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/cacheinvalidation_unittests virtualmake
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/crypto_unittests virtualmake
@@ -429,10 +430,9 @@ src_test() {
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/media_unittests virtualmake
 
 	# NetUtilTest: bug #361885.
-	# NetUtilTest.GenerateFileName: some locale-related mismatch.
-	# UDP: unstable, active development. We should revisit this later.
+	# DnsConfigServiceTest.GetSystemConfig: bug #394883.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:NetUtilTest.GenerateFileName:*UDP*'
+		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:DnsConfigServiceTest.GetSystemConfig'
 
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/printing_unittests virtualmake
 }

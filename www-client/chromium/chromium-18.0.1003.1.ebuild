@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.26.ebuild,v 1.2 2012/01/11 17:38:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-18.0.1003.1.ebuild,v 1.1 2012/01/11 17:38:00 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -186,7 +186,7 @@ src_prepare() {
 		chrome/common/zip*.cc || die
 
 	# Revert WebKit changeset responsible for Gentoo bug #393471.
-	epatch "${FILESDIR}/${PN}-revert-jpeg-swizzle-r0.patch"
+	epatch "${FILESDIR}/${PN}-revert-jpeg-swizzle-r1.patch"
 
 	epatch_user
 
@@ -211,6 +211,7 @@ src_prepare() {
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
 		\! -path 'third_party/libvpx/*' \
+		\! -path 'third_party/libyuv/*' \
 		\! -path 'third_party/lss/*' \
 		\! -path 'third_party/mesa/*' \
 		\! -path 'third_party/modp_b64/*' \
@@ -378,10 +379,9 @@ src_test() {
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/media_unittests virtualmake
 
 	# NetUtilTest: bug #361885.
-	# NetUtilTest.GenerateFileName: some locale-related mismatch.
-	# UDP: unstable, active development. We should revisit this later.
+	# DnsConfigServiceTest.GetSystemConfig: bug #394883.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:NetUtilTest.GenerateFileName:*UDP*'
+		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:DnsConfigServiceTest.GetSystemConfig'
 
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/printing_unittests virtualmake
 }
