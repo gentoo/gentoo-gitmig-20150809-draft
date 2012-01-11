@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.537 2012/01/11 18:11:30 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.538 2012/01/11 20:32:42 olemarkus Exp $
+
+  11 Jan 2012; Ole Markus With <olemarkus@gentoo.org> php-5.3.9.ebuild:
+  Added support for suhosin again. Thanks a bunch to Hanno Boeck (bug 398495)
 
   11 Jan 2012; Ole Markus With <olemarkus@gentoo.org> php-5.3.9.ebuild:
   Removed suhosin for 5.3.9 as it has not been released yet (bug #398495)
