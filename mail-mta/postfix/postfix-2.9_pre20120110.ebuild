@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20120108.ebuild,v 1.1 2012/01/09 21:49:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20120110.ebuild,v 1.1 2012/01/11 14:33:15 eras Exp $
 
 EAPI=4
 
@@ -271,8 +271,10 @@ src_install () {
 }
 
 pkg_preinst() {
+	# default for inet_protocols changed from ipv4 to all in postfix-2.9.
+	# check inet_protocols setting in main.cf and modify if necessary to prevent
+	# performance loss with useless DNS lookups and useless connection attempts.
 	[[ -d ${ROOT}/etc/postfix ]] && {
-	# changed default for inet_protocols?
 	if [[ "$(${D}/usr/sbin/postconf -dh inet_protocols)" != "ipv4" ]]; then
 		if [[ ! -n "$(${D}/usr/sbin/postconf -c ${ROOT}/etc/postfix -nh inet_protocols)" ]];
 		then
