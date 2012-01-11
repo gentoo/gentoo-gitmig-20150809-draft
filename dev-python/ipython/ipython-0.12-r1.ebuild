@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.12-r1.ebuild,v 1.1 2012/01/10 22:14:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.12-r1.ebuild,v 1.2 2012/01/11 02:28:08 mr_bones_ Exp $
 
 EAPI=4
 
@@ -21,7 +21,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc emacs examples matplotlib mongodb notebook readline +smp
 	qt4 sqlite test wxwidgets"
-
 
 CDEPEND="dev-python/decorator
 	|| ( dev-python/argparse =dev-lang/python-2.7* >=dev-lang/python-3.2 )
