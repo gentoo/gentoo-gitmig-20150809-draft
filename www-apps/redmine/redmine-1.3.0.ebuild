@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.3.0.ebuild,v 1.1 2011/12/12 16:39:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.3.0.ebuild,v 1.2 2012/01/11 15:56:00 matsuu Exp $
 
 EAPI="3"
 USE_RUBY="ruby18"
@@ -150,11 +150,5 @@ pkg_config() {
 		RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake db:migrate || die
 		einfo "Insert default configuration data in database."
 		RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake redmine:load_default_data || die
-	fi
-
-	if [ ! -e "${EPREFIX}${REDMINE_DIR}/config/email.yml" ] ; then
-		ewarn
-		ewarn "Copy ${EPREFIX}${REDMINE_DIR}/config/email.yml.example to ${EPREFIX}${REDMINE_DIR}/config/email.yml and edit this file to adjust your SMTP settings."
-		ewarn
 	fi
 }

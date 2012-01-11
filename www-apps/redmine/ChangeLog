@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/redmine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.26 2011/12/12 16:39:48 matsuu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.27 2012/01/11 15:56:00 matsuu Exp $
+
+  11 Jan 2012; MATSUU Takuto <matsuu@gentoo.org> -redmine-1.2.1-r1.ebuild,
+  -redmine-1.2.2.ebuild, redmine-1.3.0.ebuild:
+  Removed email.yml information, bug #395279. Removed old versions.
 
 *redmine-1.3.0 (12 Dec 2011)
 *redmine-1.2.3 (12 Dec 2011)
