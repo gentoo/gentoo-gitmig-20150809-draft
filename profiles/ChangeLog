@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6093 2012/01/10 15:27:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6094 2012/01/11 18:56:40 billie Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jan 2012; Daniel Pielmeier <billie@gentoo.org> package.mask:
+  net-print/cupsddk has been removed. See bug #394089 reference.
 
   10 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   default/linux/package.use.mask:

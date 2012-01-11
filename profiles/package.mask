@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13391 2012/01/09 14:21:36 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13392 2012/01/11 18:56:40 billie Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -183,11 +183,6 @@ dev-php/PEAR-DB_Table
 # Maxim Koltsov <maksbotan@gentoo.org> (11 Dec 2011)
 # Mask until big testing by proxy maintainer is finished
 dev-util/febootstrap
-
-# Daniel Pielmeier <billie@gentoo.org> (09 Dec 2011)
-# Masked for removal in 30 days. Not needed anymore as cups-1.4
-# includes all cupsddk functionality. (bug #394089)
-net-print/cupsddk
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (07 Dec 2011)
 # spidermonkey-1.9.2.x was renamed to 1.8.2.x; mask 1.9.2.x for bug #393473.
