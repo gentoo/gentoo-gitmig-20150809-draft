@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22.ebuild,v 1.2 2012/01/11 12:43:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22.ebuild,v 1.3 2012/01/11 14:02:00 radhermit Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -41,11 +41,12 @@ src_prepare() {
 		Makefile || die "sed failed"
 
 	if ! use static-libs ; then
-		sed -i -e "/install .* libstfl.a/d" Makefile
+		sed -i -e "/install .* libstfl.a/d" Makefile || die
 	fi
 
 	epatch "${FILESDIR}"/${PN}-0.21-python.patch
 	epatch "${FILESDIR}"/${P}-soname-symlink.patch
+	epatch "${FILESDIR}"/${P}-ruby-sharedlib.patch
 
 	if use perl ; then
 		echo "FOUND_PERL5=1" >> Makefile.cfg
@@ -61,6 +62,8 @@ src_prepare() {
 
 	echo "FOUND_PYTHON=0" >> Makefile.cfg
 }
+
+src_configure() { :; }
 
 src_compile() {
 	emake CC="$(tc-getCC)"
