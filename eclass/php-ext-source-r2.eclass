@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.18 2011/11/24 00:04:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.19 2012/01/11 18:30:36 olemarkus Exp $
 
 # @ECLASS: php-ext-source-r2.eclass
 # @MAINTAINER:
@@ -85,6 +85,8 @@ RDEPEND="${RDEPEND}
 	${PHPDEPEND}
 	${PHP_EXT_OPTIONAL_USE:+ )}"
 
+DEPEND="${DEPEND}
+${PHPDEPEND}"
 
 # @FUNCTION: php-ext-source-r2_src_unpack
 # @DESCRIPTION:
