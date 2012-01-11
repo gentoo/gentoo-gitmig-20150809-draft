@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.0.0.ebuild,v 1.1 2012/01/11 02:52:47 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.0.0.ebuild,v 1.2 2012/01/11 16:11:33 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ inherit autotools-utils
 DESCRIPTION="A free stand-alone ini file parsing library."
 HOMEPAGE="http://ndevilla.free.fr/iniparser/"
 
-#name this version 3.0.0 instead of 3.0 as 3.0.0 > 3.0b > 3.0 
+#name this version 3.0.0 instead of 3.0 as 3.0.0 > 3.0b > 3.0
 SRC_URI="http://ndevilla.free.fr/iniparser/${P%.0}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
