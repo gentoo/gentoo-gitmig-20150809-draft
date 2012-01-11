@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.9.ebuild,v 1.3 2011/05/11 19:36:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.12.ebuild,v 1.1 2012/01/11 15:25:31 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
 
-inherit python
+inherit autotools eutils python
 
 DESCRIPTION="ldns is a library with the aim to simplify DNS programing in C"
 HOMEPAGE="http://www.nlnetlabs.nl/projects/ldns/"
@@ -13,7 +13,7 @@ SRC_URI="http://www.nlnetlabs.nl/downloads/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86 ~ppc-macos ~x64-macos"
+KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos"
 IUSE="doc gost python ssl static-libs vim-syntax"
 
 RESTRICT="test" # 1.6.9 has no test directory
@@ -26,6 +26,12 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/1.6.12-cflags.patch"
+
+	eautoreconf
 }
 
 src_configure() {
@@ -51,6 +57,10 @@ src_install() {
 
 	if use python ; then
 		find "${ED}$(python_get_sitedir)" "(" -name "*.a" -o -name "*.la" ")" -type f -delete || die
+	fi
+
+	if ! use static-libs ; then
+		find "${ED}" -name "*.la" -type f -delete || die
 	fi
 
 	if use doc ; then
