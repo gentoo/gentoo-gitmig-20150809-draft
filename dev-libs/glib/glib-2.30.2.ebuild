@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2.ebuild,v 1.5 2011/12/31 21:26:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2.ebuild,v 1.6 2012/01/11 20:44:17 vapier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
 # Avoid runtime dependency on python when USE=test
 
-inherit autotools gnome.org libtool eutils flag-o-matic multilib pax-utils python virtualx
+inherit autotools gnome.org libtool eutils flag-o-matic multilib pax-utils python toolchain-funcs virtualx
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -129,8 +129,10 @@ src_prepare() {
 }
 
 src_configure() {
-	# Avoid circular depend with dev-util/pkgconfig
-	if ! has_version dev-util/pkgconfig; then
+	# Avoid circular depend with dev-util/pkgconfig and
+	# native builds (cross-compiles won't need pkg-config
+	# in the target ROOT to work here)
+	if ! tc-is-cross-compiler && ! has_version dev-util/pkgconfig; then
 		if has_version sys-apps/dbus; then
 			export DBUS1_CFLAGS="-I/usr/include/dbus-1.0 -I/usr/$(get_libdir)/dbus-1.0/include"
 			export DBUS1_LIBS="-ldbus-1"
