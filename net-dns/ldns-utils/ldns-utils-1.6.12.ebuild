@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.4.ebuild,v 1.3 2010/03/11 18:57:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.12.ebuild,v 1.1 2012/01/11 15:25:31 matsuu Exp $
 
-EAPI="2"
+EAPI="3"
+inherit autotools eutils
 
 MY_P="${P/-utils}"
 DESCRIPTION="Set of utilities to simplify various dns(sec) tasks."
@@ -11,14 +12,22 @@ SRC_URI="http://www.nlnetlabs.nl/downloads/ldns/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="examples ssl"
+KEYWORDS="~amd64 ~x86"
+IUSE="examples gost ssl"
 
-DEPEND=">=net-libs/ldns-${PV}[ssl?]
+DEPEND=">=net-libs/ldns-${PV}[gost?,ssl?]
 	examples? ( net-libs/libpcap )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	# bug #369339
+	epatch "${FILESDIR}/1.6.12-cflags.patch"
+
+	( cd drill && eautoreconf )
+	( cd examples && eautoreconf )
+}
 
 src_configure() {
 	cd "${S}"/drill
@@ -27,6 +36,7 @@ src_configure() {
 	if use examples; then
 		cd "${S}"/examples
 		econf \
+			$(use_enable gost) \
 			$(use_enable ssl sha2) \
 			$(use_with ssl) || die
 	fi
@@ -42,11 +52,11 @@ src_compile() {
 src_install() {
 	cd "${S}"/drill
 	emake DESTDIR="${D}" install || die "emake install for drill failed"
-	dodoc ChangeLog.22-nov-2005 README REGRESSIONS
+	dodoc ChangeLog.22-nov-2005 README REGRESSIONS || die
 
 	if use examples; then
 		cd "${S}"/examples
 		emake DESTDIR="${D}" install || die "emake install for examples failed"
-		newdoc README README.examples
+		newdoc README README.examples || die
 	fi
 }
