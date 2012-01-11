@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.11.ebuild,v 1.9 2011/01/06 17:18:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.11.ebuild,v 1.10 2012/01/11 00:19:55 robbat2 Exp $
 
 EAPI="3"
 
@@ -14,15 +14,13 @@ MY_P=${P/_/}
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="mirror://gnupg/gnupg/${P}.tar.bz2
-	!bindist? (
-		idea? ( mirror://gentoo/idea.c.gz )
-		)"
+		idea? ( mirror://gentoo/idea.c.gz )"
 #		ecc? ( http://www.calcurco.cat/eccGnuPG/src/${ECC_PATCH}.bz2 )
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
-IUSE="bzip2 bindist curl idea ldap nls readline selinux smartcard static usb zlib linguas_ru"
+IUSE="bzip2 curl idea ldap nls readline selinux smartcard static usb zlib linguas_ru"
 #IUSE="bzip2 bindist curl ecc idea ldap nls readline selinux smartcard static usb zlib linguas_ru"
 
 COMMON_DEPEND="
@@ -47,13 +45,8 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	if use idea; then
-		if use bindist; then
-			einfo "Skipping IDEA support to comply with binary distribution (bug #148907)."
-		else
-			ewarn "Please read http://www.gnupg.org/(en)/faq/why-not-idea.html"
-			mv "${WORKDIR}"/idea.c "${S}"/cipher/idea.c || \
-			ewarn "failed to insert IDEA module"
-		fi
+		mv "${WORKDIR}"/idea.c "${S}"/cipher/idea.c || \
+		ewarn "failed to insert IDEA module"
 	fi
 
 #	if use ecc; then
@@ -137,25 +130,6 @@ pkg_postinst() {
 	ewarn "If you are using a non-Linux system, or a kernel older than 2.6.9,"
 	ewarn "you MUST make the gpg binary setuid."
 	echo
-	if use !bindist && use idea; then
-		elog
-		elog "IDEA"
-		elog "you have compiled ${PN} with support for the IDEA algorithm, this code"
-		elog "is distributed under the GPL in countries where it is permitted to do so"
-		elog "by law."
-		elog
-		elog "Please read http://www.gnupg.org/(en)/faq/why-not-idea.html for more information."
-		elog
-		ewarn "If you are in a country where the IDEA algorithm is patented, you are permitted"
-		ewarn "to use it at no cost for 'non revenue generating data transfer between private"
-		ewarn "individuals'."
-		ewarn
-		ewarn "Countries where the patent applies are listed here"
-		ewarn "http://en.wikipedia.org/wiki/International_Data_Encryption_Algorithm#Security"
-		ewarn
-		ewarn "Further information and other licenses are availble from http://www.mediacrypt.com/"
-		ewarn
-	fi
 #	if use !bindist && use ecc; then
 #		ewarn
 #		ewarn "The elliptical curves patch is experimental"
