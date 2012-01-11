@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplegeneric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.1 2012/01/10 17:05:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.2 2012/01/11 02:16:15 floppym Exp $
+
+  11 Jan 2012; Mike Gilbert <floppym@gentoo.org> simplegeneric-0.8.ebuild:
+  Make setup.py work under python3. Set PYTHON_MODNAME.
 
 *simplegeneric-0.8 (10 Jan 2012)
 
