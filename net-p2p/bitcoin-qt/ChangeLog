@@ -1,5 +1,13 @@
 
 
+*bitcoin-qt-0.5.2 (11 Jan 2012)
+*bitcoin-qt-0.5.0.3 (11 Jan 2012)
+
+  11 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.0.3_rc1.ebuild, +bitcoin-qt-0.5.0.3.ebuild,
+  -bitcoin-qt-0.5.2_rc1.ebuild, +bitcoin-qt-0.5.2.ebuild:
+  Bumps from release candidates
+
 *bitcoin-qt-0.5.2_rc1 (06 Jan 2012)
 *bitcoin-qt-0.5.0.3_rc1 (06 Jan 2012)
 
