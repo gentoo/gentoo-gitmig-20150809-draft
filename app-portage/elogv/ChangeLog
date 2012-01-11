@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.67 2011/08/04 00:44:18 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.68 2012/01/11 01:55:41 ottxor Exp $
+
+  11 Jan 2012; Christoph Junghans <ottxor@gentoo.org> elogv-0.7.5.ebuild:
+  keyword ~x86-macos
 
   04 Aug 2011; Sebastian Pipping <sping@gentoo.org> elogv-0.7.5.ebuild:
   Fix compilation of 0.7.5 (bug #377607)
