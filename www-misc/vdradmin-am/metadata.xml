@@ -6,10 +6,6 @@
 		<email>vdr@gentoo.org</email>
 		<name>Gentoo VDR Project</name>
 	</maintainer>
-	<maintainer>
-		<email>billie@gentoo.org</email>
-		<name>Daniel Pielmeier</name>
-	</maintainer>
 	<longdescription lang="en">
 		To program and steer central service over a Browser the VDR 
 	</longdescription>
