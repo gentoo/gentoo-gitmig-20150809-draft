@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.2.ebuild,v 1.3 2011/12/29 17:53:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.2.ebuild,v 1.4 2012/01/11 00:14:08 tetromino Exp $
 
 EAPI="4"
 
@@ -17,6 +17,9 @@ IUSE="static-libs"
 DOCS=( ACKNOWLEDGEMENTS AUTHORS ChangeLog NEWS NOTES README TODO )
 
 src_prepare() {
+	# Fix underlinking in tests, bug #398369; requires eautoreconf
+	epatch "${FILESDIR}/${PN}-0.3.2-gold.patch"
+
 	# Don't build examples
 	sed -i -e "/^SRC_SUBDIRS/s: examples::" Makefile.am || die
 

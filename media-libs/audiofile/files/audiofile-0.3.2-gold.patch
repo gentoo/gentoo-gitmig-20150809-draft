@@ -1,0 +1,27 @@
+From f9cd73065404f7abd8064fef42b91260ecce37f9 Mon Sep 17 00:00:00 2001
+From: Michael <kensington@astralcloak.net>
+Date: Tue, 10 Jan 2012 22:43:09 +1100
+Subject: [PATCH] Fix underlinking in test/printmarkers so that it will build
+ with gold.
+
+---
+ test/Makefile.am |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+diff --git a/test/Makefile.am b/test/Makefile.am
+index 187fe1a..cfa9d71 100644
+--- a/test/Makefile.am
++++ b/test/Makefile.am
+@@ -58,6 +58,9 @@ DEPENDENCIES = $(LIBAUDIOFILE)
+ 
+ LIBGTEST = gtest/libgtest.la
+ 
++printmarkers_SOURCES = printmarkers.c
++printmarkers_LDADD = $(LIBAUDIOFILE) -lm
++
+ sign_SOURCES = sign.cpp
+ sign_LDADD = $(LIBGTEST) $(LIBAUDIOFILE)
+ 
+-- 
+1.7.8.3
+
