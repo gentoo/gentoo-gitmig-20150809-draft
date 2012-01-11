@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/system-config-printer-common
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.55 2011/12/29 17:12:18 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.56 2012/01/11 18:57:07 pacho Exp $
+
+  11 Jan 2012; Pacho Ramos <pacho@gentoo.org>
+  -system-config-printer-common-1.3.3.ebuild,
+  system-config-printer-common-1.3.7.ebuild:
+  We need newer udev for udev_enumerate_add_match_tag usage, DEPENDing on 164-r2
+  as it's the older version I have tested it works (bug #398499 by Peter
+  Gantner). Remove old.
 
   29 Dec 2011; Pacho Ramos <pacho@gentoo.org>
   system-config-printer-common-1.3.7.ebuild:
