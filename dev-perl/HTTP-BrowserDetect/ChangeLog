@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/HTTP-BrowserDetect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-BrowserDetect/ChangeLog,v 1.64 2012/01/08 19:40:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-BrowserDetect/ChangeLog,v 1.65 2012/01/11 13:25:26 tove Exp $
+
+*HTTP-BrowserDetect-1.410.0 (11 Jan 2012)
+
+  11 Jan 2012; Torsten Veller <tove@gentoo.org>
+  +HTTP-BrowserDetect-1.410.0.ebuild:
+  Version bump
 
 *HTTP-BrowserDetect-1.400.0 (08 Jan 2012)
 
