@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/apngasm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngasm/ChangeLog,v 1.3 2011/09/21 04:26:24 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngasm/ChangeLog,v 1.4 2012/01/11 23:13:07 radhermit Exp $
+
+*apngasm-2.5 (11 Jan 2012)
+
+  11 Jan 2012; Tim Harder <radhermit@gentoo.org> +apngasm-2.5.ebuild:
+  Version bump.
 
 *apngasm-2.4 (21 Sep 2011)
 
