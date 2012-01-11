@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.2.1.ebuild,v 1.5 2010/07/07 09:04:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.2.1.ebuild,v 1.6 2012/01/11 15:13:19 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit base toolchain-funcs
 
@@ -11,8 +11,8 @@ SRC_P="${PN}_v${PV}"
 MY_P="${MY_PN}_v${PV}"
 
 DESCRIPTION="MUltiple STructural AligNment AlGorithm."
-HOMEPAGE="http://www.cs.mu.oz.au/~arun/mustang/"
-SRC_URI="http://ww2.csse.unimelb.edu.au/~arun/mustang/mustang_v3.2.1.tgz"
+HOMEPAGE="http://www.csse.monash.edu.au/~karun/Site/mustang.html"
+SRC_URI="http://www.csse.unimelb.edu.au/~arun/${PN}/${SRC_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -25,8 +25,7 @@ src_compile() {
 	emake \
 		CPP=$(tc-getCXX) \
 		CPPFLAGS="${CXXFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		|| die "emake failed"
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_test() {
@@ -34,9 +33,9 @@ src_test() {
 }
 
 src_install() {
-	newbin bin/${P} mustang || die
-	doman man/${PN}.1 || die
-	dodoc README || die
+	newbin bin/${P} mustang
+	doman man/${PN}.1
+	dodoc README
 }
 
 pkg_postinst() {
