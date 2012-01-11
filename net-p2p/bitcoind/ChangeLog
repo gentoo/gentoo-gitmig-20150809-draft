@@ -1,5 +1,15 @@
 
 
+*bitcoind-0.5.2 (11 Jan 2012)
+*bitcoind-0.5.0.3 (11 Jan 2012)
+*bitcoind-0.4.3 (11 Jan 2012)
+
+  11 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.3_rc1.ebuild, +bitcoind-0.4.3.ebuild,
+  -bitcoind-0.5.0.3_rc1.ebuild, +bitcoind-0.5.0.3.ebuild,
+  -bitcoind-0.5.2_rc1.ebuild, +bitcoind-0.5.2.ebuild:
+  Bumps from release candidates
+
 *bitcoind-0.5.2_rc1 (06 Jan 2012)
 *bitcoind-0.5.0.3_rc1 (06 Jan 2012)
 *bitcoind-0.4.3_rc1 (06 Jan 2012)
