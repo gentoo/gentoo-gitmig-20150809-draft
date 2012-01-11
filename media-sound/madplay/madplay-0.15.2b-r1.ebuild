@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b-r1.ebuild,v 1.13 2011/08/31 20:36:44 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b-r1.ebuild,v 1.14 2012/01/11 10:21:22 ssuominen Exp $
 
-inherit eutils autotools
+EAPI=4
+inherit autotools eutils
 
 DESCRIPTION="The MAD audio player"
 HOMEPAGE="http://www.underbit.com/products/mad/"
@@ -11,44 +12,26 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="debug nls esd alsa"
+IUSE="alsa debug nls"
 
-#	~media-libs/libmad-${PV}
-#	~media-libs/libid3tag-${PV}
-# This version uses the previous libs... the only change is in handling lame encoded mp3s...
-# See http://sourceforge.net/project/shownotes.php?group_id=12349&release_id=219475
-
-RDEPEND="esd? ( media-sound/esound )
-	~media-libs/libmad-0.15.1b
-	alsa? ( media-libs/alsa-lib )
-	~media-libs/libid3tag-0.15.1b"
+RDEPEND=">=media-libs/libid3tag-0.15.1b
+	>=media-libs/libmad-0.15.1b
+	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}
-	nls? ( >=sys-devel/gettext-0.11.2 )"
+	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	eautoreconf # need new libtool for interix
+DOCS="CHANGES CREDITS README TODO"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-macos.patch
+	eautoreconf #need new libtool for interix
 	epunt_cxx #74499
-	epatch "${FILESDIR}/${PN}-macos.patch"
 }
 
-src_compile() {
-	# configure will bail out if both esd and alsa are enabled
-	local myconf
-	use alsa && myconf="--with-alsa --without-esd"
-	use esd && myconf="--without-alsa --with-esd"
-	use alsa || use esd || myconf="--without-alsa --without-esd"
-
+src_configure() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable debug debugging) \
-		${myconf} \
-		|| die "configure failed"
-	emake || die "make failed"
-}
-
-src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc CHANGES CREDITS README TODO VERSION
+		$(use_with alsa) \
+		--without-esd
 }
