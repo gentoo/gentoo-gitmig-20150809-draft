@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.94 2012/01/11 00:14:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.95 2012/01/11 00:16:35 tetromino Exp $
+
+  11 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  audiofile-0.3.2.ebuild:
+  Forgot to inherit eutils.
 
   11 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   audiofile-0.3.2.ebuild, +files/audiofile-0.3.2-gold.patch:

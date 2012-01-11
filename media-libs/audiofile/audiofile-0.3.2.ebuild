@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.2.ebuild,v 1.4 2012/01/11 00:14:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.2.ebuild,v 1.5 2012/01/11 00:16:35 tetromino Exp $
 
 EAPI="4"
 
-inherit autotools gnome.org
+inherit autotools eutils gnome.org
 
 DESCRIPTION="An elegant API for accessing audio files"
 HOMEPAGE="http://www.68k.org/~michael/audiofile/"
