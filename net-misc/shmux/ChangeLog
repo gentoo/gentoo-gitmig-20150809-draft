@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/shmux
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.27 2011/12/21 08:27:27 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.28 2012/01/11 23:08:49 swegener Exp $
+
+  11 Jan 2012; Sven Wegener <swegener@gentoo.org> shmux-1.0.ebuild,
+  shmux-1.0.1.ebuild, shmux-1.0.2.ebuild:
+  Add missing ncurses dep.
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> shmux-1.0.2.ebuild:
   x86 stable wrt bug #393875
