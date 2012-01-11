@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/dejavu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.163 2011/12/18 15:31:03 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.164 2012/01/11 20:45:06 ranger Exp $
+
+  11 Jan 2012; Brent Baude <ranger@gentoo.org> dejavu-2.33.ebuild:
+  Marking dejavu-2.33 ppc for bug 393753
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> dejavu-2.33.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #393753
