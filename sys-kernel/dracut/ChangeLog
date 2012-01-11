@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/dracut
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.38 2011/12/27 14:10:30 aidecoe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.39 2012/01/11 09:58:12 aidecoe Exp $
+
+  11 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-010-r3.ebuild,
+  +files/dracut-010-empty-etc-ld.so.conf.d.patch,
+  +files/dracut-010-multipath-udev-rules.patch,
+  +files/dracut-010-rd.driver.post-fixed.patch,
+  +files/dracut-010-rd.driver.pre-and-blacklist-fix.patch:
+  Restored 010-r3, because some people need it for ZFS support.  Fixes
+  bug #398213.
 
   27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-014.ebuild:
   Removed dracut_modules_xen from ebuild modules list and dependencies.
