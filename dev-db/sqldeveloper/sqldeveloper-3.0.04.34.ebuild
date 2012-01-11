@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/sqldeveloper-3.0.04.34.ebuild,v 1.3 2012/01/11 19:58:59 hwoarang Exp $
 
 EAPI="2"
 
@@ -76,8 +76,8 @@ src_install() {
 pkg_postinst() {
 	# this temporary fixes FileNotFoundException with datamodeler
 	# this is more like a workaround than permanent fix
-        test -d /opt/sqldeveloper/sqldeveloper/extensions/oracle.datamodeler/log \
-                || mkdir /opt/sqldeveloper/sqldeveloper/extensions/oracle.datamodeler/log
+	test -d /opt/sqldeveloper/sqldeveloper/extensions/oracle.datamodeler/log \
+		|| mkdir /opt/sqldeveloper/sqldeveloper/extensions/oracle.datamodeler/log
 	touch /opt/sqldeveloper/sqldeveloper/extensions/oracle.datamodeler/log/datamodeler.log
 	chmod -R 1777 /opt/sqldeveloper/sqldeveloper/extensions/oracle.datamodeler/log/datamodeler.log
 
