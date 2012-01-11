@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.77 2011/12/23 01:10:17 polynomial-c Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.78 2012/01/11 13:12:52 ago Exp $
+
+  11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> firefox-bin-9.0.1.ebuild:
+  Stable for AMD64, wrt security bug #395431
 
 *firefox-bin-9.0.1 (23 Dec 2011)
 
