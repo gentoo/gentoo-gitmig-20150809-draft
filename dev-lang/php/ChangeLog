@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.538 2012/01/11 20:32:42 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.539 2012/01/11 22:59:56 ago Exp $
+
+  11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> php-5.3.9.ebuild:
+  Stable for AMD64, wrt security bug #384301
 
   11 Jan 2012; Ole Markus With <olemarkus@gentoo.org> php-5.3.9.ebuild:
   Added support for suhosin again. Thanks a bunch to Hanno Boeck (bug 398495)
