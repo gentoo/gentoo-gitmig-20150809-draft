@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lshw
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.98 2011/11/11 17:23:49 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.99 2012/01/11 23:01:23 radhermit Exp $
+
+*lshw-02.16b (11 Jan 2012)
+
+  11 Jan 2012; Tim Harder <radhermit@gentoo.org> +lshw-02.16b.ebuild,
+  +files/lshw-02.16b-build.patch:
+  Version bump.
 
   11 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> lshw-02.15b.ebuild:
   Fix bug #389801, allowing a clean build with [gtk,-sqlite].
