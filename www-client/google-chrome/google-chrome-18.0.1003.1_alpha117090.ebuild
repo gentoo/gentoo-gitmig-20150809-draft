@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-17.0.963.26_alpha116225.ebuild,v 1.1 2012/01/05 00:59:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-18.0.1003.1_alpha117090.ebuild,v 1.1 2012/01/11 16:39:50 floppym Exp $
 
 EAPI="4"
 
@@ -46,33 +46,36 @@ for lang in ${LANGS}; do
 	    IUSE+=" linguas_${lang}"
 done
 
-RDEPEND="app-arch/bzip2
-	app-misc/ca-certificates
+RDEPEND="
 	media-libs/alsa-lib
-	dev-libs/atk
-	dev-libs/dbus-glib
+	app-arch/bzip2
+	x11-libs/cairo
+	net-print/cups
+	sys-apps/dbus
 	dev-libs/expat
+	media-libs/fontconfig
+	media-libs/freetype
+	app-misc/ca-certificates
+	dev-libs/atk
 	dev-libs/glib:2
 	dev-libs/libxslt
+	dev-libs/libgcrypt
 	dev-libs/nspr
 	dev-libs/nss
 	gnome-base/gconf:2
-	media-libs/fontconfig
-	media-libs/freetype
-	net-print/cups
 	media-libs/libpng:1.2
-	sys-apps/dbus
 	|| ( >=sys-devel/gcc-4.4.0[-nocxx] >=sys-devel/gcc-4.4.0[cxx] )
 	sys-libs/zlib
-	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
 	x11-libs/libXScrnSaver
 	x11-libs/libX11
 	x11-libs/libXrender
 	x11-libs/libXext
+	x11-libs/libXfixes
 	x11-libs/pango
-	x11-misc/xdg-utils"
+	x11-misc/xdg-utils
+"
 
 # Add blockers for the other slots.
 for x in 0 beta stable unstable; do
