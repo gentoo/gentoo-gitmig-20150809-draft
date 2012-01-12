@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.117 2012/01/11 13:13:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.118 2012/01/12 15:32:26 phajdan.jr Exp $
+
+  12 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> firefox-9.0.ebuild:
+  x86 stable wrt bug #395431
 
   11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> firefox-9.0.ebuild:
   Stable for AMD64, wrt security bug #395431

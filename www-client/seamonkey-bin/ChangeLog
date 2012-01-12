@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.112 2012/01/11 13:14:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.113 2012/01/12 15:31:06 phajdan.jr Exp $
+
+  12 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  seamonkey-bin-2.6.1.ebuild:
+  x86 stable wrt bug #395431
 
   11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> seamonkey-bin-2.6.1.ebuild:
   Stable for AMD64, wrt security bug #395431
