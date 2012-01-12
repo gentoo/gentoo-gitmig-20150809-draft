@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.70 2012/01/09 17:00:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.71 2012/01/12 20:57:45 maekke Exp $
+
+  12 Jan 2012; Markus Meier <maekke@gentoo.org> fam-2.7.0-r6.ebuild:
+  arm stable, bug #396749
 
   09 Jan 2012; Brent Baude <ranger@gentoo.org> fam-2.7.0-r6.ebuild:
   Marking fam-2.7.0-r6 ppc for bug 396749
