@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.63 2011/12/31 22:17:19 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.64 2012/01/12 16:03:33 vapier Exp $
+
+  12 Jan 2012; Mike Frysinger <vapier@gentoo.org> opencv-2.3.0.ebuild:
+  Also drop fortran from 2.3.0 ebuild #392297.
 
 *opencv-2.3.1a-r1 (31 Dec 2011)
 
