@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.100 2011/12/12 00:37:28 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.101 2012/01/12 03:32:00 tetromino Exp $
+
+  12 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-settings-daemon-3.2.2.ebuild, gnome-settings-daemon-3.2.2-r1.ebuild:
+  Increase gtk+ dep to 3.1.10 (bug #398589, thanks to Jessica Leigh for
+  reporting) and add missing cairo and gdk-pixbuf dependencies.
 
 *gnome-settings-daemon-3.2.2-r1 (12 Dec 2011)
 

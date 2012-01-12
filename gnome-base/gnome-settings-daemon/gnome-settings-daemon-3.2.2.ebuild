@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.2.ebuild,v 1.2 2011/11/28 18:18:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.2.ebuild,v 1.3 2012/01/12 03:32:00 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -16,13 +16,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="+colord +cups debug packagekit policykit +short-touchpad-timeout smartcard +udev"
 
+# gtk+-3.1.10 needed for gdk_x11_device_manager_lookup, bug #398589
 # Latest gsettings-desktop-schemas is needed due to commit e8d1de92
 # Latest gnome-desktop needed to fix the DPMS timeout bug #385063
 # colord-0.1.13 needed to avoid polkit errors in CreateProfile and CreateDevice
 # upower-0.9.11 needed for UpSleepKind
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.74
 	>=dev-libs/glib-2.29.14:2
-	>=x11-libs/gtk+-2.99.3:3
+	>=x11-libs/gtk+-3.1.10:3
 	>=gnome-base/gconf-2.6.1:2
 	>=gnome-base/libgnomekbd-2.91.1
 	>=gnome-base/gnome-desktop-3.2.0-r1:3
@@ -33,6 +34,8 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.74
 	media-libs/libcanberra[gtk3]
 	>=media-sound/pulseaudio-0.9.16
 	>=sys-power/upower-0.9.11
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf:2
 	>=x11-libs/libnotify-0.7.3
 	x11-libs/libX11
 	x11-libs/libXi
