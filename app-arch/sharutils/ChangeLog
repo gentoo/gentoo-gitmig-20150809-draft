@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.79 2012/01/04 19:31:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.80 2012/01/12 21:00:38 maekke Exp $
+
+  12 Jan 2012; Markus Meier <maekke@gentoo.org> sharutils-4.11.1.ebuild:
+  arm stable, bug #396763
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> sharutils-4.11.1.ebuild:
   Marking sharutils-4.11.1 ppc for bug 396763
