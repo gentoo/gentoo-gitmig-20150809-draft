@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r1.ebuild,v 1.1 2012/01/12 16:35:22 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r1.ebuild,v 1.2 2012/01/12 16:41:30 aidecoe Exp $
 
 EAPI=4
 
@@ -17,8 +17,6 @@ REQUIRED_USE="dracut_modules_livenet? ( dracut_modules_dmsquash-live )
 	dracut_modules_crypt-gpg? ( dracut_modules_crypt )
 	"
 
-BASIC_MODULES="
-	"
 COMMON_MODULES="
 	dracut_modules_biosdevname
 	dracut_modules_btrfs
