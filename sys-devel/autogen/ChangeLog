@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.77 2012/01/02 10:12:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.78 2012/01/12 21:17:18 maekke Exp $
+
+  12 Jan 2012; Markus Meier <maekke@gentoo.org> autogen-5.12.ebuild:
+  arm stable, bug #397221
 
   02 Jan 2012; Agostino Sarubbo <ago@gentoo.org> autogen-5.12.ebuild:
   Stable for AMD64, wrt bug #397221
