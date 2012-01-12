@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvisvgm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.29 2011/12/22 12:59:11 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.30 2012/01/12 22:10:10 maekke Exp $
+
+  12 Jan 2012; Markus Meier <maekke@gentoo.org> dvisvgm-1.0.9-r1.ebuild,
+  dvisvgm-1.0.10.ebuild:
+  add ~arm, bug #390671
 
 *dvisvgm-1.0.10 (22 Dec 2011)
 
