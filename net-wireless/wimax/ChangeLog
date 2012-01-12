@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wimax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.13 2012/01/11 14:42:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.14 2012/01/12 17:49:12 alexxy Exp $
+
+  12 Jan 2012; Alexey Shvetsov <alexxy@gentoo.org> wimax-1.5.2-r1.ebuild:
+  Fix bug #393195
 
   11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> wimax-1.5.2-r1.ebuild:
   Stable for AMD64, wrt bug #386121
