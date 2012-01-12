@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnu-netcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.24 2012/01/09 03:56:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.25 2012/01/12 21:12:20 maekke Exp $
+
+  12 Jan 2012; Markus Meier <maekke@gentoo.org> gnu-netcat-0.7.1-r3.ebuild:
+  arm stable, bug #397127
 
   09 Jan 2012; Jeroen Roovers <jer@gentoo.org> gnu-netcat-0.7.1-r3.ebuild:
   Repurpose USE=debug to respect CFLAGS by Agostino Sarubbo (bug #397883).
