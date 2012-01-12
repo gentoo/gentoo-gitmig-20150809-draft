@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jnr-posix
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.3 2010/07/17 09:07:21 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.4 2012/01/12 12:06:53 sera Exp $
+
+*jnr-posix-2.0.0 (12 Jan 2012)
+*jnr-posix-1.1.8 (12 Jan 2012)
+
+  12 Jan 2012; Ralph Sennhauser <sera@gentoo.org> +jnr-posix-1.1.8.ebuild,
+  +jnr-posix-2.0.0.ebuild, +files/jnr-posix_maven-build.xml:
+  Version bump.
+  Switch to https://github.com/jnr as project home.
+  No longer use netbeans build system.
 
   17 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   jnr-posix-1.1.4.ebuild:
