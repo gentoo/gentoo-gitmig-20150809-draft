@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspdftool/pspdftool-0.03.ebuild,v 1.1 2011/06/19 20:09:40 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspdftool/pspdftool-0.03.ebuild,v 1.2 2012/01/12 16:21:24 mgorny Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ ESVN_REPO_URI="https://pspdftool.svn.sourceforge.net/svnroot/pspdftool/trunk"
 ESVN_PROJECT="pspdftool"
 
 [[ "${PV}" == "9999" ]] && EXTRA_ECLASS="subversion"
-inherit autotools-utils ${EXTRA_ECLASS}
+inherit autotools ${EXTRA_ECLASS}
 unset EXTRA_ECLASS
 
 DESCRIPTION="Tool for prepress preparation of PDF and PostScript documents"

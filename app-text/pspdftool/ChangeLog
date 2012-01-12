@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pspdftool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspdftool/ChangeLog,v 1.1 2011/06/19 20:09:40 miska Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspdftool/ChangeLog,v 1.2 2012/01/12 16:21:24 mgorny Exp $
+
+  12 Jan 2012; Michał Górny <mgorny@gentoo.org> pspdftool-0.03.ebuild,
+  pspdftool-9999.ebuild:
+  Fix wrong eclass inherit (autotools.eclass functions are used).
 
 *pspdftool-9999 (19 Jun 2011)
 *pspdftool-0.03 (19 Jun 2011)
