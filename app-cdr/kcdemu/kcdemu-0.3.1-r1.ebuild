@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdemu/kcdemu-0.3.1.ebuild,v 1.1 2010/10/06 20:02:40 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdemu/kcdemu-0.3.1-r1.ebuild,v 1.1 2012/01/12 00:10:53 johu Exp $
 
-EAPI=3
+EAPI=4
 KDE_LINGUAS="de es pl ro"
 inherit kde4-base
 
@@ -18,6 +18,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=app-cdr/cdemu-1.2.0"
+
+PATCHES=(
+	"${FILESDIR}/${P}-start-cdemud.patch"
+)
 
 S=${WORKDIR}/${MY_PN}
 

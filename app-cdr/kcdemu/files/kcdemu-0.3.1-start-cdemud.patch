@@ -1,0 +1,68 @@
+From 9486c351315373e7f3be0ca8ab3c84e3295eccfb Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Tue, 10 Jan 2012 23:29:23 -0500
+Subject: [PATCH] Try to start the daemon if it's not already running
+
+Fixes compatibility with cdemud-1.4.0, see
+https://bugs.gentoo.org/show_bug.cgi?id=393121
+---
+ src/cdemu.cpp |    9 ++++++++-
+ src/cdemu.h   |    2 +-
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/src/cdemu.cpp b/src/cdemu.cpp
+index 3fe18c2..75f91dc 100644
+--- a/src/cdemu.cpp
++++ b/src/cdemu.cpp
+@@ -32,6 +32,9 @@ CDEmu::CDEmu()
+       m_currentBus(0)
+ {
+     this->findCurrentBus();
++    // If the daemon has not been started, try to start it
++    if (!m_currentBus)
++        this->findCurrentBus(true);
+ 
+     this->connectSlots(&m_sessionBus);
+     this->connectSlots(&m_systemBus);
+@@ -181,7 +184,7 @@ void CDEmu::connectSlots(QDBusConnection *connection)
+ }
+ 
+ 
+-void CDEmu::findCurrentBus()
++void CDEmu::findCurrentBus(bool start_daemon)
+ {
+     // We don't want to get signals from the wrong bus in case we
+     // switch from the session bus to the system bus or vice versa
+@@ -194,12 +197,16 @@ void CDEmu::findCurrentBus()
+ 
+     // Try session bus first
+     QDBusConnectionInterface *interface = m_sessionBus.interface();
++    if (start_daemon)
++        interface->startService("net.sf.cdemu.CDEMUD_Daemon");
+     if (interface->isServiceRegistered("net.sf.cdemu.CDEMUD_Daemon"))
+         m_currentBus = &m_sessionBus;
+     else
+     {
+         // Try system bus then
+         interface = m_systemBus.interface();
++        if (start_daemon)
++            interface->startService("net.sf.cdemu.CDEMUD_Daemon");
+         if (interface->isServiceRegistered("net.sf.cdemu.CDEMUD_Daemon"))
+             m_currentBus = &m_systemBus;
+         else
+diff --git a/src/cdemu.h b/src/cdemu.h
+index c7b0655..8381c2f 100644
+--- a/src/cdemu.h
++++ b/src/cdemu.h
+@@ -56,7 +56,7 @@ private:
+     ~CDEmu();
+ 
+     void connectSlots(QDBusConnection *connection);
+-    void findCurrentBus();
++    void findCurrentBus(bool start_daemon = false);
+     int nextFreeSlot();
+ 
+     QDBusConnection m_sessionBus;
+-- 
+1.7.8.3
+
