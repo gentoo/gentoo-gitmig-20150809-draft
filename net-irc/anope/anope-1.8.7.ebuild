@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.8.7.ebuild,v 1.1 2011/12/28 20:25:48 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.8.7.ebuild,v 1.2 2012/01/12 00:35:32 binki Exp $
 
 EAPI=4
 
@@ -44,6 +44,7 @@ src_prepare() {
 	epatch "${FILESDIR}/pid-patch.diff"
 	epatch "${FILESDIR}/${P}-ldflags-fix.patch"
 	epatch "${FILESDIR}/${P}-libdir-gentoo.patch"
+	epatch "${FILESDIR}"/${P}-mariadb.patch # bug 381119
 	eautoconf
 }
 

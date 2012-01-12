@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/anope
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.19 2011/12/28 20:25:48 gurligebis Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.20 2012/01/12 00:35:32 binki Exp $
+
+  12 Jan 2012; Nathan Phillip Brink <binki@gentoo.org> anope-1.8.7.ebuild,
+  +files/anope-1.8.7-mariadb.patch:
+  Fix compilation with =mariadb-5.2*, bug #381119 reported by Flameeyes with
+  patch from Adam from upstream.
 
 *anope-1.8.7 (28 Dec 2011)
 
