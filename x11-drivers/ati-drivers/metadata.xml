@@ -11,14 +11,21 @@
 	    <description>Proxied co-maintainer</description>
 	</maintainer>
 	<use>
-		<flag name='opencl'>
-			Install OpenCL libraries
-		</flag>
 		<flag name='qt4'>
 			Install qt4 dependent optional tools (e.g Catalyst Control Panel)
 		</flag>
 	</use>
 	<use>
 		<flag name='modules'>Build the kernel modules</flag>
+	</use>
+	<use>
+		<flag name='opencl'>
+			Install OpenCL runtime libraries
+		</flag>
+	</use>
+	<use>
+		<flag name='pax_kernel'>
+			Enable if the user plans to run the package under a pax enabled hardened kernel
+		</flag>
 	</use>
 </pkgmetadata>
