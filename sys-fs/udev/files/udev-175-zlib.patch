@@ -1,3 +1,7 @@
+https://bugs.gentoo.org/360849
+
+support opening the compressed pci/usb databases
+
 --- a/extras/usb-db/usb-db.c
 +++ b/extras/usb-db/usb-db.c
 @@ -90,19 +90,60 @@
@@ -86,4 +90,5 @@
  @ENABLE_HWDB_TRUE@extras_usb_db_pci_db_SOURCES = extras/usb-db/usb-db.c
 -@ENABLE_HWDB_TRUE@extras_usb_db_pci_db_CPPFLAGS = $(AM_CPPFLAGS) -DPCI_DATABASE=\"$(PCI_DATABASE)\" -DBUILD_FOR_PCI
 +@ENABLE_HWDB_TRUE@extras_usb_db_pci_db_CPPFLAGS = $(AM_CPPFLAGS) -DPCI_DATABASE=\"$(PCI_DATABASE)\" -DBUILD_FOR_PCI -DUSE_ZLIB
- @ENABLE_HWDB_TRUE@extras_usb_db_pci_db_LDADD = libudev/libudev-private.la
+-@ENABLE_HWDB_TRUE@extras_usb_db_pci_db_LDADD = libudev/libudev-private.la
++@ENABLE_HWDB_TRUE@extras_usb_db_pci_db_LDADD = libudev/libudev-private.la -lz

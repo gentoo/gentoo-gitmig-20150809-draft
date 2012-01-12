@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.632 2012/01/04 00:36:37 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.633 2012/01/12 16:29:22 williamh Exp $
+
+  12 Jan 2012; William Hubbs <williamh@gentoo.org> files/udev-175-zlib.patch:
+  add back original patch for #397953.
 
   04 Jan 2012; William Hubbs <williamh@gentoo.org> -files/udev-175-zlib.patch,
   udev-175-r1.ebuild:
