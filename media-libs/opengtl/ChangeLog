@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/opengtl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.2 2012/01/11 18:51:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.3 2012/01/12 13:04:33 johu Exp $
+
+*opengtl-0.9.15.2 (12 Jan 2012)
+
+  12 Jan 2012; Johannes Huber <johu@gentoo.org> +opengtl-0.9.15.2.ebuild:
+  Version bump.
 
   11 Jan 2012; Johannes Huber <johu@gentoo.org> opengtl-0.9.15.1.ebuild:
   Fix dep on llvm, bug #398263.
