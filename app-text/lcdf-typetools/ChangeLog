@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lcdf-typetools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.72 2012/01/09 15:47:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.73 2012/01/12 21:03:04 maekke Exp $
+
+  12 Jan 2012; Markus Meier <maekke@gentoo.org> lcdf-typetools-2.91.ebuild:
+  arm stable, bug #396837
 
 *lcdf-typetools-2.92 (09 Jan 2012)
 
