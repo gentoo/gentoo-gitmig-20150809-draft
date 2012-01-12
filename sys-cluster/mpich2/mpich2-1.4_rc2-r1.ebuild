@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2-r1.ebuild,v 1.4 2011/06/21 14:24:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2-r1.ebuild,v 1.5 2012/01/12 02:11:50 jsbronder Exp $
 
 EAPI=2
 
@@ -54,7 +54,7 @@ src_prepare() {
 		src/env/*.in || die
 
 	# 369263 and 1044, 1500 upstream.
-	epatch "${FILESDIR}"/fix-pkg-config-files.patch
+	epatch "${FILESDIR}"/mpich2-1.4_rc2-fix-pkg-config-files.patch
 	AT_M4DIR="${S}"/confdb eautoreconf || die
 }
 
