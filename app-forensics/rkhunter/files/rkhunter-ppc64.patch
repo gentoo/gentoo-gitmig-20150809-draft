@@ -1,7 +1,0 @@
---- rkhunter.orig/files/os.dat	2007-06-15 04:51:07.000000000 +0800
-+++ rkhunter/files/os.dat	2008-05-04 00:11:31.000000000 +0800
-@@ -233,3 +233,4 @@
- 988:Debian stable (arm):/usr/bin/md5sum:/bin:
- 989:Debian stable (powerpc):/usr/bin/md5sum:/bin:
- 990:Debian stable (x86_64):/usr/bin/md5sum:/bin:
-+991:Gentoo Linux 1.6 (powerpc64):/usr/bin/md5sum:/bin:

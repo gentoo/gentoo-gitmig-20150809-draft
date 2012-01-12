@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/memdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.13 2012/01/11 20:38:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.14 2012/01/12 00:06:44 radhermit Exp $
+
+  12 Jan 2012; Tim Harder <radhermit@gentoo.org> -memdump-1.0.ebuild:
+  Remove old.
 
   11 Jan 2012; Brent Baude <ranger@gentoo.org> memdump-1.01.ebuild:
   Marking memdump-1.01 ppc for bug 390013
