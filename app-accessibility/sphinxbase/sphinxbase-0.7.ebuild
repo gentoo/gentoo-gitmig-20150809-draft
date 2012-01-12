@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/sphinxbase-0.7.ebuild,v 1.1 2011/11/17 17:35:05 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/sphinxbase-0.7.ebuild,v 1.2 2012/01/12 16:33:37 mgorny Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -23,15 +23,22 @@ DEPEND="${RDEPEND}
 
 RESTRICT_PYTHON_ABIS="3*"
 
+# Due to generated Python setup.py.
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
 src_configure() {
-	econf \
-		$( use_with lapack ) \
-		$( use_with python ) \
-		$( use_enable static-libs static )
+	local myeconfargs=(
+		$( use_with lapack )
+		# python modules are built through distutils
+		# so disable the ugly wrapper
+		--without-python
+	)
+
+	autotools-utils_src_configure
 }
 
 src_compile() {
-	default
+	autotools-utils_src_compile
 
 	if use python; then
 		python_copy_sources python
@@ -45,7 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	autotools-utils_src_install
 
 	if use python; then
 		python_execute_function -s --source-dir python -d
@@ -54,6 +61,4 @@ src_install() {
 	if use doc; then
 		dohtml doc/html/*
 	fi
-
-	remove_libtool_files
 }

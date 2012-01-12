@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinxbase
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.1 2011/11/17 17:35:05 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.2 2012/01/12 16:33:37 mgorny Exp $
+
+  12 Jan 2012; Michał Górny <mgorny@gentoo.org> sphinxbase-0.7.ebuild:
+  Fix invalid use of autotools-utils.eclass.
 
 *sphinxbase-0.7 (17 Nov 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinx3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.5 2011/11/17 17:45:56 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.6 2012/01/12 16:34:10 mgorny Exp $
+
+  12 Jan 2012; Michał Górny <mgorny@gentoo.org> sphinx3-0.8.ebuild:
+  Fix invalid use of autotools-utils.eclass.
 
 *sphinx3-0.8 (17 Nov 2011)
 
