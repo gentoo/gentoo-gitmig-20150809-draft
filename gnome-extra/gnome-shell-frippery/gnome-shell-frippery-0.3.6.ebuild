@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-frippery/gnome-shell-frippery-0.3.6.ebuild,v 1.1 2012/01/11 06:13:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-frippery/gnome-shell-frippery-0.3.6.ebuild,v 1.2 2012/01/12 19:18:10 tetromino Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://intgat.tigress.co.uk/rmy/extensions/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="app-admin/eselect-gnome-shell-extensions
