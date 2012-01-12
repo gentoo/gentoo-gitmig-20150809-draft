@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.47 2011/12/18 17:53:21 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.48 2012/01/12 22:17:46 maekke Exp $
+
+  12 Jan 2012; Markus Meier <maekke@gentoo.org> coverage-3.5.1.ebuild:
+  add ~arm, bug #395461
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> coverage-3.4.ebuild,
   coverage-3.5.ebuild, coverage-3.5.1.ebuild:
