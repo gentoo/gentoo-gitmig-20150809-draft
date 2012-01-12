@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/files/ufdb.initd.2,v 1.1 2011/10/22 00:15:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/files/ufdb.initd.2,v 1.2 2012/01/12 13:22:22 flameeyes Exp $
 
 # reconfig is what the upstream documentation suggests, so let's
 # provide it for compatibility.
@@ -47,7 +47,7 @@ gentables() {
 start_pre() {
 	gentables
 
-	checkpath -d -m 0755 -o ${UFDB_USER} $(get_config logdir) /var/run/ufdbguardd
+	checkpath -d -m 0755 -o ${UFDB_USER} $(get_config logdir) "$(dirname "${pidfile}")"
 }
 
 reload() {
