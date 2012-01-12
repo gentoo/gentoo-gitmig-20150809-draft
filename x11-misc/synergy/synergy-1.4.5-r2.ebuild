@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.5-r1.ebuild,v 1.1 2011/12/05 14:45:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.5-r2.ebuild,v 1.1 2012/01/12 00:27:24 darkside Exp $
 
 EAPI=4
 
@@ -32,6 +32,7 @@ S=${WORKDIR}/${P}-Source
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gtk3-fix.patch"
+	epatch "${FILESDIR}/${P}-clipboard-fix.patch"
 }
 
 src_configure() {

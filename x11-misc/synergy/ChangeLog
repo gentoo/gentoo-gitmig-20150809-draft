@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.73 2012/01/04 20:48:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.74 2012/01/12 00:27:24 darkside Exp $
+
+*synergy-1.4.5-r2 (12 Jan 2012)
+
+  12 Jan 2012; Jeremy Olexa <darkside@gentoo.org> -synergy-1.4.5.ebuild,
+  -synergy-1.4.5-r1.ebuild, +synergy-1.4.5-r2.ebuild,
+  +files/synergy-1.4.5-clipboard-fix.patch:
+  Revbump to fix clipboard issue, bug 397549 by Patrick
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> synergy-1.3.6.ebuild:
   Marking synergy-1.3.6 ppc for bug 391393
