@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.71 2012/01/10 20:37:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.72 2012/01/12 17:29:56 phajdan.jr Exp $
+
+  12 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pdns-3.0.1.ebuild:
+  x86 stable wrt bug #398403
 
 *pdns-3.0.1 (10 Jan 2012)
 
