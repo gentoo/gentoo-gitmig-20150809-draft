@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.206 2012/01/11 19:21:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.207 2012/01/12 19:19:01 billie Exp $
+
+*hplip-3.11.12-r1 (12 Jan 2012)
+
+  12 Jan 2012; Daniel Pielmeier <billie@gentoo.org> +hplip-3.11.12-r1.ebuild,
+  +files/hplip-3.11.12-black-stripes-pcl5c.patch:
+  Fix bug #316111. Thanks to Marcin Deranek for the report.
 
   11 Jan 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.11.12.ebuild:
   Fix bug #397493. Thanks to Hanno Meyer-Thurow (geki) for the report.
