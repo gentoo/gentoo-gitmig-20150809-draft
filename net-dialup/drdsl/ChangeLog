@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/drdsl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/ChangeLog,v 1.4 2008/01/06 01:21:54 sbriesen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/ChangeLog,v 1.5 2012/01/12 22:57:53 ulm Exp $
+
+  12 Jan 2012; Ulrich Mueller <ulm@gentoo.org> drdsl-1.2.0.ebuild:
+  Correct LICENSE to AVM-FC and add mirror restriction, bug 339118.
 
   06 Jan 2008; Stefan Briesenick <sbriesen@gentoo.org> +files/README,
   drdsl-1.2.0.ebuild:

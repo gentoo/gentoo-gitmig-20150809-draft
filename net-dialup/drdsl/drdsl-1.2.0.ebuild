@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/drdsl-1.2.0.ebuild,v 1.5 2008/01/06 01:21:54 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/drdsl-1.2.0.ebuild,v 1.6 2012/01/12 22:57:53 ulm Exp $
 
 inherit eutils rpm
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://opensuse.foehr-it.de/"
 SRC_URI="x86? ( http://opensuse.foehr-it.de/rpms/${REL}/32bit/${PN}-1.0-1.i586.rpm )
 	amd64? ( http://opensuse.foehr-it.de/rpms/${REL}/64bit/${PN}-1.0-1.x86_64.rpm )"
 
-LICENSE="as-is"
+LICENSE="AVM-FC"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="unicode"
@@ -19,7 +19,7 @@ IUSE="unicode"
 DEPEND="unicode? ( virtual/libiconv )"
 RDEPEND="net-dialup/capi4k-utils"
 
-RESTRICT="strip test"
+RESTRICT="mirror strip test"
 
 S="${WORKDIR}"
 
