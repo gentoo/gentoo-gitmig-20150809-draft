@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.313 2012/01/04 23:30:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.314 2012/01/13 16:51:17 tetromino Exp $
+
+  13 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-games-3.2.1.ebuild, gnome-games-3.2.1-r1.ebuild:
+  Add missing cairo deps for sudoku, reported by Joost Ruis on irc.
 
 *gnome-games-3.2.1-r1 (04 Jan 2012)
 
