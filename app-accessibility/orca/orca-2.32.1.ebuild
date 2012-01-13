@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.1.ebuild,v 1.8 2012/01/01 00:12:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.1.ebuild,v 1.9 2012/01/13 17:21:22 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -51,7 +51,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	echo '#!/bin/sh' > py-compile
+	echo > py-compile
 }
 
 src_configure() {

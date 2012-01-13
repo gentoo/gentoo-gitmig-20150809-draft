@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.2.1.ebuild,v 1.2 2012/01/01 00:12:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.2.1.ebuild,v 1.3 2012/01/13 17:21:22 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -31,6 +31,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-libs/atk[introspection]
 	>=dev-python/dbus-python-0.83
 	dev-python/pyatspi
+	dev-python/pycairo
 	dev-python/pyxdg
 	x11-libs/libwnck:3[introspection]
 	x11-libs/pango[introspection]"
@@ -49,7 +50,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	echo '#!/bin/sh' > py-compile
+	echo > py-compile
 }
 
 pkg_postinst() {
