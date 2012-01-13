@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/saaj-api
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/saaj-api/ChangeLog,v 1.9 2011/09/12 17:39:23 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/saaj-api/ChangeLog,v 1.10 2012/01/13 11:35:32 sera Exp $
+
+  13 Jan 2012; Ralph Sennhauser <sera@gentoo.org> -saaj-api-1.3.ebuild:
+  Remove old / broken.
 
   12 Sep 2011; Mark Loeser <halcy0n@gentoo.org> Manifest:
   Regenerate manifest
