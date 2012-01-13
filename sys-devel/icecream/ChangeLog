@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/icecream
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.40 2011/09/25 13:28:17 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.41 2012/01/13 18:46:25 xarthisius Exp $
+
+  13 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/0.9.7-automake-1.11.2.patch, icecream-0.9.7.ebuild:
+  Fix autoreconf with >=automake-1.11.2 wrt bug #397715 by Jason Mours
+  <jason.mours@verizon.net>
 
 *icecream-0.9.7 (25 Sep 2011)
 

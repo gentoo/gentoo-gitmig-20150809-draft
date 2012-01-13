@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.7.ebuild,v 1.1 2011/09/25 13:28:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.7.ebuild,v 1.2 2012/01/13 18:46:25 xarthisius Exp $
 
 EAPI=4
 
-inherit base autotools
+inherit autotools base
 
-MY_P="icecc-${PV}"
+MY_P=icecc-${PV}
 
 DESCRIPTION="icecc is a program for distributed compiling of C(++) code across several machines; based on distcc"
 HOMEPAGE="http://en.opensuse.org/Icecream"
@@ -17,11 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 PATCHES=(
 	"${FILESDIR}/0.9.6-symlinks.patch"
 	"${FILESDIR}/0.9.6-crosscompile.patch"
+	"${FILESDIR}/0.9.7-automake-1.11.2.patch"
 	"${FILESDIR}/${PN}-conf.d-verbosity.patch"
 	"${FILESDIR}/${PN}-gentoo-multilib.patch"
 )
