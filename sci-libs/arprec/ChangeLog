@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/arprec
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.6 2011/06/21 15:42:20 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.7 2012/01/13 04:35:53 bicatali Exp $
+
+*arprec-2.2.8 (13 Jan 2012)
+
+  13 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +arprec-2.2.8.ebuild,
+  +files/arprec-2.2.8-autotools.patch:
+  Version bump. Added shared libs, fixed parallel building, mordenized
+  autotools for compatibility with later autoconf
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> arprec-2.2.2.ebuild,
   arprec-2.2.7.ebuild:
