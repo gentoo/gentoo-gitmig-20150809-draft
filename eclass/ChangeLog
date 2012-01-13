@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.77 2012/01/13 20:52:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.78 2012/01/13 23:25:40 mabi Exp $
+
+  13 Jan 2012; Matti Bickel <mabi@gentoo.org> php-ext-source-r2.eclass:
+  Uncomment DEPEND for php-ext-source-r2.eclass, but w/o the SELFDEPEND that
+  breaks pecl ebuilds (bug #398553)
 
   13 Jan 2012; Ulrich Müller <ulm@gentoo.org> +cdrom.eclass:
   New cdrom.eclass, split out CD-ROM functions from eutils.eclass.
