@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.332 2011/12/21 23:00:58 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.333 2012/01/13 17:28:42 tetromino Exp $
+
+  13 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gedit-3.2.3.ebuild,
+  gedit-3.2.5.ebuild:
+  Add missing python cairo deps; modernize py-compile idiom.
 
 *gedit-3.2.5 (21 Dec 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.5.ebuild,v 1.1 2011/12/21 23:00:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.5.ebuild,v 1.2 2012/01/13 17:28:42 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -40,7 +40,8 @@ COMMON_DEPEND="
 		>=dev-libs/gobject-introspection-0.9.3
 		>=x11-libs/gtk+-3.0:3[introspection]
 		>=x11-libs/gtksourceview-2.91.9:3.0[introspection]
-		>=dev-python/pygobject-3.0.0:3 )
+		dev-python/pycairo
+		>=dev-python/pygobject-3.0.0:3[cairo] )
 	spell? (
 		>=app-text/enchant-1.2
 		>=app-text/iso-codes-0.35
@@ -81,8 +82,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	mv "${S}"/py-compile "${S}"/py-compile.orig
-	ln -s $(type -P true) "${S}"/py-compile
+	echo > py-compile
 
 	# Fix missing file in POTFILES.in
 	echo "plugins/quickopen/quickopen/__init__.py" >> po/POTFILES.in
