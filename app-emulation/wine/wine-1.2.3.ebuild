@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.3.ebuild,v 1.10 2011/09/18 09:08:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.3.ebuild,v 1.11 2012/01/13 00:08:55 tetromino Exp $
 
 EAPI="2"
 
@@ -117,6 +117,7 @@ src_prepare() {
 		eautoreconf
 	fi
 	epatch "${FILESDIR}"/${PN}-1.1.15-winegcc.patch #260726
+	epatch "${FILESDIR}"/${PN}-1.2.3-msxml3-libxml2-headers.patch #397993
 	epatch_user #282735
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in || die
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
