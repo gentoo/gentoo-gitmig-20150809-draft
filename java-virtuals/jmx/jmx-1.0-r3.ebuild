@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jmx/jmx-1.0-r2.ebuild,v 1.2 2012/01/01 18:57:56 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jmx/jmx-1.0-r3.ebuild,v 1.1 2012/01/13 11:21:51 sera Exp $
 
-EAPI=1
+EAPI=4
 
 inherit java-virtuals-2
 
@@ -15,11 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
-DEPEND=""
 RDEPEND="|| (
-			virtual/jdk:1.7
-			virtual/jdk:1.6
-			virtual/jdk:1.5
+			virtual/jre:1.7
+			virtual/jre:1.6
+			virtual/jre:1.5
 			dev-java/sun-jmx:0
 		)
 		>=dev-java/java-config-2.1.8
