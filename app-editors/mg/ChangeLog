@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.42 2012/01/06 15:18:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.43 2012/01/13 02:00:54 fauli Exp $
+
+  13 Jan 2012; Christian Faulhammer <fauli@gentoo.org> -mg-20110120.ebuild:
+  clean up
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> mg-20110905.ebuild:
   Marking mg-20110905 ppc for bug 386689
