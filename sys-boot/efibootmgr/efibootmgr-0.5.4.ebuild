@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4.ebuild,v 1.4 2010/03/03 19:44:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4.ebuild,v 1.5 2012/01/13 16:47:50 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -17,22 +17,11 @@ RDEPEND="sys-apps/pciutils"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-pkg_config() {
-	# should prob get moved into tc-funcs or something ...
-	if [[ ${PKG_CONFIG+set} == "set" ]] ; then
-		echo ${PKG_CONFIG}
-	elif type -p ${CHOST}-pkg-config >/dev/null ; then
-		echo ${CHOST}-pkg-config
-	else
-		echo pkg-config
-	fi
-}
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
-		-e "/^LIBS/s:=.*:=$($(pkg_config) libpci --libs):" \
+		-e "/^LIBS/s:=.*:=$($(tc-getPKG_CONFIG) libpci --libs):" \
 		src/efibootmgr/module.mk || die
 }
 
