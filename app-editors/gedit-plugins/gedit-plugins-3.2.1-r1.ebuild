@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.2.1-r1.ebuild,v 1.1 2011/11/03 05:01:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.2.1-r1.ebuild,v 1.2 2012/01/13 17:41:16 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -28,7 +28,10 @@ RDEPEND=">=app-editors/gedit-3.2.0[python?]
 	>=x11-libs/gtksourceview-3.0.0:3.0
 	python? (
 		>=app-editors/gedit-3.0.0[introspection]
-		|| ( dev-python/pygobject:2[introspection] dev-python/pygobject:3 )
+		dev-python/pycairo
+		|| (
+			dev-python/pygobject:2[cairo,introspection]
+			dev-python/pygobject:3[cairo] )
 		>=x11-libs/gtk+-3.0.0:3[introspection]
 		>=x11-libs/gtksourceview-3.0.0:3.0[introspection]
 		x11-libs/pango[introspection]
@@ -77,7 +80,7 @@ src_prepare() {
 
 	# disable pyc compiling
 	for d in . build-aux ; do
-		ln -sfn $(type -P true) "${d}/py-compile"
+		echo > "${d}/py-compile"
 	done
 }
 
