@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.86 2012/01/11 17:38:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.87 2012/01/13 02:29:21 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -47,6 +47,7 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/libwebp-0.1.2
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
+	sys-fs/udev
 	sys-libs/zlib
 	x11-libs/gtk+:2
 	x11-libs/libXinerama
