@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/selenium-webdriver/selenium-webdriver-2.16.0.ebuild,v 1.2 2012/01/05 09:44:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/selenium-webdriver/selenium-webdriver-2.16.0.ebuild,v 1.3 2012/01/13 09:02:00 graaff Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ruby19 ree18"
 
 # NOTE: this package contains precompiled code. It appears that all
 # source code can be found at http://code.google.com/p/selenium/ but the
