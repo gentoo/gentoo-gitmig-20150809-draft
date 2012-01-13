@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/jrexx-1.1.1-r1.ebuild,v 1.10 2010/01/15 20:35:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/jrexx-1.1.1-r1.ebuild,v 1.11 2012/01/13 13:26:57 sera Exp $
 
 inherit java-pkg-2
 
@@ -27,7 +27,7 @@ src_compile() {
 
 	if use doc ; then
 		mkdir "${S}"/javadoc
-		javadoc -d "${S}"/javadoc $(find * -type d | tr '/' '.') \
+		javadoc -encoding ISO8859_1 -d "${S}"/javadoc $(find * -type d | tr '/' '.') \
 			|| die "failed to build javadocs"
 	fi
 
