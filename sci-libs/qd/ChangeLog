@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/qd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/ChangeLog,v 1.9 2012/01/12 23:09:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/ChangeLog,v 1.10 2012/01/13 04:33:03 bicatali Exp $
+
+  13 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  files/qd-2.3.12-autotools.patch:
+  Fixed qd-config script for modules installed in include directory
 
   12 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
   files/qd-2.3.12-autotools.patch:

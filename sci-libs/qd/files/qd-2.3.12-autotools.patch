@@ -1,14 +1,6 @@
-Patch for autotools for:
-* allow build of shared libraries with libtool
-* fix m4 macros for newer autoconf
-* modernize configure.ac
-* fix parallel make issues with fortran modules
-
-Sebastien Fabbro Jan. 2012
-
 diff -Nur qd-2.3.12.orig/configure.ac qd-2.3.12/configure.ac
---- qd-2.3.12.orig/configure.ac	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/configure.ac	2012-01-12 22:34:18.000000000 +0000
+--- qd-2.3.12.orig/configure.ac	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/configure.ac	2012-01-13 04:15:47.000000000 +0000
 @@ -308,12 +308,11 @@
  AC_SUBST(FFLAGS, $FCFLAGS)
  
@@ -26,8 +18,8 @@ diff -Nur qd-2.3.12.orig/configure.ac qd-2.3.12/configure.ac
  # Output
  AC_CONFIG_FILES([Makefile config/Makefile src/Makefile include/Makefile 
 diff -Nur qd-2.3.12.orig/fortran/Makefile.am qd-2.3.12/fortran/Makefile.am
---- qd-2.3.12.orig/fortran/Makefile.am	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/fortran/Makefile.am	2012-01-12 22:48:19.000000000 +0000
+--- qd-2.3.12.orig/fortran/Makefile.am	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/fortran/Makefile.am	2012-01-13 04:15:47.000000000 +0000
 @@ -1,6 +1,6 @@
  if HAVE_FORTRAN
  AM_CPPFLAGS = -I$(top_builddir) -I$(top_builddir)/include -I$(top_srcdir)/include
@@ -36,7 +28,7 @@ diff -Nur qd-2.3.12.orig/fortran/Makefile.am qd-2.3.12/fortran/Makefile.am
  
  if UPCASE_MODULE
  DDEXT=DDEXT.$(module_ext)
-@@ -14,17 +14,17 @@
+@@ -14,17 +14,18 @@
  DDMOD=ddmodule.$(module_ext)
  endif
  
@@ -60,13 +52,14 @@ diff -Nur qd-2.3.12.orig/fortran/Makefile.am qd-2.3.12/fortran/Makefile.am
 +$(QDEXT): qdext.lo $(DDEXT) 
  
 -pkglib_DATA = $(QDMOD) $(QDEXT) $(DDMOD) $(DDEXT)
-+include_HEADERS = $(QDMOD) $(QDEXT) $(DDMOD) $(DDEXT)
++qdmoddir = $(includedir)/$(PACKAGE)
++qdmod_HEADERS = $(QDMOD) $(QDEXT) $(DDMOD) $(DDEXT)
  
  DEMO=quaderq$(EXEEXT) quadgsq2d$(EXEEXT) quadgsq$(EXEEXT) \
       quadtsq$(EXEEXT) quadtsq2d$(EXEEXT)
 diff -Nur qd-2.3.12.orig/m4/ax_cxx_clock_gettime.m4 qd-2.3.12/m4/ax_cxx_clock_gettime.m4
---- qd-2.3.12.orig/m4/ax_cxx_clock_gettime.m4	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/m4/ax_cxx_clock_gettime.m4	2012-01-12 22:11:48.000000000 +0000
+--- qd-2.3.12.orig/m4/ax_cxx_clock_gettime.m4	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/m4/ax_cxx_clock_gettime.m4	2012-01-13 04:15:47.000000000 +0000
 @@ -3,13 +3,13 @@
  AC_DEFUN([AX_CXX_CLOCK_GETTIME], [
  AC_MSG_CHECKING([for clock_gettime useability])
@@ -84,8 +77,8 @@ diff -Nur qd-2.3.12.orig/m4/ax_cxx_clock_gettime.m4 qd-2.3.12/m4/ax_cxx_clock_ge
  AC_MSG_RESULT([$ax_cxx_clock_gettime])
  ])
 diff -Nur qd-2.3.12.orig/m4/ax_cxx_copysign.m4 qd-2.3.12/m4/ax_cxx_copysign.m4
---- qd-2.3.12.orig/m4/ax_cxx_copysign.m4	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/m4/ax_cxx_copysign.m4	2012-01-12 22:12:57.000000000 +0000
+--- qd-2.3.12.orig/m4/ax_cxx_copysign.m4	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/m4/ax_cxx_copysign.m4	2012-01-13 04:15:47.000000000 +0000
 @@ -6,19 +6,19 @@
  AC_MSG_CHECKING([for copysign])
  AC_LANG_PUSH(C++)
@@ -111,8 +104,8 @@ diff -Nur qd-2.3.12.orig/m4/ax_cxx_copysign.m4 qd-2.3.12/m4/ax_cxx_copysign.m4
                        ax_cxx_copysign="::copysign(x, y)"], 
                       [AC_MSG_RESULT(none)
 diff -Nur qd-2.3.12.orig/m4/ax_cxx_fma.m4 qd-2.3.12/m4/ax_cxx_fma.m4
---- qd-2.3.12.orig/m4/ax_cxx_fma.m4	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/m4/ax_cxx_fma.m4	2012-01-12 21:58:52.000000000 +0000
+--- qd-2.3.12.orig/m4/ax_cxx_fma.m4	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/m4/ax_cxx_fma.m4	2012-01-13 04:15:47.000000000 +0000
 @@ -19,14 +19,14 @@
      case $name in
        ibm)
@@ -186,8 +179,8 @@ diff -Nur qd-2.3.12.orig/m4/ax_cxx_fma.m4 qd-2.3.12/m4/ax_cxx_fma.m4
                          ax_cxx_fms="((x)*(y) - (z))"])
        ;;
 diff -Nur qd-2.3.12.orig/m4/ax_cxx_isfinite.m4 qd-2.3.12/m4/ax_cxx_isfinite.m4
---- qd-2.3.12.orig/m4/ax_cxx_isfinite.m4	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/m4/ax_cxx_isfinite.m4	2012-01-12 22:13:36.000000000 +0000
+--- qd-2.3.12.orig/m4/ax_cxx_isfinite.m4	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/m4/ax_cxx_isfinite.m4	2012-01-13 04:15:47.000000000 +0000
 @@ -6,19 +6,19 @@
  AC_MSG_CHECKING([for isfinite])
  AC_LANG_PUSH(C++)
@@ -213,8 +206,8 @@ diff -Nur qd-2.3.12.orig/m4/ax_cxx_isfinite.m4 qd-2.3.12/m4/ax_cxx_isfinite.m4
                        ax_cxx_isfinite="::isfinite(x)"], 
                       [AC_MSG_RESULT(none)
 diff -Nur qd-2.3.12.orig/m4/ax_cxx_isinf.m4 qd-2.3.12/m4/ax_cxx_isinf.m4
---- qd-2.3.12.orig/m4/ax_cxx_isinf.m4	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/m4/ax_cxx_isinf.m4	2012-01-12 22:14:20.000000000 +0000
+--- qd-2.3.12.orig/m4/ax_cxx_isinf.m4	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/m4/ax_cxx_isinf.m4	2012-01-13 04:15:47.000000000 +0000
 @@ -6,19 +6,19 @@
  AC_MSG_CHECKING([for isinf])
  AC_LANG_PUSH(C++)
@@ -240,8 +233,8 @@ diff -Nur qd-2.3.12.orig/m4/ax_cxx_isinf.m4 qd-2.3.12/m4/ax_cxx_isinf.m4
                        ax_cxx_isinf="::isinf(x)"], 
                       [AC_MSG_RESULT(none)
 diff -Nur qd-2.3.12.orig/m4/ax_cxx_isnan.m4 qd-2.3.12/m4/ax_cxx_isnan.m4
---- qd-2.3.12.orig/m4/ax_cxx_isnan.m4	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/m4/ax_cxx_isnan.m4	2012-01-12 22:14:58.000000000 +0000
+--- qd-2.3.12.orig/m4/ax_cxx_isnan.m4	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/m4/ax_cxx_isnan.m4	2012-01-13 04:15:47.000000000 +0000
 @@ -6,19 +6,19 @@
  AC_MSG_CHECKING([for isnan])
  AC_LANG_PUSH(C++)
@@ -267,8 +260,8 @@ diff -Nur qd-2.3.12.orig/m4/ax_cxx_isnan.m4 qd-2.3.12/m4/ax_cxx_isnan.m4
                        ax_cxx_isnan="::isnan(x)"], 
                       [AC_MSG_RESULT(none)
 diff -Nur qd-2.3.12.orig/m4/ax_f90_module_flag.m4 qd-2.3.12/m4/ax_f90_module_flag.m4
---- qd-2.3.12.orig/m4/ax_f90_module_flag.m4	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/m4/ax_f90_module_flag.m4	2012-01-12 22:28:24.000000000 +0000
+--- qd-2.3.12.orig/m4/ax_f90_module_flag.m4	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/m4/ax_f90_module_flag.m4	2012-01-13 04:15:47.000000000 +0000
 @@ -16,7 +16,7 @@
  
  AC_DEFUN([AX_F90_MODULE_FLAG],[
@@ -308,8 +301,8 @@ diff -Nur qd-2.3.12.orig/m4/ax_f90_module_flag.m4 qd-2.3.12/m4/ax_f90_module_fla
    fi
  done
 diff -Nur qd-2.3.12.orig/m4/ax_f90_module_style.m4 qd-2.3.12/m4/ax_f90_module_style.m4
---- qd-2.3.12.orig/m4/ax_f90_module_style.m4	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/m4/ax_f90_module_style.m4	2012-01-12 22:28:50.000000000 +0000
+--- qd-2.3.12.orig/m4/ax_f90_module_style.m4	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/m4/ax_f90_module_style.m4	2012-01-13 04:15:47.000000000 +0000
 @@ -21,7 +21,7 @@
  
  AC_DEFUN([AX_F90_MODULE_STYLE],[
@@ -336,8 +329,8 @@ diff -Nur qd-2.3.12.orig/m4/ax_f90_module_style.m4 qd-2.3.12/m4/ax_f90_module_st
     if test x$ax_f90_modext = x ; then
  dnl Some F90 compilers put module filename in uppercase letters
 diff -Nur qd-2.3.12.orig/m4/ax_fc_etime.m4 qd-2.3.12/m4/ax_fc_etime.m4
---- qd-2.3.12.orig/m4/ax_fc_etime.m4	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/m4/ax_fc_etime.m4	2012-01-12 22:42:03.000000000 +0000
+--- qd-2.3.12.orig/m4/ax_fc_etime.m4	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/m4/ax_fc_etime.m4	2012-01-13 04:15:47.000000000 +0000
 @@ -4,9 +4,9 @@
  ax_fc_etime=
  ax_fc_etime_names="etime etime_"
@@ -351,8 +344,8 @@ diff -Nur qd-2.3.12.orig/m4/ax_fc_etime.m4 qd-2.3.12/m4/ax_fc_etime.m4
    if test "x$ax_fc_etime" != "x"; then
      break;
 diff -Nur qd-2.3.12.orig/Makefile.am qd-2.3.12/Makefile.am
---- qd-2.3.12.orig/Makefile.am	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/Makefile.am	2012-01-12 20:21:15.000000000 +0000
+--- qd-2.3.12.orig/Makefile.am	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/Makefile.am	2012-01-13 04:15:47.000000000 +0000
 @@ -1,7 +1,6 @@
  ACLOCAL_AMFLAGS = -I m4
  SUBDIRS = config src include tests fortran
@@ -394,10 +387,21 @@ diff -Nur qd-2.3.12.orig/Makefile.am qd-2.3.12/Makefile.am
  
  bin_SCRIPTS=qd-config
  
-
+diff -Nur qd-2.3.12.orig/qd-config.in qd-2.3.12/qd-config.in
+--- qd-2.3.12.orig/qd-config.in	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/qd-config.in	2012-01-13 04:17:47.000000000 +0000
+@@ -30,7 +30,7 @@
+ FCLIBS="-L$libdir -lqdmod -lqd @LIBS@ @FCLIBS@"
+ FMAINLIB="-L$libdir -lqd_f_main"
+ FCFLAGS="@REQ_FCFLAGS@"
+-MODFLAG="@ax_f90_modflag@$libdir/qd"
++MODFLAG="@ax_f90_modflag@$includedir/qd"
+ 
+ build="@BUILDER@-@BUILDDATE@"
+ configure_args="@CONFIGURE_ARGS@"
 diff -Nur qd-2.3.12.orig/src/Makefile.am qd-2.3.12/src/Makefile.am
---- qd-2.3.12.orig/src/Makefile.am	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/src/Makefile.am	2012-01-12 19:49:45.000000000 +0000
+--- qd-2.3.12.orig/src/Makefile.am	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/src/Makefile.am	2012-01-13 04:15:47.000000000 +0000
 @@ -1,9 +1,9 @@
  SRC = c_dd.cpp c_qd.cpp dd_real.cpp dd_const.cpp \
        fpu.cpp qd_real.cpp qd_const.cpp util.cpp bits.cpp util.h
@@ -411,8 +415,8 @@ diff -Nur qd-2.3.12.orig/src/Makefile.am qd-2.3.12/src/Makefile.am
  AM_CPPFLAGS = -I$(top_builddir) -I$(top_builddir)/include -I$(top_srcdir)/include
  
 diff -Nur qd-2.3.12.orig/tests/Makefile.am qd-2.3.12/tests/Makefile.am
---- qd-2.3.12.orig/tests/Makefile.am	2012-01-12 19:44:25.000000000 +0000
-+++ qd-2.3.12/tests/Makefile.am	2012-01-12 20:06:49.000000000 +0000
+--- qd-2.3.12.orig/tests/Makefile.am	2012-01-13 04:15:25.000000000 +0000
++++ qd-2.3.12/tests/Makefile.am	2012-01-13 04:15:47.000000000 +0000
 @@ -1,4 +1,4 @@
 -LDADD = $(top_builddir)/src/libqd.a
 +LDADD = $(top_builddir)/src/libqd.la
