@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.272 2012/01/08 02:34:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.273 2012/01/13 21:54:06 sping Exp $
+
+*genkernel-3.4.23 (13 Jan 2012)
+
+  13 Jan 2012; Sebastian Pipping <sping@gentoo.org> +genkernel-3.4.23.ebuild:
+  Bump to genkernel 3.4.23, busybox 1.19.3, e2fsprogs 1.42, fuse 2.8.6, lvm
+  2.02.88, unionfs-fuse 0.24
 
 *genkernel-3.4.22.1 (08 Jan 2012)
 
