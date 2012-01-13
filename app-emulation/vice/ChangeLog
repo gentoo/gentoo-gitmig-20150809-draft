@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.80 2011/12/13 18:23:07 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.81 2012/01/13 17:31:32 vapier Exp $
+
+  13 Jan 2012; Mike Frysinger <vapier@gentoo.org> vice-2.3.ebuild:
+  Use common tc-getPKG_CONFIG helper.
 
   13 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org> vice-2.3.ebuild,
   +files/vice-2.3-libav.patch:
