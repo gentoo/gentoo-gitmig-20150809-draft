@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lightdm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.23 2011/11/19 20:27:34 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.24 2012/01/13 23:23:48 hwoarang Exp $
+
+  13 Jan 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/lightdm-1.0.6-pkglibexec.patch, lightdm-1.0.6-r3.ebuild:
+  Apply pkglibexec patch. Thanks to Alphat-PC <AlphatPC@gmail.com>. Bug #397399
 
 *lightdm-1.0.6-r3 (19 Nov 2011)
 

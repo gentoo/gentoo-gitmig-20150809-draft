@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.6-r3.ebuild,v 1.1 2011/11/19 20:27:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.6-r3.ebuild,v 1.2 2012/01/13 23:23:48 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -42,7 +42,7 @@ src_prepare() {
 	sed -i -e "/minimum-uid/s:500:1000:" data/users.conf || die
 	sed -i -e "s:gtk+-3.0:gtk+-2.0:" configure.ac || die
 	epatch "${FILESDIR}"/session-wrapper-${PN}.patch
-
+	epatch "${FILESDIR}"/${P}-pkglibexec.patch
 	if has_version dev-libs/gobject-introspection; then
 		eautoreconf
 	else
