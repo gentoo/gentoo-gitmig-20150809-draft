@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/biosdevname-0.3.11.ebuild,v 1.1 2011/11/09 11:29:31 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/biosdevname-0.3.11-r1.ebuild,v 1.1 2012/01/13 11:23:24 aidecoe Exp $
 
 EAPI=4
 
@@ -17,6 +17,11 @@ CDEPEND="sys-fs/udev"
 DEPEND="${CDEPEND}
 	sys-apps/pciutils"
 RDEPEND="${CDEPEND}"
+
+src_prepare() {
+	default
+	sed -e 's|/sbin/biosdevname|/usr\0|g' -i "${S}"/biosdevname.rules.in
+}
 
 pkg_postinst() {
 	elog "To make it working you need to remove"
