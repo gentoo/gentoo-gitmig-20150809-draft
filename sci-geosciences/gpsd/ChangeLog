@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/gpsd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.81 2011/12/07 16:17:42 vapier Exp $ 
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.82 2012/01/13 17:32:06 vapier Exp $
+
+*gpsd-3.4 (13 Jan 2012)
+
+  13 Jan 2012; Mike Frysinger <vapier@gentoo.org> +gpsd-3.4.ebuild,
+  +files/gpsd-3.4-cfgetispeed.patch, +files/gpsd-3.4-chrpath.patch,
+  +files/gpsd-3.4-gpsmon-lm.patch, +files/gpsd-3.4-strptime.patch:
+  Version bump.
 
   06 Dec 2011; Mike Frysinger <vapier@gentoo.org> gpsd-3.3-r1.ebuild:
   Fix typos in export options pointed out by Yufeng Shen.
