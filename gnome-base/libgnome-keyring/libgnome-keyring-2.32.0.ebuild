@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-2.32.0.ebuild,v 1.13 2011/09/12 08:41:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-2.32.0.ebuild,v 1.14 2012/01/13 20:23:49 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -17,7 +17,6 @@ KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-lin
 IUSE="debug doc test"
 
 RDEPEND=">=sys-apps/dbus-1.0
-	gnome-base/gconf
 	>=gnome-base/gnome-keyring-2.29[test?]
 	!<gnome-base/gnome-keyring-2.29"
 DEPEND="${RDEPEND}
