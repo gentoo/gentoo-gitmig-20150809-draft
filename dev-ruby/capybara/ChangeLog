@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/capybara
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/ChangeLog,v 1.7 2011/12/06 16:53:34 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/ChangeLog,v 1.8 2012/01/13 09:03:53 graaff Exp $
+
+  13 Jan 2012; Hans de Graaff <graaff@gentoo.org> capybara-1.1.2.ebuild:
+  Add ruby19.
 
   06 Dec 2011; Hans de Graaff <graaff@gentoo.org> capybara-1.1.2.ebuild:
   Restrict tests.
