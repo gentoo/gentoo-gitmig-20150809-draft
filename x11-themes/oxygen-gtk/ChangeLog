@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/oxygen-gtk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.17 2011/12/15 16:28:49 johu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.18 2012/01/13 19:24:10 ago Exp $
+
+  13 Jan 2012; Agostino Sarubbo <ago@gentoo.org> oxygen-gtk-1.1.6.ebuild:
+  Stable for X86, wrt bug #398793
 
 *oxygen-gtk-1.1.6 (15 Dec 2011)
 
