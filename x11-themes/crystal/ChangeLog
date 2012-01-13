@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/crystal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.43 2011/02/02 05:48:35 tampakrap Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.44 2012/01/13 16:49:04 binki Exp $
+
+*crystal-2.1.0 (13 Jan 2012)
+
+  13 Jan 2012; Nathan Phillip Brink <binki@gentoo.org> +crystal-2.1.0.ebuild:
+  Version bump for bug #370825 on behalf of kensington.
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> crystal-2.0.5.ebuild:
   EAPI3, use add_kdebase_dep, use array for docs
