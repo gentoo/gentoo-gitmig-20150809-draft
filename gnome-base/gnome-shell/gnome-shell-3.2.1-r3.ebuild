@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.1-r2.ebuild,v 1.2 2012/01/13 09:57:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.1-r3.ebuild,v 1.1 2012/01/13 09:57:08 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+bluetooth"
+IUSE="+bluetooth +networkmanager"
 KEYWORDS="~amd64 ~x86"
 
 # gnome-desktop-2.91.2 is needed due to header changes, db82a33 in gnome-desktop
@@ -35,14 +35,12 @@ COMMON_DEPEND=">=dev-libs/glib-2.25.9:2
 	>=dev-libs/json-glib-0.13.2
 	>=gnome-base/gnome-desktop-2.91.2:3
 	>=gnome-base/gsettings-desktop-schemas-2.91.91
-	gnome-base/libgnome-keyring
 	>=gnome-extra/evolution-data-server-2.91.6
 	>=media-libs/gstreamer-0.10.16:0.10
 	>=media-libs/gst-plugins-base-0.10.16:0.10
 	>=net-im/telepathy-logger-0.2.4[introspection]
 	net-libs/libsoup:2.4[introspection]
 	>=net-libs/telepathy-glib-0.15.5[introspection]
-	>=net-misc/networkmanager-0.8.999[introspection]
 	>=sys-auth/polkit-0.100[introspection]
 	>=x11-wm/mutter-3.2.1[introspection]
 
@@ -62,7 +60,10 @@ COMMON_DEPEND=">=dev-libs/glib-2.25.9:2
 	>=x11-libs/libXfixes-5.0
 	x11-apps/mesa-progs
 
-	bluetooth? ( >=net-wireless/gnome-bluetooth-3.1.0[introspection] )"
+	bluetooth? ( >=net-wireless/gnome-bluetooth-3.1.0[introspection] )
+	networkmanager? (
+		gnome-base/libgnome-keyring
+		>=net-misc/networkmanager-0.8.999[introspection] )"
 # Runtime-only deps are probably incomplete and approximate.
 # Each block:
 # 1. Pull in polkit-0.101 for pretty authorization dialogs
@@ -92,8 +93,9 @@ RDEPEND="${COMMON_DEPEND}
 
 	x11-misc/xdg-utils
 
-	net-misc/mobile-broadband-provider-info
-	sys-libs/timezone-data"
+	networkmanager? (
+		net-misc/mobile-broadband-provider-info
+		sys-libs/timezone-data )"
 DEPEND="${COMMON_DEPEND}
 	>=sys-devel/gettext-0.17
 	>=dev-util/pkgconfig-0.22
@@ -111,6 +113,7 @@ pkg_setup() {
 		--disable-schemas-compile
 		--disable-jhbuild-wrapper-script
 		$(use_with bluetooth)
+		$(use_enable networkmanager)
 		--with-ca-certificates=${EPREFIX}/etc/ssl/certs/ca-certificates.crt
 		BROWSER_PLUGIN_DIR=${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins"
 	python_set_active_version 2
@@ -123,6 +126,9 @@ src_prepare() {
 
 	# Fix automagic gnome-bluetooth dep, bug #398145
 	epatch "${FILESDIR}/${PN}-3.2.1-automagic-gnome-bluetooth.patch"
+
+	# Make networkmanager optional, bug #398593
+	epatch "${FILESDIR}/${PN}-3.2.1-optional-networkmanager.patch"
 
 	eautoreconf
 	gnome2_src_prepare
