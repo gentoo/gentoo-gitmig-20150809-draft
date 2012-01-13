@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pedro/pedro-1.6.ebuild,v 1.1 2011/11/19 08:47:36 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pedro/pedro-1.6.ebuild,v 1.2 2012/01/13 22:19:35 ago Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.itee.uq.edu.au/~pjr/HomePages/PedroFiles/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="doc examples"
 
 RDEPEND="dev-libs/glib:2"
