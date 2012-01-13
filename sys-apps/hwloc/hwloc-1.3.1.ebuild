@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.3.1.ebuild,v 1.1 2011/12/21 11:14:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.3.1.ebuild,v 1.2 2012/01/13 17:18:05 vapier Exp $
 
 EAPI=4
 
@@ -12,10 +12,10 @@ DESCRIPTION="displays the hardware topology in convenient formats"
 HOMEPAGE="http://www.open-mpi.org/projects/hwloc/"
 SRC_URI="http://www.open-mpi.org/software/${PN}/${MY_PV}/downloads/${P}.tar.bz2"
 
+LICENSE="BSD"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux"
 IUSE="cairo debug +numa +pci svg static-libs xml X"
-SLOT="0"
-LICENSE="BSD"
 
 RDEPEND="sys-libs/ncurses
 	cairo? ( x11-libs/cairo[X?,svg?] )
@@ -27,12 +27,8 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS NEWS README VERSION )
 
-pkg_setup() {
-	# Fix bug #393467, hwloc ignores PKG_CONFIG environment variable.
-	[[ ${PKG_CONFIG} ]] && export HWLOC_PKG_CONFIG=${PKG_CONFIG}
-}
-
 src_configure() {
+	export HWLOC_PKG_CONFIG=$(tc-getPKG_CONFIG) #393467
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable cairo) \
