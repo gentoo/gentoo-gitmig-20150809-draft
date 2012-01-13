@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.1-r3.ebuild,v 1.4 2011/09/21 23:55:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.1-r3.ebuild,v 1.5 2012/01/13 17:20:48 vapier Exp $
 
 EAPI="2"
 
-inherit gnome2 eutils autotools
+inherit gnome2 eutils autotools toolchain-funcs
 
 # NOTE: Even though the *.dict.dz are the same as dictd/freedict's files,
 #       their indexes seem to be in a different format. So we'll keep them
@@ -61,7 +61,7 @@ src_prepare() {
 }
 
 src_configure() {
-	export PKG_CONFIG=$(type -P pkg-config)
+	tc-export PKG_CONFIG
 	# Festival plugin crashes, bug 188684. Disable for now.
 	G2CONF="$(use_enable gnome gnome-support)
 		$(use_enable spell)
