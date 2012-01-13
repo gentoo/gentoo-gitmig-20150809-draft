@@ -1,0 +1,10 @@
+# ChangeLog for app-benchmarks/ioping
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ioping/ChangeLog,v 1.1 2012/01/13 08:12:28 jlec Exp $
+
+*ioping-0.6 (13 Jan 2012)
+
+  13 Jan 2012; Justin Lecher <jlec@gentoo.org> +ioping-0.6.ebuild,
+  +files/ioping-0.6-makefile.patch, +metadata.xml:
+  New inclusion, #398735; thanks Vladimir Berezhnoy for the initial ebuild
+
