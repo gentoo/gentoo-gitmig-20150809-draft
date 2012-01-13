@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcanberra
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.78 2011/10/30 17:18:32 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.79 2012/01/13 17:09:28 pacho Exp $
+
+  13 Jan 2012; Pacho Ramos <pacho@gentoo.org>
+  -files/libcanberra-0.28-revert-gsettings.patch, -libcanberra-0.26.ebuild,
+  -libcanberra-0.28-r3.ebuild:
+  Drop old.
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> libcanberra-0.28-r5.ebuild:
   alpha/ia64/sh/sparc stable wrt #385699
