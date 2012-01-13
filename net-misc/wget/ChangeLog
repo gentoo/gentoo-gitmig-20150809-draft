@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.151 2011/12/20 16:14:30 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.152 2012/01/13 06:19:16 vapier Exp $
+
+  13 Jan 2012; Mike Frysinger <vapier@gentoo.org> wget-1.13.4-r1.ebuild:
+  Depend on pkgconfig since we use it now for openssl #398527 by Viktor
+  Görzen.
 
   20 Dec 2011; Mike Frysinger <vapier@gentoo.org>
   files/wget-1.13.4-openssl-pkg-config.patch:
