@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/clang
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.49 2011/12/02 13:20:51 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.50 2012/01/13 22:25:18 voyageur Exp $
+
+*clang-3.0-r1 (13 Jan 2012)
+
+  13 Jan 2012; Bernard Cafarelli <voyageur@gentoo.org> +clang-3.0-r1.ebuild,
+  +files/clang-3.0-recognize-amd-k10-enable-sse4a.patch, clang-9999.ebuild:
+  Allow to run test without rebuilding llvm, bug #397559 by mgorny. Add AMD K10
+  suport in 3.0, patch thanks to Fabio Scaccabarozzi <fsvm88@gmail.com> in bug
+  #398357
 
 *clang-3.0 (02 Dec 2011)
 

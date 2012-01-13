@@ -1,36 +1,33 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.21 2012/01/13 22:25:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r1.ebuild,v 1.1 2012/01/13 22:25:18 voyageur Exp $
 
 EAPI=3
 
 RESTRICT_PYTHON_ABIS="3.*"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit subversion eutils multilib python
+inherit eutils multilib python
 
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
-SRC_URI=""
-ESVN_REPO_URI="http://llvm.org/svn/llvm-project/cfe/trunk"
+# Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
+SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tar.gz
+	http://llvm.org/releases/${PV}/${P}.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="debug multitarget +static-analyzer +system-cxx-headers test"
 
 DEPEND="static-analyzer? ( dev-lang/perl )"
 RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
 
-S="${WORKDIR}/llvm"
-
-src_unpack() {
-	# Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
-	ESVN_PROJECT=llvm subversion_fetch "http://llvm.org/svn/llvm-project/llvm/trunk"
-	ESVN_PROJECT=clang S="${S}"/tools/clang subversion_fetch
-}
+S=${WORKDIR}/llvm-${PV}.src
 
 src_prepare() {
+	mv "${WORKDIR}"/clang-${PV}.src "${S}"/tools/clang || die "clang source directory move failed"
+
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
 
@@ -39,7 +36,7 @@ src_prepare() {
 		-i tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
 	# Fix cxx_include_root path for Gentoo
-	epatch "${FILESDIR}"/${PN}-3.0-fix_cxx_include_root.patch
+	epatch "${FILESDIR}"/${P/_*}-fix_cxx_include_root.patch
 	# fix the static analyzer for in-tree install
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i tools/clang/tools/scan-view/scan-view \
@@ -63,8 +60,11 @@ src_prepare() {
 		-i Makefile.rules || die "rpath sed failed"
 
 	# Use system llc (from llvm ebuild) for tests
-	sed -e "/^llc_props =/s/os.path.join(llvm_tools_dir, 'llc')/'llc'/" \
+	sed -e "/^registered_targets =/s/os.path.join(llvm_tools_dir, 'llc')/'llc'/" \
 		-i tools/clang/test/lit.cfg  || die "test path sed failed"
+
+	# AMD K10 CPUs + SSE4a suppport, bug #398357
+	epatch "${FILESDIR}"/${P}-recognize-amd-k10-enable-sse4a.patch
 }
 
 src_configure() {
@@ -113,6 +113,10 @@ src_test() {
 	emake site.exp || die "updating llvm site.exp failed"
 
 	cd "${S}"/tools/clang || die "cd clang failed"
+
+	# Broken test always assuming i386 host with multilib gcc 4.6.0
+	# http://llvm.org/bugs/show_bug.cgi?id=11094
+	rm -f test/Driver/linux-ld.c
 
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 	if ! emake -j1 VERBOSE=1 test; then
