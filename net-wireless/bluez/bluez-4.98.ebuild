@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.97-r2.ebuild,v 1.1 2012/01/09 23:01:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98.ebuild,v 1.1 2012/01/13 16:53:33 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.bluez.org/"
 # Because of oui.txt changing from time to time without noticement, we need to supply it
 # ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly.
 # See bugs #345263 and #349473 for reference.
-OUIDATE="20111231"
+OUIDATE="20120113"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz
 	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt.xz"
 
@@ -40,7 +40,6 @@ CDEPEND="
 "
 DEPEND="${CDEPEND}
 	>=dev-util/pkgconfig-0.20
-	>=dev-libs/check-0.9.6
 	sys-devel/flex
 "
 RDEPEND="${CDEPEND}
