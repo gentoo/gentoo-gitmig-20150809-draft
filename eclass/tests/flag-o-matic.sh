@@ -7,14 +7,17 @@ inherit flag-o-matic
 CFLAGS="-a -b -c=1"
 CXXFLAGS="-x -y -z=2"
 LDFLAGS="-l -m -n=3"
+ftend() {
+	tend $? "CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS} LDFLAGS=${LDFLAGS}"
+}
 
 tbegin "is-flag"
 ! (is-flag 1 2 3) 2>/dev/null
-tend $?
+ftend
 
 tbegin "is-ldflag"
 ! (is-ldflag 1 2 3) 2>/dev/null
-tend $?
+ftend
 
 while read exp flag ; do
 	[[ -z ${exp}${flag} ]] && continue
@@ -22,7 +25,7 @@ while read exp flag ; do
 	tbegin "is-flagq ${flag}"
 	is-flagq ${flag}
 	[[ ${exp} -eq $? ]]
-	tend $? "CFLAGS=${CFLAGS}"
+	ftend
 done <<<"
 	1	-l
 	0	-a
@@ -35,7 +38,7 @@ while read exp flag ; do
 	tbegin "is-ldflagq ${flag}"
 	is-ldflagq "${flag}"
 	[[ ${exp} -eq $? ]]
-	tend $? "LDFLAGS=${LDFLAGS}"
+	ftend
 done <<<"
 	1	-a
 	0	-n=*
@@ -45,6 +48,33 @@ done <<<"
 tbegin "strip-unsupported-flags"
 strip-unsupported-flags
 [[ ${CFLAGS} == "" ]] && [[ ${CXXFLAGS} == "-z=2" ]]
-tend $? "CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS}"
+ftend
+
+for v in C CPP CXX F FC LD ; do
+	var="${v}FLAGS"
+	eval ${var}=\"-filter -filter-glob -${v}\"
+done
+
+tbegin "filter-flags basic"
+filter-flags -filter
+(
+for v in C CPP CXX F FC LD ; do
+	var="${v}FLAGS"
+	val=${!var}
+	[[ ${val} == "-filter-glob -${v}" ]] || exit 1
+done
+)
+ftend
+
+tbegin "filter-flags glob"
+filter-flags '-filter-*'
+(
+for v in C CPP CXX F FC LD ; do
+	var="${v}FLAGS"
+	val=${!var}
+	[[ ${val} == "-${v}" ]] || exit 1
+done
+)
+ftend
 
 texit
