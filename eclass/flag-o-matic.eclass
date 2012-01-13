@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.163 2011/12/28 06:28:55 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.164 2012/01/13 22:40:29 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -113,14 +113,13 @@ _filter-var() {
 # @FUNCTION: filter-flags
 # @USAGE: <flags>
 # @DESCRIPTION:
-# Remove particular <flags> from {C,CPP,CXX,F,FC}FLAGS.  Accepts shell globs.
+# Remove particular <flags> from {C,CPP,CXX,F,FC,LD}FLAGS.  Accepts shell globs.
 filter-flags() {
 	_filter-hardened "$@"
-	_filter-var CFLAGS "$@"
-	_filter-var CPPFLAGS "$@"
-	_filter-var CXXFLAGS "$@"
-	_filter-var FFLAGS "$@"
-	_filter-var FCFLAGS "$@"
+	local v
+	for v in C CPP CXX F FC LD ; do
+		_filter-var ${v}FLAGS "$@"
+	done
 	return 0
 }
 
