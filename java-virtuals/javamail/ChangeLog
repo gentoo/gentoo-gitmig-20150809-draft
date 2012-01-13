@@ -1,6 +1,13 @@
 # ChangeLog for java-virtuals/javamail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/javamail/ChangeLog,v 1.16 2012/01/01 18:54:12 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/javamail/ChangeLog,v 1.17 2012/01/13 10:36:19 sera Exp $
+
+*javamail-1.0-r2 (12 Jan 2012)
+
+  13 Jan 2012; Ralph Sennhauser <sera@gentoo.org> -javamail-1.0.ebuild,
+  +javamail-1.0-r2.ebuild:
+  Bump EAPI so SLOT deps can be used.
+  Remove old.
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> javamail-1.0-r1.ebuild:
   Drop ia64 support #345433
