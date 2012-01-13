@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.151 2012/01/08 21:38:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.152 2012/01/13 21:56:46 tomka Exp $
+
+  13 Jan 2012; Thomas Kahle <tomka@gentoo.org> links-2.4-r2.ebuild:
+  x86 stable per bug 396519
 
   08 Jan 2012; Markus Meier <maekke@gentoo.org> links-2.4-r2.ebuild:
   arm stable, bug #396519
