@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.8.5.ebuild,v 1.7 2011/12/30 13:14:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.8.5.ebuild,v 1.8 2012/01/13 16:07:46 vapier Exp $
 
 EAPI=4
 inherit linux-info multilib toolchain-funcs
@@ -24,16 +24,20 @@ S=${WORKDIR}/${MY_P}
 
 CONFIG_CHECK="~SHMEM"
 
-src_compile() {
+src_prepare() {
+	sed -i \
+		-e "/^PREFIX =/s:=.*:= ${EPREFIX}/usr:" \
+		-e "/^LIBDIR =/s:/lib:/$(get_libdir):" \
+		-e "/^CFLAGS :=/d" \
+		Make.rules || die
 	tc-export CC
-	pushd lib
-	emake PREFIX="${EPREFIX}/usr" LIBDIR="${EPREFIX}/usr/$(get_libdir)" CFLAGS="${CFLAGS}"
-	popd
+}
+
+src_compile() {
+	emake -C lib
 }
 
 src_install() {
-	pushd lib
-	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" LIBDIR="${EPREFIX}/usr/$(get_libdir)" install
-	popd
+	emake -C lib DESTDIR="${D}" install
 	dodoc ChangeLog README.lib* TODO
 }
