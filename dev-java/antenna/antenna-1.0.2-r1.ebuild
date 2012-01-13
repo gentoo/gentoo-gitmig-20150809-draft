@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/antenna-1.0.2.ebuild,v 1.2 2009/10/08 12:09:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/antenna-1.0.2-r1.ebuild,v 1.1 2012/01/13 14:29:39 sera Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ IUSE=""
 
 COMMON_DEP="dev-java/ant-core:0
 	dev-java/antlr:0
-	dev-java/servletapi:2.4"
+	java-virtuals/servlet-api:2.4"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	${COMMON_DEP}"
@@ -44,7 +44,7 @@ java_prepare() {
 }
 
 src_compile() {
-	local cp="ant-core,antlr,servletapi-2.4"
+	local cp="ant-core,antlr,servlet-api-2.4"
 	EANT_GENTOO_CLASSPATH="${cp}" \
 		EANT_BUILD_TARGET="init compile package" \
 		EANT_DOC_TARGET="" java-pkg-2_src_compile
