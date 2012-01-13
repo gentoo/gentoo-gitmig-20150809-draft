@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.25 2011/10/24 17:36:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.26 2012/01/13 21:48:42 robbat2 Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ IUSE="+blksha1 +curl cgi doc emacs gtk iconv +perl +python ppcsha1 tk +threads +
 CDEPEND="
 	!blksha1? ( dev-libs/openssl )
 	sys-libs/zlib
-	perl?   ( dev-lang/perl[-build] )
+	perl?   ( dev-lang/perl[-build] dev-libs/libpcre )
 	tk?     ( dev-lang/tk )
 	curl?   (
 		net-misc/curl
@@ -146,7 +146,7 @@ exportmakeopts() {
 	use tk \
 		|| myopts="${myopts} NO_TCLTK=YesPlease"
 	use perl \
-		&& myopts="${myopts} INSTALLDIRS=vendor" \
+		&& myopts="${myopts} INSTALLDIRS=vendor USE_LIBPCRE=yes" \
 		|| myopts="${myopts} NO_PERL=YesPlease"
 	use python \
 		|| myopts="${myopts} NO_PYTHON=YesPlease"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.115 2012/01/07 02:58:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.116 2012/01/13 21:48:42 robbat2 Exp $
+
+  13 Jan 2012; Robin H. Johnson <robbat2@gentoo.org> git-9999.ebuild:
+  Propogate libpcre change to live ebuild.
 
 *git-1.7.8.3 (07 Jan 2012)
 
