@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+ # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cdrom.eclass,v 1.1 2012/01/13 20:23:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cdrom.eclass,v 1.2 2012/01/13 22:35:16 ulm Exp $
 
 # @ECLASS: cdrom.eclass
 # @MAINTAINER:
@@ -19,8 +19,6 @@ if [[ -z ${___ECLASS_ONCE_CDROM} ]]; then
 ___ECLASS_ONCE_CDROM=1
 
 inherit portability
-
-PROPERTIES="interactive"
 
 # @FUNCTION: cdrom_get_cds
 # @USAGE: <file on cd1> [file on cd2] [file on cd3] [...]
