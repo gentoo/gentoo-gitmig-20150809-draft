@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.21 2011/12/12 17:47:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.22 2012/01/13 22:45:45 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -105,7 +105,7 @@ glibc_do_configure() {
 toolchain-glibc_src_compile() {
 	echo
 	local v
-	for v in ABI CBUILD CHOST CTARGET CBUILD_OPT CTARGET_OPT CC CFLAGS ; do
+	for v in ABI CBUILD CHOST CTARGET CBUILD_OPT CTARGET_OPT CC {AS,C,CPP,CXX,LD}FLAGS ; do
 		einfo " $(printf '%15s' ${v}:)   ${!v}"
 	done
 	export CC=$(tc-getCC ${CTARGET})
@@ -170,6 +170,7 @@ toolchain-glibc_headers_compile() {
 	CC=gcc \
 	CFLAGS="-O1 -pipe" \
 	CPPFLAGS="-U_FORTIFY_SOURCE" \
+	LDFLAGS="" \
 	"${S}"/configure ${myconf} || die "failed to configure glibc"
 }
 
