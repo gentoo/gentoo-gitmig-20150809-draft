@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.75 2012/01/09 10:16:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.76 2012/01/13 09:59:10 sera Exp $
+
+  13 Jan 2012; Ralph Sennhauser <sera@gentoo.org> java-virtuals-2.eclass:
+  Set S="${WORKDIR}" for java-virtuals as EAPI-4 doesn't permit the
+  S-to-WORKDIR fallback anymore.
 
   09 Jan 2012; Justin Lecher <jlec@gentoo.org> autotools-utils.eclass:
   Correct typo in autotools-utils.eclass: @DEFAULT-UNSET -> @DEFAULT_UNSET
