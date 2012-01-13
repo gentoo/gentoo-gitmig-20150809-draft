@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.1-r1.ebuild,v 1.5 2012/01/10 11:33:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.1-r1.ebuild,v 1.6 2012/01/13 19:13:57 vapier Exp $
 
 EAPI="3"
 
@@ -52,13 +52,14 @@ SLOT="0"
 if [[ ${PV} != 9999* ]] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~ppc-aix ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
-IUSE="+client expat multitarget nls +python +server test vanilla"
+IUSE="+client expat multitarget nls +python +server test vanilla zlib"
 
 RDEPEND="!dev-util/gdbserver
 	>=sys-libs/ncurses-5.2-r2
 	sys-libs/readline
 	expat? ( dev-libs/expat )
-	python? ( =dev-lang/python-2* )"
+	python? ( =dev-lang/python-2* )
+	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/yacc
@@ -119,6 +120,7 @@ src_configure() {
 			$(use_enable nls)
 			$(use multitarget && echo --enable-targets=all)
 			$(use_with python python "${EPREFIX}/usr/bin/python2")
+			$(use_with zlib)
 		)
 	fi
 
@@ -132,17 +134,7 @@ src_test() {
 src_install() {
 	use server && ! use client && cd gdb/gdbserver
 	emake DESTDIR="${D}" install || die
-	if use client; then
-		case ${CHOST} in
-			x86_64-*-solaris*|sparcv9-*-solaris*)
-				# usr/lib/64 -> usr/lib/{sparcv9,amd64} (no usr/lib64!)
-				rm "${ED}"/usr/lib/*/libiberty.a || die
-				;;
-			*)
-				rm "${ED}"/usr/lib*/libiberty.a || die
-				;;
-		esac
-	fi
+	use client && { find "${ED}"/usr -name libiberty.a -delete || die ; }
 	cd "${S}"
 
 	# Don't install docs when building a cross-gdb
