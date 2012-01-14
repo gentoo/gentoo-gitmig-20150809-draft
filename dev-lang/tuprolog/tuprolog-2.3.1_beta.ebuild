@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.1_beta.ebuild,v 1.2 2011/05/26 06:27:07 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.1_beta.ebuild,v 1.3 2012/01/14 20:53:35 keri Exp $
 
 EAPI=2
 
@@ -22,7 +22,9 @@ RDEPEND=">=virtual/jdk-1.5
 
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	dev-java/ant-core"
+	dev-java/ant-core
+	test? (	dev-java/ant-junit
+		dev-java/xalan )"
 
 S="${WORKDIR}"/2p-deploy
 
