@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-skype
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-skype/ChangeLog,v 1.9 2011/11/27 18:12:40 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-skype/ChangeLog,v 1.10 2012/01/14 19:59:59 swift Exp $
+
+*selinux-skype-2.20110726-r3 (14 Jan 2012)
+
+  14 Jan 2012; <swift@gentoo.org> +selinux-skype-2.20110726-r3.ebuild:
+  Allow network state reading as well as writing to xdg_config_home_t
 
   27 Nov 2011; <swift@gentoo.org> selinux-skype-2.20110726-r2.ebuild:
   Stable on amd64/x86
