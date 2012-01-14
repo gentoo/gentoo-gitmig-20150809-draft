@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/policycoreutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.94 2011/11/12 18:13:09 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.95 2012/01/14 19:57:53 swift Exp $
+
+  14 Jan 2012; <swift@gentoo.org> +policycoreutils-2.1.0-r2.ebuild,
+  metadata.xml:
+  Mark audit as a local USE flag
+
+*policycoreutils-2.1.0-r2 (14 Jan 2012)
+
+  14 Jan 2012; <swift@gentoo.org> +policycoreutils-2.1.0-r2.ebuild:
+  Override auto-detection of pam and audit, use USE flags for this
 
   12 Nov 2011; <swift@gentoo.org> -policycoreutils-2.0.82.ebuild,
   -policycoreutils-2.0.82-r1.ebuild, -policycoreutils-2.0.85.ebuild,
