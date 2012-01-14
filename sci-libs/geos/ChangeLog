@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.59 2012/01/05 20:09:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.60 2012/01/14 16:17:05 bicatali Exp $
+
+*geos-3.3.2 (14 Jan 2012)
+
+  14 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> -geos-3.3.1.ebuild,
+  +geos-3.3.2.ebuild:
+  Version bump. Added php slot dependency, bug #397939, thanks Andreas
+  Sturmlechner
 
 *geos-3.3.1 (05 Jan 2012)
 
