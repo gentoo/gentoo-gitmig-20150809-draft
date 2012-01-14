@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.59 2011/10/23 20:01:16 keri Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.60 2012/01/14 22:16:11 keri Exp $
+
+  14 Jan 2012; <keri@gentoo.org> yap-6.2.0-r1.ebuild, yap-6.2.2.ebuild:
+  Update YAP homepage
 
   23 Oct 2011; <keri@gentoo.org> yap-6.2.2.ebuild:
   Remove unused plstream feature definitions that conflict with ptrace headers
