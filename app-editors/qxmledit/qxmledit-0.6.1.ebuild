@@ -37,5 +37,5 @@ src_prepare(){
 src_install(){
 	qt4-r2_src_install
 	newicon "${S}"/images/icon.png ${PN}.png
-	make_desktop_entry QXmlEdit QXmlEdit ${PN} "Qt;Utility;TextEditor;"
+	make_desktop_entry QXmlEdit QXmlEdit ${PN} "Qt;Utility;TextEditor"
 }
