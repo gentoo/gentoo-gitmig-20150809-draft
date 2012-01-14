@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.165 2012/01/14 08:05:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.166 2012/01/14 08:22:13 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -519,6 +519,8 @@ get-flag() {
 # WORKS. Non-multilib gcc will take both -m32 and -m64. If the flag works
 # return code is 0, else the return code is 1.
 has_m64() {
+	eqawarn "${FUNCNAME}: don't use this anymore"
+
 	# this doesnt test if the flag is accepted, it tests if the flag
 	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
 	# please dont replace this function with test_flag in some future
@@ -534,27 +536,8 @@ has_m64() {
 	return 1
 }
 
-# @FUNCTION: has_m32
-# @DESCRIPTION:
-# This doesn't test if the flag is accepted, it tests if the flag actually
-# WORKS. Non-mulilib gcc will take both -m32 and -64. If the flag works return
-# code is 0, else return code is 1.
 has_m32() {
-	# this doesnt test if the flag is accepted, it tests if the flag
-	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
-	# please dont replace this function with test_flag in some future
-	# clean-up!
-
-	[ "$(tc-arch)" = "amd64" ] && has_multilib_profile && return 0
-
-	local temp=$(emktemp)
-	echo "int main() { return(0); }" > "${temp}".c
-	MY_CC=$(tc-getCC)
-	${MY_CC/ .*/} -m32 -o "$(emktemp)" "${temp}".c > /dev/null 2>&1
-	local ret=$?
-	rm -f "${temp}".c
-	[[ ${ret} != 1 ]] && return 0
-	return 1
+	die "${FUNCNAME}: don't use this anymore"
 }
 
 # @FUNCTION: replace-sparc64-flags
