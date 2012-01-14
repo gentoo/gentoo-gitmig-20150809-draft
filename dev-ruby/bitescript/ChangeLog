@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bitescript
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bitescript/ChangeLog,v 1.7 2011/07/11 18:08:53 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bitescript/ChangeLog,v 1.8 2012/01/14 07:39:18 graaff Exp $
+
+  14 Jan 2012; Hans de Graaff <graaff@gentoo.org> -bitescript-0.0.8.ebuild:
+  Remove old version.
 
 *bitescript-0.0.9 (11 Jul 2011)
 
