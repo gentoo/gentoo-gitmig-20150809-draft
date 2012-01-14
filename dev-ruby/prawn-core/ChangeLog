@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/prawn-core
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.7 2011/09/21 06:29:13 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.8 2012/01/14 10:50:47 graaff Exp $
+
+*prawn-core-0.8.4-r2 (14 Jan 2012)
+
+  14 Jan 2012; Hans de Graaff <graaff@gentoo.org> +prawn-core-0.8.4-r2.ebuild,
+  +files/prawn-core-0.8.4-ruby18-tests.patch,
+  +files/prawn-core-0.8.4-ruby19-document.patch,
+  +files/prawn-core-0.8.4-ruby19-tests.patch:
+  Add ruby19. Backport relevant upstream patches for it.
 
   21 Sep 2011; Hans de Graaff <graaff@gentoo.org> -prawn-core-0.8.4.ebuild:
   Remove old version.
