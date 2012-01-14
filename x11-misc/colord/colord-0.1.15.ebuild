@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.15.ebuild,v 1.6 2011/12/29 18:15:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.15.ebuild,v 1.7 2012/01/14 17:23:10 maekke Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm hppa x86 ~x86-fbsd"
 IUSE="doc elibc_FreeBSD examples gusb +introspection scanner +udev vala"
 
 # FIXME: raise to libusb-1.0.9:1 when available
