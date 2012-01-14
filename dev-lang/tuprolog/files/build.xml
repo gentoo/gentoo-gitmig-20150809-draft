@@ -5,7 +5,7 @@
 	<property name="build.dir" value="build"/>
 	<property name="docs.dir" value="docs"/>
 	<property name="dist.dir" value="dist"/>
-	<property name="test.dir" value="test/unit"/>
+	<property name="test.dir" value="test"/>
 	<property name="test.build.dir" value="test.build"/>
 	<property name="jarfile" value="${ant.project.name}.jar"/>
 	<property file="build.properties"/>
@@ -43,7 +43,7 @@
 	<!-- generate javadocs -->
 	<target depends="init" name="javadoc">
 		<javadoc classpath="${gentoo.classpath}"
-			author="true"
+			author="false"
 			destdir="${docs.dir}"
 			encoding="ISO-8859-1"
 			packagenames="alice.*"

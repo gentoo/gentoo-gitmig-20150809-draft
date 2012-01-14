@@ -1,6 +1,6 @@
 diff -ur 2p-deploy.orig/src/alice/tuprolog/ChoicePointStore.java 2p-deploy/src/alice/tuprolog/ChoicePointStore.java
 --- 2p-deploy.orig/src/alice/tuprolog/ChoicePointStore.java	2010-01-21 21:29:24.000000000 +1300
-+++ 2p-deploy/src/alice/tuprolog/ChoicePointStore.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprolog/ChoicePointStore.java	2012-01-15 09:20:48.000000000 +1300
 @@ -35,7 +35,6 @@
  	
  	/**
@@ -19,7 +19,7 @@ diff -ur 2p-deploy.orig/src/alice/tuprolog/ChoicePointStore.java 2p-deploy/src/a
  		if (pointer == null) return false;
 diff -ur 2p-deploy.orig/src/alice/tuprolog/ClauseStore.java 2p-deploy/src/alice/tuprolog/ClauseStore.java
 --- 2p-deploy.orig/src/alice/tuprolog/ClauseStore.java	2010-11-04 11:55:42.000000000 +1300
-+++ 2p-deploy/src/alice/tuprolog/ClauseStore.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprolog/ClauseStore.java	2012-01-15 09:20:48.000000000 +1300
 @@ -62,8 +62,6 @@
  	
  	/**
@@ -29,10 +29,9 @@ diff -ur 2p-deploy.orig/src/alice/tuprolog/ClauseStore.java 2p-deploy/src/alice/
  	 * @return true if compatible or false otherwise.
  	 */
  	protected boolean existCompatibleClause() {
-Only in 2p-deploy/src/alice/tuprolog: ClauseStore.java.orig
 diff -ur 2p-deploy.orig/src/alice/tuprolog/EngineManager.java 2p-deploy/src/alice/tuprolog/EngineManager.java
 --- 2p-deploy.orig/src/alice/tuprolog/EngineManager.java	2010-01-21 21:29:24.000000000 +1300
-+++ 2p-deploy/src/alice/tuprolog/EngineManager.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprolog/EngineManager.java	2012-01-15 09:20:48.000000000 +1300
 @@ -87,7 +87,7 @@
  	/**
  	 *  Solves a query
@@ -44,7 +43,7 @@ diff -ur 2p-deploy.orig/src/alice/tuprolog/EngineManager.java 2p-deploy/src/alic
  	 **/
 diff -ur 2p-deploy.orig/src/alice/tuprolog/PrimitiveManager.java 2p-deploy/src/alice/tuprolog/PrimitiveManager.java
 --- 2p-deploy.orig/src/alice/tuprolog/PrimitiveManager.java	2010-01-21 21:29:24.000000000 +1300
-+++ 2p-deploy/src/alice/tuprolog/PrimitiveManager.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprolog/PrimitiveManager.java	2012-01-15 09:20:48.000000000 +1300
 @@ -87,7 +87,7 @@
  	 * This involves identifying structs representing builtin
  	 * predicates and functors, and setting up related structures and links
@@ -56,7 +55,7 @@ diff -ur 2p-deploy.orig/src/alice/tuprolog/PrimitiveManager.java 2p-deploy/src/a
  	public Term identifyDirective(Term term) {
 diff -ur 2p-deploy.orig/src/alice/tuprolog/lib/BasicLibrary.java 2p-deploy/src/alice/tuprolog/lib/BasicLibrary.java
 --- 2p-deploy.orig/src/alice/tuprolog/lib/BasicLibrary.java	2011-01-28 16:31:44.000000000 +1300
-+++ 2p-deploy/src/alice/tuprolog/lib/BasicLibrary.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprolog/lib/BasicLibrary.java	2012-01-15 09:20:48.000000000 +1300
 @@ -109,7 +109,7 @@
  	/**
  	 * Loads a library constructed from a theory.
@@ -68,7 +67,7 @@ diff -ur 2p-deploy.orig/src/alice/tuprolog/lib/BasicLibrary.java 2p-deploy/src/a
  	 *            name of the library
 diff -ur 2p-deploy.orig/src/alice/tuprolog/lib/IOLibrary.java 2p-deploy/src/alice/tuprolog/lib/IOLibrary.java
 --- 2p-deploy.orig/src/alice/tuprolog/lib/IOLibrary.java	2011-01-19 16:34:24.000000000 +1300
-+++ 2p-deploy/src/alice/tuprolog/lib/IOLibrary.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprolog/lib/IOLibrary.java	2012-01-15 09:20:48.000000000 +1300
 @@ -372,7 +372,7 @@
  	/**
  	 * Sets an arbitrary seed for the Random object.
@@ -80,7 +79,7 @@ diff -ur 2p-deploy.orig/src/alice/tuprolog/lib/IOLibrary.java 2p-deploy/src/alic
  	public boolean set_seed_1(Term t) throws PrologError {
 diff -ur 2p-deploy.orig/src/alice/tuprolog/lib/JavaLibrary.java 2p-deploy/src/alice/tuprolog/lib/JavaLibrary.java
 --- 2p-deploy.orig/src/alice/tuprolog/lib/JavaLibrary.java	2010-01-21 21:29:24.000000000 +1300
-+++ 2p-deploy/src/alice/tuprolog/lib/JavaLibrary.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprolog/lib/JavaLibrary.java	2012-01-15 09:20:48.000000000 +1300
 @@ -1390,8 +1390,6 @@
  
  	/**
@@ -92,7 +91,7 @@ diff -ur 2p-deploy.orig/src/alice/tuprolog/lib/JavaLibrary.java 2p-deploy/src/al
  		return new Struct("$obj_" + id++);
 diff -ur 2p-deploy.orig/src/alice/tuprologx/ide/LibraryDialogFrame.java 2p-deploy/src/alice/tuprologx/ide/LibraryDialogFrame.java
 --- 2p-deploy.orig/src/alice/tuprologx/ide/LibraryDialogFrame.java	2010-01-21 21:29:22.000000000 +1300
-+++ 2p-deploy/src/alice/tuprologx/ide/LibraryDialogFrame.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprologx/ide/LibraryDialogFrame.java	2012-01-15 09:20:48.000000000 +1300
 @@ -317,7 +317,6 @@
          displayLibraryManagerStatus();
      }
@@ -103,7 +102,7 @@ diff -ur 2p-deploy.orig/src/alice/tuprologx/ide/LibraryDialogFrame.java 2p-deplo
      	onClose();
 diff -ur 2p-deploy.orig/src/alice/tuprologx/ide/ToolBar.java 2p-deploy/src/alice/tuprologx/ide/ToolBar.java
 --- 2p-deploy.orig/src/alice/tuprologx/ide/ToolBar.java	2010-01-21 21:29:22.000000000 +1300
-+++ 2p-deploy/src/alice/tuprologx/ide/ToolBar.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprologx/ide/ToolBar.java	2012-01-15 09:20:48.000000000 +1300
 @@ -232,8 +232,6 @@
  
      /**
@@ -115,7 +114,7 @@ diff -ur 2p-deploy.orig/src/alice/tuprologx/ide/ToolBar.java 2p-deploy/src/alice
  	{
 diff -ur 2p-deploy.orig/src/alice/tuprologx/pj/lib/PJLibrary.java 2p-deploy/src/alice/tuprologx/pj/lib/PJLibrary.java
 --- 2p-deploy.orig/src/alice/tuprologx/pj/lib/PJLibrary.java	2010-01-21 21:29:48.000000000 +1300
-+++ 2p-deploy/src/alice/tuprologx/pj/lib/PJLibrary.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/tuprologx/pj/lib/PJLibrary.java	2012-01-15 09:20:48.000000000 +1300
 @@ -1252,7 +1252,6 @@
  	
  	/**
@@ -124,9 +123,25 @@ diff -ur 2p-deploy.orig/src/alice/tuprologx/pj/lib/PJLibrary.java 2p-deploy/src/
  	 */
  	protected Struct generateFreshId() {
  		return new Struct("$obj_" + id++);        
+diff -ur 2p-deploy.orig/src/alice/util/ReadOnlyLinkedList.java 2p-deploy/src/alice/util/ReadOnlyLinkedList.java
+--- 2p-deploy.orig/src/alice/util/ReadOnlyLinkedList.java	2010-03-17 18:14:10.000000000 +1300
++++ 2p-deploy/src/alice/util/ReadOnlyLinkedList.java	2012-01-15 09:32:03.000000000 +1300
+@@ -12,10 +12,10 @@
+ import java.util.ListIterator;
+ 
+ /**
+- * ReadOnlyLinkedList<E> encapsulate a {@link LinkedList<E>}
++ * ReadOnlyLinkedList<E> encapsulate a {@link LinkedList}
+  * and ensures that the given list is navigated only.
+  *
+- * Even if ReadOnlyLinkedList<E> implements {@link List<E>} it doesn't
++ * Even if ReadOnlyLinkedList<E> implements {@link List} it doesn't
+  * support modifiers methods, and throws {@link UnsupportedOperationException}
+  * if invoked.
+  *
 diff -ur 2p-deploy.orig/src/alice/util/jedit/InputHandler.java 2p-deploy/src/alice/util/jedit/InputHandler.java
 --- 2p-deploy.orig/src/alice/util/jedit/InputHandler.java	2010-01-21 21:29:24.000000000 +1300
-+++ 2p-deploy/src/alice/util/jedit/InputHandler.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/util/jedit/InputHandler.java	2012-01-15 09:20:48.000000000 +1300
 @@ -24,7 +24,7 @@
   *
   * @author Slava Pestov
@@ -147,7 +162,7 @@ diff -ur 2p-deploy.orig/src/alice/util/jedit/InputHandler.java 2p-deploy/src/ali
  	{
 diff -ur 2p-deploy.orig/src/alice/util/jedit/JEditTextArea.java 2p-deploy/src/alice/util/jedit/JEditTextArea.java
 --- 2p-deploy.orig/src/alice/util/jedit/JEditTextArea.java	2010-01-21 21:29:24.000000000 +1300
-+++ 2p-deploy/src/alice/util/jedit/JEditTextArea.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/util/jedit/JEditTextArea.java	2012-01-15 09:20:48.000000000 +1300
 @@ -1389,7 +1389,7 @@
  
  	/**
@@ -159,7 +174,7 @@ diff -ur 2p-deploy.orig/src/alice/util/jedit/JEditTextArea.java 2p-deploy/src/al
  	public final void setSelectionRectangular(boolean rectSelect)
 diff -ur 2p-deploy.orig/src/alice/util/jedit/KeywordMap.java 2p-deploy/src/alice/util/jedit/KeywordMap.java
 --- 2p-deploy.orig/src/alice/util/jedit/KeywordMap.java	2010-01-21 21:29:22.000000000 +1300
-+++ 2p-deploy/src/alice/util/jedit/KeywordMap.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/util/jedit/KeywordMap.java	2012-01-15 09:20:48.000000000 +1300
 @@ -75,7 +75,7 @@
  	/**
  	 * Adds a key-value mapping.
@@ -171,7 +186,7 @@ diff -ur 2p-deploy.orig/src/alice/util/jedit/KeywordMap.java 2p-deploy/src/alice
  	{
 diff -ur 2p-deploy.orig/src/alice/util/jedit/TextAreaPainter.java 2p-deploy/src/alice/util/jedit/TextAreaPainter.java
 --- 2p-deploy.orig/src/alice/util/jedit/TextAreaPainter.java	2010-01-21 21:29:24.000000000 +1300
-+++ 2p-deploy/src/alice/util/jedit/TextAreaPainter.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/util/jedit/TextAreaPainter.java	2012-01-15 09:20:48.000000000 +1300
 @@ -75,7 +75,7 @@
  	/**
  	 * Returns the syntax styles used to paint colorized text. Entry <i>n</i>
@@ -201,7 +216,7 @@ diff -ur 2p-deploy.orig/src/alice/util/jedit/TextAreaPainter.java 2p-deploy/src/
  	{
 diff -ur 2p-deploy.orig/src/alice/util/jedit/TokenMarker.java 2p-deploy/src/alice/util/jedit/TokenMarker.java
 --- 2p-deploy.orig/src/alice/util/jedit/TokenMarker.java	2010-01-21 21:29:22.000000000 +1300
-+++ 2p-deploy/src/alice/util/jedit/TokenMarker.java	2011-05-21 11:38:55.000000000 +1200
++++ 2p-deploy/src/alice/util/jedit/TokenMarker.java	2012-01-15 09:20:48.000000000 +1300
 @@ -24,7 +24,7 @@
   * @author Slava Pestov
   * @version $Id: TokenMarker.java,v 1.32 1999/12/13 03:40:30 sp Exp $
