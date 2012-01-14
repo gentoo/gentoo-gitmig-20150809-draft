@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7.ebuild,v 1.2 2011/07/28 18:14:45 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7.ebuild,v 1.3 2012/01/14 18:28:30 ssuominen Exp $
 
 EAPI=3
 
@@ -35,8 +35,7 @@ pkg_setup() {
 
 src_prepare() {
 	if use gtk; then
-		rm -f py-compile
-		ln -s $(type -P true) py-compile || die
+		>py-compile
 		python_convert_shebangs 2 src/gtk-redshift/gtk-redshift
 	fi
 }

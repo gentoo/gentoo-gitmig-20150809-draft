@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/redshift
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.10 2011/07/28 18:14:45 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.11 2012/01/14 18:28:30 ssuominen Exp $
+
+  14 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> redshift-1.7.ebuild:
+  Empty the py-compile script instead of symlinking it for compability with
+  automake-1.11.2.
 
   28 Jul 2011; Sebastian Pipping <sping@gentoo.org> redshift-1.7.ebuild:
   Add missing dependency app-misc/geoclue
