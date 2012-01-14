@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/subversion
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.67 2011/11/30 14:28:49 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.68 2012/01/14 19:46:34 tommy Exp $
+
+*subversion-1.7.2 (14 Jan 2012)
+
+  14 Jan 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +subversion-1.7.2.ebuild, files/svnserve.initd2, metadata.xml:
+  Version bump, fixes bug 393641 and bug 389961, move from deprecated bashcomp
+  eclass to -r1, adjust svnserve default user and group based on USE flags,
+  fixes bug 381385, adjusting metadata.xml, taking over maintainership for now
 
   30 Nov 2011; Fabian Groffen <grobian@gentoo.org> subversion-1.7.1.ebuild:
   Use get_libname instead of hardcoding .so for shared libraries for Darwin, by
