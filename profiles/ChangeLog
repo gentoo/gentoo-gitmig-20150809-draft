@@ -1,14 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6098 2012/01/14 19:42:57 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6099 2012/01/14 19:47:51 swift Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
-
-  14 Jan 2012; <swift@gentoo.org> base/package.mask,
-  features/selinux/package.mask:
-  Add masks for newly added SELinux packages
 
   14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> use.desc:
   Add global tcmalloc
@@ -40,7 +36,7 @@
   Lastrite media-video/ogle and reverse dependencies because of incompabilities
   with current libdvdread.
 
-  08 Jan 2012; Ulrich MÃ¼ller <ulm@gentoo.org> license_groups:
+  08 Jan 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add czyborra and noweb to MISC-FREE license group, bugs 395179 and 397485.
 
   08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
@@ -55,7 +51,7 @@
   07 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask not-yet-released calligra
 
-  07 Jan 2012; Olivier CrÃªte <tester@gentoo.org> package.mask:
+  07 Jan 2012; Olivier Crête <tester@gentoo.org> package.mask:
   Remove gupnp block as we have the newer gupnp-igd
 
   07 Jan 2012; Michael Pagano <mpagano@gentoo.org> package.mask:
@@ -76,7 +72,7 @@
   05 Jan 2012; Mike Gilbert <floppym@gentoo.org> package.mask:
   Update mask for chrome dev channel; 17.x is now the beta channel.
 
-  05 Jan 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  05 Jan 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
   Mask one more x11 prerelease package.
 
@@ -123,11 +119,11 @@
   01 Jan 2012; Sebastian Pipping <sping@gentoo.org> package.mask:
   Extend mask on Gimp to upcoming version 2.7.4
 
-  01 Jan 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  01 Jan 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
   Add mask for xf86-input-evdev versions that require mtdev.
 
-  01 Jan 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  01 Jan 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
   Mask more prerelease x11 packages.
 
