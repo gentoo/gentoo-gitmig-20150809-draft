@@ -1,0 +1,9 @@
+# ChangeLog for x11-terms/valaterm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/ChangeLog,v 1.1 2012/01/14 16:50:40 ssuominen Exp $
+
+*valaterm-0.4.3 (14 Jan 2012)
+
+  14 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +valaterm-0.4.3.ebuild:
+  Initial commit wrt #368491 by Jacques-Pascal Deplaix
+
