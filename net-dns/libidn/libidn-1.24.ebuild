@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.24.ebuild,v 1.2 2012/01/13 17:01:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.24.ebuild,v 1.3 2012/01/14 16:01:38 jer Exp $
 
 EAPI="4"
 
@@ -14,6 +14,8 @@ LICENSE="GPL-2 GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="doc emacs java mono nls static-libs"
+
+DOCS=( AUTHORS ChangeLog FAQ NEWS README THANKS TODO )
 
 COMMON_DEPEND="emacs? ( virtual/emacs )
 	mono? ( >=dev-lang/mono-0.95 )"
@@ -57,7 +59,6 @@ src_compile() {
 
 src_install() {
 	default
-	dodoc AUTHORS ChangeLog FAQ NEWS README THANKS TODO
 
 	if use emacs; then
 		# *.el are installed by the build system
