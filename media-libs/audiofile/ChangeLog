@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.95 2012/01/11 00:16:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.96 2012/01/14 17:24:57 maekke Exp $
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> audiofile-0.3.2.ebuild:
+  x86 stable, bug #393007
 
   11 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   audiofile-0.3.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mash/mash-0.2.0-r1.ebuild,v 1.2 2011/12/29 17:56:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mash/mash-0.2.0-r1.ebuild,v 1.3 2012/01/14 17:27:17 maekke Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ HOMEPAGE="http://wiki.clutter-project.org/wiki/Mash"
 LICENSE="LGPL-2.1"
 SLOT="0.2"
 IUSE="doc examples +introspection"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 # Automagically detects x11-libs/mx, but only uses it for building examples.
 # Note: mash is using a bundled copy of rply because mash developers have
