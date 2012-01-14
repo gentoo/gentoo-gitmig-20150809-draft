@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/pangomm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.54 2011/12/29 17:22:16 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.55 2012/01/14 16:19:25 maekke Exp $
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> pangomm-2.28.4.ebuild:
+  x86 stable, bug #393007
 
   29 Dec 2011; Pacho Ramos <pacho@gentoo.org> pangomm-2.28.4.ebuild:
   amd64 stable, bug 393007
