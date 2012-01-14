@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.37 2012/01/14 14:59:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.38 2012/01/14 15:18:05 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -307,13 +307,13 @@ autotools-utils_autoreconf() {
 	if [[ $(autotools_check_macro AM_GLIB_GNU_GETTEXT) ]]; then
 		echo 'no' | autotools_run_tool glib-gettextize --copy
 	elif [[ $(autotools_check_macro AM_GNU_GETTEXT) ]]; then
-		eautopoint
+		eautopoint --force
 	fi
 
 	# intltool
 	if [[ $(autotools_check_macro AC_PROG_INTLTOOL IT_PROG_INTLTOOL) ]]
 	then
-		autotools_run_tool intltoolize --copy --automake
+		autotools_run_tool intltoolize --copy --automake --force
 	fi
 
 	# gtk-doc
@@ -323,7 +323,7 @@ autotools-utils_autoreconf() {
 
 	# gnome-doc
 	if [[ $(autotools_check_macro GNOME_DOC_INIT) ]]; then
-		autotools_run_tool gnome-doc-prepare --copy
+		autotools_run_tool gnome-doc-prepare --copy --force
 	fi
 
 	# We need to perform the check twice to know whether to run eaclocal.
