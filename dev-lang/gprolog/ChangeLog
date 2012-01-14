@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gprolog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.48 2011/07/05 07:47:32 keri Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.49 2012/01/14 11:13:40 ago Exp $
+
+  14 Jan 2012; Agostino Sarubbo <ago@gentoo.org> gprolog-1.4.0.ebuild:
+  Stable for AMD64, wrt bug #398865
 
   05 Jul 2011; <keri@gentoo.org> gprolog-1.4.0.ebuild,
   +files/gprolog-1.4.0-ma2asm-pllong.patch:
