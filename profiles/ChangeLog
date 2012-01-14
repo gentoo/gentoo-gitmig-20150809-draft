@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6095 2012/01/11 21:05:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6096 2012/01/14 14:49:26 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Calligra 2.3.86 has been released
 
   11 Jan 2012; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Remove llvm-gcc mask after last rites
