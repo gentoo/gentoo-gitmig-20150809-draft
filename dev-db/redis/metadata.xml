@@ -16,10 +16,6 @@
     <description>Proxy-Maintainer, assign bugs</description>
   </maintainer>
   <use>
-    <flag name="tcmalloc">
-      Use the <pkg>dev-util/google-perftools</pkg> libraries to
-      replace the malloc() implementation with a possibly faster one.
-    </flag>
     <flag name="jemalloc">
       Use <pkg>dev-libs/jemalloc</pkg> for allocations.
     </flag>

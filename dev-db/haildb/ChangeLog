@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/haildb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.5 2011/02/03 12:24:55 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.6 2012/01/14 17:23:46 xarthisius Exp $
+
+  14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  tcmalloc is now global
 
   03 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> haildb-2.3.2.ebuild:
   Fix header (why does repoman not stop me?)

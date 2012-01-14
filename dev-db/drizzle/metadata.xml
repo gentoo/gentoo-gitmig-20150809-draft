@@ -10,11 +10,6 @@
   </maintainer>
 
   <use>
-    <flag name="tcmalloc">
-      Use the <pkg>dev-util/google-perftools</pkg> libraries to
-      replace the malloc() implementation with a possibly faster one.
-    </flag>
-
     <flag name="doc">
       Build the API documentation for the package, using
       <pkg>app-doc/doxygen</pkg>. Warning, this might take over an

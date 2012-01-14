@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/drizzle
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.23 2011/08/04 11:33:32 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.24 2012/01/14 17:22:41 xarthisius Exp $
+
+  14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  tcmalloc is now global
 
   04 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
   drizzle-7.2011.03.11.ebuild:
