@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.33.ebuild,v 1.1 2011/12/30 22:06:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.35.ebuild,v 1.1 2012/01/14 18:27:01 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -73,6 +73,14 @@ src_prepare() {
 	sed -e "s:if os.geteuid() == 0:if False and os.geteuid() == 0:" \
 		-i setup/install.py || die "sed failed to patch install.py"
 
+	sed -e "/^            self\\.check_call(qmc + \\[ext\\.name+'\\.pro'\\])$/a\
+\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ self.check_call(['sed', \
+'-e', 's|^CFLAGS .*|\\\\\\\\0 ${CFLAGS}|', \
+'-e', 's|^CXXFLAGS .*|\\\\\\\\0 ${CXXFLAGS}|', \
+'-e', 's|^LFLAGS .*|\\\\\\\\0 ${LDFLAGS}|', \
+'-i', 'Makefile'])" \
+		-i setup/extensions.py || die "sed failed to patch extensions.py"
+
 	distutils_src_prepare
 }
 
@@ -109,7 +117,7 @@ src_install() {
 	mkdir -p "${XDG_CONFIG_HOME}" "${CALIBRE_CONFIG_DIRECTORY}"
 
 	# Bug #334243 - respect LDFLAGS when building calibre-mount-helper
-	export OVERRIDE_CFLAGS="$CFLAGS $LDFLAGS"
+	export OVERRIDE_CFLAGS="$CFLAGS" OVERRIDE_LDFLAGS="$LDFLAGS"
 	local libdir=$(get_libdir)
 	[[ -n $libdir ]] || die "get_libdir returned an empty string"
 
@@ -159,6 +167,9 @@ src_install() {
 	find "${ED}"usr/etc -type d -empty -delete
 
 	python_convert_shebangs -r $(python_get_version) "${ED}"
+
+	newinitd "${FILESDIR}"/calibre-server.init calibre-server
+	newconfd "${FILESDIR}"/calibre-server.conf calibre-server
 }
 
 pkg_postinst() {
