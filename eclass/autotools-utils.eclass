@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.36 2012/01/14 14:58:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.37 2012/01/14 14:59:18 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -98,6 +98,11 @@ esac
 # @DESCRIPTION:
 # Set to a non-empty value in order to enable running autoreconf
 # in src_prepare() and adding autotools dependencies.
+#
+# This is usually necessary when using live sources or applying patches
+# modifying configure.ac or Makefile.am files. Note that in the latter case
+# setting this variable is obligatory even though the eclass will work without
+# it (to add the necessary dependencies).
 #
 # The eclass will try to determine the correct autotools to run including a few
 # external tools: gettext, glib-gettext, intltool, gtk-doc, gnome-doc-prepare.
@@ -354,8 +359,19 @@ autotools-utils_src_prepare() {
 
 	local want_autoreconf=${AUTOTOOLS_AUTORECONF}
 
+	touch "${T}"/.autotools-utils.timestamp || die
 	[[ ${PATCHES} ]] && epatch "${PATCHES[@]}"
 	epatch_user
+	if [[ ! ${want_autoreconf} ]]; then
+		if [[ $(find . -newer "${T}"/.autotools-utils.timestamp \
+				-a '(' -name 'Makefile.am' \
+				-o -name 'configure.ac' \
+				-o -name 'configure.in' ')' \
+				-print -quit) ]]; then
+			einfo 'Will autoreconfigure due to patches applied.'
+			want_autoreconf=yep
+		fi
+	fi
 
 	[[ ${want_autoreconf} ]] && autotools-utils_autoreconf
 	elibtoolize --patch-only
