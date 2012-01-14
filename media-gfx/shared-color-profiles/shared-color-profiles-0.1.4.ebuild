@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shared-color-profiles/shared-color-profiles-0.1.4.ebuild,v 1.6 2011/12/29 17:52:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shared-color-profiles/shared-color-profiles-0.1.4.ebuild,v 1.7 2012/01/14 17:16:09 maekke Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.freedesktop.org/~hughsient/releases/${P}.tar.gz"
 
 LICENSE="GPL-2 MIT ZLIB public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm hppa x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=""
