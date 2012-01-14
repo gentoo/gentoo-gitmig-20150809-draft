@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/zsh-lovers
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/zsh-lovers/ChangeLog,v 1.4 2011/12/18 22:30:28 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/zsh-lovers/ChangeLog,v 1.5 2012/01/14 15:51:46 maekke Exp $
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> zsh-lovers-0.8.3.ebuild:
+  x86 stable, bug #394409
 
   18 Dec 2011; Markus Meier <maekke@gentoo.org> zsh-lovers-0.8.3.ebuild:
   arm stable, bug #394409
