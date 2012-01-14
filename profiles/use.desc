@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.471 2012/01/02 13:41:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.472 2012/01/14 17:20:45 xarthisius Exp $
 
 # Keep them sorted
 
@@ -351,6 +351,7 @@ sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
 taglib - Enable tagging support with taglib
 tcl - Adds support the Tcl language
+tcmalloc - Use the dev-util/google-perftools libraries to replace the malloc() implementation with a possibly faster one
 tcpd - Adds support for TCP wrappers
 test - Workaround to pull in packages needed to run with FEATURES=test. Portage-2.1.2 handles this internally, so don't set it in make.conf/package.use anymore
 theora - Adds support for the Theora Video Compression Codec

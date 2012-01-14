@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6096 2012/01/14 14:49:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6097 2012/01/14 17:20:45 xarthisius Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> use.desc:
+  Add global tcmalloc
 
   14 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Calligra 2.3.86 has been released
