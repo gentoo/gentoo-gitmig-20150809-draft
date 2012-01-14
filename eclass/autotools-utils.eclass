@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.33 2012/01/09 10:16:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.34 2012/01/14 14:41:10 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -428,6 +428,15 @@ autotools-utils_src_install() {
 	# XXX: support installing them from builddir as well?
 	if [[ ${DOCS} ]]; then
 		dodoc "${DOCS[@]}" || die "dodoc failed"
+	else
+		local f
+		# same list as in PMS
+		for f in README* ChangeLog AUTHORS NEWS TODO CHANGES \
+				THANKS BUGS FAQ CREDITS CHANGELOG; do
+			if [[ -s ${f} ]]; then
+				dodoc "${f}" || die "(default) dodoc ${f} failed"
+			fi
+		done
 	fi
 	if [[ ${HTML_DOCS} ]]; then
 		dohtml -r "${HTML_DOCS[@]}" || die "dohtml failed"

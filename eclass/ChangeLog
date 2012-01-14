@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.78 2012/01/13 23:25:40 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.79 2012/01/14 14:41:10 mgorny Exp $
+
+  14 Jan 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Support installing default docs, similarly to EAPI4; wrt bug #397659.
 
   13 Jan 2012; Matti Bickel <mabi@gentoo.org> php-ext-source-r2.eclass:
   Uncomment DEPEND for php-ext-source-r2.eclass, but w/o the SELFDEPEND that
