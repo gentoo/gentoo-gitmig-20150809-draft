@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.130 2011/12/21 21:13:34 tgurr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.131 2012/01/14 22:43:33 dilfridge Exp $
+
+  14 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  ghostscript-gpl-9.04-r4.ebuild, ghostscript-gpl-9.04-r5.ebuild:
+  Block media-fonts/gnu-gs-fonts-(std|other), bug 315629
 
 *ghostscript-gpl-9.04-r5 (21 Dec 2011)
 

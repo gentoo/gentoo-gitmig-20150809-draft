@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r4.ebuild,v 1.4 2011/11/12 10:23:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r4.ebuild,v 1.5 2012/01/14 22:43:33 dilfridge Exp $
 
 EAPI=3
 
@@ -48,7 +48,10 @@ RDEPEND="${COMMON_DEPEND}
 	linguas_ja? ( media-fonts/kochi-substitute )
 	linguas_ko? ( media-fonts/baekmuk-fonts )
 	linguas_zh_CN? ( media-fonts/arphicfonts )
-	linguas_zh_TW? ( media-fonts/arphicfonts )"
+	linguas_zh_TW? ( media-fonts/arphicfonts )
+	!!media-fonts/gnu-gs-fonts-std
+	!!media-fonts/gnu-gs-fonts-other
+"
 
 S="${WORKDIR}/${MY_P}"
 
