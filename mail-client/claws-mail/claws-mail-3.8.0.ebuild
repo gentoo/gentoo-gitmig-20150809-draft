@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.0.ebuild,v 1.2 2012/01/14 19:55:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.0.ebuild,v 1.3 2012/01/14 21:34:49 fauli Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/sylpheed-claws/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bogofilter crypt dbus dillo doc +gnutls +imap ipv6 ldap nntp pda session smime spamassassin spell ssl startup-notification xface"
+IUSE="bogofilter crypt dbus dillo doc +imap ipv6 ldap nntp pda session smime spamassassin spell +ssl startup-notification xface"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.20:2
 	pda? ( >=app-pda/jpilot-0.99 )
@@ -26,7 +26,6 @@ COMMONDEPEND=">=x11-libs/gtk+-2.20:2
 	spell? ( >=app-text/enchant-1.0.0 )
 	imap? ( >=net-libs/libetpan-0.57 )
 	nntp? ( >=net-libs/libetpan-0.57 )
-	gnutls? ( >=net-libs/gnutls-2.2.0 )
 	startup-notification? ( x11-libs/startup-notification )
 	bogofilter? ( mail-filter/bogofilter )
 	session? ( x11-libs/libSM
@@ -72,9 +71,7 @@ src_configure() {
 		myeconfargs+=( --disable-libetpan )
 	fi
 
-	# The usage of openssl was discarded once and USE=ssl is mapped to
-	# USE=gnutls now.  Maybe USE=ssl can fade out sometime
-	if use ssl || use gnutls; then
+	if use ssl; then
 		myeconfargs+=( --enable-gnutls )
 	else
 		myeconfargs+=( --disable-gnutls )

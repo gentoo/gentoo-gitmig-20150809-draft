@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.192 2012/01/14 19:55:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.193 2012/01/14 21:34:49 fauli Exp $
+
+  14 Jan 2012; Christian Faulhammer <fauli@gentoo.org> claws-mail-3.8.0.ebuild:
+  Remove IUSE=gnutls as USE=ssl only has one provider, as pointed out by mgorny
 
   14 Jan 2012; Michał Górny <mgorny@gentoo.org> claws-mail-3.8.0.ebuild:
   Use autotools-utils -- suport user patches with autoreconf.
