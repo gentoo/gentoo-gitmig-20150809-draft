@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/moodle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.17 2012/01/08 18:07:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.18 2012/01/14 00:46:00 blueness Exp $
+
+  14 Jan 2012; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.15.ebuild,
+  -moodle-2.0.6.ebuild, -moodle-2.1.3.ebuild:
+  Removed vulnerable versions
 
 *moodle-2.2.1 (08 Jan 2012)
 
