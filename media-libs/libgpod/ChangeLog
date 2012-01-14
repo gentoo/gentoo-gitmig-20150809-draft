@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgpod
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.86 2011/10/24 05:54:05 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.87 2012/01/14 18:30:45 ssuominen Exp $
+
+  14 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> libgpod-0.8.0.ebuild:
+  Empty the py-compile script instead of symlinking it for compability with
+  automake-1.11.2.
 
   24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   libgpod-0.8.0.ebuild:
