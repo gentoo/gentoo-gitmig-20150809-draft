@@ -27,7 +27,7 @@ while read exp flag ; do
 	[[ ${exp} -eq $? ]]
 	ftend
 done <<<"
-	1	-l
+	1	-L
 	0	-a
 	0	-x
 "
@@ -75,6 +75,24 @@ for v in C CPP CXX F FC LD ; do
 	[[ ${val} == "-${v}" ]] || exit 1
 done
 )
+ftend
+
+tbegin "strip-flags basic"
+CXXFLAGS+=" -O999 "
+strip-flags
+[[ -z ${CFLAGS}${LDFLAGS}${CPPFLAGS} && ${CXXFLAGS} == "-O2" ]]
+ftend
+
+tbegin "replace-flags basic"
+CFLAGS="-O0 -foo"
+replace-flags -O0 -O1
+[[ ${CFLAGS} == "-O1 -foo" ]]
+ftend
+
+tbegin "replace-flags glob"
+CXXFLAGS="-O0 -mcpu=bad -cow"
+replace-flags '-mcpu=*' -mcpu=good
+[[ ${CXXFLAGS} == "-O0 -mcpu=good -cow" ]]
 ftend
 
 texit
