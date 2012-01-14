@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.1 2011/12/25 09:59:05 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.2 2012/01/14 07:18:35 graaff Exp $
+
+  14 Jan 2012; Hans de Graaff <graaff@gentoo.org> tins-0.3.6.ebuild:
+  Add ~hppa since spruz also has that keyword and this is essentially just a
+  new version of that code.
 
 *tins-0.3.6 (25 Dec 2011)
 
