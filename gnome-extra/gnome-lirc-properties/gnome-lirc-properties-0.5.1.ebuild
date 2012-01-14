@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.5.1.ebuild,v 1.2 2010/10/10 16:40:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.5.1.ebuild,v 1.3 2012/01/14 18:46:48 ssuominen Exp $
 
 EAPI=3
 
@@ -38,8 +38,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	rm -f py-compile
-	ln -s $(type -P true) py-compile
+	>py-compile
 	gnome2_src_prepare
 }
 
