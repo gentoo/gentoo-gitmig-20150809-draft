@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/rrdtool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.218 2011/10/23 17:35:28 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.219 2012/01/14 18:20:26 jmbsvicetto Exp $
+
+*rrdtool-1.4.5-r2 (14 Jan 2012)
+
+  14 Jan 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +rrdtool-1.4.5-r2.ebuild, +files/rrdtool-1.4.5-automake-1.11.2.patch:
+  [net-analyzer/rrdtool-1.4.5-r2] Fix the build with automake-1.11.2 - bug
+  #396727.
+  Thanks to <AlphatPC@gmail.com> for the patch.
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> rrdtool-1.4.5-r1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #387171
