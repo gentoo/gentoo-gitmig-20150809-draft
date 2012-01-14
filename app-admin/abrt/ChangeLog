@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/abrt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.4 2011/12/31 18:35:49 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.5 2012/01/14 15:56:16 maekke Exp $
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> abrt-2.0.6.ebuild:
+  x86 stable, bug #393007
 
   31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org> abrt-2.0.6.ebuild:
   Simplify py-compile fix.
