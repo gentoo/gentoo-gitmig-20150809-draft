@@ -10,11 +10,6 @@
   </maintainer>
 
   <use>
-    <flag name="tcmalloc">
-      Use the <pkg>dev-util/google-perftools</pkg> libraries to
-      replace the malloc() implementation with a possibly faster one.
-    </flag>
-
     <flag name="memcache">
       Support memcache daemon (via <pkg>dev-libs/libmemcached</pkg>)
       for the queue storage.
