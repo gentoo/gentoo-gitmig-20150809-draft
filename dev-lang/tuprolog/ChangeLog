@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.40 2012/01/14 20:53:35 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.41 2012/01/14 21:26:23 keri Exp $
+
+*tuprolog-2.4.0_rc5 (14 Jan 2012)
+
+  14 Jan 2012; <keri@gentoo.org> +tuprolog-2.4.0_rc5.ebuild,
+  +files/tuprolog-2.4.0_rc5-javadocs.patch:
+  Version bump
 
   14 Jan 2012; <keri@gentoo.org> tuprolog-2.3.1_beta.ebuild:
   Fix up dependencies for Prolog kernel tests
