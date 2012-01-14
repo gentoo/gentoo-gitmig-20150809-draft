@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-gtkmvc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gtkmvc/ChangeLog,v 1.4 2011/12/29 17:35:56 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gtkmvc/ChangeLog,v 1.5 2012/01/14 16:46:57 maekke Exp $
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> python-gtkmvc-1.2.2.ebuild:
+  x86 stable, bug #393007
 
   29 Dec 2011; Pacho Ramos <pacho@gentoo.org> python-gtkmvc-1.2.2.ebuild:
   amd64 stable, bug 393007
