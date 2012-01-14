@@ -1,6 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.17 2011/12/08 08:13:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.18 2012/01/14 11:03:44 xarthisius Exp $
+
+# Kacper Kowalik <xarthisius@gentoo.org> (14 Jan 2012)
+# sci-libs/mkl don't have prefix keywords
+dev-python/numexpr mkl
 
 # Fabian Groffen <grobian@gentoo.org> (08 Dec 2011)
 # USE=vanilla produces a broken compiler for Prefix.  Only use this flag

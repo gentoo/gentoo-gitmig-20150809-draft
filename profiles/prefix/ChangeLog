@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.321 2012/01/09 04:36:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.322 2012/01/14 11:03:44 xarthisius Exp $
+
+  14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Mask dev-python/numexpr[mkl]
 
   09 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   +linux/amd64/package.use.mask, +linux/x86/package.use.mask,
