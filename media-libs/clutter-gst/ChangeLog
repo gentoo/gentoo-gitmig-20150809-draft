@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter-gst
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.19 2011/12/29 17:53:55 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.20 2012/01/14 16:38:31 maekke Exp $
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> clutter-gst-1.4.4.ebuild:
+  x86 stable, bug #393007
 
   29 Dec 2011; Pacho Ramos <pacho@gentoo.org> clutter-gst-1.4.4.ebuild:
   amd64 stable, bug 393007
