@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/coderay
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.47 2011/12/31 20:34:42 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.48 2012/01/14 08:11:59 graaff Exp $
+
+*coderay-1.0.5 (14 Jan 2012)
+
+  14 Jan 2012; Hans de Graaff <graaff@gentoo.org> +coderay-1.0.5.ebuild:
+  Version bump.
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> coderay-1.0.4.ebuild:
   Add Prefix keywords, bug #396547
