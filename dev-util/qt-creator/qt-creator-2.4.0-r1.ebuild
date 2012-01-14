@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.0-r1.ebuild,v 1.1 2012/01/03 22:17:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.0-r1.ebuild,v 1.2 2012/01/14 12:01:49 hwoarang Exp $
 
 EAPI="4"
 LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
@@ -30,7 +30,7 @@ CDEPEND="
 	>=x11-libs/qt-sql-${QTVER}
 	>=x11-libs/qt-svg-${QTVER}
 	debug? ( >=x11-libs/qt-test-${QTVER} )
-	doc? ( >=x11-libs/qt-assistant-${QTVER}[doc] )
+	>=x11-libs/qt-assistant-${QTVER}[doc]
 	!botan-bundled? ( =dev-libs/botan-1.8* )
 "
 DEPEND="${CDEPEND}
