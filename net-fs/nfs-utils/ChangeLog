@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.193 2012/01/14 10:45:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.194 2012/01/14 22:34:09 vapier Exp $
+
+  14 Jan 2012; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.5.ebuild:
+  Require newer version of libgssglue #398901 by Marien Zwart.
 
 *nfs-utils-1.2.5 (14 Jan 2012)
 
