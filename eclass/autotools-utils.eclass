@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.39 2012/01/14 18:14:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.40 2012/01/14 18:53:56 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -446,7 +446,8 @@ autotools-utils_src_install() {
 	popd > /dev/null
 
 	# Move docs installed by autotools (in EAPI < 4).
-	if [[ ${EAPI} == [23] && -d ${D}${EPREFIX}/usr/share/doc/${PF} ]]; then
+	if [[ ${EAPI} == [23] ]] \
+			&& path_exists "${D}${EPREFIX}"/usr/share/doc/${PF}/*; then
 		if [[ $(find "${D}${EPREFIX}"/usr/share/doc/${PF}/* -type d) ]]; then
 			eqawarn "autotools-utils: directories in docdir require at least EAPI 4"
 		else
