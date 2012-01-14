@@ -13,6 +13,5 @@
 	<flag name='gtest'>Build with libgtest support.</flag>
 	<flag name='hsieh'>Use Hsieh hash algorithm.</flag>
 	<flag name='libevent'>Use the libevent event loop interface.</flag>
-	<flag name='tcmalloc'>Use the dev-util/google-perftools libraries to replace the malloc() implementation with a possibly faster one.</flag>
 </use>
 </pkgmetadata>
