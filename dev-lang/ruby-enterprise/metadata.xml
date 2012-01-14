@@ -27,10 +27,6 @@
       editing functionality).
     </flag>
 
-    <flag name="tcmalloc">
-      Add support for TCMalloc provided by <pkg>dev-util/google-perftools</pkg>
-    </flag>
-
     <flag name="fastthreading">
       EXPERIMENTAL Enables fast threading routines. Removes support for callcc.
     </flag>
