@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-3.0.0.ebuild,v 1.2 2011/12/29 17:15:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-3.0.0.ebuild,v 1.3 2012/01/14 16:05:28 maekke Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.glabels.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="barcode doc eds"
 
 RDEPEND=">=dev-libs/glib-2.28.2:2
