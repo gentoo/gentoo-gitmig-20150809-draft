@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.164 2012/01/13 22:40:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.165 2012/01/14 08:05:32 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -14,20 +14,6 @@ if [[ ${___ECLASS_ONCE_FLAG_O_MATIC} != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_FLAG_O_MATIC="recur -_+^+_- spank"
 
 inherit eutils toolchain-funcs multilib
-
-################ DEPRECATED functions ################
-# The following are still present to avoid breaking existing
-# code more than necessary; however they are deprecated. Please
-# use gcc-specs-* from toolchain-funcs.eclass instead, if you
-# need to know which hardened techs are active in the compiler.
-# See bug #100974
-#
-# has_hardened
-# has_pie
-# has_pic
-# has_ssp_all
-# has_ssp
-
 
 # {C,CXX,F,FC}FLAGS that we allow in strip-flags
 # Note: shell globs and character lists are allowed
@@ -526,14 +512,6 @@ get-flag() {
 	done
 	return 1
 }
-
-# DEAD FUNCS.  Remove by Dec 2011.
-test_flag()    { die "$0: deprecated, please use test-flags()!" ; }
-has_hardened() { die "$0: deprecated, please use gcc-specs-{relro,now}()!" ; }
-has_pic()      { die "$0: deprecated, please use gcc-specs-pie()!" ; }
-has_pie()      { die "$0: deprecated, please use gcc-specs-pie()!" ; }
-has_ssp_all()  { die "$0: deprecated, please use gcc-specs-ssp()!" ; }
-has_ssp()      { die "$0: deprecated, please use gcc-specs-ssp()!" ; }
 
 # @FUNCTION: has_m64
 # @DESCRIPTION:
