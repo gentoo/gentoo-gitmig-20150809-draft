@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/PEAR-Net_LDAP2-2.0.11.ebuild,v 1.1 2011/03/04 13:33:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/PEAR-Net_LDAP2-2.0.12.ebuild,v 1.1 2012/01/14 22:47:58 mabi Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit php-pear-r1
 
