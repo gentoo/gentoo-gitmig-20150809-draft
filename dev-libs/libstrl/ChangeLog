@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libstrl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/ChangeLog,v 1.9 2011/10/15 23:24:13 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/ChangeLog,v 1.10 2012/01/14 14:55:15 mgorny Exp $
+
+  14 Jan 2012; Michał Górny <mgorny@gentoo.org> libstrl-0.5.1.ebuild:
+  --docdir is now passed within autotools-utils.eclass.
 
   15 Oct 2011; Markus Meier <maekke@gentoo.org> libstrl-0.5.1.ebuild:
   x86 stable, bug #385957
