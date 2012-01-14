@@ -1,7 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.334 2012/01/10 15:25:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.335 2012/01/14 19:54:31 swift Exp $
 
+  14 Jan 2012; Sven Vermeulen <swift@gentoo.org> package.mask:
+  Mask SELinux policy packages that are soon to be added
+  
   10 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE="e2fsprogs" for app-arch/libarchive as Linux -only feature wrt
   #354923

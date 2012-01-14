@@ -1,7 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.29 2011/09/18 12:38:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.30 2012/01/14 19:54:31 swift Exp $
 
+  14 Jan 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
+  Unmask SELinux policies that are soon to be added to the tree (masked by
+  base)
+  
   18 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> 64bit-native/package.mask:
   Mask 32bit only games-action/cs2d on no-multilib profile
 
