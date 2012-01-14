@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.33 2011/06/06 00:27:32 keri Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.34 2012/01/14 12:03:15 ago Exp $
+
+  14 Jan 2012; Agostino Sarubbo <ago@gentoo.org> xsb-3.3.2.ebuild:
+  Stable for AMD64, wrt bug #396887
 
   06 Jun 2011; <keri@gentoo.org> xsb-3.3.2.ebuild:
   Fix compile when odbc/iodbc not in USE flags. Closes #369765
