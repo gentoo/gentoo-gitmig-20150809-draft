@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.23 2012/01/03 02:12:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.24 2012/01/14 04:57:46 radhermit Exp $
+
+*monkeyd-0.31.0 (14 Jan 2012)
+
+  14 Jan 2012; Tim Harder <radhermit@gentoo.org> +monkeyd-0.31.0.ebuild:
+  Version bump.
 
 *monkeyd-0.30.0 (03 Jan 2012)
 
