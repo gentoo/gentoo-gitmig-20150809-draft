@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/btparser
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/ChangeLog,v 1.2 2011/12/29 17:23:37 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/ChangeLog,v 1.3 2012/01/14 15:55:32 maekke Exp $
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> btparser-0.13.ebuild:
+  x86 stable, bug #393007
 
   29 Dec 2011; Pacho Ramos <pacho@gentoo.org> btparser-0.13.ebuild:
   amd64 stable, bug 393007

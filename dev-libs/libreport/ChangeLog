@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libreport
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.4 2011/12/31 18:33:52 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.5 2012/01/14 15:54:48 maekke Exp $
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> libreport-2.0.7.ebuild:
+  x86 stable, bug #393007
 
   31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   libreport-2.0.7.ebuild:
