@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.0.ebuild,v 1.5 2012/01/14 11:13:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.0.ebuild,v 1.6 2012/01/14 19:13:00 keri Exp $
 
 EAPI=2
 
@@ -55,7 +55,7 @@ src_test() {
 
 src_install() {
 	cd "${S}"/src
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	cd "${S}"
 	dodoc ChangeLog NEWS PROBLEMS README VERSION || die "dodoc failed"
