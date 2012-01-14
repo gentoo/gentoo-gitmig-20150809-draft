@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.167 2011/04/13 15:03:49 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.168 2012/01/14 10:12:50 ago Exp $
+
+  14 Jan 2012; Agostino Sarubbo <ago@gentoo.org> man-1.6g.ebuild:
+  Stable for AMD64, wrt bug #398461
 
   13 Apr 2011; Ulrich Mueller <ulm@gentoo.org> man-1.6f-r4.ebuild,
   man-1.6f-r5.ebuild, man-1.6g.ebuild:
