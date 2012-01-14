@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.34 2012/01/14 14:41:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.35 2012/01/14 14:50:05 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -376,8 +376,12 @@ autotools-utils_src_configure() {
 	[[ -z ${myeconfargs+1} || $(declare -p myeconfargs) == 'declare -a'* ]] \
 		|| die 'autotools-utils.eclass: myeconfargs has to be an array.'
 
+	[[ ${EAPI} == 2 ]] && ! use prefix && EPREFIX=
+
 	# Common args
-	local econfargs=()
+	local econfargs=(
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
+	)
 
 	# Handle static-libs found in IUSE, disable them by default
 	if in_iuse static-libs; then
@@ -424,6 +428,22 @@ autotools-utils_src_install() {
 	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
 	emake DESTDIR="${D}" "$@" install || die "emake install failed"
 	popd > /dev/null
+
+	# Move docs installed by autotools (in EAPI < 4).
+	if [[ ${EAPI} == [23] && -d ${D}${EPREFIX}/usr/share/doc/${PF} ]]; then
+		mkdir "${T}"/temp-docdir
+		mv "${D}${EPREFIX}"/usr/share/doc/${PF}/* "${T}"/temp-docdir/ \
+			|| die "moving docs to tempdir failed"
+
+		local f
+		for f in "${T}"/temp-docdir/*; do
+			[[ -d ${f} ]] \
+				&& die "directories in docdir require at least EAPI 4"
+		done
+
+		dodoc "${T}"/temp-docdir/* || die "docdir dodoc failed"
+		rm -r "${T}"/temp-docdir || die
+	fi
 
 	# XXX: support installing them from builddir as well?
 	if [[ ${DOCS} ]]; then
