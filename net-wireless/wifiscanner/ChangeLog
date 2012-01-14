@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wifiscanner
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/ChangeLog,v 1.10 2011/04/02 12:49:04 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/ChangeLog,v 1.11 2012/01/14 05:28:15 vapier Exp $
+
+  14 Jan 2012; Mike Frysinger <vapier@gentoo.org> wifiscanner-1.0.1-r2.ebuild:
+  Update old grep style which fails with newer versions #349770 by Diego Elio
+  Pettenò. Also clean up and move to newer EAPI in the process.
 
   02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
   wifiscanner-1.0.1-r1.ebuild, wifiscanner-1.0.1-r2.ebuild:
