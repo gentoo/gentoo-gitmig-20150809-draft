@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ProgressBar
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.35 2011/12/30 04:05:30 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.36 2012/01/14 19:46:53 armin76 Exp $
+
+  14 Jan 2012; Raúl Porcel <armin76@gentoo.org>
+  Term-ProgressBar-2.100.0.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #395973
 
   30 Dec 2011; Jeroen Roovers <jer@gentoo.org> Term-ProgressBar-2.100.0.ebuild:
   Marked ~hppa (bug #395973).
