@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.175 2011/12/18 22:33:12 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.176 2012/01/14 15:53:25 maekke Exp $
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> zsh-4.3.12.ebuild:
+  x86 stable, bug #394409
 
   18 Dec 2011; Markus Meier <maekke@gentoo.org> zsh-4.3.12.ebuild:
   arm stable, bug #394409
