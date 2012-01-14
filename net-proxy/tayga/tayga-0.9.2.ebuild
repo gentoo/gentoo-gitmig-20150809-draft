@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tayga/tayga-0.9.2.ebuild,v 1.1 2011/06/16 22:28:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tayga/tayga-0.9.2.ebuild,v 1.2 2012/01/14 09:35:24 ago Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.litech.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
