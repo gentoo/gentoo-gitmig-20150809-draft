@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.35 2011/12/28 19:41:22 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.36 2012/01/14 19:33:30 swift Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
 #  on behalf of QA team <qa@gentoo.org
@@ -86,6 +86,7 @@ sec-policy/selinux-dmidecode
 sec-policy/selinux-dnsmasq
 sec-policy/selinux-dovecot
 sec-policy/selinux-dpkg
+sec-policy/selinux-dracut
 sec-policy/selinux-entropyd
 sec-policy/selinux-evolution
 sec-policy/selinux-exim
