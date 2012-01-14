@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.6.ebuild,v 1.3 2010/03/29 20:03:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.6.ebuild,v 1.4 2012/01/14 18:44:57 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/mpack/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~sparc ~x86 ~ppc-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~x86 ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 src_unpack() {
