@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.7.0-r2.ebuild,v 1.1 2012/01/08 15:47:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.7.0-r2.ebuild,v 1.2 2012/01/14 23:25:17 blueness Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
@@ -39,6 +39,9 @@ src_prepare() {
 
 	# Fix stricter use of dir variables, bug #397429
 	epatch "${FILESDIR}"/${PN}-3.7.0-automake-1.11.2.patch
+
+	# Fix for glibc 2.15, bug #398921
+	epatch "${FILESDIR}"/${PN}-3.7.0-glibc-2.15.patch
 
 	# Regenerate autotools files
 	eautoreconf
