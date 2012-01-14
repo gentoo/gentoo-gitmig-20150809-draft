@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.112 2011/07/18 08:04:05 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.113 2012/01/14 16:09:17 ulm Exp $
+
+  14 Jan 2012; Ulrich Müller <ulm@gentoo.org> auctex-11.86-r1.ebuild:
+  Assign VARTEXFONTS wrt bug 377921. Remove old blocker.
 
   18 Jul 2011; Ulrich Mueller <ulm@gentoo.org> -auctex-11.86.ebuild:
   Remove old.

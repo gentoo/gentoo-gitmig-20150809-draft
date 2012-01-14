@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.86-r1.ebuild,v 1.7 2011/07/18 00:45:44 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.86-r1.ebuild,v 1.8 2012/01/14 16:09:17 ulm Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~spa
 IUSE="preview-latex"
 
 DEPEND="virtual/latex-base
-	preview-latex? ( !dev-tex/preview-latex
+	preview-latex? (
 		app-text/dvipng
 		app-text/ghostscript-gpl )"
 RDEPEND="${DEPEND}"
@@ -43,6 +43,7 @@ src_configure() {
 }
 
 src_compile() {
+	export VARTEXFONTS="${T}"/fonts
 	emake || die "emake failed"
 	cd doc; emake tex-ref.pdf || die "creation of tex-ref.pdf failed"
 }
