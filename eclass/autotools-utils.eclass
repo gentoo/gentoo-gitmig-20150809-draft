@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.38 2012/01/14 15:18:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.39 2012/01/14 18:14:39 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -447,18 +447,16 @@ autotools-utils_src_install() {
 
 	# Move docs installed by autotools (in EAPI < 4).
 	if [[ ${EAPI} == [23] && -d ${D}${EPREFIX}/usr/share/doc/${PF} ]]; then
-		mkdir "${T}"/temp-docdir
-		mv "${D}${EPREFIX}"/usr/share/doc/${PF}/* "${T}"/temp-docdir/ \
-			|| die "moving docs to tempdir failed"
+		if [[ $(find "${D}${EPREFIX}"/usr/share/doc/${PF}/* -type d) ]]; then
+			eqawarn "autotools-utils: directories in docdir require at least EAPI 4"
+		else
+			mkdir "${T}"/temp-docdir
+			mv "${D}${EPREFIX}"/usr/share/doc/${PF}/* "${T}"/temp-docdir/ \
+				|| die "moving docs to tempdir failed"
 
-		local f
-		for f in "${T}"/temp-docdir/*; do
-			[[ -d ${f} ]] \
-				&& die "directories in docdir require at least EAPI 4"
-		done
-
-		dodoc "${T}"/temp-docdir/* || die "docdir dodoc failed"
-		rm -r "${T}"/temp-docdir || die
+			dodoc "${T}"/temp-docdir/* || die "docdir dodoc failed"
+			rm -r "${T}"/temp-docdir || die
+		fi
 	fi
 
 	# XXX: support installing them from builddir as well?
