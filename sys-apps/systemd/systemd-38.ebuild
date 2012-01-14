@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-38.ebuild,v 1.1 2012/01/11 07:56:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-38.ebuild,v 1.2 2012/01/14 21:17:23 williamh Exp $
 
 EAPI=4
 
@@ -114,8 +114,6 @@ src_install() {
 		|| die
 	rm "${D}"/usr/share/man/man1/init.1 || die
 
-	keepdir /run
-
 	# Create /run/lock as required by new baselay/OpenRC compat.
 	insinto /usr/lib/tmpfiles.d
 	doins "${FILESDIR}"/gentoo-run.conf
@@ -138,7 +136,8 @@ optfeature() {
 }
 
 pkg_postinst() {
-	if [[ ! -L "${ROOT}"etc/mtab ]]; then
+	mkdir -p "${ROOT}"/run
+	if [[ ! -L "${ROOT}"/etc/mtab ]]; then
 		ewarn "Upstream suggests that the /etc/mtab file should be a symlink to /proc/mounts."
 		ewarn "It is known to cause users being unable to unmount user mounts. If you don't"
 		ewarn "require that specific feature, please call:"

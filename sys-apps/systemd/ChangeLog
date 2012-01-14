@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.19 2012/01/11 07:56:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.20 2012/01/14 21:17:23 williamh Exp $
+
+  14 Jan 2012; William Hubbs <williamh@gentoo.org> systemd-29-r3.ebuild,
+  systemd-29-r5.ebuild, systemd-37-r1.ebuild, systemd-37-r3.ebuild,
+  systemd-38.ebuild:
+  move the creation of /run to pkg_postinst (approved by mgorny)
 
 *systemd-38 (11 Jan 2012)
 
