@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/w_scan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.22 2011/12/29 18:35:36 idl0r Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.23 2012/01/14 14:02:23 idl0r Exp $
+
+*w_scan-20120112 (14 Jan 2012)
+
+  14 Jan 2012; Christian Ruppert <idl0r@gentoo.org> +w_scan-20120112.ebuild:
+  Version bump.
 
   29 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -w_scan-20090918.ebuild,
   -w_scan-20101204.ebuild:
