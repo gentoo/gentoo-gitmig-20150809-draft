@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11-r2.ebuild,v 1.8 2011/06/26 13:07:04 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11-r2.ebuild,v 1.9 2012/01/14 18:07:21 tristan Exp $
 
 inherit autotools eutils multilib python gnome2
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="applet"
 RESTRICT="test"
 
-DEPEND="dev-python/pygtk
+RDEPEND="dev-python/pygtk
 	dev-python/pycrypto
 	dev-python/gconf-python
 	dev-python/gnome-vfs-python
@@ -22,11 +22,11 @@ DEPEND="dev-python/pygtk
 	dev-python/libgnome-python
 	sys-libs/cracklib
 	applet? ( dev-python/gnome-applets-python )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	gnome2_src_unpack
-	ln -sf $(type -P true) py-compile
+	echo -n > py-compile
 	epatch \
 		"${FILESDIR}"/${P}-list-index.patch \
 		"${FILESDIR}"/${P}-build.patch
