@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/identicurse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/identicurse/ChangeLog,v 1.1 2011/09/03 19:51:44 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/identicurse/ChangeLog,v 1.2 2012/01/14 18:09:46 xarthisius Exp $
+
+*identicurse-0.8.2 (14 Jan 2012)
+
+  14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/identicurse-0.8.2-config_json_path.patch, +identicurse-0.8.2.ebuild,
+  -files/identicurse-config_json_path.patch, -identicurse-0.7.3.ebuild:
+  Version bump, drop old
 
 *identicurse-0.7.3 (03 Sep 2011)
 
