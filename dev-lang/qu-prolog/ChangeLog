@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.84 2012/01/14 00:05:35 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.85 2012/01/14 09:49:25 ago Exp $
+
+  14 Jan 2012; Agostino Sarubbo <ago@gentoo.org> qu-prolog-9.1.ebuild:
+  Stable for AMD64, wrt bug #398815
 
   14 Jan 2012; <keri@gentoo.org> files/qu-prolog-9.1-cflags.patch:
   Ensure CXX from configure is used to compile prolog kernel. Closes bug
