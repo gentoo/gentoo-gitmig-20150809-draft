@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.28.ebuild,v 1.2 2011/08/21 06:21:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.28.ebuild,v 1.3 2012/01/14 18:36:50 ssuominen Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? *:2.4"
@@ -27,10 +27,10 @@ DEPEND="${RDEPEND}
 	test? ( >=dev-util/cppunit-1.9.6 )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.2.28-gcc46.patch \
+	epatch \
+		"${FILESDIR}"/${PN}-2.2.28-gcc46.patch \
 		"${FILESDIR}"/${PN}-fix-pie.patch
-	rm pkg/py-compile
-	ln -s "$(type -P true)" pkg/py-compile || die
+	>pkg/py-compile
 	eautoreconf
 }
 
@@ -42,11 +42,11 @@ src_configure() {
 		$(use_enable graphviz) \
 		$(use_enable nls) \
 		$(use_enable python) \
-		$(use_enable static-libs static) || die
+		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	emake install DESTDIR="${D}" || die
 
 	rm -rf "${D}etc/yum"
 	rm -rf "${D}usr/lib/yum-plugins"
@@ -60,9 +60,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
-	if ! use static-libs ; then
-		find "${D}" -name '*.la' -delete || die
-	fi
+	use static-libs || find "${D}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
