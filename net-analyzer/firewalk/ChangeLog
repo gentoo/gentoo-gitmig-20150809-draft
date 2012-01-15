@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/firewalk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.17 2012/01/06 12:40:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.18 2012/01/15 15:23:34 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> firewalk-5.0-r1.ebuild:
+  x86 stable wrt bug #397125
 
   06 Jan 2012; Agostino Sarubbo <ago@gentoo.org> firewalk-5.0-r1.ebuild:
   Stable for AMD64, wrt bug #397125
