@@ -1,27 +1,31 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.996.ebuild,v 1.11 2011/03/02 10:13:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998-r1.ebuild,v 1.1 2012/01/15 23:00:47 dilfridge Exp $
 
-EAPI="1"
+EAPI="4"
 
 inherit eutils
 
 DESCRIPTION="graphical scanning frontend"
 HOMEPAGE="http://www.xsane.org/"
-SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
+SRC_URI="http://www.xsane.org/download/${P}.tar.gz
+	http://dev.gentoo.org/~dilfridge/distfiles/${P}-patches-2.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
-IUSE="nls jpeg png tiff gimp lcms"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="nls jpeg png tiff gimp lcms ocr"
 
 RDEPEND="media-gfx/sane-backends
 	x11-libs/gtk+:2
+	x11-misc/xdg-utils
 	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 	gimp? ( media-gfx/gimp )
-	lcms? ( media-libs/lcms )"
+	lcms? ( =media-libs/lcms-1* )"
+
+PDEPEND="ocr? ( app-text/gocr )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -35,13 +39,15 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/MissingCapsFlag.patch"
+src_prepare() {
+	# Apply multiple fixes from different distributions
+	epatch "${WORKDIR}/${P}-patches-2"/*.patch
+
+	# Fix compability with libpng15 wrt #377363
+	sed -i -e 's:png_ptr->jmpbuf:png_jmpbuf(png_ptr):' src/xsane-save.c || die
 }
 
-src_compile() {
+src_configure() {
 	local extraCPPflags
 	if use lcms; then
 		extraCPPflags="-I /usr/include/lcms"
@@ -52,14 +58,13 @@ src_compile() {
 		$(use_enable png) \
 		$(use_enable tiff) \
 		$(use_enable gimp) \
-		$(use_enable lcms) \
-		|| die
-	emake || die
+		$(use_enable lcms)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc xsane.*
+
 	# link xsane so it is seen as a plugin in gimp
 	if use gimp; then
 		local plugindir
@@ -73,6 +78,7 @@ src_install() {
 		dodir "${plugindir}"
 		dosym /usr/bin/xsane "${plugindir}"
 	fi
+
 	newicon src/xsane-48x48.png ${PN}.png
 }
 
