@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iwl6030-ucode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6030-ucode/ChangeLog,v 1.1 2011/08/22 16:12:30 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6030-ucode/ChangeLog,v 1.2 2012/01/15 10:32:32 tomka Exp $
+
+  15 Jan 2012; Thomas Kahle <tomka@gentoo.org> iwl6030-ucode-17.168.5.2.ebuild:
+  Adding ~x86 per bug 393509
 
 *iwl6030-ucode-17.168.5.2 (22 Aug 2011)
 
