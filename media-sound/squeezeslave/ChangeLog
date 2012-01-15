@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/squeezeslave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/ChangeLog,v 1.5 2012/01/15 06:48:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/ChangeLog,v 1.6 2012/01/15 06:50:17 radhermit Exp $
+
+  15 Jan 2012; Tim Harder <radhermit@gentoo.org> -squeezeslave-1.1_p286.ebuild,
+  -files/squeezeslave-1.1_p262-ffmpeg.patch:
+  Remove old.
 
 *squeezeslave-1.1_p312 (15 Jan 2012)
 
