@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/prawn-layout
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.10 2011/09/21 06:27:07 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.11 2012/01/15 09:34:42 graaff Exp $
+
+  15 Jan 2012; Hans de Graaff <graaff@gentoo.org> prawn-layout-0.8.4-r2.ebuild:
+  Add ruby19. Make sure to use test-unit:0 with test/spec for ruby19.
 
   21 Sep 2011; Hans de Graaff <graaff@gentoo.org> -prawn-layout-0.8.4.ebuild,
   -prawn-layout-0.8.4-r1.ebuild:
