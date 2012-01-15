@@ -1,10 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.4.4.ebuild,v 1.8 2011/10/03 18:05:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.4.4.ebuild,v 1.9 2012/01/15 20:45:05 chithanh Exp $
 
 EAPI=4
 
 XORG_DOC=doc
+XORG_EAUTORECONF=yes
 inherit xorg-2 toolchain-funcs flag-o-matic
 
 DESCRIPTION="X.Org X11 library"
