@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/aria2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.75 2011/08/03 14:46:00 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.76 2012/01/15 13:49:06 dev-zero Exp $
+
+*aria2-1.14.1 (15 Jan 2012)
+
+  15 Jan 2012; Tiziano Müller <dev-zero@gentoo.org> -aria2-1.9.4.ebuild,
+  -aria2-1.10.0.ebuild, -aria2-1.10.1.ebuild, -aria2-1.10.2.ebuild,
+  -aria2-1.10.5.ebuild, -aria2-1.10.6.ebuild, -aria2-1.10.7.ebuild,
+  -aria2-1.10.8.ebuild, -aria2-1.10.9.ebuild, -aria2-1.11.0.ebuild,
+  -aria2-1.11.2.ebuild, -aria2-1.12.0.ebuild, +aria2-1.14.1.ebuild,
+  metadata.xml:
+  Version bump (bug #388971) and conditionally rebuild doc (bug #366485). Drop
+  old versions.
 
 *aria2-1.12.1 (03 Aug 2011)
 

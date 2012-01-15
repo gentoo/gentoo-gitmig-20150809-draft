@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.10.8.ebuild,v 1.1 2010/12/19 13:54:59 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.14.1.ebuild,v 1.1 2012/01/15 13:49:06 dev-zero Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit bash-completion
 
@@ -12,15 +12,15 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE="ares bittorrent expat gnutls metalink nls scripts sqlite ssl test xmlrpc"
-
+IUSE="ares bittorrent doc expat gnutls metalink nls scripts sqlite ssl test xmlrpc"
+#IUSE="nettle"
 CDEPEND="sys-libs/zlib
 	ssl? (
 		gnutls? ( >=net-libs/gnutls-1.2.9 )
 		!gnutls? ( dev-libs/openssl ) )
 	ares? ( >=net-dns/c-ares-1.5.0 )
 	bittorrent? (
-		gnutls? ( >=net-libs/gnutls-1.2.9 >=dev-libs/libgcrypt-1.2.2 )
+		gnutls? ( >=net-libs/gnutls-2.2.0 >=dev-libs/libgcrypt-1.2.2 )
 		!gnutls? ( dev-libs/openssl ) )
 	metalink? (
 		!expat? ( >=dev-libs/libxml2-2.6.26 )
@@ -29,16 +29,20 @@ CDEPEND="sys-libs/zlib
 	xmlrpc? (
 		!expat? ( >=dev-libs/libxml2-2.6.26 )
 		expat? ( dev-libs/expat ) )"
+#CDEPEND="bittorrent? (
+#		nettle? ( >=dev-libs/nettle-2.4 >=dev-libs/gmp-5 )
+#		!nettle? (
+#			gnutls? ( >=net-libs/gnutls-2.2.0 >=dev-libs/libgcrypt-1.2.2 )
+#			!gnutls? ( dev-libs/openssl ) ) )"
+
 DEPEND="${CDEPEND}
-	app-text/asciidoc
 	dev-util/pkgconfig
+	doc? ( app-text/asciidoc )
 	nls? ( sys-devel/gettext )
 	test? ( >=dev-util/cppunit-1.12.0 )"
 RDEPEND="${CDEPEND}
 	scripts? ( dev-lang/ruby )
 	nls? ( virtual/libiconv virtual/libintl )"
-
-RESTRICT="test"
 
 pkg_setup() {
 	if use scripts && use !xmlrpc && use !metalink; then
@@ -60,6 +64,8 @@ src_configure() {
 		xmllib="$(use_with expat libexpat) $(use_with !expat libxml2)"
 	fi
 
+	use doc || export ac_cv_path_ASCIIDOC=
+
 	# Note:
 	# - depends on libgcrypt only when using gnutls
 	# - if --without-libexpat or --without-libxml2 are not given, it links against
@@ -76,15 +82,17 @@ src_configure() {
 		$(use_with sqlite sqlite3) \
 		$(use_enable bittorrent) \
 		$(use_with ares libcares) \
+		--without-libnettle --without-libgmp \
 		${xmllib} \
 		${myconf}
+#		$(use_with nettle libnettle) \
+#		$(use_with nettle libgmp) \
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
 	rm -rf "${D}/usr/share/doc/aria2"
-	dodoc ChangeLog README AUTHORS NEWS
 	dohtml README.html doc/aria2c.1.html
 
 	use bash-completion && dobashcompletion doc/bash_completion/aria2c
