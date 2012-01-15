@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-2.2.ebuild,v 1.2 2012/01/04 20:19:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-2.2.ebuild,v 1.3 2012/01/15 15:22:27 phajdan.jr Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/vamp/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="doc"
 
 RDEPEND="media-libs/libsndfile"

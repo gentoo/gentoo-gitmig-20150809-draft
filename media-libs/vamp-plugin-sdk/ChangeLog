@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vamp-plugin-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.36 2012/01/07 14:54:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.37 2012/01/15 15:22:27 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  vamp-plugin-sdk-2.2.ebuild:
+  x86 stable wrt bug #397075
 
 *vamp-plugin-sdk-2.3 (07 Jan 2012)
 
