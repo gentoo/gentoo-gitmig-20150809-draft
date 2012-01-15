@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envoy/envoy-0.0.2.ebuild,v 1.3 2012/01/15 19:14:25 tove Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
