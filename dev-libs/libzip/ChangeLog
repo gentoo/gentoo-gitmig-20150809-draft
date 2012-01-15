@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.32 2012/01/07 15:34:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.33 2012/01/15 15:48:45 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libzip-0.10-r1.ebuild:
+  x86 stable wrt bug #396903
 
   07 Jan 2012; Johannes Huber <johu@gentoo.org> libzip-0.10-r1.ebuild:
   Fix QA issues. Remove unused eclass. Add zlib to DEPEND too. Prevent
