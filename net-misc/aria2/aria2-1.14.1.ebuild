@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.14.1.ebuild,v 1.1 2012/01/15 13:49:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.14.1.ebuild,v 1.2 2012/01/15 14:13:50 dev-zero Exp $
 
 EAPI="4"
 
-inherit bash-completion
+inherit bash-completion-r1
 
 DESCRIPTION="A download utility with resuming and segmented downloading with HTTP/HTTPS/FTP/BitTorrent support."
 HOMEPAGE="http://aria2.sourceforge.net/"
@@ -95,7 +95,7 @@ src_install() {
 	rm -rf "${D}/usr/share/doc/aria2"
 	dohtml README.html doc/aria2c.1.html
 
-	use bash-completion && dobashcompletion doc/bash_completion/aria2c
+	use bash-completion && dobashcomp doc/bash_completion/aria2c
 
 	use scripts && dobin doc/xmlrpc/aria2{mon,rpc}
 }
