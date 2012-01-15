@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/portsentry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.24 2012/01/03 17:50:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.25 2012/01/15 15:54:43 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  portsentry-1.2-r1.ebuild:
+  x86 stable wrt bug #397137
 
   03 Jan 2012; Jeroen Roovers <jer@gentoo.org> portsentry-1.2-r1.ebuild:
   Fix quoting issues. Do not install LICENSE file.
