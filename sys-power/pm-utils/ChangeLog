@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.62 2012/01/04 17:54:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.63 2012/01/15 16:05:43 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> pm-utils-1.4.1-r2.ebuild:
+  alpha/ia64/sparc stable wrt #375349
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pm-utils-1.4.1-r2.ebuild:
