@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7.ebuild,v 1.3 2011/12/13 18:50:56 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7.ebuild,v 1.4 2012/01/15 22:07:18 hwoarang Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils toolchain-funcs check-reqs python versionator
 
@@ -28,10 +28,14 @@ DEPEND="${RDEPEND}"
 PDEPEND="app-admin/python-updater"
 
 S="${WORKDIR}/${PN}-pypy-release-${PV}"
+
 DOC="README LICENSE"
 
-CHECKREQS_MEMORY="1250M"
-use amd64 && CHECKREQS_MEMORY="2500M"
+pkg_pretend() {	
+	CHECKREQS_MEMORY="1250M"
+	use amd64 && CHECKREQS_MEMORY="2500M"
+	check-reqs_pkg_pretend
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-patches.patch"
@@ -69,8 +73,8 @@ src_compile() {
 src_install() {
 	INSPATH="/usr/$(get_libdir)/pypy${SLOT}"
 	insinto ${INSPATH}
-	doins -r include lib_pypy lib-python pypy-c || die "failed"
-	fperms a+x ${INSPATH}/pypy-c || die "failed"
+	doins -r include lib_pypy lib-python pypy-c
+	fperms a+x ${INSPATH}/pypy-c
 	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
 }
 

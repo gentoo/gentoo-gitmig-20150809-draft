@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.6 2011/12/13 18:50:56 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.7 2012/01/15 22:07:18 hwoarang Exp $
+
+  15 Jan 2012; Markos Chandras <hwoarang@gentoo.org> pypy-1.7.ebuild:
+  Don't call use() in global scope. Patch by Arfrever.
 
   13 Dec 2011; Nirbheek Chauhan <nirbheek@gentoo.org> pypy-1.7.ebuild,
   metadata.xml:
