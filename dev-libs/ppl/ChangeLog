@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.41 2012/01/14 16:46:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.42 2012/01/15 15:41:43 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ppl-0.11.2-r1.ebuild:
+  x86 stable wrt bug #396631
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> ppl-0.11.2-r1.ebuild:
   arm stable, bug #396631
