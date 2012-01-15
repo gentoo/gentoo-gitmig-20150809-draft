@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-6.1.ebuild,v 1.4 2011/07/24 09:22:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-6.5.ebuild,v 1.1 2012/01/15 22:03:12 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
-inherit eutils
+inherit libtool autotools
 
 DESCRIPTION="HTTP Antivirus for Squid based on ClamAv and ICAP"
 HOMEPAGE="http://squidclamav.darold.net/"
@@ -12,28 +12,32 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-proxy/c-icap"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-crash.patch"
+	# version 6.3 causes maintainer-mode rebuild from tarball, and
+	# contains acinclude.m4 with libtool macros which cause trouble.
+	rm acinclude.m4 || die
+	eautoreconf
+	elibtoolize
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	find "${D}" -name '*.la' -delete || die
 
 	# delete its own documentation installed
 	rm -r "${D}"/usr/share/${PN} || die
 
-	dodoc README AUTHORS ChangeLog || die
+	dodoc README AUTHORS ChangeLog
 
 	# Fix configuration file to adapt to the Gentoo configuration
 	sed -i \
-		-e '/clamd_local/s:/tmp/clamd:/var/run/clamav/clamd.sock:' \
+		-e '/clamd_local/s:\.ctl:.sock:' \
 		"${D}"/etc/squidclamav.conf || die
 }
 
