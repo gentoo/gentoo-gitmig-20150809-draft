@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Build
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.61 2011/12/22 22:34:08 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.62 2012/01/15 19:06:35 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org>
+  perl-Module-Build-0.380.0-r2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #393397
 
   22 Dec 2011; Markus Meier <maekke@gentoo.org>
   perl-Module-Build-0.380.0-r2.ebuild:
