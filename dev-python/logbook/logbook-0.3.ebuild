@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/logbook-0.3.ebuild,v 1.1 2012/01/11 23:50:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/logbook-0.3.ebuild,v 1.2 2012/01/15 22:05:05 hwoarang Exp $
 
 EAPI=4
-
-PYTHON_DEPEND="2:2.7 3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
