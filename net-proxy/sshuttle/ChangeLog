@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/sshuttle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/ChangeLog,v 1.6 2012/01/15 23:22:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/ChangeLog,v 1.7 2012/01/15 23:25:32 radhermit Exp $
+
+  15 Jan 2012; Tim Harder <radhermit@gentoo.org> sshuttle-0.54.ebuild,
+  sshuttle-0.60.ebuild:
+  Use die for file removal.
 
 *sshuttle-0.60 (15 Jan 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/sshuttle-0.60.ebuild,v 1.1 2012/01/15 23:22:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/sshuttle-0.60.ebuild,v 1.2 2012/01/15 23:25:32 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -30,7 +30,7 @@ pkg_setup() {
 src_compile() { :; }
 
 src_install() {
-	rm -f stresstest.py
+	rm stresstest.py || die
 	insinto "$(python_get_sitedir)"/${PN}
 	doins -r *.py compat
 
