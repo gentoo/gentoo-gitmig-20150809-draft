@@ -1,6 +1,6 @@
  # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cdrom.eclass,v 1.2 2012/01/13 22:35:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cdrom.eclass,v 1.3 2012/01/15 14:13:46 ulm Exp $
 
 # @ECLASS: cdrom.eclass
 # @MAINTAINER:
@@ -19,6 +19,16 @@ if [[ -z ${___ECLASS_ONCE_CDROM} ]]; then
 ___ECLASS_ONCE_CDROM=1
 
 inherit portability
+
+# @ECLASS-VARIABLE: CDROM_DISABLE_PROPERTIES
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# By default, the eclass sets PROPERTIES="interactive".
+# A non-empty value of CDROM_DISABLE_PROPERTIES suppresses this.
+
+if [[ -z ${CDROM_DISABLE_PROPERTIES} ]]; then
+	PROPERTIES="interactive"
+fi
 
 # @FUNCTION: cdrom_get_cds
 # @USAGE: <file on cd1> [file on cd2] [file on cd3] [...]
