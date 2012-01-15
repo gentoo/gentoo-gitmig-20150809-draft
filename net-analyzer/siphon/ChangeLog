@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/siphon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.16 2012/01/03 17:53:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.17 2012/01/15 15:32:23 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> siphon-666-r1.ebuild:
+  x86 stable wrt bug #397139
 
   03 Jan 2012; Jeroen Roovers <jer@gentoo.org> siphon-666-r1.ebuild:
   Set RDEPEND.
