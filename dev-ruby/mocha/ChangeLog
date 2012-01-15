@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mocha
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.39 2011/12/31 20:36:03 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.40 2012/01/15 13:30:02 graaff Exp $
+
+*mocha-0.10.0 (15 Jan 2012)
+
+  15 Jan 2012; Hans de Graaff <graaff@gentoo.org> +mocha-0.10.0.ebuild:
+  Version bump. Drop keywords due to new metaclass dependency, bug 398985.
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> mocha-0.9.12.ebuild:
   Add Prefix keywords, bug #396547
