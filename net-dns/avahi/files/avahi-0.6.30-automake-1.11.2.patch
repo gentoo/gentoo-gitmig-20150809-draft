@@ -1,6 +1,7 @@
-diff -ur avahi-0.6.30.orig/avahi-python/avahi/Makefile.am avahi-0.6.30/avahi-python/avahi/Makefile.am
---- avahi-0.6.30.orig/avahi-python/avahi/Makefile.am	2010-06-29 06:30:34.000000000 +0300
-+++ avahi-0.6.30/avahi-python/avahi/Makefile.am	2012-01-16 00:07:41.159974487 +0200
+http://bugs.gentoo.org/397477
+
+--- avahi-python/avahi/Makefile.am
++++ avahi-python/avahi/Makefile.am
 @@ -31,7 +31,7 @@
  		-e 's,@FIRST_KEY\@,key = self.db.firstkey(),g' \
  		-e 's,@CHECK_KEY\@,while key is not None:,g' \
@@ -19,9 +20,8 @@ diff -ur avahi-0.6.30.orig/avahi-python/avahi/Makefile.am avahi-0.6.30/avahi-pyt
  	chmod +x $@
  endif
  
-diff -ur avahi-0.6.30.orig/avahi-python/avahi/ServiceTypeDatabase.py.in avahi-0.6.30/avahi-python/avahi/ServiceTypeDatabase.py.in
---- avahi-0.6.30.orig/avahi-python/avahi/ServiceTypeDatabase.py.in	2010-06-29 06:30:34.000000000 +0300
-+++ avahi-0.6.30/avahi-python/avahi/ServiceTypeDatabase.py.in	2012-01-16 00:05:13.440986312 +0200
+--- avahi-python/avahi/ServiceTypeDatabase.py.in
++++ avahi-python/avahi/ServiceTypeDatabase.py.in
 @@ -26,7 +26,7 @@
  class ServiceTypeDatabase:
      """ServiceTypeDatabase maps service types to descriptions"""
@@ -31,9 +31,8 @@ diff -ur avahi-0.6.30.orig/avahi-python/avahi/ServiceTypeDatabase.py.in avahi-0.
  
          self.db = @DBM@.open(filename, "r")
  
-diff -ur avahi-0.6.30.orig/avahi-ui/Makefile.am avahi-0.6.30/avahi-ui/Makefile.am
---- avahi-0.6.30.orig/avahi-ui/Makefile.am	2010-06-29 06:30:35.000000000 +0300
-+++ avahi-0.6.30/avahi-ui/Makefile.am	2012-01-16 00:08:41.330969679 +0200
+--- avahi-ui/Makefile.am
++++ avahi-ui/Makefile.am
 @@ -62,18 +62,18 @@
  
  if HAVE_GDBM
@@ -57,9 +56,8 @@ diff -ur avahi-0.6.30.orig/avahi-ui/Makefile.am avahi-0.6.30/avahi-ui/Makefile.a
  endif
  
  bin_PROGRAMS = bssh
-diff -ur avahi-0.6.30.orig/avahi-utils/Makefile.am avahi-0.6.30/avahi-utils/Makefile.am
---- avahi-0.6.30.orig/avahi-utils/Makefile.am	2010-06-29 06:30:35.000000000 +0300
-+++ avahi-0.6.30/avahi-utils/Makefile.am	2012-01-16 00:09:17.816966708 +0200
+--- avahi-utils/Makefile.am
++++ avahi-utils/Makefile.am
 @@ -30,13 +30,13 @@
  
  if HAVE_GDBM
@@ -76,9 +74,8 @@ diff -ur avahi-0.6.30.orig/avahi-utils/Makefile.am avahi-0.6.30/avahi-utils/Make
  endif
  
  avahi_resolve_SOURCES = avahi-resolve.c sigint.c sigint.h
-diff -ur avahi-0.6.30.orig/service-type-database/Makefile.am avahi-0.6.30/service-type-database/Makefile.am
---- avahi-0.6.30.orig/service-type-database/Makefile.am	2010-06-29 06:30:35.000000000 +0300
-+++ avahi-0.6.30/service-type-database/Makefile.am	2012-01-16 00:10:53.704959089 +0200
+--- service-type-database/Makefile.am
++++ service-type-database/Makefile.am
 @@ -18,13 +18,12 @@
  EXTRA_DIST=build-db.in service-types
  
