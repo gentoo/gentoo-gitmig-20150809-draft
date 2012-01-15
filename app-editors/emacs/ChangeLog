@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.465 2012/01/15 14:17:58 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.466 2012/01/15 19:14:09 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> emacs-23.3-r4.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #398239 and #398311
 
   15 Jan 2012; Thomas Kahle <tomka@gentoo.org> emacs-23.3-r4.ebuild:
   x86 stable per bug 398239
