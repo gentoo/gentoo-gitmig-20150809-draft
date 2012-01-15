@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tinc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.27 2011/12/21 17:32:22 blueness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.28 2012/01/15 19:48:38 tove Exp $
+
+  15 Jan 2012; Torsten Veller <tove@gentoo.org> tinc-1.0.16-r1.ebuild,
+  tinc-1.0.16-r2.ebuild:
+  Fix cvs keyword in the header (#398773)
 
 *tinc-1.0.16-r2 (21 Dec 2011)
 

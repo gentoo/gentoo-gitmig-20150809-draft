@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.16.ebuild,v 1.2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.16-r2.ebuild,v 1.2 2012/01/15 19:48:38 tove Exp $
 
 EAPI="4"
 
