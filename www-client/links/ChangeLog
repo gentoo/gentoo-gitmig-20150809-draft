@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.152 2012/01/13 21:56:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.153 2012/01/15 19:34:20 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> links-2.4-r2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #396519
 
   13 Jan 2012; Thomas Kahle <tomka@gentoo.org> links-2.4-r2.ebuild:
   x86 stable per bug 396519
