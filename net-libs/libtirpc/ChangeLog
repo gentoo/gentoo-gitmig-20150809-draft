@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.24 2012/01/04 18:12:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.25 2012/01/15 16:40:34 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> libtirpc-0.2.2-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #394979
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libtirpc-0.2.2-r1.ebuild:
