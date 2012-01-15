@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.273 2012/01/13 21:54:06 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.274 2012/01/15 00:35:11 sping Exp $
+
+*genkernel-3.4.23.1 (15 Jan 2012)
+
+  15 Jan 2012; Sebastian Pipping <sping@gentoo.org> +genkernel-3.4.23.1.ebuild,
+  genkernel-9999.ebuild:
+  Bump to genkernel 3.4.23.1, mdadm 3.1.5
 
 *genkernel-3.4.23 (13 Jan 2012)
 
