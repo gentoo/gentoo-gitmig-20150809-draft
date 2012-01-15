@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/snpfile-2.0.1-r1.ebuild,v 1.4 2012/01/07 13:41:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/snpfile-2.0.1-r1.ebuild,v 1.5 2012/01/15 15:31:51 phajdan.jr Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.birc.au.dk/~mailund/SNPFile/download/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="static-libs"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="dev-libs/boost"
 RDEPEND="${DEPEND}"
