@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.87 2012/01/15 14:13:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.88 2012/01/15 16:40:12 mgorny Exp $
+
+  15 Jan 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Improve the --docdir configure grep.
 
   15 Jan 2012; Ulrich Müller <ulm@gentoo.org> cdrom.eclass:
   New variable CDROM_DISABLE_PROPERTIES. Set PROPERTIES only if this is unset.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.41 2012/01/15 14:05:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.42 2012/01/15 16:40:12 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -398,7 +398,7 @@ autotools-utils_src_configure() {
 	local econfargs=()
 
 	_check_build_dir
-	if "${ECONF_SOURCE}"/configure --help 2>&1 | grep docdir; then
+	if "${ECONF_SOURCE}"/configure --help 2>&1 | grep '^ *--docdir='; then
 		econfargs+=(
 			--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		)
