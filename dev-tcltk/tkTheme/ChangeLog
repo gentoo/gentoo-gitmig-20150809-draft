@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkTheme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.25 2012/01/06 12:23:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.26 2012/01/15 15:51:05 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tkTheme-1.0-r2.ebuild:
+  x86 stable wrt bug #397011
 
   06 Jan 2012; Justin Lecher <jlec@gentoo.org> tkTheme-1.0-r2.ebuild:
   Aded missing RDEP on x11-libs/libX11
