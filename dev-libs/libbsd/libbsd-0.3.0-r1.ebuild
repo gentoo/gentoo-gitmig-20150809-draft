@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/libbsd-0.3.0-r1.ebuild,v 1.1 2012/01/15 17:08:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/libbsd-0.3.0-r1.ebuild,v 1.2 2012/01/15 17:11:50 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://libbsd.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="BSD BSD-2 BSD-4 ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 pkg_setup() {
