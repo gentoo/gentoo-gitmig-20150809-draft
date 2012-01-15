@@ -1,6 +1,10 @@
-# ChangeLog for dev-php5/pecl-bbcode
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-bbcode/ChangeLog,v 1.1 2011/12/14 22:31:08 mabi Exp $
+# ChangeLog for dev-php/pecl-bbcode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-bbcode/ChangeLog,v 1.2 2012/01/15 16:40:03 olemarkus Exp $
+
+  15 Jan 2012; Ole Markus With <olemarkus@gentoo.org>
+  -pecl-bbcode-1.0.2-r1.ebuild:
+  Removing PHP 5.2 only ebuilds/packages
 
 *pecl-bbcode-1.0.3_beta1 (14 Nov 2010)
 
