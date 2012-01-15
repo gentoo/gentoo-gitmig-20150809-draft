@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.77 2012/01/04 18:03:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.78 2012/01/15 16:34:13 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> libpqxx-4.0.ebuild:
+  alpha/ia64/sparc stable wrt #396483
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libpqxx-4.0.ebuild:
   x86 stable wrt bug #396483
