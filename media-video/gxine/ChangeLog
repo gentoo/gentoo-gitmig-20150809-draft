@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.114 2011/12/31 12:39:21 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.115 2012/01/15 15:48:13 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gxine-0.5.906-r1.ebuild:
+  x86 stable wrt bug #396521
 
   31 Dec 2011; Agostino Sarubbo <ago@gentoo.org> gxine-0.5.906-r1.ebuild:
   Stable for AMD64, wrt bug #396521
