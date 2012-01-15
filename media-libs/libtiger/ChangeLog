@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtiger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/ChangeLog,v 1.16 2012/01/04 18:10:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/ChangeLog,v 1.17 2012/01/15 15:33:28 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libtiger-0.3.4.ebuild:
+  x86 stable wrt bug #397071
 
   04 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libtiger-0.3.4.ebuild:
   Stable for AMD64, wrt bug #397071
