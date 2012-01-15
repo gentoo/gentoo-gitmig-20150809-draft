@@ -1,6 +1,6 @@
- # Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cdrom.eclass,v 1.3 2012/01/15 14:13:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cdrom.eclass,v 1.4 2012/01/15 19:59:17 vapier Exp $
 
 # @ECLASS: cdrom.eclass
 # @MAINTAINER:
