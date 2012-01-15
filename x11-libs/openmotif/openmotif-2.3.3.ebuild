@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.18 2011/12/19 08:43:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.19 2012/01/15 22:10:58 ulm Exp $
 
 EAPI=3
 
@@ -18,9 +18,8 @@ IUSE="doc examples jpeg png static-libs unicode xft"
 RESTRICT="!kernel_linux? (
 	!kernel_FreeBSD? (
 	!kernel_Darwin? (
-	!kernel_SunOS? (
 		fetch bindist
-	) ) ) )"
+	) ) )"
 
 RDEPEND="x11-libs/libXmu
 	x11-libs/libXp
@@ -37,13 +36,14 @@ RDEPEND="${RDEPEND}
 pkg_nofetch() {
 	local line
 	while read line; do einfo "${line}"; done <<-EOF
-	From the Open Motif license: "This software is subject to an open
-	license. It may only be used on, with or for operating systems which
-	are themselves open source systems. You must contact The Open Group
-	for a license allowing distribution and sublicensing of this software
-	on, with, or for operating systems which are not open source programs."
+	From the Open Motif license: "The rights granted under this license are
+	limited solely to distribution and sublicensing of the contribution(s)
+	on, with, or for operating systems which are themselves open source
+	programs. Contact The Open Group for a license allowing distribution and
+	sublicensing of the original program on, with, or for operating systems
+	which are not open source programs."
 
-	If you have got such a license, you may download the file:
+	If above conditions are fulfilled, you may download the file:
 	${SRC_URI}
 	and place it in ${DISTDIR}.
 	EOF

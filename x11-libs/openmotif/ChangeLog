@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.264 2012/01/06 00:04:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.265 2012/01/15 22:10:58 ulm Exp $
+
+  15 Jan 2012; Ulrich Müller <ulm@gentoo.org> openmotif-2.3.2-r2.ebuild,
+  openmotif-2.3.3.ebuild, openmotif-2.3.3-r1.ebuild:
+  Add RESTRICT="fetch bindist" on Solaris, since it is no longer open source.
+  Update message in pkg_nofetch().
 
 *openmotif-2.3.3-r1 (06 Jan 2012)
 
