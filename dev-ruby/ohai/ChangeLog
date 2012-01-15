@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ohai
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.7 2011/10/16 09:40:37 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.8 2012/01/15 14:36:40 graaff Exp $
+
+*ohai-0.6.10 (15 Jan 2012)
+
+  15 Jan 2012; Hans de Graaff <graaff@gentoo.org> +ohai-0.6.10.ebuild:
+  Version bump. Drop x86 keyword due to new sigar dependency, bug 398989.
 
   16 Oct 2011; Hans de Graaff <graaff@gentoo.org> -ohai-0.5.6-r1.ebuild,
   -ohai-0.6.2.ebuild:
