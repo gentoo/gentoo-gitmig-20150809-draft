@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.2.ebuild,v 1.1 2009/06/09 13:10:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.2.ebuild,v 1.2 2012/01/15 19:31:24 idl0r Exp $
 
 EAPI="1"
 
@@ -8,7 +8,7 @@ inherit vdr-plugin versionator
 
 DESCRIPTION="VDR text2skin PlugIn"
 HOMEPAGE="http://projects.vdr-developer.org/projects/show/plg-text2skin"
-SRC_URI="http://projects.vdr-developer.org/attachments/download/112/${P}.tgz"
+SRC_URI="mirror://vdr-developerorg/112/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
