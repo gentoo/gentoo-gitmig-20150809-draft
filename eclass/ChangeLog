@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.85 2012/01/14 18:53:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.86 2012/01/15 14:05:14 mgorny Exp $
+
+  15 Jan 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Pass --docdir to configure only when supported.
 
   14 Jan 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Use path_exists() to ensure any file exists in docdir.

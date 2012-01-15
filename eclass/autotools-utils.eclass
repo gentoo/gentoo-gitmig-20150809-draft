@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.40 2012/01/14 18:53:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.41 2012/01/15 14:05:14 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -395,9 +395,14 @@ autotools-utils_src_configure() {
 	[[ ${EAPI} == 2 ]] && ! use prefix && EPREFIX=
 
 	# Common args
-	local econfargs=(
-		--docdir="${EPREFIX}/usr/share/doc/${PF}"
-	)
+	local econfargs=()
+
+	_check_build_dir
+	if "${ECONF_SOURCE}"/configure --help 2>&1 | grep docdir; then
+		econfargs+=(
+			--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		)
+	fi
 
 	# Handle static-libs found in IUSE, disable them by default
 	if in_iuse static-libs; then
@@ -410,7 +415,6 @@ autotools-utils_src_configure() {
 	# Append user args
 	econfargs+=("${myeconfargs[@]}")
 
-	_check_build_dir
 	mkdir -p "${AUTOTOOLS_BUILD_DIR}" || die "mkdir '${AUTOTOOLS_BUILD_DIR}' failed"
 	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
 	econf "${econfargs[@]}" "$@"
