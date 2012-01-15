@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.63 2012/01/04 17:16:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.64 2012/01/15 15:25:42 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  dvipdfmx-20110311.ebuild:
+  x86 stable wrt bug #396831
 
   04 Jan 2012; Agostino Sarubbo <ago@gentoo.org> dvipdfmx-20110311.ebuild:
   Stable for AMD64, wrt bug #396831
