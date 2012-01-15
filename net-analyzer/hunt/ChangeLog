@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hunt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hunt/ChangeLog,v 1.10 2012/01/03 17:36:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hunt/ChangeLog,v 1.11 2012/01/15 15:37:03 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> hunt-1.5-r1.ebuild:
+  x86 stable wrt bug #397129
 
   03 Jan 2012; Jeroen Roovers <jer@gentoo.org> hunt-1.5-r1.ebuild:
   Remove empty DEPEND.
