@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.6.3.ebuild,v 1.3 2011/12/24 11:27:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.6.3.ebuild,v 1.4 2012/01/15 00:03:08 a3li Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -30,10 +30,12 @@ ruby_add_bdepend "dev-ruby/rake"
 all_ruby_prepare() {
 	# Avoid building the extension twice!
 	# And use rdoc instead of sdoc which we don't have packaged
+	# And don't call git to list files. We're using the pregenerated spec anyway.
 	sed -i \
 		-e 's| => :compile||' \
 		-e 's| => :clean||' \
 		-e 's|sdoc|rdoc|' \
+		-e 's|`git ls-files`|""|' \
 		Rakefile || die "rakefile fix failed"
 }
 

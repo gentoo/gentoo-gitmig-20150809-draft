@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/json
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.72 2011/12/24 11:27:10 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.73 2012/01/15 00:03:08 a3li Exp $
+
+  15 Jan 2012; Alex Legler <a3li@gentoo.org> json-1.6.3.ebuild:
+  Don't call git when compiling the extension, we're using the pregenerated
+  spec anyway. Reported in the forums:
+  https://forums.gentoo.org/viewtopic-t-909056.html
 
   24 Dec 2011; Fabian Groffen <grobian@gentoo.org> json-1.6.3.ebuild:
   Marked ~sparc{,64}-solaris
