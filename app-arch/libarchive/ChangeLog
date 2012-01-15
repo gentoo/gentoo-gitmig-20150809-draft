@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.102 2012/01/13 22:03:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.103 2012/01/15 14:30:19 klausman Exp $
+
+  15 Jan 2012; Tobias Klausmann <klausman@gentoo.org> libarchive-2.8.5.ebuild:
+  Stable on alpha, bug #366687
 
   13 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libarchive-2.8.5.ebuild:
   Stable for AMD64, wrt security bug #366687
