@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.921 2012/01/14 11:14:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.922 2012/01/15 18:15:09 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> gentoo-sources-3.1.6.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #396469
 
 *gentoo-sources-3.1.9 (14 Jan 2012)
 
