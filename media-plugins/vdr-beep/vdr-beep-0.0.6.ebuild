@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-beep/vdr-beep-0.0.6.ebuild,v 1.4 2011/01/28 17:28:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-beep/vdr-beep-0.0.6.ebuild,v 1.5 2012/01/15 19:53:33 idl0r Exp $
 
 EAPI="3"
 
@@ -15,4 +15,6 @@ SLOT="0"
 KEYWORDS="x86 ~amd64"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.3.36"
+RDEPEND=">=media-video/vdr-1.3.36"
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
