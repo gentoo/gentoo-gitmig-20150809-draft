@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.18 2012/01/04 17:07:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.19 2012/01/15 15:27:21 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> htag-0.0.24.ebuild:
+  x86 stable wrt bug #396835
 
   04 Jan 2012; Agostino Sarubbo <ago@gentoo.org> htag-0.0.24.ebuild:
   Stable for AMD64, wrt bug #396835
