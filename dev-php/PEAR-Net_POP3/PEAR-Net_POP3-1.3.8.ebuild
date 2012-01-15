@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_POP3/PEAR-Net_POP3-1.3.7.ebuild,v 1.1 2009/08/22 19:32:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_POP3/PEAR-Net_POP3-1.3.8.ebuild,v 1.1 2012/01/15 15:07:27 mabi Exp $
 
 inherit php-pear-r1
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-Net_IMAP
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IMAP/ChangeLog,v 1.30 2009/08/22 19:36:26 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IMAP/ChangeLog,v 1.31 2012/01/15 15:03:40 mabi Exp $
+
+*PEAR-Net_IMAP-1.1.1 (15 Jan 2012)
+
+  15 Jan 2012; Matti Bickel <mabi@gentoo.org>
+  -PEAR-Net_IMAP-1.1.0_beta2.ebuild, -PEAR-Net_IMAP-1.1.0.ebuild,
+  +PEAR-Net_IMAP-1.1.1.ebuild:
+  version bump & remove old
 
 *PEAR-Net_IMAP-1.1.0 (22 Aug 2009)
 
