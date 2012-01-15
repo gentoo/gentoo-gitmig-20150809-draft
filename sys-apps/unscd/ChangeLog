@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/unscd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/ChangeLog,v 1.9 2010/08/06 20:42:13 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/ChangeLog,v 1.10 2012/01/15 00:12:53 vapier Exp $
+
+*unscd-0.48 (15 Jan 2012)
+
+  15 Jan 2012; Mike Frysinger <vapier@gentoo.org> +unscd-0.48.ebuild:
+  Version bump #398923 by Samuli Suominen.
 
 *unscd-0.47 (06 Aug 2010)
 
