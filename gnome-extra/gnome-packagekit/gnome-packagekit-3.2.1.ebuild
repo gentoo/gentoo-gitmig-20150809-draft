@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.2.1.ebuild,v 1.2 2011/12/31 01:14:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.2.1.ebuild,v 1.3 2012/01/15 14:06:33 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -82,7 +82,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# fix pyc/pyo generation
-	ln -sfn $(type -P true) py-compile
+	>py-compile
 
 	# disable tests with graphical dialogs and that require packagekitd to be
 	# run with the dummy backend

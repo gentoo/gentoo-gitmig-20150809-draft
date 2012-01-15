@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.3 2011/07/01 21:14:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.4 2012/01/15 14:07:29 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -51,8 +51,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.6.2-libnotify-0.7.patch
 
 	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	>py-compile
 
 	python_copy_sources
 }
