@@ -1,6 +1,12 @@
-# ChangeLog for dev-php5/pecl-dbx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dbx/ChangeLog,v 1.1 2011/12/14 22:33:12 mabi Exp $
+# ChangeLog for dev-php/pecl-dbx
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dbx/ChangeLog,v 1.2 2012/01/15 16:51:30 olemarkus Exp $
+
+*pecl-dbx-1.1.2 (15 Jan 2012)
+
+  15 Jan 2012; Ole Markus With <olemarkus@gentoo.org>
+  -pecl-dbx-1.1.0-r1.ebuild, +pecl-dbx-1.1.2.ebuild:
+  Version bump
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> pecl-dbx-1.1.0.ebuild:
   Drop sparc keywords
