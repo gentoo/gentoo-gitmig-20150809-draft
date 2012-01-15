@@ -1,6 +1,15 @@
 # ChangeLog for dev-ml/xml-light
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/ChangeLog,v 1.1 2011/12/11 18:58:07 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/ChangeLog,v 1.2 2012/01/15 20:13:26 maksbotan Exp $
+
+*xml-light-2.2-r1 (15 Jan 2012)
+
+  15 Jan 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/01_installopt.dpatch, +files/02_cmi_depends.dpatch,
+  +files/03_cflags.dpatch, -xml-light-2.2.ebuild, +files/04_dtd_trace.dpatch,
+  +xml-light-2.2-r1.ebuild:
+  Add Debian patchset from upstream, fix more compile errors, add gcc-4.6
+  support, patches by slepnoga
 
 *xml-light-2.2 (11 Dec 2011)
 

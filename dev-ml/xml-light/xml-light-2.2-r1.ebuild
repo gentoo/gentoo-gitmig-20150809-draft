@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/xml-light-2.2.ebuild,v 1.1 2011/12/11 18:58:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/xml-light-2.2-r1.ebuild,v 1.1 2012/01/15 20:13:26 maksbotan Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils multilib
 
@@ -21,14 +21,22 @@ RDEPEND="dev-lang/ocaml"
 
 S="${WORKDIR}/${PN}"
 
+src_prepare() {
+	EPATCH_FORCE=yes EPATCH_SUFFIX=dpatch EPATCH_SOURCE="${FILESDIR}" \
+	epatch
+}
+
 src_compile() {
-	emake || die
+	emake
+	if use doc;then
+		emake doc
+	fi
 }
 
 src_install() {
 	dodir /usr/$(get_libdir)/ocaml
-	emake INSTALLDIR="${D}"/usr/$(get_libdir)/ocaml install || die
-	dodoc  README
+	emake INSTALLDIR="${D}"/usr/$(get_libdir)/ocaml install
+	dodoc README
 	if use doc; then
 		emake doc
 		dohtml doc/*
