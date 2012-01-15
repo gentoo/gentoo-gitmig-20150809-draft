@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hatools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.11 2012/01/02 09:57:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.12 2012/01/15 15:21:39 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> hatools-2.14.ebuild:
+  x86 stable wrt bug #396817
 
   02 Jan 2012; Justin Lecher <jlec@gentoo.org> hatools-2.14.ebuild,
   metadata.xml:
