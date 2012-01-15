@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.56 2012/01/08 21:04:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.57 2012/01/15 19:00:40 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> ocaml-mode-3.12.1.ebuild:
+  alpha/ia64/sparc stable wrt #396019
 
   08 Jan 2012; Markus Meier <maekke@gentoo.org> ocaml-mode-3.12.1.ebuild:
   arm stable, bug #396019
