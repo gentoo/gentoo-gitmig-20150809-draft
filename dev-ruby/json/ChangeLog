@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.75 2012/01/15 10:22:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.76 2012/01/15 10:24:48 graaff Exp $
+
+*json-1.6.4 (15 Jan 2012)
+
+  15 Jan 2012; Hans de Graaff <graaff@gentoo.org> +json-1.6.4.ebuild:
+  Version bump.
 
   15 Jan 2012; Hans de Graaff <graaff@gentoo.org> json-1.5.4.ebuild:
   Drop ruby19 to create a stable candidate.
