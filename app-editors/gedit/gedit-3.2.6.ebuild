@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.3.ebuild,v 1.2 2012/01/13 17:28:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.6.ebuild,v 1.1 2012/01/15 05:41:00 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -83,6 +83,9 @@ src_prepare() {
 
 	# disable pyc compiling
 	echo > py-compile
+
+	# Fix missing file in POTFILES.in
+	echo "plugins/quickopen/quickopen/__init__.py" >> po/POTFILES.in
 }
 
 src_test() {
