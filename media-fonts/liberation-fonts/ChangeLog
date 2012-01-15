@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/liberation-fonts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.24 2012/01/08 05:40:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.25 2012/01/15 19:51:30 tove Exp $
+
+  15 Jan 2012; Torsten Veller <tove@gentoo.org> liberation-fonts-1.07.1.ebuild:
+  Fix cvs keyword in the header (#398773)
 
   08 Jan 2012; Ryan Hill <dirtyepic@gentoo.org> -liberation-fonts-1.04.ebuild,
   -liberation-fonts-1.05.ebuild, -liberation-fonts-1.06.0.20100721-r1.ebuild,
