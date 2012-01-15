@@ -1,6 +1,10 @@
-# ChangeLog for dev-php5/pecl-memcached
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/ChangeLog,v 1.1 2011/12/14 22:42:40 mabi Exp $
+# ChangeLog for dev-php/pecl-memcached
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/ChangeLog,v 1.2 2012/01/15 17:02:13 olemarkus Exp $
+
+  15 Jan 2012; Ole Markus With <olemarkus@gentoo.org>
+  pecl-memcached-1.0.2-r1.ebuild, pecl-memcached-2.0.0_beta2.ebuild:
+  Remove PHP_USE.
 
 *pecl-memcached-2.0.0_beta2 (19 Aug 2011)
 
