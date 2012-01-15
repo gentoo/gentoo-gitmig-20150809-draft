@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.438 2012/01/15 17:47:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.439 2012/01/15 18:50:40 dilfridge Exp $
+
+*cups-1.5.0-r3 (15 Jan 2012)
+*cups-1.4.8-r23 (15 Jan 2012)
+
+  15 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-1.4.8-r23.ebuild, +cups-1.5.0-r3.ebuild:
+  Update icon cache etc, bug 370059
 
   15 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/cups-1.3.0-configure.patch, -files/cups-1.3.7-backend-https.patch,
