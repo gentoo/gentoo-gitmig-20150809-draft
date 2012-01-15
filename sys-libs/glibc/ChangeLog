@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.816 2012/01/13 22:45:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.817 2012/01/15 01:19:21 vapier Exp $
+
+  15 Jan 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.15.ebuild:
+  Post some fixes from upstrea/suse.
 
   13 Jan 2012; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit:
