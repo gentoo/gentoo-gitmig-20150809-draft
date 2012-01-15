@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.303 2012/01/08 20:57:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.304 2012/01/15 19:00:00 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> xscreensaver-5.15.ebuild:
+  alpha/ia64/sh stable wrt #395765
 
   08 Jan 2012; Markus Meier <maekke@gentoo.org> xscreensaver-5.15.ebuild:
   arm stable, bug #395765
