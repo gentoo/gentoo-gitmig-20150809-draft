@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.78 2012/01/12 21:17:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.79 2012/01/15 19:23:16 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> autogen-5.12.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #397221
 
   12 Jan 2012; Markus Meier <maekke@gentoo.org> autogen-5.12.ebuild:
   arm stable, bug #397221
