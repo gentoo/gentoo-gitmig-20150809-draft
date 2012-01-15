@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/konversation
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.107 2011/12/31 12:34:40 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.108 2012/01/15 15:20:36 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> konversation-1.4.ebuild:
+  x86 stable wrt bug #396555
 
   31 Dec 2011; Agostino Sarubbo <ago@gentoo.org> konversation-1.4.ebuild:
   Stable for AMD64, wrt bug #396555

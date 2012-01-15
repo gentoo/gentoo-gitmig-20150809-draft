@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.4.ebuild,v 1.2 2011/12/31 12:34:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.4.ebuild,v 1.3 2012/01/15 15:20:36 phajdan.jr Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://konversation.kde.org"
 SRC_URI="mirror://kde/stable/${PN}/${MY_PV}/src/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="+crypt debug"
 
