@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/PEAR-MIME_Type-1.2.0.ebuild,v 1.2 2010/01/26 22:09:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/PEAR-MIME_Type-1.3.0.ebuild,v 1.1 2012/01/15 12:23:56 mabi Exp $
+
+EAPI=4
 
 inherit php-pear-r1
 
