@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/goocanvas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.25 2011/11/20 19:59:12 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.26 2012/01/15 14:12:37 ssuominen Exp $
+
+  15 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> goocanvas-2.0.1.ebuild:
+  Empty py-compile script instead of symlinking it to /path/to/true for
+  automake-1.11.2 compability.
 
 *goocanvas-2.0.1 (20 Nov 2011)
 
