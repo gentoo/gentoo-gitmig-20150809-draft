@@ -3,6 +3,9 @@
 <pkgmetadata>
   <herd>printing</herd>
   <use>
+    <flag name='filters'>
+      Pull in net-print/foomatic-filters for filtering by default.
+    </flag>
     <flag name='python'>
       Add support for the Python interpeter in the web server CGIs.
     </flag>
