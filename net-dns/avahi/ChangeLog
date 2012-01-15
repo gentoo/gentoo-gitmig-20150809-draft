@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.217 2012/01/01 15:35:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.218 2012/01/15 22:23:55 ssuominen Exp $
+
+*avahi-0.6.30-r3 (15 Jan 2012)
+
+  15 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +avahi-0.6.30-r3.ebuild,
+  +files/avahi-0.6.30-automake-1.11.2.patch:
+  Install services-types file(s) to pkgdatadir instead of pkglibdir. Empty
+  py-compile script instead of pointing the 'make install' to "true". Closing
+  #397477.
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> avahi-0.6.30-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #393009
