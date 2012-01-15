@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.88 2012/01/15 16:40:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.89 2012/01/15 17:11:08 idl0r Exp $
+
+  15 Jan 2012; Christian Ruppert <idl0r@gentoo.org> vdr-plugin.eclass:
+  Add EAPI 4 support
 
   15 Jan 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Improve the --docdir configure grep.
