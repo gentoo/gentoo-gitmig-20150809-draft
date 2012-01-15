@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cpptest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.13 2012/01/05 11:44:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.14 2012/01/15 15:24:13 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> cpptest-1.1.1.ebuild:
+  x86 stable wrt bug #397017
 
   05 Jan 2012; Michael Weber <xmw@gentoo.org> cpptest-1.1.1.ebuild:
   ppc/ppc64/sparc stable (bug 397017)
