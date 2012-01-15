@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Net_DNSBL
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/ChangeLog,v 1.28 2009/08/22 19:41:38 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/ChangeLog,v 1.29 2012/01/15 14:42:21 mabi Exp $
+
+*PEAR-Net_DNSBL-1.3.6 (15 Jan 2012)
+
+  15 Jan 2012; Matti Bickel <mabi@gentoo.org> +PEAR-Net_DNSBL-1.3.6.ebuild:
+  version bump, now uses HTTP_Request2
 
 *PEAR-Net_DNSBL-1.3.3 (22 Aug 2009)
 
