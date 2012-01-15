@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.73 2012/01/15 00:03:08 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.74 2012/01/15 10:17:54 graaff Exp $
+
+  15 Jan 2012; Hans de Graaff <graaff@gentoo.org> -json-1.5.3.ebuild,
+  -json-1.6.1.ebuild:
+  Remove old versions.
 
   15 Jan 2012; Alex Legler <a3li@gentoo.org> json-1.6.3.ebuild:
   Don't call git when compiling the extension, we're using the pregenerated
