@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/elib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/ChangeLog,v 1.15 2012/01/06 16:47:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/ChangeLog,v 1.16 2012/01/15 15:53:12 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> elib-1.0-r1.ebuild:
+  x86 stable wrt bug #396795
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> elib-1.0-r1.ebuild:
   Marking elib-1.0-r1 ppc for bug 396795
