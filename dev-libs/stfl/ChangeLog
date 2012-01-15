@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/stfl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.36 2012/01/11 17:08:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.37 2012/01/15 15:30:04 phajdan.jr Exp $
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> stfl-0.22.ebuild:
+  x86 stable wrt bug #395439
 
   11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> stfl-0.22.ebuild:
   Stable for AMD64, wrt bug #395439
