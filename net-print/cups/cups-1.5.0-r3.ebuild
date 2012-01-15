@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r3.ebuild,v 1.1 2012/01/15 18:50:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r3.ebuild,v 1.2 2012/01/15 20:19:54 dilfridge Exp $
 
 #
 # See http://git.overlays.gentoo.org/gitweb/?p=dev/dilfridge.git;a=blob;f=net-print/cups/notes.txt;hb=HEAD
@@ -234,7 +234,7 @@ src_install() {
 	fi
 
 	keepdir /usr/libexec/cups/driver /usr/share/cups/{model,profiles} \
-		/var/cache/cups /var/cache/cups/rss /var/log/cups /var/run/cups/certs \
+		/var/cache/cups /var/cache/cups/rss /var/log/cups \
 		/var/spool/cups/tmp
 
 	keepdir /etc/cups/{interfaces,ppd,ssl}
