@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.93 2012/01/08 21:35:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.94 2012/01/15 19:02:48 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> mlocate-0.24.ebuild:
+  alpha/ia64/sparc stable wrt #396325
 
   08 Jan 2012; Markus Meier <maekke@gentoo.org> mlocate-0.24.ebuild:
   arm stable, bug #396325
