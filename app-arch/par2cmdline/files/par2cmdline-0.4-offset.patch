@@ -1,5 +1,8 @@
---- par2cmdline-0.4.orig/par2creatorsourcefile.cpp	2004-04-15 14:45:23.000000000 +0100
-+++ par2cmdline-0.4/par2creatorsourcefile.cpp	2005-09-29 02:27:43.000000000 +0100
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=299658
+http://bugs.gentoo.org/144410
+
+--- par2creatorsourcefile.cpp
++++ par2creatorsourcefile.cpp
 @@ -213,11 +213,12 @@
          }
        }
