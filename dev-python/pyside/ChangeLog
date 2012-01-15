@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyside
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.22 2011/12/27 11:59:32 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.23 2012/01/15 22:01:24 hwoarang Exp $
+
+*pyside-1.1.0 (15 Jan 2012)
+
+  15 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +pyside-1.1.0.ebuild,
+  metadata.xml:
+  version bump. Add one useflag per module. Bug #369127. Add use dependency to
+  accessebility Qt useflag. Bug #385051
 
 *pyside-1.0.9 (27 Dec 2011)
 
