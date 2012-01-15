@@ -1,15 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.78 2012/01/15 17:11:08 idl0r Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.79 2012/01/15 20:54:56 idl0r Exp $
+
+# @ECLASS: vdr-plugin.eclass
+# @MAINTAINER:
+# vdr@gentoo.org
+# @BLURB: common vdr plugin ebuild functions
+# @DESCRIPTION:
+# Eclass for easing maitenance of vdr plugin ebuilds
+
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
 #   Joerg Bornkessel <hd_brummy@gentoo.org>
-
-# vdr-plugin.eclass
-#
-#   eclass to create ebuilds for vdr plugins
-#
 
 # Example ebuild (basic version without patching):
 #
