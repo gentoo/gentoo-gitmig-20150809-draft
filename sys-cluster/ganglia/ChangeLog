@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ganglia
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.45 2011/09/27 02:13:53 jsbronder Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.46 2012/01/15 15:13:01 ago Exp $
+
+  15 Jan 2012; Agostino Sarubbo <ago@gentoo.org> ganglia-3.2.0.ebuild:
+  Stable for AMD64, wrt security bug #386277
 
 *ganglia-3.2.0 (27 Sep 2011)
 
