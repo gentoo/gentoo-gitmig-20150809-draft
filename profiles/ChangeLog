@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6100 2012/01/14 22:58:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6101 2012/01/15 07:44:41 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jan 2012; Justin Lecher <jlec@gentoo.org> package.mask:
+  Removed dev-tcltk/tkimg mask as the version isn't in the tree anymore
 
   14 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask net-print/mtink for removal in 30 days. Bug 342799.
