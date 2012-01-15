@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libircclient
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.1 2012/01/15 00:48:37 mr_bones_ Exp $
+
+*libircclient-1.3 (14 Jan 2012)
+
+  14 Jan 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +libircclient-1.3.ebuild, +files/libircclient-1.3-build.patch, +metadata.xml:
+  initial commit with ebuild submitted by Michael (kensington) via bug #398669
+

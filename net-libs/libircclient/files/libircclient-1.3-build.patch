@@ -1,0 +1,36 @@
+--- configure.in
++++ configure.in
+@@ -49,22 +49,20 @@
+ AC_CHECK_LIB(socket, socket, AC_DEFINE(HAVE_SOCKET) LIBS="$LIBS -lsocket")
+ 
+ if test "$use_debug" = "yes"; then
+-	CFLAGS="-g -DENABLE_DEBUG"
+-else
+-	CFLAGS="-O3"
++	CFLAGS="${CFLAGS} -DENABLE_DEBUG"
+ fi
+ 
+ if test "$use_ipv6" = "yes"; then
+ 	AC_CHECK_FUNCS([getaddrinfo inet_pton])
+ 	AC_CHECK_LIB(nsl, getaddrinfo, AC_DEFINE(HAVE_GETADDRINFO) LIBS="$LIBS -lnsl")
+-	CFLAGS="$CFLAGS -DENABLE_IPV6"
++	CFLAGS="${CFLAGS} -DENABLE_IPV6"
+ else
+ 	AC_CHECK_FUNCS([gethostbyname_r inet_ntoa])
+ 	AC_CHECK_LIB(nsl, inet_ntoa, AC_DEFINE(HAVE_INET_NTOA) LIBS="$LIBS -lnsl")
+ fi
+ 
+ if test "$use_threads" = "yes"; then
+-	CFLAGS="$CFLAGS -DENABLE_THREADS -D_REENTRANT"
++	CFLAGS="${CFLAGS} -DENABLE_THREADS -D_REENTRANT"
+ fi
+
+
+--- src/Makefile.in
++++ src/Makefile.in
+@@ -34,4 +34,4 @@
+ 
+ .c.o:
+ 	@echo "Compiling  $<"
+-	@$(CC) $(CFLAGS) $(INCLUDES) -c -o $@ $<
++	$(CC) $(CFLAGS) $(LDFLAGS) $(INCLUDES) -c -o $@ $<
