@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/method_source
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/ChangeLog,v 1.4 2011/12/28 08:33:26 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/ChangeLog,v 1.5 2012/01/15 10:52:23 graaff Exp $
+
+*method_source-0.7.0 (15 Jan 2012)
+
+  15 Jan 2012; Hans de Graaff <graaff@gentoo.org> +method_source-0.7.0.ebuild:
+  Version bump. No longer depends on ruby_parser.
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> -method_source-0.6.5.ebuild,
   -method_source-0.6.6.ebuild:
