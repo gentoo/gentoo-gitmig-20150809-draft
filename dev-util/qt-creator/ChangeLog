@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.106 2012/01/14 12:01:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.107 2012/01/15 22:02:31 hwoarang Exp $
+
+  15 Jan 2012; Markos Chandras <hwoarang@gentoo.org> qt-creator-2.4.0-r1.ebuild:
+  make dependency to qt-assistant[doc] optionally
 
   14 Jan 2012; Markos Chandras <hwoarang@gentoo.org> qt-creator-2.4.0-r1.ebuild:
   x11-libs/qt-assistant is a mandatory dependency. Bug #398583
