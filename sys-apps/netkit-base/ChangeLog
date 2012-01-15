@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.35 2012/01/06 23:07:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.36 2012/01/15 17:44:26 armin76 Exp $
+
+  15 Jan 2012; Raúl Porcel <armin76@gentoo.org> netkit-base-0.17-r9.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #397211
 
   06 Jan 2012; Mike Frysinger <vapier@gentoo.org> netkit-base-0.17-r9.ebuild:
   Simplify ebuild a bit, and make sure we respect $CC #397871 by Agostino
