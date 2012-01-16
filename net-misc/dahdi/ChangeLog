@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dahdi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.32 2011/10/31 14:34:14 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.33 2012/01/16 12:39:26 chainsaw Exp $
+
+*dahdi-2.5.0.2-r2 (16 Jan 2012)
+
+  16 Jan 2012; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.5.0.2-r2.ebuild:
+  Patch scavenged by Erich Seifert restores compatibility with 3.2 linux
+  kernels. Closes bug #397959 by Mike "vapier" Frysinger.
 
   31 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> dahdi-2.5.0.2-r1.ebuild:
   QA: use KV_OUT_DIR rather than KBUILD_OUTPUT to find which sources to build
