@@ -1,30 +1,34 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.90.1_pre20111001.ebuild,v 1.2 2012/01/05 06:38:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.95.ebuild,v 1.1 2012/01/16 03:47:24 nirbheek Exp $
 
-EAPI="3"
+EAPI="4"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="python? 2:2.5"
 PYTHON_USE_WITH="xml"
 PYTHON_USE_WITH_OPT="python"
 
-inherit autotools gnome2 python multilib virtualx
+inherit eutils gnome2 python multilib virtualx
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
-# Git snapshot
-SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="cdr clutter daap dbus doc gnome-keyring html ipod +lastfm libnotify lirc
-musicbrainz mtp nsplugin python test udev upnp webkit"
+musicbrainz mtp nsplugin +python test +udev upnp webkit"
 # vala
 KEYWORDS="~amd64 ~x86"
 
+REQUIRED_USE="
+	ipod? ( udev )
+	mtp? ( udev )
+	dbus? ( python )
+	gnome-keyring? ( python )
+	webkit? ( python )"
+
 # FIXME: double check what to do with fm-radio plugin
 # FIXME: Zeitgeist python plugin
-# NOTE: Rhythmbox uses both gdbus and dbus-python right now
 # NOTE: gst-python is still needed because gstreamer introspection is incomplete
 COMMON_DEPEND=">=dev-libs/glib-2.26.0:2
 	dev-libs/libxml2:2
@@ -37,6 +41,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26.0:2
 	>=net-libs/libsoup-gnome-2.26:2.4
 	>=media-libs/gst-plugins-base-0.10.32:0.10
 	>=media-libs/gstreamer-0.10.32:0.10[introspection]
+	>=sys-libs/tdb-1.2.6
 
 	clutter? (
 		>=media-libs/clutter-1.2:1.0
@@ -55,7 +60,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26.0:2
 	musicbrainz? (
 		media-libs/musicbrainz:3
 		gnome-base/gconf:2 )
-	python? ( >=dev-python/pygobject-2.28:2[introspection] )
+	python? ( dev-python/pygobject:3 )
 	udev? (
 		ipod? ( >=media-libs/libgpod-0.7.92[udev] )
 		mtp? ( >=media-libs/libmtp-0.3 )
@@ -79,7 +84,7 @@ RDEPEND="${COMMON_DEPEND}
 		x11-libs/gtk+:3[introspection]
 		x11-libs/pango[introspection]
 
-		dbus? ( dev-python/dbus-python )
+		dbus? ( sys-apps/dbus )
 		gnome-keyring? ( dev-python/gnome-keyring-python )
 		webkit? (
 			dev-python/mako
@@ -87,12 +92,10 @@ RDEPEND="${COMMON_DEPEND}
 "
 # gtk-doc-am needed for eautoreconf
 #	dev-util/gtk-doc-am
-# gtk-doc is needed for gtkdocize
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35
 	app-text/scrollkeeper
-	dev-util/gtk-doc
 	>=app-text/gnome-doc-utils-0.9.1
 	doc? ( >=dev-util/gtk-doc-1.4 )
 	test? ( dev-libs/check )"
@@ -107,47 +110,11 @@ pkg_setup() {
 		G2CONF="${G2CONF} PYTHON=$(PYTHON -2)"
 	fi
 
-	if ! use udev; then
-		if use ipod; then
-			ewarn "ipod support requires udev support.  Please"
-			ewarn "re-emerge with USE=udev to enable ipod support"
-			G2CONF="${G2CONF} --without-ipod"
-		fi
-
-		if use mtp; then
-			ewarn "MTP support requires udev support.  Please"
-			ewarn "re-emerge with USE=udev to enable MTP support"
-			G2CONF="${G2CONF} --without-mtp"
-		fi
-	else
-		G2CONF="${G2CONF} $(use_with ipod) $(use_with mtp)"
-	fi
-
-	if ! use cdr ; then
-		ewarn "You have cdr USE flag disabled."
-		ewarn "You will not be able to burn CDs."
-	fi
-
-	if ! use python; then
-		if use dbus; then
-			ewarn "You need python support to use the im-status plugin"
-		fi
-
-		if use webkit; then
-			ewarn "You need python support in addition to webkit to be able to use"
-			ewarn "the context panel plugin."
-		fi
-	fi
-
-	if use gnome-keyring && ! use python; then
-		ewarn "The magnatune plugin requires USE='python gnome-keyring'"
-	fi
-
 	# --enable-vala just installs the sample vala plugin, and the configure
 	# checks are broken, so don't enable it
 	G2CONF="${G2CONF}
 		MOZILLA_PLUGINDIR=/usr/$(get_libdir)/nsbrowser/plugins
-		VALAC=$(type -P valac-0.12)
+		VALAC=$(type -P valac-0.14)
 		--enable-mmkeys
 		--disable-more-warnings
 		--disable-scrollkeeper
@@ -178,15 +145,13 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# Git snapshot, remove for release
-	# make dist wasn't working, so no proper snapshot tarball
-	gtkdocize || die
-	gnome-doc-common || die
-	gnome-doc-prepare --automake || die
-	intltoolize --force || die
-	eautoreconf
+	# Not needed for next release
+	# https://bugzilla.gnome.org/show_bug.cgi?id=667980
+	epatch "${FILESDIR}/${P}-port-im-status-plugin.patch"
+	epatch "${FILESDIR}/${P}-port-rb-set-rating-py-example.patch"
+	epatch "${FILESDIR}/${P}-fix-db-dbus-interface.patch"
 
-	# disable pyc compiling
+	# Disable pyc compiling
 	echo > py-compile
 }
 
