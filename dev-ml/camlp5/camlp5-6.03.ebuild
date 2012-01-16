@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-6.03.ebuild,v 1.1 2012/01/10 13:22:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-6.03.ebuild,v 1.2 2012/01/16 15:25:12 aballier Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ PATCHLEVEL=${PV#*_p}
 PATCHLIST=""
 
 if [ "${PATCHLEVEL}" != "${PV}" ] ; then
-	for i in $(seq 1 ${PATCHLEVEL}) ; do
+	for (( i=1; i<=PATCHLEVEL; i++ )) ; do
 		SRC_URI="${SRC_URI}
 			http://pauillac.inria.fr/~ddr/camlp5/distrib/src/patch-${PV%_p*}-${i} -> ${MY_P}-patch-${i}.patch"
 		PATCHLIST="${PATCHLIST} ${MY_P}-patch-${i}.patch"
