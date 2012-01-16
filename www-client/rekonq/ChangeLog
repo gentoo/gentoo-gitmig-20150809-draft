@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.36 2012/01/09 17:59:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.37 2012/01/16 23:59:07 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> rekonq-0.8.1.ebuild:
+  Stable for amd64, wrt bug #396359
 
   09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> rekonq-0.8.1.ebuild:
   x86 stable wrt bug #396359
