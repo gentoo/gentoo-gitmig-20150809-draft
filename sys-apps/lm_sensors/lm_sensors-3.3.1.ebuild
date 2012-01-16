@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.3.1.ebuild,v 1.1 2011/09/30 19:58:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.3.1.ebuild,v 1.2 2012/01/16 23:01:50 ssuominen Exp $
 
 EAPI=3
 inherit eutils linux-info toolchain-funcs multilib
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86 ~x86-linux"
 IUSE="sensord"
 
 RDEPEND="dev-lang/perl
-	virtual/logger"
+	sensord? ( virtual/logger )"
 DEPEND="sys-apps/sed
 	sys-devel/bison
 	sys-devel/flex
