@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.120 2012/01/16 23:01:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.121 2012/01/16 23:08:55 ssuominen Exp $
+
+  16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> lm_sensors-3.3.1.ebuild:
+  USE="static-libs" to control building of libsensors.a wrt #378265 by Agostino
+  Sarubbo
 
   16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> lm_sensors-3.3.1.ebuild:
   Move virtual/logger behind USE="sensord" wrt #386609 by Arne Stäcker
