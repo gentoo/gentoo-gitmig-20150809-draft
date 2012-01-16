@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-net
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.37 2010/07/27 00:52:41 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.38 2012/01/16 22:57:47 mr_bones_ Exp $
+
+*sdl-net-1.2.8 (16 Jan 2012)
+
+  16 Jan 2012; Michael Sterrett <mr_bones_@gentoo.org> +sdl-net-1.2.8.ebuild:
+  version bump
 
   27 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org> sdl-net-1.2.7.ebuild:
   EAPI=2; add support for USE=static-libs
