@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.6.ebuild,v 1.1 2011/12/28 12:00:25 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.6.ebuild,v 1.2 2012/01/16 07:57:47 scarabeus Exp $
 
 EAPI=4
 
@@ -14,17 +14,17 @@ SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
 LICENSE="GPL-3 LGPL-3"
 KEYWORDS="~amd64 ~arm ~hppa ~sparc ~x86"
 SLOT="0"
-IUSE="dbi debug doc extras gnutls kerberos mysql oracle postgres relp snmp static-libs zeromq zlib"
+IUSE="dbi debug doc extras kerberos mysql oracle postgres relp snmp ssl static-libs zeromq zlib"
 
 RDEPEND="dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
-	gnutls? ( net-libs/gnutls )
 	kerberos? ( virtual/krb5 )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	oracle? ( dev-db/oracle-instantclient-basic )
 	relp? ( >=dev-libs/librelp-0.1.3 )
 	snmp? ( net-analyzer/net-snmp )
+	ssl? ( net-libs/gnutls )
 	zeromq? ( net-libs/zeromq )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
@@ -90,7 +90,7 @@ src_configure() {
 		$(use_enable dbi libdbi)
 		$(use_enable postgres pgsql)
 		$(use_enable oracle oracle)
-		$(use_enable gnutls)
+		$(use_enable ssl gnutls)
 		$(use_enable kerberos gssapi-krb5)
 		$(use_enable relp)
 		$(use_enable snmp)
@@ -158,9 +158,9 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	if ! use gnutls ; then
+	if ! use ssl ; then
 		einfo "There is nothing to configure for rsyslog unless you"
-		einfo "used USE=gnutls to build it."
+		einfo "used USE=ssl to build it."
 		return 0
 	fi
 

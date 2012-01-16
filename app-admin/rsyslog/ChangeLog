@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/rsyslog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.61 2011/12/28 12:00:25 ultrabug Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.62 2012/01/16 07:57:47 scarabeus Exp $
+
+  16 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/5-stable/rsyslog.initd, rsyslog-5.8.6.ebuild:
+  Fix initscript to not use deprecated opts. Use ssl useflag not gnutls for ssl
+  support as ssl should enable the ssl support and gnutls/openssl respective
+  features if multiple backends are available.
 
 *rsyslog-5.8.6 (28 Dec 2011)
 
