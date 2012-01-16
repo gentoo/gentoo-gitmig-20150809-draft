@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/w_scan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.23 2012/01/14 14:02:23 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.24 2012/01/16 19:43:14 idl0r Exp $
+
+  16 Jan 2012; Christian Ruppert <idl0r@gentoo.org> w_scan-20120112.ebuild:
+  Fix media-tv/linuxtv-dvb-headers dependency
 
 *w_scan-20120112 (14 Jan 2012)
 

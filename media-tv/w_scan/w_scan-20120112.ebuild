@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20120112.ebuild,v 1.1 2012/01/14 14:02:24 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20120112.ebuild,v 1.2 2012/01/16 19:43:14 idl0r Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
-DEPEND="~media-tv/linuxtv-dvb-headers-5"
+DEPEND=">=media-tv/linuxtv-dvb-headers-5.3"
 RDEPEND=""
 
 src_install() {
