@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.4.ebuild,v 1.1 2012/01/06 15:40:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.4.ebuild,v 1.2 2012/01/16 20:35:26 bicatali Exp $
 
 EAPI=4
 
@@ -66,7 +66,7 @@ src_prepare(){
 
 src_compile() {
 	distutils_src_compile
-	use doc && emake -C "${WORKDIR}"/doc -B "${WORKDIR}"/html
+	use doc && emake -C "${WORKDIR}"/${P}/doc -B html
 }
 
 src_test() {
@@ -79,7 +79,7 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-	use doc && dohtml -r "${WORKDIR}"/${P}/html
+	use doc && dohtml -r "${WORKDIR}"/${P}/doc/build/html/*
 	insinto /usr/share/doc/${PF}
 	use examples && doins -r "${WORKDIR}"/${P}/examples
 }
