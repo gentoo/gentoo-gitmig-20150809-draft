@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-oodict
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.28 2012/01/15 15:37:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.29 2012/01/16 14:50:34 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  eselect-oodict-20100228.ebuild:
+  Stable for amd64, wrt bug #396747
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   eselect-oodict-20100228.ebuild:
