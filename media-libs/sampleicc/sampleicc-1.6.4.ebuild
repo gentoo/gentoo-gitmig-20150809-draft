@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sampleicc/sampleicc-1.6.4.ebuild,v 1.2 2011/11/30 12:39:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sampleicc/sampleicc-1.6.4.ebuild,v 1.3 2012/01/16 11:57:03 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/SampleICC-${PV}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 DEPEND="media-libs/tiff"
