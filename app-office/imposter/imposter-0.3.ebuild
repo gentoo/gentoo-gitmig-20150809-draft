@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/imposter-0.3.ebuild,v 1.6 2011/03/13 19:54:43 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/imposter-0.3.ebuild,v 1.7 2012/01/16 11:19:22 ago Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="iksemel nls"
 
 RDEPEND=">=x11-libs/gtk+-2.4:2
