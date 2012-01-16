@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libosinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/ChangeLog,v 1.4 2012/01/14 17:56:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/ChangeLog,v 1.5 2012/01/16 21:50:31 nirbheek Exp $
+
+*libosinfo-0.0.5 (16 Jan 2012)
+
+  16 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> -libosinfo-0.0.1.ebuild,
+  -libosinfo-0.0.4.ebuild, +libosinfo-0.0.5.ebuild:
+  Remove old, bump to 0.0.5. libosinfo should never have been stabilized, it's
+  an unstable library with no users in the tree.
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> libosinfo-0.0.1.ebuild:
   x86 stable, bug #393007
