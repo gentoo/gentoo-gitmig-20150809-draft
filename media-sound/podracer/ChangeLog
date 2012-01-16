@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/podracer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/podracer/ChangeLog,v 1.1 2012/01/16 16:35:48 darkside Exp $
+
+*podracer-1.4 (16 Jan 2012)
+
+  16 Jan 2012; Jeremy Olexa <darkside@gentoo.org> +podracer-1.4.ebuild,
+  +metadata.xml:
+  Initial commit for media-sound/podracer. Bug 152608 by Thomas Tuttle with
+  updates by myself.
+
