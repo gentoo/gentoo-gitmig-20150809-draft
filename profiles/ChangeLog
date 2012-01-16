@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6104 2012/01/16 07:15:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6105 2012/01/16 12:43:07 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jan 2012; Johannes Huber <johu@gentoo.org> package.mask:
+  Remove package mask of kcheckgmail, bug #394881.
 
   16 Jan 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Remove Emacs-23-CEDET-grammars from FSF-APPROVED since it's no longer used.
