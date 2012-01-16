@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.5.ebuild,v 1.3 2012/01/16 09:55:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.5.ebuild,v 1.4 2012/01/16 12:21:26 jlec Exp $
 
 EAPI="4"
 
@@ -73,9 +73,9 @@ src_configure() {
 }
 
 src_install() {
-	default
+	emake DESTDIR="${D}" install
 	rm linux-nfs/Makefile* || die
-	dodoc -r linux-nfs
+	dodoc -r linux-nfs ChangeLog README
 
 	# Don't overwrite existing xtab/etab, install the original
 	# versions somewhere safe...  more info in pkg_postinst
