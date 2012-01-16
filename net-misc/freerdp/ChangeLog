@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/freerdp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.20 2012/01/07 20:45:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.21 2012/01/16 20:47:14 floppym Exp $
+
+*freerdp-1.0.0 (16 Jan 2012)
+
+  16 Jan 2012; Mike Gilbert <floppym@gentoo.org> +freerdp-1.0.0.ebuild,
+  -freerdp-1.0_beta4.ebuild, -freerdp-1.0_beta5.ebuild:
+  Version bump. Remove beta ebuilds.
 
 *freerdp-1.0_beta5 (07 Jan 2012)
 
