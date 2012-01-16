@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/hyphen-2.8.3.ebuild,v 1.2 2011/12/11 21:51:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/hyphen-2.8.3.ebuild,v 1.3 2012/01/16 11:55:44 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/hunspell/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND="app-text/hunspell"

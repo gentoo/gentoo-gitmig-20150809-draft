@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/hyphen
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.14 2011/12/18 20:44:08 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.15 2012/01/16 11:55:44 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> hyphen-2.8.3.ebuild:
+  Stable for amd64, wrt bug #398521
 
   18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> hyphen-2.7.1.ebuild:
   Stable for ppc; bug #387187
