@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/par2cmdline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.24 2012/01/15 16:39:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.25 2012/01/16 15:59:01 ssuominen Exp $
+
+  16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -par2cmdline-0.5.ebuild:
+  Revert last commit because of unclear upstream status.
 
 *par2cmdline-0.5 (15 Jan 2012)
 
