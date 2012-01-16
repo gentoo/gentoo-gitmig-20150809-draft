@@ -1,0 +1,9 @@
+# ChangeLog for app-crypt/nwipe
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nwipe/ChangeLog,v 1.1 2012/01/16 16:29:37 ssuominen Exp $
+
+*nwipe-0.06 (16 Jan 2012)
+
+  16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +nwipe-0.06.ebuild:
+  Initial commit.
+
