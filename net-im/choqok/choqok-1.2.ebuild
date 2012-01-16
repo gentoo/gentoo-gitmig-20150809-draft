@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-1.2.ebuild,v 1.2 2012/01/09 17:59:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-1.2.ebuild,v 1.3 2012/01/16 23:59:34 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} != *9999* ]]; then
 	zh_TW"
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 	KDE_HANDBOOK="optional"
-	KEYWORDS="~amd64 x86"
+	KEYWORDS="amd64 x86"
 else
 	KDE_SCM="git"
 	KEYWORDS=""
