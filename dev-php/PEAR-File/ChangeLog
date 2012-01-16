@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-File
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File/ChangeLog,v 1.44 2011/03/19 09:55:13 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File/ChangeLog,v 1.45 2012/01/16 14:51:34 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> PEAR-File-1.4.0.ebuild:
+  Stable for amd64, wrt bug #396965
 
 *PEAR-File-1.4.0 (19 Mar 2011)
 
