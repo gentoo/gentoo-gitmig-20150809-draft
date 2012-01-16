@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.1 2012/01/15 22:23:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.2 2012/01/16 16:51:09 ssuominen Exp $
 
 EAPI="3"
 
@@ -193,12 +193,10 @@ src_install() {
 		insinto /usr/share/devhelp/books/avahi
 		doins avahi.devhelp || die
 	fi
-	if use python && use gtk && use dbus; then
-		python_convert_shebangs 2 "${ED}usr/bin/avahi-discover"
-	fi
 
-	# Remove .la files
-	find "${D}" -name '*.la' -exec rm -f {} + || die
+	use python && python_convert_shebangs -r 2 "${ED}"/usr/bin #396339
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postrm() {
