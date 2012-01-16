@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/postalplus/postalplus-1.ebuild,v 1.4 2011/12/14 17:13:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/postalplus/postalplus-1.ebuild,v 1.5 2012/01/16 19:09:15 ulm Exp $
 
-inherit eutils games
+inherit eutils cdrom games
 
 DESCRIPTION="Ultraviolent and controversial game featuring the Postal Dude"
 HOMEPAGE="http://www.lokigames.com/products/postal/"
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 RESTRICT="strip"
-PROPERTIES="interactive"
 
 S=${WORKDIR}
 

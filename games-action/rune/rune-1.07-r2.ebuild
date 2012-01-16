@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.10 2010/09/01 21:30:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.11 2012/01/16 19:10:25 ulm Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils cdrom games
 
 DESCRIPTION="Viking hack and slay game"
 HOMEPAGE="http://www.runegame.com"
@@ -12,7 +12,6 @@ SRC_URI="mirror://gentoo/rune-all-0.2.tar.bz2"
 LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
-PROPERTIES="interactive"
 RESTRICT="strip"
 IUSE=""
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.18 2011/12/14 17:12:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.19 2012/01/16 19:06:50 ulm Exp $
 
-inherit eutils games
+inherit eutils cdrom games
 
 IUSE="nocd"
 DESCRIPTION="Heavy Metal: FAKK2 - 3D third-person action shooter based on the Heavy Metal comics/movies"
@@ -13,7 +13,6 @@ LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="x86"
 RESTRICT="strip"
-PROPERTIES="interactive"
 
 RDEPEND="virtual/opengl"
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-action/d1x-rebirth
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.6 2011/06/20 09:20:19 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.7 2012/01/16 18:58:56 ulm Exp $
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org> d1x-rebirth-0.55.1.ebuild,
+  d1x-rebirth-0.56.ebuild:
+  Migrate to cdrom.eclass, bug 398809.
 
   20 Jun 2011; Tupone Alfredo <tupone@gentoo.org> d1x-rebirth-0.56.ebuild,
   +files/d1x-rebirth-0.56-underlink.patch:

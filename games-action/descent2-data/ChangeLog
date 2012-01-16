@@ -1,6 +1,9 @@
 # ChangeLog for games-action/descent2-data
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/ChangeLog,v 1.7 2010/02/10 03:46:25 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/ChangeLog,v 1.8 2012/01/16 19:03:03 ulm Exp $
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org> descent2-data-1.0.ebuild:
+  Migrate to cdrom.eclass, bug 398809.
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> descent2-data-1.0.ebuild:
   Marked ppc stable for bug #294889.

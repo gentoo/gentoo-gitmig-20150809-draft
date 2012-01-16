@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.55.1.ebuild,v 1.3 2010/03/09 12:33:33 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.55.1.ebuild,v 1.4 2012/01/16 18:58:56 ulm Exp $
 
 EAPI=2
-inherit eutils games
+CDROM_DISABLE_PROPERTIES=1
+inherit eutils cdrom games
 
 DV=1
 DESCRIPTION="Descent Rebirth - enhanced Descent ${DV} engine"
@@ -19,6 +20,7 @@ LICENSE="D1X GPL-2 as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cdinstall ipv6 linguas_de opengl timidity"
+PROPERTIES="cdinstall? ( interactive )"
 
 RDEPEND="virtual/opengl
 	virtual/glu
