@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.5 2011/12/04 05:10:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.6 2012/01/16 20:51:51 floppym Exp $
 
 EAPI="4"
 
 inherit cmake-utils git-2
 
-DESCRIPTION="Client-side implementation of the Remote Desktop Protocol"
+DESCRIPTION="Free implementation of the Remote Desktop Protocol"
 HOMEPAGE="http://www.freerdp.com/"
 SRC_URI=""
 EGIT_REPO_URI="git://github.com/FreeRDP/FreeRDP.git
