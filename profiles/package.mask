@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13397 2012/01/15 17:17:33 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13398 2012/01/16 03:52:17 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -220,10 +220,6 @@ dev-perl/Test-SimpleUnit
 dev-util/cdebootstrap
 # Nothing uses libdebian-installer except cdebootstrap, remove as well
 dev-libs/libdebian-installer
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
-# Development release, not quite ready for general consumption
-=media-sound/rhythmbox-2.90*
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (24 Nov 2011)
 # GNOME 2 versions of seed are largely untested
