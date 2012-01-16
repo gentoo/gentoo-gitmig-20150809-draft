@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sary-ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.45 2012/01/01 18:29:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.46 2012/01/16 03:10:55 jer Exp $
+
+  16 Jan 2012; Jeroen Roovers <jer@gentoo.org> sary-ruby-1.2.0-r2.ebuild:
+  Stable for HPPA (bug #391587).
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> sary-ruby-1.2.0-r2.ebuild:
   alpha/ia64/sparc stable wrt #391587
