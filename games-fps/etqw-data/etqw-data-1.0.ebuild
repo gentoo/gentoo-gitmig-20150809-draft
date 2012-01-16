@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-data/etqw-data-1.0.ebuild,v 1.6 2011/12/14 17:20:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-data/etqw-data-1.0.ebuild,v 1.7 2012/01/16 20:17:04 ulm Exp $
 
-inherit eutils games
+inherit eutils cdrom games
 
 DESCRIPTION="Enemy Territory: Quake Wars data files"
 HOMEPAGE="http://zerowing.idsoftware.com/linux/etqw/"
@@ -12,7 +12,6 @@ LICENSE="ETQW"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="videos"
-PROPERTIES="interactive"
 
 S=${WORKDIR}
 
