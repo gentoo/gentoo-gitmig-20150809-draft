@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.9 2011/12/14 17:13:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.10 2012/01/16 20:15:22 ulm Exp $
 
-inherit eutils multilib games
+inherit eutils cdrom multilib games
 
 DESCRIPTION="Third-person classic magical action-adventure game"
 HOMEPAGE="http://lokigames.com/products/heretic2/
@@ -16,7 +16,6 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
-PROPERTIES="interactive"
 QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/${PN}/base/*.so"
 
 DEPEND="games-util/loki_patch"
