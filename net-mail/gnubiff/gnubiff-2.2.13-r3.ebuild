@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r3.ebuild,v 1.1 2012/01/16 17:17:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r3.ebuild,v 1.2 2012/01/16 17:18:38 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -34,6 +34,7 @@ src_prepare() {
 }
 
 src_configure() {
+	# note: --disable-gnome is to avoid deprecated gnome-panel-2.x
 	econf \
 		$(use_enable debug) \
 		--disable-gnome \
