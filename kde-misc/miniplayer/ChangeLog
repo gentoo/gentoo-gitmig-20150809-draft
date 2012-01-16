@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/miniplayer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/ChangeLog,v 1.1 2012/01/16 17:09:52 johu Exp $
+
+*miniplayer-2.1 (16 Jan 2012)
+
+  16 Jan 2012; Johannes Huber <johu@gentoo.org> +metadata.xml,
+  +miniplayer-2.1.ebuild:
+  New ebuild. Initial import from kde overlay.
+
