@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6103 2012/01/16 03:52:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6104 2012/01/16 07:15:31 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Remove Emacs-23-CEDET-grammars from FSF-APPROVED since it's no longer used.
 
   16 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Let's unmask rhythmbox-2.9x, the worst bugs seem to be fixed

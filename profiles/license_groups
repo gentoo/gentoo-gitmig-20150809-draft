@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.101 2012/01/08 22:35:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.102 2012/01/16 07:15:31 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -13,7 +13,7 @@
 # they are more permissive than the licenses they are based on.
 GPL-COMPATIBLE AGPL-3 Apache-2.0 Artistic-2 as-is Boost-1.0 BSD BSD-2 CeCILL-2 Clarified-Artistic DB FTL gcc-runtime-library-exception-3.1 GPL-1 GPL-2 GPL-2-with-exceptions GPL-2-with-font-exception GPL-2-with-linking-exception GPL-2-with-MySQL-FLOSS-exception GPL-3 GPL-3-with-font-exception ISC LGPL-2 LGPL-2.1 LGPL-2.1-FPC LGPL-3 libgcc libstdc++ MIT OPENLDAP OracleDB PSF-2 PSF-2.2 PSF-2.3 PSF-2.4 public-domain PYTHON qwt Ruby SGI-B-2.0 tanuki-community unicode UoI-NCSA vim W3C WTFPL-2 ZLIB ZPL
 
-FSF-APPROVED @GPL-COMPATIBLE AFL-2.0 AFL-2.1 AFL-3.0 Apache-1.1 APSL-2 BitTorrent BSD-4 CDDL CNRI CPL-1.0 Emacs-23-CEDET-grammars EPL-1.0 IBM LPPL-1.2 MPL-1.0 MPL-1.1 Ms-PL NPL-1.1 openssl OSL-1.1 OSL-2.0 OSL-2.1 PHP-3.01 QPL QPL-1.0 SPL
+FSF-APPROVED @GPL-COMPATIBLE AFL-2.0 AFL-2.1 AFL-3.0 Apache-1.1 APSL-2 BitTorrent BSD-4 CDDL CNRI CPL-1.0 EPL-1.0 IBM LPPL-1.2 MPL-1.0 MPL-1.1 Ms-PL NPL-1.1 openssl OSL-1.1 OSL-2.0 OSL-2.1 PHP-3.01 QPL QPL-1.0 SPL
 
 # http://www.opensource.org/licenses
 OSI-APPROVED AFL-3.0 AGPL-3 Apache-1.1 Apache-2.0 APL-1.0 APSL-2 Artistic Artistic-2 as-is Boost-1.0 BSD BSD-2 CDDL CNRI CPAL-1.0 CPL-1.0 DB EPL-1.0 EUPL-1.1 GPL-2 GPL-3 IBM IPAfont ISC LGPL-2.1 LGPL-3 LPPL-1.3c MIT MPL-1.0 MPL-1.1 Ms-PL nethack NOSA OFL-1.1 OGTSL OracleDB PHP-3 PHP-3.01 POSTGRESQL PSF-2 QPL SPL W3C wxWinLL-3 wxWinLL-3.1 ZLIB ZPL
