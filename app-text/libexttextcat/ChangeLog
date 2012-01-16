@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libexttextcat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/ChangeLog,v 1.2 2011/11/14 09:05:54 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/ChangeLog,v 1.3 2012/01/16 11:54:24 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libexttextcat-3.2.0.ebuild:
+  Stable for amd64, wrt bug #398521
 
 *libexttextcat-3.2.0 (14 Nov 2011)
 

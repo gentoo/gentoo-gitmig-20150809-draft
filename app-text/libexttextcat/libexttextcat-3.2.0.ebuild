@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/libexttextcat-3.2.0.ebuild,v 1.1 2011/11/14 09:05:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/libexttextcat-3.2.0.ebuild,v 1.2 2012/01/16 11:54:24 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev-www.libreoffice.org/src/${PN}/${P}.tar.xz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 DEPEND=""
