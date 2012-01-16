@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.67 2012/01/15 15:43:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.68 2012/01/16 03:11:41 jer Exp $
+
+  16 Jan 2012; Jeroen Roovers <jer@gentoo.org> patchutils-0.3.2.ebuild:
+  Stable for HPPA (bug #397023).
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> patchutils-0.3.2.ebuild:
   x86 stable wrt bug #397023
