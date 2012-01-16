@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktimer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.190 2012/01/09 17:22:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.191 2012/01/16 23:22:10 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> ktimer-4.7.4.ebuild:
+  Stable for amd64, wrt bug #396359
 
   09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ktimer-4.7.4.ebuild:
   x86 stable wrt bug #396359

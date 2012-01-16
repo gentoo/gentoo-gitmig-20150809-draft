@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.7.4.ebuild,v 1.2 2012/01/09 17:45:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.7.4.ebuild,v 1.3 2012/01/16 23:44:54 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 DESCRIPTION="Phonon KDE Integration"
 HOMEPAGE="http://phonon.kde.org"
 
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
 IUSE="alsa debug xine pulseaudio"
 

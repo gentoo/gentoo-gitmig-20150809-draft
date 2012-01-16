@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.54 2012/01/09 15:38:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.55 2012/01/16 21:04:14 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> blogilo-4.7.4.ebuild:
+  Stable for amd64, wrt bug #396359
 
   09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> blogilo-4.7.4.ebuild:
   x86 stable wrt bug #396359

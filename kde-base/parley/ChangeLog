@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.105 2012/01/09 17:44:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.106 2012/01/16 23:43:40 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> parley-4.7.4.ebuild:
+  Stable for amd64, wrt bug #396359
 
   09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> parley-4.7.4.ebuild:
   x86 stable wrt bug #396359

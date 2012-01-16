@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.202 2012/01/09 16:16:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.203 2012/01/16 22:11:20 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> kdegraphics-meta-4.7.4.ebuild:
+  Stable for amd64, wrt bug #396359
 
   09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   kdegraphics-meta-4.7.4.ebuild:

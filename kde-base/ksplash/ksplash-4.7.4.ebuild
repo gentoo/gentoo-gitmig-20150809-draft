@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ksplash-4.7.4.ebuild,v 1.2 2012/01/09 17:16:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ksplash-4.7.4.ebuild,v 1.3 2012/01/16 23:16:21 ago Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ KMNAME="kde-workspace"
 inherit kde4-meta
 
 DESCRIPTION="KDE splashscreen framework (the splashscreen of KDE itself, not of individual apps)"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="3dnow altivec debug mmx sse sse2 xinerama"
 
 COMMONDEPEND="

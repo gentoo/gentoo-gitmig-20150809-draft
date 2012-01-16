@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.123 2012/01/09 17:42:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.124 2012/01/16 23:42:23 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> okular-4.7.4.ebuild:
+  Stable for amd64, wrt bug #396359
 
   09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> okular-4.7.4.ebuild:
   x86 stable wrt bug #396359

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knetwalk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.122 2012/01/09 16:55:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.123 2012/01/16 22:56:10 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> knetwalk-4.7.4.ebuild:
+  Stable for amd64, wrt bug #396359
 
   09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> knetwalk-4.7.4.ebuild:
   x86 stable wrt bug #396359

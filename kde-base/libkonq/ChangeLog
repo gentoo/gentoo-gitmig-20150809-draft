@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.203 2012/01/09 17:36:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.204 2012/01/16 23:35:32 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libkonq-4.7.4.ebuild:
+  Stable for amd64, wrt bug #396359
 
   09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libkonq-4.7.4.ebuild:
   x86 stable wrt bug #396359

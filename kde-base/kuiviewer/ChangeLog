@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.175 2012/01/09 17:27:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.176 2012/01/16 23:27:26 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> kuiviewer-4.7.4.ebuild:
+  Stable for amd64, wrt bug #396359
 
   09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> kuiviewer-4.7.4.ebuild:
   x86 stable wrt bug #396359
