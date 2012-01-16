@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1-r5.ebuild,v 1.1 2011/11/16 19:50:34 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1-r6.ebuild,v 1.1 2012/01/16 20:04:45 billie Exp $
 
 EAPI=2
 
@@ -59,7 +59,8 @@ src_prepare() {
 		"${FILESDIR}/${P}-acpitemp.patch" \
 		"${FILESDIR}/${P}-curl-headers.patch" \
 		"${FILESDIR}/${P}-maxinterfaces.patch" \
-		"${FILESDIR}/${P}-utf8-scroll.patch"
+		"${FILESDIR}/${P}-utf8-scroll.patch" \
+		"${FILESDIR}/${P}-battery-time.patch"
 	eautoreconf
 }
 
