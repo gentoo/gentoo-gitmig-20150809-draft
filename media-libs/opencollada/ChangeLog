@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/opencollada
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/ChangeLog,v 1.1 2012/01/16 18:11:33 sping Exp $
+
+*opencollada-0_p864 (16 Jan 2012)
+
+  16 Jan 2012; Sebastian Pipping <sping@gentoo.org> +opencollada-0_p864.ebuild,
+  +files/opencollada-0_p864-expat.patch, +metadata.xml:
+  New package required by media-gfx/blender (bug #390431)
+
