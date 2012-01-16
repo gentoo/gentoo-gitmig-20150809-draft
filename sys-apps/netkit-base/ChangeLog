@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.36 2012/01/15 17:44:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.37 2012/01/16 03:08:48 jer Exp $
+
+  16 Jan 2012; Jeroen Roovers <jer@gentoo.org> netkit-base-0.17-r9.ebuild:
+  Stable for HPPA (bug #397211).
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> netkit-base-0.17-r9.ebuild:
   alpha/ia64/sparc/x86 stable wrt #397211
