@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.5.2.ebuild,v 1.3 2012/01/11 14:52:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.5.2.ebuild,v 1.4 2012/01/16 11:52:51 ago Exp $
 
 EAPI=4
 
@@ -72,7 +72,7 @@ gstreamer gtk jemalloc kde mysql nsplugin odk opengl pdfimport python
 test +vba webdav"
 LICENSE="LGPL-3"
 SLOT="0"
-[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+[[ ${PV} == *9999* ]] || KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="
 	app-arch/zip
