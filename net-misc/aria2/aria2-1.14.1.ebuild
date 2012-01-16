@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.14.1.ebuild,v 1.2 2012/01/15 14:13:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.14.1.ebuild,v 1.3 2012/01/16 08:05:31 dev-zero Exp $
 
 EAPI="4"
 
@@ -55,9 +55,9 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="--without-gnutls --without-openssl"
+	local myconf="--without-gnutls --without-libgcrypt --without-openssl"
 	use ssl && \
-		myconf="$(use_with gnutls) $(use_with !gnutls openssl)"
+		myconf="$(use_with gnutls) $(use_with gnutls libgcrypt) $(use_with !gnutls openssl)"
 
 	local xmllib="--without-libexpat --without-libxml2"
 	if use metalink || use xmlrpc ; then
