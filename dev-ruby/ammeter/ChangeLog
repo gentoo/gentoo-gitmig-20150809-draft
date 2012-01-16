@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ammeter
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ChangeLog,v 1.1 2012/01/16 20:51:03 flameeyes Exp $
+
+*ammeter-0.2.2 (16 Jan 2012)
+
+  16 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> +ammeter-0.2.2.ebuild,
+  +metadata.xml:
+  Initial import of ammeter gem required by mongoid.
+
