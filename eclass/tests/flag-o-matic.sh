@@ -8,7 +8,13 @@ CFLAGS="-a -b -c=1"
 CXXFLAGS="-x -y -z=2"
 LDFLAGS="-l -m -n=3"
 ftend() {
-	tend $? "CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS} LDFLAGS=${LDFLAGS}"
+	local ret=$?
+	local msg="Failed; flags are:"
+	local flag
+	for flag in $(all-flag-vars) ; do
+		msg+=$'\n\t'"${flag}=${!flag}"
+	done
+	tend ${ret} "${msg}"
 }
 
 tbegin "is-flag"
@@ -50,18 +56,16 @@ strip-unsupported-flags
 [[ ${CFLAGS} == "" ]] && [[ ${CXXFLAGS} == "-z=2" ]]
 ftend
 
-for v in C CPP CXX F FC LD ; do
-	var="${v}FLAGS"
-	eval ${var}=\"-filter -filter-glob -${v}\"
+for var in $(all-flag-vars) ; do
+	eval ${var}=\"-filter -filter-glob -${var%FLAGS}\"
 done
 
 tbegin "filter-flags basic"
 filter-flags -filter
 (
-for v in C CPP CXX F FC LD ; do
-	var="${v}FLAGS"
+for var in $(all-flag-vars) ; do
 	val=${!var}
-	[[ ${val} == "-filter-glob -${v}" ]] || exit 1
+	[[ ${val} == "-filter-glob -${var%FLAGS}" ]] || exit 1
 done
 )
 ftend
@@ -69,10 +73,9 @@ ftend
 tbegin "filter-flags glob"
 filter-flags '-filter-*'
 (
-for v in C CPP CXX F FC LD ; do
-	var="${v}FLAGS"
+for var in $(all-flag-vars) ; do
 	val=${!var}
-	[[ ${val} == "-${v}" ]] || exit 1
+	[[ ${val} == "-${var%FLAGS}" ]] || exit 1
 done
 )
 ftend
@@ -93,6 +96,18 @@ tbegin "replace-flags glob"
 CXXFLAGS="-O0 -mcpu=bad -cow"
 replace-flags '-mcpu=*' -mcpu=good
 [[ ${CXXFLAGS} == "-O0 -mcpu=good -cow" ]]
+ftend
+
+tbegin "append-cflags basic"
+CFLAGS=
+append-cflags -O0
+[[ ${CFLAGS} == "-O0" ]]
+ftend
+
+tbegin "append-cflags -DFOO='a b c'"
+CFLAGS=
+append-cflags '-DFOO="a b c"'
+[[ ${CFLAGS} == '-DFOO="a b c"' ]]
 ftend
 
 texit
