@@ -3,8 +3,6 @@
 <pkgmetadata>
 <herd>dotnet</herd>
 <use>
-	<flag name="applet">Enable tomboy applet for
-		<pkg>gnome-base/gnome-panel</pkg></flag>
 	<flag name='galago'>Add support for the galago desktop presence framework
 		(<pkg>dev-dotnet/galago-sharp</pkg>)</flag>
 </use>

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.6.1.ebuild,v 1.5 2011/10/27 06:02:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.6.1.ebuild,v 1.6 2012/01/16 12:55:01 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://projects.gnome.org/tomboy/"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="+applet eds galago"
+IUSE="eds galago"
 
 RDEPEND="app-text/gtkspell:2
 	dev-dotnet/gconf-sharp:2
@@ -27,9 +27,6 @@ RDEPEND="app-text/gtkspell:2
 	dev-libs/atk
 	gnome-base/gconf:2
 	x11-libs/gtk+:2
-	applet? ( dev-dotnet/gnome-sharp:2
-		dev-dotnet/gnome-panel-sharp:2
-		gnome-base/gnome-panel[bonobo] )
 	eds? ( dev-libs/gmime:2.4[mono] )
 	galago? ( dev-dotnet/galago-sharp )"
 DEPEND="${RDEPEND}
@@ -41,7 +38,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	G2CONF="${G2CONF}
-		$(use_enable applet panel-applet)
+		--disable-panel-applet
 		$(use_enable eds evolution)
 		$(use_enable galago)
 		--disable-update-mimedb"

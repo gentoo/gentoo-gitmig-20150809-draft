@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tomboy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.125 2011/11/20 16:16:42 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.126 2012/01/16 12:55:01 ssuominen Exp $
+
+  16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> tomboy-1.4.2-r1.ebuild,
+  tomboy-1.6.1.ebuild, tomboy-1.8.3.ebuild, metadata.xml:
+  Remove USE="applet" in order to lastrite deprecated
+  dev-dotnet/gnome-panel-sharp package wrt #398639
 
 *tomboy-1.8.3 (20 Nov 2011)
 
