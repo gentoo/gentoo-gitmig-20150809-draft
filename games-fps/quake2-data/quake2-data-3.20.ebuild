@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.25 2010/01/25 22:34:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.26 2012/01/16 19:20:15 ulm Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils cdrom games
 
 DESCRIPTION="iD Software's Quake 2 ... the data files"
 HOMEPAGE="http://www.idsoftware.com/"
@@ -13,7 +13,6 @@ LICENSE="Q2EULA"
 SLOT="0"
 KEYWORDS="~alpha amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="videos"
-PROPERTIES="interactive"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""
@@ -54,14 +53,14 @@ src_install() {
 		3) baseq2_cdpath=${CDROM_ROOT}/setup/Data/baseq2;;
 	esac
 
-	dodir ${GAMES_DATADIR}/quake2/baseq2
+	dodir "${GAMES_DATADIR}"/quake2/baseq2
 
 	if use videos ; then
-		insinto ${GAMES_DATADIR}/quake2/baseq2/video
+		insinto "${GAMES_DATADIR}"/quake2/baseq2/video
 		doins "${baseq2_cdpath}"/video/* || die "doins videos"
 	fi
 
-	insinto ${GAMES_DATADIR}/quake2/baseq2
+	insinto "${GAMES_DATADIR}"/quake2/baseq2
 	doins "${baseq2_cdpath}"/pak0.pak || die "couldnt grab pak0.pak"
 	doins baseq2/*.pak || die "couldnt grab release paks"
 	doins baseq2/maps.lst || die "couldnt grab maps.lst"
@@ -72,11 +71,11 @@ src_install() {
 	for mod in ctf rogue xatrix ; do
 		if [[ -d ${baseq2_cdpath}/../${mod} ]] ; then
 			if use videos && [[ -d ${baseq2_cdpath}/../${mod}/video ]] ; then
-				insinto ${GAMES_DATADIR}/quake2/${mod}/video
+				insinto "${GAMES_DATADIR}"/quake2/${mod}/video
 				doins "${baseq2_cdpath}"/../${mod}/video/* 2>/dev/null
 			fi
 			if [[ -n $(ls "${baseq2_cdpath}"/../${mod}/*.pak 2>/dev/null) ]] ; then
-				insinto ${GAMES_DATADIR}/quake2/${mod}
+				insinto "${GAMES_DATADIR}"/quake2/${mod}
 				doins "${baseq2_cdpath}"/../${mod}/*.pak || die "doins ${mod} pak"
 			fi
 		fi

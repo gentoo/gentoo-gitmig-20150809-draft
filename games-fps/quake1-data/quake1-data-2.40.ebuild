@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.15 2010/03/18 03:45:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.16 2012/01/16 19:17:40 ulm Exp $
 
 # TODO: if installing off of the 1.01 cd, need to fetch the
 #       quake shareware and use that pak0
@@ -8,7 +8,7 @@
 # ftp://ftp.cdrom.com/pub/idgames/idstuff/quake/quake106.zip
 
 EAPI=2
-inherit eutils games
+inherit eutils cdrom games
 
 DESCRIPTION="iD Software's Quake 1 ... the data files"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake/"
@@ -18,7 +18,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
-PROPERTIES="interactive"
 
 DEPEND="app-arch/lha"
 RDEPEND=""
@@ -51,7 +50,7 @@ src_unpack() {
 }
 
 src_install() {
-	insinto ${GAMES_DATADIR}/quake1/id1
+	insinto "${GAMES_DATADIR}"/quake1/id1
 	case ${CDROM_SET} in
 		0)  doins "${CDROM_ROOT}"/id1/* || die "doins pak files"
 		    dodoc "${CDROM_ROOT}"/*.txt

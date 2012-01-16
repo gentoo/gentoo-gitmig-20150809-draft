@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3-roe
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.12 2011/12/14 17:20:00 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.13 2012/01/16 19:13:03 ulm Exp $
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org> doom3-roe-1.ebuild:
+  Migrate to cdrom.eclass, bug 398809.
 
   14 Dec 2011; Mike Frysinger <vapier@gentoo.org> doom3-roe-1.ebuild:
   The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now

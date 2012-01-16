@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.27 2011/12/14 17:27:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.28 2012/01/16 19:25:38 ulm Exp $
 
-inherit eutils games
+inherit eutils cdrom games
 
 DESCRIPTION="First-person shooter based on the mercenary trade"
 HOMEPAGE="http://www.lokigames.com/products/sof/"
@@ -12,7 +12,6 @@ LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
 RESTRICT="strip"
-PROPERTIES="interactive"
 IUSE=""
 
 DEPEND="sys-libs/glibc

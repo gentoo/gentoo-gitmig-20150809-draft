@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament-goty
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.13 2007/03/12 15:27:03 genone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.14 2012/01/16 19:31:33 ulm Exp $
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org>
+  unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:
+  Migrate to cdrom.eclass, bug 398809.
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org>
   unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:

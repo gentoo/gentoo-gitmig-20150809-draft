@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-451.ebuild,v 1.16 2007/03/12 15:27:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-451.ebuild,v 1.17 2012/01/16 19:31:33 ulm Exp $
 
-inherit eutils games
+inherit eutils cdrom games
 
 DESCRIPTION="Futuristic FPS (Game Of The Year edition)"
 HOMEPAGE="http://www.unrealtournament.com/"
@@ -59,9 +59,9 @@ src_install() {
 	dosed "s:\`FindPath \$0\`:${dir}:" "${dir}"/ucc
 
 	# export some symlinks so ppl can run
-	dodir ${GAMES_BINDIR}
-	dosym "${dir}"/ucc ${GAMES_BINDIR}/ucc
-	dosym "${dir}"/ut ${GAMES_BINDIR}/ut
+	dodir "${GAMES_BINDIR}"
+	dosym "${dir}"/ucc "${GAMES_BINDIR}"/ucc
+	dosym "${dir}"/ut "${GAMES_BINDIR}"/ut
 	### PRE ###
 	###########
 

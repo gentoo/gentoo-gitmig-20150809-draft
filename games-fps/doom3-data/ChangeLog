@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3-data
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/ChangeLog,v 1.12 2011/12/14 17:18:23 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/ChangeLog,v 1.13 2012/01/16 19:12:07 ulm Exp $
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org> doom3-data-1.1.1282-r1.ebuild:
+  Migrate to cdrom.eclass, bug 398809.
 
   14 Dec 2011; Mike Frysinger <vapier@gentoo.org>
   doom3-data-1.1.1282-r1.ebuild:
