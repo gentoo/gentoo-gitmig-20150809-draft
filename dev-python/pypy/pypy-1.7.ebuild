@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7.ebuild,v 1.4 2012/01/15 22:07:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7.ebuild,v 1.5 2012/01/16 05:26:31 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ S="${WORKDIR}/${PN}-pypy-release-${PV}"
 
 DOC="README LICENSE"
 
-pkg_pretend() {	
+pkg_pretend() {
 	CHECKREQS_MEMORY="1250M"
 	use amd64 && CHECKREQS_MEMORY="2500M"
 	check-reqs_pkg_pretend
