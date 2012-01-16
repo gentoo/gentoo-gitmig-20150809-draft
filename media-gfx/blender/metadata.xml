@@ -26,7 +26,7 @@
 			Install contrib scripts.
 		</flag>
 		<flag name='collada'>
-			Add support for Collada interchange format.
+			Add support for Collada interchange format through <pkg>media-libs/opencollada</pkg>.
 		</flag>
 		<flag name='verse'>
 			Adds verse clustering features to Blender.

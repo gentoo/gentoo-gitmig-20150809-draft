@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.4 2011/11/13 22:43:48 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.5 2012/01/16 18:28:11 sping Exp $
 
 PYTHON_DEPEND="3:3.2"
 EAPI=4
@@ -10,11 +10,11 @@ SCM="subversion"
 ESVN_REPO_URI="https://svn.blender.org/svnroot/bf-blender/trunk/blender"
 fi
 
-inherit scons-utils eutils python versionator flag-o-matic toolchain-funcs ${SCM}
+inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-funcs ${SCM}
 
 IUSE="+game-engine player +elbeem +openexr ffmpeg jpeg2k openal openmp \
 	+dds debug doc fftw jack apidoc sndfile lcms tweak-mode sdl sse \
-	redcode +zlib iconv contrib verse"
+	redcode +zlib iconv contrib collada verse"
 
 LANGS="en ar bg ca cs de el es fi fr hr it ja ko nl pl pt_BR ro ru sr sv uk zh_CN"
 for X in ${LANGS} ; do
@@ -60,7 +60,8 @@ RDEPEND="virtual/jpeg
 	fftw? ( sci-libs/fftw:3.0 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	sndfile? ( media-libs/libsndfile )
-	lcms? ( media-libs/lcms )"
+	lcms? ( media-libs/lcms )
+	collada? ( media-libs/opencollada )"
 
 DEPEND="dev-util/scons
 	apidoc? (
@@ -117,6 +118,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-desktop.patch
+	epatch "${FILESDIR}"/${P}-collada.patch
 	epatch "${FILESDIR}"/${PN}-${SLOT}-doxyfile.patch
 
 	# TODO: write a proper Makefile to replace the borked bmake script
@@ -271,9 +273,13 @@ src_configure() {
 		'sse rayoptimization' \
 		'redcode' \
 		'zlib' \
+		'collada' \
 		'verse' ; do
 		blend_with ${arg}
 	done
+
+	echo 'BF_OPENCOLLADA_INC="/usr/include/opencollada/"' >> "${S}"/user-config.py
+	echo 'BF_OPENCOLLADA_LIBPATH="/usr/'$(get_libdir)'/opencollada/"' >> "${S}"/user-config.py
 
 	# libspnav not yet packaged (bug #390427)
 	echo 'WITH_BF_3DMOUSE=0' >> "${S}"/user-config.py
