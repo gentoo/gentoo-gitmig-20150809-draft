@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.194 2012/01/14 22:34:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.195 2012/01/16 09:55:19 jlec Exp $
+
+  16 Jan 2012; Justin Lecher <jlec@gentoo.org> nfs-utils-1.2.5.ebuild:
+  Add missing dep on sys-fs/lvm2, #399051; corrected target path in src install
+  $ED to $D
 
   14 Jan 2012; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.5.ebuild:
   Require newer version of libgssglue #398901 by Marien Zwart.
