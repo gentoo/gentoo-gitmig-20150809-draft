@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wargus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.13 2011/12/21 18:46:00 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.14 2012/01/16 19:46:14 ulm Exp $
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org> wargus-2.2.5.5.ebuild:
+  Migrate to cdrom.eclass, bug 398809.
 
   21 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org> wargus-2.2.5.5.ebuild,
   +files/wargus-2.2.5.5-libpng.patch:

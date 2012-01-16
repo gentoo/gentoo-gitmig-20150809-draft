@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.3.0.ebuild,v 1.12 2011/12/14 17:34:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.3.0.ebuild,v 1.13 2012/01/16 19:41:13 ulm Exp $
 
-inherit eutils games
+CDROM_DISABLE_PROPERTIES=1
+inherit eutils cdrom games
 
 DESCRIPTION="the hyped indie game of the year. By the Uplink creators."
 HOMEPAGE="http://www.darwinia.co.uk/support/linux.html"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="cdinstall"
 RESTRICT="mirror strip"
-PROPERTIES="interactive"
+PROPERTIES="cdinstall? ( interactive )"
 
 RDEPEND="
 	sys-libs/glibc

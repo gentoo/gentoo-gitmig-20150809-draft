@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.8 2008/02/29 19:47:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.9 2012/01/16 19:43:07 ulm Exp $
 
-inherit eutils games
+inherit eutils cdrom games
 
 DESCRIPTION="Dominions 2: The Ascension Wars is an epic turn-based fantasy strategy game"
 HOMEPAGE="http://www.shrapnelgames.com/Illwinter/d2/"
