@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.167 2012/01/14 09:10:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.168 2012/01/16 20:03:32 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -347,13 +347,13 @@ strip-flags() {
 
 test-flag-PROG() {
 	local comp=$1
-	local flags="$2"
+	local flag=$2
 
-	[[ -z ${comp} || -z ${flags} ]] && return 1
+	[[ -z ${comp} || -z ${flag} ]] && return 1
 
 	# use -c so we can test the assembler as well
 	local PROG=$(tc-get${comp})
-	${PROG} ${flags} -c -o /dev/null -xc /dev/null \
+	${PROG} "${flag}" -c -o /dev/null -xc /dev/null \
 		> /dev/null 2>&1
 }
 
