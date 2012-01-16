@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.60-r1.ebuild,v 1.1 2012/01/16 19:14:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.60-r1.ebuild,v 1.2 2012/01/16 19:23:12 ssuominen Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ src_install() {
 		APM="$(use apm && echo force || echo disabled)" \
 		./install.sh || die
 
-	dodoc Documentation/*.txt README || die
+	dodoc Documentation/*.txt README
 	newinitd "${FILESDIR}"/laptop_mode.init-1.4 laptop_mode
 
 	# See src_prepare()
