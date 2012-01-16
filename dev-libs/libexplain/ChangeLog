@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libexplain
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.13 2012/01/16 04:46:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.14 2012/01/16 04:47:17 radhermit Exp $
+
+  16 Jan 2012; Tim Harder <radhermit@gentoo.org> -libexplain-0.40.ebuild,
+  -libexplain-0.42.ebuild, -libexplain-0.45.ebuild, -libexplain-0.46.ebuild,
+  -libexplain-0.47.ebuild:
+  Remove old.
 
 *libexplain-0.50 (16 Jan 2012)
 
