@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ronn-0.7.3-r1.ebuild,v 1.1 2012/01/14 07:08:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ronn-0.7.3-r1.ebuild,v 1.2 2012/01/16 19:21:53 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18"
@@ -23,6 +23,12 @@ ruby_add_rdepend "
 	>=dev-ruby/hpricot-0.8.2
 	>=dev-ruby/mustache-0.7.0
 	>=dev-ruby/rdiscount-1.5.8"
+
+all_ruby_prepare() {
+	# Avoid test failing due to changes in hash handling in ruby 1.8.7:
+	# https://github.com/rtomayko/ronn/issues/56
+	sed -i -e '81 s:^:#:' test/test_ronn.rb || die
+}
 
 each_ruby_prepare() {
 	# Make sure that we always use the right interpreter during tests.
