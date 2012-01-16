@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Image_Canvas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Canvas/ChangeLog,v 1.26 2011/12/06 12:16:06 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Canvas/ChangeLog,v 1.27 2012/01/16 12:45:24 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  PEAR-Image_Canvas-0.3.3.ebuild:
+  Stable for amd64, wrt bug #392855
 
 *PEAR-Image_Canvas-0.3.3 (06 Dec 2011)
 
