@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r2.ebuild,v 1.1 2011/12/04 20:03:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r2.ebuild,v 1.2 2012/01/16 15:38:12 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -17,7 +17,10 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="collab cups gnome grammar latex math ots openxml plugins readline spell wordperfect wmf thesaurus" # svg
+IUSE="collab cups gnome grammar latex math ots openxml +plugins readline spell wordperfect wmf thesaurus" # svg
+
+# You need 'plugins' enabled if want to enable the extra plugins
+REQUIRED_USE="!plugins? ( !collab !grammar !latex !math !openxml !ots !readline !thesaurus !wordperfect !wmf )"
 
 # libgsf raised to make sure it provides gio backend
 # not enabling telepathy backend for collab, it depends on libempathy-gtk which

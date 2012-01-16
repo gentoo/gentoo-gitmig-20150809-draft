@@ -1,6 +1,15 @@
 # ChangeLog for app-office/abiword
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.250 2011/12/17 10:25:27 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.251 2012/01/16 15:38:12 pacho Exp $
+
+  16 Jan 2012; Pacho Ramos <pacho@gentoo.org> abiword-2.8.6-r2.ebuild:
+  Use REQUIRED_USE (thanks a lot to Ulrich Müller in bug #399069 for explaining
+  me how to handle this REQUIRED_USE statement) to be sure 'plugins' is enabled
+  when people build this with any other extra plugins enabled, otherwise extra
+  plugins won't be built at all. Enable 'plugins' by default as it doesn't add
+  any new dependency and simplifies things for people enabling any other plugin
+  (for example, 'readline' plugin will be enabled automatically in most systems
+  due profiles enabling that flag globally).
 
   17 Dec 2011; Pacho Ramos <pacho@gentoo.org> files/abiword-2.8.6-libwpd.patch:
   plugin-configure.m4 patching was skipped by error, thanks a lot to Cody
