@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langarmenian
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.40 2011/12/28 05:42:07 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.41 2012/01/16 13:47:03 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  texlive-langarmenian-2011.ebuild:
+  Stable for amd64, wrt bug #395735
 
   28 Dec 2011; Jeroen Roovers <jer@gentoo.org>
   texlive-langarmenian-2011.ebuild:

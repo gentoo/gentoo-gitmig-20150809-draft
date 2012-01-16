@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-fontsextra
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.51 2011/12/28 04:49:03 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.52 2012/01/16 13:38:40 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  texlive-fontsextra-2011.ebuild:
+  Stable for amd64, wrt bug #395735
 
   28 Dec 2011; Jeroen Roovers <jer@gentoo.org> texlive-fontsextra-2011.ebuild:
   Stable for HPPA (bug #395735).

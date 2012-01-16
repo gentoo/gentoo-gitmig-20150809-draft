@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langcyrillic
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcyrillic/ChangeLog,v 1.41 2011/12/28 05:43:50 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcyrillic/ChangeLog,v 1.42 2012/01/16 13:49:18 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  texlive-langcyrillic-2011.ebuild:
+  Stable for amd64, wrt bug #395735
 
   28 Dec 2011; Jeroen Roovers <jer@gentoo.org>
   texlive-langcyrillic-2011.ebuild:

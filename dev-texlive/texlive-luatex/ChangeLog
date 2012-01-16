@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-luatex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.22 2011/12/28 04:42:24 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.23 2012/01/16 14:13:31 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> texlive-luatex-2011.ebuild:
+  Stable for amd64, wrt bug #395735
 
   28 Dec 2011; Jeroen Roovers <jer@gentoo.org> texlive-luatex-2011.ebuild:
   Stable for HPPA (bug #395735).

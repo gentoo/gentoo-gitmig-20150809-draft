@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-bibtexextra
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-bibtexextra/ChangeLog,v 1.42 2011/12/28 04:47:58 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-bibtexextra/ChangeLog,v 1.43 2012/01/16 13:19:28 ago Exp $
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  texlive-bibtexextra-2011.ebuild:
+  Stable for amd64, wrt bug #395735
 
   28 Dec 2011; Jeroen Roovers <jer@gentoo.org> texlive-bibtexextra-2011.ebuild:
   Stable for HPPA (bug #395735).
