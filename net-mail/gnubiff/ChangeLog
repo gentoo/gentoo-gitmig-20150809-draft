@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/gnubiff
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.37 2011/12/04 19:18:38 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.38 2012/01/16 17:17:10 ssuominen Exp $
+
+*gnubiff-2.2.13-r3 (16 Jan 2012)
+
+  16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +gnubiff-2.2.13-r3.ebuild:
+  Remove USE="gnome" and always pass --disable-gnome to avoid pulling in
+  deprecated version of gnome-panel.
 
   04 Dec 2011; Tim Harder <radhermit@gentoo.org> -gnubiff-2.2.13-r1.ebuild:
   Remove old.
