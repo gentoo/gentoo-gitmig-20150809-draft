@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.39 2011/12/27 17:55:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.40 2012/01/16 21:14:13 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -32,7 +32,7 @@ EGIT_BOOTSTRAP="autogen.sh"
 EGIT_REPO_URI="git://git.xfce.org/xfce/${MY_PN:-${PN}}"
 
 _xfconf_deps=""
-_xfconf_m4=">=dev-util/xfce4-dev-tools-4.8.0 ${AUTOTOOLS_DEPEND}"
+_xfconf_m4=">=dev-util/xfce4-dev-tools-4.9.1 ${AUTOTOOLS_DEPEND}"
 
 [[ -n $_xfconf_live ]] && _xfconf_deps+=" dev-util/gtk-doc ${_xfconf_m4}"
 [[ -n $EINTLTOOLIZE ]] && _xfconf_deps+=" dev-util/intltool"
