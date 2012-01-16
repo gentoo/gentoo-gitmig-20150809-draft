@@ -1,10 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.3.ebuild,v 1.1 2011/12/19 01:40:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.3.ebuild,v 1.2 2012/01/16 00:43:38 chithanh Exp $
 
 EAPI=4
 
 XORG_DOC=doc
+XORG_EAUTORECONF=yes
 inherit xorg-2 multilib versionator
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 
@@ -111,6 +112,8 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
+	"${FILESDIR}"/${PN}-1.11-disable-tests-without-ddx.patch
+	"${FILESDIR}"/${PN}-1.11-pointer-to-int-cast.patch
 )
 
 pkg_pretend() {

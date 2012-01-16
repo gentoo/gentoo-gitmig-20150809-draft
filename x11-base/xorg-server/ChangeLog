@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.635 2012/01/02 09:44:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.636 2012/01/16 00:43:38 chithanh Exp $
+
+  16 Jan 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.11.2-r2.ebuild, xorg-server-1.11.3.ebuild,
+  +files/xorg-server-1.11-disable-tests-without-ddx.patch,
+  +files/xorg-server-1.11-pointer-to-int-cast.patch:
+  Fix building with USE="minimal -xorg", bug #381771. Add patch to properly
+  cast from pointer to int, bug #399033.
 
   02 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2009:
   Split ChangeLog.
