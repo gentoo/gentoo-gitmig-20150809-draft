@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.130 2012/01/16 23:55:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.131 2012/01/17 12:06:26 johu Exp $
+
+  17 Jan 2012; Johannes Huber <johu@gentoo.org>
+  -files/systemsettings-4.7.3-enablefinal.patch, systemsettings-4.7.3-r1.ebuild,
+  systemsettings-4.7.4.ebuild:
+  Remove kdeenablefinal patch. Build feature is gone.
 
   16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> systemsettings-4.7.4.ebuild:
   Stable for amd64, wrt bug #396359

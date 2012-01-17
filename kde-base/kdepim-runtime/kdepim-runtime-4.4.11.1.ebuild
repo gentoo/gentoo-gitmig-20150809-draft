@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.4.11.1.ebuild,v 1.6 2011/07/31 20:28:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.4.11.1.ebuild,v 1.7 2012/01/17 12:12:21 johu Exp $
 
 EAPI=4
 
@@ -37,5 +37,3 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 add_blocker akonadi '<4.3.90'
-
-PATCHES=( "${FILESDIR}/${PN}"-4.4.10-enablefinal-{1,2}.patch )
