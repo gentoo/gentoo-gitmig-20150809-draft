@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/graphcanvas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graphcanvas/ChangeLog,v 1.2 2011/08/03 23:54:52 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graphcanvas/ChangeLog,v 1.3 2012/01/17 06:25:52 bicatali Exp $
+
+  17 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  graphcanvas-4.0.0.ebuild:
+  Ebuild clean and EAPI bump
 
 *graphcanvas-4.0.0 (03 Aug 2011)
 
