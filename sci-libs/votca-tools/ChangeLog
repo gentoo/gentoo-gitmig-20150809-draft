@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/votca-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.11 2012/01/11 03:55:11 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.12 2012/01/17 13:52:34 ago Exp $
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> votca-tools-1.2.2.ebuild:
+  Stable for amd64, wrt bug #389681
 
 *votca-tools-1.2.2 (11 Jan 2012)
 
