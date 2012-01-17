@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5-appl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.25 2012/01/08 15:58:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.26 2012/01/17 20:14:05 eras Exp $
+
+  17 Jan 2012; Eray Aslan <eras@gentoo.org> -mit-krb5-appl-1.0.1.ebuild,
+  -mit-krb5-appl-1.0.1-r1.ebuild, -mit-krb5-appl-1.0.2.ebuild,
+  -files/CVE-2011-1526.patch:
+  remove vulnerable versions
 
   08 Jan 2012; Raúl Porcel <armin76@gentoo.org> mit-krb5-appl-1.0.2-r1.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #396137
