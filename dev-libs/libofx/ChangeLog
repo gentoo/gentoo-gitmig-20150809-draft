@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.65 2012/01/15 18:49:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.66 2012/01/17 21:22:34 jer Exp $
+
+  17 Jan 2012; Jeroen Roovers <jer@gentoo.org> libofx-0.9.4.ebuild:
+  Stable for HPPA (bug #397853).
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> libofx-0.9.4.ebuild:
   alpha/ia64/sparc/x86 stable wrt #397853
