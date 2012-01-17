@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.22 2012/01/13 22:45:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.23 2012/01/17 23:51:59 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -19,7 +19,6 @@ glibc_do_configure() {
 	[[ -d ports ]] && ADDONS="${ADDONS},ports"
 	popd > /dev/null
 
-	use nls || myconf="${myconf} --disable-nls"
 	myconf="${myconf} $(use_enable hardened stackguard-randomization)"
 	if has_version '<sys-libs/glibc-2.13' ; then
 		myconf="${myconf} --enable-old-ssp-compat"
