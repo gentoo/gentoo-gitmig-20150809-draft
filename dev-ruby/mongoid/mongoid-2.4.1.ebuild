@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/mongoid-2.4.1.ebuild,v 1.1 2012/01/16 20:54:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/mongoid-2.4.1.ebuild,v 1.2 2012/01/17 14:41:02 ago Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -18,8 +18,8 @@ RUBY_S="${GITHUB_USER}-${GITHUB_PROJECT}-*"
 
 inherit ruby-fakegem
 
-DESCRIPTION="http://mongoid.org/"
-HOMEPAGE="ODM (Object Document Mapper) Framework for MongoDB"
+DESCRIPTION="ODM (Object Document Mapper) Framework for MongoDB"
+HOMEPAGE="http://mongoid.org/"
 SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/v${PV} -> ${GITHUB_PROJECT}-${PV}.tar.gz"
 LICENSE="MIT"
 

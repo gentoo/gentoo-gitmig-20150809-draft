@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mongoid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/ChangeLog,v 1.1 2012/01/16 20:54:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/ChangeLog,v 1.2 2012/01/17 14:41:02 ago Exp $
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> mongoid-2.4.1.ebuild:
+  Fix DESCRIPTION and HOMEPAGE, thanks to James Rowe, wrt bug #399175
 
 *mongoid-2.4.1 (16 Jan 2012)
 
