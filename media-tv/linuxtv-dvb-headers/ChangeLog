@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/linuxtv-dvb-headers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-headers/ChangeLog,v 1.22 2012/01/16 19:42:04 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-headers/ChangeLog,v 1.23 2012/01/17 19:24:25 idl0r Exp $
+
+  17 Jan 2012; Christian Ruppert <idl0r@gentoo.org>
+  -linuxtv-dvb-headers-3.1.ebuild, linuxtv-dvb-headers-5.ebuild:
+  Remove 3.1. Adjust sys-kernel/linux-headers dependency. Remove useless eutils
+  inherit.
 
 *linuxtv-dvb-headers-5.3 (16 Jan 2012)
 
