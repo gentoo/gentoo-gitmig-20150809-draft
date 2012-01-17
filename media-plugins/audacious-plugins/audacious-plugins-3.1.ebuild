@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.1.ebuild,v 1.6 2011/12/07 13:46:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.1.ebuild,v 1.7 2012/01/17 13:18:35 klausman Exp $
 
 EAPI=4
 
@@ -65,6 +65,9 @@ mp3_warning() {
 
 src_configure() {
 	mp3_warning
+	# Turn "-z defs" into "-Wl,-z,defs" because some versions of gcc don't like
+	# it (bug 395213)
+	epatch "${FILESDIR}/audacious-plugins_ldflags.patch"
 
 	econf \
 		--enable-chardet \
