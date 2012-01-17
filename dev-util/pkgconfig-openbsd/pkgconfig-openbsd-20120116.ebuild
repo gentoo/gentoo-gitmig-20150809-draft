@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20120116.ebuild,v 1.2 2012/01/17 00:43:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20120116.ebuild,v 1.3 2012/01/17 00:46:08 ssuominen Exp $
 
 # cvs -d anoncvs@anoncvs.openbsd.org:/cvs get src/usr.bin/pkg-config/pkg-config
 # cvs -d anoncvs@anoncvs.openbsd.org:/cvs get src/usr.bin/pkg-config/pkg-config.1
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl
+	virtual/perl-Getopt-Long"
 DEPEND=""
 
 S=${WORKDIR}/src
