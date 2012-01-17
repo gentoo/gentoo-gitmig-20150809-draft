@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.93 2012/01/17 11:20:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.94 2012/01/17 16:05:59 zorry Exp $
+
+  17 Jan 2012; Magnus Granberg <zorry@gentoo.org> toolchain.eclass:
+  Add HARD_CFLAGS to ALL_CXXFLAGS for hardened gcc 4.7
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
   Drop kdeenablefinal build feature. Fix source uri calc for KDE SC 4.7.97 aka
