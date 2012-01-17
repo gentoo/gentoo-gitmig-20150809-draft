@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/essays1743
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.17 2012/01/15 19:05:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.18 2012/01/17 21:25:19 jer Exp $
+
+  17 Jan 2012; Jeroen Roovers <jer@gentoo.org> essays1743-1.203.1.ebuild:
+  Stable for HPPA (bug #398125).
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> essays1743-1.203.1.ebuild:
   alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #398125
