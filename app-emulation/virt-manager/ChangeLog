@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.60 2012/01/17 17:19:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.61 2012/01/17 17:55:18 cardoe Exp $
+
+  17 Jan 2012; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.9.0-r2.ebuild:
+  Bump the depend on a patched up virtinst-0.600.0 so everything plays nice.
 
   17 Jan 2012; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.9.0-r2.ebuild:
   The backports 2 tarball accidently contained a duplicate patch.
