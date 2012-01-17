@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tnftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.37 2012/01/15 15:28:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.38 2012/01/17 13:54:18 ago Exp $
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> tnftp-20100108.ebuild:
+  Stable for amd64, wrt bug #397147
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tnftp-20100108.ebuild:
   x86 stable wrt bug #397147
