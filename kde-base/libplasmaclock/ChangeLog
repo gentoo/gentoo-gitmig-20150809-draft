@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libplasmaclock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.91 2012/01/16 23:37:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.92 2012/01/17 13:28:58 johu Exp $
+
+  17 Jan 2012; Johannes Huber <johu@gentoo.org> -libplasmaclock-4.7.3.ebuild:
+  Remove KDE SC 4.7.3
 
   16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libplasmaclock-4.7.4.ebuild:
   Stable for amd64, wrt bug #396359
