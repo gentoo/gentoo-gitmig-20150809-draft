@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.30-r1.ebuild,v 1.2 2012/01/01 14:58:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.30-r1.ebuild,v 1.3 2012/01/17 22:32:05 ago Exp $
 
 EAPI="4"
 
@@ -126,12 +126,12 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 
 	if use doc ; then
 		einfo "Building HTML documentation"
-		cd doc
-		emake html || die "failed to build HTML documentation"
+		cd doc || die
+		emake html
 	fi
 }
 
@@ -144,13 +144,13 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 
 	# init script stuff
-	newinitd "${FILESDIR}"/lighttpd.initd lighttpd || die
-	newconfd "${FILESDIR}"/lighttpd.confd lighttpd || die
+	newinitd "${FILESDIR}"/lighttpd.initd lighttpd
+	newconfd "${FILESDIR}"/lighttpd.confd lighttpd
 	use fam && has_version app-admin/fam && \
-		sed -i 's/after famd/need famd/g' "${D}"/etc/init.d/lighttpd
+		{ sed -i 's/after famd/need famd/g' "${D}"/etc/init.d/lighttpd || die; }
 
 	# configs
 	insinto /etc/lighttpd
@@ -173,11 +173,11 @@ src_install() {
 	use doc && dohtml -r doc/*
 
 	docinto txt
-	dodoc doc/outdated/*.txt || die
+	dodoc doc/outdated/*.txt
 
 	# logrotate
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/lighttpd.logrotate lighttpd || die
+	newins "${FILESDIR}"/lighttpd.logrotate lighttpd
 
 	keepdir /var/l{ib,og}/lighttpd /var/www/localhost/htdocs
 	fowners lighttpd:lighttpd /var/l{ib,og}/lighttpd
