@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/epic4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.91 2012/01/15 15:26:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.92 2012/01/17 23:19:43 jer Exp $
+
+  17 Jan 2012; Jeroen Roovers <jer@gentoo.org> epic4-2.10.1.ebuild:
+  Stable for HPPA (bug #397151).
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> epic4-2.10.1.ebuild:
   x86 stable wrt bug #397151
