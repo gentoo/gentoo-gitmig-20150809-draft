@@ -4,7 +4,8 @@
 <herd>games</herd>
 <use>
  <flag name='midi'>basic support for MIDI files</flag>
+ <flag name='fluidsynth'>Use <pkg>media-sound/fluidsynth</pkg> for MIDI support</flag>
  <flag name='wav'>support WAVE files</flag>
- <flag name='playtools'>Install playwave and playmus tools (usefull for testing)</flag>
+ <flag name='playtools'>Install playwave and playmus tools (useful for testing)</flag>
 </use>
 </pkgmetadata>
