@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/votca-csgapps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/ChangeLog,v 1.5 2012/01/14 04:32:54 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/ChangeLog,v 1.6 2012/01/17 13:52:51 ago Exp $
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> votca-csgapps-1.2.2.ebuild:
+  Stable for amd64, wrt bug #389681
 
   14 Jan 2012; Christoph Junghans <ottxor@gentoo.org>
   votca-csgapps-1.2.2.ebuild:

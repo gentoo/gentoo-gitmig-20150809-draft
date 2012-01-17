@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/votca-csg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.13 2012/01/13 01:30:08 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.14 2012/01/17 13:52:07 ago Exp $
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> votca-csg-1.2.2.ebuild:
+  Stable for amd64, wrt bug #389681
 
   13 Jan 2012; Christoph Junghans <ottxor@gentoo.org> votca-csg-1.2.2.ebuild:
   keyword ~amd64-linux
