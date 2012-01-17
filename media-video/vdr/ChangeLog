@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.150 2011/11/12 13:22:02 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.151 2012/01/17 19:08:17 idl0r Exp $
+
+  17 Jan 2012; Christian Ruppert <idl0r@gentoo.org> vdr-1.6.0_p2-r7.ebuild:
+  Adjust media-tv/linuxtv-dvb-headers depdency
 
   12 Nov 2011; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-1.6.0_p2.ebuild,
   -vdr-1.6.0_p2-r2.ebuild, -vdr-1.6.0_p2-r3.ebuild, -vdr-1.6.0_p2-r4.ebuild,
