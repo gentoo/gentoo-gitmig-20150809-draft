@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13403 2012/01/17 11:27:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13404 2012/01/17 18:09:28 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Johannes Huber <johu@gentoo.org> (17 Jan 2012)
+# Masking until release announcement is done.
+# Tarball already available.
+~media-libs/opengtl-0.9.16
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (17 Jan 2012)
 # Determined by the maintaining team to be no longer useful.
