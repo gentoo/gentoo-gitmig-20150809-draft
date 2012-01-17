@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.30.2.ebuild,v 1.4 2012/01/14 16:15:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.30.2.ebuild,v 1.5 2012/01/17 11:00:47 pacho Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="glib"
@@ -38,8 +38,8 @@ src_prepare() {
 }
 
 src_test() {
-	elog "Skipping tests. To test ${PN}, emerge dev-libs/glib"
-	elog "with FEATURES=test"
+	elog "Skipping tests. This package is tested by dev-libs/glib"
+	elog "when merged with FEATURES=test"
 }
 
 src_install() {
