@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcp_probe/files/dhcp_probe.initd,v 1.2 2010/02/20 16:31:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcp_probe/files/dhcp_probe.initd,v 1.3 2012/01/17 17:44:02 jer Exp $
 
-opts="reload"
+extra_commands="reload"
 
 DHCP_PROBE_BINARY="/usr/sbin/dhcp_probe"
 DHCP_PROBE_CONFIG="/etc/dhcp_probe.cf"

@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcp_probe/dhcp_probe-1.3.0-r2.ebuild,v 1.1 2010/02/20 16:31:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcp_probe/dhcp_probe-1.3.0-r3.ebuild,v 1.1 2012/01/17 17:44:01 jer Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="dhcp_probe attempts to discover DHCP and BootP servers on a directly-attached Ethernet network"
 HOMEPAGE="http://www.net.princeton.edu/software/dhcp_probe/"
@@ -26,6 +26,7 @@ src_prepare() {
 }
 
 src_configure() {
+	use amd64 && append-flags -D__ARCH__=64
 	STRIP=true econf || die "econf failed"
 }
 
