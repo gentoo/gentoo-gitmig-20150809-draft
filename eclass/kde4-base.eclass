@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.111 2011/12/18 00:00:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.112 2012/01/17 11:20:03 johu Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -423,9 +423,6 @@ DEPEND+=" ${COMMONDEPEND}"
 RDEPEND+=" ${COMMONDEPEND}"
 unset COMMONDEPEND
 
-# Add experimental kdeenablefinal, masked by default
-IUSE+=" kdeenablefinal"
-
 # Fetch section - If the ebuild's category is not 'kde-base' and if it is not a
 # koffice ebuild, the URI should be set in the ebuild itself
 _calculate_src_uri() {
@@ -452,7 +449,7 @@ _calculate_src_uri() {
 	case ${KDEBASE} in
 		kde-base)
 			case ${PV} in
-				4.[456789].8[05] | 4.[456789].9[023568])
+				4.[456789].8[05] | 4.[456789].9[0235678])
 					# Unstable KDE SC releases
 					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2"
 					if ! version_is_at_least 4.6.80 ${PV}
@@ -759,10 +756,6 @@ kde4-base_src_configure() {
 	# Build tests in src_test only, where we override this value
 	local cmakeargs=(-DKDE4_BUILD_TESTS=OFF)
 
-	if use_if_iuse kdeenablefinal; then
-		cmakeargs+=(-DKDE4_ENABLE_FINAL=ON)
-	fi
-
 	if use_if_iuse debug; then
 		# Set "real" debug mode
 		CMAKE_BUILD_TYPE="Debugfull"
@@ -896,15 +889,6 @@ kde4-base_pkg_postinst() {
 	buildsycoca
 
 	if [[ -z ${I_KNOW_WHAT_I_AM_DOING} ]]; then
-		if use_if_iuse kdeenablefinal; then
-			echo
-			ewarn "WARNING! you have kdeenable final useflag enabled."
-			ewarn "This useflag needs to be enabled on ALL kde using packages and"
-			ewarn "is known to cause issues."
-			ewarn "You are using this setup at your own risk and the kde team does not"
-			ewarn "take responsibilities for dead kittens."
-			echo
-		fi
 		if [[ ${BUILD_TYPE} = live ]]; then
 			echo
 			einfo "WARNING! This is an experimental live ebuild of ${CATEGORY}/${PN}"
