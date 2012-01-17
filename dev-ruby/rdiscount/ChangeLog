@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdiscount
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.9 2012/01/14 07:11:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.10 2012/01/17 13:55:29 ago Exp $
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> rdiscount-1.6.8.ebuild:
+  Stable for amd64, wrt bug #398847
 
 *rdiscount-1.6.8-r1 (14 Jan 2012)
 
