@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.77 2011/12/04 16:47:10 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.78 2012/01/17 22:02:42 cardoe Exp $
+
+*qemu-kvm-1.0 (17 Jan 2012)
+
+  17 Jan 2012; Doug Goldstein <cardoe@gentoo.org> +qemu-kvm-1.0.ebuild:
+  Version bump. Based on ebuild from Alphat-PC <alphatpc@gmail.com>
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> qemu-kvm-0.14.1-r2.ebuild:
   Stable on amd64 wrt bug #364889
