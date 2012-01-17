@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpflow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.23 2012/01/17 04:53:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.24 2012/01/17 13:05:15 ago Exp $
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> tcpflow-1.0.6.ebuild:
+  Stable for amd64, wrt bug #399133
 
 *tcpflow-1.1.0_beta3 (17 Jan 2012)
 
