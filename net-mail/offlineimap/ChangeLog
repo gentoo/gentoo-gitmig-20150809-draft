@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.78 2012/01/08 14:02:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.79 2012/01/17 10:15:50 tomka Exp $
+
+*offlineimap-6.5.2 (17 Jan 2012)
+
+  17 Jan 2012; Thomas Kahle <tomka@gentoo.org> +offlineimap-6.5.2.ebuild:
+  bump to 6.5.2
 
 *offlineimap-6.5.1.2 (08 Jan 2012)
 
