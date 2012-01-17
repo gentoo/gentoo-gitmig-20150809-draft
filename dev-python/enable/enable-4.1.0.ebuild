@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-4.0.0.ebuild,v 1.2 2012/01/17 06:16:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-4.1.0.ebuild,v 1.1 2012/01/17 06:21:27 bicatali Exp $
 
 EAPI=4
-PYTHON_DEPEND="2"
+
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils virtualx
+inherit distutils eutils virtualx
 
-DESCRIPTION="Enthought Tool Suite: application tools"
-HOMEPAGE="http://code.enthought.com/projects/app_tools/ http://pypi.python.org/pypi/apptools"
+DESCRIPTION="Enthought Tool Suite: Drawing and interaction packages"
+HOMEPAGE="http://code.enthought.com/projects/enable/ http://pypi.python.org/pypi/enable"
 SRC_URI="http://www.enthought.com/repo/ets/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -19,17 +19,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples test"
 
-RDEPEND="dev-python/configobj
-	dev-python/numpy
-	>=dev-python/traits-4.1.0"
+RDEPEND="dev-python/numpy
+	dev-python/reportlab
+	>=dev-python/traitsui-4
+	>=media-libs/freetype-2
+	virtual/opengl
+	x11-libs/libX11"
 DEPEND="dev-python/setuptools
+	dev-lang/swig
+	dev-python/cython
 	doc? ( dev-python/sphinx )
 	test? (
 		${RDEPEND}
-		dev-python/pyface
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
 	)"
+
+DOCS="docs/*.txt"
 
 src_compile() {
 	distutils_src_compile

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyface
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/ChangeLog,v 1.1 2011/08/03 23:48:32 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/ChangeLog,v 1.2 2012/01/17 06:23:19 bicatali Exp $
+
+*pyface-4.1.0 (17 Jan 2012)
+
+  17 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +pyface-4.1.0.ebuild:
+  Version bump
 
 *pyface-4.0.0 (03 Aug 2011)
 

@@ -1,35 +1,36 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-4.0.0.ebuild,v 1.2 2012/01/17 06:16:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.1.0.ebuild,v 1.1 2012/01/17 06:23:19 bicatali Exp $
 
 EAPI=4
-PYTHON_DEPEND="2"
+
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils virtualx
 
-DESCRIPTION="Enthought Tool Suite: application tools"
-HOMEPAGE="http://code.enthought.com/projects/app_tools/ http://pypi.python.org/pypi/apptools"
+DESCRIPTION="Enthought Tool Suite: Traits-capable windowing framework"
+HOMEPAGE="https://github.com/enthought/pyface http://pypi.python.org/pypi/pyface"
 SRC_URI="http://www.enthought.com/repo/ets/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc examples test"
 
-RDEPEND="dev-python/configobj
-	dev-python/numpy
-	>=dev-python/traits-4.1.0"
+RDEPEND=">=dev-python/traits-4.1
+		|| ( dev-python/wxpython dev-python/PyQt4 dev-python/pyside )"
 DEPEND="dev-python/setuptools
 	doc? ( dev-python/sphinx )
 	test? (
 		${RDEPEND}
-		dev-python/pyface
+		dev-python/traitsui
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
 	)"
+
+DOCS="docs/*.txt"
 
 src_compile() {
 	distutils_src_compile

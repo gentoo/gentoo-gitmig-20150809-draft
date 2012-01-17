@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/enable
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.14 2011/08/06 23:46:45 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.15 2012/01/17 06:21:27 bicatali Exp $
+
+*enable-4.1.0 (17 Jan 2012)
+
+  17 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +enable-4.1.0.ebuild:
+  Version bump
 
   06 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> enable-4.0.0.ebuild:
   Syntax fix
