@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/oxygen-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.21 2012/01/17 11:33:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.22 2012/01/17 12:57:38 scarabeus Exp $
+
+*oxygen-gtk-1.2.0-r1 (17 Jan 2012)
+*oxygen-gtk-1.0.0-r1 (17 Jan 2012)
+
+  17 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -oxygen-gtk-1.0.0.ebuild, +oxygen-gtk-1.0.0-r1.ebuild,
+  -oxygen-gtk-1.2.0.ebuild, +oxygen-gtk-1.2.0-r1.ebuild:
+  Revision bump to rename env files. Fixes bug #399171.
 
 *oxygen-gtk-1.2.0 (17 Jan 2012)
 

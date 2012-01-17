@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.2.0.ebuild,v 1.1 2012/01/17 11:33:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.2.0-r1.ebuild,v 1.1 2012/01/17 12:57:38 scarabeus Exp $
 
 EAPI=4
 
@@ -44,8 +44,8 @@ src_install() {
 
 	cmake-utils_src_install
 
-	cat <<-EOF > 99oxygen-gtk
+	cat <<-EOF > 99oxygen-gtk2
 CONFIG_PROTECT="${EPREFIX}/usr/share/themes/oxygen-gtk/gtk-2.0"
 EOF
-	doenvd 99oxygen-gtk
+	doenvd 99oxygen-gtk2
 }
