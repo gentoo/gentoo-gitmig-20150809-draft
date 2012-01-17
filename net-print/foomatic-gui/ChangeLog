@@ -1,6 +1,12 @@
 # ChangeLog for net-print/foomatic-gui
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.13 2011/06/13 15:04:33 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.14 2012/01/17 14:08:47 jlec Exp $
+
+*foomatic-gui-0.7.9.5 (17 Jan 2012)
+
+  17 Jan 2012; Justin Lecher <jlec@gentoo.org> -foomatic-gui-0.7.9.4.ebuild,
+  +foomatic-gui-0.7.9.5.ebuild, metadata.xml:
+  Version Bump, should fix CVE-2011-2899, #386279
 
   13 Jun 2011; Pacho Ramos <pacho@gentoo.org> foomatic-gui-0.7.9.4.ebuild:
   RDEPEND on splitted python, bug #352937.
