@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.75 2012/01/09 04:36:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.76 2012/01/17 20:25:30 cardoe Exp $
 
 # This file requires >=portage-2.1.1
+
+# Doug Goldstein <cardoe@gentoo.org> (17 Jan 2012)
+# The SPICE server is only supported on 64-bit platforms and not on 32-bit
+app-emulation/qemu-kvm spice
 
 # Alexandre Rostovtsev <tetromono@gentoo.org> (09 Jan 2012)
 # jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
