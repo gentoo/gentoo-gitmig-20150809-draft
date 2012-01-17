@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.23 2012/01/11 07:44:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.24 2012/01/17 09:13:26 chainsaw Exp $
+
+*nodejs-0.6.7-r1 (17 Jan 2012)
+
+  17 Jan 2012; Tony Vroon <chainsaw@gentoo.org> +nodejs-0.6.7-r1.ebuild:
+  Drop pax RWX mapping restrictions on hardened systems to avoid
+  (uninformative) start-up failure. Approved by Patrick "bonsaikitten" Lauer on
+  #gentoo-dev; fix suggested by Anthony "blueness" Basile in bug #368153.
 
 *nodejs-0.6.7 (11 Jan 2012)
 
