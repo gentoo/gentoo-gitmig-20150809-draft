@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-xetex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/ChangeLog,v 1.49 2012/01/16 14:23:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/ChangeLog,v 1.50 2012/01/17 19:13:14 phajdan.jr Exp $
+
+  17 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  texlive-xetex-2011.ebuild:
+  x86 stable wrt bug #395735
 
   16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> texlive-xetex-2011.ebuild:
   Stable for amd64, wrt bug #395735

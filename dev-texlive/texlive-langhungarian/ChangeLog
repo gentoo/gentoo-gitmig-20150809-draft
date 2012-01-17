@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langhungarian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhungarian/ChangeLog,v 1.41 2012/01/16 13:56:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhungarian/ChangeLog,v 1.42 2012/01/17 18:55:49 phajdan.jr Exp $
+
+  17 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  texlive-langhungarian-2011.ebuild:
+  x86 stable wrt bug #395735
 
   16 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
   texlive-langhungarian-2011.ebuild:
