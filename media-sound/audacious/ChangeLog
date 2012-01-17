@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.249 2012/01/17 12:55:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.250 2012/01/17 13:22:00 klausman Exp $
+
+  17 Jan 2012; Tobias Klausmann <klausman@gentoo.org> audacious-3.1.ebuild:
+  Stable on alpha, bug #383991
 
   17 Jan 2012; Tobias Klausmann <klausman@gentoo.org>
   +files/audacious_ldflags.patch, audacious-3.1.1.ebuild, audacious-3.1.ebuild:
