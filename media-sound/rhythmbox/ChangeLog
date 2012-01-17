@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.210 2012/01/16 03:47:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.211 2012/01/17 17:05:37 pacho Exp $
+
+  17 Jan 2012; Pacho Ramos <pacho@gentoo.org> rhythmbox-2.95.ebuild:
+  >=x11-libs/gtk+-3.2 is needed, bug #399121 by erhard.furtner and Matthias
+  Bethke.
 
 *rhythmbox-2.95 (16 Jan 2012)
 

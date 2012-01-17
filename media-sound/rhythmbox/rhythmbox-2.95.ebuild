@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.95.ebuild,v 1.1 2012/01/16 03:47:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.95.ebuild,v 1.2 2012/01/17 17:05:37 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -32,7 +32,7 @@ REQUIRED_USE="
 # NOTE: gst-python is still needed because gstreamer introspection is incomplete
 COMMON_DEPEND=">=dev-libs/glib-2.26.0:2
 	dev-libs/libxml2:2
-	>=x11-libs/gtk+-2.91.4:3[introspection]
+	>=x11-libs/gtk+-3.2:3[introspection]
 	>=x11-libs/gdk-pixbuf-2.18.0:2
 	>=dev-libs/gobject-introspection-0.10.0
 	>=dev-libs/libpeas-0.7.3[gtk,python?]
