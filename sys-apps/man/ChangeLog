@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.168 2012/01/14 10:12:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.169 2012/01/17 16:45:00 jer Exp $
+
+  17 Jan 2012; Jeroen Roovers <jer@gentoo.org> man-1.6g.ebuild:
+  Stable for HPPA (bug #398461).
 
   14 Jan 2012; Agostino Sarubbo <ago@gentoo.org> man-1.6g.ebuild:
   Stable for AMD64, wrt bug #398461
