@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.4.ebuild,v 1.2 2012/01/16 20:35:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.4-r1.ebuild,v 1.1 2012/01/17 18:28:45 bicatali Exp $
 
 EAPI=4
 
@@ -49,13 +49,12 @@ src_prepare(){
 	use_cvx() {
 		if use ${1}; then
 			sed -i \
-				-e "s/\(BUILD_${2^^} =\) 0/\1 1/" \
+				-e "s/\(BUILD_${1^^} =\) 0/\1 1/" \
 				setup.py || die
 		fi
 	}
 
 	pkg_lib blas
-	pkg_lib cblas
 	pkg_lib lapack
 	use_cvx gsl && pkg_lib gsl
 	use_cvx fftw && pkg_lib fftw3

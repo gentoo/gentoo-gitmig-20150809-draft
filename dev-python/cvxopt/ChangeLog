@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cvxopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.2 2012/01/16 20:35:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.3 2012/01/17 18:28:45 bicatali Exp $
+
+*cvxopt-1.1.4-r1 (17 Jan 2012)
+
+  17 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> -cvxopt-1.1.4.ebuild,
+  +cvxopt-1.1.4-r1.ebuild, files/cvxopt-setup.patch:
+  Fixed missing components (bug #399029, thanks Francois Bissey), removed
+  useless seds and fixed optional sed's
 
   16 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> cvxopt-1.1.4.ebuild:
   Fixed doc generation, bug #398857 thanks Martin von Gagern
