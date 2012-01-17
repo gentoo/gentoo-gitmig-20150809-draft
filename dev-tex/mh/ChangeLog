@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.27 2012/01/16 13:17:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.28 2012/01/17 17:20:38 phajdan.jr Exp $
+
+  17 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mh-20111011.ebuild:
+  x86 stable wrt bug #395735
 
   16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> mh-20111011.ebuild:
   Stable for amd64, wrt bug #395735
