@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.0.ebuild,v 1.3 2012/01/17 06:36:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.0.ebuild,v 1.4 2012/01/17 15:31:22 bicatali Exp $
 
 EAPI="3"
 
@@ -59,7 +59,7 @@ RDEPEND="${CDEPEND}
 	cairo?  ( dev-python/pycairo )
 	excel?  ( dev-python/xlwt )
 	fltk?   ( dev-python/pyfltk )
-	qt4?    ( || ( dev-python/PyQt4[X] dev-python/pyside ) )
+	qt4?    ( || ( dev-python/PyQt4[X] dev-python/pyside[X] ) )
 	latex?  (
 		virtual/latex-base
 		app-text/ghostscript-gpl
