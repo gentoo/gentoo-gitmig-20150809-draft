@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.1.1.ebuild,v 1.1 2011/12/05 22:46:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.1.1.ebuild,v 1.2 2012/01/17 12:55:52 klausman Exp $
 
 EAPI=4
+inherit eutils
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
@@ -34,6 +35,10 @@ DEPEND="${RDEPEND}
 PDEPEND=">=media-plugins/audacious-plugins-3.1.1"
 
 src_configure() {
+	# Some gccs don't like "-z defs" on their command line. Explicitly make it a
+	# linker flag (bug 395213).
+	epatch "${FILESDIR}/audacious_ldflags.patch"
+
 	# D-Bus is a mandatory dependency, remote control,
 	# session management and some plugins depend on this.
 	# Building without D-Bus is *unsupported* and a USE-flag
