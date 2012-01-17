@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-4.4.11.1.ebuild,v 1.5 2011/06/01 19:41:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-4.4.11.1.ebuild,v 1.6 2012/01/17 11:56:06 johu Exp $
 
 EAPI=4
 
@@ -26,8 +26,6 @@ KMEXTRACTONLY="
 "
 
 KMLOADLIBS="libkdepim"
-
-PATCHES=( "${FILESDIR}/${PN}"-4.4.10-enablefinal.patch )
 
 src_unpack() {
 	if use handbook; then

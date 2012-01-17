@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/nsplugins-4.6.3.ebuild,v 1.4 2011/06/26 01:54:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/nsplugins-4.6.3.ebuild,v 1.5 2012/01/17 11:48:28 johu Exp $
 
 EAPI=4
 
@@ -21,5 +21,3 @@ RDEPEND="${DEPEND}
 KMEXTRACTONLY="
 	konqueror/settings/
 "
-
-PATCHES=( "${FILESDIR}/${PN}"-4.6.1-enablefinal.patch )
