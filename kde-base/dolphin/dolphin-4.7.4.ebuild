@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.7.4.ebuild,v 1.3 2012/01/16 21:08:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.7.4.ebuild,v 1.4 2012/01/17 22:00:19 johu Exp $
 
 EAPI=4
 
@@ -41,4 +41,11 @@ src_configure() {
 	)
 
 	kde4-meta_src_configure
+}
+
+pkg_postinst() {
+	kde4-base_pkg_postinst
+	echo
+	elog "For .exe file preview support, install media-gfx/icoutils."
+	echo
 }
