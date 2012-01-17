@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.15 2012/01/03 15:47:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.16 2012/01/17 17:53:08 xarthisius Exp $
+
+*ceph-0.40 (17 Jan 2012)
+
+  17 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> +ceph-0.40.ebuild:
+  Version bump, fixes bug #369627 and #394287 by Agostino Sarubbo
+  <ago@gentoo.org> and Emery Hemingway <emery@vfemail.net> respectively. Add
+  tcmalloc USE flag
 
   03 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +files/ceph-issue1869.patch, -ceph-0.36.ebuild, ceph-0.38.ebuild:
