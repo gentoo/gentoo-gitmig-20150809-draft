@@ -1,22 +1,22 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r18.ebuild,v 1.8 2010/10/10 11:56:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r8.ebuild,v 1.1 2012/01/17 16:28:34 grobian Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r11"
+PATCHSET_REV="-r8"
 
-DESCRIPTION="a small but very powerful text-based mail client"
-HOMEPAGE="http://www.mutt.org"
+DESCRIPTION="A small but very powerful text-based mail client"
+HOMEPAGE="http://www.mutt.org/"
 SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2
 	http://dev.gentoo.org/~grobian/distfiles/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2"
-IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap mbox nls nntp pop qdbm sasl sidebar smime smtp ssl tokyocabinet"
+IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap mbox nls nntp pop qdbm sasl selinux sidebar smime smtp ssl tokyocabinet"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 RDEPEND=">=sys-libs/ncurses-5.2
 	tokyocabinet?  ( dev-db/tokyocabinet )
 	!tokyocabinet? (
@@ -42,8 +42,9 @@ RDEPEND=">=sys-libs/ncurses-5.2
 		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
 	idn?     ( net-dns/libidn )
-	gpg?   ( >=app-crypt/gpgme-0.9.0 )
+	gpg?     ( >=app-crypt/gpgme-0.9.0 )
 	smime?   ( >=dev-libs/openssl-0.9.6 )
+	selinux? ( sec-policy/selinux-mutt )
 	app-misc/mime-types"
 DEPEND="${RDEPEND}
 	net-mail/mailbase
@@ -59,9 +60,11 @@ PATCHDIR="${WORKDIR}"/${P}-gentoo-patches${PATCHSET_REV}
 src_prepare() {
 	# Post-release hot-fixes grabbed from HG, this is what all following
 	# patches are based on in my Mercurial patchqueue (mq).
-	# If you ever take over or need to modify patches here, just ask me
-	# (grobian) for a Mercurial clone of my gentoo branch(es) and
-	# patchqueue as it'll save you a lot of work.
+	# If you ever take over or need to modify patches here, just check
+	# out the gentoo branch(es) of Gentoo's Mutt Mercurial clone, and
+	# the patchqueue as it'll save you a lot of work.
+	# http://prefix.gentooexperimental.org:8000/mutt/
+	# http://prefix.gentooexperimental.org:8000/mutt-patches/
 	for rev in $(eval echo {0..${PR#r}}) ; do
 		local revpatch="${PATCHDIR}"/mutt-gentoo-${PV}-r${rev}.patch
 		[[ -e ${revpatch} ]] && \
@@ -80,7 +83,6 @@ src_prepare() {
 	epatch "${PATCHDIR}"/gpgme-1.2.0.patch
 	# same category, but functional bits
 	epatch "${PATCHDIR}"/dont-reveal-bbc.patch
-	epatch "${PATCHDIR}"/realpath-slowness.patch
 
 	# the big feature patches that upstream doesn't want to include, but
 	# nearly every distro has due to their usefulness
@@ -88,7 +90,13 @@ src_prepare() {
 		epatch "${p}"
 	done
 
-	use sidebar && epatch "${PATCHDIR}"/sidebar.20090619.patch
+	# we conditionalise this one, simply because it has considerable
+	# impact on the code
+	if use sidebar ; then
+		epatch "${PATCHDIR}"/sidebar.patch
+		epatch "${PATCHDIR}"/sidebar-utf8.patch
+		epatch "${PATCHDIR}"/sidebar-dotpathsep.patch
+	fi
 
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
@@ -183,7 +191,6 @@ src_configure() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
-	find "${ED}"/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
 		insinto /etc/mutt
 		newins "${FILESDIR}"/Muttrc.mbox Muttrc
@@ -198,9 +205,11 @@ src_install() {
 
 	# A man-page is always handy
 	if use !doc; then
+		make -C doc DESTDIR="${D}" muttrc.man || die
 		cp doc/mutt.man mutt.1
 		cp doc/muttbug.man flea.1
-		doman mutt.1 flea.1
+		cp doc/muttrc.man muttrc.5
+		doman mutt.1 flea.1 muttrc.5
 	else
 		# nuke manpages that should be provided by an MTA, bug #177605
 		rm "${ED}"/usr/share/man/man5/{mbox,mmdf}.5 \
