@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.ebuild,v 1.2 2012/01/17 22:21:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.ebuild,v 1.3 2012/01/17 22:23:53 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -96,8 +96,8 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	app-text/texi2html
-	>=sys-kernel/linux-headers-2.6.35
-	ssl? ( dev-util/pkgconfig )"
+	dev-util/pkgconfig
+	>=sys-kernel/linux-headers-2.6.35"
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
 
