@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.25 2011/11/21 18:11:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.26 2012/01/17 22:25:48 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -31,7 +31,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses nss \
-png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
+opengl png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
 +vhost-net xattr xen"
 # static, depends on libsdl being built with USE=static-libs, which can not
 # be expressed in current EAPI's
@@ -78,13 +78,15 @@ RDEPEND="
 	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
 	nss? ( dev-libs/nss )
+	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
 	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
-	spice? ( >=app-emulation/spice-0.6.0 )
+	spice? ( >=app-emulation/spice-0.9.0
+			>=app-emulation/spice-protocol-0.8.1 )
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
@@ -93,9 +95,33 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	app-text/texi2html
-	>=sys-kernel/linux-headers-2.6.35
-	ssl? ( dev-util/pkgconfig )
-"
+	dev-util/pkgconfig
+	>=sys-kernel/linux-headers-2.6.35"
+
+STRIP_MASK="/usr/share/qemu/palcode-clipper"
+
+QA_PRESTRIPPED="
+	usr/share/qemu/openbios-ppc
+	usr/share/qemu/openbios-sparc64
+	usr/share/qemu/openbios-sparc32
+	usr/share/qemu/palcode-clipper"
+
+QA_WX_LOAD="${QA_PRESTRIPPED}
+	usr/bin/qemu-i386
+	usr/bin/qemu-x86_64
+	usr/bin/qemu-alpha
+	usr/bin/qemu-arm
+	usr/bin/qemu-cris
+	usr/bin/qemu-m68k
+	usr/bin/qemu-microblaze
+	usr/bin/qemu-mips
+	usr/bin/qemu-mipsel
+	usr/bin/qemu-sh4
+	usr/bin/qemu-sh4eb
+	usr/bin/qemu-sparc
+	usr/bin/qemu-sparc64
+	usr/bin/qemu-armeb
+	usr/bin/qemu-sparc32plus"
 
 kvm_kern_warn() {
 	eerror "Please enable KVM support in your kernel, found at:"
@@ -105,8 +131,8 @@ kvm_kern_warn() {
 	eerror
 }
 
-pkg_setup() {
-	if ! use qemu_softmmu_targets_x86_64 && use x86_64 ; then
+pkg_pretend() {
+	if ! use qemu_softmmu_targets_x86_64 && use amd64 ; then
 		eerror "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
 	fi
 
@@ -129,6 +155,9 @@ pkg_setup() {
 			ewarn "to have vhost-net support."
 		fi
 	fi
+}
+
+pkg_setup() {
 
 	python_set_active_version 2
 
@@ -201,10 +230,11 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable brltty brlapi)"
 	conf_opts="${conf_opts} $(use_enable curl)"
 	conf_opts="${conf_opts} $(use_enable fdt)"
-	conf_opts="${conf_opts} $(use_enable hardened user-pie)"
+	conf_opts="${conf_opts} $(use_enable hardened pie)"
 	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
 	conf_opts="${conf_opts} $(use_enable ncurses curses)"
 	conf_opts="${conf_opts} $(use_enable nss smartcard-nss)"
+	conf_opts="${conf_opts} $(use_enable opengl)"
 	conf_opts="${conf_opts} $(use_enable png vnc-png)"
 	conf_opts="${conf_opts} $(use_enable rbd)"
 	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
@@ -248,7 +278,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	if [ ! -z "${softmmu_targets}" ]; then
-		insinto /$(get_libdir)/udev/rules.d/
+		insinto /lib/udev/rules.d/
 		doins kvm/scripts/65-kvm.rules || die
 
 		if use qemu-ifup; then
