@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.ebuild,v 1.1 2012/01/17 22:02:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.ebuild,v 1.2 2012/01/17 22:21:43 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -279,7 +279,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	if [ ! -z "${softmmu_targets}" ]; then
-		insinto /$(get_libdir)/udev/rules.d/
+		insinto /lib/udev/rules.d/
 		doins kvm/scripts/65-kvm.rules || die
 
 		if use qemu-ifup; then
