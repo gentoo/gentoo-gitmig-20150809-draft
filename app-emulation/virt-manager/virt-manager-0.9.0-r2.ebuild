@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0-r2.ebuild,v 1.1 2012/01/16 21:20:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0-r2.ebuild,v 1.2 2012/01/17 17:19:09 cardoe Exp $
 
-BACKPORTS=2
+BACKPORTS=3
 
 EAPI=2
 
