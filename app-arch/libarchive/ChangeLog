@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.104 2012/01/16 20:33:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.105 2012/01/17 05:16:21 jer Exp $
+
+  17 Jan 2012; Jeroen Roovers <jer@gentoo.org> libarchive-2.8.5.ebuild:
+  Stable for HPPA (bug #366687).
 
   16 Jan 2012; Mark Loeser <halcy0n@gentoo.org> libarchive-2.8.5.ebuild:
   Stable for ppc/ppc64; bug #366687
