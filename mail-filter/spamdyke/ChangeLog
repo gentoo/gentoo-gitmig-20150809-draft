@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamdyke
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.21 2012/01/15 16:19:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.22 2012/01/17 11:33:35 ago Exp $
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> spamdyke-4.2.1.ebuild:
+  Stable for X86, wrt security bug #397941
 
   15 Jan 2012; Agostino Sarubbo <ago@gentoo.org> spamdyke-4.2.1.ebuild:
   Stable for AMD64, wrt security bug #397941
