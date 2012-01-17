@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/crystal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/ChangeLog,v 1.9 2011/12/10 07:23:21 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/ChangeLog,v 1.10 2012/01/17 22:42:49 ago Exp $
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> crystal-0.2.4.ebuild:
+  Stable for amd64, wrt bug #398609
 
 *crystal-0.2.4 (10 Dec 2011)
 
