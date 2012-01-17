@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20120116.ebuild,v 1.1 2012/01/16 22:15:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20120116.ebuild,v 1.2 2012/01/17 00:43:04 ssuominen Exp $
 
 # cvs -d anoncvs@anoncvs.openbsd.org:/cvs get src/usr.bin/pkg-config/pkg-config
 # cvs -d anoncvs@anoncvs.openbsd.org:/cvs get src/usr.bin/pkg-config/pkg-config.1
@@ -21,6 +21,11 @@ RDEPEND="dev-lang/perl"
 DEPEND=""
 
 S=${WORKDIR}/src
+
+src_prepare() {
+	# Config.pm from dev-lang/perl doesn't set ARCH, only archname
+	sed -i -e '/Config/s:ARCH:archname:' usr.bin/pkg-config/pkg-config || die
+}
 
 src_install() {
 	newbin usr.bin/pkg-config/pkg-config pkg-config-openbsd
