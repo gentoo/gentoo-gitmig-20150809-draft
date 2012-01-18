@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.94 2012/01/17 16:05:59 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.95 2012/01/18 17:50:58 mabi Exp $
+
+  18 Jan 2012; Matti Bickel <mabi@gentoo.org> php-pear-r1.eclass:
+  Remove dependency on long gone dev-php/PEAR-PEAR-1.8.1
 
   17 Jan 2012; Magnus Granberg <zorry@gentoo.org> toolchain.eclass:
   Add HARD_CFLAGS to ALL_CXXFLAGS for hardened gcc 4.7
