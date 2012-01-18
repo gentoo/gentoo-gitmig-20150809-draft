@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS2/PEAR-Net_DNS2-1.1.2.ebuild,v 1.1 2011/06/04 19:00:09 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS2/PEAR-Net_DNS2-1.2.0.ebuild,v 1.1 2012/01/18 20:17:17 mabi Exp $
+
+EAPI="4"
 
 inherit php-pear-r1
 
@@ -9,3 +11,5 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+RDEPEND="dev-lang/php[sockets]"
