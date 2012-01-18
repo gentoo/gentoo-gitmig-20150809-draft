@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/solfege
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.79 2011/10/24 04:14:57 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.80 2012/01/18 10:58:44 ssuominen Exp $
+
+  18 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> solfege-3.18.7.ebuild:
+  Revert back to ~ppc wrt #375479
 
   24 Oct 2011; Tim Harder <radhermit@gentoo.org> -solfege-3.20.3.ebuild:
   Remove old.
