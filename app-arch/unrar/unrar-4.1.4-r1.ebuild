@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.1.4-r1.ebuild,v 1.1 2012/01/18 21:52:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.1.4-r1.ebuild,v 1.2 2012/01/18 22:20:10 ssuominen Exp $
 
 EAPI=4
 inherit flag-o-matic multilib toolchain-funcs
@@ -34,17 +34,17 @@ src_compile() {
 	local f=makefile.unix
 
 	emake -f ${f} CXX="$(tc-getCXX)" CXXFLAGS="-fPIC ${CXXFLAGS}" lib
-	rm -f *.o
-	emake -f ${f} CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" STRIP="true"
 	ln -s libunrar$(get_libname ${PV%.*.*}) libunrar$(get_libname)
 	ln -s libunrar$(get_libname ${PV%.*.*}) libunrar$(get_libname ${PV})
+	rm -f *.o
+	emake -f ${f} CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" STRIP="true"
 }
 
 src_install() {
 	dobin unrar
 	dodoc readme.txt
 	dolib.so libunrar*
-	insinto /usr/include/libunrar4
+	insinto /usr/include/libunrar${PV%.*.*}
 	doins dll.hpp
-	dosym libunrar4 /usr/include/libunrar
+	dosym libunrar${PV%.*.*} /usr/include/libunrar
 }
