@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.6 2012/01/14 17:04:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.7 2012/01/18 08:55:08 tetromino Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -23,6 +23,9 @@ else
 	KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 	DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README.commits
 fi
+
+SRC_URI="${SRC_URI}
+	http://dev.gentoo.org/~tetromino/distfiles/aclocal/libgcrypt.m4.bz2"
 
 IUSE="afp archive avahi bluetooth bluray cdda doc fuse gdu gnome-keyring gphoto2 +http ios samba +udev"
 
@@ -84,8 +87,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Conditional patching purely to avoid eautoreconf
 	use gphoto2 && epatch "${FILESDIR}"/${PN}-1.2.2-gphoto2-stricter-checks.patch
 
@@ -101,7 +102,14 @@ src_prepare() {
 		sed -i -e 's/burn.mount/ /' daemon/Makefile.am || die
 	fi
 
-	{ use gphoto2 || use archive || use prefix; } && eautoreconf
+	if use gphoto2 || use archive || use prefix; then
+		# libgcrypt.m4 needed for eautoreconf, bug #399043
+		mv "${WORKDIR}/libgcrypt.m4" "${S}"/ || die
+
+		AT_M4DIR=. eautoreconf
+	fi
+
+	gnome2_src_prepare
 }
 
 src_install() {
