@@ -7,6 +7,8 @@
 			<pkg>x11-libs/gtk+:2</pkg></flag>
 		<flag name="spice">Support connecting to SPICE-enabled virtual
 			machines.</flag>
+		<flag name="vnc">Support connecting to VNC-enabled virtual
+			machines.</flag>
 	</use>
 </pkgmetadata>
 
