@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Net_Server
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.27 2007/12/06 00:41:57 jokey Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.28 2012/01/18 20:26:21 mabi Exp $
+
+*PEAR-Net_Server-1.0.2-r1 (18 Jan 2012)
+
+  18 Jan 2012; Matti Bickel <mabi@gentoo.org> +PEAR-Net_Server-1.0.2-r1.ebuild:
+  EAPI bump, license fix
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   -PEAR-Net_Server-0.12.0-r1.ebuild, PEAR-Net_Server-1.0.2.ebuild:
