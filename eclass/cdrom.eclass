@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cdrom.eclass,v 1.4 2012/01/15 19:59:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cdrom.eclass,v 1.5 2012/01/18 12:42:06 vapier Exp $
 
 # @ECLASS: cdrom.eclass
 # @MAINTAINER:
@@ -20,13 +20,17 @@ ___ECLASS_ONCE_CDROM=1
 
 inherit portability
 
-# @ECLASS-VARIABLE: CDROM_DISABLE_PROPERTIES
+# @ECLASS-VARIABLE: CDROM_OPTIONAL
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# By default, the eclass sets PROPERTIES="interactive".
-# A non-empty value of CDROM_DISABLE_PROPERTIES suppresses this.
-
-if [[ -z ${CDROM_DISABLE_PROPERTIES} ]]; then
+# By default, the eclass sets PROPERTIES="interactive" on the assumption
+# that people will be using these.  If your package optionally supports
+# disc based installed, then set this to "yes", and we'll set things
+# conditionally based on USE=cdinstall.
+if [[ ${CDROM_OPTIONAL} == "yes" ]] ; then
+	IUSE="cdinstall"
+	PROPERTIES="cdinstall? ( interactive )"
+else
 	PROPERTIES="interactive"
 fi
 
