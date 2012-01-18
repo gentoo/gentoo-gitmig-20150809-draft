@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ufconfig
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.30 2011/08/07 03:59:31 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.31 2012/01/18 20:09:50 lxnay Exp $
+
+  18 Jan 2012; Fabio Erculiani <lxnay@gentoo.org> ufconfig-3.6.1.ebuild:
+  add ~arm keyword
 
 *ufconfig-3.6.1 (07 Aug 2011)
 
