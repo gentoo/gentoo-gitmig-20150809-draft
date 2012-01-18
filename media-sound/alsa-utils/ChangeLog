@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.313 2011/12/29 21:33:35 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.314 2012/01/18 17:11:34 williamh Exp $
+
+  18 Jan 2012; William Hubbs <williamh@gentoo.org> alsa-utils-1.0.23-r1.ebuild,
+  alsa-utils-1.0.24.2-r1.ebuild:
+  drop module-init-tools from dependencies since it is in @system and will
+  eventually be replaced by kmod (approved by chainsaw).
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> alsa-utils-1.0.24.2-r1.ebuild:
   Stable for ppc/ppc64; bug #379423

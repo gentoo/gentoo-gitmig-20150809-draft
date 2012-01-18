@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.24.2-r1.ebuild,v 1.7 2011/12/29 21:33:35 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.24.2-r1.ebuild,v 1.8 2012/01/18 17:11:34 williamh Exp $
 
 EAPI=3
 inherit base systemd
@@ -25,7 +25,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 RDEPEND=">=sys-libs/ncurses-5.1
 	dev-util/dialog
 	>=media-libs/alsa-lib-1.0.24.1
-	sys-apps/module-init-tools
 	!minimal? ( sys-apps/pciutils )"
 
 S="${WORKDIR}/${MY_P}"
