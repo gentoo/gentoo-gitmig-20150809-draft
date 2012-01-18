@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/xcache
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/ChangeLog,v 1.2 2011/10/12 16:00:34 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/ChangeLog,v 1.3 2012/01/18 12:22:02 ago Exp $
+
+  18 Jan 2012; Agostino Sarubbo <ago@gentoo.org> xcache-1.3.2.ebuild:
+  Stable for amd64, wrt bug #398537
 
 *xcache-1.3.2 (12 Oct 2011)
 
