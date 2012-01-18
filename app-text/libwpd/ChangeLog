@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.92 2012/01/14 16:09:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.93 2012/01/18 20:11:41 lxnay Exp $
+
+  18 Jan 2012; Fabio Erculiani <lxnay@gentoo.org> libwpd-0.9.4.ebuild:
+  add ~arm keyword
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> libwpd-0.9.4.ebuild:
   x86 stable, bug #393007
