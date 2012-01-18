@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.208 2012/01/14 17:58:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.209 2012/01/18 21:08:51 maekke Exp $
+
+  18 Jan 2012; Markus Meier <maekke@gentoo.org>
+  gnome-icon-theme-3.2.1.2.ebuild:
+  arm stable, bug #393007
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org>
   gnome-icon-theme-3.2.1.2.ebuild:
