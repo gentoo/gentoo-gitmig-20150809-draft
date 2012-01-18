@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gucharmap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.164 2011/12/21 21:57:04 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.165 2012/01/18 08:22:59 tetromino Exp $
+
+  18 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gucharmap-2.32.1.ebuild:
+  Only depend on python if USE=python (bug #398957, thanks to Maxim Kammerer).
 
 *gucharmap-3.2.2 (21 Dec 2011)
 

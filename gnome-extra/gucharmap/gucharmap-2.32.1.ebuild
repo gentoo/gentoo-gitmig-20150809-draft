@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-2.32.1.ebuild,v 1.6 2011/03/22 19:29:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-2.32.1.ebuild,v 1.7 2012/01/18 08:22:59 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="python? 2:2.4"
 
 inherit gnome2 python
 
