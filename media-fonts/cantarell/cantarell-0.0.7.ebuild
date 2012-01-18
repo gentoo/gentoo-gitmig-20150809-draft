@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/cantarell-0.0.7.ebuild,v 1.3 2012/01/14 17:13:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/cantarell-0.0.7.ebuild,v 1.4 2012/01/18 20:43:30 maekke Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="${PN}-fonts"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/CantarellFonts"
 
 LICENSE="OFL-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="media-libs/fontconfig"
