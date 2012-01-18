@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0-r3.ebuild,v 1.1 2012/01/18 19:54:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0-r3.ebuild,v 1.2 2012/01/18 22:37:29 cardoe Exp $
 
 BACKPORTS=4
 
@@ -83,20 +83,4 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-
-	insinto /usr/share/virt-manager/pixmaps/
-	doins "${S}"/pixmaps/*.png
-	doins "${S}"/pixmaps/*.svg
-
-	insinto /usr/share/virt-manager/pixmaps/hicolor/16x16/actions/
-	doins "${S}"/pixmaps/hicolor/16x16/actions/*.png
-
-	insinto /usr/share/virt-manager/pixmaps/hicolor/22x22/actions/
-	doins "${S}"/pixmaps/hicolor/22x22/actions/*.png
-
-	insinto /usr/share/virt-manager/pixmaps/hicolor/24x24/actions/
-	doins "${S}"/pixmaps/hicolor/24x24/actions/*.png
-
-	insinto /usr/share/virt-manager/pixmaps/hicolor/32x32/actions/
-	doins "${S}"/pixmaps/hicolor/32x32/actions/*.png
 }
