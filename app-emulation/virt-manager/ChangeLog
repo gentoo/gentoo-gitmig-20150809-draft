@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.61 2012/01/17 17:55:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.62 2012/01/18 19:54:51 cardoe Exp $
+
+*virt-manager-0.9.0-r3 (18 Jan 2012)
+
+  18 Jan 2012; Doug Goldstein <cardoe@gentoo.org>
+  -virt-manager-0.9.0-r2.ebuild, +virt-manager-0.9.0-r3.ebuild:
+  Fix CPU usage issue.
 
   17 Jan 2012; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.9.0-r2.ebuild:
   Bump the depend on a patched up virtinst-0.600.0 so everything plays nice.
