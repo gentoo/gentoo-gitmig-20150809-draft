@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.54 2012/01/08 18:20:08 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.55 2012/01/18 10:11:52 wired Exp $
+
+  18 Jan 2012; Alex Alexander <wired@gentoo.org> znc-9999.ebuild, metadata.xml:
+  live ebuild: ares not used anymore, added support for dns threads
 
 *znc-0.202-r1 (08 Jan 2012)
 
