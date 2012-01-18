@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20120115.ebuild,v 1.1 2012/01/16 12:08:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.0_rc1.ebuild,v 1.1 2012/01/18 22:19:50 eras Exp $
 
 EAPI=4
 
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam
 
-MY_PV="${PV/_pre/-}"
+MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
 VDA_PV="2.8.5"
 VDA_P="${PN}-vda-v10-${VDA_PV}"
 RC_VER="2.6"
@@ -20,8 +20,8 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=dev-libs/libpcre-3.4
 	dev-lang/perl
@@ -38,6 +38,7 @@ DEPEND=">=dev-libs/libpcre-3.4
 
 RDEPEND="${DEPEND}
 	dovecot-sasl? ( net-mail/dovecot )
+	memcached? ( net-misc/memcached )
 	net-mail/mailbase
 	selinux? ( sec-policy/selinux-postfix )
 	!mail-mta/courier
@@ -68,6 +69,10 @@ pkg_setup() {
 src_prepare() {
 	if use vda; then
 		epatch "${DISTDIR}"/${VDA_P}.patch
+	fi
+
+	if ! use berkdb; then
+		epatch "${FILESDIR}/${P}_no-berkdb.patch"
 	fi
 
 	sed -i -e "/^#define ALIAS_DB_MAP/s|:/etc/aliases|:/etc/mail/aliases|" \
@@ -134,8 +139,7 @@ src_configure() {
 	fi
 
 	if ! use berkdb; then
-		sed -i -e "s|#define HAS_DB$|//#define HAS_DB|g" \
-			src/util/sys_defs.h || die
+		mycc="${mycc} -DNO_DB"
 		if use cdb; then
 			# change default hash format from Berkeley DB to cdb
 			sed -i -e "s/hash/cdb/" src/util/sys_defs.h || die
@@ -311,5 +315,10 @@ pkg_postinst() {
 		elog "startup scripts in ${ROOT}etc/init.d, please consider"
 		elog "upgrading your config for postmulti support. For more info:"
 		elog "http://www.postfix.org/MULTI_INSTANCE_README.html"
+		if ! use berkdb; then
+			ewarn "\nPostfix is installed without BerkeleyDB support."
+			ewarn "Please turn on berkdb USE flag if hash or btree table"
+			ewarn "lookup support is needed.\n"
+		fi
 	fi
 }

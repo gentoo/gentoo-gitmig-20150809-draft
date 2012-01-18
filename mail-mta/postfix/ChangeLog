@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.326 2012/01/16 12:08:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.327 2012/01/18 22:19:50 eras Exp $
+
+*postfix-2.9.0_rc1 (18 Jan 2012)
+
+  18 Jan 2012; Eray Aslan <eras@gentoo.org> -postfix-2.9_pre20120115.ebuild,
+  +postfix-2.9.0_rc1.ebuild, +files/postfix-2.9.0_rc1_no-berkdb.patch:
+  Version bump. Drop s390 - bug #399329
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> postfix-2.8.7.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #395289
