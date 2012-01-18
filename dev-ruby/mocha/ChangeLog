@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.40 2012/01/15 13:30:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.41 2012/01/18 16:25:17 jer Exp $
+
+  18 Jan 2012; Jeroen Roovers <jer@gentoo.org> mocha-0.10.0.ebuild:
+  Marked ~hppa (bug #398985).
 
 *mocha-0.10.0 (15 Jan 2012)
 
