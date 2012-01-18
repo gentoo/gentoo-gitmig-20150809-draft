@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.0.0-r1.ebuild,v 1.1 2012/01/17 12:57:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.0.0-r1.ebuild,v 1.2 2012/01/18 17:22:30 johu Exp $
 
 EAPI=4
 
@@ -19,6 +19,7 @@ SLOT="3"
 IUSE="debug doc"
 
 RDEPEND="
+	!x11-themes/oxygen-gtk:0
 	dev-libs/dbus-glib
 	dev-libs/glib
 	x11-libs/cairo
@@ -26,7 +27,6 @@ RDEPEND="
 	x11-libs/libX11
 "
 DEPEND="${RDEPEND}
-	!x11-themes/oxygen-gtk:0
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )
 "
