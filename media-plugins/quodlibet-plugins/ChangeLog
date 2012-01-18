@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/quodlibet-plugins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.5 2011/07/07 15:28:23 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.6 2012/01/18 11:32:36 ssuominen Exp $
+
+*quodlibet-plugins-2.3.92 (18 Jan 2012)
+
+  18 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +quodlibet-plugins-2.3.92.ebuild:
+  Version bump wrt #378021 by Sebastian Pipping
 
   07 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
   quodlibet-plugins-2.2.1.ebuild, quodlibet-plugins-2.3.ebuild:
