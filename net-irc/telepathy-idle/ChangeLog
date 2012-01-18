@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/telepathy-idle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.37 2012/01/14 17:34:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.38 2012/01/18 20:59:36 maekke Exp $
+
+  18 Jan 2012; Markus Meier <maekke@gentoo.org> telepathy-idle-0.1.11.ebuild:
+  arm stable, bug #393007
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> telepathy-idle-0.1.11.ebuild:
   x86 stable, bug #393007
