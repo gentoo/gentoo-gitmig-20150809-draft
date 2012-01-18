@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.9 2012/01/16 19:23:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.10 2012/01/18 12:43:12 vapier Exp $
 
-CDROM_DISABLE_PROPERTIES=1
+CDROM_OPTIONAL="yes"
 inherit eutils cdrom games
 
 DESCRIPTION="Quake III Team Arena - data portion"
@@ -12,8 +12,7 @@ SRC_URI="mirror://idsoftware/quake3/linux/linuxq3apoint-${PV}-3.x86.run"
 LICENSE="Q3AEULA"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
-IUSE="cdinstall"
-PROPERTIES="cdinstall? ( interactive )"
+IUSE=""
 
 RDEPEND="|| (
 	games-fps/quake3
