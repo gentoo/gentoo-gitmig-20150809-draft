@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP_Session2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Session2/ChangeLog,v 1.5 2012/01/18 19:49:05 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Session2/ChangeLog,v 1.6 2012/01/18 19:51:03 mabi Exp $
+
+  18 Jan 2012; Matti Bickel <mabi@gentoo.org> -PEAR-HTTP_Session2-0.6.1.ebuild,
+  PEAR-HTTP_Session2-0.7.3.ebuild:
+  fix description & remove missed old package
 
 *PEAR-HTTP_Session2-0.7.3 (18 Jan 2012)
 
