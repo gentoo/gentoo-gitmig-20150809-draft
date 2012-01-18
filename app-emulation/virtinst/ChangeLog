@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.32 2012/01/17 17:51:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.33 2012/01/18 17:32:51 cardoe Exp $
+
+*virtinst-0.600.0-r2 (18 Jan 2012)
+
+  18 Jan 2012; Doug Goldstein <cardoe@gentoo.org> -virtinst-0.600.0-r1.ebuild,
+  +virtinst-0.600.0-r2.ebuild:
+  Add an XML utility function that is necessary to fix a CPU usage issue in
+  virt-manager.
 
 *virtinst-0.600.0-r1 (17 Jan 2012)
 
