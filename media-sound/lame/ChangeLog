@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.139 2012/01/10 10:38:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.140 2012/01/18 16:05:11 jer Exp $
+
+  18 Jan 2012; Jeroen Roovers <jer@gentoo.org> lame-3.99.3.ebuild:
+  Stable for HPPA (bug #398353).
 
   10 Jan 2012; Agostino Sarubbo <ago@gentoo.org> lame-3.99.3.ebuild:
   Stable for AMD64, wrt bug #398353
