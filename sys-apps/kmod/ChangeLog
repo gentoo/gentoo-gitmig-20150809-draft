@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.13 2012/01/18 23:10:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.14 2012/01/18 23:23:37 williamh Exp $
+
+*kmod-4 (18 Jan 2012)
+
+  18 Jan 2012; William Hubbs <williamh@gentoo.org> +kmod-4.ebuild:
+  version bump
 
   18 Jan 2012; William Hubbs <williamh@gentoo.org> kmod-9999.ebuild:
   update to block module-init-tools if tools is in use
