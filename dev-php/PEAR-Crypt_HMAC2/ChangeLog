@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Crypt_HMAC2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC2/ChangeLog,v 1.3 2012/01/18 18:33:39 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC2/ChangeLog,v 1.4 2012/01/18 19:37:42 mabi Exp $
+
+  18 Jan 2012; Matti Bickel <mabi@gentoo.org> PEAR-Crypt_HMAC2-1.0.0.ebuild:
+  fix has_version call
 
 *PEAR-Crypt_HMAC2-1.0.0 (18 Jan 2012)
 
