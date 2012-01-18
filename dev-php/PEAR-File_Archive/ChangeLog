@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-File_Archive
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Archive/ChangeLog,v 1.7 2009/08/22 18:45:12 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Archive/ChangeLog,v 1.8 2012/01/18 18:41:56 mabi Exp $
+
+*PEAR-File_Archive-1.5.4-r1 (18 Jan 2012)
+
+  18 Jan 2012; Matti Bickel <mabi@gentoo.org>
+  +PEAR-File_Archive-1.5.4-r1.ebuild, -PEAR-File_Archive-1.5.3.ebuild,
+  -PEAR-File_Archive-1.5.4.ebuild:
+  EAPI bump & fix dev-lang/php dep & remove old
 
 *PEAR-File_Archive-1.5.4 (22 Aug 2009)
 
