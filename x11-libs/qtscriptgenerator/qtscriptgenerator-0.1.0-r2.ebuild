@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0-r1.ebuild,v 1.1 2012/01/10 09:07:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0-r2.ebuild,v 1.1 2012/01/18 17:28:20 johu Exp $
 
 EAPI=4
 
@@ -73,5 +73,5 @@ src_compile() {
 src_install() {
 	insinto /usr/$(get_libdir)/qt4/plugins/script/
 	insopts -m0755
-	doins -r "${S}"/plugins/script/*.so || die "doins failed"
+	doins -r "${S}"/plugins/script/* || die "doins failed"
 }
