@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/qtfm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.2 2011/04/10 12:58:54 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.3 2012/01/18 20:53:36 ssuominen Exp $
+
+*qtfm-5.3 (18 Jan 2012)
+
+  18 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +qtfm-5.3.ebuild:
+  Version bump wrt #390803 by Markos Chandras
 
 *qtfm-4.9 (10 Apr 2011)
 
