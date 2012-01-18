@@ -1,6 +1,10 @@
 # ChangeLog for games-action/d1x-rebirth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.7 2012/01/16 18:58:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.8 2012/01/18 12:42:50 vapier Exp $
+
+  18 Jan 2012; Mike Frysinger <vapier@gentoo.org> d1x-rebirth-0.55.1.ebuild,
+  d1x-rebirth-0.56.ebuild:
+  Move to new CDROM_OPTIONAL variable.
 
   16 Jan 2012; Ulrich Müller <ulm@gentoo.org> d1x-rebirth-0.55.1.ebuild,
   d1x-rebirth-0.56.ebuild:
