@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-2.6.35.2.ebuild,v 1.1 2010/11/21 00:41:23 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-3.2.1.ebuild,v 1.1 2012/01/18 14:58:07 mpagano Exp $
 
+EAPI=3
 inherit toolchain-funcs
 
 MY_P=linux-${PV}
@@ -9,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Developer documentation generated from the Linux kernel"
 HOMEPAGE="http://www.kernel.org/"
-SRC_URI="mirror://kernel/linux/kernel/v2.6/${MY_P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v3.x/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +23,7 @@ DEPEND="app-text/docbook-sgml-utils
 		~app-text/docbook-xml-dtd-4.1.2"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 
 	sed -i \
 		-e "s:db2:docbook2:g" \
