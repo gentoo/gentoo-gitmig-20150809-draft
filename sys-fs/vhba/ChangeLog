@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/vhba
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.27 2011/12/04 16:44:57 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.28 2012/01/18 12:07:32 ago Exp $
+
+  18 Jan 2012; Agostino Sarubbo <ago@gentoo.org> vhba-20110915.ebuild:
+  Stable for amd64, wrt bug #397709
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> vhba-20101015-r1.ebuild:
   Stable on amd64 wrt bug #348750
