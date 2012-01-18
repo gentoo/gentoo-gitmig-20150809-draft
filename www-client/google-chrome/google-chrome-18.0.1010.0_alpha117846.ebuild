@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-18.0.1003.1_alpha117090.ebuild,v 1.1 2012/01/11 16:39:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-18.0.1010.0_alpha117846.ebuild,v 1.1 2012/01/18 02:23:58 floppym Exp $
 
 EAPI="4"
 
@@ -65,6 +65,7 @@ RDEPEND="
 	gnome-base/gconf:2
 	media-libs/libpng:1.2
 	|| ( >=sys-devel/gcc-4.4.0[-nocxx] >=sys-devel/gcc-4.4.0[cxx] )
+	sys-fs/udev
 	sys-libs/zlib
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
@@ -103,7 +104,7 @@ chrome_unpack() {
 		if [[ ${x} == *.deb ]]; then
 			# Avoid automagic usage of deb2targz.
 			echo ">>> Unpacking ${x} to ${PWD}"
-			ar x "${DISTDIR}/${x}" || die
+			ar x "${DISTDIR}/${x}" data.tar.lzma || die
 		else
 			unpack "${x}"
 		fi
