@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.3.92.ebuild,v 1.1 2012/01/18 11:28:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.3.92.ebuild,v 1.2 2012/01/18 11:29:23 ssuominen Exp $
 
 EAPI=4
 
@@ -43,5 +43,5 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 	dodoc HACKING NEWS README
-	doicon ${PN}/images/hicolor/64x64/apps/{exfalso,quodlibet}.png 
+	doicon ${PN}/images/hicolor/64x64/apps/{exfalso,quodlibet}.png
 }
