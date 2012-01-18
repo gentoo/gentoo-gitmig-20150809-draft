@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.80 2012/01/09 21:24:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.81 2012/01/18 21:23:42 maekke Exp $
+
+  18 Jan 2012; Markus Meier <maekke@gentoo.org> libdvdread-4.2.0.ebuild:
+  arm stable, bug #398141
 
   09 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libdvdread-4.2.0.ebuild:
   Stable for AMD64, wrt bug #398141
