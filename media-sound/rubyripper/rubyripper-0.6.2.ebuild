@@ -1,10 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.8 2011/12/18 18:03:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.6.2.ebuild,v 1.1 2012/01/18 19:43:08 billie Exp $
 
 EAPI=2
-VIRTUALX_REQUIRED="always"
-inherit ruby virtualx
+
+VIRTUALX_REQUIRED=always
+VIRTUALX_COMMAND=./configure
+USE_RUBY=ruby18
+
+inherit ruby-ng virtualx
 
 DESCRIPTION="A secure audio ripper for Linux"
 HOMEPAGE="http://code.google.com/p/rubyripper"
@@ -12,20 +16,19 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="cli flac +gtk +mp3 normalize +vorbis wav"
+KEYWORDS="~amd64 ~x86"
+IUSE="cli cdrdao flac +gtk +mp3 normalize +vorbis wav"
 
-ILINGUAS="de es fr hu nl ru"
+ILINGUAS="bg de es fr hu it nl ru se"
 
 for lingua in $ILINGUAS; do
 	IUSE="${IUSE} linguas_${lingua}"
 done
 
-RDEPEND="gtk? ( dev-ruby/ruby-gtk2 )
-	dev-ruby/ruby-gettext
-	virtual/eject
+RDEPEND="virtual/eject
 	media-sound/cd-discid
 	media-sound/cdparanoia
+	cdrdao? ( app-cdr/cdrdao )
 	flac? ( media-libs/flac )
 	mp3? ( media-sound/lame )
 	vorbis? ( media-sound/vorbis-tools )
@@ -35,14 +38,15 @@ RDEPEND="gtk? ( dev-ruby/ruby-gtk2 )
 		wav? ( media-sound/wavegain ) )"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	# fix for bug 203737
-	epatch "${FILESDIR}"/${PN}-0.5.2-require-rubygems.patch
-}
+ruby_add_rdepend ">=dev-ruby/ruby-gettext-2.1.0-r1
+	gtk? ( >=dev-ruby/ruby-gtk2-0.19.3 )"
 
-src_configure() {
-	local myconf="--prefix=/usr"
-	local enable_linguas=""
+# fix for bug 203737
+RUBY_PATCHES=( "${FILESDIR}/${PN}-0.5.2-require-rubygems.patch" )
+
+each_ruby_configure() {
+	local myconf=--prefix=/usr
+	local enable_linguas
 
 	for lingua in $ILINGUAS; do
 		use linguas_$lingua && enable_linguas="${enable_linguas},${lingua}"
@@ -53,9 +57,9 @@ src_configure() {
 	use gtk && myconf="${myconf} --enable-gtk2"
 	use cli && myconf="${myconf} --enable-cli"
 
-	Xeconf ${myconf}
+	virtualmake ${myconf}
 }
 
-src_install() {
+each_ruby_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 }
