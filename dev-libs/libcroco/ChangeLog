@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.61 2012/01/14 16:26:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.62 2012/01/18 20:20:44 maekke Exp $
+
+  18 Jan 2012; Markus Meier <maekke@gentoo.org> libcroco-0.6.3.ebuild:
+  arm stable, bug #393007
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> libcroco-0.6.3.ebuild:
   x86 stable, bug #393007
