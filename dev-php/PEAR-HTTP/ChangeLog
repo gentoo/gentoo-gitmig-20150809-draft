@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.39 2010/11/05 04:33:10 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.40 2012/01/18 19:41:06 mabi Exp $
+
+  18 Jan 2012; Matti Bickel <mabi@gentoo.org> -PEAR-HTTP-1.4.0.ebuild,
+  -PEAR-HTTP-1.4.1.ebuild:
+  remove old
 
   05 Nov 2010; Jeroen Roovers <jer@gentoo.org> PEAR-HTTP-1.4.1-r1.ebuild:
   Stable for HPPA (bug #336869).
