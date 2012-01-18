@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.25 2012/01/14 17:37:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.26 2012/01/18 06:48:45 tetromino Exp $
+
+  18 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glib-networking-2.30.1-r1.ebuild, glib-networking-2.30.2.ebuild:
+  eautoreconf requires >=autoconf-2.65 (bug #398993, thanks to MageSlayer for
+  reporting).
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org>
   glib-networking-2.30.1-r1.ebuild:

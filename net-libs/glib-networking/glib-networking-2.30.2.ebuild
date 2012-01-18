@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.30.2.ebuild,v 1.1 2012/01/04 20:03:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.30.2.ebuild,v 1.2 2012/01/18 06:48:45 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	sys-devel/gettext"
 #	test? ( sys-apps/dbus[X] )"
+# eautoreconf needs >=sys-devel/autoconf-2.65:2.5
 
 # FIXME: tls tests often fail, figure out why, bug #387799
 # ERROR:tls.c:265:on_input_read_finish: assertion failed (error == NULL): Error performing TLS handshake: The request is invalid. (g-tls-error-quark, 1)
