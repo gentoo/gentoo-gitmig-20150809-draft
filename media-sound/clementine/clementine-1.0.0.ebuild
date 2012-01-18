@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.0.ebuild,v 1.2 2012/01/08 16:11:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.0.ebuild,v 1.3 2012/01/18 10:47:13 ssuominen Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://clementine-player.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ayatana cdda +dbus ios ipod kde +lastfm mms mtp +ofa projectm +udev wiimote"
+IUSE="ayatana cdda +dbus ios ipod kde +lastfm mms mtp +ofa projectm test +udev wiimote"
 IUSE+="${LANGS// / linguas_}"
 
 REQUIRED_USE="
@@ -33,7 +33,6 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.24.1-r1:2
 	dev-libs/libxml2
 	dev-libs/qjson
-	gnome-base/gsettings-desktop-schemas
 	media-libs/libechonest
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
@@ -73,6 +72,7 @@ DEPEND="${COMMON_DEPEND}
 	x11-libs/qt-test:4
 	kde? ( dev-util/automoc )
 	dev-cpp/gmock
+	test? ( gnome-base/gsettings-desktop-schemas )
 "
 DOCS="Changelog"
 
