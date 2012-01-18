@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.6 2011/07/24 03:24:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.7 2012/01/18 21:01:33 dilfridge Exp $
 
 EAPI="4"
 
@@ -19,7 +19,8 @@ RESTRICT="bindist"
 RDEPEND="net-print/cups
 	net-print/foomatic-db-engine
 	net-print/foomatic-filters
-	sys-fs/udev"
+	sys-fs/udev
+	!!net-print/hplip"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	app-editors/vim
@@ -34,6 +35,8 @@ src_unpack() {
 	einfo "Fetching ${PN} tarball"
 	wget "http://foo2zjs.rkkda.com/${PN}.tar.gz"
 	tar zxf "${WORKDIR}/${PN}.tar.gz"
+
+	epatch "${FILESDIR}/${PN}-udev.patch"
 
 	cd "${S}"
 
@@ -54,6 +57,10 @@ src_prepare() {
 	# Prevent an access violation, do not create symlinks on live file system
 	# during installation.
 	sed -e 's/ install-filter / /g' -i Makefile
+}
+
+src_compile() {
+	MAKEOPTS=-j1 default
 }
 
 src_install() {

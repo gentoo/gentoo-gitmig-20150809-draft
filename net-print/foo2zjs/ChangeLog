@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foo2zjs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.46 2011/07/24 03:24:05 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.47 2012/01/18 21:01:33 dilfridge Exp $
+
+  18 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/foo2zjs-udev.patch, foo2zjs-99999999.ebuild:
+  Various fixes so it builds and installs. Not sure if it works, though...
 
   24 Jul 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> foo2zjs-99999999.ebuild:
   Add app-editors/vim dependency for ex, bug #375397.
