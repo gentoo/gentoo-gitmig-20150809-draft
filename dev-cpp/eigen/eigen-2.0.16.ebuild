@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.16.ebuild,v 1.3 2012/01/11 15:22:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.16.ebuild,v 1.4 2012/01/19 16:55:39 jer Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://eigen.tuxfamily.org/"
 SRC_URI="https://bitbucket.org/eigen/eigen/get/${PV}.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 SLOT="2"
 IUSE="debug doc examples"
 
