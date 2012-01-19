@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.8 2012/01/09 15:33:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.9 2012/01/19 17:25:45 dev-zero Exp $
+
+  19 Jan 2012; Tiziano Müller <dev-zero@gentoo.org> Manifest:
+  Drop old. Fix bug #389635.
 
   09 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> spice-gtk-0.7.159.ebuild,
   metadata.xml:
