@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.99 2012/01/17 13:28:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.100 2012/01/19 23:55:34 dilfridge Exp $
+
+  19 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kleopatra-4.4.11.1.ebuild:
+  Restrict tests, bug 399431
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -kleopatra-4.7.3.ebuild:
   Remove KDE SC 4.7.3

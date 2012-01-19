@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.4.11.1.ebuild,v 1.6 2011/06/01 19:40:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.4.11.1.ebuild,v 1.7 2012/01/19 23:55:34 dilfridge Exp $
 
 EAPI=4
 
@@ -24,6 +24,9 @@ DEPEND="
 RDEPEND="${DEPEND}
 	app-crypt/gnupg
 "
+
+RESTRICT=test
+# bug 399431
 
 KMEXTRACTONLY="
 	libkleo
