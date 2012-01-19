@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mailx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.65 2012/01/10 14:38:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.66 2012/01/19 16:15:52 eras Exp $
+
+*mailx-8.1.2.20050715-r5 (19 Jan 2012)
+
+  19 Jan 2012; Eray Aslan <eras@gentoo.org> +mailx-8.1.2.20050715-r5.ebuild:
+  add compatibility sym link - bug #399253
 
 *mailx-8.1.2.20050715-r4 (10 Jan 2012)
 
