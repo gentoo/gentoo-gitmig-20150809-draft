@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mup
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/ChangeLog,v 1.36 2011/03/20 20:07:55 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/ChangeLog,v 1.37 2012/01/19 09:13:24 ssuominen Exp $
+
+  19 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> mup-5.4.ebuild:
+  Revert back to ~sparc wrt #397103
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> mup-5.4.ebuild,
   files/mup-5.4-Makefile.patch, mup-5.6.ebuild, files/mup-5.6-Makefile.patch,

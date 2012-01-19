@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.9 2011/03/20 20:07:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.10 2012/01/19 09:13:24 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.arkkra.com/pub/unix/mup${PV//.}src.tar.gz"
 
 LICENSE="Arkkra"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
