@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyquery
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.5 2011/09/20 23:32:27 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.6 2012/01/19 14:02:14 klausman Exp $
+
+  19 Jan 2012; Tobias Klausmann <klausman@gentoo.org> pyquery-1.0.ebuild:
+  Keyworded on alpha, bug #383195
 
   20 Sep 2011; Mike Gilbert <floppym@gentoo.org> pyquery-1.0.ebuild:
   Fix RESTRICT_PYTHON_ABIS. Patch by Arfrever.
