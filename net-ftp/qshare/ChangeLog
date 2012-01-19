@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/qshare
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.7 2010/10/23 00:45:20 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.8 2012/01/19 10:52:50 johu Exp $
+
+*qshare-2.1.2 (19 Jan 2012)
+
+  19 Jan 2012; Johannes Huber <johu@gentoo.org> +qshare-2.1.2.ebuild,
+  qshare-1.3.ebuild:
+  Version bump wrt bug #394263. Thanks to kensington
+  <gentoo@scribeofthenile.com>.
 
   23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata
