@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.154 2011/12/31 07:19:05 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.155 2012/01/19 16:17:29 vapier Exp $
+
+  19 Jan 2012; Mike Frysinger <vapier@gentoo.org> automake-9999.ebuild:
+  Execute bootstrap script as pointed out by Sergei Trofimovich.
 
 *automake-1.11.2 (31 Dec 2011)
 

@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.4 2011/09/21 08:35:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.5 2012/01/19 16:17:29 vapier Exp $
 
+EAPI="2"
 EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
 	http://git.savannah.gnu.org/r/${PN}.git"
 
@@ -24,18 +25,18 @@ RDEPEND="dev-lang/perl
 DEPEND="${RDEPEND}
 	sys-apps/help2man"
 
-src_unpack() {
-	git-2_src_unpack
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s|: (automake)| v${SLOT}: (automake${SLOT})|" \
-		doc/automake.texi || die "sed failed"
+		doc/automake.texi || die
 	export WANT_AUTOCONF=2.5
+	# Don't try wrapping the autotools this thing runs as it tends
+	# to be a bit esoteric, and the script does `set -e` itself.
+	./bootstrap
 }
 
-src_compile() {
-	econf --docdir=/usr/share/doc/${PF} || die
-	emake || die
+src_configure() {
+	econf --docdir=/usr/share/doc/${PF}
 }
 
 src_install() {
