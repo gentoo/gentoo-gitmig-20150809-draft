@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.56 2012/01/17 13:29:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.57 2012/01/19 23:57:47 dilfridge Exp $
+
+  19 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  blogilo-4.4.11.1.ebuild:
+  Add proper handbook support
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -blogilo-4.7.3.ebuild:
   Remove KDE SC 4.7.3

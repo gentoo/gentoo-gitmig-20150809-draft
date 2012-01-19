@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.100 2012/01/19 23:55:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.101 2012/01/19 23:59:25 dilfridge Exp $
+
+  20 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kleopatra-4.4.11.1.ebuild:
+  Add proper handbook support
 
   19 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   kleopatra-4.4.11.1.ebuild:
