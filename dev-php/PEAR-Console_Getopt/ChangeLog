@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Console_Getopt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Getopt/ChangeLog,v 1.32 2011/03/14 12:19:20 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Getopt/ChangeLog,v 1.33 2012/01/19 17:28:58 ago Exp $
+
+  19 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  PEAR-Console_Getopt-1.3.1.ebuild:
+  Stable for amd64, wrt bug #399297
 
 *PEAR-Console_Getopt-1.3.1 (14 Mar 2011)
 
