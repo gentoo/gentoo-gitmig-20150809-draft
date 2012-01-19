@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.95 2012/01/18 17:50:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.96 2012/01/19 10:12:44 mabi Exp $
+
+  19 Jan 2012; Matti Bickel <mabi@gentoo.org> php-ext-source-r2.eclass:
+  Added addpredict to src_configure phase because of bug #385403
 
   18 Jan 2012; Matti Bickel <mabi@gentoo.org> php-pear-r1.eclass:
   Remove dependency on long gone dev-php/PEAR-PEAR-1.8.1

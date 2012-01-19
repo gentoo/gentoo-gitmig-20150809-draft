@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.23 2012/01/15 17:18:48 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.24 2012/01/19 10:12:44 mabi Exp $
 
 # @ECLASS: php-ext-source-r2.eclass
 # @MAINTAINER:
@@ -140,6 +140,9 @@ php-ext-source-r2_phpize() {
 # @DESCRIPTION:
 # Set this in the ebuild to pass configure options to econf.
 php-ext-source-r2_src_configure() {
+	# net-snmp creates this file #385403
+	addpredict /usr/share/snmp/mibs/.index
+
 	local slot
 	for slot in $(php_get_slots); do
 		php_init_slot_env ${slot}
