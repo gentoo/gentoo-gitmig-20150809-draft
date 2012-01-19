@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/focuswriter/focuswriter-1.3.5.2.ebuild,v 1.1 2012/01/18 23:03:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/focuswriter/focuswriter-1.3.5.2.ebuild,v 1.2 2012/01/19 11:45:17 ssuominen Exp $
 
 EAPI=4
 
-LANGS="cs de el	en es es_MX fi fr hu it nl pl pt pt_BR ru sv uk"
+#does nothing useful, LANGS="cs de el en es_MX es fi fr hu it nl pl pt_BR pt ru sv uk"
 inherit qt4-r2
 
 DESCRIPTION="A fullscreen and distraction-free word processor"
@@ -20,7 +20,7 @@ DEPEND="
 	app-text/hunspell
 	dev-libs/libzip
 	x11-libs/qt-gui:4
-	media-libs/libao
+	media-libs/sdl-mixer[wav]
 	"
 RDEPEND="${DEPEND}"
 
