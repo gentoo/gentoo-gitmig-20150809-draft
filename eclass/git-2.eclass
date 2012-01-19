@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.27 2011/12/14 23:40:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.28 2012/01/19 16:53:39 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -278,7 +278,8 @@ git-2_prepare_storedir() {
 		if [[ ${EGIT_PROJECT} ]]; then
 			clone_dir=${EGIT_PROJECT}
 		else
-			clone_dir=${EGIT_REPO_URI##*/}
+			local strippeduri=${EGIT_REPO_URI%/.git}
+			clone_dir=${strippeduri##*/}
 		fi
 		EGIT_DIR=${EGIT_STORE_DIR}/${clone_dir}
 
