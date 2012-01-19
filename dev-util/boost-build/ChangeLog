@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.80 2012/01/08 10:43:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.81 2012/01/19 22:40:07 hwoarang Exp $
+
+*boost-build-1.48.0-r1 (19 Jan 2012)
+
+  19 Jan 2012; Markos Chandras <hwoarang@gentoo.org>
+  +boost-build-1.48.0-r1.ebuild,
+  +files/boost-build-1.48.0-disable_python_rpath.patch,
+  +files/boost-build-1.48.0-support_dots_in_python-buildid.patch:
+  Remove directory used for searching of libpythonX.Y.so from rpath of all
+  libraries, which would occur in some situations. Initial support for dots in
+  argument of --python-buildid option. Patch by Arfrever
 
 *boost-build-1.48.0 (08 Jan 2012)
 
