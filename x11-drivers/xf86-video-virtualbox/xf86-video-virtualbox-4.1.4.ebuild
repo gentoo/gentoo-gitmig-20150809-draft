@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.4.ebuild,v 1.4 2011/12/07 17:29:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.4.ebuild,v 1.5 2012/01/19 14:24:29 lxnay Exp $
 
 EAPI=2
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="dri"
 
-RDEPEND="x11-base/xorg-server[-minimal]"
+RDEPEND="x11-base/xorg-server[-minimal]
+	x11-libs/libXcomposite"
 DEPEND="${RDEPEND}
 		>=dev-util/kbuild-0.1.999
 		=dev-lang/python-2*
@@ -30,10 +31,8 @@ DEPEND="${RDEPEND}
 		x11-proto/xineramaproto
 		x11-proto/xproto
 		x11-libs/libXdmcp
-		x11-libs/libXcomposite
 		x11-libs/libXau
 		x11-libs/libX11
-		x11-libs/libXcomposite
 		x11-libs/libXfixes
 		x11-libs/libXext
 	    dri? (  x11-proto/xf86driproto
