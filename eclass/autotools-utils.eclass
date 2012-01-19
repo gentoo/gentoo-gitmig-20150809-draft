@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.43 2012/01/15 20:03:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.44 2012/01/19 21:49:38 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -284,7 +284,8 @@ autotools-utils_autoreconf() {
 		local x
 
 		# Add a few additional variants as we don't get expansions.
-		[[ ${1} = AC_CONFIG_HEADERS ]] && set -- "${@}" AC_CONFIG_HEADER
+		[[ ${1} = AC_CONFIG_HEADERS ]] && set -- "${@}" \
+			AC_CONFIG_HEADER AM_CONFIG_HEADER
 
 		for x; do
 			grep -h "^${x}" configure.{ac,in} 2>/dev/null
