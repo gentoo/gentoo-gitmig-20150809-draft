@@ -1,0 +1,16 @@
+diff --git a/src/videoglwidget.cpp b/src/videoglwidget.cpp
+index d010b22..9595ef2 100644
+--- a/src/videoglwidget.cpp
++++ b/src/videoglwidget.cpp
+@@ -1,6 +1,11 @@
+ 
+ #include <QtGui>
+ #include <QtOpenGL>
++#ifdef Q_WS_MAC
++#include <OpenGL/glu.h>
++#else
++#include <GL/glu.h>
++#endif
+ #include "videoglwidget.h"
+ 
+ #ifndef GL_TEXTURE_RECTANGLE_EXT

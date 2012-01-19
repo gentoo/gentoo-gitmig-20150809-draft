@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.8.2.1.ebuild,v 1.1 2011/12/09 09:09:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.8.2.1.ebuild,v 1.2 2012/01/19 13:58:43 johu Exp $
 
 EAPI=4
 KDE_LINGUAS="ca cs da de el es et fi fr gl he hr hu it nl pl pt pt_BR ru sl tr
@@ -26,6 +26,10 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS README )
+
+PATCHES=(
+	"${FILESDIR}/${P}-qt48.patch"
+)
 
 src_configure() {
 	local mycmakeargs=(

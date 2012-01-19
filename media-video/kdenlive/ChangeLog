@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.72 2011/12/09 09:09:59 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.73 2012/01/19 13:58:43 johu Exp $
+
+  19 Jan 2012; Johannes Huber <johu@gentoo.org>
+  +files/kdenlive-0.8.2.1-qt48.patch, kdenlive-0.8.2.1.ebuild:
+  Add patch to build with Qt 4.8. Patch spotted by dilfridge. Fixes bug #398973.
 
 *kdenlive-0.8.2.1 (09 Dec 2011)
 
