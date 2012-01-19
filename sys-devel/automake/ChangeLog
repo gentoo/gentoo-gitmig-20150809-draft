@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.155 2012/01/19 16:17:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.156 2012/01/19 20:45:11 slyfox Exp $
+
+*automake-1.11.2-r1 (19 Jan 2012)
+
+  19 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +automake-1.11.2-r1.ebuild,
+  +files/automake-1.11.2-fix-pkglibexec_SCRIPTS.patch:
+  Add upstream fix by Dennis Schridde for pkglibexec_SCRIPTS handling.
 
   19 Jan 2012; Mike Frysinger <vapier@gentoo.org> automake-9999.ebuild:
   Execute bootstrap script as pointed out by Sergei Trofimovich.
