@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.176 2012/01/10 13:46:47 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.177 2012/01/19 12:32:36 klausman Exp $
+
+  19 Jan 2012; Tobias Klausmann <klausman@gentoo.org> amavisd-new-2.7.0.ebuild:
+  Stable on alpha, bug #381977
 
   10 Jan 2012; Eray Aslan <eras@gentoo.org> files/amavisd.initd:
   don't try to parse the config file - bug #397763
