@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.5 2012/01/19 16:17:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.6 2012/01/19 20:55:45 slyfox Exp $
 
 EAPI="2"
 EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
@@ -9,7 +9,7 @@ EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
 inherit eutils git-2
 
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
-HOMEPAGE="http://sources.redhat.com/automake/"
+HOMEPAGE="http://www.gnu.org/software/automake/"
 SRC_URI=""
 
 LICENSE="GPL-3"
