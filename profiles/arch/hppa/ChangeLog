@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.130 2012/01/04 04:06:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.131 2012/01/19 14:46:48 jer Exp $
+
+  19 Jan 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=dvb.
 
   04 Jan 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=bluray (bug #397531).
