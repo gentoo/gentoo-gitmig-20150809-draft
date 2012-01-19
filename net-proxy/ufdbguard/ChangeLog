@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/ufdbguard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.24 2012/01/12 13:22:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.25 2012/01/19 20:51:42 flameeyes Exp $
+
+*ufdbguard-1.28 (19 Jan 2012)
+
+  19 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> +ufdbguard-1.28.ebuild:
+  Version bump
 
 *ufdbguard-1.27-r1 (12 Jan 2012)
 
