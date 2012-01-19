@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whatmask
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.26 2011/08/03 14:16:58 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.27 2012/01/19 16:36:10 jer Exp $
+
+  19 Jan 2012; Jeroen Roovers <jer@gentoo.org> whatmask-1.2-r1.ebuild:
+  Reduce number of lines of code.
 
   03 Aug 2011; Jeroen Roovers <jer@gentoo.org> -whatmask-1.2.ebuild:
   ^

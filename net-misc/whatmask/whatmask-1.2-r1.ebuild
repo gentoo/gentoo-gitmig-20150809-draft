@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/whatmask-1.2-r1.ebuild,v 1.6 2011/06/25 18:42:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/whatmask-1.2-r1.ebuild,v 1.7 2012/01/19 16:36:10 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit toolchain-funcs
 
@@ -15,11 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE=""
 
+DOCS=( AUTHORS ChangeLog INSTALL NEWS README )
+
 src_prepare() {
 	tc-export CC
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README INSTALL AUTHORS ChangeLog NEWS
 }
