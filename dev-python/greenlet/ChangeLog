@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/greenlet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.2 2011/04/09 20:31:07 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.3 2012/01/19 15:16:34 bicatali Exp $
+
+*greenlet-0.3.3 (19 Jan 2012)
+
+  19 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +greenlet-0.3.3.ebuild:
+  Version bump
 
   09 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   greenlet-0.3.1.ebuild, +files/greenlet-0.3.1-python-3.2.patch:
