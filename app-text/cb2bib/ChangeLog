@@ -1,6 +1,13 @@
 # ChangeLog for app-text/cb2bib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.7 2011/09/13 18:59:52 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.8 2012/01/19 13:30:58 johu Exp $
+
+*cb2bib-1.4.7 (19 Jan 2012)
+
+  19 Jan 2012; Johannes Huber <johu@gentoo.org> +cb2bib-1.4.7.ebuild,
+  -cb2bib-1.3.7.ebuild, -cb2bib-1.4.0.ebuild:
+  Version bump. EAPI 4, cmake based build, adding missing deps should fix bug
+  #371817.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #278944

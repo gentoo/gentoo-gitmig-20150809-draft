@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/cb2bib-1.3.7.ebuild,v 1.1 2010/02/22 15:47:35 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/cb2bib-1.4.7.ebuild,v 1.1 2012/01/19 13:30:58 johu Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit qt4-r2
+inherit cmake-utils qt4-r2
 
 DESCRIPTION="Tool for extracting unformatted bibliographic references"
 HOMEPAGE="http://www.molspaces.com/cb2bib/"
@@ -15,32 +15,36 @@ LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +lzo +poll"
 
-DEPEND="x11-libs/qt-webkit:4
-	lzo? ( dev-libs/lzo )"
+DEPEND="
+	x11-libs/libX11
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4
+	x11-libs/qt-webkit:4
+	lzo? ( dev-libs/lzo )
+"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	echo "CONFIG += ordered" >> "${PN}.pro" || die "patching project file failed"
-	sed -i 's:\.\./COPYRIGHT \.\.\/LICENSE::' src/src.pro || die "sed src.pro failed"
+src_configure() {
+	if use !lzo; then
+		mycmakeargs+=( -DC2B_USE_LZO=OFF )
+	fi
+
+	if use !poll; then
+		mycmakeargs+=( -DC2B_USE_POLL=OFF )
+	fi
+
+	cmake-utils_src_configure
 }
 
-src_configure() {
-	# Custom configure script has only few options, so call ./configure manually...
-	# We need to unset QTDIR here, else we may end up with qt3 if it is installed.
-	# TODO: remove QTDIR when qt3 goes away
-	QTDIR="" ./configure \
-		$(use_enable lzo) \
-		$(use_enable poll cbpoll) \
-		--disable-qmake-call \
-		--qmakepath /usr/bin/qmake \
-		--prefix /usr \
-		--bindir /usr/bin \
-		--datadir /usr/share \
-		--desktopdatadir /usr/share/applications \
-		--icondir /usr/share/pixmaps \
-		|| die "cb2bib-provided configure failed"
+src_compile() {
+	cmake-utils_src_compile
+}
 
-	eqmake4 $(cat qmake-additional-args)
+src_install() {
+	cmake-utils_src_install
+
+	rm "${D}"/usr/share/${PN}/COPYRIGHT || die "rm COPYRIGHT failed"
+	rm "${D}"/usr/share/${PN}/LICENSE || die "rm LICENSE failed"
 }
 
 pkg_postinst() {
