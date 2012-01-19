@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Structures_Graph
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_Graph/ChangeLog,v 1.14 2011/04/26 17:50:13 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_Graph/ChangeLog,v 1.15 2012/01/19 09:49:55 mabi Exp $
+
+  19 Jan 2012; Matti Bickel <mabi@gentoo.org>
+  -PEAR-Structures_Graph-1.0.3.ebuild:
+  remove old
 
   26 Apr 2011; <olemarkus@gentoo.org> PEAR-Structures_Graph-1.0.4.ebuild:
   Fixed a circular dependency issue. Bug 364943
