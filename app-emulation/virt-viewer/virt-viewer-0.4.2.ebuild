@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.4.2.ebuild,v 1.2 2012/01/18 20:27:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.4.2.ebuild,v 1.3 2012/01/19 20:20:39 cardoe Exp $
 
 EAPI=4
 
@@ -19,7 +19,9 @@ RDEPEND=">=app-emulation/libvirt-0.6.0
 	!gtk3? ( >=x11-libs/gtk+-2.10.0:2
 			>=gnome-base/libglade-2.6.0:2.0 )
 	nsplugin? ( >=dev-libs/nspr-4.0.0
-				>=net-libs/xulrunner-1.9.1:1.9 )
+				>=net-libs/xulrunner-1.9.1:1.9
+				>=x11-libs/gtk+-2.10.0:2
+				>=gnome-base/libglade-2.6.0:2.0 )
 	spice? ( >=net-misc/spice-gtk-0.6[sasl?,gtk3?] )
 	vnc? ( >=net-libs/gtk-vnc-0.4.3 )"
 DEPEND="${RDEPEND}"
