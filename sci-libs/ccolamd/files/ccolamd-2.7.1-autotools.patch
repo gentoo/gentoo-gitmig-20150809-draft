@@ -23,7 +23,7 @@
 --- Source/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
 +++ Source/Makefile.am	2008-01-29 18:53:56.000000000 +0000
 @@ -0,0 +1,10 @@
-+AM_CPPFLAGS = -I$(top_builddir)/Include
++AM_CPPFLAGS = -I$(top_srcdir)/Include
 +lib_LTLIBRARIES = libccolamd.la
 +noinst_LTLIBRARIES = libccolamdl.la libccolamdi.la
 +

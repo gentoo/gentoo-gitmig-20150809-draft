@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ccolamd-2.7.3.ebuild,v 1.7 2011/12/23 02:04:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ccolamd-2.7.3.ebuild,v 1.8 2012/01/19 15:55:46 jlec Exp $
 
 EAPI=4
 
@@ -24,13 +24,4 @@ DOCS=( README.txt Doc/ChangeLog )
 
 S="${WORKDIR}/${MY_PN}"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-2.7.1-autotools.patch
-	)
-
-src_prepare() {
-	autotools-utils_src_prepare
-	eautoreconf
-}
+PATCHES=( "${FILESDIR}"/${PN}-2.7.1-autotools.patch )
