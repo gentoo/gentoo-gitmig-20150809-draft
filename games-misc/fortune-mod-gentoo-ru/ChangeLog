@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-ru
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/ChangeLog,v 1.4 2011/11/06 07:44:53 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/ChangeLog,v 1.5 2012/01/19 17:30:44 ago Exp $
+
+  19 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  fortune-mod-gentoo-ru-0.25.ebuild:
+  Stable for amd64, wrt bug #399301
 
   06 Nov 2011; Peter Volkov <pva@gentoo.org> metadata.xml:
   Add me into metadata.xml
