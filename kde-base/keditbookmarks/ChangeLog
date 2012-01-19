@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/keditbookmarks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.107 2012/01/17 13:28:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.108 2012/01/19 14:27:57 johu Exp $
+
+*keditbookmarks-4.7.4-r1 (19 Jan 2012)
+
+  19 Jan 2012; Johannes Huber <johu@gentoo.org> +keditbookmarks-4.7.4-r1.ebuild:
+  Revision bump. Re-enable tests. Virtual x is required to perform these
+  sucessfully. Thanks to Ian Delaney <johneed@hotmail.com>, who spotted this.
+  Fixes bug #392703.
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -keditbookmarks-4.7.3.ebuild:
   Remove KDE SC 4.7.3
