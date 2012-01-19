@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlalchemy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.69 2011/12/24 09:48:00 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.70 2012/01/19 19:17:04 klausman Exp $
+
+  19 Jan 2012; Tobias Klausmann <klausman@gentoo.org>
+  +files/lru_cache_timestamping.patch, sqlalchemy-0.7.4.ebuild:
+  Add patch to make test suite pass on arches with low-precision time.time()
 
 *sqlalchemy-0.7.4 (24 Dec 2011)
 

@@ -1,11 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.4.ebuild,v 1.1 2011/12/24 09:48:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.4.ebuild,v 1.2 2012/01/19 19:17:04 klausman Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
+inherit eutils
 
 MY_PN="SQLAlchemy"
 MY_P="${MY_PN}-${PV/_}"
@@ -44,6 +45,7 @@ PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 PYTHON_MODNAME="sqlalchemy"
 
 src_prepare() {
+	epatch "${FILESDIR}/lru_cache_timestamping.patch"
 	distutils_src_prepare
 
 	# Disable tests hardcoding function call counts specific to Python versions.
