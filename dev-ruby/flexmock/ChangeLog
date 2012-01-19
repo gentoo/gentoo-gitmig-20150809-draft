@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/flexmock
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.17 2011/12/31 21:32:49 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.18 2012/01/19 16:09:25 jer Exp $
+
+  19 Jan 2012; Jeroen Roovers <jer@gentoo.org> flexmock-0.9.0.ebuild:
+  Marked ~hppa (bug #396043).
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> flexmock-0.9.0.ebuild:
   Add Prefix keywords, bug #396547
