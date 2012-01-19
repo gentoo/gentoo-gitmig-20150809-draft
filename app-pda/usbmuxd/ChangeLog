@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/usbmuxd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/ChangeLog,v 1.12 2011/11/06 17:58:42 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/ChangeLog,v 1.13 2012/01/19 18:04:41 ssuominen Exp $
+
+*usbmuxd-1.0.7-r1 (19 Jan 2012)
+
+  19 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +usbmuxd-1.0.7-r1.ebuild,
+  +files/usbmuxd-1.0.7-receive_packet_overflow.patch:
+  Upstream security patch for "receive_packet() Buffer Overflow Vulnerability"
+  wrt #399409 by Agostino Sarubbo
 
   06 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -usbmuxd-1.0.4.ebuild:
   old
