@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.1.ebuild,v 1.1 2012/01/08 15:26:07 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.1-r1.ebuild,v 1.1 2012/01/19 21:59:22 thev00d00 Exp $
 
 EAPI=4
 
 KDE_MINIMAL="4.5"
-KDE_LINGUAS="en es fr lt"
-inherit kde4-base
+PYTHON_DEPEND="2"
+inherit kde4-base python
 
 MY_P="${P/-/_}"
 
@@ -18,6 +18,10 @@ LICENSE="GPL-3"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+LINGUAS="en es fr lt"
+for lingua in ${LINGUAS}; do
+	IUSE+=" linguas_${lingua}"
+done
 
 COMMON_DEPEND="$(add_kdebase_dep kdelibs)
 	net-firewall/ufw
@@ -31,3 +35,12 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 S="${WORKDIR}/${MY_P}"
+
+src_configure() {
+	LANGS=""
+	for x in ${LINGUAS}; do
+		use linguas_${x} && LANGS+="${x};"
+	done
+	MYCMAKEARGS="-DUFW_TRANSLATIONS=${LANGS}"
+	kde4-base_src_configure
+}
