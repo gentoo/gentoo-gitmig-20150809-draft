@@ -1,9 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/bio2jack-0.9-r1.ebuild,v 1.5 2011/12/18 18:11:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/bio2jack-0.9-r1.ebuild,v 1.6 2012/01/20 20:16:38 ssuominen Exp $
 
-EAPI="3"
-
+EAPI=4
 inherit autotools
 
 DESCRIPTION="A library for porting blocked I/O OSS/ALSA audio applications to JACK"
@@ -32,13 +31,13 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		--enable-shared \
 		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dobin bio2jack-config || die
-	dodoc AUTHORS ChangeLog NEWS README || die
+	emake DESTDIR="${D}" install
+	dobin bio2jack-config
+	dodoc AUTHORS ChangeLog NEWS README
+	rm -f "${ED}"usr/lib*/lib*.la
 }
