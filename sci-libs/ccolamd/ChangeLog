@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.23 2012/01/19 15:55:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.24 2012/01/20 06:03:25 bicatali Exp $
+
+*ccolamd-2.7.4 (20 Jan 2012)
+
+  20 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  files/ccolamd-2.7.1-autotools.patch, +ccolamd-2.7.4.ebuild:
+  Version bump
 
   19 Jan 2012; Justin Lecher <jlec@gentoo.org>
   files/ccolamd-2.7.1-autotools.patch, ccolamd-2.7.3.ebuild:
