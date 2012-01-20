@@ -1,0 +1,28 @@
+--- examples/Makefile.am.orig
++++ examples/Makefile.am
+@@ -16,9 +18,7 @@ endif
+ bin_PROGRAMS = \
+ 	transform \
+ 	delaunay \
+-	$(NETPBM_EXTRA)
+-
+-noinst_PROGRAMS = \
++	$(NETPBM_EXTRA) \
+ 	set \
+ 	volume \
+ 	cleanup \
+--- src/Makefile.am.orig	2012-01-20 18:00:55.000000000 +0000
++++ src/Makefile.am	2012-01-20 18:07:32.000000000 +0000
+@@ -66,10 +66,10 @@
+ 	$(COMPILE) -c $(srcdir)/predicates.c
+ 
+ predicates_init: predicates_init.c rounding.h
+-	$(COMPILE) $(srcdir)/predicates_init.c -o $(srcdir)/predicates_init
++	$(COMPILE) $(srcdir)/predicates_init.c -o $(top_builddir)/src/predicates_init
+ 
+ predicates_init.h: predicates_init
+-	./predicates_init >  $(srcdir)/predicates_init.h
++	$(top_builddir)/src/predicates_init >  $(srcdir)/predicates_init.h
+ 
+ CLEANFILES = $(BUILT_SOURCES)
+ 

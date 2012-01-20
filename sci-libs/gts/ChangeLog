@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.20 2012/01/05 18:58:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.21 2012/01/20 19:17:11 bicatali Exp $
+
+*gts-20111025 (20 Jan 2012)
+
+  20 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/gts-0.7.6-include-fix.patch, -files/gts-20090909-examples.patch,
+  -gts-20100321-r1.ebuild, -gts-20100321-r2.ebuild, +gts-20111025.ebuild,
+  +files/gts-20111025-autotools.patch:
+  Version bump and switch to autotools-utils, bug #387215 thanks Eckard Brauer
 
   05 Jan 2012; Justin Lecher <jlec@gentoo.org> gts-20100321-r1.ebuild,
   gts-20100321-r2.ebuild, gts-20100321-r3.ebuild:
