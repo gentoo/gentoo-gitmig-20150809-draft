@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/nlopt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.9 2011/07/28 23:51:13 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.10 2012/01/20 16:56:52 bicatali Exp $
+
+  20 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> nlopt-2.2.4.ebuild:
+  Switched to autotools-utils
 
 *nlopt-2.2.4 (28 Jul 2011)
 
