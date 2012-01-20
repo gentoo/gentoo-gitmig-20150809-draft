@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/robotfindskitten
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.7 2011/12/20 16:51:16 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.8 2012/01/20 09:21:37 ago Exp $
+
+  20 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  robotfindskitten-1.7320508.406.ebuild:
+  Stable for amd64, wrt bug #399459
 
 *robotfindskitten-1.7320508.406 (20 Dec 2011)
 
