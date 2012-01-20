@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.78 2012/01/15 05:04:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.79 2012/01/20 03:06:06 tetromino Exp $
+
+  20 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk-vnc-0.5.0.ebuild:
+  Require >=glib-2.30.1 because presence of glib's .la files can result in
+  linking failure (bug #399129, thanks to Harris Landgarten for reporting).
 
 *gtk-vnc-0.5.0 (15 Jan 2012)
 

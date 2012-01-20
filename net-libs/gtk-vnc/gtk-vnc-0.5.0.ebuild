@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.0.ebuild,v 1.1 2012/01/15 05:04:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.0.ebuild,v 1.2 2012/01/20 03:06:06 tetromino Exp $
 
 EAPI="4"
 
@@ -17,9 +17,10 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="examples gtk3 +introspection python sasl vala"
 
 # libview is used in examples/gvncviewer -- no need
+# glib-2.30.1 needed to avoid linking failure due to .la files (bug #399129)
 # TODO: review nsplugin when it will be considered less experimental
 # XXX: automagic pulseaudio. Is it worth patching?
-COMMON_DEPEND=">=dev-libs/glib-2.10:2
+COMMON_DEPEND=">=dev-libs/glib-2.30.1:2
 	dev-libs/libgcrypt
 	dev-libs/libgpg-error
 	media-sound/pulseaudio
