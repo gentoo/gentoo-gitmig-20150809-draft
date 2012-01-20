@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmtp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.98 2011/12/02 22:14:54 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.99 2012/01/20 18:14:55 ssuominen Exp $
+
+*libmtp-1.1.2 (20 Jan 2012)
+
+  20 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +libmtp-1.1.2.ebuild:
+  Version bump. Use default upstream values for --with-udev and
+  --with-udev-rules as they are correct. Use more recent SLOT of libusb.
 
   02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> libmtp-1.1.1.ebuild:
   Stable on amd64 wrt bug #391541
