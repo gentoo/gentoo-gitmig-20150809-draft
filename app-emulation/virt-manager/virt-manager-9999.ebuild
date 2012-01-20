@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.7 2011/07/27 15:37:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.8 2012/01/20 09:33:31 jlec Exp $
 
 #BACKPORTS=
 
-EAPI=2
+EAPI=4
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="http://git.fedorahosted.org/git/virt-manager.git"
@@ -26,7 +26,7 @@ else
 	SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
 		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~x86"
-	VIRTINSTDEP=">=app-emulation/virtinst-0.500.6"
+	VIRTINSTDEP=">=app-emulation/virtinst-0.600.0-r2"
 fi
 
 DESCRIPTION="A graphical tool for administering virtual machines (KVM/Xen)"
@@ -47,13 +47,16 @@ RDEPEND=">=dev-python/pygtk-1.99.12
 	gnome-keyring? ( dev-python/gnome-keyring-python )
 	policykit? ( sys-auth/polkit )
 	spice? ( >=net-misc/spice-gtk-0.6[python,sasl?,-gtk3] )"
+#	tui? ( >=dev-python/new_syrup-0.1.2 )"
 DEPEND="${RDEPEND}
 	app-text/rarian
 	dev-util/intltool"
 
-# The TUI (terminal UI) requires newt_syrup which is not packaged on
-# Gentoo. bug #356711
+pkg_setup() {
 G2CONF="--without-tui"
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	sed -e "s/python/python2/" -i src/virt-manager.in || \
@@ -68,33 +71,23 @@ src_prepare() {
 		# unless we do this
 		touch config.rpath
 
-		rm -rf config.status
-		intltoolize --automake --copy --force
-		perl -i -p -e 's,^DATADIRNAME.*$,DATADIRNAME = share,' po/Makefile.in.in
+		rm -rf config.status || die
+		intltoolize --automake --copy --force || die
+		perl -i -p -e 's,^DATADIRNAME.*$,DATADIRNAME = share,' po/Makefile.in.in || die
 		perl -i -p -e 's,^GETTEXT_PACKAGE.*$,GETTEXT_PACKAGE = virt-manager,' \
-			po/Makefile.in.in
+			po/Makefile.in.in || die
 		eautoreconf
 	fi
 
 	gnome2_src_prepare
 }
 
-src_install() {
-	gnome2_src_install
+pkg_postinst() {
+	python_mod_optimize /usr/share/${PN}
+	gnome2_pkg_postinst
+}
 
-	insinto /usr/share/virt-manager/pixmaps/
-	doins "${S}"/pixmaps/*.png
-	doins "${S}"/pixmaps/*.svg
-
-	insinto /usr/share/virt-manager/pixmaps/hicolor/16x16/actions/
-	doins "${S}"/pixmaps/hicolor/16x16/actions/*.png
-
-	insinto /usr/share/virt-manager/pixmaps/hicolor/22x22/actions/
-	doins "${S}"/pixmaps/hicolor/22x22/actions/*.png
-
-	insinto /usr/share/virt-manager/pixmaps/hicolor/24x24/actions/
-	doins "${S}"/pixmaps/hicolor/24x24/actions/*.png
-
-	insinto /usr/share/virt-manager/pixmaps/hicolor/32x32/actions/
-	doins "${S}"/pixmaps/hicolor/32x32/actions/*.png
+pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
+	gnome2_pkg_postrm
 }

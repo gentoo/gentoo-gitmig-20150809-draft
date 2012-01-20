@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0-r3.ebuild,v 1.2 2012/01/18 22:37:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0-r3.ebuild,v 1.3 2012/01/20 09:33:31 jlec Exp $
 
 BACKPORTS=4
 
-EAPI=2
+EAPI=4
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="http://git.fedorahosted.org/git/virt-manager.git"
@@ -55,6 +55,8 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	G2CONF="--without-tui"
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -70,17 +72,23 @@ src_prepare() {
 		# unless we do this
 		touch config.rpath
 
-		rm -rf config.status
-		intltoolize --automake --copy --force
-		perl -i -p -e 's,^DATADIRNAME.*$,DATADIRNAME = share,' po/Makefile.in.in
+		rm -rf config.status || die
+		intltoolize --automake --copy --force || die
+		perl -i -p -e 's,^DATADIRNAME.*$,DATADIRNAME = share,' po/Makefile.in.in || die
 		perl -i -p -e 's,^GETTEXT_PACKAGE.*$,GETTEXT_PACKAGE = virt-manager,' \
-			po/Makefile.in.in
+			po/Makefile.in.in || die
 		eautoreconf
 	fi
 
 	gnome2_src_prepare
 }
 
-src_install() {
-	gnome2_src_install
+pkg_postinst() {
+	python_mod_optimize /usr/share/${PN}
+	gnome2_pkg_postinst
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
+	gnome2_pkg_postrm
 }
