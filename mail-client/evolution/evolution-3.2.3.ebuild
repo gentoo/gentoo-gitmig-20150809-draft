@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.1.ebuild,v 1.1 2011/10/31 07:35:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3.ebuild,v 1.1 2012/01/20 23:27:29 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -141,10 +141,6 @@ src_prepare() {
 	eautoreconf
 
 	gnome2_src_prepare
-
-	# Fix compilation flags crazyness
-	sed -e 's/\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
-		-i configure || die "CPPFLAGS sed failed"
 }
 
 pkg_postinst() {
