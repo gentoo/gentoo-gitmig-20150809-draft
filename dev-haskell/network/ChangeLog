@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/network
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.56 2011/12/04 16:38:53 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.57 2012/01/20 17:25:00 slyfox Exp $
+
+  20 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> network-2.3.0.7.ebuild:
+  Do not set --disable-tests as dev-haskell/cabal-1.8 knows only --enable-tests.
+  Fixes bug #395351 by Fabian Henze and others.
 
 *network-2.3.0.7 (04 Dec 2011)
 
