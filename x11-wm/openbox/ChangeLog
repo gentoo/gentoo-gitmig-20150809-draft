@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.235 2011/12/18 17:42:13 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.236 2012/01/20 20:11:41 hwoarang Exp $
+
+  20 Jan 2012; Markos Chandras <hwoarang@gentoo.org> openbox-3.5.0-r1.ebuild,
+  openbox-3.5.0_p20111019.ebuild:
+  Drop WANT_AUTOMAKE. USe latest by default. Bug #399435
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> openbox-3.5.0-r1.ebuild:
   alpha/sparc stable wrt #383475

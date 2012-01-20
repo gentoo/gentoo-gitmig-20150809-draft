@@ -1,9 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0-r1.ebuild,v 1.7 2011/12/18 17:42:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0-r1.ebuild,v 1.8 2012/01/20 20:11:41 hwoarang Exp $
 
 EAPI="2"
-WANT_AUTOMAKE="1.9"
 inherit multilib autotools eutils
 
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager"
