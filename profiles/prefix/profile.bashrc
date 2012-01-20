@@ -1,5 +1,5 @@
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Id: profile.bashrc,v 1.3 2011/12/15 20:50:52 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Id: profile.bashrc,v 1.4 2012/01/20 21:11:17 darkside Exp $
 
 # Hack to avoid every package that uses libiconv/gettext
 # install a charset.alias that will collide with libiconv's one
@@ -24,6 +24,8 @@ profile-post_src_install() { prefix-post_src_install ; }
 # Always add ${EPREFIX}/usr/share/aclocal to accommodate situations where
 # aclocal comes from another EPREFIX (for example cross-EPREFIX builds).
 # Note: AT_SYS_M4DIR gets eval-ed
-[[ -d ${EPREFIX}/usr/share/aclocal ]] && \
-	AT_SYS_M4DIR+=' -I ${EPREFIX}/usr/share/aclocal'
-
+# The profile gets sources multiple times, so the below line breaks packages. It
+# is stated that this line isn't needed now (bug 397563) and it will need to be
+# fixed eventually by interested person(s)
+#[[ -d ${EPREFIX}/usr/share/aclocal ]] && \
+#	AT_SYS_M4DIR+=' -I ${EPREFIX}/usr/share/aclocal'

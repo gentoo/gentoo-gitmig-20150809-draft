@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.322 2012/01/14 11:03:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.323 2012/01/20 21:11:17 darkside Exp $
+
+  20 Jan 2012; Jeremy Olexa <darkside@gentoo.org> profile.bashrc:
+  comment out the AT_SYS_M4DIR stuff because it breaks packages (bug 397563)
 
   14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Mask dev-python/numexpr[mkl]
