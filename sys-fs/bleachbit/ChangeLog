@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/bleachbit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bleachbit/ChangeLog,v 1.4 2011/10/30 20:29:11 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bleachbit/ChangeLog,v 1.5 2012/01/20 18:02:28 ssuominen Exp $
+
+*bleachbit-0.9.1 (20 Jan 2012)
+
+  20 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +bleachbit-0.9.1.ebuild:
+  Version bump wrt #395853 by "teidakankan"
 
   30 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -bleachbit-0.9.0.ebuild:
   old
