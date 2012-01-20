@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/whisper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whisper/ChangeLog,v 1.1 2012/01/20 01:53:25 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whisper/ChangeLog,v 1.2 2012/01/20 02:01:34 chutzpah Exp $
+
+  20 Jan 2012; Patrick McLean <chutzpah@gentoo.org> metadata.xml:
+  add my full name to <name> field in metadata.xml
 
 *whisper-0.9.9 (20 Jan 2012)
 
