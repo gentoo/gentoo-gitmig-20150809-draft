@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.1.ebuild,v 1.3 2011/12/02 17:58:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.3.ebuild,v 1.1 2012/01/20 23:26:38 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit db-use eutils flag-o-matic gnome2 versionator virtualx
+inherit autotools db-use eutils flag-o-matic gnome2 versionator virtualx
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
@@ -83,6 +83,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# fix linking with glib-2.31, bug #395777
+	epatch "${FILESDIR}/${PN}-3.2.2-gmodule-explicit.patch"
+	epatch "${FILESDIR}/${PN}-3.2.2-g_thread_init.patch"
+
+	eautoreconf
+
 	gnome2_src_prepare
 
 	# GNOME bug 611353 (skips failing test atm)
@@ -97,11 +103,6 @@ src_prepare() {
 	# /usr/include/db.h is always db-1 on FreeBSD
 	# so include the right dir in CPPFLAGS
 	append-cppflags "-I$(db_includedir)"
-
-	# FIXME: Fix compilation flags crazyness
-	# Touch configure.ac if doing eautoreconf
-	sed 's/^\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
-		-i configure || die "sed failed"
 }
 
 src_install() {
