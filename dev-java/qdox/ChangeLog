@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.26 2012/01/01 22:41:07 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.27 2012/01/20 20:55:43 ago Exp $
+
+  20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> qdox-1.12.ebuild:
+  Stable for amd64, wrt bug #391993
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> qdox-1.6.3.ebuild:
   Drop ia64 support #345433
