@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cmus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.53 2011/12/01 02:38:57 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.54 2012/01/20 12:30:44 ago Exp $
+
+  20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> cmus-2.4.2.ebuild,
+  cmus-2.4.3.ebuild:
+  force libmikmod to slot 0, as ssuominen suggested
 
 *cmus-2.4.3 (01 Dec 2011)
 

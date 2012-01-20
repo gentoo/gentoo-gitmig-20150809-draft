@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.8.1.ebuild,v 1.1 2011/06/28 04:21:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.8.1.ebuild,v 1.2 2012/01/20 12:29:31 ago Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -23,7 +23,7 @@ RDEPEND="sys-libs/readline
 	jack? ( media-sound/jack-audio-connection-kit )
 	libsamplerate? ( media-libs/libsamplerate )
 	media-libs/ladspa-sdk
-	mikmod? ( media-libs/libmikmod )
+	mikmod? ( media-libs/libmikmod:0 )
 	ncurses? ( sys-libs/ncurses )
 	oil? ( dev-libs/liboil )
 	osc? ( media-libs/liblo )

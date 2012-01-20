@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ecasound
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.60 2011/07/24 18:15:44 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.61 2012/01/20 12:29:31 ago Exp $
+
+  20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> ecasound-2.6.0.ebuild,
+  ecasound-2.8.1.ebuild:
+  force libmikmod to slot 0, as ssuominen suggested
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> ecasound-2.6.0.ebuild:
   Drop sparc keyword

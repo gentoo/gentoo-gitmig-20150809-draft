@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.77 2012/01/09 18:36:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.78 2012/01/20 12:32:06 ago Exp $
+
+  20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> alsaplayer-0.99.81.ebuild:
+  force libmikmod to slot 0, as ssuominen suggested
 
   09 Jan 2012; Agostino Sarubbo <ago@gentoo.org> alsaplayer-0.99.81.ebuild:
   Stable for AMD64, wrt bug #398271

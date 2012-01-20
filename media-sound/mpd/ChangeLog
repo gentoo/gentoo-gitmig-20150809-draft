@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.275 2012/01/05 10:26:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.276 2012/01/20 12:27:58 ago Exp $
+
+  20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> mpd-0.16.2.ebuild,
+  mpd-0.16.5.ebuild, mpd-0.16.6.ebuild, mpd-9999.ebuild:
+  force libmikmod to slot 0, as ssuominen suggested
 
   05 Jan 2012; Michael Weber <xmw@gentoo.org> mpd-0.16.5.ebuild:
   ppc/ppc64 stable (bug 388369)
