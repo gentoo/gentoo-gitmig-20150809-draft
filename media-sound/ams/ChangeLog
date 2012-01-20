@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ams
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.27 2010/01/06 22:32:46 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.28 2012/01/20 23:03:41 ssuominen Exp $
+
+  20 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> ams-2.0.1.ebuild,
+  +files/ams-2.0.1-dl.patch:
+  Link to -ldl and use ams_LDADD instead of AM_LDFLAGS wrt #379251 by Diego
+  Elio Pettenò
 
   06 Jan 2010; Markus Meier <maekke@gentoo.org> ams-2.0.1.ebuild:
   x86 stable, bug #299010
