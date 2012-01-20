@@ -1,14 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.4.2.ebuild,v 1.1 2011/10/15 22:59:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.4.6.ebuild,v 1.1 2012/01/20 23:43:01 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
-PYTHON_DEPEND="2" # Just a build-time dependency
 CLUTTER_LA_PUNT="yes"
 
 # inherit clutter after gnome2 so that defaults aren't overriden
 # inherit gnome.org in the end so we use gnome mirrors and get the xz tarball
+# no PYTHON_DEPEND, python2 is just a build-time dependency
 inherit python gnome2 clutter gnome.org
 
 DESCRIPTION="GStreamer Integration library for Clutter"
@@ -24,7 +24,7 @@ RDEPEND="
 	media-libs/gst-plugins-base:0.10[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )"
 DEPEND="${RDEPEND}
-	sys-apps/sed
+	=dev-lang/python-2*
 	doc? ( >=dev-util/gtk-doc-1.8 )"
 
 pkg_setup() {
@@ -33,16 +33,8 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable introspection)"
 
+	python_set_active_version 2
 	python_pkg_setup
-}
-
-src_prepare() {
-	gnome2_src_prepare
-	python_convert_shebangs 2 "${S}"/scripts/pso2h.py
-
-	# Remove *_DISABLE_DEPRECATED, bug #385171
-	sed -e 's/-D.*_DISABLE_DEPRECATED//g' \
-		-i clutter-gst/Makefile.am clutter-gst/Makefile.in || die
 }
 
 src_compile() {
