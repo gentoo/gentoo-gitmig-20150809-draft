@@ -1,0 +1,63 @@
+diff --git a/git-svn.perl b/git-svn.perl
+index eeb83d3..ae77c6a 100755
+--- a/git-svn.perl
++++ b/git-svn.perl
+@@ -1248,6 +1248,7 @@ sub canonicalize_path {
+ 	$path =~ s#^\./## if $dot_slash_added;
+ 	$path =~ s#^/##;
+ 	$path =~ s#^\.$##;
++	#$path =~ s# #%20#;
+ 	return $path;
+ }
+ 
+@@ -2134,6 +2135,7 @@ sub fetch_all {
+ 	             die "[svn-remote \"$repo_id\"] unknown\n";
+ 	my $fetch = $remote->{fetch};
+ 	my $url = $remote->{url} or die "svn-remote.$repo_id.url not defined\n";
++	#$url = main::canonicalize_url($url);
+ 	my (@gs, @globs);
+ 	my $ra = Git::SVN::Ra->new($url);
+ 	my $uuid = $ra->get_uuid;
+@@ -2285,6 +2287,7 @@ sub find_existing_remote {
+ 
+ sub init_remote_config {
+ 	my ($self, $url, $no_write) = @_;
++	#$url = main::canonicalize_url($url);
+ 	$url =~ s!/+$!!; # strip trailing slash
+ 	my $r = read_all_remotes();
+ 	my $existing = find_existing_remote($url, $r);
+@@ -2325,6 +2328,7 @@ sub init_remote_config {
+ 			command_oneline('config', '--get',
+ 					"svn-remote.$self->{repo_id}.url")
+ 		};
++		#$orig_url = main::canonicalize_url($orig_url);
+ 		if ($orig_url && ($orig_url ne $url)) {
+ 			die "svn-remote.$self->{repo_id}.url already set: ",
+ 			    "$orig_url\nwanted to set to: $url\n";
+@@ -2446,6 +2450,8 @@ sub new {
+                   die "Failed to read \"svn-remote.$repo_id.url\" in config\n";
+ 	$self->{pushurl} = eval { command_oneline('config', '--get',
+ 	                          "svn-remote.$repo_id.pushurl") };
++	#$self->{url} = main::canonicalize_url($self->{url});
++	#$self->{pushurl} = main::canonicalize_url($self->{pushurl}) if defined $self->{pushurl};
+ 	$self->rebuild;
+ 	$self;
+ }
+@@ -6475,6 +6481,7 @@ sub migrate_from_v1 {
+ 		next unless -f "$git_dir/$x/info/url";
+ 		my $u = eval { ::file_to_s("$git_dir/$x/info/url") };
+ 		next unless $u;
++		#$u = main::canonicalize_url($u);
+ 		my $dn = dirname("$git_dir/svn/$x");
+ 		mkpath([$dn]) unless -d $dn;
+ 		if ($x eq 'svn') { # they used 'svn' as GIT_SVN_ID:
+@@ -6509,7 +6516,8 @@ sub read_old_urls {
+ 			$pfx .= '/' if $pfx && $pfx !~ m!/$!;
+ 			my $ref_id = $pfx . basename $_;
+ 			my $url = ::file_to_s("$_/info/url");
+-			$l_map->{$ref_id} = $url;
++			$l_map->{$ref_id} = $url;
++			#$l_map->{$ref_id} = main::canonicalize_url($url);
+ 		} elsif (-d $_) {
+ 			push @dir, $_;
+ 		}
