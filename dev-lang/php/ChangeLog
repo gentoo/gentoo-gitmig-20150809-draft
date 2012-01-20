@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.543 2012/01/17 05:18:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.544 2012/01/20 14:40:05 olemarkus Exp $
+
+*php-5.4.0_rc6 (20 Jan 2012)
+
+  20 Jan 2012; Ole Markus With <olemarkus@gentoo.org> +php-5.4.0_rc6.ebuild:
+  Bump of 5.4 RC
 
   17 Jan 2012; Jeroen Roovers <jer@gentoo.org> php-5.3.9.ebuild:
   Stable for HPPA (bug #384301).
