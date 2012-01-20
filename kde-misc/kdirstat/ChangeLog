@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdirstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.24 2012/01/20 22:58:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.25 2012/01/20 22:59:59 dilfridge Exp $
+
+  20 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Fix metadata
 
 *kdirstat-2.7.3 (20 Jan 2012)
 
