@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.67 2012/01/04 18:34:33 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.68 2012/01/20 13:11:02 alexxy Exp $
 
 # Ralph Sennhauser <sera@gentoo.org> (31 Dec 2011)
 # Needs dev-java/fop which is not available for ia64 due to missing JVM #345433
@@ -12,7 +12,7 @@ www-client/firefox crashreporter
 
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # Mask use numa for openmpi
-sys-cluster/openmpi numa
+sys-cluster/openmpi numa psm knem open-mx
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
