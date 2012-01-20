@@ -15,5 +15,8 @@
 		<flag name='sctp'>Enable SCTP support</flag>
 		<flag name='slurm'>Add support for SLURM</flag>
 		<flag name='vt'>Enable bundled VampirTrace support</flag>
+		<flag name='knem'>Add High-Performance intranode communication</flag>
+		<flag name='psm'>Add support for Qlogic psm driver for IB</flag>
+		<flag name='open-mx'>Add support for Myrinet Express over Ethernet></flag>
 	</use>
 </pkgmetadata>
