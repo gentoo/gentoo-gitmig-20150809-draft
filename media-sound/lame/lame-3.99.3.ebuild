@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.3.ebuild,v 1.5 2012/01/20 20:32:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.3.ebuild,v 1.6 2012/01/20 20:36:14 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -37,8 +37,8 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-	use mmx && myconf="--enable-nasm" #361879
-	use sndfile && myconf="--with-fileio=sndfile"
+	use mmx && myconf+="--enable-nasm" #361879
+	use sndfile && myconf+=" --with-fileio=sndfile"
 
 	econf \
 		$(use_enable static-libs static) \
