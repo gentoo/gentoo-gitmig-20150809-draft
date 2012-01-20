@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/libclalsadrv-2.0.0.ebuild,v 1.2 2012/01/20 22:32:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/libclalsadrv-2.0.0.ebuild,v 1.3 2012/01/20 22:42:16 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs
 
 MY_P=${P/lib}
 
-DESCRIPTION="An audio library by Fons Adriaensen <fons.adriaensen@skynet.be>"
-HOMEPAGE="http://www.kokkinizita.net/linuxaudio/"
-SRC_URI="http://www.kokkinizita.net/linuxaudio/downloads/${MY_P}.tar.bz2"
+DESCRIPTION="ALSA driver C++ access library"
+HOMEPAGE="http://packages.debian.org/libclalsadrv"
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
