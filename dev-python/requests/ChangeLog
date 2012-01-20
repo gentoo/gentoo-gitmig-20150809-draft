@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.1 2012/01/02 06:58:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.2 2012/01/20 05:53:03 floppym Exp $
+
+*requests-0.9.3 (20 Jan 2012)
+
+  20 Jan 2012; Mike Gilbert <floppym@gentoo.org> +requests-0.9.3.ebuild,
+  -requests-0.9.0.ebuild:
+  Version bump.
 
 *requests-0.9.0 (02 Jan 2012)
 
