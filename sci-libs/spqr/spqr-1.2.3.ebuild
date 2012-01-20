@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.2.2.ebuild,v 1.1 2011/08/07 03:47:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.2.3.ebuild,v 1.1 2012/01/20 05:53:50 bicatali Exp $
 
 EAPI=4
-inherit eutils autotools
+AUTOTOOLS_AUTORECONF=yes
+inherit autotools-utils
 
 MY_PN=SPQR
 DESCRIPTION="Multithreaded multifrontal sparse QR factorization library"
@@ -20,22 +21,20 @@ RDEPEND="sci-libs/cholmod[supernodal]
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+DOCS=( README.txt Doc/ChangeLog )
+PATCHES=( "${FILESDIR}"/${P}-autotools.patch )
+
 S="${WORKDIR}/${MY_PN}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PV}-autotools.patch
-	eautoreconf
-}
-
 src_configure() {
-	econf \
-		$(use_enable static-libs static) \
-		$(use_with metis) \
+	myeconfargs+=(
+		$(use_with metis)
 		$(use_with tbb)
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	default
-	dodoc README.txt Doc/ChangeLog
+	autotools-utils_src_install
 	use doc && doins Doc/*.pdf
 }

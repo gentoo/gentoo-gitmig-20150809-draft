@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/camd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.20 2011/07/28 20:33:19 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.21 2012/01/20 05:48:09 bicatali Exp $
+
+*camd-2.2.3 (20 Jan 2012)
+
+  20 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  files/camd-2.2.0-autotools.patch, +camd-2.2.3.ebuild:
+  Version bump
 
   28 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> camd-2.2.2.ebuild:
   Fixed for wrong doc file (bug #376183) and added static-libs flag

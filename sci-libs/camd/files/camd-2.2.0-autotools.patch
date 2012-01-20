@@ -35,7 +35,7 @@
 +	@for i in $(check_PROGRAMS); do \
 +		echo "Testing $$i"; \
 +		./$$i > my_$$i.out; \
-+		if ! diff $$i.out my_$$i.out; then \
++		if ! diff $(srcdir)/$$i.out my_$$i.out; then \
 +			echo "Test $$i failed!"; \
 +			exit 1; \
 +		fi \

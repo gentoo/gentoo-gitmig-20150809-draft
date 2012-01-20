@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cxsparse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.20 2011/06/26 14:39:26 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.21 2012/01/20 05:49:19 bicatali Exp $
+
+*cxsparse-2.2.6 (20 Jan 2012)
+
+  20 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +cxsparse-2.2.6.ebuild:
+  Version bump
 
   26 Jun 2011; Justin Lecher <jlec@gentoo.org> cxsparse-2.2.1.ebuild,
   cxsparse-2.2.3.ebuild, cxsparse-2.2.5.ebuild, metadata.xml:

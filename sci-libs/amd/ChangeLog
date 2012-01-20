@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/amd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.28 2011/06/21 15:43:02 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.29 2012/01/20 05:51:11 bicatali Exp $
+
+*amd-2.2.3 (20 Jan 2012)
+
+  20 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +amd-2.2.3.ebuild:
+  Version bump
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> amd-2.2.0.ebuild,
   amd-2.2.1.ebuild, amd-2.2.2.ebuild:
