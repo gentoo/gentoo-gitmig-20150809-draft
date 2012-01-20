@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pmount
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.88 2011/12/08 18:04:06 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.89 2012/01/20 09:22:43 ago Exp $
+
+  20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> pmount-0.9.99_alpha-r1.ebuild:
+  Stable for amd64, wrt bug #399415
 
 *pmount-0.9.99_alpha-r1 (08 Dec 2011)
 
