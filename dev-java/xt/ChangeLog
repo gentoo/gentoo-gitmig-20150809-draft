@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.20 2007/07/12 22:38:23 betelgeuse Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.21 2012/01/20 16:20:37 sera Exp $
+
+*xt-20051206-r2 (20 Jan 2012)
+
+  20 Jan 2012; Ralph Sennhauser <sera@gentoo.org> +xt-20051206-r2.ebuild:
+  Revbump to switch dependency on dev-java/servletapi to
+  java-virtuals/servlet-api. #398689
+  Also bump EAPI and use SLOT deps as well as other cleanup.
 
   12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> xt-20051206-r1.ebuild:
   Javadoc in sun-jdk-1.6 starting with u2 works fine so removing the work
