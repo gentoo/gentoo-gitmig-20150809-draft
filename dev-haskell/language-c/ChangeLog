@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/language-c
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.10 2011/08/02 18:19:09 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.11 2012/01/20 21:29:36 slyfox Exp $
+
+  20 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> language-c-0.3.1.1.ebuild:
+  Set upper ghc's bound. Reported by cnervi at https://github.com/gentoo-haskell
+  /gentoo-haskell/issues/76
 
 *language-c-0.3.2.1 (02 Aug 2011)
 
