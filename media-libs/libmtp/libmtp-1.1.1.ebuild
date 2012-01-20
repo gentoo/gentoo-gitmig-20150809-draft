@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.1.ebuild,v 1.3 2011/12/02 22:14:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.1.ebuild,v 1.4 2012/01/20 18:18:19 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -28,8 +28,6 @@ src_configure() {
 		--enable-shared \
 		$(use_enable static-libs static) \
 		$(use_enable doc doxygen) \
-		--with-udev=/$(get_libdir)/udev/ \
-		--with-udev-rules="65-mtp.rules" \
 		--with-udev-group="plugdev" \
 		--with-udev-mode="0660"
 }
