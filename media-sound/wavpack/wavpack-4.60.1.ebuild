@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/wavpack-4.60.1.ebuild,v 1.2 2011/04/26 20:09:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/wavpack-4.60.1.ebuild,v 1.3 2012/01/20 22:18:35 ssuominen Exp $
 
 EAPI=4
 inherit libtool
@@ -14,6 +14,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="mmx"
 
+RDEPEND="virtual/libiconv"
+DEPEND="${RDEPEND}"
+
 DOCS=( ChangeLog README )
 
 src_prepare() {
@@ -21,11 +24,12 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --disable-static \
+	econf \
+		--disable-static \
 		$(use_enable mmx)
 }
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -delete
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
