@@ -1,0 +1,59 @@
+This is ticket "3476707" at upstream sf.net "faac" project bug tracking system:
+http://sourceforge.net/tracker/?group_id=704&atid=100704
+http://sourceforge.net/projects/faac/
+http://bugs.gentoo.org/397575
+
+--- frontend/main.c
++++ frontend/main.c
+@@ -873,8 +873,13 @@
+     if (!faacEncSetConfiguration(hEncoder, myFormat)) {
+         fprintf(stderr, "Unsupported output format!\n");
+ #ifdef HAVE_LIBMP4V2
++    /* r479 fix */
++#ifdef MP4_CLOSE_DO_NOT_COMPUTE_BITRATE
++        if (container == MP4_CONTAINER) MP4Close(MP4hFile, 0);
++#else
+         if (container == MP4_CONTAINER) MP4Close(MP4hFile);
+ #endif
++#endif
+         return 1;
+     }
+ 
+@@ -885,12 +890,11 @@
+         unsigned long ASCLength = 0;
+     char *version_string;
+ 
+-#ifdef MP4_CREATE_EXTENSIBLE_FORMAT
+-    /* hack to compile against libmp4v2 >= 1.0RC3
+-     * why is there no version identifier in mp4.h? */
++#ifdef MP4_DETAILS_ERROR
++    /* r453 fix */
+         MP4hFile = MP4Create(aacFileName, MP4_DETAILS_ERROR, 0);
+ #else
+-    MP4hFile = MP4Create(aacFileName, MP4_DETAILS_ERROR, 0, 0);
++        MP4hFile = MP4Create(aacFileName, 0);
+ #endif
+         if (!MP4_IS_VALID_FILE_HANDLE(MP4hFile)) {
+             fprintf(stderr, "Couldn't create output file %s\n", aacFileName);
+@@ -1141,11 +1145,21 @@
+         /* clean up */
+         if (container == MP4_CONTAINER)
+         {
++#ifdef MP4_CLOSE_DO_NOT_COMPUTE_BITRATE
++        /* r479 fix */
++            MP4Close(MP4hFile, 0);
++#else
+             MP4Close(MP4hFile);
++#endif
+             if (optimizeFlag == 1)
+             {
+                 fprintf(stderr, "\n\nMP4 format optimization... ");
++#ifdef MP4_DETAILS_ERROR
++    /* r453 fix */
+                 MP4Optimize(aacFileName, NULL, 0);
++#else
++                MP4Optimize(aacFileName, NULL);
++#endif
+                 fprintf(stderr, "Done!");
+             }
+         } else
