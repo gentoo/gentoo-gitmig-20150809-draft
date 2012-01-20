@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.0.ebuild,v 1.1 2012/01/19 15:06:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.0.ebuild,v 1.2 2012/01/20 23:53:28 bicatali Exp $
 
 EAPI=4
 
@@ -54,7 +54,7 @@ DEPEND="${RDEPEND}
 
 PATCHES=( "${FILESDIR}"/${PN}-3.4.3-{pkgbuilddir,help}.patch )
 
-pkg_pretend() {
+pkg_setup() {
 	use openmp && [[ $(tc-getCC)$ == *gcc* ]] && ! tc-has-openmp && \
 		die "You have openmp enabled but your current gcc does not support it"
 }
