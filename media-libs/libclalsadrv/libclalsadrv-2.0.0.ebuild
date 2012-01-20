@@ -1,12 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/libclalsadrv-2.0.0.ebuild,v 1.1 2010/04/12 08:53:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/libclalsadrv-2.0.0.ebuild,v 1.2 2012/01/20 22:32:19 ssuominen Exp $
 
+EAPI=4
 inherit eutils multilib toolchain-funcs
 
-MY_P="${P/lib/}"
-
-S="${WORKDIR}/${P/lib/}/libs"
+MY_P=${P/lib}
 
 DESCRIPTION="An audio library by Fons Adriaensen <fons.adriaensen@skynet.be>"
 HOMEPAGE="http://www.kokkinizita.net/linuxaudio/"
@@ -17,20 +16,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="media-libs/alsa-lib"
+RDEPEND="media-libs/alsa-lib"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A} || die
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-makefile.patch"
+S=${WORKDIR}/${P/lib/}/libs
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
-	tc-export CC CXX
-	emake || die "emake failed"
+	tc-export CXX
+	emake
 }
 
 src_install() {
-	emake LIBDIR="$(get_libdir)" PREFIX="${D}/usr" install || die "make install failed"
+	emake LIBDIR="$(get_libdir)" PREFIX="${D}/usr" install
 	dodoc ../AUTHORS
 }
