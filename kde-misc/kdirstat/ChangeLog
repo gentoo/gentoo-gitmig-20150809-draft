@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kdirstat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.24 2012/01/20 22:58:44 dilfridge Exp $
+
+*kdirstat-2.7.3 (20 Jan 2012)
+
+  20 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdirstat-2.7.3.ebuild, +metadata.xml:
+  New application, bug 373103. Thanks to Martin von Gagern for the ebuild.
+
