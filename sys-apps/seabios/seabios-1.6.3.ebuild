@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/seabios-1.6.3.ebuild,v 1.2 2011/10/25 14:09:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/seabios-1.6.3.ebuild,v 1.3 2012/01/20 10:52:41 ago Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ inherit ${GIT_ECLASS} python
 if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 fi
 
 DESCRIPTION="Open Source implementation of a 16-bit x86 BIOS"
