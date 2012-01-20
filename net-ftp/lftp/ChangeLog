@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.337 2012/01/09 17:11:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.338 2012/01/20 17:21:28 jer Exp $
+
+*lftp-4.3.4-r1 (20 Jan 2012)
+
+  20 Jan 2012; Jeroen Roovers <jer@gentoo.org> -lftp-4.3.4.ebuild,
+  +lftp-4.3.4-r1.ebuild, +files/lftp-4.3.4-empty-local.patch:
+  Fix segfault when running `local' command without arguments by Marcin
+  Mirosław (bug #398513).
 
   09 Jan 2012; Brent Baude <ranger@gentoo.org> lftp-4.3.3.ebuild:
   Marking lftp-4.3.3 ppc for bug 393513
