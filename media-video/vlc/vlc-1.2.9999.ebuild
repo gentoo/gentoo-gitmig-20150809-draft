@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.2.9999.ebuild,v 1.4 2011/12/16 12:48:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.2.9999.ebuild,v 1.5 2012/01/20 13:26:32 aballier Exp $
 
 EAPI="4"
 
@@ -98,7 +98,7 @@ RDEPEND="
 		libtiger? ( media-libs/libtiger )
 		linsys? ( >=media-libs/zvbi-0.2.28 )
 		lirc? ( app-misc/lirc )
-		live? ( >=media-plugins/live-2011.12.02 )
+		live? ( >=media-plugins/live-2011.12.23 )
 		lua? ( >=dev-lang/lua-5.1 )
 		macosx-vout? ( virtual/opengl )
 		matroska? (	>=dev-libs/libebml-1.0.0 >=media-libs/libmatroska-1.0.0 )
