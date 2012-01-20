@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.0.0.ebuild,v 1.1 2011/12/17 20:19:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.8.2.ebuild,v 1.1 2012/01/20 18:06:14 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -10,18 +10,17 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-2.0.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-1.7.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex srtp static syslog usb vorbis"
+IUSE="ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex sqlite sqlite3 srtp static syslog usb vorbis"
 
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
 
-RDEPEND="dev-db/sqlite:3
-	dev-libs/popt
+RDEPEND="dev-libs/popt
 	dev-libs/libxml2
 	dev-libs/openssl
 	ais? ( sys-cluster/openais )
@@ -52,6 +51,8 @@ RDEPEND="dev-db/sqlite:3
 	snmp? ( net-analyzer/net-snmp )
 	span? ( media-libs/spandsp )
 	speex? ( media-libs/speex )
+	sqlite? ( dev-db/sqlite:0 )
+	sqlite3? ( dev-db/sqlite:3 )
 	srtp? ( net-libs/libsrtp )
 	usb? ( dev-libs/libusb
 		media-libs/alsa-lib )
@@ -128,10 +129,6 @@ src_configure() {
 	menuselect/menuselect --enable func_aes menuselect.makeopts
 	menuselect/menuselect --enable chan_iax2 menuselect.makeopts
 
-	# SQlite3 is now the main database backend, enable related features
-	menuselect/menuselect --enable cdr_sqlite3_custom menuselect.makeopts
-	menuselect/menuselect --enable cel_sqlite3_custom menuselect.makeopts
-
 	# The others are based on USE-flag settings
 	use_select() {
 		local state=$(use "$1" && echo enable || echo disable)
@@ -166,6 +163,8 @@ src_configure() {
 	use_select snmp			res_snmp
 	use_select span			res_fax_spandsp
 	use_select speex		{codec,func}_speex
+	use_select sqlite		cdr_sqlite
+	use_select sqlite3		{cdr,cel}_sqlite3_custom
 	use_select srtp			res_srtp
 	use_select syslog		cdr_syslog
 	use_select usb			chan_usbradio
