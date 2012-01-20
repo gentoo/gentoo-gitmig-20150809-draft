@@ -30,7 +30,7 @@ inherit eutils
 #   epatch "${FILESDIR}"/patch-name-here
 #
 # eclasses tend to list descriptions of how to use their functions properly.
-# take a look at /usr/portage/eclasses/ for more examples.
+# take a look at /usr/portage/eclass/ for more examples.
 
 # Short one-line description of this package.
 DESCRIPTION="This is a sample skeleton ebuild file"
