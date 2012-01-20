@@ -1,0 +1,17 @@
+# ChangeLog for dev-python/whisper
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whisper/ChangeLog,v 1.1 2012/01/20 01:53:25 chutzpah Exp $
+
+*whisper-0.9.9 (20 Jan 2012)
+
+  20 Jan 2012; Patrick McLean <chutzpah@gentoo.org> +whisper-0.9.9.ebuild,
+  +metadata.xml:
+  Add new whisper ebuild from betagarden overlay
+
+  27 Oct 2011; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Removed no-herd from herd tag in metadata.xml
+
+  13 Sep 2011; Justin Lecher <jlec@gentoo.org> whisper-0.9.8.ebuild,
+  +metadata.xml:
+  Fix Python.eclass usage
+
