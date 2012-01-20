@@ -1,0 +1,11 @@
+# ChangeLog for dev-embedded/smdk-dltool
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/ChangeLog,v 1.1 2012/01/20 22:44:17 vapier Exp $
+
+*smdk-dltool-0.20 (20 Jan 2012)
+
+  20 Jan 2012; Mike Frysinger <vapier@gentoo.org> +smdk-dltool-0.20.ebuild,
+  +files/smdk-dltool-0.20-add-S3C64xx-support.patch,
+  +files/smdk-dltool-0.20-build.patch, +metadata.xml:
+  Initial ebuild by Doug Anderson.
+
