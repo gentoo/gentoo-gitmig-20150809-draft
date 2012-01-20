@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mikmod
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.16 2010/01/09 19:55:01 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.17 2012/01/20 12:56:25 ago Exp $
+
+  20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> mikmod-3.2.1.ebuild,
+  mikmod-3.2.2_beta1.ebuild:
+  force libmikmod to slot 0 and port to EAPI4, as ssuominen suggested
 
   09 Jan 2010; Jeroen Roovers <jer@gentoo.org> mikmod-3.2.2_beta1.ebuild:
   Marked ~hppa too.
