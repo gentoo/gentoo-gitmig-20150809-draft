@@ -1,6 +1,5 @@
-diff -ur alsamixergui-0.9.0rc1-2.orig/configure.in alsamixergui-0.9.0rc1-2/configure.in
---- alsamixergui-0.9.0rc1-2.orig/configure.in	2002-05-03 12:40:21.000000000 +0300
-+++ alsamixergui-0.9.0rc1-2/configure.in	2009-07-19 23:45:10.000000000 +0300
+--- configure.in
++++ configure.in
 @@ -11,11 +11,11 @@
  AC_PROG_LN_S
  

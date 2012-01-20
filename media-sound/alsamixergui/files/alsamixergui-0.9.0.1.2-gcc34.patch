@@ -1,6 +1,5 @@
-diff -Nurd alsamixergui-0.9.0rc1-2-old/src/alsamixer.cxx alsamixergui-0.9.0rc1-2/src/alsamixer.cxx
---- alsamixergui-0.9.0rc1-2-old/src/alsamixer.cxx	2004-06-06 23:35:40.994686104 -0500
-+++ alsamixergui-0.9.0rc1-2/src/alsamixer.cxx	2004-06-06 23:36:04.514110608 -0500
+--- src/alsamixer.cxx
++++ src/alsamixer.cxx
 @@ -654,7 +654,7 @@
        if (joined) {
  #ifdef ALSAMIXER_GUI

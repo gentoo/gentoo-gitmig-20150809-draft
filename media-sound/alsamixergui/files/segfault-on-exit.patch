@@ -1,5 +1,5 @@
---- src/alsamixer.cxx	2004-12-07 00:02:52.649159520 +1100
-+++ src/alsamixer.cxx	2004-12-07 00:00:26.385394992 +1100
+--- src/alsamixer.cxx
++++ src/alsamixer.cxx
 @@ -1869,7 +1869,7 @@
  			if (procWindow) delete procWindow;
  			if (mainWindow) delete mainWindow;
