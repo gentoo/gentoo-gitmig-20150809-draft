@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.6 2010/08/26 18:30:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.7 2012/01/20 17:36:07 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -17,24 +17,23 @@ IUSE=""
 DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-image[png]
-	media-libs/libmikmod"
+	media-libs/libmikmod:0"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-automake.patch
-	mv man/${PN}.fr.6 man/fr/${PN}.6 || die "failed moving man pages"
+	mv man/${PN}.fr.6 man/fr/${PN}.6 || die
 	# don't combine explicit and implicit rules for make 3.82 (bug #334629)
 	sed -i \
 		-e '/supervisor.c /s/.c /.cc /' \
-		src/Makefile.am \
-		|| die 'sed failed'
+		src/Makefile.am || die
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS CHANGES NEWS README
-	fperms g+w "${GAMES_STATEDIR}"/${PN}.hi || die "fperms failed"
+	fperms g+w "${GAMES_STATEDIR}"/${PN}.hi || die
 	make_desktop_entry ${PN} Tecnoballz
 	prepgamesdirs
 }
