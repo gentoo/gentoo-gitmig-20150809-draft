@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.118 2012/01/20 08:32:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.119 2012/01/20 08:38:27 robbat2 Exp $
+
+  20 Jan 2012; Robin H. Johnson <robbat2@gentoo.org> -git-1.7.3.5-r1.ebuild,
+  -git-1.7.3.5.ebuild, -git-1.7.4.1.ebuild, -git-1.7.4.4.ebuild,
+  -git-1.7.4.ebuild, -git-1.7.5_rc1.ebuild, -git-1.7.5_rc3.ebuild,
+  -git-1.7.6.1.ebuild, -git-1.7.6.ebuild, -git-1.7.7.1-r1.ebuild,
+  -git-1.7.7.1.ebuild, -git-1.7.7.2.ebuild, -git-1.7.7.3.ebuild,
+  -git-1.7.7.4.ebuild, -git-1.7.7.ebuild:
+  Clean up some unstable ebuilds.
 
 *git-1.7.7.6 (20 Jan 2012)
 *git-1.7.8.4 (20 Jan 2012)
