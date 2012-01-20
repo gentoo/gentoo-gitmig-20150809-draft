@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.177 2012/01/18 20:18:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.178 2012/01/20 10:21:27 tetromino Exp $
+
+*gmime-2.6.4 (20 Jan 2012)
+*gmime-2.4.31 (20 Jan 2012)
+
+  20 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gmime-2.4.31.ebuild, +files/gmime-2.4.31-fix-tutorial.patch,
+  +gmime-2.6.4.ebuild, +files/gmime-2.6.4-fix-tutorial.patch:
+  Version bump. Fixes a memory leak, improves build system, allowing simpler
+  ebuilds.
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> gmime-2.6.1.ebuild:
   arm stable, bug #393007
