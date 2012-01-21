@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/qbzr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.25 2011/12/12 16:12:58 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.26 2012/01/21 15:47:51 klausman Exp $
+
+  21 Jan 2012; Tobias Klausmann <klausman@gentoo.org> qbzr-0.21.1.ebuild:
+  Stable on alpha, bug #383751
 
 *qbzr-0.21.2 (12 Dec 2011)
 

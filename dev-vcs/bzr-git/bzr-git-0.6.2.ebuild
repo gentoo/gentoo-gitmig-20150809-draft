@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/bzr-git-0.6.2.ebuild,v 1.3 2011/12/28 16:07:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/bzr-git-0.6.2.ebuild,v 1.4 2012/01/21 15:49:48 klausman Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://samba.org/~jelmer/bzr/${P}.tar.gz"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="alpha amd64 ~x86"
 fi
 
 IUSE=""

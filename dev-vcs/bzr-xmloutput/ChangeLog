@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr-xmloutput
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.6 2011/10/30 11:44:28 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.7 2012/01/21 15:48:23 klausman Exp $
+
+  21 Jan 2012; Tobias Klausmann <klausman@gentoo.org>
+  bzr-xmloutput-0.8.7.ebuild:
+  Stable on alpha, bug #383751
 
   30 Oct 2011; Markos Chandras <hwoarang@gentoo.org> bzr-xmloutput-0.8.7.ebuild:
   Stable on amd64 wrt bug #383751
