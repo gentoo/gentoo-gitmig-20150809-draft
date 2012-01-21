@@ -1,6 +1,5 @@
-diff -Nur hdf-4.2.6.orig/configure.ac hdf-4.2.6/configure.ac
---- hdf-4.2.6.orig/configure.ac	2011-12-21 23:40:35.000000000 +0000
-+++ hdf-4.2.6/configure.ac	2011-12-22 00:36:53.000000000 +0000
+--- a/configure.ac
++++ b/configure.ac
 @@ -199,20 +199,6 @@
  dnl Build static libraries by default. Furthermore, fortran shared libraries
  dnl are unsupported. Disallow a user from enabling both shared libraries and
@@ -31,23 +30,6 @@ diff -Nur hdf-4.2.6.orig/configure.ac hdf-4.2.6/configure.ac
  AC_ARG_WITH([szlib],
              [AC_HELP_STRING([--with-szlib=DIR],
                              [Use szlib library [default=no]])],,
-@@ -445,14 +431,13 @@
-     fi
- 
-     AC_CHECK_LIB([sz], [SZ_BufftoBuffCompress],, [unset HAVE_SZIP])
--
-+    ;;
-+esac
-     if test -z "$HAVE_SZIP"; then
-       AC_MSG_ERROR([couldn't find szlib library])
-     else
-       USE_COMP_SZIP="yes"
-     fi
--    ;;
--esac
- 
- dnl Check to see if SZIP has encoder 
- if test "X$HAVE_SZIP" = "Xyes"; then
 @@ -702,7 +687,7 @@
  dnl ======================================================================
  dnl Libtool initialization
@@ -97,9 +79,8 @@ diff -Nur hdf-4.2.6.orig/configure.ac hdf-4.2.6/configure.ac
  
  
  dnl This part doesn't work yet since HDF4 config files do not contain
-diff -Nur hdf-4.2.6.orig/hdf/test/fortestF.f hdf-4.2.6/hdf/test/fortestF.f
---- hdf-4.2.6.orig/hdf/test/fortestF.f	2011-12-21 23:40:35.000000000 +0000
-+++ hdf-4.2.6/hdf/test/fortestF.f	2011-12-21 23:47:04.000000000 +0000
+--- a/hdf/test/fortestF.f
++++ b/hdf/test/fortestF.f
 @@ -203,7 +203,7 @@
  
  	if (cmd .NE. 'Test' .AND. cmd .NE. 'test') then
@@ -109,9 +90,8 @@ diff -Nur hdf-4.2.6.orig/hdf/test/fortestF.f hdf-4.2.6/hdf/test/fortestF.f
  	 retcode = -1
  	 return
  	endif
-diff -Nur hdf-4.2.6.orig/mfhdf/libsrc/Makefile.am hdf-4.2.6/mfhdf/libsrc/Makefile.am
---- hdf-4.2.6.orig/mfhdf/libsrc/Makefile.am	2011-12-21 23:40:35.000000000 +0000
-+++ hdf-4.2.6/mfhdf/libsrc/Makefile.am	2011-12-21 23:48:07.000000000 +0000
+--- a/mfhdf/libsrc/Makefile.am
++++ b/mfhdf/libsrc/Makefile.am
 @@ -32,10 +32,11 @@
  else
  libmfhdf_la_SOURCES = $(CSOURCES)
