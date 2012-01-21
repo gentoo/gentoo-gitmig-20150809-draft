@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.34 2011/11/06 16:18:28 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.35 2012/01/21 15:46:17 klausman Exp $
+
+  21 Jan 2012; Tobias Klausmann <klausman@gentoo.org> testtools-0.9.11.ebuild:
+  Stable on alpha, bug #383751
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> testtools-0.9.11.ebuild:
   Marking testtools-0.9.11 ppc stable for bug 

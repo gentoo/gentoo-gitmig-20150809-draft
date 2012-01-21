@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/nautilus-python-0.7.3.ebuild,v 1.5 2012/01/14 08:14:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/nautilus-python-0.7.3.ebuild,v 1.6 2012/01/21 15:51:34 klausman Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://projects.gnome.org/nautilus-python/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="alpha amd64 x86"
 IUSE="doc"
 
 DOCS="AUTHORS ChangeLog NEWS"
