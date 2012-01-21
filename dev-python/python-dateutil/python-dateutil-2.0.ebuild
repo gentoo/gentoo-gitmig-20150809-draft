@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-2.0.ebuild,v 1.2 2012/01/19 15:47:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-2.0.ebuild,v 1.3 2012/01/21 21:53:38 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -66,4 +66,3 @@ src_install() {
 		doins example.py sandbox/*.py
 	fi
 }
-
