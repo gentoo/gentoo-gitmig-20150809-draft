@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/nautilus-python-1.1-r1.ebuild,v 1.1 2012/01/14 08:14:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/nautilus-python-1.1-r1.ebuild,v 1.2 2012/01/21 18:37:36 klausman Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://projects.gnome.org/nautilus-python/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 IUSE="doc"
 
 # Depend on pygobject:3 for sanity, and because it's automagic
