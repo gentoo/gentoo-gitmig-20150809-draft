@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jss
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.24 2010/08/04 09:11:57 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.25 2012/01/21 08:49:23 sera Exp $
+
+  21 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jss-4.3.ebuild:
+  Fix building with Linux 3.x. #379283
+  Thanks to Andreis_Vinogradovs ( slepnoga ) <andreis.vinogradovs@gmail.com>
 
   04 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> jss-4.3.ebuild,
   +files/jss-4.3-ldflags.patch:

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3.ebuild,v 1.3 2010/08/04 09:11:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3.ebuild,v 1.4 2012/01/21 08:49:23 sera Exp $
 
-inherit base java-pkg-2 versionator
+inherit base java-pkg-2 linux-info versionator
 
 RTM_NAME="JSS_${PV//./_}_RTM"
 DESCRIPTION="Network Security Services for Java (JSS)"
@@ -42,6 +42,13 @@ src_compile() {
 	export JAVA_GENTOO_OPTS="-target $(java-pkg_get-target) -source $(java-pkg_get-source)"
 	use amd64 && export USE_64=1
 	cd "${S}/security/coreconf" || die
+
+	# Hotfix for kernel 3.x #379283
+	get_running_version || die "Failed to determine kernel version"
+	if [[ ${KV_MAJOR} -ge 3 ]]; then
+		cp Linux2.6.mk Linux${KV_MAJOR}.${KV_MINOR}.mk || die
+	fi
+
 	emake -j1 BUILD_OPT=1 || die "coreconf make failed"
 
 	cd "${S}/security/jss" || die
