@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.35 2012/01/21 05:33:11 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.36 2012/01/21 20:14:29 keri Exp $
+
+*xsb-3.3.3 (21 Jan 2012)
+
+  21 Jan 2012; <keri@gentoo.org> +xsb-3.3.3.ebuild:
+  Version bump
 
   21 Jan 2012; <keri@gentoo.org> xsb-3.3.2.ebuild:
   Explicitely set general-tagging of Prolog cells on Linux. Closes #399513
