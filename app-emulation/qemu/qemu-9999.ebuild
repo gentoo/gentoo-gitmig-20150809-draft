@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.2 2011/09/20 22:34:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.3 2012/01/21 12:57:30 slyfox Exp $
 
 EAPI="2"
 
@@ -29,9 +29,9 @@ SLOT="0"
 IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses \
 png pulseaudio qemu-ifup sasl sdl ssl static vde"
 
-COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc32plus"
+COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb xtensa xtensaeb" # dropped lm32
+IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
 	IUSE="${IUSE} +qemu_softmmu_targets_${target}"
@@ -130,7 +130,7 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable brltty brlapi)"
 	conf_opts="${conf_opts} $(use_enable curl)"
 	conf_opts="${conf_opts} $(use_enable fdt)"
-	conf_opts="${conf_opts} $(use_enable hardened user-pie)"
+	conf_opts="${conf_opts} $(use_enable hardened pie)"
 	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
 	conf_opts="${conf_opts} $(use_enable ncurses curses)"
 	conf_opts="${conf_opts} $(use_enable png vnc-png)"
@@ -147,7 +147,8 @@ src_configure() {
 	use esd && audio_opts="esd ${audio_opts}"
 	use pulseaudio && audio_opts="pa ${audio_opts}"
 	use sdl && audio_opts="sdl ${audio_opts}"
-	./configure --prefix=/usr \
+
+	set -- --prefix=/usr \
 		--disable-strip \
 		--disable-werror \
 		--disable-kvm \
@@ -157,9 +158,10 @@ src_configure() {
 		--audio-drv-list="${audio_opts}" \
 		--target-list="${softmmu_targets} ${user_targets}" \
 		--cc="$(tc-getCC)" \
-		--host-cc="$(tc-getBUILD_CC)" \
-		|| die "configure failed"
+		--host-cc="$(tc-getBUILD_CC)"
 
+	echo ./configure "$@" # show actual options
+	./configure "$@" || die "configure failed"
 		# this is for qemu upstream's threaded support which is
 		# in development and broken
 		# the kvm project has its own support for threaded IO

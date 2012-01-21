@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.87 2011/09/20 22:34:01 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.88 2012/01/21 12:57:30 slyfox Exp $
+
+  21 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-9999.ebuild:
+  Fixed configure failure (follow upstream in renaming --enablble-user-pic to
+  --enable-pic). Added all missing linux targets except lm32 (needs proper deps
+  and a fix against --as-needed). Made ./configure params to be shown.
 
   20 Sep 2011; Michał Górny <mgorny@gentoo.org> qemu-9999.ebuild:
   Migrate to git-2.
