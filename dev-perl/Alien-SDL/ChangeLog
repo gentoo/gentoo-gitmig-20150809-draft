@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Alien-SDL
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/ChangeLog,v 1.1 2012/01/21 20:20:00 ssuominen Exp $
+
+*Alien-SDL-1.430 (21 Jan 2012)
+
+  21 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +Alien-SDL-1.430.ebuild:
+  Initial commit (as part of #356535 by Satoshi Hayazaki)
+
