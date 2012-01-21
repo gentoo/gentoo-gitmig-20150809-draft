@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mecab
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.62 2010/05/02 11:01:57 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.63 2012/01/21 02:57:45 matsuu Exp $
+
+*mecab-0.991 (21 Jan 2012)
+
+  21 Jan 2012; MATSUU Takuto <matsuu@gentoo.org> +mecab-0.991.ebuild:
+  Version bumped. Added static-libs USE flag.
 
   02 May 2010; Alexis Ballier <aballier@gentoo.org> mecab-0.98.ebuild,
   +files/mecab-0.98-iconv.patch:
