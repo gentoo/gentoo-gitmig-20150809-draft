@@ -1,15 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.4.ebuild,v 1.2 2012/01/21 09:13:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.4.ebuild,v 1.3 2012/01/21 10:03:46 jlec Exp $
 
 EAPI=4
-
-AUTOTOOLS_AUTORECONF=yes
-AUTOTOOLS_IN_SOURCE_BUILD=1
 
 inherit autotools-utils
 
 MY_PN=COLAMD
+
 DESCRIPTION="Column approximate minimum degree ordering algorithm"
 HOMEPAGE="http://www.cise.ufl.edu/research/sparse/colamd/"
 SRC_URI="http://www.cise.ufl.edu/research/sparse/${PN}/${MY_PN}-${PV}.tar.gz"
@@ -23,7 +21,7 @@ DEPEND="sci-libs/ufconfig"
 RDEPEND="${DEPEND}"
 
 DOCS=( README.txt Doc/ChangeLog )
-PATCHES=( "${FILESDIR}"/${PN}-2.7.1-autotools.patch )
+PATCHES=( "${FILESDIR}"/${P}-autotools.patch )
 
 # Needs manual inspection of the result, useless.
 RESTRICT="test"
