@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.80 2012/01/18 21:17:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.81 2012/01/21 16:32:08 phajdan.jr Exp $
+
+  21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dvipng-1.14.ebuild:
+  x86 stable wrt bug #397821
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> dvipng-1.14.ebuild:
   arm stable, bug #397821
