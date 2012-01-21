@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.45 2012/01/21 15:51:10 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.46 2012/01/21 17:29:34 klausman Exp $
+
+  21 Jan 2012; Tobias Klausmann <klausman@gentoo.org> dulwich-0.8.2.ebuild:
+  Keyword 0.8.2 on alpha
 
   21 Jan 2012; Tobias Klausmann <klausman@gentoo.org> dulwich-0.8.1.ebuild:
   Stable on alpha, bug #383751
