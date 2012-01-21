@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.2.1.ebuild,v 1.1 2011/11/05 07:51:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.2.2.ebuild,v 1.1 2012/01/21 02:06:12 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -68,4 +68,11 @@ pkg_setup() {
 		--with-libcanberra
 		$(use_enable introspection)
 		$(use_enable xinerama)"
+}
+
+src_prepare() {
+	# Compat with Ubuntu metacity themes (e.g. x11-themes/light-themes)
+	epatch "${FILESDIR}/${PN}-3.2.1-ignore-shadow-and-padding.patch"
+
+	gnome2_src_prepare
 }
