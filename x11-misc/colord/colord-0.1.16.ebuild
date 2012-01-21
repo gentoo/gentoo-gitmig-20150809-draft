@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.14-r1.ebuild,v 1.1 2011/11/25 18:15:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.16.ebuild,v 1.1 2012/01/21 04:09:09 tetromino Exp $
 
 EAPI="4"
 
-inherit autotools eutils base
+inherit autotools eutils systemd base
 
 DESCRIPTION="System service to accurately color manage input and output devices"
 HOMEPAGE="http://www.freedesktop.org/software/colord/"
@@ -12,16 +12,14 @@ SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86"
-IUSE="doc elibc_FreeBSD examples +introspection scanner +udev vala"
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd"
+IUSE="doc examples +gusb +introspection scanner +udev vala"
 
-# FIXME: raise to libusb-1.0.9:1 when available
 COMMON_DEPEND="
 	dev-db/sqlite:3
 	>=dev-libs/glib-2.28.0:2
 	>=media-libs/lcms-2.2:2
-	elibc_FreeBSD? ( >=sys-freebsd/freebsd-lib-8.0[usb] )
-	!elibc_FreeBSD? ( >=dev-libs/libusb-1.0.8:1 )
+	gusb? ( >=dev-libs/libgusb-0.1.1 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 	scanner? ( media-gfx/sane-backends )
 	udev? ( || ( sys-fs/udev[gudev] sys-fs/udev[extras] ) )
@@ -51,48 +49,38 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Fix SQL injection vulnerability (bug #391879); will be in next release
-	epatch "${FILESDIR}/${P}-sql-injections"{,-2}.patch
-
 	# Ubuntu patch to allow root and at_console to access colord without polkit;
 	# this behavior matches upstream default polkit settings.
 	epatch "${FILESDIR}/${PN}-0.1.13-use-dbus-security-for-permissions.patch"
 
 	epatch "${FILESDIR}/${PN}-0.1.11-fix-automagic-vala.patch"
-
-	# Use <libusb.h> for freebsd compatibility, bug #387959#c6
-	sed -e 's:#include <libusb-1.0/libusb.h>:#include <libusb.h>:' \
-		-i src/sensors/*.c src/sensors/*.h || die "sed failed"
+	epatch "${FILESDIR}/${PN}-0.1.15-fix-automagic-libgusb.patch"
 
 	eautoreconf
 }
 
 src_configure() {
-	#  bug #387959#c6
-	if use elibc_FreeBSD; then
-		USB_CFLAGS="-I${EPREFIX}/usr/include"
-		USB_LIBS="-lusb"
-		echo "$USB_CFLAGS $USB_LIBS"
-	fi
-
 	# Disable polkit to allow registering devices when colord is running as
 	# non-root; https://bugs.launchpad.net/ubuntu/+source/colord/+bug/837851
+	# Reverse tools require gusb
 	econf \
 		--disable-examples \
 		--disable-static \
 		--disable-polkit \
-		--enable-reverse \
 		--disable-volume-search \
 		--with-daemon-user=colord \
 		--localstatedir="${EPREFIX}"/var \
 		$(use_enable doc gtk-doc) \
+		$(use_enable gusb) \
+		$(use_enable gusb reverse) \
 		$(use_enable introspection) \
 		$(use_enable scanner sane) \
 		$(use_enable udev gudev) \
 		$(use_enable vala) \
+		$(systemd_with_unitdir) \
 		VAPIGEN=$(type -p vapigen-0.14)
 	# parallel make fails in doc/api
-	use doc && MAKEOPTS=-j1
+	use doc && MAKEOPTS="${MAKEOPTS} -j1"
 }
 
 src_install() {
