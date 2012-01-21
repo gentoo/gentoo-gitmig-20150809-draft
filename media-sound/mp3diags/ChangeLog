@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mp3diags
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/ChangeLog,v 1.9 2011/09/13 19:14:44 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/ChangeLog,v 1.10 2012/01/21 22:01:12 pesa Exp $
+
+*mp3diags-1.0.10.065 (21 Jan 2012)
+
+  21 Jan 2012; Davide Pesavento <pesa@gentoo.org> +mp3diags-1.0.10.065.ebuild,
+  -mp3diags-1.0.00.045.ebuild, -mp3diags-1.0.01.046.ebuild:
+  Version bump (bug #398481), EAPI 4.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #278944
