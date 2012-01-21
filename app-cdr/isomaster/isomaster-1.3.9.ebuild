@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.9.ebuild,v 1.2 2012/01/21 19:18:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.9.ebuild,v 1.3 2012/01/21 19:31:34 ssuominen Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs
+inherit eutils fdo-mime toolchain-funcs
 
 DESCRIPTION="Graphical CD image editor for reading, modifying and writing ISO images"
 HOMEPAGE="http://littlesvr.ca/isomaster"
@@ -45,4 +45,12 @@ src_compile() {
 src_install() {
 	emake "${myisoconf[@]}" DESTDIR="${D}" install
 	dodoc {CHANGELOG,CREDITS,README,TODO}.TXT *.txt
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
 }
