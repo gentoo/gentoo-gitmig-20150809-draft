@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.144 2012/01/01 05:02:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.145 2012/01/21 19:48:20 floppym Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -555,6 +555,42 @@ python_convert_shebangs() {
 
 			sed -e "1s:^#![[:space:]]*\([^[:space:]]*/usr/bin/env[[:space:]]\)\?[[:space:]]*\([^[:space:]]*/\)\?\(jython\|pypy-c\|python\)\([[:digit:]]\+\(\.[[:digit:]]\+\)\?\)\?\(\$\|[[:space:]].*\):#!\1\2${python_interpreter}\6:" -i "${file}" || die "Conversion of shebang in '${file}' failed"
 		fi
+	done
+}
+
+# @FUNCTION: python_clean_py-compile_files
+# @USAGE: [-q|--quiet]
+# @DESCRIPTION:
+# Clean py-compile files to disable byte-compilation.
+python_clean_py-compile_files() {
+	_python_check_python_pkg_setup_execution
+
+	local file files=() quiet="0"
+
+	while (($#)); do
+		case "$1" in
+			-q|--quiet)
+				quiet="1"
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				die "${FUNCNAME}(): Invalid usage"
+				;;
+		esac
+		shift
+	done
+
+	while read -d $'\0' -r file; do
+		files+=("${file#./}")
+	done < <(find -name py-compile -type f -print0)
+
+	for file in "${files[@]}"; do
+		if [[ "${quiet}" == "0" ]]; then
+			einfo "Cleaning '${file}' file"
+		fi
+		echo "#!/bin/sh" > "${file}"
 	done
 }
 
