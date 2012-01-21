@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.536.ebuild,v 1.1 2012/01/21 21:00:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.536.ebuild,v 1.2 2012/01/21 21:07:51 ssuominen Exp $
 
 EAPI=4
 
@@ -15,13 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-perl/Capture-Tiny
-	virtual/perl-Test-Simple
+RDEPEND="dev-perl/Alien-SDL
+	dev-perl/Capture-Tiny
+	dev-perl/File-ShareDir
 	dev-perl/Test-Most
 	dev-perl/Tie-Simple
-	dev-perl/Capture-Tiny
-	dev-perl/Alien-SDL
-	dev-perl/File-ShareDir
 	media-libs/libpng:0
 	media-libs/libsdl
 	media-libs/sdl-gfx
@@ -36,14 +34,14 @@ RDEPEND="dev-perl/Capture-Tiny
 	virtual/opengl
 	virtual/perl-ExtUtils-CBuilder
 	virtual/perl-Module-Build
-	virtual/perl-Scalar-List-Utils"
+	virtual/perl-Scalar-List-Utils
+	virtual/perl-Test-Simple"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	# Only enable this if you are confirming a bug in this module. The testsrequire
 	# access to your /dev/{snd,sound} devices.
 	#SRC_TEST="do"
-
 	mydoc="CHANGELOG README TODO"
 	perl-module_pkg_setup
 }
