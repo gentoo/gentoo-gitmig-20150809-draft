@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/tea
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.50 2010/10/06 20:02:57 chiiph Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.51 2012/01/21 22:08:26 johu Exp $
+
+*tea-31.2.0 (21 Jan 2012)
+
+  21 Jan 2012; Johannes Huber <johu@gentoo.org> +tea-31.2.0.ebuild,
+  -tea-27.0.0.ebuild, -tea-28.1.2.ebuild:
+  Version bump wrt bug #399399. Thanks to kensington
+  <gentoo@scribeofthenile.com>. Fixes also bug #370113.
 
 *tea-28.1.2 (06 Oct 2010)
 

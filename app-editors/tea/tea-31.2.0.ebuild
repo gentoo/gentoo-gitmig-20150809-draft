@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-27.0.0.ebuild,v 1.1 2010/02/27 19:52:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-31.2.0.ebuild,v 1.1 2012/01/21 22:08:26 johu Exp $
 
-EAPI="2"
+EAPI=4
 inherit eutils qt4-r2
 
 DESCRIPTION="Small, lightweight Qt text editor"
@@ -14,13 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86 ~x86-fbsd"
 IUSE="aspell hunspell"
 
-DEPEND="x11-libs/qt-core:4
+RDEPEND="sys-libs/zlib
+	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
-	x11-libs/qt-svg:4
-	x11-libs/qt-script:4"
-RDEPEND="${DEPEND}
 	aspell? ( app-text/aspell )
 	hunspell? ( app-text/hunspell )"
+DEPEND="${RDEPEND}
+	hunspell? ( dev-util/pkgconfig )"
 
 src_configure() {
 	local myopts
@@ -40,9 +40,9 @@ src_configure() {
 }
 
 src_install() {
-	dobin bin/tea || die
-	dodoc AUTHORS ChangeLog NEWS NEWS-RU TODO || die
-	doicon icons/tea_icon_v2.png || die
+	dobin bin/tea
+	dodoc AUTHORS ChangeLog NEWS NEWS-RU TODO
+	doicon icons/tea_icon_v2.png
 
 	make_desktop_entry tea Tea tea_icon_v2 Utility
 }
