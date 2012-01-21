@@ -30,7 +30,7 @@
  AC_ARG_WITH([szlib],
              [AC_HELP_STRING([--with-szlib=DIR],
                              [Use szlib library [default=no]])],,
-@@ -702,7 +687,7 @@
+@@ -702,7 +688,7 @@
  dnl ======================================================================
  dnl Libtool initialization
  dnl ======================================================================
@@ -39,7 +39,7 @@
  LT_OUTPUT
  
  dnl ======================================================================
-@@ -780,11 +765,6 @@
+@@ -780,11 +766,6 @@
  dnl ------------------------------------------------------------------------
  dnl Check to see if libtool has enabled shared libraries. Set a conditional
  dnl as some Makefiles will build based on availability of shared libraries.
@@ -51,7 +51,18 @@
  
  dnl ------------------------------------------------------------------------
  dnl Specify shared library extension the host machine should recognize.
-@@ -841,26 +821,7 @@
+@@ -814,10 +795,6 @@
+ dnl Report anything stripped as a flag in CFLAGS and 
+ dnl only the compiler in CC_VERSION.
+ CC_NOFLAGS=`echo $CC | sed 's/ -.*//'`
+-CFLAGS_TO_ADD=`echo $CC | grep - | sed 's/.* -/-/'`
+-if test -n $CFLAGS_TO_ADD; then
+-  CFLAGS="$CFLAGS_TO_ADD$CFLAGS"
+-fi
+ 
+ if `echo $CC_NOFLAGS | grep ^/ >/dev/null 2>&1`; then
+   CC_VERSION="$CC_NOFLAGS"
+@@ -841,26 +818,7 @@
  dnl Strip anything that looks like a flag off of $F77
  dnl Report anything stripped as a flag in RFLAGS and 
  dnl only the compiler in F77_VERSION.
