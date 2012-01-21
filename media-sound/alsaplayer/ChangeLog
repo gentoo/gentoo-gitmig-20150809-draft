@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.79 2012/01/21 16:22:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.80 2012/01/21 17:17:54 ssuominen Exp $
+
+  21 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -alsaplayer-0.99.80-r1.ebuild,
+  -files/alsaplayer-0.99.80-enable-libid3tag.patch,
+  -files/alsaplayer-0.99.80-glibc-2.10.patch,
+  -files/alsaplayer-0.99.80-missing_limits_h.patch,
+  -files/alsaplayer-0.99.80_rc3-flags.patch:
+  old
 
   21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   alsaplayer-0.99.81.ebuild:
