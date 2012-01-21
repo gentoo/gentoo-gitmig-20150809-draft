@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/root
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.90 2011/11/13 11:21:12 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.91 2012/01/21 19:19:46 bicatali Exp $
+
+*root-5.32.00-r2 (21 Jan 2012)
+
+  21 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +root-5.32.00-r2.ebuild,
+  metadata.xml:
+  Import root ebuild from the science overlay. Main work from Andrew Savchenko,
+  now proxy-maintainer
 
   13 Nov 2011; Justin Lecher <jlec@gentoo.org> -root-5.26.00-r2.ebuild,
   root-5.26.00e-r1.ebuild, root-5.28.00d.ebuild, metadata.xml:
