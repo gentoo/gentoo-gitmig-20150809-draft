@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/IPC-System-Simple
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-System-Simple/ChangeLog,v 1.1 2012/01/21 23:58:24 ssuominen Exp $
+
+*IPC-System-Simple-1.21 (21 Jan 2012)
+
+  21 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +IPC-System-Simple-1.21.ebuild:
+  Initial commit (required by frozen-bubble >= 2.2.1_beta1)
+
