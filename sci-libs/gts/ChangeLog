@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.21 2012/01/20 19:17:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.22 2012/01/21 15:11:51 jlec Exp $
+
+  21 Jan 2012; Justin Lecher <jlec@gentoo.org> gts-20111025.ebuild,
+  files/gts-20111025-autotools.patch:
+  Drop doc installation as doc generation is broken, #399613
 
 *gts-20111025 (20 Jan 2012)
 

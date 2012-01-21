@@ -26,3 +26,19 @@
  
  CLEANFILES = $(BUILT_SOURCES)
  
+ gts-snapshot-111025/doc/Makefile.am |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/gts-snapshot-111025/doc/Makefile.am b/gts-snapshot-111025/doc/Makefile.am
+index ea9a468..cd5a606 100644
+--- doc/Makefile.am
++++ doc/Makefile.am
+@@ -9,7 +9,7 @@ DOC_MODULE=gts
+ DOC_MAIN_SGML_FILE=gts-docs.sgml
+ 
+ # The directory containing the source code (if it contains documentation).
+-DOC_SOURCE_DIR=../src
++DOC_SOURCE_DIR=$(top_srcdir)/src
+ 
+ TARGET_DIR=html/$(DOC_MODULE)
+ 
