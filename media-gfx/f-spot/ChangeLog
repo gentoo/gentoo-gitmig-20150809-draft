@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/f-spot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.55 2011/05/11 19:31:33 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.56 2012/01/21 13:34:05 pacho Exp $
+
+  21 Jan 2012; Pacho Ramos <pacho@gentoo.org> f-spot-0.8.2.ebuild:
+  It needs mono-addins with gtk support, bug #398037 by Maciej Grela.
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> f-spot-0.8.2.ebuild:
   Stable on amd64 wrt bug #359651
