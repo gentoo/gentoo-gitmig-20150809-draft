@@ -1,20 +1,30 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.1-r1.ebuild,v 1.3 2012/01/21 17:22:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.1 2012/01/21 17:22:14 slyfox Exp $
 
 EAPI=4
 
-inherit base flag-o-matic
+if [[ ${PV} = *9999* ]]; then
+	EGIT_REPO_URI="git://midnight-commander.org/git/mc.git"
+	LIVE_ECLASSES="git-2 autotools"
+	LIVE_EBUILD=yes
+fi
 
-MY_P=${P/_/-}
+inherit flag-o-matic ${LIVE_ECLASSES}
+
+if [[ -n ${LIVE_EBUILD} ]]; then
+	SRC_URI=""
+	KEYWORDS=""
+else
+	SRC_URI="http://www.midnight-commander.org/downloads/${P}.tar.xz"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
+fi
 
 DESCRIPTION="GNU Midnight Commander is a text based file manager"
 HOMEPAGE="http://www.midnight-commander.org"
-SRC_URI="http://www.midnight-commander.org/downloads/${MY_P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE="+edit gpm mclib +ncurses nls samba slang test X +xdg"
 
 REQUIRED_USE="^^ ( ncurses slang )"
@@ -37,7 +47,11 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/check )
 	"
 
-S=${WORKDIR}/${MY_P}
+[[ -n ${LIVE_EBUILD} ]] && DEPEND="${DEPEND} dev-vcs/cvs" # needed only for SCM source tree (autopoint uses cvs)
+
+src_prepare() {
+	[[ -n ${LIVE_EBUILD} ]] && ./autogen.sh
+}
 
 src_configure() {
 	local myscreen=ncurses

@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/mc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.235 2011/12/16 13:17:35 wired Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.236 2012/01/21 17:22:14 slyfox Exp $
+
+*mc-9999 (21 Jan 2012)
+
+  21 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> +mc-9999.ebuild,
+  mc-4.8.1-r1.ebuild:
+  Added live ebuild.
 
   16 Dec 2011; Alex Alexander <wired@gentoo.org> mc-4.8.1-r1.ebuild,
   metadata.xml:
