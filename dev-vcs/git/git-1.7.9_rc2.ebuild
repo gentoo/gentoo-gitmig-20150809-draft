@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9_rc2.ebuild,v 1.1 2012/01/20 08:27:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9_rc2.ebuild,v 1.2 2012/01/21 21:54:14 mr_bones_ Exp $
 
 EAPI=4
 
@@ -262,11 +262,11 @@ src_prepare() {
 	# merged upstream
 	#epatch "${FILESDIR}"/git-1.7.6-interix.patch
 
-	# Newer versions of SVN hate a whitespace in the file URL. 
+	# Newer versions of SVN hate a whitespace in the file URL.
 	# So we avoid that by replaced the space with an underscore.
 	#Initialized empty Git repository in /dev/shm/portage/dev-vcs/git-9999/work/git-9999/t/t d.t9155/git_project/.git/
 	#svn: E235000: In file 'subversion/libsvn_subr/dirent_uri.c' line 2291: assertion failed (svn_uri_is_canonical(url, pool))
-	# 
+	#
 	# With this change the following tests still fail: t9100 t9118 t9120
 	# Without it, MOST of t91* fails, due to the space tripping up the
 	# svn_uri_is_canonical.
@@ -512,13 +512,13 @@ src_test() {
 
 	# Clean old results first, must always run
 	cd "${S}/t"
-	nonfatal git_emake clean 
+	nonfatal git_emake clean
 
 	# Now run the tests, keep going if we hit an error, and don't terminate on
 	# failure
 	cd "${S}"
 	einfo "Start test run"
-	#MAKEOPTS=-j1 
+	#MAKEOPTS=-j1
 	nonfatal git_emake --keep-going test
 	rc=$?
 
