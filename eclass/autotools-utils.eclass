@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.44 2012/01/19 21:49:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.45 2012/01/21 20:44:28 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -360,8 +360,9 @@ autotools-utils_src_prepare() {
 
 	local want_autoreconf=${AUTOTOOLS_AUTORECONF}
 
-	touch "${T}"/.autotools-utils.timestamp || die
 	[[ ${PATCHES} ]] && epatch "${PATCHES[@]}"
+
+	touch "${T}"/.autotools-utils.timestamp || die
 	epatch_user
 	if [[ ! ${want_autoreconf} ]]; then
 		if [[ $(find . -newer "${T}"/.autotools-utils.timestamp \
@@ -369,7 +370,7 @@ autotools-utils_src_prepare() {
 				-o -name 'configure.ac' \
 				-o -name 'configure.in' ')' \
 				-print -quit) ]]; then
-			einfo 'Will autoreconfigure due to patches applied.'
+			einfo 'Will autoreconfigure due to user patches applied.'
 			want_autoreconf=yep
 		fi
 	fi
