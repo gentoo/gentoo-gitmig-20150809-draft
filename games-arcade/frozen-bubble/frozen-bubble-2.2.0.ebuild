@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.0.ebuild,v 1.10 2009/09/06 21:25:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.0.ebuild,v 1.11 2012/01/21 21:02:30 ssuominen Exp $
 
 EAPI=2
 inherit eutils gnome2-utils perl-module games
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	>=media-libs/sdl-mixer-1.2.3[mikmod,vorbis]
 	media-libs/sdl-pango
 	media-libs/sdl-image[gif,png]
-	dev-perl/sdl-perl
+	dev-perl/SDL
 	dev-perl/Locale-gettext"
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
