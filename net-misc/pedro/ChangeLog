@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pedro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pedro/ChangeLog,v 1.9 2012/01/13 22:19:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pedro/ChangeLog,v 1.10 2012/01/21 16:14:26 phajdan.jr Exp $
+
+  21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pedro-1.6.ebuild:
+  x86 stable wrt bug #398813
 
   13 Jan 2012; Agostino Sarubbo <ago@gentoo.org> pedro-1.6.ebuild:
   Stable for AMD64, wrt bug #398813
