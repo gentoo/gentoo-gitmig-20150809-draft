@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Cache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.41 2012/01/16 12:42:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.42 2012/01/21 16:31:01 phajdan.jr Exp $
+
+  21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> PEAR-Cache-1.5.6.ebuild:
+  x86 stable wrt bug #393705
 
   16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> PEAR-Cache-1.5.6.ebuild:
   Stable for amd64, wrt bug #393705
