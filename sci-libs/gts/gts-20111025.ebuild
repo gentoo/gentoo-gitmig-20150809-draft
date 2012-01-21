@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20111025.ebuild,v 1.2 2012/01/21 15:11:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20111025.ebuild,v 1.3 2012/01/21 16:06:15 jlec Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~bicatali/distfiles/${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="examples static-libs test"
+IUSE="doc examples static-libs test"
 
 RDEPEND="virtual/fortran
 	dev-libs/glib:2
@@ -32,7 +32,7 @@ PATCHES=( "${FILESDIR}"/${P}-autotools.patch )
 
 src_compile() {
 	autotools-utils_src_compile
-#	use doc && autotools-utils_src_compile -j1 -C doc scan sgml html
+	use doc && autotools-utils_src_compile -C doc html
 }
 
 src_test() {
@@ -43,13 +43,12 @@ src_test() {
 }
 
 src_install() {
+	use doc && HTML_DOCS=("${AUTOTOOLS_BUILD_DIR}"/doc/html/)
 	autotools-utils_src_install
 
 	# rename to avoid collisions
 	mv "${ED}"/usr/bin/{,gts-}split || die
 	mv "${ED}"/usr/bin/{,gts-}merge || die
-
-#	use doc && dohtml doc/html/*
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
