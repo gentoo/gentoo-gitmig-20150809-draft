@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subvertpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.39 2012/01/21 15:50:50 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.40 2012/01/21 17:39:26 klausman Exp $
+
+  21 Jan 2012; Tobias Klausmann <klausman@gentoo.org> subvertpy-0.8.9.ebuild:
+  Keyword 0.8.9 on alpha
 
   21 Jan 2012; Tobias Klausmann <klausman@gentoo.org> subvertpy-0.8.0.ebuild:
   Stable on alpha, bug #383751
