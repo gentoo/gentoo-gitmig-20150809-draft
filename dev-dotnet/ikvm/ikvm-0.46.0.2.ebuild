@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.44.0.6.ebuild,v 1.1 2010/12/06 14:09:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.46.0.2.ebuild,v 1.1 2012/01/21 13:49:31 pacho Exp $
 
-EAPI=2
+EAPI="4"
 
 inherit eutils mono multilib java-pkg-2
 
 DESCRIPTION="Java VM for .NET"
 HOMEPAGE="http://www.ikvm.net/ http://weblog.ikvm.net/"
-SRC_URI="http://www.frijters.net/openjdk6-b18-stripped.zip
+SRC_URI="http://www.frijters.net/openjdk6-b22-stripped.zip
 	http://www.frijters.net/${PN}src-${PV}.zip"
 LICENSE="as-is"
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# We cannot rely on Mono Crypto Service Provider as it doesn't work inside
 	# sandbox, we simply hard-code the path to a bundled key like Debian does.
-	epatch "${FILESDIR}"/${PN}-0.44.0.5-key.patch
+	epatch "${FILESDIR}"/${PN}-0.46.0.1-key.patch
 	uudecode < "${FILESDIR}"/mono.snk.uu || die
 
 	# Ensures that we use Mono's bundled copy of SharpZipLib instead of relying
@@ -75,7 +75,7 @@ generate_pkgconfig() {
 src_install() {
 	local dll dllbase exe
 	insinto /usr/$(get_libdir)/${PN}
-	doins bin/*.exe bin/*.so || die
+	doins bin/*.exe
 
 	dodir /bin
 	for exe in bin/*.exe

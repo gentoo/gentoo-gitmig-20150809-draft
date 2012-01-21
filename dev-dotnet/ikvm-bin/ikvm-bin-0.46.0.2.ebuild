@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.44.0.6.ebuild,v 1.3 2011/06/30 14:15:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.46.0.2.ebuild,v 1.1 2012/01/21 13:54:04 pacho Exp $
+
+EAPI="4"
 
 inherit eutils mono multilib
 
@@ -15,7 +17,7 @@ LICENSE="as-is"
 SLOT="0"
 S=${WORKDIR}/${MY_P}
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/mono-1.1
@@ -25,7 +27,7 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 	insinto /usr/$(get_libdir)/${MY_PN}
-	doins bin/* || die "doins failed"
+	doins bin/*
 
 	for exe in ikvm ikvmc ikvmstub;
 	do
@@ -40,7 +42,10 @@ src_install() {
 
 	for dll in bin/IKVM*.dll
 	do
-		gacutil -i ${dll} -root "${D}"/usr/$(get_libdir) \
-			-gacdir /usr/$(get_libdir) -package ${dll} || die
+		dllbase=${dll##*/}
+		ebegin "Installing and registering ${dllbase}"
+		gacutil -i bin/${dllbase} -root "${D}"/usr/$(get_libdir) \
+			-gacdir /usr/$(get_libdir) -package IKVM &>/dev/null
+		eend $? || die "Failed installing ${dllbase}"
 	done
 }
