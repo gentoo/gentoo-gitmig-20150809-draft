@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.20 2012/01/14 21:17:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.21 2012/01/21 15:55:11 mgorny Exp $
+
+*systemd-38-r1 (21 Jan 2012)
+*systemd-37-r4 (21 Jan 2012)
+*systemd-29-r6 (21 Jan 2012)
+
+  21 Jan 2012; Michał Górny <mgorny@gentoo.org> -systemd-29-r5.ebuild,
+  +systemd-29-r6.ebuild, -systemd-37-r3.ebuild, +systemd-37-r4.ebuild,
+  -systemd-38.ebuild, +systemd-38-r1.ebuild:
+  Fix installing pam_systemd.so to /lib*/security. Also, backport a few other
+  fixes.
 
   14 Jan 2012; William Hubbs <williamh@gentoo.org> systemd-29-r3.ebuild,
   systemd-29-r5.ebuild, systemd-37-r1.ebuild, systemd-37-r3.ebuild,
