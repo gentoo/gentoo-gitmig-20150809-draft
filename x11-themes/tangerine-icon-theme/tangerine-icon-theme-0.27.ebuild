@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.27.ebuild,v 1.5 2012/01/02 10:25:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.27.ebuild,v 1.6 2012/01/21 16:23:35 phajdan.jr Exp $
 
 EAPI=3
 inherit gnome2-utils
@@ -12,7 +12,7 @@ SRC_URI="mirror://ubuntu/pool/universe/t/${PN}/${PN}_${PV}.tar.gz
 
 LICENSE="CCPL-Attribution-ShareAlike-2.5 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND="|| ( kde-base/oxygen-icons x11-themes/gnome-icon-theme )"
