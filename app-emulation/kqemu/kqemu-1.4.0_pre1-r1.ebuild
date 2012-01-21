@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.4.0_pre1-r1.ebuild,v 1.4 2011/03/24 19:48:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.4.0_pre1-r1.ebuild,v 1.5 2012/01/21 20:21:11 slyfox Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -42,6 +42,7 @@ src_unpack() {
 		-i common/Makefile
 	epatch "${FILESDIR}/${P}-missing-sched-header.patch"
 	epatch "${FILESDIR}"/${P}-init_MUTEX.patch
+	epatch "${FILESDIR}"/${P}-remove-smp_lock.patch #368439
 }
 
 src_compile() {
