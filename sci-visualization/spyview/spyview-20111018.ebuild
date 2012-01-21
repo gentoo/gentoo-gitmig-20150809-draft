@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20110329-r1.ebuild,v 1.3 2011/07/13 19:50:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20111018.ebuild,v 1.1 2012/01/21 21:10:09 dilfridge Exp $
 
 EAPI=4
 
@@ -12,13 +12,17 @@ SRC_URI="http://kavli.nano.tudelft.nl/~gsteele/${PN}/versions/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEPEND=">=dev-libs/boost-1.40
+COMMON_DEPEND="
+	>=dev-libs/boost-1.42
 	media-libs/netpbm
+	media-libs/libpng:1.2
 	x11-libs/fltk:1
-	app-text/ghostscript-gpl"
+	app-text/ghostscript-gpl
+	virtual/glu
+"
 
 DEPEND="${COMMON_DEPEND}
 	sys-apps/groff"
@@ -26,9 +30,10 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	sci-visualization/gnuplot"
 
-S=${WORKDIR}/spyview-2011-03-29-10_59
-
-PATCHES=( "${FILESDIR}/${P}-xsection_fn.patch" )
+src_unpack() {
+	default
+	mv -v "${WORKDIR}"/spyview-20* "${S}" || die
+}
 
 src_prepare() {
 	append-cflags $(fltk-config --cflags)

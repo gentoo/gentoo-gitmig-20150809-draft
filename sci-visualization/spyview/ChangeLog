@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/spyview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.19 2012/01/04 17:51:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.20 2012/01/21 21:10:09 dilfridge Exp $
+
+*spyview-20111018 (21 Jan 2012)
+
+  21 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -spyview-20110329-r1.ebuild, -files/spyview-20110329-xsection_fn.patch,
+  +spyview-20111018.ebuild:
+  Version bump; remove old
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> spyview-20110803.ebuild:
   x86 stable wrt bug #394799
