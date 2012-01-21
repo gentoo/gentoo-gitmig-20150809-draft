@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6120 2012/01/21 12:32:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6121 2012/01/21 12:55:12 slyfox Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  desc/qemu_softmmu_targets.desc, desc/qemu_user_targets.desc:
+  Added more upstream targets to QEMU_USER_TARGETS and QEMU_SOFTMMU_TARGETS.
 
   21 Jan 2012; Justin Lecher <jlec@gentoo.org> package.mask:
   Mask sci-visualization/scidavis for removal
