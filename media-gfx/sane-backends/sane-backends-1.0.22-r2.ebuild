@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r2.ebuild,v 1.2 2011/11/17 07:59:03 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r2.ebuild,v 1.3 2012/01/21 22:52:52 phosphan Exp $
 
 EAPI="4"
 
@@ -128,7 +128,8 @@ DEPEND="${RDEPEND}
 		virtual/latex-base
 		dev-texlive/texlive-latexextra
 	)
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	dev-util/pkgconfig"
 
 # We now use new syntax construct (SUBSYSTEMS!="usb|usb_device)
 RDEPEND="${RDEPEND}
