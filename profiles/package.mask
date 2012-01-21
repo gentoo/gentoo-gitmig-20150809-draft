@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13411 2012/01/21 10:59:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13412 2012/01/21 12:32:44 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (21 Jan 2012)
+# Mask for removal
+# Direct upstream is dead, doesn't build anymore
+# Most code is included in http://labplot.sourceforge.net/
+# removal #398897, labplot #399607
+sci-visualization/scidavis
 
 # Michał Górny <mgorny@gentoo.org> (21 Jan 2012)
 # Blocks sysvinit yet doesn't provide all tools provided by it.
