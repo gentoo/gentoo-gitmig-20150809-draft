@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.8 2012/01/18 23:10:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.9 2012/01/21 18:47:22 williamh Exp $
 
 EAPI=4
 
@@ -65,8 +65,10 @@ src_install()
 	find "${D}" -name libkmod.la -delete
 
 	if use compat && use tools; then
+	dodir /bin
+dosym /usr/bin/kmod /bin/lsmod
 		dodir /sbin
-		for cmd in depmod insmod lsmod modinfo modprobe rmmod; do
+		for cmd in depmod insmod modinfo modprobe rmmod; do
 			dosym /usr/bin/kmod /sbin/$cmd
 		done
 	fi
