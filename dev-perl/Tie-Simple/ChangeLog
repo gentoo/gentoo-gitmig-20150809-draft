@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Tie-Simple
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Simple/ChangeLog,v 1.1 2012/01/21 20:43:26 ssuominen Exp $
+
+*Tie-Simple-1.03 (21 Jan 2012)
+
+  21 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +Tie-Simple-1.03.ebuild:
+  Initial commit (as part of #356535 by Satoshi Hayazaki)
+
