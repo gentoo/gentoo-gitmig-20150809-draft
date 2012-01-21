@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.9-r1.ebuild,v 1.1 2012/01/21 20:40:38 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.9-r1.ebuild,v 1.2 2012/01/21 21:22:10 ssuominen Exp $
 
 EAPI=4
 inherit eutils fdo-mime toolchain-funcs
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="nls"
 
-#dev-libs/iniparser, see pkg_setup() and bug 399629
-RDEPEND="x11-libs/gtk+:2"
+RDEPEND=">=dev-libs/iniparser-3.0.0
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
@@ -33,7 +33,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-asneeded.patch
-	epatch "${FILESDIR}"/${P}-iniparser-3.0.0.patch  # bug 399629
+	epatch "${FILESDIR}"/${P}-iniparser-3.0.0.patch #399629
 	rm -R iniparser-2.17 || die
 }
 
