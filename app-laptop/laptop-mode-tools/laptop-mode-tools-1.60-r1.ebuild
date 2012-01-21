@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.60-r1.ebuild,v 1.4 2012/01/17 12:58:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.60-r1.ebuild,v 1.5 2012/01/21 16:34:14 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.samwel.tk/laptop_mode/tools/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="acpi apm bluetooth scsi"
 
 RDEPEND="net-wireless/wireless-tools
