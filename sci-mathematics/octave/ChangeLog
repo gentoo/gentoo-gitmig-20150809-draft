@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.113 2012/01/20 23:53:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.114 2012/01/21 18:28:10 bicatali Exp $
+
+  21 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> octave-3.4.3-r1.ebuild:
+  Applying pkg_setup to earlier version
 
   20 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> octave-3.6.0.ebuild:
   Move pkg_pretend -> pkg_setup for openmp check, bug #399557
