@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xml2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2/ChangeLog,v 1.9 2010/01/02 11:45:51 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2/ChangeLog,v 1.10 2012/01/21 06:48:03 radhermit Exp $
+
+*xml2-0.5 (21 Jan 2012)
+
+  21 Jan 2012; Tim Harder <radhermit@gentoo.org> +xml2-0.5.ebuild:
+  Version bump.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> xml2-0.4.ebuild:
   Transfer Prefix keywords
