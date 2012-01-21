@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.4.ebuild,v 1.1 2012/01/20 06:00:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.4.ebuild,v 1.2 2012/01/21 09:13:23 xarthisius Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=yes
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 inherit autotools-utils
 
@@ -27,4 +28,4 @@ PATCHES=( "${FILESDIR}"/${PN}-2.7.1-autotools.patch )
 # Needs manual inspection of the result, useless.
 RESTRICT="test"
 
-S="${WORKDIR}/${MY_PN}"
+S=${WORKDIR}/${MY_PN}

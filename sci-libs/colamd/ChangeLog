@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/colamd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.23 2012/01/20 06:00:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.24 2012/01/21 09:13:23 xarthisius Exp $
+
+  21 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> colamd-2.7.4.ebuild:
+  Readd AUTOTOOLS_IN_SOURCE_BUILD=1, drop quotes
 
 *colamd-2.7.4 (20 Jan 2012)
 
