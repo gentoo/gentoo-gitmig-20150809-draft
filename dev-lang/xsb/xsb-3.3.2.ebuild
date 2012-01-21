@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.3.2.ebuild,v 1.4 2012/01/14 12:03:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.3.2.ebuild,v 1.5 2012/01/21 05:33:11 keri Exp $
 
 EAPI=2
 
 MY_P="XSB${PV//./}"
 
-PATCHSET_VER="2"
+PATCHSET_VER="3"
 
 inherit eutils autotools java-pkg-opt-2
 
