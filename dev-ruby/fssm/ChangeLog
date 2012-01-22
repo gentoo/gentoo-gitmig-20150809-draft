@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fssm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.15 2011/12/31 18:04:39 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.16 2012/01/22 09:44:24 flameeyes Exp $
+
+*fssm-0.2.8.1 (22 Jan 2012)
+
+  22 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> +fssm-0.2.8.1.ebuild:
+  Version bump; add rb-inotify dependency to gemspec if using it at all.
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> fssm-0.2.7-r1.ebuild:
   Add Prefix keywords, bug #396547
