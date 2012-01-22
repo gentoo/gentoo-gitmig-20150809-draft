@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/syslogger
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syslogger/ChangeLog,v 1.1 2012/01/22 18:45:01 flameeyes Exp $
+
+*syslogger-1.2.5 (22 Jan 2012)
+
+  22 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +syslogger-1.2.5.ebuild:
+  Initial import of syslogger to use with Rails.
+
