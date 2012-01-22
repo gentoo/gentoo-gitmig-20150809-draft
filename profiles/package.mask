@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13414 2012/01/22 11:31:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13415 2012/01/22 13:03:32 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -284,32 +284,6 @@ dev-libs/libdebian-installer
 app-text/chasen
 app-dicts/ipadic
 dev-ruby/ruby-chasen
-
-# Pacho Ramos <pacho@gentoo.org> (23 Nov 2011)
-# Upstream stopped their development and support for a long
-# time, they are not compatible with recent monodevelop versions.
-# See bug #389473. Removal in 30 days.
-dev-util/monodevelop-boo
-dev-util/monodevelop-debugger-mdb
-
-# Pacho Ramos <pacho@gentoo.org> (22 Nov 2011)
-# Mozilla dropped support for it and nothing uses it in
-# the tree. See bug #372243. Removal in 30 days.
-dev-python/gtkmozembed-python
-
-# Pacho Ramos <pacho@gentoo.org> (21 Nov 2011)
-# Unmaintained by upstream for ages, use 
-# app-admin/system-config-printer-gnome instead.
-# Removal in 30 days. Bug #352952
-net-print/gnome-cups-manager
-
-# Pacho Ramos <pacho@gentoo.org> (21 Nov 2011)
-# Drop old gnome-python metas that are no longer needed,
-# people have to use splitted ebuilds instead, bug #108479
-# Removal in 30 days
-dev-python/gnome-python
-dev-python/gnome-python-desktop
-dev-python/gnome-python-extras
 
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
