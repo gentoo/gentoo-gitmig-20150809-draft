@@ -1,6 +1,6 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.102 2012/01/21 23:31:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.103 2012/01/22 00:55:15 floppym Exp $
 
   21 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> cmake-utils.eclass:
   Dont force CMAKE_BUILD_WITH_INSTALL_RPATH in APPLE prefix on request from
@@ -10,7 +10,7 @@
   Force autoreconf on user patches only.
 
   21 Jan 2012; Mike Gilbert <floppym@gentoo.org> python.eclass:
-  Copy python_clean_installation_image from Progress overlay. Thanks Arfrever.
+  Copy python_clean_py-compile_files from Progress overlay. Thanks Arfrever.
   Bug 396586.
 
   20 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
