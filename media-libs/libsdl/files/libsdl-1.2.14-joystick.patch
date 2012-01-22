@@ -1,5 +1,5 @@
---- SDL-1.2.14/src/joystick/linux/SDL_sysjoystick.c	2009-10-18 13:54:40.000000000 -0400
-+++ SDL-1.2.14-mod/src/joystick/linux/SDL_sysjoystick.c	2010-08-15 22:28:19.000000000 -0400
+--- SDL-1.2.14/src/joystick/linux/SDL_sysjoystick.c
++++ SDL-1.2.14-mod/src/joystick/linux/SDL_sysjoystick.c
 @@ -700,26 +700,26 @@
  				continue;
  			}

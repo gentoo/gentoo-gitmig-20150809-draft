@@ -2,8 +2,8 @@ fix from upstream for the cld issue on x86
 
 http://bugs.gentoo.org/217097
 
---- include/SDL_stdinc.h	(revision 3535)
-+++ include/SDL_stdinc.h	(revision 3536)
+--- include/SDL_stdinc.h
++++ include/SDL_stdinc.h
 @@ -373,6 +373,7 @@ do {							\
  	__asm__ __volatile__ (				\
  		"std\n\t"				\
