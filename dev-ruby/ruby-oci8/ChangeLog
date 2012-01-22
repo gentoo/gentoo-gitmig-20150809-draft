@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-oci8
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ChangeLog,v 1.19 2011/11/06 10:25:30 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ChangeLog,v 1.20 2012/01/22 12:54:13 graaff Exp $
+
+*ruby-oci8-2.0.6-r1 (22 Jan 2012)
+
+  22 Jan 2012; Hans de Graaff <graaff@gentoo.org> ruby-oci8-2.0.6.ebuild,
+  +ruby-oci8-2.0.6-r1.ebuild:
+  Revision bump to create stable candidate.
 
 *ruby-oci8-2.0.6 (06 Nov 2011)
 
