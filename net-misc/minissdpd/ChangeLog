@@ -1,5 +1,12 @@
 
 
+*minissdpd-1.1.20120121 (22 Jan 2012)
+
+  22 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  +minissdpd-1.1.20120121.ebuild,
+  +files/minissdpd-1.1.20120121-remove-initd.patch:
+  Version bump
+
   08 Nov 2011; Anthony G. Basile <blueness@gentoo.org>
   files/minissdpd.initd-r1:
   Fixed confusion between two variable names
