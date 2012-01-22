@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/kinput2
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.23 2006/10/27 18:18:22 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.24 2012/01/22 11:14:22 matsuu Exp $
+
+*kinput2-3.1-r2 (22 Jan 2012)
+
+  22 Jan 2012; MATSUU Takuto <matsuu@gentoo.org> +files/xinput-kinput2,
+  +kinput2-3.1-r2.ebuild:
+  Added imsettings related file. Clean up.
 
   27 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kinput2-3.1-r1.ebuild:
   Ebuild cleanup, fix for modular X support only (thanks Patrick Lauer for
