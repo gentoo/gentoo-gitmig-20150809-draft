@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.94 2011/10/06 17:48:47 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.95 2012/01/22 19:07:07 ssuominen Exp $
+
+*gv-3.7.3 (22 Jan 2012)
+
+  22 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +gv-3.7.3.ebuild,
+  +files/gv-3.7.3-libXaw3d-1.6.patch:
+  Version bump wrt #398225 by Pavel Sanda. Fix building with libXaw3d >= 1.6
+  wrt #399753 by Helmut Jarausch.
 
   06 Oct 2011; Jeroen Roovers <jer@gentoo.org> gv-3.7.1-r1.ebuild:
   Stable for HPPA (bug #371807).
