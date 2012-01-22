@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/qemu_softmmu_targets.desc,v 1.3 2012/01/21 12:55:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/qemu_softmmu_targets.desc,v 1.4 2012/01/22 10:19:01 slyfox Exp $
 
 # This file contains descriptions of QEMU_SOFTMMU_TARGETS USE_EXPAND flags.
 
@@ -10,6 +10,7 @@ alpha - system emulation target
 arm - system emulation target
 cris - system emulation target
 i386 - system emulation target
+lm32 - LatticeMico32 system emulation target
 m68k - system emulation target
 microblazeel - system emulation target
 microblaze - system emulation target
