@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.304 2012/01/15 19:00:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.305 2012/01/22 23:33:26 ssuominen Exp $
+
+  22 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> xscreensaver-5.15.ebuild:
+  Missing perl dependencies for Text::Wrap, Digest::MD5 and LWP::Simple wrt
+  #398033 by Michael Casey
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> xscreensaver-5.15.ebuild:
   alpha/ia64/sh stable wrt #395765

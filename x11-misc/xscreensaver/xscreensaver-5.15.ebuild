@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.15.ebuild,v 1.9 2012/01/15 19:00:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.15.ebuild,v 1.10 2012/01/22 23:33:26 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib pam
@@ -12,37 +12,43 @@ SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
-IUSE="jpeg new-login opengl pam suid xinerama"
+IUSE="jpeg new-login opengl pam +perl suid xinerama"
 
-RDEPEND="x11-libs/libXmu
-	x11-libs/libXxf86vm
-	x11-libs/libXrandr
-	x11-libs/libXxf86misc
-	x11-libs/libXt
+COMMON_DEPEND="dev-libs/libxml2
+	>=gnome-base/libglade-2
+	media-libs/netpbm
+	x11-apps/appres
+	x11-apps/xwininfo
+	x11-libs/gtk+:2
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXi
-	x11-apps/xwininfo
-	x11-apps/appres
-	media-libs/netpbm
-	>=dev-libs/libxml2-2.5
-	>=x11-libs/gtk+-2:2
-	>=gnome-base/libglade-1.99
-	pam? ( virtual/pam )
+	x11-libs/libXmu
+	x11-libs/libXrandr
+	x11-libs/libXt
+	x11-libs/libXxf86misc
+	x11-libs/libXxf86vm
 	jpeg? ( virtual/jpeg )
+	new-login? ( || ( x11-misc/lightdm gnome-base/gdm kde-base/kdm ) )
 	opengl? ( virtual/opengl )
-	xinerama? ( x11-libs/libXinerama )
-	new-login? ( || ( x11-misc/lightdm gnome-base/gdm kde-base/kdm ) )"
-DEPEND="${RDEPEND}
-	x11-proto/xf86vidmodeproto
-	x11-proto/xextproto
-	x11-proto/scrnsaverproto
-	x11-proto/recordproto
-	x11-proto/xf86miscproto
-	sys-devel/bc
-	dev-util/pkgconfig
-	sys-devel/gettext
+	pam? ( virtual/pam )
+	xinerama? ( x11-libs/libXinerama )"
+RDEPEND="${COMMON_DEPEND}
+	perl? (
+		dev-lang/perl
+		dev-perl/libwww-perl
+		virtual/perl-Digest-MD5
+		)"
+DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
+	dev-util/pkgconfig
+	sys-devel/bc
+	sys-devel/gettext
+	x11-proto/recordproto
+	x11-proto/scrnsaverproto
+	x11-proto/xextproto
+	x11-proto/xf86miscproto
+	x11-proto/xf86vidmodeproto
 	xinerama? ( x11-proto/xineramaproto )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
