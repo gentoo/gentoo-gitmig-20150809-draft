@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/uuagc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.17 2011/12/18 12:39:59 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.18 2012/01/22 12:04:23 ago Exp $
+
+  22 Jan 2012; Agostino Sarubbo <ago@gentoo.org> uuagc-0.9.24.ebuild:
+  Stable for amd64, wrt bug #396869
 
   18 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
   +files/uuagc-0.9.1-split-base.patch, uuagc-0.9.1.ebuild:
