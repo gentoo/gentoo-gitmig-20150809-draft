@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.2-r1.ebuild,v 1.4 2011/07/14 08:29:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.8.ebuild,v 1.1 2012/01/22 11:55:20 pacho Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit linux-info mono eutils flag-o-matic multilib go-mono pax-utils
 
@@ -11,13 +11,12 @@ HOMEPAGE="http://www.mono-project.com/Main_Page"
 
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="hardened minimal xen"
+IUSE="minimal pax_kernel xen"
 
 #Bash requirement is for += operator
-COMMONDEPEND="!<dev-dotnet/pnet-0.6.12
-	!dev-util/monodoc
+COMMONDEPEND="!dev-util/monodoc
 	!minimal? ( =dev-dotnet/libgdiplus-${GO_MONO_REL_PV}* )
 	ia64? (	sys-libs/libunwind )"
 RDEPEND="${COMMONDEPEND}
@@ -25,8 +24,9 @@ RDEPEND="${COMMONDEPEND}
 
 DEPEND="${COMMONDEPEND}
 	sys-devel/bc
+	virtual/yacc
 	>=app-shells/bash-3.2
-	hardened? ( sys-apps/paxctl )"
+	pax_kernel? ( sys-apps/paxctl )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -61,7 +61,7 @@ src_prepare() {
 	# we need to sed in the paxctl -mr in the runtime/mono-wrapper.in so it don't
 	# get killed in the build proces when MPROTEC is enable. #286280
 	# RANDMMAP kill the build proces to #347365
-	if use hardened ; then
+	if use pax_kernel ; then
 		ewarn "We are disabling MPROTECT on the mono binary."
 		sed '/exec/ i\paxctl -mr "$r/@mono_runtime@"' -i "${S}"/runtime/mono-wrapper.in
 	fi
@@ -71,7 +71,7 @@ src_configure() {
 	# mono's build system is finiky, strip the flags
 	strip-flags
 
-	#Remove this at your own peril. Mono will barf in unexpected ways.
+	# Remove this at your own peril. Mono will barf in unexpected ways.
 	append-flags -fno-strict-aliasing
 
 	# NOTE: We need the static libs for now so mono-debugger works.
@@ -118,8 +118,8 @@ src_install() {
 	# Remove files not respecting LDFLAGS and that we are not supposed to provide, see Fedora
 	# mono.spec and http://www.mail-archive.com/mono-devel-list@lists.ximian.com/msg24870.html
 	# for reference.
-	rm -f "${D}"/usr/$(get_libdir)/mono/2.0/mscorlib.dll.so
-	rm -f "${D}"/usr/$(get_libdir)/mono/2.0/mcs.exe.so
+	rm -f "${ED}"/usr/$(get_libdir)/mono/2.0/mscorlib.dll.so
+	rm -f "${ED}"/usr/$(get_libdir)/mono/2.0/mcs.exe.so
 }
 
 #THINK!!!! Before touching postrm and postinst
