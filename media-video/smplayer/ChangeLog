@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.98 2011/11/04 17:14:02 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.99 2012/01/22 19:38:31 hwoarang Exp $
+
+*smplayer-0.6.10 (22 Jan 2012)
+
+  22 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +smplayer-0.6.10.ebuild:
+  Version bump. Migrate to EAPI4
 
   04 Nov 2011; Sebastian Pipping <sping@gentoo.org> smplayer-0.6.9-r1.ebuild,
   smplayer-0.6.9-r2.ebuild:
