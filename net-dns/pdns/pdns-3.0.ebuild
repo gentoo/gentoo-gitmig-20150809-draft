@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.2 2011/07/30 09:59:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.3 2012/01/22 20:36:55 swegener Exp $
 
 EAPI=2
 
@@ -26,7 +26,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-lua-config.patch
+	epatch "${FILESDIR}"/${P}-lua-config.patch \
+		"${FILESDIR}"/${PN}-3.0-verbose-logging.patch
 	eautoreconf
 }
 
