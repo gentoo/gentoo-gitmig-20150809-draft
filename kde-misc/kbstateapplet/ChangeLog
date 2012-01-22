@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kbstateapplet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbstateapplet/ChangeLog,v 1.1 2011/12/15 22:25:54 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbstateapplet/ChangeLog,v 1.2 2012/01/22 21:36:41 johu Exp $
+
+  22 Jan 2012; Johannes Huber <johu@gentoo.org> kbstateapplet-0_p1268845.ebuild:
+  Update HOMEPAGE fixes bug #399761.
 
 *kbstateapplet-0_p1268845 (15 Dec 2011)
 
