@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.35.ebuild,v 1.1 2012/01/14 18:27:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.35.ebuild,v 1.2 2012/01/22 21:58:27 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -26,6 +26,7 @@ COMMON_DEPEND="
 	>=dev-libs/chmlib-0.40
 	>=dev-libs/icu-4.4
 	>=dev-python/beautifulsoup-3.0.5:python-2
+	dev-python/python-dateutil:python-2
 	>=dev-python/dnspython-1.6.0
 	>=dev-python/cssutils-0.9.7_alpha3
 	>=dev-python/dbus-python-0.82.2
