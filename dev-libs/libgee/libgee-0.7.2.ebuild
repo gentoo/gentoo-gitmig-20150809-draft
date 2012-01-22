@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.7.0.ebuild,v 1.1 2011/09/08 22:10:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.7.2.ebuild,v 1.1 2012/01/22 13:10:59 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -17,15 +17,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-linux"
 IUSE="+introspection"
 
 # FIXME: add doc support, requires valadoc
-RDEPEND=">=dev-libs/glib-2.12
+RDEPEND=">=dev-libs/glib-2.12:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=dev-lang/vala-0.9.3:0.10"
+	>=dev-lang/vala-0.14.0:0.14"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog* MAINTAINERS NEWS README"
 	G2CONF="${G2CONF}
 		$(use_enable introspection)
-		VALAC=$(type -P valac-0.10)"
+		VALAC=$(type -P valac-0.14)"
 }
