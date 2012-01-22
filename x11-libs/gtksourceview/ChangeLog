@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtksourceview
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.214 2011/12/17 01:55:23 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.215 2012/01/22 14:46:11 jer Exp $
+
+  22 Jan 2012; Jeroen Roovers <jer@gentoo.org> gtksourceview-3.2.3.ebuild:
+  Remove duplicate KEYWORDS entry by zvasylvv (bug #399575).
 
 *gtksourceview-2.10.5-r2 (17 Dec 2011)
 
