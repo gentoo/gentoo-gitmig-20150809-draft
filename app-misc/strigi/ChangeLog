@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.83 2012/01/16 20:55:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.84 2012/01/22 01:51:17 johu Exp $
+
+  22 Jan 2012; Johannes Huber <johu@gentoo.org>
+  -files/strigi-0.7.5-ffmpeg.patch, -files/strigi-0.7.5-no-qt4.patch,
+  -files/strigi-0.7.6-crash.patch, -strigi-0.7.6-r1.ebuild:
+  Remove old.
 
   16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> strigi-0.7.7.ebuild:
   Stable for amd64, wrt bug #396359
