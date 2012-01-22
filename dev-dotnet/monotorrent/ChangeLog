@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/monotorrent
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monotorrent/ChangeLog,v 1.9 2011/05/11 19:26:59 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monotorrent/ChangeLog,v 1.10 2012/01/22 10:49:12 pacho Exp $
+
+  22 Jan 2012; Pacho Ramos <pacho@gentoo.org> -monotorrent-0.72.ebuild:
+  Drop old.
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> monotorrent-0.80.ebuild:
   Stable on amd64 wrt bug #359651
