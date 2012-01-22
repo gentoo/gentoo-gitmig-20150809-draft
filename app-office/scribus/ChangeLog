@@ -1,6 +1,10 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.149 2012/01/04 09:11:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.150 2012/01/22 13:01:35 jlec Exp $
+
+  22 Jan 2012; Justin Lecher <jlec@gentoo.org> scribus-1.4.0.ebuild:
+  Don't compress the help file symlink with temporary workaround from #399595,
+  #397801
 
 *scribus-1.4.0 (04 Jan 2012)
 

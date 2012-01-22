@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0.ebuild,v 1.1 2012/01/04 09:11:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0.ebuild,v 1.2 2012/01/22 13:01:35 jlec Exp $
 
 EAPI=4
 
@@ -94,9 +94,15 @@ src_install() {
 
 	mv "${ED}"/usr/share/doc/${PF}/{en,html} || die
 	ln -sf html "${ED}"/usr/share/doc/${PF}/en || die
-
+	docompress -x /usr/share/doc/${PF}/en
 	doicon resources/icons/scribus.png
 	domenu scribus.desktop
+}
+
+pkg_preinst() {
+	# 399595
+	rm -vf "${ED}"/usr/share/doc/${PF}/en* || die
+	ln -sf html "${ED}"/usr/share/doc/${PF}/en
 }
 
 pkg_postinst() {
