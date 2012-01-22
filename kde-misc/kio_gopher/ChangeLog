@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kio_gopher
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_gopher/ChangeLog,v 1.7 2011/10/29 00:35:51 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_gopher/ChangeLog,v 1.8 2012/01/22 20:51:15 johu Exp $
+
+*kio_gopher-0.1.4 (22 Jan 2012)
+
+  22 Jan 2012; Johannes Huber <johu@gentoo.org> +kio_gopher-0.1.4.ebuild:
+  Version bump wrt bug #399757.
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kio_gopher-0.1.3.ebuild:
   Bump to EAPI=4
