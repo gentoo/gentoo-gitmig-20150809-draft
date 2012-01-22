@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.107 2012/01/20 10:40:08 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.108 2012/01/22 14:53:05 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org> libarchive-2.8.5.ebuild:
+  ia64/s390/sh/sparc stable wrt #366687
 
   20 Jan 2012; Thomas Kahle <tomka@gentoo.org> libarchive-2.8.5.ebuild:
   x86 stable per bug 366687
