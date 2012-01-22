@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.91 2012/01/22 11:52:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.92 2012/01/22 12:38:34 slyfox Exp $
+
+  22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-9999.ebuild:
+  Added _all_ emulated audio cards (bug #144894 by Torsten Krah)
 
 *qemu-1.0 (22 Jan 2012)
 

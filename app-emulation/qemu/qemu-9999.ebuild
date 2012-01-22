@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.6 2012/01/22 11:52:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.7 2012/01/22 12:38:34 slyfox Exp $
 
 EAPI="2"
 
@@ -207,6 +207,7 @@ src_configure() {
 		--enable-nptl \
 		--enable-uuid \
 		${conf_opts} \
+		--audio-card-list="ac97 es1370 sb16 cs4231a adlib gus hda" \
 		--audio-drv-list="${audio_opts}" \
 		--target-list="${softmmu_targets} ${user_targets}" \
 		--cc="$(tc-getCC)" \
