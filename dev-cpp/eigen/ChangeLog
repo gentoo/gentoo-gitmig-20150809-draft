@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.54 2012/01/21 16:25:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.55 2012/01/22 15:38:38 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org> eigen-2.0.16.ebuild:
+  alpha/ia64/sparc stable wrt #398545
 
   21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> eigen-2.0.16.ebuild:
   x86 stable wrt bug #398545
