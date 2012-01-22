@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/mix-mplus-ipa
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mix-mplus-ipa/ChangeLog,v 1.2 2011/11/04 11:53:39 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mix-mplus-ipa/ChangeLog,v 1.3 2012/01/22 10:40:37 matsuu Exp $
+
+*mix-mplus-ipa-20111002 (22 Jan 2012)
+
+  22 Jan 2012; MATSUU Takuto <matsuu@gentoo.org>
+  +mix-mplus-ipa-20111002.ebuild:
+  Version bumped. Removed migu-1vs and migu-2ds because of license issue.
 
   04 Nov 2011; Naohiro Aota <naota@gentoo.org> mix-mplus-ipa-20110825.ebuild:
   Add ~x86-fbsd
