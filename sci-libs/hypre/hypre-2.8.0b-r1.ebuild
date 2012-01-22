@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b.ebuild,v 1.1 2012/01/22 03:32:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.1 2012/01/22 16:20:03 bicatali Exp $
 
 EAPI=4
 
@@ -63,7 +63,7 @@ src_configure() {
 src_install() {
 	dolib.so hypre/lib/lib*
 	insinto /usr/include/hypre
-	doins -r hypre/include
+	doins -r hypre/include/*
 
 	use doc && dodoc "${WORKDIR}"/${P}/docs/*.pdf
 	if use examples; then

@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/hypre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/ChangeLog,v 1.1 2012/01/22 03:32:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/ChangeLog,v 1.2 2012/01/22 16:20:03 bicatali Exp $
+
+*hypre-2.8.0b-r1 (22 Jan 2012)
+
+  22 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> -hypre-2.8.0b.ebuild,
+  +hypre-2.8.0b-r1.ebuild:
+  include files in proper directory
 
 *hypre-2.8.0b (22 Jan 2012)
 
