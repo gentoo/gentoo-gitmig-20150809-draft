@@ -1,18 +1,22 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-0.9.1.ebuild,v 1.6 2011/10/27 06:34:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-1.2.ebuild,v 1.1 2012/01/22 12:20:59 pacho Exp $
 
-EAPI=2
+EAPI="4"
+GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
-inherit mono gnome2 eutils autotools
+inherit mono gnome2
 
 DESCRIPTION="Video subtitling for the Gnome desktop"
 HOMEPAGE="http://gnome-subtitles.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gnome-subtitles/${P}.tar.gz"
+
 LICENSE="GPL-2"
-IUSE=""
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+IUSE=""
+KEYWORDS="~amd64 ~ppc ~x86"
+
 RDEPEND=">=dev-lang/mono-1.1
 	>=dev-dotnet/glade-sharp-2.12
 	>=dev-dotnet/gtk-sharp-2.12
@@ -25,16 +29,5 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig
 	app-text/gnome-doc-utils"
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-as-needed.patch"
-	eautoreconf
-	gnome2_src_prepare
-}
-
-src_install() {
-	gnome2_src_install
-	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
-}
 
 DOCS="AUTHORS ChangeLog NEWS README"
