@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.14 2011/09/28 14:31:56 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.15 2012/01/22 16:58:11 ssuominen Exp $
 
 EAPI=4
 
@@ -71,6 +71,9 @@ RDEPEND="${RDEPEND}
 		alsa? ( media-sound/alsa-utils )
 		bluetooth? ( >=net-wireless/bluez-4 )
 	)"
+
+# See "*** BLUEZ support not found (requires D-Bus)" in configure.ac
+REQUIRED_USE="bluetooth? ( dbus )"
 
 pkg_setup() {
 	enewgroup audio 18 # Just make sure it exists
