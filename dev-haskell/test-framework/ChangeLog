@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/test-framework
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/ChangeLog,v 1.9 2011/02/25 13:13:56 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/ChangeLog,v 1.10 2012/01/22 14:19:16 gienah Exp $
+
+*test-framework-0.4.2.0 (22 Jan 2012)
+
+  22 Jan 2012; Mark Wright <gienah@gentoo.org> +test-framework-0.4.2.0.ebuild:
+  Version bump for dev-haskell/hashable
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   test-framework-0.2.4.ebuild:
