@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/qtiplot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.86 2011/12/22 15:45:25 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.87 2012/01/22 14:20:07 dilfridge Exp $
+
+*qtiplot-0.9.8.9-r1 (22 Jan 2012)
+
+  22 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +qtiplot-0.9.8.9-r1.ebuild, +files/qtiplot-0.9.8.9-origin-2.patch:
+  Add Origin and EMF file format patch by Stephan Zevenhuisen, Universiteit
+  Utrecht
 
 *qtiplot-0.9.8.9 (22 Dec 2011)
 
