@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0.ebuild,v 1.1 2012/01/16 16:37:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0.ebuild,v 1.2 2012/01/22 10:09:39 naota Exp $
 
 EAPI=2
 
@@ -22,7 +22,9 @@ SRC_URI="mirror://gentoo/${LIB}.tar.bz2
 		mirror://gentoo/${USBIN}.tar.bz2
 		mirror://gentoo/${GNU}.tar.bz2
 		build? (
-			mirror://gentoo/${SYS}.tar.bz2 )"
+			mirror://gentoo/${SYS}.tar.bz2 )
+		zfs? (
+			mirror://gentoo/${CDDL}.tar.bz2 )"
 
 if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 	RDEPEND="ssl? ( dev-libs/openssl )
