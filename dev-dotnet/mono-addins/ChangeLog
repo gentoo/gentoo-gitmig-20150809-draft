@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono-addins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.31 2011/11/10 19:17:32 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.32 2012/01/22 10:41:27 pacho Exp $
+
+  22 Jan 2012; Pacho Ramos <pacho@gentoo.org> -mono-addins-0.6.ebuild:
+  Drop old.
 
   10 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> mono-addins-0.6.2.ebuild:
   ppc stable wrt #389181
