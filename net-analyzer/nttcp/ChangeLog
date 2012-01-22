@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nttcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.16 2012/01/15 15:34:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.17 2012/01/22 15:13:04 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org> nttcp-1.47.ebuild,
+  nttcp-1.47-r1.ebuild:
+  Drop alpha/ia64 keywords
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nttcp-1.47-r1.ebuild:
   x86 stable wrt bug #397135
