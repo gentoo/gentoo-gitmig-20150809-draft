@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.90.ebuild,v 1.1 2012/01/15 19:49:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.4.9999.ebuild,v 1.1 2012/01/22 10:27:44 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
