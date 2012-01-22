@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/scrollz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.37 2012/01/15 15:24:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.38 2012/01/22 15:06:14 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org> scrollz-2.1.ebuild,
+  scrollz-2.2.ebuild, scrollz-2.2.1.ebuild:
+  Drop ia64 keywords
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> scrollz-2.2.ebuild:
   x86 stable wrt bug #397155
