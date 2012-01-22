@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.8 2012/01/22 17:55:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.9 2012/01/22 21:03:52 slyfox Exp $
 
 EAPI="2"
 
@@ -106,6 +106,9 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 	usr/bin/qemu-microblazeel
 	usr/bin/qemu-mips
 	usr/bin/qemu-mipsel
+	usr/bin/qemu-ppc
+	usr/bin/qemu-ppc64
+	usr/bin/qemu-ppc64abi32
 	usr/bin/qemu-sh4
 	usr/bin/qemu-sh4eb
 	usr/bin/qemu-sparc
@@ -220,11 +223,6 @@ src_configure() {
 		# the kvm project has its own support for threaded IO
 		# which is always on and works
 		# --enable-io-thread \
-}
-
-src_compile() {
-	# Restricting parallel build until we get a patch to fix this
-	emake || die
 }
 
 src_install() {
