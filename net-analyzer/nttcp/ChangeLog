@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nttcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.17 2012/01/22 15:13:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.18 2012/01/22 16:42:57 jer Exp $
+
+  22 Jan 2012; Jeroen Roovers <jer@gentoo.org> -nttcp-1.47.ebuild:
+  Old.
 
   22 Jan 2012; Raúl Porcel <armin76@gentoo.org> nttcp-1.47.ebuild,
   nttcp-1.47-r1.ebuild:
