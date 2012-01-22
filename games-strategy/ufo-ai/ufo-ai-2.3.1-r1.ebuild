@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.1-r1.ebuild,v 1.6 2011/08/20 08:08:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.1-r1.ebuild,v 1.7 2012/01/22 16:35:28 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
 
-MY_P="${P/o-a/oa}"
+MY_P=${P/o-a/oa}
 
 DESCRIPTION="UFO: Alien Invasion - X-COM inspired strategy game"
 HOMEPAGE="http://ufoai.sourceforge.net/"
@@ -28,7 +28,7 @@ RDEPEND="!dedicated? (
 		media-libs/sdl-ttf
 		media-libs/sdl-mixer
 		virtual/jpeg
-		media-libs/libpng
+		media-libs/libpng:0
 		media-libs/libogg
 		media-libs/libvorbis
 		x11-proto/xf86vidmodeproto
@@ -37,7 +37,7 @@ RDEPEND="!dedicated? (
 	sys-devel/gettext
 	sys-libs/zlib
 	editor? (
-		dev-libs/libxml2:2
+		dev-libs/libxml2
 		virtual/jpeg
 		media-libs/openal
 		x11-libs/gtkglext
@@ -53,9 +53,11 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}-source
 
 src_prepare() {
+	has_version '>=sys-libs/zlib-1.2.5.1-r1' && sed -i \
+		-e '1i#define OF(x) x' src/common/ioapi.h
 	epatch "${FILESDIR}"/${P}-libpng15.patch
 	cp "${DISTDIR}"/1maps.pk3 "${WORKDIR}"/base/ || die
-	mv "${WORKDIR}"/base/ "${S}"/ || die "Moving data failed"
+	mv "${WORKDIR}"/base/ "${S}"/ || die
 }
 
 src_configure() {
@@ -73,15 +75,15 @@ src_configure() {
 }
 
 src_compile() {
-	if use doc ; then
-		emake pdf-manual || die "emake pdf-manual failed"
+	if use doc; then
+		emake pdf-manual || die
 	fi
 
-	emake || die "emake failed"
-	emake lang || die "emake lang failed"
+	emake || die
+	emake lang || die
 
 	if use editor; then
-		emake uforadiant || die "emake uforadiant failed"
+		emake uforadiant || die
 	fi
 }
 
@@ -90,7 +92,7 @@ src_install() {
 
 	newicon src/ports/linux/ufo.png ${PN}.png || die
 	make_desktop_entry ufoded "UFO: Alien Invasion Server" ${PN}
-	if ! use dedicated ; then
+	if ! use dedicated; then
 		make_desktop_entry ufo "UFO: Alien Invasion" ${PN}
 	fi
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/ufo-ai
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.35 2011/08/20 08:08:34 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.36 2012/01/22 16:35:28 ssuominen Exp $
+
+  22 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> ufo-ai-2.3.1-r1.ebuild:
+  Fix building with sys-libs/zlib >= 1.2.5.1-r1 (OF change) wrt #383179
 
   20 Aug 2011; Alexis Ballier <aballier@gentoo.org> ufo-ai-2.3.1-r1.ebuild:
   virtual/latex-base provides pdftex, drop useless pdftex dep
