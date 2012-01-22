@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.86.ebuild,v 1.1 2012/01/07 23:38:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.86.ebuild,v 1.2 2012/01/22 22:26:53 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -110,6 +110,9 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}"
+
+RESTRICT=test
+# bug 394273
 
 src_configure() {
 	local cal_ft

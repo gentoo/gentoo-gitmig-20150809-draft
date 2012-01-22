@@ -1,6 +1,10 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.18 2012/01/07 23:38:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.19 2012/01/22 22:26:53 dilfridge Exp $
+
+  22 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -calligra-2.3.85.ebuild, calligra-2.3.86.ebuild, calligra-9999.ebuild:
+  Remove old; restrict tests, bug 394273
 
 *calligra-2.3.86 (07 Jan 2012)
 
