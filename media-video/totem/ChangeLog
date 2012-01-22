@@ -1,6 +1,11 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.329 2012/01/22 01:25:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.330 2012/01/22 01:34:18 tetromino Exp $
+
+  22 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  totem-2.32.0-r2.ebuild, totem-3.2.1.ebuild:
+  Don't run python_mod_cleanup in pkg_postrm if python was disabled (prevents
+  _python_check_python_pkg_setup_execution errors).
 
   22 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   totem-2.32.0-r2.ebuild:

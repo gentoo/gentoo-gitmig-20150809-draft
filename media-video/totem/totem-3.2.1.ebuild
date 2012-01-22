@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.1.ebuild,v 1.2 2012/01/05 08:06:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.1.ebuild,v 1.3 2012/01/22 01:34:18 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -170,5 +170,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/totem/plugins
+	use python && python_mod_cleanup /usr/$(get_libdir)/totem/plugins
 }
