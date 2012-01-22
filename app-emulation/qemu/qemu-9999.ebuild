@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.3 2012/01/21 12:57:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.4 2012/01/22 08:00:09 slyfox Exp $
 
 EAPI="2"
 
@@ -45,9 +45,7 @@ RESTRICT="test"
 
 RDEPEND="
 	!app-emulation/qemu-kvm
-	!app-emulation/qemu-softmmu
 	!app-emulation/qemu-user
-	!app-emulation/qemu-kvm-spice
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	sys-libs/zlib
