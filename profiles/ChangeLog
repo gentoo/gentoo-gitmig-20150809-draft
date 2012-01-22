@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6123 2012/01/22 10:19:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6124 2012/01/22 10:27:49 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jan 2012; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Update mask for Emacs live ebuilds.
 
   22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
   desc/qemu_softmmu_targets.desc:
