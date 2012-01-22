@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.28 2012/01/22 20:40:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.29 2012/01/22 22:49:21 jmbsvicetto Exp $
 
 #BACKPORTS=1
 
@@ -30,8 +30,7 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses nss \
-png pulseaudio rbd sasl sdl spice ssl threads vde \
-+vhost-net xattr xen"
+png pulseaudio rbd sasl sdl spice ssl threads vde +vhost-net xattr xen"
 # static, depends on libsdl being built with USE=static-libs, which can not
 # be expressed in current EAPI's
 
@@ -82,8 +81,10 @@ RDEPEND="
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
-	spice? ( >=app-emulation/spice-0.9.0
-			>=app-emulation/spice-protocol-0.8.1 )
+	spice? (
+		>=app-emulation/spice-0.9.0
+		>=app-emulation/spice-protocol-0.8.1
+	)
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
