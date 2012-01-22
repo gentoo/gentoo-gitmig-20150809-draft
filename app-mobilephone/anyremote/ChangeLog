@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/anyremote
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.17 2011/09/26 15:51:25 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.18 2012/01/22 21:01:11 hwoarang Exp $
+
+*anyremote-5.5 (22 Jan 2012)
+
+  22 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +anyremote-5.5.ebuild,
+  -anyremote-5.3.ebuild, -anyremote-5.4.ebuild:
+  version bump. drop old
 
 *anyremote-5.4.2 (26 Sep 2011)
 
