@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/selinux-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/selinux-syntax/ChangeLog,v 1.15 2012/01/15 15:30:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/selinux-syntax/ChangeLog,v 1.16 2012/01/22 15:07:17 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org>
+  selinux-syntax-20041225.ebuild:
+  alpha/ia64/sparc stable wrt #396853
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   selinux-syntax-20041225.ebuild:
