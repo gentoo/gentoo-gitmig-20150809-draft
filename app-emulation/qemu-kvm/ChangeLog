@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.86 2012/01/22 20:56:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.87 2012/01/22 21:23:30 slyfox Exp $
+
+  22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-kvm-0.14.1-r2.ebuild,
+  qemu-kvm-0.15.0.ebuild, qemu-kvm-0.15.1-r1.ebuild, qemu-kvm-1.0.ebuild:
+  Backport xen vs. xen-tools depend to older ebuilds. Fixes bug #389727 by Ian
+  Delaney.
 
   22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/qemu-kvm-1.0-fix-qemu-system-ppc.patch, qemu-kvm-1.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.0.ebuild,v 1.6 2012/01/17 22:23:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.0.ebuild,v 1.7 2012/01/22 21:23:30 slyfox Exp $
 
 BACKPORTS=1
 
@@ -88,7 +88,7 @@ RDEPEND="
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
-	xen? ( app-emulation/xen )
+	xen? ( app-emulation/xen-tools )
 "
 
 DEPEND="${RDEPEND}
