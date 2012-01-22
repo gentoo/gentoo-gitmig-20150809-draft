@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/s3ql
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.2 2011/12/08 10:20:11 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.3 2012/01/22 09:54:06 radhermit Exp $
+
+*s3ql-1.9 (22 Jan 2012)
+
+  22 Jan 2012; Tim Harder <radhermit@gentoo.org> +s3ql-1.9.ebuild:
+  Version bump.
 
   08 Dec 2011; Tim Harder <radhermit@gentoo.org> s3ql-1.8.1.ebuild:
   Make test skipping message more descriptive.
