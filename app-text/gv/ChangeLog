@@ -1,6 +1,6 @@
 # ChangeLog for app-text/gv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.96 2012/01/22 19:10:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.97 2012/01/22 19:46:24 ssuominen Exp $
 
   22 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -gv-3.7.1.ebuild,
   -gv-3.7.2.ebuild:
@@ -11,7 +11,8 @@
   22 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +gv-3.7.3.ebuild,
   +files/gv-3.7.3-libXaw3d-1.6.patch:
   Version bump wrt #398225 by Pavel Sanda. Fix building with libXaw3d >= 1.6
-  wrt #399753 by Helmut Jarausch.
+  wrt #399753 by Helmut Jarausch. Both gv-3.6.1-a0.patch and -dAlignToPixels=0
+  wrt #135354 dropped for testing (because they never went upstream).
 
   06 Oct 2011; Jeroen Roovers <jer@gentoo.org> gv-3.7.1-r1.ebuild:
   Stable for HPPA (bug #371807).
