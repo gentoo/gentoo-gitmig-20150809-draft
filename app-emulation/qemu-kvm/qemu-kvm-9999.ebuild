@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.26 2012/01/17 22:25:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.27 2012/01/22 19:30:01 slyfox Exp $
 
 #BACKPORTS=1
 
@@ -29,16 +29,15 @@ HOMEPAGE="http://www.linux-kvm.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-# xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses nss \
-opengl png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
+png pulseaudio rbd sasl sdl spice ssl threads vde \
 +vhost-net xattr xen"
 # static, depends on libsdl being built with USE=static-libs, which can not
 # be expressed in current EAPI's
 
-COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc32plus"
+COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 mips64 mips64el ppcemb xtensa xtensaeb"
+IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 
 # Setup the default SoftMMU targets, while using the loops
 # below to setup the other targets. x86_64 should be the only
@@ -72,16 +71,14 @@ RDEPEND="
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
 	brltty? ( app-accessibility/brltty )
-	curl? ( >=net-misc/curl-7.15.4 )
+	curl? ( net-misc/curl )
 	esd? ( media-sound/esound )
 	fdt? ( >=sys-apps/dtc-1.2.0 )
 	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
 	nss? ( dev-libs/nss )
-	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
-	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
@@ -90,7 +87,12 @@ RDEPEND="
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
-	xen? ( app-emulation/xen )
+	xen? ( app-emulation/xen-tools )
+
+	qemu_softmmu_targets_lm32? (
+		x11-libs/libX11
+		virtual/opengl
+	)
 "
 
 DEPEND="${RDEPEND}
@@ -104,24 +106,29 @@ QA_PRESTRIPPED="
 	usr/share/qemu/openbios-ppc
 	usr/share/qemu/openbios-sparc64
 	usr/share/qemu/openbios-sparc32
-	usr/share/qemu/palcode-clipper"
-
+	usr/share/qemu/palcode-clipper
+"
+# keep sorted
 QA_WX_LOAD="${QA_PRESTRIPPED}
-	usr/bin/qemu-i386
-	usr/bin/qemu-x86_64
 	usr/bin/qemu-alpha
 	usr/bin/qemu-arm
+	usr/bin/qemu-armeb
 	usr/bin/qemu-cris
+	usr/bin/qemu-i386
 	usr/bin/qemu-m68k
 	usr/bin/qemu-microblaze
+	usr/bin/qemu-microblazeel
 	usr/bin/qemu-mips
 	usr/bin/qemu-mipsel
 	usr/bin/qemu-sh4
 	usr/bin/qemu-sh4eb
 	usr/bin/qemu-sparc
+	usr/bin/qemu-sparc32plus
 	usr/bin/qemu-sparc64
-	usr/bin/qemu-armeb
-	usr/bin/qemu-sparc32plus"
+	usr/bin/qemu-s390x
+	usr/bin/qemu-unicore32
+	usr/bin/qemu-x86_64
+"
 
 kvm_kern_warn() {
 	eerror "Please enable KVM support in your kernel, found at:"
@@ -173,9 +180,6 @@ src_prepare() {
 	# append CFLAGS while linking
 	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak || die
 
-	# remove part to make udev happy
-	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
-
 	# ${PN}-guest-hang-on-usb-add.patch was sent by Timothy Jones
 	# to the qemu-devel ml - bug 337988
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
@@ -183,6 +187,9 @@ src_prepare() {
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
+	# Fix underlinking.
+	# Fault reproducer: USE=nss QEMU_SOFTMMU_TARGETS=lm32 QEMU_USER_TARGETS=
+	sed -i 's/opengl_libs="-lGL"/opengl_libs="-lGL -lX11"/' configure || die
 }
 
 src_configure() {
@@ -234,7 +241,7 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
 	conf_opts="${conf_opts} $(use_enable ncurses curses)"
 	conf_opts="${conf_opts} $(use_enable nss smartcard-nss)"
-	conf_opts="${conf_opts} $(use_enable opengl)"
+	conf_opts="${conf_opts} $(use_enable qemu_softmmu_targets_lm32 opengl)" # single opengl user
 	conf_opts="${conf_opts} $(use_enable png vnc-png)"
 	conf_opts="${conf_opts} $(use_enable rbd)"
 	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
@@ -254,19 +261,22 @@ src_configure() {
 	use esd && audio_opts="esd ${audio_opts}"
 	use pulseaudio && audio_opts="pa ${audio_opts}"
 	use sdl && audio_opts="sdl ${audio_opts}"
-	./configure --prefix=/usr \
+
+	set -- --prefix=/usr \
 		--disable-strip \
 		--disable-werror \
 		--enable-kvm \
 		--enable-nptl \
 		--enable-uuid \
 		${conf_opts} \
+		--audio-card-list="ac97 es1370 sb16 cs4231a adlib gus hda" \
 		--audio-drv-list="${audio_opts}" \
 		--target-list="${softmmu_targets} ${user_targets}" \
 		--cc="$(tc-getCC)" \
-		--host-cc="$(tc-getBUILD_CC)" \
-		|| die "configure failed"
+		--host-cc="$(tc-getBUILD_CC)"
 
+	echo ./configure "$@" # show actual options
+	./configure "$@" || die "configure failed"
 		# this is for qemu upstream's threaded support which is
 		# in development and broken
 		# the kvm project has its own support for threaded IO
@@ -279,13 +289,7 @@ src_install() {
 
 	if [ ! -z "${softmmu_targets}" ]; then
 		insinto /lib/udev/rules.d/
-		doins kvm/scripts/65-kvm.rules || die
-
-		if use qemu-ifup; then
-			insinto /etc/qemu/
-			insopts -m0755
-			doins kvm/scripts/qemu-ifup || die
-		fi
+		doins "${FILESDIR}"/65-gentoo-kvm.rules || die
 
 		if use qemu_softmmu_targets_x86_64 ; then
 			dobin "${FILESDIR}"/qemu-kvm
@@ -323,9 +327,7 @@ pkg_postinst() {
 		elog
 		elog "You will need the Universal TUN/TAP driver compiled into your"
 		elog "kernel or loaded as a module to use the virtual network device"
-		elog "if using -net tap.  You will also need support for 802.1d"
-		elog "Ethernet Bridging and a configured bridge if using the provided"
-		elog "kvm-ifup script from /etc/kvm."
+		elog "if using -net tap."
 		elog
 		elog "The gnutls use flag was renamed to ssl, so adjust your use flags."
 	fi
