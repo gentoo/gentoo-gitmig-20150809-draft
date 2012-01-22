@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r6.ebuild,v 1.8 2012/01/15 15:52:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r6.ebuild,v 1.9 2012/01/22 15:15:18 armin76 Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://oss.sgi.com/projects/fam/download/stable/${P}.tar.gz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86"
 IUSE="static-libs"
 
 DEPEND="|| ( net-nds/rpcbind >=net-nds/portmap-5b-r6 )
