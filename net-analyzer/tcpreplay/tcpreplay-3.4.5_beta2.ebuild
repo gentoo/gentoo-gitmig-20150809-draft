@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.5_beta2.ebuild,v 1.1 2010/10/29 06:03:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.5_beta2.ebuild,v 1.2 2012/01/22 17:53:01 jer Exp $
 
-EAPI="2"
+EAPI=4
 
 MY_P="${P/_/}"
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
@@ -32,7 +32,9 @@ src_prepare() {
 
 src_configure() {
 	# By default it uses static linking. Avoid that, bug 252940
-	econf --enable-shared \
+	econf \
+		--enable-shared \
+		--enable-dynamic-link \
 		--disable-local-libopts \
 		$(use_with tcpdump tcpdump /usr/sbin/tcpdump) \
 		$(use_with pcapnav pcapnav-config /usr/bin/pcapnav-config) \

@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/tcpreplay
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.43 2011/03/21 08:12:16 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.44 2012/01/22 17:53:01 jer Exp $
+
+*tcpreplay-3.4.5_beta3 (22 Jan 2012)
+
+  22 Jan 2012; Jeroen Roovers <jer@gentoo.org> -tcpreplay-3.4.3.ebuild,
+  -tcpreplay-3.4.4.ebuild, tcpreplay-3.4.4-r1.ebuild,
+  tcpreplay-3.4.5_beta2.ebuild, +tcpreplay-3.4.5_beta3.ebuild:
+  Version bump. Add --enable-dynamic-link to configure by Tupone Alfredo (bug
+  #399749).
 
   21 Mar 2011; Thomas Kahle <tomka@gentoo.org> tcpreplay-3.4.4-r1.ebuild:
   x86 stable per bug 358665

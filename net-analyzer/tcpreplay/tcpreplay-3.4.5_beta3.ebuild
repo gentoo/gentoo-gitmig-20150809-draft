@@ -1,12 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.4.ebuild,v 1.1 2010/04/21 19:24:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.5_beta3.ebuild,v 1.1 2012/01/22 17:53:01 jer Exp $
 
-EAPI="2"
+EAPI=4
 
+MY_P="${P/_/}"
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
 HOMEPAGE="http://tcpreplay.synfin.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="http://synfin.net/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -22,13 +23,18 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/${MY_P}"
+
 src_prepare() {
 	echo "We don't use bundled libopts" > libopts/options.h
+	./autogen.sh
 }
 
 src_configure() {
 	# By default it uses static linking. Avoid that, bug 252940
-	econf --enable-shared \
+	econf \
+		--enable-shared \
+		--enable-dynamic-link \
 		--disable-local-libopts \
 		$(use_with tcpdump tcpdump /usr/sbin/tcpdump) \
 		$(use_with pcapnav pcapnav-config /usr/bin/pcapnav-config) \
