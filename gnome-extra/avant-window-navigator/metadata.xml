@@ -5,7 +5,7 @@
     <flag name='gconf'>Enable GConf as configuration backend</flag>
     <flag name='vala'>Enable installation of <pkg>dev-lang/vala</pkg> binding</flag>
   </use>
-  <herd>desktop-effects</herd>
+  <herd>desktop-misc</herd>
   <longdescription>
     Avant Window Navigator (Awn) is a dock-like bar which sits at the
     bottom of the screen. It has support for launchers, task lists, and
