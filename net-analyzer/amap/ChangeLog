@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.49 2012/01/15 15:34:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.50 2012/01/22 15:09:06 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org> amap-5.2-r1.ebuild,
+  amap-5.2-r2.ebuild, amap-5.4.ebuild:
+  Drop ia64/sparc keywords
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> amap-5.4.ebuild:
   x86 stable wrt bug #397121
