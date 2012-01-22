@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkarma
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.16 2011/03/20 18:13:56 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.17 2012/01/22 12:11:37 pacho Exp $
+
+*libkarma-0.1.2 (22 Jan 2012)
+
+  22 Jan 2012; Pacho Ramos <pacho@gentoo.org> +libkarma-0.1.2.ebuild:
+  Version bump.
 
   20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> libkarma-0.1.0-r1.ebuild:
   Fix libusb depend to correct SLOT.
