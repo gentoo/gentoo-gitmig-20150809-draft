@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kgtk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.29 2011/04/29 14:04:47 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.30 2012/01/22 20:07:36 johu Exp $
+
+*kgtk-0.11.0 (22 Jan 2012)
+
+  22 Jan 2012; Johannes Huber <johu@gentoo.org> +kgtk-0.11.0.ebuild:
+  Version bump wrt bug #399759.
 
   29 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> kgtk-0.10.1.ebuild:
   Declare cmakelists local as they should be.
