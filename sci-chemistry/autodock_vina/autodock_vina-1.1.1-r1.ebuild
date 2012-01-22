@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock_vina/autodock_vina-1.1.1-r1.ebuild,v 1.2 2011/04/06 16:42:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock_vina/autodock_vina-1.1.1-r1.ebuild,v 1.3 2012/01/22 12:02:04 ago Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://vina.scripps.edu/"
 SRC_URI="http://vina.scripps.edu/download/${MY_P}.tgz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 LICENSE="Apache-2.0"
 IUSE="debug"
 
