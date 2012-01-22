@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.ebuild,v 1.4 2012/01/22 20:40:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.ebuild,v 1.5 2012/01/22 20:56:30 slyfox Exp $
 
 #BACKPORTS=1
 
@@ -117,6 +117,9 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 	usr/bin/qemu-microblaze
 	usr/bin/qemu-mips
 	usr/bin/qemu-mipsel
+	usr/bin/qemu-ppc
+	usr/bin/qemu-ppc64
+	usr/bin/qemu-ppc64abi32
 	usr/bin/qemu-sh4
 	usr/bin/qemu-sh4eb
 	usr/bin/qemu-sparc
@@ -182,6 +185,7 @@ src_prepare() {
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
 
 	epatch "${FILESDIR}"/${PN}-1.0-fix-nonkvm-arches.patch
+	epatch "${FILESDIR}"/${PN}-1.0-fix-qemu-system-ppc.patch
 
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \

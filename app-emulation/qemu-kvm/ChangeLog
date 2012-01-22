@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.85 2012/01/22 20:40:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.86 2012/01/22 20:56:30 slyfox Exp $
+
+  22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/qemu-kvm-1.0-fix-qemu-system-ppc.patch, qemu-kvm-1.0.ebuild:
+  Fix build failure of qemu-system-ppc* targets.
 
   22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/qemu-kvm-1.0-fix-nonkvm-arches.patch,

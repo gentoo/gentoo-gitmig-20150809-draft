@@ -1,0 +1,21 @@
+Fix the following build failure:
+  LINK  ppc64-softmmu/qemu-system-ppc64
+../libhw64/i8259.o: In function `pic_read_irq':
+/tmp/portage/app-emulation/qemu-kvm-1.0/work/qemu-kvm-1.0/hw/i8259.c:240: undefined reference to `timer_acks'
+/tmp/portage/app-emulation/qemu-kvm-1.0/work/qemu-kvm-1.0/hw/i8259.c:240: undefined reference to `timer_acks'
+/tmp/portage/app-emulation/qemu-kvm-1.0/work/qemu-kvm-1.0/hw/i8259.c:241: undefined reference to `timer_ints_to_push'
+/tmp/portage/app-emulation/qemu-kvm-1.0/work/qemu-kvm-1.0/hw/i8259.c:242: undefined reference to `timer_ints_to_push'
+/tmp/portage/app-emulation/qemu-kvm-1.0/work/qemu-kvm-1.0/hw/i8259.c:242: undefined reference to `timer_ints_to_push'
+diff --git a/Makefile.target b/Makefile.target
+index 0b610ad..d8b1740 100644
+--- a/Makefile.target
++++ b/Makefile.target
+@@ -275,7 +275,7 @@ obj-ppc-y += virtex_ml507.o
+ obj-ppc-$(CONFIG_KVM) += kvm_ppc.o
+ obj-ppc-$(CONFIG_FDT) += device_tree.o
+ # PowerPC OpenPIC
+-obj-ppc-y += openpic.o
++obj-ppc-y += openpic.o i8254.o
+ 
+ # Xilinx PPC peripherals
+ obj-ppc-y += xilinx_intc.o
