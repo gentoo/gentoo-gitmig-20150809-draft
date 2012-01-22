@@ -1,6 +1,11 @@
 # ChangeLog for net-print/fax4cups
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.18 2007/11/23 18:42:59 drac Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.19 2012/01/22 20:55:29 dilfridge Exp $
+
+*fax4cups-1.29 (22 Jan 2012)
+
+  22 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +fax4cups-1.29.ebuild:
+  Version bump with a lot of improvements, thanks to Tilo Prütz in bug 348877.
 
   23 Nov 2007; Samuli Suominen <drac@gentoo.org> fax4cups-1.28.ebuild:
   amd64 stable wrt #194298
