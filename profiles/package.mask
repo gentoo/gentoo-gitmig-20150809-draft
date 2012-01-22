@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13416 2012/01/22 16:08:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13417 2012/01/22 23:27:54 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,25 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jan 2012)
+# Mask compiz for last-rites unless someone steps up
+# to maintain it. Removal in 30 days.
+dev-python/compizconfig-python
+x11-apps/ccsm
+x11-apps/fusion-icon
+x11-apps/simple-ccsm
+x11-libs/compiz-bcop
+x11-libs/compizconfig-backend-gconf
+x11-libs/compizconfig-backend-kconfig4
+x11-libs/libcompizconfig
+x11-plugins/compiz-plugins-extra
+x11-plugins/compiz-plugins-main
+x11-plugins/compiz-plugins-unsupported
+x11-themes/emerald-themes
+x11-wm/compiz
+x11-wm/compiz-fusion
+x11-wm/emerald
 
 # Pacho Ramos <pacho@gentoo.org> (22 Jan 2012)
 # Unmaintained by upstream, still relies on old
