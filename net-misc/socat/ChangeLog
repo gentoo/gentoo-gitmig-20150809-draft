@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.89 2012/01/17 22:43:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.90 2012/01/22 15:23:14 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org> socat-1.7.2.0.ebuild:
+  alpha/arm/ia64/sparc/x86 stable wrt #399187
 
   17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> socat-1.7.2.0.ebuild:
   Stable for amd64, wrt bug #399187
