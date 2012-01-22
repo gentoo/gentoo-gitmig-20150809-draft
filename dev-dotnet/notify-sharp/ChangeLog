@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/notify-sharp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.16 2011/11/10 19:20:20 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.17 2012/01/22 11:13:58 pacho Exp $
+
+  22 Jan 2012; Pacho Ramos <pacho@gentoo.org>
+  -notify-sharp-0.4.0_pre20080912-r1.ebuild:
+  Drop old.
 
   10 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
   notify-sharp-0.4.0_pre20090305.ebuild:
