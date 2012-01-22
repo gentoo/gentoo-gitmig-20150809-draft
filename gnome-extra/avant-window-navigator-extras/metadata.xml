@@ -5,5 +5,5 @@
     <flag name='gconf'>Enable GConf as configuration backend</flag>
     <flag name='webkit'>Enable support for <pkg>net-libs/webkit-gtk</pkg></flag>
   </use>
-  <herd>desktop-effects</herd>
+  <herd>desktop-misc</herd>
 </pkgmetadata>
