@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.101 2012/01/22 11:19:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.102 2012/01/22 12:54:29 pacho Exp $
+
+*xsp-2.10.2-r1 (22 Jan 2012)
+
+  22 Jan 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/2.2/mod-mono-server-r1.initd, +xsp-2.10.2-r1.ebuild:
+  Fix mod-mono-server init.d to support MonoServerVersion=4, bug #388669.
 
   22 Jan 2012; Pacho Ramos <pacho@gentoo.org> -xsp-2.10.ebuild:
   Drop old.
