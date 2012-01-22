@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.312 2012/01/16 08:18:48 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.313 2012/01/22 12:02:42 ago Exp $
+
+  22 Jan 2012; Agostino Sarubbo <ago@gentoo.org> swi-prolog-5.10.5-r1.ebuild:
+  Stable for amd64, wrt bug #399679
 
   16 Jan 2012; <keri@gentoo.org> swi-prolog-5.10.5-r1.ebuild:
   Fix up JPL regression tests - use correct library search path
