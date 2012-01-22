@@ -1,6 +1,12 @@
 # ChangeLog for net-news/blam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.56 2010/10/07 20:37:31 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.57 2012/01/22 12:37:08 pacho Exp $
+
+*blam-1.8.9 (22 Jan 2012)
+
+  22 Jan 2012; Pacho Ramos <pacho@gentoo.org> +blam-1.8.9.ebuild,
+  +files/blam-1.8.9-use-elif.patch:
+  Version bump.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -blam-1.8.4.ebuild,
   -files/blam-1.8.4_pre2-gtk-sharp-2.10-compat.diff,
