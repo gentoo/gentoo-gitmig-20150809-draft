@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/testpack
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/testpack/ChangeLog,v 1.2 2011/12/04 18:07:09 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/testpack/ChangeLog,v 1.3 2012/01/22 12:00:35 ago Exp $
+
+  22 Jan 2012; Agostino Sarubbo <ago@gentoo.org> testpack-2.1.1.ebuild:
+  Stable for amd64, wrt bug #342977
 
 *testpack-2.1.1 (04 Dec 2011)
 
