@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.3.ebuild,v 1.1 2012/01/20 05:51:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.3.ebuild,v 1.2 2012/01/22 15:41:44 grozin Exp $
 
 EAPI=4
 
@@ -29,5 +29,8 @@ DOCS=( README.txt Doc/ChangeLog )
 
 src_install() {
 	autotools-utils_src_install
-	use doc && doins Doc/AMD_UserGuide.pdf
+	if use doc; then
+		insinto /usr/share/doc/${PF}
+		doins Doc/AMD_UserGuide.pdf
+	fi
 }

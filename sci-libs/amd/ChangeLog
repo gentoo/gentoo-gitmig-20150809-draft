@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/amd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.29 2012/01/20 05:51:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.30 2012/01/22 15:41:44 grozin Exp $
+
+  22 Jan 2012; Andrey Grozin <grozin@gentoo.org> amd-2.2.3.ebuild:
+  Dont install AMD_UserGuide.pdf to /
 
 *amd-2.2.3 (20 Jan 2012)
 
