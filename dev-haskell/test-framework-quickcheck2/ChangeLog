@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/test-framework-quickcheck2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/ChangeLog,v 1.9 2011/02/25 13:17:58 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/ChangeLog,v 1.10 2012/01/22 14:48:14 gienah Exp $
+
+*test-framework-quickcheck2-0.2.10 (22 Jan 2012)
+
+  22 Jan 2012; Mark Wright <gienah@gentoo.org>
+  +test-framework-quickcheck2-0.2.10.ebuild:
+  Version bump for dev-haskell/hashable
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   test-framework-quickcheck2-0.2.5.ebuild:
