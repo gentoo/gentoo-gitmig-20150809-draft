@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.109 2012/01/22 15:03:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.110 2012/01/22 15:06:29 ssuominen Exp $
+
+  22 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -libarchive-2.8.4-r1.ebuild, -libarchive-3.0.2.ebuild,
+  -files/libarchive-disable-lzma-size-test.patch:
+  old
 
   22 Jan 2012; Raúl Porcel <armin76@gentoo.org> libarchive-2.8.5.ebuild,
   libarchive-3.0.2.ebuild, libarchive-3.0.3.ebuild:
