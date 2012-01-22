@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r11.ebuild,v 1.11 2011/10/23 15:49:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r11.ebuild,v 1.12 2012/01/22 20:16:27 ssuominen Exp $
 
 EAPI=2
-inherit autotools eutils toolchain-funcs
+inherit autotools eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="utility to view many different types of images under X11"
 HOMEPAGE="http://world.std.com/~jimf/xloadimage.html"
@@ -59,6 +59,10 @@ src_prepare() {
 }
 
 src_configure() {
+	# Set TIFFHeader to TIFFHeaderCommon wrt #319383
+	has_version '>=media-libs/tiff-4.0.0_pre' && \
+		append-flags -DTIFFHeader=TIFFHeaderCommon
+
 	tc-export CC
 	econf $(use_with jpeg) \
 		$(use_with png) \
