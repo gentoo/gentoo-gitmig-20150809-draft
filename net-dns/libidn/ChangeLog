@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.153 2012/01/15 19:36:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.154 2012/01/22 15:16:36 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org> libidn-1.23.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #398849
 
   15 Jan 2012; Jeroen Roovers <jer@gentoo.org> libidn-1.23.ebuild:
   Stable for HPPA (bug #398849).
