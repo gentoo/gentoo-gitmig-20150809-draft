@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-2.26.1.ebuild,v 1.2 2009/11/11 14:55:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-3.0.4.ebuild,v 1.1 2012/01/22 13:15:39 pacho Exp $
 
-EAPI=1
+EAPI="4"
 GCONF_DEBUG="no"
 
 inherit gnome2
@@ -16,8 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.16:2
-	>=x11-libs/gtk+-2.10:2
-	gnome-base/gconf"
+	>=x11-libs/gtk+-3.0.0:3"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.3.2
