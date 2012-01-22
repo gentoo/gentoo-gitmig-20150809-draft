@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/lohit-fonts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/ChangeLog,v 1.26 2012/01/15 15:17:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/ChangeLog,v 1.27 2012/01/22 15:04:53 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org> lohit-fonts-2.4.2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #397059
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   lohit-fonts-2.4.2.ebuild:
