@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/parallel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.8 2010/07/18 13:28:02 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.9 2012/01/22 12:00:57 ago Exp $
+
+  22 Jan 2012; Agostino Sarubbo <ago@gentoo.org> parallel-1.1.0.1.ebuild:
+  Stable for amd64, wrt bug #396867
 
   18 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
   parallel-1.0.0.0.ebuild, parallel-1.1.0.1.ebuild:
