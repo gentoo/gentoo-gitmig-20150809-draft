@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.27 2012/01/22 19:30:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.28 2012/01/22 20:40:49 slyfox Exp $
 
 #BACKPORTS=1
 
@@ -120,6 +120,9 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 	usr/bin/qemu-microblazeel
 	usr/bin/qemu-mips
 	usr/bin/qemu-mipsel
+	usr/bin/qemu-ppc
+	usr/bin/qemu-ppc64
+	usr/bin/qemu-ppc64abi32
 	usr/bin/qemu-sh4
 	usr/bin/qemu-sh4eb
 	usr/bin/qemu-sparc
@@ -183,6 +186,8 @@ src_prepare() {
 	# ${PN}-guest-hang-on-usb-add.patch was sent by Timothy Jones
 	# to the qemu-devel ml - bug 337988
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
+
+	epatch "${FILESDIR}"/${PN}-9999-fix-nonkvm-arches.patch
 
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \

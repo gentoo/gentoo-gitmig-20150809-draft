@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.84 2012/01/22 19:30:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.85 2012/01/22 20:40:49 slyfox Exp $
+
+  22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/qemu-kvm-1.0-fix-nonkvm-arches.patch,
+  +files/qemu-kvm-9999-fix-nonkvm-arches.patch, qemu-kvm-1.0.ebuild,
+  qemu-kvm-9999.ebuild:
+  Fix build failure on non-KVM targets.
 
   22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/65-gentoo-kvm.rules, qemu-kvm-9999.ebuild:
