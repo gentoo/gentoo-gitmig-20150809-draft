@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.4 2012/01/22 08:00:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.5 2012/01/22 10:58:23 slyfox Exp $
 
 EAPI="2"
 
@@ -25,12 +25,12 @@ HOMEPAGE="http://www.qemu.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-# xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses \
-png pulseaudio qemu-ifup sasl sdl ssl static vde"
+IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses nss \
+png pulseaudio qemu-ifup rbd sasl sdl spice ssl static threads vde \
++vhost-net xattr xen"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb xtensa xtensaeb" # dropped lm32
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 mips64 mips64el ppcemb xtensa xtensaeb"
 IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
@@ -46,6 +46,7 @@ RESTRICT="test"
 RDEPEND="
 	!app-emulation/qemu-kvm
 	!app-emulation/qemu-user
+	>=dev-libs/glib-2.0
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	sys-libs/zlib
@@ -58,19 +59,61 @@ RDEPEND="
 	fdt? ( >=sys-apps/dtc-1.2.0 )
 	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
+	nss? ( dev-libs/nss )
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
 	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
+	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
+	spice? ( >=app-emulation/spice-0.9.0
+			>=app-emulation/spice-protocol-0.8.1 )
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
+	xattr? ( sys-apps/attr )
+	xen? ( app-emulation/xen )
+
+	qemu_softmmu_targets_lm32? (
+		x11-libs/libX11
+		virtual/opengl
+	)
 "
 
 DEPEND="${RDEPEND}
 	app-text/texi2html
-	>=sys-kernel/linux-headers-2.6.29
-	ssl? ( dev-util/pkgconfig )
+	dev-util/pkgconfig
+	>=sys-kernel/linux-headers-2.6.35
+"
+
+# alpha ELF binary. don't let portage mess with it
+STRIP_MASK="usr/share/qemu/palcode-clipper"
+
+QA_PRESTRIPPED="
+	usr/share/qemu/openbios-ppc
+	usr/share/qemu/openbios-sparc64
+	usr/share/qemu/openbios-sparc32
+	usr/share/qemu/palcode-clipper
+"
+# keep sorted
+QA_WX_LOAD="${QA_PRESTRIPPED}
+	usr/bin/qemu-alpha
+	usr/bin/qemu-arm
+	usr/bin/qemu-armeb
+	usr/bin/qemu-cris
+	usr/bin/qemu-i386
+	usr/bin/qemu-m68k
+	usr/bin/qemu-microblaze
+	usr/bin/qemu-microblazeel
+	usr/bin/qemu-mips
+	usr/bin/qemu-mipsel
+	usr/bin/qemu-sh4
+	usr/bin/qemu-sh4eb
+	usr/bin/qemu-sparc
+	usr/bin/qemu-sparc32plus
+	usr/bin/qemu-sparc64
+	usr/bin/qemu-s390x
+	usr/bin/qemu-unicore32
+	usr/bin/qemu-x86_64
 "
 
 pkg_setup() {
@@ -85,6 +128,10 @@ src_prepare() {
 		Makefile Makefile.target || die
 	# append CFLAGS while linking
 	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak || die
+
+	# Fix underlinking.
+	# Fault reproducer: USE=nss QEMU_SOFTMMU_TARGETS=lm32 QEMU_USER_TARGETS=
+	sed -i 's/opengl_libs="-lGL"/opengl_libs="-lGL -lX11"/' configure || die
 }
 
 src_configure() {
@@ -131,12 +178,19 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable hardened pie)"
 	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
 	conf_opts="${conf_opts} $(use_enable ncurses curses)"
+	conf_opts="${conf_opts} $(use_enable nss smartcard-nss)"
+	conf_opts="${conf_opts} $(use_enable qemu_softmmu_targets_lm32 opengl)" # single opengl user
 	conf_opts="${conf_opts} $(use_enable png vnc-png)"
+	conf_opts="${conf_opts} $(use_enable rbd)"
 	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
 	conf_opts="${conf_opts} $(use_enable sdl)"
+	conf_opts="${conf_opts} $(use_enable spice)"
 	conf_opts="${conf_opts} $(use_enable ssl vnc-tls)"
+	conf_opts="${conf_opts} $(use_enable threads vnc-thread)"
 	conf_opts="${conf_opts} $(use_enable vde)"
-	conf_opts="${conf_opts} --disable-xen"
+	conf_opts="${conf_opts} $(use_enable vhost-net)"
+	conf_opts="${conf_opts} $(use_enable xen)"
+	conf_opts="${conf_opts} $(use_enable xattr attr)"
 	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
 
 	# audio options

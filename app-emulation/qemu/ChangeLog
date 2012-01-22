@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.89 2012/01/22 08:00:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.90 2012/01/22 10:58:23 slyfox Exp $
+
+  22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml,
+  qemu-9999.ebuild:
+  Added LatticeMico32 (lm32) softmmu target. Added USE="nss rbd spice threads
+  +vhost-net xattr xen" to get control of some automagic depends (bug #326491 by
+  Diego Elio Pettenò); mostly picked from qemu-kvm-9999.ebuild. Updated USE=curl
+  description (bug #354565 by klondike).
 
   22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-0.11.1.ebuild,
   qemu-0.14.0.ebuild, qemu-9999.ebuild:
