@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/boo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.41 2011/05/11 19:27:42 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.42 2012/01/22 11:21:39 pacho Exp $
+
+  22 Jan 2012; Pacho Ramos <pacho@gentoo.org> -boo-0.9.3.3457.ebuild:
+  Drop old.
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> boo-0.9.4.9.ebuild:
   Stable on amd64 wrt bug #359651
