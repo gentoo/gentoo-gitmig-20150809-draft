@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.105 2012/01/20 13:11:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.106 2012/01/22 11:52:17 slyfox Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (20 Jan 2012)
 # Mask some use flags for openmpi due to unkeyworded deps
@@ -69,6 +69,7 @@ kde-base/kdebindings-meta java
 # app-emulation/spice, app-emulation/xen, and sys-cluster/ceph
 # are not keyworded. bug #368959
 app-emulation/qemu-kvm spice xen rbd
+app-emulation/qemu     spice xen rbd
 
 # Kacper Kowalik <xarthisius@gentoo.org> (16 Jan 2011)
 # bug 350513, app-pda/jpilot is not keyworded
