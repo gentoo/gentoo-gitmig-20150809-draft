@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.8-r1.ebuild,v 1.9 2012/01/15 22:41:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.8-r1.ebuild,v 1.10 2012/01/22 17:14:51 dilfridge Exp $
 
 EAPI=3
 
@@ -33,7 +33,6 @@ RDEPEND="
 		)
 	)
 	dbus? ( sys-apps/dbus )
-	filters? ( net-print/foomatic-filters )
 	java? ( >=virtual/jre-1.6 )
 	jpeg? ( virtual/jpeg:0 )
 	kerberos? ( virtual/krb5 )
@@ -63,6 +62,7 @@ DEPEND="${RDEPEND}
 PDEPEND="
 	app-text/ghostscript-gpl[cups]
 	>=app-text/poppler-0.12.3-r3[utils]
+	filters? ( net-print/foomatic-filters )
 "
 
 # upstream includes an interactive test which is a nono for gentoo.
