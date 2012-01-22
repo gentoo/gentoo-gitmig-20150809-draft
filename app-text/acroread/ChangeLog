@@ -1,6 +1,12 @@
 # ChangeLog for app-text/acroread
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.168 2011/06/25 07:40:18 zmedico Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.169 2012/01/22 22:16:24 dilfridge Exp $
+
+*acroread-9.4.2-r1 (22 Jan 2012)
+
+  22 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +acroread-9.4.2-r1.ebuild:
+  Remove bundled libraries, bug 340527
 
   25 Jun 2011; Zac Medico <zmedico@gentoo.org> acroread-9.4.2.ebuild:
   Fix firefox dep for rename from mozilla-firefox.
