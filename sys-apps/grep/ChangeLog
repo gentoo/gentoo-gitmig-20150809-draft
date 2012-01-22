@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.104 2012/01/17 21:21:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.105 2012/01/22 15:47:00 armin76 Exp $
+
+  22 Jan 2012; Raúl Porcel <armin76@gentoo.org> grep-2.9.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #398453
 
   17 Jan 2012; Jeroen Roovers <jer@gentoo.org> grep-2.9.ebuild:
   Stable for HPPA (bug #398453).
