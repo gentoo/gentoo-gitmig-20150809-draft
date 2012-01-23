@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/parallel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.12 2011/12/29 12:29:14 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.13 2012/01/23 11:17:46 ssuominen Exp $
+
+*parallel-20120122 (23 Jan 2012)
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +parallel-20120122.ebuild:
+  Version bump wrt #388665 by Corentin Chary. Rename gparallel back to parallel
+  wrt #395107 by Andrey Kislyuk.
 
 *parallel-20111222 (29 Dec 2011)
 
