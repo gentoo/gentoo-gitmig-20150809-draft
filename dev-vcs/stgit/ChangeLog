@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/stgit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.11 2011/12/30 15:43:10 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.12 2012/01/23 13:58:14 darkside Exp $
+
+*stgit-0.16 (23 Jan 2012)
+
+  23 Jan 2012; Jeremy Olexa <darkside@gentoo.org> +stgit-0.16.ebuild:
+  Version bump, bug 399631 by René 'Necoro' Neumann
 
   30 Dec 2011; Mark Loeser <halcy0n@gentoo.org> stgit-0.14.3.ebuild:
   Revert to ~ppc/~ppc64; bug #381127
