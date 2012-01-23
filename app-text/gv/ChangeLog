@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.97 2012/01/22 19:46:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.98 2012/01/23 16:36:42 ssuominen Exp $
+
+*gv-3.7.3-r1 (23 Jan 2012)
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +gv-3.7.3-r1.ebuild:
+  Enable the unicode codepath from libXaw3d wrt #372395 by Marco Paolone
 
   22 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -gv-3.7.1.ebuild,
   -gv-3.7.2.ebuild:
