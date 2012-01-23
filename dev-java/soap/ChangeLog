@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/soap
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/ChangeLog,v 1.13 2008/05/17 14:23:45 ken69267 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/ChangeLog,v 1.14 2012/01/23 13:17:46 sera Exp $
+
+*soap-2.3.1-r3 (23 Jan 2012)
+
+  23 Jan 2012; Ralph Sennhauser <sera@gentoo.org> +soap-2.3.1-r3.ebuild:
+  Revbump and EAPI bump. 
+  Replace dep on dev-java/servletapi with java-virtuals/servlet-api. #398689
+  Replace dep on dev-java/sun-jaf with java-virtuals/jaf
+  Only register optional dep on dev-java/xerces
+  Drop obsolete workaround for javadoc generation.
+  Use default src_compile
+  Fix SRC_URI, the project was archived and is no longer available via mirrors.
 
   17 May 2008; Kenneth Prugh <ken69267@gentoo.org> soap-2.3.1-r2.ebuild:
   amd64 stable, bug #219665
