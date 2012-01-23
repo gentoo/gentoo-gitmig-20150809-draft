@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.4-r1.ebuild,v 1.1 2012/01/20 17:21:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.4-r1.ebuild,v 1.2 2012/01/23 10:53:37 jer Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ LFTP_LINGUAS="cs de es fr it ja ko pl pt_BR ru zh_CN zh_HK zh_TW"
 
 IUSE="
 	$( for i in ${LFTP_LINGUAS}; do echo linguas_${i}; done )
-	ssl gnutls socks5 nls
+	gnutls nls socks5 +ssl
 "
 
 RDEPEND="

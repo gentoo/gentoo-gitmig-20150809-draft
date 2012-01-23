@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.338 2012/01/20 17:21:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.339 2012/01/23 10:53:37 jer Exp $
+
+  23 Jan 2012; Jeroen Roovers <jer@gentoo.org> lftp-4.3.3.ebuild,
+  lftp-4.3.4-r1.ebuild, metadata.xml:
+  Encourage USE=ssl.
 
 *lftp-4.3.4-r1 (20 Jan 2012)
 
