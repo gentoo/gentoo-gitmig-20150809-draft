@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/tar
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tar/ChangeLog,v 1.3 2011/11/29 10:08:52 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tar/ChangeLog,v 1.4 2012/01/23 07:53:02 gienah Exp $
+
+*tar-0.3.2.0 (23 Jan 2012)
+
+  23 Jan 2012; Mark Wright <gienah@gentoo.org> tar-0.3.1.0.ebuild,
+  +files/tar-0.3.1.0-ghc-7.4.patch, +tar-0.3.2.0.ebuild:
+  Bump to 0.3.2.0. Allow 0.3.1.0 to build with ghc 7.4.1-rc1. Add hoogle use
+  flag.
 
   29 Nov 2011; Naohiro Aota <naota@gentoo.org> tar-0.3.1.0.ebuild:
   Add ~x86-fbsd
