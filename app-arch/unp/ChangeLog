@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.29 2011/10/16 19:22:48 hanno Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.30 2012/01/23 15:14:34 ago Exp $
+
+  23 Jan 2012; Agostino Sarubbo <ago@gentoo.org> unp-2.0_pre7.ebuild:
+  Stable for amd64, wrt bug #396767
 
 *unp-2.0_pre7 (16 Oct 2011)
 
