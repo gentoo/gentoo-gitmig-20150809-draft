@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.3.1.ebuild,v 1.1 2012/01/23 08:02:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.3.1.ebuild,v 1.2 2012/01/23 08:14:27 ssuominen Exp $
 
 EAPI=4
 inherit libtool
@@ -28,11 +28,12 @@ src_prepare() {
 }
 
 src_configure() {
+	# --enable-driver-conf is --enable-driverc as per configure.in
 	econf \
 		--sysconfdir="${EPREFIX}"/etc/${PN} \
 		$(use_enable static-libs static) \
 		$(use_enable !minimal drivers) \
-		$(use_enable !minimal driver-conf)
+		$(use_enable !minimal driverc)
 }
 
 src_install() {

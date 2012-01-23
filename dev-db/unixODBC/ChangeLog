@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.104 2012/01/23 08:02:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.105 2012/01/23 08:14:27 ssuominen Exp $
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> unixODBC-2.3.1.ebuild:
+  Despite ./configure --help giving --enable-driver-conf it's really
+  AC_ARG_ENABLE for --enable-driverc.
 
 *unixODBC-2.3.1 (23 Jan 2012)
 
