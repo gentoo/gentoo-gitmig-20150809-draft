@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.21.1.ebuild,v 1.4 2012/01/21 15:47:51 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.21.1.ebuild,v 1.5 2012/01/23 16:47:04 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="https://edge.launchpad.net/qbzr/$(get_version_component_range 1-2)/${PV
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ppc ~sparc x86"
 IUSE=""
 
 # bzr version comes from NEWS file. It's lowest version required for some
