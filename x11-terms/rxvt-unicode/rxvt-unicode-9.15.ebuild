@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.15.ebuild,v 1.1 2012/01/21 18:16:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.15.ebuild,v 1.2 2012/01/23 10:43:49 jer Exp $
 
 EAPI="4"
 
@@ -63,7 +63,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-9.05_no-MOTIF-WM-INFO.patch
 
 		# support for wheel scrolling on secondary screens
-		use secondary-wheel && epatch "${FILESDIR}"/${P}-secondary-wheel.patch
+		use secondary-wheel && epatch "${FILESDIR}"/${PN}-9.14-secondary-wheel.patch
 
 		# ctrl-l buffer fix
 		use buffer-on-clear && epatch "${FILESDIR}"/${P}-clear.patch
