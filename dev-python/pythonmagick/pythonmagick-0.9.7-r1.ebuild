@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.7.ebuild,v 1.2 2012/01/23 22:25:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.7-r1.ebuild,v 1.1 2012/01/23 22:25:36 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython *-pypy-*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit autotools eutils python
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="<dev-libs/boost-1.48[python]
+RDEPEND=">=dev-libs/boost-1.48[python]
 	>=media-gfx/imagemagick-6.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -41,11 +41,20 @@ src_prepare() {
 
 	python_clean_py-compile_files
 
+	# Support Python 3.
+	sed -e "s/import _PythonMagick/from . import _PythonMagick/" -i PythonMagick/__init__.py || die "sed failed"
+
 	python_src_prepare
 }
 
 src_configure() {
-	python_src_configure --disable-static BOOST_PYTHON_LIB="boost_python"
+	configuration() {
+		sed -e "s/-lboost_python/-lboost_python-${PYTHON_ABI}/" -i Makefile.in
+		econf \
+			--disable-static \
+			--with-boost-python="boost_python-${PYTHON_ABI}"
+	}
+	python_execute_function -s configuration
 }
 
 src_install() {
