@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax-tools/wimax-tools-1.4.5-r1.ebuild,v 1.2 2012/01/11 14:42:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax-tools/wimax-tools-1.4.5-r1.ebuild,v 1.3 2012/01/23 17:02:53 tomka Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://linuxwimax.org/Download?action=AttachFile&do=get&target=${P}.tar
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 DEPEND=">=sys-kernel/linux-headers-2.6.34
