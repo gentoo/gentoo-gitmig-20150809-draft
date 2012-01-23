@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/gerris
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.13 2011/07/20 16:59:00 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.14 2012/01/23 02:22:14 bicatali Exp $
+
+*gerris-20111123 (23 Jan 2012)
+
+  23 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> -gerris-0.8.0.ebuild,
+  -gerris-0.9.2.ebuild, -gerris-20080929.ebuild,
+  -files/gerris-20080929-as-needed.patch, -gerris-20100114.ebuild,
+  -files/gerris-20100114-autotools.patch, +gerris-20111123.ebuild,
+  +files/gerris-20111123-autotools.patch, metadata.xml:
+  Version bump. Rewritten for automagic and include more modules. Initial work
+  from Eckard Brauer, bug #387217
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #105599

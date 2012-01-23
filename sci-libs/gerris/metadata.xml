@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
-<use>
-  <flag name='dx'>Enable support for <pkg>sci-visualization/opendx</pkg></flag>
-</use>
 <longdescription lang='en'>
   Gerris Flow Solver is a software program for the solution of the partial
   differential equations describing fluid flow.
