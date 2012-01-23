@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.5.1.ebuild,v 1.2 2011/11/18 11:02:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.5.1.ebuild,v 1.3 2012/01/23 14:29:46 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="pulseaudio"
 
 RDEPEND=">=dev-libs/glib-2.10:2
