@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.633 2012/01/12 16:29:22 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.634 2012/01/23 14:27:27 ago Exp $
+
+  23 Jan 2012; Agostino Sarubbo <ago@gentoo.org> udev-171-r5.ebuild:
+  Stable for amd64, wrt bug #399717
 
   12 Jan 2012; William Hubbs <williamh@gentoo.org> files/udev-175-zlib.patch:
   add back original patch for #397953.

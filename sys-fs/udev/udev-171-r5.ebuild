@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.1 2011/12/29 19:32:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.2 2012/01/23 14:27:27 ago Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd l
 
 if [[ ${PV} != "9999" ]]
 then
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
+	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
 	# please update testsys-tarball whenever udev-xxx/test/sys/ is changed
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
 			 test? ( mirror://gentoo/${PN}-171-testsys.tar.bz2 )"
