@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/pf-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.47 2012/01/23 21:02:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.48 2012/01/23 21:46:52 hwoarang Exp $
+
+*pf-sources-3.0.7-r1 (23 Jan 2012)
+
+  23 Jan 2012; Markos Chandras <hwoarang@gentoo.org>
+  +pf-sources-3.0.7-r1.ebuild, -pf-sources-3.0.6.ebuild,
+  -pf-sources-3.0.7.ebuild:
+   Apply fix from gentoo-sources for CVE-2012-0056 to 3.0.X series. Affected
+  ebuilds from this series dropped
 
 *pf-sources-3.1.6-r1 (23 Jan 2012)
 *pf-sources-3.2.1-r1 (23 Jan 2012)
