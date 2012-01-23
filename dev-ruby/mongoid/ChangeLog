@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/mongoid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/ChangeLog,v 1.3 2012/01/19 22:08:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/ChangeLog,v 1.4 2012/01/23 02:32:13 flameeyes Exp $
+
+*mongoid-2.4.2 (23 Jan 2012)
+
+  23 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> +mongoid-2.4.2.ebuild,
+  -mongoid-2.4.1.ebuild:
+  Version bump; tests are now finally enabled, at least partially.
 
   19 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> mongoid-2.4.1.ebuild:
   Add support for testing with a custom mongd instance, but keep it disabled for

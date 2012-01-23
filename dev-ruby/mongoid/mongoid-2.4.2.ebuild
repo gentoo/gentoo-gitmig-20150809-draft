@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/mongoid-2.4.1.ebuild,v 1.3 2012/01/19 22:08:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/mongoid-2.4.2.ebuild,v 1.1 2012/01/23 02:32:13 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -29,7 +29,7 @@ IUSE="test"
 
 # there is support to create a custom mongodb instance now but there are
 # still issues to be fixed.
-RESTRICT="test"
+#RESTRICT="test"
 
 ruby_add_rdepend "
 	>=dev-ruby/activemodel-3.1
@@ -54,20 +54,6 @@ all_ruby_prepare() {
 	sed -i -e '/[bB]undler/d' Rakefile || die
 	# remove the Gemfile as well or it'll try to load it during testing
 	rm Gemfile || die
-
-	# the specsuite requires to connect to a mongodb instance; since we
-	# _really_ don't want to connect to the system-configured mongodb
-	# instance we replace the localhost address with another loopback
-	# address (127.0.0.0/8 is all local), which we'll use later.
-	find spec -type f -exec \
-		sed -i \
-		-e 's:localhost:127.255.255.254:g' \
-		-e '/Mongo::Connection/s:\.new\.:.new("127.255.255.254").:g' \
-		{} + || die
-
-	# and fix a few references that should have been from `localhost`
-	sed -i -e '139,$ s:127\.255\.255\.254:localhost:g' \
-		spec/functional/mongoid/config/database_spec.rb || die
 }
 
 each_ruby_test() {
@@ -76,11 +62,18 @@ each_ruby_test() {
 		--noprealloc --noauth --nohttpinterface --nounixsocket --nojournal \
 		--bind_ip 127.255.255.254 &
 	mongod_pid=$!
+	failed=0
 
 	sleep 2
 
-	${RUBY} -S rake spec || failed=1
+	export MONGOID_SPEC_HOST="127.255.255.254"
+	export MONGOID_SPEC_PORT="27017"
+
+	# functional testing crashes Ruby from within Portage, but works
+	# outside of it, needs to be investigated thoroughly, but at least
+	# unit testing works.
+	${RUBY} -S rake spec:unit || failed=1
 	kill "${mongod_pid}"
 
-	[ -n ${failed} ] && die "tests failed"
+	[[ "${failed}" == "1" ]] && die "tests failed"
 }
