@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libnotify
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.78 2011/11/18 22:17:12 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.79 2012/01/23 01:50:33 ssuominen Exp $
+
+*libnotify-0.7.4-r1 (23 Jan 2012)
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +libnotify-0.7.4-r1.ebuild, metadata.xml:
+  Rename notify-send to libnotify-notify-send and symlink it to notify-send
+  with USE="symlink" wrt #379941 by Michał Górny
 
   18 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   -files/libnotify-0.7.1-gtk3-tests.patch, -libnotify-0.7.2.ebuild:
