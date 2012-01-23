@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.6-r1.ebuild,v 1.5 2011/11/11 17:07:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.6-r1.ebuild,v 1.6 2012/01/23 10:05:46 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency"
@@ -20,7 +20,7 @@ RDEPEND=">=x11-wm/fvwm-2.6.2[png]
 	|| ( x11-misc/stalonetray x11-misc/trayer )
 	|| ( x11-misc/habak x11-misc/hsetroot )
 	x11-apps/xwd
-	media-gfx/imagemagick[png]"
+	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[png] )"
 
 src_prepare() {
 	find . -type d -name '.svn' -prune -exec rm -rf {} ';' || die
@@ -28,18 +28,18 @@ src_prepare() {
 }
 
 src_install() {
-	einstall || die
+	einstall
 
-	dodoc AUTHORS README INSTALL NEWS ChangeLog doc/* || die
+	dodoc AUTHORS README INSTALL NEWS ChangeLog doc/*
 
 	docinto examples
-	dodoc addons/* || die
+	dodoc addons/*
 
 	exeinto /etc/X11/Sessions
-	doexe "${FILESDIR}"/fvwm-crystal || die
+	doexe "${FILESDIR}"/fvwm-crystal
 
 	insinto /usr/share/xsessions
-	doins addons/fvwm-crystal.desktop || die
+	doins addons/fvwm-crystal.desktop
 }
 
 pkg_postinst() {
