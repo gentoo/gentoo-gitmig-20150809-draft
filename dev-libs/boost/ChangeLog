@@ -1,6 +1,25 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.234 2012/01/08 11:42:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.235 2012/01/23 22:23:22 hwoarang Exp $
+
+*boost-1.48.0-r1 (23 Jan 2012)
+
+  23 Jan 2012; Markos Chandras <hwoarang@gentoo.org> -boost-1.48.0.ebuild,
+  +boost-1.48.0-r1.ebuild, +files/boost-1.48.0-disable_icu_rpath.patch,
+  +files/boost-1.48.0-disable_libboost_python3.patch,
+  +files/boost-1.48.0-mpi_python3.patch,
+  +files/boost-1.48.0-no_strict_aliasing_python2.patch,
+  +files/boost-1.48.0-python_linking.patch,
+  +files/boost-1.48.0-respect_python-buildid.patch,
+  +files/boost-1.48.0-support_dots_in_python-buildid.patch,
+  files/remove-toolset-1.48.0.patch:
+  Support for installation for multiple Python ABIs (bug #312155). Link
+  libboost_python-*, libboost_mpi_python-* and mpi.so against libpythonX.Y.so
+  (bug #312155). Fix building of mpi.so with Python 3 (bug #295705). Use
+  -fno-strict-aliasing only for libboost_python-2.*. Delete /usr/bin from rpath
+  of all libraries with USE="icu". All changes backported from Progress
+  Overlay. Ebuild and patches by Arfrever.
+  See: http://archives.gentoo.org/gentoo-dev/msg_ab39d8366b714ecacfc7fa64cd48ad00.xml
 
   08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> boost-1.45.0.ebuild,
   boost-1.46.1-r1.ebuild, boost-1.47.0-r1.ebuild, boost-1.47.0.ebuild,
