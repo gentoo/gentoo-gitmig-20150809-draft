@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haskell-src-exts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.13 2010/07/12 18:53:17 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.14 2012/01/23 11:36:28 gienah Exp $
+
+*haskell-src-exts-1.11.1 (23 Jan 2012)
+
+  23 Jan 2012; Mark Wright <gienah@gentoo.org> +haskell-src-exts-1.11.1.ebuild:
+  Bump haskell-src-exts to 1.11.1.
 
   12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
   haskell-src-exts-0.2.ebuild:
