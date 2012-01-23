@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.924 2012/01/18 14:39:33 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.925 2012/01/23 19:58:14 mpagano Exp $
+
+*gentoo-sources-3.2.1-r1 (23 Jan 2012)
+*gentoo-sources-3.1.10 (23 Jan 2012)
+
+  23 Jan 2012; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.1.10.ebuild, +gentoo-sources-3.2.1-r1.ebuild:
+  Clean up and fix /proc/<pid>/mem handling, prevent local privilege escalation
 
   18 Jan 2012; Michael Pagano <mpagano@gentoo.org>
   -gentoo-sources-3.1.4.ebuild, -gentoo-sources-3.1.5.ebuild:
