@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/fvwm-crystal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.66 2012/01/23 10:14:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.67 2012/01/23 17:38:56 ssuominen Exp $
+
+*fvwm-crystal-3.0.6-r2 (23 Jan 2012)
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +fvwm-crystal-3.0.6-r2.ebuild, +files/fvwm-crystal-build.patch:
+  Fix bad initialization of generate-menu wrt #345985. Use "emake install" with
+  DESTDIR instead of "einstall".
 
   23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   fvwm-crystal-3.0.6-r1.ebuild:
