@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/ibam
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.8 2011/03/20 15:34:24 aidecoe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.9 2012/01/23 00:55:39 ssuominen Exp $
+
+*ibam-0.5.2-r3 (23 Jan 2012)
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +ibam-0.5.2-r3.ebuild,
+  +files/ibam-0.5.2-build.patch:
+  Fix sysfs detection problems (by migrating to Debian patchset) wrt #359891 by
+  Naohiro Aota
 
 *ibam-0.5.2-r2 (20 Mar 2011)
 
