@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/mcomix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.5 2011/12/30 07:44:04 dirtyepic Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.6 2012/01/23 04:27:12 dirtyepic Exp $
+
+  23 Jan 2012; Ryan Hill <dirtyepic@gentoo.org> -mcomix-0.95.ebuild,
+  mcomix-0.96.ebuild, metadata.xml:
+  Depend on unrar-4.1.4-r1 to support encrypted archives and make it manditory.
+  Remove old version that could corrupt data.
 
 *mcomix-0.96 (30 Dec 2011)
 

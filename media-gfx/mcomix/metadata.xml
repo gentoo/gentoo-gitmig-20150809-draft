@@ -6,9 +6,4 @@
     <email>dirtyepic@gentoo.org</email>
     <name>Ryan Hill</name>
 </maintainer>
-<use>
-	<flag name='rar'>
-		Enable support for .cbr archives using rar/unrar.
-	</flag>
-</use>
 </pkgmetadata>
