@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.9 2012/01/22 21:03:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.10 2012/01/23 19:04:48 williamh Exp $
 
-EAPI="2"
+EAPI=4
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git
@@ -12,10 +12,7 @@ fi
 
 inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs
 
-if [[ ${PV} = *9999* ]]; then
-	SRC_URI=""
-	KEYWORDS=""
-else
+if [[ ${PV} != *9999* ]]; then
 	SRC_URI="http://wiki.qemu.org/download/${P}.tar.gz"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
@@ -25,8 +22,8 @@ HOMEPAGE="http://www.qemu.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses nss \
-png pulseaudio qemu-ifup rbd sasl sdl spice ssl static threads vde \
+IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses nss
+png pulseaudio qemu-ifup rbd sasl sdl spice ssl static threads vde
 +vhost-net xattr xen"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
@@ -173,28 +170,30 @@ src_configure() {
 	conf_opts="${conf_opts} --sysconfdir=/etc"
 
 	#config options
-	conf_opts="${conf_opts} $(use_enable aio linux-aio)"
-	conf_opts="${conf_opts} $(use_enable bluetooth bluez)"
-	conf_opts="${conf_opts} $(use_enable brltty brlapi)"
-	conf_opts="${conf_opts} $(use_enable curl)"
-	conf_opts="${conf_opts} $(use_enable fdt)"
-	conf_opts="${conf_opts} $(use_enable hardened pie)"
-	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
-	conf_opts="${conf_opts} $(use_enable ncurses curses)"
-	conf_opts="${conf_opts} $(use_enable nss smartcard-nss)"
-	conf_opts="${conf_opts} $(use_enable qemu_softmmu_targets_lm32 opengl)" # single opengl user
-	conf_opts="${conf_opts} $(use_enable png vnc-png)"
-	conf_opts="${conf_opts} $(use_enable rbd)"
-	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
-	conf_opts="${conf_opts} $(use_enable sdl)"
-	conf_opts="${conf_opts} $(use_enable spice)"
-	conf_opts="${conf_opts} $(use_enable ssl vnc-tls)"
-	conf_opts="${conf_opts} $(use_enable threads vnc-thread)"
-	conf_opts="${conf_opts} $(use_enable vde)"
-	conf_opts="${conf_opts} $(use_enable vhost-net)"
-	conf_opts="${conf_opts} $(use_enable xen)"
-	conf_opts="${conf_opts} $(use_enable xattr attr)"
-	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
+	conf_opts="${conf_opts}
+		$(use_enable aio linux-aio)
+		$(use_enable bluetooth bluez)
+		$(use_enable brltty brlapi)
+		$(use_enable curl)
+		$(use_enable fdt)
+		$(use_enable hardened pie)
+		$(use_enable jpeg vnc-jpeg)
+		$(use_enable ncurses curses)
+		$(use_enable nss smartcard-nss)
+		$(use_enable qemu_softmmu_targets_lm32 opengl)" # single opengl user
+	conf_opts="${conf_opts}
+		$(use_enable png vnc-png)
+		$(use_enable rbd)
+		$(use_enable sasl vnc-sasl)
+		$(use_enable sdl)
+		$(use_enable spice)
+		$(use_enable ssl vnc-tls)
+		$(use_enable threads vnc-thread)
+		$(use_enable vde)
+		$(use_enable vhost-net)
+		$(use_enable xen)
+		$(use_enable xattr attr)
+		--disable-darwin-user --disable-bsd-user"
 
 	# audio options
 	audio_opts="oss"
