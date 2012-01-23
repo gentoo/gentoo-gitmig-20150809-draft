@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bird
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.18 2011/11/07 10:57:30 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.19 2012/01/23 14:48:52 chainsaw Exp $
+
+*bird-1.3.6 (23 Jan 2012)
+
+  23 Jan 2012; Tony Vroon <chainsaw@gentoo.org> +bird-1.3.6.ebuild:
+  Version bump, as requested by Tim Preston in the LINX engineering team.
 
 *bird-1.3.2 (07 Nov 2011)
 
