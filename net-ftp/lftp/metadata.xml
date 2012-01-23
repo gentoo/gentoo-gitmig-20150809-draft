@@ -5,5 +5,4 @@
   <email>jer@gentoo.org</email>
   <name>Jeroen Roovers</name>
 </maintainer>
-<use><flag name="dnssec">Enable local DNSSEC validation using libval</flag></use>
 </pkgmetadata>
