@@ -29,21 +29,6 @@ index ea9a468..9cd0341 100644
  	if ! test -d html ; then mkdir html ; fi
  	-cd html && gtkdoc-mkhtml $(DOC_MODULE) ../$(DOC_MAIN_SGML_FILE)
  
-diff --git a/examples/Makefile.am b/examples/Makefile.am
-index a4b2fc6..63646e8 100644
---- a/examples/Makefile.am
-+++ b/examples/Makefile.am
-@@ -16,9 +16,7 @@ endif
- bin_PROGRAMS = \
- 	transform \
- 	delaunay \
--	$(NETPBM_EXTRA)
--
--noinst_PROGRAMS = \
-+	$(NETPBM_EXTRA) \
- 	set \
- 	volume \
- 	cleanup \
 diff --git a/src/Makefile.am b/src/Makefile.am
 index 3e3c5b3..1b0f286 100644
 --- a/src/Makefile.am
@@ -61,3 +46,20 @@ index 3e3c5b3..1b0f286 100644
  
  CLEANFILES = $(BUILT_SOURCES)
  
+--- examples/Makefile.am.orig	2012-01-20 19:44:46.000000000 +0000
++++ examples/Makefile.am	2012-01-20 19:45:04.000000000 +0000
+@@ -13,12 +13,10 @@
+ NETPBM_EXTRA = happrox
+ endif
+ 
+-bin_PROGRAMS = \
++check_PROGRAMS = \
+ 	transform \
+ 	delaunay \
+-	$(NETPBM_EXTRA)
+-
+-noinst_PROGRAMS = \
++	$(NETPBM_EXTRA) \
+ 	set \
+ 	volume \
+ 	cleanup \

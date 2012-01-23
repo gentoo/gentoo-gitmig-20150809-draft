@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.23 2012/01/21 16:06:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.24 2012/01/23 02:25:41 bicatali Exp $
+
+*gts-20111025-r1 (23 Jan 2012)
+
+  23 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> -gts-20111025.ebuild,
+  +gts-20111025-r1.ebuild, files/gts-20111025-autotools.patch:
+  Fixed collisions by not installing examples execs
 
   21 Jan 2012; Justin Lecher <jlec@gentoo.org> gts-20111025.ebuild,
   files/gts-20111025-autotools.patch:
