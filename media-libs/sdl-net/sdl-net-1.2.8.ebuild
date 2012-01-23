@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.8.ebuild,v 1.2 2012/01/17 17:28:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.8.ebuild,v 1.3 2012/01/23 05:14:26 mr_bones_ Exp $
 
 EAPI=2
 MY_P=${P/sdl-/SDL_}
@@ -20,6 +20,7 @@ S=${WORKDIR}/${MY_P}
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
+		--disable-gui \
 		$(use_enable static-libs static)
 }
 
