@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/npapi-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.6 2012/01/19 17:31:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.7 2012/01/23 22:29:49 axs Exp $
+
+  23 Jan 2012; Ian Stakenvicius <axs@gentoo.org> npapi-sdk-0.27.ebuild:
+  added ~arch keywords to match keywords for media-video/vlc[nsplugin]
 
   19 Jan 2012; Agostino Sarubbo <ago@gentoo.org> npapi-sdk-0.27.ebuild:
   Stable for amd64, wrt bug #399403
