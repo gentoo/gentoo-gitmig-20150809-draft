@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.5 2012/01/16 18:28:11 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.6 2012/01/23 18:34:59 ssuominen Exp $
 
 PYTHON_DEPEND="3:3.2"
 EAPI=4
@@ -37,10 +37,10 @@ LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="virtual/jpeg
-	media-libs/libpng
+	media-libs/libpng:0
 	x11-libs/libXi
 	x11-libs/libX11
-	media-libs/tiff
+	media-libs/tiff:0
 	media-libs/libsamplerate
 	virtual/opengl
 	>=media-libs/freetype-2.0
@@ -60,7 +60,7 @@ RDEPEND="virtual/jpeg
 	fftw? ( sci-libs/fftw:3.0 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	sndfile? ( media-libs/libsndfile )
-	lcms? ( media-libs/lcms )
+	lcms? ( media-libs/lcms:0 )
 	collada? ( media-libs/opencollada )"
 
 DEPEND="dev-util/scons
