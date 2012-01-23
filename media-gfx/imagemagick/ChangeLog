@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/imagemagick
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.452 2011/12/11 06:32:21 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.453 2012/01/23 22:54:00 ssuominen Exp $
+
+*imagemagick-6.7.4.8 (23 Jan 2012)
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  imagemagick-6.7.1.0.ebuild, +imagemagick-6.7.4.8.ebuild:
+  Version bump. Use virtual/opencl for USE="opencl" instead of any drivers.
 
   11 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
   -imagemagick-6.6.5.6.ebuild, -imagemagick-6.7.3.0.ebuild:

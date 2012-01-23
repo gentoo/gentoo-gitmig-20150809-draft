@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.1.0.ebuild,v 1.14 2012/01/23 22:54:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.4.8.ebuild,v 1.1 2012/01/23 22:54:00 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs versionator
@@ -13,13 +13,13 @@ SRC_URI="mirror://${PN}/${MY_P}.tar.xz"
 
 LICENSE="imagemagick"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="autotrace bzip2 +corefonts cxx djvu fftw fontconfig fpx graphviz gs hdri jbig jpeg jpeg2k lcms lqr lzma opencl openexr openmp perl png q32 q64 q8 raw static-libs svg tiff truetype webp wmf X xml zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+IUSE="autotrace bzip2 corefonts cxx djvu fftw fontconfig fpx graphviz gs hdri jbig jpeg jpeg2k lcms lqr lzma opencl openexr openmp pango perl png q32 q64 q8 raw static-libs svg tiff truetype webp wmf X xml zlib"
 
-# libtool is required for loading plugins
 RDEPEND=">=sys-devel/libtool-2.2.6b
 	autotrace? ( >=media-gfx/autotrace-0.31.1 )
 	bzip2? ( app-arch/bzip2 )
+	corefonts? ( media-fonts/corefonts )
 	djvu? ( app-text/djvu )
 	fftw? ( sci-libs/fftw:3.0 )
 	fontconfig? ( media-libs/fontconfig )
@@ -33,13 +33,13 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	lqr? ( >=media-libs/liblqr-0.1.0 )
 	opencl? ( virtual/opencl )
 	openexr? ( media-libs/openexr )
+	pango? ( x11-libs/pango )
 	perl? ( >=dev-lang/perl-5.8.6-r6 )
-	png? ( >=media-libs/libpng-1.4:0 )
+	png? ( media-libs/libpng:0 )
 	raw? ( media-gfx/ufraw )
 	svg? ( >=gnome-base/librsvg-2.9.0 )
-	tiff? ( >=media-libs/tiff-3.5.5:0 )
-	truetype? ( media-libs/freetype:2
-		corefonts? ( media-fonts/corefonts ) )
+	tiff? ( media-libs/tiff:0 )
+	truetype? ( media-libs/freetype:2 )
 	webp? ( media-libs/libwebp )
 	wmf? ( >=media-libs/libwmf-0.2.8 )
 	X? (
@@ -50,12 +50,15 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	)
 	xml? ( >=dev-libs/libxml2-2.4.10 )
 	lzma? ( app-arch/xz-utils )
-	zlib? ( sys-libs/zlib )
-	!dev-perl/perlmagick
-	!media-gfx/graphicsmagick[imagemagick]"
+	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
+	!media-gfx/graphicsmagick[imagemagick]
+	app-arch/xz-utils
+	dev-util/pkgconfig
 	>=sys-apps/sed-4
 	X? ( x11-proto/xextproto )"
+
+REQUIRED_USE="corefonts? ( truetype )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -72,13 +75,6 @@ src_configure() {
 	local openmp=disable
 	if use openmp && tc-has-openmp; then
 		openmp=enable
-	fi
-
-	local myconf
-	if use truetype; then
-		myconf="$(use_with corefonts windows-font-dir /usr/share/fonts/corefonts)"
-	else
-		myconf="--without-windows-font-dir"
 	fi
 
 	econf \
@@ -117,11 +113,12 @@ src_configure() {
 		$(use_with lqr) \
 		$(use_with lzma) \
 		$(use_with openexr) \
+		$(use_with pango) \
 		$(use_with png) \
 		$(use_with svg rsvg) \
 		$(use_with tiff) \
 		$(use_with webp) \
-		${myconf} \
+		$(use_with corefonts windows-font-dir /usr/share/fonts/corefonts) \
 		$(use_with wmf) \
 		$(use_with xml) \
 		--${openmp}-openmp
@@ -139,8 +136,8 @@ src_install() {
 	default
 
 	if use perl; then
-		find "${ED}" -type f -name perllocal.pod -delete
-		find "${ED}" -depth -mindepth 1 -type d -empty -delete
+		find "${ED}" -type f -name perllocal.pod -exec rm -f {} +
+		find "${ED}" -depth -mindepth 1 -type d -empty -exec rm -rf {} +
 	fi
 
 	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
