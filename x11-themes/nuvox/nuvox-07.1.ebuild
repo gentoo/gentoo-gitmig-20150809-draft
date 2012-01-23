@@ -1,36 +1,33 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvox/nuvox-07.1.ebuild,v 1.3 2008/04/07 21:02:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvox/nuvox-07.1.ebuild,v 1.4 2012/01/23 10:43:31 ssuominen Exp $
 
-MY_P="nuvoX_${PV}"
+EAPI=4
 
-DESCRIPTION="NuvoX SVG icon theme."
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
+MY_P=nuvoX_${PV}
+
+DESCRIPTION="NuvoX SVG icon theme"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=38467"
-LICENSE="GPL-2"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
-IUSE=""
-KEYWORDS="amd64 x86"
+LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="amd64 x86"
+IUSE=""
+
+RDEPEND=""
+DEPEND="|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] )"
 
 RESTRICT="strip binchecks"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
-DEPEND="media-gfx/imagemagick"
-RDEPEND=""
-
-src_unpack() {
-	unpack ${A}
-
-	sed -i \
-		-e '/rm -fr/d' \
-		-e '/tar cf/d' \
-		"${S}/buildset"
+src_prepare() {
+	sed -i -e '/rm -fr/d' -e '/tar cf/d' buildset || die
 }
 
 src_compile() {
-	./buildset || die "unable to build icon sets."
+	./buildset || die
 }
 
 src_install() {
