@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.367 2012/01/20 20:08:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.368 2012/01/23 15:02:05 tomka Exp $
+
+  23 Jan 2012; Thomas Kahle <tomka@gentoo.org> asterisk-1.8.8.2.ebuild:
+  x86 stable per bug 399507
 
   20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> asterisk-1.8.8.2.ebuild:
   Stable for AMD64, wrt security bug #399507
