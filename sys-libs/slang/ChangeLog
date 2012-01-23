@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.120 2011/04/25 15:07:01 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.121 2012/01/23 15:15:31 ago Exp $
+
+  23 Jan 2012; Agostino Sarubbo <ago@gentoo.org> slang-2.2.4.ebuild:
+  Stable for amd64, wrt bug #397239
 
 *slang-2.2.4 (25 Apr 2011)
 
