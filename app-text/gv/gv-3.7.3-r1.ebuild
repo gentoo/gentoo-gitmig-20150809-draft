@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3-r1.ebuild,v 1.1 2012/01/23 16:36:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3-r1.ebuild,v 1.2 2012/01/23 16:38:30 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic
@@ -35,7 +35,7 @@ src_prepare() {
 
 src_configure() {
 	# Expose the correct codepath from /usr/include/X11/Xaw3d/SimpleP.h
-	append-cppflags -DXAW_INTERNATIONALIZATION
+	append-cppflags -DXAW_INTERNATIONALIZATION #372395
 
 	export ac_cv_lib_Xinerama_main=$(usex xinerama)
 

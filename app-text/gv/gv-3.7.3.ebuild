@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3.ebuild,v 1.1 2012/01/22 19:07:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3.ebuild,v 1.2 2012/01/23 16:38:30 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -34,8 +34,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# For $(use_enable unicode international), see bug #372395
-
 	export ac_cv_lib_Xinerama_main=$(usex xinerama)
 
 	econf --enable-scrollbar-code
