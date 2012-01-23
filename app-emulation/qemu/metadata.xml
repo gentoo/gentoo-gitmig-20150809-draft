@@ -21,6 +21,7 @@
     <flag name='kvm'>Use the KVM (Kernel Virtual Machine) infrastructure on compatible hardware</flag>
     <flag name='ncurses'>Enable the ncurses-based console</flag>
     <flag name='nss'>Build support for Smartcard devices emulation using <pkg>dev-libs/nss</pkg></flag>
+    <flag name='nss'>Enable opengl/x11 output for lm32 target.</flag>
     <flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
     <flag name='qemu-ifup'>Provides the qemu-ifup script for use with
         QEMU's built in bridging</flag>
@@ -30,6 +31,8 @@
         emulation</flag>
     <flag name='spice'>Enable Spice protocol support via <pkg>app-emulation/spice</pkg></flag>
     <flag name='ssl'>Enable TLS support for the VNC console server</flag>
+    <flag name="usbredir">Use <pkg>sys-apps/usbredir</pkg> to redirect USB
+        devices to another machine over TCP</flag>
     <flag name='vde'>Enable Virtual Distributed Ethernet (VDE) based networking</flag>
     <flag name='vhost-net'>Enable accelerated networking using vhost-net, see http://www.linux-kvm.org/page/VhostNet</flag>
     <flag name='xattr'>

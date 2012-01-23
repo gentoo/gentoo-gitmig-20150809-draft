@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.10 2012/01/23 19:04:48 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.11 2012/01/23 21:15:03 slyfox Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.qemu.org"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses nss
-png pulseaudio qemu-ifup rbd sasl sdl spice ssl static threads vde
+opengl png pulseaudio qemu-ifup rbd sasl sdl spice ssl static threads usbredir vde
 +vhost-net xattr xen"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
@@ -57,6 +57,10 @@ RDEPEND="
 	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
 	nss? ( dev-libs/nss )
+	opengl? (
+		virtual/opengl
+		x11-libs/libX11
+	)
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
 	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
@@ -66,14 +70,11 @@ RDEPEND="
 	spice? ( >=app-emulation/spice-0.9.0
 			>=app-emulation/spice-protocol-0.8.1 )
 	ssl? ( net-libs/gnutls )
+	usbredir? ( sys-apps/usbredir )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
 	xen? ( app-emulation/xen-tools )
 
-	qemu_softmmu_targets_lm32? (
-		x11-libs/libX11
-		virtual/opengl
-	)
 "
 
 DEPEND="${RDEPEND}
@@ -121,8 +122,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# prevent docs to get automatically installed
-	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
 	# Alter target makefiles to accept CFLAGS set via flag-o
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
@@ -147,13 +146,13 @@ src_configure() {
 		user_targets="${user_targets} ${target}-linux-user"
 	done
 
-	if [ -z "${softmmu_targets}" ]; then
+	if [[ -z ${softmmu_targets} ]]; then
 		conf_opts="${conf_opts} --disable-system"
 	else
 		einfo "Building the following softmmu targets: ${softmmu_targets}"
 	fi
 
-	if [ ! -z "${user_targets}" ]; then
+	if [[ -n ${user_targets} ]]; then
 		einfo "Building the following user targets: ${user_targets}"
 		conf_opts="${conf_opts} --enable-linux-user"
 	else
@@ -166,9 +165,6 @@ src_configure() {
 	# Add support for static builds
 	use static && conf_opts="${conf_opts} --static"
 
-	# Fix the $(prefix)/etc issue
-	conf_opts="${conf_opts} --sysconfdir=/etc"
-
 	#config options
 	conf_opts="${conf_opts}
 		$(use_enable aio linux-aio)
@@ -180,8 +176,7 @@ src_configure() {
 		$(use_enable jpeg vnc-jpeg)
 		$(use_enable ncurses curses)
 		$(use_enable nss smartcard-nss)
-		$(use_enable qemu_softmmu_targets_lm32 opengl)" # single opengl user
-	conf_opts="${conf_opts}
+		$(use_enable opengl)
 		$(use_enable png vnc-png)
 		$(use_enable rbd)
 		$(use_enable sasl vnc-sasl)
@@ -193,7 +188,8 @@ src_configure() {
 		$(use_enable vhost-net)
 		$(use_enable xen)
 		$(use_enable xattr attr)
-		--disable-darwin-user --disable-bsd-user"
+		--disable-darwin-user --disable-bsd-user
+	"
 
 	# audio options
 	audio_opts="oss"
@@ -202,10 +198,12 @@ src_configure() {
 	use pulseaudio && audio_opts="pa ${audio_opts}"
 	use sdl && audio_opts="sdl ${audio_opts}"
 
-	set -- --prefix=/usr \
+	set -- --prefix="${EPREFIX}"/usr \
+		--sysconfdir="${EPREFIX}"/etc \
 		--disable-strip \
 		--disable-werror \
 		--disable-kvm \
+		--disable-libiscsi \
 		--enable-nptl \
 		--enable-uuid \
 		${conf_opts} \
@@ -217,27 +215,20 @@ src_configure() {
 
 	echo ./configure "$@" # show actual options
 	./configure "$@" || die "configure failed"
-		# this is for qemu upstream's threaded support which is
-		# in development and broken
-		# the kvm project has its own support for threaded IO
-		# which is always on and works
-		# --enable-io-thread \
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake \
+		DESTDIR="${D}" \
+		docdir="${EPREFIX}"/usr/share/doc/"${PF}" \
+	    install || die "make install failed"
 
-	if [ ! -z "${softmmu_targets}" ]; then
-		exeinto /etc/qemu
-		use qemu-ifup && { doexe \
-			"${FILESDIR}/qemu-ifup" \
-			"${FILESDIR}/qemu-ifdown" \
-			|| die "qemu interface scripts missing" ; }
+	if [[ -n ${softmmu_targets} ]]; then
+		if use qemu-ifup; then
+			exeinto /etc/qemu
+			doexe "${FILESDIR}"/qemu-if{up,down}
+		fi
 	fi
-
-	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
-	newdoc pc-bios/README README.pc-bios || die
-	dohtml qemu-doc.html qemu-tech.html || die
 }
 
 pkg_postinst() {
