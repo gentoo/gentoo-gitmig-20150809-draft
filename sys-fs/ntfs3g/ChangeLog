@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/ntfs3g
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.120 2011/12/29 20:37:13 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.121 2012/01/23 18:32:01 chutzpah Exp $
+
+*ntfs3g-2012.1.15 (23 Jan 2012)
+
+  23 Jan 2012; Patrick McLean <chutzpah@gentoo.org> -ntfs3g-2010.8.8.ebuild,
+  -ntfs3g-2010.10.2.ebuild, -ntfs3g-2011.1.15.ebuild, +ntfs3g-2012.1.15.ebuild,
+  metadata.xml:
+  Version bump, add new "extras" USE flag. Drop some older versions.
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> ntfs3g-2011.4.12.ebuild:
   Stable for ppc64; bug #378829
