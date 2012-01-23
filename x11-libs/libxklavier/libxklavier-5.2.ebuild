@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.2.ebuild,v 1.1 2012/01/19 18:46:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.2.ebuild,v 1.2 2012/01/23 18:58:22 ssuominen Exp $
 
 EAPI=4
-inherit gnome.org libtool
+inherit autotools eutils gnome.org libtool
 
 DESCRIPTION="A library for the X Keyboard Extension (high-level API)"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/LibXklavier"
@@ -30,7 +30,12 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog CREDITS NEWS README"
 
 src_prepare() {
-	elibtoolize
+	if use introspection; then
+		epatch "${FILESDIR}"/${P}-include-top_srcdir.patch
+		eautoreconf
+	else
+		elibtoolize
+	fi
 }
 
 src_configure() {
