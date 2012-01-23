@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.29 2012/01/22 22:49:21 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.30 2012/01/23 22:10:14 slyfox Exp $
 
 #BACKPORTS=1
 
@@ -29,8 +29,9 @@ HOMEPAGE="http://www.linux-kvm.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses nss \
-png pulseaudio rbd sasl sdl spice ssl threads vde +vhost-net xattr xen"
+IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses nss
+opengl png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads usbredir vde
++vhost-net xattr xen"
 # static, depends on libsdl being built with USE=static-libs, which can not
 # be expressed in current EAPI's
 
@@ -44,7 +45,7 @@ IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 IUSE="${IUSE} +qemu_softmmu_targets_x86_64"
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
-	if [ "x${target}" = "xx86_64" ]; then
+	if [[ ${target} = x86_64 ]]; then
 		continue
 	fi
 	IUSE="${IUSE} qemu_softmmu_targets_${target}"
@@ -76,8 +77,16 @@ RDEPEND="
 	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
 	nss? ( dev-libs/nss )
+	opengl? (
+		virtual/opengl
+		x11-libs/libX11
+	)
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
+	qemu-ifup? (
+		sys-apps/iproute2
+		net-misc/bridge-utils
+	)
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
@@ -86,14 +95,10 @@ RDEPEND="
 		>=app-emulation/spice-protocol-0.8.1
 	)
 	ssl? ( net-libs/gnutls )
+	usbredir? ( sys-apps/usbredir )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
 	xen? ( app-emulation/xen-tools )
-
-	qemu_softmmu_targets_lm32? (
-		x11-libs/libX11
-		virtual/opengl
-	)
 "
 
 DEPEND="${RDEPEND}
@@ -211,14 +216,14 @@ src_configure() {
 		user_targets="${user_targets} ${target}-linux-user"
 	done
 
-	if [ -z "${softmmu_targets}" ]; then
+	if [[ -z ${softmmu_targets} ]]; then
 		eerror "All SoftMMU targets are disabled. This is invalid for qemu-kvm"
 		die "At least 1 SoftMMU target must be enabled"
 	else
 		einfo "Building the following softmmu targets: ${softmmu_targets}"
 	fi
 
-	if [ ! -z "${user_targets}" ]; then
+	if [[ -n ${user_targets} ]]; then
 		einfo "Building the following user targets: ${user_targets}"
 		conf_opts="${conf_opts} --enable-linux-user"
 	else
@@ -234,32 +239,31 @@ src_configure() {
 	# Support debug USE flag
 	use debug && conf_opts="${conf_opts} --enable-debug --disable-strip"
 
-	# Fix the $(prefix)/etc issue
-	conf_opts="${conf_opts} --sysconfdir=/etc"
-
 	#config options
-	conf_opts="${conf_opts} $(use_enable aio linux-aio)"
-	conf_opts="${conf_opts} $(use_enable bluetooth bluez)"
-	conf_opts="${conf_opts} $(use_enable brltty brlapi)"
-	conf_opts="${conf_opts} $(use_enable curl)"
-	conf_opts="${conf_opts} $(use_enable fdt)"
-	conf_opts="${conf_opts} $(use_enable hardened pie)"
-	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
-	conf_opts="${conf_opts} $(use_enable ncurses curses)"
-	conf_opts="${conf_opts} $(use_enable nss smartcard-nss)"
-	conf_opts="${conf_opts} $(use_enable qemu_softmmu_targets_lm32 opengl)" # single opengl user
-	conf_opts="${conf_opts} $(use_enable png vnc-png)"
-	conf_opts="${conf_opts} $(use_enable rbd)"
-	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
-	conf_opts="${conf_opts} $(use_enable sdl)"
-	conf_opts="${conf_opts} $(use_enable spice)"
-	conf_opts="${conf_opts} $(use_enable ssl vnc-tls)"
-	conf_opts="${conf_opts} $(use_enable threads vnc-thread)"
-	conf_opts="${conf_opts} $(use_enable vde)"
-	conf_opts="${conf_opts} $(use_enable vhost-net)"
-	conf_opts="${conf_opts} $(use_enable xen)"
-	conf_opts="${conf_opts} $(use_enable xattr attr)"
-	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
+	conf_opts="${conf_opts}
+		$(use_enable aio linux-aio)
+		$(use_enable bluetooth bluez)
+		$(use_enable brltty brlapi)
+		$(use_enable curl)
+		$(use_enable fdt)
+		$(use_enable hardened pie)
+		$(use_enable jpeg vnc-jpeg)
+		$(use_enable ncurses curses)
+		$(use_enable nss smartcard-nss)
+		$(use_enable opengl)
+		$(use_enable png vnc-png)
+		$(use_enable rbd)
+		$(use_enable sasl vnc-sasl)
+		$(use_enable sdl)
+		$(use_enable spice)
+		$(use_enable ssl vnc-tls)
+		$(use_enable threads vnc-thread)
+		$(use_enable vde)
+		$(use_enable vhost-net)
+		$(use_enable xen)
+		$(use_enable xattr attr)
+		--disable-darwin-user --disable-bsd-user
+	"
 
 	# audio options
 	audio_opts="oss"
@@ -268,10 +272,12 @@ src_configure() {
 	use pulseaudio && audio_opts="pa ${audio_opts}"
 	use sdl && audio_opts="sdl ${audio_opts}"
 
-	set -- --prefix=/usr \
+	set -- --prefix="${EPREFIX}"/usr \
+		--sysconfdir="${EPREFIX}"/etc \
 		--disable-strip \
 		--disable-werror \
 		--enable-kvm \
+		--disable-libiscsi \
 		--enable-nptl \
 		--enable-uuid \
 		${conf_opts} \
@@ -283,17 +289,12 @@ src_configure() {
 
 	echo ./configure "$@" # show actual options
 	./configure "$@" || die "configure failed"
-		# this is for qemu upstream's threaded support which is
-		# in development and broken
-		# the kvm project has its own support for threaded IO
-		# which is always on and works
-		# --enable-io-thread \
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	if [ ! -z "${softmmu_targets}" ]; then
+	if [[ -n ${softmmu_targets} ]]; then
 		insinto /lib/udev/rules.d/
 		doins "${FILESDIR}"/65-gentoo-kvm.rules || die
 
@@ -303,6 +304,12 @@ src_install() {
 		else
 			elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
 			elog "of /usr/bin/qemu-kvm and /usr/bin/kvm"
+		fi
+
+		if use qemu-ifup; then
+			insinto /etc/qemu/
+			insopts -m0755
+			doins "${FILESDIR}"/qemu-ifup || die
 		fi
 	fi
 
@@ -320,7 +327,7 @@ src_install() {
 
 pkg_postinst() {
 
-	if [ ! -z "${softmmu_targets}" ]; then
+	if [[ -n ${softmmu_targets} ]]; then
 		elog "If you don't have kvm compiled into the kernel, make sure you have"
 		elog "the kernel module loaded before running kvm. The easiest way to"
 		elog "ensure that the kernel module is loaded is to load it on boot."
@@ -333,7 +340,9 @@ pkg_postinst() {
 		elog
 		elog "You will need the Universal TUN/TAP driver compiled into your"
 		elog "kernel or loaded as a module to use the virtual network device"
-		elog "if using -net tap."
+		elog "if using -net tap.  You will also need support for 802.1d"
+		elog "Ethernet Bridging and a configured bridge if using the provided"
+		elog "qemu-ifup script from /etc/qemu."
 		elog
 		elog "The gnutls use flag was renamed to ssl, so adjust your use flags."
 	fi

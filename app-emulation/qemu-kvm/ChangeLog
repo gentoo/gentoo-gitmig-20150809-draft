@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.88 2012/01/22 22:49:21 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.89 2012/01/23 22:10:14 slyfox Exp $
+
+  23 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> +files/qemu-ifup,
+  metadata.xml, qemu-kvm-9999.ebuild:
+  Restored USE="opengl qemu-ifup"; added USE="usbredir".
 
   22 Jan 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   qemu-kvm-9999.ebuild:
