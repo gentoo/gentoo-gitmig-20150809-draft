@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.203 2012/01/23 10:43:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.204 2012/01/23 23:39:51 wired Exp $
+
+  23 Jan 2012; Alex Alexander <wired@gentoo.org> rxvt-unicode-9.15.ebuild:
+  fixed buffer-on-clear patch not applying in new version
 
   23 Jan 2012; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.15.ebuild:
   Fix patch name by Markus Peloquin (bug #399659).

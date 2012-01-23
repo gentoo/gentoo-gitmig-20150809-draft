@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.15.ebuild,v 1.2 2012/01/23 10:43:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.15.ebuild,v 1.3 2012/01/23 23:39:51 wired Exp $
 
 EAPI="4"
 
@@ -66,7 +66,7 @@ src_prepare() {
 		use secondary-wheel && epatch "${FILESDIR}"/${PN}-9.14-secondary-wheel.patch
 
 		# ctrl-l buffer fix
-		use buffer-on-clear && epatch "${FILESDIR}"/${P}-clear.patch
+		use buffer-on-clear && epatch "${FILESDIR}"/${PN}-9.14-clear.patch
 
 		use alt-font-width && epatch "${FILESDIR}"/${PN}-9.06-font-width.patch
 	fi
