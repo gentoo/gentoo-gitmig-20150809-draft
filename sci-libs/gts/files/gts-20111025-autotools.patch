@@ -1,12 +1,5 @@
- doc/Makefile.am      |    6 +++---
- examples/Makefile.am |    4 +---
- src/Makefile.am      |    4 ++--
- 3 files changed, 6 insertions(+), 8 deletions(-)
-
-diff --git a/doc/Makefile.am b/doc/Makefile.am
-index ea9a468..9cd0341 100644
---- a/doc/Makefile.am
-+++ b/doc/Makefile.am
+--- doc/Makefile.am.orig
++++ doc/Makefile.am
 @@ -9,7 +9,7 @@ DOC_MODULE=gts
  DOC_MAIN_SGML_FILE=gts-docs.sgml
  
@@ -29,10 +22,8 @@ index ea9a468..9cd0341 100644
  	if ! test -d html ; then mkdir html ; fi
  	-cd html && gtkdoc-mkhtml $(DOC_MODULE) ../$(DOC_MAIN_SGML_FILE)
  
-diff --git a/src/Makefile.am b/src/Makefile.am
-index 3e3c5b3..1b0f286 100644
---- a/src/Makefile.am
-+++ b/src/Makefile.am
+--- src/Makefile.am.orig
++++ src/Makefile.am
 @@ -66,10 +66,10 @@ predicates.o: predicates.c predicates_init.h predicates.h
  	$(COMPILE) -c $(srcdir)/predicates.c
  

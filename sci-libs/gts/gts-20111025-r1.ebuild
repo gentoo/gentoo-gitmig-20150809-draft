@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20111025-r1.ebuild,v 1.1 2012/01/23 02:25:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20111025-r1.ebuild,v 1.2 2012/01/23 04:21:48 bicatali Exp $
 
 EAPI=4
 
+AUTOTOOLS_AUTORECONF=1
 inherit autotools-utils fortran-2
 
 DESCRIPTION="GNU Triangulated Surface Library"
