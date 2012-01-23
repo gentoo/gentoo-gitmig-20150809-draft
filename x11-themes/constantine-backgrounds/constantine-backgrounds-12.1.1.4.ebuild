@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/constantine-backgrounds/constantine-backgrounds-12.1.1.4.ebuild,v 1.1 2011/03/09 22:22:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/constantine-backgrounds/constantine-backgrounds-12.1.1.4.ebuild,v 1.2 2012/01/23 15:59:55 ago Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ HOMEPAGE="https://fedoraproject.org/wiki/F12_Artwork"
 SRC_URI="mirror://fedora-dev/${SRC_PATH}/${PN}-$(replace_version_separator 3 -).fc${FEDORA}.src.rpm"
 
 LICENSE="CCPL-Attribution-ShareAlike-2.0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND="!x11-themes/fedora-backgrounds:12"
