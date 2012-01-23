@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.1.4-r1.ebuild,v 1.2 2012/01/18 22:20:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.1.4-r1.ebuild,v 1.3 2012/01/23 22:27:07 ssuominen Exp $
 
 EAPI=4
 inherit flag-o-matic multilib toolchain-funcs
@@ -28,9 +28,6 @@ src_prepare() {
 }
 
 src_compile() {
-	#append-lfs-flags #356155 #makefile.unix has DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE in 4.1.4
-	#todo: LIBS="-L. -lunrar" fails with undefineds
-
 	local f=makefile.unix
 
 	emake -f ${f} CXX="$(tc-getCXX)" CXXFLAGS="-fPIC ${CXXFLAGS}" lib
