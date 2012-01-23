@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/grass
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.109 2011/11/15 04:05:27 nerdboy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.110 2012/01/23 11:40:33 ssuominen Exp $
+
+*grass-6.4.1-r1 (23 Jan 2012)
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +grass-6.4.1-r1.ebuild:
+  Rename sql.1 manpage to sql.1grass (file collision with sys-process/parallel)
+  wrt #381599 by Matt Summers
 
   15 Nov 2011; Steve Arnold <nerdboy@gentoo.org> grass-6.4.1.ebuild,
   +files/grass-6.4.1-nopycompile.patch, +files/grass-6.4.1-timer_flags.patch:
