@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.536.ebuild,v 1.3 2012/01/21 21:53:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.536.ebuild,v 1.4 2012/01/23 00:02:23 ssuominen Exp $
 
 EAPI=4
 
@@ -39,9 +39,8 @@ RDEPEND="dev-perl/Alien-SDL
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	# Only enable this if you are confirming a bug in this module. The testsrequire
-	# access to your /dev/{snd,sound} devices.
-	#SRC_TEST="do"
+	# NOTE: If this fails because of sandbox, see games-sports/torcs for addpredict
+	SRC_TEST="do"
 	mydoc="CHANGELOG README TODO"
 	perl-module_pkg_setup
 }
