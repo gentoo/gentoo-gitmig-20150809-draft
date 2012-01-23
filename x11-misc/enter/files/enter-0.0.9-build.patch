@@ -1,0 +1,27 @@
+http://bugs.gentoo.org/397739
+
+--- configure.ac
++++ configure.ac
+@@ -32,11 +32,8 @@
+ 
+ AC_CHECK_FT2
+ 
+-AC_PATH_PROGS([XFT_CONFIG], [xft-config], [none])
+-if test "x$XFT_CONFIG" = "xnone"; then
+-	AC_MSG_ERROR([You need to have libXft.])
+-fi
+-XFT_LIBS=`$XFT_CONFIG --libs`
++PKG_CHECK_MODULES([XFT], [xft])
++
+ AC_CHECK_LIB([Xft], [XftFontOpenName],,
+ 			AC_MSG_ERROR([You need to have libXft.]))
+ 
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -20,5 +20,5 @@
+ 	gui.c gui.h
+ 
+ enter_CFLAGS = @DEBUG_CFLAGS@ @FT2_CFLAGS@ @IMLIB_CFLAGS@ @X_CFLAGS@ -DCONFDIR=\"$(sysconfdir)\" -DTHEMEDIR=\"$(datadir)/@PACKAGE@/themes\"
+-enter_LDFLAGS = @X_LIBS@ @IMLIB_LIBS@ @FT2_LIBS@ -lcrypt
++enter_LDADD = @X_LIBS@ @IMLIB_LIBS@ @FT2_LIBS@ -lcrypt
+ 

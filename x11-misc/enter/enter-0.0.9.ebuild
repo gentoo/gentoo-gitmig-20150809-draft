@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/enter/enter-0.0.9.ebuild,v 1.1 2010/06/20 21:22:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/enter/enter-0.0.9.ebuild,v 1.2 2012/01/23 18:46:17 ssuominen Exp $
 
-EAPI=2
-inherit autotools
+EAPI=4
+inherit autotools eutils
 
 DESCRIPTION="A lightweight graphical login manager for X"
 HOMEPAGE="http://enter.sourceforge.net/"
@@ -14,24 +14,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/libXau
-	x11-libs/libXext
-	x11-libs/libXft
+RDEPEND=">=media-libs/freetype-2
+	media-libs/imlib2
 	x11-libs/libX11
-	media-libs/imlib2"
+	x11-libs/libXau
+	x11-libs/libXext
+	x11-libs/libXft"
 DEPEND="${RDEPEND}
-	>=media-libs/freetype-2
+	dev-util/pkgconfig
 	x11-proto/xproto"
 
+DOCS="AUTHORS ChangeLog README TODO"
+
 src_prepare() {
-	sed -i \
-		-e 's:enter_LDFLAGS:enter_LDADD:' \
-		src/Makefile.am || die
-
+	epatch "${FILESDIR}"/${P}-build.patch
 	eautoreconf
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README TODO
 }
