@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/agda
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.10 2010/11/20 13:45:12 kolmodin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.11 2012/01/23 13:52:38 gienah Exp $
+
+*agda-2.3.0 (23 Jan 2012)
+
+  23 Jan 2012; Mark Wright <gienah@gentoo.org> +agda-2.3.0.ebuild,
+  +files/agda-2.3.0-emacs.patch, metadata.xml:
+  Bump agda to 2.3.0 bug #349460
 
 *agda-2.2.6-r1 (20 Nov 2010)
 
