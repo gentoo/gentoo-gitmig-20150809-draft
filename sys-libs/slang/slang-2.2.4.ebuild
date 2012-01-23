@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4.ebuild,v 1.2 2012/01/23 15:15:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4.ebuild,v 1.3 2012/01/23 15:44:46 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://slang/v${PV%.*}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="cjk pcre png readline zlib"
+IUSE="cjk pcre png readline static-libs zlib"
 
 # ncurses for ncurses5-config to get terminfo directory
 RDEPEND="sys-libs/ncurses
@@ -45,7 +45,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake elf static
+	emake elf $(use static-libs && echo static)
 
 	pushd slsh >/dev/null
 	emake slsh
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install-all
+	emake DESTDIR="${D}" install-elf $(use static-libs && echo install-static)
 
 	rm -rf "${D}"/usr/share/doc/{slang,slsh}
 
