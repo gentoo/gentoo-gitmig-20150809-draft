@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/moreutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.33 2011/09/05 07:04:40 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.34 2012/01/23 11:23:54 ssuominen Exp $
+
+*moreutils-0.45-r1 (23 Jan 2012)
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +moreutils-0.45-r1.ebuild:
+  Rename parallel command to moreutils_parallel because the one from
+  sys-process/parallel is more advanced wrt #349225 by Helmut Jarausch
 
   05 Sep 2011; Tim Harder <radhermit@gentoo.org>
   -files/moreutils-0.30-dtd-path.patch, -moreutils-0.39.ebuild,
