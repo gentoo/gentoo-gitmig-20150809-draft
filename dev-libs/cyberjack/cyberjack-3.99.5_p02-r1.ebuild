@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p02-r1.ebuild,v 1.1 2011/10/30 14:12:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p02-r1.ebuild,v 1.2 2012/01/23 09:44:17 ssuominen Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://support.reiner-sct.de/downloads/LINUX/V${PV/_p/_SP}/${MY_P}.tar.
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="fox kernel_linux xml"
 
 COMMON_DEPEND="sys-apps/pcsc-lite
@@ -49,8 +49,8 @@ src_configure() {
 src_install() {
 	default
 
-	rm -f "${D}"usr/lib*/cyberjack/pcscd_init.diff
-	find "${D}"usr -name '*.la' -exec rm -f {} +
+	rm -f "${ED}"usr/lib*/cyberjack/pcscd_init.diff
+	find "${ED}"usr -name '*.la' -exec rm -f {} +
 
 	# http://bugs.gentoo.org/388329
 	if use kernel_linux; then
@@ -60,7 +60,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	local conf="${ROOT}etc/${PN}/${PN}.conf"
+	local conf="${EROOT}/etc/${PN}/${PN}.conf"
 	elog
 	elog "To configure logging, key beep behaviour etc. you need to"
 	elog "copy ${conf}.default"
