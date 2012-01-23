@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall6
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.47 2012/01/03 08:50:02 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.48 2012/01/23 13:40:45 klausman Exp $
+
+  23 Jan 2012; Tobias Klausmann <klausman@gentoo.org>
+  shorewall6-4.4.23.2.ebuild:
+  Stable on alpha, bug #388195
 
 *shorewall6-4.4.27 (03 Jan 2012)
 
