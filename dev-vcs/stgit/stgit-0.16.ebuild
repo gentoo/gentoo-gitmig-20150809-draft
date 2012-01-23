@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.16.ebuild,v 1.1 2012/01/23 13:58:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.16.ebuild,v 1.2 2012/01/23 19:18:35 darkside Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ inherit distutils bash-completion-r1
 DESCRIPTION="Manage a stack of patches using GIT as a backend"
 HOMEPAGE="http://www.procode.org/stgit/"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz
-	mirror://gentoo/${PN}-0.15-missing-patches.tar.gz"
+	mirror://gentoo/${P}-missing-patches.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
