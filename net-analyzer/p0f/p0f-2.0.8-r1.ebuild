@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8-r1.ebuild,v 1.8 2010/01/01 17:43:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8-r1.ebuild,v 1.9 2012/01/23 02:44:04 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="net-libs/libpcap"
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
-	unpack ${A} && cd ${S}
+	unpack ${A} && cd "${S}"
 	sed -i 's;#include <net/bpf.h>;;' p0f.c || die "sed p0f.c failed"
 	sed -i -e 's|^\(all: $(FILE)\).*$|\1|' \
 		-e "s|^\(CFLAGS.*=\).*$|\1${CFLAGS}|" mk/* || die "sed makefiles failed"
