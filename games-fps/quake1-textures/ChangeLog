@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake1-textures
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.9 2010/07/01 13:31:11 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.10 2012/01/23 22:33:19 ssuominen Exp $
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  quake1-textures-20050820.ebuild:
+  Remove blockers for app-arch/unrar-gpl because the binary was renamed from
+  "unrar" to "unrar-gpl".
 
   01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   quake1-textures-20050820.ebuild:

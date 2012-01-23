@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20050820.ebuild,v 1.7 2010/07/01 13:31:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20050820.ebuild,v 1.8 2012/01/23 22:33:19 ssuominen Exp $
 
 inherit eutils games
 
@@ -19,7 +19,6 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="app-arch/unzip
-	!app-arch/unrar-gpl
 	|| (
 		app-arch/unrar
 		app-arch/rar )"
