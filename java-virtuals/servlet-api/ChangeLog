@@ -1,6 +1,15 @@
 # ChangeLog for java-virtuals/servlet-api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.33 2012/01/01 19:00:14 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.34 2012/01/23 12:29:37 sera Exp $
+
+*servlet-api-3.0-r1 (23 Jan 2012)
+*servlet-api-2.5-r1 (23 Jan 2012)
+
+  23 Jan 2012; Ralph Sennhauser <sera@gentoo.org> +servlet-api-2.5-r1.ebuild,
+  -servlet-api-3.0.ebuild, +servlet-api-3.0-r1.ebuild:
+  Fix JAVA_VIRTUAL_PROVIDES to include the JAVA_PKG_NAMEs of providing
+  packages.
+  Remove no longer need one.
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> servlet-api-2.2.ebuild,
   servlet-api-2.3.ebuild:

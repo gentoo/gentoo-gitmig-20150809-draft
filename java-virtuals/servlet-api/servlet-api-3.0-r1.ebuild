@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/servlet-api-3.0.ebuild,v 1.2 2010/12/21 18:41:54 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/servlet-api-3.0-r1.ebuild,v 1.1 2012/01/23 12:29:37 sera Exp $
 
-EAPI=1
+EAPI=4
 
 inherit java-virtuals-2
 
@@ -19,6 +19,5 @@ RDEPEND="|| (
 		dev-java/tomcat-servlet-api:${SLOT}
 		dev-java/resin-servlet-api:${SLOT}
 	)"
-DEPEND=""
 
-JAVA_VIRTUAL_PROVIDES="resin-servlet-api-${SLOT}"
+JAVA_VIRTUAL_PROVIDES="tomcat-servlet-api-${SLOT} resin-servlet-api-${SLOT}"
