@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/xhtml
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.21 2011/12/21 08:46:50 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.22 2012/01/23 12:14:57 gienah Exp $
+
+*xhtml-3000.2.0.4 (23 Jan 2012)
+
+  23 Jan 2012; Mark Wright <gienah@gentoo.org> +xhtml-3000.2.0.4.ebuild:
+  Bump xhtml to 3000.2.0.4.
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xhtml-3000.2.0.1.ebuild:
   x86 stable wrt bug #393933
