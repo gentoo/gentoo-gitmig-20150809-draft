@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.11 2012/01/23 21:15:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.12 2012/01/23 21:34:33 slyfox Exp $
 
 EAPI=4
 
@@ -63,18 +63,22 @@ RDEPEND="
 	)
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
-	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
+	qemu-ifup? (
+		sys-apps/iproute2
+		net-misc/bridge-utils
+	)
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
-	spice? ( >=app-emulation/spice-0.9.0
-			>=app-emulation/spice-protocol-0.8.1 )
+	spice? (
+		>=app-emulation/spice-0.9.0
+		>=app-emulation/spice-protocol-0.8.1
+	)
 	ssl? ( net-libs/gnutls )
 	usbredir? ( sys-apps/usbredir )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
 	xen? ( app-emulation/xen-tools )
-
 "
 
 DEPEND="${RDEPEND}
