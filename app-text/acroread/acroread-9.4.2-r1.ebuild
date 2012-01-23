@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.2-r1.ebuild,v 1.1 2012/01/22 22:16:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.2-r1.ebuild,v 1.2 2012/01/23 03:11:35 mr_bones_ Exp $
 
 EAPI=4
 
@@ -185,7 +185,7 @@ src_install() {
 	cp -dpR Adobe "${D}"opt/ || die
 
 	# remove some bundled libs
-	for mylib in ${REMOVELIBS} ; do 
+	for mylib in ${REMOVELIBS} ; do
 		einfo Removing bundled ${mylib}
 		rm -v "${D}"/opt/Adobe/Reader9/Reader/intellinux/lib/${mylib}*
 	done
