@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cgkit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.31 2011/05/27 12:32:04 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.32 2012/01/24 20:45:42 hwoarang Exp $
+
+*cgkit-2.0.0_alpha9-r1 (24 Jan 2012)
+
+  24 Jan 2012; Markos Chandras <hwoarang@gentoo.org>
+  +cgkit-2.0.0_alpha9-r1.ebuild, cgkit-2.0.0_alpha9.ebuild:
+  Add new revision to be compatible with boost-1.48. Thanks to Arfrever
 
   27 May 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   cgkit-2.0.0_alpha9.ebuild:
