@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.1.6-r1.ebuild,v 1.1 2012/01/23 21:02:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.0.7-r2.ebuild,v 1.1 2012/01/24 15:05:15 wired Exp $
 
 EAPI="2"
 
@@ -51,7 +51,6 @@ pkg_setup(){
 
 src_prepare(){
 	epatch "${DISTDIR}"/"${PF_FILE}"
-	epatch "${FILESDIR}"/2100_proc-mem-handling-fix.patch
 }
 
 K_EXTRAEINFO="For more info on pf-sources and details on how to report problems, see: \

@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/pf-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.48 2012/01/23 21:46:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.49 2012/01/24 15:05:15 wired Exp $
+
+*pf-sources-3.2.1-r2 (24 Jan 2012)
+*pf-sources-3.1.6-r2 (24 Jan 2012)
+*pf-sources-3.0.7-r2 (24 Jan 2012)
+
+  24 Jan 2012; Alex Alexander <wired@gentoo.org>
+  files/2100_proc-mem-handling-fix.patch, -pf-sources-3.0.7-r1.ebuild,
+  +pf-sources-3.0.7-r2.ebuild, -pf-sources-3.1.6-r1.ebuild,
+  +pf-sources-3.1.6-r2.ebuild, -pf-sources-3.2.1-r1.ebuild,
+  +pf-sources-3.2.1-r2.ebuild:
+  replaced bad proc-mem-handling-fix with correct one, removed it from 3.0.7
+  since it wouldn't apply cleanly. -r1 was still vulnerable.
 
 *pf-sources-3.0.7-r1 (23 Jan 2012)
 
