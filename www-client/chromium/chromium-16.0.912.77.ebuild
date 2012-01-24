@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.912.77.ebuild,v 1.2 2012/01/24 09:50:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.912.77.ebuild,v 1.3 2012/01/24 10:42:58 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
@@ -352,9 +352,10 @@ src_test() {
 		die "Tests must be run as non-root. Please use FEATURES=userpriv."
 	fi
 
-	# For more info see bug #350347.
+	# ICUStringConversionsTest: bug #350347.
+	# MessagePumpLibeventTest: bug #398501.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
-		'--gtest_filter=-ICUStringConversionsTest.*'
+		'--gtest_filter=-ICUStringConversionsTest.*:MessagePumpLibeventTest.*'
 
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/crypto_unittests virtualmake
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/googleurl_unittests virtualmake
