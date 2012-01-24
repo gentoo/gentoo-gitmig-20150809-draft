@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-moto/libopensync-plugin-moto-0.22.ebuild,v 1.2 2011/03/30 18:26:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-moto/libopensync-plugin-moto-0.22.ebuild,v 1.3 2012/01/24 02:59:29 xarthisius Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ IUSE="bluetooth"
 
 RDEPEND="~app-pda/libopensync-${PV}
 	~app-pda/libopensync-plugin-python-${PV}
-	dev-python/python-dateutil
+	dev-python/python-dateutil:python-2
 	bluetooth? ( dev-python/pybluez )"
 DEPEND=""
 
