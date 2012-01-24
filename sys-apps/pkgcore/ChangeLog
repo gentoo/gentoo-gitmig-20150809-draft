@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.147 2012/01/24 11:53:49 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.148 2012/01/24 15:16:20 ferringb Exp $
+
+*pkgcore-0.7.7.7-r1 (24 Jan 2012)
+
+  24 Jan 2012; Brian Harring <ferringb@gentoo.org> +pkgcore-0.7.7.7-r1.ebuild,
+  +files/pkgcore-0.7.7.7-NameError-fix.patch:
+  Fix a NameError reported in 0.7.7.7.
 
 *pkgcore-0.7.7.7 (24 Jan 2012)
 
