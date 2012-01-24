@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1-r2.ebuild,v 1.1 2012/01/24 22:27:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1-r2.ebuild,v 1.2 2012/01/24 22:52:21 dilfridge Exp $
 
 inherit eutils autotools
 
@@ -23,6 +23,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-fbsd.patch
 	epatch "${FILESDIR}"/${P}-fixoverflow.patch
+	epatch "${FILESDIR}"/${P}-cflags.patch
 	eautoreconf
 }
 

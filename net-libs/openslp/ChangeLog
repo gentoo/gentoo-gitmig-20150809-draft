@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/openslp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.48 2012/01/24 22:27:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.49 2012/01/24 22:52:21 dilfridge Exp $
+
+  24 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  openslp-1.2.1-r2.ebuild, +files/openslp-1.2.1-cflags.patch:
+  Respect CFLAGS, bug 364387
 
 *openslp-1.2.1-r2 (24 Jan 2012)
 
