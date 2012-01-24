@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.929 2012/01/24 14:12:56 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.930 2012/01/24 14:26:10 mpagano Exp $
+
+*gentoo-sources-3.1.10-r1 (24 Jan 2012)
+
+  24 Jan 2012; Michael Pagano <mpagano@gentoo.org>
+  -gentoo-sources-3.1.10.ebuild, +gentoo-sources-3.1.10-r1.ebuild:
+  Replace bad copy of proc mem handling patch. Remove kernel with incorrect
+  priviledge escalation fix.
 
   24 Jan 2012; Michael Pagano <mpagano@gentoo.org>
   -gentoo-sources-3.2.1-r1.ebuild:
