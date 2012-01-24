@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.64 2012/01/22 12:03:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.65 2012/01/24 07:08:37 keri Exp $
+
+  24 Jan 2012; <keri@gentoo.org> yap-6.2.2.ebuild, yap-6.3.0.ebuild:
+  Add ncurses to RDEPEND. Reported in bug #399675.
 
   22 Jan 2012; Agostino Sarubbo <ago@gentoo.org> yap-6.2.2.ebuild:
   Stable for amd64, wrt bug #399675
