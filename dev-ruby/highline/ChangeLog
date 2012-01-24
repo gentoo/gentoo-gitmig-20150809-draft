@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/highline
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.55 2011/12/18 13:23:14 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.56 2012/01/24 15:44:07 flameeyes Exp $
+
+*highline-1.6.11 (24 Jan 2012)
+
+  24 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> +highline-1.6.11.ebuild:
+  Version bump.
 
 *highline-1.6.8 (18 Dec 2011)
 
