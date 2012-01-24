@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/etm-696.ebuild,v 1.1 2011/01/19 03:45:52 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/etm-696.ebuild,v 1.2 2012/01/24 03:16:08 xarthisius Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.5"
@@ -12,11 +12,11 @@ SRC_URI="mirror://sourceforge/etmeventandtask/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="ical"
 
 DEPEND="dev-python/wxpython:2.8
-	dev-python/python-dateutil
+	dev-python/python-dateutil:python-2
 	ical? ( dev-python/icalendar )"
 RDEPEND="${DEPEND}"
 RESTRICT_PYTHON_ABIS="2.4 3.*"

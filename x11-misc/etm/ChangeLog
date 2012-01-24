@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/etm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/ChangeLog,v 1.3 2011/01/19 03:45:52 lack Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/ChangeLog,v 1.4 2012/01/24 03:16:08 xarthisius Exp $
+
+  24 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> etm-696.ebuild:
+  Depend on proper slot of dev-python/python-dateutil, drop old
 
 *etm-696 (19 Jan 2011)
 
