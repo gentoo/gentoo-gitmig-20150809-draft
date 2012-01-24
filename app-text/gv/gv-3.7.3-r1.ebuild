@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3-r1.ebuild,v 1.3 2012/01/24 19:17:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3-r1.ebuild,v 1.4 2012/01/24 19:19:58 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs
@@ -42,7 +42,7 @@ src_configure() {
 
 	econf \
 		--enable-scrollbar-code \
-		--enable-international
+		$(use_enable unicode international)
 }
 
 src_install() {
