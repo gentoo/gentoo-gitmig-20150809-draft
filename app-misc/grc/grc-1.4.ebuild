@@ -1,14 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.4.ebuild,v 1.1 2011/08/24 03:22:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.4.ebuild,v 1.2 2012/01/24 09:53:11 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 PYTHON_DEPEND="2"
 
 inherit eutils python
 
-DESCRIPTION="Generic Colouriser is yet another colouriser for beautifying your logfiles or output of commands"
+DESCRIPTION="Generic Colouriser beautifies your logfiles or output of commands"
 HOMEPAGE="http://kassiopeia.juls.savba.sk/~garabik/software/grc.html"
 SRC_URI="http://kassiopeia.juls.savba.sk/~garabik/software/${PN}/${P/-/_}.tar.gz"
 
@@ -24,10 +24,10 @@ src_prepare() {
 
 src_install() {
 	insinto /usr/share/grc
-	doins conf.* "${FILESDIR}"/conf.* || die
+	doins conf.* "${FILESDIR}"/conf.*
 	insinto /etc
-	doins grc.conf || die
-	dobin grc grcat || die
-	dodoc README INSTALL TODO CHANGES CREDITS || die
-	doman grc.1 grcat.1 || die
+	doins grc.conf
+	dobin grc grcat
+	dodoc README INSTALL TODO CHANGES CREDITS
+	doman grc.1 grcat.1
 }
