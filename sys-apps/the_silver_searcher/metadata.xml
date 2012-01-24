@@ -3,11 +3,7 @@
 <pkgmetadata>
   <herd>proxy-maintainers</herd>
   <maintainer>
-    <email>jdhore1@gmail.com</email>
+    <email>jdhore@gentoo.org</email>
     <name>Jeff Horelick</name>
-  </maintainer>
-  <maintainer>
-    <email>ssuominen@gentoo.org</email>
-    <name>Samuli Suominen</name>
   </maintainer>
 </pkgmetadata>
