@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/quickshare
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quickshare/ChangeLog,v 1.1 2011/09/17 23:25:01 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quickshare/ChangeLog,v 1.2 2012/01/24 23:41:36 jdhore Exp $
+
+  24 Jan 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
+  Take full maintenance of this package now that I am a developer.
 
 *quickshare-1.0 (17 Sep 2011)
 
