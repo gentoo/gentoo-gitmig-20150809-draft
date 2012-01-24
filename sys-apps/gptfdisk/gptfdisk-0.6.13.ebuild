@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.6.13.ebuild,v 1.2 2011/11/19 10:04:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.6.13.ebuild,v 1.3 2012/01/24 10:20:42 jlec Exp $
 
 EAPI="3"
 
@@ -18,8 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 ~arm x86"
 IUSE=""
 
-RDEPEND="
-"
+RDEPEND=""
+DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
