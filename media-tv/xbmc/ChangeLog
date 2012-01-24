@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.106 2012/01/24 02:45:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.107 2012/01/24 17:02:32 vapier Exp $
+
+  24 Jan 2012; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Fix typo pointed out by Stéphane Kattoor.
 
   24 Jan 2012; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
   +files/xbmc-9999-nomythtv.patch, metadata.xml:
