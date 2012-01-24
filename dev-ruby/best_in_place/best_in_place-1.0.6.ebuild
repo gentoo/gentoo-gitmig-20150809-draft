@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-1.0.4-r1.ebuild,v 1.1 2012/01/21 13:27:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-1.0.6.ebuild,v 1.1 2012/01/24 10:38:54 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18"
@@ -48,12 +48,12 @@ all_ruby_prepare() {
 		-e '/git ls-files/d' \
 		-e '/rspec-rails/s:,.*::' \
 		${RUBY_FAKEGEM_GEMSPEC} || die
-	rm test_app/Gemfile.lock
 
-	# improve timing-resilience on two tests that would otherwise fail
-	# https://github.com/bernat/best_in_place/issues/87
-	# fix an issue with the :display_as option, that has been sent upstream
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	# let test_app work with Rails 3.1 (since we lack 3.2 for now).
+	sed -i \
+		-e '/gem .rails/s:3.2:~> 3.1:' \
+		-e '/gem .\(coffee\|sass\)/s:3\.2\..:3.1.0:' \
+		test_app/Gemfile || die
 }
 
 each_ruby_test() {
