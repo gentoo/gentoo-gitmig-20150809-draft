@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/povray
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.124 2011/11/17 17:02:26 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.125 2012/01/24 04:32:57 lavajoe Exp $
+
+  24 Jan 2012; Joe Peterson <lavajoe@gentoo.org> povray-3.7.0_rc3-r1.ebuild:
+  Add --with-boost-thread=boost_thread-mt to config as suggested at
+  http://www.povray.org/beta/source/ (bug #394639)
 
   17 Nov 2011; Justin Lecher <jlec@gentoo.org> povray-3.7.0_rc3.ebuild,
   povray-3.7.0_rc3-r1.ebuild, metadata.xml:
