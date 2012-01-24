@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ccolamd-2.7.4.ebuild,v 1.1 2012/01/20 06:03:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ccolamd-2.7.4.ebuild,v 1.2 2012/01/24 19:20:43 jlec Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=yes
+
 inherit autotools-utils
 
 MY_PN=CCOLAMD

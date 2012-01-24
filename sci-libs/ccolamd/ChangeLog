@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.24 2012/01/20 06:03:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.25 2012/01/24 19:20:43 jlec Exp $
+
+  24 Jan 2012; Justin Lecher <jlec@gentoo.org> ccolamd-2.7.3.ebuild,
+  ccolamd-2.7.4.ebuild:
+  Add missing AUTOTOOLS_AUTORECONF, #400631
 
 *ccolamd-2.7.4 (20 Jan 2012)
 
