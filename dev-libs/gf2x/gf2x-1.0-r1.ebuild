@@ -1,16 +1,16 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/gf2x-1.0-r1.ebuild,v 1.1 2011/07/08 11:25:31 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/gf2x-1.0-r1.ebuild,v 1.2 2012/01/24 09:30:01 jlec Exp $
 
-EAPI=2
+EAPI=4
 
 inherit autotools-utils
 
-PID=27999 # hack
+PACKAGEID=27999 # hack
 
 DESCRIPTION="C/C++ routines for fast arithmetic in GF(2)[x]"
 HOMEPAGE="http://gf2x.gforge.inria.fr/"
-SRC_URI="http://gforge.inria.fr/frs/download.php/${PID}/${P}.tar.gz"
+SRC_URI="http://gforge.inria.fr/frs/download.php/${PACKAGEID}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,9 +39,4 @@ src_configure() {
 	fi
 
 	autotools-utils_src_configure
-}
-
-src_install() {
-	dodoc ChangeLog README AUTHORS BUGS
-	autotools-utils_src_install
 }
