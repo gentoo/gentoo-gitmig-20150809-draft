@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3-r1.ebuild,v 1.2 2012/01/23 16:38:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3-r1.ebuild,v 1.3 2012/01/24 19:17:37 ssuominen Exp $
 
 EAPI=4
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Viewer for PostScript and PDF documents using Ghostscript"
 HOMEPAGE="http://www.gnu.org/software/gv/"
@@ -12,19 +12,20 @@ SRC_URI="mirror://gnu/gv/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="xinerama"
+IUSE="unicode xinerama"
 
 RDEPEND="app-text/ghostscript-gpl
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
-	>=x11-libs/libXaw3d-1.6-r1
+	>=x11-libs/libXaw3d-1.6-r1[unicode?]
 	x11-libs/libXext
 	x11-libs/libXmu
 	x11-libs/libXpm
 	x11-libs/libXt
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	x11-proto/xproto"
 
 DOCS="AUTHORS ChangeLog NEWS README"
@@ -34,8 +35,8 @@ src_prepare() {
 }
 
 src_configure() {
-	# Expose the correct codepath from /usr/include/X11/Xaw3d/SimpleP.h
-	append-cppflags -DXAW_INTERNATIONALIZATION #372395
+	# Grab -DXAW_INTERNATIONALIZATION if needed
+	append-cppflags "$($(tc-getPKG_CONFIG) --cflags xaw3d)"
 
 	export ac_cv_lib_Xinerama_main=$(usex xinerama)
 
