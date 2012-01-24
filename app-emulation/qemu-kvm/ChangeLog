@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.89 2012/01/23 22:10:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.90 2012/01/24 20:59:56 slyfox Exp $
+
+  24 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/qemu-kvm-1.0-per-target-i8259.patch, qemu-kvm-1.0.ebuild:
+  Unbreak KVM targets (breakage caused by qemu-kvm-1.0-fix-nonkvm-arches.patch).
+  Fixes bug #400597 reported by Marc Schiffbauer.
 
   23 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> +files/qemu-ifup,
   metadata.xml, qemu-kvm-9999.ebuild:
