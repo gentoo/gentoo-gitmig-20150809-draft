@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webmin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.193 2011/12/31 18:33:39 idl0r Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.194 2012/01/24 20:54:42 hwoarang Exp $
+
+*webmin-1.580 (24 Jan 2012)
+
+  24 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +webmin-1.580.ebuild,
+  files/init.d.webmin:
+  Version bump. Bug #400633. Thanks to PhobosK phobosk@fastmail.fm
 
 *webmin-1.570-r1 (31 Dec 2011)
 *webmin-1.560-r1 (31 Dec 2011)

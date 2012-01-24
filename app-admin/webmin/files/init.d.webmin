@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/files/init.d.webmin,v 1.9 2011/12/31 18:33:40 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/files/init.d.webmin,v 1.10 2012/01/24 20:54:42 hwoarang Exp $
 
 
 # We do not give a choice to user for configuring these 'cause it will mess up
@@ -55,7 +55,10 @@ reload() {
 	checkconfig || return 1
 
 	ebegin "Reloading Webmin's configuration files"
-	start-stop-daemon --signal USR1 --pidfile "$WEBMIN_PID"
+	start-stop-daemon --oknodo --stop  --interpreted \
+		--signal USR1 \
+		--exec "$WEBMIN_EXE" \
+		--pidfile "$WEBMIN_PID"
 	eend $?
 }
 
