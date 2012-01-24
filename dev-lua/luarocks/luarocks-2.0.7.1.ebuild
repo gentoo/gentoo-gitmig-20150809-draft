@@ -1,12 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luarocks/luarocks-1.0.ebuild,v 1.1 2010/11/05 22:13:24 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luarocks/luarocks-2.0.7.1.ebuild,v 1.1 2012/01/24 20:56:04 mabi Exp $
+
+EAPI=4
 
 inherit eutils
 
 DESCRIPTION="A deployment and management system for Lua modules"
 HOMEPAGE="http://www.luarocks.org"
-SRC_URI="http://luaforge.net/frs/download.php/3727/${P}.tar.gz"
+SRC_URI="http://luarocks.org/releases/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -19,7 +21,7 @@ DEPEND="dev-lang/lua
 RDEPEND="${DEPEND}
 		app-arch/unzip"
 
-src_compile() {
+src_configure() {
 	USE_MD5="md5sum"
 	USE_FETCH="wget"
 	use openssl && USE_MD5="openssl"
@@ -29,18 +31,20 @@ src_compile() {
 	# handle
 	./configure \
 			--prefix=/usr \
-			--scripts-dir=/usr/bin \
-			--with-lua=/usr \
 			--with-lua-lib=/usr/$(get_libdir) \
-			--rocks-tree=/usr/lib/lua/luarocks \
+			--rocks-tree=/usr/$(get_libdir)/lua/luarocks \
 			--with-downloader=$USE_FETCH \
 			--with-md5-checker=$USE_MD5 \
 			--force-config || die "configure failed"
+}
+
+src_compile() {
 	emake DESTDIR="${D}" || die "make failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "einstall"
+	# -j1 b/c otherwise it fails with to find src/bin/luarocks
+	emake DESTDIR="${D}" -j1 install || die "einstall"
 }
 
 pkg_preinst() {
