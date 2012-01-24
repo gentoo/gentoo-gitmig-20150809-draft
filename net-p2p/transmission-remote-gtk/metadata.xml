@@ -2,13 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>ssuominen@gentoo.org</email>
-		<name>Samuli Suominens</name>
-		<description>Proxy maintainer. CC him on bugs.</description>
-	</maintainer>
-	<maintainer>
-		<email>jdhore1@gmail.com</email>
-		<name>Jeff D. Horelick</name>
-		<description>Maintainer. Assign bugs to him.</description>
+		<email>jdhore@gentoo.org</email>
+		<name>Jeff Horelick</name>
 	</maintainer>
 </pkgmetadata>
