@@ -1,11 +1,6 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.162 2012/01/23 23:48:51 ssuominen Exp $
-
-*unrar-4.1.4-r2 (23 Jan 2012)
-
-  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +unrar-4.1.4-r2.ebuild:
-  Link "unrar" executable against the shared libunrar wrt #177402
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.163 2012/01/24 00:15:01 ssuominen Exp $
 
   23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -unrar-4.1.4.ebuild:
   old
