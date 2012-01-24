@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/MooseX-Role-Parameterized
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Role-Parameterized/ChangeLog,v 1.5 2011/09/24 13:17:18 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Role-Parameterized/ChangeLog,v 1.6 2012/01/24 17:12:34 tove Exp $
+
+*MooseX-Role-Parameterized-1.0.0 (24 Jan 2012)
+
+  24 Jan 2012; Torsten Veller <tove@gentoo.org>
+  +MooseX-Role-Parameterized-1.0.0.ebuild:
+  Version bump
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   MooseX-Role-Parameterized-0.270.0.ebuild:
