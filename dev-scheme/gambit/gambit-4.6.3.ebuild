@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.5.3.ebuild,v 1.1 2009/11/02 15:09:06 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.6.3.ebuild,v 1.1 2012/01/24 14:08:41 hkbst Exp $
 
-inherit elisp-common
+EAPI="4"
+
+inherit eutils elisp-common
 
 MY_PN=gambc
 MY_PV=${PV//./_}
@@ -14,13 +16,9 @@ SRC_URI="http://www.iro.umontreal.ca/~gambit/download/gambit/v${PV%.*}/source/${
 
 LICENSE="|| ( Apache-2.0 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
-#gsc is now Gambit Scheme Compiler and not ghostscript.
-#only app-text/ghostscript-gpl-8.64 has freed gsc yet.
-DEPEND="emacs? ( virtual/emacs )
-		!app-text/ghostscript-gnu
-		!<app-text/ghostscript-gpl-8.64"
+DEPEND="emacs? ( virtual/emacs )"
 RDEPEND=""
 
 SITEFILE="50gambit-gentoo.el"
@@ -29,9 +27,11 @@ S=${WORKDIR}/${MY_P} #-devel
 
 IUSE="emacs static"
 
-src_compile() {
-	econf $(use_enable !static shared) --docdir=/usr/share/doc/${PF} --enable-single-host --disable-absolute-shared-libs
+src_configure() {
+	econf $(use_enable !static shared) --docdir="${EPREFIX}"/usr/share/doc/${PF} --enable-single-host --disable-absolute-shared-libs
+}
 
+src_compile() {
 	emake bootstrap || die
 
 	if use emacs; then
