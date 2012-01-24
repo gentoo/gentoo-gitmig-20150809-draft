@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13418 2012/01/23 22:15:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13419 2012/01/24 10:50:58 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -235,7 +235,6 @@ www-apps/tikiwiki
 # Opera Next and Opera snapshots are unsupported and eternally unstable.
 # <http://my.opera.com/desktopteam/blog>
 www-client/opera-next
-=www-client/opera-11.61*
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (19 Dec 2011)
 # Mask prerelease x11 packages

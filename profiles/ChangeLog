@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6129 2012/01/23 22:15:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6130 2012/01/24 10:50:58 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Unmask www-client/opera-11.61.
 
   23 Jan 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Initial commit of boost-1.48 reverse python dependencies. See:
