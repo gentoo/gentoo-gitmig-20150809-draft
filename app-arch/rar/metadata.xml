@@ -3,14 +3,8 @@
 <pkgmetadata>
 <herd>proxy-maintainers</herd>
 <maintainer>
-	<email>jdhore1@gmail.com</email>
-	<name>JD Horelick</name>
-	<description>Maintainer. Add bugs to him</description>
-</maintainer>
-<maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-<description>Proxy maintainer. CC him on bugs</description>
+	<email>jdhore@gentoo.org</email>
+	<name>Jeff Horelick</name>
 </maintainer>
 <use>
  <flag name='all_sfx'>
