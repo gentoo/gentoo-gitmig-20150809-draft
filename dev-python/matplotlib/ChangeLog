@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.113 2012/01/17 15:31:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.114 2012/01/24 02:56:26 xarthisius Exp $
+
+  24 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  matplotlib-1.0.1-r1.ebuild, matplotlib-1.1.0.ebuild:
+  Depend on proper slot of dev-python/python-dateutil
 
   17 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> matplotlib-1.1.0.ebuild:
   Add pyside[X] dep
