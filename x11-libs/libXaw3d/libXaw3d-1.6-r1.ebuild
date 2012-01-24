@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6-r1.ebuild,v 1.2 2012/01/24 19:07:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6-r1.ebuild,v 1.3 2012/01/24 19:12:50 ssuominen Exp $
 
 EAPI=4
 
@@ -29,4 +29,11 @@ pkg_setup() {
 		)
 
 	xorg-2_pkg_setup
+}
+
+src_prepare() {
+	use unicode && \
+		sed -i -e 's/Cflags:/& -DXAW_INTERNATIONALIZATION/' xaw3d.pc.in
+
+	xorg-2_src_prepare
 }
