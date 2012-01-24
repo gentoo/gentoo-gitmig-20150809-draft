@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/media-player-info
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.11 2011/11/19 22:34:03 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.12 2012/01/24 13:33:30 ssuominen Exp $
+
+*media-player-info-16 (24 Jan 2012)
+
+  24 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +media-player-info-16.ebuild:
+  Version bump.
 
 *media-player-info-15 (19 Nov 2011)
 
