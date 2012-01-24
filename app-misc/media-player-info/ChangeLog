@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/media-player-info
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.13 2012/01/24 13:34:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.14 2012/01/24 13:36:52 ssuominen Exp $
+
+  24 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  media-player-info-16.ebuild:
+  Revert part of commit from 11 May 2011 which added ~x86-fbsd keywording to
+  sys-fs/udev specific package.
 
   24 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -media-player-info-14.ebuild, -media-player-info-15.ebuild:
