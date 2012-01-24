@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.4.0.ebuild,v 1.3 2012/01/15 14:01:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.4.0.ebuild,v 1.4 2012/01/24 03:07:53 xarthisius Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="dev-python/dbus-python
 	dev-python/pycairo
 	dev-python/pygobject:2
 	dev-python/pygtk:2
-	dev-python/python-dateutil
+	dev-python/python-dateutil:python-2
 	dev-python/vobject
 	>=gnome-base/libgtop-2
 	>=gnome-extra/avant-window-navigator-${PV}[gconf?]
