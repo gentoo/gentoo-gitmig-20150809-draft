@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.7-r1.ebuild,v 1.1 2012/01/23 22:25:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.7-r1.ebuild,v 1.2 2012/01/24 20:42:14 hwoarang Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython *-pypy-*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
