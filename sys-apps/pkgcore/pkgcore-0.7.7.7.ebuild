@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.7.5-r1.ebuild,v 1.1 2012/01/03 14:02:38 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.7.7.ebuild,v 1.1 2012/01/24 11:53:49 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -28,10 +28,6 @@ pkg_setup() {
 	# disable snakeoil 2to3 caching...
 	unset PY2TO3_CACHEDIR
 	python_pkg_setup
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/"${PN}-${PV}-NameError.patch
 }
 
 src_compile() {

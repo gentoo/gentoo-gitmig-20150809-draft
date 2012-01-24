@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.146 2012/01/18 04:16:19 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.147 2012/01/24 11:53:49 ferringb Exp $
+
+*pkgcore-0.7.7.7 (24 Jan 2012)
+
+  24 Jan 2012; Brian Harring <ferringb@gentoo.org> -pkgcore-0.7.7.5.ebuild,
+  -pkgcore-0.7.7.5-r1.ebuild, -files/pkgcore-0.7.7.5-NameError.patch,
+  +pkgcore-0.7.7.7.ebuild:
+  Add support for weak blockers, fix eselect compatibility. Cleanse older
+  versions.
 
 *pkgcore-0.7.7.6 (16 Jan 2012)
 
