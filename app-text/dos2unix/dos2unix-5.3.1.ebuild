@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.3.1.ebuild,v 1.1 2011/08/09 22:12:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.3.1.ebuild,v 1.2 2012/01/24 09:50:28 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -44,12 +44,10 @@ lintl() {
 
 src_compile() {
 	emake prefix="${EPREFIX}/usr" \
-		$(use nls && echo "LDFLAGS_EXTRA=$(lintl)" || echo "ENABLE_NLS=") \
-		|| die
+		$(use nls && echo "LDFLAGS_EXTRA=$(lintl)" || echo "ENABLE_NLS=")
 }
 
 src_install() {
 	emake DESTDIR="${D}" prefix="${EPREFIX}/usr" \
-		$(use nls || echo "ENABLE_NLS=") install \
-		|| die "emake install failed"
+		$(use nls || echo "ENABLE_NLS=") install
 }
