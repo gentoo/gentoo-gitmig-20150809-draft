@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6131 2012/01/24 18:22:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6132 2012/01/24 20:44:21 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Add dev-python/cgkit-2.0.0_alpha9-r1 to the boost-1.48 rdeps
 
   24 Jan 2012; Johannes Huber <johu@gentoo.org> updates/1Q-2012:
   Rename net-libs/telepathy-qt4 to net-libs/telepathy-qt
