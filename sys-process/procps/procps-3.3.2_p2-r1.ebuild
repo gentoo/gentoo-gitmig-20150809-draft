@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.2_p2.ebuild,v 1.1 2012/01/24 06:20:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.2_p2-r1.ebuild,v 1.1 2012/01/24 18:40:30 vapier Exp $
 
 EAPI="4"
 
-inherit flag-o-matic eutils toolchain-funcs multilib
+inherit eutils toolchain-funcs autotools
 
 DEB_VER=${PV#*_p}
 MY_PV=${PV%_p*}
@@ -16,9 +16,11 @@ SRC_URI="mirror://debian/pool/main/p/procps/${PN}_${MY_PV}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="static-libs unicode"
+IUSE="+ncurses static-libs unicode"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r2[unicode?]"
+RDEPEND="ncurses? ( >=sys-libs/ncurses-5.2-r2[unicode?] )"
+DEPEND="${RDEPEND}
+	ncurses? ( dev-util/pkgconfig )"
 
 S=${WORKDIR}/${PN}-ng-${MY_PV}
 
@@ -28,13 +30,18 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-3.3.2-noproc.patch
 	epatch "${FILESDIR}"/${PN}-3.3.2-headers.patch
+	epatch "${FILESDIR}"/${PN}-3.3.2-ncurses.patch #400555
+
+	eautoreconf
 }
 
 src_configure() {
 	econf \
 		--exec-prefix="${EPREFIX}/" \
 		--docdir='$(datarootdir)'/doc/${PF} \
-		$(use_enable static-libs static)
+		$(use_with ncurses) \
+		$(use_enable static-libs static) \
+		$(use_enable unicode watch8bit)
 }
 
 src_install() {

@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.61 2012/01/24 06:20:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.62 2012/01/24 18:40:30 vapier Exp $
+
+*procps-3.3.2_p2-r1 (24 Jan 2012)
+
+  24 Jan 2012; Mike Frysinger <vapier@gentoo.org> -procps-3.3.2_p2.ebuild,
+  +procps-3.3.2_p2-r1.ebuild, +files/procps-3.3.2-ncurses.patch, metadata.xml:
+  Add some ncurses configure cleanups #400555.
 
 *procps-3.3.2_p2 (24 Jan 2012)
 
