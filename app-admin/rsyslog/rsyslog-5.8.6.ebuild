@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.6.ebuild,v 1.2 2012/01/16 07:57:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.6.ebuild,v 1.3 2012/01/24 20:32:58 jlec Exp $
 
 EAPI=4
 
@@ -147,7 +147,7 @@ pkg_postinst() {
 		elog "  /usr/share/doc/${PF}/scripts"
 	fi
 
-	if use gnutls; then
+	if use ssl; then
 		echo
 		elog "To create a default CA and certificates for your server and clients, run:"
 		elog "  emerge --config =${PF}"

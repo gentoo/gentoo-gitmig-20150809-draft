@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.62 2012/01/16 07:57:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.63 2012/01/24 20:32:58 jlec Exp $
+
+  24 Jan 2012; Justin Lecher <jlec@gentoo.org> rsyslog-5.8.6.ebuild:
+  exchange last gnutls to ssl
 
   16 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   files/5-stable/rsyslog.initd, rsyslog-5.8.6.ebuild:
