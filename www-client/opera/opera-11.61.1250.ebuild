@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.61.1250.ebuild,v 1.2 2012/01/24 10:49:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.61.1250.ebuild,v 1.3 2012/01/24 10:53:25 jer Exp $
 
 EAPI="4"
 
@@ -16,12 +16,6 @@ IUSE="elibc_FreeBSD gtk gtk3 kde +gstreamer"
 
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
-
-SRC_URI="
-	amd64? ( ${O_U}${O_D}/${O_P}.x86_64.linux.tar.xz )
-	x86? ( ${O_U}${O_D}/${O_P}.i386.linux.tar.xz )
-	x86-fbsd? ( ${O_U}${O_D}/${O_P}.i386.freebsd.tar.xz )
-"
 
 O_D="${O_V/./}"
 O_P="${PN}-${O_V}-${O_B}"
