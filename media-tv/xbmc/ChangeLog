@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.105 2011/12/21 03:42:04 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.106 2012/01/24 02:45:06 vapier Exp $
+
+  24 Jan 2012; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
+  +files/xbmc-9999-nomythtv.patch, metadata.xml:
+  Make mysql support optional.
 
   21 Dec 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Require simplejson for the weather plugin #395365 by Pertti Kosunen.
