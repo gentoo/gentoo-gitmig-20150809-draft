@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.315 2012/01/24 11:23:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.316 2012/01/24 13:06:55 blueness Exp $
+
+*tor-0.2.3.11_alpha (24 Jan 2012)
+
+  24 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.3.11_alpha.ebuild,
+  +files/tor-0.2.3.11_alpha-fix-tor-fw-helper-natpmp.patch:
+  Version bump alpha
 
   24 Jan 2012; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.2.34.ebuild:
   Removed old vulnerable stable version
