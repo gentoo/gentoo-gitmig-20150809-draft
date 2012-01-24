@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.8-r1.ebuild,v 1.1 2012/01/23 22:29:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.8-r1.ebuild,v 1.2 2012/01/24 20:42:49 hwoarang Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -34,7 +34,7 @@ src_prepare() {
 
 src_configure() {
 	configuration() {
-		"$(PYTHON -f)" ./configure.py \
+		"$(PYTHON)" configure.py \
 			--taglib-inc-dir="${EPREFIX}/usr/include/taglib" \
 			--boost-python-libname="boost_python-${PYTHON_ABI}-mt"
 	}
