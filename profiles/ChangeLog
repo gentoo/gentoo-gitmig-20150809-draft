@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6130 2012/01/24 10:50:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6131 2012/01/24 18:22:31 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2012; Johannes Huber <johu@gentoo.org> updates/1Q-2012:
+  Rename net-libs/telepathy-qt4 to net-libs/telepathy-qt
 
   24 Jan 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
   Unmask www-client/opera-11.61.
