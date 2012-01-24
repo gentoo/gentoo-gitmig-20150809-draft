@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.9.ebuild,v 1.2 2012/01/04 19:17:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.9.ebuild,v 1.3 2012/01/24 10:28:17 jlec Exp $
 
 EAPI="3"
 inherit flag-o-matic
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/${MYPN}/${MYPN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
 CDEPEND="sci-libs/scipy
