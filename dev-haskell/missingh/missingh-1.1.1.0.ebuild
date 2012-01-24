@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/missingh-1.1.1.0.ebuild,v 1.2 2012/01/22 12:00:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/missingh-1.1.1.0.ebuild,v 1.3 2012/01/24 15:39:13 tomka Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="test"
 
 # testpack dependency is a workaround for cabal-1.8 bug, which pulls

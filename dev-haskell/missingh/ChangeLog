@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/missingh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.18 2012/01/22 12:00:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.19 2012/01/24 15:39:13 tomka Exp $
+
+  24 Jan 2012; Thomas Kahle <tomka@gentoo.org> missingh-1.1.1.0.ebuild:
+  x86 stable per bug 342977
 
   22 Jan 2012; Agostino Sarubbo <ago@gentoo.org> missingh-1.1.1.0.ebuild:
   Stable for amd64, wrt bug #342977
