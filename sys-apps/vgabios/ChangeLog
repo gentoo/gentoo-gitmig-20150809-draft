@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vgabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/ChangeLog,v 1.5 2012/01/25 08:12:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/ChangeLog,v 1.6 2012/01/25 08:16:41 cardoe Exp $
+
+  25 Jan 2012; Doug Goldstein <cardoe@gentoo.org> vgabios-0.7a.ebuild:
+  0.7a should still be masked
 
   25 Jan 2012; Doug Goldstein <cardoe@gentoo.org> vgabios-0.6c.ebuild,
   vgabios-0.7a.ebuild:
