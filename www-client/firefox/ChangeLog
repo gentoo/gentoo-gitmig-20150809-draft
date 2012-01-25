@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.118 2012/01/12 15:32:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.119 2012/01/25 17:34:23 ssuominen Exp $
+
+  25 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> firefox-9.0.ebuild:
+  Restore ~ppc64 keywording with USE crashreporter masked in
+  arch/powerpc/package.use.mask wrt #396565
 
   12 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> firefox-9.0.ebuild:
   x86 stable wrt bug #395431
