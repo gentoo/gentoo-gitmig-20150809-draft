@@ -1,12 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/fast_xs-0.7.3.ebuild,v 1.1 2011/07/25 08:56:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/fast_xs-0.8.0.ebuild,v 1.1 2012/01/25 00:52:49 flameeyes Exp $
 
-EAPI="2"
-USE_RUBY="ruby18"
+EAPI=4
 
-RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST=""
+USE_RUBY="ruby18 ree18"
+
+RUBY_FAKEGEM_TASK_DOC="docs"
+RUBY_FAKEGEM_DOCDIR="doc"
+
+RUBY_FAKEGEM_EXTRADOC="History.rdoc README.rdoc"
 
 inherit ruby-fakegem
 
@@ -17,6 +20,9 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+ruby_add_bdepend "doc? ( >=dev-ruby/hoe-2.3.2 )"
+ruby_add_bdepend "test? ( >=dev-ruby/hoe-2.3.2 virtual/ruby-test-unit )"
 
 each_ruby_configure() {
 	${RUBY} -Cext/fast_xs extconf.rb || die "extconf.rb failed"
