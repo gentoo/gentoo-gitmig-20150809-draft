@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ruby-oci8-2.0.6.ebuild,v 1.3 2012/01/22 15:16:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ruby-oci8-2.0.6.ebuild,v 1.4 2012/01/25 10:31:15 tomka Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -12,7 +12,7 @@ HOMEPAGE="http://rubyforge.org/projects/ruby-oci8/"
 SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-db/oracle-instantclient-basic"
