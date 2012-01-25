@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.3 2012/01/25 14:26:54 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.4 2012/01/25 14:34:43 anarchy Exp $
 
 EAPI="3"
-inherit eutils toolchain-funcs multilib python versionator pax-utils
+WANT_AUTOCONF="2.1"
+inherit autotools eutils toolchain-funcs multilib python versionator pax-utils
 
 MY_PN="js"
 TARBALL_PV="$(replace_all_version_separators '' $(get_version_component_range 1-3))"
@@ -47,6 +48,9 @@ src_prepare() {
 		# Don't try to be smart, this does not work in cross-compile anyway
 		ln -sfn "${BUILDDIR}/config/Linux_All.mk" "${S}/config/$(uname -s)$(uname -r).mk"
 	fi
+
+	cd ${S}/js/src
+	eautoconf
 }
 
 src_configure() {
