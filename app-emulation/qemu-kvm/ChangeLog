@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.91 2012/01/25 06:01:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.92 2012/01/25 06:04:47 cardoe Exp $
+
+  25 Jan 2012; Doug Goldstein <cardoe@gentoo.org> -qemu-kvm-0.15.0.ebuild:
+  Drop 0.15.0 since we favor 0.15.1 over it.
 
 *qemu-kvm-1.0-r1 (25 Jan 2012)
 
