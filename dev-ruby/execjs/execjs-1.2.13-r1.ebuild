@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-1.2.13.ebuild,v 1.1 2011/12/30 12:39:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-1.2.13-r1.ebuild,v 1.1 2012/01/25 00:28:24 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -9,12 +9,17 @@ RUBY_FAKEGEM_TASK_DOC=""
 
 RUBY_FAKEGEM_EXTRADOC="README.md"
 
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
+
+GITHUB_USER="sstephenson"
+GITHUB_PROJECT="${PN}"
+RUBY_S="${GITHUB_USER}-${GITHUB_PROJECT}-*"
+
 inherit ruby-fakegem
 
-DESCRIPTION="Ruby wrapper for UglifyJS JavaScript compressor."
-HOMEPAGE="https://github.com/lautis/uglifier"
-SRC_URI="https://github.com/sstephenson/execjs/tarball/v${PV} -> ${P}-git.tgz"
-RUBY_S="sstephenson-execjs-*"
+DESCRIPTION="ExecJS lets you run JavaScript code from Ruby"
+HOMEPAGE="https://github.com/sstephenson/execjs"
+SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/v${PV} -> ${P}-git.tgz"
 
 LICENSE="MIT"
 SLOT="0"
