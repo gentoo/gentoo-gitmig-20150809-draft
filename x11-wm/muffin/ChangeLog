@@ -1,0 +1,11 @@
+# ChangeLog for x11-wm/muffin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.1 2012/01/25 08:42:11 tetromino Exp $
+
+*muffin-1.0.0 (25 Jan 2012)
+
+  25 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +muffin-1.0.0.ebuild, +files/muffin-1.0.0-ignore-shadow-and-padding.patch,
+  +metadata.xml:
+  New package: Linux Mint's fork of x11-wm/mutter for use with Cinnamon.
+
