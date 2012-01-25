@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.101 2012/01/20 18:18:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.102 2012/01/25 18:18:00 ssuominen Exp $
+
+  25 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> libmtp-1.1.1.ebuild:
+  ppc64 stable wrt #391541
 
   20 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> libmtp-1.1.1.ebuild:
   Backport --with-udev and --with-udev-rules change from 1.1.2.
