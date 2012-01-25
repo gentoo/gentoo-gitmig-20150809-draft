@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-1.0.1.ebuild,v 1.2 2011/08/02 05:48:20 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-1.0.1.ebuild,v 1.3 2012/01/25 23:08:20 hwoarang Exp $
 
 DESCRIPTION="Delta compression suite for using/generating binary patches"
 HOMEPAGE="http://diffball.googlecode.com/"
@@ -8,7 +8,7 @@ SRC_URI="http://diffball.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="debug"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
