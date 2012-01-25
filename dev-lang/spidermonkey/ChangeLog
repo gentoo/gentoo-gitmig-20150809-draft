@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.69 2012/01/25 14:11:54 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.70 2012/01/25 14:26:54 anarchy Exp $
+
+  25 Jan 2012; <anarchy@gentoo.org> spidermonkey-1.8.5-r1.ebuild,
+  +files/spidermonkey-1.8.5-arm_resprect_cflags.patch:
+  Spidermonkey-1.8.5 respect arm cflags, bug #400727
 
   25 Jan 2012; <anarchy@gentoo.org> files/spidermonkey-1.8.5-fix-ppc64.patch:
   Fix ppc64 support bug #388217

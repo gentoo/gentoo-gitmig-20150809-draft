@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.2 2011/11/26 04:49:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.3 2012/01/25 14:26:54 anarchy Exp $
 
 EAPI="3"
 inherit eutils toolchain-funcs multilib python versionator pax-utils
@@ -38,6 +38,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-install-symlinks.patch"
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=638056#c9
 	epatch "${FILESDIR}/${P}-fix-ppc64.patch"
+	# https://bugs.gentoo.org/show_bug.cgi?id=400727
+	epatch "${FILESDIR}/${P}-arm_resprect_cflags.patch"
 
 	epatch_user
 
