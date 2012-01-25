@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.84 2011/08/18 17:35:47 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.85 2012/01/25 23:09:30 hwoarang Exp $
+
+  25 Jan 2012; Markos Chandras <hwoarang@gentoo.org> traceroute-2.0.18.ebuild:
+  Stable on amd64 wrt bug #400431
 
 *traceroute-2.0.18 (18 Aug 2011)
 
