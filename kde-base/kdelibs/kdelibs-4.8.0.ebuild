@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.0.ebuild,v 1.1 2012/01/25 18:16:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.0.ebuild,v 1.2 2012/01/25 23:01:47 johu Exp $
 
 EAPI=4
 
@@ -10,8 +10,8 @@ OPENGL_REQUIRED="optional"
 KDE_SCM="git"
 inherit kde4-base fdo-mime toolchain-funcs
 
-# The "master" branch is out of date, so use KDE/4.7 per upstream's
-# recommendation (KDE/4.8 will be branched off of KDE/4.7)
+# The "master" branch is out of date, so use KDE/4.8 per upstream's
+# recommendation.
 EGIT_BRANCH="KDE/4.8"
 
 DESCRIPTION="KDE libraries needed by all KDE programs."
