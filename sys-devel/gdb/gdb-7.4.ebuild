@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.4.ebuild,v 1.1 2012/01/25 04:34:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.4.ebuild,v 1.2 2012/01/25 19:31:42 vapier Exp $
 
 EAPI="3"
 
@@ -76,7 +76,7 @@ src_prepare() {
 
 gdb_branding() {
 	printf "Gentoo ${PV} "
-	if [[ -n ${PATCH_VER} ]] ; then
+	if ! use vanilla && [[ -n ${PATCH_VER} ]] ; then
 		printf "p${PATCH_VER}"
 	else
 		printf "vanilla"
