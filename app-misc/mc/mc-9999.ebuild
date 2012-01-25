@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.1 2012/01/21 17:22:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.2 2012/01/25 18:56:16 slyfox Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} = *9999* ]]; then
 	LIVE_EBUILD=yes
 fi
 
-inherit flag-o-matic ${LIVE_ECLASSES}
+inherit eutils flag-o-matic ${LIVE_ECLASSES}
 
 if [[ -n ${LIVE_EBUILD} ]]; then
 	SRC_URI=""
@@ -49,8 +49,19 @@ DEPEND="${RDEPEND}
 
 [[ -n ${LIVE_EBUILD} ]] && DEPEND="${DEPEND} dev-vcs/cvs" # needed only for SCM source tree (autopoint uses cvs)
 
+LANGS="az be bg ca cs da de el eo es et eu fi
+fr gl hu ia id it ja ka ko lt lv mn nb nl pl pt_BR
+pt ro ru sk sl sr sv sv_SE ta tr uk vi wa zh_CN zh_TW"
+#LANGS+=" de_CH fi_FI it_IT" # suspicious overlap
+
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
+
 src_prepare() {
 	[[ -n ${LIVE_EBUILD} ]] && ./autogen.sh
+
+	strip-linguas ${LANGS}
 }
 
 src_configure() {
@@ -78,15 +89,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS README NEWS
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS doc/{FAQ,NEWS,README}
 
 	# fix bug #334383
 	if use kernel_linux && [[ ${EUID} == 0 ]] ; then
-		fowners root:tty /usr/libexec/mc/cons.saver ||
-			die "setting cons.saver's owner failed"
-		fperms g+s /usr/libexec/mc/cons.saver ||
-			die "setting cons.saver's permissions failed"
+		fowners root:tty /usr/libexec/mc/cons.saver
+		fperms g+s /usr/libexec/mc/cons.saver
 	fi
 }
 
