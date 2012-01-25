@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epdfview
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.42 2011/08/07 18:16:45 billie Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.43 2012/01/25 20:05:19 billie Exp $
+
+  25 Jan 2012; Daniel Pielmeier <billie@gentoo.org> -epdfview-0.1.7-r2.ebuild:
+  Remove old.
 
   07 Aug 2011; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
   Add myself as maintainer.
