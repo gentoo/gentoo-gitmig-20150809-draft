@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libmnl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.5 2011/09/16 13:24:02 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.6 2012/01/25 22:05:03 pva Exp $
+
+*libmnl-1.0.2 (25 Jan 2012)
+
+  25 Jan 2012; Peter Volkov <pva@gentoo.org> +libmnl-1.0.2.ebuild:
+  Version bump.
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libmnl-1.0.1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
