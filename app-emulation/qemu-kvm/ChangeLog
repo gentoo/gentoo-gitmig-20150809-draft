@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.90 2012/01/24 20:59:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.91 2012/01/25 06:01:29 cardoe Exp $
+
+*qemu-kvm-1.0-r1 (25 Jan 2012)
+
+  25 Jan 2012; Doug Goldstein <cardoe@gentoo.org> +qemu-kvm-1.0-r1.ebuild,
+  qemu-kvm-9999.ebuild:
+  Switch from using shipped pre-compiled vgabios binary blobs to building them
+  ourselves on x86 and amd64. Still need a solution for non-x86 platforms.
 
   24 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/qemu-kvm-1.0-per-target-i8259.patch, qemu-kvm-1.0.ebuild:
