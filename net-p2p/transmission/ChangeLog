@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.162 2012/01/03 07:59:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.163 2012/01/25 14:33:01 scarabeus Exp $
+
+*transmission-2.42 (25 Jan 2012)
+
+  25 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +transmission-2.42.ebuild, +files/transmission-2.42-0001-configure.ac.patch,
+  +files/transmission-2.42-0003-system-miniupnpc.patch,
+  +files/transmission-2.42-0005-build-with-natpmp1.patch,
+  +files/transmission-2.42-natpmp-system.patch,
+  +files/transmission-2.42-respect-cflags.patch, metadata.xml:
+  Initial commit of 2.42. Fixes bugs #389167 and #376647.
 
   03 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   transmission-2.41.ebuild:

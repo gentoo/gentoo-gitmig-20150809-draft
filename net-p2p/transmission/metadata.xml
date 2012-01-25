@@ -9,5 +9,6 @@
   <use>
 	<flag name="libcanberra">Enable sound event support with <pkg>media-libs/libcanberra</pkg></flag>
 	<flag name="utp">Adds support for µTP (Micro Transport Protocol)</flag>
+	<flag name="gtk3">Enable gtk3 frontend instead of gtk2 one</flag>
   </use>
 </pkgmetadata>
