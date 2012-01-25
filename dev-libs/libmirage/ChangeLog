@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libmirage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.17 2012/01/22 00:29:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.18 2012/01/25 18:09:44 tetromino Exp $
+
+*libmirage-1.5.0-r1 (25 Jan 2012)
+
+  25 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libmirage-1.5.0.ebuild, +libmirage-1.5.0-r1.ebuild,
+  +files/libmirage-1.5.0-gtk-doc.patch,
+  +files/libmirage-1.5.0-session-initialize-language.patch:
+  Fix segfault in mirage_session_add_language(). Bypass unnecessary gtk-doc
+  configure check (bug #399701, thanks to Piotr Mitas et al. for reporting).
 
 *libmirage-1.5.0 (22 Jan 2012)
 
