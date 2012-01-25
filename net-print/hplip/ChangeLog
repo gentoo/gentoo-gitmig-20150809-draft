@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.207 2012/01/12 19:19:01 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.208 2012/01/25 18:50:03 billie Exp $
+
+*hplip-3.11.12-r2 (25 Jan 2012)
+
+  25 Jan 2012; Daniel Pielmeier <billie@gentoo.org> -hplip-3.11.12.ebuild,
+  +hplip-3.11.12-r2.ebuild, +files/hplip-3.11.12-fast-pp.patch:
+  Fix bug #361847. Thanks to ungift-ed for the report, Daniel Gnoutcheff for
+  the patch provided at the upstream bug and Andreas K. Hüttel for reminding
+  me about the patch. Remove old.
 
 *hplip-3.11.12-r1 (12 Jan 2012)
 

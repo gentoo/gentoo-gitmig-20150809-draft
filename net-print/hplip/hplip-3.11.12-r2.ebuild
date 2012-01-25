@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.12.ebuild,v 1.2 2012/01/11 19:21:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.12-r2.ebuild,v 1.1 2012/01/25 18:50:03 billie Exp $
 
 EAPI=4
 
@@ -134,6 +134,14 @@ src_prepare() {
 	# http://secunia.com/advisories/42956/
 	# https://bugzilla.redhat.com/show_bug.cgi?id=662740
 	epatch "${FILESDIR}"/${PN}-3.10.9-cve-2010-4267.patch
+
+	# Fix black stripes on pcl5c printouts
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/561264
+	epatch "${FILESDIR}"/${P}-black-stripes-pcl5c.patch
+
+	# Fix parallel port cpu usage
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/750796
+	epatch "${FILESDIR}"/${P}-fast-pp.patch
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
