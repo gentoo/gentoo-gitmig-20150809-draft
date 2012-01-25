@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.131 2012/01/21 12:24:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.132 2012/01/25 23:02:37 hwoarang Exp $
+
+  25 Jan 2012; Markos Chandras <hwoarang@gentoo.org>
+  tuxonice-sources-3.0.17.ebuild:
+  Stable on amd64 wrt bug #400703
 
 *tuxonice-sources-3.0.17 (21 Jan 2012)
 
