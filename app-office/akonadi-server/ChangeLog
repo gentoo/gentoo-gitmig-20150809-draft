@@ -1,6 +1,11 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.69 2012/01/22 01:07:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.70 2012/01/25 14:51:10 johu Exp $
+
+*akonadi-server-1.7.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +akonadi-server-1.7.0.ebuild:
+  Version bump. Required for KDE SC 4.8.0.
 
   22 Jan 2012; Johannes Huber <johu@gentoo.org> -akonadi-server-1.5.2-r1.ebuild,
   -akonadi-server-1.6.2.ebuild:
