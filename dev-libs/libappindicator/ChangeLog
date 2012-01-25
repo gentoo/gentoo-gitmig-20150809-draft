@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libappindicator
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.6 2011/11/28 16:49:48 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.7 2012/01/25 14:59:44 ssuominen Exp $
+
+  25 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libappindicator-0.4.1-r201.ebuild:
+  Fix building with automake-1.11.2 by emptying py-compile script instead of
+  symlinking it to /path/to/true.
 
   28 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   libappindicator-0.4.1-r201.ebuild, libappindicator-0.4.1-r300.ebuild:
