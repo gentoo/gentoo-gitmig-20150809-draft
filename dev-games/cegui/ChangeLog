@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/cegui
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.39 2011/11/09 02:04:08 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.40 2012/01/25 01:01:51 tristan Exp $
+
+*cegui-0.7.6 (25 Jan 2012)
+
+  25 Jan 2012; Tristan Heaven <tristan@gentoo.org> +cegui-0.7.6.ebuild:
+  Version bump
 
   09 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> cegui-0.7.5-r1.ebuild:
   build with newer zlib (bug #389863); kill ogre use flag (bug #387103)
