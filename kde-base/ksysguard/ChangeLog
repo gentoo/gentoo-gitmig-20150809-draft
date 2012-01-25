@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.230 2012/01/17 13:29:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.231 2012/01/25 18:16:50 johu Exp $
+
+*ksysguard-4.8.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +ksysguard-4.8.0.ebuild:
+  Version bump KDE SC 4.8.0
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -ksysguard-4.7.3.ebuild:
   Remove KDE SC 4.7.3

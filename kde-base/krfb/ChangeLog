@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.198 2012/01/17 13:29:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.199 2012/01/25 18:17:20 johu Exp $
+
+*krfb-4.8.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +krfb-4.8.0.ebuild:
+  Version bump KDE SC 4.8.0
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -krfb-4.7.3.ebuild:
   Remove KDE SC 4.7.3

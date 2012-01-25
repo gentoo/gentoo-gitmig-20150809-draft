@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkcompactdisc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.103 2012/01/17 13:28:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.104 2012/01/25 18:16:53 johu Exp $
+
+*libkcompactdisc-4.8.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +libkcompactdisc-4.8.0.ebuild:
+  Version bump KDE SC 4.8.0
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -libkcompactdisc-4.7.3.ebuild:
   Remove KDE SC 4.7.3

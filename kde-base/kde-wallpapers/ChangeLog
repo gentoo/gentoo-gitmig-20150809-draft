@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-wallpapers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.49 2012/01/17 13:29:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.50 2012/01/25 18:17:13 johu Exp $
+
+*kde-wallpapers-4.8.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +kde-wallpapers-4.8.0.ebuild:
+  Version bump KDE SC 4.8.0
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -kde-wallpapers-4.7.3.ebuild:
   Remove KDE SC 4.7.3

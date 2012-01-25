@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.107 2012/01/17 13:29:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.108 2012/01/25 18:17:26 johu Exp $
+
+*parley-4.8.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +parley-4.8.0.ebuild:
+  Version bump KDE SC 4.8.0
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -parley-4.7.3.ebuild:
   Remove KDE SC 4.7.3
