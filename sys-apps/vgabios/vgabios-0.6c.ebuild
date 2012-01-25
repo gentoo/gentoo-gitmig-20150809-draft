@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/vgabios-0.6c.ebuild,v 1.3 2012/01/25 03:28:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/vgabios-0.6c.ebuild,v 1.4 2012/01/25 03:29:53 cardoe Exp $
 
 # Can't really call them backports when they're fixes that upstream
 # won't carry
@@ -17,8 +17,7 @@ SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tgz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-#KEYWORDS="~amd64 ~x86"
-KEYWORDS="-*"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="sys-devel/dev86"
