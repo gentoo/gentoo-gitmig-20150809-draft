@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.6.1.ebuild,v 1.9 2012/01/04 22:32:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.6.1.ebuild,v 1.10 2012/01/25 18:24:20 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/patch/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="static test"
 
 RDEPEND=""
@@ -31,7 +31,7 @@ src_compile() {
 	[[ ${USERLAND} != "GNU" ]] && myconf="--program-prefix=g"
 	econf ${myconf} || die
 
-	emake || die "emake failed"
+	emake || die
 }
 
 src_install() {
