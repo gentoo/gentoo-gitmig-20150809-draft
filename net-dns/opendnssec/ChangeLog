@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/opendnssec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.13 2012/01/25 21:49:25 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.14 2012/01/25 22:05:07 mschiff Exp $
+
+  25 Jan 2012; Marc Schiffbauer <mschiff@gentoo.org> opendnssec-1.3.5.ebuild:
+  Support >=dev-libssofthsm-1.3.1. Thanks to Tom Hendrikx.
 
 *opendnssec-1.3.5 (25 Jan 2012)
 
