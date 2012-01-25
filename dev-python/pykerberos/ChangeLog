@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pykerberos
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.1 2011/11/04 20:58:12 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.2 2012/01/25 15:12:53 jer Exp $
+
+  25 Jan 2012; Jeroen Roovers <jer@gentoo.org> pykerberos-1.1.ebuild:
+  Inherit eutils by William Throwe (bug #400683).
 
 *pykerberos-1.1 (04 Nov 2011)
 
