@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.931 2012/01/24 15:20:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.932 2012/01/25 01:19:08 mpagano Exp $
+
+  25 Jan 2012; Michael Pagano <mpagano@gentoo.org>
+  gentoo-sources-3.1.10-r1.ebuild:
+  Security stablization for root exploit. CVE-2012-0056. bug #399243
 
 *gentoo-sources-3.0.17-r2 (24 Jan 2012)
 
