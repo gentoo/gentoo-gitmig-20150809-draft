@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120118.ebuild,v 1.1 2012/01/19 16:36:24 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.0_rc2.ebuild,v 1.1 2012/01/25 06:20:10 eras Exp $
 
 EAPI=4
 
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam
 
-MY_PV="${PV/_pre/-}"
+MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
 VDA_PV="2.8.5"
 VDA_P="${PN}-vda-v10-${VDA_PV}"
 RC_VER="2.6"
@@ -317,8 +317,8 @@ pkg_postinst() {
 		elog "http://www.postfix.org/MULTI_INSTANCE_README.html"
 		if ! use berkdb; then
 			ewarn "\nPostfix is installed without BerkeleyDB support."
-			ewarn "Please turn on berkdb USE flag if hash or btree table"
-			ewarn "lookup support is needed.\n"
+			ewarn "Please turn on berkdb USE flag for hash or btree table"
+			ewarn "lookup support.\n"
 		fi
 	fi
 }
