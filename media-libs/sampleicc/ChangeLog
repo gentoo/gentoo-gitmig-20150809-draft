@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sampleicc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sampleicc/ChangeLog,v 1.3 2012/01/16 11:57:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sampleicc/ChangeLog,v 1.4 2012/01/25 12:22:36 scarabeus Exp $
+
+*sampleicc-1.6.6 (25 Jan 2012)
+
+  25 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org> +sampleicc-1.6.6.ebuild:
+  Version bump to latest.
 
   16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> sampleicc-1.6.4.ebuild:
   Stable for amd64, wrt bug #398521
