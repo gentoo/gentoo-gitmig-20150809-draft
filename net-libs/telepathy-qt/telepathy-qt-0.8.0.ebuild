@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.8.0.ebuild,v 1.1 2012/01/24 17:40:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.8.0.ebuild,v 1.2 2012/01/25 08:49:10 johu Exp $
 
 EAPI=4
 
@@ -15,12 +15,12 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${MY_PN}/${MY_PN}-${PV}.tar.g
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug farsight glib"
+IUSE="debug farsight glib test"
 
 RDEPEND="
 	dev-python/dbus-python
-	>=x11-libs/qt-core-4.6.0:4[glib?]
-	>=x11-libs/qt-dbus-4.6.0:4
+	x11-libs/qt-core:4[glib?]
+	x11-libs/qt-dbus:4
 	farsight? (
 		dev-libs/dbus-glib
 		dev-libs/libxml2
@@ -34,6 +34,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	dev-util/pkgconfig
+	test? ( x11-libs/qt-test:4 )
 "
 
 PATCHES=( "${FILESDIR}/${P}-automagicness.patch" )
@@ -51,6 +52,10 @@ src_prepare() {
 	base_src_prepare
 
 	sed -i -e '/^add_subdirectory(examples)$/d' CMakeLists.txt || die
+
+	if ! use test ; then
+		sed -i -e '/^add_subdirectory(tests)$/d' CMakeLists.txt || die
+	fi
 }
 
 src_configure() {

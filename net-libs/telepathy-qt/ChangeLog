@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/telepathy-qt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.2 2012/01/24 18:27:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.3 2012/01/25 08:49:10 johu Exp $
+
+*telepathy-qt-0.9.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org>
+  +files/telepathy-qt-0.9.0-automagicness.patch, +telepathy-qt-0.9.0.ebuild,
+  -files/telepathy-qt-0.5.12-automagicness.patch, -telepathy-qt-0.5.15.ebuild,
+  telepathy-qt-0.8.0.ebuild:
+  Version bump wrt bug #400669. Remove old. Make tests optional and add missing
+  dep, fixes bug #373955.
 
   24 Jan 2012; Johannes Huber <johu@gentoo.org> Manifest:
   Fix manifest.
