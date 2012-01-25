@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/debugedit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.23 2011/10/11 03:53:15 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.24 2012/01/25 19:28:35 vapier Exp $
+
+*debugedit-5.3.5-r1 (25 Jan 2012)
+
+  25 Jan 2012; Mike Frysinger <vapier@gentoo.org> +debugedit-5.3.5-r1.ebuild,
+  +files/debugedit-5.3.5-DWARF-4.patch:
+  Add DWARF 4 support #400663 by Francesco Riosa.
 
 *debugedit-5.3.5 (11 Oct 2011)
 
