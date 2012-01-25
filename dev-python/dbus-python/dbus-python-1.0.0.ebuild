@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.0.0.ebuild,v 1.1 2012/01/25 21:07:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.0.0.ebuild,v 1.2 2012/01/25 21:10:00 ssuominen Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2:2.6 3:3.2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.0 3.1 *-jython *-pypy-*"
 PYTHON_TESTS_RESTRICTED_ABIS="2.4 2.5 3.0 3.1"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
