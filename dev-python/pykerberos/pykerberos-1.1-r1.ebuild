@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/pykerberos-1.1.ebuild,v 1.3 2012/01/25 15:12:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/pykerberos-1.1-r1.ebuild,v 1.1 2012/01/25 15:14:17 jer Exp $
 
 EAPI="4"
 
