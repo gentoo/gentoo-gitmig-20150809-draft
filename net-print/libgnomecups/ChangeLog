@@ -1,6 +1,16 @@
 # ChangeLog for net-print/libgnomecups
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.74 2011/10/05 17:02:45 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.75 2012/01/25 22:12:03 tetromino Exp $
+
+*libgnomecups-0.2.3-r2 (25 Jan 2012)
+
+  25 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgnomecups-0.2.3-r2.ebuild,
+  +files/libgnomecups-0.2.3-g_list_find_custom.patch,
+  +files/libgnomecups-0.2.3-glib.h.patch:
+  Fix building with >=glib-2.31 (bug #400789, thanks to Rolf S. Arvidson for
+  reporting). Fix g_list_find_custom() argument order. Don't build static
+  libraries and don't install .la files.
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libgnomecups-0.2.3-r1.ebuild:
