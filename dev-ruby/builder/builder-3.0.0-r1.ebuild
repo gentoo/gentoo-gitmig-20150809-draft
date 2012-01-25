@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-3.0.0-r1.ebuild,v 1.1 2012/01/25 02:19:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-3.0.0-r1.ebuild,v 1.2 2012/01/25 15:52:28 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -22,8 +22,13 @@ IUSE=""
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
+DEPEND+=" doc? ( dev-util/ctags )"
+
 all_ruby_prepare() {
-	sed -i -e '/rdoc\.template .*jamis/d' Rakefile || die
+	sed -i \
+		-e '/rdoc\.template .*jamis/d' \
+		-e 's:xctags:exuberant-ctags:' \
+		Rakefile || die
 
 	# Remove file that should not be part of the distribution.
 	rm test/test_cssbuilder.rb || die

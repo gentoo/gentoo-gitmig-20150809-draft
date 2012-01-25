@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.65 2012/01/25 02:19:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.66 2012/01/25 15:52:28 flameeyes Exp $
+
+  25 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> builder-3.0.0-r1.ebuild:
+  Add missing dependency over ctags (bug #400709).
 
 *builder-3.0.0-r1 (25 Jan 2012)
 
