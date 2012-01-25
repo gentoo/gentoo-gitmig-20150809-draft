@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.23 2012/01/11 19:06:57 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.24 2012/01/25 20:18:37 billie Exp $
+
+  25 Jan 2012; Daniel Pielmeier <billie@gentoo.org>
+  -vdradmin-am-3.6.7-r1.ebuild:
+  Remove old.
 
   11 Jan 2012; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
   Remove myself from maintainers as I don't own a vdr anymore.
