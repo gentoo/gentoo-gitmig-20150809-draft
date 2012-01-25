@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.2 2012/01/10 05:53:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.3 2012/01/25 08:43:16 tetromino Exp $
+
+*cinnamon-1.2 (25 Jan 2012)
+
+  25 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cinnamon-1.2.ebuild, +files/cinnamon-1.2-optional-networkmanager.patch:
+  Version bump. Adds support for applets and desktop effects. Cinnamon now uses
+  its own window manager (muffin) and is incompatible with gnome-shell themes.
+  Synced with gnome-shell ebuild for optional networkmanager patch and
+  hardened/PaX marking.
 
   10 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   cinnamon-1.1.3.ebuild:
