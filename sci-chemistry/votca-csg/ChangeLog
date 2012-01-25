@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/votca-csg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.15 2012/01/25 02:24:32 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.16 2012/01/25 10:20:54 tomka Exp $
+
+  25 Jan 2012; Thomas Kahle <tomka@gentoo.org> votca-csg-1.2.2.ebuild:
+  x86 stable per bug 389681
 
   25 Jan 2012; Christoph Junghans <ottxor@gentoo.org> votca-csg-1.2.2.ebuild:
   keyword ~x86-macos and fix bug #398437
