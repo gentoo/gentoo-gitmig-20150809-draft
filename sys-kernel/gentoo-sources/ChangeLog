@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.933 2012/01/25 01:21:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.934 2012/01/25 01:29:30 mpagano Exp $
+
+  25 Jan 2012; Michael Pagano <mpagano@gentoo.org>
+  -gentoo-sources-3.0.6.ebuild, -gentoo-sources-3.0.13.ebuild,
+  -gentoo-sources-3.0.14.ebuild, -gentoo-sources-3.0.15.ebuild,
+  -gentoo-sources-3.0.17.ebuild, -gentoo-sources-3.1.6.ebuild,
+  -gentoo-sources-3.1.7.ebuild, -gentoo-sources-3.1.9.ebuild:
+  Remove vulnerable kernel versions. CVE-2012-0056. Bug #399243.
+
+  25 Jan 2012; Michael Pagano <mpagano@gentoo.org>
+  -gentoo-sources-3.0.6.ebuild, -gentoo-sources-3.0.13.ebuild,
+  -gentoo-sources-3.0.14.ebuild, -gentoo-sources-3.0.15.ebuild,
+  -gentoo-sources-3.0.17.ebuild:
+  Remove vulnerable kernel versions. CVE-2012-0056. Bug #399243.
 
   25 Jan 2012; Michael Pagano <mpagano@gentoo.org>
   gentoo-sources-3.0.17-r2.ebuild:
