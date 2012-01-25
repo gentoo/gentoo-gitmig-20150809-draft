@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-18.0.1017.2_alpha118867.ebuild,v 1.1 2012/01/25 04:39:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-18.0.1017.2_alpha118867.ebuild,v 1.2 2012/01/25 05:01:38 floppym Exp $
 
 EAPI="4"
 
@@ -56,26 +56,25 @@ RDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype
 	app-misc/ca-certificates
-	dev-libs/atk
-	dev-libs/glib:2
-	dev-libs/libxslt
+	gnome-base/gconf:2
 	dev-libs/libgcrypt
+	x11-libs/gdk-pixbuf
+	x11-libs/gtk+:2
+	dev-libs/glib:2
 	dev-libs/nspr
 	dev-libs/nss
-	gnome-base/gconf:2
+	x11-libs/pango
 	media-libs/libpng:1.2
 	|| ( >=sys-devel/gcc-4.4.0[-nocxx] >=sys-devel/gcc-4.4.0[cxx] )
 	sys-fs/udev
-	sys-libs/zlib
-	x11-libs/gdk-pixbuf
-	x11-libs/gtk+:2
-	x11-libs/libXScrnSaver
 	x11-libs/libX11
-	x11-libs/libXrender
 	x11-libs/libXext
 	x11-libs/libXfixes
-	x11-libs/pango
+	x11-libs/libXrender
+	x11-libs/libXScrnSaver
+	sys-libs/zlib
 	x11-misc/xdg-utils
+	net-misc/curl
 "
 
 # Add blockers for the other slots.
