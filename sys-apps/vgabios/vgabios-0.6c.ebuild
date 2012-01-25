@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/vgabios-0.6c.ebuild,v 1.5 2012/01/25 03:31:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/vgabios-0.6c.ebuild,v 1.6 2012/01/25 08:12:31 cardoe Exp $
 
 # Can't really call them backports when they're fixes that upstream
 # won't carry
@@ -46,21 +46,21 @@ src_install() {
 	use debug && newins VGABIOS-lgpl-latest.debug.bin vgabios.debug.bin
 
 	# Cirrus
-	newins VGABIOS-lgpl-latest.cirrus.bin vgabios.cirrus.bin
+	newins VGABIOS-lgpl-latest.cirrus.bin vgabios-cirrus.bin
 	use debug && newins VGABIOS-lgpl-latest.cirrus.debug.bin \
-		vgabios.cirrus.debug.bin
+		vgabios-cirrus.debug.bin
 
 	# QXL
-	newins VGABIOS-lgpl-latest.qxl.bin vgabios.qxl.bin
-	use debug && newins VGABIOS-lgpl-latest.qxl.debug.bin vgabios.qxl.debug.bin
+	newins VGABIOS-lgpl-latest.qxl.bin vgabios-qxl.bin
+	use debug && newins VGABIOS-lgpl-latest.qxl.debug.bin vgabios-qxl.debug.bin
 
 	# Standard VGA
-	newins VGABIOS-lgpl-latest.stdvga.bin vgabios.stdvga.bin
+	newins VGABIOS-lgpl-latest.stdvga.bin vgabios-stdvga.bin
 	use debug && newins VGABIOS-lgpl-latest.stdvga.debug.bin \
-		vgabios.stdvga.debug.bin
+		vgabios-stdvga.debug.bin
 
 	# VMWare
-	newins VGABIOS-lgpl-latest.vmware.bin vgabios.vmware.bin
+	newins VGABIOS-lgpl-latest.vmware.bin vgabios-vmware.bin
 	use debug && newins VGABIOS-lgpl-latest.vmware.debug.bin \
-		vgabios.vmware.debug.bin
+		vgabios-vmware.debug.bin
 }
