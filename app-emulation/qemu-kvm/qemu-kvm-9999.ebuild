@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.31 2012/01/25 06:01:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.32 2012/01/25 06:02:34 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -65,7 +65,7 @@ RDEPEND="
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	sys-libs/zlib
-	amd64? ( sys-apps/seabios 
+	amd64? ( sys-apps/seabios
 		sys-apps/vgabios )
 	x86? ( sys-apps/seabios
 		sys-apps/vgabios )
