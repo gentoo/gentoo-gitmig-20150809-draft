@@ -1,6 +1,42 @@
 # ChangeLog for net-mail/notmuch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.19 2011/12/11 20:51:27 aidecoe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.20 2012/01/25 10:28:03 aidecoe Exp $
+
+*notmuch-0.11 (25 Jan 2012)
+
+  25 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +notmuch-0.11.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  (Extracted headlines from NEWS file. See it for details.)
+
+  Command-Line Interface
+  - Hooks have been introduced to notmuch
+  - notmuch reply --decrypt bugfix
+
+  Performance
+  - Automatic tag query optimization
+  - Don't sort messages when creating a dump file
+
+  Memory Management
+  - Reduction of memory leaks
+
+  Emacs Interface
+  - Bug fixes
+  - Support "notmuch new" as a notmuch-poll-script
+  - Improvements in saved search management
+  - Hooks for notmuch-hello
+  - New face for crypto parts headers
+  - Use space as default thousands separator
+  - New function notmuch-show-advance
+  - Various performance improvements
+
+  New add-on tool
+
+  Upstream has added also notmuch-deliver into contrib, which is not installed
+  by this ebuild. I'll create separate ebuild for it or add contrib USE flag in
+  the future.
 
 *notmuch-0.10.2 (11 Dec 2011)
 
