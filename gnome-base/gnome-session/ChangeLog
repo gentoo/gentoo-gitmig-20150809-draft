@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gnome-session
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.307 2011/11/28 06:37:21 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.308 2012/01/25 03:53:57 tetromino Exp $
+
+*gnome-session-3.2.1-r1 (25 Jan 2012)
+
+  25 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/10-user-dirs-update-gnome-r1, +files/15-xdg-data-gnome-r1,
+  +gnome-session-3.2.1-r1.ebuild,
+  +files/gnome-session-3.2.1-kernel-boot-line.patch:
+  Add patch from gnome-3.3 to respect the gnome.fallback=0/1 kernel boot line,
+  and improve support for gnome-extra/cinnamon.
 
   28 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-session-3.2.1.ebuild:
