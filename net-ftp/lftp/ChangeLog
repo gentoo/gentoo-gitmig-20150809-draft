@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.340 2012/01/23 10:56:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.341 2012/01/25 17:14:54 jer Exp $
+
+*lftp-4.3.5 (25 Jan 2012)
+
+  25 Jan 2012; Jeroen Roovers <jer@gentoo.org> +lftp-4.3.5.ebuild:
+  Version bump.
 
   23 Jan 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove accidental tag addition.
