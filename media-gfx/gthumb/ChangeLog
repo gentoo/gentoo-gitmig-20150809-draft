@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.139 2012/01/14 17:14:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.140 2012/01/25 10:52:05 pacho Exp $
+
+*gthumb-2.14.2-r300 (25 Jan 2012)
+*gthumb-2.14.2 (25 Jan 2012)
+
+  25 Jan 2012; Pacho Ramos <pacho@gentoo.org> +gthumb-2.14.2-r300.ebuild,
+  +gthumb-2.14.2.ebuild, -gthumb-2.12.4.ebuild:
+  Drop old, version bump: upstream fixes, add a jpeg USE flag and have a
+  revision for gnome3 (bug #387917 by Torsten Stets.
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> gthumb-2.14.0.ebuild:
   x86 stable, bug #393007
