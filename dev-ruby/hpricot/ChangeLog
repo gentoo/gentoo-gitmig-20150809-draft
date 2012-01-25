@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/hpricot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.34 2011/12/27 07:52:31 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.35 2012/01/25 01:21:18 flameeyes Exp $
+
+*hpricot-0.8.6 (25 Jan 2012)
+
+  25 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/hpricot-0.8.6-fast_xs.patch, +hpricot-0.8.6.ebuild,
+  -files/hpricot-0.8.2-jruby.patch:
+  Version bump; unbundle fast_xs (for all but JRuby) and add a dependency over
+  it instead.
 
 *hpricot-0.8.5 (27 Dec 2011)
 
