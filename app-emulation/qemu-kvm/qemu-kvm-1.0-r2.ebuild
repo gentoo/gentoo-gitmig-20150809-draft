@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r1.ebuild,v 1.2 2012/01/25 06:02:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r2.ebuild,v 1.1 2012/01/25 06:29:42 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -189,6 +189,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0-per-target-i8259.patch #400597
 	epatch "${FILESDIR}"/${PN}-1.0-fix-nonkvm-arches.patch
 	epatch "${FILESDIR}"/${PN}-1.0-fix-qemu-system-ppc.patch
+
+	# bug #400595 / CVE-2012-0029
+	epatch "${FILESDIR}"/${P}-e1000-bounds-packet-size-against-buffer-size.patch
 
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
