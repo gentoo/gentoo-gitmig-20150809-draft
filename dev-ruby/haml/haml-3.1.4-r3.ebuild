@@ -1,17 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.1.4-r1.ebuild,v 1.1 2012/01/01 07:45:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.1.4-r3.ebuild,v 1.1 2012/01/25 00:46:57 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
 USE_RUBY="ruby18 ruby19 ree18"
 
+RUBY_FAKEGEM_TASK_TEST="test"
 RUBY_FAKEGEM_TASK_DOC="doc"
 
 RUBY_FAKEGEM_EXTRADOC="CONTRIBUTING README.md"
 RUBY_FAKEGEM_DOCDIR="doc"
 
-RUBY_FAKEGEM_EXTRAINSTALL="init.rb VERSION VERSION_NAME vendor"
+RUBY_FAKEGEM_EXTRAINSTALL="init.rb rails VERSION VERSION_NAME"
 
 inherit ruby-fakegem
 
@@ -26,7 +27,7 @@ KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc
 IUSE=""
 
 # The html engine requires hpricot
-ruby_add_rdepend "dev-ruby/hpricot dev-ruby/fssm"
+ruby_add_rdepend "dev-ruby/hpricot dev-ruby/sass"
 
 # It could use merb during testing as well, but it's not mandatory
 ruby_add_bdepend "
@@ -40,3 +41,16 @@ ruby_add_bdepend "
 		dev-ruby/yard
 		dev-ruby/maruku
 	)"
+
+all_ruby_prepare() {
+	# unbundle sass; remove dependency over fssm and add one over sass
+	# itself.
+	rm -r vendor/ || die
+
+	pushd .. &>/dev/null
+	epatch "${FILESDIR}"/${P}-sass.patch
+	sed -i \
+		-e '/vendor\//d' \
+		metadata || die
+	popd &>/dev/null
+}
