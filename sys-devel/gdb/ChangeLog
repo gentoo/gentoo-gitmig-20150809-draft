@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.206 2012/01/15 16:44:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.207 2012/01/25 04:34:34 vapier Exp $
+
+*gdb-7.4 (25 Jan 2012)
+
+  25 Jan 2012; Mike Frysinger <vapier@gentoo.org> +gdb-7.4.ebuild:
+  Version bump.
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> gdb-7.3.1.ebuild:
   alpha/ia64/s390/sparc stable wrt #395017
