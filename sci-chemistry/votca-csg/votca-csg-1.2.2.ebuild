@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.2.ebuild,v 1.3 2012/01/17 13:52:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.2.ebuild,v 1.4 2012/01/25 02:24:32 ottxor Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ HOMEPAGE="http://www.votca.org"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-macos"
 
 RDEPEND="=sci-libs/votca-tools-${PV}[system-boost=]
 	gromacs? ( sci-chemistry/gromacs )
@@ -45,6 +45,10 @@ src_configure() {
 
 	use gromacs && has_version =sci-chemistry/gromacs-9999 && \
 		extra="-DWITH_GMX_DEVEL=ON"
+
+	#to create man pages, build tree binaries are executed (bug #398437)
+	[[ ${CHOST} = *-darwin* ]] && \
+		extra+=" -DCMAKE_BUILD_WITH_INSTALL_RPATH=OFF"
 
 	mycmakeargs=(
 		$(cmake-utils_use system-boost EXTERNAL_BOOST)
