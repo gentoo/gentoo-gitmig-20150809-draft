@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.163 2011/12/27 18:10:31 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.164 2012/01/25 13:24:31 wired Exp $
+
+  25 Jan 2012; Alex Alexander <wired@gentoo.org> PyQt4-4.9.ebuild:
+  builds with qt-opengl-4.8.0[egl], updated dep
 
   27 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> PyQt4-4.9.ebuild:
   Enable versioning of /usr/bin/pyuic4. Run eqmake4() in qpy/QtDBus directory.
