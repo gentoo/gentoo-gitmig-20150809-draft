@@ -1,6 +1,18 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.74 2012/01/22 20:36:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.75 2012/01/25 21:14:57 swegener Exp $
+
+  25 Jan 2012; Sven Wegener <swegener@gentoo.org> pdns-2.9.22-r1.ebuild,
+  pdns-2.9.22.5.ebuild, pdns-3.0.ebuild, pdns-3.0.1.ebuild:
+  Remove .a and .la files for plugins.
+
+  25 Jan 2012; Sven Wegener <swegener@gentoo.org> pdns-2.9.22-r1.ebuild,
+  pdns-2.9.22.5.ebuild, pdns-3.0.ebuild, pdns-3.0.1.ebuild:
+  Require boost built with static-libs.
+
+  22 Jan 2012; Sven Wegener <swegener@gentoo.org> pdns-2.9.22-r1.ebuild,
+  pdns-2.9.22.5.ebuild, pdns-3.0.ebuild, pdns-3.0.1.ebuild:
+  Use emake in src_install, bug #398707.
 
   22 Jan 2012; Sven Wegener <swegener@gentoo.org> pdns-3.0.ebuild,
   pdns-3.0.1.ebuild, +files/pdns-3.0-verbose-logging.patch:
