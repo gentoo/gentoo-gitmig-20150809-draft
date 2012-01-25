@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.4.0.ebuild,v 1.5 2011/04/12 18:05:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.4.0.ebuild,v 1.6 2012/01/25 21:46:14 c1pher Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -26,8 +26,7 @@ S="${WORKDIR}"
 
 RDEPEND="sys-libs/zlib
 	ldap? ( net-nds/openldap )
-	odbc? ( dev-db/unixODBC )
-	!dev-python/cryptlib_py"
+	odbc? ( dev-db/unixODBC )"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
@@ -85,7 +84,7 @@ src_compile() {
 	replace-flags -Os -O2
 	is-flagq -O* || append-flags -O2
 
-	append-flags "-D __UNIX__ -DOSVERSION=2 -DNDEBUG -I."
+	append-flags "-D__UNIX__ -DOSVERSION=2 -DNDEBUG -I."
 
 	if [ -f /usr/include/pthread.h -a \
 	`grep -c PTHREAD_MUTEX_RECURSIVE /usr/include/pthread.h` -ge 0 ] ; then
