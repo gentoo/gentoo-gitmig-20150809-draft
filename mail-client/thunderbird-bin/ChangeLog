@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.48 2012/01/12 15:30:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.49 2012/01/26 15:01:17 nirbheek Exp $
+
+  26 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  thunderbird-bin-9.0.1.ebuild:
+  Use nsplugins.eclass for creating the plugins symlink, bug 390807
 
   12 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   thunderbird-bin-9.0.1.ebuild:

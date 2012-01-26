@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-9.0.1.ebuild,v 1.3 2012/01/12 15:30:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-9.0.1.ebuild,v 1.4 2012/01/26 15:01:17 nirbheek Exp $
 
 EAPI="3"
 
-inherit eutils multilib mozextension pax-utils fdo-mime gnome2-utils
+inherit eutils multilib mozextension pax-utils fdo-mime gnome2-utils nsplugins
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 LANGS=(ar be bg bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et eu fi fr
@@ -125,8 +125,8 @@ EOF
 		"${D}/${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js" || \
 		die "failed to cp thunderbird-gentoo-default-prefs.js"
 
-	ln -sfn "/usr/$(get_libdir)/nsbrowser/plugins" \
-			"${D}${MOZILLA_FIVE_HOME}/plugins" || die
+	# Plugins dir
+	share_plugins_dir
 
 	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{thunderbird-bin,thunderbird,plugin-container}
 }
