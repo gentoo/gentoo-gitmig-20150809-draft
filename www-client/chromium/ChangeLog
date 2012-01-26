@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.546 2012/01/25 15:48:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.547 2012/01/26 04:17:23 floppym Exp $
+
+*chromium-17.0.963.44 (26 Jan 2012)
+
+  26 Jan 2012; Mike Gilbert <floppym@gentoo.org> +chromium-17.0.963.44.ebuild,
+  -chromium-17.0.963.33.ebuild:
+  Version bump for beta channel release.
 
   25 Jan 2012; Mike Gilbert <floppym@gentoo.org> chromium-18.0.1017.2.ebuild:
   Bump v8 dep to 3.8.7.1.
