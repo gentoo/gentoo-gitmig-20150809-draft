@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.43 2012/01/25 20:05:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.44 2012/01/26 21:14:22 hwoarang Exp $
+
+  26 Jan 2012; Markos Chandras <hwoarang@gentoo.org> epdfview-0.1.8.ebuild:
+  Stable on amd64 wrt bug #400807
 
   25 Jan 2012; Daniel Pielmeier <billie@gentoo.org> -epdfview-0.1.7-r2.ebuild:
   Remove old.
