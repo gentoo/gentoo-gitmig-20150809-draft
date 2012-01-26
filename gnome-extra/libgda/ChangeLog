@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.191 2012/01/25 11:01:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.192 2012/01/26 01:06:31 tetromino Exp $
+
+  26 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org> libgda-5.0.3.ebuild,
+  +files/libgda-5.0.3-custom.vala:
+  Disable building vala bindings for now due to
+  https://bugzilla.gnome.org/show_bug.cgi?id=668701
 
 *libgda-5.0.3 (25 Jan 2012)
 

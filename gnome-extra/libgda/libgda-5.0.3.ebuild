@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3.ebuild,v 1.1 2012/01/25 11:01:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3.ebuild,v 1.2 2012/01/26 01:06:31 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -13,7 +13,7 @@ DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2 LGPL-2"
 
-IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres sourceview ssl vala"
+IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres sourceview ssl" # vala
 SLOT="5"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
@@ -47,8 +47,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.35.5
 	>=app-text/gnome-doc-utils-0.9
-	doc? ( >=dev-util/gtk-doc-1 )
-	vala? ( >=dev-lang/vala-0.14:0.14[vapigen] )"
+	doc? ( >=dev-util/gtk-doc-1 )"
+#	vala? ( >=dev-lang/vala-0.14:0.14[vapigen] )
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
@@ -82,7 +82,10 @@ pkg_setup() {
 		$(use_with mysql mysql /usr)
 		$(use_with postgres postgres /usr)
 		$(use_enable ssl crypto)
-		$(use_enable vala)"
+		--disable-vala
+		VAPIGEN=$(type -P vapigen-0.14)"
+#		$(use_enable vala)
+	# Disable vala due to https://bugzilla.gnome.org/show_bug.cgi?id=668701
 
 	if use bindist; then
 		# firebird license is not GPL compatible
@@ -128,6 +131,9 @@ src_prepare() {
 	done
 
 	python_convert_shebangs -r 2 libgda-report/RML/trml2{html,pdf}
+
+	# Missing from tarball
+	cp "${FILESDIR}/libgda-${PV}-custom.vala" libgda/libgda-5.0-custom.vala || die
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
