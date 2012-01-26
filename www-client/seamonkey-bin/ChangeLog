@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.114 2012/01/24 23:52:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.115 2012/01/26 15:30:23 nirbheek Exp $
+
+  26 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> seamonkey-bin-2.5.ebuild,
+  seamonkey-bin-2.6.1.ebuild:
+  Remove useless eclass inherit
 
   24 Jan 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
   Take full maintenance of this package now that I am a developer.

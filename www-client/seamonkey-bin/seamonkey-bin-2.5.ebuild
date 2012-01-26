@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.5.ebuild,v 1.4 2011/12/20 08:31:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.5.ebuild,v 1.5 2012/01/26 15:30:23 nirbheek Exp $
 
 EAPI="4"
 
-inherit eutils mozilla-launcher multilib mozextension pax-utils nsplugins fdo-mime gnome2-utils
+inherit eutils multilib mozextension pax-utils nsplugins fdo-mime gnome2-utils
 
 LANGS=(be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it
 ja lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN)
