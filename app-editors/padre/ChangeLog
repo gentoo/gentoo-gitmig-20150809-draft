@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/padre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/ChangeLog,v 1.21 2012/01/24 15:50:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/ChangeLog,v 1.22 2012/01/26 11:32:10 tove Exp $
+
+  26 Jan 2012; Torsten Veller <tove@gentoo.org> -padre-0.840.0.ebuild,
+  -padre-0.860.0.ebuild, -padre-0.880.0.ebuild, -padre-0.900.0.ebuild,
+  padre-0.940.0.ebuild:
+  Drop File-Slurp dependency. Thanks to Sergiy Borodych. Cleanup
 
 *padre-0.940.0 (24 Jan 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/padre-0.940.0.ebuild,v 1.1 2012/01/24 15:50:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/padre-0.940.0.ebuild,v 1.2 2012/01/26 11:32:10 tove Exp $
 
 EAPI=4
 
@@ -46,7 +46,6 @@ RDEPEND="
 	>=virtual/perl-File-Path-2.08
 	>=dev-perl/File-Remove-1.40
 	>=dev-perl/File-ShareDir-1.00
-	dev-perl/File-Slurp
 	>=virtual/perl-File-Spec-3.27.01
 	>=virtual/perl-File-Temp-0.20
 	>=dev-perl/File-Which-1.08
