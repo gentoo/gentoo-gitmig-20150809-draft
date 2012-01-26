@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/gf2x-1.0-r1.ebuild,v 1.2 2012/01/24 09:30:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/gf2x-1.0-r1.ebuild,v 1.3 2012/01/26 08:45:30 jlec Exp $
 
 EAPI=4
 
@@ -15,10 +15,7 @@ SRC_URI="http://gforge.inria.fr/frs/download.php/${PACKAGEID}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-
-IUSE="bindist"
-DEPEND=""
-RDEPEND="${DEPEND}"
+IUSE="bindist static-libs"
 
 src_configure() {
 	local myeconfargs=(
