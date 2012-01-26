@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.954 2012/01/26 13:10:46 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.955 2012/01/26 13:16:36 mpagano Exp $
+
+  26 Jan 2012; Michael Pagano <mpagano@gentoo.org>
+  vanilla-sources-3.0.18.ebuild:
+  Security stablization for root exploit. CVE-2012-0056.
 
 *vanilla-sources-3.0.18 (26 Jan 2012)
 *vanilla-sources-2.6.32.55 (26 Jan 2012)
