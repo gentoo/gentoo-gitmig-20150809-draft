@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.27 2012/01/25 19:06:57 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.28 2012/01/26 07:14:50 ali_bush Exp $
+
+  26 Jan 2012; Alistair Bush <ali_bush@gentoo.org> scala-2.9.1.ebuild:
+  Fix qa warning about old check_reqs function
 
 *scala-2.9.1 (25 Jan 2012)
 
