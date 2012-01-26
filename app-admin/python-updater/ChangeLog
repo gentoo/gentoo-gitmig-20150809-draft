@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/python-updater
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.68 2011/12/30 17:41:45 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.69 2012/01/26 14:18:18 ago Exp $
+
+  26 Jan 2012; Agostino Sarubbo <ago@gentoo.org> python-updater-0.10.ebuild:
+  Stable for amd64, wrt bug #400861
 
   30 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> python-updater-9999.ebuild:
   Synchronize live ebuild with other ebuilds. Patch by Arfrever.
