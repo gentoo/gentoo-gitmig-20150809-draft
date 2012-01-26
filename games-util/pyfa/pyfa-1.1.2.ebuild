@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.ebuild,v 1.1 2011/11/30 18:33:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.2.ebuild,v 1.1 2012/01/26 19:44:51 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
 PYTHON_USE_WITH="sqlite threads"
 
-inherit eutils python
+inherit eutils gnome2-utils python
 
 if [[ ${PV/_rc*/} == ${PV} ]] ; then
 	MY_PV=${PV}-crucible-src
@@ -57,14 +57,23 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins -r staticdata
 	dodoc readme.txt
-	doicon icons/${PN}.png
+	insinto /usr/share/icons/hicolor/32x32/apps
+	doins icons/pyfa.png
+	insinto /usr/share/icons/hicolor/64x64/apps
+	newins icons/pyfa64.png pyfa.png
 	domenu "${FILESDIR}/${PN}.desktop"
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
+	gnome2_icon_cache_update
 	python_mod_optimize ${PN}
 }
 
 pkg_postrm() {
+	gnome2_icon_cache_update
 	python_mod_cleanup ${PN}
 }
