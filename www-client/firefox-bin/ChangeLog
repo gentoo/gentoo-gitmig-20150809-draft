@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.80 2012/01/26 15:01:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.81 2012/01/26 15:24:40 nirbheek Exp $
+
+  26 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-bin-8.0.ebuild,
+  firefox-bin-9.0.1.ebuild:
+  Why the heck were we still calling update_mozilla_launcher_symlinks in
+  pkg_postrm? Nuke it from orbit. Bug 390807
 
   26 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-bin-9.0.1.ebuild:
   Use nsplugins.eclass for creating the plugins symlink, bug 390807
