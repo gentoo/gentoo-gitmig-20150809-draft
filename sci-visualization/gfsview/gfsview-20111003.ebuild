@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-20111003.ebuild,v 1.1 2012/01/23 04:33:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-20111003.ebuild,v 1.2 2012/01/26 22:01:54 mr_bones_ Exp $
 
 EAPI=4
 
@@ -24,7 +24,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}"/${P/-20/-snapshot-}
-
 
 src_configure() {
 	econf $(use_enable static-libs static)
