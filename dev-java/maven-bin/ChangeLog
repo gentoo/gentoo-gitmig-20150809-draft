@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/maven-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.75 2011/12/14 15:43:49 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.76 2012/01/26 16:42:40 fordfrog Exp $
+
+*maven-bin-3.0.4 (26 Jan 2012)
+
+  26 Jan 2012; Miroslav Šulc <fordfrog@gentoo.org> +maven-bin-3.0.4.ebuild:
+  Version bump
 
 *maven-bin-3.0.3-r1 (14 Dec 2011)
 *maven-bin-2.2.1-r1 (14 Dec 2011)
