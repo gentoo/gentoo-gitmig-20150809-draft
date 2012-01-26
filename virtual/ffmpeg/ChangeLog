@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ffmpeg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.20 2011/12/22 11:55:56 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.21 2012/01/26 13:25:27 ssuominen Exp $
+
+  26 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> ffmpeg-0.9.ebuild:
+  Restore ~ppc and ~ppc64 keywording wrt #392269
 
   22 Dec 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.9.ebuild:
   remove keywords that do not have their matching in ffmpeg-0.9 so that itll
