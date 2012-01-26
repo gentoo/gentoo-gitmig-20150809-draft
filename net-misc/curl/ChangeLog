@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.196 2011/12/01 21:11:06 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.197 2012/01/26 19:20:26 vapier Exp $
+
+  26 Jan 2012; Mike Frysinger <vapier@gentoo.org> curl-7.21.4.ebuild,
+  curl-7.21.6.ebuild, curl-7.21.7.ebuild, curl-7.21.7-r2.ebuild,
+  curl-7.22.0.ebuild, curl-7.23.1.ebuild:
+  Add pkgconfig to DEPEND since we use it for many libraries #393067 by Nikoli.
 
   01 Dec 2011; Mike Frysinger <vapier@gentoo.org> curl-7.21.4.ebuild,
   curl-7.21.6.ebuild, curl-7.21.7.ebuild, curl-7.21.7-r2.ebuild,
