@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/alsa-plugins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.140 2011/12/29 21:34:51 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.141 2012/01/26 11:53:24 chainsaw Exp $
+
+*alsa-plugins-1.0.25 (26 Jan 2012)
+
+  26 Jan 2012; Tony Vroon <chainsaw@gentoo.org> -alsa-plugins-1.0.23-r1.ebuild,
+  alsa-plugins-1.0.24.ebuild, +alsa-plugins-1.0.25.ebuild:
+  Version bump, as requested by Mart "leio" Raudsepp on #gentoo-dev. Update
+  alsa-lib dependency to cope with reduced complexity in packaging. Removed old
+  ebuild.
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> alsa-plugins-1.0.24.ebuild:
   Stable for ppc/ppc64; bug #379423
