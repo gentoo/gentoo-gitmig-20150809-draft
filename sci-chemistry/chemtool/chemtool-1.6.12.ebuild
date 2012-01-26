@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.6 2011/05/23 15:18:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.7 2012/01/26 18:38:30 jlec Exp $
 
 EAPI=1
 
@@ -16,8 +16,11 @@ KEYWORDS="amd64 ppc x86"
 IUSE="gnome nls"
 
 RDEPEND="
+	dev-libs/glib:2
 	media-gfx/transfig
 	x11-libs/gtk+:2
+	x11-libs/libX11
+	x11-libs/pango
 	x86? ( media-libs/libemf )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

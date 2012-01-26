@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12-r1.ebuild,v 1.2 2012/01/26 18:38:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.13.ebuild,v 1.1 2012/01/26 18:38:30 jlec Exp $
 
 EAPI=4
 
-inherit autotools eutils
+ AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils eutils
 
 DESCRIPTION="A GTK program for drawing organic molecules"
 HOMEPAGE="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/"
@@ -25,33 +27,29 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PV}-no-underlinking.patch
-	eautoreconf
-}
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
+PATCHES=(
+	"${FILESDIR}"/${PV}-no-underlinking.patch
+	)
 
 src_configure() {
-	local mycppflags
-
-	if use emf; then
-		mycppflags="${mycppflags} -I /usr/include/libEMF"
-	fi
-
-	sed -e "s:\(^CPPFLAGS.*\):\1 ${mycppflags}:" -i Makefile.in || \
-		die "could not append cppflags"
-
-	econf \
-		--without-kdedir \
-		$(use_with gnome gnomedir /usr) \
-		$(use_enable emf) \
+	local myeconfargs=(
+		--without-kdedir
+		$(use_with gnome gnomedir /usr)
+		$(use_enable emf)
+		--enable-undo
 		--enable-menu
+		)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	default
+	autotools-utils_src_install
+
 	insinto /usr/share/${PN}/examples
 	doins "${S}"/examples/*
-	if ! use nls; then rm -rf "${ED}"/usr/share/locale; fi
+	if ! use nls; then rm -rf "${ED}"/usr/share/locale || die; fi
 
 	insinto /usr/share/pixmaps
 	doins chemtool.xpm

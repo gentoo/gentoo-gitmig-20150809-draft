@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/chemtool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.31 2011/05/23 15:18:31 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.32 2012/01/26 18:38:30 jlec Exp $
+
+*chemtool-1.6.13 (26 Jan 2012)
+
+  26 Jan 2012; Justin Lecher <jlec@gentoo.org>
+  +files/1.6.13-no-underlinking.patch, chemtool-1.6.12.ebuild,
+  chemtool-1.6.12-r1.ebuild, +chemtool-1.6.13.ebuild, metadata.xml:
+  Version Bump, #400733; add missing deps
 
 *chemtool-1.6.12-r1 (23 May 2011)
 
