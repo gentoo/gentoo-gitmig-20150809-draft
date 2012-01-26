@@ -3,12 +3,16 @@
 <pkgmetadata>
   <herd>net-p2p</herd>
   <maintainer>
-  	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-  </maintainer>	
+    <email>pva@gentoo.org</email>
+    <name>Peter Volkov</name>
+  </maintainer>
+  <maintainer>
+    <email>ssuominen@gentoo.org</email>
+    <name>Samuli Suominen</name>
+  </maintainer>
   <use>
-    <flag name="ayatana">Enable Ayatana support with <pkg>dev-libs/libappindicator</pkg></flag>
-	<flag name="libcanberra">Enable sound event support with <pkg>media-libs/libcanberra</pkg></flag>
-	<flag name="utp">Adds support for µTP (Micro Transport Protocol)</flag>
+    <flag name='ayatana'>Enable Ayatana support with <pkg>dev-libs/libappindicator</pkg></flag>
+    <flag name='libcanberra'>Enable sound event support with <pkg>media-libs/libcanberra</pkg></flag>
+    <flag name='utp'>Adds support for µTP (Micro Transport Protocol)</flag>
   </use>
 </pkgmetadata>
