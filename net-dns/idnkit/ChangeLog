@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.33 2011/11/27 22:46:13 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.34 2012/01/26 20:34:41 hwoarang Exp $
+
+  26 Jan 2012; Markos Chandras <hwoarang@gentoo.org> idnkit-1.0-r2.ebuild:
+  Stable on amd64 wrt bug #400433
 
   27 Nov 2011; Jeroen Roovers <jer@gentoo.org> idnkit-1.0-r2.ebuild:
   Do not use autotools-utils.eclass (bug #392159).
