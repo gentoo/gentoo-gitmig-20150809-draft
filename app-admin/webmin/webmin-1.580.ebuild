@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.580.ebuild,v 1.1 2012/01/24 20:54:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.580.ebuild,v 1.2 2012/01/26 22:00:54 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -180,7 +180,6 @@ pkg_config(){
 	# 'hard' - deletes all files in $config_dir (keeping the .keep_* Gentoo file)
 	#		  and thus resetting all Webmin. Deletes the specific Webmin cron jobs too.
 	local _reset="none"
-
 
 	# If in interactive mode ask user what should we do
 	if [[ "${INTERACTIVE}" = "yes" ]]; then
