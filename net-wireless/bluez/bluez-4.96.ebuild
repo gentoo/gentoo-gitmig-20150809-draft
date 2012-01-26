@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96.ebuild,v 1.6 2011/10/25 14:23:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96.ebuild,v 1.7 2012/01/26 11:39:09 chainsaw Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ CDEPEND="
 	sys-apps/dbus
 	>=sys-fs/udev-146[extras]
 	alsa? (
-		media-libs/alsa-lib[alsa_pcm_plugins_extplug,alsa_pcm_plugins_ioplug]
+		media-libs/alsa-lib[alsa_pcm_plugins_extplug(+),alsa_pcm_plugins_ioplug(+)]
 		media-libs/libsndfile
 	)
 	caps? ( >=sys-libs/libcap-ng-0.6.2 )

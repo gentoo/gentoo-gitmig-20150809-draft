@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.115 2012/01/23 15:13:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.116 2012/01/26 11:39:09 chainsaw Exp $
+
+  26 Jan 2012; Tony Vroon <chainsaw@gentoo.org> bluez-4.96.ebuild,
+  bluez-4.98.ebuild, bluez-4.98-r1.ebuild:
+  Cope with reduced complexity in alsa-lib 1.0.25 packaging. Signed off by
+  Nirbheek Chauhan & Pacho Ramos.
 
   23 Jan 2012; Agostino Sarubbo <ago@gentoo.org> bluez-4.98-r1.ebuild:
   Stable for amd64, wrt bug #399745
