@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6137 2012/01/26 10:37:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6138 2012/01/26 15:02:34 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask net-misc/hylafax and x11-misc/tkhylafax because lack of support for
+  stable media-libs/tiff >= 4.0.0.
 
   26 Jan 2012; Tony Vroon <chainsaw@gentoo.org> thirdpartymirrors:
   Drop firewalled ftp.silug.org from alsaproject mirror list. Timeouts suck.
