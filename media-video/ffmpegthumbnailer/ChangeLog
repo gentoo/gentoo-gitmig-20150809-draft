@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpegthumbnailer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.129 2011/11/05 18:35:20 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.130 2012/01/26 13:19:03 ssuominen Exp $
+
+  26 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  ffmpegthumbnailer-2.0.7.ebuild:
+  ppc/ppc64 stable wrt #387599
 
   05 Nov 2011; Raúl Porcel <armin76@gentoo.org>
   ffmpegthumbnailer-2.0.7.ebuild:
