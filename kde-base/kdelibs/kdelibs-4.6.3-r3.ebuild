@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r3.ebuild,v 1.9 2012/01/05 09:36:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r3.ebuild,v 1.10 2012/01/26 12:02:11 johu Exp $
 
 EAPI=4
 
@@ -136,7 +136,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.6.3-doublepost.patch"
 	"${FILESDIR}/${PN}-4.6.5-qlabel-1.patch"
 	"${FILESDIR}/${PN}-4.6.5-qlabel-2.patch"
-	"${FILESDIR}/${PN}-4.7.4-xinelib12x.patch"
 )
 
 pkg_pretend() {

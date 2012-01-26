@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.820 2012/01/25 23:01:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.821 2012/01/26 12:02:11 johu Exp $
+
+  26 Jan 2012; Johannes Huber <johu@gentoo.org> kdelibs-4.6.3-r3.ebuild:
+  Drop failing patch, fixes bug #400893.
 
   25 Jan 2012; Johannes Huber <johu@gentoo.org>
   files/kdelibs-4.3.2-solaris-fileunix.patch,
