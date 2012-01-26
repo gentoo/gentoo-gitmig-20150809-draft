@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.50 2012/01/13 22:25:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.51 2012/01/26 00:42:51 lu_zero Exp $
+
+  25 Jan 2012; Luca Barbato <lu_zero@gentoo.org>
+  +files/clang-3.1-fix_cxx_include_root.patch, clang-9999.ebuild:
+  Update live ebuild
 
 *clang-3.0-r1 (13 Jan 2012)
 

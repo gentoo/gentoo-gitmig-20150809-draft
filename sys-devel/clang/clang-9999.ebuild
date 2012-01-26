@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.21 2012/01/13 22:25:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.22 2012/01/26 00:42:51 lu_zero Exp $
 
 EAPI=3
 
@@ -32,14 +32,14 @@ src_unpack() {
 
 src_prepare() {
 	# Same as llvm doc patches
-	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
+#	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
 
 	# multilib-strict
 	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
 		-i tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
 	# Fix cxx_include_root path for Gentoo
-	epatch "${FILESDIR}"/${PN}-3.0-fix_cxx_include_root.patch
+	epatch "${FILESDIR}"/${PN}-3.1-fix_cxx_include_root.patch
 	# fix the static analyzer for in-tree install
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i tools/clang/tools/scan-view/scan-view \
