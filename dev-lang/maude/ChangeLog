@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/maude
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/ChangeLog,v 1.14 2010/06/23 14:24:31 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/ChangeLog,v 1.15 2012/01/26 17:51:48 jlec Exp $
+
+*maude-2.6 (26 Jan 2012)
+
+  26 Jan 2012; Justin Lecher <jlec@gentoo.org> +maude-2.6.ebuild:
+  Version Bump, #399379
 
 *maude-2.5.0 (23 Jun 2010)
 
