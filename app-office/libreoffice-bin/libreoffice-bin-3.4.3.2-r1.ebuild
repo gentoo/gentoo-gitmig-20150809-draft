@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.2-r1.ebuild,v 1.8 2011/11/30 10:17:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.2-r1.ebuild,v 1.9 2012/01/26 03:23:37 floppym Exp $
 
 EAPI=4
 
@@ -121,6 +121,8 @@ REQUIRED_USE="kde? ( !gnome ) gnome? ( !kde )"
 RESTRICT="test strip"
 
 S="${WORKDIR}"
+
+PYTHON_UPDATER_IGNORE="1"
 
 pkg_pretend() {
 	[[ $(gcc-major-version) -lt 4 ]] || \
