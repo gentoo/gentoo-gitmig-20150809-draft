@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-console/389-console-1.1.6.ebuild,v 1.2 2010/10/17 10:10:27 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-console/389-console-1.1.6.ebuild,v 1.3 2012/01/26 18:58:41 lxnay Exp $
 
 EAPI="2"
 
@@ -10,7 +10,8 @@ inherit java-pkg-2 eutils java-ant-2
 
 DESCRIPTION="A Java based console for remote management 389 server"
 HOMEPAGE="http://port389.org/"
-SRC_URI="http://directory.fedoraproject.org/sources/${P}.tar.bz2"
+SRC_URI="http://directory.fedoraproject.org/sources/${P}.tar.bz2
+	http://dev.gentoo.org/~lxnay/${PN}/fedora.png"
 
 LICENSE="LGPL-2.1"
 SLOT="1.1"
@@ -49,6 +50,6 @@ src_install() {
 		--pkg_args "-Djava.util.prefs.systemRoot=\"\$HOME/.${PN}\" -Djava.util.prefs.userRoot=\"\$HOME/.${PN}\"" \
 		|| die
 
-	doicon "${FILESDIR}"/fedora.png || die "doicon failed"
+	doicon "${DISTDIR}"/fedora.png || die "doicon failed"
 	make_desktop_entry ${PN} "Port389 Management Console" fedora System
 }

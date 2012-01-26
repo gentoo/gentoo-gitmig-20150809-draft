@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/389-console
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-console/ChangeLog,v 1.3 2011/08/14 09:29:12 lxnay Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-console/ChangeLog,v 1.4 2012/01/26 18:58:41 lxnay Exp $
+
+  26 Jan 2012; Fabio Erculiani <lxnay@gentoo.org> 389-console-1.1.6.ebuild,
+  389-console-1.1.7.ebuild, -files/fedora.png:
+  move binary files remotely, closes bug #370911
 
 *389-console-1.1.7 (14 Aug 2011)
 
