@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.42-r1.ebuild,v 1.1 2012/01/26 15:46:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.42-r1.ebuild,v 1.2 2012/01/26 22:01:24 mr_bones_ Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2
@@ -55,7 +55,7 @@ pkg_setup() {
 
 src_prepare() {
 	# note: this patchset has useless bits for optionalizing UTP which can be
-	# dropped from next one	
+	# dropped from next one
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patches
 
 	# note: http://trac.transmissionbt.com/ticket/4324
