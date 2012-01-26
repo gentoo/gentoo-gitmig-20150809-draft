@@ -1,13 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.23.ebuild,v 1.10 2011/02/17 17:26:29 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.25.ebuild,v 1.1 2012/01/26 11:49:30 chainsaw Exp $
+
+EAPI=4
 
 PYTHON_DEPEND="python? 2"
 
-inherit eutils libtool python
+inherit autotools base python multilib
 
-MY_P="${P/_rc/rc}"
-S="${WORKDIR}/${MY_P}"
+MY_P=${P/_rc/rc}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -15,48 +17,31 @@ SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-linux ~x86-linux"
-IUSE="doc debug alisp python"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
+IUSE="doc debug alisp python static-libs"
 
-DEPEND=">=media-sound/alsa-headers-${PV}
+DEPEND=">=media-sound/alsa-headers-1.0.25
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 RDEPEND=""
-
-IUSE_PCM_PLUGIN="copy linear route mulaw alaw adpcm rate plug multi shm file
-null empty share meter mmap_emul hooks lfloat ladspa dmix dshare dsnoop asym iec958
-softvol extplug ioplug"
-
-for plugin in ${IUSE_PCM_PLUGIN}; do
-	IUSE="${IUSE} alsa_pcm_plugins_${plugin}"
-done
+PATCHES=( "${FILESDIR}/${PV}-extraneous-cflags.diff" )
 
 pkg_setup() {
-	if [ -z "${ALSA_PCM_PLUGINS}" ] ; then
-		ewarn "You haven't selected _any_ PCM plugins. Either you set it to something like the default"
-		ewarn "(which is being set in the profile UNLESS you unset them) or alsa based applications"
-		ewarn "are going to *misbehave* !"
-		epause 5
-	fi
-
 	if use python; then
 		python_set_active_version 2
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	elibtoolize
+src_prepare() {
+	eautoreconf
 	epunt_cxx
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	use elibc_uclibc && myconf="--without-versioned"
 
 	econf \
-		--enable-static \
+		$(use_enable static-libs static) \
 		--enable-shared \
 		--disable-resmgr \
 		--enable-rawmidi \
@@ -65,11 +50,12 @@ src_compile() {
 		$(use_with debug) \
 		$(use_enable alisp) \
 		$(use_enable python) \
-		--with-pcm-plugins="${ALSA_PCM_PLUGINS}" \
 		--disable-dependency-tracking \
 		${myconf}
+}
 
-	emake || die "make failed"
+src_compile() {
+	emake || die
 
 	if use doc; then
 		emake doc || die "failed to generate docs"
@@ -79,7 +65,10 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${ED}"/usr/$(get_libdir)/alsa-lib -name '*.a' -exec rm -f {} +
 
 	dodoc ChangeLog TODO || die
 	use doc && dohtml -r doc/doxygen/html/*

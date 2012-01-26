@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/alsa-lib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.324 2011/12/29 21:35:32 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.325 2012/01/26 11:49:30 chainsaw Exp $
+
+*alsa-lib-1.0.25 (26 Jan 2012)
+
+  26 Jan 2012; Tony Vroon <chainsaw@gentoo.org>
+  +files/1.0.25-extraneous-cflags.diff, -alsa-lib-1.0.23.ebuild,
+  +alsa-lib-1.0.25.ebuild:
+  Version bump. Do a full eautoreconf to avoid failures with et_EE locale,
+  closes bug #361053 by Mart "leio" Raudsepp. Remove extraneous CFLAGS, closes
+  bug #378653 by Agostino "ago" Sarubbo. Prevent build failures in the library
+  and beyond by not allowing individual plugin control, closes bug #379925 by
+  Myckel Habets. Removed old ebuild.
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> alsa-lib-1.0.24.1.ebuild:
   Stable for ppc/ppc64; bug #379423
