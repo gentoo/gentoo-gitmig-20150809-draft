@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.163 2012/01/25 14:33:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.164 2012/01/26 00:09:52 floppym Exp $
+
+  26 Jan 2012; Mike Gilbert <floppym@gentoo.org>
+  -files/transmission-2.42-natpmp-system.patch:
+  Remove bad patch due to cvs keyword substitution.
 
 *transmission-2.42 (25 Jan 2012)
 
