@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/global
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.93 2011/10/14 00:49:53 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.94 2012/01/26 04:31:17 floppym Exp $
+
+*global-6.2 (26 Jan 2012)
+
+  26 Jan 2012; Mike Gilbert <floppym@gentoo.org> +global-6.2.ebuild:
+  Version bump for Arfrever.
 
 *global-6.1 (14 Oct 2011)
 
