@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.148 2012/01/24 15:16:20 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.149 2012/01/26 14:57:03 ferringb Exp $
+
+  26 Jan 2012; Brian Harring <ferringb@gentoo.org> pkgcore-9999.ebuild:
+  update deps to reference sphinx
 
 *pkgcore-0.7.7.7-r1 (24 Jan 2012)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.6 2011/12/06 11:39:34 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.7 2012/01/26 14:57:03 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -21,7 +21,7 @@ RDEPEND=">=dev-lang/python-2.4
 	=dev-python/snakeoil-9999
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
-	doc? ( >=dev-python/docutils-0.4 dev-python/pyparsing )"
+    dev-python/sphinx dev-python/pyparsing"
 
 DOCS="AUTHORS NEWS"
 
@@ -33,19 +33,7 @@ pkg_setup() {
 
 src_compile() {
 	distutils_src_compile
-
-	if use doc; then
-		python setup.py build_docs || die "doc generation failed"
-		python setup.py build_man || die "man generation failed"
-	fi
-}
-
-src_install() {
-	distutils_src_install
-
-	if use doc; then
-		dohtml -r build/sphinx/html/*
-	fi
+	python setup.py build_man || die "man generation failed"
 }
 
 pkg_postinst() {
