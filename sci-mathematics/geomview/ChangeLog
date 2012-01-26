@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/geomview
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.13 2010/10/10 21:49:01 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.14 2012/01/26 17:10:25 jlec Exp $
+
+  26 Jan 2012; Justin Lecher <jlec@gentoo.org> -geomview-1.9.2.ebuild,
+  geomview-1.9.4.ebuild, -files/geomview.png:
+  Mirror binary file and remove it from FILESDIR, #370879; add missing dies;
+  resorted ebuild
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> geomview-1.9.2.ebuild,
   geomview-1.9.4.ebuild:
