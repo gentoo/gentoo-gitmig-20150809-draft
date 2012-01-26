@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/tanglet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/ChangeLog,v 1.9 2011/12/22 01:19:06 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/ChangeLog,v 1.10 2012/01/26 14:18:44 ago Exp $
+
+  26 Jan 2012; Agostino Sarubbo <ago@gentoo.org> tanglet-1.2.0.ebuild:
+  Stable for amd64, wrt bug #400813
 
 *tanglet-1.2.0 (22 Dec 2011)
 
