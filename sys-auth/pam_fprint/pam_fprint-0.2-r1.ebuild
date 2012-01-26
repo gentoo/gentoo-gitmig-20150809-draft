@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_fprint/pam_fprint-0.2-r1.ebuild,v 1.1 2011/06/16 23:50:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_fprint/pam_fprint-0.2-r1.ebuild,v 1.2 2012/01/26 14:48:14 tomka Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/fprint/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="sys-auth/libfprint
