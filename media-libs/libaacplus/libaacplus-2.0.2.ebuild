@@ -1,9 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2.ebuild,v 1.3 2011/12/07 17:30:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2.ebuild,v 1.4 2012/01/26 13:23:07 ssuominen Exp $
 
 EAPI=4
-
 inherit autotools
 
 # This file cannot be mirrored.
@@ -20,8 +19,9 @@ SRC_URI="http://dev.gentoo.org/~aballier/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~hppa ~x86-fbsd"
 IUSE="bindist fftw static-libs"
+
 RESTRICT="mirror"
 REQUIRED_USE="!bindist"
 
@@ -37,11 +37,12 @@ src_unpack() {
 
 src_prepare() {
 	eautoreconf
-	cp "${DISTDIR}/${TGPPDIST}" "${S}/src/" || die
+	cp "${DISTDIR}/${TGPPDIST}" src/ || die
 }
 
 src_configure() {
-	econf $(use_with fftw fftw3) \
+	econf \
+		$(use_with fftw fftw3) \
 		$(use_enable static-libs static)
 }
 
@@ -51,5 +52,5 @@ src_compile() {
 
 src_install() {
 	default
-	find "${D}" -name '*.la' -delete
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
