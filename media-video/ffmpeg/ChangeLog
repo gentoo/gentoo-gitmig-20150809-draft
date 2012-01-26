@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.520 2012/01/06 12:06:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.521 2012/01/26 13:24:09 ssuominen Exp $
+
+  26 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> ffmpeg-0.9.1.ebuild:
+  Restore ~ppc and ~ppc64 keywording wrt #392269
 
   06 Jan 2012; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.9.ebuild:
   remove old
