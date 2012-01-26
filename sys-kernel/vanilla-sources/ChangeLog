@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.955 2012/01/26 13:16:36 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.956 2012/01/26 13:19:09 mpagano Exp $
+
+  26 Jan 2012; Michael Pagano <mpagano@gentoo.org>
+  -vanilla-sources-3.0.6.ebuild, -vanilla-sources-3.0.16.ebuild,
+  -vanilla-sources-3.0.17.ebuild:
+  Remove vulnerable kernel versions. CVE-2012-0056. Bug #399243.
 
   26 Jan 2012; Michael Pagano <mpagano@gentoo.org>
   vanilla-sources-3.0.18.ebuild:
