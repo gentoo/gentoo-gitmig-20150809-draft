@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.76 2012/01/26 11:53:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.77 2012/01/26 20:17:49 swegener Exp $
+
+*pdns-2.9.22.6 (26 Jan 2012)
+
+  26 Jan 2012; Sven Wegener <swegener@gentoo.org> +pdns-2.9.22.6.ebuild:
+  Bugfix bump for 2.9.22.
 
   26 Jan 2012; Agostino Sarubbo <ago@gentoo.org> pdns-3.0.1.ebuild:
   Stable for AMD64, wrt security bug #398403
