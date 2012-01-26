@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1_rc3.ebuild,v 1.2 2012/01/09 20:54:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1_rc5.ebuild,v 1.1 2012/01/26 13:21:27 eras Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
 major_dash_minor="$( replace_version_separator 1 - ${major_minor} )"
 sieve_version="0.3.0"
-sieve_snapshot="d17f4a699ad2"
+sieve_snapshot="bc5acd9e957e"
 SRC_URI="http://www.dovecot.org/releases/${major_minor}/rc/${MY_P}.tar.gz
 	sieve? (
 	http://hg.rename-it.nl/${PN}-${major_minor}-pigeonhole/archive/${sieve_snapshot}.tar.bz2 \
@@ -48,7 +48,6 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	elog "${PN}-${major_minor}-pigeonhole-${sieve_snapshot}.tar.bz2"
 	if use managesieve && ! use sieve; then
 		ewarn "managesieve USE flag selected but sieve USE flag unselected"
 		ewarn "sieve USE flag will be turned on"
