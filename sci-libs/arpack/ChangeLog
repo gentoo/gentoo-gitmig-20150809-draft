@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.33 2012/01/23 15:29:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.34 2012/01/26 10:52:12 jlec Exp $
+
+*arpack-3.0.2 (26 Jan 2012)
+
+  26 Jan 2012; Justin Lecher <jlec@gentoo.org> +arpack-3.0.2.ebuild,
+  metadata.xml:
+  version Bump and new upstream, bundles mostly all downstream patches, old
+  upstream is dead
 
   23 Jan 2012; Tobias Klausmann <klausman@gentoo.org> arpack-96-r3.ebuild:
   Stable on alpha, bug #388475
