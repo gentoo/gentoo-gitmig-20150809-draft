@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/s3fs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.13 2011/08/31 05:06:24 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.14 2012/01/26 20:37:10 hwoarang Exp $
+
+  26 Jan 2012; Markos Chandras <hwoarang@gentoo.org> s3fs-1.61.ebuild:
+  Stable on amd64 wrt bug #400509
 
   31 Aug 2011; Tim Harder <radhermit@gentoo.org> -s3fs-0_p177-r1.ebuild,
   -files/s3fs-0_p177-asneeded.patch, -s3fs-1.33.ebuild, -s3fs-1.40.ebuild:
