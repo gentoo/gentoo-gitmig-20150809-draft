@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.8.0.ebuild,v 1.1 2012/01/25 18:17:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.8.0-r1.ebuild,v 1.1 2012/01/26 16:54:08 johu Exp $
 
 EAPI=4
 
@@ -30,6 +30,8 @@ add_blocker libkdepim
 add_blocker libkleo
 add_blocker libkpgp
 add_blocker kaddressbook '<4.4.90'
+# kdepim-wizards removed since 4.8.0
+add_blocker kdepim-wizards
 add_blocker kmail '<4.4.80'
 add_blocker korganizer '<4.5.67'
 
