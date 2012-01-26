@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.19 2012/01/13 17:18:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.20 2012/01/26 17:33:31 xarthisius Exp $
+
+*hwloc-1.4 (26 Jan 2012)
+
+  26 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> +hwloc-1.4.ebuild:
+  Version bump
 
   13 Jan 2012; Mike Frysinger <vapier@gentoo.org> hwloc-1.3.1.ebuild:
   Use common tc-getPKG_CONFIG helper.
