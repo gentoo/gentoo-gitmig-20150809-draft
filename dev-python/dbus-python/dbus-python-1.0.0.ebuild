@@ -1,13 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.0.0.ebuild,v 1.3 2012/01/25 21:14:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.0.0.ebuild,v 1.4 2012/01/26 03:40:12 floppym Exp $
 
-EAPI=4
-
-PYTHON_DEPEND="2:2.6 3:3.2"
+EAPI="4"
+PYTHON_DEPEND="2:2.6 3"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.0 3.1 *-jython *-pypy-*"
-PYTHON_TESTS_RESTRICTED_ABIS="2.4 2.5 3.0 3.1"
+RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython *-pypy-*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit python
@@ -21,31 +19,28 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
-RDEPEND=">=dev-libs/dbus-glib-0.98
-	>=sys-apps/dbus-1.4.16"
+RDEPEND=">=dev-libs/dbus-glib-0.70
+	>=sys-apps/dbus-1.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( =dev-python/epydoc-3* )
 	test? (
 		dev-python/pygobject:2
 		dev-python/pygobject:3
-		)"
+	)"
 
 src_prepare() {
-	# Disable compiling of .pyc files.
-	>py-compile
+	# Fix tests with Python 3.1.
+	sed -e 's/if sys.version_info\[:2\] >= (2, 7):/if sys.version_info[:2] == (2, 7) or sys.version_info[:2] >= (3, 2):/' -i test/test-standalone.py || die "sed failed"
 
-	# Simple sed to avoid an eautoreconf
-	# bug #363679, https://bugs.freedesktop.org/show_bug.cgi?id=43735
-	sed -i -e 's/\(RST2HTMLFLAGS=\)$/\1--input-encoding=UTF-8/' configure || die
-
+	python_clean_py-compile_files
 	python_src_prepare
 }
 
 src_configure() {
 	configuration() {
 		econf \
-			--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+			--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 			--disable-html-docs \
 			$(use_enable doc api-docs)
 	}
