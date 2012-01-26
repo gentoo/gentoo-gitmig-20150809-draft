@@ -1,15 +1,16 @@
 # ChangeLog for sys-apps/haveged
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.9 2012/01/26 19:53:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.10 2012/01/26 23:26:58 darkside Exp $
+
+  26 Jan 2012; Jeremy Olexa <darkside@gentoo.org> haveged-1.1.ebuild,
+  haveged-1.2.ebuild, haveged-1.3a.ebuild:
+  Revert: add ~arm, works on armv7
 
 *haveged-1.3a (26 Jan 2012)
 
   26 Jan 2012; Jeremy Olexa <darkside@gentoo.org> -haveged-1.01.ebuild,
   +haveged-1.3a.ebuild:
   Version bump from upstream, includes a non-daemon mode
-
-  26 Jan 2012; Jeremy Olexa <darkside@gentoo.org> haveged-1.2.ebuild:
-  add ~arm, works on armv7
 
 *haveged-1.2 (17 Oct 2011)
 
