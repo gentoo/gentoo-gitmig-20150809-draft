@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0-r1.ebuild,v 1.1 2012/01/23 21:15:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0-r2.ebuild,v 1.1 2012/01/26 19:01:15 slyfox Exp $
 
 EAPI=4
 
@@ -63,18 +63,22 @@ RDEPEND="
 	)
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
-	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
+	qemu-ifup? (
+		sys-apps/iproute2
+		net-misc/bridge-utils
+	)
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
-	spice? ( >=app-emulation/spice-0.9.0
-			>=app-emulation/spice-protocol-0.8.1 )
+	spice? (
+		>=app-emulation/spice-0.9.0
+		>=app-emulation/spice-protocol-0.8.1
+	)
 	ssl? ( net-libs/gnutls )
 	usbredir? ( sys-apps/usbredir )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
 	xen? ( app-emulation/xen-tools )
-
 "
 
 DEPEND="${RDEPEND}
@@ -122,6 +126,11 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# bug #400595 / CVE-2012-0029
+	epatch "${FILESDIR}"/qemu-kvm-1.0-e1000-bounds-packet-size-against-buffer-size.patch
+
+	# prevent docs to get automatically installed
+	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
 	# Alter target makefiles to accept CFLAGS set via flag-o
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
@@ -218,10 +227,7 @@ src_configure() {
 }
 
 src_install() {
-	emake \
-		DESTDIR="${D}" \
-		docdir="${EPREFIX}"/usr/share/doc/"${PF}" \
-	    install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	if [[ -n ${softmmu_targets} ]]; then
 		if use qemu-ifup; then
@@ -229,6 +235,10 @@ src_install() {
 			doexe "${FILESDIR}"/qemu-if{up,down}
 		fi
 	fi
+
+	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
+	newdoc pc-bios/README README.pc-bios || die
+	dohtml qemu-doc.html qemu-tech.html || die
 }
 
 pkg_postinst() {

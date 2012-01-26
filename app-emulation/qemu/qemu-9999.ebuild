@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.12 2012/01/23 21:34:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.13 2012/01/26 19:01:15 slyfox Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.qemu.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses nss
+IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg kvm ncurses nss
 opengl png pulseaudio qemu-ifup rbd sasl sdl spice ssl static threads usbredir vde
 +vhost-net xattr xen"
 
@@ -123,9 +123,13 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 
 pkg_setup() {
 	use qemu_softmmu_targets_x86_64 || ewarn "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
+
+	use kvm && ewarn "You have enabled USE=kvm feature. Please consider using app-emulation/qemu-kvm"
 }
 
 src_prepare() {
+	# prevent docs to get automatically installed
+	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
 	# Alter target makefiles to accept CFLAGS set via flag-o
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
@@ -206,7 +210,7 @@ src_configure() {
 		--sysconfdir="${EPREFIX}"/etc \
 		--disable-strip \
 		--disable-werror \
-		--disable-kvm \
+		$(use_enable kvm) \
 		--disable-libiscsi \
 		--enable-nptl \
 		--enable-uuid \
@@ -222,10 +226,7 @@ src_configure() {
 }
 
 src_install() {
-	emake \
-		DESTDIR="${D}" \
-		docdir="${EPREFIX}"/usr/share/doc/"${PF}" \
-	    install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	if [[ -n ${softmmu_targets} ]]; then
 		if use qemu-ifup; then
@@ -233,6 +234,10 @@ src_install() {
 			doexe "${FILESDIR}"/qemu-if{up,down}
 		fi
 	fi
+
+	dodoc Changelog MAINTAINERS TODO pci-ids.txt
+	newdoc pc-bios/README README.pc-bios
+	dohtml qemu-doc.html qemu-tech.html
 }
 
 pkg_postinst() {
