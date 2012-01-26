@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.0.0.ebuild,v 1.4 2012/01/26 03:40:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.0.0.ebuild,v 1.5 2012/01/26 08:01:59 ssuominen Exp $
 
-EAPI="4"
+EAPI=4
+
 PYTHON_DEPEND="2:2.6 3"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython *-pypy-*"
@@ -19,15 +20,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
-RDEPEND=">=dev-libs/dbus-glib-0.70
-	>=sys-apps/dbus-1.4"
+RDEPEND=">=dev-libs/dbus-glib-0.98
+	>=sys-apps/dbus-1.4.16"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( =dev-python/epydoc-3* )
 	test? (
 		dev-python/pygobject:2
 		dev-python/pygobject:3
-	)"
+		)"
 
 src_prepare() {
 	# Fix tests with Python 3.1.
@@ -40,7 +41,7 @@ src_prepare() {
 src_configure() {
 	configuration() {
 		econf \
-			--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+			--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 			--disable-html-docs \
 			$(use_enable doc api-docs)
 	}
