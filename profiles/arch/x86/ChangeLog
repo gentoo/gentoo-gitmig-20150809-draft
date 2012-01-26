@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.90 2012/01/17 20:25:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.91 2012/01/26 14:50:44 tomka Exp $
+
+  26 Jan 2012; Thomas Kahle <tomka@gentoo.org> package.use.mask:
+  unmask fprint for gdm-3 per bug 390345
 
   17 Jan 2012; Doug Goldstein <cardoe@gentoo.org> package.use.mask:
   Mask the spice USE flag on app-emulation/qemu-kvm since the SPICE server

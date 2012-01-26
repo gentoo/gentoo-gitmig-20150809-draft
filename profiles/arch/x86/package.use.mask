@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.76 2012/01/17 20:25:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.77 2012/01/26 14:50:44 tomka Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -21,11 +21,6 @@ media-video/transcode -nuv -pic
 # JavaScriptCore JIT is supported only on amd64/arm/x86,
 # so it's masked in base profile and unmasked here
 >=x11-libs/qt-webkit-4.7 -jit
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
-# Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
-# bug #390345
->=gnome-base/gdm-3 fprint
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Nov 2011)
 # Expose USE="suid" for USE="svga" only for x86 users,
