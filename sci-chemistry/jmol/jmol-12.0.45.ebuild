@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.0.45.ebuild,v 1.1 2011/06/28 10:17:13 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.0.45.ebuild,v 1.2 2012/01/26 17:34:04 jlec Exp $
 
 EAPI=1
 WEBAPP_OPTIONAL="yes"
@@ -9,16 +9,17 @@ inherit eutils webapp java-pkg-2 java-ant-2
 
 MY_P=Jmol
 
-DESCRIPTION="Jmol is a java molecular viever for 3-D chemical structures."
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}-${PV}-full.tar.gz"
+DESCRIPTION="Java molecular viever for 3-D chemical structures"
 HOMEPAGE="http://jmol.sourceforge.net/"
-KEYWORDS="~amd64 ~x86"
-LICENSE="LGPL-2.1"
-
-IUSE="client-only vhosts"
+SRC_URI="
+	mirror://sourceforge/${PN}/${MY_P}-${PV}-full.tar.gz
+	http://dev.gentoo.org/~jlec/distfiles/${PN}-selfSignedCertificate.store.tar"
 
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
+LICENSE="LGPL-2.1"
+IUSE="client-only vhosts"
 
 COMMON_DEP="dev-java/commons-cli:1
 	dev-java/itext:0
@@ -32,24 +33,19 @@ DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
 
 pkg_setup() {
-
-	if ! use client-only ; then
-		webapp_pkg_setup || die "Failed to setup webapp"
-	fi
-
+	use client-only || webapp_pkg_setup
 	java-pkg-2_pkg_setup
-
 }
 
 src_unpack() {
-
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}/${PN}-nointl.patch
-	epatch "${FILESDIR}"/${PV}/${PN}-manifest.patch
+	epatch \
+		"${FILESDIR}"/${PV}/${PN}-nointl.patch \
+		"${FILESDIR}"/${PV}/${PN}-manifest.patch
 
 	mkdir "${S}"/selfSignedCertificate || die "Failed to create Cert directory."
-	cp "${FILESDIR}"/selfSignedCertificate.store "${S}"/selfSignedCertificate/ \
+	cp "${WORKDIR}"/selfSignedCertificate.store "${S}"/selfSignedCertificate/ \
 		|| die "Failed to install Cert file."
 
 	rm -v "${S}"/*.jar "${S}"/plugin-jars/*.jar || die
@@ -76,7 +72,6 @@ src_compile() {
 }
 
 src_install() {
-
 	java-pkg_dojar build/Jmol.jar
 	dohtml -r  build/doc/* || die "Failed to install html docs."
 	dodoc *.txt doc/*license* || die "Failed to install licenses."
@@ -106,17 +101,9 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	if ! use client-only ; then
-		webapp_pkg_postinst || die "webapp_pkg_postinst failed"
-	fi
-
+	use client-only || webapp_pkg_postinst
 }
 
 pkg_prerm() {
-
-	if ! use client-only ; then
-		webapp_pkg_prerm || die "webapp_pkg_prerm failed"
-	fi
-
+	use client-only || webapp_pkg_prerm
 }
