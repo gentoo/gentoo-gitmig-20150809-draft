@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.119 2012/01/25 17:34:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.120 2012/01/26 11:08:13 nirbheek Exp $
+
+  26 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-9.0.ebuild:
+  Fix access violations due to proprietary drivers + pgo (AGAIN). See bug
+  394715 .
 
   25 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> firefox-9.0.ebuild:
   Restore ~ppc64 keywording with USE crashreporter masked in
