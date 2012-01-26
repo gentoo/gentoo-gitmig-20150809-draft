@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/rpcbind
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.17 2011/12/28 15:56:31 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.18 2012/01/26 01:02:24 vapier Exp $
+
+  26 Jan 2012; Mike Frysinger <vapier@gentoo.org> rpcbind-0.2.0.ebuild,
+  rpcbind-9999.ebuild:
+  Add USE=tcpd support #400607 by Tor.
 
   28 Dec 2011; <swift@gentoo.org> rpcbind-0.2.0.ebuild:
   Add selinux dependency for selinux-rpcbind

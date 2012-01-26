@@ -1,13 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0.ebuild,v 1.12 2011/12/28 15:56:31 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0.ebuild,v 1.13 2012/01/26 01:02:24 vapier Exp $
 
 EAPI="2"
 
 inherit autotools
+
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.infradead.org/~steved/rpcbind.git"
-	inherit autotools git
+	inherit autotools git-2
 	SRC_URI=""
 	#KEYWORDS=""
 else
@@ -20,10 +21,11 @@ HOMEPAGE="http://sourceforge.net/projects/rpcbind/"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="selinux"
+IUSE="selinux tcpd"
 
 RDEPEND="net-libs/libtirpc
-	selinux? ( sec-policy/selinux-rpcbind )"
+	selinux? ( sec-policy/selinux-rpcbind )
+	tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -37,7 +39,9 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --bindir=/sbin
+	econf \
+		--bindir=/sbin \
+		$(use_enable tcpd libwrap)
 }
 
 src_install() {
