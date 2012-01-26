@@ -1,31 +1,35 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.7.4.ebuild,v 1.1 2012/01/20 05:52:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.7.4.ebuild,v 1.2 2012/01/26 19:40:13 jlec Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=yes
-inherit eutils autotools autotools-utils
+
+inherit autotools-utils eutils
 
 MY_PN=CHOLMOD
 PPV=1.7.0
 
 DESCRIPTION="Sparse Cholesky factorization and update/downdate library"
-HOMEPAGE="http://www.cise.ufl.edu/research/sparse/cholmod"
-SRC_URI="http://www.cise.ufl.edu/research/sparse/${PN}/${MY_PN}-${PV}.tar.gz
+HOMEPAGE="http://www.cise.ufl.edu/research/sparse/cholmod/"
+SRC_URI="
+	http://www.cise.ufl.edu/research/sparse/${PN}/${MY_PN}-${PV}.tar.gz
 	mirror://gentoo/${PN}-${PPV}-autotools.patch.bz2"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
-IUSE="doc metis minimal static-libs +supernodal"
+IUSE="debug doc metis minimal static-libs +supernodal"
 
-RDEPEND="supernodal? ( virtual/lapack )
+RDEPEND="
 	sci-libs/amd
 	sci-libs/colamd
-	metis? ( sci-libs/camd
-			 sci-libs/ccolamd
-			 || ( sci-libs/metis sci-libs/parmetis ) )"
+	metis? (
+		sci-libs/camd
+		sci-libs/ccolamd
+		|| ( sci-libs/metis sci-libs/parmetis ) )
+	supernodal? ( virtual/lapack )"
 
 DEPEND="${RDEPEND}
 	supernodal? ( dev-util/pkgconfig )
@@ -39,6 +43,7 @@ src_prepare() {
 	cd "${WORKDIR}"
 	epatch "${WORKDIR}"/${PN}-${PPV}-autotools.patch
 	cd "${S}"
+	use debug && epatch "${FILESDIR}"/${P}-debug.patch
 	# We need to take care of cholmod.h here as well depending on
 	# the USE flags, otherwise the installed file will reference
 	# headers that we may not have included.
