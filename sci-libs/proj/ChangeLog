@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/proj
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.31 2011/08/03 16:23:10 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.32 2012/01/26 18:12:58 bicatali Exp $
+
+*proj-4.7.0-r1 (26 Jan 2012)
+
+  26 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +proj-4.7.0-r1.ebuild,
+  +files/proj-4.7.0-robinson.patch:
+  Patch for Robinson projections thanks Jean-Claude Repetto bug #394427,
+  switched to EAPI4
 
   03 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org>
   -files/proj-4.4.7-gentoo.patch, -proj-4.4.9.ebuild, -proj-4.5.0.ebuild,
