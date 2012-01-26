@@ -1,6 +1,13 @@
 # ChangeLog for games-kids/gcompris
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.70 2011/12/21 07:21:29 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.71 2012/01/26 15:42:53 mr_bones_ Exp $
+
+*gcompris-12.01 (26 Jan 2012)
+
+  26 Jan 2012; Michael Sterrett <mr_bones_@gentoo.org> -gcompris-11.12.ebuild,
+  -files/gcompris-11.12-build.patch, +gcompris-12.01.ebuild,
+  +files/gcompris-12.01-build.patch:
+  version bump
 
 *gcompris-11.12 (21 Dec 2011)
 
