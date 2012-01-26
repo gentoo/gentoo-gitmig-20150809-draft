@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-1.8.4.3.1.5-r1.ebuild,v 1.1 2012/01/03 13:07:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-1.8.4.3.1.5-r2.ebuild,v 1.1 2012/01/26 10:02:37 chainsaw Exp $
 
 EAPI="4"
 
@@ -11,9 +11,9 @@ HOMEPAGE="http://store.digium.com/productview.php?product_code=G729CODEC"
 
 BENCH_PV=1.0.8
 
-AST_DPV=1.8.7
-AST_PV=1.8.7
+AST_PV=$(get_version_component_range 1-3)
 MY_PV=$(replace_version_separator 3 _)
+AST_NEXT_PV=10.0
 
 SRC_URI="x86? (
 	http://downloads.digium.com/pub/telephony/codec_g729/asterisk-${AST_PV}/x86-32/codec_g729a-${MY_PV}-athlon_32.tar.gz
@@ -55,7 +55,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND} =net-misc/asterisk-${AST_DPV-${AST_PV}}*"
+RDEPEND="${DEPEND}
+	>=net-misc/asterisk-${AST_PV}
+	<net-misc/asterisk-${AST_NEXT_PV}"
 
 RESTRICT="mirror strip"
 
