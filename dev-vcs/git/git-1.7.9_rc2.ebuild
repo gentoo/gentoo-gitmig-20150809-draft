@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9_rc2.ebuild,v 1.2 2012/01/21 21:54:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9_rc2.ebuild,v 1.3 2012/01/27 04:20:21 mr_bones_ Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+blksha1 +curl cgi doc emacs gtk iconv +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion"
+IUSE="+blksha1 +curl cgi doc emacs gtk iconv +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test"
 
 # Common to both DEPEND and RDEPEND
 CDEPEND="
