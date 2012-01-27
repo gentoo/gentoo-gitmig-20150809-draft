@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfsidmap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.35 2011/09/02 18:34:41 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.36 2012/01/27 15:48:55 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libnfsidmap-0.24.ebuild:
+  Stable for amd64, wrt bug #400441
 
 *libnfsidmap-0.24 (02 Sep 2011)
 
