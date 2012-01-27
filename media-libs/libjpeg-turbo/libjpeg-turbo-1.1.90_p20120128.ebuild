@@ -1,19 +1,26 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.90_p20120128.ebuild,v 1.2 2012/01/27 23:06:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.90_p20120128.ebuild,v 1.3 2012/01/27 23:23:35 ssuominen Exp $
+
+# http://libjpeg-turbo.svn.sourceforge.net/viewvc/libjpeg-turbo/branches/1.2.x/?view=tar
 
 EAPI=4
-JPEG_ABI=8
-inherit autotools java-pkg-opt-2 libtool toolchain-funcs
 
-DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
-HOMEPAGE="http://libjpeg-turbo.virtualgl.org/ http://sourceforge.net/projects/libjpeg-turbo/"
+unset _inherits
+
+JPEG_ABI=8
 
 if [[ ${PV} == *_p20* ]]; then
 	SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+	_inherits=autotools
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 fi
+
+inherit ${_inherits} java-pkg-opt-2 libtool toolchain-funcs
+
+DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
+HOMEPAGE="http://libjpeg-turbo.virtualgl.org/ http://sourceforge.net/projects/libjpeg-turbo/"
 SRC_URI="${SRC_URI}
 	mirror://debian/pool/main/libj/libjpeg${JPEG_ABI}/libjpeg${JPEG_ABI}_${JPEG_ABI}c-2.debian.tar.gz"
 
@@ -36,8 +43,11 @@ DEPEND="${COMMON_DEPEND}
 DOCS="*.txt change.log example.c README"
 
 src_prepare() {
-	eautoreconf
-	#elibtoolize # note: for fbsd and prefix
+	if [[ -x ./configure ]]; then
+		elibtoolize
+	else
+		eautoreconf
+	fi
 	java-pkg-opt-2_src_prepare
 }
 
