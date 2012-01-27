@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13427 2012/01/27 14:45:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13428 2012/01/27 14:58:56 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -747,12 +747,6 @@ sci-chemistry/webmo
 # Mask perl-5.14. See tracker bug #356171
 =dev-lang/perl-5.14*
 
-# Stuart Longland <redhatter@gentoo.org> (17 Jun 2011)
-# Masked for removal within 30 days.  Will be replacing it with updated
-# ebuilds to address numerous issues.  See bugs #336993, #336199, #369881
-# and #335307.
-=media-radio/svxlink-090426
-
 # Eray Aslan <eras@gentoo.org> (15 Jun 2011)
 # Mask experimental software
 =mail-mta/postfix-2.9*
@@ -787,11 +781,6 @@ dev-lang/open64
 # development branch of argus/-clients
 =net-analyzer/argus-3.0.5*
 =net-analyzer/argus-clients-3.0.5*
-
-# Daniel Gryniewicz <dang@gentoo.org> (13 Apr 2011)
-# Masked for removal in 30 days. Functionality is merged into and maintained in
-# the upstream kernel.  Use any kernel (e.g. gentoo-sources) instead.
-sys-kernel/usermode-sources
 
 # Patrick Lauer <patrick@gentoo.org> (12 Apr 2011)
 # lacks most features and sanity, waiting for upstream to improve it
