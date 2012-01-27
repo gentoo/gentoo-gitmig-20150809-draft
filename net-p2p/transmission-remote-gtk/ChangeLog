@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/transmission-remote-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/ChangeLog,v 1.3 2012/01/24 23:44:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/ChangeLog,v 1.4 2012/01/27 06:24:58 jdhore Exp $
+
+*transmission-remote-gtk-1.0 (27 Jan 2012)
+
+  27 Jan 2012; Jeff Horelick <jdhore@gentoo.org>
+  +transmission-remote-gtk-1.0.ebuild, -transmission-remote-gtk-0.6.ebuild,
+  metadata.xml:
+  Version bump and remove old.
 
   24 Jan 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
   Take full maintenance of this package now that I am a developer.

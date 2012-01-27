@@ -5,4 +5,12 @@
 		<email>jdhore@gentoo.org</email>
 		<name>Jeff Horelick</name>
 	</maintainer>
+	<use>
+	<flag name="ayatana">Enable Unity Menu support via
+	        <pkg>dev-libs/libappindicate</pkg></flag>
+	<flag name="libproxy">Use <pkg>net-libs/libproxy</pkg> for 
+			getting the HTTP/HTTPS/SOCKS proxy configuration.</flag>
+	<flag name="unique">Enable single instance support using
+			<pkg>dev-libs/libunique</pkg></flag>
+	</use>
 </pkgmetadata>

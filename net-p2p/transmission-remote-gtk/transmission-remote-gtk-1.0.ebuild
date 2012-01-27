@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/transmission-remote-gtk-0.6.ebuild,v 1.1 2011/09/18 06:35:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/transmission-remote-gtk-1.0.ebuild,v 1.1 2012/01/27 06:24:58 jdhore Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -12,12 +12,13 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug geoip"
+IUSE="ayatana debug geoip libnotify libproxy unique"
 
 RDEPEND=">=dev-libs/glib-2.22:2
 	>=dev-libs/json-glib-0.12.2
-	dev-libs/libunique:1
-	net-libs/libproxy
+	ayatana? ( dev-libs/libappindicator )
+	unique? ( dev-libs/libunique:1 )
+	libproxy? ( net-libs/libproxy )
 	net-misc/curl
 	>=x11-libs/gtk+-2.16:2
 	x11-libs/libnotify
@@ -29,9 +30,14 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS README )
 
 src_configure() {
+	# disable gtk3 for now because upstream doesn't consider it "ready".
 	econf \
 		$(use_enable debug) \
-		$(use_with geoip libgeoip)
+		$(use_with geoip libgeoip) \
+		$(use_with ayatana libappindicator) \
+		$(use_with libproxy) \
+		$(use_with unique libunique) \
+		--disable-gtk3
 }
 
 pkg_preinst() {	gnome2_icon_savelist; }
