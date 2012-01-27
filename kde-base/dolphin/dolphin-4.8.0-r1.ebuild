@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.8.0.ebuild,v 1.1 2012/01/25 18:17:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.8.0-r1.ebuild,v 1.1 2012/01/27 09:01:13 johu Exp $
 
 EAPI=4
 
@@ -34,6 +34,10 @@ KMLOADLIBS="libkonq"
 
 RESTRICT="test"
 # bug 393129
+
+PATCHES=(
+	"${FILESDIR}/${P}-fix-selection.patch"
+)
 
 src_configure() {
 	mycmakeargs=(

@@ -1,0 +1,23 @@
+commit 84a9cc4bf6e9decc4c102102c4b04162369eb0fe
+Author: Frank Reininghaus <frank78ac@googlemail.com>
+Date:   Mon Jan 23 19:28:21 2012 +0100
+
+    Make sure that Control+click toggles the selection state
+    
+    This commit fixes a regression caused by the recent commit
+    9f711b5f2e1d1fd856cd6b033e6adb96f9b46d8a.
+    BUG: 292250
+
+diff --git a/dolphin/src/kitemviews/kitemlistcontroller.cpp b/dolphin/src/kitemviews/kitemlistcontroller.cpp
+index 0f22d70..560d160 100644
+--- a/dolphin/src/kitemviews/kitemlistcontroller.cpp
++++ b/dolphin/src/kitemviews/kitemlistcontroller.cpp
+@@ -471,7 +471,7 @@ bool KItemListController::mousePressEvent(QGraphicsSceneMouseEvent* event, const
+                                 (!shiftOrControlPressed && !pressedItemAlreadySelected);
+     if (clearSelection) {
+         m_selectionManager->clearSelection();
+-    } else if (pressedItemAlreadySelected && (event->buttons() & Qt::LeftButton)) {
++    } else if (pressedItemAlreadySelected && !shiftOrControlPressed && (event->buttons() & Qt::LeftButton)) {
+         // The user might want to start dragging multiple items, but if he clicks the item
+         // in order to trigger it instead, the other selected items must be deselected.
+         // However, we do not know yet what the user is going to do.
