@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.106 2012/01/27 11:45:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.107 2012/01/27 13:37:54 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> wicd-1.7.1_pre20120127.ebuild:
+  Stable for AMD64, wrt security bug #401005
 
   27 Jan 2012; <anarchy@gentoo.org> wicd-1.7.1_pre20120127.ebuild:
   Give the option for a mac4lin icon theme
