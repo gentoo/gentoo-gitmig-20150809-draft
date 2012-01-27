@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstyles
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.109 2012/01/27 19:02:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.110 2012/01/27 19:03:05 dilfridge Exp $
+
+  27 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
+  Make new revision to force rebuild with qt upgrade to qt-4.8
 
 *kstyles-4.7.4-r10 (27 Jan 2012)
 
