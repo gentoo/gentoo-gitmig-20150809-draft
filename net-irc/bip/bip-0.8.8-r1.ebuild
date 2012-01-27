@@ -1,28 +1,31 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.5-r1.ebuild,v 1.3 2010/09/10 10:49:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.8-r1.ebuild,v 1.1 2012/01/27 17:07:03 a3li Exp $
 
 EAPI="2"
 inherit eutils autotools
 
-DESCRIPTION="Multiuser IRC proxy with ssl support"
-HOMEPAGE="http://bip.t1r.net/"
-SRC_URI="http://bip.t1r.net/downloads/${P}.tar.gz"
+DESCRIPTION="Multiuser IRC proxy with SSL support"
+HOMEPAGE="http://bip.milkypond.org/"
+SRC_URI="ftp://ftp.duckcorp.org/bip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug freenode noctcp ssl vim-syntax oidentd"
 
-DEPEND="ssl? ( dev-libs/openssl )"
+DEPEND="sys-devel/flex
+	virtual/yacc
+	ssl? ( dev-libs/openssl )"
+
 RDEPEND="${DEPEND}
-	vim-syntax? ( || ( app-editors/vim
-	app-editors/gvim ) )
+	vim-syntax? (
+		|| ( app-editors/vim app-editors/gvim ) )
 	oidentd? ( >=net-misc/oidentd-2.0 )"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-configure.patch" || die
-	epatch "${FILESDIR}/${PN}-CVE-2010-3071.patch" || die
+	epatch "${FILESDIR}/${P}-configure.patch" || die
+	epatch "${FILESDIR}/${PN}-CVE-2012-0806.patch" || die
 
 	eautoreconf
 

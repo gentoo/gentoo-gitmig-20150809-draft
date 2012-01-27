@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/bip
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.22 2011/10/25 16:42:55 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.23 2012/01/27 17:07:03 a3li Exp $
+
+*bip-0.8.8-r1 (27 Jan 2012)
+
+  27 Jan 2012; Alex Legler <a3li@gentoo.org> -bip-0.8.5-r1.ebuild,
+  +bip-0.8.8-r1.ebuild, -files/bip-CVE-2010-3071.patch,
+  +files/bip-CVE-2012-0806.patch, -files/bip-configure.patch:
+  Revbump for security bug 400599, fixing CVE-2012-0806. Depend on yacc and
+  flex, bug 397405. Remove unneeded vulnerable version.
 
   25 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bip-0.8.8.ebuild:
   x86 stable wrt bug #388285
