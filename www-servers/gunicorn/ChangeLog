@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/gunicorn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.12 2011/09/23 06:05:25 rafaelmartins Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.13 2012/01/27 17:06:49 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> gunicorn-0.13.4.ebuild:
+  Stable for amd64, wrt bug #400527
 
 *gunicorn-0.13.4 (23 Sep 2011)
 
