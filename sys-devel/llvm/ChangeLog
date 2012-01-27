@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.60 2012/01/27 13:42:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.61 2012/01/27 15:21:41 voyageur Exp $
+
+  27 Jan 2012; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.0.ebuild,
+  +files/llvm-3.0-PPC_macro.patch:
+  Fix compilation on ppc, bug #394183
 
   27 Jan 2012; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild:
   Really fix new llvm-config in live ebuild, bug #392715
