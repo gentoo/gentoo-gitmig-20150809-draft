@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/oracle-jre-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.8 2011/12/18 09:52:17 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.9 2012/01/27 13:06:16 sera Exp $
+
+  27 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
+  oracle-jre-bin-1.7.0.2.ebuild:
+  Add basename to dosym targets.
 
 *oracle-jre-bin-1.7.0.2 (18 Dec 2011)
 
