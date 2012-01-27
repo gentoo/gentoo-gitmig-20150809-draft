@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/cwm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.27 2011/10/06 00:20:06 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.28 2012/01/27 17:06:26 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> cwm-20110913-r1.ebuild:
+  Stable for amd64, wrt bug #400535
 
   06 Oct 2011; Michael Weber <xmw@gentoo.org> cwm-99999999.ebuild:
   incorporate changes in Makefile by chneukirchen
