@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.128 2011/11/01 01:06:23 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.129 2012/01/27 20:11:51 tupone Exp $
+
+  27 Jan 2012; Tupone Alfredo <tupone@gentoo.org> DirectFB-1.4.9-r1.ebuild,
+  metadata.xml:
+  Remove dependency on sys-fs/sysfsutils. Bug #377681 by Anthony Basile
 
   01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> DirectFB-1.4.9-r1.ebuild:
   Rename USE="v4l2" to USE="v4l" while removing support for video4linux 1.x wrt
