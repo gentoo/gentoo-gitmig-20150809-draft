@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.394 2012/01/23 13:41:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.395 2012/01/27 16:10:28 ranger Exp $
+
+  27 Jan 2012; Brent Baude <ranger@gentoo.org> eix-0.23.3-r1.ebuild:
+  Marking eix-0.23.3-r1 ppc for bug 393435
 
 *eix-0.23.7 (23 Jan 2012)
 
