@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/tvbrowser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.31 2009/11/16 10:24:48 zzam Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.32 2012/01/27 17:01:39 johu Exp $
+
+  27 Jan 2012; Johannes Huber <johu@gentoo.org> metadata.xml:
+  Take package over. Remove proxy maintainer and add myself.
 
   16 Nov 2009; Matthias Schwarzott <zzam@gentoo.org>
   -files/tvbrowser-2.1-makefiles.patch, -tvbrowser-2.2.1.ebuild,
