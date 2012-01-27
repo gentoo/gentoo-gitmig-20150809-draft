@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.63 2011/12/18 17:21:45 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.64 2012/01/27 22:23:16 nelchael Exp $
+
+*mercurial-2.0.2 (27 Jan 2012)
+
+  27 Jan 2012; Krzysztof Pawlik <nelchael@gentoo.org> +mercurial-2.0.2.ebuild:
+  Version bump.
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> mercurial-2.0.ebuild:
   alpha/ia64/sparc stable wrt #393265
