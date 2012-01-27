@@ -1,6 +1,7 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.0.0.ebuild,v 1.1 2011/03/09 21:06:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.1.0.ebuild,v 1.1 2012/01/27 06:33:11 jdhore Exp $
+EAPI=4
 
 DESCRIPTION="RAR compressor/uncompressor"
 HOMEPAGE="http://www.rarsoft.com/"

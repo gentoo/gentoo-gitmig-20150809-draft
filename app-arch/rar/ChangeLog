@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.77 2012/01/26 08:36:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.78 2012/01/27 06:33:11 jdhore Exp $
+
+*rar-4.1.0 (27 Jan 2012)
+
+  27 Jan 2012; Jeff Horelick <jdhore@gentoo.org> +rar-4.1.0.ebuild,
+  -rar-3.8.0.ebuild, -rar-3.9.3-r1.ebuild, -rar-3.9.3.ebuild, -rar-4.0.0.ebuild:
+  Version bump and remove old.
 
   24 Jan 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
   Take full maintenance of this package now that I am a developer.
