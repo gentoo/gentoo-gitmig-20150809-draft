@@ -18,6 +18,6 @@
 			<email>binki@gentoo.org</email>
 			<name>Nathan Phillip Brink</name>
 		</maintainer>
-		<bugs-to>http://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&amp;component=Applications&amp;short_desc=app-portage/repo-commit:%20</bugs-to>
+		<bugs-to>https://github.com/mgorny/repo-commit/issues/</bugs-to>
 	</upstream>
 </pkgmetadata>
