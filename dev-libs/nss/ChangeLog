@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.233 2012/01/12 15:33:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.234 2012/01/27 03:45:50 anarchy Exp $
+
+*nss-3.13.1-r2 (27 Jan 2012)
+
+  27 Jan 2012; <anarchy@gentoo.org> +nss-3.13.1-r2.ebuild:
+  add ca cert support to database
 
   12 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nss-3.13.1-r1.ebuild:
   x86 stable wrt bug #395431
