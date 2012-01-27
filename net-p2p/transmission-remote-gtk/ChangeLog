@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission-remote-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/ChangeLog,v 1.5 2012/01/27 07:44:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/ChangeLog,v 1.6 2012/01/27 08:53:51 jdhore Exp $
+
+  27 Jan 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml,
+  transmission-remote-gtk-1.0.ebuild:
+  Disable ayatana support as ayatana on gtk2 is deprecated in Gentoo.
 
   27 Jan 2012; Jeff Horelick <jdhore@gentoo.org>
   transmission-remote-gtk-1.0.ebuild:
