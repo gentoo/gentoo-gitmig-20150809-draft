@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.198 2012/01/26 19:41:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.199 2012/01/27 13:26:35 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> curl-7.24.0.ebuild:
+  Stable for AMD64, wrt security bug #400799
 
 *curl-7.24.0 (26 Jan 2012)
 
