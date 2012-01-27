@@ -1,6 +1,10 @@
 # ChangeLog for net-print/lprng
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.57 2011/03/19 17:54:50 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.58 2012/01/27 14:33:47 phajdan.jr Exp $
+
+  27 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> lprng-3.8.28.ebuild:
+  Add blocker on net-print/cups, bug #388515 by Martin von Gagern. Also note
+  earlier bug #17473 that was solved by a similar blocker.
 
   19 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> lprng-3.8.28.ebuild:
   Move virtual/lpr to new-style virtual.
