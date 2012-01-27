@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/spl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.1 2012/01/27 17:01:12 floppym Exp $
+
+*spl-9999 (27 Jan 2012)
+
+  27 Jan 2012; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +spl-9999.ebuild:
+  New pacakge.
+
