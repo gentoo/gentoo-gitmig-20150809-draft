@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-8c-r1.ebuild,v 1.2 2011/12/31 08:47:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-8c-r1.ebuild,v 1.3 2012/01/27 23:46:07 ssuominen Exp $
 
-EAPI="3"
+EAPI=4
 
-DEB_PV="7-1"
-DEB_PN="libjpeg7"
+DEB_PV=7-1
+DEB_PN=libjpeg7
 DEB="${DEB_PN}_${DEB_PV}"
 
 inherit eutils libtool multilib
@@ -37,7 +37,6 @@ src_configure() {
 	local ldverscript=
 	[[ ${CHOST} == *-solaris* ]] && ldverscript="--disable-ld-version-script"
 	econf \
-		--disable-dependency-tracking \
 		--enable-shared \
 		$(use_enable static-libs static) \
 		--enable-maxmem=64 \
@@ -48,5 +47,15 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc change.log example.c README *.txt
 
-	find "${ED}" -name '*.la' -exec rm -f '{}' +
+	find "${ED}" -name '*.la' -exec rm -f {} +
+}
+
+pkg_postinst() {
+	ewarn "If you are switching from media-libs/libjpeg-turbo you might need to"
+	ewarn "rebuild reverse dependencies:"
+	ewarn
+	ewarn "# emerge gentoolkit"
+	ewarn "# revdep-rebuild --library libjpeg.so.8"
+	ewarn
+	ewarn "NOTE: The --library argument is important here."
 }
