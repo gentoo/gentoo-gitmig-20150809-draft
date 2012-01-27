@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13430 2012/01/27 19:42:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13431 2012/01/27 21:15:26 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Jan 2012)
+# Has developed into an unmaintainable mess, and everyone who
+# knows about it is either retired or missing in action. 
+# Several minor bugs and one ugly security issues (#386271).
+# Masked for removal because of lack of maintainer.
+app-text/xpdf
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (27 Jan 2012)
 # Mask this until qt-4.8 is in tree
