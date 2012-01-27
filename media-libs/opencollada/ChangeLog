@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencollada
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/ChangeLog,v 1.1 2012/01/16 18:11:33 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/ChangeLog,v 1.2 2012/01/27 16:47:42 sping Exp $
+
+  27 Jan 2012; Sebastian Pipping <sping@gentoo.org> opencollada-0_p864.ebuild:
+  Fix installation on arch x86 (bug #400823)
 
 *opencollada-0_p864 (16 Jan 2012)
 
