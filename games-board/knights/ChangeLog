@@ -1,6 +1,11 @@
 # ChangeLog for games-board/knights
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.26 2011/10/30 06:51:00 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.27 2012/01/27 12:23:34 johu Exp $
+
+*knights-2.4.1 (27 Jan 2012)
+
+  27 Jan 2012; Johannes Huber <johu@gentoo.org> +knights-2.4.1.ebuild:
+  Version bump.
 
 *knights-2.4.0 (30 Oct 2011)
 
