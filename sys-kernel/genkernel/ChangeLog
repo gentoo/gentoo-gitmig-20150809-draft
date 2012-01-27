@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.277 2012/01/24 23:30:18 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.278 2012/01/27 17:08:06 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> genkernel-3.4.20.ebuild:
+  Stable for amd64, wrt bug #400539
 
 *genkernel-3.4.24 (24 Jan 2012)
 
