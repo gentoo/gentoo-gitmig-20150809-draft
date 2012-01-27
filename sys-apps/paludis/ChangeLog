@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.213 2011/11/11 20:12:43 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.214 2012/01/27 16:07:25 dagger Exp $
+
+*paludis-0.70.2 (27 Jan 2012)
+
+  27 Jan 2012; Robert Piasek <dagger@gentoo.org> +paludis-0.70.2.ebuild:
+  Add version 0.70.2
 
   11 Nov 2011; Mike Frysinger <vapier@gentoo.org> paludis-0.62.2.ebuild,
   paludis-0.64.0.ebuild, paludis-0.64.3.ebuild, paludis-0.66.0.ebuild,
