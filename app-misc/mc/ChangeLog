@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.237 2012/01/25 18:56:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.238 2012/01/27 20:26:43 slyfox Exp $
+
+*mc-4.8.1-r2 (27 Jan 2012)
+
+  27 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.1-fix-fallocate-xBSD.patch, +mc-4.8.1-r2.ebuild,
+  -mc-4.7.5.5.ebuild, -mc-4.8.0-r2.ebuild, mc-9999.ebuild:
+  Upstream fix for build failure on MacOSX and various xBSDs (bug #395135 by
+  Denis I. Polukarov). Removed old.
 
   25 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> mc-9999.ebuild:
   Fixed dangling symlinks in doc/ after install by Andrew Savchenko (bug

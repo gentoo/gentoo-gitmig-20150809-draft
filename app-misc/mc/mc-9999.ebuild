@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.2 2012/01/25 18:56:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.3 2012/01/27 20:26:43 slyfox Exp $
 
 EAPI=4
 
@@ -12,11 +12,10 @@ fi
 
 inherit eutils flag-o-matic ${LIVE_ECLASSES}
 
-if [[ -n ${LIVE_EBUILD} ]]; then
-	SRC_URI=""
-	KEYWORDS=""
-else
-	SRC_URI="http://www.midnight-commander.org/downloads/${P}.tar.xz"
+MY_P=${P/_/-}
+
+if [[ -z ${LIVE_EBUILD} ]]; then
+	SRC_URI="http://www.midnight-commander.org/downloads/${MY_P}.tar.xz"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 fi
 
@@ -63,6 +62,8 @@ src_prepare() {
 
 	strip-linguas ${LANGS}
 }
+
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local myscreen=ncurses
