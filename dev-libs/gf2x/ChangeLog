@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gf2x
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.13 2012/01/26 08:45:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.14 2012/01/27 15:41:52 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> gf2x-1.0-r1.ebuild:
+  Stable for amd64, wrt bug #400009
 
   26 Jan 2012; Justin Lecher <jlec@gentoo.org> gf2x-1.0-r1.ebuild:
   Add support for static-libs, #400777
