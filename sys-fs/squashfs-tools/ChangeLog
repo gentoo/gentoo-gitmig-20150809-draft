@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/squashfs-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.76 2011/07/29 07:47:45 zmedico Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.77 2012/01/27 20:02:15 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> squashfs-tools-4.2.ebuild:
+  Stable for amd64, wrt bug #400937
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> squashfs-tools-4.2.ebuild:
   Add ~x86-linux keyword.
