@@ -1,13 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r3.ebuild,v 1.4 2012/01/22 17:14:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r3.ebuild,v 1.5 2012/01/27 19:37:37 dilfridge Exp $
 
-#
-# See http://git.overlays.gentoo.org/gitweb/?p=dev/dilfridge.git;a=blob;f=net-print/cups/notes.txt;hb=HEAD
-# for some notes about the ongoing work here
-#
-
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="python? 2:2.5"
 
@@ -72,7 +67,7 @@ PDEPEND="
 	filters? ( net-print/foomatic-filters )
 "
 
-# upstream includes an interactive test which is a nono for gentoo.
+# upstream includes an interactive test which is a nono for gentoo
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
@@ -97,6 +92,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4.4-php-destdir.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-perl-includes.patch"
 	epatch "${FILESDIR}/${PN}-1.4.8-largeimage.patch"
+
 	# security fixes
 	epatch "${FILESDIR}/${PN}-1.4.8-CVE-2011-3170.patch"
 
@@ -126,16 +122,6 @@ src_configure() {
 		"
 	fi
 
-	# bug 352252, recheck for later versions if still necessary....
-	if use gnutls && ! use threads ; then
-		ewarn "The useflag gnutls requires also threads enabled. Switching on threads."
-	fi
-	if use gnutls || use threads ; then
-		myconf+=" --enable-threads "
-	else
-		myconf+=" --disable-threads "
-	fi
-
 	econf \
 		--libdir=/usr/$(get_libdir) \
 		--localstatedir=/var \
@@ -156,6 +142,7 @@ src_configure() {
 		$(use_enable png) \
 		$(use_enable slp) \
 		$(use_enable static-libs static) \
+		$(use_enable threads) \
 		$(use_enable tiff) \
 		$(use_enable usb libusb) \
 		$(use_with java) \
@@ -175,7 +162,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 
 	if use perl ; then
 		cd "${S}"/scripting/perl
@@ -185,13 +172,13 @@ src_compile() {
 
 	if use php ; then
 		cd "${S}"/scripting/php
-		emake || die "emake php failed"
+		emake
 	fi
 }
 
 src_install() {
-	emake BUILDROOT="${D}" install || die "emake install failed"
-	dodoc {CHANGES,CREDITS,README}.txt || die "dodoc install failed"
+	emake BUILDROOT="${D}" install
+	dodoc {CHANGES,CREDITS,README}.txt
 
 	if use perl ; then
 		cd "${S}"/scripting/perl
@@ -215,7 +202,7 @@ src_install() {
 	sed -i \
 		-e "s/@neededservices@/$neededservices/" \
 		"${T}"/cupsd || die
-	doinitd "${T}"/cupsd || die "doinitd failed"
+	doinitd "${T}"/cupsd
 
 	# install our pam script
 	pamd_mimic_system cups auth account
