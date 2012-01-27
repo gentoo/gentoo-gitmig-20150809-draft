@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jcifs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.30 2011/10/19 00:41:50 fordfrog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.31 2012/01/27 08:35:28 sera Exp $
+
+*jcifs-1.3.17-r1 (27 Jan 2012)
+
+  27 Jan 2012; Ralph Sennhauser <sera@gentoo.org> -jcifs-1.3.17.ebuild,
+  +jcifs-1.3.17-r1.ebuild:
+  Use java-virtuals/servlet-api instead of dev-java/servletapi. #398689
 
 *jcifs-1.3.17 (19 Oct 2011)
 

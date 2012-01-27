@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/jcifs-1.3.17.ebuild,v 1.1 2011/10/19 00:41:50 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/jcifs-1.3.17-r1.ebuild,v 1.1 2012/01/27 08:35:28 sera Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc examples source"
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 SLOT="1.1"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 RDEPEND=">=virtual/jre-1.4
-	dev-java/servletapi:2.4"
+	java-virtuals/servlet-api:2.4"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
 IUSE=""
@@ -28,7 +28,7 @@ java_prepare() {
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_EXTRA_ARGS="-DhasServlet=true"
-EANT_GENTOO_CLASSPATH="servletapi-2.4"
+EANT_GENTOO_CLASSPATH="servlet-api-2.4"
 
 src_install() {
 	java-pkg_newjar ${P}.jar
