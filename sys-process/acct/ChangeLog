@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/acct
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.53 2011/12/31 07:26:18 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.54 2012/01/27 17:05:29 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> acct-6.5.5-r2.ebuild:
+  Stable for amd64, wrt bug #400513
 
   31 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/acct.logrotate:
   Do not always restart acct init.d when rotating logs #395867 by Eugeny
