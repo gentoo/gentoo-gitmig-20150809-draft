@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.268 2012/01/18 21:03:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.269 2012/01/27 17:33:42 tetromino Exp $
+
+*libsoup-2.36.1-r1 (27 Jan 2012)
+
+  27 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libsoup-2.36.1-r1.ebuild,
+  +files/libsoup-2.36.1-SoupHTTPInputStream-GCancellable.patch:
+  Add patch from 2.37.x fixing "Too many open files" crash when loading some
+  webpages. Thanks to Priit Laes for reporting.
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> libsoup-2.36.1.ebuild:
   arm stable, bug #393007
