@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.19 2011/12/12 18:23:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.20 2012/01/27 13:42:08 voyageur Exp $
 
 EAPI="3"
 inherit subversion eutils flag-o-matic multilib toolchain-funcs
@@ -73,6 +73,8 @@ src_prepare() {
 		-e 's,^PROJ_etcdir.*,PROJ_etcdir := '"${EPREFIX}"'/etc/llvm,' \
 		-e 's,^PROJ_libdir.*,PROJ_libdir := $(PROJ_prefix)/'$(get_libdir)/${PN}, \
 		-i Makefile.config.in || die "Makefile.config sed failed"
+	sed -e "/ActiveLibDir = ActivePrefix/s/lib/$(get_libdir)\/${PN}/" \
+		-i tools/llvm-config/llvm-config.cpp || die "llvm-config sed failed"
 
 	einfo "Fixing rpath and CFLAGS"
 	sed -e 's,\$(RPATH) -Wl\,\$(\(ToolDir\|LibDir\)),$(RPATH) -Wl\,'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
