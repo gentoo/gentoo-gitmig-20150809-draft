@@ -1,6 +1,13 @@
 # ChangeLog for net-im/ktp-presence-applet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-presence-applet/ChangeLog,v 1.1 2012/01/25 22:53:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-presence-applet/ChangeLog,v 1.2 2012/01/27 10:36:33 johu Exp $
+
+*ktp-presence-applet-0.3.0-r1 (27 Jan 2012)
+
+  27 Jan 2012; Johannes Huber <johu@gentoo.org>
+  +files/ktp-presence-applet-0.3.0-fix-multi-linguas.patch,
+  +ktp-presence-applet-0.3.0-r1.ebuild, -ktp-presence-applet-0.3.0.ebuild:
+  Add patch which makes multi linguas build working, fixes bug #400955.
 
 *ktp-presence-applet-0.3.0 (25 Jan 2012)
 
