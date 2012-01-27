@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/udpcast
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.22 2011/07/30 17:05:49 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.23 2012/01/27 15:50:45 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> udpcast-20110710.ebuild:
+  Stable for amd64, wrt bug #400451
 
 *udpcast-20110710 (30 Jul 2011)
 
