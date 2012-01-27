@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6139 2012/01/26 15:06:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6140 2012/01/27 14:45:11 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jan 2012; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  cdebootstrap is removed from tree
 
   26 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask =net-p2p/transmission-2.42 for bugs #400815, #400865 and #400923

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13426 2012/01/26 15:06:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13427 2012/01/27 14:45:11 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -316,13 +316,6 @@ dev-perl/Test-SimpleUnit
 # Tim Harder <radhermit@gentoo.org> (29 Nov 2011)
 # Masked until gcc-4.6 is unmasked
 >=media-video/mkvtoolnix-5.1.0
-
-# Jeremy Olexa <darkside@gentoo.org> (29 Nov 2011)
-# Broken, doesn't validate releases. Bug 387565 Use dev-util/debootstrap instead
-# Removal in 30 days.
-dev-util/cdebootstrap
-# Nothing uses libdebian-installer except cdebootstrap, remove as well
-dev-libs/libdebian-installer
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (24 Nov 2011)
 # GNOME 2 versions of seed are largely untested
