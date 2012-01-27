@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.103 2012/01/25 19:26:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.104 2012/01/27 19:12:37 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libburn-1.1.8.ebuild:
+  Stable for amd64, wrt bug #400017
 
   25 Jan 2012; Daniel Pielmeier <billie@gentoo.org> -libburn-1.1.6.ebuild:
   Remove old.
