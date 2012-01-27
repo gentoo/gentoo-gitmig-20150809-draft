@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.251 2011/11/30 04:35:37 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.252 2012/01/27 19:11:44 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.88.ebuild:
+  Stable for amd64, wrt bug #400557
 
   30 Nov 2011; Mike Frysinger <vapier@gentoo.org> lvm2-2.02.73-r1.ebuild,
   lvm2-2.02.74.ebuild, lvm2-2.02.83.ebuild, lvm2-2.02.84.ebuild,
