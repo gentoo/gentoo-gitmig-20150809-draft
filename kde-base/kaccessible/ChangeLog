@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/kaccessible
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaccessible/ChangeLog,v 1.35 2012/01/25 18:16:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaccessible/ChangeLog,v 1.36 2012/01/27 09:24:47 johu Exp $
+
+*kaccessible-4.7.4-r1 (27 Jan 2012)
+*kaccessible-4.6.3-r1 (27 Jan 2012)
+*kaccessible-4.8.0-r1 (27 Jan 2012)
+
+  27 Jan 2012; Johannes Huber <johu@gentoo.org> +kaccessible-4.6.3-r1.ebuild,
+  +kaccessible-4.7.4-r1.ebuild, +kaccessible-4.8.0-r1.ebuild,
+  -kaccessible-4.8.0.ebuild:
+  Only depend on app-accessibility/speech-dispatcher if speechd USE flag is
+  enabled, fixes bug #400983.
 
 *kaccessible-4.8.0 (25 Jan 2012)
 
