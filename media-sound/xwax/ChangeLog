@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xwax
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.35 2011/08/31 21:25:28 nixphoeni Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.36 2012/01/27 15:41:31 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> xwax-1.0.ebuild:
+  Stable for amd64, wrt bug #400415
 
   31 Aug 2011; Joe Sapp <nixphoeni@gentoo.org> xwax-1.0.ebuild:
   Compressed sed in src_prepare() and use it to really eliminate the dependency
