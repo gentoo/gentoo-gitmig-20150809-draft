@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-cpplibs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-cpplibs/ChangeLog,v 1.10 2011/10/16 12:10:19 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-cpplibs/ChangeLog,v 1.11 2012/01/27 17:53:32 pacho Exp $
+
+*emul-linux-x86-cpplibs-20120127 (27 Jan 2012)
+
+  27 Jan 2012; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-cpplibs-20120127.ebuild,
+  -emul-linux-x86-cpplibs-20110129.ebuild,
+  -emul-linux-x86-cpplibs-20110722.ebuild:
+  Version bump, remove old.
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   emul-linux-x86-cpplibs-20110928.ebuild:
