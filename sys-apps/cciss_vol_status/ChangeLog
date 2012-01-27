@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/cciss_vol_status
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.8 2011/05/27 09:32:46 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.9 2012/01/27 13:12:41 chainsaw Exp $
+
+*cciss_vol_status-1.09-r1 (27 Jan 2012)
+
+  27 Jan 2012; Tony Vroon <chainsaw@gentoo.org> -cciss_vol_status-1.02.ebuild,
+  -cciss_vol_status-1.06.ebuild, +cciss_vol_status-1.09-r1.ebuild,
+  +files/cciss_vol_status.cron:
+  Added cron job to check volume status on a daily basis and e-mail for errors.
+  Suggestion & implementation by Oleg Gawriloff, closes bug #350029. Removed
+  old ebuilds.
 
 *cciss_vol_status-1.09 (27 May 2011)
 
