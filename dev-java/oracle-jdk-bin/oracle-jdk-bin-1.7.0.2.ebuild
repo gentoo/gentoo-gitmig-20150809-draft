@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.2.ebuild,v 1.2 2011/12/18 19:23:13 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.2.ebuild,v 1.3 2012/01/27 13:01:30 sera Exp $
 
 EAPI="4"
 
@@ -207,9 +207,9 @@ src_install() {
 		mv "${ED}"/opt/${P}/jre/lib/security/local_policy.jar \
 			"${ED}"/opt/${P}/jre/lib/security/strong-jce || die
 		dosym /opt/${P}/jre/lib/security/${JCE_DIR}/US_export_policy.jar \
-			/opt/${P}/jre/lib/security/
+			/opt/${P}/jre/lib/security/US_export_policy.jar
 		dosym /opt/${P}/jre/lib/security/${JCE_DIR}/local_policy.jar \
-			/opt/${P}/jre/lib/security/
+			/opt/${P}/jre/lib/security/local_policy.jar
 	fi
 
 	if use nsplugin; then
