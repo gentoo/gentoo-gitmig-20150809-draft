@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.21 2012/01/18 16:18:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.22 2012/01/27 23:04:51 ssuominen Exp $
+
+*libjpeg-turbo-1.1.90_p20120128 (27 Jan 2012)
+
+  27 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +libjpeg-turbo-1.1.90_p20120128.ebuild:
+  New snapshot from
+  http://libjpeg-turbo.svn.sourceforge.net/viewvc/libjpeg-turbo/branches/1.2.x/
+  ?view=tar for resolving bug #398023 as reported by Piotr Szymaniak and
+  debugged by Rafał Mużyło.
 
   18 Jan 2012; Jeroen Roovers <jer@gentoo.org> libjpeg-turbo-1.1.90.ebuild:
   Marked ~hppa (bug #398909).
