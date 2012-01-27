@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-2.2.0-r1.ebuild,v 1.1 2011/09/20 21:56:45 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-2.2.0-r1.ebuild,v 1.2 2012/01/27 15:56:35 ago Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.secdev.org/projects/scapy/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="gnuplot pyx crypt graphviz imagemagick visual tcpreplay"
 
 DEPEND=""
