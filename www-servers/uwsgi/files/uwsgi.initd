@@ -1,13 +1,15 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/files/uwsgi.initd,v 1.1 2011/05/31 19:49:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/files/uwsgi.initd,v 1.2 2012/01/27 11:10:27 ultrabug Exp $
 
 PROGNAME=${SVCNAME#*.}
 
 UWSGI_EXEC=/usr/bin/uwsgi
 PIDPATH=/var/run/uwsgi
 PIDFILE="${PIDPATH}/${PROGNAME}.pid"
+
+extra_started_commands="reload"
 
 depend() {
 	need net
@@ -92,6 +94,12 @@ start() {
 	cd "${UWSGI_DIR}" && \
 	start-stop-daemon --start --user "${UWSGI_USER}" --exec "${UWSGI_EXEC}" -- ${OPTIONS} --pidfile "${PIDFILE}"
 	eend $?
+}
+
+reload() {
+	ebegin "Reloading ${SVCNAME}"
+	kill -HUP `cat ${PIDFILE}` &>/dev/null
+	eend $? "Failed to reload ${SVCNAME}"
 }
 
 stop() {
