@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.1 2012/01/27 17:01:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.2 2012/01/27 22:51:06 floppym Exp $
 
 EAPI="4"
 
@@ -32,9 +32,9 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	default
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 }
