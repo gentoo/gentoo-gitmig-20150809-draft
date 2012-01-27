@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6_rc1.ebuild,v 1.2 2012/01/27 13:37:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6_rc1.ebuild,v 1.3 2012/01/27 16:05:06 ulm Exp $
 
 EAPI=4
 
@@ -68,7 +68,7 @@ DEPEND="${RDEPEND}
 if [[ -z ${PV%%*9999} ]]; then
 	# The live ebuild always needs an Emacs for building of gnuplot.texi
 	DEPEND="${DEPEND}
-		!emacs? ( !xemacs? ( || ( virtual/emacs app-xemacs/texinfo ) ) )"
+	!emacs? ( !xemacs? ( || ( virtual/emacs app-xemacs/texinfo ) ) )"
 fi
 
 S="${WORKDIR}/${MY_P}"
