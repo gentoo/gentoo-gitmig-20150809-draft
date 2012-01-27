@@ -39,6 +39,7 @@
       Add support for getting and setting POSIX extended attributes, through
       <pkg>sys-apps/attr</pkg>. Requisite for the virtfs backend.
     </flag>
+    <flag name='xfs'>Support specific optimizations when files are stored on XFS filesystem.</flag>
     <flag name='xen'>Enables support for Xen backends</flag>
   </use>
 </pkgmetadata>

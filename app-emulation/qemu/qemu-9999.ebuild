@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.13 2012/01/26 19:01:15 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.14 2012/01/27 21:35:16 slyfox Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg kvm ncurses nss
 opengl png pulseaudio qemu-ifup rbd sasl sdl spice ssl static threads usbredir vde
-+vhost-net xattr xen"
++vhost-net xattr xen xfs"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 mips64 mips64el ppcemb xtensa xtensaeb"
@@ -79,6 +79,7 @@ RDEPEND="
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
 	xen? ( app-emulation/xen-tools )
+	xfs? ( sys-fs/xfsprogs )
 "
 
 DEPEND="${RDEPEND}
@@ -196,6 +197,7 @@ src_configure() {
 		$(use_enable vhost-net)
 		$(use_enable xen)
 		$(use_enable xattr attr)
+		$(use_enable xfs xfsctl)
 		--disable-darwin-user --disable-bsd-user
 	"
 
