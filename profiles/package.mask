@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13431 2012/01/27 21:15:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13432 2012/01/27 22:47:34 nelchael Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Krzysztof Pawlik <nelchael@gentoo.org> (27 Jan 2012)
+# Deprecated, please migrate your code to dev-python/xhtml2pdf.
+# Removal by end of February.
+dev-python/pisa
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (27 Jan 2012)
 # Has developed into an unmaintainable mess, and everyone who
