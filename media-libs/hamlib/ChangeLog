@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/hamlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.62 2011/12/15 09:01:06 tomjbe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.63 2012/01/27 15:58:24 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> hamlib-1.2.14.ebuild:
+  Stable for amd64, wrt bug #400377
 
   15 Dec 2011; Thomas Beierlein <tomjbe@gentoo.org> hamlib-1.2.14.ebuild:
   Use only autotools-utils functions. Bug #392101
