@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_pre20120127.ebuild,v 1.1 2012/01/27 10:06:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_pre20120127.ebuild,v 1.2 2012/01/27 11:45:32 anarchy Exp $
 
 EAPI=3
 
@@ -17,12 +17,13 @@ S="${WORKDIR}/${MY_PV}"
 
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
 HOMEPAGE="http://wicd.sourceforge.net/"
-SRC_URI="http://dev.gentoo.org/~tomka/files/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~tomka/files/${P}.tar.gz
+	mac4lin? ( http://dev.gentoo.org/~anarchy/dist/wicd-mac4lin-icons.tar.xz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="X +gtk ioctl libnotify ncurses nls +pm-utils"
+IUSE="X +gtk ioctl libnotify mac4lin ncurses nls +pm-utils"
 
 DEPEND=""
 # Maybe virtual/dhcp would work, but there are enough problems with
@@ -94,6 +95,11 @@ src_install() {
 		|| die "keepdir failed, critical for this app"
 	use nls || rm -rf "${D}"/usr/share/locale
 	systemd_dounit "${S}/other/wicd.service"
+
+	if use mac4lin; then
+		rm -rf "${D}"/usr/share/pixmaps/wicd || die "Failed to remove old icons"
+		mv "${WORKDIR}"/wicd "${D}"/usr/share/pixmaps/
+	fi
 }
 
 pkg_postinst() {
