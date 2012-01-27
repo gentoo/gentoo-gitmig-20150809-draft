@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.46-r1.ebuild,v 1.1 2011/10/22 20:04:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.46-r1.ebuild,v 1.2 2012/01/27 17:08:39 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://nongnu/${PN}/${P}.src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="nls static-libs"
 
 DEPEND="nls? ( sys-devel/gettext )
