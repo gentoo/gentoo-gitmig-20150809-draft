@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.64 2011/12/18 18:13:15 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.65 2012/01/27 16:11:57 ranger Exp $
+
+  27 Jan 2012; Brent Baude <ranger@gentoo.org> munin-1.4.6-r2.ebuild:
+  Marking munin-1.4.6-r2 ppc for bug 383683
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> munin-1.4.5-r3.ebuild,
   munin-1.4.6-r2.ebuild, munin-1.4.6-r4.ebuild:
