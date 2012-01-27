@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.474 2012/01/22 20:04:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.475 2012/01/27 16:46:01 mr_bones_ Exp $
 
 # Keep them sorted
 
@@ -14,7 +14,6 @@ aalib - Adds support for media-libs/aalib (ASCII-Graphics Library)
 accessibility - Adds support for accessibility (eg 'at-spi' library)
 acl - Adds support for Access Control Lists
 acpi - Adds support for Advanced Configuration and Power Interface
-adabas - Adds support for the Adabas database engine
 adns - Adds support for the adns DNS client library
 afs - Adds OpenAFS support (distributed file system)
 aim - Enable AIM IM protocol support
@@ -32,7 +31,6 @@ bcmath - Adds support for libbcmath
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
 bidi - Enables bidirectional language support
 bindist - Flag to enable or disable options for prebuilt (GRP)  packages (eg. due to licensing issues)
-birdstep - Adds support for the Birdstep Database Server
 blas - Adds support for the virtual/blas numerical library
 bluetooth - Enables Bluetooth Support
 bootstrap - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during original system bootstrapping [make stage2]
@@ -66,10 +64,8 @@ curlwrappers - Adds support for using curl in streams
 custom-cflags - Build with user-specified CFLAGS (unsupported)
 cvs - Enable CVS (Concurrent Versions System) integration
 cxx - Builds support for C++ (bindings, extra libraries, code generation, ...)
-db2 - Enables support for IBM DB2 database server
 dbi - Enable dev-db/libdbi (database-independent abstraction layer) support
 dbm - Adds support for generic DBM databases
-dbmaker - Adds support for dbmaker database server
 dbus - Enable dbus support for anything that needs it (gpsd, gnomemeeting, etc)
 dbx - Adds database abstraction layer
 debug - Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see http://www.gentoo.org/proj/en/qa/backtraces.xml
@@ -87,12 +83,9 @@ dvdr - Adds support for DVD writer hardware (e.g. in xcdroast)
 eds - Enables support for Evolution-Data-Server (EDS)
 emacs - Adds support for GNU Emacs
 emboss - Adds support for the European Molecular Biology Open Software Suite
-empress - Adds support for the Empress database server
-empress-bcs - Adds local access support for the Empress database server
 encode - Adds support for encoding of audio or video files
 enscript - Add enscript support to colourize code stored in the repository
 esd - Adds support for media-sound/esound (Enlightened Sound Daemon)
-esoob - Adds support for Easysoft OOD database
 evo - Adds support for mail-client/evolution
 examples - Install examples, usually source code
 exif - Adds support for reading EXIF headers from JPEG and TIFF images
@@ -116,7 +109,6 @@ frontbase - Adds support for the frontbase sql server
 ftp - Adds FTP (File Transfer Protocol) support
 gcj - Enable building with gcj (The GNU Compiler for the Javatm Programming Language)
 gd - Adds support for media-libs/gd (to generate graphics on the fly)
-gd-external - Use the external version of gd rather than the bundled one (possibly dangerous)
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
 geoip - Add geoip support for country and city lookup based on IPs
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
@@ -156,7 +148,6 @@ imap - Adds support for IMAP (Internet Mail Application Protocol)
 imlib - Adds support for imlib, an image loading and rendering library
 infiniband - Enable Infiniband RDMA transport support
 inifile - Adds dbm support for .ini files
-interbase - Adds support for Interbase database
 iodbc - Adds support for iODBC library
 ios - Enable support for Apple's iDevice with iOS operating system (iPad, iPhone, iPod, etc)
 ipod - Enable support for iPod device access
@@ -298,7 +289,6 @@ recode - Enables support for the GNU recode library
 rss - Enables support for RSS feeds
 ruby - Adds support/bindings for the Ruby language
 samba - Adds support for SAMBA (Windows File and Printer sharing)
-sapdb - Adds support for SAP DB
 sasl - Adds support for the Simple Authentication and Security Layer
 savedconfig - Use this to restore your config from /etc/portage/savedconfig ${CATEGORY}/${PN}. Make sure your USE flags allow for appropriate dependencies
 scanner - Adds support for scanner hardware (e.g. build the sane frontend in kdegraphics)
@@ -307,7 +297,6 @@ seamonkey - Adds support for the Seamonkey web-browser
 selinux - !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
 semantic-desktop - Cross-KDE support for semantic search and information retrieval
 session - Adds persistent session support
-sharedext - Adds support for building shared extensions in PHP
 sharedmem - Adds support for shared memory use
 shorten - Adds support for the shorten audio compressor
 simplexml - support for SimpleXML
@@ -321,7 +310,6 @@ snmp - Adds support for the Simple Network Management Protocol if available
 soap - Adds support for SOAP (Simple Object Access Protocol)
 sockets - Adds support for tcp/ip sockets
 socks5 - Adds support for the socks5 proxy
-solid - Adds support for the Solid database engine
 sound - Enable sound support
 source - Zip the sources and install them
 sox - Adds support for Sound eXchange (SoX)
