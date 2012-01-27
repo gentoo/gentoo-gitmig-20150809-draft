@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.23 2012/01/27 17:07:03 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.24 2012/01/27 19:42:49 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> bip-0.8.8-r1.ebuild:
+  Stable for AMD64, wrt security bug #400599
 
 *bip-0.8.8-r1 (27 Jan 2012)
 
