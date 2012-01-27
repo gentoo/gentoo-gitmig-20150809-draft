@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.25 2012/01/04 21:16:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.26 2012/01/27 10:06:53 scarabeus Exp $
 
 EAPI=4
 
@@ -59,7 +59,7 @@ RDEPEND="
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		vorbis? ( media-libs/libvorbis media-libs/libogg )
-		x264? ( >=media-libs/x264-0.0.20110426 )
+		x264? ( >=media-libs/x264-0.0.20111017 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
 	truetype? ( media-libs/freetype )

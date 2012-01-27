@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8_pre20110818.ebuild,v 1.5 2011/12/02 18:19:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.7.4.ebuild,v 1.1 2012/01/27 10:06:53 scarabeus Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://libav.org/"
 if [[ ${PV} == *9999 ]] ; then
 	SRC_URI=""
 elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
-	SRC_URI="http://dev.gentoo.org/~lu_zero/libav/${P}.tar.xz"
+	SRC_URI="mirror://gentoo/${P}.tar.xz"
 else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
@@ -81,11 +81,10 @@ DEPEND="${RDEPEND}
 
 # faac can't be binary distributed
 # faac and aac are concurent implementations
-# amr and aac require at least lgpl3
+# amr and aac require gpl
 REQUIRED_USE="bindist? ( !faac )
+	faac? ( !aac ) aac? ( !faac )
 	amr? ( gpl ) aac? ( gpl )"
-
-RESTRICT="test"
 
 src_prepare() {
 	# if we have snapshot then we need to hardcode the version
@@ -111,7 +110,7 @@ src_configure() {
 		use ${i} || myconf+=" --disable-${i}"
 	done
 	use bzip2 || myconf+=" --disable-bzlib"
-	use sdl || myconf+=" --disable-avplay"
+	use sdl || myconf+=" --disable-ffplay"
 
 	use custom-cflags && myconf+=" --disable-optimizations"
 	use cpudetection && myconf+=" --enable-runtime-cpudetect"
@@ -258,18 +257,6 @@ src_install() {
 	if use qt-faststart; then
 		dobin tools/qt-faststart
 	fi
-
-	for i in avplay avserver avprobe; do
-		dosym  ${i} /usr/bin/${i/av/ff}
-	done
-}
-
-pkg_postinst() {
-	elog "Please note that the programs formerly known as ffplay, ffserver"
-	elog "and ffprobe are now called avplay, avserver and avprobe."
-	elog
-	elog "ffmpeg had been replaced by the feature incompatible avconv thus"
-	elog "the legacy ffmpeg is provided for compatibility with older scripts"
 }
 
 src_test() {

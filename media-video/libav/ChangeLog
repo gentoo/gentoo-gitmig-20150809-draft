@@ -1,6 +1,20 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.45 2012/01/25 20:12:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.46 2012/01/27 10:06:53 scarabeus Exp $
+
+*libav-0.7.4 (27 Jan 2012)
+*libav-0.6.5 (27 Jan 2012)
+
+  27 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0.6.2-fix_enable_hardcoded_tables.patch,
+  -libav-0.8_pre20110818.ebuild, -files/0.6.2-float_arrays.patch,
+  -libav-0.6.2.ebuild, +libav-0.6.5.ebuild, -libav-0.6.9999.ebuild,
+  -libav-0.7.2.ebuild, +libav-0.7.4.ebuild, -libav-0.8_beta1.ebuild,
+  -libav-0.8_pre20111116.ebuild, -libav-0.8_pre20111222.ebuild,
+  libav-0.8.ebuild, libav-9999.ebuild:
+  Version bump to latest versions. Remove overshadowed ebuilds. Remove 0.6
+  series live as nobody would use it nowdays. Update x264 dep on 0.8 series and
+  later.
 
 *libav-0.8 (25 Jan 2012)
 
