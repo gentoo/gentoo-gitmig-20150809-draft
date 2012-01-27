@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.90_p20120128.ebuild,v 1.1 2012/01/27 23:04:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.90_p20120128.ebuild,v 1.2 2012/01/27 23:06:18 ssuominen Exp $
 
 EAPI=4
 JPEG_ABI=8
@@ -80,7 +80,7 @@ src_install() {
 		insinto /usr/share/doc/${PF}/html/java
 		doins -r java/doc/*
 		newdoc java/README README.java
-	
+
 		rm -rf "${ED}"usr/classes
 		java-pkg_dojar java/turbojpeg.jar
 	fi
