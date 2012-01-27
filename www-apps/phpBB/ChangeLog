@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.39 2012/01/25 09:54:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.40 2012/01/27 15:54:53 ago Exp $
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> phpBB-3.0.9.ebuild:
+  Stable for amd64, wrt bug #398045
 
   25 Jan 2012; Tim Harder <radhermit@gentoo.org> -phpBB-3.0.8.ebuild:
   Remove old.
