@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/scite
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.125 2011/12/07 07:29:48 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.126 2012/01/27 22:19:03 nelchael Exp $
+
+*scite-3.0.2 (27 Jan 2012)
+
+  27 Jan 2012; Krzysztof Pawlik <nelchael@gentoo.org> +scite-3.0.2.ebuild:
+  Version bump.
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> scite-2.28.ebuild:
   x86 stable wrt bug #392577
