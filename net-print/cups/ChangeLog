@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.445 2012/01/27 19:52:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.446 2012/01/27 21:30:49 dilfridge Exp $
+
+  27 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.4.8-r1.ebuild,
+  cups-1.4.8-r23.ebuild, cups-1.5.0-r3.ebuild:
+  Remove unused useflag samba, bug 373849
 
   27 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.0-r3.ebuild:
   Downgrade gnutls version requirement. Lets see what breaks now.
