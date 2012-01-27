@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.10.1.ebuild,v 1.2 2011/10/23 22:27:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.10.1.ebuild,v 1.3 2012/01/27 15:52:06 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -16,7 +16,7 @@ SRC_URI="http://www.bpython-interpreter.org/releases/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="gtk urwid"
 
 RDEPEND="dev-python/pygments
