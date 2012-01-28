@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/mx4j-tools-3.0.2.ebuild,v 1.2 2010/04/03 12:01:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/mx4j-tools-3.0.2.ebuild,v 1.3 2012/01/28 11:04:15 ali_bush Exp $
 
 EAPI=1
 
@@ -29,7 +29,7 @@ RDEPEND="
 	dev-java/log4j
 	=www-servers/axis-1*
 	dev-java/hessian:4.0
-	dev-java/jython
+	dev-java/jython:2.5
 	java-virtuals/servlet-api:2.3
 	java-virtuals/jaf
 	java-virtuals/javamail"

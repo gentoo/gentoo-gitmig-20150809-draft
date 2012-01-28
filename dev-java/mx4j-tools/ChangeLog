@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mx4j-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/ChangeLog,v 1.13 2010/04/03 23:57:13 nelchael Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/ChangeLog,v 1.14 2012/01/28 11:04:15 ali_bush Exp $
+
+  28 Jan 2012; Alistair Bush <ali_bush@gentoo.org> mx4j-tools-3.0.2.ebuild:
+  Fix jython dependency which did not specify slot. #401137
 
   03 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
   files/mx4j-tools-3.0.2-new-hessian.patch:
