@@ -1,6 +1,9 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.47 2012/01/22 15:30:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.48 2012/01/28 05:04:48 ssuominen Exp $
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> highlight-2.9.ebuild:
+  Revert back to ~ppc wrt #369715
 
   22 Jan 2012; Raúl Porcel <armin76@gentoo.org> highlight-2.9.ebuild,
   highlight-3.3.ebuild, highlight-3.5.ebuild, highlight-3.6.ebuild,
