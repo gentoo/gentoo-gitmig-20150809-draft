@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.126 2012/01/23 14:26:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.127 2012/01/28 15:17:13 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libusb-1.0.9_rc3.ebuild:
+  x86 stable wrt bug #399713
 
   23 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libusb-1.0.9_rc3.ebuild:
   Stable for amd64, wrt bug #399713
