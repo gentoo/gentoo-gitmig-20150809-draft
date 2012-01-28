@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.38 2012/01/28 14:54:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.39 2012/01/28 18:46:10 keri Exp $
+
+  28 Jan 2012; <keri@gentoo.org> -xsb-3.2-r1.ebuild, -xsb-3.3.0.ebuild,
+  -xsb-3.3.1.ebuild:
+  Remove old versions
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xsb-3.3.2.ebuild:
   x86 stable wrt bug #396887
