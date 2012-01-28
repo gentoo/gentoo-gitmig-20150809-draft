@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.15.ebuild,v 1.1 2012/01/28 06:09:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.15.ebuild,v 1.2 2012/01/28 06:14:07 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -56,7 +56,7 @@ src_compile() {
 src_install() {
 	default
 
-	use X || rm "${ED}"/usr/bin/pstree.x11
+	use X || rm -f "${ED}"/usr/bin/pstree.x11
 
 	[[ -s ${ED}/usr/bin/peekfd ]] || rm -f "${ED}"/usr/bin/peekfd
 	[[ -e ${ED}/usr/bin/peekfd ]] || rm -f "${ED}"/usr/share/man/man1/peekfd.1
