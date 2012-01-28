@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pambase
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.103 2011/10/22 01:12:25 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.104 2012/01/28 07:54:54 ssuominen Exp $
+
+*pambase-20101024-r2 (28 Jan 2012)
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +pambase-20101024-r2.ebuild:
+  Restore "nox11" as pam_ck_connector.so argument because most of the display
+  managers in tree, including XDM and SLIM, has native ConsoleKit support now.
 
 *pambase-20101024-r1 (22 Oct 2011)
 
