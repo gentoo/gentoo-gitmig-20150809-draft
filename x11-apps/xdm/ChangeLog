@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xdm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.131 2011/12/27 20:52:41 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.132 2012/01/28 07:52:04 ssuominen Exp $
+
+*xdm-1.1.11-r1 (28 Jan 2012)
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +xdm-1.1.11-r1.ebuild,
+  +files/xdm-consolekit.patch:
+  Import native support for ConsoleKit wrt #360987
 
   27 Dec 2011; Markus Meier <maekke@gentoo.org> xdm-1.1.11.ebuild:
   x86 stable, bug #394393
