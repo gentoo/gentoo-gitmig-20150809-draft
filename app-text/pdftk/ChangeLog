@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pdftk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.37 2012/01/07 00:41:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.38 2012/01/28 20:58:51 dilfridge Exp $
+
+  28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> -pdftk-1.41-r1.ebuild,
+  -pdftk-1.41-r2.ebuild, -files/pdftk-1.41-gcc-4.3.patch,
+  -files/pdftk-1.41-gcc-4.4.patch, -files/pdftk-1.41-honor-ldflags.patch:
+  Cleanup
 
   07 Jan 2012; Michael Weber <xmw@gentoo.org> pdftk-1.44.ebuild:
   ppc stable (bug 370169)
