@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.87 2012/01/28 11:00:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.88 2012/01/28 19:52:06 armin76 Exp $
+
+  28 Jan 2012; Raúl Porcel <armin76@gentoo.org> multitail-5.2.9.ebuild:
+  ia64/sparc/x86 stable wrt #401093
 
   28 Jan 2012; Agostino Sarubbo <ago@gentoo.org> multitail-5.2.9.ebuild:
   Stable for amd64, wrt bug #401093
