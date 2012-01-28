@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrtools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.284 2011/10/18 17:11:08 billie Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.285 2012/01/28 01:51:23 ssuominen Exp $
+
+*cdrtools-3.01_alpha06-r1 (28 Jan 2012)
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +cdrtools-3.01_alpha06-r1.ebuild:
+  Change cdda2wav, cdrecord, readcd and rscsi from suid root to sgid disk for
+  udev users (note: tested with cdrecord -scanbus)
 
 *cdrtools-3.01_alpha06 (18 Oct 2011)
 
