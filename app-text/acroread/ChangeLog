@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.172 2012/01/28 20:08:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.173 2012/01/28 20:22:04 dilfridge Exp $
+
+  28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> acroread-9.4.7.ebuild:
+  Add net-dns/libidn to dependencies on x86, bug 396079
 
   28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -acroread-9.4.2-r1.ebuild, -acroread-9.4.2-r2.ebuild:
