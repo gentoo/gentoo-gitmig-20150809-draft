@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-0.6.ebuild,v 1.1 2012/01/28 13:17:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-0.6.ebuild,v 1.2 2012/01/28 15:19:41 ssuominen Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -18,7 +18,6 @@ IUSE="test tools"
 RDEPEND=">=virtual/ffmpeg-0.6
 	tools? ( >=media-libs/taglib-1.6 )"
 DEPEND="${RDEPEND}
-	dev-libs/boost
 	test? ( dev-cpp/gtest )
 	tools? ( dev-libs/boost )"
 
