@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/uuagc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.18 2012/01/22 12:04:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.19 2012/01/28 14:52:05 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> uuagc-0.9.24.ebuild:
+  x86 stable wrt bug #396869
 
   22 Jan 2012; Agostino Sarubbo <ago@gentoo.org> uuagc-0.9.24.ebuild:
   Stable for amd64, wrt bug #396869
