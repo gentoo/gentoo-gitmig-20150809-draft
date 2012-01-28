@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.8.ebuild,v 1.2 2012/01/28 20:00:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.9-r1.ebuild,v 1.1 2012/01/28 20:00:21 floppym Exp $
 
-EAPI="2"
+EAPI="4"
 PYTHON_DEPEND="python? 2:2.6"
 PYTHON_USE_WITH="threads"
 PYTHON_USE_WITH_OPT="python"
 
-inherit eutils versionator python
+inherit multilib python versionator
 
 MY_P=${P/rb_/}
 MY_P=${MY_P/torrent/torrent-rasterbar}
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl static-libs"
 RESTRICT="test"
 
-DEPEND="<dev-libs/boost-1.48[python?]
+DEPEND=">=dev-libs/boost-1.48[python?]
 	>=sys-devel/libtool-2.2
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )
@@ -32,7 +32,10 @@ DEPEND="<dev-libs/boost-1.48[python?]
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	use python && python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -44,7 +47,7 @@ src_configure() {
 	local BOOST_LIBS="--with-boost-system=boost_system-mt \
 		--with-boost-filesystem=boost_filesystem-mt \
 		--with-boost-thread=boost_thread-mt \
-		--with-boost-python=boost_python-mt"
+		--with-boost-python=boost_python-${PYTHON_ABI}-mt"
 	# detect boost version and location, bug 295474
 	BOOST_PKG="$(best_version ">=dev-libs/boost-1.34.1")"
 	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
@@ -69,10 +72,10 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die 'emake install failed'
+	emake DESTDIR="${D}" install
 	use static-libs || find "${D}" -name '*.la' -exec rm -f {} +
-	dodoc ChangeLog AUTHORS NEWS README || die 'dodoc failed'
-	if use doc ; then
-		dohtml docs/* || die "Could not install HTML documentation"
+	dodoc ChangeLog AUTHORS NEWS README
+	if use doc; then
+		dohtml docs/*
 	fi
 }

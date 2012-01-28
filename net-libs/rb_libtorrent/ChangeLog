@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/rb_libtorrent
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.116 2011/11/22 21:28:44 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.117 2012/01/28 20:00:21 floppym Exp $
+
+*rb_libtorrent-0.15.9-r1 (28 Jan 2012)
+
+  28 Jan 2012; Mike Gilbert <floppym@gentoo.org>
+  +rb_libtorrent-0.15.9-r1.ebuild, rb_libtorrent-0.15.5.ebuild,
+  rb_libtorrent-0.15.6.ebuild, rb_libtorrent-0.15.8.ebuild,
+  rb_libtorrent-0.15.9.ebuild:
+  Prepare for PYTHON_ABI-versioned Boost Python libraries in Boost 1.48. Patch
+  by Arfrever.
 
 *rb_libtorrent-0.15.9 (22 Nov 2011)
 
