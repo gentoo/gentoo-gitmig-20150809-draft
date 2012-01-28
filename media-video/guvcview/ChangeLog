@@ -1,6 +1,9 @@
 # ChangeLog for media-video/guvcview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.24 2012/01/23 14:29:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.25 2012/01/28 15:24:26 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> guvcview-1.5.1.ebuild:
+  x86 stable wrt bug #399789
 
   23 Jan 2012; Agostino Sarubbo <ago@gentoo.org> guvcview-1.5.1.ebuild:
   Stable for amd64, wrt bug #399789
