@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.118 2012/01/12 15:29:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.119 2012/01/28 05:31:11 nirbheek Exp $
+
+  28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  thunderbird-8.0-r1.ebuild, thunderbird-9.0.ebuild:
+  Add yasm to DEPEND, just like for firefox, bug 380231
 
   12 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> thunderbird-9.0.ebuild:
   x86 stable wrt bug #395431

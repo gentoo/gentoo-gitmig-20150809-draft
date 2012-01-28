@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-9.0.ebuild,v 1.6 2012/01/12 15:29:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-9.0.ebuild,v 1.7 2012/01/28 05:31:11 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -50,6 +50,8 @@ if ! [[ ${PV} =~ alpha|beta ]]; then
 	done
 fi
 
+ASM_DEPEND=">=dev-lang/yasm-1.1"
+
 RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.13.1
 	>=dev-libs/nspr-4.8.8
@@ -75,7 +77,10 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 		=app-crypt/gnupg-1.4*
 	) )"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	webm? ( x86? ( ${ASM_DEPEND} )
+		amd64? ( ${ASM_DEPEND} ) )"
 
 S="${WORKDIR}"/comm-release
 
