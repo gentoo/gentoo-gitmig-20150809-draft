@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/spork
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.6 2012/01/16 18:25:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.7 2012/01/28 10:39:15 graaff Exp $
+
+*spork-0.9.0 (28 Jan 2012)
+
+  28 Jan 2012; Hans de Graaff <graaff@gentoo.org> +spork-0.9.0.ebuild:
+  Version bump. Add ruby19. Stop trying to run the cucumber features since
+  their setup is very brittle.
 
 *spork-0.8.5 (16 Jan 2012)
 
