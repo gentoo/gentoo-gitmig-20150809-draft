@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nethogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.20 2012/01/27 17:03:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.21 2012/01/28 15:07:08 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nethogs-0.8.0-r2.ebuild:
+  x86 stable wrt bug #400611
 
   27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> nethogs-0.8.0-r2.ebuild:
   Stable for amd64, wrt bug #400611
