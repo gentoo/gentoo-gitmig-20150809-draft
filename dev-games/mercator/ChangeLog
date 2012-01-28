@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/mercator
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.17 2011/10/20 15:40:23 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.18 2012/01/28 21:13:04 tupone Exp $
+
+  28 Jan 2012; Tupone Alfredo <tupone@gentoo.org> +mercator-0.3.0.ebuild:
+  Version bump to 0.3.0 Bug #383411 by Mr. Anderson
 
   20 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> -mercator-0.3.0.ebuild:
   remove non-api-frozen development release (bug #383411)
