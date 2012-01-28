@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6147 2012/01/28 07:29:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6148 2012/01/28 07:43:42 sera Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jan 2012; Ralph Sennhauser <sera@gentoo.org> package.mask:
+  Package.mask dev-java/sun-j2ee for removal in 30 days.
+  Hopelessly outdated, contains broken jars. #91484
 
   28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> thirdpartymirrors:
   Remove everything except archive.xfce.org from the mirror://xfce.
