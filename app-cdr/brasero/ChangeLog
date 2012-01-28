@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.139 2011/12/29 17:13:38 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.140 2012/01/28 11:59:15 pacho Exp $
+
+  28 Jan 2012; Pacho Ramos <pacho@gentoo.org> -brasero-2.32.1.ebuild,
+  brasero-2.32.1-r1.ebuild:
+  Prevent people from mixing brasero-2 with nautilus-3, bug #397469. Drop old.
 
   29 Dec 2011; Pacho Ramos <pacho@gentoo.org> brasero-2.32.1-r1.ebuild:
   amd64 stable, bug 393007

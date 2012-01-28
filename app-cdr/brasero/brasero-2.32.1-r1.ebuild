@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.7 2011/12/29 17:13:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.8 2012/01/28 11:59:15 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -31,7 +31,7 @@ COMMON_DEPEND="
 	libburn? (
 		>=dev-libs/libburn-0.4
 		>=dev-libs/libisofs-0.6.4 )
-	nautilus? ( >=gnome-base/nautilus-2.31.3 )
+	nautilus? ( >=gnome-base/nautilus-2.31.3 <gnome-base/nautilus-3 )
 	playlist? ( >=dev-libs/totem-pl-parser-2.29.1 )"
 RDEPEND="${COMMON_DEPEND}
 	app-cdr/cdrdao
