@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/commons-fileupload
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.54 2011/12/19 12:44:30 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.55 2012/01/28 07:01:18 sera Exp $
+
+*commons-fileupload-1.2.1-r1 (27 Jan 2012)
+
+  28 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
+  +commons-fileupload-1.2.1-r1.ebuild:
+  Revbump, bump EAPI and use SLOT deps.
+  Bump servlet-api dep to :2.5
+  Let the eclasses do the hard work.
+  Fix repoman warnings.
 
   19 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
   commons-fileupload-1.2.ebuild, commons-fileupload-1.2-r1.ebuild,
