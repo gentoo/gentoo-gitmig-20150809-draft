@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/pacman-4.0.0.ebuild,v 1.1 2011/10/18 00:58:32 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/pacman-4.0.1.ebuild,v 1.1 2012/01/28 18:53:03 binki Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ RESTRICT="test"
 src_prepare() {
 	# Adds AM_GPGME_PATH call which requires app-crypt/gpgme to be
 	# DEPENDed on unconditionally:
-	epatch "${FILESDIR}"/${P}-gpgme.patch
+	epatch "${FILESDIR}"/${PN}-4.0.0-gpgme.patch
 
 	# Remove a line that adds -Werror in ./configure when --enable-debug
 	# is passed:
@@ -49,7 +49,7 @@ src_configure() {
 		--localstatedir=/var
 		--disable-git-version
 		--with-openssl
-		# Help protect users from shooting their Gentoo installation in
+		# Help protect user from shooting his/her Gentoo installation in
 		# its foot.
 		--with-root-dir="${EPREFIX}"/var/chroot/archlinux
 		$(use_enable debug)

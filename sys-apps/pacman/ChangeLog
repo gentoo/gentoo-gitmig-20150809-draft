@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pacman
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.8 2011/10/18 00:58:32 binki Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.9 2012/01/28 18:53:03 binki Exp $
+
+*pacman-4.0.1 (28 Jan 2012)
+
+  28 Jan 2012; Nathan Phillip Brink <binki@gentoo.org> -pacman-3.5.4.ebuild,
+  -pacman-4.0.0.ebuild, +pacman-4.0.1.ebuild:
+  Bump to pacman-4.0.1, dropping old pacmen. Fixes bug #400933 where pacman was
+  incompatible with >=libarchive-3.
 
 *pacman-4.0.0 (18 Oct 2011)
 
