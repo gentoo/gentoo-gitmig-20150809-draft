@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.66 2012/01/27 16:17:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.67 2012/01/28 01:56:12 flameeyes Exp $
+
+  28 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> munin-1.4.6-r4.ebuild:
+  Some mysql plugins (such as 'mysql_') do use DBD-mysql the same way PostgreSQL
+  plugins use DBD-Pg; update the comment and fix dependencies.
 
   27 Jan 2012; Jeremy Olexa <darkside@gentoo.org> -munin-1.4.5-r3.ebuild,
   -munin-1.4.6-r2.ebuild, munin-1.4.6-r4.ebuild:
