@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-XPathEngine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPathEngine/ChangeLog,v 1.12 2012/01/27 15:43:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPathEngine/ChangeLog,v 1.13 2012/01/28 15:19:43 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  XML-XPathEngine-0.130.0.ebuild:
+  x86 stable wrt bug #400273
 
   27 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
   XML-XPathEngine-0.130.0.ebuild:
