@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.121 2012/01/28 05:09:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.122 2012/01/28 05:49:49 nirbheek Exp $
+
+  28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-8.0.ebuild,
+  firefox-9.0.ebuild:
+  RDEPEND on sqlite[threadsafe], bug 375047
 
   28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-9.0.ebuild:
   Reset the GNOME/XDG environment for PGO, bug 384943

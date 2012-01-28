@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-8.0.ebuild,v 1.5 2011/12/26 23:30:42 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-8.0.ebuild,v 1.6 2012/01/28 05:49:49 nirbheek Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -38,7 +38,7 @@ RDEPEND="
 	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	virtual/libffi
-	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	webm? ( media-libs/libvpx
 		media-libs/alsa-lib )
 	crashreporter? ( net-misc/curl )"
