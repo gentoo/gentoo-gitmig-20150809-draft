@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/delay-1.6-r1.ebuild,v 1.3 2012/01/27 15:50:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/delay-1.6-r1.ebuild,v 1.4 2012/01/28 14:51:13 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://onegeek.org/~tom/software/delay/dl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses"
