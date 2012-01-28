@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/pry-0.9.7.4.ebuild,v 1.1 2011/12/24 07:47:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/pry-0.9.7.4.ebuild,v 1.2 2012/01/28 07:56:27 graaff Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ ruby_add_rdepend ">=dev-ruby/ruby_parser-2.0.5
 	>=dev-ruby/slop-2.1.0
 	>=dev-ruby/method_source-0.6.7"
 
-ruby_add_bdepend "test? ( >=dev-ruby/bacon-1.1.0 )"
+ruby_add_bdepend "test? ( >=dev-ruby/bacon-1.1.0 >=dev-ruby/open4-1.0.1 )"
 
 all_ruby_prepare() {
 	# Make version dependencies more lenient to avoid problems with
