@@ -3,6 +3,8 @@
 <pkgmetadata>
 <herd>mozilla</herd>
 <use>
+	<flag name="bindist">Disable official Firefox branding (icons, name) which 
+		are not binary-redistributable according to upstream.</flag>
 	<flag name="custom-optimization">Fine-tune custom compiler
 		optimizations, setting this is not recommended.</flag>
 	<flag name="crashreporter">Enable crashreporter for mozilla upstream, debugging

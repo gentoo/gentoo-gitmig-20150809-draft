@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.122 2012/01/28 05:49:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.123 2012/01/28 06:14:04 nirbheek Exp $
+
+  28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
+  Add USE=bindist description, bug 369255
 
   28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-8.0.ebuild,
   firefox-9.0.ebuild:
