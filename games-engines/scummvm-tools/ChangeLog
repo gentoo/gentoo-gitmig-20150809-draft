@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/scummvm-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.51 2012/01/27 19:10:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.52 2012/01/28 15:22:33 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  scummvm-tools-1.4.0.ebuild:
+  x86 stable wrt bug #400803
 
   27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> scummvm-tools-1.4.0.ebuild:
   Stable for amd64, wrt bug #400803
