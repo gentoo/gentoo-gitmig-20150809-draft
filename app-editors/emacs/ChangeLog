@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.471 2012/01/28 10:54:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.472 2012/01/28 12:00:53 ulm Exp $
+
+*emacs-23.4 (28 Jan 2012)
+
+  28 Jan 2012; Ulrich Müller <ulm@gentoo.org> +emacs-23.4.ebuild:
+  Version bump.
 
   28 Jan 2012; Ulrich Müller <ulm@gentoo.org> emacs-23.3-r4.ebuild,
   emacs-23.4_rc1.ebuild:
