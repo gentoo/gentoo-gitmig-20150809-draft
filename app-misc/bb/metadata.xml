@@ -5,4 +5,8 @@
 		<email>jokey@gentoo.org</email>
 		<name>Markus Ullmann</name>
 	</maintainer>
+	<maintainer>
+		<email>slyfox@gentoo.org</email>
+		<name>Sergei Trofimovich</name>
+	</maintainer>
 </pkgmetadata>
