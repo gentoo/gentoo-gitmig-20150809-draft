@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.4.0-r2.ebuild,v 1.3 2012/01/27 15:40:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.4.0-r2.ebuild,v 1.4 2012/01/28 14:40:10 phajdan.jr Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0.4"
-KEYWORDS="amd64 ~mips ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug nls static-libs threads"
 
 RDEPEND="threads? ( dev-libs/glib:2 )"
