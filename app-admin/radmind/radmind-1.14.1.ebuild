@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/radmind-1.14.1.ebuild,v 1.1 2011/08/16 21:03:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/radmind-1.14.1.ebuild,v 1.2 2012/01/28 14:45:49 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/radmind/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl"
