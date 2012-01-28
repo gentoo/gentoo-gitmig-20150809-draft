@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.78 2012/01/19 14:57:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.79 2012/01/28 14:55:31 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> json-1.5.4.ebuild:
+  x86 stable wrt bug #398947
 
   19 Jan 2012; Jeroen Roovers <jer@gentoo.org> json-1.5.4.ebuild:
   Stable for HPPA (bug #398947).
