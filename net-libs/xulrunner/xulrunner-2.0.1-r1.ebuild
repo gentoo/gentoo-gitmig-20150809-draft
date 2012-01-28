@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.9 2011/09/28 11:17:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.10 2012/01/28 05:21:42 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -24,7 +24,7 @@ SLOT="1.9"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+crashreporter gconf +ipc system-sqlite +webm"
 
-REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
+REL_URI="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases"
 # More URIs appended below...
 SRC_URI="http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
 
