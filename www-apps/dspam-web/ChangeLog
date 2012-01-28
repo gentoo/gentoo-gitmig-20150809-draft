@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.43 2012/01/27 17:05:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.44 2012/01/28 15:13:26 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dspam-web-3.10.1.ebuild:
+  x86 stable wrt bug #400521
 
   27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> dspam-web-3.10.1.ebuild:
   Stable for amd64, wrt bug #400521
