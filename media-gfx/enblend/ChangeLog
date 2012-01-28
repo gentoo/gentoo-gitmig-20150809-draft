@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/enblend
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.46 2011/08/12 15:46:37 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.47 2012/01/28 04:45:51 ottxor Exp $
+
+  28 Jan 2012; Christoph Junghans <ottxor@gentoo.org> enblend-4.0.ebuild:
+  fix bug #347786
 
   12 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> enblend-4.0.ebuild:
   Seems the -libpng15.patch isn't entirely compatible with libpng14, apply

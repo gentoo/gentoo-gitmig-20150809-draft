@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.10 2011/08/12 15:46:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.11 2012/01/28 04:45:51 ottxor Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
 		media-gfx/transfig
-		sci-visualization/gnuplot
+		sci-visualization/gnuplot[gd]
 		virtual/latex-base
 	)"
 
