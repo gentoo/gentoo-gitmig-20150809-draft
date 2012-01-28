@@ -6,7 +6,4 @@
 		<email>voyageur@gentoo.org</email>
 		<name>Bernard Cafarelli</name>
 	</maintainer>
-	<use>
-		<flag name="konqueror">Enable integration with konqueror</flag>
-	</use>
 </pkgmetadata>
