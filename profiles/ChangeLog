@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6148 2012/01/28 07:43:42 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6149 2012/01/28 08:13:10 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite x11-misc/enter because it doesn't have ConsoleKit support.
 
   28 Jan 2012; Ralph Sennhauser <sera@gentoo.org> package.mask:
   Package.mask dev-java/sun-j2ee for removal in 30 days.
