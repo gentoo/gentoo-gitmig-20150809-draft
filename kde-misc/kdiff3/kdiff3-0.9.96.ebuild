@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.96.ebuild,v 1.5 2012/01/17 07:22:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.96.ebuild,v 1.6 2012/01/28 15:07:48 phajdan.jr Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ DESCRIPTION="Qt/KDE based frontend to diff3"
 HOMEPAGE="http://kdiff3.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux"
 SLOT="4"
 IUSE="debug kde"
 
