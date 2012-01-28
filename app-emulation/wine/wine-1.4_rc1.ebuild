@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.4_rc1.ebuild,v 1.1 2012/01/28 19:51:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.4_rc1.ebuild,v 1.2 2012/01/28 22:53:52 vapier Exp $
 
 EAPI="4"
 
@@ -169,7 +169,6 @@ do_configure() {
 src_configure() {
 	export LDCONFIG=/bin/true
 	use custom-cflags || strip-flags
-	filter-flags -m64 -m32 -mx32 #395615
 
 	if use win64 ; then
 		do_configure 64 --enable-win64
@@ -180,7 +179,6 @@ src_configure() {
 }
 
 src_compile() {
-	filter-flags -m64 -m32 -mx32 #395615
 	local b
 	for b in 64 32 ; do
 		local builddir="${WORKDIR}/wine${b}"
@@ -190,7 +188,6 @@ src_compile() {
 }
 
 src_install() {
-	filter-flags -m64 -m32 -mx32 #395615
 	local b
 	for b in 64 32 ; do
 		local builddir="${WORKDIR}/wine${b}"
