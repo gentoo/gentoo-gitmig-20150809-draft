@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.14 2012/01/17 14:08:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.15 2012/01/28 21:37:54 dilfridge Exp $
+
+  28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  foomatic-gui-0.7.9.5.ebuild:
+  Does not need pyxml, bug 367769
 
 *foomatic-gui-0.7.9.5 (17 Jan 2012)
 

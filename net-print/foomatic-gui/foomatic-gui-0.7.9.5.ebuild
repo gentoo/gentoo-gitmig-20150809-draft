@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/foomatic-gui-0.7.9.5.ebuild,v 1.1 2012/01/17 14:08:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/foomatic-gui-0.7.9.5.ebuild,v 1.2 2012/01/28 21:37:54 dilfridge Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
@@ -27,7 +28,6 @@ RDEPEND="
 	dev-python/ipy
 	dev-python/pygtk:2
 	dev-python/pywebkitgtk
-	>=dev-python/pyxml-0.8
 	net-print/foomatic-db-engine"
 
 S="${WORKDIR}/${PN}"
