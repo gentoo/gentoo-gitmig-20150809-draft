@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/flaggie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.27 2012/01/23 14:29:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.28 2012/01/28 15:27:54 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> flaggie-0.2.ebuild:
+  x86 stable wrt bug #399815
 
   23 Jan 2012; Agostino Sarubbo <ago@gentoo.org> flaggie-0.2.ebuild:
   Stable for amd64, wrt bug #399815
