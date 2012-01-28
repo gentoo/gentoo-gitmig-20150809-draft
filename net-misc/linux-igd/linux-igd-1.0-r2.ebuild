@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r2.ebuild,v 1.7 2008/09/16 06:53:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r2.ebuild,v 1.8 2012/01/28 01:05:40 ssuominen Exp $
 
+EAPI=4
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Deamon that emulates Microsoft's Internet Connection Sharing (ICS) for UPnP-aware clients"
 HOMEPAGE="http://linux-igd.sourceforge.net/"
-SRC_URI="mirror://sourceforge/linux-igd/linuxigd-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${PN/-}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,21 +18,19 @@ DEPEND=">=net-libs/libupnp-1.4.1"
 RDEPEND="${DEPEND}
 	net-firewall/iptables"
 
-S=${WORKDIR}/linuxigd-${PV}
+S=${WORKDIR}/${PN/-}-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-build.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-{build,include}.patch
 }
 
 src_compile() {
 	tc-export CC
-	emake || die "compile failed"
+	emake
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake DESTDIR="${D}" install
 
 	newinitd "${FILESDIR}"/upnpd.initd-${PVR} upnpd
 	newconfd "${FILESDIR}"/upnpd.confd-${PVR} upnpd
@@ -40,6 +39,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Make sure your firewall allows routing of packages"
-	einfo "to 239.0.0.0/255.0.0.0 correctly."
+	elog "Make sure your firewall allows routing of packages to:"
+	elog " 239.0.0.0/255.0.0.0"
 }
