@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.133 2012/01/21 16:37:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.134 2012/01/28 18:54:45 armin76 Exp $
+
+  28 Jan 2012; Raúl Porcel <armin76@gentoo.org>
+  gtk-engines-xfce-2.99.0-r200.ebuild, gtk-engines-xfce-2.99.0-r300.ebuild:
+  alpha/ia64/sparc stable wrt # 397865
 
   21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gtk-engines-xfce-2.99.0-r200.ebuild, gtk-engines-xfce-2.99.0-r300.ebuild:
