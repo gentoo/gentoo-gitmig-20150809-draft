@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-filters-ppds
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.26 2008/05/07 23:57:14 tgurr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.27 2012/01/28 21:47:57 dilfridge Exp $
+
+  28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -foomatic-filters-ppds-20060720.ebuild:
+  Remove old
 
 *foomatic-filters-ppds-20080507 (07 May 2008)
 
