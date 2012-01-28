@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.51 2012/01/14 19:13:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.52 2012/01/28 15:34:38 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gprolog-1.4.0.ebuild:
+  x86 stable wrt bug #398837
 
   14 Jan 2012; <keri@gentoo.org> gprolog-1.4.0.ebuild:
   Use emake in src_install instead of make. Closes bug #398865
