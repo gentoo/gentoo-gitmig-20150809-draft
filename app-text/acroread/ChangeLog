@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.171 2012/01/28 20:05:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.172 2012/01/28 20:08:03 dilfridge Exp $
+
+  28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -acroread-9.4.2-r1.ebuild, -acroread-9.4.2-r2.ebuild:
+  Cleanup
 
 *acroread-9.4.7 (28 Jan 2012)
 
