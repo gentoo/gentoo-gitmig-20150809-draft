@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.0.1_pre20110819.ebuild,v 1.4 2011/12/15 23:14:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.0.1_pre20110819.ebuild,v 1.5 2012/01/28 04:36:13 ssuominen Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ COMMON_DEPEND="
 "
 RDEPEND="
 	${COMMON_DEPEND}
-	aacs? ( media-video/aacskeys )
+	aacs? ( media-libs/libaacs )
 	java? ( >=virtual/jre-1.6 )
 "
 DEPEND="
