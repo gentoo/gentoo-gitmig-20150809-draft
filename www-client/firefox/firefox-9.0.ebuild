@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-9.0.ebuild,v 1.8 2012/01/26 11:08:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-9.0.ebuild,v 1.9 2012/01/28 05:09:32 nirbheek Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -262,6 +262,8 @@ src_compile() {
 	if use pgo; then
 		addpredict /root
 		addpredict /etc/gconf
+		# Reset and cleanup environment variables used by GNOME/XDG
+		gnome2_environment_reset
 
 		# Firefox tries to use dri stuff when it's run, see bug 380283
 		shopt -s nullglob

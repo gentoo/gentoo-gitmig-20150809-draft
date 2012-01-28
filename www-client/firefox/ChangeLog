@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.120 2012/01/26 11:08:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.121 2012/01/28 05:09:32 nirbheek Exp $
+
+  28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-9.0.ebuild:
+  Reset the GNOME/XDG environment for PGO, bug 384943
 
   26 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-9.0.ebuild:
   Fix access violations due to proprietary drivers + pgo (AGAIN). See bug
