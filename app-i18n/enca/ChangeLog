@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.73 2012/01/18 16:32:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.74 2012/01/28 15:00:12 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> enca-1.13-r2.ebuild:
+  x86 stable wrt bug #398991
 
   18 Jan 2012; Jeroen Roovers <jer@gentoo.org> enca-1.13-r2.ebuild:
   Stable for HPPA (bug #398991).
