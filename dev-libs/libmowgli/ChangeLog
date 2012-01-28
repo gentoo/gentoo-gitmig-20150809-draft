@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.55 2012/01/19 09:05:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.56 2012/01/28 06:26:29 jdhore Exp $
+
+  28 Jan 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
+  Take ownership of libmowgli. Signed-off by Tony Vroon (chainsaw).
 
   19 Jan 2012; Tobias Klausmann <klausman@gentoo.org> libmowgli-0.9.50.ebuild:
   Stable on alpha, bug #383991
