@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.6 2012/01/28 21:14:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.7 2012/01/28 22:28:20 xmw Exp $
 
 EAPI=4
 
@@ -49,6 +49,9 @@ src_install() {
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins debian/mupdf.pc
+
+	insinto /usr/include
+	doins fitz/memento.h
 
 	if use X ; then
 		domenu debian/mupdf.desktop

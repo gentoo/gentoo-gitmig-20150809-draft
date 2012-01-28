@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.25 2012/01/28 21:14:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.26 2012/01/28 22:28:20 xmw Exp $
+
+  28 Jan 2012; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
+  include memento.h
 
   28 Jan 2012; Michael Weber <xmw@gentoo.org> -mupdf-0.8.165.ebuild,
   mupdf-9999.ebuild, +files/mupdf-9999-scroll.patch,
