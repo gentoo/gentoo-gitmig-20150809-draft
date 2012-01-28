@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/packagekit-gtk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.7 2011/11/07 13:28:20 lxnay Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.8 2012/01/28 17:11:18 lxnay Exp $
+
+  28 Jan 2012; Fabio Erculiani <lxnay@gentoo.org> packagekit-gtk-0.6.16.ebuild,
+  packagekit-gtk-0.6.17.ebuild, packagekit-gtk-0.6.18.ebuild,
+  packagekit-gtk-0.6.19.ebuild, packagekit-gtk-0.6.20.ebuild:
+  add ~arm keyword
 
 *packagekit-gtk-0.6.20 (07 Nov 2011)
 

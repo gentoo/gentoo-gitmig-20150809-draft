@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/packagekit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit/ChangeLog,v 1.5 2011/11/07 13:29:17 lxnay Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit/ChangeLog,v 1.6 2012/01/28 17:17:21 lxnay Exp $
+
+  28 Jan 2012; Fabio Erculiani <lxnay@gentoo.org> packagekit-0.6.17.ebuild,
+  packagekit-0.6.18.ebuild, packagekit-0.6.19.ebuild, packagekit-0.6.20.ebuild:
+  add ~arm keyword
 
 *packagekit-0.6.20 (07 Nov 2011)
 
