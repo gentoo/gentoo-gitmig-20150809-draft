@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.45 2011/09/09 16:41:52 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.46 2012/01/28 11:01:18 ago Exp $
+
+  28 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libpaper-1.1.24-r1.ebuild:
+  Stable for amd64, wrt bug #401085
 
 *libpaper-1.1.24-r1 (09 Sep 2011)
 
