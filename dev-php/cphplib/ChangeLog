@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/cphplib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/ChangeLog,v 1.6 2007/03/18 15:29:38 chtekk Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/ChangeLog,v 1.7 2012/01/28 13:48:10 mabi Exp $
+
+  28 Jan 2012; Matti Bickel <mabi@gentoo.org> cphplib-0.51.ebuild:
+  EAPI bump
 
   18 Mar 2007; Luca Longinotti <chtekk@gentoo.org> cphplib-0.51.ebuild:
   Cleanup.

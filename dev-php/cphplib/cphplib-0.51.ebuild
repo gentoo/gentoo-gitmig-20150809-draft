@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/cphplib-0.51.ebuild,v 1.2 2007/03/18 15:29:38 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/cphplib-0.51.ebuild,v 1.3 2012/01/28 13:48:10 mabi Exp $
 
-inherit php-lib-r1
+EAPI=4
 
 KEYWORDS="~amd64 ~x86"
 
@@ -16,13 +16,9 @@ IUSE=""
 DEPEND=">=dev-php/PEAR-DB-1.7.6-r1"
 RDEPEND="${DEPEND}"
 
-need_php_by_category
-
 src_install() {
-	# install php files
-	php-lib-r1_src_install . *.spec
-	php-lib-r1_src_install . *.inc
+	insinto "/usr/share/php/${PN}"
+	doins *.spec *.inc
 
-	# install documentation
-	dodoc-php ChangeLog COPYRIGHT LGPL README TODO
+	dodoc ChangeLog COPYRIGHT LGPL README TODO
 }
