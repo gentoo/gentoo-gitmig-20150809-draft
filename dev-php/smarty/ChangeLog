@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/smarty
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.109 2011/02/12 17:38:46 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.110 2012/01/28 14:24:23 mabi Exp $
+
+*smarty-3.1.7 (28 Jan 2012)
+
+  28 Jan 2012; Matti Bickel <mabi@gentoo.org> +smarty-3.1.7.ebuild,
+  -smarty-2.6.24-r1.ebuild, -smarty-2.6.26-r1.ebuild, -smarty-3.0.7.ebuild:
+  version bump, remove old, obsoletes the need for dev-php/smarty-docs
 
   12 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> smarty-2.6.24.ebuild:
   ia64 stable
