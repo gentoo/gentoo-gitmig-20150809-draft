@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/qtnotifydaemon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtnotifydaemon/ChangeLog,v 1.1 2012/01/28 02:14:54 ssuominen Exp $
+
+*qtnotifydaemon-1.0.14 (28 Jan 2012)
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +qtnotifydaemon-1.0.14.ebuild:
+  Initial commit.
+
