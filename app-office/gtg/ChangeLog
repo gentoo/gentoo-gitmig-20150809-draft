@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gtg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.11 2011/10/23 22:02:52 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.12 2012/01/28 21:16:06 steev Exp $
+
+*gtg-0.2.5 (28 Jan 2012)
+
+  28 Jan 2012; Steev Klimaszewski <steev@gentoo.org> +gtg-0.2.5.ebuild:
+  version bump, fixes bug #397597 thanks to Mao PU for reporting.
 
   23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gtg-0.2.4-r1.ebuild:
   Use correct slot of pygobject.
