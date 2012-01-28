@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/CGI
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.99 2011/08/06 07:31:57 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.100 2012/01/28 08:50:57 tove Exp $
+
+*CGI-3.590.0 (28 Jan 2012)
+
+  28 Jan 2012; Torsten Veller <tove@gentoo.org> +CGI-3.590.0.ebuild:
+  Version bump
 
 *CGI-3.550.0 (06 Aug 2011)
 
