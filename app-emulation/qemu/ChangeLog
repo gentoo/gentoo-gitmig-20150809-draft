@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.100 2012/01/27 21:35:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.101 2012/01/28 11:45:00 slyfox Exp $
+
+*qemu-0.11.1-r1 (28 Jan 2012)
+
+  28 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/qemu-0.11.1-CVE-2012-0029-backport.patch, +qemu-0.11.1-r1.ebuild:
+  Backport fix for bug #400595 / CVE-2012-0029 (picked from qemu-kvm ebuild).
 
   27 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml,
   qemu-9999.ebuild:
