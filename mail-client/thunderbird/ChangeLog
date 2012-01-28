@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.119 2012/01/28 05:31:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.120 2012/01/28 06:14:07 nirbheek Exp $
+
+  28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
+  Add USE=bindist description, bug 369247
 
   28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
   thunderbird-8.0-r1.ebuild, thunderbird-9.0.ebuild:
