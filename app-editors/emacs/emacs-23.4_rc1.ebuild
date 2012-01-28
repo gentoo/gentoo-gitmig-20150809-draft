@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4_rc1.ebuild,v 1.1 2012/01/19 19:15:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4_rc1.ebuild,v 1.2 2012/01/28 10:54:33 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -149,9 +149,16 @@ src_configure() {
 		if use gtk; then
 			einfo "Configuring to build with GIMP Toolkit (GTK+)"
 			myconf="${myconf} --with-x-toolkit=gtk"
-		elif use Xaw3d || use athena; then
+			local f
+			for f in athena Xaw3d motif; do
+				use ${f} && ewarn "USE flag \"${f}\" ignored" \
+					"(superseded by \"gtk\")"
+			done
+		elif use athena || use Xaw3d; then
 			einfo "Configuring to build with Athena/Lucid toolkit"
 			myconf="${myconf} --with-x-toolkit=lucid $(use_with Xaw3d xaw3d)"
+			use motif && ewarn "USE flag \"motif\" ignored" \
+				"(superseded by \"athena\" or \"Xaw3d\")"
 		elif use motif; then
 			einfo "Configuring to build with Motif toolkit"
 			myconf="${myconf} --with-x-toolkit=motif"
@@ -159,14 +166,6 @@ src_configure() {
 			einfo "Configuring to build with no toolkit"
 			myconf="${myconf} --with-x-toolkit=no"
 		fi
-
-		local f tk=
-		for f in gtk Xaw3d athena motif; do
-			use ${f} || continue
-			[[ ${tk} ]] \
-				&& ewarn "USE flag \"${f}\" ignored (superseded by \"${tk}\")"
-			tk="${tk}${tk:+ }${f}"
-		done
 	elif use aqua; then
 		einfo "Configuring to build with Cocoa support"
 		myconf="${myconf} --with-ns --disable-ns-self-contained"

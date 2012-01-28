@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.470 2012/01/19 19:15:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.471 2012/01/28 10:54:33 ulm Exp $
+
+  28 Jan 2012; Ulrich Müller <ulm@gentoo.org> emacs-23.3-r4.ebuild,
+  emacs-23.4_rc1.ebuild:
+  USE="athena Xaw3d" is a valid combination, so don't warn.
 
 *emacs-23.4_rc1 (19 Jan 2012)
 
