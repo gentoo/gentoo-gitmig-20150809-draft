@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/notify-osd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/ChangeLog,v 1.10 2012/01/04 05:37:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/ChangeLog,v 1.11 2012/01/28 02:17:40 ssuominen Exp $
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> notify-osd-0.9.32.ebuild:
+  Block x11-misc/qtnotifydaemon because it's using same .service file.
 
   04 Jan 2012; Mike Frysinger <vapier@gentoo.org> notify-osd-0.9.32.ebuild:
   Drop `use savedconfig` logic that the savedconfig eclass handles itself.

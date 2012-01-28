@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.84 2011/10/19 02:14:33 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.85 2012/01/28 02:17:07 ssuominen Exp $
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  notification-daemon-0.5.0.ebuild, notification-daemon-0.7.3.ebuild:
+  Block x11-misc/qtnotifydaemon because it's using same .service file.
 
   19 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   notification-daemon-0.7.3.ebuild:
