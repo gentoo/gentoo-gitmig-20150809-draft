@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.4.ebuild,v 1.2 2012/01/23 16:13:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.4.ebuild,v 1.3 2012/01/28 15:18:41 phajdan.jr Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps"
@@ -15,7 +15,7 @@ SRC_URI="http://www.appgate.com/downloads/MindTerm-${PV}/${MY_P}-src.zip"
 
 LICENSE="mindterm"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 COMMON_DEP="dev-java/jzlib:0"
 RDEPEND=">=virtual/jre-1.4
