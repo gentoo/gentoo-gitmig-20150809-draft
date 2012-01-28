@@ -1,6 +1,12 @@
 # ChangeLog for games-server/cyphesis
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.20 2011/01/15 15:23:25 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.21 2012/01/28 21:15:47 tupone Exp $
+
+*cyphesis-0.5.26 (28 Jan 2012)
+
+  28 Jan 2012; Tupone Alfredo <tupone@gentoo.org> +cyphesis-0.5.26.ebuild,
+  +files/cyphesis-0.5.26-gentoo.patch:
+  Version bump to 0.5.26. Bug #383415 by Mr. Anderson
 
   15 Jan 2011; Markus Meier <maekke@gentoo.org> cyphesis-0.5.25.ebuild:
   x86 stable, bug #350780
