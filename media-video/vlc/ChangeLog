@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.773 2012/01/28 14:55:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.774 2012/01/28 15:29:17 aballier Exp $
+
+*vlc-2.0.0_rc1 (28 Jan 2012)
+
+  28 Jan 2012; Alexis Ballier <aballier@gentoo.org> +vlc-2.0.0_rc1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  libv44l has been renamed to v4l and bump to 2.0.0 rc1
 
 *vlc-2.0.9999 (28 Jan 2012)
 

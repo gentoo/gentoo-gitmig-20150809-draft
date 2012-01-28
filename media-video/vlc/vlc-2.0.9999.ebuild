@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.1 2012/01/28 14:55:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.2 2012/01/28 15:29:17 aballier Exp $
 
 EAPI="4"
 
@@ -48,13 +48,13 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	directfb directx dshow dts dvb dvd dxva2 elibc_glibc egl +encode
 	fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
-	libproxy libsamplerate libtiger libv4l2 linsys libtar lirc live lua +macosx
+	libproxy libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opengl optimisememory oss png portaudio
 	+postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba schroedinger
 	sdl sdl-image shine shout sid skins speex sqlite sse svg +swscale switcher
-	taglib theora truetype twolame udev upnp vaapi vcdx vlm vorbis waveout
+	taglib theora truetype twolame udev upnp vaapi v4l vcdx vlm vorbis waveout
 	win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
@@ -134,7 +134,7 @@ RDEPEND="
 		twolame? ( media-sound/twolame )
 		udev? ( >=sys-fs/udev-142 )
 		upnp? ( net-libs/libupnp )
-		libv4l2? ( media-libs/libv4l )
+		v4l? ( media-libs/libv4l )
 		vaapi? ( x11-libs/libva )
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
@@ -251,7 +251,6 @@ src_configure() {
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable libtar) \
 		$(use_enable libtiger tiger) \
-		$(use_enable libv4l2) \
 		$(use_enable linsys) \
 		$(use_enable lirc) \
 		$(use_enable live live555) \
@@ -306,8 +305,9 @@ src_configure() {
 		$(use_enable twolame) \
 		$(use_enable udev) \
 		$(use_enable upnp) \
-		$(use_enable vcdx) \
+		$(use_enable v4l v4l2) \
 		$(use_enable vaapi libva) \
+		$(use_enable vcdx) \
 		$(use_enable vlm) \
 		$(use_enable vorbis) \
 		$(use_enable waveout) \
