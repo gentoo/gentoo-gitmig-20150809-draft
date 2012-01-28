@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.5 2011/08/13 02:53:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.6 2012/01/28 21:14:47 xmw Exp $
 
-EAPI=2
+EAPI=4
 
-EGIT_REPO_URI="http://mupdf.com/repos/mupdf.git"
+EGIT_REPO_URI="git://git.ghostscript.com/mupdf.git"
 
 inherit eutils flag-o-matic git-2 multilib toolchain-funcs
 
@@ -29,7 +29,10 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.8.165-buildsystem.patch
 
-	use vanilla || epatch "${FILESDIR}"/${PN}-0.8.165-zoom.patch
+	if ! use vanilla ; then
+		epatch "${FILESDIR}"/${PN}-9999-zoom.patch
+		epatch "${FILESDIR}"/${PN}-9999-scroll.patch
+	fi
 }
 
 src_compile() {
@@ -45,20 +48,13 @@ src_install() {
 		build=debug verbose=true ${my_nox11} install || die
 
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins debian/mupdf.pc || die
+	doins debian/mupdf.pc
 
 	if use X ; then
-		domenu debian/mupdf.desktop || die
-		doicon debian/mupdf.xpm || die
-		doman apps/man/mupdf.1 || die
+		domenu debian/mupdf.desktop
+		doicon debian/mupdf.xpm
+		doman apps/man/mupdf.1
 	fi
-	doman apps/man/pdf{clean,draw,show}.1 || die
-	dodoc README || die
-
-	# avoid collision with app-text/poppler-utils
-	mv "${D}"usr/bin/pdfinfo "${D}"usr/bin/mupdf_pdfinfo || die
-}
-
-pkg_postinst() {
-	elog "pdfinfo was renamed to mupdf_pdfinfo"
+	doman apps/man/mupdf{clean,draw,show}.1
+	dodoc README
 }
