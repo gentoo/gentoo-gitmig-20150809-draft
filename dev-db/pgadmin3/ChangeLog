@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.72 2012/01/11 12:33:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.73 2012/01/28 21:03:14 titanofold Exp $
+
+*pgadmin3-1.14.1-r1 (28 Jan 2012)
+
+  28 Jan 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  +pgadmin3-1.14.1-r1.ebuild:
+  Moved pkg_prepare to pkg_setup. Fixes bug 398887.
 
   11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> pgadmin3-1.14.1.ebuild:
   Stable for AMD64, wrt bug #394447
