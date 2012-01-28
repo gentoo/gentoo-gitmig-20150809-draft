@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/cups-windows-6.0.ebuild,v 1.3 2008/10/10 09:57:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/cups-windows-6.0.ebuild,v 1.4 2012/01/28 00:07:21 dilfridge Exp $
 
 DESCRIPTION="CUPS PostScript Driver for Windows"
-HOMEPAGE="http://cups.org/windows/"
+HOMEPAGE="http://www.cups.org/links.php?V4"
 SRC_URI="http://ftp.easysw.com/pub/cups/windows/${P}-source.tar.bz2"
 
 LICENSE="GPL-2"
