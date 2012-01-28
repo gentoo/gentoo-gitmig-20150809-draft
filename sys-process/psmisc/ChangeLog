@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.120 2012/01/26 13:30:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.121 2012/01/28 06:09:00 ssuominen Exp $
+
+*psmisc-22.15 (28 Jan 2012)
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +psmisc-22.15.ebuild,
+  +files/psmisc-22.15-COMM_LEN-to-18.patch:
+  Version bump. Backport -COMM_LEN-to-18.patch from git to prevent pstree
+  crashing.
 
   26 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/psmisc-22.5-no-nls.patch, -psmisc-22.12.ebuild,
