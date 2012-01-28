@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-fileupload
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.55 2012/01/28 07:01:18 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.56 2012/01/28 07:06:09 sera Exp $
+
+  28 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
+  -commons-fileupload-1.2.ebuild:
+  Remove old depending on dev-java/servletapi. #398689
 
 *commons-fileupload-1.2.1-r1 (27 Jan 2012)
 
