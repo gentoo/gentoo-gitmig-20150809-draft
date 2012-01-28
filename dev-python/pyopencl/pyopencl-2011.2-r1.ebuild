@@ -1,28 +1,26 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-9999.ebuild,v 1.8 2012/01/28 19:51:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-2011.2-r1.ebuild,v 1.1 2012/01/28 19:51:45 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 
-inherit distutils git-2
-
-EGIT_REPO_URI="http://git.tiker.net/trees/pyopencl.git"
+inherit distutils
 
 DESCRIPTION="Python wrapper for OpenCL"
 HOMEPAGE="http://mathema.tician.de/software/pyopencl http://pypi.python.org/pypi/pyopencl"
-SRC_URI=""
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="examples opengl"
 
 RDEPEND=">=dev-libs/boost-1.48[python]
 	dev-python/numpy
-	=dev-python/pytools-9999
+	dev-python/pytools
 	virtual/opencl"
 DEPEND="${RDEPEND}"
 

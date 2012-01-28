@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-2011.2.ebuild,v 1.1 2012/01/08 22:20:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-2011.2.ebuild,v 1.2 2012/01/28 19:51:45 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 
 inherit distutils
 
@@ -18,12 +18,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples opengl"
 
-RDEPEND="dev-libs/boost[python]
+RDEPEND="<dev-libs/boost-1.48[python]
 	>=dev-python/numpy-1.0.4
 	dev-python/pytools
 	virtual/opencl"
-DEPEND="${RDEPEND}
-	dev-libs/boost[python]"
+DEPEND="${RDEPEND}"
 
 src_configure()
 {
