@@ -1,23 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-9999.ebuild,v 1.10 2012/01/28 19:55:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-2011.2.2-r1.ebuild,v 1.1 2012/01/28 19:55:27 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 
-inherit distutils git-2 multilib
+inherit distutils multilib
 
 DESCRIPTION="Python wrapper for NVIDIA CUDA"
 HOMEPAGE="http://mathema.tician.de/software/pycuda/ http://pypi.python.org/pypi/pycuda"
-SRC_URI=""
-EGIT_REPO_URI="http://git.tiker.net/trees/pycuda.git"
-EGIT_HAS_SUBMODULES="True"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="examples opengl"
 
 RDEPEND=">=dev-libs/boost-1.48[python]
@@ -29,10 +27,6 @@ RDEPEND=">=dev-libs/boost-1.48[python]
 DEPEND="${RDEPEND}"
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
-
-src_unpack() {
-	git-2_src_unpack
-}
 
 src_configure() {
 	local myopts=()

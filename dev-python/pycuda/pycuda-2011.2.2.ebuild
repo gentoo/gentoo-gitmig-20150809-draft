@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-2011.2.2.ebuild,v 1.1 2012/01/10 16:16:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-2011.2.2.ebuild,v 1.2 2012/01/28 19:55:26 floppym Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 
 inherit distutils multilib
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="examples opengl"
 
 RDEPEND="
-	dev-libs/boost[python]
+	<dev-libs/boost-1.48[python]
 	dev-python/decorator
 	dev-python/numpy
 	dev-python/pytools

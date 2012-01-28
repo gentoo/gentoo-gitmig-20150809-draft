@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.49 2012/01/05 17:37:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.50 2012/01/28 19:58:09 floppym Exp $
+
+*visual-5.72-r1 (28 Jan 2012)
+
+  28 Jan 2012; Mike Gilbert <floppym@gentoo.org> +visual-5.72-r1.ebuild,
+  visual-5.4.ebuild, visual-5.72.ebuild:
+  Prepare for PYTHON_ABI-versioned Boost Python libraries in Boost 1.48. Patch
+  by Arfrever.
 
 *visual-5.72 (05 Jan 2012)
 
