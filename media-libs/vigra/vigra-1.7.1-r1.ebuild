@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1-r1.ebuild,v 1.9 2011/12/18 20:41:50 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1-r1.ebuild,v 1.10 2012/01/28 19:36:31 floppym Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ KEYWORDS="amd64 ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x
 IUSE="doc +fftw +hdf5 +jpeg +png +python test +tiff"
 
 RDEPEND="
-	dev-libs/boost
+	dev-libs/boost[python?]
 	fftw? ( >=sci-libs/fftw-3 )
 	hdf5? ( sci-libs/hdf5 )
 	jpeg? ( virtual/jpeg )

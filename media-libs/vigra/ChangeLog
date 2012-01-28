@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vigra
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.48 2011/12/18 20:41:50 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.49 2012/01/28 19:36:31 floppym Exp $
+
+  28 Jan 2012; Mike Gilbert <floppym@gentoo.org> vigra-1.7.1-r1.ebuild,
+  vigra-1.7.1.ebuild:
+  Change boost dep to resolve bug 400849. Fix by Arfrever.
 
   18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> vigra-1.7.1-r1.ebuild:
   Stable for ppc; bug #387187
