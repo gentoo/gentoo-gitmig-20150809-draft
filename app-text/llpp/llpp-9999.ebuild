@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.8 2011/10/04 22:46:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.9 2012/01/28 22:36:31 xmw Exp $
 
 EAPI=3
 
 EGIT_REPO_URI="git://repo.or.cz/llpp.git"
 
-inherit git-2 toolchain-funcs
+inherit eutils git-2 toolchain-funcs
 
 DESCRIPTION="a graphical PDF viewer which aims to superficially resemble less(1)"
 HOMEPAGE="http://repo.or.cz/w/llpp.git"
@@ -15,7 +15,7 @@ SRC_URI=""
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="vanilla"
+IUSE=""
 
 RDEPEND=">=app-text/mupdf-0.8.165
 	dev-ml/lablgl[glut]
@@ -26,7 +26,10 @@ RDEPEND=">=app-text/mupdf-0.8.165
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	use vanilla || epatch "${FILESDIR}"/${PN}-WM_CLASS.patch
+	sed -e s/pdf_xref/pdf_document/ \
+		-e s/pdf_open_xref/pdf_open_document/ \
+		-e s/pdf_free_xref/pdf_close_document/ \
+		-i link.c || die
 }
 
 src_compile() {
@@ -36,7 +39,7 @@ src_compile() {
 	local myccopt="$(freetype-config --cflags) -O -include ft2build.h -D_GNU_SOURCE"
 	local mycclib="-lmupdf -lfitz -lz -ljpeg -lopenjpeg -ljbig2dec -lfreetype"
 	#if use ocamlopt ; then
-		myccopt="${myccopt} -lpthread"
+		mycclib="${mycclib} -lpthread"
 		ocamlopt -c -o link.o -ccopt "${myccopt}" link.c || die
 		ocamlopt -c -o help.cmx help.ml || die
 		ocamlopt -c -o parser.cmx parser.ml || die
