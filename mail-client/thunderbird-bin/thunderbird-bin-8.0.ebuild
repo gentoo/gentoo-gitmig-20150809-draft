@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-8.0.ebuild,v 1.4 2011/12/08 14:48:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-8.0.ebuild,v 1.5 2012/01/28 05:53:22 nirbheek Exp $
 
 EAPI="3"
 
@@ -50,6 +50,7 @@ RDEPEND="x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu
 	>=x11-libs/gtk+-2.2:2
+	>=media-libs/alsa-lib-1.0.16
 	crashreporter? ( net-misc/curl ) "
 
 S="${WORKDIR}/thunderbird"
