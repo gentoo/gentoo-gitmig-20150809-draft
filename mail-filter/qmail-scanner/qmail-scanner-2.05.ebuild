@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.05.ebuild,v 1.7 2011/02/07 11:00:10 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.05.ebuild,v 1.8 2012/01/28 21:11:09 vapier Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -49,6 +49,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${DISTDIR}"/q-s-${PV}st-${Q_S_DATE}.patch.gz
+	epatch "${FILESDIR}"/${PN}-2.08-disable-suid-check.patch #364123
 	ht_fix_file autoupdaters/* configure
 	sed -i \
 		-e "s:/var/spool/qscand:/var/spool/qscan:g" \
