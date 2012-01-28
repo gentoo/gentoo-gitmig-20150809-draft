@@ -1,6 +1,14 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.45 2012/01/28 12:57:29 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.46 2012/01/28 13:32:56 billie Exp $
+
+*epdfview-0.1.8-r1 (28 Jan 2012)
+
+  28 Jan 2012; Daniel Pielmeier <billie@gentoo.org> +epdfview-0.1.8-r1.ebuild,
+  +files/epdfview-0.1.8-swap-blue-red-channels.patch:
+  Add patch from upstream to fix bug #387125. Thanks to Vladimir for the report
+  and Fab for the link to the upstream patch. Possible endian issues still have
+  to be sorted out.
 
   28 Jan 2012; Daniel Pielmeier <billie@gentoo.org>
   -files/epdfview-0.1.7-mouse-scrolling.patch,
