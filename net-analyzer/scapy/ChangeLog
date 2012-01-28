@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scapy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.34 2012/01/27 15:56:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.35 2012/01/28 15:34:08 phajdan.jr Exp $
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> scapy-2.2.0-r1.ebuild:
+  x86 stable wrt bug #400427
 
   27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> scapy-2.2.0-r1.ebuild:
   Stable for amd64, wrt bug #400427
