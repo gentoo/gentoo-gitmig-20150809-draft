@@ -1,10 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/onphp/onphp-1.0.10.ebuild,v 1.1 2011/04/10 17:30:40 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/onphp/onphp-1.0.10.ebuild,v 1.2 2012/01/28 14:07:28 mabi Exp $
 
-EAPI="3"
-
-inherit php-lib-r1
+EAPI="4"
 
 KEYWORDS="~amd64 ~x86"
 
@@ -26,6 +24,7 @@ src_install() {
 		dohtml -r "${WORKDIR}/${PN}-api-${PV}/"*
 	fi
 
-	php-lib-r1_src_install ./ global.inc.php.tpl
-	php-lib-r1_src_install ./ `find core main meta -type f -print`
+	insinto "/usr/share/php/${PN}"
+	doins global.inc.php.tpl
+	doins -r core main meta
 }
