@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nethogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.21 2012/01/28 15:07:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.22 2012/01/28 18:09:31 jer Exp $
+
+  28 Jan 2012; Jeroen Roovers <jer@gentoo.org> -nethogs-0.6.1_pre2.ebuild,
+  -files/nethogs-0.6.1_pre2-gcc43.patch, -nethogs-0.7.0.ebuild,
+  -files/nethogs-0.7.0-Makefile.patch, -files/nethogs-0.7.0-gcc44.patch:
+  Old.
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nethogs-0.8.0-r2.ebuild:
   x86 stable wrt bug #400611
