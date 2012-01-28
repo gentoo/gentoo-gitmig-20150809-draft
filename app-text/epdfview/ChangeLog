@@ -1,6 +1,10 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.46 2012/01/28 13:32:56 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.47 2012/01/28 14:52:58 lxnay Exp $
+
+  28 Jan 2012; Fabio Erculiani <lxnay@gentoo.org> epdfview-0.1.8.ebuild,
+  epdfview-0.1.8-r1.ebuild:
+  add ~arm keyword, looks good
 
 *epdfview-0.1.8-r1 (28 Jan 2012)
 
