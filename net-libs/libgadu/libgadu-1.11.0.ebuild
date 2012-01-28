@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.0.ebuild,v 1.8 2011/07/09 16:49:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.0.ebuild,v 1.9 2012/01/28 02:43:22 reavertm Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ DESCRIPTION="This library implements the client side of the Gadu-Gadu protocol"
 HOMEPAGE="http://toxygen.net/libgadu/"
 SRC_URI="http://toxygen.net/libgadu/files/${MY_P}.tar.gz"
 
-# Bug 373215, relies on remote server presence
+# Bug 373215
 RESTRICT="test"
 
 LICENSE="LGPL-2.1"
