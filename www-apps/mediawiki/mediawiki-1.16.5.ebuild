@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.16.5.ebuild,v 1.5 2011/09/27 16:35:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.16.5.ebuild,v 1.6 2012/01/28 18:38:05 armin76 Exp $
 
 EAPI="3"
 inherit webapp depend.php versionator eutils
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.mediawiki.org"
 SRC_URI="http://download.wikimedia.org/mediawiki/${MY_BRANCH}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ppc x86"
 IUSE="imagemagick math mysql postgres +ocamlopt sqlite"
 
 DEPEND="math? ( >=dev-lang/ocaml-3.0.6[ocamlopt?] )"
