@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.447 2012/01/27 22:18:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.448 2012/01/28 20:43:10 dilfridge Exp $
+
+*cups-1.5.0-r4 (28 Jan 2012)
+
+  28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.5.0-r3.ebuild,
+  +cups-1.5.0-r4.ebuild, +files/cups-1.5.0-systemd-socket.patch:
+  Add systemd support, bug 376021
 
   27 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.0-r3.ebuild:
   Re-add usb useflag / kernel configuration checks, but only on linux, bug

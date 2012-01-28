@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r3.ebuild,v 1.8 2012/01/27 22:18:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r4.ebuild,v 1.1 2012/01/28 20:43:10 dilfridge Exp $
 
 EAPI=4
 
@@ -130,6 +130,9 @@ src_prepare() {
 
 	# security fixes
 	epatch "${FILESDIR}/${PN}-1.4.8-CVE-2011-3170.patch"
+
+	# systemd support
+	epatch "${FILESDIR}/${PN}-1.5.0-systemd-socket.patch"
 
 	AT_M4DIR=config-scripts eaclocal
 	eautoconf
