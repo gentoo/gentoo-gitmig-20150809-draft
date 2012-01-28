@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.16.ebuild,v 1.3 2011/06/05 19:38:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.16-r1.ebuild,v 1.1 2012/01/28 21:23:25 dilfridge Exp $
 
 EAPI=4
 inherit eutils base
@@ -22,7 +22,10 @@ DEPEND="X? ( x11-libs/libX11
 	dev-libs/libusb"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${P}-options.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-options.patch"
+	"${FILESDIR}/${P}-overflow.patch"
+)
 
 src_configure() {
 	./Configure || die
@@ -36,7 +39,7 @@ src_compile() {
 		mytargets="${mytargets} mtink mtinkc";
 	fi
 
-	make ${mytargets} || die "Compile problem"
+	emake ${mytargets}
 }
 
 src_install() {
