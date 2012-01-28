@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xhtml2pdf/xhtml2pdf-0.0.3.ebuild,v 1.1 2012/01/27 22:43:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xhtml2pdf/xhtml2pdf-0.0.3.ebuild,v 1.2 2012/01/28 10:27:55 nelchael Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,4 +24,4 @@ DEPEND="dev-python/html5lib
 	dev-python/reportlab"
 RDEPEND="${DEPEND}"
 
-PYTHON_MODNAME="ho sx"
+PYTHON_MODNAME="xhtml2pdf"
