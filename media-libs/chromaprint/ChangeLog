@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/chromaprint
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/ChangeLog,v 1.1 2012/01/28 13:17:50 ssuominen Exp $
+
+*chromaprint-0.6 (28 Jan 2012)
+
+  28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +chromaprint-0.6.ebuild:
+  Initial commit; required by recent release of media-sound/clementine wrt
+  #400615 by Nikoli
+
