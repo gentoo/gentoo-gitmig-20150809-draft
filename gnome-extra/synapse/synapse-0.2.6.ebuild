@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.6.ebuild,v 1.3 2011/05/25 19:12:51 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.6.ebuild,v 1.4 2012/01/29 16:06:46 jlec Exp $
 
 EAPI=4
 inherit gnome2-utils
 
 DESCRIPTION="A program launcher in the style of GNOME Do"
-HOMEPAGE="http://launchpad.net/synapse-project"
+HOMEPAGE="http://launchpad.net/synapse-project/"
 SRC_URI="http://launchpad.net/synapse-project/0.2/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="dev-lang/vala:0.12
 	x11-libs/gtkhotkey
-	>=dev-libs/libgee-0.5.2
+	dev-libs/libgee:0
 	>=dev-libs/json-glib-0.10.0
 	>=x11-libs/gtk+-2.20.0:2
 	>=dev-libs/glib-2.20.0:2
