@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/encoding-warnings
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/encoding-warnings/ChangeLog,v 1.1 2012/01/29 18:02:50 dilfridge Exp $
+
+*encoding-warnings-0.11 (29 Jan 2012)
+
+  29 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +encoding-warnings-0.11.ebuild, +metadata.xml:
+  New package, dependency of Lab::Measurement
+
