@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.24 2012/01/13 23:23:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.25 2012/01/29 10:08:31 hwoarang Exp $
+
+*lightdm-1.0.6-r4 (29 Jan 2012)
+
+  29 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +lightdm-1.0.6-r4.ebuild:
+  Drop bundled moc files. This should allow building with multiple Qt versions.
+  Thanks to Ben de Groot <yngwin@gmail.com>. Bug #401259
 
   13 Jan 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/lightdm-1.0.6-pkglibexec.patch, lightdm-1.0.6-r3.ebuild:
