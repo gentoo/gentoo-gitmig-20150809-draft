@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6157 2012/01/29 16:14:15 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6158 2012/01/29 19:12:24 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jan 2012; Alex Alexander <wired@gentoo.org> package.mask:
+  unmasked Qt 4.8.0 and friends
 
   29 Jan 2012; Aaron W. Swenson <titanofold@gentoo.org> thirdpartymirrors:
   PostgreSQL revamped their download network.
