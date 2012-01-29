@@ -1,6 +1,11 @@
 # ChangeLog for media-video/submux-dvd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/ChangeLog,v 1.12 2010/03/25 21:22:40 lordvan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/ChangeLog,v 1.13 2012/01/29 20:20:38 lordvan Exp $
+
+  29 Jan 2012; <lordvan@gentoo.org> -submux-dvd-0.5.ebuild,
+  submux-dvd-0.5.1.ebuild:
+  actually removed 0.5 now and fixed SRC_URI and HOMEPAGE. fixes bug #370609
+  (thanks to David for pointing this out)
 
   25 Mar 2010; <lordvan@gentoo.org> submux-dvd-0.5.1.ebuild:
   removed submux-dvd-0.5.ebuild
