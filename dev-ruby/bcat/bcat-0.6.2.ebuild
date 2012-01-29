@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/bcat-0.6.2.ebuild,v 1.1 2011/09/11 05:51:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/bcat-0.6.2.ebuild,v 1.2 2012/01/29 09:55:48 graaff Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_DOC="man"
 RUBY_FAKEGEM_EXTRADOC="README"
@@ -22,6 +22,17 @@ ruby_add_bdepend "doc? ( app-text/ronn )"
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 ruby_add_rdepend "dev-ruby/rack"
+
+each_ruby_prepare() {
+	sed -i -e "s/a2h/#{ENV['RUBY']} -S a2h/" test/test_bcat_a2h.rb || die
+}
+
+each_ruby_test() {
+	# The Rakefile uses weird trickery with load path that causes gems
+	# not to be found. Run tests directly instead and do the trickery
+	# here to support popen calls for the bins in this package.
+	RUBY=${RUBY} RUBYLIB=lib:${RUBYLIB} PATH=bin:${PATH} ${RUBY} -S testrb test/test_*.rb || die
+}
 
 all_ruby_install() {
 	all_fakegem_install
