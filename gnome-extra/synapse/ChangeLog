@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/synapse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.8 2012/01/29 16:45:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.9 2012/01/29 18:30:53 jlec Exp $
+
+  29 Jan 2012; Justin Lecher <jlec@gentoo.org> synapse-0.2.8.2.ebuild,
+  +files/synapse-0.2.8.2-underlinking.patch:
+  Add underlinking patch, moved to autotools-utils.eclass
 
 *synapse-0.2.8.2 (29 Jan 2012)
 
