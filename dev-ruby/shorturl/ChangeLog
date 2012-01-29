@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/shorturl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.15 2011/01/10 18:13:50 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.16 2012/01/29 08:00:28 graaff Exp $
+
+*shorturl-0.8.8-r1 (29 Jan 2012)
+
+  29 Jan 2012; Hans de Graaff <graaff@gentoo.org> shorturl-0.8.8.ebuild,
+  +shorturl-0.8.8-r1.ebuild:
+  Revision bump to create stable candidate without ruby19.
 
   10 Jan 2011; Hans de Graaff <graaff@gentoo.org> shorturl-0.8.8.ebuild:
   Keyword ~x86-macos.
