@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.93 2012/01/25 06:29:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.94 2012/01/29 12:44:05 slyfox Exp $
+
+  29 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-kvm-9999.ebuild:
+  Respect user's decision whether to generate debug info when build stuff
+  (related to bug #355861 by Andrew Savchenko). Drop outdated seding of
+  Makefiles.
 
 *qemu-kvm-1.0-r2 (25 Jan 2012)
 
