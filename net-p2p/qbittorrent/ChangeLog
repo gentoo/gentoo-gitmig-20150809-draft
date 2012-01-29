@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.178 2012/01/28 15:10:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.179 2012/01/29 00:46:59 johu Exp $
+
+  29 Jan 2012; Johannes Huber <johu@gentoo.org> -qbittorrent-2.8.2.ebuild,
+  -qbittorrent-2.8.3.ebuild, -qbittorrent-2.8.4.ebuild,
+  -qbittorrent-2.8.5.ebuild, -qbittorrent-2.9.2.ebuild:
+  Remove old.
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   qbittorrent-2.9.3.ebuild:
