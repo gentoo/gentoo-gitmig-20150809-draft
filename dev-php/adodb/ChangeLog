@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.114 2011/11/13 14:52:58 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.115 2012/01/29 15:33:36 armin76 Exp $
+
+  29 Jan 2012; Raúl Porcel <armin76@gentoo.org> adodb-5.14.ebuild:
+  alpha/ia64/sparc stable
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org> adodb-5.14.ebuild:
   x86 stable, bug #387661
