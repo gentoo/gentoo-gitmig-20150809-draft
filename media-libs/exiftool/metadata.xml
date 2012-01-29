@@ -3,9 +3,6 @@
 <pkgmetadata>
 	<herd>graphics</herd>
 	<herd>perl</herd>
-	<maintainer>
-		<email>graaff@gentoo.org</email>
-	</maintainer>
     <longdescription>
       ExifTool is a platform-independent Perl library plus a
       command-line application for reading, writing and editing meta
