@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vgabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/ChangeLog,v 1.6 2012/01/25 08:16:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/ChangeLog,v 1.7 2012/01/29 21:53:59 cardoe Exp $
+
+  29 Jan 2012; Doug Goldstein <cardoe@gentoo.org> vgabios-0.6c.ebuild,
+  vgabios-0.7a.ebuild:
+  Call emake clean at the start of the compile phase to get rid of the prebuilt
+  pieces. bug #400731
 
   25 Jan 2012; Doug Goldstein <cardoe@gentoo.org> vgabios-0.7a.ebuild:
   0.7a should still be masked
