@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-core
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.149 2011/12/27 21:25:59 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.150 2012/01/29 17:00:02 wired Exp $
+
+*qt-core-4.8.0-r1 (29 Jan 2012)
+
+  29 Jan 2012; Alex Alexander <wired@gentoo.org> +qt-core-4.8.0-r1.ebuild,
+  +files/qt-core-4.8.0-qurl-regression-fix.patch, metadata.xml:
+  version bump
 
   27 Dec 2011; Markus Meier <maekke@gentoo.org> qt-core-4.7.4-r1.ebuild:
   x86 stable, bug #390963
