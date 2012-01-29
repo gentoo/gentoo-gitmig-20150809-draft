@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6154 2012/01/29 11:49:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6155 2012/01/29 15:13:30 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jan 2012; Alex Alexander <wired@gentoo.org> package.mask:
+  Getting ready to push qt-4.8.0
 
   29 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Improve xpdf mask message

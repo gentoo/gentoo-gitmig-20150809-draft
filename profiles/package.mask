@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13440 2012/01/29 11:49:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13441 2012/01/29 15:13:30 wired Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,28 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alex Alexander <wired@gentoo.org> (29 Jan 2012)
+# Getting ready to push qt-4.8.0
+app-admin/eselect-qtgraphicssystem
+~x11-libs/qt-meta-4.8
+~x11-libs/qt-assistant-4.8.0
+~x11-libs/qt-core-4.8.0
+~x11-libs/qt-declarative-4.8.0
+~x11-libs/qt-dbus-4.8.0
+~x11-libs/qt-demo-4.8.0
+~x11-libs/qt-gui-4.8.0
+~x11-libs/qt-multimedia-4.8.0
+~x11-libs/qt-opengl-4.8.0
+~x11-libs/qt-openvg-4.8.0
+~x11-libs/qt-phonon-4.8.0
+~x11-libs/qt-qt3support-4.8.0
+~x11-libs/qt-script-4.8.0
+~x11-libs/qt-sql-4.8.0
+~x11-libs/qt-svg-4.8.0
+~x11-libs/qt-test-4.8.0
+~x11-libs/qt-webkit-4.8.0
+~x11-libs/qt-xmlpatterns-4.8.0
 
 # Aaron W. Swenson <titanofold@gentoo.org> (28 Jan 2012)
 # Masked for last rites. Package is no longer maintained upstream and
