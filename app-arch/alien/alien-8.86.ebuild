@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.69.ebuild,v 1.1 2008/02/03 11:20:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.86.ebuild,v 1.1 2012/01/29 20:47:44 lordvan Exp $
 
 EAPI=1
 
@@ -17,7 +17,9 @@ IUSE="+bzip2"
 
 RDEPEND="app-arch/rpm
 	app-arch/dpkg
-	bzip2? ( app-arch/bzip2 )"
+	bzip2? ( app-arch/bzip2 )
+	dev-util/debhelper
+	>=app-arch/tar-1.14.91"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}

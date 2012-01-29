@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/alien
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.27 2009/03/21 01:46:14 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.28 2012/01/29 20:47:44 lordvan Exp $
+
+*alien-8.86 (29 Jan 2012)
+
+  29 Jan 2012; <lordvan@gentoo.org> -alien-8.64.ebuild, -alien-8.69.ebuild,
+  -alien-8.72.ebuild, +alien-8.86.ebuild:
+  removed old unstable versions, added newest version fixes bug #303865 (thanks
+  to Clemmitt M. Sigler for reporting)
 
   21 Mar 2009; Jeroen Roovers <jer@gentoo.org> alien-8.74.ebuild:
   Stable for HPPA (bug #249918).
