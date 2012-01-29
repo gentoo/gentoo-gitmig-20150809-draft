@@ -1,19 +1,19 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.1.ebuild,v 1.7 2011/10/05 16:59:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.3.ebuild,v 1.1 2012/01/29 10:54:23 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 
 inherit python gnome2 eutils multilib
 
-DESCRIPTION="A graphical (GNOME 2) diff and merge tool"
-HOMEPAGE="http://meld.sourceforge.net/"
+DESCRIPTION="A graphical diff and merge tool"
+HOMEPAGE="http://meldmerge.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc gnome"
 
 RDEPEND="
@@ -26,9 +26,10 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper"
 
 pkg_setup() {
-	DOCS="AUTHORS NEWS help/ChangeLog"
+	DOCS="NEWS"
 	# Needed for optimizing python modules against proper interpreter
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -51,11 +52,6 @@ src_prepare() {
 	# leave that to gnome2.eclass #145833
 	sed -e '/scrollkeeper-update/s/\t/&#/' \
 		-i help/*/Makefile || die "sed 4 failed"
-
-	# fix test suite
-	sed -e 's,\(for file in \["\)\(meld"\]\),\1bin/\2,' \
-		-e 's,\(open("\)\(meldapp.py")\),\1meld/\2,' \
-		-i tools/check_release || die "sed 5 failed"
 
 	# replace all calls to python by specific major version
 	sed -e "s/\(PYTHON ?= \).*/\1$(PYTHON -2)/" \
