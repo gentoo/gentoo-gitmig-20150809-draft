@@ -1,9 +1,29 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.304 2012/01/25 07:56:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.305 2012/01/29 14:52:52 wired Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alex Alexander <wired@gentoo.org> (29 Jan 2012)
+# Experimental use flags
+~x11-libs/qt-assistant-4.8.0 c++0x qpa
+~x11-libs/qt-core-4.8.0 c++0x qpa
+~x11-libs/qt-declarative-4.8.0 c++0x qpa
+~x11-libs/qt-dbus-4.8.0 c++0x qpa
+~x11-libs/qt-demo-4.8.0 c++0x qpa
+~x11-libs/qt-gui-4.8.0 c++0x qpa
+~x11-libs/qt-multimedia-4.8.0 c++0x qpa
+~x11-libs/qt-opengl-4.8.0 c++0x qpa
+~x11-libs/qt-openvg-4.8.0 c++0x qpa
+~x11-libs/qt-phonon-4.8.0 c++0x qpa
+~x11-libs/qt-qt3support-4.8.0 c++0x qpa
+~x11-libs/qt-script-4.8.0 c++0x qpa
+~x11-libs/qt-sql-4.8.0 c++0x qpa
+~x11-libs/qt-svg-4.8.0 c++0x qpa
+~x11-libs/qt-test-4.8.0 c++0x qpa
+~x11-libs/qt-webkit-4.8.0 c++0x qpa
+~x11-libs/qt-xmlpatterns-4.8.0 c++0x qpa
 
 # Johannes Huber <johu@gentoo.org> (25 Jan 2012)
 # Required >=net-libs/telepathy-glib-0.17.2 version is not tree yet. 
