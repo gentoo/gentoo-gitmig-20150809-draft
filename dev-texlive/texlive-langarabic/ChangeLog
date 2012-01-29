@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langarabic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarabic/ChangeLog,v 1.22 2012/01/17 17:39:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarabic/ChangeLog,v 1.23 2012/01/29 19:21:02 maekke Exp $
+
+  29 Jan 2012; Markus Meier <maekke@gentoo.org> texlive-langarabic-2011.ebuild:
+  arm stable, bug #395735
 
   17 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   texlive-langarabic-2011.ebuild:

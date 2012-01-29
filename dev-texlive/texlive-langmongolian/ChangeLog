@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langmongolian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langmongolian/ChangeLog,v 1.43 2012/01/17 18:58:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langmongolian/ChangeLog,v 1.44 2012/01/29 20:06:17 maekke Exp $
+
+  29 Jan 2012; Markus Meier <maekke@gentoo.org>
+  texlive-langmongolian-2011.ebuild:
+  arm stable, bug #395735
 
   17 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   texlive-langmongolian-2011.ebuild:
