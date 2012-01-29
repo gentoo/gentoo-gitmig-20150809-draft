@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13443 2012/01/29 19:12:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13444 2012/01/29 23:44:49 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -255,19 +255,6 @@ xfce-extra/thunar-vfs
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (01 Jan 2012)
 # Mask until dependencies are keyworded, bug #396669
 >=x11-drivers/xf86-input-evdev-2.6.99
-
-# Sebastien Fabbro <bicatali@gentoo.org> (29 Dec 2011)
-# current version very broken (bug #239254 and bug #296770)
-# New upstream source is a different package
-# Removal in 30 days
-sci-astronomy/orsa
-
-# Sebastien Fabbro <bicatali@gentoo.org> (29 Dec 2011)
-# Maintaining a pain with many tcl/tk bundled sources
-# Contact me if you want to maintain.
-# Replacement: sci-astronomy/ds9-bin
-# Removal in 30 days
-sci-astronomy/ds9
 
 # Sebastien Fabbro <bicatali@gentoo.org> (29 Dec 2011)
 # Hard to maintain. Missing files in source, broken packaging.
