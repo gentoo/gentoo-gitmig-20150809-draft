@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/pysam
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/pysam/ChangeLog,v 1.1 2012/01/29 00:03:41 weaver Exp $
+
+*pysam-0.6 (29 Jan 2012)
+
+  29 Jan 2012; Andrey Kislyuk <weaver@gentoo.org> +pysam-0.6.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me
+
