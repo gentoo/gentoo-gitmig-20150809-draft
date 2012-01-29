@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnugo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.24 2010/09/19 02:17:50 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.25 2012/01/29 06:44:40 mr_bones_ Exp $
+
+*gnugo-3.9.1 (29 Jan 2012)
+
+  29 Jan 2012; Michael Sterrett <mr_bones_@gentoo.org> +gnugo-3.9.1.ebuild:
+  version bump
 
   19 Sep 2010; Jonathan Callen <abcd@gentoo.org> gnugo-3.8.ebuild:
   Add ~amd64-linux, ~x86-linux keywords
