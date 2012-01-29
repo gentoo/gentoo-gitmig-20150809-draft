@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-4.0-r1.ebuild,v 1.1 2012/01/29 15:28:47 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-4.0-r1.ebuild,v 1.2 2012/01/29 15:42:43 titanofold Exp $
 
 EAPI="4"
 
@@ -13,13 +13,17 @@ SRC_URI="http://pqxx.org/download/software/${PN}/${P}.tar.gz"
 HOMEPAGE="http://pqxx.org/development/libpqxx/"
 LICENSE="BSD"
 SLOT="0"
-IUSE="doc"
+IUSE="doc static-libs"
 
 DEPEND="dev-db/postgresql-base"
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	econf --enable-shared
+	if use static-libs ; then
+		econf --enable-static
+	else
+		econf --enable-shared
+	fi
 }
 
 src_install () {

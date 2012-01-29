@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.79 2012/01/29 15:28:47 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.80 2012/01/29 15:42:43 titanofold Exp $
+
+  29 Jan 2012; Aaron W. Swenson <titanofold@gentoo.org> libpqxx-4.0-r1.ebuild:
+  Added static-libs support.
 
 *libpqxx-4.0-r1 (29 Jan 2012)
 
