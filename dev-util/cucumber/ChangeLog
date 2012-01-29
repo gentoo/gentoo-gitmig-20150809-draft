@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.46 2011/12/31 19:14:21 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.47 2012/01/29 10:30:00 graaff Exp $
+
+  29 Jan 2012; Hans de Graaff <graaff@gentoo.org> cucumber-1.1.4.ebuild:
+  Add ruby19. Closes bug 293358.
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> cucumber-0.7.3-r1.ebuild:
   Add Prefix keywords, bug #396547
