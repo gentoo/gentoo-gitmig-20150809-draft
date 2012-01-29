@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.52.ebuild,v 1.1 2011/05/30 21:41:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.54.ebuild,v 1.1 2012/01/29 01:24:47 xmw Exp $
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="2:2.5"
@@ -16,16 +16,13 @@ SRC_URI="http://zim-wiki.org/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="graphviz latex screenshot spell test"
+IUSE="test"
 
-RDEPEND="${DEPEND}
-	graphviz? ( media-gfx/graphviz )
-	latex? ( virtual/latex-base app-text/dvipng )
-	screenshot? ( media-gfx/scrot )
-	spell? ( dev-python/gtkspell-python )"
-DEPEND="|| ( >=dev-lang/python-2.6 dev-python/simplejson )
-	dev-python/pygtk
-	x11-misc/xdg-utils"
+RDEPEND="|| ( >=dev-lang/python-2.6 dev-python/simplejson )
+	dev-python/pygtk"
+DEPEND="${RDEPEND}
+	x11-misc/xdg-utils
+	test? ( dev-vcs/bzr )"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -51,6 +48,15 @@ pkg_postinst() {
 	xdg-icon-resource install --context mimetypes --size 64 \
 		"${ROOT}/usr/share/pixmaps/zim.png" \
 		application-x-zim-notebook || die "xdg-icon-resource install failed"
+	ewarn "Please emerge these packages for additional functionality"
+	ewarn "    dev-lang/R"
+	ewarn "    dev-python/gtkspell-python"
+	ewarn "    dev-vcs/bzr"
+	ewarn "    media-gfx/graphviz"
+	ewarn "    media-gfx/imagemagick"
+	ewarn "    media-gfx/scrot"
+	ewarn "    sci-visualization/gnuplot"
+	ewarn "    virtual/latex-base app-text/dvipng"
 }
 
 pkg_postrm() {
