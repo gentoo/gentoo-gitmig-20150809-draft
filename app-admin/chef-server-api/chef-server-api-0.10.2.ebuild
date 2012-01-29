@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-0.10.2.ebuild,v 1.1 2011/07/25 09:16:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-0.10.2.ebuild,v 1.2 2012/01/29 12:22:49 hollow Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -43,7 +43,7 @@ each_ruby_install() {
 all_ruby_install() {
 	all_fakegem_install
 
-	newinitd "${FILESDIR}/initd/chef-server-api-r1" ${PN}
+	doinitd "${FILESDIR}/initd/chef-server-api"
 	doconfd "${FILESDIR}/confd/chef-server-api"
 
 	keepdir /etc/chef /var/lib/chef /var/log/chef /var/run/chef \
