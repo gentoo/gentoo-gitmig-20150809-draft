@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/chef
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.7 2011/07/25 09:06:18 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.8 2012/01/29 12:07:26 hollow Exp $
+
+*chef-0.10.8 (29 Jan 2012)
+
+  29 Jan 2012; Benedikt Böhm <hollow@gentoo.org> -chef-0.9.12.ebuild,
+  +chef-0.10.8.ebuild, files/initd/chef-client:
+  version bump wrt #396693
 
 *chef-0.10.2 (25 Jul 2011)
 

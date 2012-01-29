@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/chef-solr-0.9.12-r1.ebuild,v 1.1 2011/12/31 20:07:50 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/chef-solr-0.10.8.ebuild,v 1.1 2012/01/29 12:11:53 hollow Exp $
 
-EAPI="2"
+EAPI="4"
 USE_RUBY="ruby18"
 
 RUBY_FAKEGEM_TASK_DOC=""
@@ -18,17 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=net-misc/rabbitmq-server-1.7.0
+RDEPEND=">=net-misc/rabbitmq-server-1.7.2
 	virtual/jre:1.6"
 
-ruby_add_rdepend "~app-admin/chef-${PV}
-	>=dev-ruby/libxml-1.1.3
-	>=dev-ruby/uuidtools-2.0.0"
-
-pkg_setup() {
-	enewgroup chef
-	enewuser chef -1 -1 /var/lib/chef chef
-}
+ruby_add_rdepend "~app-admin/chef-${PV}"
 
 each_ruby_install() {
 	each_fakegem_install
@@ -40,9 +33,6 @@ all_ruby_install() {
 
 	doinitd "${FILESDIR}/initd/chef-solr"
 	doconfd "${FILESDIR}/confd/chef-solr"
-
-	doinitd "${FILESDIR}/initd/chef-solr-indexer"
-	doconfd "${FILESDIR}/confd/chef-solr-indexer"
 
 	keepdir /etc/chef /var/lib/chef /var/log/chef /var/run/chef
 

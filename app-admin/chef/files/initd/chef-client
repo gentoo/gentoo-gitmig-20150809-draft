@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
@@ -14,14 +14,17 @@ SPLAY=${SPLAY:-20}
 
 start() {
 	ebegin "Starting Chef client"
-	start-stop-daemon --start --quiet --pidfile ${CHEF_CLIENT_PIDFILE} \
-		--exec ${CHEF_CLIENT_BINARY} -- -d -c ${CONFIGFILE} \
-		-i ${INTERVAL} -s ${SPLAY} ${CHEF_CLIENT_OPTS}
+	start-stop-daemon --start \
+		--pidfile ${CHEF_CLIENT_PIDFILE} \
+		--exec ${CHEF_CLIENT_BINARY} \
+		-- \
+		-d -c ${CONFIGFILE} -i ${INTERVAL} -s ${SPLAY} \
+		${CHEF_CLIENT_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Shutting down Chef client"
-	start-stop-daemon --stop --quiet --pidfile ${CHEF_CLIENT_PIDFILE}
+	start-stop-daemon --stop --pidfile ${CHEF_CLIENT_PIDFILE}
 	eend $?
 }
