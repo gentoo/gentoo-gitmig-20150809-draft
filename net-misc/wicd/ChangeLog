@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.107 2012/01/27 13:37:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.108 2012/01/29 12:23:34 phajdan.jr Exp $
+
+  29 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  wicd-1.7.1_pre20120127.ebuild:
+  x86 stable wrt bug #401005
 
   27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> wicd-1.7.1_pre20120127.ebuild:
   Stable for AMD64, wrt security bug #401005
