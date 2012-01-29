@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.96.ebuild,v 1.3 2012/01/29 03:36:26 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.96.ebuild,v 1.4 2012/01/29 05:36:48 dirtyepic Exp $
 
 EAPI="3"
 
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}
 	app-arch/unrar
 	>=dev-python/imaging-1.1.5
 	>=dev-python/pygtk-2.14
+	virtual/jpeg
 	|| ( dev-lang/python[sqlite] dev-python/pysqlite )
 	!media-gfx/comix"
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/mcomix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.7 2012/01/29 03:36:26 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.8 2012/01/29 05:36:48 dirtyepic Exp $
+
+  29 Jan 2012; Ryan Hill <dirtyepic@gentoo.org> mcomix-0.96.ebuild:
+  Add dependency on virtual/jpeg. 99% of archives I've encountered are in jpeg
+  format.
 
   29 Jan 2012; Ryan Hill <dirtyepic@gentoo.org> mcomix-0.96.ebuild:
   New libunrar.so segfaults a lot. Relax dependency so people can downgrade.
