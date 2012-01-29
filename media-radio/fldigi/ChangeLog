@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/fldigi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/ChangeLog,v 1.35 2012/01/28 15:08:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/ChangeLog,v 1.36 2012/01/29 16:19:25 tomjbe Exp $
+
+  29 Jan 2012; Thomas Beierlein <tomjbe@gentoo.org> -fldigi-3.21.33.ebuild:
+  Remove old only working with fltk-1.1 series
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   fldigi-3.21.35_pre1.ebuild:
