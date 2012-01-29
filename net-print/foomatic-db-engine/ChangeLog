@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.50 2012/01/28 21:48:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.51 2012/01/29 16:55:31 maekke Exp $
+
+  29 Jan 2012; Markus Meier <maekke@gentoo.org>
+  foomatic-db-engine-4.0.7.ebuild:
+  arm stable, bug #397189
 
   28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -foomatic-db-engine-4.0.4.ebuild:
