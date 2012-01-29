@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.7.ebuild,v 1.3 2012/01/29 12:22:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.7.ebuild,v 1.4 2012/01/29 14:35:42 ago Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="Adobe"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 RESTRICT="strip mirror"
 
 # mozilla-firefox-bin won't work because it doesn't have gtkembedmoz.so
