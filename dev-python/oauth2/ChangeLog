@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/oauth2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2/ChangeLog,v 1.6 2011/09/24 13:43:16 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2/ChangeLog,v 1.7 2012/01/29 00:18:03 weaver Exp $
+
+*oauth2-1.5.211 (29 Jan 2012)
+
+  29 Jan 2012; Andrey Kislyuk <weaver@gentoo.org> +oauth2-1.5.211.ebuild:
+  Version bump
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> oauth2-1.5.170.ebuild:
   Marked ~x64-macos
