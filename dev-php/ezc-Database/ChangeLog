@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-Database
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-Database/ChangeLog,v 1.1 2011/12/14 22:05:31 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-Database/ChangeLog,v 1.2 2012/01/29 16:19:57 mabi Exp $
+
+  29 Jan 2012; Matti Bickel <mabi@gentoo.org> -ezc-Database-1.3.4.ebuild,
+  ezc-Database-1.4.7.ebuild:
+  remove unneeded depend.php reference, EAPI bump
 
 *ezc-Database-1.4.7 (20 May 2010)
 

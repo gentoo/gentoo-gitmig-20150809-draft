@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-UserInput
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-UserInput/ChangeLog,v 1.1 2011/12/14 22:26:07 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-UserInput/ChangeLog,v 1.2 2012/01/29 16:25:32 mabi Exp $
+
+  29 Jan 2012; Matti Bickel <mabi@gentoo.org> -ezc-UserInput-1.2.ebuild,
+  ezc-UserInput-1.4.ebuild:
+  remove unneeded depend.php reference, EAPI bump
 
 *ezc-UserInput-1.4 (20 May 2010)
 
