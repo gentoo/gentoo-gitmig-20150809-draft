@@ -1,10 +1,13 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.140 2011/06/22 02:33:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.141 2012/01/29 17:03:19 spock Exp $
 
   22 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> elinks-0.11.7.ebuild,
   elinks-0.12_pre5.ebuild, elinks-0.12_pre5-r1.ebuild:
   Fix spidermonkey versions for the new versioning scheme
+
+  18 Jun 2011; Michał Januszewski <spock@gentoo.org> metadata.xml:
+  Reassigning to maintainer-needed.
 
   12 Jun 2011; Michał Januszewski <spock@gentoo.org> elinks-0.11.7.ebuild:
   Disable zlib support (bug #365585).
