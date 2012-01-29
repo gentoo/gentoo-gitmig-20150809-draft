@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.937 2012/01/25 22:57:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.938 2012/01/29 15:33:42 jer Exp $
+
+  29 Jan 2012; Jeroen Roovers <jer@gentoo.org> gentoo-sources-3.2.1-r2.ebuild:
+  Marked -hppa (bug #400671).
 
   25 Jan 2012; Markos Chandras <hwoarang@gentoo.org>
   gentoo-sources-3.2.1-r2.ebuild:
