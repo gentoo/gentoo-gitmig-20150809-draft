@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.14 2012/01/27 21:35:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.15 2012/01/29 12:18:34 slyfox Exp $
 
 EAPI=4
 
@@ -131,11 +131,11 @@ pkg_setup() {
 src_prepare() {
 	# prevent docs to get automatically installed
 	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
-	# Alter target makefiles to accept CFLAGS set via flag-o
-	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
-		Makefile Makefile.target || die
-	# append CFLAGS while linking
-	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak || die
+
+	# drop '-g' by default as it tends to eat
+	# A LOT (~2GB) of ram for each job #355861
+	sed -e 's/CFLAGS="-g $CFLAGS"/CFLAGS="$CFLAGS"/g' \
+		-i configure || die
 
 	# Fix underlinking.
 	# Fault reproducer: USE=nss QEMU_SOFTMMU_TARGETS=lm32 QEMU_USER_TARGETS=
