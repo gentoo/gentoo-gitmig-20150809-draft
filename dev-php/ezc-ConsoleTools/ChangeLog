@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-ConsoleTools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-ConsoleTools/ChangeLog,v 1.1 2011/12/14 22:04:54 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-ConsoleTools/ChangeLog,v 1.2 2012/01/29 16:15:21 mabi Exp $
+
+  29 Jan 2012; Matti Bickel <mabi@gentoo.org> -ezc-ConsoleTools-1.3.2.ebuild,
+  -ezc-ConsoleTools-1.6.1.ebuild:
+  remove old
 
   05 Nov 2010; Jeroen Roovers <jer@gentoo.org>
   ezc-ConsoleTools-1.6.1-r1.ebuild:
