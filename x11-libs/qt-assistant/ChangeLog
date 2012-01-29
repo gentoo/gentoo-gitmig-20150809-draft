@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.118 2012/01/29 19:02:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.119 2012/01/29 23:22:15 josejx Exp $
+
+  29 Jan 2012; Joseph Jezak <josejx@gentoo.org> qt-assistant-4.7.4.ebuild:
+  Marked ppc ppc64 stable for bug #390963.
 
   29 Jan 2012; Alex Alexander <wired@gentoo.org> +files/disable-webkit.patch:
   added missing patch

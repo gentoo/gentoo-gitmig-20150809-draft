@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.101 2012/01/29 17:07:26 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.102 2012/01/29 23:32:48 josejx Exp $
+
+  29 Jan 2012; Joseph Jezak <josejx@gentoo.org> qt-script-4.7.4.ebuild:
+  Marked ppc ppc64 stable for bug #390963.
 
 *qt-script-4.8.0 (29 Jan 2012)
 
