@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.821 2012/01/26 12:02:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.822 2012/01/29 01:25:58 johu Exp $
+
+*kdelibs-4.8.0-r1 (29 Jan 2012)
+
+  29 Jan 2012; Johannes Huber <johu@gentoo.org>
+  +files/kdelibs-4.8.0-xinelib12x.patch, +kdelibs-4.8.0-r1.ebuild:
+  Revision bump, adds upstream patch to fix cmake module for >=xine-lib-1.2, bug
+  #397595.
 
   26 Jan 2012; Johannes Huber <johu@gentoo.org> kdelibs-4.6.3-r3.ebuild:
   Drop failing patch, fixes bug #400893.
