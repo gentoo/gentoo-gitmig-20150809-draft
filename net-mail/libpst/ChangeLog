@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.25 2012/01/01 01:51:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.26 2012/01/29 02:40:13 floppym Exp $
+
+*libpst-0.6.54-r1 (29 Jan 2012)
+
+  29 Jan 2012; Mike Gilbert <floppym@gentoo.org> +libpst-0.6.54-r1.ebuild,
+  libpst-0.6.52.ebuild, libpst-0.6.53.ebuild, libpst-0.6.54.ebuild:
+  Prepare for PYTHON_ABI-versioned Boost Python libraries in Boost 1.48. Patch
+  by Arfrever.
 
 *libpst-0.6.54 (01 Jan 2012)
 
