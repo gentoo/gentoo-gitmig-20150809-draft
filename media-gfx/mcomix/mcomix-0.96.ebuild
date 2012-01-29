@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.96.ebuild,v 1.2 2012/01/23 04:27:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.96.ebuild,v 1.3 2012/01/29 03:36:26 dirtyepic Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ IUSE=""
 
 DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}
-	>=app-arch/unrar-4.1.4-r1
+	app-arch/unrar
 	>=dev-python/imaging-1.1.5
 	>=dev-python/pygtk-2.14
 	|| ( dev-lang/python[sqlite] dev-python/pysqlite )
