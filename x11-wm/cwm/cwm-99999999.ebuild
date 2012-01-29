@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-99999999.ebuild,v 1.5 2011/10/06 00:20:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-99999999.ebuild,v 1.6 2012/01/29 01:49:55 xmw Exp $
 
-EAPI=2
+EAPI=4
 
 EGIT_REPO_URI=https://github.com/chneukirchen/cwm.git
 EGIT_BRANCH=linux
@@ -26,12 +26,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/bison"
 
-src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
+src_prpare() {
+	epatch "${FILESDIR}"/${PN}-20111229-Makefile.patch
+	tc-export CC
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install || die
-	dodoc README || die
+	emake DESTDIR="${D}" install
+	dodoc README
 	make_session_desktop ${PN} ${PN}
 }

@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.29 2012/01/28 15:01:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.30 2012/01/29 01:49:55 xmw Exp $
+
+*cwm-20111229 (29 Jan 2012)
+
+  29 Jan 2012; Michael Weber <xmw@gentoo.org>
+  -files/cwm-20110213-Makefile.patch, -cwm-20110726.ebuild,
+  -cwm-20110908-r1.ebuild, +cwm-20111229.ebuild,
+  +files/cwm-20111229-Makefile.patch, cwm-99999999.ebuild:
+  Version bump to new tarball, remove old version, EAPI-4
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> cwm-20110913-r1.ebuild:
   x86 stable wrt bug #400535
