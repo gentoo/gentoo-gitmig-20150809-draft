@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/kile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.146 2011/10/29 01:09:05 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.147 2012/01/29 17:01:49 johu Exp $
+
+*kile-2.1.1 (29 Jan 2012)
+
+  29 Jan 2012; Johannes Huber <johu@gentoo.org> +kile-2.1.1.ebuild:
+  Version bump.
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> -kile-2.1_beta5.ebuild:
   remove old
