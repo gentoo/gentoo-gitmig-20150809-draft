@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-9.1.2.ebuild,v 1.1 2011/12/08 02:07:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-9.1.2.ebuild,v 1.2 2012/01/29 16:04:08 titanofold Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ S="${WORKDIR}/postgresql-${PV}"
 
 DESCRIPTION="PostgreSQL documentation"
 HOMEPAGE="http://www.postgresql.org/"
-SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${PV}.tar.bz2"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 LICENSE="POSTGRESQL"
 
 IUSE=""

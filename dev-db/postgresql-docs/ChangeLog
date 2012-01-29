@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-docs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.122 2011/12/17 17:58:45 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.123 2012/01/29 16:04:08 titanofold Exp $
+
+  29 Jan 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  postgresql-docs-9.1.2.ebuild:
+  Fixed URI.
 
   17 Dec 2011; Raúl Porcel <armin76@gentoo.org> postgresql-docs-9.1.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #388489
