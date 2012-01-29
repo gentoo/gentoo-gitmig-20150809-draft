@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/eselect-qtgraphicssystem
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-qtgraphicssystem/ChangeLog,v 1.1 2012/01/29 16:19:55 wired Exp $
+
+*eselect-qtgraphicssystem-1.0 (29 Jan 2012)
+
+  29 Jan 2012; Alex Alexander <wired@gentoo.org>
+  +eselect-qtgraphicssystem-1.0.ebuild, +metadata.xml:
+  ebuild for our new qt graphics system eselect module
+
