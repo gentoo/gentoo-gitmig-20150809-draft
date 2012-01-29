@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/xom
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.59 2012/01/01 14:51:59 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.60 2012/01/29 09:57:39 sera Exp $
+
+*xom-1.2.6-r1 (29 Jan 2012)
+
+  29 Jan 2012; Ralph Sennhauser <sera@gentoo.org> +xom-1.2.6-r1.ebuild,
+  +files/xom-strip-fallback-parser.patch:
+  Revbump, strip out fallback parser to allow building wiht other JVMs than
+  SUN/Oracles. #399119
+  Use java-virtuals/servlet-api instead of dev-java/servletapi. #398689
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> xom-1.0-r6.ebuild,
   xom-1.0-r7.ebuild, xom-1.2.6.ebuild:
