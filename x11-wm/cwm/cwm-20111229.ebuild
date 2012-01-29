@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-20111229.ebuild,v 1.1 2012/01/29 01:49:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-20111229.ebuild,v 1.2 2012/01/29 01:54:19 xmw Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" PREFIX=/usr install
 	dodoc README
 	make_session_desktop ${PN} ${PN}
 }
