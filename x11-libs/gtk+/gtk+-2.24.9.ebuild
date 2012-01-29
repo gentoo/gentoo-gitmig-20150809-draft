@@ -1,22 +1,23 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.4.ebuild,v 1.9 2011/08/16 16:09:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.9.ebuild,v 1.1 2012/01/29 10:51:28 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.4"
 
 inherit eutils flag-o-matic gnome.org libtool python virtualx autotools
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
+SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="aqua cups debug doc examples +introspection test vim-syntax xinerama"
 
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
-RDEPEND="!aqua? (
+COMMON_DEPEND="!aqua? (
 		x11-libs/libXrender
 		x11-libs/libX11
 		x11-libs/libXi
@@ -43,16 +44,13 @@ RDEPEND="!aqua? (
 	cups? ( net-print/cups )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
 	!<gnome-base/gail-1000"
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.9
 	!aqua? (
 		x11-proto/xextproto
 		x11-proto/xproto
 		x11-proto/inputproto
 		x11-proto/damageproto
-	)
-	x86-interix? (
-		sys-libs/itx-bind
 	)
 	xinerama? ( x11-proto/xineramaproto )
 	>=dev-util/gtk-doc-am-1.11
@@ -62,6 +60,10 @@ DEPEND="${RDEPEND}
 	test? (
 		media-fonts/font-misc-misc
 		media-fonts/font-cursor-misc )"
+# gtk+-2.24.8 breaks Alt key handling in <=x11-libs/vte-0.28.2:0
+# Remove blocker after >=vte-0.28.2-r201:0 is stable
+RDEPEND="${COMMON_DEPEND}
+	!<x11-libs/vte-0.28.2-r201:0"
 PDEPEND="vim-syntax? ( app-vim/gtk-syntax )"
 
 strip_builddir() {
@@ -86,8 +88,8 @@ src_prepare() {
 	# Don't break inclusion of gtkclist.h, upstream bug 536767
 	epatch "${FILESDIR}/${PN}-2.14.3-limit-gtksignal-includes.patch"
 
-	# Create symlinks to old icons until apps are ported, bug #339319
-	epatch "${FILESDIR}/${PN}-2.24.4-old-icons.patch"
+	# fix building with gir #372953, upstream bug #642085
+	epatch "${FILESDIR}"/${PN}-2.24.7-darwin-quartz-introspection.patch
 
 	# Stop trying to build unmaintained docs, bug #349754
 	strip_builddir SUBDIRS tutorial docs/Makefile.am docs/Makefile.in
@@ -99,34 +101,32 @@ src_prepare() {
 
 	use ppc64 && append-flags -mminimal-toc
 
-	# Non-working test in gentoo's env
-	sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \
-		-i gtk/tests/testing.c || die "sed 1 failed"
-
-	# Cannot work because glib is too clever to find real user's home
-	# gentoo bug #285687, upstream bug #639832
-	# XXX: /!\ Pay extra attention to second sed when bumping /!\
-	sed '/TEST_PROGS.*recentmanager/d' -i gtk/tests/Makefile.am \
-		|| die "failed to disable recentmanager test (1)"
-	sed '/^TEST_PROGS =/,+3 s/recentmanager//' -i gtk/tests/Makefile.in \
-		|| die "failed to disable recentmanager test (2)"
-	sed 's:\({ "GtkFileChooserButton".*},\):/*\1*/:g' -i gtk/tests/object.c \
-		|| die "failed to disable recentmanager test (3)"
-
-	if use x86-interix; then
-		# activate the itx-bind package...
-		append-flags "-I${EPREFIX}/usr/include/bind"
-		append-ldflags "-L${EPREFIX}/usr/lib/bind"
-	fi
-
 	if ! use test; then
 		# don't waste time building tests
 		strip_builddir SRC_SUBDIRS tests Makefile.am Makefile.in
 	else
+		# Non-working test in gentoo's env
+		sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \
+			-i gtk/tests/testing.c || die "sed 1 failed"
+
+		# Cannot work because glib is too clever to find real user's home
+		# gentoo bug #285687, upstream bug #639832
+		# XXX: /!\ Pay extra attention to second sed when bumping /!\
+		sed '/TEST_PROGS.*recentmanager/d' -i gtk/tests/Makefile.am \
+			|| die "failed to disable recentmanager test (1)"
+		sed '/^TEST_PROGS =/,+3 s/recentmanager//' -i gtk/tests/Makefile.in \
+			|| die "failed to disable recentmanager test (2)"
+		sed 's:\({ "GtkFileChooserButton".*},\):/*\1*/:g' -i gtk/tests/object.c \
+			|| die "failed to disable recentmanager test (3)"
+
 		# Skip tests known to fail
 		# https://bugzilla.gnome.org/show_bug.cgi?id=646609
 		sed -e '/g_test_add_func.*test_text_access/s:^://:' \
 			-i "${S}/gtk/tests/testing.c" || die
+
+		# https://bugzilla.gnome.org/show_bug.cgi?id=617473
+		sed -i -e 's:pltcheck.sh:$(NULL):g' \
+			gtk/Makefile.am || die
 	fi
 
 	if ! use examples; then
@@ -134,7 +134,10 @@ src_prepare() {
 		strip_builddir SRC_SUBDIRS demos Makefile.am Makefile.in
 	fi
 
-	eautoreconf
+	# http://bugs.gentoo.org/show_bug.cgi?id=371907
+	mkdir -p "${S}/m4" || die
+	mv "${WORKDIR}/introspection.m4" "${S}/m4macros" || die
+	AT_M4DIR=m4macros eautoreconf
 	# Use elibtoolize in place of eautoreconf when it will be dropped
 	#elibtoolize
 }
@@ -166,22 +169,22 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install
 
 	set_gtk2_confdir
-	dodir ${GTK2_CONFDIR} || die "dodir failed"
+	dodir ${GTK2_CONFDIR}
 	keepdir ${GTK2_CONFDIR}
 
 	# see bug #133241
 	echo 'gtk-fallback-icon-theme = "gnome"' > "${T}/gtkrc"
 	insinto /etc/gtk-2.0
-	doins "${T}"/gtkrc || die "doins gtkrc failed"
+	doins "${T}"/gtkrc
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
 	echo "GDK_USE_XFT=1" > "${T}"/50gtk2
-	doenvd "${T}"/50gtk2 || die "doenvd failed"
+	doenvd "${T}"/50gtk2
 
-	dodoc AUTHORS ChangeLog* HACKING NEWS* README* || die "dodoc failed"
+	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
 	# add -framework Carbon to the .pc files
 	use aqua && for i in gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc; do
@@ -189,6 +192,8 @@ src_install() {
 	done
 
 	python_convert_shebangs 2 "${ED}"usr/bin/gtk-builder-convert
+
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
