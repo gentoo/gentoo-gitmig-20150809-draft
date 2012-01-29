@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.1.ebuild,v 1.1 2012/01/29 16:50:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.1.ebuild,v 1.2 2012/01/29 22:10:59 mr_bones_ Exp $
 
 EAPI=2
 
@@ -101,7 +101,6 @@ LDPATH=${DEST}/$(get_libdir)
 MANPATH=${DEST}/man
 EOF
 	newenvd "${T}/env" 99cuda
-
 
 	export CONF_LIBDIR_OVERRIDE="lib"
 	# HACK: temporary workaround until CONF_LIBDIR_OVERRIDE is respected.
