@@ -1,6 +1,9 @@
 # ChangeLog for media-video/submux-dvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/ChangeLog,v 1.13 2012/01/29 20:20:38 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/ChangeLog,v 1.14 2012/01/29 20:21:39 lordvan Exp $
+
+  29 Jan 2012;  <lordvan@gentoo.org> -submux-dvd-0.5.ebuild:
+  update of src_uri
 
   29 Jan 2012; <lordvan@gentoo.org> -submux-dvd-0.5.ebuild,
   submux-dvd-0.5.1.ebuild:
