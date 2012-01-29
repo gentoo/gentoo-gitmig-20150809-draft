@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doc++
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.28 2010/01/22 00:51:52 cla Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.29 2012/01/29 02:43:43 xmw Exp $
+
+*doc++-3.4.10-r4 (29 Jan 2012)
+
+  29 Jan 2012; Michael Weber <xmw@gentoo.org> +doc++-3.4.10-r4.ebuild:
+  Revbump to fix flex dependency (thanks bay, bug 399345). EAPI-4
 
   22 Jan 2010; Dawid Węgliński <cla@gentoo.org> doc++-3.4.10-r3.ebuild:
   Respect user C(XX)FLAGS (bug #240002)
