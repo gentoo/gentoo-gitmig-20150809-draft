@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.1 2012/01/22 16:20:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.2 2012/01/29 18:48:24 jlec Exp $
 
 EAPI=4
 
-inherit fortran-2 eutils
+inherit eutils fortran-2
 
 DESCRIPTION="Parallel matrix preconditioners library"
 HOMEPAGE="http://acts.nersc.gov/hypre/"
@@ -15,12 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="blas doc examples fortran lapack mpi"
 
-RDEPEND="mpi? ( virtual/mpi )
+RDEPEND="
+	sci-libs/superlu
 	blas? ( virtual/blas )
-	lapack? ( virtual/lapack )"
+	lapack? ( virtual/lapack )
+	mpi? ( virtual/mpi )"
 DEPEND="${RDEPEND}
-	fortran? ( virtual/fortran )
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	fortran? ( virtual/fortran )"
 
 DOCS=( "${WORKDIR}"/${P}/{CHANGELOG,COPYRIGHT,README} )
 
