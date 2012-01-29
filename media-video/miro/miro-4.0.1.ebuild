@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-4.0.1.ebuild,v 1.2 2011/09/26 13:03:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-4.0.1.ebuild,v 1.3 2012/01/29 02:22:11 floppym Exp $
 
 EAPI=3
 
@@ -19,7 +19,6 @@ IUSE="libnotify aac musepack xvid"
 
 CDEPEND="
 	dev-libs/glib:2
-	dev-libs/boost[python]
 	>=dev-python/pyrex-0.9.6.4
 	dev-python/pygtk:2
 	dev-python/pygobject:2
