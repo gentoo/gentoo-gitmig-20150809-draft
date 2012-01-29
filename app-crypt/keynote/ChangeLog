@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/keynote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.13 2012/01/05 13:09:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.14 2012/01/29 02:51:40 xmw Exp $
+
+  29 Jan 2012; Michael Weber <xmw@gentoo.org> keynote-2.3-r2.ebuild:
+  Add yacc dependency (thanks bay, bug 399341), EAPI-4
 
 *keynote-2.3-r2 (05 Jan 2012)
 

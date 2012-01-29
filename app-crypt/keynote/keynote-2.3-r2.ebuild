@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3-r2.ebuild,v 1.1 2012/01/05 13:09:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3-r2.ebuild,v 1.2 2012/01/29 02:51:40 xmw Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
@@ -15,11 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ssl"
 
-DEPEND="ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
+RDEPEND="ssl? ( dev-libs/openssl )"
+DEPEND="${RDEPEND}
+	virtual/yacc"
 
 src_prepare() {
-	cp -av Makefile.in{,.orig}
+	cp -av Makefile.in{,.orig} || die
 	epatch "${FILESDIR}"/${P}-make.patch
 	epatch "${FILESDIR}"/$P-parallel-build.patch
 }
@@ -31,14 +32,14 @@ src_configure() {
 
 src_compile() {
 	if use ssl; then
-		emake || die
+		emake
 	else
-		emake nocrypto || die
+		emake nocrypto
 	fi
 }
 
 src_install() {
-	dobin keynote || die
+	dobin keynote
 
 	dolib.a libkeynote.a
 
