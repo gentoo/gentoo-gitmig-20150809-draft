@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Lab-Measurement
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/ChangeLog,v 1.1 2012/01/29 18:05:30 dilfridge Exp $
+
+*Lab-Measurement-9999 (29 Jan 2012)
+*Lab-Measurement-2.94 (29 Jan 2012)
+
+  29 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Lab-Measurement-2.94.ebuild, +Lab-Measurement-9999.ebuild, +metadata.xml:
+  New package
+
