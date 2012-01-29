@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.91 2012/01/17 17:16:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.92 2012/01/29 21:40:47 maekke Exp $
+
+  29 Jan 2012; Markus Meier <maekke@gentoo.org> texlive-2011.ebuild:
+  arm stable, bug #395735
 
   17 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> texlive-2011.ebuild:
   x86 stable wrt bug #395735
