@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/slony1
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.25 2011/08/10 22:47:31 titanofold Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.26 2012/01/30 11:45:07 titanofold Exp $
+
+*slony1-2.1.0 (30 Jan 2012)
+
+  30 Jan 2012; Aaron W. Swenson <titanofold@gentoo.org> +slony1-2.1.0.ebuild:
+  Version bump. Fixes bug 395689.
 
 *slony1-2.0.7-r1 (10 Aug 2011)
 
