@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.109 2012/01/27 17:56:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.110 2012/01/30 14:47:33 tupone Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -120,6 +120,7 @@ games-fps/unreal-tournament
 games-fps/ut2003
 games-fps/ut2003-demo
 games-fps/ut2004-demo
+games-puzzle/drod-bin
 games-puzzle/hoh-bin
 games-roguelike/adom
 games-rpg/eschalon-book-1-demo
