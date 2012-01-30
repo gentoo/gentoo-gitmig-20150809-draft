@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.7 2011/10/03 08:08:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.8 2012/01/30 13:41:34 chithanh Exp $
 
 EAPI="3"
 
@@ -56,6 +56,7 @@ src_prepare() {
 		libs/pixertool/src/v4l/v4l-pixertool.c \
 		libs/webcam/include/webcam/V4LWebcamDriver.h \
 		libs/webcam/src/v4l/V4LWebcamDriver.cpp || die
+	epatch "${FILESDIR}"/${PN}-2.2-no-deprecated-avcodec-decode-video.patch
 }
 
 src_configure() {

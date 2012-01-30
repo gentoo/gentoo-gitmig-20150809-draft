@@ -1,6 +1,11 @@
 # ChangeLog for net-im/qutecom
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/ChangeLog,v 1.11 2011/10/03 08:08:29 chithanh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/ChangeLog,v 1.12 2012/01/30 13:41:34 chithanh Exp $
+
+  30 Jan 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  qutecom-2.2_p20110210.ebuild,
+  +files/qutecom-2.2-no-deprecated-avcodec-decode-video.patch:
+  Fix building against >=ffmpeg-0.8, bug #401175.
 
   03 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   qutecom-2.2_p20110210.ebuild:
