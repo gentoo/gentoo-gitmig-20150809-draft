@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.9.ebuild,v 1.3 2011/03/27 12:20:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.9.ebuild,v 1.4 2012/01/30 23:38:56 dilfridge Exp $
 
 EAPI="3"
 
@@ -26,6 +26,7 @@ DEPEND="app-arch/unzip
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-libdl.patch
 	tc-export CC
 }
 
