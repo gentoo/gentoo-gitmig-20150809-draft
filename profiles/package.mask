@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13444 2012/01/29 23:44:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13445 2012/01/30 01:44:09 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -101,6 +101,7 @@ media-fonts/gnu-gs-fonts-other
 =dev-python/visual-5.72-r1
 =net-libs/rb_libtorrent-0.15.9-r1
 =net-mail/libpst-0.6.54-r1
+=sci-physics/camfr-20070717-r3
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jan 2012)
 # Mask compiz for last-rites unless someone steps up
