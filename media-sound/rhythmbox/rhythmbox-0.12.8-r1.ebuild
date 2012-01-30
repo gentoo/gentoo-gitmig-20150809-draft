@@ -1,8 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.18 2012/01/05 06:38:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.19 2012/01/30 12:04:13 pacho Exp $
 
-EAPI="3"
+EAPI="4"
+GNOME_TARBALL_SUFFIX="bz2"
+GCONF_DEBUG="no"
+PYTHON_DEPEND="python? 2"
 
 inherit eutils gnome2 python multilib virtualx
 
@@ -44,7 +47,6 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	musicbrainz? ( media-libs/musicbrainz:3
 			media-libs/musicbrainz:1 )
 	python? (
-		>=dev-lang/python-2.4.2
 		|| (
 			>=dev-lang/python-2.5
 			dev-python/celementtree )
@@ -137,6 +139,11 @@ pkg_setup() {
 		--disable-vala"
 
 	export GST_INSPECT=/bin/true
+
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -152,6 +159,8 @@ src_prepare() {
 
 	# Fix building with recent glibc, bug #333373
 	epatch "${FILESDIR}/${P}-namespace-conflict.patch"
+
+	use python && python_convert_shebangs -r 2 .
 }
 
 src_compile() {
