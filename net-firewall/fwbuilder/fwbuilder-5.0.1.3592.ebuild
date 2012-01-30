@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.1.3592.ebuild,v 1.3 2012/01/30 22:46:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.1.3592.ebuild,v 1.4 2012/01/30 22:52:13 ssuominen Exp $
 
 EAPI="4"
 
-inherit eutils base qt4-r2 multilib autotools libtool
+inherit eutils base qt4-r2 multilib autotools
 
 DESCRIPTION="A firewall GUI"
 HOMEPAGE="http://www.fwbuilder.org/"
