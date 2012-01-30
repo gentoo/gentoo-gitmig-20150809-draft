@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.184 2012/01/28 18:34:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.185 2012/01/30 22:28:45 tampakrap Exp $
+
+*cmake-2.8.7-r2 (30 Jan 2012)
+
+  30 Jan 2012; Theo Chatzimichos <tampakrap@gentoo.org> +cmake-2.8.7-r2.ebuild,
+  +files/cmake-2.8.7-FindBoost-python.patch:
+  Fix detection of PYTHON_ABI-versioned Boost Python libraries of >=dev-
+  libs/boost-1.48, bug 400969
 
   28 Jan 2012; Raúl Porcel <armin76@gentoo.org> cmake-2.8.6-r4.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #391425
