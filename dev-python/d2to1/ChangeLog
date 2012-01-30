@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/d2to1
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/d2to1/ChangeLog,v 1.1 2012/01/30 22:41:50 xarthisius Exp $
+
+*d2to1-0.2.5 (30 Jan 2012)
+
+  30 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> +d2to1-0.2.5.ebuild,
+  +metadata.xml:
+  Initial import, ebuild written by me
+
