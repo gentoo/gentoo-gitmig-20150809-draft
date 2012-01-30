@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.108 2012/01/29 12:23:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.109 2012/01/30 14:59:36 tomka Exp $
+
+  30 Jan 2012; Thomas Kahle <tomka@gentoo.org> -wicd-1.7.1_beta2-r3.ebuild,
+  -wicd-1.7.1_beta2-r6.ebuild, -wicd-1.7.1_beta2-r7.ebuild,
+  -wicd-1.7.1_pre20111210.ebuild, -files/wicd-1.7.1_beta2-urwid-1.0.patch,
+  -files/fix-ad-hoc-networking.patch:
+  Remove some old versions
 
   29 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   wicd-1.7.1_pre20120127.ebuild:
