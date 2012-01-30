@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.4.6.ebuild,v 1.1 2012/01/20 23:43:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.4.6.ebuild,v 1.2 2012/01/30 18:47:57 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -9,7 +9,7 @@ CLUTTER_LA_PUNT="yes"
 # inherit clutter after gnome2 so that defaults aren't overriden
 # inherit gnome.org in the end so we use gnome mirrors and get the xz tarball
 # no PYTHON_DEPEND, python2 is just a build-time dependency
-inherit python gnome2 clutter gnome.org
+inherit autotools python gnome2 clutter gnome.org
 
 DESCRIPTION="GStreamer Integration library for Clutter"
 
@@ -26,6 +26,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*
 	doc? ( >=dev-util/gtk-doc-1.8 )"
+# eautoreconf does *not* need gtk-doc-am, see build/autotools/ directory
 
 pkg_setup() {
 	DOCS="AUTHORS NEWS README"
@@ -35,6 +36,13 @@ pkg_setup() {
 
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	# bug #401383, https://bugzilla.gnome.org/show_bug.cgi?id=669054
+	eautoreconf
+
+	gnome2_src_prepare
 }
 
 src_compile() {
