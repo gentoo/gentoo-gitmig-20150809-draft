@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.94 2012/01/29 12:44:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.95 2012/01/30 06:32:59 slyfox Exp $
+
+  30 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  files/qemu-kvm-9999-fix-nonkvm-arches.patch, qemu-kvm-9999.ebuild:
+  Update patch against current upstream.
 
   29 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-kvm-9999.ebuild:
   Respect user's decision whether to generate debug info when build stuff
