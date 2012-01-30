@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/akonadi-google-0.2_p20111130.ebuild,v 1.1 2011/12/06 02:15:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/akonadi-google-0.2_p20120130.ebuild,v 1.1 2012/01/30 15:47:59 johu Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Google services integration in Akonadi"
 HOMEPAGE="https://projects.kde.org/projects/playground/pim/akonadi-google"
 LICENSE="GPL-2"
 
-SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~johu/distfiles/${P}.tar.xz"
 
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
