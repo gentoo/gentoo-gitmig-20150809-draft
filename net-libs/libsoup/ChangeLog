@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.269 2012/01/27 17:33:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.270 2012/01/30 20:03:06 tetromino Exp $
+
+  30 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libsoup-2.34.3.ebuild, libsoup-2.36.1.ebuild, libsoup-2.36.1-r1.ebuild:
+  Move gnome2_src_prepare after eautoreconf (bug #401415, thanks to Martin von
+  Gagern for reporting).
 
 *libsoup-2.36.1-r1 (27 Jan 2012)
 

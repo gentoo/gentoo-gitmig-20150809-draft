@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.36.1.ebuild,v 1.5 2012/01/18 21:03:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.36.1.ebuild,v 1.6 2012/01/30 20:03:06 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -53,8 +53,6 @@ src_configure() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	if ! use test; then
 		# don't waste time building tests (bug #226271)
 		sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
@@ -67,4 +65,6 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-2.34.2-fix-build-without-gnome-with-doc.patch"
 		eautoreconf
 	fi
+
+	gnome2_src_prepare
 }

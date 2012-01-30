@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.36.1-r1.ebuild,v 1.1 2012/01/27 17:33:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.36.1-r1.ebuild,v 1.2 2012/01/30 20:03:06 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -53,8 +53,6 @@ src_configure() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	if ! use test; then
 		# don't waste time building tests (bug #226271)
 		sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
@@ -70,4 +68,6 @@ src_prepare() {
 
 	# Patch from 2.37.x, fixes 'Too many open files' error
 	epatch "${FILESDIR}/${P}-SoupHTTPInputStream-GCancellable.patch"
+
+	gnome2_src_prepare
 }
