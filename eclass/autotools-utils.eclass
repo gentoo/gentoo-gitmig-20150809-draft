@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.45 2012/01/21 20:44:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.46 2012/01/30 13:11:27 jlec Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -306,7 +306,7 @@ autotools-utils_autoreconf() {
 
 	# gettext
 	if [[ $(autotools_check_macro AM_GLIB_GNU_GETTEXT) ]]; then
-		echo 'no' | autotools_run_tool glib-gettextize --copy
+		echo 'no' | autotools_run_tool glib-gettextize --copy --force
 	elif [[ $(autotools_check_macro AM_GNU_GETTEXT) ]]; then
 		eautopoint --force
 	fi

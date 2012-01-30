@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.103 2012/01/22 00:55:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.104 2012/01/30 13:11:27 jlec Exp $
+
+  30 Jan 2012; Justin Lecher <jlec@gentoo.org> autotools-utils.eclass:
+  Call glib-gettextize with --force in autotools-utils.eclass
 
   21 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> cmake-utils.eclass:
   Dont force CMAKE_BUILD_WITH_INSTALL_RPATH in APPLE prefix on request from
