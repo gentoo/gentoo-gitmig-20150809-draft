@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.8.ebuild,v 1.1 2012/01/28 19:46:10 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.8.ebuild,v 1.2 2012/01/30 13:02:39 sera Exp $
 
 EAPI="4"
 
@@ -52,5 +52,5 @@ src_install() {
 	dodoc README RELEASE-NOTES.txt *.html src/native/unix/CHANGES.txt
 	use doc && java-pkg_dohtml -r dist/docs/*
 	use examples && java-pkg_doexamples src/samples
-	use source && java-pkg_dosrc src/java/* src/native/unix/native
+	use source && java-pkg_dosrc src/main/java/*
 }

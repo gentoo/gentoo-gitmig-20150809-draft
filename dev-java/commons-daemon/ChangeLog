@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.48 2012/01/28 19:46:10 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.49 2012/01/30 13:02:39 sera Exp $
+
+  30 Jan 2012; Ralph Sennhauser <sera@gentoo.org> commons-daemon-1.0.8.ebuild:
+  Fix installation of source files. Thanks to Krzysztof Magusiak
+  <chrmag@poczta.onet.pl>. #401271
 
 *commons-daemon-1.0.8 (28 Jan 2012)
 
