@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.959 2012/01/26 15:46:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.960 2012/01/30 00:07:32 josejx Exp $
+
+  30 Jan 2012; Joseph Jezak <josejx@gentoo.org> vanilla-sources-3.2.2.ebuild:
+  Marked ppc/ppc64 stable for bug #400671.
 
   26 Jan 2012; Agostino Sarubbo <ago@gentoo.org> vanilla-sources-3.2.2.ebuild:
   Stable for AMD64, wrt bug #400671
