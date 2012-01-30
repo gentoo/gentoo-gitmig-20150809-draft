@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.2-r1.ebuild,v 1.1 2012/01/27 21:54:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.2-r1.ebuild,v 1.2 2012/01/30 22:33:08 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -142,7 +142,9 @@ src_prepare() {
 		   files/usr/bin/cinnamon-settings \
 		   files/cinnamon-settings.pot \
 		   files/makepot || die "sed 2 failed"
-	mv files/usr/lib files/usr/$(get_libdir) || die "mv failed"
+	if [[ "$(get_libdir)" != lib ]]; then
+		mv files/usr/lib "files/usr/$(get_libdir)" || die "mv failed"
+	fi
 
 	eautoreconf
 	gnome2_src_prepare
