@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13446 2012/01/30 11:08:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13447 2012/01/30 12:40:33 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -169,11 +169,6 @@ dev-php/PEAR-PHP_Archive
 # Reverse RDEPEND of dev-php/PEAR-I18N, which is going away
 # The package is unmaintained upstream, removal in 30 days
 dev-php/PEAR-HTML_Select_Common
-
-# Johannes Huber <johu@gentoo.org> (17 Jan 2012)
-# Masking until release announcement is done.
-# Tarball already available.
-~media-libs/opengtl-0.9.16
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (17 Jan 2012)
 # Determined by the maintaining team to be no longer useful.
