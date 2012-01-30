@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.68 2012/01/20 13:11:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.69 2012/01/30 10:44:04 pacho Exp $
 
 # Ralph Sennhauser <sera@gentoo.org> (31 Dec 2011)
 # Needs dev-java/fop which is not available for ia64 due to missing JVM #345433
@@ -113,4 +113,4 @@ dev-java/icu4j test
 dev-lisp/clisp hyperspec pari svm
 
 # missing keywords
-media-plugins/gst-plugins-meta dts dv lame mms taglib vcd wavpack
+media-plugins/gst-plugins-meta dts dv lame libvisual mms taglib vcd wavpack

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.69 2012/01/09 04:36:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.70 2012/01/30 10:44:04 pacho Exp $
 
 # Alexandre Rostovtsev <tetromono@gentoo.org> (09 Jan 2012)
 # jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
@@ -128,7 +128,7 @@ dev-libs/boost mpi
 
 # missing keywords
 media-sound/sox ladspa
-media-plugins/gst-plugins-meta aac dts dv lame taglib vcd wavpack
+media-plugins/gst-plugins-meta aac dts dv lame libvisual taglib vcd wavpack
 
 # projectm not keyworded, bug #314969
 media-video/vlc projectm

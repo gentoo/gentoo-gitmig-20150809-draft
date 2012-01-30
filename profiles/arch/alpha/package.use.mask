@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.75 2012/01/20 13:11:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.76 2012/01/30 10:44:04 pacho Exp $
 
 
 # Raúl Porcel <armin76@gentoo.org> (26 Dec 2011)
@@ -55,7 +55,7 @@ app-cdr/brasero dvd vcd
 
 # Pacho Ramos <pacho@gentoo.org> (30 Jun 2011)
 # Needed plugins are not keyworded on this arch
-media-plugins/gst-plugins-meta dts vcd
+media-plugins/gst-plugins-meta dts libvisual vcd
 
 # Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
 # quvi support is needed to play youtube files now
