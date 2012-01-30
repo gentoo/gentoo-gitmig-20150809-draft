@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.2 2011/11/27 16:05:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.3 2012/01/30 04:46:52 nerdboy Exp $
 
 EAPI=3
 
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bidi cairo debug doc gdal geos nobfonts postgres python sqlite"
 
-RDEPEND="dev-libs/boost
-	net-misc/curl
+RDEPEND="net-misc/curl
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
@@ -28,11 +27,10 @@ RDEPEND="dev-libs/boost
 	dev-libs/libxml2
 	dev-libs/icu
 	x11-libs/agg[truetype]
+	dev-libs/boost[python?]
 	postgres? ( >=dev-db/postgresql-base-8.3 )
-	python? ( dev-libs/boost[python] )
 	gdal? ( sci-libs/gdal )
 	geos? ( sci-libs/geos )
-	python? ( dev-lang/python )
 	bidi? ( dev-libs/fribidi )
 	cairo? (
 		x11-libs/cairo
@@ -107,7 +105,7 @@ src_install() {
 	if use doc; then
 		export PYTHONPATH="${D}$(python_get_sitedir):$(python_get_sitedir)"
 		pushd docs/epydoc_config > /dev/null
-		./build_epydoc.sh
+			./build_epydoc.sh
 		popd > /dev/null
 		dohtml -r docs/api_docs/python/* || die "API doc install failed"
 	fi
