@@ -1,6 +1,9 @@
 # ChangeLog for app-text/crm114
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.47 2011/07/31 20:10:14 steev Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.48 2012/01/30 21:08:51 ago Exp $
+
+  30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> crm114-20100106.ebuild:
+  Stable for amd64, wrt bug #401275
 
   31 Jul 2011; Steev Klimaszewsk <steev@gentoo.org> crm114-20100106.ebuild:
   Remove static as a default useflag. This closes Bug 299503, and also fix the
