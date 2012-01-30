@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.4 2009/10/25 11:52:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.5 2012/01/30 23:59:48 dilfridge Exp $
 
-EAPI="2"
+EAPI=4
 inherit confutils
 
 SRC_PREFIX="http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.1/misc/FontPack910_"
@@ -24,10 +24,10 @@ IUSE="minimal linguas_ja linguas_ko linguas_zh_CN linguas_zh_TW"
 RESTRICT="strip mirror"
 
 DEPEND=""
-RDEPEND="linguas_ja? ( >=app-text/acroread-9.1[-linguas_ja] )"
-#	linguas_ko? ( >=app-text/acroread-9.1[-linguas_ko] )
-#	linguas_zh_CN? ( >=app-text/acroread-9.1[-linguas_zh_CN] )
-#	linguas_zh_TW? ( >=app-text/acroread-9.1[-linguas_zh_TW] )
+RDEPEND="linguas_ja? ( >=app-text/acroread-9.1[-linguas_ja(-)] )"
+#	linguas_ko? ( >=app-text/acroread-9.1[-linguas_ko(-)] )
+#	linguas_zh_CN? ( >=app-text/acroread-9.1[-linguas_zh_CN(-)] )
+#	linguas_zh_TW? ( >=app-text/acroread-9.1[-linguas_zh_TW(-)] )
 
 S="${WORKDIR}"
 
@@ -47,29 +47,29 @@ src_install() {
 	if use linguas_ja ; then
 		tar xf JPNKIT/LANGCOM.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
 		tar xf JPNKIT/LANGJPN.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
-		doins JPNKIT/LICREAD.TXT || die
+		doins JPNKIT/LICREAD.TXT
 	fi
 	if use linguas_ko ; then
 		tar xf KORKIT/LANGCOM.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
 		tar xf KORKIT/LANGKOR.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
-		doins KORKIT/LICREAD.TXT || die
+		doins KORKIT/LICREAD.TXT
 	fi
 	if use linguas_zh_CN ; then
 		tar xf CHSKIT/LANGCOM.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
 		tar xf CHSKIT/LANGCHS.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
-		doins CHSKIT/LICREAD.TXT || die
+		doins CHSKIT/LICREAD.TXT
 	fi
 	if use linguas_zh_TW ; then
 		tar xf CHTKIT/LANGCOM.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
 		tar xf CHTKIT/LANGCHT.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
-		doins CHTKIT/LICREAD.TXT || die
+		doins CHTKIT/LICREAD.TXT
 	fi
 
 	if use !minimal ; then
 		tar xf xtdfont/XTDFONT.TAR --no-same-owner -C "${D}/${INSTALLDIR}"
 		rm "${D}${RESOURCEDIR}"/Font/{MinionPro*,MyriadPro*}
 
-		doins "${D}${INSTALLDIR}"/LICREAD.TXT || die
+		doins "${D}${INSTALLDIR}"/LICREAD.TXT
 		rm "${D}${INSTALLDIR}"/{INSTALL,LICREAD.TXT}
 		rm -rf "${D}${READERDIR}"/Reader/intellinux
 	fi

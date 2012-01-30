@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/acroread-asianfonts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.27 2009/11/08 01:48:07 matsuu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.28 2012/01/30 23:59:48 dilfridge Exp $
+
+  31 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  acroread-asianfonts-9.1.ebuild:
+  If a linguas useflag is not present in acroread, assume it is unset
 
   08 Nov 2009; MATSUU Takuto <matsuu@gentoo.org>
   -acroread-asianfonts-8.1.2.ebuild:
