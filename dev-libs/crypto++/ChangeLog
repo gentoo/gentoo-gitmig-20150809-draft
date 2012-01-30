@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/crypto++
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.73 2011/12/28 07:02:03 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.74 2012/01/30 16:06:14 c1pher Exp $
+
+*crypto++-5.6.1-r3 (30 Jan 2012)
+
+  30 Jan 2012; Dane Smith <c1pher@gentoo.org> -crypto++-5.6.1-r2.ebuild,
+  +crypto++-5.6.1-r3.ebuild, +files/crypto++-5.6.1-r3-fix_build_system.patch:
+  Address NEEDED library issues wrt bug 401431. Thanks Arfrever for the patch.
+  Add new patch (updated fix_build_system patch) for r3 since the current one
+  is
+  used by the stable -r1. The new patch includes the changes that are in the
+  patch {P}-sunos. This should be dropped when -r3 goes stable and -r1 is
+  dropped.
+  Drop -r2.
 
 *crypto++-5.6.1-r2 (28 Dec 2011)
 

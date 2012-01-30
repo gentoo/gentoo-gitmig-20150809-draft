@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1-r2.ebuild,v 1.1 2011/12/28 07:02:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1-r3.ebuild,v 1.1 2012/01/30 16:06:14 c1pher Exp $
 
 EAPI="3"
 
@@ -21,8 +21,7 @@ RDEPEND=""
 S="${WORKDIR}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix_build_system.patch" \
-		"${FILESDIR}/${P}-sunos.patch" \
+	epatch "${FILESDIR}/${PF}-fix_build_system.patch" \
 		"${FILESDIR}/${P}-rijndael.patch"
 }
 
