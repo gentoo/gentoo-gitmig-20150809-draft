@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.0.ebuild,v 1.2 2011/07/30 21:08:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.4.ebuild,v 1.1 2012/01/30 14:32:54 chithanh Exp $
 
 EAPI=4
 inherit cmake-utils nsplugins multilib versionator
 
 DESCRIPTION="High performance flash player"
 HOMEPAGE="http://lightspark.sourceforge.net/"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PN}-$(get_version_component_range 1-3)/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/trunk/${P}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -31,7 +31,10 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	)
 	net-misc/curl
 	>=sys-devel/gcc-4.4
-	>=sys-devel/llvm-2.8-r2
+	|| (
+		>=sys-devel/llvm-3
+		=sys-devel/llvm-2.8*
+	)
 	virtual/opengl
 	nsplugin? (
 		dev-libs/nspr
