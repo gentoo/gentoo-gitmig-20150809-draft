@@ -1,10 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.10.ebuild,v 1.3 2011/05/31 13:31:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.15.ebuild,v 1.1 2012/01/30 15:58:00 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
-inherit eutils python
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit eutils flag-o-matic python
 
 DESCRIPTION="A validating, recursive and caching DNS resolver"
 HOMEPAGE="http://unbound.net/"
@@ -12,7 +15,7 @@ SRC_URI="http://unbound.net/downloads/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x64-macos"
+KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE="debug gost python static-libs test threads"
 
 RDEPEND="dev-libs/expat
@@ -33,12 +36,22 @@ RDEPEND="${RDEPEND}
 	net-dns/dnssec-root"
 
 pkg_setup() {
-	python_set_active_version 2
 	enewgroup unbound
 	enewuser unbound -1 -1 /etc/unbound unbound
+
+	use python && python_pkg_setup
+}
+
+src_prepare() {
+	# To avoid below error messages, set 'trust-anchor-file' to same value in
+	# 'auto-trust-anchor-file'.
+	# [23109:0] error: Could not open autotrust file for writing,
+	# /etc/dnssec/root-anchors.txt: Permission denied
+	epatch "${FILESDIR}/${PN}-1.4.12-gentoo.patch"
 }
 
 src_configure() {
+	append-ldflags -Wl,-z,noexecstack || die
 	econf \
 		--with-pidfile="${EPREFIX}"/var/run/unbound.pid \
 		--with-ldns="${EPREFIX}"/usr \
@@ -64,7 +77,7 @@ src_install() {
 
 	# bug #299016
 	if use python ; then
-		find "${ED}$(python_get_sitedir)" "(" -name "*.a" -o -name "*.la" ")" -type f -delete || die
+		find "${ED}" -name '_unbound.{la,a}' -delete || die
 	fi
 	if ! use static-libs ; then
 		find "${ED}" -name "*.la" -type f -delete || die
@@ -85,4 +98,12 @@ src_install() {
 
 	exeinto /usr/share/${PN}
 	doexe contrib/update-anchor.sh || die "doexe failed"
+}
+
+pkg_postinst() {
+	use python && python_mod_optimize unbound.py unboundmodule.py
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup unbound.py unboundmodule.py
 }
