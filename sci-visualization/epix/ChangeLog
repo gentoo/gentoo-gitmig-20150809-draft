@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/epix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.38 2011/11/27 05:55:07 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.39 2012/01/30 02:26:59 bicatali Exp $
+
+  30 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> epix-1.2.9.ebuild,
+  +files/epix-1.2.9-automake.patch:
+  Fixed for automake-1.11.2, bug #401195
 
 *epix-1.2.9 (27 Nov 2011)
 

@@ -1,0 +1,12 @@
+--- Makefile.am.orig	2012-01-30 02:24:22.000000000 +0000
++++ Makefile.am	2012-01-30 02:24:58.000000000 +0000
+@@ -15,7 +15,8 @@
+ bin_SCRIPTS = epix elaps flix laps
+ 
+ pkglib_LIBRARIES = libepix.a
+-pkglib_DATA = epix-lib.sh
++pkgepixdir = $(pkglibdir)
++pkgepix_DATA = epix-lib.sh
+ include_HEADERS = epix.h
+ 
+ libepix_a_CXXSOURCES = active_screen.cc affine.cc angle_units.cc \
