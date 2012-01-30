@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.7 2011/07/27 17:51:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.8 2012/01/30 14:55:18 tupone Exp $
 
 inherit eutils games
 
@@ -14,7 +14,9 @@ KEYWORDS="-* ~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-RDEPEND=""
+DEPEND=""
+RDEPEND="x11-libs/libX11
+	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}
 
