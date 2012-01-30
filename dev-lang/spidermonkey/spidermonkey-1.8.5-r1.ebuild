@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.4 2012/01/25 14:34:43 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.5 2012/01/30 19:36:18 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -40,7 +40,7 @@ src_prepare() {
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=638056#c9
 	epatch "${FILESDIR}/${P}-fix-ppc64.patch"
 	# https://bugs.gentoo.org/show_bug.cgi?id=400727
-	epatch "${FILESDIR}/${P}-arm_resprect_cflags.patch"
+	epatch "${FILESDIR}/${P}-arm_resprect_cflags-1.patch"
 
 	epatch_user
 
@@ -49,7 +49,7 @@ src_prepare() {
 		ln -sfn "${BUILDDIR}/config/Linux_All.mk" "${S}/config/$(uname -s)$(uname -r).mk"
 	fi
 
-	cd ${S}/js/src
+	cd "${S}"/js/src
 	eautoconf
 }
 
