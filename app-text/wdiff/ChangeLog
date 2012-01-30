@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.65 2012/01/06 02:04:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.66 2012/01/30 21:10:52 ago Exp $
+
+  30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> wdiff-1.1.0.ebuild:
+  Stable for amd64, wrt bug #401095
 
   06 Jan 2012; Christoph Junghans <ottxor@gentoo.org> wdiff-1.1.0.ebuild:
   keyword ~x86-macos
