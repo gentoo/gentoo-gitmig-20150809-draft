@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.42 2012/01/12 16:41:30 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.43 2012/01/30 18:03:13 aidecoe Exp $
+
+*dracut-014-r2 (30 Jan 2012)
+
+  30 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-014-r1.ebuild,
+  +dracut-014-r2.ebuild:
+  Depend on >=sys-apps/util-linux-2.20. Fixes bug #399213.
 
   12 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-013-r2.ebuild,
   dracut-014-r1.ebuild:

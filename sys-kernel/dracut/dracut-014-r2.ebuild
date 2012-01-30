@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r1.ebuild,v 1.2 2012/01/12 16:41:30 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r2.ebuild,v 1.1 2012/01/30 18:03:13 aidecoe Exp $
 
 EAPI=4
 
@@ -54,7 +54,7 @@ RDEPEND="
 	>=sys-apps/baselayout-1.12.14-r1
 	>=sys-apps/module-init-tools-3.8
 	>=sys-apps/sysvinit-2.87-r3
-	>=sys-apps/util-linux-2.16
+	>=sys-apps/util-linux-2.20
 	>=sys-fs/udev-164
 	app-arch/cpio
 
