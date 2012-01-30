@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.64 2012/01/29 16:49:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.65 2012/01/30 13:43:16 ssuominen Exp $
+
+*polkit-0.104-r1 (30 Jan 2012)
+
+  30 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +polkit-0.104-r1.ebuild:
+  Restore the default value of AdminIdentities from "wheel" to "0" like it was
+  in polkit-0.102 and ones before that. You should see files
+  50-localauthority.conf and 60-gentoo.conf in
+  /etc/polkit-1/localauthority.conf.d. You should also familiarize yourself
+  with "man 8 pklocalauthority" as soon as possible.
 
   29 Jan 2012; Markus Meier <maekke@gentoo.org> polkit-0.103.ebuild:
   arm stable, bug #397755
