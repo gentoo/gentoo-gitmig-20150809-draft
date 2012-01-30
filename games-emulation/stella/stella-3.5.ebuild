@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-3.5.ebuild,v 1.1 2012/01/04 04:53:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-3.5.ebuild,v 1.2 2012/01/30 17:40:39 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -32,6 +32,8 @@ src_prepare() {
 		-e '/Icon/s/.png//' \
 		-e '/Categories/s/Application;//' \
 		src/unix/stella.desktop || die
+	# build with newer zlib (bug #390093)
+	sed -i -e '60i#define OF(x) x' src/emucore/unzip.h || die
 }
 
 src_configure() {
