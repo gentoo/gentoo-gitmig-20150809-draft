@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.25.ebuild,v 1.1 2012/01/26 11:49:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.25-r1.ebuild,v 1.1 2012/01/30 08:56:24 chainsaw Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc debug alisp python static-libs"
+IUSE="doc debug alisp python"
 
 DEPEND=">=media-sound/alsa-headers-1.0.25
 	doc? ( >=app-doc/doxygen-1.2.6 )"
@@ -41,7 +41,6 @@ src_configure() {
 	use elibc_uclibc && myconf="--without-versioned"
 
 	econf \
-		$(use_enable static-libs static) \
 		--enable-shared \
 		--disable-resmgr \
 		--enable-rawmidi \

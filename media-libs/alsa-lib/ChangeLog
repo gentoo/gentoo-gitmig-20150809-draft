@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.325 2012/01/26 11:49:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.326 2012/01/30 08:56:24 chainsaw Exp $
+
+*alsa-lib-1.0.25-r1 (30 Jan 2012)
+
+  30 Jan 2012; Tony Vroon <chainsaw@gentoo.org> -alsa-lib-1.0.25.ebuild,
+  +alsa-lib-1.0.25-r1.ebuild:
+  Remove ability to build static libs as upstream has made it unworkable.
+  Closes bug #401071 by Sebastian "sping" Pipping. Removed initial 1.0.25
+  ebuild due to build failures.
 
 *alsa-lib-1.0.25 (26 Jan 2012)
 
