@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcuefile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.25 2011/08/17 17:02:07 chithanh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.26 2012/01/30 19:07:45 ssuominen Exp $
+
+*libcuefile-477 (30 Jan 2012)
+
+  30 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +libcuefile-477.ebuild:
+  New upstream revision.
 
   17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   libcuefile-465.ebuild:
