@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xfmpc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.19 2011/10/23 19:19:43 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.20 2012/01/30 16:44:56 ago Exp $
+
+  30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> xfmpc-0.2.2.ebuild:
+  Stable for amd64, wrt bug #401229
 
 *xfmpc-0.2.2 (23 Oct 2011)
 
