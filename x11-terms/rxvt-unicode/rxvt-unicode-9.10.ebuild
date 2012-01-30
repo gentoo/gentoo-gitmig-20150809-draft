@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.10.ebuild,v 1.12 2011/12/22 18:51:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.10.ebuild,v 1.13 2012/01/30 22:56:30 jer Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://dist.schmorp.de/rxvt-unicode/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="ppc ppc64"
 IUSE="256-color afterimage blink fading-colors +font-styles force-hints iso14755 +perl pixbuf truetype unicode3 +vanilla wcwidth"
 
 # see bug #115992 for modular x deps
