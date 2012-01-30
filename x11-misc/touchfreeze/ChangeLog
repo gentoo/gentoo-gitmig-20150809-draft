@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/touchfreeze
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.12 2011/06/13 15:13:15 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.13 2012/01/30 14:52:05 johu Exp $
+
+*touchfreeze-0.2.5-r1 (30 Jan 2012)
+
+  30 Jan 2012; Johannes Huber <johu@gentoo.org>
+  +files/touchfreeze-0.2.5-underlinking.patch, +touchfreeze-0.2.5-r1.ebuild:
+  Revision bump. Fixes underlinking wrt bug #379325. Thanks to kensington
+  <gentoo@scribeofthenile.com>.
 
   13 Jun 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata.xml
