@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6163 2012/01/30 12:40:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6164 2012/01/30 21:55:42 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jan 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Add =sci-geosciences/mapnik-0.7.1-r2 to boost-1.48 reverse dependencies
 
   30 Jan 2012; Johannes Huber <johu@gentoo.org> package.mask:
   Lift mask for media-libs/opengtl-0.9.16, as it is released now.
