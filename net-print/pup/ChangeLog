@@ -1,6 +1,12 @@
 # ChangeLog for net-print/pup
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pup/ChangeLog,v 1.8 2010/08/21 19:06:31 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pup/ChangeLog,v 1.9 2012/01/30 17:52:34 ago Exp $
+
+  30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> pup-1.1-r1.ebuild:
+  With dilfridge's ok: remove toolchain-funcs to inherit, set correct
+  DEPEND/RDEPEND, convert src_install to emake, adding quoting for variable as
+  repoman recommends. Thanks  to Maurizio Camisaschi for reporting, bug #397191
+  #c2
 
 *pup-1.1-r1 (21 Aug 2010)
 
