@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/smooth-tasks
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/ChangeLog,v 1.4 2011/10/29 00:07:54 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/ChangeLog,v 1.5 2012/01/30 16:47:39 johu Exp $
+
+*smooth-tasks-0_p20120130 (30 Jan 2012)
+
+  30 Jan 2012; Johannes Huber <johu@gentoo.org>
+  +files/smooth-tasks-0_p20120130-kde48.patch, +smooth-tasks-0_p20120130.ebuild,
+  -smooth-tasks-20101106.ebuild:
+  Add new snapshot from a more active fork. Snapshot is patched to build with
+  kde 4.8. Remove old snapshot violates naming scheme. Fixes bug #400863.
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> smooth-tasks-20101106.ebuild:
   Bump to EAPI=4
