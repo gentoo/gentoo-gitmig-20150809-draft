@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/qtexengine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/ChangeLog,v 1.3 2010/10/12 12:05:13 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/ChangeLog,v 1.4 2012/01/30 08:22:27 johu Exp $
+
+*qtexengine-0.3 (30 Jan 2012)
+
+  30 Jan 2012; Johannes Huber <johu@gentoo.org>
+  +files/qtexengine-0.3-dynlib.patch, +qtexengine-0.3.ebuild:
+  Version bump wrt bug #400737. Thanks to kensington
+  <gentoo@scribeofthenile.com>.
 
   12 Oct 2010; Justin Lecher <jlec@gentoo.org> qtexengine-0.2.ebuild:
   Keyworded for ~linux prefix
