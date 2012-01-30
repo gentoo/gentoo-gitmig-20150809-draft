@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/fwbuilder
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.112 2011/12/31 09:13:37 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.113 2012/01/30 22:46:35 ssuominen Exp $
+
+  30 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  fwbuilder-5.0.1.3592.ebuild:
+  Fix building with broken AM_INIT_AUTOMAKE detection of autotools.eclass (rev.
+  1.117) wrt #398743
 
   31 Dec 2011; Mike Frysinger <vapier@gentoo.org> fwbuilder-5.0.0.3568.ebuild,
   fwbuilder-5.0.1.3592.ebuild:

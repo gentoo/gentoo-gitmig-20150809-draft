@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.1.3592.ebuild,v 1.2 2011/12/31 09:13:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.1.3592.ebuild,v 1.3 2012/01/30 22:46:35 ssuominen Exp $
 
 EAPI="4"
 
-inherit eutils base qt4-r2 multilib autotools
+inherit eutils base qt4-r2 multilib autotools libtool
 
 DESCRIPTION="A firewall GUI"
 HOMEPAGE="http://www.fwbuilder.org/"
@@ -25,6 +25,7 @@ PATCHES=(
 
 src_prepare() {
 	qt4-r2_src_prepare
+	sed -i -e '/dnl.*AM_INIT_AUTOMAKE/d' configure.in || die #398743
 	eautoreconf
 }
 
