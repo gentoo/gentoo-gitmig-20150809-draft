@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclastfm/libclastfm-0.4.ebuild,v 1.1 2011/10/26 18:02:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclastfm/libclastfm-0.4.ebuild,v 1.2 2012/01/30 16:41:07 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/liblastfm/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="static-libs"
 
 RDEPEND="net-misc/curl"
