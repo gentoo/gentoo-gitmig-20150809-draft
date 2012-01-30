@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.216_pre2935.ebuild,v 1.2 2011/11/20 09:13:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.216_pre3004.ebuild,v 1.1 2012/01/30 10:45:09 hollow Exp $
+
+EAPI=4
 
 inherit eutils bash-completion
 
@@ -42,10 +44,19 @@ pkg_setup() {
 	einfo
 }
 
-src_compile() {
+src_test() {
+	# do not use $D from portage by accident (#297982)
+	sed -i -e 's/^\$D //' "${S}"/src/testsuite/vunify-test.sh
+	default
+}
+
+src_configure() {
 	econf --with-vrootdir=${VDIRBASE} \
 		--with-initscripts=gentoo \
-		--localstatedir=/var || die "econf failed!"
+		--localstatedir=/var
+}
+
+src_compile() {
 	emake || die "emake failed!"
 }
 
