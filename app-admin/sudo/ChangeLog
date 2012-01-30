@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.295 2012/01/30 18:05:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.296 2012/01/30 21:48:27 jdhore Exp $
+
+  30 Jan 2012; Jeff Horelick <jdhore@gentoo.org> sudo-1.8.3_p2.ebuild:
+  x86 stable per bug 401533
 
   30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> sudo-1.8.3_p2.ebuild:
   Stable for AMD64, wrt security bug #401533
