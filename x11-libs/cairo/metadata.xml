@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>x11</herd>
 <maintainer>
-  <email>cardoe@gentoo.org</email>
-  <name>Doug Goldstein</name>
-</maintainer>
-<maintainer>
   <email>spatz@gentoo.org</email>
   <name>Dror Levin</name>
 </maintainer>
