@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13445 2012/01/30 01:44:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13446 2012/01/30 11:08:31 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -358,12 +358,6 @@ dev-ruby/ruby-chasen
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
 =www-plugins/google-talkplugin-9999
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (13 Nov 2011)
-# Fails to build or run with >=opencv-2.3. Incompatible with pyatspi-2.2 (and
-# therefore with gnome-3.2). No upstream activity since early 2010.
-# Masked for removal in 30 days. Bug #389979
-app-accessibility/gnome-mousetrap
 
 # Alin Năstac <mrness@gentoo.org> (13 Nov 2011)
 # Dead project, masked for removal in 30 days
