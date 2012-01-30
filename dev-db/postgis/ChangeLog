@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.58 2011/08/23 22:56:13 titanofold Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.59 2012/01/30 18:03:06 ago Exp $
+
+  30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> postgis-1.5.3-r1.ebuild:
+  Stable for AMD64, wrt bug #376359
 
 *postgis-1.4.2-r1 (23 Aug 2011)
 
