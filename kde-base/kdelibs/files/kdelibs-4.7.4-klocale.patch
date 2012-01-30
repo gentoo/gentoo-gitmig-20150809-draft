@@ -1,0 +1,136 @@
+From 2993b24bc21a340695ad35b4f014a684f4d0c651 Mon Sep 17 00:00:00 2001
+From: John Layt <jlayt@kde.org>
+Date: Sat, 17 Dec 2011 16:27:51 +0000
+Subject: [PATCH] KLocale: Fix readNumber() and readMoney() for lenient group parsing
+
+Restore the old pre-4.7 behaviour of accepting as valid any numbers
+that do not contain any group separators but strictly enforce group
+rules when the number contains 1 or more group separators.
+
+Distro's will really want to backport this fix to all versions of 4.7
+as previously number entry for all KDE apps would have been seriously
+broken.
+
+I'm amazed I wasn't beaten up for this earlier!
+
+BUG: 288963
+FIXED-IN: 4.7.5
+CCMAIL: kde-packager@kde.org
+---
+ kdecore/localization/klocale_kde.cpp |   10 ++++++++--
+ kdecore/tests/klocaletest.cpp        |   34 +++++++++++++++++++++++++++++-----
+ 2 files changed, 37 insertions(+), 7 deletions(-)
+
+diff --git a/kdecore/localization/klocale_kde.cpp b/kdecore/localization/klocale_kde.cpp
+index 6cf85f9..6690f4a 100644
+--- a/kdecore/localization/klocale_kde.cpp
++++ b/kdecore/localization/klocale_kde.cpp
+@@ -1894,7 +1894,10 @@ double KLocalePrivate::readNumber(const QString &_str, bool * ok) const
+ 
+     // Remove group separators
+     bool groupOk = true;
+-    str = parseDigitGroup(str, thousandsSeparator(), decimalSymbol(), numericDigitGrouping(), &groupOk);
++    if(str.contains(thousandsSeparator())) {
++        str = parseDigitGroup(str, thousandsSeparator(), decimalSymbol(),
++                              numericDigitGrouping(), &groupOk);
++    }
+ 
+     if (!groupOk) {
+         if (ok) {
+@@ -2013,7 +2016,10 @@ double KLocalePrivate::readMoney(const QString &_str, bool *ok) const
+ 
+     // Remove group separators
+     bool groupOk = true;
+-    str = parseDigitGroup(str, monetaryThousandsSeparator(), monetaryDecimalSymbol(), monetaryDigitGrouping(), &groupOk);
++    if(str.contains(monetaryThousandsSeparator())) {
++        str = parseDigitGroup(str, monetaryThousandsSeparator(), monetaryDecimalSymbol(),
++                              monetaryDigitGrouping(), &groupOk);
++    }
+ 
+     if (!groupOk) {
+         if (ok) {
+diff --git a/kdecore/tests/klocaletest.cpp b/kdecore/tests/klocaletest.cpp
+index 97a3bce..f80de85 100644
+--- a/kdecore/tests/klocaletest.cpp
++++ b/kdecore/tests/klocaletest.cpp
+@@ -180,9 +180,13 @@ KLocaleTest::readNumber()
+     QVERIFY(!ok);
+     QCOMPARE(locale.readNumber(QString("123,456,789.01"), &ok), 0.0);
+     QVERIFY(!ok);
+-    QCOMPARE(locale.readNumber(QString("123456789"), &ok), 0.0);
++    QCOMPARE(locale.readNumber(QString("123456789"), &ok), 123456789.0);
++    QVERIFY(ok);
++    QCOMPARE(locale.readNumber(QString("123456789.01"), &ok), 123456789.01);
++    QVERIFY(ok);
++    QCOMPARE(locale.readNumber(QString("123456,789"), &ok), 0.0);
+     QVERIFY(!ok);
+-    QCOMPARE(locale.readNumber(QString("123456789.01"), &ok), 0.0);
++    QCOMPARE(locale.readNumber(QString("123456,789.01"), &ok), 0.0);
+     QVERIFY(!ok);
+ 
+     //Test it parses correctly with an empty separator.
+@@ -204,6 +208,14 @@ KLocaleTest::readNumber()
+     QVERIFY(ok);
+     QCOMPARE(locale.readNumber(QString("123 456 789.01"), &ok), 123456789.01);
+     QVERIFY(ok);
++    QCOMPARE(locale.readNumber(QString("123456789"), &ok), 123456789.0);
++    QVERIFY(ok);
++    QCOMPARE(locale.readNumber(QString("123456789.01"), &ok), 123456789.01);
++    QVERIFY(ok);
++    QCOMPARE(locale.readNumber(QString("123456 789"), &ok), 0.0);
++    QVERIFY(!ok);
++    QCOMPARE(locale.readNumber(QString("123456 789.01"), &ok), 0.0);
++    QVERIFY(!ok);
+     QCOMPARE(locale.readNumber(QString("123,456,789"), &ok), 0.0);
+     QVERIFY(!ok);
+     QCOMPARE(locale.readNumber(QString("123,456,789.01"), &ok), 0.0);
+@@ -479,6 +491,10 @@ void KLocaleTest::readMoney()
+     QVERIFY(ok);
+     QCOMPARE(locale.readMoney("$ 987,654,321.12", &ok), 987654321.12);
+     QVERIFY(ok);
++    QCOMPARE(locale.readMoney("$ 987654321.12", &ok), 987654321.12);
++    QVERIFY(ok);
++    QCOMPARE(locale.readMoney("$ 987654,321.12", &ok), 0.0);
++    QVERIFY(!ok);
+ 
+     QCOMPARE(locale.readMoney(          "$ -1.12", &ok),         -1.12);
+     QVERIFY(ok);
+@@ -498,6 +514,10 @@ void KLocaleTest::readMoney()
+     QVERIFY(ok);
+     QCOMPARE(locale.readMoney("$ -987,654,321.12", &ok), -987654321.12);
+     QVERIFY(ok);
++    QCOMPARE(locale.readMoney("$ -987654321.12", &ok), -987654321.12);
++    QVERIFY(ok);
++    QCOMPARE(locale.readMoney("$ -987654,321.12", &ok), 0.0);
++    QVERIFY(!ok);
+ 
+     // Test incomplete formats
+     QCOMPARE(locale.readMoney(          "$ 1", &ok),         1.00);
+@@ -521,17 +541,21 @@ void KLocaleTest::readMoney()
+ 
+     // Test Grouping
+     locale.d->setMonetaryDigitGrouping(QList<int>());
+-    QCOMPARE(locale.readMoney( "$ 987654321.12", &ok),  987654321.12);
++    QCOMPARE(locale.readMoney("$ 987654321.12", &ok),  987654321.12);
+     QVERIFY(ok);
+     QCOMPARE(locale.readMoney("$ -987654321.12", &ok), -987654321.12);
+     QVERIFY(ok);
+     locale.d->setMonetaryDigitGrouping(QList<int>() << 3 << 2);
+-    QCOMPARE(locale.readMoney( "$ 98,76,54,321.12", &ok),  987654321.12);
++    QCOMPARE(locale.readMoney("$ 98,76,54,321.12", &ok),  987654321.12);
+     QVERIFY(ok);
+     QCOMPARE(locale.readMoney("$ -98,76,54,321.12", &ok), -987654321.12);
+     QVERIFY(ok);
++    QCOMPARE(locale.readMoney("$ 987654321.12", &ok),  987654321.12);
++    QVERIFY(ok);
++    QCOMPARE(locale.readMoney("$ -987654321.12", &ok), -987654321.12);
++    QVERIFY(ok);
+     locale.d->setMonetaryDigitGrouping(QList<int>() << 3 << -1);
+-    QCOMPARE(locale.readMoney( "$ 987654,321.12", &ok),  987654321.12);
++    QCOMPARE(locale.readMoney("$ 987654,321.12", &ok),  987654321.12);
+     QVERIFY(ok);
+     QCOMPARE(locale.readMoney("$ -987654,321.12", &ok), -987654321.12);
+     QVERIFY(ok);
+-- 
+1.7.3.4
+
