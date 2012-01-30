@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r1.ebuild,v 1.1 2012/01/30 21:34:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r1.ebuild,v 1.2 2012/01/30 22:01:15 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool multilib
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="3dnow a52 aac alsa altivec dv dvd +iconv imagemagick jpeg lzo mjpeg mmx mp3 mpeg nuv ogg oss pic postproc quicktime sdl sse sse2 theora truetype v4l vorbis X x264 xml xvid"
 
 RDEPEND="
-	virtual/ffmpeg
+	>=virtual/ffmpeg-0.6.90
 	a52? ( media-libs/a52dec )
 	aac? ( media-libs/faac )
 	alsa? ( media-libs/alsa-lib )
