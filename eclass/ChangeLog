@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.104 2012/01/30 13:11:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.105 2012/01/30 20:18:38 floppym Exp $
+
+  30 Jan 2012; Mike Gilbert <floppym@gentoo.org> python.eclass:
+  Detect needless usage of python_convert_shebangs(). Patch by Arfrever.
 
   30 Jan 2012; Justin Lecher <jlec@gentoo.org> autotools-utils.eclass:
   Call glib-gettextize with --force in autotools-utils.eclass
