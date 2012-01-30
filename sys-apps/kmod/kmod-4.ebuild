@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-4.ebuild,v 1.2 2012/01/21 18:47:22 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-4.ebuild,v 1.3 2012/01/30 21:10:20 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ unset vcs
 
 if [[ "${PV}" != "9999" ]] ; then
 	SRC_URI="http://packages.profusion.mobi/kmod/${P}.tar.xz"
-	KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="library and tools for managing linux kernel modules"
