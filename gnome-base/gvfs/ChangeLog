@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.165 2012/01/18 20:39:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.166 2012/01/30 23:49:21 tetromino Exp $
+
+  30 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gvfs-1.10.1.ebuild,
+  +files/gvfs-1.10.1-unneeded-include.patch:
+  Add patch from 1.11.x to fix building against >=glib-2.31 (bug #401539,
+  thanks to Rolf S. Arvidson for reporting).
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> gvfs-1.10.1.ebuild:
   arm stable, bug #393007

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.8 2012/01/18 20:39:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.9 2012/01/30 23:49:21 tetromino Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -87,6 +87,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Patch from 1.11 for building against glib-2.31, bug #401539
+	epatch "${FILESDIR}/${P}-unneeded-include.patch"
+
 	# Conditional patching purely to avoid eautoreconf
 	use gphoto2 && epatch "${FILESDIR}"/${PN}-1.2.2-gphoto2-stricter-checks.patch
 
