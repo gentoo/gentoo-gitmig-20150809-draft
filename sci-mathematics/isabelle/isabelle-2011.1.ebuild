@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1.ebuild,v 1.2 2012/01/09 13:49:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1.ebuild,v 1.3 2012/01/30 06:54:53 gienah Exp $
 
 EAPI="4"
 
@@ -109,7 +109,7 @@ src_install() {
 
 	dodir /etc/isabelle
 	insinto /etc/isabelle
-	doins -r etc
+	doins -r etc/*
 
 	dosym /etc/isabelle "${TARGETDIR}/etc"
 	dosym "${LIBDIR}/heaps" "${TARGETDIR}/heaps"
