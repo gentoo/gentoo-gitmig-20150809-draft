@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.204 2012/01/23 23:39:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.205 2012/01/30 22:28:23 jer Exp $
+
+  30 Jan 2012; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.14.ebuild,
+  rxvt-unicode-9.15.ebuild:
+  Use the Attic subdirectory (by default).
 
   23 Jan 2012; Alex Alexander <wired@gentoo.org> rxvt-unicode-9.15.ebuild:
   fixed buffer-on-clear patch not applying in new version
