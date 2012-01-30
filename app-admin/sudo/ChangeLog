@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.293 2012/01/22 15:35:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.294 2012/01/30 16:41:37 vapier Exp $
+
+*sudo-1.8.3_p2 (30 Jan 2012)
+
+  30 Jan 2012; Mike Frysinger <vapier@gentoo.org> +sudo-1.8.3_p2.ebuild:
+  Version bump #401533.
 
   22 Jan 2012; Raúl Porcel <armin76@gentoo.org> sudo-1.8.2-r1.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #398767
