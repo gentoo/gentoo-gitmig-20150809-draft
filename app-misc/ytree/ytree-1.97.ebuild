@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ytree-1.95.ebuild,v 1.1 2012/01/30 17:18:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ytree-1.97.ebuild,v 1.1 2012/01/30 17:21:14 jer Exp $
 
 EAPI=2
 
