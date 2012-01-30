@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.29.4.ebuild,v 1.1 2011/10/19 01:59:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.29.4.ebuild,v 1.2 2012/01/30 09:45:11 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -16,6 +16,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 IUSE="X doc +introspection test"
+
+# Upstream bug #643802
+REQUIRED_USE="doc? ( X )"
 
 # Use glib-2.29.5 for g_atomic_int_add
 RDEPEND=">=dev-libs/glib-2.29.5:2
@@ -56,8 +59,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system.  Fix building for
 	# emul-linux-x86-gtklibs
@@ -67,6 +68,7 @@ src_prepare() {
 	fi
 
 	elibtoolize # for Darwin bundles
+	gnome2_src_prepare
 }
 
 pkg_postinst() {
