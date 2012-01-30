@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.8.2-r1.ebuild,v 1.2 2012/01/30 01:07:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.8.2-r1.ebuild,v 1.3 2012/01/30 23:12:35 tetromino Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
@@ -8,7 +8,7 @@ WANT_AUTOMAKE="1.11"
 
 # Inherit gnome2 after clutter to download sources from gnome.org
 # since clutter-project.org doesn't provide .xz tarballs
-inherit clutter gnome2
+inherit clutter eutils gnome2
 
 DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 

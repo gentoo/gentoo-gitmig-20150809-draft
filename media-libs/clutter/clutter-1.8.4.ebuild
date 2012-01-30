@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.8.2.ebuild,v 1.1 2011/10/28 22:16:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.8.4.ebuild,v 1.1 2012/01/30 23:12:35 tetromino Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
@@ -24,9 +24,9 @@ RDEPEND="
 	>=dev-libs/atk-2.1.5[introspection?]
 	>=dev-libs/json-glib-0.12[introspection?]
 	>=media-libs/cogl-1.8.0:1.0[introspection?,pango]
+	<=media-libs/cogl-1.9.2:1.0
 	media-libs/fontconfig
 	>=x11-libs/cairo-1.10[glib]
-	x11-libs/gdk-pixbuf:2
 	>=x11-libs/pango-1.20[introspection?]
 
 	virtual/opengl
