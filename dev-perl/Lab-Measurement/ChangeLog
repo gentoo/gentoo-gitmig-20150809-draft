@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lab-Measurement
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/ChangeLog,v 1.1 2012/01/29 18:05:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/ChangeLog,v 1.2 2012/01/30 00:45:24 dilfridge Exp $
+
+  30 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  Lab-Measurement-2.94.ebuild, Lab-Measurement-9999.ebuild:
+  Remove duplicate setting of KEYWORDS
 
 *Lab-Measurement-9999 (29 Jan 2012)
 *Lab-Measurement-2.94 (29 Jan 2012)
