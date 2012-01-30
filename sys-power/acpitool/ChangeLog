@@ -1,6 +1,17 @@
 # ChangeLog for sys-power/acpitool
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.15 2010/05/24 18:50:26 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.16 2012/01/30 14:45:58 ssuominen Exp $
+
+*acpitool-0.5.1-r1 (30 Jan 2012)
+
+  30 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +acpitool-0.5.1-r1.ebuild, +files/acpitool-0.5.1-ac_adapter.patch,
+  +files/acpitool-0.5.1-battery.patch, +files/acpitool-0.5.1-kernel3.patch,
+  +files/acpitool-0.5.1-wakeup.patch:
+  Fix compability with Linux 3.x wrt #377355 by Damien Thébault. Fix reading
+  of values from ac_adapters and batteries. Rewrite part of the wakeup code.
+  This will also close #337565 (overflow revealed by _FORTIFY_SOURCE) by Diego
+  Elio Pettenò.
 
   24 May 2010; Pacho Ramos <pacho@gentoo.org> acpitool-0.5.1.ebuild:
   stable amd64, bug 317629
