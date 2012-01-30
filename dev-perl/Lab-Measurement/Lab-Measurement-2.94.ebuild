@@ -1,18 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-2.94.ebuild,v 1.2 2012/01/30 00:45:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-2.94.ebuild,v 1.3 2012/01/30 00:55:41 dilfridge Exp $
 
 if [[ "${PV}" != "9999" ]]; then
 	MODULE_AUTHOR="AKHUETTEL"
 	KEYWORDS="~amd64 ~x86"
+	inherit perl-module
 else
 	EGIT_REPO_URI="git://gitorious.org/lab-measurement/lab.git"
 	EGIT_BRANCH="master"
 	EGIT_SOURCEDIR=${S}
 	KEYWORDS=""
+	S=${WORKDIR}/${P}/Measurement
+	inherit perl-module git-2
 fi
-
-inherit perl-module git-2
 
 DESCRIPTION="Measurement control and automation with Perl"
 HOMEPAGE="http://www.labmeasurement.de/"
@@ -42,8 +43,6 @@ DEPEND="
 	${RDEPEND}
 	virtual/perl-Module-Build
 "
-
-S=${WORKDIR}/${P}/Measurement
 
 pkg_postinst() {
 	elog "You may want to install one or more backend driver modules. Supported are"
