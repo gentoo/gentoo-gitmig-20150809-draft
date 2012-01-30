@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ytree
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.11 2010/04/11 15:48:51 jokey Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.12 2012/01/30 17:18:54 jer Exp $
+
+*ytree-1.95 (30 Jan 2012)
+
+  30 Jan 2012; Jeroen Roovers <jer@gentoo.org> +ytree-1.95.ebuild:
+  Version bump.
 
   11 Apr 2010; Markus Ullmann <jokey@gentoo.org> ytree-1.94.ebuild:
   Fix quoting, meh
