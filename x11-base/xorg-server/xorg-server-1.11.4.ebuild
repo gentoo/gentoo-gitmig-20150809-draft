@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.2-r1.ebuild,v 1.2 2012/01/30 12:38:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.4.ebuild,v 1.1 2012/01/30 12:38:52 chithanh Exp $
 
 EAPI=4
 
 XORG_DOC=doc
+XORG_EAUTORECONF=yes
 inherit xorg-2 multilib versionator
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 
@@ -111,6 +112,9 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
+	"${FILESDIR}"/${PN}-1.11-disable-tests-without-ddx.patch
+	"${FILESDIR}"/${PN}-1.11-dix-pointerrootwin-send-focusin.patch
+	"${FILESDIR}"/${PN}-1.11-dix-send-focus-events.patch
 )
 
 pkg_pretend() {
@@ -185,7 +189,7 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}"/xdm-setup.initd-1 xdm-setup
-	newinitd "${FILESDIR}"/xdm.initd-4 xdm
+	newinitd "${FILESDIR}"/xdm.initd-5 xdm
 	newconfd "${FILESDIR}"/xdm.confd-4 xdm
 
 	# install the @x11-module-rebuild set for Portage

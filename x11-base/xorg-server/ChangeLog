@@ -1,6 +1,18 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.636 2012/01/16 00:43:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.637 2012/01/30 12:38:52 chithanh Exp $
+
+*xorg-server-1.11.99.902 (30 Jan 2012)
+*xorg-server-1.11.4 (30 Jan 2012)
+
+  30 Jan 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.11.2-r1.ebuild, xorg-server-1.11.2-r2.ebuild,
+  xorg-server-1.11.3.ebuild, +xorg-server-1.11.4.ebuild,
+  -xorg-server-1.11.99.901.ebuild, +xorg-server-1.11.99.902.ebuild,
+  +files/xorg-server-1.11-dix-pointerrootwin-send-focusin.patch,
+  +files/xorg-server-1.11-dix-send-focus-events.patch:
+  Version bumps. Include upstream patches to address gtk+:3.3 triggered issues.
+  Raise dependency on xkeyboard-config to avoid security bug #399347.
 
   16 Jan 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-server-1.11.2-r2.ebuild, xorg-server-1.11.3.ebuild,
