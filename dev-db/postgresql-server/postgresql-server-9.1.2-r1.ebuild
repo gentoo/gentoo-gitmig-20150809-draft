@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1.2-r1.ebuild,v 1.1 2011/12/10 04:28:24 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1.2-r1.ebuild,v 1.2 2012/01/30 19:51:21 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2"
 WANT_AUTOMAKE="none"
 inherit autotools eutils flag-o-matic multilib pam prefix python versionator
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 SLOT="$(get_version_component_range 1-2)"
 S="${WORKDIR}/postgresql-${PV}"
