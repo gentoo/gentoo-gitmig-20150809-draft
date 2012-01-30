@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9.ebuild,v 1.1 2011/12/22 15:45:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9.ebuild,v 1.2 2012/01/30 12:12:04 jlec Exp $
 
 EAPI=3
 
@@ -53,6 +53,7 @@ RDEPEND="${CDEPEND}
 	python? ( dev-python/PyQt4[X] )"
 
 PATCHES=(
+	"${FILESDIR}/${P}-qt48.patch"
 	"${FILESDIR}/${PN}-0.9.8.8-system-gl2ps.patch"
 	"${FILESDIR}/${PN}-0.9.7.10-dont-install-qwt.patch"
 	"${FILESDIR}/${PN}-0.9.8.6-gold.patch"
@@ -90,7 +91,7 @@ src_prepare() {
 	QWT_LIBS = \$\$QTI_ROOT/3rdparty/qwt/lib/libqwt.a
 	QWT3D_INCLUDEPATH = \$\$QTI_ROOT/3rdparty/qwtplot3d/include
 	QWT3D_LIBS = \$\$QTI_ROOT/3rdparty/qwtplot3d/lib/libqwtplot3d.a
-	SYS_LIBS = -lgl2ps ${mylibs}
+	SYS_LIBS = -lgl2ps ${mylibs} -lGLU
 
 	PYTHON = python
 	LUPDATE = lupdate
