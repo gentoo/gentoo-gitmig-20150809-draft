@@ -1,6 +1,11 @@
 # ChangeLog for app-text/evince
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.236 2011/12/17 11:07:21 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.237 2012/01/30 11:33:40 pacho Exp $
+
+  30 Jan 2012; Pacho Ramos <pacho@gentoo.org> evince-2.32.0-r4.ebuild:
+  Stop allowing to build gtk-doc files as they are useless for evince as
+  discussed in bug #398435 (by Nick Bowler). Thanks to Alexandre Rostovtsev for
+  looking to the issue.
 
 *evince-2.32.0-r4 (17 Dec 2011)
 

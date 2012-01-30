@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.2 2011/12/17 16:29:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.3 2012/01/30 11:33:40 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 
-IUSE="dbus debug djvu doc dvi gnome gnome-keyring +introspection nautilus t1lib tiff"
+IUSE="dbus debug djvu dvi gnome gnome-keyring +introspection nautilus t1lib tiff"
 
 # Since 2.26.2, can handle poppler without cairo support. Make it optional ?
 # not mature enough
@@ -48,8 +48,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
-	>=dev-util/gtk-doc-am-1.13
-	doc? ( >=dev-util/gtk-doc-1.13 )"
+	>=dev-util/gtk-doc-am-1.13"
 
 ELTCONF="--portage"
 
