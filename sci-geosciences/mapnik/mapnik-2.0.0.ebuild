@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.3 2012/01/30 04:46:52 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.4 2012/01/30 21:59:14 hwoarang Exp $
 
 EAPI=3
 
@@ -27,7 +27,7 @@ RDEPEND="net-misc/curl
 	dev-libs/libxml2
 	dev-libs/icu
 	x11-libs/agg[truetype]
-	dev-libs/boost[python?]
+	>=dev-libs/boost-1.48[python?]
 	postgres? ( >=dev-db/postgresql-base-8.3 )
 	gdal? ( sci-libs/gdal )
 	geos? ( sci-libs/geos )
@@ -45,6 +45,13 @@ DEPEND="${RDEPEND}
 	dev-util/scons"
 
 #EPATCH_OPTS="-F 3"
+
+pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
@@ -66,6 +73,7 @@ src_configure() {
 		PROJ_LIBS=/usr/lib
 		$(use_scons nobfonts SYSTEM_FONTS /usr/share/fonts '')
 		$(use_scons python BINDINGS all none)
+		$(use_scons python BOOST_PYTHON_LIB boost_python-${PYTHON_ABI})
 		$(use_scons bidi BIDI)
 		$(use_scons cairo CAIRO)
 		$(use_scons debug DEBUG)

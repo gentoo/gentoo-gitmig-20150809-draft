@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.10 2012/01/30 21:59:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r2.ebuild,v 1.1 2012/01/30 21:59:14 hwoarang Exp $
 
 EAPI=3
 
@@ -36,7 +36,7 @@ RDEPEND="dev-libs/boost
 	postgres? (
 		>=dev-db/postgresql-base-8.3
 	)
-	python? ( <dev-libs/boost-1.48[python] )
+	python? ( >=dev-libs/boost-1.48[python] )
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
@@ -78,6 +78,7 @@ src_configure() {
 
 	use cairo  || EMAKEOPTS="${EMAKEOPTS} CAIRO=false"
 	use python || EMAKEOPTS="${EMAKEOPTS} BINDINGS=none"
+	use python && EMAKEOPTS="${EMAKEOPTS} BOOST_PYTHON_LIB=boost_python-${PYTHON_ABI}"
 	use debug  && EMAKEOPTS="${EMAKEOPTS} DEBUG=yes"
 	EMAKEOPTS="${EMAKEOPTS} DESTDIR=${D}"
 

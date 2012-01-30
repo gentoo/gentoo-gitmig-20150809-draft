@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.30 2012/01/30 04:46:52 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.31 2012/01/30 21:59:14 hwoarang Exp $
+
+*mapnik-0.7.1-r2 (30 Jan 2012)
+
+  30 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +mapnik-0.7.1-r2.ebuild,
+  mapnik-0.7.1-r1.ebuild, mapnik-2.0.0.ebuild:
+  New revision for boost-1.48 compatibility. Thanks to Arfrever. Fixes bug
+  #401395
 
   30 Jan 2012; Steve Arnold <nerdboy@gentoo.org> mapnik-2.0.0.ebuild:
   Updated python and boost deps.
