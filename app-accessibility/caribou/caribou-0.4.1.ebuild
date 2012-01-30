@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.1.ebuild,v 1.2 2012/01/01 00:09:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.1.ebuild,v 1.3 2012/01/30 19:17:24 hwoarang Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -67,11 +67,6 @@ src_prepare() {
 	echo '#!/bin/sh' > py-compile
 
 	gnome2_src_prepare
-}
-
-src_install() {
-	gnome2_src_install
-	python_convert_shebangs -r 2 "${ED}"
 }
 
 pkg_postinst() {
