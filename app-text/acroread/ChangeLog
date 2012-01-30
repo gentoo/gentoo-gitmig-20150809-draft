@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.176 2012/01/29 15:11:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.177 2012/01/30 17:42:07 idl0r Exp $
+
+  30 Jan 2012; Christian Ruppert <idl0r@gentoo.org> acroread-9.4.7.ebuild:
+  Add QA_TEXTRELS for libsccore.so, bug 401319.
 
   29 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -acroread-9.4.2.ebuild:

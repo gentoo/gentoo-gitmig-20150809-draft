@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.7.ebuild,v 1.4 2012/01/29 14:35:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.7.ebuild,v 1.5 2012/01/30 17:42:07 idl0r Exp $
 
 EAPI=4
 
@@ -61,6 +61,8 @@ QA_DT_HASH="opt/Adobe/Reader9/Reader/intellinux/plug_ins3d/.*.x3d
 	opt/Adobe/Reader9/Reader/intellinux/sidecars/.*.DEU
 	opt/Adobe/Reader9/Browser/intellinux/nppdf.so
 	opt/netscape/plugins/nppdf.so"
+
+QA_TEXTRELS="opt/Adobe/Reader9/Reader/intellinux/lib/libsccore.so"
 
 INSTALLDIR=/opt
 
