@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.2.2.ebuild,v 1.1 2012/01/27 22:08:23 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.2.1.ebuild,v 1.1 2012/01/30 20:26:58 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
