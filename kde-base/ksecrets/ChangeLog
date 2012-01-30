@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksecrets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksecrets/ChangeLog,v 1.2 2012/01/25 20:17:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksecrets/ChangeLog,v 1.3 2012/01/30 11:51:12 johu Exp $
+
+  30 Jan 2012; Johannes Huber <johu@gentoo.org> ksecrets-4.8.0.ebuild:
+  Add missing build dep, fixes bug #401141.
 
   25 Jan 2012; Johannes Huber <johu@gentoo.org> Manifest:
   Fix manifest.
