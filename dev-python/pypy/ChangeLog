@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.7 2012/01/15 22:07:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.8 2012/01/30 15:50:35 floppym Exp $
+
+*pypy-1.7-r1 (30 Jan 2012)
+
+  30 Jan 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/pypy-1.7-distutils-fix_handling_of_executables_and_flags.patch, +files/
+  pypy-1.7-distutils.unixccompiler.UnixCCompiler.runtime_library_dir_option.patc
+  h, +pypy-1.7-r1.ebuild:
+  Apply patches from Arfrever to resolve bug 397523.
 
   15 Jan 2012; Markos Chandras <hwoarang@gentoo.org> pypy-1.7.ebuild:
   Don't call use() in global scope. Patch by Arfrever.
