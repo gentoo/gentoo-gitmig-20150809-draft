@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r2.ebuild,v 1.5 2012/01/30 01:45:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r3.ebuild,v 1.1 2012/01/30 01:45:42 bicatali Exp $
 
-EAPI=2
+EAPI=4
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils fortran-2 distutils toolchain-funcs
+inherit eutils fortran-2 distutils
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="true"
 
@@ -21,18 +21,16 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="
-	virtual/fortran
-
+RDEPEND="virtual/fortran
 	dev-libs/blitz
-	<dev-libs/boost-1.48[python]
+	>=dev-libs/boost-1.48[python]
 	dev-python/imaging[tk]
 	dev-python/matplotlib
 	sci-libs/scipy
 	virtual/lapack"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=dev-util/scons-0.98"
+	dev-util/scons"
 
 RESTRICT_PYTHON_ABIS="3.*"
 
@@ -45,33 +43,26 @@ src_prepare() {
 	python_copy_sources
 
 	preparation() {
-		local libfort
-		local lapack_libs=
-		local lapack_libdirs=
+		local libfort lapack_libs lapack_libdirs
 		# Configure to compile against selected python version
 		cat <<-EOF >> machine_cfg.py
 			include_dirs = []
 			include_dirs.append("$(python_get_includedir)")
 			include_dirs.append("$(python_get_sitedir)")
 		EOF
-
+		local x
 		for x in $(pkg-config --libs-only-l lapack); do
 			lapack_libs="${lapack_libs}, \"${x#-l}\""
 		done
 		for x in $(pkg-config --libs-only-L lapack); do
 			lapack_libdirs="${lapack_libdirs}, \"${x#-L}\""
 		done
-		case "$(tc-getF77)" in
-			*gfortran) libfort=gfortran ;;
-			*g77) libfort=g2c ;;
-		esac
 		cat <<-EOF >> machine_cfg.py
 			library_dirs = [${lapack_libdirs#,}]
-			libs = ["boost_python", "${libfort}", "blitz"${lapack_libs}]
+			libs = ["boost_python-${PYTHON_ABI}", "blitz"${lapack_libs}]
 		EOF
 	}
 	python_execute_function -s preparation
-	export F77=$(tc-getF77)
 }
 
 src_test() {
@@ -86,5 +77,5 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-	dodoc docs/camfr.pdf || die "doc install failed"
+	dodoc docs/camfr.pdf
 }
