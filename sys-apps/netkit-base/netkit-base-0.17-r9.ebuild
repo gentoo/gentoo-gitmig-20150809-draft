@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r9.ebuild,v 1.8 2012/01/16 03:08:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r9.ebuild,v 1.9 2012/01/31 16:04:14 ssuominen Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 src_prepare() {
