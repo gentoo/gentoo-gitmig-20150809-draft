@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.5 2012/01/30 23:59:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.6 2012/01/31 22:51:52 dilfridge Exp $
 
 EAPI=4
 inherit confutils
@@ -24,16 +24,11 @@ IUSE="minimal linguas_ja linguas_ko linguas_zh_CN linguas_zh_TW"
 RESTRICT="strip mirror"
 
 DEPEND=""
-RDEPEND="linguas_ja? ( >=app-text/acroread-9.1[-linguas_ja(-)] )"
-#	linguas_ko? ( >=app-text/acroread-9.1[-linguas_ko(-)] )
-#	linguas_zh_CN? ( >=app-text/acroread-9.1[-linguas_zh_CN(-)] )
-#	linguas_zh_TW? ( >=app-text/acroread-9.1[-linguas_zh_TW(-)] )
+RDEPEND="!<app-text/acroread-9.4.0"
 
 S="${WORKDIR}"
 
-pkg_setup() {
-	confutils_require_any !minimal linguas_ja linguas_ko linguas_zh_CN linguas_zh_TW
-}
+REQUIRED_USE="|| ( !minimal linguas_ja linguas_ko linguas_zh_CN linguas_zh_TW )"
 
 src_install() {
 	local INSTALLDIR="/opt"

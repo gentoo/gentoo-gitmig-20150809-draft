@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/acroread-asianfonts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.28 2012/01/30 23:59:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.29 2012/01/31 22:51:52 dilfridge Exp $
+
+  31 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  acroread-asianfonts-9.1.ebuild:
+  Sanitize dependencies
 
   31 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   acroread-asianfonts-9.1.ebuild:
