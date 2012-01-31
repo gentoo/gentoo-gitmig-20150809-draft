@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gsview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.35 2012/01/30 23:38:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.36 2012/01/31 14:41:29 ago Exp $
+
+  31 Jan 2012; Agostino Sarubbo <ago@gentoo.org> gsview-4.9.ebuild:
+  Stable for amd64, wrt bug #401599
 
   30 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> gsview-4.9.ebuild,
   +files/gsview-4.9-libdl.patch:
