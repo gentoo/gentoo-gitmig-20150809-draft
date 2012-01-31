@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.4 2011/11/20 09:17:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.5 2012/01/31 17:10:33 jer Exp $
 
 EAPI=2
 inherit flag-o-matic
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.fefe.de/libowfat/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/dietlibc-0.33_pre20090721"
