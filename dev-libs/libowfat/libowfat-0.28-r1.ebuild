@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.5 2012/01/31 17:10:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.6 2012/01/31 22:06:08 jer Exp $
 
 EAPI=2
-inherit flag-o-matic
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="reimplement libdjb - excellent libraries from Dan Bernstein."
 SRC_URI="http://dl.fefe.de/${P}.tar.bz2"
@@ -12,9 +12,9 @@ HOMEPAGE="http://www.fefe.de/libowfat/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
-IUSE=""
+IUSE="diet"
 
-RDEPEND=">=dev-libs/dietlibc-0.33_pre20090721"
+RDEPEND="diet? ( >=dev-libs/dietlibc-0.33_pre20090721 )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -25,10 +25,16 @@ pkg_setup() {
 
 src_prepare() {
 	sed -e "s:^CFLAGS.*:CFLAGS=-I. ${CFLAGS}:" \
-		-e "s:^DIET.*:DIET=/usr/bin/diet -Os:" \
+		-e "s:^DIET.*:DIET?=/usr/bin/diet -Os:" \
 		-e "s:^prefix.*:prefix=/usr:" \
 		-e "s:^INCLUDEDIR.*:INCLUDEDIR=\${prefix}/include/libowfat:" \
 		-i GNUmakefile || die "sed failed"
+}
+
+src_compile() {
+	emake \
+		CC=$(tc-getCC) \
+		$( use diet || echo 'DIET=' )
 }
 
 src_install () {
