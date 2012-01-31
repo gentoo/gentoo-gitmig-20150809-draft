@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.8 2012/01/30 14:55:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.9 2012/01/31 12:55:26 tupone Exp $
 
 inherit eutils games
 
@@ -15,10 +15,21 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND=""
-RDEPEND="x11-libs/libX11
-	amd64? ( app-emulation/emul-linux-x86-xlibs )"
+RDEPEND="
+	x86? (
+		x11-libs/libX11
+		media-libs/freetype
+		media-libs/libsdl
+		media-libs/sdl-ttf
+		sys-libs/libstdc++-v3
+	)
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-sdl
+		app-emulation/emul-linux-x86-compat
+	)"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack_makeself
@@ -26,7 +37,7 @@ src_unpack() {
 }
 
 src_install() {
-	./install.sh -R "${D}" -s "${GDIR}" -al -pn -o -I \
+	./install.sh -R "${D}" -s "${GDIR}" -rl -pn -o -I \
 		|| die "install.sh failed"
 	dodir "${GAMES_BINDIR}"
 	dosym "${GDIR}/drod" "${GAMES_BINDIR}/drod"

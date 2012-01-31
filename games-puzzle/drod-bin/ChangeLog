@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/drod-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.13 2012/01/30 14:55:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.14 2012/01/31 12:55:26 tupone Exp $
+
+  31 Jan 2012; Tupone Alfredo <tupone@gentoo.org> drod-bin-1.6.6.ebuild:
+  Removing usage of some bundled libraries. Bug #251505 by 
+  flameeyes@gentoo.org
 
   30 Jan 2012; Tupone Alfredo <tupone@gentoo.org> drod-bin-1.6.6.ebuild:
   Adding emul-linux-x86-xlibs depends.
