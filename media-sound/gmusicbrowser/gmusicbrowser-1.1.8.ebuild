@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.1.8.ebuild,v 1.2 2012/01/31 19:17:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.1.8.ebuild,v 1.3 2012/01/31 19:20:41 ssuominen Exp $
+
+# note: dev-perl/Gtk2-MozEmbed left out in purpose because gtkmozembed and xulrunner are obsolete
 
 EAPI=4
 inherit fdo-mime
