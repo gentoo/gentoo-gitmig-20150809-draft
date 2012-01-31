@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>julian.ospald@googlemail.com</email>
+		<name>Julian Ospald</name>
+		<description>Maintainer. Assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>xmw@gentoo.org</email>
+		<name>Michael Weber</name>
+		<description>Proxy maintainer. CC him on bugs</description>
+	</maintainer>
+	<upstream>
+		<maintainer status="active">
+			<email>ignorantguru@users.sourceforge.net</email>
+		</maintainer>
+		<changelog>http://sourceforge.net/p/spacefm/blog/</changelog>
+		<doc lang="en">http://spacefm.wikispaces.com/</doc>
+		<bugs-to>http://sourceforge.net/p/spacefm/tickets/</bugs-to>
+	</upstream>
+	<use>
+		<flag name="fam">Disable inotify and use fam or gamin instead</flag>
+	</use>
+	<longdescription lang="en">
+		SpaceFM is a file manager with built-in VFS, optional udisks-based device 
+		manager, customizable menu system, and bash integration. SpaceFM is a fork 
+		of legacy PCManFM. Earlier versions of this program were released under 
+		the name PCManFM-Mod.
+	</longdescription>
+</pkgmetadata>
