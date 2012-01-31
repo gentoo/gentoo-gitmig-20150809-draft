@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/cameras.desc,v 1.7 2010/11/21 22:16:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/cameras.desc,v 1.8 2012/01/31 08:54:03 pacho Exp $
 
 # This file contains descriptions of CAMERAS USE_EXPAND flags.
 
@@ -70,3 +70,4 @@ sx330z - libgphoto support for sx330z cameras
 template - libgphoto support for template cameras (obsolete)
 topfield - libgphoto support for Topfield PVR5000 cameras
 toshiba_pdrm11 - libgphoto support for toshiba_pdrm11 cameras
+tp6801 - libgphoto support for Tenx tp6801 cameras

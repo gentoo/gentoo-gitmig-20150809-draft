@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6165 2012/01/31 05:07:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6166 2012/01/31 08:54:03 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jan 2012; Pacho Ramos <pacho@gentoo.org> desc/cameras.desc:
+  Add new camera.
 
   31 Jan 2012; Jeff Horelick <jdhore@gentoo.org> package.mask:
   Mask >=dev-libs/libmowgli-2.0.0_alpha1 in preperation for adding it to the tree.
