@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.74 2012/01/14 17:15:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.75 2012/01/31 09:05:30 pacho Exp $
+
+*gtkam-0.1.18 (31 Jan 2012)
+
+  31 Jan 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/gtkam-0.1.18-desktop-validation.patch, +gtkam-0.1.18.ebuild:
+  Version bump, it should also fix location problems like bug #335292 by
+  Alexander E. Patrakov.
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> gtkam-0.1.17.ebuild:
   x86 stable, bug #393007
