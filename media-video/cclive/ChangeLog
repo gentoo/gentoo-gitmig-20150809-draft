@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cclive
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.42 2011/12/05 10:57:02 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.43 2012/01/31 14:43:16 ssuominen Exp $
+
+  31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> cclive-0.7.2.ebuild:
+  Revert back to ~ppc/~ppc64 wrt #387611
 
 *cclive-0.7.8 (05 Dec 2011)
 

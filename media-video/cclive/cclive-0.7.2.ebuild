@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.2.ebuild,v 1.5 2011/08/05 14:21:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.2.ebuild,v 1.6 2012/01/31 14:43:16 ssuominen Exp $
 
 EAPI=2
 CMAKE_MIN_VERSION="2.8.3"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/$(get_version_component_range 1-2)/${P}.tar.
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=media-libs/quvi-0.2.10
