@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.7.ebuild,v 1.5 2012/01/30 17:42:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.7.ebuild,v 1.6 2012/01/31 00:08:44 dilfridge Exp $
 
 EAPI=4
 
@@ -14,6 +14,7 @@ SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/${PV}"
 SRC_FOOT=".tar.bz2"
 
 # languages not available yet: it:ita es:esp pt:ptb sv:sve zh_CN:chs zh_TW:cht fi:suo nb:nor nl:nld ko:kor da:dan de:deu fr:fra ja:jpn
+# asian fonts are handled separately
 LINGUA_LIST="en:enu"
 DEFAULT_URI="${SRC_HEAD}/enu/AdbeRdr${PV}-1_i486linux_enu${SRC_FOOT}"
 for ll in ${LINGUA_LIST} ; do
@@ -24,6 +25,10 @@ for ll in ${LINGUA_LIST} ; do
 	SRC_URI="${SRC_URI}
 		${iuse_l}? ( ${SRC_HEAD}/${src_l}/AdbeRdr${PV}-1_i486linux_${src_l}${SRC_FOOT} )"
 done
+
+# asian fonts from separate package:
+IUSE="${IUSE} linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
+
 SRC_URI="${SRC_URI}
 	${DEFAULT_URI}"
 
@@ -41,7 +46,11 @@ RDEPEND="media-libs/fontconfig
 			!minimal? ( || ( net-libs/xulrunner
 						www-client/firefox
 						www-client/seamonkey ) ) )
-	amd64? ( app-emulation/emul-linux-x86-gtklibs app-emulation/emul-linux-x86-baselibs )"
+	amd64? ( app-emulation/emul-linux-x86-gtklibs app-emulation/emul-linux-x86-baselibs )
+	linguas_zh_CN? ( media-fonts/acroread-asianfonts[linguas_zh_CN] )
+	linguas_ja? ( media-fonts/acroread-asianfonts[linguas_ja] )
+	linguas_zh_TW? ( media-fonts/acroread-asianfonts[linguas_zh_TW] )
+	linguas_ko? ( media-fonts/acroread-asianfonts[linguas_ko] )"
 
 QA_EXECSTACK="opt/Adobe/Reader9/Reader/intellinux/bin/acroread
 	opt/Adobe/Reader9/Reader/intellinux/lib/libauthplay.so.0.0.0
