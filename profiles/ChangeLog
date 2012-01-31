@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6164 2012/01/30 21:55:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6165 2012/01/31 05:07:08 jdhore Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jan 2012; Jeff Horelick <jdhore@gentoo.org> package.mask:
+  Mask >=dev-libs/libmowgli-2.0.0_alpha1 in preperation for adding it to the tree.
 
   30 Jan 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Add =sci-geosciences/mapnik-0.7.1-r2 to boost-1.48 reverse dependencies
