@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13448 2012/01/30 21:55:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13449 2012/01/31 05:05:14 jdhore Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeff Horelick <jdhore@gentoo.org> (31 Jan 2011)
+# Masking alpha release series.
+>=dev-libs/libmowgli-2.0.0_alpha1
 
 # Aaron W. Swenson <titanofold@gentoo.org> (28 Jan 2012)
 # Masked for last rites. Package is no longer maintained upstream and
