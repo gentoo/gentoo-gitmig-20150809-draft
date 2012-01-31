@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgphoto2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.199 2011/11/08 09:32:21 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.200 2012/01/31 08:55:14 pacho Exp $
+
+*libgphoto2-2.4.12 (31 Jan 2012)
+
+  31 Jan 2012; Pacho Ramos <pacho@gentoo.org> +libgphoto2-2.4.12.ebuild,
+  -libgphoto2-2.4.10.ebuild, -libgphoto2-2.4.11.ebuild:
+  Version bump, drop no longer needed libusb fix and automagic patch, empty
+  dependency_libs in .la files (bug #386665 by Samuli Suominen). Drop old.
 
   04 Nov 2011; Naohiro Aota <naota@gentoo.org> libgphoto2-2.4.11-r1.ebuild:
   Add ~x86-fbsd

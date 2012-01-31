@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.10.ebuild,v 1.9 2011/03/27 16:16:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.12.ebuild,v 1.1 2012/01/31 08:55:14 pacho Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
 #	http://sourceforge.net/tracker/index.php?func=detail&aid=1643870&group_id=8874&atid=108874
 
-EAPI="2"
+EAPI="4"
 
 inherit autotools eutils multilib
 
@@ -16,8 +16,8 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-IUSE="doc examples exif nls kernel_linux zeroconf"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="doc examples exif gd jpeg nls kernel_linux zeroconf"
 
 # By default, drivers for all supported cameras will be compiled.
 # If you want to only compile for specific camera(s), set CAMERAS
@@ -40,7 +40,7 @@ IUSE_CAMERAS="
 	panasonic_coolshot panasonic_l859 panasonic_dc1000 panasonic_dc1580 pccam300 pccam600 polaroid_pdc320 polaroid_pdc640 polaroid_pdc700 ptp2
 	ricoh ricoh_g3
 	samsung sierra sipix_blink sipix_blink2 sipix_web2 smal sonix sony_dscf1 sony_dscf55 soundvision spca50x sq905 st2205 stv0674 stv0680 sx330z
-	template toshiba_pdrm11 topfield
+	template toshiba_pdrm11 topfield tp6801
 "
 
 for camera in ${IUSE_CAMERAS}; do
@@ -55,6 +55,8 @@ RDEPEND="virtual/libusb:0
 		net-dns/avahi[mdnsresponder-compat]
 		net-misc/mDNSResponder ) )
 	exif? ( >=media-libs/libexif-0.5.9 )
+	gd? ( media-libs/gd[jpeg=] )
+	jpeg? ( virtual/jpeg )
 	sys-devel/libtool"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -98,13 +100,7 @@ src_prepare() {
 	# Increase max entries from 1024 to 8192 to fix bug #291049
 	epatch "${FILESDIR}/${PN}-2.4.8-increase_max_entries.patch"
 
-	# Fix copied libtool macro dnl problem, bug #336598
-	epatch "${FILESDIR}/${PN}-2.4.9-dnl.patch"
-
 	eautoreconf
-
-	# Fix bug #216206, libusb detection
-	sed -i "s:usb_busses:usb_find_busses:g" libgphoto2_port/configure || die "libusb sed failed"
 }
 
 src_configure() {
@@ -128,6 +124,8 @@ src_configure() {
 		einfo "Enabled camera drivers: all"
 	fi
 
+	local myconf
+	use doc || myconf="ac_cv_path_DOXYGEN=false"
 	econf \
 		--disable-docs \
 		--disable-gp2ddb \
@@ -135,19 +133,22 @@ src_configure() {
 		--without-hal \
 		$(use_enable nls) \
 		$(use_with exif libexif auto) \
+		$(use_with gd) \
+		$(use_with jpeg) \
 		--with-drivers=${cameras} \
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-html-dir=/usr/share/doc/${PF}/html \
 		--with-hotplug-doc-dir=/usr/share/doc/${PF}/hotplug \
 		--with-rpmbuild=$(type -P true) \
-		udevscriptdir=/$(get_libdir)/udev
+		udevscriptdir=/lib/udev \
+		${myconf}
 
 # FIXME: gtk-doc is currently broken
 #		$(use_enable doc docs)
 }
 
 src_compile() {
-	emake || die "make failed"
+	emake
 
 	if use doc; then
 		doxygen doc/Doxyfile || die "Documentation generation failed"
@@ -155,15 +156,18 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install
+
+	# Empty dependency_libs in .la files, bug #386665
+	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
 
 	# Clean up unwanted files
 	rm "${D}/usr/share/doc/${PF}/"{ABOUT-NLS,COPYING} || die "rm failed"
-	dodoc ChangeLog NEWS* README* AUTHORS TESTERS MAINTAINERS HACKING || die "dodoc failed"
+	dodoc ChangeLog NEWS* README* AUTHORS TESTERS MAINTAINERS HACKING
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins examples/README examples/*.c examples/*.h || die "examples installation failed"
+		doins examples/README examples/*.c examples/*.h
 	fi
 
 	# FIXME: fixup autoconf bug
@@ -172,7 +176,7 @@ src_install() {
 	fi
 	# end fixup
 
-	UDEV_RULES="/$(get_libdir)/udev/rules.d/70-libgphoto2.rules"
+	UDEV_RULES="/lib/udev/rules.d/70-libgphoto2.rules"
 	CAM_LIST="/usr/$(get_libdir)/libgphoto2/print-camera-list"
 
 	if [ -x "${D}"${CAM_LIST} ]; then
