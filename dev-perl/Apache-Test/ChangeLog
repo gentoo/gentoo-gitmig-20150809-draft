@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Apache-Test
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.74 2011/09/04 11:20:50 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.75 2012/01/31 18:36:52 tove Exp $
+
+*Apache-Test-1.370.0 (31 Jan 2012)
+
+  31 Jan 2012; Torsten Veller <tove@gentoo.org> +Apache-Test-1.370.0.ebuild:
+  Version bump
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Apache-Test-1.360.ebuild:
   Cleanup
