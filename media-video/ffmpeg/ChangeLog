@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.523 2012/01/28 12:50:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.524 2012/01/31 00:17:33 jdhore Exp $
+
+  31 Jan 2012; Jeff Horelick <jdhore@gentoo.org> ffmpeg-0.10.ebuild,
+  ffmpeg-0.9.1.ebuild:
+  Keyword on ~x86 wrt bug 392269
 
 *ffmpeg-0.10 (28 Jan 2012)
 
