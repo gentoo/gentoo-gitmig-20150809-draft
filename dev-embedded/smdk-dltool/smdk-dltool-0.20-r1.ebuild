@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/smdk-dltool-0.20-r1.ebuild,v 1.1 2012/01/30 23:35:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/smdk-dltool-0.20-r1.ebuild,v 1.2 2012/01/31 16:13:21 vapier Exp $
 
 EAPI="4"
 
@@ -24,7 +24,6 @@ S=${WORKDIR}/releases/smdk-tools-v${PV}/dltool
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-add-S3C64xx-support.patch
 	epatch "${FILESDIR}"/${P}-build.patch
-	cp -a ${S}{,.orig}
 	epatch "${FILESDIR}"/${P}-libusb-1.0.patch
 	tc-export CC PKG_CONFIG
 }
