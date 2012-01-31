@@ -1,6 +1,11 @@
 # ChangeLog for net-print/lprng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.58 2012/01/27 14:33:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.59 2012/01/31 23:24:13 dilfridge Exp $
+
+*lprng-3.8.35 (31 Jan 2012)
+
+  31 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +lprng-3.8.35.ebuild:
+  Version bump
 
   27 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> lprng-3.8.28.ebuild:
   Add blocker on net-print/cups, bug #388515 by Martin von Gagern. Also note
