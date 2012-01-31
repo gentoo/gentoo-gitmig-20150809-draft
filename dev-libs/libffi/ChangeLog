@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.133 2012/01/21 20:31:10 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.134 2012/01/31 14:28:03 ssuominen Exp $
+
+  31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> libffi-3.0.10.ebuild:
+  ppc/ppc64 stable wrt #387063
 
   21 Jan 2012; Tobias Klausmann <klausman@gentoo.org> libffi-3.0.10.ebuild:
   Stable on alpha, bug #387063
