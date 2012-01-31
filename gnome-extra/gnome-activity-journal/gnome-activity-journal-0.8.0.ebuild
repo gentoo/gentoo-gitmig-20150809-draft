@@ -1,14 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/gnome-activity-journal-0.8.0.ebuild,v 1.1 2012/01/31 17:26:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/gnome-activity-journal-0.8.0.ebuild,v 1.2 2012/01/31 18:15:36 jlec Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils versionator
+inherit distutils gnome2-utils versionator
 
 DIR_PV=$(get_version_component_range 1-2)
 
@@ -21,5 +19,21 @@ LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=gnome-extra/zeitgeist-0.8.2"
+RDEPEND="
+	dev-python/pygtk
+	>=gnome-extra/zeitgeist-0.8.2"
 DEPEND="dev-python/python-distutils-extra"
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	python_mod_optimize /usr/share/gnome-activity-journal
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/gnome-activity-journal
+	gnome2_icon_cache_update
+}
