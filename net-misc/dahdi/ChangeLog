@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.33 2012/01/16 12:39:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.34 2012/01/31 18:26:42 ago Exp $
+
+  31 Jan 2012; Agostino Sarubbo <ago@gentoo.org> dahdi-2.5.0.2-r2.ebuild:
+  Stable for AMD64, wrt bug #401077
 
 *dahdi-2.5.0.2-r2 (16 Jan 2012)
 
