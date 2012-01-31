@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.4 2012/01/21 18:28:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.5 2012/01/31 18:01:08 bicatali Exp $
 
 EAPI=4
 inherit eutils base autotools toolchain-funcs
@@ -55,7 +55,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{pkgbuilddir,help}.patch
+	epatch "${FILESDIR}"/${P}-{pkgbuilddir,help,texi}.patch
 	eautoreconf
 }
 

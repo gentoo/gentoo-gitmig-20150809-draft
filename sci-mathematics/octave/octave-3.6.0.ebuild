@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.0.ebuild,v 1.2 2012/01/20 23:53:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.0.ebuild,v 1.3 2012/01/31 18:01:08 bicatali Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.octave.org/"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-IUSE="curl doc fftw +glpk +imagemagick opengl openmp +qhull +qrupdate
+IUSE="curl doc fftw +glpk +imagemagick opengl +qhull +qrupdate
 	readline +sparse static-libs X zlib"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
@@ -52,12 +52,7 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	dev-util/pkgconfig"
 
-PATCHES=( "${FILESDIR}"/${PN}-3.4.3-{pkgbuilddir,help}.patch )
-
-pkg_setup() {
-	use openmp && [[ $(tc-getCC)$ == *gcc* ]] && ! tc-has-openmp && \
-		die "You have openmp enabled but your current gcc does not support it"
-}
+PATCHES=( "${FILESDIR}"/${PN}-3.4.3-{pkgbuilddir,help,texi}.patch )
 
 src_configure() {
 	# hdf5 disabled because not really useful (bug #299876)
@@ -72,12 +67,10 @@ src_configure() {
 
 	myeconfargs+=(
 		--localstatedir="${EPREFIX}/var/state/octave"
-		--disable-rpath
 		--without-hdf5
 		--with-blas="$(pkg-config --libs blas)"
 		--with-lapack="$(pkg-config --libs lapack)"
 		$(use_enable doc docs)
-		$(use_enable openmp)
 		$(use_enable readline)
 		$(use_with curl)
 		$(use_with fftw fftw3)
