@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.3.ebuild,v 1.1 2012/01/30 12:14:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.3.ebuild,v 1.2 2012/01/31 07:55:35 scarabeus Exp $
 
 EAPI=4
 
@@ -71,6 +71,20 @@ REQUIRED_USE="
 	swat? ( server )
 "
 
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		if use winbind &&
+			[[ $(tc-getCC)$ == *gcc* ]] &&
+			[[ $(gcc-major-version)$(gcc-minor-version) -lt 43 ]]
+		then
+			eerror "It is a known issue that ${P} will not build with "
+			eerror "winbind use flag enabled when using gcc < 4.3 ."
+			eerror "Please use at least the latest stable gcc version."
+			die "Using sys-devel/gcc < 4.3 with winbind use flag."
+		fi
+	fi
+}
+
 pkg_setup() {
 	if use server ; then
 		SBINPROGS="${SBINPROGS} bin/smbd bin/nmbd"
@@ -97,16 +111,6 @@ pkg_setup() {
 		SHAREDMODS="${SHAREDMODS}idmap_rid,idmap_hash"
 		use ads && SHAREDMODS="${SHAREDMODS},idmap_ad"
 		use ldap && SHAREDMODS="${SHAREDMODS},idmap_ldap,idmap_adex"
-	fi
-
-	if use winbind &&
-		[[ $(tc-getCC)$ == *gcc* ]] &&
-		[[ $(gcc-major-version)$(gcc-minor-version) -lt 43 ]]
-	then
-		eerror "It is a known issue that ${P} will not build with "
-		eerror "winbind use flag enabled when using gcc < 4.3 ."
-		eerror "Please use at least the latest stable gcc version."
-		die "Using sys-devel/gcc < 4.3 with winbind use flag."
 	fi
 }
 

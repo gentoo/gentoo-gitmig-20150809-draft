@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.496 2012/01/30 13:21:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.497 2012/01/31 07:55:35 scarabeus Exp $
+
+  31 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org> samba-3.6.3.ebuild:
+  Fix the gcc check. Closes bug #392893.
 
 *samba-3.5.12 (30 Jan 2012)
 
