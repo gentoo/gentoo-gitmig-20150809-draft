@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.131 2012/01/19 14:46:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.132 2012/01/31 22:09:31 jer Exp $
+
+  31 Jan 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask dev-libs/libowfat diet so we can re-keyword it.
 
   19 Jan 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=dvb.

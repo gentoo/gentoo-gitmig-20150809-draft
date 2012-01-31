@@ -1,8 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.90 2011/10/31 17:32:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.91 2012/01/31 22:09:31 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (25 Oct 2011)
+# Depends upon an as yet unsupported version of dev-libs/dietlibc
+dev-libs/libowfat diet
 
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2011)
 # Untested, probably never needed (bug #387959)
