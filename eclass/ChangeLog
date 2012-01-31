@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.109 2012/01/31 06:53:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.110 2012/01/31 23:02:00 hwoarang Exp $
+
+  31 Jan 2012; Markos Chandras <hwoarang@gentoo.org> qt4-build.eclass:
+  Initial EAPI4 support in qt4-build eclass
 
   31 Jan 2012; Ulrich Müller <ulm@gentoo.org> eutils.eclass:
   Use ${P}-${PR} instead of ${PF} in epatch_user.
