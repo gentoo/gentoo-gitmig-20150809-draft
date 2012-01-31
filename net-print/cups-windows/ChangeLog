@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-windows
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/ChangeLog,v 1.4 2012/01/28 00:07:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/ChangeLog,v 1.5 2012/01/31 13:29:30 ago Exp $
+
+  31 Jan 2012; Agostino Sarubbo <ago@gentoo.org> cups-windows-6.0-r1.ebuild:
+  Stable for amd64, wrt bug #401113
 
   28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   cups-windows-6.0.ebuild, cups-windows-6.0-r1.ebuild:
