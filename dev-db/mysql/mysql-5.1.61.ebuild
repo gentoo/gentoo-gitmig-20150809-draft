@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.61.ebuild,v 1.1 2012/01/31 09:33:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.61.ebuild,v 1.2 2012/01/31 20:23:03 robbat2 Exp $
 
 EAPI="4"
 
@@ -217,10 +217,14 @@ src_test() {
 			done
 		fi
 
-		# bug 332565
 		if ! use extraengine ; then
+			# bug 332565
 			for t in main.range ; do
 				mysql-v2_disable_test $t "Test $t requires USE=extraengine"
+			done
+			# bug 401673
+			for t in federated.federated_plugin ; do
+				mysql-v2_disable_test $t "Test $t requires USE=extraengine (Need federated engine)"
 			done
 		fi
 
