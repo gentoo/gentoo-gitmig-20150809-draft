@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-2.0.1.ebuild,v 1.10 2012/01/31 23:02:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-2.1.0.ebuild,v 1.1 2012/01/31 23:02:03 jer Exp $
 
-EAPI=3
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Very fast and lightweight still powerful window manager for X"
@@ -11,7 +11,7 @@ SRC_URI="http://joewing.net/programs/jwm/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ppc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="bidi debug jpeg png truetype xinerama xpm"
 
 RDEPEND="xpm? ( x11-libs/libXpm )
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-nostrip.patch
+	epatch "${FILESDIR}"/${PN}-2.0.1-nostrip.patch
 }
 
 src_configure() {
@@ -52,7 +52,7 @@ src_install() {
 	dodir /etc
 	dodir /usr/share/man
 	emake BINDIR="${D}/usr/bin" SYSCONF="${D}/etc" \
-		MANDIR="${D}/usr/share/man" install || die
+		MANDIR="${D}/usr/share/man" install
 	rm "${D}"/etc/system.jwmrc
 
 	echo "#!/bin/sh" > jwm

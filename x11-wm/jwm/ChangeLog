@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/jwm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.21 2010/11/08 18:48:32 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.22 2012/01/31 23:02:05 jer Exp $
+
+*jwm-2.1.0 (31 Jan 2012)
+
+  31 Jan 2012; Jeroen Roovers <jer@gentoo.org> jwm-2.0.1.ebuild,
+  files/jwm-2.0.1-nostrip.patch, +jwm-2.1.0.ebuild:
+  Clean up patch. Version bump.
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> jwm-2.0.1.ebuild:
   media-libs/jpeg -> virtual/jpeg
