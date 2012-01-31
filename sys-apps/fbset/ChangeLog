@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fbset
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/ChangeLog,v 1.15 2011/08/03 10:59:00 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/ChangeLog,v 1.16 2012/01/31 16:12:39 ssuominen Exp $
+
+  31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> fbset-2.1.ebuild:
+  Missing sys-devel/flex DEPEND wrt #376949, Comment #2 by Matt Sealey
 
   31 Jul 2011; Matt Turner <mattst88@gentoo.org> fbset-2.1.ebuild:
   Add sys-devel/bison to DEPEND, bug 376949.
