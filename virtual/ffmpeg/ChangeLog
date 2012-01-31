@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.21 2012/01/26 13:25:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.22 2012/01/31 00:19:36 jdhore Exp $
+
+  31 Jan 2012; Jeff Horelick <jdhore@gentoo.org> ffmpeg-0.9.ebuild:
+  Keyword on ~x86 wrt bug 392269
 
   26 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> ffmpeg-0.9.ebuild:
   Restore ~ppc and ~ppc64 keywording wrt #392269
