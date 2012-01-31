@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/map
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/map/ChangeLog,v 1.5 2012/01/15 10:41:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/map/ChangeLog,v 1.6 2012/01/31 18:20:14 graaff Exp $
+
+  31 Jan 2012; Hans de Graaff <graaff@gentoo.org> map-5.2.0.ebuild:
+  Update license per https://github.com/ahoward/map/issues/10
 
 *map-5.2.0 (15 Jan 2012)
 
