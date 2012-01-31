@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/xdsi-0.92.ebuild,v 1.1 2010/05/17 15:25:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/xdsi-0.92-r1.ebuild,v 1.1 2012/01/31 08:30:01 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils
 
 DESCRIPTION="A crude interface for running the XDS"
-HOMEPAGE="http://strucbio.biologie.uni-konstanz.de/xdswiki/index.php/Xdsi"
+HOMEPAGE="http://strucbio.biologie.uni-konstanz.de/xdswiki/index.php/Xdsi/"
 SRC_URI="ftp://turn5.biologie.uni-konstanz.de/pub/${PN}_${PV}.tar.gz"
 
 LICENSE="as-is"
@@ -16,14 +16,14 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
+	app-text/mupdf
+	dev-lang/tk
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	sci-chemistry/mosflm
-	sci-chemistry/xds-bin[smp]
 	sci-chemistry/pointless
-	sci-visualization/xds-viewer
+	sci-chemistry/xds-bin[smp]
 	sci-visualization/gnuplot
-	media-gfx/imagemagick
-	app-text/xpdf
-	dev-lang/tk"
+	sci-visualization/xds-viewer"
 # Need to clarified for licensing
 # sci-chemistry/xdsstat-bin
 DEPEND=""
@@ -32,15 +32,18 @@ S="${WORKDIR}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-gentoo.patch
-	sed "s:GENTOOTEMPLATE:${EPREFIX}/usr/share/${PN}/templates:g" -i ${PN} \
-	|| die
+	sed \
+		-e "s:GENTOOTEMPLATE:${EPREFIX}/usr/share/${PN}/templates:g" \
+		-e "s:kpdf:mupdf:g" \
+		-e "s:xds-viewer-0.6:xds-viewer:g" \
+		-i ${PN} || die
 }
 
 src_install() {
-	dobin ${PN} || die
+	dobin ${PN}
 	insinto /usr/share/${PN}/templates
-	doins templates/{*.INP,bohr*,fortran,pauli,info.png,*.pck,tablesf_xdsi} || die
-	dodoc templates/*.pdf || die
+	doins templates/{*.INP,bohr*,fortran,pauli,info.png,*.pck,tablesf_xdsi}
+	dodoc templates/*.pdf
 }
 
 pkg_postinst() {

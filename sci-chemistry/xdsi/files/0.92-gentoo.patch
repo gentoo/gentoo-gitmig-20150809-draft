@@ -1,5 +1,8 @@
+ xdsi |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
 diff --git a/xdsi b/xdsi
-index cbedee8..e11abc5 100755
+index cbedee8..1037913 100755
 --- a/xdsi
 +++ b/xdsi
 @@ -20,8 +20,8 @@
@@ -18,7 +21,7 @@ index cbedee8..e11abc5 100755
  
  
 -CheckExecutables "kpdf gnuplot xds_par xdsstat xds-viewer-0.6 convert pointless ipmosflm VIEW"
-+CheckExecutables "xpdf gnuplot xds_par xds-viewer convert pointless ipmosflm"
++CheckExecutables "kpdf gnuplot xds_par xds-viewer convert pointless ipmosflm"
  
  #wm resizable . 0 0
  
