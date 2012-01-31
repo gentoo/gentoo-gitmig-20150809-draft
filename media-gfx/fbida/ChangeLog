@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.87 2011/12/18 18:06:15 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.88 2012/01/31 14:48:26 ssuominen Exp $
+
+  31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> fbida-2.08.ebuild:
+  ppc/ppc64 stable wrt #388287
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> fbida-2.08.ebuild:
   alpha/sh/sparc stable wrt #388287
