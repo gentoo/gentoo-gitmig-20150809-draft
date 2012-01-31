@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.205 2012/01/31 02:13:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.206 2012/01/31 14:41:03 ago Exp $
+
+  31 Jan 2012; Agostino Sarubbo <ago@gentoo.org> openrc-0.9.8.4.ebuild:
+  Stable for amd64, wrt bug #401593
 
   31 Jan 2012; Jeff Horelick <jdhore@gentoo.org> openrc-0.9.8.4.ebuild:
   x86 fast stable wrt bug 401593
