@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/propel-runtime
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/ChangeLog,v 1.11 2011/12/14 22:55:19 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/ChangeLog,v 1.12 2012/01/31 09:11:32 olemarkus Exp $
+
+*propel-runtime-1.6.4 (31 Jan 2012)
+
+  31 Jan 2012; Ole Markus With <olemarkus@gentoo.org>
+  +propel-runtime-1.6.4.ebuild:
+  Version bump and URL fix. Bug 394783
 
   01 Jun 2010; <mabi@gentoo.org> -propel-runtime-1.2.1.ebuild:
   remove old
