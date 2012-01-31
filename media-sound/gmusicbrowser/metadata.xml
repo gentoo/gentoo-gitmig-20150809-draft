@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sound</herd>
-<use>
-    <flag name="webkit">Enables gtk WebKit support</flag>
-</use>
+  <herd>sound</herd>
+  <herd>proxy-maintainers</herd>
+  <maintainer>
+    <email>julian.ospald@googlemail.com</email>
+    <name>Julian Ospald</name>
+    <description>hasufell at Freenode</description>
+  </maintainer>
+  <use>
+    <flag name='webkit'>Enable GTK+ based WebKit support</flag>
+  </use>
 </pkgmetadata>
