@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.95 2011/11/27 18:07:54 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.96 2012/01/31 16:05:08 ssuominen Exp $
+
+  31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> flex-2.5.35_p10.ebuild:
+  ppc64 stable wrt #384221
 
   27 Nov 2011; Mike Frysinger <vapier@gentoo.org> flex-2.5.35_p10.ebuild:
   Add comment about needing bison and not general yacc.
