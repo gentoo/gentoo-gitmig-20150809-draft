@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/kpathsea
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.25 2011/12/11 15:51:11 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.26 2012/01/31 14:40:10 ssuominen Exp $
+
+  31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  kpathsea-6.0.1_p20110705.ebuild:
+  ppc/ppc64 stable wrt #392617
 
   11 Dec 2011; Raúl Porcel <armin76@gentoo.org>
   kpathsea-6.0.1_p20110705.ebuild:
