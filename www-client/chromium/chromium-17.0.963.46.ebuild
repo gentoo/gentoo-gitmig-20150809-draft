@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.46.ebuild,v 1.1 2012/01/31 00:25:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.46.ebuild,v 1.2 2012/01/31 10:11:46 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -187,6 +187,9 @@ src_prepare() {
 
 	# Revert WebKit changeset responsible for Gentoo bug #393471.
 	epatch "${FILESDIR}/${PN}-revert-jpeg-swizzle-r0.patch"
+
+	# Backport upstream fix for Gentoo bug #389479.
+	epatch "${FILESDIR}/${PN}-dev-shm-r0.patch"
 
 	epatch_user
 
@@ -380,8 +383,9 @@ src_test() {
 	# NetUtilTest: bug #361885.
 	# NetUtilTest.GenerateFileName: some locale-related mismatch.
 	# UDP: unstable, active development. We should revisit this later.
+	# CertDatabaseNSSTest.ImportCACertHierarchyTree: works in 18.x, broken here.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:NetUtilTest.GenerateFileName:*UDP*'
+		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:NetUtilTest.GenerateFileName:*UDP*:CertDatabaseNSSTest.ImportCACertHierarchyTree'
 
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/printing_unittests virtualmake
 }
