@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/PEAR-PhpDocumentor-1.4.4.ebuild,v 1.1 2012/01/31 10:36:59 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/PEAR-PhpDocumentor-1.4.4.ebuild,v 1.2 2012/01/31 16:49:03 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -16,7 +16,6 @@ IUSE="minimal"
 RDEPEND="!minimal? ( >=dev-php/PEAR-XML_Beautifier-1.1-r1 )
 		 >=dev-php/smarty-2.6.0
 		 <dev-php/smarty-3"
-
 
 src_prepare()
 {
