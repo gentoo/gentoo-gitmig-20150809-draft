@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.9.1.ebuild,v 1.2 2012/01/26 07:14:50 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.9.1.ebuild,v 1.3 2012/01/31 09:22:41 ali_bush Exp $
 
 EAPI="3"
 JAVA_PKG_IUSE="doc examples source"
@@ -26,7 +26,7 @@ IUSE="binary emacs"
 # one fails with 1.7, two with 1.4 (blackdown)
 #RESTRICT="test"
 
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	java-virtuals/jdk-with-com-sun
 	!binary? (
 		dev-java/ant-contrib:0
