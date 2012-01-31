@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-444.ebuild,v 1.7 2012/01/04 22:34:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-444.ebuild,v 1.8 2012/01/31 16:07:49 ssuominen Exp $
 
 inherit eutils
 
@@ -11,10 +11,10 @@ SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
 
 LICENSE="|| ( GPL-3 BSD-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="unicode"
 
-DEPEND=">=sys-libs/ncurses-5.2"
+DEPEND=">=sys-libs/ncurses-5.7-r7"
 
 src_unpack() {
 	unpack ${P}.tar.gz
