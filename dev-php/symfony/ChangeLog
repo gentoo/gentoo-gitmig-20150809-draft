@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/symfony
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.5 2011/08/16 13:21:09 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.6 2012/01/31 20:39:40 mabi Exp $
+
+*symfony-1.4.16 (31 Jan 2012)
+
+  31 Jan 2012; Matti Bickel <mabi@gentoo.org> +symfony-1.4.16.ebuild,
+  -symfony-1.4.8.ebuild:
+  version bump, remove old
 
   16 Aug 2011; Tony Vroon <chainsaw@gentoo.org> symfony-1.4.11.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo, Ian
