@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.3.1.ebuild,v 1.2 2012/01/24 09:50:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.3.1.ebuild,v 1.3 2012/01/31 06:17:38 polynomial-c Exp $
 
 EAPI=4
 
@@ -26,6 +26,8 @@ DEPEND="
 	dev-lang/perl"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-5.3.1-fix_debug_build.patch
+
 	sed \
 		-e '/^LDFLAGS/s|=|+=|' \
 		-e '/^CC/s|=|?=|' \
