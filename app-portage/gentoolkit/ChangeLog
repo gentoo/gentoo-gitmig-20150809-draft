@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.247 2012/01/31 17:07:59 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.248 2012/01/31 17:19:21 fuzzyray Exp $
+
+  31 Jan 2012; Paul Varner <fuzzyray@gentoo.org> gentoolkit-0.3.0.4-r5.ebuild,
+  gentoolkit-9999.ebuild:
+  Update dev-lang/python dependencies so that emerge will block if an installed
+  slot of python is not built with +xml.
 
   31 Jan 2012; Paul Varner <fuzzyray@gentoo.org> -gentoolkit-0.3.0.4-r1.ebuild,
   -gentoolkit-0.3.0.4-r2.ebuild, -gentoolkit-0.3.0.4-r3.ebuild:
