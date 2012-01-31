@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-005.ebuild,v 1.2 2011/12/14 17:21:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-005.ebuild,v 1.3 2012/01/31 16:17:50 vapier Exp $
 
 EAPI="4"
 
@@ -49,10 +49,11 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
-	dodoc AUTHORS NEWS
+	default
 	newdoc usbhid-dump/NEWS NEWS.usbhid-dump
+
+	# the package (currently) lacks plumbing to use the gzipped file
+	rm -f "${ED}"/usr/share/misc/usb.ids.gz
 
 	use python || rm -f "${ED}"/usr/bin/lsusb.py
 
