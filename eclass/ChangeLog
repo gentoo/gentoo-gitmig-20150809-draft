@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.106 2012/01/30 22:04:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.107 2012/01/31 06:36:19 ulm Exp $
+
+  31 Jan 2012; Ulrich Müller <ulm@gentoo.org> eutils.eclass:
+  Use ${P}-${PR} instead of ${PF} in epatch_user.
 
   30 Jan 2012; Mike Gilbert <floppym@gentoo.org> python.eclass:
   Avoid inheriting eutils from python.eclass.
