@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.4.3.ebuild,v 1.4 2011/12/02 19:22:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.4.3.ebuild,v 1.5 2012/01/31 15:01:49 johu Exp $
 
 EAPI="2"
 
@@ -13,10 +13,9 @@ SRC_URI="mirror://kde/stable/phonon/${PV}/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
-IUSE="alsa aqua debug gstreamer pulseaudio +xcb +xine"
+IUSE="alsa aqua debug +gstreamer pulseaudio"
 
 RDEPEND="
-	!kde-base/phonon-xine
 	!!x11-libs/qt-phonon:4
 	>=x11-libs/qt-test-4.6.0:4[aqua=]
 	>=x11-libs/qt-dbus-4.6.0:4[aqua=]
@@ -30,10 +29,6 @@ RDEPEND="
 		dev-libs/glib:2
 		>=media-sound/pulseaudio-0.9.21[glib]
 	)
-	xine? (
-		>=media-libs/xine-lib-1.1.15-r1[xcb?]
-		xcb? ( x11-libs/libxcb )
-	)
 "
 DEPEND="${RDEPEND}
 	!!x11-libs/qt-phonon:4
@@ -41,12 +36,6 @@ DEPEND="${RDEPEND}
 "
 
 S=${WORKDIR}/${P/.0}
-
-pkg_setup() {
-	if use xine && use aqua; then
-		die "XINE backend needs X11 which is not available for USE=aqua"
-	fi
-}
 
 src_prepare() {
 	# Fix the qt7 backend for MacOS 10.6.
@@ -70,8 +59,8 @@ src_configure() {
 		$(cmake-utils_use_with gstreamer GStreamerPlugins)
 		$(cmake-utils_use_with pulseaudio PulseAudio)
 		$(cmake-utils_use_with pulseaudio GLib2)
-		$(cmake-utils_use_with xine)
-		$(cmake-utils_use_with xcb)
+		-DWITH_Xine=OFF
+		-DWITH_XCB=OFF
 	)
 
 	cmake-utils_src_configure

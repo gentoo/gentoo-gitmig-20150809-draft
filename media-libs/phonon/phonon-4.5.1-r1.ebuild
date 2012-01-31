@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.1-r1.ebuild,v 1.2 2011/12/02 19:22:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.1-r1.ebuild,v 1.3 2012/01/31 15:01:49 johu Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="aqua debug +gstreamer pulseaudio vlc xine"
+IUSE="aqua debug +gstreamer pulseaudio vlc"
 
 COMMON_DEPEND="
 	!!x11-libs/qt-phonon:4
@@ -41,24 +41,23 @@ PDEPEND="
 	aqua? ( media-libs/phonon-qt7 )
 	gstreamer? ( media-libs/phonon-gstreamer )
 	vlc? ( >=media-libs/phonon-vlc-0.3.2 )
-	xine? ( >=media-libs/phonon-xine-0.4.4 )
 "
-RDEPEND="${COMMON_DEPEND}
-	!kde-base/phonon-xine
-"
+RDEPEND="${COMMON_DEPEND}"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/automoc-0.9.87
 	dev-util/pkgconfig
 "
 
-REQUIRED_USE="|| ( aqua gstreamer vlc xine )"
+REQUIRED_USE="|| ( aqua gstreamer vlc )"
 
 PATCHES=( "${FILESDIR}/${P}-qmakeworkaround.patch" )
 
 src_configure() {
 	local mycmakeargs=(
+		-DWITH_QZeitgeist=OFF
 		$(cmake-utils_use_with pulseaudio GLIB2)
 		$(cmake-utils_use_with pulseaudio PulseAudio)
 	)
+
 	cmake-utils_src_configure
 }
