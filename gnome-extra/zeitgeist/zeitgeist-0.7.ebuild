@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.7.ebuild,v 1.2 2011/03/05 01:52:25 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.7.ebuild,v 1.3 2012/01/31 17:00:01 jlec Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="sqlite"
 inherit autotools eutils python
 
 EXT_VER=0.0.6

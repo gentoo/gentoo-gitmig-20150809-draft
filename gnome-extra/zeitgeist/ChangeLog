@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/zeitgeist
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.6 2011/12/21 11:43:41 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.7 2012/01/31 17:00:00 jlec Exp $
+
+*zeitgeist-0.8.2 (31 Jan 2012)
+
+  31 Jan 2012; Justin Lecher <jlec@gentoo.org> zeitgeist-0.7.ebuild,
+  zeitgeist-0.7.1.ebuild, zeitgeist-0.7.1-r1.ebuild, zeitgeist-0.7.1-r2.ebuild,
+  +zeitgeist-0.8.2.ebuild, metadata.xml:
+  Add myself as maintainer, Version Bump #389279, depend on python[sqlite],
+  #393449
 
 *zeitgeist-0.7.1-r2 (21 Dec 2011)
 
