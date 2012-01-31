@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.15.ebuild,v 1.2 2012/01/28 06:14:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.15.ebuild,v 1.3 2012/01/31 16:28:49 vapier Exp $
 
-EAPI=4
-inherit autotools eutils
+EAPI="4"
+
+inherit eutils
 
 DESCRIPTION="A set of tools that use the proc filesystem"
 HOMEPAGE="http://psmisc.sourceforge.net/"
@@ -25,26 +26,13 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-COMM_LEN-to-18.patch
-
-	if ! use nls; then
-		# http://bugs.gentoo.org/193920
-		sed -i \
-			-e '/AM_GNU_GETTEXT/d' -e 's:po/Makefile.in::' \
-			-e '/SUBDIRS/s:po::' -e 's:@LIBINTL@::' \
-			configure.ac {.,src}/Makefile.am || die
-	fi
-
-	eautoreconf
 }
 
 src_configure() {
-	# the nls looks weird, but it's because we actually delete the nls stuff
-	# above when USE=-nls.  this should get cleaned up so we dont have to patch
-	# it out, but until then, let's not confuse users ... #220787
 	econf \
 		$(use_enable selinux) \
 		$(use_enable ipv6) \
-		$(use nls && use_enable nls)
+		$(use_enable nls)
 }
 
 src_compile() {
