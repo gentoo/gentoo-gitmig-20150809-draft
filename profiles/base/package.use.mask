@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.305 2012/01/29 14:52:52 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.306 2012/01/31 15:20:15 johu Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -54,11 +54,6 @@ sys-devel/gcc libssp
 # Samuli Suominen <ssuominen@gentoo.org> (06 Dec 2011)
 # NuppelVideo is available on x86 only
 media-video/transcode nuv pic
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (01 Dec 2011)
-# The phonon xine backend is unmaintained and makes trouble
-media-libs/phonon xine
-kde-base/phonon-kde xine
 
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
 # JavaScriptCore JIT is supported only on amd64/arm/x86, so
