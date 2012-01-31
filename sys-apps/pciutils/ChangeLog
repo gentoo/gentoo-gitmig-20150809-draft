@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.186 2012/01/20 05:13:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.187 2012/01/31 16:05:09 vapier Exp $
+
+*pciutils-3.1.9-r1 (31 Jan 2012)
+
+  31 Jan 2012; Mike Frysinger <vapier@gentoo.org> +pciutils-3.1.9-r1.ebuild,
+  metadata.xml:
+  Split logic between supporting a compressed db (USE=zlib) and using one
+  (USE=compress-db) #360849 #397591 and some others.
 
 *pciutils-3.1.9 (20 Jan 2012)
 

@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <use>
-	<flag name='network-cron'>
-		Monthly cronjob the update-pciids script
-	</flag>
+ <flag name='compress-db'>Compress pci.ids database by default</flag>
+ <flag name='network-cron'>Monthly cronjob the update-pciids script</flag>
+ <flag name='zlib'>Support compressed pci.ids database</flag>
 </use>
 </pkgmetadata>
