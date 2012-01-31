@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/rapidsvn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.4 2011/12/04 16:41:54 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.5 2012/01/31 16:20:08 jlec Exp $
+
+  31 Jan 2012; Justin Lecher <jlec@gentoo.org> -rapidsvn-0.9.8.ebuild,
+  -rapidsvn-0.10.0.ebuild, rapidsvn-0.12.0.ebuild, metadata.xml:
+  Added myself as maintainer, upgraded to EAPI=4 to drop built_with_use
+  (#305365), thanks agostino for the patch #390469; dropped old
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> rapidsvn-0.12.0.ebuild:
   Stable on amd64 wrt bug #377737
