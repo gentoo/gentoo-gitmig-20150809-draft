@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.3 2012/01/28 03:03:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.4 2012/01/31 19:19:35 floppym Exp $
+
+  31 Jan 2012; Mike Gilbert <floppym@gentoo.org> zfs-9999.ebuild:
+  Move udev files from /usr/lib/udev to /lib/udev.
 
   28 Jan 2012; Mike Gilbert <floppym@gentoo.org> zfs-9999.ebuild:
   Migrate to autotools-utils for la file handling and add IUSE=static-libs.

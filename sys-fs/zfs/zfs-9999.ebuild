@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.3 2012/01/28 03:03:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.4 2012/01/31 19:19:35 floppym Exp $
 
 EAPI="4"
 
@@ -36,6 +36,7 @@ src_configure() {
 		--with-config=all
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT}"
+		--with-udevdir=/lib/udev
 	)
 	autotools-utils_src_configure
 }
