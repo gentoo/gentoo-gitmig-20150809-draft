@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.0.4.ebuild,v 1.1 2012/01/06 16:54:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.0.4.ebuild,v 1.2 2012/01/31 02:44:15 floppym Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS="1"
@@ -10,14 +10,15 @@ inherit distutils eutils
 
 DESCRIPTION="Provides an interface to FITS formatted files under python"
 HOMEPAGE="http://www.stsci.edu/resources/software_hardware/pyfits http://pypi.python.org/pypi/pyfits"
-SRC_URI="http://pypi.python.org/packages/source/p/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/p/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="test"
 
-RDEPEND="dev-python/numpy"
+RDEPEND="dev-python/numpy
+	dev-python/setuptools"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose )"
 
