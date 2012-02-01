@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.0_rc2.ebuild,v 1.1 2012/01/25 06:20:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120130.ebuild,v 1.1 2012/02/01 22:46:56 eras Exp $
 
 EAPI=4
 
-inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam
+inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam versionator
 
-MY_PV="${PV/_rc/-RC}"
+MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
 VDA_PV="2.8.5"
 VDA_P="${PN}-vda-v10-${VDA_PV}"
 RC_VER="2.6"
@@ -163,20 +163,6 @@ src_configure() {
 		mylibs="${mylibs} ${CDB_LIBS}"
 	fi
 
-#	mycc="${mycc} -DDEF_DAEMON_DIR=\\\"/usr/$(get_libdir)/postfix\\\""
-#	mycc="${mycc} -DDEF_CONFIG_DIR=\\\"/etc/postfix\\\""
-#	mycc="${mycc} -DDEF_COMMAND_DIR=\\\"/usr/sbin\\\""
-#	mycc="${mycc} -DDEF_SENDMAIL_PATH=\\\"/usr/sbin/sendmail\\\""
-#	mycc="${mycc} -DDEF_NEWALIS_PATH=\\\"/usr/bin/newaliases\\\""
-#	mycc="${mycc} -DDEF_MAILQ_PATH=\\\"/usr/bin/mailq\\\""
-#	mycc="${mycc} -DDEF_MANPAGE_DIR=\\\"/usr/share/man\\\""
-#	mycc="${mycc} -DDEF_README_DIR=\\\"/usr/share/doc/${PF}/readme\\\""
-#	mycc="${mycc} -DDEF_HTML_DIR=\\\"/usr/share/doc/${PF}/html\\\""
-#	mycc="${mycc} -DDEF_QUEUE_DIR=\\\"/var/spool/postfix\\\""
-#	mycc="${mycc} -DDEF_DATA_DIR=\\\"/var/lib/postfix\\\""
-#	mycc="${mycc} -DDEF_MAIL_OWNER=\\\"postfix\\\""
-#	mycc="${mycc} -DDEF_SGID_GROUP=\\\"postdrop\\\""
-
 	# Robin H. Johnson <robbat2@gentoo.org> 17/Nov/2006
 	# Fix because infra boxes hit 2Gb .db files that fail a 32-bit fstat signed check.
 	mycc="${mycc} -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
@@ -310,7 +296,7 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	if [[ ${REPLACING_VERSIONS} < 2.9 ]]; then
+	if [[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 7 ]]; then
 		elog "If you are using old style postfix instances by symlinking"
 		elog "startup scripts in ${ROOT}etc/init.d, please consider"
 		elog "upgrading your config for postmulti support. For more info:"
