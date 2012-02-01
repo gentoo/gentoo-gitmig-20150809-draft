@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.72 2012/02/01 17:17:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.73 2012/02/01 17:27:58 ulm Exp $
+
+  01 Feb 2012; Ulrich Müller <ulm@gentoo.org> -cedet-1.0.ebuild:
+  Remove vulnerable version wrt bug 398227.
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> cedet-1.0.1.ebuild:
   Marking cedet-1.0.1 ppc for bug 398227
