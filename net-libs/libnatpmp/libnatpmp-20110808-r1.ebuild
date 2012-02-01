@@ -1,9 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20110808-r1.ebuild,v 1.1 2011/12/17 13:58:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20110808-r1.ebuild,v 1.2 2012/02/01 11:19:55 ssuominen Exp $
 
 EAPI=4
-
 inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="An alternative protocol to UPnP IGD specification."
@@ -12,11 +11,8 @@ SRC_URI="http://miniupnp.free.fr/files/download.php?file=${P}.tar.gz -> ${P}.tar
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="static-libs"
-
-DEPEND=""
-RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/respect-FLAGS.patch

@@ -1,5 +1,9 @@
 
 
+  01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libnatpmp-20110808-r1.ebuild:
+  Keyword ~ppc/~ppc64 wrt #400929; required by net-p2p/transmission
+
 *libnatpmp-20110808-r1 (17 Dec 2011)
 
   17 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
