@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.448 2012/01/28 20:43:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.449 2012/02/01 22:10:49 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> cups-1.5.0-r4.ebuild:
+  Marking cups-1.5.0-r4 ~ppc for bug 401067
 
 *cups-1.5.0-r4 (28 Jan 2012)
 
