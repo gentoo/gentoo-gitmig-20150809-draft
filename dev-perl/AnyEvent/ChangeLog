@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/AnyEvent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.100 2012/01/28 08:01:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.101 2012/02/01 16:52:03 tove Exp $
+
+*AnyEvent-6.140.0 (01 Feb 2012)
+
+  01 Feb 2012; Torsten Veller <tove@gentoo.org> +AnyEvent-6.140.0.ebuild:
+  Version bump
 
 *AnyEvent-6.130.0 (28 Jan 2012)
 
