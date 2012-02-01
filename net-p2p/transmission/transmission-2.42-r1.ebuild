@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.42-r1.ebuild,v 1.2 2012/01/26 22:01:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.42-r1.ebuild,v 1.3 2012/02/01 11:21:25 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2
@@ -12,7 +12,7 @@ SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz
 
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="ayatana gtk kde nls qt4"
 
 RDEPEND="
