@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/PEAR-Translation2-2.0.4.ebuild,v 1.4 2012/01/29 15:38:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/PEAR-Translation2-2.0.4.ebuild,v 1.5 2012/02/01 11:04:08 ssuominen Exp $
 
 EAPI="2"
 inherit php-pear-r1
@@ -8,7 +8,7 @@ inherit php-pear-r1
 DESCRIPTION="Class for multilingual applications management."
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 IUSE="minimal xml"
 
 RDEPEND="dev-lang/php[nls]
