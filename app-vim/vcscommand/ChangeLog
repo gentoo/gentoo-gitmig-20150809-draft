@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vcscommand
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.26 2011/12/14 09:17:25 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.27 2012/02/01 20:58:30 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> vcscommand-1.99.45.ebuild:
+  Marking vcscommand-1.99.45 ppc for bug 393569
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   vcscommand-1.99.45.ebuild:
