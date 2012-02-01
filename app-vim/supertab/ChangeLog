@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/supertab
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.38 2011/12/14 08:52:53 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.39 2012/02/01 20:48:58 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> supertab-1.6.ebuild:
+  Marking supertab-1.6 ppc for bug 393563
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> supertab-1.6.ebuild:
   x86 stable wrt bug #393563
