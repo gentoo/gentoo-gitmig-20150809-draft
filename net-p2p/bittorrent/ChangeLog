@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.148 2011/12/04 13:59:55 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.149 2012/02/01 17:30:39 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> bittorrent-4.4.0-r2.ebuild:
+  Marking bittorrent-4.4.0-r2 ppc for bug 390591
 
   04 Dec 2011; Raúl Porcel <armin76@gentoo.org> bittorrent-4.4.0-r2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #390591
