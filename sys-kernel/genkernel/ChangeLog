@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.279 2012/01/28 04:10:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.280 2012/02/01 17:41:02 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> genkernel-3.4.20.ebuild:
+  Marking genkernel-3.4.20 ppc for bug 400539
 
   28 Jan 2012; Jeff Horelick <jdhore@gentoo.org> genkernel-3.4.20.ebuild:
   x86 stable per bug 400539

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.20.ebuild,v 1.3 2012/01/28 04:10:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.20.ebuild,v 1.4 2012/02/01 17:41:02 ranger Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -50,7 +50,7 @@ else
 		${COMMON_URI}"
 	# Please don't touch individual KEYWORDS.  Since this is maintained/tested by
 	# Release Engineering, it's easier for us to deal with all arches at once.
-	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
+	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sparc x86"
 fi
 
 DESCRIPTION="Gentoo automatic kernel building scripts"
