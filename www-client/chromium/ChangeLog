@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.550 2012/01/31 10:11:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.551 2012/02/01 20:11:58 phajdan.jr Exp $
+
+*chromium-18.0.1025.1 (01 Feb 2012)
+
+  01 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-gyp-settings-r0.patch,
+  +files/chromium-revert-jpeg-swizzle-r2.patch,
+  +files/chromium-webkit-zlib-r0.patch, -chromium-18.0.1010.0.ebuild,
+  +chromium-18.0.1025.1.ebuild, chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Remove old.
 
   31 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-17.0.963.46.ebuild:
