@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.172 2012/01/28 15:21:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.173 2012/02/01 17:01:09 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> conky-1.8.1-r6.ebuild:
+  Marking conky-1.8.1-r6 ppc for bug 400795
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> conky-1.8.1-r6.ebuild:
   x86 stable wrt bug #400795
