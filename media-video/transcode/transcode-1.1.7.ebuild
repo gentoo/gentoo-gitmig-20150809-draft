@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7.ebuild,v 1.6 2012/02/01 14:33:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7.ebuild,v 1.7 2012/02/01 14:37:06 aballier Exp $
 
 EAPI=4
 inherit eutils libtool multilib
@@ -29,7 +29,7 @@ RDEPEND="
 	mp3? ( media-sound/lame )
 	mpeg? ( media-libs/libmpeg2 )
 	ogg? ( media-libs/libogg )
-	postproc? ( media-video/ffmpeg )
+	postproc? ( >=virtual/ffmpeg-0.6.90 )
 	quicktime? ( >=media-libs/libquicktime-1 )
 	sdl? ( >=media-libs/libsdl-1.2.5[X?] )
 	theora? ( media-libs/libtheora )
