@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.131 2012/01/14 22:43:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.132 2012/02/01 21:15:56 dilfridge Exp $
+
+*ghostscript-gpl-9.04-r6 (01 Feb 2012)
+
+  01 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +ghostscript-gpl-9.04-r6.ebuild:
+  Unbundle media-libs/jbig2dec, bug 206893. Dropped some keywords until
+  jbig2dec is keyworded in bug 401853.
 
   14 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   ghostscript-gpl-9.04-r4.ebuild, ghostscript-gpl-9.04-r5.ebuild:
