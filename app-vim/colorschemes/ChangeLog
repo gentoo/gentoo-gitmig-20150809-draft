@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/colorschemes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.66 2011/12/17 19:03:58 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.67 2012/02/01 20:55:50 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> colorschemes-20111107.ebuild:
+  Marking colorschemes-20111107 ppc for bug 393567
 
   17 Dec 2011; Raúl Porcel <armin76@gentoo.org> colorschemes-20111107.ebuild:
   alpha/ia64/sparc stable wrt #393567
