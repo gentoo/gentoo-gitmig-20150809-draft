@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twill
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.8 2011/12/11 21:49:56 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.9 2012/02/01 22:02:32 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> twill-0.9.ebuild:
+  Marking twill-0.9 ppc for bug 386727
 
   11 Dec 2011; Markus Meier <maekke@gentoo.org> twill-0.9.ebuild:
   x86 stable, bug #386727
