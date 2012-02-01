@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.13.ebuild,v 1.5 2012/01/01 15:21:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.13.ebuild,v 1.6 2012/02/01 13:50:25 aballier Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
-PATCHLEVEL="104"
+PATCHLEVEL="105"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild

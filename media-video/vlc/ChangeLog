@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.775 2012/01/28 15:30:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.776 2012/02/01 13:50:25 aballier Exp $
+
+  01 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-1.1.13.ebuild,
+  vlc-1.1.9999.ebuild:
+  backport upstream patch to fix build with latest zlib, bug #401629
 
   28 Jan 2012; Alexis Ballier <aballier@gentoo.org> -vlc-1.2.0_pre3.ebuild,
   -vlc-1.2.0_pre4.ebuild:
