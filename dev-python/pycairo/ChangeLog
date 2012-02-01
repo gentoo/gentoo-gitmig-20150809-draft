@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.105 2011/12/18 12:59:55 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.106 2012/02/01 22:19:30 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> pycairo-1.10.0-r2.ebuild:
+  Marking pycairo-1.10.0-r2 ppc for bug 393403
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> pycairo-1.10.0-r2.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #393403
