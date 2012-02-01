@@ -1,6 +1,16 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.323 2012/01/20 23:26:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.324 2012/02/01 02:57:25 leio Exp $
+
+  01 Feb 2012; Mart Raudsepp <leio@gentoo.org>
+  -files/evolution-data-server-2.32.1-libgdata07.patch,
+  -evolution-data-server-2.32.2.ebuild,
+  -evolution-data-server-2.32.2-r1.ebuild,
+  -evolution-data-server-3.2.2-r1.ebuild,
+  -files/evolution-data-server-3.2.2-libical-timezones.patch,
+  -files/evolution-data-server-3.2.2-new-folder-imap.patch,
+  -files/evolution-data-server-3.2.2-retrieval_done-crash.patch:
+  Remove old
 
 *evolution-data-server-3.2.3 (20 Jan 2012)
 
