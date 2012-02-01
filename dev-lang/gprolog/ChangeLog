@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.52 2012/01/28 15:34:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.53 2012/02/01 17:44:43 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> gprolog-1.4.0.ebuild:
+  Marking gprolog-1.4.0 ppc for bug 398837
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gprolog-1.4.0.ebuild:
   x86 stable wrt bug #398837
