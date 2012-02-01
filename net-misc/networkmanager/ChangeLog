@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.124 2012/01/05 01:56:32 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.125 2012/02/01 08:00:19 tetromino Exp $
+
+  01 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -networkmanager-0.9.1.95.ebuild,
+  -files/networkmanager-0.9.1.95-dns-routing-unmanaged-devices.patch,
+  -files/networkmanager-0.9.1.95-glib-2.31.patch,
+  -files/networkmanager-0.9.1.95-keyfile-scheme.patch:
+  Drop old and undo accidental broken CVS commit.
 
 *networkmanager-0.9.2.0-r2 (05 Jan 2012)
 
