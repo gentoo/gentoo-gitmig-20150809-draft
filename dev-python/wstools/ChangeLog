@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wstools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.6 2011/09/20 23:38:05 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.7 2012/02/01 20:59:08 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> wstools-0.3.ebuild:
+  Marking wstools-0.3 ~ppc for bug 381749
 
   20 Sep 2011; Mike Gilbert <floppym@gentoo.org> wstools-0.3.ebuild:
   Require Python[xml]. Don't install .cvsignore files. Patch by Arfrever.
