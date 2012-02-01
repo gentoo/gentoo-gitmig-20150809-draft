@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.425 2012/01/28 18:30:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.426 2012/02/01 14:20:26 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> openssl-0.9.8t.ebuild,
+  openssl-1.0.0g.ebuild:
+  Marking 0.9.8t and 1.0.0g for sec bug 399365
 
   28 Jan 2012; Raúl Porcel <armin76@gentoo.org> openssl-1.0.0g.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #399365
