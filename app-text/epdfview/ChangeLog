@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.49 2012/02/01 02:16:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.50 2012/02/01 17:03:03 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> epdfview-0.1.8.ebuild:
+  Marking epdfview-0.1.8 ppc for bug 400807
 
   01 Feb 2012; Jeroen Roovers <jer@gentoo.org> epdfview-0.1.8.ebuild:
   Stable for HPPA (bug #400807).
