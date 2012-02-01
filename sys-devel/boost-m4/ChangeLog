@@ -1,0 +1,11 @@
+# ChangeLog for sys-devel/boost-m4
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.1 2012/02/01 02:21:01 binki Exp $
+
+*boost-m4-0.2 (01 Feb 2012)
+
+  01 Feb 2012; Nathan Phillip Brink <binki@gentoo.org> +boost-m4-0.2.ebuild,
+  +metadata.xml:
+  Add boost-m4-0.2 for bug #352618, an alternate set of boost-detecting m4
+  macros.
+
