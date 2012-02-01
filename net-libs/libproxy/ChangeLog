@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.76 2012/01/30 06:47:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.77 2012/02/01 02:00:47 ssuominen Exp $
+
+  01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> libproxy-0.4.7.ebuild:
+  ppc64 stable wrt #394363
 
   30 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> libproxy-0.4.7.ebuild:
   Add note about bug 373397 so it doesn't get forgotten
