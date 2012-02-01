@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.8.ebuild,v 1.5 2012/01/28 15:33:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.8.ebuild,v 1.6 2012/02/01 02:16:07 jer Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -11,7 +11,7 @@ SRC_URI="http://trac.emma-soft.com/epdfview/chrome/site/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="cups nls test"
 
 RDEPEND=">=app-text/poppler-0.12.3-r3[cairo]
