@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libatomic_ops
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.26 2011/12/09 18:36:31 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.27 2012/02/01 20:53:48 vapier Exp $
+
+*libatomic_ops-7.2_alpha4 (01 Feb 2012)
+
+  01 Feb 2012; Mike Frysinger <vapier@gentoo.org>
+  +libatomic_ops-7.2_alpha4.ebuild, +files/libatomic_ops-7.2_alpha4-x32.patch:
+  Version bump #353240 by Kevin Bowling.
 
   09 Dec 2011; Mike Frysinger <vapier@gentoo.org> libatomic_ops-1.2-r1.ebuild,
   +files/libatomic_ops-1.2-x32.patch:
