@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.97 2012/02/01 01:56:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.98 2012/02/01 01:58:04 ssuominen Exp $
+
+  01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -dbus-glib-0.92.ebuild,
+  -files/dbus-glib-0.92-userpriv-fix.patch:
+  old
 
   01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> dbus-glib-0.98.ebuild:
   ppc/ppc64 stable wrt #387257
