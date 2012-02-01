@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gtk-syntax
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.46 2011/12/04 18:27:15 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.47 2012/02/01 20:46:04 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> gtk-syntax-20110214-r1.ebuild:
+  Marking gtk-syntax-20110214-r1 ppc for bug 391473
 
   04 Dec 2011; Raúl Porcel <armin76@gentoo.org> gtk-syntax-20110214-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #391473
