@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-File_Passwd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Passwd/ChangeLog,v 1.19 2012/01/18 18:57:16 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Passwd/ChangeLog,v 1.20 2012/02/01 10:51:43 ssuominen Exp $
+
+  01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  PEAR-File_Passwd-1.1.7-r1.ebuild:
+  ppc/ppc64 stable wrt #399305
 
   18 Jan 2012; Matti Bickel <mabi@gentoo.org> -PEAR-File_Passwd-1.1.7.ebuild:
   remove old
