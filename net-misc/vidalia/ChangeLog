@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vidalia
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.26 2011/11/24 19:41:43 blueness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.27 2012/02/01 17:05:08 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> vidalia-0.2.12.ebuild:
+  Marking vidalia-0.2.12 ppc for bug 381243
 
 *vidalia-0.3.0_alpha (24 Nov 2011)
 
