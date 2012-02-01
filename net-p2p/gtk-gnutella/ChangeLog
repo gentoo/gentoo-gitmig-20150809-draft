@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.128 2012/01/31 13:28:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.129 2012/02/01 18:46:50 graaff Exp $
+
+  01 Feb 2012; Hans de Graaff <graaff@gentoo.org> gtk-gnutella-0.98.2.ebuild:
+  Add missing runtime dependencies, reported in bug 401369.
 
   31 Jan 2012; Agostino Sarubbo <ago@gentoo.org> gtk-gnutella-0.98.2.ebuild:
   Stable for amd64, wrt bug #401369
