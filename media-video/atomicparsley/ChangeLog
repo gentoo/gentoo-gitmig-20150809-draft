@@ -1,6 +1,10 @@
 # ChangeLog for media-video/atomicparsley
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/atomicparsley/ChangeLog,v 1.16 2009/07/21 22:22:32 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/atomicparsley/ChangeLog,v 1.17 2012/02/01 09:21:40 ssuominen Exp $
+
+  01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  atomicparsley-0.9.0.ebuild:
+  ppc stable wrt #394017
 
   21 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   atomicparsley-0.9.0.ebuild, +files/atomicparsley-0.9.0-environment.patch:
