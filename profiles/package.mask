@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13450 2012/01/31 15:22:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13451 2012/02/01 08:11:13 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sammuli Suominen <ssuominen@gentoo.org> (01 Feb 2012)
+# Masked for removal in 30 days for having unallowed depend for
+# unslotted <net-analyzer/rrdtool-1.2 in the same stabilization
+# level
+net-analyzer/FlowScan
+dev-perl/CUFlow
+dev-perl/JKFlow
 
 # Jeff Horelick <jdhore@gentoo.org> (31 Jan 2011)
 # Masking alpha release series.
