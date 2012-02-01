@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.44 2011/10/13 21:48:18 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.45 2012/02/01 22:10:11 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> mako-0.4.2.ebuild:
+  Marking mako-0.4.2 ppc for bug 386799
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mako-0.4.2.ebuild:
   x86 stable wrt bug #386799
