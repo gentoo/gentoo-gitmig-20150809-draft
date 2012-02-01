@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.37.ebuild,v 1.2 2012/01/08 14:27:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.37.ebuild,v 1.3 2012/02/01 02:07:58 jer Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic pam
@@ -13,6 +13,10 @@ LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="crypt debug gtk imagemagick motif nas opengl pam truetype xinerama xlockrc"
+
+REQUIRED_USE="
+	|| ( crypt pam )
+"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext

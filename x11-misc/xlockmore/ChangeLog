@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.100 2012/01/31 22:47:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.101 2012/02/01 02:07:58 jer Exp $
+
+  01 Feb 2012; Jeroen Roovers <jer@gentoo.org> xlockmore-5.37.ebuild,
+  xlockmore-5.38.ebuild:
+  Make USE=pam or USE=crypt required by Maurizio Camisaschi (bug #401721).
 
 *xlockmore-5.38 (31 Jan 2012)
 
