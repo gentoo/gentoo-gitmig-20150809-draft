@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.564 2012/01/01 20:25:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.565 2012/02/01 21:28:27 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> python-2.7.2-r3.ebuild,
+  python-3.1.4-r3.ebuild:
+  Marking -2.7.2-r3 and -3.1.4-r3 for bug 387849
 
   01 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2011:
   Split ChangeLog. For older entries, please see ChangeLog-2011.
