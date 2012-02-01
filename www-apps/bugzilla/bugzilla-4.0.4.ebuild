@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.2.ebuild,v 1.1 2011/08/15 16:49:41 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.4.ebuild,v 1.1 2012/02/01 18:30:55 idl0r Exp $
 
 EAPI="3"
 

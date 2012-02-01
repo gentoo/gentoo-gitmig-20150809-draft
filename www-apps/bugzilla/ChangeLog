@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/bugzilla
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.205 2011/08/27 20:13:12 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.206 2012/02/01 18:30:55 idl0r Exp $
+
+*bugzilla-4.0.4 (01 Feb 2012)
+*bugzilla-3.6.8 (01 Feb 2012)
+
+  01 Feb 2012; Christian Ruppert <idl0r@gentoo.org> -bugzilla-3.4.12.ebuild,
+  -bugzilla-3.6.4.ebuild, +bugzilla-3.6.8.ebuild, -bugzilla-4.0.2.ebuild,
+  +bugzilla-4.0.4.ebuild, -files/3.4/bugzilla.cron.daily,
+  -files/3.4/bugzilla.cron.tab, -files/3.4/postinstall-en.txt,
+  -files/3.4/reconfig:
+  Version bump, CVE-2012-0440, bug 401809.
 
   27 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bugzilla-3.6.6.ebuild:
   x86 stable wrt security bug #380255

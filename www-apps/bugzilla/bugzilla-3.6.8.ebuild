@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.6.4.ebuild,v 1.8 2011/07/23 20:12:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.6.8.ebuild,v 1.1 2012/02/01 18:30:55 idl0r Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit webapp depend.apache versionator eutils
 
@@ -13,8 +13,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
 HOMEPAGE="http://www.bugzilla.org"
 
 LICENSE="MPL-1.1"
-# KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="modperl extras graphviz mysql postgres"
 
@@ -68,6 +67,7 @@ RDEPEND="
 		|| ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] )
 		dev-perl/TheSchwartz
 		dev-perl/Daemon-Generic
+		dev-perl/Math-Random-Secure
 	)
 "
 # from extras we miss:
@@ -90,7 +90,7 @@ src_install () {
 	webapp_src_preinst
 
 	insinto "${MY_HTDOCSDIR}"
-	doins -r .
+	doins -r . || die
 	for f in bugzilla.cron.daily bugzilla.cron.tab; do
 		doins "${FILESDIR}"/${MY_PB}/${f} || die
 	done
