@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/awstats
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.27 2011/11/15 15:03:00 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.28 2012/02/01 17:06:00 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> awstats-7.1-r2.ebuild:
+  Marking awstats-7.1-r2 ppc for bug 384237
 
   15 Nov 2011; Jeroen Roovers <jer@gentoo.org> awstats-7.1-r2.ebuild:
   Stable for HPPA (bug #384237).
