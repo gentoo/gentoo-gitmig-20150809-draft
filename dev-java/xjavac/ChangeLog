@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.37 2012/01/02 09:02:00 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.38 2012/02/01 14:17:54 ranger Exp $
+
+  31 Jan 2012; Brent Baude <ranger@gentoo.org> xjavac-20110814.ebuild:
+  Marking xjavac-20110814 ppc for bug 384611
 
   02 Jan 2012; Ralph Sennhauser <sera@gentoo.org> xjavac-20041208-r5.ebuild,
   xjavac-20110814.ebuild:
