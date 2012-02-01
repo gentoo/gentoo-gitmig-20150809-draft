@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.201 2012/01/29 12:22:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.202 2012/02/01 17:22:37 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> curl-7.24.0.ebuild:
+  Marking curl-7.24.0 ppc for bug 400799
 
   29 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> curl-7.24.0.ebuild:
   x86 stable wrt bug #400799
