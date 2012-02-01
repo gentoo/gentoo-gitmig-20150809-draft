@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.8.2.ebuild,v 1.2 2012/01/29 18:30:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.8.2.ebuild,v 1.3 2012/02/01 10:01:09 jlec Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils gnome2-utils
+inherit gnome2 autotools-utils gnome2-utils
 
 DESCRIPTION="A program launcher in the style of GNOME Do"
 HOMEPAGE="http://launchpad.net/synapse-project/"
@@ -66,10 +66,14 @@ src_configure() {
 	autotools-utils_src_configure
 }
 
+pkg_preinst() {
+	gnome2_pkg_preinst
+}
+
 pkg_postinst() {
-	gnome2_icon_cache_update
+	gnome2_pkg_postinst
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	gnome2_pkg_postrm
 }
