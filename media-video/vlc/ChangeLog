@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.777 2012/02/01 19:50:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.778 2012/02/01 19:52:08 aballier Exp $
+
+  01 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  bump fluidsynth dep
 
   01 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   portaudio has been removed

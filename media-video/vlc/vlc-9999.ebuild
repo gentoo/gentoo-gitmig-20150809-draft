@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.159 2012/02/01 19:50:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.160 2012/02/01 19:52:08 aballier Exp $
 
 EAPI="4"
 
@@ -79,7 +79,7 @@ RDEPEND="
 		egl? ( virtual/opengl )
 		elibc_glibc? ( >=sys-libs/glibc-2.8 )
 		flac? ( media-libs/libogg >=media-libs/flac-1.1.2 )
-		fluidsynth? ( media-sound/fluidsynth )
+		fluidsynth? ( >=media-sound/fluidsynth-1.1.0 )
 		fontconfig? ( media-libs/fontconfig )
 		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		gme? ( media-libs/game-music-emu )
