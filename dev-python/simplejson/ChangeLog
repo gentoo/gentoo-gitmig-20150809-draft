@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplejson
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.52 2011/12/26 09:59:31 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.53 2012/02/01 22:06:55 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> simplejson-2.2.1.ebuild:
+  Marking simplejson-2.2.1 ppc for bug 386791
 
   26 Dec 2011; Dirkjan Ochtman <djc@gentoo.org> -simplejson-2.2.0.ebuild:
   Remove old version.
