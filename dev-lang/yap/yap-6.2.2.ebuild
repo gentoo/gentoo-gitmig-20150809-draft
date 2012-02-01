@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.2.ebuild,v 1.7 2012/01/28 15:14:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.2.ebuild,v 1.8 2012/02/01 17:47:50 ranger Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.dcc.fc.up.pt/~vsc/Yap/${P}.tar.gz
 
 LICENSE="Artistic LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug doc examples gmp java mpi mysql odbc readline static threads"
 
 RDEPEND="sys-libs/zlib
