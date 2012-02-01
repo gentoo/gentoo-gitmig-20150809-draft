@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/epplets
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.17 2011/12/14 08:59:30 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.18 2012/02/01 21:41:27 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> epplets-0.12.ebuild:
+  Marking epplets-0.12 ppc for bug 393909
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> epplets-0.12.ebuild:
   x86 stable wrt bug #393909
