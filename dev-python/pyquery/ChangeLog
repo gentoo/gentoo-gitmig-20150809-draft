@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.6 2012/01/19 14:02:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.7 2012/02/01 21:03:52 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> pyquery-1.0.ebuild:
+  Marking pyquery-1.0 ~ppc for bug 383195
 
   19 Jan 2012; Tobias Klausmann <klausman@gentoo.org> pyquery-1.0.ebuild:
   Keyworded on alpha, bug #383195
