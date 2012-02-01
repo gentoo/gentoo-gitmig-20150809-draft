@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/togl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.22 2012/01/28 15:29:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.23 2012/02/01 17:40:56 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> togl-2.0-r2.ebuild:
+  Marking togl-2.0-r2 ppc for bug 400345
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> togl-2.0-r2.ebuild:
   x86 stable wrt bug #400345
