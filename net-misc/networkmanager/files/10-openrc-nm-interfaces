@@ -1,0 +1,25 @@
+#!/bin/sh
+# Copyright (c) 2012 Alexandre Rostovtsev
+# Released under the 2-clause BSD license.
+
+# Ensures that the nm-interfaces OpenRC service is marked as started if
+# NetworkManager had been started via openrc and brought up some interfaces.
+
+# Exit if no valid interface name given
+if [ -z "$1" -o "x$1" = "xnone" ]; then
+    exit 1
+fi
+
+# Exit if the NetworkManager OpenRC service is not running
+"@EPREFIX@/etc/init.d/NetworkManager" status &> /dev/null || exit 1
+
+case "$2" in
+    up)
+        exec "@EPREFIX@/etc/init.d/nm-interfaces" mark-started
+        ;;
+    down)
+        exec "@EPREFIX/etc/init.d/nm-interfaces" stop
+        ;;
+esac
+
+exit 1

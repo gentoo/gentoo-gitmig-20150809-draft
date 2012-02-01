@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.1.95.ebuild,v 1.1 2011/11/07 18:27:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.2.0-r3.ebuild,v 1.1 2012/02/01 07:46:37 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -95,12 +95,14 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9_rc3-fix-tests.patch"
 	# Build against libnl:1.1 for net-wireless/wimax-1.5.2 compatibility
 	epatch "${FILESDIR}/${PN}-0.9.1.95-force-libnl1.1.patch"
-	# Fix building with glib-2.31, will be in next release
-	epatch "${FILESDIR}/${P}-glib-2.31.patch"
-	# Typo fix, will be in next release
-	epatch "${FILESDIR}/${P}-keyfile-scheme.patch"
-	# Do not blow away configs for devices not managed by nm; in next release
-	epatch "${FILESDIR}/${P}-dns-routing-unmanaged-devices.patch"
+	# Migrate to openrc style
+	epatch "${FILESDIR}/${P}-ifnet-openrc-style.patch"
+	# Ignore per-user connections
+	epatch "${FILESDIR}/${P}-ifnet-ignore-user-connections.patch"
+	# Remove system prefix
+	epatch "${FILESDIR}/${P}-ifnet-remove-system-prefix.patch"
+	# Correctly deal with single quotes in /etc/conf.d/hostname
+	epatch "${FILESDIR}/${P}-ifnet-unquote-hostname.patch"
 
 	eautoreconf
 	default
@@ -135,11 +137,14 @@ src_configure() {
 
 src_install() {
 	default
-	# Need to keep the /var/run/NetworkManager directory
-	keepdir /var/run/NetworkManager
 
 	# Need to keep the /etc/NetworkManager/dispatched.d for dispatcher scripts
 	keepdir /etc/NetworkManager/dispatcher.d
+
+	# Service that provides openrc net dependency only when nm is connected
+	doinitd "${FILESDIR}/nm-interfaces"
+	insinto /etc/NetworkManager/dispatcher.d
+	doins "${FILESDIR}/10-openrc-nm-interfaces"
 
 	# Add keyfile plugin support
 	keepdir /etc/NetworkManager/system-connections
