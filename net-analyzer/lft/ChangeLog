@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.35 2012/02/01 16:59:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.36 2012/02/01 17:37:40 jer Exp $
+
+  01 Feb 2012; Jeroen Roovers <jer@gentoo.org>
+  -files/lft-2.5-installpath.patch, -lft-3.0-r1.ebuild, lft-3.33.ebuild:
+  Remove testing cruft. Remove old.
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> lft-3.33.ebuild:
   Marking lft-3.33 ppc for bug 358787

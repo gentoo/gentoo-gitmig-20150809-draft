@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.33.ebuild,v 1.5 2012/02/01 16:59:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.33.ebuild,v 1.6 2012/02/01 17:37:40 jer Exp $
 
 EAPI="4"
 
@@ -19,6 +19,5 @@ RDEPEND="${DEPEND}"
 DOCS=( CHANGELOG README TODO )
 
 src_prepare() {
-cp -av Makefile.in{,.org}
 	sed -i Makefile.in -e '/[Ss]trip/d' || die
 }
