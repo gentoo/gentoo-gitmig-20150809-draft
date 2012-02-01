@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/MogileFS-Client-Async
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Client-Async/ChangeLog,v 1.1 2012/02/01 19:17:47 robbat2 Exp $
+
+*MogileFS-Client-Async-0.015.0 (01 Feb 2012)
+
+  01 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +MogileFS-Client-Async-0.015.0.ebuild, +metadata.xml:
+  Initial commit, ebuild by Robin H Johnson <robbat2@gentoo.org>. Testsuite
+  disabled as it needs a local MogileFS deployment.
+
