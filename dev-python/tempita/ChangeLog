@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tempita
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.6 2012/01/19 19:52:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.7 2012/02/01 20:48:35 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> tempita-0.5.1.ebuild:
+  Marking tempita-0.5.1 ~ppc for bug 381709
 
   19 Jan 2012; Tobias Klausmann <klausman@gentoo.org> tempita-0.5.1.ebuild:
   Keyworded on alpha, bug #381709
