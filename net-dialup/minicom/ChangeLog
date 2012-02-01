@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.88 2011/12/28 22:45:32 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.89 2012/02/01 22:31:06 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> minicom-2.5.ebuild:
+  Marking minicom-2.5 ppc for bug 389063
 
 *minicom-2.6 (28 Dec 2011)
 
