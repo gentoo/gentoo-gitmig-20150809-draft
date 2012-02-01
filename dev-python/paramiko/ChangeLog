@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.66 2011/11/11 19:22:52 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.67 2012/02/01 22:05:29 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> paramiko-1.7.7.1.ebuild:
+  Marking paramiko-1.7.7.1 ppc for bug 386789
 
   11 Nov 2011; Markos Chandras <hwoarang@gentoo.org> paramiko-1.7.7.1.ebuild:
   Don't inherit unused eclass. Set PYTHONPATH in src_test(). Patch by Arfrever
