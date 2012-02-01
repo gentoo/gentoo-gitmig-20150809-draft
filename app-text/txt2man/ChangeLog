@@ -1,6 +1,9 @@
 # ChangeLog for app-text/txt2man
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.23 2011/12/14 08:44:19 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.24 2012/02/01 22:27:05 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> txt2man-1.5.6.ebuild:
+  Marking txt2man-1.5.6 ppc for bug 393357
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> txt2man-1.5.6.ebuild:
   x86 stable wrt bug #393357
