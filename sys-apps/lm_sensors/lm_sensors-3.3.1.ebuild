@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.3.1.ebuild,v 1.5 2012/01/21 16:35:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.3.1.ebuild,v 1.6 2012/02/01 00:03:06 ssuominen Exp $
 
 EAPI=3
 inherit eutils linux-info toolchain-funcs multilib
@@ -15,11 +15,14 @@ KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc x86 ~x86-linux"
 IUSE="sensord static-libs"
 
 RDEPEND="dev-lang/perl
-	sensord? ( virtual/logger )"
-DEPEND="sys-apps/sed
+	sensord? (
+		net-analyzer/rrdtool
+		virtual/logger
+		)"
+DEPEND="${RDEPEND}
+	sys-apps/sed
 	sys-devel/bison
-	sys-devel/flex
-	sensord? ( net-analyzer/rrdtool )"
+	sys-devel/flex"
 
 CONFIG_CHECK="~HWMON ~I2C_CHARDEV ~I2C"
 WARNING_HWMON="${PN} requires CONFIG_HWMON to be enabled for use."
