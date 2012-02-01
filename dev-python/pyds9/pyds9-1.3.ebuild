@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.3.ebuild,v 1.1 2011/10/09 18:34:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.3.ebuild,v 1.2 2012/02/01 02:24:37 floppym Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit distutils multilib
 
 DESCRIPTION="Python interface to XPA to communicate with DS9"
 HOMEPAGE="http://hea-www.harvard.edu/saord/ds9/pyds9/"

@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.72-r1.ebuild,v 1.1 2012/01/28 19:58:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.72-r1.ebuild,v 1.2 2012/02/01 02:27:12 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
-inherit flag-o-matic python versionator
+inherit flag-o-matic multilib python versionator
 
 MY_P="${PN}-$(delete_version_separator 2)_release"
 
