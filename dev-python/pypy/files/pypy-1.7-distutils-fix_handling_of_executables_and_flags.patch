@@ -1,6 +1,6 @@
 --- lib-python/modified-2.7/distutils/ccompiler.py
 +++ lib-python/modified-2.7/distutils/ccompiler.py
-@@ -27,10 +27,12 @@
+@@ -27,10 +27,16 @@
      varies across Unices and is stored in Python's Makefile.
      """
      if compiler.compiler_type == "unix":
@@ -8,16 +8,20 @@
 -            _sysconfig.get_config_vars('CC', 'CXX', 'OPT', 'CFLAGS',
 -                                       'CCSHARED', 'LDSHARED', 'SO', 'AR',
 -                                       'ARFLAGS')
-+        (cc, cxx, ccshared, ldshared, ldcxxshared, so_ext, ar, ar_flags) = \
-+            _sysconfig.get_config_vars('CC', 'CXX', 'CCSHARED', 'LDSHARED',
-+                                       'LDCXXSHARED', 'SO', 'AR', 'ARFLAGS')
++        cc = ' '.join(compiler.compiler)
++        cxx = ' '.join(compiler.compiler_cxx)
++        ldshared = ' '.join(compiler.linker_so)
++        ldcxxshared = ' '.join(compiler.linker_so_cxx)
++        ar = compiler.archiver[0]
 +
 +        cflags = ''
 +        cxxflags = ''
++        ccshared = '-fPIC'
++        ar_flags = compiler.archiver[1]
  
          if 'CC' in os.environ:
              cc = os.environ['CC']
-@@ -38,19 +40,27 @@
+@@ -38,19 +44,27 @@
              cxx = os.environ['CXX']
          if 'LDSHARED' in os.environ:
              ldshared = os.environ['LDSHARED']
@@ -46,7 +50,7 @@
          if 'AR' in os.environ:
              ar = os.environ['AR']
          if 'ARFLAGS' in os.environ:
-@@ -59,13 +69,17 @@
+@@ -59,17 +73,19 @@
              archiver = ar + ' ' + ar_flags
  
          cc_cmd = cc + ' ' + cflags
@@ -64,7 +68,11 @@
 +            linker_exe_cxx=cxx,
              archiver=archiver)
  
-         compiler.shared_lib_extension = so_ext
+-        compiler.shared_lib_extension = so_ext
+-
+ class CCompiler:
+     """Abstract base class to define the interface that must be implemented
+     by real compiler classes.  Also has some utility methods used by
 --- lib-python/modified-2.7/distutils/cygwinccompiler.py
 +++ lib-python/modified-2.7/distutils/cygwinccompiler.py
 @@ -135,9 +135,13 @@
