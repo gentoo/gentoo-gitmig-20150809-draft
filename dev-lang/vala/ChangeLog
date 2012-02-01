@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.84 2012/01/18 20:16:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.85 2012/02/01 02:55:39 tetromino Exp $
+
+*vala-0.14.2 (01 Feb 2012)
+
+  01 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +vala-0.14.2.ebuild:
+  Bump. Lots of updates for bindings and assorted bugfixes.
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> vala-0.14.1.ebuild:
   arm stable, bug #393007
