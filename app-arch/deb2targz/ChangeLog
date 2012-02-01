@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/deb2targz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.17 2012/01/31 18:13:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.18 2012/02/01 17:10:05 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> deb2targz-1-r2.ebuild:
+  Marking deb2targz-1-r2 ppc for bug 399909
 
   31 Jan 2012; Jeroen Roovers <jer@gentoo.org> deb2targz-1-r2.ebuild:
   Stable for HPPA (bug #399909).
