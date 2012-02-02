@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/freetts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.32 2011/03/23 17:15:06 cbrannon Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.33 2012/02/02 17:00:54 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> freetts-1.2.1-r2.ebuild:
+  Stable for amd64, wrt bug #396743
 
 *freetts-1.2.1-r2 (23 Mar 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2.1-r2.ebuild,v 1.1 2011/03/23 17:15:06 cbrannon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2.1-r2.ebuild,v 1.2 2012/02/02 17:00:54 ago Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -17,7 +17,7 @@ DEPEND=">=virtual/jdk-1.4
 
 LICENSE="jsapi? ( sun-bcla-jsapi ) freetts"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc jsapi mbrola"
 
 src_unpack() {
