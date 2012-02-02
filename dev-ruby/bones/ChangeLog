@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bones
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.15 2011/06/02 07:07:30 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.16 2012/02/02 22:01:50 tomka Exp $
+
+  02 Feb 2012; Thomas Kahle <tomka@gentoo.org> bones-3.7.0.ebuild:
+  ~x86 per bug 325471
 
 *bones-3.7.0 (02 Jun 2011)
 
