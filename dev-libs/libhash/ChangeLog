@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhash
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.7 2010/08/16 00:52:43 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.8 2012/02/02 18:57:28 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libhash-1.0.3-r1.ebuild:
+  Stable for amd64, wrt bug #396895
 
 *libhash-1.0.3-r1 (16 Aug 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/libhash-1.0.3-r1.ebuild,v 1.1 2010/08/16 00:52:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/libhash-1.0.3-r1.ebuild,v 1.2 2012/02/02 18:57:28 ago Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ugh.net.au/pub/unix/libhash/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ia64 ~ppc ~x86"
 IUSE="doc"
 
 DEPEND=""
