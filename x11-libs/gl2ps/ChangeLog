@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gl2ps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/ChangeLog,v 1.16 2012/01/11 11:38:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/ChangeLog,v 1.17 2012/02/02 07:41:27 jlec Exp $
+
+  02 Feb 2012; Justin Lecher <jlec@gentoo.org> gl2ps-1.3.6.ebuild,
+  metadata.xml:
+  Added missing DEP on dev-texlive/texlive-latexrecommended, thanks tomka
 
   11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> gl2ps-1.3.6.ebuild:
   Stable for AMD64, wrt bug #398421

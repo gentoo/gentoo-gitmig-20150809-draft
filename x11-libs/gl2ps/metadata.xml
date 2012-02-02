@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang="en">
+	<herd>sci</herd>
+	<longdescription lang="en">
   GL2PS is a C library providing high quality vector output for any
   OpenGL application. The main difference between GL2PS and other
   similar libraries is the use of sorting algorithms
