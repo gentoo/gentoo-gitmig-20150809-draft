@@ -1,6 +1,12 @@
 # ChangeLog for www-client/leechcraft-deadlyrics
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-deadlyrics/ChangeLog,v 1.5 2011/12/31 12:20:57 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-deadlyrics/ChangeLog,v 1.6 2012/02/02 17:52:50 maksbotan Exp $
+
+*leechcraft-deadlyrics-0.4.99 (02 Feb 2012)
+
+  02 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-deadlyrics-0.4.99.ebuild:
+  Big leechcraft bump to 0.4.99, thanks to 0xd34df00d
 
 *leechcraft-deadlyrics-0.4.97 (31 Dec 2011)
 
