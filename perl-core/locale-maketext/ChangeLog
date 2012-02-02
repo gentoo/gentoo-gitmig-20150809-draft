@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/locale-maketext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/ChangeLog,v 1.39 2012/01/24 16:04:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/ChangeLog,v 1.40 2012/02/02 19:21:32 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> locale-maketext-1.190.0.ebuild:
+  Marking locale-maketext-1.190.0 ppc for bug 393809
 
 *locale-maketext-1.220.0 (24 Jan 2012)
 
