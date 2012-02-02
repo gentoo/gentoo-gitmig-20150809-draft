@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.106 2012/02/01 16:01:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.107 2012/02/02 15:38:41 ssuominen Exp $
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> grep-2.9.ebuild:
+  ppc64 stable wrt #398453
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> grep-2.9.ebuild:
   Marking grep-2.9 ppc for bug 398453
