@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-MD5
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.45 2011/12/17 19:11:42 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.46 2012/02/02 16:12:14 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> Digest-MD5-2.510.0.ebuild:
+  Marking Digest-MD5-2.510.0 ppc for bug 392845
 
   17 Dec 2011; Raúl Porcel <armin76@gentoo.org> Digest-MD5-2.510.0.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #392845
