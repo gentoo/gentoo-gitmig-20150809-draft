@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.110 2012/01/31 23:02:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.111 2012/02/02 03:17:56 floppym Exp $
+
+  02 Feb 2012; Mike Gilbert <floppym@gentoo.org> subversion.eclass:
+  Introduce ESVN_UMASK variable to override default umask. Patch by Arfrever.
 
   31 Jan 2012; Markos Chandras <hwoarang@gentoo.org> qt4-build.eclass:
   Initial EAPI4 support in qt4-build eclass

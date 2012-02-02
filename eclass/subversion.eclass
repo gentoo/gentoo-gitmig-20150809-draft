@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.72 2011/12/27 22:40:50 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.73 2012/02/02 03:17:56 floppym Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -156,6 +156,12 @@ ESVN_DISABLE_DEPENDENCIES="${ESVN_DISABLE_DEPENDENCIES:-}"
 # tree by users.
 ESVN_OFFLINE="${ESVN_OFFLINE:-${ESCM_OFFLINE}}"
 
+# @ECLASS-VARIABLE: ESVN_UMASK
+# @DESCRIPTION:
+# Set this variable to custom umask.
+# This is intended to be set by users.
+ESVN_UMASK="${ESVN_UMASK:-${EVCS_UMASK}}"
+
 # @ECLASS-VARIABLE: ESVN_UP_FREQ
 # @DESCRIPTION:
 # Set the minimum number of hours between svn up'ing in any given svn module. This is particularly
@@ -214,6 +220,10 @@ subversion_fetch() {
 
 	addread "/etc/subversion"
 	addwrite "${ESVN_STORE_DIR}"
+
+	if [[ -n "${ESVN_UMASK}" ]]; then
+		eumask_push "${ESVN_UMASK}"
+	fi
 
 	if [[ ! -d ${ESVN_STORE_DIR} ]]; then
 		debug-print "${FUNCNAME}: initial checkout. creating subversion directory"
@@ -329,6 +339,10 @@ subversion_fetch() {
 				fi
 			fi
 		fi
+	fi
+
+	if [[ -n "${ESVN_UMASK}" ]]; then
+		eumask_pop
 	fi
 
 	einfo "   working copy: ${wc_path}"
