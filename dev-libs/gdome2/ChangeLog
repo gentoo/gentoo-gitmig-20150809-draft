@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.32 2011/10/22 13:07:13 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.33 2012/02/02 18:56:00 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> gdome2-0.8.1-r3.ebuild:
+  Stable for amd64, wrt bug #396889
 
   22 Oct 2011; Gilles Dartiguelongue <eva@gentoo.org> gdome2-0.8.1-r2.ebuild,
   gdome2-0.8.1-r3.ebuild:
