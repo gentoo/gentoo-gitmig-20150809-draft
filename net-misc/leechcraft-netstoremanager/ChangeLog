@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leechcraft-netstoremanager
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-netstoremanager/ChangeLog,v 1.1 2012/02/02 17:20:07 maksbotan Exp $
+
+*leechcraft-netstoremanager-9999 (02 Feb 2012)
+
+  02 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-netstoremanager-9999.ebuild, +metadata.xml:
+  Add leechcraft-netstoremanager-9999, thanks to 0xd34df00d
+
