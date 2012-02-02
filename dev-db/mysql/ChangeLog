@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.598 2012/02/02 03:12:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.599 2012/02/02 15:53:10 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> mysql-5.1.61.ebuild:
+  Stable for AMD64, wrt security bug #399375
 
   02 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> files/my.cnf-4.0:
   Bug #360847: Give users of MySQL 4.0 an easier time in upgrading on a newer
