@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-de
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.11 2011/02/27 16:41:33 jmbsvicetto Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.12 2012/02/02 18:21:29 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> man-pages-de-0.8.ebuild:
+  Stable for amd64, wrt bug #396811
 
 *man-pages-de-0.8 (27 Feb 2011)
 *man-pages-de-0.7 (27 Feb 2011)
