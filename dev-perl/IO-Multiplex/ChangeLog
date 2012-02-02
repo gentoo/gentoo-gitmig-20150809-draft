@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.36 2012/01/01 15:46:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.37 2012/02/02 20:54:31 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> IO-Multiplex-1.130.0.ebuild:
+  Marking IO-Multiplex-1.130.0 ppc for bug 393743
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> IO-Multiplex-1.130.0.ebuild:
   alpha/ia64/sparc stable wrt #393743
