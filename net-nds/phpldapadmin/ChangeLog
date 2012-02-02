@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/phpldapadmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.55 2012/01/05 00:36:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.56 2012/02/02 21:18:10 jmbsvicetto Exp $
+
+*phpldapadmin-1.2.2-r1 (02 Feb 2012)
+
+  02 Feb 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phpldapadmin-1.2.2-r1.ebuild, +files/phpldapadmin-1.2.2-base.patch:
+  [net-nds/phpldapadmin-1.2.2-r1] Apply security patch to fix XSS issue - fixes
+  bug 401901.
 
 *phpldapadmin-1.2.2 (05 Jan 2012)
 
