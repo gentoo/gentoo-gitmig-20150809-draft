@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.231 2012/01/17 13:21:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.232 2012/02/02 04:00:47 jdhore Exp $
+
+*audacious-plugins-3.2 (02 Feb 2012)
+
+  02 Feb 2012; Jeff Horelick <jdhore@gentoo.org> +audacious-plugins-3.2.ebuild,
+  metadata.xml:
+  Version bump. New ebuild also includes many improvements such as gtk+:2
+  support re-added, old configure switches dropped and more. Fixes bugs #393371
+  and #401293. Also, set myself as the new maintainer.
 
   17 Jan 2012; Tobias Klausmann <klausman@gentoo.org>
   audacious-plugins-3.1.ebuild:
