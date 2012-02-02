@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.56 2012/01/10 20:16:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.57 2012/02/02 16:05:59 ssuominen Exp $
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> snes9x-1.53.ebuild:
+  ppc64 stable wrt #395479
 
   10 Jan 2012; Brent Baude <ranger@gentoo.org> snes9x-1.53.ebuild:
   Marking snes9x-1.53 ppc for bug 395479
