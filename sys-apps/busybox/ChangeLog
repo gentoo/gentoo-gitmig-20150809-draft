@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.297 2012/01/15 18:46:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.298 2012/02/02 15:22:01 ssuominen Exp $
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> busybox-1.19.3-r1.ebuild:
+  ppc64 stable wrt #395427
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> busybox-1.19.3-r1.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #395427
