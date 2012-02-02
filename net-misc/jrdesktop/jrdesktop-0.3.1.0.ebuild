@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jrdesktop/jrdesktop-0.3.1.0.ebuild,v 1.1 2009/09/18 02:49:00 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jrdesktop/jrdesktop-0.3.1.0.ebuild,v 1.2 2012/02/02 17:03:47 ago Exp $
 
 JAVA_PKG_IUSE="source doc"
 WANT_ANT_TASKS="ant-nodeps"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 S="${WORKDIR}/${PN}"
