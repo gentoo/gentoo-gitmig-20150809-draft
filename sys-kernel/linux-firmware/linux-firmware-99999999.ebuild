@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.12 2011/11/01 14:40:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.13 2012/02/02 13:15:29 chithanh Exp $
 
 EAPI=3
 inherit savedconfig
@@ -8,13 +8,13 @@ inherit savedconfig
 if [[ ${PV} == 99999999* ]]; then
 	inherit git-2
 	SRC_URI=""
-	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/dwmw2/${PN}.git"
+	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/firmware/${PN}.git"
 else
-	SRC_URI="mirror://kernel/linux/kernel/people/dwmw2/firmware/${P}.tar.bz2"
+	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 fi
 
 DESCRIPTION="Linux firmware files"
-HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/dwmw2/firmware"
+HOMEPAGE="http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git"
 
 LICENSE="GPL-1 GPL-2 GPL-3 BSD freedist"
 KEYWORDS=""
