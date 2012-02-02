@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.28.ebuild,v 1.3 2012/02/02 14:12:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.28.ebuild,v 1.4 2012/02/02 15:37:39 johu Exp $
 
 EAPI=4
 
@@ -26,6 +26,11 @@ PATCHES=( "${FILESDIR}"/${P}-qt-4.7_fix.patch )
 
 src_configure() {
 	mycmakeargs=( "-DAUTOPLUGINS=$(use plugins && echo 1 || echo 0)" )
+
+	sed -e "s#/lib/pkgconfig#/$(get_libdir)/pkgconfig#" \
+		-e "s#DESTINATION lib#DESTINATION $(get_libdir)#" \
+	    -i CMakeLists.txt || die "sed fixing multilib failed"
+
 	cmake-utils_src_configure
 }
 
