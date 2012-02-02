@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-nn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nn/ChangeLog,v 1.21 2010/09/27 23:39:56 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nn/ChangeLog,v 1.22 2012/02/02 17:02:13 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> myspell-nn-20080310.ebuild:
+  Stable for amd64, wrt bug #396787
 
   27 Sep 2010; Mart Raudsepp <leio@gentoo.org> myspell-nn-20080310.ebuild:
   Add ~mips
