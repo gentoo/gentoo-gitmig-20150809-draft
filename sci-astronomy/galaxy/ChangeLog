@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/galaxy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.5 2011/12/28 12:21:18 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.6 2012/02/02 11:22:26 xarthisius Exp $
+
+*galaxy-2.1 (02 Feb 2012)
+
+  02 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +galaxy-2.1.ebuild:
+  Adding new version that works only with gtk+:3
 
   28 Dec 2011; Kacper Kowalik <xarthisius@gentoo.org> galaxy-2.0.ebuild:
   Fix deps, use fdo-mime for desktop update
