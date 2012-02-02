@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.216 2012/02/02 01:35:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.217 2012/02/02 01:49:37 floppym Exp $
+
+  02 Feb 2012; Mike Gilbert <floppym@gentoo.org> file-5.05.ebuild,
+  file-5.06.ebuild, file-5.07.ebuild, file-5.07-r1.ebuild:
+  Restore copyright dates.
 
   02 Feb 2012; Mike Gilbert <floppym@gentoo.org> file-5.05.ebuild,
   file-5.06.ebuild, file-5.07-r1.ebuild, file-5.07-r2.ebuild,
