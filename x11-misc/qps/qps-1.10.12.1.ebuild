@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qps/qps-1.10.12.1.ebuild,v 1.1 2009/12/17 23:13:35 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qps/qps-1.10.12.1.ebuild,v 1.2 2012/02/02 13:16:24 johu Exp $
 
 EAPI="2"
 
 inherit qt4-r2
 
 DESCRIPTION="Visual process manager - Qt version of ps/top"
-HOMEPAGE="http://qps.kldp.net/"
+HOMEPAGE="http://qps.kldp.net/projects/qps/"
 SRC_URI="http://kldp.net/frs/download.php/5394/${P}.tar.bz2"
 
 LICENSE="GPL-2"
