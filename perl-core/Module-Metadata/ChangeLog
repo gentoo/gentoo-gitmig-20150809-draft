@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Metadata
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.17 2012/01/15 18:51:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.18 2012/02/02 19:36:48 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> Module-Metadata-1.0.6.ebuild:
+  Marking Module-Metadata-1.0.6 ppc stable for bug 393397
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> Module-Metadata-1.0.6.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #393397
