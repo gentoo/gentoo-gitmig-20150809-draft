@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/soundconverter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.24 2012/01/11 19:29:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.25 2012/02/02 19:20:54 ssuominen Exp $
+
+*soundconverter-2.0.1 (02 Feb 2012)
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +soundconverter-2.0.1.ebuild:
+  Version bump wrt #401941 by "Phr33d0m"
 
   11 Jan 2012; Pacho Ramos <pacho@gentoo.org> soundconverter-1.5.4.ebuild:
   Work when python3 is main interpreter, bug #394675 (also bump to eapi4)
