@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.111 2012/02/02 03:17:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.112 2012/02/02 22:01:13 mgorny Exp $
+
+  02 Feb 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Use checksums to determine whether files need autoreconf. Fixes bug #399641.
 
   02 Feb 2012; Mike Gilbert <floppym@gentoo.org> subversion.eclass:
   Introduce ESVN_UMASK variable to override default umask. Patch by Arfrever.

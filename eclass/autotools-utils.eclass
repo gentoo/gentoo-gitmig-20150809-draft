@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.46 2012/01/30 13:11:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.47 2012/02/02 22:01:13 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -362,14 +362,17 @@ autotools-utils_src_prepare() {
 
 	[[ ${PATCHES} ]] && epatch "${PATCHES[@]}"
 
-	touch "${T}"/.autotools-utils.timestamp || die
+	at_checksum() {
+		find '(' -name 'Makefile.am' \
+			-o -name 'configure.ac' \
+			-o -name 'configure.in' ')' \
+			-exec cksum {} + | sort -k2
+	}
+
+	[[ ! ${want_autoreconf} ]] && local checksum=$(at_checksum)
 	epatch_user
 	if [[ ! ${want_autoreconf} ]]; then
-		if [[ $(find . -newer "${T}"/.autotools-utils.timestamp \
-				-a '(' -name 'Makefile.am' \
-				-o -name 'configure.ac' \
-				-o -name 'configure.in' ')' \
-				-print -quit) ]]; then
+		if [[ ${checksum} != $(at_checksum) ]]; then
 			einfo 'Will autoreconfigure due to user patches applied.'
 			want_autoreconf=yep
 		fi
