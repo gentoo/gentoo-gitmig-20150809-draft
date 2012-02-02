@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.43-r1.ebuild,v 1.9 2011/08/22 23:22:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.43-r1.ebuild,v 1.10 2012/02/02 08:42:07 robbat2 Exp $
 
 EAPI="2"
 
@@ -75,7 +75,7 @@ openldap_upgrade_howto() {
 	i="${l}.raw"
 	eerror " 1. /etc/init.d/slurpd stop ; /etc/init.d/slapd stop"
 	eerror " 2. slapcat -l ${i}"
-	eerror " 3. egrep -v '^entryCSN:' <${i} >${l}"
+	eerror " 3. egrep -v '^(entry|context)CSN:' <${i} >${l}"
 	eerror " 4. mv /var/lib/openldap-data/ /var/lib/openldap-data-backup/"
 	eerror " 5. emerge --update \=net-nds/${PF}"
 	eerror " 6. etc-update, and ensure that you apply the changes"
