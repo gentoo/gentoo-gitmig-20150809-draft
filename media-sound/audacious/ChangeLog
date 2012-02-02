@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.251 2012/02/02 04:02:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.252 2012/02/02 04:10:26 jdhore Exp $
+
+  02 Feb 2012; Jeff Horelick <jdhore@gentoo.org> audacious-3.1.1.ebuild,
+  audacious-3.1.ebuild:
+  Kill off sse2 and altivec USE flags from the 3.1 ebuilds as they've been
+  dropped. Closes bug #393371.
 
 *audacious-3.2 (02 Feb 2012)
 

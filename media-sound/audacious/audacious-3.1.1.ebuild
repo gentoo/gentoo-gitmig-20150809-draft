@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.1.1.ebuild,v 1.2 2012/01/17 12:55:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.1.1.ebuild,v 1.3 2012/02/02 04:10:26 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -15,7 +15,7 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
-IUSE="altivec chardet nls session sse2"
+IUSE="chardet nls session"
 
 RDEPEND=">=dev-libs/dbus-glib-0.60
 	>=dev-libs/glib-2.16
@@ -48,11 +48,9 @@ src_configure() {
 	econf \
 		--enable-dbus \
 		--enable-gtk3 \
-		$(use_enable altivec) \
 		$(use_enable chardet) \
 		$(use_enable nls) \
-		$(use_enable session sm) \
-		$(use_enable sse2)
+		$(use_enable session sm)
 }
 
 src_install() {
