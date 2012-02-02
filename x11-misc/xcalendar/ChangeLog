@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.26 2012/01/04 21:24:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.27 2012/02/02 16:02:25 ssuominen Exp $
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> xcalendar-4.0-r1.ebuild:
+  ppc64 stable wrt #391577
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> xcalendar-4.0-r1.ebuild:
   Marking xcalendar-4.0-r1 ppc for bug 391577
