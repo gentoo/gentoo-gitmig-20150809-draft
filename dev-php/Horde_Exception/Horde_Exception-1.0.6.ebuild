@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Exception/Horde_Exception-1.0.6.ebuild,v 1.1 2011/09/17 12:09:20 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Exception/Horde_Exception-1.0.6.ebuild,v 1.2 2012/02/02 14:49:13 ssuominen Exp $
 
 EAPI=4
 
 inherit php-pear-r1
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 DESCRIPTION="Horde Exception Handler"
 LICENSE="LGPL-2"
