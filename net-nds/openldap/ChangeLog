@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.387 2012/02/02 08:42:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.388 2012/02/02 20:10:26 robbat2 Exp $
+
+*openldap-2.4.28 (02 Feb 2012)
+
+  02 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openldap-2.4.28-contrib-smbk5pwd.patch, +openldap-2.4.28.ebuild:
+  Bug #374115: version bump.
 
   02 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> openldap-2.3.43-r1.ebuild,
   openldap-2.4.19-r1.ebuild, openldap-2.4.21.ebuild, openldap-2.4.23.ebuild,
