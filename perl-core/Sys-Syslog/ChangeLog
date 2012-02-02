@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Sys-Syslog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.47 2012/01/14 19:54:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.48 2012/02/02 19:27:03 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> Sys-Syslog-0.290.0.ebuild:
+  Marking Sys-Syslog-0.290.0 ppc for bug 393937
 
   14 Jan 2012; Raúl Porcel <armin76@gentoo.org> Sys-Syslog-0.290.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #393937
