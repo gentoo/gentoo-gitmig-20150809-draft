@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.10.ebuild,v 1.1 2011/12/31 06:00:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.10.ebuild,v 1.2 2012/02/02 01:35:39 floppym Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython"
 
-inherit eutils distutils libtool flag-o-matic
+inherit eutils distutils libtool flag-o-matic toolchain-funcs
 
 DESCRIPTION="identify a file's format by scanning binary data for patterns"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
@@ -31,7 +31,7 @@ src_prepare() {
 	mv python/README{,.python}
 }
 
-wd() { echo ${WORKDIR}/build-${CHOST}; }
+wd() { echo "${WORKDIR}"/build-${CHOST}; }
 do_configure() {
 	ECONF_SOURCE=${S}
 

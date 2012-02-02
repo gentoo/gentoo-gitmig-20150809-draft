@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.05.ebuild,v 1.10 2011/04/07 20:41:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.05.ebuild,v 1.11 2012/02/02 01:35:39 floppym Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
