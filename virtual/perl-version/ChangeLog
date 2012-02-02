@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.51 2012/01/15 18:22:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.52 2012/02/02 19:40:44 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> perl-version-0.940.0.ebuild:
+  Marking perl-version-0.940.0 ppc stable for bug 393397
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> perl-version-0.940.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #393397
