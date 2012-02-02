@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/slock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.29 2012/02/02 16:52:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.30 2012/02/02 17:04:17 jer Exp $
+
+  02 Feb 2012; Jeroen Roovers <jer@gentoo.org> slock-0.9.ebuild,
+  slock-0.9-r1.ebuild:
+  Update HOMEPAGE.
 
   02 Feb 2012; Jeroen Roovers <jer@gentoo.org> slock-0.9-r1.ebuild:
   Use tc-export instead of tc-getCC.

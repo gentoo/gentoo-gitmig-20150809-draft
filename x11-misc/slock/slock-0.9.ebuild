@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-0.9.ebuild,v 1.4 2008/10/30 00:05:14 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-0.9.ebuild,v 1.5 2012/02/02 17:04:17 jer Exp $
 
 inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="simple X screen locker"
-HOMEPAGE="http://www.suckless.org/programs/slock.html"
+HOMEPAGE="http://tools.suckless.org/slock"
 SRC_URI="http://code.suckless.org/dl/tools/${P}.tar.gz"
 
 LICENSE="MIT"
