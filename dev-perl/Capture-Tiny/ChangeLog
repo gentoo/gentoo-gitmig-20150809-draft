@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Capture-Tiny
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.17 2012/01/14 19:42:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.18 2012/02/02 19:40:30 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> Capture-Tiny-0.150.0.ebuild:
+  Marking Capture-Tiny-0.150.0 ~ppc for bug 395973
 
   14 Jan 2012; Raúl Porcel <armin76@gentoo.org> Capture-Tiny-0.150.0.ebuild:
   Add ~alpha/~ia64/~sparc wrt #395973
