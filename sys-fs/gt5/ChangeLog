@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/gt5
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.9 2011/02/19 16:58:43 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.10 2012/02/02 17:01:44 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> gt5-1.4.0-r2.ebuild:
+  Stable for amd64, wrt bug #397227
 
 *gt5-1.4.0-r2 (19 Feb 2011)
 

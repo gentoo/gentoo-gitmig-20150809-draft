@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/gt5-1.4.0-r2.ebuild,v 1.1 2011/02/19 16:58:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/gt5-1.4.0-r2.ebuild,v 1.2 2012/02/02 17:01:44 ago Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="|| ( www-client/links
