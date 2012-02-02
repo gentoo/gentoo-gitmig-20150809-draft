@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.16-r3.ebuild,v 1.1 2012/01/31 22:53:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.16-r4.ebuild,v 1.1 2012/02/02 20:29:33 blueness Exp $
 
 EAPI="4"
 
