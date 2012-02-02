@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.6.1.ebuild,v 1.3 2012/02/02 22:39:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.6.1.ebuild,v 1.4 2012/02/02 22:56:32 ssuominen Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -9,7 +9,8 @@ DESCRIPTION="a multi-panel tabbed file manager"
 HOMEPAGE="http://spacefm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
-LICENSE="GPL-2"
+# Internal copy of xfce-base/exo is LGPL-2 at src/exo/
+LICENSE="GPL-2 IgnorantGuru LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fam kde kernel_linux udev"
