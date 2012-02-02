@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-JSON-PP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.19 2012/01/15 18:32:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.20 2012/02/02 19:31:20 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> perl-JSON-PP-2.272.0.ebuild:
+  Marking perl-JSON-PP-2.272.0 ppc stable for bug 393397
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> perl-JSON-PP-2.272.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #393397
