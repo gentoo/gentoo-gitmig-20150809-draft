@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/leechcraft-full
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.7 2011/12/31 12:13:00 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.8 2012/02/02 17:42:23 maksbotan Exp $
+
+  02 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-full-0.4.99.ebuild, leechcraft-full-9999.ebuild:
+  Add leechcraft-netstoremanager plugin
+
+*leechcraft-full-0.4.99 (02 Feb 2012)
+
+  02 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-full-0.4.99.ebuild:
+  Bump net-misc/leechcraft-full to 0.4.99, thanks to 0xd34df00d
 
 *leechcraft-full-0.4.97 (31 Dec 2011)
 
