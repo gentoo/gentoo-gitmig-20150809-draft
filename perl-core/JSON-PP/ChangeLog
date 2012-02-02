@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/JSON-PP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.17 2012/01/15 18:30:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.18 2012/02/02 19:30:33 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> JSON-PP-2.272.0.ebuild:
+  Marking JSON-PP-2.272.0 ppc stable for bug 393397
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> JSON-PP-2.272.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #393397
