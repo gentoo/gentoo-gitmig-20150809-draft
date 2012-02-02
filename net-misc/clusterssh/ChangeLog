@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/clusterssh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/ChangeLog,v 1.4 2011/10/04 16:10:05 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/ChangeLog,v 1.5 2012/02/02 17:46:06 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> clusterssh-3.28.ebuild:
+  Stable for amd64, wrt bug #397165
 
 *clusterssh-4.00_pre11 (04 Oct 2011)
 
