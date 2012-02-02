@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdspeed
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.25 2010/09/17 05:21:18 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.26 2012/02/02 18:21:59 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> cdspeed-0.4-r1.ebuild:
+  Stable for amd64, wrt bug #396813
 
   17 Sep 2010; Jeroen Roovers <jer@gentoo.org> cdspeed-0.4-r1.ebuild:
   Respect upstream CFLAGS too.
