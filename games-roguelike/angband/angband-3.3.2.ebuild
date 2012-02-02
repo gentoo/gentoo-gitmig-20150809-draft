@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.3.2.ebuild,v 1.1 2011/12/20 00:19:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.3.2.ebuild,v 1.2 2012/02/02 15:52:58 mr_bones_ Exp $
 
 EAPI=2
-inherit autotools eutils versionator games
+inherit eutils versionator games
 
 MAJOR_PV=$(get_version_component_range 1-2)
 MY_P=${PN}-v${PV}

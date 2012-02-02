@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/angband
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.40 2011/12/20 00:19:32 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.41 2012/02/02 15:52:58 mr_bones_ Exp $
+
+  02 Feb 2012; Michael Sterrett <mr_bones_@gentoo.org> angband-3.3.2.ebuild:
+  autotools eclass isn't used
 
 *angband-3.3.2 (20 Dec 2011)
 
