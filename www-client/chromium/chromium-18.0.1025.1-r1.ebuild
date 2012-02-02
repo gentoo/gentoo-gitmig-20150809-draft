@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-18.0.1017.2.ebuild,v 1.2 2012/01/25 15:48:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-18.0.1025.1-r1.ebuild,v 1.1 2012/02/02 14:44:43 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -19,7 +19,7 @@ IUSE="bindist cups custom-cflags gnome gnome-keyring kerberos pulseaudio"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
 LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he hi hr
-hu id it ja kn ko lt lv ml mr nb nl pl pt_BR pt_PT ro ru sk sl sr sv sw ta te th
+hu id it ja kn ko lt lv ml mr ms nb nl pl pt_BR pt_PT ro ru sk sl sr sv sw ta te th
 tr uk vi zh_CN zh_TW"
 for lang in ${LANGS}; do
 	IUSE+=" linguas_${lang}"
@@ -30,7 +30,7 @@ RDEPEND="app-arch/bzip2
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.8.7.1
+	>=dev-lang/v8-3.8.9.4
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
@@ -187,7 +187,17 @@ src_prepare() {
 		chrome/common/zip*.cc || die
 
 	# Revert WebKit changeset responsible for Gentoo bug #393471.
-	epatch "${FILESDIR}/${PN}-revert-jpeg-swizzle-r1.patch"
+	epatch "${FILESDIR}/${PN}-revert-jpeg-swizzle-r2.patch"
+
+	# Prevent gyp failures caused by target type 'settings' instead of 'none'.
+	epatch "${FILESDIR}/${PN}-gyp-settings-r0.patch"
+
+	# Prevent compilation failures caused by missing zlib #include
+	# and dependency.
+	epatch "${FILESDIR}/${PN}-webkit-zlib-r0.patch"
+
+	# Fix crashes on illegal instructions, bug #401537.
+	epatch "${FILESDIR}/${PN}-media-no-sse-r0.patch"
 
 	epatch_user
 
@@ -211,6 +221,7 @@ src_prepare() {
 		\! -path 'third_party/leveldatabase/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
+		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libvpx/*' \
 		\! -path 'third_party/libyuv/*' \
 		\! -path 'third_party/lss/*' \
