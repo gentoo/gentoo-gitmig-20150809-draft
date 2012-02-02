@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.6.1.ebuild,v 1.2 2012/02/02 22:28:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.6.1.ebuild,v 1.3 2012/02/02 22:39:32 ssuominen Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -41,8 +41,10 @@ src_configure() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
