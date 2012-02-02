@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PatchReader
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.28 2011/12/04 17:54:03 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.29 2012/02/02 20:23:54 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> PatchReader-0.9.6.ebuild:
+  Marking PatchReader-0.9.6 ppc for bug 391571
 
   04 Dec 2011; Raúl Porcel <armin76@gentoo.org> PatchReader-0.9.6.ebuild:
   alpha/ia64/sparc stable wrt #391571
