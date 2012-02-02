@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.56 2012/01/15 19:04:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.57 2012/02/02 19:29:46 ranger Exp $
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org> Module-Build-0.380.0.ebuild:
+  Marking Module-Build-0.380.0 ppc stable for bug 393397
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> Module-Build-0.380.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #393397
