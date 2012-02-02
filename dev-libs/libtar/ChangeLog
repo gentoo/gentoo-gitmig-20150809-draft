@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtar
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.16 2011/08/01 08:20:50 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.17 2012/02/02 18:54:29 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libtar-1.2.11-r4.ebuild:
+  Stable for amd64, wrt bug #396901
 
   01 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> libtar-1.2.11-r3.ebuild:
   ppc/ppc64 stable wrt #376885
