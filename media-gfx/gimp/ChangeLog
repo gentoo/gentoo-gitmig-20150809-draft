@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.351 2012/01/02 18:49:04 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.352 2012/02/02 00:59:17 sping Exp $
+
+*gimp-2.6.12 (02 Feb 2012)
+
+  02 Feb 2012; Sebastian Pipping <sping@gentoo.org> +gimp-2.6.12.ebuild:
+  Bump to 2.6.12, drop included patches
 
   02 Jan 2012; Sebastian Pipping <sping@gentoo.org> gimp-2.7.4.ebuild,
   +files/gimp-2.7.4-no-deprecation.patch:
