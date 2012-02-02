@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/3ddesktop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.41 2010/09/16 17:34:48 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.42 2012/02/02 17:44:40 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> 3ddesktop-0.2.9-r1.ebuild:
+  Stable for amd64, wrt bug #397255
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   3ddesktop-0.2.9.ebuild, 3ddesktop-0.2.9-r1.ebuild:
