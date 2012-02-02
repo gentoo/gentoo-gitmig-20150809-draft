@@ -1,6 +1,9 @@
 # ChangeLog for app-text/code2html
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.20 2010/04/05 22:24:08 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.21 2012/02/02 18:57:00 ago Exp $
+
+  02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> code2html-0.9.1-r1.ebuild:
+  Stable for amd64, wrt bug #396829
 
   05 Apr 2010; Jonathan Callen <abcd@gentoo.org> code2html-0.9.1-r1.ebuild,
   +files/code2html-0.9.1-prefix.patch:
