@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.103 2012/02/03 17:04:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.104 2012/02/03 19:02:41 johu Exp $
+
+  03 Feb 2012; Johannes Huber <johu@gentoo.org> -taglib-1.6.3.ebuild:
+  Remove old.
 
   03 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> taglib-1.7.ebuild:
   ppc64 stable wrt #391653
