@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/tempest_for_eliza
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tempest_for_eliza/ChangeLog,v 1.10 2010/09/12 14:42:43 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tempest_for_eliza/ChangeLog,v 1.11 2012/02/03 17:49:58 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  tempest_for_eliza-1.0.5-r1.ebuild:
+  Stable for amd64, wrt bug #397109
 
 *tempest_for_eliza-1.0.5-r1 (12 Sep 2010)
 
