@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.278 2012/01/25 18:16:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.279 2012/02/03 16:10:42 johu Exp $
+
+*kdm-4.8.0-r1 (03 Feb 2012)
+*kdm-4.7.4-r1 (03 Feb 2012)
+
+  03 Feb 2012; Johannes Huber <johu@gentoo.org> +kdm-4.7.4-r1.ebuild,
+  +kdm-4.8.0-r1.ebuild, -kdm-4.8.0.ebuild:
+  Revision bump. Removes pam patch which has no effect. Is fixed in kde-
+  base/libkworkspace bug #398333.
 
 *kdm-4.8.0 (25 Jan 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.8.0.ebuild,v 1.1 2012/01/25 18:16:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.7.4-r1.ebuild,v 1.1 2012/02/03 16:10:42 johu Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KMNAME="kde-workspace"
 inherit kde4-meta flag-o-matic
 
 DESCRIPTION="KDE login manager, similar to xdm and gdm"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="+consolekit debug kerberos pam"
 
 DEPEND="
@@ -38,7 +38,6 @@ KMEXTRA="
 "
 
 PATCHES=(
-	"${FILESDIR}/kdebase-4.0.2-pam-optional.patch"
 	"${FILESDIR}/${PN}-4-gentoo-xinitrc.d.patch"
 	"${FILESDIR}/${PN}-4.7.3-revertcrashlogic.patch"
 )
