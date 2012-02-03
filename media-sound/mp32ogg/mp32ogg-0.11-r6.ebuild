@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/mp32ogg-0.11-r6.ebuild,v 1.1 2010/07/19 14:52:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/mp32ogg-0.11-r6.ebuild,v 1.2 2012/02/03 17:48:55 ago Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.faceprint.com/pub/software/scripts/mp32ogg"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="media-sound/mpg123
