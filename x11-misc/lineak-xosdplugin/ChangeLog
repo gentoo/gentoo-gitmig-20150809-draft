@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineak-xosdplugin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.28 2010/09/03 07:05:37 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.29 2012/02/03 18:35:27 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  lineak-xosdplugin-0.9.0-r1.ebuild:
+  Stable for amd64, wrt bug #397271
 
 *lineak-xosdplugin-0.9.0-r1 (03 Sep 2010)
 
