@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.28 2012/01/26 08:36:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.29 2012/02/03 01:24:17 binki Exp $
+
+  03 Feb 2012; Nathan Phillip Brink <binki@gentoo.org>
+  atheme-services-6.0.9.ebuild, atheme-services-6.0.9-r1.ebuild,
+  atheme-services-7.0.0_alpha9.ebuild:
+  Fix dependency to use libmowgli-1.
 
   24 Jan 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
   Update my email address
