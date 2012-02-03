@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.40 2012/02/03 18:36:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.41 2012/02/03 22:05:12 ranger Exp $
+
+  03 Feb 2012; Brent Baude <ranger@gentoo.org> wdm-1.28-r3.ebuild:
+  Marking wdm-1.28-r3 ppc for bug 397275
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> wdm-1.28-r3.ebuild:
   Stable for amd64, wrt bug #397275
