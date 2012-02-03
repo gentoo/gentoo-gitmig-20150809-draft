@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.32 2011/12/02 08:12:01 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.33 2012/02/03 19:36:10 darkside Exp $
+
+  03 Feb 2012; Jeremy Olexa <darkside@gentoo.org>
+  mplayer2-2.0_p20111126.ebuild, mplayer2-9999.ebuild:
+  Remove 'custom-cflags' flag since it does nothing. bug 379031
 
   02 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Remove the usedesc from metadata too.

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.20 2011/12/02 08:10:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.21 2012/02/03 19:36:10 darkside Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux "
 fi
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
-bluray bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts custom-cflags
+bluray bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts
 debug dga directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca esd +faad fbcon ftp
 gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc +live
 mad md5sum +mmx mmxext mng +mp3 nas +network nut +opengl oss png pnm pulseaudio
