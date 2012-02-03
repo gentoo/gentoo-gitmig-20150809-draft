@@ -1,0 +1,10 @@
+# ChangeLog for virtual/modutils
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/modutils/ChangeLog,v 1.1 2012/02/03 23:21:54 williamh Exp $
+
+*modutils-0 (03 Feb 2012)
+
+  03 Feb 2012; William Hubbs <williamh@gentoo.org> +metadata.xml,
+  +modutils-0.ebuild:
+  initial import for bug #401899
+
