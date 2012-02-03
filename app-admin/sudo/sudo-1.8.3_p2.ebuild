@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.3_p2.ebuild,v 1.5 2012/02/01 17:25:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.3_p2.ebuild,v 1.6 2012/02/03 00:07:45 vapier Exp $
 
 EAPI="4"
 
@@ -32,14 +32,14 @@ DEPEND="pam? ( virtual/pam )
 		>=net-nds/openldap-2.1.30-r1
 		dev-libs/cyrus-sasl
 	)
-	>=app-misc/editor-wrapper-3
-	sys-libs/zlib
-	virtual/editor
-	virtual/mta"
-RDEPEND="selinux? ( sec-policy/selinux-sudo )
+	sys-libs/zlib"
+RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-sudo )
 	ldap? ( dev-lang/perl )
 	pam? ( sys-auth/pambase )
-	${DEPEND}"
+	>=app-misc/editor-wrapper-3
+	virtual/editor
+	virtual/mta"
 DEPEND="${DEPEND}
 	sys-devel/bison"
 
