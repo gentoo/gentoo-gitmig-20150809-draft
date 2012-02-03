@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-EN-NameParse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-NameParse/ChangeLog,v 1.31 2011/12/18 19:51:16 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-NameParse/ChangeLog,v 1.32 2012/02/03 14:29:13 ranger Exp $
+
+  03 Feb 2012; Brent Baude <ranger@gentoo.org>
+  Lingua-EN-NameParse-1.300.0.ebuild:
+  Marking Lingua-EN-NameParse-1.300.0 ppc for bug 393795
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Lingua-EN-NameParse-1.300.0.ebuild:
