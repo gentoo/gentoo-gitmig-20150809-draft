@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libsieve
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/ChangeLog,v 1.17 2011/07/20 17:17:55 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/ChangeLog,v 1.18 2012/02/03 17:54:26 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libsieve-2.2.7.ebuild:
+  Stable for amd64, wrt bug #397051
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
