@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/oroborus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.33 2010/05/31 10:07:19 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.34 2012/02/03 18:36:26 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> oroborus-2.0.20.ebuild:
+  Stable for amd64, wrt bug #397307
 
 *oroborus-2.0.20 (31 May 2010)
 
