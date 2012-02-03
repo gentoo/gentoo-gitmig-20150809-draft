@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dxpc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.15 2010/02/11 17:21:48 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.16 2012/02/03 21:33:40 ranger Exp $
+
+  03 Feb 2012; Brent Baude <ranger@gentoo.org> dxpc-3.9.2-r1.ebuild:
+  Marking dxpc-3.9.2-r1 ppc for bug 397263
 
 *dxpc-3.9.2-r1 (11 Feb 2010)
 
