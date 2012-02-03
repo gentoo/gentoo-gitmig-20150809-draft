@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/libkworkspace-4.8.0.ebuild,v 1.1 2012/01/25 18:17:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/libkworkspace-4.8.0-r1.ebuild,v 1.1 2012/02/03 15:50:03 johu Exp $
 
 EAPI=4
 
@@ -24,6 +24,10 @@ DEPEND="
 	x11-libs/libXcomposite
 "
 RDEPEND=${DEPEND}
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.8.0-pam-optional.patch"
+)
 
 src_prepare() {
 	sed -i -e 's/install( FILES kdisplaymanager.h/install( FILES kdisplaymanager.h screenpreviewwidget.h/' \
