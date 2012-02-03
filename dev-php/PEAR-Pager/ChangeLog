@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Pager
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.32 2009/08/22 19:25:18 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.33 2012/02/03 16:51:57 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> PEAR-Pager-2.4.8.ebuild:
+  Stable for amd64, wrt bug #396993
 
 *PEAR-Pager-2.4.8 (22 Aug 2009)
 
