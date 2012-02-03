@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.3.ebuild,v 1.3 2011/04/16 17:51:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.3.ebuild,v 1.4 2012/02/03 22:30:16 ranger Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.netmeister.org/apps/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
