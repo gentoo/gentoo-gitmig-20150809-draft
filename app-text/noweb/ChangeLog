@@ -1,6 +1,9 @@
 # ChangeLog for app-text/noweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.49 2012/01/08 22:43:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.50 2012/02/03 14:43:45 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> noweb-2.11b-r2.ebuild:
+  Stable for amd64, wrt bug #396843
 
   08 Jan 2012; Ulrich Müller <ulm@gentoo.org> noweb-2.11b-r1.ebuild,
   noweb-2.11b-r2.ebuild:
