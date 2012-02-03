@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.368 2012/01/23 15:02:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.369 2012/02/03 10:49:47 chainsaw Exp $
+
+*asterisk-10.1.0 (03 Feb 2012)
+
+  03 Feb 2012; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.7.2.ebuild,
+  +asterisk-10.1.0.ebuild:
+  Version bump. ast_streamfile no longer unconditionally seeks, allowing
+  playback of more formats. Music on hold no longer runs at the same priority
+  as its timing source, fixing obscure reload bugs. Blind transfers no longer
+  fail if a h extension is present. An RTP reference leak was plugged.
+  Distribution patchset unchanged.
 
   23 Jan 2012; Thomas Kahle <tomka@gentoo.org> asterisk-1.8.8.2.ebuild:
   x86 stable per bug 399507
