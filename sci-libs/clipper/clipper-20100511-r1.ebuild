@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20100511-r1.ebuild,v 1.1 2011/06/26 10:13:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20100511-r1.ebuild,v 1.2 2012/02/03 12:27:50 jlec Exp $
 
 EAPI=4
 
-WANT_AUTOMAKE="1.11"
+AUTOTOOLS_AUTORECONF=true
 
-inherit autotools eutils flag-o-matic
+inherit autotools-utils eutils flag-o-matic
 
 DESCRIPTION="Object-oriented libraries for crystallographic data and crystallographic computation"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~cowtan/clipper/clipper.html"
@@ -16,7 +16,7 @@ SRC_URI="http://www.ysbl.york.ac.uk/~cowtan/clipper/clipper-2.1-${PV:2:${#PV}}-a
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug"
+IUSE="debug static-libs"
 
 RDEPEND="
 	sci-libs/ccp4-libs
@@ -26,13 +26,13 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${PN}-2.1
 
-src_prepare() {
-	epatch "${FILESDIR}"/20091215-missing-var.patch
+PATCHES=( "${FILESDIR}"/20091215-missing-var.patch )
 
+src_prepare() {
 	# ccp4 provides these, and more.
 	sed -i -e "s:examples::g" "${S}"/Makefile.am
 
-	AT_M4DIR="config" eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -40,20 +40,22 @@ src_configure() {
 	# on 64-bit systems
 	append-flags -fno-strict-aliasing
 
-	econf \
-		--enable-ccp4 \
-		--enable-cif \
-		--enable-cns \
-		--enable-contrib \
-		--enable-minimol \
-		--enable-mmdb \
-		--enable-phs \
-		--with-mmdb="${EPREFIX}"/usr \
+	local myeconfargs=(
+		--enable-ccp4
+		--enable-cif
+		--enable-cns
+		--enable-contrib
+		--enable-minimol
+		--enable-mmdb
+		--enable-phs
+		--with-mmdb="${EPREFIX}"/usr
 		$(use_enable debug)
+		)
+	autotools-utils_src_configure
 }
 
 src_test() {
 	emake \
-		-C examples \
+		-C "${AUTOTOOLS_BUILD_DIR}"/examples \
 		check
 }
