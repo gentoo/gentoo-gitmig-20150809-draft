@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/abcm2ps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/ChangeLog,v 1.38 2012/01/25 10:33:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/ChangeLog,v 1.39 2012/02/03 07:59:03 radhermit Exp $
+
+*abcm2ps-6.6.4 (03 Feb 2012)
+
+  03 Feb 2012; Tim Harder <radhermit@gentoo.org> +abcm2ps-6.6.4.ebuild:
+  Version bump.
 
   25 Jan 2012; Tim Harder <radhermit@gentoo.org> -abcm2ps-5.9.15.ebuild,
   -abcm2ps-5.9.25.ebuild:
