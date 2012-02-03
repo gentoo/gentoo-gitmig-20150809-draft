@@ -19,9 +19,9 @@ start () {
 
 		# Since I have no idea how I could do this during the webapp-config installation,
 		# lets do it during start up...
-		for DIR in cache cache/htmlpurifier cache/magpie cache/simplepie lock feed-icons; do
-			chgrp ttrssd "${INSTANCE_DIR}/${DIR}"
-			chmod g+w "${INSTANCE_DIR}/${DIR}"
+		for DIR in cache cache/htmlpurifier cache/magpie cache/simplepie cache/images cache/export lock feed-icons; do
+			[ -d "${INSTANCE_DIR}/${DIR}" ] && chgrp ttrssd "${INSTANCE_DIR}/${DIR}"
+			[ -d "${INSTANCE_DIR}/${DIR}" ] && chmod g+w "${INSTANCE_DIR}/${DIR}"
 		done
 
 		# Finally run the PHP script
