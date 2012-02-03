@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbrun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.26 2012/02/03 18:33:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.27 2012/02/03 22:27:12 ranger Exp $
+
+  03 Feb 2012; Brent Baude <ranger@gentoo.org> bbrun-1.6-r1.ebuild:
+  Marking bbrun-1.6-r1 ppc for bug 397259
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> bbrun-1.6-r1.ebuild:
   Stable for amd64, wrt bug #397259
