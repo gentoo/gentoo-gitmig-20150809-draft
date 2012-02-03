@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/solve-resolve-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/solve-resolve-bin/ChangeLog,v 1.3 2011/10/06 11:24:01 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/solve-resolve-bin/ChangeLog,v 1.4 2012/02/03 14:00:34 jlec Exp $
+
+  03 Feb 2012; Justin Lecher <jlec@gentoo.org> solve-resolve-bin-2.13.ebuild,
+  metadata.xml:
+  Correct QA_* , stable x86 tested by me
 
   06 Oct 2011; Tony Vroon <chainsaw@gentoo.org> solve-resolve-bin-2.13.ebuild:
   Marked stable on AMD64 without rigorous testing as it is part of a tangled
