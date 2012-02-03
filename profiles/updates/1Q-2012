@@ -4,3 +4,4 @@ move x11-misc/synergy-plus x11-misc/synergy
 move media-sound/minitunes media-sound/musique
 move dev-perl/sdl-perl dev-perl/SDL
 move net-libs/telepathy-qt4 net-libs/telepathy-qt
+slotmove =dev-libs/libmowgli-2.0.0_alpha1 0 2
