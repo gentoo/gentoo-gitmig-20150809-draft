@@ -1,6 +1,10 @@
 # ChangeLog for media-video/subtitleripper
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.23 2010/08/03 20:16:15 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.24 2012/02/03 17:51:16 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  subtitleripper-0.3.4-r4.ebuild:
+  Stable for amd64, wrt bug #397119
 
 *subtitleripper-0.3.4-r4 (03 Aug 2010)
 
