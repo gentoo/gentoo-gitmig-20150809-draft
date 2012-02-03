@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/hostapd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.116 2011/11/07 19:50:23 gurligebis Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.117 2012/02/03 13:45:13 gurligebis Exp $
+
+*hostapd-1.0_rc2 (03 Feb 2012)
+
+  03 Feb 2012; <gurligebis@gentoo.org> +hostapd-1.0_rc2.ebuild:
+  Adding 1.0_rc2 to allow people help testing, hardmasked for now.
 
   07 Nov 2011; <gurligebis@gentoo.org> hostapd-0.7.3.ebuild:
   Fixing compiling with both libnl-1.1 and libnl-3 installed.
