@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/txw2-runtime
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.11 2008/10/05 16:38:49 serkan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.12 2012/02/03 16:54:40 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  txw2-runtime-20070407-r2.ebuild:
+  Stable for amd64, wrt bug #396883
 
 *txw2-runtime-20070407-r2 (05 Oct 2008)
 
