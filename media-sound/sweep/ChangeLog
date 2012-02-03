@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sweep
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.43 2011/03/29 07:41:46 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.44 2012/02/03 17:49:29 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> sweep-0.9.3-r1.ebuild:
+  Stable for amd64, wrt bug #397107
 
 *sweep-0.9.3-r1 (29 Mar 2011)
 
