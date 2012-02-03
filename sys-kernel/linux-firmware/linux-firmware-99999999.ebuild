@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.13 2012/02/02 13:15:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.14 2012/02/03 22:56:13 chithanh Exp $
 
-EAPI=3
+EAPI=4
 inherit savedconfig
 
 if [[ ${PV} == 99999999* ]]; then
@@ -10,7 +10,7 @@ if [[ ${PV} == 99999999* ]]; then
 	SRC_URI=""
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/firmware/${PN}.git"
 else
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	SRC_URI="mirror://gentoo/${P}.tar.gz"
 fi
 
 DESCRIPTION="Linux firmware files"
@@ -53,6 +53,16 @@ RDEPEND="!savedconfig? (
 	)"
 #add anything else that collides to this
 
+src_unpack() {
+	if [[ ${PV} == 99999999* ]]; then
+		git-2_src_unpack
+	else
+		default
+		# rename directory from git snapshot tarball
+		mv ${PN}-*/ ${P} || die
+	fi
+}
+
 src_prepare() {
 	echo "# Remove files that shall not be installed from this list." > ${PN}.conf
 	find * \( \! -type d -and \! -name ${PN}.conf \) >> ${PN}.conf
@@ -64,6 +74,8 @@ src_prepare() {
 			| sort ${PN}.conf ${PN}.conf - \
 			| uniq -u | xargs -r rm
 		eend $? || die
+		# remove empty directories, bug #396073
+		find -type d -empty -delete || die
 	fi
 }
 
@@ -71,7 +83,7 @@ src_install() {
 	save_config ${PN}.conf
 	rm ${PN}.conf || die
 	insinto /lib/firmware/
-	doins -r * || die "Install failed!"
+	doins -r *
 }
 
 pkg_preinst() {
