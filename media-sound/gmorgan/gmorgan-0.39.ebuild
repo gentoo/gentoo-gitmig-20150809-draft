@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.39.ebuild,v 1.1 2011/05/26 14:42:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.39.ebuild,v 1.2 2012/02/03 17:48:01 ago Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gmorgan/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="
