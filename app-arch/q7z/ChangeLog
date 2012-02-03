@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/q7z
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/ChangeLog,v 1.9 2011/04/16 19:35:02 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/ChangeLog,v 1.10 2012/02/03 18:35:55 hwoarang Exp $
+
+  03 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  reassigned to maintainer-needed per bug #400689
 
   16 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   q7z-0.8.0.ebuild:
