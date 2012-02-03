@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.230 2012/01/18 12:49:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.231 2012/02/03 14:08:22 dilfridge Exp $
+
+  03 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Assign to maintainer-needed
 
 *libreoffice-3.5.0.1 (18 Jan 2012)
 
