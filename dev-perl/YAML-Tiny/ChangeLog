@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/YAML-Tiny
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Tiny/ChangeLog,v 1.29 2011/07/30 10:47:48 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Tiny/ChangeLog,v 1.30 2012/02/03 16:50:57 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> YAML-Tiny-1.500.0.ebuild:
+  Stable for amd64, wrt bug #396961
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> YAML-Tiny-1.41.ebuild,
   YAML-Tiny-1.500.0.ebuild:
