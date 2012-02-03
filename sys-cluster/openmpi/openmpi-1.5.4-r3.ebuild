@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.4-r2.ebuild,v 1.1 2012/01/20 13:15:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.4-r3.ebuild,v 1.1 2012/02/03 21:55:52 jsbronder Exp $
 
 EAPI=4
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs
@@ -10,34 +10,31 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A high-performance message passing library (MPI)"
 HOMEPAGE="http://www.open-mpi.org"
-SRC_URI="http://www.open-mpi.org/software/ompi/v1.5/downloads/${MY_P}.tar.bz2"
+SRC_URI="http://www.open-mpi.org/software/ompi/v${P%.*}/downloads/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux"
 IUSE="+cxx elibc_FreeBSD fortran heterogeneous infiniband ipv6 knem mpi-threads
-	+numa pbs open-mx psm romio sctp slurm threads vt"
+	+numa open-mx pbs psm romio sctp slurm threads vt"
 
-REQUIRED_USE="^^ (
-					( !slurm !pbs )
-					( slurm !pbs )
-					( !slurm pbs )
-				)
-			psm? ( infiniband )"
+REQUIRED_USE="slurm? ( !pbs )
+	pbs? ( !slurm )
+	psm? ( infiniband )"
 
 RDEPEND="
+	elibc_FreeBSD? ( dev-libs/libexecinfo )
 	fortran? ( virtual/fortran )
-	pbs? ( sys-cluster/torque )
 	infiniband? ( sys-infiniband/openib )
+	knem? ( sys-cluster/knem )
+	numa? ( sys-process/numactl )
+	open-mx? ( sys-cluster/open-mx )
+	pbs? ( sys-cluster/torque )
+	psm? ( sys-infiniband/infinipath-psm )
 	sctp? ( net-misc/lksctp-tools )
 	vt? (
 		!dev-libs/libotf
 		!app-text/lcdf-typetools
 	)
-	elibc_FreeBSD? ( dev-libs/libexecinfo )
-	knem? ( sys-cluster/knem )
-	numa? ( sys-process/numactl )
-	open-mx? ( sys-cluster/open-mx )
-	psm? ( sys-infiniband/infinipath-psm )
 	>=sys-apps/hwloc-1.3
 	!sys-cluster/mpich
 	!sys-cluster/lam-mpi
@@ -82,8 +79,7 @@ src_configure() {
 		)
 
 	if use mpi-threads; then
-		myconf+=(
-			--enable-mpi-thread-multiple
+		myconf+=(--enable-mpi-thread-multiple
 			--enable-opal-multi-threads
 			)
 	fi
@@ -93,10 +89,10 @@ src_configure() {
 			myconf+=(--disable-mpi-f90)
 		elif [[ $(tc-getFC) =~ if ]]; then
 			# Enabled here as gfortran compile times are huge with this enabled.
-			myconf+=( --with-mpi-f90-size=medium )
+			myconf+=(--with-mpi-f90-size=medium)
 		fi
 	else
-		myconf+=( --disable-mpi-f90 --disable-mpi-f77 )
+		myconf+=(--disable-mpi-f90 --disable-mpi-f77)
 	fi
 
 	! use vt && myconf+=(--enable-contrib-no-build=vt)
@@ -111,10 +107,15 @@ src_configure() {
 		$(use_enable cxx mpi-cxx) \
 		$(use_enable romio io-romio) \
 		$(use_enable heterogeneous) \
-		$(use_with pbs tm) \
-		$(use_with slurm) \
 		$(use_enable ipv6) \
-		$(use_with sctp sctp)
+		$(use_with infiniband openib "${EPREFIX}"/usr) \
+		$(use_with knem knem "${EPREFIX}"/usr) \
+		$(use_with numa libnuma "${EPREFIX}"/usr) \
+		$(use_with open-mx mx "${EPREFIX}"/usr) \
+		$(use_with pbs tm) \
+		$(use_with psm psm "${EPREFIX}"/usr) \
+		$(use_with sctp sctp) \
+		$(use_with slurm)
 }
 
 src_install () {
