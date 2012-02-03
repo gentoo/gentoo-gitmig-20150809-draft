@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/fakechroot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.18 2011/12/19 13:14:03 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.19 2012/02/03 22:35:09 hwoarang Exp $
+
+*fakechroot-2.16 (03 Feb 2012)
+
+  03 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +fakechroot-2.16.ebuild:
+  version bump. Thanks to Michael (kensington) <gentoo@scribeofthenile.com>. Bug
+  #400867
 
   19 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
   +files/fakechroot-2.15-fix_chk_fail.patch:
