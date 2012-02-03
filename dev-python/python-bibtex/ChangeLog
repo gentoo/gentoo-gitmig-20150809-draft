@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-bibtex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.22 2011/05/03 14:10:34 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.23 2012/02/03 16:53:59 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> python-bibtex-1.2.5.ebuild:
+  Stable for amd64, wrt bug #397007
 
 *python-bibtex-1.2.5 (03 May 2011)
 
