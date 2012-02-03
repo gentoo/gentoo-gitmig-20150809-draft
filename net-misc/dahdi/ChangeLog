@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.35 2012/02/02 09:05:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.36 2012/02/03 15:35:38 chainsaw Exp $
+
+  03 Feb 2012; Tony Vroon <chainsaw@gentoo.org> -dahdi-2.4.1-r1.ebuild,
+  -dahdi-2.5.0.ebuild, -dahdi-2.5.0-r2.ebuild, -dahdi-2.5.0.2-r1.ebuild:
+  Remove old ebuilds now that stabling has been completed. Closes bug #401077
+  by Sergio Basurto.
 
   02 Feb 2012; Jeff Horelick <jdhore@gentoo.org> dahdi-2.5.0.2-r2.ebuild:
   x86 stable per bug 401077
