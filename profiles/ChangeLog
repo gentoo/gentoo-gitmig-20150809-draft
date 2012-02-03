@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6173 2012/02/03 01:11:35 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6174 2012/02/03 12:57:58 maksbotan Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
+  Mask =sys-libs/ldb-1.1.4
 
   03 Feb 2012; Nathan Phillip Brink <binki@gentoo.org> updates/1Q-2012:
   Move dev-libs/libmowgli-2* to SLOT=2.

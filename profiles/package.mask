@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13454 2012/02/02 22:14:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13455 2012/02/03 12:57:58 maksbotan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Maxim Koltsov <maksbotan@gentoo.org> (03 Feb 2012)
+# Does not compile, waiting for patch
+=sys-libs/ldb-1.1.4
 
 # Markos Chandras <hwoarang@gentoo.org> (02 Feb 2012)
 # Multiple security bugs: 284356, 341085, 369137, 384243, 401993
