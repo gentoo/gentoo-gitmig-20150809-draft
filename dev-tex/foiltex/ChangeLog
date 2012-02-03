@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/foiltex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/ChangeLog,v 1.14 2009/06/17 07:39:39 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/ChangeLog,v 1.15 2012/02/03 16:55:52 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> foiltex-2.1.4b.ebuild:
+  Stable for amd64, wrt bug #397015
 
 *foiltex-2.1.4b (17 Jun 2009)
 
