@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.29 2012/01/16 11:53:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.30 2012/02/03 14:16:56 dilfridge Exp $
+
+  03 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Assign to maintainer-needed
 
   16 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
   libreoffice-l10n-3.4.5-r1.ebuild:
