@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.105 2012/01/15 16:37:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.106 2012/02/03 16:40:13 ranger Exp $
+
+  03 Feb 2012; Brent Baude <ranger@gentoo.org> GD-2.460.0.ebuild:
+  Marking GD-2.460.0 ppc for bug 394843
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> GD-2.460.0.ebuild:
   alpha/ia64/sparc stable wrt #394843
