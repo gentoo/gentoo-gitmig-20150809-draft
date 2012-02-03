@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/varconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.30 2012/01/28 21:09:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.31 2012/02/03 17:47:08 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> varconf-0.6.6.ebuild:
+  Stable for amd64, wrt bug #397077
 
 *varconf-0.6.7 (28 Jan 2012)
 
