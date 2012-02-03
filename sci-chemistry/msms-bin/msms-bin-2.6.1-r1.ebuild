@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/msms-bin-2.6.1-r1.ebuild,v 1.5 2011/03/22 08:10:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/msms-bin-2.6.1-r1.ebuild,v 1.6 2012/02/03 11:52:38 jlec Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ RESTRICT="fetch"
 
 S="${WORKDIR}"
 
-QA_DT_HASH="${EROOT#/}opt/bin"
+QA_DT_HASH="${EROOT#/}opt/bin/.*"
 
 pkg_nofetch() {
 	einfo "Please download ${A} from http://mgltools.scripps.edu/downloads#msms and place it to ${DISTDIR}"
