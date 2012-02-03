@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/genindent
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.18 2010/11/14 07:09:25 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.19 2012/02/03 14:44:47 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> genindent-1.1.ebuild:
+  Stable for amd64, wrt bug #396851
 
 *genindent-1.1 (14 Nov 2010)
 
