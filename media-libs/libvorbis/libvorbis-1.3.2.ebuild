@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.3.2.ebuild,v 1.3 2012/01/28 15:15:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.3.2.ebuild,v 1.4 2012/02/03 17:12:09 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit autotools
 
 DESCRIPTION="The Ogg Vorbis sound file format library"
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.xiph.org/releases/vorbis/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="static-libs"
 
 RDEPEND="media-libs/libogg"
@@ -29,13 +29,11 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable static-libs static)
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS CHANGES
-	find "${D}" -name '*.la' -exec rm -f '{}' +
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
