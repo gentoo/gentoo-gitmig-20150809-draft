@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grabc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grabc/ChangeLog,v 1.12 2010/02/08 11:25:33 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grabc/ChangeLog,v 1.13 2012/02/03 18:34:29 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> grabc-1.1-r1.ebuild:
+  Stable for amd64, wrt bug #397267
 
 *grabc-1.1-r1 (08 Feb 2010)
 
