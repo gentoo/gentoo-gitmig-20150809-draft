@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmrss
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/ChangeLog,v 1.17 2011/11/24 12:27:57 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/ChangeLog,v 1.18 2012/02/03 17:53:28 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libmrss-0.19.2.ebuild:
+  Stable for amd64, wrt bug #397157
 
   24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #158470
