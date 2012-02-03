@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.5.4.ebuild,v 1.4 2011/10/11 16:59:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.5.4.ebuild,v 1.5 2012/02/03 01:35:54 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="altivec chardet nls session sse2"
 RDEPEND=">=dev-libs/dbus-glib-0.60
 	>=dev-libs/glib-2.16
 	>=dev-libs/libmcs-0.7.1-r2
-	>=dev-libs/libmowgli-0.9.50
+	>=dev-libs/libmowgli-0.9.50:0
 	dev-libs/libxml2
 	>=x11-libs/cairo-1.2.6
 	>=x11-libs/gtk+-2.14:2
