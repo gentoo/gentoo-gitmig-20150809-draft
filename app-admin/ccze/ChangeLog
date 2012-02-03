@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ccze
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.27 2010/05/17 20:15:47 joker Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.28 2012/02/03 13:22:43 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ccze-0.2.1-r3.ebuild:
+  Cleanup before stabilization
 
   17 May 2010; Christian Birchinger <joker@gentoo.org> ccze-0.2.1-r2.ebuild,
   ccze-0.2.1-r3.ebuild:
