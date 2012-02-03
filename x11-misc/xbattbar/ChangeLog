@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbattbar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/ChangeLog,v 1.13 2010/07/08 15:47:01 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/ChangeLog,v 1.14 2012/02/03 22:07:48 ranger Exp $
+
+  03 Feb 2012; Brent Baude <ranger@gentoo.org> xbattbar-1.4.3.ebuild:
+  Marking xbattbar-1.4.3 ppc for bug 397279
 
 *xbattbar-1.4.3 (08 Jul 2010)
 

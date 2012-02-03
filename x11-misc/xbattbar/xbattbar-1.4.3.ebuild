@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/xbattbar-1.4.3.ebuild,v 1.1 2010/07/08 15:47:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/xbattbar-1.4.3.ebuild,v 1.2 2012/02/03 22:07:48 ranger Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/x/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
