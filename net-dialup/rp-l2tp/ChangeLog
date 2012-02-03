@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rp-l2tp
-# Copyright 2003-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.17 2008/10/18 08:50:27 mrness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.18 2012/02/03 17:52:10 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> rp-l2tp-0.4-r2.ebuild:
+  Stable for amd64, wrt bug #397141
 
 *rp-l2tp-0.4-r2 (18 Oct 2008)
 
