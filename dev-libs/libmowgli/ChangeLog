@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.58 2012/01/31 05:10:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.59 2012/02/03 01:10:52 binki Exp $
+
+  03 Feb 2012; Nathan Phillip Brink <binki@gentoo.org>
+  libmowgli-2.0.0_alpha1.ebuild:
+  Move dev-libs/libmowgli-2* to SLOT=2 as it has an (almost superficially)
+  different API from libmowgli-1. EAPI=4 code cleanup.
 
 *libmowgli-2.0.0_alpha1 (31 Jan 2012)
 
