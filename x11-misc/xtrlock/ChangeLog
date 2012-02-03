@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtrlock
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.16 2010/09/12 19:26:59 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.17 2012/02/03 22:24:19 ranger Exp $
+
+  03 Feb 2012; Brent Baude <ranger@gentoo.org> xtrlock-2.0-r3.ebuild:
+  Marking xtrlock-2.0-r3 ppc for bug 397289
 
 *xtrlock-2.0-r3 (12 Sep 2010)
 
