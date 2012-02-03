@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-advancednotifications
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-advancednotifications/ChangeLog,v 1.6 2012/02/02 17:38:17 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-advancednotifications/ChangeLog,v 1.7 2012/02/03 12:31:43 maksbotan Exp $
+
+  03 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> Manifest:
+  Fix broken manifests
 
 *leechcraft-advancednotifications-0.4.99 (02 Feb 2012)
 
