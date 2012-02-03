@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.59 2012/01/07 22:00:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.60 2012/02/03 23:30:14 williamh Exp $
 
 # Gentoo Base Profile
 
@@ -43,7 +43,6 @@
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/kbd
-*sys-apps/module-init-tools
 #*>=sys-apps/portage-2.0.51.22
 *sys-process/procps
 *sys-process/psmisc
@@ -68,6 +67,7 @@
 *virtual/editor
 *virtual/libc
 *virtual/man
+*virtual/modutils
 *virtual/os-headers
 *virtual/package-manager
 *virtual/pager
