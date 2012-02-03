@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/kcheckpass-4.8.0.ebuild,v 1.1 2012/01/25 18:16:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/kcheckpass-4.8.0-r1.ebuild,v 1.1 2012/02/03 15:58:55 johu Exp $
 
 EAPI=4
 
@@ -20,10 +20,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	x11-libs/libxkbfile
 "
-
-PATCHES=(
-	"${FILESDIR}/kdebase-4.0.2-pam-optional.patch"
-)
 
 src_prepare() {
 	kde4-meta_src_prepare
