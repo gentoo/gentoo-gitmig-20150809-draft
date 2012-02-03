@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gogoc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.14 2011/05/07 18:14:11 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.15 2012/02/03 09:22:02 voyageur Exp $
+
+  03 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> files/gogoc.rc:
+  Fix warning message in init script, bug #401877
 
   07 May 2011; Thomas Kahle <tomka@gentoo.org> gogoc-1.2-r1.ebuild:
   x86 stable per bug 362549
