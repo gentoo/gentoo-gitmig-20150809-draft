@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_SmartIRC
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SmartIRC/ChangeLog,v 1.26 2009/08/22 19:28:26 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SmartIRC/ChangeLog,v 1.27 2012/02/03 16:51:29 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  PEAR-Net_SmartIRC-1.0.1.ebuild:
+  Stable for amd64, wrt bug #396991
 
 *PEAR-Net_SmartIRC-1.0.1 (22 Aug 2009)
 
