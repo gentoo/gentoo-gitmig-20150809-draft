@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty-docs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.53 2011/09/07 19:14:30 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.54 2012/02/03 16:53:32 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> smarty-docs-3.0.ebuild:
+  Stable for amd64, wrt bug #397003
 
   07 Sep 2011; Ole Markus With <olemarkus@gentoo.org> +smarty-docs-2.6.ebuild:
   Readded 2.6 and cleaned it up
