@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.22 2012/01/26 00:42:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.23 2012/02/03 14:29:44 voyageur Exp $
 
 EAPI=3
 
@@ -47,6 +47,10 @@ src_prepare() {
 	sed -e "/scanview.css\|sorttable.js/s#\$RealBin#${EPREFIX}/usr/share/${PN}#" \
 		-i tools/clang/tools/scan-build/scan-build \
 		|| die "scan-build sed failed"
+	# Set correct path for gold plugin
+	sed -e "/LLVMgold.so/s#lib/#$(get_libdir)/llvm/#" \
+		-i  tools/clang/lib/Driver/Tools.cpp \
+		|| die "gold plugin path sed failed"
 	# Specify python version
 	python_convert_shebangs 2 tools/clang/tools/scan-view/scan-view
 
