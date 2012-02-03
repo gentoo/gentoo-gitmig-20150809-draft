@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/kterm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.28 2011/08/02 05:51:06 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.29 2012/02/03 22:44:46 ranger Exp $
+
+  03 Feb 2012; Brent Baude <ranger@gentoo.org> kterm-6.2.0-r5.ebuild:
+  Marking kterm-6.2.0-r5 ppc for bug 397295
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> kterm-6.2.0-r4.ebuild,
   kterm-6.2.0-r5.ebuild:
