@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.29 2012/02/03 01:24:17 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.30 2012/02/03 02:02:37 binki Exp $
+
+*atheme-services-7.0.0_alpha11 (03 Feb 2012)
+
+  03 Feb 2012; Nathan Phillip Brink <binki@gentoo.org>
+  +atheme-services-7.0.0_alpha11.ebuild,
+  +files/atheme-services-7.0.0_alpha11-unrealircd.patch:
+  Bump to unstable atheme-services-7.0.0_alpha11.
 
   03 Feb 2012; Nathan Phillip Brink <binki@gentoo.org>
   atheme-services-6.0.9.ebuild, atheme-services-6.0.9-r1.ebuild,

@@ -1,0 +1,109 @@
+From 5f64c859cba285f4207a08cc4f02dc450a5b600d Mon Sep 17 00:00:00 2001
+From: Nathan Phillip Brink <binki@gentoo.org>
+Date: Mon, 28 Nov 2011 05:28:11 +0000
+Subject: [PATCH] libathemecore: Fix NULL dereference when talking to IRCds without UID support.
+
+Fixes regression caused by c14ab567552c0053cb4c5d184956d0a1a7a5d19f.
+---
+ include/users.h          |    2 +-
+ libathemecore/services.c |    6 +++---
+ libathemecore/users.c    |   12 ++++++------
+ 3 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/include/users.h b/include/users.h
+index 16deee9..643a23a 100644
+--- a/include/users.h
++++ b/include/users.h
+@@ -55,7 +55,7 @@ struct user_
+ #define UF_WASENFORCED 0x00002000 /* this user was FNCed once already */
+ #define UF_DEAF        0x00004000 /* user does not receive channel msgs */
+ 
+-#define CLIENT_NAME(user)	((user)->uid[0] ? (user)->uid : (user)->nick)
++#define CLIENT_NAME(user)	((user)->uid != NULL ? (user)->uid : (user)->nick)
+ 
+ typedef struct {
+ 	user_t *u;		/* User in question. Write NULL here if you delete the user. */
+diff --git a/libathemecore/services.c b/libathemecore/services.c
+index abcd7fc..3725234 100644
+--- a/libathemecore/services.c
++++ b/libathemecore/services.c
+@@ -245,9 +245,9 @@ void services_init(void)
+ 
+ 	MOWGLI_PATRICIA_FOREACH(svs, &state, services_name)
+ 	{
+-		if (ircd->uses_uid && svs->me->uid[0] == '\0')
++		if (ircd->uses_uid && svs->me->uid == NULL)
+ 			user_changeuid(svs->me, uid_get());
+-		else if (!ircd->uses_uid && svs->me->uid[0] != '\0')
++		else if (!ircd->uses_uid && svs->me->uid != NULL)
+ 			user_changeuid(svs->me, NULL);
+ 		if (!ircd->uses_uid)
+ 			kill_id_sts(NULL, svs->nick, "Attempt to use service nick");
+@@ -311,7 +311,7 @@ void reintroduce_user(user_t *u)
+ 	/* Reintroduce with a new UID.  This avoids problems distinguishing
+ 	 * commands targeted at the old and new user.
+ 	 */
+-	if (*u->uid)
++	if (u->uid != NULL)
+ 	{
+ 		user_changeuid(u, uid_get());
+ 	}
+diff --git a/libathemecore/users.c b/libathemecore/users.c
+index 432b9ea..18a8855 100644
+--- a/libathemecore/users.c
++++ b/libathemecore/users.c
+@@ -134,7 +134,7 @@ user_t *user_add(const char *nick, const char *user, const char *host,
+ 		{
+ 			wallops("Server %s is introducing nick %s which already exists on %s",
+ 					server->name, nick, u2->server->name);
+-			if (uid != NULL && *u2->uid != '\0')
++			if (uid != NULL && u2->uid != NULL)
+ 			{
+ 				kill_id_sts(NULL, uid, "Ghost detected via nick collision (new)");
+ 				kill_id_sts(NULL, u2->uid, "Ghost detected via nick collision (old)");
+@@ -244,7 +244,7 @@ void user_delete(user_t *u, const char *comment)
+ 
+ 	mowgli_patricia_delete(userlist, u->nick);
+ 
+-	if (*u->uid)
++	if (u->uid != NULL)
+ 		mowgli_patricia_delete(uidlist, u->uid);
+ 
+ 	mowgli_node_delete(&u->snode, &u->server->userlist);
+@@ -364,13 +364,13 @@ void user_changeuid(user_t *u, const char *uid)
+ {
+ 	return_if_fail(u != NULL);
+ 
+-	if (*u->uid)
++	if (u->uid != NULL)
+ 		mowgli_patricia_delete(uidlist, u->uid);
+ 
+ 	strshare_unref(u->uid);
+ 	u->uid = strshare_get(uid);
+ 
+-	if (*u->uid)
++	if (u->uid != NULL)
+ 		mowgli_patricia_add(uidlist, u->uid, u);
+ }
+ 
+@@ -420,7 +420,7 @@ bool user_changenick(user_t *u, const char *nick, time_t ts)
+ 		slog(LG_INFO, "user_changenick(): nick collision on %s", nick);
+ 		if (u2->server == me.me)
+ 		{
+-			if (*u->uid != '\0')
++			if (u->uid != NULL)
+ 			{
+ 				/* If the changing client has a UID, our
+ 				 * client will have a UID too and the
+@@ -466,7 +466,7 @@ bool user_changenick(user_t *u, const char *nick, time_t ts)
+ 			wallops("Server %s is sending nick change from %s to %s which already exists on %s",
+ 					u->server->name, u->nick, nick,
+ 					u2->server->name);
+-			if (*u->uid != '\0' && *u2->uid != '\0')
++			if (u->uid != NULL && u2->uid != NULL)
+ 			{
+ 				kill_id_sts(NULL, u->uid, "Ghost detected via nick change collision (new)");
+ 				kill_id_sts(NULL, u2->uid, "Ghost detected via nick change collision (old)");
+-- 
+1.7.3.4
+
