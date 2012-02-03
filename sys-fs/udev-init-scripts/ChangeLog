@@ -1,0 +1,12 @@
+# ChangeLog for sys-fs/udev-init-scripts
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.1 2012/02/03 19:14:55 williamh Exp $
+
+*udev-init-scripts-9999 (02 Feb 2012)
+*udev-init-scripts-8 (02 Feb 2012)
+
+  02 Feb 2012; William Hubbs <williamh@gentoo.org> +udev-init-scripts-8.ebuild,
+  +udev-init-scripts-9999.ebuild, +metadata.xml:
+  Initial commit of udev-init-scripts. This package contains the openrc init
+  scripts and helpers for udev.
+
