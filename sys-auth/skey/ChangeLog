@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/skey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.16 2012/01/05 18:47:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.17 2012/02/03 21:33:44 hwoarang Exp $
+
+  03 Feb 2012; Markos Chandras <hwoarang@gentoo.org> skey-1.1.5-r8.ebuild:
+  Stable on amd64 wrt bug #402041
 
   05 Jan 2012; Ulrich Mueller <ulm@gentoo.org> skey-1.1.5-r8.ebuild:
   New patchset with skeyinfo.c and skey.3 updated from newer NetBSD version.
