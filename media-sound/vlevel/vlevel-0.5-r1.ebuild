@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5-r1.ebuild,v 1.1 2011/06/02 06:34:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5-r1.ebuild,v 1.2 2012/02/03 17:50:23 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/vlevel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="media-libs/ladspa-sdk"
