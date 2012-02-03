@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.38 2012/01/17 00:01:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.39 2012/02/03 15:23:26 dilfridge Exp $
+
+  03 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> rekonq-0.8.1.ebuild:
+  Fix LINGUAS handling (now rekonq adheres to KDE doc standards), bug 401525
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -rekonq-0.8.0.ebuild:
   Remove old.

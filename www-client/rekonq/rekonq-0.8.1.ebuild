@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.8.1.ebuild,v 1.3 2012/01/16 23:59:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.8.1.ebuild,v 1.4 2012/02/03 15:23:26 dilfridge Exp $
 
 EAPI=4
 
@@ -8,9 +8,10 @@ WEBKIT_REQUIRED="always"
 QT_MINIMAL="4.7"
 KDE_MINIMAL="4.7"
 KDE_SCM="git"
-# Yay for non-compatible linguas handling
-#KDE_LINGUAS_DIR="i18n"
-#KDE_LINGUAS="ca cs da de el en_GB es et fr hu it ja ko lt nb nds nl pt_BR pt ru sl sr sv uk zh_CN"
+
+KDE_LINGUAS="bs ca@valencia da el eo et fa fr gl is ja lt nds pl pt_BR ru sl sr@ijekavian sr@latin th ug zh_CN
+bg ca cs de en_GB es eu fi ga hu it ko nb nl pt ro sk sr sr@ijekavianlatin sv tr uk zh_TW"
+
 KDE_DOC_DIRS="doc"
 KDE_HANDBOOK="optional"
 VIRTUALX_REQUIRED=test
