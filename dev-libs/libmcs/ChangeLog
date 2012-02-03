@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmcs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.50 2011/09/02 09:49:56 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.51 2012/02/03 01:29:26 jdhore Exp $
+
+  03 Feb 2012; Jeff Horelick <jdhore@gentoo.org> libmcs-0.7.1-r2.ebuild,
+  libmcs-0.7.1-r3.ebuild, libmcs-0.7.2.ebuild, metadata.xml:
+  Fix dependency to use libmowgli-1. Also take over maintenance as I know
+  chainsaw no longer wants it and do a quick & dirty conversion to EAPI=4.
 
 *libmcs-0.7.2 (02 Sep 2011)
 
