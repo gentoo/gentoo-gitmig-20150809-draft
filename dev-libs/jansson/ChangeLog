@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/jansson
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.1 2011/11/04 21:09:20 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.2 2012/02/03 22:50:37 hwoarang Exp $
+
+*jansson-2.3 (03 Feb 2012)
+
+  03 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +jansson-2.3.ebuild:
+  version bump. Bug #401581
 
 *jansson-2.2.1 (04 Nov 2011)
 
