@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.314 2012/01/18 17:11:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.315 2012/02/03 12:31:38 chainsaw Exp $
+
+*alsa-utils-1.0.25 (03 Feb 2012)
+
+  03 Feb 2012; Tony Vroon <chainsaw@gentoo.org> +alsa-utils-1.0.25.ebuild,
+  +files/alsa-utils-1.0.25-separate-usr-var-fs.patch:
+  Version bump. Add missed libsamplerate dependency, closes bug #383263 by
+  Hans. Patch by Martin van Gagern silences warnings when using a separate /usr
+  or /var partition, closes bug #384375. Upstream changes fix build breakage
+  when SED is set in the environment, closes bug #366587 by Nils Kneuper.
+  Automatic module loading & unloading is unsupported and may be removed soon.
 
   18 Jan 2012; William Hubbs <williamh@gentoo.org> alsa-utils-1.0.23-r1.ebuild,
   alsa-utils-1.0.24.2-r1.ebuild:
