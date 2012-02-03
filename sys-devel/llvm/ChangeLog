@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.61 2012/01/27 15:21:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.62 2012/02/03 13:11:42 voyageur Exp $
+
+*llvm-3.0-r1 (03 Feb 2012)
+
+  03 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> -llvm-3.0.ebuild,
+  +llvm-3.0-r1.ebuild, +files/llvm-3.0-gold_LTO_link.patch:
+  Fix gold plugin build (using correct libLTO), thanks Rafał Mużyło and
+  grobian in bug #398391
 
   27 Jan 2012; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.0.ebuild,
   +files/llvm-3.0-PPC_macro.patch:
