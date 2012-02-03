@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test-Harness
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.61 2011/07/30 12:26:09 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.62 2012/02/03 17:51:46 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Test-Harness-3.230.0.ebuild:
+  Stable for amd64, wrt bug #397197
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> Test-Harness-3.17.ebuild,
   Test-Harness-3.22.ebuild, Test-Harness-3.230.0.ebuild:
