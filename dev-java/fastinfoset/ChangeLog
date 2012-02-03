@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fastinfoset
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastinfoset/ChangeLog,v 1.7 2008/10/05 16:23:51 serkan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastinfoset/ChangeLog,v 1.8 2012/02/03 16:52:57 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> fastinfoset-1.2.1-r1.ebuild:
+  Stable for amd64, wrt bug #396873
 
 *fastinfoset-1.2.1-r1 (05 Oct 2008)
 
