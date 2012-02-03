@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/libguess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.13 2012/02/02 08:52:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.14 2012/02/03 01:32:23 jdhore Exp $
+
+  03 Feb 2012; Jeff Horelick <jdhore@gentoo.org> libguess-1.0.ebuild,
+  libguess-1.1.ebuild:
+  Fix dependency to use libmowgli-1.
 
   02 Feb 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
   Take ownership as Chainsaw is no longer affiliated with the Atheme project.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/libguess-1.0.ebuild,v 1.11 2012/01/19 09:05:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/libguess-1.0.ebuild,v 1.12 2012/02/03 01:32:23 jdhore Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-li
 IUSE="examples"
 
 RDEPEND="
-	>=dev-libs/libmowgli-0.7.0"
+	>=dev-libs/libmowgli-0.7.0:0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0"
