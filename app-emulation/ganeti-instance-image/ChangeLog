@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/ganeti-instance-image
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-image/ChangeLog,v 1.5 2011/05/26 16:44:28 ramereth Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-image/ChangeLog,v 1.6 2012/02/03 14:47:07 ago Exp $
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  ganeti-instance-image-0.5.1.ebuild:
+  Stable for amd64, wrt bug #396799
 
 *ganeti-instance-image-0.5.1 (26 May 2011)
 
