@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.0-r1.ebuild,v 1.10 2011/11/13 11:52:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.0-r1.ebuild,v 1.11 2012/02/04 18:25:49 tetromino Exp $
 
 EAPI="4"
 
@@ -43,8 +43,6 @@ src_prepare() {
 	# This will avoid polluting the pkg-config file with versioned libpng,
 	# which is causing problems with libpng14 -> libpng15 upgrade
 	sed -i -e 's:libpng15:libpng libpng15:' configure.ac || die
-
-	elibtoolize
 	eautoreconf
 }
 

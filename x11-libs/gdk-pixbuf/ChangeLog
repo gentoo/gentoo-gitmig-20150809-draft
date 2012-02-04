@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gdk-pixbuf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.44 2011/12/31 18:24:32 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.45 2012/02/04 18:25:49 tetromino Exp $
+
+  04 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gdk-pixbuf-2.24.0-r1.ebuild:
+  Drop superfluous elibtoolize call (bug #401983, thanks to Julian W.)
 
 *gdk-pixbuf-2.24.1 (31 Dec 2011)
 
