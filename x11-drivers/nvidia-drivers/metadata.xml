@@ -12,5 +12,9 @@
   <email>spock@gentoo.org</email>
   <description>Focused on CUDA and new kernel support</description>
 </maintainer>
+<maintainer>
+  <email>xarthisius@gentoo.org</email>
+  <description>Blame me on all OpenCL issues</description>
+</maintainer>
 <longdescription>NVIDIA X11 driver and GLX libraries</longdescription>
 </pkgmetadata>
