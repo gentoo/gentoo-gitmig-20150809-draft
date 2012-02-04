@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ettercap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.86 2011/12/09 20:14:11 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.87 2012/02/04 21:11:14 radhermit Exp $
+
+*ettercap-0.7.4.1 (04 Feb 2012)
+
+  04 Feb 2012; Tim Harder <radhermit@gentoo.org> +ettercap-0.7.4.1.ebuild:
+  Version bump.
 
   09 Dec 2011; Tim Harder <radhermit@gentoo.org>
   files/ettercap-0.7.4-autotools.patch:
