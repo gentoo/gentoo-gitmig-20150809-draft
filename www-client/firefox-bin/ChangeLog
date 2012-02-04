@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.82 2012/01/31 18:09:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.83 2012/02/04 18:35:30 nirbheek Exp $
+
+  04 Feb 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-bin-10.0.ebuild:
+  Port to the new mozlinguas.eclass
 
 *firefox-bin-10.0 (31 Jan 2012)
 

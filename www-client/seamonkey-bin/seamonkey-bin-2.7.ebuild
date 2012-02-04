@@ -1,23 +1,30 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.7.ebuild,v 1.1 2012/01/31 20:50:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.7.ebuild,v 1.2 2012/02/04 18:39:18 nirbheek Exp $
 
 EAPI="4"
 
-inherit eutils multilib mozextension pax-utils nsplugins fdo-mime gnome2-utils
+# This list can be updated with scripts/get_langs.sh from the mozilla overlay
+MOZ_LANGS=(be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it ja lt nb-NO nl pl
+pt-PT ru sk sv-SE tr zh-CN)
 
-LANGS=(be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it
-ja lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN)
+MOZ_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
+MOZ_PV="${MOZ_PV/_beta/b}" # Handle beta for SRC_URI
+MOZ_PV="${MOZ_PV/_rc/rc}" # Handle rc for SRC_URI
+MOZ_PN="${PN/-bin}"
+MOZ_P="${MOZ_PN}-${MOZ_PV}"
 
-MY_PV="${PV/_alpha/a}"
-MY_P="${PN}-${MY_PV}"
-MY_PN="${PN/-bin}"
+MOZ_LANGPACK_PREFIX="${MOZ_PV}/langpack/${MOZ_P}."
+MOZ_LANGPACK_SUFFIX=".langpack.xpi"
+
+MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MOZ_PN}/releases/"
+
+inherit eutils multilib mozextension pax-utils nsplugins fdo-mime gnome2-utils mozlinguas
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
-FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
-SRC_URI="
-	amd64? ( ${FTP_URI}/${MY_PV}/contrib/seamonkey-${MY_PV}.en-US.linux-x86_64.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
-	x86? ( ${FTP_URI}/${MY_PV}/linux-i686/en-US/seamonkey-${MY_PV}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
+SRC_URI="${SRC_URI}
+	amd64? ( ${MOZ_FTP_URI}/${MOZ_PV}/contrib/${MOZ_P}.en-US.linux-x86_64.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
+	x86? ( ${MOZ_FTP_URI}/${MOZ_PV}/linux-i686/en-US/${MOZ_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip"
 QA_EXECSTACK="opt/seamonkey/*"
@@ -36,64 +43,13 @@ RDEPEND="dev-libs/dbus-glib
 	x11-libs/libXmu
 	!<www-client/seamonkey-bin-2"
 
-S="${WORKDIR}/seamonkey"
-
-for X in "${LANGS[@]}" ; do
-	# en and en_US are handled internally
-	if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
-		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? (
-			${FTP_URI}/${MY_PV}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
-	fi
-	IUSE="${IUSE} linguas_${X/-/_}"
-	# Install all the specific locale xpis if there's no generic locale xpi
-	# Example: there's no pt.xpi, so install all pt-*.xpi
-	if ! has ${X%%-*} "${LANGS[@]}"; then
-		SRC_URI="${SRC_URI}
-			linguas_${X%%-*}? (
-			${FTP_URI}/${MY_PV}/langpack/seamonkey-${MY_PV}.${X}.langpack.xpi -> ${P/-bin/}-${X}.xpi )"
-	IUSE="${IUSE} linguas_${X%%-*}"
-	fi
-done
-
-linguas() {
-	# Generate the list of language packs called "linguas"
-	# This list is used to install the xpi language packs
-	local LINGUA
-	for LINGUA in ${LINGUAS}; do
-		if has ${LINGUA} en en_US; then
-			# For mozilla products, en and en_US are handled internally
-			continue
-		# If this language is supported by ${P},
-		elif has ${LINGUA} "${LANGS[@]//-/_}"; then
-			# Add the language to linguas, if it isn't already there
-			has ${LINGUA//_/-} "${linguas[@]}" || linguas+=(${LINGUA//_/-})
-			continue
-		# For each short LINGUA that isn't in LANGS,
-		# add *all* long LANGS to the linguas list
-		elif ! has ${LINGUA%%-*} "${LANGS[@]}"; then
-			for LANG in "${LANGS[@]}"; do
-				if [[ ${LANG} == ${LINGUA}-* ]]; then
-					has ${LANG} "${linguas[@]}" || linguas+=(${LANG})
-					continue 2
-				fi
-			done
-		fi
-		ewarn "Sorry, but ${P} does not support the ${LINGUA} locale"
-	done
-}
+S="${WORKDIR}/${MOZ_PN}"
 
 src_unpack() {
 	unpack ${A}
 
-	linguas
-	for X in "${linguas[@]}"; do
-		# FIXME: Add support for unpacking xpis to portage
-		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
-	done
-	if [[ "${linguas[*]}" != "" && "${linguas[*]}" != "en" ]]; then
-		einfo "Selected language packs (first will be default): ${linguas[*]}"
-	fi
+	# Unpack language packs
+	mozlinguas_src_unpack
 }
 
 src_install() {
@@ -103,18 +59,8 @@ src_install() {
 	dodir ${MOZILLA_FIVE_HOME%/*}
 	mv "${S}" "${D}${MOZILLA_FIVE_HOME}"
 
-	linguas
-	for X in "${linguas[@]}"; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P/-bin/}-${X}"
-	done
-
-	local LANG=${linguas%% *}
-	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
-		elog "Setting default locale to ${LANG}"
-		echo "pref(\"general.useragent.locale\", \"${LANG}\");" \
-			>> "${D}${MOZILLA_FIVE_HOME}"/defaults/pref/${PN}-prefs.js || \
-			die "sed failed to change locale"
-	fi
+	# Install language packs
+	mozlinguas_src_install
 
 	# Create /usr/bin/seamonkey-bin
 	dodir /usr/bin/
