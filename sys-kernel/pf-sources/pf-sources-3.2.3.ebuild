@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.2.3.ebuild,v 1.1 2012/02/04 19:41:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.2.3.ebuild,v 1.2 2012/02/04 23:59:25 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -53,8 +53,8 @@ src_prepare(){
 	epatch "${DISTDIR}"/"${PF_FILE}"
 }
 
-K_EXTRAEINFO="${P} can use the following runtime dependencies: 
-sys-apps/tuxonice-userui for minimal userspace progress information related to 
+K_EXTRAEINFO="${P} can use the following runtime dependencies:
+sys-apps/tuxonice-userui for minimal userspace progress information related to
 suspending and resuming process, and sys-power/hibernate-script or sys-power/pm-utils
 which are runtime utilites for hibernating and suspending your computer.
 
