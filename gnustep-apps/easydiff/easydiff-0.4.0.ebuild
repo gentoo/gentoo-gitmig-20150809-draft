@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/easydiff-0.4.0.ebuild,v 1.2 2010/06/19 00:55:09 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/easydiff-0.4.0.ebuild,v 1.3 2012/02/04 14:09:26 ago Exp $
 
 inherit gnustep-2
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/usr-apps/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="cvs"
 
 RDEPEND="cvs? ( dev-vcs/cvs )"
