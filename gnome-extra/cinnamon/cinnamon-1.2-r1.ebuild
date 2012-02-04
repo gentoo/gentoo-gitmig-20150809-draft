@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.2-r1.ebuild,v 1.2 2012/01/30 22:33:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.2-r1.ebuild,v 1.3 2012/02/04 18:14:01 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -41,7 +41,6 @@ COMMON_DEPEND=">=dev-libs/glib-2.29.10:2
 	>=net-im/telepathy-logger-0.2.4[introspection]
 	net-libs/libsoup:2.4[introspection]
 	>=net-libs/telepathy-glib-0.15.5[introspection]
-	>=net-misc/networkmanager-0.8.999[introspection]
 	>=sys-auth/polkit-0.100[introspection]
 	>=x11-wm/muffin-1.0.0[introspection]
 
