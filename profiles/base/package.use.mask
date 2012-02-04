@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.306 2012/01/31 15:20:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.307 2012/02/04 21:30:13 ottxor Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Christoph Junghans <ottxor@gentoo.org> (04 Feb 2012)
+# mips only use flags
+>=sci-libs/fftw-3.3 paired-single zbus
 
 # Alex Alexander <wired@gentoo.org> (29 Jan 2012)
 # Experimental use flags
