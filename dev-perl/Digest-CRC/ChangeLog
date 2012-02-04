@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-CRC
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.4 2011/11/13 20:16:05 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.5 2012/02/04 15:16:13 maksbotan Exp $
+
+  04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer's email in metadata
 
 *Digest-CRC-0.180.0 (13 Nov 2011)
 
