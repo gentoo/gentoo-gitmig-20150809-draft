@@ -1,0 +1,46 @@
+--- config/configure.in.orig	2012-02-04 13:20:17.730436149 +0100
++++ config/configure.in	2012-02-04 13:21:05.333936874 +0100
+@@ -12,6 +12,20 @@
+     CXXFLAGS="$CXXFLAGS -I$x_includes"
+ fi
+ 
++#
++# On hpux10 both x_includes and x_libraries seem to be set to ""
++# This causes compiler options like '-I' and '-L', which break
++# the build.  So, we avoid empty strings here.
++#
++if test -z "$x_includes"
++then
++    x_includes=.
++fi
++if test -z "$x_libraries"
++then
++   x_libraries=.
++fi
++
+ dnl
+ dnl Added a proper check for the snprintf() function
+ dnl
+@@ -381,22 +395,6 @@
+ AC_SUBST(USE_MOD_VERSIONS)
+ dnl  Check for usleep().  Currently, only HP-UX doesn't have it.
+ AC_CHECK_FUNCS(usleep)
+-
+-#
+-# On hpux10 both x_includes and x_libraries seem to be set to ""
+-# This causes compiler options like '-I' and '-L', which break
+-# the build.  So, we avoid empty strings here.
+-#
+-if test -z "$x_includes"
+-then
+-    x_includes=.
+-fi
+-if test -z "$x_libraries"
+-then
+-   x_libraries=.
+-fi
+-
+-
+ AC_SUBST(host_dir)
+ AC_OUTPUT(\
+   Makefile:config/Makefile.top.in \
