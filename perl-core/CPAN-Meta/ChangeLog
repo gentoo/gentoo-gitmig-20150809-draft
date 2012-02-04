@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/CPAN-Meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.21 2012/02/02 19:35:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.22 2012/02/04 07:34:21 tove Exp $
+
+*CPAN-Meta-2.120.351 (04 Feb 2012)
+
+  04 Feb 2012; Torsten Veller <tove@gentoo.org> +CPAN-Meta-2.120.351.ebuild:
+  Version bump
 
   02 Feb 2012; Brent Baude <ranger@gentoo.org> CPAN-Meta-2.112.621.ebuild:
   Marking CPAN-Meta-2.112.621 ppc stable for bug 393397
