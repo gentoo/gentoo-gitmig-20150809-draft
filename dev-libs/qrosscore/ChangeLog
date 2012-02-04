@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/qrosscore
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/ChangeLog,v 1.1 2011/08/22 17:49:35 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/ChangeLog,v 1.2 2012/02/04 14:54:12 maksbotan Exp $
+
+*qrosscore-0.2.2 (04 Feb 2012)
+
+  04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> +qrosscore-0.2.2.ebuild:
+  Bump to 0.2.2, fixes bug 402117
 
 *qrosscore-9999 (22 Aug 2011)
 *qrosscore-0.2.0 (22 Aug 2011)
