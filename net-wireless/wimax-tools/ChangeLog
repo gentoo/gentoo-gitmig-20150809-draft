@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wimax-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax-tools/ChangeLog,v 1.11 2012/01/23 17:02:53 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax-tools/ChangeLog,v 1.12 2012/02/04 16:45:58 alexxy Exp $
+
+  04 Feb 2012; Alexey Shvetsov <alexxy@gentoo.org> -wimax-tools-1.4.5.ebuild,
+  wimax-tools-1.4.5-r1.ebuild:
+  Fix bug #381321
 
   23 Jan 2012; Thomas Kahle <tomka@gentoo.org> wimax-tools-1.4.5-r1.ebuild:
   x86 stable per bug 386121
