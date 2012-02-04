@@ -1,6 +1,9 @@
 # ChangeLog for app-text/flpsed
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.25 2011/10/03 03:18:22 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.26 2012/02/04 20:39:15 ssuominen Exp $
+
+  04 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -flpsed-0.6.1.ebuild:
+  old
 
   03 Oct 2011; Tim Harder <radhermit@gentoo.org> flpsed-0.7.0.ebuild:
   Make fltk version dependency more specific.
