@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13460 2012/02/04 01:28:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13461 2012/02/04 16:15:49 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -310,7 +310,6 @@ www-client/opera-next
 =x11-base/xorg-server-1.11.99*
 =x11-libs/libX11-1.4.99*
 =x11-libs/libXi-1.5.99*
-=x11-libs/libpciaccess-0.12.902
 =x11-proto/inputproto-2.1.99*
 
 # Hanno Boeck <hanno@gentoo.org> (15 Dec 2011)
