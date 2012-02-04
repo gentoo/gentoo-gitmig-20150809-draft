@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/redis-py-2.4.10.ebuild,v 1.1 2011/11/30 16:34:57 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/redis-py-2.4.10.ebuild,v 1.2 2012/02/04 21:09:39 swegener Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 # Tests are not distributed in the tarball.
 # DISTUTILS_SRC_TEST="setup.py"
 
