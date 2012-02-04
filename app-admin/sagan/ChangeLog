@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sagan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.1 2011/08/31 08:36:54 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.2 2012/02/04 14:48:42 maksbotan Exp $
+
+  04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer's email in metadata
 
 *sagan-0.2.0 (31 Aug 2011)
 
