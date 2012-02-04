@@ -118,6 +118,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-BOOST_FOREACH.patch"
 	epatch "${FILESDIR}/${P}-mpi_python3.patch"
 	epatch "${FILESDIR}/${P}-respect_python-buildid.patch"
 	epatch "${FILESDIR}/${P}-support_dots_in_python-buildid.patch"
