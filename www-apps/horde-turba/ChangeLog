@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-turba
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.50 2010/10/22 17:46:03 a3li Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.51 2012/02/04 12:26:29 ago Exp $
+
+  04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> horde-turba-2.3.5.ebuild:
+  Stable for amd64, wrt bug #397249
 
   22 Oct 2010; Alex Legler <a3li@gentoo.org> -horde-turba-2.1.7.ebuild:
   cleanup
