@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/vdrift
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.16 2011/12/16 16:48:36 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.17 2012/02/04 13:14:37 ago Exp $
+
+  04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> vdrift-20111022.ebuild:
+  Stable for amd64, wrt bug #401821
 
 *vdrift-20111022 (16 Dec 2011)
 
