@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.202 2012/02/04 18:51:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.203 2012/02/04 20:34:36 ssuominen Exp $
+
+  04 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -files/fltk-1.1.9-as-needed.patch, -files/fltk-1.1.9-conf-tests.patch,
+  -files/fltk-1.1.9-desktop.patch, -files/fltk-1.1.9-glibc2.10-scandir.patch,
+  -files/fltk-1.1.9-share.patch, -fltk-1.1.10-r2.ebuild,
+  -files/fltk-1.1.10-includedir.patch, -files/fltk2-glibc2.10-scandir.patch,
+  -files/fltk-1.1.10-libpng15.patch:
+  old
 
   04 Feb 2012; Raúl Porcel <armin76@gentoo.org> fltk-1.3.0.ebuild:
   alpha/ia64/sparc stable wrt #395739
