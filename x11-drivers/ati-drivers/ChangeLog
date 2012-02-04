@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.270 2012/01/30 12:47:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.271 2012/02/04 11:15:36 xarthisius Exp $
+
+*ati-drivers-12.1-r1 (04 Feb 2012)
+
+  04 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +ati-drivers-12.1-r1.ebuild:
+  Add revbump that installs OpenCL related libraries in place that doesn't
+  create conflicts and is expected by app-admin/eselect-opencl. Env file and
+  blocker against nvidia are no longer needed
 
 *ati-drivers-12.1 (30 Jan 2012)
 
