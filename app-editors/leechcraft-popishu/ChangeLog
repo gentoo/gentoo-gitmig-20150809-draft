@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/leechcraft-popishu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leechcraft-popishu/ChangeLog,v 1.8 2012/02/02 17:22:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leechcraft-popishu/ChangeLog,v 1.9 2012/02/04 19:09:26 ago Exp $
+
+  04 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-popishu-0.4.99.ebuild:
+  Stable for amd64, wrt bug #400605
 
 *leechcraft-popishu-0.4.99 (02 Feb 2012)
 
