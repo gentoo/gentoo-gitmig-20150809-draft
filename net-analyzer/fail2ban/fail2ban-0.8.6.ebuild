@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.6.ebuild,v 1.1 2011/12/30 10:18:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.6.ebuild,v 1.2 2012/02/04 19:53:16 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 inherit distutils eutils
 
 DESCRIPTION="Bans IP that make too many password failures"
-HOMEPAGE="http://fail2ban.sourceforge.net/"
+HOMEPAGE="http://www.fail2ban.org/"
 SRC_URI="https://github.com/${PN}/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -30,7 +30,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-sshd-breakin.patch
+	epatch "${FILESDIR}"/${P}-sshd-breakin.patch \
+		"${FILESDIR}"/${P}-gentoo-init.patch
 	distutils_src_prepare
 }
 

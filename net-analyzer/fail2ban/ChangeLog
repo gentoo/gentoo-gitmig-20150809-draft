@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fail2ban
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.75 2011/12/30 10:18:51 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.76 2012/02/04 19:53:16 hwoarang Exp $
+
+  04 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/fail2ban-0.8.6-gentoo-init.patch, fail2ban-0.8.6.ebuild:
+  Update homepage. Use extra_started_commands instead of opts. Thanks to
+  Alexander Bezrukov <phmagic@mail.ru>. Bug #401209
 
 *fail2ban-0.8.6 (30 Dec 2011)
 
