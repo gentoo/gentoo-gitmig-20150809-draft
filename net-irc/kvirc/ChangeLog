@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.138 2011/09/18 13:45:07 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.139 2012/02/04 09:57:10 hwoarang Exp $
+
+  04 Feb 2012; Markos Chandras <hwoarang@gentoo.org> kvirc-4.2_pre5816.ebuild:
+  Convert to EAPI4 so we can use REQUIRED_USE to force certain useflag
+  combinations. Bug #327231
 
   18 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Add Arfrever as proxy maintainer with proxy-maintainers as herd.

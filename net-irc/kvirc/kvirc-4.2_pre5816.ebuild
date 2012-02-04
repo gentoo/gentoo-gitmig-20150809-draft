@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.2_pre5816.ebuild,v 1.3 2011/06/19 13:51:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.2_pre5816.ebuild,v 1.4 2012/02/04 09:57:10 hwoarang Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="python? 2"
 
 inherit cmake-utils multilib python
@@ -44,15 +44,9 @@ RDEPEND="${RDEPEND}
 
 DOCS="ChangeLog doc/FAQ"
 
+REQUIRED_USE="audiofile? ( oss ) theora? ( dcc_video )"
+
 pkg_setup() {
-	if use audiofile && ! use oss; then
-		die "USE=\"audiofile\" requires USE=\"oss\""
-	fi
-
-	if use theora && ! use dcc_video; then
-		die "USE=\"theora\" requires USE=\"dcc_video\""
-	fi
-
 	if use python; then
 		python_set_active_version 2
 		python_pkg_setup
