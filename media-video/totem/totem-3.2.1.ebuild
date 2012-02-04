@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.1.ebuild,v 1.3 2012/01/22 01:34:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.1.ebuild,v 1.4 2012/02/04 13:21:56 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -18,14 +18,13 @@ HOMEPAGE="http://projects.gnome.org/totem/"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
-IUSE="bluetooth doc grilo +introspection iplayer lirc nautilus nsplugin +python +youtube vala" # zeroconf
+IUSE="bluetooth doc grilo +introspection iplayer lirc nautilus nsplugin +python +youtube vala zeitgeist" # zeroconf
 
 # TODO:
 # Cone (VLC) plugin needs someone with the right setup (remi ?)
 # coherence plugin broken upstream
 #
 # FIXME: Automagic tracker-0.9.0
-# XXX: Add Zeitgeist support when it gets added to GNOME 3 (3.2?)
 # Runtime dependency on gnome-session-2.91
 RDEPEND=">=dev-libs/glib-2.27.92:2
 	>=x11-libs/gdk-pixbuf-2.23.0:2
@@ -79,7 +78,8 @@ RDEPEND=">=dev-libs/glib-2.27.92:2
 		>=dev-libs/libgdata-0.7.0
 		net-libs/libsoup:2.4
 		media-plugins/gst-plugins-soup:0.10
-		>=dev-libs/totem-pl-parser-2.32.4[quvi] )"
+		>=dev-libs/totem-pl-parser-2.32.4[quvi] )
+	zeitgeist? ( dev-libs/libzeitgeist )"
 #	zeroconf? ( >=net-libs/libepc-0.5.0 )
 # XXX: zeroconf requires unreleased version of libepc
 
@@ -99,6 +99,7 @@ DEPEND="${RDEPEND}
 
 # see bug #359379
 REQUIRED_USE="python? ( introspection )"
+REQUIRED_USE="zeitgeist? ( vala )"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
@@ -131,6 +132,7 @@ pkg_setup() {
 	use python && plugins="${plugins},dbusservice,pythonconsole,opensubtitles"
 	use vala && plugins="${plugins},rotation"
 	use youtube && plugins="${plugins},youtube"
+	use zeitgeist && plugins="${plugins},zeitgeist-dp"
 	# XXX: zeroconf requires unreleased version of libepc
 	# use zeroconf && plugins="${plugins},publish"
 
