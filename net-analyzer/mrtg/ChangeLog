@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mrtg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.113 2011/08/20 20:30:10 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.114 2012/02/04 21:26:38 radhermit Exp $
+
+*mrtg-2.17.4 (04 Feb 2012)
+
+  04 Feb 2012; Tim Harder <radhermit@gentoo.org> +mrtg-2.17.4.ebuild:
+  Version bump.
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> mrtg-2.17.2.ebuild:
   Make default functions not die(). Add missing ~arm back.
