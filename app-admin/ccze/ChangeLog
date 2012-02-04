@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ccze
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.29 2012/02/03 14:43:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.30 2012/02/04 20:54:59 ranger Exp $
+
+  04 Feb 2012; Brent Baude <ranger@gentoo.org> ccze-0.2.1-r3.ebuild:
+  Marking ccze-0.2.1-r3 ppc for bug 396745
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ccze-0.2.1-r3.ebuild:
   Stable for amd64, wrt bug #396745
