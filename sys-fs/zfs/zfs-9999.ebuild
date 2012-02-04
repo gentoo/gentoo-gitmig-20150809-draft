@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.5 2012/01/31 21:10:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.6 2012/02/04 21:06:23 floppym Exp $
 
 EAPI="4"
 
@@ -33,6 +33,7 @@ pkg_setup() {
 src_configure() {
 	set_arch_to_kernel
 	local myeconfargs=(
+		--exec-prefix=
 		--with-config=all
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
