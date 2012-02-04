@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ark/ChangeLog,v 1.44 2012/01/31 21:28:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ark/ChangeLog,v 1.45 2012/02/04 16:17:03 chithanh Exp $
+
+  04 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-ark-0.7.4.ebuild:
+  Raise libpciaccess dependency, bug #402141.
 
 *xf86-video-ark-0.7.4 (31 Jan 2012)
 
