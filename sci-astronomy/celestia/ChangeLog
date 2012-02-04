@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.81 2011/11/01 08:13:01 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.82 2012/02/04 19:08:25 xarthisius Exp $
+
+  04 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  files/celestia-1.6.1-linking.patch:
+  Allow to use theora with glut wrt #399237 by <boxcars@gmx.net>
 
   01 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> celestia-1.6.1.ebuild,
   -files/celestia-1.6.1-as-needed.patch, -files/celestia-1.6.1-gold.patch,

@@ -1,6 +1,7 @@
 Fix linking issues:
  * underlinking GLUT (bug #372123, #387609)
  * as-needed (bug #281258)
+ * theora with glut (bug #399237)
 
 --- a/src/celestia/Makefile.am
 +++ b/src/celestia/Makefile.am
@@ -52,3 +53,13 @@ Fix linking issues:
  
  noinst_HEADERS = $(wildcard *.h)
  noinst_DATA = ../../celestia
+--- a/configure.in
++++ b/configure.in
+@@ -252,6 +252,7 @@
+ 	dnl Check for GLUT.
+ 	AC_CHECK_LIB(glut, glutKeyboardUpFunc, ,
+ 	             [AC_MSG_ERROR([GLUT library version >= 3.7 not found])])
++	check_theora="yes"
+ fi
+ AM_CONDITIONAL(ENABLE_GLUT, test "$ui_glut" = "yes")
+ 
