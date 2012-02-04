@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120130.ebuild,v 1.1 2012/02/01 22:46:56 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120202.ebuild,v 1.1 2012/02/04 12:26:59 eras Exp $
 
 EAPI=4
 
@@ -296,7 +296,7 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	if [[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 7 ]]; then
+	if [[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 9 ]]; then
 		elog "If you are using old style postfix instances by symlinking"
 		elog "startup scripts in ${ROOT}etc/init.d, please consider"
 		elog "upgrading your config for postmulti support. For more info:"
