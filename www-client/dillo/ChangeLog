@@ -1,6 +1,10 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.106 2012/02/04 18:55:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.107 2012/02/04 20:30:56 ssuominen Exp $
+
+  04 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -dillo-2.2.ebuild,
+  -files/dillo-2.2-libpng14.patch:
+  old
 
   04 Feb 2012; Raúl Porcel <armin76@gentoo.org> dillo-3.0.1.ebuild:
   alpha/sparc stable wrt #395917
