@@ -1,0 +1,40 @@
+From 79062869a18ef70862f5cadb51a53731d3ba5cc1 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sat, 4 Feb 2012 16:51:53 -0500
+Subject: [PATCH] Call vapigen with --pkg cogl-pango-1.0
+
+https://bugzilla.gnome.org/show_bug.cgi?id=669378
+---
+ champlain-gtk/Makefile.am |    2 +-
+ champlain/Makefile.am     |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/champlain-gtk/Makefile.am b/champlain-gtk/Makefile.am
+index 1efeeea..549c197 100644
+--- a/champlain-gtk/Makefile.am
++++ b/champlain-gtk/Makefile.am
+@@ -113,7 +113,7 @@ if ENABLE_VALA
+ CLEANFILES += $(dist_vapi_DATA)
+ 
+ champlain-gtk-@CHAMPLAIN_API_VERSION@.vapi:	GtkChamplain-@CHAMPLAIN_API_VERSION@.gir
+-	$(AM_V_GEN) ( $(VAPIGEN) --library champlain-gtk-@CHAMPLAIN_API_VERSION@ --vapidir=$(top_builddir)/champlain --pkg champlain-@CHAMPLAIN_API_VERSION@ --pkg clutter-gtk-1.0 --pkg gtk+-3.0 --pkg atk --pkg pangocairo --girdir=$(top_builddir)/champlain $(builddir)/GtkChamplain-@CHAMPLAIN_API_VERSION@.gir )
++	$(AM_V_GEN) ( $(VAPIGEN) --library champlain-gtk-@CHAMPLAIN_API_VERSION@ --vapidir=$(top_builddir)/champlain --pkg champlain-@CHAMPLAIN_API_VERSION@ --pkg clutter-gtk-1.0 --pkg cogl-pango-1.0 --pkg gtk+-3.0 --pkg atk --pkg pangocairo --girdir=$(top_builddir)/champlain $(builddir)/GtkChamplain-@CHAMPLAIN_API_VERSION@.gir )
+ 
+ endif
+ 
+diff --git a/champlain/Makefile.am b/champlain/Makefile.am
+index a4b55a6..f145e9f 100644
+--- a/champlain/Makefile.am
++++ b/champlain/Makefile.am
+@@ -206,7 +206,7 @@ if ENABLE_VALA
+ CLEANFILES += $(dist_vapi_DATA)
+ 
+ champlain-@CHAMPLAIN_API_VERSION@.vapi:	Champlain-@CHAMPLAIN_API_VERSION@.gir
+-	$(AM_V_GEN) ( $(VAPIGEN) --library champlain-@CHAMPLAIN_API_VERSION@ --pkg clutter-1.0 --pkg atk --pkg pangocairo $(builddir)/Champlain-@CHAMPLAIN_API_VERSION@.gir )
++	$(AM_V_GEN) ( $(VAPIGEN) --library champlain-@CHAMPLAIN_API_VERSION@ --pkg clutter-1.0 --pkg cogl-pango-1.0 --pkg atk --pkg pangocairo $(builddir)/Champlain-@CHAMPLAIN_API_VERSION@.gir )
+ 
+ endif
+ 
+-- 
+1.7.8.4
+

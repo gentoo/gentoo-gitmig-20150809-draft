@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.1.ebuild,v 1.1 2011/12/22 23:38:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.1.ebuild,v 1.2 2012/02/04 22:44:28 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Clutter based world map renderer"
 HOMEPAGE="http://blog.pierlux.com/projects/libchamplain/en/"
@@ -32,8 +32,9 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
-	vala? ( dev-lang/vala:0.14[vapigen] )"
+	vala? ( >=dev-lang/vala-0.14.2-r1:0.14[vapigen] )"
 # segfaults with vala:0.12
+# vala-0.14.2-r1 required for bug #402013
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
@@ -52,6 +53,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# bug #402013, https://bugzilla.gnome.org/show_bug.cgi?id=669378
+	epatch "${FILESDIR}/${P}-vala-cogl-pango-1.0.patch"
+
 	# Fix documentation slotability
 	sed -e "s/^DOC_MODULE.*/DOC_MODULE = ${PN}-${SLOT}/" \
 		-i docs/reference/Makefile.{am,in} || die "sed (1) failed"
@@ -60,5 +64,6 @@ src_prepare() {
 	mv "${S}"/docs/reference/${PN}{,-${SLOT}}-docs.sgml || die "mv (1) failed"
 	mv "${S}"/docs/reference-gtk/${PN}-gtk{,-${SLOT}}-docs.sgml || die "mv (2) failed"
 
+	eautoreconf
 	gnome2_src_prepare
 }
