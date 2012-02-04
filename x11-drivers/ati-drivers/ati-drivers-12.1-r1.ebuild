@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.1-r1.ebuild,v 1.1 2012/02/04 11:15:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.1-r1.ebuild,v 1.2 2012/02/04 12:32:36 xarthisius Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ else
 	SRC_URI="https://launchpad.net/ubuntu/natty/+source/fglrx-installer/2:${PV}-0ubuntu1/+files/fglrx-installer_${PV}.orig.tar.gz"
 	FOLDER_PREFIX=""
 fi
-IUSE="debug +modules multilib opencl pax_kernel qt4"
+IUSE="debug +modules multilib pax_kernel qt4"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
 KEYWORDS="~amd64 ~x86"
@@ -428,7 +428,7 @@ src_install() {
 	into /opt
 	dosbin "${ARCH_DIR}"/usr/sbin/atieventsd
 	use qt4 && dosbin "${ARCH_DIR}"/usr/sbin/amdnotifyui
-	use opencl && dobin "${ARCH_DIR}"/usr/bin/clinfo
+	dobin "${ARCH_DIR}"/usr/bin/clinfo
 	# We cleaned out the compilable stuff in src_unpack
 	dobin "${ARCH_DIR}"/usr/X11R6/bin/*
 
@@ -534,23 +534,19 @@ src_install-libs() {
 	doexe "${MY_ARCH_DIR}"/usr/X11R6/${pkglibdir}/modules/dri/fglrx_dri.so
 
 	# AMD Cal and OpenCL libraries
-	if use opencl ; then
-		exeinto /usr/$(get_libdir)/OpenCL/vendors/amd
-		doexe "${MY_ARCH_DIR}"/usr/${pkglibdir}/libamdocl*.so*
-		doexe "${MY_ARCH_DIR}"/usr/${pkglibdir}/libOpenCL*.so*
-		dosym libOpenCL.so.${libmajor} /usr/$(get_libdir)/OpenCL/vendors/amd/libOpenCL.so
-	fi
+	exeinto /usr/$(get_libdir)/OpenCL/vendors/amd
+	doexe "${MY_ARCH_DIR}"/usr/${pkglibdir}/libamdocl*.so*
+	doexe "${MY_ARCH_DIR}"/usr/${pkglibdir}/libOpenCL*.so*
+	dosym libOpenCL.so.${libmajor} /usr/$(get_libdir)/OpenCL/vendors/amd/libOpenCL.so
 	exeinto /usr/$(get_libdir)
 	doexe "${MY_ARCH_DIR}"/usr/${pkglibdir}/libati*.so*
 
 	# OpenCL vendor files
-	if use opencl ; then
-		insinto /etc/OpenCL/vendors/
-		cat > "${T}"/amdocl${oclsuffix}.icd <<-EOF
-			/usr/$(get_libdir)/OpenCL/vendors/amd/libamdocl${oclsuffix}.so
-		EOF
-		doins "${T}"/amdocl${oclsuffix}.icd
-	fi
+	insinto /etc/OpenCL/vendors/
+	cat > "${T}"/amdocl${oclsuffix}.icd <<-EOF
+		/usr/$(get_libdir)/OpenCL/vendors/amd/libamdocl${oclsuffix}.so
+	EOF
+	doins "${T}"/amdocl${oclsuffix}.icd
 
 	local envname="${T}"/04ati-dri-path
 	if [[ -n ${ABI} ]]; then
