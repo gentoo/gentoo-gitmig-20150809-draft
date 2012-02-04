@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.112 2012/02/02 22:01:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.113 2012/02/04 09:26:16 mgorny Exp $
+
+  04 Feb 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Fix typo in recursive autoreconf.
 
   02 Feb 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Use checksums to determine whether files need autoreconf. Fixes bug #399641.

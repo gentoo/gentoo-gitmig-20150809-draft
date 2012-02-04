@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.47 2012/02/02 22:01:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.48 2012/02/04 09:26:16 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -344,7 +344,7 @@ autotools-utils_autoreconf() {
 	for x in $(autotools_get_subdirs); do
 		if [[ -d ${x} ]] ; then
 			pushd "${x}" >/dev/null
-			autotools-utils_eautoreconf
+			autotools-utils_autoreconf
 			popd >/dev/null
 		fi
 	done
