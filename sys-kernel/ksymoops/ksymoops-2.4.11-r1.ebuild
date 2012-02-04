@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ksymoops-2.4.11-r1.ebuild,v 1.1 2010/09/11 19:54:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ksymoops-2.4.11-r1.ebuild,v 1.2 2012/02/04 09:38:45 ago Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Utility to decode a kernel oops, or other kernel call traces"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/ksymoops/"
@@ -20,6 +20,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
 	epatch "${FILESDIR}"/${P}-fortify-fix.patch
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
