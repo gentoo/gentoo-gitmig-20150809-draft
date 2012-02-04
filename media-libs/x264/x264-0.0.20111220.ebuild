@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20111220.ebuild,v 1.1 2011/12/21 23:05:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20111220.ebuild,v 1.2 2012/02/04 11:48:11 ssuominen Exp $
 
 EAPI=4
 
@@ -34,9 +34,9 @@ fi
 IUSE="10bit custom-cflags debug +interlaced pic static-libs +threads"
 
 RDEPEND=""
-DEPEND="amd64? ( >=dev-lang/yasm-0.6.2 )
-	x86? ( >=dev-lang/yasm-0.6.2 )
-	x86-fbsd? ( >=dev-lang/yasm-0.6.2 )"
+DEPEND="amd64? ( >=dev-lang/yasm-1 )
+	x86? ( >=dev-lang/yasm-1 )
+	x86-fbsd? ( >=dev-lang/yasm-1 )"
 
 if [ "${PV#9999}" = "${PV}" ]; then
 	S="${WORKDIR}/${MY_P}"
