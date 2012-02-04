@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.113 2012/02/04 09:26:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.114 2012/02/04 18:28:32 nirbheek Exp $
+
+  04 Feb 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +mozlinguas.eclass:
+  Add mozlinguas.eclass to handle language packs for mozilla products
 
   04 Feb 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Fix typo in recursive autoreconf.
