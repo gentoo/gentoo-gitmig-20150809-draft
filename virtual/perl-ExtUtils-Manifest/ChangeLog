@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-ExtUtils-Manifest
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.14 2011/08/25 14:44:02 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.15 2012/02/04 15:29:46 armin76 Exp $
+
+  04 Feb 2012; Raúl Porcel <armin76@gentoo.org>
+  perl-ExtUtils-Manifest-1.580.0-r1.ebuild,
+  perl-ExtUtils-Manifest-1.590.0.ebuild, perl-ExtUtils-Manifest-1.600.0.ebuild:
+  Add ~arm/~s390/~sh
 
 *perl-ExtUtils-Manifest-1.600.0 (25 Aug 2011)
 
