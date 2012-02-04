@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.98 2012/02/04 18:28:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.99 2012/02/04 19:50:24 vapier Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils python
 
@@ -22,7 +22,8 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluray css debug goom joystick midi profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
+IUSE="airplay alsa altivec avahi bluray css debug goom joystick midi mysql profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
+REQUIRED_USE="pvr? ( mysql )"
 
 COMMON_DEPEND="virtual/opengl
 	app-arch/bzip2
@@ -75,7 +76,7 @@ COMMON_DEPEND="virtual/opengl
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )
 	sys-apps/dbus
 	sys-libs/zlib
-	pvr? ( virtual/mysql )
+	mysql? ( virtual/mysql )
 	x11-apps/xdpyinfo
 	x11-apps/mesa-progs
 	vaapi? ( x11-libs/libva )
@@ -123,7 +124,6 @@ src_prepare() {
 	do
 		[[ -e ${d}/configure ]] && continue
 		pushd ${d} >/dev/null
-		einfo "Generating autotools in ${d}"
 		eautoreconf
 		popd >/dev/null
 	done
@@ -178,6 +178,7 @@ src_configure() {
 		--disable-hal \
 		$(use_enable joystick) \
 		$(use_enable midi mid) \
+		$(use_enable mysql) \
 		$(use_enable profile profiling) \
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
@@ -192,8 +193,8 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	prepalldocs
+	default
+	rm "${ED}"/usr/share/doc/*/{LICENSE.GPL,copying.txt}*
 
 	insinto /usr/share/applications
 	doins tools/Linux/xbmc.desktop
