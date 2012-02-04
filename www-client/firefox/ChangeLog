@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.123 2012/01/28 06:14:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.124 2012/02/04 19:00:16 nirbheek Exp $
+
+*firefox-10.0 (04 Feb 2012)
+
+  04 Feb 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +firefox-10.0.ebuild:
+  Bump to 10.0, now with more shared code! (mozlinguas.eclass)
 
   28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
   Add USE=bindist description, bug 369255
