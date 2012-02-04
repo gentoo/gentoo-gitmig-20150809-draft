@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.97 2012/01/16 14:59:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.98 2012/02/04 15:08:06 swegener Exp $
+
+*systemtap-1.7 (04 Feb 2012)
+
+  04 Feb 2012; Sven Wegener <swegener@gentoo.org> +systemtap-1.7.ebuild:
+  Version bump.
 
   16 Jan 2012; Tobias Klausmann <klausman@gentoo.org> systemtap-1.6.ebuild:
   Keyworded on alpha, bug #351931
