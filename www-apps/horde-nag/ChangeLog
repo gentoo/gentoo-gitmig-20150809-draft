@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-nag
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.43 2010/10/22 17:41:28 a3li Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.44 2012/02/04 12:27:45 ago Exp $
+
+  04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> horde-nag-2.3.6.ebuild:
+  Stable for amd64, wrt bug #397247
 
   22 Oct 2010; Alex Legler <a3li@gentoo.org> -horde-nag-2.1.4.ebuild:
   cleanup
