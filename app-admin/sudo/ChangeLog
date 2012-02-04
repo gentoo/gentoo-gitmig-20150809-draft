@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.299 2012/02/03 00:07:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.300 2012/02/04 15:31:59 armin76 Exp $
+
+  04 Feb 2012; Raúl Porcel <armin76@gentoo.org> sudo-1.8.3_p2.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #401533
 
   03 Feb 2012; Mike Frysinger <vapier@gentoo.org> sudo-1.8.3_p2.ebuild:
   We only need the mta/editor at runtime, not build time, so move to RDEPEND.
