@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-ru
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/ChangeLog,v 1.5 2012/01/19 17:30:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/ChangeLog,v 1.6 2012/02/04 15:36:39 maksbotan Exp $
+
+  04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer's email in metadata
 
   19 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
   fortune-mod-gentoo-ru-0.25.ebuild:
