@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.138 2012/01/18 21:06:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.139 2012/02/04 10:04:42 pacho Exp $
+
+*webkit-gtk-1.6.3-r200 (04 Feb 2012)
+*webkit-gtk-1.6.3-r300 (04 Feb 2012)
+
+  04 Feb 2012; Pacho Ramos <pacho@gentoo.org> +webkit-gtk-1.6.3-r200.ebuild,
+  +webkit-gtk-1.6.3-r300.ebuild, -webkit-gtk-1.6.1-r200.ebuild,
+  -webkit-gtk-1.6.1-r300.ebuild:
+  Version bump, remove old.
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> webkit-gtk-1.6.1-r301.ebuild:
   arm stable, bug #393007

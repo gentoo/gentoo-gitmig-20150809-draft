@@ -1,24 +1,22 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.1-r300.ebuild,v 1.2 2011/11/29 19:01:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r300.ebuild,v 1.1 2012/02/04 10:04:42 pacho Exp $
 
 EAPI="4"
 
-inherit autotools eutils flag-o-matic eutils virtualx
+inherit autotools eutils flag-o-matic eutils virtualx gnome2-utils
 
 MY_P="webkit-${PV}"
 DESCRIPTION="Open source web browser engine"
 HOMEPAGE="http://www.webkitgtk.org/"
-# Upstream is still shipping silly gzip files
-#SRC_URI="http://www.webkitgtk.org/${MY_P}.tar.gz"
-SRC_URI="mirror://gentoo/${P}.tar.xz"
+SRC_URI="http://www.webkitgtk.org/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
-~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 # geoclue
 IUSE="aqua coverage debug doc +gstreamer +introspection +jit spell webgl"
+
 # bug 372493
 REQUIRED_USE="introspection? ( gstreamer )"
 
@@ -66,19 +64,34 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	DOCS="ChangeLog NEWS" # other ChangeLog files handled by src_install
 
+	# Fix arches that use 64-bit double type
+	# https://bugs.webkit.org/show_bug.cgi?id=69940
+	epatch "${FILESDIR}/${PN}-1.6.1-double-conversion.patch"
+
 	# FIXME: Fix unaligned accesses on ARM, IA64 and SPARC
 	# https://bugs.webkit.org/show_bug.cgi?id=19775
-	use sparc && epatch "${FILESDIR}"/${PN}-1.2.3-fix-pool-sparc.patch
+	# TODO: FAILS TO APPLY!
+	#use sparc && epatch "${FILESDIR}"/${PN}-1.2.3-fix-pool-sparc.patch
+
+	# intermediate MacPorts hack while upstream bug is not fixed properly
+	# https://bugs.webkit.org/show_bug.cgi?id=28727
+	use aqua && epatch "${FILESDIR}"/${PN}-1.6.1-darwin-quartz.patch
+
+	# Drop DEPRECATED flags
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' GNUmakefile.am || die
 
 	# Don't force -O2
-	sed -i 's/-O2//g' "${S}"/configure.ac
-
-	# Don't build tests if not needed, part of bug #343249
-	# XXX: Fails to apply
-	#epatch "${FILESDIR}/${PN}-1.2.5-tests-build.patch"
+	sed -i 's/-O2//g' "${S}"/configure.ac || die
 
 	# Required for webgl; https://bugs.webkit.org/show_bug.cgi?id=69085
 	mkdir -p DerivedSources/ANGLE
+
+	# We need to reset some variables to prevent permissions problems and failures
+	# like https://bugs.webkit.org/show_bug.cgi?id=35471 and bug #323669
+	gnome2_environment_reset
+
+	# Respect CC, otherwise fails on prefix #395875
+	tc-export CC
 
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf
@@ -119,9 +132,7 @@ src_configure() {
 }
 
 src_compile() {
-	# Fix sandbox error with USE="introspection"
-	# https://bugs.webkit.org/show_bug.cgi?id=35471
-	emake XDG_DATA_HOME="${T}/.local"
+	default
 
 	# ${PN} neither ships, nor builds documentation on its own
 	if use doc; then
@@ -132,9 +143,8 @@ src_compile() {
 src_test() {
 	unset DISPLAY
 	# Tests need virtualx, bug #294691, bug #310695
-	# Set XDG_DATA_HOME for introspection tools, bug #323669
 	# Parallel tests sometimes fail
-	Xemake -j1 check XDG_DATA_HOME="${T}/.local"
+	Xemake -j1 check
 }
 
 src_install() {
