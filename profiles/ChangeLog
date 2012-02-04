@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6175 2012/02/03 19:25:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6176 2012/02/04 01:15:54 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Feb 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Unmask avidemux. Upstream does not care about parallel build and neither do I
 
   03 Feb 2012; William Hubbs <williamh@gentoo.org> package.mask:
   add udev-180 to the udev mask.

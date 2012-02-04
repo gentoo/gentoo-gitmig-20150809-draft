@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13456 2012/02/03 19:25:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13457 2012/02/04 01:15:54 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -259,11 +259,6 @@ media-plugins/gst-plugins-esd
 media-sound/extace
 x11-plugins/wmpop
 x11-plugins/wsoundserver
-
-# Markos Chandras <hwoarang@gentoo.org> (02 Jan 2012)
-# Parallel build does not work. Upstream report:
-# http://www.avidemux.org/smf/index.php?topic=10149.msg54692#msg54692
-=media-video/avidemux-2.5.6
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Jan 2012)
 # Unused backward compability library (for Xfce 4.6 packages in Xfce 4.8)
