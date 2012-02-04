@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.17 2012/01/30 21:10:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.18 2012/02/04 00:37:44 williamh Exp $
+
+  04 Feb 2012; William Hubbs <williamh@gentoo.org> kmod-4.ebuild,
+  kmod-9999.ebuild:
+  fix blockers for module-init-tools for bug #401899.
 
   30 Jan 2012; Markus Meier <maekke@gentoo.org> kmod-4.ebuild:
   add ~arm, bug #397769
