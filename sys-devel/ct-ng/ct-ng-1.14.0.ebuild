@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.14.0.ebuild,v 1.1 2012/02/01 13:16:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.14.0.ebuild,v 1.2 2012/02/04 00:35:32 blueness Exp $
 
 EAPI="4"
 
@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="bash-completion"
 
 RDEPEND="net-misc/curl
+	dev-util/gperf
 	dev-vcs/cvs
 	dev-vcs/subversion"
 
