@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0-r1.ebuild,v 1.6 2012/02/02 16:02:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0-r1.ebuild,v 1.7 2012/02/04 15:47:58 ssuominen Exp $
 
-EAPI=2
-
+EAPI=4
 inherit eutils multilib
 
 DESCRIPTION="A simple interactive calendar program with a notebook capability"
@@ -38,20 +37,18 @@ src_prepare() {
 
 src_compile() {
 	xmkmf -a
-	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" \
-		EXTRA_LDOPTIONS="${LDFLAGS}"  || die
+	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" EXTRA_LDOPTIONS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin xcalendar || die
-	newman xcalendar.man xcalendar.1 || die
+	dobin xcalendar
+	newman xcalendar.man xcalendar.1
 
-	dodir /etc/X11/app-defaults
-	insinto /etc/X11/app-defaults
-	newins XCalendar.sed XCalendar || die
+	insinto /usr/share/X11/app-defaults
+	newins XCalendar.sed XCalendar
 
 	insinto /usr/$(get_libdir)/xcalendar
-	doins *.xbm *.hlp || die
+	doins *.xbm *.hlp
 
-	dodoc README || die
+	dodoc README
 }
