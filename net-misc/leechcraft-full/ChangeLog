@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.8 2012/02/02 17:42:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.9 2012/02/04 19:14:17 ago Exp $
+
+  04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> leechcraft-full-0.4.99.ebuild:
+  Stable for amd64, wrt bug #400605
 
   02 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
   +leechcraft-full-0.4.99.ebuild, leechcraft-full-9999.ebuild:
