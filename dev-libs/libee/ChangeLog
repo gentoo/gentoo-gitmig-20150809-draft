@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/ChangeLog,v 1.5 2012/02/04 15:07:12 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/ChangeLog,v 1.6 2012/02/04 19:52:54 ago Exp $
+
+  04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libee-0.3.2-r1.ebuild:
+  Stable for amd64, wrt bug #402161
 
   04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
   Fix maintainer's email in metadata
