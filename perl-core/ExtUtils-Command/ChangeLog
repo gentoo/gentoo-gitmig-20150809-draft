@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-Command
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Command/ChangeLog,v 1.12 2012/02/03 17:44:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Command/ChangeLog,v 1.13 2012/02/04 15:37:05 armin76 Exp $
+
+  04 Feb 2012; Raúl Porcel <armin76@gentoo.org> ExtUtils-Command-1.16.ebuild,
+  ExtUtils-Command-1.170.0.ebuild:
+  Add ~arm/~s390/~sh
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   ExtUtils-Command-1.170.0.ebuild:
