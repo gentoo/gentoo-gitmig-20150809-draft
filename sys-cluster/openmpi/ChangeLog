@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.98 2012/02/03 21:55:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.99 2012/02/04 09:59:18 ago Exp $
+
+  04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> openmpi-1.4.3.ebuild:
+  Stable for amd64, wrt bug #402095
 
 *openmpi-1.5.4-r3 (03 Feb 2012)
 
