@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxde-common
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.29 2011/10/09 16:41:12 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.30 2012/02/04 10:47:27 hwoarang Exp $
+
+*lxde-common-0.5.5-r2 (04 Feb 2012)
+
+  04 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +files/lxde,
+  +lxde-common-0.5.5-r2.ebuild:
+  Add X11 session file. This should fix 325689. Thanks to Nikolaj Sjujskij
+  <sterkrig@myopera.com?>
 
   09 Oct 2011; Markus Meier <maekke@gentoo.org> lxde-common-0.5.5-r1.ebuild:
   arm stable, bug #385189
