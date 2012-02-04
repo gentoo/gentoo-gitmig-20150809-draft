@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.22.ebuild,v 1.3 2012/02/04 16:54:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.24.ebuild,v 1.1 2012/02/04 16:54:30 alexxy Exp $
 
 EAPI=4
 
 inherit flag-o-matic linux-info
 
-MY_TREE="3e216c9"
+MY_TREE="e039354"
 
 DESCRIPTION="Linux SCSI target framework (tgt)"
 HOMEPAGE="http://stgt.sourceforge.net"
