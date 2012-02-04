@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.953 2012/02/02 15:26:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.954 2012/02/04 23:07:41 zmedico Exp $
+
+*portage-2.1.10.45 (04 Feb 2012)
+
+  04 Feb 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.45.ebuild:
+  2.1.10.45 version bump. This fixes bug #269410 (add --human-readable to rsync
+  opts), bug #333687 (repoman support for git commit --gpg-sign), bug #397415
+  (fix REQUIRED_USE sample in ebuild.5), bug #398543 (add ./ to quickpkg file
+  names), bug #398587 (handle unicode in overlay path), bug #399595 (erroneous
+  rename of html dir symlink to html.bz2), bug #402099 (honor repos.conf
+  priority settings), and bug #400679 (handle rm failure for info dir files).
+  Bug #402213 tracks all bugs fixed since portage-2.1.10.44.
 
   02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> portage-2.1.10.44.ebuild:
   ppc64 stable wrt #400559
