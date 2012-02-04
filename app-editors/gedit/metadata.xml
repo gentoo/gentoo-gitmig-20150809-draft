@@ -5,5 +5,6 @@
 	<use>
 		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
 			for introspection</flag>
+		<flag name="zeitgeist">Build the plugin to inject events to <pkg>gnome-extra/zeitgeist</pkg></flag>
 	</use>
 </pkgmetadata>

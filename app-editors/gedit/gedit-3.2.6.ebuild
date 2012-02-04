@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.6.ebuild,v 1.1 2012/01/15 05:41:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.6.ebuild,v 1.2 2012/02/04 10:44:01 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc +introspection +python spell"
+IUSE="doc +introspection +python spell zeitgeist"
 KEYWORDS="~amd64 ~mips ~sh ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 
 # X libs are not needed for OSX (aqua)
@@ -44,8 +44,8 @@ COMMON_DEPEND="
 		>=dev-python/pygobject-3.0.0:3[cairo] )
 	spell? (
 		>=app-text/enchant-1.2
-		>=app-text/iso-codes-0.35
-	)"
+		>=app-text/iso-codes-0.35 )
+	zeitgeist? ( dev-libs/libzeitgeist )"
 
 RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-icon-theme-symbolic"
@@ -62,9 +62,7 @@ DEPEND="${COMMON_DEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
-	# TODO: Zeitgeist support, if GNOME 3 adds it to moduleset (3.2?)
 	G2CONF="${G2CONF}
-		--disable-zeitgeist
 		--disable-deprecations
 		--disable-schemas-compile
 		--disable-scrollkeeper
@@ -72,7 +70,8 @@ pkg_setup() {
 		--enable-gvfs-metadata
 		$(use_enable introspection)
 		$(use_enable python)
-		$(use_enable spell)"
+		$(use_enable spell)
+		$(use_enable zeitgeist)"
 
 	python_set_active_version 2
 	python_pkg_setup
