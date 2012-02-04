@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/cciss_vol_status
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.9 2012/01/27 13:12:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.10 2012/02/04 22:41:32 robbat2 Exp $
+
+  04 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  files/cciss_vol_status.cron:
+  Bug #402109: Refactor grep/awk mess with bad linebreak to single awk.
 
 *cciss_vol_status-1.09-r1 (27 Jan 2012)
 

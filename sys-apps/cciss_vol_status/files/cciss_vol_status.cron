@@ -5,8 +5,7 @@ test -x /usr/bin/cciss_vol_status || exit 0
 STATUS=0
 
 if [ -d /proc/driver/cciss ]; then
-   DEVS=`grep -h 'cciss/c.*d0:' /proc/driver/cciss/cciss* |awk -F: '{print
-"/dev/" $1}'`
+   DEVS=`awk -F: '/^cciss\/c.*d0/{print "/dev/" $1}' /proc/driver/cciss/cciss*`
    OUTPUT=`/usr/bin/cciss_vol_status $DEVS`
    if [ $? -ne 0 ];  then
         printf "%s\n" "$OUTPUT"
