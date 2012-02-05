@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/legends
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.26 2009/02/22 15:55:36 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.27 2012/02/05 06:03:26 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> legends-0.4.1.43.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   22 Feb 2009; Raúl Porcel <armin76@gentoo.org> legends-0.4.1.43.ebuild:
   x86 stable wrt #257854

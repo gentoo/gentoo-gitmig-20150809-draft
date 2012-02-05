@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/postal2mp-demo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/ChangeLog,v 1.16 2011/12/22 22:04:40 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/ChangeLog,v 1.17 2012/02/05 06:03:51 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> postal2mp-demo-1407.ebuild,
+  postal2mp-demo-1407-r1.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   22 Dec 2011; Markus Meier <maekke@gentoo.org> postal2mp-demo-1407-r1.ebuild:
   x86 stable, bug #393863

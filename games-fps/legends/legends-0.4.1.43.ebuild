@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.5 2010/09/01 21:01:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.6 2012/02/05 06:03:26 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 MY_P=${PN}_linux-${PV}
 dir=${GAMES_PREFIX_OPT}/${PN}

@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.11 2012/01/16 19:32:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.12 2012/02/05 06:11:45 vapier Exp $
 
-inherit eutils cdrom games
+inherit eutils unpacker cdrom games
 
 DESCRIPTION="Unreal Tournament 2003 - Sequel to the 1999 Game of the Year multi-player first-person shooter"
 HOMEPAGE="http://www.unrealtournament2003.com/"

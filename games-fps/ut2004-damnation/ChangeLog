@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004-damnation
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-damnation/ChangeLog,v 1.4 2009/10/08 23:01:10 nyhm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-damnation/ChangeLog,v 1.5 2012/02/05 06:11:04 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> ut2004-damnation-2.0.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   08 Oct 2009; Tristan Heaven <nyhm@gentoo.org> ut2004-damnation-2.0.ebuild:
   EAPI=2

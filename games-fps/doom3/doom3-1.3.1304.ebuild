@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1304.ebuild,v 1.5 2012/01/04 04:16:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1304.ebuild,v 1.6 2012/02/05 06:02:13 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 MY_PV="1.3.1.1304"
 

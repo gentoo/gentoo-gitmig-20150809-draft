@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/unreal-tournament
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.20 2012/01/16 19:29:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.21 2012/02/05 06:10:09 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> unreal-tournament-451.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   16 Jan 2012; Ulrich Müller <ulm@gentoo.org> unreal-tournament-451.ebuild:
   Migrate to cdrom.eclass, bug 398809.

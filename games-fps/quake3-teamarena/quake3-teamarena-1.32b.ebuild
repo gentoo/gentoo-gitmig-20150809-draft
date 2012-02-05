@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.10 2012/01/18 12:43:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.11 2012/02/05 06:14:58 vapier Exp $
 
 CDROM_OPTIONAL="yes"
-inherit eutils cdrom games
+inherit eutils unpacker cdrom games
 
 DESCRIPTION="Quake III Team Arena - data portion"
 HOMEPAGE="http://icculus.org/quake3/"

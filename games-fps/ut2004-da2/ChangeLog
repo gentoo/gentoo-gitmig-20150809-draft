@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004-da2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-da2/ChangeLog,v 1.4 2009/10/08 18:05:46 nyhm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-da2/ChangeLog,v 1.5 2012/02/05 06:11:19 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> ut2004-da2-1.6_beta.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   08 Oct 2009; Tristan Heaven <nyhm@gentoo.org> ut2004-da2-1.6_beta.ebuild:
   EAPI=2

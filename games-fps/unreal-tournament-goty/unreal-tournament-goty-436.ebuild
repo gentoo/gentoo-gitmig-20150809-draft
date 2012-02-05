@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.14 2012/01/16 19:31:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.15 2012/02/05 06:12:08 vapier Exp $
 
-inherit eutils cdrom games
+inherit eutils unpacker cdrom games
 
 DESCRIPTION="Futuristic FPS (Game Of The Year edition)"
 HOMEPAGE="http://www.unrealtournament.com/"

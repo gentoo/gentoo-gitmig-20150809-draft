@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.24 2011/12/14 17:28:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.25 2012/02/05 06:11:34 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 DESCRIPTION="Demo for the sequel to the 1999 Game of the Year multi-player first-person shooter"
 HOMEPAGE="http://www.ut2003.com/"

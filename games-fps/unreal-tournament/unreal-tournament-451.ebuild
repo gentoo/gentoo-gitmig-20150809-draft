@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.27 2012/01/16 19:29:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.28 2012/02/05 06:10:09 vapier Exp $
 
-inherit eutils cdrom games
+inherit eutils unpacker cdrom games
 
 DESCRIPTION="Futuristic FPS"
 HOMEPAGE="http://www.unrealtournament.com/ http://utpg.org/"

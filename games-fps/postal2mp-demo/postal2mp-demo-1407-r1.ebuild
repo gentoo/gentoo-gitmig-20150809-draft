@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407-r1.ebuild,v 1.4 2011/12/22 22:04:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407-r1.ebuild,v 1.5 2012/02/05 06:03:51 vapier Exp $
 
 EAPI=2
-inherit eutils multilib games
+inherit eutils unpacker multilib games
 
 DESCRIPTION="You play the Postal Dude: Postal 2 is only as violent as you are"
 HOMEPAGE="http://www.linuxgamepublishing.com/info.php?id=postal2"

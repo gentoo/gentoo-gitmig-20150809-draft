@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.23 2011/12/14 17:18:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.24 2012/02/05 06:02:06 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 DESCRIPTION="Doom III - 3rd installment of the classic id 3D first-person shooter"
 HOMEPAGE="http://www.doom3.com/"

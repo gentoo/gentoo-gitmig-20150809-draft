@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/unreal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.14 2012/01/16 19:28:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.15 2012/02/05 06:11:56 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> unreal-226.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   16 Jan 2012; Ulrich Müller <ulm@gentoo.org> unreal-226.ebuild:
   Migrate to cdrom.eclass, bug 398809.

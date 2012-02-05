@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.22 2012/01/16 19:27:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.23 2012/02/05 06:09:54 vapier Exp $
 
-inherit eutils cdrom games
+inherit eutils unpacker cdrom games
 
 IUSE=""
 DESCRIPTION="Tribes 2 - Team Combat on an Epic Scale"
