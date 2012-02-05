@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/soundconverter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.25 2012/02/02 19:20:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.26 2012/02/05 01:47:49 floppym Exp $
+
+  05 Feb 2012; Mike Gilbert <floppym@gentoo.org> soundconverter-2.0.1.ebuild:
+  Inherit multilib.
 
 *soundconverter-2.0.1 (02 Feb 2012)
 

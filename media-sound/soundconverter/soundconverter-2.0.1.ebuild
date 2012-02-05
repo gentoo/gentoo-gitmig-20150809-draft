@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.0.1.ebuild,v 1.1 2012/02/02 19:20:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.0.1.ebuild,v 1.2 2012/02/05 01:47:49 floppym Exp $
 
 EAPI=4
 
 GCONF_DEBUG=no
 PYTHON_DEPEND="2:2.7"
 
-inherit gnome2 python
+inherit gnome2 multilib python
 
 DESCRIPTION="A simple audiofile converter application for the GNOME environment"
 HOMEPAGE="http://soundconverter.org/"
