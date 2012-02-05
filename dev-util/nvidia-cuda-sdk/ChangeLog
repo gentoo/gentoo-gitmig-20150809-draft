@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.29 2012/02/05 06:27:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.30 2012/02/05 16:39:02 spock Exp $
+
+  05 Feb 2012; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-sdk-4.1.ebuild:
+  Add a check for gcc-4.5+ (bug #401407).
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
   nvidia-cuda-sdk-2.02.0807.1535.ebuild,
