@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnump3d
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.70 2011/12/13 23:11:35 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.71 2012/02/05 15:14:55 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> gnump3d-3.0-r1.ebuild:
+  alpha/sparc stable wrt #392857
 
   13 Dec 2011; Tim Harder <radhermit@gentoo.org> files/gnump3d.init.d:
   Replace deprecated opts variable from init script.
