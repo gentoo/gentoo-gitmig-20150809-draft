@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r1.ebuild,v 1.1 2012/02/01 17:43:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r1.ebuild,v 1.2 2012/02/05 01:39:43 floppym Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ WX_GTK_VER="2.8"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit cmake-utils eutils wxwidgets python virtualx
+inherit cmake-utils eutils wxwidgets python toolchain-funcs virtualx
 
 RESTRICT_PYTHON_ABIS="3.*"
 
