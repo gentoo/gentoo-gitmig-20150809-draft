@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.189 2012/02/05 21:44:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.190 2012/02/05 23:06:33 radhermit Exp $
+
+*libpcre-8.30-r1 (05 Feb 2012)
+
+  05 Feb 2012; Tim Harder <radhermit@gentoo.org> +libpcre-8.30-r1.ebuild,
+  metadata.xml:
+  Add pcre16 use flag to control building the library with 16-bit character
+  support.
 
 *libpcre-8.30 (05 Feb 2012)
 

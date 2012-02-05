@@ -15,6 +15,10 @@
       Gentoo Hardened.
     </flag>
 
+    <flag name='pcre16'>
+      Build 16 bit PCRE library.
+    </flag>
+
     <flag name='readline'>
       Add support for command line editing to pcretest, through
       <pkg>sys-libs/readline</pkg>.
