@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.0.7.30.ebuild,v 1.2 2011/11/04 15:31:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.0.7.35.ebuild,v 1.1 2012/02/05 15:38:59 xmw Exp $
 
 EAPI=3
 
@@ -30,8 +30,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-apps/xmodmap
 	parti? ( dev-python/ipython
 		 dev-python/dbus-python )
-	libnotify? ( dev-python/notify-python
-			 dev-python/dbus-python )
+	libnotify? ( dev-python/dbus-python )
 	jpeg? ( dev-python/imaging )
 	png? ( dev-python/imaging )
 	ssh? ( net-misc/openssh )
