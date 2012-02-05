@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.0.0.ebuild,v 1.1 2011/12/29 11:49:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.0.0.ebuild,v 1.2 2012/02/05 12:50:41 fauli Exp $
 
 EAPI=1
 
@@ -77,7 +77,7 @@ pkg_setup() {
 
 pkg_nofetch() {
 	elog "Download the client RPM file ${SRC_URI} from http://www.citrix.com/English/ss/downloads/details.asp?downloadId=2316611&productId=1689163&c1=ost1349860"
-	elog "and place it in ${DISTDIR:-/usr/portage/distfiles}."
+	elog "and place it in ${DISTDIR:-/usr/portage/distfiles}.  Please use the 32-bit file even if you are on the amd64 platform."
 }
 
 src_install() {

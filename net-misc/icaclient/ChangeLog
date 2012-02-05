@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icaclient
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.83 2011/12/30 15:19:57 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.84 2012/02/05 12:50:41 fauli Exp $
+
+  05 Feb 2012; Christian Faulhammer <fauli@gentoo.org> icaclient-12.0.0.ebuild:
+  Add note about identity of 32-bit and 64-bit packages, as reported in bug
+  389605 by Maciej Grela
 
   30 Dec 2011; Christian Faulhammer <fauli@gentoo.org> Manifest:
   Fix manifest; bug 396499
