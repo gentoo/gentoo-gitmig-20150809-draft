@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/flpsed-0.7.0.ebuild,v 1.2 2011/10/03 03:18:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/flpsed-0.7.0.ebuild,v 1.3 2012/02/05 09:59:55 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ecademix.com/JohannesHofmann/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
