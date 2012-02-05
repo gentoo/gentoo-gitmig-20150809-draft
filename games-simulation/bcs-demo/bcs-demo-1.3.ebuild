@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.9 2011/12/14 17:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.10 2012/02/05 06:19:31 vapier Exp $
 
-inherit eutils games
+inherit unpacker games
 
 DESCRIPTION="design and build bridges and then stress test them with trains"
 HOMEPAGE="http://www.garagegames.com/pg/product/view.php?id=17"
