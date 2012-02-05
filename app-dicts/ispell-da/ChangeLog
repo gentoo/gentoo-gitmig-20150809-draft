@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-da
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.70 2012/01/04 20:28:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.71 2012/02/05 17:52:17 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> ispell-da-1.6.18.ebuild:
+  alpha/sparc stable wrt #392837
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> ispell-da-1.6.18.ebuild:
   Marking ispell-da-1.6.18 ppc for bug 392837
