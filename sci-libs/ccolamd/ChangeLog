@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.25 2012/01/24 19:20:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.26 2012/02/05 17:45:24 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> ccolamd-2.7.3.ebuild:
+  alpha/sparc stable wrt #393945
 
   24 Jan 2012; Justin Lecher <jlec@gentoo.org> ccolamd-2.7.3.ebuild,
   ccolamd-2.7.4.ebuild:
