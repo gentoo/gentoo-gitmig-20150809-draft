@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2b.ebuild,v 1.2 2011/10/10 20:43:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2b.ebuild,v 1.3 2012/02/05 05:59:10 vapier Exp $
 
 EAPI="4"
 
-inherit eutils versionator
+inherit eutils unpacker versionator
 
 MY_PV=$(replace_version_separator 2 '-' )
 MY_P="$PN-${MY_PV}"

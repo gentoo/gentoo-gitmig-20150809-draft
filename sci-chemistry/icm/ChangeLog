@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/icm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/ChangeLog,v 1.7 2011/10/10 20:52:18 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/ChangeLog,v 1.8 2012/02/05 05:59:10 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> icm-3.7.2b.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> icm-3.7.2b.ebuild:
   Replace removed media-libs/tiff-compat:3 depend with =media-libs/tiff-3*
