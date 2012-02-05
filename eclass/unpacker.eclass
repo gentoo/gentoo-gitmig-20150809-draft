@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.1 2012/02/05 04:48:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.2 2012/02/05 05:48:00 vapier Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -94,7 +94,7 @@ unpack_pdv() {
 	local tailskip=$(tail -c $((${sizeoff_t}*2)) "${src}" | head -c ${sizeoff_t} | hexdump -e \"%i\")
 
 	# grab metadata for debug reasons
-	local metafile=$(emktemp)
+	local metafile="${T}/${FUNCNAME}.meta"
 	tail -c +$((${metaskip}+1)) "${src}" > "${metafile}"
 
 	# rip out the final file name from the metadata
@@ -102,14 +102,14 @@ unpack_pdv() {
 	datafile=$(basename "${datafile}")
 
 	# now lets uncompress/untar the file if need be
-	local tmpfile=$(emktemp)
-	tail -c +$((${tailskip}+1)) ${src} 2>/dev/null | head -c 512 > ${tmpfile}
+	local tmpfile="${T}/${FUNCNAME}"
+	tail -c +$((${tailskip}+1)) ${src} 2>/dev/null | head -c 512 > "${tmpfile}"
 
 	local iscompressed=$(file -b "${tmpfile}")
 	if [[ ${iscompressed:0:8} == "compress" ]] ; then
 		iscompressed=1
-		mv ${tmpfile}{,.Z}
-		gunzip ${tmpfile}
+		mv "${tmpfile}"{,.Z}
+		gunzip "${tmpfile}"
 	else
 		iscompressed=0
 	fi
@@ -127,22 +127,22 @@ unpack_pdv() {
 	#	> ${datafile}
 	if [ ${iscompressed} -eq 1 ] ; then
 		if [ ${istar} -eq 1 ] ; then
-			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
+			tail -c +$((${tailskip}+1)) "${src}" 2>/dev/null \
 				| head -c $((${metaskip}-${tailskip})) \
 				| tar -xzf -
 		else
-			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
+			tail -c +$((${tailskip}+1)) "${src}" 2>/dev/null \
 				| head -c $((${metaskip}-${tailskip})) \
 				| gzip -dc \
 				> ${datafile}
 		fi
 	else
 		if [ ${istar} -eq 1 ] ; then
-			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
+			tail -c +$((${tailskip}+1)) "${src}" 2>/dev/null \
 				| head -c $((${metaskip}-${tailskip})) \
 				| tar --no-same-owner -xf -
 		else
-			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
+			tail -c +$((${tailskip}+1)) "${src}" 2>/dev/null \
 				| head -c $((${metaskip}-${tailskip})) \
 				> ${datafile}
 		fi
@@ -218,7 +218,7 @@ unpack_makeself() {
 	esac
 
 	# lets grab the first few bytes of the file to figure out what kind of archive it is
-	local filetype tmpfile=$(emktemp)
+	local filetype tmpfile="${T}/${FUNCNAME}"
 	eval ${exe} 2>/dev/null | head -c 512 > "${tmpfile}"
 	filetype=$(file -b "${tmpfile}") || die
 	case ${filetype} in
