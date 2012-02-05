@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.9-r1.ebuild,v 1.2 2012/02/05 01:32:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.9-r1.ebuild,v 1.3 2012/02/05 03:32:12 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.6"
 PYTHON_USE_WITH="threads"
 PYTHON_USE_WITH_OPT="python"
 
-inherit multilib multilib python versionator
+inherit multilib python versionator
 
 MY_P=${P/rb_/}
 MY_P=${MY_P/torrent/torrent-rasterbar}

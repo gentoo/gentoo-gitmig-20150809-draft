@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.118 2012/02/05 01:32:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.119 2012/02/05 03:32:12 floppym Exp $
+
+  05 Feb 2012; Mike Gilbert <floppym@gentoo.org> rb_libtorrent-0.15.9-r1.ebuild:
+  Drop duplicate multilib (oops).
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> rb_libtorrent-0.15.5.ebuild,
   rb_libtorrent-0.15.6.ebuild, rb_libtorrent-0.15.8.ebuild,
