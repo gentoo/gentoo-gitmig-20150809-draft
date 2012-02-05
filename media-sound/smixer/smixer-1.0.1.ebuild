@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/smixer-1.0.1.ebuild,v 1.16 2006/03/07 15:52:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/smixer-1.0.1.ebuild,v 1.17 2012/02/05 15:08:39 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://centerclick.org/programs/smixer/${PN}${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc hppa amd64 sparc"
+KEYWORDS="amd64 hppa ppc x86"
 
 S="${WORKDIR}/${PN}"
 
