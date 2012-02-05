@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/dav
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/ChangeLog,v 1.14 2011/04/05 18:20:51 signals Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/ChangeLog,v 1.15 2012/02/05 21:38:27 ranger Exp $
+
+  05 Feb 2012; Brent Baude <ranger@gentoo.org> dav-0.8.5-r1.ebuild:
+  Marking dav-0.8.5-r1 ppc for bug 396791
 
 *dav-0.8.5-r1 (05 Apr 2011)
 
