@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.316 2012/02/04 10:57:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.317 2012/02/05 07:42:05 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
+  nvidia-drivers-96.43.20.ebuild, nvidia-drivers-173.14.31.ebuild,
+  nvidia-drivers-275.09.07.ebuild, nvidia-drivers-275.28.ebuild,
+  nvidia-drivers-275.36.ebuild, nvidia-drivers-285.05.09-r1.ebuild,
+  nvidia-drivers-290.06.ebuild, nvidia-drivers-290.10.ebuild,
+  nvidia-drivers-290.10-r1.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
 *nvidia-drivers-290.10-r1 (04 Feb 2012)
 
