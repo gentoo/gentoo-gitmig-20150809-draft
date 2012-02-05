@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.2.8.ebuild,v 1.3 2012/02/05 09:59:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.2.8.ebuild,v 1.4 2012/02/05 11:33:06 blueness Exp $
 
 EAPI=4
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="doc static-libs -sse +sse2 +brass +chert +flint +inmemory +remote"
 
-DEPEND=""
-RDEPEND=""
+DEPEND="sys-libs/zlib"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
