@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.30-r1.ebuild,v 1.1 2012/02/05 23:06:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.30-r2.ebuild,v 1.1 2012/02/05 23:57:46 radhermit Exp $
 
 EAPI="4"
 
-inherit libtool flag-o-matic
+inherit eutils multilib libtool flag-o-matic
 
 DESCRIPTION="Perl-compatible regular expression library"
 HOMEPAGE="http://www.pcre.org/"
@@ -58,4 +58,12 @@ src_install() {
 	emake DESTDIR="${D}" install
 	gen_usr_ldscript -a pcre
 	find "${D}" -type f -name '*.la' -exec rm -f {} +
+}
+
+pkg_preinst() {
+	preserve_old_lib /$(get_libdir)/libpcre.so.0
+}
+
+pkg_postinst() {
+	preserve_old_lib_notify /$(get_libdir)/libpcre.so.0
 }
