@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-4.0.ebuild,v 1.1 2011/05/29 20:26:10 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-4.0.ebuild,v 1.2 2012/02/05 05:48:44 vapier Exp $
 
 EAPI=2
 
-inherit eutils toolchain-funcs
+inherit unpacker toolchain-funcs
 
 DESCRIPTION="NVIDIA CUDA Software Development Kit"
 HOMEPAGE="http://developer.nvidia.com/cuda"
@@ -34,10 +34,6 @@ pkg_setup() {
 		eerror "Please use gcc-config to switch to a compatible GCC version."
 		die "<=sys-devel/gcc-4.4 required"
 	fi
-}
-
-src_unpack() {
-	unpack_makeself
 }
 
 src_compile() {
