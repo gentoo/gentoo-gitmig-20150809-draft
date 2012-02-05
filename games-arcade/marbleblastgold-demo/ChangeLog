@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/marbleblastgold-demo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/ChangeLog,v 1.5 2011/12/14 17:32:54 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/ChangeLog,v 1.6 2012/02/05 06:21:08 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
+  marbleblastgold-demo-1.4.1.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   14 Dec 2011; Mike Frysinger <vapier@gentoo.org>
   marbleblastgold-demo-1.4.1.ebuild:

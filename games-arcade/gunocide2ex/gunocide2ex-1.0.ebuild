@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.14 2009/06/17 23:32:42 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.15 2012/02/05 06:20:50 vapier Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs games
+inherit eutils unpacker toolchain-funcs games
 
 DESCRIPTION="fast-paced 2D shoot'em'up"
 HOMEPAGE="http://www.polyfrag.com/content/product_gunocide.html"

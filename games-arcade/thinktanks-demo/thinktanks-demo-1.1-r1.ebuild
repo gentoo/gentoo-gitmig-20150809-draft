@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/thinktanks-demo-1.1-r1.ebuild,v 1.5 2011/12/14 17:32:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/thinktanks-demo-1.1-r1.ebuild,v 1.6 2012/02/05 06:21:31 vapier Exp $
 
-inherit eutils games
+inherit unpacker games
 
 DESCRIPTION="tank combat game with lighthearted, fast paced pandemonium"
 HOMEPAGE="http://www.garagegames.com/pg/product/view.php?id=12"
@@ -19,10 +19,6 @@ RDEPEND="media-libs/libsdl
 	media-libs/libvorbis"
 
 S=${WORKDIR}
-
-src_unpack() {
-	unpack_makeself
-}
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
