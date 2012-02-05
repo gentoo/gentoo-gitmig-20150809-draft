@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.2 2012/02/05 05:48:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.3 2012/02/05 05:57:19 vapier Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -298,7 +298,7 @@ _unpacker() {
 
 	# finally do the unpack
 	if [[ -z ${arch}${comp} ]] ; then
-		unpack "${a}"
+		unpack "$1"
 		return $?
 	fi
 
