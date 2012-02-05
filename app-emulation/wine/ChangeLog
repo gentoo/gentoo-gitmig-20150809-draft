@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.398 2012/01/28 22:53:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.399 2012/02/05 21:15:05 tetromino Exp $
+
+*wine-1.4_rc2 (05 Feb 2012)
+
+  05 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +wine-1.4_rc2.ebuild, +files/wine-1.4_rc2-multilib-portage.patch,
+  wine-9999.ebuild:
+  Bump, see http://www.winehq.org/announce/1.4-rc2 for the announcement. Add
+  patch by Thomas Sachau to (hopefully) finally fix bug #395615.
 
   28 Jan 2012; Mike Frysinger <vapier@gentoo.org> wine-1.4_rc1.ebuild:
   Drop manual flag filtering #395615.
