@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.120 2012/01/28 20:35:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.121 2012/02/05 23:24:51 robbat2 Exp $
+
+*git-1.7.9 (05 Feb 2012)
+
+  05 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.9.ebuild:
+  Version bump. Please be careful of git-svn functionality with SVN 1.7 if your
+  SVN repo URL, branch name or tag names contains characters that need URL
+  escaping.
 
   28 Jan 2012; Robin H. Johnson <robbat2@gentoo.org> git-1.7.9_rc2.ebuild,
   git-9999.ebuild:
