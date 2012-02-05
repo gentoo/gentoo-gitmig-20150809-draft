@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.103 2012/01/06 02:21:02 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.104 2012/02/05 17:46:19 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> gromacs-4.5.4-r1.ebuild,
+  gromacs-4.5.5-r1.ebuild:
+  Drop alpha/sparc keywords
 
   06 Jan 2012; Christoph Junghans <ottxor@gentoo.org> -gromacs-4.5.4-r2.ebuild,
   -gromacs-4.5.5.ebuild:
