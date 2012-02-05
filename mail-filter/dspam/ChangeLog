@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dspam
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.143 2011/12/06 05:44:01 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.144 2012/02/05 12:16:29 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> dspam-3.8.0-r15.ebuild,
+  dspam-3.10.1-r1.ebuild:
+  Drop alpha/sparc keywords
 
   06 Dec 2011; Tim Harder <radhermit@gentoo.org> files/dspam.initd:
   Replace opts with extra_commands (bug #393113 by Sven Schwyn) and remove
