@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.115 2012/01/27 09:01:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.116 2012/02/05 21:08:59 maekke Exp $
+
+  05 Feb 2012; Markus Meier <maekke@gentoo.org> libebml-1.2.2.ebuild:
+  arm stable, bug #400013
 
   27 Jan 2012; Jeff Horelick <jdhore@gentoo.org> libebml-1.2.2.ebuild:
   x86 stable per bug 400013
