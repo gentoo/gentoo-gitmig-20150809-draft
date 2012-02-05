@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/cufflinks
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cufflinks/ChangeLog,v 1.1 2012/02/05 03:56:55 weaver Exp $
+
+*cufflinks-1.3.0 (05 Feb 2012)
+
+  05 Feb 2012; Andrey Kislyuk <weaver@gentoo.org> +cufflinks-1.3.0.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me
+
