@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.638 2012/02/04 18:21:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.639 2012/02/05 17:50:04 maekke Exp $
+
+  05 Feb 2012; Markus Meier <maekke@gentoo.org> udev-171-r5.ebuild:
+  arm stable, bug #399717
 
   04 Feb 2012; William Hubbs <williamh@gentoo.org> udev-180.ebuild,
   udev-9999.ebuild:
