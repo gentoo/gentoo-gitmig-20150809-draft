@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.70 2012/01/30 10:44:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.71 2012/02/05 21:57:49 maekke Exp $
 
 # Alexandre Rostovtsev <tetromono@gentoo.org> (09 Jan 2012)
 # jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
@@ -14,7 +14,7 @@ net-libs/webkit-gtk -jit
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Nov 2011)
 # Missing keywords on dev-libs/libgusb, bug #392057
-x11-misc/colord gusb
+=x11-misc/colord-0.1.15 gusb
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
