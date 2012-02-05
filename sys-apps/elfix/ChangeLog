@@ -1,5 +1,8 @@
 
 
+  05 Feb 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Fix the description of xtpax to match what the kernel now calls it
+
 *elfix-0.4.2 (29 Dec 2011)
 
   29 Dec 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.4.1.ebuild,
