@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.14 2012/01/16 19:44:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.15 2012/02/05 06:23:55 vapier Exp $
 
 #	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
@@ -16,7 +16,7 @@ LANGPACKBASE="http://babelize.org/download/"
 LANGPACKPATHPREFIX="${LANGPACKBASE}/${LANGPACKPREFIX}"
 LANGPACKVERSION=1.0.4
 
-inherit eutils cdrom games
+inherit eutils unpacker cdrom games
 
 DESCRIPTION="Heroes of Might and Magic III : The Restoration of Erathia - turn-based 2-D medieval combat"
 HOMEPAGE="http://www.lokigames.com/products/heroes3/"

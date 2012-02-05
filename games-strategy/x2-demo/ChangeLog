@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/x2-demo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2-demo/ChangeLog,v 1.7 2011/03/29 11:56:14 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2-demo/ChangeLog,v 1.8 2012/02/05 06:25:14 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> x2-demo-1.4.05.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> x2-demo-1.4.05.ebuild:
   Fixed slot deps

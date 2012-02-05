@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2-demo/x2-demo-1.4.05.ebuild,v 1.3 2011/03/29 11:56:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2-demo/x2-demo-1.4.05.ebuild,v 1.4 2012/02/05 06:25:14 vapier Exp $
 
 EAPI=1
-inherit eutils games
+inherit eutils unpacker games
 
 MY_PN=${PN/-/_}
 

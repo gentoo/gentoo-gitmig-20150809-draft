@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.11 2012/01/18 12:43:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.12 2012/02/05 06:22:45 vapier Exp $
 
 CDROM_OPTIONAL="yes"
-inherit eutils cdrom games
+inherit eutils unpacker cdrom games
 
 MY_PV=${PV/_beta/b}
 DESCRIPTION="the hyped indie game of the year. By the Uplink creators."

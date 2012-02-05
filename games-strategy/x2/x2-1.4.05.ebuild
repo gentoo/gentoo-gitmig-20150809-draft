@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2/x2-1.4.05.ebuild,v 1.5 2012/01/16 19:47:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2/x2-1.4.05.ebuild,v 1.6 2012/02/05 06:25:47 vapier Exp $
 
 EAPI=2
-inherit eutils cdrom games
+inherit eutils unpacker cdrom games
 
 MY_PV="1.4.04-${PV}"
 MY_UPD="http://updatefiles.linuxgamepublishing.com/${PN}"

@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1.ebuild,v 1.4 2008/02/29 19:46:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1.ebuild,v 1.5 2012/02/05 06:23:13 vapier Exp $
 
-inherit eutils versionator games
+inherit eutils unpacker versionator games
 
 MY_PN="gorky17"
 MY_PV=$(replace_version_separator 2 '-')

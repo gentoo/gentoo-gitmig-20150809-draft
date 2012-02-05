@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/knights-demo/knights-demo-1.32.ebuild,v 1.2 2008/02/29 19:50:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/knights-demo/knights-demo-1.32.ebuild,v 1.3 2012/02/05 06:24:05 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 DESCRIPTION="Anglo-Saxon medieval army battles and resource management"
 HOMEPAGE="http://www.linuxgamepublishing.com/info.php?id=knights"

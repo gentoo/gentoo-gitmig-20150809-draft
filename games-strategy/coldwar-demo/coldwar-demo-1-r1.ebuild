@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar-demo/coldwar-demo-1-r1.ebuild,v 1.2 2008/02/29 19:43:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar-demo/coldwar-demo-1-r1.ebuild,v 1.3 2012/02/05 06:22:26 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 MY_PN=${PN%-demo}
 
