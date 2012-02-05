@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/glpk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.52 2011/12/02 22:09:55 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.53 2012/02/05 14:27:15 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> glpk-4.45.ebuild:
+  alpha/sparc stable wrt #391517
 
   02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> glpk-4.45.ebuild:
   Add missing zlib dependency. Stable on amd64. Bug #391517
