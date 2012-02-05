@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.44 2012/02/05 05:37:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.45 2012/02/05 15:32:41 spock Exp $
+
+  05 Feb 2012; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-toolkit-4.1.ebuild:
+  Fix problems with the executable bit being unset on some .so files (bug
+  #401447).
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
   nvidia-cuda-toolkit-2.2-r3.ebuild, nvidia-cuda-toolkit-2.3.ebuild,
