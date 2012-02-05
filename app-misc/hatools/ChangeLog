@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hatools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.12 2012/01/15 15:21:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.13 2012/02/05 18:26:26 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> hatools-2.00.ebuild,
+  hatools-2.14.ebuild:
+  Drop sparc keywords
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> hatools-2.14.ebuild:
   x86 stable wrt bug #396817
