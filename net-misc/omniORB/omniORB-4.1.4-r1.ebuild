@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4-r1.ebuild,v 1.6 2010/07/21 20:25:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4-r1.ebuild,v 1.7 2012/02/05 01:53:54 floppym Exp $
 
 EAPI="3"
 
 # 2.5 is problematic due to bug #261330
 PYTHON_DEPEND="2:2.6"
 
-inherit python eutils
+inherit python eutils multilib
 
 DESCRIPTION="A robust, high-performance CORBA 2 ORB"
 SRC_URI="mirror://sourceforge/omniorb/${P}.tar.gz"

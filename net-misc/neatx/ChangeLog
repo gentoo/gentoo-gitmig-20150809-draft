@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/neatx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.16 2011/10/24 06:24:21 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.17 2012/02/05 01:53:02 floppym Exp $
+
+  05 Feb 2012; Mike Gilbert <floppym@gentoo.org> neatx-0.3.1_p59-r1.ebuild,
+  neatx-0.3.1_p59-r2.ebuild:
+  Inherit multilib.
 
   24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   neatx-0.3.1_p59-r1.ebuild, neatx-0.3.1_p59-r2.ebuild:
