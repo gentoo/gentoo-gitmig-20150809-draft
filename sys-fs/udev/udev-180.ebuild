@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-180.ebuild,v 1.2 2012/02/04 18:21:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-180.ebuild,v 1.3 2012/02/05 18:05:21 williamh Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
 	gudev? ( dev-libs/glib:2 )
 	introspection? ( dev-libs/gobject-introspection )
-	sys-apps/kmod
+	~sys-apps/kmod-4
 	>=sys-apps/util-linux-2.20
 	>=sys-libs/glibc-2.10"
 

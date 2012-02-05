@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.639 2012/02/05 17:50:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.640 2012/02/05 18:05:21 williamh Exp $
+
+  05 Feb 2012; William Hubbs <williamh@gentoo.org> udev-180.ebuild:
+  udev-180 only builds with kmod-4
 
   05 Feb 2012; Markus Meier <maekke@gentoo.org> udev-171-r5.ebuild:
   arm stable, bug #399717
