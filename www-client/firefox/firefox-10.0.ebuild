@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.ebuild,v 1.2 2012/02/04 19:05:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.ebuild,v 1.3 2012/02/05 15:43:36 nirbheek Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -230,9 +230,9 @@ src_compile() {
 			cards=$(echo -n /dev/ati/card* /dev/nvidiactl* | sed 's/ /:/g')
 			if test -n "${cards}"; then
 				# Binary drivers seem to cause access violations anyway, so
-				# let's use indirect rendering so that the device files aren't
+				# let's use software rendering so that the device files aren't
 				# touched at all. See bug 394715.
-				export LIBGL_ALWAYS_INDIRECT=1
+				export LIBGL_ALWAYS_SOFTWARE=1
 			fi
 		fi
 		shopt -u nullglob
