@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.16-r1.ebuild,v 1.4 2010/08/05 06:16:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.16-r1.ebuild,v 1.5 2012/02/05 18:44:46 armin76 Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ DESCRIPTION="Two-way cross-platform file synchronizer"
 HOMEPAGE="http://www.cis.upenn.edu/~bcpierce/unison/"
 LICENSE="GPL-2"
 SLOT="$(get_version_component_range 1-2 ${PV})"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=dev-lang/ocaml-3.04
 	gtk? ( >=dev-ml/lablgtk-2.2 )"
