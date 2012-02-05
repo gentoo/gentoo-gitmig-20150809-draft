@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.434 2011/12/28 20:33:56 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.435 2012/02/05 02:57:06 vapier Exp $
+
+*binutils-9999 (05 Feb 2012)
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> +binutils-9999.ebuild:
+  Add live git version.
 
   28 Dec 2011; Mark Loeser <halcy0n@gentoo.org> binutils-2.21.1-r1.ebuild:
   Stable for ppc/ppc64; bug #378485
