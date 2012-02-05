@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.133 2012/02/05 05:57:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.134 2012/02/05 06:00:52 radhermit Exp $
+
+  05 Feb 2012; Tim Harder <radhermit@gentoo.org> wordpress-3.3.1.ebuild:
+  Drop depend.php eclass usage.
 
   05 Feb 2012; Tim Harder <radhermit@gentoo.org> -wordpress-3.2.1.ebuild,
   -wordpress-3.3.ebuild:

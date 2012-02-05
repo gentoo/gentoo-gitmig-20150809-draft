@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.3.1.ebuild,v 1.1 2012/01/06 05:47:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.3.1.ebuild,v 1.2 2012/02/05 06:00:52 radhermit Exp $
 
 EAPI="4"
 
-inherit webapp depend.php
+inherit webapp
 
 DESCRIPTION="Wordpress php and mysql based CMS system"
 HOMEPAGE="http://wordpress.org/"
@@ -14,13 +14,13 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="|| ( dev-lang/php[mysql] dev-lang/php[mysqli] )
+RDEPEND="virtual/httpd-php
+	|| ( dev-lang/php[mysql] dev-lang/php[mysqli] )
 	|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )"
 
 S=${WORKDIR}/${PN}
 
 need_httpd_cgi
-need_php_httpd
 
 src_install() {
 	webapp_src_preinst
