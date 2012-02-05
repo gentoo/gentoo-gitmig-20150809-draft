@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3-r2.ebuild,v 1.1 2012/02/04 21:45:07 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3-r2.ebuild,v 1.2 2012/02/05 20:39:36 ottxor Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.fftw.org/${P/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="3.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="altivec avx doc fortran mpi openmp paired-single quad sse sse2 static-libs threads zbus"
+IUSE="altivec avx doc fortran mpi openmp quad sse sse2 static-libs threads zbus"
 
 DEPEND="
 	fortran? ( virtual/fortran[openmp?] )
@@ -68,7 +68,6 @@ src_configure() {
 				$(use_enable altivec)
 				$(use_enable avx)
 				$(use_enable sse)
-				$(use_enable paired-single mips-ps)
 				$(use_enable mpi)
 			)
 		elif [[ $x == double ]]; then
