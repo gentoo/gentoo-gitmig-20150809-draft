@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-openvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.1 2012/01/30 10:25:11 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.2 2012/02/05 13:03:34 wired Exp $
+
+*qt-openvg-4.8.0-r2 (05 Feb 2012)
+
+  05 Feb 2012; Alex Alexander <wired@gentoo.org> -qt-openvg-4.8.0-r1.ebuild,
+  +qt-openvg-4.8.0-r2.ebuild:
+  marked openvg as experimental in the eselect qtgraphicssystem list
 
 *qt-openvg-4.8.0-r1 (30 Jan 2012)
 
