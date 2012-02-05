@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.956 2012/02/04 23:48:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.957 2012/02/05 15:28:51 zmedico Exp $
+
+  05 Feb 2012; Zac Medico <zmedico@gentoo.org> portage-2.1.10.45.ebuild,
+  portage-2.2.0_alpha85.ebuild, portage-9999.ebuild:
+  Add preinst ewarn message for USE=xattr if pyxattr is not installed.
 
   04 Feb 2012; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.11.ebuild,
   -portage-2.2.0_alpha81.ebuild:

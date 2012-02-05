@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.40 2011/12/22 04:46:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.41 2012/02/05 15:28:51 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -67,6 +67,10 @@ S="${WORKDIR}"/${PN}
 
 compatible_python_is_selected() {
 	[[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') = good ]]
+}
+
+current_python_has_xattr() {
+	[[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x3030000 and "yes" or "no")') = yes ]]
 }
 
 pkg_setup() {
@@ -323,6 +327,13 @@ pkg_preinst() {
 			einfo "Running preinst sanity tests..."
 			"$test_runner" || die "preinst sanity tests failed"
 		fi
+	fi
+
+	if use xattr && ! current_python_has_xattr && \
+		! has_version dev-python/pyxattr ; then
+		ewarn "For optimal performance in xattr handling, install"
+		ewarn "dev-python/pyxattr, or install >=dev-lang/python-3.3 and"
+		ewarn "enable USE=python3 for $CATEGORY/$PN."
 	fi
 
 	if ! use build && ! has_version dev-python/pycrypto && \
