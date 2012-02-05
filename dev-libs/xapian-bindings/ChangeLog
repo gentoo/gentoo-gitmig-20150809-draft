@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian-bindings
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.27 2011/12/17 18:51:08 blueness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.28 2012/02/05 10:00:53 ago Exp $
+
+  05 Feb 2012; Agostino Sarubbo <ago@gentoo.org> xapian-bindings-1.2.8.ebuild:
+  Stable for amd64, wrt bug #402187
 
   17 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
   xapian-bindings-1.2.8.ebuild, +files/fix-LUA_LIB-envvar.patch:
