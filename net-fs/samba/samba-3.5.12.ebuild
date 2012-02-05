@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.12.ebuild,v 1.1 2012/01/30 13:21:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.12.ebuild,v 1.2 2012/02/05 01:56:24 ottxor Exp $
 
 EAPI=4
 
@@ -145,6 +145,10 @@ src_configure() {
 	else
 		myconf+=" --without-cifsmount --without-cifsumount"
 	fi
+
+	#bug #399141 wrap newer iniparser version
+	has_version ">=dev-libs/iniparser-3.0.0" && \
+		export CPPFLAGS+=" -Diniparser_getstr\(d,i\)=iniparser_getstring\(d,i,NULL\)"
 
 	# Notes:
 	# - automount is only needed in conjunction with NIS and we don't have that
