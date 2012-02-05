@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.0.ebuild,v 1.3 2011/11/22 23:27:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.1.ebuild,v 1.1 2012/02/05 16:33:16 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -79,12 +79,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	mv py-compile py-compile.orig || die
-	ln -s "$(type -P true)" py-compile || die
+	>py-compile #397497
 	echo "ibus/_config.py" >> po/POTFILES.skip || die
-	sed -i -e "s/python/python2/" setup/ibus-setup.in ui/gtk/ibus-ui-gtk.in || die
 
-	epatch "${FILESDIR}"/${P}-doc-typo.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.4.0-machine-id-fallback.patch
+	use gconf || epatch "${FILESDIR}/${P}-no-gconf.patch"
+
 	eautoreconf
 }
 
@@ -101,7 +102,8 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable python) \
 		$(use_enable vala) \
-		$(use_enable X xim) || die
+		$(use_enable X xim) \
+		PYTHON="$(PYTHON)" || die
 }
 
 src_install() {
