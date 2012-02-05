@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.23.ebuild,v 1.6 2011/12/15 13:21:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.23.ebuild,v 1.7 2012/02/05 02:28:30 radhermit Exp $
 
 EAPI="4"
 
@@ -27,11 +27,11 @@ PATCHES=(
 )
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
+AUTOTOOLS_AUTORECONF=1
 
 src_prepare() {
-	autotools-utils_src_prepare
 	sed -i -e "s:-O2::" configure.ac
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
