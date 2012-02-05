@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.526 2012/01/08 15:36:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.527 2012/02/05 22:06:30 maekke Exp $
+
+  05 Feb 2012; Markus Meier <maekke@gentoo.org> ruby-1.9.3_p0.ebuild:
+  add ~arm, bug #332593
 
   08 Jan 2012; Raúl Porcel <armin76@gentoo.org> ruby-1.8.7_p357.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #396301
