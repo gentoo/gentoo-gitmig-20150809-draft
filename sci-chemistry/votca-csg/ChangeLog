@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/votca-csg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.16 2012/01/25 10:20:54 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.17 2012/02/05 01:14:07 ottxor Exp $
+
+  05 Feb 2012; Christoph Junghans <ottxor@gentoo.org> -votca-csg-1.2.1.ebuild:
+  remove old
 
   25 Jan 2012; Thomas Kahle <tomka@gentoo.org> votca-csg-1.2.2.ebuild:
   x86 stable per bug 389681
