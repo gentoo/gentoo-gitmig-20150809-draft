@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.128 2012/02/01 22:37:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.129 2012/02/05 17:36:02 maekke Exp $
+
+  05 Feb 2012; Markus Meier <maekke@gentoo.org> libusb-1.0.9_rc3.ebuild:
+  arm stable, bug #399713
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> libusb-1.0.9_rc3.ebuild:
   Marking libusb-1.0.9_rc3 ppc for bug 399713
