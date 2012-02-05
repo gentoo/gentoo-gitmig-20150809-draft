@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/rabbitvcs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.6 2011/11/10 10:27:24 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.7 2012/02/05 01:43:47 floppym Exp $
+
+  05 Feb 2012; Mike Gilbert <floppym@gentoo.org> rabbitvcs-0.14.2.1.ebuild,
+  rabbitvcs-0.15.0.5.ebuild:
+  Inherit multilib.
 
 *rabbitvcs-0.15.0.5 (10 Nov 2011)
 
