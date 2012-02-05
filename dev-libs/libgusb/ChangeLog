@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgusb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.6 2012/01/14 16:32:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.7 2012/02/05 21:00:19 maekke Exp $
+
+  05 Feb 2012; Markus Meier <maekke@gentoo.org> libgusb-0.1.3.ebuild:
+  add ~arm, bug #392057
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> libgusb-0.1.2.ebuild:
   x86 stable, bug #393007
