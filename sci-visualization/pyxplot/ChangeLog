@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/pyxplot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.23 2011/03/02 21:14:23 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.24 2012/02/05 02:00:09 floppym Exp $
+
+  05 Feb 2012; Mike Gilbert <floppym@gentoo.org> pyxplot-0.8.3.ebuild,
+  pyxplot-0.8.4.ebuild:
+  Inherit multilib.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> pyxplot-0.8.3.ebuild,
   pyxplot-0.8.4.ebuild:

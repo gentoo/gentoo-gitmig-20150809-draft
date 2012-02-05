@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.8.3.ebuild,v 1.2 2011/03/02 21:14:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.8.3.ebuild,v 1.3 2012/02/05 02:00:09 floppym Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 
-inherit eutils python flag-o-matic
+inherit eutils multilib python flag-o-matic
 
 DESCRIPTION="Gnuplot like graphing program publication-quality figures"
 HOMEPAGE="http://www.pyxplot.org.uk/"
