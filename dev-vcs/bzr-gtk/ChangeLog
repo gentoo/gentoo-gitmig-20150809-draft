@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.13 2012/01/23 16:48:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.14 2012/02/05 14:44:51 fauli Exp $
+
+  05 Feb 2012; Christian Faulhammer <fauli@gentoo.org> -bzr-gtk-0.99.0.ebuild:
+  clean up
 
   23 Jan 2012; Thomas Kahle <tomka@gentoo.org> bzr-gtk-0.100.0.ebuild:
   x86 stable per bug 383751
