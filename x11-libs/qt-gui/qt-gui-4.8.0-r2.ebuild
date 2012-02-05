@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r1.ebuild,v 1.1 2012/01/29 17:02:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r2.ebuild,v 1.1 2012/02/05 13:00:54 wired Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -179,7 +179,7 @@ src_install() {
 	# touch the available graphics systems
 	mkdir -p "${D}/usr/share/qt4/graphicssystems/" ||
 		die "could not create ${D}/usr/share/qt4/graphicssystems/"
-	touch "${D}/usr/share/qt4/graphicssystems/raster" ||
+	echo "default" > "${D}/usr/share/qt4/graphicssystems/raster" ||
 		die "could not touch ${D}/usr/share/qt4/graphicssystems/raster"
 	touch "${D}/usr/share/qt4/graphicssystems/native" ||
 		die "could not touch ${D}/usr/share/qt4/graphicssystems/native"
