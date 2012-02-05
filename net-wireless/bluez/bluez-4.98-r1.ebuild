@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98-r1.ebuild,v 1.4 2012/01/26 11:39:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98-r1.ebuild,v 1.5 2012/02/05 17:53:54 maekke Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -19,7 +19,7 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="alsa caps +consolekit cups debug gstreamer pcmcia test-programs usb"
 
 CDEPEND="
