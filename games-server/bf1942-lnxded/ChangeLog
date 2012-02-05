@@ -1,6 +1,9 @@
 # ChangeLog for games-server/bf1942-lnxded
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/ChangeLog,v 1.10 2009/06/12 16:35:02 nyhm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/ChangeLog,v 1.11 2012/02/05 06:18:27 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> bf1942-lnxded-1.61.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   12 Jun 2009; Tristan Heaven <nyhm@gentoo.org> bf1942-lnxded-1.61.ebuild:
   Update SRC_URI, bug #255677
