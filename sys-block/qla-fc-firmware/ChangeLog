@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/qla-fc-firmware
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.26 2011/12/04 14:52:04 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.27 2012/02/05 15:00:27 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org>
+  qla-fc-firmware-20101015.ebuild:
+  sparc stable wrt #391589
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
   qla-fc-firmware-20101015.ebuild:
