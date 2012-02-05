@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.24.ebuild,v 1.2 2012/02/05 02:26:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.24.ebuild,v 1.3 2012/02/05 04:44:49 radhermit Exp $
 
 EAPI="4"
 
-inherit autotools-utils multilib
+inherit autotools multilib
 
 MY_PN="ZenLib"
 DESCRIPTION="Shared library for libmediainfo and mediainfo"
@@ -22,23 +22,20 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_PN}/Project/GNU/Library"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
-AUTOTOOLS_AUTORECONF=1
-
 src_prepare() {
 	sed -i -e "s:-O2::" configure.ac
-	autotools-utils_src_prepare
+	eautoreconf
 }
 
 src_configure() {
-	local myeconfargs=(
-		--enable-unicode
-	)
-	autotools-utils_src_configure
+	econf \
+		--enable-unicode \
+		--enable-shared \
+		$(use_enable static-libs static)
 }
 
 src_compile() {
-	autotools-utils_src_compile
+	default
 
 	if use doc ; then
 		cd "${WORKDIR}"/${MY_PN}/Source/Doc
@@ -47,10 +44,10 @@ src_compile() {
 }
 
 src_install() {
-	autotools-utils_src_install
+	default
 
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins "${AUTOTOOLS_BUILD_DIR}"/${PN}.pc
+	doins ${PN}.pc
 
 	for x in ./ Format/Html Format/Http HTTP_Client ; do
 		insinto /usr/include/${MY_PN}/${x}
@@ -61,4 +58,6 @@ src_install() {
 	if use doc ; then
 		dohtml "${WORKDIR}"/${MY_PN}/Doc/*
 	fi
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }

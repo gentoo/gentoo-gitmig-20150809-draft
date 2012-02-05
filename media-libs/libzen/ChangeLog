@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.32 2012/02/05 02:28:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.33 2012/02/05 04:44:49 radhermit Exp $
+
+  05 Feb 2012; Tim Harder <radhermit@gentoo.org> libzen-0.4.23.ebuild,
+  libzen-0.4.24.ebuild:
+  Revert to autotools eclass to fix broken reconfigure deps (bug #402219).
 
   05 Feb 2012; Tim Harder <radhermit@gentoo.org> libzen-0.4.23.ebuild:
   Use autoreconf from autotools-utils eclass for old version too.
