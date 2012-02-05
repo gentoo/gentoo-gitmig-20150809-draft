@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.343 2012/02/04 21:30:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.344 2012/02/05 20:28:54 ottxor Exp $
+
+  05 Feb 2012; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  mips flags exist also in fftw-3.2
 
   04 Feb 2012; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   Masked sci-libs/fftw mips only flags
