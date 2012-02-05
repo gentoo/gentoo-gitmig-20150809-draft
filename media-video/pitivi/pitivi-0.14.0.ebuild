@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.14.0.ebuild,v 1.2 2011/06/10 03:06:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.14.0.ebuild,v 1.3 2012/02/05 01:50:23 floppym Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 
-inherit gnome2 python eutils virtualx
+inherit gnome2 python eutils virtualx multilib
 
 DESCRIPTION="A non-linear video editor using the GStreamer multimedia framework"
 HOMEPAGE="http://www.pitivi.org"
