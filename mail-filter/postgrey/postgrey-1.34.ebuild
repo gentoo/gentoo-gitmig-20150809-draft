@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.34.ebuild,v 1.4 2011/11/28 23:04:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.34.ebuild,v 1.5 2012/02/05 14:24:51 armin76 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://postgrey.schweikert.ch/pub/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=""
