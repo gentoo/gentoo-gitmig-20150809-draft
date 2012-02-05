@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.144 2011/11/25 08:00:02 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.145 2012/02/05 18:18:18 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask bluray, bug #397891
 
   25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask USE flags on gnome-3.2 packages due to missing keywords on deps; bug
