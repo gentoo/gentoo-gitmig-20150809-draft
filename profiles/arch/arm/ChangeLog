@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.149 2012/02/05 21:57:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.150 2012/02/05 22:10:25 maekke Exp $
+
+  05 Feb 2012; Markus Meier <maekke@gentoo.org> use.mask:
+  remove ruby19 mask, bug #332593
 
   05 Feb 2012; Markus Meier <maekke@gentoo.org> package.use.mask:
   update x11-misc/colord gusb use-mask to match only stable version
