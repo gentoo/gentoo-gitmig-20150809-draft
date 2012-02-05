@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/quake4-sdk/quake4-sdk-1.4.2.ebuild,v 1.1 2007/07/23 19:31:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/quake4-sdk/quake4-sdk-1.4.2.ebuild,v 1.2 2012/02/05 06:00:55 vapier Exp $
 
-inherit eutils games
+inherit unpacker games
 
 DESCRIPTION="Quake4 SDK"
 HOMEPAGE="http://www.iddevnet.com/quake4/"
