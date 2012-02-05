@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.23 2012/01/16 19:08:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.24 2012/02/05 05:00:30 vapier Exp $
 
 EAPI=2
-inherit eutils cdrom games
+inherit eutils unpacker cdrom games
 
 DESCRIPTION="Heavy Gear II - 3D first-person Mechanized Assault"
 HOMEPAGE="http://www.lokigames.com/products/heavy-gear2/"
