@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.111 2012/02/01 18:06:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.112 2012/02/05 16:21:38 tomka Exp $
+
+*wicd-1.7.1 (05 Feb 2012)
+
+  05 Feb 2012; Thomas Kahle <tomka@gentoo.org> +wicd-1.7.1.ebuild:
+  bump to 1.7.1
 
 *wicd-1.7.1_pre20120127-r1 (01 Feb 2012)
 
