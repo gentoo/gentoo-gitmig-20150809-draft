@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-6.2.0.ebuild,v 1.4 2009/07/07 23:02:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-6.2.0.ebuild,v 1.5 2012/02/05 05:27:28 vapier Exp $
 
-inherit eutils
+inherit unpacker
 
 DESCRIPTION="simplified/streamlined version of wine with commercial support"
 HOMEPAGE="http://www.codeweavers.com/products/cxoffice/"
@@ -29,10 +29,6 @@ S=${WORKDIR}
 pkg_nofetch() {
 	elog "Please visit ${HOMEPAGE}"
 	elog "and place ${A} in ${DISTDIR}"
-}
-
-src_unpack() {
-	unpack_makeself
 }
 
 src_install() {

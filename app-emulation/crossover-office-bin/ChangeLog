@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/crossover-office-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/ChangeLog,v 1.17 2009/07/07 23:02:56 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/ChangeLog,v 1.18 2012/02/05 05:27:28 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
+  crossover-office-bin-6.0.0.ebuild, crossover-office-bin-6.0.1.ebuild,
+  crossover-office-bin-6.1.0.ebuild, crossover-office-bin-6.2.0.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   crossover-office-bin-6.2.0.ebuild:
