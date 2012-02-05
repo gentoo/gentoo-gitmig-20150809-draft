@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.17 2012/01/16 19:05:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.18 2012/02/05 05:22:29 vapier Exp $
 
-inherit eutils cdrom multilib games
+inherit eutils unpacker cdrom multilib games
 
 IUSE="nocd videos"
 DESCRIPTION="Descent 3 - 3-Dimensional indoor/outdoor spaceship combat"
