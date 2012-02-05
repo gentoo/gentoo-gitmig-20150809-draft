@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/xapian-omega-1.2.8.ebuild,v 1.2 2012/02/05 10:01:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/xapian-omega-1.2.8.ebuild,v 1.3 2012/02/05 11:39:29 blueness Exp $
 
 EAPI="4"
 
@@ -17,7 +17,6 @@ IUSE=""
 DEPEND=">=dev-libs/xapian-${PV}
 	dev-lang/perl
 	dev-libs/libpcre
-	sys-apps/file
 	sys-libs/zlib"
 RDEPEND="${DEPEND}"
 
