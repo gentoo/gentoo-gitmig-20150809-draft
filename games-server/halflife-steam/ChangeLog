@@ -1,6 +1,9 @@
 # ChangeLog for games-server/halflife-steam
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/ChangeLog,v 1.12 2011/10/05 09:14:03 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/ChangeLog,v 1.13 2012/02/05 04:55:24 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> halflife-steam-2.0.ebuild:
+  Move to new unpacker eclass for unpack_pdv.
 
   05 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> files/hlds.confd,
   files/hlds.rc:
