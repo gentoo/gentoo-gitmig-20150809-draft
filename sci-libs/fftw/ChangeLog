@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.122 2012/02/05 20:39:36 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.123 2012/02/05 20:54:57 ottxor Exp $
+
+*fftw-3.3.1_beta1 (05 Feb 2012)
+
+  05 Feb 2012; Christoph Junghans <ottxor@gentoo.org> +fftw-3.3.1_beta1.ebuild:
+  added 3.3.1_beta1 with neon support
 
 *fftw-3.2.2-r2 (05 Feb 2012)
 
