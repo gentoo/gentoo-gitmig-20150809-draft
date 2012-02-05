@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.331 2012/02/04 12:26:59 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.332 2012/02/05 06:03:44 eras Exp $
+
+  05 Feb 2012; Eray Aslan <eras@gentoo.org> postfix-2.9.0.ebuild:
+  install daemons to /usr/libexec/postfix - bug #401911
 
 *postfix-2.10_pre20120202 (04 Feb 2012)
 
