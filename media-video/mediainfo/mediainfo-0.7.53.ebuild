@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.53.ebuild,v 1.1 2012/02/04 23:31:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.53.ebuild,v 1.2 2012/02/05 01:34:30 radhermit Exp $
 
 EAPI="4"
 WX_GTK_VER="2.8"
@@ -64,7 +64,7 @@ src_install() {
 		autotools-utils_src_install
 		dodoc "${S}"/History_${target}.txt
 		if [[ ${target} == "GUI" ]]; then
-			newicon "${S}"/Source/Ressource/Image/MediaInfo.png ${PN}.png
+			newicon "${S}"/Source/Resource/Image/MediaInfo.png ${PN}.png
 			make_desktop_entry ${PN}-gui MediaInfo ${PN} "AudioVideo;GTK"
 		fi
 	done
