@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.6.1.ebuild,v 1.5 2012/02/02 23:19:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.6.1.ebuild,v 1.6 2012/02/05 03:04:14 xmw Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 LICENSE="GPL-2 IgnorantGuru LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="fam kde kernel_linux udev"
+IUSE="fam gtk kde kernel_linux udev"
 
 COMMON_DEPEND=">=dev-libs/glib-2
 	dev-util/desktop-file-utils
@@ -25,13 +25,11 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/eject
 	virtual/freedesktop-icon-theme
 	x11-misc/shared-mime-info
-	kde? ( kde-base/kdesu )
-	!kde? ( x11-libs/gksu )
+	kde? ( || ( kde-base/kdesu x11-misc/ktsuss ) )
+	gtk? ( || ( x11-libs/gksu x11-misc/ktsuss ) )
 	!kernel_linux? ( fam? ( virtual/fam ) )
-	udev? (
-		sys-fs/udisks
-		sys-process/lsof
-		)"
+	udev? ( sys-fs/udisks
+		sys-process/lsof )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig

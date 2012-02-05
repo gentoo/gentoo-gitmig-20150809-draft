@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.7 2012/02/02 23:19:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.8 2012/02/05 03:04:14 xmw Exp $
+
+  05 Feb 2012; Michael Weber <xmw@gentoo.org> spacefm-0.6.1.ebuild:
+  Fix gksu/kdesu/ktsuss deps as pointed out by Julian Ospald, (bug 402135
+  reported by Samuel BAUER)
 
   02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> spacefm-0.6.1.ebuild:
   src/ptk/ptk-location-view.c is using lsof to determine if mountpoint is used
