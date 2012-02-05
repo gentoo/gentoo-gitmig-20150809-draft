@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10.ebuild,v 1.5 2011/11/06 19:21:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10.ebuild,v 1.6 2012/02/05 01:29:04 floppym Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="!minimal? 2"
 PYTHON_USE_WITH="threads xml"
 PYTHON_USE_WITH_OPT="!minimal"
 
-inherit fdo-mime linux-info python autotools
+inherit fdo-mime linux-info python autotools multilib
 
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
