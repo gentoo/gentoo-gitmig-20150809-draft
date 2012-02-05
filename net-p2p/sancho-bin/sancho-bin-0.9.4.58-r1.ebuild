@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.6 2011/03/28 14:30:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.7 2012/02/05 05:57:07 vapier Exp $
 
 EAPI="1"
 
-inherit eutils
+inherit eutils unpacker
 
 MY_P=${P/-bin/}
 MY_P=${MY_P%.*}-${MY_P##*.}

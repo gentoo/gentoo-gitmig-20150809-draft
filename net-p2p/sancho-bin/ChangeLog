@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/sancho-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.47 2011/03/28 14:30:52 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.48 2012/02/05 05:57:07 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
+  sancho-bin-0.9.4.58-r1.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   sancho-bin-0.9.4.58.ebuild, sancho-bin-0.9.4.58-r1.ebuild:
