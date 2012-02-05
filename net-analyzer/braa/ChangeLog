@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/braa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.17 2012/01/15 15:35:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.18 2012/02/05 18:31:17 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> braa-0.8-r2.ebuild,
+  braa-0.82.ebuild:
+  Drop sparc keywords
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> braa-0.82.ebuild:
   x86 stable wrt bug #397123

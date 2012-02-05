@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/siphon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.17 2012/01/15 15:32:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.18 2012/02/05 18:29:41 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> siphon-666.ebuild,
+  siphon-666-r1.ebuild:
+  Drop sparc keywords
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> siphon-666-r1.ebuild:
   x86 stable wrt bug #397139

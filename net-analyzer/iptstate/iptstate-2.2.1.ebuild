@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-2.2.1.ebuild,v 1.11 2011/04/19 23:18:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-2.2.1.ebuild,v 1.12 2012/02/05 18:25:50 armin76 Exp $
 
 inherit base
 
@@ -14,7 +14,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc x86"
 IUSE=""
 
 PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
