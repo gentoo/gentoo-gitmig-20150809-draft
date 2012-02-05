@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.7 2011/12/21 08:38:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.8 2012/02/05 17:40:28 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-3"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="blas debug doc fftw lapack minimal static-libs"
 
 RDEPEND="
