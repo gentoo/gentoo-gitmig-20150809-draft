@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.1.ebuild,v 1.5 2012/01/20 16:42:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.1.ebuild,v 1.6 2012/02/05 17:06:47 xarthisius Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ src_install() {
 	use doc && dohtml doc/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		cd examples
-		doins Makefile.am README *.c *.h *.ctl *scm
+		doins "${AUTOTOOLS_BUILD_DIR}"/examples/{*.c,*.h,example.scm,Makefile}
+		doins "${S}"/examples/{README,example.c,run.ctl}
 	fi
 }
