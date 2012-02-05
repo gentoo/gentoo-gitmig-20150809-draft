@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.0.1.ebuild,v 1.10 2011/11/21 23:02:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.0.1.ebuild,v 1.11 2012/02/05 01:42:43 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 
-inherit distutils eutils
+inherit distutils eutils multilib
 
 DESCRIPTION="Extensible Python-based build utility"
 HOMEPAGE="http://www.scons.org/"

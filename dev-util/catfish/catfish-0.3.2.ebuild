@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/catfish-0.3.2.ebuild,v 1.1 2012/01/14 20:30:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/catfish-0.3.2.ebuild,v 1.2 2012/02/05 01:41:24 floppym Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.7"
-inherit eutils gnome2-utils python
+inherit eutils gnome2-utils multilib python
 
 DESCRIPTION="A frontend for find, (s)locate, doodle, tracker, beagle, strigi and pinot"
 HOMEPAGE="http://software.twotoasts.de/index.php?/pages/catfish_summary.html"

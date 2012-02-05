@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.105 2012/02/04 13:15:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.106 2012/02/05 01:42:43 floppym Exp $
+
+  05 Feb 2012; Mike Gilbert <floppym@gentoo.org> scons-2.0.1.ebuild:
+  Inherit multilib.
 
   04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> scons-2.1.0.ebuild:
   Stable for amd64, wrt bug #401831
