@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.16 2012/01/28 11:01:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.17 2012/02/05 17:54:53 maekke Exp $
+
+  05 Feb 2012; Markus Meier <maekke@gentoo.org>
+  man-pages-pl-20070628-r1.ebuild:
+  arm stable, bug #399935
 
   28 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
   man-pages-pl-20070628-r1.ebuild:
