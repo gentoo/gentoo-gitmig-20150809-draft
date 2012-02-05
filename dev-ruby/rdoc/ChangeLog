@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.71 2011/12/31 17:53:25 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.72 2012/02/05 21:01:47 maekke Exp $
+
+  05 Feb 2012; Markus Meier <maekke@gentoo.org> rdoc-3.12.ebuild:
+  add ~arm, bug #332593
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> rdoc-3.6.1.ebuild:
   Add Prefix keywords, bug #396547
