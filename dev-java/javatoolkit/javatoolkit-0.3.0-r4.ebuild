@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.3.0-r4.ebuild,v 1.6 2010/11/05 20:00:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.3.0-r4.ebuild,v 1.7 2012/02/05 01:25:05 floppym Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="xml"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils eutils
+inherit distutils eutils multilib
 
 DESCRIPTION="Collection of Gentoo-specific tools for Java"
 HOMEPAGE="http://www.gentoo.org/proj/en/java/"
