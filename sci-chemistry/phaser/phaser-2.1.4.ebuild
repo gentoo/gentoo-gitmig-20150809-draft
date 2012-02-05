@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/phaser/phaser-2.1.4.ebuild,v 1.2 2011/04/10 13:10:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/phaser/phaser-2.1.4.ebuild,v 1.3 2012/02/05 01:54:57 floppym Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 
-inherit base flag-o-matic python
+inherit base flag-o-matic python toolchain-funcs
 
 CCP4VER="6.1.13"
 
