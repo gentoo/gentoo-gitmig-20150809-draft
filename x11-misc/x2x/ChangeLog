@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/x2x
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.27 2012/01/04 21:33:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.28 2012/02/05 17:54:37 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> x2x-1.27-r1.ebuild,
+  x2x-1.27-r2.ebuild, x2x-1.27-r3.ebuild:
+  Drop alpha/sparc keywords
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> x2x-1.27-r3.ebuild:
   Marking x2x-1.27-r3 ppc for bug 393781

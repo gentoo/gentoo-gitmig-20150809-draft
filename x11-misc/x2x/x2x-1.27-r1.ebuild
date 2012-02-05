@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r1.ebuild,v 1.12 2009/05/05 18:18:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r1.ebuild,v 1.13 2012/02/05 17:54:37 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.digital.com/pub/Digital/SRC/x2x/${P}.tar.gz
 	mirror://gentoo/x2x_1.27-8-initvars.patch.gz
 	mirror://gentoo/x2x-1.27-license.patch.gz"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~mips ppc sparc x86"
+KEYWORDS="~amd64 ~mips ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
