@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.110 2011/11/26 18:11:31 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.111 2012/02/05 02:02:43 floppym Exp $
+
+  05 Feb 2012; Mike Gilbert <floppym@gentoo.org> alacarte-0.12.4.ebuild:
+  Inherit multilib.
 
 *alacarte-0.13.2-r50 (26 Nov 2011)
 

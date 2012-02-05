@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.12.4.ebuild,v 1.8 2011/10/19 22:50:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.12.4.ebuild,v 1.9 2012/02/05 02:02:43 floppym Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit gnome2 python
+inherit gnome2 multilib python
 
 DESCRIPTION="Simple GNOME menu editor"
 HOMEPAGE="http://live.gnome.org/"
