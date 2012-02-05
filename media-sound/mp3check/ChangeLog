@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3check
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/ChangeLog,v 1.15 2011/12/11 09:13:29 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/ChangeLog,v 1.16 2012/02/05 15:10:38 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> mp3check-0.8.0.ebuild,
+  mp3check-0.8.4.ebuild:
+  Drop alpha/sparc keywords
 
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mp3check-0.8.4.ebuild:
   x86 stable wrt bug #392877
