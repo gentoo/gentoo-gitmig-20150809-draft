@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218-r1.ebuild,v 1.6 2011/11/13 20:21:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218-r1.ebuild,v 1.7 2012/02/05 05:54:06 vapier Exp $
 
 EAPI=2
 
-inherit eutils fdo-mime versionator toolchain-funcs
+inherit eutils unpacker fdo-mime versionator toolchain-funcs
 
 DESCRIPTION="A 3D interface to the planet"
 HOMEPAGE="http://earth.google.com/"
