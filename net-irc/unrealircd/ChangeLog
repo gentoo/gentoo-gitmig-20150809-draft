@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.93 2012/01/04 20:21:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.94 2012/02/05 17:51:26 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> unrealircd-3.2.8.1-r1.ebuild,
+  unrealircd-3.2.8.1-r2.ebuild, unrealircd-3.2.9_rc2.ebuild,
+  unrealircd-3.2.9.ebuild:
+  Drop sparc keywords
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> unrealircd-3.2.9.ebuild:
   Marking unrealircd-3.2.9 ppc for bug 395579
