@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.35.ebuild,v 1.1 2012/01/31 23:24:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.35.ebuild,v 1.2 2012/02/05 13:58:45 dilfridge Exp $
 
 EAPI=4
 
@@ -66,7 +66,6 @@ src_install() {
 		gnulocaledir="${D}"/usr/share/locale
 
 	dodoc CHANGES README VERSION "${FILESDIR}"/printcap lpd.conf lpd.perms
-	dohtml HOWTO/*
 
 	insinto /etc/lprng
 	doins "${FILESDIR}"/printcap lpd.conf lpd.perms
