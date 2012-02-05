@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.24.ebuild,v 1.1 2012/02/04 23:22:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.24.ebuild,v 1.2 2012/02/05 02:26:14 radhermit Exp $
 
 EAPI="4"
 
@@ -23,11 +23,11 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}/Project/GNU/Library"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
+AUTOTOOLS_AUTORECONF=1
 
 src_prepare() {
-	autotools-utils_src_prepare
 	sed -i -e "s:-O2::" configure.ac
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
