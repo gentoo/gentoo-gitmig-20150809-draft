@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.837 2012/01/28 13:02:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.838 2012/02/05 15:41:41 tomka Exp $
+
+  05 Feb 2012; Thomas Kahle <tomka@gentoo.org>
+  mplayer-1.0_rc4_p20120128.ebuild:
+  marked ~x86 per bug 394805
 
 *mplayer-1.0_rc4_p20120128 (28 Jan 2012)
 
