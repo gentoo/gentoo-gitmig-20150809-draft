@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.48 2012/01/15 15:53:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.49 2012/02/05 18:36:58 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> libnids-1.18.ebuild,
+  libnids-1.18-r1.ebuild, libnids-1.18-r2.ebuild, libnids-1.24.ebuild,
+  libnids-1.24-r1.ebuild, libnids-1.24-r2.ebuild:
+  Drop alpha/sparc keywords
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libnids-1.18-r1.ebuild,
   libnids-1.24-r1.ebuild:
