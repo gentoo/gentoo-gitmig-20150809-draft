@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/grepmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.35 2012/01/04 22:11:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.36 2012/02/05 18:07:20 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> grepmail-5.30.33.ebuild,
+  grepmail-5.30.33-r1.ebuild:
+  Drop sparc keywords
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> grepmail-5.30.33-r1.ebuild:
   Marking grepmail-5.30.33-r1 ppc for bug 391649

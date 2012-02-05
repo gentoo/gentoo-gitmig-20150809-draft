@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/tnef
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.55 2012/01/04 22:08:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.56 2012/02/05 18:06:48 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> tnef-1.4.7.ebuild,
+  tnef-1.4.8.ebuild:
+  Drop sparc keywords
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> tnef-1.4.8.ebuild:
   Marking tnef-1.4.8 ppc for bug 391335
