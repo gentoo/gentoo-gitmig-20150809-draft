@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.66 2011/12/24 11:28:15 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.67 2012/02/05 20:48:55 maekke Exp $
+
+  05 Feb 2012; Markus Meier <maekke@gentoo.org> racc-1.4.7.ebuild:
+  add ~arm, bug #332593
 
   24 Dec 2011; Fabian Groffen <grobian@gentoo.org> racc-1.4.7.ebuild:
   Marked ~{sparc{,64},x64}-solaris
