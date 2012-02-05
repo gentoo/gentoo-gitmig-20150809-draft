@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker-gui/pacemaker-gui-2.1.0-r1.ebuild,v 1.1 2011/12/27 14:11:56 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker-gui/pacemaker-gui-2.1.0-r1.ebuild,v 1.2 2012/02/05 02:01:35 floppym Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
 MY_P="pacemaker-mgmt-${PV}"
 
-inherit python base autotools
+inherit python base autotools multilib
 
 DESCRIPTION="Pacemaker python GUI and management daemon"
 HOMEPAGE="http://hg.clusterlabs.org/pacemaker/pygui/"
