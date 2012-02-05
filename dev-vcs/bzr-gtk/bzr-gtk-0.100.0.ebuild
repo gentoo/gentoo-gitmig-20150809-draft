@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/bzr-gtk-0.100.0.ebuild,v 1.4 2012/01/23 16:48:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/bzr-gtk-0.100.0.ebuild,v 1.5 2012/02/05 15:46:08 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,17 +21,17 @@ KEYWORDS="alpha amd64 x86"
 IUSE="gconf gnome-keyring gpg +sourceview nautilus"
 
 DEPEND=">=dev-vcs/bzr-1.6_rc1
-	>=dev-python/pygtk-2.8
+	dev-python/pygtk:2
 	dev-python/notify-python
 	>=dev-python/pycairo-1.0"
 RDEPEND="${DEPEND}
-	nautilus? ( dev-python/nautilus-python )
+	nautilus? ( <dev-python/nautilus-python-1.0 !>=gnome-base/nautilus-3.0 )
 	dev-python/notify-python
 	gnome-keyring? ( dev-python/gnome-keyring-python )
 	gpg? ( app-crypt/seahorse )
 	sourceview? (
-		dev-python/pygtksourceview
-		gconf? ( dev-python/gconf-python )
+		dev-python/pygtksourceview:2
+		gconf? ( dev-python/gconf-python:2 )
 	)"
 
 S="${WORKDIR}/${MY_P}"
@@ -47,4 +47,9 @@ src_install() {
 	distutils_src_install
 	insinto /etc/xdg/autostart
 	doins bzr-notify.desktop
+	if ! use nautilus
+	then
+		rm -rf "${D}"/usr/lib/nautilus/
+		rm -rf "${D}"/usr/lib/python2.7/site-packages/bzrlib/plugins/gtk/nautilus-bzr.py
+	fi
 }
