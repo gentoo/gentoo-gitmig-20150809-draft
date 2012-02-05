@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/adplug
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.33 2011/12/23 00:42:18 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.34 2012/02/05 15:03:48 armin76 Exp $
+
+  05 Feb 2012; Raúl Porcel <armin76@gentoo.org> adplug-2.1.ebuild,
+  adplug-2.2.ebuild, adplug-2.2.1.ebuild:
+  Drop sparc keywords
 
   23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> adplug-2.2.1.ebuild:
   USE="static-libs" and remove unnecessary libadplug.la libtool archive.
