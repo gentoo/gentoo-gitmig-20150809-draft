@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdspeed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.26 2012/02/02 18:21:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.27 2012/02/05 21:42:11 ranger Exp $
+
+  05 Feb 2012; Brent Baude <ranger@gentoo.org> cdspeed-0.4-r1.ebuild:
+  Marking cdspeed-0.4-r1 ppc for bug 396813
 
   02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> cdspeed-0.4-r1.ebuild:
   Stable for amd64, wrt bug #396813

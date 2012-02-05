@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.4-r1.ebuild,v 1.3 2012/02/02 18:21:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.4-r1.ebuild,v 1.4 2012/02/05 21:42:11 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://linuxfocus.org/~guido/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
