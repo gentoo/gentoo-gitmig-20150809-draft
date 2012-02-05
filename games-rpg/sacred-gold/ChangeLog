@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/sacred-gold
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/ChangeLog,v 1.3 2010/01/23 17:04:39 calchan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/ChangeLog,v 1.4 2012/02/05 06:00:21 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> sacred-gold-1.0.01.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
 *sacred-gold-1.0.01 (23 Jan 2010)
 
