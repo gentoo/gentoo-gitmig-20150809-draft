@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bb/bb-1.3.0_rc1-r1.ebuild,v 1.1 2012/01/28 19:25:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bb/bb-1.3.0_rc1-r2.ebuild,v 1.1 2012/02/05 19:37:31 slyfox Exp $
 
 EAPI=4
 
@@ -26,6 +26,9 @@ S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-noattr.patch"
 	epatch "${FILESDIR}/${P}-fix-protos.patch"
+	epatch "${FILESDIR}"/${P}-messager-overlap.patch
+	epatch "${FILESDIR}"/${P}-zbuff-fault.patch
+	epatch "${FILESDIR}"/${P}-printf-cleanup.patch
 
 	# rename binary and manpage bb -> bb-aalib
 
