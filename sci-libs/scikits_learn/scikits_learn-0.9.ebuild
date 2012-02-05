@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.9.ebuild,v 1.3 2012/01/24 10:28:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.9.ebuild,v 1.4 2012/02/05 01:58:26 floppym Exp $
 
 EAPI="3"
 inherit flag-o-matic
@@ -10,7 +10,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils
+inherit distutils multilib
 
 MYPN="${PN/scikits_/scikit-}"
 
