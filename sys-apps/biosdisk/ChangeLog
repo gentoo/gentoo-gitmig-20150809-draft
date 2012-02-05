@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/biosdisk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.9 2010/04/25 11:38:12 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.10 2012/02/05 15:29:13 xmw Exp $
+
+  05 Feb 2012; Michael Weber <xmw@gentoo.org> biosdisk-0.75.2.ebuild:
+  Update HOMEPAGE (bug 401967)
 
   22 Mar 2010; <jlec@gentoo.org> biosdisk-0.65.ebuild,
   biosdisk-0.75.2.ebuild:
