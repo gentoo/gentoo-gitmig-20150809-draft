@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.1.ebuild,v 1.6 2011/07/23 20:41:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.1.ebuild,v 1.7 2012/02/05 05:37:49 vapier Exp $
 
 EAPI=2
 
-inherit eutils multilib
+inherit eutils multilib unpacker
 
 DESCRIPTION="NVIDIA CUDA Toolkit"
 HOMEPAGE="http://developer.nvidia.com/cuda"
@@ -35,14 +35,6 @@ RDEPEND="${DEPEND}
 	debugger? ( >=sys-libs/libtermcap-compat-2.0.8-r2 )"
 
 S="${WORKDIR}"
-
-src_unpack() {
-	for f in ${A} ; do
-		if [ "${f//*.run/}" == "" ]; then
-			unpack_makeself ${f}
-		fi
-	done
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-enum_fix.patch

@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.43 2012/01/29 16:50:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.44 2012/02/05 05:37:49 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
+  nvidia-cuda-toolkit-2.2-r3.ebuild, nvidia-cuda-toolkit-2.3.ebuild,
+  nvidia-cuda-toolkit-3.0.ebuild, nvidia-cuda-toolkit-3.1.ebuild,
+  nvidia-cuda-toolkit-3.2.ebuild, nvidia-cuda-toolkit-4.0.ebuild,
+  nvidia-cuda-toolkit-4.1.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
 *nvidia-cuda-toolkit-4.1 (29 Jan 2012)
 
