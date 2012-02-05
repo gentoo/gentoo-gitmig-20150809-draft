@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.8.1.ebuild,v 1.1 2011/07/26 17:50:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.10.ebuild,v 1.1 2012/02/05 00:41:35 bicatali Exp $
 
-EAPI="3"
+EAPI=4
+inherit flag-o-matic
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -11,15 +12,15 @@ DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
-MY_P="${P/scikits_/scikits.}"
+MYPN="${PN/scikits_/scikit-}"
 
 DESCRIPTION="A set of python modules for machine learning and data mining"
-HOMEPAGE="http://scikit-learn.sourceforge.net/"
-SRC_URI="mirror://sourceforge/scikit-learn/${MY_P}.tar.gz"
+HOMEPAGE="http://scikit-learn.org"
+SRC_URI="mirror://sourceforge/${MYPN}/${MYPN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
 CDEPEND="sci-libs/scipy
@@ -32,7 +33,7 @@ DEPEND="${CDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/sphinx dev-python/matplotlib )"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MYPN}-${PV}"
 
 src_prepare() {
 	# use stock libsvm
@@ -42,6 +43,10 @@ src_prepare() {
 		library_dirs=${EPREFIX}/usr/$(get_libdir)
 		include_dirs=${EPREFIX}/usr/include/
 	EOF
+	# bug #397605
+	[[ ${CHOST} == *-darwin* ]] \
+		&& append-ldflags -bundle "-undefined dynamic_lookup" \
+		|| append-ldflags -shared
 }
 
 src_compile() {
@@ -51,7 +56,7 @@ src_compile() {
 		export VARTEXFONTS="${T}"/fonts
 		MPLCONFIGDIR="${S}/build-$(PYTHON -f --ABI)" \
 			PYTHONPATH=$(ls -d "${S}"/build-$(PYTHON -f --ABI)/lib*) \
-			emake html latex || die
+			emake html latex
 	fi
 }
 
@@ -63,11 +68,7 @@ src_install() {
 	}
 	python_execute_function -q remove_scikits
 	insinto /usr/share/doc/${PF}
-	if use doc; then
-		doins "${DISTDIR}"/scikits.learn.pdf || die
-		doins -r build/sphinx/html || die
-	fi
-	if use examples; then
-		doins -r examples || die
-	fi
+	use doc && doins "${DISTDIR}"/scikits.learn.pdf && \
+		doins -r build/sphinx/html
+	use examples && doins -r examples
 }
