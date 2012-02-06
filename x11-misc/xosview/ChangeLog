@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.44 2012/02/04 12:33:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.45 2012/02/06 15:39:33 xarthisius Exp $
+
+  06 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> xosview-1.9.2.ebuild:
+  Respect CXXFLAGS, add suid flag and postinst warning wrt bug 402395 by Steffen
+  'j0inty' Stollfuß <steffen@stollfuss.net>
 
 *xosview-1.9.2 (04 Feb 2012)
 
