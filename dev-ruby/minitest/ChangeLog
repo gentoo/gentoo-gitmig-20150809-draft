@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.67 2012/01/15 16:04:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.68 2012/02/06 19:34:28 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> minitest-2.6.2.ebuild:
+  Marking minitest-2.6.2 ppc for bug 394781
 
   15 Jan 2012; Raúl Porcel <armin76@gentoo.org> minitest-2.6.2.ebuild:
   alpha/ia64/sparc stable wrt #394781
