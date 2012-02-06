@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-atk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.54 2012/01/07 22:21:58 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.55 2012/02/06 17:28:55 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> ruby-atk-0.90.8.ebuild:
+  Marking ruby-atk-0.90.8 ~ppc for bug 371353
 
 *ruby-atk-1.1.0 (07 Jan 2012)
 
