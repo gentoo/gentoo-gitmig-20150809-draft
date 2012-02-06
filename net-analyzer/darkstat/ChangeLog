@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/darkstat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.47 2011/12/18 19:48:37 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.48 2012/02/06 18:29:59 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> darkstat-3.0.714.ebuild:
+  Marking darkstat-3.0.714 ppc for bug 393845
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> darkstat-3.0.714.ebuild:
   x86 stable wrt bug #393845
