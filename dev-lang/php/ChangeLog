@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.551 2012/02/06 01:15:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.552 2012/02/06 13:41:27 olemarkus Exp $
+
+*php-5.3.10-r1 (06 Feb 2012)
+
+  06 Feb 2012; Ole Markus With <olemarkus@gentoo.org> +php-5.3.10-r1.ebuild,
+  -php-5.4.0_rc6.ebuild, php-5.3.10.ebuild, php-5.3.9.ebuild,
+  php-5.4.0_rc7.ebuild:
+  Fixed compile fail against libpcre. Bug 402357 Non-fixed versions block
+  libpcre-8.30+
 
   06 Feb 2012; Jeroen Roovers <jer@gentoo.org> php-5.3.10.ebuild:
   Stable for HPPA (bug #401997).
