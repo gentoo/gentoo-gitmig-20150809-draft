@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Scrubber
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/ChangeLog,v 1.22 2012/02/03 16:44:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/ChangeLog,v 1.23 2012/02/06 19:14:19 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> HTML-Scrubber-0.90.0.ebuild:
+  Marking HTML-Scrubber-0.90.0 ppc for bug 396929
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> HTML-Scrubber-0.90.0.ebuild:
   Stable for amd64, wrt bug #396929
