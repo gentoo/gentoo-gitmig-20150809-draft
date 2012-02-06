@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6181 2012/02/04 16:15:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6182 2012/02/06 00:29:00 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Masked sci-libs/fftw-3.3.1_beta1 until more stable
+
+  06 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Masking sci-visualization/hippodraw for removal
 
   04 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

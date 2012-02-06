@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13461 2012/02/04 16:15:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13462 2012/02/06 00:29:00 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sébastien Fabbro <bicatali@gentoo.org> (05 Feb 2012)
+# still beta software
+>=sci-libs/fftw-3.3.1_beta1
+
+# Sébastien Fabbro <bicatali@gentoo.org> (05 Feb 2012)
+# Dead upstream
+# Bugs #236435, #297701, #368445, #401387. Removal in 30 days
+sci-visualization/hippodraw
 
 # Markos Chandras <hwoarang@gentoo.org> (04 Feb 2012)
 # Dead upstream
