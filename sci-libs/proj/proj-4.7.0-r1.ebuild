@@ -1,12 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.7.0-r1.ebuild,v 1.1 2012/01/26 18:12:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.7.0-r1.ebuild,v 1.2 2012/02/06 18:51:31 jlec Exp $
 
 EAPI=4
 
+inherit eutils
+
 DESCRIPTION="Proj.4 cartographic projection software with updated NAD27 grids"
 HOMEPAGE="http://trac.osgeo.org/proj/"
-SRC_URI="ftp://ftp.remotesensing.org/pub/proj/${P}.tar.gz
+SRC_URI="
+	ftp://ftp.remotesensing.org/pub/proj/${P}.tar.gz
 	http://download.osgeo.org/proj/${PN}-datumgrid-1.5.zip"
 
 LICENSE="MIT"
