@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/stuffit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.19 2009/10/12 16:47:21 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.20 2012/02/06 03:14:33 vapier Exp $
+
+  06 Feb 2012; Mike Frysinger <vapier@gentoo.org> stuffit-5.2.0.611.ebuild:
+  Don't run env-update in pkg_* funcs -- the PM does that.
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> stuffit-5.2.0.611.ebuild:
   QA fixes; unquoted variables

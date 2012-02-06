@@ -1,22 +1,24 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.20 2009/10/12 16:47:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.21 2012/02/06 03:14:33 vapier Exp $
 
 MY_P="stuffit520.611linux-i386"
 DESCRIPTION="Aladdin Software's StuffIt and StuffIt Expander"
 HOMEPAGE="http://www.stuffit.com/"
 SRC_URI="http://my.smithmicro.com/downloads/files/stuffit520.611linux-i386.tar.gz"
+
 LICENSE="Stuffit"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
-
 IUSE=""
+RESTRICT="fetch strip"
+
 DEPEND=""
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 S="${WORKDIR}"
+
 INSTALLDIR="/opt/stuffit"
-RESTRICT="fetch strip"
 
 pkg_nofetch() {
 	einfo "Please download stuffit from"
@@ -58,16 +60,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	env-update
 	elog
 	elog "Reminder: StuffIt requires registration within 30 days."
 	elog "The registration program is located in ${INSTALLDIR}/extra"
 	elog
 	elog "The binaries are named 'stuff' and 'unstuff'"
 	elog
-}
-
-pkg_postrm() {
-	# Get rid of those extraneous PATH entries.
-	env-update
 }
