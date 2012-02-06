@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.43 2012/01/01 18:45:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.44 2012/02/06 19:30:44 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> rdtool-0.6.22-r1.ebuild:
+  Marking rdtool-0.6.22-r1 ppc for bug 394231
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> rdtool-0.6.22-r1.ebuild:
   alpha/ia64/sparc stable wrt #394231
