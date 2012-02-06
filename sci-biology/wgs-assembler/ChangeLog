@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/wgs-assembler
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/ChangeLog,v 1.8 2011/03/20 20:19:27 weaver Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/ChangeLog,v 1.9 2012/02/06 09:12:38 weaver Exp $
+
+*wgs-assembler-7.0 (06 Feb 2012)
+
+  06 Feb 2012; Andrey Kislyuk <weaver@gentoo.org> +wgs-assembler-7.0.ebuild:
+  Version bump
 
   20 Mar 2011; Andrey Kislyuk <weaver@gentoo.org> wgs-assembler-5.4.ebuild,
   wgs-assembler-6.1.ebuild:
