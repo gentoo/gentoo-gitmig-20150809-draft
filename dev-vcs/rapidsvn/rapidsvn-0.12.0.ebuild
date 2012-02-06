@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.5 2012/01/31 16:20:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.6 2012/02/06 19:16:53 jlec Exp $
 
 EAPI=4
 
@@ -26,9 +26,7 @@ IUSE="doc static-libs"
 COMMON_DEP="
 	dev-libs/apr
 	dev-libs/apr-util
-	|| (
-		dev-vcs/subversion[webdav-neon]
-		dev-vcs/subversion[webdav-serf] )
+	dev-vcs/subversion
 	x11-libs/wxGTK:2.8[X]"
 DEPEND="${COMMON_DEP}
 	doc? (

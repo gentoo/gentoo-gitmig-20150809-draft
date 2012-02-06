@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/rapidsvn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.5 2012/01/31 16:20:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.6 2012/02/06 19:16:53 jlec Exp $
+
+  06 Feb 2012; Justin Lecher <jlec@gentoo.org> rapidsvn-0.12.0.ebuild:
+  Remove forced webdav dependency in subversion, reported by Denis Scherbakov
 
   31 Jan 2012; Justin Lecher <jlec@gentoo.org> -rapidsvn-0.9.8.ebuild,
   -rapidsvn-0.10.0.ebuild, rapidsvn-0.12.0.ebuild, metadata.xml:
