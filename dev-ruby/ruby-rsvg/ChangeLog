@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-rsvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.24 2012/01/08 06:15:42 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.25 2012/02/06 17:32:01 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> ruby-rsvg-0.90.8.ebuild:
+  Marking ruby-rsvg-0.90.8 ~ppc for bug 371353
 
 *ruby-rsvg-1.1.0 (08 Jan 2012)
 
