@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/argouml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.32 2012/02/03 15:16:24 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.33 2012/02/06 15:17:43 sera Exp $
+
+  06 Feb 2012; Ralph Sennhauser <sera@gentoo.org> -argouml-0.24.ebuild,
+  -argouml-0.26.ebuild, -argouml-0.29.2-r1.ebuild, -argouml-0.30.2.ebuild,
+  argouml-0.32.2.ebuild, argouml-0.34.ebuild, -files/argouml.png:
+  Use shipped png. #370921
+  Move to freedesktop category Development. #373017
+  Remove old/unused.
 
 *argouml-0.34 (03 Feb 2012)
 

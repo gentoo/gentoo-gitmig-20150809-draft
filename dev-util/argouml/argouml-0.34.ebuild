@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.34.ebuild,v 1.1 2012/02/03 15:16:24 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.34.ebuild,v 1.2 2012/02/06 15:17:43 sera Exp $
 
 EAPI="3"
 
-inherit fdo-mime java-pkg-2
+inherit eutils fdo-mime java-pkg-2
 
-DESCRIPTION="modelling tool that helps you do your design using UML"
+DESCRIPTION="Modelling tool that helps you do your design using UML"
 HOMEPAGE="http://argouml.tigris.org"
 BASE_URI="http://argouml-downloads.tigris.org/nonav/${P}"
 SRC_URI="${BASE_URI}/ArgoUML-${PV}.tar.gz
@@ -46,8 +46,8 @@ src_install() {
 		doins "${DISTDIR}/quickguide-${PV}.pdf"
 	fi
 
-	doicon "${FILESDIR}"/${PN}.png || die
-	make_desktop_entry ${PN} "ArgoUML" ${PN} "Graphics"
+	newicon ${P}/icon/ArgoIcon128x128.png ${PN}.png || die
+	make_desktop_entry ${PN} "ArgoUML"
 }
 
 pkg_postinst() {
