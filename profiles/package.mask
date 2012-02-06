@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13464 2012/02/06 04:30:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13465 2012/02/06 18:37:01 sera Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -262,11 +262,6 @@ media-video/ripmake
 # Mike Gilbert <floppym@gentoo.org> (05 Jan 2012)
 # Mask v8 versions used for www-client/chromium dev channel releases.
 >=dev-lang/v8-3.8
-
-# Ralph Sennhauser <sera@gentoo.org> (04 Jan 2012)
-# Outdated Java version, fails to fetch, no upstream. #228929
-# Removal in 30 days.
-dev-java/jrockit-jdk-bin
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (04 Jan 2012)
 # Outdated and unused sound daemon. Why is this still in the tree?
