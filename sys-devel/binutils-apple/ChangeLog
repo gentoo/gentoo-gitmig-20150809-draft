@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils-apple
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.26 2011/11/08 14:02:59 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.27 2012/02/06 12:15:22 grobian Exp $
+
+  06 Feb 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/ld64-127.2-ppc-range-warning.patch, binutils-apple-4.2.ebuild:
+  Add patch to treat 32-bits 4GB overflow problem as warning on PowerPC next to
+  ARM and i386.
 
   08 Nov 2011; Fabian Groffen <grobian@gentoo.org> binutils-apple-4.2.ebuild:
   Fix Darwin8 patch version in name
