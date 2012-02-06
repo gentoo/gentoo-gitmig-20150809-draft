@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-freedb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.21 2011/12/11 15:15:17 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.22 2012/02/06 19:26:47 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> ruby-freedb-0.5-r1.ebuild:
+  Marking ruby-freedb-0.5-r1 ppc for bug 391631
 
   11 Dec 2011; Raúl Porcel <armin76@gentoo.org> ruby-freedb-0.5.ebuild,
   ruby-freedb-0.5-r1.ebuild:
