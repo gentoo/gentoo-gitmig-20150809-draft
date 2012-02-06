@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cgilib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.32 2012/01/31 18:07:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.33 2012/02/06 18:49:33 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> cgilib-0.7.ebuild:
+  Marking cgilib-0.7 ppc for bug 400007
 
   31 Jan 2012; Jeroen Roovers <jer@gentoo.org> cgilib-0.7.ebuild:
   Stable for HPPA (bug #400007).
