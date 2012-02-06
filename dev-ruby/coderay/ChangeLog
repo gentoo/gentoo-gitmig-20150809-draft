@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.48 2012/01/14 08:11:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.49 2012/02/06 19:32:10 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> coderay-0.9.8.ebuild:
+  Marking coderay-0.9.8 ppc for bug 393665
 
 *coderay-1.0.5 (14 Jan 2012)
 
