@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/packages,v 1.4 2011/11/14 17:12:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/packages,v 1.5 2012/02/06 16:52:20 darkside Exp $
 
 # Gentoo Base Prefix Profile
 
@@ -17,12 +17,12 @@
 -*sys-apps/baselayout
 -*net-misc/iputils
 -*sys-apps/kbd
--*sys-apps/module-init-tools
 -*sys-process/procps
 -*sys-process/psmisc
 -*>=sys-apps/shadow-4.1
 -*sys-fs/e2fsprogs
 -*virtual/dev-manager
+-*virtual/modutils
 
 # add back prefix baselayout
 *sys-apps/baselayout-prefix
