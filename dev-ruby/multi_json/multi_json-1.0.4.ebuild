@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/multi_json-1.0.4.ebuild,v 1.5 2012/01/19 16:13:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/multi_json-1.0.4.ebuild,v 1.6 2012/02/06 18:22:42 ranger Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ DESCRIPTION="A gem to provide swappable JSON backends"
 HOMEPAGE="http://github.com/intridea/multi_json"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~hppa ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE=""
 

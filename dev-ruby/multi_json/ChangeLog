@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/multi_json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.12 2012/01/19 16:13:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.13 2012/02/06 18:22:42 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> multi_json-1.0.4.ebuild:
+  Marking multi_json-1.0.4 ~ppc for bug 396043
 
   19 Jan 2012; Jeroen Roovers <jer@gentoo.org> multi_json-1.0.4.ebuild:
   Marked ~hppa (bug #396043).
