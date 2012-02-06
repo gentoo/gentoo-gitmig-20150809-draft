@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bcrypt-ruby
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/ChangeLog,v 1.6 2011/12/31 20:56:28 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/ChangeLog,v 1.7 2012/02/06 16:10:02 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> bcrypt-ruby-3.0.1.ebuild:
+  Marking bcrypt-ruby-3.0.1 ~ppc for bug 385763
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> bcrypt-ruby-3.0.1.ebuild:
   Add Prefix keywords, bug #396547
