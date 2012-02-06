@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.26 2011/12/22 14:35:56 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.27 2012/02/06 01:47:55 jer Exp $
+
+*pv-1.2.0-r1 (06 Feb 2012)
+
+  06 Feb 2012; Jeroen Roovers <jer@gentoo.org> +pv-1.2.0-r1.ebuild:
+  Add LINGUAS support by Piotr Szymaniak (bug #402295).
 
   22 Dec 2011; Jeroen Roovers <jer@gentoo.org> pv-1.2.0.ebuild:
   Simpler and shorter by Mike Frysinger.
