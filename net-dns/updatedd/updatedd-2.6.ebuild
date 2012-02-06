@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/updatedd-2.6.ebuild,v 1.6 2012/02/03 17:52:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/updatedd-2.6.ebuild,v 1.7 2012/02/06 15:36:42 ranger Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/updatedd/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ppc ~x86"
 IUSE=""
 
 RDEPEND=""
