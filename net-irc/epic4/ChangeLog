@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/epic4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.93 2012/01/22 15:21:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.94 2012/02/06 17:26:33 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> epic4-2.10.1.ebuild:
+  Marking epic4-2.10.1 ppc for bug 397151
 
   22 Jan 2012; Raúl Porcel <armin76@gentoo.org> epic4-2.10.1.ebuild:
   alpha/ia64/sparc stable wrt #397151

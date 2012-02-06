@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.10.1.ebuild,v 1.5 2012/01/22 15:21:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.10.1.ebuild,v 1.6 2012/02/06 17:26:33 ranger Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="ipv6 perl ssl"
 
 DEPEND=">=sys-libs/ncurses-5.2
