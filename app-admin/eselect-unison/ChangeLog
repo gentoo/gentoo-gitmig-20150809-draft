@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-unison
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.13 2012/02/05 18:46:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.14 2012/02/06 17:14:22 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> eselect-unison-0.3.ebuild:
+  Marking eselect-unison-0.3 ppc for bug 391507
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> eselect-unison-0.1.ebuild,
   eselect-unison-0.2.ebuild, eselect-unison-0.3.ebuild:
