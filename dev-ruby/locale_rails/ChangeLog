@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/locale_rails
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.20 2011/10/15 23:02:58 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.21 2012/02/06 17:33:00 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org>
+  locale_rails-2.0.5_p20100710.ebuild:
+  Marking locale_rails-2.0.5_p20100710 ppc stable for bug 384825
 
   15 Oct 2011; Markus Meier <maekke@gentoo.org>
   locale_rails-2.0.5_p20100710.ebuild:
