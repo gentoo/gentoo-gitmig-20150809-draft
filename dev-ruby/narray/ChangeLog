@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/narray
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.49 2011/12/28 08:31:07 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.50 2012/02/06 19:18:53 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> narray-0.6.0.1.ebuild:
+  Marking narray-0.6.0.1 ppc for bug 386135
 
 *narray-0.6.0.1-r1 (28 Dec 2011)
 
