@@ -16,6 +16,9 @@
 		Available for Windows, Linux, Irix, Sun Solaris, FreeBSD or Mac OS X.
 	</longdescription>
 	<use>
+		<flag name='3dmouse'>
+			Adds support for space navigator devices through package <pkg>dev-libs/libspnav</pkg>.
+		</flag>
 		<flag name='blender-game'>
 			Adds Game Engine support to Blender (2.4* ebuilds).
 		</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.6 2012/01/23 18:34:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.7 2012/02/06 21:48:17 sping Exp $
 
 PYTHON_DEPEND="3:3.2"
 EAPI=4
@@ -12,7 +12,7 @@ fi
 
 inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-funcs ${SCM}
 
-IUSE="+game-engine player +elbeem +openexr ffmpeg jpeg2k openal openmp \
+IUSE="3dmouse +game-engine player +elbeem +openexr ffmpeg jpeg2k openal openmp \
 	+dds debug doc fftw jack apidoc sndfile lcms tweak-mode sdl sse \
 	redcode +zlib iconv contrib collada verse"
 
@@ -61,6 +61,7 @@ RDEPEND="virtual/jpeg
 	jack? ( media-sound/jack-audio-connection-kit )
 	sndfile? ( media-libs/libsndfile )
 	lcms? ( media-libs/lcms:0 )
+	3dmouse? ( dev-libs/libspnav )
 	collada? ( media-libs/opencollada )"
 
 DEPEND="dev-util/scons
@@ -274,15 +275,13 @@ src_configure() {
 		'redcode' \
 		'zlib' \
 		'collada' \
+		'3dmouse' \
 		'verse' ; do
 		blend_with ${arg}
 	done
 
 	echo 'BF_OPENCOLLADA_INC="/usr/include/opencollada/"' >> "${S}"/user-config.py
 	echo 'BF_OPENCOLLADA_LIBPATH="/usr/'$(get_libdir)'/opencollada/"' >> "${S}"/user-config.py
-
-	# libspnav not yet packaged (bug #390427)
-	echo 'WITH_BF_3DMOUSE=0' >> "${S}"/user-config.py
 
 	# enable debugging/testing support
 	use debug && echo "BF_DEBUG=1" >> "${S}"/user-config.py
