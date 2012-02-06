@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.92 2012/02/05 17:49:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.93 2012/02/06 19:40:26 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> fxruby-1.6.20-r1.ebuild:
+  Marking fxruby-1.6.20-r1 ppc for bug 395983
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> fxruby-1.6.20-r1.ebuild:
   alpha/sparc stable wrt #395983
