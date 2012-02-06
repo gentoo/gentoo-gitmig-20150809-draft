@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/skoosh
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/skoosh/ChangeLog,v 1.8 2006/10/05 18:18:07 nyhm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/skoosh/ChangeLog,v 1.9 2012/02/06 19:00:11 mr_bones_ Exp $
+
+  06 Feb 2012; Michael Sterrett <mr_bones_@gentoo.org> skoosh-2.5.0.ebuild:
+  add app-text/rarian dep for building
 
   05 Oct 2006; Tristan Heaven <nyhm@gentoo.org> skoosh-2.5.0.ebuild:
   Fix gettext dependency
