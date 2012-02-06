@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.185 2012/01/30 22:28:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.186 2012/02/06 13:52:50 jlec Exp $
+
+*cmake-2.8.7-r3 (06 Feb 2012)
+
+  06 Feb 2012; Justin Lecher <jlec@gentoo.org> +cmake-2.8.7-r3.ebuild,
+  +files/cmake-2.8.7-FindOpenMP.patch:
+  Adding patch for language selective openmp support testing,
+  http://public.kitware.com/Bug/view.php?id=11910 ; approved by tampakrap
 
 *cmake-2.8.7-r2 (30 Jan 2012)
 
