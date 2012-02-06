@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.0.1.ebuild,v 1.4 2012/01/28 11:07:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.0.1.ebuild,v 1.5 2012/02/06 17:22:22 ranger Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
 LICENSE="Scintilla"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~x86 ~x86-fbsd"
 IUSE="lua"
 
 RDEPEND="dev-libs/glib
