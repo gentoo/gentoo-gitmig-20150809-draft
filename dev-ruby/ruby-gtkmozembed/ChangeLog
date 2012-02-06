@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gtkmozembed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.36 2012/02/06 17:30:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.37 2012/02/06 19:12:02 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> ruby-gtkmozembed-1.0.0.ebuild:
+  Marking ruby-gtkmozembed-1.0.0 ~ppc for bug 396605
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> ruby-gtkmozembed-0.90.8.ebuild:
   Marking ruby-gtkmozembed-0.90.8 ~ppc for bug 371353
