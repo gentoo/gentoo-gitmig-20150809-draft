@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.3.0.ebuild,v 1.1 2012/02/02 23:09:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.3.0.ebuild,v 1.2 2012/02/06 20:52:05 hwoarang Exp $
 
 EAPI="3"
 
@@ -34,7 +34,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	! use spell && epatch "${FILESDIR}/${P}-disable-spell.patch"
+	! use spell && epatch "${FILESDIR}/${PN}-1.2.0-disable-spell.patch"
 	# rename wae file. I think this should be wa.po instead of wae.po
 	mv po/wae.po po/wa.po || die
 	for x in ${LANGS}; do
