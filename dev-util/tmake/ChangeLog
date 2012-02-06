@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/tmake
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.26 2010/04/06 09:25:20 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.27 2012/02/06 15:35:02 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> tmake-2.12.ebuild:
+  Marking tmake-2.12 ppc for bug 397029
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org> tmake-2.12.ebuild:
   Bump to EAPI=3, add prefix keywords
