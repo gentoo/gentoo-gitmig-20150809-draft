@@ -1,6 +1,12 @@
 # ChangeLog for net-im/kadu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.119 2012/01/28 02:56:07 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.120 2012/02/06 20:11:51 reavertm Exp $
+
+*kadu-0.11.0 (06 Feb 2012)
+
+  06 Feb 2012; Maciej Mrozowski <reavertm@gentoo.org> +kadu-0.11.0.ebuild,
+  metadata.xml:
+  Version bump, bug 402319.
 
   28 Jan 2012; Maciej Mrozowski <reavertm@gentoo.org>
   -files/kadu-0.10.0-cmake.patch, -files/kadu-0.10.0-sdk-cmake.patch,
