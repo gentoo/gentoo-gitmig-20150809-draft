@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activemodel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.20 2011/12/31 20:57:22 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.21 2012/02/06 18:45:13 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> activemodel-3.1.3.ebuild:
+  Marking activemodel-3.1.3 ~ppc for bug 396177
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> activemodel-3.1.3.ebuild:
   Add Prefix keywords, bug #396547
