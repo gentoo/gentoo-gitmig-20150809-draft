@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.4.0.ebuild,v 1.3 2012/01/28 15:22:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.4.0.ebuild,v 1.4 2012/02/06 22:34:47 mr_bones_ Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -30,10 +30,13 @@ S=${WORKDIR}/${P/_/}
 
 src_prepare() {
 	rm -rf *.bat dists/win32
+	# use $T instead of /tmp - bug #402459
+	sed -i \
+		-e 's:/tmp:"${T}":' \
+		configure || die
 	sed -ri \
 		-e '/^(CC|CXX)\b/d' \
-		Makefile \
-		|| die "sed failed"
+		Makefile || die
 }
 
 src_configure() {
