@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.10-r1.ebuild,v 1.1 2012/02/06 13:41:27 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.10-r2.ebuild,v 1.1 2012/02/06 21:24:03 olemarkus Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ PHP_PATCHSET_LOC="olemarkus"
 
 PHP_SRC_URI="$(php_get_uri "${PHP_RELEASE}" "${PHP_P}.tar.bz2")"
 
-PHP_PATCHSET="1"
+PHP_PATCHSET="2"
 PHP_PATCHSET_URI="
 	$(php_get_uri "${PHP_PATCHSET_LOC}" "php-patchset-${PV}-r${PHP_PATCHSET}.tar.bz2")"
 
