@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.130 2012/01/26 15:54:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.131 2012/02/06 23:06:54 johu Exp $
+
+  06 Feb 2012; Johannes Huber <johu@gentoo.org> kdepimlibs-4.8.0.ebuild:
+  KMail doesn't send mails with dev-libs/cyrus-sasl-2.1.25, adjusting deps.
+  Upstream bugs https://bugs.kde.org/show_bug.cgi?id=289207,
+  https://bugs.kde.org/show_bug.cgi?id=289207. Spotted by tampakrap.
 
   26 Jan 2012; Johannes Huber <johu@gentoo.org> kdepimlibs-4.8.0.ebuild:
   Fix build without semantic-desktop enabled by Marien Zwart
