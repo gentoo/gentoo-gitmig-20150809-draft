@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.75 2012/01/29 17:13:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.76 2012/02/06 16:34:59 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> enca-1.13-r2.ebuild:
+  Marking enca-1.13-r2 ppc for bug 398991
 
   29 Jan 2012; Markus Meier <maekke@gentoo.org> enca-1.13-r2.ebuild:
   arm stable, bug #398991
