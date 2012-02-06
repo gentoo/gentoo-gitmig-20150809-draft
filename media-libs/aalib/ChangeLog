@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/aalib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.41 2011/02/06 12:08:49 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.42 2012/02/06 06:59:47 slyfox Exp $
+
+*aalib-1.4_rc5-r1 (06 Feb 2012)
+
+  06 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> +aalib-1.4_rc5-r1.ebuild,
+  +files/aalib-1.4_rc5-fix-protos.patch, metadata.xml:
+  Fixed bug #224267 by Peter Hüwe (missing function prototypes). Added myself to
+  maintainers.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> aalib-1.4_rc5.ebuild:
   Drop to ~mips
