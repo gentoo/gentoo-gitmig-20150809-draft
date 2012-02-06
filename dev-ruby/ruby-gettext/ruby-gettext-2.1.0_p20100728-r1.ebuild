@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-2.1.0_p20100728-r1.ebuild,v 1.6 2011/10/23 15:53:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-2.1.0_p20100728-r1.ebuild,v 1.7 2012/02/06 17:33:41 ranger Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ DESCRIPTION="Ruby GetText Package is Native Language Support Library and Tools m
 HOMEPAGE="http://www.yotabanana.com/hiki/ruby-gettext.html"
 SRC_URI="http://dev.a3li.li/gentoo/distfiles/${P}.tar.bz2"
 
-KEYWORDS="amd64 ia64 ~ppc sparc x86 ~x86-fbsd ~x86-macos"
+KEYWORDS="amd64 ia64 ppc sparc x86 ~x86-fbsd ~x86-macos"
 IUSE=""
 SLOT="0"
 LICENSE="Ruby"
