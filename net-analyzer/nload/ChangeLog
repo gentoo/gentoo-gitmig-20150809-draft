@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.37 2012/02/06 18:16:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.38 2012/02/06 23:49:00 radhermit Exp $
+
+*nload-0.7.4 (06 Feb 2012)
+
+  06 Feb 2012; Tim Harder <radhermit@gentoo.org> +nload-0.7.4.ebuild:
+  Version bump.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> nload-0.7.3.ebuild:
   Marking nload-0.7.3 ppc for bug 374661
