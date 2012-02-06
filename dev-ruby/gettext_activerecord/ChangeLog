@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gettext_activerecord
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_activerecord/ChangeLog,v 1.18 2011/10/23 15:54:24 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_activerecord/ChangeLog,v 1.19 2012/02/06 17:34:16 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org>
+  gettext_activerecord-2.1.0-r1.ebuild:
+  Marking gettext_activerecord-2.1.0-r1 ppc stable for bug 384825
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org>
   gettext_activerecord-2.1.0-r1.ebuild:
