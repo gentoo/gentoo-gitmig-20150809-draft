@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.431 2011/12/14 19:52:12 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.432 2012/02/06 20:17:52 darkside Exp $
+
+  06 Feb 2012; Jeremy Olexa <darkside@gentoo.org> openssh-5.9_p1-r3.ebuild:
+  [Bug 402441] net-misc/openssh: Add output to say that ECDSA will not work
+  when openssl[bindist] is present
 
   14 Dec 2011; Michał Górny <mgorny@gentoo.org> openssh-5.9_p1-r3.ebuild,
   +files/sshd.service, +files/sshd.socket, +files/sshd_at.service:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r3.ebuild,v 1.5 2011/12/14 19:52:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r3.ebuild,v 1.6 2012/02/06 20:17:52 darkside Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam systemd
@@ -182,6 +182,7 @@ src_install() {
 
 	# not all openssl installs support ecc, or are functional #352645
 	if ! grep -q '#define OPENSSL_HAS_ECC 1' config.h ; then
+		elog "dev-libs/openssl was built with 'bindist' - disabling ecdsa support"
 		dosed 's:&& gen_key ecdsa::' /etc/init.d/sshd || die
 	fi
 
