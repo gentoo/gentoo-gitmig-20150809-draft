@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/cgikit-1.2.1-r1.ebuild,v 1.2 2012/01/01 18:27:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/cgikit-1.2.1-r1.ebuild,v 1.3 2012/02/06 19:35:56 ranger Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.spice-of-life.net/cgikit/index_en.html"
 SRC_URI="http://www.spice-of-life.net/cgikit/archive/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~ppc ~ppc64 x86"
+KEYWORDS="alpha ~amd64 ia64 ppc ~ppc64 x86"
 IUSE="examples"
 
 all_ruby_prepare() {
