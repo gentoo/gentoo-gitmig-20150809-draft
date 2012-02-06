@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libspnav/libspnav-0.2.2.ebuild,v 1.1 2012/02/06 20:04:53 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libspnav/libspnav-0.2.2.ebuild,v 1.2 2012/02/06 21:13:53 sping Exp $
 
 EAPI="4"
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X"
 
-RDEPEND="X? ( app-misc/spacenavd[X] )"
-DEPEND="${RDEPEND}"
+RDEPEND="app-misc/spacenavd[X?]"
+DEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
