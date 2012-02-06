@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gpc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.26 2010/02/04 18:02:35 truedfx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.27 2012/02/06 15:32:10 george Exp $
+
+  06 Feb 2012; george <george@gentoo.org> gpc-20051104.ebuild,
+  gpc-20070904.ebuild:
+  removed manual env-update (has been automated some time ago; #402339)
 
   04 Feb 2010; Harald van Dĳk <truedfx@gentoo.org> gpc-20070904.ebuild:
   Don't try to replace -m*=native, it's not necessary and it was done wrong
