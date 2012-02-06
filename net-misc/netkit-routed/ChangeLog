@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-routed
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.16 2010/10/18 07:40:02 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.17 2012/02/06 16:09:59 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> netkit-routed-0.17-r4.ebuild:
+  Marking netkit-routed-0.17-r4 ppc for bug 397175
 
   18 Oct 2010; Mart Raudsepp <leio@gentoo.org> netkit-routed-0.17-r3.ebuild:
   Drop to ~mips
