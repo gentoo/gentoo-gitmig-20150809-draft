@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/sptk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.73 2011/05/23 13:48:26 iluxa Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.74 2012/02/06 20:09:46 ssuominen Exp $
+
+*sptk-4.13 (06 Feb 2012)
+
+  06 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> +sptk-4.13.ebuild:
+  Version bump (for bug #402149 to gain FLTK 1.3.x support)
 
 *sptk-4.11 (23 May 2011)
 
