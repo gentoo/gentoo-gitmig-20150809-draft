@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rwho
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.28 2012/02/05 15:48:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.29 2012/02/06 18:28:19 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> netkit-rwho-0.17-r4.ebuild:
+  Marking netkit-rwho-0.17-r4 ppc for bug 393691
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> netkit-rwho-0.17-r4.ebuild:
   alpha/s390/sh/sparc stable wrt #393691
