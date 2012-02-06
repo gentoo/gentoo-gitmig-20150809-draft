@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.68 2012/02/03 16:45:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.69 2012/02/06 19:16:13 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> Net-Daemon-0.480.0.ebuild:
+  Marking Net-Daemon-0.480.0 ppc for bug 396935
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Net-Daemon-0.480.0.ebuild:
   Stable for amd64, wrt bug #396935
