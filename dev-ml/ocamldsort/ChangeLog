@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamldsort
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ChangeLog,v 1.9 2011/07/23 11:22:00 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ChangeLog,v 1.10 2012/02/06 17:11:34 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> ocamldsort-0.15.0.ebuild:
+  Marking ocamldsort-0.15.0 ppc for bug 374969
 
   23 Jul 2011; Markus Meier <maekke@gentoo.org> ocamldsort-0.15.0.ebuild:
   x86 stable, bug #374969
