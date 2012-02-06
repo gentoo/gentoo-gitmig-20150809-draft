@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/tigcc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.20 2011/07/31 06:18:03 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.21 2012/02/06 03:10:58 vapier Exp $
+
+  06 Feb 2012; Mike Frysinger <vapier@gentoo.org> tigcc-0.95-r2.ebuild,
+  tigcc-0.95_p3.ebuild, tigcc-0.96_beta2.ebuild, tigcc-0.96_beta7.ebuild:
+  Drop unused pkg-postinst func (its a typo, and we don't run env-update in
+  pkg_* anyways).
 
   31 Jul 2011; Matt Turner <mattst88@gentoo.org> tigcc-0.95-r2.ebuild,
   tigcc-0.95_p3.ebuild, tigcc-0.96_beta2.ebuild, tigcc-0.96_beta7.ebuild:

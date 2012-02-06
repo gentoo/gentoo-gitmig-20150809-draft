@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta2.ebuild,v 1.6 2011/07/31 06:18:03 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta2.ebuild,v 1.7 2012/02/06 03:10:58 vapier Exp $
 
 inherit eutils
 
@@ -223,8 +223,4 @@ src_install() {
 	dosym /usr/lib/gcc-lib/ti-linux-gnu/${GCC_VER} /usr/ti-linux-gnu/lib
 	dosym /usr/share/doc/${PF} /usr/ti-linux-gnu/doc
 	dosym /usr/ti-linux-gnu/tigcc-bin/${GCC_VER} /usr/ti-linux-gnu/bin
-}
-
-pkg-postinst() {
-	env-update && source /etc/profile
 }
