@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-3.0.2.ebuild,v 1.2 2012/01/05 18:07:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-3.0.2.ebuild,v 1.3 2012/02/06 13:00:33 jer Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib
@@ -31,6 +31,7 @@ src_configure() {
 	append-ldflags "-L/usr/$(get_libdir)/fltk"
 
 	econf  \
+		--docdir="/usr/share/doc/${PF}" \
 		$(use_enable gif) \
 		$(use_enable ipv6) \
 		$(use_enable jpeg) \
@@ -51,7 +52,6 @@ src_install() {
 
 	use doc && dohtml html/*
 	dodoc AUTHORS ChangeLog README NEWS
-	docinto doc
 	dodoc doc/*.txt doc/README
 
 	doicon "${DISTDIR}"/${PN}.png

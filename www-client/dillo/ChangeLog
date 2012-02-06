@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.107 2012/02/04 20:30:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.108 2012/02/06 13:00:33 jer Exp $
+
+  06 Feb 2012; Jeroen Roovers <jer@gentoo.org> dillo-3.0.2.ebuild:
+  Install all docs in docdir.
 
   04 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -dillo-2.2.ebuild,
   -files/dillo-2.2-libpng14.patch:
