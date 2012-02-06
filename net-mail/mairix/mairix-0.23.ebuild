@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.23.ebuild,v 1.5 2011/12/18 17:55:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.23.ebuild,v 1.6 2012/02/06 17:32:02 ranger Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~x86-macos"
 
 IUSE="zlib bzip2 gnus"
 
