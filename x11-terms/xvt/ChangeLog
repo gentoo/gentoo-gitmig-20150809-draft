@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xvt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.18 2012/01/30 21:09:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.19 2012/02/06 16:32:43 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> xvt-2.1-r3.ebuild:
+  Marking xvt-2.1-r3 ppc for bug 397297
 
   30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> xvt-2.1-r3.ebuild:
   Stable for amd64, wrt bug #397297
