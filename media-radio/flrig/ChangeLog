@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/flrig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/ChangeLog,v 1.4 2012/01/23 06:16:52 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/ChangeLog,v 1.5 2012/02/06 12:52:30 tomjbe Exp $
+
+*flrig-1.2.7 (06 Feb 2012)
+
+  06 Feb 2012; Thomas Beierlein <tomjbe@gentoo.org> +flrig-1.2.7.ebuild:
+  Version bump
 
 *flrig-1.2.6 (23 Jan 2012)
 
