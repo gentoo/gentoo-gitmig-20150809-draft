@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.115 2012/01/31 18:01:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.116 2012/02/06 00:00:14 bicatali Exp $
+
+  05 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> octave-3.4.3-r1.ebuild,
+  octave-3.6.0.ebuild:
+  Added readline dependency
 
   31 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> octave-3.4.3-r1.ebuild,
   +files/octave-3.4.3-texi.patch, octave-3.6.0.ebuild:

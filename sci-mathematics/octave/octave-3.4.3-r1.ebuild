@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.5 2012/01/31 18:01:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.6 2012/02/06 00:00:14 bicatali Exp $
 
 EAPI=4
 inherit eutils base autotools toolchain-funcs
@@ -31,6 +31,7 @@ RDEPEND="dev-libs/libpcre
 		>=x11-libs/fltk-1.3:1[opengl] )
 	qhull? ( media-libs/qhull )
 	qrupdate? ( sci-libs/qrupdate )
+	readline? ( sys-libs/readline )
 	sparse? (
 		sci-libs/camd
 		sci-libs/ccolamd
