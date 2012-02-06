@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/moldy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.23 2011/12/18 20:12:49 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.24 2012/02/06 10:02:14 xarthisius Exp $
+
+  06 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> moldy-2.16e-r2.ebuild:
+  ppc stable wrt #393697
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> moldy-2.16e-r2.ebuild:
   x86 stable wrt bug #393697
