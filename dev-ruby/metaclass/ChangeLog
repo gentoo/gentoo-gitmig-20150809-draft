@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/metaclass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.2 2012/01/18 16:24:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.3 2012/02/06 18:27:14 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> metaclass-0.0.1.ebuild:
+  Marking metaclass-0.0.1 ~ppc for bug 398985
 
   18 Jan 2012; Jeroen Roovers <jer@gentoo.org> metaclass-0.0.1.ebuild:
   Marked ~hppa (bug #398985).
