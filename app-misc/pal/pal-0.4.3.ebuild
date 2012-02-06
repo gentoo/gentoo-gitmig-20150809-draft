@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.4.3.ebuild,v 1.4 2012/02/02 18:23:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.4.3.ebuild,v 1.5 2012/02/06 15:17:22 ranger Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/palcal/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ppc ~x86"
 IUSE="nls unicode"
 
 RDEPEND=">=dev-libs/glib-2.0
