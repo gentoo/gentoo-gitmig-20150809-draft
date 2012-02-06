@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.192 2012/01/02 19:47:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.193 2012/02/06 21:19:57 bicatali Exp $
+
+  06 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> R-2.14.1.ebuild,
+  files/R-2.14.1-tiff.patch:
+  Fixed libtiff syntax in patch (bug #402327), remove
+  bash_completion_post_install (bug #402329)
 
 *R-2.14.1 (02 Jan 2012)
 

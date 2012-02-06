@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.14.1.ebuild,v 1.1 2012/01/02 19:47:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.14.1.ebuild,v 1.2 2012/02/06 21:19:57 bicatali Exp $
 
 EAPI=4
 
@@ -152,5 +152,4 @@ pkg_postinst() {
 		einfo "Re-initializing java paths for ${P}"
 		R CMD javareconf
 	fi
-	bash-completion-r1_pkg_postinst
 }
