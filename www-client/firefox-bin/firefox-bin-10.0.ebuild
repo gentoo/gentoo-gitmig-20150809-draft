@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-10.0.ebuild,v 1.2 2012/02/04 18:35:30 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-10.0.ebuild,v 1.3 2012/02/06 03:17:42 anarchy Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ MOZ_P="${MOZ_PN}-${MOZ_PV}"
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MOZ_PN}/releases/"
 
-inherit eutils multilib pax-utils fdo-mime gnome2-utils mozlinguas
+inherit eutils multilib pax-utils fdo-mime gnome2-utils mozlinguas nsplugins
 
 DESCRIPTION="Firefox Web Browser"
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MOZ_PN}/releases"
