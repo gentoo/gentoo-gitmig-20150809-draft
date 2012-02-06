@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.9.2.ebuild,v 1.2 2012/02/06 15:39:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.9.2.ebuild,v 1.3 2012/02/06 16:18:59 mr_bones_ Exp $
 
 EAPI=4
 
@@ -51,4 +51,3 @@ pkg_postinst() {
 		ewarn "Please see ${EPREFIX}/usr/share/doc/${PF}/README.linux for details."
 	fi
 }
-
