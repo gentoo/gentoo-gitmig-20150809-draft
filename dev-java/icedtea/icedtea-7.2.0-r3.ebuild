@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r3.ebuild,v 1.2 2011/12/21 10:15:05 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r3.ebuild,v 1.3 2012/02/06 10:01:44 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -129,6 +129,7 @@ DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 		dev-java/icedtea:6
 	)
 	app-arch/cpio
+	app-arch/unzip
 	app-arch/zip
 	app-misc/ca-certificates
 	>=dev-java/ant-core-1.8.1
