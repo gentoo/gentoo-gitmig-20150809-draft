@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.8.0.ebuild,v 1.1 2012/01/25 18:17:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.8.0.ebuild,v 1.2 2012/02/06 11:40:37 johu Exp $
 
 EAPI=4
 inherit kde4-meta-pkg
 
 DESCRIPTION="kdepim - merge this to pull in all kdepim-derived packages"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="nls"
 
 RDEPEND="
 	$(add_kdebase_dep akonadiconsole)
@@ -29,4 +29,8 @@ RDEPEND="
 	$(add_kdebase_dep kontact)
 	$(add_kdebase_dep korganizer)
 	$(add_kdebase_dep ktimetracker)
+	nls? (
+		$(add_kdebase_dep kde-l10n)
+		$(add_kdebase_dep kdepim-l10n)
+	)
 "
