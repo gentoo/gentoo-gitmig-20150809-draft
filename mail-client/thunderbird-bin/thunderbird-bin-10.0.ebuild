@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-10.0.ebuild,v 1.2 2012/02/04 18:35:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-10.0.ebuild,v 1.3 2012/02/06 03:57:40 jdhore Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ MOZ_LANGPACK_PREFIX="${MY_TEN_PV}/linux-i686/xpi/"
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MOZ_PN}/releases/"
 
-inherit eutils multilib pax-utils fdo-mime gnome2-utils mozlinguas
+inherit eutils multilib pax-utils fdo-mime gnome2-utils mozlinguas nsplugins
 
 DESCRIPTION="Thunderbird Mail Client"
 SRC_URI="${SRC_URI}
