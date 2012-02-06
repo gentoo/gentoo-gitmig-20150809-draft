@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.26 2011/11/21 15:29:36 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.27 2012/02/06 13:13:44 nirbheek Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -12,6 +12,7 @@ IUSE="+alsa +dbus debug libnotify startup-notification system-sqlite wifi"
 # XXX: GConf is used for setting the default browser
 #      revisit to make it optional with GNOME 3
 # pango[X] is needed for pangoxft.h
+# freedesktop-icon-theme is needed for bug 341697
 RDEPEND="app-arch/zip
 	app-arch/unzip
 	>=app-text/hunspell-1.2
@@ -22,6 +23,7 @@ RDEPEND="app-arch/zip
 	>=x11-libs/gtk+-2.8.6:2
 	>=x11-libs/pango-1.10.1[X]
 	virtual/jpeg
+	virtual/freedesktop-icon-theme
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( >=dev-libs/dbus-glib-0.72 )
 	libnotify? ( >=x11-libs/libnotify-0.4 )

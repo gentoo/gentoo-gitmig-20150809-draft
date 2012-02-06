@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.115 2012/02/05 19:14:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.116 2012/02/06 13:13:44 nirbheek Exp $
+
+  06 Feb 2012; Nirbheek Chauhan <nirbheek@gentoo.org> mozconfig-3.eclass:
+  Depend on an icon theme, fixes bug 341697
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> mercurial.eclass:
   Don't die if hg pull exits with status 1.
