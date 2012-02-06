@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnu-netcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.27 2012/02/05 18:29:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.28 2012/02/06 18:43:07 ranger Exp $
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> gnu-netcat-0.7.1-r3.ebuild:
+  Marking gnu-netcat-0.7.1-r3 ppc for bug 397127
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> gnu-netcat-0.7.1-r3.ebuild:
   alpha/sparc stable wrt #397127
