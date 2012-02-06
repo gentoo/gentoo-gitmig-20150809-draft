@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/runit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.33 2011/11/30 00:19:33 mschiff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.34 2012/02/06 03:13:33 vapier Exp $
+
+  06 Feb 2012; Mike Frysinger <vapier@gentoo.org> runit-2.1.1-r1.ebuild:
+  Don't run env-update in pkg_* funcs -- the PM does that.
 
 *runit-2.1.1-r1 (30 Nov 2011)
 

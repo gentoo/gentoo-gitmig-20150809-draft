@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-2.1.1-r1.ebuild,v 1.1 2011/11/30 00:19:33 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-2.1.1-r1.ebuild,v 1.2 2012/02/06 03:13:33 vapier Exp $
 
 EAPI="3"
 
@@ -68,7 +68,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	env-update
 	ewarn "/etc/profile was updated. Please run:"
 	ewarn "source /etc/profile"
 	ewarn "to make 'sv' work correctly on your currently open shells"
