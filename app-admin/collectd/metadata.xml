@@ -77,6 +77,7 @@
 		<flag name='collectd_plugins_python'>Build the python language binding plugin (embeds a Python interpreter into collectd for writing plugins)</flag> 
 		<flag name='collectd_plugins_rrdcached'>Build the rrdcached input/output plugin (connects to rrdcached and submits updates for RRD files)</flag> 
 		<flag name='collectd_plugins_rrdtool'>Build the rrdtool output plugin (writes values to RRD-files)</flag>
+		<flag name='collectd_plugins_routeros'>Build the routeros input plugin (collect information on devices running RouterOS)</flag>
 		<flag name='collectd_plugins_sensors'>Build the sensors input plugin (uses lm-sensors to read hardware sensors)</flag> 
 		<flag name='collectd_plugins_serial'>Build the serial input plugin (collects the traffic on serial interfaces)</flag> 
 		<flag name='collectd_plugins_snmp'>Build the snmp input plugin (read values from network devices using SNMP)</flag> 

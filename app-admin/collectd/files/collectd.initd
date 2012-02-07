@@ -1,14 +1,14 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/files/collectd.initd,v 1.5 2011/08/25 21:02:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/files/collectd.initd,v 1.6 2012/02/07 20:12:03 dilfridge Exp $
 
 : ${COLLECTD_PIDFILE:='/var/run/collectd/collectd.pid'}
 : ${COLLECTD_CFGFILE:='/etc/collectd.conf'}
 : ${COLLECTD_NICELVL:='5'}
 : ${COLLECTD_USER:='collectd'}
 
-opts="${opts} configtest"
+extra_commands="configtest"
 
 depend() {
 	use net
@@ -58,4 +58,3 @@ stop() {
 		--pidfile "${COLLECTD_PIDFILE}"
 	eend $? "Failed to stop collectd"
 }
-
