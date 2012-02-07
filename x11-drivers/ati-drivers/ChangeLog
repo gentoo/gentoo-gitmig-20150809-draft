@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.272 2012/02/04 12:32:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.273 2012/02/07 15:53:37 xarthisius Exp $
+
+  07 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  ati-drivers-12.1-r1.ebuild:
+  Invoke eselect opencl during postinst to avoid ati flavour of bug 402407
 
   04 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
   ati-drivers-12.1-r1.ebuild:

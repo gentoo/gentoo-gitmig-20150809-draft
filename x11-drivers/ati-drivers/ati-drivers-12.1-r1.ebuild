@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.1-r1.ebuild,v 1.2 2012/02/04 12:32:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.1-r1.ebuild,v 1.3 2012/02/07 15:53:37 xarthisius Exp $
 
 EAPI=4
 
@@ -586,6 +586,7 @@ pkg_postinst() {
 
 	use modules && linux-mod_pkg_postinst
 	"${ROOT}"/usr/bin/eselect opengl set --use-old ati
+	"${ROOT}"/usr/bin/eselect opencl set --use-old amd
 }
 
 pkg_preinst() {
