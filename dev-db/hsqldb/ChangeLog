@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/hsqldb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.64 2011/10/19 11:02:38 fordfrog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.65 2012/02/07 12:26:05 sera Exp $
+
+  07 Feb 2012; Ralph Sennhauser <sera@gentoo.org> -files/35hsqldb,
+  hsqldb-1.8.1.2-r1.ebuild, hsqldb-1.8.1.3.ebuild:
+  Inline one line env.d file and reuse HSQLDB_HOME.
+  Remove unneded call of env-update. #402339
+  Remove elog about env-update and source profile as it's the same for every
+  packge.
 
 *hsqldb-1.8.1.3 (19 Oct 2011)
 
