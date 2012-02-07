@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.281 2012/02/06 08:32:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.282 2012/02/07 16:08:32 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org> genkernel-3.4.20.ebuild:
+  Stable for HPPA (bug #400539).
 
   06 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
   New genkernel uses lddtree from pax-utils to ensure needed libraries for
