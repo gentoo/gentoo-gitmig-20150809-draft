@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db-ppds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/ChangeLog,v 1.24 2012/02/07 15:26:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/ChangeLog,v 1.25 2012/02/07 19:24:19 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org>
+  foomatic-db-ppds-4.0.20110506.ebuild:
+  Stable for HPPA (bug #401111).
 
 *foomatic-db-ppds-4.0.20120117-r1 (07 Feb 2012)
 
