@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.32.1.ebuild,v 1.6 2011/03/22 19:30:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.32.1.ebuild,v 1.7 2012/02/07 21:11:09 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit gnome2 python waf-utils
+inherit gnome2 multilib python waf-utils
 
 DESCRIPTION="Time tracking for the masses, in a GNOME applet"
 HOMEPAGE="http://projecthamster.wordpress.com/"

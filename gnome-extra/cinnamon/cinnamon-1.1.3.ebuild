@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.1.3.ebuild,v 1.2 2012/01/10 05:53:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.1.3.ebuild,v 1.3 2012/02/07 21:07:47 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.5"
 
-inherit autotools eutils gnome2 python
+inherit autotools eutils gnome2 multilib python
 
 DESCRIPTION="A fork of GNOME Shell with layout similar to GNOME 2"
 HOMEPAGE="http://cinnamon.linuxmint.com/"
