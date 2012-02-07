@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-cinebars
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cinebars/ChangeLog,v 1.5 2011/01/28 18:08:52 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cinebars/ChangeLog,v 1.6 2012/02/07 22:09:17 hd_brummy Exp $
+
+  07 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-cinebars-0.0.5.ebuild, +files/vdr-cinebars-0.0.5_makefile.diff:
+  eapi=4, stable amd64 x86, compile fix for multicore CPU
 
   28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-cinebars-0.0.3a.ebuild, vdr-cinebars-0.0.5.ebuild:

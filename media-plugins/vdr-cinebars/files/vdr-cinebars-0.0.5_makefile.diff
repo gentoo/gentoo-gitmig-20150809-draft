@@ -1,0 +1,25 @@
+Joerg Bornkessel <hd_brummy@gentoo.org> 2012.01.07
+Fix Makefile for compile on multicore CPU
+
+diff -Naur cinebars-0.0.5.orig/Makefile cinebars-0.0.5/Makefile
+--- cinebars-0.0.5.orig/Makefile    2012-02-07 23:19:00.000000000 +0100
++++ cinebars-0.0.5/Makefile 2012-02-07 23:19:31.000000000 +0100
+@@ -49,13 +49,13 @@
+ 
+ ### The object files (add further files here):
+ OBJS = $(PLUGIN).o
+-ifneq ($(VERS157),1)
++#ifneq ($(VERS157),1)
+ OBJS += i18n.o
+-endif
++#endif
+ 
+ ### The main target:
+-all: libvdr-$(PLUGIN).so
+-   if [ $(VERS157) = 1 ]; then make i18n; fi
++all: libvdr-$(PLUGIN).so i18n
++#  if [ $(VERS157) = 1 ]; then make i18n; fi
+ 
+ ### Implicit rules:
+ %.o: %.c
+
