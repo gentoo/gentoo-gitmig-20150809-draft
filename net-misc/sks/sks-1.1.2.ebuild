@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/sks-1.1.2.ebuild,v 1.2 2012/02/07 00:19:31 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/sks-1.1.2.ebuild,v 1.3 2012/02/07 00:23:55 kingtaco Exp $
 
 EAPI=4
 
@@ -48,8 +48,8 @@ src_compile() {
 src_install() {
 	if use optimize; then
 		emake install.bc
-		dosym usr/bin/sks.bc usr/bin/sks
-		dosym usr/bin/sks_add_mail.bc usr/bin/sks_add_mail
+		dosym usr/bin/sks.bc /usr/bin/sks
+		dosym usr/bin/sks_add_mail.bc /usr/bin/sks_add_mail
 	else
 		emake install
 	fi
