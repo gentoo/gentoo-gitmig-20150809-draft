@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/ChangeLog,v 1.16 2012/02/03 17:45:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/ChangeLog,v 1.17 2012/02/07 19:28:51 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org> libcue-1.4.0.ebuild:
+  Stable for HPPA (bug #397069).
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libcue-1.4.0.ebuild:
   Stable for amd64, wrt bug #397069
