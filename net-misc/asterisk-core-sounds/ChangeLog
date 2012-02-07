@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk-core-sounds
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-core-sounds/ChangeLog,v 1.6 2011/09/20 11:25:06 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-core-sounds/ChangeLog,v 1.7 2012/02/07 09:37:50 chainsaw Exp $
+
+*asterisk-core-sounds-1.4.21-r1 (07 Feb 2012)
+
+  07 Feb 2012; Tony Vroon <chainsaw@gentoo.org>
+  +asterisk-core-sounds-1.4.21-r1.ebuild:
+  Revision bump. Make it impossible to unset GSM, as unsetting all USE-flags
+  caused QA warnings and did not install any files. Closes bug #402439 by
+  Maurizio "k01" Camisaschi. Added more detailed progress reporting for unpack
+  & install stages.
 
 *asterisk-core-sounds-1.4.21 (20 Sep 2011)
 
