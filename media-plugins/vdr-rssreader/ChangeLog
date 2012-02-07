@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-rssreader
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/ChangeLog,v 1.9 2011/07/25 10:45:47 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/ChangeLog,v 1.10 2012/02/07 00:26:02 hd_brummy Exp $
+
+  07 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-rssreader-1.0.3.ebuild, -files/vdr-rssreader-1.0.3-gentoo.diff,
+  -files/vdr-rssreader-1.0.3-gentoo-rss.diff, -vdr-rssreader-1.1.4.ebuild,
+  -files/vdr-rssreader-1.1.4-gentoo.diff,
+  -files/vdr-rssreader-1.1.4-gentoo-rss.diff, -vdr-rssreader-1.6.0.ebuild,
+  -files/vdr-rssreader-1.6.0-gentoo.diff,
+  -files/vdr-rssreader-1.6.0-gentoo-rss.diff, vdr-rssreader-1.6.4.ebuild:
+  cleanup, eapi=3, stable x86 amd64, bug 397083
 
   25 Jul 2011; Christoph Mende <angelos@gentoo.org> vdr-rssreader-1.0.3.ebuild,
   vdr-rssreader-1.1.4.ebuild, vdr-rssreader-1.6.0.ebuild,
