@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.3.0.ebuild,v 1.1 2012/01/24 00:12:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.3.0.ebuild,v 1.2 2012/02/07 16:58:10 vapier Exp $
 
-inherit flag-o-matic toolchain-funcs eutils
+inherit toolchain-funcs unpacker
 
 DESCRIPTION="ELF related utils for ELF 32/64 binaries that can check files for security relevant properties"
 HOMEPAGE="http://hardened.gentoo.org/pax-utils.xml"
@@ -19,11 +19,6 @@ IUSE="caps"
 RDEPEND="caps? ( sys-libs/libcap )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
-
-src_unpack() {
-	# avoid newer EAPI for easy upgrade paths
-	xz -dc "${DISTDIR}/${A}" | tar xf - || die
-}
 
 src_compile() {
 	emake CC="$(tc-getCC)" USE_CAP=$(use caps && echo yes) || die
