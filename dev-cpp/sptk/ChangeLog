@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.76 2012/02/07 16:35:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.77 2012/02/07 16:40:55 ssuominen Exp $
+
+  07 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -sptk-3.5.8.10.ebuild,
+  -sptk-3.5.8.14.ebuild, -sptk-4.00.ebuild, -files/sptk-4.00-as-needed.patch,
+  -sptk-4.02.ebuild, -files/sptk-4.02-openssl-1.patch, -sptk-4.11.ebuild,
+  -sptk-4.13.ebuild:
+  old
 
 *sptk-4.13-r1 (07 Feb 2012)
 
