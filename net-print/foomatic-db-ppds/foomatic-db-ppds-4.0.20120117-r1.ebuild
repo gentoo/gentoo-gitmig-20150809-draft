@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-4.0.20120117.ebuild,v 1.1 2012/01/17 13:48:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-4.0.20120117-r1.ebuild,v 1.1 2012/02/07 15:26:25 dilfridge Exp $
 
 EAPI=4
 
@@ -23,4 +23,9 @@ S="${WORKDIR}/${PN/-ppds}-$(get_version_component_range 3 ${PV})"
 
 src_prepare() {
 	epatch "${FILESDIR}/Makefile.in-${PV}.patch"
+}
+
+src_install() {
+	default
+	rm -v "${ED}"/usr/share/foomatic/xmlschema/{driver,option,printer,types}.xsd || die "Cannot remove duplicates"
 }

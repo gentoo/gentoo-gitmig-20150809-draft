@@ -1,6 +1,13 @@
 # ChangeLog for net-print/foomatic-db-ppds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/ChangeLog,v 1.23 2012/02/06 19:46:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/ChangeLog,v 1.24 2012/02/07 15:26:25 dilfridge Exp $
+
+*foomatic-db-ppds-4.0.20120117-r1 (07 Feb 2012)
+
+  07 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -foomatic-db-ppds-4.0.20120117.ebuild,
+  +foomatic-db-ppds-4.0.20120117-r1.ebuild:
+  Remove duplicate files, bug 399623
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org>
   foomatic-db-ppds-4.0.20110506.ebuild:
