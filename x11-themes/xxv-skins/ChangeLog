@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xxv-skins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/ChangeLog,v 1.14 2011/10/30 19:46:02 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/ChangeLog,v 1.15 2012/02/07 10:42:00 hd_brummy Exp $
+
+  07 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org> -xxv-skins-1.4.ebuild,
+  -xxv-skins-1.5.ebuild, xxv-skins-1.6.ebuild:
+  added missing homepage, added new download url, cleanup
 
   30 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-skins-1.4.ebuild,
   xxv-skins-1.5.ebuild, xxv-skins-1.6.ebuild:
