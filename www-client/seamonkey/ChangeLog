@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.356 2012/02/07 15:02:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.357 2012/02/07 21:59:39 polynomial-c Exp $
+
+  07 Feb 2012; Lars Wendler <polynomial-c@gentoo.org> +files/all-gentoo-1.js,
+  seamonkey-2.7.ebuild:
+  Added all-gentoo-1.js to FILESDIR. Thanks to Torsten Kaiser for reporting
+  this in bug #402583. Adjusted dependency on libvpx as mentioned by jdhore.
 
 *seamonkey-2.7 (07 Feb 2012)
 
