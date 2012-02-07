@@ -1,6 +1,12 @@
 # ChangeLog for app-office/karbon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.127 2011/11/20 18:30:46 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.128 2012/02/07 19:46:21 dilfridge Exp $
+
+*karbon-2.3.3-r1 (07 Feb 2012)
+
+  07 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +karbon-2.3.3-r1.ebuild, +files/karbon-2.3.3-newlibwpd.patch:
+  Add patch from Debian for newer libwpg support, bug 401463
 
   20 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> karbon-2.3.3.ebuild:
   Newer libwpg needs tools useflag, bug 390681

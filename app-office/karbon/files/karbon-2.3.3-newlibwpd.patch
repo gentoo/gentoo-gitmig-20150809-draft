@@ -1,0 +1,180 @@
+Description: porting to pwg & conversion as SVG output
+ Reduced version of Calligra's commit 9cda7aed2ea103750172e61f5c800a474913fa59:
+    make wpg import compile again, simplified code by using high level libwpg function to convert to svg,
+    this makes us less dependent on libwpg API changes, code works with old an new libwpg versions
+Author: Jan Hambrecht <jaham@gmx.net>
+Author: Pino Toscano <pino@kde.org>
+Last-Update: 2011-02-06
+Applied-Upstream: Calligra 2.4
+
+--- a/filters/karbon/wpg/import/CMakeLists.txt
++++ b/filters/karbon/wpg/import/CMakeLists.txt
+@@ -4,13 +4,11 @@
+ 
+ set(wpgimport_PART_SRCS 
+ WPGImport.cpp 
+-OdgExporter.cxx
+-FileOutputHandler.cxx
+-GraphicsElement.cxx)
++)
+ 
+ kde4_add_plugin(wpgimport ${wpgimport_PART_SRCS})
+ 
+-target_link_libraries(wpgimport komain ${LIBWPG_LIBRARIES} ${LIBWPG_STREAM_LIBRARIES})
++target_link_libraries(wpgimport komain ${LIBWPG_LIBRARIES} ${LIBWPG_STREAM_LIBRARIES} ${WPD_LIBRARIES})
+ 
+ install(TARGETS wpgimport DESTINATION ${PLUGIN_INSTALL_DIR})
+ install(FILES karbon_wpg_import.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+--- a/filters/karbon/wpg/import/WPGImport.cpp
++++ b/filters/karbon/wpg/import/WPGImport.cpp
+@@ -23,6 +23,7 @@
+ #include <QBuffer>
+ #include <QByteArray>
+ #include <QString>
++#include <QFile>
+ 
+ #include <kdebug.h>
+ #include <KoFilterChain.h>
+@@ -37,11 +38,9 @@
+ #include <libwpg/WPGStreamImplementation.h>
+ #else
+ #include <libwpd-stream/libwpd-stream.h>
++#include <libwpd/libwpd.h>
+ #endif
+ 
+-#include "FileOutputHandler.hxx"
+-#include "OdgExporter.hxx"
+-
+ #include <iostream>
+ 
+ K_PLUGIN_FACTORY(WPGImportFactory, registerPlugin<WPGImport>();)
+@@ -56,35 +55,12 @@
+ {
+ }
+ 
+-static QByteArray createManifest()
+-{
+-    KoXmlWriter* manifestWriter;
+-    QByteArray manifestData;
+-    QBuffer manifestBuffer(&manifestData);
+-
+-    manifestBuffer.open(QIODevice::WriteOnly);
+-    manifestWriter = new KoXmlWriter(&manifestBuffer);
+-
+-    manifestWriter->startDocument("manifest:manifest");
+-    manifestWriter->startElement("manifest:manifest");
+-    manifestWriter->addAttribute("xmlns:manifest", "urn:oasis:names:tc:openoffice:xmlns:manifest:1.0");
+-    manifestWriter->addManifestEntry("/", "application/vnd.oasis.opendocument.graphics");
+-    //manifestWriter->addManifestEntry( "styles.xml", "text/xml" );
+-    manifestWriter->addManifestEntry("content.xml", "text/xml");
+-    manifestWriter->endElement();
+-    manifestWriter->endDocument();
+-    delete manifestWriter;
+-
+-    return manifestData;
+-}
+-
+-
+ KoFilter::ConversionStatus WPGImport::convert(const QByteArray& from, const QByteArray& to)
+ {
+     if (from != "application/x-wpg")
+         return KoFilter::NotImplemented;
+ 
+-    if (to != "application/vnd.oasis.opendocument.graphics")
++    if (to != "image/svg+xml")
+         return KoFilter::NotImplemented;
+ 
+ #if LIBWPG_VERSION_MINOR<2
+@@ -96,6 +72,7 @@
+             input = olestream;
+         }
+     }
++    libwpg::WPGString output;
+ #else
+     WPXInputStream* input = new WPXFileStream(m_chain->inputFile().toLocal8Bit());
+     if (input->isOLEStream()) {
+@@ -105,6 +82,7 @@
+             input = olestream;
+         }
+      }
++     ::WPXString output;
+ #endif
+ 
+     if (!libwpg::WPGraphics::isSupported(input)) {
+@@ -113,51 +91,21 @@
+         return KoFilter::NotImplemented;
+     }
+ 
+-    // do the conversion
+-    std::ostringstream tmpStringStream;
+-    FileOutputHandler tmpHandler(tmpStringStream);
+-    OdgExporter exporter(&tmpHandler);
+-    libwpg::WPGraphics::parse(input, &exporter);
+-    delete input;
+-
+-
+-    // create output store
+-    KoStore* storeout;
+-    storeout = KoStore::createStore(m_chain->outputFile(), KoStore::Write,
+-                                    "application/vnd.oasis.opendocument.graphics", KoStore::Zip);
+-
+-    if (!storeout) {
+-        kWarning() << "Couldn't open the requested file.";
+-        return KoFilter::FileNotFound;
+-    }
+-
+-#if 0
+-    if (!storeout->open("styles.xml")) {
+-        kWarning() << "Couldn't open the file 'styles.xml'.";
+-        return KoFilter::CreationError;
+-    }
+-    //storeout->write( createStyles() );
+-    storeout->close();
+-#endif
+-
+-    if (!storeout->open("content.xml")) {
+-        kWarning() << "Couldn't open the file 'content.xml'.";
+-        return KoFilter::CreationError;
+-    }
+-    storeout->write(tmpStringStream.str().c_str());
+-    storeout->close();
+-
+-    // store document manifest
+-    storeout->enterDirectory("META-INF");
+-    if (!storeout->open("manifest.xml")) {
+-        kWarning() << "Couldn't open the file 'META-INF/manifest.xml'.";
+-        return KoFilter::CreationError;
++    if (!libwpg::WPGraphics::generateSVG(input, output)) {
++        kWarning() << "ERROR: SVG Generation failed!";
++        delete input;
++        return KoFilter::ParsingError;
+     }
+-    storeout->write(createManifest());
+-    storeout->close();
+-
+-    // we are done!
+-    delete storeout;
+ 
++    delete input;
++ 
++    QFile outputFile(m_chain->outputFile());
++    if(!outputFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
++        kWarning() << "ERROR: Could not open output file" << m_chain->outputFile();
++        return KoFilter::InternalError;
++    }
++    outputFile.write(output.cstr());
++    outputFile.close();
++ 
+     return KoFilter::OK;
+ }
+--- a/filters/karbon/wpg/import/karbon_wpg_import.desktop
++++ b/filters/karbon/wpg/import/karbon_wpg_import.desktop
+@@ -42,7 +42,7 @@
+ Name[x-test]=xxKarbon WPG Import Filterxx
+ Name[zh_CN]=Karbon WPG 导入过滤器
+ Name[zh_TW]=Karbon WPG 匯入過濾程式
+-X-KDE-Export=application/vnd.oasis.opendocument.graphics
++X-KDE-Export=image/svg+xml
+ X-KDE-Import=application/x-wpg
+ X-KDE-Weight=1
+ X-KDE-Library=wpgimport
