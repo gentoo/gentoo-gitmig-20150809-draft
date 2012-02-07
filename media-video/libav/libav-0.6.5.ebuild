@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.6.5.ebuild,v 1.1 2012/01/27 10:06:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.6.5.ebuild,v 1.2 2012/02/07 18:31:56 ago Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-[[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64
+[[ ${PV} == *9999 ]] || KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
 IUSE="+3dnow +3dnowext alsa altivec amr bindist +bzip2 cpudetection
