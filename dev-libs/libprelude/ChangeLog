@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libprelude
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.77 2011/07/26 07:47:59 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.78 2012/02/07 21:30:23 floppym Exp $
+
+  07 Feb 2012; Mike Gilbert <floppym@gentoo.org> libprelude-1.0.0-r1.ebuild:
+  Inherit multilib.
 
   26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libprelude-0.9.15.2.ebuild, libprelude-0.9.22.ebuild,

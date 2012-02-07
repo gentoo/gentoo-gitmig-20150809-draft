@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.8 2011/07/26 07:47:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.9 2012/02/07 21:30:23 floppym Exp $
 
 EAPI="3"
 GENTOO_DEPEND_ON_PERL="no"
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit autotools distutils eutils flag-o-matic perl-module
+inherit autotools distutils eutils flag-o-matic multilib perl-module
 
 DESCRIPTION="Prelude-IDS Framework Library"
 HOMEPAGE="http://www.prelude-technologies.com"
