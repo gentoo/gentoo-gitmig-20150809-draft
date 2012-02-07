@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.3.3.ebuild,v 1.5 2011/06/07 03:06:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.3.3-r2.ebuild,v 1.1 2012/02/07 21:10:50 dilfridge Exp $
 
 EAPI=3
 
@@ -10,8 +10,8 @@ OPENGL_REQUIRED="optional"
 CPPUNIT_REQUIRED="optional"
 inherit kde4-meta
 
-DESCRIPTION="Shared KOffice libraries."
-KEYWORDS="amd64 x86"
+DESCRIPTION="Shared KOffice libraries"
+KEYWORDS="~amd64 ~x86"
 IUSE="crypt openexr reports"
 
 RDEPEND="
@@ -54,6 +54,11 @@ KMEXTRACTONLY="
 
 KMSAVELIBS="true"
 
+RESTRICT=test
+# bug 385025
+
+PATCHES=( "${FILESDIR}/${P}-qt48.patch" )
+
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with crypt QCA2)
@@ -78,4 +83,7 @@ src_install() {
 	# this is already installed by koffice-data
 	rm -f "${D}/usr/include/config-opengl.h"
 	rm -f "${D}/usr/include/KoConfig.h"
+
+	# this is not useful and only leads to error messages, bug 381955
+	rm -f "${D}/usr/share/applications/kde4/koffice.desktop"
 }

@@ -1,6 +1,13 @@
 # ChangeLog for app-office/koffice-libs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.133 2011/10/01 03:21:29 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.134 2012/02/07 21:10:50 dilfridge Exp $
+
+*koffice-libs-2.3.3-r2 (07 Feb 2012)
+
+  07 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -koffice-libs-2.3.3.ebuild, +koffice-libs-2.3.3-r2.ebuild,
+  +files/koffice-libs-2.3.3-qt48.patch:
+  Add patch to fix build with Qt 4.8, bug 399291. Backport from Calligra.
 
   01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   koffice-libs-2.3.3-r1.ebuild:
