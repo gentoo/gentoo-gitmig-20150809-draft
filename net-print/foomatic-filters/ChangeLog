@@ -1,6 +1,12 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.75 2012/02/01 17:02:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.76 2012/02/07 22:08:56 dilfridge Exp $
+
+  07 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -foomatic-filters-3.0.20060720.ebuild,
+  -files/foomatic-filters-4.0.3-multilib.patch, -foomatic-filters-4.0.5.ebuild,
+  -foomatic-filters-4.0.7.ebuild, -files/foomatic-filters-4.0.7-multilib.patch:
+  Cleanup
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> foomatic-filters-4.0.9.ebuild:
   Marking foomatic-filters-4.0.9 ppc for bug 379559
