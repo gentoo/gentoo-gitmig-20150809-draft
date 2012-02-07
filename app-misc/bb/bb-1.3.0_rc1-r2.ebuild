@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bb/bb-1.3.0_rc1-r2.ebuild,v 1.1 2012/02/05 19:37:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bb/bb-1.3.0_rc1-r2.ebuild,v 1.2 2012/02/07 08:10:42 slyfox Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-messager-overlap.patch
 	epatch "${FILESDIR}"/${P}-zbuff-fault.patch
 	epatch "${FILESDIR}"/${P}-printf-cleanup.patch
+	epatch "${FILESDIR}"/${P}-m4-stuff.patch
 
 	# rename binary and manpage bb -> bb-aalib
 
@@ -40,7 +41,7 @@ src_prepare() {
 	    -e 's/bb_SOURCES/bb_aalib_SOURCES/'               \
 		-i Makefile.am || die
 
-	eautoreconf
+	AT_M4DIR="m4" eautoreconf
 }
 
 pkg_postinst() {
