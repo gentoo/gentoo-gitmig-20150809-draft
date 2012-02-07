@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.2-r1.ebuild,v 1.2 2012/02/05 12:36:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.2-r1.ebuild,v 1.3 2012/02/07 13:15:10 maksbotan Exp $
 
 EAPI=4
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
+AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-utils
 
@@ -21,6 +22,8 @@ DEPEND="
 	dev-libs/libestr
 	dev-libs/libee"
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/do-not-include-private-in-public-headers.patch" )
 
 src_configure() {
 	local myeconfargs=(
