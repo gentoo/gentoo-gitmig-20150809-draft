@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/tac_plus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.9 2012/02/07 14:24:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.10 2012/02/07 20:00:32 chainsaw Exp $
+
+  07 Feb 2012; Tony Vroon <chainsaw@gentoo.org> tac_plus-4.0.4.19-r3.ebuild:
+  Marked stable on AMD64 based on arch testing by Maurizio "k01" Camisaschi &
+  Aaron "B-Man" Bauman in bug #397187.
 
 *tac_plus-4.0.4.19-r3 (07 Feb 2012)
 
