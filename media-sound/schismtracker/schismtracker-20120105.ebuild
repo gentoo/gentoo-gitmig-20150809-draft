@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/schismtracker/schismtracker-20120105.ebuild,v 1.1 2012/02/03 10:46:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/schismtracker/schismtracker-20120105.ebuild,v 1.2 2012/02/07 11:31:39 slyfox Exp $
 
 EAPI=4
 inherit eutils
@@ -27,6 +27,21 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 DOCS="AUTHORS NEWS README TODO"
+
+src_prepare() {
+	default
+
+	# workaround for temporary files (missing directory). Fixes:
+	# sh ./scripts/build-font.sh . font/default-lower.fnt font/default-upper-alt.fnt font/default-upper-itf.fnt font/half-width.fnt >auto/default-font.c
+	# /bin/sh: auto/default-font.c: No such file or directory
+	mkdir auto
+
+	#   sys-devel/binutils[multitarget] provides ${CHOST}-windres
+	#   wine provides /usr/bin/windres
+	# and schismtracker fails to use it properly:
+	# sys/win32/schismres.rc:2:20: fatal error: winver.h: No such file or directory
+	[[ ${CHOST} = *mingw32* ]] || export WINDRES= ac_cv_prog_WINDRES= ac_cv_prog_ac_ct_WINDRES=
+}
 
 src_install() {
 	default

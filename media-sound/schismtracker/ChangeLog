@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/schismtracker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/schismtracker/ChangeLog,v 1.6 2012/02/03 10:50:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/schismtracker/ChangeLog,v 1.7 2012/02/07 11:31:39 slyfox Exp $
+
+  07 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  schismtracker-20120105.ebuild:
+  Fix build failure due missing 'auto/' directory. Fixed build failure on native
+  (non-cross) systems with windres binary. Approved by Chainsaw.
 
   03 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
   schismtracker-20110101.ebuild:
