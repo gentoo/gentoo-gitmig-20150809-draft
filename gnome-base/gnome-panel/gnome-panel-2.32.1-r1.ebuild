@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r1.ebuild,v 1.13 2011/12/07 07:32:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r1.ebuild,v 1.14 2012/02/07 21:02:25 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.4"
 
-inherit gnome2 python eutils autotools
+inherit gnome2 multilib python eutils autotools
 
 DESCRIPTION="The GNOME panel"
 HOMEPAGE="http://www.gnome.org/"
