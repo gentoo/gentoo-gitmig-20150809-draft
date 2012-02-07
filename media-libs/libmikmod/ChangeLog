@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.77 2012/02/07 12:46:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.78 2012/02/07 19:21:17 slyfox Exp $
+
+*libmikmod-3.2.0_beta2-r4 (07 Feb 2012)
+
+  07 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +libmikmod-3.2.0_beta2-r4.ebuild:
+  Add USE=static-libs (bug #402499 by Maurizio Camisaschi). Approved by
+  ssuominen.
 
   07 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libmikmod-3.1.12-r1.ebuild,
   libmikmod-3.2.0_beta2-r3.ebuild:
