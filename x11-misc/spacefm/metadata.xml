@@ -21,6 +21,7 @@
 	</upstream>
 	<use>
 		<flag name="fam">Disable inotify and use fam or gamin instead</flag>
+		<flag name="su">Adds support for graphical su</flag>
 	</use>
 	<longdescription lang="en">
 		SpaceFM is a file manager with built-in VFS, optional udisks-based device 
