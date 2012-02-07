@@ -1,6 +1,15 @@
 # ChangeLog for net-nds/tac_plus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.8 2011/06/16 16:00:43 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.9 2012/02/07 14:24:52 chainsaw Exp $
+
+*tac_plus-4.0.4.19-r3 (07 Feb 2012)
+
+  07 Feb 2012; Tony Vroon <chainsaw@gentoo.org> +tac_plus-4.0.4.19-r3.ebuild,
+  +files/tac_plus.init2:
+  Revision bump. Add sys-libs/pam to RDEPEND and remove spurious libtool
+  archive when static-libs is not enabled. Stop specifying deprecated opts
+  variable in init script. Closes bugs #402503 & #402505 by Agostino "ago"
+  Sarubbo.
 
 *tac_plus-4.0.4.19-r2 (16 Jun 2011)
 
