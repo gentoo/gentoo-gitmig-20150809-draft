@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.12-r1.ebuild,v 1.1 2012/01/12 19:19:01 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.2.ebuild,v 1.1 2012/02/07 20:04:31 billie Exp $
 
 EAPI=4
 
@@ -122,13 +122,9 @@ src_prepare() {
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483217
 	epatch "${FILESDIR}"/${PN}-3.11.1-htmldir.patch
 
-	# Increase systray check timeout for slower machines
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/335662
-	epatch "${FILESDIR}"/${PN}-3.9.12-systray.patch
-
 	# Let 56-hpmud_support.rules call hp-mkuri to make it work with newer udev
 	# Upstream bug: None
-	epatch "${FILESDIR}"/${P}-udev-rules.patch
+	epatch "${FILESDIR}"/${PN}-3.11.12-udev-rules.patch
 
 	# CVE-2010-4267 SNMP Response Processing Buffer Overflow Vulnerability
 	# http://secunia.com/advisories/42956/
@@ -137,7 +133,11 @@ src_prepare() {
 
 	# Fix black stripes on pcl5c printouts
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/561264
-	epatch "${FILESDIR}"/${P}-black-stripes-pcl5c.patch
+	epatch "${FILESDIR}"/${PN}-3.11.12-black-stripes-pcl5c.patch
+
+	# Fix parallel port cpu usage
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/750796
+	epatch "${FILESDIR}"/${PN}-3.11.12-fast-pp.patch
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
@@ -247,11 +247,11 @@ src_install() {
 	# Gentoo Bug: #201023
 	rm -f "${D}"/etc/sane.d/dll.conf || die
 
-	rm -f "${D}"/usr/share/doc/${P}/{copyright,README_LIBJPG,COPYING} || die
-	rmdir "${D}"/usr/share/doc/${P}/ >/dev/null
+	rm -f "${D}"/usr/share/doc/${PF}/{copyright,README_LIBJPG,COPYING} || die
+	rmdir --ignore-fail-on-non-empty "${D}"/usr/share/doc/${PF}/ || die
 
 	# Remove hal fdi files
-	rm -rf "${D}"/usr/share/hal  || die
+	rm -rf "${D}"/usr/share/hal || die
 
 	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die
 }
