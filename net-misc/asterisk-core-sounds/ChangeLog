@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-core-sounds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-core-sounds/ChangeLog,v 1.7 2012/02/07 09:37:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-core-sounds/ChangeLog,v 1.8 2012/02/07 13:41:13 ago Exp $
+
+  07 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  asterisk-core-sounds-1.4.21-r1.ebuild:
+  Stable for amd64, wrt bug #400447
 
 *asterisk-core-sounds-1.4.21-r1 (07 Feb 2012)
 
