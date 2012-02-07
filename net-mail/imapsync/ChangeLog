@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.44 2012/02/06 17:29:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.45 2012/02/07 06:57:14 radhermit Exp $
+
+  07 Feb 2012; Tim Harder <radhermit@gentoo.org> -imapsync-1.303.ebuild,
+  -imapsync-1.350-r1.ebuild, -imapsync-1.404.ebuild, -imapsync-1.452.ebuild,
+  -imapsync-1.468.ebuild:
+  Remove old.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> imapsync-1.456.ebuild:
   Marking imapsync-1.456 ppc for bug 388021
