@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.77 2012/02/06 17:33:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.78 2012/02/07 07:49:39 graaff Exp $
+
+  07 Feb 2012; Hans de Graaff <graaff@gentoo.org> -ruby-gettext-2.1.0.ebuild:
+  Remove old version.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org>
   ruby-gettext-2.1.0_p20100728-r1.ebuild:

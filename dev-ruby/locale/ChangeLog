@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.29 2012/02/06 17:32:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.30 2012/02/07 07:51:44 graaff Exp $
+
+  07 Feb 2012; Hans de Graaff <graaff@gentoo.org> -locale-2.0.5.ebuild:
+  Remove old version.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> locale-2.0.5-r2.ebuild:
   Marking locale-2.0.5-r2 ppc stable for bug 384825
