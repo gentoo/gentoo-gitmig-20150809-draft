@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.9.ebuild,v 1.1 2012/01/29 10:51:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10.ebuild,v 1.1 2012/02/07 23:42:57 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.4"
@@ -103,7 +103,8 @@ src_prepare() {
 
 	if ! use test; then
 		# don't waste time building tests
-		strip_builddir SRC_SUBDIRS tests Makefile.am Makefile.in
+		strip_builddir SRC_SUBDIRS tests Makefile.{am,in}
+		strip_builddir SUBDIRS tests gdk/Makefile.{am,in} gtk/Makefile.{am,in}
 	else
 		# Non-working test in gentoo's env
 		sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \

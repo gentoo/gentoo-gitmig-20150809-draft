@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.561 2012/02/02 10:23:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.562 2012/02/07 23:42:57 tetromino Exp $
+
+*gtk+-2.24.10 (07 Feb 2012)
+
+  07 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -gtk+-2.24.9.ebuild,
+  +gtk+-2.24.10.ebuild:
+  Version bump; drop crash-prone 2.24.9 version. Avoid building gdk/gtk tests
+  when FEATURES=-test (thanks to Rafał Mużyło).
 
 *gtk+-2.24.9-r1 (02 Feb 2012)
 
