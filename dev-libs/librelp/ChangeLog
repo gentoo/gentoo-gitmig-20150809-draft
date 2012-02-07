@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/librelp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/ChangeLog,v 1.14 2012/02/03 16:56:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/ChangeLog,v 1.15 2012/02/07 15:50:56 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org> librelp-1.0.0.ebuild:
+  Stable for HPPA (bug #396899).
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> librelp-1.0.0.ebuild:
   Stable for amd64, wrt bug #396899
