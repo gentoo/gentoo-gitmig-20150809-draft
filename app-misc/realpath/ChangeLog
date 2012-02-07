@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/realpath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.23 2012/02/07 15:25:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.24 2012/02/07 20:33:14 jlec Exp $
+
+  07 Feb 2012; Justin Lecher <jlec@gentoo.org>
+  -files/realpath-1.14-build.patch, -realpath-1.15-r1.ebuild,
+  -realpath-1.15-r3.ebuild, -files/realpath-1.15-nonls.patch:
+  dropped old
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> realpath-1.16.ebuild:
   Stable for HPPA (bug #401089).
