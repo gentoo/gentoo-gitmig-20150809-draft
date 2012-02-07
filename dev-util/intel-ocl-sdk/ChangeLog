@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intel-ocl-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.1 2012/02/04 11:17:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.2 2012/02/07 15:55:54 xarthisius Exp $
+
+  07 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> intel-ocl-sdk-1.5.ebuild:
+  Invoke eselect opencl during postinst to avoid intel flavour of bug 402407
 
 *intel-ocl-sdk-1.5 (04 Feb 2012)
 
