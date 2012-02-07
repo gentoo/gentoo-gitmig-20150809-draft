@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.253 2012/02/01 17:28:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.254 2012/02/07 15:37:48 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org> lvm2-2.02.88.ebuild:
+  Stable for HPPA (bug #400557).
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> lvm2-2.02.88.ebuild:
   Marking lvm2-2.02.88 ppc for bug 400557
