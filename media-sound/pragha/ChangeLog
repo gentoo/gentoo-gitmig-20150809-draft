@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pragha
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/ChangeLog,v 1.4 2012/01/30 16:44:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/ChangeLog,v 1.5 2012/02/07 19:05:08 ssuominen Exp $
+
+  07 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> pragha-1.0_rc3.ebuild:
+  Punt USE="minimal" to unbreak the build wrt #402349 by Myckel Habets
 
   30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> pragha-1.0_rc3.ebuild:
   Stable for amd64, wrt bug #401229
