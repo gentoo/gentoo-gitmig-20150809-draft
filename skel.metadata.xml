@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <!--
-$Header: /var/cvsroot/gentoo-x86/skel.metadata.xml,v 1.20 2012/02/07 00:02:28 idl0r Exp $
+$Header: /var/cvsroot/gentoo-x86/skel.metadata.xml,v 1.21 2012/02/07 00:03:15 idl0r Exp $
 
 This is the example metadata file.
 The root element of this file is <pkgmetadata>. Within this element a
@@ -24,10 +24,10 @@ not relevant for general metadata.xml files.
 <!-- <longdescription>Long description of the package</longdescription> -->
 <!--
 <use>
-	<flag name='flag'>Description of how USE='flag' affects this package</flag>
-	<flag name='userland_GNU'>Description of how USERLAND='GNU' affects this
+	<flag name="flag">Description of how USE='flag' affects this package</flag>
+	<flag name="userland_GNU">Description of how USERLAND='GNU' affects this
 		package</flag>
-	<flag name='aspell'>Uses <pkg>app-text/aspell</pkg> for spell checking.
+	<flag name="aspell">Uses <pkg>app-text/aspell</pkg> for spell checking.
 		Requires an installed dictionary from <cat>app-dicts</cat></flag>
 </use>
 -->
