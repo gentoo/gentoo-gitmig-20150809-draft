@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.49 2012/01/27 12:01:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.50 2012/02/07 16:38:58 ago Exp $
+
+  07 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libav-0.6.5.ebuild:
+  Stable for AMD64, wrt bug #401017
 
   27 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Whitespace.
