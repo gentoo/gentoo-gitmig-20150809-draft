@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.35 2012/02/06 18:56:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.36 2012/02/07 16:19:50 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org> metagen-0.6.2.ebuild:
+  Stable for HPPA (bug #399949).
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> metagen-0.6.2.ebuild:
   Marking metagen-0.6.2 ppc for bug 399949
