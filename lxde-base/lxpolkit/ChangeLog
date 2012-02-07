@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxpolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/ChangeLog,v 1.15 2012/01/28 14:47:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/ChangeLog,v 1.16 2012/02/07 19:00:41 ssuominen Exp $
+
+  07 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -lxpolkit-0.1.0.ebuild:
+  old
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   lxpolkit-0.1.0-r1.ebuild:
