@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_DNSBL
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/ChangeLog,v 1.29 2012/01/15 14:42:21 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/ChangeLog,v 1.30 2012/02/07 17:03:19 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Net_DNSBL-1.3.6.ebuild:
+  Marked ~hppa (bug #396973).
 
 *PEAR-Net_DNSBL-1.3.6 (15 Jan 2012)
 
