@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remoteosd/vdr-remoteosd-0.1.1.ebuild,v 1.1 2011/09/21 08:49:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remoteosd/vdr-remoteosd-0.1.1.ebuild,v 1.2 2012/02/07 14:06:28 hd_brummy Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://vdr.schmirler.de/remoteosd/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.6.0
