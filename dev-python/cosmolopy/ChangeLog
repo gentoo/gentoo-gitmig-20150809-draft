@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cosmolopy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.3 2011/08/04 18:41:26 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.4 2012/02/07 12:05:39 xarthisius Exp $
+
+*cosmolopy-0.1.104 (07 Feb 2012)
+
+  07 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +cosmolopy-0.1.104.ebuild:
+  Version bump wrt bug 402495 by Ian Delaney <johneed@hotmail.com>
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
