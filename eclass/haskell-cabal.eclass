@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.26 2012/01/20 18:24:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.27 2012/02/07 12:47:54 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -51,6 +51,12 @@ inherit ghc-package multilib
 # User-specified additional parameters passed to 'setup configure'.
 # example: /etc/make.conf: CABAL_EXTRA_CONFIGURE_FLAGS=--enable-shared
 : ${CABAL_EXTRA_CONFIGURE_FLAGS:=}
+
+# @ECLASS-VARIABLE: CABAL_EXTRA_BUILD_FLAGS
+# @DESCRIPTION:
+# User-specified additional parameters passed to 'setup build'.
+# example: /etc/make.conf: CABAL_EXTRA_BUILD_FLAGS=-v
+: ${CABAL_EXTRA_BUILD_FLAGS:=}
 
 # @ECLASS-VARIABLE: GHC_BOOTSTRAP_FLAGS
 # @DESCRIPTION:
@@ -180,7 +186,7 @@ cabal-bootstrap() {
 			${GHC_BOOTSTRAP_FLAGS} \
 			"$@" \
 			-o setup
-		echo $(ghc-getghc) "$@"
+		echo $(ghc-getghc) ${HCFLAGS} "$@"
 		$(ghc-getghc) "$@"
 	}
 	if $(ghc-supports-shared-libraries); then
@@ -250,6 +256,12 @@ cabal-configure() {
 		cabalconf="${cabalconf} --with-cpphs=${EPREFIX}/usr/bin/cpphs"
 	fi
 
+	local option
+	for option in ${HCFLAGS}
+	do
+		cabalconf+=" --ghc-option=$option"
+	done
+
 	# Building GHCi libs on ppc64 causes "TOC overflow".
 	if use ppc64; then
 		cabalconf="${cabalconf} --disable-library-for-ghci"
@@ -307,7 +319,7 @@ cabal-configure() {
 
 cabal-build() {
 	unset LANG LC_ALL LC_MESSAGES
-	set --  build "$@"
+	set --  build ${CABAL_EXTRA_BUILD_FLAGS} "$@"
 	echo ./setup "$@"
 	./setup "$@" \
 		|| die "setup build failed"
@@ -404,7 +416,7 @@ haskell-cabal_src_configure() {
 
 		cabal-bootstrap
 
-		cabal-configure $ghc_flags "$@"
+		cabal-configure "$@"
 
 		popd > /dev/null
 	fi
