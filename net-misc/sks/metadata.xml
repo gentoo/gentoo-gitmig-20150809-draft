@@ -5,6 +5,6 @@
   <email>kingtaco@gentoo.org</email>
 </maintainer>
 <use>
-  <flag name='optimize'>Enables bytecode optimization</flag>
+  <flag name="optimize">Enables bytecode optimization</flag>
 </use>
 </pkgmetadata>

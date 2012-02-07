@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/ChangeLog,v 1.2 2012/02/06 23:48:09 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/ChangeLog,v 1.3 2012/02/07 00:19:31 kingtaco Exp $
+
+  07 Feb 2012; Mike Doty <kingtaco@gentoo.org> sks-1.1.2.ebuild, metadata.xml:
+  Fixed formatting in metadata.xml
+  Fixed USE=optimize src_install()
 
   06 Feb 2012; Mike Doty <kingtaco@gentoo.org> ChangeLog:
   Signing Manifest
