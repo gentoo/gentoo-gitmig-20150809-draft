@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.0-r1.ebuild,v 1.1 2012/02/06 13:20:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.0-r1.ebuild,v 1.2 2012/02/07 07:56:40 eras Exp $
 
 EAPI=4
 
@@ -305,5 +305,9 @@ pkg_postinst() {
 			ewarn "Please turn on berkdb USE flag for hash or btree table"
 			ewarn "lookup support.\n"
 		fi
+		ewarn "Postfix daemons now live under /usr/libexec/postfix"
+		ewarn "Please adjust your main.cf accordingly by running"
+		ewarn "etc-update/dispatch-conf or similar and accepting the new"
+		ewarn "daemon_directory setting."
 	fi
 }

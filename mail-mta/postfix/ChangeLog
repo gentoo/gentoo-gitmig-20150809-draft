@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.334 2012/02/06 13:20:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.335 2012/02/07 07:56:40 eras Exp $
+
+  07 Feb 2012; Eray Aslan <eras@gentoo.org> postfix-2.9.0.ebuild,
+  postfix-2.9.0-r1.ebuild:
+  add warning for new daemon directory
 
 *postfix-2.9.0-r1 (06 Feb 2012)
 
