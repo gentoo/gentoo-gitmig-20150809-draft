@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.2.ebuild,v 1.4 2010/05/24 17:38:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.2.ebuild,v 1.5 2012/02/07 22:06:44 floppym Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
+PYTHON_DEPEND="2"
 
 inherit gnome2 python
 
@@ -31,24 +32,28 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_prepare() {
 	gnome2_src_prepare
+	python_convert_shebangs -r 2 .
 
 	# Let this file be re-created so the path in the <oaf_server> element is
 	# correct. See bug #93612.
 	rm -f GNOME_BlogApplet.server.in || die "rm failed"
 
-	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	python_clean_py-compile_files
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize $(python_get_sitedir)/gnomeblog
+	python_mod_optimize gnomeblog
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/gnomeblog
+	python_mod_cleanup gnomeblog
 }
