@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.691 2012/02/03 17:37:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.692 2012/02/07 19:31:53 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org> opera-11.62.1273.ebuild,
+  opera-11.62.1274.ebuild:
+  Fix SRC_URI again, by James Cloos (bug #402579).
 
   03 Feb 2012; Jeroen Roovers <jer@gentoo.org> opera-11.62.1274.ebuild:
   Fix SRC_URI by Helmut Jarausch (bug #402037).
