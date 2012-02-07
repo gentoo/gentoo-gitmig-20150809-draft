@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.5.18.ebuild,v 1.1 2011/08/01 22:44:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.5.31.ebuild,v 1.1 2012/02/07 20:49:29 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit autotools eutils
 
@@ -51,12 +51,12 @@ src_configure() {
 }
 
 src_compile() {
-	emake CCOPT="${CFLAGS} ${LDFLAGS}" || die "emake failed"
+	emake CCOPT="${CFLAGS} ${LDFLAGS}"
 }
 
 src_install() {
 	# argus_parse.a and argus_common.a are supplied by net-analyzer/argus
-	dobin bin/ra* || die "Failed to install ra*"
-	dodoc ChangeLog CREDITS README doc/{CHANGES,FAQ,HOW-TO} || die
+	dobin bin/ra*
+	dodoc ChangeLog CREDITS README CHANGES
 	doman man/man{1,5}/*
 }

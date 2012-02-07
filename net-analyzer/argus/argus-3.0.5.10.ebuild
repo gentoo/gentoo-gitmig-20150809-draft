@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.5.5.ebuild,v 1.1 2011/08/30 19:35:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.5.10.ebuild,v 1.1 2012/02/07 20:49:11 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit autotools eutils
 
@@ -34,7 +34,9 @@ src_prepare() {
 		-e 's:#\(ARGUS_SETGROUP_ID=\).*:\1argus:' \
 		-e 's:\(#ARGUS_CHROOT_DIR=\).*:\1/var/lib/argus:' \
 			-i support/Config/argus.conf || die
-	epatch "${FILESDIR}"/${PN}-3.0.4-disable-tcp-wrappers-automagic.patch
+	epatch \
+		"${FILESDIR}"/${PN}-3.0.4-disable-tcp-wrappers-automagic.patch \
+		"${FILESDIR}"/${PN}-3.0.5-Makefile.patch
 	eautoreconf
 }
 
@@ -43,16 +45,20 @@ src_configure() {
 	econf $(use_with tcpd wrappers)
 }
 
+src_compile() {
+	emake CCOPT="${CFLAGS} ${LDFLAGS}"
+}
+
 src_install () {
 	doman man/man5/* man/man8/*
-	dosbin bin/argus{,bug} || die
+	dosbin bin/argus{,bug}
 
-	dodoc ChangeLog CREDITS README || die
+	dodoc ChangeLog CREDITS README
 
 	insinto /etc/argus
-	doins support/Config/argus.conf || die
+	doins support/Config/argus.conf
 
-	newinitd "${FILESDIR}/argus.initd" argus || die
+	newinitd "${FILESDIR}/argus.initd" argus
 	dodir /var/lib/argus
 }
 
