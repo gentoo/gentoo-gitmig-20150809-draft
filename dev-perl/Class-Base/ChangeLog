@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Class-Base
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Base/ChangeLog,v 1.4 2011/09/04 11:22:06 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Base/ChangeLog,v 1.5 2012/02/07 18:53:48 tove Exp $
+
+*Class-Base-0.40.0 (07 Feb 2012)
+
+  07 Feb 2012; Torsten Veller <tove@gentoo.org> +Class-Base-0.40.0.ebuild:
+  Version bump
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Class-Base-0.03.ebuild:
   Cleanup
