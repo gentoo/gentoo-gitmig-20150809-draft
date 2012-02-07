@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.140 2012/01/22 15:41:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.141 2012/02/07 17:25:53 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org> lcms-2.3.ebuild:
+  Stable for HPPA (bug #399593).
 
   22 Jan 2012; Raúl Porcel <armin76@gentoo.org> lcms-2.3.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #399593
