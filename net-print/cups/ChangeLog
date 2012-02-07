@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.452 2012/02/07 16:32:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.453 2012/02/07 16:43:38 dilfridge Exp $
+
+  07 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.2-r1.ebuild:
+  Drop php scripting support; it is unmaintained by upstream, has already been
+  removed in trunk, and displays build failures with recent php. Bug 388105
 
 *cups-1.5.2-r1 (07 Feb 2012)
 

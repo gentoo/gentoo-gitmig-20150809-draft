@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r1.ebuild,v 1.1 2012/02/07 16:32:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r1.ebuild,v 1.2 2012/02/07 16:43:38 dilfridge Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="acl dbus debug +filters gnutls java +jpeg kerberos ldap pam perl php +png python slp +ssl static-libs +threads +tiff usb X xinetd"
+IUSE="acl dbus debug +filters gnutls java +jpeg kerberos ldap pam perl +png python slp +ssl static-libs +threads +tiff usb X xinetd"
 
 LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
 for X in ${LANGS} ; do
@@ -41,7 +41,6 @@ RDEPEND="
 	ldap? ( net-nds/openldap[ssl?,gnutls?] )
 	pam? ( virtual/pam )
 	perl? ( dev-lang/perl )
-	php? ( dev-lang/php )
 	png? ( >=media-libs/libpng-1.4.3:0 )
 	slp? ( >=net-libs/openslp-1.0.4 )
 	ssl? (
@@ -185,7 +184,7 @@ src_configure() {
 		$(use_enable usb libusb) \
 		$(use_with java) \
 		$(use_with perl) \
-		$(use_with php) \
+		--without-php \
 		$(use_with python) \
 		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
@@ -207,11 +206,6 @@ src_compile() {
 		perl-module_src_prep
 		perl-module_src_compile
 	fi
-
-	if use php ; then
-		cd "${S}"/scripting/php
-		emake
-	fi
 }
 
 src_install() {
@@ -222,11 +216,6 @@ src_install() {
 		cd "${S}"/scripting/perl
 		perl-module_src_install
 		fixlocalpod
-	fi
-
-	if use php ; then
-		cd "${S}"/scripting/php
-		emake DESTDIR="${D}" install || die "emake install for php bindings failed"
 	fi
 
 	# clean out cups init scripts
