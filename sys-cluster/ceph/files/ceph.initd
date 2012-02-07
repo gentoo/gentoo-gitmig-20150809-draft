@@ -1,6 +1,6 @@
 #!/sbin/runscript
 
-opts="reload"
+extra_started_commands="reload"
 bin=/usr/lib/ceph/ceph_init.sh
 
 depend() {
