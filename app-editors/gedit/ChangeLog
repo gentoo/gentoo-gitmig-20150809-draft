@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.335 2012/02/04 10:44:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.336 2012/02/07 20:55:15 tetromino Exp $
+
+  07 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gedit-2.30.4.ebuild,
+  gedit-3.2.5.ebuild, gedit-3.2.6.ebuild:
+  Directly inherit multilib, thanks to Arfrever for reporting.
 
   04 Feb 2012; Justin Lecher <jlec@gentoo.org> gedit-3.2.6.ebuild,
   metadata.xml:
