@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2.ebuild,v 1.1 2012/02/07 14:48:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r1.ebuild,v 1.1 2012/02/07 16:32:47 dilfridge Exp $
 
 EAPI=4
 
@@ -13,7 +13,8 @@ MY_PV=${PV/_}
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
-SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2"
+SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2
+	http://dev.gentoo.org/~dilfridge/distfiles/${P}-ipp-r8950.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -129,6 +130,9 @@ src_prepare() {
 
 	# systemd support
 	epatch "${FILESDIR}/${PN}-1.5.0-systemd-socket.patch"
+
+	# revert ipp backend to 1.4 state, as ubuntu and debian
+	epatch "${DISTDIR}/${P}-ipp-r8950.patch.bz2"
 
 	AT_M4DIR=config-scripts eaclocal
 	eautoconf
