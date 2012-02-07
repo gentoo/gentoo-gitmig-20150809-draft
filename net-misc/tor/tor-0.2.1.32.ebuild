@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.32.ebuild,v 1.2 2011/12/17 00:06:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.32.ebuild,v 1.3 2012/02/07 21:11:21 blueness Exp $
 
 EAPI=4
 
@@ -13,10 +13,11 @@ SRC_URI="http://www.torproject.org/dist/${PN}-${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug"
+IUSE="debug selinux"
 
 DEPEND="dev-libs/openssl
-	>=dev-libs/libevent-2.0"
+	>=dev-libs/libevent-2.0
+	selinux? ( sec-policy/selinux-tor )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
