@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/cone
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.42 2012/02/06 17:30:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.43 2012/02/07 07:00:22 radhermit Exp $
+
+  07 Feb 2012; Tim Harder <radhermit@gentoo.org> -cone-0.84.20100819-r1.ebuild,
+  -files/cone-0.84.20100819-skip-rfc2045-test.patch, -cone-0.86.ebuild:
+  Remove old.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> cone-0.89.ebuild:
   Marking cone-0.89 ppc for bug 373155
