@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.1 2012/02/01 10:43:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.2 2012/02/07 21:56:25 floppym Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils eutils mono python versionator
+inherit autotools-utils eutils mono multilib python versionator
 
 DIR_PV=$(get_version_component_range 1-2)
 DIR_PV2=$(get_version_component_range 1-3)
