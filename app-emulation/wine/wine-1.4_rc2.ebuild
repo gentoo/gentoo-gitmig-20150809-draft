@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.4_rc2.ebuild,v 1.1 2012/02/05 21:15:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.4_rc2.ebuild,v 1.2 2012/02/07 20:51:57 swift Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa capi cups custom-cflags elibc_glibc fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap mp3 ncurses nls openal opencl +opengl +oss +perl png samba scanner ssl test +threads +truetype udisks v4l +win32 +win64 +X xcomposite xinerama xml"
+IUSE="alsa capi cups custom-cflags elibc_glibc fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap mp3 ncurses nls openal opencl +opengl +oss +perl png samba scanner selinux ssl test +threads +truetype udisks v4l +win32 +win64 +X xcomposite xinerama xml"
 REQUIRED_USE="elibc_glibc? ( threads )" #286560
 RESTRICT="test" #72375
 
@@ -80,6 +80,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	mp3? ( >=media-sound/mpg123-1.5.0 )
 	nls? ( sys-devel/gettext )
 	samba? ( >=net-fs/samba-3.0.25 )
+	selinux? ( sec-policy/selinux-wine )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends )
 	ssl? ( dev-libs/openssl )
