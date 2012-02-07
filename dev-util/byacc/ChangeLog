@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.31 2012/02/01 13:32:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.32 2012/02/07 06:48:53 radhermit Exp $
+
+*byacc-20120115 (07 Feb 2012)
+
+  07 Feb 2012; Tim Harder <radhermit@gentoo.org> +byacc-20120115.ebuild:
+  Version bump.
 
   01 Feb 2012; Ulrich Müller <ulm@gentoo.org> -byacc-1.9-r2.ebuild,
   byacc-1.9-r3.ebuild:
