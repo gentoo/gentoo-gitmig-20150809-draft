@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/colander
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colander/ChangeLog,v 1.1 2011/07/30 01:43:51 rafaelmartins Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colander/ChangeLog,v 1.2 2012/02/07 08:03:54 patrick Exp $
+
+*colander-0.9.4 (07 Feb 2012)
+
+  07 Feb 2012; Patrick Lauer <patrick@gentoo.org> +colander-0.9.4.ebuild:
+  Bump for #402445
 
 *colander-0.9.3 (30 Jul 2011)
 
