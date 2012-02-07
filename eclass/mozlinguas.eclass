@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozlinguas.eclass,v 1.2 2012/02/07 15:17:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozlinguas.eclass,v 1.3 2012/02/07 15:19:22 polynomial-c Exp $
 
 # @ECLASS: mozlinguas.eclass
 # @MAINTAINER:
@@ -69,7 +69,7 @@ esac
 
 # Add linguas_* to IUSE according to available language packs
 # No language packs for alphas and betas
-if ! [[ ${PV} =~ alpha|beta ]]|| { [[ ${PN} == seamonkey ]] && ! [[ ${PV} =~ alpha ]] ; } ; then
+if ! [[ ${PV} =~ alpha|beta ]] || { [[ ${PN} == seamonkey ]] && ! [[ ${PV} =~ alpha ]] ; } ; then
 	for x in "${MOZ_LANGS[@]}" ; do
 		# en and en_US are handled internally
 		if [[ ${x} == en ]] || [[ ${x} == en-US ]]; then

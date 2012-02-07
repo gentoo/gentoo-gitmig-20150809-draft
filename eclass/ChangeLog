@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.118 2012/02/07 15:17:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.119 2012/02/07 15:19:22 polynomial-c Exp $
+
+  07 Feb 2012; Lars Wendler <polynomial-c@gentoo.org> mozlinguas.eclass:
+  Whitespace fix
 
   07 Feb 2012; Lars Wendler <polynomial-c@gentoo.org> mozlinguas.eclass:
   Fixed eclass for usage with seamonkey (which has langpacks in beta releases).
