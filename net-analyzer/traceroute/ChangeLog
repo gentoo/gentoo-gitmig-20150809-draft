@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.88 2012/02/06 18:53:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.89 2012/02/07 16:18:12 jer Exp $
+
+  07 Feb 2012; Jeroen Roovers <jer@gentoo.org> traceroute-2.0.18.ebuild:
+  Stable for HPPA (bug #400431).
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> traceroute-2.0.18.ebuild:
   Marking traceroute-2.0.18 ppc for bug 400431
