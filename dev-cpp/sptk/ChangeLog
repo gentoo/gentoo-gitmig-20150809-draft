@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.75 2012/02/06 20:15:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.76 2012/02/07 16:35:53 ssuominen Exp $
+
+*sptk-4.13-r1 (07 Feb 2012)
+
+  07 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> +sptk-4.13-r1.ebuild:
+  Punt broken aspell support wrt #402149 by Agostino Sarubbo. Also, correct
+  other dependencies and USE flags for the 4.13 release.
 
 *sptk-4.13 (06 Feb 2012)
 
