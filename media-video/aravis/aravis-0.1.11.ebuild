@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aravis/aravis-0.1.11.ebuild,v 1.1 2012/02/07 19:16:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aravis/aravis-0.1.11.ebuild,v 1.2 2012/02/07 19:45:38 flameeyes Exp $
 
 EAPI=4
 
@@ -35,6 +35,7 @@ RDEPEND=">=dev-libs/glib-2.22
 	)
 	gstreamer? ( ${GST_DEPEND} )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	dev-libs/gobject-introspection"
 
 if [[ -z ${EGIT_COMMIT} ]]; then
