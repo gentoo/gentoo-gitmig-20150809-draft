@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.212 2012/01/30 12:04:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.213 2012/02/07 20:48:04 jlec Exp $
+
+  07 Feb 2012; Justin Lecher <jlec@gentoo.org> rhythmbox-2.95.ebuild,
+  metadata.xml:
+  Enable support for zeitgeist plugin
 
   30 Jan 2012; Pacho Ramos <pacho@gentoo.org> rhythmbox-0.12.8-r1.ebuild:
   Fix build/running when python3 is main interpreter, bug #401047 by Alexander

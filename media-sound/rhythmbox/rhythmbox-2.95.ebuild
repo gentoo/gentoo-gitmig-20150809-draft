@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.95.ebuild,v 1.2 2012/01/17 17:05:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.95.ebuild,v 1.3 2012/02/07 20:48:04 jlec Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="cdr clutter daap dbus doc gnome-keyring html ipod +lastfm libnotify lirc
-musicbrainz mtp nsplugin +python test +udev upnp webkit"
+musicbrainz mtp nsplugin +python test +udev upnp webkit zeitgeist"
 # vala
 KEYWORDS="~amd64 ~x86"
 
@@ -28,7 +28,6 @@ REQUIRED_USE="
 	webkit? ( python )"
 
 # FIXME: double check what to do with fm-radio plugin
-# FIXME: Zeitgeist python plugin
 # NOTE: gst-python is still needed because gstreamer introspection is incomplete
 COMMON_DEPEND=">=dev-libs/glib-2.26.0:2
 	dev-libs/libxml2:2
@@ -65,6 +64,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26.0:2
 		ipod? ( >=media-libs/libgpod-0.7.92[udev] )
 		mtp? ( >=media-libs/libmtp-0.3 )
 		|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] ) )
+	zeitgeist? ( gnome-extra/zeitgeist )
 "
 RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-soup-0.10

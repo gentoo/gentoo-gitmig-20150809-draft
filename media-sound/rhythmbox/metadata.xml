@@ -19,5 +19,6 @@
 		UPnP protocols using <pkg>media-video/coherence</pkg>,
 		<pkg>dev-python/louie</pkg>, and <pkg>dev-python/twisted</pkg></flag>
 	<flag name="webkit">Enable context panel plugin</flag>
+	<flag name="zeitgeist">Build the plugin to inject events to <pkg>gnome-extra/zeitgeist</pkg></flag>
   </use>
 </pkgmetadata>
