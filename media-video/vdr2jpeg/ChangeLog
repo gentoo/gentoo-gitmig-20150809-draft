@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr2jpeg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.24 2011/12/17 14:09:05 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.25 2012/02/07 10:31:44 hd_brummy Exp $
+
+  07 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr2jpeg-0.1.9.ebuild:
+  added missing Homepage, added new download URL
 
   17 Dec 2011; Alexis Ballier <aballier@gentoo.org> vdr2jpeg-0.1.9.ebuild,
   +files/vdr2jpeg-0.1.9-ffmpeg.patch:
