@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.10.91.ebuild,v 1.1 2012/01/11 23:29:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-1.0.0.ebuild,v 1.1 2012/02/07 14:07:23 johu Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ IUSE="debug"
 
 RDEPEND=">=net-fs/samba-3.4.2[cups]"
 
-DOCS="AUTHORS BUGS ChangeLog FAQ README TODO"
+DOCS=( AUTHORS BUGS ChangeLog README TODO )
 
 src_configure() {
 	local mycmakeargs=(
