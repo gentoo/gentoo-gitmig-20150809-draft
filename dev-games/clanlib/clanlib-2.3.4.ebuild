@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.4.ebuild,v 1.1 2012/02/06 13:56:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.4.ebuild,v 1.2 2012/02/07 10:02:38 tupone Exp $
 
 EAPI=2
 inherit flag-o-matic eutils autotools-utils
@@ -27,13 +27,15 @@ RDEPEND="sys-libs/zlib
 		x11-libs/libX11
 	)
 	sqlite? ( dev-db/sqlite )
-	sound? (
+	sound? ( media-libs/alsa-lib )
+	mikmod? (
+		media-libs/libmikmod
 		media-libs/alsa-lib
-		mikmod? ( media-libs/libmikmod )
-		vorbis? (
-			media-libs/libogg
-			media-libs/libvorbis
-		)
+	)
+	vorbis? (
+		media-libs/libogg
+		media-libs/libvorbis
+		media-libs/alsa-lib
 	)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -60,12 +62,15 @@ src_configure() {
 		$(use_enable opengl clanGL1)
 		$(use_enable opengl clanGUI)
 		$(use_enable X clanDisplay)
-		$(use_enable sound clanSound)
 		$(use_enable vorbis clanVorbis)
 		$(use_enable mikmod clanMikMod)
 		$(use_enable sqlite clanSqlite)
 		$(use_enable ipv6 getaddr)
 	)
+	use sound \
+		|| use vorbis \
+		|| use mikmod \
+		|| myeconfargs+=( --disable-clanSound )
 	autotools-utils_src_configure
 }
 
