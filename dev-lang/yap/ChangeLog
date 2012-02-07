@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.67 2012/02/01 17:47:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.68 2012/02/07 20:28:57 keri Exp $
+
+  07 Feb 2012; <keri@gentoo.org> -yap-6.2.0-r1.ebuild:
+  Remove old version
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> yap-6.2.2.ebuild:
   Marking yap-6.2.2 ppc for bug 399675
