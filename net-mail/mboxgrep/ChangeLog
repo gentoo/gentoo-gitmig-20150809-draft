@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mboxgrep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.18 2012/02/05 18:10:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.19 2012/02/07 10:45:29 eras Exp $
+
+  07 Feb 2012; Eray Aslan <eras@gentoo.org> -mboxgrep-0.7.9.ebuild:
+  remove old
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> mboxgrep-0.7.9.ebuild,
   mboxgrep-0.7.9-r1.ebuild:
