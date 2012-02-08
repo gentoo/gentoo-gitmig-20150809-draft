@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/gorm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.40 2011/08/19 09:31:31 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.41 2012/02/08 15:01:34 voyageur Exp $
+
+*gorm-1.2.16 (08 Feb 2012)
+
+  08 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> +gorm-1.2.16.ebuild:
+  Version bump, includes XIB reading and bugfixes
 
   19 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> -gorm-1.2.8.ebuild,
   -gorm-1.2.10.ebuild, gorm-1.2.12.ebuild,
