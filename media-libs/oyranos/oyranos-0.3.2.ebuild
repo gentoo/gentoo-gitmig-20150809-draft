@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.3.2.ebuild,v 1.3 2012/02/08 05:49:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.3.2.ebuild,v 1.4 2012/02/08 22:25:06 mr_bones_ Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/oyranos/Oyranos/Oyranos%200.3/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="X doc static-libs xinerama"
+IUSE="X doc static-libs test xinerama"
 
 RDEPEND="app-admin/elektra
 	dev-libs/libxml2
@@ -30,7 +30,7 @@ RDEPEND="app-admin/elektra
 		xinerama? ( x11-libs/libXinerama ) )"
 DEPEND="${RDEPEND}
 	app-doc/doxygen
-	test? ( media-libs/icc-profiles-basiccolor-printing2009 
+	test? ( media-libs/icc-profiles-basiccolor-printing2009
 		media-libs/icc-profiles-openicc )"
 
 src_prepare() {
