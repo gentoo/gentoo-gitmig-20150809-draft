@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.11.0.ebuild,v 1.1 2012/02/06 20:11:50 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.11.0.ebuild,v 1.2 2012/02/08 18:54:13 reavertm Exp $
 
 EAPI="4"
 
@@ -24,7 +24,6 @@ REQUIRED_USE="
 "
 COMMON_DEPEND="
 	>=app-crypt/qca-2.0.0-r2
-	>=net-libs/libgadu-1.11.1[threads]
 	x11-libs/libXfixes
 	x11-libs/libXScrnSaver
 	>=x11-libs/qt-dbus-4.7.0:4
@@ -33,7 +32,10 @@ COMMON_DEPEND="
 	>=x11-libs/qt-sql-4.7.0:4[sqlite]
 	>=x11-libs/qt-webkit-4.7.0:4
 	ayatana? ( dev-libs/libindicate-qt )
-	gadu? ( >=x11-libs/qt-xmlpatterns-4.7.0:4 )
+	gadu? (
+		>=net-libs/libgadu-1.11.1[threads]
+		>=x11-libs/qt-xmlpatterns-4.7.0:4
+	)
 	mpd? ( media-libs/libmpdclient )
 	phonon? (
 		|| (
