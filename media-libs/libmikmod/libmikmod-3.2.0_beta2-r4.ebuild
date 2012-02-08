@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0_beta2-r4.ebuild,v 1.1 2012/02/07 19:21:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0_beta2-r4.ebuild,v 1.2 2012/02/08 06:50:52 slyfox Exp $
 
 EAPI=2
 MY_P=${P/_/-}
@@ -31,6 +31,10 @@ src_prepare() {
 		"${FILESDIR}"/${P}-CVE-2009-3995-3996.patch \
 		"${FILESDIR}"/${P}-CVE-2010-2546-2971.patch \
 		"${FILESDIR}"/${P}-pa-workaround.patch
+
+	# forge automake regenerate that ancient Makefile.in
+	# by creating empty Makefile.am. Fixes bug #401329
+	touch libmikmod/Makefile.am
 
 	AT_M4DIR=${S} eautoreconf
 }
