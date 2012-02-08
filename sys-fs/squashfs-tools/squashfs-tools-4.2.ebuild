@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.2.ebuild,v 1.5 2012/02/08 18:25:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.2.ebuild,v 1.6 2012/02/08 18:44:18 jer Exp $
 
 EAPI="2"
 
@@ -14,10 +14,10 @@ SRC_URI="mirror://sourceforge/squashfs/squashfs${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
-IUSE="+gzip +xz lzo xattr"
+IUSE="+xz lzo xattr"
 
 RDEPEND="
-	gzip? ( sys-libs/zlib )
+	sys-libs/zlib
 	xz? ( app-arch/xz-utils )
 	lzo? ( dev-libs/lzo )
 	!xz? ( !lzo? ( sys-libs/zlib ) )
@@ -34,27 +34,7 @@ use_sed() {
 
 src_configure() {
 	tc-export CC
-	local def
-	if [[ -n ${SQUASH_FS_DEFAULT_COMP} ]]; then
-		def=${SQUASH_FS_DEFAULT_COMP}
-	else
-		einfo "You can set the default compression (gzip, xz or lzo) by exporting SQUASH_FS_DEFAULT_COMP"
-		if use gzip; then
-			def="gzip"
-		elif use xz; then
-			def="xz"
-		elif use lzo; then
-			def="lzo"
-		else
-			die "Please set at least one of the gzip, xz and lzo USE flags as compression algorithm."
-		fi
-	fi
-
-	einfo "Using ${def} as compression algorithm."
-
 	sed -i -r \
-		-e "/^COMP_DEFAULT =/s:=.*:= ${def}:" \
-		-e "$(use_sed gzip)" \
 		-e "$(use_sed xz XZ)" \
 		-e "$(use_sed lzo)" \
 		-e "$(use_sed xattr)" \
