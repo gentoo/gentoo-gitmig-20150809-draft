@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r3.ebuild,v 1.5 2012/02/06 15:23:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r3.ebuild,v 1.6 2012/02/08 01:27:41 jer Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="http://gdome2.cs.unibo.it/tarball/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RESTRICT="test"
