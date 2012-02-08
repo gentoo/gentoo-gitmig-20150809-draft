@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.0.0.ebuild,v 1.2 2011/03/27 16:07:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.1.0.ebuild,v 1.1 2012/02/08 21:17:26 tommy Exp $
 
 EAPI="2"
 
@@ -15,6 +15,7 @@ IUSE="bluetooth +connman +libnotify ofono static-libs test-binaries +udev"
 RDEPEND=">=dev-libs/eina-1.0.0_beta
 	>=dev-libs/ecore-1.0.0_beta
 	sys-apps/dbus
+	connman? ( >=net-misc/connman-0.75 )
 	libnotify? ( >=media-libs/evas-1.0.0_beta )
 	udev? ( sys-power/upower sys-fs/udisks )
 "
@@ -23,7 +24,7 @@ DEPEND="${RDEPEND}"
 src_configure() {
 	MY_ECONF="
 		$(use_enable bluetooth ebluez)
-		$(use_enable connman econnman)
+		$(use_enable connman econnman0_7x)
 		$(use_enable doc)
 		--disable-ehal
 		$(use_enable libnotify enotify)
@@ -34,7 +35,7 @@ src_configure() {
 	if use test-binaries ; then
 		MY_ECONF+="
 			 $(use_enable bluetooth edbus-bluez-test)
-			$(use_enable connman edbus-connman-test)
+			$(use_enable connman edbus-connman0_7x-test)
 			$(use_enable libnotify edbus-notification-daemon-test)
 			$(use_enable libnotify edbus-notify-test)
 			$(use_enable ofono edbus-ofono-test)
@@ -42,7 +43,7 @@ src_configure() {
 	else
 		MY_ECONF+="
 			 --disable-edbus-bluez-test
-			--disable-edbus-connman-test
+			--disable-edbus-connman0_7x-test
 			--disable-edbus-notification-daemon-test
 			--disable-edbus-notify-test
 			--disable-edbus-ofono-test
