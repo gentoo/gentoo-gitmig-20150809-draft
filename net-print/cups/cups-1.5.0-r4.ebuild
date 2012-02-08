@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r4.ebuild,v 1.3 2012/02/05 20:54:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r4.ebuild,v 1.4 2012/02/08 14:51:03 jer Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="acl dbus debug +filters gnutls java +jpeg kerberos ldap pam perl php +png python slp +ssl static-libs +threads +tiff usb X xinetd"
 
 LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
