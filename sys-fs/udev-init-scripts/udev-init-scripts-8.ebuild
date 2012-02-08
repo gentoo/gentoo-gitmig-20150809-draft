@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-8.ebuild,v 1.1 2012/02/03 19:14:55 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-8.ebuild,v 1.2 2012/02/08 16:59:30 mattst88 Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE=""
 
 if [ "${PV}" != "9999" ]; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 fi
 
 DEPEND=""

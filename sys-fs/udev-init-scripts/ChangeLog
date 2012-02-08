@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.1 2012/02/03 19:14:55 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.2 2012/02/08 16:59:30 mattst88 Exp $
+
+  08 Feb 2012; Matt Turner <mattst88@gentoo.org> udev-init-scripts-8.ebuild:
+  Added ~mips, bug 397769.
 
 *udev-init-scripts-9999 (02 Feb 2012)
 *udev-init-scripts-8 (02 Feb 2012)
