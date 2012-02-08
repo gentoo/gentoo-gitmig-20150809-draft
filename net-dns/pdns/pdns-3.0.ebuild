@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.4 2012/01/25 21:14:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.5 2012/02/08 21:51:21 swegener Exp $
 
 EAPI=2
 
@@ -23,6 +23,7 @@ RDEPEND="mysql? ( virtual/mysql )
 	opendbx? ( dev-db/opendbx )
 	!static? ( >=dev-libs/boost-1.34 )"
 DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.9.0
 	static? ( >=dev-libs/boost-1.34[static-libs] )
 	doc? ( app-doc/doxygen )"
 
