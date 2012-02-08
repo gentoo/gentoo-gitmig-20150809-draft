@@ -6,4 +6,7 @@
     <email>cedk@gentoo.org</email>
     <name>Cédric Krier</name>
   </maintainer>
+  <use>
+  <flag name="xft">Enable unofficial <pkg>x11-libs/libXft</pkg> support</flag>
+  </use>
 </pkgmetadata>
