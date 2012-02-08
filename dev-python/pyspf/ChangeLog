@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyspf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.14 2011/11/04 22:21:39 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.15 2012/02/08 06:00:48 patrick Exp $
+
+*pyspf-2.0.6 (08 Feb 2012)
+
+  08 Feb 2012; Patrick Lauer <patrick@gentoo.org> +pyspf-2.0.6.ebuild:
+  Bump for #401971
 
   04 Nov 2011; Markos Chandras <hwoarang@gentoo.org> pyspf-2.0.5.ebuild:
   Update LICENSE. Patch by Arfrever.
