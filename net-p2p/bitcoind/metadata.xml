@@ -10,6 +10,7 @@
 		<name>Luke Dashjr</name>
 	</maintainer>
 	<use>
+		<flag name='bip17'>Enable validation of new P2SH transactions</flag>
 		<flag name='eligius'>Enable using lower fees accepted by Eligius</flag>
 		<flag name='upnp'>Enable Universal Plug and Play</flag>
 	</use>
