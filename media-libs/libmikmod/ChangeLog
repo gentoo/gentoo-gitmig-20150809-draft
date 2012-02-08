@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.79 2012/02/08 06:50:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.80 2012/02/08 14:18:59 tomka Exp $
+
+  08 Feb 2012; Thomas Kahle <tomka@gentoo.org> libmikmod-3.2.0_beta2-r3.ebuild:
+  marked x86 per bug 335892
 
   08 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
   libmikmod-3.2.0_beta2-r4.ebuild:
