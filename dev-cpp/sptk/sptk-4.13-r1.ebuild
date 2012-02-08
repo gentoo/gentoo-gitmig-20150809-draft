@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-4.13-r1.ebuild,v 1.1 2012/02/07 16:35:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-4.13-r1.ebuild,v 1.2 2012/02/08 19:29:53 ago Exp $
 
 EAPI=4
 CMAKE_IN_SOURCE_BUILD=1
@@ -12,7 +12,7 @@ SRC_URI="http://www.sptk.net/${P}.tbz2"
 
 LICENSE="GPL-2 LGPL-2 LGPL-2.1"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="doc examples excel fltk mysql odbc pcre postgres sqlite ssl" # spell
 
 # spell? ( >=app-text/aspell-0.60 )
