@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.158 2012/01/30 14:47:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.159 2012/02/08 14:29:23 voyageur Exp $
+
+  08 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> package.use.mask:
+  Drop arch-speficic mask on gnustep-base/gnustep-make[libobjc2]
 
   30 Jan 2012; Tupone Alfredo <tupone@gentoo.org> no-multilib/package.mask:
   Adding games-puzzle/drod-bin. Binary package 32 bits only
