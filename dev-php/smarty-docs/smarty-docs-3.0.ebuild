@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/smarty-docs-3.0.ebuild,v 1.3 2012/02/03 16:53:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/smarty-docs-3.0.ebuild,v 1.4 2012/02/08 20:12:05 jer Exp $
 
 EAPI=4
 
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pdf html"
 DESCRIPTION="Documentation for Smarty, a template engine for PHP."
 HOMEPAGE="http://www.smarty.net/documentation"
