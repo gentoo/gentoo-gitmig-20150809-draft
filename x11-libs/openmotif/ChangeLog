@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.267 2012/02/08 00:43:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.268 2012/02/08 21:14:06 maekke Exp $
+
+  08 Feb 2012; Markus Meier <maekke@gentoo.org> openmotif-2.3.3-r1.ebuild:
+  add ~arm, bug #397819
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> openmotif-2.3.3-r1.ebuild:
   Stable for HPPA (bug #402039).
