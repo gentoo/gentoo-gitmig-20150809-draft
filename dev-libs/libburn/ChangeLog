@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.106 2012/02/08 14:59:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.107 2012/02/08 21:05:03 maekke Exp $
+
+  08 Feb 2012; Markus Meier <maekke@gentoo.org> libburn-1.1.8.ebuild:
+  arm stable, bug #400017
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> libburn-1.1.8.ebuild:
   Stable for HPPA (bug #400017).
