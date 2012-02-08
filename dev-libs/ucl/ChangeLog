@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.34 2012/02/06 15:33:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.35 2012/02/08 01:18:21 jer Exp $
+
+  08 Feb 2012; Jeroen Roovers <jer@gentoo.org> ucl-1.03-r1.ebuild:
+  Stable for HPPA (bug #396909).
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> ucl-1.03-r1.ebuild:
   Marking ucl-1.03-r1 ppc for bug 396909
