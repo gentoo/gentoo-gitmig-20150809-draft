@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/spice
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.19 2011/11/14 14:02:14 dev-zero Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.20 2012/02/08 15:57:30 dev-zero Exp $
+
+*spice-0.10.1 (08 Feb 2012)
+
+  08 Feb 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.10.1-disable-werror.patch, +spice-0.10.1.ebuild, metadata.xml:
+  Version bump. Added patch to disable -Werror (bug #390615, thanks to Alphat-
+  PC). Added flag to enable smartcard support based on app-emulation/libcacard.
 
   14 Nov 2011; Tiziano Müller <dev-zero@gentoo.org> spice-0.10.0.ebuild:
   Updated dep to require spice-protocol >=0.10.0 (unfortunately spice and spice-
