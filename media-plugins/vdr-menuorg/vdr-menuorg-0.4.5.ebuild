@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/vdr-menuorg-0.4.5.ebuild,v 1.1 2012/02/08 14:06:53 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/vdr-menuorg-0.4.5.ebuild,v 1.2 2012/02/08 14:09:48 idl0r Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit vdr-plugin
 
 DESCRIPTION="VDR plugin: make osd menu configurable via config-file"
 HOMEPAGE="http://www.e-tobi.net/blog/pages/vdr-menuorg/"
-SRC_URI="http://projects.vdr-developer.org/attachments/download/879/${P}.tar.gz"
+SRC_URI="mirror://vdr-developerorg/879/${P}.tar.gz"
 #SRC_URI="http://www.e-tobi.net/blog/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
