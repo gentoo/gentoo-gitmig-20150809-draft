@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.36 2012/02/05 02:34:02 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.37 2012/02/08 20:35:31 swift Exp $
+
+  08 Feb 2012; <swift@gentoo.org> unbound-1.4.16.ebuild:
+  Adding USE=selinux dependency on selinux-bind, bug #402601
 
 *unbound-1.4.16 (05 Feb 2012)
 
