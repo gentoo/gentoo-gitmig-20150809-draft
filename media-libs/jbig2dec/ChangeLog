@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbig2dec
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.8 2011/06/02 10:09:32 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.9 2012/02/08 21:15:47 maekke Exp $
+
+  08 Feb 2012; Markus Meier <maekke@gentoo.org> jbig2dec-0.11.ebuild:
+  add ~arm, bug #401853
 
   02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> jbig2dec-0.11.ebuild:
   Silence Repoman
