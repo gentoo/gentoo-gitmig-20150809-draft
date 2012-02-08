@@ -9,14 +9,8 @@
 		<flag name='mini'>Create a minimal binary suitable for early boot environments</flag>
 	</use>
 	<maintainer>
-		<email>ian@aerobiology.ca</email>
+		<email>axs@gentoo.org</email>
 		<name>Ian Stakenvicius</name>
-			<description>Maintainer of ebuilds, assign bugs</description>
-	</maintainer>
-	<maintainer>
-		<email>tommy@gentoo.org</email>
-		<name>Thomas Sachau</name>
-			<description>Proxy committer, CC bugs</description>
 	</maintainer>
 	<longdescription>This software discovers, activates, deactivates and displays properties of software RAID sets eg: ATARAID and contained DOS partitions.</longdescription>
 </pkgmetadata>
