@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.5 2008/05/15 13:14:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.6 2012/02/08 21:33:04 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 MY_P="mindrover_demo.run"
 DESCRIPTION="Control a robot as it races across Europa"
@@ -20,10 +20,6 @@ RDEPEND="virtual/opengl"
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-src_unpack() {
-	unpack_makeself "${DISTDIR}"/${MY_P} || die "unpacking game"
-}
 
 src_install() {
 	einfo "This will take a while ... go get a pizza or something"
