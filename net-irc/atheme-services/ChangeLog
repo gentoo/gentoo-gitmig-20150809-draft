@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.31 2012/02/04 09:58:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.32 2012/02/08 21:46:13 jdhore Exp $
+
+  08 Feb 2012; Jeff Horelick <jdhore@gentoo.org>
+  atheme-services-6.0.9-r1.ebuild:
+  x86 stable per bug 402011
 
   04 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   atheme-services-6.0.9-r1.ebuild:
