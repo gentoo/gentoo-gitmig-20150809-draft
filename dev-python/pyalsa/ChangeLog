@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyalsa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.21 2012/02/05 18:25:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.22 2012/02/08 14:56:58 chainsaw Exp $
+
+*pyalsa-1.0.25 (08 Feb 2012)
+
+  08 Feb 2012; Tony Vroon <chainsaw@gentoo.org> +pyalsa-1.0.25.ebuild:
+  Version bump. Fixes bad PyArg-ParseTuple format strings.
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> pyalsa-1.0.24.ebuild:
   sparc stable wrt #397005
