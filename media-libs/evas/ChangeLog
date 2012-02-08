@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/evas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.7 2011/05/29 16:06:53 tommy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.8 2012/02/08 20:32:16 tommy Exp $
+
+*evas-1.1.0 (08 Feb 2012)
+
+  08 Feb 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> -evas-1.0.0.ebuild,
+  -evas-1.0.0-r1.ebuild, +evas-1.1.0.ebuild:
+  Version bump, drop old versions
 
 *evas-1.0.1 (29 May 2011)
 

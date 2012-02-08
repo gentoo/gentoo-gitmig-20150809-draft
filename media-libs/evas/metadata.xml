@@ -4,8 +4,13 @@
 <herd>enlightenment</herd>
 <use>
  <flag name='cache'>Enable experimental caching to speed up rendering</flag>
+ <flag name='bmp'>Support windows bitmap (bmp) image loader</flag>
  <flag name='eet'>Support dev-libs/eet</flag>
- <flag name='gles'>Enable gles falvor of gl instead of standard</flag>
+ <flag name='ico'>Support windows icon (ico) image loader</flag>
+ <flag name='gles'>Enable gles flavor of gl instead of standard</flag>
+ <flag name='ppm'>Support PPM image loader</flag>
+ <flag name='psd'>Support PSD image loader</flag>
+ <flag name='tga'>Support tga image loader</flag>
 </use>
 <longdescription>
 Evas is a hardware-accelerated canvas API for X-Windows that can draw 
