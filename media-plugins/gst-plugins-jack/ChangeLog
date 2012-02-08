@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-jack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.7 2012/02/07 23:33:07 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.8 2012/02/08 00:30:03 miknix Exp $
+
+  08 Feb 2012; Angelo Arrifano <miknix@gentoo.org>
+  -gst-plugins-jack-0.10.19.ebuild:
+  Remove old version depending on non-existing =gst-plugins-base-0.10.29
 
   07 Feb 2012; Angelo Arrifano <miknix@gentoo.org> metadata.xml:
   Make maintainership more clear to me and bug wranglers..
