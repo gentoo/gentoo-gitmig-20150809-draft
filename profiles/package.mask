@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13466 2012/02/08 04:24:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13467 2012/02/08 15:04:00 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -780,10 +780,6 @@ sci-chemistry/webmo
 # Diego E. Pettenò <flameeyes@gentoo.org> (8 Jun 2011)
 # Broken upstream
 =net-libs/libtirpc-0.2.2
-
-# Bernard Cafarelli <voyageur@gentoo.org> (6 Jun 2011)
-# Support for libobjc2, for adventurous people only for now
-=gnustep-base/gnustep-make-2.6.1-r10
 
 # Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
 # Mask release candidates
