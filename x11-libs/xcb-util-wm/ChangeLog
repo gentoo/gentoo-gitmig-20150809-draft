@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xcb-util-wm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-wm/ChangeLog,v 1.8 2011/08/20 15:49:28 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-wm/ChangeLog,v 1.9 2012/02/08 23:44:14 chithanh Exp $
+
+  08 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xcb-util-wm-0.3.8.ebuild:
+  Add dependency on xcb-proto as xcb-ewmh.pc requires it.
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> xcb-util-wm-0.3.8.ebuild:
   Stable for HPPA (bug #371857).
