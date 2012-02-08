@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.10 2011/12/14 17:13:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.11 2012/02/08 21:27:52 vapier Exp $
 
-inherit eutils multilib games
+inherit eutils unpacker multilib games
 
 DESCRIPTION="Third-person classic magical action-adventure game"
 HOMEPAGE="http://www.lokigames.com/products/heretic2/
@@ -30,11 +30,6 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-src_unpack() {
-	# Can ignore warning: "A lone zero block at 116240"
-	unpack_makeself
-}
 
 src_install() {
 	local demo="data/demos/heretic2_demo"
