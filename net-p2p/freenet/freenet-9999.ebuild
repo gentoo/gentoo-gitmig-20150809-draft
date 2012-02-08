@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.23 2011/09/17 18:42:44 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.24 2012/02/08 18:42:24 tommy Exp $
 
 EAPI="2"
 DATE=20110917
@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="freemail test"
 
-CDEPEND="freemail? ( dev-java/bcprov )
+CDEPEND="freemail? ( >=dev-java/bcprov-1.45 )
 	dev-java/commons-compress
 	dev-db/db-je:3.3
 	dev-java/fec
