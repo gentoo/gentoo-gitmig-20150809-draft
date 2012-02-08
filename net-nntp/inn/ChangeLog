@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.40 2011/08/06 03:51:55 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.41 2012/02/08 06:41:07 slyfox Exp $
+
+  08 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> files/innd:
+  Converted /etc/init.d/innd to use --user instead of --chuid.
 
   06 Aug 2011; Jeroen Roovers <jer@gentoo.org> inn-2.5.2-r1.ebuild:
   Replace piped sed calls with single combined sed scripts.
