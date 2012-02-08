@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.16 2011/12/14 17:24:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.17 2012/02/08 23:18:01 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 MY_P="quake4-linux-${PV}-demo"
 DESCRIPTION="Sequel to Quake 2, an Id 3D first-person shooter"
@@ -47,10 +47,6 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-src_unpack() {
-	unpack_makeself
-}
 
 src_install() {
 	insinto "${dir}"
