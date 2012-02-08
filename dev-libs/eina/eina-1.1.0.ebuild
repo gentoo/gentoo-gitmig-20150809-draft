@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.0.0.ebuild,v 1.1 2011/01/30 14:10:16 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.1.0.ebuild,v 1.1 2012/02/08 19:53:55 tommy Exp $
 
 EAPI="2"
 
@@ -23,6 +23,12 @@ DEPEND="${RDEPEND}
 		dev-libs/glib
 		dev-util/lcov
 	)"
+
+src_prepare() {
+	cp "${FILESDIR}"/city.h src/tests/ || die
+
+	enlightenment_src_prepare
+}
 
 src_configure() {
 	local MODULE_ARGUMENT="static"
