@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.3.2.ebuild,v 1.2 2012/02/06 05:49:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.3.2.ebuild,v 1.3 2012/02/08 05:49:19 xmw Exp $
 
 EAPI=4
 
@@ -23,27 +23,31 @@ RDEPEND="app-admin/elektra
 	media-libs/libpng:0
 	media-libs/libraw
 	media-libs/libXcm
-	X? (
-		x11-libs/fltk:1
+	X? ( x11-libs/fltk:1
 		x11-libs/libXfixes
 		x11-libs/libXrandr
 		x11-libs/libXxf86vm
-		xinerama? ( x11-libs/libXinerama )
-		)"
+		xinerama? ( x11-libs/libXinerama ) )"
 DEPEND="${RDEPEND}
-	app-doc/doxygen"
+	app-doc/doxygen
+	test? ( media-libs/icc-profiles-basiccolor-printing2009 
+		media-libs/icc-profiles-openicc )"
 
 src_prepare() {
 	einfo remove bundled elektra yajl
 	rm -rf elektra* yajl || die
 	#keep bundled libXNVCtrl
 
-	epatch "${FILESDIR}"/${P}-buildsystem.patch
+	epatch "${FILESDIR}"/${P}-buildsystem.patch \
+		"${FILESDIR}"/${P}-test.patch
 
 	if ! use X ; then
 		sed -e '/FLTK_GUI =/s:=.*:=:' \
 			-i makefile.in || die
 	fi
+
+	sed -e '/#include/s:alpha/oyranos_alpha.h:oyranos_alpha.h:' \
+		-i examples/libraw/oyranos_file.cpp || die
 }
 
 src_configure() {
