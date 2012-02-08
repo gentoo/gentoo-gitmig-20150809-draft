@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.9 2012/01/31 12:55:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.10 2012/02/08 21:30:15 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 DESCRIPTION="Deadly Rooms Of Death: face room upon room of deadly things, armed with only a sword and your wits"
 HOMEPAGE="http://www.drod.net/"
