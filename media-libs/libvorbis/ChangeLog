@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.142 2012/02/07 15:20:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.143 2012/02/08 21:33:27 maekke Exp $
+
+  08 Feb 2012; Markus Meier <maekke@gentoo.org> libvorbis-1.3.2.ebuild:
+  arm stable, bug #400387
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> libvorbis-1.3.2.ebuild:
   Stable for HPPA (bug #400387).
