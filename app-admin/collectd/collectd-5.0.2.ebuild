@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.2.ebuild,v 1.1 2012/02/07 20:12:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.2.ebuild,v 1.2 2012/02/08 05:22:11 mr_bones_ Exp $
 
 EAPI=4
 
@@ -348,7 +348,7 @@ pkg_postinst() {
 		elog "The scripts in /usr/share/doc/${PF}/collection3 for generating graphs need dev-perl/HTML-Parser,"
 		elog "dev-perl/config-general, dev-perl/regexp-common, and net-analyzer/rrdtool[perl] to be installed."
 	fi
-	
+
 	if [[ ${REPLACING_VERSIONS} < 5 ]]; then
 		ewarn "Version 5 of collectd uses a database format different from version 4. You will"
 		ewarn "have to migrate your database after the upgrade, following the guide at"
