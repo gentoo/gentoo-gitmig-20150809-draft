@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.0.0.ebuild,v 1.1 2011/01/30 14:43:21 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.1.0.ebuild,v 1.1 2012/02/08 20:47:55 tommy Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction lay
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="ares curl directfb +evas fbcon glib gnutls +inotify opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
+IUSE="ares curl directfb +evas fbcon glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
 
 RDEPEND=">=dev-libs/eina-1.0.0_beta
 	ares? ( net-dns/c-ares )
@@ -41,6 +41,9 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 	)
 	!X? ( xcb? ( x11-libs/xcb-util ) )"
 DEPEND="${RDEPEND}"
+
+#tests depend on temp data from eina WORKDIR
+RESTRICT=test
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""
@@ -81,13 +84,11 @@ src_configure() {
 			ewarn "Compiling without opengl support."
 			EVAS_FLAGS+="
 				--disable-ecore-evas-software-x11
-				--disable-ecore-evas-xrender-x11
 				--disable-ecore-evas-software-16-x11
 			"
 		else
 			EVAS_FLAGS+="
 				--enable-ecore-evas-software-x11
-				--enable-ecore-evas-xrender-x11
 				--enable-ecore-evas-software-16-x11
 			"
 		fi
@@ -95,7 +96,6 @@ src_configure() {
 			$(use_enable directfb ecore-evas-directfb)
 			$(use_enable fbcon ecore-evas-fb)
 			$(use_enable sdl ecore-evas-software-sdl)
-			$(use_enable xcb ecore-evas-xrender-xcb)
 			$(use_enable opengl ecore-evas-opengl-x11)
 		"
 	else
@@ -104,9 +104,7 @@ src_configure() {
 			--disable-ecore-evas-fb
 			--disable-ecore-evas-software-sdl
 			--disable-ecore-evas-software-x11
-			--disable-ecore-evas-xrender-x11
 			--disable-ecore-evas-software-16-x11
-			--disable-ecore-evas-xrender-xcb
 			--disable-ecore-evas-opengl-x11
 		"
 		if use opengl; then
@@ -181,6 +179,7 @@ src_configure() {
 	$(use_enable fbcon ecore-fb)
 	$(use_enable glib)
 	$(use_enable inotify)
+	$(use_enable ipv6)
 	$(use_enable sdl ecore-sdl)
 	$(use_enable test tests)
 	$(use_enable threads posix-threads)
