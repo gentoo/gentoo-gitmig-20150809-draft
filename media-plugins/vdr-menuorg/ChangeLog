@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-menuorg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/ChangeLog,v 1.9 2009/12/23 20:56:20 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/ChangeLog,v 1.10 2012/02/08 14:06:53 idl0r Exp $
+
+*vdr-menuorg-0.4.5 (08 Feb 2012)
+
+  08 Feb 2012; Christian Ruppert <idl0r@gentoo.org> +vdr-menuorg-0.4.5.ebuild:
+  Version bump
 
   23 Dec 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-menuorg-0.4.4.ebuild:
