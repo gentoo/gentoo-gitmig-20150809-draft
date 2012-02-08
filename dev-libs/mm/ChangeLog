@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.38 2012/02/08 01:17:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.39 2012/02/08 21:53:32 maekke Exp $
+
+  08 Feb 2012; Markus Meier <maekke@gentoo.org> mm-1.4.2-r1.ebuild:
+  arm stable, bug #396905
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> mm-1.4.2-r1.ebuild:
   Stable for HPPA (bug #396905).
