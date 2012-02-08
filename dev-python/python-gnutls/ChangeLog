@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-gnutls
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/ChangeLog,v 1.6 2010/09/29 16:02:05 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/ChangeLog,v 1.7 2012/02/08 06:11:37 patrick Exp $
+
+*python-gnutls-1.2.2 (08 Feb 2012)
+
+  08 Feb 2012; Patrick Lauer <patrick@gentoo.org> +python-gnutls-1.2.2.ebuild:
+  Bump for #401969
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> python-gnutls-1.2.0.ebuild:
   Marking python-gnutls-1.2.0 ~ppc for bug 317391
