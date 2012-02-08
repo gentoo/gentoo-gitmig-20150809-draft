@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.201 2011/03/22 09:59:02 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.202 2012/02/08 15:03:17 chainsaw Exp $
+
+*alsa-tools-1.0.25 (08 Feb 2012)
+
+  08 Feb 2012; Tony Vroon <chainsaw@gentoo.org> +alsa-tools-1.0.25.ebuild:
+  Version bump. Contains major hdspmixer fixes, among which a buffer overflow
+  and a failure to detect some RME hardware. Closes bug #317919 & #358765, both
+  by Chris Smith.
 
   22 Mar 2011; Justin Lecher <jlec@gentoo.org> alsa-tools-1.0.20-r1.ebuild,
   alsa-tools-1.0.20-r2.ebuild, alsa-tools-1.0.21.ebuild,
