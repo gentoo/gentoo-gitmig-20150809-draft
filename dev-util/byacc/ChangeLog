@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.32 2012/02/07 06:48:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.33 2012/02/08 00:41:23 jer Exp $
+
+  08 Feb 2012; Jeroen Roovers <jer@gentoo.org> byacc-1.9-r3.ebuild:
+  Stable for HPPA (bug #402039).
 
 *byacc-20120115 (07 Feb 2012)
 
