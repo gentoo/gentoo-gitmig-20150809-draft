@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13465 2012/02/06 18:37:01 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13466 2012/02/08 04:24:31 williamh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -391,6 +391,7 @@ net-mail/vmailmgr-tools
 # http://www.freedesktop.org/wiki/Software/systemd/separate-usr-is-broken
 ~sys-fs/udev-175
 ~sys-fs/udev-180
+~sys-fs/udev-181
 <sys-apps/kmod-9999
 >=sys-apps/systemd-30
 
