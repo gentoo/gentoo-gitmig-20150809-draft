@@ -1,0 +1,18 @@
+--- elektra-0.7.1/Makefile.am
++++ elektra-0.7.1/Makefile.am
+@@ -1,6 +1,6 @@
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-SUBDIRS = libltdl src doc benchmarks examples scripts xmlschema tests
++SUBDIRS =  src doc benchmarks examples scripts xmlschema tests
+ EXTRA_DIST=elektra.pc elektratools.pc elektracpp.pc elektra.spec elektra.mandriva.spec elektra.xml
+ 
+ pkgconfigdir = $(ulibdir)/pkgconfig
+--- elektra-0.7.1/doc/Makefile.am
++++ elektra-0.7.1/doc/Makefile.am
+@@ -1,4 +1,5 @@
+ # $Id: elektra-0.7.1-ltdl.patch,v 1.1 2012/02/08 04:43:23 xmw Exp $
++develdocDATA_INSTALL = install
+ 
+ EXTRA_DIST=kdb.1.xml elektra.7.xml elektra.5.xml
+ EXTRA_DIST+=author.xml bestpract.xml rgexample.xml rgcmd.xml storage.xml overview.xml apiexample.xml api.xml compared.xml garbage.xml html-params.xsl html-titlepage-layout.tpl society.xml storage.xml UPLOAD

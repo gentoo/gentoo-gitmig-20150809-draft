@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1.ebuild,v 1.1 2012/02/05 17:23:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1.ebuild,v 1.2 2012/02/08 04:43:23 xmw Exp $
 
 EAPI=4
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="universal and secure framework to store config parameters in a hierarchical key-value pair mechanism"
 HOMEPAGE="http://sourceforge.net/projects/elektra/"
@@ -13,18 +13,19 @@ SRC_URI="ftp://ftp.markus-raab.org/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="iconv static-libs"
+IUSE="iconv static-libs test"
 
 RDEPEND="dev-libs/libxml2"
 DEPEND="${RDEPEND}
 	sys-devel/libtool
-	iconv? ( virtual/libiconv )"
+	iconv? ( virtual/libiconv )
+	test? ( dev-libs/libxml2[static-libs] )"
 
 src_prepare() {
 	einfo 'Removing bundled libltdl'
 	rm -rf libltdl || die
-	sed -i -e '/^SUBDIRS/s:libltdl::' Makefile.am || die
-	sed -i -e '1adeveldocDATA_INSTALL = install' doc/Makefile.am || die
+
+	epatch "${FILESDIR}"/${P}-{ltdl,test}.patch
 
 	touch config.rpath
 	eautoreconf
