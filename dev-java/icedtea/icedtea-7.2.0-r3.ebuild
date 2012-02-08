@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r3.ebuild,v 1.3 2012/02/06 10:01:44 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r3.ebuild,v 1.4 2012/02/08 13:09:17 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -330,6 +330,11 @@ src_install() {
 	dosym /usr/share/doc/${PF} /usr/share/doc/${PN}${SLOT}
 
 	cd openjdk.build/j2sdk-image || die
+
+	#402507
+	mkdir jre/.systemPrefs || die
+	touch jre/.systemPrefs/.system.lock || die
+	touch jre/.systemPrefs/.systemRootModFile || die
 
 	# Don't hide classes
 	rm lib/ct.sym || die
