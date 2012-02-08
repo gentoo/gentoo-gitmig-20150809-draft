@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.0.ebuild,v 1.4 2012/02/07 15:19:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.0.ebuild,v 1.5 2012/02/08 21:21:16 maekke Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.xiph.org/releases/ogg/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="static-libs"
 
 DOCS=( AUTHORS CHANGES )
