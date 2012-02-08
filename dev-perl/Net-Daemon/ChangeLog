@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.70 2012/02/08 19:37:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.71 2012/02/08 21:38:15 maekke Exp $
+
+  08 Feb 2012; Markus Meier <maekke@gentoo.org> Net-Daemon-0.480.0.ebuild:
+  arm stable, bug #396935
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> Net-Daemon-0.480.0.ebuild:
   Stable for HPPA (bug #396935).
