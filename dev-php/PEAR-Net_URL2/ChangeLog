@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_URL2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL2/ChangeLog,v 1.8 2012/02/07 16:46:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL2/ChangeLog,v 1.9 2012/02/08 21:26:43 maekke Exp $
+
+  08 Feb 2012; Markus Meier <maekke@gentoo.org> PEAR-Net_URL2-2.0.0.ebuild:
+  add ~arm, bug #396973
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Net_URL2-2.0.0.ebuild:
   Marked ~hppa (bug #396973).
