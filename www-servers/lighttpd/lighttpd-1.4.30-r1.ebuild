@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.30-r1.ebuild,v 1.3 2012/01/17 22:32:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.30-r1.ebuild,v 1.4 2012/02/08 20:32:00 swift Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.lighttpd.net/lighttpd/releases-1.4.x/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="bzip2 doc fam gdbm ipv6 kerberos ldap libev lua minimal memcache mysql pcre php rrdtool ssl test uploadprogress webdav xattr zlib"
+IUSE="bzip2 doc fam gdbm ipv6 kerberos ldap libev lua minimal memcache mysql pcre php rrdtool selinux ssl test uploadprogress webdav xattr zlib"
 
 REQUIRED_USE="kerberos? ( ssl )"
 
@@ -29,6 +29,7 @@ RDEPEND="
 	pcre?     ( >=dev-libs/libpcre-3.1 )
 	php?      ( dev-lang/php[cgi] )
 	rrdtool?  ( net-analyzer/rrdtool )
+	selinux? ( sec-policy/selinux-apache )
 	ssl?    ( >=dev-libs/openssl-0.9.7[kerberos?] )
 	webdav? (
 		dev-libs/libxml2
