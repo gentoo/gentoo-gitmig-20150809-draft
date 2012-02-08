@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.14.ebuild,v 1.5 2012/02/01 10:53:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.14.ebuild,v 1.6 2012/02/08 20:06:38 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/adodb/${PN}${MY_PV}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
