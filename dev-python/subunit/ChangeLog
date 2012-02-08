@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/subunit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.12 2011/04/16 16:05:16 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.13 2012/02/08 06:57:46 patrick Exp $
+
+*subunit-0.0.7 (08 Feb 2012)
+
+  08 Feb 2012; Patrick Lauer <patrick@gentoo.org> +subunit-0.0.7.ebuild:
+  Bump for #401959
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> subunit-0.0.6.ebuild:
   ia64 stable wrt #343309
