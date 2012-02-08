@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12.ebuild,v 1.2 2012/01/18 17:07:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12.ebuild,v 1.3 2012/02/08 18:41:32 mr_bones_ Exp $
 
 EAPI=4
 
@@ -40,7 +40,7 @@ src_configure() {
 		$(use_enable fluidsynth music-fluidsynth-midi) \
 		$(use_enable vorbis music-ogg) \
 		$(use_enable mikmod music-mod) \
-		$(use_enable modplug music-modplug) \
+		$(use_enable modplug music-mod-modplug) \
 		$(use_enable flac music-flac) \
 		$(use_enable static-libs static) \
 		$(use mad && echo --disable-music-mp3 || use_enable mp3 music-mp3) \
