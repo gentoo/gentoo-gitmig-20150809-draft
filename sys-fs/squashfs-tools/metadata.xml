@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>livecd</herd>
+<use>
+<flag name="xz">Enable support for XZ compression using <pkg>app-arch/xz-utils</pkg></flag>
+</use>
 </pkgmetadata>
