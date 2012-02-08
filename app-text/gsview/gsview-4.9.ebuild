@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.9.ebuild,v 1.6 2012/02/06 19:49:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.9.ebuild,v 1.7 2012/02/08 14:47:30 jer Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/ghostgum/gsv${MY_PV}src.zip"
 IUSE="doc"
 SLOT="0"
 LICENSE="Aladdin"
-KEYWORDS="amd64 ~hppa ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 hppa ppc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="x11-libs/gtk+:1
 	app-text/epstool
