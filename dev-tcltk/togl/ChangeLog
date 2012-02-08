@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/togl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.24 2012/02/07 15:27:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.25 2012/02/08 21:30:56 maekke Exp $
+
+  08 Feb 2012; Markus Meier <maekke@gentoo.org> togl-2.0-r2.ebuild:
+  arm stable, bug #400345
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> togl-2.0-r2.ebuild:
   Stable for HPPA (bug #400345).
