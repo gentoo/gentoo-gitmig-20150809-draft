@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.13 2011/12/14 17:25:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.14 2012/02/08 21:23:43 vapier Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils unpacker games
 
 DESCRIPTION="Return to Castle Wolfenstein - Long awaited sequel to Wolfenstein 3D"
 HOMEPAGE="http://games.activision.com/games/wolfenstein/"
@@ -39,11 +39,6 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-src_unpack() {
-	unpack_makeself wolf-linux-GOTY-maps.x86.run
-	unpack_makeself wolf-linux-${PV}.x86.run
-}
 
 src_install() {
 	insinto "${dir}"

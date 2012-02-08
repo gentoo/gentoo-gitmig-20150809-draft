@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.8 2011/12/14 17:26:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.9 2012/02/08 21:24:53 vapier Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 MY_PN=${PN/soldieroffortune/sof}
 
@@ -36,10 +36,6 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-src_unpack() {
-	unpack_makeself
-}
 
 src_install() {
 	local demo="data/demos/sof_demo"

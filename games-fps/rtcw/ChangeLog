@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/rtcw
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.37 2011/12/14 17:25:45 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.38 2012/02/08 21:23:43 vapier Exp $
+
+  08 Feb 2012; Mike Frysinger <vapier@gentoo.org> rtcw-1.41b.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
 
   14 Dec 2011; Mike Frysinger <vapier@gentoo.org> rtcw-1.41b.ebuild:
   The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now

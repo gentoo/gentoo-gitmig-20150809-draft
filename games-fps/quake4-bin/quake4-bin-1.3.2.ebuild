@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.10 2011/12/14 17:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.11 2012/02/08 21:20:12 vapier Exp $
 
-inherit eutils versionator games
+inherit eutils unpacker versionator games
 
 MY_PV=$(replace_version_separator 2 '-')
 
@@ -58,10 +58,6 @@ QA_EXECSTACK="${dir}/quake4.x86
 	${dir}/libgcc_s.so.1
 	${dir}/quake4smp.x86
 	${dir}/libstdc++.so.6"
-
-src_unpack() {
-	unpack_makeself ${A}
-}
 
 src_install() {
 	insinto "${dir}"
