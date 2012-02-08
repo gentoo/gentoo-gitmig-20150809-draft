@@ -1,5 +1,12 @@
 
 
+*bitcoin-qt-0.5.2-r1 (08 Feb 2012)
+*bitcoin-qt-0.5.0.3-r1 (08 Feb 2012)
+
+  08 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.0.3-r1.ebuild, +bitcoin-qt-0.5.2-r1.ebuild, metadata.xml:
+  Add USE=bip17 to validate new P2SH transactions
+
 *bitcoin-qt-0.5.2 (11 Jan 2012)
 *bitcoin-qt-0.5.0.3 (11 Jan 2012)
 
