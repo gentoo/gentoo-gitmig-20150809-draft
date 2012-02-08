@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Diff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.22 2012/02/06 19:33:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.23 2012/02/08 19:46:28 jer Exp $
+
+  08 Feb 2012; Jeroen Roovers <jer@gentoo.org> Text-Diff-1.410.0.ebuild:
+  Marked ~hppa (bug #399649).
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> Text-Diff-1.410.0.ebuild:
   Marking Text-Diff-1.410.0 ppc for bug 396955
