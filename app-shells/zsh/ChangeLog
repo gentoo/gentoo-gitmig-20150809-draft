@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.179 2012/02/07 20:36:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.180 2012/02/08 08:49:26 chainsaw Exp $
+
+  08 Feb 2012; Tony Vroon <chainsaw@gentoo.org> zsh-4.3.15.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Aaron "B-Man" Bauman in bug #401931.
 
   07 Feb 2012; Tim Harder <radhermit@gentoo.org> -zsh-4.3.10-r2.ebuild,
   -zsh-4.3.11.ebuild, -zsh-4.3.13.ebuild, -zsh-4.3.14.ebuild,
