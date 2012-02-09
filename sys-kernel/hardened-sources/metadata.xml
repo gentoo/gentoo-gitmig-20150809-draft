@@ -13,5 +13,6 @@
 	</longdescription>
 	<use>
 		<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
-  	</use>
+		<flag name='xtpax'>Enable XATTR_PAX_FLAGS support (EXPERIMENTAL).</flag>
+	</use>
 </pkgmetadata>
