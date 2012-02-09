@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1.ebuild,v 1.3 2012/02/09 23:55:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1.ebuild,v 1.4 2012/02/09 23:59:30 xmw Exp $
 
 EAPI=4
 
@@ -25,10 +25,8 @@ src_prepare() {
 	einfo 'Removing bundled libltdl'
 	rm -rf libltdl || die
 
-	epatch "${FILESDIR}"/${P}-test.patch
-	return 
-	
-	#	"${FILESDIR}"/${P}-test.patch
+	epatch "${FILESDIR}"/${P}-test.patch \
+		"${FILESDIR}"/${P}-ltdl.patch
 
 	touch config.rpath
 	eautoreconf
