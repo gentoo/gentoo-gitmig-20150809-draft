@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_rc7.ebuild,v 1.2 2012/02/06 13:41:27 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_rc7.ebuild,v 1.3 2012/02/09 16:59:39 olemarkus Exp $
 
 EAPI=4
 
@@ -118,7 +118,7 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 DEPEND="!dev-lang/php:5
 	>=app-admin/eselect-php-0.6.2
 	>=dev-libs/libpcre-8.12[unicode]
-	<dev-libs/libpcre-8.30[unicode]
+	<dev-libs/libpcre-8.30
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
 	bzip2? ( app-arch/bzip2 )
