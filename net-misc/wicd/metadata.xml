@@ -10,6 +10,7 @@
 	<name>Dane Smith</name>
 </maintainer>
 <use>
+	<flag name='ambiance'>Install icons from Ubuntu's ambiance theme</flag>
 	<flag name='gtk'>Installs a gtk UI. This is enabled by default because it is
 		intended behavior. Requires <pkg>dev-python/pygtk</pkg></flag>
 	<flag name='ioctl'>Installs additional python libraries to use as a backend.
