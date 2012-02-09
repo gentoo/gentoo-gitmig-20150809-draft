@@ -1,10 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.1.ebuild,v 1.5 2011/12/31 18:47:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.4.ebuild,v 1.1 2012/02/09 09:30:45 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
-GNOME_TARBALL_SUFFIX="xz"
 GNOME2_LA_PUNT="yes"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.6 3:3.1"
@@ -54,6 +53,8 @@ pkg_setup() {
 		--with-ffi
 		$(use_enable cairo)
 		$(use_enable threads thread)"
+
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -66,8 +67,13 @@ src_prepare() {
 	# Disable tests that fail
 	#epatch "${FILESDIR}/${PN}-2.28.3-disable-failing-tests.patch"
 
-	# disable pyc compiling
-	echo '#!/bin/sh' > py-compile
+	# FIXME: disable tests that require >=gobject-introspection-1.31
+	epatch "${FILESDIR}/${PN}-3.0.3-disable-new-gi-tests.patch"
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=666852
+	epatch "${FILESDIR}/${PN}-3.0.3-tests-python3.patch"
+
+	python_clean_py-compile_files
 
 	eautoreconf
 	gnome2_src_prepare
@@ -80,18 +86,21 @@ src_configure() {
 }
 
 src_compile() {
-	python_execute_function -d -s
+	python_src_compile
 }
 
 # FIXME: With python multiple ABI support, tests return 1 even when they pass
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
+	export GIO_USE_VFS="local" # prevents odd issues with deleting ${T}/.gvfs
 
 	testing() {
-		XDG_CACHE_HOME="${T}/$(PYTHON --ABI)"
+		export XDG_CACHE_HOME="${T}/$(PYTHON --ABI)"
 		Xemake check PYTHON=$(PYTHON -a)
+		unset XDG_CACHE_HOME
 	}
 	python_execute_function -s testing
+	unset GIO_USE_VFS
 }
 
 src_install() {
@@ -99,8 +108,8 @@ src_install() {
 	python_clean_installation_image
 
 	if use examples; then
-		insinto /usr/share/doc/${P}
-		doins -r examples || die "doins failed"
+		insinto /usr/share/doc/${PF}
+		doins -r examples
 	fi
 }
 
