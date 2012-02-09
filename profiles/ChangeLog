@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6188 2012/02/08 15:04:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6189 2012/02/09 08:53:52 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+  
+  09 Feb 2012; Robin H Johnson <robbat2@gentoo.org> package.mask:
+  Mask sys-libs/db-5.3 for testing.
 
   08 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   gnustep-make-2.6.1-r10 removed from tree, unmask libobjc2 USE flag for
