@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.2.1.ebuild,v 1.5 2012/02/09 12:31:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.2.1.ebuild,v 1.6 2012/02/09 12:32:40 ago Exp $
 
 inherit java-pkg-opt-2 flag-o-matic autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.seasip.demon.co.uk/Unix/LibDsk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="java"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 CDEPEND="sys-libs/zlib
 		app-arch/bzip2"
