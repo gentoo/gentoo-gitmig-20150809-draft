@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Template_Sigma
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_Sigma/ChangeLog,v 1.55 2012/02/07 16:43:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_Sigma/ChangeLog,v 1.56 2012/02/09 10:59:34 mabi Exp $
+
+  09 Feb 2012; Matti Bickel <mabi@gentoo.org>
+  -PEAR-HTML_Template_Sigma-1.1.6.ebuild:
+  remove old
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org>
   PEAR-HTML_Template_Sigma-1.2.0-r1.ebuild:
