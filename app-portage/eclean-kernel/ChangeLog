@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eclean-kernel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.10 2011/12/07 17:03:31 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.11 2012/02/09 23:27:58 mattst88 Exp $
+
+  09 Feb 2012; Matt Turner <mattst88@gentoo.org> eclean-kernel-0.2.1.ebuild:
+  Added ~mips, bug 393179.
 
   07 Dec 2011; Naohiro Aota <naota@gentoo.org> eclean-kernel-0.2.1.ebuild:
   Add ~x86-fbsd #393179
