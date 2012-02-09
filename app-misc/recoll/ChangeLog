@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/recoll
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.3 2011/12/10 10:21:51 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.4 2012/02/09 18:59:28 hwoarang Exp $
+
+*recoll-1.16.2 (09 Feb 2012)
+
+  09 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +recoll-1.16.2.ebuild:
+  version bump. bug #402799
 
 *recoll-1.16.1 (10 Dec 2011)
 
