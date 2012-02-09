@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obex-data-server
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.31 2011/03/27 12:15:04 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.32 2012/02/09 09:44:37 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Herd is primary maintainer.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   obex-data-server-0.4.4.ebuild:
