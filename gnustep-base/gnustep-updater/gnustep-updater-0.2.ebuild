@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-updater/gnustep-updater-0.2.ebuild,v 1.1 2012/02/09 21:25:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-updater/gnustep-updater-0.2.ebuild,v 1.2 2012/02/09 21:36:18 voyageur Exp $
 
 EAPI=4
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="app-shells/bash"
 RDEPEND="${DEPEND}
+	app-misc/pax-utils
 	>=gnustep-base/gnustep-make-2.6.0"
 
 src_install() {
