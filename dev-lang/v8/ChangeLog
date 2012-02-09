@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.131 2012/02/03 22:59:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.132 2012/02/09 13:22:06 ago Exp $
+
+  09 Feb 2012; Agostino Sarubbo <ago@gentoo.org> v8-3.7.12.20.ebuild:
+  Stable for X86/AMD64, wrt security bug #402841
 
   03 Feb 2012; Mike Gilbert <floppym@gentoo.org> -files/v8-no-O3-r0.patch,
   -files/v8-no-werror-r0.patch:
