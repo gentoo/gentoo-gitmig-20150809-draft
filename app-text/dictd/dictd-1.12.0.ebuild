@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.12.0.ebuild,v 1.1 2011/06/28 10:22:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.12.0.ebuild,v 1.2 2012/02/09 00:06:47 vapier Exp $
 
 EAPI="4"
 
 inherit eutils
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
-HOMEPAGE="http://www.dict.org/"
+HOMEPAGE="http://www.dict.org/ http://sourceforge.net/projects/dict/"
 SRC_URI="mirror://sourceforge/dict/${P}.tar.gz"
 
 SLOT="0"
@@ -32,7 +32,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/dictd-1.10.11-colorit-nopp-fix.patch"
+	epatch "${FILESDIR}"/dictd-1.10.11-colorit-nopp-fix.patch
+	epatch "${FILESDIR}"/dictd-1.12.0-build.patch
 
 	[[ ${CHOST} == *-darwin* ]] && \
 		sed -i -e 's:libtool:glibtool:g' Makefile.in

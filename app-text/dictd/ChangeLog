@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dictd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.88 2011/06/28 10:22:14 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.89 2012/02/09 00:06:47 vapier Exp $
+
+  09 Feb 2012; Mike Frysinger <vapier@gentoo.org> dictd-1.12.0.ebuild,
+  +files/dictd-1.12.0-build.patch:
+  Fix building with libtool-2.4 #342669 by Diego Elio Pettenò.
 
 *dictd-1.12.0 (28 Jun 2011)
 
