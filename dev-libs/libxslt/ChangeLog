@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libxslt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.221 2011/10/30 15:15:27 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.222 2012/02/09 19:33:49 tetromino Exp $
+
+*libxslt-1.1.26-r3 (09 Feb 2012)
+
+  09 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libxslt-1.1.26.ebuild, -libxslt-1.1.26-r1.ebuild, +libxslt-1.1.26-r3.ebuild,
+  +files/libxslt-1.1.26-pattern-out-of-bounds-read.patch:
+  Fix out-of-bounds read in xsltCompilePatternInternal (bug #402861,
+  CVE-2011-3970, thanks to Agostino Sarubbo for reporting). Update to EAPI4.
+  Drop old.
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> libxslt-1.1.26-r2.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #385699
