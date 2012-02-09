@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.49 2012/02/07 17:12:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.50 2012/02/09 18:07:42 grobian Exp $
+
+  09 Feb 2012; Fabian Groffen <grobian@gentoo.org> mocha-0.10.3.ebuild:
+  Rekeyword for Prefix, bug #398985
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> mocha-0.9.12.ebuild:
   Stable for HPPA (bug #399799).
