@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xbae
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.15 2010/10/10 20:00:32 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.16 2012/02/09 09:46:56 jlec Exp $
+
+  09 Feb 2012; Justin Lecher <jlec@gentoo.org> xbae-4.60.4.ebuild:
+  Keyworded for ~-linux prefix
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> xbae-4.60.4.ebuild:
   Fix openmotif dependency.
