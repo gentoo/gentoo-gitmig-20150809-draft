@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Image_Text
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Text/ChangeLog,v 1.4 2010/08/12 08:49:11 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Text/ChangeLog,v 1.5 2012/02/09 11:13:04 mabi Exp $
+
+*PEAR-Image_Text-0.6.1 (09 Feb 2012)
+
+  09 Feb 2012; Matti Bickel <mabi@gentoo.org> +PEAR-Image_Text-0.6.1.ebuild:
+  version bump
 
   12 Aug 2010; Markus Meier <maekke@gentoo.org>
   PEAR-Image_Text-0.6.0_beta.ebuild:
