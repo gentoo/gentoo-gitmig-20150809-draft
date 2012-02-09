@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/slurm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.7 2011/10/26 16:00:57 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.8 2012/02/09 19:41:58 alexxy Exp $
+
+*slurm-2.3.3 (09 Feb 2012)
+
+  09 Feb 2012; Alexey Shvetsov <alexxy@gentoo.org> +slurm-2.3.3.ebuild:
+  Version bump
 
   26 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.2.7-r2.ebuild:
   Fix build if no previos slurm was insatlled
