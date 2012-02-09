@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.7.12.17.ebuild,v 1.1 2012/01/19 02:08:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.8.9.5.ebuild,v 1.1 2012/02/09 20:44:40 floppym Exp $
 
 EAPI="4"
 
 PYTHON_DEPEND="2:2.6"
 
-inherit eutils multilib pax-utils python toolchain-funcs
+inherit eutils multilib pax-utils python toolchain-funcs versionator
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
@@ -49,7 +49,7 @@ src_compile() {
 	esac
 	mytarget=${myarch}.release
 
-	soname_version="${PV}"
+	soname_version="$(get_version_component_range 1-3)"
 
 	local snapshot=on
 	host-is-pax && snapshot=off
