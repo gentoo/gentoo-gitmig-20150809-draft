@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.39 2012/02/09 08:29:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.40 2012/02/09 08:35:05 robbat2 Exp $
+
+  09 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  files/iscsid-2.0.871-r1.init.d, files/iscsid-conf.d:
+  Bug #307619: improve init script for BL2.
 
   09 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> open-iscsi-2.0.872.ebuild,
   +files/open-iscsi-2.0.872-isns-slp.patch:

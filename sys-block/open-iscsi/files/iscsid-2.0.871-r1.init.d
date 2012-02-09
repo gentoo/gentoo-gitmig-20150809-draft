@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Technologies, Inc.
+# Copyright 1999-2012 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/files/iscsid-2.0.871-r1.init.d,v 1.1 2009/11/12 09:29:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/files/iscsid-2.0.871-r1.init.d,v 1.2 2012/02/09 08:35:05 robbat2 Exp $
 
 opts="${opts} starttargets stoptargets restarttargets"
 
@@ -9,6 +9,9 @@ depend() {
 	after modules
 	use net
 }
+
+PIDFILE=${PIDFILE:-/var/run/${SVCNAME}.pid}
+BINARY="/usr/sbin/iscsid"
 
 checkconfig() {
 	if [ ! -e /etc/conf.d/${SVCNAME} ]; then
@@ -71,7 +74,7 @@ start() {
 	fi
 
 	ebegin "Starting ${SVCNAME}"
-	start-stop-daemon --start --quiet --exec /usr/sbin/iscsid -- ${OPTS}
+	start-stop-daemon --start --quiet --exec ${BINARY} -- ${OPTS}
 	ret=$?
 	if [ $ret -ne 0 ]; then
 		eend $?
@@ -81,7 +84,11 @@ start() {
 	# Start automatic targets when iscsid is started
 	if [ "${AUTOSTARTTARGETS}" = "yes" ]; then
 		starttargets
-		return $?
+		ret=$?
+		if [ "${AUTOSTART}" = "strict" ] && [ $ret -ne 0 ]; then
+			stop
+			return $ret
+		fi
 	fi
 	return 0
 }
@@ -89,12 +96,9 @@ start() {
 stop() {
 	stoptargets
 	ebegin "Stopping ${SVCNAME}"
-	start-stop-daemon --signal HUP --stop --quiet --exec /usr/sbin/iscsid #--pidfile $PID_FILE
+	start-stop-daemon --stop --quiet --exec ${BINARY} --pidfile ${PIDFILE}
 	eend $?
 
-	# ugly, but pid file is not removed by iscsid
-	rm -f $PID_FILE
-	
 	do_modules 'Removing iSCSI modules' 'iscsi_tcp scsi_transport_iscsi libiscsi' '-r'
 	eend $?
 }
@@ -102,18 +106,18 @@ stop() {
 starttargets() {
         ebegin "Setting up iSCSI targets"
         /usr/sbin/iscsiadm -m node --loginall=automatic
-		ret=$?
+	ret=$?
         eend $ret
-		return $ret
+	return $ret
 }
 
 stoptargets() {
         ebegin "Disconnecting iSCSI targets"
         sync
         /usr/sbin/iscsiadm -m node --logoutall=all
-		ret=$?
+	ret=$?
         eend $ret
-		return $ret
+	return $ret
 }
 
 restarttargets() {
