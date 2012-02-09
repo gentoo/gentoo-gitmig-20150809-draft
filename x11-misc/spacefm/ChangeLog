@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.9 2012/02/07 03:26:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.10 2012/02/09 20:12:16 xmw Exp $
+
+*spacefm-0.6.3 (09 Feb 2012)
+
+  09 Feb 2012; Michael Weber <xmw@gentoo.org> -spacefm-0.6.1.ebuild,
+  -spacefm-0.6.2.ebuild, +spacefm-0.6.3.ebuild:
+  Version bump, resolve license issue (bug 402243) by removing all previous
+  versions.
 
 *spacefm-0.6.2 (07 Feb 2012)
 
