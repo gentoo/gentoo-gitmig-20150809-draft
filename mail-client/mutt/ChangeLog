@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.222 2012/01/17 16:28:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.223 2012/02/09 18:23:24 idl0r Exp $
+
+  09 Feb 2012; Christian Ruppert <idl0r@gentoo.org> mutt-1.5.21-r8.ebuild:
+  Allow user patches through epatch_user
 
 *mutt-1.5.21-r8 (17 Jan 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r8.ebuild,v 1.1 2012/01/17 16:28:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r8.ebuild,v 1.2 2012/02/09 18:23:24 idl0r Exp $
 
 EAPI="3"
 
@@ -101,6 +101,9 @@ src_prepare() {
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
 		muttlib.c || die "failed patching in Gentoo version"
+
+	# allow user patches
+	epatch_user
 
 	# many patches touch the buildsystem, we always need this
 	AT_M4DIR="m4" eautoreconf
