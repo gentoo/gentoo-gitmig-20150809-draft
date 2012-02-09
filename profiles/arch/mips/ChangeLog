@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.85 2011/11/01 00:59:53 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.86 2012/02/09 22:52:01 mattst88 Exp $
+
+  09 Feb 2012; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  Add 'dev-vcs/git cgi' to package.use.mask.
 
   01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Remove obsolete entry for media-video/mplayer and USE="v4l2"
