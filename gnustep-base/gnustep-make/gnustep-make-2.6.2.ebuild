@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.2.ebuild,v 1.2 2012/02/09 15:11:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.2.ebuild,v 1.3 2012/02/09 21:34:34 voyageur Exp $
 
 EAPI=4
 
@@ -23,13 +23,17 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if ( use libobjc2 && ! has_version gnustep-base/gnustep-make[libobjc2] ) || \
-		( ! use libobjc2 && has_version gnustep-base/gnustep-make[libobjc2] ) || \
-		( use libobjc2 && has_version <gnustep-base-2.6.2 ) ; then
-		ewarn "TOGGLED libobjc2 USE-FLAG WARNING:"
-		ewarn "You changed the libojbc2 use-flag"
-		ewarn "You must rebuild all gnustep packages installed."
-		# Suggest gnustep-updater once it can do the trick
+	if has_version gnustep-base/gnustep-make; then
+		if ( use libobjc2 && ! has_version gnustep-base/gnustep-make[libobjc2] ) || \
+			( ! use libobjc2 && has_version gnustep-base/gnustep-make[libobjc2] ) || \
+			( use libobjc2 && has_version <gnustep-base/gnustep-make-2.6.2 ) ; then
+			ewarn "TOGGLED libobjc2 USE-FLAG WARNING:"
+			ewarn "You changed the libojbc2 use-flag"
+			ewarn "You must rebuild all gnustep packages installed."
+			ewarn ""
+			ewarn "To do so, please emerge gnustep-base/gnustep-updater and run:"
+			ewarn "# gnustep-updater -l"
+		fi
 	fi
 }
 

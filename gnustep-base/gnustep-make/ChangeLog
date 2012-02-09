@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.104 2012/02/09 15:11:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.105 2012/02/09 21:34:34 voyageur Exp $
+
+  09 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-make-2.6.2.ebuild:
+  Suggest gnustep-update for libobjc2, fix test on gnustep-make < 2.6.2
 
   09 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
   gnustep-make-2.6.2.ebuild:
