@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4ui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.28 2012/01/30 16:46:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.29 2012/02/09 01:40:04 jer Exp $
+
+  09 Feb 2012; Jeroen Roovers <jer@gentoo.org> libxfce4ui-4.8.1.ebuild:
+  Stable for HPPA (bug #401229).
 
   30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libxfce4ui-4.8.1.ebuild:
   Stable for amd64, wrt bug #401229
