@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.8 2012/01/24 18:18:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.9 2012/02/09 12:17:23 maksbotan Exp $
 
 EAPI="4"
 
@@ -18,6 +18,7 @@ IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +chathistory
 DEPEND="~net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit
 		x11-libs/qt-multimedia
+		autoidler? ( x11-libs/libXScrnSaver )
 		astrality? ( net-libs/telepathy-qt )
 		otroid? ( net-libs/libotr )
 		xoox? ( =net-libs/qxmpp-9999[extras] media-libs/speex )
