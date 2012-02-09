@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.15 2011/10/23 15:36:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.16 2012/02/09 09:44:13 jlec Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="fortran fftw jpeg netcdf png"
 
 DEPEND="
@@ -52,7 +52,7 @@ src_prepare() {
 	# don't strip if not asked for
 	sed -i \
 		-e 's:$(INSTALL_PROGRAM) -s:$(INSTALL_PROGRAM):g' \
-		{auxiliary,grconvert,src}/Makefile
+		{auxiliary,grconvert,src}/Makefile || die
 
 	sed -i \
 		-e 's:$(GRACE_HOME)/bin:$(PREFIX)/bin:g' \
@@ -101,7 +101,7 @@ src_install() {
 	dosym ../../${PN}/doc /usr/share/doc/${PF}/html
 
 	doman "${ED}"/usr/share/doc/${PF}/html/*.1
-	rm -f "${ED}"/usr/share/doc/${PF}/html/*.1
-	doicon "${WORKDIR}"/${PN}.png || die
+	rm -f "${ED}"/usr/share/doc/${PF}/html/*.1 || die
+	doicon "${WORKDIR}"/${PN}.png
 	make_desktop_entry xmgrace Grace grace
 }

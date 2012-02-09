@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.58 2011/10/23 20:08:59 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.59 2012/02/09 09:44:13 jlec Exp $
+
+  09 Feb 2012; Justin Lecher <jlec@gentoo.org> grace-5.1.22-r2.ebuild,
+  metadata.xml:
+  Keyworded for ~-linux prefix, die sanity
 
   23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -grace-5.1.22-r1.ebuild:
   old
