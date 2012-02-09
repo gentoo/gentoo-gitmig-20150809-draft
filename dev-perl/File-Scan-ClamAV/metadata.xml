@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>net-mail</herd>
-  <maintainer>
-    <email>dertobi123@gentoo.org</email>
-  </maintainer>
   <upstream>
     <remote-id type="cpan">File-Scan-ClamAV</remote-id>
   </upstream>
