@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/leechcraft-anhero
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-anhero/ChangeLog,v 1.7 2012/02/04 19:11:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-anhero/ChangeLog,v 1.8 2012/02/09 11:11:43 maksbotan Exp $
+
+*leechcraft-anhero-0.5.0 (09 Feb 2012)
+
+  09 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-anhero-0.5.0.ebuild, -leechcraft-anhero-0.4.96-r1.ebuild,
+  -leechcraft-anhero-0.4.97.ebuild:
+  Bumped LeechCraft to 0.5.0, removed 0.4.96-r1 and 0.4.97
 
   04 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   leechcraft-anhero-0.4.99.ebuild:
