@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Image_Color
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Color/ChangeLog,v 1.16 2009/08/22 19:47:22 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Color/ChangeLog,v 1.17 2012/02/09 11:06:39 mabi Exp $
+
+*PEAR-Image_Color-1.0.4 (09 Feb 2012)
+
+  09 Feb 2012; Matti Bickel <mabi@gentoo.org> +PEAR-Image_Color-1.0.4.ebuild:
+  version bump, changes license
 
 *PEAR-Image_Color-1.0.3 (22 Aug 2009)
 
