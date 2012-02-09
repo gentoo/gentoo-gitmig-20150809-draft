@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/spacenavd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.1 2012/02/06 19:51:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.2 2012/02/09 03:46:36 sping Exp $
+
+*spacenavd-0.5-r2 (09 Feb 2012)
+
+  09 Feb 2012; Sebastian Pipping <sping@gentoo.org>
+  +files/99-space-navigator.rules, -spacenavd-0.5-r1.ebuild,
+  +spacenavd-0.5-r2.ebuild:
+  Add udev rule
 
 *spacenavd-0.5-r1 (06 Feb 2012)
 
