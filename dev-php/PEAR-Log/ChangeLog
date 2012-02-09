@@ -1,6 +1,15 @@
 # ChangeLog for dev-php/PEAR-Log
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.94 2012/02/07 16:37:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.95 2012/02/09 11:26:11 mabi Exp $
+
+*PEAR-Log-1.12.7-r1 (09 Feb 2012)
+
+  09 Feb 2012; Matti Bickel <mabi@gentoo.org> +PEAR-Log-1.12.7-r1.ebuild,
+  -PEAR-Log-1.10.0.ebuild, -PEAR-Log-1.11.5.ebuild, -PEAR-Log-1.11.6.ebuild,
+  -PEAR-Log-1.12.0.ebuild, -PEAR-Log-1.12.5.ebuild, -PEAR-Log-1.12.6.ebuild,
+  -PEAR-Log-1.9.11.ebuild, -PEAR-Log-1.9.13.ebuild, -PEAR-Log-1.9.14.ebuild,
+  -PEAR-Log-1.9.3.ebuild:
+  EAPI bump, remove depend.php dependency, remove old versions
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Log-1.12.7.ebuild:
   Stable for HPPA (bug #393859).
