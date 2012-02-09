@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.193 2012/02/06 21:19:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.194 2012/02/09 17:35:24 bicatali Exp $
+
+  09 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> R-2.14.1.ebuild,
+  +files/R-2.14.1-pcre830.patch:
+  Fixed for pcre-8.30, thanks Rainer 'Siju' Sigl for his initial work
 
   06 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> R-2.14.1.ebuild,
   files/R-2.14.1-tiff.patch:

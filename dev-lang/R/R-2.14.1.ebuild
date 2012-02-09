@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.14.1.ebuild,v 1.2 2012/02/06 21:19:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.14.1.ebuild,v 1.3 2012/02/09 17:35:24 bicatali Exp $
 
 EAPI=4
 
@@ -64,7 +64,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-2.12.1-ldflags.patch \
 		"${FILESDIR}"/${PN}-2.13.1-zlib_header_fix.patch \
 		"${FILESDIR}"/${PN}-2.14.1-tiff.patch \
-		"${FILESDIR}"/${PN}-2.14.1-rmath-shared.patch
+		"${FILESDIR}"/${PN}-2.14.1-rmath-shared.patch \
+		"${FILESDIR}"/${PN}-2.14.1-pcre830.patch
 
 	# fix packages.html for doc (bug #205103)
 	sed -i \
