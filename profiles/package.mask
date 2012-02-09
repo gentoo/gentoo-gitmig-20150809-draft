@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13468 2012/02/09 08:53:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13469 2012/02/09 20:22:54 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (09 Feb 2012)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-19
+>=www-client/google-chrome-19
+
+# Mike Gilbert <floppym@gentoo.org> (09 Feb 2012)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+>=dev-lang/v8-3.9
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Masked for testing
@@ -256,16 +266,6 @@ media-video/goggles
 # last upstream release 2004.
 # Removal in 30 days.
 media-video/ripmake
-
-# Mike Gilbert <floppym@gentoo.org> (05 Jan 2012)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-18
->=www-client/google-chrome-18
-
-# Mike Gilbert <floppym@gentoo.org> (05 Jan 2012)
-# Mask v8 versions used for www-client/chromium dev channel releases.
->=dev-lang/v8-3.8
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (04 Jan 2012)
 # Outdated and unused sound daemon. Why is this still in the tree?
