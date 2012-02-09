@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/xdebug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.35 2012/01/29 18:48:54 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.36 2012/02/09 01:28:29 jer Exp $
+
+  09 Feb 2012; Jeroen Roovers <jer@gentoo.org> xdebug-2.1.2.ebuild:
+  Stable for HPPA (bug #400323).
 
   29 Jan 2012; Ole Markus With <olemarkus@gentoo.org> Manifest:
   Regenerated hashes for 2.1.3
