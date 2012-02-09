@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.4.ebuild,v 1.2 2012/02/09 22:14:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.1 2012/02/09 22:14:45 vapier Exp $
 
 EAPI="4"
 
@@ -61,8 +61,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.3-ldflags.patch
-	epatch "${FILESDIR}"/${PN}-3.4-cfgetispeed.patch #393515
-	epatch "${FILESDIR}"/${PN}-3.4-gpsmon-lm.patch
 	epatch "${FILESDIR}"/${PN}-3.4-strptime.patch
 	epatch "${FILESDIR}"/${PN}-3.4-chrpath.patch
 	epatch "${FILESDIR}"/${PN}-3.4-always-install-man-pages.patch
