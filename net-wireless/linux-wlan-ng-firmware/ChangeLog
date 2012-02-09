@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/linux-wlan-ng-firmware
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/ChangeLog,v 1.5 2007/02/22 03:10:42 peper Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/ChangeLog,v 1.6 2012/02/09 09:51:40 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Herd is primary maintainer.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

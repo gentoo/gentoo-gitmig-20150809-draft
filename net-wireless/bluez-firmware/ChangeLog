@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-firmware
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/ChangeLog,v 1.12 2008/06/02 06:16:17 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/ChangeLog,v 1.13 2012/02/09 09:49:27 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Herd is primary maintainer.
 
   02 Jun 2008; Jeroen Roovers <jer@gentoo.org> bluez-firmware-1.2.ebuild:
   Stable for HPPA (bug #224409).

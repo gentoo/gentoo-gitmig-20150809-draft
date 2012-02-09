@@ -4,5 +4,6 @@
 	<herd>mobile</herd>
 	<maintainer>
 		<email>betelgeuse@gentoo.org</email>
+		<description>Assign to herd and CC me</description>
 	</maintainer>
 </pkgmetadata>

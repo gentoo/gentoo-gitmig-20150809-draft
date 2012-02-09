@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/linux-wlan-ng
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.60 2006/10/08 18:39:33 betelgeuse Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.61 2012/02/09 09:54:06 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Herd is primary maintainer.
 
   08 Oct 2006; Petteri Räty <betelgeuse@gentoo.org>
   linux-wlan-ng-0.2.3-r2.ebuild:
