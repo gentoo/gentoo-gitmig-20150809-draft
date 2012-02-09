@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/japitools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.12 2008/07/04 06:51:22 opfer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.13 2012/02/09 09:45:49 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Herd is primary maintainer.
 
   04 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
   japitools-0.9.7-r1.ebuild:

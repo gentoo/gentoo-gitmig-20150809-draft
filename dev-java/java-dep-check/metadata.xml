@@ -6,5 +6,6 @@
 	<maintainer>
 		<email>betelgeuse@gentoo.org</email>
 		<name>Petteri Räty</name>
+		<description>Assign to herd and CC me</description>
 	</maintainer>
 </pkgmetadata>
