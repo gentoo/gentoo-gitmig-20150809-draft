@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.872.ebuild,v 1.3 2011/11/05 23:03:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.872.ebuild,v 1.4 2012/02/09 08:29:45 robbat2 Exp $
 
 EAPI=2
 inherit versionator linux-info eutils flag-o-matic
@@ -45,6 +45,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-glibc212.patch
 	epatch "${FILESDIR}"/${P}-dont-call-configure.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-isns-slp.patch
 }
 
 src_configure() {
@@ -56,8 +57,10 @@ src_compile() {
 	use debug && append-flags -DDEBUG_TCP -DDEBUG_SCSI
 
 	einfo "Building userspace"
+	local SLP_LIBS
+	use slp && SLP_LIBS="-lslp"
 	cd "${S}" && \
-	KSRC="${KV_DIR}" CFLAGS="" emake OPTFLAGS="${CFLAGS}" user \
+	KSRC="${KV_DIR}" CFLAGS="" emake OPTFLAGS="${CFLAGS}" SLP_LIBS="${SLP_LIBS}" user \
 		|| die "emake failed"
 }
 
