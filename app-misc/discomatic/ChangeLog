@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/discomatic
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/discomatic/ChangeLog,v 1.11 2008/12/15 21:26:32 dertobi123 Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/discomatic/ChangeLog,v 1.12 2012/02/09 10:21:39 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #85926
 
   15 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   +files/discomatic-0.3-gcc43.patch, discomatic-0.3.ebuild:
