@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.116 2012/01/31 23:02:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.117 2012/02/09 22:07:34 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -781,9 +781,6 @@ qt_mkspecs_dir() {
 		spec+=-icc
 	else
 		die "Unknown compiler '${CXX}'"
-	fi
-	if [[ -n ${LIBDIR/lib} ]]; then
-		spec+=-${LIBDIR/lib}
 	fi
 
 	# Add -64 for 64bit profiles
