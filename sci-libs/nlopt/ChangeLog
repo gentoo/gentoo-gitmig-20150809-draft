@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/nlopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.11 2012/02/07 13:53:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.12 2012/02/09 17:50:14 bicatali Exp $
+
+  09 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> nlopt-2.2.4.ebuild,
+  +files/nlopt-2.2.4-fix-nlopt_hpp-location.patch:
+  Fixed directory location for swig generated pfiles, thanks Dustin Polke, bug
+  #402513
 
   07 Feb 2012; Agostino Sarubbo <ago@gentoo.org> nlopt-2.2.4.ebuild:
   Stable for amd64, wrt bug #386953

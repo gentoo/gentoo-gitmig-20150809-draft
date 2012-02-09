@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.3 2012/02/07 13:53:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.4 2012/02/09 17:50:14 bicatali Exp $
 
 EAPI=4
 
@@ -32,6 +32,8 @@ src_prepare() {
 			swig/Makefile.in || die
 		echo '#!/bin/sh' > py-compile
 	fi
+	epatch "${FILESDIR}"/${P}-fix-nlopt_hpp-location.patch
+	eautoreconf
 }
 
 src_configure() {
