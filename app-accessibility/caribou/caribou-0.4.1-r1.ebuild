@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.1-r1.ebuild,v 1.1 2012/02/09 09:05:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.1-r1.ebuild,v 1.2 2012/02/09 09:22:09 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -64,8 +64,7 @@ src_prepare() {
 		-i bin/{antler-keyboard,caribou,caribou-preferences}.in ||
 		die "sed failed"
 
-	# disable pyc compiling
-	echo '#!/bin/sh' > py-compile
+	python_clean_py-compile_files
 
 	gnome2_src_prepare
 }
