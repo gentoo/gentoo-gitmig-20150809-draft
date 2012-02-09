@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/mini-qmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.17 2012/01/12 21:05:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.18 2012/02/09 02:09:14 jer Exp $
+
+  09 Feb 2012; Jeroen Roovers <jer@gentoo.org> mini-qmail-1.06.ebuild:
+  Stable for HPPA (bug #397057).
 
   12 Jan 2012; Markus Meier <maekke@gentoo.org> mini-qmail-1.06.ebuild:
   arm stable, bug #397057
