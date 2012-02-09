@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.117 2012/02/09 22:07:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.118 2012/02/09 22:58:36 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -382,6 +382,9 @@ qt4-build_src_compile() {
 # @DESCRIPTION:
 # Runs tests only in target directories.
 qt4-build_src_test() {
+	# QtMultimedia does not have any test suite (bug #332299)
+	[[ ${PN} == "qt-multimedia" ]] && return
+
 	for dir in ${QT4_TARGET_DIRECTORIES}; do
 		emake -j1 check -C ${dir}
 	done
