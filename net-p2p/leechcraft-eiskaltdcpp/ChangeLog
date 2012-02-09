@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/leechcraft-eiskaltdcpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/ChangeLog,v 1.6 2012/02/02 17:50:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/ChangeLog,v 1.7 2012/02/09 11:26:55 maksbotan Exp $
+
+*leechcraft-eiskaltdcpp-0.5.0 (09 Feb 2012)
+
+  09 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-eiskaltdcpp-0.5.0.ebuild,
+  -leechcraft-eiskaltdcpp-0.4.96-r1.ebuild,
+  -leechcraft-eiskaltdcpp-0.4.97.ebuild:
+  Bumped LeechCraft to 0.5.0, removed 0.4.96-r1 and 0.4.97
 
 *leechcraft-eiskaltdcpp-0.4.99 (02 Feb 2012)
 
