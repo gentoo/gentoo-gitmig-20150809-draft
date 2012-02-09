@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/skanlite
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.17 2011/12/24 11:57:45 johu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.18 2012/02/09 13:57:37 johu Exp $
+
+  09 Feb 2012; Johannes Huber <johu@gentoo.org> skanlite-0.7.ebuild,
+  skanlite-0.8.ebuild:
+  Set KDE_MINIMAL 4.6, fixes bug #399599.
 
 *skanlite-0.8 (24 Dec 2011)
 
