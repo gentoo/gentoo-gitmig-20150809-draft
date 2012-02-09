@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/akonadi-google
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.4 2012/02/06 23:02:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.5 2012/02/09 21:28:51 johu Exp $
+
+  09 Feb 2012; Johannes Huber <johu@gentoo.org>
+  -akonadi-google-0.2_p20120201.ebuild:
+  Remove seg faulting snapshot, bug #402609.
 
 *akonadi-google-0.2_p20120201 (06 Feb 2012)
 
