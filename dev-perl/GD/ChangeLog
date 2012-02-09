@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.106 2012/02/03 16:40:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.107 2012/02/09 00:10:20 vapier Exp $
+
+  09 Feb 2012; Mike Frysinger <vapier@gentoo.org> GD-2.460.0.ebuild:
+  Touch up configure code a bit.
 
   03 Feb 2012; Brent Baude <ranger@gentoo.org> GD-2.460.0.ebuild:
   Marking GD-2.460.0 ppc for bug 394843

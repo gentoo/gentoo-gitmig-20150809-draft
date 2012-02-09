@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.460.0.ebuild,v 1.7 2012/02/03 16:40:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.460.0.ebuild,v 1.8 2012/02/09 00:10:20 vapier Exp $
 
 EAPI=4
 
@@ -45,14 +45,14 @@ src_prepare(){
 }
 
 src_configure() {
-	myconf=""
+	local myconf
 	use gif && use animgif && myconf+=",ANIMGIF"
 	use jpeg && myconf+=",JPEG"
 	use truetype && myconf+=",FREETYPE"
 	use png && myconf+=",PNG"
 	use xpm && myconf+=",XPM"
 	use gif && myconf+=",GIF"
-	myconf="-options \"${myconf:1}\""
+	myconf="-options '${myconf:1}'"
 	perl-module_src_configure
 }
 
