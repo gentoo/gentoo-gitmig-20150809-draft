@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.148 2012/02/09 18:36:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.149 2012/02/09 18:37:20 cardoe Exp $
+
+  09 Feb 2012; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.9.7.ebuild:
+  Remove older version
 
   09 Feb 2012; Doug Goldstein <cardoe@gentoo.org> -files/libvirtd.confd-r1,
   -files/libvirtd.init-r1, -files/libvirtd.init-r2, -files/libvirtd.init-r3,
