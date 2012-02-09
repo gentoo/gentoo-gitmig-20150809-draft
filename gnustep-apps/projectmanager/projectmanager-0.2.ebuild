@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectmanager/projectmanager-0.2.ebuild,v 1.6 2010/08/20 14:53:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectmanager/projectmanager-0.2.ebuild,v 1.7 2012/02/09 21:22:23 voyageur Exp $
 
 inherit gnustep-2
 
@@ -28,4 +28,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-missing_includes.patch
 	epatch "${FILESDIR}"/${P}-pathdomainmask.patch
+
+	rm GNUmakefile.common.preamble || die
 }
