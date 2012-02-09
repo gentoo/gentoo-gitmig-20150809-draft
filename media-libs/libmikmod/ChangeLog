@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.81 2012/02/08 14:46:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.82 2012/02/09 18:27:38 slyfox Exp $
+
+*libmikmod-3.2.0_beta2-r5 (09 Feb 2012)
+
+  09 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/libmikmod-3.2.0_beta2-shell.patch, +libmikmod-3.2.0_beta2-r5.ebuild,
+  -libmikmod-3.2.0_beta2-r4.ebuild:
+  Fix libmikmod.so installation caused by Makefile.am change. Fixes bug #402771
+  by Torsten Kaiser.
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> libmikmod-3.2.0_beta2-r3.ebuild:
   Stable for HPPA (bug #335892).
