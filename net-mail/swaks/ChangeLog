@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/swaks
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.17 2011/06/14 19:15:41 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.18 2012/02/09 11:44:32 eras Exp $
+
+*swaks-20111230.0 (09 Feb 2012)
+
+  09 Feb 2012; Eray Aslan <eras@gentoo.org> +swaks-20111230.0.ebuild:
+  version bump - bug #402715
 
   14 Jun 2011; Eray Aslan <eras@gentoo.org> -swaks-20060621.0.ebuild:
   Remove old version
