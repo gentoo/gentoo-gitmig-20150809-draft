@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.17 2010/01/10 18:39:36 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.18 2012/02/09 00:18:15 radhermit Exp $
+
+  09 Feb 2012; Tim Harder <radhermit@gentoo.org> xsel-1.2.0.ebuild:
+  Update to EAPI 4.
 
   10 Jan 2010; Christian Faulhammer <fauli@gentoo.org> xsel-1.2.0.ebuild:
   Transfer Prefix keywords
