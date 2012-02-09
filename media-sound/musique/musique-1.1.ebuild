@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/musique-1.1.ebuild,v 1.1 2012/02/09 22:53:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/musique-1.1.ebuild,v 1.2 2012/02/09 23:19:34 hwoarang Exp $
 
 EAPI="4"
 
@@ -30,4 +30,9 @@ DOCS="CHANGES TODO"
 
 src_configure() {
 	eqmake4 ${PN}.pro PREFIX="/usr"
+}
+
+src_install() {
+	qt4-r2_src_install
+	doicon data/${PN}.svg
 }
