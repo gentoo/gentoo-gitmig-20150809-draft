@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/leechcraft-lcftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/leechcraft-lcftp/ChangeLog,v 1.7 2012/02/04 19:10:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/leechcraft-lcftp/ChangeLog,v 1.8 2012/02/09 11:06:54 maksbotan Exp $
+
+*leechcraft-lcftp-0.5.0 (09 Feb 2012)
+
+  09 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lcftp-0.5.0.ebuild, -leechcraft-lcftp-0.4.96-r1.ebuild,
+  -leechcraft-lcftp-0.4.97.ebuild:
+  Bumped LeechCraft to 0.5.0, removed 0.4.96-r1 and 0.4.97
 
   04 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   leechcraft-lcftp-0.4.99.ebuild:
