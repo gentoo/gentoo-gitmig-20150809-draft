@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-dbusmanager/leechcraft-dbusmanager-0.4.96-r1.ebuild,v 1.1 2011/12/16 18:41:33 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-dbusmanager/leechcraft-dbusmanager-0.5.0.ebuild,v 1.1 2012/02/09 11:19:04 maksbotan Exp $
 
 EAPI="4"
 
