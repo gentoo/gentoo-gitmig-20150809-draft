@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_DNS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.40 2012/02/01 10:56:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.41 2012/02/09 01:24:05 jer Exp $
+
+  09 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Net_DNS-1.0.7.ebuild:
+  Stable for HPPA (bug #399315).
 
   01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
   PEAR-Net_DNS-1.0.7.ebuild:
