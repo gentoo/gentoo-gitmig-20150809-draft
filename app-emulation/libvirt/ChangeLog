@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.146 2012/02/09 15:59:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.147 2012/02/09 16:13:05 cardoe Exp $
+
+  09 Feb 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.8.ebuild,
+  libvirt-9999.ebuild:
+  Bump up to EAPI=4 so we can use REQUIRED_USE to ensure at least one is
+  enabled.
 
   09 Feb 2012; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.9.3-r1.ebuild:
   Drop older version
