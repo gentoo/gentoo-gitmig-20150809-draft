@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libdsk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.23 2011/07/20 13:48:51 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.24 2012/02/09 12:31:06 ago Exp $
+
+  09 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libdsk-1.2.1.ebuild:
+  Stable for amd64, wrt bug #289743
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
