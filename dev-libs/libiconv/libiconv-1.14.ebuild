@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.14.ebuild,v 1.1 2011/11/10 11:49:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.14.ebuild,v 1.2 2012/02/09 00:16:30 vapier Exp $
 
-inherit eutils multilib flag-o-matic libtool toolchain-funcs
+EAPI="4"
+
+inherit libtool toolchain-funcs
 
 DESCRIPTION="GNU charset conversion library for libc which doesn't implement it"
 HOMEPAGE="http://www.gnu.org/software/libiconv/"
@@ -17,36 +19,26 @@ DEPEND="!sys-libs/glibc
 	!sys-apps/man-pages"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# Make sure that libtool support is updated to link "the linux way" on
-	# FreeBSD.
+src_prepare() {
+	# Make sure that libtool support is updated to link "the linux way"
+	# on FreeBSD.
 	elibtoolize
 }
 
-src_compile() {
-	# Install in /lib as utils installed in /lib like gnutar
-	# can depend on this
-
+src_configure() {
 	# Disable NLS support because that creates a circular dependency
 	# between libiconv and gettext
-
 	econf \
+		--docdir="\$(datarootdir)/doc/${PF}/html" \
 		--disable-nls \
 		--enable-shared \
-		--enable-static \
-		 || die "econf failed"
-	emake || die "emake failed"
+		--enable-static
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install || die "make install failed"
+	default
 
-	# Move static libs and creates ldscripts into /usr/lib
-	dodir /$(get_libdir)
-	mv "${D}"/usr/$(get_libdir)/lib{iconv,charset}*$(get_libname)* "${D}/$(get_libdir)" || die
-	gen_usr_ldscript libiconv$(get_libname)
-	gen_usr_ldscript libcharset$(get_libname)
+	# Install in /lib as utils installed in /lib like gnutar
+	# can depend on this
+	gen_usr_ldscript -a iconv charset
 }
