@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/files/slpd-init,v 1.4 2007/07/13 13:20:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/files/slpd-init,v 1.5 2012/02/09 08:19:35 robbat2 Exp $
 
 depend() {
 	need net
@@ -27,7 +27,7 @@ multicast_route_set() {
 	MSG_FAILED_TO_ADD=' FAILED - Route NOT Added.'
 	MSG_SUCCES_ON_ADD=' SUCCESS - Route Added.'
 
-	CMD_GET_INTERFACE="netstat -i | awk 'BEGIN{}(NR>2)&&(!/^lo*/){print \$1}'"
+	CMD_GET_INTERFACE="netstat -i | awk 'BEGIN{}(NR>2)&&(!/^lo*/){print \$1;exit}'"
 	CMD_ADD_ROUTE="route add -net 224.0.0.0 netmask 240.0.0.0"
 
 	ping $PING_OPTIONS_1 $MULTICAST_ADDRESS 2> $TMP_FILE 1> /dev/null

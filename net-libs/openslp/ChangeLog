@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/openslp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.49 2012/01/24 22:52:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.50 2012/02/09 08:19:35 robbat2 Exp $
+
+  09 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> files/slpd-init:
+  The init script fails on a machine with multiple non-lo interfaces as route
+  only takes one argument, I discovered this during testing fast booting, when
+  there was no default route yet. I think it should not bother to check for a
+  route anyway (as it is moot after there is a default route), but I'm not
+  making that change.
 
   24 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   openslp-1.2.1-r2.ebuild, +files/openslp-1.2.1-cflags.patch:
