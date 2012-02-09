@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.124 2012/01/25 18:17:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.125 2012/02/09 15:20:29 johu Exp $
+
+*marble-4.8.0-r1 (09 Feb 2012)
+
+  09 Feb 2012; Johannes Huber <johu@gentoo.org>
+  +files/marble-4.8.0-lower-qt48.patch, +files/marble-4.8.0-qt48.patch,
+  +marble-4.8.0-r1.ebuild:
+  Revision bump adds upstream patches for Qt, maybe related to bug #402777.
 
 *marble-4.8.0 (25 Jan 2012)
 
