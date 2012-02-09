@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.22 2012/02/08 14:05:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.23 2012/02/09 16:06:39 voyageur Exp $
 
 # @ECLASS: gnustep-base.eclass
 # @MAINTAINER:
@@ -157,7 +157,7 @@ egnustep_env() {
 			&& GS_ENV=( "${GS_ENV[@]}" "debug=yes" ) \
 			|| GS_ENV=( "${GS_ENV[@]}" "debug=no" )
 
-		if has_version gnustep-base/gnustep-make[libobjc2];
+		if grep -q libobjc.so.4 "${GS_MAKEFILES}"/config.make;
 		then
 			# Set clang for packages that do not respect gnustep-make
 			# settings (gnustep-base's configure for example)
