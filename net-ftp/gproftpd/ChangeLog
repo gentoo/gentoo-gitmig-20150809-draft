@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gproftpd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.22 2011/03/29 12:48:34 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.23 2012/02/09 10:45:40 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #85926
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> gproftpd-8.3.2.ebuild:
   Fix gtk+ slot deps
