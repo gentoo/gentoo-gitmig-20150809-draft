@@ -2,10 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-	  <email>betelgeuse@gentoo.org</email>
+		<email>qiaomuf@gentoo.org</email>
 	</maintainer>
 	<maintainer>
-	  <email>qiaomuf@gentoo.org</email>
+		<email>betelgeuse@gentoo.org</email>
 	</maintainer>
 	<use>
 	  <flag name='debugger'>Compiles debug info into the library</flag>
