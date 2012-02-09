@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.92 2012/02/09 10:29:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.93 2012/02/09 14:27:56 haubi Exp $
+
+  09 Feb 2012; Michael Haubenwallner <haubi@gentoo.org> metadata.xml:
+  Taking over maintainership.
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> -tora-2.1.3.ebuild, metadata.xml:
   Drop maintainer due retirement, bug #85926

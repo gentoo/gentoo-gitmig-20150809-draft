@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/oracle-instantclient-odbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/ChangeLog,v 1.5 2012/02/09 10:26:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/ChangeLog,v 1.6 2012/02/09 14:25:40 haubi Exp $
+
+  09 Feb 2012; Michael Haubenwallner <haubi@gentoo.org> metadata.xml:
+  Taking over maintainership.
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926
