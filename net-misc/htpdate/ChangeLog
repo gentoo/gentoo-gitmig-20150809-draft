@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/htpdate
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.42 2011/10/09 16:19:16 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.43 2012/02/09 10:46:53 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> -htpdate-1.0.0.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #85926
 
   09 Oct 2011; Mike Frysinger <vapier@gentoo.org> files/htpdate.init:
   Fix simple bashism in init.d script #386483 by Faustus.
