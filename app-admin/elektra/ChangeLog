@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/elektra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.2 2012/02/08 04:43:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.3 2012/02/09 23:55:32 xmw Exp $
+
+  09 Feb 2012; Michael Weber <xmw@gentoo.org> elektra-0.7.1.ebuild,
+  files/elektra-0.7.1-ltdl.patch:
+  Fix patch file, got scrambled during upload (bug 402785)
 
   08 Feb 2012; Michael Weber <xmw@gentoo.org> elektra-0.7.1.ebuild,
   +files/elektra-0.7.1-ltdl.patch, +files/elektra-0.7.1-test.patch:
