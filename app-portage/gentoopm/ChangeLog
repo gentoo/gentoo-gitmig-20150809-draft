@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.17 2012/01/09 16:22:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.18 2012/02/09 23:29:11 mattst88 Exp $
+
+  09 Feb 2012; Matt Turner <mattst88@gentoo.org> gentoopm-0.2.5.ebuild:
+  Added ~mips, bug 393183.
 
 *gentoopm-0.2.5 (09 Jan 2012)
 
