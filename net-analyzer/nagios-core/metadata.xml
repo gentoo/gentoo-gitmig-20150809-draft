@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
-	<maintainer>
-		<email>dertobi123@gentoo.org</email>
-		<name>Tobias Scherbaum</name>
-	</maintainer>
 	<longdescription>Nagios is a host and service monitor designed to inform you
 		of network problems before your clients, end-users or managers do. It
 		has been designed to run under the Linux operating system, but works

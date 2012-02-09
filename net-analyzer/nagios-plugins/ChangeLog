@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-plugins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.141 2011/04/29 21:00:36 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.142 2012/02/09 10:40:07 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #85926
 
   29 Apr 2011; Markos Chandras <hwoarang@gentoo.org>
   files/nagios-plugins-1.4.15-openldap.patch:

@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
-	<maintainer>
-		<email>dertobi123@gentoo.org</email>
-		<name>Tobias Scherbaum</name>
-	</maintainer>
 	<use>
 		<flag name='nmap'>Installs nmap which can be used to automatically discover devices to monitor.</flag>
 	</use>

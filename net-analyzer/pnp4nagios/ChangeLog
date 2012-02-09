@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pnp4nagios
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.35 2011/11/03 16:31:44 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.36 2012/02/09 10:44:39 pacho Exp $
+
+  09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #85926
 
   03 Nov 2011; Justin Lecher <jlec@gentoo.org> pnp4nagios-0.6.7.ebuild,
   pnp4nagios-0.6.11.ebuild, pnp4nagios-0.6.14.ebuild:

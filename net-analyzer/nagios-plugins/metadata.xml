@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
-	<maintainer>
-		<email>dertobi123@gentoo.org</email>
-		<name>Tobias Scherbaum</name>
-	</maintainer>
 	<longdescription lang="en">
 		Nagios plugins - Pack of plugins to make Nagios work properly
 	</longdescription>

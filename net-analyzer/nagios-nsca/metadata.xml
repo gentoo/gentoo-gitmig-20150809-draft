@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
-	<maintainer>
-		<email>dertobi123@gentoo.org</email>
-		<name>Tobias Scherbaum</name>
-	</maintainer>
 	<longdescription lang="en">
 		This program is designed to accept passive service check results from
 		clients that use the send_nsca utility (which is included in this
