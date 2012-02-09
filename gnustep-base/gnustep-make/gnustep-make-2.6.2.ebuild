@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.2.ebuild,v 1.1 2012/02/08 14:37:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.2.ebuild,v 1.2 2012/02/09 15:11:16 voyageur Exp $
 
 EAPI=4
 
@@ -19,8 +19,7 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=sys-devel/make-3.75
 	libobjc2? ( gnustep-base/libobjc2
 		>=sys-devel/clang-2.9 )
-	!libobjc2? ( !gnustep-base/libobjc2
-		>=sys-devel/gcc-3.3[objc] )"
+	!libobjc2? ( >=sys-devel/gcc-3.3[objc] )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -43,15 +42,19 @@ src_prepare() {
 }
 
 src_configure() {
+	local libobjc_version
 	if use libobjc2; then
 		export CC=clang
+		libobjc_version=4
+	else
+		libobjc_version=2
 	fi
 
 	#--enable-objc-nonfragile-abi: only working in clang for now
-	#--with-objc-lib-flag: TODO use to force libobjc2 or not
 	econf \
 		--with-layout=fhs-system \
 		--with-config-file="${EPREFIX}"/etc/GNUstep/GNUstep.conf \
+		--with-objc-lib-flag=-l:libobjc.so.${libobjc_version} \
 		$(use_enable libobjc2 objc-nonfragile-abi) \
 		$(use_enable native-exceptions native-objc-exceptions)
 }
