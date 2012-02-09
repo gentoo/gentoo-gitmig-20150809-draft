@@ -1,0 +1,13 @@
+diff --git a/tests/asn.1/trval.c b/tests/asn.1/trval.c
+index 780d60c..ffd66ac 100644
+--- a/tests/asn.1/trval.c
++++ b/tests/asn.1/trval.c
+@@ -176,7 +176,7 @@ int trval2(fp, enc, len, lev, rlen)
+     int lev;
+     int *rlen;
+ {
+-    int l, eid, elen, xlen, r, rlen2;
++    int l, eid, elen, xlen, r, rlen2 = 0;
+     int rlen_ext = 0;
+ 
+     r = OK;
