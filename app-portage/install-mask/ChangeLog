@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/install-mask
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.4 2011/12/16 16:55:18 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.5 2012/02/10 00:00:11 mattst88 Exp $
+
+  09 Feb 2012; Matt Turner <mattst88@gentoo.org> install-mask-0.0.2.ebuild:
+  Added ~mips, bug 393181.
 
   16 Dec 2011; Michał Górny <mgorny@gentoo.org> files/location-db.xml:
   Add logrotate to supported install-mask methods.
