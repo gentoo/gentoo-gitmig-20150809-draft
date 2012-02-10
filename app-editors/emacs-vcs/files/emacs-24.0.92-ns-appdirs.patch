@@ -1,0 +1,38 @@
+--- emacs-24.0.92-orig/Makefile.in
++++ emacs-24.0.92/Makefile.in
+@@ -469,21 +469,6 @@
+ 	-chmod 1755 $(DESTDIR)${bindir}/$(EMACSFULL)
+ 	rm -f $(DESTDIR)${bindir}/$(EMACS)
+ 	-ln $(DESTDIR)${bindir}/$(EMACSFULL) $(DESTDIR)${bindir}/$(EMACS)
+-	if test "${ns_appresdir}" != ""; then \
+-	  ( cd ${ns_appresdir} ; \
+-	    if test -d share/emacs ; then dir=share/emacs/*/*; $(MV_DIRS); fi;\
+-	    if test -d share/info ; then dir=share/info; $(MV_DIRS) ; fi ; \
+-	    rm -fr share ) ; \
+-	  ( cd ${ns_appbindir} ; \
+-	    if cd libexec ; then dir=emacs/*/*/* ; $(MV_DIRS); \
+-	    rm -fr emacs; if cd ../bin; then rm -f emacs emacs-24*; \
+-	    ln -sf ../libexec/* . ; fi ; fi ) ; \
+-	else true ; fi
+-
+-## FIXME is the emacs-24* bit above really necessary and correct?
+-## What if I have 24.1 and 24.2 installed at the same time?
+-## In any case, it should use something like echo $version | sed 's/\..*//'
+-## instead of hard-coding a version.
+ 
+ ## http://lists.gnu.org/archive/html/emacs-devel/2007-10/msg01672.html
+ ## Needs to be the user running install, so configure can't set it.
+--- emacs-24.0.92-orig/leim/Makefile.in
++++ emacs-24.0.92/leim/Makefile.in
+@@ -259,11 +259,6 @@
+ 	  [ -n "$${installuser}" ] && break ; \
+ 	done ; \
+ 	find ${INSTALLDIR} -exec chown $${installuser} '{}' ';'
+-	if [ "${ns_appresdir}" != "" ]; then \
+-	  ( cd ${ns_appresdir} ; \
+-	    if test -d share/emacs ; then dir=share/emacs/*/*; $(MV_DIRS); fi;\
+-	    rm -fr share ) ; \
+-	else true ; fi
+ 
+ clean mostlyclean:
+ 	rm -f ${TIT_MISC} ${TIT_MISC:.elc=.el} \

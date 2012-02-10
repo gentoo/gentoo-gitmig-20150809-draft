@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.81 2012/01/29 17:41:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.82 2012/02/10 16:39:37 ulm Exp $
+
+  10 Feb 2012; Ulrich Müller <ulm@gentoo.org> -emacs-vcs-24.0.92-r1.ebuild,
+  +files/emacs-24.0.92-ns-appdirs.patch, emacs-vcs-24.0.93.ebuild:
+  Add Cocoa support, bug 399059. Remove old.
 
 *emacs-vcs-24.0.93 (29 Jan 2012)
 
