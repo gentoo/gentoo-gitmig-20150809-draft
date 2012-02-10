@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.213 2012/02/07 20:48:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.214 2012/02/10 03:20:06 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> rhythmbox-0.13.3.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   07 Feb 2012; Justin Lecher <jlec@gentoo.org> rhythmbox-2.95.ebuild,
   metadata.xml:
