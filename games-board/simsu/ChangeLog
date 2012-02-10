@@ -1,6 +1,11 @@
 # ChangeLog for games-board/simsu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/simsu/ChangeLog,v 1.2 2010/02/27 17:19:11 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/simsu/ChangeLog,v 1.3 2012/02/10 17:30:24 mr_bones_ Exp $
+
+*simsu-1.2.2 (10 Feb 2012)
+
+  10 Feb 2012; Michael Sterrett <mr_bones_@gentoo.org> +simsu-1.2.2.ebuild:
+  version bump (bug #402939)
 
   27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> simsu-1.2.1.ebuild:
   x86 stable wrt bug #303501
