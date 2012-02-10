@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leechcraft-gacts
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-gacts/ChangeLog,v 1.1 2012/02/10 17:15:36 maksbotan Exp $
+
+*leechcraft-gacts-9999 (10 Feb 2012)
+
+  10 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-gacts-9999.ebuild, +metadata.xml:
+  Add leechcraft-gacts plugin, by 0xd34df00d
+
