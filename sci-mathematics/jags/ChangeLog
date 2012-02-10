@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/jags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/ChangeLog,v 1.5 2012/01/04 04:58:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/ChangeLog,v 1.6 2012/02/10 18:25:19 tomka Exp $
+
+  10 Feb 2012; Thomas Kahle <tomka@gentoo.org> jags-3.2.0.ebuild:
+  added missing dep for doc USE-flag, x86 stable per bug 402953
 
 *jags-3.2.0 (04 Jan 2012)
 

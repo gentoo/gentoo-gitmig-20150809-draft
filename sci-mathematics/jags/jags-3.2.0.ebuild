@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-3.2.0.ebuild,v 1.1 2012/01/04 04:58:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-3.2.0.ebuild,v 1.2 2012/02/10 18:25:19 tomka Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -14,13 +14,15 @@ LICENSE="GPL-2"
 IUSE="doc"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="virtual/blas
 	virtual/lapack"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( virtual/latex-base )"
+	doc? ( virtual/latex-base
+		   dev-texlive/texlive-latexextra
+		 )"
 
 S="${WORKDIR}/${MYP}"
 
