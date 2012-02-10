@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.7.ebuild,v 1.5 2011/10/21 13:04:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.7.ebuild,v 1.6 2012/02/10 03:53:51 patrick Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="python? 2:2.4"
+PYTHON_DEPEND="python? 2:2.5"
 
 inherit gnome2 python eutils autotools
 

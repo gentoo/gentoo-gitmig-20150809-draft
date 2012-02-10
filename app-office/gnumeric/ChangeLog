@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.231 2011/10/30 14:46:35 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.232 2012/02/10 03:52:53 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> gnumeric-1.10.13.ebuild,
+  gnumeric-1.10.15.ebuild, gnumeric-1.10.16.ebuild, gnumeric-1.10.17.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> gnumeric-1.10.17.ebuild:
   alpha/ia64/sparc stable wrt #385699

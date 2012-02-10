@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.13.ebuild,v 1.8 2011/03/22 19:56:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.13.ebuild,v 1.9 2012/02/10 03:52:53 patrick Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="python? 2:2.4"
+PYTHON_DEPEND="python? 2:2.5"
 
 inherit gnome2 flag-o-matic python
 
