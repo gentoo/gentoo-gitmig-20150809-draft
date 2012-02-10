@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.345 2012/02/08 14:29:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.346 2012/02/10 16:28:50 ssuominen Exp $
+
+  10 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="q64" for media-gfx/imagemagick wrt #401327 and #402999
 
   08 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> package.use.mask:
   Global mask for gnustep-base/gnustep-make[libobjc2] with new version
