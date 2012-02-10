@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-mpd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.21 2011/04/30 15:38:21 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.22 2012/02/10 03:48:25 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-mpd-0.3.0.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   30 Apr 2011; Christoph Mende <angelos@gentoo.org> -python-mpd-0.2.1.ebuild:
   Remove old
