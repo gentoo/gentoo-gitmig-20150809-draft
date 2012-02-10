@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/pep8-0.6.1.ebuild,v 1.1 2011/06/10 19:42:46 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/pep8-0.6.1.ebuild,v 1.2 2012/02/10 04:09:50 patrick Exp $
 
 EAPI=3
 
-PYTHON_DEPEND="2:2.4 3:3.1"
+PYTHON_DEPEND="2:2.5 3:3.1"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
