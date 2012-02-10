@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.51 2012/02/10 18:50:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.52 2012/02/10 21:31:34 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -357,6 +357,10 @@ ocamlopt
 # Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
 # mask d3d since we don't have wine
 d3d
+
+# Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
+# mask wayland since dev-libs/wayland isn't keyworded
+wayland
 
 # Mips USE flags
 -n32
