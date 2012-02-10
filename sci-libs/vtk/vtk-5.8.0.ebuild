@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.4 2012/02/10 18:55:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.5 2012/02/10 19:36:06 jlec Exp $
 
 EAPI=3
 
@@ -74,6 +74,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-5.6.0-odbc.patch
 	"${FILESDIR}"/${PN}-5.6.1-ffmpeg.patch
 	"${FILESDIR}"/${PN}-5.6.1-libav-0.8.patch
+	"${FILESDIR}"/${P}-boost.patch
 	)
 
 pkg_setup() {
@@ -97,8 +98,8 @@ src_configure() {
 		-DCMAKE_SKIP_RPATH=YES
 		-DVTK_DIR="${S}"
 		-DVTK_INSTALL_LIB_DIR=/$(get_libdir)/
-		-DVTK_DATA_ROOT:PATH="${EPREFIX}"/usr/share/${PN}/data
-		-DCMAKE_INSTALL_PREFIX="${EPREFIX}"/usr
+		-DVTK_DATA_ROOT:PATH="${EPREFIX}/usr/share/${PN}/data"
+		-DCMAKE_INSTALL_PREFIX="${EPREFIX}/usr"
 		-DBUILD_SHARED_LIBS=ON
 		-DVTK_USE_SYSTEM_EXPAT=ON
 		-DVTK_USE_SYSTEM_FREETYPE=ON
@@ -108,8 +109,8 @@ src_configure() {
 		-DVTK_USE_SYSTEM_TIFF=ON
 		-DVTK_USE_SYSTEM_ZLIB=ON
 		-DVTK_USE_SYSTEM_HDF5=ON
-		-DHDF5_LIBRARY="${EPREFIX}"/usr/$(get_libdir)
-		-DHDF5_INCLUDE_DIRS="${EPREFIX}"/usr/include
+		-DHDF5_LIBRARY="${EPREFIX}/usr/$(get_libdir)"
+		-DHDF5_INCLUDE_DIRS="${EPREFIX}/usr/include"
 		-DBUILD_TESTING=OFF
 		-DBUILD_EXAMPLES=OFF
 		-DVTK_USE_HYBRID=ON
@@ -143,10 +144,10 @@ src_configure() {
 	mycmakeargs+=(
 		-DVTK_WRAP_TCL=ON
 		-DVTK_WRAP_TK=ON
-		-DVTK_TCL_INCLUDE_DIR="${EPREFIX}"/usr/include
-		-DVTK_TCL_LIBRARY="${EPREFIX}"/usr/$(get_libdir)
-		-DVTK_TK_INCLUDE_DIR="${EPREFIX}"/usr/include
-		-DVTK_TK_LIBRARY="${EPREFIX}"/usr/$(get_libdir)
+		-DVTK_TCL_INCLUDE_DIR="${EPREFIX}/usr/include"
+		-DVTK_TCL_LIBRARY="${EPREFIX}/usr/$(get_libdir)"
+		-DVTK_TK_INCLUDE_DIR="${EPREFIX}/usr/include"
+		-DVTK_TK_LIBRARY="${EPREFIX}/usr/$(get_libdir)"
 	)
 
 	use theora &&
@@ -178,9 +179,9 @@ src_configure() {
 			-DVTK_WRAP_PYTHON_SIP=ON
 			-DSIP_PYQT_DIR="${EPREFIX}/usr/share/sip"
 			-DSIP_INCLUDE_DIR="${EPREFIX}$(python_get_includedir)"
-			-DPYTHON_INCLUDE_DIR="${EPREFIX}"$(python_get_includedir)
+			-DPYTHON_INCLUDE_DIR="${EPREFIX}$(python_get_includedir)"
 			-DPYTHON_LIBRARY="${EPREFIX}$(python_get_library)"
-			-DVTK_PYTHON_INCLUDE_DIR="${EPREFIX}"$(python_get_includedir)
+			-DVTK_PYTHON_INCLUDE_DIR="${EPREFIX}$(python_get_includedir)"
 			-DVTK_PYTHON_LIBRARY="${EPREFIX}$(python_get_library)"
 			-DVTK_PYTHON_SETUP_ARGS:STRING=--root="${D}")
 	fi
@@ -195,10 +196,10 @@ src_configure() {
 			-DQT_WRAP_UI=ON
 			-DVTK_INSTALL_QT_DIR=/$(get_libdir)/qt4/plugins/${PN}
 			-DDESIRED_QT_VERSION=4
-			-DQT_MOC_EXECUTABLE="${EPREFIX}"/usr/bin/moc
-			-DQT_UIC_EXECUTABLE="${EPREFIX}"/usr/bin/uic
-			-DQT_INCLUDE_DIR="${EPREFIX}"/usr/include/qt4
-			-DQT_QMAKE_EXECUTABLE="${EPREFIX}"/usr/bin/qmake)
+			-DQT_MOC_EXECUTABLE="${EPREFIX}/usr/bin/moc"
+			-DQT_UIC_EXECUTABLE="${EPREFIX}/usr/bin/uic"
+			-DQT_INCLUDE_DIR="${EPREFIX}/usr/include/qt4"
+			-DQT_QMAKE_EXECUTABLE="${EPREFIX}/usr/bin/qmake")
 	fi
 
 	cmake-utils_src_configure
