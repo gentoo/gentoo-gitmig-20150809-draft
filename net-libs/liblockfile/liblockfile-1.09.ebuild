@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.09.ebuild,v 1.2 2012/02/10 17:04:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.09.ebuild,v 1.3 2012/02/10 21:17:30 mr_bones_ Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ src_prepare() {
 	# I don't feel like making the Makefile portable
 	[[ ${CHOST} == *-darwin* ]] \
 		&& cp ${FILESDIR}/Makefile.Darwin.in Makefile.in
-	
+
 	eautoreconf
 }
 
