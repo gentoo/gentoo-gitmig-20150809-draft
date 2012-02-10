@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyorbit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.72 2010/12/21 22:49:06 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.73 2012/02/10 03:35:41 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyorbit-2.24.0.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   21 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> pyorbit-2.24.0.ebuild:
   Add support for multiple python slots, bug #309045.
