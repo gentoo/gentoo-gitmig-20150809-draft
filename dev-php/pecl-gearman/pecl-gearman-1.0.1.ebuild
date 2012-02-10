@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-gearman/pecl-gearman-0.7.0-r1.ebuild,v 1.1 2011/12/06 09:56:29 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-gearman/pecl-gearman-1.0.1.ebuild,v 1.1 2012/02/10 23:16:36 mabi Exp $
 
-EAPI=2
+EAPI=4
 PHP_EXT_NAME="gearman"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
@@ -16,5 +16,5 @@ LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
 
-DEPEND="sys-cluster/gearmand"
+DEPEND=">=sys-cluster/gearmand-0.21"
 RDEPEND="${DEPEND}"
