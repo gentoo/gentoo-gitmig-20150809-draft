@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/gnome-activity-journal-0.8.0-r1.ebuild,v 1.3 2012/02/09 07:02:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/gnome-activity-journal-0.8.0-r1.ebuild,v 1.4 2012/02/10 23:45:23 tetromino Exp $
 
 EAPI=4
 
@@ -33,6 +33,11 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-python/python-distutils-extra"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_configure() { :; }
 

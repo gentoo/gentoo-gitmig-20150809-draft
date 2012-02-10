@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-activity-journal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/ChangeLog,v 1.5 2012/02/09 07:02:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/ChangeLog,v 1.6 2012/02/10 23:45:23 tetromino Exp $
+
+  10 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-activity-journal-0.8.0-r1.ebuild:
+  Fix building when python is python3.
 
   09 Feb 2012; Justin Lecher <jlec@gentoo.org>
   gnome-activity-journal-0.8.0-r1.ebuild:
