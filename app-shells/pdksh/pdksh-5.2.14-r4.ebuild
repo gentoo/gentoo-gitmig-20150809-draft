@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.28 2009/03/21 14:58:19 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.29 2012/02/10 22:40:17 hwoarang Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
-DEPEND="!app-shells/ksh"
+DEPEND=""
 
 RESTRICT="test"
 

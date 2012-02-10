@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/pdksh
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.23 2009/03/21 14:58:19 truedfx Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.24 2012/02/10 22:40:17 hwoarang Exp $
+
+  10 Feb 2012; Markos Chandras <hwoarang@gentoo.org> pdksh-5.2.14-r4.ebuild:
+  drop app-shells/ksh from DEPEND
 
   21 Mar 2009; Harald van Dĳk <truedfx@gentoo.org> pdksh-5.2.14-r4.ebuild:
   Avoid creating config.h twice; the second time can fail and is unnecessary
