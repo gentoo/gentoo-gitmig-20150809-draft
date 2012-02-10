@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r202.ebuild,v 1.6 2012/01/18 21:11:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r202.ebuild,v 1.7 2012/02/10 02:47:58 patrick Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
-PYTHON_DEPEND="python? 2:2.4"
+PYTHON_DEPEND="python? 2:2.5"
 
 inherit eutils gnome2 python
 
