@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20111203.ebuild,v 1.1 2011/12/26 19:42:53 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20120128.ebuild,v 1.1 2012/02/10 00:34:22 idl0r Exp $
 
 EAPI="4"
 
@@ -13,14 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
-DEPEND="~media-tv/linuxtv-dvb-headers-5"
+DEPEND=">=media-tv/linuxtv-dvb-headers-5.3"
 RDEPEND=""
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-
-	insinto /usr/share/w_scan
-	doins {pci,usb}.ids {pci,usb}.classes
 
 	dodoc ChangeLog README
 
