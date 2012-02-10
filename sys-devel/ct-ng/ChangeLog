@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/ct-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.30 2012/02/08 11:23:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.31 2012/02/10 11:44:10 blueness Exp $
+
+*ct-ng-1.13.4 (10 Feb 2012)
+
+  10 Feb 2012; Anthony G. Basile <blueness@gentoo.org> +ct-ng-1.13.4.ebuild:
+  Version bump 1.13 branch
 
 *ct-ng-1.14.1 (08 Feb 2012)
 
@@ -8,11 +13,11 @@
   Version bump
 
   04 Feb 2012; Anthony G. Basile <blueness@gentoo.org> ct-ng-1.14.0.ebuild:
-  Add dependency on dev-util/gperf in 1.14 series
+  Add dependency on dev-util/gperf in 1.14 branch
 
   01 Feb 2012; Anthony G. Basile <blueness@gentoo.org> -ct-ng-1.13.1.ebuild,
   -ct-ng-1.13.2.ebuild:
-  Removed older versions in 1.13 series
+  Removed older versions in 1.13 branch
 
 *ct-ng-1.14.0 (01 Feb 2012)
 
@@ -25,7 +30,7 @@
   Version bump
 
   21 Nov 2011; Anthony G. Basile <blueness@gentoo.org> -ct-ng-1.13.0.ebuild:
-  Removed older version in 1.13 series
+  Removed older version in 1.13 branch
 
 *ct-ng-1.13.2 (21 Nov 2011)
 
