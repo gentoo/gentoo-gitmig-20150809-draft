@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/venus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/venus/ChangeLog,v 1.2 2010/09/12 22:07:28 tampakrap Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/venus/ChangeLog,v 1.3 2012/02/10 02:50:15 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> venus-20100911.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   12 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   venus-20100911.ebuild, metadata.xml:
