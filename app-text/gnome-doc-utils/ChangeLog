@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-doc-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.192 2011/11/15 21:44:48 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.193 2012/02/10 02:42:18 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> gnome-doc-utils-0.20.6.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   15 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-doc-utils-0.20.4.ebuild, -gnome-doc-utils-0.20.5.ebuild:
