@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.255 2012/02/10 17:07:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.256 2012/02/10 22:17:11 jdhore Exp $
+
+  10 Feb 2012; Jeff Horelick <jdhore@gentoo.org> lvm2-2.02.88.ebuild:
+  x86 stable per bug 400557
 
   10 Feb 2012; Markus Meier <maekke@gentoo.org> lvm2-2.02.88.ebuild:
   arm stable, bug #400557
