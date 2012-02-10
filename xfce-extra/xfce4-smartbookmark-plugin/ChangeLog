@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-smartbookmark-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/ChangeLog,v 1.6 2012/02/09 01:44:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/ChangeLog,v 1.7 2012/02/10 12:30:35 ssuominen Exp $
+
+  10 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-smartbookmark-plugin-0.4.4.ebuild:
+  ppc/ppc64/x86 stable wrt #401229
 
   09 Feb 2012; Jeroen Roovers <jer@gentoo.org>
   xfce4-smartbookmark-plugin-0.4.4.ebuild:
