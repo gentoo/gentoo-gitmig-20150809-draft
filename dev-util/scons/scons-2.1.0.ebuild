@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.1.0.ebuild,v 1.6 2012/02/08 21:36:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.1.0.ebuild,v 1.7 2012/02/10 03:45:16 patrick Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
