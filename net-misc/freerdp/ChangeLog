@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/freerdp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.22 2012/01/16 20:51:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.23 2012/02/10 03:37:19 floppym Exp $
+
+*freerdp-1.0.1 (10 Feb 2012)
+
+  10 Feb 2012; Mike Gilbert <floppym@gentoo.org> +freerdp-1.0.1.ebuild:
+  Version bump.
 
   16 Jan 2012; Mike Gilbert <floppym@gentoo.org> freerdp-1.0.0.ebuild,
   freerdp-9999.1.ebuild:
