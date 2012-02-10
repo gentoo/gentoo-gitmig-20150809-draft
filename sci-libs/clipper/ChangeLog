@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/clipper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.15 2012/02/03 12:27:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.16 2012/02/10 20:27:03 jlec Exp $
+
+  10 Feb 2012; Justin Lecher <jlec@gentoo.org> +files/20100511-makefile.patch,
+  clipper-20100511-r1.ebuild:
+  Drop -g from FLAGS
 
   03 Feb 2012; Justin Lecher <jlec@gentoo.org> clipper-20100511-r1.ebuild:
   Moved to autotools-utils.eclass

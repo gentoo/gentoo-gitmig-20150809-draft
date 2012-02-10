@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20100511-r1.ebuild,v 1.2 2012/02/03 12:27:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20100511-r1.ebuild,v 1.3 2012/02/10 20:27:03 jlec Exp $
 
 EAPI=4
 
@@ -26,14 +26,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${PN}-2.1
 
-PATCHES=( "${FILESDIR}"/20091215-missing-var.patch )
-
-src_prepare() {
-	# ccp4 provides these, and more.
-	sed -i -e "s:examples::g" "${S}"/Makefile.am
-
-	autotools-utils_src_prepare
-}
+PATCHES=(
+	"${FILESDIR}"/20091215-missing-var.patch
+	"${FILESDIR}"/${PV}-makefile.patch
+	)
 
 src_configure() {
 	# Recommended on ccp4bb/coot ML to fix crashes when calculating maps
@@ -55,7 +51,5 @@ src_configure() {
 }
 
 src_test() {
-	emake \
-		-C "${AUTOTOOLS_BUILD_DIR}"/examples \
-		check
+	emake -C "${AUTOTOOLS_BUILD_DIR}"/examples check
 }
