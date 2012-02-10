@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/accerciser
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.25 2011/12/31 22:16:21 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.26 2012/02/10 04:04:50 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> accerciser-1.12.1.ebuild,
+  accerciser-3.2.1.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   accerciser-1.12.1.ebuild, accerciser-3.2.1.ebuild:
