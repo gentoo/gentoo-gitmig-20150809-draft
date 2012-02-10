@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98-r1.ebuild,v 1.6 2012/02/07 15:40:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98-r1.ebuild,v 1.7 2012/02/10 01:40:56 flameeyes Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -20,7 +20,7 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ~ppc ~ppc64 ~x86"
-IUSE="alsa caps +consolekit cups debug gstreamer pcmcia test-programs usb"
+IUSE="alsa caps +consolekit cups debug gstreamer pcmcia test-programs usb readline"
 
 CDEPEND="
 	>=dev-libs/glib-2.14:2
@@ -37,6 +37,7 @@ CDEPEND="
 		>=media-libs/gst-plugins-base-0.10:0.10
 	)
 	usb? ( dev-libs/libusb:1 )
+	readline? ( sys-libs/readline )
 "
 DEPEND="${CDEPEND}
 	>=dev-util/pkgconfig-0.20
@@ -82,6 +83,8 @@ src_prepare() {
 }
 
 src_configure() {
+	use readline || export ac_cv_header_readline_readline_h=no
+
 	econf \
 		--enable-hid2hci \
 		--enable-audio \
