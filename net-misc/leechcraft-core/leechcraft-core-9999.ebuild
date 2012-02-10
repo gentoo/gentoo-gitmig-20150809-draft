@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-9999.ebuild,v 1.2 2011/12/16 18:40:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-9999.ebuild,v 1.3 2012/02/10 13:17:37 maksbotan Exp $
 
 EAPI="4"
 
@@ -28,35 +28,8 @@ pkg_setup() {
 }
 
 src_configure() {
-	local mycmakeargs="-DENABLE_HTTP=OFF
-		-DENABLE_POSHUKU=OFF
-		-DENABLE_TORRENT=OFF
-		-DENABLE_AGGREGATOR=OFF
-		-DENABLE_NUFELLA=OFF
-		-DENABLE_DBUSMANAGER=OFF
-		-DENABLE_DEADLYRICS=OFF
-		-DENABLE_HISTORYHOLDER=OFF
-		-DENABLE_LMP=OFF
-		-DENABLE_NETWORKMONITOR=OFF
-		-DENABLE_SEEKTHRU=OFF
-		-DENABLE_CHATTER=OFF
-		-DENABLE_FTP=OFF
-		-DENABLE_EISKALTDCPP=OFF
-		-DENABLE_YASD=OFF
-		-DENABLE_ANHERO=OFF
-		-DENABLE_KINOTIFY=OFF
-		-DENABLE_VGRABBER=OFF
-		-DENABLE_NEWLIFE=OFF
-		-DENABLE_PYLC=OFF
-		-DENABLE_POC=OFF
-		-DENABLE_AUSCRIE=OFF
-		-DENABLE_SUMMARY=OFF
-		-DENABLE_TABPP=OFF
-		-DENABLE_SECMAN=OFF
-		-DENABLE_QROSP=OFF
-		-DENABLE_POPISHU=OFF
-		-DENABLE_GLANCE=OFF
-		-DENABLE_SHELLOPEN=OFF"
+	local mycmakeargs="
+		-DWITH_PLUGINS=False"
 	cmake-utils_src_configure
 }
 
