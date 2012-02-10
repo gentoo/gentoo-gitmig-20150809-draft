@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/windowmaker
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.129 2011/11/12 10:36:45 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.130 2012/02/10 18:20:06 voyageur Exp $
+
+*windowmaker-0.95.1 (10 Feb 2012)
+
+  10 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +windowmaker-0.95.1.ebuild, metadata.xml:
+  New version! Integrates the compilation fixes/new features of our patchsets,
+  and adds some new features too (tab completion in run dialog, inotify
+  detection of configuration changes...). Fixes bug #398351
 
   12 Nov 2011; Justin Lecher <jlec@gentoo.org> windowmaker-0.92.0-r11.ebuild,
   metadata.xml:
