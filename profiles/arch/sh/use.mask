@@ -112,7 +112,6 @@ video_cards_nsc
 video_cards_nv
 video_cards_r128
 video_cards_radeon
-video_cards_radeonhd
 video_cards_rendition
 video_cards_s3
 video_cards_s3virge
@@ -126,6 +125,17 @@ video_cards_tseng
 video_cards_vesa
 video_cards_via
 video_cards_voodoo
+
+# Matt Turner <mattst88@gentoo.org>
+# Mask more VIDEO_CARDs added with mesa-8.0
+video_cards_r100
+video_cards_r200
+video_cards_r300
+video_cards_r600
+video_cards_i915
+video_cards_i965
+# vmware wasn't added with mesa-8.0, but it should still be masked
+video_cards_vmware
 
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering      

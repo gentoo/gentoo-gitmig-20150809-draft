@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.121 2012/01/04 18:34:33 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.122 2012/02/10 17:33:30 mattst88 Exp $
+
+  10 Feb 2012; Matt Turner <mattst88@gentoo.org> use.mask:
+  Add new video_cards_* to use.mask. Also remove dead radeonhd mask.
 
   04 Jan 2012; Ralph Sennhauser <sera@gentoo.org> package.use.mask:
   Remove package.use.mask for ruby_targets_jruby as it's already masked in base
