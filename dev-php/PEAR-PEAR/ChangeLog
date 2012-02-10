@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.152 2011/11/30 14:30:27 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.153 2012/02/10 13:37:31 olemarkus Exp $
+
+  10 Feb 2012; Ole Markus With <olemarkus@gentoo.org> PEAR-PEAR-1.9.3.ebuild,
+  PEAR-PEAR-1.9.4.ebuild:
+  Setting dev-php/pear as PEDEPEND to ensure a usable system is installed
 
   30 Nov 2011; Fabian Groffen <grobian@gentoo.org> PEAR-PEAR-1.9.4.ebuild:
   Marked ~x64-macos, bug #388257
