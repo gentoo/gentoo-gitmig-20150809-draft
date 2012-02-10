@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.8 2012/01/20 09:33:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.9 2012/02/10 04:00:38 patrick Exp $
 
 #BACKPORTS=
 
@@ -11,7 +11,7 @@ if [[ ${PV} = *9999* ]]; then
 	GIT_ECLASS="git-2 autotools"
 fi
 
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 
 # Stop gnome2.eclass from doing stuff on USE=debug
 GCONF_DEBUG="no"
