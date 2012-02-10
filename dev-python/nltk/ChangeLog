@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nltk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.5 2011/10/10 18:52:12 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.6 2012/02/10 16:45:31 jer Exp $
+
+  10 Feb 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Change maintainer order to match description tags.
 
 *nltk-2.0.1_rc1 (10 Oct 2011)
 
