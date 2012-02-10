@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r3.ebuild,v 1.1 2007/08/15 11:55:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r3.ebuild,v 1.2 2012/02/10 22:39:38 hwoarang Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-RDEPEND="|| ( app-shells/pdksh app-shells/ksh )
+RDEPEND="app-shells/pdksh
 	dev-lang/perl
 	<net-analyzer/rrdtool-1.2
 	dev-perl/ConfigReader
