@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.16 2012/02/10 00:34:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.17 2012/02/10 00:55:34 flameeyes Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/pulseaudio/pulseaudio.git"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc"
+IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc ssl"
 
 RDEPEND="app-admin/eselect-esd
 	X? (
@@ -44,6 +44,7 @@ RDEPEND="app-admin/eselect-esd
 	realtime? ( sys-auth/rtkit )
 	equalizer? ( sci-libs/fftw:3.0 )
 	orc? ( >=dev-lang/orc-0.4.9 )
+	ssl? ( dev-libs/openssl )
 	>=media-libs/speex-1.2_rc1
 	>=media-libs/libsndfile-1.0.20
 	sys-libs/gdbm
@@ -109,6 +110,7 @@ src_configure() {
 		$(use_enable test default-build-tests) \
 		$(use_enable udev) \
 		$(use_enable ipv6) \
+		$(use_enable ssl openssl) \
 		$(use_with caps) \
 		$(use_with equalizer fftw) \
 		--localstatedir="${EPREFIX}"/var \

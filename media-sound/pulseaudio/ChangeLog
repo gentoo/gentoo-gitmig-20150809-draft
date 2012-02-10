@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.255 2012/02/10 00:34:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.256 2012/02/10 00:55:34 flameeyes Exp $
+
+  10 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
+  pulseaudio-0.9.23-r1.ebuild, pulseaudio-1.1-r1.ebuild, pulseaudio-9999.ebuild:
+  Add an USE flag 'ssl' to disable raop (and add missing dependency).
 
   10 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   pulseaudio-0.9.22-r2.ebuild, pulseaudio-0.9.22.ebuild,

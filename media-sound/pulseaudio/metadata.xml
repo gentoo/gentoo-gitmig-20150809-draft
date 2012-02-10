@@ -41,11 +41,15 @@
       Makes PulseAudio use RealtimeKit (<pkg>sys-auth/rtkit</pkg>) to get
       real-time priority while running.
     </flag>
-	<flag name="equalizer" restrict="=media-sound/pulseaudio-9999">
+    <flag name="equalizer" restrict="=media-sound/pulseaudio-9999">
       Enable the equalizer module (requires <pkg>sci-libs/fftw</pkg>).
-	</flag>
-	<flag name="orc" restrict="=media-sound/pulseaudio-9999">
+    </flag>
+    <flag name="orc" restrict="=media-sound/pulseaudio-9999">
       Use <pkg>dev-lang/orc</pkg> for runtime optimisations.
-	</flag>
+    </flag>
+    <flag name="ssl">
+      Use <pkg>dev-libs/openssl</pkg> to provide support for RAOP
+      (AirPort) streaming.
+    </flag>
   </use>
 </pkgmetadata>

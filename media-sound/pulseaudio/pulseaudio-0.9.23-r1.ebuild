@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.23-r1.ebuild,v 1.2 2012/02/10 00:34:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.23-r1.ebuild,v 1.3 2012/02/10 00:55:34 flameeyes Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.gz"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="+alsa avahi +caps jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime"
+IUSE="+alsa avahi +caps jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime ssl"
 
 RDEPEND="app-admin/eselect-esd
 	X? (
@@ -42,6 +42,7 @@ RDEPEND="app-admin/eselect-esd
 	asyncns? ( net-libs/libasyncns )
 	udev? ( || ( >=sys-fs/udev-171[hwdb] >=sys-fs/udev-143[extras] ) )
 	realtime? ( sys-auth/rtkit )
+	ssl? ( dev-libs/openssl )
 	>=media-libs/speex-1.2_rc1
 	>=media-libs/libsndfile-1.0.20
 	sys-libs/gdbm
@@ -101,6 +102,7 @@ src_configure() {
 		$(use_enable test default-build-tests) \
 		$(use_enable udev) \
 		$(use_enable ipv6) \
+		$(use_enable ssl openssl) \
 		$(use_with caps) \
 		--localstatedir="${EPREFIX}"/var \
 		--disable-per-user-esound-socket \
