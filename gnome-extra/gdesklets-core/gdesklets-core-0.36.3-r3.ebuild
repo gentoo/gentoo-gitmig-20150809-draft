@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r3.ebuild,v 1.10 2011/10/24 05:47:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r3.ebuild,v 1.11 2012/02/10 03:36:40 patrick Exp $
 
 EAPI=3
 # desklets don't run with USE=debug
 GCONF_DEBUG="no"
 PYTHON_USE_WITH="xml"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 
 inherit gnome2 python eutils autotools multilib bash-completion-r1
 

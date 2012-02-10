@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.32.0.ebuild,v 1.10 2011/03/22 19:22:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.32.0.ebuild,v 1.11 2012/02/10 03:38:26 patrick Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 
 inherit eutils gnome2 python
 

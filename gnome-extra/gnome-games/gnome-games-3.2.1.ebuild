@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1.ebuild,v 1.3 2012/01/13 16:51:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1.ebuild,v 1.4 2012/02/10 03:33:26 patrick Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 WANT_AUTOMAKE="1.11"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="xml"
 
 # make sure games is inherited first so that the gnome2

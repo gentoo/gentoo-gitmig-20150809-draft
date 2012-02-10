@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/at-spi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.229 2011/11/16 01:55:34 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.230 2012/02/10 03:41:53 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> at-spi-1.32.0-r1.ebuild,
+  at-spi-1.32.0.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
 *at-spi-2.2.0 (16 Nov 2011)
 

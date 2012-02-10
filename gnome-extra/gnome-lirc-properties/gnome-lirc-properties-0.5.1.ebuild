@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.5.1.ebuild,v 1.3 2012/01/14 18:46:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.5.1.ebuild,v 1.4 2012/02/10 03:32:07 patrick Exp $
 
 EAPI=3
 
 GCONF_DEBUG=no
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 
 inherit gnome2 python
 

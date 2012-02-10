@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.152 2011/12/01 09:33:23 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.153 2012/02/10 03:36:40 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org>
+  gdesklets-core-0.36.3-r3.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   01 Dec 2011; Pacho Ramos <pacho@gentoo.org> -gdesklets-core-0.36.2-r3.ebuild:
   Drop old version that still needs deprecated gnome-python meta package.
