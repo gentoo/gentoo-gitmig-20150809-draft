@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.943 2012/02/07 14:47:14 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.944 2012/02/10 16:42:17 maekke Exp $
+
+  10 Feb 2012; Markus Meier <maekke@gentoo.org> gentoo-sources-3.2.1-r2.ebuild:
+  arm stable, bug #400671
 
 *gentoo-sources-3.0.20 (07 Feb 2012)
 

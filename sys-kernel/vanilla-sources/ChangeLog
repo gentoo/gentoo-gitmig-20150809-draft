@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.964 2012/02/07 14:56:34 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.965 2012/02/10 16:46:58 maekke Exp $
+
+  10 Feb 2012; Markus Meier <maekke@gentoo.org> vanilla-sources-3.2.2.ebuild:
+  arm stable, bug #400671
 
 *vanilla-sources-3.0.20 (07 Feb 2012)
 
