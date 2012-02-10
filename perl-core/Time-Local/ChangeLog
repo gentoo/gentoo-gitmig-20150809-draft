@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.57 2012/02/08 19:40:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.58 2012/02/10 16:53:47 maekke Exp $
+
+  10 Feb 2012; Markus Meier <maekke@gentoo.org> Time-Local-1.200.0.ebuild:
+  arm stable, bug #397199
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> Time-Local-1.200.0.ebuild:
   Stable for HPPA (bug #397199).
