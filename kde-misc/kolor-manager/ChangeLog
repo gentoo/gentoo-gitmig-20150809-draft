@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kolor-manager
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kolor-manager/ChangeLog,v 1.1 2012/02/10 09:16:24 johu Exp $
+
+*kolor-manager-0_p20120210 (10 Feb 2012)
+
+  10 Feb 2012; Johannes Huber <johu@gentoo.org>
+  +kolor-manager-0_p20120210.ebuild, +metadata.xml:
+  New package wrt bug #402473. Initial ebuild by Chris Reffett
+  <geekboy72@gmail.com>.
+
