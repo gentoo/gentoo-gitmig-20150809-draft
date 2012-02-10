@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13470 2012/02/10 00:22:01 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13471 2012/02/10 06:48:52 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (10 Feb 2012)
+# Masked for testing
+=net-libs/gnutls-3*
 
 # Angelo Arrifano <miknix@gentoo.org> (10 Feb 2012)
 # Upstream versioning changed, hard masked old versions
@@ -831,11 +835,6 @@ dev-lang/open64
 # Masked for testing
 >=sys-devel/gcc-4.6.0
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (18 Sep 2011)
-# Mask latest revisions using dev-libs/nettle and app-crypt/p11-kit
-# Needs tinderbox testing.
->=net-libs/gnutls-2.12
-
 # Christian Faulhammer <fauli@gentoo.org> (12 Mar 2011)
 # Mask for testing
 >=www-apps/joomla-1.6.0
@@ -957,10 +956,6 @@ net-analyzer/ncrack
 # opennebula: beta, testing
 app-emulation/opennebula
 =media-libs/celt-0.8.1
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (22 Jul 2010)
-# Development versions.
-=net-libs/gnutls-2.11*
 
 # Luca Barbato <lu_zero@gentoo.org> (21 Jul 2010)
 # Not ready for public consumption, clashes with current mesa-git
