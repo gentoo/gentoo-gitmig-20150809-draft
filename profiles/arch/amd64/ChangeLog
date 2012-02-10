@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.159 2012/02/08 14:29:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.160 2012/02/10 21:34:45 mattst88 Exp $
+
+  10 Feb 2012; Matt Turner <mattst88@gentoo.org> no-multilib/use.mask:
+  USE mask d3d on amd64/no-multilib since wine is 32-bit.
 
   08 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> package.use.mask:
   Drop arch-speficic mask on gnustep-base/gnustep-make[libobjc2]
