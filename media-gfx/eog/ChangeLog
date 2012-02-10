@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.287 2011/11/27 18:09:26 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.288 2012/02/10 03:27:09 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> eog-2.32.1.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   27 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org> eog-2.32.1.ebuild:
   Drop use flag checks on gtk+, they have been long gone.
