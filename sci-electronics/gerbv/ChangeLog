@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gerbv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.41 2011/06/28 19:53:20 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.42 2012/02/10 06:35:25 tomjbe Exp $
+
+*gerbv-2.6.0 (10 Feb 2012)
+
+  10 Feb 2012; Thomas Beierlein <tomjbe@gentoo.org> +gerbv-2.6.0.ebuild:
+  Version bump (bug #401825). Thanks to A. Walker
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> gerbv-2.4.0.ebuild:
   Marking gerbv-2.4.0 ppc for bug 342811
