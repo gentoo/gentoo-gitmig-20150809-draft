@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.6.2.ebuild,v 1.10 2010/11/05 18:05:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.6.2.ebuild,v 1.11 2012/02/10 00:57:22 pesa Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -57,7 +57,7 @@ src_install() {
 	# note that emake install_qchdocs fails for undefined reason so we use a
 	# workaround
 	cd "${S}"
-	insinto ${QTDOCDIR#${EPREFIX}}
+	insinto "${QTDOCDIR#${EPREFIX}}"
 	doins -r "${S}"/doc/qch || die "doins qch documentation failed"
 	dobin "${S}"/bin/qdoc3 || die "Installing qdoc3 failed"
 	#emake INSTALL_ROOT="${D}" install_qchdocs || die "emake install_qchdocs	failed"
