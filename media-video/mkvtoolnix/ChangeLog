@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.157 2012/02/10 05:33:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.158 2012/02/10 05:38:55 radhermit Exp $
+
+  10 Feb 2012; Tim Harder <radhermit@gentoo.org> +mkvtoolnix-5.0.1.ebuild:
+  Re-add latest unmasked version.
 
   10 Feb 2012; Tim Harder <radhermit@gentoo.org> -mkvtoolnix-4.7.0-r1.ebuild,
   -mkvtoolnix-4.8.0.ebuild, -mkvtoolnix-4.9.0.ebuild, -mkvtoolnix-5.0.0.ebuild,
