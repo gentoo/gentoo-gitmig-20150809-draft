@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>miknix@gentoo.org</email>
+		<name>Angelo Arrifano</name>
 	</maintainer>
 	<longdescription lang="en">
 		Periodic Calendar is a GUI utility which assists in menstrual cycle
