@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12.ebuild,v 1.6 2012/02/10 18:28:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12-r1.ebuild,v 1.1 2012/02/10 18:28:36 voyageur Exp $
 
-EAPI=3
+EAPI=4
+inherit eutils
 
 DESCRIPTION="X based config tool for the windowmaker X windowmanager."
 HOMEPAGE="http://wmakerconf.sourceforge.net/"
@@ -10,11 +11,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="imlib nls perl"
 
 RDEPEND="x11-libs/gtk+:2
-	<x11-wm/windowmaker-0.95.0
+	>=x11-wm/windowmaker-0.95.0
 	imlib? ( media-libs/imlib )
 	perl? ( dev-lang/perl
 		dev-perl/HTML-Parser
@@ -24,6 +25,10 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-wmaker-0.95_support.patch
+}
 
 src_configure() {
 	local myconf
@@ -36,9 +41,14 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" gnulocaledir="${ED}/usr/share/locale" install || die
+	emake DESTDIR="${D}" gnulocaledir="${ED}/usr/share/locale" install
 	dodoc AUTHORS ChangeLog MANUAL NEWS README TODO
 	doman man/*.1
 
 	rm -f "${ED}"/usr/share/${PN}/{AUTHORS,README,COPYING,NEWS,MANUAL,ABOUT-NLS,NLS-TEAM1,ChangeLog}
+}
+
+pkg_postinst() {
+	elog "New features added with WindowMaker >= 0.95 will not be available in wmakerconf"
+	elog "WPrefs is the recommended configuration tool"
 }
