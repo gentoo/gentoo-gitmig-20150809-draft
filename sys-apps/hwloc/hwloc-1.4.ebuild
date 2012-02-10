@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.4.ebuild,v 1.1 2012/01/26 17:33:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.4.ebuild,v 1.2 2012/02/10 09:11:07 xarthisius Exp $
 
 EAPI=4
 
@@ -34,6 +34,7 @@ src_configure() {
 		$(use_enable cairo) \
 		$(use_enable debug) \
 		$(use_enable pci) \
+		$(use_enable numa libnuma) \
 		$(use_enable static-libs static) \
 		$(use_enable xml libxml2) \
 		$(use_with X x) \

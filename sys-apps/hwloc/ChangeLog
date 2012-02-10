@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.20 2012/01/26 17:33:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.21 2012/02/10 09:11:07 xarthisius Exp $
+
+  10 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> hwloc-1.4.ebuild:
+  Add actual use_enable for numa
 
 *hwloc-1.4 (26 Jan 2012)
 
