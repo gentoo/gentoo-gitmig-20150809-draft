@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.3.1.ebuild,v 1.1 2011/07/30 21:45:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.3.1.ebuild,v 1.2 2012/02/10 03:16:07 patrick Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH_OPT="X"
 PYTHON_USE_WITH="tk"
 
