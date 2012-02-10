@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/polysh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/polysh/ChangeLog,v 1.1 2011/11/04 08:23:26 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/polysh/ChangeLog,v 1.2 2012/02/10 02:55:20 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> polysh-0.4.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
 *polysh-0.4 (04 Nov 2011)
 
