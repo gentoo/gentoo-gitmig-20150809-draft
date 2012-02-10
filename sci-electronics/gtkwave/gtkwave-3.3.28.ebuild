@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.28.ebuild,v 1.3 2012/02/10 19:09:44 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.28.ebuild,v 1.4 2012/02/10 22:17:52 ago Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 IUSE="doc examples fasttree fatlines judy lzma tcl"
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
