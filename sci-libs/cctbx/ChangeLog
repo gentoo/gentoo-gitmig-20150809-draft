@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.22 2012/02/10 20:20:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.23 2012/02/10 22:52:33 hwoarang Exp $
+
+  10 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  cctbx-2010.03.29.2334-r3.ebuild, cctbx-2010.03.29.2334-r4.ebuild,
+  cctbx-2010.03.29.2334-r5.ebuild, cctbx-2010.03.29.2334-r6.ebuild:
+  Update Boost dependencies. Thanks to Arfrever
 
 *cctbx-2010.03.29.2334-r6 (10 Feb 2012)
 

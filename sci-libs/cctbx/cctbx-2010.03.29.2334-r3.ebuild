@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r3.ebuild,v 1.9 2011/10/07 09:52:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r3.ebuild,v 1.10 2012/02/10 22:52:33 hwoarang Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ IUSE="+minimal openmp threads"
 
 RDEPEND="
 	virtual/fortran
-	>dev-libs/boost-1.39[python]
+	<dev-libs/boost-1.48[python]
 	sci-libs/clipper
 	sci-libs/fftw
 	!minimal? (
