@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/mesa
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.377 2011/12/27 20:47:37 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.378 2012/02/10 18:44:37 mattst88 Exp $
+
+*mesa-8.0 (10 Feb 2012)
+
+  10 Feb 2012; Matt Turner <mattst88@gentoo.org> +mesa-8.0.ebuild,
+  +files/mesa-8.0-dont-require-llvm-for-r300.patch,
+  +files/eselect-mesa.conf.8.0, metadata.xml:
+  Version bump. Move to EAPI4. New USE flags gles1, gles2, wayland, g3dvl,
+  vdpau, xvmc, and d3d. New split VIDEO_CARDS: i915, i965, r100, r200, r300,
+  r600. Fixes bugs 308497, 377013, 380303.
 
   27 Dec 2011; Markus Meier <maekke@gentoo.org> mesa-7.11.2.ebuild:
   x86 stable, bug #394393
