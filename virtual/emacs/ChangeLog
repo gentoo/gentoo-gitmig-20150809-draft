@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.44 2011/07/02 17:31:27 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.45 2012/02/10 16:51:07 grobian Exp $
+
+  10 Feb 2012; Fabian Groffen <grobian@gentoo.org> emacs-23.ebuild:
+  Marked ~x64-macos
 
   02 Jul 2011; Ulrich Mueller <ulm@gentoo.org> emacs-21.ebuild,
   emacs-22.ebuild, emacs-23.ebuild:
