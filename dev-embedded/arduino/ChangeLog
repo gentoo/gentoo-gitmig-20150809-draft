@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/arduino
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/ChangeLog,v 1.7 2012/02/10 00:09:27 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/ChangeLog,v 1.8 2012/02/10 00:50:47 miknix Exp $
+
+  10 Feb 2012; Angelo Arrifano <miknix@gentoo.org> arduino-1.0.ebuild,
+  +files/arduino.desktop:
+  Add menu entry since upstream does not do it.
 
 *arduino-1.0 (10 Feb 2012)
 

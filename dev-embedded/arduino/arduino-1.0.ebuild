@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.ebuild,v 1.1 2012/02/10 00:09:27 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.ebuild,v 1.2 2012/02/10 00:50:47 miknix Exp $
 
 EAPI=3
 inherit eutils
@@ -76,5 +76,11 @@ src_install() {
 			|| die "Couldn't symlink system avrdude files"
 		dosym /etc/avrdude.conf "/usr/share/${P}/hardware/tools/avrdude.conf" \
 			|| die "Couldn't symlink system avrdude files"
+
+		# install desktop icon
+		mkdir -p "${D}"/usr/share/applications
+		sed -e s@__P__@${P}@ < "${FILESDIR}"/arduino.desktop \
+			> "${D}"/usr/share/applications/arduino.desktop \
+			|| die "Failed to install desktop icon"
 	fi
 }
