@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.16 2012/02/10 03:59:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.17 2012/02/10 19:13:10 flameeyes Exp $
 
 #BACKPORTS=2
 #AUTOTOOLIZE=yes
@@ -42,7 +42,9 @@ IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux +udev \
 	uml virtualbox virt-network xen elibc_glibc"
 # IUSE=one : bug #293416 & bug #299011
-REQUIRED_USE="|| ( lxc openvz qemu uml virtualbox xen )"
+REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
+	lxc? ( libvirtd ) openvz? ( libvirtd ) qemu? ( libvirtd ) uml? ( libvirtd )
+	virtualbox? ( libvirtd ) xen? ( libvirtd )"
 
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
