@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.47 2012/01/01 16:13:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.48 2012/02/10 19:45:03 radhermit Exp $
+
+  10 Feb 2012; Tim Harder <radhermit@gentoo.org> nettle-2.4.ebuild,
+  files/nettle-2.4-darwin-shlink.patch:
+  Enable gmp use flag by default (needed by gnutls) and fix sed line in patch
+  file (bug #400941).
 
   01 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/nettle-2.0-binutils-2.22.patch, nettle-1.15.ebuild, nettle-2.0.ebuild,

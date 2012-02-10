@@ -15,15 +15,14 @@ Fixed incorrect -gmp argument in LIBS (probably typo)
 
 --- configure.ac
 +++ configure.ac
-@@ -61,9 +61,8 @@
+@@ -61,9 +61,7 @@
    [enable_gcov=no])
  
  LSH_RPATH_INIT([`echo $with_lib_path | sed 's/:/ /g'` \
 -    `echo $exec_prefix | sed "s@^NONE@$prefix/lib@g" | sed "s@^NONE@$ac_default_prefix/lib@g"` \
 -    /usr/local/lib /sw/local/lib /sw/lib \
 -    /usr/gnu/lib /opt/gnu/lib /sw/gnu/lib /usr/freeware/lib /usr/pkg/lib])
-+    `echo $exec_prefix | sed "s@^NONE@$prefix/lib@g" | sed
-+"s@^NONE@$ac_default_prefix/lib@g"`])
++    `echo $exec_prefix | sed "s@^NONE@$prefix/lib@g" | sed "s@^NONE@$ac_default_prefix/lib@g"`])
  
  # Checks for programs.
  AC_PROG_CC
