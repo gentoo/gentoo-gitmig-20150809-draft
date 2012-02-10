@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.388 2012/02/02 20:10:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.389 2012/02/10 18:10:03 robbat2 Exp $
+
+  10 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> openldap-2.3.43-r1.ebuild,
+  openldap-2.4.19-r1.ebuild, openldap-2.4.21.ebuild, openldap-2.4.23.ebuild,
+  openldap-2.4.24.ebuild, openldap-2.4.25-r1.ebuild, openldap-2.4.25.ebuild,
+  openldap-2.4.28.ebuild:
+  Make USE=syslog default on older ebuilds as well, to solve where the logs are
+  vanishing to with the default configuration.
 
 *openldap-2.4.28 (02 Feb 2012)
 
