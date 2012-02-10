@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2011.08.04.ebuild,v 1.7 2011/12/11 00:42:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2011.08.04.ebuild,v 1.8 2012/02/10 04:11:03 patrick Exp $
 
 EAPI=3
-PYTHON_DEPEND=2:2.4
+PYTHON_DEPEND=2:2.5
 
 inherit python
 
