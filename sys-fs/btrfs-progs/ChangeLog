@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/btrfs-progs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.38 2011/12/15 16:35:04 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.39 2012/02/10 21:45:37 lavajoe Exp $
+
+  10 Feb 2012; Joe Peterson <lavajoe@gentoo.org> btrfs-progs-0.19-r3.ebuild,
+  btrfs-progs-9999.ebuild:
+  Added sys-libs/zlib dependency (bug #393953)
 
   15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-0.19-r3.ebuild:
   Stable for AMD64, wrt bug #393953
