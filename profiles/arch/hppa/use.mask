@@ -1,5 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.47 2012/02/10 17:49:40 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.48 2012/02/10 18:49:01 mattst88 Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (4 Jan 2012)
@@ -312,5 +312,9 @@ h323
 # Doug Goldstein <cardoe@gentoo.org> (27 Apr 2007)
 # Dell does not ship or sell HPPA systems
 dell
+
+# Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
+# mask d3d since we don't have wine
+d3d
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.

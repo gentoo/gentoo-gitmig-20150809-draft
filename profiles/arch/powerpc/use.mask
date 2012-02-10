@@ -187,3 +187,7 @@ prelude
 # x11-misc/colord and app-admin/packagekit-base not tested. Bug #387959.
 colord
 packagekit
+
+# Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
+# mask d3d since we don't have wine
+d3d

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.69 2012/02/10 17:31:21 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.70 2012/02/10 18:51:46 mattst88 Exp $
+
+  10 Feb 2012; Matt Turner <mattst88@gentoo.org> use.mask:
+  Mask d3d USE flag.
 
   10 Feb 2012; Matt Turner <mattst88@gentoo.org> use.mask:
   Add new video_cards_* to use.mask. Also remove dead radeonhd mask.

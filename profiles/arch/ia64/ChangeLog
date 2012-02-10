@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.122 2012/02/10 17:33:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.123 2012/02/10 18:49:59 mattst88 Exp $
+
+  10 Feb 2012; Matt Turner <mattst88@gentoo.org> use.mask:
+  Mask d3d USE flag.
 
   10 Feb 2012; Matt Turner <mattst88@gentoo.org> use.mask:
   Add new video_cards_* to use.mask. Also remove dead radeonhd mask.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.79 2012/02/05 18:18:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.80 2012/02/10 18:52:11 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -276,3 +276,7 @@ multilib
 # Ben de Groot <yngwin@gentoo.org> 11 Feb 2009
 # both x11-libs/qt-phonon and media-sound/phonon are unkeyworded
 phonon
+
+# Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
+# mask d3d since we don't have wine
+d3d

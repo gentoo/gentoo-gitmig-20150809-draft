@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.56 2012/02/10 17:52:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.57 2012/02/10 18:46:36 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -177,3 +177,7 @@ topal
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # We don't have sys-devel/llvm
 llvm
+
+# Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
+# mask d3d since we don't have wine
+d3d
