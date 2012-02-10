@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-1.0.3-r1.ebuild,v 1.1 2011/10/01 07:54:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-1.0.3-r1.ebuild,v 1.2 2012/02/10 22:18:21 ago Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ else
 	SRC_URI="mirror://gentoo/gnosek-${P}-4-g${MY_REV}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/gnosek-${PN}-${MY_REV}"
 
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 fi
 
 DEPEND="dev-libs/fcgi"
