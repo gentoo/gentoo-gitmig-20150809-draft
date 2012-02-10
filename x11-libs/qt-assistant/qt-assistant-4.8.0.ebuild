@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.0.ebuild,v 1.1 2012/01/29 16:59:14 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.0.ebuild,v 1.2 2012/02/10 00:51:18 pesa Exp $
 
 EAPI="3"
 if [[ ${PV} == 4*9999 ]]; then
@@ -69,13 +69,14 @@ src_unpack() {
 
 src_prepare() {
 	qt4-build${ECLASS}_src_prepare
-	if use compat; then
-		epatch "${FILESDIR}"/"${PN}"-4.7-fix-compat.patch
-	fi
-	sed -e "s/\(sub-qdoc3\.depends =\).*/\1/" \
-		-i doc/doc.pri || die "patching qdoc3 depends failed"
+
+	use compat && epatch "${FILESDIR}"/${PN}-4.7-fix-compat.patch
+
 	# bug 401173
-	! use webkit && epatch "${FILESDIR}"/disable-webkit.patch
+	use webkit || epatch "${FILESDIR}"/disable-webkit.patch
+
+	# bug 348034
+	sed -i -e '/^sub-qdoc3\.depends/d' doc/doc.pri || die
 }
 
 src_configure() {
@@ -84,8 +85,8 @@ src_configure() {
 		-no-nas-sound -no-dbus -iconv -no-cups -no-nis -no-gif -no-libpng
 		-no-libmng -no-libjpeg -no-openssl -system-zlib -no-phonon
 		-no-xmlpatterns -no-freetype -no-libtiff -no-accessibility
-		-no-fontconfig -no-multimedia
-		-no-svg $(qt_use qt3support) $(qt_use webkit)"
+		-no-fontconfig -no-multimedia -no-svg
+		$(qt_use qt3support) $(qt_use webkit)"
 	! use glib && myconf="${myconf} -no-glib"
 
 	qt4-build${ECLASS}_src_configure

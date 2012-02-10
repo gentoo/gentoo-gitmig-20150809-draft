@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.4.ebuild,v 1.4 2012/01/29 23:22:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.4.ebuild,v 1.5 2012/02/10 00:51:18 pesa Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -55,9 +55,11 @@ src_unpack() {
 
 src_prepare() {
 	qt4-build_src_prepare
-	if use compat; then
-		epatch "${FILESDIR}"/"${PN}"-4.7-fix-compat.patch
-	fi
+
+	use compat && epatch "${FILESDIR}"/${PN}-4.7-fix-compat.patch
+
+	# bug 348034
+	sed -i -e '/^sub-qdoc3\.depends/d' doc/doc.pri || die
 }
 
 src_configure() {
