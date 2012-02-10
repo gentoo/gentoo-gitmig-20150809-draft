@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r3.ebuild,v 1.10 2012/02/05 01:45:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r3.ebuild,v 1.11 2012/02/10 03:29:22 patrick Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="python? 2:2.4"
+PYTHON_DEPEND="python? 2:2.5"
 
 inherit autotools flag-o-matic gnome2 multilib python versionator
 
