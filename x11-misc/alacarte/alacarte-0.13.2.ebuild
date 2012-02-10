@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.13.2.ebuild,v 1.9 2011/10/19 22:50:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.13.2.ebuild,v 1.10 2012/02/10 02:44:47 patrick Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
