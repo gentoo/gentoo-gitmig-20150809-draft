@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6194 2012/02/10 21:49:24 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6195 2012/02/10 21:52:55 mattst88 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2012; Matt Turner <mattst88@gentoo.org>
+  +hardened/linux/amd64/no-multilib/use.mask:
+  Add d3d USE mask to hardened/amd64/no-multilib.
 
   10 Feb 2012; Matt Turner <mattst88@gentoo.org> desc/video_cards.desc:
   Add i915 and i965 to video_cards.desc.
