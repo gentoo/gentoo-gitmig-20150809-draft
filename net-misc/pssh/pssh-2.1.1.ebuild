@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/pssh-2.1.1.ebuild,v 1.2 2011/04/05 18:49:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/pssh-2.1.1.ebuild,v 1.3 2012/02/10 03:07:51 patrick Exp $
 
 EAPI="3"
-PYTHON_DEPEND="*:2.4"
+PYTHON_DEPEND="*:2.5"
 inherit distutils
 
 DESCRIPTION="This package provides parallel versions of the openssh tools."

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pssh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.5 2011/04/26 17:06:45 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.6 2012/02/10 03:07:51 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> pssh-2.1.1.ebuild,
+  pssh-2.2.2.ebuild:
+  Changing python deps in preparation for 2.4 removal
 
   26 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> pssh-2.2.2.ebuild:
   Remove pointless doman
