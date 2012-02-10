@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.6 2012/02/02 17:42:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.7 2012/02/10 17:17:20 maksbotan Exp $
 
 EAPI="4"
 
@@ -24,6 +24,7 @@ RDEPEND="
 		~net-misc/leechcraft-core-${PV}
 		~net-misc/leechcraft-cstp-${PV}
 		~net-misc/leechcraft-dbusmanager-${PV}
+		~net-misc/leechcraft-gacts-${PV}
 		~net-misc/leechcraft-glance-${PV}
 		~net-misc/leechcraft-historyholder-${PV}
 		~net-misc/leechcraft-kinotify-${PV}
