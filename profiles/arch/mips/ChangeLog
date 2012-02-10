@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.87 2012/02/09 22:56:05 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.88 2012/02/10 17:28:47 mattst88 Exp $
+
+  10 Feb 2012; Matt Turner <mattst88@gentoo.org> use.mask:
+  Add new video_cards_* to use.mask.
 
   09 Feb 2012; Matt Turner <mattst88@gentoo.org> arch/mips/package.use.mask:
   Unmask zbus and paired-single USE flags on mips.
