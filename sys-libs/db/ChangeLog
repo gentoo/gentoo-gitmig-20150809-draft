@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.323 2011/12/18 17:40:29 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.324 2012/02/10 19:31:00 robbat2 Exp $
+
+*db-5.1.29 (10 Feb 2012)
+
+  10 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> +db-5.1.29.ebuild:
+  Verison bump.
 
   18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> db-4.8.30.ebuild:
   Stable for ppc; bug #387187
