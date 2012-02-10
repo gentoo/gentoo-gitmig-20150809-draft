@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.254 2012/01/22 16:58:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.255 2012/02/10 00:34:53 flameeyes Exp $
+
+  10 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  pulseaudio-0.9.22-r2.ebuild, pulseaudio-0.9.22.ebuild,
+  pulseaudio-0.9.23-r1.ebuild, pulseaudio-1.1-r1.ebuild, pulseaudio-1.1.ebuild,
+  pulseaudio-9999.ebuild:
+  Remove dependency over audiofile, that was never used by PulseAudio (looks
+  like I imported it this way back in 2006, time to fix my mistake).
 
   22 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> pulseaudio-1.1-r1.ebuild,
   pulseaudio-9999.ebuild:
