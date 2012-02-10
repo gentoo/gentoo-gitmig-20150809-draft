@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.123 2012/02/09 22:58:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.124 2012/02/10 04:15:42 patrick Exp $
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> python.eclass:
+  Removing python 2.4 support from python eclass
 
   09 Feb 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Make src_test() a noop for qt-multimedia (bug #332299).

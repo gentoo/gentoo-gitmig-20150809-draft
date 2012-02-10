@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.147 2012/01/30 22:04:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.148 2012/02/10 04:15:42 patrick Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -27,7 +27,7 @@ if ! has "${EAPI:-0}" 0 1 2 3 4; then
 	die "API of python.eclass in EAPI=\"${EAPI}\" not established"
 fi
 
-_CPYTHON2_GLOBALLY_SUPPORTED_ABIS=(2.4 2.5 2.6 2.7)
+_CPYTHON2_GLOBALLY_SUPPORTED_ABIS=(2.5 2.6 2.7)
 _CPYTHON3_GLOBALLY_SUPPORTED_ABIS=(3.1 3.2)
 _JYTHON_GLOBALLY_SUPPORTED_ABIS=(2.5-jython)
 _PYPY_GLOBALLY_SUPPORTED_ABIS=(2.7-pypy-1.7)
