@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/joe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.75 2010/10/19 06:25:19 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.76 2012/02/10 17:53:39 grobian Exp $
+
+  10 Feb 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/joe-3.7-sanitise-includes.patch, joe-3.7-r1.ebuild:
+  Fixed for Prefix, transferred Prefix keywords
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> joe-3.5.ebuild:
   Drop to ~mips

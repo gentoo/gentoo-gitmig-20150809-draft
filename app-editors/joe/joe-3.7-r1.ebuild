@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.7-r1.ebuild,v 1.7 2010/04/13 18:20:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.7-r1.ebuild,v 1.8 2012/02/10 17:53:39 grobian Exp $
+
+EAPI="3"
 
 inherit flag-o-matic eutils
 
@@ -10,18 +12,16 @@ SRC_URI="mirror://sourceforge/joe-editor/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
 IUSE="xterm"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
 RDEPEND="xterm? ( >=x11-terms/xterm-239 )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Fix segfault, bug 283508
 	epatch "${FILESDIR}/${P}-segfault-fix.patch"
+	epatch "${FILESDIR}/${P}-sanitise-includes.patch"
 
 	cd ./rc
 
@@ -37,8 +37,7 @@ src_compile() {
 	# Bug 34609 (joe 2.9.8 editor seg-faults on 'find and replace' when compiled with -Os)
 	replace-flags "-Os" "-O2"
 
-	econf --docdir=/usr/share/doc/${PF} || die
-	emake || die
+	econf --docdir="${EPREFIX}"/usr/share/doc/${PF} || die
 }
 
 src_install() {
