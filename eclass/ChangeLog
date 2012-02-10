@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.124 2012/02/10 04:15:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.125 2012/02/10 22:54:33 tommy Exp $
+
+  10 Feb 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> python.eclass:
+  Revert previous commit to python eclass, breaks any ebuild using
+  PYTHON_DEPEND=2.4 without any need or prior warning
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> python.eclass:
   Removing python 2.4 support from python eclass
