@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.27 2011/02/07 20:49:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.28 2012/02/10 21:49:24 mattst88 Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -20,6 +20,8 @@ geode - VIDEO_CARDS setting to build driver for AMD Geode GX and LX video cards
 glint - VIDEO_CARDS setting to build driver for glint video cards
 i128 - VIDEO_CARDS setting to build driver for Number 9 I128 video cards
 i740 - VIDEO_CARDS setting to build driver for Intel i740 video cards
+i915 - VIDEO_CARDS setting to build driver for Intel i915 video cards
+i965 - VIDEO_CARDS setting to build driver for Intel i965 video cards
 impact - VIDEO_CARDS setting to build driver for impact video cards
 intel - VIDEO_CARDS setting to build driver for Intel video cards
 mach64 - VIDEO_CARDS setting to build driver for mach64 video cards
