@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.1.ebuild,v 1.6 2011/11/16 09:50:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.1.ebuild,v 1.7 2012/02/10 18:55:37 jlec Exp $
 
 EAPI="3"
 
@@ -168,8 +168,8 @@ src_configure() {
 	if use python; then
 		mycmakeargs+=(
 			-DVTK_WRAP_PYTHON=ON
-			-DPYTHON_INCLUDE_PATH=${EPREFIX}$(python_get_includedir)
-			-DPYTHON_LIBRARY=${EPREFIX}$(python_get_library)
+			-DPYTHON_INCLUDE_PATH="${EPREFIX}$(python_get_includedir)"
+			-DPYTHON_LIBRARY="${EPREFIX}$(python_get_library)"
 			-DVTK_PYTHON_SETUP_ARGS:STRING=--root="${D}")
 	fi
 
@@ -182,10 +182,10 @@ src_configure() {
 			-DQT_WRAP_UI=ON
 			-DVTK_INSTALL_QT_DIR=/$(get_libdir)/qt4/plugins/${PN}
 			-DDESIRED_QT_VERSION=4
-			-DQT_MOC_EXECUTABLE="${EPREFIX}"/usr/bin/moc
-			-DQT_UIC_EXECUTABLE="${EPREFIX}"/usr/bin/uic
-			-DQT_INCLUDE_DIR="${EPREFIX}"/usr/include/qt4
-			-DQT_QMAKE_EXECUTABLE="${EPREFIX}"/usr/bin/qmake)
+			-DQT_MOC_EXECUTABLE="${EPREFIX}/usr/bin/moc"
+			-DQT_UIC_EXECUTABLE="${EPREFIX}/usr/bin/uic"
+			-DQT_INCLUDE_DIR="${EPREFIX}/usr/include/qt4"
+			-DQT_QMAKE_EXECUTABLE="${EPREFIX}/usr/bin/qmake")
 	fi
 
 	cmake-utils_src_configure

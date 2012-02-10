@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.3 2011/12/29 13:28:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.4 2012/02/10 18:55:37 jlec Exp $
 
 EAPI=3
 
@@ -178,6 +178,8 @@ src_configure() {
 			-DVTK_WRAP_PYTHON_SIP=ON
 			-DSIP_PYQT_DIR="${EPREFIX}/usr/share/sip"
 			-DSIP_INCLUDE_DIR="${EPREFIX}$(python_get_includedir)"
+			-DPYTHON_INCLUDE_DIR="${EPREFIX}"$(python_get_includedir)
+			-DPYTHON_LIBRARY="${EPREFIX}$(python_get_library)"
 			-DVTK_PYTHON_INCLUDE_DIR="${EPREFIX}"$(python_get_includedir)
 			-DVTK_PYTHON_LIBRARY="${EPREFIX}$(python_get_library)"
 			-DVTK_PYTHON_SETUP_ARGS:STRING=--root="${D}")
