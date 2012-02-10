@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquvi-scripts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.5 2011/12/14 18:12:12 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.6 2012/02/10 23:00:49 radhermit Exp $
+
+  10 Feb 2012; Tim Harder <radhermit@gentoo.org> -libquvi-scripts-0.4.0.ebuild,
+  -libquvi-scripts-0.4.1.ebuild:
+  Remove old.
 
   14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> libquvi-scripts-0.4.2.ebuild:
   Stable for AMD64, wrt bug #393409
