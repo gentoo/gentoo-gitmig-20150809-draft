@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/ctemplate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.18 2012/02/11 05:11:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.19 2012/02/11 08:21:33 radhermit Exp $
+
+*ctemplate-2.0 (11 Feb 2012)
+
+  11 Feb 2012; Tim Harder <radhermit@gentoo.org> +ctemplate-2.0.ebuild:
+  Version bump.
 
   11 Feb 2012; Mike Frysinger <vapier@gentoo.org> ctemplate-1.0.ebuild:
   Add some arm love.
