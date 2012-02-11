@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-1.11.8.ebuild,v 1.1 2011/07/31 12:34:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-1.11.8.ebuild,v 1.2 2012/02/11 11:54:25 ago Exp $
+
+EAPI=4
 
 DESCRIPTION="A USENET software package designed for small sites"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -13,19 +15,18 @@ IUSE="ipv6"
 DEPEND=">=dev-libs/libpcre-3.9"
 RDEPEND="${DEPEND}
 	virtual/inetd"
+DOCS=( CREDITS ChangeLog FAQ.txt FAQ.pdf INSTALL NEWS README-daemontools UNINSTALL-daemontools README README-MAINTAINER README-FQDN )
 
-src_compile() {
+src_configure() {
 	econf \
 		--sysconfdir=/etc/leafnode \
 		--localstatedir=/var \
 		--with-spooldir=/var/spool/news \
-		$(use_with ipv6) \
-		|| die "econf failed"
-	emake || die "emake failed"
+		$(use_with ipv6)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	default
 
 	keepdir \
 		/var/lock/news \
@@ -43,9 +44,5 @@ src_install() {
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}"/texpire.cron texpire
 
-	dodoc \
-		CREDITS ChangeLog FAQ.txt FAQ.pdf INSTALL NEWS \
-		README.FIRST README-daemontools UNINSTALL-daemontools \
-		README README-MAINTAINER README-FQDN
 	dohtml FAQ.html FAQ.xml README-FQDN.html
 }
