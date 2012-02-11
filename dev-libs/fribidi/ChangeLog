@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.48 2011/11/27 18:55:49 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.49 2012/02/11 20:41:50 nixnut Exp $
+
+  11 Feb 2012; nixnut <nixnut@gentoo.org> fribidi-0.19.2-r1.ebuild:
+  ppc stable #385239
 
   27 Nov 2011; Raúl Porcel <armin76@gentoo.org> fribidi-0.19.2-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #385239
