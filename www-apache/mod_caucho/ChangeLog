@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_caucho
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.61 2011/09/06 16:42:52 nelchael Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.62 2012/02/11 18:48:31 nelchael Exp $
+
+*mod_caucho-4.0.25 (11 Feb 2012)
+
+  11 Feb 2012; Krzysztof Pawlik <nelchael@gentoo.org>
+  +mod_caucho-4.0.25.ebuild:
+  Version bump.
 
 *mod_caucho-4.0.22 (06 Sep 2011)
 
