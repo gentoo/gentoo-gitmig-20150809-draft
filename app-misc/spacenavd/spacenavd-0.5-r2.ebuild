@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/spacenavd-0.5-r2.ebuild,v 1.1 2012/02/09 03:46:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/spacenavd-0.5-r2.ebuild,v 1.2 2012/02/11 23:31:46 sping Exp $
 
 EAPI="4"
 
@@ -19,8 +19,8 @@ RDEPEND="X? ( x11-apps/xdpyinfo )"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	CONFIG_CHECK="~HOTPLUG"
-	ERROR_CFG="Your kernel needs HOTPLUG for the spacenavd to work properly"
+	CONFIG_CHECK="~INPUT_EVDEV"
+	ERROR_CFG="Your kernel needs INPUT_EVDEV for the spacenavd to work properly"
 	check_extra_config
 }
 
