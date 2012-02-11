@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.5.ebuild,v 1.4 2012/01/08 11:47:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.5.ebuild,v 1.5 2012/02/11 15:43:51 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -21,19 +21,14 @@ IUSE="bzip2 directfb fbcon gpm jpeg livecd lzma ssl suid svga tiff unicode X zli
 
 # We've also made USE=livecd compile in graphics mode.  This closes bug #75685.
 PNG_DEPEND=">=media-libs/libpng-1.2:0"
+
 RDEPEND=">=sys-libs/ncurses-5.7-r7
 	bzip2? ( app-arch/bzip2 )
 	directfb? ( dev-libs/DirectFB )
-	fbcon? (
-		${PNG_DEPEND}
-		sys-libs/gpm
-		)
+	fbcon? ( ${PNG_DEPEND} )
 	gpm? ( sys-libs/gpm )
 	jpeg? ( virtual/jpeg )
-	livecd? (
-		${PNG_DEPEND}
-		sys-libs/gpm
-		)
+	livecd? ( ${PNG_DEPEND} )
 	lzma? ( app-arch/xz-utils )
 	ssl? ( dev-libs/openssl:0 )
 	svga? (
@@ -46,11 +41,12 @@ RDEPEND=">=sys-libs/ncurses-5.7-r7
 		x11-libs/libXext
 		)
 	zlib? ( sys-libs/zlib )"
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-REQUIRED_USE="fbcon? ( jpeg )
-	livecd? ( jpeg )
+REQUIRED_USE="fbcon? ( jpeg gpm )
+	livecd? ( jpeg gpm )
 	svga? ( suid )"
 
 DOCS=( AUTHORS BRAILLE_HOWTO BUGS ChangeLog KEYS NEWS README SITES TODO )
@@ -74,13 +70,13 @@ src_prepare() {
 }
 
 src_configure() {
+	export ac_cv_lib_gpm_Gpm_Open=$(usex gpm)
+
 	local myconf
 
 	if use X || use fbcon || use directfb || use svga || use livecd; then
 		myconf="${myconf} --enable-graphics"
 	fi
-
-	( use gpm || use fbcon || use livecd ) || export ac_cv_lib_gpm_Gpm_Open=no
 
 	if use fbcon || use livecd; then
 		myconf="${myconf} --with-fb"
