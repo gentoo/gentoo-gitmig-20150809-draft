@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.242 2012/02/01 17:24:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.243 2012/02/11 19:54:32 slyfox Exp $
+
+  11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> mc-9999.ebuild:
+  Upstream moved main tree to github leaving old one as read-only mirror.
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> mc-4.8.1-r1.ebuild:
   Marking mc-4.8.1-r1 ppc for bug 401157

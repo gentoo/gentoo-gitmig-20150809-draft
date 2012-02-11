@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.3 2012/01/27 20:26:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.4 2012/02/11 19:54:32 slyfox Exp $
 
 EAPI=4
 
 if [[ ${PV} = *9999* ]]; then
-	EGIT_REPO_URI="git://midnight-commander.org/git/mc.git"
+	EGIT_REPO_URI="git://github.com/MidnightCommander/mc.git http://github.com/MidnightCommander/mc.git git://midnight-commander.org/git/mc.git"
 	LIVE_ECLASSES="git-2 autotools"
 	LIVE_EBUILD=yes
 fi
