@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/simple_oauth
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.1 2011/09/19 19:38:32 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.2 2012/02/11 16:10:09 tomka Exp $
+
+  11 Feb 2012; Thomas Kahle <tomka@gentoo.org> simple_oauth-0.1.5.ebuild:
+  marked ~x86 per bug 395971
 
 *simple_oauth-0.1.5 (19 Sep 2011)
 
