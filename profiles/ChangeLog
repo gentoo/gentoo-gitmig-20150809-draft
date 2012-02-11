@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6199 2012/02/11 03:59:19 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6200 2012/02/11 10:42:34 slyfox Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  hardened/linux/package.mask:
+  Mask skypetab-ng for hardened as it's a library for x86-only skype.
 
   11 Feb 2012; Angelo Arrifano <miknix@gentoo.org> license_groups:
   Add Mendeley-EULA to EULA, needed for sci-misc/mendeleydesktop
