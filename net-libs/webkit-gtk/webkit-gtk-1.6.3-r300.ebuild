@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r300.ebuild,v 1.1 2012/02/04 10:04:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r300.ebuild,v 1.2 2012/02/11 03:04:59 tetromino Exp $
 
 EAPI="4"
 
@@ -55,7 +55,6 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	dev-util/pkgconfig
 	dev-util/gtk-doc-am
-	doc? ( >=dev-util/gtk-doc-1.10 )
 	test? ( x11-themes/hicolor-icon-theme )
 "
 
@@ -112,11 +111,12 @@ src_configure() {
 	# XXX: Check Web Audio support
 	# XXX: files for generating DerivedSources/WebKit2/* are missing, see
 	#      https://bugs.webkit.org/show_bug.cgi?id=66527
+	# Do not enable gtk-doc, the results look much worse than the docs that
+	# are shipped with the tarball.
 	myconf="
 		$(use_enable coverage)
 		$(use_enable debug)
 		$(use_enable debug debug-features)
-		$(use_enable doc gtk-doc)
 		$(use_enable spell spellcheck)
 		$(use_enable introspection)
 		$(use_enable gstreamer video)
@@ -131,15 +131,6 @@ src_configure() {
 	econf ${myconf}
 }
 
-src_compile() {
-	default
-
-	# ${PN} neither ships, nor builds documentation on its own
-	if use doc; then
-		emake -C "${S}/Source/WebKit/gtk/docs"
-	fi
-}
-
 src_test() {
 	unset DISPLAY
 	# Tests need virtualx, bug #294691, bug #310695
@@ -152,7 +143,8 @@ src_install() {
 
 	# ${PN} doesn't install documentation on its own
 	if use doc; then
-		emake DESTDIR=${D} -C "${S}/Source/WebKit/gtk/docs" install
+		insinto /usr/share/gtk-doc/html/webkitgtk
+		doins -r html/*
 	fi
 
 	newdoc Source/WebKit/gtk/ChangeLog ChangeLog.gtk

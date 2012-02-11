@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.139 2012/02/04 10:04:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.140 2012/02/11 03:04:59 tetromino Exp $
+
+  11 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-1.6.3-r300.ebuild:
+  The tarball now comes with pre-generated documentation; install it when
+  USE=doc since it looks much better than what is built with --enable-gtk-doc.
+  As a side effect, fixes bug #402173 (thanks to Torsten Kaiser for reporting).
 
 *webkit-gtk-1.6.3-r200 (04 Feb 2012)
 *webkit-gtk-1.6.3-r300 (04 Feb 2012)
