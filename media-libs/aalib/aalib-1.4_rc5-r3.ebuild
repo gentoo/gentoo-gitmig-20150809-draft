@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5-r2.ebuild,v 1.1 2012/02/09 18:36:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5-r3.ebuild,v 1.1 2012/02/11 12:46:41 slyfox Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ src_prepare() {
 	sed -i -e 's:#include <malloc.h>:#include <stdlib.h>:g' "${S}"/src/*.c
 
 	# Fix bug #165617.
-	use gpm && sed -i \
+	use gpm || sed -i \
 		's/gpm_mousedriver_test=yes/gpm_mousedriver_test=no/' "${S}/configure.in"
 
 	eautoreconf
