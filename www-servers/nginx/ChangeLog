@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.305 2012/01/29 13:11:49 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.306 2012/02/11 10:17:30 hollow Exp $
+
+*nginx-1.1.14 (11 Feb 2012)
+*nginx-1.0.12 (11 Feb 2012)
+
+  11 Feb 2012; Benedikt Böhm <hollow@gentoo.org> nginx-1.0.10.ebuild,
+  nginx-1.0.11.ebuild, +nginx-1.0.12.ebuild, -nginx-1.1.12-r1.ebuild,
+  nginx-1.1.13.ebuild, +nginx-1.1.14.ebuild, +files/nginx.conf,
+  +files/nginx.initd, -files/nginx.conf-r4, -files/nginx.init-r2:
+  version bump wrt #402957
 
 *nginx-1.1.13 (29 Jan 2012)
 *nginx-1.0.11 (29 Jan 2012)

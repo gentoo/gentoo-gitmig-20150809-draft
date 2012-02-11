@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.11.ebuild,v 1.1 2012/01/29 13:11:49 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.11.ebuild,v 1.2 2012/02/11 10:17:30 hollow Exp $
 
 EAPI="4"
 
@@ -288,9 +288,9 @@ src_install() {
 	keepdir /var/www/localhost/htdocs
 
 	dosbin objs/nginx
-	newinitd "${FILESDIR}"/nginx.init-r2 nginx
+	newinitd "${FILESDIR}"/nginx.initd nginx
 
-	cp "${FILESDIR}"/nginx.conf-r4 conf/nginx.conf
+	cp "${FILESDIR}"/nginx.conf conf/nginx.conf
 	rm conf/win-utf conf/koi-win conf/koi-utf
 
 	dodir /etc/${PN}

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.1.12-r1.ebuild,v 1.1 2011/12/28 05:49:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.12.ebuild,v 1.1 2012/02/11 10:17:30 hollow Exp $
 
 EAPI="4"
 
@@ -35,7 +35,7 @@ HTTP_PUSH_MODULE_P="nginx_http_push_module-${HTTP_PUSH_MODULE_PV}"
 HTTP_PUSH_MODULE_URI="http://pushmodule.slact.net/downloads/${HTTP_PUSH_MODULE_P}.tar.gz"
 
 # http_cache_purge (http://labs.frickle.com/nginx_ngx_cache_purge/, BSD-2 license)
-HTTP_CACHE_PURGE_MODULE_PV="1.5"
+HTTP_CACHE_PURGE_MODULE_PV="1.4"
 HTTP_CACHE_PURGE_MODULE_P="ngx_cache_purge-${HTTP_CACHE_PURGE_MODULE_PV}"
 HTTP_CACHE_PURGE_MODULE_URI="http://labs.frickle.com/files/${HTTP_CACHE_PURGE_MODULE_P}.tar.gz"
 
@@ -81,7 +81,7 @@ NGINX_MODULES_3RD="
 	http_upload
 	http_slowfs_cache"
 
-IUSE="aio debug +http +http-cache ipv6 libatomic +pcre pcre-jit ssl vim-syntax"
+IUSE="aio debug +http +http-cache ipv6 libatomic +pcre ssl vim-syntax"
 
 for mod in $NGINX_MODULES_STD; do
 	IUSE="${IUSE} +nginx_modules_http_${mod}"
@@ -116,7 +116,6 @@ DEPEND="${CDEPEND}
 	arm? ( dev-libs/libatomic_ops )
 	libatomic? ( dev-libs/libatomic_ops )"
 PDEPEND="vim-syntax? ( app-vim/nginx-syntax )"
-REQUIRED_USE="pcre-jit? ( pcre )"
 
 pkg_setup() {
 	if use nginx_modules_http_passenger; then
@@ -173,7 +172,6 @@ src_configure() {
 	use ipv6      && myconf+=" --with-ipv6"
 	use libatomic && myconf+=" --with-libatomic"
 	use pcre      && myconf+=" --with-pcre"
-	use pcre-jit  && myconf+=" --with-pcre-jit"
 
 	# HTTP modules
 	for mod in $NGINX_MODULES_STD; do
@@ -290,9 +288,9 @@ src_install() {
 	keepdir /var/www/localhost/htdocs
 
 	dosbin objs/nginx
-	newinitd "${FILESDIR}"/nginx.init-r2 nginx
+	newinitd "${FILESDIR}"/nginx.initd nginx
 
-	cp "${FILESDIR}"/nginx.conf-r4 conf/nginx.conf
+	cp "${FILESDIR}"/nginx.conf conf/nginx.conf
 	rm conf/win-utf conf/koi-win conf/koi-utf
 
 	dodir /etc/${PN}
