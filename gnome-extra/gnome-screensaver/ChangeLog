@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-screensaver
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.148 2011/11/28 18:38:09 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.149 2012/02/11 03:01:16 tetromino Exp $
+
+*gnome-screensaver-3.2.1 (11 Feb 2012)
+
+  11 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-screensaver-3.2.1.ebuild, metadata.xml:
+  Bump with various bugfixes and optional support for systemd's logind.
 
   28 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-screensaver-2.30.2.ebuild, gnome-screensaver-2.30.2-r1.ebuild:

@@ -7,4 +7,7 @@
 		integrate well with the desktop and provide a control interface that is
 		desktop neutral.
 	</longdescription>
+	<use>
+		<flag name="systemd">Support <pkg>sys-apps/systemd</pkg>'s logind</flag>
+	</use>
 </pkgmetadata>
