@@ -3,7 +3,11 @@
 <pkgmetadata>
 	<maintainer>
 		<email>maintainer-needed@gentoo.org</email>
-		</maintainer>
+	</maintainer>
+<use>
+	<flag name="search-domains">Honour search domains from
+		/etc/resolv.conf (see bug #201948 for possible side effects)</flag>
+</use>
 	<longdescription lang="en">
 		Name service switch module for multicast dns.
 	</longdescription>

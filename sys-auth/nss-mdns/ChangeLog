@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/nss-mdns
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.31 2009/12/10 19:38:48 vostorga Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.32 2012/02/11 12:29:00 pacho Exp $
+
+*nss-mdns-0.10-r1 (11 Feb 2012)
+
+  11 Feb 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/nss-mdns-0.10-avahi-socket.patch, +nss-mdns-0.10-r1.ebuild,
+  -nss-mdns-0.8.ebuild, -nss-mdns-0.9-r1.ebuild, metadata.xml:
+  Make search-domains optional (bug #201948 by Jonathan Barnard, Dennis
+  Schridde, Paweł Hajdan, Jr. and many others), also fix bug #226823 by
+  flameeyes. Drop old.
 
   10 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> nss-mdns-0.10.ebuild:
   Putting example in pkg_postinst() from einfo to ewarn, bug 249447
