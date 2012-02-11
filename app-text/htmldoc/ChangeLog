@@ -1,6 +1,12 @@
 # ChangeLog for app-text/htmldoc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.66 2011/10/23 15:33:27 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.67 2012/02/11 12:50:14 pacho Exp $
+
+*htmldoc-1.8.27-r3 (11 Feb 2012)
+
+  11 Feb 2012; Pacho Ramos <pacho@gentoo.org> +files/htmldoc-1.8.27-crash.patch,
+  +htmldoc-1.8.27-r3.ebuild:
+  Fix crash, bug #219373 by Marek Cruz.
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> -htmldoc-1.8.27-r1.ebuild,
   htmldoc-1.8.27-r2.ebuild:
