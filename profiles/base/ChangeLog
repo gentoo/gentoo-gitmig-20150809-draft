@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.346 2012/02/10 16:28:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.347 2012/02/11 02:27:34 tetromino Exp $
+
+  11 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask USE=systemd for gnome-extra/gnome-screensaver, it requires a systemd
+  version which is masked and keyworded only for 2 arches.
 
   10 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE="q64" for media-gfx/imagemagick wrt #401327 and #402999
