@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.ebuild,v 1.1 2012/02/10 18:44:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.ebuild,v 1.2 2012/02/11 04:38:37 chithanh Exp $
 
 EAPI=4
 
@@ -326,6 +326,14 @@ pkg_postinst() {
 	# Switch to the xorg implementation.
 	echo
 	eselect opengl set --use-old ${OPENGL_DIR}
+
+	# switch to xorg-x11 and back if necessary, bug #374647 comment 11
+	OLD_IMPLEM="$(eselect opengl show)"
+	if [[ ${OPENGL_DIR}x != ${OLD_IMPLEM}x ]]; then
+		eselect opengl set ${OPENGL_DIR}
+		eselect opengl set ${OLD_IMPLEM}
+	fi
+
 	# Select classic/gallium drivers
 	if use classic || use gallium; then
 		eselect mesa set --auto
