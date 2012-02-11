@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.30 2011/03/26 17:27:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.31 2012/02/11 19:41:50 floppym Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="python? 2"
 
 inherit cmake-utils multilib python subversion
@@ -18,8 +18,7 @@ SLOT="4"
 KEYWORDS=""
 IUSE="audiofile dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus qt-webkit +ssl theora +transparency"
 
-RDEPEND=">=dev-libs/crypto++-5.6.0-r1
-	sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	x11-libs/libX11
 	>=x11-libs/qt-core-4.6
 	>=x11-libs/qt-gui-4.6
@@ -43,18 +42,11 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 RDEPEND="${RDEPEND}
 	gsm? ( media-sound/gsm )"
+REQUIRED_USE="audiofile? ( oss ) theora? ( dcc_video )"
 
 DOCS="ChangeLog doc/FAQ"
 
 pkg_setup() {
-	if use audiofile && ! use oss; then
-		die "USE=\"audiofile\" requires USE=\"oss\""
-	fi
-
-	if use theora && ! use dcc_video; then
-		die "USE=\"theora\" requires USE=\"dcc_video\""
-	fi
-
 	if use python; then
 		python_set_active_version 2
 		python_pkg_setup
@@ -69,13 +61,14 @@ src_prepare() {
 }
 
 src_configure() {
+	append-flags -fno-strict-aliasing
+
 	local libdir="$(get_libdir)"
 	local mycmakeargs=(
 		-DLIB_SUFFIX=${libdir#lib}
 		-DMANUAL_REVISION=${VERSIO_PRAESENS}
 		-DWANT_COEXISTENCE=1
 		-DWANT_CRYPT=1
-		-DWANT_CRYPTOPP=1
 		-DWANT_ENV_FLAGS=1
 		-DWANT_VERBOSE=1
 		$(cmake-utils_use_want audiofile AUDIOFILE)
