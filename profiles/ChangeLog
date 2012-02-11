@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6200 2012/02/11 10:42:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6201 2012/02/11 18:34:30 slyfox Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  hardened/linux/amd64/no-multilib/parent:
+  Make hardened/linux/amd64/no-multilib include arch/amd64/no-multilib
+  (http://archives.gentoo.org/gentoo-dev/msg_7c41ab6653426048c2e8b0f271637bf3.x
+  ml). Approved by Zorry.
 
   11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
   hardened/linux/package.mask:
