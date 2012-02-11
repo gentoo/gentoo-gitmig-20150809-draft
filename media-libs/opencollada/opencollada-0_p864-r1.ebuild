@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/opencollada-0_p864.ebuild,v 1.2 2012/01/27 16:47:42 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/opencollada-0_p864-r1.ebuild,v 1.1 2012/02/11 23:01:22 sping Exp $
 
 EAPI="3"
 
@@ -51,11 +51,19 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
+src_compile() {
+	MAKEOPTS="${MAKEOPTS} -j1" default  # TODO
+}
+
 src_install() {
 	cmake-utils_src_install
 	if [[ $(get_libdir) != 'lib' ]]; then
 		mv "${D}"/usr/{lib,$(get_libdir)} || die
 	fi
+
+	dodir /etc/env.d || die
+	echo "LDPATH=/usr/$(get_libdir)/opencollada" \
+			> "${D}"/etc/env.d/99opencollada || die
 
 	dobin build/bin/OpenCOLLADAValidator || die
 }
