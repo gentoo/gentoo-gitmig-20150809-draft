@@ -1,6 +1,14 @@
 # ChangeLog for www-client/httrack
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.33 2011/11/30 17:20:30 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.34 2012/02/11 14:25:41 pacho Exp $
+
+*httrack-3.44.5 (11 Feb 2012)
+
+  11 Feb 2012; Pacho Ramos <pacho@gentoo.org> +httrack-3.44.5.ebuild,
+  -httrack-3.44.1-r1.ebuild, -httrack-3.44.1.ebuild:
+  Version bump (should fix bug #351813 by Michael Orlitzky and Xavier Roche),
+  install docs in proper place (bug #241466 by flameeyes and Gef Lebster). Drop
+  old.
 
   30 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> httrack-3.44.1-r1.ebuild:
   Raise sys-libs/zlib depend since httrack-3.44.1+zlib-1.2.5.1.patch is not
