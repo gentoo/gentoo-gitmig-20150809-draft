@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r2.ebuild,v 1.1 2012/01/25 06:29:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r2.ebuild,v 1.2 2012/02/11 23:22:46 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -31,8 +31,8 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses nss \
-opengl png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
+IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened +jpeg ncurses nss \
+opengl +png pulseaudio qemu-ifup rbd sasl sdl spice ssl +threads vde \
 +vhost-net xattr xen"
 # static, depends on libsdl being built with USE=static-libs, which can not
 # be expressed in current EAPI's
@@ -232,7 +232,7 @@ src_configure() {
 	#use static && conf_opts="${conf_opts} --static"
 
 	# Support debug USE flag
-	use debug && conf_opts="${conf_opts} --enable-debug --disable-strip"
+	use debug && conf_opts="${conf_opts} --enable-debug"
 
 	# Fix the $(prefix)/etc issue
 	conf_opts="${conf_opts} --sysconfdir=/etc"
