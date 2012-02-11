@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.140 2012/02/11 19:41:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.141 2012/02/11 20:16:10 floppym Exp $
+
+*kvirc-4.2_pre6066 (11 Feb 2012)
+
+  11 Feb 2012; Mike Gilbert <floppym@gentoo.org> +kvirc-4.2_pre6066.ebuild:
+  Version bump. Ebuild by Arfrever.
 
   11 Feb 2012; Mike Gilbert <floppym@gentoo.org> kvirc-9999.ebuild:
   Update ebuild. Patch by Arfrever.
