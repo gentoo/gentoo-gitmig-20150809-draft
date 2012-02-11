@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.79 2012/01/30 14:52:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.80 2012/02/11 11:08:42 slyfox Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -163,6 +163,7 @@ media-tv/livestation
 media-video/binkplayer
 media-video/tsmuxer
 net-im/skype
+net-im/skypetab-ng
 net-im/skysentials
 net-misc/icaclient
 net-misc/ps3mediaserver

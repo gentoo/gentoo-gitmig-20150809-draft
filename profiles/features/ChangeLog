@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.31 2012/01/30 14:52:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.32 2012/02/11 11:08:42 slyfox Exp $
+
+  11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  64bit-native/package.mask:
+  Mask skypetab-ng as it's a library for x86-only skype (synced with
+  amd64/no-multilib profile). Noticed by hwoarang.
 
   30 Jan 2012; Tupone Alfredo <tupone@gentoo.org> 64bit-native/package.mask:
   Masking games-puzzle/drod-bin for non multilib. Binary 32 bits only
