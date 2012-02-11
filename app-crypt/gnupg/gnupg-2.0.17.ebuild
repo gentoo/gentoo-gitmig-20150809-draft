@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17.ebuild,v 1.11 2011/05/14 19:37:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17.ebuild,v 1.12 2012/02/11 19:16:34 robbat2 Exp $
 
 EAPI="3"
 
@@ -23,6 +23,7 @@ COMMON_DEPEND_LIBS="
 	>=dev-libs/libksba-1.0.7
 	>=dev-libs/pth-1.3.7
 	>=net-misc/curl-7.10
+	sys-libs/zlib
 	adns? ( >=net-libs/adns-1.4 )
 	bzip2? ( app-arch/bzip2 )
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 )

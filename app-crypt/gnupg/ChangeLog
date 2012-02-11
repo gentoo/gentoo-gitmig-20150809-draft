@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.421 2012/01/31 02:44:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.422 2012/02/11 19:16:34 robbat2 Exp $
+
+  11 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> gnupg-2.0.17-r2.ebuild,
+  gnupg-2.0.17-r3.ebuild, gnupg-2.0.17.ebuild, gnupg-2.0.18.ebuild:
+  Bug #380755: missing sys-libs/zlib dependency.
 
 *gnupg-1.4.12 (31 Jan 2012)
 
