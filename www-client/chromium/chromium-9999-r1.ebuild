@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.90 2012/02/02 14:44:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.91 2012/02/11 20:30:23 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -81,9 +81,11 @@ gclient_config() {
 
 gclient_sync() {
 	einfo "gclient sync -->"
+	[[ -n "${ESVN_UMASK}" ]] && eumask_push "${ESVN_UMASK}"
 	# Only use a single job to prevent hangs.
 	"${WORKDIR}/depot_tools/gclient" sync --nohooks --jobs=1 \
 		--delete_unversioned_trees || die
+	[[ -n "${ESVN_UMASK}" ]] && eumask_pop
 }
 
 gclient_runhooks() {
