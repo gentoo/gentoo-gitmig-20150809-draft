@@ -1,6 +1,11 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.154 2012/02/11 15:32:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.155 2012/02/11 15:33:48 ssuominen Exp $
+
+  11 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -links-2.3_pre1-r1.ebuild, -files/links-2.3_pre1-libpng-1.5.patch,
+  -files/links-2.3_pre1-verify-ssl-certs.patch:
+  old
 
   11 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> links-2.4-r2.ebuild:
   ppc/ppc64 stable wrt #396519
