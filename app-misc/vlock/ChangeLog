@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vlock
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.45 2011/12/04 18:12:06 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.46 2012/02/11 16:07:17 nixnut Exp $
+
+  11 Feb 2012; nixnut <nixnut@gentoo.org> vlock-2.2.3.ebuild:
+  ppc stable #392351
 
   04 Dec 2011; Raúl Porcel <armin76@gentoo.org> vlock-2.2.3.ebuild:
   alpha/ia64/sparc/x86 stable wrt #392351
