@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5-r3.ebuild,v 1.1 2012/02/11 12:46:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5-r4.ebuild,v 1.1 2012/02/11 14:02:44 slyfox Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4_rc4-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-1.4_rc4-m4.patch
 	epatch "${FILESDIR}"/${PN}-1.4_rc5-fix-protos.patch #224267
+	epatch "${FILESDIR}"/${PN}-1.4_rc5-fix-aarender.patch #214142
 
 	sed -i -e 's:#include <malloc.h>:#include <stdlib.h>:g' "${S}"/src/*.c
 

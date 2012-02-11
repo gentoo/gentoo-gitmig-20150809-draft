@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/aalib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.44 2012/02/11 12:46:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.45 2012/02/11 14:02:44 slyfox Exp $
+
+*aalib-1.4_rc5-r4 (11 Feb 2012)
+
+  11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> +aalib-1.4_rc5-r4.ebuild,
+  +files/aalib-1.4_rc5-fix-aarender.patch, -aalib-1.4_rc5-r3.ebuild:
+  Fix bug #214142 in aarender() reported and fixed by Reimar Döffinger. The
+  patch also fixes resizing of 'mplayer -vo aa' for me.
 
 *aalib-1.4_rc5-r3 (11 Feb 2012)
 
