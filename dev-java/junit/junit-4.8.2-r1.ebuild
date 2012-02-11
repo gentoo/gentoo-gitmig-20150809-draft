@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.8.2-r1.ebuild,v 1.4 2012/01/01 22:39:29 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.8.2-r1.ebuild,v 1.5 2012/02/11 14:20:47 sera Exp $
 
 # WARNING: JUNIT.JAR IS _NOT_ SYMLINKED TO ANT-CORE LIB FOLDER AS JUNIT3 IS
 
@@ -39,7 +39,7 @@ src_unpack() {
 	popd >/dev/null
 
 	# copy Gentoo manifest to working directory
-	cp "${FILESDIR}/gentoo-manifest.mf" "${S}"
+	cp "${FILESDIR}/gentoo-manifest.mf" "${S}" || die
 }
 
 java_prepare() {
