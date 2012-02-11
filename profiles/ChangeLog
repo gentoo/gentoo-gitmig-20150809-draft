@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6201 2012/02/11 18:34:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6202 2012/02/11 19:26:14 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Feb 2012; Ole Markus With <olemarkus@gentoo.org> package.mask:
+  Masked pecl-{idn,enchant}
 
   11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
   hardened/linux/amd64/no-multilib/parent:
