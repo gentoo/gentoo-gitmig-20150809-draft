@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/twitter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.24 2011/12/25 10:18:47 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.25 2012/02/11 10:22:02 graaff Exp $
+
+  11 Feb 2012; Hans de Graaff <graaff@gentoo.org> twitter-2.0.2.ebuild:
+  Run specs directly to avoid extra dependency on yard, bug 395971.
 
 *twitter-2.0.2 (25 Dec 2011)
 
