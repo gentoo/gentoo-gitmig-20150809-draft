@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.78 2011/12/03 20:43:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.79 2012/02/11 12:20:33 ulm Exp $
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -316,7 +316,7 @@ elisp-site-file-install() {
 
 elisp-site-regen() {
 	local sitelisp=${ROOT}${EPREFIX}${SITELISP}
-	local sf i line null="" page=$'\f'
+	local sf i null="" page=$'\f'
 	local -a sflist
 
 	if [[ ! -d ${sitelisp} ]]; then
