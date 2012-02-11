@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13476 2012/02/11 19:26:14 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13477 2012/02/11 19:40:30 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,8 +34,8 @@
 # Ole Markus With <olemarkus@gentoo.org> (11 Feb 2012)
 # Made obsolete by PHP 5.3. Bugs #402862, #402865.
 # Masked for removal on 11 Mar 2012
-dev-php/idn
-dev-php/enchant
+dev-php/pecl-idn
+dev-php/pecl-enchant
 
 # Markos Chandras <hwoarang@gentoo.org> (10 Feb 2012)
 # Unmaintained. Does not build with recent kernels. Bug #381263
