@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.09.ebuild,v 1.3 2012/02/10 21:17:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.09.ebuild,v 1.4 2012/02/11 10:11:36 grobian Exp $
 
 EAPI=4
 
@@ -43,6 +43,6 @@ src_configure() {
 
 src_install() {
 	dodir /usr/{bin,include,$(get_libdir)} /usr/share/man/{man1,man3}
-	emake ROOT="${ED}" install
+	emake ROOT="${D}" install
 	dodoc README Changelog
 }
