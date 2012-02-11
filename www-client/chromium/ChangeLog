@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.556 2012/02/11 20:30:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.557 2012/02/11 21:59:15 floppym Exp $
+
+  11 Feb 2012; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Do not use gold linker flags. Depend on >=v8-3.9.4.
 
   11 Feb 2012; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
   Obey ESVN_UMASK when syncing.

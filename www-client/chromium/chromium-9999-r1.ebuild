@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.91 2012/02/11 20:30:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.92 2012/02/11 21:59:15 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -30,7 +30,7 @@ RDEPEND="app-arch/bzip2
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.8.9.4
+	>=dev-lang/v8-3.9.4
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
@@ -352,6 +352,11 @@ src_configure() {
 	myconf+="
 		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
 		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
+
+	# Never use bundled gold binary. Disable gold linker flags for now.
+	myconf+="
+		-Dlinux_use_gold_binary=0
+		-Dlinux_use_gold_flags=0"
 
 	# if host-is-pax; then
 	#	# Prevent the build from failing (bug #301880). The performance
