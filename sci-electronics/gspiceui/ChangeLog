@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gspiceui
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.6 2011/07/15 22:56:38 calchan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.7 2012/02/11 13:50:23 tomjbe Exp $
+
+*gspiceui-1.0.0 (11 Feb 2012)
+
+  11 Feb 2012; Thomas Beierlein <tomjbe@gentoo.org> +gspiceui-1.0.0.ebuild,
+  +files/gspiceui-1.0.0-flags.patch:
+  Version bump
 
   15 Jul 2011; Denis Dupeyron <calchan@gentoo.org> gspiceui-0.9.99.ebuild,
   gspiceui-0.9.99-r1.ebuild:
