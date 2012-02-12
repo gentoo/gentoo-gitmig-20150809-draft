@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.2.1.ebuild,v 1.1 2011/12/10 04:41:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.2.2-r1.ebuild,v 1.1 2012/02/12 02:16:09 floppym Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ RDEPEND="dev-python/iniparse
 	dev-python/pygments
 	dev-python/PyQt4
 	dev-python/qscintilla-python
-	>=dev-vcs/mercurial-1.9
+	>=dev-vcs/mercurial-2.0
 	nautilus? ( dev-python/nautilus-python )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.3 )"
@@ -39,6 +39,9 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# make the install respect multilib.
 	sed -i -e "s:lib/nautilus:$(get_libdir)/nautilus:" setup.py || die
+
+	# Bump the required mercurial version range.
+	epatch "${FILESDIR}/${P}-hgversion.patch"
 
 	distutils_src_prepare
 }

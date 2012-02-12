@@ -1,0 +1,19 @@
+# HG changeset patch
+# User Yuya Nishihara <yuya@tcha.org>
+# Date 1327248119 -32400
+# Node ID d5dc83c7fc47f6692887f5af6bb7b1c819e7ad8e
+# Parent  54c988c2eb8442d3cb121b8ba73973bcdcbac467
+hgversion: bump required Mercurial version to 2.0
+
+diff --git a/tortoisehg/util/hgversion.py b/tortoisehg/util/hgversion.py
+--- a/tortoisehg/util/hgversion.py
++++ b/tortoisehg/util/hgversion.py
+@@ -18,7 +18,7 @@
+ 
+ def checkhgversion(v):
+     """range check the Mercurial version"""
+-    reqver = ['1', '9']
++    reqver = ['2', '0']
+     v = v.split('+')[0]
+     if not v or v == 'unknown' or len(v) >= 12:
+         # can't make any intelligent decisions about unknown or hashes
