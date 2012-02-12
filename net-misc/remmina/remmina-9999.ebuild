@@ -1,13 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.3 2011/11/23 20:57:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.4 2012/02/12 10:46:37 hwoarang Exp $
 
-EAPI=2
+EAPI="4"
 EGIT_REPO_URI="git://github.com/FreeRDP/Remmina.git"
-EGIT_PROJECT="remmina"
-EGIT_SOURCEDIR="${WORKDIR}"
 
-inherit autotools git-2 eutils gnome2-utils
+inherit gnome2-utils cmake-utils git-2
 
 DESCRIPTION="A GTK+ RDP, VNC, XDMCP and SSH client"
 HOMEPAGE="http://remmina.sourceforge.net/"
@@ -15,46 +13,36 @@ HOMEPAGE="http://remmina.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="avahi crypt debug nls ssh unique vte"
+IUSE="ayatana avahi crypt debug freerdp nls ssh unique vte"
 
 RDEPEND="x11-libs/gtk+:2
+	ayatana? ( dev-libs/libappindicator )
 	avahi? ( net-dns/avahi )
 	crypt? ( dev-libs/libgcrypt )
-	nls? ( virtual/libintl )
+	freerdp? ( net-misc/freerdp )
 	ssh? ( net-libs/libssh[sftp] )
-	unique? ( dev-libs/libunique:1 )
-	vte? ( x11-libs/vte:0 )"
+	!net-misc/remmina-plugins"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-S="${WORKDIR}/${PN}"
+DOCS=( README )
 
 src_prepare() {
-	intltoolize --force --copy --automake
-	eautoreconf
+	sed -i -e "/REMMINA_PLUGINDIR/s:lib:$(get_libdir):" CMakeLists.txt || die
 }
 
 src_configure() {
-	if use ssh && ! use vte; then
-		ewarn "Enabling ssh without vte only provides sftp support."
-	fi
-
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable avahi) \
-		$(use_enable crypt gcrypt) \
-		$(use_enable debug) \
-		$(use_enable nls) \
-		$(use_enable ssh) \
-		$(use_enable unique) \
-		$(use_enable vte)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README || die "dodoc failed"
+	mycmakeargs=(
+		$(cmake-utils_use_with ayatana appindicator) \
+		$(cmake-utils_use_with avahi) \
+		$(cmake-utils_use_with crypt GCRYPT) \
+		$(cmake-utils_use_with freerdp) \
+		$(cmake-utils_use_with ssh LIBSSH) \
+		-DHAVE_PTHREAD=ON
+	)
+	cmake-utils_src_configure
 }
 
 pkg_preinst() {

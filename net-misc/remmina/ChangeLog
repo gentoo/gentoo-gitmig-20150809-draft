@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.8 2011/11/23 20:57:50 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.9 2012/02/12 10:46:37 hwoarang Exp $
+
+  12 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  remmina-9999.ebuild:
+  Build system moved from autotools to cmake. Bug #392437
 
   23 Nov 2011; Markos Chandras <hwoarang@gentoo.org> remmina-9999.ebuild:
   Replace https with git protocol. Bug #391719
