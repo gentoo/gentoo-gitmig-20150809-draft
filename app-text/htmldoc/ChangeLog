@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmldoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.67 2012/02/11 12:50:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.68 2012/02/12 14:36:41 ago Exp $
+
+  12 Feb 2012; Agostino Sarubbo <ago@gentoo.org> htmldoc-1.8.27-r3.ebuild:
+  Stable for amd64, wrt bug #219373
 
 *htmldoc-1.8.27-r3 (11 Feb 2012)
 
