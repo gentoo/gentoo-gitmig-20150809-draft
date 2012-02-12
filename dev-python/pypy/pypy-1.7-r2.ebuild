@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7-r2.ebuild,v 1.2 2012/02/02 22:04:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7-r2.ebuild,v 1.3 2012/02/12 23:25:42 floppym Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs check-reqs python versionator
 
 DESCRIPTION="PyPy is a fast, compliant alternative implementation of the Python language"
 HOMEPAGE="http://pypy.org/"
-SRC_URI="https://bitbucket.org/pypy/pypy/get/release-${PV}.tar.bz2"
+SRC_URI="https://bitbucket.org/pypy/pypy/get/release-${PV}.tar.bz2 -> ${P}.tar.bz2"
 SLOTVER=$(get_version_component_range 1-2 ${PV})
 
 LICENSE="MIT"
@@ -28,14 +28,17 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 DEPEND="${RDEPEND}"
 PDEPEND="app-admin/python-updater"
 
-S="${WORKDIR}/${PN}-pypy-release-${PV}"
-
 DOC="README LICENSE"
 
 pkg_pretend() {
 	CHECKREQS_MEMORY="1250M"
 	use amd64 && CHECKREQS_MEMORY="2500M"
 	check-reqs_pkg_pretend
+}
+
+src_unpack() {
+	default
+	mv pypy-pypy-* "${S}" || die
 }
 
 src_prepare() {

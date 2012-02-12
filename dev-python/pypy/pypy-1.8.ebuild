@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.8.ebuild,v 1.2 2012/02/12 22:58:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.8.ebuild,v 1.3 2012/02/12 23:25:42 floppym Exp $
 
 EAPI="4"
 
@@ -28,14 +28,17 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 DEPEND="${RDEPEND}"
 PDEPEND="app-admin/python-updater"
 
-S="${WORKDIR}/pypy-pypy-2346207d9946"
-
 DOC="README LICENSE"
 
 pkg_pretend() {
 	CHECKREQS_MEMORY="1250M"
 	use amd64 && CHECKREQS_MEMORY="2500M"
 	check-reqs_pkg_pretend
+}
+
+src_unpack() {
+	default
+	mv pypy-pypy-* "${S}" || die
 }
 
 src_prepare() {
