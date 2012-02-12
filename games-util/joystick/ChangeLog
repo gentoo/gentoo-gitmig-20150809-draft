@@ -1,6 +1,12 @@
 # ChangeLog for games-util/joystick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.10 2012/02/12 18:36:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.11 2012/02/12 18:42:10 vapier Exp $
+
+*joystick-1.4.2 (12 Feb 2012)
+
+  12 Feb 2012; Mike Frysinger <vapier@gentoo.org> +joystick-1.4.2.ebuild,
+  +files/joystick-1.4.2-build.patch:
+  Version bump #374245 by Alan Swanson.
 
 *joystick-0_pre20060731 (12 Feb 2012)
 
