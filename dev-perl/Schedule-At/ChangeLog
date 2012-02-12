@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Schedule-At
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.28 2012/02/03 16:49:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.29 2012/02/12 15:09:30 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> Schedule-At-1.10.ebuild,
+  Schedule-At-1.130.0.ebuild, Schedule-At-1.140.0.ebuild:
+  Drop ia64/sparc, x86 stable wrt #396951
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Schedule-At-1.130.0.ebuild:
   Stable for amd64, wrt bug #396951
