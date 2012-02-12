@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.3.1.ebuild,v 1.3 2010/03/05 07:37:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.3.1.ebuild,v 1.4 2012/02/12 18:26:15 armin76 Exp $
 
 WEBAPP_NO_AUTO_INSTALL="yes"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://twiki.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 RESTRICT="fetch"
 IUSE=""
 

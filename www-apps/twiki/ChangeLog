@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/twiki
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.49 2010/03/05 07:37:13 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.50 2012/02/12 18:26:15 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> twiki-4.3.1.ebuild:
+  Drop sparc keywords
 
   05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> twiki-4.3.1.ebuild:
   Update dev-vcs/rcs dependency after package move, bug 56967.
