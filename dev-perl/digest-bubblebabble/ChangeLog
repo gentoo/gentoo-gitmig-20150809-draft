@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/digest-bubblebabble
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-bubblebabble/ChangeLog,v 1.20 2011/12/17 18:50:13 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-bubblebabble/ChangeLog,v 1.21 2012/02/12 20:45:10 chainsaw Exp $
+
+  12 Feb 2012; Tony Vroon <chainsaw@gentoo.org>
+  digest-bubblebabble-0.20.0.ebuild:
+  Marked stable on PPC64 as requested by Paweł Hajdan, Jr. in bug #392785.
+  Compile tested on a PowerMac7,3 (64UL) with GCC 4.5.3.
 
   17 Dec 2011; Raúl Porcel <armin76@gentoo.org>
   digest-bubblebabble-0.20.0.ebuild:
