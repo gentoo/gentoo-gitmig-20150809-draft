@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.118 2012/02/07 16:01:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.119 2012/02/12 18:41:43 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> libebml-1.2.2.ebuild:
+  alpha/ia64/sparc stable wrt #400013
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> libebml-1.2.2.ebuild:
   Stable for HPPA (bug #400013).
