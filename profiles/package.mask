@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13484 2012/02/12 18:32:50 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13485 2012/02/12 18:36:26 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -80,11 +80,6 @@ dev-php/pecl-enchant
 app-laptop/thinkpad
 app-laptop/tpctl
 app-laptop/configure-thinkpad
-
-# Markos Chandras <hwoarang@gentoo.org> (10 Feb 2012)
-# Unmaintained. If you want it take and bump it
-# Bug #386339
-app-shells/ksh
 
 # Markos Chandras <hwoarang@gentoo.org> (10 Feb 2012)
 # No maintainer. Does not build. Bug #402857
