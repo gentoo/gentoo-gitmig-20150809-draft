@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/lisaac
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.6 2011/11/06 16:38:23 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.7 2012/02/12 11:54:36 pacho Exp $
+
+*lisaac-0.13.1-r1 (12 Feb 2012)
+
+  12 Feb 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/lisaac-0.13.1-makefile.patch, +lisaac-0.13.1-r1.ebuild:
+  Install docs at proper place (bug #241270 by Boris Fersing) and respect CC
+  (bug #243878 by flameeyes).
 
   06 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> lisaac-0.13.1.ebuild,
   metadata.xml:

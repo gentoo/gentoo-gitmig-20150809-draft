@@ -1,0 +1,11 @@
+--- Makefile.orig	2008-10-13 11:25:21.000000000 +0200
++++ Makefile	2008-10-13 11:26:08.000000000 +0200
+@@ -59,7 +59,7 @@
+ HTML=/html
+ BIN=/usr/bin
+ MAN=/usr/share/man/man1
+-DOC=/usr/share/doc/lisaac
++DOC=${DOC:=/usr/share/doc/lisaac}
+ DESTDIR=
+ CC=gcc
+ CFLAGS=-O2
