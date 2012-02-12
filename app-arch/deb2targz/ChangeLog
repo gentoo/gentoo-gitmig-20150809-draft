@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/deb2targz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.19 2012/02/05 17:51:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.20 2012/02/12 15:42:44 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> deb2targz-1-r2.ebuild:
+  alpha/ia64/sparc stable wrt #399909
 
   05 Feb 2012; Markus Meier <maekke@gentoo.org> deb2targz-1-r2.ebuild:
   arm stable, bug #399909
