@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.8.ebuild,v 1.1 2012/02/12 21:06:56 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.8.ebuild,v 1.2 2012/02/12 22:58:42 floppym Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs check-reqs python versionator
 
 DESCRIPTION="PyPy is a fast, compliant alternative implementation of the Python language"
 HOMEPAGE="http://pypy.org/"
-SRC_URI="https://bitbucket.org/pypy/pypy/get/release-${PV}.tar.bz2"
+SRC_URI="https://bitbucket.org/pypy/pypy/get/release-${PV}.tar.bz2 -> ${P}.tar.bz2"
 SLOTVER=$(get_version_component_range 1-2 ${PV})
 
 LICENSE="MIT"
