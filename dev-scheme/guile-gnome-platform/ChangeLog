@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile-gnome-platform
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.14 2011/03/29 12:02:20 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.15 2012/02/12 17:55:50 jlec Exp $
+
+  12 Feb 2012; Justin Lecher <jlec@gentoo.org>
+  -guile-gnome-platform-2.15.92.ebuild:
+  Drop old
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org>
   guile-gnome-platform-2.15.92.ebuild, guile-gnome-platform-2.16.1.ebuild:
