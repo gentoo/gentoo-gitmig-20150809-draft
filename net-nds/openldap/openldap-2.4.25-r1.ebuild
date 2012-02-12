@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.25-r1.ebuild,v 1.4 2012/02/12 00:54:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.25-r1.ebuild,v 1.5 2012/02/12 19:24:32 robbat2 Exp $
 
 EAPI="3"
-WANT_AUTOMAKE=none
+WANT_AUTOMAKE=1.9
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs autotools
 
 DESCRIPTION="LDAP suite of application and development tools"
@@ -253,9 +253,7 @@ src_prepare() {
 		"${S}"/tests/scripts/* || die "sed failed"
 
 	cd "${S}"
-	#sed '/AM_INIT_AUTOMAKE/s,^,#,g' -i configure.in || die "sed failed"
-	eautoreconf
-	#sed '/AM_INIT_AUTOMAKE/s,^#,,g' -i configure.in || die "sed failed"
+	WANT_AUTOMAKE=none eautoreconf
 }
 
 build_contrib_module() {
