@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.118 2012/01/06 21:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.119 2012/02/12 00:20:54 robbat2 Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -253,6 +253,12 @@ eautoconf() {
 eautomake() {
 	local extra_opts
 	local makefile_name
+
+	# Some packages might need to skip automake
+	# OpenLDAP is a good example. It does not use automake (all the .in files are
+	# handwritten), but it does AM_INIT_AUTOMAKE in configure.in, for all the
+	# other macros involved
+	[[ ${WANT_AUTOMAKE} == "none" ]] && return 0
 
 	# Run automake if:
 	#  - a Makefile.am type file exists
