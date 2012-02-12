@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TheSchwartz
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TheSchwartz/ChangeLog,v 1.14 2011/09/04 11:22:29 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TheSchwartz/ChangeLog,v 1.15 2012/02/12 18:04:15 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> TheSchwartz-1.100.0.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -TheSchwartz-1.10.ebuild:
   Cleanup
