@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rygel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.18 2011/11/08 21:06:10 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.19 2012/02/12 17:50:20 eva Exp $
+
+*rygel-0.12.7 (12 Feb 2012)
+
+  12 Feb 2012; Gilles Dartiguelongue <eva@gentoo.org> +rygel-0.12.7.ebuild:
+  Version bump. Make sure autostart works, bug #402745, thanks to Mehmet.
 
 *rygel-0.12.5 (08 Nov 2011)
 
