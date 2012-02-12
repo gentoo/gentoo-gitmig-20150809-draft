@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.5.0.ebuild,v 1.3 2012/02/12 15:57:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.5.0.ebuild,v 1.4 2012/02/12 16:01:42 dilfridge Exp $
 
 EAPI=4
 
@@ -63,6 +63,7 @@ RDEPEND="${CDEPEND}
 	)
 "
 DEPEND="${CDEPEND}
+	dev-libs/boost
 	sys-devel/gettext
 	doc? ( app-doc/doxygen )
 "
