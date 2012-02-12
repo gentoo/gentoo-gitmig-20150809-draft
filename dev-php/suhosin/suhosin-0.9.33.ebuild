@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/suhosin-0.9.33.ebuild,v 1.2 2012/01/27 13:30:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/suhosin-0.9.33.ebuild,v 1.3 2012/02/12 19:13:00 olemarkus Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ src_prepare() {
 	for slot in $(php_get_slots); do
 		php_init_slot_env ${slot}
 		epatch "${FILESDIR}"/${P}-libcrypt.patch
+		epatch "${FILESDIR}"/${P}-fix-ZTS-compile-problem.patch
 	done
 	php-ext-source-r2_src_prepare
 }
