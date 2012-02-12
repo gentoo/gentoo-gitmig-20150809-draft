@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whois
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.167 2011/12/26 21:59:45 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.168 2012/02/12 01:11:50 chainsaw Exp $
+
+  12 Feb 2012; Tony Vroon <chainsaw@gentoo.org> whois-5.0.11.ebuild:
+  Marked stable on PPC64 as requested by Mike "vapier" Frysinger in bug
+  #387601. Compiled & functionally tested on a PowerMac7,3 (64UL) with GCC
+  4.5.3.
 
 *whois-5.0.14 (26 Dec 2011)
 
