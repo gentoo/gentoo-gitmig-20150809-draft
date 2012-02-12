@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/tslib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.15 2010/02/08 20:16:54 solar Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.16 2012/02/12 19:32:24 vapier Exp $
+
+*tslib-1.0-r2 (12 Feb 2012)
+
+  12 Feb 2012; Mike Frysinger <vapier@gentoo.org> +tslib-1.0-r2.ebuild:
+  Sync patches with upstream, and drop custom `inputattach` addition #281456.
 
   08 Feb 2010; <solar@gentoo.org> tslib-1.0-r1.ebuild:
   - tslib is not glib. it does not need to have versioned .pc files.
