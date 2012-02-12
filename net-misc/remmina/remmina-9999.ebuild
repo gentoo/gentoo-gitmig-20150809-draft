@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.4 2012/02/12 10:46:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.5 2012/02/12 21:38:31 hwoarang Exp $
 
 EAPI="4"
 EGIT_REPO_URI="git://github.com/FreeRDP/Remmina.git"
@@ -35,7 +35,7 @@ src_prepare() {
 
 src_configure() {
 	mycmakeargs=(
-		$(cmake-utils_use_with ayatana appindicator) \
+		$(cmake-utils_use_with ayatana APPINDICATOR) \
 		$(cmake-utils_use_with avahi) \
 		$(cmake-utils_use_with crypt GCRYPT) \
 		$(cmake-utils_use_with freerdp) \
