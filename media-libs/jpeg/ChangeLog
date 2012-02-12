@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.125 2012/01/31 19:01:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.126 2012/02/12 15:48:05 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> jpeg-8c-r1.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #401109
 
   31 Jan 2012; Jeroen Roovers <jer@gentoo.org> jpeg-8c-r1.ebuild:
   Stable for HPPA (bug #401109).
