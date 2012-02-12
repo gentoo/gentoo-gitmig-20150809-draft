@@ -1,6 +1,15 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.389 2012/02/10 18:10:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.390 2012/02/12 00:54:14 robbat2 Exp $
+
+  12 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openldap-2.4.28-gnutls-gcrypt.patch, openldap-2.4.21.ebuild,
+  openldap-2.4.23.ebuild, openldap-2.4.24.ebuild, openldap-2.4.25-r1.ebuild,
+  openldap-2.4.25.ebuild, openldap-2.4.28.ebuild:
+  Bug #337504: compile-fix for gnutls linked with gcrypt. Relies on
+  WANT_AUTOMAKE=none eautoreconf support added to autotools.eclass as openldap
+  configure.in uses AM_INIT_AUTOMAKE but there are no Makefile.am (all
+  Makefile.in are hand-written).
 
   10 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> openldap-2.3.43-r1.ebuild,
   openldap-2.4.19-r1.ebuild, openldap-2.4.21.ebuild, openldap-2.4.23.ebuild,
