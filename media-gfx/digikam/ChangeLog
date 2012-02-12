@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.211 2012/02/12 15:47:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.212 2012/02/12 15:57:12 dilfridge Exp $
+
+  12 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> digikam-2.5.0.ebuild,
+  +files/digikam-2.5.0-boost148.patch:
+  Add compatibility patch for Boost 1.48, bug 399727
 
   12 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> digikam-2.5.0.ebuild:
   Install handbooks, bug 338757

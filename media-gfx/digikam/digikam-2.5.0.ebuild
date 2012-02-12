@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.5.0.ebuild,v 1.2 2012/02/12 15:47:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.5.0.ebuild,v 1.3 2012/02/12 15:57:12 dilfridge Exp $
 
 EAPI=4
 
@@ -72,7 +72,10 @@ S="${WORKDIR}/${MY_P}/core"
 RESTRICT=test
 # bug 366505
 
-PATCHES=( "${FILESDIR}/${P}-libkipi.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-libkipi.patch"
+	"${FILESDIR}/${P}-boost148.patch"
+)
 
 src_prepare() {
 	# just to make absolutely sure
