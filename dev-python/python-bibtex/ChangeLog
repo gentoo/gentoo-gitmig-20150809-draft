@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-bibtex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.23 2012/02/03 16:53:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.24 2012/02/12 15:11:06 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> python-bibtex-1.2.4.ebuild,
+  python-bibtex-1.2.5.ebuild:
+  Drop ia64, x86 stable wrt #397007
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> python-bibtex-1.2.5.ebuild:
   Stable for amd64, wrt bug #397007
