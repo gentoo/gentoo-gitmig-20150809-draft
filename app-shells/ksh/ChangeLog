@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.41 2010/01/24 19:11:19 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.42 2012/02/12 18:33:02 floppym Exp $
+
+  12 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
   24 Jan 2010; Mike Frysinger <vapier@gentoo.org> ksh-93.20071105.ebuild,
   ksh-93.20081104.ebuild, ksh-93.20090505.ebuild:
