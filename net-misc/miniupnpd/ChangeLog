@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/miniupnpd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.22 2011/12/28 14:58:45 gurligebis Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.23 2012/02/12 11:59:19 gurligebis Exp $
+
+*miniupnpd-1.7_pre20120207 (12 Feb 2012)
+
+  12 Feb 2012; <gurligebis@gentoo.org> -miniupnpd-1.7_pre20111118.ebuild,
+  +miniupnpd-1.7_pre20120207.ebuild, -files/miniupnpd-nettools_newoutput.patch:
+  Bumping to 1.7_pre20120207
 
 *miniupnpd-1.7_pre20111118 (28 Dec 2011)
 
