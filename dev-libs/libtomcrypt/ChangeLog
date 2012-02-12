@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libtomcrypt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.43 2011/06/10 01:16:36 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.44 2012/02/12 21:06:16 tommy Exp $
+
+*libtomcrypt-1.17-r6 (12 Feb 2012)
+
+  12 Feb 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -libtomcrypt-1.17-r3.ebuild, -libtomcrypt-1.17-r4.ebuild,
+  -libtomcrypt-1.17-r5.ebuild, +libtomcrypt-1.17-r6.ebuild:
+  Revision bump, remove optional tomsfastmath dependency, remove older
+  revisions
 
   10 Jun 2011; Tim Harder <radhermit@gentoo.org> libtomcrypt-1.06.ebuild,
   libtomcrypt-1.17-r3.ebuild, libtomcrypt-1.17-r4.ebuild,

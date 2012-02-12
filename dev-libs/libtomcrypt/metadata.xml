@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+    <email>tommy@gentoo.org</email>
   </maintainer>
   <longdescription>
     LibTomCrypt is a fairly comprehensive, modular and portable cryptographic toolkit 
