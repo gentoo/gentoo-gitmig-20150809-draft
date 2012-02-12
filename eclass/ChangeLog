@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.130 2012/02/12 21:45:28 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.131 2012/02/12 21:48:58 mabi Exp $
+
+  12 Feb 2012; Matti Bickel <mabi@gentoo.org> php-lib-r1.eclass:
+  always install stuff into /usr/share/php
+
+  12 Feb 2012; Matti Bickel <mabi@gentoo.org> fox.eclass:
+  fix eclass to also support building apps with fox:1.7
 
   12 Feb 2012; Magnus Granberg <zorry@gentoo.org> toolchain.eclass:
   PaX mark cc1 and cc1plus for bug 301299
@@ -33,9 +39,6 @@
 
   09 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> gnustep-base.eclass:
   Use check on configuration file instead of has_version for EAPI0 ebuilds
-
-  12 Feb 2012; Matti Bickel <mabi@gentoo.org> fox.eclass:
-  fix eclass to also support building apps with fox:1.7
 
   08 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> gnustep-base.eclass:
   Force clang when using experimental libobjc2 support
