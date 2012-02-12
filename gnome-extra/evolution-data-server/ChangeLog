@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.324 2012/02/01 02:57:25 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.325 2012/02/12 17:25:02 pacho Exp $
+
+*evolution-data-server-2.32.3-r2 (12 Feb 2012)
+
+  12 Feb 2012; Pacho Ramos <pacho@gentoo.org>
+  +evolution-data-server-2.32.3-r2.ebuild,
+  +files/evolution-data-server-2.32.3-imap-move.patch:
+  Fix imap messages reappearing after moving/deleting them, bug #392665 by Wayne
+  and Gilles Dartiguelongue.
 
   01 Feb 2012; Mart Raudsepp <leio@gentoo.org>
   -files/evolution-data-server-2.32.1-libgdata07.patch,
