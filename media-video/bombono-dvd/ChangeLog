@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.22 2012/02/12 16:48:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.23 2012/02/12 16:49:35 dilfridge Exp $
+
+  12 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -bombono-dvd-1.0.2.ebuild, -bombono-dvd-1.2.0-r1.ebuild:
+  Remove old
 
 *bombono-dvd-1.2.1 (12 Feb 2012)
 
