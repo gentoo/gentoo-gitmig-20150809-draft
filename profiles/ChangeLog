@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6206 2012/02/12 12:33:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6207 2012/02/12 16:50:21 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,9 @@
 
   12 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
   Unmasked ldb-1.1.4, bug 401635
+
+  12 Feb 2012; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask more packages for removal.
 
   12 Feb 2012; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask more packages for removal.

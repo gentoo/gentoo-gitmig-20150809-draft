@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13482 2012/02/12 12:33:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13483 2012/02/12 16:50:21 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,26 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org (12 Feb 2012)
+# Unmaintained, segfaults, bug #353556
+# Removal in 30 days
+net-im/skysentials
+
+# Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
+# Unmaintained and fails to build, bug #298594
+# Removal in 30 days
+sys-power/powersoftplus
+
+# Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
+# Unmaintained, broken, bug #309201
+# Removal in 30 days
+net-dns/dlint
+
+# Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
+# Unmaintained, dead upstream, broken, bug #330419
+# Removal in 30 days
+x11-misc/genmenu
 
 # Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
 # Unmaintained for a long time, dead upstream and crashes,
