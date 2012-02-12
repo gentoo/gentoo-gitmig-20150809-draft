@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/meld3
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.3 2010/09/22 20:08:35 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.4 2012/02/12 12:07:46 djc Exp $
+
+  12 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Removing myself as a maintainer.
 
   22 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -meld3-0.6.6.ebuild:
