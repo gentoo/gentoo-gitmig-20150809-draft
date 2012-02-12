@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.20 2012/02/08 15:57:30 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.21 2012/02/12 03:00:01 cardoe Exp $
+
+  11 Feb 2012; Doug Goldstein <cardoe@gentoo.org> -spice-0.8.2.ebuild:
+  Remove unused version
 
 *spice-0.10.1 (08 Feb 2012)
 
