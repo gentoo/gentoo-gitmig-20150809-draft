@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.14 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.15 2012/02/12 21:45:28 mabi Exp $
 
 # @ECLASS: fox.eclass
 # @MAINTAINER:
@@ -122,6 +122,7 @@ fox_src_prepare() {
 		sed -i \
 			-e "s:-I\$(top_srcdir)/include -I\$(top_builddir)/include:-I\$(includedir)/fox-${FOXVER}:" \
 			-e 's:$(top_builddir)/src/libFOX:-lFOX:' \
+			-e 's:$(top_builddir)/lib/libFOX:-lFOX:' \
 			-e 's:\.la::' \
 			${d}/Makefile.am || die "sed ${d}/Makefile.am error"
 	done
