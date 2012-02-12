@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Netmask
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.46 2012/02/03 16:45:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.47 2012/02/12 15:08:11 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> Net-Netmask-1.901.500.ebuild,
+  Net-Netmask-1.901.600.ebuild:
+  Drop alpha/ia64/sparc keywords. x86 stable wrt #396937
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Net-Netmask-1.901.600.ebuild:
   Stable for amd64, wrt bug #396937

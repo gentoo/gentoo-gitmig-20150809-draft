@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/Net-Netmask-1.901.600.ebuild,v 1.2 2012/02/03 16:45:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/Net-Netmask-1.901.600.ebuild,v 1.3 2012/02/12 15:08:11 armin76 Exp $
 
 EAPI=3
 
@@ -12,5 +12,5 @@ inherit perl-module
 DESCRIPTION="Parse, manipulate and lookup IP network blocks"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~mips ~ppc x86"
 IUSE=""
