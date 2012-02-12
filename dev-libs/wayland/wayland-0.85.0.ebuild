@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-0.85.0.ebuild,v 1.1 2012/02/10 17:15:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-0.85.0.ebuild,v 1.2 2012/02/12 18:26:40 jer Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ fi
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="static-libs"
 
 RDEPEND="dev-libs/expat
