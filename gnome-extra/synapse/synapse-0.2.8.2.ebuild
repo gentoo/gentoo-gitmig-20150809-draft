@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.8.2.ebuild,v 1.3 2012/02/01 10:01:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.8.2.ebuild,v 1.4 2012/02/12 18:18:48 jlec Exp $
 
 EAPI=4
 
@@ -21,7 +21,6 @@ RDEPEND="
 	dev-lang/vala:0.12
 	dev-libs/dbus-glib
 	dev-libs/libgee:0
-	dev-libs/libzeitgeist
 	dev-libs/glib:2
 	dev-libs/json-glib
 	dev-libs/libunique:1
