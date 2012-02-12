@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.12.ebuild,v 1.2 2011/10/24 05:40:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.12.ebuild,v 1.3 2012/02/12 20:00:12 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.6"
@@ -14,7 +14,7 @@ DESCRIPTION="Python binding to libudev"
 HOMEPAGE="http://packages.python.org/pyudev/ http://pypi.python.org/pypi/pyudev"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pygobject pyqt4 pyside"

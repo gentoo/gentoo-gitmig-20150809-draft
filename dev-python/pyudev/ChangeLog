@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyudev
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.10 2011/11/11 00:17:29 sbriesen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.11 2012/02/12 20:00:12 floppym Exp $
+
+  12 Feb 2012; Mike Gilbert <floppym@gentoo.org> pyudev-0.11.ebuild,
+  pyudev-0.12.ebuild, pyudev-0.13.ebuild:
+  Per Arfrever, LICENSE="LGPL-2.1"
 
 *pyudev-0.13 (11 Nov 2011)
 
