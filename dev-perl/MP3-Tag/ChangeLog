@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MP3-Tag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.49 2012/02/03 16:33:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.50 2012/02/12 15:03:37 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> MP3-Tag-1.12.ebuild,
+  MP3-Tag-1.130.0.ebuild:
+  Drop ia64/sparc keywords
 
   03 Feb 2012; Brent Baude <ranger@gentoo.org> MP3-Tag-1.130.0.ebuild:
   Marking MP3-Tag-1.130.0 ppc for bug 400165
