@@ -10,5 +10,7 @@
   <use>
     <flag name="jit">Enable the JIT compiler</flag>
     <flag name="sandbox">Enable sandboxing functionality</flag>
+    <flag name="stackless">Enable running with stackless features</flag>
+    <flag name="shadowstack">Use a shadow stack for finding GC roots</flag>
   </use>
 </pkgmetadata>
