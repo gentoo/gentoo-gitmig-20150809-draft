@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypserv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.55 2011/08/02 02:33:22 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.56 2012/02/12 14:37:44 ago Exp $
+
+  12 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ypserv-2.26.ebuild:
+  Stable for amd64, wrt bug #400453
 
 *ypserv-2.26 (02 Aug 2011)
 
