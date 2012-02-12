@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.30 2012/02/06 08:32:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.31 2012/02/12 01:17:48 robbat2 Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
 
 VERSION_BUSYBOX='1.19.3'
-VERSION_DMAP='1.02.22'
-VERSION_DMRAID='1.0.0.rc14'
+VERSION_DMRAID='1.0.0.rc16-3'
 VERSION_MDADM='3.1.5'
 VERSION_E2FSPROGS='1.42'
 VERSION_FUSE='2.8.6'
@@ -26,8 +25,6 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 		mirror://kernel/linux/utils/raid/mdadm/mdadm-${VERSION_MDADM}.tar.bz2
 		${RH_HOME}/lvm2/LVM2.${VERSION_LVM}.tgz
 		${RH_HOME}/lvm2/old/LVM2.${VERSION_LVM}.tgz
-		${RH_HOME}/dm/device-mapper.${VERSION_DMAP}.tgz
-		${RH_HOME}/dm/old/device-mapper.${VERSION_DMAP}.tgz
 		${BB_HOME}/busybox-${VERSION_BUSYBOX}.tar.bz2
 		mirror://kernel/linux/kernel/people/mnc/open-iscsi/releases/open-iscsi-${VERSION_ISCSI}.tar.gz
 		mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz
@@ -91,7 +88,6 @@ src_install() {
 	# This block updates genkernel.conf
 	sed \
 		-e "s:VERSION_BUSYBOX:$VERSION_BUSYBOX:" \
-		-e "s:VERSION_DMAP:$VERSION_DMAP:" \
 		-e "s:VERSION_MDADM:$VERSION_MDADM:" \
 		-e "s:VERSION_DMRAID:$VERSION_DMRAID:" \
 		-e "s:VERSION_E2FSPROGS:$VERSION_E2FSPROGS:" \
@@ -124,7 +120,6 @@ src_install() {
 		"${DISTDIR}"/mdadm-${VERSION_MDADM}.tar.bz2 \
 		"${DISTDIR}"/dmraid-${VERSION_DMRAID}.tar.bz2 \
 		"${DISTDIR}"/LVM2.${VERSION_LVM}.tgz \
-		"${DISTDIR}"/device-mapper.${VERSION_DMAP}.tgz \
 		"${DISTDIR}"/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz \
 		"${DISTDIR}"/busybox-${VERSION_BUSYBOX}.tar.bz2 \
 		"${DISTDIR}"/fuse-${VERSION_FUSE}.tar.gz \

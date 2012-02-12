@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.283 2012/02/10 17:04:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.284 2012/02/12 01:17:48 robbat2 Exp $
+
+  12 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
+  Drop device-mapper as it was merged into LVM2-2.02.67 upstream in 2010. Update
+  dmraid per bug #398467.
 
   10 Feb 2012; Markus Meier <maekke@gentoo.org> genkernel-3.4.20.ebuild:
   arm stable, bug #400539
