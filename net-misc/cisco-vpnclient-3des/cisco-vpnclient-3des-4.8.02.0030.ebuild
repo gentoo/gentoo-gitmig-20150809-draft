@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.01.0640.ebuild,v 1.5 2009/07/07 23:15:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.02.0030.ebuild,v 1.1 2012/02/12 11:09:24 pacho Exp $
 
+EAPI="4"
 inherit eutils linux-mod
 
 MY_PV=${PV}-k9
@@ -38,12 +39,16 @@ pkg_nofetch() {
 	elog "and download ${A} to ${DISTDIR}"
 }
 
-src_unpack () {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${PV}-amd64.patch
-	epatch "${FILESDIR}"/${PV}-2.6.24.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-frag.c.patch
+	epatch "${FILESDIR}"/${PV}-GenDefs.h.patch
+	epatch "${FILESDIR}"/${PV}-interceptor.c.patch
+	epatch "${FILESDIR}"/${PV}-linuxcniapi.c.patch
+	epatch "${FILESDIR}"/${PV}-linuxcniapi.h.patch
+	epatch "${FILESDIR}"/${PV}-linuxkernelapi.c.patch
+	epatch "${FILESDIR}"/${PV}-Makefile.patch
+	epatch "${FILESDIR}"/${PV}-autoconf.patch
+	sed -i "s:^MODULE_DIR.*$:MODULE_DIR=/lib/modules/${KV_FULL}:" Makefile
 }
 
 src_install() {

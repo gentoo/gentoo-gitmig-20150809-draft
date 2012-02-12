@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.67 2011/06/06 06:19:54 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.68 2012/02/12 11:09:24 pacho Exp $
+
+*cisco-vpnclient-3des-4.8.02.0030 (12 Feb 2012)
+
+  12 Feb 2012; Pacho Ramos <pacho@gentoo.org>
+  +cisco-vpnclient-3des-4.8.02.0030.ebuild, +files/4.8.02.0030-GenDefs.h.patch,
+  +files/4.8.02.0030-Makefile.patch, +files/4.8.02.0030-autoconf.patch,
+  +files/4.8.02.0030-frag.c.patch, +files/4.8.02.0030-interceptor.c.patch,
+  +files/4.8.02.0030-linuxcniapi.c.patch,
+  +files/4.8.02.0030-linuxcniapi.h.patch,
+  +files/4.8.02.0030-linuxkernelapi.c.patch,
+  -cisco-vpnclient-3des-4.8.01.0640.ebuild:
+  Version bump, thanks a lot to  Rolando J. Zappacosta, Andreas Simon, Andrea
+  Postiglione, Matthew Schultz, JTRiley. Drop old.
 
   06 Jun 2011; Robin H. Johnson <robbat2@gentoo.org>
   cisco-vpnclient-3des-4.8.00.0490-r1.ebuild:
