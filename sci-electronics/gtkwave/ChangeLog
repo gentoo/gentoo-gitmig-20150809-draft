@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.70 2012/02/10 22:17:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.71 2012/02/12 08:53:24 tomjbe Exp $
+
+*gtkwave-3.3.31 (11 Feb 2012)
+
+  11 Feb 2012; Thomas Beierlein <tomjbe@gentoo.org> +gtkwave-3.3.31.ebuild:
+  Version bump. Thanks hiyuh (bug #402807)
 
   10 Feb 2012; Agostino Sarubbo <ago@gentoo.org> gtkwave-3.3.28.ebuild:
   Stable for amd64, wrt bug #402963
