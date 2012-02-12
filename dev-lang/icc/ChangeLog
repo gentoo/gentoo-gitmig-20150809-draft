@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/icc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.83 2010/12/03 18:46:33 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.84 2012/02/12 23:20:14 bicatali Exp $
+
+  12 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> -icc-10.1.017-r1.ebuild,
+  -icc-10.1.018.ebuild, -icc-11.1.046-r2.ebuild, -icc-11.1.056.ebuild,
+  -icc-11.1.056-r1.ebuild, -icc-11.1.072.ebuild, icc-11.1.072-r1.ebuild:
+  Removed obsoletes
 
   03 Dec 2010; Patrick Lauer <patrick@gentoo.org> icc-11.1.056.ebuild,
   icc-11.1.056-r1.ebuild, icc-11.1.072.ebuild, icc-11.1.072-r1.ebuild:

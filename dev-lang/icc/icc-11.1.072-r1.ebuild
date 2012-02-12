@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.072-r1.ebuild,v 1.2 2010/12/03 18:46:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.072-r1.ebuild,v 1.3 2012/02/12 23:20:14 bicatali Exp $
 
 EAPI="3"
 
@@ -66,8 +66,8 @@ src_unpack() {
 	use eclipse || rm -f rpm/*cdt*.rpm
 	if has_version "~dev-lang/ifc-${PV}"; then
 		rm -f rpm/*cprolib*.rpm
-		use idb && built_with_use dev-lang/ifc idb && rm -f rpm/*idb*.rpm
-		use mkl && built_with_use dev-lang/ifc mkl && rm -f rpm/*mkl*.rpm
+		use idb && has_version dev-lang/ifc[idb] && rm -f rpm/*idb*.rpm
+		use mkl && has_version dev-lang/ifc[mkl] && rm -f rpm/*mkl*.rpm
 	fi
 	for x in rpm/intel*.rpm; do
 		einfo "Extracting $(basename ${x})..."
