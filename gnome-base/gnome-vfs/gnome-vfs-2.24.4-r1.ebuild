@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r1.ebuild,v 1.3 2012/01/12 02:24:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r1.ebuild,v 1.4 2012/02/12 22:10:40 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -89,7 +89,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.24.4-home_dir_fakeroot.patch
 
 	# Configure with gnutls-2.7, bug #253729
-	epatch "${FILESDIR}"/${PN}-2.24.0-gnutls27.patch
+	# Fix building with gnutls-2.12, bug #388895
+	epatch "${FILESDIR}"/${PN}-2.24.4-gnutls27.patch
 
 	# Prevent duplicated volumes, bug #193083
 	epatch "${FILESDIR}"/${PN}-2.24.0-uuid-mount.patch

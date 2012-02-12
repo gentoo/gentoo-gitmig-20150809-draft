@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.342 2012/01/12 02:24:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.343 2012/02/12 22:10:40 tetromino Exp $
+
+  12 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/gnome-vfs-2.24.0-gnutls27.patch, gnome-vfs-2.24.4-r1.ebuild,
+  +files/gnome-vfs-2.24.4-gnutls27.patch:
+  Add Debian patch to allow building against gnutls-2.12 (bug #388895, thanks
+  to Lars Wendler and Pacho Ramos).
 
   12 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-vfs-2.24.4-r1.ebuild:
