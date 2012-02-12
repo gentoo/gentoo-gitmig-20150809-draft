@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.58 2011/03/16 11:03:37 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.59 2012/02/12 20:57:22 vapier Exp $
+
+  12 Feb 2012; Mike Frysinger <vapier@gentoo.org> netqmail-1.05-r4.ebuild,
+  netqmail-1.05-r8.ebuild, netqmail-1.06.ebuild:
+  Drop env-update call that the PM does for us #402339.
 
   16 Mar 2011; Eray Aslan <eras@gentoo.org> netqmail-1.05-r4.ebuild,
   netqmail-1.05-r8.ebuild, netqmail-1.06.ebuild:
