@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/activity-log-manager-0.9.0.1.ebuild,v 1.1 2012/02/10 17:34:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/activity-log-manager-0.9.0.1.ebuild,v 1.2 2012/02/12 20:30:33 jlec Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools gnome2 versionator
 
 DESCRIPTION="GUI which lets you easily control what gets logged by Zeitgeist"
 HOMEPAGE="https://launchpad.net/activity-log-manager/"
-SRC_URI="http://launchpad.net/history-manager/$(get_version_component_range 1-2)/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/history-manager/$(get_version_component_range 1-2)/$(get_version_component_range 1-3)/+download/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -42,7 +42,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gold.patch \
 		"${FILESDIR}"/${P}-ccpanel.patch
 	sed \
-		-e "/^almdocdir/s:=.*$:= \${prefix}/usr/share/doc:g" \
+		-e "/^almdocdir/s:=.*$:= \${prefix}/share/doc/${PF}:g" \
 		-i Makefile.am || die
 	sed \
 		-e 's:-g::g' \
