@@ -1,9 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/slapd-initd-2.4.28-r1,v 1.1 2012/02/12 21:11:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/slapd-initd-2.4.28-r1,v 1.2 2012/02/12 21:35:04 robbat2 Exp $
 
 extra_commands="checkconfig"
+
+[ -z "$INSTANCE" ] && INSTANCE="openldap${SVCNAME#slapd}"
 
 depend() {
 	need net
@@ -18,13 +20,13 @@ start() {
 	fi
 	ebegin "Starting ldap-server"
 	[ -n "$KRB5_KTNAME" ] && export KRB5_KTNAME
-	eval start-stop-daemon --start --pidfile /var/run/openldap/slapd.pid --exec /usr/lib/openldap/slapd -- -u ldap -g ldap "${OPTS}"
+	eval start-stop-daemon --start --pidfile /var/run/openldap/${SVCNAME}.pid --exec /usr/lib/openldap/slapd -- -u ldap -g ldap "${OPTS}"
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping ldap-server"
-	start-stop-daemon --stop --signal 2 --quiet --pidfile /var/run/openldap/slapd.pid 
+	start-stop-daemon --stop --signal 2 --quiet --pidfile /var/run/openldap/${SVCNAME}.pid
 	eend $?
 }
 

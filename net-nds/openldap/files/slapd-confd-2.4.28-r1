@@ -4,10 +4,13 @@
 # one uncomment this line or set any other server starting options
 # you may desire.
 
+# If you have multiple slapd instances per #376699, this will provide a default config
+INSTANCE="openldap${SVCNAME#slapd}"
+
 # If you use the classical configuration file:
-OPTS_CONF="-f /etc/openldap/slapd.conf"
+OPTS_CONF="-f /etc/${INSTANCE}/slapd.conf"
 # Uncomment this instead to use the new slapd.d configuration directory for openldap 2.3
-#OPTS_CONF="-F /etc/openldap/slapd.d"
+#OPTS_CONF="-F /etc/${INSTANCE}/slapd.d"
 # (the OPTS_CONF variable is also passed to slaptest during startup)
 
 OPTS="${OPTS_CONF} -h 'ldaps:// ldap:// ldapi://%2fvar%2frun%2fopenldap%2fslapd.sock'"
