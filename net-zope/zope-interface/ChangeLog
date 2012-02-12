@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-interface
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.30 2011/10/23 17:14:36 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.31 2012/02/12 00:04:13 chainsaw Exp $
+
+  12 Feb 2012; Tony Vroon <chainsaw@gentoo.org> zope-interface-3.7.0.ebuild:
+  Marked stable on PPC64 as requested by Dirkjan "djc" Ochtman in bug
+  #386089. Compile tested on a PowerMac7,3 (64UL) with GCC 4.5.3.
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> zope-interface-3.7.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #386069
