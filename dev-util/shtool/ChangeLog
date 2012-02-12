@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/shtool
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.27 2009/09/11 21:48:22 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.28 2012/02/12 14:57:08 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> shtool-2.0.2.ebuild,
+  shtool-2.0.8.ebuild:
+  Move to ~ia64/~sparc, x86 stable wrt #397027
 
 *shtool-2.0.8 (11 Sep 2009)
 
