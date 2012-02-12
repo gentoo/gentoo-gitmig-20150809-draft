@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.164 2012/02/05 13:00:54 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.165 2012/02/12 09:16:08 hwoarang Exp $
+
+  12 Feb 2012; Markos Chandras <hwoarang@gentoo.org> qt-gui-4.8.0-r2.ebuild:
+  Add missing mesa[egl] dependency. Bug #402183
 
 *qt-gui-4.8.0-r2 (05 Feb 2012)
 
