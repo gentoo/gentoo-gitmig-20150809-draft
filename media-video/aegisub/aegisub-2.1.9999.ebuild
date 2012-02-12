@@ -1,19 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-2.1.9.ebuild,v 1.2 2012/02/12 12:31:16 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-2.1.9999.ebuild,v 1.1 2012/02/12 12:31:16 maksbotan Exp $
 
 EAPI="4"
 
 WX_GTK_VER="2.8"
-inherit autotools wxwidgets
+inherit autotools wxwidgets subversion
 
 DESCRIPTION="Advanced SSA/ASS subtitle editor"
 HOMEPAGE="http://www.aegisub.net/"
-SRC_URI="http://rion-overlay.googlecode.com/files/${P}.tar.xz"
+ESVN_REPO_URI="http://svn.aegisub.org/branches/aegisub_2.1.9/aegisub/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="alsa debug +ffmpeg lua nls openal oss portaudio pulseaudio spell"
 
 RDEPEND="
@@ -42,6 +42,9 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
+	subversion_wc_info
+	echo "${ESVN_WC_REVISION}" > svn_revision
+
 	sh autogen.sh --skip-configure
 	eautoreconf
 }
