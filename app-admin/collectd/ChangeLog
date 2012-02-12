@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.31 2012/02/07 20:12:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.32 2012/02/12 16:17:53 dilfridge Exp $
+
+*collectd-5.0.2-r1 (12 Feb 2012)
+
+  12 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +collectd-5.0.2-r1.ebuild, +files/collectd-5.0.2-message.patch:
+  Increase message buffer size for memcached, bug 402569
 
 *collectd-5.0.2 (07 Feb 2012)
 

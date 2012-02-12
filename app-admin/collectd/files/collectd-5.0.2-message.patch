@@ -1,0 +1,11 @@
+--- src/memcached.c.orig	2011-03-26 18:04:35.000000000 +0200
++++ src/memcached.c	2011-10-29 12:21:08.714557170 +0300
+@@ -358,7 +358,7 @@
+ 
+ static int memcached_read (void) /* {{{ */
+ {
+-	char buf[1024];
++	char buf[2048];
+ 	char *fields[3];
+ 	char *ptr;
+ 	char *line;
