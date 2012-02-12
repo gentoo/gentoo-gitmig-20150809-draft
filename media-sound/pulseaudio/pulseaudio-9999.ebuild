@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.17 2012/02/10 00:55:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.18 2012/02/12 17:49:28 ford_prefect Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc ssl"
 
-RDEPEND="app-admin/eselect-esd
+RDEPEND=">=media-libs/libsndfile-1.0.20
 	X? (
 		>=x11-libs/libX11-1.4.0
 		>=x11-libs/libxcb-1.6
@@ -27,7 +27,10 @@ RDEPEND="app-admin/eselect-esd
 	)
 	caps? ( sys-libs/libcap )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.1-r1 )
-	alsa? ( >=media-libs/alsa-lib-1.0.19 )
+	alsa? (
+		>=media-libs/alsa-lib-1.0.19
+		media-plugins/alsa-plugins[pulseaudio]
+	)
 	glib? ( >=dev-libs/glib-2.4.0 )
 	avahi? ( >=net-dns/avahi-0.6.12[dbus] )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.117 )
@@ -46,7 +49,6 @@ RDEPEND="app-admin/eselect-esd
 	orc? ( >=dev-lang/orc-0.4.9 )
 	ssl? ( dev-libs/openssl )
 	>=media-libs/speex-1.2_rc1
-	>=media-libs/libsndfile-1.0.20
 	sys-libs/gdbm
 	dev-libs/json-c
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
@@ -113,6 +115,7 @@ src_configure() {
 		$(use_enable ssl openssl) \
 		$(use_with caps) \
 		$(use_with equalizer fftw) \
+		--disable-esound \
 		--localstatedir="${EPREFIX}"/var \
 		--with-database=gdbm \
 		--with-udev-rules-dir="${EPREFIX}/lib/udev/rules.d"
@@ -197,15 +200,6 @@ pkg_postinst() {
 		elog "configuration file. If you do enable it, you'll have to have"
 		elog "your Bluetooth controller enabled and inserted at bootup or"
 		elog "PulseAudio will refuse to start."
-	fi
-	if use alsa; then
-		local pkg="media-plugins/alsa-plugins"
-		if has_version ${pkg} && ! has_version "${pkg}[pulseaudio]"; then
-			elog
-			elog "You have alsa support enabled so you probably want to install"
-			elog "${pkg} with pulseaudio support to have"
-			elog "alsa using applications route their sound through pulseaudio"
-		fi
 	fi
 
 	eselect esd update --if-unset
