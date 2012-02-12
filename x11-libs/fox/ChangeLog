@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/fox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.152 2011/08/25 21:38:27 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.153 2012/02/12 18:29:55 mabi Exp $
+
+*fox-1.7.32 (12 Feb 2012)
+
+  12 Feb 2012; Matti Bickel <mabi@gentoo.org> +fox-1.7.32.ebuild,
+  -fox-1.7.23.ebuild, fox-1.6.43.ebuild:
+  version bump (thanks to James Broadhead in bug #376239 for providing much of
+  the code), add media-libs/mesa dep (bug #379725)
 
 *fox-1.6.43 (25 Aug 2011)
 

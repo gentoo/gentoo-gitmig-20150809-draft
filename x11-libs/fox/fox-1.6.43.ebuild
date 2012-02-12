@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.43.ebuild,v 1.2 2011/08/31 06:43:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.43.ebuild,v 1.3 2012/02/12 18:29:55 mabi Exp $
 
 EAPI="4"
 
@@ -14,6 +14,7 @@ IUSE="bzip2 jpeg opengl png tiff truetype zlib"
 RDEPEND="x11-libs/libXrandr
 	x11-libs/libXcursor
 	x11-libs/fox-wrapper
+	media-libs/mesa
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
 	jpeg? ( virtual/jpeg )
 	opengl? ( virtual/opengl )
@@ -26,10 +27,12 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-libs/libXt"
 
-FOXCONF="$(use_enable bzip2 bz2lib) \
-	$(use_enable jpeg) \
-	$(use_with opengl) \
-	$(use_enable png) \
-	$(use_enable tiff) \
-	$(use_with truetype xft) \
-	$(use_enable zlib)"
+src_configure() {
+	FOXCONF="$(use_enable bzip2 bz2lib) \
+		$(use_enable jpeg) \
+		$(use_with opengl) \
+		$(use_enable png) \
+		$(use_enable tiff) \
+		$(use_with truetype xft) \
+		$(use_enable zlib)" fox_src_configure
+}
