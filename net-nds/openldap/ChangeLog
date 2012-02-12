@@ -1,6 +1,18 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.392 2012/02/12 19:24:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.393 2012/02/12 21:11:44 robbat2 Exp $
+
+*openldap-2.4.28-r1 (12 Feb 2012)
+
+  12 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openldap-2.4.6-evolution-ntlm.patch, +files/slapd-confd-2.4.28-r1,
+  +files/slapd-initd-2.4.28-r1, +openldap-2.4.28-r1.ebuild, metadata.xml:
+  Bug #322787: Fix false positve on USE=minimal build safety. Bug #322535:
+  Samba4 overlay support. Bug #337717: missing groff DEPEND. Bug #340987: back-
+  ldbm was removed in the 2.4.x branch. Bug #342439: Connectionless LDAP
+  support. Bug #350295: Clarify slapd.conf vs slapd.d configuration methods. Bug
+  #294350: NTLM auth support for evolution client. Bug #302310: rfc2307bis
+  schema. Bug #302960: slaptest the configuration on startup.
 
   12 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> openldap-2.4.21.ebuild,
   openldap-2.4.23.ebuild, openldap-2.4.24.ebuild, openldap-2.4.25-r1.ebuild,
