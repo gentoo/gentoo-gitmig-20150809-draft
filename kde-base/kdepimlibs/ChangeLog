@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.131 2012/02/06 23:06:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.132 2012/02/12 16:42:16 johu Exp $
+
+  12 Feb 2012; Johannes Huber <johu@gentoo.org> kdepimlibs-4.8.0.ebuild:
+  Reverted the dep change on cyrus-sasl as reported to be working on several
+  systems, bug #402489.
 
   06 Feb 2012; Johannes Huber <johu@gentoo.org> kdepimlibs-4.8.0.ebuild:
   KMail doesn't send mails with dev-libs/cyrus-sasl-2.1.25, adjusting deps.

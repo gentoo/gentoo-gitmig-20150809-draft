@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.8.0.ebuild,v 1.3 2012/02/06 23:06:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.8.0.ebuild,v 1.4 2012/02/12 16:42:16 johu Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ COMMON_DEPEND="
 	>=app-crypt/gpgme-1.1.6
 	dev-libs/libgpg-error
 	>=dev-libs/libical-0.43
-	<dev-libs/cyrus-sasl-2.1.25
+	dev-libs/cyrus-sasl
 	$(add_kdebase_dep kdelibs 'semantic-desktop=')
 	prison? ( media-libs/prison )
 	semantic-desktop? (
