@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.6.1.ebuild,v 1.4 2012/01/26 15:30:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.6.1.ebuild,v 1.5 2012/02/12 23:24:02 anarchy Exp $
 
 EAPI="4"
 
@@ -33,8 +33,7 @@ RDEPEND="dev-libs/dbus-glib
 	>=x11-libs/gtk+-2.10:2
 	x11-libs/libXrender
 	x11-libs/libXt
-	x11-libs/libXmu
-	!<www-client/seamonkey-bin-2"
+	x11-libs/libXmu"
 
 S="${WORKDIR}/seamonkey"
 

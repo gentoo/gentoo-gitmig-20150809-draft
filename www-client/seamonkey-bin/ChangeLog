@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.118 2012/02/04 18:39:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.119 2012/02/12 23:24:02 anarchy Exp $
+
+*seamonkey-bin-2.7.1 (12 Feb 2012)
+
+  12 Feb 2012; Jory A. Pratt <anarchy@gentoo.org> -seamonkey-bin-2.0.14.ebuild,
+  -seamonkey-bin-2.7.ebuild, +seamonkey-bin-2.7.1.ebuild:
+  Security Bump
 
   04 Feb 2012; Nirbheek Chauhan <nirbheek@gentoo.org> seamonkey-bin-2.7.ebuild:
   Port to the new mozlinguas.eclass
