@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.128 2012/02/12 00:20:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.129 2012/02/12 14:17:33 zorry Exp $
+
+  12 Feb 2012; Magnus Granberg <zorry@gentoo.org> toolchain.eclass:
+  PaX mark cc1 and cc1plus for bug 301299
 
   12 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> autotools.eclass:
   Provide a way to run eautoreconf without automake by using
