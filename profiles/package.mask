@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13480 2012/02/12 11:21:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13481 2012/02/12 11:38:07 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
+# Unmaintained for a long time, dead upstream and crashes,
+# bug #214545. Removal in 30 days.
+x11-terms/wterm
+
+# Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
+# Unmaintained for a long time, fails to start, bug #223783.
+# Removal in 30 days.
+dev-lang/cm3-bin
 
 # Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
 # Completely unmaintained, broken and with different bugs
