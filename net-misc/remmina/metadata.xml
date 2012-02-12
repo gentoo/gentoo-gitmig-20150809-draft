@@ -9,6 +9,10 @@
 		<email>hwoarang@gentoo.org</email>
 		<name>Markos Chandras</name>
 	</maintainer>
+	<maintainer>
+		<email>floppym@gentoo.org</email>
+		<name>Mike Gilbert</name>
+	</maintainer>
 	<use>
 		<flag name="ayatana">Add support for the Unity desktop</flag>
 		<flag name="freerdp">Add support for the net-misc/freerdp application</flag>
