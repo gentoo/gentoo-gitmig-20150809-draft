@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/metalog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.98 2011/11/13 21:11:47 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.99 2012/02/12 23:39:43 chainsaw Exp $
+
+  12 Feb 2012; Tony Vroon <chainsaw@gentoo.org> metalog-2.ebuild:
+  Marked stable on PPC64 as requested by Agostino "ago" Sarubbo in bug
+  #390033. Compile tested on a PowerMac7,3 (64UL) with GCC 4.5.3.
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org> metalog-2.ebuild:
   arm stable, bug #390033
