@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.164 2012/01/25 13:24:31 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.165 2012/02/12 11:02:13 hwoarang Exp $
+
+*PyQt4-4.9.1 (12 Feb 2012)
+
+  12 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +PyQt4-4.9.1.ebuild:
+  version bump
 
   25 Jan 2012; Alex Alexander <wired@gentoo.org> PyQt4-4.9.ebuild:
   builds with qt-opengl-4.8.0[egl], updated dep
