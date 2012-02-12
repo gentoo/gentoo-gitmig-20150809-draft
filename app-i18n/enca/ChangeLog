@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.76 2012/02/06 16:34:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.77 2012/02/12 15:46:01 armin76 Exp $
+
+  12 Feb 2012; Raúl Porcel <armin76@gentoo.org> enca-1.13-r2.ebuild:
+  alpha/ia64/sparc stable wrt #398991
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> enca-1.13-r2.ebuild:
   Marking enca-1.13-r2 ppc for bug 398991
