@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.13 2012/01/30 15:15:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.14 2012/02/12 02:54:45 cardoe Exp $
+
+  11 Feb 2012; <cardoe@gentoo.org> -spice-gtk-0.7.ebuild:
+  Remove older version
 
   30 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> spice-gtk-0.8.ebuild:
   Fix usbredir and polkit deps
