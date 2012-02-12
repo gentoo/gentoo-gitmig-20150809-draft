@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.28-r1.ebuild,v 1.2 2012/02/12 21:29:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.28-r1.ebuild,v 1.3 2012/02/12 21:39:37 robbat2 Exp $
 
 EAPI="3"
 WANT_AUTOMAKE=1.9
@@ -128,6 +128,7 @@ openldap_find_versiontags() {
 					eerror
 					eerror "For a HOWTO on exporting the data, see instructions in the ebuild"
 					eerror
+					openldap_upgrade_howto
 					die "Please move the datadir ${CURRENT_TAGDIR} away"
 				fi
 			fi
