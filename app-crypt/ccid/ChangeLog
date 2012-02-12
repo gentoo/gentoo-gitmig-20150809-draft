@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ccid
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.69 2011/10/17 20:46:18 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.70 2012/02/12 00:46:30 chainsaw Exp $
+
+  12 Feb 2012; Tony Vroon <chainsaw@gentoo.org> ccid-1.4.2.ebuild:
+  Marked stable on PPC64 as requested by Diego Elio "Flameeyes" Pettenò in
+  bug #386345. Compile tested on a PowerMac7,3 (64UL) with GCC 4.5.3.
 
   17 Oct 2011; Markus Meier <maekke@gentoo.org> ccid-1.4.2.ebuild:
   arm stable, bug #386345
