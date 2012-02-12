@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.119 2012/02/10 01:40:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.120 2012/02/12 04:03:05 jdhore Exp $
+
+  12 Feb 2012; Jeff Horelick <jdhore@gentoo.org> bluez-4.98-r1.ebuild:
+  x86 stable per bug 399745
 
   10 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org> bluez-4.98-r1.ebuild:
   Add a readline USE flag and fix dependencies.
