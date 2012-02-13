@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-1.9.3.ebuild,v 1.1 2011/07/11 17:37:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-1.9.3.ebuild,v 1.2 2012/02/13 23:13:15 tetromino Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ RDEPEND="net-misc/curl
 	x11-libs/gtkdatabox"
 
 DEPEND="${RDEPEND}
-	sys-devel/gettext"
+	sys-devel/gettext
+	|| ( dev-util/gtk-builder-convert <=x11-libs/gtk+-2.24.10:2 )"
 
 DOCS=( AUTHORS ChangeLog NEWS README TODO )
