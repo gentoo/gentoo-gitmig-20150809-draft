@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.4 2012/02/05 06:30:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.5 2012/02/13 20:53:34 vapier Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -286,6 +286,7 @@ _unpacker() {
 	esac
 
 	# then figure out if there are any archiving aspects
+	arch=""
 	case ${m} in
 	*.tgz|*.tbz|*.tbz2|*.txz|*.tar.*|*.tar)
 		arch="tar --no-same-owner -xof" ;;
@@ -293,7 +294,12 @@ _unpacker() {
 		arch="unpack_deb" ;;
 	*.run)
 		arch="unpack_makeself" ;;
-	*) arch="" ;;
+	*.bin)
+		# Makeself archives can be annoyingly named
+		if head -c 100 "${a}" | grep -qs '#.*Makeself' ; then
+			arch="unpack_makeself"
+		fi
+		;;
 	esac
 
 	# finally do the unpack
