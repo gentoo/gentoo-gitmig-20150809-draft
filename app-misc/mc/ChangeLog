@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.244 2012/02/13 11:32:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.245 2012/02/13 22:32:52 maekke Exp $
+
+  13 Feb 2012; Markus Meier <maekke@gentoo.org> mc-4.8.1-r1.ebuild:
+  arm stable, bug #401157
 
   13 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/mc-4.8.1-fix-vfs-test.patch, +files/mc-4.8.1-muldefs-in.patch,
