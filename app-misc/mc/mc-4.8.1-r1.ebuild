@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.1-r1.ebuild,v 1.7 2012/02/01 17:24:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.1-r1.ebuild,v 1.8 2012/02/13 11:32:40 slyfox Exp $
 
 EAPI=4
 
-inherit base flag-o-matic
+inherit eutils flag-o-matic
 
 MY_P=${P/_/-}
 
@@ -38,6 +38,12 @@ DEPEND="${RDEPEND}
 	"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-4.8.1-muldefs.patch #403343
+	epatch "${FILESDIR}"/${PN}-4.8.1-muldefs-in.patch #403343
+	epatch "${FILESDIR}"/${PN}-4.8.1-fix-vfs-test.patch #403343
+}
 
 src_configure() {
 	local myscreen=ncurses

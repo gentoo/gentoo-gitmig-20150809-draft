@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.243 2012/02/11 19:54:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.244 2012/02/13 11:32:40 slyfox Exp $
+
+  13 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.1-fix-vfs-test.patch, +files/mc-4.8.1-muldefs-in.patch,
+  +files/mc-4.8.1-muldefs.patch, mc-4.8.1-r1.ebuild, mc-4.8.1-r2.ebuild:
+  Fix FEATURES=test on arm and alpha (bug #403343 by Markus Meier).
 
   11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> mc-9999.ebuild:
   Upstream moved main tree to github leaving old one as read-only mirror.
