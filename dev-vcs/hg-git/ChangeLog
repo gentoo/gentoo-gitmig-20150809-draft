@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.36 2012/02/12 12:18:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.37 2012/02/13 00:20:22 floppym Exp $
+
+  13 Feb 2012; Mike Gilbert <floppym@gentoo.org> hg-git-0.3.2.ebuild:
+  Drop eutils.
 
 *hg-git-0.3.2 (12 Feb 2012)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.3.2.ebuild,v 1.1 2012/02/12 12:18:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.3.2.ebuild,v 1.2 2012/02/13 00:20:22 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit distutils eutils
+inherit distutils
 
 DESCRIPTION="push and pull from a Git server using Mercurial"
 HOMEPAGE="http://hg-git.github.com/ http://pypi.python.org/pypi/hg-git"
