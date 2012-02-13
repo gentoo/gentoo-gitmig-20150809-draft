@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.171 2012/01/04 16:40:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.172 2012/02/13 09:51:45 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> strace-4.6.ebuild:
+  ppc64 stable wrt #391655
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> strace-4.6.ebuild:
   Marking strace-4.6 ppc for bug 391655
