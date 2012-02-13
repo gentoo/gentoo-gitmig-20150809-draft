@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.44 2012/02/13 05:25:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.45 2012/02/13 16:11:20 floppym Exp $
+
+  13 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Add Dan Douglas as a maintainer.
 
   13 Feb 2012; Mike Gilbert <floppym@gentoo.org> ksh-93.20110208.ebuild:
   Build from the ast-base sources. Enable /etc/ksh.kshrc (SHOPT_SYSRC).

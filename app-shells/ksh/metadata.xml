@@ -5,6 +5,10 @@
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
 	</maintainer>
+	<maintainer>
+		<email>ormaaj@gmail.com</email>
+		<name>Dan Douglas</name>
+	</maintainer>
 	<longdescription lang="en">
 		The KornShell language was designed and developed by David G. Korn at
 		AT&amp;T Bell Laboratories. It is an interactive command language that
