@@ -1,5 +1,5 @@
 --- linux-2.6.37-gentoo/arch/x86/kernel/cpu/cpufreq/acpi-cpufreq.c
-+++ phc-intel-0.3.2-12-1/inc/2.6.37/acpi-cpufreq.c
++++ phc-intel-0.3.2-12-1/phc-intel.c
 @@ -25,6 +25,10 @@
   * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   */
