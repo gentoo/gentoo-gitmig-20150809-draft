@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.26.0.ebuild,v 1.1 2011/12/21 07:25:58 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.26.0.ebuild,v 1.2 2012/02/13 13:41:36 grozin Exp $
 
 EAPI=3
 
@@ -116,6 +116,9 @@ src_prepare() {
 
 	# fix LDFLAGS handling in ecl (#378195)
 	epatch "${FILESDIR}"/${PN}-ecl-ldflags.patch
+
+	# fix the ecls-12.2.1 build
+	epatch "${FILESDIR}"/${P}-ecls-12.2.1.patch
 
 	# bug #343331
 	rm share/Makefile.in || die
