@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/ksh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.42 2012/02/12 18:33:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.43 2012/02/13 03:35:41 floppym Exp $
+
+*ksh-93.20110208 (13 Feb 2012)
+
+  13 Feb 2012; Mike Gilbert <floppym@gentoo.org> +ksh-93.20110208.ebuild:
+  Version bump / rewrite for bug 386339. Should also resolve bug 238906.
 
   12 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Add myself as maintainer.
