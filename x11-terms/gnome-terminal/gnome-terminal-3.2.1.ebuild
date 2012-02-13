@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.2.1.ebuild,v 1.1 2011/10/30 02:01:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.2.1.ebuild,v 1.2 2012/02/13 23:09:57 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.26.0:2
 	x11-libs/libICE"
 # gtk+:2 needed for gtk-builder-convert, bug 356239
 DEPEND="${RDEPEND}
-	x11-libs/gtk+:2
+	|| ( dev-util/gtk-builder-convert <=x11-libs/gtk+-2.24.10:2 )
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.9
 	>=app-text/gnome-doc-utils-0.3.2

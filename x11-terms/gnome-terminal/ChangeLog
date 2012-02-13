@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.239 2011/10/30 02:01:30 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.240 2012/02/13 23:09:57 tetromino Exp $
+
+  13 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-terminal-2.32.1.ebuild, gnome-terminal-3.2.1.ebuild:
+  Update deps for split gtk-builder-convert (bug #402905).
 
 *gnome-terminal-3.2.1 (30 Oct 2011)
 
