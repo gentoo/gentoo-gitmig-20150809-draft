@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/lisaac-0.13.1-r1.ebuild,v 1.1 2012/02/12 11:54:36 pacho Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/lisaac-0.13.1-r1.ebuild,v 1.2 2012/02/13 04:49:37 mr_bones_ Exp $
 
 EAPI="4"
 inherit versionator elisp-common eutils
