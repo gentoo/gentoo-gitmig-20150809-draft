@@ -1,6 +1,15 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.151 2012/02/13 09:25:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.152 2012/02/13 10:55:47 jlec Exp $
+
+*scribus-1.4.9999 (13 Feb 2012)
+*scribus-1.4.0-r1 (13 Feb 2012)
+
+  13 Feb 2012; Justin Lecher <jlec@gentoo.org> -scribus-1.4.0.ebuild,
+  +scribus-1.4.0-r1.ebuild, +files/scribus-1.4.0-export.patch,
+  +scribus-1.4.9999.ebuild:
+  Fix for crash when exporting pixmaps,
+  http://bugs.scribus.net/view.php?id=10509 ; added live 1.4
 
 *scribus-9999 (13 Feb 2012)
 

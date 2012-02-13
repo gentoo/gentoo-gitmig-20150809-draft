@@ -1,20 +1,22 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0.ebuild,v 1.3 2012/02/13 09:25:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.1 2012/02/13 10:55:47 jlec Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
 
-inherit cmake-utils fdo-mime multilib python
+inherit cmake-utils fdo-mime multilib python subversion
 
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="http://www.scribus.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+#SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI=""
+ESVN_REPO_URI="svn://scribus.net/branches/Version14x/Scribus"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS=""
 IUSE="cairo debug examples +minimal +pdf spell templates"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
@@ -64,6 +66,7 @@ src_prepare() {
 		-i scribus/fileunzip.cpp scribus/unzip.h scribus/ioapi.h || die
 
 	base_src_prepare
+	subversion_src_prepare
 }
 
 src_configure() {
@@ -104,6 +107,7 @@ pkg_preinst() {
 	# 399595
 	rm -vf "${ED}"/usr/share/doc/${PF}/en* || die
 	ln -sf html "${ED}"/usr/share/doc/${PF}/en
+	subversion_pkg_preinst
 }
 
 pkg_postinst() {
