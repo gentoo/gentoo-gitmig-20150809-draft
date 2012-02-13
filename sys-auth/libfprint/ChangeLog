@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/libfprint
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.7 2011/11/14 00:42:44 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.8 2012/02/13 23:44:14 xmw Exp $
+
+  13 Feb 2012; Michael Weber <xmw@gentoo.org> libfprint-0.4.0.ebuild:
+  Drop x11-libs/gtk+:2 and dev-libs/glib dependency. Thanks Andrei Slavoiu 
+  (bug 403189) for clarification.
 
   14 Nov 2011; Michael Weber <xmw@gentoo.org> libfprint-0.4.0.ebuild:
   adding ~x86 keyword
