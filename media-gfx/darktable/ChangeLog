@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/darktable
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.13 2011/12/20 22:04:32 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.14 2012/02/13 09:57:26 radhermit Exp $
+
+  13 Feb 2012; Tim Harder <radhermit@gentoo.org>
+  -files/darktable-0.9.1-no-rawspeed.patch, -darktable-0.9.2-r1.ebuild,
+  -darktable-0.9.2-r2.ebuild, -files/darktable-0.9.2-system-libraw.patch,
+  -files/darktable-0.9.2-zlib-header.patch, -files/darktable-0.9-cflags.patch:
+  Remove old.
 
   20 Dec 2011; Mike Frysinger <vapier@gentoo.org> darktable-0.9.3.ebuild:
   Switch to new virtual/opencl #392179 by Michal Pytasz.
