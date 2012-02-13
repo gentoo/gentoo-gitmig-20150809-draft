@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.134 2012/02/13 01:31:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.135 2012/02/13 23:50:12 zmedico Exp $
+
+  13 Feb 2012; Zac Medico <zmedico@gentoo.org> python.eclass:
+  Enable PyPy 1.8 support. Merged from the progress overlay:
+  http://code.google.com/p/gentoo-progress/source/detail?r=1785
 
   13 Feb 2012; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
   Minor code style cleanup and quoting fixes.

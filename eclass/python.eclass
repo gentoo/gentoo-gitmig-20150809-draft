@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.149 2012/02/10 22:54:33 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.150 2012/02/13 23:50:12 zmedico Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -30,7 +30,7 @@ fi
 _CPYTHON2_GLOBALLY_SUPPORTED_ABIS=(2.4 2.5 2.6 2.7)
 _CPYTHON3_GLOBALLY_SUPPORTED_ABIS=(3.1 3.2)
 _JYTHON_GLOBALLY_SUPPORTED_ABIS=(2.5-jython)
-_PYPY_GLOBALLY_SUPPORTED_ABIS=(2.7-pypy-1.7)
+_PYPY_GLOBALLY_SUPPORTED_ABIS=(2.7-pypy-1.7 2.7-pypy-1.8)
 _PYTHON_GLOBALLY_SUPPORTED_ABIS=(${_CPYTHON2_GLOBALLY_SUPPORTED_ABIS[@]} ${_CPYTHON3_GLOBALLY_SUPPORTED_ABIS[@]} ${_JYTHON_GLOBALLY_SUPPORTED_ABIS[@]} ${_PYPY_GLOBALLY_SUPPORTED_ABIS[@]})
 
 # ================================================================================================
