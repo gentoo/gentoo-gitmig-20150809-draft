@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/cifs-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.18 2011/10/28 20:07:54 vostorga Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.19 2012/02/13 20:33:19 vostorga Exp $
+
+*cifs-utils-5.3 (13 Feb 2012)
+
+  13 Feb 2012; Víctor Ostorga <vostorga@gentoo.org> +cifs-utils-5.3.ebuild:
+  Version bump to 5.3
 
   28 Oct 2011; Víctor Ostorga <vostorga@gentoo.org> cifs-utils-5.1.ebuild:
   Disabling cifsidmap and cifsacl support, because they look for a 
