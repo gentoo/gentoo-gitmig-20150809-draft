@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.840 2012/02/13 11:18:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.841 2012/02/13 11:27:20 aballier Exp $
+
+  13 Feb 2012; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  trunk does not build with ffmpeg 0.10, bump dep
 
   13 Feb 2012; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   typos in real use flag description, bug #400963
