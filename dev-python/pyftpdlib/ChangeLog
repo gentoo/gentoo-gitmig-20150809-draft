@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyftpdlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.9 2011/10/06 18:16:37 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.10 2012/02/13 12:38:48 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> pyftpdlib-0.6.0.ebuild:
+  Marked ~ppc/~ppc64 wrt #381261
 
   06 Oct 2011; Jeroen Roovers <jer@gentoo.org> pyftpdlib-0.6.0.ebuild:
   Marked ~hppa (bug #381261).
