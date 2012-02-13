@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/ChangeLog,v 1.13 2012/02/12 23:32:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/ChangeLog,v 1.14 2012/02/13 07:29:19 jlec Exp $
+
+  13 Feb 2012; Justin Lecher <jlec@gentoo.org> -tree-2.65.ebuild, metadata.xml:
+  Drop old
 
   12 Feb 2012; Tony Vroon <chainsaw@gentoo.org> tree-2.65-r1.ebuild:
   Marked stable on PPC64 as requested by Paweł Hajdan, Jr. in bug #394077.
