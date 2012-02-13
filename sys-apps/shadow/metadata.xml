@@ -4,6 +4,7 @@
 <herd>base-system</herd>
 <herd>pam</herd> <!-- only for USE=pam -->
 <use>
-	<flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
+ <flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
+ <flag name='tcb'>Enable support for <pkg>sys-auth/tcb</pkg></flag>
 </use>
 </pkgmetadata>

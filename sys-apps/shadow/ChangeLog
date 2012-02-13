@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/shadow
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.264 2011/12/31 07:40:41 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.265 2012/02/13 05:18:04 vapier Exp $
+
+*shadow-4.1.5 (13 Feb 2012)
+
+  13 Feb 2012; Mike Frysinger <vapier@gentoo.org> +shadow-4.1.5.ebuild,
+  +files/shadow-4.1.5-nscd-ignore-exit-1.patch,
+  +files/shadow-4.1.5-nscd-newline-msg.patch, +files/shadow-4.1.5-stdarg.patch,
+  metadata.xml:
+  Version bump.
 
   31 Dec 2011; Mike Frysinger <vapier@gentoo.org> shadow-4.1.4.3.ebuild:
   Add more arm consoles to securetty #396011 by Raúl Porcel.
