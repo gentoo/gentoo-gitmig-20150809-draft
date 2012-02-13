@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.1.ebuild,v 1.1 2011/11/08 19:27:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.1.ebuild,v 1.2 2012/02/13 18:46:07 johu Exp $
 
 EAPI=4
 
@@ -52,6 +52,10 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )
 "
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.6.1-qt48.patch"
+)
 
 src_configure() {
 	mycmakeargs=(
