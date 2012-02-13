@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-1.0.ebuild,v 1.5 2012/02/11 05:11:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-1.0.ebuild,v 1.6 2012/02/13 16:29:14 vapier Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://google-ctemplate.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc emacs vim-syntax static-libs test"
 
 DEPEND="test? ( =dev-lang/python-2* )"
