@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-apc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/ChangeLog,v 1.3 2011/09/09 13:01:09 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/ChangeLog,v 1.4 2012/02/13 11:45:09 ago Exp $
+
+  13 Feb 2012; Agostino Sarubbo <ago@gentoo.org> pecl-apc-3.1.9-r2.ebuild:
+  Stable for amd64, wrt bug #402919
 
 *pecl-apc-3.1.9-r2 (09 Sep 2011)
 
