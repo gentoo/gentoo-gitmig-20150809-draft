@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.8-r1.ebuild,v 1.2 2012/02/13 17:38:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.8-r1.ebuild,v 1.3 2012/02/13 17:44:06 polynomial-c Exp $
 
 EAPI="3"
 
@@ -54,9 +54,9 @@ src_install() {
 	newpamd "${FILESDIR}/${PN}-1.4.3-pamd" crond
 
 	if use anacron ; then
-		insinto /etc/cron.daily
-		doins "${S}"/contrib/0anacron
-		fperms 0755 /etc/cron.daily/0anacron
+		#insinto /etc/cron.daily
+		#doins "${S}"/contrib/0anacron
+		#fperms 0755 /etc/cron.daily/0anacron
 
 		keepdir /var/spool/anacron
 		fowners root:cron /var/spool/anacron
