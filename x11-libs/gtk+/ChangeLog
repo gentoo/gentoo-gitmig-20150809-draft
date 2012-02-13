@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.563 2012/02/10 02:33:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.564 2012/02/13 23:09:27 tetromino Exp $
+
+*gtk+-2.24.10-r1 (13 Feb 2012)
+
+  13 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk+-2.24.5-r1.ebuild, gtk+-2.24.8-r1.ebuild, gtk+-2.24.9-r1.ebuild,
+  gtk+-2.24.10.ebuild, +gtk+-2.24.10-r1.ebuild:
+  Split dev-util/gtk-builder-convert out of gtk+-2.24.10-r1 to get rid of
+  python dependency (requested by Diego Elio Pettenò, bug #402905).
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> gtk+-2.24.10.ebuild,
   gtk+-2.24.5-r1.ebuild, gtk+-2.24.8-r1.ebuild, gtk+-2.24.9-r1.ebuild:

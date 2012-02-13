@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.9-r1.ebuild,v 1.2 2012/02/10 02:33:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.9-r1.ebuild,v 1.3 2012/02/13 23:09:27 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -43,6 +43,7 @@ COMMON_DEPEND="!aqua? (
 	x11-misc/shared-mime-info
 	cups? ( net-print/cups )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
+	!dev-util/gtk-builder-convert
 	!<gnome-base/gail-1000"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.9

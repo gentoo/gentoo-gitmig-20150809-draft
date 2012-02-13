@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10.ebuild,v 1.3 2012/02/13 23:09:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10-r1.ebuild,v 1.1 2012/02/13 23:09:27 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
 
-inherit eutils flag-o-matic gnome.org libtool python virtualx autotools
+inherit eutils flag-o-matic gnome.org libtool virtualx autotools
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
@@ -43,7 +43,6 @@ COMMON_DEPEND="!aqua? (
 	x11-misc/shared-mime-info
 	cups? ( net-print/cups )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
-	!dev-util/gtk-builder-convert
 	!<gnome-base/gail-1000"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.9
@@ -193,7 +192,8 @@ src_install() {
 		sed -i -e "s:Libs\: :Libs\: -framework Carbon :" "${ED%/}"/usr/lib/pkgconfig/$i || die "sed failed"
 	done
 
-	python_convert_shebangs 2 "${ED}"usr/bin/gtk-builder-convert
+	# dev-util/gtk-builder-convert split off into a separate package, #402905
+	rm "${ED}"usr/bin/gtk-builder-convert
 
 	find "${D}" -name '*.la' -exec rm -f {} +
 }
