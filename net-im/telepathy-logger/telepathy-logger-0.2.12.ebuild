@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.2.12.ebuild,v 1.5 2012/02/13 11:24:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.2.12.ebuild,v 1.6 2012/02/13 13:06:01 jlec Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -38,7 +38,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	base_src_prepare
 	python_convert_shebangs -r 2 .
 }
 
