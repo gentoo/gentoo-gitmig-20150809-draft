@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.35 2012/01/06 19:55:39 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.36 2012/02/13 20:23:40 grobian Exp $
+
+  13 Feb 2012; Fabian Groffen <grobian@gentoo.org> babl-0.1.6.ebuild:
+  Marked ~x64-macos
 
   06 Jan 2012; Sebastian Pipping <sping@gentoo.org> babl-0.1.6.ebuild:
   Add missing dependency on libtool >=2.2 and vala
