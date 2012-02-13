@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.97 2012/01/25 18:17:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.98 2012/02/13 14:29:32 dilfridge Exp $
+
+  13 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> okteta-4.7.4.ebuild,
+  +files/okteta-4.7.4-ppc.patch:
+  Add compatibility patch for ppc, bug 403321
 
 *okteta-4.8.0 (25 Jan 2012)
 
