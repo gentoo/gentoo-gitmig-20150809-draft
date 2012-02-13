@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.63 2012/02/01 21:40:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.64 2012/02/13 19:24:34 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  egenix-mx-base-3.2.1-r1.ebuild:
+  ppc64 stable wrt #392749
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> egenix-mx-base-3.2.1-r1.ebuild:
   Marking egenix-mx-base-3.2.1-r1 ppc for bug 392749
