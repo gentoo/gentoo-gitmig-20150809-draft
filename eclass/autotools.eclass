@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.120 2012/02/13 17:21:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.121 2012/02/13 17:26:17 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -61,7 +61,7 @@ if [[ -n ${WANT_AUTOCONF} ]] ; then
 		none)       _autoconf_atom="" ;; # some packages don't require autoconf at all
 		2.1)        _autoconf_atom="=sys-devel/autoconf-${WANT_AUTOCONF}*" ;;
 		# if you change the "latest" version here, change also autotools_env_setup
-		latest|2.5) _autoconf_atom=">=sys-devel/autoconf-2.61" ;;
+		latest|2.5) _autoconf_atom=">=sys-devel/autoconf-2.68" ;;
 		*)          die "Invalid WANT_AUTOCONF value '${WANT_AUTOCONF}'" ;;
 	esac
 	export WANT_AUTOCONF
