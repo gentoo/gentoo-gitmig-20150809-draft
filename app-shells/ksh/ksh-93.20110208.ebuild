@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20110208.ebuild,v 1.1 2012/02/13 03:35:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20110208.ebuild,v 1.2 2012/02/13 05:25:51 floppym Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ ksh_release() {
 }
 
 SRC_URI="http://dev.gentoo.org/~floppym/distfiles/INIT.${INIT_RELEASE}.tgz
-	http://dev.gentoo.org/~floppym/distfiles/ast-ksh.$(ksh_release).tgz"
+	http://dev.gentoo.org/~floppym/distfiles/ast-base.$(ksh_release).tgz"
 
 LICENSE="CPL-1.0 EPL-1.0"
 SLOT="0"
@@ -36,12 +36,12 @@ src_prepare() {
 src_compile() {
 	tc-export AR CC LD NM
 	export CCFLAGS="${CFLAGS}"
-	sh bin/package only make ast-ksh SHELL=/bin/sh || die
+	sh bin/package only make ast-ksh SHELL=/bin/sh SHOPT_SYSRC=1 || die
 }
 
 src_install() {
-	dodoc lib/package/ast-ksh.README
-	dohtml lib/package/ast-ksh.html
+	dodoc lib/package/ast-base.README
+	dohtml lib/package/ast-base.html
 
 	local myhost="$(sh bin/package host)"
 	cd "arch/${myhost}" || die
