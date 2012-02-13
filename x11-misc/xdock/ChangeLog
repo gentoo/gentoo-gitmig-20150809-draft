@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xdock
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdock/ChangeLog,v 1.4 2010/10/26 12:28:16 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdock/ChangeLog,v 1.5 2012/02/13 22:17:46 voyageur Exp $
+
+*xdock-0.3.0 (13 Feb 2012)
+
+  13 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> +xdock-0.3.0.ebuild:
+  Version bump, fixes bug #403083
 
   26 Oct 2010; Michael Weber <xmw@gentoo.org> xdock-0.2.0.ebuild,
   +files/xdock-0.2.0-ldconfig.patch:
