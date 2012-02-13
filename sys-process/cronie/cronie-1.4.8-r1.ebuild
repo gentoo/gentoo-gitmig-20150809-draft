@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.4-r1.ebuild,v 1.1 2011/07/10 19:41:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.8-r1.ebuild,v 1.1 2012/02/13 17:32:34 polynomial-c Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit cron eutils pam
 
@@ -11,10 +11,11 @@ SRC_URI="https://fedorahosted.org/releases/c/r/cronie/${P}.tar.gz"
 HOMEPAGE="https://fedorahosted.org/cronie/wiki"
 
 LICENSE="ISC BSD BSD-2"
-KEYWORDS="amd64 x86"
-IUSE="inotify pam"
+KEYWORDS="~amd64 ~arm ~sparc ~x86"
+IUSE="anacron inotify pam"
 
-DEPEND="pam? ( virtual/pam )"
+DEPEND="pam? ( virtual/pam )
+	anacron? ( !sys-process/anacron )"
 RDEPEND="${DEPEND}"
 
 #cronie supports /etc/crontab
@@ -28,6 +29,7 @@ src_configure() {
 	SPOOL_DIR="/var/spool/cron/crontabs" econf \
 		$(use_with inotify ) \
 		$(use_with pam ) \
+		$(use_enable anacron ) \
 		--with-daemon_username=cron \
 		--with-daemon_groupname=cron \
 		|| die "econf failed"
@@ -40,15 +42,27 @@ src_install() {
 	fowners root:crontab /usr/bin/crontab
 	fperms 2751 /usr/bin/crontab
 
+	insinto /etc/conf.d
+	newins "${S}"/crond.sysconfig ${PN}
+
 	insinto /etc
 	newins "${FILESDIR}/${PN}-1.2-crontab" crontab
 	newins "${FILESDIR}/${PN}-1.2-cron.deny" cron.deny
 
 	keepdir /etc/cron.d
-	newinitd "${FILESDIR}/${PN}-1.2-initd" cronie
+	newinitd "${FILESDIR}/${PN}-1.3-initd" ${PN}
 	newpamd "${FILESDIR}/${PN}-1.4.3-pamd" crond
 
-	dodoc NEWS AUTHORS README
+	if use anacron ; then
+		keepdir /var/spool/anacron
+
+		insinto /etc
+		doins "${S}"/contrib/anacrontab
+
+		newinitd "${FILESDIR}"/anacron-1.0-initd anacron
+	fi
+
+	dodoc AUTHORS README contrib/*
 }
 
 pkg_postinst() {
