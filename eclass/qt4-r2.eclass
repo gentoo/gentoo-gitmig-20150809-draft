@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.17 2012/02/13 00:32:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.18 2012/02/13 00:53:28 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -52,19 +52,6 @@ qt4-r2_src_unpack() {
 	debug-print-function $FUNCNAME "$@"
 
 	base_src_unpack "$@"
-
-	# Fallback to ${WORKDIR}/${MY_P} when ${WORKDIR}/${P} doesn't exist.
-	# This is a hack that was never meant to be used by ebuilds in tree.
-	if [[ ${S} == "${WORKDIR}/${P}" && ! -d ${S} && -d ${WORKDIR}/${MY_P} ]]; then
-		echo
-		eqawarn "*** DEPRECATION NOTICE ***"
-		eqawarn
-		eqawarn "\${S} fallback is deprecated and will be removed on 12/12/2011."
-		eqawarn "Please set the correct value for \${S} variable inside the ebuild."
-		echo
-		einfo "Falling back to '${WORKDIR}/${MY_P}'"
-		S="${WORKDIR}/${MY_P}"
-	fi
 }
 
 # @ECLASS-VARIABLE: PATCHES
