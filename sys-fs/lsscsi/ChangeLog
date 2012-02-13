@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.68 2012/02/01 14:28:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.69 2012/02/13 10:00:33 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> lsscsi-0.25.ebuild:
+  ppc64 stable wrt #397229
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> lsscsi-0.25.ebuild:
   Marking lsscsi-0.25 ppc for bug 397229
