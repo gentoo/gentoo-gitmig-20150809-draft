@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.119 2012/02/12 00:20:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.120 2012/02/13 17:21:44 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -60,7 +60,7 @@ if [[ -n ${WANT_AUTOCONF} ]] ; then
 	case ${WANT_AUTOCONF} in
 		none)       _autoconf_atom="" ;; # some packages don't require autoconf at all
 		2.1)        _autoconf_atom="=sys-devel/autoconf-${WANT_AUTOCONF}*" ;;
-		# if you change the “latest” version here, change also autotools_run_tool
+		# if you change the "latest" version here, change also autotools_env_setup
 		latest|2.5) _autoconf_atom=">=sys-devel/autoconf-2.61" ;;
 		*)          die "Invalid WANT_AUTOCONF value '${WANT_AUTOCONF}'" ;;
 	esac
@@ -324,7 +324,7 @@ config_rpath_update() {
 
 # Internal function to run an autotools' tool
 autotools_env_setup() {
-	# We do the “latest” → version switch here because it solves
+	# We do the "latest" → version switch here because it solves
 	# possible order problems, see bug #270010 as an example.
 	if [[ ${WANT_AUTOMAKE} == "latest" ]]; then
 		local pv
