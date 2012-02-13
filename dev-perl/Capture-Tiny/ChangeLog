@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Capture-Tiny
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.18 2012/02/02 19:40:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.19 2012/02/13 14:40:52 tove Exp $
+
+*Capture-Tiny-0.160.0 (13 Feb 2012)
+
+  13 Feb 2012; Torsten Veller <tove@gentoo.org> +Capture-Tiny-0.160.0.ebuild:
+  Version bump
 
   02 Feb 2012; Brent Baude <ranger@gentoo.org> Capture-Tiny-0.150.0.ebuild:
   Marking Capture-Tiny-0.150.0 ~ppc for bug 395973
