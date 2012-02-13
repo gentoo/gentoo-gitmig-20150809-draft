@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.61.1250.ebuild,v 1.5 2012/01/24 13:48:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.61.1250.ebuild,v 1.6 2012/02/13 12:45:23 jer Exp $
 
 EAPI="4"
 
@@ -194,10 +194,7 @@ src_install() {
 		> "${D}"/etc/revdep-rebuild/90${PN}
 
 	# Set PaX markings for hardened/PaX (bug #344267)
-	pax-mark m \
-		"${D}/${OPREFIX}/${PN}/${PN}" \
-		"${D}/${OPREFIX}/${PN}/operaplugincleaner" \
-		"${D}/${OPREFIX}/${PN}/operapluginwrapper"
+	pax-mark m "${D}"/${OPREFIX}/${PN}/opera*
 }
 
 pkg_preinst() {

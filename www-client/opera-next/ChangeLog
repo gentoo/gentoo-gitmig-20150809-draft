@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.63 2012/02/10 16:39:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.64 2012/02/13 12:46:14 jer Exp $
+
+  13 Feb 2012; Jeroen Roovers <jer@gentoo.org> -opera-next-12.00.1272.ebuild,
+  opera-next-12.00.1289.ebuild, opera-next-12.00.1291.ebuild,
+  opera-next-12.00.1301.ebuild:
+  Fix PaX marking by Zhang Hongjiu (bug #403363).
 
 *opera-next-12.00.1301 (10 Feb 2012)
 

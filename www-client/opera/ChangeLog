@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.694 2012/02/11 13:07:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.695 2012/02/13 12:45:23 jer Exp $
+
+  13 Feb 2012; Jeroen Roovers <jer@gentoo.org> opera-11.61.1250.ebuild,
+  opera-11.62.1302.ebuild:
+  Fix PaX marking by Zhang Hongjiu (bug #403363).
 
 *opera-11.62.1302 (11 Feb 2012)
 
