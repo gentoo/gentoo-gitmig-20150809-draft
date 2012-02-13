@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.839 2012/02/13 11:14:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.840 2012/02/13 11:18:41 aballier Exp $
+
+  13 Feb 2012; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  typos in real use flag description, bug #400963
 
 *mplayer-1.0_rc4_p20120213 (13 Feb 2012)
 

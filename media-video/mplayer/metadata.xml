@@ -34,7 +34,7 @@
 	<flag name="pvr">Enable Video4Linux2 MPEG PVR</flag>
 	<flag name="radio">Enable V4L2 radio interface and support</flag>
 	<flag name="rar">Enable Unique RAR File Library</flag>
-	<flag name="real">Adds real audo/video support</flag>
+	<flag name="real">Adds Real audio/video support</flag>
 	<flag name="rtc">Enables usage of the linux real time clock. The alternative is software emulation of rtc</flag>
 	<flag name="rtmp">Enables RTMPDump Streaming Media support</flag>
 	<flag name="schroedinger">Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).</flag>
