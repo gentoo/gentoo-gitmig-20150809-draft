@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.7.ebuild,v 1.1 2012/02/04 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.7.ebuild,v 1.2 2012/02/13 20:32:54 xarthisius Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~x86"
 IUSE="sqlite"
 
 DEPEND=">=dev-libs/elfutils-0.142

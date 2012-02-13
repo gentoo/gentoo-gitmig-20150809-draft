@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.98 2012/02/04 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.99 2012/02/13 20:32:54 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> systemtap-1.7.ebuild:
+  Marked ~ppc/~ppc64 wrt #351931
 
 *systemtap-1.7 (04 Feb 2012)
 
