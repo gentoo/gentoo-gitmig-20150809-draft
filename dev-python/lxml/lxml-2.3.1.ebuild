@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.3.1.ebuild,v 1.6 2012/02/01 22:17:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.3.1.ebuild,v 1.7 2012/02/13 18:43:07 xarthisius Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ SRC_URI="http://codespeak.net/lxml/${MY_P}.tgz"
 
 LICENSE="BSD ElementTree GPL-2 PSF-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc examples +threads"
 
 RDEPEND=">=dev-libs/libxml2-2.7.2

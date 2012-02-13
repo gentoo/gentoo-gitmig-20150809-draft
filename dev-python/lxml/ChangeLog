@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.113 2012/02/09 23:55:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.114 2012/02/13 18:43:07 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> lxml-2.3.1.ebuild:
+  ppc64 stable wrt #392629
 
   09 Feb 2012; Matt Turner <mattst88@gentoo.org> lxml-2.3.2.ebuild:
   Added ~mips, bug 393181.
