@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.838 2012/02/05 15:41:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.839 2012/02/13 11:14:48 aballier Exp $
+
+*mplayer-1.0_rc4_p20120213 (13 Feb 2012)
+
+  13 Feb 2012; Alexis Ballier <aballier@gentoo.org>
+  +mplayer-1.0_rc4_p20120213.ebuild, +files/ffmpeg.patch:
+  bump a new snapshot, should fix bugs #402235 and #401315
 
   05 Feb 2012; Thomas Kahle <tomka@gentoo.org>
   mplayer-1.0_rc4_p20120128.ebuild:
