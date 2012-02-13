@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r3.ebuild,v 1.6 2012/02/06 20:17:52 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r3.ebuild,v 1.7 2012/02/13 08:03:28 robbat2 Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam systemd
@@ -200,6 +200,11 @@ src_install() {
 	# Used for the server logging functionality
 	if [[ -n ${HPN_PATCH} ]] && use hpn ; then
 		keepdir /var/empty/dev
+	fi
+
+	if use ldap ; then
+		insinto /etc/openldap/schema/
+		newins openssh-lpk_openldap.schema openssh-lpk.schema
 	fi
 
 	doman contrib/ssh-copy-id.1
