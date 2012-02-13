@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.48.ebuild,v 1.5 2012/02/10 12:06:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.48.ebuild,v 1.6 2012/02/13 21:28:28 maekke Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/freeassociation/${PN}/${P}/${P}.tar.gz"
 
 LICENSE="|| ( MPL-1.1 LGPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="examples"
 
 # https://sourceforge.net/tracker2/index.php?func=detail&aid=2196790&group_id=16077&atid=116077
