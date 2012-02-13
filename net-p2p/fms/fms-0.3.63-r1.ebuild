@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.63.ebuild,v 1.1 2011/11/19 18:12:10 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.63-r1.ebuild,v 1.1 2012/02/13 19:32:12 tommy Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="frost"
 
 RDEPEND="virtual/libiconv
-	frost? ( >=dev-libs/libtomcrypt-1.17-r3[libtommath] )
+	frost? ( >=dev-libs/libtomcrypt-1.17-r6 )
 	>=dev-libs/poco-1.2.9
 	>=dev-db/sqlite-3.6.15
 	<dev-libs/libpcre-8.13"
