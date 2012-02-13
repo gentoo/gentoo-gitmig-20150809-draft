@@ -1,6 +1,9 @@
 # ChangeLog for games-util/joystick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.12 2012/02/12 19:33:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.13 2012/02/13 11:41:20 ago Exp $
+
+  13 Feb 2012; Agostino Sarubbo <ago@gentoo.org> joystick-0_pre20060731.ebuild:
+  Stable for amd64, wrt bug #403233
 
   12 Feb 2012; Mike Frysinger <vapier@gentoo.org> joystick-1.4.2.ebuild:
   Do not block newer tslib that no longer installs inputattach #281456.
