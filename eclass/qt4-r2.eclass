@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.18 2012/02/13 00:53:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.19 2012/02/13 01:31:50 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -30,7 +30,7 @@ export XDG_CONFIG_HOME="${T}"
 #   LANGS="en el de"
 # @CODE
 for x in ${LANGS}; do
-	IUSE="${IUSE} linguas_${x}"
+	IUSE+=" linguas_${x}"
 done
 
 # @ECLASS-VARIABLE: LANGSLONG
@@ -40,8 +40,9 @@ done
 # Remember to set this variable before inheriting qt4-r2 eclass.
 # Look at ${PORTDIR}/profiles/desc/linguas.desc for details.
 for x in ${LANGSLONG}; do
-	IUSE="${IUSE} linguas_${x%_*}"
+	IUSE+=" linguas_${x%_*}"
 done
+unset x
 
 # @FUNCTION: qt4-r2_src_unpack
 # @DESCRIPTION:
@@ -83,10 +84,10 @@ qt4-r2_src_prepare() {
 qt4-r2_src_configure() {
 	debug-print-function $FUNCNAME "$@"
 
-	local project_file="$(_find_project_file)"
+	local project_file=$(_find_project_file)
 
 	if [[ -n ${project_file} ]]; then
-		eqmake4 ${project_file}
+		eqmake4 "${project_file}"
 	else
 		base_src_configure "$@"
 	fi
@@ -126,7 +127,7 @@ qt4-r2_src_install() {
 	emake INSTALL_ROOT="${D}" DESTDIR="${D}" install || die "emake install failed"
 
 	# install documentation
-	local doc dir="${DOCSDIR:-${S}}"
+	local doc= dir=${DOCSDIR:-${S}}
 	for doc in ${DOCS}; do
 		dodoc "${dir}/${doc}" || die "dodoc failed"
 	done
@@ -141,10 +142,11 @@ qt4-r2_src_install() {
 # Outputs a project file argument used by eqmake4. Sets nullglob locally
 # to avoid expanding *.pro as "*.pro" when there are no matching files.
 _find_project_file() {
-	shopt -s nullglob
+	local dir_name=$(basename "${S}")
+
+	eshopts_push -s nullglob
 	local pro_files=(*.pro)
-	shopt -u nullglob
-	local dir_name="$(basename ${S})"
+	eshopts_pop
 
 	case ${#pro_files[@]} in
 	1)
@@ -152,7 +154,7 @@ _find_project_file() {
 		;;
 	*)
 		for pro_file in "${pro_files[@]}"; do
-			if [[ ${pro_file} == "${dir_name}" || ${pro_file} == "${PN}.pro" ]]; then
+			if [[ ${pro_file} == "${dir_name}.pro" || ${pro_file} == "${PN}.pro" ]]; then
 				echo "${pro_file}"
 				break
 			fi
@@ -176,6 +178,8 @@ _find_project_file() {
 # will be automatically re-invoked with the right arguments on every
 # directory specified inside the top-level project file.
 eqmake4() {
+	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
+
 	ebegin "Running qmake"
 
 	local qmake_args=("$@")
@@ -184,10 +188,10 @@ eqmake4() {
 	# if not, then search for it
 	local regexp='.*\.pro'
 	if ! [[ ${1} =~ ${regexp} ]]; then
-		local project_file="$(_find_project_file)"
+		local project_file=$(_find_project_file)
 		if [[ -z ${project_file} ]]; then
 			echo
-			eerror "No project file found in ${S}!"
+			eerror "No project files found in '${PWD}'!"
 			eerror "This shouldn't happen - please send a bug report to http://bugs.gentoo.org/"
 			echo
 			die "eqmake4 failed"
@@ -197,11 +201,11 @@ eqmake4() {
 
 	# make sure CONFIG variable is correctly set
 	# for both release and debug builds
-	local CONFIG_ADD="release"
-	local CONFIG_REMOVE="debug"
+	local config_add="release"
+	local config_remove="debug"
 	if has debug ${IUSE} && use debug; then
-		CONFIG_ADD="debug"
-		CONFIG_REMOVE="release"
+		config_add="debug"
+		config_remove="release"
 	fi
 	local awkscript='BEGIN {
 				printf "### eqmake4 was here ###\n" > file;
@@ -231,19 +235,17 @@ eqmake4() {
 		local retval=$({
 				rm -f "${file}" || echo FAIL
 				awk -v file="${file}" \
-					-v add=${CONFIG_ADD} \
-					-v remove=${CONFIG_REMOVE} \
+					-v add=${config_add} \
+					-v remove=${config_remove} \
 					-- "${awkscript}" || echo FAIL
 				} < "${file}")
 		if [[ ${retval} == 1 ]]; then
 			einfo " - fixed CONFIG in ${file}"
 		elif [[ ${retval} != 0 ]]; then
-			eerror "An error occurred while processing ${file}"
-			die "eqmake4 failed to process '${file}'"
+			eerror " - error while processing ${file}"
+			die "eqmake4 failed to process ${file}"
 		fi
-	done < <(find . -type f -name "*.pr[io]" -printf '%P\n' 2>/dev/null)
-
-	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
+	done < <(find . -type f -name '*.pr[io]' -printf '%P\n' 2>/dev/null)
 
 	"${EPREFIX}"/usr/bin/qmake \
 		-makefile \
