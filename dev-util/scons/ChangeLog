@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.110 2012/02/13 19:43:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.111 2012/02/13 22:12:22 maekke Exp $
+
+  13 Feb 2012; Markus Meier <maekke@gentoo.org> scons-2.1.0.ebuild:
+  arm stable, bug #401831
 
   13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> scons-2.1.0.ebuild:
   ppc64 stable wrt #401831
