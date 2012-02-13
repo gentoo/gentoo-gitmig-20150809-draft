@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.22 2012/02/08 14:56:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.23 2012/02/13 19:40:19 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> pyalsa-1.0.24.ebuild:
+  ppc/ppc64 stable wrt #397005
 
 *pyalsa-1.0.25 (08 Feb 2012)
 
