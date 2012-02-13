@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.118 2012/01/25 18:17:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.119 2012/02/13 18:13:53 johu Exp $
+
+  13 Feb 2012; Johannes Huber <johu@gentoo.org>
+  +files/kdeplasma-addons-4.8.0-ibus141.patch, kdeplasma-addons-4.8.0.ebuild:
+  Add upstream patch to build with app-i18n/ibus-1.4.1 wrt bug #403367.
 
 *kdeplasma-addons-4.8.0 (25 Jan 2012)
 

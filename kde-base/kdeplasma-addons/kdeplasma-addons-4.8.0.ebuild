@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.8.0.ebuild,v 1.1 2012/01/25 18:17:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.8.0.ebuild,v 1.2 2012/02/13 18:13:53 johu Exp $
 
 EAPI=4
 
@@ -38,6 +38,10 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 "
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.8.0-ibus141.patch"
+)
 
 src_prepare() {
 	use semantic-desktop || epatch "${FILESDIR}/${PN}-4.6.2-optional-akonadi.patch"
