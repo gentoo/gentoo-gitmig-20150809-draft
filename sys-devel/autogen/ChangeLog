@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.81 2012/02/09 04:34:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.82 2012/02/13 12:28:02 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> autogen-5.12.ebuild:
+  ppc/ppc64 stable wrt #397221
 
 *autogen-5.14 (09 Feb 2012)
 
