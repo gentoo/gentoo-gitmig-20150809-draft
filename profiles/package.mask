@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13486 2012/02/13 02:08:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13487 2012/02/13 11:48:37 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,55 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
+# Outdated, useless, hard to bump, without maintainer.
+# Removal in a month (bug #234846)
+dev-dotnet/db4o
+
+# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
+# Unmaintained and problems with its packaging (bug #261347)
+# Use man2html provided by sys-apps/man instead.
+# Removal in a month.
+app-text/man2html
+
+# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
+# Broken, unmaintained and unstable (bug #262504),
+# removal in a month.
+net-misc/pavuk
+
+# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
+# As talked with its maintainer, it's dead and nothing
+# needs it (bug #298349). Removal in a month.
+app-admin/pcihpview
+
+# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
+# Buffer overflow, upstream dead since 2004, bug #339455
+# Removal in a month
+net-print/xpp
+
+# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
+# Dead for a long time, use baobab 
+# (from gnome-extra/gnome-utils) instead, bug #370605
+# Removal in a month.
+app-admin/gtkdiskfree
+
+# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
+# Fails to build and unmaintained, bug #385295
+# Removal in a month.
+media-libs/libdlna
+media-video/ushare
+
+# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
+# Broken and upstream dead since 2005, bug #387381
+# Removal in a month.
+dev-libs/libtranslate
+
+# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
+# Unmaintained, nobody willing to take it as also
+# looks to have a poor quality (bug #400689).
+# Removal in a month.
+app-arch/q7z
 
 # Michael Weber <xmw@gentoo.org (13 Feb 2012)
 # Maked for testing
