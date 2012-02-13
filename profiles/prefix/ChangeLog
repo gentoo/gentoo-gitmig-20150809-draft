@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.325 2012/02/09 19:11:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.326 2012/02/13 20:27:03 grobian Exp $
+
+  13 Feb 2012; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Unmask gimp-2.7 on Darwin, as it's the only gimp that compiles there
 
   09 Feb 2012; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/package.use.mask:
