@@ -1,12 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/mongoid-2.4.3.ebuild,v 1.1 2012/01/28 20:52:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/mongoid-2.4.4.ebuild,v 1.1 2012/02/13 18:37:19 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
 
 #RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST="spec:unit"
+# functional testing crashes Ruby from within Portage, but works
+# outside of it, needs to be investigated thoroughly, but at least
+# unit testing works.
+RUBY_FAKEGEM_TASK_TEST="spec:unit spec:functional"
 
 RUBY_FAKEGEM_EXTRADOC="README.md"
 
@@ -26,10 +29,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
-
-# there is support to create a custom mongodb instance now but there are
-# still issues to be fixed.
-#RESTRICT="test"
 
 ruby_add_rdepend "
 	>=dev-ruby/activemodel-3.1
@@ -69,10 +68,7 @@ each_ruby_test() {
 	export MONGOID_SPEC_HOST="127.255.255.254"
 	export MONGOID_SPEC_PORT="27017"
 
-	# functional testing crashes Ruby from within Portage, but works
-	# outside of it, needs to be investigated thoroughly, but at least
-	# unit testing works.
-	${RUBY} -S rake spec:unit || failed=1
+	${RUBY} -S rake ${RUBY_FAKEGEM_TASK_TEST} || failed=1
 	kill "${mongod_pid}"
 
 	[[ "${failed}" == "1" ]] && die "tests failed"
