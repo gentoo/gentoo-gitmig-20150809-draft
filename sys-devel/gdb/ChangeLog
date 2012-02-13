@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.210 2012/02/01 21:08:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.211 2012/02/13 10:31:36 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> gdb-7.3.1.ebuild:
+  ppc64 stable wrt #395017
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> gdb-7.3.1.ebuild:
   Marking gdb-7.3.1 ppc for bug 395017
