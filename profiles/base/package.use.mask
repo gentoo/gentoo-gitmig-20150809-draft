@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.311 2012/02/11 02:27:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.312 2012/02/13 22:03:49 jlec Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Justin Lecher <jlec@gentoo.org> (13. Feb 2012)
+# Is broken somehow, upstream informed
+>sci-chemistry/pymol-1.5.0.1 vmd
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (11 Feb 2012)
 # Requires >=sys-apps/systemd-31, which is masked and keyworded only for two
