@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.10.4-r1.ebuild,v 1.1 2011/11/28 14:01:54 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.10.4-r1.ebuild,v 1.2 2012/02/13 21:33:33 caster Exp $
 
 EAPI="4"
 
@@ -29,26 +29,43 @@ LICENSE="GPL-2-with-linking-exception"
 SLOT="6"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="X alsa cjk doc examples nsplugin source"
+IUSE="+X +alsa cjk +cups doc examples nsplugin source"
 REQUIRED_USE="nsplugin? ( X )"
 RESTRICT="strip"
 
-RDEPEND="
+ALSA_COMMON_DEP="
+	>=media-libs/alsa-lib-1.0.20"
+CUPS_COMMON_DEP="
+	>=net-print/cups-1.4"
+X_COMMON_DEP="
+	dev-libs/glib
+	>=media-libs/freetype-2.3.9:2
+	>=x11-libs/gtk+-2.20.1:2
+	>=x11-libs/libX11-1.3
+	>=x11-libs/libXext-1.1
+	>=x11-libs/libXi-1.3
+	>=x11-libs/libXtst-1.1"
+
+COMMON_DEP="
+	>=media-libs/giflib-4.1.6-r1
+	>=media-libs/libpng-1.5
 	>=sys-devel/gcc-4.3
 	>=sys-libs/glibc-2.11.2
-	>=media-libs/giflib-4.1.6-r1
-	virtual/jpeg
-	>=media-libs/libpng-1.5
 	>=sys-libs/zlib-1.2.3-r1
+	virtual/jpeg
+	nsplugin? (
+		>=dev-libs/atk-1.30.0
+		>=dev-libs/glib-2.20.5:2
+		>=dev-libs/nspr-4.8
+		>=x11-libs/cairo-1.8.8
+		>=x11-libs/pango-1.24.5
+
+	)"
+
+RDEPEND="${COMMON_DEP}
 	X? (
+		${X_COMMON_DEP}
 		media-fonts/dejavu
-		>=media-libs/fontconfig-2.6.0-r2:1.0
-		>=media-libs/freetype-2.3.9:2
-		>=x11-libs/libX11-1.3
-		>=x11-libs/libXext-1.1
-		>=x11-libs/libXi-1.3
-		x11-libs/libXt
-		>=x11-libs/libXtst-1.1
 		cjk? (
 			media-fonts/arphicfonts
 			media-fonts/baekmuk-fonts
@@ -57,20 +74,18 @@ RDEPEND="
 			media-fonts/sazanami
 		)
 	)
-	alsa? ( >=media-libs/alsa-lib-1.0.20 )
-	nsplugin? (
-		>=dev-libs/atk-1.30.0
-		>=dev-libs/glib-2.20.5:2
-		>=dev-libs/nspr-4.8
-		>=x11-libs/cairo-1.8.8
-		>=x11-libs/gtk+-2.20.1:2
-		>=x11-libs/pango-1.24.5
-	)"
+	alsa? ( ${ALSA_COMMON_DEP} )
+	cups? ( ${CUPS_COMMON_DEP} )"
 
 src_install() {
 	local dest="/opt/${P}"
 	local ddest="${ED}/${dest}"
 	dodir "${dest}"
+
+	# Ensures HeadlessGraphicsEnvironment is used.
+	if ! use X; then
+		rm -r jre/lib/$(get_system_arch)/xawt || die
+	fi
 
 	# doins can't handle symlinks.
 	cp -pRP bin include jre lib man "${ddest}" || die

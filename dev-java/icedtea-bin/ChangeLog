@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.9 2011/11/28 14:01:54 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.10 2012/02/13 21:33:33 caster Exp $
+
+  13 Feb 2012; Vlastimil Babka <caster@gentoo.org>
+  -icedtea-bin-1.10.3-r2.ebuild, -icedtea-bin-6.1.10.4.ebuild,
+  icedtea-bin-6.1.10.4-r1.ebuild, -icedtea-bin-7.2.0-r1.ebuild,
+  icedtea-bin-7.2.0-r2.ebuild:
+  Update dependencies and flag defaults to match dev-java/icedtea, add cups
+  flag. Remove xawt directory with -X.
 
 *icedtea-bin-7.2.0-r2 (28 Nov 2011)
 *icedtea-bin-6.1.10.4-r1 (28 Nov 2011)
