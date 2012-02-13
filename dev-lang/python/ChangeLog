@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.566 2012/02/10 04:18:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.567 2012/02/13 18:29:32 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> python-2.7.2-r3.ebuild,
+  python-3.1.4-r3.ebuild:
+  ppc64 stable wrt #387849
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> -python-2.4.6.ebuild:
   Removing last python-2.4 ebuilds. Was nice having you around ...
