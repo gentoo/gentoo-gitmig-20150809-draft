@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.19 2012/02/09 01:20:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.20 2012/02/13 17:55:08 nelchael Exp $
+
+*man-pages-pl-20070628-r2 (13 Feb 2012)
+
+  13 Feb 2012; Krzysztof Pawlik <nelchael@gentoo.org>
+  +man-pages-pl-20070628-r2.ebuild:
+  Do not install shadow.3 man page, see bug #403379.
 
   09 Feb 2012; Jeroen Roovers <jer@gentoo.org> man-pages-pl-20070628-r1.ebuild:
   Stable for HPPA (bug #399935).
