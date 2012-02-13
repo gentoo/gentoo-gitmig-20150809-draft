@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r1.ebuild,v 1.1 2012/02/13 19:31:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r1.ebuild,v 1.2 2012/02/13 19:37:32 ssuominen Exp $
 
 # http://libjpeg-turbo.svn.sourceforge.net/viewvc/libjpeg-turbo/branches/1.2.x/?view=tar
 
@@ -80,12 +80,11 @@ src_test() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		exampledir="${EPREFIX}"/usr/share/doc/${PF} \
 		install
 
 	find "${ED}"usr -name '*.la' -exec rm -f {} +
-
-	dodoc *.txt change.log example.c README
 
 	insinto /usr/share/doc/${PF}/html
 	doins -r doc/html/*
