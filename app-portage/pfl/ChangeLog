@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.39 2012/02/05 20:57:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.40 2012/02/13 18:29:07 billie Exp $
+
+*pfl-2.3-r1 (13 Feb 2012)
+
+  13 Feb 2012; Daniel Pielmeier <billie@gentoo.org> +pfl-2.3-r1.ebuild:
+  Use tarball and distutils setup script instead of messing with single files.
 
   05 Feb 2012; Markus Meier <maekke@gentoo.org> pfl-2.3.ebuild:
   arm stable, bug #399951
