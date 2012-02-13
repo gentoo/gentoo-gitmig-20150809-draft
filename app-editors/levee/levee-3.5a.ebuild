@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.5a.ebuild,v 1.6 2012/02/13 16:30:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.5a.ebuild,v 1.7 2012/02/13 16:32:07 darkside Exp $
 
 EAPI=4
 
@@ -25,10 +25,13 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.5-glibc210.patch
 }
 
-src_compile() {
+src_configure() {
 	export AC_CPP_PROG=$(tc-getCPP)
 	export AC_PATH=${PATH}
 	./configure.sh --prefix="${PREFIX}"/usr || die "configure failed"
+}
+
+src_compile() {
 	emake CFLAGS="${CFLAGS} -Wall -Wextra ${LDFLAGS}" CC=$(tc-getCC)
 }
 
