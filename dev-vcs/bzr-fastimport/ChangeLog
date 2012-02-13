@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr-fastimport
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/ChangeLog,v 1.1 2012/02/13 05:16:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/ChangeLog,v 1.2 2012/02/13 23:32:02 tetromino Exp $
+
+  13 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Add to bazaar herd, acked by fauli.
 
 *bzr-fastimport-0.11.0 (13 Feb 2012)
 
