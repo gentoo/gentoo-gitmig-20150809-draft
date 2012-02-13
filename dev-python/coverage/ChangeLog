@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.50 2012/02/01 22:11:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.51 2012/02/13 18:36:42 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> coverage-3.5.ebuild:
+  ppc64 stable wrt #388311
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> coverage-3.5.ebuild:
   Marking coverage-3.5 ppc for bug 388311
