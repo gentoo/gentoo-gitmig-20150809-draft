@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.94 2012/02/10 19:36:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.95 2012/02/13 14:12:34 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> vtk-5.8.0.ebuild:
+  Add missing dependency on media-video/nvidia-settings
 
   10 Feb 2012; Justin Lecher <jlec@gentoo.org> vtk-5.8.0.ebuild,
   +files/vtk-5.8.0-boost.patch:

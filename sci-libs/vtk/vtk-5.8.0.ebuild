@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.5 2012/02/10 19:36:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.6 2012/02/13 14:12:34 xarthisius Exp $
 
 EAPI=3
 
@@ -59,6 +59,7 @@ RDEPEND="
 	tk? ( dev-lang/tk )
 	theora? ( media-libs/libtheora )
 	tk? ( dev-lang/tk )
+	video_cards_nvidia? ( media-video/nvidia-settings )
 	R? ( dev-lang/R )"
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
