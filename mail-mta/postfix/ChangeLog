@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.336 2012/02/09 04:32:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.337 2012/02/13 07:36:20 eras Exp $
+
+  13 Feb 2012; Eray Aslan <eras@gentoo.org> postfix-2.9.0.ebuild,
+  postfix-2.9.0-r1.ebuild:
+  block against broken vda patch until fixed upstream - bug #402369
 
   09 Feb 2012; Jeroen Roovers <jer@gentoo.org> postfix-2.8.7.ebuild:
   Stable for HPPA (bug #395289).
