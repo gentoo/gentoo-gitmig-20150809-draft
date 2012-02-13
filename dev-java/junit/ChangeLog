@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.66 2012/02/11 14:20:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.67 2012/02/13 13:14:09 ago Exp $
+
+  13 Feb 2012; Agostino Sarubbo <ago@gentoo.org> junit-4.8.2-r1.ebuild:
+  Stable for amd64, wrt bug #403161
 
   11 Feb 2012; Ralph Sennhauser <sera@gentoo.org> junit-4.8.2-r1.ebuild,
   junit-4.10.ebuild:
