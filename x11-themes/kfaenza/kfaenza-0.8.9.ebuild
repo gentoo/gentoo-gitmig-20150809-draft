@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/kfaenza/kfaenza-0.8.9.ebuild,v 1.2 2012/01/15 19:09:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/kfaenza/kfaenza-0.8.9.ebuild,v 1.3 2012/02/13 21:22:53 scarabeus Exp $
 
 EAPI=4
 
@@ -8,11 +8,11 @@ MY_PN="KFaenza"
 DESCRIPTION="Faenza-Cupertino icon theme for KDE"
 HOMEPAGE="http://kde-look.org/content/show.php/KFaenza?content=143890"
 #That is upstream location, not reupload. Don't fix
-SRC_URI="http://ompldr.org/vYjR0NQ/${PN}-${PV}.tar.gz"
+SRC_URI="http://ompldr.org/vYjR0NQ/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S="${WORKDIR}"/"${MY_PN}"
