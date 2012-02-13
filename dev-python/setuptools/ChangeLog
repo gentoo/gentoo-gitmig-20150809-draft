@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.151 2012/02/01 21:33:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.152 2012/02/13 18:34:45 xarthisius Exp $
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> setuptools-0.6.21.ebuild:
+  ppc64 stable wrt #386061
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> setuptools-0.6.21.ebuild:
   Marking setuptools-0.6.21 ppc for bug 386061
