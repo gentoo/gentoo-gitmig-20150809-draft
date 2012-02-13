@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.16 2011/12/28 10:57:38 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.17 2012/02/13 00:32:31 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -218,33 +218,35 @@ eqmake4() {
 	fi
 	local awkscript='BEGIN {
 				printf "### eqmake4 was here ###\n" > file;
+				printf "CONFIG -= debug_and_release %s\n", remove >> file;
+				printf "CONFIG += %s\n\n", add >> file;
 				fixed=0;
 			}
 			/^[[:blank:]]*CONFIG[[:blank:]]*[\+\*]?=/ {
-				for (i=1; i <= NF; i++) {
-					if ($i ~ rem || $i ~ /debug_and_release/)
-						{ $i=add; fixed=1; }
+				if (gsub("\\<((" remove ")|(debug_and_release))\\>", "") > 0) {
+					fixed=1;
 				}
 			}
 			/^[[:blank:]]*CONFIG[[:blank:]]*-=/ {
-				for (i=1; i <= NF; i++) {
-					if ($i ~ add) { $i=rem; fixed=1; }
+				if (gsub("\\<" add "\\>", "") > 0) {
+					fixed=1;
 				}
 			}
 			{
 				print >> file;
 			}
 			END {
-				printf "\nCONFIG -= debug_and_release %s\n", rem >> file;
-				printf "CONFIG += %s\n", add >> file;
 				print fixed;
 			}'
 	local file=
 	while read file; do
 		grep -q '^### eqmake4 was here ###$' "${file}" && continue
 		local retval=$({
-				rm -f "${file}" || echo "FAILED"
-				awk -v file="${file}" -- "${awkscript}" add=${CONFIG_ADD} rem=${CONFIG_REMOVE} || echo "FAILED"
+				rm -f "${file}" || echo FAIL
+				awk -v file="${file}" \
+					-v add=${CONFIG_ADD} \
+					-v remove=${CONFIG_REMOVE} \
+					-- "${awkscript}" || echo FAIL
 				} < "${file}")
 		if [[ ${retval} == 1 ]]; then
 			einfo " - fixed CONFIG in ${file}"
@@ -258,7 +260,6 @@ eqmake4() {
 
 	"${EPREFIX}"/usr/bin/qmake \
 		-makefile \
-		-config ${CONFIG_ADD} \
 		QTDIR="${EPREFIX}"/usr/$(get_libdir) \
 		QMAKE="${EPREFIX}"/usr/bin/qmake \
 		QMAKE_CC="$(tc-getCC)" \

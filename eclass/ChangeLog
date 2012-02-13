@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.131 2012/02/12 21:48:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.132 2012/02/13 00:32:31 pesa Exp $
+
+  13 Feb 2012; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
+  eqmake4: make CONFIG manipulation more robust by using gsub in the awk
+  script. Fixes bug #372719.
 
   12 Feb 2012; Matti Bickel <mabi@gentoo.org> php-lib-r1.eclass:
   always install stuff into /usr/share/php
