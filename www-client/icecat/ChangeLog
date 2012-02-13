@@ -1,6 +1,12 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.109 2012/02/08 14:29:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.110 2012/02/13 17:25:09 polynomial-c Exp $
+
+*icecat-10.0-r1 (13 Feb 2012)
+
+  13 Feb 2012; Lars Wendler <polynomial-c@gentoo.org> -icecat-9.0.1.ebuild,
+  -icecat-10.0.ebuild, +icecat-10.0-r1.ebuild:
+  Revision bump to add ff-10.0.1 changes. Removed old.
 
 *icecat-10.0 (08 Feb 2012)
 
