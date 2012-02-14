@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pimpd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/ChangeLog,v 1.12 2007/07/15 08:50:48 phreak Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/ChangeLog,v 1.13 2012/02/14 09:03:01 pacho Exp $
+
+  14 Feb 2012; Pacho Ramos <pacho@gentoo.org> pimpd-0.8.ebuild:
+  Fallback to gentoo.org webpage as upstream is dead (bug #371695 by David) and
+  use emake instead of plain make.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).
