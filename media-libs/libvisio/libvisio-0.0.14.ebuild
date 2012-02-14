@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.14.ebuild,v 1.1 2012/01/25 12:19:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.14.ebuild,v 1.2 2012/02/14 19:27:02 scarabeus Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="
 	app-text/libwpd:0.9
 	app-text/libwpg:0.2
 "
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.46
 	dev-util/pkgconfig
 	sys-devel/libtool

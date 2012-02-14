@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.17 2012/01/25 12:19:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.18 2012/02/14 19:27:02 scarabeus Exp $
+
+  14 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> libvisio-0.0.14.ebuild:
+  Fix typo wrt bug #401531.
 
 *libvisio-0.0.14 (25 Jan 2012)
 
