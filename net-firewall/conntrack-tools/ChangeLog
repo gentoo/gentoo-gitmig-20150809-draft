@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/conntrack-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.44 2012/01/05 06:49:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.45 2012/02/14 22:40:16 jer Exp $
+
+  14 Feb 2012; Jeroen Roovers <jer@gentoo.org> -conntrack-tools-0.9.9.ebuild:
+  Old.
 
 *conntrack-tools-1.0.1 (05 Jan 2012)
 
