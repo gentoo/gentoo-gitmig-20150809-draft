@@ -3,15 +3,13 @@ a filedescriptor is incorrectly type tor_socket_t.
 
 See https://trac.torproject.org/projects/tor/ticket/4955
 
-diff -Naur tor-0.2.3.11-alpha.orig/src/tools/tor-fw-helper/tor-fw-helper-natpmp.c tor-0.2.3.11-alpha/src/tools/tor-fw-helper/tor-fw-helper-natpmp.c
---- tor-0.2.3.11-alpha.orig/src/tools/tor-fw-helper/tor-fw-helper-natpmp.c	2012-01-21 22:07:30.000000000 -0500
-+++ tor-0.2.3.11-alpha/src/tools/tor-fw-helper/tor-fw-helper-natpmp.c	2012-01-24 07:57:42.000000000 -0500
-@@ -87,7 +87,7 @@
+--- a/src/tools/tor-fw-helper/tor-fw-helper-natpmp.c
++++ b/src/tools/tor-fw-helper/tor-fw-helper-natpmp.c
+@@ -23,6 +23,8 @@
+ // debugging stuff
+ #include <assert.h>
  
- /** Use select() to wait until we can read on fd. */
- static int
--wait_until_fd_readable(tor_socket_t fd, struct timeval *timeout)
-+wait_until_fd_readable(unsigned int fd, struct timeval *timeout)
- {
-   int r;
-   fd_set fds;
++#include "compat.h"
++
+ #include "tor-fw-helper.h"
+ #include "tor-fw-helper-natpmp.h"
