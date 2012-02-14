@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.564 2012/02/13 23:09:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.565 2012/02/14 00:11:58 tetromino Exp $
+
+  14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk+-2.24.10-r1.ebuild:
+  PYTHON_DEPEND is not needed without python, thanks to Dessa for noticing.
 
 *gtk+-2.24.10-r1 (13 Feb 2012)
 
