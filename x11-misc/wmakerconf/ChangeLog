@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wmakerconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.40 2012/02/14 09:16:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.41 2012/02/14 20:23:34 voyageur Exp $
+
+  14 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  wmakerconf-2.12-r1.ebuild, files/wmakerconf-2.12-wmaker-0.95_support.patch:
+  Drop function rename (fixed in official WindowMaker)
 
   14 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmakerconf-2.12.ebuild,
   wmakerconf-2.12-r1.ebuild:
