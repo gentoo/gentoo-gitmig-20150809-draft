@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.6.ebuild,v 1.1 2011/11/24 10:54:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.6.ebuild,v 1.2 2012/02/14 18:49:56 voyageur Exp $
 
 EAPI=4
 inherit multilib
 
 # We need gnustep-make, but gnustep-make can depend on libobjc
 # Use a temporary setup to install in /usr/
-GSMAKE=gnustep-make-2.6.1
+GSMAKE=gnustep-make-2.6.2
 DESCRIPTION="GNUstep Objective-C runtime"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="http://download.gna.org/gnustep/${P}.tar.bz2
@@ -16,11 +16,10 @@ SRC_URI="http://download.gna.org/gnustep/${P}.tar.bz2
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+boehm-gc"
 
-DEPEND=">=sys-devel/gcc-3.3[objc]
-	>=sys-devel/make-3.75"
-RDEPEND=""
+DEPEND="boehm-gc? ( dev-libs/boehm-gc )"
+RDEPEND="${DEPEND}"
 
 GSMAKE_S=${WORKDIR}/${GSMAKE}
 
@@ -37,7 +36,11 @@ src_configure() {
 }
 
 src_compile() {
-	emake GNUSTEP_MAKEFILES="${GSMAKE_S}" messages=yes
+	local gb
+	use boehm-gc \
+		&& gb="boehm_gc=yes" \
+		|| gb="boehm_gc=no"
+	emake GNUSTEP_MAKEFILES="${GSMAKE_S}" messages=yes ${gb}
 }
 
 src_install() {
