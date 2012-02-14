@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.5.10.ebuild,v 1.1 2012/02/10 03:19:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.5.10.ebuild,v 1.2 2012/02/14 20:36:52 blueness Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.5
+RDEPEND=">=dev-lang/python-2.5[sqlite]
 	>=dev-python/m2crypto-0.16
 	>=dev-python/wxpython-2.8
 	>=dev-python/apsw-3.6
