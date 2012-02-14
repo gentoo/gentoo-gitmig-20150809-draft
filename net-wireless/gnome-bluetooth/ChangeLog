@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.105 2012/02/13 05:40:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.106 2012/02/14 05:02:43 tetromino Exp $
+
+  14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-bluetooth-3.2.1.ebuild, gnome-bluetooth-3.2.2.ebuild:
+  Add missing dependency on gnome-icon-theme-symbolic (bug #403503).
 
 *gnome-bluetooth-3.2.2 (13 Feb 2012)
 

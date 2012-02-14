@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.2.2.ebuild,v 1.1 2012/02/13 05:40:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.2.2.ebuild,v 1.2 2012/02/14 05:02:43 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -28,7 +28,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.25.7:2
 RDEPEND="${COMMON_DEPEND}
 	>=net-wireless/bluez-4.34
 	app-mobilephone/obexd
-	sys-fs/udev"
+	sys-fs/udev
+	x11-themes/gnome-icon-theme-symbolic"
 # To break circular dependencies
 PDEPEND=">=gnome-base/gnome-control-center-2.91"
 DEPEND="${COMMON_DEPEND}
