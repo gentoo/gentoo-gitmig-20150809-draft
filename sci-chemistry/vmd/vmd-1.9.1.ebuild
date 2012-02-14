@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1.ebuild,v 1.1 2012/02/14 13:28:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1.ebuild,v 1.2 2012/02/14 15:26:56 alexxy Exp $
 
 EAPI="3"
 
@@ -79,6 +79,9 @@ src_prepare() {
 		-e "s:SHXXLD = g++:SHXXLD = $(tc-getCXX) -shared:" \
 		-e "s:-ltcl8.5:-ltcl:" \
 		-i Make-arch || die "Failed to set up plugins Makefile"
+
+	sed -e "s:\$(CXXFLAGS)::g" \
+		-i hesstrans/Makefile || die
 
 	# prepare vmd itself
 	cd "${S}"
