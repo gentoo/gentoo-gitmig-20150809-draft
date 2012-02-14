@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.73 2012/02/02 03:17:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.74 2012/02/14 16:08:11 vapier Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -158,8 +158,12 @@ ESVN_OFFLINE="${ESVN_OFFLINE:-${ESCM_OFFLINE}}"
 
 # @ECLASS-VARIABLE: ESVN_UMASK
 # @DESCRIPTION:
-# Set this variable to custom umask.
-# This is intended to be set by users.
+# Set this variable to a custom umask. This is intended to be set by users.
+# By setting this to something like 002, it can make life easier for people
+# who do development as non-root (but are in the portage group), and then
+# switch over to building with FEATURES=userpriv.  Or vice-versa.  Shouldn't
+# be a security issue here as anyone who has portage group write access
+# already can screw the system over in more creative ways.
 ESVN_UMASK="${ESVN_UMASK:-${EVCS_UMASK}}"
 
 # @ECLASS-VARIABLE: ESVN_UP_FREQ
