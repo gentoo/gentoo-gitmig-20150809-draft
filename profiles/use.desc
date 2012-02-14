@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.476 2012/01/31 09:40:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.477 2012/02/14 19:31:03 hwoarang Exp $
 
 # Keep them sorted
 
@@ -25,6 +25,7 @@ apm - Adds APM (Advanced Power Management) support
 aqua - Include support for the Mac OS X Aqua (Carbon/Cocoa) GUI
 atm - Enable Asynchronous Transfer Mode protocol support
 audiofile - Adds support for libaudiofile where applicable
+ayatana - Build in support for Ayatana notification using the libindicate-qt plugin
 avahi - Add avahi/Zeroconf support
 bash-completion - Enable bash-completion support
 bcmath - Adds support for libbcmath

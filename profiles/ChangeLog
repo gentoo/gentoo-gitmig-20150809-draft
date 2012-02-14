@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6213 2012/02/14 07:54:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6214 2012/02/14 19:31:03 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> use.desc:
+  ayatana is now global per
+  http://archives.gentoo.org/gentoo-dev/msg_f2eb26947d0c86020625a9aeca6f25e4.xm
+  l
 
   14 Feb 2012; Justin Lecher <jlec@gentoo.org> base/package.use.mask:
   Correct version for recent pymol USE=vmd mask
