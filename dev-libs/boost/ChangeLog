@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.236 2012/02/04 19:31:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.237 2012/02/14 19:57:04 hwoarang Exp $
+
+  14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> boost-1.48.0-r1.ebuild:
+  update header per bug #403671
 
   04 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/boost-1.48.0-BOOST_FOREACH.patch, boost-1.48.0-r1.ebuild:
