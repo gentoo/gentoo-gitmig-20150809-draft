@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.1.1.ebuild,v 1.7 2009/05/31 20:57:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.1.1.ebuild,v 1.8 2012/02/14 11:54:08 naota Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source doc test"
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}-nolibs-src.zip"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 LANGS="tr tk"
 
 S=${WORKDIR}/${P}-nolibs-src
