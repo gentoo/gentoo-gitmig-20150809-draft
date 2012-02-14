@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop-pg-qt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/ChangeLog,v 1.6 2011/08/14 17:01:04 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/ChangeLog,v 1.7 2012/02/14 16:11:33 johu Exp $
+
+*kdevelop-pg-qt-1.0.0 (14 Feb 2012)
+
+  14 Feb 2012; Johannes Huber <johu@gentoo.org> +kdevelop-pg-qt-1.0.0.ebuild:
+  Version bump.
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org> kdevelop-pg-qt-0.9.5.ebuild:
   x86 stable, bug #368739
