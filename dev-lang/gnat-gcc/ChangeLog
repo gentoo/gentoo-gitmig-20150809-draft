@@ -1,10 +1,11 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.50 2012/02/14 12:31:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.51 2012/02/14 12:43:56 george Exp $
 
-  14 Feb 2012; george <george@gentoo.org> gnat-gcc-4.3.6.ebuild:
-  changing SRC_URI to reflect recent discussion and avoid stuff disappearing
-  from mirrors
+  14 Feb 2012; george <george@gentoo.org> gnat-gcc-3.4.6.ebuild,
+  gnat-gcc-4.3.5.ebuild, gnat-gcc-4.3.6.ebuild:
+  changed SRC_URIs to reflect recent discussion on -dev and avoid mirrors
+  losing stuff
 
   20 Sep 2011; George Shapovalov <george@gentoo.org> gnat-gcc-4.4.3.ebuild,
   gnat-gcc-4.4.5.ebuild:
