@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/projectcenter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.20 2012/02/04 14:09:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.21 2012/02/14 18:25:52 voyageur Exp $
+
+  14 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  projectcenter-0.6.0.ebuild, +files/projectcenter-0.6.0-32788+33818.patch:
+  Fix compilation with llvm and latest gnustep base
 
   04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> projectcenter-0.6.0.ebuild:
   Stable for amd64, wrt bug #397047

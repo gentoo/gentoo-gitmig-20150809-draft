@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/projectcenter-0.6.0.ebuild,v 1.2 2012/02/04 14:09:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/projectcenter-0.6.0.ebuild,v 1.3 2012/02/14 18:25:52 voyageur Exp $
 
-EAPI=3
+EAPI=4
 inherit gnustep-2
 
 MY_P=${P/projectc/ProjectC}
@@ -18,3 +18,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=sys-devel/gdb-6.0"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-32788+33818.patch
+}
