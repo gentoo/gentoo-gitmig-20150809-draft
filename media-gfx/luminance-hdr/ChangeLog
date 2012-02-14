@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/luminance-hdr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.10 2011/09/23 23:43:07 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.11 2012/02/14 09:15:54 radhermit Exp $
+
+*luminance-hdr-2.2.0 (14 Feb 2012)
+
+  14 Feb 2012; Tim Harder <radhermit@gentoo.org> +luminance-hdr-2.2.0.ebuild,
+  +files/luminance-hdr-2.2.0-docs.patch,
+  +files/luminance-hdr-2.2.0-no-git.patch,
+  +files/luminance-hdr-2.2.0-openmp-automagic.patch:
+  Version bump (bug #399767).
 
   23 Sep 2011; Tim Harder <radhermit@gentoo.org> luminance-hdr-2.1.0.ebuild:
   Add dependency on qt-sql (bug #382305 by Martin Thierer).
