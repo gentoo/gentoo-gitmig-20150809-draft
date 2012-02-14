@@ -1,6 +1,9 @@
 # ChangeLog for media-video/coriander
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.20 2011/09/13 18:06:04 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.21 2012/02/14 22:29:20 ulm Exp $
+
+  14 Feb 2012; Ulrich Müller <ulm@gentoo.org> coriander-2.0.0.ebuild:
+  QA: Fix ebuild header, bug 403707.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> -coriander-2.0.0_rc6.ebuild:
   Drop old.
