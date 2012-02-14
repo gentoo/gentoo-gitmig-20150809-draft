@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyproj
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyproj/ChangeLog,v 1.6 2011/03/09 18:16:22 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyproj/ChangeLog,v 1.7 2012/02/14 04:46:33 patrick Exp $
+
+*pyproj-1.9.0 (14 Feb 2012)
+
+  14 Feb 2012; Patrick Lauer <patrick@gentoo.org> +pyproj-1.9.0.ebuild,
+  -pyproj-1.8.8.ebuild:
+  Bump for #403291, adding doc useflag, thanks to Chris Mayo
 
 *pyproj-1.8.9 (09 Mar 2011)
 
