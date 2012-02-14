@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.4.1.ebuild,v 1.2 2011/06/02 08:39:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.4.1.ebuild,v 1.3 2012/02/14 08:18:11 jlec Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ PYTHON_MODNAME="${PN} chempy pmg_tk pmg_wx"
 
 inherit eutils distutils prefix versionator
 
-DESCRIPTION="A Python-extensible molecular graphics system."
+DESCRIPTION="A Python-extensible molecular graphics system"
 HOMEPAGE="http://pymol.sourceforge.net/"
 SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
@@ -41,12 +41,12 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PV}-data-path.patch \
-		"${FILESDIR}"/${PV}-shaders.patch
+		"${FILESDIR}"/${P}-data-path.patch \
+		"${FILESDIR}"/${P}-shaders.patch
 
-	use web || epatch "${FILESDIR}"/${PV}-web.patch
+	use web || epatch "${FILESDIR}"/${P}-web.patch
 
-	epatch "${FILESDIR}"/1.2.2-prefix.patch && \
+	epatch "${FILESDIR}"/${PN}-1.2.2-prefix.patch && \
 		eprefixify setup.py
 
 	# Turn off splash screen.  Please do make a project contribution
@@ -58,7 +58,7 @@ src_prepare() {
 		-e "s:\(ext_comp_args=\).*:\1[]:g" \
 		"${S}"/setup.py || die "Failed running sed on setup.py"
 
-	use vmd && epatch "${FILESDIR}"/$(get_version_component_range 1-2)-vmd.patch
+	use vmd && epatch "${FILESDIR}"/${PN}-$(get_version_component_range 1-2)-vmd.patch
 
 	use numpy && \
 		sed \

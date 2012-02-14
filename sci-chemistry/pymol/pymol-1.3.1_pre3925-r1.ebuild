@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.3.1_pre3925-r1.ebuild,v 1.3 2011/05/24 18:44:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.3.1_pre3925-r1.ebuild,v 1.4 2012/02/14 08:18:11 jlec Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ REV="3925"
 
 inherit eutils distutils prefix
 
-DESCRIPTION="A Python-extensible molecular graphics system."
+DESCRIPTION="A Python-extensible molecular graphics system"
 HOMEPAGE="http://pymol.sourceforge.net/"
 #SRC_URI="http://pymol.svn.sourceforge.net/viewvc/pymol/trunk/pymol.tar.gz?view=tar&pathrev=${REV} -> ${P}.tar.gz"
 SRC_URI="mirror://gentoo/${PF}.tar.gz"
@@ -42,9 +42,9 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/1.2.2-data-path.patch
+	epatch "${FILESDIR}"/${PN}-1.2.2-data-path.patch
 
-	epatch "${FILESDIR}"/1.2.2-prefix.patch && \
+	epatch "${FILESDIR}"/${PN}-1.2.2-prefix.patch && \
 	eprefixify setup.py
 
 	# Turn off splash screen.  Please do make a project contribution
@@ -58,7 +58,7 @@ src_prepare() {
 
 	use shaders && epatch "${FILESDIR}"/${PN}-1.2.2-shaders.patch
 
-	use vmd && epatch "${FILESDIR}"/1.3.0-vmd.patch
+	use vmd && epatch "${FILESDIR}"/${PN}-1.3.0-vmd.patch
 
 	use numpy && \
 		sed \

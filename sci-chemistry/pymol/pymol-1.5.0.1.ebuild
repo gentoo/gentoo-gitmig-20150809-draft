@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.1.ebuild,v 1.1 2012/02/13 22:09:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.1.ebuild,v 1.2 2012/02/14 08:18:11 jlec Exp $
 
 EAPI=4
 
@@ -10,11 +10,13 @@ RESTRICT_PYTHON_ABIS="2.4 2.5 2.6 3.*"
 PYTHON_USE_WITH="tk"
 PYTHON_MODNAME="${PN} chempy pmg_tk pmg_wx"
 
-inherit eutils distutils prefix versionator
+inherit distutils eutils fdo-mime prefix versionator
 
-DESCRIPTION="A Python-extensible molecular graphics system."
+DESCRIPTION="A Python-extensible molecular graphics system"
 HOMEPAGE="http://pymol.sourceforge.net/"
-SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${PN}-v${PV}.tar.bz2"
+SRC_URI="
+	mirror://sourceforge/project/${PN}/${PN}/${PV}/${PN}-v${PV}.tar.bz2
+	http://dev.gentoo.org/~jlec/distfiles/${PN}.xpm.tar"
 
 LICENSE="PSF-2.2"
 SLOT="0"
@@ -52,10 +54,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-prefix.patch && \
 		eprefixify setup.py
 
-	# Turn off splash screen.  Please do make a project contribution
-	# if you are able though. #299020
-	epatch "${FILESDIR}"/${P}-nosplash.patch
-
 	use vmd && epatch "${FILESDIR}"/${P}-vmd.patch
 
 	if use numpy; then
@@ -92,7 +90,7 @@ src_install() {
 
 	cat >> "${T}"/pymol <<- EOF
 	#!/bin/sh
-	$(PYTHON -f) -O \${PYMOL_PATH}/__init__.py \$*
+	$(PYTHON -f) -O \${PYMOL_PATH}/__init__.py -q \$*
 	EOF
 
 	dobin "${T}"/pymol
@@ -104,6 +102,9 @@ src_install() {
 	doins -r examples
 
 	dodoc DEVELOPERS README
+
+	doicon "${WORKDIR}"/${PN}.xpm
+	make_desktop_entry pymol PyMol ${PN}.xpm "Graphics;Science;Chemistry"
 }
 
 pkg_postinst() {
@@ -111,4 +112,11 @@ pkg_postinst() {
 	elog "please use pymol config settings"
 	elog "\t set use_shaders, 1"
 	distutils_pkg_postinst
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
