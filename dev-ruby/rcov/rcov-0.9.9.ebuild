@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.9.ebuild,v 1.1 2010/09/19 09:27:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.9.ebuild,v 1.2 2012/02/14 13:41:27 flameeyes Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19 "
 
 RUBY_FAKEGEM_TASK_TEST="test_rcovrt"
 

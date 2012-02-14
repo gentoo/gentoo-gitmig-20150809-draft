@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.11.ebuild,v 1.1 2011/10/10 19:49:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.11.ebuild,v 1.2 2012/02/14 13:41:27 flameeyes Exp $
 
 EAPI=4
 
 # The documenttion indicates that rcov does not work with (reliably)
 # with ruby 1.9. Use ruby 1.9's built in coverage or simplecov instead.
-USE_RUBY="ruby18 jruby"
+USE_RUBY="ruby18 "
 
 RUBY_FAKEGEM_TASK_TEST="test_rcovrt"
 
