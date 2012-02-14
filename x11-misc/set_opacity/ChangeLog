@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/set_opacity
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/set_opacity/ChangeLog,v 1.2 2011/07/21 11:12:03 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/set_opacity/ChangeLog,v 1.3 2012/02/14 21:41:19 ulm Exp $
+
+  14 Feb 2012; Ulrich Müller <ulm@gentoo.org> set_opacity-1.0.ebuild,
+  set_opacity-9999.ebuild:
+  QA: Fix ebuild header, bug 398773.
 
 *set_opacity-9999 (21 Jul 2011)
 
