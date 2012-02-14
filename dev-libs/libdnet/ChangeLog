@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libdnet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.46 2010/07/19 21:35:59 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.47 2012/02/14 22:08:17 jer Exp $
+
+*libdnet-1.11-r2 (14 Feb 2012)
+
+  14 Feb 2012; Jeroen Roovers <jer@gentoo.org> files/libdnet-1.10-gcc4.diff,
+  +libdnet-1.11-r2.ebuild:
+  Clean up patch. Add IUSE=static-libs. Possibly improve python related code by
+  Ian Delaney (bugs #253267, #326389, #363601).
 
   19 Jul 2010; Markus Meier <maekke@gentoo.org> libdnet-1.11-r1.ebuild:
   add ~arm, bug #301080
