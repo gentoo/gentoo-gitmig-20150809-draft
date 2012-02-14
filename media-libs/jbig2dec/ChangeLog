@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbig2dec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.12 2012/02/10 07:41:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.13 2012/02/14 10:47:14 aballier Exp $
+
+  14 Feb 2012; Alexis Ballier <aballier@gentoo.org> jbig2dec-0.11-r1.ebuild:
+  keyword ~x86-fbsd
 
   10 Feb 2012; Agostino Sarubbo <ago@gentoo.org> jbig2dec-0.11-r1.ebuild:
   Stable for amd64, wrt bug #402907

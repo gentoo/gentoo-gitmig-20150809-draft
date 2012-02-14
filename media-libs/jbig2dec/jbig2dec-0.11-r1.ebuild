@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11-r1.ebuild,v 1.2 2012/02/10 07:41:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11-r1.ebuild,v 1.3 2012/02/14 10:47:14 aballier Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://ghostscript.com/~giles/jbig2/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~x86 ~x86-fbsd"
 IUSE="png static-libs"
 
 RDEPEND="png? ( >=media-libs/libpng-1.2:0 )"
