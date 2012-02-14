@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo FoundationOU
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.6.0.ebuild,v 1.10 2012/02/12 22:15:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.6.0.ebuild,v 1.11 2012/02/14 21:34:13 ulm Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic
