@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.41 2012/02/05 15:28:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.42 2012/02/14 00:09:00 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -10,15 +10,16 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS=""
 SLOT="0"
-IUSE="build doc epydoc +ipc python2 python3 selinux xattr"
+IUSE="build doc epydoc +ipc pypy1_8 python2 python3 selinux xattr"
 
 # Import of the io module in python-2.6 raises ImportError for the
 # thread module if threading is disabled.
 python_dep="python3? ( =dev-lang/python-3* )
-	!python2? ( !python3? (
+	!pypy1_8? ( !python2? ( !python3? (
 		build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) )
 		!build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] >=dev-lang/python-3 ) )
-	) )
+	) ) )
+	pypy1_8? ( !python2? ( !python3? ( dev-python/pypy:1.8 ) ) )
 	python2? ( !python3? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) ) )"
 
 # The pysqlite blocker is for bug #282760.
@@ -66,11 +67,12 @@ EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/portage.git"
 S="${WORKDIR}"/${PN}
 
 compatible_python_is_selected() {
-	[[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') = good ]]
+	[[ $("${EPREFIX}/usr/bin/python" -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') = good ]]
 }
 
 current_python_has_xattr() {
-	[[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x3030000 and "yes" or "no")') = yes ]]
+	[[ $("${EPREFIX}/usr/bin/python" -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x3030000 and "yes" or "no")') = yes ]] || \
+	"${EPREFIX}/usr/bin/python" -c 'import xattr' 2>/dev/null
 }
 
 pkg_setup() {
@@ -82,7 +84,16 @@ pkg_setup() {
 		ewarn "Both python2 and python3 USE flags are enabled, but only one"
 		ewarn "can be in the shebangs. Using python3."
 	fi
-	if ! use python2 && ! use python3 && ! compatible_python_is_selected ; then
+	if use pypy1_8 && use python3 ; then
+		ewarn "Both pypy1_8 and python3 USE flags are enabled, but only one"
+		ewarn "can be in the shebangs. Using python3."
+	fi
+	if use pypy1_8 && use python2 ; then
+		ewarn "Both pypy1_8 and python2 USE flags are enabled, but only one"
+		ewarn "can be in the shebangs. Using python2"
+	fi
+	if ! use pypy1_8 && ! use python2 && ! use python3 && \
+		! compatible_python_is_selected ; then
 		ewarn "Attempting to select a compatible default python interpreter"
 		local x success=0
 		for x in /usr/bin/python2.* ; do
@@ -106,6 +117,8 @@ pkg_setup() {
 		python_set_active_version 3
 	elif use python2; then
 		python_set_active_version 2
+	elif use pypy1_8; then
+		python_set_active_version 2.7-pypy-1.8
 	fi
 }
 
@@ -139,6 +152,9 @@ src_prepare() {
 	elif use python2; then
 		einfo "Converting shebangs for python2..."
 		python_convert_shebangs -r 2 .
+	elif use pypy1_8; then
+		einfo "Converting shebangs for pypy-c1.8..."
+		python_convert_shebangs -r 2.7-pypy-1.8 .
 	fi
 
 	if [[ -n ${EPREFIX} ]] ; then
@@ -329,8 +345,7 @@ pkg_preinst() {
 		fi
 	fi
 
-	if use xattr && ! current_python_has_xattr && \
-		! has_version dev-python/pyxattr ; then
+	if use xattr && ! current_python_has_xattr ; then
 		ewarn "For optimal performance in xattr handling, install"
 		ewarn "dev-python/pyxattr, or install >=dev-lang/python-3.3 and"
 		ewarn "enable USE=python3 for $CATEGORY/$PN."
