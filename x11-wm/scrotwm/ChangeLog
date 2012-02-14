@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/scrotwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/scrotwm/ChangeLog,v 1.4 2012/01/27 15:42:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/scrotwm/ChangeLog,v 1.5 2012/02/14 23:15:34 xmw Exp $
+
+*scrotwm-0.10.0-r1 (14 Feb 2012)
+
+  14 Feb 2012; Michael Weber <xmw@gentoo.org> +scrotwm-0.10.0-r1.ebuild:
+  Install documentation and configs (thanks Timothy Messier for the report, bug
+  403499)
 
 *scrotwm-0.10.0 (27 Jan 2012)
 
