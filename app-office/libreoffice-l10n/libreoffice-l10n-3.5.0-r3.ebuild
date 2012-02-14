@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.0-r2.ebuild,v 1.1 2012/01/11 12:06:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.0-r3.ebuild,v 1.1 2012/02/14 14:56:30 scarabeus Exp $
 
 EAPI=4
 
-MY_PV="3.5.0beta2"
+MY_PV="3.5.0"
 
-RC_VERSION="" # CHECK ME WITH EVERY BUMP!
-BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/testing/3.5.0-beta2/rpm"
+RC_VERSION="rc3" # CHECK ME WITH EVERY BUMP!
+BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/3.5.0/rpm"
 
 OO_EXTENSIONS=(
 	"472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
@@ -39,10 +39,10 @@ for lang in ${LANGUAGES}; do
 	langpack=""
 	if [[ "${LANGUAGES_HELP}" =~ "${lang}" ]]; then
 		[[ ${lang} == en ]] && lang2=${lang/en/en_US} || lang2=${lang}
-		helppack=" offlinehelp? ( ${BASE_SRC_URI}/x86/LibO-Dev_${MY_PV}_Linux_x86_helppack-rpm_${lang2/_/-}.tar.gz ) "
+		helppack=" offlinehelp? ( ${BASE_SRC_URI}/x86/LibO_${MY_PV}_Linux_x86_helppack-rpm_${lang2/_/-}.tar.gz ) "
 	fi
 	[[ ${lang} == en ]] \
-		|| langpack=" ${BASE_SRC_URI}/x86/LibO-Dev_${MY_PV}_Linux_x86_langpack-rpm_${lang/_/-}.tar.gz "
+		|| langpack=" ${BASE_SRC_URI}/x86/LibO_${MY_PV}_Linux_x86_langpack-rpm_${lang/_/-}.tar.gz "
 	SRC_URI+=" linguas_${lang}? (
 		${langpack}
 		${helppack}
@@ -104,7 +104,7 @@ src_unpack() {
 
 		# for english we provide just helppack, as translation is always there
 		if [[ ${lang} != en ]]; then
-			rpmdir="LibO-Dev_${MY_PV}${RC_VERSION}_Linux_x86_langpack-rpm_${dir}/RPMS/"
+			rpmdir="LibO_${MY_PV}${RC_VERSION}_Linux_x86_langpack-rpm_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			# First remove dictionaries, we want to use system ones.
 			rm -rf "${S}/${rpmdir}/"*dict*.rpm
@@ -112,7 +112,7 @@ src_unpack() {
 		fi
 		if [[ "${LANGUAGES_HELP}" =~ "${lang}" ]] && use offlinehelp; then
 			[[ ${lang} == en ]] && dir="en-US"
-			rpmdir="LibO-Dev_${MY_PV}${RC_VERSION}_Linux_x86_helppack-rpm_${dir}/RPMS/"
+			rpmdir="LibO_${MY_PV}${RC_VERSION}_Linux_x86_helppack-rpm_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			rpm_unpack ./"${rpmdir}/"*.rpm
 		fi
