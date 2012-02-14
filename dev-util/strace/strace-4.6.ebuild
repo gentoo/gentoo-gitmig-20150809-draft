@@ -1,14 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.6.ebuild,v 1.8 2012/02/13 09:51:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.6.ebuild,v 1.9 2012/02/14 06:12:19 vapier Exp $
 
 EAPI="3"
 
-inherit flag-o-matic
+inherit flag-o-matic eutils autotools
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
 HOMEPAGE="http://sourceforge.net/projects/strace/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
+	mirror://gentoo/${P}-x32.patch.xz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -19,6 +20,13 @@ IUSE="static aio"
 DEPEND="aio? ( >=dev-libs/libaio-0.3.106 )
 	sys-kernel/linux-headers"
 RDEPEND=""
+
+src_prepare() {
+	if has x32 $(get_all_abis) ; then
+		epatch "${WORKDIR}"/${P}-x32.patch
+		eautoreconf
+	fi
+}
 
 src_configure() {
 	filter-lfs-flags # configure handles this sanely
