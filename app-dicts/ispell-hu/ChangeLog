@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-hu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.15 2009/10/18 00:59:23 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.16 2012/02/14 22:55:04 ranger Exp $
+
+  14 Feb 2012; Brent Baude <ranger@gentoo.org> ispell-hu-1.4.ebuild:
+  Marking ispell-hu-1.4 ppc for bug 396783
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> ispell-hu-0.99.4.ebuild,
   ispell-hu-1.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-1.4.ebuild,v 1.1 2008/11/21 19:53:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-1.4.ebuild,v 1.2 2012/02/14 22:55:04 ranger Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://magyarispell.sourceforge.net/"
 SRC_URI="mirror://sourceforge/magyarispell/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 LGPL-2.1 MPL-1.1 )"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ppc ~sparc ~x86"
 SLOT="0"
 
 DEPEND="app-text/ispell
