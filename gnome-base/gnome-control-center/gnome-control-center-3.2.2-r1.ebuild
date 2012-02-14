@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.2.1.ebuild,v 1.4 2012/02/14 04:55:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.2.2-r1.ebuild,v 1.1 2012/02/14 10:43:43 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes" # gmodule is used, which uses dlopen
 
-inherit autotools gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="GNOME Desktop Configuration Tool"
 HOMEPAGE="http://www.gnome.org/"
@@ -86,7 +86,9 @@ DEPEND="${COMMON_DEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.10.1
 
-	cups? ( sys-apps/sed )"
+	cups? ( sys-apps/sed )
+
+	gnome-base/gnome-common"
 # Needed for autoreconf
 #	gnome-base/gnome-common
 
@@ -102,6 +104,15 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Upstream patch to not crash on missing metacity; will be in next release
+	epatch "${FILESDIR}/${P}-metacity-gconf.patch"
+
+	# bug #403527, https://bugzilla.gnome.org/show_bug.cgi?id=670042
+	epatch "${FILESDIR}/${P}-timezone-free.patch"
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=670051, requires eautoreconf
+	epatch "${FILESDIR}/${P}-timezones-linguas.patch"
+
 	# Make colord plugin optional; requires eautoreconf
 	epatch "${FILESDIR}/${PN}-3.2.1-optional-colord.patch"
 	eautoreconf

@@ -1,0 +1,31 @@
+From 0c5f7f64d6f8ffd24eda8d6115f54189a18e191e Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Tue, 14 Feb 2012 04:21:05 -0500
+Subject: [PATCH] datetime: Make sure timezone is initialized in
+ get_timezone_cb()
+
+If date_time_mechanism_call_get_timezone_finish() fails, timezone is
+left uninitialized, and attempting to free it at the end of
+get_timezone_cb() results in a crash.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=670042
+---
+ panels/datetime/cc-datetime-panel.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/panels/datetime/cc-datetime-panel.c b/panels/datetime/cc-datetime-panel.c
+index 555eaaa..413986e 100644
+--- a/panels/datetime/cc-datetime-panel.c
++++ b/panels/datetime/cc-datetime-panel.c
+@@ -553,7 +553,7 @@ get_timezone_cb (GObject      *source,
+ {
+   CcDateTimePanel *self = user_data;
+   GtkWidget *widget;
+-  gchar *timezone;
++  gchar *timezone = NULL;
+   GError *error;
+ 
+   error = NULL;
+-- 
+1.7.8.4
+
