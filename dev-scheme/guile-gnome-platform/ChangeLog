@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/guile-gnome-platform
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.15 2012/02/12 17:55:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.16 2012/02/14 19:47:24 jlec Exp $
+
+*guile-gnome-platform-2.16.1-r1 (14 Feb 2012)
+
+  14 Feb 2012; Justin Lecher <jlec@gentoo.org> +files/2.16.1-gdk-color.patch,
+  +guile-gnome-platform-2.16.1-r1.ebuild:
+  Add patch for gdk-color handling, thanks gregory benison; move to EAPI=4 and
+  autotools-utils.eclass, handle static-libs
 
   12 Feb 2012; Justin Lecher <jlec@gentoo.org>
   -guile-gnome-platform-2.15.92.ebuild:
