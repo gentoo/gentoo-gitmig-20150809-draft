@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.1.2.ebuild,v 1.3 2012/02/10 03:11:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.1.2.ebuild,v 1.4 2012/02/14 04:57:56 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -46,6 +46,7 @@ RDEPEND=">=dev-libs/glib-2.28:2
 	>=net-libs/telepathy-farsight-0.0.14
 	net-im/telepathy-connection-managers
 	x11-libs/libX11
+	x11-themes/gnome-icon-theme-symbolic
 
 	call? (
 		>=media-libs/clutter-1.7.14:1.0
