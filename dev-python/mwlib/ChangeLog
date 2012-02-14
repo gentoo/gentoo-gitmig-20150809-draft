@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mwlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.9 2011/12/26 13:22:55 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.10 2012/02/14 04:20:42 patrick Exp $
+
+*mwlib-0.13.3 (14 Feb 2012)
+
+  14 Feb 2012; Patrick Lauer <patrick@gentoo.org> +mwlib-0.13.3.ebuild:
+  Bump for #402827
 
 *mwlib-0.12.17 (26 Dec 2011)
 
