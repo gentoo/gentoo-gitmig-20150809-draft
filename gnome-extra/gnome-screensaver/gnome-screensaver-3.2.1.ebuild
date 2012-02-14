@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.2.1.ebuild,v 1.1 2012/02/11 03:01:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.2.1.ebuild,v 1.2 2012/02/14 04:24:33 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -31,6 +31,7 @@ RDEPEND="
 	x11-libs/libXScrnSaver
 	x11-libs/libXxf86misc
 	x11-libs/libXxf86vm
+	x11-themes/gnome-icon-theme-symbolic
 
 	pam? ( virtual/pam )
 	systemd? ( >=sys-apps/systemd-31 )
