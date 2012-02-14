@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/sushi-0.2.1.ebuild,v 1.1 2011/11/02 16:52:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/sushi-0.2.1.ebuild,v 1.2 2012/02/14 05:11:56 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -44,6 +44,7 @@ DEPEND="${RDEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/nautilus-3.1.90
+	x11-themes/gnome-icon-theme-symbolic
 "
 
 pkg_setup() {
