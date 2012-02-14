@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.8.ebuild,v 1.2 2012/01/09 22:50:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.8.ebuild,v 1.3 2012/02/14 07:17:22 polynomial-c Exp $
 
 EAPI=4
 
@@ -48,7 +48,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 		media-libs/libsdl[X,video]
 	)
 	vnc? ( >=net-libs/libvncserver-0.9.7 )
-	java? ( >=virtual/jre-1.5 )"
+	java? ( virtual/jre:1.6 )"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.999
 	>=dev-lang/yasm-0.6.2
@@ -66,7 +66,7 @@ DEPEND="${RDEPEND}
 		dev-texlive/texlive-fontsrecommended
 		dev-texlive/texlive-fontsextra
 	)
-	java? ( >=virtual/jdk-1.5 )
+	java? ( virtual/jdk:1.6 )
 	dev-util/pkgconfig
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	!headless? ( x11-libs/libXinerama )
