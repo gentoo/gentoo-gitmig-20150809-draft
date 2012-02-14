@@ -1,6 +1,15 @@
 # ChangeLog for app-doc/doxygen
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.206 2011/11/05 21:30:54 nerdboy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.207 2012/02/14 13:37:27 xarthisius Exp $
+
+*doxygen-1.7.6.1 (14 Feb 2012)
+
+  14 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +doxygen-1.7.6.1.ebuild,
+  metadata.xml:
+  Version bump: EAPI4, reorder vars, initial support for LINGUAS, use 'dot'
+  instead of 'nodot', add missing dependencies on perl and bison (fixes bug
+  #399349 by bay), respect CC and CXX, call eqmake4 for doxywizard, always use
+  emake, simplify latex+doc logic. Add myself as maintainer.
 
 *doxygen-1.7.5.1 (05 Nov 2011)
 

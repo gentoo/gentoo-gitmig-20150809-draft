@@ -6,6 +6,10 @@
     <email>nerdboy@gentoo.org</email>
     <name>Steve Arnold</name>
 </maintainer>
+<maintainer>
+    <email>xarthisius@gentoo.org</email>
+    <name>Kacper Kowalik</name>
+</maintainer>
 <longdescription>Doxygen is a tool for analyzing, documenting, and reverse-engineering 
     source code of various languages using a variety of output formats 
     (try it and see).  Doxygen supports C++, C, Java, Objective-C, Python, 
@@ -14,6 +18,7 @@
 </longdescription>
 <use>
 	<flag name='nodot'>removes graphviz dependency, along with dot graphs</flag>
+	<flag name='dot'>allow to create dot graphs using <pkg>media-gfx/graphviz</pkg></flag>
 	<flag name='tcl'>adds experimental support for parsing/documenting Tcl source code</flag>
 </use>
 </pkgmetadata>
