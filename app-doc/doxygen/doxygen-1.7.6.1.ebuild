@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.6.1.ebuild,v 1.1 2012/02/14 13:37:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.6.1.ebuild,v 1.2 2012/02/14 13:56:17 xarthisius Exp $
 
 EAPI=4
 
@@ -8,7 +8,8 @@ inherit eutils flag-o-matic toolchain-funcs qt4-r2 fdo-mime
 
 DESCRIPTION="Documentation system for most programming languages"
 HOMEPAGE="http://www.doxygen.org/"
-SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
+SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
+   http://dev.gentoo.org/~xarthisius/distfiles/doxywizard.png"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -189,7 +190,7 @@ src_install() {
 	emake DESTDIR="${D}" MAN1DIR=share/man/man1 install
 
 	if use qt4; then
-		doicon "${FILESDIR}/doxywizard.png"
+		doicon "${DISTDIR}/doxywizard.png"
 		make_desktop_entry doxywizard "DoxyWizard ${PV}" \
 			"/usr/share/pixmaps/doxywizard.png" \
 			"Application;Development"

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.29 2010/01/02 22:22:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.30 2012/02/14 13:56:17 xarthisius Exp $
 
 EAPI=1
 
@@ -9,6 +9,7 @@ inherit eutils flag-o-matic toolchain-funcs
 DESCRIPTION="documentation system for C++, C, Java, Objective-C, Python, IDL, and other languages"
 HOMEPAGE="http://www.doxygen.org/"
 SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
+	http://dev.gentoo.org/~xarthisius/distfiles/doxywizard.png
 	unicode? ( mirror://gentoo/${P}-utf8-ru.patch.gz )"
 
 LICENSE="GPL-2"
