@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.2.1.1-r2.ebuild,v 1.1 2011/12/31 08:34:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.2.1.1-r2.ebuild,v 1.2 2012/02/14 04:53:07 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -78,6 +78,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/gnome-session-2.91.92
 	x11-apps/xhost
+	x11-themes/gnome-icon-theme-symbolic
 
 	accessibility? (
 		app-accessibility/gnome-mag

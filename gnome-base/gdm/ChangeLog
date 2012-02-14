@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gdm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.349 2011/12/31 08:34:36 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.350 2012/02/14 04:53:07 tetromino Exp $
+
+  14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gdm-3.2.1.1-r1.ebuild, gdm-3.2.1.1-r2.ebuild:
+  Add missing dependency on gnome-icon-theme-symbolic (bug #403503).
 
 *gdm-3.2.1.1-r2 (31 Dec 2011)
 
