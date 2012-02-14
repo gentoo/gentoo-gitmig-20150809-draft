@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libnfnetlink
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.42 2011/08/28 15:54:58 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.43 2012/02/14 22:29:23 jer Exp $
+
+*libnfnetlink-1.0.0-r1 (14 Feb 2012)
+
+  14 Feb 2012; Jeroen Roovers <jer@gentoo.org> -libnfnetlink-0.0.25.ebuild,
+  -libnfnetlink-0.0.30.ebuild, -libnfnetlink-0.0.33.ebuild,
+  -libnfnetlink-0.0.38.ebuild, -libnfnetlink-0.0.39.ebuild,
+  -libnfnetlink-0.0.40.ebuild, -libnfnetlink-0.0.41.ebuild,
+  +libnfnetlink-1.0.0-r1.ebuild:
+  Clean up old. Add IUSE=static-libs.
 
   28 Aug 2011; Raúl Porcel <armin76@gentoo.org> libnfnetlink-1.0.0.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #376881
