@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.214 2011/12/13 20:34:44 vostorga Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.215 2012/02/14 19:40:48 hwoarang Exp $
+
+  14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  ayatana is now global per http://archives.gentoo.org/gentoo-
+  dev/msg_f2eb26947d0c86020625a9aeca6f25e4.xml
 
 *liferea-1.8.0 (13 Dec 2011)
 
