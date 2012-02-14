@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6212 2012/02/13 22:03:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6213 2012/02/14 07:54:20 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Feb 2012; Justin Lecher <jlec@gentoo.org> base/package.use.mask:
+  Correct version for recent pymol USE=vmd mask
 
   13 Feb 2012; Justin Lecher <jlec@gentoo.org> base/package.use.mask:
   Masked USE=vmd for >pymol-1.5
