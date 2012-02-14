@@ -12,7 +12,6 @@
 		<description>Please CC on bugs</description>
 	</maintainer>
 	<use>
-		<flag name="ayatana">Enables support for Ayatana notifications using <pkg>libindicate-qt</pkg></flag>
 		<flag name="gadu">Enables Gadu communication protocol</flag>
 		<flag name="mpd">Enables Music Player Daemon support</flag>
 		<flag name="phonon">Enables phonon audio plugin</flag>

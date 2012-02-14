@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kadu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.122 2012/02/08 20:05:53 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.123 2012/02/14 19:34:33 hwoarang Exp $
+
+  14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  ayatana is now global per http://archives.gentoo.org/gentoo-
+  dev/msg_f2eb26947d0c86020625a9aeca6f25e4.xml
 
   08 Feb 2012; Maciej Mrozowski <reavertm@gentoo.org> kadu-0.10.1.ebuild,
   kadu-0.11.0.ebuild:
