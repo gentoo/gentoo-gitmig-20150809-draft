@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-nb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.21 2012/02/02 17:03:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.22 2012/02/14 22:56:34 ranger Exp $
+
+  14 Feb 2012; Brent Baude <ranger@gentoo.org> myspell-nb-20080310.ebuild:
+  Marking myspell-nb-20080310 ppc for bug 396785
 
   02 Feb 2012; Agostino Sarubbo <ago@gentoo.org> myspell-nb-20080310.ebuild:
   Stable for amd64, wrt bug #396785
