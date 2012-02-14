@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.332 2012/02/10 03:18:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.333 2012/02/14 04:09:20 tetromino Exp $
+
+  14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org> totem-3.2.1.ebuild:
+  Add missing dependency on gnome-icon-theme-symbolic (bug #403503, thanks to
+  Denis Dupeyron for reporting).
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> totem-3.2.1.ebuild:
   Changing python deps in preparation for 2.4 removal
