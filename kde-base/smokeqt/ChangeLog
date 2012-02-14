@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smokeqt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/ChangeLog,v 1.14 2012/01/25 18:16:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/ChangeLog,v 1.15 2012/02/14 19:17:31 nixnut Exp $
+
+  14 Feb 2012; nixnut <nixnut@gentoo.org> smokeqt-4.7.4.ebuild:
+  ~ppc, preparing for #396359
 
 *smokeqt-4.8.0 (25 Jan 2012)
 

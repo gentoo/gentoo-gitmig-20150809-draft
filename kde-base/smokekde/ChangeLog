@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smokekde
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.14 2012/01/25 18:17:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.15 2012/02/14 19:20:42 nixnut Exp $
+
+  14 Feb 2012; nixnut <nixnut@gentoo.org> smokekde-4.7.4.ebuild:
+  ~ppc, preparing for #396359
 
 *smokekde-4.8.0 (25 Jan 2012)
 

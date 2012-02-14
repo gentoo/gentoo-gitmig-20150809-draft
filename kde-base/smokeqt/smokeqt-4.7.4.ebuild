@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.7.4.ebuild,v 1.3 2012/01/16 23:51:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.7.4.ebuild,v 1.4 2012/02/14 19:17:31 nixnut Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ KDE_SCM="git"
 inherit kde4-base
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine - Qt bindings"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug +phonon qimageblitz qscintilla qwt webkit"
 
 # Maybe make more of Qt optional?
