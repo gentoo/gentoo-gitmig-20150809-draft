@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.10 2012/02/07 21:04:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.11 2012/02/14 04:35:48 tetromino Exp $
+
+  14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.2.1-r3.ebuild, gnome-shell-3.2.2.1.ebuild:
+  Add missing dependency on gnome-icon-theme-symbolic (bug #403503).
 
   07 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-shell-3.2.1-r3.ebuild, gnome-shell-3.2.2.1.ebuild:
