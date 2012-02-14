@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.120 2012/02/12 04:03:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.121 2012/02/14 08:43:43 pacho Exp $
+
+*bluez-4.98-r2 (14 Feb 2012)
+
+  14 Feb 2012; Pacho Ramos <pacho@gentoo.org> +bluez-4.98-r2.ebuild,
+  +files/bluez-4.98-fix-header.patch, +files/bluez-4.98-fix-socket.patch,
+  -bluez-4.98.ebuild:
+  Fix compilation problems against bluez, bug #403341 (by Steev Klimaszewski and
+  Marcel Unbehaun); fix needing to enable socket, bug #401065 (by Andreas
+  Eckstein and Ivan ivanov). Drop old.
 
   12 Feb 2012; Jeff Horelick <jdhore@gentoo.org> bluez-4.98-r1.ebuild:
   x86 stable per bug 399745
