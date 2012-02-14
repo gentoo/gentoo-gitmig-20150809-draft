@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.42 2012/02/14 00:09:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.43 2012/02/14 19:06:20 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -19,7 +19,7 @@ python_dep="python3? ( =dev-lang/python-3* )
 		build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) )
 		!build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] >=dev-lang/python-3 ) )
 	) ) )
-	pypy1_8? ( !python2? ( !python3? ( dev-python/pypy:1.8 ) ) )
+	pypy1_8? ( !python2? ( !python3? ( dev-python/pypy:1.8[bzip2] ) ) )
 	python2? ( !python3? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) ) )"
 
 # The pysqlite blocker is for bug #282760.
