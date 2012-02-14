@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.38.ebuild,v 1.1 2012/02/05 22:46:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.38.ebuild,v 1.2 2012/02/14 13:31:08 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
-PYTHON_USE_WITH=sqlite
+PYTHON_USE_WITH="ssl sqlite"
 
 inherit python distutils eutils fdo-mime bash-completion-r1 multilib
 

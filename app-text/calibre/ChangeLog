@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.185 2012/02/11 22:06:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.186 2012/02/14 13:31:08 zmedico Exp $
+
+  14 Feb 2012; Zac Medico <zmedico@gentoo.org> calibre-0.8.38.ebuild,
+  calibre-0.8.39.ebuild:
+  Require python[ssl] for bug #403201.
 
 *calibre-0.8.39 (11 Feb 2012)
 
