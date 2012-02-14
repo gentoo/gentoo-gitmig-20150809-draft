@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-fileupload
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.56 2012/01/28 07:06:09 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.57 2012/02/14 11:54:04 aballier Exp $
+
+  14 Feb 2012; Alexis Ballier <aballier@gentoo.org>
+  commons-fileupload-1.2.1-r1.ebuild:
+  keyword ~x86-fbsd
 
   28 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
   -commons-fileupload-1.2.ebuild:
