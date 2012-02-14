@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpxviewer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.7 2011/03/06 09:37:00 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.8 2012/02/14 21:36:14 ulm Exp $
+
+  14 Feb 2012; Ulrich Müller <ulm@gentoo.org> gpxviewer-0.2.0.ebuild:
+  QA: Fix ebuild header, bug 398773.
 
   06 Mar 2011; Justin Lecher <jlec@gentoo.org> gpxviewer-0.2.0.ebuild:
   Correct Slots for gtk 3 introduction to tree
