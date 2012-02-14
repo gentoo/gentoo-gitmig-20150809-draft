@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/postler
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/ChangeLog,v 1.5 2011/03/21 21:58:55 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/ChangeLog,v 1.6 2012/02/14 19:36:55 hwoarang Exp $
+
+  14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  ayatana is now global per http://archives.gentoo.org/gentoo-
+  dev/msg_f2eb26947d0c86020625a9aeca6f25e4.xml
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> postler-0.1.0.ebuild,
   postler-0.1.1.ebuild:

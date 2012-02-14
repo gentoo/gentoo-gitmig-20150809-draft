@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>xfce</herd>
-  <use>
-    <flag name='ayatana'>Enable Messaging Menu support via
-		<pkg>dev-libs/libindicate</pkg></flag>
-  </use>
 </pkgmetadata>
