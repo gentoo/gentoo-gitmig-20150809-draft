@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyalsaaudio
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.21 2011/11/16 19:01:42 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.22 2012/02/14 04:56:16 patrick Exp $
+
+*pyalsaaudio-0.7 (14 Feb 2012)
+
+  14 Feb 2012; Patrick Lauer <patrick@gentoo.org> +pyalsaaudio-0.7.ebuild:
+  Bump for #403007
 
   16 Nov 2011; Markos Chandras <hwoarang@gentoo.org> pyalsaaudio-0.6.ebuild:
   estrict Jython ABIs. Update LICENSE. Patch by Arfrever
