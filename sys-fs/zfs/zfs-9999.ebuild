@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.6 2012/02/04 21:06:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.7 2012/02/14 03:14:25 floppym Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git"
 LICENSE="CDDL GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="static-libs"
+IUSE="debug static-libs"
 
 DEPEND=">=sys-kernel/spl-${PV}"
 RDEPEND="${DEPEND}
@@ -38,6 +38,7 @@ src_configure() {
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
 		--with-udevdir=/lib/udev
+		$(use_enable debug)
 	)
 	autotools-utils_src_configure
 }
