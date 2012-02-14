@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4.ebuild,v 1.6 2012/02/12 14:36:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4.ebuild,v 1.7 2012/02/14 21:24:41 jer Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://slang/v${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="cjk pcre png readline static-libs zlib"
 
 # ncurses for ncurses5-config to get terminfo directory
