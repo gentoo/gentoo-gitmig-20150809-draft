@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Output/Test-Output-1.10.0.ebuild,v 1.3 2011/11/06 17:35:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Output/Test-Output-1.10.0.ebuild,v 1.4 2012/02/14 11:37:01 aballier Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Utilities to test STDOUT and STDERR messages"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~x86-fbsd"
 IUSE="test"
 
 RDEPEND="
