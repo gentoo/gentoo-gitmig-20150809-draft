@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.0.3.ebuild,v 1.1 2012/02/14 15:02:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.0.3.ebuild,v 1.2 2012/02/14 17:46:17 scarabeus Exp $
 
 EAPI=4
 
@@ -442,7 +442,7 @@ src_configure() {
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable pdfimport ext-pdfimport) \
-		$(use_enable postgres ext-postgresql-sdbc) \
+		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable svg librsvg system) \
 		$(use_enable test linkoo) \
 		$(use_enable vba) \
