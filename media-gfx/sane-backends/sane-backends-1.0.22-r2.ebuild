@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r2.ebuild,v 1.3 2012/01/21 22:52:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r2.ebuild,v 1.4 2012/02/14 20:57:41 phosphan Exp $
 
 EAPI="4"
 
@@ -190,6 +190,15 @@ src_configure() {
 	fi
 	if ! ( use sane_backends_canon_pp || use sane_backends_hpsj5s || use sane_backends_mustek_pp ); then
 		myconf="${myconf} sane_cv_use_libieee1284=no"
+	fi
+	# if LINGUAS is set, just use the listed and supported localizations.
+	if [ "${LINGUAS-NoLocalesSet}" != NoLocalesSet ]; then
+		echo > po/LINGUAS
+		for lang in ${LINGUAS}; do
+			if [ -a po/${lang}.po ]; then
+				echo ${lang} >> po/LINGUAS
+			fi
+		done
 	fi
 	SANEI_JPEG="sanei_jpeg.o" SANEI_JPEG_LO="sanei_jpeg.lo" \
 	BACKENDS="${BACKENDS}" econf \
