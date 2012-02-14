@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vpnc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.98 2011/07/03 17:30:21 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.99 2012/02/14 19:14:11 jlec Exp $
+
+*vpnc-0.5.3_p514 (14 Feb 2012)
+
+  14 Feb 2012; Justin Lecher <jlec@gentoo.org> vpnc-0.5.3_p457-r2.ebuild,
+  +vpnc-0.5.3_p514.ebuild, +files/vpnc-0.5.3_p514-as-needed.patch,
+  metadata.xml:
+  Version Bump, #392999, fix for compilation with as-needed, respect CC, ensure
+  correct deps, #397511
 
 *vpnc-0.5.3_p457-r2 (03 Jul 2011)
 
