@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/dbuskit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/dbuskit/ChangeLog,v 1.2 2011/05/02 13:56:31 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/dbuskit/ChangeLog,v 1.3 2012/02/14 18:37:45 voyageur Exp $
+
+  14 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> dbuskit-0.1.ebuild,
+  +files/dbuskit-0.1-configure.patch:
+  Fix configure with clang
 
   02 May 2011; Bernard Cafarelli <voyageur@gentoo.org> dbuskit-0.1.ebuild:
   Also works on ppc
