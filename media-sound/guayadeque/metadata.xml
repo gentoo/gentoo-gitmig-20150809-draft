@@ -5,7 +5,4 @@
 		<email>jlec@gentoo.org</email>
 		<name>Justin Lecher</name>
 	</maintainer>
-	<use>
-		<flag name="ayatana">Build in support for Ayatana notification using the libindicate plugin.</flag>
-	</use>
 </pkgmetadata>
