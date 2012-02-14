@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.173 2012/02/14 06:12:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.174 2012/02/14 06:13:45 vapier Exp $
+
+*strace-9999 (14 Feb 2012)
+
+  14 Feb 2012; Mike Frysinger <vapier@gentoo.org> +strace-9999.ebuild:
+  Add live git ebuild.
 
   14 Feb 2012; Mike Frysinger <vapier@gentoo.org> strace-4.6.ebuild:
   Add x32 support.
