@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.620.0.ebuild,v 1.2 2012/02/04 16:42:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.620.0.ebuild,v 1.3 2012/02/14 11:24:25 aballier Exp $
 
 EAPI=4
 MODULE_AUTHOR=MSCHWERN
@@ -10,7 +10,7 @@ inherit eutils perl-module
 DESCRIPTION="Create a module Makefile"
 HOMEPAGE="http://makemaker.org ${HOMEPAGE}"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="
