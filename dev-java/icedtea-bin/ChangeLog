@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.10 2012/02/13 21:33:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.11 2012/02/14 07:46:36 caster Exp $
+
+*icedtea-bin-6.1.11 (14 Feb 2012)
+
+  14 Feb 2012; Vlastimil Babka <caster@gentoo.org> +icedtea-bin-6.1.11.ebuild:
+  Version bump. Also pre-populates .systemPrefs, fixes bug #402507.
 
   13 Feb 2012; Vlastimil Babka <caster@gentoo.org>
   -icedtea-bin-1.10.3-r2.ebuild, -icedtea-bin-6.1.10.4.ebuild,
