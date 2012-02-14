@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/dispcalgui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.7 2012/02/14 17:18:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.8 2012/02/14 21:21:09 hwoarang Exp $
+
+*dispcalgui-0.8.9.3 (14 Feb 2012)
+
+  14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +dispcalgui-0.8.9.3.ebuild:
+  version bump
 
   14 Feb 2012; Torsten Veller <tove@gentoo.org> dispcalgui-0.8.5.2.ebuild:
   Fix ebuild header (#398773)
