@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.2-r1.ebuild,v 1.3 2012/02/04 18:14:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.2-r1.ebuild,v 1.4 2012/02/14 04:45:20 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -74,6 +74,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.29.10:2
 # 6. caribou needed for on-screen keyboard
 # 7. xdg-utils needed for xdg-open, used by extension tool
 # 8. gconf-python needed for cinnamon-settings
+# 9. gnome-icon-theme-symbolic needed for various icons
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/libgnomekbd-2.91.4[introspection]
@@ -91,6 +92,8 @@ RDEPEND="${COMMON_DEPEND}
 	x11-misc/xdg-utils
 
 	dev-python/gconf-python:2
+
+	x11-themes/gnome-icon-theme-symbolic
 
 	networkmanager? (
 		net-misc/mobile-broadband-provider-info
