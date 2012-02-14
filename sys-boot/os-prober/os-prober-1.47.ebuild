@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.47.ebuild,v 1.2 2011/05/26 19:01:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.47.ebuild,v 1.3 2012/02/14 15:37:25 scarabeus Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}
