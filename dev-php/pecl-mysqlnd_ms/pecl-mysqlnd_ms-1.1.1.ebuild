@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_ms/pecl-mysqlnd_ms-1.1.1.ebuild,v 1.2 2012/02/14 17:15:38 tove Exp $
 
 PHP_EXT_NAME="mysqlnd_ms"
 PHP_EXT_INI="yes"
