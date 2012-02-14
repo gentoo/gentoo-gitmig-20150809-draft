@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.381 2012/02/14 16:01:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.382 2012/02/14 16:08:54 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -214,6 +214,7 @@ eumask_push() {
 # @DESCRIPTION:
 # Restore the previous umask state.
 eumask_pop() {
+	[[ $# -eq 0 ]] || die "${FUNCNAME}: we take no options"
 	local s
 	estack_pop eumask s || die "${FUNCNAME}: unbalanced push"
 	umask ${s} || die "${FUNCNAME}: sanity: could not restore umask: ${s}"
