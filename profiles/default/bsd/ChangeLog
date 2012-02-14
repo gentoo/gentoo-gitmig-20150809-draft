@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.68 2011/12/18 13:27:09 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.69 2012/02/14 10:49:50 aballier Exp $
+
+  14 Feb 2012; Alexis Ballier <aballier@gentoo.org> packages:
+  remove virtual/modutils from system by Yuta SATOH, bug #402389
 
   18 Dec 2011; Alexis Ballier <aballier@gentoo.org> use.mask:
   usemask libv4l, linux only

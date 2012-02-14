@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/packages,v 1.6 2011/11/14 17:12:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/packages,v 1.7 2012/02/14 10:49:50 aballier Exp $
 
 -*virtual/dev-manager
 -*sys-fs/e2fsprogs
@@ -15,3 +15,4 @@
 -*sys-apps/coreutils
 -*net-misc/iputils
 -*app-arch/tar
+-*virtual/modutils
