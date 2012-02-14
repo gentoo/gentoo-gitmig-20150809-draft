@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.36 2012/02/14 23:05:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.37 2012/02/14 23:06:59 radhermit Exp $
+
+  14 Feb 2012; Tim Harder <radhermit@gentoo.org> byacc-20120115.ebuild:
+  Add ~arm to new version as well.
 
   14 Feb 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Add myself as maintainer.
