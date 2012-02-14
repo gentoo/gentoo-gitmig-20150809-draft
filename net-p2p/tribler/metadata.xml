@@ -9,4 +9,7 @@
 		Python based bittorrent client that does not require an external
 		website or indexing service to discover content.
 	</longdescription>
+	<use>
+		<flag name='vlc'>Enable vlc support.</flag>
+	</use>
 </pkgmetadata>
