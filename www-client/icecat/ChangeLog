@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.110 2012/02/13 17:25:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.111 2012/02/14 10:25:38 polynomial-c Exp $
+
+  14 Feb 2012; Lars Wendler <polynomial-c@gentoo.org> icecat-10.0-r1.ebuild:
+  Use correct language packs.
 
 *icecat-10.0-r1 (13 Feb 2012)
 

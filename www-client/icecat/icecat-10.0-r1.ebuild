@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-10.0-r1.ebuild,v 1.1 2012/02/13 17:25:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-10.0-r1.ebuild,v 1.2 2012/02/14 10:25:38 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -23,6 +23,7 @@ PATCH="firefox-10.0-patches-0.5"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/firefox/releases"
+MOZ_LANGPACK_PREFIX="10.0.1/linux-i686/xpi/"
 
 inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools python virtualx nsplugins mozlinguas
 
