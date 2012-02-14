@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.2.1.ebuild,v 1.1 2011/11/06 04:57:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.2.1.ebuild,v 1.2 2012/02/14 04:19:36 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -41,6 +41,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.30.0:2
 	nss? ( dev-libs/nss )"
 # networkmanager is used purely via dbus
 RDEPEND="${COMMON_DEPEND}
+	x11-themes/gnome-icon-theme-symbolic
 	networkmanager? ( >=net-misc/networkmanager-0.8.997 )"
 DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
