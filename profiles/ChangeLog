@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6215 2012/02/14 19:44:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6216 2012/02/14 21:59:20 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Last rites for gnustep-libs/objcunit, gnustep-apps/cynthiune,
+  gnustep-apps/gridlock, gnustep-apps/talksoup
 
   14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> use.desc:
   ayatana: add note about libappindicator as well
