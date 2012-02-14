@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/virtualenvwrapper
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/ChangeLog,v 1.1 2012/02/14 21:00:24 djc Exp $
+
+*virtualenvwrapper-3.0 (14 Feb 2012)
+
+  14 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> +virtualenvwrapper-3.0.ebuild,
+  +files/tox.ini, +metadata.xml:
+  Initial version of virtualenvwrapper. Ebuild contributed by
+  nicolas.pinto@gmail.com.
+
