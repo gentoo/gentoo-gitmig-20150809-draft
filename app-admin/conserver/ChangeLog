@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conserver
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.76 2011/08/25 09:50:42 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.77 2012/02/14 23:05:26 ranger Exp $
+
+  14 Feb 2012; Brent Baude <ranger@gentoo.org> conserver-8.1.18.ebuild:
+  Marking conserver-8.1.18 ppc for bug 402765
 
 *conserver-8.1.18 (24 Aug 2011)
 
