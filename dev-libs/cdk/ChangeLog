@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cdk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.71 2011/06/09 07:33:47 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.72 2012/02/14 23:01:56 radhermit Exp $
+
+  14 Feb 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
 *cdk-5.0.20110517 (09 Jun 2011)
 
