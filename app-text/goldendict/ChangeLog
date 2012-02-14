@@ -1,6 +1,11 @@
 # ChangeLog for app-text/goldendict
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.5 2011/05/09 14:46:59 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.6 2012/02/14 15:39:28 pesa Exp $
+
+  14 Feb 2012; Davide Pesavento <pesa@gentoo.org>
+  -files/goldendict-0.9.0-gcc4.4.patch, -goldendict-0.9.0_p20100410.ebuild,
+  goldendict-1.0.1.ebuild, metadata.xml:
+  Depend on qt3support being enabled (bug #390985). Remove obsolete version.
 
   09 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> goldendict-1.0.1.ebuild:
   x86 stable wrt bug #365343

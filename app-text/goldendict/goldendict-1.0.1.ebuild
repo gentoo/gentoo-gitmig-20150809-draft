@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.4 2011/05/09 14:46:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.5 2012/02/14 15:39:28 pesa Exp $
 
 EAPI=3
 LANGSLONG="ar_SA bg_BG cs_CZ de_DE el_GR it_IT lt_LT ru_RU uk_UA vi_VN zh_CN"
@@ -22,8 +22,8 @@ RDEPEND="
 	media-libs/libvorbis
 	sys-libs/zlib
 	x11-libs/libXtst
-	>=x11-libs/qt-core-4.5:4[exceptions]
-	>=x11-libs/qt-gui-4.5:4[exceptions]
+	>=x11-libs/qt-core-4.5:4[exceptions,qt3support]
+	>=x11-libs/qt-gui-4.5:4[exceptions,qt3support]
 	>=x11-libs/qt-webkit-4.5:4[exceptions]
 	!kde? ( || (
 		>=x11-libs/qt-phonon-4.5:4[exceptions]
@@ -34,7 +34,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 "
-S="${WORKDIR}"
+
+S=${WORKDIR}
 
 src_prepare() {
 	qt4-r2_src_prepare
