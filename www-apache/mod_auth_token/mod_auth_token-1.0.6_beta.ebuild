@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_token/mod_auth_token-1.0.6_beta.ebuild,v 1.4 2012/02/14 17:19:24 tove Exp $
 
 EAPI=3
 
