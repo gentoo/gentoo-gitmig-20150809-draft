@@ -6,8 +6,6 @@
 		<email>jlec@gentoo.org</email>
 	</maintainer>
 	<use>
-		<flag name="ayatana">Build in support for Ayatana notification using the 
-	libindicate plugin</flag>
 		<flag name="plugins">Build support for plugins using librest</flag>
 		<flag name="zeitgeist">Add support for Zeitgeist event tracking system</flag>
 	</use>
