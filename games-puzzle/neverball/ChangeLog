@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/neverball
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.42 2011/06/22 04:48:42 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.43 2012/02/14 19:33:14 tristan Exp $
+
+  14 Feb 2012; Tristan Heaven <tristan@gentoo.org> neverball-1.5.4.ebuild:
+  Respect LINGUAS, bug #402311
 
   22 Jun 2011; Tupone Alfredo <tupone@gentoo.org> neverball-1.5.4.ebuild,
   +files/neverball-1.5.4-underlink.patch:

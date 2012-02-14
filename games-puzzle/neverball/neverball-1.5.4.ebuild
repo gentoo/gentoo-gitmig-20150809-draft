@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.5 2011/06/22 04:48:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.6 2012/02/14 19:33:14 tristan Exp $
 
 EAPI=2
 inherit eutils games
@@ -39,15 +39,10 @@ src_prepare() {
 		-e "/^MAPC_TARG/s/mapc/${PN}-mapc/" \
 		Makefile \
 		|| die "sed failed"
-	sed -i \
-		-e "s/LOCALEDIR/LLOCALEDIR/g" \
-		po/Makefile \
-		|| die "sed failed"
 	epatch "${FILESDIR}"/${P}-underlink.patch
 }
 
 src_compile() {
-	LINGUAS= \
 	emake \
 		ENABLE_NLS=$(use nls && echo 1 || echo 0) \
 		E_CFLAGS="${CFLAGS}" \
@@ -61,8 +56,9 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r data/* || die
 	rm -f "${D}${GAMES_DATADIR}/${PN}"/ttf/DejaVuSans-Bold.ttf
-	dosym /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf "${GAMES_DATADIR}/${PN}"/ttf/ || die
-	if use nls ; then
+	dosym /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf \
+		"${GAMES_DATADIR}/${PN}"/ttf/DejaVuSans-Bold.ttf || die
+	if [[ -d locale ]] ; then
 		insinto /usr/share
 		doins -r locale || die
 	fi
