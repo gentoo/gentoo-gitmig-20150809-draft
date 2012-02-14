@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12.ebuild,v 1.6 2012/02/10 18:28:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12.ebuild,v 1.7 2012/02/14 09:16:23 voyageur Exp $
 
 EAPI=3
 
@@ -18,9 +18,9 @@ RDEPEND="x11-libs/gtk+:2
 	imlib? ( media-libs/imlib )
 	perl? ( dev-lang/perl
 		dev-perl/HTML-Parser
-		dev-perl/libwww-perl
+		|| ( dev-perl/libwww-perl
 		www-client/lynx
-		net-misc/wget )"
+		net-misc/wget ) )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"

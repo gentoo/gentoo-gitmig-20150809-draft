@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wmakerconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.39 2012/02/10 18:28:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.40 2012/02/14 09:16:23 voyageur Exp $
+
+  14 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmakerconf-2.12.ebuild,
+  wmakerconf-2.12-r1.ebuild:
+  Fix deps on wget and its alternatives
 
 *wmakerconf-2.12-r1 (10 Feb 2012)
 
