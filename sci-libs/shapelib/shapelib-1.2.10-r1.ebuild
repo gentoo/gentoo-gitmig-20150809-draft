@@ -1,7 +1,6 @@
-
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.2.10-r1.ebuild,v 1.6 2012/01/04 20:42:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.2.10-r1.ebuild,v 1.7 2012/02/14 21:37:49 ulm Exp $
 
 EAPI=4
 inherit eutils
