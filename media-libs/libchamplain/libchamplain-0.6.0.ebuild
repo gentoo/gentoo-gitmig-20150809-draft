@@ -1,11 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.12 2011/10/17 16:15:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.13 2012/02/14 18:30:07 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit gnome2 python
 
@@ -37,8 +38,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.9 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )"
 
-RESTRICT_PYTHON_ABIS="3.*"
-
+pkg_setup() {
 DOCS="AUTHORS ChangeLog NEWS README"
 
 G2CONF="${G2CONF}
@@ -50,6 +50,7 @@ G2CONF="${G2CONF}
 	$(use_enable html gtk-doc-html)
 	$(use_enable introspection)
 	$(use_enable python)"
+}
 
 src_prepare() {
 	gnome2_src_prepare
