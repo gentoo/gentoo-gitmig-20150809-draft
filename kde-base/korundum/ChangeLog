@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.101 2012/01/25 18:16:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.102 2012/02/14 19:31:47 nixnut Exp $
+
+  14 Feb 2012; nixnut <nixnut@gentoo.org> korundum-4.7.4.ebuild:
+  ~ppc, preparing for #396359
 
 *korundum-4.8.0 (25 Jan 2012)
 
