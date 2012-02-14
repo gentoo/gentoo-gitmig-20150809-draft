@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.139 2012/02/13 19:25:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.140 2012/02/14 03:38:41 patrick Exp $
+
+*psycopg-2.4.4 (14 Feb 2012)
+
+  14 Feb 2012; Patrick Lauer <patrick@gentoo.org> +psycopg-2.4.4.ebuild:
+  Bump for #402867
 
   13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> psycopg-2.4.2.ebuild:
   ppc64 stable wrt #392749
