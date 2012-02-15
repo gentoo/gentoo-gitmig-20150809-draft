@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtiger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/ChangeLog,v 1.18 2012/02/05 18:31:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/ChangeLog,v 1.19 2012/02/15 16:47:58 ranger Exp $
+
+  15 Feb 2012; Brent Baude <ranger@gentoo.org> libtiger-0.3.4.ebuild:
+  Marking libtiger-0.3.4 ppc for bug 397071
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> libtiger-0.3.4.ebuild:
   alpha/sparc stable wrt #397071
