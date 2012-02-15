@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/shc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.18 2011/08/19 18:14:02 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.19 2012/02/15 16:41:55 ranger Exp $
+
+  15 Feb 2012; Brent Baude <ranger@gentoo.org> shc-3.8.7.ebuild:
+  Marking shc-3.8.7 ppc for bug 363217
 
   19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> shc-3.8.7.ebuild:
   Add ~amd64. Bug #379721
