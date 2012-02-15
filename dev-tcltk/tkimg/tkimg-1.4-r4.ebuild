@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r4.ebuild,v 1.3 2012/01/22 23:48:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r4.ebuild,v 1.4 2012/02/15 02:14:08 ssuominen Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ SRC_URI="
 IUSE="doc test"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	dev-lang/tk
