@@ -1,8 +1,8 @@
 #!/sbin/runscript
 
 description="Virtual Machine Management daemon (libvirt)"
-extra_commands="halt"
 extra_started_commands="reload"
+extra_stopped_commands="halt"
 description_halt="Stops the libvirt daemon without stopping your VMs"
 description_reload="Restarts the libvirt daemon without stopping your VMs"
 
