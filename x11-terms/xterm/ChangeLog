@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.347 2012/01/19 19:01:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.348 2012/02/15 19:17:23 ranger Exp $
+
+  15 Feb 2012; Brent Baude <ranger@gentoo.org> xterm-276.ebuild:
+  Marking xterm-276 ppc stable for bug 394393
 
 *xterm-278 (19 Jan 2012)
 
