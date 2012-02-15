@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-2.0.3-r1.ebuild,v 1.1 2011/09/10 17:50:33 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-2.3.ebuild,v 1.1 2012/02/15 22:16:17 idl0r Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils perl-module
 
@@ -16,30 +16,31 @@ KEYWORDS="~amd64 ~x86"
 IUSE="contrib vim-syntax"
 
 DEPEND="dev-lang/perl
-	>=dev-vcs/git-1.6.2"
+	>=dev-vcs/git-1.6.6"
 RDEPEND="${DEPEND}
 	!dev-vcs/gitolite-gentoo
 	vim-syntax? ( app-vim/gitolite-syntax )"
 
 pkg_setup() {
 	enewgroup git
-	enewuser git -1 /bin/bash /var/lib/gitolite git
+	enewuser git -1 /bin/sh /var/lib/gitolite git
 }
 
 src_prepare() {
 	rm Makefile doc/COPYING || die
 	rm -rf contrib/{gitweb,vim} || die
 
-	epatch "${FILESDIR}/0001-fix-a-rather-large-typo-thinko-in-1006eba.patch"
-
 	echo "${PF}" > conf/VERSION
 }
 
 src_install() {
+	local gl_bin="${D}/usr/bin"
+
 	dodir /usr/share/gitolite/{conf,hooks} /usr/bin || die
 
 	# install using upstream method
-	./src/gl-system-install "${D}"/usr/bin \
+	export PATH="${D}"/usr/bin:$PATH
+	./src/gl-system-install ${gl_bin//\/\///} \
 		"${D}"/usr/share/gitolite/conf "${D}"/usr/share/gitolite/hooks || die
 	sed -i -e "s:${D}::g" "${D}/usr/bin/gl-setup" \
 		"${D}/usr/share/gitolite/conf/example.gitolite.rc" || die

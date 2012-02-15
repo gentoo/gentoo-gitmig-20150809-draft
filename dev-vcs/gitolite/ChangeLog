@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/gitolite
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.13 2011/12/11 09:23:24 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.14 2012/02/15 22:16:17 idl0r Exp $
+
+*gitolite-2.3 (15 Feb 2012)
+
+  15 Feb 2012; Christian Ruppert <idl0r@gentoo.org> -gitolite-1.5.9.1.ebuild,
+  -gitolite-2.0.3-r1.ebuild, +gitolite-2.3.ebuild,
+  -files/0001-fix-a-rather-large-typo-thinko-in-1006eba.patch:
+  Version bump, bug 403937.
 
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gitolite-2.1.0.ebuild:
   x86 stable wrt bug #393151
