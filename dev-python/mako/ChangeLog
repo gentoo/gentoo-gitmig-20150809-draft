@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.45 2012/02/01 22:10:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.46 2012/02/15 11:49:16 djc Exp $
+
+*mako-0.6.2 (15 Feb 2012)
+
+  15 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> +mako-0.6.2.ebuild:
+  Version bump to 0.6.2.
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> mako-0.4.2.ebuild:
   Marking mako-0.4.2 ppc for bug 386799
