@@ -1,19 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.45-r1.ebuild,v 1.1 2012/01/23 11:23:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.45-r1.ebuild,v 1.2 2012/02/15 01:02:01 ssuominen Exp $
 
 EAPI=4
-
 inherit eutils toolchain-funcs prefix
 
-DESCRIPTION="a growing collection of the unix tools that nobody thought to write
-thirty years ago"
+DESCRIPTION="a growing collection of the unix tools that nobody thought to write thirty years ago"
 HOMEPAGE="http://kitenet.net/~joey/code/moreutils/"
 SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-linux"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-linux"
 IUSE="+doc +perl"
 
 RDEPEND="
@@ -34,13 +32,11 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.45-dtd-path.patch
-	eprefixify "${S}/"*.docbook
+	eprefixify *.docbook
 
 	# Don't build manpages
 	if ! use doc ; then
-		sed -i -e '/^all:/s/$(MANS)//' \
-			-e '/man1/d' \
-			Makefile
+		sed -i -e '/^all:/s/$(MANS)//' -e '/man1/d' Makefile
 	fi
 
 	# Don't install perl scripts
