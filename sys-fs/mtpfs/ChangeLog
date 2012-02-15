@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mtpfs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/ChangeLog,v 1.2 2011/07/01 13:04:10 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/ChangeLog,v 1.3 2012/02/15 00:20:41 voyageur Exp $
+
+*mtpfs-1.0 (15 Feb 2012)
+
+  15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> +mtpfs-1.0.ebuild:
+  Version bump, thanks Trevor Bowen in bug #403507
 
   01 Jul 2011; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
   Add myself to maintainers
