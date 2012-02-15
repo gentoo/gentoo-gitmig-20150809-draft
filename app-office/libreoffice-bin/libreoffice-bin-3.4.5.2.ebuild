@@ -1,13 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.2-r1.ebuild,v 1.9 2012/01/26 03:23:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2.ebuild,v 1.1 2012/02/15 10:03:11 scarabeus Exp $
 
 EAPI=4
 
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 
-BASE_URI="http://dev.gentooexperimental.org/~scarabeus/libreo_binary/"
+BASE_AMD64_URI="http://dev.gentoo.org/~pacho/libreoffice/"
+BASE_X86_URI="http://gentoo-pr.org/libreo/libreo/"
 
 inherit kde4-base java-pkg-opt-2 pax-utils
 
@@ -15,31 +16,31 @@ DESCRIPTION="LibreOffice, a full office productivity suite. Binary package"
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI_AMD64="
 	kde? (
-		!java? ( ${BASE_URI}/amd64/${PN/-bin}-kde-${PVR}.tbz2 -> ${PN/-bin}-kde-amd64-${PVR}.tbz2 )
-		java? ( ${BASE_URI}/amd64/${PN/-bin}-kde-java-${PVR}.tbz2 -> ${PN/-bin}-kde-java-amd64-${PVR}.tbz2 )
+		!java? ( ${BASE_AMD64_URI}/${PN/-bin}-kde-${PVR}.tbz2 -> ${PN/-bin}-kde-amd64-${PVR}.tbz2 )
+		java? ( ${BASE_AMD64_URI}/${PN/-bin}-kde-java-${PVR}.tbz2 -> ${PN/-bin}-kde-java-amd64-${PVR}.tbz2 )
 	)
 	gnome? (
-		!java? ( ${BASE_URI}/amd64/${PN/-bin}-gnome-${PVR}.tbz2 -> ${PN/-bin}-gnome-amd64-${PVR}.tbz2 )
-		java? ( ${BASE_URI}/amd64/${PN/-bin}-gnome-java-${PVR}.tbz2 -> ${PN/-bin}-gnome-java-amd64-${PVR}.tbz2 )
+		!java? ( ${BASE_AMD64_URI}/${PN/-bin}-gnome-${PVR}.tbz2 -> ${PN/-bin}-gnome-amd64-${PVR}.tbz2 )
+		java? ( ${BASE_AMD64_URI}/${PN/-bin}-gnome-java-${PVR}.tbz2 -> ${PN/-bin}-gnome-java-amd64-${PVR}.tbz2 )
 	)
 	!kde? ( !gnome? (
-		!java? ( ${BASE_URI}/amd64/${PN/-bin}-base-${PVR}.tbz2 -> ${PN/-bin}-base-amd64-${PVR}.tbz2 )
-		java? ( ${BASE_URI}/amd64/${PN/-bin}-base-java-${PVR}.tbz2 -> ${PN/-bin}-base-java-amd64-${PVR}.tbz2 )
+		!java? ( ${BASE_AMD64_URI}/${PN/-bin}-base-${PVR}.tbz2 -> ${PN/-bin}-base-amd64-${PVR}.tbz2 )
+		java? ( ${BASE_AMD64_URI}/${PN/-bin}-base-java-${PVR}.tbz2 -> ${PN/-bin}-base-java-amd64-${PVR}.tbz2 )
 	) )
 "
 
 SRC_URI_X86="
 	kde? (
-		!java? ( ${BASE_URI}/x86/${PN/-bin}-kde-${PVR}.tbz2 -> ${PN/-bin}-kde-x86-${PVR}.tbz2 )
-		java? ( ${BASE_URI}/x86/${PN/-bin}-kde-java-${PVR}.tbz2 -> ${PN/-bin}-kde-java-x86-${PVR}.tbz2 )
+		!java? ( ${BASE_X86_URI}/${PN/-bin}-kde-${PVR}.tbz2 -> ${PN/-bin}-kde-x86-${PVR}.tbz2 )
+		java? ( ${BASE_X86_URI}/${PN/-bin}-kde-java-${PVR}.tbz2 -> ${PN/-bin}-kde-java-x86-${PVR}.tbz2 )
 	)
 	gnome? (
-		!java? ( ${BASE_URI}/x86/${PN/-bin}-gnome-${PVR}.tbz2 -> ${PN/-bin}-gnome-x86-${PVR}.tbz2 )
-		java? ( ${BASE_URI}/x86/${PN/-bin}-gnome-java-${PVR}.tbz2 -> ${PN/-bin}-gnome-java-x86-${PVR}.tbz2 )
+		!java? ( ${BASE_X86_URI}/${PN/-bin}-gnome-${PVR}.tbz2 -> ${PN/-bin}-gnome-x86-${PVR}.tbz2 )
+		java? ( ${BASE_X86_URI}/${PN/-bin}-gnome-java-${PVR}.tbz2 -> ${PN/-bin}-gnome-java-x86-${PVR}.tbz2 )
 	)
 	!kde? ( !gnome? (
-		!java? ( ${BASE_URI}/x86/${PN/-bin}-base-${PVR}.tbz2 -> ${PN/-bin}-base-x86-${PVR}.tbz2 )
-		java? ( ${BASE_URI}/x86/${PN/-bin}-base-java-${PVR}.tbz2 -> ${PN/-bin}-base-java-x86-${PVR}.tbz2 )
+		!java? ( ${BASE_X86_URI}/${PN/-bin}-base-${PVR}.tbz2 -> ${PN/-bin}-base-x86-${PVR}.tbz2 )
+		java? ( ${BASE_X86_URI}/${PN/-bin}-base-java-${PVR}.tbz2 -> ${PN/-bin}-base-java-x86-${PVR}.tbz2 )
 	) )
 "
 
@@ -56,12 +57,11 @@ KEYWORDS="amd64 ~x86"
 COMMON_DEPEND="
 	app-arch/zip
 	app-arch/unzip
-	>=app-text/hunspell-1.3.2-r1
+	>=app-text/hunspell-1.3.2-r3
 	app-text/mythes
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
-	>=app-text/poppler-0.12.3-r3[xpdf-headers,cairo]
 	dev-db/unixODBC
 	dev-libs/expat
 	>=dev-libs/glib-2.28
@@ -69,7 +69,7 @@ COMMON_DEPEND="
 	>=dev-libs/icu-4.8.1-r1
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0e
-	dev-libs/redland[ssl]
+	>=dev-libs/redland-1.0.14[ssl]
 	media-libs/freetype:2
 	>=media-libs/fontconfig-2.8.0
 	>=media-libs/libpng-1.5
@@ -77,7 +77,7 @@ COMMON_DEPEND="
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
 	virtual/jpeg
-	>=x11-libs/cairo-1.10.0
+	>=x11-libs/cairo-1.10.0[X]
 	x11-libs/libXaw
 	x11-libs/libXinerama
 	x11-libs/libXrandr
@@ -97,7 +97,6 @@ COMMON_DEPEND="
 		dev-java/lucene-analyzers:2.3
 		dev-java/saxon:0
 	)
-	net-nds/openldap
 	virtual/opengl
 	net-libs/neon
 "
