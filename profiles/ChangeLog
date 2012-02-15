@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6216 2012/02/14 21:59:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6217 2012/02/15 00:46:41 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  targets/desktop/package.use:
+  Disable USE="zlib" in sys-apps/pciutils by default for USE="hwdb" in
+  sys-fs/udev.
 
   14 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Last rites for gnustep-libs/objcunit, gnustep-apps/cynthiune,
