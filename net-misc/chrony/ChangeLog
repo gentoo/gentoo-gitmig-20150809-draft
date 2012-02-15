@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.86 2012/02/14 23:10:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.87 2012/02/15 13:21:06 jer Exp $
+
+  15 Feb 2012; Jeroen Roovers <jer@gentoo.org> -chrony-1.25.ebuild,
+  -files/chrony-1.25-linux3.patch:
+  Old.
 
   14 Feb 2012; Brent Baude <ranger@gentoo.org> chrony-1.26.ebuild:
   Marking chrony-1.26 ppc for bug 383687
