@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.78 2012/01/03 20:05:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.79 2012/02/15 15:15:43 jer Exp $
+
+  15 Feb 2012; Jeroen Roovers <jer@gentoo.org> dwm-6.0.ebuild:
+  Do not add -g to CFLAGS by Agostino Sarubbo (bug #386089).
 
   03 Jan 2012; Mike Frysinger <vapier@gentoo.org> dwm-6.0.ebuild:
   Do not bother saving config.h as a doc since we use savedconfig.eclass and it
