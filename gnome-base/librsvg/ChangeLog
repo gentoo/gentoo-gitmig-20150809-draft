@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.267 2012/01/18 20:40:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.268 2012/02/15 18:46:10 grobian Exp $
+
+  15 Feb 2012; Fabian Groffen <grobian@gentoo.org> librsvg-2.34.2.ebuild:
+  Marked ~x64-macos
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> librsvg-2.34.2.ebuild:
   arm stable, bug #393007
