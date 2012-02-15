@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.6.2.ebuild,v 1.2 2012/02/15 14:58:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.6.2-r1.ebuild,v 1.1 2012/02/15 14:58:31 jer Exp $
 
-EAPI="4"
-
-inherit eutils toolchain-funcs versionator
+EAPI=4
+inherit eutils multilib toolchain-funcs versionator
 
 MY_PV=$(replace_version_separator 3 '-r')
 DESCRIPTION="An implementation of the Optimized Link State Routing protocol"
@@ -15,7 +14,13 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
-DEPEND="gtk? ( =x11-libs/gtk+-2* )"
+DEPEND="
+	gtk? (
+		dev-libs/glib:2
+		x11-libs/gdk-pixbuf:2
+		x11-libs/gtk+:2
+	)
+"
 RDEPEND=$DEPEND
 S="${WORKDIR}/${PN}-${MY_PV}"
 
@@ -29,13 +34,19 @@ src_prepare() {
 }
 
 src_compile() {
-	emake OS=linux CC="$(tc-getCC)" build_all
-	use gtk && emake -C "${S}/gui/linux-gtk" CC="$(tc-getCC)"
+	emake LIBDIR="/usr/$(get_libdir)/${PN}" OS=linux CC="$(tc-getCC)" build_all
+	if use gtk; then
+		emake -C "${S}/gui/linux-gtk" LIBDIR="/usr/$(get_libdir)/${PN}" CC="$(tc-getCC)"
+	fi
 }
 
 src_install() {
-	emake OS=linux DESTDIR="${D}" STRIP=true install_all
-	use gtk && emake -C "${S}/gui/linux-gtk" DESTDIR="${D}" install
+	emake OS=linux LIBDIR="${D}/usr/$(get_libdir)/${PN}" \
+		DESTDIR="${D}" STRIP=true install_all
+	if use gtk; then
+		emake -C "${S}/gui/linux-gtk" \
+			LIBDIR="${D}/usr/$(get_libdir)/${PN}" DESTDIR="${D}" install
+	fi
 
 	doinitd "${FILESDIR}/olsrd"
 

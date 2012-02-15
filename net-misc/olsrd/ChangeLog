@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/olsrd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.25 2011/10/09 16:52:38 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.26 2012/02/15 14:58:31 jer Exp $
+
+*olsrd-0.6.2-r1 (15 Feb 2012)
+
+  15 Feb 2012; Jeroen Roovers <jer@gentoo.org> olsrd-0.6.2.ebuild,
+  +olsrd-0.6.2-r1.ebuild:
+  Set more dependencies for GTK+. Fix multilib-strict requirements. Install
+  plugins in /usr/lib*/olsrd. Remove testing cruft.
 
   09 Oct 2011; Jeroen Roovers <jer@gentoo.org> -olsrd-0.4.10.ebuild,
   -files/olsrd-0.4.10-makefile.patch,
