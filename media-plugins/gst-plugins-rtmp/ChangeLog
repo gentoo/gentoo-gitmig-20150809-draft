@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/gst-plugins-rtmp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-rtmp/ChangeLog,v 1.1 2012/02/15 12:53:44 ford_prefect Exp $
+
+*gst-plugins-rtmp-0.10.22 (15 Feb 2012)
+
+  15 Feb 2012; Arun Raghavan <ford_prefect@gentoo.org>
+  +gst-plugins-rtmp-0.10.22.ebuild, +metadata.xml:
+  Initial commit of rtmpsrc plugin.
+
