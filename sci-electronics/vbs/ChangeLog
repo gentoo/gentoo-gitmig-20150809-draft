@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/vbs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.8 2009/07/11 04:14:09 calchan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.9 2012/02/15 06:47:04 tomjbe Exp $
+
+  15 Feb 2012; Thomas Beierlein <tomjbe@gentoo.org> vbs-1.4.0.ebuild:
+  Fix invalid header wrt bug #403709. Thanks ulm
 
   11 Jul 2009; Denis Dupeyron <calchan@gentoo.org> vbs-1.4.0.ebuild:
   Fixed compatibility with glibc 2.10, thanks to Diego Pettenò (bug
