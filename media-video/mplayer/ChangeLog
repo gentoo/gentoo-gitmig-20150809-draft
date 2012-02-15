@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.841 2012/02/13 11:27:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.842 2012/02/15 18:10:01 hd_brummy Exp $
+
+  15 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  mplayer-1.0_rc4_p20110322-r1.ebuild, mplayer-1.0_rc4_p20111215.ebuild,
+  mplayer-1.0_rc4_p20120105.ebuild, mplayer-1.0_rc4_p20120109.ebuild,
+  mplayer-1.0_rc4_p20120128.ebuild, mplayer-1.0_rc4_p20120213.ebuild,
+  mplayer-9999.ebuild:
+  fix media-tv to virtual/linuxtv-dvb-headers, bug #403929
 
   13 Feb 2012; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   trunk does not build with ffmpeg 0.10, bump dep
