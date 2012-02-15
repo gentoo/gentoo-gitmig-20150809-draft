@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.4.1.ebuild,v 1.3 2011/02/01 19:05:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.4.1.ebuild,v 1.4 2012/02/15 19:13:02 jlec Exp $
 
 EAPI="3"
+
 PYTHON_DEPEND="2"
 
 inherit distutils eutils
@@ -10,8 +11,8 @@ inherit distutils eutils
 MY_PN="Mayavi"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="The Mayavi scientific data 3-dimensional visualizer"
-HOMEPAGE="http://code.enthought.com/projects/mayavi/ http://pypi.python.org/pypi/Mayavi"
+DESCRIPTION="Enthought Tool Suite: scientific data 3-dimensional visualizer"
+HOMEPAGE="http://code.enthought.com/projects/mayavi/ http://pypi.python.org/pypi/Mayavi/"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 LICENSE="BSD"
@@ -19,7 +20,8 @@ SLOT="2"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples qt4"
 
-RDEPEND=">=dev-python/apptools-3.4.1
+RDEPEND="
+	>=dev-python/apptools-3.4.1
 	dev-python/configobj
 	>=dev-python/enthoughtbase-3.1.0
 	>=dev-python/envisagecore-3.2.0
