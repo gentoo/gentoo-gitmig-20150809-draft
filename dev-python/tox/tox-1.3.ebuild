@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/tox-1.3.ebuild,v 1.1 2012/02/14 20:49:40 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/tox-1.3.ebuild,v 1.2 2012/02/15 11:32:00 djc Exp $
 
 EAPI=4
 
@@ -20,7 +20,8 @@ IUSE=""
 
 DEPEND="dev-python/setuptools
 		dev-python/virtualenv
-		dev-python/pytest"
+		dev-python/pip
+		>=dev-python/pytest-2.2.3"
 RDEPEND="${DEPEND}"
 
 #src_test() {
