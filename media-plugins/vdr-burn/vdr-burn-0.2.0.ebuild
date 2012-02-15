@@ -1,20 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0_beta5-r1.ebuild,v 1.2 2012/02/15 21:21:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.1 2012/02/15 21:21:52 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit vdr-plugin versionator
+inherit vdr-plugin
 
-VERSION="437" # every bump, new version!
+VERSION="832" # every bump, new version!
 
-RESTRICT="test"
-
-MY_P="${PN}-$(replace_version_separator 3 -)"
+#RESTRICT="test"
 
 DESCRIPTION="VDR Plugin: burn records on DVD"
 HOMEPAGE="http://projects.vdr-developer.org/projects/show/plg-burn"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${MY_P}.tgz"
+SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
@@ -25,7 +23,7 @@ DEPEND=">=media-video/vdr-1.6
 		media-libs/gd[png,truetype,jpeg]"
 RDEPEND="${DEPEND}
 		>=dev-libs/libcdio-0.71
-		>=media-video/dvdauthor-0.6.10
+		>=media-video/dvdauthor-0.6.14
 		>=media-video/mjpegtools-1.6.2[png]
 		media-video/transcode
 		media-fonts/ttf-bitstream-vera
@@ -38,7 +36,7 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 		>=dev-libs/boost-1.32.0"
 
-S="${WORKDIR}/${MY_P#vdr-}"
+S="${WORKDIR}/${P#vdr-}"
 
 src_prepare() {
 	vdr-plugin_src_prepare
@@ -46,7 +44,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}_gentoo-path.diff"
 	epatch "${FILESDIR}/${P}_setdefaults.diff"
 	epatch "${FILESDIR}/${P}_makefile.diff"
-	epatch "${FILESDIR}/${P}_ldflags.diff"
 
 	use dvdarchive && sed -i Makefile \
 		-e "s:#ENABLE_DMH_ARCHIVE:ENABLE_DMH_ARCHIVE:"
@@ -61,7 +58,6 @@ src_prepare() {
 src_install() {
 	vdr-plugin_src_install
 
-	dobin "${S}"/burn-buffers
 	dobin "${S}"/*.sh
 
 	insinto /usr/share/vdr/burn
