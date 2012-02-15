@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/symon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.9 2011/06/01 02:44:21 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.10 2012/02/15 15:49:30 jer Exp $
+
+*symon-2.84 (15 Feb 2012)
+
+  15 Feb 2012; Jeroen Roovers <jer@gentoo.org> -symon-2.80.ebuild,
+  +symon-2.84.ebuild:
+  Version bump.
 
 *symon-2.83 (01 Jun 2011)
 
