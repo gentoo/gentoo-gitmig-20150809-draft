@@ -1,6 +1,17 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.21 2012/01/25 10:45:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.22 2012/02/15 12:45:19 aidecoe Exp $
+
+*notmuch-0.11.1 (15 Feb 2012)
+
+  15 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +notmuch-0.11.1.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - Fix error handling bug in python bindings
+  - Fix vulnerability in emacs reply handling
 
   25 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -files/0.10.1-fix-test-build.patch, -notmuch-0.10.1.ebuild:
