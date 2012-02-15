@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.637 2012/01/30 12:38:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.638 2012/02/15 19:09:43 ranger Exp $
+
+  15 Feb 2012; Brent Baude <ranger@gentoo.org> xorg-server-1.11.2-r2.ebuild:
+  Marking xorg-server-1.11.2-r2 ppc stable for bug 394393
 
 *xorg-server-1.11.99.902 (30 Jan 2012)
 *xorg-server-1.11.4 (30 Jan 2012)
