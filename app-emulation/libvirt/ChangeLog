@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.153 2012/02/15 17:20:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.154 2012/02/15 17:30:31 cardoe Exp $
+
+  15 Feb 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.8.ebuild,
+  libvirt-9999.ebuild:
+  Always call python_pkg_setup since its necessary in EAPI=4 and greater now.
+  bug #403315
 
   15 Feb 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.8.ebuild,
   libvirt-9999.ebuild:
