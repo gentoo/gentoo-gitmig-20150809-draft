@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/graphite2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.19 2011/12/18 20:42:45 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.20 2012/02/15 12:09:02 scarabeus Exp $
+
+*graphite2-1.1.0 (15 Feb 2012)
+
+  15 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> +graphite2-1.1.0.ebuild,
+  files/graphite2-fix_wrong_linker_opts.patch,
+  +files/graphite2-1.1.0-includes-libs-perl.patch:
+  Version bump to latest.
 
   18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> graphite2-1.0.3-r1.ebuild:
   Stable for ppc; bug #387187
