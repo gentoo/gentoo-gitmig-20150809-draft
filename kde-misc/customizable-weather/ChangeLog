@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/customizable-weather
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/ChangeLog,v 1.20 2012/01/17 17:07:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/ChangeLog,v 1.21 2012/02/15 11:11:57 johu Exp $
+
+*customizable-weather-1.5.9 (15 Feb 2012)
+
+  15 Feb 2012; Johannes Huber <johu@gentoo.org>
+  +customizable-weather-1.5.9.ebuild:
+  Version bump.
 
 *customizable-weather-1.5.8 (17 Jan 2012)
 
