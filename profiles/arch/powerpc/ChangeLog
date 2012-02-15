@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.155 2012/02/10 21:31:53 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.156 2012/02/15 00:26:13 anarchy Exp $
+
+  14 Feb 2012; Jory A. Pratt <anarchy@gentoo.org> package.use.mask:
+  Finish crashreport mask on mozilla packages
 
   10 Feb 2012; Matt Turner <mattst88@gentoo.org> use.mask:
   Mask wayland USE flag.

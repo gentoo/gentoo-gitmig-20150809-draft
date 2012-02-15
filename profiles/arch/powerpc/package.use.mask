@@ -1,11 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.108 2012/01/25 17:32:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.109 2012/02/15 00:26:13 anarchy Exp $
 
+# Jory A. Pratt <anarchy@gentoo.org> (12 Feb 2012)
 # Samuli Suominen <ssuominen@gentoo.org> (25 Jan 2012)
 # Tested not working with ppc64/10.0/64bit-userland/desktop,
 # gcc-4.5.3, glibc-2.13-r4 and by users in bug #396565
 www-client/firefox crashreporter
+www-client/icecat crashreporter
+mail-client/thunderbird crashreporter
 
 # Alexey Shvetsov <alexxy@gentoo.org> (20 Jan 2012)
 # Mask some use flags for openmpi due to unkeyworded deps
