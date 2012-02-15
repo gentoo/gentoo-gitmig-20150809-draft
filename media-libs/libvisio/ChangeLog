@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.18 2012/02/14 19:27:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.19 2012/02/15 21:04:32 scarabeus Exp $
+
+  15 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libvisio-0.0.8.ebuild,
+  libvisio-0.0.14.ebuild:
+  Fix libvisio not install doc to correct location. Stable 0.0.14 on amd64 and
+  x86. Fixes bug #403943
 
   14 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> libvisio-0.0.14.ebuild:
   Fix typo wrt bug #401531.
