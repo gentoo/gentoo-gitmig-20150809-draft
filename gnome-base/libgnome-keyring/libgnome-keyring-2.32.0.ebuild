@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-2.32.0.ebuild,v 1.14 2012/01/13 20:23:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-2.32.0.ebuild,v 1.15 2012/02/15 04:01:04 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -33,8 +33,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Remove unneeded test file.
 	epatch "${FILESDIR}/${P}-drop-test.patch"
 
@@ -54,6 +52,7 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_test() {
