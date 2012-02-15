@@ -1,12 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.1.2-r2.ebuild,v 1.5 2010/04/23 19:09:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.1.2-r2.ebuild,v 1.6 2012/02/15 19:10:26 jlec Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs flag-o-matic multilib
 
-DESCRIPTION="Charm++ is a message-passing parallel language and runtime system."
-LICENSE="charm"
+DESCRIPTION="Message-passing parallel language and runtime system"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
 SRC_URI="http://charm.cs.uiuc.edu/distrib/${P}_src.tar.gz"
 
@@ -15,9 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cmkopt tcp smp doc"
 
-DEPEND="doc? ( >=app-text/poppler-0.12.3-r3[utils]
-	dev-tex/latex2html
-	virtual/tex-base )"
+DEPEND="
+	doc? (
+		>=app-text/poppler-0.12.3-r3[utils]
+		dev-tex/latex2html
+		virtual/tex-base )"
 RDEPEND=""
 
 case ${ARCH} in
@@ -56,7 +57,6 @@ src_prepare() {
 
 src_compile() {
 	# build charmm++ first
-	cd "${S}"
 	./build charm++ ${CHARM_ARCH} ${CHARM_OPTS} ${CFLAGS} || \
 		die "Failed to build charm++"
 
