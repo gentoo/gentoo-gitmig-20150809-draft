@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/knock
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.41 2011/12/21 08:39:56 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.42 2012/02/15 18:21:36 xmw Exp $
+
+*knock-0.5-r2 (15 Feb 2012)
+
+  15 Feb 2012; Michael Weber <xmw@gentoo.org> +knock-0.5-r2.ebuild,
+  +files/knockd.confd.2, +files/knockd.initd.2:
+  Revbump to fix buildsystem problems and adept to openrc (thanks Diego Elio
+  Pettenò for the updates, bug 403925)
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> knock-0.5-r1.ebuild:
   x86 stable wrt bug #393985
