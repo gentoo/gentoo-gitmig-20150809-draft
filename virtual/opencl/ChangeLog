@@ -1,6 +1,10 @@
 # ChangeLog for virtual/opencl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.3 2012/02/04 12:35:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.4 2012/02/15 09:58:43 xarthisius Exp $
+
+  15 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> opencl-0-r1.ebuild:
+  Remove dependency on opencl useflag since it was dropped in ati-drivers. Fixes
+  bug 403409 by Paolo Pedroni <paolo.pedroni@iol.it>
 
 *opencl-0-r1 (04 Feb 2012)
 
