@@ -1,6 +1,52 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.43 2012/01/30 18:03:13 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.44 2012/02/15 18:38:30 aidecoe Exp $
+
+*dracut-016 (15 Feb 2012)
+
+  15 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-016.ebuild,
+  +files/dracut-016-multipath-udev-rules.patch:
+  Version bump.
+
+  New modules come:
+  - convertfs
+  - ssh-client
+  - terminfo
+
+  Kernel options are checked starting with this ebuild. CONFIG_BLK_DEV_INITRD
+  is obvious and was always required and since dracut 015 CONFIG_DEVTMPFS is
+  required, too.
+
+  usrmount module doesn't enforce /usr being mount ro anymore.
+
+  NEWS
+  ~~~~
+  Extracted from Dracut NEWS file - merged news from version 015 and 016,
+  because 015 was skipped in Portage:
+
+  - fixed lsinitrd
+  - honor binaries in sbin first
+  - fixed usrmount module
+  - added systemd service for shutdown
+  - fixed terminfo on distros with /usr/share/terminfo
+  - reload udev rules after "pre-trigger" hook
+  - improved test suite
+  - new parameter "--omit-drivers" and new conf param omit_drivers
+  - "--offroot" support for mdraid
+  - new libs: net-lib.sh, nfs-lib.sh, url-lib.sh, img-lib.sh
+  full of functions to use in your dracut module
+  - hostonly mode automatically adds command line options for root and /usr
+  - --add-fstab --mount parameters
+  - ssh-client module
+  - --ctty option: add job control
+  - cleanup /run/initramfs
+  - convertfs module
+  - /sbin/ifup can be called directly
+  - support kernel modules compressed with xz
+  - s390 iscsi modules added
+  - terminfo module
+  - lsinitrd can handle concatened images
+  - lsinitrd can sort by size
 
 *dracut-014-r2 (30 Jan 2012)
 
