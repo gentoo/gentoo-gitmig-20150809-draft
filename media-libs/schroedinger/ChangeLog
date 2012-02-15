@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/schroedinger
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.56 2011/09/16 23:57:33 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.57 2012/02/15 10:09:58 radhermit Exp $
+
+*schroedinger-1.0.11 (15 Feb 2012)
+
+  15 Feb 2012; Tim Harder <radhermit@gentoo.org> +schroedinger-1.0.11.ebuild:
+  Version bump. Add static-libs use flag (bug #378331).
 
 *schroedinger-1.0.10-r1 (16 Sep 2011)
 
