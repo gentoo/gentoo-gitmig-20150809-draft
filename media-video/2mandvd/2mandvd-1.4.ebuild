@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.4.ebuild,v 1.1 2010/10/05 22:15:07 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.4.ebuild,v 1.2 2012/02/15 18:14:59 hwoarang Exp $
 
 EAPI="2"
 LANGS="de en he it pl pt ru"
@@ -33,7 +33,7 @@ DEPEND="dev-lang/perl
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-fix-const-char-concatenation.patch"
+	"${FILESDIR}/${PN}-fix-const-char-concatenation.old.patch"
 )
 
 S="${WORKDIR}/${MY_PN}"
