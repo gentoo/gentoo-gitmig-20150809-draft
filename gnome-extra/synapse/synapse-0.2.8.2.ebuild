@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.8.2.ebuild,v 1.4 2012/02/12 18:18:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.8.2.ebuild,v 1.5 2012/02/15 18:47:58 jlec Exp $
 
 EAPI=4
 
@@ -36,14 +36,16 @@ RDEPEND="
 	plugins? ( net-libs/rest )
 	zeitgeist? (
 		dev-libs/libzeitgeist
-		gnome-extra/zeitgeist[fts]
+		gnome-extra/zeitgeist
+		gnome-extra/zeitgeist-extensions[fts]
 		)"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}"/synapse-0.2.8.2-underlinking.patch
+	"${FILESDIR}"/${P}-underlinking.patch
+	"${FILESDIR}"/${P}-zeitgeist.patch
 	)
 
 pkg_preinst() {
