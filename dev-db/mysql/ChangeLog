@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.603 2012/02/11 18:56:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.604 2012/02/15 02:07:21 jmbsvicetto Exp $
+
+  15 Feb 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  files/my.cnf-5.1:
+  Update table_cache to table_open_cache variable for mysql-5.1 my.cnf file.
+  Fixes bug 403425 - thanks to Alex Efros <powerman-asdf@yandex.ru> for the
+  report.
 
   11 Feb 2012; Raúl Porcel <armin76@gentoo.org> mysql-5.1.61.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #399375
