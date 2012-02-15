@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.121 2012/02/05 23:24:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.122 2012/02/15 01:36:48 robbat2 Exp $
+
+*git-1.7.9.1 (15 Feb 2012)
+
+  15 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.9.1.ebuild:
+  Version bump.
 
 *git-1.7.9 (05 Feb 2012)
 
