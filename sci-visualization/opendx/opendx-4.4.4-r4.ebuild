@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.8 2010/11/19 05:45:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.9 2012/02/15 10:24:29 xarthisius Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils flag-o-matic autotools
 
@@ -12,9 +12,7 @@ SRC_URI="http://opendx.sdsc.edu/source/${P/open}.tar.gz"
 
 LICENSE="IBM"
 SLOT="0"
-
-KEYWORDS="amd64 ppc x86"
-
+KEYWORDS="amd64 ppc x86 ~amd64-linux"
 IUSE="hdf cdf netcdf tiff imagemagick szip smp"
 
 DEPEND="x11-libs/libXmu
@@ -30,11 +28,10 @@ DEPEND="x11-libs/libXmu
 	netcdf? ( sci-libs/netcdf )
 	tiff? ( media-libs/tiff )
 	imagemagick? ( >=media-gfx/imagemagick-5.3.4 )"
-
 RDEPEND="${DEPEND}"
 # waiting on bug #36349 for media-libs/jasper in imagemagick
 
-S="${WORKDIR}/${P/open}"
+S=${WORKDIR}/${P/open}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.3.2-sys.h.patch"
@@ -64,7 +61,7 @@ src_configure() {
 
 	# javadx is currently broken. we may try to fix it someday.
 	econf \
-		--libdir=/usr/$(get_libdir) \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--with-x \
 		--without-javadx \
 		$(use_with szip szlib) \
@@ -77,7 +74,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	newicon src/uipp/ui/icon50.xpm ${PN}.xpm
 	make_desktop_entry dx "Open Data Explorer"
 }
