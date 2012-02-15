@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.1 2012/02/11 17:34:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.2 2012/02/15 10:11:40 xarthisius Exp $
+
+  15 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> autopep8-0.5.ebuild:
+  Add src_test and missing dependency on dev-python/pep8. Fixes bug 403663 by
+  Nicolas Pinto <nicolas.pinto@gmail.com>
 
 *autopep8-0.5 (11 Feb 2012)
 
