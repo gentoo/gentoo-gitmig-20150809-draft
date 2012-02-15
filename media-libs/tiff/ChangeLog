@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.183 2012/02/08 20:57:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.184 2012/02/15 02:12:12 ssuominen Exp $
+
+  15 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> tiff-4.0.0-r1.ebuild:
+  ppc/ppc64 stable wrt #399769
 
   08 Feb 2012; Jeff Horelick <jdhore@gentoo.org> tiff-4.0.0-r1.ebuild:
   x86 stable per bug 399769
