@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.45 2012/02/15 10:03:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.46 2012/02/15 21:26:20 scarabeus Exp $
+
+  15 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Not m-n package
 
 *libreoffice-bin-3.4.5.2 (15 Feb 2012)
 

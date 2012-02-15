@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.234 2012/02/14 19:29:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.235 2012/02/15 21:26:00 scarabeus Exp $
+
+  15 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Not m-n package
 
   14 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.3.2-r1.ebuild, libreoffice-3.4.5.2.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.32 2012/02/14 18:41:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.33 2012/02/15 21:26:41 scarabeus Exp $
+
+  15 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Not m-n package
 
 *libreoffice-l10n-3.5.0-r4 (14 Feb 2012)
 
