@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bustle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.6 2012/01/19 19:14:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.7 2012/02/15 18:16:40 slyfox Exp $
+
+  15 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> bustle-0.4.0.ebuild:
+  Unbroke FEATURES=test (upstream didn't provide all the files) for bug #403741
+  by Chris Reffett.
 
 *bustle-0.4.0 (19 Jan 2012)
 
