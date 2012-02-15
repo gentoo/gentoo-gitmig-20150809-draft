@@ -2,4 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gstreamer</herd>
+<longdescription lang="en">
+	GStreamer plugin for reading RTMP streams.
+
+	Includes the following elements:
+	* rtmpsrc - Read RTMP streams
+</longdescription>
 </pkgmetadata>
