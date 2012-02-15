@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.8 2012/02/15 00:56:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.9 2012/02/15 01:02:10 floppym Exp $
 
 EAPI="4"
 EGIT_REPO_URI="git://github.com/FreeRDP/Remmina.git"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="ayatana avahi crypt debug freerdp nls ssh telepathy unique vte"
 
-RDEPEND="x11-libs/gtk+:2
+RDEPEND="x11-libs/gtk+:3
 	net-libs/libvncserver
 	x11-libs/libxkbfile
 	gnome-base/libgnome-keyring
