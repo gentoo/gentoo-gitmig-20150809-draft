@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.8.2.ebuild,v 1.1 2012/01/31 17:00:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.8.2.ebuild,v 1.2 2012/02/15 18:51:50 jlec Exp $
 
 EAPI=4
 
@@ -15,25 +15,27 @@ DIR_PV=$(get_version_component_range 1-2)
 EXT_VER=0.0.13
 
 DESCRIPTION="Service to log activities and present to other apps"
-HOMEPAGE="http://launchpad.net/zeitgeist"
-SRC_URI="
-	http://launchpad.net/zeitgeist/${DIR_PV}/${PV}/+download/${P}.tar.gz
-	http://launchpad.net/zeitgeist-extensions/trunk/fts-${EXT_VER}/+download/zeitgeist-extensions-${EXT_VER}.tar.gz"
+HOMEPAGE="http://launchpad.net/zeitgeist/"
+SRC_URI="http://launchpad.net/zeitgeist/${DIR_PV}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="fts"
+IUSE="extensions passiv plugins"
 
 RDEPEND="
 	dev-python/dbus-python
+	dev-python/pygobject:2
 	dev-python/pyxdg
 	dev-python/rdflib
 	media-libs/raptor:2
-	fts? ( dev-libs/xapian-bindings[python] )"
+	extensions? ( gnome-extra/zeitgeist-extensions  )
+	passiv? ( gnome-extra/zeitgeist-datahub )
+	plugins? ( gnome-extra/zeitgeist-datasources )
+"
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}"/${PN}-0.7.1-no-rdfpipe.patch )
+PATCHES=( )
 
 pkg_setup() {
 	python_set_active_version 2
@@ -42,9 +44,15 @@ pkg_setup() {
 
 src_install() {
 	autotools-utils_src_install
-	if use fts; then
-		insinto /usr/share/zeitgeist/_zeitgeist/engine/extensions
-		doins "${WORKDIR}"/zeitgeist-extensions-${EXT_VER}/fts/fts.py
-	fi
 	python_convert_shebangs -r 2 "${ED}"
+}
+
+pkg_postinst() {
+	python_mod_optimize zeitgeist
+	python_mod_optimize /usr/share/zeitgeist/
+}
+
+pkg_postrm() {
+	python_mod_cleanup zeitgeist
+	python_mod_cleanup /usr/share/zeitgeist/
 }

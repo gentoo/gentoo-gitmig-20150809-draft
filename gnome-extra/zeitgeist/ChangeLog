@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/zeitgeist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.7 2012/01/31 17:00:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.8 2012/02/15 18:51:50 jlec Exp $
+
+  15 Feb 2012; Justin Lecher <jlec@gentoo.org> zeitgeist-0.8.2.ebuild,
+  metadata.xml:
+  Unbundle the extensions, add long description, make it more to behave as a
+  meta package
 
 *zeitgeist-0.8.2 (31 Jan 2012)
 

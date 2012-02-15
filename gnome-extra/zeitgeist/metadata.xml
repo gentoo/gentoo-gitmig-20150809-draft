@@ -5,7 +5,15 @@
 	<maintainer>
 		<email>jlec@gentoo.org</email>
 	</maintainer>
+	<longdescription>
+The engine is the main module that accepts all incoming events and allows 
+applications to fetch as well as subscribe to be notified when events 
+are logged. It is the heart of Zeitgeist.
+</longdescription>
 	<use>
+		<flag name="extensions">Use <pkg>gnome-extra/zeitgeist-extentions</pkg> to enhance the internal routines</flag>
+		<flag name="passiv">Use <pkg>gnome-extra/zeitgeist-datahub</pkg> to passively inject events</flag>
+		<flag name="plugins">Use <pkg>gnome-extra/zeitgeist-datasources</pkg> to enable numerous packages to inject events</flag>
 		<flag name="fts">Enable the full text search extension</flag>
 	</use>
 </pkgmetadata>
