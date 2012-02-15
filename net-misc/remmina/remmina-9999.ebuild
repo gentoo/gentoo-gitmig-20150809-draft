@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.5 2012/02/12 21:38:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.6 2012/02/15 00:49:37 floppym Exp $
 
 EAPI="4"
 EGIT_REPO_URI="git://github.com/FreeRDP/Remmina.git"
@@ -13,15 +13,20 @@ HOMEPAGE="http://remmina.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="ayatana avahi crypt debug freerdp nls ssh unique vte"
+IUSE="ayatana avahi crypt debug freerdp nls ssh telepathy unique vte"
 
 RDEPEND="x11-libs/gtk+:2
+	net-libs/libvncserver
+	x11-libs/libxkbfile
+	gnome-base/libgnome-keyring
 	ayatana? ( dev-libs/libappindicator )
 	avahi? ( net-dns/avahi )
 	crypt? ( dev-libs/libgcrypt )
 	freerdp? ( net-misc/freerdp )
 	ssh? ( net-libs/libssh[sftp] )
-	!net-misc/remmina-plugins"
+	telepathy? ( net-libs/telepathy-glib )
+	!net-misc/remmina-plugins
+	vte? ( x11-libs/vte )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
@@ -34,12 +39,14 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs=(
-		$(cmake-utils_use_with ayatana APPINDICATOR) \
-		$(cmake-utils_use_with avahi) \
-		$(cmake-utils_use_with crypt GCRYPT) \
-		$(cmake-utils_use_with freerdp) \
-		$(cmake-utils_use_with ssh LIBSSH) \
+	local mycmakeargs=(
+		$(cmake-utils_use_with ayatana APPINDICATOR)
+		$(cmake-utils_use_with avahi AVAHI)
+		$(cmake-utils_use_with crypt GCRYPT)
+		$(cmake-utils_use_with freerdp FREERDP)
+		$(cmake-utils_use_with ssh LIBSSH)
+		$(cmake-utils_use_with telepathy TELEPATHY)
+		$(cmake-utils_use_with vte VTE)
 		-DHAVE_PTHREAD=ON
 	)
 	cmake-utils_src_configure
