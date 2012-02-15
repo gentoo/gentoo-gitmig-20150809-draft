@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.68 2012/01/11 20:34:51 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.69 2012/02/15 19:16:39 ranger Exp $
+
+  15 Feb 2012; Brent Baude <ranger@gentoo.org> xcb-proto-1.6-r2.ebuild:
+  Marking xcb-proto-1.6-r2 ppc stable for bug 394393
 
 *xcb-proto-1.7 (11 Jan 2012)
 
