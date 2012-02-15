@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-0.9.2-r1.ebuild,v 1.3 2011/11/16 19:46:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-0.9.2-r1.ebuild,v 1.4 2012/02/15 00:55:41 floppym Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -17,7 +17,7 @@ IUSE="nls nx rdesktop ssh telepathy vnc xdmcp"
 RDEPEND=">=net-misc/remmina-0.8.0
 	nls? ( virtual/libintl )
 	nx? ( net-misc/nx )
-	rdesktop? ( || ( <net-misc/freerdp-1.0_beta =net-misc/freerdp-9999 ) )
+	rdesktop? ( <net-misc/freerdp-1.0_beta )
 	xdmcp? ( x11-base/xorg-server[kdrive] )
 	ssh? ( net-libs/libssh[sftp] )
 	vnc? ( net-libs/libvncserver[jpeg,zlib] >=net-libs/gnutls-2.4.0 )"
