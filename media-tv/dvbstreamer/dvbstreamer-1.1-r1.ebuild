@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-1.1-r1.ebuild,v 1.3 2010/02/09 15:19:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-1.1-r1.ebuild,v 1.4 2012/02/15 18:34:36 hd_brummy Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -18,7 +18,7 @@ RDEPEND="dev-db/sqlite:3
 	sys-libs/readline
 	>=sys-devel/libtool-2.2.6"
 DEPEND="${RDEPEND}
-	media-tv/linuxtv-dvb-headers"
+	virtual/linuxtv-dvb-headers"
 
 src_prepare() {
 	rm -rf libltdl

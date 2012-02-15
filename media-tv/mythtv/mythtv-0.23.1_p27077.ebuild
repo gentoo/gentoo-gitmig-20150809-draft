@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p27077.ebuild,v 1.4 2011/07/28 21:10:59 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p27077.ebuild,v 1.5 2012/02/15 18:23:39 hd_brummy Exp $
 
 EAPI=3
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -41,7 +41,7 @@ RDEPEND="media-fonts/corefonts
 	css? ( media-libs/libdvdcss )
 	dbus? ( >=x11-libs/qt-dbus-4.4:4 )
 	directv? ( virtual/perl-Time-HiRes )
-	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
+	dvb? ( media-libs/libdvb virtual/linuxtv-dvb-headers )
 	faad? ( media-libs/faad2 )
 	fftw? ( sci-libs/fftw:3.0 )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0

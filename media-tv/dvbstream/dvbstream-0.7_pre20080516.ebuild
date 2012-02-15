@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.7_pre20080516.ebuild,v 1.1 2008/05/16 20:30:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.7_pre20080516.ebuild,v 1.2 2012/02/15 18:32:24 hd_brummy Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 RDEPEND="dev-lang/perl"
-DEPEND="media-tv/linuxtv-dvb-headers"
+DEPEND="virtual/linuxtv-dvb-headers"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20100223.ebuild,v 1.3 2011/03/20 11:23:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20100223.ebuild,v 1.4 2012/02/15 18:27:38 hd_brummy Exp $
 
 EAPI="1"
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND="usb? ( virtual/libusb:0 )
 	!dev-db/xbase"
 DEPEND="${RDEPEND}
-	media-tv/linuxtv-dvb-headers"
+	virtual/linuxtv-dvb-headers"
 # !dev-db/xbase (bug #208596)
 
 S="${WORKDIR}/dvb-apps-7de0663facd9"

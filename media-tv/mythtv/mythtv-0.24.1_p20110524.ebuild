@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.24.1_p20110524.ebuild,v 1.1 2011/12/18 04:15:55 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.24.1_p20110524.ebuild,v 1.2 2012/02/15 18:23:39 hd_brummy Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -48,7 +48,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	autostart? ( net-dialup/mingetty
 				 x11-wm/evilwm
 				 x11-apps/xset )
-	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
+	dvb? ( media-libs/libdvb virtual/linuxtv-dvb-headers )
 	dvd? ( media-libs/libdvdcss )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			    >=sys-libs/libavc1394-0.5.3

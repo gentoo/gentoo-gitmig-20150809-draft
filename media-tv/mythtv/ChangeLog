@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.335 2011/12/18 04:15:55 rich0 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.336 2012/02/15 18:23:39 hd_brummy Exp $
+
+  15 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  mythtv-0.23.1_p27077.ebuild, mythtv-0.24.1_p20110524.ebuild:
+  move media-tv to virtual/linuxtv-dvb-headers, bug #403929
 
 *mythtv-0.24.1_p20110524 (17 Dec 2011)
 

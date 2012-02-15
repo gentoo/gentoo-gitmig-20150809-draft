@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/dvbstreamer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/ChangeLog,v 1.16 2010/06/18 12:18:18 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/ChangeLog,v 1.17 2012/02/15 18:34:36 hd_brummy Exp $
+
+  15 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  dvbstreamer-1.1-r1.ebuild, dvbstreamer-2.0.0_rc1.ebuild:
+  move media-tv to virtual/linuxtv-dvb-headers, bug #403929
 
 *dvbstreamer-2.0.0_rc1 (18 Jun 2010)
 
