@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.108 2012/01/08 14:34:51 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.109 2012/02/15 11:57:21 aidecoe Exp $
+
+  15 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
+  Added Hitachi HTS725050A9A364. Fixes bug #403127.
+
+  Thanks to Ivan Bagaev <gmiramir@gmail.com>.
 
   08 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
   Added few Seagate Barracuda 7200.14 hard drives.  Fixes bug #392913.
