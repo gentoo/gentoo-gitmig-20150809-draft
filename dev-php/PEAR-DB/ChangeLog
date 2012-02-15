@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.68 2012/02/08 14:52:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.69 2012/02/15 18:37:13 ranger Exp $
+
+  15 Feb 2012; Brent Baude <ranger@gentoo.org> PEAR-DB-1.7.14.ebuild:
+  Marking PEAR-DB-1.7.14 ppc for bug 402253
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-DB-1.7.14.ebuild:
   Stable for HPPA (bug #402253).
