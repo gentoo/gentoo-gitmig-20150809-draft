@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/makeself
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.27 2012/02/14 21:32:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.28 2012/02/15 16:43:10 ranger Exp $
+
+  15 Feb 2012; Brent Baude <ranger@gentoo.org> makeself-2.1.5-r1.ebuild:
+  Marking makeself-2.1.5-r1 ppc for bug 399911
 
   14 Feb 2012; Jeroen Roovers <jer@gentoo.org> makeself-2.1.5-r1.ebuild:
   Stable for HPPA (bug #399911).
