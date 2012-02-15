@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.2 2012/02/07 21:56:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.3 2012/02/15 17:46:04 jlec Exp $
 
 EAPI=4
 
@@ -23,12 +23,11 @@ IUSE="${PLUGINS_IUSE} static-libs"
 
 RDEPEND="
 	dev-libs/libzeitgeist
-	gnome-extra/zeitgeist
 	x11-libs/gtk+:2
 	chromium? ( www-client/chromium )
 	eog? ( media-gfx/eog[python] )
 	geany? ( dev-util/geany )
-	gedit? ( <app-editors/gedit-3[python] )
+	gedit? ( app-editors/gedit[zeitgeist] )
 	vim? ( app-editors/vim )
 	emacs? ( virtual/emacs )
 	tomboy? (
@@ -42,15 +41,16 @@ RDEPEND="
 		dev-python/dbus-python
 		dev-python/pygobject )
 	xchat? ( net-irc/xchat-gnome )
-	rhythmbox? ( media-sound/rhythmbox )
+	rhythmbox? ( media-sound/rhythmbox[zeitgeist] )
 	firefox? (
 		|| ( >=www-client/firefox-4.0 >=www-client/firefox-bin-4.0 )
 		net-libs/xulrunner )
-	totem? ( media-video/totem )"
+	totem? ( media-video/totem[zeitgeist] )"
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.14"
+PDEPEND="gnome-extra/zeitgeist"
 
-PLUGINS="bzr chrome eog geany gedit vim emacs tomboy telepathy xchat rhythmbox firefox-40-libzg totem-libzg"
+PLUGINS="bzr chrome eog geany vim emacs tomboy telepathy xchat firefox-40-libzg"
 
 src_prepare() {
 	sed \
