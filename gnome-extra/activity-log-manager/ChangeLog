@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/activity-log-manager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/ChangeLog,v 1.2 2012/02/12 20:30:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/ChangeLog,v 1.3 2012/02/15 18:29:05 jlec Exp $
+
+*activity-log-manager-0.9.1 (15 Feb 2012)
+
+  15 Feb 2012; Justin Lecher <jlec@gentoo.org>
+  +activity-log-manager-0.9.1.ebuild,
+  +files/activity-log-manager-0.9.1-ccpanel.patch, metadata.xml:
+  Version Bump, add long description
 
   12 Feb 2012; Justin Lecher <jlec@gentoo.org>
   activity-log-manager-0.9.0.1.ebuild:
