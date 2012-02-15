@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.154 2012/02/15 17:30:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.155 2012/02/15 22:45:31 cardoe Exp $
+
+*libvirt-0.9.10 (15 Feb 2012)
+
+  15 Feb 2012; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.9.10.ebuild,
+  libvirt-9999.ebuild, +files/libvirtd.confd-r3, +files/libvirtd.init-r6:
+  Version bump. Change init script to make it clear that it shuts down KVM/Qemu
+  only based VMs and not others. Changed the helper functions to support other
+  hypervisors in the future. bug #388003
 
   15 Feb 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.8.ebuild,
   libvirt-9999.ebuild:
