@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.14 2010/09/15 10:11:04 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.15 2012/02/15 09:44:32 voyageur Exp $
 
 inherit multilib toolchain-funcs
 
 DESCRIPTION="A WindowMaker DockApp calculator"
-HOMEPAGE="http://dockapps.org/file.php/id/130"
+HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/130"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"

@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-1.0.1.ebuild,v 1.15 2011/05/26 13:51:50 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-1.0.1.ebuild,v 1.16 2012/02/15 09:51:10 voyageur Exp $
 
 IUSE=""
 DESCRIPTION="A program to monitor memory/swap usages."
 SRC_URI="mirror://gentoo/${P}.tar.gz"
-HOMEPAGE="http://www.dockapps.org/file.php/id/37"
+HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/37"
 
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"

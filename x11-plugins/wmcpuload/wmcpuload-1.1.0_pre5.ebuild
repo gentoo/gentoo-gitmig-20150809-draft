@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/wmcpuload-1.1.0_pre5.ebuild,v 1.6 2011/05/26 13:56:16 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/wmcpuload-1.1.0_pre5.ebuild,v 1.7 2012/02/15 09:46:26 voyageur Exp $
 
 DESCRIPTION="a dockapp for monitoring CPU usage with a LCD display."
-HOMEPAGE="http://www.dockapps.org/file.php/id/36"
+HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/36"
 SRC_URI="mirror://gentoo/${P/_/}.tar.gz"
 
 LICENSE="GPL-2"

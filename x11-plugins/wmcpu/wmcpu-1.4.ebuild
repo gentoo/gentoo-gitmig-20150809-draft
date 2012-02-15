@@ -1,16 +1,16 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpu/wmcpu-1.4.ebuild,v 1.4 2010/09/16 08:58:47 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpu/wmcpu-1.4.ebuild,v 1.5 2012/02/15 09:45:56 voyageur Exp $
 
 EAPI="3"
 
 inherit flag-o-matic
 
 DESCRIPTION="wmcpu is a dockapp to monitor memory and CPU usage, similar to xosview"
-HOMEPAGE="http://dockapps.org/file.php/id/306"
+HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/306"
 SRC_URI="http://denilsonsa.sh.nu/~denilson/${P}.tar.gz
 	http://denilsonsa.selfip.org/~denilson/${P}.tar.gz
-	http://dockapps.org/download.php/id/673/${P}.tar.gz"
+	http://dockapps.windowmaker.org/download.php/id/673/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

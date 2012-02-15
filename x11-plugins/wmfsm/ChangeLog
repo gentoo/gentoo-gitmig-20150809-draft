@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfsm
-# Copyright 2002-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.13 2011/05/26 13:34:42 s4t4n Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.14 2012/02/15 09:48:17 voyageur Exp $
+
+  15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmfsm-0.34-r1.ebuild:
+  Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
 
   26 May 2011; Michele Noberasco <s4t4n@gentoo.org> wmfsm-0.34-r1.ebuild:
   Fixed HOMEPAGE and SRC_URI. Closes bug #367173.

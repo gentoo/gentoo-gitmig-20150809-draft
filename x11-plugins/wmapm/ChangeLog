@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmapm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/ChangeLog,v 1.13 2010/10/11 09:17:28 s4t4n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/ChangeLog,v 1.14 2012/02/15 09:44:03 voyageur Exp $
+
+  15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmapm-3.1-r1.ebuild:
+  Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
 
   11 Oct 2010; Michele Noberasco <s4t4n@gentoo.org>; wmapm-3.1-r1.ebuild:
   Fixed HOMEPAGE and SRC_URI, closing bug #338810.

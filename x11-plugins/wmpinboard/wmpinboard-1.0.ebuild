@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/wmpinboard-1.0.ebuild,v 1.18 2010/07/22 14:37:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/wmpinboard-1.0.ebuild,v 1.19 2012/02/15 09:53:12 voyageur Exp $
 
 inherit eutils
 
 IUSE=""
 DESCRIPTION="Window Maker dock applet resembling a miniature pinboard."
-SRC_URI="http://dockapps.org/download.php/id/131/${P}.tar.gz"
-HOMEPAGE="http://dockapps.org/file.php/id/93"
+SRC_URI="http://dockapps.windowmaker.org/download.php/id/131/${P}.tar.gz"
+HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/93"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext

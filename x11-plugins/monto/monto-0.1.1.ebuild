@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/monto/monto-0.1.1.ebuild,v 1.1 2010/09/06 09:39:08 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/monto/monto-0.1.1.ebuild,v 1.2 2012/02/15 09:42:49 voyageur Exp $
 
 EAPI=2
 inherit eutils
 
 DESCRIPTION="This WindowMaker dockapp is a simple manual device mounter (up to four devices)."
-HOMEPAGE="http://dockapps.org/file.php/id/274"
-SRC_URI="http://dockapps.org/download.php/id/274/${P}.tar.gz"
+HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/274"
+SRC_URI="http://dockapps.windowmaker.org/download.php/id/274/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""

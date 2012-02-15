@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r3.ebuild,v 1.7 2010/09/15 10:29:15 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r3.ebuild,v 1.8 2012/02/15 09:43:35 voyageur Exp $
 
 inherit eutils
 
 DESCRIPTION="Window Maker dock application showing incoming mail"
-HOMEPAGE="http://www.dockapps.org/file.php/id/70"
+HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/70"
 SRC_URI="http://www.minet.uni-jena.de/~topical/sveng/wmail/${P}.tar.gz"
 
 LICENSE="GPL-2"

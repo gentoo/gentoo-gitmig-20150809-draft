@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/wmcpuload-1.0.1.ebuild,v 1.19 2011/05/26 13:56:17 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/wmcpuload-1.0.1.ebuild,v 1.20 2012/02/15 09:46:26 voyageur Exp $
 
 IUSE=""
 DESCRIPTION="WMCPULoad is a program to monitor CPU usage."
-HOMEPAGE="http://www.dockapps.org/file.php/id/36"
+HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/36"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 RDEPEND="x11-libs/libX11

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmail
-# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.21 2010/09/15 10:29:15 s4t4n Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.22 2012/02/15 09:43:35 voyageur Exp $
+
+  15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmail-2.0-r3.ebuild:
+  Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
 
   15 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmail-2.0-r3.ebuild:
   Honour Gentoo LDFLAGS, see bug #337407.

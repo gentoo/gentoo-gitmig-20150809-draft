@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsmixer
-# Copyright 2002-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.25 2011/05/26 12:46:13 s4t4n Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.26 2012/02/15 09:53:40 voyageur Exp $
+
+  15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmsmixer-0.5.1.ebuild:
+  Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
 
   26 May 2011; Michele Noberasco <s4t4n@gentoo.org> wmsmixer-0.5.1.ebuild:
   Changed HOMEPAGE and SRC_URI to dockapps.org one. Closes bug #367183.

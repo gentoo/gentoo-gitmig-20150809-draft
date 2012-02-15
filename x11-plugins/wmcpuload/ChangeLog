@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmcpuload
-# Copyright 2002-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.28 2011/05/26 13:56:16 s4t4n Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.29 2012/02/15 09:46:27 voyageur Exp $
+
+  15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmcpuload-1.0.1.ebuild,
+  wmcpuload-1.1.0_pre5.ebuild:
+  Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
 
   26 May 2011; Michele Noberasco <s4t4n@gentoo.org> wmcpuload-1.1.0_pre5.ebuild,
   wmcpuload-1.0.1.ebuild:

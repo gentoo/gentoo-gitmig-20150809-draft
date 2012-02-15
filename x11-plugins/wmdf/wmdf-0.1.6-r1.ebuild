@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/wmdf-0.1.6-r1.ebuild,v 1.9 2010/01/07 15:59:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/wmdf-0.1.6-r1.ebuild,v 1.10 2012/02/15 09:46:56 voyageur Exp $
 
 inherit eutils
 
 DESCRIPTION="An app to monitor disk space on partitions"
-SRC_URI="http://dockapps.org/download.php/id/359/${P}.tar.gz"
-HOMEPAGE="http://dockapps.org/file.php/id/175"
+SRC_URI="http://dockapps.windowmaker.org/download.php/id/359/${P}.tar.gz"
+HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/175"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
