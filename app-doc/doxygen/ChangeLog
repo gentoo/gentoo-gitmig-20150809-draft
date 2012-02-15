@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.209 2012/02/14 14:06:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.210 2012/02/15 11:29:59 xarthisius Exp $
+
+  15 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.7.6.1.ebuild:
+  Don't RDEPEND on python, thanks to Arfrever Frehtes Taifersar Arahesis
+  <arfrever.fta@gmail.com>
 
   14 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.7.6.1.ebuild:
   Improve Python-related code wrt #308353 by Arfrever Frehtes Taifersar
