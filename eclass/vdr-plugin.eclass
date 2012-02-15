@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.80 2012/02/11 20:44:40 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.81 2012/02/15 18:41:24 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin.eclass
 # @MAINTAINER:
@@ -65,7 +65,7 @@ S="${WORKDIR}/${VDRPLUGIN}-${PV}"
 COMMON_DEPEND=">=media-tv/gentoo-vdr-scripts-0.4.2"
 
 DEPEND="${COMMON_DEPEND}
-	media-tv/linuxtv-dvb-headers"
+	virtual/linuxtv-dvb-headers"
 RDEPEND="${COMMON_DEPEND}
 	>=app-admin/eselect-vdr-0.0.2"
 

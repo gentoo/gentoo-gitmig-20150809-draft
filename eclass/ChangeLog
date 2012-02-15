@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.135 2012/02/13 23:50:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.136 2012/02/15 18:41:24 hd_brummy Exp $
+
+  15 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
+  move media-tv to virtual/linuxtv-dvb-headers, bug #403929
 
   13 Feb 2012; Zac Medico <zmedico@gentoo.org> python.eclass:
   Enable PyPy 1.8 support. Merged from the progress overlay:
