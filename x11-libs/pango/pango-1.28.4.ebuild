@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.14 2011/07/11 00:05:28 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.15 2012/02/15 03:47:58 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -54,8 +54,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system.  Fix building for
 	# emul-linux-x86-gtklibs
@@ -64,7 +62,7 @@ src_prepare() {
 		eautoreconf
 	fi
 
-	elibtoolize # for Darwin bundles
+	gnome2_src_prepare
 }
 
 pkg_postinst() {

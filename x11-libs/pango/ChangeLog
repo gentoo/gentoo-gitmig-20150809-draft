@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.330 2012/01/30 09:45:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.331 2012/02/15 03:47:58 tetromino Exp $
+
+  15 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pango-1.28.3-r1.ebuild, pango-1.28.4.ebuild, pango-1.29.4.ebuild:
+  Don't call elibtoolize multiple times or before eautoreconf (bug #403695,
+  thanks to Kris Hepler for reporting).
 
   30 Jan 2012; Pacho Ramos <pacho@gentoo.org> pango-1.29.4.ebuild:
   REQUIRED_USE='doc? ( X )' due upstream bug #643802, move gnome2_src_prepare to
