@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.9 2011/10/05 17:35:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.10 2012/02/15 03:56:39 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -35,8 +35,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix wrong process kill, bug #268142
 	sed "s:killall lt-timeout-server:killall timeout-server:" \
 		-i test/timeout.sh || die "sed 1 failed"
@@ -52,6 +50,7 @@ src_prepare() {
 	sed -i -e 's/test-mem //' test/Makefile.am || die
 
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_configure() {
