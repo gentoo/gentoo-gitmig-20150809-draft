@@ -4,6 +4,13 @@
 	<maintainer>
 		<email>jlec@gentoo.org</email>
 	</maintainer>
+	<longdescription>
+Dataproviders are small plugins for applications whose work is to push the 
+user’s activities as events in the Zeitgeist daemon. The work of dataproviders 
+are limited to pushing events and not consuming. Without dataproviders being 
+enabled having exhaustive log of user’s activities is tough as Zeitgeist 
+datahub does not track events like opening websites etc.
+</longdescription>
 	<use>
 		<flag name="bzr">Zeitgeist plugin for <pkg>dev-vcs/bzr</pkg> as data source</flag>
 		<flag name="chromium">Zeitgeist plugin for <pkg>www-client/chromium</pkg> as data source</flag>
