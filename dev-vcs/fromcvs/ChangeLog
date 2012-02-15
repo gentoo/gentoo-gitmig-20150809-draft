@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/fromcvs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fromcvs/ChangeLog,v 1.3 2011/06/18 10:08:55 sochotnicky Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fromcvs/ChangeLog,v 1.4 2012/02/15 07:34:38 sochotnicky Exp $
+
+*fromcvs-0_pre20120214 (14 Feb 2012)
+
+  14 Feb 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +fromcvs-0_pre20120214.ebuild,
+  +files/0001-Fix-379271-require-rubygems-before-other-deps.patch:
+  Get files from devspace (original home is inaccessible). Fix bug 379271
+  (finally)
 
   18 Jun 2011; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   fromcvs-0_pre132-r1.ebuild:
