@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/Class-Load-0.170.0.ebuild,v 1.2 2012/02/14 11:39:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/Class-Load-0.170.0.ebuild,v 1.3 2012/02/15 15:55:54 jer Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A working (require q{Class::Name}) and more"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
 IUSE="test"
 
 RDEPEND="
