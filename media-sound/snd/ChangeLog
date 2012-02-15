@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/snd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.61 2012/02/07 08:01:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.62 2012/02/15 02:57:08 radhermit Exp $
+
+  15 Feb 2012; Tim Harder <radhermit@gentoo.org> snd-12.7.ebuild,
+  snd-12.8.ebuild:
+  Die on sed failure.
 
   07 Feb 2012; Tim Harder <radhermit@gentoo.org> -snd-12.5.ebuild,
   -snd-12.6.ebuild:

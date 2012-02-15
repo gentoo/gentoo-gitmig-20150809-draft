@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.8.ebuild,v 1.1 2012/02/07 08:00:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.8.ebuild,v 1.2 2012/02/15 02:57:08 radhermit Exp $
 
 EAPI="4"
 
@@ -96,7 +96,7 @@ src_compile() {
 	emake snd
 
 	# Do not compile ruby extensions for command line programs since they fail
-	sed -i -e "s:HAVE_RUBY 1:HAVE_RUBY 0:" mus-config.h
+	sed -i -e "s:HAVE_RUBY 1:HAVE_RUBY 0:" mus-config.h || die
 
 	for i in sndinfo audinfo sndplay ; do
 	   emake ${i}
