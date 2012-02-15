@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.7 2012/02/15 00:52:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.8 2012/02/15 00:56:46 floppym Exp $
 
 EAPI="4"
 EGIT_REPO_URI="git://github.com/FreeRDP/Remmina.git"
@@ -57,8 +57,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog "You need to install net-misc/remmina-plugins which"
-	elog "provide all the necessary network protocols required by ${PN}"
 	gnome2_icon_cache_update
 }
 
