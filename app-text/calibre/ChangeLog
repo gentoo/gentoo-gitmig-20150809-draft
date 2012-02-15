@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.186 2012/02/14 13:31:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.187 2012/02/15 18:38:54 flameeyes Exp $
+
+  15 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org> calibre-0.8.39.ebuild:
+  Calibre also requires png support in imagemagick because it converts JPEG
+  images to PNG thumbnails; if PNG support is disabled, it would report 'No
+  device connected'.
 
   14 Feb 2012; Zac Medico <zmedico@gentoo.org> calibre-0.8.38.ebuild,
   calibre-0.8.39.ebuild:
