@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/dropbox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.8 2011/12/18 09:11:30 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.9 2012/02/15 19:20:40 jlec Exp $
+
+*dropbox-1.2.51 (15 Feb 2012)
+
+  15 Feb 2012; Justin Lecher <jlec@gentoo.org> dropbox-1.2.13.ebuild,
+  dropbox-1.2.13-r1.ebuild, dropbox-1.2.13-r2.ebuild, dropbox-1.2.24.ebuild,
+  dropbox-1.2.24-r1.ebuild, dropbox-1.2.48.ebuild, +dropbox-1.2.51.ebuild,
+  metadata.xml:
+  Version Bump, #402501, drop a copuple of bundled libs, #400877, drop
+  mprotect() PaX flag, #401467, drop . from DESCRIPTION
 
 *dropbox-1.2.48-r1 (18 Dec 2011)
 
