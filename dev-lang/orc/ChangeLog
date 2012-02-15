@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/orc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.22 2011/11/24 22:42:57 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.23 2012/02/15 09:58:58 radhermit Exp $
+
+*orc-0.4.16 (15 Feb 2012)
+
+  15 Feb 2012; Tim Harder <radhermit@gentoo.org> +orc-0.4.16.ebuild:
+  Version bump. Update to EAPI 4.
 
   24 Nov 2011; Naohiro Aota <naota@gentoo.org> orc-0.4.14.ebuild:
   Add ~x86-fbsd
