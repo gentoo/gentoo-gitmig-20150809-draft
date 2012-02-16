@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/idb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.17 2010/04/20 20:58:28 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.18 2012/02/16 21:48:17 bicatali Exp $
+
+  16 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> -idb-10.1.017.ebuild,
+  -idb-10.1.018.ebuild, -idb-11.1.056.ebuild:
+  Removed versions conflicting with non-existing icc/ifc
 
   20 Apr 2010; Sébastien Fabbro <bicatali@gentoo.org> idb-11.1.056.ebuild:
   Include missing inherit, bug #315187
