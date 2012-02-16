@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/python-geoclue-0.1.0.ebuild,v 1.1 2012/02/15 16:18:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/python-geoclue-0.1.0.ebuild,v 1.2 2012/02/16 04:21:04 mr_bones_ Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.paulocabido.com/soc/${PN}/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-3"
-IUSE=""
+IUSE="test"
 
 RDEPEND="
 	app-misc/geoclue
