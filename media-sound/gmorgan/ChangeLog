@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmorgan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.29 2012/02/03 17:48:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.30 2012/02/16 18:52:53 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gmorgan-0.39.ebuild:
+  x86 stable wrt bug #397095
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> gmorgan-0.39.ebuild:
   Stable for amd64, wrt bug #397095
