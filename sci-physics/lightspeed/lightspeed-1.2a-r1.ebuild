@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.13 2011/09/14 18:51:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.14 2012/02/16 23:52:46 bicatali Exp $
 
-EAPI=2
+EAPI=4
 
 inherit autotools eutils
 
@@ -31,6 +31,7 @@ RDEPEND="
 	x11-libs/gtkglext
 	x11-libs/gtkglarea:2
 	x11-libs/gtk+:2
+	x11-libs/libXmu
 	truetype? ( media-libs/ftgl )"
 
 DEPEND="${RDEPEND}
@@ -54,22 +55,22 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
+	local i
 	for i in ${LANGS}; do
 		use linguas_${i} && emake ${i}.gmo
 	done
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	newicon src/icon.xpm lightspeed.xpm
 	make_desktop_entry ${PN} "Light Speed! Relativistic Simulator"
-	dodoc AUTHORS ChangeLog MATH NEWS README TODO || die
-	newdoc debian/changelog ChangeLog.Debian || die
+	newdoc debian/changelog ChangeLog.Debian
 	cd ${S2}
-	newdoc README objects-README || die
+	newdoc README objects-README
 	insinto /usr/share/${PN}
-	doins *.3ds *.lwo || die
+	doins *.3ds *.lwo
 }
 
 pkg_postinst() {
