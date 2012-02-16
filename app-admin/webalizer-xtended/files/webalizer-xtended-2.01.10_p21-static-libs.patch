@@ -1,5 +1,5 @@
---- configure.in.org	2012-02-16 02:30:19.953528344 +0100
-+++ configure.in	2012-02-16 02:30:20.193512290 +0100
+--- a/configure.in
++++ b/configure.in
 @@ -40,7 +40,7 @@
  AC_ARG_WITH(etcdir,--with-etcdir=DIR         Where to look for default config file [[/etc]],
  ETCDIR="${withval}",CACHE_ETC="yes")
