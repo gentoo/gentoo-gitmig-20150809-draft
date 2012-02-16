@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/sic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.6 2012/02/16 07:03:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.7 2012/02/16 07:09:14 jer Exp $
+
+*sic-1.1 (16 Feb 2012)
+
+  16 Feb 2012; Jeroen Roovers <jer@gentoo.org> sic-1.0.ebuild, +sic-1.1.ebuild:
+  Version bump. Fix SRC_URI.
 
   16 Feb 2012; Jeroen Roovers <jer@gentoo.org> sic-1.0.ebuild:
   Fix HOMEPAGE.
