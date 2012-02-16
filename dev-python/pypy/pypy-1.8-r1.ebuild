@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.8-r1.ebuild,v 1.1 2012/02/16 12:18:54 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.8-r1.ebuild,v 1.2 2012/02/16 13:53:54 djc Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ LICENSE="MIT"
 SLOT="${SLOTVER}"
 PYTHON_ABI="2.7-pypy-${SLOTVER}"
 KEYWORDS="~amd64 ~x86"
-IUSE="bzip2 doc examples +jit ncurses sandbox shadowstack sqlite ssl"
+IUSE="bzip2 doc examples +jit ncurses sandbox shadowstack sqlite ssl +xml"
 
 RDEPEND=">=sys-libs/zlib-1.1.3
 		virtual/libffi
