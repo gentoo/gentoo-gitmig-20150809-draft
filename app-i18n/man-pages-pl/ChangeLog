@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.20 2012/02/13 17:55:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.21 2012/02/16 17:54:07 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  man-pages-pl-20070628-r1.ebuild:
+  x86 stable wrt bug #399935
 
 *man-pages-pl-20070628-r2 (13 Feb 2012)
 
