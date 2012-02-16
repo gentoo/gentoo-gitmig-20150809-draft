@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/ms-sys
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.8 2012/02/03 18:31:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.9 2012/02/16 19:18:39 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ms-sys-2.2.1.ebuild:
+  x86 stable wrt bug #397219
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ms-sys-2.2.1.ebuild:
   Stable for amd64, wrt bug #397219
