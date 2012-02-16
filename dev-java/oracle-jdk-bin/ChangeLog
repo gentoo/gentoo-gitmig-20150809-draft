@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.11 2012/01/27 13:01:30 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.12 2012/02/16 09:34:55 sera Exp $
+
+*oracle-jdk-bin-1.7.0.3 (16 Feb 2012)
+
+  16 Feb 2012; Ralph Sennhauser <sera@gentoo.org>
+  -oracle-jdk-bin-1.7.0.1-r1.ebuild, -oracle-jdk-bin-1.7.0.1-r2.ebuild,
+  -oracle-jdk-bin-1.7.0.2.ebuild, +oracle-jdk-bin-1.7.0.3.ebuild:
+  Security bump. #404071
+  Use relative path for desktop file icon. #403139
+  Make installation of src.zip optional as for other JDKs.
+  Unzip is build only dependency.
+  Remove vulnerable.
 
   27 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
   oracle-jdk-bin-1.7.0.2.ebuild:
