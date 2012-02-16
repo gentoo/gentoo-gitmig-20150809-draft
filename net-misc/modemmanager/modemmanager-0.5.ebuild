@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.ebuild,v 1.1 2011/08/14 15:41:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.ebuild,v 1.2 2012/02/16 16:42:50 vapier Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="ModemManager"
@@ -21,6 +21,7 @@ RDEPEND=">=dev-libs/glib-2.18:2
 	net-dialup/ppp
 	policykit? ( >=sys-auth/polkit-0.99 )"
 DEPEND="${RDEPEND}
+	doc? ( dev-libs/libxslt )
 	>=dev-util/intltool-0.35.0
 	sys-devel/gettext
 	dev-util/pkgconfig"
@@ -48,8 +49,9 @@ src_configure() {
 
 src_install() {
 	default
+	use doc && dohtml docs/spec.html
 	# Remove useless .la files
-	find "${D}" -name '*.la' -exec rm -f {} +
+	find "${D}" -name '*.la' -delete
 }
 
 pkg_postinst() {

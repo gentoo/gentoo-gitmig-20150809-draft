@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/modemmanager
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.21 2011/08/14 15:41:54 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.22 2012/02/16 16:42:50 vapier Exp $
+
+  16 Feb 2012; Mike Frysinger <vapier@gentoo.org> modemmanager-0.5.ebuild:
+  Fix USE=doc depend and install so it actually does something.
 
 *modemmanager-0.5 (14 Aug 2011)
 
