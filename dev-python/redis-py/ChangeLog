@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/redis-py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.14 2012/02/16 12:44:39 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.15 2012/02/16 12:47:04 djc Exp $
+
+  16 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove myself as a maintainer.
 
 *redis-py-2.4.11 (16 Feb 2012)
 
