@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openvpn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.218 2011/07/29 08:45:05 zmedico Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.219 2012/02/16 10:50:02 djc Exp $
+
+*openvpn-2.2.2 (16 Feb 2012)
+
+  16 Feb 2012; Dirkjan Ochtman <djc@gentoo.org>
+  files/openvpn-2.1_rc20-pkcs11.patch, +openvpn-2.2.2.ebuild,
+  +files/openvpn-2.2.2-pkcs11.patch:
+  Version bump to 2.2.2 (bug 383537), some cleanups from darkside.
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> openvpn-2.2.0-r1.ebuild:
   Add ~x86-linux keyword.
