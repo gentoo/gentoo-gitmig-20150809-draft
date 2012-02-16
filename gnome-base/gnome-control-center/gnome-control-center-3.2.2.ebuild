@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.2.2.ebuild,v 1.4 2012/02/14 04:55:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.2.2.ebuild,v 1.5 2012/02/16 07:26:52 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -22,6 +22,7 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solari
 # gnome-session-2.91.6-r1 is needed so that 10-user-dirs-update is run at login
 # Latest gsettings-desktop-schemas is neededfor commit 73f9bffb
 # gnome-settings-daemon-3.1.4 is needed for power panel (commit 4f08a325)
+# g-s-d[policykit] needed for bug #403527
 COMMON_DEPEND="
 	>=dev-libs/glib-2.29.14:2
 	>=x11-libs/gdk-pixbuf-2.23.0:2
@@ -30,7 +31,7 @@ COMMON_DEPEND="
 	>=gnome-base/gconf-2.0:2
 	>=dev-libs/dbus-glib-0.73
 	>=gnome-base/gnome-desktop-3.1.0:3
-	>=gnome-base/gnome-settings-daemon-3.1.4[colord(+)?]
+	>=gnome-base/gnome-settings-daemon-3.1.4[colord(+)?,policykit]
 	>=gnome-base/libgnomekbd-2.91.91
 
 	app-text/iso-codes
