@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.541 2012/02/16 16:56:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.542 2012/02/16 18:18:58 blueness Exp $
+
+  16 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-3.2.1.ebuild:
+  Remove another older ~arch 3.x kernel
 
   16 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
   -hardened-sources-3.1.4.ebuild, -hardened-sources-3.1.4-r1.ebuild,
