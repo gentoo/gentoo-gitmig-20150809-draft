@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/metakit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.54 2010/10/15 20:44:07 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.55 2012/02/16 09:33:52 pacho Exp $
+
+  16 Feb 2012; Pacho Ramos <pacho@gentoo.org> metakit-2.4.9.7.ebuild:
+  Restrict pypy, bug #403797 by Patrick Lauer.
 
   15 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -metakit-2.4.9.6.ebuild:

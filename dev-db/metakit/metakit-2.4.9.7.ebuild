@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.12 2010/10/14 19:07:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.13 2012/02/16 09:33:52 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-pypy-*"
 
 inherit eutils multilib python toolchain-funcs
 
@@ -39,7 +39,7 @@ src_configure() {
 	use static && myconf+=" --disable-shared"
 	use static || mycxxflags="-fPIC"
 
-	sed -i -e "s:^\(CXXFLAGS = \).*:\1${CXXFLAGS} ${mycxxflags} -I\$(srcdir)/../include:" unix/Makefile.in
+	sed -i -e "s:^\(CXXFLAGS = \).*:\1${CXXFLAGS} ${mycxxflags} -I\$(srcdir)/../include:" unix/Makefile.in || die
 
 	CXXFLAGS="${CXXFLAGS} ${mycxxflags}" unix/configure \
 		${myconf} \
@@ -47,11 +47,11 @@ src_configure() {
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "configure failed"
+		--mandir=/usr/share/man
 }
 
 src_compile() {
-	emake SHLIB_LD="$(tc-getCXX) -shared" || die "emake failed"
+	emake SHLIB_LD="$(tc-getCXX) -shared"
 
 	if use python; then
 		python_copy_sources
@@ -67,7 +67,7 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	if use python; then
 		installation() {
