@@ -66,7 +66,7 @@ make mysql/mythtv support optional
  AC_ARG_ENABLE([dvdcss],
    [AS_HELP_STRING([--enable-dvdcss],
    [enable DVDCSS support (default is yes)])],
-@@ -563,14 +578,30 @@ else
+@@ -563,14 +578,31 @@ else
  fi
  
  # platform common libraries
@@ -90,14 +90,15 @@ make mysql/mythtv support optional
 +  fi
 +fi
 +if test "$have_mysql" = "yes"; then
++  BUILD_MYTHTV=1
 +  AC_DEFINE([BUILD_MYSQL], [1], [Define to 1 to build MySQL.])
-+  AC
 +  if test "$use_mysql" != "no"; then
-+    AC_DEFINE([BUILD_MYTHTV], [1], [Define to 1 to build mythtv.]),
++    AC_DEFINE([BUILD_MYTHTV], [1], [Define to 1 to build mythtv.])
 +  fi
 +elif test "$use_mysql" = "yes" || test "$use_mythtv" = "yes"; then
 +  AC_MSG_ERROR([$mysql_not_found])
 +else
++  BUILD_MYTHTV=0
 +  use_mysql=no
 +  AC_MSG_NOTICE($mysql_disabled)
 +  use_mythtv=no
@@ -183,20 +184,23 @@ make mysql/mythtv support optional
    else
    {
      CLog::Log(LOGERROR, "Unable to determine database type: %s", dbSettings.type.c_str());
---- a/xbmc/dbwrappers/Makefile
-+++ b/xbmc/dbwrappers/Makefile
-@@ -1,9 +1,13 @@
- SRCS=Database.cpp \
-      dataset.cpp \
--     mysqldataset.cpp \
-      qry_dat.cpp \
-      sqlitedataset.cpp \
+--- a/xbmc/dbwrappers/mysqldataset.cpp
++++ b/xbmc/dbwrappers/mysqldataset.cpp
+@@ -23,9 +23,11 @@
+ #include <string>
+ #include <set>
  
-+ifeq (@BUILD_MYSQL@,1)
-+SRCS+=\
-+     mysqldataset.cpp
-+endif
++#include "system.h" // for GetLastError()
++#ifdef BUILD_MYSQL
 +
- LIB=dbwrappers.a
+ #include "mysqldataset.h"
+ #include "utils/log.h"
+-#include "system.h" // for GetLastError()
+ #include "mysql/errmsg.h"
+ #ifdef _WIN32
+ #pragma comment(lib, "mysqlclient.lib")
+@@ -1562,3 +1564,4 @@
  
- include ../../Makefile.include
+ }//namespace
+ 
++#endif /* BUILD_MYSQL */
