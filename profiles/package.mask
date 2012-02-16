@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13490 2012/02/16 08:27:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13491 2012/02/16 09:27:29 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -56,11 +56,6 @@ dev-dotnet/db4o
 app-text/man2html
 
 # Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
-# Broken, unmaintained and unstable (bug #262504),
-# removal in a month.
-net-misc/pavuk
-
-# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
 # As talked with its maintainer, it's dead and nothing
 # needs it (bug #298349). Removal in a month.
 app-admin/pcihpview
@@ -78,7 +73,6 @@ app-admin/gtkdiskfree
 
 # Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
 # Fails to build and unmaintained, bug #385295
-# Removal in a month.
 media-libs/libdlna
 media-video/ushare
 
