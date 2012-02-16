@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2texi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.19 2011/12/16 09:27:15 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.20 2012/02/16 21:31:04 grobian Exp $
+
+  16 Feb 2012; Fabian Groffen <grobian@gentoo.org> dot2texi-3.0.ebuild:
+  Marked ~sparc-solaris
 
   16 Dec 2011; Naohiro Aota <naota@gentoo.org> dot2texi-3.0.ebuild:
   Add ~x86-fbsd
