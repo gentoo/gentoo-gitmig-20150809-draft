@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.29 2012/02/03 14:42:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.30 2012/02/16 17:38:27 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ibus-anthy-1.2.6.ebuild:
+  x86 stable wrt bug #396807
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ibus-anthy-1.2.6.ebuild:
   Stable for amd64, wrt bug #396807
