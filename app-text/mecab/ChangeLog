@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mecab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.66 2012/02/08 01:15:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.67 2012/02/16 17:47:05 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mecab-0.98.ebuild:
+  x86 stable wrt bug #396841
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> mecab-0.98.ebuild:
   Stable for HPPA (bug #396841).
