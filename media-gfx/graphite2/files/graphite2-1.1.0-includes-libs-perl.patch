@@ -6,7 +6,7 @@
      extra_compiler_flags => $^O ne 'MSWin32' ? '-Wall -Wno-unused-variable' : '',
 -    extra_linker_flags  => $^O eq 'MSWin32' ? '../../build/src/graphite2.lib' : '-lgraphite2',
 -    include_dirs        => ['.'],
-+    extra_linker_flags  => extra_linker_flags  => $^O eq 'MSWin32' ? '../../build/src/graphite2.lib' : '-L @BUILD_DIR@ -lgraphite2',
++    extra_linker_flags  => $^O eq 'MSWin32' ? '../../build/src/graphite2.lib' : '-L @BUILD_DIR@ -lgraphite2',
 +    include_dirs        => ['.', '../../include'],
      requires => {
          'Test::More' => 0,
