@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.ebuild,v 1.1 2012/02/13 05:18:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.ebuild,v 1.2 2012/02/16 21:12:56 vapier Exp $
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -183,13 +183,10 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	# Enable shadow groups (we need ROOT=/ here, as grpconv only
-	# operate on / ...).
-	local re="${ROOT}/etc"
-	if [ ! -f "${re}"/gshadow ] ; then
-		if grpck -r "${re}"/group "${re}"/gshadow 2>/dev/null ; then
-			# Would be nice to add --root option to the *conv utils ...
-			[ "${ROOT}" = "/" ] && grpconv
+	# Enable shadow groups.
+	if [ ! -f "${ROOT}"/etc/gshadow ] ; then
+		if grpck -r -R "${ROOT}" 2>/dev/null ; then
+			grpconv -R "${ROOT}"
 		else
 			ewarn "Running 'grpck' returned errors.  Please run it by hand, and then"
 			ewarn "run 'grpconv' afterwards!"
