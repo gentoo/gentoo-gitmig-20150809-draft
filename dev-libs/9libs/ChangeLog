@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/9libs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/ChangeLog,v 1.18 2011/10/09 03:46:00 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/ChangeLog,v 1.19 2012/02/16 18:15:55 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> 9libs-1.0-r2.ebuild:
+  x86 stable wrt bug #400005
 
 *9libs-1.0-r2 (09 Oct 2011)
 
