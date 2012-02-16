@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.35 2012/02/08 01:27:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.36 2012/02/16 18:03:04 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gdome2-0.8.1-r3.ebuild:
+  x86 stable wrt bug #396889
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> gdome2-0.8.1-r3.ebuild:
   Stable for HPPA (bug #396889).
