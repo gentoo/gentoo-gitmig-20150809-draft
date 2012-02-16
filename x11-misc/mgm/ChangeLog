@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/mgm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/ChangeLog,v 1.19 2012/02/03 22:03:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/ChangeLog,v 1.20 2012/02/16 19:34:20 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mgm-1.2.ebuild:
+  x86 stable wrt bug #397273
 
   03 Feb 2012; Brent Baude <ranger@gentoo.org> mgm-1.2.ebuild:
   Marking mgm-1.2 ppc for bug 397273
