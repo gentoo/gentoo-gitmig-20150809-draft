@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.327 2012/02/14 21:02:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.328 2012/02/16 12:46:57 haubi Exp $
+
+  16 Feb 2012; Michael Haubenwallner <haubi@gentoo.org> aix/package.use.mask:
+  p.use.mask 'jit' for libpcre, is not ported to AIX
 
   14 Feb 2012; Fabian Groffen <grobian@gentoo.org> sunos/solaris/package.mask:
   Drop binutils mask, latest version is 2.22 which seems to compile again
