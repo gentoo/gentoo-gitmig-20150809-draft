@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/icdprog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/ChangeLog,v 1.8 2011/05/28 00:40:02 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/ChangeLog,v 1.9 2012/02/16 17:56:02 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> icdprog-0.5.ebuild:
+  x86 stable wrt bug #396861
 
 *icdprog-0.5 (28 May 2011)
 
