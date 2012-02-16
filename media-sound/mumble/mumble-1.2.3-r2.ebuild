@@ -1,28 +1,26 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.2.ebuild,v 1.1 2010/02/10 21:48:20 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.3-r2.ebuild,v 1.1 2012/02/16 02:07:37 tgurr Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit eutils multilib qt4
+inherit eutils multilib qt4-r2
 
-MY_P="${PN}-${PV/_/~}"
-
-DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software."
+DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software"
 HOMEPAGE="http://mumble.sourceforge.net/"
-SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+alsa +dbus debug g15 oss pch portaudio pulseaudio speech zeroconf"
 
-RDEPEND=">=dev-libs/boost-1.36.0-r1
-	dev-libs/openssl
+RDEPEND=">=dev-libs/boost-1.41.0
+	>=dev-libs/openssl-1.0.0b
 	>=dev-libs/protobuf-2.2.0
-	>=media-libs/celt-0.7.0
-	>=media-libs/libsndfile-1.0.20
+	>=media-libs/libsndfile-1.0.20[-minimal]
 	>=media-libs/speex-1.2_rc1
+	sys-apps/lsb-release
 	x11-libs/qt-core:4[ssl]
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
@@ -36,11 +34,14 @@ RDEPEND=">=dev-libs/boost-1.36.0-r1
 	portaudio? ( media-libs/portaudio )
 	pulseaudio? ( media-sound/pulseaudio )
 	speech? ( app-accessibility/speech-dispatcher )
-	zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) )"
+	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_P}"
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.2.3-fix-cert-validation.patch
+	"${FILESDIR}"/${PN}-1.2.3-set-file-permissions.patch
+)
 
 src_configure() {
 	local conf_add
@@ -63,18 +64,18 @@ src_configure() {
 
 	eqmake4 "${S}/main.pro" -recursive \
 		CONFIG+="${conf_add} \
+			bundled-celt \
 			no-11x \
-			no-bundled-celt \
 			no-bundled-speex \
 			no-embed-qt-translations \
-			no-server" \
-		DEFINES+="PLUGIN_PATH=/usr/$(get_libdir)/mumble" \
-		|| die "eqmake4 failed."
+			no-server \
+			no-update" \
+		DEFINES+="PLUGIN_PATH=/usr/$(get_libdir)/mumble"
 }
 
 src_install() {
-	newdoc README.Linux README || die "Installing docs failed."
-	dodoc CHANGES || die "Installing docs failed."
+	newdoc README.Linux README
+	dodoc CHANGES
 
 	local dir
 	if use debug; then
@@ -83,24 +84,26 @@ src_install() {
 		dir=release
 	fi
 
-	dobin "${dir}"/mumble || die "Installing mumble binary failed."
-	dobin scripts/mumble-overlay || die "Installing overlay script failed."
+	dobin "${dir}"/mumble
+	dobin scripts/mumble-overlay
 
 	insinto /usr/share/services
-	doins scripts/mumble.protocol || die "Installing mumble.protocol file failed."
+	doins scripts/mumble.protocol
 
-	domenu scripts/mumble.desktop || die "Installing menu entry failed."
+	domenu scripts/mumble.desktop
 
 	insinto /usr/share/icons/hicolor/scalable/apps
-	doins icons/mumble.svg || die "Installing icon failed."
+	doins icons/mumble.svg
 
-	doman man/mumble-overlay.1 || die "Installing mumble-overlay manpage failed."
-	doman man/mumble.1 || die "Installing mumble manpage failed."
+	doman man/mumble-overlay.1
+	doman man/mumble.1
 
 	insopts -o root -g root -m 0755
 	insinto "/usr/$(get_libdir)/mumble"
-	doins "${dir}"/lib*.so* || die "Installing plugins failed."
-	doins "${dir}"/plugins/lib*.so* || die "Installing plugins failed."
+	doins "${dir}"/libmumble.so.${PV}
+	dosym libmumble.so.${PV} /usr/$(get_libdir)/mumble/libmumble.so.1
+	doins "${dir}"/libcelt0.so.0.{7,11}.0
+	doins "${dir}"/plugins/lib*.so*
 }
 
 pkg_postinst() {
