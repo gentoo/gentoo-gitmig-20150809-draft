@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/picasm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picasm/ChangeLog,v 1.8 2011/05/07 10:07:50 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picasm/ChangeLog,v 1.9 2012/02/16 17:56:26 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> picasm-1.14.ebuild:
+  x86 stable wrt bug #396863
 
 *picasm-1.14 (07 May 2011)
 
