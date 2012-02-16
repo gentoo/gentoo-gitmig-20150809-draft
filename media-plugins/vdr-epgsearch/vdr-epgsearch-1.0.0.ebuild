@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0.ebuild,v 1.1 2011/09/12 09:27:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0.ebuild,v 1.2 2012/02/16 15:09:16 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit vdr-plugin
 
@@ -30,18 +30,10 @@ DEPEND=">=media-video/vdr-1.3.45
 	tre? ( dev-libs/tre )"
 RDEPEND="${DEPEND}"
 
-check_menu_flags() {
-	if use pcre && use tre; then
-		echo
-		eerror "Please use only one of this USE-Flags"
-		eerror "\tpcre tre"
-		die "multiple use-flag manipulation"
-	fi
-}
+REQUIRED_USE="pcre? ( !tre )
+			tre? ( !pcre )"
 
 src_prepare() {
-	check_menu_flags
-
 	vdr-plugin_src_prepare
 
 	fix_vdr_libsi_include conflictcheck.c
