@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/cooledit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.29 2012/02/15 16:44:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.30 2012/02/16 17:51:24 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  cooledit-3.17.17-r1.ebuild:
+  x86 stable wrt bug #399925
 
   15 Feb 2012; Brent Baude <ranger@gentoo.org> cooledit-3.17.17-r1.ebuild:
   Marking cooledit-3.17.17-r1 ppc for bug 399925
