@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.23 2012/02/03 14:29:44 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.24 2012/02/16 14:47:35 voyageur Exp $
 
-EAPI=3
+EAPI=4
 
 RESTRICT_PYTHON_ABIS="3.*"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/cfe/trunk"
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug multitarget +static-analyzer +system-cxx-headers test"
+IUSE="debug multitarget +static-analyzer test"
 
 DEPEND="static-analyzer? ( dev-lang/perl )"
 RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
@@ -32,14 +32,12 @@ src_unpack() {
 
 src_prepare() {
 	# Same as llvm doc patches
-#	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
+	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
 
 	# multilib-strict
 	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
 		-i tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
-	# Fix cxx_include_root path for Gentoo
-	epatch "${FILESDIR}"/${PN}-3.1-fix_cxx_include_root.patch
 	# fix the static analyzer for in-tree install
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i tools/clang/tools/scan-view/scan-view \
@@ -94,27 +92,16 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
 	fi
 
-	if use system-cxx-headers; then
-		# Try to get current gcc headers path
-		local CXX_PATH=$(gcc-config -L| cut -d: -f1)
-		CONF_FLAGS="${CONF_FLAGS} --with-c-include-dirs=/usr/include:${CXX_PATH}/include"
-		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=${CXX_PATH}/include/g++-v4"
-		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-arch=$CHOST"
-		if has_multilib_profile; then
-			CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-32bit-dir=32"
-		fi
-	fi
-
-	econf ${CONF_FLAGS} || die "econf failed"
+	econf ${CONF_FLAGS}
 }
 
 src_compile() {
-	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1 clang-only || die "emake failed"
+	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1 clang-only
 }
 
 src_test() {
 	cd "${S}"/test || die "cd failed"
-	emake site.exp || die "updating llvm site.exp failed"
+	emake site.exp
 
 	cd "${S}"/tools/clang || die "cd clang failed"
 
@@ -127,7 +114,7 @@ src_test() {
 
 src_install() {
 	cd "${S}"/tools/clang || die "cd clang failed"
-	emake KEEP_SYMBOLS=1 DESTDIR="${D}" install || die "install failed"
+	emake KEEP_SYMBOLS=1 DESTDIR="${D}" install
 
 	if use static-analyzer ; then
 		dobin tools/scan-build/ccc-analyzer
@@ -174,15 +161,6 @@ src_install() {
 
 pkg_postinst() {
 	python_mod_optimize clang
-	if use system-cxx-headers; then
-		elog "C++ headers search path is hardcoded to the active gcc profile one"
-		elog "If you change the active gcc profile, or update gcc to a new version,"
-		elog "you will have to remerge this package to update the search path"
-	else
-		elog "If clang++ fails to find C++ headers on your system,"
-		elog "you can remerge clang with USE=system-cxx-headers to use C++ headers"
-		elog "from the active gcc profile"
-	fi
 }
 
 pkg_postrm() {
