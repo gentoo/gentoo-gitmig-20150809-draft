@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/root-tail-1.2-r3.ebuild,v 1.1 2010/09/17 04:17:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/root-tail-1.2-r3.ebuild,v 1.2 2012/02/16 00:40:43 jer Exp $
 
 EAPI="2"
 
@@ -42,6 +42,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install install.man || die "make install failed"
+	emake DESTDIR="${D}" install install.man || die "make install failed"
 	dodoc Changes README
 }
