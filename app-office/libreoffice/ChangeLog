@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.235 2012/02/15 21:26:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.236 2012/02/16 08:48:32 scarabeus Exp $
+
+  16 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.5.0.3.ebuild, libreoffice-3.5.9999.ebuild:
+  Paralelism was not fixed so use more conservative behaviour.
 
   15 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Not m-n package
