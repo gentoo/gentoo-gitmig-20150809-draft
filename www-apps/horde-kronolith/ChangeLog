@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-kronolith
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.58 2012/02/08 19:26:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.59 2012/02/16 19:26:23 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  horde-kronolith-2.3.5.ebuild:
+  x86 stable wrt bug #397245
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> horde-kronolith-2.3.5.ebuild:
   Stable for HPPA (bug #397245).
