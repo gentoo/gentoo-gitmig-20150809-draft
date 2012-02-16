@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/iwl6050-ucode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6050-ucode/ChangeLog,v 1.4 2012/01/31 14:42:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6050-ucode/ChangeLog,v 1.5 2012/02/16 19:20:47 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  iwl6050-ucode-41.28.5.1.ebuild:
+  x86 stable wrt bug #401567
 
   31 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
   iwl6050-ucode-41.28.5.1.ebuild:

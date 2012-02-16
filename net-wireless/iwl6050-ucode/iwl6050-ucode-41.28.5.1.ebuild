@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6050-ucode/iwl6050-ucode-41.28.5.1.ebuild,v 1.3 2012/01/31 14:42:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6050-ucode/iwl6050-ucode-41.28.5.1.ebuild,v 1.4 2012/02/16 19:20:47 phajdan.jr Exp $
 
 inherit linux-info
 
@@ -12,7 +12,7 @@ SRC_URI="http://intellinuxwireless.org/iwlwifi/downloads/${MY_PN}-${PV}.tgz"
 
 LICENSE="ipw3945"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RDEPEND=""
 
