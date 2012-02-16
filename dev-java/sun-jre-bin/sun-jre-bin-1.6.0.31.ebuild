@@ -1,10 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.29-r1.ebuild,v 1.2 2011/11/21 12:15:02 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.31.ebuild,v 1.1 2012/02/16 11:03:24 sera Exp $
 
 EAPI="4"
 
 inherit java-vm-2 eutils prefix versionator
+
+# This URIs need to be updated when bumping!
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre-6u31-download-1501637.html"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -12,17 +15,16 @@ S_PV="$(replace_version_separator 3 '_')"
 X86_AT="jre-${MY_PV}-linux-i586.bin"
 AMD64_AT="jre-${MY_PV}-linux-x64.bin"
 
-# check the URIs when bumping, no idea about their stability yet
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre-${MY_PV}-download-513650.html"
-
 DESCRIPTION="Oracle's Java SE Runtime Environment"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
-SRC_URI="x86? ( ${X86_AT} )
-	amd64? ( ${AMD64_AT} )"
+SRC_URI="
+	amd64? ( ${AMD64_AT} )
+	x86? ( ${X86_AT} )"
 
 LICENSE="Oracle-BCLA-JavaSE"
-KEYWORDS="~amd64 ~x86"
 SLOT="1.6"
+KEYWORDS="~amd64 ~x86"
+
 IUSE="X alsa jce nsplugin"
 
 RESTRICT="fetch strip"
@@ -31,17 +33,17 @@ QA_TEXTRELS_x86="
 	opt/${P}/lib/i386/motif21/libmawt.so
 	opt/${P}/lib/i386/server/libjvm.so"
 
-RDEPEND="${DEPEND}
-	!prefix? ( sys-libs/glibc )
-	alsa? ( media-libs/alsa-lib )
+RDEPEND="
 	X? (
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/libXrender
 		x11-libs/libXtst
 		x11-libs/libX11
-	)"
-DEPEND="jce? ( dev-java/sun-jce-bin:1.6 )"
+	)
+	alsa? ( media-libs/alsa-lib )
+	jce? ( dev-java/sun-jce-bin:1.6 )
+	!prefix? ( sys-libs/glibc )"
 
 S="${WORKDIR}/jre${S_PV}"
 
@@ -54,7 +56,7 @@ pkg_nofetch() {
 
 	einfo "Due to Oracle no longer providing the distro-friendly DLJ bundles, the package has become fetch restricted again."
 	einfo "Alternatives are switching to dev-java/icedtea-bin or the source-based dev-java/icedtea:6"
-
+	einfo ""
 	einfo "Please download ${AT} from:"
 	einfo "${JRE_URI}"
 	einfo "and move it to ${DISTDIR}"
@@ -71,9 +73,9 @@ src_compile() {
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"
 	if use x86; then
-		"${S}"/bin/java -client -Xshare:dump || die
+		bin/java -client -Xshare:dump || die
 	fi
-	"${S}"/bin/java -server -Xshare:dump || die
+	bin/java -server -Xshare:dump || die
 }
 
 src_install() {
@@ -116,16 +118,17 @@ src_install() {
 		install_mozilla_plugin /opt/${P}/lib/${arch}/libnpjp2.so
 	fi
 
-	# Install desktop file for the Java Control Panel. Using VMHANDLE as file
-	# name to prevent file collision with jdk and or other slots.
-	[[ -f "${ED}"/opt/${P}/lib/desktop/applications/sun_java.desktop ]] || die
-	sed -e "s/\(Name=\)Java/\1 Java Control Panel for Oracle JRE ${SLOT} (sun-jre-bin)/" \
+	# Install desktop file for the Java Control Panel.
+	# Using ${PN}-${SLOT} to prevent file collision with jre and or other slots.
+	# make_desktop_entry can't be used as ${P} would end up in filename.
+	newicon lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png \
+		sun-jcontrol-${PN}-${SLOT}.png || die
+	sed -e "s#Name=.*#Name=Java Control Panel for Oracle JDK ${SLOT} (${PN})#" \
 		-e "s#Exec=.*#Exec=/opt/${P}/bin/jcontrol#" \
-		-e "s#Icon=.*#Icon=/opt/${P}/lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png#" \
-		"${ED}"/opt/${P}/lib/desktop/applications/sun_java.desktop > \
-		"${T}"/${VMHANDLE}.desktop
-
-	domenu "${T}"/${VMHANDLE}.desktop
+		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}.png#" \
+		lib/desktop/applications/sun_java.desktop > \
+		"${T}"/jcontrol-${PN}-${SLOT}.desktop || die
+	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
 
 	# bug #56444
 	cp "${FILESDIR}"/fontconfig.Gentoo.properties-r1 "${T}"/fontconfig.properties || die
