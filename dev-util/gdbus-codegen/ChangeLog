@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.8 2012/01/18 20:11:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.9 2012/02/16 17:26:09 binki Exp $
+
+  16 Feb 2012; Nathan Phillip Brink <binki@gentoo.org>
+  gdbus-codegen-2.30.2.ebuild:
+  Add ~amd64-linux keyword, tested on ubuntu 10.
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> gdbus-codegen-2.30.2.ebuild:
   arm stable, bug #393007
