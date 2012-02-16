@@ -1,6 +1,11 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.62 2012/01/06 19:18:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.63 2012/02/16 20:51:02 pesa Exp $
+
+  16 Feb 2012; Davide Pesavento <pesa@gentoo.org>
+  -files/minitube-1.5-use-correct-env-variable.patch, -minitube-1.5-r1.ebuild,
+  minitube-1.7.ebuild:
+  Cleanup 1.7 ebuild; remove old and unused 1.5-r1.
 
 *minitube-1.7 (06 Jan 2012)
 
