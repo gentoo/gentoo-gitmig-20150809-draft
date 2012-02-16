@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r1.ebuild,v 1.1 2012/02/08 01:08:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r1.ebuild,v 1.2 2012/02/16 06:50:30 jer Exp $
 
 EAPI="4"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="a generic, highly customizable, and efficient menu for the X Window System"
-HOMEPAGE="http://www.suckless.org/programs/dmenu.html"
+HOMEPAGE="http://tools.suckless.org/dmenu/"
 SRC_URI="http://dl.suckless.org/tools/${P}.tar.gz"
 
 LICENSE="MIT"
