@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.98 2012/02/14 07:17:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.99 2012/02/16 17:41:43 zorry Exp $
+
+*virtualbox-4.1.8-r1 (16 Feb 2012)
+
+  16 Feb 2012; Magnus Granberg <zorry@gentoo.org> +virtualbox-4.1.8-r1.ebuild,
+  +files/virtualbox_nopie.patch:
+  Fix compile error for hardened bug 339914
 
   14 Feb 2012; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.1.8.ebuild:
   Use jre-1.6/jdk-1.6 for java bindings. This should fix bug #396271 and
