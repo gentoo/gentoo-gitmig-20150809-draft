@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/libmrss-0.19.2.ebuild,v 1.5 2012/02/06 16:07:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/libmrss-0.19.2.ebuild,v 1.6 2012/02/16 19:03:51 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.autistici.org/bakunin/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc examples static-libs"
 
 RDEPEND=">=net-libs/libnxml-0.18.0
