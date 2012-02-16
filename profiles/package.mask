@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13489 2012/02/14 21:59:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13490 2012/02/16 08:27:06 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (10 Feb 2012)
+# is included in current pymol
+sci-chemistry/pymol-plugins-cealign
 
 # Bernard Cafarelli <voyageur@gentoo.org> (14 Feb 2012)
 # Does not compile with new Objective-C runtimes
