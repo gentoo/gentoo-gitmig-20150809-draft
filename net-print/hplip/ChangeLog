@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.211 2012/02/08 19:29:59 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.212 2012/02/16 19:35:13 billie Exp $
+
+*hplip-3.12.2-r1 (16 Feb 2012)
+
+  16 Feb 2012; Daniel Pielmeier <billie@gentoo.org> +hplip-3.12.2-r1.ebuild,
+  +files/hplip-3.12.2-minimal.patch:
+  Add a patch to fix minimal build with hpijs disabled and hpcups enabled. This
+  should fix bug #402727. Thanks to Francisco Vazquez for the report. Correct
+  other USE="minmal" related issues.
 
   08 Feb 2012; Daniel Pielmeier <billie@gentoo.org>
   files/hplip-3.11.12-fast-pp.patch:
