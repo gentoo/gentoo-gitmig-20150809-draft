@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cpdvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.14 2012/02/03 17:50:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.15 2012/02/16 18:57:21 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> cpdvd-1.10-r1.ebuild:
+  x86 stable wrt bug #397115
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> cpdvd-1.10-r1.ebuild:
   Stable for amd64, wrt bug #397115
