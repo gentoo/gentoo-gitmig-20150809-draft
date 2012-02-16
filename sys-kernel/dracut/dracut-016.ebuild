@@ -1,22 +1,31 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-016.ebuild,v 1.1 2012/02/15 18:38:30 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-016.ebuild,v 1.2 2012/02/16 17:51:18 aidecoe Exp $
 
 EAPI=4
 
 inherit eutils linux-info
 
+add_req_use_for() {
+	local dep="$1"; shift
+	local f
+
+	for f in "$@"; do
+		REQUIRED_USE+="${f}? ( ${dep} )
+"
+	done
+}
+
 DESCRIPTION="Generic initramfs generation tool"
 HOMEPAGE="http://dracut.wiki.kernel.org"
 SRC_URI="mirror://kernel/linux/utils/boot/${PN}/${P}.tar.bz2"
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-REQUIRED_USE="dracut_modules_livenet? ( dracut_modules_dmsquash-live )
-	dracut_modules_crypt-gpg? ( dracut_modules_crypt )
-	"
+KEYWORDS="~amd64 ~x86"
 
+REQUIRED_USE="dracut_modules_crypt-gpg? ( dracut_modules_crypt )
+	dracut_modules_livenet? ( dracut_modules_dmsquash-live )
+	"
 COMMON_MODULES="
 	dracut_modules_biosdevname
 	dracut_modules_btrfs
@@ -28,12 +37,6 @@ COMMON_MODULES="
 	dracut_modules_plymouth
 	dracut_modules_syslog
 	"
-NETWORK_MODULES="
-	dracut_modules_iscsi
-	dracut_modules_livenet
-	dracut_modules_nbd
-	dracut_modules_nfs
-	"
 DM_MODULES="
 	dracut_modules_crypt
 	dracut_modules_dmraid
@@ -41,12 +44,19 @@ DM_MODULES="
 	dracut_modules_livenet
 	dracut_modules_lvm
 	"
+NETWORK_MODULES="
+	dracut_modules_iscsi
+	dracut_modules_livenet
+	dracut_modules_nbd
+	dracut_modules_nfs
+	dracut_modules_ssh-client
+	"
+add_req_use_for dm ${DM_MODULES}
+add_req_use_for net ${NETWORK_MODULES}
 IUSE_DRACUT_MODULES="${COMMON_MODULES} ${DM_MODULES} ${NETWORK_MODULES}"
-IUSE="debug selinux ${IUSE_DRACUT_MODULES}"
-RESTRICT="test"
+IUSE="debug dm net selinux ${IUSE_DRACUT_MODULES}"
 
-NETWORK_DEPS=">=net-misc/dhcp-4.2.1-r1 sys-apps/iproute2"
-DM_DEPS="|| ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 )"
+RESTRICT="test"
 
 RDEPEND="
 	>=app-shells/bash-4.0
@@ -59,22 +69,24 @@ RDEPEND="
 	app-arch/cpio
 
 	debug? ( dev-util/strace )
+	dm? ( || ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 ) )
+	net? ( net-misc/curl >=net-misc/dhcp-4.2.1-r1 sys-apps/iproute2 )
 	selinux? ( sys-libs/libselinux sys-libs/libsepol )
 	dracut_modules_biosdevname? ( sys-apps/biosdevname )
 	dracut_modules_btrfs? ( sys-fs/btrfs-progs )
 	dracut_modules_caps? ( sys-libs/libcap )
-	dracut_modules_crypt? ( sys-fs/cryptsetup ${DM_DEPS} )
+	dracut_modules_crypt? ( sys-fs/cryptsetup )
 	dracut_modules_crypt-gpg? ( app-crypt/gnupg )
-	dracut_modules_dmraid? ( sys-fs/dmraid sys-fs/multipath-tools ${DM_DEPS} )
-	dracut_modules_dmsquash-live? ( ${DM_DEPS} )
+	dracut_modules_dmraid? ( sys-fs/dmraid sys-fs/multipath-tools )
 	dracut_modules_gensplash? ( media-gfx/splashutils )
-	dracut_modules_iscsi? ( >=sys-block/open-iscsi-2.0.871.3 ${NETWORK_DEPS} )
+	dracut_modules_iscsi? ( >=sys-block/open-iscsi-2.0.871.3 )
 	dracut_modules_lvm? ( >=sys-fs/lvm2-2.02.33 )
 	dracut_modules_mdraid? ( sys-fs/mdadm )
 	dracut_modules_multipath? ( sys-fs/multipath-tools )
-	dracut_modules_nbd? ( sys-block/nbd ${NETWORK_DEPS} )
-	dracut_modules_nfs? ( net-fs/nfs-utils net-nds/rpcbind ${NETWORK_DEPS} )
+	dracut_modules_nbd? ( sys-block/nbd )
+	dracut_modules_nfs? ( net-fs/nfs-utils net-nds/rpcbind )
 	dracut_modules_plymouth? ( >=sys-boot/plymouth-0.8.3-r1 )
+	dracut_modules_ssh-client? ( dev-libs/openssl )
 	dracut_modules_syslog? ( || ( app-admin/syslog-ng app-admin/rsyslog ) )
 	"
 DEPEND="
@@ -112,9 +124,9 @@ rm_module() {
 
 	for m in $@; do
 		if [[ $m =~ ^[0-9][0-9][^\ ]*$ ]]; then
-			rm -rf "${modules_dir}"/$m
+			rm --interactive=never -r "${modules_dir}"/$m
 		else
-			rm -rf "${modules_dir}"/[0-9][0-9]$m
+			rm --interactive=never -r "${modules_dir}"/[0-9][0-9]$m
 		fi
 	done
 }
@@ -181,8 +193,10 @@ src_install() {
 	use debug || rm_module 95debug
 	use selinux || rm_module 98selinux
 
-	! any_module ${DM_MODULES} && rm_module 90dm
-	! any_module ${NETWORK_MODULES} && rm_module 45ifcfg 40network
+	# Following flags define set of helper modules which are base dependencies
+	# for others and as so have no practical use, so remove these modules.
+	use dm  || rm_module 90dm
+	use net || rm_module 40network 45ifcfg 45url-lib
 
 	# Remove S/390 modules which are not tested at all
 	rm_module 95dasd 95dasd_mod 95zfcp 95znet
