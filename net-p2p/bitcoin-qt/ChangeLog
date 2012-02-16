@@ -1,5 +1,12 @@
 
 
+*bitcoin-qt-0.5.3_rc2 (16 Feb 2012)
+*bitcoin-qt-0.5.0.4_rc2 (16 Feb 2012)
+
+  16 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.0.4_rc2.ebuild, +bitcoin-qt-0.5.3_rc2.ebuild:
+  Moved from luke-jr's bitcoin overlay
+
 *bitcoin-qt-0.5.2-r1 (08 Feb 2012)
 *bitcoin-qt-0.5.0.3-r1 (08 Feb 2012)
 
