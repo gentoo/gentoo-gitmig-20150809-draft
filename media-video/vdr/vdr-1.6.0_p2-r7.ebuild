@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r7.ebuild,v 1.4 2012/02/15 17:57:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r7.ebuild,v 1.5 2012/02/16 14:55:48 hd_brummy Exp $
 
 EAPI="4"
 
@@ -44,6 +44,9 @@ KEYWORDS="~arm ~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
+REQUIRED_USE="setup? ( !menuorg )
+			menuorg? ( !setup )"
+
 COMMON_DEPEND="virtual/jpeg
 	sys-libs/libcap
 	>=media-libs/fontconfig-2.4.2
@@ -63,26 +66,15 @@ RDEPEND="${COMMON_DEPEND}
 
 # pull in vdr-setup to get the xml files, else menu will not work
 PDEPEND="setup? ( >=media-plugins/vdr-setup-0.3.1-r4 )
-		dxr3? ( >=media-plugins/vdr-dxr3-0.2.12 ) "
+		dxr3? ( >=media-plugins/vdr-dxr3-0.2.13 ) "
 
 CONF_DIR=/etc/vdr
 CAP_FILE=${S}/capabilities.sh
 CAPS="# Capabilities of the vdr-executable for use by startscript etc."
 
 pkg_setup() {
-	check_menu_flags
-
 	use debug && append-flags -g
 	PLUGIN_LIBDIR="/usr/$(get_libdir)/vdr/plugins"
-}
-
-check_menu_flags() {
-	if use menuorg && use setup; then
-		echo
-		eerror "Please use only one of this USE-Flags"
-		eerror "\tmenuorg setup"
-		die "multiple menu manipulation"
-	fi
 }
 
 add_cap() {
