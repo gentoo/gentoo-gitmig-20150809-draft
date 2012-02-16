@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.1.ebuild,v 1.2 2011/11/12 21:06:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.3-r1.ebuild,v 1.1 2012/02/16 03:10:04 vapier Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs
@@ -11,8 +11,7 @@ SRC_URI="mirror://kernel/linux/utils/raid/mdadm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-# until it's safe !
-#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static"
 
 DEPEND=""
@@ -24,10 +23,8 @@ RDEPEND="!<sys-apps/baselayout-2
 RESTRICT="test"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.0-dont-make-man.patch
-	epatch "${FILESDIR}"/${PN}-3.2.1-syslog-updates.patch
 	epatch "${FILESDIR}"/${PN}-3.2.1-mdassemble.patch #211426
-	epatch "${FILESDIR}"/${PN}-3.1.5-cflags.patch #336175
+	epatch "${FILESDIR}"/${PN}-3.2.3-segv-assemble.patch #211426
 }
 
 mdadm_emake() {
@@ -70,8 +67,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "If using baselayout-2 and not relying on kernel auto-detect"
-	elog "of your RAID devices, you need to add 'mdraid' to your 'boot'"
-	elog "runlevel. Run the following command:"
+	elog "If you're not relying on kernel auto-detect of your RAID devices,"
+	elog "you need to add 'mdraid' to your 'boot' runlevel:"
 	elog "rc-update add mdraid boot"
 }

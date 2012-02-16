@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.148 2012/02/02 17:18:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.149 2012/02/16 03:10:04 vapier Exp $
+
+*mdadm-3.2.3-r1 (16 Feb 2012)
+
+  16 Feb 2012; Mike Frysinger <vapier@gentoo.org> -mdadm-3.2.1.ebuild,
+  -files/mdadm-3.2.1-syslog-updates.patch, -mdadm-3.2.3.ebuild,
+  +mdadm-3.2.3-r1.ebuild, +files/mdadm-3.2.3-segv-assemble.patch:
+  Fix by Nikita Kozlov for segfault when assembling #403593.
 
   02 Feb 2012; Mike Frysinger <vapier@gentoo.org> mdadm-3.2.3.ebuild:
   Move into ~arch.
