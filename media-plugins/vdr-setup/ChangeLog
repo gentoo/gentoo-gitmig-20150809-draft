@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-setup
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.26 2011/10/24 17:45:49 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.27 2012/02/16 17:31:18 hd_brummy Exp $
+
+  16 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-setup-0.3.1-r4.ebuild:
+  stable x86 amd64
 
   24 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-setup-0.3.1-r4.ebuild:
