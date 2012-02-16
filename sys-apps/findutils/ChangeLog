@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.198 2011/07/05 21:12:54 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.199 2012/02/16 22:26:56 vapier Exp $
+
+  16 Feb 2012; Mike Frysinger <vapier@gentoo.org> findutils-4.4.2-r1.ebuild,
+  +files/findutils-4.4.2-gnulib-date-x32.patch:
+  Add minor patch for building for x32 targets.
 
   05 Jul 2011; Alexis Ballier <aballier@gentoo.org> findutils-4.5.10-r1.ebuild:
   keyword ~sparc-fbsd; untested but should work as it works on sparc and

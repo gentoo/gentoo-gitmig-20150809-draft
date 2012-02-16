@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.4.2-r1.ebuild,v 1.1 2011/07/05 21:08:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.4.2-r1.ebuild,v 1.2 2012/02/16 22:26:56 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gnulib-date-x32.patch
 
 	# Don't build or install locate because it conflicts with slocate,
 	# which is a secure version of locate.  See bug 18729
