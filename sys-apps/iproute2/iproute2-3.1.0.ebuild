@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.1.0.ebuild,v 1.3 2011/12/05 20:59:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.1.0.ebuild,v 1.4 2012/02/16 05:21:31 vapier Exp $
 
 EAPI="4"
 
@@ -36,6 +36,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.0-mtu.patch #291907
 
 	sed -i \
+		-e '/^CC =/d' \
 		-e "/^LIBDIR/s:=.*:=/$(get_libdir):" \
 		-e "s:-O2:${CFLAGS} ${CPPFLAGS}:" \
 		Makefile || die
