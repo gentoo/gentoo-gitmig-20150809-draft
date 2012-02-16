@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lsx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/ChangeLog,v 1.7 2007/07/23 08:41:05 opfer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/ChangeLog,v 1.8 2012/02/16 06:59:31 jer Exp $
+
+  16 Feb 2012; Jeroen Roovers <jer@gentoo.org> lsx-0.1.ebuild:
+  Fix HOMEPAGE.
 
   23 Jul 2007; Christian Faulhammer <opfer@gentoo.org> lsx-0.1.ebuild:
   stable x86, bug 185317
