@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Sys-Virt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/ChangeLog,v 1.5 2012/01/08 18:02:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/ChangeLog,v 1.6 2012/02/16 14:55:50 tove Exp $
+
+*Sys-Virt-0.9.10 (16 Feb 2012)
+
+  16 Feb 2012; Torsten Veller <tove@gentoo.org> +Sys-Virt-0.9.10.ebuild:
+  Version bump
 
 *Sys-Virt-0.9.8 (08 Jan 2012)
 
