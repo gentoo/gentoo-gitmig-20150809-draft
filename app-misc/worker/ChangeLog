@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.100 2012/02/15 16:46:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.101 2012/02/16 19:23:14 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> worker-2.18.1.ebuild:
+  x86 stable wrt bug #399945
 
   15 Feb 2012; Brent Baude <ranger@gentoo.org> worker-2.18.1.ebuild:
   Marking worker-2.18.1 ppc for bug 399945
