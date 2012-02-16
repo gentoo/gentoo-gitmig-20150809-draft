@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/killproc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.20 2012/02/05 13:44:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.21 2012/02/16 19:32:17 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> killproc-2.13.ebuild:
+  x86 stable wrt bug #396753
 
   05 Feb 2012; Brent Baude <ranger@gentoo.org> killproc-2.13.ebuild:
   Marking killproc-2.13 ppc for bug 396753
