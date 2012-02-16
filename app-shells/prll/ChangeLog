@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/prll
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.14 2012/02/16 18:20:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.15 2012/02/16 20:06:43 jlec Exp $
+
+  16 Feb 2012; Justin Lecher <jlec@gentoo.org> Manifest:
+  Drop old
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> prll-0.6.2.ebuild:
   x86 stable wrt bug #401091
