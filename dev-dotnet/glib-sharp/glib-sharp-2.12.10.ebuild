@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glib-sharp/glib-sharp-2.12.10.ebuild,v 1.4 2010/09/12 04:28:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glib-sharp/glib-sharp-2.12.10.ebuild,v 1.5 2012/02/16 12:06:28 pacho Exp $
 
-EAPI=2
+EAPI="4"
 
 inherit gtk-sharp-module
 
@@ -11,3 +11,5 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 RESTRICT="test"
+
+PATCHES=( "${FILESDIR}/${PN}-2.12.10-glib-header.patch" )
