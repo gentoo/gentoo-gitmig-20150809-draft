@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/xbatt-1.2.1-r1.ebuild,v 1.2 2012/02/03 22:06:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/xbatt-1.2.1-r1.ebuild,v 1.3 2012/02/16 19:35:54 phajdan.jr Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.clave.gr.jp/~eto/xbatt/${P}.tar.gz"
 
 LICENSE="|| ( as-is BSD )"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
