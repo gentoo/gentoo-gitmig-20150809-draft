@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r2.ebuild,v 1.1 2012/02/03 14:29:44 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r3.ebuild,v 1.1 2012/02/16 11:35:09 voyageur Exp $
 
 EAPI=3
 
@@ -101,7 +101,7 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=${CXX_PATH}/include/g++-v4"
 		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-arch=$CHOST"
 		if has_multilib_profile; then
-			CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-32bit-dir=32"
+			CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-32bit-dir=/32"
 		fi
 	fi
 
