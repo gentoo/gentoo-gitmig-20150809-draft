@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-glint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-glint/ChangeLog,v 1.55 2012/02/15 19:11:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-glint/ChangeLog,v 1.56 2012/02/16 04:21:54 mattst88 Exp $
+
+*xf86-video-glint-1.2.7 (16 Feb 2012)
+
+  16 Feb 2012; Matt Turner <mattst88@gentoo.org>
+  +xf86-video-glint-1.2.7.ebuild:
+  Version bump.
 
   15 Feb 2012; Brent Baude <ranger@gentoo.org> xf86-video-glint-1.2.6.ebuild:
   Marking xf86-video-glint-1.2.6 ppc stable for bug 394393
