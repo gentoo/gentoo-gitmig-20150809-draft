@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.2.51.ebuild,v 1.2 2012/02/16 13:25:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.2.51.ebuild,v 1.3 2012/02/16 20:40:51 jlec Exp $
 
 EAPI="4"
 
@@ -23,13 +23,15 @@ QA_EXECSTACK_amd64="opt/dropbox/_ctypes.so"
 
 DEPEND=""
 # Be sure to have GLIBCXX_3.4.9, #393125
-RDEPEND="
-	dev-libs/popt
-	dev-libs/openssl:0.9.8
-	>=sys-devel/gcc-4.2.0
-	net-misc/wget
-	net-misc/rsync
-	media-libs/libpng:1.2"
+RDEPEND=""
+# statically linked this time
+#
+#	dev-libs/popt
+#	dev-libs/openssl:0.9.8
+#	>=sys-devel/gcc-4.2.0
+#	net-misc/wget
+#	net-misc/rsync
+#	media-libs/libpng:1.2"
 
 src_unpack() {
 	unpack ${A}
@@ -38,7 +40,7 @@ src_unpack() {
 	cd "${S}"/src
 	rm -vf libstdc++.so.6 libz* libssl* libbz2* libpopt.so.0 librsync.so.1 libcrypto.so.0.9.8 libpng12.so.0 || die
 	pax-mark cm "${S}/src/dropbox"
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 }
 
 src_install() {
