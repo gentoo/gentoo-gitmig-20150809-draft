@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-cairo/pecl-cairo-0.3.1.ebuild,v 1.1 2012/02/16 11:19:04 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-cairo/pecl-cairo-0.3.1.ebuild,v 1.2 2012/02/16 16:56:12 mr_bones_ Exp $
 
 PHP_EXT_NAME="cairo"
 PHP_EXT_INI="yes"
@@ -27,7 +27,7 @@ IUSE=""
 src_unpack()  {
 
 	unpack ${A}
-	#Cairo is very silly. 
+	#Cairo is very silly.
 	mv "${WORKDIR}/Cairo-${MY_PV}" "${WORKDIR}/cairo-${MY_PV}" || die "Failed to move"
 	local slot orig_s="${PHP_EXT_S}"
 	for slot in $(php_get_slots); do
