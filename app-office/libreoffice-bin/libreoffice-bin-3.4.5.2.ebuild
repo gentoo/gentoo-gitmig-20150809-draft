@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2.ebuild,v 1.1 2012/02/15 10:03:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2.ebuild,v 1.2 2012/02/16 08:55:36 scarabeus Exp $
 
 EAPI=4
 
@@ -144,6 +144,10 @@ src_compile() { :; }
 src_install() {
 	dodir /usr
 	cp -aR "${S}"/usr/* "${ED}"/usr/
+
+	# prevent revdep-rebuild from attempting to rebuild all the time
+	insinto /etc/revdep-rebuild && doins "${T}/50-${PN}"
+
 }
 
 pkg_preinst() {
