@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407-r2.ebuild,v 1.2 2012/02/03 16:54:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/txw2-runtime-20070407-r2.ebuild,v 1.3 2012/02/16 18:01:39 phajdan.jr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="https://txw.dev.java.net/files/documents/3310/54821/txw2-${PV}.zip"
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="java-virtuals/stax-api"
