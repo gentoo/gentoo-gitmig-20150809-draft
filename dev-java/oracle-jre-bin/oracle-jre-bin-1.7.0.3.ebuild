@@ -1,21 +1,20 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.1-r1.ebuild,v 1.2 2011/11/21 10:45:21 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.3.ebuild,v 1.1 2012/02/16 09:52:25 sera Exp $
 
 EAPI="4"
 
 inherit java-vm-2 eutils prefix versionator
 
 UPDATE="$(get_version_component_range 4)"
-UPDATE="${UPDATE#0}"
 MY_PV="$(get_version_component_range 2)u${UPDATE}"
 S_PV="$(get_version_component_range 1-3)_0${UPDATE}"
 
 X86_AT="jre-${MY_PV}-linux-i586.tar.gz"
 AMD64_AT="jre-${MY_PV}-linux-x64.tar.gz"
 
-# check the URIs when bumping, no idea about their stability yet
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre-7u1-download-513652.html"
+# This URIs need updating when bumping!
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre-7u3-download-1501631.html"
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 
 JCE_DIR="UnlimitedJCEPolicy"
@@ -23,30 +22,34 @@ JCE_FILE="${JCE_DIR}JDK7.zip"
 
 DESCRIPTION="Oracle's Java SE Runtime Environment"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
-SRC_URI="x86? ( ${X86_AT} )
+SRC_URI="
+	x86? ( ${X86_AT} )
 	amd64? ( ${AMD64_AT} )
 	jce? ( ${JCE_FILE} )"
-SLOT="1.7"
+
 LICENSE="Oracle-BCLA-JavaSE"
+SLOT="1.7"
 KEYWORDS="~amd64 ~x86"
-RESTRICT="fetch strip"
+
 IUSE="X alsa jce nsplugin"
+RESTRICT="fetch strip"
 
-QA_TEXTRELS_x86="
-	opt/${P}/lib/i386/client/libjvm.so
-	opt/${P}/lib/i386/server/libjvm.so"
-
-DEPEND="jce? ( app-arch/unzip )"
-RDEPEND="${DEPEND}
-	!prefix? ( sys-libs/glibc )
-	alsa? ( media-libs/alsa-lib )
+RDEPEND="
 	X? (
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/libXrender
 		x11-libs/libXtst
 		x11-libs/libX11
-	)"
+	)
+	alsa? ( media-libs/alsa-lib )
+	!prefix? ( sys-libs/glibc )"
+DEPEND="
+	jce? ( app-arch/unzip )"
+
+QA_TEXTRELS_x86="
+	opt/${P}/lib/i386/client/libjvm.so
+	opt/${P}/lib/i386/server/libjvm.so"
 
 S="${WORKDIR}/jre${S_PV}"
 
@@ -63,7 +66,7 @@ pkg_nofetch() {
 
 	if use jce; then
 		einfo "Also download ${JCE_FILE} from:"
-		einfo ${JCE_URI}
+		einfo "${JCE_URI}"
 		einfo "and move it to ${DISTDIR}"
 	fi
 }
@@ -81,9 +84,9 @@ src_compile() {
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"
 	if use x86; then
-		"${S}"/bin/java -client -Xshare:dump || die
+		bin/java -client -Xshare:dump || die
 	fi
-	"${S}"/bin/java -server -Xshare:dump || die
+	bin/java -server -Xshare:dump || die
 
 	# Create files used as storage for system preferences.
 	mkdir .systemPrefs || die
@@ -122,25 +125,26 @@ src_install() {
 		mv "${ED}"/opt/${P}/lib/security/local_policy.jar \
 			"${ED}"/opt/${P}/lib/security/strong-jce || die
 		dosym /opt/${P}/lib/security/${JCE_DIR}/US_export_policy.jar \
-			/opt/${P}/lib/security/
+			/opt/${P}/lib/security/US_export_policy.jar
 		dosym /opt/${P}/lib/security/${JCE_DIR}/local_policy.jar \
-			/opt/${P}/lib/security/
+			/opt/${P}/lib/security/local_policy.jar
 	fi
 
 	if use nsplugin; then
 		install_mozilla_plugin /opt/${P}/lib/${arch}/libnpjp2.so
 	fi
 
-	# Install desktop file for the Java Control Panel. Using VMHANDLE as file
-	# name to prevent file collision with jre and or other slots.
-	[[ -f "${ED}"/opt/${P}/lib/desktop/applications/sun_java.desktop ]] || die
-	sed -e "s/\(Name=\)Java/\1 Java Control Panel for Oracle JRE ${SLOT}/" \
+	# Install desktop file for the Java Control Panel.
+	# Using ${PN}-${SLOT} to prevent file collision with jre and or other slots.
+	# make_desktop_entry can't be used as ${P} would end up in filename.
+	newicon lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png \
+		sun-jcontrol-${PN}-${SLOT}.png || die
+	sed -e "s#Name=.*#Name=Java Control Panel for Oracle JRE ${SLOT}#" \
 		-e "s#Exec=.*#Exec=/opt/${P}/bin/jcontrol#" \
-		-e "s#Icon=.*#Icon=/opt/${P}/lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png#" \
-		"${ED}"/opt/${P}/lib/desktop/applications/sun_java.desktop > \
-		"${T}"/${VMHANDLE}.desktop
-
-	domenu "${T}"/${VMHANDLE}.desktop
+		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}.png#" \
+		lib/desktop/applications/sun_java.desktop > \
+		"${T}"/jcontrol-${PN}-${SLOT}.desktop || die
+	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
 
 	# bug #56444
 	cp "${FILESDIR}"/fontconfig.Gentoo.properties "${T}"/fontconfig.properties || die
