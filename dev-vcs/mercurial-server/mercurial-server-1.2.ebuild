@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial-server/mercurial-server-1.2.ebuild,v 1.1 2012/02/16 01:33:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial-server/mercurial-server-1.2.ebuild,v 1.2 2012/02/16 01:36:12 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ else
 	MY_P="${PN}_${PV}"
 	SRC_URI="http://dev.lshift.net/paul/mercurial-server/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-	S="${WORKDIR}/${MY_P}"
+	S="${WORKDIR}/${MY_P}.orig"
 fi
 
 DESCRIPTION="Mercurial authentication and authorization tools"
