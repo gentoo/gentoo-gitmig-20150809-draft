@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.24 2012/01/19 10:12:44 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.25 2012/02/16 11:25:38 olemarkus Exp $
 
 # @ECLASS: php-ext-source-r2.eclass
 # @MAINTAINER:
@@ -104,7 +104,7 @@ php-ext-source-r2_src_unpack() {
 	unpack ${A}
 	local slot orig_s="${PHP_EXT_S}"
 	for slot in $(php_get_slots); do
-		cp -r "${orig_s}" "${WORKDIR}/${slot}"
+		cp -r "${orig_s}" "${WORKDIR}/${slot}" || die "Failed to copy source ${orig_s} to PHP target directory"
 	done
 }
 
