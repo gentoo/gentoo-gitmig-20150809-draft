@@ -1,23 +1,24 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.29-r1.ebuild,v 1.3 2011/12/16 07:26:39 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.31.ebuild,v 1.1 2012/02/16 10:43:38 sera Exp $
 
 EAPI="4"
 
 inherit java-vm-2 eutils prefix versionator
+
+# This URIs need to be updated when bumping!
+JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u31-download-1501634.html"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
 
 X86_AT="jdk-${MY_PV}-linux-i586.bin"
 AMD64_AT="jdk-${MY_PV}-linux-x64.bin"
+IA64_AT="jdk-${MY_PV}-linux-ia64.bin"
 SOL_X86_AT="jdk-${MY_PV}-solaris-i586.sh"
 SOL_AMD64_AT="jdk-${MY_PV}-solaris-x64.sh"
 SOL_SPARC_AT="jdk-${MY_PV}-solaris-sparc.sh"
 SOL_SPARCv9_AT="jdk-${MY_PV}-solaris-sparcv9.sh"
-
-# check the URIs when bumping, no idea about their stability yet
-JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk-${MY_PV}-download-513648.html"
 
 DESCRIPTION="Oracle's Java SE Development Kit"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
@@ -29,9 +30,10 @@ SRC_URI="x86? ( ${X86_AT} )
 	sparc64-solaris? ( ${SOL_SPARC_AT} ${SOL_SPARCv9_AT} )"
 
 LICENSE="Oracle-BCLA-JavaSE"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="1.6"
-IUSE="X alsa derby doc examples jce kernel_Solaris nsplugin"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+
+IUSE="X alsa derby doc examples jce kernel_SunOS nsplugin +source"
 
 RESTRICT="fetch strip"
 QA_TEXTRELS_x86="
@@ -39,19 +41,19 @@ QA_TEXTRELS_x86="
 	opt/${P}/jre/lib/i386/motif21/libmawt.so
 	opt/${P}/jre/lib/i386/server/libjvm.so"
 
-RDEPEND="${DEPEND}
-	doc? ( dev-java/java-sdk-docs:1.6.0 )
-	!prefix? ( sys-libs/glibc )
-	kernel_Solaris? ( app-arch/unzip )
-	alsa? ( media-libs/alsa-lib )
+RDEPEND="
 	X? (
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/libXrender
 		x11-libs/libXtst
 		x11-libs/libX11
-	)"
-DEPEND="jce? ( dev-java/sun-jce-bin:1.6 )"
+	)
+	alsa? ( media-libs/alsa-lib )
+	doc? ( dev-java/java-sdk-docs:1.6.0 )
+	jce? ( dev-java/sun-jce-bin:1.6 )
+	kernel_SunOS? ( app-arch/unzip )
+	!prefix? ( sys-libs/glibc )"
 
 S="${WORKDIR}/jdk${S_PV}"
 
@@ -60,6 +62,8 @@ pkg_nofetch() {
 		AT=${X86_AT}
 	elif use amd64; then
 		AT=${AMD64_AT}
+	elif use ia64; then
+		AT=${IA64_AT}
 	elif use x86-solaris; then
 		AT=${SOL_X86_AT}
 	elif use x64-solaris; then
@@ -72,7 +76,7 @@ pkg_nofetch() {
 
 	einfo "Due to Oracle no longer providing the distro-friendly DLJ bundles, the package has become fetch restricted again."
 	einfo "Alternatives are switching to dev-java/icedtea-bin:6 or the source-based dev-java/icedtea:6"
-
+	einfo ""
 	einfo "Please download ${AT} from:"
 	einfo "${JDK_URI}"
 	einfo "and move it to ${DISTDIR}"
@@ -101,9 +105,9 @@ src_compile() {
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"
 	if use x86; then
-		"${S}"/bin/java -client -Xshare:dump || die
+		bin/java -client -Xshare:dump || die
 	fi
-	"${S}"/bin/java -server -Xshare:dump || die
+	bin/java -server -Xshare:dump || die
 }
 
 src_install() {
@@ -123,7 +127,7 @@ src_install() {
 	fi
 
 	dodir /opt/${P}
-	cp -pPR bin include jre lib man src.zip "${ED}"/opt/${P} || die
+	cp -pPR bin include jre lib man "${ED}"/opt/${P} || die
 
 	if use derby; then
 		cp -pPR db "${ED}"/opt/${P} || die
@@ -155,16 +159,21 @@ src_install() {
 		install_mozilla_plugin /opt/${P}/jre/lib/${arch}/libnpjp2.so
 	fi
 
-	# Install desktop file for the Java Control Panel. Using VMHANDLE as file
-	# name to prevent file collision with jre and or other slots.
-	[[ -f "${ED}"/opt/${P}/jre/lib/desktop/applications/sun_java.desktop ]] || die
-	sed -e "s/\(Name=\)Java/\1 Java Control Panel for Oracle JDK ${SLOT} (sun-jdk)/" \
-		-e "s#Exec=.*#Exec=/opt/${P}/jre/bin/jcontrol#" \
-		-e "s#Icon=.*#Icon=/opt/${P}/jre/lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png#" \
-		"${ED}"/opt/${P}/jre/lib/desktop/applications/sun_java.desktop > \
-		"${T}"/${VMHANDLE}.desktop
+	if use source; then
+		cp src.zip "${ED}"/opt/${P} || die
+	fi
 
-	domenu "${T}"/${VMHANDLE}.desktop
+	# Install desktop file for the Java Control Panel.
+	# Using ${PN}-${SLOT} to prevent file collision with jre and or other slots.
+	# make_desktop_entry can't be used as ${P} would end up in filename.
+	newicon jre/lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png \
+		sun-jcontrol-${PN}-${SLOT}.png || die
+	sed -e "s#Name=.*#Name=Java Control Panel for Oracle JDK ${SLOT} (sun-jdk)#" \
+		-e "s#Exec=.*#Exec=/opt/${P}/jre/bin/jcontrol#" \
+		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}.png#" \
+		jre/lib/desktop/applications/sun_java.desktop > \
+		"${T}"/jcontrol-${PN}-${SLOT}.desktop || die
+	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
 
 	# bug #56444
 	cp "${FILESDIR}"/fontconfig.Gentoo.properties-r1 "${T}"/fontconfig.properties || die
