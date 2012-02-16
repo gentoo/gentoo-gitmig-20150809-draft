@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.15 2012/01/13 21:18:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.16 2012/02/16 00:27:08 vapier Exp $
 
 int_to_KV() {
 	local version=$1 major minor micro
@@ -70,11 +70,7 @@ unpack_pkg() {
 		fi
 	fi
 	if has ${a}.tar.xz ${A} ; then
-		unpack ${a}.tar.xz
-		if [[ ! -d ${a} ]] ; then
-			# EAPI=0 does not support .xz
-			xz -dc "${DISTDIR}/${a}.tar.xz" | tar xof - || die
-		fi
+		unpacker ${a}.tar.xz
 	else
 		unpack ${a}.tar.bz2
 	fi
