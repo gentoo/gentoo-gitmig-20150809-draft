@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dracut_modules.desc,v 1.5 2011/08/21 10:59:28 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dracut_modules.desc,v 1.6 2012/02/16 10:04:10 aidecoe Exp $
 
 # This file contains descriptions of DRACUT_MODULES USE_EXPAND flags.
 
@@ -20,5 +20,6 @@ multipath - Support Device Mapper multipathing
 plymouth - Plymouth boot splash
 nbd - Support network block devices
 nfs - Support NFS
+ssh-client - Install ssh and scp along with config files and specified keys
 syslog - Enable logging with syslog-ng or rsyslog
 xen - Support for Xen
