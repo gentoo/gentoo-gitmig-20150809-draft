@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2011.04.ebuild,v 1.2 2012/02/16 07:20:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2011.04.ebuild,v 1.3 2012/02/16 08:16:56 patrick Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ inherit eutils multilib
 
 DESCRIPTION="A Perl 6 implementation built on the Parrot virtual machine"
 HOMEPAGE="http://rakudo.org/"
-SRC_URI="github://${PN}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://github/${PN}/${PN}/${P}.tar.gz"
 
 LICENSE="Artistic-2"
 SLOT="0"
