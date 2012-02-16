@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.97 2012/02/11 23:24:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.98 2012/02/16 19:09:18 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  qemu-kvm-0.15.1-r1.ebuild:
+  x86 stable wrt bug #399221
 
   11 Feb 2012; Doug Goldstein <cardoe@gentoo.org> Manifest:
   Enable a few USE flags by default since users will really want this on by

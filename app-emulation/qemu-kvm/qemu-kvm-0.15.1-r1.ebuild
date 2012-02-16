@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1-r1.ebuild,v 1.5 2012/01/22 21:23:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1-r1.ebuild,v 1.6 2012/02/16 19:09:18 phajdan.jr Exp $
 
 #BACKPORTS=1
 
@@ -21,7 +21,7 @@ else
 	${BACKPORTS:+
 		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
 		http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+	KEYWORDS="amd64 ~ppc ~ppc64 x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
