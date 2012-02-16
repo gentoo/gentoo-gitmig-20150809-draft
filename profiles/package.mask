@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13491 2012/02/16 09:27:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13492 2012/02/16 22:18:36 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,32 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Vlastimil Babka <caster@gentoo.org> (16 Feb 2012)
+# Masked for atomic bumping/testing
+~dev-java/ant-core-1.8.2
+~dev-java/ant-antlr-1.8.2
+~dev-java/ant-apache-bcel-1.8.2
+~dev-java/ant-apache-bsf-1.8.2
+~dev-java/ant-apache-log4j-1.8.2
+~dev-java/ant-apache-oro-1.8.2
+~dev-java/ant-apache-regexp-1.8.2
+~dev-java/ant-apache-resolver-1.8.2
+~dev-java/ant-apache-xalan2-1.8.2
+~dev-java/ant-commons-logging-1.8.2
+~dev-java/ant-commons-net-1.8.2
+~dev-java/ant-jai-1.8.2
+~dev-java/ant-javamail-1.8.2
+~dev-java/ant-jdepend-1.8.2
+~dev-java/ant-jmf-1.8.2
+~dev-java/ant-jsch-1.8.2
+~dev-java/ant-junit-1.8.2
+~dev-java/ant-junit4-1.8.2
+~dev-java/ant-nodeps-1.8.2
+~dev-java/ant-swing-1.8.2
+~dev-java/ant-testutil-1.8.2
+~dev-java/ant-trax-1.8.2
+~dev-java/ant-1.8.2
 
 # Justin Lecher <jlec@gentoo.org> (10 Feb 2012)
 # is included in current pymol
