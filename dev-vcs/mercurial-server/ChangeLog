@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial-server
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial-server/ChangeLog,v 1.1 2011/01/13 20:22:42 rafaelmartins Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial-server/ChangeLog,v 1.2 2012/02/16 01:33:50 floppym Exp $
+
+*mercurial-server-1.2 (16 Feb 2012)
+
+  16 Feb 2012; Mike Gilbert <floppym@gentoo.org> +mercurial-server-1.2.ebuild:
+  Version bump by request of maintainer. Bug 391973.
 
 *mercurial-server-9999 (13 Jan 2011)
 *mercurial-server-1.1 (13 Jan 2011)
