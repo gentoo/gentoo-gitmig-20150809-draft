@@ -1,6 +1,11 @@
 # ChangeLog for media-video/miro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.13 2012/01/29 02:22:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.14 2012/02/16 19:43:33 jdhore Exp $
+
+*miro-4.0.6 (16 Feb 2012)
+
+  16 Feb 2012; Jeff Horelick <jdhore@gentoo.org> +miro-4.0.6.ebuild:
+  Version bump. OK'd by volkmar.
 
   29 Jan 2012; Mike Gilbert <floppym@gentoo.org> miro-4.0.1-r1.ebuild,
   miro-4.0.1.ebuild:
