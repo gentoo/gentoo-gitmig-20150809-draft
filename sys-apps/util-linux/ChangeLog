@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.366 2012/01/07 21:33:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.367 2012/02/16 20:10:52 vapier Exp $
+
+*util-linux-2.20.1-r2 (16 Feb 2012)
+
+  16 Feb 2012; Mike Frysinger <vapier@gentoo.org> +util-linux-2.20.1-r2.ebuild,
+  +files/util-linux-2.20.1-libmount-c++.patch,
+  +files/util-linux-2.20.1-umount-fs-search.patch:
+  Add patch from upstream for libmount.h in C++ code #401057 by Michał Górny.
+  Have umount search /usr/sbin like mount/fsck #403073 by Aidan Marks.
 
 *util-linux-2.20.1-r1 (07 Jan 2012)
 
