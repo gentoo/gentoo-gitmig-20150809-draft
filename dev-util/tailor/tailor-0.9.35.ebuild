@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tailor/tailor-0.9.35.ebuild,v 1.3 2010/06/29 07:19:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tailor/tailor-0.9.35.ebuild,v 1.4 2012/02/16 13:10:33 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,6 +22,12 @@ DEPEND=""
 RDEPEND=""
 
 PYTHON_MODNAME="vcpx"
+
+src_install() {
+	dohtml README.html
+	distutils_src_install
+	rm "${D}usr/share/doc/${PF}/README.html"
+}
 
 pkg_postinst() {
 	distutils_pkg_postinst
