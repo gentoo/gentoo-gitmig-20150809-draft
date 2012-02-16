@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/scrotwm/scrotwm-0.10.0-r1.ebuild,v 1.2 2012/02/16 21:35:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/scrotwm/scrotwm-0.11.0.ebuild,v 1.1 2012/02/16 21:35:37 xmw Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ DEPEND="${DEPEND}
 S=${WORKDIR}/${P}/linux
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-0.10.0-makefile.patch
 	tc-export CC
 }
 
