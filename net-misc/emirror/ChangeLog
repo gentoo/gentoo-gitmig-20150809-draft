@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/emirror
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/ChangeLog,v 1.11 2010/01/19 15:46:54 cla Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/ChangeLog,v 1.12 2012/02/16 19:05:59 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  emirror-2.2.0.0.4.ebuild:
+  x86 stable wrt bug #397167
 
 *emirror-2.2.0.0.4 (19 Jan 2010)
 
