@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.9.2.ebuild,v 1.1 2009/06/11 08:43:32 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.9.2.ebuild,v 1.2 2012/02/16 09:51:10 pacho Exp $
 
-EAPI=1
+EAPI="4"
 
 inherit eutils wxwidgets
 
@@ -26,7 +26,7 @@ pkg_setup() {
 	export WX_GTK_VER="2.8"
 	need-wxwidgets gtk2
 }
-src_compile() {
+src_configure() {
 	# temp hack since configure is not executable
 	chmod +x configure
 
@@ -36,14 +36,10 @@ src_compile() {
 		--disable-debug \
 		--with-wx=yes \
 		--with-wx-config=${WX_CONFIG}"
-	econf ${myconf} || die "Could not configure FlameRobin"
-	emake || die "error during make"
+	econf ${myconf}
 }
+
 src_install() {
-	make DESTDIR="${D}" install || die "Could not install FlameRobin"
-
-	doicon "${S}"/res/fricon.xpm
-	domenu "${FILESDIR}"/FlameRobin.desktop
-
+	emake DESTDIR="${D}" install
 	dodoc devdocs/* docs/* docs-src/*
 }
