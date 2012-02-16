@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/siefs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.14 2012/02/03 18:34:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.15 2012/02/16 19:21:45 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> siefs-0.5-r2.ebuild:
+  x86 stable wrt bug #397233
 
   03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> siefs-0.5-r2.ebuild:
   Stable for amd64, wrt bug #397233
