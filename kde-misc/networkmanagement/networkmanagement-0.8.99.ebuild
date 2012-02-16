@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.8.99.ebuild,v 1.1 2012/01/22 16:30:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.8.99.ebuild,v 1.2 2012/02/16 22:22:13 johu Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://kde.org/"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="consolekit debug"
+IUSE="debug"
 
 DEPEND="
 	$(add_kdebase_dep solid)
@@ -28,23 +28,3 @@ DEPEND="
 	>=net-misc/networkmanager-0.9.0
 "
 RDEPEND="${DEPEND}"
-
-src_prepare() {
-	kde4-base_src_prepare
-
-	if ! use consolekit; then
-		# Fix dbus policy
-		sed -i \
-			-e 's/at_console=".*"/group="plugdev"/' \
-			"${S}/NetworkManager-kde4.conf" \
-			|| die "Fixing dbus policy failed"
-	fi
-}
-
-src_configure() {
-	local mycmakeargs=(
-		-DDBUS_SYSTEM_POLICY_DIR=/etc/dbus-1/system.d
-	)
-
-	kde4-base_src_configure
-}
