@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gflags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.15 2012/02/16 18:51:51 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.16 2012/02/16 23:30:21 vapier Exp $
+
+  16 Feb 2012; Mike Frysinger <vapier@gentoo.org> gflags-1.5.ebuild,
+  gflags-1.6.ebuild, gflags-1.7.ebuild, gflags-2.0.ebuild:
+  Touch up style -- no functional changes.
 
 *gflags-2.0 (16 Feb 2012)
 *gflags-1.7 (16 Feb 2012)
