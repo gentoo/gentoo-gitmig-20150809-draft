@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.382 2012/02/14 16:08:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.383 2012/02/16 00:27:17 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -442,15 +442,18 @@ epatch() {
 		fi
 
 		# Dynamically detect the correct -p# ... i'm lazy, so shoot me :/
+		local patch_cmd
 		while [[ ${count} -lt 5 ]] ; do
+			patch_cmd="patch -p${count} ${EPATCH_OPTS}"
+
 			# Generate some useful debug info ...
 			(
 			_epatch_draw_line "***** ${patchname} *****"
 			echo
-			echo "PATCH COMMAND:  patch -p${count} ${EPATCH_OPTS} < '${PATCH_TARGET}'"
+			echo "PATCH COMMAND:  ${patch_cmd} < '${PATCH_TARGET}'"
 			echo
 			_epatch_draw_line "***** ${patchname} *****"
-			patch -p${count} ${EPATCH_OPTS} --dry-run -f < "${PATCH_TARGET}" 2>&1
+			${patch_cmd} --dry-run -f < "${PATCH_TARGET}" 2>&1
 			ret=$?
 			echo
 			echo "patch program exited with status ${ret}"
@@ -464,7 +467,7 @@ epatch() {
 				echo "ACTUALLY APPLYING ${patchname} ..."
 				echo
 				_epatch_draw_line "***** ${patchname} *****"
-				patch -p${count} ${EPATCH_OPTS} < "${PATCH_TARGET}" 2>&1
+				${patch_cmd} < "${PATCH_TARGET}" 2>&1
 				ret=$?
 				echo
 				echo "patch program exited with status ${ret}"
@@ -501,8 +504,16 @@ epatch() {
 			die "Failed Patch: ${patchname}!"
 		fi
 
-		# if everything worked, delete the patch log
+		# if everything worked, delete the full debug patch log
 		rm -f "${STDERR_TARGET}"
+
+		# then log away the exact stuff for people to review later
+		cat <<-EOF >> "${T}/epatch.log"
+		PATCH: ${x}
+		CMD: ${patch_cmd}
+		PWD: ${PWD}
+
+		EOF
 		eend 0
 	done
 
@@ -540,7 +551,7 @@ epatch_user() {
 	[[ $# -ne 0 ]] && die "epatch_user takes no options"
 
 	# Allow multiple calls to this function; ignore all but the first
-	local applied="${T}/epatch_user.applied"
+	local applied="${T}/epatch_user.log"
 	[[ -e ${applied} ]] && return 2
 
 	# don't clobber any EPATCH vars that the parent might want
