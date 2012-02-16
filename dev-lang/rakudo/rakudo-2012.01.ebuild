@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2011.07.ebuild,v 1.3 2012/02/16 07:20:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2012.01.ebuild,v 1.1 2012/02/16 07:20:06 patrick Exp $
 
 EAPI=3
 
-PARROT_VERSION="3.6.0"
+PARROT_VERSION="3.11.0"
+NQP_VERSION="${PV}"
+
 inherit eutils multilib
 
 DESCRIPTION="A Perl 6 implementation built on the Parrot virtual machine"
@@ -16,13 +18,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-RDEPEND=">=dev-lang/parrot-${PARROT_VERSION}[unicode]"
+RDEPEND=">=dev-lang/parrot-${PARROT_VERSION}[unicode]
+	>=dev-lang/nqp-${NQP_VERSION}"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 #	>=dev-lang/perl-5.10"
 
 src_prepare() {
-	sed -i "s,\$(DOCDIR)/rakudo$,&-${PVR}," build/Makefile.in || die
+	sed -i "s,\$(DOCDIR)/rakudo$,&-${PVR}," tools/build/Makefile.in || die
 }
 
 src_configure() {
