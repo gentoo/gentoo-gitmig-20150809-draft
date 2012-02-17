@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/resin-servlet-api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.56 2012/02/16 18:15:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.57 2012/02/17 11:51:13 ago Exp $
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  resin-servlet-api-3.1.12.ebuild:
+  Stable for amd64, wrt bug #404165
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   resin-servlet-api-4.0.22.ebuild:
