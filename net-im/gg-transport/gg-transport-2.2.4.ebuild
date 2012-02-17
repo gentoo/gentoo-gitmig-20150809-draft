@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.4.ebuild,v 1.2 2012/02/16 19:02:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.4.ebuild,v 1.3 2012/02/17 11:52:33 ago Exp $
 
 DESCRIPTION="Gadu-Gadu transport for Jabber"
 HOMEPAGE="https://github.com/Jajcus/jggtrans"
@@ -8,7 +8,7 @@ SRC_URI="https://github.com/downloads/Jajcus/jggtrans/jggtrans-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=net-im/jabber-base-0.01
