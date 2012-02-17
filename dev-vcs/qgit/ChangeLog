@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/qgit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/ChangeLog,v 1.1 2011/02/10 21:35:11 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/ChangeLog,v 1.2 2012/02/17 18:08:32 pesa Exp $
+
+*qgit-2.4 (17 Feb 2012)
+
+  17 Feb 2012; Davide Pesavento <pesa@gentoo.org> +qgit-2.4.ebuild,
+  -qgit-2.2.ebuild, metadata.xml:
+  Version bump (bug #396705), also fixes bug #373689. Install icon and desktop
+  file (bug #271953). Remove old.
 
   10 Feb 2011; Ulrich Mueller <ulm@gentoo.org> +qgit-2.2.ebuild,
   +qgit-2.3.ebuild, +qgit-2.3-r1.ebuild, +metadata.xml:
