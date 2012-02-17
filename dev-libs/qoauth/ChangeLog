@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/qoauth
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.14 2011/09/13 19:08:05 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.15 2012/02/17 13:54:46 pesa Exp $
+
+  17 Feb 2012; Davide Pesavento <pesa@gentoo.org> -qoauth-1.0-r1.ebuild,
+  -qoauth-1.0.ebuild, metadata.xml:
+  Remove obsolete versions.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #278944
