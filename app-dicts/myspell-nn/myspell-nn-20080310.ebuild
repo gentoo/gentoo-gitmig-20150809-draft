@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nn/myspell-nn-20080310.ebuild,v 1.8 2012/02/14 22:59:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nn/myspell-nn-20080310.ebuild,v 1.9 2012/02/17 11:05:46 phajdan.jr Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "nn,NO,nn_NO,Norwegian nynorsk (Norway),nn_NO.zip"
@@ -20,4 +20,4 @@ DESCRIPTION="Norwegian dictionaries for myspell/hunspell"
 LICENSE="GPL-2"
 HOMEPAGE="http://spell-norwegian.alioth.debian.org/"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
