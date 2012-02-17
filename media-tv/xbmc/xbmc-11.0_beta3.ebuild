@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0_beta3.ebuild,v 1.1 2012/02/14 22:39:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0_beta3.ebuild,v 1.2 2012/02/17 02:43:43 idl0r Exp $
 
 EAPI="4"
 
@@ -94,6 +94,8 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xineramaproto
 	dev-util/cmake
 	x86? ( dev-lang/nasm )"
+
+QA_EXECSTACK="usr/lib*/xbmc/xbmc.bin"
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then

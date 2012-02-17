@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.114 2012/02/16 04:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.115 2012/02/17 02:43:43 idl0r Exp $
+
+  17 Feb 2012; Christian Ruppert <idl0r@gentoo.org> xbmc-11.0_beta3.ebuild:
+  Add QA_EXECSTACK
 
   16 Feb 2012; Mike Frysinger <vapier@gentoo.org>
   files/xbmc-9999-nomythtv.patch:
