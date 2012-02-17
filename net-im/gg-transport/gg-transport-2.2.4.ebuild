@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.4.ebuild,v 1.3 2012/02/17 11:52:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.4.ebuild,v 1.4 2012/02/17 18:09:10 nelchael Exp $
 
 DESCRIPTION="Gadu-Gadu transport for Jabber"
 HOMEPAGE="https://github.com/Jajcus/jggtrans"
@@ -14,15 +14,15 @@ IUSE=""
 RDEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/glib-2.6.4
 	net-dns/libidn
-	>=net-libs/libgadu-1.9.0_rc3"
+	>=net-libs/libgadu-1.9.0_rc3
+	dev-libs/expat"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/jggtrans-${PV}"
 
 src_install() {
-
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 
 	keepdir /var/spool/jabber/gg
 	keepdir /var/run/jabber
@@ -40,8 +40,7 @@ src_install() {
 		-e 's,/var/lib/jabber/spool/gg.localhost/,/var/spool/jabber/gg/,' \
 		-e 's,/var/lib/jabber/ggtrans.pid,/var/run/jabber/jggtrans.pid,' \
 		-e 's,/tmp/ggtrans.log,/var/log/jabber/jggtrans.log,' \
-		"${D}/etc/jabber/jggtrans.xml"
+		"${D}/etc/jabber/jggtrans.xml" || die "sed failed"
 
 	dodoc AUTHORS ChangeLog README README.Pl NEWS
-
 }

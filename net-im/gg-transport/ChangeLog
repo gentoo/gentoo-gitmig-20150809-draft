@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gg-transport
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/ChangeLog,v 1.18 2012/02/17 11:52:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/ChangeLog,v 1.19 2012/02/17 18:09:10 nelchael Exp $
+
+  17 Feb 2012; Krzysztof Pawlik <nelchael@gentoo.org>
+  gg-transport-2.2.4.ebuild:
+  Add missing dev-libs/expat to RDEPEND, use emake, die if sed fails.
 
   17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> gg-transport-2.2.4.ebuild:
   Stable for amd64, wrt bug #404175
