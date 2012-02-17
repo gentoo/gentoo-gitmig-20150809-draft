@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.7.0-r3.ebuild,v 1.1 2012/02/14 01:19:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.7.0-r3.ebuild,v 1.2 2012/02/17 01:46:44 blueness Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
@@ -56,12 +56,12 @@ src_configure() {
 	#                       amd64 (bug #102157)
 	# -fstack-protector     more undefined references to __guard and __stack_smash_handler
 	#                       because valgrind doesn't link to glibc (bug #114347)
+	# -m64 -mx32			for multilib-portage, bug #398825
 	# -ggdb3                segmentation fault on startup
 	filter-flags -fomit-frame-pointer
 	filter-flags -fpie
 	filter-flags -fstack-protector
-	filter-flags -m64
-	filter-flags -mx32
+	filter-flags -m64 -mx32
 	replace-flags -ggdb3 -ggdb2
 
 	if use amd64 || use ppc64; then
