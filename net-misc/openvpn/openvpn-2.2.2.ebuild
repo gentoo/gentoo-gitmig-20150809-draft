@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.2.2.ebuild,v 1.2 2012/02/16 13:50:26 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.2.2.ebuild,v 1.3 2012/02/17 09:39:54 djc Exp $
 
 EAPI=4
 
-inherit eutils multilib toolchain-funcs autotools flag-o-matic
+inherit eutils multilib toolchain-funcs flag-o-matic
 
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application compatible with many OSes."
 SRC_URI="http://swupdate.openvpn.net/community/releases/${P}.tar.gz"
@@ -31,9 +31,6 @@ src_prepare() {
 		-e "s/gcc \${CC_FLAGS}/\${CC} \${CFLAGS} -Wall/" \
 		-e "s/-shared/-shared \${LDFLAGS}/" \
 		plugin/*/Makefile || die "sed failed"
-	if use ipv6; then
-		eautoreconf
-	fi
 }
 
 src_configure() {
