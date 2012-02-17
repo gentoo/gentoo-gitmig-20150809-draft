@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DNS-Async
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Async/ChangeLog,v 1.4 2011/09/04 11:23:43 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Async/ChangeLog,v 1.5 2012/02/17 19:49:37 ago Exp $
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Net-DNS-Async-1.70.0.ebuild:
+  Stable for amd64, wrt bug #355195
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Net-DNS-Async-1.07.ebuild:
   Cleanup
