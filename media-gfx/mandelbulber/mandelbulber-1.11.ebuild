@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-1.08.ebuild,v 1.1 2011/09/04 10:45:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-1.11.ebuild,v 1.1 2012/02/17 13:42:31 xarthisius Exp $
 
 EAPI=4
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	# https://sourceforge.net/tracker/?func=detail&aid=3368617&group_id=303080&atid=1277701
 	epatch "${FILESDIR}"/${P}-qa.patch
 }
 
