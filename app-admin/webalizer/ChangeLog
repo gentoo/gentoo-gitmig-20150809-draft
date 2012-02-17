@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.83 2012/02/09 01:19:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.84 2012/02/17 21:45:43 klausman Exp $
+
+  17 Feb 2012; Tobias Klausmann <klausman@gentoo.org> webalizer-2.21.02.ebuild:
+  Stable on alpha, bug #287931
 
   09 Feb 2012; Jeroen Roovers <jer@gentoo.org> webalizer-2.21.02.ebuild:
   Stable for HPPA (bug #287931).
