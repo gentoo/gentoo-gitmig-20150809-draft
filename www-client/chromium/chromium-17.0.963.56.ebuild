@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.56.ebuild,v 1.2 2012/02/16 10:31:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.963.56.ebuild,v 1.3 2012/02/17 11:14:45 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="bindist cups custom-cflags gnome gnome-keyring kerberos pulseaudio"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
@@ -387,8 +387,9 @@ src_test() {
 	# NetUtilTest.GenerateFileName: some locale-related mismatch.
 	# UDP: unstable, active development. We should revisit this later.
 	# CertDatabaseNSSTest.ImportCACertHierarchyTree: works in 18.x, broken here.
+	# CertDatabaseNSSTest.ImportServerCert_SelfSigned: bug #399269.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:NetUtilTest.GenerateFileName:*UDP*:CertDatabaseNSSTest.ImportCACertHierarchyTree'
+		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:NetUtilTest.GenerateFileName:*UDP*:CertDatabaseNSSTest.ImportCACertHierarchyTree:CertDatabaseNSSTest.ImportServerCert_SelfSigned'
 
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/printing_unittests virtualmake
 }

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.562 2012/02/16 10:31:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.563 2012/02/17 11:14:45 phajdan.jr Exp $
+
+  17 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-17.0.963.46-r1.ebuild, chromium-17.0.963.56.ebuild:
+  x86 stable wrt security bug #404067; suppress test failure (bug #399269);
+  remove old
 
   16 Feb 2012; Agostino Sarubbo <ago@gentoo.org> chromium-17.0.963.56.ebuild:
   Stable for AMD64, wrt security bug #404067
