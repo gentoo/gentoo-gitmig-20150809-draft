@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-hu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.16 2012/02/14 22:55:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.17 2012/02/17 11:04:43 phajdan.jr Exp $
+
+  17 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ispell-hu-1.4.ebuild:
+  x86 stable wrt bug #396783
 
   14 Feb 2012; Brent Baude <ranger@gentoo.org> ispell-hu-1.4.ebuild:
   Marking ispell-hu-1.4 ppc for bug 396783
