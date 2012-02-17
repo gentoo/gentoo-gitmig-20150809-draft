@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/stringex-1.3.0.ebuild,v 1.2 2012/02/09 08:00:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/stringex-1.3.2.ebuild,v 1.1 2012/02/17 22:15:21 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -18,9 +18,14 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
+# we could rely on activerecord[sqlite3], but since we do not remove the
+# sqlite3 adapter from activerecord when building -sqlite3, it's easier
+# to just add another dependency, so the user doesn't have to change the
+# USE flags at all.
 ruby_add_bdepend "
 	test? (
 		dev-ruby/activerecord
+		dev-ruby/sqlite3-ruby
 		dev-ruby/redcloth
 	)"
 
