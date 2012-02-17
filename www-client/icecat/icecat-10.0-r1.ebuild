@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-10.0-r1.ebuild,v 1.2 2012/02/14 10:25:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-10.0-r1.ebuild,v 1.3 2012/02/17 11:31:59 ago Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -30,7 +30,7 @@ inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+crashreporter +ipc pgo selinux system-sqlite +webm"
