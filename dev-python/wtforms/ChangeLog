@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wtforms
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.16 2011/09/12 08:23:05 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.17 2012/02/17 11:18:33 ago Exp $
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> wtforms-0.6.3.ebuild:
+  Stable for amd64, wrt bug #400343
 
   12 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove myself as a maintainer.
