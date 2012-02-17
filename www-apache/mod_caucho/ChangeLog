@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_caucho
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.62 2012/02/11 18:48:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.63 2012/02/17 18:12:41 nelchael Exp $
+
+  17 Feb 2012; Krzysztof Pawlik <nelchael@gentoo.org> mod_caucho-4.0.22.ebuild,
+  mod_caucho-4.0.25.ebuild:
+  Fix building on amd64.
 
 *mod_caucho-4.0.25 (11 Feb 2012)
 
