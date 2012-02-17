@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/open-mx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/ChangeLog,v 1.1 2011/08/31 18:34:14 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/ChangeLog,v 1.2 2012/02/17 19:28:44 xarthisius Exp $
+
+  17 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> -open-mx-1.4.0.ebuild:
+  Drop old as sources were removed upstream
 
 *open-mx-1.5.0 (31 Aug 2011)
 *open-mx-1.4.0 (31 Aug 2011)
