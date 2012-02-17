@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/icdprog-0.5.ebuild,v 1.2 2012/02/16 17:56:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/icdprog-0.5.ebuild,v 1.3 2012/02/17 07:49:16 radhermit Exp $
 
 EAPI=4
 
@@ -14,9 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
-
-DEPEND=""
-RDEPEND=""
 
 src_compile() {
 	tc-export CC
