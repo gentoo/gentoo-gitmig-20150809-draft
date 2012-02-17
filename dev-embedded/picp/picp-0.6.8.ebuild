@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picp/picp-0.6.8.ebuild,v 1.2 2012/02/16 17:56:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picp/picp-0.6.8.ebuild,v 1.3 2012/02/17 07:43:54 radhermit Exp $
 
 EAPI=4
 
@@ -14,8 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
-
-DEPEND=""
 
 src_prepare() {
 	sed -i -e '/strip/d' \
