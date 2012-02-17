@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/rply
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rply/ChangeLog,v 1.1 2011/10/28 20:41:32 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rply/ChangeLog,v 1.2 2012/02/17 20:55:06 tetromino Exp $
+
+  17 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org> rply-1.01-r1.ebuild:
+  Tarball no longer fetchable from upstream (bug #404299, thanks to Kacper
+  Kowalik for reporting).
 
 *rply-1.01-r1 (28 Oct 2011)
 

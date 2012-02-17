@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rply/rply-1.01-r1.ebuild,v 1.1 2011/10/28 20:41:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rply/rply-1.01-r1.ebuild,v 1.2 2012/02/17 20:55:06 tetromino Exp $
 
 EAPI="4"
 
@@ -8,7 +8,9 @@ inherit cmake-utils
 
 DESCRIPTION="A library to read and write PLY files"
 HOMEPAGE="http://w3.impa.br/~diego/software/rply/"
-SRC_URI="http://w3.impa.br/~diego/software/rply/${P}.tar.gz"
+# SRC_URI="http://w3.impa.br/~diego/software/rply/${P}.tar.gz"
+# Tarball no longer available from upstream website
+SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
