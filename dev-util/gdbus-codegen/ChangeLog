@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.9 2012/02/16 17:26:09 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.10 2012/02/17 17:20:08 klausman Exp $
+
+  17 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  gdbus-codegen-2.30.2.ebuild:
+  Stable on alpha, bug #401513
 
   16 Feb 2012; Nathan Phillip Brink <binki@gentoo.org>
   gdbus-codegen-2.30.2.ebuild:
