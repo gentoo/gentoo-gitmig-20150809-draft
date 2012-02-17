@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.5 2011/12/09 03:10:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.6 2012/02/17 20:20:45 ago Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -32,7 +32,7 @@ fi
 LICENSE="PSF-2"
 SLOT="3.2"
 PYTHON_ABI="${SLOT}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
 
 RDEPEND=">=app-admin/eselect-python-20091230
