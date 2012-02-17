@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.17 2012/02/15 01:14:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.18 2012/02/17 05:23:50 floppym Exp $
+
+  17 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0.ebuild,
+  remmina-9999.ebuild:
+  Adjust avahi and vte dependencies for bug 404211. Thanks to CFuga for
+  reporting.
 
 *remmina-1.0.0 (15 Feb 2012)
 
