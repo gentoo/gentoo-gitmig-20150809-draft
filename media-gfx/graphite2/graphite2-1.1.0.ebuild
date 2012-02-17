@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.1.0.ebuild,v 1.1 2012/02/15 12:09:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.1.0.ebuild,v 1.2 2012/02/17 09:59:58 scarabeus Exp $
 
 EAPI=4
 
@@ -32,6 +32,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-fix_wrong_linker_opts.patch"
 	"${FILESDIR}/${PN}-1.0.2-no_harfbuzz_tests.patch"
 	"${FILESDIR}/${PN}-1.0.3-no-test-binaries.patch"
+	"${FILESDIR}/${P}-fix-perl-includes.patch"
 )
 
 pkg_setup() {
@@ -40,6 +41,9 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
+
+	# move the wrong file only in 1.1.0 release
+	mv src/inc/Log.h include/
 
 	# fix perl linking
 	if use perl; then
