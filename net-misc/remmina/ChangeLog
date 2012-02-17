@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.20 2012/02/17 15:54:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.21 2012/02/17 20:49:37 hwoarang Exp $
+
+  17 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  remove myself from metadata
 
 *remmina-1.0.0-r1 (17 Feb 2012)
 
