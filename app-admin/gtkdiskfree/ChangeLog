@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.30 2012/02/09 10:19:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.31 2012/02/17 08:26:29 pacho Exp $
+
+  17 Feb 2012; Pacho Ramos <pacho@gentoo.org> gtkdiskfree-1.9.3-r1.ebuild:
+  Fallback to gentoo.org homepage as upstream is dead, install desktop file. Bug
+  #370605 by David and Samuel BAUER.
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926
