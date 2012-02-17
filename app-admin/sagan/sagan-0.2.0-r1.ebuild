@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.0.ebuild,v 1.1 2011/08/31 08:36:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.0-r1.ebuild,v 1.1 2012/02/17 11:32:01 maksbotan Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
 RDEPEND="dev-libs/libpcre
-	app-admin/sagan-rules
+	app-admin/sagan-rules[lognorm?]
 	smtp? ( net-libs/libesmtp )
 	pcap? ( net-libs/libpcap )
 	mysql? ( virtual/mysql )
