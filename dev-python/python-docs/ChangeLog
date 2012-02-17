@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-docs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.160 2011/12/10 18:56:32 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.161 2012/02/17 20:21:12 ago Exp $
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> python-docs-3.2.2.ebuild:
+  Stable for amd64, wrt bug #403875
 
 *python-docs-2.7.2 (10 Dec 2011)
 *python-docs-2.6.7 (10 Dec 2011)
