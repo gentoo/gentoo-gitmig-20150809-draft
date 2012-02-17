@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ps3mediaserver
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ChangeLog,v 1.6 2011/11/30 07:31:44 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ChangeLog,v 1.7 2012/02/17 04:14:01 floppym Exp $
+
+*ps3mediaserver-1.50.1 (17 Feb 2012)
+
+  17 Feb 2012; Mike Gilbert <floppym@gentoo.org> +ps3mediaserver-1.50.1.ebuild:
+  Version bump.
 
   30 Nov 2011; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Make myself the primary maintainer so I get bugs assigned to me.
