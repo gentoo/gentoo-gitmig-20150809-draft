@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.19 2012/02/17 05:57:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.20 2012/02/17 15:54:49 floppym Exp $
+
+*remmina-1.0.0-r1 (17 Feb 2012)
+
+  17 Feb 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/remmina-1.0.0-desktop-file.patch,
+  +files/remmina-1.0.0-fix-desktop-file.patch,
+  +files/remmina-1.0.0-optional-gnome-keyring.patch, +remmina-1.0.0-r1.ebuild:
+  Backport patches for desktop file and optional gnome-keyring.Bugs 403879 and
+  404235.
 
   17 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-9999.ebuild:
   Make gnome-keyring optional for bug 403879 by haarp.
