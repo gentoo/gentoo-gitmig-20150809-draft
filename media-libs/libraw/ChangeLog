@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.19 2012/02/10 22:57:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.20 2012/02/17 22:19:52 radhermit Exp $
+
+  17 Feb 2012; Tim Harder <radhermit@gentoo.org> libraw-0.14.5.ebuild:
+  Check for openmp toolchain support, remove unnecessary quotes, and set
+  autoreconf variable.
 
   10 Feb 2012; Tim Harder <radhermit@gentoo.org> -libraw-0.14.3.ebuild,
   -libraw-0.14.4.ebuild:

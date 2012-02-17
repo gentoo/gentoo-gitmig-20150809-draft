@@ -1,10 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.5.ebuild,v 1.1 2011/12/26 22:09:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.5.ebuild,v 1.2 2012/02/17 22:19:52 radhermit Exp $
 
 EAPI="4"
+AUTOTOOLS_AUTORECONF=yes
 
-inherit autotools-utils
+inherit autotools-utils toolchain-funcs
 
 MY_P="LibRaw-${PV}"
 DESCRIPTION="LibRaw is a library for reading RAW files obtained from digital photo cameras"
@@ -24,18 +25,18 @@ IUSE="demosaic examples jpeg2k +lcms +openmp static-libs"
 RDEPEND="jpeg2k? ( media-libs/jasper )
 	lcms? ( media-libs/lcms:2 )"
 DEPEND="${RDEPEND}
-	openmp? ( sys-devel/gcc[openmp] )
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 DOCS=( Changelog.txt README )
 
 PATCHES=( "${FILESDIR}"/${PN}-0.13.4-docs.patch )
 
-src_prepare() {
-	autotools-utils_src_prepare
-	eautomake
+pkg_setup() {
+	if use openmp ; then
+		tc-has-openmp || die "Please switch to an openmp compatible compiler"
+	fi
 }
 
 src_configure() {
