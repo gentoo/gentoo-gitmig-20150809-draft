@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.135 2012/02/14 01:19:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.136 2012/02/17 01:36:13 blueness Exp $
+
+  17 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  valgrind-3.6.1-r2.ebuild, +files/valgrind-3.6.1-automake-1.11.3.patch:
+  Fix 3.6.1-r2 to autoreconf with automake-1.11.x, bug #403779
 
 *valgrind-3.7.0-r3 (14 Feb 2012)
 
