@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.104 2012/02/17 04:58:21 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.105 2012/02/17 17:33:27 idl0r Exp $
+
+*nvidia-settings-295.20 (17 Feb 2012)
+
+  17 Feb 2012; Christian Ruppert <idl0r@gentoo.org>
+  +nvidia-settings-295.20.ebuild, +files/0001-Makefile-improvements.patch,
+  +files/0002-Build-libNVCtrl-with-PIC.patch:
+  Version bump, bug 403581 and partially bug 257765.
 
   17 Feb 2012; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Take maintainership
