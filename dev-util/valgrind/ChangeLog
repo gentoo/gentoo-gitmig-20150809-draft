@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.137 2012/02/17 01:46:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.138 2012/02/17 02:19:37 blueness Exp $
+
+*valgrind-3.6.1-r3 (17 Feb 2012)
+
+  17 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  +valgrind-3.6.1-r3.ebuild, +files/valgrind-3.6.1-fix-unhandled-opcode.patch:
+  Backport upstream commits r11856 and r11904 to address bug #403179
 
   17 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
   valgrind-3.7.0-r3.ebuild:
