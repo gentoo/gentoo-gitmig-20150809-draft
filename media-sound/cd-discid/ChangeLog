@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cd-discid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/ChangeLog,v 1.23 2012/02/15 02:41:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/ChangeLog,v 1.24 2012/02/17 11:50:38 ago Exp $
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> cd-discid-1.3.ebuild:
+  Stable for amd64, wrt bug #403745
 
   15 Feb 2012; Tim Harder <radhermit@gentoo.org> cd-discid-1.3.ebuild:
   Die on failed directory move.
