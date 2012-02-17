@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.0.ebuild,v 1.2 2012/01/20 03:06:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.0.ebuild,v 1.3 2012/02/17 04:50:11 tetromino Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ IUSE="examples gtk3 +introspection python sasl vala"
 # TODO: review nsplugin when it will be considered less experimental
 # XXX: automagic pulseaudio. Is it worth patching?
 COMMON_DEPEND=">=dev-libs/glib-2.30.1:2
-	dev-libs/libgcrypt
+	>=dev-libs/libgcrypt-1.4.2
 	dev-libs/libgpg-error
 	media-sound/pulseaudio
 	>=net-libs/gnutls-1.4
