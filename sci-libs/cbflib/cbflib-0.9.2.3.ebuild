@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.2.3.ebuild,v 1.1 2012/01/25 15:34:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.2.3.ebuild,v 1.2 2012/02/17 19:37:14 xarthisius Exp $
 
 EAPI=4
 
@@ -14,9 +14,9 @@ DESCRIPTION="Library providing a simple mechanism for accessing CBF files and im
 HOMEPAGE="http://www.bernstein-plus-sons.com/software/CBF/"
 BASE_TEST_URI="http://arcib.dowling.edu/software/CBFlib/downloads/version_${PV}/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P1}.tar.gz
-	 test? (
-		${BASE_TEST_URI}/${MY_P2}_Data_Files_Input.tar.gz
-		${BASE_TEST_URI}/${MY_P2}_Data_Files_Output.tar.gz
+	test? (
+		mirror://sourceforge/${PN}/${MY_P2}_Data_Files_Input.tar.gz
+		mirror://sourceforge/${PN}/${MY_P2}_Data_Files_Output.tar.gz
 	)"
 
 LICENSE="GPL-2"
@@ -24,11 +24,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
-DEPEND="virtual/fortran	"
+DEPEND="virtual/fortran"
 RDEPEND="${DEPEND}"
 #test? ( sys-process/time )"
 
-S="${WORKDIR}/${MY_P1}"
+S=${WORKDIR}/${MY_P1}
 
 src_prepare(){
 	rm -rf Py* drel* dRel* ply*
