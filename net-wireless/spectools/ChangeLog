@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/spectools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.1 2012/02/17 03:30:54 steev Exp $
+
+*spectools-2011.08.1 (17 Feb 2012)
+
+  17 Feb 2012; Steev Klimaszewsk <steev@gentoo.org>
+  +spectools-2011.08.1.ebuild, +metadata.xml:
+  New tool, spectools added as a dependency for new Kismet ebuilds.
+
