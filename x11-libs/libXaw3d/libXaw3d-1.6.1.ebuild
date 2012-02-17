@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6.1.ebuild,v 1.1 2012/02/15 23:53:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6.1.ebuild,v 1.2 2012/02/17 08:54:14 ssuominen Exp $
 
 EAPI=4
 
-inherit flag-o-matic xorg-2
+inherit xorg-2
 
 DESCRIPTION="X.Org Xaw3d library"
 
