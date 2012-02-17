@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.22 2012/02/14 19:29:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.23 2012/02/17 16:22:52 scarabeus Exp $
 
 EAPI=4
 
@@ -365,7 +365,6 @@ src_configure() {
 	#   affecting the nsplugin that is always ON
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
-	# --disable-static-gtk: ensure that gtk is linked dynamically
 	# --disable-ugly: disable ugly pieces of code
 	# --disable-zenity: disable build icon
 	# --enable-extension-integration: enable any extension integration support
@@ -402,7 +401,6 @@ src_configure() {
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
-		--disable-static-gtk \
 		--disable-strip-solver \
 		--disable-ugly \
 		--disable-zenity \
