@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.83 2012/02/08 14:53:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.84 2012/02/17 10:58:04 voyageur Exp $
+
+  17 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-back-art-0.22.0.ebuild:
+  Clean and make gnustep-back-* ebuilds closer
 
 *gnustep-back-art-0.22.0 (08 Feb 2012)
 

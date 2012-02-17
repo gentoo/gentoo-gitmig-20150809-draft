@@ -1,22 +1,20 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.22.0.ebuild,v 1.1 2012/02/08 14:53:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.22.0.ebuild,v 1.2 2012/02/17 10:58:04 voyageur Exp $
 
+EAPI=4
 inherit gnustep-base
 
-S=${WORKDIR}/gnustep-back-${PV}
-
 DESCRIPTION="libart_lgpl back-end component for the GNUstep GUI Library"
-
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-back-${PV}.tar.gz"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
-SLOT="0"
-LICENSE="LGPL-2.1"
 
+LICENSE="LGPL-2.1"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="opengl xim"
 
-DEPEND="${GNUSTEP_CORE_DEPEND}
+RDEPEND="${GNUSTEP_CORE_DEPEND}
 	=gnustep-base/gnustep-gui-${PV%.*}*
 	opengl? ( virtual/opengl virtual/glu )
 	x11-libs/libICE
@@ -28,26 +26,31 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	x11-libs/libXt
 	x11-libs/libXft
 	x11-libs/libXrender
-	dev-libs/expat
-	media-libs/fontconfig
 	>=media-libs/freetype-2.1.9
+
 	>=media-libs/libart_lgpl-2.3
 	>=gnustep-base/mknfonts-0.5-r1
 	media-fonts/dejavu
+
 	!gnustep-base/gnustep-back-cairo
 	!gnustep-base/gnustep-back-xlib"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
-src_compile() {
+S=${WORKDIR}/gnustep-back-${PV}
+
+src_configure() {
 	egnustep_env
 
-	use opengl && myconf="--enable-glx"
-	myconf="$myconf `use_enable xim`"
+	myconf="$(use_enable opengl glx)"
+	myconf="$myconf $(use_enable xim)"
 	myconf="$myconf --enable-server=x11"
 	myconf="$myconf --enable-graphics=art"
-	econf $myconf || die "configure failed"
 
-	egnustep_make
+	econf $myconf
+}
+
+src_compile() {
+	gnustep-base_src_compile
 
 	# Create font lists for DejaVu
 	einfo "Generating nfonts support files"
@@ -65,8 +68,6 @@ src_compile() {
 }
 
 src_install() {
-	egnustep_env
-
 	gnustep-base_src_install
 
 	mkdir -p "${D}/${GNUSTEP_SYSTEM_LIBRARY}/Fonts"
