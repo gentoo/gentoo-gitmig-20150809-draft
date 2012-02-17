@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/oroborus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.35 2012/02/03 22:37:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.36 2012/02/17 11:07:14 phajdan.jr Exp $
+
+  17 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> oroborus-2.0.20.ebuild:
+  x86 stable wrt bug #397307
 
   03 Feb 2012; Brent Baude <ranger@gentoo.org> oroborus-2.0.20.ebuild:
   Marking oroborus-2.0.20 ppc for bug 397307
