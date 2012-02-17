@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webpy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.20 2011/09/13 07:29:25 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.21 2012/02/17 11:19:18 ago Exp $
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> webpy-0.36.ebuild:
+  Stable for amd64, wrt bug #400341
 
 *webpy-0.36 (13 Sep 2011)
 
