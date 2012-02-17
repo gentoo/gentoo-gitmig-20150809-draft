@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/datovka
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/datovka/ChangeLog,v 1.1 2011/12/05 14:02:03 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/datovka/ChangeLog,v 1.2 2012/02/17 09:21:15 scarabeus Exp $
+
+  17 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> datovka-1.7.ebuild:
+  Stable 1.7 on amd64 and x86.
 
 *datovka-1.7 (05 Dec 2011)
 
