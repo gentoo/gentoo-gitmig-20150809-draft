@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.69 2012/02/17 08:38:50 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.70 2012/02/17 08:41:10 djc Exp $
+
+  17 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> -virtualenv-1.6.1.ebuild:
+  Remove old version.
 
 *virtualenv-1.7.1.1 (17 Feb 2012)
 
