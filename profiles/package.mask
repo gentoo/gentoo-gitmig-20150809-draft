@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13492 2012/02/16 22:18:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13493 2012/02/17 08:28:29 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -90,12 +90,6 @@ app-admin/pcihpview
 # Buffer overflow, upstream dead since 2004, bug #339455
 # Removal in a month
 net-print/xpp
-
-# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
-# Dead for a long time, use baobab 
-# (from gnome-extra/gnome-utils) instead, bug #370605
-# Removal in a month.
-app-admin/gtkdiskfree
 
 # Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
 # Fails to build and unmaintained, bug #385295
