@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.162 2012/01/23 18:58:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.163 2012/02/17 09:40:07 ssuominen Exp $
+
+*libxklavier-5.2.1 (17 Feb 2012)
+
+  17 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +libxklavier-5.2.1.ebuild:
+  Version bump and raise xkeyboard-config dependency to non-vulnerable version.
 
   23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> libxklavier-5.2.ebuild,
   +files/libxklavier-5.2-include-top_srcdir.patch:
