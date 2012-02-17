@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.1.0.ebuild,v 1.2 2012/02/17 09:59:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.1.0.ebuild,v 1.3 2012/02/17 10:02:45 scarabeus Exp $
 
 EAPI=4
 
@@ -41,9 +41,6 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
-
-	# move the wrong file only in 1.1.0 release
-	mv src/inc/Log.h include/
 
 	# fix perl linking
 	if use perl; then
