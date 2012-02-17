@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/kismet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.109 2011/10/27 16:10:23 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.110 2012/02/17 04:52:21 steev Exp $
+
+*kismet-2011.03.2 (17 Feb 2012)
+
+  17 Feb 2012; Steev Klimaszewsk <steev@gentoo.org>
+  +files/bluechanfix_r3184.patch, +kismet-2011.03.2.ebuild,
+  +files/kismet-console-scrolling-backport.patch, +files/makefile.patch,
+  +files/plugins-ldflags.patch, metadata.xml:
+  New Kismet release, courtesy of ZeroChaos of Pentoo. He's also offered to
+  proxy-maintain, so add him as proxy-maintainer, myself as committer.
 
   27 Oct 2011; Jeroen Roovers <jer@gentoo.org> kismet-2010.01.1.ebuild,
   kismet-2010.01.1-r1.ebuild:
