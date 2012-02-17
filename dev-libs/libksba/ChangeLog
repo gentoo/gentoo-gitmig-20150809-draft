@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.130 2012/02/11 20:22:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.131 2012/02/17 23:04:48 radhermit Exp $
+
+  17 Feb 2012; Tim Harder <radhermit@gentoo.org> -libksba-1.0.7.ebuild,
+  -libksba-1.1.0.ebuild:
+  Remove old.
 
   11 Feb 2012; nixnut <nixnut@gentoo.org> libksba-1.2.0.ebuild:
   ppc stable #364419
