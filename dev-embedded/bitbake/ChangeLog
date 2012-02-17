@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/bitbake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.41 2012/02/17 19:52:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.42 2012/02/17 21:49:06 radhermit Exp $
+
+  17 Feb 2012; Tim Harder <radhermit@gentoo.org> bitbake-1.14.0.ebuild,
+  bitbake-1.15.1.ebuild:
+  Die on failure.
 
   17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> bitbake-1.14.0.ebuild:
   Stable for amd64, wrt bug #403759
