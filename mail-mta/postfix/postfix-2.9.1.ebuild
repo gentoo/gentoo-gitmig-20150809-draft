@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120202.ebuild,v 1.2 2012/02/05 06:13:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.1.ebuild,v 1.1 2012/02/18 19:40:32 eras Exp $
 
 EAPI=4
 
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam versionator
 
-MY_PV="${PV/_pre/-}"
+MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
 VDA_PV="2.8.5"
 VDA_P="${PN}-vda-v10-${VDA_PV}"
 RC_VER="2.6"
@@ -55,7 +55,9 @@ RDEPEND="${DEPEND}
 	!>=mail-mta/ssmtp-2.64-r2[mta]
 	!net-mail/fastforward"
 
-REQUIRED_USE="ldap-bind? ( ldap sasl )"
+# vda patch is broken in 2.9
+REQUIRED_USE="ldap-bind? ( ldap sasl )
+	!vda"
 
 S="${WORKDIR}/${MY_SRC}"
 
@@ -215,7 +217,7 @@ src_install () {
 	dodir /var/lib/postfix
 	keepdir /var/lib/postfix
 	fowners postfix:postfix /var/lib/postfix
-	fowners postfix:postfix /var/lib/postfix/.keep_${CATEGORY}_${PN}-${SLOT}
+	fowners postfix:postfix /var/lib/postfix/.keep*
 	fperms 0750 /var/lib/postfix
 	fowners root:postdrop /usr/sbin/post{drop,queue}
 	fperms 02711 /usr/sbin/post{drop,queue}
@@ -305,5 +307,9 @@ pkg_postinst() {
 			ewarn "Please turn on berkdb USE flag for hash or btree table"
 			ewarn "lookup support.\n"
 		fi
+		ewarn "Postfix daemons now live under /usr/libexec/postfix"
+		ewarn "Please adjust your main.cf accordingly by running"
+		ewarn "etc-update/dispatch-conf or similar and accepting the new"
+		ewarn "daemon_directory setting."
 	fi
 }
