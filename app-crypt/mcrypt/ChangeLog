@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mcrypt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.33 2010/10/15 21:02:20 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.34 2012/02/18 08:34:38 radhermit Exp $
+
+  18 Feb 2012; Tim Harder <radhermit@gentoo.org> mcrypt-2.6.8-r1.ebuild,
+  files/mcrypt-2.6.8-stdlib.h.patch:
+  Remove relative path from patch and add zlib dependency (bug #380753).
 
   15 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -mcrypt-2.6.7.ebuild, -mcrypt-2.6.8.ebuild:
