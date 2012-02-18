@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.8 2012/02/15 21:08:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.9 2012/02/18 16:28:59 scarabeus Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--docdir="${EPREFIX}/usr/share/${PF}" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable static-libs static) \
 		--disable-werror \
 		$(use_with doc docs)
