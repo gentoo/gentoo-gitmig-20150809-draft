@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.3.ebuild,v 1.6 2011/09/19 15:29:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.5.ebuild,v 1.1 2012/02/18 18:58:02 idl0r Exp $
 
 EAPI="3"
 
@@ -8,14 +8,15 @@ inherit toolchain-funcs
 
 DESCRIPTION="Utility for reading, writing, erasing and verifying flash ROM chips"
 HOMEPAGE="http://flashrom.org/"
-SRC_URI="http://qa.coreboot.org/releases/${P}.tar.bz2"
+SRC_URI="http://download.flashrom.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="+atahpt +bitbang_spi +buspirate_spi dediprog +drkaiser
-+dummy ft2232_spi +gfxnvidia +internal +nic3com +nicintel_spi +nicnatsemi +nicrealtek +rayer_spi
-+satasii +serprog +wiki"
+KEYWORDS="~amd64 ~x86"
+IUSE="+atahpt +bitbang_spi +buspirate_spi dediprog doc +drkaiser
++dummy ft2232_spi +gfxnvidia +internal +nic3com +nicintel +nicintel_spi
++nicnatsemi +nicrealtek +ogp_spi +rayer_spi
++satasii +satamv +serprog +wiki"
 
 COMMON_DEPEND="atahpt? ( sys-apps/pciutils )
 	dediprog? ( virtual/libusb:0 )
@@ -24,11 +25,14 @@ COMMON_DEPEND="atahpt? ( sys-apps/pciutils )
 	gfxnvidia? ( sys-apps/pciutils )
 	internal? ( sys-apps/pciutils )
 	nic3com? ( sys-apps/pciutils )
+	nicintel? ( sys-apps/pciutils )
 	nicintel_spi? ( sys-apps/pciutils )
 	nicnatsemi? ( sys-apps/pciutils )
 	nicrealtek? ( sys-apps/pciutils )
 	rayer_spi? ( sys-apps/pciutils )
-	satasii? ( sys-apps/pciutils )"
+	satasii? ( sys-apps/pciutils )
+	satamv? ( sys-apps/pciutils )
+	ogp_spi? ( sys-apps/pciutils )"
 RDEPEND="${COMMON_DEPEND}
 	internal? ( sys-apps/dmidecode )"
 DEPEND="${COMMON_DEPEND}
@@ -50,8 +54,9 @@ src_compile() {
 	# Programmer
 	flashrom_enable \
 		atahpt bitbang_spi buspirate_spi dediprog drkaiser \
-		ft2232_spi gfxnvidia nic3com nicintel_spi nicnatsemi nicrealtek rayer_spi \
-		satasii serprog \
+		ft2232_spi gfxnvidia nic3com nicintel nicintel_spi nicnatsemi nicrealtek \
+		ogp_spi rayer_spi \
+		satasii satamv serprog \
 		internal dummy
 	_flashrom_enable wiki PRINT_WIKI
 
@@ -74,11 +79,15 @@ src_compile() {
 	fi
 
 	# WARNERROR=no, bug 347879
-	emake CC="$(tc-getCC)" WARNERROR=no ${args} || die
+	emake CC="$(tc-getCC)" AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" WARNERROR=no ${args} || die
 }
 
 src_install() {
 	dosbin flashrom || die
 	doman flashrom.8
 	dodoc ChangeLog README
+
+	if use doc; then
+		dodoc Documentation/*.txt
+	fi
 }
