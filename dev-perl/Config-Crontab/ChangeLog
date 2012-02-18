@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Config-Crontab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Crontab/ChangeLog,v 1.16 2012/02/12 15:12:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Crontab/ChangeLog,v 1.17 2012/02/18 15:24:13 tove Exp $
+
+  18 Feb 2012; Torsten Veller <tove@gentoo.org> -Config-Crontab-1.20.ebuild:
+  Cleanup
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> Config-Crontab-1.20.ebuild,
   Config-Crontab-1.330.0.ebuild:
