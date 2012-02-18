@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.11 2012/02/12 12:28:08 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.12 2012/02/18 19:44:43 klausman Exp $
+
+  18 Feb 2012; Tobias Klausmann <klausman@gentoo.org> tevent-0.9.14-r1.ebuild:
+  Keyworded on alpha, bug #377809
 
 *tevent-0.9.14-r1 (12 Feb 2012)
 
