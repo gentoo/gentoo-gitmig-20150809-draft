@@ -1,0 +1,11 @@
+# ChangeLog for x11-wm/razorqt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/ChangeLog,v 1.1 2012/02/18 11:59:37 hwoarang Exp $
+
+*razorqt-0.4.1 (18 Feb 2012)
+
+  18 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +razorqt-0.4.1.ebuild:
+  Initial commit of Razor-qt WM. Thanks to all the people who contributed on bug
+  #382875
+
