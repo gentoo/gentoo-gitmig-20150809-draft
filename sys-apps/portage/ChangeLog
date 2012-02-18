@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.963 2012/02/18 05:31:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.964 2012/02/18 23:11:02 zmedico Exp $
+
+  18 Feb 2012; Zac Medico <zmedico@gentoo.org> portage-2.1.10.41.ebuild,
+  portage-2.1.10.44.ebuild, portage-2.1.10.46.ebuild, portage-2.1.10.47.ebuild,
+  portage-2.2.0_alpha84.ebuild, portage-2.2.0_alpha86.ebuild,
+  portage-2.2.0_alpha87.ebuild, portage-9999.ebuild:
+  Remove special USE=build python dependencies, since they no longer function
+  correctly as reported in bug #399331.
 
 *portage-2.2.0_alpha87 (18 Feb 2012)
 

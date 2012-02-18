@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha84.ebuild,v 1.1 2011/12/28 09:01:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha84.ebuild,v 1.2 2012/02/18 23:11:02 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -18,8 +18,7 @@ IUSE="build doc epydoc +ipc linguas_pl python2 python3 selinux xattr"
 # thread module if threading is disabled.
 python_dep="python3? ( =dev-lang/python-3* )
 	!python2? ( !python3? (
-		build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) )
-		!build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] >=dev-lang/python-3 ) )
+		|| ( >=dev-lang/python-2.7 dev-lang/python:2.6[threads] )
 	) )
 	python2? ( !python3? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) ) )"
 
