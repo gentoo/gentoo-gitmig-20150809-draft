@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.318 2012/02/17 21:53:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.319 2012/02/18 15:07:58 phajdan.jr Exp $
+
+  18 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> sun-jdk-1.6.0.31.ebuild:
+  x86 stable wrt bug #404071
 
   17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> sun-jdk-1.6.0.31.ebuild:
   Stable for amd64, wrt bug #404071
