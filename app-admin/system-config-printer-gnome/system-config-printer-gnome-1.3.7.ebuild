@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.7.ebuild,v 1.5 2012/01/18 19:56:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.7.ebuild,v 1.6 2012/02/18 17:00:24 reavertm Exp $
 
 EAPI="3"
 
@@ -33,6 +33,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=app-text/xmlto-0.0.22
+	dev-util/desktop-file-utils
 	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext
