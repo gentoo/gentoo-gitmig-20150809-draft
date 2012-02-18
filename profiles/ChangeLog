@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6224 2012/02/17 08:28:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6225 2012/02/18 10:22:52 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Remove entry for dev-util/chromium-tools, package has been removed.
 
   17 Feb 2012; Pacho Ramos <pacho@gentoo.org> package.mask:
   Unmask gtkdiskfree after fixing trivial bug and people wanting to keep it due

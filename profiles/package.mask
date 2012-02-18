@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13494 2012/02/18 03:24:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13495 2012/02/18 10:22:52 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -375,11 +375,6 @@ dev-php/PEAR-PHP_Archive
 # Reverse RDEPEND of dev-php/PEAR-I18N, which is going away
 # The package is unmaintained upstream, removal in 30 days
 dev-php/PEAR-HTML_Select_Common
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (17 Jan 2012)
-# Determined by the maintaining team to be no longer useful.
-# Removal in 30 days (02/16/2012).
-dev-util/chromium-tools
 
 # Matti Bickel <mabi@gentoo.org> (16 Jan 2012)
 # Now part of dev-lang/php; merge it with USE="intl"
