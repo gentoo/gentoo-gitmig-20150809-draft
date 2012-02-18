@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.313 2012/02/14 07:54:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.314 2012/02/18 05:16:43 zmedico Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Zac Medico <zmedico@gentoo.org> (18 Feb 2012)
+# Mask USE=pypy1_8 for sys-apps/portage, since pypy has limited KEYWORDS.
+sys-apps/portage pypy1_8
 
 # Justin Lecher <jlec@gentoo.org> (13. Feb 2012)
 # Is broken somehow, upstream informed
