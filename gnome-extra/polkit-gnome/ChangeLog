@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/polkit-gnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/ChangeLog,v 1.52 2012/02/17 17:25:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/ChangeLog,v 1.53 2012/02/18 19:50:19 armin76 Exp $
+
+  18 Feb 2012; Raúl Porcel <armin76@gentoo.org> polkit-gnome-0.102.ebuild:
+  ia64/sh/sparc stable wrt #401513
+
+  18 Feb 2012; Raúl Porcel <armin76@gentoo.org> polkit-gnome-0.102.ebuild,
+  polkit-gnome-0.105.ebuild:
+  ia64/sh/sparc stable wrt #401513
 
   17 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
   polkit-gnome-0.102.ebuild:
