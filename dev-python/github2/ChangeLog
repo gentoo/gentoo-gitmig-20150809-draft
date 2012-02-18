@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/github2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/github2/ChangeLog,v 1.1 2012/02/18 04:55:52 radhermit Exp $
+
+*github2-0.6.0 (18 Feb 2012)
+
+  18 Feb 2012; Tim Harder <radhermit@gentoo.org> +github2-0.6.0.ebuild,
+  +metadata.xml:
+  Initial import (bug #378347). Ebuild by me.
+
