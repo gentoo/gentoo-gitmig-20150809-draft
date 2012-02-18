@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.80 2012/01/04 17:16:32 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.81 2012/02/18 15:05:43 phajdan.jr Exp $
+
+  18 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  java-sdk-docs-1.7.0.2.ebuild:
+  x86 stable wrt security bug #404071
 
 *java-sdk-docs-1.7.0.2 (04 Jan 2012)
 
