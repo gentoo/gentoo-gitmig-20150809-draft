@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-1.0.ebuild,v 1.1 2012/02/11 15:26:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-1.0.ebuild,v 1.2 2012/02/18 14:31:32 phajdan.jr Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://dl.suckless.org/tools/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
