@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.561 2012/02/17 17:58:39 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.562 2012/02/18 14:27:53 olemarkus Exp $
+
+  18 Feb 2012; Ole Markus With <olemarkus@gentoo.org> -php-5.4.0_rc7-r1.ebuild,
+  -php-5.4.0_rc7.ebuild, metadata.xml:
+  Cleaned up metadata.xml and removed some old versions
 
   17 Feb 2012; Tobias Klausmann <klausman@gentoo.org> php-5.3.10.ebuild:
   Stable on alpha, bug #401997
