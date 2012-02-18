@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgcrypt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.152 2011/09/22 14:44:39 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.153 2012/02/18 20:55:36 ulm Exp $
+
+*libgcrypt-1.5.0-r2 (18 Feb 2012)
+
+  18 Feb 2012; Ulrich Müller <ulm@gentoo.org> +libgcrypt-1.5.0-r2.ebuild:
+  Re-add support for the IDEA cipher, bug 159870.
 
 *libgcrypt-1.5.0-r1 (22 Sep 2011)
 
