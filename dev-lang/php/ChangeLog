@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.562 2012/02/18 14:27:53 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.563 2012/02/18 19:42:03 armin76 Exp $
+
+  18 Feb 2012; Raúl Porcel <armin76@gentoo.org> php-5.3.10.ebuild:
+  ia64/s390/sh/sparc stable wrt #401997
 
   18 Feb 2012; Ole Markus With <olemarkus@gentoo.org> -php-5.4.0_rc7-r1.ebuild,
   -php-5.4.0_rc7.ebuild, metadata.xml:
