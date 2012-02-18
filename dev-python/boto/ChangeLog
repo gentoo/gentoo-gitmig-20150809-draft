@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.36 2012/02/01 22:13:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.37 2012/02/18 03:12:01 radhermit Exp $
+
+*boto-2.2.2 (18 Feb 2012)
+
+  18 Feb 2012; Tim Harder <radhermit@gentoo.org> +boto-2.2.2.ebuild:
+  Version bump (fixes bug #404153).
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> boto-2.0.ebuild:
   Marking boto-2.0 ppc for bug 391437
