@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qoauth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.15 2012/02/17 13:54:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.16 2012/02/18 17:33:43 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> qoauth-1.0.1.ebuild:
+  ~ppc, preparing for #396359
 
   17 Feb 2012; Davide Pesavento <pesa@gentoo.org> -qoauth-1.0-r1.ebuild,
   -qoauth-1.0.ebuild, metadata.xml:
