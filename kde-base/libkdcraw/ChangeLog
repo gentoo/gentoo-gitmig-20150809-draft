@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.103 2012/02/18 16:10:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.104 2012/02/18 16:41:48 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> Manifest:
+  ppc stable #396359
 
   18 Feb 2012; nixnut <nixnut@gentoo.org> libkdcraw-4.7.4.ebuild:
   ppc stable #396359
