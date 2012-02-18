@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009-r1.ebuild,v 1.4 2011/09/21 06:23:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009-r1.ebuild,v 1.5 2012/02/18 03:37:58 radhermit Exp $
 
 EAPI=2
 
@@ -37,7 +37,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-desktop.patch \
-		"${FILESDIR}"/${P}-no-nls.patch
+		"${FILESDIR}"/${P}-no-nls.patch \
+		"${FILESDIR}"/${P}-zlib-1.2.6.patch
 
 	# Fix issue with zlib-1.2.5.1 macros (bug #383179)
 	sed -i '1i#define OF(x) x' src/common/memgzio.c || die
