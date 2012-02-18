@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mednafen
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.32 2011/12/14 07:27:56 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.33 2012/02/18 08:16:13 radhermit Exp $
+
+  18 Feb 2012; Tim Harder <radhermit@gentoo.org> mednafen-0.8.13.3-r1.ebuild,
+  +files/mednafen-0.8.13.3-zlib-1.2.6.patch:
+  Fix build with zlib-1.2.6 (bug #403483).
 
 *mednafen-0.8.13.3-r1 (14 Dec 2011)
 

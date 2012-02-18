@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.3-r1.ebuild,v 1.1 2011/12/14 07:27:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.3-r1.ebuild,v 1.2 2012/02/18 08:16:13 radhermit Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -43,6 +43,7 @@ src_prepare() {
 		configure.ac \
 		|| die "sed failed"
 	epatch "${FILESDIR}"/${P}-zlib.patch
+	epatch "${FILESDIR}"/${P}-zlib-1.2.6.patch
 	eautoreconf
 }
 
