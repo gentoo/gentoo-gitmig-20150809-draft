@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.205 2011/12/24 08:35:16 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.206 2012/02/18 12:56:18 hwoarang Exp $
+
+*sip-4.13.2 (18 Feb 2012)
+
+  18 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +sip-4.13.2.ebuild:
+  version bump
 
 *sip-4.13.1 (24 Dec 2011)
 
