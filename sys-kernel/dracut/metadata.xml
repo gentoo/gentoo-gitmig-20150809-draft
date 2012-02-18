@@ -12,8 +12,9 @@
 	<use>
 		<flag name="debug">Module installing additional tools like strace, file
 			editor, ssh and more</flag>
-		<flag name="dm">Set of helper modules providing support for device
-			mapper. You need to enable this only if emerge says so.</flag>
+		<flag name="device-mapper">Set of helper modules providing support for
+			device mapper. You need to enable this only if emerge says
+			so.</flag>
 		<flag name="net">Set of helper modules providing networking support. You
 			need to enable this only if emerge says so.</flag>
 	</use>

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-016.ebuild,v 1.3 2012/02/16 18:01:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-016.ebuild,v 1.4 2012/02/18 14:42:44 aidecoe Exp $
 
 EAPI=4
 
@@ -51,10 +51,10 @@ NETWORK_MODULES="
 	dracut_modules_nfs
 	dracut_modules_ssh-client
 	"
-add_req_use_for dm ${DM_MODULES}
+add_req_use_for device-mapper ${DM_MODULES}
 add_req_use_for net ${NETWORK_MODULES}
 IUSE_DRACUT_MODULES="${COMMON_MODULES} ${DM_MODULES} ${NETWORK_MODULES}"
-IUSE="debug dm net selinux ${IUSE_DRACUT_MODULES}"
+IUSE="debug device-mapper net selinux ${IUSE_DRACUT_MODULES}"
 
 RESTRICT="test"
 
@@ -69,7 +69,7 @@ RDEPEND="
 	virtual/modutils
 
 	debug? ( dev-util/strace )
-	dm? ( || ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 ) )
+	device-mapper? ( || ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 ) )
 	net? ( net-misc/curl >=net-misc/dhcp-4.2.1-r1 sys-apps/iproute2 )
 	selinux? ( sys-libs/libselinux sys-libs/libsepol )
 	dracut_modules_biosdevname? ( sys-apps/biosdevname )
@@ -195,7 +195,7 @@ src_install() {
 
 	# Following flags define set of helper modules which are base dependencies
 	# for others and as so have no practical use, so remove these modules.
-	use dm  || rm_module 90dm
+	use device-mapper  || rm_module 90dm
 	use net || rm_module 40network 45ifcfg 45url-lib
 
 	# Remove S/390 modules which are not tested at all

@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.46 2012/02/16 18:01:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.47 2012/02/18 14:42:44 aidecoe Exp $
+
+  18 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-016.ebuild,
+  metadata.xml:
+  Renamed 'dm' flag to 'device-mapper', because the later is used also by lilo,
+  grub and parted.
 
   16 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-010-r3.ebuild,
   dracut-013-r2.ebuild, dracut-014-r2.ebuild, dracut-016.ebuild:
