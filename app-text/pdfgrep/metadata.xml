@@ -10,6 +10,6 @@
 		<description>Maintainer, CC him on bugs</description>
 	</maintainer>
 	<use>
-		<flag name="unac">Rremoving accents and ligatures before search</flag>
+		<flag name="unac">Removing accents and ligatures before search</flag>
 	</use>
 </pkgmetadata>
