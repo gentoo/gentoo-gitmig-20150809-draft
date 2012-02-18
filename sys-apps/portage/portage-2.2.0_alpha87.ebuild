@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha85.ebuild,v 1.2 2012/02/05 15:28:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha87.ebuild,v 1.1 2012/02/18 05:31:48 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -12,15 +12,16 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc +ipc linguas_pl python2 python3 selinux xattr"
+IUSE="build doc epydoc +ipc linguas_pl pypy1_8 python2 python3 selinux xattr"
 
 # Import of the io module in python-2.6 raises ImportError for the
 # thread module if threading is disabled.
 python_dep="python3? ( =dev-lang/python-3* )
-	!python2? ( !python3? (
+	!pypy1_8? ( !python2? ( !python3? (
 		build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) )
-		!build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] >=dev-lang/python-3 ) )
-	) )
+		!build? ( || ( >=dev-lang/python-2.7 dev-lang/python:2.6[threads] ) )
+	) ) )
+	pypy1_8? ( !python2? ( !python3? ( dev-python/pypy:1.8[bzip2] ) ) )
 	python2? ( !python3? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) ) )"
 
 # The pysqlite blocker is for bug #282760.
@@ -66,7 +67,7 @@ prefix_src_archives() {
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV=2.2.0_alpha84
+TARBALL_PV=2.2.0_alpha86
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
@@ -83,11 +84,12 @@ S="${WORKDIR}"/${PN}-${TARBALL_PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
 compatible_python_is_selected() {
-	[[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') = good ]]
+	[[ $("${EPREFIX}/usr/bin/python" -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') = good ]]
 }
 
 current_python_has_xattr() {
-	[[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x3030000 and "yes" or "no")') = yes ]]
+	[[ $("${EPREFIX}/usr/bin/python" -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x3030000 and "yes" or "no")') = yes ]] || \
+	"${EPREFIX}/usr/bin/python" -c 'import xattr' 2>/dev/null
 }
 
 pkg_setup() {
@@ -99,7 +101,16 @@ pkg_setup() {
 		ewarn "Both python2 and python3 USE flags are enabled, but only one"
 		ewarn "can be in the shebangs. Using python3."
 	fi
-	if ! use python2 && ! use python3 && ! compatible_python_is_selected ; then
+	if use pypy1_8 && use python3 ; then
+		ewarn "Both pypy1_8 and python3 USE flags are enabled, but only one"
+		ewarn "can be in the shebangs. Using python3."
+	fi
+	if use pypy1_8 && use python2 ; then
+		ewarn "Both pypy1_8 and python2 USE flags are enabled, but only one"
+		ewarn "can be in the shebangs. Using python2"
+	fi
+	if ! use pypy1_8 && ! use python2 && ! use python3 && \
+		! compatible_python_is_selected ; then
 		ewarn "Attempting to select a compatible default python interpreter"
 		local x success=0
 		for x in /usr/bin/python2.* ; do
@@ -123,6 +134,8 @@ pkg_setup() {
 		python_set_active_version 3
 	elif use python2; then
 		python_set_active_version 2
+	elif use pypy1_8; then
+		python_set_active_version 2.7-pypy-1.8
 	fi
 }
 
@@ -161,6 +174,9 @@ src_prepare() {
 	elif use python2; then
 		einfo "Converting shebangs for python2..."
 		python_convert_shebangs -r 2 .
+	elif use pypy1_8; then
+		einfo "Converting shebangs for pypy-c1.8..."
+		python_convert_shebangs -r 2.7-pypy-1.8 .
 	fi
 
 	if [[ -n ${EPREFIX} ]] ; then
@@ -356,8 +372,7 @@ pkg_preinst() {
 		fi
 	fi
 
-	if use xattr && ! current_python_has_xattr && \
-		! has_version dev-python/pyxattr ; then
+	if use xattr && ! current_python_has_xattr ; then
 		ewarn "For optimal performance in xattr handling, install"
 		ewarn "dev-python/pyxattr, or install >=dev-lang/python-3.3 and"
 		ewarn "enable USE=python3 for $CATEGORY/$PN."
