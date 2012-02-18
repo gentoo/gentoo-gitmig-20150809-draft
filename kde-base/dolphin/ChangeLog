@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.124 2012/01/27 09:01:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.125 2012/02/18 14:47:27 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> dolphin-4.7.4.ebuild:
+  ppc stable #396359
 
 *dolphin-4.8.0-r1 (27 Jan 2012)
 

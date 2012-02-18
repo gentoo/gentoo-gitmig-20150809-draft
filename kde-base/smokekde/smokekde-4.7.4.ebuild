@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/smokekde-4.7.4.ebuild,v 1.4 2012/02/14 19:20:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/smokekde-4.7.4.ebuild,v 1.5 2012/02/18 16:26:44 nixnut Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KDE_SCM="git"
 inherit kde4-base
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine - KDE bindings"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="akonadi attica debug kate okular semantic-desktop"
 
 DEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/keditfiletype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.82 2012/01/25 18:16:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.83 2012/02/18 15:26:58 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> keditfiletype-4.7.4.ebuild:
+  ppc stable #396359
 
 *keditfiletype-4.8.0 (25 Jan 2012)
 

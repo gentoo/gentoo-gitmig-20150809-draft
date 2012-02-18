@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaccounts-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccounts-plugin/ChangeLog,v 1.100 2012/01/25 18:17:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccounts-plugin/ChangeLog,v 1.101 2012/02/18 15:04:54 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kdeaccounts-plugin-4.7.4.ebuild:
+  ppc stable #396359
 
 *kdeaccounts-plugin-4.8.0 (25 Jan 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.146 2012/01/25 18:17:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.147 2012/02/18 16:24:02 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> pykde4-4.7.4.ebuild:
+  ppc stable #396359
 
 *pykde4-4.8.0 (25 Jan 2012)
 

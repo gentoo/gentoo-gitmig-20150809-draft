@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-wallpapers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.50 2012/01/25 18:17:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.51 2012/02/18 15:04:13 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kde-wallpapers-4.7.4.ebuild:
+  ppc stable #396359
 
 *kde-wallpapers-4.8.0 (25 Jan 2012)
 

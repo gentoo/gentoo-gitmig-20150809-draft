@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.58 2012/01/25 18:17:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.59 2012/02/18 14:45:36 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> blogilo-4.7.4.ebuild:
+  ppc stable #396359
 
 *blogilo-4.8.0 (25 Jan 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.195 2012/01/25 18:17:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.196 2012/02/18 15:36:36 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kjots-4.7.4.ebuild:
+  ppc stable #396359
 
 *kjots-4.8.0 (25 Jan 2012)
 

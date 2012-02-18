@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kaccessible
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaccessible/ChangeLog,v 1.36 2012/01/27 09:24:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaccessible/ChangeLog,v 1.37 2012/02/18 14:51:55 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kaccessible-4.7.4.ebuild:
+  ppc stable #396359
 
 *kaccessible-4.7.4-r1 (27 Jan 2012)
 *kaccessible-4.6.3-r1 (27 Jan 2012)

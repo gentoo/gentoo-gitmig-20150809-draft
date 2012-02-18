@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/palapeli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.53 2012/01/25 18:17:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.54 2012/02/18 16:20:15 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> palapeli-4.7.4.ebuild:
+  ppc stable #396359
 
 *palapeli-4.8.0 (25 Jan 2012)
 

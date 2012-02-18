@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.100 2012/01/25 18:16:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.101 2012/02/18 16:23:18 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> powerdevil-4.7.4.ebuild:
+  ppc stable #396359
 
 *powerdevil-4.8.0 (25 Jan 2012)
 

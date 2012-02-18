@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.210 2012/01/25 18:17:25 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.211 2012/02/18 15:09:25 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kdebase-data-4.7.4.ebuild:
+  ppc stable #396359
 
 *kdebase-data-4.8.0 (25 Jan 2012)
 

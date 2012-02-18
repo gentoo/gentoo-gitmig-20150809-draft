@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-strigi-analyzer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.94 2012/01/25 18:16:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.95 2012/02/18 15:13:57 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org>
+  kdegraphics-strigi-analyzer-4.7.4.ebuild:
+  ppc stable #396359
 
 *kdegraphics-strigi-analyzer-4.8.0 (25 Jan 2012)
 

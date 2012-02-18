@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/freespacenotifier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/freespacenotifier/ChangeLog,v 1.43 2012/01/25 18:16:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/freespacenotifier/ChangeLog,v 1.44 2012/02/18 14:49:40 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> freespacenotifier-4.7.4.ebuild:
+  ppc stable #396359
 
 *freespacenotifier-4.8.0 (25 Jan 2012)
 

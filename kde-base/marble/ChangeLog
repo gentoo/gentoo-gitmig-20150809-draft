@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.125 2012/02/09 15:20:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.126 2012/02/18 16:17:45 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> marble-4.7.4.ebuild:
+  ppc stable #396359
 
 *marble-4.8.0-r1 (09 Feb 2012)
 

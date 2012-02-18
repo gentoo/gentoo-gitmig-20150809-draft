@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbruch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.191 2012/01/25 18:16:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.192 2012/02/18 14:59:03 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kbruch-4.7.4.ebuild:
+  ppc stable #396359
 
 *kbruch-4.8.0 (25 Jan 2012)
 

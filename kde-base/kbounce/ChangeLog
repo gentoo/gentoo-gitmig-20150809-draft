@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.194 2012/01/25 18:16:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.195 2012/02/18 14:58:16 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kbounce-4.7.4.ebuild:
+  ppc stable #396359
 
 *kbounce-4.8.0 (25 Jan 2012)
 

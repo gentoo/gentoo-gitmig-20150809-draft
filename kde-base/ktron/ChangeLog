@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktron
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.170 2012/01/25 18:17:25 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.171 2012/02/18 16:04:41 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> ktron-4.7.4.ebuild:
+  ppc stable #396359
 
 *ktron-4.8.0 (25 Jan 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/kimono-4.7.4.ebuild,v 1.4 2012/02/14 19:35:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/kimono-4.7.4.ebuild,v 1.5 2012/02/18 15:34:37 nixnut Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ KDE_SCM="git"
 inherit kde4-base mono
 
 DESCRIPTION="C# bindings for KDE"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="akonadi debug plasma semantic-desktop"
 
 DEPEND="

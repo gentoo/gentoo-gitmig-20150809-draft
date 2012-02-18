@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-kresources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.207 2012/01/25 18:16:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.208 2012/02/18 15:17:32 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kdepim-kresources-4.7.4.ebuild:
+  ppc stable #396359
 
 *kdepim-kresources-4.8.0 (25 Jan 2012)
 

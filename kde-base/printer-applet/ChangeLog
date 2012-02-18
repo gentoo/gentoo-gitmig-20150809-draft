@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/printer-applet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.69 2012/01/25 18:16:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.70 2012/02/18 16:23:39 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> printer-applet-4.7.4.ebuild:
+  ppc stable #396359
 
 *printer-applet-4.8.0 (25 Jan 2012)
 

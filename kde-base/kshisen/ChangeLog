@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kshisen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.195 2012/01/25 18:16:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.196 2012/02/18 15:56:30 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kshisen-4.7.4.ebuild:
+  ppc stable #396359
 
 *kshisen-4.8.0 (25 Jan 2012)
 

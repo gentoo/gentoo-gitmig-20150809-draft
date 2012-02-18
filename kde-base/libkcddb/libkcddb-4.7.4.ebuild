@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/libkcddb-4.7.4.ebuild,v 1.3 2012/01/16 23:31:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/libkcddb-4.7.4.ebuild,v 1.4 2012/02/18 16:10:17 nixnut Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ KMNAME="kdemultimedia"
 inherit kde4-meta
 
 DESCRIPTION="KDE library for CDDB"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug musicbrainz"
 
 # tests require network access and compare static data with online data

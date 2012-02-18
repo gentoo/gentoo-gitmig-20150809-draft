@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.198 2012/01/25 18:16:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.199 2012/02/18 15:53:19 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kreversi-4.7.4.ebuild:
+  ppc stable #396359
 
 *kreversi-4.8.0 (25 Jan 2012)
 

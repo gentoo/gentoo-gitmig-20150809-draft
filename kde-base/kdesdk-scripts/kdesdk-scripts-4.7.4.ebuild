@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/kdesdk-scripts-4.7.4.ebuild,v 1.4 2012/01/16 22:27:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/kdesdk-scripts-4.7.4.ebuild,v 1.5 2012/02/18 15:22:07 nixnut Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ KMMODULE="scripts"
 inherit kde4-meta
 
 DESCRIPTION="KDE SDK Scripts"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.212 2012/01/25 18:17:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.213 2012/02/18 15:03:54 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kde-meta-4.7.4.ebuild:
+  ppc stable #396359
 
 *kde-meta-4.8.0 (25 Jan 2012)
 

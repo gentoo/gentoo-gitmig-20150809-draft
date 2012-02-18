@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.41 2012/01/25 18:17:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.42 2012/02/18 14:52:58 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kajongg-4.7.4.ebuild:
+  ppc stable #396359
 
 *kajongg-4.8.0 (25 Jan 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.203 2012/01/25 18:16:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.204 2012/02/18 16:03:59 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> ktouch-4.7.4.ebuild:
+  ppc stable #396359
 
 *ktouch-4.8.0 (25 Jan 2012)
 

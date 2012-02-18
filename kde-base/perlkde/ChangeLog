@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/perlkde
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.18 2012/02/14 19:22:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.19 2012/02/18 16:20:56 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> perlkde-4.7.4.ebuild:
+  ppc stable #396359
 
   14 Feb 2012; nixnut <nixnut@gentoo.org> perlkde-4.7.4.ebuild:
   ~ppc, preparing for #396359

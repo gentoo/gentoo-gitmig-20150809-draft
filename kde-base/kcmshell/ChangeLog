@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcmshell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.108 2012/01/25 18:16:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.109 2012/02/18 15:01:42 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kcmshell-4.7.4.ebuild:
+  ppc stable #396359
 
 *kcmshell-4.8.0 (25 Jan 2012)
 

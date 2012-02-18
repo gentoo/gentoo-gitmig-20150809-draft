@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.279 2012/02/03 16:10:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.280 2012/02/18 15:25:32 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kdm-4.7.4.ebuild:
+  ppc stable #396359
 
 *kdm-4.8.0-r1 (03 Feb 2012)
 *kdm-4.7.4-r1 (03 Feb 2012)

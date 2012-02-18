@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.172 2012/01/25 18:17:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.173 2012/02/18 14:55:40 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kapptemplate-4.7.4.ebuild:
+  ppc stable #396359
 
 *kapptemplate-4.8.0 (25 Jan 2012)
 

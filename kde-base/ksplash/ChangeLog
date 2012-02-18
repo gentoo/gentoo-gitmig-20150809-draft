@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksplash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.113 2012/01/25 18:17:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.114 2012/02/18 15:58:17 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> ksplash-4.7.4.ebuild:
+  ppc stable #396359
 
 *ksplash-4.8.0 (25 Jan 2012)
 

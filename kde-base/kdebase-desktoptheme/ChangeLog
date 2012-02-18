@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-desktoptheme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.98 2012/01/25 18:17:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.99 2012/02/18 15:09:45 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kdebase-desktoptheme-4.7.4.ebuild:
+  ppc stable #396359
 
 *kdebase-desktoptheme-4.8.0 (25 Jan 2012)
 

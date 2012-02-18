@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgeography
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.168 2012/01/25 18:16:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.169 2012/02/18 15:30:05 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kgeography-4.7.4.ebuild:
+  ppc stable #396359
 
 *kgeography-4.8.0 (25 Jan 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.109 2012/01/31 12:29:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.110 2012/02/18 16:21:37 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> phonon-kde-4.7.4.ebuild:
+  ppc stable #396359
 
   31 Jan 2012; Johannes Huber <johu@gentoo.org> phonon-kde-4.6.3.ebuild,
   phonon-kde-4.7.4.ebuild:

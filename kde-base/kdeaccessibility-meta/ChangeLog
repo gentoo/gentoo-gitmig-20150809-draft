@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.196 2012/01/25 18:17:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.197 2012/02/18 15:04:34 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kdeaccessibility-meta-4.7.4.ebuild:
+  ppc stable #396359
 
 *kdeaccessibility-meta-4.8.0 (25 Jan 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.213 2012/01/25 18:17:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.214 2012/02/18 14:54:03 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kalzium-4.7.4.ebuild:
+  ppc stable #396359
 
 *kalzium-4.8.0 (25 Jan 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/plasma-apps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.96 2012/01/25 18:17:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.97 2012/02/18 16:21:58 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> plasma-apps-4.7.4.ebuild:
+  ppc stable #396359
 
 *plasma-apps-4.8.0 (25 Jan 2012)
 

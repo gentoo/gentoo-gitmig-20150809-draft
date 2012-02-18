@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.126 2012/01/25 18:17:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.127 2012/02/18 16:19:34 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> okular-4.7.4.ebuild:
+  ppc stable #396359
 
 *okular-4.8.0 (25 Jan 2012)
 

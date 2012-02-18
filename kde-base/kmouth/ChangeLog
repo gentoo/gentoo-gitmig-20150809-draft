@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmouth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.192 2012/01/25 18:16:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.193 2012/02/18 15:43:01 nixnut Exp $
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kmouth-4.7.4.ebuild:
+  ppc stable #396359
 
 *kmouth-4.8.0 (25 Jan 2012)
 
