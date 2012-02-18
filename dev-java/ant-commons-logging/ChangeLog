@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-commons-logging
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-commons-logging/ChangeLog,v 1.25 2011/12/31 11:54:00 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-commons-logging/ChangeLog,v 1.26 2012/02/18 22:11:19 caster Exp $
+
+*ant-commons-logging-1.8.2 (18 Feb 2012)
+
+  18 Feb 2012; Vlastimil Babka <caster@gentoo.org>
+  +ant-commons-logging-1.8.2.ebuild:
+  Version bump, bug #351850.
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
   ant-commons-logging-1.7.1.ebuild, ant-commons-logging-1.8.0.ebuild,
