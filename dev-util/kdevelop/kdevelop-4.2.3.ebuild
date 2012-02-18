@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.2.3.ebuild,v 1.3 2011/11/20 22:33:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.2.3.ebuild,v 1.4 2012/02/18 17:42:39 reavertm Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 LICENSE="GPL-2 LGPL-2"
-IUSE="+cmake +cxx debug okteta +qmake qthelp"
+IUSE="+cmake +cxx debug okteta qthelp"
 
 # Remove ksysguard dep after libprocessui moved into kdelibs
 DEPEND="
@@ -39,9 +39,6 @@ src_configure() {
 		$(cmake-utils_use_with okteta LibKasten)
 		$(cmake-utils_use_with okteta LibOkteta)
 		$(cmake-utils_use_with okteta LibOktetaKasten)
-		$(cmake-utils_use_build qmake)
-		$(cmake-utils_use_build qmake qmakebuilder)
-		$(cmake-utils_use_build qmake qmake_parser)
 		$(cmake-utils_use_build qthelp)
 	)
 
