@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r3.ebuild,v 1.1 2012/02/04 10:43:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r4.ebuild,v 1.1 2012/02/18 11:41:25 hwoarang Exp $
 
 EAPI="2"
 
@@ -26,16 +26,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig"
 
-src_configure() {
-	econf	--enable-password \
-		--with-x \
-		--with-xconn=xcb \
-		$(use_enable gtk3) \
-		$(use_enable nls) \
-		$(use_enable debug) \
-		|| die "econf failed"
-}
-
 src_prepare() {
 	# Upstream bug, tarball contains pre-made lxdm.conf
 	rm "${S}"/data/lxdm.conf || die
@@ -47,6 +37,9 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-configure-add-pam.patch
 
+	# 403999
+	epatch "${FILESDIR}"/${P}-missing-pam-defines.patch
+
 	# this replaces the bootstrap/autogen script in most packages
 	eautoreconf
 
@@ -56,6 +49,15 @@ src_prepare() {
 		intltoolize --force --copy --automake || die
 		strip-linguas -i "${S}/po" || die
 	fi
+}
+src_configure() {
+	econf	--enable-password \
+		--with-x \
+		--with-xconn=xcb \
+		$(use_enable gtk3) \
+		$(use_enable nls) \
+		$(use_enable debug) \
+		$(use_with pam)
 }
 
 src_install() {

@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.12 2012/02/04 10:43:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.13 2012/02/18 11:41:25 hwoarang Exp $
+
+*lxdm-0.4.1-r4 (18 Feb 2012)
+
+  18 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/lxdm-0.4.1-missing-pam-defines.patch, +lxdm-0.4.1-r4.ebuild,
+  -lxdm-0.4.1-r3.ebuild:
+  Fix pam support. Thanks to Simon Poirier for investigating this. Bug #403999
 
 *lxdm-0.4.1-r3 (04 Feb 2012)
 
