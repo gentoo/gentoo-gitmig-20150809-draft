@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.23 2011/02/19 18:02:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.24 2012/02/18 11:58:04 nixnut Exp $
 
 # This file requires >=portage-2.1.1
+
+#nixnut <nixnut@gentoo.org> (18 feb 2012)
+#krossjava won't install, looks like bug #280629 
+=kde-base/kdebindings-meta-4.7.4 -java
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
 # sys-devel/llvm is keyworded on ppc
