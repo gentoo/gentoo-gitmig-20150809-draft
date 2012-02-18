@@ -1,9 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.9 2009/03/29 16:58:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.10 2012/02/18 22:02:28 caster Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
+WANT_ANT_TASKS="ant-antlr"
 
 inherit java-pkg-2 java-ant-2 eutils versionator
 
