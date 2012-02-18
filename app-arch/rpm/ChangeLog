@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/rpm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.125 2011/05/08 15:13:06 sochotnicky Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.126 2012/02/18 20:14:40 sochotnicky Exp $
+
+*rpm-4.9.1.2 (18 Feb 2012)
+
+  18 Feb 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org> -rpm-4.9.0.ebuild,
+  +rpm-4.9.1.2.ebuild:
+  Version bumped to latest release, dropped 4.9.0 ebuild (more to come)
 
 *rpm-4.9.0 (08 May 2011)
 *rpm-4.8.1-r2 (08 May 2011)

@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.0.ebuild,v 1.3 2011/05/08 15:28:18 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.1.2.ebuild,v 1.1 2012/02/18 20:14:40 sochotnicky Exp $
 
-EAPI="3"
+EAPI=4
 
 PYTHON_DEPEND="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://rpm.org/releases/rpm-4.9.x/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 IUSE="nls python doc caps lua acl"
 
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -63,22 +64,21 @@ src_configure() {
 		$(use_with doc hackingdocs) \
 		$(use_enable nls) \
 		$(use_with lua) \
-		$(use_with caps cap)\
-		$(use_with acl)\
-		|| die "econf failed"
+		$(use_with caps cap) \
+		$(use_with acl)
 }
 
 src_install() {
-	emake DESTDIR="${D}" INSTALLDIRS=vendor install || die "emake install failed"
+	default
 
-	mv "${D}"/bin/rpm "${D}"/usr/bin
-	rmdir "${D}"/bin
+	mv "${ED}"/bin/rpm "${ED}"/usr/bin
+	rmdir "${ED}"/bin
 	# fix symlinks to /bin/rpm (#349840)
 	for binary in rpmquery rpmverify;do
-		ln -sf rpm "${D}"/usr/bin/$binary
+		ln -sf rpm "${ED}"/usr/bin/${binary}
 	done
 
-	use nls || rm -rf "${D}"/usr/share/man/??
+	use nls || rm -rf "${ED}"/usr/share/man/??
 
 	keepdir /usr/src/rpm/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
 
@@ -90,12 +90,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [[ -f "${ROOT}"/var/lib/rpm/Packages ]] ; then
+	if [[ -f "${EROOT}"/var/lib/rpm/Packages ]] ; then
 		einfo "RPM database found... Rebuilding database (may take a while)..."
-		"${ROOT}"/usr/bin/rpmdb --rebuilddb --root="${ROOT}"
+		"${EROOT}"/usr/bin/rpmdb --rebuilddb --root="${EROOT}"
 	else
 		einfo "No RPM database found... Creating database..."
-		"${ROOT}"/usr/bin/rpmdb --initdb --root="${ROOT}"
+		"${EROOT}"/usr/bin/rpmdb --initdb --root="${EROOT}"
 	fi
 
 	use python && python_mod_optimize rpm
