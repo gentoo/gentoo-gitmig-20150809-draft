@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r3.ebuild,v 1.1 2011/12/12 19:07:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r3.ebuild,v 1.2 2012/02/18 08:26:15 radhermit Exp $
 
 EAPI=2
 inherit eutils flag-o-matic autotools games
@@ -47,7 +47,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-glibc2.10.patch \
 		"${FILESDIR}"/${P}-ovflfix.patch \
 		"${FILESDIR}"/${P}-libpng15.patch \
-		"${FILESDIR}"/${P}-zlib.patch
+		"${FILESDIR}"/${P}-zlib.patch \
+		"${FILESDIR}"/${P}-zlib-1.2.6.patch
 
 	eautoreconf
 
