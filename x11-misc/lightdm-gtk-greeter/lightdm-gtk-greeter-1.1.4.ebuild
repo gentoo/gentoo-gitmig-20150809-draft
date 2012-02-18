@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/lightdm-gtk-greeter-1.1.4.ebuild,v 1.1 2012/02/18 11:23:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/lightdm-gtk-greeter-1.1.4.ebuild,v 1.2 2012/02/18 17:24:44 hwoarang Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ src_install() {
 
 	if use branding; then
 		insinto /etc
-		doins "${WORKDIR}"/${PN}
+		doins "${WORKDIR}"/${PN}.conf
 		insinto /usr/share/lightdm/backgrounds/
 		doins "${WORKDIR}"/gentoo1024x768.png
 		sed -i -e "/background/s:=.*:=/usr/share/lightdm/backgrounds/gentoo1024x768.png:" \

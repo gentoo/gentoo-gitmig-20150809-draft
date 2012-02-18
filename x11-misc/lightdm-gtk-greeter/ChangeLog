@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lightdm-gtk-greeter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.1 2012/02/18 11:23:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.2 2012/02/18 17:24:44 hwoarang Exp $
+
+  18 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  lightdm-gtk-greeter-1.1.4.ebuild:
+  Add missing .conf extension when branding is enabled
 
 *lightdm-gtk-greeter-1.1.4 (18 Feb 2012)
 
