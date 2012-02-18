@@ -1,6 +1,2 @@
-#nixnut <nixnut@gentoo.org> (18 feb 2012)
-# qthelp until qt-assistant gets assistance (bug #398885)
--qthelp
-
 # Unmask the flag which corresponds to ARCH.
 -ppc
