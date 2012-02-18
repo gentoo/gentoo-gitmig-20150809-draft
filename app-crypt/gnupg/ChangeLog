@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.422 2012/02/11 19:16:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.423 2012/02/18 16:51:35 ulm Exp $
+
+  18 Feb 2012; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  Update description of idea USE flag, bug 404353.
 
   11 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> gnupg-2.0.17-r2.ebuild,
   gnupg-2.0.17-r3.ebuild, gnupg-2.0.17.ebuild, gnupg-2.0.18.ebuild:

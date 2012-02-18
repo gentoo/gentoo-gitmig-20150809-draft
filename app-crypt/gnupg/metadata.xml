@@ -12,7 +12,7 @@
     restrictions. GnuPG is a RFC2440 (OpenPGP) compliant application.
   </longdescription>
   <use>
-    <flag name='idea'>Use the patented IDEA algorithm</flag>
+    <flag name='idea'>Add support for the IDEA algorithm</flag>
     <flag name='openct'>
       Bring in <pkg>dev-libs/openct</pkg> as a dependency; enable
       scdaemon.
