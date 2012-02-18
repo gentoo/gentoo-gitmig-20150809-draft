@@ -1,0 +1,11 @@
+# ChangeLog for www-client/dwb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.1 2012/02/18 09:20:33 radhermit Exp $
+
+*dwb-9999 (18 Feb 2012)
+*dwb-2012.02.01 (18 Feb 2012)
+
+  18 Feb 2012; Tim Harder <radhermit@gentoo.org> +dwb-2012.02.01.ebuild,
+  +dwb-9999.ebuild, +metadata.xml:
+  Initial import. Ebuild by me.
+
