@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.217 2012/01/09 20:02:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.218 2012/02/18 18:01:26 jer Exp $
+
+  18 Feb 2012; Jeroen Roovers <jer@gentoo.org> exim-4.77.ebuild:
+  Stable for HPPA (bug #391237).
 
   09 Jan 2012; Brent Baude <ranger@gentoo.org> exim-4.77.ebuild:
   Marking exim-4.77 ppc for bug 391237
