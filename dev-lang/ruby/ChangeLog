@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.527 2012/02/05 22:06:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.528 2012/02/18 08:35:39 graaff Exp $
+
+*ruby-1.9.3_p125 (18 Feb 2012)
+
+  18 Feb 2012; Hans de Graaff <graaff@gentoo.org> +ruby-1.9.3_p125.ebuild:
+  Version bump, thanks to Sven Schwyn for reporting in bug 203706.
 
   05 Feb 2012; Markus Meier <maekke@gentoo.org> ruby-1.9.3_p0.ebuild:
   add ~arm, bug #332593
