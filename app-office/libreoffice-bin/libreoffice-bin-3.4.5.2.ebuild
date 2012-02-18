@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2.ebuild,v 1.3 2012/02/16 17:47:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2.ebuild,v 1.4 2012/02/18 09:04:57 scarabeus Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ CMAKE_REQUIRED="never"
 BASE_AMD64_URI="http://dev.gentoo.org/~pacho/libreoffice/"
 BASE_X86_URI="http://gentoo-pr.org/libreo/libreo/"
 
-inherit kde4-base java-pkg-opt-2 pax-utils
+inherit kde4-base java-pkg-opt-2 pax-utils prefix
 
 DESCRIPTION="LibreOffice, a full office productivity suite. Binary package"
 HOMEPAGE="http://www.libreoffice.org"
@@ -137,6 +137,11 @@ src_unpack() {
 	default
 }
 
+src_prepare() {
+	cp "${FILESDIR}"/50-${PN} "${T}"
+	eprefixify "${T}"/50-${PN}
+}
+
 src_configure() { :; }
 
 src_compile() { :; }
@@ -146,7 +151,7 @@ src_install() {
 	cp -aR "${S}"/usr/* "${ED}"/usr/
 
 	# prevent revdep-rebuild from attempting to rebuild all the time
-	insinto /etc/revdep-rebuild && doins "${FILESDIR}/50-${PN}"
+	insinto /etc/revdep-rebuild && doins "${T}/50-${PN}"
 
 }
 

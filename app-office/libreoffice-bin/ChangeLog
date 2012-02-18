@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.50 2012/02/17 15:19:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.51 2012/02/18 09:04:57 scarabeus Exp $
+
+  18 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.4.5.2.ebuild:
+  Fix the revdep-rebuild thingie for good. Wrt bug#404105
 
   16 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-bin-3.4.5.2.ebuild:
