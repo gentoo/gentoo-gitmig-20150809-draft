@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pinentry
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.116 2011/08/26 15:18:08 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.117 2012/02/18 18:58:11 grobian Exp $
+
+  18 Feb 2012; Fabian Groffen <grobian@gentoo.org> pinentry-0.8.1.ebuild:
+  Remove existing file in Prefix
 
   26 Aug 2011; Fabian Groffen <grobian@gentoo.org> pinentry-0.8.1.ebuild:
   Explicitly disable X11, such that Darwin users don't have hanging pinentry
