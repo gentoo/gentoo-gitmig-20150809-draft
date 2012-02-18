@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1.0.ebuild,v 1.1 2012/02/17 15:24:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1.0.ebuild,v 1.2 2012/02/18 18:17:35 eras Exp $
 
 EAPI=4
 
@@ -281,4 +281,5 @@ pkg_postinst() {
 			install_cert /etc/ssl/dovecot/server
 		fi
 	fi
+	elog "Please read http://wiki2.dovecot.org/Upgrading/2.1 for upgrade notes."
 }
