@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.2.12-r1.ebuild,v 1.2 2012/02/13 13:06:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.2.12-r1.ebuild,v 1.3 2012/02/18 08:22:28 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -44,6 +44,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable doc gtk-doc) \
+		$(use_enable introspection) \
 		--enable-call \
 		--enable-debug \
 		--enable-public-extensions \
