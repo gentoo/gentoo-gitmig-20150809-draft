@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.298 2012/02/01 14:37:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.299 2012/02/19 14:49:54 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> transcode-1.1.7.ebuild:
+  Stable on alpha, bug #395729
 
   01 Feb 2012; Alexis Ballier <aballier@gentoo.org> transcode-1.1.7.ebuild:
   postproc should build with libav now
