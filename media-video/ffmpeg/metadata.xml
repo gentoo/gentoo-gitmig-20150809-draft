@@ -14,7 +14,6 @@
 	<flag name="ass">Enables <pkg>media-libs/libass</pkg> based subtitle renderer.</flag>
     <flag name="aacplus">AAC+ encoding via <pkg>media-libs/libaacplus</pkg>.</flag>
     <flag name="amr">Enables Adaptive Multi-Rate Audio support</flag>
-	<flag name="avconv">Build and install avconv, an alternative command line tool to ffmpeg from <pkg>media-video/libav</pkg>.</flag>
     <flag name="avx">Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)</flag>
     <flag name="cdio">Enables audio CD grabbing with <pkg>dev-libs/libcdio</pkg>.</flag>
 	<flag name="celt">Adds Xiph CELT audio decoding support via <pkg>media-libs/celt</pkg></flag>
