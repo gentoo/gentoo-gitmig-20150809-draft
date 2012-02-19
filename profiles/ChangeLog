@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6231 2012/02/19 22:29:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6232 2012/02/19 22:45:59 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Feb 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask app-text/notecase-pro for removal
 
   19 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> updates/1Q-2012:
   Move net-wireless/{wispy-,spec}tools.
