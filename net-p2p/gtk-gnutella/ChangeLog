@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.131 2012/02/18 09:41:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.132 2012/02/19 07:11:44 graaff Exp $
+
+  19 Feb 2012; Hans de Graaff <graaff@gentoo.org>
+  gtk-gnutella-0.98.2-r1.ebuild:
+  Empty the LINGUAS file instead of removing it to avoid tripping up the
+  MANIFEST checking. Fixes bug 404455.
 
 *gtk-gnutella-0.98.2-r1 (18 Feb 2012)
 
