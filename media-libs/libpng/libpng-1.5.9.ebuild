@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.9.ebuild,v 1.1 2012/02/19 09:36:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.9.ebuild,v 1.2 2012/02/19 11:46:24 ssuominen Exp $
 
 # WARNING: media-gfx/optipng is shipping internal copy of libpng14. Look out for
 # security.
@@ -12,7 +12,7 @@ inherit eutils libtool multilib
 DESCRIPTION="Portable Network Graphics library"
 HOMEPAGE="http://www.libpng.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
-	apng? ( mirror://sourceforge/${PN}-apng/${PN}-1.5.7-apng.patch.gz )"
+	apng? ( mirror://sourceforge/${PN}-apng/${P}-apng.patch.gz )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -27,7 +27,7 @@ DOCS=( ANNOUNCE CHANGES libpng-manual.txt README TODO )
 
 src_prepare() {
 	if use apng; then
-		epatch "${WORKDIR}"/${PN}-1.5.7-apng.patch
+		epatch "${WORKDIR}"/${P}-apng.patch
 		# Don't execute symbols check with apng patch wrt #378111
 		sed -i -e '/^check/s:scripts/symbols.chk::' Makefile.in || die
 	fi
