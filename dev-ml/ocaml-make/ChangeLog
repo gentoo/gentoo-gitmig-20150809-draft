@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocaml-make
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ChangeLog,v 1.17 2012/02/19 13:25:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ChangeLog,v 1.18 2012/02/19 13:27:22 aballier Exp $
+
+  19 Feb 2012; Alexis Ballier <aballier@gentoo.org> -ocaml-make-6.29.3.ebuild,
+  -ocaml-make-6.30.0.ebuild, -ocaml-make-6.33.0.ebuild,
+  -ocaml-make-6.34.0.ebuild, -ocaml-make-6.35.0.ebuild:
+  remove old
 
 *ocaml-make-6.36.0 (19 Feb 2012)
 
