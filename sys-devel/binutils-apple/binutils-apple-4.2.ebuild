@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.4 2012/02/06 12:15:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.5 2012/02/19 19:37:57 grobian Exp $
 
 EAPI="3"
 
@@ -154,16 +154,16 @@ src_prepare() {
 src_configure() {
 	tc-export CC CXX AR
 	if use lto ; then
-		append-flags -DLTO_SUPPORT
+		append-cppflags -DLTO_SUPPORT
 		append-ldflags -L"${EPREFIX}"/usr/$(get_libdir)/llvm
 		append-libs LTO
 		LTO=1
 	else
-		append-flags -ULTO_SUPPORT
+		append-cppflags -ULTO_SUPPORT
 		LTO=0
 	fi
-	append-flags -DNDEBUG
-	append-flags -I${WORKDIR}/libunwind/include
+	append-cppflags -DNDEBUG
+	append-cppflags -I${WORKDIR}/libunwind/include
 }
 
 compile_libunwind() {
