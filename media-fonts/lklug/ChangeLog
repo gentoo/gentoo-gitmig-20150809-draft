@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/lklug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lklug/ChangeLog,v 1.2 2012/02/18 14:30:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lklug/ChangeLog,v 1.3 2012/02/19 10:45:51 ago Exp $
+
+  19 Feb 2012; Agostino Sarubbo <ago@gentoo.org> lklug-0.5.4.ebuild:
+  Stable for AMD64, wrt bug #404095
 
   18 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> lklug-0.5.4.ebuild:
   x86 stable wrt bug #404095
