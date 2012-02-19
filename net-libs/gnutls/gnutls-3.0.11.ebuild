@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.11.ebuild,v 1.1 2012/01/13 23:21:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.11.ebuild,v 1.2 2012/02/19 15:13:55 scarabeus Exp $
 
 EAPI=4
 
-inherit autotools libtool
+inherit autotools libtool eutils
 
 DESCRIPTION="A TLS 1.2 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -61,6 +61,10 @@ src_prepare() {
 		rm -f "${dir}/lt"* "${dir}/libtool.m4"
 	done
 	find . -name ltmain.sh -exec rm {} \;
+
+	# support user patches
+	epatch_user
+
 	eautoreconf
 
 	# Use sane .so versioning on FreeBSD.
