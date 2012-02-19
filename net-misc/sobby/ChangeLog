@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/sobby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.28 2012/02/03 22:35:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.29 2012/02/19 16:32:36 xarthisius Exp $
+
+*sobby-0.4.8 (19 Feb 2012)
+
+  19 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +sobby-0.4.8.ebuild,
+  -sobby-0.4.5.ebuild:
+  Version bump, fix compilation with glibmm 2.31 or greater. Drop old
 
   03 Feb 2012; Brent Baude <ranger@gentoo.org> sobby-0.4.7.ebuild:
   Marking sobby-0.4.7 ppc for bug 394059
