@@ -1,6 +1,19 @@
 # ChangeLog for net-wireless/spectools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.1 2012/02/17 03:30:54 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.2 2012/02/19 22:27:11 robbat2 Exp $
+
+*spectools-2006.03.1 (19 Feb 2012)
+*spectools-2006.09.1 (19 Feb 2012)
+*spectools-2011.08.1-r1 (19 Feb 2012)
+*spectools-2009.02.1 (19 Feb 2012)
+
+  19 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/spectools-2009.02.1-libusb-compat.patch,
+  +files/spectools-2009.02.1-udev-rules.patch, +spectools-2006.03.1.ebuild,
+  +spectools-2006.09.1.ebuild, +spectools-2009.02.1.ebuild,
+  +spectools-2011.08.1-r1.ebuild, metadata.xml:
+  Bug #404573: import old ebuilds from wispy-tools package, along with all fixes
+  in those ebuilds. This includes an old stable keyword as well.
 
 *spectools-2011.08.1 (17 Feb 2012)
 

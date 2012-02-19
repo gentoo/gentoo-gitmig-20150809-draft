@@ -10,9 +10,14 @@
 		<email>steev@gentoo.org</email>
 		<name>Steev Klimaszewski</name>
 		<description>Proxy-maintainer, CC him on bugs</description>
-</maintainer>
+	</maintainer>
+	<maintainer>
+		<email>robbat2@gentoo.org</email>
+		<name>Robin H. Johnson</name>
+		<description>Maintainer, has 1st gen WiSpy hardware for testing</description>
+	</maintainer>
 <use>
-	<flag name="debug">Build the raw output client for spectools.  This is only needed for developing spectools.</flag>
+	<flag name="debug">Build the raw output client for spectools.</flag>
 	<flag name="ncurses">Build the ncurses based client for spectools</flag>
 	<flag name="gtk">Build the gtk-2 based client for spectools</flag>
 </use>
