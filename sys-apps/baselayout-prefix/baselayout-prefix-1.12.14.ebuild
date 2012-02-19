@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.6 2011/12/04 13:55:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.7 2012/02/19 19:32:40 grobian Exp $
 
 EAPI=3
 
@@ -68,8 +68,8 @@ src_compile() {
 	emake || die "Cannot build gnulib"
 	popd > /dev/null
 
-	# use gnulib
-	append-flags -I../gnulib -I../gnulib/gllib
+	# use gnulib (buildsystem doesn't respect cppflags)
+	append-cflags -I../gnulib -I../gnulib/gllib
 	append-ldflags -L../gnulib/gllib
 	append-libs gnu
 
