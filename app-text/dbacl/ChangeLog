@@ -1,6 +1,13 @@
 # ChangeLog for app-text/dbacl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.20 2011/01/24 21:57:09 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.21 2012/02/19 10:01:37 steev Exp $
+
+  19 Feb 2012; Steev Klimaszewsk <steev@gentoo.org> dbacl-1.13.ebuild,
+  metadata.xml:
+  Update dbacl-1.13's license based on the report from bug #404117. Also fix
+  the
+  issue with the metadata that Jeroen Roovers pointed out. Thanks to Marcin
+  Mirosław for reporting.
 
   24 Jan 2011; Mike Frysinger <vapier@gentoo.org> dbacl-1.13.ebuild:
   Drop empty DEPEND, unused eutils inherit, and convert to emake.
