@@ -1,6 +1,13 @@
 # ChangeLog for sci-calculators/tilp2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.6 2011/03/15 21:23:34 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.7 2012/02/19 13:57:10 xarthisius Exp $
+
+*tilp2-1.16 (19 Feb 2012)
+
+  19 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +tilp2-1.16.ebuild,
+  -tilp2-1.12.ebuild:
+  Version bump, fixes bug #379703 by Michael (kensington)
+  <gentoo@scribeofthenile.com>. Drop old
 
 *tilp2-1.14 (15 Mar 2011)
 
