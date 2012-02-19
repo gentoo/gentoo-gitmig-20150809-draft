@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.2.ebuild,v 1.1 2012/02/12 14:43:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.2.ebuild,v 1.2 2012/02/19 10:10:13 klausman Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://clutter-project.org/"
 
 LICENSE="LGPL-2.1"
 SLOT="1.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 IUSE="dbus debug doc glade +gtk +introspection startup-notification"
 
 RDEPEND="
