@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/flann
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.12 2011/11/11 20:12:59 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.13 2012/02/19 22:34:54 dilfridge Exp $
+
+*flann-1.7.1 (19 Feb 2012)
+
+  19 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> +flann-1.7.1.ebuild:
+  Version bump. Needs still implementation of cuda support.
 
   11 Nov 2011; Mike Frysinger <vapier@gentoo.org> flann-1.6.8.ebuild,
   flann-1.6.10.ebuild, flann-1.6.11.ebuild:
