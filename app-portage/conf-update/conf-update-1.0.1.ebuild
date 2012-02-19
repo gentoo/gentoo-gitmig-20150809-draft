@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.1.ebuild,v 1.4 2012/01/04 22:28:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.1.ebuild,v 1.5 2012/02/19 13:39:18 klausman Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE="colordiff"
 
 RDEPEND=">=dev-libs/glib-2.6
