@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/ChangeLog,v 1.17 2011/12/21 08:42:23 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/ChangeLog,v 1.18 2012/02/19 14:13:52 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> xcb-2.4-r1.ebuild:
+  Stable on alpha, bug #393921
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xcb-2.4-r1.ebuild:
   x86 stable wrt bug #393921
