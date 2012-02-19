@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/perl-info
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.28 2012/02/03 15:23:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.29 2012/02/19 14:10:54 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> perl-info-0.16.ebuild:
+  Stable on alpha, bug #393919
 
   03 Feb 2012; Brent Baude <ranger@gentoo.org> perl-info-0.16.ebuild:
   Marking perl-info-0.16 ppc for bug 393919
