@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.90 2012/02/18 17:44:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.91 2012/02/19 10:33:09 ago Exp $
+
+  19 Feb 2012; Agostino Sarubbo <ago@gentoo.org> XML-Writer-0.615.0.ebuild:
+  Stable for amd64, wrt bug #404339
 
   18 Feb 2012; Jeroen Roovers <jer@gentoo.org> XML-Writer-0.615.0.ebuild:
   Stable for HPPA (bug #404339).
