@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-savage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/ChangeLog,v 1.68 2012/02/15 19:12:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/ChangeLog,v 1.69 2012/02/19 15:04:11 armin76 Exp $
+
+  19 Feb 2012; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-savage-2.3.3.ebuild:
+  alpha/ia64/sparc stable wrt #394393
 
   15 Feb 2012; Brent Baude <ranger@gentoo.org> xf86-video-savage-2.3.3.ebuild:
   Marking xf86-video-savage-2.3.3 ppc stable for bug 394393
