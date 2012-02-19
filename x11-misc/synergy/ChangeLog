@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.75 2012/01/27 20:54:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.76 2012/02/19 13:24:19 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> synergy-1.3.6.ebuild:
+  Stable on alpha, bug #391393
 
   27 Jan 2012; Brent Baude <ranger@gentoo.org> synergy-1.3.6.ebuild:
   Marking synergy-1.3.6 ppc64 for bug 391393
