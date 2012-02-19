@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.76 2012/02/12 18:29:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.77 2012/02/19 23:44:57 dilfridge Exp $
+
+  19 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -foomatic-db-4.0.20101123.ebuild:
+  Remove old
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org>
   foomatic-db-4.0.20110506.ebuild:
