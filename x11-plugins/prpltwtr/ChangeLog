@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/prpltwtr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/prpltwtr/ChangeLog,v 1.1 2012/02/19 08:00:17 jdhore Exp $
+
+*prpltwtr-0.11.0 (19 Feb 2012)
+
+  19 Feb 2012; Jeff Horelick <jdhore@gentoo.org> +metadata.xml,
+  +prpltwtr-0.11.0.ebuild:
+  New ebuild (closes bug 307411).
+
