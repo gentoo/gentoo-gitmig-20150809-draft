@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.69 2012/02/15 19:16:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.70 2012/02/19 15:12:44 armin76 Exp $
+
+  19 Feb 2012; Raúl Porcel <armin76@gentoo.org> xcb-proto-1.6-r2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #394393
 
   15 Feb 2012; Brent Baude <ranger@gentoo.org> xcb-proto-1.6-r2.ebuild:
   Marking xcb-proto-1.6-r2 ppc stable for bug 394393
