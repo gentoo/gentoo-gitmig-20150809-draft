@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-8.2.23.ebuild,v 1.6 2012/02/16 19:39:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-8.2.23.ebuild,v 1.7 2012/02/19 11:02:49 klausman Exp $
 
 EAPI="4"
 
 inherit versionator
 
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ~s390 ~sh ~sparc x86"
 
 RESTRICT="test"
 
