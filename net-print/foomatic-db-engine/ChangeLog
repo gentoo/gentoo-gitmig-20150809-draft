@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.52 2012/02/07 17:00:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.53 2012/02/19 15:54:05 armin76 Exp $
+
+  19 Feb 2012; Raúl Porcel <armin76@gentoo.org>
+  foomatic-db-engine-4.0.7.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #397189
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> foomatic-db-engine-4.0.7.ebuild:
   Stable for HPPA (bug #397189).
