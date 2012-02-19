@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xman
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.56 2011/10/03 17:57:02 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.57 2012/02/19 14:34:23 armin76 Exp $
+
+  19 Feb 2012; Raúl Porcel <armin76@gentoo.org> xman-1.1.2.ebuild:
+  s390/sh/sparc stable wrt #394393
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> xman-1.1.2.ebuild:
   Marked ppc ppc64 stable for bug #380421.
