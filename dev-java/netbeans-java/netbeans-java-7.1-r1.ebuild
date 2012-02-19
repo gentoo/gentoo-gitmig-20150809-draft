@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.1.ebuild,v 1.1 2012/01/06 11:09:16 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.1-r1.ebuild,v 1.1 2012/02/19 12:32:24 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -169,8 +169,10 @@ src_install() {
 
 	doins -r *
 	rm -fr "${D}"/${INSTALL_DIR}/ant/* || die
-	rm -fr "${D}"/${INSTALL_DIR}/maven || die
-	dosym /usr/share/maven-bin-3.0 ${INSTALL_DIR}/maven
+	#rm -fr "${D}"/${INSTALL_DIR}/maven || die
+	#dosym /usr/share/maven-bin-3.0 ${INSTALL_DIR}/maven
+	chmod 755 "${D}"/${INSTALL_DIR}/maven/bin/mvn* || die
+	rm -fr "${D}"/${INSTALL_DIR}/maven/bin/*.bat || die
 
 	insinto ${INSTALL_DIR}/ant
 	dosym /usr/share/ant/bin ${INSTALL_DIR}/ant/bin
