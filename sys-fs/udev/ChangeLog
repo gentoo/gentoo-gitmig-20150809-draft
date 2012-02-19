@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.645 2012/02/19 04:15:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.646 2012/02/19 07:21:53 williamh Exp $
+
+  19 Feb 2012; William Hubbs <williamh@gentoo.org> udev-181.ebuild,
+  udev-9999.ebuild:
+  update kmod dependencies to >=kmod-5
 
   19 Feb 2012; William Hubbs <williamh@gentoo.org> -udev-175-r1.ebuild,
   -udev-180.ebuild:
