@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.119 2012/02/18 17:02:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.120 2012/02/19 10:34:15 ago Exp $
+
+  19 Feb 2012; Agostino Sarubbo <ago@gentoo.org> XML-LibXML-1.900.0.ebuild:
+  Stable for amd64, wrt bug #404343
 
   18 Feb 2012; Jeroen Roovers <jer@gentoo.org> XML-LibXML-1.900.0.ebuild:
   Stable for HPPA (bug #404343).
