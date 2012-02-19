@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/libXi-1.4.3-r1.ebuild,v 1.6 2012/02/15 19:13:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/libXi-1.4.3-r1.ebuild,v 1.7 2012/02/19 15:05:58 armin76 Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ XORG_DOC=doc
 inherit xorg-2
 
 DESCRIPTION="X.Org Xi library"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE=""
 
 RDEPEND=">=x11-libs/libX11-1.3
