@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hlatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.15 2012/02/01 17:18:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.16 2012/02/19 15:17:56 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> hlatex-1.0.1.ebuild:
+  Stable on alpha, bug #393847
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> hlatex-1.0.1.ebuild:
   Marking hlatex-1.0.1 ppc for bug 393847

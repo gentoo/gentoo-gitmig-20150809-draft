@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-1.0.1.ebuild,v 1.6 2012/02/01 17:18:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-1.0.1.ebuild,v 1.7 2012/02/19 15:17:56 klausman Exp $
 
 EAPI=3
 
@@ -30,7 +30,7 @@ SRC_URI="ftp://ftp.ktug.or.kr/pub/ktug/hlatex/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 S="${WORKDIR}/HLaTeX"
