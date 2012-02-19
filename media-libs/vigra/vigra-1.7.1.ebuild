@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1.ebuild,v 1.11 2012/01/28 19:36:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1.ebuild,v 1.12 2012/02/19 22:46:18 dilfridge Exp $
 
 EAPI=4
 
@@ -95,3 +95,6 @@ src_install() {
 	# drop useless cmake files from libdir
 	rm -rf "${ED}"/usr/$(get_libdir)/${PN}/
 }
+
+src_test() { : ; }
+# bug 390447
