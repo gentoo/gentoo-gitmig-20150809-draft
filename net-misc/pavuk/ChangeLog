@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.36 2012/02/17 08:13:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.37 2012/02/19 13:20:37 pacho Exp $
+
+  19 Feb 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/pavuk-0.9.36_pre20120215-pcre-fix.patch,
+  pavuk-0.9.36_pre20120215.ebuild:
+  Fix PCRE support (bug #262504#c34 by Richard Grenville), install icon for menu
+  entry.
 
   17 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml,
   pavuk-0.9.36_pre20120215.ebuild:
