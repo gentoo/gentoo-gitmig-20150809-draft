@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.1.ebuild,v 1.5 2012/01/05 17:57:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.1.ebuild,v 1.6 2012/02/19 21:33:12 xarthisius Exp $
 
 EAPI=4
 CMAKE_MIN_VERSION="2.4.7"
@@ -39,6 +39,19 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	x11-libs/libXt"
 DOCS=( AUTHORS ChangeLog README )
+
+LANGS=( af ar az be bg bn bs ca cs cy da de el en en_CA en_GB eo es et eu
+fa fil fi fr ga gl gu he hi hr hu hy ia id is it ja ka kn ko lt lv mk ml
+mr ms mt nan nb nl nn pl pt_BR pt ro ru se si sk sl sq sr sv te th tl tr uk vi
+zh_CN zh_HK zh_TW )
+for X in "${LANGS[@]}" ; do
+	IUSE="${IUSE} linguas_${X}"
+done
+
+src_prepare() {
+	sed -e "/af ar az/d" -e "/GETTEXT_CREATE_TRANSLATIONS/a ${LINGUAS}" \
+		-i po/stellarium{,-skycultures}/CMakeLists.txt || die #403647
+}
 
 src_configure() {
 	mycmakeargs=( $(cmake-utils_use_enable nls NLS) )
