@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/libggz
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.31 2010/01/22 22:10:44 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.32 2012/02/19 13:37:57 scarabeus Exp $
+
+  19 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> libggz-0.0.14.1.ebuild:
+  Do not install static-libs unless requested and remove not-required .la
+  files.
 
   22 Jan 2010; Jonathan Callen <abcd@gentoo.org> libggz-0.0.14.1.ebuild:
   Keyword ~amd64-linux/~x86-linux

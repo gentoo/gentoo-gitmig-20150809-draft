@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ggz-client-libs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.34 2010/01/22 22:11:22 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.35 2012/02/19 13:38:00 scarabeus Exp $
+
+  19 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  ggz-client-libs-0.0.14.1.ebuild:
+  Do not install static-libs unless requested and remove not-required .la
+  files.
 
   22 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   ggz-client-libs-0.0.14.1.ebuild:
