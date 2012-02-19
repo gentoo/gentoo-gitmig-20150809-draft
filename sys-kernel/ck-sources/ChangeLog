@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.203 2012/02/11 19:00:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.204 2012/02/19 16:25:48 nelchael Exp $
+
+*ck-sources-3.2.6 (19 Feb 2012)
+
+  19 Feb 2012; Krzysztof Pawlik <nelchael@gentoo.org> +ck-sources-3.2.6.ebuild:
+  Version bump.
 
 *ck-sources-3.2.5 (11 Feb 2012)
 
