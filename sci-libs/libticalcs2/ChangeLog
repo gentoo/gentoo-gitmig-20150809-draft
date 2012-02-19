@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/libticalcs2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/ChangeLog,v 1.5 2011/03/15 21:21:44 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/ChangeLog,v 1.6 2012/02/19 13:49:32 xarthisius Exp $
+
+*libticalcs2-1.1.7 (19 Feb 2012)
+
+  19 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +libticalcs2-1.1.7.ebuild,
+  -libticalcs2-1.1.0.ebuild, -libticalcs2-1.1.3.ebuild:
+  Version bump, remove .la file, drop old
 
 *libticalcs2-1.1.5 (15 Mar 2011)
 
