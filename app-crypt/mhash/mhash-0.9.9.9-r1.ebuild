@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.9.9.ebuild,v 1.3 2011/07/29 06:23:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.9.9-r1.ebuild,v 1.1 2012/02/19 16:13:25 scarabeus Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/mhash/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="static-libs"
 
 RDEPEND=""
@@ -20,7 +20,11 @@ DEPEND="dev-lang/perl" # pod2html
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-0.9.9-fix-{mem-leak,snefru-segfault,whirlpool-segfault}.patch \
-		"${FILESDIR}"/${PN}-0.9.9-autotools-namespace-stomping.patch
+		"${FILESDIR}"/${PN}-0.9.9-autotools-namespace-stomping.patch \
+		"${FILESDIR}"/${P}-remove_premature_free.patch \
+		"${FILESDIR}"/${P}-force64bit-tiger.patch \
+		"${FILESDIR}"/${P}-align.patch \
+		"${FILESDIR}"/${P}-alignment.patch
 }
 
 src_configure() {
@@ -33,7 +37,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
+
 	use static-libs || rm -f "${ED}"usr/lib*/libmhash.la
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO \
 		doc/{example.c,skid2-authentication}
