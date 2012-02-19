@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.65 2012/01/28 14:42:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.66 2012/02/19 14:27:03 aballier Exp $
+
+*ncmpc-0.20 (19 Feb 2012)
+
+  19 Feb 2012; Alexis Ballier <aballier@gentoo.org> +ncmpc-0.20.ebuild:
+  version bump
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ncmpc-0.19.ebuild:
   x86 stable wrt bug #400403
