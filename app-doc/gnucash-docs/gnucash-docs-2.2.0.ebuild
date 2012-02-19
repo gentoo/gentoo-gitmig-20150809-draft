@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/gnucash-docs-2.2.0.ebuild,v 1.9 2010/01/06 20:27:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/gnucash-docs-2.2.0.ebuild,v 1.10 2012/02/19 15:05:11 armin76 Exp $
 
 GCONF_DEBUG=no
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gnucash/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 FDL-1.1"
-KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 
 IUSE=""
 
