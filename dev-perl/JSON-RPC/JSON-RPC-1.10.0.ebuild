@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-RPC/JSON-RPC-1.10.0.ebuild,v 1.1 2012/02/14 15:05:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-RPC/JSON-RPC-1.10.0.ebuild,v 1.2 2012/02/19 20:16:36 tove Exp $
 
 EAPI=4
 
@@ -29,3 +29,4 @@ DEPEND="${RDEPEND}
 "
 
 SRC_TEST="do"
+pm_echovar="y"
