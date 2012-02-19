@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.162 2012/02/18 16:08:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.163 2012/02/19 01:40:33 hwoarang Exp $
+
+  19 Feb 2012; Markos Chandras <hwoarang@gentoo.org> python-docs-2.6.7.ebuild,
+  python-docs-2.7.2.ebuild, python-docs-3.1.4.ebuild, python-docs-3.2.2.ebuild:
+  Stabilize python documentation on all architectures. Patch by Arfrever
 
   18 Feb 2012; Jeroen Roovers <jer@gentoo.org> python-docs-3.2.2.ebuild:
   Stable for HPPA (bug #403875).
