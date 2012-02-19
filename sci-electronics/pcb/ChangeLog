@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/pcb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.64 2011/06/28 19:56:04 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.65 2012/02/19 04:56:01 calchan Exp $
+
+  19 Feb 2012; Denis Dupeyron <calchan@gentoo.org> -pcb-20081128-r1.ebuild,
+  -pcb-20091103.ebuild, -files/pcb-20091103-png.patch:
+  Cleanup.
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> pcb-20100929.ebuild:
   Marking pcb-20100929 ppc for bug 349096
