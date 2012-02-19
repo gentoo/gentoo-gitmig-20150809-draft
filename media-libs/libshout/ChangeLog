@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libshout
-# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.27 2012/02/19 14:20:45 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.28 2012/02/19 14:23:07 aballier Exp $
+
+  19 Feb 2012; Alexis Ballier <aballier@gentoo.org> -libshout-1.0.9.ebuild,
+  -libshout-2.0.ebuild:
+  remove old
 
 *libshout-2.3.0 (19 Feb 2012)
 
