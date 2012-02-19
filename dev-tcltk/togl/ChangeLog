@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/togl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.25 2012/02/08 21:30:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.26 2012/02/19 17:35:00 armin76 Exp $
+
+  19 Feb 2012; Raúl Porcel <armin76@gentoo.org> togl-2.0-r2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #400345
 
   08 Feb 2012; Markus Meier <maekke@gentoo.org> togl-2.0-r2.ebuild:
   arm stable, bug #400345
