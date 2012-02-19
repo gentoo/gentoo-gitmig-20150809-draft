@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.163 2012/02/12 22:44:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.164 2012/02/19 20:01:58 grobian Exp $
+
+  19 Feb 2012; Fabian Groffen <grobian@gentoo.org> libpcap-1.2.1.ebuild:
+  Make sure we use -fPIC on sparc64-solaris targets, bug #396345
 
   12 Feb 2012; Tony Vroon <chainsaw@gentoo.org> libpcap-1.1.1-r1.ebuild:
   Marked stable on PPC64 as requested by Francisco "klondike" Blas Izquierdo

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.2.1.ebuild,v 1.1 2012/01/04 02:40:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.2.1.ebuild,v 1.2 2012/02/19 20:01:58 grobian Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -25,6 +25,9 @@ DOCS=( CREDITS CHANGES VERSION TODO README{,.dag,.linux,.macosx,.septel} )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.0-cross-linux.patch
+	# Prefix' Solaris uses GNU ld
+	sed -i -e 's/freebsd\*/freebsd*|solaris*/' \
+		-e 's/sparc64\*/sparc64*|sparcv9*/'  aclocal.m4 || die
 	eautoreconf
 }
 
