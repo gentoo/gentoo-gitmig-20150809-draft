@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/srm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.24 2012/02/04 13:43:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.25 2012/02/19 10:28:36 ago Exp $
+
+  19 Feb 2012; Agostino Sarubbo <ago@gentoo.org> metadata.xml:
+  Remove no-herd from metadata.xml
 
   03 Feb 2012; Brent Baude <ranger@gentoo.org> srm-1.2.11-r1.ebuild:
   Marking srm-1.2.11-r1 ppc for bug 388955
