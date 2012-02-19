@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.133 2012/02/09 01:47:54 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.134 2012/02/19 23:55:42 dilfridge Exp $
+
+  19 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  ghostscript-gpl-9.05.ebuild:
+  Restore keywords after unbundling, see bug 206893 comment 15.
 
 *ghostscript-gpl-9.05 (09 Feb 2012)
 
