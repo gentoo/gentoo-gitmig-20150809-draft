@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.6 2012/02/16 13:23:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.7 2012/02/19 19:05:21 grobian Exp $
 
 EAPI="4"
 
@@ -28,8 +28,9 @@ src_prepare() {
 		-e "/^LDFLAGS/{s|=|+=|g;s|-s ||g}" \
 		-e "s/#XINERAMALIBS =/XINERAMALIBS ?=/" \
 		-e "s/#XINERAMAFLAGS =/XINERAMAFLAGS ?=/" \
-		-e "s@/usr/X11R6/include@/usr/include/X11@" \
-		-e "s@/usr/X11R6/lib@/usr/lib@" \
+		-e "s@/usr/X11R6/include@${EPREFIX}/usr/include/X11@" \
+		-e "s@/usr/X11R6/lib@${EPREFIX}/usr/lib@" \
+		-e "s@-I/usr/include@@" -e "s@-L/usr/lib@@" \
 		config.mk || die "sed failed"
 
 	restore_config config.h
@@ -44,7 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="/usr" install
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 
 	exeinto /etc/X11/Sessions
 	newexe "${FILESDIR}"/dwm-session2 dwm
