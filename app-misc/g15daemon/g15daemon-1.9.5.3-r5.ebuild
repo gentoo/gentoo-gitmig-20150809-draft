@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r5.ebuild,v 1.1 2011/09/09 15:19:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r5.ebuild,v 1.2 2012/02/19 15:18:32 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 GENTOO_DEPEND_ON_PERL="no"
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
@@ -15,8 +15,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="perl python"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
+IUSE="perl python static-libs"
 
 DEPEND="virtual/libusb:0
 	>=dev-libs/libg15-1.2.4
@@ -29,8 +29,8 @@ DEPEND="virtual/libusb:0
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-"${FILESDIR}/${P}-forgotten-open-mode.patch"
-"${FILESDIR}/${P}-overflow-fix.patch"
+	"${FILESDIR}/${P}-forgotten-open-mode.patch"
+	"${FILESDIR}/${P}-overflow-fix.patch"
 )
 uinput_check() {
 	ebegin "Checking for uinput support"
@@ -81,7 +81,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-static
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		$(use_enable static-libs static)
 
 	if use perl; then
 		cd "${WORKDIR}/G15Daemon-0.2"
@@ -90,7 +91,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die
+	default
 
 	if use perl; then
 		cd "${WORKDIR}/G15Daemon-0.2"
@@ -99,13 +100,12 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" \
-		docdir=/usr/share/doc/${PF} install || die "make install failed"
+	default
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	# remove odd docs installed my make
-	rm "${D}/usr/share/doc/${PF}/"{LICENSE,README.usage}
+	rm "${ED}/usr/share/doc/${PF}/"{LICENSE,README.usage}
 
 	insinto /usr/share/${PN}/contrib
 	doins contrib/xmodmaprc
