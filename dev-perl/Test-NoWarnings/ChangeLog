@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-NoWarnings
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.37 2012/02/18 17:44:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.38 2012/02/19 10:34:46 ago Exp $
+
+  19 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Test-NoWarnings-1.40.0.ebuild:
+  Stable for amd64, wrt bug #404347
 
   18 Feb 2012; Jeroen Roovers <jer@gentoo.org> Test-NoWarnings-1.40.0.ebuild:
   Stable for HPPA (bug #404347).
