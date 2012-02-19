@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.7 2012/02/19 04:43:33 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20120119_p3256.ebuild,v 1.1 2012/02/19 04:43:33 calchan Exp $
 
 # rafaelmartins: Please try to keep the live ebuild synchronized with
 # the latest snapshot ebuild. e.g.:
