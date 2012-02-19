@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lightdm-gtk-greeter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.2 2012/02/18 17:24:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.3 2012/02/19 23:11:04 hwoarang Exp $
+
+  19 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  lightdm-gtk-greeter-1.1.4.ebuild:
+  Fix installed location for lightdm-gtk-greeter config file when branding is
+  enabled
 
   18 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
   lightdm-gtk-greeter-1.1.4.ebuild:
