@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.254 2012/02/18 00:19:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.255 2012/02/19 15:32:23 armin76 Exp $
+
+  19 Feb 2012; Raúl Porcel <armin76@gentoo.org> audacious-3.1.ebuild:
+  sparc stable wrt #383991
 
 *audacious-3.2.1 (18 Feb 2012)
 
