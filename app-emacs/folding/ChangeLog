@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/folding
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/ChangeLog,v 1.21 2011/12/14 08:52:15 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/ChangeLog,v 1.22 2012/02/19 13:54:31 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  folding-2009.0905.0811.ebuild:
+  Stable on alpha, bug #393771
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   folding-2009.0905.0811.ebuild:
