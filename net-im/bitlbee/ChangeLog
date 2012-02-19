@@ -1,6 +1,11 @@
 # ChangeLog for net-im/bitlbee
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.149 2011/12/04 21:18:10 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.150 2012/02/19 06:31:43 radhermit Exp $
+
+*bitlbee-3.0.5 (19 Feb 2012)
+
+  19 Feb 2012; Tim Harder <radhermit@gentoo.org> +bitlbee-3.0.5.ebuild:
+  Version bump.
 
 *bitlbee-3.0.4 (04 Dec 2011)
 
