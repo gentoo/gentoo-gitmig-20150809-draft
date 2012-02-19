@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.2.2.ebuild,v 1.1 2011/11/16 22:11:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.2.2.ebuild,v 1.2 2012/02/19 10:10:28 klausman Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/cheese/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc +introspection"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.28.0:2
