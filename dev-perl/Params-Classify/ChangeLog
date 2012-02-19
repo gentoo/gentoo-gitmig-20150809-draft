@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Params-Classify
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Classify/ChangeLog,v 1.4 2011/11/07 08:14:29 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Classify/ChangeLog,v 1.5 2012/02/19 12:08:49 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Params-Classify-0.13.0.ebuild:
+  Keyworded on alpha, bug #389001
 
   07 Nov 2011; Fabian Groffen <grobian@gentoo.org>
   Params-Classify-0.13.0.ebuild:

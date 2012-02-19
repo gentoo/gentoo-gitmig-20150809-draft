@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Requires
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.11 2012/02/14 11:10:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.12 2012/02/19 12:08:26 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Test-Requires-0.60.0.ebuild:
+  Keyworded on alpha, bug #389001
 
   14 Feb 2012; Alexis Ballier <aballier@gentoo.org>
   Test-Requires-0.60.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-DeprecationManager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.21 2012/02/18 14:00:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.22 2012/02/19 12:08:02 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Package-DeprecationManager-0.110.0.ebuild:
+  Keyworded on alpha, bug #389001
 
   18 Feb 2012; Torsten Veller <tove@gentoo.org>
   -Package-DeprecationManager-0.10.ebuild:
