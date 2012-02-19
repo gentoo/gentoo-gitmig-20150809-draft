@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/parent
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/parent/ChangeLog,v 1.11 2011/11/07 08:09:11 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/parent/ChangeLog,v 1.12 2012/02/19 12:09:25 klausman Exp $
+
+  19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> parent-0.224.ebuild:
+  Keyworded on alpha, bug #389001
 
   07 Nov 2011; Fabian Groffen <grobian@gentoo.org> parent-0.225.0.ebuild:
   Added Prefix keywords, bug #389001
