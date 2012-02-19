@@ -19,6 +19,7 @@
     <flag name='sdl'>Enable the SDL-based console</flag>
     <flag name='spice'>Enable Spice protocol support via <pkg>app-emulation/spice</pkg></flag>
     <flag name='ssl'>Enable TLS support for the VNC console server</flag>
+    <flag name='tls'>Enable TLS support for the VNC console server</flag>
     <flag name="usbredir">Use <pkg>sys-apps/usbredir</pkg> to redirect USB
         devices to another machine over TCP</flag>
     <flag name='vde'>Enable VDE-based networking</flag>
