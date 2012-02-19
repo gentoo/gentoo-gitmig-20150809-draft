@@ -1,6 +1,10 @@
 # ChangeLog for net-print/ink
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ChangeLog,v 1.17 2011/08/22 18:00:47 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ChangeLog,v 1.18 2012/02/19 23:14:21 dilfridge Exp $
+
+  19 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> -ink-0.3.ebuild,
+  -ink-0.4.1.ebuild:
+  Remove old
 
 *ink-0.5.1 (22 Aug 2011)
 
