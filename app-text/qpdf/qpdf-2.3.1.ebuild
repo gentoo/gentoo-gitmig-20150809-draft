@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/qpdf-2.3.1.ebuild,v 1.1 2011/12/31 07:07:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/qpdf-2.3.1.ebuild,v 1.2 2012/02/19 10:11:41 radhermit Exp $
 
 EAPI="4"
+
+inherit eutils
 
 DESCRIPTION="A command-line program that does structural, content-preserving transformations on PDF files"
 HOMEPAGE="http://qpdf.sourceforge.net/"
@@ -28,6 +30,8 @@ DOCS=( ChangeLog README TODO )
 src_prepare() {
 	# Manually install docs
 	sed -i -e "/docdir/d" make/libtool.mk || die
+
+	epatch "${FILESDIR}"/${P}-libpcre-8.30.patch
 }
 
 src_install() {
