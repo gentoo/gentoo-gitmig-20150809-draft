@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/rpmdevtools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rpmdevtools/ChangeLog,v 1.1 2012/02/19 15:29:57 sochotnicky Exp $
+
+*rpmdevtools-8.2 (19 Feb 2012)
+
+  19 Feb 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +rpmdevtools-8.2.ebuild, +metadata.xml:
+  Adding rpmdevtoos: Collection of rpm packaging related utilities
+
