@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/nltk-2.0.1_rc1.ebuild,v 1.2 2012/02/14 03:00:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/nltk-2.0.1_rc1.ebuild,v 1.3 2012/02/19 01:15:42 hwoarang Exp $
 
 EAPI=3
 
@@ -20,9 +20,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-DEPEND="dev-python/pyyaml
+RDEPEND="dev-python/numpy
+	dev-python/pyyaml"
+DEPEND="${RDEPEND}
 	app-arch/unzip"
-RDEPEND="$DEPEND
-	dev-python/numpy"
 
 S=${WORKDIR}/${MY_P}
