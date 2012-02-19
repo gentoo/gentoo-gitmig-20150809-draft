@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13499 2012/02/19 04:21:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13500 2012/02/19 09:28:30 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,11 @@
 
 #--- END OF EXAMPLES ---
 
-# Markos Chandras <hwoarang@gentoo.org> (28 Feg 2012)
+# Markos Chandras <hwoarang@gentoo.org> (19 Feb 2012)
+# Masked for testing. See bug #357531
+=x11-libs/qt-qt3support-4.8.0-r1
+
+# Markos Chandras <hwoarang@gentoo.org> (18 Feb 2012)
 # Masked for testing. See bug #399719
 ~x11-misc/lightdm-1.1.3
 

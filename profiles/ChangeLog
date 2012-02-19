@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6229 2012/02/19 04:21:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6230 2012/02/19 09:28:30 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Feb 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking x11-libs/qt-qt3support-4.8.0-r1 for testing
 
   19 Feb 2012; William Hubbs <williamh@gentoo.org> package.mask:
   remove old udev from mask and adjust udev-init-scripts mask.
