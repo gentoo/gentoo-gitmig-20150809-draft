@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0-r3.ebuild,v 1.1 2012/01/01 01:13:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0-r3.ebuild,v 1.2 2012/02/19 08:18:47 zmedico Exp $
 
 # QA failiures reported in https://code.monotone.ca/p/monotone/issues/181/
 EAPI="4"
@@ -40,6 +40,7 @@ src_prepare() {
 	fi
 	epatch "${FILESDIR}/monotone-1.0-bash-completion-tests.patch"
 	epatch "${FILESDIR}/monotone-1.0-botan-1.10.patch"
+	epatch "${FILESDIR}/monotone-1.0-glibc-2.14-file-handle.patch"
 }
 
 src_configure() {

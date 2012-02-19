@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/monotone
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.21 2012/01/01 01:13:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.22 2012/02/19 08:18:47 zmedico Exp $
+
+  19 Feb 2012; Zac Medico <zmedico@gentoo.org>
+  +files/monotone-1.0-glibc-2.14-file-handle.patch, monotone-1.0-r3.ebuild:
+  Add patch to fix struct file_handle name collision with glibc-2.14 for bug
+  #396651.
 
 *monotone-1.0-r3 (01 Jan 2012)
 *monotone-1.0-r2 (01 Jan 2012)
