@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.3.3.ebuild,v 1.1 2012/02/19 13:36:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.3.3.ebuild,v 1.2 2012/02/19 13:38:32 xarthisius Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Library to handle different link cables for TI calculators"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"
