@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.39 2012/01/30 02:26:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.40 2012/02/19 17:04:33 bicatali Exp $
+
+  19 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/epix-1.2.7-doc-gentoo.patch, -epix-1.2.8.ebuild, epix-1.2.9.ebuild,
+  -files/epix-1.2.9-automake.patch, +files/epix-1.2.9-autotools.patch:
+  More recent autotools update fixes, remove old
 
   30 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> epix-1.2.9.ebuild,
   +files/epix-1.2.9-automake.patch:

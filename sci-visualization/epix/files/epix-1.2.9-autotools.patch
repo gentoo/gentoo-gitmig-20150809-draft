@@ -1,0 +1,213 @@
+* disable automatic install of doc and examples
+* update for newer autotools
+Patch by Sebastien Fabbro
+
+diff -Nur epix-1.2.9.orig/doc/Makefile.am epix-1.2.9/doc/Makefile.am
+--- epix-1.2.9.orig/doc/Makefile.am	2009-02-16 02:16:58.000000000 +0000
++++ epix-1.2.9/doc/Makefile.am	2012-02-19 16:46:02.123782104 +0000
+@@ -1,7 +1,7 @@
+ # Makefile.am for ePiX v1.x "doc" directory
+ #
+ 
+-EPIXFLAGS = --no-defaults -I.. -L.. -lepix -v
++EPIXFLAGS = --no-defaults -I.. -L.. -lepix -q
+ 
+ %.eepic: %.xp
+ 	../epix-local $(EPIXFLAGS) $<
+@@ -13,13 +13,13 @@
+ CLEANFILES = *~ *.aux *.dvi *.log *.out *.toc \
+ 	*.fdx *.flg *.fnd *.idx *.ilg *.ind \
+ 	epix.info epix.info.bz2 manual_src.tar manual.pdf manual.ps \
+-	manual_src.tar.gz manual.pdf.gz manual.ps.gz manual-stamp
++	manual_src.tar.gz manual.pdf manual.ps.gz manual-stamp
+ 
+ MAINTAINERCLEANFILES = *.eepic *.aux *.dvi *.log *.out *.toc \
+ 	*.fdx *.flg *.fnd *.idx *.ilg *.ind
+ 
+ ## Targets ##
+-doc_DATA = manual.pdf.gz manual.ps.gz manual_src.tar.gz
++doc_DATA = 
+ 
+ info_TEXINFOS = epix.texi
+ 
+@@ -42,8 +42,7 @@
+ 	gzip -9 -c manual.ps > manual.ps.gz
+ 
+ #PDF
+-manual.pdf.gz: manual-stamp
+-	gzip -9 -c manual.pdf > manual.pdf.gz
++manual.pdf: manual-stamp
+ 
+ epix.info: manual-stamp epix.texi
+ 	makeinfo epix.texi 2>&1 >/dev/null
+diff -Nur epix-1.2.9.orig/Makefile.am epix-1.2.9/Makefile.am
+--- epix-1.2.9.orig/Makefile.am	2010-01-25 02:42:26.000000000 +0000
++++ epix-1.2.9/Makefile.am	2012-02-19 16:50:24.890671835 +0000
+@@ -15,7 +15,8 @@
+ bin_SCRIPTS = epix elaps flix laps
+ 
+ pkglib_LIBRARIES = libepix.a
+-pkglib_DATA = epix-lib.sh
++pkgepixdir = $(pkglibdir)
++pkgepix_DATA = epix-lib.sh
+ include_HEADERS = epix.h
+ 
+ libepix_a_CXXSOURCES = active_screen.cc affine.cc angle_units.cc \
+@@ -56,7 +57,7 @@
+ 
+ EPIX_CONFFILES = bash_completions $(EPIX_EL)
+ 
+-EPIX_NOTEFILES = AUTHORS BUGS ChangeLog COPYING INSTALL NEWS POST-INSTALL \
++EPIX_NOTEFILES = AUTHORS BUGS ChangeLog NEWS POST-INSTALL \
+ 	README THANKS VERSION
+ 
+ EXTRA_DIST = $(bin_SCRIPTS) $(man_MANS) $(EPIX_CONFFILES) $(EPIX_NOTEFILES) \
+@@ -102,13 +103,12 @@
+ # Extra things to install
+ install-data-local:
+ 	@echo; echo "Installing notes and configuration files"
+-	$(mkinstalldirs) $(DESTDIR)$(docdir)/notes $(DESTDIR)$(docdir)/config
+-	$(INSTALL_DATA) $(EPIX_NOTEFILES) $(DESTDIR)$(docdir)/notes
+-	$(INSTALL_DATA) $(EPIX_CONFFILES) $(DESTDIR)$(docdir)/config
++	$(mkinstalldirs) $(DESTDIR)$(docdir)
++	$(INSTALL_DATA) $(EPIX_NOTEFILES) $(DESTDIR)$(docdir)
+ 
+ # This is being installed by install-exec, but should not be executable
+-install-exec-local: install-pkglibDATA
+-	chmod a-x $(DESTDIR)$(pkglibdir)/epix-lib.sh
++install-exec-local: install-pkgepixDATA
++	chmod a-x $(DESTDIR)$(pkgepixdir)/epix-lib.sh
+ 
+ uninstall-local:
+ 	-rm -rf $(DESTDIR)$(docdir)/notes $(DESTDIR)$(docdir)/config
+diff -Nur epix-1.2.9.orig/Makefile.am~ epix-1.2.9/Makefile.am~
+--- epix-1.2.9.orig/Makefile.am~	1970-01-01 01:00:00.000000000 +0100
++++ epix-1.2.9/Makefile.am~	2012-02-19 16:46:02.000000000 +0000
+@@ -0,0 +1,115 @@
++## epix-1.x Makefile.am for top-level directory
++##
++## Process this file with automake to produce Makefile.in
++
++#if BUILD_CONTRIB
++  # Must be in this order!
++#  MAYBE_DIRS = contrib contrib/doc
++#endif
++
++# SUBDIRS = . samples doc $(MAYBE_DIRS)
++SUBDIRS = . samples doc
++
++# Now stuff for this directory specifically
++
++bin_SCRIPTS = epix elaps flix laps
++
++pkglib_LIBRARIES = libepix.a
++pkglib_DATA = epix-lib.sh
++include_HEADERS = epix.h
++
++libepix_a_CXXSOURCES = active_screen.cc affine.cc angle_units.cc \
++	arrow_data.cc arrow_style.cc axis.cc camera.cc circle.cc clipping.cc \
++	Color_Base.cc Color.cc Color_CMY.cc Color_CMYK.cc Color_Gray.cc \
++	Color_Neutral.cc Color_RGB.cc Color_Sep.cc Color_Utils.cc \
++	cropping.cc curves.cc \
++	data_bins.cc data_file.cc data_mask.cc domain.cc \
++	eepic.cc facet.cc format.cc frac.cc frame.cc functions.cc \
++	geometry.cc glyph.cc halfspace.cc hatching.cc \
++	intersections.cc interval.cc label_data.cc label_style.cc \
++	legend.cc legend_item.cc legend_tile.cc \
++	length.cc lens.cc markers.cc marker_style.cc \
++	mask_diamond.cc mask_ellipse.cc mask_rectangle.cc \
++	paint_style.cc pairs.cc path.cc path_data.cc \
++	path_style.cc pen_arrow.cc pen_data.cc pen_fill.cc pen_line.cc \
++	picture.cc picture_data.cc plane.cc plots.cc pst.cc \
++	screen.cc screen_crop.cc screen_data.cc screen_mask.cc \
++	segment.cc spline.cc sphere.cc state.cc surface.cc tikz.cc tile.cc \
++	triples.cc utils.cc verbatim.cc
++#	polygon.cc 
++
++libepix_a_HDRS = $(libepix_a_CXXSOURCES:.cc=.h) constants.h \
++	crop_algorithms.h deriv.h edge_data.h enums.h errors.h \
++	map.h plot_algorithms.h spline_data.h
++
++libepix_a_SOURCES = $(libepix_a_CXXSOURCES) $(libepix_a_HDRS)
++
++libepix_a_LIBADD = $(libepix_a_CXXSOURCES:.cc=.o)
++
++pkginclude_HEADERS = $(libepix_a_HDRS)
++
++man_MANS = epix.1 elaps.1 flix.1 laps.1
++
++if ENABLE_EPIX_EL
++  EPIX_EL = epix.el
++endif
++
++EPIX_CONFFILES = bash_completions $(EPIX_EL)
++
++EPIX_NOTEFILES = AUTHORS BUGS ChangeLog NEWS POST-INSTALL \
++	README THANKS VERSION
++
++EXTRA_DIST = $(bin_SCRIPTS) $(man_MANS) $(EPIX_CONFFILES) $(EPIX_NOTEFILES) \
++	$(pkgdata_DATA)
++
++CLEANFILES = *~ $(libepix_a_OBJECTS) $(bin_SCRIPTS) $(bin_SCRIPTS:=-local) \
++	epix.h epix.1 epix.el
++
++# Headers
++epix.h: $(libepix_a_HDRS)
++	./make_header
++
++# Scripts; we create local variants which will work during the build process
++epix elaps flix laps: %: %.in epix.el
++	sed -e 's%^#! /bin/bash%#! $(BASH_PATH)%;' \
++	    -e 's%@bindir\@%$(bindir)%;' \
++	    -e 's%@pkglibdir\@%$(pkglibdir)%;' \
++	    -e 's%@includedir\@%$(includedir)%;' \
++	    -e 's%@RUNTIME_COMPILER\@%$(RUNTIME_COMPILER)%;' $< > $@
++	sed -e 's%^#! /bin/bash%#! $(BASH_PATH)%;' \
++	    -e 's%@bindir\@%$(CURDIR)%;' \
++	    -e 's%@pkglibdir\@%$(CURDIR)%;' \
++	    -e 's%@includedir\@%$(CURDIR)%;' \
++	    -e 's%@RUNTIME_COMPILER\@%$(CXX)%;' $< > $@-local
++	chmod a+x $@ $@-local
++
++# libepix.a
++libepix.a: $(libepix_a_OBJECTS)
++	ar -ru libepix.a $(libepix_a_OBJECTS)
++	$(RANLIB) libepix.a
++
++# object file dependencies
++$(libepix_a_LIBADD): %.o: %.cc %.h
++
++# Manpage
++epix.1: epix.1.in
++	sed -e 's%@docdir\@%$(docdir)%;' $< > $@
++
++#  emacs mode
++epix.el: epix.el.in
++	sed -e 's%@infodir\@%$(infodir)%;' $< > $@
++
++# Extra things to install
++install-data-local:
++	@echo; echo "Installing notes and configuration files"
++	$(mkinstalldirs) $(DESTDIR)$(docdir)/notes $(DESTDIR)$(docdir)/config
++	$(INSTALL_DATA) $(EPIX_NOTEFILES) $(DESTDIR)$(docdir)/notes
++	$(INSTALL_DATA) $(EPIX_CONFFILES) $(DESTDIR)$(docdir)/config
++
++# This is being installed by install-exec, but should not be executable
++install-exec-local: install-pkglibDATA
++	chmod a-x $(DESTDIR)$(pkglibdir)/epix-lib.sh
++
++uninstall-local:
++	-rm -rf $(DESTDIR)$(docdir)/notes $(DESTDIR)$(docdir)/config
++	-rmdir $(DESTDIR)$(docdir)
+diff -Nur epix-1.2.9.orig/samples/Makefile.am epix-1.2.9/samples/Makefile.am
+--- epix-1.2.9.orig/samples/Makefile.am	2008-07-01 03:55:14.000000000 +0100
++++ epix-1.2.9/samples/Makefile.am	2012-02-19 16:46:02.123782104 +0000
+@@ -7,7 +7,7 @@
+ CLEANFILES = *~ *.eepic *.eps sample_src.tar sample_src.tar.gz sample-stamp
+ 
+ ## Targets ##
+-doc_DATA = sample_src.tar.gz
++doc_DATA =
+ 
+ 
+ # tar up tex, xp, and eepic files

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.9.ebuild,v 1.2 2012/01/30 02:26:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.9.ebuild,v 1.3 2012/02/19 17:04:33 bicatali Exp $
 
 EAPI=4
 inherit elisp-common bash-completion-r1 autotools
@@ -24,9 +24,7 @@ RDEPEND="${DEPEND}"
 SITEFILE=50${PN}-gentoo.el
 
 src_prepare() {
-	# disable automatic install of doc and examples
-	epatch "${FILESDIR}"/${PN}-1.2.7-doc-gentoo.patch
-	epatch "${FILESDIR}"/${PN}-1.2.9-automake.patch
+	epatch "${FILESDIR}"/${PN}-1.2.9-autotools.patch
 	eautoreconf
 }
 
