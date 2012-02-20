@@ -1,0 +1,24 @@
+From 642e6b5ca996325dc0ca6401a3b87039408b2585 Mon Sep 17 00:00:00 2001
+From: Nikos Mavrogiannopoulos <nmav@gnutls.org>
+Date: Sun, 19 Feb 2012 19:51:06 +0100
+Subject: [PATCH] force kill of child process.
+
+---
+ tests/mini-loss-time.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/tests/mini-loss-time.c b/tests/mini-loss-time.c
+index 17f6d3f..cc01dcd 100644
+--- a/tests/mini-loss-time.c
++++ b/tests/mini-loss-time.c
+@@ -267,6 +267,7 @@ static void start (int server_packet, int client_packet)
+     {
+       /* parent */
+       server (fd[0], server_packet);
++      kill(child, SIGTERM);
+     }
+   else 
+     {
+-- 
+1.7.2.5
+
