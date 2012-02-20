@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/opencore-amr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.18 2011/08/29 17:42:13 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.19 2012/02/20 21:06:42 aballier Exp $
+
+*opencore-amr-0.1.3 (20 Feb 2012)
+
+  20 Feb 2012; Alexis Ballier <aballier@gentoo.org> +opencore-amr-0.1.3.ebuild:
+  version bump. build static libs with use=static-libs
 
   29 Aug 2011; Fabian Groffen <grobian@gentoo.org> opencore-amr-0.1.2.ebuild:
   Marked *-macos, bug #362691
