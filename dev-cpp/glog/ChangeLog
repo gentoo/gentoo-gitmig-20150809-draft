@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/ChangeLog,v 1.2 2011/11/12 00:27:22 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/ChangeLog,v 1.3 2012/02/20 04:15:02 floppym Exp $
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
 
   12 Nov 2011; Mike Frysinger <vapier@gentoo.org> glog-0.3.1.ebuild:
   do not actually need versionator
