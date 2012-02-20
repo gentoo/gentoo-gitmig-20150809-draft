@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11-r1.ebuild,v 1.5 2012/02/19 22:03:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11-r1.ebuild,v 1.6 2012/02/20 15:58:34 mr_bones_ Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -27,7 +27,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-libpng15.patch
 	eautoreconf
 
-	if use test; then 
+	if use test; then
 		mkdir "${WORKDIR}/ubc" || die
 		mv -v "${WORKDIR}"/*.jb2 "${WORKDIR}/ubc/" || die
 		mv -v "${WORKDIR}"/*.bmp "${WORKDIR}/ubc/" || die
