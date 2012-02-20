@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.2.ebuild,v 1.1 2012/02/17 21:43:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.2.ebuild,v 1.2 2012/02/20 15:56:39 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="colordiff"
 
 RDEPEND=">=dev-libs/glib-2.6
-		sys-libs/ncurses	
+		sys-libs/ncurses
 		dev-libs/openssl
 		colordiff? ( app-misc/colordiff )"
 DEPEND="dev-util/pkgconfig
