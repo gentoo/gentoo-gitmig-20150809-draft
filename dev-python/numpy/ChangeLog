@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numpy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.155 2011/12/17 05:36:54 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.156 2012/02/20 15:36:45 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> numpy-1.5.1.ebuild,
+  numpy-1.6.0.ebuild, numpy-1.6.1-r1.ebuild, numpy-1.6.1.ebuild:
+  Restricting pypy #403757
 
   17 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org> numpy-1.6.1-r1.ebuild,
   +files/numpy-1.6.1-import_umath.patch:
