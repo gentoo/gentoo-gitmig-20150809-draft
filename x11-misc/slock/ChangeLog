@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/slock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.34 2012/02/20 09:13:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.35 2012/02/20 16:12:13 jer Exp $
+
+  20 Feb 2012; Jeroen Roovers <jer@gentoo.org> -slock-0.9.ebuild,
+  -slock-0.9-r1.ebuild:
+  Old.
 
   20 Feb 2012; Agostino Sarubbo <ago@gentoo.org> slock-1.0.ebuild:
   Stable for AMD64, wrt security bug #401645
