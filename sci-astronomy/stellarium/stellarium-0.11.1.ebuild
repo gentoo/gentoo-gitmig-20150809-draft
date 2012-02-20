@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.1.ebuild,v 1.6 2012/02/19 21:33:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.1.ebuild,v 1.7 2012/02/20 11:12:37 xarthisius Exp $
 
 EAPI=4
 CMAKE_MIN_VERSION="2.4.7"
@@ -49,7 +49,7 @@ for X in "${LANGS[@]}" ; do
 done
 
 src_prepare() {
-	sed -e "/af ar az/d" -e "/GETTEXT_CREATE_TRANSLATIONS/a ${LINGUAS}" \
+	sed -e "/af ar az/d" -e "/GETTEXT_CREATE_TRANSLATIONS/a \ ${LINGUAS}" \
 		-i po/stellarium{,-skycultures}/CMakeLists.txt || die #403647
 }
 
