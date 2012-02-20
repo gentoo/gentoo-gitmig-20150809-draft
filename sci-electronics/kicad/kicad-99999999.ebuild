@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.7 2012/02/19 04:43:33 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.8 2012/02/20 15:59:05 mr_bones_ Exp $
 
 # rafaelmartins: Please try to keep the live ebuild synchronized with
 # the latest snapshot ebuild. e.g.:
@@ -37,7 +37,6 @@ RDEPEND="${CDEPEND}
 	sys-libs/zlib
 	sci-electronics/electronics-menu"
 
-
 src_unpack() {
 	if [[ "${PV}" != "99999999" ]]; then
 		EBZR_REVISION="${PV#*_p}"
@@ -70,7 +69,6 @@ src_unpack() {
 			bzr_fetch
 	fi
 }
-
 
 src_prepare() {
 	sed -i \
@@ -118,7 +116,6 @@ src_prepare() {
 	fi
 }
 
-
 src_configure() {
 	need-wxwidgets unicode
 
@@ -142,12 +139,10 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-
 src_compile() {
 	cmake-utils_src_compile
 	use dev-doc && doxygen Doxyfile
 }
-
 
 src_install() {
 	cmake-utils_src_install
@@ -159,11 +154,9 @@ src_install() {
 	fi
 }
 
-
 pkg_preinst() {
 	gnome2_icon_savelist
 }
-
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
@@ -181,7 +174,6 @@ pkg_postinst() {
 	fi
 	elog "You may want to emerge media-gfx/wings if you want to create 3D models of components."
 }
-
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
