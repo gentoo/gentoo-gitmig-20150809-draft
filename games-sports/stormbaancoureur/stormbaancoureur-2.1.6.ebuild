@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.6.ebuild,v 1.3 2010/09/16 17:52:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.6.ebuild,v 1.4 2012/02/20 17:57:59 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -24,24 +24,14 @@ DEPEND="virtual/opengl
 S=${WORKDIR}/${P}/src-${PN}
 
 src_prepare() {
-	sed -i \
-		-e "/dirprefix \?=\"/s:=.*: = \"${GAMES_DATADIR}/${PN}\";:" main.cxx \
-		|| die "sed failed"
-
-	sed -i \
-		-e "/^CXX=/d" \
-		-e '/Wall/d' \
-		-e "/^CXXFLAGS/ s%=%= ${CXXFLAGS} %" \
-		-e '/DGAMEVERSION/s:\\::' \
-		-e '/^LFLAGS=/s:=:= $(LDFLAGS) :' \
-		-e 's:$(ODEPREFIX)/$(LIBDIRNAME)/libode.a:-lode:' \
-		Makefile || die "sed failed"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	sed -ie "s:GENTOODIR:${GAMES_DATADIR}/${PN}:" main.cxx || die
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN} || die
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r images/ models/ sounds/ shaders/ || die "doins failed"
+	doins -r images/ models/ sounds/ shaders/ || die
 	dodoc JOYSTICKS README TODO
 	make_desktop_entry ${PN} "Stormbaan Coureur"
 	prepgamesdirs
