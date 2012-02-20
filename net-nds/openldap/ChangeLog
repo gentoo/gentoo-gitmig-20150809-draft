@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.398 2012/02/13 00:43:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.399 2012/02/20 02:54:35 robbat2 Exp $
+
+  20 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> openldap-2.4.28-r1.ebuild:
+  Bug #404555: Use new variable AT_NOEAUTOMAKE instead of WANT_AUTOMAKE=none
+  overload.
 
   13 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Maybe repoman should detect files not in the VCS in the Manifest?
