@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.25 2012/02/20 22:30:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.26 2012/02/20 23:59:45 floppym Exp $
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0-r1.ebuild,
+  remmina-9999.ebuild:
+  We only use libappindicator if building against gtk3.
 
   20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml,
   remmina-1.0.0-r1.ebuild, remmina-9999.ebuild:
