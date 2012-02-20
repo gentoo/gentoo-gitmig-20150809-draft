@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.3.1.ebuild,v 1.1 2011/12/30 11:18:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.3.1.ebuild,v 1.2 2012/02/20 13:17:18 tomka Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.hjcms.de/qx11grab/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
