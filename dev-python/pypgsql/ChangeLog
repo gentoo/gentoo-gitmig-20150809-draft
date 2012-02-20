@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypgsql
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.20 2010/07/14 17:51:58 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.21 2012/02/20 08:05:24 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> pypgsql-2.5.1.ebuild:
+  Restricting pypy #404951
 
   14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pypgsql-2.5.1.ebuild:
