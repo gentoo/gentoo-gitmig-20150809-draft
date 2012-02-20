@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/bleachbit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bleachbit/ChangeLog,v 1.5 2012/01/20 18:02:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bleachbit/ChangeLog,v 1.6 2012/02/20 04:25:53 floppym Exp $
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
 
 *bleachbit-0.9.1 (20 Jan 2012)
 
