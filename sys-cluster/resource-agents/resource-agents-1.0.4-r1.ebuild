@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.4-r1.ebuild,v 1.4 2011/03/17 22:40:08 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.4-r1.ebuild,v 1.5 2012/02/20 18:01:20 ultrabug Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="doc libnet"
 DEPEND="sys-apps/iproute2
 	sys-cluster/cluster-glue
 	!<sys-cluster/heartbeat-3.0
-	libnet? ( <net-libs/libnet-1.1.5 )"
+	libnet? ( net-libs/libnet:1.1 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/Cluster-Resource-Agents-${MY_P}"

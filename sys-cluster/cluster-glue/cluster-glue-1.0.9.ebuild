@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.9.ebuild,v 1.1 2011/12/13 09:40:24 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.9.ebuild,v 1.2 2012/02/20 18:00:22 ultrabug Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="doc large-cluster libnet static-libs"
 
 RDEPEND="app-arch/bzip2
 	dev-libs/glib:2
-	libnet? ( <net-libs/libnet-1.1.5 )
+	libnet? ( net-libs/libnet:1.1 )
 	net-misc/curl
 	net-misc/iputils
 	|| ( net-misc/netkit-telnetd net-misc/telnet-bsd )

@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/resource-agents
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/ChangeLog,v 1.14 2011/06/24 06:24:15 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/ChangeLog,v 1.15 2012/02/20 18:01:20 ultrabug Exp $
+
+  20 Feb 2012; Ultrabug <ultrabug@gentoo.org> resource-agents-1.0.4-r1.ebuild:
+  Fix libnet dependency, wrt #405055
 
   24 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org>
   -resource-agents-1.0.3-r1.ebuild, -resource-agents-1.0.4.ebuild:
