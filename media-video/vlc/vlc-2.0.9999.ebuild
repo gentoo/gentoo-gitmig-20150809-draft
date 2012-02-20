@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.2 2012/01/28 15:29:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.3 2012/02/20 20:52:04 aballier Exp $
 
 EAPI="4"
 
@@ -35,7 +35,7 @@ fi
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 
 if [ "${PV%9999}" = "${PV}" ] ; then
