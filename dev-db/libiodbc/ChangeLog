@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/libiodbc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.52 2011/03/27 12:26:23 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.53 2012/02/20 10:21:59 scarabeus Exp $
+
+*libiodbc-3.52.7-r1 (20 Feb 2012)
+
+  20 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/libiodbc-3.52.7-debian_bug501100.patch,
+  +files/libiodbc-3.52.7-debian_bug508480.patch,
+  +files/libiodbc-3.52.7-gtk.patch, +files/libiodbc-3.52.7-multilib.patch,
+  +files/libiodbc-3.52.7-unicode_includes.patch, +libiodbc-3.52.7-r1.ebuild:
+  Revision bump to include few fixes, from debian and others. Fix also static-
+  libs bug#377529.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   libiodbc-3.52.7.ebuild:
