@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.67 2012/01/06 10:21:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.68 2012/02/20 20:32:30 ssuominen Exp $
+
+*exo-0.7.1 (20 Feb 2012)
+
+  20 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> +exo-0.7.1.ebuild:
+  Version bump to development series.
 
   06 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -exo-0.6.0.ebuild:
   old
