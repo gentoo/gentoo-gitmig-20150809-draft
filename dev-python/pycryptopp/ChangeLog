@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycryptopp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycryptopp/ChangeLog,v 1.1 2011/12/08 02:23:47 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycryptopp/ChangeLog,v 1.2 2012/02/20 14:45:32 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> pycryptopp-0.5.29.ebuild:
+  Restricting pypy #404915
 
 *pycryptopp-0.5.29 (08 Dec 2011)
 
