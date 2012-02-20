@@ -1,19 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.2.ebuild,v 1.3 2012/02/09 21:34:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.2.ebuild,v 1.4 2012/02/20 20:05:38 voyageur Exp $
 
 EAPI=4
-
-inherit gnustep-base eutils prefix
+inherit gnustep-base eutils prefix toolchain-funcs
 
 DESCRIPTION="GNUstep Makefile Package"
-
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE="libobjc2 native-exceptions"
-SLOT="0"
-LICENSE="GPL-2"
 
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=sys-devel/make-3.75
@@ -23,17 +22,35 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
+	# Determine libobjc.so to use
+	if use libobjc2; then
+		libobjc_version=libobjc.so.4
+	else
+		# Test new libobjc.so.3
+		$(tc-getCC) -Werror -Wl,-l:libobjc.so.3 "${FILESDIR}"/testlibobjc.m -o /dev/null 2> /dev/null \
+			&& libobjc_version=libobjc.so.3 \
+			|| libobjc_version=libobjc.so.2
+	fi
+
+	# For existing installations, determine if we will use another libobjc.so
 	if has_version gnustep-base/gnustep-make; then
-		if ( use libobjc2 && ! has_version gnustep-base/gnustep-make[libobjc2] ) || \
-			( ! use libobjc2 && has_version gnustep-base/gnustep-make[libobjc2] ) || \
-			( use libobjc2 && has_version <gnustep-base/gnustep-make-2.6.2 ) ; then
-			ewarn "TOGGLED libobjc2 USE-FLAG WARNING:"
-			ewarn "You changed the libojbc2 use-flag"
+		local current_libobjc="$(awk -F: '/^OBJC_LIB_FLAG/ {print $2}' ${EPREFIX}/usr/share/GNUstep/Makefiles/config.make)"
+		# Old installations did not set this explicitely
+		: ${current_libobjc:=libobjc.so.2}
+
+		if [[ ${current_libobjc} != ${libobjc_version} ]]; then
+			ewarn "Warning: changed libobjc.so version!!"
+			ewarn "The libobjc.so version used for gnustep-make has changed"
+			ewarn "(either by the libojbc2 use-flag or a GCC upgrade)"
 			ewarn "You must rebuild all gnustep packages installed."
 			ewarn ""
 			ewarn "To do so, please emerge gnustep-base/gnustep-updater and run:"
 			ewarn "# gnustep-updater -l"
 		fi
+	fi
+
+	if use libobjc2; then
+		export CC=clang
 	fi
 }
 
@@ -46,19 +63,11 @@ src_prepare() {
 }
 
 src_configure() {
-	local libobjc_version
-	if use libobjc2; then
-		export CC=clang
-		libobjc_version=4
-	else
-		libobjc_version=2
-	fi
-
 	#--enable-objc-nonfragile-abi: only working in clang for now
 	econf \
 		--with-layout=fhs-system \
 		--with-config-file="${EPREFIX}"/etc/GNUstep/GNUstep.conf \
-		--with-objc-lib-flag=-l:libobjc.so.${libobjc_version} \
+		--with-objc-lib-flag=-l:${libobjc_version} \
 		$(use_enable libobjc2 objc-nonfragile-abi) \
 		$(use_enable native-exceptions native-objc-exceptions)
 }
