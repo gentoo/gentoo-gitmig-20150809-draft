@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bicyclerepair
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.27 2010/06/23 16:31:28 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.28 2012/02/20 15:15:37 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> bicyclerepair-0.9-r2.ebuild:
+  Restricting pypy #403837
 
   23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bicyclerepair-0.9-r2.ebuild:
