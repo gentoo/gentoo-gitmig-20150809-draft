@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.69 2012/02/14 10:49:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.70 2012/02/20 12:10:09 naota Exp $
+
+  20 Feb 2012; Naohiro Aota <naota@gentoo.org> fbsd/package.use.mask:
+  Mask wifi for net-libs/xulrunner
 
   14 Feb 2012; Alexis Ballier <aballier@gentoo.org> packages:
   remove virtual/modutils from system by Yuta SATOH, bug #402389
