@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-updater
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-updater/ChangeLog,v 1.3 2012/02/09 21:36:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-updater/ChangeLog,v 1.4 2012/02/20 19:45:43 voyageur Exp $
+
+  20 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnustep-updater-0.1.ebuild:
+  Remove old version (missing libobjc.so change support)
 
   09 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
   gnustep-updater-0.2.ebuild:
