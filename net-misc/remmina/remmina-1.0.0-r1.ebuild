@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0-r1.ebuild,v 1.3 2012/02/20 20:45:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0-r1.ebuild,v 1.4 2012/02/20 22:30:39 floppym Exp $
 
 EAPI="4"
 
@@ -13,16 +13,18 @@ SRC_URI="https://github.com/downloads/FreeRDP/Remmina/Remmina-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ayatana avahi crypt debug freerdp gnome-keyring nls ssh telepathy vte"
+IUSE="ayatana avahi crypt debug freerdp gnome-keyring +gtk3 nls ssh telepathy vte"
 
 # net-libs/libvncserver is bundled; add dep for next release
-RDEPEND="x11-libs/gtk+:3
+RDEPEND="
 	x11-libs/libxkbfile
 	gnome-keyring? ( gnome-base/libgnome-keyring )
 	ayatana? ( dev-libs/libappindicator )
 	avahi? ( net-dns/avahi[gtk3] )
 	crypt? ( dev-libs/libgcrypt )
 	freerdp? ( >=net-misc/freerdp-1.0 )
+	gtk3? ( x11-libs/gtk+:3 )
+	!gtk3? ( x11-libs/gtk+:2 )
 	ssh? ( net-libs/libssh[sftp] )
 	telepathy? ( net-libs/telepathy-glib )
 	!net-misc/remmina-plugins
@@ -56,6 +58,7 @@ src_configure() {
 		$(cmake-utils_use_with ssh LIBSSH)
 		$(cmake-utils_use_with telepathy TELEPATHY)
 		$(cmake-utils_use_with vte VTE)
+		-DGTK_VERSION=$(use gtk3 && echo 3 || echo 2)
 		-DHAVE_PTHREAD=ON
 	)
 	cmake-utils_src_configure
