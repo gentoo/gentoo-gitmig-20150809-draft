@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnosis-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.18 2010/06/23 15:14:51 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.19 2012/02/20 15:19:52 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> gnosis-utils-1.2.2.ebuild:
+  Restricting pypy #403823
 
   23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gnosis-utils-1.2.2.ebuild:
