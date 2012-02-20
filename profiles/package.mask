@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13501 2012/02/19 22:45:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13502 2012/02/20 06:01:59 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -368,37 +368,16 @@ dev-php/PEAR-HTML_Select_Common
 # Removal in 30 days, bug #396975
 dev-php/PEAR-I18N
 
-# Samuli Suominen <ssuominen@gentoo.org> (16 Jan 2012)
-# No longer used and only for Gnome 2.x wrt #398639
-# Removal in 30 days
-dev-dotnet/gnome-panel-sharp
-
 # Samuli Suominen <ssuominen@gentoo.org> (09 Jan 2012)
 # Fails to compile against recent glibc and multiple other issues.
 # No maintainer to take care of the package. Removal in 30 days.
 # Bugs 325331, 284369, 380749, 388741, 381539, 358697, and 332395.
 sys-fs/zfs-fuse
 
-# Samuli Suominen <ssuominen@gentoo.org> (08 Jan 2012)
-# Incompatible with upstream libdvdread without custom
-# patching the UDF symbols in again wrt bug #387813. 
-# Multiple other issues. Bugs 262084, 165700, 340739,
-# 369775 and 339965. No upstream or hope for new releases 
-# anymore either.   Removal in 30 days.
-media-video/ogle
-media-video/ogle-gui
-media-video/goggles
-
 # Markos Chandras <hwoarang@gentoo.org> (08 Jan 2012)
 # Masking new boost release for testing
 ~dev-util/boost-build-1.48.0
 ~dev-libs/boost-1.48.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 Jan 2012)
-# Incompatible with stable transcode-1.1.7 wrt #397375 and
-# last upstream release 2004.
-# Removal in 30 days.
-media-video/ripmake
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (04 Jan 2012)
 # Outdated and unused sound daemon. Why is this still in the tree?
@@ -410,11 +389,6 @@ media-plugins/gst-plugins-esd
 media-sound/extace
 x11-plugins/wmpop
 x11-plugins/wsoundserver
-
-# Samuli Suominen <ssuominen@gentoo.org> (02 Jan 2012)
-# Unused backward compability library (for Xfce 4.6 packages in Xfce 4.8)
-# Removal in 30 days
-xfce-extra/thunar-vfs
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (01 Jan 2012)
 # Mask until dependencies are keyworded, bug #396669
