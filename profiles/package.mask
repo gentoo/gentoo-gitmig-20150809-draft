@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13505 2012/02/20 20:39:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13506 2012/02/20 20:51:21 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,7 @@
 >=xfce-base/exo-0.7.0
 >=xfce-base/libxfce4ui-4.9.0
 >=xfce-base/xfce4-panel-4.9.0
+>=xfce-base/xfce4-settings-4.9.0
 >=xfce-extra/xfce4-appfinder-4.9.0
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Feb 2012)
