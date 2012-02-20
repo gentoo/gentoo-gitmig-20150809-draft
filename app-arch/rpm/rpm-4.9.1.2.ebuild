@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.1.2.ebuild,v 1.1 2012/02/18 20:14:40 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.1.2.ebuild,v 1.2 2012/02/20 20:46:09 sochotnicky Exp $
 
 EAPI=4
 
@@ -83,7 +83,14 @@ src_install() {
 	keepdir /usr/src/rpm/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
 
 	dodoc CHANGES CREDITS GROUPS README*
-	use doc && dohtml -r apidocs/html/*
+	if use doc; then
+		pushd doc/hacking/html
+		dohtml -p hacking -r .
+		popd
+		pushd doc/librpm/html
+		dohtml -p librpm -r .
+		popd
+	fi
 
 	# Fix perllocal.pod file collision
 	fixlocalpod
