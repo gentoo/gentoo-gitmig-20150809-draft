@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.3-r1.ebuild,v 1.1 2011/09/15 21:42:38 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.3-r2.ebuild,v 1.1 2012/02/20 19:10:16 tgurr Exp $
 
 EAPI="4"
 
@@ -34,7 +34,11 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=( "${FILESDIR}/${PN}-1.2.3-ice-3.4.2-compat.patch" )
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.2.3-ice-3.4.2-compat.patch
+	"${FILESDIR}"/mumble-1.2.3-remove-certs.patch
+	"${FILESDIR}"/mumble-1.2.3-fix-cert-validation.patch
+)
 
 pkg_setup() {
 	enewgroup murmur
@@ -89,6 +93,9 @@ src_install() {
 
 	insinto /etc/dbus-1/system.d/
 	doins scripts/murmur.conf
+
+	insinto /usr/share/murmur/
+	doins src/murmur/Murmur.ice
 
 	newinitd "${FILESDIR}"/murmur.initd murmur
 	newconfd "${FILESDIR}"/murmur.confd murmur
