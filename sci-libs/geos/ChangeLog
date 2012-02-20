@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.60 2012/01/14 16:17:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.61 2012/02/20 15:27:40 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> geos-3.2.2.ebuild,
+  geos-3.3.2.ebuild:
+  Restricting pypy #403809
 
 *geos-3.3.2 (14 Jan 2012)
 

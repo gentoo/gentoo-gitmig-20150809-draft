@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.3.2.ebuild,v 1.1 2012/01/14 16:17:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.3.2.ebuild,v 1.2 2012/02/20 15:27:40 patrick Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 inherit autotools eutils python
 
 DESCRIPTION="Geometry engine library for Geographic Information Systems"
