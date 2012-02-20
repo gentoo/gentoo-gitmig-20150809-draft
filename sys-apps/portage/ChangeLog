@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.966 2012/02/20 11:22:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.967 2012/02/20 12:47:08 zmedico Exp $
+
+  20 Feb 2012; Zac Medico <zmedico@gentoo.org> portage-2.2.0_alpha88.ebuild:
+  Fix SRC_URI.
 
 *portage-2.2.0_alpha88 (20 Feb 2012)
 
