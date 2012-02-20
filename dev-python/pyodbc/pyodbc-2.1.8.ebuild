@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/pyodbc-2.1.8.ebuild,v 1.3 2011/03/25 22:00:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/pyodbc-2.1.8.ebuild,v 1.4 2012/02/20 14:44:32 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit distutils
 
