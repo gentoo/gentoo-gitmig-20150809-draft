@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/trayer-srg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.1 2012/01/29 01:17:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.2 2012/02/20 04:16:06 floppym Exp $
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
 
 *trayer-srg-1.1.4 (29 Jan 2012)
 
