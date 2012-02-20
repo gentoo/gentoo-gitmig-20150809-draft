@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8-r4.ebuild,v 1.6 2012/01/16 02:59:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8-r4.ebuild,v 1.7 2012/02/20 09:08:18 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
-PYTHON_USE_WITH="-build xml"
+PYTHON_USE_WITH="xml"
 PYTHON_USE_WITH_OPT="python"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit libtool flag-o-matic eutils python autotools prefix
 

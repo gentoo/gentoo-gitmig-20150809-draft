@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.327 2012/01/16 02:59:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.328 2012/02/20 09:08:18 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> libxml2-2.7.8-r1.ebuild,
+  libxml2-2.7.8-r2.ebuild, libxml2-2.7.8-r3.ebuild, libxml2-2.7.8-r4.ebuild:
+  Restricting pypy #403751
 
   16 Jan 2012; Jeroen Roovers <jer@gentoo.org> libxml2-2.7.8-r4.ebuild:
   Stable for HPPA (bug #398361).
