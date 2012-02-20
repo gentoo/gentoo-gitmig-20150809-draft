@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.8.3.ebuild,v 1.8 2012/02/20 20:59:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.8.3.ebuild,v 1.9 2012/02/20 21:14:40 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -56,7 +56,8 @@ src_install() {
 
 	# NOTE: ONLY FOR DEVELOPMENT REASONS
 	has_version '>=xfce-extra/xfce4-appfinder-4.9' && rm -f \
-		"${ED}"usr/bin/xfrun4
+		"${ED}"usr/bin/xfrun4 \
+		"${ED}"usr/share/applications/xfrun4.desktop
 	has_version '>=xfce-base/libxfce4ui-4.9' && rm -f \
 		"${ED}"usr/bin/xfce4-about \
 		"${ED}"usr/share/applications/xfce4-about.desktop \
