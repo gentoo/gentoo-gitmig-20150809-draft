@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pystopwatch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pystopwatch/ChangeLog,v 1.1 2012/02/07 22:28:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pystopwatch/ChangeLog,v 1.2 2012/02/20 01:29:04 floppym Exp $
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
 
 *pystopwatch-2011.04.04.1 (07 Feb 2012)
 
