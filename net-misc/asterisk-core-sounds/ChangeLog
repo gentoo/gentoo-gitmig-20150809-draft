@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk-core-sounds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-core-sounds/ChangeLog,v 1.9 2012/02/16 18:43:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-core-sounds/ChangeLog,v 1.10 2012/02/20 16:33:01 chainsaw Exp $
+
+*asterisk-core-sounds-1.4.22 (20 Feb 2012)
+
+  20 Feb 2012; Tony Vroon <chainsaw@gentoo.org>
+  -asterisk-core-sounds-1.4.19.ebuild, -asterisk-core-sounds-1.4.21.ebuild,
+  +asterisk-core-sounds-1.4.22.ebuild, metadata.xml:
+  Version bump, as requested by Oleg Gawriloff in bug #404489. Removed old
+  ebuilds and unused gsm USE-flag description.
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   asterisk-core-sounds-1.4.21-r1.ebuild:
