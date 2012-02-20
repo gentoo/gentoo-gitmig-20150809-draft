@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cddb-py
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cddb-py/ChangeLog,v 1.14 2010/07/27 22:11:07 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cddb-py/ChangeLog,v 1.15 2012/02/20 15:11:58 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> cddb-py-1.4.ebuild:
+  Restricting pypy #404009
 
   27 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cddb-py-1.4.ebuild:
