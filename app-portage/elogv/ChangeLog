@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.68 2012/01/11 01:55:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.69 2012/02/20 22:22:05 fuzzyray Exp $
+
+*elogv-0.7.5-r1 (20 Feb 2012)
+
+  20 Feb 2012; Paul Varner <fuzzyray@gentoo.org> +elogv-0.7.5-r1.ebuild:
+  Revision bump to honor LINGUAS, bug 402305.
 
   11 Jan 2012; Christoph Junghans <ottxor@gentoo.org> elogv-0.7.5.ebuild:
   keyword ~x86-macos
