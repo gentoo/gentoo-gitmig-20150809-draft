@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.53 2012/02/20 10:21:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.54 2012/02/20 15:57:31 scarabeus Exp $
+
+  20 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> libiodbc-3.52.7-r1.ebuild:
+  Use single thread build as it is broken in paralel on some machines wrt
+  bug#405029.
 
 *libiodbc-3.52.7-r1 (20 Feb 2012)
 
