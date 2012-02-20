@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.6.ebuild,v 1.2 2012/02/14 18:49:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.6.ebuild,v 1.3 2012/02/20 10:10:43 voyageur Exp $
 
 EAPI=4
 inherit multilib
@@ -18,8 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+boehm-gc"
 
-DEPEND="boehm-gc? ( dev-libs/boehm-gc )"
-RDEPEND="${DEPEND}"
+RDEPEND="boehm-gc? ( dev-libs/boehm-gc )"
+DEPEND="${DEPEND}
+	>=sys-devel/clang-2.9"
 
 GSMAKE_S=${WORKDIR}/${GSMAKE}
 
@@ -31,6 +32,8 @@ src_prepare() {
 }
 
 src_configure() {
+	export CC=clang
+
 	cd "${GSMAKE_S}"
 	econf --with-layout=fhs-system
 }

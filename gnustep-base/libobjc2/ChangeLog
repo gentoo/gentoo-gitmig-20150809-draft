@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/libobjc2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/ChangeLog,v 1.8 2012/02/14 18:49:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/ChangeLog,v 1.9 2012/02/20 10:10:43 voyageur Exp $
+
+  20 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> libobjc2-1.6.ebuild:
+  Force clang use, as gcc-4.6 does not work and clang is needed anyway for
+  gnustep with libobjc2. Fixes bug #404931
 
   14 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> libobjc2-1.6.ebuild,
   metadata.xml:
