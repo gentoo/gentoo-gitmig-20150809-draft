@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.11 2012/02/17 05:57:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.12 2012/02/20 00:51:14 floppym Exp $
 
 EAPI="4"
 EGIT_REPO_URI="git://github.com/FreeRDP/Remmina.git"
@@ -33,10 +33,6 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 DOCS=( README )
-
-src_prepare() {
-	sed -i -e "/REMMINA_PLUGINDIR/s:lib:$(get_libdir):" CMakeLists.txt || die
-}
 
 src_configure() {
 	local mycmakeargs=(
