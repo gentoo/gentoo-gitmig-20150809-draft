@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/pyalsa-1.0.25.ebuild,v 1.1 2012/02/08 14:56:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/pyalsa-1.0.25.ebuild,v 1.2 2012/02/20 14:42:27 patrick Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython 2.7-pypy-*"
 
 inherit distutils
 
