@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/timelib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/timelib/ChangeLog,v 1.6 2011/12/28 22:55:02 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/timelib/ChangeLog,v 1.7 2012/02/20 14:52:46 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> timelib-0.2.2.ebuild,
+  timelib-0.2.3.ebuild:
+  Restricting pypy #404909
 
   28 Dec 2011; Mike Gilbert <floppym@gentoo.org> timelib-0.2.3.ebuild:
   Restrict jython and drop CFLAGS override. Another Arfrever sighting.

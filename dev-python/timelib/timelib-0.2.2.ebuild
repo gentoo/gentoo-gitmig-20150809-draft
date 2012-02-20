@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/timelib/timelib-0.2.2.ebuild,v 1.1 2010/10/17 20:48:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/timelib/timelib-0.2.2.ebuild,v 1.2 2012/02/20 14:52:46 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.7-pypy-*"
 
 inherit distutils
 
