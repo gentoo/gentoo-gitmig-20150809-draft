@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/editobj
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.20 2010/12/26 17:09:45 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.21 2012/02/20 15:23:53 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> editobj-0.5.7-r1.ebuild:
+  Restricting pypy #403815
 
   26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   editobj-0.5.7-r1.ebuild:
