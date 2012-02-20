@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.55 2011/12/14 11:09:14 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.56 2012/02/20 10:34:40 scarabeus Exp $
+
+  20 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> cppunit-1.12.1-r1.ebuild:
+  Stable 1.12.1-r1 on amd64 and x86. Wrt bug#405001.
 
   14 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   cppunit-1.12.1-r1.ebuild:
