@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.4.1.ebuild,v 1.7 2011/08/09 18:51:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.4.1-r1.ebuild,v 1.1 2012/02/20 12:07:48 jer Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils savedconfig toolchain-funcs
 
@@ -39,6 +39,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/CVE-2012-0842.patch
 	sed -i \
 		-e 's|{|(|g;s|}|)|g' \
 		-e 's|\t@|\t|g;s|echo|@&|g' \
@@ -48,13 +49,10 @@ src_prepare() {
 		-e 's|^CFLAGS.*|CFLAGS += -std=c99 -pedantic -Wall $(INCS) $(CPPFLAGS)|g' \
 		config.mk Makefile || die "sed failed"
 	restore_config config.h
-}
-
-src_compile() {
-	emake CC=$(tc-getCC) || die "emake compile failed"
+	tc-export CC
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="/usr" install || die "emake install failed"
+	emake DESTDIR="${D}" PREFIX="/usr" install
 	save_config config.h
 }
