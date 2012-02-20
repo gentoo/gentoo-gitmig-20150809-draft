@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13507 2012/02/20 20:58:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13508 2012/02/20 21:31:09 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (20 Feb 2012)
+# Installs stuff over the top of nvidia-drivers
+=media-video/nvidia-settings-295.20
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Feb 2012)
 # Mask what will be the Xfce Desktop Environment 4.10 for testing
