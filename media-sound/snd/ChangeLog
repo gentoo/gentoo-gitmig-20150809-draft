@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/snd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.62 2012/02/15 02:57:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.63 2012/02/20 23:52:02 radhermit Exp $
+
+  20 Feb 2012; Tim Harder <radhermit@gentoo.org> snd-12.7.ebuild,
+  snd-12.8.ebuild:
+  Make portaudio and pulseaudio use flags mutually exclusive (fixes bug
+  #404201).
 
   15 Feb 2012; Tim Harder <radhermit@gentoo.org> snd-12.7.ebuild,
   snd-12.8.ebuild:

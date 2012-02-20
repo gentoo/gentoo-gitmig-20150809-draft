@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.8.ebuild,v 1.2 2012/02/15 02:57:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.8.ebuild,v 1.3 2012/02/20 23:52:02 radhermit Exp $
 
 EAPI="4"
 
@@ -36,7 +36,10 @@ RDEPEND="media-libs/audiofile
 	readline? ( sys-libs/readline )
 	ruby? ( dev-lang/ruby )"
 
-REQUIRED_USE="^^ (
+REQUIRED_USE="
+	portaudio? ( !pulseaudio )
+	pulseaudio? ( !portaudio )
+	^^ (
 		( !ruby !s7 )
 		( ruby !s7 )
 		( !ruby s7 )
