@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.7-r1.ebuild,v 1.2 2012/02/20 15:57:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.7-r1.ebuild,v 1.3 2012/02/20 16:05:26 scarabeus Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-MAKEOPTS="-j1"
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
 	sed -i.orig \
