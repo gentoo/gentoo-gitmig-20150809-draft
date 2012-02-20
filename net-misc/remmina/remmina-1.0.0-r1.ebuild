@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0-r1.ebuild,v 1.1 2012/02/17 15:54:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0-r1.ebuild,v 1.2 2012/02/20 00:16:39 floppym Exp $
 
 EAPI="4"
 
@@ -43,6 +43,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-desktop-file.patch"
 	epatch "${FILESDIR}/${P}-fix-desktop-file.patch"
 	epatch "${FILESDIR}/${P}-optional-gnome-keyring.patch"
+	sed -i -e "/REMMINA_PLUGINDIR/s:lib:$(get_libdir):" CMakeLists.txt || die
 }
 
 src_configure() {
@@ -55,7 +56,6 @@ src_configure() {
 		$(cmake-utils_use_with ssh LIBSSH)
 		$(cmake-utils_use_with telepathy TELEPATHY)
 		$(cmake-utils_use_with vte VTE)
-		-DREMMINA_PLUGINDIR="/usr/$(get_libdir)/remmina/plugins"
 		-DHAVE_PTHREAD=ON
 	)
 	cmake-utils_src_configure
