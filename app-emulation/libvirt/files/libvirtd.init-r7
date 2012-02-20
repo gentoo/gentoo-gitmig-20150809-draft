@@ -102,7 +102,7 @@ stop() {
 		einfo " Shutting down network(s):"
 			for net_name in $(libvirtd_net_list qemu); do
 				einfo "   ${net_name}"
-				libvirtd_virsh net-destroy ${net_name} > /dev/null
+				libvirtd_virsh qemu net-destroy ${net_name} > /dev/null
 			done
 
 		if [ "$(libvirtd_net_count qemu)" != "0" ]; then

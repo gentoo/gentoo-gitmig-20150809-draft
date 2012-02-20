@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.10-r1.ebuild,v 1.2 2012/02/20 05:18:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.10-r2.ebuild,v 1.1 2012/02/20 15:35:56 cardoe Exp $
 
 BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -213,7 +213,7 @@ src_install() {
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
-	newinitd "${FILESDIR}/libvirtd.init-r6" libvirtd || die
+	newinitd "${FILESDIR}/libvirtd.init-r7" libvirtd || die
 	newconfd "${FILESDIR}/libvirtd.confd-r3" libvirtd || die
 
 	keepdir /var/lib/libvirt/images

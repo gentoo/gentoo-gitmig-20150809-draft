@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.159 2012/02/20 05:18:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.160 2012/02/20 15:35:56 cardoe Exp $
+
+*libvirt-0.9.10-r2 (20 Feb 2012)
+
+  20 Feb 2012; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.9.10-r1.ebuild,
+  +libvirt-0.9.10-r2.ebuild, libvirt-9999.ebuild, +files/libvirtd.init-r7,
+  -files/libvirtd.init-r6:
+  Fix syntax error in the init script. bug #404525
 
   19 Feb 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.10-r1.ebuild:
   Actually push the use of the backports tarball.
