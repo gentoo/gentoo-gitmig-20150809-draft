@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gsasl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.48 2011/11/27 22:55:54 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.49 2012/02/20 10:43:16 naota Exp $
+
+  20 Feb 2012; Naohiro Aota <naota@gentoo.org> gsasl-1.6.1.ebuild:
+  Add ~x86-fbsd
 
   27 Nov 2011; Jeroen Roovers <jer@gentoo.org> gsasl-1.6.1.ebuild:
   Do not inherit autotools-utils.eclass (bug #392117).
