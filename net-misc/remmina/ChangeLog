@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.23 2012/02/20 00:51:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.24 2012/02/20 20:45:32 floppym Exp $
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> -remmina-1.0.0.ebuild,
+  remmina-1.0.0-r1.ebuild, remmina-9999.ebuild:
+  Drop unique use flag. Bug 404579 by Daniel M. Weeks.
 
   20 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-9999.ebuild:
   Drop libdir sed in live ebuild; fixed upstream.
