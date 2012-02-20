@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.15.ebuild,v 1.6 2012/02/06 15:25:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.15.ebuild,v 1.7 2012/02/20 20:57:43 jer Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-lin
 IUSE="
 	256-color alt-font-width afterimage blink buffer-on-clear +focused-urgency
 	fading-colors +font-styles iso14755 +mousewheel +perl pixbuf secondary-wheel
-	startup-notification truetype unicode3 +vanilla wcwidth
+	startup-notification xft unicode3 +vanilla wcwidth
 "
 
 RDEPEND="
@@ -28,8 +28,8 @@ RDEPEND="
 	pixbuf? ( x11-libs/gdk-pixbuf x11-libs/gtk+:2 )
 	startup-notification? ( x11-libs/startup-notification )
 	x11-libs/libX11
-	x11-libs/libXft
 	x11-libs/libXrender
+	xft? ( x11-libs/libXft )
 "
 DEPEND="
 	${RDEPEND}
@@ -92,7 +92,7 @@ src_configure() {
 		$(use_enable perl) \
 		$(use_enable pixbuf) \
 		$(use_enable startup-notification) \
-		$(use_enable truetype xft) \
+		$(use_enable xft) \
 		$(use_enable unicode3) \
 		${myconf}
 }
