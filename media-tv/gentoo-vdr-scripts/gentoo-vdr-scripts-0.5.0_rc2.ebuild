@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.4.8.ebuild,v 1.2 2011/02/20 15:41:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.5.0_rc2.ebuild,v 1.1 2012/02/20 11:38:43 hd_brummy Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils
 
@@ -13,14 +13,12 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="nvram"
 
 RDEPEND="nvram? ( sys-power/nvram-wakeup )
 	app-admin/sudo
-	sys-process/wait_on_pid
-	!media-tv/vdr-dvd-scripts
-	!media-tv/vdrplugin-rebuild"
+	sys-process/wait_on_pid"
 
 VDR_HOME=/var/vdr
 

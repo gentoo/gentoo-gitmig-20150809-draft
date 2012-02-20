@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.115 2011/11/13 19:11:18 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.116 2012/02/20 11:38:43 hd_brummy Exp $
+
+*gentoo-vdr-scripts-0.5.0_rc2 (20 Feb 2012)
+
+  20 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -gentoo-vdr-scripts-0.4.8.ebuild, gentoo-vdr-scripts-0.4.9.ebuild,
+  +gentoo-vdr-scripts-0.5.0_rc2.ebuild:
+  cleanup; bump, handle svdrpsend/svdrsend.pl in all vdr versions
 
   13 Nov 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   gentoo-vdr-scripts-0.4.9.ebuild:
