@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.123 2012/02/17 11:28:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.124 2012/02/20 11:26:26 tomka Exp $
+
+  20 Feb 2012; Thomas Kahle <tomka@gentoo.org> thunderbird-10.0.1.ebuild:
+  marked x86 per bug 403183
 
   17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> thunderbird-10.0.1.ebuild:
   Stable for amd64, wrt bug #403183
