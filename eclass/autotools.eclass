@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.121 2012/02/13 17:26:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.122 2012/02/20 02:54:21 robbat2 Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -98,6 +98,27 @@ unset _automake_atom _autoconf_atom
 # Additional options to pass to automake during
 # eautoreconf call.
 
+# @ECLASS-VARIABLE: AT_NOEACLOCAL
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Don't run eaclocal command if set to 'yes',
+# useful when eaclocal needs to be ran with
+# particular options
+
+# @ECLASS-VARIABLE: AT_NOEAUTOCONF
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Don't run eautoconf command if set to 'yes',
+# useful when eautoconf needs to be ran with
+# particular options
+
+# @ECLASS-VARIABLE: AT_NOEAUTOMAKE
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Don't run eautomake command if set to 'yes',
+# useful when eautomake needs to be ran with
+# particular options
+
 # @ECLASS-VARIABLE: AT_NOELIBTOOLIZE
 # @DEFAULT_UNSET
 # @DESCRIPTION:
@@ -142,18 +163,20 @@ eautoreconf() {
 
 	auxdir=$(autotools_get_auxdir)
 
-	einfo "Running eautoreconf in '${PWD}' ..."
-	[[ -n ${auxdir} ]] && mkdir -p ${auxdir}
-	eaclocal
+	if  [[ ${AT_NOEACLOCAL} != "yes" ]]; then
+		einfo "Running eautoreconf in '${PWD}' ..."
+		[[ -n ${auxdir} ]] && mkdir -p ${auxdir}
+		eaclocal
+	fi
 	[[ ${CHOST} == *-darwin* ]] && g=g
 	if ${LIBTOOLIZE:-${g}libtoolize} -n --install >& /dev/null ; then
 		_elibtoolize --copy --force --install
 	else
 		_elibtoolize --copy --force
 	fi
-	eautoconf
-	eautoheader
-	FROM_EAUTORECONF="yes" eautomake ${AM_OPTS}
+	[[ ${AT_NOEAUTOCONF} != "yes" ]] && eautoconf
+	[[ ${AT_NOEAUTOHEADER} != "yes" ]] && eautoheader
+	[[ ${AT_NOEAUTOMAKE} != "yes" ]] && FROM_EAUTORECONF="yes" eautomake ${AM_OPTS}
 
 	[[ ${AT_NOELIBTOOLIZE} == "yes" ]] && return 0
 
@@ -253,12 +276,6 @@ eautoconf() {
 eautomake() {
 	local extra_opts
 	local makefile_name
-
-	# Some packages might need to skip automake
-	# OpenLDAP is a good example. It does not use automake (all the .in files are
-	# handwritten), but it does AM_INIT_AUTOMAKE in configure.in, for all the
-	# other macros involved
-	[[ ${WANT_AUTOMAKE} == "none" ]] && return 0
 
 	# Run automake if:
 	#  - a Makefile.am type file exists
