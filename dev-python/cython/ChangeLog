@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cython
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.73 2011/12/26 12:01:39 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.74 2012/02/20 10:04:45 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> cython-0.14.1.ebuild,
+  cython-0.15.1.ebuild:
+  Restrict pypy for #403791
 
   26 Dec 2011; Patrick Lauer <patrick@gentoo.org> cython-0.15.1.ebuild:
   Fixing deps for #388411
