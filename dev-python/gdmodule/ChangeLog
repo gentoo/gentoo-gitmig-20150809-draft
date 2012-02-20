@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gdmodule
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/ChangeLog,v 1.5 2010/12/06 17:15:04 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/ChangeLog,v 1.6 2012/02/20 14:37:51 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> gdmodule-0.56-r2.ebuild,
+  gdmodule-0.56.ebuild:
+  Restricting pypy #404937
 
   06 Dec 2010; Justin Lecher <jlec@gentoo.org> gdmodule-0.56.ebuild,
   gdmodule-0.56-r2.ebuild:
