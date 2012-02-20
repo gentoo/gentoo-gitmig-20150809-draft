@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/lasi-1.1.1.ebuild,v 1.1 2011/11/27 04:05:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/lasi-1.1.1.ebuild,v 1.2 2012/02/20 09:54:55 jlec Exp $
 
 EAPI=4
-inherit eutils cmake-utils
+
+inherit cmake-utils eutils
 
 MY_PN=libLASi
 MY_P=${MY_PN}-${PV}
@@ -17,17 +18,22 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc examples"
 
-RDEPEND="x11-libs/pango
-	media-libs/freetype:2"
+RDEPEND="
+	media-libs/freetype:2
+	x11-libs/pango"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${MY_P}
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.1.0-cmake.patch
+	"${FILESDIR}"/${PN}-1.1.0-pkgconfig.patch
+	)
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.1.0-cmake.patch
-	epatch "${FILESDIR}"/${PN}-1.1.0-pkgconfig.patch
+	base_src_prepare
 	sed -i \
 		-e "s:\/lib$:\/$(get_libdir):" \
 		-e "s/libLASi-\${VERSION}/${PF}/" \
@@ -42,9 +48,10 @@ src_prepare() {
 
 src_configure() {
 	CMAKE_BUILD_TYPE=None
-	mycmakeargs="${mycmakeargs}
-		 -DCMAKE_SKIP_RPATH=OFF
-		 -DUSE_RPATH=OFF"
-		use doc || mycmakeargs="${mycmakeargs} -DDOXYGEN_EXECUTABLE="
+	local mycmakeargs=(
+		-DCMAKE_SKIP_RPATH=OFF
+		-DUSE_RPATH=OFF
+		)
+		use doc || mycmakeargs+=( -DDOXYGEN_EXECUTABLE= )
 	cmake-utils_src_configure
 }
