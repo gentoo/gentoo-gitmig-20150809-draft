@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.138 2012/02/20 07:18:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.139 2012/02/20 10:14:44 voyageur Exp $
+
+  20 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> gnustep-base.eclass:
+  Use WORKDIR instead of T for temporary GNUstep.conf, fixes bug #389859
 
   20 Feb 2012; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Require dev-libs/ppl-0.11 now that it's stable (bug #396569). Drop cloog-ppl
