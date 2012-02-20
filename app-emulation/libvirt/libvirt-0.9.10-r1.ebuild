@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.10.ebuild,v 1.1 2012/02/15 22:45:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.10-r1.ebuild,v 1.1 2012/02/20 05:15:02 cardoe Exp $
 
 #BACKPORTS=2
 #AUTOTOOLIZE=yes
@@ -29,7 +29,7 @@ else
 		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
 		${BACKPORTS:+
 			http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-backports-${BACKPORTS}.tar.bz2
-			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-backports-${BACKPORTS}.tar.bz2}"
+			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-bp-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~x86"
 fi
 S="${WORKDIR}/${P%_rc*}"
