@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.516 2012/02/12 14:17:33 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.517 2012/02/20 07:18:47 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -138,7 +138,7 @@ if in_iuse graphite ; then
 	RDEPEND+="
 	    graphite? (
 	        >=dev-libs/cloog-ppl-0.15.10
-	        >=dev-libs/ppl-0.10
+	        >=dev-libs/ppl-0.11
 	    )"
 fi
 
@@ -1070,12 +1070,7 @@ gcc_do_configure() {
 		confgcc+=" $(use_with graphite cloog)"
 		if use graphite; then
 			confgcc+=" --disable-ppl-version-check"
-			# this will be removed when cloog-ppl-0.15.10 goes stable
-			if has_version '>=dev-libs/cloog-ppl-0.15.10'; then
-				confgcc+=" --with-cloog-include=/usr/include/cloog-ppl"
-			else
-				confgcc+=" --with-cloog-include=/usr/include/cloog"
-			fi
+			confgcc+=" --with-cloog-include=/usr/include/cloog-ppl"
 		fi
 	fi
 
