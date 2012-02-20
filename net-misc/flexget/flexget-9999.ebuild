@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.8 2012/02/06 06:06:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.9 2012/02/20 16:17:17 floppym Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ IUSE="deluge test transmission"
 
 RDEPEND="
 	>=dev-python/feedparser-5.1
-	>=dev-python/sqlalchemy-0.7
+	=dev-python/sqlalchemy-0.7.4
 	dev-python/pyyaml
 	dev-python/beautifulsoup:python-2
 	dev-python/html5lib
@@ -34,6 +34,7 @@ RDEPEND="
 	dev-python/flask
 	dev-python/cherrypy
 	>=dev-python/requests-0.10.0
+	!=dev-python/requests-0.10.1
 "
 DEPEND="
 	dev-python/setuptools
