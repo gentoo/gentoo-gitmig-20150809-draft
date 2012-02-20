@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.96-r1.ebuild,v 1.1 2011/12/07 09:49:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.96-r1.ebuild,v 1.2 2012/02/20 20:31:01 jlec Exp $
 
 EAPI="2"
 
@@ -21,7 +21,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="dbus gnome"
 
 RDEPEND="
-	>=x11-libs/vte-0.16:0[python]
+	dev-libs/keybinder[python]
+	dev-python/notify-python
+	x11-libs/vte:0[python]
 	dbus? ( sys-apps/dbus )
 	gnome? (
 		dev-python/gconf-python
