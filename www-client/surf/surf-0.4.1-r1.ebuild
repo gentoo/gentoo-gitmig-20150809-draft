@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.4.1-r1.ebuild,v 1.1 2012/02/20 12:07:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.4.1-r1.ebuild,v 1.2 2012/02/20 12:12:04 jer Exp $
 
 EAPI=4
 
@@ -55,4 +55,9 @@ src_prepare() {
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install
 	save_config config.h
+}
+
+pkg_postinst() {
+	ewarn "Please correct the permissions of your \$HOME/.surf/ directory"
+	ewarn "and its contents to no longer be world readable (see bug #404983)"
 }
