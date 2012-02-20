@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1-r1.ebuild,v 1.11 2012/02/20 14:48:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1-r1.ebuild,v 1.12 2012/02/20 15:58:05 mr_bones_ Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,6 @@ PYTHON_USE_WITH="tk"
 PYTHON_USE_WITH_OPT="X"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.7-pypy-*"
-
 
 inherit distutils eutils
 
