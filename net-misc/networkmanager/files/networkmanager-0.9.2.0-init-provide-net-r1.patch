@@ -1,0 +1,59 @@
+From e99873e7583a3838e0873b1d0b1f9c3dac49f853 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Wed, 1 Feb 2012 05:51:20 -0500
+Subject: [PATCH] gentoo: provide net and use inactive status when not
+ connected
+
+The status will be reset to started via a dispatcher script on up/down
+events. See https://bugs.gentoo.org/show_bug.cgi?id=252137
+---
+ initscript/Gentoo/NetworkManager.in |   22 +++++++++++++++++++++-
+ 1 files changed, 21 insertions(+), 1 deletions(-)
+
+diff --git a/initscript/Gentoo/NetworkManager.in b/initscript/Gentoo/NetworkManager.in
+index 7db410b..34f19b1 100755
+--- a/initscript/Gentoo/NetworkManager.in
++++ b/initscript/Gentoo/NetworkManager.in
+@@ -3,18 +3,38 @@
+ # Distributed under the terms of the GNU General Purpose License v2
+ # $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/files/networkmanager-0.9.2.0-init-provide-net-r1.patch,v 1.1 2012/02/20 09:24:59 tetromino Exp $
+ 
++description="NetworkManager daemon. The service is marked as started only \
++when a network connection is established."
++
+ depend() {
+    need dbus
++   provide net
+ }
+ 
+ start() {
++   # If we are re-called by a dispatcher event, we want to mark the service
++   # as started without starting the daemon again
++   yesno "${IN_BACKGROUND}" && return 0
++
+    ebegin "Starting NetworkManager"
+    start-stop-daemon --start --quiet --pidfile /var/run/NetworkManager.pid \
+       --exec /usr/sbin/NetworkManager -- --pid-file /var/run/NetworkManager.pid
+-   eend $?
++   local _retval=$?
++   eend "${_retval}"
++   if [ "x${_retval}" = 'x0' ]; then
++      nm-online -t 5 || mark_service_inactive
++   fi
++   return "${_retval}"
+ }
+ 
+ stop() {
++   # If we are re-called by a dispatcher event, we want to mark the service
++   # as inactive without stopping the daemon
++   if yesno "${IN_BACKGROUND}"; then
++      mark_service_inactive "${SVCNAME}"
++      return 0
++   fi
++
+    ebegin "Stopping NetworkManager"
+    start-stop-daemon --stop --quiet --pidfile /var/run/NetworkManager.pid
+    eend $?
+-- 
+1.7.8.4
+
