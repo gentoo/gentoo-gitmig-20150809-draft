@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.22 2012/02/17 16:42:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.23 2012/02/20 15:14:25 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> webpy-0.34.ebuild,
+  webpy-0.36.ebuild:
+  Restricting pypy #403839
 
   17 Feb 2012; Jeroen Roovers <jer@gentoo.org> webpy-0.36.ebuild:
   Stable for HPPA (bug #400341).
