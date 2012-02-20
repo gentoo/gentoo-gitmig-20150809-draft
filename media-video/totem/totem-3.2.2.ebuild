@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.2.ebuild,v 1.1 2012/02/20 00:50:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.2.ebuild,v 1.2 2012/02/20 08:18:35 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -156,7 +156,7 @@ src_prepare() {
 	#	eautoreconf
 	#fi
 
-	python_clean_py-compile_files
+	use python && python_clean_py-compile_files
 
 	gnome2_src_prepare
 }
