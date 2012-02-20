@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/fcitx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.35 2011/11/02 06:53:22 qiaomuf Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.36 2012/02/20 02:23:28 qiaomuf Exp $
+
+  20 Feb 2012; Mu Qiao <qiaomuf@gentoo.org> fcitx-4.1.2.ebuild:
+  Fix gtk+ dependency (Bug #402017)
+
+  Thanks to wyqing for his help.
 
 *fcitx-4.1.2 (02 Nov 2011)
 
