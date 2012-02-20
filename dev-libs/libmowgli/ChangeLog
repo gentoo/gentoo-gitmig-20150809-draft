@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.61 2012/02/19 15:04:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.62 2012/02/20 19:00:47 jdhore Exp $
+
+*libmowgli-9999 (20 Feb 2012)
+
+  20 Feb 2012; Jeff Horelick <jdhore@gentoo.org> +libmowgli-9999.ebuild:
+  Add a live ebuild for libmowgli. This allows developers to use still slightly
+  experimental stuff (like the VIO layer) and allows for the addition of an
+  atheme-services live ebuild.
 
   19 Feb 2012; Raúl Porcel <armin76@gentoo.org> libmowgli-0.9.50.ebuild:
   sparc stable wrt #383991
