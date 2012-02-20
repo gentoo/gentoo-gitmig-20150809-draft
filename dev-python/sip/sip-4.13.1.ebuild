@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.13.1.ebuild,v 1.1 2011/12/24 08:35:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.13.1.ebuild,v 1.2 2012/02/20 10:13:40 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
 
 inherit eutils python toolchain-funcs
 
