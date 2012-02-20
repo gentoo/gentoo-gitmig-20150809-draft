@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epydoc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.60 2011/10/05 19:33:13 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.61 2012/02/20 14:48:25 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> epydoc-3.0.1-r1.ebuild:
+  Restricting pypy #404913
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> epydoc-3.0.1-r1.ebuild:
   remove ptex dep as it is going away
