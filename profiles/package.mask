@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13506 2012/02/20 20:51:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13507 2012/02/20 20:58:26 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -507,10 +507,6 @@ net-mail/vmailmgr-tools
 =net-misc/radvd-1.7
 =net-misc/radvd-1.8
 =net-misc/radvd-1.8.1
-
-# Alexis Ballier <aballier@gentoo.org> (04 Nov 2011)
-# Pre-releases of vlc 1.2. Mask it until final version is out
->=media-video/vlc-1.2_pre
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Oct 2011)
 # Working on more reliable versioning, consider experimental for now.
