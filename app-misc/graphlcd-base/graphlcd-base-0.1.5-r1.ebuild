@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5-r1.ebuild,v 1.9 2011/10/07 18:56:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5-r1.ebuild,v 1.10 2012/02/20 01:21:04 floppym Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -8,7 +8,7 @@ VERSION="226" # every bump, new version
 
 DESCRIPTION="Graphical LCD Driver"
 HOMEPAGE="http://projects.vdr-developer.org/projects/graphlcd"
-SRC_URI="http://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz
+SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz
 		mirror://vdrfiles/${PN}/${P}_utf8.diff.tgz"
 
 KEYWORDS="amd64 x86 ~ppc"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.9.ebuild,v 1.2 2011/10/07 18:56:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.9.ebuild,v 1.3 2012/02/20 01:21:04 floppym Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ VERSION="501" #every bump, new version
 
 DESCRIPTION="Graphical LCD Driver"
 HOMEPAGE="http://projects.vdr-developer.org/projects/show/graphlcd"
-SRC_URI="http://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
+SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"

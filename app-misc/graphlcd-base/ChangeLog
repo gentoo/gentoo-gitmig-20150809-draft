@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/graphlcd-base
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.28 2011/11/24 12:19:45 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.29 2012/02/20 01:21:04 floppym Exp $
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> graphlcd-base-0.1.5-r1.ebuild,
+  graphlcd-base-0.1.9.ebuild:
+  Use mirror://vdr-developerorg in SRC_URI.
 
   24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #158470
