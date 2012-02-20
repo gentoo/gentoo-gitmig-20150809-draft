@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simpleparse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.26 2011/09/16 07:46:34 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.27 2012/02/20 15:06:34 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> simpleparse-2.1.1.ebuild,
+  simpleparse-2.1.1_alpha2.ebuild:
+  Restricting pypy #404041
 
   16 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> simpleparse-2.1.1.ebuild:
   Restrict jython, remove setuptools dependency (thanks jbergstroem).
