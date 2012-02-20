@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-appfinder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/ChangeLog,v 1.110 2012/02/20 20:23:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/ChangeLog,v 1.111 2012/02/20 20:24:46 ssuominen Exp $
+
+  20 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-appfinder-4.9.2.ebuild:
+  old
 
 *xfce4-appfinder-4.9.3 (20 Feb 2012)
 
@@ -12,26 +16,17 @@
   -xfce4-appfinder-4.9.0.ebuild:
   old
 
-  29 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
-  xfce4-appfinder-4.9.2.ebuild:
-  Set KEYWORDS="" for now (duplicate menu entry for "Run program" and when
-  ALT-F2 is pressed both run dialogs start at once)
-
 *xfce4-appfinder-4.9.2 (04 Nov 2011)
 
   04 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   +xfce4-appfinder-4.9.2.ebuild:
   Version bump.
 
-  20 Oct 2011; Christoph Mende <angelos@gentoo.org>
-  xfce4-appfinder-4.9.0.ebuild:
-  Remove README and TODO, fix garcon dep
-
 *xfce4-appfinder-4.9.0 (20 Oct 2011)
 
   20 Oct 2011; Christoph Mende <angelos@gentoo.org>
   +xfce4-appfinder-4.9.0.ebuild:
-  Version bump
+  Version bump to development series.
 
   14 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-appfinder-4.8.0.ebuild:
