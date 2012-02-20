@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gsasl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.12 2011/11/02 10:01:59 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.13 2012/02/20 11:05:56 naota Exp $
+
+  20 Feb 2012; Naohiro Aota <naota@gentoo.org> gsasl-2.ebuild:
+  Add ~x86-fbsd
 
 *gsasl-2 (02 Nov 2011)
 
