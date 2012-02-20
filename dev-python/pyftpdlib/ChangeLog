@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyftpdlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.11 2012/02/13 14:57:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.12 2012/02/20 07:33:14 patrick Exp $
+
+*pyftpdlib-0.7.0 (20 Feb 2012)
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> +pyftpdlib-0.7.0.ebuild:
+  Bump for #404565
 
   13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> pyftpdlib-0.6.0.ebuild:
   ppc/ppc64 stable wrt #383751
