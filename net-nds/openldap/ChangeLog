@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.399 2012/02/20 02:54:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.400 2012/02/20 07:37:45 slyfox Exp $
+
+  20 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/openldap-2.4.28-fix-dash.patch, openldap-2.4.28-r1.ebuild:
+  Fix libtool build failure when /bin/sh points to dash. Approved by robbat2.
 
   20 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> openldap-2.4.28-r1.ebuild:
   Bug #404555: Use new variable AT_NOEAUTOMAKE instead of WANT_AUTOMAKE=none
