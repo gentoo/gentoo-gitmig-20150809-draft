@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.42 2012/02/11 23:55:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.43 2012/02/20 15:10:58 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> apsw-3.7.10.1.ebuild,
+  apsw-3.7.6.2.1.ebuild, apsw-3.7.8.1.ebuild, apsw-3.7.9.1.ebuild:
+  Restricting pypy #404011
 
 *apsw-3.7.10.1 (11 Feb 2012)
 
