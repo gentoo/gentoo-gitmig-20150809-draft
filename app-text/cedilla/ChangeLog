@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cedilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.12 2012/01/18 20:10:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.13 2012/02/20 04:21:06 floppym Exp $
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
 
   18 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> -cedilla-0.3.ebuild:
   Remove old
