@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.3.0.ebuild,v 1.4 2012/01/26 13:33:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.3.0.ebuild,v 1.5 2012/02/20 14:27:11 patrick Exp $
 
 # FIXME: MakeSwig.py execution should be made work from pyfltk-1.1.5.ebuild
 
 EAPI=4
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-**"
 
 inherit distutils eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.0.12.ebuild,v 1.2 2011/07/29 23:10:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.0.12.ebuild,v 1.3 2012/02/20 14:31:12 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"

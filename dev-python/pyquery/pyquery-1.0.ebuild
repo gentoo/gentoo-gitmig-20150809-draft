@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.0.ebuild,v 1.7 2012/02/01 21:03:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.0.ebuild,v 1.8 2012/02/20 14:29:51 patrick Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 *-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 *-jython 2.7-pypy-**"
 #DISTUTILS_SRC_TEST="nosetests" somewhat works, tries to test docs
 
 inherit distutils

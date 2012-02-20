@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.1.ebuild,v 1.13 2011/03/26 16:38:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.1.ebuild,v 1.14 2012/02/20 14:24:02 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"

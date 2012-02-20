@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.0.ebuild,v 1.6 2012/02/16 13:24:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.0.ebuild,v 1.7 2012/02/20 14:25:48 patrick Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
 PYTHON_USE_WITH_OPT="tk"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-**"
 WX_GTK_VER="2.8"
 
 inherit distutils

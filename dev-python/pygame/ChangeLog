@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.83 2012/01/08 21:05:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.84 2012/02/20 14:27:51 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org>
+  pygame-1.9.2_pre20120101.ebuild, pygame-1.9.2_pre3082.ebuild,
+  pygame-1.9.2_pre3203.ebuild:
+  Fixing pypy restricts to actually work
 
 *pygame-1.9.2_pre20120101 (08 Jan 2012)
 

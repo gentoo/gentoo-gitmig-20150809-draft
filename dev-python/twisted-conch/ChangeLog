@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-conch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.77 2011/12/27 06:57:07 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.78 2012/02/20 14:32:33 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> twisted-conch-10.2.0.ebuild,
+  twisted-conch-11.0.0.ebuild, twisted-conch-11.1.0.ebuild:
+  Fixing pypy restricts to actually work
 
 *twisted-conch-11.1.0 (27 Dec 2011)
 
