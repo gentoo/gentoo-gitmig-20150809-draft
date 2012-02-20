@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/celementtree
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.28 2010/07/08 15:56:49 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.29 2012/02/20 14:35:25 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> celementtree-1.0.5-r1.ebuild:
+  Restricting pypy #404929
 
   08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   celementtree-1.0.5-r1.ebuild:
