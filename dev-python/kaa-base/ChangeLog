@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-base
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.23 2010/12/13 14:52:44 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.24 2012/02/20 14:36:33 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> kaa-base-0.6.0.ebuild:
+  Restricting pypy #404933
 
   13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   kaa-base-0.6.0.ebuild:

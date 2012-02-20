@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0.ebuild,v 1.6 2010/12/13 14:52:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0.ebuild,v 1.7 2012/02/20 14:36:33 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
 
 inherit distutils
 
