@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-wpactrl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.12 2010/12/24 23:11:13 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.13 2012/02/20 15:09:39 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org>
+  python-wpactrl-20081102.ebuild:
+  Restricting pypy #404015
 
   24 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-wpactrl-20081102.ebuild:
