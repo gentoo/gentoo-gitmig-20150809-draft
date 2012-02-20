@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rhpl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.16 2010/05/31 19:11:06 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.17 2012/02/20 14:59:47 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> rhpl-0.219.ebuild:
+  Restricting pypy #404027
 
 *rhpl-0.219 (31 May 2010)
 
