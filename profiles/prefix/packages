@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/packages,v 1.5 2012/02/06 16:52:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/packages,v 1.6 2012/02/20 07:51:43 grobian Exp $
 
 # Gentoo Base Prefix Profile
 
@@ -14,7 +14,7 @@
 # This file removes everything from the base profile which is not
 # necessary/desired in a prefix environment.
 
--*sys-apps/baselayout
+-*>=sys-apps/baselayout-2
 -*net-misc/iputils
 -*sys-apps/kbd
 -*sys-process/procps

@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.329 2012/02/19 19:46:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.330 2012/02/20 07:51:43 grobian Exp $
+
+  20 Feb 2012; Fabian Groffen <grobian@gentoo.org> packages:
+  Update packages to reflect same baselayout atom as in base profile, thanks
+  Askar Bektassov in bug #404247
 
   19 Feb 2012; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask FSF GCC on Mac OS X profiles, because Gentoo Prefix does not support its
