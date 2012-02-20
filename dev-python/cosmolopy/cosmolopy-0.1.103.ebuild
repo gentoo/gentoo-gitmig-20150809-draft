@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/cosmolopy-0.1.103.ebuild,v 1.1 2011/05/13 04:46:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/cosmolopy-0.1.103.ebuild,v 1.2 2012/02/20 14:18:39 patrick Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Cosmology routines built on NumPy/SciPy"
 HOMEPAGE="http://roban.github.com/CosmoloPy/ http://pypi.python.org/pypi/CosmoloPy"
-SRC_URI="http://pypi.python.org/packages/source/C/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/C/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

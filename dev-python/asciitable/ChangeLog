@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/asciitable
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.13 2011/10/07 11:30:46 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.14 2012/02/20 14:17:57 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> asciitable-0.8.0.ebuild:
+  Fixing SRC_URI for pypi
 
   07 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> asciitable-0.8.0.ebuild:
   Remove obsolete PYTHON_MODNAME
