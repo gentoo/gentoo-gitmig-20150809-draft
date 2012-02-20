@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.111 2012/02/13 22:12:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.112 2012/02/20 15:29:44 patrick Exp $
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> scons-2.0.1-r1.ebuild,
+  scons-2.0.1.ebuild, scons-2.1.0.ebuild:
+  Restricting pypy #403805
 
   13 Feb 2012; Markus Meier <maekke@gentoo.org> scons-2.1.0.ebuild:
   arm stable, bug #401831
