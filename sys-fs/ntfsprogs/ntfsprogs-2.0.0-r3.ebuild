@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0-r3.ebuild,v 1.1 2011/03/30 14:41:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0-r3.ebuild,v 1.2 2012/02/20 11:52:58 scarabeus Exp $
+
+EAPI=4
 
 inherit eutils flag-o-matic autotools
 
@@ -11,7 +13,7 @@ SRC_URI="mirror://sourceforge/linux-ntfs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="crypt debug fuse gnome minimal"
+IUSE="crypt debug fuse gnome minimal static-libs"
 
 RDEPEND="
 	fuse? ( >=sys-fs/fuse-2.7.0 )
@@ -25,12 +27,9 @@ RDEPEND="
 		>=gnome-base/gnome-vfs-2.0
 	)"
 DEPEND="${RDEPEND}
-	!=sys-fs/ntfs3g-0.1_beta20070714
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	#epatch "${FILESDIR}"/${P}-extras.patch #218601
 	epatch "${FILESDIR}"/${P}-erange.patch #329445
 	epatch "${FILESDIR}"/${P}-cryptolink.patch #361307
@@ -40,28 +39,29 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# Avoid --enable-debug as that will set -O0 -ggdb3
 	use debug && append-flags -DDEBUG
 
 	econf \
+		$(use_enable static-libs static) \
 		$(use_enable crypt crypto) \
 		$(use_enable fuse ntfsmount) \
-		$(use_enable gnome gnome-vfs) \
-		|| die "Configure failed"
-
-	emake || die "Make failed"
+		$(use_enable gnome gnome-vfs)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
-	mv "${D}"/sbin/mkfs.ntfs "${D}"/usr/sbin/ || die
+	default
+
+	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
+
+	mv "${ED}"/sbin/mkfs.ntfs "${ED}"/usr/sbin/ || die
 	if ! use minimal ; then
-		mv "${D}"/usr/bin/ntfsck "${D}"/sbin/ || die
+		mv "${ED}"/usr/bin/ntfsck "${ED}"/sbin/ || die
 		dosym ntfsck /sbin/fsck.ntfs
 	fi
 	if use fuse ; then
-		mv "${D}"/sbin/mount.{fuse.ntfs,ntfs-fuse} "${D}"/usr/bin/ || die
+		mv "${ED}"/sbin/mount.{fuse.ntfs,ntfs-fuse} "${ED}"/usr/bin/ || die
 	fi
 
 	dodoc AUTHORS CREDITS ChangeLog NEWS README TODO.* \

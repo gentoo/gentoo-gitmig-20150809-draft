@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfsprogs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.73 2011/03/30 14:41:43 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.74 2012/02/20 11:52:58 scarabeus Exp $
+
+  20 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> ntfsprogs-2.0.0-r3.ebuild:
+  Add support for static-libs useflag and put la files accordingly.
 
 *ntfsprogs-2.0.0-r3 (30 Mar 2011)
 
