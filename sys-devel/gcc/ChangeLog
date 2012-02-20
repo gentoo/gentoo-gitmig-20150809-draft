@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.848 2012/01/02 17:47:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.849 2012/02/20 05:11:27 dirtyepic Exp $
+
+  20 Feb 2012; Ryan Hill <dirtyepic@gentoo.org> gcc-4.6.2.ebuild:
+  Bump to p1.4. Fixes bug #388835 (ICE in move_insn, at haifa-sched.c) and bug
 
   02 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2006:
   Split ChangeLog.
