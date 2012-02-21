@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libopenraw
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.51 2011/12/19 08:59:01 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.52 2012/02/21 13:45:55 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libopenraw-0.0.9.ebuild:
+  Stable for amd64, wrt bug #404793
 
   19 Dec 2011; Nirbheek Chauhan <nirbheek@gentoo.org> libopenraw-0.0.9.ebuild:
   Remove unused exempi dep
