@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/ck
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.8 2011/12/12 09:10:27 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.9 2012/02/21 13:39:00 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ck-8.0-r3.ebuild:
+  Stable for amd64, wrt bug #393747
 
 *ck-8.0-r3 (12 Dec 2011)
 
