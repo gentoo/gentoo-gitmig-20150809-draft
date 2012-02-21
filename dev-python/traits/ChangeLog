@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.27 2012/01/17 06:15:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.28 2012/02/21 12:24:57 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> traits-3.6.0.ebuild,
+  traits-4.0.0.ebuild, traits-4.1.0.ebuild:
+  Restricting pypy
 
 *traits-4.1.0 (17 Jan 2012)
 
