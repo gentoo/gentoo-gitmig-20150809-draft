@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.5.ebuild,v 1.3 2012/01/28 03:11:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.5.ebuild,v 1.4 2012/02/21 07:28:44 ssuominen Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -24,8 +24,10 @@ COMMON_DEPEND=">=dev-libs/glib-2.26
 	gnome? ( gnome-base/nautilus )
 	ipod? ( >=media-libs/libgpod-0.7 )
 	libnotify? ( >=x11-libs/libnotify-0.7 )
-	musicbrainz? ( net-misc/curl
-		>=media-libs/musicbrainz-3 )
+	musicbrainz? (
+		media-libs/musicbrainz:3
+		net-misc/curl
+		)
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.14 )"
 RDEPEND="${COMMON_DEPEND}
 	|| ( >=media-video/mplayer-1.0_rc4_p20100101[ass] media-video/mplayer2[ass] )"

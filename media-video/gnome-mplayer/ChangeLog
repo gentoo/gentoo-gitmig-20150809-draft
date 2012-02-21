@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.72 2012/01/28 03:12:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.73 2012/02/21 07:28:44 ssuominen Exp $
+
+  21 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-mplayer-1.0.5.ebuild:
+  Use SLOT to pull in correct version of media-libs/musicbrainz.
 
   28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -gnome-mplayer-1.0.4.ebuild, -files/gnome-mplayer-1.0.4-noalsa.patch:
