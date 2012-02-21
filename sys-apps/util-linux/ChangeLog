@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.369 2012/02/21 17:11:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.370 2012/02/21 21:44:51 jdhore Exp $
+
+  21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> util-linux-2.20.1-r1.ebuild:
+  marked x86 per bug 404179
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> util-linux-2.20.1-r1.ebuild:
   Stable for amd64, wrt bug #404179
