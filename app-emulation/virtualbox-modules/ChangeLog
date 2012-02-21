@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-modules
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.97 2011/12/20 12:39:22 polynomial-c Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.98 2012/02/21 17:10:03 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  virtualbox-modules-4.1.8.ebuild:
+  Stable for amd64, wrt bug #403441
 
 *virtualbox-modules-4.1.8 (20 Dec 2011)
 

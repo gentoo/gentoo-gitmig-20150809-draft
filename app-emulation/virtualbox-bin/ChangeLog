@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.124 2012/02/05 05:25:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.125 2012/02/21 17:09:00 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> virtualbox-bin-4.1.8.ebuild:
+  Stable for amd64, wrt bug #403441
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> virtualbox-bin-4.1.4.ebuild,
   virtualbox-bin-4.1.6-r1.ebuild, virtualbox-bin-4.1.8.ebuild:
