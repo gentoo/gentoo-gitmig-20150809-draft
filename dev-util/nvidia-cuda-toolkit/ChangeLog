@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.47 2012/02/11 14:54:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.48 2012/02/21 21:42:21 spock Exp $
+
+  21 Feb 2012; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-toolkit-3.0.ebuild, nvidia-cuda-toolkit-3.1.ebuild,
+  nvidia-cuda-toolkit-3.2.ebuild, nvidia-cuda-toolkit-4.0.ebuild,
+  nvidia-cuda-toolkit-4.1.ebuild:
+  Stop creating the /usr/include/CL symlink now that there is an eselect module
+  to switch between OpenCL implementations.
 
   11 Feb 2012; Michał Januszewski <spock@gentoo.org>
   nvidia-cuda-toolkit-3.0.ebuild, nvidia-cuda-toolkit-3.1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.9 2012/02/11 14:54:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.10 2012/02/21 21:42:21 spock Exp $
 
 EAPI=2
 
@@ -134,11 +134,6 @@ EOF
 	dobin open64/bin/*
 	libopts -m0755
 	dolib open64/lib/*
-
-	# TODO: ideally, there would be multiple OpenCL implementations available in
-	# the tree and an eselect module would allow to switch between them.
-	into /
-	dosym /opt/cuda/include/CL usr/include/CL
 }
 
 pkg_postinst() {
