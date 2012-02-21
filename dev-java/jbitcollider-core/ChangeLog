@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jbitcollider-core
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jbitcollider-core/ChangeLog,v 1.2 2011/07/31 16:14:58 tommy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jbitcollider-core/ChangeLog,v 1.3 2012/02/21 18:36:20 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> jbitcollider-core-0.8.ebuild:
+  Stable for amd64, wrt bug #405069
 
   31 Jul 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   jbitcollider-core-0.8.ebuild:
