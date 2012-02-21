@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-SAX-Base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/ChangeLog,v 1.13 2012/02/18 17:05:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/ChangeLog,v 1.14 2012/02/21 14:28:19 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> XML-SAX-Base-1.80.0.ebuild:
+  Stable for amd64, wrt bug #400269
 
   18 Feb 2012; Jeroen Roovers <jer@gentoo.org> XML-SAX-Base-1.80.0.ebuild:
   Stable for HPPA (bug #400269).
