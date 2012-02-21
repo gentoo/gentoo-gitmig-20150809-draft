@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.56 2012/02/20 11:27:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.57 2012/02/21 05:07:28 jdhore Exp $
+
+*thunderbird-bin-10.0.2 (21 Feb 2012)
+
+  21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> +thunderbird-bin-10.0.2.ebuild:
+  Version bump wrt security bug 404437 . Also a EAPI bump.
 
   20 Feb 2012; Thomas Kahle <tomka@gentoo.org> thunderbird-bin-10.0.1.ebuild:
   marked x86 per bug 403183
