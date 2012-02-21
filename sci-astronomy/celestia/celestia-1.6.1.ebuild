@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.1.ebuild,v 1.10 2011/11/01 08:13:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.1.ebuild,v 1.11 2012/02/21 20:37:31 xarthisius Exp $
 
 EAPI=2
 
-inherit eutils flag-o-matic gnome2 autotools
+inherit eutils flag-o-matic gnome2 autotools pax-utils
 
 DESCRIPTION="OpenGL 3D space simulator"
 HOMEPAGE="http://www.shatters.net/celestia/"
@@ -109,4 +109,5 @@ src_install() {
 	fi
 	[[ ${CELESTIA_GUI} == glut ]] && domenu celestia.desktop
 	dodoc AUTHORS README TRANSLATORS *.txt || die
+	pax-mark -m "${D}"/usr/bin/${PN} #365359
 }

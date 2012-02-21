@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.82 2012/02/04 19:08:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.83 2012/02/21 20:37:31 xarthisius Exp $
+
+  21 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> celestia-1.6.1.ebuild:
+  Pax mark m main binary wrt bug 365359 by Nikoli <nikoli@lavabit.com>
 
   04 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
   files/celestia-1.6.1-linking.patch:
