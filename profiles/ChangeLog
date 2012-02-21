@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6235 2012/02/20 20:58:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6236 2012/02/21 13:04:44 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Feb 2012; Ole Markus With <olemarkus@gentoo.org> package.mask:
+  Masking dev-php/PEAR-Image_Color, dev-php/PEAR-Image_Canvas
 
   20 Feb 2012; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask vlc 2.0
