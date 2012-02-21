@@ -1,5 +1,21 @@
 
 
+*bitcoind-0.5.3_rc2-r1 (21 Feb 2012)
+*bitcoind-0.5.2-r2 (21 Feb 2012)
+*bitcoind-0.5.0.4_rc2-r1 (21 Feb 2012)
+*bitcoind-0.5.0.3-r2 (21 Feb 2012)
+*bitcoind-0.4.4_rc2-r1 (21 Feb 2012)
+*bitcoind-0.4.3-r2 (21 Feb 2012)
+
+  21 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.3-r1.ebuild, +bitcoind-0.4.3-r2.ebuild,
+  -bitcoind-0.4.4_rc2.ebuild, +bitcoind-0.4.4_rc2-r1.ebuild,
+  -bitcoind-0.5.0.3-r1.ebuild, +bitcoind-0.5.0.3-r2.ebuild,
+  -bitcoind-0.5.0.4_rc2.ebuild, +bitcoind-0.5.0.4_rc2-r1.ebuild,
+  -bitcoind-0.5.2-r1.ebuild, +bitcoind-0.5.2-r2.ebuild,
+  -bitcoind-0.5.3_rc2.ebuild, +bitcoind-0.5.3_rc2-r1.ebuild:
+  Update BIP17 patch
+
 *bitcoind-0.5.3_rc2 (16 Feb 2012)
 *bitcoind-0.5.0.4_rc2 (16 Feb 2012)
 *bitcoind-0.4.4_rc2 (16 Feb 2012)
