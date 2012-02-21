@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rlcompleter2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/ChangeLog,v 1.11 2010/11/07 00:34:16 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/ChangeLog,v 1.12 2012/02/21 09:09:39 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> rlcompleter2-0.98.ebuild:
+  Restricting jython
 
   07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -rlcompleter2-0.95.ebuild, -rlcompleter2-0.96.ebuild:
