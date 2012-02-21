@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-levenshtein
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/ChangeLog,v 1.8 2011/09/16 16:50:33 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/ChangeLog,v 1.9 2012/02/21 07:20:14 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org>
+  python-levenshtein-0.10.2.ebuild, python-levenshtein-0.10.ebuild:
+  Restricting jython
 
 *python-levenshtein-0.10.2 (16 Sep 2011)
 
