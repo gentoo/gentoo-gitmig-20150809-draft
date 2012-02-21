@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.6.4.ebuild,v 1.2 2012/02/21 14:29:00 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.6.4-r1.ebuild,v 1.1 2012/02/21 14:29:00 ultrabug Exp $
 
-EAPI=3
+EAPI=4
 PYTHON_DEPEND="gtk? 2"
-inherit base python versionator
+inherit autotools python versionator
 
 DESCRIPTION="Support programs for the Oracle Cluster Filesystem 2"
 HOMEPAGE="http://oss.oracle.com/projects/ocfs2-tools/"
@@ -17,10 +17,11 @@ IUSE="debug external gtk"
 
 RDEPEND="
 	sys-apps/util-linux
-	sys-cluster/cman-lib
-	external?  (
-				|| ( sys-cluster/corosync sys-cluster/openais sys-cluster/dlm-lib )
-				)
+	sys-cluster/libcman
+	external? (
+		sys-cluster/libdlm
+		<sys-cluster/pacemaker-1.1[-heartbeat]
+		)
 	sys-fs/e2fsprogs
 	sys-libs/ncurses
 	sys-libs/readline
@@ -50,6 +51,9 @@ src_prepare() {
 	sed -e 's:"/dlm/":"/sys/kernel/dlm":g' \
 		-i libo2dlm/o2dlm_test.c \
 		-i libocfs2/dlm.c || die "sed failed"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	rm -f aclocal.m4
+	AT_M4DIR=. eautoreconf
 }
 
 src_configure() {
@@ -62,7 +66,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	newinitd "${FILESDIR}/ocfs2.initd" ocfs2  || die
-	newconfd "${FILESDIR}/ocfs2.confd" ocfs2  || die
+	default
+	newinitd "${FILESDIR}/ocfs2.initd" ocfs2
+	newconfd "${FILESDIR}/ocfs2.confd" ocfs2
 }
