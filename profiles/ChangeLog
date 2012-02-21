@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6237 2012/02/21 15:44:00 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6238 2012/02/21 16:21:33 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Feb 2012; Michał Górny <mgorny@gentoo.org> package.mask, repo_name:
+  Forward mask API-incompatible update of npapi-sdk.
 
   21 Feb 2012; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   Masking www-client/arora
