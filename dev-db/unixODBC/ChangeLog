@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.105 2012/01/23 08:14:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.106 2012/02/21 14:52:32 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> unixODBC-2.3.1.ebuild:
+  Stable for amd64, wrt bug #405059
 
   23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> unixODBC-2.3.1.ebuild:
   Despite ./configure --help giving --enable-driver-conf it's really
