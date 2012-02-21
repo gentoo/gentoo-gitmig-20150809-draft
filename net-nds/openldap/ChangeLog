@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.400 2012/02/20 07:37:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.401 2012/02/21 00:19:44 robbat2 Exp $
+
+  21 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> openldap-2.3.43-r1.ebuild,
+  openldap-2.4.19-r1.ebuild, openldap-2.4.21.ebuild, openldap-2.4.23.ebuild,
+  openldap-2.4.24.ebuild, openldap-2.4.25-r1.ebuild, openldap-2.4.25.ebuild,
+  openldap-2.4.28.ebuild:
+  More bug #404555: WANT_AUTOMAKE=none changes to AT_NOEAUTOMAKE=yes with eclass
+  changes.
 
   20 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/openldap-2.4.28-fix-dash.patch, openldap-2.4.28-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.24.ebuild,v 1.11 2012/02/12 21:29:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.24.ebuild,v 1.12 2012/02/21 00:19:44 robbat2 Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=1.9
@@ -254,7 +254,7 @@ src_prepare() {
 		"${S}"/tests/scripts/* || die "sed failed"
 
 	cd "${S}"
-	WANT_AUTOMAKE=none eautoreconf
+	AT_NOEAUTOMAKE=yes eautoreconf
 }
 
 build_contrib_module() {
