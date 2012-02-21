@@ -1,6 +1,9 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.150 2012/02/19 06:31:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.151 2012/02/21 14:47:37 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> bitlbee-3.0.4.ebuild:
+  Stable for amd64, wrt bug #405011
 
 *bitlbee-3.0.5 (19 Feb 2012)
 
