@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.ebuild,v 1.2 2012/02/18 17:07:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.ebuild,v 1.3 2012/02/21 17:12:24 ago Exp $
 
 case ${PV} in
 *_pre*) UP_PV="${PV%_pre*}-WIP-${PV#*_pre}" ;;
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/e2fsprogs/${PN}-${UP_PV}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint"
 IUSE="nls static-libs elibc_FreeBSD"
 
 RDEPEND="~sys-libs/${PN}-libs-${PV}
