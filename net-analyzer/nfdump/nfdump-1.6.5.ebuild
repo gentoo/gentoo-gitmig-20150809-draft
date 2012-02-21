@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.5.ebuild,v 1.1 2012/02/21 16:34:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.5.ebuild,v 1.2 2012/02/21 17:10:10 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -31,7 +31,6 @@ DOCS=( AUTHORS ChangeLog NEWS README )
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-cp -av configure.in{,.org}
 	if use ftconv; then
 		sed -e '/ftbuild.h/d' -i bin/ft2nfdump.c || die
 		sed \
