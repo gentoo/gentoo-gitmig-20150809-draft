@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/denu-2.3.2-r1.ebuild,v 1.1 2011/11/26 17:15:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/denu-2.3.2-r1.ebuild,v 1.2 2012/02/21 14:48:33 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-python/pygtk-2.4.1"
