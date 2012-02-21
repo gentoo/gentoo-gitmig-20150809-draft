@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.4.1.ebuild,v 1.2 2011/11/08 09:32:09 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.4.1.ebuild,v 1.3 2012/02/21 14:55:58 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -14,7 +14,7 @@ SRC_URI="http://www.atagar.com/arm/resources/static/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=net-misc/tor-0.2.1.27"
