@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.12.0.2548.ebuild,v 1.1 2011/10/30 16:50:17 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.14.1.ebuild,v 1.1 2012/02/21 13:01:03 maksbotan Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://pypi/S/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="boto doc examples ibl ssl"
 
 DEPEND="dev-python/setuptools
@@ -36,7 +36,8 @@ RDEPEND="dev-libs/libxml2[python]
 	dev-python/twisted
 	dev-python/twisted-conch
 	dev-python/twisted-mail
-	dev-python/twisted-web"
+	dev-python/twisted-web
+	dev-python/w3lib"
 
 S="${WORKDIR}/${MY_P}"
 
