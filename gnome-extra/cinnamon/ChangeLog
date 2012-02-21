@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.8 2012/02/14 04:45:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.9 2012/02/21 01:33:07 tetromino Exp $
+
+*cinnamon-1.3.1 (21 Feb 2012)
+
+  21 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cinnamon-1.3.1.ebuild, +files/cinnamon-1.3.1-optional-networkmanager.patch:
+  Major version bump, see http://cinnamon.linuxmint.com/?p=163 for the release
+  notes.
 
   14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -cinnamon-1.1.3.ebuild, cinnamon-1.2-r1.ebuild:
