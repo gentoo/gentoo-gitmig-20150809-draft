@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-timer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-timer/ChangeLog,v 1.4 2011/12/29 15:15:22 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-timer/ChangeLog,v 1.5 2012/02/21 14:56:47 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> php-timer-1.0.2.ebuild:
+  Stable for amd64, wrt bug #404709
 
   29 Dec 2011; Ole Markus With <olemarkus@gentoo.org> php-timer-1.0.0.ebuild,
   php-timer-1.0.2.ebuild:
