@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-HTML_QuickForm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.55 2009/08/22 22:42:32 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.56 2012/02/21 12:49:42 olemarkus Exp $
+
+*PEAR-HTML_QuickForm-3.2.13 (21 Feb 2012)
+
+  21 Feb 2012; Ole Markus With <olemarkus@gentoo.org>
+  +PEAR-HTML_QuickForm-3.2.13.ebuild:
+  Version bump
 
 *PEAR-HTML_QuickForm-3.2.11 (22 Aug 2009)
 
