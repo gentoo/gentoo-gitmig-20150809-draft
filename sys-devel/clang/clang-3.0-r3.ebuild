@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r3.ebuild,v 1.1 2012/02/16 11:35:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r3.ebuild,v 1.2 2012/02/21 13:49:06 grobian Exp $
 
 EAPI=3
 
@@ -48,6 +48,8 @@ src_prepare() {
 	sed -e "/LLVMgold.so/s#lib/#$(get_libdir)/llvm/#" \
 		-i  tools/clang/lib/Driver/Tools.cpp \
 		|| die "gold plugin path sed failed"
+	# Properly detect Gentoo's binutils-apple version
+	epatch "${FILESDIR}"/${PN}-3.0-gentoo-binutils-apple.patch
 	# Specify python version
 	python_convert_shebangs 2 tools/clang/tools/scan-view/scan-view
 
