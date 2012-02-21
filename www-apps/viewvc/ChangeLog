@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/viewvc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.82 2011/11/29 13:18:09 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.83 2012/02/21 16:14:12 darkside Exp $
+
+*viewvc-1.1.13 (21 Feb 2012)
+
+  21 Feb 2012; Jeremy Olexa <darkside@gentoo.org> +viewvc-1.1.13.ebuild:
+  version bump from upstream with a few small bug fixes
 
 *viewvc-1.1.12-r1 (29 Nov 2011)
 
