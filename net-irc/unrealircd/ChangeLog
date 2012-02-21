@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.94 2012/02/05 17:51:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.95 2012/02/21 02:17:45 binki Exp $
+
+  21 Feb 2012; Nathan Phillip Brink <binki@gentoo.org>
+  -unrealircd-3.2.8.1-r1.ebuild, -unrealircd-3.2.8.1-r2.ebuild,
+  -unrealircd-3.2.9_rc2.ebuild, -files/unrealircd.confd, -files/unrealircd.rc,
+  -files/unrealircd-system-cares.patch, -files/unrealircd-system-tre.patch,
+  metadata.xml:
+  Drop old versions as bug #395579 (stabilization of 3.2.9) is resolved.
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> unrealircd-3.2.8.1-r1.ebuild,
   unrealircd-3.2.8.1-r2.ebuild, unrealircd-3.2.9_rc2.ebuild,

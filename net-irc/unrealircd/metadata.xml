@@ -8,7 +8,6 @@
   </maintainer>
 <use>
   <flag name='extban-stacking'>Enable extended channel bans (such as +b ~c: and +b ~n:) to contain other extended bans instead of just hostmasks.</flag>
-	<flag name='hub'>Enable hub support</flag>
 	<flag name='spoof'>Enable the spoof protection</flag>
 	<flag name='prefixaq'>Enable chanadmin and chanowner prefixes</flag>
 	<flag name='showlistmodes'>Support displaying channel modes during compilation</flag>
