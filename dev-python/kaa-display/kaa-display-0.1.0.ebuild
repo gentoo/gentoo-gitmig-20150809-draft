@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/kaa-display-0.1.0.ebuild,v 1.6 2011/03/24 09:42:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/kaa-display-0.1.0.ebuild,v 1.7 2012/02/21 07:02:15 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -21,7 +21,7 @@ IUSE=""
 DEPEND=">=dev-python/kaa-base-0.3.0
 	>=dev-python/kaa-imlib2-0.2.0
 	>=dev-python/pygame-1.6.0
-	>=media-libs/imlib2-1.2.1
+	media-libs/imlib2[X]
 	>=x11-libs/libX11-1.0.0"
 RDEPEND="${DEPEND}"
 
