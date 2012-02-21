@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.21.1.ebuild,v 1.1 2011/11/20 05:15:39 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.21.1.ebuild,v 1.2 2012/02/21 18:45:04 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://plugins.geany.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debugger devhelp enchant gpg gtkspell lua nls soup webkit"
 
 LINGUAS="be ca da de es fr gl ja pt pt_BR ru tr zh_CN"
