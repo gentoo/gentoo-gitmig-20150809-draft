@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.78 2011/12/18 20:01:16 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.79 2012/02/21 14:58:47 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> fakeroot-1.18.2.ebuild:
+  Stable for amd64, wrt bug #404851
 
   18 Dec 2011; Tim Harder <radhermit@gentoo.org> -fakeroot-1.14.4.ebuild:
   Remove old.
