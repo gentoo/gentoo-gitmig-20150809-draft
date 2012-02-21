@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/php-docs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.50 2011/09/09 12:00:50 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.51 2012/02/21 14:50:22 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> php-docs-20101029-r1.ebuild:
+  Stable for amd64, wrt bug #399923
 
 *php-docs-20101029-r1 (09 Sep 2011)
 
