@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audtty
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.23 2011/11/04 11:00:58 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.24 2012/02/21 13:45:14 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> audtty-0.1.12.ebuild:
+  Stable for amd64, wrt bug #404799
 
 *audtty-0.1.12 (04 Nov 2011)
 
