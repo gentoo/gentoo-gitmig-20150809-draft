@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.257 2012/02/11 19:10:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.258 2012/02/21 06:31:40 robbat2 Exp $
+
+*lvm2-2.02.92 (21 Feb 2012)
+
+  21 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lvm2-2.02.92-dynamic-static-ldflags.patch,
+  +files/lvm2-2.02.92-locale-muck.patch, +lvm2-2.02.92.ebuild:
+  Bug #402193: version bump. lvmetad does not compile, will be added in 2.02.93.
 
   11 Feb 2012; Raúl Porcel <armin76@gentoo.org> lvm2-2.02.88.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #400557
