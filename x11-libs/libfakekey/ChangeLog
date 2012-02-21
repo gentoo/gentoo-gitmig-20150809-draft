@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfakekey
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/ChangeLog,v 1.8 2011/05/22 14:43:15 miknix Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/ChangeLog,v 1.9 2012/02/21 16:14:24 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libfakekey-0.1-r1.ebuild:
+  Stable for amd64, wrt bug #309407
 
 *libfakekey-0.1-r1 (22 May 2011)
 
