@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyprotocols
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.24 2011/10/31 21:36:51 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.25 2012/02/21 04:18:08 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org>
+  pyprotocols-1.0_pre2306.ebuild:
+  Restricting pypy
 
   31 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
   pyprotocols-1.0_pre2306.ebuild:
