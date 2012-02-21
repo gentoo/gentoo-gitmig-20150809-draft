@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/pax-3.4.12.16.ebuild,v 1.1 2011/12/10 08:53:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/pax-3.4.12.16.ebuild,v 1.2 2012/02/21 13:50:01 ago Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://fedora-dev/releases/${FC_PV}/Everything/source/SRPMS/${MY_P}-$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.16 2011/12/10 08:53:54 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.17 2012/02/21 13:50:01 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> pax-3.4.12.16.ebuild:
+  Stable for amd64, wrt bug #404599
 
 *pax-3.4.12.16 (10 Dec 2011)
 
