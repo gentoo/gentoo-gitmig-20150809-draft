@@ -1,0 +1,13 @@
+# ChangeLog for sci-visualization/nonolith-connect
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/nonolith-connect/ChangeLog,v 1.1 2012/02/21 13:41:48 chainsaw Exp $
+
+*nonolith-connect-1.0.1 (21 Feb 2012)
+
+  21 Feb 2012; Tony Vroon <chainsaw@gentoo.org>
+  +files/1.0.1-cflags-respect.patch, +files/60-nonolith-connect.rules,
+  +nonolith-connect-1.0.1.ebuild, +files/nonolith-connect.initd, +metadata.xml:
+  Initial commit. Ebuild by me, build system tamed by Kacper "xarthisius"
+  Kowalik. Please note that you require CEE hardware to use the pixelpulse
+  visualiser. Many thanks to upstream for rolling me a personal tarball.
+
