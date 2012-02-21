@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/thrulay
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.9 2007/06/10 19:17:53 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.10 2012/02/21 09:00:28 robbat2 Exp $
+
+*thrulay-0.9 (21 Feb 2012)
+
+  21 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> +thrulay-0.9.ebuild:
+  Version bump.
 
   10 Jun 2007; Robin H. Johnson <robbat2@gentoo.org> thrulay-0.6.ebuild,
   thrulay-0.8.ebuild:
