@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6.ebuild,v 1.10 2012/02/13 16:26:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6.ebuild,v 1.11 2012/02/21 04:11:11 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.7-pypy-*"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
