@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/datefudge-1.17.ebuild,v 1.1 2011/09/20 22:37:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/datefudge-1.17.ebuild,v 1.2 2012/02/21 05:09:28 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -18,7 +18,6 @@ src_prepare() {
 	sed -i \
 		-e '/dpkg-parsechangelog/d' \
 		-e "s:usr/lib:usr/$(get_libdir):" \
-		-e 's:$(CC) -o:$(CC) $(LDFLAGS) -o:' \
 		Makefile || die
 
 	if use prefix; then
@@ -27,8 +26,7 @@ src_prepare() {
 }
 
 src_compile() {
-	tc-export CC
-	emake VERSION="${PV}"
+	emake CC="$(tc-getCC)" VERSION="${PV}"
 }
 
 src_install() {
