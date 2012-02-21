@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.25 2011/11/17 21:08:07 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.26 2012/02/21 13:40:29 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libmix-2.05-r6.ebuild:
+  Stable for amd64, wrt bug #404651
 
 *libmix-2.05-r6 (17 Nov 2011)
 
