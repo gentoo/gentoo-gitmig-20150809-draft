@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/cluster-glue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.18 2012/02/20 18:00:22 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.19 2012/02/21 14:43:20 ultrabug Exp $
+
+  21 Feb 2012; Ultrabug <ultrabug@gentoo.org> cluster-glue-1.0.9.ebuild:
+  cleanup .la files from non static builds wrt #404859
 
   20 Feb 2012; Ultrabug <ultrabug@gentoo.org> cluster-glue-1.0.9.ebuild:
   Fix libnet dependency, fix #405055
