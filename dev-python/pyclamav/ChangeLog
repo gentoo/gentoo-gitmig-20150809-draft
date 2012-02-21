@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyclamav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/ChangeLog,v 1.24 2012/02/20 15:04:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/ChangeLog,v 1.25 2012/02/21 08:02:57 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyclamav-0.4.1-r1.ebuild:
+  Restricting jython
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyclamav-0.4.1-r1.ebuild:
   Restricting pypy #404033

@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/pyclamav-0.4.1-r1.ebuild,v 1.4 2012/02/20 15:04:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/pyclamav-0.4.1-r1.ebuild,v 1.5 2012/02/21 08:02:57 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.7-pypy-* *-jython"
 
 inherit distutils eutils
 

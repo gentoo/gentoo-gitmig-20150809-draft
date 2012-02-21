@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/adns-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.28 2011/09/14 08:03:50 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.29 2012/02/21 08:06:21 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> adns-python-1.2.1.ebuild:
+  Restricting jython
 
   14 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> adns-python-1.2.1.ebuild:
   Add PyPI homepage.
