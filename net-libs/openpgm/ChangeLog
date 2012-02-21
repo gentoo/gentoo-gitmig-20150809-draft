@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openpgm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/ChangeLog,v 1.6 2011/12/19 07:52:49 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/ChangeLog,v 1.7 2012/02/21 18:49:18 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> openpgm-5.1.118.ebuild:
+  Stable for amd64, wrt bug #404829
 
 *openpgm-5.1.118 (19 Dec 2011)
 
