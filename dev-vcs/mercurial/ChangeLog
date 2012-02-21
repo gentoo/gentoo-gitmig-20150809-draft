@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.66 2012/02/02 03:38:21 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.67 2012/02/21 03:31:01 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> mercurial-1.7.ebuild,
+  mercurial-2.0.1.ebuild, mercurial-2.0.2.ebuild, mercurial-2.0.ebuild,
+  mercurial-2.1.ebuild, mercurial-9999.ebuild:
+  Fix pypy restrict
 
 *mercurial-2.1 (02 Feb 2012)
 

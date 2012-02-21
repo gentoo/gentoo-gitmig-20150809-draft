@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.0.2.ebuild,v 1.1 2012/01/27 22:23:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.0.2.ebuild,v 1.2 2012/02/21 03:31:01 patrick Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit bash-completion-r1 elisp-common eutils distutils
 
