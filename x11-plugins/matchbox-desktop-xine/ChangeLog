@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/matchbox-desktop-xine
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-xine/ChangeLog,v 1.4 2009/06/17 01:49:59 miknix Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-xine/ChangeLog,v 1.5 2012/02/21 16:14:03 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  matchbox-desktop-xine-0.4.ebuild:
+  Stable for amd64, wrt bug #309407
 
   17 Jun 2009; Angelo Arrifano <miknix@gentoo.org>
   matchbox-desktop-xine-0.4.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/matchbox-desktop-image-browser
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.6 2010/01/06 01:24:12 yvasilev Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.7 2012/02/21 16:13:45 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  matchbox-desktop-image-browser-0.2-r1.ebuild:
+  Stable for amd64, wrt bug #309407
 
 *matchbox-desktop-image-browser-0.2-r1 (06 Jan 2010)
 

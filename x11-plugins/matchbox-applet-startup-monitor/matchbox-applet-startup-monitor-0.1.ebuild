@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/matchbox-applet-startup-monitor-0.1.ebuild,v 1.8 2009/12/14 14:48:04 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/matchbox-applet-startup-monitor-0.1.ebuild,v 1.9 2012/02/21 16:13:07 ago Exp $
 
 inherit eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://matchbox-project.org/sources/${MY_PN}/$(get_version_component_ra
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/libmatchbox-1.5
