@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.3_p2.ebuild,v 1.7 2012/02/04 15:31:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.3_p2.ebuild,v 1.8 2012/02/21 15:49:44 vapier Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ SRC_URI="http://www.sudo.ws/sudo/dist/${uri_prefix}${MY_P}.tar.gz
 LICENSE="as-is BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="pam offensive ldap selinux skey"
+IUSE="ldap nls pam offensive selinux skey"
 
 DEPEND="pam? ( virtual/pam )
 	skey? ( >=sys-auth/skey-1.1.5-r1 )
@@ -112,6 +112,7 @@ src_configure() {
 		$(use_with offensive all-insults) \
 		$(use_with ldap ldap_conf_file /etc/ldap.conf.sudo) \
 		$(use_with ldap) \
+		$(use_enable nls) \
 		$(use_with pam) \
 		$(use_with skey) \
 		$(use_with selinux) \
