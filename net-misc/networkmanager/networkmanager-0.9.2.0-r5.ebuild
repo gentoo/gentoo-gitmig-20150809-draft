@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.2.0-r4.ebuild,v 1.1 2012/02/20 09:25:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.2.0-r5.ebuild,v 1.1 2012/02/21 23:19:19 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -164,6 +164,9 @@ src_install() {
 	# Allow users in plugdev group to modify system connections
 	insinto /etc/polkit-1/localauthority/10-vendor.d
 	doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.pkla"
+
+	# Default conf.d file
+	newconfd "${FILESDIR}/conf.d.NetworkManager" NetworkManager
 
 	# Remove useless .la files
 	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
