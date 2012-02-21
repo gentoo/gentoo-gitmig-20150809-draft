@@ -1,12 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.25 2012/02/18 12:22:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.26 2012/02/21 12:50:59 johu Exp $
 
 # This file requires >=portage-2.1.1
-
-#nixnut <nixnut@gentoo.org> (18 feb 2012)
-#krossjava won't install, looks like bug #280629 
-=kde-base/kdebindings-meta-4.7.4 -java
 
 #nixnut <nixnut@gentoo.org> (18 feb 2012)
 # qthelp until qt-assistant gets assistance (bug #398885)
