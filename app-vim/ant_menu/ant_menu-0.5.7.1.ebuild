@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ant_menu/ant_menu-0.5.7.1.ebuild,v 1.1 2010/11/14 06:15:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ant_menu/ant_menu-0.5.7.1.ebuild,v 1.2 2012/02/21 13:42:13 ago Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: Java ant build system integration"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=155"
 LICENSE="LGPL-2"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 RDEPEND="dev-java/ant"
 
