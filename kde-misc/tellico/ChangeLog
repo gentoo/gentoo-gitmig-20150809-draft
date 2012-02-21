@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.106 2012/01/17 17:45:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.107 2012/02/21 16:02:37 johu Exp $
+
+  21 Feb 2012; Johannes Huber <johu@gentoo.org> tellico-2.3.4.ebuild,
+  tellico-2.3.5.ebuild:
+  Use slot for musicbrainz dep, fixes bug #405113.
 
 *tellico-2.3.5 (17 Jan 2012)
 

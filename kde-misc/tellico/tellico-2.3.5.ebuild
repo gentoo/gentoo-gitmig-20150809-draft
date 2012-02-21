@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.5.ebuild,v 1.1 2012/01/17 17:45:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.5.ebuild,v 1.2 2012/02/21 16:02:37 johu Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ DEPEND="
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	cddb? ( $(add_kdebase_dep libkcddb) )
 	pdf? ( >=app-text/poppler-0.12.3-r3[qt4] )
-	musicbrainz? ( >=media-libs/musicbrainz-2.1.5 )
+	musicbrainz? ( media-libs/musicbrainz:1 )
 	scanner? ( $(add_kdebase_dep libksane) )
 	semantic-desktop? ( dev-libs/soprano[raptor,redland] )
 	taglib? ( >=media-libs/taglib-1.5 )
