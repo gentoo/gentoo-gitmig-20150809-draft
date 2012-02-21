@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libguess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.17 2012/02/21 15:28:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.18 2012/02/21 20:56:30 jdhore Exp $
+
+  21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> libguess-1.1.ebuild:
+  marked x86 per bug 404609
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> libguess-1.1.ebuild:
   Stable for HPPA (bug #404609).
