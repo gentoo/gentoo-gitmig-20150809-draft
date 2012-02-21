@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cbqinit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.18 2012/02/21 14:56:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.19 2012/02/21 15:33:32 jer Exp $
+
+  21 Feb 2012; Jeroen Roovers <jer@gentoo.org> cbqinit-0.7.3-r1.ebuild:
+  Stable for HPPA (bug #404835).
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> cbqinit-0.7.3-r1.ebuild:
   Stable for amd64, wrt bug #404835
