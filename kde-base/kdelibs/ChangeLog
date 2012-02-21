@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.826 2012/02/21 12:52:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.827 2012/02/21 14:03:03 johu Exp $
+
+  21 Feb 2012; Johannes Huber <johu@gentoo.org>
+  -files/kdelibs-4.6.2-nonepomuk.patch, -files/kdelibs-4.6.3-doublepost.patch,
+  -files/kdelibs-4.6.3-use_QWeakPointer.patch,
+  -files/kdelibs-4.6.5-cardinality.patch, -files/kdelibs-4.6.5-qlabel-1.patch,
+  -files/kdelibs-4.6.5-qlabel-2.patch, -files/kdelibs-4.7.1-libpng15.patch,
+  -files/kdelibs-4.7.3-customcont.patch:
+  Remove old.
 
   20 Feb 2012; Johannes Huber <johu@gentoo.org> -kdelibs-4.6.3-r3.ebuild:
   Remove KDE SC 4.6.3
