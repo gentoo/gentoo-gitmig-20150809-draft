@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/flawfinder
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.15 2011/11/26 01:38:02 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.16 2012/02/21 13:38:09 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> flawfinder-1.27-r2.ebuild:
+  Stable for amd64, wrt bug #404737
 
 *flawfinder-1.27-r2 (26 Nov 2011)
 
