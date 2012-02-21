@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyao
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.19 2010/08/01 16:16:34 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.20 2012/02/21 08:49:16 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyao-0.82-r2.ebuild:
+  Restricting jython
 
   01 Aug 2010; Raúl Porcel <armin76@gentoo.org> pyao-0.82-r2.ebuild:
   ia64 stable wrt #325403

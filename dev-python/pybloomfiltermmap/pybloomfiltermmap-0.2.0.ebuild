@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/pybloomfiltermmap-0.2.0.ebuild,v 1.2 2012/02/20 15:22:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/pybloomfiltermmap-0.2.0.ebuild,v 1.3 2012/02/21 08:55:38 patrick Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
 inherit distutils
 

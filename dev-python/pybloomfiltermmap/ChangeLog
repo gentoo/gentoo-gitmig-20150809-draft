@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pybloomfiltermmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.2 2012/02/20 15:22:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.3 2012/02/21 08:55:38 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org>
+  pybloomfiltermmap-0.2.0.ebuild:
+  Restricting jython
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org>
   pybloomfiltermmap-0.2.0.ebuild:
