@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13510 2012/02/21 15:44:00 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13511 2012/02/21 15:51:12 mabi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -374,21 +374,6 @@ sys-apps/systemd-sysv-utils
 # Eray Aslan <eras@gentoo.org> (19 Jan 2012)
 # Mask experimental software
 =mail-mta/postfix-2.10*
-
-# Matti Bickel <mabi@gentoo.org> (18 Jan 2012)
-# Superseded by dev-lang/php[phar], please use that one
-# Removal in 30 days, bug #399317 
-dev-php/PEAR-PHP_Archive
-
-# Matti Bickel <mabi@gentoo.org> (17 Jan 2012)
-# Reverse RDEPEND of dev-php/PEAR-I18N, which is going away
-# The package is unmaintained upstream, removal in 30 days
-dev-php/PEAR-HTML_Select_Common
-
-# Matti Bickel <mabi@gentoo.org> (16 Jan 2012)
-# Now part of dev-lang/php; merge it with USE="intl"
-# Removal in 30 days, bug #396975
-dev-php/PEAR-I18N
 
 # Samuli Suominen <ssuominen@gentoo.org> (09 Jan 2012)
 # Fails to compile against recent glibc and multiple other issues.
