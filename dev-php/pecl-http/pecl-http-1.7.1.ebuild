@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/pecl-http-1.7.1.ebuild,v 1.2 2012/01/04 17:04:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/pecl-http-1.7.1.ebuild,v 1.3 2012/02/21 13:54:40 olemarkus Exp $
 
 EAPI="3"
 
@@ -24,6 +24,7 @@ DEPEND=">=net-misc/curl-7.19.4
 	dev-libs/libevent
 	|| ( <dev-lang/php-5.3[spl] >=dev-lang/php-5.3 )
 	>=dev-lang/php-5[hash,session,iconv]
+	php_targets_php5-3? ( dev-lang/php:5.3[-threads] )
 	"
 RDEPEND="${DEPEND}"
 
