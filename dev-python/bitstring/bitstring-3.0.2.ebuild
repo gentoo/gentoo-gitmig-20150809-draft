@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-3.0.2.ebuild,v 1.1 2012/02/10 10:17:56 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-3.0.2.ebuild,v 1.2 2012/02/21 03:38:15 patrick Exp $
 
 EAPI=3
-PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS=1
+RESTRICT_PYTHON_ABIS="2.5"
 inherit distutils
 
 DESCRIPTION="A pure Python module for creation and analysis of binary data"

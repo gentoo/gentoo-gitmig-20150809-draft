@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygit2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.5 2012/02/13 04:07:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.6 2012/02/21 03:41:18 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> pygit2-0.16.0.ebuild:
+  Restricting py2.5
 
   13 Feb 2012; Tim Harder <radhermit@gentoo.org> -pygit2-0.14.0.ebuild,
   -files/pygit2-0.14.0-fix-write.patch, -pygit2-0.15.0.ebuild:
