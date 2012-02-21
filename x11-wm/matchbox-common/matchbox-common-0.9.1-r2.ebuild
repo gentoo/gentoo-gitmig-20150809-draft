@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1-r2.ebuild,v 1.4 2009/08/03 10:49:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1-r2.ebuild,v 1.5 2012/02/21 16:10:51 ago Exp $
 
 inherit eutils versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://matchbox-project.org/sources/${PN}/$(get_version_component_range
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="pda"
 
 RDEPEND=">=x11-libs/libmatchbox-1.1"
