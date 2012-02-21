@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-295.20.ebuild,v 1.1 2012/02/17 17:33:27 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-295.20.ebuild,v 1.2 2012/02/21 21:38:23 idl0r Exp $
 
 EAPI=4
 
@@ -15,22 +15,26 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 IUSE="examples"
 
-COMMON_DEPEND="x11-libs/libXxf86vm
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/gtk+:2
-	x11-libs/gdk-pixbuf[X]
-	media-libs/mesa
-	x11-libs/pango[X]
-	x11-libs/libXv
-	x11-libs/libXrandr
-	dev-libs/glib:2"
+#COMMON_DEPEND="x11-libs/libX11
+#	x11-libs/libXext
+#	x11-libs/libXxf86vm
+#	x11-libs/gtk+:2
+#	x11-libs/gdk-pixbuf[X]
+#	media-libs/mesa
+#	x11-libs/pango[X]
+#	x11-libs/libXv
+#	x11-libs/libXrandr
+#	dev-libs/glib:2"
 
-RDEPEND="x11-drivers/nvidia-drivers
-	${COMMON_DEPEND}"
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	x11-proto/xproto"
+#RDEPEND="x11-drivers/nvidia-drivers
+#	${COMMON_DEPEND}"
+#DEPEND="${RDEPEND}
+#	dev-util/pkgconfig
+#	x11-proto/xproto"
+
+DEPEND="x11-libs/libX11
+	x11-libs/libXext"
+RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}/0001-Makefile-improvements.patch"
@@ -45,12 +49,12 @@ src_compile() {
 	emake -C src/libXNVCtrl/ clean # NVidia ships pre-built archives :(
 	emake -C src/libXNVCtrl/ CC="$(tc-getCC)" RANLIB="$(tc-getRANLIB)" libXNVCtrl.a
 
-	einfo "Building nvidia-settings..."
-	emake  CC="$(tc-getCC)" LD="$(tc-getLD)" STRIP_CMD=/bin/true
+#	einfo "Building nvidia-settings..."
+#	emake  CC="$(tc-getCC)" LD="$(tc-getLD)" STRIP_CMD=/bin/true
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install
+#	emake DESTDIR="${D}" PREFIX=/usr install
 
 	# Install libXNVCtrl and headers
 	insinto /usr/$(get_libdir)
@@ -60,8 +64,8 @@ src_install() {
 	doins src/libXNVCtrl/*.h
 
 	# Install icon and .desktop entry
-	doicon doc/${PN}.png
-	make_desktop_entry ${PN} "NVIDIA X Server Settings" ${PN} Application
+#	doicon doc/${PN}.png
+#	make_desktop_entry ${PN} "NVIDIA X Server Settings" ${PN} Application
 
 	# Now install documentation
 	dodoc doc/*.txt
