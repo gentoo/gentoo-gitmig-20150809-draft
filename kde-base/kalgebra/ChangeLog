@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.116 2012/02/21 12:52:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.117 2012/02/21 13:50:56 johu Exp $
+
+  21 Feb 2012; Johannes Huber <johu@gentoo.org>
+  -files/kalgebra-4.6.4-nolib.patch:
+  Remove old.
 
   20 Feb 2012; Johannes Huber <johu@gentoo.org> -kalgebra-4.6.3.ebuild:
   Remove KDE SC 4.6.3
