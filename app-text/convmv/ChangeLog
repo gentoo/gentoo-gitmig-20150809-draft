@@ -1,6 +1,11 @@
 # ChangeLog for app-text/convmv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.38 2011/02/06 05:44:18 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.39 2012/02/21 08:35:47 robbat2 Exp $
+
+*convmv-1.15 (21 Feb 2012)
+
+  21 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> +convmv-1.15.ebuild:
+  Version bump.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> convmv-1.10.ebuild:
   Drop to ~mips
