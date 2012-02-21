@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.11.ebuild,v 1.2 2011/10/29 00:09:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.11.ebuild,v 1.3 2012/02/21 21:58:17 ago Exp $
 
 EAPI=4
 KDE_LINGUAS="ar be ca cs da de el en_GB es et fr ga gl hi hne is it ja km ko lt
@@ -16,7 +16,7 @@ SRC_URI="http://www.rsibreak.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug"
 
 RDEPEND="
