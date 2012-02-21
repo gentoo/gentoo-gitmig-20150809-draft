@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.47 2012/02/18 14:42:44 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.48 2012/02/21 20:52:30 aidecoe Exp $
+
+  21 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-016.ebuild:
+  Check kernel config for CONFIG_MODULES. Added -f option to rm_module
+  function, btw.
 
   18 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-016.ebuild,
   metadata.xml:
