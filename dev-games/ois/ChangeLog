@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ois
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.6 2010/05/22 15:02:23 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.7 2012/02/21 21:19:19 mr_bones_ Exp $
+
+*ois-1.3 (21 Feb 2012)
+
+  21 Feb 2012; Michael Sterrett <mr_bones_@gentoo.org> +ois-1.3.ebuild:
+  version bump (bug #405179)
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> ois-1.2.0.ebuild:
   stable amd64, bug 303471
