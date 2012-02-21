@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipset
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.57 2011/12/17 03:30:59 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.58 2012/02/21 09:02:06 robbat2 Exp $
+
+*ipset-6.11 (21 Feb 2012)
+
+  21 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> +ipset-6.11.ebuild:
+  Version bump.
 
 *ipset-6.10 (17 Dec 2011)
 
