@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.123 2012/02/21 05:19:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.124 2012/02/21 07:13:24 jdhore Exp $
+
+  21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> seamonkey-bin-2.7.2.ebuild:
+  x86 stable wrt security bug 404437 .
 
   21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> -seamonkey-bin-2.6.1.ebuild:
   Remove old.
