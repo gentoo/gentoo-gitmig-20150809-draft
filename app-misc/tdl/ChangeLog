@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/tdl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.30 2011/06/13 11:24:01 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.31 2012/02/21 07:54:56 jlec Exp $
+
+*tdl-1.5.2-r2 (21 Feb 2012)
+
+  21 Feb 2012; Justin Lecher <jlec@gentoo.org> +tdl-1.5.2-r2.ebuild,
+  +files/tdl-1.5.2-list.c.patch, +files/tdl-1.5.2-main.c.patch,
+  +files/tdl-1.5.2-man.patch:
+  Add paches from debian, fixes timestamp calculation, #350614
 
   13 Jun 2011; Justin Lecher <jlec@gentoo.org> tdl-1.5.2-r1.ebuild,
   -files/screenshot.png:
