@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.87 2012/02/20 11:30:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.88 2012/02/21 05:17:32 jdhore Exp $
+
+*firefox-bin-10.0.2 (21 Feb 2012)
+
+  21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> +firefox-bin-10.0.2.ebuild,
+  -firefox-bin-9.0.1.ebuild:
+  Version bump wrt security bug 404437 . Also an EAPI bump and remove old.
 
   20 Feb 2012; Thomas Kahle <tomka@gentoo.org> firefox-bin-10.0.1.ebuild:
   marked x86 per bug 403183
