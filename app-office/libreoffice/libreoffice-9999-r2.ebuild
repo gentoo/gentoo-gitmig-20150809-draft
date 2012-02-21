@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.23 2012/02/17 16:22:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.24 2012/02/21 13:41:14 scarabeus Exp $
 
 EAPI=4
 
@@ -70,7 +70,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer +gtk gtk3
-+jemalloc kde mysql +nsplugin odk opengl pdfimport postgres svg test +vba
+jemalloc kde mysql +nsplugin odk opengl pdfimport postgres svg test +vba
 +webdav +xmlsec"
 LICENSE="LGPL-3"
 SLOT="0"
