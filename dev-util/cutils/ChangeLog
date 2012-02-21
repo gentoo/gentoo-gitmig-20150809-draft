@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.27 2011/11/12 14:50:02 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.28 2012/02/21 13:50:28 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> cutils-1.6-r4.ebuild:
+  Stable for amd64, wrt bug #404729
 
 *cutils-1.6-r4 (12 Nov 2011)
 
