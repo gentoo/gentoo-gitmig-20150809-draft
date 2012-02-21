@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.78 2012/02/07 21:30:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.79 2012/02/21 16:16:05 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libprelude-1.0.0-r1.ebuild:
+  Stable for amd64, wrt bug #383391
 
   07 Feb 2012; Mike Gilbert <floppym@gentoo.org> libprelude-1.0.0-r1.ebuild:
   Inherit multilib.
