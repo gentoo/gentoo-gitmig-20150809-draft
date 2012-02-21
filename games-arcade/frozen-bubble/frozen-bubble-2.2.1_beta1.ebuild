@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.1_beta1.ebuild,v 1.2 2012/02/21 04:36:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.1_beta1.ebuild,v 1.3 2012/02/21 04:51:50 ssuominen Exp $
 
 EAPI=2
 
@@ -24,6 +24,7 @@ RDEPEND=">=dev-lang/perl-5.12
 	dev-perl/File-ShareDir
 	dev-perl/File-Slurp
 	dev-perl/File-Which
+	dev-perl/IPC-System-Simple
 	>=dev-perl/SDL-2.511
 	media-libs/sdl-image[gif,png]
 	media-libs/sdl-mixer[vorbis]
