@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/scsirastools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/ChangeLog,v 1.9 2009/09/23 20:32:42 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/ChangeLog,v 1.10 2012/02/21 08:27:18 robbat2 Exp $
+
+*scsirastools-1.5.7 (21 Feb 2012)
+
+  21 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> +scsirastools-1.5.7.ebuild:
+  Version bump.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> scsirastools-1.5.4.ebuild:
   Remove virtual/libc
