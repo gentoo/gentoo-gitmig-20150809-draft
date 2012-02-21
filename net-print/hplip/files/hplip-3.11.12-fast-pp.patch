@@ -1,6 +1,40 @@
-diff -Naur hplip-3.12.2-orig/io/hpmud/pp.c hplip-3.12.2/io/hpmud/pp.c
---- hplip-3.12.2-orig/io/hpmud/pp.c	2012-02-01 12:53:52.000000000 +0100
-+++ hplip-3.12.2/io/hpmud/pp.c	2012-02-08 20:04:14.559884716 +0100
+Speed up HPLIP's parallel port I/O
+
+HPLIP should stop emulating IEE1284 ECP in userspace; that requires so many
+ioctls that it's uncomfortably (and sometimes unusably) slow, even on fast
+systems.  Instead, it should use ppdev read/write calls, working around ppdev
+quirks/bugs as necessary.
+
+Until now, we avoided this because we feared that using ppdev would make us
+susceptible to variations in PC parallel port hardware.  However, it turns out
+that the kernel already addresses that problem: on PCs, the kernel defaults to
+software-emulated ECP, which is exactly what the current HPLIP code does.
+Using the kernel code avoids the massive ioctl overhead, and it makes it
+possible to use hardware-accelerated ECP in those cases where it works.
+
+To apply this patch, 'cd' into the unpacked hplip source directory and run:
+$ patch -p1 <../hplip-fast-pp-v2.patch
+$ libtoolize --force
+$ AUTOMAKE="automake --foreign" autoreconf
+(Remember to use the --enable-pp-build option with ./configure)
+
+Patch by Daniel Gnoutcheff <daniel@gnoutcheff.name>
+Thanks to Daniel Pielmeir for figuring out the autotools bits
+
+diff -ur hplip-3.12.2/configure.in hplip-3.12.2-fast-pp/configure.in
+--- hplip-3.12.2/configure.in	2012-02-01 06:56:29.000000000 -0500
++++ hplip-3.12.2-fast-pp/configure.in	2012-02-20 21:09:45.850744922 -0500
+@@ -222,6 +222,7 @@
+ else
+    AC_MSG_RESULT(no)
+ fi
++AM_CONDITIONAL(PP_BUILD, test x$pp_build = xyes)
+    
+ AC_MSG_CHECKING([for scanner build])
+ AC_ARG_ENABLE(scan_build,
+diff -ur hplip-3.12.2/io/hpmud/pp.c hplip-3.12.2-fast-pp/io/hpmud/pp.c
+--- hplip-3.12.2/io/hpmud/pp.c	2012-02-01 06:53:52.000000000 -0500
++++ hplip-3.12.2-fast-pp/io/hpmud/pp.c	2012-02-20 19:28:27.990747569 -0500
 @@ -28,6 +28,8 @@
  
  #include "hpmud.h"
@@ -784,9 +818,9 @@ diff -Naur hplip-3.12.2-orig/io/hpmud/pp.c hplip-3.12.2/io/hpmud/pp.c
  
        m = IEEE1284_MODE_NIBBLE;
        ioctl(pd->mlc_fd, PPNEGOT, &m);
-diff -Naur hplip-3.12.2-orig/io/hpmud/pp.h hplip-3.12.2/io/hpmud/pp.h
---- hplip-3.12.2-orig/io/hpmud/pp.h	2012-02-01 12:53:52.000000000 +0100
-+++ hplip-3.12.2/io/hpmud/pp.h	2012-02-08 20:04:14.559884716 +0100
+diff -ur hplip-3.12.2/io/hpmud/pp.h hplip-3.12.2-fast-pp/io/hpmud/pp.h
+--- hplip-3.12.2/io/hpmud/pp.h	2012-02-01 06:53:52.000000000 -0500
++++ hplip-3.12.2-fast-pp/io/hpmud/pp.h	2012-02-20 19:28:27.990747569 -0500
 @@ -60,18 +60,11 @@
   *   0 - Strobe *
   * 
@@ -806,27 +840,16 @@ diff -Naur hplip-3.12.2-orig/io/hpmud/pp.h hplip-3.12.2/io/hpmud/pp.h
  
  struct _mud_device;
  struct _mud_channel;
-diff -Naur hplip-3.12.2-orig/Makefile.am hplip-3.12.2/Makefile.am
---- hplip-3.12.2-orig/Makefile.am	2012-02-01 12:53:57.000000000 +0100
-+++ hplip-3.12.2/Makefile.am	2012-02-08 20:04:14.576551703 +0100
-@@ -68,9 +68,9 @@
- 	  io/hpmud/hpmud.h io/hpmud/hpmudi.h io/hpmud/list.h io/hpmud/mlc.h io/hpmud/musb.h io/hpmud/pml.h io/hpmud/dot4.c \
- 	  io/hpmud/dot4.h io/hpmud/jd.c io/hpmud/jd.h io/hpmud/pp.c io/hpmud/pp.h
- if NETWORK_BUILD
--libhpmud_la_LDFLAGS = -version-info 0:6:0 -lusb -lpthread -l$(SNMPLIB) -lcrypto
-+libhpmud_la_LDFLAGS = -version-info 0:6:0 -lusb -lpthread -lrt -l$(SNMPLIB) -lcrypto
- else
--libhpmud_la_LDFLAGS = -version-info 0:6:0 -lusb -lpthread
-+libhpmud_la_LDFLAGS = -version-info 0:6:0 -lusb -lpthread -lrt
+diff -ur hplip-3.12.2/Makefile.am hplip-3.12.2-fast-pp/Makefile.am
+--- hplip-3.12.2/Makefile.am	2012-02-01 06:53:57.000000000 -0500
++++ hplip-3.12.2-fast-pp/Makefile.am	2012-02-20 21:26:21.210745149 -0500
+@@ -73,6 +73,9 @@
+ libhpmud_la_LDFLAGS = -version-info 0:6:0 -lusb -lpthread
  endif
  libhpmud_la_CFLAGS = -DMUDNAME=\"$(MUDNAME)\" -DCONFDIR=\"$(hplip_confdir)\"
++if PP_BUILD
++libhpmud_la_LDFLAGS += -lrt
++endif
  
-@@ -87,7 +87,7 @@
- hp_mkuridir = $(bindir)
- hp_mkuri_PROGRAMS = hp-mkuri
- hp_mkuri_SOURCES = io/hpmud/hp-mkuri.c
--hp_mkuri_LDADD = -ldl libhpmud.la
-+hp_mkuri_LDADD = -ldl -lrt libhpmud.la
- hp_mkuri_CFLAGS = -DCONFDIR=\"$(hplip_confdir)\"
- 
- # hpmud.rules
+ # ip library
+ lib_LTLIBRARIES += libhpip.la
