@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/imlib2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.106 2011/07/21 04:01:44 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.107 2012/02/21 06:54:16 ssuominen Exp $
+
+*imlib2-1.4.5 (21 Feb 2012)
+
+  21 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> +imlib2-1.4.5.ebuild:
+  Version bump with USE="static-libs" and removed libtool files.
 
   21 Jul 2011; Mike Frysinger <vapier@gentoo.org> imlib2-1.4.4.ebuild:
   Pull in pkg-config for png support #375195.
