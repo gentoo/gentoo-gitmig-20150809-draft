@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.28-r1.ebuild,v 1.5 2012/02/20 07:37:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.28-r1.ebuild,v 1.6 2012/02/21 01:17:14 robbat2 Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ BIS_P="${BIS_PN}-${BIS_PV}"
 DESCRIPTION="LDAP suite of application and development tools"
 HOMEPAGE="http://www.OpenLDAP.org/"
 SRC_URI="mirror://openldap/openldap-release/${P}.tgz
-		 http://simonraven.kisikew.org/src/ldap/${BIS_PN} -> ${BIS_P}"
+		 http://simon.kisikew.org/src/ldap/${BIS_PN} -> ${BIS_P}"
 
 LICENSE="OPENLDAP"
 SLOT="0"
