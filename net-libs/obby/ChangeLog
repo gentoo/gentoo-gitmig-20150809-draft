@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/obby
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.35 2011/11/06 13:39:47 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.36 2012/02/21 20:15:05 xarthisius Exp $
+
+  21 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> obby-0.4.8.ebuild:
+  Introduce static-libs use flag, remove unneeded .la files
 
 *obby-0.4.8 (06 Nov 2011)
 
