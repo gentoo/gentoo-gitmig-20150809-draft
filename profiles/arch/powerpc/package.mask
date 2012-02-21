@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.49 2012/02/19 13:43:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.50 2012/02/21 12:03:52 johu Exp $
+
+# Johannes Huber <johu@gentoo.org> (21 Feb 2012)
+# Mask failing package on powerpc
+=kde-base/krossjava-4.7*
 
 # Justin Lecher <jlec@gentoo.org> (9 Mar 2011)
 # sci-libs/plplot needs keywords #358035

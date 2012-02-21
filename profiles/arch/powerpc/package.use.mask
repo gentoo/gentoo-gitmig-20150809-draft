@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.109 2012/02/15 00:26:13 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.110 2012/02/21 12:03:52 johu Exp $
 
 # Jory A. Pratt <anarchy@gentoo.org> (12 Feb 2012)
 # Samuli Suominen <ssuominen@gentoo.org> (25 Jan 2012)
@@ -87,6 +87,7 @@ mail-client/claws-mail pda
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Mar 2011)
 # Mask unsatisfied kde-deps bug #357403
 =kde-base/kdelibs-4.6* policykit
+=kde-base/kdelibs-4.7* policykit
 =kde-base/solid-4.6* bluetooth
 =kde-base/solid-4.7* bluetooth
 
