@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/parallel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.14 2012/01/23 11:24:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.15 2012/02/21 17:20:58 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> parallel-20120122.ebuild:
+  Stable for amd64, wrt bug #403737
 
   23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -parallel-20110522.ebuild, -parallel-20111222.ebuild:
