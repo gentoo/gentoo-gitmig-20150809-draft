@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-HTML_Common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.45 2012/02/21 14:55:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.46 2012/02/21 23:21:28 jer Exp $
+
+  21 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-HTML_Common-1.2.5.ebuild:
+  Stable for HPPA (bug #404703).
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> PEAR-HTML_Common-1.2.5.ebuild:
   Stable for amd64, wrt bug #404703
