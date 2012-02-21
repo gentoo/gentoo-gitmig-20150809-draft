@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.10.8.ebuild,v 1.1 2012/01/29 12:07:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.10.8.ebuild,v 1.2 2012/02/21 07:49:31 hollow Exp $
 
 EAPI="4"
 USE_RUBY="ruby18"
@@ -29,15 +29,11 @@ ruby_add_rdepend ">=dev-ruby/bunny-0.6.0
 	>=dev-ruby/mixlib-log-1.3.0
 	dev-ruby/moneta
 	>=dev-ruby/net-ssh-2.1.3
-	<dev-ruby/net-ssh-2.2
 	>=dev-ruby/net-ssh-multi-1.1
-	<dev-ruby/net-ssh-multi-1.2
 	>=dev-ruby/ohai-0.6.0
 	>=dev-ruby/rest-client-1.0.4
-	<dev-ruby/rest-client-1.7.0
 	dev-ruby/ruby-shadow
 	>=dev-ruby/treetop-1.4.9
-	<dev-ruby/treetop-1.5
 	dev-ruby/uuidtools"
 
 all_ruby_install() {
