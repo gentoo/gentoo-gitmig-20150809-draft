@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkhotkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.14 2012/02/19 11:16:15 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.15 2012/02/21 00:33:53 serkan Exp $
+
+  21 Feb 2012; Serkan Kaba <serkan@gentoo.org>
+  files/gtkhotkey-0.2.1-glibheaders.patch:
+  Further fix bug #404397. Patch by Aljosha Papsch <papsch.al@googlemail.com>
 
   19 Feb 2012; Serkan Kaba <serkan@gentoo.org> gtkhotkey-0.2.1.ebuild,
   +files/gtkhotkey-0.2.1-glibheaders.patch:
