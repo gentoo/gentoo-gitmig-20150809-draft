@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.74 2012/02/14 16:08:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.75 2012/02/21 18:03:49 jlec Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -473,7 +473,9 @@ subversion__svn_info() {
 	local target="${1}"
 	local key="${2}"
 
-	env LC_ALL=C svn info "${target}" | grep -i "^${key}" | cut -d" " -f2-
+	env LC_ALL=C svn info \
+		${options} --username "${ESVN_USER}" --password "${ESVN_PASSWORD}" \
+		"${target}" | grep -i "^${key}" | cut -d" " -f2-
 }
 
 ## -- subversion__get_repository_uri() --------------------------------------- #

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.139 2012/02/20 10:14:44 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.140 2012/02/21 18:03:49 jlec Exp $
+
+  21 Feb 2012; Justin Lecher <jlec@gentoo.org> subversion.eclass:
+  Respect ESVN_USER, ESVN_PASSWORD and ESVN_OPTIONS on repo update, #401737
 
   20 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> gnustep-base.eclass:
   Use WORKDIR instead of T for temporary GNUstep.conf, fixes bug #389859
