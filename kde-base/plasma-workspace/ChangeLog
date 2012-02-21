@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.149 2012/02/21 12:52:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.150 2012/02/21 15:42:32 johu Exp $
+
+  21 Feb 2012; Johannes Huber <johu@gentoo.org>
+  -files/plasma-workspace-4.6.2-optional_akonadi-server.patch,
+  -files/plasma-workspace-4.6.3-dduplicate.patch,
+  -files/plasma-workspace-4.6.3-gpsdapi.patch,
+  -files/plasma-workspace-4.7.3-calendarcrash.patch,
+  -files/plasma-workspace-4.7.3-deletedwidget.patch,
+  -files/plasma-workspace-4.7.3-layoutcrash.patch,
+  -files/plasma-workspace-4.7.3-taskcrash.patch,
+  -files/plasma-workspace-4.7.3-weathercrash.patch:
+  Remove old.
 
   20 Feb 2012; Johannes Huber <johu@gentoo.org>
   -plasma-workspace-4.6.3-r2.ebuild:

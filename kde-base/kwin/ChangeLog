@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.263 2012/02/21 12:52:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.264 2012/02/21 15:34:52 johu Exp $
+
+  21 Feb 2012; Johannes Huber <johu@gentoo.org>
+  -files/kwin-4.6.3-desktopnames.patch, -files/kwin-4.6.5-mesadri.patch,
+  -files/kwin-4.6.5-performance.patch, -files/kwin-fix-opengl.patch:
+  Remove old.
 
   20 Feb 2012; Johannes Huber <johu@gentoo.org> -kwin-4.6.3-r1.ebuild:
   Remove KDE SC 4.6.3
