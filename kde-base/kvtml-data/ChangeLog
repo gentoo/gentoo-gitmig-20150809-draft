@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kvtml-data
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kvtml-data/ChangeLog,v 1.46 2011/07/06 20:05:38 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kvtml-data/ChangeLog,v 1.47 2012/02/21 12:52:43 johu Exp $
+
+  20 Feb 2012; Johannes Huber <johu@gentoo.org> -kvtml-data-4.6.3.ebuild:
+  Remove KDE SC 4.6.3
 
   06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kvtml-data-4.6.2.ebuild:

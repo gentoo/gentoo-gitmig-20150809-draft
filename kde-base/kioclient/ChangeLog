@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kioclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.109 2012/02/18 15:35:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.110 2012/02/21 12:52:32 johu Exp $
+
+  20 Feb 2012; Johannes Huber <johu@gentoo.org> -kioclient-4.6.3.ebuild:
+  Remove KDE SC 4.6.3
 
   18 Feb 2012; nixnut <nixnut@gentoo.org> kioclient-4.7.4.ebuild:
   ppc stable #396359

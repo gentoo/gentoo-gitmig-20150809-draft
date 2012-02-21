@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.220 2012/02/18 15:48:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.221 2012/02/21 12:52:32 johu Exp $
+
+  20 Feb 2012; Johannes Huber <johu@gentoo.org> -konsole-4.6.3.ebuild:
+  Remove KDE SC 4.6.3
 
   18 Feb 2012; nixnut <nixnut@gentoo.org> konsole-4.7.4-r1.ebuild:
   ppc stable #396359

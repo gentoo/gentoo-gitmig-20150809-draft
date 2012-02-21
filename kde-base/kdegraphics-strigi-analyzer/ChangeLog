@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-strigi-analyzer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.95 2012/02/18 15:13:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.96 2012/02/21 12:52:32 johu Exp $
+
+  20 Feb 2012; Johannes Huber <johu@gentoo.org>
+  -kdegraphics-strigi-analyzer-4.6.3.ebuild:
+  Remove KDE SC 4.6.3
 
   18 Feb 2012; nixnut <nixnut@gentoo.org>
   kdegraphics-strigi-analyzer-4.7.4.ebuild:

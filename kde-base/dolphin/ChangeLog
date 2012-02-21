@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.125 2012/02/18 14:47:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.126 2012/02/21 12:52:34 johu Exp $
+
+  20 Feb 2012; Johannes Huber <johu@gentoo.org> -dolphin-4.6.3.ebuild:
+  Remove KDE SC 4.6.3
 
   18 Feb 2012; nixnut <nixnut@gentoo.org> dolphin-4.7.4.ebuild:
   ppc stable #396359

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kimagemapeditor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.189 2012/02/18 15:34:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.190 2012/02/21 12:52:46 johu Exp $
+
+  20 Feb 2012; Johannes Huber <johu@gentoo.org> -kimagemapeditor-4.6.3.ebuild:
+  Remove KDE SC 4.6.3
 
   18 Feb 2012; nixnut <nixnut@gentoo.org> kimagemapeditor-4.7.4.ebuild:
   ppc stable #396359

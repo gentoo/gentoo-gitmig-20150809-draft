@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-iconthemes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.177 2011/12/18 19:46:29 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.178 2012/02/21 12:52:39 johu Exp $
+
+  20 Feb 2012; Johannes Huber <johu@gentoo.org>
+  -kdeaccessibility-iconthemes-4.6.3.ebuild:
+  Remove KDE SC 4.6.3
 
   18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdeaccessibility-iconthemes-4.6.5.ebuild:

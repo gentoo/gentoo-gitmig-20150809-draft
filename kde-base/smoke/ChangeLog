@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.145 2011/12/18 19:46:25 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.146 2012/02/21 12:52:36 johu Exp $
+
+  20 Feb 2012; Johannes Huber <johu@gentoo.org> -smoke-4.6.3.ebuild:
+  Remove KDE SC 4.6.3
 
   18 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> -smoke-4.6.5.ebuild:
   Drop KDE 4.6.5
