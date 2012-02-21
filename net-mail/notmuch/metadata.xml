@@ -10,6 +10,9 @@
 		<flag name="crypt">Support decryption and verification of PGP/MIME
 			messages and in Emacs UI - encryption</flag>
 		<flag name="emacs">Install Notmuch client for Emacs (main client)</flag>
+		<flag name="nmbug">Install Experimental Tag Sharing /
+			Pseudo-Bug-Tracking for Notmuch
+			(http://notmuchmail.org/nmbug/)</flag>
 		<flag name="vim">Install Notmuch client for Vim (experimental)</flag>
 	</use>
 	<longdescription lang="en">
