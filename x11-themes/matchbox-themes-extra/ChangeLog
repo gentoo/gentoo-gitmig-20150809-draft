@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/matchbox-themes-extra
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/matchbox-themes-extra/ChangeLog,v 1.8 2009/03/14 03:51:56 solar Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/matchbox-themes-extra/ChangeLog,v 1.9 2012/02/21 16:14:42 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  matchbox-themes-extra-0.3.ebuild:
+  Stable for amd64, wrt bug #309407
 
   14 Mar 2009; <solar@gentoo.org> matchbox-themes-extra-0.3.ebuild:
   keyword ~amd64
