@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdbackup
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.28 2011/10/10 19:45:53 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.29 2012/02/21 14:49:52 ago Exp $
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> dvdbackup-0.4.1.ebuild:
+  Stable for amd64, wrt bug #404967
 
   10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> dvdbackup-0.4.1.ebuild:
   Missing sys-devel/gettext DEPEND.
