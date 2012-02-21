@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/geoip-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.23 2011/09/16 08:58:57 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.24 2012/02/21 05:10:05 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> geoip-python-1.2.4.ebuild,
+  geoip-python-1.2.5.ebuild, geoip-python-1.2.7.ebuild:
+  Restricting jython
 
 *geoip-python-1.2.7 (16 Sep 2011)
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/geoip-python-1.2.7.ebuild,v 1.1 2011/09/16 08:58:57 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/geoip-python-1.2.7.ebuild,v 1.2 2012/02/21 05:10:05 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* 2.5-jython"
 
 inherit distutils
 
