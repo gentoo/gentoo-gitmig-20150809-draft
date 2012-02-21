@@ -1,34 +1,42 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.2 2012/02/20 14:24:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.3 2012/02/21 00:46:23 pesa Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-**"
+RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
 
 inherit python qt4-r2 toolchain-funcs
 
-MY_P="PyQt-x11-gpl-${PV/_pre/-snapshot-}"
-
 # Minimal supported version of Qt.
-QT_VER="4.6.2"
+QT_VER="4.7.2"
 
 DESCRIPTION="Python bindings for the Qt toolkit"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/ http://pypi.python.org/pypi/PyQt"
-SRC_URI="http://www.riverbankcomputing.com/static/Downloads/${PN}/${MY_P}.tar.gz"
+
+if [[ ${PV} == *_pre* ]]; then
+	MY_P="PyQt-x11-gpl-snapshot-${PV%_pre*}-${REVISION}"
+	SRC_URI="http://www.gentoo-el.org/~hwoarang/distfiles/${MY_P}.tar.gz"
+else
+	MY_P="PyQt-x11-gpl-${PV}"
+	SRC_URI="http://www.riverbankcomputing.com/static/Downloads/${PN}/${MY_P}.tar.gz"
+fi
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="X assistant +dbus debug declarative doc examples kde multimedia opengl phonon sql svg webkit xmlpatterns"
 
-DEPEND=">=dev-python/sip-4.13.1
+RDEPEND="
+	>=dev-python/sip-4.13.1
 	>=x11-libs/qt-core-${QT_VER}:4
 	>=x11-libs/qt-script-${QT_VER}:4
-	>=x11-libs/qt-test-${QT_VER}:4
-	X? ( >=x11-libs/qt-gui-${QT_VER}:4[dbus?] )
+	X? (
+		>=x11-libs/qt-gui-${QT_VER}:4[dbus?]
+		>=x11-libs/qt-test-${QT_VER}:4
+	)
 	assistant? ( >=x11-libs/qt-assistant-${QT_VER}:4 )
 	dbus? (
 		>=dev-python/dbus-python-0.80
@@ -36,7 +44,10 @@ DEPEND=">=dev-python/sip-4.13.1
 	)
 	declarative? ( >=x11-libs/qt-declarative-${QT_VER}:4 )
 	multimedia? ( >=x11-libs/qt-multimedia-${QT_VER}:4 )
-	opengl? ( >=x11-libs/qt-opengl-${QT_VER}:4 || ( >=x11-libs/qt-opengl-4.8.0:4 >=x11-libs/qt-opengl-4.7.0:4[-egl] <x11-libs/qt-opengl-4.7.0:4 ) )
+	opengl? (
+		>=x11-libs/qt-opengl-${QT_VER}:4
+		|| ( >=x11-libs/qt-opengl-4.8.0:4 <x11-libs/qt-opengl-4.8.0:4[-egl] )
+	)
 	phonon? (
 		!kde? ( || ( >=x11-libs/qt-phonon-${QT_VER}:4 media-libs/phonon ) )
 		kde? ( media-libs/phonon )
@@ -44,10 +55,13 @@ DEPEND=">=dev-python/sip-4.13.1
 	sql? ( >=x11-libs/qt-sql-${QT_VER}:4 )
 	svg? ( >=x11-libs/qt-svg-${QT_VER}:4 )
 	webkit? ( >=x11-libs/qt-webkit-${QT_VER}:4 )
-	xmlpatterns? ( >=x11-libs/qt-xmlpatterns-${QT_VER}:4 )"
-RDEPEND="${DEPEND}"
+	xmlpatterns? ( >=x11-libs/qt-xmlpatterns-${QT_VER}:4 )
+"
+DEPEND="${RDEPEND}
+	dbus? ( dev-util/pkgconfig )
+"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.7.2-configure.py.patch"
@@ -92,16 +106,18 @@ src_configure() {
 			--bindir="${EPREFIX}/usr/bin"
 			--destdir="${EPREFIX}$(python_get_sitedir)"
 			--sipdir="${EPREFIX}/usr/share/sip"
+			--assume-shared
+			--no-timestamp
 			--qsci-api
 			$(use debug && echo --debug)
 			--enable=QtCore
 			--enable=QtNetwork
 			--enable=QtScript
-			--enable=QtTest
 			--enable=QtXml
-			$(pyqt4_use_enable X QtDesigner)
 			$(pyqt4_use_enable X QtGui)
+			$(pyqt4_use_enable X QtDesigner) $(use X || echo --no-designer-plugin)
 			$(pyqt4_use_enable X QtScriptTools)
+			$(pyqt4_use_enable X QtTest)
 			# QtAssistant module is not available with Qt >=4.7.0.
 			$(pyqt4_use_enable assistant QtAssistant)
 			$(pyqt4_use_enable assistant QtHelp)
@@ -125,14 +141,20 @@ src_configure() {
 		"${myconf[@]}" || return 1
 
 		local mod
-		for mod in QtCore $(use X && echo QtDesigner QtGui) $(use dbus && echo QtDBus) $(use declarative && echo QtDeclarative) $(use opengl && echo QtOpenGL); do
-			# Run eqmake4 inside the qpy subdirectories to respect CC, CXX, CFLAGS, CXXFLAGS and LDFLAGS and avoid stripping.
+		for mod in QtCore \
+				$(use X && echo QtDesigner QtGui) \
+				$(use dbus && echo QtDBus) \
+				$(use declarative && echo QtDeclarative) \
+				$(use opengl && echo QtOpenGL); do
+			# Run eqmake4 inside the qpy subdirectories to respect
+			# CC, CXX, CFLAGS, CXXFLAGS, LDFLAGS and avoid stripping.
 			pushd qpy/${mod} > /dev/null || return 1
 			eqmake4 $(ls w_qpy*.pro)
 			popd > /dev/null || return 1
 
 			# Fix insecure runpaths.
-			sed -e "/^LFLAGS[[:space:]]*=/s:-Wl,-rpath,${BUILDDIR}/qpy/${mod}::" -i ${mod}/Makefile || die "Fixing of runpaths failed"
+			sed -e "/^LFLAGS[[:space:]]*=/s:-Wl,-rpath,${BUILDDIR}/qpy/${mod}::" \
+				-i ${mod}/Makefile || die "Failed to fix rpath for ${mod}"
 		done
 
 		# Avoid stripping of libpythonplugin.so.
