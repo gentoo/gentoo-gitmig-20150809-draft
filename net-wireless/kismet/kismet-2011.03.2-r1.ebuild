@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2.ebuild,v 1.1 2012/02/17 04:52:21 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2-r1.ebuild,v 1.1 2012/02/21 04:22:30 steev Exp $
 
 EAPI=4
 
@@ -26,6 +26,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="+ncurses +pcre speech +plugin-autowep +plugin-btscan +plugin-dot15d4 +plugin-ptw +plugin-spectools +ruby +suid"
 
+# Bluez 4.98 breaks c++ building, so we choose to use -r2 which has the patch
+# or 4.96 which still builds properly.
 RDEPEND="net-wireless/wireless-tools
 	kernel_linux? ( sys-libs/libcap
 		>=dev-libs/libnl-1.1 )
@@ -35,8 +37,10 @@ RDEPEND="net-wireless/wireless-tools
 	ncurses? ( sys-libs/ncurses )
 	!arm? ( speech? ( app-accessibility/flite ) )
 	ruby? ( dev-lang/ruby )
-	plugin-btscan? ( net-wireless/bluez \
-			!=net-wireless/bluez-4.98-r1 )
+	plugin-btscan? ( || (
+			>=net-wireless/bluez-4.98-r2
+			=net-wireless/bluez-4.96
+			) )
 	plugin-dot15d4? ( <dev-libs/libusb-1 )
 	plugin-spectools? ( net-wireless/spectools )"
 
@@ -55,6 +59,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/plugins-ldflags.patch
 	epatch "${FILESDIR}"/bluechanfix_r3184.patch
 	epatch "${FILESDIR}"/kismet-console-scrolling-backport.patch
+	epatch "${FILESDIR}"/header_alignment_r3326.patch
 }
 
 src_configure() {
@@ -71,7 +76,6 @@ src_configure() {
 }
 
 src_compile() {
-	emake dep
 	emake
 
 	if use plugin-autowep; then

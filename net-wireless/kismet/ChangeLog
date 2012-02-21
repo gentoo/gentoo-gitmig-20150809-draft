@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.110 2012/02/17 04:52:21 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.111 2012/02/21 04:22:30 steev Exp $
+
+*kismet-2011.03.2-r1 (21 Feb 2012)
+
+  21 Feb 2012; Steev Klimaszewsk <steev@gentoo.org>
+  +files/header_alignment_r3326.patch, -kismet-2011.03.2.ebuild,
+  +kismet-2011.03.2-r1.ebuild:
+  Remove kismest 2011.03.2 ebuild. Revbump to add a critical patch from svn.
+  Fix the bluez dependency issue.
 
 *kismet-2011.03.2 (17 Feb 2012)
 
