@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13512 2012/02/21 16:21:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13513 2012/02/22 05:43:13 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -558,13 +558,6 @@ app-misc/openjnlp
 # Anthony G. Basile <blueness@gentoo.org> (08 Oct 2011)
 # Masked while testing potentially dangerous utility
 dev-python/pypax
-
-# Michael Sterrett <mr_bones_@gentoo.org> (29 Sep 2011)
-# This version is added for ebuild testing only.
-# Bug reports about anything other than the package
-# install should be directed upstream at:
-# https://bugzilla.balabit.com/
->=app-admin/syslog-ng-3.2.9999
 
 # Justin Bronder <jsbronder@gentoo.org> (27 Sep 2011)
 # Masking the torque 2.3 series due to bug #372959.  This allows
