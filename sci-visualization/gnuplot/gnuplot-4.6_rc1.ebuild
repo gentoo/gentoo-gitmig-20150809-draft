@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6_rc1.ebuild,v 1.5 2012/01/30 04:34:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6_rc1.ebuild,v 1.6 2012/02/22 07:53:16 ulm Exp $
 
 EAPI=4
 
@@ -125,9 +125,16 @@ src_configure() {
 		&& myconf="${myconf} --with-readline=gnu" \
 		|| myconf="${myconf} --with-readline=builtin"
 
+	local emacs=$(usev emacs || usev xemacs || echo no)
+	if [[ -z ${PV%%*9999} && ${emacs} = no ]]; then
+		# Live ebuild needs an Emacs to build gnuplot.texi
+		if has_version virtual/emacs; then emacs=emacs
+		elif has_version app-xemacs/texinfo; then emacs=xemacs; fi
+	fi
+
 	econf ${myconf} \
 		DIST_CONTACT="http://bugs.gentoo.org/" \
-		EMACS=$(usev emacs || usev xemacs || echo no)
+		EMACS=${emacs}
 
 	if use xemacs; then
 		einfo "Configuring gnuplot-mode for XEmacs ..."
@@ -147,10 +154,9 @@ src_compile() {
 	# Prevent access violations, see bug 201871
 	VARTEXFONTS="${T}/fonts"
 
-	# This is a hack to avoid sandbox violations when using the Linux console.
-	# Creating the DVI and PDF tutorials require /dev/svga to build the
-	# example plots.
-	addwrite /dev/svga:/dev/mouse:/dev/tts/0
+	# We believe that the following line is no longer needed.
+	# In case of problems file a bug report at bugs.gentoo.org.
+	#addwrite /dev/svga:/dev/mouse:/dev/tts/0
 
 	emake all info
 
