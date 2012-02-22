@@ -1,11 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsui/traitsui-4.0.1.ebuild,v 1.1 2011/08/03 23:49:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsui/traitsui-4.0.1.ebuild,v 1.2 2012/02/22 15:05:54 patrick Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.5 3.* *-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils virtualx
