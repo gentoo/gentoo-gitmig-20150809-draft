@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypcap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/ChangeLog,v 1.10 2012/01/08 21:13:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/ChangeLog,v 1.11 2012/02/22 06:42:03 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pypcap-1.1-r1.ebuild:
+  Restricting jython
 
   08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> pypcap-1.1-r1.ebuild:
   Fix building with net-libs/libpcap[-static-libs] (bug #397647). Patch by
