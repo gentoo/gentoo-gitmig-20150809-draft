@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.4.ebuild,v 1.1 2011/12/12 20:32:38 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.6.ebuild,v 1.1 2012/02/22 17:06:27 mschiff Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-lang/perl
 	dev-libs/libxml2
 	dev-libs/libxslt
-	>=net-libs/ldns-1.6.9
+	>=net-libs/ldns-1.6.12
 	auditor? ( dev-lang/ruby[ssl] >=dev-ruby/dnsruby-1.53 )
 	curl? ( net-misc/curl )
 	mysql? (
@@ -65,7 +65,11 @@ check_pkcs11_setup() {
 
 	if use softhsm; then
 		PKCS11_LIB=softhsm
-		PKCS11_PATH=/usr/$(get_libdir)/libsofthsm.so
+		if has_version ">=dev-libs/softhsm-1.3.1"; then
+			PKCS11_PATH=/usr/$(get_libdir)/softhsm/libsofthsm.so
+		else
+			PKCS11_PATH=/usr/$(get_libdir)/libsofthsm.so
+		fi
 		elog "Building with SoftHSM PKCS#11 library support."
 	fi
 	if use opensc; then
