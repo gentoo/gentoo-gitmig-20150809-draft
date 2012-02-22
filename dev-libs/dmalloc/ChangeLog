@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.57 2012/02/22 01:20:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.58 2012/02/22 01:29:23 jer Exp $
+
+  22 Feb 2012; Jeroen Roovers <jer@gentoo.org> dmalloc-5.5.2-r4.ebuild:
+  Introduce IUSE=static-libs.
 
 *dmalloc-5.5.2-r4 (22 Feb 2012)
 
