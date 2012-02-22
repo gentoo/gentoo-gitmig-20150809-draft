@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-bibtex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.24 2012/02/12 15:11:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.25 2012/02/22 06:10:21 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-bibtex-1.2.4.ebuild,
+  python-bibtex-1.2.5.ebuild:
+  Restricting jython
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> python-bibtex-1.2.4.ebuild,
   python-bibtex-1.2.5.ebuild:
