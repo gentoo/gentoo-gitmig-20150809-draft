@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.16.ebuild,v 1.3 2012/02/19 15:13:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.16.ebuild,v 1.4 2012/02/22 19:35:07 ranger Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ fi
 # LGPL-2.1 for libgnutls library and GPL-3 for libgnutls-extra library.
 LICENSE="GPL-3 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="bindist +cxx doc examples guile lzo +nettle nls pkcs11 static-libs test zlib"
 
 RDEPEND=">=dev-libs/libtasn1-0.3.4
