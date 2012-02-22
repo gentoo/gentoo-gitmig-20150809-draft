@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/premake
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/ChangeLog,v 1.5 2011/09/04 17:40:26 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/ChangeLog,v 1.6 2012/02/22 12:14:03 titanofold Exp $
+
+  22 Feb 2012; Aaron W. Swenson <titanofold@gentoo.org> -premake-3.5.ebuild,
+  premake-4.3.ebuild:
+  Changed LICENSE from GPL-2 to BSD. Fixes bug 398565. Remove old.
 
   04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> premake-4.3.ebuild:
   x86 stable wrt bug #380963
