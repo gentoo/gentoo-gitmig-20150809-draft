@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.89 2012/02/21 07:15:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.90 2012/02/22 01:59:49 jdhore Exp $
+
+  22 Feb 2012; Jeff Horelick <jdhore@gentoo.org> firefox-bin-10.0.2.ebuild:
+  Restrict binchecks. This package is built by Mozilla so the binaries may not
+  fit our QA policies.
 
   21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> firefox-bin-10.0.2.ebuild:
   x86 stable wrt security bug 404437 .
