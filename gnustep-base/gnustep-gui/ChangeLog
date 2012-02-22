@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.92 2012/02/08 14:52:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.93 2012/02/22 15:59:29 voyageur Exp $
+
+  22 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-gui-0.22.0.ebuild, metadata.xml:
+  Add speech USE-flag, finally fixes bug #320119. Clean ebuild a bit
 
 *gnustep-gui-0.22.0 (08 Feb 2012)
 
