@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac-git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-git/ChangeLog,v 1.4 2012/02/22 00:11:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-git/ChangeLog,v 1.5 2012/02/22 02:24:56 idl0r Exp $
+
+  22 Feb 2012; Christian Ruppert <idl0r@gentoo.org> trac-git-20111119.ebuild:
+  Fix __init__.py installation
 
 *trac-git-20111119 (22 Feb 2012)
 

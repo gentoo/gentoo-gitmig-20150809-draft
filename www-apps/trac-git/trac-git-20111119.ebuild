@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-git/trac-git-20111119.ebuild,v 1.1 2012/02/22 00:11:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-git/trac-git-20111119.ebuild,v 1.2 2012/02/22 02:24:56 idl0r Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -24,5 +24,11 @@ RDEPEND=">=www-apps/trac-0.12
 
 src_install() {
 	distutils_src_install
+
+	install_init() {
+		touch "${D}/$(python_get_sitedir)/tracext/__init__.py"
+	}
+	python_execute_function -q install_init
+
 	rm -f "${D}"/usr/{README,COPYING}
 }
