@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.281 2012/01/21 23:33:16 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.282 2012/02/22 17:37:05 fordfrog Exp $
+
+*tomcat-7.0.26 (22 Feb 2012)
+
+  22 Feb 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/7/7.0.26-build-xml.patch, +tomcat-7.0.26.ebuild:
+  Version bump
 
 *tomcat-7.0.25 (21 Jan 2012)
 
