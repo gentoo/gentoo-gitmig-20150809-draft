@@ -1,11 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-1.6.ebuild,v 1.5 2011/12/04 21:18:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-1.6.ebuild,v 1.6 2012/02/22 07:40:53 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="setup.py"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -22,8 +23,6 @@ RDEPEND=">=dev-python/lockfile-0.9"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	test? ( dev-python/minimock )"
-# dev-python/lockfile requires >=2.5.
-RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 PYTHON_MODNAME="daemon"
 DOCS="ChangeLog"
