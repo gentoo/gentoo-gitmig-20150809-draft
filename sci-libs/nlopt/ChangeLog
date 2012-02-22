@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/nlopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.12 2012/02/09 17:50:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.13 2012/02/22 10:09:50 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> nlopt-2.2.4.ebuild:
+  Restricting pypy and jython
 
   09 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> nlopt-2.2.4.ebuild,
   +files/nlopt-2.2.4-fix-nlopt_hpp-location.patch:
