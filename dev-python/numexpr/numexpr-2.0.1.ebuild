@@ -1,12 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-2.0.1.ebuild,v 1.1 2012/01/08 16:51:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-2.0.1.ebuild,v 1.2 2012/02/22 09:52:10 patrick Exp $
 
 EAPI=3
 
-PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
 inherit distutils
 
