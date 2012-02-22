@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.1.ebuild,v 1.1 2012/02/18 19:40:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.1.ebuild,v 1.2 2012/02/22 20:46:21 eras Exp $
 
 EAPI=4
 
@@ -216,8 +216,7 @@ src_install () {
 	# Set proper permissions on required files/directories
 	dodir /var/lib/postfix
 	keepdir /var/lib/postfix
-	fowners postfix:postfix /var/lib/postfix
-	fowners postfix:postfix /var/lib/postfix/.keep*
+	fowners -R postfix:postfix /var/lib/postfix
 	fperms 0750 /var/lib/postfix
 	fowners root:postdrop /usr/sbin/post{drop,queue}
 	fperms 02711 /usr/sbin/post{drop,queue}

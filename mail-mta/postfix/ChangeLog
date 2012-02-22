@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.338 2012/02/18 19:40:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.339 2012/02/22 20:46:21 eras Exp $
+
+  22 Feb 2012; Eray Aslan <eras@gentoo.org> postfix-2.9.1.ebuild:
+  chown /var/lib/postfix recursively - bug #405247
 
 *postfix-2.10_pre20120218 (18 Feb 2012)
 *postfix-2.9.1 (18 Feb 2012)
