@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.7.2.ebuild,v 1.2 2012/02/21 07:13:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.7.2.ebuild,v 1.3 2012/02/22 02:00:55 jdhore Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI}
 	amd64? ( ${MOZ_FTP_URI}/${MOZ_PV}/contrib/${MOZ_P}.en-US.linux-x86_64.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
 	x86? ( ${MOZ_FTP_URI}/${MOZ_PV}/linux-i686/en-US/${MOZ_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.seamonkey-project.org/"
-RESTRICT="strip"
+RESTRICT="strip mirror binchecks"
 QA_EXECSTACK="opt/seamonkey/*"
 
 KEYWORDS="-* ~amd64 x86"
