@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13513 2012/02/22 05:43:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13514 2012/02/22 09:14:55 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (22 Feb 2012)
+# Mask for testing
+=app-office/libreoffice-bin-3.4.5.2-r1
+=app-office/libreoffice-bin-debug-3.4.5.2-r1
 
 # Michał Górny <mgorny@gentoo.org> (21 Feb 2012)
 # Masked until all reverse dependencies have proper versioned
