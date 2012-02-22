@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.241 2012/02/21 20:47:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.242 2012/02/22 18:40:56 ranger Exp $
+
+  22 Feb 2012; Brent Baude <ranger@gentoo.org> e2fsprogs-1.42.ebuild:
+  Marking e2fsprogs-1.42 ppc for bug 403405
 
   21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> e2fsprogs-1.42.ebuild:
   marked x86 per bug 403405
