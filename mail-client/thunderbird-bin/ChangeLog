@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.59 2012/02/21 07:17:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.60 2012/02/22 01:58:34 jdhore Exp $
+
+  22 Feb 2012; Jeff Horelick <jdhore@gentoo.org> thunderbird-bin-10.0.2.ebuild:
+  Restrict mirror and binchecks. This package is built by Mozilla so the
+  binaries may not fit our QA policies.
 
   21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> thunderbird-bin-10.0.2.ebuild:
   x86 stable wrt security bug 404437 .

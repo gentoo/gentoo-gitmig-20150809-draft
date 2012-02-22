@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-10.0.2.ebuild,v 1.2 2012/02/21 07:17:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-10.0.2.ebuild,v 1.3 2012/02/22 01:58:34 jdhore Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI}
 	amd64? ( ${MOZ_FTP_URI}/${MOZ_PV}/linux-x86_64/en-US/${MOZ_P}.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
 	x86? ( ${MOZ_FTP_URI}/${MOZ_PV}/linux-i686/en-US/${MOZ_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/thunderbird"
-RESTRICT="strip"
+RESTRICT="strip mirror binchecks"
 
 KEYWORDS="-* ~amd64 x86"
 SLOT="0"
