@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r1.ebuild,v 1.1 2010/01/01 22:30:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r1.ebuild,v 1.2 2012/02/22 21:26:03 jer Exp $
 
 EAPI="2"
 
@@ -30,6 +30,10 @@ get_audio() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-parallel-builds.patch
 	epatch "${FILESDIR}"/${P}-respect-destdir.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch
+	sed -i main/Makefile \
+		-e '/-rpath/s|$(LIBDIR)|$(INSTALLLIBDIR)|g' \
+		|| die
 }
 
 src_configure() {
@@ -49,7 +53,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "installation failed"
 	dodoc ACKNOWLEDGEMENTS README || die "Documentation installation failed"
 	if ! use static-libs; then
-		rm -rf "${D}"/usr/lib/*.a
+		rm -rf "${D}"/usr/lib*/*.a
 	fi
 }
 
