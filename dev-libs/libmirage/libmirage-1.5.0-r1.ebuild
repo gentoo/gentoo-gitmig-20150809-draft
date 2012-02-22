@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-1.5.0-r1.ebuild,v 1.1 2012/01/25 18:09:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-1.5.0-r1.ebuild,v 1.2 2012/02/22 18:40:02 jer Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/glib-2.28:2
