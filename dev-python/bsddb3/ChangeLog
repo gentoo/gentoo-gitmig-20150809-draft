@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bsddb3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.71 2011/09/10 13:56:55 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.72 2012/02/22 04:59:02 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> bsddb3-5.1.2.ebuild,
+  bsddb3-5.2.0.ebuild:
+  Restricting jython
 
 *bsddb3-5.2.0 (10 Sep 2011)
 
