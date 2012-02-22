@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-4.0.25.ebuild,v 1.2 2012/02/17 18:12:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-4.0.25.ebuild,v 1.3 2012/02/22 20:52:53 nelchael Exp $
 
 EAPI="2"
 
@@ -34,7 +34,12 @@ src_prepare() {
 		epatch "${i}"
 	done
 
-	sed -i -e 's,-m32,,g; s,-m64,,g;' configure.ac || die "sed failed"
+	sed -i \
+		-e 's,-m32,,g; s,-m64,,g;' \
+		configure.ac || die "sed for configure.ac failed"
+	sed -i \
+		-e 's,\$(LIBS_SHLIB),$(LDFLAGS) $(LIBS_SHLIB),g' \
+		modules/c/src/apache2/Makefile.in || die "sed for Makefile.in failed"
 
 	mkdir m4
 	eautoreconf
@@ -42,7 +47,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --with-apxs=${APXS} || die "econf failed"
+	econf --with-apxs=${APXS} --with-java-home=/usr || die "econf failed"
 }
 
 src_compile() {
