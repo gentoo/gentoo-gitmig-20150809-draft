@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.32 2012/01/22 00:37:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.33 2012/02/22 18:42:17 jer Exp $
+
+  22 Feb 2012; Jeroen Roovers <jer@gentoo.org> cdemu-1.5.0.ebuild:
+  Marked ~hppa (bug #300331).
 
   22 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org> cdemu-1.5.0.ebuild:
   Add missing upstream bug url.

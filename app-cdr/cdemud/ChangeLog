@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemud
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.22 2012/01/22 00:30:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.23 2012/02/22 18:41:59 jer Exp $
+
+  22 Feb 2012; Jeroen Roovers <jer@gentoo.org> cdemud-1.5.0.ebuild:
+  Marked ~hppa (bug #300331).
 
 *cdemud-1.5.0 (22 Jan 2012)
 
