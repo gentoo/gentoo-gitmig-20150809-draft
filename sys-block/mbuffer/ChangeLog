@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/mbuffer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.25 2010/06/04 18:26:59 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.26 2012/02/22 15:57:49 wschlich Exp $
+
+*mbuffer-20110724 (22 Feb 2012)
+
+  22 Feb 2012; Wolfram Schlich <wschlich@gentoo.org> +mbuffer-20110724.ebuild:
+  version bump, removed older masked version
 
 *mbuffer-20100526 (04 Jun 2010)
 
