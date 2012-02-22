@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylzma
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylzma/ChangeLog,v 1.5 2011/03/24 16:20:20 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylzma/ChangeLog,v 1.6 2012/02/22 08:45:49 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pylzma-0.4.4.ebuild:
+  Restricting pypy
 
 *pylzma-0.4.4 (24 Mar 2011)
 
