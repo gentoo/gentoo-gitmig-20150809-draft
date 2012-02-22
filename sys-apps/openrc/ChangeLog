@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.211 2012/02/13 15:31:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.212 2012/02/22 20:57:25 williamh Exp $
+
+*openrc-0.9.9 (22 Feb 2012)
+
+  22 Feb 2012; William Hubbs <williamh@gentoo.org> +openrc-0.9.9.ebuild:
+  version bump, bug #399185 tracks changes.
 
   13 Feb 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   add swapfiles to the boot runlevel
