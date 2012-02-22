@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/ChangeLog,v 1.8 2012/02/19 22:48:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/ChangeLog,v 1.9 2012/02/22 03:58:12 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-gnutls-1.2.0.ebuild,
+  python-gnutls-1.2.2.ebuild, python-gnutls-1.2.4.ebuild:
+  Restricting jython
 
 *python-gnutls-1.2.4 (19 Feb 2012)
 
