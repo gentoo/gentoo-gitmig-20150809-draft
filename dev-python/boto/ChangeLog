@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.37 2012/02/18 03:12:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.38 2012/02/22 16:50:56 vapier Exp $
+
+  22 Feb 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
 *boto-2.2.2 (18 Feb 2012)
 
