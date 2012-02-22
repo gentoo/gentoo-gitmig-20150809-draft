@@ -1,0 +1,10 @@
+# ChangeLog for app-office/libreoffice-bin-debug
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.1 2012/02/22 22:59:57 dilfridge Exp $
+
+*libreoffice-bin-debug-3.4.5.2-r1 (22 Feb 2012)
+
+  22 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-debug-3.4.5.2-r1.ebuild, +metadata.xml:
+  New ebuild for split-out debug info files
+
