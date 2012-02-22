@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzrtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.26 2012/02/19 12:34:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.27 2012/02/22 08:45:02 djc Exp $
+
+  22 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd.
 
   19 Feb 2012; Raúl Porcel <armin76@gentoo.org> bzrtools-2.4.0.ebuild:
   sparc stable wrt #383751
