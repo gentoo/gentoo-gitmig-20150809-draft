@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/nilfs-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.13 2011/11/28 13:33:17 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.14 2012/02/22 18:57:16 jer Exp $
+
+  22 Feb 2012; Jeroen Roovers <jer@gentoo.org> nilfs-utils-2.1.0.ebuild:
+  Marked ~hppa (bug #276410).
 
 *nilfs-utils-2.0.23 (28 Nov 2011)
 
