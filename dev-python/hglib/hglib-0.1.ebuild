@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hglib/hglib-0.1.ebuild,v 1.1 2011/12/04 12:14:33 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hglib/hglib-0.1.ebuild,v 1.2 2012/02/22 05:40:42 patrick Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 2.6 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.5 2.6 3.* *-jython 2.7-pypy-*"
 MY_P="python-${P}"
 MY_PN="python-${PN}"
 
