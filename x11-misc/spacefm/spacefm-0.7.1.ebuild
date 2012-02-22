@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.0.ebuild,v 1.2 2012/02/14 22:39:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.1.ebuild,v 1.1 2012/02/22 22:47:45 floppym Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -48,7 +48,7 @@ pkg_postinst() {
 
 	ewarn ""
 	ewarn "Consider backing up your ~/.config/spacefm directory"
-	ewarn "because 0.7.0 introduces a few fixes which will be"
+	ewarn "because >=0.7.0 introduces a few fixes which will be"
 	ewarn "applied to the session file the first time you run spacefm."
 	ewarn "Further information:"
 	ewarn "http://igurublog.wordpress.com/2012/02/14/spacefm-0-7-0/"
