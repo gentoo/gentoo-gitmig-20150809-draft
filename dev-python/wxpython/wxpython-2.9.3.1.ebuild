@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.3.1.ebuild,v 1.1 2012/02/12 08:54:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.3.1.ebuild,v 1.2 2012/02/22 14:51:31 patrick Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
 WX_GTK_VER="2.9"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython 2.7-pypy-*"
 
 inherit alternatives distutils eutils fdo-mime wxwidgets
 
