@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/pylibacl-0.5.0.ebuild,v 1.8 2011/11/11 00:04:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/pylibacl-0.5.0.ebuild,v 1.9 2012/02/22 09:08:17 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 
 inherit distutils
 
