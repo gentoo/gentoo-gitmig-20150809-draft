@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-nss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/ChangeLog,v 1.5 2012/02/04 15:33:14 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/ChangeLog,v 1.6 2012/02/22 02:48:23 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-nss-0.12.ebuild,
+  python-nss-0.8-r1.ebuild, python-nss-0.8.ebuild:
+  Restricting jython
 
   04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
   Fix maintainer's email in metadata

@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/python-nss-0.8-r1.ebuild,v 1.2 2011/11/17 17:09:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/python-nss-0.8-r1.ebuild,v 1.3 2012/02/22 02:48:23 patrick Exp $
 
 EAPI="3"
 
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils
 
