@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/netifaces
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.2 2011/11/17 14:27:59 sbriesen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.3 2012/02/22 08:34:34 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> netifaces-0.5.ebuild,
+  netifaces-0.6.ebuild:
+  Restricting jython
 
 *netifaces-0.6 (17 Nov 2011)
 
