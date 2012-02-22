@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.403 2012/02/21 16:41:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.404 2012/02/22 16:40:02 jer Exp $
+
+  22 Feb 2012; Jeroen Roovers <jer@gentoo.org> openldap-2.4.28-r1.ebuild:
+  Stable for HPPA (bug #388605).
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> openldap-2.4.28-r1.ebuild:
   Stable for AMD64, wrt security bug #388605
