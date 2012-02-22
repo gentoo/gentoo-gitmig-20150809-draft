@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ropeide
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ropeide/ChangeLog,v 1.4 2010/07/01 04:13:16 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ropeide/ChangeLog,v 1.5 2012/02/22 05:45:24 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> ropeide-1.5.1-r1.ebuild:
+  Restricting pypy and jython
 
   01 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ropeide-1.5.1-r1.ebuild:
