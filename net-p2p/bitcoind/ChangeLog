@@ -1,5 +1,8 @@
 
 
+  22 Feb 2012; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.5.1.ebuild:
+  Stable for amd64, wrt bug #405211
+
 *bitcoind-0.5.3_rc2-r1 (21 Feb 2012)
 *bitcoind-0.5.2-r2 (21 Feb 2012)
 *bitcoind-0.5.0.4_rc2-r1 (21 Feb 2012)
