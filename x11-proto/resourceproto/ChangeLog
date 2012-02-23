@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/resourceproto
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.52 2011/08/20 15:55:26 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.53 2012/02/23 18:47:54 scarabeus Exp $
+
+  23 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> -resourceproto-1.1.1.ebuild:
+  Remove oldest overshadowed.
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> resourceproto-1.2.0.ebuild:
   Stable for HPPA (bug #371857).
