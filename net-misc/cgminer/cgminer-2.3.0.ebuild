@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.3.0.ebuild,v 1.1 2012/02/23 18:16:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.3.0.ebuild,v 1.2 2012/02/23 23:29:34 blueness Exp $
 
-EAPI=4
+EAPI="4"
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA miner in C"
 HOMEPAGE="https://bitcointalk.org/index.php?topic=28402.0"
@@ -12,24 +12,24 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-IUSE="+adl altivec bitforce +cpumining examples icarus +opencl padlock sse2 sse2_4way sse4"
-REQUIRED_USE='
+IUSE="+adl altivec bitforce +cpumining examples hardened icarus +opencl padlock sse2 sse2_4way sse4"
+REQUIRED_USE="
 	|| ( bitforce cpumining icarus opencl )
 	adl? ( opencl )
 	altivec? ( cpumining ppc ppc64 )
 	padlock? ( cpumining || ( amd64 x86 ) )
 	sse2? ( cpumining || ( amd64 x86 ) )
 	sse4? ( cpumining amd64 )
-'
+"
 
-DEPEND='
+DEPEND="
 	net-misc/curl
 	sys-libs/ncurses
 	dev-libs/jansson
 	opencl? (
 		virtual/opencl
 	)
-'
+"
 RDEPEND="${DEPEND}"
 DEPEND="${DEPEND}
 	dev-util/pkgconfig
@@ -67,6 +67,7 @@ src_configure() {
 	fi
 	use sse2_4way && CFLAGS="${CFLAGS} -DWANT_SSE2_4WAY=1"
 	use sse4 && CFLAGS="${CFLAGS} -DWANT_X8664_SSE4=1"
+	use hardened && CFLAGS="${CFLAGS} -nopie"
 	CFLAGS="${CFLAGS}" \
 	econf \
 		$(use_enable adl) \

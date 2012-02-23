@@ -1,4 +1,6 @@
 
+  23 Feb 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.0.ebuild:
+  Add -nopie to CFLAGS for hardened because of PIC unfriendly asm
 
 *cgminer-2.3.0 (23 Feb 2012)
 
