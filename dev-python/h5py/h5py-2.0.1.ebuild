@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.0.1.ebuild,v 1.2 2012/01/17 10:10:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.0.1.ebuild,v 1.3 2012/02/23 05:34:40 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="2.5 *-jython 2.7-pypy-*"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
