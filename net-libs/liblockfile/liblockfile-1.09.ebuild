@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.09.ebuild,v 1.4 2012/02/11 10:11:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.09.ebuild,v 1.5 2012/02/23 21:52:25 darkside Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ src_configure() {
 		# we never want to use LDCONFIG
 		export LDCONFIG=${EPREFIX}/bin/true
 		# in unprivileged installs this is "mail"
-		grp=$(id -gn)
+		grp=$(id -g)
 	fi
 	econf --with-mailgroup=${grp} --enable-shared
 }
