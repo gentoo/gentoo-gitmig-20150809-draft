@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsnap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.42 2012/02/23 11:44:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.43 2012/02/23 17:20:35 ranger Exp $
+
+  23 Feb 2012; Brent Baude <ranger@gentoo.org> xsnap-1.5.10.ebuild:
+  Marking xsnap-1.5.10 ppc for bug 404897
 
   23 Feb 2012; Agostino Sarubbo <ago@gentoo.org> xsnap-1.5.10.ebuild:
   Stable for amd64, wrt bug #404897
