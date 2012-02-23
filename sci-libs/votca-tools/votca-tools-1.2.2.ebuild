@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.2.ebuild,v 1.3 2012/01/25 10:20:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.2.ebuild,v 1.4 2012/02/23 17:03:25 xarthisius Exp $
 
 EAPI="3"
 
@@ -33,7 +33,7 @@ RDEPEND="fftw? ( sci-libs/fftw:3.0 )
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen[-nodot] )
+	doc? ( || ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] ) )
 	>=app-text/txt2tags-2.5
 	dev-util/pkgconfig"
 
