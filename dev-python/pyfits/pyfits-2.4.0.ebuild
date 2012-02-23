@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.4.0.ebuild,v 1.3 2011/03/21 14:43:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.4.0.ebuild,v 1.4 2012/02/23 04:47:44 patrick Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
 
 inherit distutils
 
@@ -18,7 +19,6 @@ LICENSE="BSD"
 
 RDEPEND="dev-python/numpy"
 DEPEND="${RDEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 # current tests need data which are not in tar ball
 RESTRICT="test"

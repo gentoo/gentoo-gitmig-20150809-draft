@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.0.4.ebuild,v 1.2 2012/01/31 02:44:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.0.4.ebuild,v 1.3 2012/02/23 04:47:44 patrick Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="*:2.6"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* 2.7-pypy-*"
 
 inherit distutils eutils
 
