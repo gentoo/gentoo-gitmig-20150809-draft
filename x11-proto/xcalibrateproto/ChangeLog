@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xcalibrateproto
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/ChangeLog,v 1.10 2009/06/23 19:25:26 klausman Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/ChangeLog,v 1.11 2012/02/23 18:31:47 scarabeus Exp $
+
+  23 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  xcalibrateproto-0.1_pre20081210.ebuild:
+  Another proto last touched in 2k8. Move to use xorg-2 eclass by hand.
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   xcalibrateproto-0.1_pre20081210.ebuild:
