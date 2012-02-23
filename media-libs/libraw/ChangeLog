@@ -1,8 +1,8 @@
 # ChangeLog for media-libs/libraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.23 2012/02/23 05:50:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.24 2012/02/23 05:53:47 radhermit Exp $
 
-  23 Feb 2012; <radhermit@gentoo.org> libraw-0.14.5.ebuild:
+  23 Feb 2012; Tim Harder <radhermit@gentoo.org> libraw-0.14.5.ebuild:
   No need to enable the openmp use flag by default since that's already done in
   the standard linux profile.
 
