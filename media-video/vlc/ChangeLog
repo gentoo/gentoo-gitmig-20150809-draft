@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.783 2012/02/20 20:56:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.784 2012/02/23 10:05:32 aballier Exp $
+
+  23 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.0.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild, metadata.xml:
+  add a dvbpsi useflag, enabled by default and with a correct description, as
+  its needed to read Mpeg-TS files. Bug #405267
 
   20 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.0.ebuild:
   drop arm keyword prior to unmasking for bug #397891

@@ -17,6 +17,7 @@
 	<flag name="direct2d">Enable Win7/VistaPU Direct2D support.</flag>
 	<flag name="directx">Enable Win32 DirectX support.</flag>
 	<flag name="dshow">Enables Win32 DirectShow support.</flag>
+	<flag name="dvbpsi">Enables support for Mpeg-TS files (.ts, .m2ts, .mts) via <pkg>media-libs/libdvbpsi</pkg>.</flag>
 	<flag name="dxva2">Enables Win32 DxVA2 support.</flag>
 	<flag name="egl">Enables EGL video output module.</flag>
 	<flag name="fbosd">Enables the framebuffer overlay plugin.</flag>
