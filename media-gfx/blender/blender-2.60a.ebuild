@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.8 2012/02/11 23:10:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.9 2012/02/23 16:57:16 xarthisius Exp $
 
 PYTHON_DEPEND="3:3.2"
 EAPI=4
@@ -67,7 +67,7 @@ RDEPEND="virtual/jpeg
 DEPEND="dev-util/scons
 	apidoc? (
 		dev-python/sphinx
-		app-doc/doxygen[-nodot]
+		|| ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] )
 		game-engine? ( dev-python/epydoc )
 	)
 	${RDEPEND}"

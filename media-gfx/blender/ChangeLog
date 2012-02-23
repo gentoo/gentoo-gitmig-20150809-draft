@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.220 2012/02/11 23:10:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.221 2012/02/23 16:57:16 xarthisius Exp $
+
+  23 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> blender-2.57-r1.ebuild,
+  blender-2.60a.ebuild:
+  Fix dependency on app-doc/doxygen wrt converting useflags 'nodot' to 'dot'.
+  Fixes bug 405445 by Marien Zwart <marienz@gentoo.org>
 
   11 Feb 2012; Sebastian Pipping <sping@gentoo.org> blender-2.60a.ebuild,
   +files/blender-2.61-opencollada-debug.patch:

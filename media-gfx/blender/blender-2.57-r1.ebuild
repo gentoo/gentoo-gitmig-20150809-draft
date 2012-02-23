@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57-r1.ebuild,v 1.10 2012/01/23 18:34:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57-r1.ebuild,v 1.11 2012/02/23 16:57:16 xarthisius Exp $
 
 PYTHON_DEPEND="3:3.2"
 
@@ -69,7 +69,7 @@ RDEPEND="virtual/jpeg
 DEPEND=">=dev-util/scons-2.0.1-r1
 	apidoc? (
 		dev-python/sphinx
-		>=app-doc/doxygen-1.5.7[-nodot]
+		|| ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] )
 	)
 	x11-base/xorg-server
 	${RDEPEND}"
