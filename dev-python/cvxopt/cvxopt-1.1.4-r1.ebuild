@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.4-r1.ebuild,v 1.1 2012/01/17 18:28:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.4-r1.ebuild,v 1.2 2012/02/23 09:00:56 patrick Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS="2.4"
+RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython 2.7-pypy-*"
 
 inherit distutils eutils
 
