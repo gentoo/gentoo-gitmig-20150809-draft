@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.22 2012/02/02 20:47:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.23 2012/02/23 16:16:53 mgorny Exp $
+
+*systemd-43 (23 Feb 2012)
+
+  23 Feb 2012; Michał Górny <mgorny@gentoo.org> +systemd-43.ebuild:
+  Version bump.
 
 *systemd-39 (02 Feb 2012)
 
