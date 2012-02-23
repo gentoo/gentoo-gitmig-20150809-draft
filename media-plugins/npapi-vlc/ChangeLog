@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/npapi-vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.4 2012/01/07 15:06:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.5 2012/02/23 10:18:58 aballier Exp $
+
+*npapi-vlc-2.0.0 (23 Feb 2012)
+
+  23 Feb 2012; Alexis Ballier <aballier@gentoo.org> +npapi-vlc-2.0.0.ebuild,
+  npapi-vlc-9999.ebuild:
+  bump to 2.0.0, in line with vlc-2.0.0, and update live ebuild
 
   07 Jan 2012; Alexis Ballier <aballier@gentoo.org> npapi-vlc-9999.ebuild:
   add gtk useflag and make deps match reality
