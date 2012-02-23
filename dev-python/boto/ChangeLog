@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.39 2012/02/22 16:51:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.40 2012/02/23 15:14:50 radhermit Exp $
+
+  23 Feb 2012; Tim Harder <radhermit@gentoo.org> -boto-1.9b.ebuild:
+  Remove old.
 
   22 Feb 2012; Mike Frysinger <vapier@gentoo.org> boto-2.0.ebuild:
   Mark sparc stable #391437.
