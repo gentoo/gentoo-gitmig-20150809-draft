@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/grantlee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.9 2012/01/17 00:21:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.10 2012/02/23 16:38:31 xarthisius Exp $
+
+  23 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> grantlee-0.1.8.ebuild,
+  grantlee-0.1.9.ebuild:
+  Fix dependency on app-doc/doxygen wrt converting useflags 'nodot' to 'dot'.
+  Fixes bug 405447 by Marien Zwart <marienz@gentoo.org>
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org> -grantlee-0.1.7.ebuild:
   Remove old.
