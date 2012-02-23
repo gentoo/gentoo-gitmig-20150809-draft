@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.8.0.ebuild,v 1.1 2012/01/25 18:16:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.8.0.ebuild,v 1.2 2012/02/23 11:44:54 johu Exp $
 
 EAPI=4
 
@@ -18,12 +18,7 @@ IUSE="debug jpeg rdesktop vnc zeroconf"
 DEPEND="
 	jpeg? ( virtual/jpeg )
 	vnc? ( >=net-libs/libvncserver-0.9 )
-	zeroconf? (
-		|| (
-			net-dns/avahi
-			net-misc/mDNSResponder
-		)
-	)
+	zeroconf? ( net-dns/avahi )
 "
 RDEPEND="${DEPEND}
 	rdesktop? ( net-misc/rdesktop )

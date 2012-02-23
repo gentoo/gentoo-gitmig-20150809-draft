@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.213 2012/02/21 12:52:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.214 2012/02/23 11:44:54 johu Exp $
+
+  23 Feb 2012; Johannes Huber <johu@gentoo.org> krdc-4.7.4.ebuild,
+  krdc-4.8.0.ebuild:
+  Remove dep on net-misc/mDNSResponder wrt bug #405387.
 
   20 Feb 2012; Johannes Huber <johu@gentoo.org> -krdc-4.6.3.ebuild:
   Remove KDE SC 4.6.3
