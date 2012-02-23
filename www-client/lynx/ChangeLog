@@ -1,6 +1,12 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.113 2012/02/23 03:47:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.114 2012/02/23 03:51:26 radhermit Exp $
+
+  23 Feb 2012; Tim Harder <radhermit@gentoo.org>
+  -files/lynx-2.8.6-CVE-2008-4690.patch, -lynx-2.8.8_pre5.ebuild,
+  -lynx-2.8.8_pre9.ebuild, -lynx-2.8.8_pre10.ebuild,
+  -files/lynx-2.8.8_pre9-zlib.patch:
+  Remove old.
 
 *lynx-2.8.8_pre12 (23 Feb 2012)
 
