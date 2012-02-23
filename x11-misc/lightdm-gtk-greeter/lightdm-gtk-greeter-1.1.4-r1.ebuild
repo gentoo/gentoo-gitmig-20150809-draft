@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/lightdm-gtk-greeter-1.1.4.ebuild,v 1.3 2012/02/19 23:11:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/lightdm-gtk-greeter-1.1.4-r1.ebuild,v 1.1 2012/02/23 23:45:00 hwoarang Exp $
 
 EAPI=4
 
@@ -19,6 +19,16 @@ RDEPEND="!!<x11-misc/lightdm-1.1.1
 	x11-libs/gtk+:3
 	x11-themes/gnome-themes-standard
 	x11-themes/gnome-icon-theme"
+
+src_prepare() {
+	# Ok, this has to be fixed in the tarball but I am too lazy to do it.
+	# I will fix this once I decide to update the tarball with a new gentoo
+	# background
+	# Bug #404467
+	if use branding; then
+		sed -i -e "/xft-hintstyle/s:slight:hintslight:" ${WORKDIR}/${PN}.conf || die
+	fi
+}
 
 src_install() {
 	default
