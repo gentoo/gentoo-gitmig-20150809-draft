@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628-r2.ebuild,v 1.1 2012/02/13 17:55:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628-r2.ebuild,v 1.2 2012/02/23 23:05:59 nelchael Exp $
+
+EAPI=4
 
 inherit autotools
 
@@ -16,14 +18,13 @@ IUSE=""
 RDEPEND=""
 DEPEND=""
 
+DOCS=(AUTHORS ChangeLog FAQ NEWS README TODO)
+
 S="${WORKDIR}/pl_PL"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# missing manpages
-	sed -i -e '/\tpasswd.1/ d' man1/Makefile.am
+	sed -i -e '/\tpasswd.1/ d' man1/Makefile.am || die
 
 	# manpages provided by other packages
 	mans="gendiff.1 groups.1 apropos.1 man.1 su.1 newgrp.1 whatis.1 gpasswd.1 chsh.1 \
@@ -35,18 +36,8 @@ src_unpack() {
 	# bug #403379:
 	mans="${mans} shadow.3"
 	for page in ${mans} ; do
-		sed -i -e "/\\t${page}/d; \$s,\\\,,;" man${page: -1}/Makefile.am
+		sed -i -e "/\\t${page}/d; \$s,\\\,,;" man${page: -1}/Makefile.am || die
 	done
 
-	eautoreconf || die
-}
-
-src_compile() {
-	econf || die
-	emake || die
-}
-
-src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog FAQ NEWS README TODO
+	eautoreconf
 }
