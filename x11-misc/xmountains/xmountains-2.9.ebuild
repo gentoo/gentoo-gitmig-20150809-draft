@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/xmountains-2.9.ebuild,v 1.1 2011/12/04 07:38:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/xmountains-2.9.ebuild,v 1.2 2012/02/23 11:50:56 ago Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://www.epcc.ed.ac.uk/~spb/${PN}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-misc/xbitmaps
