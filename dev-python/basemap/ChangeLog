@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/basemap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.23 2012/01/04 20:24:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.24 2012/02/23 09:24:05 patrick Exp $
+
+  23 Feb 2012; Patrick Lauer <patrick@gentoo.org> basemap-1.0.2-r1.ebuild,
+  basemap-1.0.2.ebuild:
+  Restricting python
 
 *basemap-1.0.2-r1 (04 Jan 2012)
 

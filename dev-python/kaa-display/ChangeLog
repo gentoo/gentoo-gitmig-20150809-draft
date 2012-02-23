@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-display
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/ChangeLog,v 1.8 2012/02/21 07:02:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/ChangeLog,v 1.9 2012/02/23 09:28:00 patrick Exp $
+
+  23 Feb 2012; Patrick Lauer <patrick@gentoo.org> kaa-display-0.1.0.ebuild:
+  Restricting python
 
   21 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> kaa-display-0.1.0.ebuild:
   Pull in media-libs/imlib2 with USE="X" enabled wrt #403397 by Piotr Szymaniak
