@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.4.ebuild,v 1.1 2011/11/15 22:24:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.4.ebuild,v 1.2 2012/02/23 12:23:14 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug nls startup-notification"
 
 RDEPEND="x11-libs/libX11
