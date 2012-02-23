@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.328 2012/02/20 09:08:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.329 2012/02/23 01:00:54 tetromino Exp $
+
+*libxml2-2.7.8-r5 (23 Feb 2012)
+
+  23 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libxml2-2.7.8-r1.ebuild, -libxml2-2.7.8-r2.ebuild, -libxml2-2.7.8-r3.ebuild,
+  +libxml2-2.7.8-r5.ebuild, +files/libxml2-2.7.8-hash-randomization.patch:
+  Add hashing randomization to prevent DoS vulnerability (CVE-2012-0841, bug
+  #405261, thanks to Michael Harrison for reporting). Drop old.
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> libxml2-2.7.8-r1.ebuild,
   libxml2-2.7.8-r2.ebuild, libxml2-2.7.8-r3.ebuild, libxml2-2.7.8-r4.ebuild:
