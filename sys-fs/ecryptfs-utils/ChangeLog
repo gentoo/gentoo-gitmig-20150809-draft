@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ecryptfs-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.41 2011/12/16 05:15:27 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.42 2012/02/23 07:51:58 radhermit Exp $
+
+*ecryptfs-utils-96 (23 Feb 2012)
+
+  23 Feb 2012; Tim Harder <radhermit@gentoo.org> +ecryptfs-utils-96.ebuild:
+  Version bump.
 
 *ecryptfs-utils-95 (16 Dec 2011)
 
