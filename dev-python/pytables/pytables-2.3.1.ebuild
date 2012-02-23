@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.3.1.ebuild,v 1.3 2012/02/23 06:48:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.3.1.ebuild,v 1.4 2012/02/23 20:20:42 mr_bones_ Exp $
 
 EAPI=4
 
@@ -30,7 +30,6 @@ RDEPEND="
 	app-arch/bzip2"
 DEPEND="${RDEPEND}
 	dev-python/cython"
-
 
 S=${WORKDIR}/${MY_P}
 
