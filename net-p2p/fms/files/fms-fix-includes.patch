@@ -1,0 +1,11 @@
+--- include/keyfinder.h	2011-11-29 19:20:02.000000000 +0100
++++ include/keyfinder.h.new	2012-02-23 22:12:36.000000000 +0100
+@@ -1,7 +1,7 @@
+ #ifndef _keyfinder_
+ #define _keyfinder_
+ 
+-#include "../../../include/http/emoticonreplacer.h"
++#include "http/emoticonreplacer.h"
+ 
+ #include <string>
+ #include <vector>
