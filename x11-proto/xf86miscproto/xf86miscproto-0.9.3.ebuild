@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86miscproto/xf86miscproto-0.9.3.ebuild,v 1.10 2010/09/10 18:31:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86miscproto/xf86miscproto-0.9.3.ebuild,v 1.11 2012/02/23 18:44:01 scarabeus Exp $
 
-inherit x-modular
+EAPI=4
+inherit xorg-2
 
 DESCRIPTION="X.Org XF86Misc protocol headers"
 
