@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-mozilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.16 2012/01/29 13:08:49 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.17 2012/02/23 18:17:39 swift Exp $
+
+*selinux-mozilla-2.20110726-r6 (23 Feb 2012)
+
+  23 Feb 2012; <swift@gentoo.org> +selinux-mozilla-2.20110726-r6.ebuild:
+  Mark xserver policy as an optional call
 
   29 Jan 2012;  <swift@gentoo.org> Manifest:
   Updating manifest
