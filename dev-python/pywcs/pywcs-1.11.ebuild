@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/pywcs-1.11.ebuild,v 1.1 2012/01/06 17:37:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/pywcs-1.11.ebuild,v 1.2 2012/02/23 05:09:55 patrick Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.7-pypy-* *-jython"
 
 inherit distutils eutils
 
