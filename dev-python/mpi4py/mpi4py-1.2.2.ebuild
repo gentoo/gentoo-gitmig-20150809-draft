@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpi4py/mpi4py-1.2.2.ebuild,v 1.2 2012/02/20 13:24:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpi4py/mpi4py-1.2.2.ebuild,v 1.3 2012/02/23 09:52:20 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.7-pypy-* *-jython"
 
 inherit distutils
 
