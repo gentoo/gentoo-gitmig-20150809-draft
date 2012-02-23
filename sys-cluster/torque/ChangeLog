@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.132 2012/01/18 16:36:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.133 2012/02/23 17:11:50 xarthisius Exp $
+
+  23 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> torque-2.3.13.ebuild,
+  torque-2.4.14.ebuild, torque-2.4.16.ebuild:
+  Fix dependency on app-doc/doxygen wrt converting useflag 'nodot' to 'dot'.
+  Fixes bug 405457 by Marien Zwart <marienz@gentoo.org>
 
   18 Jan 2012; Jeroen Roovers <jer@gentoo.org> torque-2.4.16.ebuild:
   Stable for HPPA (bug #397831).

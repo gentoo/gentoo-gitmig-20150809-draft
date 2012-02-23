@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.13.ebuild,v 1.8 2011/01/22 23:16:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.13.ebuild,v 1.9 2012/02/23 17:11:50 xarthisius Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info autotools
@@ -23,7 +23,9 @@ DEPEND_COMMON="sys-libs/ncurses
 	!games-util/qstat"
 
 DEPEND="${DEPEND_COMMON}
-	doc? ( drmaa? ( app-doc/doxygen[latex,-nodot] ) )
+	doc? ( drmaa? (
+		|| ( <app-doc/doxygen-1.7.6.1[latex,-nodot]	>=app-doc/doxygen-1.7.6.1[latex,dot] )
+	) )
 	sys-apps/ed"
 
 RDEPEND="${DEPEND_COMMON}
