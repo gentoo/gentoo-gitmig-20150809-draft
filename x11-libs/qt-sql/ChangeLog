@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.119 2012/01/29 23:33:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.120 2012/02/23 23:49:46 pesa Exp $
+
+*qt-sql-4.8.0-r1 (23 Feb 2012)
+
+  23 Feb 2012; Davide Pesavento <pesa@gentoo.org> +qt-sql-4.8.0-r1.ebuild,
+  -qt-sql-4.8.0.ebuild:
+  Allow using libiodbc instead of unixODBC (bug #295342 by Rafał Mużyło), remove
+  useless iconv USE flag, delete obsolete sed, don't extract more directories
+  than necessary, cleanup src_configure.
 
   29 Jan 2012; Joseph Jezak <josejx@gentoo.org> qt-sql-4.7.4.ebuild:
   Marked ppc ppc64 stable for bug #390963.
