@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/di
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.35 2012/02/21 14:59:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.36 2012/02/23 16:16:35 ranger Exp $
+
+  23 Feb 2012; Brent Baude <ranger@gentoo.org> di-4.31.ebuild:
+  Marking di-4.31 ppc for bug 404855
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> di-4.31.ebuild:
   Stable for amd64, wrt bug #404855
