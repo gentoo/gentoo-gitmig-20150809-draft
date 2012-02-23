@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.2.0.ebuild,v 1.2 2012/02/14 09:33:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.2.0.ebuild,v 1.3 2012/02/23 05:24:57 radhermit Exp $
 
 EAPI="4"
 
-inherit cmake-utils toolchain-funcs
+inherit cmake-utils toolchain-funcs eutils
 
 DESCRIPTION="Luminance HDR is a graphical user interface that provides a workflow for HDR imaging."
 HOMEPAGE="http://qtpfsgui.sourceforge.net"
@@ -32,23 +32,26 @@ RDEPEND="${DEPEND}"
 
 DOCS=( AUTHORS BUGS Changelog README TODO )
 
-PATCHES=(
-	# Don't try to define the git version of the release
-	"${FILESDIR}"/${P}-no-git.patch
-
-	# Don't install extra docs and fix install dir
-	"${FILESDIR}"/${P}-docs.patch
-
-	# Fix openmp automagic support
-	"${FILESDIR}"/${P}-openmp-automagic.patch
-)
-
 S=${WORKDIR}
 
 pkg_setup() {
 	if use openmp ; then
 		tc-has-openmp || die "Please switch to an openmp compatible compiler"
 	fi
+}
+
+src_prepare() {
+	# Don't try to define the git version of the release
+	epatch "${FILESDIR}"/${P}-no-git.patch
+
+	# Don't install extra docs and fix install dir
+	epatch "${FILESDIR}"/${P}-docs.patch
+
+	# Fix openmp automagic support
+	epatch "${FILESDIR}"/${P}-openmp-automagic.patch
+
+	# Respect user CFLAGS
+	sed -i -e "/-O3/d" CMakeLists.txt || die
 }
 
 src_configure() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/luminance-hdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.14 2012/02/14 09:47:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.15 2012/02/23 05:24:57 radhermit Exp $
+
+  23 Feb 2012; Tim Harder <radhermit@gentoo.org> luminance-hdr-2.2.0.ebuild:
+  Respect user CFLAGS and use epatch directly instead of the PATCHES array.
 
   14 Feb 2012; Tim Harder <radhermit@gentoo.org> -luminance-hdr-2.0.1.ebuild,
   -luminance-hdr-2.0.2.ebuild:
