@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.4.ebuild,v 1.1 2012/01/30 14:32:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.4.1.ebuild,v 1.1 2012/02/23 16:24:01 chithanh Exp $
 
 EAPI=4
 inherit cmake-utils nsplugins multilib versionator
