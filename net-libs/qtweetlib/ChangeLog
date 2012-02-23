@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/qtweetlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qtweetlib/ChangeLog,v 1.1 2011/11/12 19:21:12 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qtweetlib/ChangeLog,v 1.2 2012/02/23 18:44:05 johu Exp $
+
+*qtweetlib-0.4 (23 Feb 2012)
+
+  23 Feb 2012; Johannes Huber <johu@gentoo.org> +qtweetlib-0.4.ebuild,
+  qtweetlib-0.3.ebuild, qtweetlib-9999.ebuild:
+  Version bump.
 
 *qtweetlib-9999 (12 Nov 2011)
 *qtweetlib-0.3 (12 Nov 2011)
