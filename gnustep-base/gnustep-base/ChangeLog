@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.108 2012/02/08 14:51:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.109 2012/02/23 10:09:33 voyageur Exp $
+
+*gnustep-base-1.24.0-r1 (23 Feb 2012)
+
+  23 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-base-1.20.1.ebuild, -gnustep-base-1.22.1.ebuild,
+  -gnustep-base-1.24.0.ebuild, +gnustep-base-1.24.0-r1.ebuild:
+  Update zeroconf dependencies (bug #405383), remove old unstable version
 
 *gnustep-base-1.24.0 (08 Feb 2012)
 
