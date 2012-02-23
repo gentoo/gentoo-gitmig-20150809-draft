@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/atool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.35 2011/11/17 18:58:04 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.36 2012/02/23 11:45:14 ago Exp $
+
+  23 Feb 2012; Agostino Sarubbo <ago@gentoo.org> atool-0.38.0.ebuild:
+  Stable for amd64, wrt bug #405347
 
   17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Change developer's email
