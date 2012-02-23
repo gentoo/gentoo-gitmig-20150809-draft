@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-biggles
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.20 2010/09/22 15:38:49 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.21 2012/02/23 05:48:17 patrick Exp $
+
+  23 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-biggles-1.6.6.ebuild:
+  Restricting pypy and jython
 
   22 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -python-biggles-1.6.4-r1.ebuild, -files/python-biggles-1.6.4-numpy.patch,
