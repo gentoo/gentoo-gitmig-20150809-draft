@@ -7,6 +7,7 @@
     <name>Olivier Crête</name>
   </maintainer>
   <use>
-    <flag name='webkit'>Enable webkit support for browsing and downloading album covers</flag>
+    <flag name='clutter'>Enable clutter support for displaying coverart</flag>
+    <flag name='webkit'>Enable webkit support for finding coverart</flag>
   </use>
 </pkgmetadata>
