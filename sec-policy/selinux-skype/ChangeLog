@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-skype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-skype/ChangeLog,v 1.10 2012/01/14 19:59:59 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-skype/ChangeLog,v 1.11 2012/02/23 18:44:01 swift Exp $
+
+  23 Feb 2012; <swift@gentoo.org> selinux-skype-2.20110726-r3.ebuild:
+  Stabilizing
 
 *selinux-skype-2.20110726-r3 (14 Jan 2012)
 

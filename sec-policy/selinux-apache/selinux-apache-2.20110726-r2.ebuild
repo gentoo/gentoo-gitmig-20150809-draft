@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/selinux-apache-2.20110726-r2.ebuild,v 1.1 2012/01/14 19:59:58 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/selinux-apache-2.20110726-r2.ebuild,v 1.2 2012/02/23 18:44:00 swift Exp $
 IUSE="kerberos"
 MODS="apache"
 BASEPOL="2.20110726-r11"
@@ -12,7 +12,7 @@ DEPEND="${DEPEND}
 	kerberos? ( sec-policy/selinux-kerberos )"
 RDEPEND="${DEPEND}"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 S="${WORKDIR}/"
 
 src_unpack() {
