@@ -1,11 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.2-r1.ebuild,v 1.9 2011/12/23 18:08:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.2-r1.ebuild,v 1.10 2012/02/23 08:02:18 patrick Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
 inherit eutils distutils
 

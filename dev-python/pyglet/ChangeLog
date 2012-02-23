@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyglet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/ChangeLog,v 1.4 2010/12/21 02:18:10 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/ChangeLog,v 1.5 2012/02/23 07:59:42 patrick Exp $
+
+  23 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyglet-1.1.4.ebuild:
+  Restricting pypy and jython
 
   21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> pyglet-1.1.4.ebuild:
   Stable on amd64 wrt bug #348439
