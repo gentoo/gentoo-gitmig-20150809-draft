@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.2.ebuild,v 1.5 2012/01/25 10:20:54 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.2.ebuild,v 1.6 2012/02/23 17:01:36 xarthisius Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ RDEPEND="=sci-libs/votca-tools-${PV}[system-boost=]
 	app-shells/bash"
 
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen[-nodot] )
+	doc? ( || ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] ) )
 	>=app-text/txt2tags-2.5
 	dev-util/pkgconfig"
 
