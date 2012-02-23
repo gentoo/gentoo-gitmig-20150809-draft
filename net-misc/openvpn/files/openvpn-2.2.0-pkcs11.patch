@@ -1,6 +1,6 @@
 diff -ru openvpn-2.1_rc20~/easy-rsa/2.0/openssl.cnf openvpn-2.1_rc20/easy-rsa/2.0/openssl.cnf
---- openvpn-2.1_rc20~/easy-rsa/2.0/openssl.cnf	2009-10-11 01:04:36.000000000 +0200
-+++ openvpn-2.1_rc20/easy-rsa/2.0/openssl.cnf	2009-10-11 01:05:53.000000000 +0200
+--- openvpn-2.1_rc20~/easy-rsa/2.0/openssl-1.0.0.cnf	2009-10-11 01:04:36.000000000 +0200
++++ openvpn-2.1_rc20/easy-rsa/2.0/openssl-1.0.0.cnf	2009-10-11 01:05:53.000000000 +0200
 @@ -283,9 +283,9 @@
  #pkcs11 = pkcs11_section
  
