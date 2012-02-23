@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.24 2012/01/17 19:45:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.25 2012/02/23 18:56:09 hwoarang Exp $
+
+  23 Feb 2012; Markos Chandras <hwoarang@gentoo.org> pyside-1.1.0.ebuild:
+  Fix tests. Thanks to Ian Delaney <johneed@hotmail.com>. Bug #403061
 
   17 Jan 2012; Markos Chandras <hwoarang@gentoo.org> pyside-1.1.0.ebuild:
   drop obsolete help useflag

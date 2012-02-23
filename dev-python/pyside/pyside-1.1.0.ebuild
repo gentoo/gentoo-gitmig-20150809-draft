@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.0.ebuild,v 1.2 2012/01/17 19:45:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.0.ebuild,v 1.3 2012/02/23 18:56:09 hwoarang Exp $
 
 EAPI=4
 
@@ -58,6 +58,7 @@ cmake-utils_use_build() {
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_configure() {
@@ -82,6 +83,8 @@ src_configure() {
 }
 
 src_test() {
+	python_enable_pyc
 	VIRTUALX_COMMAND="cmake-utils_src_test"
 	virtualmake
+	python_disable_pyc
 }
