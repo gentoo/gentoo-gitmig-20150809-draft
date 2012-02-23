@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.5.ebuild,v 1.3 2012/02/21 21:56:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.5.ebuild,v 1.4 2012/02/23 05:47:10 radhermit Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF=yes
@@ -20,7 +20,7 @@ SRC_URI="http://www.libraw.org/data/${MY_P}.tar.gz
 LICENSE="LGPL-2.1 CDDL GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="demosaic examples jpeg2k +lcms +openmp static-libs"
+IUSE="demosaic examples jpeg2k +lcms openmp static-libs"
 
 RDEPEND="jpeg2k? ( media-libs/jasper )
 	lcms? ( media-libs/lcms:2 )"
