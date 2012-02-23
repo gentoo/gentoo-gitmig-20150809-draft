@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/xml-light-2.2-r1.ebuild,v 1.1 2012/01/15 20:13:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/xml-light-2.2-r1.ebuild,v 1.2 2012/02/23 15:20:24 phajdan.jr Exp $
 
 EAPI=4
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND="dev-lang/ocaml
+DEPEND="app-arch/unzip
+	dev-lang/ocaml
 	doc? ( dev-ml/ocaml-doc )"
 RDEPEND="dev-lang/ocaml"
 
