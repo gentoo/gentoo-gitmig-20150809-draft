@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.160 2012/02/20 15:35:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.161 2012/02/23 16:34:57 cardoe Exp $
+
+*libvirt-0.9.10-r3 (23 Feb 2012)
+
+  23 Feb 2012; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.9.10-r2.ebuild,
+  +libvirt-0.9.10-r3.ebuild, libvirt-9999.ebuild, +files/libvirtd.init-r8,
+  -files/libvirtd.init-r7:
+  Fix issue in the init script where we weren't passing the correct values to a
+  function resulting in shutdown failing. bug #405341
 
 *libvirt-0.9.10-r2 (20 Feb 2012)
 

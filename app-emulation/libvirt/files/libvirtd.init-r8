@@ -70,7 +70,7 @@ stop() {
         for dom_id in $(libvirtd_dom_list qemu) ; do
             vm_name="$(libvirtd_virsh qemu domname ${dom_id} | head -n 1)"
             einfo "   ${vm_name}"
-            libvirtd_virsh ${LIBVIRTD_KVM_SHUTDOWN} ${dom_id} > /dev/null
+            libvirtd_virsh qemu ${LIBVIRTD_KVM_SHUTDOWN} ${dom_id} > /dev/null
         done
 
         if [ -n "${LIBVIRTD_KVM_SHUTDOWN_MAXWAIT}" ] ; then
