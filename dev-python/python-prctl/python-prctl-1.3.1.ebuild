@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-prctl/python-prctl-1.3.1.ebuild,v 1.1 2011/11/19 13:47:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-prctl/python-prctl-1.3.1.ebuild,v 1.2 2012/02/23 10:21:48 patrick Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
