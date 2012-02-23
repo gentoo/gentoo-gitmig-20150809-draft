@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.69 2012/02/23 16:19:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.70 2012/02/23 16:22:51 jer Exp $
+
+  23 Feb 2012; Jeroen Roovers <jer@gentoo.org> xfe-1.32.4.ebuild:
+  Fix DEPEND/RDEPEND by Agostino Sarubbo (bug #405263).
 
   23 Feb 2012; Jeroen Roovers <jer@gentoo.org> xfe-1.32.4.ebuild:
   Remove --disable-dependency-tracking from econf by Agostino Sarubbo (bug
