@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/smp_utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.7 2012/02/23 07:20:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.8 2012/02/23 07:22:06 radhermit Exp $
+
+  23 Feb 2012; Tim Harder <radhermit@gentoo.org> smp_utils-0.96.ebuild:
+  Remove unused multilib eclass.
 
 *smp_utils-0.97 (23 Feb 2012)
 
