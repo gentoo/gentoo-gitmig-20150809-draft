@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.208 2012/02/23 18:04:39 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.209 2012/02/23 18:39:42 pesa Exp $
+
+  23 Feb 2012; Davide Pesavento <pesa@gentoo.org> sip-4.13.2.ebuild:
+  Minor code cleanup.
 
   23 Feb 2012; Davide Pesavento <pesa@gentoo.org> -sip-4.12.4.ebuild,
   -sip-4.13.1.ebuild, -sip-4.13.ebuild, metadata.xml:
