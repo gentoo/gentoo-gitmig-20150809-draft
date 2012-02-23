@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.827 2012/02/21 14:03:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.828 2012/02/23 15:28:46 johu Exp $
+
+  23 Feb 2012; Johannes Huber <johu@gentoo.org> kdelibs-4.7.4-r10.ebuild,
+  kdelibs-4.7.4-r11.ebuild, kdelibs-4.7.4-r12.ebuild, kdelibs-4.7.4.ebuild,
+  kdelibs-4.8.0-r1.ebuild:
+  Remove dep on net-misc/mDNSResponder wrt bug #405385.
 
   21 Feb 2012; Johannes Huber <johu@gentoo.org>
   -files/kdelibs-4.6.2-nonepomuk.patch, -files/kdelibs-4.6.3-doublepost.patch,

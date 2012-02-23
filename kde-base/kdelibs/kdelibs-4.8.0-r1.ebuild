@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.0-r1.ebuild,v 1.1 2012/01/29 01:25:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.0-r1.ebuild,v 1.2 2012/02/23 15:28:46 johu Exp $
 
 EAPI=4
 
@@ -19,9 +19,9 @@ HOMEPAGE="http://www.kde.org/"
 
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
-IUSE="3dnow acl alsa altivec bindist +bzip2 debug doc fam +handbook jpeg2k kerberos
-lzma mmx nls openexr +policykit semantic-desktop spell sse sse2 ssl +udev
-+udisks +upower upnp zeroconf"
+IUSE="3dnow acl alsa altivec +bzip2 debug doc fam +handbook jpeg2k kerberos lzma
+mmx nls openexr +policykit semantic-desktop spell sse sse2 ssl +udev +udisks
++upower upnp zeroconf"
 
 REQUIRED_USE="
 	udisks? ( udev )
@@ -84,12 +84,7 @@ COMMONDEPEND="
 	ssl? ( dev-libs/openssl )
 	udev? ( sys-fs/udev )
 	upnp? ( media-libs/herqq )
-	zeroconf? (
-		|| (
-			net-dns/avahi[mdnsresponder-compat]
-			!bindist? ( net-misc/mDNSResponder )
-		)
-	)
+	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 "
 DEPEND="${COMMONDEPEND}
 	doc? ( app-doc/doxygen )
@@ -194,10 +189,8 @@ src_configure() {
 	if use zeroconf; then
 		if has_version net-dns/avahi; then
 			mycmakeargs=(-DWITH_Avahi=ON -DWITH_DNSSD=OFF)
-		elif has_version net-misc/mDNSResponder; then
-			mycmakeargs=(-DWITH_Avahi=OFF -DWITH_DNSSD=ON)
 		else
-			die "USE=\"zeroconf\" enabled but neither net-dns/avahi nor net-misc/mDNSResponder were found."
+			die "USE=\"zeroconf\" enabled but net-dns/avahi wasn't found."
 		fi
 	else
 		mycmakeargs=(-DWITH_Avahi=OFF -DWITH_DNSSD=OFF)
