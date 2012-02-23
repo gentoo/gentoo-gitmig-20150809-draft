@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.969 2012/02/23 06:03:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.970 2012/02/23 06:07:12 zmedico Exp $
+
+*portage-2.1.10.49 (23 Feb 2012)
+
+  23 Feb 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.49.ebuild:
+  2.1.10.49 version bump. This fixes bug #384397 (remove orphan symlinks to
+  directories) and bug #405327 (erroneous rename of absolute symlink to
+  symlink.bz2). Bug #402213 tracks all bugs fixed since portage-2.1.10.44.
 
   23 Feb 2012; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.41.ebuild,
   -portage-2.1.10.46.ebuild, -portage-2.2.0_alpha86.ebuild:
