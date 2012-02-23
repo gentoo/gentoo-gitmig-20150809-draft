@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/collectl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.15 2012/02/23 07:41:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.16 2012/02/23 07:44:16 radhermit Exp $
+
+  23 Feb 2012; Tim Harder <radhermit@gentoo.org> collectl-3.6.0.ebuild,
+  collectl-3.6.1.ebuild:
+  Shorten description to make repoman happy.
 
   23 Feb 2012; Tim Harder <radhermit@gentoo.org>
   -files/collectl-3.4.0-install.patch, -files/collectl-3.4.1-install.patch,

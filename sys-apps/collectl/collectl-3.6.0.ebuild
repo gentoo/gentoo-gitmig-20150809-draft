@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-3.6.0.ebuild,v 1.1 2011/10/28 05:23:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-3.6.0.ebuild,v 1.2 2012/02/23 07:44:16 radhermit Exp $
 
 EAPI="4"
 
-DESCRIPTION="light-weight performance monitoring tool capable of reporting interactively as well as logging to disk"
+DESCRIPTION="light-weight performance monitoring tool capable of reporting interactively and logging to disk"
 HOMEPAGE="http://collectl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/collectl/${P}.src.tar.gz"
 
