@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/path64
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/ChangeLog,v 1.6 2011/11/08 12:25:28 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/ChangeLog,v 1.7 2012/02/23 12:57:51 xarthisius Exp $
+
+*path64-1.0.0_pre20120223 (23 Feb 2012)
+
+  23 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +path64-1.0.0_pre20120223.ebuild:
+  Version bump
 
 *path64-1.0.0_pre20111108 (08 Nov 2011)
 
