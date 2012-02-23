@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.344 2012/02/18 18:17:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.345 2012/02/23 17:34:53 ranger Exp $
+
+  23 Feb 2012; Brent Baude <ranger@gentoo.org> dovecot-2.0.17.ebuild:
+  Marking dovecot-2.0.17 ppc for bug 403849
 
   18 Feb 2012; Eray Aslan <eras@gentoo.org> dovecot-2.1.0.ebuild:
   Add link for upgrade notes
