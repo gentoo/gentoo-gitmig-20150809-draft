@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/smp_utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.6 2011/08/30 09:31:54 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.7 2012/02/23 07:20:01 radhermit Exp $
+
+*smp_utils-0.97 (23 Feb 2012)
+
+  23 Feb 2012; Tim Harder <radhermit@gentoo.org> +smp_utils-0.97.ebuild:
+  Version bump. Add static-libs use flag.
 
 *smp_utils-0.96 (30 Aug 2011)
 
