@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.9.0.ebuild,v 1.4 2009/09/27 14:04:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.9.0.ebuild,v 1.5 2012/02/23 09:32:15 pacho Exp $
 
 EAPI=2
 
@@ -13,16 +13,15 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="doc +avahi"
+IUSE="doc"
 
 RDEPEND=">=dev-lang/mono-2.0
-	avahi? ( >=net-dns/avahi-0.6[mono] )
-	!avahi? ( net-misc/mDNSResponder )"
+	>=net-dns/avahi-0.6[mono]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
-	econf $(use_enable doc docs) $(use_enable avahi) $(use_enable !avahi mdnsresponder)
+	econf $(use_enable doc docs) --enable-avahi
 }
 
 src_compile() {

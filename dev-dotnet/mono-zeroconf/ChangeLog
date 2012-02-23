@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono-zeroconf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/ChangeLog,v 1.15 2010/10/07 19:49:45 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/ChangeLog,v 1.16 2012/02/23 09:32:15 pacho Exp $
+
+  23 Feb 2012; Pacho Ramos <pacho@gentoo.org> mono-zeroconf-0.9.0.ebuild:
+  Drop mDNSResponder support due its removal, bug #403537.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
   -mono-zeroconf-0.8.0-r1.ebuild, -files/mono-zeroconf-0.8.0-mono-2.2.patch:
