@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyregion/pyregion-1.0.1.ebuild,v 1.1 2011/01/23 17:45:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyregion/pyregion-1.0.1.ebuild,v 1.2 2012/02/23 03:41:03 patrick Exp $
 
 EAPI=2
 
-PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
 
 inherit distutils
 
@@ -21,4 +21,3 @@ LICENSE="MIT"
 DEPEND="dev-python/numpy"
 RDEPEND="${DEPEND}"
 
-RESTRICT_PYTHON_ABIS="3.*"
