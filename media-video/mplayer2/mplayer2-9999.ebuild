@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.22 2012/02/15 18:14:22 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.23 2012/02/23 18:36:58 scarabeus Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ else
 fi
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
 bluray bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts
-debug dga directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca esd +faad fbcon ftp
+debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca esd +faad fbcon ftp
 gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc +live
 mad md5sum +mmx mmxext mng +mp3 nas +network nut +opengl oss png pnm pulseaudio
 pvr +quicktime radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3 tga
@@ -53,7 +53,6 @@ REQUIRED_USE="bindist? ( !win32codecs )
 	cddb? ( || ( cdio cdparanoia ) network )
 	dvdnav? ( dvd )
 	radio? ( || ( dvb v4l ) )
-	dga? ( X )
 	dxr3? ( X )
 	ggi? ( X )
 	opengl? ( X )
@@ -81,7 +80,6 @@ RDEPEND+="
 	X? (
 		x11-libs/libXext
 		x11-libs/libXxf86vm
-		dga? ( x11-libs/libXxf86dga )
 		ggi? (
 			media-libs/libggi
 			media-libs/libggiwmh
@@ -155,7 +153,6 @@ DEPEND="${RDEPEND}
 	X? (
 		x11-proto/videoproto
 		x11-proto/xf86vidmodeproto
-		dga? ( x11-proto/xf86dgaproto )
 		dxr3? ( media-video/em8300-libraries )
 		xinerama? ( x11-proto/xineramaproto )
 		xscreensaver? ( x11-proto/scrnsaverproto )
@@ -482,7 +479,7 @@ src_configure() {
 		for i in ${uses}; do
 			use ${i} || myconf+=" --disable-${i}"
 		done
-		use dga || myconf+=" --disable-dga1 --disable-dga2"
+		myconf+=" --disable-dga1 --disable-dga2"
 		use opengl || myconf+=" --disable-gl"
 		use vdpau || myconf+=" --disable-vdpau"
 		use video_cards_vesa || myconf+=" --disable-vesa"
