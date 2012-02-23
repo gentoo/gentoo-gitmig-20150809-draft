@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-xlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.64 2012/02/17 10:56:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.65 2012/02/23 10:13:46 voyageur Exp $
+
+  23 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnustep-back-xlib-0.20.1.ebuild:
+  Remove old unstable version
 
   17 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
   gnustep-back-xlib-0.22.0.ebuild:
