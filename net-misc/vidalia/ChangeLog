@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.28 2012/02/12 13:53:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.29 2012/02/23 12:57:31 blueness Exp $
+
+  23 Feb 2012; Anthony G. Basile <blueness@gentoo.org> -vidalia-0.2.16.ebuild:
+  Its code base is identical to 0.2.17
 
 *vidalia-0.2.17 (12 Feb 2012)
 *vidalia-0.2.16 (12 Feb 2012)
