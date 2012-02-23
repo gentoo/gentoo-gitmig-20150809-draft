@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.9.4.ebuild,v 1.13 2011/12/17 18:33:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.9.4.ebuild,v 1.14 2012/02/23 04:28:48 williamh Exp $
 
 EAPI=4
 
@@ -27,11 +27,9 @@ RDEPEND="virtual/init
 	pam? ( sys-auth/pambase )
 	>=sys-apps/baselayout-2.0.0
 	kernel_linux? (
-		!<sys-apps/module-init-tools-3.2.2-r2
 		sys-process/psmisc
 	)
-	!<sys-fs/udev-133
-	!<sys-apps/sysvinit-2.86-r11"
+	!<sys-fs/udev-133"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
