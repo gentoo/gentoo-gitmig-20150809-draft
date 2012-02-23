@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/libertine-ttf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.30 2012/02/20 14:27:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.31 2012/02/23 17:39:24 ranger Exp $
+
+  23 Feb 2012; Brent Baude <ranger@gentoo.org>
+  libertine-ttf-5.1.3.20110615.ebuild:
+  Marking libertine-ttf-5.1.3.20110615 ppc for bug 405037
 
   20 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libertine-ttf-4.4.1.ebuild,
   libertine-ttf-5.1.3.20110615.ebuild:
