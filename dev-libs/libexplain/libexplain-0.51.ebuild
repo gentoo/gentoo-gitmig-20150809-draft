@@ -1,8 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.51.ebuild,v 1.1 2012/01/26 22:45:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.51.ebuild,v 1.2 2012/02/23 05:04:59 radhermit Exp $
 
 EAPI=4
+AUTOTOOLS_AUTORECONF=yes
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
 inherit autotools-utils
 
 MY_P="${P}.D001"
@@ -26,8 +29,6 @@ S=${WORKDIR}/${MY_P}
 
 DOCS=( README )
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.45-configure.patch
 )
@@ -42,5 +43,4 @@ src_prepare() {
 	cp "${S}"/etc/configure.ac "${S}"
 
 	autotools-utils_src_prepare
-	eautoreconf
 }
