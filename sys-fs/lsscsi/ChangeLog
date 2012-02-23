@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.69 2012/02/13 10:00:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.70 2012/02/23 07:01:03 radhermit Exp $
+
+*lsscsi-0.26 (23 Feb 2012)
+
+  23 Feb 2012; Tim Harder <radhermit@gentoo.org> +lsscsi-0.26.ebuild:
+  Version bump.
 
   13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> lsscsi-0.25.ebuild:
   ppc64 stable wrt #397229
