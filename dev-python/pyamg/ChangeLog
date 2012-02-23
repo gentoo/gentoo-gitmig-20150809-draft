@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyamg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.3 2011/08/08 18:32:44 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.4 2012/02/23 09:58:28 patrick Exp $
+
+  23 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyamg-2.0.0.ebuild:
+  Restricting python
 
   08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> pyamg-2.0.0.ebuild:
   Fix dependencies. Patch by Arfrever.
