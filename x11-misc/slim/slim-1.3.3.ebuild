@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r3.ebuild,v 1.7 2011/08/09 17:38:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.3.ebuild,v 1.1 2012/02/23 15:17:56 axs Exp $
 
-EAPI=2
+EAPI=4
 
-inherit toolchain-funcs pam eutils
+inherit cmake-utils pam eutils
 
 DESCRIPTION="Simple Login Manager"
 HOMEPAGE="http://slim.berlios.de"
@@ -12,16 +12,19 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="branding pam"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="branding pam consolekit"
+REQUIRED_USE="consolekit? ( pam )"
 
 RDEPEND="x11-libs/libXmu
 	x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXft
-	>=media-libs/libpng-1.4
+	media-libs/libpng
 	virtual/jpeg
 	x11-apps/sessreg
+	consolekit? ( sys-auth/consolekit
+		sys-apps/dbus )
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -29,64 +32,43 @@ DEPEND="${RDEPEND}
 PDEPEND="branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )"
 
 src_prepare() {
-	# respect C[XX]FLAGS, fix crosscompile,
-	# fix linking order for --as-needed"
-	sed -i -e "s:^CXX=.*:CXX=$(tc-getCXX) ${CXXFLAGS}:" \
-		-e "s:^CC=.*:CC=$(tc-getCC) ${CFLAGS}:" \
-		-e "s:^MANDIR=.*:MANDIR=/usr/share/man:" \
-		-e "s:^\t\(.*\)\ \$(LDFLAGS)\ \(.*\):\t\1\ \2\ \$(LDFLAGS):g" \
-		-e "s:-I/usr/include/libpng12:$(pkg-config --cflags-only-I libpng):" \
-		-e "s:-lpng12:$(pkg-config --libs-only-l libpng):" \
-		-r -e "s:^LDFLAGS=(.*):LDFLAGS=\1 ${LDFLAGS}:" \
-		Makefile || die "sed failed in Makefile"
 	# Our Gentoo-specific config changes
-	epatch "${FILESDIR}"/${PN}-1.3.2-r2-config.diff
+	epatch "${FILESDIR}"/${P}-config.diff
 
 	if use elibc_FreeBSD; then
-		sed -i -e "s/CUSTOM=-DHAVE_SHADOW/CUSTOM=-DNEEDS_BASENAME/" Makefile \
-			|| die "sed failed in Makefile"
-		epatch "${FILESDIR}"/${PN}-1.3.2-bsd-install.patch
+		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
+			|| die
 	fi
 
 	if use branding; then
 		sed -i -e 's/  default/  slim-gentoo-simple/' slim.conf || die
 	fi
 
-	# Gentoo bug 297655
-	epatch "${FILESDIR}"/14509-fix-keyboard-in-tty-from-which-${PN}-is-lauched.patch
-	# Upstream bug #15287
+	# Upstream bug #15287 (still not fixed in codebase)
 	epatch "${FILESDIR}"/15287-fix-pam-authentication-with-pam_unix2.patch
-	# Gentoo Bug 261713
-	epatch "${FILESDIR}"/261713-restart-xserver-if-killed.patch
-	# Gentoo bug 261359, upstream 15326
-	epatch "${FILESDIR}"/261359-fix-SIGTERM-freeze.patch
-	# Gentoo bug 346037
-	epatch "${FILESDIR}"/346037-stop_setting_host_for_pam_ck_connector_so.patch
-	# Gentoo bug 378505
-	epatch "${FILESDIR}"/${P}-libpng15.patch
 }
 
-src_compile() {
-	if use pam ; then
-		emake USE_PAM=1 || die "emake failed."
-	else
-		emake || die "emake failed."
-	fi
+src_configure() {
+	mycmakeargs=(
+		$(cmake-utils_use pam USE_PAM)
+		$(cmake-utils_use consolekit USE_CONSOLEKIT)
+	)
+
+	cmake-utils_src_configure
 }
 
 src_install() {
+	cmake-utils_src_install
+
 	if use pam ; then
-		emake USE_PAM=1 DESTDIR="${D}" install || die "emake install failed."
 		pamd_mimic system-local-login slim auth account session
-	else
-		emake DESTDIR="${D}" install || die "emake install failed."
 	fi
 
 	insinto /usr/share/slim
-	newins "${FILESDIR}/Xsession" Xsession || die "newins failed"
+	newins "${FILESDIR}/Xsession-r3" Xsession
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/slim.logrotate" slim || die "newins failed"
+	newins "${FILESDIR}/slim.logrotate" slim
 
 	dodoc xinitrc.sample ChangeLog README TODO THEMES
 }
@@ -110,9 +92,14 @@ pkg_postinst() {
 	elog "/usr/share/doc/${PF} and change your login_cmd in /etc/slim.conf"
 	elog "accordingly."
 	elog
+	ewarn "Please note that slim now supports consolekit directly.  Please remove any "
+	ewarn "existing work-arounds (including all calls to 'ck-launch-session' in "
+	ewarn "xinitrc scripts) and enable USE=\"consolekit\""
+	elog
 	if ! use pam; then
 		elog "You have merged ${PN} without USE=pam, this will cause ${PN} to fall back to"
 		elog "the console when restarting your window manager. If this is not"
 		elog "desired, then please remerge ${PN} with USE=pam"
+		elog
 	fi
 }
