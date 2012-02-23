@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.23 2012/02/21 20:39:05 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.24 2012/02/23 11:13:15 aidecoe Exp $
+
+  23 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.10.2.ebuild,
+  notmuch-0.11.ebuild, notmuch-0.11.1.ebuild, notmuch-0.11.1-r1.ebuild:
+  Removed postinst info about Python API documentation.  It's useless info,
+  since this documentation can be easily found.
 
 *notmuch-0.11.1-r1 (21 Feb 2012)
 

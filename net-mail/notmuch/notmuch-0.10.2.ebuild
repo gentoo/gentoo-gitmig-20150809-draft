@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.2.ebuild,v 1.1 2011/12/11 20:51:26 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.2.ebuild,v 1.2 2012/02/23 11:13:15 aidecoe Exp $
 
 EAPI=4
 
@@ -141,12 +141,6 @@ src_install() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	use python && distutils_pkg_postinst
-
-	if use python; then
-		echo
-		elog "Python API documentation is also available online at:"
-		elog "  http://packages.python.org/notmuch/"
-	fi
 }
 
 pkg_postrm() {
