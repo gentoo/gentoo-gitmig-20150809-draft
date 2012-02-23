@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.140 2012/02/21 18:03:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.141 2012/02/23 23:06:13 a3li Exp $
+
+  23 Feb 2012; Alex Legler <a3li@gentoo.org> ruby-ng.eclass:
+  Improve no-matching-ruby-target-error message wording wrt bug 405373.
 
   21 Feb 2012; Justin Lecher <jlec@gentoo.org> subversion.eclass:
   Respect ESVN_USER, ESVN_PASSWORD and ESVN_OPTIONS on repo update, #401737
