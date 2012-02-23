@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.53 2012/02/21 15:24:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.54 2012/02/23 18:54:46 ranger Exp $
+
+  23 Feb 2012; Brent Baude <ranger@gentoo.org> libopenraw-0.0.9.ebuild:
+  Marking libopenraw-0.0.9 ppc for bug 404793
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> libopenraw-0.0.9.ebuild:
   Stable for HPPA (bug #404793).
