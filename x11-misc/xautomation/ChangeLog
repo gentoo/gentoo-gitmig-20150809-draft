@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xautomation
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/ChangeLog,v 1.28 2011/12/04 16:53:52 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/ChangeLog,v 1.29 2012/02/23 11:50:30 ago Exp $
+
+  23 Feb 2012; Agostino Sarubbo <ago@gentoo.org> xautomation-1.05.ebuild:
+  Stable for amd64, wrt bug #404893
 
 *xautomation-1.05 (04 Dec 2011)
 
