@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/espresso
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.4 2011/11/27 21:09:29 ottxor Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.5 2012/02/23 17:04:57 xarthisius Exp $
+
+  23 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> espresso-3.0.2.ebuild:
+  Fix dependency on app-doc/doxygen wrt converting useflag 'nodot' to 'dot'.
+  Fixes bug 405455 by Marien Zwart <marienz@gentoo.org>
 
 *espresso-3.0.2 (27 Nov 2011)
 

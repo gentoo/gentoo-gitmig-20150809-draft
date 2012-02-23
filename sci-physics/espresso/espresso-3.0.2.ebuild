@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.0.2.ebuild,v 1.1 2011/11/27 21:09:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.0.2.ebuild,v 1.2 2012/02/23 17:04:57 xarthisius Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	doc? (
-		app-doc/doxygen[-nodot]
+		|| ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] )
 		virtual/latex-base )"
 
 DOCS=( AUTHORS NEWS README ChangeLog )
