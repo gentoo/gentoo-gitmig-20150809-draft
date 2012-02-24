@@ -1,6 +1,9 @@
 # ChangeLog for net-print/ink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ChangeLog,v 1.19 2012/02/21 14:54:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ChangeLog,v 1.20 2012/02/24 14:15:53 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ink-0.5.1.ebuild:
+  x86 stable wrt bug #400459
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ink-0.5.1.ebuild:
   Stable for amd64, wrt bug #400459
