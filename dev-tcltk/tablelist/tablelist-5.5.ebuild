@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/tablelist-5.5.ebuild,v 1.2 2012/02/21 13:49:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/tablelist-5.5.ebuild,v 1.3 2012/02/24 15:15:24 phajdan.jr Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.nemethi.de/tablelist/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-lang/tcl"
