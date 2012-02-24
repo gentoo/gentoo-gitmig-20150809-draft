@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ddskk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.36 2011/07/17 23:15:11 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.37 2012/02/24 09:33:19 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ddskk-14.3.ebuild:
+  Stable for amd64, wrt bug #399927
 
 *ddskk-14.3 (17 Jul 2011)
 
