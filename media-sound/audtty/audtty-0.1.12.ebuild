@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.12.ebuild,v 1.3 2012/02/23 16:23:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.12.ebuild,v 1.4 2012/02/24 14:52:29 phajdan.jr Exp $
 
 EAPI=4
 inherit autotools base toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.code-monkeys.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~x86"
+KEYWORDS="~alpha amd64 ppc x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audtty
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.25 2012/02/23 16:23:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.26 2012/02/24 14:52:29 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> audtty-0.1.12.ebuild:
+  x86 stable wrt bug #404799
 
   23 Feb 2012; Brent Baude <ranger@gentoo.org> audtty-0.1.12.ebuild:
   Marking audtty-0.1.12 ppc for bug 404799
