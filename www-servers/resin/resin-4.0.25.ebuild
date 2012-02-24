@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.25.ebuild,v 1.2 2012/02/23 22:45:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.25.ebuild,v 1.3 2012/02/24 17:42:49 nelchael Exp $
 
-EAPI="2"
+EAPI="4"
 
 JAVA_PKG_IUSE="source"
 
@@ -50,34 +50,35 @@ src_prepare() {
 	done;
 
 	# Respect LDFLAGS:
-	sed -i -e 's/-o/$(LDFLAGS) -o/' modules/c/src/resin_os/Makefile.in
+	sed -i -e 's/-o/$(LDFLAGS) -o/' modules/c/src/resin_os/Makefile.in || die
 
 	# No bundled JARs!
-	rm -f "${S}/modules/ext/"*.jar
-	rm -rf "${S}/project-jars"
+	rm -f "${S}/modules/ext/"*.jar || die
+	rm -rf "${S}/project-jars" || die
 
 	java-ant_bsfix_one "${S}/build.xml"
 	java-ant_bsfix_one "${S}/build-common.xml"
 
-	mkdir -p "${S}/m4"
+	mkdir -p "${S}/m4" || die
+	sed -i -e 's,-O2,,g' configure.ac || die
 	eautoreconf
 
 	# Symlink our libraries:
-	mkdir -p "${S}/gentoo-deps"
-	cd "${S}/gentoo-deps/"
+	mkdir -p "${S}/gentoo-deps" || die
+	cd "${S}/gentoo-deps/" || die
 	java-pkg_jar-from --virtual javamail
 	java-pkg_jar-from glassfish-deployment-api-1.2
 	java-pkg_jar-from resin-servlet-api-3.0 resin-servlet-api.jar
 	java-pkg_jar-from mojarra-1.2
 	java-pkg_jar-from jsr101
 	java-pkg_jar-from validation-api-1.0
-	ln -s $(java-config --jdk-home)/lib/tools.jar
+	ln -s $(java-config --jdk-home)/lib/tools.jar || die
 }
 
 src_configure() {
 	append-flags -fPIC -DPIC
 
-	chmod 755 "${S}/configure"
+	chmod 755 "${S}/configure" || die
 	econf --prefix=${RESIN_HOME} || die "econf failed"
 }
 
@@ -101,10 +102,10 @@ src_install() {
 	sed -i \
 		-e 's,${resin.root}/doc/resin-doc,webapps/resin-doc,' \
 		-e 's,${resin.root}/doc/admin,webapps/admin,' \
-		"${D}/etc/resin/resin.xml"
+		"${D}/etc/resin/resin.xml" || die
 
 	einfo "Fixing log directory ..."
-	rm -rf "${D}/${RESIN_HOME}/log"
+	rm -rf "${D}/${RESIN_HOME}/log" || die
 	keepdir /var/log/resin
 	dosym /var/log/resin ${RESIN_HOME}/log
 
@@ -115,24 +116,24 @@ src_install() {
 	newinitd "${FILESDIR}/${PV}/resin.init" resin
 	newconfd "${FILESDIR}/${PV}/resin.conf" resin
 
-	sed -i -e "s,__RESIN_HOME__,${RESIN_HOME},g" "${D}/etc/init.d/resin"
+	sed -i -e "s,__RESIN_HOME__,${RESIN_HOME},g" "${D}/etc/init.d/resin" || die
 
 	einfo "Fixing location of jars ..."
-	rm -f "${S}/lib/tools.jar"
+	rm -f "${S}/lib/tools.jar" || die
 	java-pkg_dojar "${S}"/lib/*.jar
-	rm -fr "${D}/${RESIN_HOME}/lib"
+	rm -fr "${D}/${RESIN_HOME}/lib" || die
 	dosym /usr/share/resin/lib ${RESIN_HOME}/lib
 
 	einfo "Symlinking directories from /var/lib/resin ..."
-	rm -rf "${D}/${RESIN_HOME}/resin-data"
-	rm -rf "${D}/${RESIN_HOME}/watchdog-data"
+	rm -rf "${D}/${RESIN_HOME}/resin-data" || die
+	rm -rf "${D}/${RESIN_HOME}/watchdog-data" || die
 	dodir /var/lib/resin/webapps
 	keepdir /var/lib/resin/hosts
 	keepdir /var/lib/resin/resin-data
 	keepdir /var/lib/resin/watchdog-data
 	mv "${D}"/${RESIN_HOME}/webapps/* "${D}/var/lib/resin/webapps" || \
 		die "mv of webapps failed"
-	rm -rf "${D}/${RESIN_HOME}/webapps"
+	rm -rf "${D}/${RESIN_HOME}/webapps" || die
 	dosym /var/lib/resin/webapps ${RESIN_HOME}/webapps
 	dosym /var/lib/resin/hosts ${RESIN_HOME}/hosts
 	dosym /var/lib/resin/resin-data ${RESIN_HOME}/resin-data
@@ -140,7 +141,7 @@ src_install() {
 
 	dosym \
 		"$(java-pkg_getjar resin-servlet-api-3.0 resin-servlet-api.jar)" \
-		"${JAVA_PKG_JARDEST}/resin-servlet-api.jar" || die
+		"${JAVA_PKG_JARDEST}/resin-servlet-api.jar"
 
 	use admin && {
 		einfo "Installing administration app ..."
@@ -157,22 +158,22 @@ src_install() {
 	}
 
 	einfo "Removing stale directories ..."
-	rm -fr "${D}/${RESIN_HOME}/bin"
-	rm -fr "${D}/${RESIN_HOME}/doc"
-	rm -fr "${D}/${RESIN_HOME}/keys"
-	rm -fr "${D}/${RESIN_HOME}/licenses"
-	rm -fr "${D}/etc/resin/"*.orig
+	rm -fr "${D}/${RESIN_HOME}/bin" || die
+	rm -fr "${D}/${RESIN_HOME}/doc" || die
+	rm -fr "${D}/${RESIN_HOME}/keys" || die
+	rm -fr "${D}/${RESIN_HOME}/licenses" || die
+	rm -fr "${D}/etc/resin/"*.orig || die
 
 	einfo "Fixing ownerships and permissions ..."
-	chown -R 0:root "${D}/"
-	chown -R resin:resin "${D}/etc/resin"
-	chown -R resin:resin "${D}/var/lib/resin"
-	chown -R resin:resin "${D}/var/log/resin"
+	fowners -R 0:root /
+	fowners -R resin:resin /etc/resin
+	fowners -R resin:resin /var/lib/resin
+	fowners -R resin:resin /var/log/resin
 
-	chmod 644 "${D}/etc/conf.d/resin"
-	chmod 755 "${D}/etc/init.d/resin"
-	chmod 750 "${D}/var/lib/resin"
-	chmod 750 "${D}/etc/resin"
+	fperms 644 /etc/conf.d/resin
+	fperms 755 /etc/init.d/resin
+	fperms 750 /var/lib/resin
+	fperms 750 /etc/resin
 }
 
 pkg_postinst() {
