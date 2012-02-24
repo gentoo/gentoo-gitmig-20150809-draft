@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/resin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.111 2012/02/23 22:45:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.112 2012/02/24 14:33:59 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> resin-4.0.22.ebuild:
+  Stable for amd64, wrt bug #403199
 
   23 Feb 2012; Krzysztof Pawlik <nelchael@gentoo.org> resin-4.0.25.ebuild:
   Use -r1 of patches for Resin 4.0.25, fixes build issues.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.22.ebuild,v 1.2 2012/02/23 22:23:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.22.ebuild,v 1.3 2012/02/24 14:33:59 ago Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="admin doc"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 COMMON_DEP="~dev-java/resin-servlet-api-${PV}
 	dev-java/glassfish-deployment-api:1.2
