@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.64 2012/02/18 23:14:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.65 2012/02/24 18:43:48 sera Exp $
+
+*icedtea-7.2.1 (24 Feb 2012)
+*icedtea-7.2.0.1 (24 Feb 2012)
+*icedtea-6.1.10.6 (24 Feb 2012)
+
+  24 Feb 2012; Ralph Sennhauser <sera@gentoo.org> +icedtea-6.1.10.6.ebuild,
+  icedtea-6.1.11.ebuild, icedtea-6.1.11.1.ebuild, +icedtea-7.2.0.1.ebuild,
+  +icedtea-7.2.1.ebuild:
+  Version bump, security bug #404095.
+  No vm currently available for IcedTea 7 on alternative archs.
+  Temporarely drop ~ppc ~ppc64 for IcedTea 6 1.11 branch. #403159
+  For archs other than x86 and amd64 icedtea-6.1.10.6 likely works best.
 
 *icedtea-6.1.11.1 (18 Feb 2012)
 
