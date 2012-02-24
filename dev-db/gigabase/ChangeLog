@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/gigabase
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.53 2011/10/11 08:26:34 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.54 2012/02/24 09:39:02 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> gigabase-3.83-r1.ebuild:
+  Stable for amd64, wrt bug #399961
 
 *gigabase-3.83-r1 (11 Oct 2011)
 

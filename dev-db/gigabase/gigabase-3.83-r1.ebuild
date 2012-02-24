@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.83-r1.ebuild,v 1.1 2011/10/11 08:26:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.83-r1.ebuild,v 1.2 2012/02/24 09:39:02 ago Exp $
 
 EAPI="4"
 inherit eutils multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gigabase/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
