@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-19.0.1049.3_alpha123257.ebuild,v 1.1 2012/02/24 03:39:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-19.0.1049.3_alpha123257.ebuild,v 1.2 2012/02/24 05:33:01 floppym Exp $
 
 EAPI="4"
 
@@ -115,26 +115,36 @@ src_prepare() {
 
 	# Support LINGUAS, bug #332751.
 	# Emulate logic from po.m4.
-	if [[ "%UNSET%" != ${LINGUAS-%UNSET%} ]]; then
-		local desiredlang presentlang pak pakname useit
-		cd "${CHROME_HOME}locales" || die
+	if [[ "%UNSET%" != "${LINGUAS-%UNSET}" ]]; then
+		local found desiredlang presentlang pak pakname
+
+		pushd "${CHROME_HOME}locales" > /dev/null || die
+
 		for pak in *.pak; do
-			useit=
-			pakname=${pak%.pak}
-			pakname=${pakname/-/_}
-			presentlang=$(chromium_lang "$pakname")
-			if [[ ${presentlang} == en_US ]]; then
+			pakname="${pak%.pak}"
+			pakname="${pakname/-/_}"
+			presentlang="$(chromium_lang "${pakname}")"
+
+			# Do not issue warning for en_US locale. This is the fallback
+			# locale so it should always be installed.
+			if [[ "${presentlang}" == "en_US" ]]; then
 				continue
 			fi
-			for lang in ${LINGUAS}; do
-				if [[ ${lang} == ${presentlang}* ]]; then
-					useit=1
+
+			found=
+			for desiredlang in ${LINGUAS}; do
+				if [[ "${desiredlang}" == "${presentlang}"* ]]; then
+					found=1
+					break
 				fi
 			done
-			if [[ -z ${useit} ]]; then
+
+			if [[ -z ${found} ]]; then
 				rm "${pak}" || die
 			fi
 		done
+
+		popd > /dev/null
 	fi
 }
 
