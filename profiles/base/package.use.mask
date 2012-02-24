@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.314 2012/02/18 05:16:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.315 2012/02/24 02:11:26 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Feb 2012)
+# lirc support is broken in older gnash
+<www-plugins/gnash-0.8.10 lirc
 
 # Zac Medico <zmedico@gentoo.org> (18 Feb 2012)
 # Mask USE=pypy1_8 for sys-apps/portage, since pypy has limited KEYWORDS.
@@ -226,10 +230,6 @@ media-libs/mesa llvm
 # Alex Legler <a3li@gentoo.org> (1 Sep 2010)
 # This feature is marked as experimental by upstream.
 dev-lang/ruby-enterprise fastthreading
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (12 Jul 2010)
-# lirc support is broken in the snapshot
->=www-plugins/gnash-0.8.7_p20100706 lirc
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
 # Mask clutter till clutter games are usable

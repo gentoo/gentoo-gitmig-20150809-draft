@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.348 2012/02/18 05:16:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.349 2012/02/24 02:11:26 chithanh Exp $
+
+  24 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Unmask lirc on most recent gnash
 
   18 Feb 2012; Zac Medico <zmedico@gentoo.org> package.use.mask:
   Mask USE=pypy1_8 for sys-apps/portage, since pypy has limited KEYWORDS.
