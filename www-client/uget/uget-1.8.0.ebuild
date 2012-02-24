@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.8.0.ebuild,v 1.1 2011/07/25 09:46:22 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.8.0.ebuild,v 1.2 2012/02/24 09:48:48 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/urlget/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="aria2 +curl gstreamer gtk3 hide-temp-files libnotify nls"
 
 REQUIRED_USE="|| ( aria2 curl )"
