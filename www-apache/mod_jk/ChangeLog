@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.69 2011/10/14 16:58:23 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.70 2012/02/24 09:48:11 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> mod_jk-1.2.32.ebuild:
+  Stable for amd64, wrt bug #400519
 
 *mod_jk-1.2.32 (14 Oct 2011)
 
