@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.25 2012/02/24 20:55:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.26 2012/02/24 22:19:36 hd_brummy Exp $
+
+  24 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/vdradmin-3.6.6.conf:
+  info about SSL using added
 
 *vdradmin-am-3.6.9 (24 Feb 2012)
 
