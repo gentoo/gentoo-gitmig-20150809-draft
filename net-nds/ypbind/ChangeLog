@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.70 2012/02/21 15:34:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.71 2012/02/24 15:26:11 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ypbind-1.33.ebuild:
+  x86 stable wrt bug #404843
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> ypbind-1.33.ebuild:
   Stable for HPPA (bug #404843).
