@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Name
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.13 2011/09/24 13:27:16 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.14 2012/02/24 10:35:47 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Sub-Name-0.50.0.ebuild:
+  Stable for amd64, wrt bug #400221
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> Sub-Name-0.50.0.ebuild:
   Marked ~x64-macos
