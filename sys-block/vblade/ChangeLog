@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/vblade
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.29 2011/09/15 08:05:36 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.30 2012/02/24 09:30:24 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> vblade-20.ebuild:
+  Stable for amd64, wrt bug #400497
 
   15 Sep 2011; Tim Harder <radhermit@gentoo.org>
   -files/init.d-vblade.vblade0-14, -vblade-14.ebuild,
