@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pastedeploy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.11 2012/02/21 18:02:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.12 2012/02/24 14:19:13 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pastedeploy-1.5.0.ebuild:
+  x86 stable wrt bug #405085
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> pastedeploy-1.5.0.ebuild:
   Stable for amd64, wrt bug #405085
