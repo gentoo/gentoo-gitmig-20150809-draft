@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lasi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.25 2012/02/21 15:42:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.26 2012/02/24 14:50:11 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> lasi-1.1.1.ebuild:
+  x86 stable wrt bug #404789
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> lasi-1.1.1.ebuild:
   Stable for HPPA (bug #404789).
