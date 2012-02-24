@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/librsvg-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.48 2011/03/23 20:24:05 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.49 2012/02/24 09:08:15 patrick Exp $
+
+  24 Feb 2012; Patrick Lauer <patrick@gentoo.org> librsvg-python-2.32.0.ebuild:
+  Restricting pypy and jython
 
   23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -librsvg-python-2.30.2.ebuild:
