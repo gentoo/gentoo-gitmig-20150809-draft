@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/mldonkey
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.252 2011/11/28 23:21:54 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.253 2012/02/24 20:52:54 ranger Exp $
+
+  24 Feb 2012; Brent Baude <ranger@gentoo.org> mldonkey-3.1.0.ebuild:
+  Marking mldonkey-3.1.0 ppc for bug 391035
+
+  06 Feb 2012; Brent Baude <ranger@gentoo.org> mldonkey-3.1.0.ebuild:
+  Marking mldonkey-3.1.0 ppc for bug 391035
 
   28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> mldonkey-3.1.0.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
