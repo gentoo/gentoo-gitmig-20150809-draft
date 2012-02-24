@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nast
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.11 2011/12/19 02:11:16 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.12 2012/02/24 14:54:59 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nast-0.2.0-r1.ebuild:
+  x86 stable wrt bug #404811
 
 *nast-0.2.0-r1 (19 Dec 2011)
 
