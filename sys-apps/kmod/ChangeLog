@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.21 2012/02/19 04:18:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.22 2012/02/24 04:44:13 williamh Exp $
+
+  24 Feb 2012; William Hubbs <williamh@gentoo.org> kmod-5.ebuild,
+  kmod-9999.ebuild:
+  migrate git repository to kernel.org
 
   19 Feb 2012; William Hubbs <williamh@gentoo.org> -kmod-4.ebuild:
   remove old version

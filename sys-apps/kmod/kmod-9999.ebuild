@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.10 2012/02/04 00:37:44 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.11 2012/02/24 04:44:13 williamh Exp $
 
 EAPI=4
 
-EGIT_REPO_URI="git://git.profusion.mobi/${PN}.git"
+EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/${PN}/${PN}.git"
 
 [[ "${PV}" == "9999" ]] && vcs=git-2
 inherit ${vcs}  autotools eutils toolchain-funcs
