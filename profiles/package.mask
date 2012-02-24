@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13518 2012/02/23 23:46:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13519 2012/02/24 18:54:09 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -73,6 +73,7 @@ app-text/notecase-pro
 # Davide Pesavento <pesa@gentoo.org> (19 Feb 2012)
 # Masked until all reverse dependencies are fixed. Bug #404493
 =x11-libs/qt-qt3support-4.8.0-r1
+=x11-libs/qt-webkit-4.8.0-r1
 
 # Michael Weber <xmw@gentoo.org> (18 Feb 2012)
 # Project was renamed to x11-wm/spectrwm
