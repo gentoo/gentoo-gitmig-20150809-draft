@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymtp/ChangeLog,v 1.6 2012/02/20 15:17:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymtp/ChangeLog,v 1.7 2012/02/24 19:30:36 marienz Exp $
+
+  24 Feb 2012; Marien Zwart <marienz@gentoo.org> pymtp-0.0.4.ebuild:
+  Unrestrict pypy, see bug #403831. Thanks to Arfrever on IRC for reporting.
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> pymtp-0.0.4.ebuild:
   Restricting pypy #403831
