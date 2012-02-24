@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/archdiff
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/archdiff/ChangeLog,v 1.1 2012/02/24 06:36:21 radhermit Exp $
+
+*archdiff-1.1.4 (24 Feb 2012)
+
+  24 Feb 2012; Tim Harder <radhermit@gentoo.org> +archdiff-1.1.4.ebuild,
+  +metadata.xml:
+  Initial import (bug #401847 by Christopher Howard).
+
