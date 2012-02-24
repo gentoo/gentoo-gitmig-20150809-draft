@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.134 2012/02/04 10:42:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.135 2012/02/24 17:37:34 phajdan.jr Exp $
+
+# Not ready "yet", bug #405593. (phajdan.jr@)
+tcb
 
 # Mask as long its not available everywhere
 zeitgeist
