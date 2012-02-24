@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/kpartsplugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/ChangeLog,v 1.5 2012/02/21 14:46:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/ChangeLog,v 1.6 2012/02/24 15:05:49 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kpartsplugin-20110823.ebuild:
+  x86 stable wrt bug #404873
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> kpartsplugin-20110823.ebuild:
   Stable for amd64, wrt bug #404873

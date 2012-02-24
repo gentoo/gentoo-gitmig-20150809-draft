@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/kpartsplugin-20110823.ebuild,v 1.2 2012/02/21 14:46:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/kpartsplugin-20110823.ebuild,v 1.3 2012/02/24 15:05:49 phajdan.jr Exp $
 
 EAPI=3
 inherit kde4-base nsplugins
@@ -11,7 +11,7 @@ SRC_URI="http://www.unix-ag.uni-kl.de/~fischer/kpartsplugin/${P}.tar.bz2"
 
 LICENSE="GPL-3 BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
