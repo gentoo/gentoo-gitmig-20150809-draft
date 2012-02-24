@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/culmus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.70 2011/10/18 19:12:48 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.71 2012/02/24 11:01:00 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> culmus-0.120-r3.ebuild:
+  Stable for amd64, wrt bug #400369
 
 *culmus-0.120-r3 (18 Oct 2011)
 
