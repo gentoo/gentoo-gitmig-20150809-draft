@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.0.3.ebuild,v 1.5 2012/02/21 13:41:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.0.3.ebuild,v 1.6 2012/02/24 13:17:17 scarabeus Exp $
 
 EAPI=4
 
@@ -421,7 +421,7 @@ src_configure() {
 		--without-stlport \
 		--without-system-mozilla \
 		--without-help \
-		--without-helppack-integration \
+		--with-helppack-integration \
 		--without-sun-templates \
 		$(use_enable binfilter) \
 		$(use_enable dbus) \
