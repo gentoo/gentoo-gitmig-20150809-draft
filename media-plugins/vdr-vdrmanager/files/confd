@@ -1,0 +1,19 @@
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrmanager/files/confd,v 1.1 2012/02/24 21:44:54 hd_brummy Exp $
+# /etc/conf.d/vdr.manager
+
+# Parameters for vdr-plugin-vdrmanager
+#
+#   For more details see:
+#   http://projects.vdr-developer.org/projects/vdr-manager/wiki
+
+# Set the port where the plugin is listen on
+#   allowed values: port number
+#   default: 6420
+#
+#VDRMANAGER_PORT="6420"
+
+# Set the password where the plugin is listen on
+#   allowed values: your_password
+#   default:
+#
+VDRMANAGER_PASS=""

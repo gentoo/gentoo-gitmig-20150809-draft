@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/vdr-vdrmanager
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrmanager/ChangeLog,v 1.1 2012/02/24 21:44:53 hd_brummy Exp $
+
+*vdr-vdrmanager-0.6 (24 Feb 2012)
+
+  24 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-vdrmanager-0.6.ebuild, +files/confd, +files/rc-addon.sh, +metadata.xml:
+  initial ebuild, thanks to M.Lange on bug 389543 and T.Rheinhold on IRC for
+  some inspiration
+
