@@ -1,4 +1,11 @@
 
+
+*cgminer-2.3.1.2 (24 Feb 2012)
+
+  24 Feb 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.0.ebuild,
+  +cgminer-2.3.1.2.ebuild:
+  Version bump
+
   23 Feb 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.0.ebuild:
   Add -nopie to CFLAGS for hardened because of PIC unfriendly asm
 
