@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/namespace-clean
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.17 2011/09/24 13:13:21 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.18 2012/02/24 10:54:09 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  namespace-clean-0.210.0.ebuild:
+  Stable for amd64, wrt bug #400307
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   namespace-clean-0.210.0.ebuild:
