@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pytextile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.26 2012/02/17 11:18:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.27 2012/02/24 14:17:19 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pytextile-2.1.5.ebuild:
+  x86 stable wrt bug #399957
 
   17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> pytextile-2.1.5.ebuild:
   Stable for amd64, wrt bug #399957
