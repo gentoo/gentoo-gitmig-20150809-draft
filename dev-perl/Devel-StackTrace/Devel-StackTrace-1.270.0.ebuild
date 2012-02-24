@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/Devel-StackTrace-1.270.0.ebuild,v 1.2 2011/09/24 13:15:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/Devel-StackTrace-1.270.0.ebuild,v 1.3 2012/02/24 10:06:17 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Devel-StackTrace module for perl"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="test"
 
 RDEPEND="virtual/perl-File-Spec"

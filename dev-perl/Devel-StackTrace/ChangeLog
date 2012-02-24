@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-StackTrace
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.74 2011/09/24 13:15:08 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.75 2012/02/24 10:06:17 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  Devel-StackTrace-1.270.0.ebuild:
+  Stable for amd64, wrt bug #400089
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   Devel-StackTrace-1.270.0.ebuild:
