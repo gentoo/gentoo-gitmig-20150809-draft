@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/leafnode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.38 2012/02/16 19:28:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.39 2012/02/24 20:51:06 ranger Exp $
+
+  24 Feb 2012; Brent Baude <ranger@gentoo.org> leafnode-1.11.8.ebuild:
+  Marking leafnode-1.11.8 ppc for bug 403017
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> leafnode-1.11.8.ebuild:
   x86 stable wrt bug #403017
