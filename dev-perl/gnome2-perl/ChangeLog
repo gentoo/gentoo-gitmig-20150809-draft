@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-perl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.48 2011/09/04 18:35:21 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.49 2012/02/24 10:49:23 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> gnome2-perl-1.42.0.ebuild:
+  Stable for amd64, wrt bug #400287
 
 *gnome2-perl-1.42.0 (04 Sep 2011)
 
