@@ -1,6 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-lqr/gimp-lqr-0.7.1.ebuild,v 1.4 2011/11/28 11:57:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-lqr/gimp-lqr-0.7.1.ebuild,v 1.5 2012/02/24 18:39:40 phajdan.jr Exp $
+
+EAPI="4"
+
+inherit autotools eutils
 
 MY_P="${PN}-plugin-${PV}"
 
@@ -19,8 +23,12 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_install() {
-	emake DESTDIR="${D}" install || die
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-no-deprecated.patch"
+	eautoreconf
+}
 
-	dodoc AUTHORS BUGS ChangeLog NEWS README TODO || die
+src_install() {
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 }
