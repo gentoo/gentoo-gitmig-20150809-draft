@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/extlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.13 2012/02/24 09:50:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.14 2012/02/24 20:10:57 ranger Exp $
+
+  24 Feb 2012; Brent Baude <ranger@gentoo.org> extlib-1.5.2.ebuild:
+  Marking extlib-1.5.2 ppc for bug 400023
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> extlib-1.5.2.ebuild:
   Stable for amd64, wrt bug #400023
