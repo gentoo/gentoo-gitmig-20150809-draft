@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jigdo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.25 2012/02/21 21:19:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.26 2012/02/24 19:43:53 ranger Exp $
+
+  24 Feb 2012; Brent Baude <ranger@gentoo.org> jigdo-0.7.3-r1.ebuild:
+  Marking jigdo-0.7.3-r1 ppc for bug 404839
 
   21 Feb 2012; Jeff Horelick <jdhore@gentoo.org> jigdo-0.7.3-r1.ebuild:
   marked x86 per bug 404839
