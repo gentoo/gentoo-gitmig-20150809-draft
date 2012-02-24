@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.11-r1.ebuild,v 1.5 2012/02/17 11:54:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.11-r1.ebuild,v 1.6 2012/02/24 14:45:30 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DEFAULTVT=vt7
 
 DESCRIPTION="X.Org xdm application"
 
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="consolekit ipv6 pam"
 
 RDEPEND="x11-apps/xrdb
