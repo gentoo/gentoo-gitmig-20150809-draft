@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/bmf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/ChangeLog,v 1.12 2011/11/20 13:38:42 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/ChangeLog,v 1.13 2012/02/24 11:05:04 eras Exp $
+
+*bmf-0.9.4-r2 (24 Feb 2012)
+
+  24 Feb 2012; Eray Aslan <eras@gentoo.org> +bmf-0.9.4-r2.ebuild,
+  +files/bmf-0.9.4_QA.patch:
+  Include correct mysql headers - bug #405481. Ifdef out unused code - QA.
 
 *bmf-0.9.4-r1 (20 Nov 2011)
 
