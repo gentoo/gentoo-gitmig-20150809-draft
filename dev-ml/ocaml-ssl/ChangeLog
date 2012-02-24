@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-ssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.20 2012/02/21 13:39:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.21 2012/02/24 14:31:24 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ocaml-ssl-0.4.6.ebuild:
+  x86 stable wrt bug #404657
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ocaml-ssl-0.4.6.ebuild:
   Stable for amd64, wrt bug #404657
