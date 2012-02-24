@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bmf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/ChangeLog,v 1.14 2012/02/24 14:48:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/ChangeLog,v 1.15 2012/02/24 20:47:58 ranger Exp $
+
+  24 Feb 2012; Brent Baude <ranger@gentoo.org> bmf-0.9.4-r1.ebuild:
+  Marking bmf-0.9.4-r1 ppc for bug 404775
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bmf-0.9.4-r1.ebuild:
   x86 stable wrt bug #404775
