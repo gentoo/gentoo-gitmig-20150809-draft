@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.8.2.ebuild,v 1.5 2011/10/30 18:06:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.8.2.ebuild,v 1.6 2012/02/24 23:26:57 tetromino Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ IUSE="nls xinerama"
 
 RDEPEND=">=dev-libs/librep-0.92.0
 	>=x11-libs/rep-gtk-0.90.4
-	>=x11-libs/pango-1.8.0
+	>=x11-libs/pango-1.8.0[X]
 	>=x11-libs/gtk+-2.12.0:2
 	nls? ( sys-devel/gettext )
 	xinerama? ( x11-libs/libXinerama )"
