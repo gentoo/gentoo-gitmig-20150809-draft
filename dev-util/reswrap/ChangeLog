@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/reswrap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.13 2011/08/25 21:50:11 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.14 2012/02/24 10:58:55 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> reswrap-4.0.0.ebuild:
+  Stable for amd64, wrt bug #400351
 
 *reswrap-4.0.0 (25 Aug 2011)
 
