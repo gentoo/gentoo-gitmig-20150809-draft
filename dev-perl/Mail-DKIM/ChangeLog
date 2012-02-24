@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-DKIM
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.52 2011/12/20 09:58:41 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.53 2012/02/24 10:23:35 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Mail-DKIM-0.390.0.ebuild:
+  Stable for amd64, wrt bug #400167
 
   20 Dec 2011; Naohiro Aota <naota@gentoo.org> Mail-DKIM-0.390.0.ebuild:
   Add ~x86-fbsd
