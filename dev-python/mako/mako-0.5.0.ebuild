@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.5.0.ebuild,v 1.2 2012/02/16 13:26:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.5.0.ebuild,v 1.3 2012/02/24 15:14:56 phajdan.jr Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://www.makotemplates.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="doc"
 
 RDEPEND=">=dev-python/beaker-1.1
