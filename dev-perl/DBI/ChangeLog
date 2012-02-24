@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.147 2012/01/31 18:40:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.148 2012/02/24 17:02:57 ranger Exp $
+
+  24 Feb 2012; Brent Baude <ranger@gentoo.org> DBI-1.617.0.ebuild:
+  Marking DBI-1.617.0 ppc for bug 400225
 
 *DBI-1.617.0 (31 Jan 2012)
 
