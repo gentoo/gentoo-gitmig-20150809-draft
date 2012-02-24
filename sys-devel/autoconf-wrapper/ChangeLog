@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.88 2011/10/02 19:39:07 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.89 2012/02/24 10:27:51 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> autoconf-wrapper-12.ebuild:
+  Stable for amd64, wrt bug #400501
 
 *autoconf-wrapper-12 (02 Oct 2011)
 
