@@ -1,15 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11-r1.ebuild,v 1.5 2012/02/24 23:31:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11-r1.ebuild,v 1.6 2012/02/24 23:47:17 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils flag-o-matic perl-module
 
 DESCRIPTION="dvd::rip is a graphical frontend for transcode"
 HOMEPAGE="http://www.exit1.org/dvdrip/"
 SRC_URI="http://www.exit1.org/dvdrip/dist/${P}.tar.gz"
 
-LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="ffmpeg fping mplayer ogg subtitles vcd vorbis xine xvid"
@@ -20,8 +19,7 @@ DEPEND=">=dev-perl/Event-ExecFlow-0.64
 	>=dev-perl/gtk2-ex-formfactory-0.65
 	>=dev-perl/libintl-perl-1.16
 	|| ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick )
-	|| ( <media-video/transcode-1.1.0_pre0[dvd,jpeg,mp3,mpeg,ogg,vorbis]
-		>=media-video/transcode-1.1.0_pre0[dvd,jpeg,mp3,ogg,vorbis] )"
+	>=media-video/transcode-1.1.0[dvd,jpeg,mp3,ogg,vorbis]"
 RDEPEND="${DEPEND}
 	x11-libs/gdk-pixbuf:2[jpeg]
 	x11-libs/gtk+:2
@@ -47,16 +45,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e 's:$(CC):$(CC) $(OTHERLDFLAGS):' src/Makefile || die
-	epatch "${FILESDIR}"/parallelmakefix.diff
+	sed -i -e 's:$(CC):$(CC) $(OTHERLDFLAGS):' src/Makefile || die #333739
+	epatch "${FILESDIR}"/${P}-fix_parallel_make.patch
 }
 
 src_install() {
 	newicon lib/Video/DVDRip/icon.xpm dvdrip.xpm
-	make_desktop_entry dvdrip dvd::rip dvdrip AudioVideo
-	DOCS="Changes Changes.0.46 Credits README TODO"
+	make_desktop_entry dvdrip dvd::rip
 
-	perl-module_src_install
+	mydoc="Changes* Credits README TODO" perl-module_src_install
 }
 
 pkg_postinst() {

@@ -1,5 +1,7 @@
---- src/Makefile	2011-05-12 08:47:37.601613368 -0400
-+++ Makefile.new	2011-05-12 08:52:59.412613500 -0400
+http://bugs.gentoo.org/266739
+
+--- src/Makefile
++++ src/Makefile
 @@ -3,10 +3,10 @@
  all:	../bin/dvdrip-splitpipe ../bin/dvdrip-progress
  
@@ -13,8 +15,8 @@
  
  clean:
  	rm -f dvdrip-splitpipe ../bin/dvdrip-splitpipe dvdrip-progress ../bin/dvdrip-progress
---- Makefile.PL	2009-12-19 08:42:17.000000000 -0500
-+++ Makefile.PL.new	2011-05-17 15:57:46.447000011 -0400
+--- Makefile.PL
++++ Makefile.PL
 @@ -52,7 +52,7 @@
  sub MY::postamble {
      '
