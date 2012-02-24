@@ -1,0 +1,72 @@
+From d7311f2dcedd96f5833acceb27f9d17275893e1e Mon Sep 17 00:00:00 2001
+From: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date: Thu, 25 Aug 2011 14:22:24 +0200
+Subject: Do not always save session with xfce4-logout-plugin (Bug #7915)
+
+Respect the value of the "/general/SaveOnExit" option from xfce4-session in the
+logout panel plugin as well.
+---
+ panel-plugin/Makefile.am          |    2 ++
+ panel-plugin/xfsm-logout-plugin.c |   14 +++++++++++++-
+ 2 files changed, 15 insertions(+), 1 deletions(-)
+
+diff --git a/panel-plugin/Makefile.am b/panel-plugin/Makefile.am
+index 0675e2e..fd0609b 100644
+--- a/panel-plugin/Makefile.am
++++ b/panel-plugin/Makefile.am
+@@ -18,6 +18,7 @@ libxfsm_logout_plugin_la_SOURCES = \
+ libxfsm_logout_plugin_la_CFLAGS = \
+ 	$(LIBX11_CFLAGS) \
+ 	$(LIBXFCE4PANEL_CFLAGS) \
++	$(XFCONF_CFLAGS) \
+ 	$(LIBXFCE4UTIL_CFLAGS) \
+ 	$(LIBXFCE4UI_CFLAGS) \
+ 	$(GTK_CFLAGS) \
+@@ -26,6 +27,7 @@ libxfsm_logout_plugin_la_CFLAGS = \
+ libxfsm_logout_plugin_la_LIBADD = \
+ 	$(LIBX11_LIBS) \
+ 	$(LIBXFCE4PANEL_LIBS) \
++	$(XFCONF_LIBS) \
+ 	$(LIBXFCE4UTIL_LIBS) \
+ 	$(LIBXFCE4UI_LIBS) \
+ 	$(GTK_LIBS) \
+diff --git a/panel-plugin/xfsm-logout-plugin.c b/panel-plugin/xfsm-logout-plugin.c
+index b8e25ab..12dec0f 100644
+--- a/panel-plugin/xfsm-logout-plugin.c
++++ b/panel-plugin/xfsm-logout-plugin.c
+@@ -43,6 +43,7 @@
+ 
+ #include <libxfce4util/libxfce4util.h>
+ #include <libxfce4ui/libxfce4ui.h>
++#include <xfconf/xfconf.h>
+ #include <libxfce4panel/libxfce4panel.h>
+ 
+ #include "xfsm-logout-plugin-ui.h"
+@@ -207,12 +208,23 @@ static void
+ xfsm_logout_plugin_show_confirmation_dialog(XfsmLogoutPlugin *logout_plugin,
+                                             XfsmShutdownType type)
+ {
++    GError *error = NULL;
++    XfconfChannel *channel;
+     gint resp = GTK_RESPONSE_ACCEPT;
+ 
+     g_return_if_fail(logout_plugin != NULL);
+     g_return_if_fail(type >= XFSM_SHUTDOWN_LOGOUT && type <= XFSM_SHUTDOWN_HIBERNATE);
+ 
+-    logout_plugin->allow_save = TRUE;
++    if (G_UNLIKELY (!xfconf_init (&error))) {
++        g_warning ("Unable to contact settings server: %s", error->message);
++        g_error_free (error);
++        logout_plugin->allow_save = TRUE;
++    }
++    else {
++        channel = xfconf_channel_get ("xfce4-session");
++        logout_plugin->allow_save = xfconf_channel_get_bool (channel, "/general/SaveOnExit", TRUE);
++        xfconf_shutdown ();
++    }
+ 
+     if(type != XFSM_SHUTDOWN_SUSPEND && type != XFSM_SHUTDOWN_HIBERNATE) {
+         GtkWidget *dialog, *topvbox, *hbox, *image, *label;
+-- 
+1.7.2.5
+
