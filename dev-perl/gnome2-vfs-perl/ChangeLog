@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.46 2011/09/04 11:21:21 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.47 2012/02/24 10:49:52 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> gnome2-vfs-perl-1.81.0.ebuild:
+  Stable for amd64, wrt bug #400289
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -gnome2-vfs-perl-1.081.ebuild:
   Cleanup
