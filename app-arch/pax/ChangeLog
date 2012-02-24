@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.18 2012/02/21 15:31:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.19 2012/02/24 14:37:09 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pax-3.4.12.16.ebuild:
+  x86 stable wrt bug #404599
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> pax-3.4.12.16.ebuild:
   Stable for HPPA (bug #404599).
