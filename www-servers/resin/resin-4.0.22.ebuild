@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.22.ebuild,v 1.3 2012/02/24 14:33:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.22.ebuild,v 1.4 2012/02/24 14:50:13 nelchael Exp $
 
 EAPI="2"
 
@@ -50,20 +50,21 @@ src_prepare() {
 	done;
 
 	# Respect LDFLAGS:
-	sed -i -e 's/-o/$(LDFLAGS) -o/' modules/c/src/resin_os/Makefile.in
+	sed -i -e 's/-o/$(LDFLAGS) -o/' modules/c/src/resin_os/Makefile.in || die
 
 	# No bundled JARs!
-	rm -f "${S}/modules/ext/"*.jar
-	rm -rf "${S}/project-jars"
+	rm -f "${S}/modules/ext/"*.jar || die
+	rm -rf "${S}/project-jars" || die
 
 	java-ant_bsfix_one "${S}/build.xml"
 	java-ant_bsfix_one "${S}/build-common.xml"
 
-	mkdir -p "${S}/m4"
+	mkdir -p "${S}/m4" || die
+	sed -i -e 's,-O2,,g' configure.ac || die
 	eautoreconf
 
 	# Symlink our libraries:
-	mkdir -p "${S}/gentoo-deps"
+	mkdir -p "${S}/gentoo-deps" || die
 	cd "${S}/gentoo-deps/"
 	java-pkg_jar-from --virtual javamail
 	java-pkg_jar-from glassfish-deployment-api-1.2
@@ -71,13 +72,13 @@ src_prepare() {
 	java-pkg_jar-from mojarra-1.2
 	java-pkg_jar-from jsr101
 	java-pkg_jar-from validation-api-1.0
-	ln -s $(java-config --jdk-home)/lib/tools.jar
+	ln -s $(java-config --jdk-home)/lib/tools.jar || die
 }
 
 src_configure() {
 	append-flags -fPIC -DPIC
 
-	chmod 755 "${S}/configure"
+	chmod 755 "${S}/configure" || die
 	econf --prefix=${RESIN_HOME} || die "econf failed"
 }
 
@@ -104,7 +105,7 @@ src_install() {
 		"${D}/etc/resin/resin.xml"
 
 	einfo "Fixing log directory ..."
-	rm -rf "${D}/${RESIN_HOME}/log"
+	rm -rf "${D}/${RESIN_HOME}/log" || die
 	keepdir /var/log/resin
 	dosym /var/log/resin ${RESIN_HOME}/log
 
@@ -118,7 +119,7 @@ src_install() {
 	sed -i -e "s,__RESIN_HOME__,${RESIN_HOME},g" "${D}/etc/init.d/resin"
 
 	einfo "Fixing location of jars ..."
-	rm -f "${S}/lib/tools.jar"
+	rm -f "${S}/lib/tools.jar" || die
 	java-pkg_dojar "${S}"/lib/*.jar
 	rm -fr "${D}/${RESIN_HOME}/lib"
 	dosym /usr/share/resin/lib ${RESIN_HOME}/lib
@@ -164,15 +165,15 @@ src_install() {
 	rm -fr "${D}/etc/resin/"*.orig
 
 	einfo "Fixing ownerships and permissions ..."
-	chown -R 0:root "${D}/"
-	chown -R resin:resin "${D}/etc/resin"
-	chown -R resin:resin "${D}/var/lib/resin"
-	chown -R resin:resin "${D}/var/log/resin"
+	fowners -R 0:root /
+	fowners -R resin:resin /etc/resin
+	fowners -R resin:resin /var/lib/resin
+	fowners -R resin:resin /var/log/resin
 
-	chmod 644 "${D}/etc/conf.d/resin"
-	chmod 755 "${D}/etc/init.d/resin"
-	chmod 750 "${D}/var/lib/resin"
-	chmod 750 "${D}/etc/resin"
+	fperms 644 /etc/conf.d/resin
+	fperms 755 /etc/init.d/resin
+	fperms 750 /var/lib/resin
+	fperms 750 /etc/resin
 }
 
 pkg_postinst() {
