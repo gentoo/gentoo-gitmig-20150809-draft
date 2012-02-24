@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-MIME
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.54 2011/09/19 01:13:43 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.55 2012/02/24 10:08:51 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Email-MIME-1.910.0.ebuild:
+  Stable for amd64, wrt bug #400099
 
 *Email-MIME-1.910.0 (19 Sep 2011)
 
