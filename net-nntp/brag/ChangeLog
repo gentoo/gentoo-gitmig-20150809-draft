@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/brag
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.5 2011/10/07 09:09:20 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.6 2012/02/24 20:50:02 ranger Exp $
+
+  24 Feb 2012; Brent Baude <ranger@gentoo.org> brag-1.4.3.ebuild:
+  Marking brag-1.4.3 ppc for bug 400457
 
 *brag-1.4.3 (07 Oct 2011)
 
