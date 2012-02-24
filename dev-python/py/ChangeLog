@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.104 2012/02/16 13:30:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.105 2012/02/24 15:12:44 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> py-1.4.5.ebuild:
+  x86 stable wrt bug #403867
 
   16 Feb 2012; Agostino Sarubbo <ago@gentoo.org> py-1.4.5.ebuild:
   Stable for amd64, wrt bug #403867
