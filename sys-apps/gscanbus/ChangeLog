@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gscanbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/ChangeLog,v 1.13 2012/02/23 15:42:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/ChangeLog,v 1.14 2012/02/24 14:28:03 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gscanbus-0.8.ebuild:
+  x86 stable wrt bug #404853
 
   22 Feb 2012; Brent Baude <ranger@gentoo.org> gscanbus-0.8.ebuild:
   Marking gscanbus-0.8 ppc for bug 404853
