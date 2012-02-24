@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.48 2012/02/21 23:40:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.49 2012/02/24 14:39:54 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> eyeD3-0.6.18.ebuild:
+  x86 stable wrt bug #404711
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> eyeD3-0.6.18.ebuild:
   Stable for HPPA (bug #404711).
