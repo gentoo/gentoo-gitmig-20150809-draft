@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/sshuttle-0.60.ebuild,v 1.3 2012/02/16 13:29:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/sshuttle-0.60.ebuild,v 1.4 2012/02/24 14:14:21 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~radhermit/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/xz-utils"
