@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.9.ebuild,v 1.5 2012/02/21 15:22:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.9.ebuild,v 1.6 2012/02/24 15:22:05 phajdan.jr Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://hg.linux-ha.org/glue/archive/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~x86"
+KEYWORDS="amd64 hppa x86"
 IUSE="doc large-cluster libnet static-libs"
 
 RDEPEND="app-arch/bzip2
