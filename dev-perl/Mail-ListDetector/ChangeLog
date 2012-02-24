@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-ListDetector
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.20 2011/09/04 11:21:04 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.21 2012/02/24 10:24:04 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  Mail-ListDetector-1.40.0.ebuild:
+  Stable for amd64, wrt bug #400169
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Mail-ListDetector-1.40.ebuild:
   Cleanup
