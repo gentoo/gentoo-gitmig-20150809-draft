@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LockFile-Simple/LockFile-Simple-0.207.0.ebuild,v 1.1 2011/08/30 11:15:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LockFile-Simple/LockFile-Simple-0.207.0.ebuild,v 1.2 2012/02/24 10:23:04 ago Exp $
 
 EAPI=4
 
@@ -12,5 +12,5 @@ DESCRIPTION="File locking module for Perl"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 GPL-3 )" # Artistic or GPL-2+
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
