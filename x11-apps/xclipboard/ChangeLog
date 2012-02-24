@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xclipboard
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclipboard/ChangeLog,v 1.43 2011/02/14 23:41:03 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclipboard/ChangeLog,v 1.44 2012/02/24 15:35:47 chithanh Exp $
+
+*xclipboard-1.1.2 (24 Feb 2012)
+
+  24 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xclipboard-1.1.2.ebuild:
+  Version bump.
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xclipboard-1.1.1.ebuild:
