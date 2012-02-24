@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wscr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/ChangeLog,v 1.21 2012/02/15 11:41:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/ChangeLog,v 1.22 2012/02/24 19:26:36 ranger Exp $
+
+  24 Feb 2012; Brent Baude <ranger@gentoo.org> wscr-1.2-r1.ebuild:
+  Marking wscr-1.2-r1 ppc for bug 403885
 
   15 Feb 2012; Pacho Ramos <pacho@gentoo.org> wscr-1.2-r1.ebuild:
   Fallback to gentoo.org webpage as upstream is dead.
