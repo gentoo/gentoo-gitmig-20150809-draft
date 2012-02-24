@@ -1,12 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.1.ebuild,v 1.3 2011/09/18 10:49:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.3.ebuild,v 1.1 2012/02/24 20:02:00 maksbotan Exp $
 
 EAPI=4
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
-inherit autotools-utils
+inherit  autotools-utils
 
 DESCRIPTION="Fast samples-based log normalization library"
 HOMEPAGE="http://www.liblognorm.com"
@@ -14,7 +12,7 @@ SRC_URI="http://www.liblognorm.com/files/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="debug static-libs"
 
 DEPEND="
@@ -22,14 +20,6 @@ DEPEND="
 	dev-libs/libee"
 RDEPEND="${DEPEND}"
 
-src_configure() {
-	local myeconfargs=(
-		$(use_enable debug)
-	)
-
-	autotools-utils_src_configure
-}
-
 src_compile() {
-	emake -j1
+	autotools-utils_src_compile -j1
 }
