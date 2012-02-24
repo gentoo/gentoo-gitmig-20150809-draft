@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.48 2012/01/01 00:20:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.49 2012/02/24 23:57:57 tetromino Exp $
+
+*gtranslator-2.90.8 (24 Feb 2012)
+
+  24 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtranslator-2.90.7.ebuild, +gtranslator-2.90.8.ebuild:
+  Version bump. Fix missing deps for eautoreconf (bug #405663, thanks to Piotr
+  Szymaniak for reporting).
 
   01 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gtranslator-2.90.7.ebuild:

@@ -1,18 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.90.7.ebuild,v 1.3 2012/02/24 23:57:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.90.8.ebuild,v 1.1 2012/02/24 23:57:57 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="gnome? 2"
-GNOME_TARBALL_SUFFIX="bz2"
 
-inherit autotools eutils gnome2 multilib python
+inherit gnome2 multilib python
 
 DESCRIPTION="An enhanced gettext po file editor for GNOME"
 HOMEPAGE="http://gtranslator.sourceforge.net/"
-SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2" # for eautoreconf
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -27,7 +25,7 @@ COMMON_DEPEND="
 	>=dev-libs/libxml2-2.4.12:2
 	>=dev-libs/json-glib-0.12.0
 	>=dev-libs/libpeas-1.0.0[gtk]
-	>=gnome-extra/libgda-4.2.0:4
+	gnome-extra/libgda:5
 	>=app-text/iso-codes-0.35
 
 	gnome-base/gsettings-desktop-schemas
@@ -48,9 +46,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2
-	doc? ( >=dev-util/gtk-doc-1 )
-
-	gnome-base/gnome-common"
+	doc? ( >=dev-util/gtk-doc-1 )"
 # eautoreconf requires gnome-base/gnome-common
 
 pkg_setup() {
@@ -68,14 +64,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Fix gtkspell detection, https://bugzilla.gnome.org/show_bug.cgi?id=660709
-	epatch "${FILESDIR}/${PN}-2.90.6-gtkspell3.patch"
-
-	# introspection.m4 needed for eautoreconf
-	mv "${WORKDIR}/introspection.m4" "${S}/m4/" || die
-
-	eautoreconf
-
 	gnome2_src_prepare
 
 	if use gnome; then
