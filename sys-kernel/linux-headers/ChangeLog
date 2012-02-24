@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.339 2012/02/13 12:42:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.340 2012/02/24 22:01:38 vapier Exp $
+
+*linux-headers-3.2-r1 (24 Feb 2012)
+
+  24 Feb 2012; Mike Frysinger <vapier@gentoo.org> +linux-headers-3.2-r1.ebuild:
+  Add fix from upstream #402393#1 by Arun Raghavan.
 
   13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> linux-headers-3.1.ebuild:
   ppc64 stable wrt #397903
