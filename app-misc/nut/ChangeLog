@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.33 2012/02/24 19:33:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.34 2012/02/24 23:43:14 radhermit Exp $
+
+  24 Feb 2012; Tim Harder <radhermit@gentoo.org>
+  -files/nut-16.5-build-fixes.patch, -nut-16.9.ebuild:
+  Remove old.
 
   24 Feb 2012; Brent Baude <ranger@gentoo.org> nut-17.4.ebuild:
   Marking nut-17.4 ppc for bug 404611
