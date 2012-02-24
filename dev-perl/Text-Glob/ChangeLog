@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Glob
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.39 2011/09/04 11:21:32 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.40 2012/02/24 10:40:09 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Text-Glob-0.90.0.ebuild:
+  Stable for amd64, wrt bug #400241
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Text-Glob-0.90.ebuild:
   Cleanup
