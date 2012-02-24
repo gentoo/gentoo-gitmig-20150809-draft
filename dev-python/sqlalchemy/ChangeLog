@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.73 2012/02/21 14:51:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.74 2012/02/24 15:25:08 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> sqlalchemy-0.7.4.ebuild:
+  x86 stable wrt bug #404981
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> sqlalchemy-0.7.4.ebuild:
   Stable for amd64, wrt bug #404981
