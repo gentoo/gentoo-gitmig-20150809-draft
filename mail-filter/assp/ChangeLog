@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/assp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.36 2011/07/28 21:26:17 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.37 2012/02/24 10:59:56 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> assp-1.8.5.9.ebuild:
+  Stable for amd64, wrt bug #400365
 
 *assp-1.9.1.3 (28 Jul 2011)
 
