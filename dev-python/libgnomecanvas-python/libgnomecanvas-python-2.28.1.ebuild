@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomecanvas-python/libgnomecanvas-python-2.28.1.ebuild,v 1.10 2011/12/18 02:48:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomecanvas-python/libgnomecanvas-python-2.28.1.ebuild,v 1.11 2012/02/24 08:37:23 patrick Exp $
 
 EAPI="1"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ G_PY_PN="gnome-python"
 G_PY_BINDINGS="gnomecanvas"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
 inherit gnome-python-common
 
