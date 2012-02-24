@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-4.1.0.ebuild,v 1.1 2012/01/17 06:21:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-4.1.0.ebuild,v 1.2 2012/02/24 09:37:06 patrick Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils eutils virtualx

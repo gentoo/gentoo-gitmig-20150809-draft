@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/enable
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.15 2012/01/17 06:21:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.16 2012/02/24 09:37:06 patrick Exp $
+
+  24 Feb 2012; Patrick Lauer <patrick@gentoo.org> enable-3.4.0.ebuild,
+  enable-3.4.1.ebuild, enable-4.0.0.ebuild, enable-4.1.0.ebuild:
+  Restricting pypy
 
 *enable-4.1.0 (17 Jan 2012)
 
