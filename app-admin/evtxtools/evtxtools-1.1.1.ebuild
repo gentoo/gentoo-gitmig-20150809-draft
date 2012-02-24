@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/evtxtools/evtxtools-1.0.8.ebuild,v 1.1 2011/10/30 16:03:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/evtxtools/evtxtools-1.1.1.ebuild,v 1.1 2012/02/24 19:46:35 maksbotan Exp $
 
 EAPI=3
 
