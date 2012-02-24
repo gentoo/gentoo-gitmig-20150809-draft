@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-CUPS
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/ChangeLog,v 1.34 2011/09/04 11:23:40 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/ChangeLog,v 1.35 2012/02/24 10:25:54 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Net-CUPS-0.610.0.ebuild:
+  Stable for amd64, wrt bug #400179
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Net-CUPS-0.61.ebuild:
   Cleanup
