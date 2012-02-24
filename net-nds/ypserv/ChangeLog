@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.57 2012/02/16 17:58:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.58 2012/02/24 19:25:24 ranger Exp $
+
+  24 Feb 2012; Brent Baude <ranger@gentoo.org> ypserv-2.26.ebuild:
+  Marking ypserv-2.26 ppc for bug 400453
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ypserv-2.26.ebuild:
   x86 stable wrt bug #400453
