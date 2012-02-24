@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.78 2012/02/08 19:29:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.79 2012/02/24 14:58:47 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> sptk-4.13-r1.ebuild:
+  x86 stable wrt bug #396857
 
   08 Feb 2012; Agostino Sarubbo <ago@gentoo.org> sptk-4.13-r1.ebuild:
   Stable for amd64, wrt bug #396857

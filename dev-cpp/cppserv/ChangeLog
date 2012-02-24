@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cppserv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.56 2012/02/08 19:30:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.57 2012/02/24 14:58:04 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> cppserv-0.2.14.ebuild:
+  x86 stable wrt bug #396857
 
   08 Feb 2012; Agostino Sarubbo <ago@gentoo.org> cppserv-0.2.14.ebuild:
   Stable for amd64, wrt bug #396857
