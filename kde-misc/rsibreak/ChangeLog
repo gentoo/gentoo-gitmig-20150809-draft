@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/rsibreak
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.39 2012/02/24 14:20:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.40 2012/02/24 16:27:49 johu Exp $
+
+  24 Feb 2012; Johannes Huber <johu@gentoo.org>
+  -files/rsibreak-0.10-gcc45.patch, -rsibreak-0.10.ebuild:
+  Remove old.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> rsibreak-0.11.ebuild:
   x86 stable wrt bug #404583
