@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-SAX
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.74 2012/02/21 14:27:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.75 2012/02/24 15:10:23 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> XML-SAX-0.990.0.ebuild:
+  x86 stable wrt bug #400269
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> XML-SAX-0.990.0.ebuild:
   Stable for amd64, wrt bug #400269
