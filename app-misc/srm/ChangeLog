@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/srm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.26 2012/02/19 10:32:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.27 2012/02/24 15:23:06 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> srm-1.2.11-r2.ebuild:
+  x86 stable wrt bug #404365
 
   19 Feb 2012; Agostino Sarubbo <ago@gentoo.org> srm-1.2.11-r2.ebuild:
   Stable for amd64, wrt bug #404365
