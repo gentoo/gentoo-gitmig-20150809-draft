@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libasyncns
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.23 2011/08/12 14:19:43 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.24 2012/02/24 09:32:53 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libasyncns-0.8-r2.ebuild:
+  Stable for amd64, wrt bug #400437
 
 *libasyncns-0.8-r2 (12 Aug 2011)
 
