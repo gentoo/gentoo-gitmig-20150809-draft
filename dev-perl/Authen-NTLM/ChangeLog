@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Authen-NTLM
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/ChangeLog,v 1.18 2011/09/13 17:47:48 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/ChangeLog,v 1.19 2012/02/24 09:55:00 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Authen-NTLM-1.90.0.ebuild:
+  Stable for amd64, wrt bug #400041
 
 *Authen-NTLM-1.90.0 (13 Sep 2011)
 
