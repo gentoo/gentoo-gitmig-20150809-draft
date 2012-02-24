@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-DBI
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.23 2011/09/04 11:21:03 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.24 2012/02/24 10:36:48 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Template-DBI-2.650.0.ebuild:
+  Stable for amd64, wrt bug #400225
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Template-DBI-2.65.ebuild:
   Cleanup
