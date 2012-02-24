@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.45 2012/02/21 14:49:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.46 2012/02/24 15:12:09 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qcomicbook-0.8.2.ebuild:
+  x86 stable wrt bug #404889
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> qcomicbook-0.8.2.ebuild:
   Stable for amd64, wrt bug #404889
