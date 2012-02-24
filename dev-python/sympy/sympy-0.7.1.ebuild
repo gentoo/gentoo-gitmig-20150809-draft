@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.1.ebuild,v 1.2 2011/08/08 18:37:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.1.ebuild,v 1.3 2012/02/24 10:09:26 grozin Exp $
 
 EAPI="3"
 
@@ -18,9 +18,8 @@ SRC_URI="http://sympy.googlecode.com/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-macos"
-IUSE="doc examples gtk imaging ipython latex mathml opengl pdf png test texmacs"
+IUSE="doc examples gtk imaging ipython latex mathml opengl pdf png pyglet test texmacs"
 
-# FIXME: pyglet has been removed and is now a soft dep. Find out how to deal with this.
 RDEPEND="
 	mathml? (
 		dev-libs/libxml2:2[python]
@@ -28,12 +27,14 @@ RDEPEND="
 		gtk? ( x11-libs/gtkmathview[gtk] ) )
 	latex? (
 		virtual/latex-base
+		dev-texlive/texlive-fontsextra
 		png? ( app-text/dvipng )
 		pdf? ( app-text/ghostscript-gpl ) )
 	texmacs? ( app-office/texmacs )
 	ipython? ( dev-python/ipython )
 	opengl? ( dev-python/pyopengl )
 	imaging? ( dev-python/imaging )
+	pyglet? ( dev-python/pyglet )
 	>=dev-python/pexpect-2.0
 	~dev-python/mpmath-0.17"
 DEPEND="${RDEPEND}

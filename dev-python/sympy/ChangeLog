@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sympy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.17 2011/08/08 18:37:35 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.18 2012/02/24 10:09:26 grozin Exp $
+
+  24 Feb 2012; Andrey Grozin <grozin@gentoo.org> sympy-0.7.1.ebuild,
+  metadata.xml:
+  USE flag pyglet added, closing bug #405315
 
   08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> sympy-0.7.1.ebuild:
   Restrict Jython ABIs. Fix dependencies. Call python_pkg_setup(). Patch by
