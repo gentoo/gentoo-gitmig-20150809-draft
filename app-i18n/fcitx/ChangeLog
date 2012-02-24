@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.37 2012/02/20 07:58:31 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.38 2012/02/24 01:49:21 qiaomuf Exp $
+
+*fcitx-4.2.0-r1 (24 Feb 2012)
+*fcitx-4.1.2-r1 (24 Feb 2012)
+
+  24 Feb 2012; Mu Qiao <qiaomuf@gentoo.org> -fcitx-4.1.2.ebuild,
+  +fcitx-4.1.2-r1.ebuild, -fcitx-4.2.0.ebuild, +fcitx-4.2.0-r1.ebuild:
+  Revision bump wrt bug 405459
 
 *fcitx-4.2.0 (20 Feb 2012)
 

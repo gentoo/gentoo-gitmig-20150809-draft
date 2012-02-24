@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.1.2.ebuild,v 1.2 2012/02/20 02:23:28 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.1.2-r1.ebuild,v 1.1 2012/02/24 01:49:21 qiaomuf Exp $
 
 EAPI="3"
 
@@ -28,6 +28,25 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	dev-util/pkgconfig"
 
+update_gtk_immodules() {
+	local GTK2_CONFDIR="/etc/gtk-2.0"
+	# bug #366889
+	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
+		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
+	fi
+	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
+
+	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
+		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
+	fi
+}
+
+update_gtk3_immodules() {
+	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
+		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
+	fi
+}
+
 src_configure() {
 	local mycmakeargs="
 		$(cmake-utils_use_enable cairo)
@@ -51,16 +70,17 @@ src_install() {
 }
 
 pkg_postinst() {
+	use gtk && update_gtk_immodules
+	use gtk3 && update_gtk3_immodules
 	elog
 	elog "You should export the following variables to use fcitx"
 	elog " export XMODIFIERS=\"@im=fcitx\""
 	elog " export XIM=fcitx"
 	elog " export XIM_PROGRAM=fcitx"
 	elog
-	elog "If you want to use WuBi ,ErBi or something else."
-	elog " mkdir -p ~/.fcitx"
-	elog " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
-	elog " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"
-	elog " cp /usr/share/fcitx/data/tables.conf ~/.fcitx"
-	elog
+}
+
+pkg_postrm() {
+	use gtk && update_gtk_immodules
+	use gtk3 && update_gtk3_immodules
 }
