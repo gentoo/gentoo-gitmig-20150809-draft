@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.74 2012/02/24 00:07:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.75 2012/02/24 02:17:07 chithanh Exp $
+
+  24 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.10.ebuild:
+  Don't download tarball from savannah.
 
 *gnash-0.8.10 (24 Feb 2012)
 

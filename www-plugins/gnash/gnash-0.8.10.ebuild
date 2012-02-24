@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10.ebuild,v 1.1 2012/02/24 00:07:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10.ebuild,v 1.2 2012/02/24 02:17:07 chithanh Exp $
 
 EAPI=4
 CMAKE_REQUIRED="never"
@@ -21,7 +21,7 @@ if [[ ${PV} = 9999* ]]; then
 else
 # Release tarball is b0rked, upstream #35612
 #	SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
-	SRC_URI="http://git.savannah.gnu.org/cgit/gnash.git/snapshot/gnash-0.8.10.tar.gz"
+	SRC_URI="mirror://gentoo/${P}.tar.gz"
 fi
 
 LICENSE="GPL-3"
