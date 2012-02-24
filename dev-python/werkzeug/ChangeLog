@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.30 2012/02/21 13:51:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.31 2012/02/24 14:41:06 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> werkzeug-0.8.2.ebuild:
+  x86 stable wrt bug #404721
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> werkzeug-0.8.2.ebuild:
   Stable for amd64, wrt bug #404721
