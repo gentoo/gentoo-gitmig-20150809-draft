@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI-Shell
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/ChangeLog,v 1.16 2011/09/04 11:21:33 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/ChangeLog,v 1.17 2012/02/24 10:02:04 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> DBI-Shell-11.950.0.ebuild:
+  Stable for amd64, wrt bug #400071
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -DBI-Shell-11.95.ebuild:
   Cleanup
