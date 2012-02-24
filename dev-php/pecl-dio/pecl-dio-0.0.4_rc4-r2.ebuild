@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dio/pecl-dio-0.0.4_rc4-r2.ebuild,v 1.1 2011/12/14 22:33:52 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dio/pecl-dio-0.0.4_rc4-r2.ebuild,v 1.2 2012/02/24 11:39:12 olemarkus Exp $
 
 EAPI="3"
 
@@ -9,6 +9,8 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="docs/examples/tutorial.txt ThanksTo.txt KnownIssues.txt"
 
+MY_PV=${PV/_rc/RC}
+S="${WORKDIR}/${PN/pecl-/}-${MY_PV}"
 inherit php-ext-pecl-r2
 
 KEYWORDS="~amd64 ~x86"
@@ -18,8 +20,6 @@ LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
 
-MY_PV=${PV/_rc/RC}
-S="${WORKDIR}/${PN/pecl-/}-${MY_PV}"
 
 src_configure() {
 	my_conf="--enable-dio --enable-shared"

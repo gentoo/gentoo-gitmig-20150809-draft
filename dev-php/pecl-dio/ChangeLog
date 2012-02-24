@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-dio
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dio/ChangeLog,v 1.1 2011/12/14 22:33:52 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dio/ChangeLog,v 1.2 2012/02/24 11:39:12 olemarkus Exp $
+
+  24 Feb 2012; Ole Markus With <olemarkus@gentoo.org>
+  pecl-dio-0.0.4_rc4-r2.ebuild:
+  Fixed emerge issue. This package should now be installable again
 
 *pecl-dio-0.0.4_rc4-r2 (05 Jan 2011)
 
