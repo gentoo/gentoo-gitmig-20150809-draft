@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.52 2011/10/11 01:26:08 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.53 2012/02/24 09:49:18 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> xinetd-2.3.14-r1.ebuild:
+  Stable for amd64, wrt bug #400493
 
 *xinetd-2.3.14-r1 (11 Oct 2011)
 
