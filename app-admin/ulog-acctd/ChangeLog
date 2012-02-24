@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulog-acctd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ChangeLog,v 1.15 2012/02/21 13:48:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ChangeLog,v 1.16 2012/02/24 14:21:13 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ulog-acctd-0.4.3-r1.ebuild:
+  x86 stable wrt bug #404593
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ulog-acctd-0.4.3-r1.ebuild:
   Stable for amd64, wrt bug #404593
