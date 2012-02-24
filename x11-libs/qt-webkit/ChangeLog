@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.131 2012/01/29 23:36:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.132 2012/02/24 19:02:42 pesa Exp $
+
+*qt-webkit-4.8.0-r1 (24 Feb 2012)
+
+  24 Feb 2012; Davide Pesavento <pesa@gentoo.org> +qt-webkit-4.8.0-r1.ebuild,
+  metadata.xml:
+  Add proper support for HTML5 audio/video via USE=gstreamer (bug #368047).
+  Remove phonon deps, it's nowhere used in QtWebKit. Remove dbus and kde USE
+  flags, no longer needed.
 
   29 Jan 2012; Joseph Jezak <josejx@gentoo.org> qt-webkit-4.7.4.ebuild:
   Marked ppc ppc64 stable for bug #390963.
