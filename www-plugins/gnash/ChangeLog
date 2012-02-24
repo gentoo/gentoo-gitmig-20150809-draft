@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.73 2012/02/01 17:14:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.74 2012/02/24 00:07:21 chithanh Exp $
+
+*gnash-0.8.10 (24 Feb 2012)
+
+  24 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +gnash-0.8.10.ebuild, +files/gnash-0.8.10-amf-include.patch,
+  +files/gnash-0.8.10-gettext-macro.patch, metadata.xml:
+  Version bump, bug #403177. Force python-2 during build, bug #392969.
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> gnash-0.8.9-r2.ebuild:
   Mistakenly commited. Back to ~ppc gnash-0.8.9-r2
