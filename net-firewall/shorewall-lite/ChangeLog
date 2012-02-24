@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.94 2012/01/23 13:40:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.95 2012/02/24 18:52:52 constanze Exp $
+
+*shorewall-lite-4.5.0.1 (24 Feb 2012)
+
+  24 Feb 2012; Constanze Hausner <constanze@gentoo.org>
+  +shorewall-lite-4.5.0.1.ebuild, files/shorewall-lite:
+  Version Bump
 
   23 Jan 2012; Tobias Klausmann <klausman@gentoo.org>
   shorewall-lite-4.4.23.2.ebuild:

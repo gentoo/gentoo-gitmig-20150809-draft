@@ -1,9 +1,10 @@
 #!/sbin/runscript
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/files/shorewall6-lite.initd,v 1.1 2009/01/22 08:44:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/files/shorewall6-lite.initd,v 1.2 2012/02/24 18:54:19 constanze Exp $
 
-opts="start stop restart clear reset refresh"
+extra_commands="check clear"
+extra_started_commands="refresh reset"
 
 depend() {
 	need net
