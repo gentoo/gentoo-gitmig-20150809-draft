@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.7 2012/02/14 03:14:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.8 2012/02/24 22:46:23 floppym Exp $
 
 EAPI="4"
 
@@ -18,16 +18,28 @@ IUSE="debug static-libs"
 
 DEPEND=">=sys-kernel/spl-${PV}"
 RDEPEND="${DEPEND}
-	!sys-fs/zfs-fuse"
+	!sys-fs/zfs-fuse
+	sys-apps/util-linux
+	test? ( sys-fs/mdadm )"
 
 AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 pkg_setup() {
-	CONFIG_CHECK="!PREEMPT !DEBUG_LOCK_ALLOC"
-	kernel_is ge 2 6 32 || die "Linux 2.6.32 or newer required"
+	CONFIG_CHECK="!PREEMPT
+		!DEBUG_LOCK_ALLOC
+		ZLIB_DEFLATE
+		ZLIB_INFLATE
+		BLK_DEV_LOOP"
+	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 	check_extra_config
+}
+
+src_prepare() {
+	# Workaround for hard coded path
+	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/common.sh.in || die
+	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -41,4 +53,14 @@ src_configure() {
 		$(use_enable debug)
 	)
 	autotools-utils_src_configure
+}
+
+src_test() {
+	if [[ $UID -ne 0 ]]
+	then
+		ewarn "Cannot run make check tests with FEATURES=userpriv."
+		ewarn "Skipping make check tests."
+	else
+		autotools-utils_src_test
+	fi
 }
