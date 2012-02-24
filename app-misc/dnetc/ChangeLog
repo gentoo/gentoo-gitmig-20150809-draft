@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dnetc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.63 2011/10/23 06:16:30 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.64 2012/02/24 09:36:01 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> dnetc-2.9108.517.ebuild:
+  Stable for amd64, wrt bug #399939
 
   23 Oct 2011; Robin H. Johnson <robbat2@gentoo.org> -dnetc-2.9002.479.ebuild,
   -dnetc-2.9003.481-r1.ebuild:
