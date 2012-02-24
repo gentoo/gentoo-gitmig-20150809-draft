@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20111211.ebuild,v 1.3 2012/02/16 13:28:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20111211.ebuild,v 1.4 2012/02/24 14:47:35 phajdan.jr Exp $
 
 EAPI=4
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="aac alsa curl debug ffmpeg flac jack libsamplerate mad modplug musepack oss sid sndfile speex timidity +unicode vorbis wavpack"
 
 # libltdl from libtool is used at runtime
