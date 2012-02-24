@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libecap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.15 2011/11/28 02:38:48 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.16 2012/02/24 09:36:54 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libecap-0.0.3.ebuild:
+  Stable for amd64, wrt bug #400439
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org> libecap-0.0.3.ebuild,
   libecap-0.2.0.ebuild:
