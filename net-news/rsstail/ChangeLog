@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rsstail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstail/ChangeLog,v 1.9 2011/09/26 21:22:14 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstail/ChangeLog,v 1.10 2012/02/24 09:37:16 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> rsstail-1.8.ebuild:
+  Stable for amd64, wrt bug #400455
 
 *rsstail-1.8 (26 Sep 2011)
 
