@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.0-r1.ebuild,v 1.1 2012/02/24 01:49:21 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.0-r2.ebuild,v 1.1 2012/02/24 06:23:07 qiaomuf Exp $
 
 EAPI="3"
 
@@ -45,6 +45,11 @@ update_gtk3_immodules() {
 	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
 	fi
+}
+
+src_prepare() {
+	# fix a bug when compiling without pango
+	epatch "${FILESDIR}/${P}-fix-pango.patch"
 }
 
 src_configure() {
