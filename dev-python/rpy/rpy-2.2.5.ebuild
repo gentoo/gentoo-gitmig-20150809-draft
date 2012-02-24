@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.2.5.ebuild,v 1.1 2011/12/29 08:59:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.2.5.ebuild,v 1.2 2012/02/24 07:52:31 patrick Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.5 3.* *-jython 2.7-pypy-*"
 
 inherit distutils eutils
 
@@ -25,7 +26,6 @@ RDEPEND=">=dev-lang/R-2.8
 	!<=dev-python/rpy-1.0.2-r2"
 DEPEND="${RDEPEND}"
 
-RESTRICT_PYTHON_ABIS="3.*"
 PYTHON_MODNAME="${MY_PN}"
 
 S="${WORKDIR}/${MY_P}"
