@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/ansi-terminal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.10 2011/08/01 07:45:31 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.11 2012/02/24 09:40:28 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ansi-terminal-0.5.5.ebuild:
+  Stable for amd64, wrt bug #399967
 
 *ansi-terminal-0.5.5 (01 Aug 2011)
 
