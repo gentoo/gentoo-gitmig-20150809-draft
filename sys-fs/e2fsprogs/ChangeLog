@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.242 2012/02/22 18:40:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.243 2012/02/24 17:20:34 vapier Exp $
+
+*e2fsprogs-1.42.1 (24 Feb 2012)
+
+  24 Feb 2012; Mike Frysinger <vapier@gentoo.org> +e2fsprogs-1.42.1.ebuild,
+  +files/e2fsprogs-1.42.1-libext2fs-config.patch,
+  +files/e2fsprogs-1.42.1-libext2fs-gettimeofday.patch:
+  Version bump #405331 by teidakankan.
 
   22 Feb 2012; Brent Baude <ranger@gentoo.org> e2fsprogs-1.42.ebuild:
   Marking e2fsprogs-1.42 ppc for bug 403405
