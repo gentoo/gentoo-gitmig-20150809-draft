@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77-r1.ebuild,v 1.1 2011/08/13 12:03:15 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77-r1.ebuild,v 1.2 2012/02/24 09:39:26 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.corpit.ru/mjt/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ia64 ~ppc ~x86"
 IUSE="static-libs"
 RESTRICT="test"
 
