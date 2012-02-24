@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypesgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.23 2012/02/20 15:16:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.24 2012/02/24 19:33:22 marienz Exp $
+
+  24 Feb 2012; Marien Zwart <marienz@gentoo.org> ctypesgen-0_p72.ebuild:
+  Unrestrict pypy, see bug #403833. Thanks to Arfrever on IRC for reporting.
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> ctypesgen-0_p72.ebuild:
   Restricting pypy #403833
