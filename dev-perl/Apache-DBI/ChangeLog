@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-DBI
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.62 2011/10/22 08:13:57 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.63 2012/02/24 09:51:42 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Apache-DBI-1.110.0.ebuild:
+  Stable for amd64, wrt bug #400027
 
 *Apache-DBI-1.110.0 (22 Oct 2011)
 
