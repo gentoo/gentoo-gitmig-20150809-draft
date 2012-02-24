@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/yaboot-static
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.25 2011/04/10 14:24:22 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.26 2012/02/24 15:18:55 josejx Exp $
+
+*yaboot-static-1.3.17 (24 Feb 2012)
+*yaboot-static-1.3.16-r1 (24 Feb 2012)
+
+  24 Feb 2012; Joseph Jezak <josejx@gentoo.org> -yaboot-static-1.3.16.ebuild,
+  +yaboot-static-1.3.16-r1.ebuild, +yaboot-static-1.3.17.ebuild:
+  Fixed the file issue for 1.3.16, bumped to the new version.
 
   10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> yaboot-static-1.3.14-r1.ebuild,
   yaboot-static-1.3.16.ebuild:
