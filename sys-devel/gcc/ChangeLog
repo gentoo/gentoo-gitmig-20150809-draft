@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.852 2012/02/22 18:34:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.853 2012/02/24 15:13:53 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcc-4.5.3-r2.ebuild:
+  x86 stable wrt bug #402847
 
   22 Feb 2012; Jeroen Roovers <jer@gentoo.org> gcc-4.5.3-r2.ebuild:
   Stable for HPPA (bug #402847).
