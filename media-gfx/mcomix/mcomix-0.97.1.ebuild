@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.97.1.ebuild,v 1.1 2012/02/19 02:36:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.97.1.ebuild,v 1.2 2012/02/24 04:52:06 dirtyepic Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS=1
+PYTHON_USE_WITH="sqlite"
 
 inherit distutils fdo-mime python
 
@@ -24,7 +25,6 @@ RDEPEND="${DEPEND}
 	>=dev-python/imaging-1.1.5
 	>=dev-python/pygtk-2.14
 	virtual/jpeg
-	|| ( dev-lang/python[sqlite] dev-python/pysqlite )
 	!media-gfx/comix"
 
 RESTRICT_PYTHON_ABIS="3.*"

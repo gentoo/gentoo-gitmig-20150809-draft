@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/mcomix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.9 2012/02/19 02:36:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.10 2012/02/24 04:52:06 dirtyepic Exp $
+
+  24 Feb 2012; Ryan Hill <dirtyepic@gentoo.org> mcomix-0.97.1.ebuild:
+  Use PYTHON_USE_WITH to check for sqlite availability and drop alternate
+  dependency on pysqlite due to limitations of python.eclass wrt any-of depends
+  (bug #405133).
 
 *mcomix-0.97.1 (19 Feb 2012)
 
