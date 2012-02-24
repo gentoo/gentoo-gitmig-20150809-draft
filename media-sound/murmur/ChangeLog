@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.27 2012/02/20 19:10:16 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.28 2012/02/24 16:51:25 tgurr Exp $
+
+*murmur-1.2.3-r3 (24 Feb 2012)
+
+  24 Feb 2012; Timo Gurr <tgurr@gentoo.org> -murmur-1.2.3-r2.ebuild,
+  +murmur-1.2.3-r3.ebuild:
+  Revbump removing mDNSResponder wrt upcomming last rite, bug #405393.
 
 *murmur-1.2.3-r2 (20 Feb 2012)
 
