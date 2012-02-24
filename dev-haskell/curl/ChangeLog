@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/curl/ChangeLog,v 1.5 2012/01/04 07:21:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/curl/ChangeLog,v 1.6 2012/02/24 09:42:52 ago Exp $
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> curl-1.3.7.ebuild:
+  Stable for amd64, wrt bug #399977
 
   04 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/curl-1.3.5-ghc-7.patch, curl-1.3.5.ebuild:
