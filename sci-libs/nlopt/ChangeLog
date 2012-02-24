@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/nlopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.13 2012/02/22 10:09:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.14 2012/02/24 15:09:03 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nlopt-2.2.4.ebuild:
+  x86 stable wrt bug #386953
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> nlopt-2.2.4.ebuild:
   Restricting pypy and jython

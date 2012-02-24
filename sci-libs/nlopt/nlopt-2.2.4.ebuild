@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.5 2012/02/22 10:09:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.6 2012/02/24 15:09:03 phajdan.jr Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://ab-initio.mit.edu/nlopt/"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 MIT"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE="cxx guile octave python static-libs"
 
