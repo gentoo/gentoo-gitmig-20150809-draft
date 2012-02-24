@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.27 2012/02/21 11:37:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.28 2012/02/24 14:43:55 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> monkeyd-0.31.0.ebuild:
+  x86 stable wrt bug #403717
 
 *monkeyd-0.33.0 (21 Feb 2012)
 
