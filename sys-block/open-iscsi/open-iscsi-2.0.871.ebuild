@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.ebuild,v 1.4 2011/11/05 23:03:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.ebuild,v 1.5 2012/02/25 06:30:10 robbat2 Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
