@@ -1,6 +1,11 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.23 2012/02/12 16:49:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.24 2012/02/25 23:03:46 aballier Exp $
+
+  25 Feb 2012; Alexis Ballier <aballier@gentoo.org> bombono-dvd-1.0.0.ebuild,
+  +files/bombono-dvd-1.0.0-ffmpeg.patch:
+  backport fixes for ffmpeg-0.10 from 1.2.1 as it 1.2.1 has a ~arch boost dep,
+  so its simpler just to fix stable, bug #405751
 
   12 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -bombono-dvd-1.0.2.ebuild, -bombono-dvd-1.2.0-r1.ebuild:

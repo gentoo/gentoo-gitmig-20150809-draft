@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.0.0.ebuild,v 1.7 2011/05/09 19:48:37 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.0.0.ebuild,v 1.8 2012/02/25 23:03:46 aballier Exp $
 
 EAPI=2
 
@@ -33,6 +33,8 @@ RDEPEND="
 
 DEPEND=">=dev-util/scons-0.96.1
 	${RDEPEND}"
+
+PATCHES=( "${FILESDIR}/${PN}-1.0.0-ffmpeg.patch" )
 
 src_compile() {
 	append-flags -DBOOST_FILESYSTEM_VERSION=2
