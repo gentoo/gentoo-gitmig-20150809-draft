@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4-r1.ebuild,v 1.3 2012/02/24 20:09:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4-r1.ebuild,v 1.4 2012/02/25 00:02:44 ssuominen Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -12,44 +12,42 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE="dvdr flac libnotify mp3 vorbis"
 
-RDEPEND="x11-libs/gtk+:2
-	gnome-base/libgnomeui
-	dev-libs/libxml2:2
-	gnome-base/libglade:2.0
-	media-libs/gstreamer:0.10
-	x11-libs/cairo
-	app-cdr/cdrdao
+COMMON_DEPEND="app-cdr/cdrdao
+	dev-libs/libxml2
+	>=gnome-base/libglade-2
+	>=gnome-base/libgnomeui-2
+	=media-libs/gstreamer-0.10*
 	virtual/cdrtools
+	x11-libs/cairo
+	x11-libs/gtk+:2
 	dvdr? ( app-cdr/dvd+rw-tools )
-	flac? ( media-plugins/gst-plugins-flac
-		media-libs/gst-plugins-good )
-	libnotify? ( x11-libs/libnotify )
-	mp3? ( media-plugins/gst-plugins-mad
-		media-libs/gst-plugins-good )
-	vorbis? ( media-plugins/gst-plugins-vorbis
-		media-libs/libogg
-		media-libs/gst-plugins-good )"
-DEPEND="${RDEPEND}
+	libnotify? ( x11-libs/libnotify )"
+RDEPEND="${COMMON_DEPEND}
+	=media-libs/gst-plugins-good-0.10*
+	flac? ( =media-plugins/gst-plugins-flac-0.10* )
+	mp3? ( =media-plugins/gst-plugins-mad-0.10* )
+	vorbis? ( =media-plugins/gst-plugins-vorbis-0.10* )"
+DEPEND="${COMMON_DEPEND}
 	app-text/rarian
 	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {
-	G2CONF="${G2CONF}
-		--disable-dependency-tracking
-		$(use_enable libnotify)"
+	G2CONF="$(use_enable libnotify)"
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch \
+	epatch \
+		"${FILESDIR}"/${P}-libnotify-0.7.patch \
 		"${FILESDIR}"/${P}-ldadd.patch \
 		"${FILESDIR}"/${P}-seldata.patch \
 		"${FILESDIR}"/${P}-mimetype.patch \
 		"${FILESDIR}"/${P}-implicits.patch
+
 	gnome2_src_prepare
 }
 
@@ -58,5 +56,6 @@ src_install() {
 		gnomebakerdocdir=/usr/share/doc/${P} \
 		docdir=/usr/share/gnome/help/${PN}/C \
 		gnomemenudir=/usr/share/applications
-	rm -rf "${D}"/usr/share/doc/${P}/*.make "${D}"/var
+
+	rm -rf "${ED}"/usr/share/doc/${P}/*.make "${ED}"/var
 }
