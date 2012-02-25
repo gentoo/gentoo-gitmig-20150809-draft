@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.5 2011/10/18 09:43:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.6 2012/02/25 14:30:55 serkan Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps ant-contrib"
@@ -51,6 +51,7 @@ java_prepare() {
 	if ! use spell; then
 		rm -R plugins/{zemberek,aspell} || die "spellcheck plugin removal failed"
 	fi
+	sed -i -e "s/CODEC_TYPE/AVMEDIA_TYPE/g" $(find resources/ffmpeg/ffdecode -name "*.c")
 }
 
 src_compile() {
