@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Reload
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Reload/ChangeLog,v 1.13 2012/02/24 09:52:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Reload/ChangeLog,v 1.14 2012/02/25 17:43:03 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Apache-Reload-0.110.0.ebuild:
+  Stable on alpha, bug #400029
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Apache-Reload-0.110.0.ebuild:
   Stable for amd64, wrt bug #400029
