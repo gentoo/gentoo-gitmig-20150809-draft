@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6.ebuild,v 1.7 2012/02/25 21:53:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6.ebuild,v 1.8 2012/02/25 22:05:03 aballier Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="compressed-lumas dv debug ffmpeg frei0r gtk jack kde libsamplerate melt
-mmx qt4 quicktime sdl sse sse2 vorbis xine xml lua python ruby vdpau" # java perl php tcl
+mmx qt4 quicktime sdl sse sse2 swfdec vorbis xine xml lua python ruby vdpau" # java perl php tcl
 
 RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 	dv? ( >=media-libs/libdv-0.104 )
@@ -31,6 +31,7 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 		media-libs/libexif
 		x11-libs/pango )
 	quicktime? ( media-libs/libquicktime )
+	swfdec? ( media-libs/swfdec )
 	xine? ( >=media-libs/xine-lib-1.1.2_pre20060328-r7 )
 	qt4? ( x11-libs/qt-gui:4 x11-libs/qt-svg:4 media-libs/libexif )
 	!media-libs/mlt++
@@ -79,6 +80,7 @@ src_configure() {
 		$(use_enable dv)
 		$(use_enable sse)
 		$(use_enable sse2)
+		$(use_enable swfdec)
 		$(use_enable gtk gtk2)
 		$(use_enable vorbis)
 		$(use_enable sdl)
