@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tdb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.38 2011/07/11 00:16:00 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.39 2012/02/25 16:37:14 ago Exp $
+
+  25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> tdb-1.2.9.ebuild:
+  Stable for amd64, wrt bug #405617
 
   11 Jul 2011; Mark Loeser <halcy0n@gentoo.org> tdb-1.2.7-r1.ebuild:
   Stable on ppc/ppc64; bug #361055
