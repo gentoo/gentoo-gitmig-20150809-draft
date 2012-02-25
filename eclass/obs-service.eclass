@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.1 2011/09/16 15:49:19 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.2 2012/02/25 22:56:56 miska Exp $
 
 # @ECLASS: obs-service.eclass
 # @MAINTAINER:
@@ -65,13 +65,25 @@ for i in ${ADDITIONAL_FILES}; do
 	SRC_URI+=" ${OBS_URI}/${i}"
 done
 
-S="${WORKDIR}"
-
-# @FUNCTION: obs-service_src_configure
+# @FUNCTION: obs-service_src_unpack
 # @DESCRIPTION:
-# Does nothing. Files are not compressed.
+# Just copy files. Files are not compressed.
 obs-service_src_unpack() {
 	debug-print-function ${FUNCNAME} "$@"
+	cd "${DISTDIR}"
+	mkdir -p "${S}"
+	cp ${A} "${S}"
+}
+
+# @FUNCTION: obs-service_src_prepare
+# @DESCRIPTION:
+# Replaces all /usr/lib/build directories with /usr/share/suse-build to reflect
+# where suse-build is installed in Gentoo.
+obs-service_src_prepare() {
+	debug-print-function ${FUNCNAME} "$@"
+	debug-print "Replacing all paths to find suse-build in Gentoo"
+	find "${S}" -type f -exec \
+		sed -i 's|/usr/lib/build|/usr/share/suse-build|g' {} +
 }
 
 # @FUNCTION: obs-service_src_install
@@ -81,17 +93,17 @@ obs-service_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 	debug-print "Installing service \"${OBS_SERVICE_NAME}\""
 	exeinto /usr/lib/obs/service
-	doexe "${DISTDIR}"/${OBS_SERVICE_NAME}
+	doexe "${S}"/${OBS_SERVICE_NAME}
 	insinto /usr/lib/obs/service
-	doins "${DISTDIR}"/${OBS_SERVICE_NAME}.service
+	doins "${S}"/${OBS_SERVICE_NAME}.service
 	if [[ -n ${ADDITIONAL_FILES} ]]; then
 		debug-print "Installing following additional files:"
 		debug-print "	${ADDITIONAL_FILES}"
 		exeinto /usr/lib/obs/service/${OBS_SERVICE_NAME}.files
 		for i in ${ADDITIONAL_FILES}; do
-			doexe "${DISTDIR}"/${i}
+			doexe "${S}"/${i}
 		done
 	fi
 }
 
-EXPORT_FUNCTIONS src_install src_unpack
+EXPORT_FUNCTIONS src_install src_prepare src_unpack

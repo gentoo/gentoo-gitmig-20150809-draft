@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.142 2012/02/25 06:26:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.143 2012/02/25 22:56:56 miska Exp $
+
+  25 Feb 2012; Michal Hrusecky <miska@gentoo.org> obs-service.eclass:
+  Improved obs-service eclass to fix paths to suse-build automatically
 
   25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> linux-mod.eclass:
   Bug #404193: Depend on virtual/modutils instead of
