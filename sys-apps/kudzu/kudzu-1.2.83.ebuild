@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.7 2010/05/24 18:39:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.8 2012/02/25 03:32:18 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
 inherit eutils multilib python rpm toolchain-funcs
 
@@ -31,7 +32,6 @@ RDEPEND="dev-lang/python
 	!sys-libs/libkudzu"
 DEPEND="dev-libs/popt
 	>=sys-apps/pciutils-2.2.4"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
