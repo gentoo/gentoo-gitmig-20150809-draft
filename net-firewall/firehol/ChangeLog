@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firehol
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.45 2011/04/24 21:01:05 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.46 2012/02/25 06:34:01 robbat2 Exp $
+
+  25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> firehol-1.273-r1.ebuild:
+  Bug #405687: Depend on virtual/modutils instead of sys-apps/module-init-tools.
 
   24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> firehol-1.273-r1.ebuild:
   Replace dependency on virtual/modutils, bug 358891.
