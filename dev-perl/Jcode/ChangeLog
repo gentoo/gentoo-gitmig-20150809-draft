@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Jcode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.49 2012/02/24 10:21:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.50 2012/02/25 17:57:09 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> Jcode-2.70.0.ebuild:
+  Stable on alpha, bug #400155
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Jcode-2.70.0.ebuild:
   Stable for amd64, wrt bug #400155
