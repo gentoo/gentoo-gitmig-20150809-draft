@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Uplevel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.70 2012/02/24 16:52:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.71 2012/02/25 18:04:04 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Sub-Uplevel-0.220.0.ebuild:
+  Stable on alpha, bug #400223
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> Sub-Uplevel-0.220.0.ebuild:
   Stable for HPPA (bug #400223).
