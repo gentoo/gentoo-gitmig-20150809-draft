@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/rescan-scsi-bus-1.48.ebuild,v 1.1 2011/02/02 09:30:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/rescan-scsi-bus-1.48.ebuild,v 1.2 2012/02/25 06:24:37 robbat2 Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=sys-apps/sg3_utils-1.24
-		 sys-apps/module-init-tools
+		 virtual/modutils
 		 app-shells/bash"
 
 S="${WORKDIR}"
