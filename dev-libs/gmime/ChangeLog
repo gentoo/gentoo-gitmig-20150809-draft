@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.178 2012/01/20 10:21:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.179 2012/02/25 13:07:16 pacho Exp $
+
+*gmime-2.4.32 (25 Feb 2012)
+*gmime-2.6.6 (25 Feb 2012)
+
+  25 Feb 2012; Pacho Ramos <pacho@gentoo.org> +gmime-2.4.32.ebuild,
+  +gmime-2.6.6.ebuild, -gmime-2.4.30.ebuild, -gmime-2.6.3.ebuild:
+  Version bump, drop old.
 
 *gmime-2.6.4 (20 Jan 2012)
 *gmime-2.4.31 (20 Jan 2012)

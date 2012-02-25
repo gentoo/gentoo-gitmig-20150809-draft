@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.3.ebuild,v 1.1 2011/12/31 18:55:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.6.ebuild,v 1.1 2012/02/25 13:07:16 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2 eutils mono libtool
+inherit gnome2 eutils mono
 
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/"
@@ -29,6 +29,9 @@ DEPEND="${RDEPEND}
 		app-text/docbook-sgml-utils )
 	mono? ( dev-dotnet/gtk-sharp-gapi:2 )"
 
+#	dev-util/gtk-doc-am"
+# eautoreconf requires dev-util/gtk-doc-am
+
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS PORTING README TODO"
 	G2CONF="${G2CONF}
@@ -36,30 +39,6 @@ pkg_setup() {
 		--disable-strict-parser
 		$(use_enable mono)
 		$(use_enable static-libs static)"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	if use doc ; then
-		# db2html should be docbook2html, upstream bug #667070
-		sed -i -e 's:db2html:docbook2html:' \
-			configure.ac configure || die "sed failed (1)"
-		sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \
-			docs/tutorial/Makefile.am docs/tutorial/Makefile.in \
-			|| die "sed failed (2)"
-		# Fix doc targets (bug #97154), upstream bug #667071
-		sed -i -e 's!\<\(tmpl-build.stamp\): !\1 $(srcdir)/tmpl/*.sgml: !' \
-			gtk-doc.make docs/reference/Makefile.in || die "sed failed (3)"
-	fi
-
-	# Use correct libdir for mono assembly, upstream bug #667072
-	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
-		   -e 's:^prefix=:exec_prefix=:' \
-		   -e 's:prefix)/lib:libdir):' \
-		mono/gmime-sharp.pc.in mono/Makefile.{am,in} || die "sed failed (4)"
-
-	elibtoolize
 }
 
 src_compile() {
@@ -78,9 +57,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}/tutorial
 		doins docs/tutorial/html/*
 	fi
-
-	# rename these two, so they don't conflict with app-arch/sharutils
-	# (bug #70392)	Ticho, 2004-11-10, upstream bug #667073
-	mv "${ED}/usr/bin/uuencode" "${ED}/usr/bin/gmime-uuencode-${SLOT}" || die
-	mv "${ED}/usr/bin/uudecode" "${ED}/usr/bin/gmime-uudecode-${SLOT}" || die
 }
