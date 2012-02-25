@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6.ebuild,v 1.6 2012/02/25 21:44:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6.ebuild,v 1.7 2012/02/25 21:53:52 aballier Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -71,8 +71,6 @@ src_prepare() {
 }
 
 src_configure() {
-	use vdpau || export MLT_NO_VDPAU=1
-
 	tc-export CC CXX
 
 	local myconf="--enable-gpl
@@ -89,6 +87,7 @@ src_configure() {
 		$(use_enable frei0r)
 		$(use_enable melt)
 		$(use_enable libsamplerate resample)
+		$(use vdpau && echo ' --avformat-vdpau')
 		$(use_enable xml)
 		$(use_enable xine)
 		$(use_enable kde kdenlive)
