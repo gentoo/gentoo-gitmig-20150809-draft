@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.7 2012/01/11 18:34:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.8 2012/02/25 23:38:20 aballier Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -30,7 +30,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-ffmpeg.patch \
-		"${FILESDIR}"/${P}-ffmpeg-0.6.90.patch
+		"${FILESDIR}"/${P}-ffmpeg-0.6.90.patch \
+		"${FILESDIR}"/${P}-ffmpeg-0.10.patch
 	sed -i -e 's:-O3 -ffast-math -pipe::' configure.in \
 		|| die "sed failed"
 	AT_M4DIR="m4" eautoreconf
