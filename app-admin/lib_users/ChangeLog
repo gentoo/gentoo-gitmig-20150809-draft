@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/lib_users
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.14 2012/02/25 08:19:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.15 2012/02/25 14:23:27 jer Exp $
+
+  25 Feb 2012; Jeroen Roovers <jer@gentoo.org> -lib_users-0.1.ebuild,
+  -lib_users-0.2.ebuild, lib_users-0.3.ebuild:
+  Stable for HPPA (bug #401597).
 
   25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> lib_users-0.3.ebuild:
   Stable on alpha, bug #401597
