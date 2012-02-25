@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/pyvorbis-1.4-r3.ebuild,v 1.9 2010/03/13 17:53:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/pyvorbis-1.4-r3.ebuild,v 1.10 2012/02/25 13:34:28 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit distutils eutils
 
@@ -21,7 +22,6 @@ DEPEND=">=dev-python/pyogg-1.1
 	>=media-libs/libogg-1.0
 	>=media-libs/libvorbis-1.0"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README"
 
