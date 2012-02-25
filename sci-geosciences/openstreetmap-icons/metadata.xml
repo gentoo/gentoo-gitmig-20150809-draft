@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-geosciences</herd>
-<maintainer>
-<email>tupone@gentoo.org</email>
-<name>Tupone Alfredo</name>
-</maintainer>
 <longdescription lang="en">
 Icons from openstreetmap
 </longdescription>

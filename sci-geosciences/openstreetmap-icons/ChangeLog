@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/openstreetmap-icons
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/openstreetmap-icons/ChangeLog,v 1.7 2011/06/01 12:17:47 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/openstreetmap-icons/ChangeLog,v 1.8 2012/02/25 18:19:45 tupone Exp $
+
+  25 Feb 2012; Tupone Alfredo <tupone@gentoo.org> metadata.xml:
+  Removing me as a maintainer. 
 
 *openstreetmap-icons-99999999 (01 Jun 2011)
 *openstreetmap-icons-20110601 (01 Jun 2011)
