@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-SVG
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.33 2012/02/24 10:14:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.34 2012/02/25 17:54:36 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> GD-SVG-0.330.0.ebuild:
+  Stable on alpha, bug #400123
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> GD-SVG-0.330.0.ebuild:
   Stable for amd64, wrt bug #400123
