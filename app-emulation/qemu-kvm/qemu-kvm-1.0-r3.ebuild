@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.3 2012/02/25 20:57:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.4 2012/02/25 23:12:17 floppym Exp $
 
 #BACKPORTS=1
 
@@ -83,7 +83,7 @@ RDEPEND="
 	sdl? ( static? ( >=media-libs/libsdl-1.2.11[static-libs,X] )
 		!static? ( >=media-libs/libsdl-1.2.11[X] ) )
 	static? ( sys-libs/zlib[static-libs] )
-	!static? ( sys-libs/zlib[static-libs] )
+	!static? ( sys-libs/zlib )
 	smartcard? ( dev-libs/nss )
 	spice? ( >=app-emulation/spice-0.9.0
 			>=app-emulation/spice-protocol-0.8.1 )
