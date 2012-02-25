@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/pyalsa-1.0.25.ebuild,v 1.2 2012/02/20 14:42:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/pyalsa-1.0.25.ebuild,v 1.3 2012/02/25 23:48:55 marienz Exp $
 
 EAPI="2"
-PYTHON_DEPEND="2:2.5"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.* *-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit distutils
+inherit distutils eutils
 
-DESCRIPTION="Python Bindings for Alsa lib"
+DESCRIPTION="Python bindings for ALSA library"
 HOMEPAGE="http://alsa-project.org/"
 SRC_URI="mirror://alsaproject/pyalsa/${P}.tar.bz2"
 
@@ -24,4 +24,8 @@ DEPEND="${RDEPEND}
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
-DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
+src_prepare() {
+	distutils_src_prepare
+
+	epatch "${FILESDIR}/${P}-no-build-symlinks.patch"
+}
