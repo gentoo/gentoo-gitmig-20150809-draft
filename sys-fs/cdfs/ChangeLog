@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/cdfs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/ChangeLog,v 1.12 2010/06/15 07:26:00 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/ChangeLog,v 1.13 2012/02/25 12:36:04 pacho Exp $
+
+  25 Feb 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/cdfs-2.6.27-kernel-2.6.39.patch, -cdfs-2.6.19.ebuild,
+  -cdfs-2.6.23.ebuild, cdfs-2.6.27.ebuild:
+  Fix building with recent kernels, bug #373489 by Mathieu Zhang, Guy and
+  Karata. Drop old.
 
   15 Jun 2010; Torsten Veller <tove@gentoo.org> cdfs-2.6.19.ebuild,
   cdfs-2.6.23.ebuild, cdfs-2.6.27.ebuild:

@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/cdfs-2.6.27.ebuild,v 1.3 2010/06/15 07:26:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/cdfs-2.6.27.ebuild,v 1.4 2012/02/25 12:36:04 pacho Exp $
+
+EAPI=4
 
 inherit eutils linux-mod
 
@@ -18,10 +20,8 @@ CONFIG_CHECK="BLK_DEV_LOOP"
 BUILD_TARGETS="all"
 BUILD_PARAMS="KDIR=\"${KERNEL_DIR}\""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.6.19-kernel-2.6.22.patch
 	epatch "${FILESDIR}"/${P}-kernel-2.6.28.patch
+	epatch "${FILESDIR}"/${P}-kernel-2.6.39.patch
 }
