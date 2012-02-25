@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/packages,v 1.7 2012/02/14 10:49:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/packages,v 1.8 2012/02/25 07:05:28 robbat2 Exp $
 
 -*virtual/dev-manager
 -*sys-fs/e2fsprogs
@@ -8,11 +8,10 @@
 -*sys-process/psmisc
 -*>=sys-apps/shadow-4.1
 -*sys-apps/which
--*sys-apps/module-init-tools
+-*virtual/modutils
 -*sys-apps/kbd
 #-*sys-apps/findutils
 #-*sys-apps/debianutils
 -*sys-apps/coreutils
 -*net-misc/iputils
 -*app-arch/tar
--*virtual/modutils

@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.70 2012/02/20 12:10:09 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.71 2012/02/25 07:05:28 robbat2 Exp $
+
+  25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> packages:
+  sys-apps/module-init-tools replaced by virtual/modutils in base/packages, so
+  match up here too.
 
   20 Feb 2012; Naohiro Aota <naota@gentoo.org> fbsd/package.use.mask:
   Mask wifi for net-libs/xulrunner
