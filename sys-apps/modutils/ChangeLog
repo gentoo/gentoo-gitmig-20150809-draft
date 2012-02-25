@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/modutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.55 2011/04/24 21:31:35 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.56 2012/02/25 07:09:43 robbat2 Exp $
+
+  25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> modutils-2.4.27-r1.ebuild,
+  modutils-2.4.27.ebuild:
+  Mutually exclusive with both module-init-tools and kmod
 
   24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> modutils-2.4.27.ebuild,
   modutils-2.4.27-r1.ebuild:
