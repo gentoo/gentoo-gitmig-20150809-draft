@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-RSA
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.77 2012/02/24 10:01:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.78 2012/02/25 17:47:43 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Crypt-OpenSSL-RSA-0.280.0.ebuild:
+  Stable on alpha, bug #400067
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   Crypt-OpenSSL-RSA-0.280.0.ebuild:
