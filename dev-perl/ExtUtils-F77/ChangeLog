@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-F77
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.43 2012/02/24 10:11:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.44 2012/02/25 17:53:09 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  ExtUtils-F77-1.170.0.ebuild:
+  Stable on alpha, bug #400111
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ExtUtils-F77-1.170.0.ebuild:
   Stable for amd64, wrt bug #400111
