@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.8.1-r1.ebuild,v 1.2 2011/04/24 20:53:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.8.1-r1.ebuild,v 1.3 2012/02/25 06:34:46 robbat2 Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ CONFIG_CHECK="USB SOUND"
 MODULE_NAMES="line6usb(usb:${S}:${S})"
 ERROR_PODXTPRO="${P} requires the podxtpro driver to be removed first."
 
-RDEPEND="sys-apps/module-init-tools
+RDEPEND="virtual/modutils
 	dev-lang/perl"
 DEPEND="${RDEPEND}
 	>=media-sound/alsa-headers-1.0.10
