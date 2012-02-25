@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-POP3Client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.32 2012/02/24 10:24:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.33 2012/02/25 17:59:20 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Mail-POP3Client-2.180.0.ebuild:
+  Stable on alpha, bug #400171
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   Mail-POP3Client-2.180.0.ebuild:
