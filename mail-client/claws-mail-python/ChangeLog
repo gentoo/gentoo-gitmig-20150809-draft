@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/ChangeLog,v 1.25 2011/12/26 10:51:40 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/ChangeLog,v 1.26 2012/02/25 21:15:39 ago Exp $
+
+  25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> claws-mail-python-0.9.ebuild:
+  Stable for amd64, wrt bug #387547
 
 *claws-mail-python-0.9 (26 Dec 2011)
 
