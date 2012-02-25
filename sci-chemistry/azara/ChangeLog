@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/azara
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/ChangeLog,v 1.10 2011/06/27 13:47:18 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/ChangeLog,v 1.11 2012/02/25 03:04:59 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> azara-2.8-r4.ebuild:
+  Restricting pypy and jython
 
   27 Jun 2011; Justin Lecher <jlec@gentoo.org> azara-2.8-r4.ebuild:
   added X USE back
