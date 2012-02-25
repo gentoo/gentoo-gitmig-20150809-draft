@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-CIDR-Lite
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/ChangeLog,v 1.35 2011/09/04 11:23:21 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/ChangeLog,v 1.36 2012/02/25 16:39:11 ago Exp $
+
+  25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Net-CIDR-Lite-0.210.0.ebuild:
+  Stable for amd64, wrt bug #400177
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Net-CIDR-Lite-0.21.ebuild:
   Cleanup
