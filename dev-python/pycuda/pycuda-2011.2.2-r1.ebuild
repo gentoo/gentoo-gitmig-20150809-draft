@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-2011.2.2-r1.ebuild,v 1.2 2012/02/20 14:26:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-2011.2.2-r1.ebuild,v 1.3 2012/02/25 01:54:53 patrick Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-**"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit distutils multilib
 

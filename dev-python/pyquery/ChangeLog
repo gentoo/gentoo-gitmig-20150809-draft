@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.9 2012/02/20 14:29:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.10 2012/02/25 01:57:05 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyquery-1.0.ebuild,
+  pyquery-1.1.1.ebuild:
+  Fixing accidental double asterisk
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyquery-0.6.1.ebuild,
   pyquery-1.0.ebuild, pyquery-1.1.1.ebuild:

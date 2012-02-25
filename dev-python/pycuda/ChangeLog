@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycuda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.15 2012/02/20 14:26:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.16 2012/02/25 01:54:53 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pycuda-2011.2.2-r1.ebuild,
+  pycuda-2011.2.2.ebuild, pycuda-9999.ebuild:
+  Fixing accidental double asterisk
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> pycuda-2011.2.2-r1.ebuild,
   pycuda-2011.2.2.ebuild, pycuda-9999.ebuild:
