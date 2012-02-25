@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6.ebuild,v 1.3 2012/02/25 21:31:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6.ebuild,v 1.4 2012/02/25 21:40:01 aballier Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -28,6 +28,7 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 		>=dev-libs/libxml2-2.5 )
 	frei0r? ( media-plugins/frei0r-plugins )
 	gtk? ( x11-libs/gtk+:2
+		media-libs/libexif
 		x11-libs/pango )
 	quicktime? ( media-libs/libquicktime )
 	xine? ( >=media-libs/xine-lib-1.1.2_pre20060328-r7 )

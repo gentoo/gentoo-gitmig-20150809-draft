@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.77 2012/02/25 21:31:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.78 2012/02/25 21:40:01 aballier Exp $
+
+  25 Feb 2012; Alexis Ballier <aballier@gentoo.org> mlt-0.7.6.ebuild:
+  make the gtk2 module depend on exif as its automagic and there is no
+  configure option to disable it, part of bug #385395
 
   25 Feb 2012; Alexis Ballier <aballier@gentoo.org> mlt-0.7.6.ebuild:
   add dies to sed calls
