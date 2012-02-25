@@ -1,10 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.4.1.ebuild,v 1.4 2011/08/21 21:58:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.4.1.ebuild,v 1.5 2012/02/25 02:47:03 patrick Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython 2.7-pypy-*"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils eutils
@@ -20,7 +21,6 @@ IUSE="doc test"
 RDEPEND=""
 DEPEND="doc? ( dev-python/sphinx )
 	test? ( dev-python/setuptools )"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 src_prepare() {
 	# don't install rst files
