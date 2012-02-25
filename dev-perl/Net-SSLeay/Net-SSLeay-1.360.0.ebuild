@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.360.0.ebuild,v 1.2 2011/09/03 21:04:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.360.0.ebuild,v 1.3 2012/02/25 08:01:54 tove Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}"
 #		dev-perl/Test-Warn
 #		dev-perl/Test-NoWarnings )"
 
-#SRC_TEST=do
+SRC_TEST=do
 
 export OPTIMIZE="$CFLAGS"
 export OPENSSL_PREFIX=${EPREFIX}/usr
