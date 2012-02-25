@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powermgmt-base
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.24 2011/01/13 22:34:13 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.25 2012/02/25 06:28:17 robbat2 Exp $
+
+  25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> powermgmt-base-1.31.ebuild:
+  Bug #405687: Depend on virtual/modutils instead of sys-apps/module-init-tools.
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> powermgmt-base-1.31.ebuild:
   stable ppc, bug 338990
