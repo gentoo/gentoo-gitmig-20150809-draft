@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rpl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rpl/ChangeLog,v 1.28 2011/03/27 21:56:47 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rpl/ChangeLog,v 1.29 2012/02/25 01:21:16 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> rpl-1.5.5.ebuild:
+  Restrict jython
 
   27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -rpl-1.4.0.ebuild:
   remove old ebuilds
