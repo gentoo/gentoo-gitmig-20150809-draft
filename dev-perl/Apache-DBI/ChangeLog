@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-DBI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.64 2012/02/25 01:57:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.65 2012/02/25 17:42:41 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Apache-DBI-1.110.0.ebuild:
+  Stable on alpha, bug #400027
 
   24 Feb 2012; Brent Baude <ranger@gentoo.org> Apache-DBI-1.110.0.ebuild:
   Marking Apache-DBI-1.110.0 ppc for bug 400027
