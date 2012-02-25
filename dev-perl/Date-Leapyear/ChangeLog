@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Date-Leapyear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.32 2012/02/24 10:04:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.33 2012/02/25 17:48:48 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Date-Leapyear-1.720.0.ebuild:
+  Stable on alpha, bug #400079
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Date-Leapyear-1.720.0.ebuild:
   Stable for amd64, wrt bug #400079
