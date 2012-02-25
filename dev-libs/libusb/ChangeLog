@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.131 2012/02/12 18:37:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.132 2012/02/25 15:13:20 ssuominen Exp $
+
+  25 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> libusb-1.0.9_rc3.ebuild:
+  ppc64 stable wrt #399713
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> libusb-1.0.9_rc3.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #399713
