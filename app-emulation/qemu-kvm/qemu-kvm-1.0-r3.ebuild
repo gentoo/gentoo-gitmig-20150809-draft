@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.2 2012/02/20 18:45:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.3 2012/02/25 20:57:58 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -31,10 +31,8 @@ LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth brltty curl debug esd fdt ncurses \
-opengl pulseaudio qemu-ifup rbd sasl sdl smartcard spice test +threads tls \
-usbredir vde +vhost-net xattr xen"
-# static, depends on libsdl being built with USE=static-libs, which can not
-# be expressed in current EAPI's
+opengl pulseaudio qemu-ifup rbd sasl sdl smartcard spice static test
++threads tls usbredir vde +vhost-net xattr xen"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
@@ -64,7 +62,6 @@ RDEPEND="
 	media-libs/libpng
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
-	sys-libs/zlib
 	virtual/jpeg
 	amd64? ( sys-apps/seabios
 		sys-apps/vgabios )
@@ -83,7 +80,10 @@ RDEPEND="
 	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
-	sdl? ( >=media-libs/libsdl-1.2.11[X] )
+	sdl? ( static? ( >=media-libs/libsdl-1.2.11[static-libs,X] )
+		!static? ( >=media-libs/libsdl-1.2.11[X] ) )
+	static? ( sys-libs/zlib[static-libs] )
+	!static? ( sys-libs/zlib[static-libs] )
 	smartcard? ( dev-libs/nss )
 	spice? ( >=app-emulation/spice-0.9.0
 			>=app-emulation/spice-protocol-0.8.1 )
@@ -235,7 +235,7 @@ src_configure() {
 	conf_opts="${conf_opts} --extra-ldflags=-Wl,-z,execheap"
 
 	# Add support for static builds
-	#use static && conf_opts="${conf_opts} --static"
+	use static && conf_opts="${conf_opts} --static"
 
 	# Support debug USE flag
 	use debug && conf_opts="${conf_opts} --enable-debug"
