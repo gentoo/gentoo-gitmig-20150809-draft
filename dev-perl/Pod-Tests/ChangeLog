@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Tests
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.21 2012/02/24 16:55:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.22 2012/02/25 18:02:14 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> Pod-Tests-1.190.0.ebuild:
+  Stable on alpha, bug #400205
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> Pod-Tests-1.190.0.ebuild:
   Stable for HPPA (bug #400205).
