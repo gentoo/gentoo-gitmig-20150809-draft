@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.79 2012/02/25 21:42:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.80 2012/02/25 21:44:35 aballier Exp $
+
+  25 Feb 2012; Alexis Ballier <aballier@gentoo.org> mlt-0.7.6.ebuild:
+  depend on libexif with qt4 too as, again, there is no way to disable it, this
+  is last part of the patch by SN (Enlik) in bug #385395
 
   25 Feb 2012; Alexis Ballier <aballier@gentoo.org> mlt-0.7.6.ebuild:
   add qt-svg dep with qt4 as its needed now, bug #385395
