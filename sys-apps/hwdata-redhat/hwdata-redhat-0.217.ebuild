@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/hwdata-redhat-0.217.ebuild,v 1.2 2011/12/21 08:16:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/hwdata-redhat-0.217.ebuild,v 1.3 2012/02/25 06:45:07 robbat2 Exp $
 
 inherit eutils flag-o-matic rpm
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2 MIT"
 SLOT="0"
 KEYWORDS="~ppc ~ppc64 ~x86 ~amd64"
 IUSE="test"
-RDEPEND=">=sys-apps/module-init-tools-3.2
+RDEPEND="virtual/modutils
 	!sys-apps/hwdata-gentoo"
 DEPEND="${RDEPEND}
 	test? ( sys-apps/pciutils )"
