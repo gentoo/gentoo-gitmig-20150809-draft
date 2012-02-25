@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/identicurse/identicurse-0.8.2.ebuild,v 1.1 2012/01/14 18:09:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/identicurse/identicurse-0.9.ebuild,v 1.1 2012/02/25 20:36:50 xarthisius Exp $
 
 EAPI=4
 
@@ -22,12 +22,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
-RDEPEND=""
+RDEPEND="dev-python/oauth"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-gzipped_readme.patch \
-		"${FILESDIR}"/${P}-config_json_path.patch
+		"${FILESDIR}"/${PV}-config_json_path.patch
+	rm -rf src/oauth #405735
 	distutils_src_prepare
 }

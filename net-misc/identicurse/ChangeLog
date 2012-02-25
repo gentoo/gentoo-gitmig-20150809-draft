@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/identicurse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/identicurse/ChangeLog,v 1.2 2012/01/14 18:09:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/identicurse/ChangeLog,v 1.3 2012/02/25 20:36:50 xarthisius Exp $
+
+*identicurse-0.9 (25 Feb 2012)
+
+  25 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/0.9-config_json_path.patch, +identicurse-0.9.ebuild,
+  -files/identicurse-0.8.2-config_json_path.patch, -identicurse-0.8.2.ebuild:
+  Version bump, remove bundled dev-python/oauth wrt bug 405735 by Patrick Lauer
+  <patrick@gentoo.org>. Drop old
 
 *identicurse-0.8.2 (14 Jan 2012)
 
