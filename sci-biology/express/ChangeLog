@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/express
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/express/ChangeLog,v 1.1 2012/02/25 18:05:05 weaver Exp $
+
+*express-0.9.5 (25 Feb 2012)
+
+  25 Feb 2012; Andrey Kislyuk <weaver@gentoo.org> +express-0.9.5.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me
+
