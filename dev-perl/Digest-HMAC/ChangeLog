@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-HMAC
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.34 2012/02/24 10:06:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.35 2012/02/25 17:49:53 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Digest-HMAC-1.30.0.ebuild:
+  Stable on alpha, bug #400091
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Digest-HMAC-1.30.0.ebuild:
   Stable for amd64, wrt bug #400091
