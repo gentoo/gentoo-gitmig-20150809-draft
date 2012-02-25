@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Piece
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Piece/ChangeLog,v 1.21 2012/02/19 17:28:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Piece/ChangeLog,v 1.22 2012/02/25 17:42:20 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> Time-Piece-1.20.ebuild:
+  Stable on alpha, bug #397201
 
   19 Feb 2012; Raúl Porcel <armin76@gentoo.org> Time-Piece-1.20.ebuild:
   alpha/ia64/sparc/x86 stable wrt #397201
