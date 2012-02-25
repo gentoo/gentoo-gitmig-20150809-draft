@@ -1,11 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/markupsafe-0.15.ebuild,v 1.11 2012/02/20 14:57:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/markupsafe-0.15.ebuild,v 1.12 2012/02/25 22:28:33 marienz Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="setup.py"
-RESTRICT_PYTHON_ABIS="2.7-pypy-*"
 
 inherit distutils
 
@@ -27,7 +26,7 @@ RDEPEND=""
 S="${WORKDIR}/${MY_P}"
 
 set_global_options() {
-	if [[ "$(python_get_implementation)" != "Jython" ]]; then
+	if [[ "$(python_get_implementation)" = "CPython" ]]; then
 		DISTUTILS_GLOBAL_OPTIONS=("--with-speedups")
 	else
 		DISTUTILS_GLOBAL_OPTIONS=()
