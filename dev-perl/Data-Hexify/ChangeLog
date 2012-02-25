@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Hexify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hexify/ChangeLog,v 1.4 2012/02/04 15:15:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hexify/ChangeLog,v 1.5 2012/02/25 16:39:54 ago Exp $
+
+  25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Data-Hexify-1.0.0.ebuild:
+  Stable for amd64, wrt bug #405623
 
   04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
   Fix maintainer's email in metadata
