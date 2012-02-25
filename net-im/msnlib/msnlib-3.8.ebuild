@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.8.ebuild,v 1.2 2012/02/25 02:23:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.8.ebuild,v 1.3 2012/02/25 02:27:52 patrick Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
 PYTHON_USE_WITH_OPT="tk"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*" 
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*" 
 
 inherit multilib distutils
 
@@ -22,7 +22,6 @@ IUSE="tk"
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="msncb.py msnlib.py"
 

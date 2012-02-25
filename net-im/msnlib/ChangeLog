@@ -1,6 +1,10 @@
 # ChangeLog for net-im/msnlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.31 2012/02/25 02:23:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.32 2012/02/25 02:27:55 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> msnlib-3.7.ebuild,
+  msnlib-3.8.ebuild:
+  Restricting python bits properly
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> msnlib-3.7.ebuild,
   msnlib-3.8.ebuild:
