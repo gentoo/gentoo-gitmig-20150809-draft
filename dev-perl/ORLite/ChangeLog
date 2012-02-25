@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/ORLite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ORLite/ChangeLog,v 1.20 2012/02/18 14:01:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ORLite/ChangeLog,v 1.21 2012/02/25 07:59:21 tove Exp $
+
+*ORLite-1.910.0 (25 Feb 2012)
+
+  25 Feb 2012; Torsten Veller <tove@gentoo.org> +ORLite-1.910.0.ebuild:
+  Version bump
 
   18 Feb 2012; Torsten Veller <tove@gentoo.org> -ORLite-1.500.0.ebuild,
   -ORLite-1.510.0.ebuild:
