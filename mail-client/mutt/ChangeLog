@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.223 2012/02/09 18:23:24 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.224 2012/02/25 16:05:17 grobian Exp $
+
+  25 Feb 2012; Fabian Groffen <grobian@gentoo.org> mutt-1.5.21-r8.ebuild:
+  Bump patchset for small insignificant update to gpg-display-signature also to
+  ignore output for openssl/smime signatures
 
   09 Feb 2012; Christian Ruppert <idl0r@gentoo.org> mutt-1.5.21-r8.ebuild:
   Allow user patches through epatch_user
