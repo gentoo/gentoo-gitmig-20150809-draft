@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.1-r1.ebuild,v 1.3 2012/02/10 04:03:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.1-r1.ebuild,v 1.4 2012/02/25 00:42:47 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -51,7 +51,7 @@ pkg_setup() {
 		--enable-gtk3-module
 		--enable-gtk2-module
 		PYTHON=${EPREFIX}/usr/bin/python2
-		VALAC=$(type -P true)"
+		VALAC=$(type -P valac-0.14)" # harmless even if valac-0.14 not found
 	# PYTHON is substituted into several installed shell scripts
 	# vala is not needed for tarball builds, but configure checks for it...
 	python_set_active_version 2
