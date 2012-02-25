@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.76 2012/02/24 09:53:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.77 2012/02/25 17:43:46 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Apache-Test-1.360.0.ebuild:
+  Stable on alpha, bug #400033
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Apache-Test-1.360.0.ebuild:
   Stable for amd64, wrt bug #400033
