@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-SHA1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.62 2012/02/24 10:07:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.63 2012/02/25 17:50:16 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Digest-SHA1-2.130.0.ebuild:
+  Stable on alpha, bug #400093
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Digest-SHA1-2.130.0.ebuild:
   Stable for amd64, wrt bug #400093
