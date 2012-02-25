@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.28 2012/02/10 21:49:24 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.29 2012/02/25 01:41:14 chithanh Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -26,6 +26,7 @@ impact - VIDEO_CARDS setting to build driver for impact video cards
 intel - VIDEO_CARDS setting to build driver for Intel video cards
 mach64 - VIDEO_CARDS setting to build driver for mach64 video cards
 mga - VIDEO_CARDS setting to build driver for mga video cards
+modesetting - VIDEO_CARDS setting to build driver for unaccelerated modesetting
 neomagic - VIDEO_CARDS setting to build driver for neomagic video cards
 newport - VIDEO_CARDS setting to build driver for newport video cards
 none - VIDEO_CARDS setting to build no drivers (useful when using binary drivers)
