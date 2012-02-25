@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/owfs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.15 2010/07/22 19:45:32 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.16 2012/02/25 03:44:06 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> owfs-2.7_p21.ebuild:
+  Restricting pypy and jython
 
   22 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   owfs-2.7_p21.ebuild:
