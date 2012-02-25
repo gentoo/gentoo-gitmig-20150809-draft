@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-Blowfish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Blowfish/ChangeLog,v 1.32 2012/02/24 10:00:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Blowfish/ChangeLog,v 1.33 2012/02/25 17:47:21 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Crypt-Blowfish-2.120.0.ebuild:
+  Stable on alpha, bug #400063
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Crypt-Blowfish-2.120.0.ebuild:
   Stable for amd64, wrt bug #400063
