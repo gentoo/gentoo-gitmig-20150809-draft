@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.24.0.ebuild,v 1.8 2012/02/19 15:09:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.24.0.ebuild,v 1.9 2012/02/25 16:23:13 ssuominen Exp $
 
 EAPI=4
+XORG_EAUTORECONF=yes
 inherit xorg-2 toolchain-funcs versionator
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/pixman"
@@ -12,7 +13,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd
 IUSE="altivec iwmmxt mmx neon sse2"
 
 PATCHES=( "${FILESDIR}"/${P}-posix-test.patch )
-XORG_EAUTORECONF="yes"
 
 pkg_setup() {
 	xorg-2_pkg_setup
