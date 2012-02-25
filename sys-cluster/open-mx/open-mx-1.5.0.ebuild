@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/open-mx-1.5.0.ebuild,v 1.1 2011/08/31 18:34:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/open-mx-1.5.0.ebuild,v 1.2 2012/02/25 06:29:00 robbat2 Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ DEPEND="
 		virtual/linux-sources"
 RDEPEND="
 		sys-apps/hwloc
-		sys-apps/module-init-tools"
+		virtual/modutils"
 
 MODULE_NAMES="open-mx(misc:${S}/driver/linux)"
 BUILD_TARGETS="all"
