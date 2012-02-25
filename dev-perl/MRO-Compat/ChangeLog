@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MRO-Compat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MRO-Compat/ChangeLog,v 1.18 2011/09/24 13:14:32 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MRO-Compat/ChangeLog,v 1.19 2012/02/25 17:51:00 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  MRO-Compat-0.110.0.ebuild:
+  Stable on alpha, bug #400095
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> MRO-Compat-0.110.0.ebuild:
   Marked ~x64-macos

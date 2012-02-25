@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-C3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.23 2011/09/24 13:26:07 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.24 2012/02/25 17:51:21 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> Class-C3-0.230.0.ebuild:
+  Stable on alpha, bug #400095
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> Class-C3-0.230.0.ebuild:
   Marked ~x64-macos
