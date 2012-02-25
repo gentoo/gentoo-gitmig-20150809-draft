@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/genmenu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.26 2008/09/17 21:20:58 coldwind Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.27 2012/02/25 12:41:16 pacho Exp $
+
+*genmenu-1.0.9 (25 Feb 2012)
+
+  25 Feb 2012; Pacho Ramos <pacho@gentoo.org> +genmenu-1.0.9.ebuild,
+  -genmenu-1.0.7-r1.ebuild:
+  Version bump (also fixes bug #330419 by Paul Chany and teidakankan. Drop old.
 
   17 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> -genmenu-1.0.6.ebuild,
   -genmenu-1.0.7.ebuild:
