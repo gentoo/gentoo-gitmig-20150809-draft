@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.9 2012/01/27 11:10:27 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.10 2012/02/25 04:26:07 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> uwsgi-0.9.7.2.ebuild,
+  uwsgi-0.9.8.ebuild, uwsgi-1.0.2.1.ebuild:
+  Restricting pypy and jython
 
 *uwsgi-1.0.2.1 (27 Jan 2012)
 

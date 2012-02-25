@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-0.9.8.ebuild,v 1.1 2011/06/08 18:00:13 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-0.9.8.ebuild,v 1.2 2012/02/25 04:26:07 patrick Exp $
 
 EAPI="3"
-PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
 
 inherit eutils python toolchain-funcs apache-module
 
