@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0-r3.ebuild,v 1.1 2012/02/21 08:04:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0-r3.ebuild,v 1.2 2012/02/25 21:03:08 cardoe Exp $
 
 EAPI=4
 
@@ -48,7 +48,6 @@ RDEPEND="${RDEPEND}
 	>=dev-libs/glib-2.0
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
-	sys-libs/zlib
 	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
@@ -77,6 +76,8 @@ RDEPEND="${RDEPEND}
 		>=app-emulation/spice-protocol-0.8.1
 	)
 	ssl? ( net-libs/gnutls )
+	static? ( sys-libs/zlib[static-libs] )
+	!static? ( sys-libs/zlib )
 	usbredir? ( sys-apps/usbredir )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
