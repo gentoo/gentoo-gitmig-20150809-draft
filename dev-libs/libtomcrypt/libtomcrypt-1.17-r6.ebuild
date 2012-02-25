@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r6.ebuild,v 1.1 2012/02/12 21:06:16 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r6.ebuild,v 1.2 2012/02/25 15:22:17 jer Exp $
 
 EAPI="2"
 
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="modular and portable cryptographic toolkit"
 HOMEPAGE="http://libtom.org/?page=features&whatfile=crypt"
@@ -30,6 +30,7 @@ src_prepare() {
 
 src_compile() {
 	append-flags -DLTM_DESC
+	export LIBPATH="/usr/$(get_libdir)"
 	EXTRALIBS="-ltommath" \
 		CC=$(tc-getCC) \
 		IGNORE_SPEED=1 \

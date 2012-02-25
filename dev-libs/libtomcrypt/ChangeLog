@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.44 2012/02/12 21:06:16 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.45 2012/02/25 15:22:17 jer Exp $
+
+  25 Feb 2012; Jeroen Roovers <jer@gentoo.org> libtomcrypt-1.17-r6.ebuild:
+  Set libdir.
 
 *libtomcrypt-1.17-r6 (12 Feb 2012)
 
