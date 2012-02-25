@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/envisage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisage/ChangeLog,v 1.2 2012/01/17 06:21:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisage/ChangeLog,v 1.3 2012/02/25 15:18:42 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> envisage-4.0.0.ebuild,
+  envisage-4.1.0.ebuild:
+  Restricting py 2.5
 
 *envisage-4.1.0 (17 Jan 2012)
 
