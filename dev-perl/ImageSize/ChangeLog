@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageSize
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ChangeLog,v 1.69 2012/02/24 10:20:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ChangeLog,v 1.70 2012/02/25 17:56:47 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> ImageSize-3.230.0.ebuild:
+  Stable on alpha, bug #400153
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ImageSize-3.230.0.ebuild:
   Stable for amd64, wrt bug #400153
