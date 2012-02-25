@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Convert-BER
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.23 2012/02/24 09:59:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.24 2012/02/25 17:47:00 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Convert-BER-1.320.0.ebuild:
+  Stable on alpha, bug #400061
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Convert-BER-1.320.0.ebuild:
   Stable for amd64, wrt bug #400061
