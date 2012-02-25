@@ -1,6 +1,11 @@
 # ChangeLog for virtual/modutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/modutils/ChangeLog,v 1.1 2012/02/03 23:21:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/modutils/ChangeLog,v 1.2 2012/02/25 06:42:22 robbat2 Exp $
+
+  25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> modutils-0.ebuild:
+  Per Bug #405687 migration to the virtual, some of the deps were version-
+  specific to an old version, so lets just upgrade everybody on older module-
+  init-tools anyway.
 
 *modutils-0 (03 Feb 2012)
 
