@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/vifm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.21 2011/11/24 22:03:54 wired Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.22 2012/02/25 15:33:42 wired Exp $
+
+*vifm-0.7.2 (25 Feb 2012)
+
+  25 Feb 2012; Alex Alexander <wired@gentoo.org> +vifm-0.7.2.ebuild:
+  version bump, bug #405305
 
 *vifm-0.7.1 (24 Nov 2011)
 
