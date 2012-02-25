@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Convert-ASN1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.50 2012/02/24 09:59:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.51 2012/02/25 17:46:39 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
+  Convert-ASN1-0.220.0.ebuild:
+  Stable on alpha, bug #400059
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Convert-ASN1-0.220.0.ebuild:
   Stable for amd64, wrt bug #400059
