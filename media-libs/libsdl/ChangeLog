@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.182 2012/02/23 19:05:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.183 2012/02/25 15:00:20 ssuominen Exp $
+
+  25 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> libsdl-1.2.15.ebuild:
+  ppc64 stable wrt #405217
 
   23 Feb 2012; Brent Baude <ranger@gentoo.org> libsdl-1.2.15.ebuild:
   Marking libsdl-1.2.15 ppc for bug 405217
