@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22.ebuild,v 1.5 2012/01/15 15:30:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22.ebuild,v 1.6 2012/02/25 04:06:42 patrick Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 
 inherit eutils multilib perl-module python toolchain-funcs
 
