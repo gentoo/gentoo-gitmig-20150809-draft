@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.37 2012/02/19 13:20:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.38 2012/02/25 12:31:13 pacho Exp $
+
+*pavuk-0.9.36_pre20120215-r1 (25 Feb 2012)
+
+  25 Feb 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/pavuk-0.9.36_pre20120215-fix-gtkmulticol-segfault.patch,
+  +files/pavuk-0.9.36_pre20120215-fix-underlinking.patch,
+  +pavuk-0.9.36_pre20120215-r1.ebuild:
+  Fixes underlinking, bug #405337 by Attila Tóth; fixes a segfault in the GTK+2
+  interface on amd64, bug #262504#c40. Thanks to Richard Grenville for the
+  fixes.
 
   19 Feb 2012; Pacho Ramos <pacho@gentoo.org>
   +files/pavuk-0.9.36_pre20120215-pcre-fix.patch,
