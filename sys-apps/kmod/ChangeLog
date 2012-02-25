@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.22 2012/02/24 04:44:13 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.23 2012/02/25 07:08:25 robbat2 Exp $
+
+  25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> kmod-5.ebuild,
+  kmod-9999.ebuild:
+  Also blocks the 2.4 kernel sys-apps/modutils.
 
   24 Feb 2012; William Hubbs <williamh@gentoo.org> kmod-5.ebuild,
   kmod-9999.ebuild:
