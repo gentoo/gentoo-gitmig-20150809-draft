@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libopensync
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.47 2011/07/17 10:23:03 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.48 2012/02/25 14:07:59 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> libopensync-0.22-r1.ebuild,
+  libopensync-0.36-r2.ebuild, libopensync-0.39-r1.ebuild,
+  libopensync-9999.ebuild:
+  Restricting pypy and jython
 
   17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libopensync-0.22-r1.ebuild:

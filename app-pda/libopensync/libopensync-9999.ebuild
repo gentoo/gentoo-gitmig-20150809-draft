@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-9999.ebuild,v 1.8 2011/05/21 17:29:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-9999.ebuild,v 1.9 2012/02/25 14:07:59 patrick Exp $
 
 EAPI="3"
 
-PYTHON_DEPEND="python? 2:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit cmake-utils subversion python
 
@@ -36,7 +36,6 @@ DOCS="AUTHORS CODING ChangeLog README"
 
 # tests don't pass
 RESTRICT="test"
-RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
 	# Use cmake's instead - bug #276220
