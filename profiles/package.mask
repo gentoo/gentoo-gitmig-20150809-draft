@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13519 2012/02/24 18:54:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13520 2012/02/25 12:42:08 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -148,11 +148,6 @@ sys-power/powersoftplus
 # Unmaintained, broken, bug #309201
 # Removal in 30 days
 net-dns/dlint
-
-# Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
-# Unmaintained, dead upstream, broken, bug #330419
-# Removal in 30 days
-x11-misc/genmenu
 
 # Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
 # Unmaintained for a long time, dead upstream and crashes,
