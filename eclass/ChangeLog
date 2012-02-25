@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.141 2012/02/23 23:06:13 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.142 2012/02/25 06:26:14 robbat2 Exp $
+
+  25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> linux-mod.eclass:
+  Bug #404193: Depend on virtual/modutils instead of
+  sys-apps/module-init-tools.
 
   23 Feb 2012; Alex Legler <a3li@gentoo.org> ruby-ng.eclass:
   Improve no-matching-ruby-target-error message wording wrt bug 405373.
