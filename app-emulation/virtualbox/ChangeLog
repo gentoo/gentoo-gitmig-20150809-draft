@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.100 2012/02/21 17:08:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.101 2012/02/25 13:13:32 zorry Exp $
+
+  25 Feb 2012; Magnus Granberg <zorry@gentoo.org> virtualbox-4.1.8-r1.ebuild:
+  Added a check for nopie for the nopie patch
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> virtualbox-4.1.8.ebuild:
   Stable for amd64, wrt bug #403441

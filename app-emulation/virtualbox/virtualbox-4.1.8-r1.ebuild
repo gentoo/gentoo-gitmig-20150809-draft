@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.8-r1.ebuild,v 1.1 2012/02/16 17:41:43 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.8-r1.ebuild,v 1.2 2012/02/25 13:13:32 zorry Exp $
 
 EAPI=4
 
@@ -175,7 +175,9 @@ src_prepare() {
 	fi
 
 	# Fix compile error on hardened bug 339914 (disable PIE)
-	epatch "${FILESDIR}"/virtualbox_nopie.patch
+	if gcc-specs-pie ; then
+		epatch "${FILESDIR}"/virtualbox_nopie.patch
+	fi
 }
 
 src_configure() {
