@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.3.1-r1.ebuild,v 1.7 2011/05/28 17:51:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.3.1-r1.ebuild,v 1.8 2012/02/25 02:41:28 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads ssl?"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
 
 inherit eutils distutils
 
