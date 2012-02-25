@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DBus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.19 2012/02/24 10:26:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.20 2012/02/25 18:00:03 klausman Exp $
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> Net-DBus-1.0.0.ebuild:
+  Stable on alpha, bug #400181
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Net-DBus-1.0.0.ebuild:
   Stable for amd64, wrt bug #400181
