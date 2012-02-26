@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.16.ebuild,v 1.1 2012/02/26 03:10:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.16.ebuild,v 1.2 2012/02/26 03:58:46 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
-PYTHON_USE_WITH="ssl"
+PYTHON_USE_WITH="ssl xml"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
@@ -20,9 +20,6 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="examples"
-
-DEPEND="|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-lang/python:2.5[xml] dev-python/elementtree )"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
