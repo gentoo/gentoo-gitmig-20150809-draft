@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/bin-prot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.12 2012/02/23 20:30:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.13 2012/02/26 13:51:56 aballier Exp $
+
+  26 Feb 2012; Alexis Ballier <aballier@gentoo.org> bin-prot-2.0.3.ebuild:
+  dont assign EAPI twice, by Ulrich Müller in bug #405895
 
   23 Feb 2012; Alexis Ballier <aballier@gentoo.org> -bin-prot-1.3.1.ebuild:
   remove old
