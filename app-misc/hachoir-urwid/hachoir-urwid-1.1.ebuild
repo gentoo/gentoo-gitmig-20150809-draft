@@ -1,11 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-urwid/hachoir-urwid-1.1.ebuild,v 1.2 2010/12/26 14:34:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-urwid/hachoir-urwid-1.1.ebuild,v 1.3 2012/02/26 08:32:38 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="ncurses"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -23,7 +24,6 @@ RDEPEND=">=dev-python/hachoir-core-1.2
 	>=dev-python/urwid-0.9.4"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
-RESTRICT_PYTHON_ABIS="3.*"
 
 DISTUTILS_GLOBAL_OPTIONS=("--setuptools")
 PYTHON_MODNAME="${PN/-/_}"
