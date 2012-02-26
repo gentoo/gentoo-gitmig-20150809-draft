@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmldiff
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.21 2011/12/18 22:11:00 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.22 2012/02/26 03:03:32 patrick Exp $
+
+  26 Feb 2012; Patrick Lauer <patrick@gentoo.org> xmldiff-0.6.10.ebuild,
+  xmldiff-0.6.9-r1.ebuild:
+  Restricting jython
 
   18 Dec 2011; Michael Weber <xmw@gentoo.org> xmldiff-0.6.10.ebuild:
   ppc stable (bug 378063)
