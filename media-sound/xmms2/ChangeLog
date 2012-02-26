@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.21 2012/02/05 01:48:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.22 2012/02/26 15:47:40 ago Exp $
+
+  26 Feb 2012; Agostino Sarubbo <ago@gentoo.org> xmms2-0.8-r1.ebuild:
+  Stable for amd64, wrt bug #405717
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> xmms2-0.7-r2.ebuild:
   Inherit multilib.
