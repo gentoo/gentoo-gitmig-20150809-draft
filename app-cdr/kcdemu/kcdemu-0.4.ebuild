@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdemu/kcdemu-0.4.ebuild,v 1.1 2012/01/13 23:29:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdemu/kcdemu-0.4.ebuild,v 1.2 2012/02/26 15:44:23 ago Exp $
 
 EAPI=4
 KDE_LINGUAS="de es pl ro sv"
@@ -14,7 +14,7 @@ SRC_URI="http://www.kde-apps.org/CONTENT/content-files/99752-${MY_PN}-${PV}.tar.
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="app-cdr/cdemu"
