@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/ucommon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.1 2012/02/26 19:29:12 maksbotan Exp $
+
+*ucommon-5.2.1 (26 Feb 2012)
+
+  26 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/disable_rtf_gen_doxy.patch, +metadata.xml, +ucommon-5.2.1.ebuild:
+  Add dev-libs/ucommon, bug #220597. Thanks to slepnoga
+
