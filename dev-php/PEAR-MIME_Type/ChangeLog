@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-MIME_Type
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/ChangeLog,v 1.17 2012/02/24 14:31:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/ChangeLog,v 1.18 2012/02/26 16:39:54 olemarkus Exp $
+
+*PEAR-MIME_Type-1.3.1 (26 Feb 2012)
+
+  26 Feb 2012; Ole Markus With <olemarkus@gentoo.org>
+  +PEAR-MIME_Type-1.3.1.ebuild, -PEAR-MIME_Type-1.0.0.ebuild:
+  Version bump
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   PEAR-MIME_Type-1.3.0.ebuild:
