@@ -1,11 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.1-r1.ebuild,v 1.8 2011/02/23 07:20:23 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.1-r1.ebuild,v 1.9 2012/02/26 09:07:53 patrick Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_USE_WITH="xml threads"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
 inherit distutils eutils
 
