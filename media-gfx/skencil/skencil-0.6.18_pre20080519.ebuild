@@ -1,10 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20080519.ebuild,v 1.11 2011/03/04 23:32:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20080519.ebuild,v 1.12 2012/02/26 09:33:38 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
+RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
 
 inherit eutils multilib python
 
