@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/byobu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.34 2012/02/15 09:14:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.35 2012/02/26 05:31:02 radhermit Exp $
+
+*byobu-5.15 (26 Feb 2012)
+
+  26 Feb 2012; Tim Harder <radhermit@gentoo.org> +byobu-5.15.ebuild,
+  metadata.xml:
+  Version bump. Add screen use flag to allow using app-misc/screen as the
+  default backend (fixes bug #398969).
 
   15 Feb 2012; Tim Harder <radhermit@gentoo.org> -byobu-4.55.ebuild,
   -byobu-5.0.ebuild, -byobu-5.1.ebuild, -byobu-5.2.ebuild, -byobu-5.4.ebuild:

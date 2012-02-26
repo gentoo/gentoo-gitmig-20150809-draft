@@ -6,4 +6,7 @@
 	<email>weaver@gentoo.org</email>
 	<name>Andrey Kislyuk</name>
 </maintainer>
+<use>
+	<flag name="screen">Use <pkg>app-misc/screen</pkg> as the default backend</flag>
+</use>
 </pkgmetadata>
