@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.60 2012/02/03 23:30:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.61 2012/02/26 21:22:12 kingtaco Exp $
 
 # Gentoo Base Profile
 
@@ -43,6 +43,8 @@
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/kbd
+# temporary bugfix for #398295
+*sys-apps/less
 #*>=sys-apps/portage-2.0.51.22
 *sys-process/procps
 *sys-process/psmisc
