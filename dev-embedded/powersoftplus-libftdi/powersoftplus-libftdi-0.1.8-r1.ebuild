@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/powersoftplus-libftdi/powersoftplus-libftdi-0.1.8-r1.ebuild,v 1.1 2007/09/02 19:09:20 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/powersoftplus-libftdi/powersoftplus-libftdi-0.1.8-r1.ebuild,v 1.2 2012/02/26 12:34:47 pacho Exp $
 
-inherit multilib
+EAPI=4
+inherit multilib toolchain-funcs
 
 MY_PN="${PN/-libftdi/}"
 MY_P="${MY_PN}-${PV}"
@@ -28,11 +29,11 @@ src_compile() {
 	cd "${TABFILEDIR}"
 
 	# Wipe out precompiled binary
-	emake clean || die "emake failed"
-	emake || die "emake failed"
+	emake clean
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}"
 }
 
 src_install() {
 	ftditabfile="${TABFILEDIR}/${TABFILE}"
-	dolib.so ${ftditabfile} || die "dolib.so failed"
+	dolib.so ${ftditabfile}
 }
