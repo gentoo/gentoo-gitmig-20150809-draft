@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.383 2012/02/16 00:27:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.384 2012/02/26 13:20:59 pacho Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -653,22 +653,22 @@ make_desktop_entry() {
 		case ${catmaj} in
 			app)
 				case ${catmin} in
-					accessibility) type=Accessibility;;
+					accessibility) type="Utility;Accessibility";;
 					admin)         type=System;;
 					antivirus)     type=System;;
-					arch)          type=Archiving;;
-					backup)        type=Archiving;;
-					cdr)           type=DiscBurning;;
-					dicts)         type=Dictionary;;
+					arch)          type="Utility;Archiving";;
+					backup)        type="Utility;Archiving";;
+					cdr)           type="AudioVideo;DiscBurning";;
+					dicts)         type="Office;Dictionary";;
 					doc)           type=Documentation;;
-					editors)       type=TextEditor;;
-					emacs)         type=TextEditor;;
-					emulation)     type=Emulator;;
-					laptop)        type=HardwareSettings;;
+					editors)       type="Utility;TextEditor";;
+					emacs)         type="Development;TextEditor";;
+					emulation)     type="System;Emulator";;
+					laptop)        type="Settings;HardwareSettings";;
 					office)        type=Office;;
-					pda)           type=PDA;;
-					vim)           type=TextEditor;;
-					xemacs)        type=TextEditor;;
+					pda)           type="Office;PDA";;
+					vim)           type="Development;TextEditor";;
+					xemacs)        type="Development;TextEditor";;
 				esac
 				;;
 

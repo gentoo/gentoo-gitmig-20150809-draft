@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.143 2012/02/25 22:56:56 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.144 2012/02/26 13:20:59 pacho Exp $
+
+  26 Feb 2012; Pacho Ramos <pacho@gentoo.org> eutils.eclass:
+  Use correct menu categories for app-* as discussed in gentoo-dev.
 
   25 Feb 2012; Michal Hrusecky <miska@gentoo.org> obs-service.eclass:
   Improved obs-service eclass to fix paths to suse-build automatically
