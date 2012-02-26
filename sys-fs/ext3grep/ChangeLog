@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ext3grep
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext3grep/ChangeLog,v 1.4 2010/07/08 05:13:10 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext3grep/ChangeLog,v 1.5 2012/02/26 17:51:44 hanno Exp $
+
+  26 Feb 2012; Hanno Boeck <hanno@gentoo.org> ext3grep-0.10.2.ebuild,
+  +files/ext3grep-0.10.2-new-e2fsprogs.diff:
+  Fix build with latest e2fsprogs.
 
   08 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   ext3grep-0.10.2.ebuild:
