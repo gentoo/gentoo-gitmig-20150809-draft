@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.236 2012/02/20 11:28:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.237 2012/02/26 15:57:02 anarchy Exp $
+
+*nss-3.13.2 (26 Feb 2012)
+
+  26 Feb 2012; Jory A. Pratt <anarchy@gentoo.org> -nss-3.12.9-r1.ebuild,
+  -nss-3.12.10.ebuild, -nss-3.13.1-r1.ebuild, +nss-3.13.2.ebuild:
+  Remove stale versions, version bump
 
   20 Feb 2012; Thomas Kahle <tomka@gentoo.org> nss-3.13.1-r2.ebuild:
   marked x86 per bug 403183
