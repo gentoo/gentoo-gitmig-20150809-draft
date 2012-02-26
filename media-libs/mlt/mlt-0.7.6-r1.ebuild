@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6-r1.ebuild,v 1.1 2012/02/25 22:07:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.6-r1.ebuild,v 1.2 2012/02/26 15:28:01 aballier Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -46,8 +46,8 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 SWIG_DEPEND=">=dev-lang/swig-2.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	compressed-lumas? ( || ( media-gfx/imagemagick
-			media-gfx/graphicsmagick[imagemagick] ) )
+	compressed-lumas? ( || ( media-gfx/imagemagick[png]
+			media-gfx/graphicsmagick[imagemagick,png] ) )
 	lua? ( ${SWIG_DEPEND} dev-util/pkgconfig )
 	python? ( ${SWIG_DEPEND} )
 	ruby? ( ${SWIG_DEPEND} )"
