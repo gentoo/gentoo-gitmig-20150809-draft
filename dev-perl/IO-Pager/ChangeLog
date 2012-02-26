@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-Pager
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.21 2011/09/04 11:20:59 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.22 2012/02/26 09:12:31 tove Exp $
+
+*IO-Pager-0.240.0 (26 Feb 2012)
+
+  26 Feb 2012; Torsten Veller <tove@gentoo.org> +IO-Pager-0.240.0.ebuild:
+  Version bump
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -IO-Pager-0.06.ebuild:
   Cleanup
