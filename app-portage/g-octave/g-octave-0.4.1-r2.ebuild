@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r2.ebuild,v 1.1 2011/09/18 01:44:11 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r2.ebuild,v 1.2 2012/02/26 09:06:00 patrick Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="*:2.6"
+RESTRICT_PYTHON_ABIS="2.5 *-jython"
 
 DB_COMMIT="f8de0c5a490a9572a7e6592f0082c3f7e039ef67"
 DB_DIR="rafaelmartins-${PN}-db-${DB_COMMIT:0:7}"

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-octave
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.6 2011/09/18 01:44:11 rafaelmartins Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.7 2012/02/26 09:06:00 patrick Exp $
+
+  26 Feb 2012; Patrick Lauer <patrick@gentoo.org> g-octave-0.4.1-r2.ebuild:
+  Restricting python bits
 
 *g-octave-0.4.1-r2 (18 Sep 2011)
 
