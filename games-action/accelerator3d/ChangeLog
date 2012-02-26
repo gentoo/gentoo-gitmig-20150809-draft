@@ -1,6 +1,10 @@
 # ChangeLog for games-action/accelerator3d
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/ChangeLog,v 1.8 2010/05/04 06:20:09 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/ChangeLog,v 1.9 2012/02/26 14:55:15 tupone Exp $
+
+  26 Feb 2012; Tupone Alfredo <tupone@gentoo.org>
+  accelerator3d-0.1.1-r1.ebuild:
+  Installing desktop file. Bug #314199 by Paweł Hajdan, Jr.
 
   04 May 2010; Tupone Alfredo <tupone@gentoo.org>
   accelerator3d-0.1.1-r1.ebuild:
