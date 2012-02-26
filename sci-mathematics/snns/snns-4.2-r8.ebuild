@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.10 2011/08/02 05:49:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.11 2012/02/26 05:28:38 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils
 
