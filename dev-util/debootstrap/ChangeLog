@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.161 2012/02/23 15:26:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.162 2012/02/26 19:50:02 jdhore Exp $
+
+  26 Feb 2012; Jeff Horelick <jdhore@gentoo.org> debootstrap-1.0.38.ebuild:
+  marked x86 per bug 405365
 
   23 Feb 2012; Jeroen Roovers <jer@gentoo.org> debootstrap-1.0.32.ebuild,
   debootstrap-1.0.33.ebuild, debootstrap-1.0.34.ebuild,
