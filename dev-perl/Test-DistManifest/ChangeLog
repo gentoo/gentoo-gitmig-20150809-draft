@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-DistManifest
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-DistManifest/ChangeLog,v 1.1 2012/02/26 13:33:58 jlec Exp $
+
+*Test-DistManifest-1.011 (26 Feb 2012)
+
+  26 Feb 2012; Justin Lecher <jlec@gentoo.org> +Test-DistManifest-1.011.ebuild,
+  +metadata.xml:
+  New addition needed for net-misc/clusterssh
+
