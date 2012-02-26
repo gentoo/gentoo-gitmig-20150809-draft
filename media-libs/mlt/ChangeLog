@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.84 2012/02/26 00:54:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.85 2012/02/26 12:52:01 aballier Exp $
+
+  26 Feb 2012; Alexis Ballier <aballier@gentoo.org> mlt-0.7.8.ebuild,
+  +files/mlt-0.7.8-libavcodec54.patch:
+  fix build with libavcodec 54, ie, ffmpeg git
 
 *mlt-0.7.8 (26 Feb 2012)
 
