@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.8.ebuild,v 1.3 2012/02/21 17:10:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.8.ebuild,v 1.4 2012/02/26 12:48:15 zorry Exp $
 
 EAPI=2
 
-inherit eutils linux-mod multilib python versionator
+inherit eutils linux-mod multilib python versionator toolchain-funcs
 
 MY_P=VirtualBox-${PV}
 DESCRIPTION="VirtualBox video driver"
@@ -80,6 +80,11 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-3.2.8-mesa-check.patch" \
 			"${FILESDIR}/${PN}-4-makeself-check.patch" \
 			"${FILESDIR}/${PN}-4-mkisofs-check.patch"
+
+		# Patch to link with lazy on hardened #394757
+		if gcc-specs-now ; then
+			epatch "${FILESDIR}/${PN}-link-lazy.patch"
+		fi
 }
 
 src_configure() {

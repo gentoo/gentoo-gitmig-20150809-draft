@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.82 2012/02/21 17:10:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.83 2012/02/26 12:48:15 zorry Exp $
+
+  26 Feb 2012; Magnus Granberg <zorry@gentoo.org>
+  +files/xf86-video-virtualbox-link-lazy.patch,
+  xf86-video-virtualbox-4.1.8.ebuild:
+  Fix bug #394575 for hardened thanks Faustus for the fix
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   xf86-video-virtualbox-4.1.8.ebuild:
