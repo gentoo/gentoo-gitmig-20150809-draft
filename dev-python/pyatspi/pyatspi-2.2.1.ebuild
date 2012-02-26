@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.2.1.ebuild,v 1.3 2012/02/10 03:40:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.2.1.ebuild,v 1.4 2012/02/26 09:49:33 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -42,6 +42,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Fix configure to disable tests properly, upstream bug #670823
+	epatch "${FILESDIR}/${PN}-2.2.1-configure-check.patch"
+
 	# remove pygtk cruft; https://bugzilla.gnome.org/show_bug.cgi?id=660826
 	# requires eautoreconf
 	epatch "${FILESDIR}/${PN}-2.2.0-AM_CHECK_PYMOD-pygtk.patch"
@@ -49,9 +52,7 @@ src_prepare() {
 
 	gnome2_src_prepare
 
-	# disable pyc compiling
-	echo '#!/bin/sh' > config/py-compile
-
+	python_clean_py-compile_files
 	python_copy_sources
 }
 
