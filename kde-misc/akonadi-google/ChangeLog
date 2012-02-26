@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/akonadi-google
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.7 2012/02/23 09:52:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.8 2012/02/26 23:31:15 dilfridge Exp $
+
+  26 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  akonadi-google-0.2_p20111229.ebuild, akonadi-google-0.2_p20120130.ebuild,
+  akonadi-google-0.2_p20120222.ebuild:
+  Remove dependency on libgcal, bug 405787
 
   23 Feb 2012; Johannes Huber <johu@gentoo.org>
   akonadi-google-0.2_p20120222.ebuild:
