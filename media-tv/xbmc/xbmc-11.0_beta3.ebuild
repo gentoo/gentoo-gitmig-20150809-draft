@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0_beta3.ebuild,v 1.2 2012/02/17 02:43:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0_beta3.ebuild,v 1.3 2012/02/26 23:47:16 vapier Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluray css debug goom joystick midi mysql profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
+IUSE="airplay alsa altivec avahi bluetooth bluray css debug goom joystick midi mysql profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
 REQUIRED_USE="pvr? ( mysql )"
 
 COMMON_DEPEND="virtual/opengl
@@ -74,6 +74,7 @@ COMMON_DEPEND="virtual/opengl
 	webserver? ( net-libs/libmicrohttpd )
 	net-misc/curl
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )
+	bluetooth? ( net-wireless/bluez )
 	sys-apps/dbus
 	sys-libs/zlib
 	mysql? ( virtual/mysql )
@@ -165,6 +166,8 @@ src_configure() {
 	export ac_cv_path_LATEX=no
 	# Avoid help2man
 	export HELP2MAN=$(type -P help2man || echo true)
+	# No configure flage for this #403561
+	export ac_cv_lib_bluetooth_hci_devid=$(usex bluetooth)
 
 	econf \
 		--docdir=/usr/share/doc/${PF} \
