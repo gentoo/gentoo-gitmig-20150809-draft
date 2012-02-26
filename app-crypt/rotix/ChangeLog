@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/rotix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/ChangeLog,v 1.14 2011/03/08 03:00:38 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/ChangeLog,v 1.15 2012/02/26 13:03:19 pacho Exp $
+
+  26 Feb 2012; Pacho Ramos <pacho@gentoo.org> rotix-0.83.ebuild:
+  Fallback to gentoo.org as it has no valid homepage now.
 
   08 Mar 2011; Jonathan Callen <abcd@gentoo.org> rotix-0.83.ebuild,
   +files/rotix-0.83-interix.patch:
