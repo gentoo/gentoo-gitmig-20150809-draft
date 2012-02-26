@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/libgit2-0.16.0.ebuild,v 1.1 2012/02/13 03:59:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/libgit2-0.16.0.ebuild,v 1.2 2012/02/26 07:58:58 radhermit Exp $
 
 EAPI=4
 
@@ -32,7 +32,8 @@ src_install() {
 	cmake-utils_src_install
 
 	if use examples ; then
-		docinto examples
-		dodoc examples/*
+		find examples -name .gitignore -delete
+		dodoc -r examples
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 }
