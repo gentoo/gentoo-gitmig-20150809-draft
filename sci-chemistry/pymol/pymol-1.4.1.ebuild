@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.4.1.ebuild,v 1.3 2012/02/14 08:18:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.4.1.ebuild,v 1.4 2012/02/26 06:10:49 patrick Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
 PYTHON_USE_WITH="tk"
 PYTHON_MODNAME="${PN} chempy pmg_tk pmg_wx"
 
