@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/vienna-rna
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.42 2011/12/21 08:24:41 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.43 2012/02/26 01:44:58 patrick Exp $
+
+  26 Feb 2012; Patrick Lauer <patrick@gentoo.org> vienna-rna-1.8.4-r1.ebuild,
+  vienna-rna-1.8.5.ebuild:
+  Restricting jython
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vienna-rna-1.8.5.ebuild:
   x86 stable wrt bug #393867
