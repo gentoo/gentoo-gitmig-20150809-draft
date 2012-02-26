@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.176 2012/02/01 17:19:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.177 2012/02/26 04:10:34 radhermit Exp $
+
+  26 Feb 2012; Tim Harder <radhermit@gentoo.org> mediawiki-1.18.1.ebuild,
+  +files/postinstall-1.18-en.txt:
+  Update post install instructions (fixes bugs #405573 and #405575), update php
+  dependencies (fixes bug #401335), and remove depend.php eclass usage.
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> mediawiki-1.18.1.ebuild:
   Marking mediawiki-1.18.1 ppc for bug 398687

@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.18.1.ebuild,v 1.5 2012/02/01 17:19:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.18.1.ebuild,v 1.6 2012/02/26 04:10:34 radhermit Exp $
 
 EAPI="4"
-inherit webapp depend.php versionator eutils
+inherit webapp versionator eutils
 
 MY_BRANCH=$(get_version_component_range 1-2)
 
@@ -15,16 +15,16 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha amd64 ppc x86"
 IUSE="imagemagick mysql postgres sqlite"
 
-RDEPEND="${DEPEND}
+RDEPEND=">=dev-lang/php-5.3[mysql?,postgres?,session,xml,xmlreader]
 	imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
-	!imagemagick? ( || ( dev-lang/php[gd] dev-lang/php[gd-external] ) )
-	|| (  >=dev-lang/php-5.3[mysql?,postgres?,session,xml]
-		<dev-lang/php-5.3[mysql?,pcre,postgres?,session,spl,xml] )
-	sqlite? ( dev-db/sqlite:3[fts3]
-		|| ( >=dev-lang/php-5.3[sqlite3,pdo] <dev-lang/php-5.3[sqlite,pdo] ) )"
+	!imagemagick? ( dev-lang/php[gd] )
+	sqlite? (
+		dev-db/sqlite:3[fts3]
+		>=dev-lang/php-5.3[sqlite3,pdo]
+	)
+	virtual/httpd-php"
 
 need_httpd_cgi
-need_php_httpd
 
 RESTRICT="test"
 
@@ -54,7 +54,7 @@ src_install() {
 		webapp_serverowned "${MY_HTDOCSDIR}"/images
 	fi
 
-	webapp_postinst_txt en "${FILESDIR}/postinstall-1.13-en.txt"
+	webapp_postinst_txt en "${FILESDIR}/postinstall-1.18-en.txt"
 	webapp_postupgrade_txt en "${FILESDIR}/postupgrade-1.16-en.txt"
 	webapp_src_install
 }
@@ -68,11 +68,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	webapp_pkg_postinst
-
-	einfo
-	einfo "Math support has been removed from the core mediawiki package from 1.18.0 onwards."
-	einfo "See http://www.mediawiki.org/wiki/Extension:Math to enable math support."
-	einfo
 
 	if ${prev_install} ; then
 		einfo
