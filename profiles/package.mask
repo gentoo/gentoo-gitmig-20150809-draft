@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13523 2012/02/26 16:13:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13524 2012/02/26 18:03:39 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,13 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Samuli Suominen <ssuominen@gentoo.org> (23 Feb 2012)
-# Last commit upstream 2010 and fails to build against
-# current e2fsprogs wrt #402633. Removal in 30 days unless
-# patch is provided.
-# Try ext3grep or ext4magic as replacement.
-sys-fs/extundelete
 
 # Michał Górny <mgorny@gentoo.org> (21 Feb 2012)
 # Masked until all reverse dependencies have proper versioned
@@ -232,14 +225,6 @@ app-portage/autounmask
 # No maintainer. Removal in 30 days
 www-apps/twiki
 
-# Sammuli Suominen <ssuominen@gentoo.org> (01 Feb 2012)
-# Masked for removal in 30 days for having unallowed depend for
-# unslotted <net-analyzer/rrdtool-1.2 in the same stabilization
-# level
-net-analyzer/FlowScan
-dev-perl/CUFlow
-dev-perl/JKFlow
-
 # Jeff Horelick <jdhore@gentoo.org> (31 Jan 2011)
 # Masking alpha release series.
 >=dev-libs/libmowgli-2.0.0_alpha1
@@ -256,13 +241,6 @@ dev-db/pgaccess
 # several bugs which makes it someway obsolete.
 # Please use net-misc/miniupnpd instead. Removal in 30 days.
 net-misc/linux-igd
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Jan 2012)
-# Missing native ConsoleKit support and upstream has
-# stopped development.
-# Use lightdm, gdm, kdm, lxdm, slim (only latest), or xdm (only latest).
-# Removal in 30 days.
-x11-misc/enter
 
 # Ralph Sennhauser <sera@gentoo.org> (28 Jan 2012)
 # Hopelessly outdated, contains broken jars. #91484
@@ -281,19 +259,6 @@ dev-python/pisa
 # Masked for removal because of lack of maintainer.
 # Please try app-text/epdfview as light-weight replacement.
 app-text/xpdf
-
-# Samuli Suominen <ssuominen@gentoo.org> (26 Jan 2012)
-# Too broken ebuild to be shipped wrt bugs #400815, #400865
-# and #400923
-=net-p2p/transmission-2.42
-
-# Samuli Suominen <ssuominen@gentoo.org> (26 Jan 2012)
-# No support for stable TIFF 4.x wrt #400925 with multiple
-# other issues wrt #297150, #356083, #335864 and #318485.
-# Version bump request been open since 2011-03-30 wrt #361187
-# Unless fixed, removal in 30 days
-<net-misc/hylafax-6.0.5
-x11-misc/tkhylafax
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (24 Jan 2012)
 # Finally mask media-fonts/gnu-gs-fonts-* for last-riting, ending
@@ -373,12 +338,6 @@ sys-apps/systemd-sysv-utils
 # Eray Aslan <eras@gentoo.org> (19 Jan 2012)
 # Mask experimental software
 =mail-mta/postfix-2.10*
-
-# Samuli Suominen <ssuominen@gentoo.org> (09 Jan 2012)
-# Fails to compile against recent glibc and multiple other issues.
-# No maintainer to take care of the package. Removal in 30 days.
-# Bugs 325331, 284369, 380749, 388741, 381539, 358697, and 332395.
-sys-fs/zfs-fuse
 
 # Markos Chandras <hwoarang@gentoo.org> (08 Jan 2012)
 # Masking new boost release for testing
