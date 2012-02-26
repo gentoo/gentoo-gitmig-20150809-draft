@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pygresql
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.57 2011/06/23 14:50:35 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.58 2012/02/26 09:13:55 patrick Exp $
+
+  26 Feb 2012; Patrick Lauer <patrick@gentoo.org> pygresql-3.8.1.ebuild,
+  pygresql-4.0.ebuild:
+  Restricting pypy
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -pygresql-3.5.ebuild,
   -files/pygresql-3.5-gentoo.patch, -pygresql-3.6.2.ebuild,
