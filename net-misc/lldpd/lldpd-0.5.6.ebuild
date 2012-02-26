@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.5.6.ebuild,v 1.1 2012/02/09 23:34:41 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.5.6.ebuild,v 1.2 2012/02/26 20:32:19 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Implementation of IEEE 802.1ab (LLDP)"
 HOMEPAGE="http://github.com/vincentbernat/lldpd/wiki"
 SRC_URI="http://media.luffy.cx/files/${PN}/${P}.tar.gz"
 
-LICENSE="lldpd"
+LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="snmp xml"
