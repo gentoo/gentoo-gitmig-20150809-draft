@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/nsscache-0.8.8.ebuild,v 1.1 2010/05/04 02:42:38 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/nsscache-0.8.8.ebuild,v 1.2 2012/02/26 03:22:21 patrick Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit eutils python distutils
 
