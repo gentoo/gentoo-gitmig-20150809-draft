@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scikits_optimization
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_optimization/ChangeLog,v 1.1 2011/01/08 19:23:25 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_optimization/ChangeLog,v 1.2 2012/02/26 04:29:49 patrick Exp $
+
+  26 Feb 2012; Patrick Lauer <patrick@gentoo.org>
+  scikits_optimization-0.1.ebuild:
+  Restricting pypy and jython
 
   08 Jan 2011; Sébastien Fabbro <bicatali@gentoo.org>
   +scikits_optimization-0.1.ebuild, +metadata.xml:
