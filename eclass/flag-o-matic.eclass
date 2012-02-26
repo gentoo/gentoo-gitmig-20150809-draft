@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.168 2012/01/16 20:03:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.169 2012/02/26 12:09:44 blueness Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -17,7 +17,7 @@ inherit eutils toolchain-funcs multilib
 
 # Return all the flag variables that our high level funcs operate on.
 all-flag-vars() {
-	echo {C,CPP,CXX,F,FC,LD}FLAGS
+	echo {C,CPP,CXX,CCAS,F,FC,LD}FLAGS
 }
 
 # {C,CXX,F,FC}FLAGS that we allow in strip-flags
@@ -101,7 +101,7 @@ _filter-var() {
 # @FUNCTION: filter-flags
 # @USAGE: <flags>
 # @DESCRIPTION:
-# Remove particular <flags> from {C,CPP,CXX,F,FC,LD}FLAGS.  Accepts shell globs.
+# Remove particular <flags> from {C,CPP,CXX,CCAS,F,FC,LD}FLAGS.  Accepts shell globs.
 filter-flags() {
 	_filter-hardened "$@"
 	local v
