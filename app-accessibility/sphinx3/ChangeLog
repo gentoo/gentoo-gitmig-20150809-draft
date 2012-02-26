@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinx3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.6 2012/01/12 16:34:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.7 2012/02/26 02:57:03 patrick Exp $
+
+  26 Feb 2012; Patrick Lauer <patrick@gentoo.org> sphinx3-0.8.ebuild:
+  Restricting jython
 
   12 Jan 2012; Michał Górny <mgorny@gentoo.org> sphinx3-0.8.ebuild:
   Fix invalid use of autotools-utils.eclass.
