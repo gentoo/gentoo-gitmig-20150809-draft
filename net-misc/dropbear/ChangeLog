@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.85 2012/02/24 18:24:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.86 2012/02/26 17:39:16 vapier Exp $
+
+  26 Feb 2012; Mike Frysinger <vapier@gentoo.org> dropbear-2012.55.ebuild:
+  Rewrite deps to not require newer zlib #405607#3.
 
 *dropbear-2012.55 (24 Feb 2012)
 

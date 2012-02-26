@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.1 2012/02/24 18:24:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.2 2012/02/26 17:39:16 vapier Exp $
 
 EAPI="4"
 
@@ -16,19 +16,24 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="bsdpty minimal multicall pam static syslog zlib"
 
-DEPEND="static? ( zlib? ( sys-libs/zlib[static-libs] ) )
+LIB_DEPEND="zlib? ( sys-libs/zlib[static-libs(+)] )"
+RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	pam? ( virtual/pam )"
-RDEPEND="${DEPEND}
-	!static? ( zlib? ( sys-libs/zlib ) )
-	pam? ( >=sys-auth/pambase-20080219.1 )"
+DEPEND="${RDEPEND}
+	static? ( ${LIB_DEPEND} )"
+RDEPEND+=" pam? ( >=sys-auth/pambase-20080219.1 )"
 
 REQUIRED_USE="pam? ( !static )"
 
 set_options() {
-	progs="dropbear dbclient dropbearkey"
-	progs+=" $(usex minimal "" "dropbearconvert scp")"
-	use multicall && makeopts+=" MULTI=1"
-	use static && makeopts+=" STATIC=1"
+	progs=(
+		dropbear dbclient dropbearkey
+		$(usex minimal "" "dropbearconvert scp")
+	)
+	makeopts=(
+		MULTI=$(usex multicall 1 0)
+		STATIC=$(usex static 1 0)
+	)
 }
 
 src_prepare() {
@@ -53,12 +58,12 @@ src_configure() {
 
 src_compile() {
 	set_options
-	emake ${makeopts} PROGRAMS="${progs}"
+	emake ${makeopts[@]} PROGRAMS="${progs[*]}"
 }
 
 src_install() {
 	set_options
-	emake install DESTDIR="${D}" ${makeopts} PROGRAMS="${progs}"
+	emake install DESTDIR="${D}" ${makeopts[@]} PROGRAMS="${progs[*]}"
 	doman *.8
 	newinitd "${FILESDIR}"/dropbear.init.d dropbear
 	newconfd "${FILESDIR}"/dropbear.conf.d dropbear
@@ -68,7 +73,7 @@ src_install() {
 	if use multicall ; then
 		cd "${D}"/usr/bin
 		local x
-		for x in ${progs} ; do
+		for x in ${progs[@]} ; do
 			ln -s dropbearmulti ${x} || die "ln -s dropbearmulti to ${x} failed"
 		done
 		rm -f dropbear
