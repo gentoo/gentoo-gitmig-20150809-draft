@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/redmine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.27 2012/01/11 15:56:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.28 2012/02/26 13:58:17 matsuu Exp $
+
+*redmine-1.3.1 (26 Feb 2012)
+
+  26 Feb 2012; MATSUU Takuto <matsuu@gentoo.org>
+  +files/redmine-rubytree-r8214.patch, -redmine-1.1.3.ebuild,
+  -redmine-1.2.3.ebuild, +redmine-1.3.1.ebuild:
+  Version bumped, bug #404245. Added einfo about sqlite3, bug #401087. Removed
+  rubytree, bug #399503. Removed old versions.
 
   11 Jan 2012; MATSUU Takuto <matsuu@gentoo.org> -redmine-1.2.1-r1.ebuild,
   -redmine-1.2.2.ebuild, redmine-1.3.0.ebuild:

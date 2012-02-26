@@ -1,8 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.2.3.ebuild,v 1.1 2011/12/12 16:39:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.3.1.ebuild,v 1.1 2012/02/26 13:58:17 matsuu Exp $
 
 EAPI="3"
+# ruby19: dev-ruby/rack has no ruby19
+# jruby: dev-ruby/rails has no jruby
+# rbx: dev-ruby/rails has no rbx
+#USE_RUBY="ruby18 ree18"
 USE_RUBY="ruby18"
 inherit eutils depend.apache ruby-ng
 
@@ -20,12 +24,12 @@ RDEPEND="$(ruby_implementation_depend ruby18 '>=' -1.8.6)[ssl]"
 
 ruby_add_rdepend "virtual/ruby-ssl
 	virtual/rubygems
-	=dev-ruby/coderay-0.9*
+	>=dev-ruby/coderay-1
 	>=dev-ruby/ruby-net-ldap-0.0.4
 	~dev-ruby/i18n-0.4.2
-	~dev-ruby/rack-1.1.0
+	>=dev-ruby/rack-1.1:0
 	dev-ruby/rake
-	dev-ruby/rails:2.3
+	>=dev-ruby/rails-2.3.14:2.3
 	dev-ruby/activerecord:2.3
 	fastcgi? ( dev-ruby/ruby-fcgi )
 	imagemagick? ( dev-ruby/rmagick )
@@ -50,9 +54,14 @@ pkg_setup() {
 
 all_ruby_prepare() {
 	rm -r log files/delete.me || die
-	rm -r vendor/gems/coderay-0.9.7 || die
+	rm -r vendor/gems/coderay-1.0.0 || die
 	rm -r vendor/plugins/ruby-net-ldap-0.0.4 || die
 	rm -fr vendor/rails || die
+
+	# bug #399503
+	rm -r vendor/gems/rubytree-0.5.2 || die
+	epatch "${FILESDIR}/${PN}-rubytree-r8214.patch"
+
 	echo "CONFIG_PROTECT=\"${EPREFIX}${REDMINE_DIR}/config\"" > "${T}/50${PN}"
 	echo "CONFIG_PROTECT_MASK=\"${EPREFIX}${REDMINE_DIR}/config/locales ${EPREFIX}${REDMINE_DIR}/config/settings.yml\"" >> "${T}/50${PN}"
 	sed -i -e "/RAILS_GEM_VERSION/s/'.*'/'$(best_version dev-ruby/rails:2.3|cut -d- -f3)'/" config/environment.rb || die
@@ -150,11 +159,11 @@ pkg_config() {
 		RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake db:migrate || die
 		einfo "Insert default configuration data in database."
 		RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake redmine:load_default_data || die
-	fi
-
-	if [ ! -e "${EPREFIX}${REDMINE_DIR}/config/email.yml" ] ; then
-		ewarn
-		ewarn "Copy ${EPREFIX}${REDMINE_DIR}/config/email.yml.example to ${EPREFIX}${REDMINE_DIR}/config/email.yml and edit this file to adjust your SMTP settings."
-		ewarn
+		einfo
+		einfo "If you use sqlite3. please do not forget to change the ownership of the sqlite files."
+		einfo
+		einfo "# cd \"${EPREFIX}${REDMINE_DIR}\""
+		einfo "# chown redmine db/ db/*.sqlite3"
+		einfo
 	fi
 }
