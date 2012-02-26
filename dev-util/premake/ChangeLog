@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/premake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/ChangeLog,v 1.6 2012/02/22 12:14:03 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/ChangeLog,v 1.7 2012/02/26 22:38:57 titanofold Exp $
+
+  26 Feb 2012; Aaron W. Swenson <titanofold@gentoo.org> +premake-3.5.ebuild:
+  Adding back Premake 3.5
 
   22 Feb 2012; Aaron W. Swenson <titanofold@gentoo.org> -premake-3.5.ebuild,
   premake-4.3.ebuild:
