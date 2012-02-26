@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gdata
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.100 2011/06/23 15:06:32 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.101 2012/02/26 03:10:23 floppym Exp $
+
+*gdata-2.0.16 (26 Feb 2012)
+
+  26 Feb 2012; Mike Gilbert <floppym@gentoo.org> +gdata-2.0.16.ebuild:
+  Version bump. Resolves bug 398533.
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -gdata-2.0.13.ebuild:
   Remove old ebuilds. Requested by Arfrever
