@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQrcodec
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQrcodec/ChangeLog,v 1.6 2010/11/15 03:12:00 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQrcodec/ChangeLog,v 1.7 2012/02/26 23:46:39 patrick Exp $
+
+  26 Feb 2012; Patrick Lauer <patrick@gentoo.org> PyQrcodec-1.0.ebuild:
+  Restricting py 2.5
 
   15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   PyQrcodec-1.0.ebuild:
