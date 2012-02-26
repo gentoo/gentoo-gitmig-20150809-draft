@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.7.2.ebuild,v 1.2 2011/01/08 20:33:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.7.2.ebuild,v 1.3 2012/02/26 04:49:28 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
 
 inherit distutils gnome.org eutils
 
