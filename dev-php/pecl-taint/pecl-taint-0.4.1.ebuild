@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-taint/pecl-taint-0.3.0.ebuild,v 1.1 2012/02/18 14:15:06 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-taint/pecl-taint-0.4.1.ebuild,v 1.1 2012/02/26 07:05:50 olemarkus Exp $
 
 EAPI=4
 
