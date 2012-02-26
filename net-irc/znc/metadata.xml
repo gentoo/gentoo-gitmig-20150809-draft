@@ -10,5 +10,6 @@
 	<flag name="extras">Enable some additional modules</flag>
 	<flag name="ares">Enables support for asynchronous DNS using the c-ares library</flag>
 	<flag name="dns-threads">Use threads for DNS resolving</flag>
+	<flag name="user-networks">Allow non-admin users to add networks</flag>
 </use>
 </pkgmetadata>

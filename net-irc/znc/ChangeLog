@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.56 2012/01/27 09:22:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.57 2012/02/26 15:16:16 wired Exp $
+
+  26 Feb 2012; Alex Alexander <wired@gentoo.org> znc-9999.ebuild, metadata.xml:
+  live ebuild: removed extras use flag, added user-networks use flag
 
 *znc-0.204 (27 Jan 2012)
 

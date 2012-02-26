@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-9999.ebuild,v 1.3 2012/01/18 10:11:52 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-9999.ebuild,v 1.4 2012/02/26 15:16:16 wired Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug dns-threads extras ipv6 perl python ssl sasl tcl"
+IUSE="debug dns-threads ipv6 perl python ssl sasl tcl user-networks"
 
 RDEPEND="
 	perl? ( >=dev-lang/perl-5.10 )
@@ -47,9 +47,9 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		$(use_enable user-networks add-networks) \
 		$(use_enable debug) \
 		$(use_enable dns-threads tdns) \
-		$(use_enable extras extra) \
 		$(use_enable ipv6) \
 		$(use_enable perl) \
 		$(use python && echo "--enable-python=python-$(python_get_version)") \
