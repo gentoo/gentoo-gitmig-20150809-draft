@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.16.ebuild,v 1.2 2012/02/26 03:58:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.16.ebuild,v 1.3 2012/02/26 04:00:30 floppym Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="ssl xml"
 SUPPORT_PYTHON_ABIS="1"
@@ -40,6 +40,6 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins -r samples/* || die "Installation of examples failed"
+		doins -r samples/*
 	fi
 }
