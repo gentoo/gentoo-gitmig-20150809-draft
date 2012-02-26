@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-1.0-r2.ebuild,v 1.6 2012/02/12 14:46:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-1.0-r2.ebuild,v 1.7 2012/02/26 08:57:59 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45]"
+RESTRICT_PYTHON_ABIS="2.[45] 2.7-pypy-* *-jython"
 PYTHON_USE_WITH="readline"
 PYTHON_NONVERSIONED_EXECUTABLES=(".*")
 
