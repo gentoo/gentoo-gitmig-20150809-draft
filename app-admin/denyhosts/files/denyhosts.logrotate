@@ -4,9 +4,9 @@
 	create 0640 root root
 	sharedscripts
 	prerotate
-		/etc/init.d/denyhosts stop
+		/etc/init.d/denyhosts stop -q
 	endscript
 	postrotate
-		/etc/init.d/denyhosts start
+		/etc/init.d/denyhosts start -q
 	endscript
 }
