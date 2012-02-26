@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13522 2012/02/26 13:09:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13523 2012/02/26 16:13:04 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -878,10 +878,6 @@ sci-chemistry/webmo
 # Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
 # Mask release candidates
 =app-office/scribus-1.4.0_rc*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (25 May 2011)
-# Needs an old version of bison that isn't in the tree anymore.
-dev-lang/open64
 
 # Hans de Graaff <graaff@gentoo.org> (15 May 2011)
 # Mask new versions until thread-related crashes have been fixed.
