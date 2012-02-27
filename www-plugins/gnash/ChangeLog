@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.76 2012/02/24 02:53:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.77 2012/02/27 01:23:22 chithanh Exp $
+
+  27 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.10.ebuild:
+  Fix dependencies and REQUIRED_USE for building openvg, bug #405799.
 
   24 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.10.ebuild, metadata.xml:

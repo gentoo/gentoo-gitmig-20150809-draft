@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10.ebuild,v 1.3 2012/02/24 02:53:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10.ebuild,v 1.4 2012/02/27 01:23:22 chithanh Exp $
 
 EAPI=4
 CMAKE_REQUIRED="never"
@@ -30,6 +30,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X +agg cairo cygnal dbus directfb doc egl fbcon +ffmpeg gconf gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl openvg python sdl +sdl-sound ssh ssl test vaapi"
 REQUIRED_USE="fbcon? ( agg )
 	nsplugin? ( gtk )
+	openvg? ( egl )
 	python? ( gtk )
 	vaapi? ( agg ffmpeg )
 	|| ( agg cairo opengl openvg )
@@ -87,7 +88,7 @@ RDEPEND=">=dev-libs/boost-1.41.0
 		gtk? ( x11-libs/gtkglext )
 	)
 	openvg? (
-		virtual/opengl
+		media-libs/mesa[openvg]
 	)
 	nsplugin? ( >=net-libs/xulrunner-1.9.2:1.9 )
 	sdl? ( media-libs/libsdl[X] )
