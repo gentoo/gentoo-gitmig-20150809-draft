@@ -8,3 +8,4 @@ slotmove =dev-libs/libmowgli-2.0.0_alpha1 0 2
 move media-tv/linuxtv-dvb-headers virtual/linuxtv-dvb-headers
 move app-shells/prll sys-process/prll
 move net-wireless/wispy-tools net-wireless/spectools
+slotmove dev-ruby/syslogger 3 0
