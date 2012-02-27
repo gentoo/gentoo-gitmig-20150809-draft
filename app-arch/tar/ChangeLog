@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.166 2012/02/25 20:33:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.167 2012/02/27 01:26:41 jer Exp $
+
+  27 Feb 2012; Jeroen Roovers <jer@gentoo.org> tar-1.26.ebuild:
+  Stable for HPPA (bug #358749).
 
   25 Feb 2012; Jeff Horelick <jdhore@gentoo.org> tar-1.26.ebuild:
   marked x86 per bug 358749
