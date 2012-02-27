@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/osm2pgsql
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.8 2011/11/27 13:54:45 swegener Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.9 2012/02/27 09:25:20 tupone Exp $
+
+  27 Feb 2012; Tupone Alfredo <tupone@gentoo.org> metadata.xml:
+  Removing me as a maintainer
 
   27 Nov 2011; Sven Wegener <swegener@gentoo.org> osm2pgsql-20100413.ebuild,
   osm2pgsql-99999999.ebuild:

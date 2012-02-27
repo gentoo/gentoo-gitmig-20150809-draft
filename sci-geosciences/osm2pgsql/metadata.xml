@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-geosciences</herd>
-<maintainer>
-<email>tupone@gentoo.org</email>
-<name>Tupone Alfredo</name>
-</maintainer>
 <longdescription lang="en">
 osm2pgsql is a utility program that converts OpenStreetMap (.OSM) data into a format that can be loaded into PostgreSQL. It is often used to render OSM data visually using Mapnik, as Mapnik can query PostgreSQL for map data, but does not work directly with OSM files. For more information on using osm2pgsql to render OpenStreetMap data with Mapnik, see the Mapnik page.
 
