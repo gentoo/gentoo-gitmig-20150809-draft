@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.135 2012/02/10 21:29:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.136 2012/02/27 01:22:10 jer Exp $
+
+  27 Feb 2012; Jeroen Roovers <jer@gentoo.org> package.use.force:
+  Remove deprecated USE=nptlonly by Mr. Anderson (bug #405875).
 
   10 Feb 2012; Matt Turner <mattst88@gentoo.org> use.mask:
   Mask wayland USE flag.
