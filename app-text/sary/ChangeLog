@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sary
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.32 2012/02/24 09:38:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.33 2012/02/27 03:11:47 jer Exp $
+
+  27 Feb 2012; Jeroen Roovers <jer@gentoo.org> sary-1.2.0-r1.ebuild:
+  Stable for HPPA (bug #399959).
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> sary-1.2.0-r1.ebuild:
   Stable for amd64, wrt bug #399959
