@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/libfaketime-0.9.ebuild,v 1.1 2012/01/15 09:06:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/libfaketime-0.9-r1.ebuild,v 1.1 2012/02/27 23:54:08 radhermit Exp $
 
 EAPI=4
 
@@ -19,6 +19,7 @@ S=${WORKDIR}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-make.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 }
 
 src_compile() {
