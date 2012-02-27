@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.6.ebuild,v 1.2 2011/12/31 18:12:20 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.7.ebuild,v 1.1 2012/02/27 16:33:03 scarabeus Exp $
 
 EAPI=3
 
 USE_RUBY="ruby18 ruby19"
 RUBY_OPTIONAL="yes"
 
-PYTHON_DEPEND="python? 2"
+PYTHON_DEPEND="python? *"
 
 EGIT_REPO_URI="git://git.sv.gnu.org/weechat.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-2"
@@ -52,9 +52,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 #REQUIRED_USE=" || ( ncurses gtk )"
 
 pkg_setup() {
-	python_set_active_version 2
 	python_pkg_setup
-
 	ruby-ng_pkg_setup
 }
 
@@ -99,6 +97,6 @@ pkg_postinst() {
 	if use scripts && use python; then
 		elog "You may use the following script from upstream to manage your scripts."
 		elog "It helps with downloading and updating other scripts:"
-		elog "  http://www.weechat.org/scripts/source/stable/weeget.py/"
+		elog "    http://www.weechat.org/scripts/source/stable/weeget.py/"
 	fi
 }
