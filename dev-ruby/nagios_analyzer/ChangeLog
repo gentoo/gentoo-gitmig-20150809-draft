@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/nagios_analyzer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nagios_analyzer/ChangeLog,v 1.1 2012/02/27 18:26:34 a3li Exp $
+
+*nagios_analyzer-0.0.3 (27 Feb 2012)
+
+  27 Feb 2012; Alex Legler <a3li@gentoo.org> +nagios_analyzer-0.0.3.ebuild,
+  +metadata.xml:
+  Initial ebuild
+
