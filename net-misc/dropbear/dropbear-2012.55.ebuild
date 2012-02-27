@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.2 2012/02/26 17:39:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.3 2012/02/27 03:56:43 jer Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="bsdpty minimal multicall pam static syslog zlib"
 
 LIB_DEPEND="zlib? ( sys-libs/zlib[static-libs(+)] )"
