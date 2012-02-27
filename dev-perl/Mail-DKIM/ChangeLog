@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-DKIM
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.54 2012/02/25 17:58:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.55 2012/02/27 03:50:52 jer Exp $
+
+  27 Feb 2012; Jeroen Roovers <jer@gentoo.org> Mail-DKIM-0.390.0.ebuild:
+  Stable for HPPA (bug #400167).
 
   25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> Mail-DKIM-0.390.0.ebuild:
   Stable on alpha, bug #400167
