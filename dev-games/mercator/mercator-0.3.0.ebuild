@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.3.0.ebuild,v 1.5 2012/02/24 15:25:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.3.0.ebuild,v 1.6 2012/02/27 21:12:27 tupone Exp $
 
 EAPI=2
 inherit base
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog NEWS README TODO )
+PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 src_compile() {
 	base_src_compile
