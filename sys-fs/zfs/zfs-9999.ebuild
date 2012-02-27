@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.11 2012/02/27 01:28:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.12 2012/02/27 05:17:19 floppym Exp $
 
 EAPI="4"
 
-inherit flag-o-matic git-2 linux-mod autotools-utils
+inherit flag-o-matic git-2 linux-mod toolchain-funcs autotools-utils
 
 DESCRIPTION="Native ZFS for Linux"
 HOMEPAGE="http://zfsonlinux.org/"
