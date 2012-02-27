@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.25.ebuild,v 1.6 2011/09/21 13:44:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.4.19.ebuild,v 1.1 2012/02/27 22:40:14 idl0r Exp $
+
+EAPI="4"
 
 inherit eutils versionator toolchain-funcs flag-o-matic
 
@@ -10,7 +12,7 @@ SRC_URI="http://haproxy.1wt.eu/download/$(get_version_component_range 1-2)/src/$
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="examples pcre vim-syntax"
 
 DEPEND="pcre? ( dev-libs/libpcre )"
@@ -37,7 +39,8 @@ src_compile() {
 
 src_install() {
 	dobin haproxy || die
-	newinitd "${FILESDIR}/haproxy.initd" haproxy || die
+
+	newinitd "${FILESDIR}/haproxy.initd-r1" haproxy || die
 
 	# Don't install useless files
 	rm examples/build.cfg doc/*gpl.txt
