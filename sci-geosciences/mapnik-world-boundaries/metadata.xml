@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-geosciences</herd>
-<maintainer>
-<email>tupone@gentoo.org</email>
-<name>Alfredo Tupone</name>
-</maintainer>
 <longdescription lang="en">
 World Boundaries data from openstreetmap needed by mapnik
 </longdescription>
