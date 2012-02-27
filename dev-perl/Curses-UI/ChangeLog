@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Curses-UI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.32 2012/02/24 10:01:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.33 2012/02/27 03:40:42 jer Exp $
+
+  27 Feb 2012; Jeroen Roovers <jer@gentoo.org> Curses-UI-0.960.900.ebuild:
+  Stable for HPPA (bug #400069).
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Curses-UI-0.960.900.ebuild:
   Stable for amd64, wrt bug #400069
