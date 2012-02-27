@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.2.1.ebuild,v 1.4 2012/02/26 09:49:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.2.1.ebuild,v 1.5 2012/02/27 04:35:01 patrick Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.5 3.* *-jython"
 
 inherit autotools eutils gnome2 python
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyatspi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.5 2012/02/26 09:49:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.6 2012/02/27 04:35:01 patrick Exp $
+
+  27 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyatspi-2.2.1.ebuild:
+  Restricting py2.5
 
   26 Feb 2012; Pacho Ramos <pacho@gentoo.org>
   +files/pyatspi-2.2.1-configure-check.patch, -pyatspi-2.0.2.ebuild,
