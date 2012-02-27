@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-IxHash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.30 2012/02/24 16:50:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.31 2012/02/27 18:13:24 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> Tie-IxHash-1.220.0.ebuild:
+  Marking Tie-IxHash-1.220.0 ppc for bug 400243
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> Tie-IxHash-1.220.0.ebuild:
   Stable for HPPA (bug #400243).
