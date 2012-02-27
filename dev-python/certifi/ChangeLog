@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/certifi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/certifi/ChangeLog,v 1.1 2012/01/02 06:56:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/certifi/ChangeLog,v 1.2 2012/02/27 05:05:43 floppym Exp $
+
+*certifi-0.0.8 (27 Feb 2012)
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> +certifi-0.0.8.ebuild:
+  Version bump. Support Python 3.
 
 *certifi-0.0.6 (02 Jan 2012)
 
