@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.80 2012/02/27 07:24:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.81 2012/02/27 17:30:09 pesa Exp $
+
+  27 Feb 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Add <upstream> tag to metadata.
 
   27 Feb 2012; Patrick Lauer <patrick@gentoo.org>
   qscintilla-python-2.4.5.ebuild, qscintilla-python-2.4.6.ebuild,
