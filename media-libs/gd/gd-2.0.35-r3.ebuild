@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.12 2011/12/15 17:08:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.13 2012/02/27 20:17:14 vapier Exp $
 
 EAPI="2"
 
@@ -21,7 +21,8 @@ RDEPEND="fontconfig? ( media-libs/fontconfig )
 	truetype? ( >=media-libs/freetype-2.1.5 )
 	xpm? ( x11-libs/libXpm x11-libs/libXt )
 	zlib? ( sys-libs/zlib )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libpng14.patch #305101
