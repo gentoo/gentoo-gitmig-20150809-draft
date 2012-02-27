@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.05.ebuild,v 1.2 2012/02/24 11:00:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.05.ebuild,v 1.3 2012/02/27 21:57:27 ranger Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://untroubled.org/nullmailer/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 
 IUSE=""
 
