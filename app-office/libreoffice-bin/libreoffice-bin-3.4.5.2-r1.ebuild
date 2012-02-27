@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2-r1.ebuild,v 1.3 2012/02/27 21:34:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2-r1.ebuild,v 1.4 2012/02/27 21:43:48 scarabeus Exp $
 
 EAPI=4
 
@@ -164,9 +164,8 @@ pkg_postinst() {
 
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 
-	if ! use cups; then
+	use cups || \
 		ewarn 'You will need net-print/cups in order to be able to print with libreoffice.'
-	fi
 }
 
 pkg_postrm() {
