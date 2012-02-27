@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.34 2012/02/24 23:43:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.35 2012/02/27 00:51:22 jer Exp $
+
+*nut-17.4-r1 (27 Feb 2012)
+
+  27 Feb 2012; Jeroen Roovers <jer@gentoo.org> files/nut-16.12-makefile.patch,
+  nut-17.4.ebuild, +nut-17.4-r1.ebuild:
+  Add missing dependency. Fix building with x11-libs/fltk[-static-libs] by
+  Attila Stehr (bug #405819). Clean up patch.
 
   24 Feb 2012; Tim Harder <radhermit@gentoo.org>
   -files/nut-16.5-build-fixes.patch, -nut-16.9.ebuild:

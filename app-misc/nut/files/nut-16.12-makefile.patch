@@ -1,25 +1,5 @@
---- nut-16.12.orig//fltk/Makefile
-+++ nut-16.12/fltk/Makefile
-@@ -16,7 +16,7 @@
- CXX = g++
- endif
- 
--CFLAGS := -I.. `fltk-config --optim --cflags` -O -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR)
-+CFLAGS += -I.. `fltk-config --optim --cflags` -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR)
- 
- ifeq ($(CXX),g++)
- CFLAGS += -Wall -fno-inline -ansi
-@@ -28,7 +28,7 @@
- OBJS := ../anameal.o ../db.o ../food.o ../meal.o ../options.o ../prtmenu.o ../recmeal.o ../util.o $(patsubst %.cc,%.o,$(SOURCE))
- 
- nut:	$(OBJS)
--	$(CXX) -O -o $(EXECUTABLE) $(OBJS) $(LIBS)
-+	$(CXX) $(LDFLAGS) -o $(EXECUTABLE) $(OBJS) $(LIBS)
- 
- deps:
- 	makedepend -Y. *.h *.cc >/dev/null 2>&1
---- nut-16.12.orig//Makefile
-+++ nut-16.12/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -1,4 +1,4 @@
 -prefix = /usr/local
 +prefix = /usr
@@ -69,3 +49,32 @@
  
  deps:
  	makedepend -Y. *.c >/dev/null 2>&1
+--- a/fltk/Makefile
++++ b/fltk/Makefile
+@@ -5,7 +5,7 @@
+ NUTDIR := \".nutdb\"
+ FOODDIR := \"$(libdir)\"
+ EXECUTABLE := Nut
+-LIBS := `fltk-config --ldstaticflags` -lXpm
++LIBS := `fltk-config --ldflags` -lXpm
+ 
+ OS := $(shell uname -s)
+ ifeq ($(OS),HP-UX)
+@@ -17,7 +17,7 @@
+ CXX = g++
+ endif
+ 
+-CFLAGS := -I.. `fltk-config --optim --cflags` -O -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR)
++CFLAGS += -I.. `fltk-config --optim --cflags` -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR)
+ 
+ ifeq ($(CXX),g++)
+ CFLAGS := -I.. `fltk-config --optim --cflags` -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR) -Wall -fno-inline -ansi
+@@ -29,7 +29,7 @@
+ OBJS := ../anameal.o ../db.o ../food.o ../meal.o ../options.o ../prtmenu.o ../recmeal.o ../util.o $(patsubst %.cc,%.o,$(SOURCE))
+ 
+ nut:	$(OBJS)
+-	$(CXX) -O -o $(EXECUTABLE) $(OBJS) $(LIBS)
++	$(CXX) $(LDFLAGS) -o $(EXECUTABLE) $(OBJS) $(LIBS)
+ 
+ deps:
+ 	makedepend -Y.. ../anameal.c ../db.c ../food.c ../meal.c ../options.c ../prtmenu.c ../recmeal.c ../util.c *.cc >/dev/null 2>&1
