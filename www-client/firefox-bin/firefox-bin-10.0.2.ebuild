@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-10.0.2.ebuild,v 1.4 2012/02/22 09:37:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-10.0.2.ebuild,v 1.5 2012/02/27 06:46:56 jdhore Exp $
 
 EAPI="4"
 
@@ -38,6 +38,7 @@ IUSE="startup-notification"
 
 DEPEND="app-arch/unzip"
 RDEPEND="dev-libs/dbus-glib
+	virtual/freedesktop-icon-theme
 	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.7.2.ebuild,v 1.4 2012/02/22 09:46:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.7.2.ebuild,v 1.5 2012/02/27 06:47:51 jdhore Exp $
 
 EAPI="4"
 
@@ -37,6 +37,7 @@ IUSE="startup-notification"
 DEPEND="app-arch/unzip"
 RDEPEND="dev-libs/dbus-glib
 	>=media-libs/alsa-lib-1.0.16
+	virtual/freedesktop-icon-theme
 	>=x11-libs/gtk+-2.10:2
 	x11-libs/libXrender
 	x11-libs/libXt
