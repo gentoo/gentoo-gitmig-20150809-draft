@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.9.8.ebuild,v 1.1 2012/02/24 17:57:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.9.8.ebuild,v 1.2 2012/02/27 15:19:30 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -107,8 +107,7 @@ pkg_preinst() {
 
 	eshopts_push -s nullglob
 
-	for candidate in "${EROOT}usr/$(get_libdir)"/libv8-*$(get_libname) \
-		"${EROOT}usr/$(get_libdir)"/libv8$(get_libname).*; do
+	for candidate in "${EROOT}usr/$(get_libdir)"/libv8$(get_libname).*; do
 		baselib=${candidate##*/}
 		if [[ ! -e "${ED}usr/$(get_libdir)/${baselib}" ]]; then
 			preserved_libs+=( "${EPREFIX}/usr/$(get_libdir)/${baselib}" )
