@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-Map
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.22 2012/02/24 16:49:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.23 2012/02/27 18:54:46 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> Unicode-Map-0.112.0.ebuild:
+  Marking Unicode-Map-0.112.0 ppc for bug 400255
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> Unicode-Map-0.112.0.ebuild:
   Stable for HPPA (bug #400255).
