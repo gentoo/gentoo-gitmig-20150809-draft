@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unix-Syslog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/ChangeLog,v 1.23 2012/02/24 16:48:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/ChangeLog,v 1.24 2012/02/27 19:49:19 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> Unix-Syslog-1.100.0.ebuild:
+  Marking Unix-Syslog-1.100.0 ppc for bug 400257
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> Unix-Syslog-1.100.0.ebuild:
   Stable for HPPA (bug #400257).
