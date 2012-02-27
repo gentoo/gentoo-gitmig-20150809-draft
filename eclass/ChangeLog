@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.145 2012/02/26 16:13:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.146 2012/02/27 03:57:35 floppym Exp $
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> python.eclass:
+  Add a safety check to catch issues like bug 405299 earlier. Adapted from
+  Progress overlay.
 
   26 Feb 2012; Pacho Ramos <pacho@gentoo.org> tla.eclass:
   Convert to eshopts_{push,pop}, bug 328871 by Spanky.
