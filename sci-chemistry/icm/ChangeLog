@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/icm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/ChangeLog,v 1.8 2012/02/05 05:59:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/ChangeLog,v 1.9 2012/02/27 12:48:08 alexxy Exp $
+
+*icm-3.7.2c (27 Feb 2012)
+
+  27 Feb 2012; Alexey Shvetsov <alexxy@gentoo.org> +icm-3.7.2c.ebuild:
+  Version bump
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> icm-3.7.2b.ebuild:
   Move to new unpacker eclass for unpack_makeself.
