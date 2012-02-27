@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.7.ebuild,v 1.1 2012/02/26 04:55:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.7.ebuild,v 1.2 2012/02/27 11:09:10 jlec Exp $
 
 EAPI=4
-inherit fdo-mime
+inherit eutils fdo-mime
 
 DESCRIPTION="GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags"
 HOMEPAGE="http://easytag.sourceforge.net"
@@ -29,6 +29,10 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS=( ChangeLog README THANKS TODO USERS-GUIDE )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gold.patch
+}
 
 src_configure() {
 	econf \

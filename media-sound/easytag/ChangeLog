@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.150 2012/02/26 04:55:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.151 2012/02/27 11:09:10 jlec Exp $
+
+  27 Feb 2012; Justin Lecher <jlec@gentoo.org> easytag-2.1.7.ebuild,
+  +files/easytag-2.1.7-gold.patch:
+  Add patch to fix underlinking detected by linking with gold
 
 *easytag-2.1.7 (26 Feb 2012)
 
