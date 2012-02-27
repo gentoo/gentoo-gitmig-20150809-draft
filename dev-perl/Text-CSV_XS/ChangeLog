@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-CSV_XS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV_XS/ChangeLog,v 1.90 2012/02/24 15:02:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV_XS/ChangeLog,v 1.91 2012/02/27 17:53:56 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> Text-CSV_XS-0.860.0.ebuild:
+  Marking Text-CSV_XS-0.860.0 ppc for bug 400239
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Text-CSV_XS-0.860.0.ebuild:
