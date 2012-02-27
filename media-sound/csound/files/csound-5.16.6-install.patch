@@ -66,7 +66,7 @@
      if err == 0:
          if i[:13] == 'libcsound.so.':
              err = installLink(i, concatPath([libDir, 'libcsound.so']))
-@@ -292,7 +267,7 @@
+@@ -292,11 +267,26 @@
      if i in pluginList:
          pluginList.remove(i)
  for i in pluginList:
@@ -75,7 +75,26 @@
      installErrors = installErrors or err
  
  # copy header files
-@@ -313,6 +288,7 @@
+ 
++# Add forgotten header dependencies
++headerdeps = []
++for header in headerFiles:
++    f = open(header)
++    for line in f:
++        m = re.findall('^#include "\w+.\w+"', line)
++        if m:
++            n = re.match('^#include "(.+)"', "".join(m))
++            if os.path.isfile("H/" + n.group(1)):
++                headerdeps.append("H/" + n.group(1))
++            else:
++                headerdeps.append("interfaces/" + n.group(1))
++    f.close()
++headerFiles = list(set(headerdeps + headerFiles))
++
+ print ' === Installing header files ==='
+ err = installFiles(headerFiles, includeDir)
+ installErrors = installErrors or err
+@@ -313,6 +303,7 @@
                 ['_loris\\.so', '1', pythonDir2],
                 ['_scoregen\\.so', '1', pythonDir2],
                 ['_CsoundAC\\.so ', '1', pythonDir2],
@@ -83,13 +102,14 @@
                 ['csnd\\.jar', '0', javaDir],
                 ['interfaces/csound5\\.lisp', '0', lispDir]]
  for i in wrapperList:
-@@ -322,48 +298,21 @@
+@@ -322,48 +313,21 @@
          if i[1] == '0':
              err = installFile(fName, i[2])
          else:
 -            err = installXFile('--strip-debug', fName, i[2])
--        installErrors = installErrors or err
--
++            err = installXFile('', fName, i[2])
+         installErrors = installErrors or err
+ 
 -# copy XMG files
 -
 -print ' === Installing Localisation files ==='
@@ -109,9 +129,8 @@
 -        print '  %s' % fileName
 -    else:
 -        print ' *** error copying %s' % fileName
-+            err = installXFile('', fName, i[2])
-         installErrors = installErrors or err
- 
+-        installErrors = installErrors or err
+-
 -# Copy documentation
 -
 -print ' === Installing documentation ==='
@@ -138,7 +157,7 @@
  
  # copy STK raw wave files
  
-@@ -398,7 +347,7 @@
+@@ -398,7 +362,7 @@
      pdDir = ''
  if pdDir != '':
      print ' === Installing csoundapi~ PD object ==='
@@ -147,7 +166,7 @@
      if err == 0:
          try:
              os.chmod(concatPath([instDir, pdDir, 'csoundapi~.pd_linux']), 0644)
-@@ -420,42 +369,6 @@
+@@ -420,42 +384,6 @@
                            '%s/%s' % (vimDir, 'syntax'))
          installErrors = installErrors or err
  
@@ -190,7 +209,7 @@
      
  # -----------------------------------------------------------------------------
  
-@@ -481,10 +394,6 @@
+@@ -481,10 +409,6 @@
      print '  CSSTRNGS=%s' % xmgDir
      if '%s/libstk.so' % pluginDir in fileList:
          print '  RAWWAVE_PATH=%s' % rawWaveDir
