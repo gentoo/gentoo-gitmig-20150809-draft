@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-4.8.ebuild,v 1.6 2011/08/20 16:00:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-4.8.1-r3.ebuild,v 1.1 2012/02/27 16:19:35 scarabeus Exp $
 
 EAPI="3"
 
@@ -26,7 +26,7 @@ SRC_URI="${BASE_URI}/${SRC_ARCHIVE}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples static-libs"
 
 DEPEND="doc? ( app-arch/unzip )"
@@ -53,6 +53,11 @@ src_prepare() {
 	for variable in CFLAGS CPPFLAGS CXXFLAGS FFLAGS LDFLAGS; do
 		sed -i -e "/^${variable} =.*/s:@${variable}@::" config/Makefile.inc.in || die "sed failed"
 	done
+
+	epatch \
+		"${FILESDIR}/icu-4.8.1-fix_binformat_fonts.patch" \
+		"${FILESDIR}/icu-4.8.1-fix_nan.patch" \
+		"${FILESDIR}/icu-4.8.1-fix_ltr.patch"
 }
 
 src_configure() {
