@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/bt747
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/ChangeLog,v 1.4 2010/01/10 22:10:17 bangert Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/ChangeLog,v 1.5 2012/02/27 09:39:20 tupone Exp $
+
+  27 Feb 2012; Tupone Alfredo <tupone@gentoo.org> metadata.xml:
+  Removing me as maintainer
 
 *bt747-1.68.32 (10 Jan 2010)
 
