@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/shorewall-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/ChangeLog,v 1.1 2012/02/24 18:56:30 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/ChangeLog,v 1.2 2012/02/27 17:05:22 constanze Exp $
+
+*shorewall-core-4.5.0.1-r1 (27 Feb 2012)
+
+  27 Feb 2012; Constanze Hausner <constanze@gentoo.org>
+  +shorewall-core-4.5.0.1-r1.ebuild:
+  Added missing dependency; see bug #405747
+
 
 *shorewall-core-4.5.0.1 (24 Feb 2012)
 
