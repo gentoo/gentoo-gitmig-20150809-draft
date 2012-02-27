@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.55 2012/02/25 15:21:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.56 2012/02/27 21:34:07 dilfridge Exp $
+
+  27 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-bin-3.4.5.2-r1.ebuild:
+  Introduce use-flag cups to allow for no-printing installation, bug 402987
 
   25 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -libreoffice-bin-3.4.5.2.ebuild:

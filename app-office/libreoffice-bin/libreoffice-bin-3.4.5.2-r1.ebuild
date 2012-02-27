@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2-r1.ebuild,v 1.2 2012/02/24 21:38:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2-r1.ebuild,v 1.3 2012/02/27 21:34:07 dilfridge Exp $
 
 EAPI=4
 
@@ -48,7 +48,7 @@ SRC_URI="
 	x86? ( ${SRC_URI_X86} )
 "
 
-IUSE="gnome java kde"
+IUSE="+cups gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
@@ -72,7 +72,6 @@ COMMON_DEPEND="
 	media-libs/freetype:2
 	>=media-libs/fontconfig-2.8.0
 	>=media-libs/libpng-1.5
-	net-print/cups
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
 	virtual/jpeg
@@ -104,6 +103,7 @@ RDEPEND="${COMMON_DEPEND}
 	!app-office/libreoffice
 	!app-office/openoffice-bin
 	!app-office/openoffice
+	cups? ( net-print/cups )
 	java? ( >=virtual/jre-1.6 )
 "
 
@@ -111,7 +111,8 @@ PDEPEND="
 	=app-office/libreoffice-l10n-$(get_version_component_range 1-3)*
 "
 
-DEPEND="${COMMON_DEPEND}"
+# after all it's a binary package
+DEPEND=""
 
 # only one flavor at a time
 REQUIRED_USE="kde? ( !gnome ) gnome? ( !kde )"
@@ -151,7 +152,6 @@ src_install() {
 
 	# prevent revdep-rebuild from attempting to rebuild all the time
 	insinto /etc/revdep-rebuild && doins "${T}/50-${PN}"
-
 }
 
 pkg_preinst() {
@@ -163,6 +163,10 @@ pkg_postinst() {
 	kde4-base_pkg_postinst
 
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
+
+	if ! use cups; then
+		ewarn 'You will need net-print/cups in order to be able to print with libreoffice.'
+	fi
 }
 
 pkg_postrm() {
