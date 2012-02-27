@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/yaml-cpp-0.2.7.ebuild,v 1.2 2011/09/16 10:55:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/yaml-cpp-0.3.0.ebuild,v 1.1 2012/02/27 16:38:28 scarabeus Exp $
 
 EAPI=4
 
@@ -17,6 +17,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	sed -i \
