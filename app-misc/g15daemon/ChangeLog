@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.39 2012/02/19 15:18:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.40 2012/02/27 18:34:19 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> g15daemon-1.9.5.3-r5.ebuild:
+  Marking g15daemon-1.9.5.3-r5 ppc for bug 399941
 
   19 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> g15daemon-1.9.5.3-r5.ebuild:
   Stable on amd64 and x86.
