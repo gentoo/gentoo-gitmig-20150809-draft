@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.79-r1.ebuild,v 1.1 2011/12/19 18:38:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.79-r1.ebuild,v 1.2 2012/02/27 02:02:56 bicatali Exp $
 
 EAPI=4
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="doc double-precision examples extras"
 
-RDEPEND="virtual/opengl"
+RDEPEND="virtual/opengl
+	media-libs/freeglut"
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/${PN}-2.78-soversion.patch )

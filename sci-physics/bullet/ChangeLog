@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/bullet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.25 2011/12/19 18:38:48 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.26 2012/02/27 02:02:56 bicatali Exp $
+
+  27 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> bullet-2.79-r1.ebuild:
+  Add dependence on media-libs/freeglut, thanks Julian Bayardo bug #403433
 
 *bullet-2.79-r1 (19 Dec 2011)
 
