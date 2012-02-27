@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/module-info
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.61 2012/02/24 15:35:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.62 2012/02/27 22:12:27 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> module-info-0.320.0.ebuild:
+  Marking module-info-0.320.0 ppc for bug 400303
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> module-info-0.320.0.ebuild:
   Stable for HPPA (bug #400303).
