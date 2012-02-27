@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.4.ebuild,v 1.2 2011/03/28 14:43:30 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.4-r2.ebuild,v 1.1 2012/02/27 14:58:33 voyageur Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils
 
 DESCRIPTION="Load monitoring dockapp displaying dancing flame."
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.3-stringh.patch
+	epatch "${FILESDIR}"/${P}-no_display.patch
+	epatch "${FILESDIR}"/${P}-lastprocessor_SMP.patch
 	eautoreconf
 }
 
@@ -35,6 +37,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc ALL_I_GET_IS_A_GREY_BOX AUTHORS ChangeLog NEWS README
 }
