@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/shorewall6-lite-4.4.22.1.ebuild,v 1.1 2011/08/06 15:48:01 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/shorewall6-lite-4.4.27-r1.ebuild,v 1.1 2012/02/27 17:48:16 constanze Exp $
 
 EAPI="4"
 
@@ -24,9 +24,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~sparc ~x86"
 IUSE="doc"
 
-DEPEND=">=net-firewall/iptables-1.4.0
-	sys-apps/iproute2"
-RDEPEND="${DEPEND}"
+RDEPEND=">=net-firewall/iptables-1.4.0
+	sys-apps/iproute2
+	!net-firewall/shorewall-core"
 
 pkg_pretend() {
 	if kernel_is lt 2 6 25 ; then

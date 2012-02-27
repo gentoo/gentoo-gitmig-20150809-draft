@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.4.22.1.ebuild,v 1.1 2011/08/06 15:46:03 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.4.27-r1.ebuild,v 1.1 2012/02/27 17:45:34 constanze Exp $
 
 EAPI="4"
 
@@ -26,9 +26,7 @@ IUSE="doc"
 DEPEND=">=net-firewall/iptables-1.2.4
 	sys-apps/iproute2[-minimal]
 	dev-lang/perl
-	!net-firewall/shorewall-common
-	!net-firewall/shorewall-shell
-	!net-firewall/shorewall-perl"
+	!net-firewall/shorewall-core"
 RDEPEND="${DEPEND}"
 
 src_compile() {

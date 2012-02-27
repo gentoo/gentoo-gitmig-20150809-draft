@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-4.4.24.1.ebuild,v 1.1 2011/10/23 09:22:30 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-4.4.27-r1.ebuild,v 1.1 2012/02/27 17:46:33 constanze Exp $
 
 EAPI="4"
 
@@ -25,7 +25,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND="net-firewall/iptables
-	sys-apps/iproute2"
+	sys-apps/iproute2
+	!net-firewall/shorewall-core"
 
 src_prepare() {
 	    epatch "${FILESDIR}/shorewall-lite-4.4.20.3_installer-path.patch"
