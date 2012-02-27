@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/inline-files
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/inline-files/ChangeLog,v 1.16 2012/02/24 10:52:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/inline-files/ChangeLog,v 1.17 2012/02/27 22:11:12 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> inline-files-0.680.0.ebuild:
+  Marking inline-files-0.680.0 ppc for bug 400299
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> inline-files-0.680.0.ebuild:
   Stable for amd64, wrt bug #400299
