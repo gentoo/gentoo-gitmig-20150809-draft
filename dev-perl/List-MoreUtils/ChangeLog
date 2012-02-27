@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-MoreUtils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.33 2012/02/27 03:49:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.34 2012/02/27 15:52:08 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> List-MoreUtils-0.330.0.ebuild:
+  Marking List-MoreUtils-0.330.0 ppc for bug 400161
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> List-MoreUtils-0.330.0.ebuild:
   Stable for HPPA (bug #400161).
