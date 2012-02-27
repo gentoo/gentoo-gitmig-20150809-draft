@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.121 2011/11/20 23:32:22 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.122 2012/02/27 08:31:00 robbat2 Exp $
+
+  27 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> cryptsetup-1.1.3-r3.ebuild:
+  Stable version is bitten by the util-linux static-libs as well, per
+  https://forums.gentoo.org/viewtopic-t-914468.html.
 
   20 Nov 2011; Mike Frysinger <vapier@gentoo.org> files/dmcrypt.rc:
   Drop dead prompt code.

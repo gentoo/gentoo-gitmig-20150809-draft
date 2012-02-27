@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.1.3-r3.ebuild,v 1.6 2011/03/17 16:25:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.1.3-r3.ebuild,v 1.7 2012/02/27 08:31:00 robbat2 Exp $
 
 EAPI="2"
 
@@ -25,12 +25,14 @@ RDEPEND=">=sys-fs/lvm2-2.02.64
 	>=sys-fs/udev-124
 	|| ( >=sys-libs/e2fsprogs-libs-1.41 <sys-fs/e2fsprogs-1.41 )
 	selinux? ( sys-libs/libselinux )
-	!sys-fs/cryptsetup-luks"
+	!sys-fs/cryptsetup-luks
+	>=sys-apps/util-linux-2.17.2"
 DEPEND="${RDEPEND}
 	!dynamic? (
 		|| ( >=dev-libs/libgpg-error-1.10[static-libs] <dev-libs/libgpg-error-1.10 )
 		|| ( >=dev-libs/popt-1.16-r1[static-libs] <dev-libs/popt-1.16-r1 )
 		dev-libs/libgcrypt[static-libs]
+		|| ( >=sys-apps/util-linux-2.20[static-libs] <sys-apps/util-linux-2.20 )
 	)"
 
 pkg_setup() {
