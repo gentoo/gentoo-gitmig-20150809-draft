@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Number-Compare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Compare/ChangeLog,v 1.23 2012/02/25 18:01:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Compare/ChangeLog,v 1.24 2012/02/27 03:55:07 jer Exp $
+
+  27 Feb 2012; Jeroen Roovers <jer@gentoo.org> Number-Compare-0.30.0.ebuild:
+  Stable for HPPA (bug #400193).
 
   25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
   Number-Compare-0.30.0.ebuild:
