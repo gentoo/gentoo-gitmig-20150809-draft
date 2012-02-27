@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.15.ebuild,v 1.1 2012/02/26 05:31:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.15.ebuild,v 1.2 2012/02/27 22:24:40 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -25,7 +25,7 @@ src_prepare() {
 
 	# Set default system backend to screen
 	if use screen ; then
-		sed -i -e "s/#\(BYOBU_BACKEND\).*/\1=screen/" etc/byobu/backend || die
+		sed -i -e 's/#\(BYOBU_BACKEND\).*/\1="screen"/' etc/byobu/backend || die
 	fi
 }
 
