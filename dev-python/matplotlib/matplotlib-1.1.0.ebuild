@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.0.ebuild,v 1.11 2012/02/27 16:05:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.0.ebuild,v 1.12 2012/02/27 23:18:11 bicatali Exp $
 
 EAPI="3"
 
@@ -138,7 +138,7 @@ src_prepare() {
 		EOF
 		cat <<-EOF >> matplotlibrc.template
 			examples.download : False
-			examples.directory : ${EPREFIX}/usr/share/${PF}/examples
+			examples.directory : ${EPREFIX}/usr/share/doc/${PF}/examples
 		EOF
 	fi
 }
