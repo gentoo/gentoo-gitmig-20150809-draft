@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/csound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.1 2012/02/27 05:37:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.2 2012/02/27 05:42:44 radhermit Exp $
+
+  27 Feb 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Sort use flags and fix whitespace.
 
 *csound-5.16.6 (27 Feb 2012)
 
