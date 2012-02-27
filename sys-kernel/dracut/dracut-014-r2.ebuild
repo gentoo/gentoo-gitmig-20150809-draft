@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r2.ebuild,v 1.2 2012/02/16 18:01:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r2.ebuild,v 1.3 2012/02/27 11:11:16 aidecoe Exp $
 
 EAPI=4
 
@@ -56,7 +56,7 @@ RDEPEND="
 	>=sys-apps/util-linux-2.20
 	>=sys-fs/udev-164
 	app-arch/cpio
-	virtual/modutils
+	|| ( >=sys-apps/module-init-tools-3.8 >sys-apps/kmod-5[tools] )
 
 	debug? ( dev-util/strace )
 	selinux? ( sys-libs/libselinux sys-libs/libsepol )
