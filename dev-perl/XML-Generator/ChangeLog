@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Generator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.39 2012/02/24 16:46:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.40 2012/02/27 21:58:28 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> XML-Generator-1.40.0.ebuild:
+  Marking XML-Generator-1.40.0 ppc for bug 400267
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> XML-Generator-1.40.0.ebuild:
   Stable for HPPA (bug #400267).
