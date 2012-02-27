@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.1 2012/02/21 20:51:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.2 2012/02/27 09:15:27 tupone Exp $
 
 EAPI=3
 
@@ -59,7 +59,6 @@ PATCHES=(
 	"${FILESDIR}"/${P}-libpng.patch
 	"${FILESDIR}"/${P}-gentoo.patch
 )
-DOCS="docs/{Author,DeveloperReadme,instruments,TODO}.txt"
 append-cppflags -DBOOST_FILESYSTEM_VERSION=2
 
 src_prepare() {
@@ -88,5 +87,8 @@ src_install() {
 		insinto "${GAMES_DATADIR}"/${PN}
 		doins -r "${S}/songs" || die "doins failed"
 	fi
+	cd docs
+	dodoc {Authors,DeveloperReadme,instruments,TODO}.txt \
+		|| die "dodoc failed"
 	prepgamesdirs
 }

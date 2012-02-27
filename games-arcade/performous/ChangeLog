@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/performous
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.1 2012/02/21 20:51:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.2 2012/02/27 09:15:27 tupone Exp $
+
+  27 Feb 2012; Tupone Alfredo <tupone@gentoo.org> performous-0.6.1.ebuild:
+  Fixing dodoc. Bug #405925 by Dennis Schridde
 
 *performous-0.6.1 (21 Feb 2012)
 
