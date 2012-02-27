@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.5.ebuild,v 1.1 2011/03/09 20:03:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.7.ebuild,v 1.1 2012/02/27 02:35:17 bicatali Exp $
 
 EAPI=4
 
@@ -56,9 +56,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc README TODO AUTHORS ChangeLog
-
+	default
 	# leftover
 	rm -rf "${ED}"/usr/share/${PN}/doc || die
 	use doc && use cxx && dohtml -r ccwrap/doxy/html/*
