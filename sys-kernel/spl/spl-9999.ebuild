@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.8 2012/02/27 01:12:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.9 2012/02/27 01:23:34 floppym Exp $
 
 EAPI="4"
 
-inherit git-2 linux-mod autotools-utils
+inherit flag-o-matic git-2 linux-mod autotools-utils
 
 DESCRIPTION="The Solaris Porting Layer is a Linux kernel module which provides many of the Solaris kernel APIs"
 HOMEPAGE="http://zfsonlinux.org/"
@@ -67,5 +67,4 @@ src_test() {
 	else
 		autotools-utils_src_test
 	fi
-
 }
