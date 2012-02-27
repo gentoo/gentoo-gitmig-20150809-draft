@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcpflow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.27 2012/02/03 07:55:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.28 2012/02/27 11:18:59 radhermit Exp $
+
+*tcpflow-1.1.1 (27 Feb 2012)
+
+  27 Feb 2012; Tim Harder <radhermit@gentoo.org> +tcpflow-1.1.1.ebuild:
+  Version bump.
 
 *tcpflow-1.1.0 (03 Feb 2012)
 
