@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4-r2.ebuild,v 1.1 2012/02/24 11:05:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4-r2.ebuild,v 1.2 2012/02/27 19:05:27 eras Exp $
 
 EAPI=4
 inherit toolchain-funcs eutils
@@ -35,7 +35,7 @@ src_configure() {
 	# this is not an autotools script
 	./configure \
 		$(use_with mysql) \
-		$(use_with berkdb libdb)
+		$(use_with berkdb libdb) || die
 }
 
 src_compile() {
