@@ -1,6 +1,6 @@
 diff -Nur grib_api-1.9.9.orig/configure.ac grib_api-1.9.9/configure.ac
---- grib_api-1.9.9.orig/configure.ac	2010-10-19 13:19:26.000000000 +0100
-+++ grib_api-1.9.9/configure.ac	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/configure.ac	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/configure.ac	2012-02-27 18:08:55.000000000 +0000
 @@ -24,21 +24,9 @@
  AC_CONFIG_HEADER([src/config.h])
  AM_INIT_AUTOMAKE($PACKAGE_NAME,[${PACKAGE_VERSION}],[http://www.ecmwf.int])
@@ -138,6 +138,15 @@ diff -Nur grib_api-1.9.9.orig/configure.ac grib_api-1.9.9/configure.ac
  then
    FORTRAN_MOD=fortran
    AC_SUBST(FORTRAN_MOD)
+@@ -221,7 +221,7 @@
+ then
+ 	IFS_SAMPLES_DIR=$ifs_samples
+ else
+-	IFS_SAMPLES_DIR=${prefix}/ifs_samples
++	IFS_SAMPLES_DIR=${datadir}/$PACKAGE_NAME/ifs_samples
+ fi
+ AC_SUBST([IFS_SAMPLES_DIR])
+ 
 @@ -262,8 +262,8 @@
  AC_ARG_ENABLE([timer],
    [AC_HELP_STRING([--enable-timer],
@@ -160,7 +169,16 @@ diff -Nur grib_api-1.9.9.orig/configure.ac grib_api-1.9.9/configure.ac
  then
    AC_DEFINE(OMP_PACKING,1,1->OpenMP packing 0->single thread packing)
  else
-@@ -312,7 +312,7 @@
+@@ -291,8 +291,6 @@
+ if test $netcdf_dir != 'none'
+ then
+ 	with_netcdf=1
+-	CFLAGS="$CFLAGS -I${netcdf_dir}/include"
+-    LDFLAGS="$LDFLAGS -L${netcdf_dir}/lib"
+     AC_CHECK_LIB(netcdf,nc_open,netcdf_ok=1,netcdf_ok=0)
+ 	if test $netcdf_ok -eq 0
+ 	then
+@@ -312,7 +310,7 @@
  AC_ARG_ENABLE([jpeg],
    [AC_HELP_STRING([--disable-jpeg],
                    [disable jpeg 2000 for grib 2 decoding/encoding])],
@@ -169,16 +187,35 @@ diff -Nur grib_api-1.9.9.orig/configure.ac grib_api-1.9.9/configure.ac
  
  AC_ARG_WITH([jasper],
          [AC_HELP_STRING([--with-jasper=JASPER],
-@@ -342,7 +342,7 @@
-   LDFLAGS="$LDFLAGS -L${openjpeg_dir}/lib"
- fi
+@@ -322,12 +320,6 @@
+ JASPER_DIR=$jasper_dir
+ AC_SUBST(JASPER_DIR)
  
+-if test $jasper_dir != 'system'
+-then
+-  CFLAGS="$CFLAGS -I${jasper_dir}/include"
+-  LDFLAGS="$LDFLAGS -L${jasper_dir}/lib"
+-fi
+-
+ AC_ARG_WITH([openjpeg],
+         [AC_HELP_STRING([--with-openjpeg=OPENJPEG],
+ 	    [use specified openjpeg installation directory])],
+@@ -336,13 +328,7 @@
+ OPENJPEG_DIR=$openjpeg_dir
+ AC_SUBST(OPENJPEG_DIR)
+ 
+-if test $openjpeg_dir != 'system'
+-then
+-  CFLAGS="$CFLAGS -I${openjpeg_dir}/include"
+-  LDFLAGS="$LDFLAGS -L${openjpeg_dir}/lib"
+-fi
+-
 -if test $without_jpeg -ne 1
 +if test x"$with_jpeg" = x"yes"
  then
      AC_DEFINE(HAVE_JPEG,1,JPEG enabled)
      AC_CHECK_LIB(jasper,jas_stream_memopen,jasper_ok=1,jasper_ok=0)
-@@ -429,9 +429,9 @@
+@@ -429,9 +415,9 @@
  AC_ARG_ENABLE([install-system-perl],
          [AC_HELP_STRING([--enable-install-system-perl],
  		                [perl modules will install in the standard perl installation ])],
@@ -190,7 +227,7 @@ diff -Nur grib_api-1.9.9.orig/configure.ac grib_api-1.9.9/configure.ac
  then
      PERL_INSTALL_OPTIONS=""
  fi
-@@ -461,7 +461,7 @@
+@@ -461,7 +447,7 @@
  builddir=`pwd`
  
  dnl Options to pass when configuring Perl grib_api
@@ -200,8 +237,8 @@ diff -Nur grib_api-1.9.9.orig/configure.ac grib_api-1.9.9/configure.ac
  AC_ARG_WITH([perl-options],
    [AC_HELP_STRING([--with-perl-options=[OPTIONS]], [options to pass on command-line when
 diff -Nur grib_api-1.9.9.orig/definitions/installDefinitions.sh grib_api-1.9.9/definitions/installDefinitions.sh
---- grib_api-1.9.9.orig/definitions/installDefinitions.sh	2010-05-10 16:25:15.000000000 +0100
-+++ grib_api-1.9.9/definitions/installDefinitions.sh	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/definitions/installDefinitions.sh	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/definitions/installDefinitions.sh	2012-02-27 17:42:14.000000000 +0000
 @@ -44,7 +44,7 @@
  echo checking definition files compatibility...
  for file in `find . -name '*.def' -print`
@@ -212,8 +249,8 @@ diff -Nur grib_api-1.9.9.orig/definitions/installDefinitions.sh grib_api-1.9.9/d
  if [ $? != 0 ]
  then
 diff -Nur grib_api-1.9.9.orig/examples/C/Makefile.am grib_api-1.9.9/examples/C/Makefile.am
---- grib_api-1.9.9.orig/examples/C/Makefile.am	2010-09-15 16:12:55.000000000 +0100
-+++ grib_api-1.9.9/examples/C/Makefile.am	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/examples/C/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/examples/C/Makefile.am	2012-02-27 17:42:14.000000000 +0000
 @@ -30,7 +30,7 @@
  
  INCLUDES =  -I$(top_builddir)/src
@@ -224,8 +261,8 @@ diff -Nur grib_api-1.9.9.orig/examples/C/Makefile.am grib_api-1.9.9/examples/C/M
  
  EXTRA_DIST =$(TESTS) include.sh
 diff -Nur grib_api-1.9.9.orig/examples/F90/Makefile.am grib_api-1.9.9/examples/F90/Makefile.am
---- grib_api-1.9.9.orig/examples/F90/Makefile.am	2010-04-01 10:21:30.000000000 +0100
-+++ grib_api-1.9.9/examples/F90/Makefile.am	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/examples/F90/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/examples/F90/Makefile.am	2012-02-27 17:42:14.000000000 +0000
 @@ -37,7 +37,7 @@
  
  AM_FCFLAGS = $(F90_MODULE_FLAG)$(top_builddir)/fortran
@@ -236,8 +273,8 @@ diff -Nur grib_api-1.9.9.orig/examples/F90/Makefile.am grib_api-1.9.9/examples/F
  
  EXTRA_DIST =$(TESTS) include.sh
 diff -Nur grib_api-1.9.9.orig/examples/python/include.sh grib_api-1.9.9/examples/python/include.sh
---- grib_api-1.9.9.orig/examples/python/include.sh	2011-02-17 11:24:13.000000000 +0000
-+++ grib_api-1.9.9/examples/python/include.sh	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/examples/python/include.sh	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/examples/python/include.sh	2012-02-27 17:42:14.000000000 +0000
 @@ -14,6 +14,8 @@
  
  PYTHONPATH=$cpath/python:$PYTHONPATH
@@ -248,8 +285,8 @@ diff -Nur grib_api-1.9.9.orig/examples/python/include.sh grib_api-1.9.9/examples
  set -u
  
 diff -Nur grib_api-1.9.9.orig/examples/python/Makefile.am grib_api-1.9.9/examples/python/Makefile.am
---- grib_api-1.9.9.orig/examples/python/Makefile.am	2011-02-17 11:24:13.000000000 +0000
-+++ grib_api-1.9.9/examples/python/Makefile.am	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/examples/python/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/examples/python/Makefile.am	2012-02-27 17:42:14.000000000 +0000
 @@ -10,7 +10,7 @@
  iterator_SOURCES = iterator.c
  count_messages_SOURCES = count_messages.c
@@ -260,8 +297,8 @@ diff -Nur grib_api-1.9.9.orig/examples/python/Makefile.am grib_api-1.9.9/example
  
  EXTRA_DIST = $(TESTS) include.sh clone.py count_messages.py get.py index.py iterator.py keys_iterator.py multi_write.py nearest.py print_data.py samples.py set.py set_missing.py binary_message.py set_pv.py
 diff -Nur grib_api-1.9.9.orig/fortran/Makefile.am grib_api-1.9.9/fortran/Makefile.am
---- grib_api-1.9.9.orig/fortran/Makefile.am	2009-11-24 11:51:52.000000000 +0000
-+++ grib_api-1.9.9/fortran/Makefile.am	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/fortran/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/fortran/Makefile.am	2012-02-27 17:42:14.000000000 +0000
 @@ -2,14 +2,14 @@
  
  AM_CFLAGS =  @WARN_PEDANTIC@
@@ -292,8 +329,8 @@ diff -Nur grib_api-1.9.9.orig/fortran/Makefile.am grib_api-1.9.9/fortran/Makefil
  #noinst_HEADERS = 
  
 diff -Nur grib_api-1.9.9.orig/perl/GRIB-API/Makefile.PL.in grib_api-1.9.9/perl/GRIB-API/Makefile.PL.in
---- grib_api-1.9.9.orig/perl/GRIB-API/Makefile.PL.in	2009-11-24 11:51:53.000000000 +0000
-+++ grib_api-1.9.9/perl/GRIB-API/Makefile.PL.in	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/perl/GRIB-API/Makefile.PL.in	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/perl/GRIB-API/Makefile.PL.in	2012-02-27 17:42:14.000000000 +0000
 @@ -19,5 +19,5 @@
      INC               => '-I@GRIB_API_INC@', # e.g., '-I. -I/usr/include/other'
  	# Un-comment this if you add C files to link with later:
@@ -302,8 +339,8 @@ diff -Nur grib_api-1.9.9.orig/perl/GRIB-API/Makefile.PL.in grib_api-1.9.9/perl/G
 +	depend           => { "API.o" => "../../src/libgrib_api.la" }
  );
 diff -Nur grib_api-1.9.9.orig/perl/Makefile.am grib_api-1.9.9/perl/Makefile.am
---- grib_api-1.9.9.orig/perl/Makefile.am	2010-03-19 11:25:53.000000000 +0000
-+++ grib_api-1.9.9/perl/Makefile.am	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/perl/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/perl/Makefile.am	2012-02-27 17:42:14.000000000 +0000
 @@ -16,10 +16,10 @@
  $(PERLMAKEFILE): $(PERLMAKEMAKER)
  	cd $(API_DIR) && @PERL@ Makefile.PL @PERL_INSTALL_OPTIONS@ @PERL_MAKE_OPTIONS@ @PERL_LD_OPTIONS@ 
@@ -317,9 +354,21 @@ diff -Nur grib_api-1.9.9.orig/perl/Makefile.am grib_api-1.9.9/perl/Makefile.am
  	cd $(top_builddir)/src  && $(MAKE)
  
  install-exec-perl: $(PERLMAKEFILE)
+diff -Nur grib_api-1.9.9.orig/python/Makefile.am grib_api-1.9.9/python/Makefile.am
+--- grib_api-1.9.9.orig/python/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/python/Makefile.am	2012-02-27 17:56:09.000000000 +0000
+@@ -23,7 +23,7 @@
+ 			swig_wrap_numpy.py
+ 
+ # What I want installed
+-pdir = $(libdir)/python$(PYTHON_VERSION)/site-packages/grib_api
++pdir = $(libdir)/python$(PYTHON_VERSION)/site-packages
+ p_DATA = \
+ 	_gribapi_swig.so \
+ 	gribapi.py \
 diff -Nur grib_api-1.9.9.orig/python/setup.py.in grib_api-1.9.9/python/setup.py.in
---- grib_api-1.9.9.orig/python/setup.py.in	2010-10-08 16:00:49.000000000 +0100
-+++ grib_api-1.9.9/python/setup.py.in	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/python/setup.py.in	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/python/setup.py.in	2012-02-27 17:42:14.000000000 +0000
 @@ -17,7 +17,8 @@
  build_dir = '@BUILD_DIR@'
  add_attribute(
@@ -331,8 +380,8 @@ diff -Nur grib_api-1.9.9.orig/python/setup.py.in grib_api-1.9.9/python/setup.py.
  
  with_jasper = '@LIB_JASPER@'
 diff -Nur grib_api-1.9.9.orig/src/extrules.am grib_api-1.9.9/src/extrules.am
---- grib_api-1.9.9.orig/src/extrules.am	2010-10-05 11:21:12.000000000 +0100
-+++ grib_api-1.9.9/src/extrules.am	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/src/extrules.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/src/extrules.am	2012-02-27 17:42:14.000000000 +0000
 @@ -9,7 +9,7 @@
  	cmp ../python/grib_errors.h grib_errors.h.new || (p4 edit ../python/grib_errors.h ; cp grib_errors.h.new ../python/grib_errors.h)
  
@@ -343,8 +392,8 @@ diff -Nur grib_api-1.9.9.orig/src/extrules.am grib_api-1.9.9/src/extrules.am
  
  templates:
 diff -Nur grib_api-1.9.9.orig/src/Makefile.am grib_api-1.9.9/src/Makefile.am
---- grib_api-1.9.9.orig/src/Makefile.am	2011-02-04 14:38:58.000000000 +0000
-+++ grib_api-1.9.9/src/Makefile.am	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/src/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/src/Makefile.am	2012-02-27 17:42:14.000000000 +0000
 @@ -7,10 +7,10 @@
  #  -DYYDEBUG
  
@@ -358,7 +407,7 @@ diff -Nur grib_api-1.9.9.orig/src/Makefile.am grib_api-1.9.9/src/Makefile.am
  	action.c \
           action_class_alias.c \
           action_class_gen.c \
-@@ -142,7 +142,6 @@
+@@ -143,7 +143,6 @@
             grib_accessor_class_spectral_truncation.c \
             grib_accessor_class_time.c \
             grib_accessor_class_transient.c \
@@ -366,7 +415,7 @@ diff -Nur grib_api-1.9.9.orig/src/Makefile.am grib_api-1.9.9/src/Makefile.am
             grib_accessor_class_values.c \
  		   grib_accessor_class_simple_packing_error.c \
             grib_accessor_class_data_simple_packing.c \
-@@ -285,10 +284,10 @@
+@@ -286,10 +285,10 @@
  
  libgrib_api_extra_prototypes = grib_bits_any_endian.c grib_bits_any_endian_simple.c
  
@@ -380,7 +429,7 @@ diff -Nur grib_api-1.9.9.orig/src/Makefile.am grib_api-1.9.9/src/Makefile.am
  
  
  # set the include path
-@@ -296,7 +295,7 @@
+@@ -297,7 +296,7 @@
  
  ## Make sure these will be cleaned even when they're not built by
  ## default.
@@ -390,8 +439,8 @@ diff -Nur grib_api-1.9.9.orig/src/Makefile.am grib_api-1.9.9/src/Makefile.am
  
  noinst_HEADERS = grib_api_internal.h \
 diff -Nur grib_api-1.9.9.orig/tests/definitions.sh grib_api-1.9.9/tests/definitions.sh
---- grib_api-1.9.9.orig/tests/definitions.sh	2010-06-17 15:00:13.000000000 +0100
-+++ grib_api-1.9.9/tests/definitions.sh	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/tests/definitions.sh	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/tests/definitions.sh	2012-02-27 17:42:14.000000000 +0000
 @@ -15,6 +15,6 @@
  
  for file in `find $GRIB_DEFINITION_PATH -name '*.def' -print`
@@ -401,8 +450,8 @@ diff -Nur grib_api-1.9.9.orig/tests/definitions.sh grib_api-1.9.9/tests/definiti
  done
  
 diff -Nur grib_api-1.9.9.orig/tests/Makefile.am grib_api-1.9.9/tests/Makefile.am
---- grib_api-1.9.9.orig/tests/Makefile.am	2010-12-02 14:54:51.000000000 +0000
-+++ grib_api-1.9.9/tests/Makefile.am	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/tests/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/tests/Makefile.am	2012-02-27 17:42:14.000000000 +0000
 @@ -31,7 +31,7 @@
  	 gribex_perf_SOURCES = gribex_perf.c
  	 gribex_perf_SOURCES = gauss_sub.c
@@ -413,8 +462,8 @@ diff -Nur grib_api-1.9.9.orig/tests/Makefile.am grib_api-1.9.9/tests/Makefile.am
       INCLUDES   = -I$(top_builddir)/src
  
 diff -Nur grib_api-1.9.9.orig/tigge/Makefile.am grib_api-1.9.9/tigge/Makefile.am
---- grib_api-1.9.9.orig/tigge/Makefile.am	2010-02-17 16:53:55.000000000 +0000
-+++ grib_api-1.9.9/tigge/Makefile.am	2011-03-08 17:20:10.000000000 +0000
+--- grib_api-1.9.9.orig/tigge/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/tigge/Makefile.am	2012-02-27 17:42:14.000000000 +0000
 @@ -12,5 +12,5 @@
  
  INCLUDES =  -I$(top_builddir)/src
@@ -423,8 +472,8 @@ diff -Nur grib_api-1.9.9.orig/tigge/Makefile.am grib_api-1.9.9/tigge/Makefile.am
 +LDADD = $(top_builddir)/src/libgrib_api.la
  DEPENDENCIES = $(LDADD)
 diff -Nur grib_api-1.9.9.orig/tools/Makefile.am grib_api-1.9.9/tools/Makefile.am
---- grib_api-1.9.9.orig/tools/Makefile.am	2011-01-31 16:33:49.000000000 +0000
-+++ grib_api-1.9.9/tools/Makefile.am	2011-03-08 17:22:25.000000000 +0000
+--- grib_api-1.9.9.orig/tools/Makefile.am	2012-02-27 17:41:54.000000000 +0000
++++ grib_api-1.9.9/tools/Makefile.am	2012-02-27 17:42:14.000000000 +0000
 @@ -3,9 +3,9 @@
  
  AM_YFLAGS = -d

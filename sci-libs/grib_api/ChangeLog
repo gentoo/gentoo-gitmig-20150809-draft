@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/grib_api
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.8 2011/12/21 07:55:03 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.9 2012/02/27 18:18:19 bicatali Exp $
+
+*grib_api-1.9.9-r1 (27 Feb 2012)
+
+  27 Feb 2012; Sébastien Fabbro <bicatali@gentoo.org> -grib_api-1.9.9.ebuild,
+  +grib_api-1.9.9-r1.ebuild, files/grib_api-1.9.9-autotools.patch:
+  Install samples in proper FHS directory. Python routines now installed
+  without changing PYTHONPATH (bug #405177). Switchd to EAPI4
 
   21 Dec 2011; Justin Lecher <jlec@gentoo.org> grib_api-1.9.9.ebuild:
   Fix for linker failure, #391797

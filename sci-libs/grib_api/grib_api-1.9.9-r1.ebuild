@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.9.ebuild,v 1.3 2011/12/21 07:55:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.9-r1.ebuild,v 1.1 2012/02/27 18:18:19 bicatali Exp $
 
-EAPI=3
+EAPI=4
 inherit eutils autotools
 
 #MYP=${P}_libtool
@@ -29,9 +29,6 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-ieeefloat.patch \
 		"${FILESDIR}"/${P}-autotools.patch
-	sed \
-		-e '/LDFLAGS=/d' \
-		-i configure.ac || die
 	eautoreconf
 }
 
@@ -62,14 +59,11 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install  || die "emake install failed"
-	dodoc AUTHORS ChangeLog README
-	if use doc; then
-		dohtml html/* || die
-	fi
+	default
+	use doc && dohtml html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		emake clean
-		doins -r * || die
+		doins -r *
 	fi
 }
