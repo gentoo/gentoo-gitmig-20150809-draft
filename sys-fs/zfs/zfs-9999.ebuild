@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.8 2012/02/24 22:46:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.9 2012/02/27 01:14:13 floppym Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git"
 LICENSE="CDDL GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug static-libs"
+IUSE="custom-cflags debug static-libs"
 
 DEPEND=">=sys-kernel/spl-${PV}"
 RDEPEND="${DEPEND}
@@ -27,7 +27,8 @@ AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 pkg_setup() {
-	CONFIG_CHECK="!PREEMPT
+	CONFIG_CHECK="MODULES
+		!PREEMPT
 		!DEBUG_LOCK_ALLOC
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
@@ -43,9 +44,11 @@ src_prepare() {
 }
 
 src_configure() {
+	use custom-cflags || strip-flags
 	set_arch_to_kernel
 	local myeconfargs=(
-		--exec-prefix=
+		--bin=/bin
+		--sbin=/sbin
 		--with-config=all
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
@@ -63,4 +66,9 @@ src_test() {
 	else
 		autotools-utils_src_test
 	fi
+}
+
+src_install() {
+	autotools-utils_src_install
+	gen_usr_ldscript -a uutil nvpair zpool zfs
 }
