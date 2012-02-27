@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-9999.ebuild,v 1.2 2012/02/27 21:40:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-9999.ebuild,v 1.3 2012/02/27 21:42:16 scarabeus Exp $
 
 EAPI=4
 
@@ -19,8 +19,8 @@ SLOT="0"
 IUSE="doc static-libs"
 
 RDEPEND="
-	app-text/libwpd:9
-	app-text/libwpg:2
+	app-text/libwpd:0.9
+	app-text/libwpg:0.2
 	media-libs/lcms:2
 	sys-libs/zlib
 "
