@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Audio-Wav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/ChangeLog,v 1.49 2012/02/27 03:34:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/ChangeLog,v 1.50 2012/02/27 15:23:56 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> Audio-Wav-0.120.0.ebuild:
+  Marking Audio-Wav-0.120.0 ppc for bug 400037
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> Audio-Wav-0.120.0.ebuild:
   Stable for HPPA (bug #400037).
