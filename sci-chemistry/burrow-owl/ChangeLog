@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/burrow-owl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/ChangeLog,v 1.5 2012/02/14 19:58:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/ChangeLog,v 1.6 2012/02/27 22:50:44 jlec Exp $
+
+*burrow-owl-1.5.1 (27 Feb 2012)
+
+  27 Feb 2012; Justin Lecher <jlec@gentoo.org> +burrow-owl-1.5.1.ebuild:
+  Version Bump
 
 *burrow-owl-1.5 (14 Feb 2012)
 

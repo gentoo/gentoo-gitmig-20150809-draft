@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.1.ebuild,v 1.4 2012/02/27 22:53:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.2.ebuild,v 1.1 2012/02/27 22:53:03 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ inherit distutils eutils fdo-mime prefix versionator
 DESCRIPTION="A Python-extensible molecular graphics system"
 HOMEPAGE="http://pymol.sourceforge.net/"
 SRC_URI="
-	mirror://sourceforge/project/${PN}/${PN}/${PV}/${PN}-v${PV}.tar.bz2
+	http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz
 	http://dev.gentoo.org/~jlec/distfiles/${PN}.xpm.tar"
 
 LICENSE="PSF-2.2"
@@ -41,20 +41,18 @@ DEPEND="
 	web? ( !dev-python/webpy )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"/${PN}
-
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${P}-setup.py.patch \
-		"${FILESDIR}"/${P}-data-path.patch \
-		"${FILESDIR}"/${P}-flags.patch
+		"${FILESDIR}"/${PN}-1.5.0.1-setup.py.patch \
+		"${FILESDIR}"/${PN}-1.5.0.1-data-path.patch \
+		"${FILESDIR}"/${PN}-1.5.0.1-flags.patch
 
-	use web || epatch "${FILESDIR}"/${P}-web.patch
+	use web || epatch "${FILESDIR}"/${PN}-1.5.0.1-web.patch
 
-	epatch "${FILESDIR}"/${P}-prefix.patch && \
+	epatch "${FILESDIR}"/${PN}-1.5.0.1-prefix.patch && \
 		eprefixify setup.py
 
-	use vmd && epatch "${FILESDIR}"/${P}-vmd.patch
+	use vmd && epatch "${FILESDIR}"/${PN}-1.5.0.1-vmd.patch
 
 	if use numpy; then
 		sed \
