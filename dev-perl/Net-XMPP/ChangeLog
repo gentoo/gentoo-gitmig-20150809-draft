@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-XMPP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.33 2012/02/27 03:52:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.34 2012/02/27 16:07:14 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> Net-XMPP-1.20.0.ebuild:
+  Marking Net-XMPP-1.20.0 ppc for bug 400187
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> Net-XMPP-1.20.0.ebuild:
   Stable for HPPA (bug #400187).
