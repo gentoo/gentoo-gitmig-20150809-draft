@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lightdm-gtk-greeter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.4 2012/02/23 23:45:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.5 2012/02/27 20:00:10 hwoarang Exp $
+
+  27 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  lightdm-gtk-greeter-1.1.4-r1.ebuild:
+  Add lightdm to build dependencies. Bug #405971
 
 *lightdm-gtk-greeter-1.1.4-r1 (23 Feb 2012)
 

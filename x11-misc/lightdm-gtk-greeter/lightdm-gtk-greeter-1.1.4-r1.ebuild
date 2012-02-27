@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/lightdm-gtk-greeter-1.1.4-r1.ebuild,v 1.1 2012/02/23 23:45:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/lightdm-gtk-greeter-1.1.4-r1.ebuild,v 1.2 2012/02/27 20:00:10 hwoarang Exp $
 
 EAPI=4
 
@@ -14,9 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="branding"
 
-DEPEND="x11-libs/gtk+:3"
+DEPEND="x11-libs/gtk+:3
+	>=x11-misc/lightdm-1.1.3"
 RDEPEND="!!<x11-misc/lightdm-1.1.1
 	x11-libs/gtk+:3
+	>=x11-misc/lightdm-1.1.3
 	x11-themes/gnome-themes-standard
 	x11-themes/gnome-icon-theme"
 
