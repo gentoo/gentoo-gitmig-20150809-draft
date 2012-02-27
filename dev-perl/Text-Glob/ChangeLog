@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Glob
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.41 2012/02/24 16:50:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.42 2012/02/27 18:02:25 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> Text-Glob-0.90.0.ebuild:
+  Marking Text-Glob-0.90.0 ppc for bug 400241
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> Text-Glob-0.90.0.ebuild:
   Stable for HPPA (bug #400241).
