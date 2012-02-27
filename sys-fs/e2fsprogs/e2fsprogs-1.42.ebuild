@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.ebuild,v 1.5 2012/02/22 18:40:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.ebuild,v 1.6 2012/02/27 20:54:27 vapier Exp $
 
 case ${PV} in
 *_pre*) UP_PV="${PV%_pre*}-WIP-${PV#*_pre}" ;;
@@ -137,7 +137,7 @@ src_install() {
 	# /usr/lib/, and install linker scripts to /usr/lib/.
 	gen_usr_ldscript -a e2p ext2fs
 	# configure doesn't have an option to disable static libs :/
-	find "${D}" -name '*.a' -delete
+	use static-libs || find "${D}" -name '*.a' -delete
 
 	if use elibc_FreeBSD ; then
 		# Install helpers for us
