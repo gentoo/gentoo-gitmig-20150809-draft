@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.67 2012/02/24 16:51:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.68 2012/02/27 17:35:26 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> Test-Exception-0.310.0.ebuild:
+  Marking Test-Exception-0.310.0 ppc for bug 400231
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> Test-Exception-0.310.0.ebuild:
   Stable for HPPA (bug #400231).
