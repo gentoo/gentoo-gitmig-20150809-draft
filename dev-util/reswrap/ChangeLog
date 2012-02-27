@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/reswrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.15 2012/02/24 19:23:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.16 2012/02/27 03:26:21 jer Exp $
+
+  27 Feb 2012; Jeroen Roovers <jer@gentoo.org> reswrap-4.0.0.ebuild:
+  Stable for HPPA (bug #400351).
 
   24 Feb 2012; Brent Baude <ranger@gentoo.org> reswrap-4.0.0.ebuild:
   Marking reswrap-4.0.0 ppc for bug 400351
