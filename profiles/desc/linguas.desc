@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.55 2011/10/13 19:26:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.56 2012/02/27 05:27:49 radhermit Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -47,6 +47,7 @@ eo - Esperanto locale
 es - Spanish locale
 es_AR - Spanish locale for Argentina
 es_CL - Spanish locale for Chile
+es_CO - Spanish locale for Columbia
 es_CR - Spanish locale for Costa Rica
 es_ES - Spanish locale for Spain
 es_LA - Spanish locale for Latin America

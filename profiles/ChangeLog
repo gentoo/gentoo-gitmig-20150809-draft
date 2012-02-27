@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6251 2012/02/26 18:03:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6252 2012/02/27 05:27:48 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Feb 2012; Tim Harder <radhermit@gentoo.org> desc/linguas.desc:
+  Add Spanish locale for Columbia, used in media-sound/csound.
 
   26 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Remove mask for fixed extundelete and some removed pkgs.
