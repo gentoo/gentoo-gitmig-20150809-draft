@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6255 2012/02/27 20:46:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6256 2012/02/27 22:44:37 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -23,6 +23,9 @@
 
   26 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   removing obsolete mask on dev-lang/open64 that was removed from tree
+
+  26 Feb 2012; Justin Lecher <jlec@gentoo.org> package.mask:
+  Remove mask for sci-visualization/hippodraw
 
   25 Feb 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask rb_libtorrent-0.15.10 as well
