@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.21 2011/04/18 18:27:39 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.22 2012/02/27 23:12:46 sping Exp $
+
+  27 Feb 2012; Sebastian Pipping <sping@gentoo.org> pysvn-1.7.5.ebuild:
+  Adjust dependency to require subversion before 1.7 (bug #395533)
 
   18 Apr 2011; Thomas Kahle <tomka@gentoo.org> pysvn-1.7.5.ebuild:
   x86 stable per bug 362769
