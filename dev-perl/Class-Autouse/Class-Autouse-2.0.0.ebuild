@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/Class-Autouse-2.0.0.ebuild,v 1.4 2012/02/27 03:35:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/Class-Autouse-2.0.0.ebuild,v 1.5 2012/02/27 15:30:47 ranger Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Runtime aspect loading of one or more classes"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
 
 RDEPEND=">=virtual/perl-Scalar-List-Utils-1.18"
