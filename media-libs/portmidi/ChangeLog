@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/portmidi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portmidi/ChangeLog,v 1.1 2012/02/27 04:14:00 radhermit Exp $
+
+*portmidi-217 (27 Feb 2012)
+
+  27 Feb 2012; Tim Harder <radhermit@gentoo.org> +portmidi-217.ebuild,
+  +files/portmidi-217-cmake.patch, +files/portmidi-217-python.patch,
+  +metadata.xml:
+  Initial import from sunrise (bug #90614, thanks to all contributors).
+
