@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.78 2012/02/08 14:29:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.79 2012/02/27 13:17:45 voyageur Exp $
 
 # This file requires >=portage-2.1.1
+
+# Bernard Cafarelli <voyageur@gentoo.org> (27 Feb 2012)
+# Masked in base profile, supported on this arch
+gnustep-base/gnustep-make -libobjc2
 
 # Doug Goldstein <cardoe@gentoo.org> (17 Jan 2012)
 # The SPICE server is only supported on 64-bit platforms and not on 32-bit

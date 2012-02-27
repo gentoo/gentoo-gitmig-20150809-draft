@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.161 2012/02/11 10:41:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.162 2012/02/27 13:17:22 voyageur Exp $
+
+  27 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> package.use.mask:
+  Allow gnustep-make[libobjc2] on amd64
 
   11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> no-multilib/package.mask:
   Mask skypetab-ng as it's a library for x86-only skype.
