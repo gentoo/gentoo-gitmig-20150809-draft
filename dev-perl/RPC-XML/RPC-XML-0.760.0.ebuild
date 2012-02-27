@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.760.0.ebuild,v 1.3 2012/02/25 18:02:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.760.0.ebuild,v 1.4 2012/02/27 16:26:42 ranger Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="An implementation of XML-RPC"
 
 SLOT="0"
 LICENSE="|| ( Artistic-2 LGPL-2.1 )"
-KEYWORDS="alpha amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~ia64 ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 SRC_TEST="do"
