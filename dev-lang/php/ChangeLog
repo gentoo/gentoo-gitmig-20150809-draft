@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.563 2012/02/18 19:42:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.564 2012/02/27 22:04:47 mabi Exp $
+
+  27 Feb 2012; Matti Bickel <mabi@gentoo.org>
+  files/eblits/src_configure-v53.eblit, files/eblits/src_configure-v54.eblit:
+  rely on /etc/env.d/50oracle-instantclient-basic to provide oci configuration
+  for php (bug #380581)
 
   18 Feb 2012; Raúl Porcel <armin76@gentoo.org> php-5.3.10.ebuild:
   ia64/s390/sh/sparc stable wrt #401997
