@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-fu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.33 2012/02/24 15:37:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.34 2012/02/27 22:07:54 ranger Exp $
+
+  27 Feb 2012; Brent Baude <ranger@gentoo.org> gtk2-fu-0.110.0.ebuild:
+  Marking gtk2-fu-0.110.0 ppc for bug 400295
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> gtk2-fu-0.110.0.ebuild:
   Stable for HPPA (bug #400295).
