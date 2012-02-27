@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.169 2012/02/27 16:19:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.170 2012/02/27 18:09:25 scarabeus Exp $
+
+  27 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/icu-4.8.1.1-fix_ltr.patch, icu-4.8.1.1-r1.ebuild:
+  Ooops rebase the patch for 4.8.1.1.
 
 *icu-4.8.1.1-r1 (27 Feb 2012)
 *icu-4.8.1-r3 (27 Feb 2012)
