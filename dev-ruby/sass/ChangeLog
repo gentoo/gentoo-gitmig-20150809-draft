@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.12 2012/01/22 09:55:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.13 2012/02/28 00:21:31 flameeyes Exp $
+
+*sass-3.1.15 (28 Feb 2012)
+
+  28 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org> +sass-3.1.15.ebuild:
+  Version bump; tests are known not to work on JRuby for now, working on it.
 
 *sass-3.1.12 (22 Jan 2012)
 
