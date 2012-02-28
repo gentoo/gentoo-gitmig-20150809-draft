@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.8.0-r2.ebuild,v 1.1 2012/02/05 13:02:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.8.0-r2.ebuild,v 1.2 2012/02/28 13:30:35 jlec Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -50,8 +50,8 @@ src_install() {
 	qt4-build_src_install
 
 	#touch the available graphics systems
-	mkdir -p "${D}/usr/share/qt4/graphicssystems/" ||
-		die "could not create ${D}/usr/share/qt4/graphicssystems/"
-	echo "experimental" > "${D}/usr/share/qt4/graphicssystems/opengl" ||
-		die "could not touch ${D}/usr/share/qt4/graphicssystems/opengl"
+	mkdir -p "${ED}/usr/share/qt4/graphicssystems/" ||
+		die "could not create ${ED}/usr/share/qt4/graphicssystems/"
+	echo "experimental" > "${ED}/usr/share/qt4/graphicssystems/opengl" ||
+		die "could not touch ${ED}/usr/share/qt4/graphicssystems/opengl"
 }
