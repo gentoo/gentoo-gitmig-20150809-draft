@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6256 2012/02/27 22:44:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6257 2012/02/28 00:42:50 titanofold Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Feb 2012; Aaron W. Swenson <titanofold@gentoo.org> package.mask:
+  Masked dev-db/postgresql-{docs,base,server}:8.2 for removal. EOL and
+  vulnerabilities. (Bug 406037)
 
   27 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org> updates/1Q-2012:
   Add slotmove for dev-ruby/syslogger.
