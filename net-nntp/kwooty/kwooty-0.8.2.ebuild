@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-0.7.2.ebuild,v 1.1 2011/09/25 11:24:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-0.8.2.ebuild,v 1.1 2012/02/28 19:42:52 johu Exp $
 
 EAPI=4
 
-KDE_LINGUAS="cs de"
+KDE_LINGUAS="cs de fr"
 inherit kde4-base
 
 DESCRIPTION="Friendly nzb linux usenet binary client"
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 	app-arch/unrar
 	app-arch/par2cmdline"
 
-DOCS="README.txt"
+DOCS=( README.txt TODO )
 
 src_prepare() {
 	sed -i \
