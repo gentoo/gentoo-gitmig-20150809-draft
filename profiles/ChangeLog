@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6258 2012/02/28 20:47:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6259 2012/02/28 20:50:47 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove pmask of gnu-gs-fonts-*, not in the tree anymore
 
   28 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Remove pmask of xpdf (not in the tree anymore)
