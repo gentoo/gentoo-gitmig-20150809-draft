@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/vbisam
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/vbisam/ChangeLog,v 1.3 2011/10/05 08:03:39 nativemad Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/vbisam/ChangeLog,v 1.4 2012/02/28 22:21:14 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> vbisam-2.0.ebuild:
+  Marking vbisam-2.0 ppc for bug 384499
 
   05 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> vbisam-2.0.ebuild:
   x86 stable, see bug 384499
