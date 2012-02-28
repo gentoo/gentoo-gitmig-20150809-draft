@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Sub-Install
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.16 2011/11/07 07:58:02 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.17 2012/02/28 15:02:45 tove Exp $
+
+*Sub-Install-0.926.0 (28 Feb 2012)
+
+  28 Feb 2012; Torsten Veller <tove@gentoo.org> +Sub-Install-0.926.0.ebuild:
+  Version bump
 
   07 Nov 2011; Fabian Groffen <grobian@gentoo.org> Sub-Install-0.925.0.ebuild:
   Added Prefix keywords, bug #389001
