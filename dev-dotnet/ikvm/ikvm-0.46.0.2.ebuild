@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.46.0.2.ebuild,v 1.1 2012/01/21 13:49:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.46.0.2.ebuild,v 1.2 2012/02/28 08:30:16 pacho Exp $
 
 EAPI="4"
 
@@ -21,12 +21,15 @@ RDEPEND=">=dev-lang/mono-2
 DEPEND="${RDEPEND}
 	!dev-dotnet/ikvm-bin
 	>=dev-dotnet/nant-0.85
-	>=virtual/jdk-1.6
+	>=virtual/jdk-1.6:1.6
 	app-arch/unzip
 	dev-util/pkgconfig
 	app-arch/sharutils"
 
 src_prepare() {
+	# Fix unmappable character for encoding ASCII, bug #399729
+	epatch "${FILESDIR}"/${PN}-0.46.0.2-unmappable-character.patch
+
 	# We cannot rely on Mono Crypto Service Provider as it doesn't work inside
 	# sandbox, we simply hard-code the path to a bundled key like Debian does.
 	epatch "${FILESDIR}"/${PN}-0.46.0.1-key.patch

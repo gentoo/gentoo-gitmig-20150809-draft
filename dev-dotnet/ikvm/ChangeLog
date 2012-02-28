@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/ikvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.30 2012/01/21 13:49:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.31 2012/02/28 08:30:16 pacho Exp $
+
+  28 Feb 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/ikvm-0.46.0.2-unmappable-character.patch, ikvm-0.46.0.2.ebuild:
+  Fix unmappable character for encoding ASCII, bug #399729 by Dennis Schridde;
+  restrict to jdk:1.6, bug #405933
 
 *ikvm-0.46.0.2 (21 Jan 2012)
 
