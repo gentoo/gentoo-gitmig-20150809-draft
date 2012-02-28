@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.14.ebuild,v 1.3 2011/06/19 13:49:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.14.ebuild,v 1.4 2012/02/28 15:03:24 pesa Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 # 2.4 and 2.5 are restricted to avoid conditional dependency on dev-python/simplejson.
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
 
 inherit eutils python
 
