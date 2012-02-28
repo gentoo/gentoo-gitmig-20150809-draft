@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.1-r1.ebuild,v 1.5 2012/02/25 16:38:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.1-r1.ebuild,v 1.6 2012/02/28 22:19:45 ranger Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="aacs java static-libs utils +xml"
 
 COMMON_DEPEND="
