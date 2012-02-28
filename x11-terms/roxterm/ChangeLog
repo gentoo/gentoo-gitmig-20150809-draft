@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/roxterm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.55 2011/12/30 13:57:20 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.56 2012/02/28 20:40:35 lack Exp $
+
+*roxterm-2.5.2 (28 Feb 2012)
+
+  28 Feb 2012; Jim Ramsay <jim_ramsay@gentoo.org> +roxterm-2.5.2.ebuild,
+  metadata.xml:
+  Version bump, plus Bug #396539: Adding gtk3 USE flag
 
 *roxterm-2.3.4 (30 Dec 2011)
 
