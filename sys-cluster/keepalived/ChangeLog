@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/keepalived
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.83 2011/12/10 23:51:00 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.84 2012/02/28 02:31:56 robbat2 Exp $
+
+*keepalived-1.2.2-r3 (28 Feb 2012)
+
+  28 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> +files/conf-keepalived,
+  +keepalived-1.2.2-r3.ebuild, files/init-keepalived:
+  Merge debian patch. Support passing options to daemon, and improve init.d for
+  BL2. Bug #371469: Fix CVE-2011-1784 pidfile perms.
 
 *keepalived-1.2.2-r2 (10 Dec 2011)
 
