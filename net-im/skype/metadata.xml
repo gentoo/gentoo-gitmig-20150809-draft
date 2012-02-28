@@ -12,5 +12,6 @@ time, but to talk and chat with your friends.
 </longdescription>
 <use>
 	<flag name='qt-static'>Installs binaries statically linked to Qt</flag>
+	<flag name='pax_kernel'>Triggers a paxmarking of the binary</flag>
 </use>
 </pkgmetadata>

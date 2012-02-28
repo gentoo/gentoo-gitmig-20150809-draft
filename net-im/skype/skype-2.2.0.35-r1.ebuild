@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r1.ebuild,v 1.1 2011/06/15 22:07:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r1.ebuild,v 1.2 2012/02/28 21:24:54 prometheanfire Exp $
 
 EAPI=4
 inherit gnome2-utils eutils qt4-r2 pax-utils
@@ -16,7 +16,7 @@ SRC_URI="!qt-static? ( http://download.skype.com/linux/${DFILENAME} )
 LICENSE="skype-eula"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="qt-static"
+IUSE="qt-static pax_kernel"
 
 RESTRICT="mirror strip" # Bug 299368
 EMUL_VER=20091231
@@ -103,6 +103,15 @@ src_install() {
 	make_desktop_entry skype "Skype VoIP" skype "Network;InstantMessaging;Telephony"
 
 	dosym /opt/skype /usr/share/skype #Fix for disabled sound notification
+
+	if use pax_kernel; then
+		pax-mark m /opt/skype/skype || die
+		eqawarn "You have set USE=pax_kernel meaning that you intend to run"
+		eqawarn "skype under a PaX enabled kernel.  To do so, we must modify"
+		eqawarn "the skype binary itself and this *may* lead to breakage!  If"
+		eqawarn "you suspect that skype is being broken by this modification,"
+		eqawarn "please open a bug."
+	fi
 }
 
 pkg_preinst() {
