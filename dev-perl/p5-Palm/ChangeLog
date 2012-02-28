@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/p5-Palm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/ChangeLog,v 1.25 2012/02/24 10:54:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/ChangeLog,v 1.26 2012/02/28 14:53:27 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> p5-Palm-1.12.0.ebuild:
+  Marking p5-Palm-1.12.0 ppc for bug 400309
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> p5-Palm-1.12.0.ebuild:
   Stable for amd64, wrt bug #400309
