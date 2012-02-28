@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/zanshin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/zanshin/ChangeLog,v 1.4 2012/01/10 13:44:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/zanshin/ChangeLog,v 1.5 2012/02/28 14:14:30 johu Exp $
+
+*zanshin-0.2.1 (28 Feb 2012)
+
+  28 Feb 2012; Johannes Huber <johu@gentoo.org> +zanshin-0.2.1.ebuild:
+  Version bump.
 
 *zanshin-0.2.0 (10 Jan 2012)
 
