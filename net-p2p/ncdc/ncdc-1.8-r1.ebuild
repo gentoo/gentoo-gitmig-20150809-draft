@@ -1,10 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-1.7.ebuild,v 1.1 2011/12/30 23:59:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-1.8-r1.ebuild,v 1.1 2012/02/28 13:02:36 xmw Exp $
 
 EAPI=4
-
-inherit base
 
 DESCRIPTION="ncurses directconnect client"
 HOMEPAGE="http://dev.yorhel.nl/ncdc"
@@ -17,16 +15,11 @@ IUSE=""
 
 RDEPEND="app-arch/bzip2
 	dev-db/sqlite:3
+	dev-lang/perl
 	dev-libs/glib:2
 	dev-libs/libxml2:2
+	net-libs/glib-networking
 	sys-libs/gdbm
 	sys-libs/ncurses:5"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-DOCS=( ChangeLog README )
-
-src_install() {
-	base_src_install
-	dobin util/ncdc-gen-cert
-}
