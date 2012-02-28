@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/command-t-1.3.1.ebuild,v 1.1 2012/02/28 03:57:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/command-t-1.3.1.ebuild,v 1.2 2012/02/28 03:58:58 radhermit Exp $
 
 EAPI="4"
 USE_RUBY="ruby18 ruby19"
@@ -37,6 +37,6 @@ each_ruby_install() {
 }
 
 all_ruby_install() {
-	rm -rf ruby
+	rm -r ruby || die
 	vim-plugin_src_install
 }
