@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cabextract
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.72 2011/08/25 12:22:12 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.73 2012/02/28 19:38:58 darkside Exp $
+
+  28 Feb 2012; Jeremy Olexa <darkside@gentoo.org> cabextract-1.4.ebuild:
+  add prefix keywords as tested in the overlay
 
   25 Aug 2011; Jeroen Roovers <jer@gentoo.org> cabextract-1.4.ebuild:
   Stable for HPPA (bug #372597).
