@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.5 2012/02/20 04:22:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.6 2012/02/28 20:09:17 xmw Exp $
+
+*xpra-0.0.7.36 (28 Feb 2012)
+
+  28 Feb 2012; Michael Weber <xmw@gentoo.org> +xpra-0.0.7.36.ebuild:
+  Version bump, thanks soxx.
 
   20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Drop no-herd.
