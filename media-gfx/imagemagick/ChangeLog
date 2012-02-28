@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.463 2012/02/18 19:43:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.464 2012/02/28 20:15:12 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> imagemagick-6.7.5.3.ebuild:
+  Marking imagemagick-6.7.5.3 ppc for bug 402999
 
   18 Feb 2012; Raúl Porcel <armin76@gentoo.org> imagemagick-6.7.5.3.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #402999
