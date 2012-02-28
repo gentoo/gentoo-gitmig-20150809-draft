@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/pymmlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.22 2011/06/26 10:22:51 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.23 2012/02/28 12:50:40 patrick Exp $
+
+  28 Feb 2012; Patrick Lauer <patrick@gentoo.org> pymmlib-1.0.0-r1.ebuild:
+  Restricting jython
 
   26 Jun 2011; Justin Lecher <jlec@gentoo.org> pymmlib-1.0.0-r1.ebuild,
   metadata.xml:
