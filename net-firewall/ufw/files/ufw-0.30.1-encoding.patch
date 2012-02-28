@@ -1,0 +1,15 @@
+Fixes usage with ufw-frontends.
+upstream bug report: https://bugs.launchpad.net/ufw/+bug/921758
+--- src/util.py
++++ src/util.py
+@@ -205,8 +205,9 @@
+ 
+ def open_file_read(f):
+     '''Opens the specified file read-only'''
++    import codecs
+     try:
+-        orig = open(f, 'r')
++        orig = codecs.open(f, 'r', "UTF-8")
+     except Exception:
+         raise
+ 

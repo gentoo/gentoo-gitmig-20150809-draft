@@ -1,9 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.30.1-r2.ebuild,v 1.3 2011/09/13 06:35:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.30.1-r4.ebuild,v 1.1 2012/02/28 11:42:22 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 PYTHON_DEPEND="2:2.5"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit versionator bash-completion-r1 eutils linux-info distutils
 
@@ -17,13 +19,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND=""
+DEPEND="sys-devel/gettext"
 RDEPEND=">=net-firewall/iptables-1.4"
 
 # tests fail; upstream bug: https://bugs.launchpad.net/ufw/+bug/815982
 RESTRICT="test"
 
-pkg_setup() {
+pkg_pretend() {
 	local CONFIG_CHECK="~PROC_FS ~NETFILTER_XT_MATCH_COMMENT ~IP6_NF_MATCH_HL \
 		~NETFILTER_XT_MATCH_LIMIT ~NETFILTER_XT_MATCH_MULTIPORT \
 		~NETFILTER_XT_MATCH_RECENT ~NETFILTER_XT_MATCH_STATE"
@@ -35,7 +37,9 @@ pkg_setup() {
 	fi
 
 	check_extra_config
-	python_set_active_version 2
+}
+
+pkg_setup() {
 	python_pkg_setup
 }
 
@@ -45,6 +49,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-dont-check-iptables.patch
 	# Move files away from /lib/ufw.
 	epatch "${FILESDIR}"/${PN}-move-path.patch
+	# Allows correct build with SUPPORT_PYTHON_ABIS="1" (see comment in the file).
+	epatch "${FILESDIR}"/${P}-python-abis.patch
+	# Fixes usage with ufw-frontends (bug ref. inside the patch).
+	epatch "${FILESDIR}"/${P}-encoding.patch
 	# Set as enabled by default. User can enable or disable
 	# the service by adding or removing it to/from a runlevel.
 	sed -i 's/^ENABLED=no/ENABLED=yes/' conf/ufw.conf \
@@ -52,15 +60,25 @@ src_prepare() {
 }
 
 src_install() {
-	newconfd "${FILESDIR}"/ufw.confd ufw || die "inserting a file to conf.d failed"
-	newinitd "${FILESDIR}"/ufw-2.initd ufw || die "inserting a file to init.d failed"
+	newconfd "${FILESDIR}"/ufw.confd ufw
+	newinitd "${FILESDIR}"/ufw-2.initd ufw
+
+	# users normally would want it
+	insinto /usr/share/doc/${PF}/logging
+	doins -r "${FILESDIR}"/syslog-ng
+
+	insinto /usr/share/doc/${PF}/logging/rsyslog
+	doins "${FILESDIR}"/rsyslog/*
+	doins doc/rsyslog.example
+
 	if use examples; then
-		dodoc doc/rsyslog.example || die "inserting example rsyslog configuration failed"
 		insinto /usr/share/doc/${PF}/examples
-		doins examples/* || die "inserting example files failed"
+		doins examples/*
 	fi
 	distutils_src_install
-	newbashcomp shell-completion/bash ${PN} || die "newbashcomp failed"
+	domo locales/mo/*.mo
+	rm -r "${ED}"usr/share/${PN}/messages || die
+	newbashcomp shell-completion/bash ${PN}
 }
 
 pkg_postinst() {
@@ -75,4 +93,7 @@ pkg_postinst() {
 	elog "Remember to enable ufw add it to your boot sequence:"
 	elog "-- # ufw enable"
 	elog "-- # rc-update add ufw boot"
+	echo
+	elog "If you want to keep ufw logs in a separate file, take a look at"
+	elog "/usr/share/doc/${PF}/logging."
 }
