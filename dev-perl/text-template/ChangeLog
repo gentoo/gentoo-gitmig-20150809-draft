@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/text-template
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.19 2012/02/24 15:33:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.20 2012/02/28 14:59:28 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> text-template-1.450.0.ebuild:
+  Marking text-template-1.450.0 ppc for bug 400315
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org> text-template-1.450.0.ebuild:
   Stable for HPPA (bug #400315).
