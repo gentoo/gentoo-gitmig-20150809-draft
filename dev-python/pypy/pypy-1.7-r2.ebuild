@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7-r2.ebuild,v 1.4 2012/02/14 02:16:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.7-r2.ebuild,v 1.5 2012/02/28 19:24:00 floppym Exp $
 
 EAPI="4"
 
@@ -88,6 +88,9 @@ src_install() {
 		rm -fr "${ED}${INSPATH}/lib-python/modified-2.7/sqlite3"
 		rm -f "${ED}${INSPATH}/lib_pypy/_sqlite3.py"
 	fi
+
+	# Generate Grammar and PatternGrammar pickles.
+	PYTHONPATH="${ED}${INSPATH}/lib_pypy/__extensions__:${ED}${INSPATH}/lib_pypy:${ED}${INSPATH}/lib-python/modified-2.7:${ED}${INSPATH}/lib-python/2.7" "${ED}${INSPATH}/pypy-c" -c "import lib2to3.pygram, lib2to3.patcomp; lib2to3.patcomp.PatternCompiler()" || die "Generation of Grammar and PatternGrammar pickles failed"
 }
 
 src_test() {
