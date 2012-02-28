@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.100 2012/02/19 12:14:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.101 2012/02/28 20:44:26 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> metalog-2.ebuild:
+  Marking metalog-2 ppc for bug 390033
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> metalog-2.ebuild:
   Stable on alpha, bug #390033
