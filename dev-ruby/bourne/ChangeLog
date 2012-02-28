@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/bourne
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bourne/ChangeLog,v 1.1 2012/02/28 11:04:24 flameeyes Exp $
+
+*bourne-1.1.0 (28 Feb 2012)
+
+  28 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org> +bourne-1.1.0.ebuild,
+  +metadata.xml:
+  Initial import of the bourne extension to mocha.
+
