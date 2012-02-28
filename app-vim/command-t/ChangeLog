@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/command-t
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/ChangeLog,v 1.4 2011/09/13 08:06:29 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/ChangeLog,v 1.5 2012/02/28 03:57:11 radhermit Exp $
+
+*command-t-1.3.1 (28 Feb 2012)
+
+  28 Feb 2012; Tim Harder <radhermit@gentoo.org> +command-t-1.3.1.ebuild:
+  Version bump.
 
   13 Sep 2011; Tim Harder <radhermit@gentoo.org> command-t-1.2.1-r1.ebuild:
   Remove unnecessary permission setting and die on file removal failures.
