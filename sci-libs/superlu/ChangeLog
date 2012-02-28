@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/superlu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.13 2011/11/27 04:14:47 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.14 2012/02/28 14:20:47 jlec Exp $
+
+  28 Feb 2012; Justin Lecher <jlec@gentoo.org> superlu-4.3.ebuild,
+  +files/superlu-4.3-autotools.patch, metadata.xml:
+  Moved to autotools-utils, EAPI=4, fix blas/lapack detection and add
+  USE=static-libs
 
 *superlu-4.3 (27 Nov 2011)
 

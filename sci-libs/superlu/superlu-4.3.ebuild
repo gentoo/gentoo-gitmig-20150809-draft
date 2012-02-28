@@ -1,10 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.3.ebuild,v 1.1 2011/11/27 04:14:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.3.ebuild,v 1.2 2012/02/28 14:20:47 jlec Exp $
 
 EAPI=4
 
-inherit autotools eutils fortran-2 toolchain-funcs multilib
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils fortran-2 toolchain-funcs multilib
 
 MY_PN=SuperLU
 
@@ -25,20 +27,16 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_PN}_${PV}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-4.2-autotools.patch
-	sed -i -e "s/4.2/${PV}/" configure.ac || die
-	eautoreconf
-}
+AUTOTOOLS_IN_SOURCE_BUILD=1
+PATCHES=( "${FILESDIR}"/${P}-autotools.patch )
 
 src_configure() {
-	econf \
-		--with-blas="$(pkg-config --libs blas)" \
-		$(use_enable static-libs static)
+	local myeconfargs=( --with-blas="$(pkg-config --libs blas)" )
+	autotools-utils_src_configure
 }
 
 src_test() {
-	cd TESTING
+	cd "${AUTOTOOLS_BUILD_DIR}"/TESTING
 	emake -j1 \
 		CC="$(tc-getCC)" \
 		FORTRAN="$(tc-getFC)" \
@@ -53,7 +51,7 @@ src_test() {
 }
 
 src_install() {
-	default
+	autotools-utils_src_install
 	use doc && dodoc DOC/ug.pdf && dohtml DOC/html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
