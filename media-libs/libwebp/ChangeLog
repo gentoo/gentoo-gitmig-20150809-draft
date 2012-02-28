@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwebp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.23 2012/01/01 18:56:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.24 2012/02/28 22:35:35 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> libwebp-0.1.3.ebuild:
+  Marking libwebp-0.1.3 ppc for bug 394299
 
   01 Jan 2012; Raúl Porcel <armin76@gentoo.org> libwebp-0.1.3.ebuild:
   alpha/arm/ia64 stable wrt #394299

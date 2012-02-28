@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.1.3.ebuild,v 1.5 2012/01/01 18:56:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.1.3.ebuild,v 1.6 2012/02/28 22:35:35 ranger Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://webp.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 x86"
 IUSE="static-libs"
 
 RDEPEND=">=media-libs/libpng-1.4:0
