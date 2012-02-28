@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.81 2012/02/09 20:47:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.82 2012/02/28 22:55:18 blueness Exp $
+
+*ipsec-tools-0.8.0-r1 (28 Feb 2012)
+
+  28 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  +ipsec-tools-0.8.0-r1.ebuild, +files/ipsec-tools-def-psk.patch,
+  +files/ipsec-tools-include-vendoridh.patch, +files/racoon.pam.d:
+  Address bugs #210826 and #403509
 
 *ipsec-tools-0.8.0 (09 Feb 2012)
 
