@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.67 2012/02/24 14:43:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.68 2012/02/28 21:36:36 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> roundcube-0.7.1.ebuild:
+  Marking roundcube-0.7.1 ppc for bug 403711
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> roundcube-0.7.1.ebuild:
   x86 stable wrt bug #403711
