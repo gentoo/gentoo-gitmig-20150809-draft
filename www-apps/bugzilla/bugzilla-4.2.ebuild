@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.2.ebuild,v 1.1 2012/02/28 14:51:52 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.2.ebuild,v 1.2 2012/02/28 14:57:36 idl0r Exp $
 
 EAPI="4"
 
@@ -52,7 +52,7 @@ RDEPEND="
 	mysql? ( >=dev-perl/DBD-mysql-4.00.5 )
 
 	extras? (
-		>=dev-perl/GD-2.35
+		>=dev-perl/GD-2.35[png,truetype]
 		>=dev-perl/Chart-2.4.1
 		dev-perl/Template-GD
 		dev-perl/GDTextUtil
