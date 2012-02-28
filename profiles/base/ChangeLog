@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.352 2012/02/26 21:22:12 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.353 2012/02/28 10:52:58 ssuominen Exp $
+
+  28 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Mask USE="vidix" as x86 only.
 
   26 Feb 2012; Mike Doty <kingtaco@gentoo.org> packages:
   adding sys-apps/less temporarly to resolve bug 398295.
