@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.3.ebuild,v 1.3 2012/02/28 12:38:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.3.ebuild,v 1.4 2012/02/28 12:41:48 patrick Exp $
 
 EAPI="2"
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
 inherit distutils
 
