@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.564 2012/02/27 22:04:47 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.565 2012/02/28 10:59:13 mabi Exp $
+
+  28 Feb 2012; Matti Bickel <mabi@gentoo.org>
+  files/eblits/src_configure-v53.eblit:
+  fix typo in src_configure-v53.eblit (bug #406107), thanks to Matthew for
+  catching this
 
   27 Feb 2012; Matti Bickel <mabi@gentoo.org>
   files/eblits/src_configure-v53.eblit, files/eblits/src_configure-v54.eblit:
