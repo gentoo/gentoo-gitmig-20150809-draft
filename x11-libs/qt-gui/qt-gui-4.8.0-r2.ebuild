@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r2.ebuild,v 1.2 2012/02/12 09:16:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r2.ebuild,v 1.3 2012/02/28 13:22:57 jlec Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -178,12 +178,12 @@ src_install() {
 	doins "${S}"/tools/designer/src/lib/sdk/* || die
 
 	# touch the available graphics systems
-	mkdir -p "${D}/usr/share/qt4/graphicssystems/" ||
-		die "could not create ${D}/usr/share/qt4/graphicssystems/"
-	echo "default" > "${D}/usr/share/qt4/graphicssystems/raster" ||
-		die "could not touch ${D}/usr/share/qt4/graphicssystems/raster"
-	touch "${D}/usr/share/qt4/graphicssystems/native" ||
-		die "could not touch ${D}/usr/share/qt4/graphicssystems/native"
+	mkdir -p "${ED}/usr/share/qt4/graphicssystems/" ||
+		die "could not create ${ED}/usr/share/qt4/graphicssystems/"
+	echo "default" > "${ED}/usr/share/qt4/graphicssystems/raster" ||
+		die "could not touch ${ED}/usr/share/qt4/graphicssystems/raster"
+	touch "${ED}/usr/share/qt4/graphicssystems/native" ||
+		die "could not touch ${ED}/usr/share/qt4/graphicssystems/native"
 
 	# install private headers
 	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
