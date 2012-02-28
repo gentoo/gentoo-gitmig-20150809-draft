@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.517 2012/02/20 07:18:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.518 2012/02/28 23:34:16 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1469,10 +1469,6 @@ toolchain_src_install() {
 	# can nuke multiple versions of gcc
 
 	gcc_slot_java
-
-	# Move <cxxabi.h> to compiler-specific directories
-	[[ -f ${D}${STDCXX_INCDIR}/cxxabi.h ]] && \
-		mv -f "${D}"${STDCXX_INCDIR}/cxxabi.h "${D}"${LIBPATH}/include/
 
 	# These should be symlinks
 	dodir /usr/bin
