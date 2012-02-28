@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13529 2012/02/28 20:50:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13530 2012/02/28 21:24:16 gurligebis Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -242,12 +242,6 @@ www-apps/twiki
 # in 60 days.
 # Alternatives: dev-db/pgadmin3 or dev-db/phppgadmin
 dev-db/pgaccess
-
-# Bjarke Istrup Pedersen <gurligebis@gentoo.org> (28 Jan 2012)
-# Mask linux-igd for last-rites since upstream is dead and it contains
-# several bugs which makes it someway obsolete.
-# Please use net-misc/miniupnpd instead. Removal in 30 days.
-net-misc/linux-igd
 
 # Ralph Sennhauser <sera@gentoo.org> (28 Jan 2012)
 # Hopelessly outdated, contains broken jars. #91484
