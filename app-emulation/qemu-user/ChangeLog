@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.41 2012/02/28 13:55:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.42 2012/02/28 22:06:57 lu_zero Exp $
+
+  28 Feb 2012; Luca Barbato <lu_zero@gentoo.org> files/qemu-binfmt.initd:
+  Update arm mask to account for variability in byte 15 as experienced in gcc
+  cc1
 
 *qemu-user-1.0 (28 Feb 2012)
 
