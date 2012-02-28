@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.53 2012/02/27 22:06:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.54 2012/02/28 02:29:54 radhermit Exp $
+
+  28 Feb 2012; Tim Harder <radhermit@gentoo.org> sleuthkit-3.2.3.ebuild:
+  Add sqlite dep.
 
 *sleuthkit-3.2.3 (27 Feb 2012)
 
