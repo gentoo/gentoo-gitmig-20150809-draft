@@ -1,5 +1,6 @@
 http://llvm.org/bugs/show_bug.cgi?id=8339
 https://bugs.gentoo.org/show_bug.cgi?id=395013
+http://llvm.org/viewvc/llvm-project?view=rev&revision=151612
 
 Tweak version detection bit to cope with Gentoo's slightly different
 output for ld -v.
