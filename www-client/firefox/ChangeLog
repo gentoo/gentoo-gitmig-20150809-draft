@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.129 2012/02/20 11:28:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.130 2012/02/28 03:55:15 anarchy Exp $
+
+*firefox-10.0.1-r1 (28 Feb 2012)
+
+  28 Feb 2012; Jory A. Pratt <anarchy@gentoo.org> +firefox-10.0.1-r1.ebuild:
+  Use aurora for bindist builds, bug #404999
 
   20 Feb 2012; Thomas Kahle <tomka@gentoo.org> firefox-10.0.1.ebuild:
   marked x86 per bug 403183
