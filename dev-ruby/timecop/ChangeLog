@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/timecop
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timecop/ChangeLog,v 1.1 2012/02/28 16:52:15 flameeyes Exp $
+
+*timecop-0.3.5 (28 Feb 2012)
+
+  28 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +timecop-0.3.5.ebuild:
+  Initial import; dependency of delocalize.
+
