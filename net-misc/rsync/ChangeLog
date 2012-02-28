@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.216 2012/02/28 18:07:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.217 2012/02/28 19:34:07 darkside Exp $
+
+*rsync-3.0.9-r1 (28 Feb 2012)
+
+  28 Feb 2012; Jeremy Olexa <darkside@gentoo.org> +files/rsyncd.conf-3.0.9-r1,
+  +files/rsyncd.xinetd-3.0.9-r1, +rsync-3.0.9-r1.ebuild:
+  revision bump to support Gentoo Prefix. EAPI, KEYWORDS, EPREFIX/ED/EROOT
+  usage, new files in FILESDIR. Bug 406061
 
   28 Feb 2012; Jeroen Roovers <jer@gentoo.org> rsync-3.0.9.ebuild:
   Stable for HPPA (bug #406055).
