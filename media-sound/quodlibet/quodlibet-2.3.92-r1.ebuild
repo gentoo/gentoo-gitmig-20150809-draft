@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.3.92-r1.ebuild,v 1.2 2012/02/21 17:59:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.3.92-r1.ebuild,v 1.3 2012/02/28 13:16:02 patrick Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2:2.7"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.5 2.6 3.* *-jython 2.7-pypy-*"
 
 inherit distutils eutils
 
