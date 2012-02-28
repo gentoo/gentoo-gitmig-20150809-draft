@@ -9,4 +9,4 @@ diff -Naur usr.orig/bin/tribler usr/bin/tribler
 +[ ! -d $STATEDIR ] && mkdir -p $STATEDIR
  cd $_TRIBLERPATH
 -exec python -O Tribler/Main/tribler.py "$@" > /tmp/$USER-tribler.log 2>&1
-+exec python -O Tribler/Main/tribler.py "$@" > $STATEDIR/tribler.log 2>&1
++exec python2 -O Tribler/Main/tribler.py "$@" > $STATEDIR/tribler.log 2>&1
