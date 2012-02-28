@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/tribler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.5 2012/02/28 16:01:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.6 2012/02/28 16:14:57 blueness Exp $
+
+*tribler-5.5.18 (28 Feb 2012)
+
+  28 Feb 2012; Anthony G. Basile <blueness@gentoo.org> +tribler-5.5.18.ebuild:
+  Version bump with python2 only code, bug #406077
 
   28 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
   files/tribler-log2homedir.patch:
