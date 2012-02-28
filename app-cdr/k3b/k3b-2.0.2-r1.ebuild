@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.10 2011/11/24 01:55:23 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.11 2012/02/28 23:30:58 aballier Exp $
 
 EAPI=4
 
@@ -64,7 +64,8 @@ RDEPEND="${DEPEND}
 
 DOCS+=( ChangeLog )
 
-PATCHES=( "${FILESDIR}/${P}-ffmpeg.patch" )
+PATCHES=( "${FILESDIR}/${P}-ffmpeg.patch"
+		  "${FILESDIR}/${P}-libavformat54.patch" )
 
 src_configure() {
 	mycmakeargs=(
