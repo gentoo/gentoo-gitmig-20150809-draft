@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.37 2012/02/28 18:28:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.38 2012/02/28 23:32:43 chainsaw Exp $
+
+*dahdi-2.5.0.2-r4 (28 Feb 2012)
+
+  28 Feb 2012; Tony Vroon <chainsaw@gentoo.org> -dahdi-2.5.0.2-r3.ebuild,
+  +dahdi-2.5.0.2-r4.ebuild:
+  Actually *use* the new patch by Stefan "stkn" Knoblich, my apologies. Jaco
+  Kroon demonstrates to Digium how to do a parallel safe build, closing bug
+  #404407.
 
 *dahdi-2.5.0.2-r3 (28 Feb 2012)
 

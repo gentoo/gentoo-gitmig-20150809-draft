@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.5.0.2-r3.ebuild,v 1.1 2012/02/28 18:28:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.5.0.2-r4.ebuild,v 1.1 2012/02/28 23:32:43 chainsaw Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-oct6114-064
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-oct6114-128-1.05.01.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-tc400m-MR6.12.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-hx8-2.06.tar.gz
-mirror://gentoo/gentoo-dahdi-patchset-1.0.tar.bz2
+mirror://gentoo/gentoo-dahdi-patchset-1.0.2.tar.bz2
 http://www.junghanns.net/downloads/jnet-dahdi-drivers-${JNET}.tar.gz"
 
 LICENSE="LGPL-2.1"
