@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/libtimidity-0.1.0-r1.ebuild,v 1.8 2012/01/11 18:33:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/libtimidity-0.1.0-r1.ebuild,v 1.9 2012/02/28 16:38:42 jer Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 IUSE="ao debug"
 
 RDEPEND="ao? ( media-libs/libao )"
