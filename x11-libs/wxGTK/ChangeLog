@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.285 2012/02/22 16:45:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.286 2012/02/28 18:41:52 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> wxGTK-2.8.12.1.ebuild:
+  Marking wxGTK-2.8.12.1 ppc for bug 403235
 
   22 Feb 2012; Jeroen Roovers <jer@gentoo.org> wxGTK-2.8.12.1.ebuild:
   Stable for HPPA (bug #403235).
