@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.6.89.ebuild,v 1.1 2012/02/20 08:07:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.6.89.ebuild,v 1.2 2012/02/28 11:44:59 patrick Exp $
 
 EAPI=2
 SUPPORT_PYTHON_ABIS=1
 PYTHON_DEPEND="2:2.5"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils fdo-mime python
 
@@ -24,8 +25,6 @@ DEPEND=">=dev-python/wxpython-2.8.9.2:2.8
 # setuptools is RDEPEND because it's used by the runtime for installing plugins
 RDEPEND="${DEPEND}
 	spell? ( dev-python/pyenchant )"
-
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}"/${MY_PN}-${PV}
 
