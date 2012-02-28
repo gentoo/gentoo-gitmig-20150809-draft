@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/primer3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.29 2011/12/03 10:58:16 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.30 2012/02/28 05:41:15 weaver Exp $
+
+*primer3-2.3.0 (28 Feb 2012)
+
+  28 Feb 2012; Andrey Kislyuk <weaver@gentoo.org> -primer3-1.1.4.ebuild,
+  +primer3-2.3.0.ebuild:
+  Version bump, remove old
 
   03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> primer3-2.2.3.ebuild:
   convert test statement to if;fi block because || die does not work on a

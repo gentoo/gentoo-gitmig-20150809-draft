@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/prank
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/ChangeLog,v 1.7 2010/08/09 17:26:54 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/ChangeLog,v 1.8 2012/02/28 05:37:06 weaver Exp $
+
+*prank-111130 (28 Feb 2012)
+
+  28 Feb 2012; Andrey Kislyuk <weaver@gentoo.org> -prank-081202.ebuild,
+  -files/prank-081202-gcc44.patch, -prank-091016.ebuild,
+  -prank-100311.ebuild, +prank-111130.ebuild:
+  Version bump, remove old
 
   09 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> prank-100701.ebuild:
   Respect user FLAGS wrt bug 331799. Thanks to Diego for report. Drop perl
