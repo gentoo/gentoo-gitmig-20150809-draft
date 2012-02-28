@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/nanoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.1 2012/02/28 01:29:25 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.2 2012/02/28 15:28:29 a3li Exp $
+
+  28 Feb 2012; Alex Legler <a3li@gentoo.org> nanoc-3.3.1.ebuild:
+  always require cri
 
 *nanoc-3.3.1 (28 Feb 2012)
 
