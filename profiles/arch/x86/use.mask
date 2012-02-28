@@ -1,11 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.29 2012/02/04 10:42:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.30 2012/02/28 10:58:18 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
 
-# Justin Lecher <jlec@gentoo.org> (04. Feb 2012)
+# Samuli Suominen <ssuominen@gentoo.org> (28 Feb 2012)
+# Unmasking vidix for x86 which is masked in base/use.mask for others
+-vidix
+
+# Justin Lecher <jlec@gentoo.org> (04 Feb 2012)
 # Unmask because deps are keyworded
 -zeitgeist
 
