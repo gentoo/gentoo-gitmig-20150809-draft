@@ -1,6 +1,22 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.25 2012/02/28 15:13:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.26 2012/02/28 16:29:24 aidecoe Exp $
+
+*notmuch-0.11.1-r2 (28 Feb 2012)
+*notmuch-0.10.2-r1 (28 Feb 2012)
+
+  28 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +notmuch-0.10.2-r1.ebuild, +notmuch-0.11.1-r2.ebuild:
+  Support for Ruby bindings is removed.  Rels bug #405429 and makes it
+  OBSOLETE.
+
+  Ruby bindings don't have so much care as the rest of the project. There's no
+  test suite for Ruby bindings to even check if bindings are compatible and I
+  have no sufficient Ruby knowledge to maintain them without any help. I have a
+  bit tested them only once when adding package. Notmuch is developed too
+  rapidly in comparison to Ruby bindings. I haven't heard of any project
+  depending on Notmuch Ruby bindings so far. Also Debian doesn't include them
+  in package. Therefore I'm removing them.
 
   28 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.11.ebuild,
   -notmuch-0.11.1.ebuild:
