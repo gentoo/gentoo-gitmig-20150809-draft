@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccigrep/coccigrep-1.6.ebuild,v 1.1 2011/11/07 21:40:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccigrep/coccigrep-1.6.ebuild,v 1.2 2012/02/28 19:08:41 radhermit Exp $
 
 EAPI=4
 USE_PYTHON="2"
@@ -46,7 +46,7 @@ src_install() {
 	use doc && dohtml -r doc/_build/html/*
 
 	if use emacs ; then
-		elisp-install ${PN} editor/*.el || die
+		elisp-install ${PN} editors/*.el || die
 		elisp-site-file-install "${FILESDIR}"/${SITEFILE} || die
 	fi
 
