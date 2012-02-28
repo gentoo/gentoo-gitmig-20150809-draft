@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.30 2012/02/04 10:42:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.31 2012/02/28 10:55:16 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -125,10 +125,9 @@ gamess
 alsa_cards_cs5535audio
 
 # 2006/06/07 - Danny van Dyk <kugelfang@gentoo.org>
-# Profile cleanup: No info about these
-asm
+# FIXME. Unknown mask reason. Has effect on qpopper
+# and tpop3d.
 drac
-vidix
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
