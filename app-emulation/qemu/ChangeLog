@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.104 2012/02/25 21:03:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.105 2012/02/28 18:31:06 slyfox Exp $
+
+  28 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-9999.ebuild:
+  Switch to upstream's '--disable-debug-info' to avoid OOM bug #355861.
 
   25 Feb 2012; Doug Goldstein <cardoe@gentoo.org> qemu-1.0-r3.ebuild:
   When building with USE=static, zlib needs to be built with USE=static-libs.

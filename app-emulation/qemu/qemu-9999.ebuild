@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.15 2012/01/29 12:18:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.16 2012/02/28 18:31:06 slyfox Exp $
 
 EAPI=4
 
@@ -132,11 +132,6 @@ src_prepare() {
 	# prevent docs to get automatically installed
 	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
 
-	# drop '-g' by default as it tends to eat
-	# A LOT (~2GB) of ram for each job #355861
-	sed -e 's/CFLAGS="-g $CFLAGS"/CFLAGS="$CFLAGS"/g' \
-		-i configure || die
-
 	# Fix underlinking.
 	# Fault reproducer: USE=nss QEMU_SOFTMMU_TARGETS=lm32 QEMU_USER_TARGETS=
 	sed -i 's/opengl_libs="-lGL"/opengl_libs="-lGL -lX11"/' configure || die
@@ -170,6 +165,10 @@ src_configure() {
 
 	# Fix QA issues. QEMU needs executable heaps and we need to mark it as such
 	conf_opts="${conf_opts} --extra-ldflags=-Wl,-z,execheap"
+
+	# drop '-g' by default as it tends to eat
+	# A LOT (~2GB) of ram for each job #355861
+	conf_opts="${conf_opts} --disable-debug-info"
 
 	# Add support for static builds
 	use static && conf_opts="${conf_opts} --static"
