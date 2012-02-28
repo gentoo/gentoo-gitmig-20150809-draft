@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.8_beta1.ebuild,v 1.1 2012/02/28 13:14:40 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.8_beta1.ebuild,v 1.2 2012/02/28 14:42:58 mschiff Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6:2.7"
@@ -32,8 +32,9 @@ RESTRICT_PYTHON_ABIS="2.[45]"
 #}
 
 src_install() {
+	dodoc INSTALL CREDITS
+
 	if use doc; then
-		dodoc INSTALL CREDITS
 		dohtml -r doc/html/*
 
 		docinto examples
@@ -56,10 +57,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $PN
-	use doc && einfo "See /usr/share/doc/${PF}/INSTALL.bz2 for setup instructions"
+	python_mod_optimize ${PN}
+	einfo
+	einfo "See /usr/share/doc/${PF}/INSTALL.bz2 for setup instructions"
+	einfo
 }
 
 pkg_postrm() {
-	python_mod_cleanup $PN
+	python_mod_cleanup ${PN}
 }
