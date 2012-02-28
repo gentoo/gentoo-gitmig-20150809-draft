@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.2 2012/02/27 22:04:47 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.3 2012/02/28 11:02:54 olemarkus Exp $
 
 eblit-php-src_configure() {
     addpredict /usr/share/snmp/mibs/.index
@@ -162,7 +162,7 @@ eblit-php-src_configure() {
 	# Oracle support
 	if use oci8-instant-client ; then
 	    my_conf+="
-		$(use_with oci8-instant-client oci8)
+		$(use_with oci8-instant-client oci8)"
 	fi
 
 	# PDO support

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.565 2012/02/28 10:59:13 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.566 2012/02/28 11:02:54 olemarkus Exp $
+
+  28 Feb 2012; Ole Markus With <olemarkus@gentoo.org>
+  files/eblits/src_configure-v53.eblit, files/eblits/src_configure-v54.eblit:
+  Fixed another bad mabi. Issue 406107
 
   28 Feb 2012; Matti Bickel <mabi@gentoo.org>
   files/eblits/src_configure-v53.eblit:
