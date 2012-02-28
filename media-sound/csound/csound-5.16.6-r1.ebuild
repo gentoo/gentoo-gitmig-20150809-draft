@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.16.6-r1.ebuild,v 1.1 2012/02/27 13:37:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.16.6-r1.ebuild,v 1.2 2012/02/28 21:04:04 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -26,10 +26,12 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-LANGS=" de en_GB en_US es_CO fr it ro ru"
 IUSE="+alsa beats chua csoundac +cxx debug double-precision dssi examples fltk +fluidsynth
 html +image jack java keyboard linear lua nls osc openmp doc portaudio portmidi pulseaudio
-python samples static-libs stk tcl test +threads +utils vim-syntax vst ${LANGS// / linguas_}"
+python samples static-libs stk tcl test +threads +utils vim-syntax vst"
+
+LANGS=" de en_GB en_US es_CO fr it ro ru"
+IUSE+="${LANGS// / linguas_}"
 
 RDEPEND=">=media-libs/libsndfile-1.0.16
 	alsa? ( media-libs/alsa-lib )
@@ -97,7 +99,7 @@ src_prepare() {
 		customCXXFLAGS = "${CXXFLAGS}".split()
 		customLIBS = []
 		customLIBPATH = []
-		customSHLINKFLAGS = []
+		customSHLINKFLAGS = "${LDFLAGS}".split()
 		customSWIGFLAGS = []
 	EOF
 }
@@ -110,7 +112,6 @@ src_compile() {
 		prefix=/usr \
 		CC="$(tc-getCC)" \
 		CXX="$(tc-getCXX)" \
-		LINKFLAGS="${LDFLAGS}" \
 		buildNewParser=1 \
 		pythonVersion=$(python_get_version) \
 		$(use_scons alsa useALSA) \
