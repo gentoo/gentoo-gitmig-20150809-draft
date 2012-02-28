@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.605 2012/02/21 08:55:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.606 2012/02/28 19:54:07 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> mysql-5.1.61.ebuild:
+  Marking mysql-5.1.61 ppc for bug 399375
 
 *mysql-5.5.21 (21 Feb 2012)
 
