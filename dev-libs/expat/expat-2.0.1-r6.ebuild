@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.1-r6.ebuild,v 1.3 2012/02/27 15:17:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.1-r6.ebuild,v 1.4 2012/02/28 10:35:34 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool toolchain-funcs
@@ -35,11 +35,11 @@ src_configure() {
 
 	if use unicode; then
 		pushd "${S}"-buildu >/dev/null
-		CPPFLAGS+=" -DXML_UNICODE" ECONF_SOURCE="${S}" econf ${myconf}
+		CPPFLAGS="${CPPFLAGS} -DXML_UNICODE" ECONF_SOURCE="${S}" econf ${myconf}
 		popd >/dev/null
 
 		pushd "${S}"-buildw >/dev/null
-		CFLAGS+=" -fshort-wchar" CPPFLAGS+=" -DXML_UNICODE_WCHAR_T" ECONF_SOURCE="${S}" econf ${myconf}
+		CFLAGS="${CFLAGS} -fshort-wchar" CPPFLAGS="${CPPFLAGS} -DXML_UNICODE_WCHAR_T" ECONF_SOURCE="${S}" econf ${myconf}
 		popd >/dev/null
 	fi
 }
