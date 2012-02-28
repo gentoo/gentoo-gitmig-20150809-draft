@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.27 2012/02/06 13:13:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.28 2012/02/28 03:49:41 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -36,6 +36,9 @@ mozconfig_config() {
 
 	if has bindist ${IUSE}; then
 		mozconfig_use_enable !bindist official-branding
+		if [[ ${PN} == firefox ]] ; then
+			mozconfig_annotate '' --with-branding=browser/branding/aurora
+		fi
 	fi
 
 	mozconfig_use_enable alsa ogg
