@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ipmitool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.19 2012/02/08 14:37:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.20 2012/02/28 19:47:19 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> ipmitool-1.8.11-r1.ebuild:
+  Marking ipmitool-1.8.11-r1 ppc for bug 394597
 
   08 Feb 2012; Thomas Kahle <tomka@gentoo.org> ipmitool-1.8.11-r1.ebuild:
   marked x86 per bug 394597
