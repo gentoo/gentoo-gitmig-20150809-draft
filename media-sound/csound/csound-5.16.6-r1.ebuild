@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.16.6-r1.ebuild,v 1.2 2012/02/28 21:04:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.16.6-r1.ebuild,v 1.3 2012/02/28 21:19:38 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -100,6 +100,7 @@ src_prepare() {
 		customLIBS = []
 		customLIBPATH = []
 		customSHLINKFLAGS = "${LDFLAGS}".split()
+		customLINKFLAGS = "${LDFLAGS}".split()
 		customSWIGFLAGS = []
 	EOF
 }
