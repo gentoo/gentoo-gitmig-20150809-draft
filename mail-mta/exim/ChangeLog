@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.218 2012/02/18 18:01:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.219 2012/02/28 04:03:55 idl0r Exp $
+
+  28 Feb 2012; Christian Ruppert <idl0r@gentoo.org> files/exim.rc7:
+  Don't use --quiet in the init script
 
   18 Feb 2012; Jeroen Roovers <jer@gentoo.org> exim-4.77.ebuild:
   Stable for HPPA (bug #391237).
