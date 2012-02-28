@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/apr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.182 2011/11/11 20:34:47 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.183 2012/02/28 08:08:16 idl0r Exp $
+
+*apr-1.4.6 (28 Feb 2012)
+
+  28 Feb 2012; Christian Ruppert <idl0r@gentoo.org> +apr-1.4.6.ebuild,
+  metadata.xml:
+  Version bump, CVE-2012-0840, bug 403731
 
   11 Nov 2011; Markos Chandras <hwoarang@gentoo.org> -apr-1.4.4.ebuild:
   remove old ebuild
