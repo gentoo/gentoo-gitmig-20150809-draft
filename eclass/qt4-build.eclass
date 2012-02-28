@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.118 2012/02/09 22:58:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.119 2012/02/28 18:19:29 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -46,6 +46,8 @@ RDEPEND="
 	!>x11-libs/qt-multimedia-${PV}-r9999
 	!<x11-libs/qt-opengl-${PV}
 	!>x11-libs/qt-opengl-${PV}-r9999
+	!<x11-libs/qt-openvg-${PV}
+	!>x11-libs/qt-openvg-${PV}-r9999
 	!<x11-libs/qt-phonon-${PV}
 	!>x11-libs/qt-phonon-${PV}-r9999
 	!<x11-libs/qt-qt3support-${PV}
