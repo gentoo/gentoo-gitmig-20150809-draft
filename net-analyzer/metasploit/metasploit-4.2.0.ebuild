@@ -1,13 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.1.4.ebuild,v 1.1 2012/01/12 08:14:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.2.0.ebuild,v 1.1 2012/02/28 08:09:31 patrick Exp $
 
 EAPI="3"
 inherit eutils
 
-#SRC_URI="http://updates.metasploit.com/data/releases/framework-${PV}.tar.bz2"
-# Naughty upstream ... no versioning at the moment
-SRC_URI="http://downloads.metasploit.com/data/releases/framework-latest.tar.bz2"
+SRC_URI="http://updates.metasploit.com/data/releases/framework-${PV}.tar.bz2"
 
 DESCRIPTION="Advanced open-source framework for developing, testing, and using vulnerability exploit code"
 HOMEPAGE="http://www.metasploit.org/"
@@ -78,7 +76,7 @@ src_install() {
 	# Avoid useless revdep-rebuild trigger #377617
 	dodir /etc/revdep-rebuild/
 	echo "SEARCH_DIRS_MASK=\"/usr/lib*/${PN}${SLOT}/data/john\"" > \
-		${D}/etc/revdep-rebuild/70-${PN}-${SLOT}
+		"${D}"/etc/revdep-rebuild/70-${PN}-${SLOT}
 }
 
 pkg_postinst() {
