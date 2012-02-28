@@ -1,11 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/kapteyn-2.1.ebuild,v 1.1 2011/02/17 06:45:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/kapteyn-2.1.ebuild,v 1.2 2012/02/28 00:44:06 patrick Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit distutils
 
@@ -21,8 +22,6 @@ IUSE=""
 DEPEND=">=sci-astronomy/wcslib-4.7
 	dev-python/numpy"
 RDEPEND="${DEPEND}"
-
-RESTRICT_PYTHON_ABIS="3.*"
 
 src_install() {
 	distutils_src_install

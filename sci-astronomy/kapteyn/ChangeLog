@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/kapteyn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.7 2011/08/04 18:31:14 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.8 2012/02/28 00:44:06 patrick Exp $
+
+  28 Feb 2012; Patrick Lauer <patrick@gentoo.org> kapteyn-2.1.ebuild:
+  Restricting pypy and jython
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
