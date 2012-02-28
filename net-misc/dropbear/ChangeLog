@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.87 2012/02/27 03:56:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.88 2012/02/28 20:25:31 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> dropbear-2012.55.ebuild:
+  Marking dropbear-2012.55 ppc for bug 405607
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> dropbear-2012.55.ebuild:
   Stable for HPPA (bug #405607).
