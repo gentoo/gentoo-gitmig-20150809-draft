@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.59 2012/02/28 08:09:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.60 2012/02/28 14:19:19 patrick Exp $
+
+  28 Feb 2012; Patrick Lauer <patrick@gentoo.org> metasploit-4.2.0.ebuild:
+  Fixing slot for #406149
 
 *metasploit-4.2.0 (28 Feb 2012)
 

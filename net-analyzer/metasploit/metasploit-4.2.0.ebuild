@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.2.0.ebuild,v 1.1 2012/02/28 08:09:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.2.0.ebuild,v 1.2 2012/02/28 14:19:19 patrick Exp $
 
 EAPI="3"
 inherit eutils
@@ -11,7 +11,7 @@ DESCRIPTION="Advanced open-source framework for developing, testing, and using v
 HOMEPAGE="http://www.metasploit.org/"
 
 LICENSE="BSD"
-SLOT="4.1"
+SLOT="4.2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="gui mysql postgres"
 
