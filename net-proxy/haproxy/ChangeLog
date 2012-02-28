@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/haproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.60 2012/02/27 22:40:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.61 2012/02/28 22:41:06 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> haproxy-1.4.18-r1.ebuild:
+  Marking haproxy-1.4.18-r1 ppc for bug 375111
 
 *haproxy-1.4.19 (27 Feb 2012)
 
