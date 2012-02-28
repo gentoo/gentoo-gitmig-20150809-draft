@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.119 2012/02/28 18:19:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.120 2012/02/28 18:53:45 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -198,7 +198,7 @@ qt4-build_src_prepare() {
 		symlink_binaries_to_buildtree
 	fi
 
-	if [[ ${CHOST} == *86*-apple-darwin* ]] ; then
+	if [[ ${CHOST} == *86*-apple-darwin* ]]; then
 		# qmake bus errors with -O2 but -O3 works
 		replace-flags -O2 -O3
 	fi
@@ -219,7 +219,7 @@ qt4-build_src_prepare() {
 	fi
 
 	# Unsupported old gcc versions - hardened needs this :(
-	if [[ $(gcc-major-version) -lt 4 ]] ; then
+	if [[ $(gcc-major-version) -lt 4 ]]; then
 		ewarn "Appending -fno-stack-protector to CXXFLAGS"
 		append-cxxflags -fno-stack-protector
 		# Bug 253127
@@ -284,7 +284,7 @@ qt4-build_src_prepare() {
 			|| die "sed -arch/-Xarch failed"
 
 		# On Snow Leopard don't fall back to 10.5 deployment target.
-		if [[ ${CHOST} == *-apple-darwin10 ]] ; then
+		if [[ ${CHOST} == *-apple-darwin10 ]]; then
 			sed -e "s:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET.*:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET 10.6:g" \
 				-e "s:-mmacosx-version-min=10.[0-9]:-mmacosx-version-min=10.6:g" \
 				-i configure mkspecs/common/mac-g++.conf \
@@ -294,7 +294,7 @@ qt4-build_src_prepare() {
 
 	# this one is needed for all systems with a separate -liconv, apart from
 	# Darwin, for which the sources already cater for -liconv
-	if use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] ; then
+	if use !elibc_glibc && [[ ${CHOST} != *-darwin* ]]; then
 		sed -e 's|mac:\(LIBS += -liconv\)|\1|g' \
 			-i config.tests/unix/iconv/iconv.pro \
 			|| die "sed iconv.pro failed"
@@ -321,11 +321,11 @@ qt4-build_src_configure() {
 
 	# this one is needed for all systems with a separate -liconv, apart from
 	# Darwin, for which the sources already cater for -liconv
-	use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] && \
+	if use !elibc_glibc && [[ ${CHOST} != *-darwin* ]]; then
 		myconf+=" -liconv"
+	fi
 
 	if use_if_iuse glib; then
-		# use -I, -L and -l from configure
 		local glibflags="$(pkg-config --cflags --libs glib-2.0 gthread-2.0)"
 		# avoid the -pthread argument
 		myconf+=" ${glibflags//-pthread}"
@@ -341,22 +341,22 @@ qt4-build_src_configure() {
 		myconf+=" -qpa"
 	fi
 
-	if use aqua ; then
+	if use aqua; then
 		# On (snow) leopard use the new (frameworked) cocoa code.
-		if [[ ${CHOST##*-darwin} -ge 9 ]] ; then
+		if [[ ${CHOST##*-darwin} -ge 9 ]]; then
 			myconf+=" -cocoa -framework"
+			# We need the source's headers, not the installed ones.
+			myconf+=" -I${S}/include"
+			# Add hint for the framework location.
+			myconf+=" -F${QTLIBDIR}"
 
 			# We are crazy and build cocoa + qt3support :-)
 			if use qt3support; then
 				sed -e "/case \"\$PLATFORM,\$CFG_MAC_COCOA\" in/,/;;/ s|CFG_QT3SUPPORT=\"no\"|CFG_QT3SUPPORT=\"yes\"|" \
 					-i configure || die
 			fi
-
-			# We need the source's headers, not the installed ones.
-			myconf+=" -I${S}/include"
-
-			# Add hint for the framework location.
-			myconf+=" -F${QTLIBDIR}"
+		else
+			myconf+=" -no-framework"
 		fi
 	else
 		# freetype2 include dir is non-standard, thus include it on configure
@@ -397,7 +397,7 @@ qt4-build_src_test() {
 # For MacOS X we need to add some symlinks when frameworks are
 # being used, to avoid complications with some more or less stupid packages.
 fix_includes() {
-	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
+	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]]; then
 		# Some packages tend to include <Qt/...>
 		dodir "${QTHEADERDIR#${EPREFIX}}"/Qt
 
@@ -465,7 +465,8 @@ setqtenv() {
 # Sets up some standard configure options, like libdir (if necessary), whether
 # debug info is wanted or not.
 standard_configure_options() {
-	local myconf="-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
+	local myconf="
+		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
 		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR}
 		$(version_is_at_least 4.7 && echo -importdir ${QTIMPORTDIR})
 		-datadir ${QTDATADIR} -translationdir ${QTTRANSDIR} -sysconfdir ${QTSYSCONFDIR}
@@ -484,9 +485,7 @@ standard_configure_options() {
 	myconf+=" -no-separate-debug-info"
 
 	# exceptions USE flag
-	local exceptions="-exceptions"
-	in_iuse exceptions && exceptions="$(qt_use exceptions)"
-	myconf+=" ${exceptions}"
+	myconf+=" $(in_iuse exceptions && qt_use exceptions || echo -exceptions)"
 
 	# disable RPATH on Qt >= 4.8 (bug 380415)
 	version_is_at_least 4.8 && myconf+=" -no-rpath"
@@ -500,8 +499,6 @@ standard_configure_options() {
 	# construct a QApplication before a QPaintDevice" on Solaris.
 	#   -- Daniel Vergien
 	[[ ${CHOST} != *-solaris* ]] && myconf+=" -reduce-relocations"
-
-	use aqua && myconf+=" -no-framework"
 
 	# ARCH is set on Gentoo. Qt now falls back to generic on an unsupported
 	# $(tc-arch). Therefore we convert it to supported values.
