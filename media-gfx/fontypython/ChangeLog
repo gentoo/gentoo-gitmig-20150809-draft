@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fontypython
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.15 2011/03/04 22:25:32 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.16 2012/02/28 12:29:39 patrick Exp $
+
+  28 Feb 2012; Patrick Lauer <patrick@gentoo.org> fontypython-0.4.2.3.ebuild:
+  Restricting pypy
 
   04 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -fontypython-0.4.2.2.ebuild:
