@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.78 2012/01/28 12:19:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.79 2012/02/28 21:01:41 aballier Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ IUSE="
 	aac aacplus alsa amr ass bindist +bzip2 cdio celt cpudetection debug
 	dirac doc +encode faac frei0r gnutls gsm +hardcoded-tables ieee1394 jack
 	jpeg2k libv4l modplug mp3 network openal openssl oss pic pulseaudio
-	+qt-faststart rtmp schroedinger sdl speex static-libs test theora threads
+	rtmp schroedinger sdl speex static-libs test theora threads
 	truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
@@ -42,6 +42,12 @@ CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 ss
 
 for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
+done
+
+FFTOOLS="aviocat cws2fws ffeval graph2dot ismindex pktdumper qt-faststart trasher"
+
+for i in ${FFTOOLS}; do
+	IUSE="${IUSE} +$i"
 done
 
 RDEPEND="
@@ -249,10 +255,11 @@ src_configure() {
 src_compile() {
 	emake
 
-	if use qt-faststart; then
-		tc-export CC
-		emake -C tools qt-faststart
-	fi
+	for i in ${FFTOOLS} ; do
+		if use $i ; then
+			emake tools/$i
+		fi
+	done
 }
 
 src_install() {
@@ -261,9 +268,11 @@ src_install() {
 	dodoc Changelog README INSTALL
 	dodoc -r doc/*
 
-	if use qt-faststart; then
-		dobin tools/qt-faststart
-	fi
+	for i in ${FFTOOLS} ; do
+		if use $i ; then
+			dobin tools/$i
+		fi
+	done
 }
 
 src_test() {
