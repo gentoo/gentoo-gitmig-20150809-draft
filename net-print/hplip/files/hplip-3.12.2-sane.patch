@@ -1,0 +1,11 @@
+diff -Naur hplip-3.12.2-old/scan/sane.py hplip-3.12.2/scan/sane.py
+--- hplip-3.12.2-old/scan/sane.py	2012-02-28 18:32:25.237883282 +0100
++++ hplip-3.12.2/scan/sane.py	2012-02-28 18:34:00.899673377 +0100
+@@ -272,6 +272,7 @@
+             self.last_opt = self.dev.setOption(opt.index, value)
+         except scanext.error:
+             log.error("Unable to set option %s to value %s" % (key, value))
++            return
+ 
+         # do binary AND to find if we have to reload options:
+         if self.last_opt & scanext.INFO_RELOAD_OPTIONS:

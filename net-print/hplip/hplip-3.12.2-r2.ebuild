@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.2.ebuild,v 1.1 2012/02/07 20:04:31 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.2-r2.ebuild,v 1.1 2012/02/28 17:56:09 billie Exp $
 
 EAPI=4
 
@@ -22,19 +22,21 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 # Thus support for it is also disabled in hplip.
 IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds -acl X"
 
+REQUIRED_USE="|| ( hpijs hpcups )"
+
 COMMON_DEPEND="
 	virtual/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
 	acl? ( || ( >=sys-fs/udev-171[acl] >=sys-fs/udev-145[extras] ) )
-	snmp? (
-		net-analyzer/net-snmp
-		dev-libs/openssl
-	)
 	!minimal? (
 		>=net-print/cups-1.4.0
 		virtual/libusb:0
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		fax? ( sys-apps/dbus )
+		snmp? (
+			net-analyzer/net-snmp
+			dev-libs/openssl
+		)
 	)"
 
 DEPEND="${COMMON_DEPEND}
@@ -42,6 +44,9 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-text/ghostscript-gpl-8.71-r3
+	policykit? (
+		sys-auth/polkit
+	)
 	!minimal? (
 		dev-python/pygobject:2
 		kernel_linux? ( >=sys-fs/udev-114 )
@@ -62,9 +67,6 @@ RDEPEND="${COMMON_DEPEND}
 			libnotify? (
 				dev-python/notify-python
 			)
-			policykit? (
-				sys-auth/polkit
-			)
 		)
 	)"
 
@@ -81,17 +83,10 @@ pkg_setup() {
 
 	use scanner && ! use X && ewarn "You need USE=X for the scanner GUI."
 
-	if ! use hpcups && ! use hpijs ; then
-		ewarn "Installing neither hpcups (USE=-hpcups) nor hpijs (USE=-hpijs) driver,"
-		ewarn "which is probably not what you want."
-		ewarn "You will almost certainly not be able to print."
-		ewarn "Recommended USE flags: USE=\"hpcups -hpijs\")."
-	fi
-
 	if use minimal ; then
 		ewarn "Installing driver portions only, make sure you know what you are doing."
-		ewarn "Depending on the USE flags set for hpcups and/or hpijs the appropiate"
-		ewarn "drivers are installed."
+		ewarn "Depending on the USE flags set for hpcups or hpijs the appropiate driver"
+		ewarn "is installed. If both USE flags are set hpijs overrides hpcups."
 	else
 		use parport && linux-info_pkg_setup
 	fi
@@ -139,6 +134,14 @@ src_prepare() {
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/750796
 	epatch "${FILESDIR}"/${PN}-3.11.12-fast-pp.patch
 
+	# Fix minmal/hpijs_only/hpcups_only install
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/932918
+	epatch "${FILESDIR}"/${P}-minimal.patch
+
+	# Fix Option parsing in sane/scan.py
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/927708
+	epatch "${FILESDIR}"/${P}-sane.patch
+
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
 		-e "s:file('/etc/issue', 'r').read():'Gentoo':" \
@@ -158,18 +161,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local gui_build myconf drv_build minimal_build
-
-	if use qt4 ; then
-		gui_build="--enable-gui-build --enable-qt4 --disable-qt3"
-		if use policykit ; then
-			myconf="--enable-policykit"
-		else
-			myconf="--disable-policykit"
-		fi
-	else
-		gui_build="--disable-gui-build --disable-qt3 --disable-qt4"
-	fi
+	local myconf drv_build minimal_build
 
 	if use fax || use qt4 ; then
 		myconf="${myconf} --enable-dbus-build"
@@ -187,7 +179,8 @@ src_configure() {
 			drv_build="${drv_build} --disable-cups-ppd-install"
 		fi
 	else
-		drv_build="--disable-hpcups-install --disable-cups-drv-install"
+		drv_build="--disable-hpcups-install"
+		drv_build="${drv_build} --disable-cups-drv-install"
 		drv_build="${drv_build} --disable-cups-ppd-install"
 	fi
 
@@ -224,11 +217,11 @@ src_configure() {
 		--disable-lite-build \
 		--disable-foomatic-rip-hplip-install \
 		--disable-shadow-build \
+		--disable-qt3 \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-htmldir=/usr/share/doc/${PF}/html \
-		${gui_build} \
 		${myconf} \
 		${drv_build} \
 		${minimal_build} \
@@ -237,7 +230,10 @@ src_configure() {
 		$(use_enable parport pp-build) \
 		$(use_enable scanner scan-build) \
 		$(use_enable snmp network-build) \
-		$(use_enable acl udev-acl-rules)
+		$(use_enable acl udev-acl-rules) \
+		$(use_enable qt4 gui-build) \
+		$(use_enable qt4) \
+		$(use_enable policykit)
 }
 
 src_install() {
