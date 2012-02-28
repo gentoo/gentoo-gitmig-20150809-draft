@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.83 2012/02/24 14:15:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.84 2012/02/28 22:02:22 ranger Exp $
+
+  28 Feb 2012; Brent Baude <ranger@gentoo.org> freeglut-2.8.0.ebuild:
+  Marking freeglut-2.8.0 ppc for bug 405063
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> freeglut-2.8.0.ebuild:
   x86 stable wrt bug #405063
