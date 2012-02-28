@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1-r1.ebuild,v 1.7 2012/02/28 21:41:58 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1-r3.ebuild,v 1.1 2012/02/28 21:41:58 marienz Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -16,13 +16,12 @@ SRC_URI="http://launchpad.net/poppler-python/trunk/development/+download/pypoppl
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="examples"
 
 S=${WORKDIR}/pypoppler-${PV}
 
 RDEPEND=">=app-text/poppler-0.15.0[cairo]
-	<app-text/poppler-0.18
 	>=dev-python/pycairo-1.8.4
 	dev-python/pygobject:2
 	dev-python/pygtk:2"
@@ -32,9 +31,9 @@ src_prepare() {
 	# http://pkgs.fedoraproject.org/gitweb/?p=pypoppler.git;a=tree
 	epatch \
 		"${FILESDIR}"/${P}-75_74.diff \
-		"${FILESDIR}"/${P}-76_75.diff \
 		"${FILESDIR}"/${P}-79_78.diff \
-		"${FILESDIR}"/${P}-poppler0.15.0-changes.patch
+		"${FILESDIR}"/${P}-poppler0.15.0-changes.patch \
+		"${FILESDIR}"/${P}-poppler-0.18.0-minimal-fix.patch
 
 	elibtoolize
 	python_copy_sources
