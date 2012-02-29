@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.2-r2.ebuild,v 1.1 2012/02/29 07:41:23 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.2-r2.ebuild,v 1.2 2012/02/29 08:35:13 aidecoe Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ inherit autotools-utils
 
 DESCRIPTION="The mail indexer"
 HOMEPAGE="http://notmuchmail.org/"
-SRC_URI="${HOMEPAGE}/releases/${P}.tar.gz"
+SRC_URI="${HOMEPAGE%/}/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
