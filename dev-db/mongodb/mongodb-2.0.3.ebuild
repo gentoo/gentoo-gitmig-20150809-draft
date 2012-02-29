@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.8.3.ebuild,v 1.2 2011/10/19 15:54:07 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.3.ebuild,v 1.1 2012/02/29 11:31:11 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -11,18 +11,22 @@ MY_P=${PN}-src-r${PV/_rc/-rc}
 
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="http://www.mongodb.org"
-SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz"
+SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz
+	mms-agent? ( http://dev.gentoo.org/~ultrabug/20111027-10gen-mms-agent.zip )"
 
 LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="static-libs v8"
+IUSE="mms-agent static-libs v8"
 
-RDEPEND="!v8? ( =dev-lang/spidermonkey-1.8.2* )
+PDEPEND="mms-agent? ( dev-python/pymongo )"
+RDEPEND="!v8? ( <dev-lang/spidermonkey-1.8[unicode] )
 	v8? ( dev-lang/v8 )
 	dev-libs/boost
 	dev-libs/libpcre[cxx]
-	net-libs/libpcap"
+	net-libs/libpcap
+	app-arch/snappy
+	"
 DEPEND="${RDEPEND}
 	sys-libs/readline
 	sys-libs/ncurses"
@@ -33,7 +37,7 @@ pkg_setup() {
 	enewgroup mongodb
 	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
 
-	scons_opts=" --cxx=$(tc-getCXX) --sharedclient"
+	scons_opts=" --cxx=$(tc-getCXX) --use-system-all --sharedclient"
 	if use v8; then
 		scons_opts+=" --usev8"
 	else
@@ -42,8 +46,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.8-fix-scons.patch"
-	epatch "${FILESDIR}/${PN}-linux3.patch"
+	epatch "${FILESDIR}/${PN}-2.0.3-fix-scons.patch"
+
+	# drop -Werror
+	sed -i -e '/Werror/d' SConstruct || die
+
+	sed -i -e "s@jsapi.h@js/jsapi.h@g" \
+			-e "s@jsobj.h@js/jsobj.h@g" \
+			-e "s@jsdate.h@js/jsdate.h@g" \
+			-e "s@jsregexp.h@js/jsregexp.h@g" scripting/engine_spidermonkey.h
 }
 
 src_compile() {
@@ -67,6 +78,16 @@ src_install() {
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 	newinitd "${FILESDIR}/${PN/db/s}.initd" ${PN/db/s}
 	newconfd "${FILESDIR}/${PN/db/s}.confd" ${PN/db/s}
+
+	if use mms-agent; then
+		local MY_PN="mms-agent"
+		local MY_D="/opt/${MY_PN}"
+		insinto ${MY_D}
+		doins "${WORKDIR}/${MY_PN}/"*
+		fowners -R mongodb:mongodb ${MY_D}
+		newinitd "${FILESDIR}/${MY_PN}.initd" ${MY_PN}
+		newconfd "${FILESDIR}/${MY_PN}.confd" ${MY_PN}
+	fi
 }
 
 src_test() {
