@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/php-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.52 2012/02/21 23:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.53 2012/02/29 20:42:12 maekke Exp $
+
+  29 Feb 2012; Markus Meier <maekke@gentoo.org> php-docs-20101029-r1.ebuild:
+  arm stable, bug #399923
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> php-docs-20101029-r1.ebuild:
   Stable for HPPA (bug #399923).
