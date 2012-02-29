@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.1.ebuild,v 1.4 2012/02/28 22:20:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.1.ebuild,v 1.5 2012/02/29 01:12:55 aballier Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ else
 	SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 fi
 
-inherit libtool multilib ${_live_inherits}
+inherit eutils libtool multilib ${_live_inherits}
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -113,6 +113,7 @@ REQUIRED_USE="vidix? ( || ( X fbcon ) )
 	xinerama? ( X )"
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-ffmpeg-git.patch"
 	sed -i -e '/define VDR_ABS_FIFO_DIR/s|".*"|"/var/vdr/xine"|' src/vdr/input_vdr.c || die
 
 	if [[ ${PV} == *9999* ]]; then
