@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.8 2012/02/29 19:05:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.0.ebuild,v 1.1 2012/02/29 19:05:51 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -40,7 +40,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb caps dlz doc geoip gost gssapi idn ipv6 ldap mysql odbc pkcs11 postgres rpz sdb-ldap
 selinux ssl static-libs threads urandom xml"
 
@@ -90,9 +90,6 @@ src_prepare() {
 	done
 
 	if use dlz; then
-		# bug 382269
-		epatch "${FILESDIR}/${PN}-9.8.1-sdlz_helper.patch"
-
 		# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 		# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
 		if use mysql && has_version ">=dev-db/mysql-5"; then
@@ -119,6 +116,8 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
+		sed -i -e 's:^ RELEASETYPE=-P$: RELEASETYPE=:' \
+			-e 's:^\([+-]RELEASEVER=\)1:\1:' ${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
@@ -169,6 +168,7 @@ src_configure() {
 		$(use_enable caps linux-caps) \
 		$(use_with gost) \
 		$(use_enable static-libs static) \
+		--without-readline \
 		${myconf}
 
 	# bug #151839
@@ -238,6 +238,11 @@ src_install() {
 	rm -f "${D}"/usr/share/man/man8/{dnssec-keygen,nsupdate}.8*
 	rm -f "${D}"/usr/bin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 	rm -f "${D}"/usr/sbin/{dig,host,nslookup,dnssec-keygen,nsupdate}
+
+	# bug 405251, library archives aren't properly handled by --enable/disable-static
+	if ! use static-libs; then
+		find "${D}" -type f -name '*.la' -delete || die
+	fi
 
 	dosym /var/bind/named.cache /var/bind/root.cache || die
 	dosym /var/bind/pri /etc/bind/pri || die
