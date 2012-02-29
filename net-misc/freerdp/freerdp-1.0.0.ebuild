@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0.0.ebuild,v 1.2 2012/01/16 20:51:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0.0.ebuild,v 1.3 2012/02/29 23:26:39 floppym Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="Free implementation of the Remote Desktop Protocol"
 HOMEPAGE="http://www.freerdp.com/"
-SRC_URI="https://github.com/downloads/FreeRDP/FreeRDP/FreeRDP-${PV}.tar.gz"
+SRC_URI="https://github.com/downloads/FreeRDP/FreeRDP/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -51,11 +51,6 @@ DOCS=( README )
 
 # Test suite segfaults
 RESTRICT="test"
-
-src_unpack() {
-	unpack ${A}
-	mv FreeRDP-* "${S}" || die
-}
 
 src_configure() {
 	local mycmakeargs=(
