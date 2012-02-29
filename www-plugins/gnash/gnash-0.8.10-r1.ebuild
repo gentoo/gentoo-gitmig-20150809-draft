@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10.ebuild,v 1.5 2012/02/27 11:28:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r1.ebuild,v 1.1 2012/02/29 19:13:22 chithanh Exp $
 
 EAPI=4
 CMAKE_REQUIRED="never"
@@ -157,6 +157,9 @@ src_prepare() {
 
 	# Allow building against npapi-sdk, bug #383071
 	epatch "${FILESDIR}"/${PN}-0.8.10-npapi-sdk.patch
+
+	# Fix broken jemalloc, bug #405993
+	epatch "${FILESDIR}"/${PN}-0.8.10-jemalloc-aslr-fix.patch
 
 	eautoreconf
 }
