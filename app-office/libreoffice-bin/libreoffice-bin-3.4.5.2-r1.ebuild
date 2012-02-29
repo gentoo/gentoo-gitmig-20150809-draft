@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2-r1.ebuild,v 1.4 2012/02/27 21:43:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.5.2-r1.ebuild,v 1.5 2012/02/29 08:46:16 scarabeus Exp $
 
 EAPI=4
 
@@ -48,7 +48,7 @@ SRC_URI="
 	x86? ( ${SRC_URI_X86} )
 "
 
-IUSE="+cups gnome java kde"
+IUSE="+cups debug gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
@@ -109,6 +109,7 @@ RDEPEND="${COMMON_DEPEND}
 
 PDEPEND="
 	=app-office/libreoffice-l10n-$(get_version_component_range 1-3)*
+	debug? ( ~app-office/libreoffice-bin-debug-${PV} )
 "
 
 # after all it's a binary package
@@ -165,7 +166,7 @@ pkg_postinst() {
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 
 	use cups || \
-		ewarn 'You will need net-print/cups in order to be able to print with libreoffice.'
+		ewarn 'You will need net-print/cups to be able to print and export to PDF with libreoffice.'
 }
 
 pkg_postrm() {

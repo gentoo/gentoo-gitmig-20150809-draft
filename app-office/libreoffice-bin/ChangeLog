@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.57 2012/02/27 21:43:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.58 2012/02/29 08:46:16 scarabeus Exp $
+
+  29 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.4.5.2-r1.ebuild:
+  Add debug useflag and reword cups warning to match non-bin pkg.
 
   27 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-bin-3.4.5.2-r1.ebuild:
