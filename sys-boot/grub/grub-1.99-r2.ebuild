@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.9 2012/01/30 09:14:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.10 2012/02/29 08:45:06 scarabeus Exp $
 
 EAPI=4
 
@@ -271,7 +271,7 @@ EOF
 show_doc_url() {
 	elog
 	elog "For informations how to configure grub-2 please refer to the guide:"
-	elog "    http://dev.gentoo.org/~scarabeus/grub-2-guide.xml"
+	elog "    http://wiki.gentoo.org/wiki/GRUB2"
 }
 
 setup_boot_dir() {

@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.179 2012/02/29 01:54:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.180 2012/02/29 08:45:06 scarabeus Exp $
+
+  29 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> grub-1.99-r2.ebuild,
+  grub-2.00_beta0.ebuild, grub-9999.ebuild:
+  Rather point people to the wiki than to the stale doc in my devspace.
 
 *grub-2.00_beta0 (29 Feb 2012)
 
