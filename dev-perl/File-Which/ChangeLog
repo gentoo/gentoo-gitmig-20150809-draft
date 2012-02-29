@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Which
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.25 2012/02/27 03:45:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.26 2012/02/29 21:19:39 maekke Exp $
+
+  29 Feb 2012; Markus Meier <maekke@gentoo.org> File-Which-1.90.0.ebuild:
+  arm stable, bug #400117
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> File-Which-1.90.0.ebuild:
   Stable for HPPA (bug #400117).
