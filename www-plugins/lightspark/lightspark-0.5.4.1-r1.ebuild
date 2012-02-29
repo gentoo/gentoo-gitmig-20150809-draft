@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.4.1.ebuild,v 1.1 2012/02/23 16:24:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.4.1-r1.ebuild,v 1.1 2012/02/29 19:03:58 chithanh Exp $
 
 EAPI=4
 inherit cmake-utils nsplugins multilib versionator
@@ -69,6 +69,11 @@ src_install() {
 	cmake-utils_src_install
 
 	use nsplugin && inst_plugin /usr/$(get_libdir)/${PN}/plugins/liblightsparkplugin.so
+
+	# default to sdl audio if pulseaudio plugin is not built, bug #406197
+	if use sdl && ! use pulseaudio; then
+		sed -i 's/backend = pulseaudio/backend = sdl/' "${ED}/etc/xdg/${PN}.conf" || die
+	fi
 }
 
 pkg_postinst() {
