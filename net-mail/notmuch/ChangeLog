@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.31 2012/02/29 09:08:04 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.32 2012/02/29 20:09:07 aidecoe Exp $
+
+  29 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  notmuch-0.10.2-r2.ebuild, notmuch-0.11.1-r2.ebuild:
+  Fixed LD_LIBRARY_PATH for Python docs build and added for test suites.
 
   29 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
   notmuch-0.10.2-r2.ebuild, notmuch-0.11.1-r2.ebuild:

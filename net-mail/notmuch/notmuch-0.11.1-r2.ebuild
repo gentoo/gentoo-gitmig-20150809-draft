@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.11.1-r2.ebuild,v 1.3 2012/02/29 09:08:04 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.11.1-r2.ebuild,v 1.4 2012/02/29 20:09:07 aidecoe Exp $
 
 EAPI=4
 
@@ -44,6 +44,7 @@ RDEPEND="${CDEPEND}
 
 DOCS=( AUTHORS NEWS README )
 SITEFILE="50${PN}-gentoo.el"
+MY_LD_LIBRARY_PATH="${WORKDIR}/${P}/lib"
 
 bindings() {
 	if use $1; then
@@ -90,8 +91,12 @@ src_compile() {
 			mv html ../python || die
 			popd || die
 		}
-		LD_LIBRARY_PATH="${WORKDIR}/${PF}_build/lib" bindings python pydocs
+		LD_LIBRARY_PATH="${MY_LD_LIBRARY_PATH}" bindings python pydocs
 	fi
+}
+
+src_test() {
+	LD_LIBRARY_PATH="${MY_LD_LIBRARY_PATH}" default
 }
 
 src_install() {
