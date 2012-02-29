@@ -1,9 +1,12 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.4 2012/02/28 22:18:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.5 2012/02/29 10:22:36 ssuominen Exp $
+
+  29 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> libaacs-0.3.0.ebuild:
+  ppc64 stable wrt #405661
 
   28 Feb 2012; Brent Baude <ranger@gentoo.org> libaacs-0.3.0.ebuild:
-  Marking libaacs-0.3.0 ppc for bug 405659
+  Marking libaacs-0.3.0 ppc for bug 405661
 
   28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> libaacs-0.3.0.ebuild:
   Keyword ~ppc/~ppc64 wrt #398233
