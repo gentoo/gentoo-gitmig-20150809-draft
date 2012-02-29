@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20111019.ebuild,v 1.1 2011/10/18 21:52:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20111019.ebuild,v 1.2 2012/02/29 17:55:12 hwoarang Exp $
 
 EAPI=2
 inherit autotools fdo-mime eutils
@@ -17,7 +17,7 @@ IUSE="lxde nls"
 RDEPEND="gnome-base/libglade:2.0
 	x11-libs/gtk+:2
 	x11-libs/startup-notification
-	>=x11-wm/openbox-3.5.0_pre20111019"
+	>=x11-wm/openbox-3.5.0_p20111019"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"

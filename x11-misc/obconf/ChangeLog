@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obconf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.92 2011/12/18 17:44:07 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.93 2012/02/29 17:55:12 hwoarang Exp $
+
+  29 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  obconf-2.0.3_p20111019.ebuild:
+  Fix typo in openbox's version
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org>
   obconf-2.0.3_p20110314-r1.ebuild:
