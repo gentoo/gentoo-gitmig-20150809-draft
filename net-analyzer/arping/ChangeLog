@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.47 2012/02/27 09:15:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.48 2012/02/29 00:59:45 radhermit Exp $
+
+*arping-2.11 (29 Feb 2012)
+
+  29 Feb 2012; Tim Harder <radhermit@gentoo.org> +arping-2.11.ebuild:
+  Version bump.
 
   27 Feb 2012; Tim Harder <radhermit@gentoo.org> -arping-2.05.ebuild,
   -arping-2.08.ebuild, -arping-2.08-r1.ebuild:
