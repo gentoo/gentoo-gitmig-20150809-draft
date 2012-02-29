@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc-config
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.198 2011/12/07 05:42:19 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.199 2012/02/29 20:16:56 vapier Exp $
+
+*gcc-config-1.5.1 (29 Feb 2012)
+
+  29 Feb 2012; Mike Frysinger <vapier@gentoo.org> +files/gcc-config-1.5.1,
+  +gcc-config-1.5.1.ebuild:
+  Always sort runtime ld.so.conf paths and the install libgcc_s libraries based
+  on version rather than defaulting to the selected profile #297685 by Scott
+  McMurray. Fix gcc-config -E handling of GCC_SPECS #375091 by Bertrand
+  Jacquin.
 
   07 Dec 2011; Mike Frysinger <vapier@gentoo.org> files/gcc-config-1.4.1,
   files/gcc-config-1.5:
