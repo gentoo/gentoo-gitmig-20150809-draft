@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r1.ebuild,v 1.4 2012/02/29 09:07:45 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r1.ebuild,v 1.5 2012/02/29 13:07:46 sping Exp $
 
 EAPI=4
 inherit gnome2-utils eutils qt4-r2 pax-utils
@@ -65,7 +65,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A} && mv skype* "${S}" || die
+	unpack ${A} || die
+	[[ ! -d "${S}" ]] && {
+		mv skype* "${S}" || die
+	}
 }
 
 src_install() {
