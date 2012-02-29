@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6261 2012/02/29 06:41:36 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6262 2012/02/29 07:55:06 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite gnunet and gnunet-gtk.
 
   29 Feb 2012; Ralph Sennhauser <sera@gentoo.org> package.mask:
   Remove package.mask for removed sun-j2ee. #91484

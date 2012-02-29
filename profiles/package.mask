@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13532 2012/02/29 06:41:36 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13533 2012/02/29 07:55:06 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (29 Feb 2012)
+# The old version of gnunet in portage is broken with the
+# new libextractor API.
+# Bugs 338909, #403461, #367677 and #260113.
+# Removal in 30 days unless fixed.
+net-p2p/gnunet
+net-p2p/gnunet-gtk
 
 # Aaron W. Swenson <titanofold@gentoo.org> (27 Feb 2012)
 # End of life. Upgrade to 8.3 or later. Multiple vulnerabilities. (Bug 406037)
