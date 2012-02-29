@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.29 2012/02/09 22:28:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.30 2012/02/29 10:18:12 lu_zero Exp $
 
 EAPI=4
 
@@ -33,11 +33,6 @@ IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cdio cpudetection
 	  oss pic pulseaudio +qt-faststart rtmp schroedinger sdl speex ssl +ssse3
 	  static-libs test theora threads v4l vaapi vdpau vorbis vpx X x264 xvid
 	  +zlib"
-
-VIDEO_CARDS="nvidia"
-for x in ${VIDEO_CARDS}; do
-	IUSE="${IUSE} video_cards_${x}"
-done
 
 CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 ssse3 vis neon iwmmxt"
 
@@ -75,7 +70,7 @@ RDEPEND="
 	schroedinger? ( media-libs/schroedinger )
 	speex? ( >=media-libs/speex-1.2_beta3 )
 	vaapi? ( x11-libs/libva )
-	video_cards_nvidia? ( vdpau? ( x11-libs/libvdpau ) )
+	vdpau? ( x11-libs/libvdpau )
 	vpx? ( >=media-libs/libvpx-0.9.6 )
 	X? ( x11-libs/libX11 x11-libs/libXext )
 	zlib? ( sys-libs/zlib )
@@ -140,7 +135,7 @@ src_configure() {
 	#	use video_cards_nvidia || myconf="${myconf} --disable-decoder=${i}"
 	#	use vdpau || myconf="${myconf} --disable-decoder=${i}"
 	#done
-	use video_cards_nvidia && use vdpau || myconf+=" --disable-vdpau"
+	use vdpau || myconf+=" --disable-vdpau"
 
 	use vaapi && myconf+=" --enable-vaapi"
 
