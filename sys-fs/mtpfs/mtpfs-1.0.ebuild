@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/mtpfs-1.0.ebuild,v 1.1 2012/02/15 00:20:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/mtpfs-1.0.ebuild,v 1.2 2012/02/29 15:50:47 xarthisius Exp $
 
 EAPI=4
 
@@ -21,6 +21,11 @@ DEPEND="dev-libs/glib:2
 RDEPEND="${DEPEND}"
 
 DOCS=(AUTHORS NEWS README)
+
+src_prepare() {
+	sed -e "/#include <string.h>/ a\
+		#include <stdlib.h>" -i mtpfs.h id3read.c || die #implicit
+}
 
 src_configure() {
 	econf $(use_enable debug)
