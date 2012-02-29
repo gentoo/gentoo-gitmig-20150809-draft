@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.51 2012/02/29 18:13:20 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.52 2012/02/29 18:22:09 aidecoe Exp $
+
+  29 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-010-r3.ebuild,
+  -files/dracut-010-empty-etc-ld.so.conf.d.patch,
+  -files/dracut-010-multipath-udev-rules.patch,
+  -files/dracut-010-rd.driver.post-fixed.patch,
+  -files/dracut-010-rd.driver.pre-and-blacklist-fix.patch,
+  -dracut-013-r2.ebuild, -files/dracut-013-integrated-initramfs-fix.patch,
+  -files/dracut-013-livenet-gentoo-ca-bundle-path.patch,
+  -files/dracut-013-makefile-manpages.patch,
+  -files/dracut-013-multipath-udev-rules.patch, -dracut-016.ebuild,
+  -files/dracut-016-multipath-udev-rules.patch:
+  Removed old versions. Left 014 because it is most stable and 017 because this
+  is the latest with important fixes.
 
 *dracut-017 (29 Feb 2012)
 
