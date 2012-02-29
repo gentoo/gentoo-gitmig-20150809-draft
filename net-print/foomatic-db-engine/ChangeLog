@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.53 2012/02/19 15:54:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.54 2012/02/29 02:17:37 ranger Exp $
+
+  29 Feb 2012; Brent Baude <ranger@gentoo.org> foomatic-db-engine-4.0.7.ebuild:
+  Marking foomatic-db-engine-4.0.7 ppc for bug 397189
 
   19 Feb 2012; Raúl Porcel <armin76@gentoo.org>
   foomatic-db-engine-4.0.7.ebuild:
