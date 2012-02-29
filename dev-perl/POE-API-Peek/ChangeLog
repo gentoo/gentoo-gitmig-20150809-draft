@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/POE-API-Peek
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-API-Peek/ChangeLog,v 1.6 2011/09/11 01:28:10 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-API-Peek/ChangeLog,v 1.7 2012/02/29 09:13:50 robbat2 Exp $
+
+*POE-API-Peek-2.200.0 (29 Feb 2012)
+
+  29 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +POE-API-Peek-2.200.0.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *POE-API-Peek-2.190.0 (11 Sep 2011)
 

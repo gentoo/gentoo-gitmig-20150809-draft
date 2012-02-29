@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/WWW-Mechanize
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.81 2011/11/30 18:58:42 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.82 2012/02/29 09:16:11 robbat2 Exp $
+
+*WWW-Mechanize-1.720.0 (29 Feb 2012)
+
+  29 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +WWW-Mechanize-1.720.0.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *WWW-Mechanize-1.710.0 (30 Nov 2011)
 

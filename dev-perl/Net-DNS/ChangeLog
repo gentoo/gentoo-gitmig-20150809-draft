@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-DNS
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.161 2011/12/20 09:00:54 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.162 2012/02/29 09:12:58 robbat2 Exp $
+
+*Net-DNS-0.680.0 (29 Feb 2012)
+
+  29 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/Net-DNS-0.68-ar.patch, +Net-DNS-0.680.0.ebuild:
+  Version bump via perl-bump experimental tool.
 
   16 Dec 2011; Naohiro Aota <naota@gentoo.org> Net-DNS-0.660.0.ebuild:
   Add ~x86-fbsd
