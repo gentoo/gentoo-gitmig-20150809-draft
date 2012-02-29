@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.30 2012/02/29 10:35:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.31 2012/02/29 15:21:02 scarabeus Exp $
 
 EAPI=4
 
@@ -90,6 +90,7 @@ COMMON_DEPEND="
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
+	>=dev-cpp/clucene-2.3.3.4
 	dev-cpp/libcmis
 	dev-db/unixODBC
 	dev-libs/expat
@@ -129,8 +130,6 @@ COMMON_DEPEND="
 	)
 	java? (
 		>=dev-java/bsh-2.0_beta4
-		dev-java/lucene:2.9
-		dev-java/lucene-analyzers:2.3
 	)
 	jemalloc? ( dev-libs/jemalloc )
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
@@ -144,6 +143,7 @@ COMMON_DEPEND="
 
 RDEPEND="${COMMON_DEPEND}
 	!app-office/libreoffice-bin
+	!app-office/libreoffice-bin-debug
 	!app-office/openoffice-bin
 	!app-office/openoffice
 	media-fonts/libertine-ttf
@@ -336,8 +336,6 @@ src_configure() {
 			--with-java-target-version=$(java-pkg_get-target)
 			--with-jvm-path="${EPREFIX}/usr/$(get_libdir)/"
 			--with-beanshell-jar=$(java-pkg_getjar bsh bsh.jar)
-			--with-lucene-core-jar=$(java-pkg_getjar lucene-2.9 lucene-core.jar)
-			--with-lucene-analyzers-jar=$(java-pkg_getjar lucene-analyzers-2.3 lucene-analyzers.jar)
 		"
 		if use test; then
 			java_opts+=" --with-junit=$(java-pkg_getjar junit-4 junit.jar)"
@@ -367,7 +365,6 @@ src_configure() {
 	#   affecting the nsplugin that is always ON
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
-	# --disable-ugly: disable ugly pieces of code
 	# --disable-zenity: disable build icon
 	# --enable-extension-integration: enable any extension integration support
 	# --with-{max-jobs,num-cpus}: ensuring parallel building
@@ -404,7 +401,6 @@ src_configure() {
 		--disable-pch \
 		--disable-rpath \
 		--disable-strip-solver \
-		--disable-ugly \
 		--disable-zenity \
 		--with-alloc=$(use jemalloc && echo "jemalloc" || echo "system") \
 		--with-build-version="Gentoo official package" \
