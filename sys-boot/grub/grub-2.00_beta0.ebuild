@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_beta0.ebuild,v 1.2 2012/02/29 08:45:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_beta0.ebuild,v 1.3 2012/02/29 23:09:30 floppym Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P=${P/_/\~}
 	if [[ ${PV} == *_alpha* || ${PV} == *_beta* ]]; then
-		SRC_URI="http://alpha.gnu.org/gnu/${PN}/${MY_P}.tar.xz"
+		SRC_URI="mirror://gnu-alpha/${PN}/${MY_P}.tar.xz"
 	else
 		SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.xz
 		mirror://gentoo/${MY_P}.tar.xz"

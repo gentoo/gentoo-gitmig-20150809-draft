@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r10.ebuild,v 1.12 2012/01/06 04:57:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r10.ebuild,v 1.13 2012/02/29 23:09:30 floppym Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -20,7 +20,7 @@ PATCHVER="1.12" # Should match the revision ideally
 DESCRIPTION="GNU GRUB Legacy boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
-	ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
+	mirror://gnu-alpha/${PN}/${P}.tar.gz
 	mirror://gentoo/splash.xpm.gz
 	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
 

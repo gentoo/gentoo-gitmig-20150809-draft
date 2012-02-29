@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97.ebuild,v 1.5 2012/01/14 08:09:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97.ebuild,v 1.6 2012/02/29 23:09:30 floppym Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ PATCHVER=1.0
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
-	ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
+	mirror://gnu-alpha/${PN}/${P}.tar.gz
 	mirror://gentoo/splash.xpm.gz
 	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
 
