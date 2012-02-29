@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>net-p2p</herd>
+  <herd>net-p2p</herd>
+  <maintainer>
+    <email>ssuominen@gentoo.org</email>
+    <name>Samuli Suominen</name>
+  </maintainer>
+  <use>
+    <flag name='gsf'>Enable OLE2 (MS Office) plug-in support using <pkg>gnome-base/libgsf</pkg></flag>
+  </use>
 </pkgmetadata>
