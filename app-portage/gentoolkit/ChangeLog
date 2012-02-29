@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.249 2012/02/01 21:14:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.250 2012/02/29 01:16:33 fuzzyray Exp $
+
+*gentoolkit-0.3.0.5 (29 Feb 2012)
+
+  29 Feb 2012; Paul Varner <fuzzyray@gentoo.org> +gentoolkit-0.3.0.5.ebuild:
+  Version bump to consolidate all patches since the gentoolkit-0.3.0.4 release.
+  Additionally, this version of gentoolkit installs the python version of
+  revdep-rebuild as revdep-rebuild.py.
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> gentoolkit-0.3.0.4-r5.ebuild:
   Marking gentoolkit-0.3.0.4-r5 ppc for bug 395303
