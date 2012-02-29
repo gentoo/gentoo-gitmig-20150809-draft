@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.2-r1.ebuild,v 1.1 2012/02/28 16:29:24 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.2-r1.ebuild,v 1.2 2012/02/29 07:36:13 aidecoe Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ REQUIRED_USE="test? ( crypt emacs )"
 IUSE="bash-completion crypt debug doc emacs python test vim zsh-completion"
 
 CDEPEND="
-	>=dev-libs/glib-2.14
+	>=dev-libs/glib-2.22
 	dev-libs/gmime:2.4
 	dev-libs/xapian
 	doc? ( python? ( dev-python/sphinx ) )

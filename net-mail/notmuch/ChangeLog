@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.26 2012/02/28 16:29:24 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.27 2012/02/29 07:36:13 aidecoe Exp $
+
+  28 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.10.2.ebuild,
+  notmuch-0.10.2-r1.ebuild, notmuch-0.11.1-r1.ebuild, notmuch-0.11.1-r2.ebuild:
+  Since Wed Nov 17 14:28:26 2010 -0500 glib-2.22 or newer is required. This
+  nothing changes for Gentoo users, actually, because the oldest 2 version is
+  2.28 at this time.
 
 *notmuch-0.11.1-r2 (28 Feb 2012)
 *notmuch-0.10.2-r1 (28 Feb 2012)
