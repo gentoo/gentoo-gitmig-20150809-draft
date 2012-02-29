@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/MogileFS-Network
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Network/ChangeLog,v 1.1 2012/02/29 08:47:39 robbat2 Exp $
+
+*MogileFS-Network-0.060.0 (29 Feb 2012)
+
+  29 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +MogileFS-Network-0.060.0.ebuild, +metadata.xml:
+  Initial commit. Module was previously part of MogileFS-Server but is now
+  optional extra.
+
