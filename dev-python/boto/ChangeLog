@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.40 2012/02/23 15:14:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.41 2012/02/29 16:27:43 vapier Exp $
+
+*boto-2.2.2-r1 (29 Feb 2012)
+
+  29 Feb 2012; Mike Frysinger <vapier@gentoo.org> +boto-2.2.2-r1.ebuild,
+  +files/boto-2.2.2-no-install-tests.patch:
+  Add fix from upstream to not install tests #404979 by Patrick Lauer.
 
   23 Feb 2012; Tim Harder <radhermit@gentoo.org> -boto-1.9b.ebuild:
   Remove old.
