@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.21.ebuild,v 1.8 2011/10/30 16:25:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.21.ebuild,v 1.9 2012/02/29 06:14:39 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -73,8 +73,7 @@ src_prepare() {
 	eautoreconf
 
 	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	>py-compile
 }
 
 src_compile() {
