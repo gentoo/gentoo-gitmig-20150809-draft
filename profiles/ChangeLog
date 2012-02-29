@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6263 2012/02/29 13:02:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6264 2012/02/29 22:55:20 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Feb 2012; Mike Gilbert <floppym@gentoo.org> thirdpartymirrors:
+  Add gnu-alpha mirrors.
 
   29 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   license_groups:
