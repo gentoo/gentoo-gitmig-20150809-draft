@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.0.0.ebuild,v 1.8 2012/02/27 04:43:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.0.0.ebuild,v 1.9 2012/02/29 16:51:14 floppym Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython 2.7-pypy-*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
-inherit python
+inherit eutils python
 
 DESCRIPTION="Python bindings for the D-Bus messagebus"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/DBusBindings http://dbus.freedesktop.org/doc/dbus-python/"
@@ -33,6 +33,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Fix tests with Python 3.1.
 	sed -e 's/if sys.version_info\[:2\] >= (2, 7):/if sys.version_info[:2] == (2, 7) or sys.version_info[:2] >= (3, 2):/' -i test/test-standalone.py || die "sed failed"
+
+	epatch "${FILESDIR}/${P}-test-socket-tmpdir.patch"
 
 	python_clean_py-compile_files
 	python_src_prepare
