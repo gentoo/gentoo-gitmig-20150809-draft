@@ -1,0 +1,57 @@
+From b6aaac5020cd2e4ee8aaff300ed1a2dbf7bcd6b4 Mon Sep 17 00:00:00 2001
+From: Harald Hoyer <harald@redhat.com>
+Date: Wed, 29 Feb 2012 13:21:51 +0100
+Subject: [PATCH 3/4] 30convertfs/convertfs.sh: correct check for /usr/bin
+
+---
+ modules.d/30convertfs/convertfs.sh |   17 ++++++++++-------
+ 1 files changed, 10 insertions(+), 7 deletions(-)
+
+diff --git a/modules.d/30convertfs/convertfs.sh b/modules.d/30convertfs/convertfs.sh
+index 69c3b3e..aa2c8b1 100755
+--- a/modules.d/30convertfs/convertfs.sh
++++ b/modules.d/30convertfs/convertfs.sh
+@@ -21,13 +21,13 @@ while [[ "$ROOT" != "${ROOT%/}" ]]; do
+     ROOT=${ROOT%/}
+ done
+ 
+-if [ ! -L $ROOT/var/run ]; then
++if [ ! -L $ROOT/var/run -a -e $ROOT/var/run ]; then
+     echo "Converting /var/run to symlink"
+     mv -f $ROOT/var/run $ROOT/var/run.runmove~
+     ln -sfn ../run $ROOT/var/run
+ fi
+ 
+-if [ ! -L $ROOT/var/lock ]; then
++if [ ! -L $ROOT/var/lock -a -e $ROOT/var/lock ]; then
+     echo "Converting /var/lock to symlink"
+     mv -f $ROOT/var/lock $ROOT/var/lock.lockmove~
+     ln -sfn ../run/lock $ROOT/var/lock
+@@ -42,16 +42,19 @@ needconvert() {
+     return 1
+ }
+ 
++if ! [ -e "$ROOT/usr/bin" ]; then
++    echo "$ROOT/usr/bin does not exist!"
++    echo "Make sure, the kernel command line has enough information"
++    echo "to mount /usr (man dracut.cmdline)"
++    exit 1
++fi
++
++
+ if ! needconvert; then
+     echo "Your system is already converted."
+     exit 0
+ fi
+ 
+-if [ -e "$ROOT/usr/bin" ]; then
+-    echo "$ROOT/usr/bin does not exist"
+-    exit 1
+-fi
+-
+ testfile="$ROOT/.usrmovecheck$$"
+ rm -f "$testfile"
+ > "$testfile"
+-- 
+1.7.8.4
+
