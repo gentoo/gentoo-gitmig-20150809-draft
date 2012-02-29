@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.34 2012/01/26 10:52:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.35 2012/02/29 22:33:46 ranger Exp $
+
+  29 Feb 2012; Brent Baude <ranger@gentoo.org> arpack-96-r3.ebuild:
+  Marking arpack-96-r3 ppc for bug 388475
 
 *arpack-3.0.2 (26 Jan 2012)
 
