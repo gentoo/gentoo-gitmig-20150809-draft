@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pixie
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.57 2011/03/20 20:13:49 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.58 2012/02/29 02:21:04 jer Exp $
+
+  29 Feb 2012; Jeroen Roovers <jer@gentoo.org> pixie-2.2.6-r1.ebuild:
+  Do not link statically (bug #383035).
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> pixie-2.2.6-r1.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly

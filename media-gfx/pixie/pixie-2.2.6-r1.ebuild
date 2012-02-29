@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.8 2011/03/20 20:13:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.9 2012/02/29 02:21:04 jer Exp $
 
 EAPI="2"
 
@@ -71,6 +71,7 @@ src_configure() {
 		--with-displaysdir=/usr/$(get_libdir)/pixie/displays \
 		--with-modulesdir=/usr/$(get_libdir)/pixie/modules \
 		--enable-openexr-threads \
+		--disable-static-fltk \
 		--mandir=/usr/share/man \
 		--bindir=/usr/bin \
 		--program-transform-name="s/show/pixie-show/"
