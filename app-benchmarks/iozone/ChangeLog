@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.44 2012/02/24 09:31:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.45 2012/02/29 20:39:32 maekke Exp $
+
+  29 Feb 2012; Markus Meier <maekke@gentoo.org> iozone-3.397.ebuild:
+  arm stable, bug #399919
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> iozone-3.397.ebuild:
   Stable for amd64, wrt bug #399919
