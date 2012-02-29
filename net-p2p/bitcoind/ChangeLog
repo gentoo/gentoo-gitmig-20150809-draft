@@ -1,4 +1,9 @@
+# ChangeLog for sys-kernel/hardened-sources
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.8 2012/02/29 21:29:16 blueness Exp $
 
+  29 Feb 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fixed the Header for ChangeLog
 
   22 Feb 2012; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.5.1.ebuild:
   Stable for amd64, wrt bug #405211

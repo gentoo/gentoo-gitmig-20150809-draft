@@ -1,4 +1,9 @@
+# ChangeLog for sys-kernel/hardened-sources
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.9 2012/02/29 21:32:15 blueness Exp $
 
+  29 Feb 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog, Manifest:
+  Fixed the Header for ChangeLog
 
   25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> bitcoin-qt-0.5.1.ebuild:
   Stable for amd64, wrt bug #405213
