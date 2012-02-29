@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/terminal-colors
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/terminal-colors/ChangeLog,v 1.1 2012/02/29 03:16:32 radhermit Exp $
+
+*terminal-colors-1.4 (29 Feb 2012)
+
+  29 Feb 2012; Tim Harder <radhermit@gentoo.org> +terminal-colors-1.4.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild by me.
+
