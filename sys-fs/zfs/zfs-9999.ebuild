@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.13 2012/02/27 05:36:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.14 2012/02/29 00:29:35 floppym Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git"
 LICENSE="CDDL GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="custom-cflags debug static-libs"
+IUSE="custom-cflags debug dracut test-suite static-libs"
 
 DEPEND="
 	>=sys-kernel/spl-${PV}
@@ -23,6 +23,16 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!sys-fs/zfs-fuse
+	sys-fs/udev
+	test-suite? (
+		sys-apps/gawk
+		sys-apps/util-linux
+		sys-block/parted
+		sys-fs/lsscsi
+		sys-fs/mdadm
+		sys-process/procps
+		virtual/modutils
+		)
 "
 DEPEND+="
 	test? ( sys-fs/mdadm )
@@ -41,11 +51,14 @@ pkg_setup() {
 		BLK_DEV_LOOP"
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 	check_extra_config
+	use x86 && ewarn "32-bit kernels are unsupported by ZFSOnLinux upstream. Do	not file bug reports."
 }
 
 src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/common.sh.in || die
+	# Workaround rename
+	sed -i "s|/usr/bin/scsi-rescan|/usr/sbin/rescan-scsi-bus|" scripts/common.sh.in || die
 	autotools-utils_src_prepare
 }
 
@@ -77,4 +90,6 @@ src_test() {
 src_install() {
 	autotools-utils_src_install
 	gen_usr_ldscript -a uutil nvpair zpool zfs
+	use dracut || rm -rf "${ED}usr/share/dracut"
+	use test-suite || rm -rf "${ED}usr/libexec"
 }

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.13 2012/02/27 05:36:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.14 2012/02/29 00:29:35 floppym Exp $
+
+  29 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml, zfs-9999.ebuild:
+  Update from Richard: Add missing dependencies, introduce USE flags to permit
+  omission of ZFS Regression Test Suite and dracut module, add warning about
+  lack of upstream support for x86, fix issue in ZFS Regression Test Suite.
 
   27 Feb 2012; Mike Gilbert <floppym@gentoo.org> zfs-9999.ebuild:
   Adjust dependencies.

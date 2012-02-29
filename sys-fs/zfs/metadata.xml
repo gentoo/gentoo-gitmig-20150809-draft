@@ -10,4 +10,8 @@
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
 	</maintainer>
+	<use>
+		<flag name="dracut">Install dracut module</flag>
+		<flag name="test-suite">Install regression test suite</flag>
+	</use>
 </pkgmetadata>
