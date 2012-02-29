@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/rt2870-firmware
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2870-firmware/ChangeLog,v 1.1 2012/02/29 14:25:15 tetromino Exp $
+
+*rt2870-firmware-29 (29 Feb 2012)
+
+  29 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +rt2870-firmware-29.ebuild, +metadata.xml:
+  New ebuild for Ralink rt2870 wifi firmware blob.
+
