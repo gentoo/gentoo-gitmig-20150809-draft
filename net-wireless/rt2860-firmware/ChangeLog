@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/rt2860-firmware
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2860-firmware/ChangeLog,v 1.1 2012/02/29 14:25:01 tetromino Exp $
+
+*rt2860-firmware-34 (29 Feb 2012)
+
+  29 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +rt2860-firmware-34.ebuild, +metadata.xml:
+  New ebuild for Ralink rt2860 wifi firmware blob. Fixed bug #405695 (thanks to
+  Christopher Head for reporting).
+
