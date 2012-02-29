@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.175 2012/02/10 02:40:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.176 2012/02/29 06:05:54 tetromino Exp $
+
+  29 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-menus-3.0.1-r1.ebuild:
+  Add missing gnome-common dependency (bug #406231, thanks to Robin Bankhead
+  for reporting). Add introspection.m4 for eautoreconf. Update to EAPI4.
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> gnome-menus-2.30.5.ebuild,
   gnome-menus-3.0.1-r1.ebuild, gnome-menus-3.2.0.1-r1.ebuild,
