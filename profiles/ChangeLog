@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6260 2012/02/28 22:21:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6261 2012/02/29 06:41:36 sera Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Feb 2012; Ralph Sennhauser <sera@gentoo.org> package.mask:
+  Remove package.mask for removed sun-j2ee. #91484
 
   28 Feb 2012; Mike Frysinger <vapier@gentoo.org> package.mask:
   Drop perf mask since it builds nicely now.
