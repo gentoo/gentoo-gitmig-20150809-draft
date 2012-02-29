@@ -5,10 +5,6 @@
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
 	</maintainer>
-	<maintainer>
-	<email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
-	</maintainer>
 	<longdescription>FreeRDP is a fork of the rdesktop project that intends to rapidly start moving forward and implement features that rdesktop lacks the most.</longdescription>
 <use>
 	<flag name="debug-assert">Enable assert debugging</flag>
