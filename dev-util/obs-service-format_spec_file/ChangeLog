@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/obs-service-format_spec_file
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-format_spec_file/ChangeLog,v 1.1 2011/09/16 17:52:59 miska Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-format_spec_file/ChangeLog,v 1.2 2012/02/29 13:13:28 miska Exp $
+
+*obs-service-format_spec_file-0.1 (29 Feb 2012)
+
+  29 Feb 2012; Michal Hrusecky <miska@gentoo.org>
+  +obs-service-format_spec_file-0.1.ebuild,
+  obs-service-format_spec_file-9999.ebuild:
+  Adding dependency on suse-build and adding stable version
 
 *obs-service-format_spec_file-9999 (16 Sep 2011)
 
