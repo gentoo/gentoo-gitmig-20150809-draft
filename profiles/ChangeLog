@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6262 2012/02/29 07:55:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6263 2012/02/29 13:02:26 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  license_groups:
+  Update new Adobe licenses in EULA group.
 
   29 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite gnunet and gnunet-gtk.
