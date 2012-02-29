@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20120219.ebuild,v 1.1 2012/02/21 21:41:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20120219.ebuild,v 1.2 2012/02/29 17:37:07 tetromino Exp $
 
 EAPI=4
 inherit savedconfig
@@ -48,6 +48,8 @@ RDEPEND="!savedconfig? (
 		!net-wireless/libertas-firmware
 		!net-wireless/rt61-firmware
 		!net-wireless/rt73-firmware
+		!net-wireless/rt2860-firmware
+		!net-wireless/rt2870-firmware
 		!sys-block/qla-fc-firmware
 		!x11-drivers/radeon-ucode
 	)"

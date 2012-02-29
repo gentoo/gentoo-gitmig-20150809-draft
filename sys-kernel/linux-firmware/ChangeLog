@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.33 2012/02/21 21:41:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.34 2012/02/29 17:37:07 tetromino Exp $
+
+  29 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  linux-firmware-20110731.ebuild, linux-firmware-20110818.ebuild,
+  linux-firmware-20120125.ebuild, linux-firmware-20120219.ebuild,
+  linux-firmware-99999999.ebuild:
+  File collisions with rt2860-firmware and rt2870-firmware, thanks to
+  Chí-Thanh Christopher Nguyễn for noticing.
 
 *linux-firmware-20120219 (21 Feb 2012)
 
