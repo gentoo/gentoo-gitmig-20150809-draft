@@ -1,0 +1,37 @@
+From a8bd98bfda679b52b92615984ec3129b1b9469da Mon Sep 17 00:00:00 2001
+From: Nick Schermer <nick@xfce.org>
+Date: Fri, 10 Feb 2012 21:26:55 +0000
+Subject: Add preferred app helper for Chromium (bug #8398).
+
+---
+diff --git a/exo-helper/helpers/Makefile.am b/exo-helper/helpers/Makefile.am
+index 052ed2f..b9d292a 100644
+--- a/exo-helper/helpers/Makefile.am
++++ b/exo-helper/helpers/Makefile.am
+@@ -8,6 +8,7 @@ desktop_in_in_files =							\
+ 	Thunar.desktop.in.in						\
+ 	aterm.desktop.in.in						\
+ 	balsa.desktop.in.in						\
++	chromium.desktop.in.in						\
+ 	debian-sensible-browser.desktop.in.in				\
+ 	debian-x-terminal-emulator.desktop.in.in			\
+ 	encompass.desktop.in.in						\
+diff --git a/exo-helper/helpers/chromium.desktop.in.in b/exo-helper/helpers/chromium.desktop.in.in
+new file mode 100644
+index 0000000..a9edf06
+--- a/dev/null
++++ b/exo-helper/helpers/chromium.desktop.in.in
+@@ -0,0 +1,11 @@
++
++[Desktop Entry]
++Version=1.0
++Icon=chromium
++Type=X-XFCE-Helper
++_Name=Chromium
++StartupNotify=true
++X-XFCE-Binaries=chromium;google-chrome;
++X-XFCE-Category=WebBrowser
++X-XFCE-Commands=%B;
++X-XFCE-CommandsWithParameter=%B "%s";
+--
+cgit v0.9.0.2

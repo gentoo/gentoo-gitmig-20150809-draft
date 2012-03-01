@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.68 2012/02/20 20:32:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.69 2012/03/01 15:10:21 ssuominen Exp $
+
+*exo-0.6.2-r1 (01 Mar 2012)
+
+  01 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +exo-0.6.2-r1.ebuild,
+  +files/exo-0.6.x-chromium.patch:
+  Backport upstream patch to include Chromium (or Google Chrome) in the
+  preferred browsers list wrt #388853 by Michael Mol and Paweł Hajdan, Jr.
 
 *exo-0.7.1 (20 Feb 2012)
 
