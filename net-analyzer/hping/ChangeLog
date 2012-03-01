@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.56 2012/01/16 03:21:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.57 2012/03/01 23:32:45 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> hping-3_pre20051105-r3.ebuild:
+  Marking hping-3_pre20051105-r3 ppc for bug 396501
 
   16 Jan 2012; Jeroen Roovers <jer@gentoo.org> hping-3_pre20051105-r3.ebuild:
   Stable for HPPA (bug #396501).
