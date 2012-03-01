@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.76 2012/02/04 19:53:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.77 2012/03/01 22:14:42 hwoarang Exp $
+
+  01 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  remove myself from metadata
 
   04 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/fail2ban-0.8.6-gentoo-init.patch, fail2ban-0.8.6.ebuild:
