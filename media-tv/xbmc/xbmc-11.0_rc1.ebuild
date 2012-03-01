@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0_beta3.ebuild,v 1.3 2012/02/26 23:47:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0_rc1.ebuild,v 1.1 2012/03/01 05:14:52 vapier Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ else
 	MY_P=${P/_/-Eden_}
 	SRC_URI="http://mirrors.xbmc.org/releases/source/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-	S=${WORKDIR}/${MY_P}.1
+	S=${WORKDIR}/${MY_P}
 fi
 
 DESCRIPTION="XBMC is a free and open source media-player and entertainment hub"
@@ -96,8 +96,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cmake
 	x86? ( dev-lang/nasm )"
 
-QA_EXECSTACK="usr/lib*/xbmc/xbmc.bin"
-
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
 		git-2_src_unpack
@@ -117,6 +115,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-11.0-libpng-1.5.patch #380127
 	epatch "${FILESDIR}"/${PN}-9999-nomythtv.patch
 	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
+	epatch "${FILESDIR}"/${PN}-9999-no-exec-stack.patch
+	# The mythtv patch touches configure.ac, so force a regen
+	rm -f configure
 
 	# some dirs ship generated autotools, some dont
 	local d
