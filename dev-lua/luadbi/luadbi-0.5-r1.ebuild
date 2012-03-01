@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r1.ebuild,v 1.1 2011/05/02 16:37:07 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r1.ebuild,v 1.2 2012/03/01 12:16:02 djc Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="mysql postgres sqlite"
 
 RDEPEND=">=dev-lang/lua-5.1
-		mysql? ( dev-db/mysql )
+		mysql? ( virtual/mysql )
 		postgres? ( dev-db/postgresql-base )
 		sqlite? ( >=dev-db/sqlite-3 )"
 DEPEND="${RDEPEND}
