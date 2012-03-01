@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2-r1.ebuild,v 1.7 2011/12/11 22:03:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2-r1.ebuild,v 1.8 2012/03/01 23:40:55 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -17,7 +17,7 @@ SRC_URI="mirror://berlios/${PN}/${MY_P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="doc"
 
 RDEPEND="app-text/htmltidy"
