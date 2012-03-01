@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.121 2012/03/01 15:06:00 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.122 2012/03/01 15:19:14 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -753,7 +753,8 @@ qt_use() {
 # Allows us to define which mkspecs dir we want to use.
 qt_mkspecs_dir() {
 	local spec=
-	case ${CHOST} in
+
+	case "${CHOST}" in
 		*-freebsd*|*-dragonfly*)
 			spec=freebsd ;;
 		*-openbsd*)
@@ -774,17 +775,17 @@ qt_mkspecs_dir() {
 		*-linux-*|*-linux)
 			spec=linux ;;
 		*)
-			die "Unknown CHOST, no platform chosen"
+			die "${FUNCNAME}(): Unknown CHOST '${CHOST}'" ;;
 	esac
 
-	CXX=$(tc-getCXX)
-	if [[ ${CXX} == *g++* ]]; then
-		spec+=-g++
-	elif [[ ${CXX} == *icpc* ]]; then
-		spec+=-icc
-	else
-		die "Unknown compiler '${CXX}'"
-	fi
+	case "$(tc-getCXX)" in
+		*g++*)
+			spec+=-g++ ;;
+		*icpc*)
+			spec+=-icc ;;
+		*)
+			die "${FUNCNAME}(): Unknown compiler '$(tc-getCXX)'" ;;
+	esac
 
 	# Add -64 for 64bit profiles
 	if use x64-freebsd ||
