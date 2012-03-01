@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.53 2012/02/01 17:44:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.54 2012/03/01 13:21:02 keri Exp $
+
+  01 Mar 2012; <keri@gentoo.org> -gprolog-1.3.1.ebuild,
+  -gprolog-1.3.1-r1.ebuild, -files/gprolog-1.3.1-CFLAGS_MACHINE.patch,
+  -files/gprolog-1.3.1-LDFLAGS.patch, -files/gprolog-1.3.1-TXT_FILES.patch:
+  Remove old versions
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> gprolog-1.4.0.ebuild:
   Marking gprolog-1.4.0 ppc for bug 398837
