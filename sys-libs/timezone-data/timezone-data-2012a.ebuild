@@ -1,17 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2011i.ebuild,v 1.1 2011/08/29 19:42:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2012a.ebuild,v 1.1 2012/03/01 17:37:27 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
 code_ver=${PV}
 data_ver=${PV}
 DESCRIPTION="Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)"
-HOMEPAGE="http://www.twinsun.com/tz/tz-link.htm"
-SRC_URI="ftp://elsie.nci.nih.gov/pub/tzdata${data_ver}.tar.gz
-	ftp://elsie.nci.nih.gov/pub/tzcode${code_ver}.tar.gz
-	mirror://gentoo/tzdata${data_ver}.tar.gz
-	mirror://gentoo/tzcode${code_ver}.tar.gz"
+HOMEPAGE="http://www.twinsun.com/tz/tz-link.htm https://mm.icann.org/mailman/listinfo/tz"
+SRC_URI="ftp://munnari.oz.au/pub/tzdata${data_ver}.tar.gz
+	ftp://munnari.oz.au/pub/tzcode${code_ver}.tar.gz"
 
 LICENSE="BSD public-domain"
 SLOT="0"
@@ -24,7 +22,7 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${PN}-2008h-makefile.patch
+	epatch "${FILESDIR}"/${PN}-2012a-makefile.patch
 	tc-is-cross-compiler && cp -pR "${S}" "${S}"-native
 }
 
@@ -64,7 +62,7 @@ src_install() {
 
 pkg_config() {
 	# make sure the /etc/localtime file does not get stale #127899
-	local tz src
+	local tz src etc_lt="${ROOT}etc/localtime"
 
 	if has_version '<sys-apps/baselayout-2' ; then
 		src="${ROOT}etc/conf.d/clock"
@@ -82,23 +80,29 @@ pkg_config() {
 	if [[ ${tz} == "FOOKABLOIE" ]] ; then
 		elog "You do not have TIMEZONE set in ${src}."
 
-		if [[ ! -e ${ROOT}/etc/localtime ]] ; then
-			cp -f "${ROOT}"/usr/share/zoneinfo/Factory "${ROOT}"/etc/localtime
-			elog "Setting ${ROOT}etc/localtime to Factory."
+		if [[ ! -e ${etc_lt} ]] ; then
+			# if /etc/localtime is a symlink somewhere, assume they
+			# know what they're doing and they're managing it themselves
+			if [[ ! -L ${etc_lt} ]] ; then
+				cp -f "${ROOT}"/usr/share/zoneinfo/Factory "${etc_lt}"
+				elog "Setting ${etc_lt} to Factory."
+			else
+				elog "Assuming your ${etc_lt} symlink is what you want; skipping update."
+			fi
 		else
-			elog "Skipping auto-update of ${ROOT}etc/localtime."
+			elog "Skipping auto-update of ${etc_lt}."
 		fi
 		return 0
 	fi
 
 	if [[ ! -e ${ROOT}/usr/share/zoneinfo/${tz} ]] ; then
 		elog "You have an invalid TIMEZONE setting in ${src}"
-		elog "Your ${ROOT}etc/localtime has been reset to Factory; enjoy!"
+		elog "Your ${etc_lt} has been reset to Factory; enjoy!"
 		tz="Factory"
 	fi
-	einfo "Updating ${ROOT}etc/localtime with ${ROOT}usr/share/zoneinfo/${tz}"
-	[[ -L ${ROOT}/etc/localtime ]] && rm -f "${ROOT}"/etc/localtime
-	cp -f "${ROOT}"/usr/share/zoneinfo/"${tz}" "${ROOT}"/etc/localtime
+	einfo "Updating ${etc_lt} with ${ROOT}usr/share/zoneinfo/${tz}"
+	[[ -L ${etc_lt} ]] && rm -f "${etc_lt}"
+	cp -f "${ROOT}"/usr/share/zoneinfo/"${tz}" "${etc_lt}"
 }
 
 pkg_postinst() {
