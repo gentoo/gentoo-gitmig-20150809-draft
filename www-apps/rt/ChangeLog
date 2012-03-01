@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.72 2012/03/01 20:56:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.73 2012/03/01 21:09:59 radhermit Exp $
+
+*rt-3.8.11 (01 Mar 2012)
+
+  01 Mar 2012; Tim Harder <radhermit@gentoo.org> +rt-3.8.11.ebuild:
+  Version bump (fixes bug #397361).
 
   01 Mar 2012; Tim Harder <radhermit@gentoo.org> rt-4.0.5.ebuild:
   Use newer init script.
