@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.54 2012/02/27 04:04:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.55 2012/03/01 23:44:04 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> xinetd-2.3.14-r1.ebuild:
+  Marking xinetd-2.3.14-r1 ppc for bug 400493
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> xinetd-2.3.14-r1.ebuild:
   Stable for HPPA (bug #400493).
