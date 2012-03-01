@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.120 2012/02/28 18:53:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.121 2012/03/01 15:06:00 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -317,18 +317,76 @@ qt4-build_src_prepare() {
 # Default configure phase
 qt4-build_src_configure() {
 	setqtenv
-	myconf="$(standard_configure_options) ${myconf}"
+
+	local conf="
+		-prefix ${QTPREFIXDIR}
+		-bindir ${QTBINDIR}
+		-libdir ${QTLIBDIR}
+		-docdir ${QTDOCDIR}
+		-headerdir ${QTHEADERDIR}
+		-plugindir ${QTPLUGINDIR}
+		$(version_is_at_least 4.7 && echo -importdir ${QTIMPORTDIR})
+		-datadir ${QTDATADIR}
+		-translationdir ${QTTRANSDIR}
+		-sysconfdir ${QTSYSCONFDIR}
+		-examplesdir ${QTEXAMPLESDIR}
+		-demosdir ${QTDEMOSDIR}
+		-opensource -confirm-license
+		-shared -fast -largefile -stl -verbose
+		-nomake examples -nomake demos"
+
+	# ARCH is set on Gentoo. Qt now falls back to generic on an unsupported
+	# $(tc-arch). Therefore we convert it to supported values.
+	case "$(tc-arch)" in
+		amd64|x64-*)		  conf+=" -arch x86_64" ;;
+		ppc-macos)		  conf+=" -arch ppc" ;;
+		ppc|ppc64|ppc-*)	  conf+=" -arch powerpc" ;;
+		sparc|sparc-*|sparc64-*)  conf+=" -arch sparc" ;;
+		x86-macos)		  conf+=" -arch x86" ;;
+		x86|x86-*)		  conf+=" -arch i386" ;;
+		alpha|arm|ia64|mips|s390) conf+=" -arch $(tc-arch)" ;;
+		hppa|sh)		  conf+=" -arch generic" ;;
+		*) die "$(tc-arch) is unsupported by this eclass. Please file a bug." ;;
+	esac
+
+	conf+=" -platform $(qt_mkspecs_dir)"
+
+	[[ $(get_libdir) != lib ]] && conf+=" -L${EPREFIX}/usr/$(get_libdir)"
+
+	# debug/release
+	if use debug; then
+		conf+=" -debug"
+	else
+		conf+=" -release"
+	fi
+	conf+=" -no-separate-debug-info"
+
+	# exceptions USE flag
+	conf+=" $(in_iuse exceptions && qt_use exceptions || echo -exceptions)"
+
+	# disable RPATH on Qt >= 4.8 (bug 380415)
+	version_is_at_least 4.8 && conf+=" -no-rpath"
+
+	# precompiled headers don't work on hardened, where the flag is masked
+	conf+=" $(qt_use pch)"
+
+	# -reduce-relocations
+	# This flag seems to introduce major breakage to applications,
+	# mostly to be seen as a core dump with the message "QPixmap: Must
+	# construct a QApplication before a QPaintDevice" on Solaris.
+	#   -- Daniel Vergien
+	[[ ${CHOST} != *-solaris* ]] && conf+=" -reduce-relocations"
 
 	# this one is needed for all systems with a separate -liconv, apart from
 	# Darwin, for which the sources already cater for -liconv
 	if use !elibc_glibc && [[ ${CHOST} != *-darwin* ]]; then
-		myconf+=" -liconv"
+		conf+=" -liconv"
 	fi
 
 	if use_if_iuse glib; then
 		local glibflags="$(pkg-config --cflags --libs glib-2.0 gthread-2.0)"
 		# avoid the -pthread argument
-		myconf+=" ${glibflags//-pthread}"
+		conf+=" ${glibflags//-pthread}"
 		unset glibflags
 	fi
 
@@ -338,17 +396,17 @@ qt4-build_src_configure() {
 		ewarn "known as Qt Lighthouse. If you are not sure what that is, then"
 		ewarn "disable it before reporting any bugs related to this useflag."
 		ewarn
-		myconf+=" -qpa"
+		conf+=" -qpa"
 	fi
 
 	if use aqua; then
 		# On (snow) leopard use the new (frameworked) cocoa code.
 		if [[ ${CHOST##*-darwin} -ge 9 ]]; then
-			myconf+=" -cocoa -framework"
+			conf+=" -cocoa -framework"
 			# We need the source's headers, not the installed ones.
-			myconf+=" -I${S}/include"
+			conf+=" -I${S}/include"
 			# Add hint for the framework location.
-			myconf+=" -F${QTLIBDIR}"
+			conf+=" -F${QTLIBDIR}"
 
 			# We are crazy and build cocoa + qt3support :-)
 			if use qt3support; then
@@ -356,17 +414,18 @@ qt4-build_src_configure() {
 					-i configure || die
 			fi
 		else
-			myconf+=" -no-framework"
+			conf+=" -no-framework"
 		fi
 	else
-		# freetype2 include dir is non-standard, thus include it on configure
-		# use -I from configure
-		myconf+=" $(pkg-config --cflags freetype2)"
+		# freetype2 include dir is non-standard, thus pass it to configure
+		conf+=" $(pkg-config --cflags-only-I freetype2)"
 	fi
 
-	echo ./configure ${myconf}
-	./configure ${myconf} || die "./configure failed"
-	myconf=""
+	conf+=" ${myconf}"
+	myconf=
+
+	echo ./configure ${conf}
+	./configure ${conf} || die "./configure failed"
 
 	prepare_directories ${QT4_TARGET_DIRECTORIES}
 }
@@ -457,64 +516,6 @@ setqtenv() {
 	PLATFORM=$(qt_mkspecs_dir)
 
 	unset QMAKESPEC
-}
-
-# @FUNCTION: standard_configure_options
-# @INTERNAL
-# @DESCRIPTION:
-# Sets up some standard configure options, like libdir (if necessary), whether
-# debug info is wanted or not.
-standard_configure_options() {
-	local myconf="
-		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
-		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR}
-		$(version_is_at_least 4.7 && echo -importdir ${QTIMPORTDIR})
-		-datadir ${QTDATADIR} -translationdir ${QTTRANSDIR} -sysconfdir ${QTSYSCONFDIR}
-		-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR}
-		-opensource -confirm-license -shared -fast -largefile -stl -verbose
-		-platform $(qt_mkspecs_dir) -nomake examples -nomake demos"
-
-	[[ $(get_libdir) != lib ]] && myconf+=" -L${EPREFIX}/usr/$(get_libdir)"
-
-	# debug/release
-	if use debug; then
-		myconf+=" -debug"
-	else
-		myconf+=" -release"
-	fi
-	myconf+=" -no-separate-debug-info"
-
-	# exceptions USE flag
-	myconf+=" $(in_iuse exceptions && qt_use exceptions || echo -exceptions)"
-
-	# disable RPATH on Qt >= 4.8 (bug 380415)
-	version_is_at_least 4.8 && myconf+=" -no-rpath"
-
-	# precompiled headers don't work on hardened, where the flag is masked
-	myconf+=" $(qt_use pch)"
-
-	# -reduce-relocations
-	# This flag seems to introduce major breakage to applications,
-	# mostly to be seen as a core dump with the message "QPixmap: Must
-	# construct a QApplication before a QPaintDevice" on Solaris.
-	#   -- Daniel Vergien
-	[[ ${CHOST} != *-solaris* ]] && myconf+=" -reduce-relocations"
-
-	# ARCH is set on Gentoo. Qt now falls back to generic on an unsupported
-	# $(tc-arch). Therefore we convert it to supported values.
-	case "$(tc-arch)" in
-		amd64|x64-*)		  myconf+=" -arch x86_64" ;;
-		ppc-macos)		  myconf+=" -arch ppc" ;;
-		ppc|ppc64|ppc-*)	  myconf+=" -arch powerpc" ;;
-		sparc|sparc-*|sparc64-*)  myconf+=" -arch sparc" ;;
-		x86-macos)		  myconf+=" -arch x86" ;;
-		x86|x86-*)		  myconf+=" -arch i386" ;;
-		alpha|arm|ia64|mips|s390) myconf+=" -arch $(tc-arch)" ;;
-		hppa|sh)		  myconf+=" -arch generic" ;;
-		*) die "$(tc-arch) is unsupported by this eclass. Please file a bug." ;;
-	esac
-
-	echo "${myconf}"
 }
 
 # @FUNCTION: prepare_directories
