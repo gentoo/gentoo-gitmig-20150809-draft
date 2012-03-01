@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/expect
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.87 2011/12/27 08:16:11 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.88 2012/03/01 04:34:56 darkside Exp $
+
+  01 Mar 2012; Jeremy Olexa <darkside@gentoo.org>
+  +files/expect-5.43.0-darwin.patch:
+  add missing patch, bug 406363 by Richard Yao
 
   27 Dec 2011; Justin Lecher <jlec@gentoo.org> expect-5.44.1.15.ebuild,
   expect-5.45.ebuild:
