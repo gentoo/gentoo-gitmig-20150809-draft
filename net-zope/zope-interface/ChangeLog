@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.31 2012/02/12 00:04:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.32 2012/03/01 16:07:32 djc Exp $
+
+  01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  The net-zope herd is empty.
 
   12 Feb 2012; Tony Vroon <chainsaw@gentoo.org> zope-interface-3.7.0.ebuild:
   Marked stable on PPC64 as requested by Dirkjan "djc" Ochtman in bug
