@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/w3af
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.13 2012/01/19 22:44:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.14 2012/03/01 22:15:11 hwoarang Exp $
+
+  01 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  add proxy-maintainers as herd
 
 *w3af-1.1 (19 Jan 2012)
 
