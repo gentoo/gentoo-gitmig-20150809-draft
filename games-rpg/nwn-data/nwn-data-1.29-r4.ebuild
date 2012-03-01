@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r4.ebuild,v 1.8 2012/03/01 06:52:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r4.ebuild,v 1.9 2012/03/01 07:18:52 ulm Exp $
 
 CDROM_OPTIONAL="yes"
 inherit eutils cdrom games
@@ -41,7 +41,7 @@ SRC_URI="${CLIENT_BASEURL}/${MY_PV}/nwclient${MY_PV}.tar.gz
 LICENSE="NWN-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="hou nowin sou videos ${LANGUAGES}"
+IUSE="cdinstall hou nowin sou videos ${LANGUAGES}"
 RESTRICT="strip mirror"
 
 RDEPEND="virtual/opengl
