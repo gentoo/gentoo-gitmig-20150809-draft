@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.218 2012/02/29 15:23:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.219 2012/03/01 23:47:36 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> rsync-3.0.9.ebuild:
+  Marking rsync-3.0.9 ppc for bug 406055
 
   29 Feb 2012; Agostino Sarubbo <ago@gentoo.org> rsync-3.0.9.ebuild:
   Stable for amd64, wrt bug #406055
