@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.950 2012/02/21 17:46:00 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.951 2012/03/01 20:43:59 mpagano Exp $
+
+*gentoo-sources-3.2.9 (01 Mar 2012)
+
+  01 Mar 2012; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.2.9.ebuild:
+  Linux patches: 3.2.7, 3.2.8 and 3.2.9. Patch to add a per-pci-device
+  subdirectory in sysfs. Gentoo bug #405357
 
 *gentoo-sources-3.0.22 (21 Feb 2012)
 
