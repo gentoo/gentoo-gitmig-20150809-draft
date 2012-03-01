@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.528 2012/02/18 08:35:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.529 2012/03/01 22:49:37 naota Exp $
+
+  01 Mar 2012; Naohiro Aota <naota@gentoo.org> ruby-1.9.3_p125.ebuild:
+  Add ~x86-fbsd, #332593
 
 *ruby-1.9.3_p125 (18 Feb 2012)
 
