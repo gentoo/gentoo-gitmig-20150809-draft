@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.114 2012/03/01 13:30:34 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.115 2012/03/01 15:11:32 ago Exp $
+
+  01 Mar 2012; Agostino Sarubbo <ago@gentoo.org> icecat-10.0-r2.ebuild:
+  Stable for amd64, wrt bug #401985
 
 *icecat-10.0-r2 (01 Mar 2012)
 

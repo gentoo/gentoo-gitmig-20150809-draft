@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.361 2012/03/01 13:36:44 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.362 2012/03/01 15:08:57 ago Exp $
+
+  01 Mar 2012; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.7.1-r1.ebuild:
+  Stable for amd64, wrt bug #401985
 
 *seamonkey-2.7.1-r1 (01 Mar 2012)
 
