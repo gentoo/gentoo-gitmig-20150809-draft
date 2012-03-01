@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/suil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/ChangeLog,v 1.1 2012/01/07 15:33:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/ChangeLog,v 1.2 2012/03/01 13:45:34 tomka Exp $
+
+  01 Mar 2012; Thomas Kahle <tomka@gentoo.org> suil-0.4.4.ebuild:
+  marked ~x86 per bug 397887
 
 *suil-0.4.4 (07 Jan 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.4.4.ebuild,v 1.1 2012/01/07 15:33:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.4.4.ebuild,v 1.2 2012/03/01 13:45:34 tomka Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.drobilla.net/${P}.tar.bz2"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc gtk qt4"
 
 RDEPEND=">=media-libs/lv2core-6
