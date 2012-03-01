@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/mathgl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.26 2012/02/28 00:56:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.27 2012/03/01 07:41:06 jlec Exp $
+
+  01 Mar 2012; Justin Lecher <jlec@gentoo.org> mathgl-1.11.2.ebuild,
+  +files/mathgl-1.11.2-cast.patch, metadata.xml:
+  Add patch to compile with latest gcc, #406277, provided by Helmut Jarausch;
+  moved to eapi=4 and autotools-utils.eclass
 
   28 Feb 2012; Patrick Lauer <patrick@gentoo.org> mathgl-1.11.1.1.ebuild,
   mathgl-1.11.2.ebuild:
