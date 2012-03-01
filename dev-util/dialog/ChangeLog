@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.147 2012/02/04 20:58:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.148 2012/03/01 15:22:22 jer Exp $
+
+*dialog-1.1.20120215 (01 Mar 2012)
+
+  01 Mar 2012; Jeroen Roovers <jer@gentoo.org> +dialog-1.1.20120215.ebuild:
+  Version bump.
 
   04 Feb 2012; Brent Baude <ranger@gentoo.org> dialog-1.1.20110707-r1.ebuild:
   Marking dialog-1.1.20110707-r1 ppc for bug 396161
