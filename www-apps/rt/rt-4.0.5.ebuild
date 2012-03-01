@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.0.5.ebuild,v 1.1 2012/03/01 10:19:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.0.5.ebuild,v 1.2 2012/03/01 20:56:31 radhermit Exp $
 
 EAPI=4
 
@@ -258,8 +258,8 @@ src_install() {
 	doins -r etc/upgrade
 
 	if use lighttpd ; then
-		newinitd "${FILESDIR}"/${PN}.init.d ${PN}
-		newconfd "${FILESDIR}"/${PN}.conf.d ${PN}
+		newinitd "${FILESDIR}"/${PN}.init.d.2 ${PN}
+		newconfd "${FILESDIR}"/${PN}.conf.d.2 ${PN}
 		sed -i -e "s/@@PF@@/${PF}/g" "${D}"/etc/conf.d/${PN} || die
 	else
 		doins "${FILESDIR}"/{rt_apache2_fcgi.conf,rt_apache2.conf}
