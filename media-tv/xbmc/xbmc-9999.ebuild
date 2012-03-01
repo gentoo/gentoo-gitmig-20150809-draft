@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.101 2012/02/26 23:47:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.102 2012/03/01 05:12:53 vapier Exp $
 
 EAPI="4"
 
@@ -115,6 +115,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-11.0-libpng-1.5.patch #380127
 	epatch "${FILESDIR}"/${PN}-9999-nomythtv.patch
 	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
+	epatch "${FILESDIR}"/${PN}-9999-no-exec-stack.patch
 
 	# some dirs ship generated autotools, some dont
 	local d
