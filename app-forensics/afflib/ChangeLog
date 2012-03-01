@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/afflib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.27 2011/12/07 07:41:11 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.28 2012/03/01 23:29:55 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> afflib-3.6.12.ebuild:
+  Marking afflib-3.6.12 ppc stable for bug 374321
 
   07 Dec 2011; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove unused local use flag description for ewf.
