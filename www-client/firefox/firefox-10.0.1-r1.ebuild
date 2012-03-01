@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.1-r1.ebuild,v 1.2 2012/03/01 00:13:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.1-r1.ebuild,v 1.3 2012/03/01 13:14:10 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -21,7 +21,7 @@ MOZ_PV="${MOZ_PV/_rc/rc}" # Handle rc for SRC_URI
 # Changeset for alpha snapshot
 CHANGESET="e56ecd8b3a68"
 # Patch version
-PATCH="${PN}-10.0-patches-0.5"
+PATCH="${PN}-10.0-patches-0.6"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -52,7 +52,7 @@ RDEPEND="
 	media-libs/libpng[apng]
 	virtual/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
-	webm? ( ~media-libs/libvpx-0.9.7
+	webm? ( >=media-libs/libvpx-1.0.0
 		media-libs/alsa-lib )
 	crashreporter? ( net-misc/curl )
 	selinux? ( sec-policy/selinux-mozilla )"
