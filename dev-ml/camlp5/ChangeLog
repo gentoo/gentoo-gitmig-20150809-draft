@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.66 2012/02/23 20:22:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.67 2012/03/01 22:10:34 aballier Exp $
+
+*camlp5-6.04 (01 Mar 2012)
+
+  01 Mar 2012; Alexis Ballier <aballier@gentoo.org> +camlp5-6.04.ebuild:
+  version bump, switch to strict mode since everything in the tree is now fine
+  with it
 
   23 Feb 2012; Alexis Ballier <aballier@gentoo.org> -camlp5-5.14.ebuild,
   -files/camlp5-5.14-ocaml312.patch:
