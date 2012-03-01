@@ -11,6 +11,7 @@
     <flag name="halfword">Enable halfword emulator</flag>
     <flag name="kpoll">Enable kernel polling support</flag>
     <flag name="sctp">Support for Stream Control Transmission Protocol</flag>
+    <flag name="compat-ethread">Enable compatibility with pre-pentium 4 CPUs in the ethread library.</flag>
   </use>
 <longdescription>
 Erlang is a programming language designed at the Ericsson 
