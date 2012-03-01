@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.202 2011/11/02 21:53:22 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.203 2012/03/01 15:25:25 patrick Exp $
+
+  01 Mar 2012; Patrick Lauer <patrick@gentoo.org> -zope-2.10.11.ebuild:
+  Removing p.masked version
 
   02 Nov 2011; Mike Frysinger <vapier@gentoo.org> zope-3.2.2.ebuild,
   zope-3.3.1.ebuild:
