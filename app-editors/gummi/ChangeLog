@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gummi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.31 2012/01/21 16:25:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.32 2012/03/01 22:12:58 hwoarang Exp $
+
+  01 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  add proxy-maintainers as herd
 
   21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gummi-0.6.1.ebuild:
   x86 stable wrt bug #397653
