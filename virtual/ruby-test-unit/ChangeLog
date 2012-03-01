@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-test-unit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.25 2011/12/31 17:43:39 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.26 2012/03/01 23:02:17 naota Exp $
+
+  01 Mar 2012; Naohiro Aota <naota@gentoo.org> ruby-test-unit-0-r4.ebuild:
+  Add ~x86-fbsd
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> ruby-test-unit-0-r4.ebuild:
   Add Prefix keywords, bug #396547
