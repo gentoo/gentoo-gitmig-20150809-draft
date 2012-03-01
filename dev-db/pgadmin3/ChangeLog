@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.75 2012/02/21 02:42:51 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.76 2012/03/01 02:52:22 titanofold Exp $
+
+*pgadmin3-1.14.2 (01 Mar 2012)
+
+  01 Mar 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  +pgadmin3-1.14.2.ebuild:
+  Version bump.
 
   21 Feb 2012; Aaron W. Swenson <titanofold@gentoo.org>
   pgadmin3-1.12.3-r1.ebuild, pgadmin3-1.14.0.ebuild, pgadmin3-1.14.1.ebuild,
