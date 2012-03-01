@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>net-zope</herd>
-<longdescription lang="en">
-PCNG is a bugtracking system for Plone. It is based on the concepts and ideas of
-CMFCollector and CMFCollectorNG but it is a complete re-write
-</longdescription>
-</pkgmetadata>
