@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vde
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.24 2011/10/23 12:18:42 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.25 2012/03/01 23:37:27 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> vde-2.2.2.ebuild:
+  Marking vde-2.2.2 ppc for bug 356685
 
   23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/Unixterm_20070403.patch, -vde-1.5.7.ebuild, -vde-2.0.2.ebuild,
