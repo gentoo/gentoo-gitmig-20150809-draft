@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.87 2012/02/01 17:42:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.88 2012/03/01 11:30:25 keri Exp $
+
+  01 Mar 2012; <keri@gentoo.org> -qu-prolog-8.12.ebuild,
+  -files/qu-prolog-8.12-cerr-ptr.patch, -files/qu-prolog-8.12-cflags.patch,
+  -files/qu-prolog-8.12-portage.patch, -qu-prolog-9.0.ebuild,
+  -files/qu-prolog-9.0-cerr-ptr.patch, -files/qu-prolog-9.0-cflags.patch,
+  -files/qu-prolog-9.0-portage.patch:
+  Remove old versions
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> qu-prolog-9.1.ebuild:
   Marking qu-prolog-9.1 ppc for bug 398815
