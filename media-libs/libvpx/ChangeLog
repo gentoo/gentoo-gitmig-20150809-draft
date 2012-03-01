@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.40 2012/03/01 09:20:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.41 2012/03/01 11:31:19 aballier Exp $
+
+  01 Mar 2012; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  sync keywords with 1.0.0 so that keywords wont get dropped by mistake again
+  next time.
 
   01 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> libvpx-1.0.0.ebuild:
   Marked ~ppc/~ppc64 as per Anarchy request, bug #360427 and bug #405955
