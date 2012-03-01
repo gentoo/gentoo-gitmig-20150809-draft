@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.29 2012/03/01 10:26:45 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.30 2012/03/01 10:29:43 djc Exp $
+
+  01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> argparse-1.2.1.ebuild:
+  Set COLUMNS to make tests pass (bug 397345, thanks Dustin Polke).
 
   01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove myself as a maintainer.

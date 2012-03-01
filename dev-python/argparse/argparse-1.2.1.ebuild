@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1.ebuild,v 1.12 2011/08/27 21:14:31 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1.ebuild,v 1.13 2012/03/01 10:29:43 djc Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -23,7 +23,7 @@ PYTHON_MODNAME="argparse.py"
 
 src_test() {
 	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test/test_argparse.py
+		COLUMNS=80 PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test/test_argparse.py
 	}
 	python_execute_function testing
 }
