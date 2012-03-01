@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.8.9.8.ebuild,v 1.1 2012/02/22 02:54:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.8.9.8.ebuild,v 1.2 2012/03/01 19:26:34 grobian Exp $
 
 EAPI="4"
 
@@ -29,6 +29,26 @@ pkg_pretend() {
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	# don't force 32-bits mode on Darwin
+	sed -i -e '/-arch i386/d' build/gyp/pylib/gyp/generator/make.py || die
+	# force using Makefiles, instead of Xcode project file on Darwin
+	sed -i -e '/darwin/s/xcode/make/' build/gyp/pylib/gyp/__init__.py || die
+	# don't refuse to build shared_libs because we build somewhere else
+	sed -i \
+		-e '/params\.get.*mac.*darwin.*linux/s/mac/darwin/' \
+		-e "/if GetFlavor(params) == 'mac':/s/mac/darwin/" \
+		-e "/^  if flavor == 'mac':/s/mac/darwin/" \
+		build/gyp/pylib/gyp/generator/make.py || die
+	# make sure our v8.dylib doesn't end up being empty and give it a proper
+	# install_name (soname)
+	sed -i \
+		-e '/^LINK_COMMANDS_MAC =/,/^SHARED_HEADER =/s#-shared#-dynamiclib -all_load -install_name '"${EPREFIX}/usr/$(get_libdir)/libv8$(get_libname $(get_version_component_range 1-3))"'#' \
+		build/gyp/pylib/gyp/generator/make.py || die
+	# don't force targetting old machines
+	sed -i -e "s/, '-mmacosx-version-min=10.4'//" SConstruct || die
 }
 
 src_compile() {
@@ -90,13 +110,13 @@ src_install() {
 	dobin out/${mytarget}/d8 || die
 
 	if [[ ${CHOST} == *-darwin* ]] ; then
-		install_name_tool \
-			-id "${EPREFIX}"/usr/$(get_libdir)/libv8$(get_libname).${soname_version} \
-			out/${mytarget}/lib.target/libv8$(get_libname).${soname_version} || die
+		# buildsystem is too horrific to get this built correctly
+		mv out/${mytarget}/lib.target/libv8.so.${soname_version} \
+			out/${mytarget}/lib.target/libv8$(get_libname ${soname_version}) || die
 	fi
 
-	dolib out/${mytarget}/lib.target/libv8$(get_libname).${soname_version} || die
-	dosym libv8$(get_libname).${soname_version} /usr/$(get_libdir)/libv8$(get_libname) || die
+	dolib out/${mytarget}/lib.target/libv8$(get_libname ${soname_version}) || die
+	dosym libv8$(get_libname ${soname_version}) /usr/$(get_libdir)/libv8$(get_libname) || die
 
 	dodoc AUTHORS ChangeLog || die
 }
