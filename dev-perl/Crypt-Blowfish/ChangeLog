@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-Blowfish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Blowfish/ChangeLog,v 1.34 2012/02/27 03:37:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Blowfish/ChangeLog,v 1.35 2012/03/01 20:10:14 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> Crypt-Blowfish-2.120.0.ebuild:
+  Marking Crypt-Blowfish-2.120.0 ppc for bug 400063
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> Crypt-Blowfish-2.120.0.ebuild:
   Stable for HPPA (bug #400063).
