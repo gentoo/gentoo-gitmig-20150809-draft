@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.105 2012/02/28 18:31:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.106 2012/03/01 23:38:13 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> qemu-0.11.1.ebuild:
+  Marking qemu-0.11.1 ppc for bug 356685
 
   28 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-9999.ebuild:
   Switch to upstream's '--disable-debug-info' to avoid OOM bug #355861.

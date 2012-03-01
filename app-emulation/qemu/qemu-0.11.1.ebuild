@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1.ebuild,v 1.6 2012/01/22 08:00:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1.ebuild,v 1.7 2012/03/01 23:38:13 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/qemu/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="alsa bluetooth esd gnutls ncurses pulseaudio sasl +sdl vde kqemu kvm"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k mips mipsel mips64 mips64el ppc ppc64 sh4 sh4eb sparc"
