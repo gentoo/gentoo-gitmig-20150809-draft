@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.250 2012/02/29 01:16:33 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.251 2012/03/01 23:07:29 fuzzyray Exp $
+
+  01 Mar 2012; Paul Varner <fuzzyray@gentoo.org> gentoolkit-0.3.0.5.ebuild:
+  Drop the prefix keywords for gentoolkit-0.3.0.5 since equery is currently
+  broken. The keywords will be re-added after fixing the code and retesting on
+  the prefix enviroments (Bug 406495).
 
 *gentoolkit-0.3.0.5 (29 Feb 2012)
 
