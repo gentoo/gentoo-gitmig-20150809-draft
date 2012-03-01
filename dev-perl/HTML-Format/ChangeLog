@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Format
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/ChangeLog,v 1.21 2012/02/24 10:16:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/ChangeLog,v 1.22 2012/03/01 20:32:25 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> HTML-Format-2.100.0.ebuild:
+  Marking HTML-Format-2.100.0 ppc for bug 400135
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> HTML-Format-2.100.0.ebuild:
   Stable for amd64, wrt bug #400135
