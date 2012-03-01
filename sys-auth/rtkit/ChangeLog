@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/rtkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.20 2012/02/27 04:38:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.21 2012/03/01 23:59:12 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> rtkit-0.10.ebuild:
+  Marking rtkit-0.10 ppc for bug 400495
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> rtkit-0.10.ebuild:
   Stable for HPPA (bug #400495).
