@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/neartree
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.18 2011/12/21 08:54:39 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.19 2012/03/01 20:04:27 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> neartree-2.3.2.ebuild:
+  Marking neartree-2.3.2 ppc for bug 393999
 
   21 Dec 2011; Justin Lecher <jlec@gentoo.org> -neartree-2.3.1-r1.ebuild:
   Cleaned old
