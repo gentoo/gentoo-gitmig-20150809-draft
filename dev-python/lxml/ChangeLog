@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.115 2012/02/20 14:55:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.116 2012/03/01 15:29:34 djc Exp $
+
+*lxml-2.3.3 (01 Mar 2012)
+
+  01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +lxml-2.3.3.ebuild:
+  Version bump to 2.3.3 for bug 404431 (thanks to Ian Delaney).
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> lxml-2.3.1.ebuild,
   lxml-2.3.2.ebuild, lxml-2.3.ebuild:
