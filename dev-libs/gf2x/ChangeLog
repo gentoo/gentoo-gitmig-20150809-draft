@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gf2x
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.16 2012/02/29 18:54:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.17 2012/03/01 12:58:02 jlec Exp $
+
+  01 Mar 2012; Justin Lecher <jlec@gentoo.org> -gf2x-0.9.5.ebuild,
+  -gf2x-1.0.ebuild:
+  Dropped old
 
   29 Feb 2012; Brent Baude <ranger@gentoo.org> gf2x-1.0-r1.ebuild:
   Marking gf2x-1.0-r1 ppc for bug 400009
