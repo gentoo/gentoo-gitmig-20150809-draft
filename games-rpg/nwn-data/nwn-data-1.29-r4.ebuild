@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r4.ebuild,v 1.7 2011/12/10 21:51:16 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r4.ebuild,v 1.8 2012/03/01 06:52:06 ulm Exp $
 
-inherit eutils games
+CDROM_OPTIONAL="yes"
+inherit eutils cdrom games
 
 # 3-in-1 DVD - NWN, SoU, HotU (1 disk)
 # Diamond DVD - NWN, SoU, HotU (1 disk)
@@ -40,9 +41,8 @@ SRC_URI="${CLIENT_BASEURL}/${MY_PV}/nwclient${MY_PV}.tar.gz
 LICENSE="NWN-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="cdinstall hou nowin sou videos ${LANGUAGES}"
+IUSE="hou nowin sou videos ${LANGUAGES}"
 RESTRICT="strip mirror"
-PROPERTIES="cdinstall? ( interactive )"
 
 RDEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2.5
@@ -465,12 +465,12 @@ src_unpack() {
 	rm -rf override/*
 	for a in ${A}
 	do
-	    currentlocale=""
-	    if [[ -z ${a/*german*/} ]]
-	    then
-	        currentlocale=de
-	    elif [[ -z ${a/*spanish*/} ]]
-	    then
+		currentlocale=""
+		if [[ -z ${a/*german*/} ]]
+		then
+			currentlocale=de
+		elif [[ -z ${a/*spanish*/} ]]
+		then
 			currentlocale=es
 		elif [[ -z ${a/*italian*/} ]]
 		then

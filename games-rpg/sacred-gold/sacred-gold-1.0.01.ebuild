@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/sacred-gold-1.0.01.ebuild,v 1.2 2012/02/05 06:00:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/sacred-gold-1.0.01.ebuild,v 1.3 2012/03/01 06:55:05 ulm Exp $
 
-inherit versionator eutils unpacker games
+inherit versionator eutils cdrom unpacker games
 
 PV_MAJOR=$(get_version_component_range 1-2)
 MY_P=sacred-${PV_MAJOR}-${PV}

@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/sacred-gold-1.0.ebuild,v 1.1 2009/07/29 04:53:23 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/sacred-gold-1.0.ebuild,v 1.2 2012/03/01 06:55:05 ulm Exp $
 
-inherit eutils games
+inherit eutils cdrom games
 
 DESCRIPTION="Action role-playing game"
 HOMEPAGE="http://linuxgamepublishing.com/info.php?id=sacred"
