@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.97 2012/03/01 19:49:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.98 2012/03/01 19:51:53 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> qwt-6.0.0.ebuild:
+  Marking qwt-6.0.0 ppc for bug 395341
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> qwt-5.2.1.ebuild:
   Marking qwt-5.2.1 ppc for bug 395339
