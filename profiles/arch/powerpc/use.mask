@@ -6,10 +6,6 @@
 # Unmask the Altivec instruction set
 -altivec
 
-# vpx is not supported by non x86 archs yet
-vpx
-
-
 # Incompatible Use Flags
 #
 # These use-flags are x86/amd64 only, please feel free to make a bug report if
