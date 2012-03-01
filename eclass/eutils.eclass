@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.385 2012/03/01 07:00:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.386 2012/03/01 22:10:50 naota Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -444,7 +444,7 @@ epatch() {
 		# Dynamically detect the correct -p# ... i'm lazy, so shoot me :/
 		local patch_cmd
 		while [[ ${count} -lt 5 ]] ; do
-			patch_cmd="patch -p${count} ${EPATCH_OPTS}"
+			patch_cmd="${BASH_ALIASES[patch]:-patch} -p${count} ${EPATCH_OPTS}"
 
 			# Generate some useful debug info ...
 			(

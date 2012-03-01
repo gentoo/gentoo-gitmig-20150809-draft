@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.150 2012/03/01 15:19:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.151 2012/03/01 22:10:50 naota Exp $
+
+  01 Mar 2012; Naohiro Aota <naota@gentoo.org> eutils.eclass:
+  Consider patch alias, #404447
 
   01 Mar 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Cleanup qt_mkspecs_dir().
