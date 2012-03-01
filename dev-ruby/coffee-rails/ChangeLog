@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coffee-rails
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-rails/ChangeLog,v 1.1 2011/12/30 13:31:44 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-rails/ChangeLog,v 1.2 2012/03/01 21:01:24 grobian Exp $
+
+  01 Mar 2012; Fabian Groffen <grobian@gentoo.org> coffee-rails-3.1.1.ebuild:
+  Marked ~x64-macos
 
 *coffee-rails-3.1.1 (30 Dec 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-1.2.13-r1.ebuild,v 1.1 2012/01/25 00:28:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-1.2.13-r1.ebuild,v 1.2 2012/03/01 21:02:12 grobian Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -23,7 +23,7 @@ SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/v${PV} -> $
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x64-macos"
 
 IUSE="test"
 

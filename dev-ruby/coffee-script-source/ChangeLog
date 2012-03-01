@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/coffee-script-source
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script-source/ChangeLog,v 1.1 2011/12/30 13:18:46 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script-source/ChangeLog,v 1.2 2012/03/01 20:57:23 grobian Exp $
+
+  01 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  coffee-script-source-1.2.0.ebuild:
+  Marked ~x64-macos
 
 *coffee-script-source-1.2.0 (30 Dec 2011)
 

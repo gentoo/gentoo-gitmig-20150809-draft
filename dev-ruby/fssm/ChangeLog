@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fssm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.17 2012/02/06 15:35:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.18 2012/03/01 20:59:26 grobian Exp $
+
+  01 Mar 2012; Fabian Groffen <grobian@gentoo.org> fssm-0.2.8.1.ebuild:
+  Marked ~x64-macos
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> fssm-0.2.7-r1.ebuild:
   Marking fssm-0.2.7-r1 ~ppc for bug 379131
