@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.130 2012/02/28 03:55:15 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.131 2012/03/01 00:13:44 dilfridge Exp $
+
+  01 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> firefox-10.0.1.ebuild,
+  firefox-10.0.1-r1.ebuild:
+  Temporarily require ~libvpx-0.9.7, as quick workaround for bug 401985
 
 *firefox-10.0.1-r1 (28 Feb 2012)
 

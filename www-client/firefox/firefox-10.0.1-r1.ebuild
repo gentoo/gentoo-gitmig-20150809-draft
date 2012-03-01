@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.1-r1.ebuild,v 1.1 2012/02/28 03:55:15 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.1-r1.ebuild,v 1.2 2012/03/01 00:13:44 dilfridge Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -52,7 +52,7 @@ RDEPEND="
 	media-libs/libpng[apng]
 	virtual/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
-	webm? ( >=media-libs/libvpx-0.9.7
+	webm? ( ~media-libs/libvpx-0.9.7
 		media-libs/alsa-lib )
 	crashreporter? ( net-misc/curl )
 	selinux? ( sec-policy/selinux-mozilla )"
