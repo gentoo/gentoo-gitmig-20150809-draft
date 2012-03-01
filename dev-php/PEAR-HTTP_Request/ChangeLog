@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-HTTP_Request
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request/ChangeLog,v 1.46 2012/02/24 14:38:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request/ChangeLog,v 1.47 2012/03/01 20:01:53 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> PEAR-HTTP_Request-1.4.4.ebuild:
+  Marking PEAR-HTTP_Request-1.4.4 ppc for bug 404707
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   PEAR-HTTP_Request-1.4.4.ebuild:
