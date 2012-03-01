@@ -13,5 +13,6 @@
   <use>
     <flag name='libcanberra'>Enable sound event support with <pkg>media-libs/libcanberra</pkg></flag>
     <flag name='utp'>Adds support for µTP (Micro Transport Protocol)</flag>
+    <flag name='xfs'>Use <pkg>sys-fs/xfsprogs</pkg> headers in building of fdlimit(.c)</flag>
   </use>
 </pkgmetadata>

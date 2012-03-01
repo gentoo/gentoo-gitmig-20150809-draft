@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.171 2012/02/14 19:41:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.172 2012/03/01 22:53:53 ssuominen Exp $
+
+*transmission-2.50 (01 Mar 2012)
+
+  01 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +transmission-2.50.ebuild:
+  Version bump wrt #405569 by Alejandro Ojeda and Qt4 translation install
+  patch from #403027 by Nikoli
 
   14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   ayatana is now global per http://archives.gentoo.org/gentoo-
