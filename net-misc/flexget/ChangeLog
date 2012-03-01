@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.14 2012/02/27 04:38:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.15 2012/03/01 04:37:05 floppym Exp $
+
+  01 Mar 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Depend on dev-python/python-dateutil.
 
   27 Feb 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
   Add blocker on sqlalchemy-0.7.5.

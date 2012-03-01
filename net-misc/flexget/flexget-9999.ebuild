@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.13 2012/02/27 04:38:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.14 2012/03/01 04:37:05 floppym Exp $
 
 EAPI=4
 
@@ -34,6 +34,7 @@ RDEPEND="
 	dev-python/progressbar
 	dev-python/flask
 	dev-python/cherrypy
+	dev-python/python-dateutil:python-2
 	>=dev-python/requests-0.10.0
 	!=dev-python/requests-0.10.1
 "
