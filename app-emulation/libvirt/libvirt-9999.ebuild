@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.22 2012/02/23 16:34:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.23 2012/03/01 10:07:31 cardoe Exp $
 
-#BACKPORTS=2
+BACKPORTS=1
 #AUTOTOOLIZE=yes
 
 EAPI="4"
@@ -28,8 +28,7 @@ else
 	SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
 		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
 		${BACKPORTS:+
-			http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-backports-${BACKPORTS}.tar.bz2
-			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-backports-${BACKPORTS}.tar.bz2}"
+			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-bp-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~x86"
 fi
 S="${WORKDIR}/${P%_rc*}"
@@ -38,7 +37,7 @@ DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap nfs \
+IUSE="avahi caps debug iscsi +libvirtd lvm +lxc macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux +udev \
 	uml virtualbox virt-network xen elibc_glibc"
 # IUSE=one : bug #293416 & bug #299011
@@ -54,6 +53,7 @@ RDEPEND="sys-libs/readline
 	>=dev-libs/libxml2-2.7.6
 	>=dev-libs/libnl-1.1:1.1
 	>=net-libs/gnutls-1.0.25
+	sys-apps/dmidecode
 	>=sys-apps/util-linux-2.17
 	sys-devel/gettext
 	>=net-analyzer/netcat6-1.0-r2
@@ -61,7 +61,6 @@ RDEPEND="sys-libs/readline
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
 	iscsi? ( sys-block/open-iscsi )
-	json? ( dev-libs/yajl )
 	libvirtd? ( net-misc/bridge-utils )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
 	nfs? ( net-fs/nfs-utils )
@@ -74,7 +73,8 @@ RDEPEND="sys-libs/readline
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/polkit-0.9 )
-	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 ) )
+	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 )
+		dev-libs/yajl )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
@@ -128,6 +128,7 @@ src_configure() {
 	fi
 	myconf="${myconf} $(use_with uml)"
 	myconf="${myconf} $(use_with qemu)"
+	myconf="${myconf} $(use_with qemu yajl)" # Use QMP over HMP
 	# doesn't belong with hypervisors but links to libvirtd for some reason
 	#myconf="${myconf} $(use_with one)"
 
@@ -162,7 +163,6 @@ src_configure() {
 	## other
 	myconf="${myconf} $(use_enable nls)"
 	myconf="${myconf} $(use_with python)"
-	myconf="${myconf} $(use_with json yajl)"
 
 	## stuff we don't yet support
 	myconf="${myconf} --without-netcf --without-audit"
