@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.41 2011/02/06 07:48:56 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.42 2012/03/01 17:25:31 vapier Exp $
+
+  01 Mar 2012; Mike Frysinger <vapier@gentoo.org> netcat-110-r9.ebuild:
+  Update to EAPI=4 to handle libmix[static-libs] #406329 by venom00.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> netcat-110-r8.ebuild:
   Drop to ~mips
