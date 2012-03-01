@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Cycle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.25 2012/02/24 10:05:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.26 2012/03/01 20:18:32 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> Devel-Cycle-1.110.0.ebuild:
+  Marking Devel-Cycle-1.110.0 ppc for bug 400085
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Devel-Cycle-1.110.0.ebuild:
   Stable for amd64, wrt bug #400085
