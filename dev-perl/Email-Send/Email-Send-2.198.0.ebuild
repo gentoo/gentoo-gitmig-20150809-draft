@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/Email-Send-2.198.0.ebuild,v 1.3 2012/02/24 10:10:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/Email-Send-2.198.0.ebuild,v 1.4 2012/03/01 20:26:52 ranger Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Simply Sending Email"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="virtual/perl-Test-Simple
