@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/cri-2.2.0.ebuild,v 1.1 2012/02/28 01:26:49 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/cri-2.2.0.ebuild,v 1.2 2012/03/01 06:38:19 graaff Exp $
 
 EAPI="2"
-USE_RUBY="ruby18 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 RUBY_FAKEGEM_EXTRADOC="NEWS.md README.md"
 
@@ -20,4 +20,3 @@ SLOT="0"
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/yard )"
-ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
