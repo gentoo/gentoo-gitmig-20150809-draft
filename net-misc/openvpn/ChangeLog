@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.224 2012/03/01 12:09:00 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.225 2012/03/01 12:10:51 djc Exp $
+
+  01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> openvpn-9999.ebuild:
+  Fix CVS header in live ebuild.
 
 *openvpn-9999 (01 Mar 2012)
 
