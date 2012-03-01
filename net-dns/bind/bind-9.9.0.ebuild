@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.0.ebuild,v 1.1 2012/02/29 19:05:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.0.ebuild,v 1.2 2012/03/01 03:18:18 floppym Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -194,11 +194,11 @@ src_install() {
 		docinto html
 		dohtml -r doc/arm/* || die
 
-		docinto	draft
-		dodoc doc/draft/* || die
+		#docinto	draft
+		#dodoc doc/draft/* || die
 
-		docinto rfc
-		dodoc doc/rfc/* || die
+		#docinto rfc
+		#dodoc doc/rfc/* || die
 
 		docinto contrib
 		dodoc contrib/named-bootconf/named-bootconf.sh \
