@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/proofgeneral
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.34 2012/02/26 15:48:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.35 2012/03/01 23:53:48 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> proofgeneral-4.1.ebuild:
+  Marking proofgeneral-4.1 ppc for bug 404605
 
   26 Feb 2012; Agostino Sarubbo <ago@gentoo.org> proofgeneral-4.1.ebuild:
   Stable for amd64, wrt bug #404605
