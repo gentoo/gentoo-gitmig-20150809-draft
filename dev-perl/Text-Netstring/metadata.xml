@@ -6,4 +6,7 @@
     <email>robbat2@gentoo.org</email>
     <description>Primary Maintainer</description>
   </maintainer>
+  <upstream>
+    <remote-id type="cpan">Text-Netstring</remote-id>
+  </upstream>
 </pkgmetadata>

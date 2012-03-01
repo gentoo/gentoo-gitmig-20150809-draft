@@ -4,4 +4,7 @@
 	<herd>perl</herd>
 	<longdescription lang="en">
 	</longdescription>
+	<upstream>
+		<remote-id type="cpan">Cache</remote-id>
+	</upstream>
 </pkgmetadata>

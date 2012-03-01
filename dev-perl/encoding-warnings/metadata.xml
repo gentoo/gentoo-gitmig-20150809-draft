@@ -5,4 +5,7 @@
 	<maintainer>
 		<email>dilfridge@gentoo.org</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="cpan">encoding-warnings</remote-id>
+	</upstream>
 </pkgmetadata>

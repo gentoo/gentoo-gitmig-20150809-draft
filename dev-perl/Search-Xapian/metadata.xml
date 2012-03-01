@@ -9,4 +9,7 @@
 		<email>bugs@bergstroem.nu</email>
 		<name>Johan Bergström</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="cpan">Search-Xapian</remote-id>
+	</upstream>
 </pkgmetadata>

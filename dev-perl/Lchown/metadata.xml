@@ -5,4 +5,7 @@
   <email>jlec@gentoo.org</email>
 </maintainer>
 <herd>perl</herd>
+  <upstream>
+    <remote-id type="cpan">Lchown</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Cookies
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cookies/ChangeLog,v 1.16 2012/02/29 09:01:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cookies/ChangeLog,v 1.17 2012/03/01 16:17:45 tove Exp $
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
 
 *HTTP-Cookies-6.0.1 (29 Feb 2012)
 

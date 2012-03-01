@@ -10,5 +10,7 @@
 <name>Azamat Hackimov</name>
 </maintainer>
 <herd>perl</herd>
+	<upstream>
+		<remote-id type="cpan">Term-Shell</remote-id>
+	</upstream>
 </pkgmetadata>
-

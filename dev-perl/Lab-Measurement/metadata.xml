@@ -6,4 +6,7 @@
 		<email>dilfridge@gentoo.org</email>
 		<name>Andreas K. Huettel</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="cpan">Lab-Measurement</remote-id>
+	</upstream>
 </pkgmetadata>

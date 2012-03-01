@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Encode-Locale
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.19 2012/02/12 20:23:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.20 2012/03/01 16:17:43 tove Exp $
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
 
 *Encode-Locale-1.30.0 (12 Feb 2012)
 
