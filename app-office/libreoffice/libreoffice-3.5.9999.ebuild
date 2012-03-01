@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.17 2012/02/29 15:21:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.18 2012/03/01 13:14:47 scarabeus Exp $
 
 EAPI=4
 
@@ -155,8 +155,8 @@ PDEPEND="
 "
 
 # FIXME: cppunit should be moved to test conditional
-#        after everything upstream is under gbuild
-#        as dmake execute tests right away
+#		after everything upstream is under gbuild
+#		as dmake execute tests right away
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.46
 	>=dev-libs/libxml2-2.7.8
@@ -191,6 +191,8 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
+	# this can't be upstreamed :(
+	"${FILESDIR}/${PN}-system-pyuno.patch"
 )
 
 REQUIRED_USE="
@@ -220,7 +222,7 @@ pkg_pretend() {
 		 pgslot=$(postgresql-config show)
 		 if [[ ${pgslot//.} < 90 ]] ; then
 		 	eerror "PostgreSQL slot must be set to 9.0 or higher."
-			eerror "    postgresql-config set 9.0"
+			eerror "	postgresql-config set 9.0"
 			die "PostgreSQL slot is not set to 9.0 or higher."
 		 fi
 	fi
@@ -297,6 +299,13 @@ src_prepare() {
 	eautoreconf
 	# hack in the autogen.sh
 	touch autogen.lastrun
+	# system pyuno mess
+	sed \
+		-e "s:%eprefix%:${EPREFIX}:g" \
+		-e "s:%libdir%:$(get_libdir):g" \
+		-i pyuno/source/module/uno.py \
+		-i scripting/source/pyprov/officehelper.py || die
+
 }
 
 src_configure() {
