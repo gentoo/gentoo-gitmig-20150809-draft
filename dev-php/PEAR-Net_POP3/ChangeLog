@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_POP3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_POP3/ChangeLog,v 1.23 2012/02/24 14:33:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_POP3/ChangeLog,v 1.24 2012/03/01 19:58:13 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> PEAR-Net_POP3-1.3.8.ebuild:
+  Marking PEAR-Net_POP3-1.3.8 ppc for bug 396987
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   PEAR-Net_POP3-1.3.8.ebuild:
