@@ -1,6 +1,11 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.113 2012/02/20 11:31:06 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.114 2012/03/01 13:30:34 anarchy Exp $
+
+*icecat-10.0-r2 (01 Mar 2012)
+
+  01 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> +icecat-10.0-r2.ebuild:
+  Fix libvpx-1.0.0 support, bug #401985
 
   20 Feb 2012; Thomas Kahle <tomka@gentoo.org> icecat-10.0-r1.ebuild:
   marked x86 per bug 403183
