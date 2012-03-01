@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.23 2012/02/17 10:02:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.24 2012/03/01 20:21:11 scarabeus Exp $
+
+*graphite2-1.1.1 (01 Mar 2012)
+
+  01 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +graphite2-1.1.1.ebuild,
+  -files/graphite2-1.1.0-fix-perl-includes.patch, -graphite2-1.1.0.ebuild:
+  Version bump to latest.
 
   17 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> graphite2-1.1.0.ebuild:
   Fix errornous mv from testing.
