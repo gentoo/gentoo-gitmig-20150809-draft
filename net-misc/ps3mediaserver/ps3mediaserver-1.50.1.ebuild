@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.50.1.ebuild,v 1.2 2012/03/01 16:08:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.50.1.ebuild,v 1.3 2012/03/01 17:47:41 floppym Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="multiuser +transcode tsmuxer"
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jre-1.6.0
-	media-gfx/imagemagick
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	media-libs/libmediainfo
 	media-libs/libzen
 	tsmuxer? ( media-video/tsmuxer )
