@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-TTF
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.28 2012/02/29 20:52:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.29 2012/03/01 23:57:24 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> Font-TTF-0.480.0.ebuild:
+  Marking Font-TTF-0.480.0 ppc for bug 400121
 
   29 Feb 2012; Markus Meier <maekke@gentoo.org> Font-TTF-0.480.0.ebuild:
   arm stable, bug #400121
