@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.147 2012/02/28 18:19:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.148 2012/03/01 07:00:40 ulm Exp $
+
+  01 Mar 2012; Ulrich Müller <ulm@gentoo.org> eutils.eclass:
+  Cdrom functions split out to dedicated cdrom.eclass.
 
   28 Feb 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Add qt-openvg blocker.
