@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Element-Extended
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.35 2012/02/29 21:06:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.36 2012/03/01 20:31:29 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org>
+  HTML-Element-Extended-1.180.0.ebuild:
+  Marking HTML-Element-Extended-1.180.0 ppc for bug 400131
 
   29 Feb 2012; Markus Meier <maekke@gentoo.org>
   HTML-Element-Extended-1.180.0.ebuild:
