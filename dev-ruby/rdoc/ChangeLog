@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.72 2012/02/05 21:01:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.73 2012/03/01 22:15:44 naota Exp $
+
+  01 Mar 2012; Naohiro Aota <naota@gentoo.org> rdoc-3.12.ebuild:
+  Add ~x86-fbsd
 
   05 Feb 2012; Markus Meier <maekke@gentoo.org> rdoc-3.12.ebuild:
   add ~arm, bug #332593
