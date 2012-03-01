@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.366 2012/02/28 21:14:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.367 2012/03/01 16:59:03 jer Exp $
+
+  01 Mar 2012; Jeroen Roovers <jer@gentoo.org> gvim-7.3.409.ebuild:
+  Stable for HPPA (bug #406427).
 
 *gvim-7.3.456 (28 Feb 2012)
 
