@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-twitter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/ChangeLog,v 1.8 2011/09/24 13:46:12 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/ChangeLog,v 1.9 2012/03/01 09:38:50 djc Exp $
+
+*python-twitter-0.8.2 (01 Mar 2012)
+
+  01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +python-twitter-0.8.2.ebuild:
+  Version bump to 0.8.2.
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> python-twitter-0.8.1.ebuild:
   Marked ~x64-macos
