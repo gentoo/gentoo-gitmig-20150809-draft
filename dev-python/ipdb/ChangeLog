@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipdb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.6 2011/09/16 15:59:46 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.7 2012/03/01 15:16:44 djc Exp $
+
+*ipdb-0.6.1 (01 Mar 2012)
+
+  01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +ipdb-0.6.1.ebuild:
+  Version bump to 0.6.1 for bug 402805 (thanks to Ian Delaney).
 
 *ipdb-0.6 (16 Sep 2011)
 
