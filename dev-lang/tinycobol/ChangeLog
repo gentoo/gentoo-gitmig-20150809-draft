@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tinycobol
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.21 2011/10/05 08:05:16 nativemad Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.22 2012/03/01 19:53:02 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> tinycobol-0.65.9.ebuild:
+  Marking tinycobol-0.65.9 ppc for bug 384499
+
+  15 Feb 2012; Brent Baude <ranger@gentoo.org> tinycobol-0.65.9.ebuild:
+  Marking tinycobol-0.65.9 ppc for bug 384499
 
   05 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> tinycobol-0.65.9.ebuild:
   x86 stable, see bug 384499
