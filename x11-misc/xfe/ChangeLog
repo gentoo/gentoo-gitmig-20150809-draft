@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.70 2012/02/23 16:22:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.71 2012/03/01 23:31:49 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> xfe-1.32.4.ebuild:
+  Marking xfe-1.32.4 ppc for bug 405263
 
   23 Feb 2012; Jeroen Roovers <jer@gentoo.org> xfe-1.32.4.ebuild:
   Fix DEPEND/RDEPEND by Agostino Sarubbo (bug #405263).
