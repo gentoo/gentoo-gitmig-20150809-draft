@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-ICal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.35 2012/02/25 17:48:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.36 2012/03/01 20:15:48 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> Date-ICal-2.678.0.ebuild:
+  Marking Date-ICal-2.678.0 ppc for bug 400077
 
   25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> Date-ICal-2.678.0.ebuild:
   Stable on alpha, bug #400077
