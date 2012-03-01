@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/hcalc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/ChangeLog,v 1.12 2011/12/22 22:23:30 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/ChangeLog,v 1.13 2012/03/01 19:48:18 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> hcalc-1.0-r1.ebuild:
+  Marking hcalc-1.0-r1 ppc for bug 394049
 
   22 Dec 2011; Markus Meier <maekke@gentoo.org> hcalc-1.0-r1.ebuild:
   x86 stable, bug #394049
