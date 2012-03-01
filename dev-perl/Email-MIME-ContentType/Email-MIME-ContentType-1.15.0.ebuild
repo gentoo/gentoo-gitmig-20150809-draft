@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-ContentType/Email-MIME-ContentType-1.15.0.ebuild,v 1.3 2012/02/25 17:52:48 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-ContentType/Email-MIME-ContentType-1.15.0.ebuild,v 1.4 2012/03/01 20:25:57 ranger Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Parse a MIME Content-Type Header"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 ~ia64 ppc ~ppc64 ~sparc ~x86 ~sparc-solaris ~x86-solaris"
 IUSE="test"
 
 RDEPEND=""
