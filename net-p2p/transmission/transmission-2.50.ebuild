@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50.ebuild,v 1.1 2012/03/01 22:53:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50.ebuild,v 1.2 2012/03/01 23:42:33 ssuominen Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
@@ -117,14 +117,16 @@ src_install() {
 		domenu ${PN}-qt.desktop
 		doicon icons/${PN}-qt.png
 
-		insinto /usr/share/qt4/translations
-		local lang
-		for lang in ${LANGS}; do
-			if use linguas_${lang}; then
-				lrelease translations/${PN}_${lang}.ts || die
-				doins translations/${PN}_${lang}.qm
-			fi
-		done
+		if use nls; then
+			insinto /usr/share/qt4/translations
+			local lang
+			for lang in ${LANGS}; do
+				if use linguas_${lang}; then
+					lrelease translations/${PN}_${lang}.ts || die
+					doins translations/${PN}_${lang}.qm
+				fi
+			done
+		fi
 
 		if use kde; then
 			insinto /usr/share/kde4/services
