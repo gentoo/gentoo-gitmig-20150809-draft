@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.204 2012/03/01 15:28:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.205 2012/03/01 15:31:11 patrick Exp $
+
+  01 Mar 2012; Patrick Lauer <patrick@gentoo.org> -zope-2.10.7-r1.ebuild,
+  -zope-2.10.7.ebuild, -zope-2.10.9.ebuild:
+  Removing more impossible versions
 
   01 Mar 2012; Patrick Lauer <patrick@gentoo.org> -zope-2.9.10-r1.ebuild,
   -zope-2.9.10.ebuild, -zope-2.9.12.ebuild:
