@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clipboard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.13 2012/02/24 09:58:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.14 2012/03/01 20:06:33 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> Clipboard-0.130.0.ebuild:
+  Marking Clipboard-0.130.0 ppc for bug 400057
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Clipboard-0.130.0.ebuild:
   Stable for amd64, wrt bug #400057
