@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.90 2012/02/27 04:39:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.91 2012/03/01 23:44:57 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> autoconf-wrapper-12.ebuild:
+  Marking autoconf-wrapper-12 ppc for bug 400501
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> autoconf-wrapper-12.ebuild:
   Stable for HPPA (bug #400501).
