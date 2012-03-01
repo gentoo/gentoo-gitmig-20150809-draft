@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/splash-themes-livedvd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livedvd/ChangeLog,v 1.1 2012/03/01 20:48:48 tampakrap Exp $
+
+*splash-themes-livedvd-12.0 (01 Mar 2012)
+
+  01 Mar 2012; Theo Chatzimichos <tampakrap@gentoo.org> +metadata.xml,
+  +splash-themes-livedvd-12.0.ebuild:
+  Initial commit, ebuild based on splash-themes-{gentoo,livecd}
+
