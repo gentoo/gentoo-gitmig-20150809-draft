@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pkcs11-helper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.48 2012/02/29 20:45:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.49 2012/03/01 23:51:07 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> pkcs11-helper-1.09.ebuild:
+  Marking pkcs11-helper-1.09 ppc for bug 400021
 
   29 Feb 2012; Markus Meier <maekke@gentoo.org> pkcs11-helper-1.09.ebuild:
   arm stable, bug #400021
