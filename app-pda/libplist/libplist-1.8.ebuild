@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.8.ebuild,v 1.1 2012/02/10 21:07:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.8.ebuild,v 1.2 2012/03/01 11:44:10 pesa Exp $
 
 EAPI=4
 
@@ -25,6 +25,9 @@ DEPEND="${RDEPEND}
 "
 
 DOCS=(AUTHORS NEWS README)
+
+# bug 406365
+MAKEOPTS+=" -j1"
 
 pkg_setup() {
 	if use cython || use python; then
