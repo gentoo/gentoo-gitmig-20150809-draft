@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-017.ebuild,v 1.1 2012/02/29 18:13:20 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-017-r1.ebuild,v 1.1 2012/03/01 08:40:44 aidecoe Exp $
 
 EAPI=4
 
@@ -161,7 +161,6 @@ src_install() {
 	emake WITH_SWITCH_ROOT=0 \
 		prefix=/usr sysconfdir=/etc DESTDIR="${D}" \
 		install
-	dosym usr/lib/dracut/dracut-functions dracut-functions.sh
 
 	local gen2conf
 
