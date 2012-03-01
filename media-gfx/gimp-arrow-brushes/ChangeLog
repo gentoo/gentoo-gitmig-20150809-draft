@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp-arrow-brushes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-arrow-brushes/ChangeLog,v 1.2 2012/02/26 15:48:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-arrow-brushes/ChangeLog,v 1.3 2012/03/01 13:57:14 tomka Exp $
+
+  01 Mar 2012; Thomas Kahle <tomka@gentoo.org>
+  gimp-arrow-brushes-20120122.ebuild:
+  marked ~x86 per bug 399731
 
   26 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   gimp-arrow-brushes-20120122.ebuild:
