@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-UUID
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.56 2012/02/24 10:03:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.57 2012/03/01 20:14:52 ranger Exp $
+
+  01 Mar 2012; Brent Baude <ranger@gentoo.org> Data-UUID-1.217.0.ebuild:
+  Marking Data-UUID-1.217.0 ppc for bug 400075
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Data-UUID-1.217.0.ebuild:
   Stable for amd64, wrt bug #400075
