@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.142 2012/01/04 20:44:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.143 2012/03/02 15:30:44 jlec Exp $
+
+  02 Mar 2012; Justin Lecher <jlec@gentoo.org> +tcl-8.5.11.ebuild:
+  Version Bump
+
+*tcl-8.5.11 (02 Mar 2012)
+
+  02 Mar 2012; Justin Lecher <jlec@gentoo.org> +tcl-8.5.11.ebuild:
+  Version Bump
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> tcl-8.5.10.ebuild:
   Marking tcl-8.5.10 ppc for bug 280934
