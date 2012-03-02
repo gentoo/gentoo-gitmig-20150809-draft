@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-CPU
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.12 2011/09/04 11:22:54 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.13 2012/03/02 13:44:05 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  Stable on alpha, bug #356387
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Sys-CPU-0.52.ebuild:
   Cleanup
