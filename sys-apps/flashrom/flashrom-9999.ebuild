@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.1 2011/10/14 18:54:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.2 2012/03/02 01:47:54 idl0r Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
@@ -18,7 +18,7 @@ HOMEPAGE="http://flashrom.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+atahpt +bitbang_spi +buspirate_spi dediprog +drkaiser
+IUSE="+atahpt +bitbang_spi +buspirate_spi dediprog doc +drkaiser
 +dummy ft2232_spi +gfxnvidia +internal +nic3com +nicintel +nicintel_spi
 +nicnatsemi +nicrealtek +ogp_spi +rayer_spi
 +satasii +satamv +serprog +wiki"
@@ -92,4 +92,8 @@ src_install() {
 	dosbin flashrom || die
 	doman flashrom.8
 	dodoc ChangeLog README
+
+	if use doc; then
+		dodoc Documentation/*.txt
+	fi
 }

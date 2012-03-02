@@ -1,18 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.5.ebuild,v 1.1 2012/02/18 18:58:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.5.1.ebuild,v 1.1 2012/03/02 01:47:54 idl0r Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
+if [[ ${PV} == "9999" ]] ; then
+	ESVN_REPO_URI="svn://coreboot.org/flashrom/trunk"
+	inherit subversion
+else
+	SRC_URI="http://download.flashrom.org/releases/${P}.tar.bz2"
+	KEYWORDS="~amd64 ~arm ~x86"
+fi
 
 DESCRIPTION="Utility for reading, writing, erasing and verifying flash ROM chips"
 HOMEPAGE="http://flashrom.org/"
-SRC_URI="http://download.flashrom.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="+atahpt +bitbang_spi +buspirate_spi dediprog doc +drkaiser
 +dummy ft2232_spi +gfxnvidia +internal +nic3com +nicintel +nicintel_spi
 +nicnatsemi +nicrealtek +ogp_spi +rayer_spi
@@ -40,7 +45,7 @@ DEPEND="${COMMON_DEPEND}
 
 _flashrom_enable() {
 	local c="CONFIG_${2:-$(echo $1 | tr [:lower:] [:upper:])}"
-	args+=" $c=`use $1 && echo yes || echo no`"
+	args+=" $c=$(usex $1 yes no)"
 }
 flashrom_enable() {
 	local u
@@ -79,7 +84,8 @@ src_compile() {
 	fi
 
 	# WARNERROR=no, bug 347879
-	emake CC="$(tc-getCC)" AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" WARNERROR=no ${args} || die
+	tc-export AR CC RANLIB
+	emake WARNERROR=no ${args} || die
 }
 
 src_install() {
