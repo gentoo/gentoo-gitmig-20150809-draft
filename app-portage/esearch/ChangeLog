@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.83 2012/02/26 08:57:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.84 2012/03/02 20:26:34 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> esearch-1.0-r2.ebuild:
+  Marking esearch-1.0-r2 ppc64 for bug 397693
 
   26 Feb 2012; Patrick Lauer <patrick@gentoo.org> esearch-0.7.2-r2.ebuild,
   esearch-1.0-r2.ebuild, esearch-9999.ebuild:
