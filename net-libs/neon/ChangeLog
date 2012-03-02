@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.27 2011/09/24 10:04:23 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.28 2012/03/02 21:07:32 grobian Exp $
+
+  02 Mar 2012; Fabian Groffen <grobian@gentoo.org> neon-0.29.6.ebuild:
+  Fix ca-bundle path for Prefix
 
   24 Sep 2011; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Fix invalid herd.

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6.ebuild,v 1.8 2011/07/20 22:14:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6.ebuild,v 1.9 2012/03/02 21:07:32 grobian Exp $
 
 EAPI="3"
 
@@ -66,7 +66,7 @@ src_configure() {
 	fi
 
 	if use gnutls; then
-		myconf+=" --with-ssl=gnutls --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt"
+		myconf+=" --with-ssl=gnutls --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
 	elif use ssl; then
 		myconf+=" --with-ssl=openssl"
 	fi
