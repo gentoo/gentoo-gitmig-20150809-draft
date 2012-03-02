@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-1.12.ebuild,v 1.1 2011/11/26 16:26:08 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-1.12.ebuild,v 1.2 2012/03/02 15:08:44 elvanor Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.pjsip.org/release/${PV}/pjproject-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa doc epoll examples ext-sound g711 g722 g7221 gsm ilbc l16
+IUSE="alsa cli doc epoll examples ext-sound g711 g722 g7221 gsm ilbc l16
 oss python speex"
 #small-filter large-filter speex-aec ssl
 
@@ -73,6 +73,10 @@ src_compile() {
 
 src_install() {
 	DESTDIR="${D}" emake install || die "emake install failed."
+
+	if use python; then
+		dobin pjsip-apps/bin/pjsua
+	fi
 
 	if use python; then
 		pushd pjsip-apps/src/python

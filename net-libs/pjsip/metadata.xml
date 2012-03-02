@@ -11,6 +11,7 @@
 		embedded/non-embedded VoIP applications.
 	</longdescription>
 	<use>
+		<flag name="cli">Installs pjsua, a simple command-line SIP client</flag>
 		<flag name="epoll">epoll system call support</flag>
 		<flag name="ext-sound">External sound device support</flag>
 		<flag name="g711">Builds the G711 codec</flag>
