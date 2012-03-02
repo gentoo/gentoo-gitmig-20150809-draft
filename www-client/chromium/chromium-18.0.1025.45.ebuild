@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-18.0.1025.45.ebuild,v 1.1 2012/03/01 02:46:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-18.0.1025.45.ebuild,v 1.2 2012/03/02 21:03:41 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -199,6 +199,9 @@ src_prepare() {
 	# Fix crashes on illegal instructions, bug #401537.
 	epatch "${FILESDIR}/${PN}-media-no-sse-r0.patch"
 
+	# Backport fix for bug #395773.
+	epatch "${FILESDIR}/${PN}-glib-r0.patch"
+
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
@@ -392,8 +395,9 @@ src_test() {
 
 	# NetUtilTest: bug #361885.
 	# DnsConfigServiceTest.GetSystemConfig: bug #394883.
+	# CertDatabaseNSSTest.ImportServerCert_SelfSigned: bug #399269.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:DnsConfigServiceTest.GetSystemConfig'
+		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:DnsConfigServiceTest.GetSystemConfig:CertDatabaseNSSTest.ImportServerCert_SelfSigned'
 
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/printing_unittests virtualmake
 }

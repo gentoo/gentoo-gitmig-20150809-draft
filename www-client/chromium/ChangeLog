@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.568 2012/03/01 02:46:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.569 2012/03/02 21:03:41 phajdan.jr Exp $
+
+  02 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-18.0.1025.45.ebuild:
+  Backport fix for bug #395773 by Oschtan, patch by Alphat-PC. Suppress test
+  failure (bug #399269).
 
 *chromium-18.0.1025.45 (01 Mar 2012)
 
