@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.79 2012/01/22 18:40:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.80 2012/03/02 20:25:39 hwoarang Exp $
+
+*qmmp-0.5.4 (02 Mar 2012)
+
+  02 Mar 2012; Markos Chandras <hwoarang@gentoo.org> +qmmp-0.5.4.ebuild:
+  Version bump
 
 *qmmp-0.5.3 (22 Jan 2012)
 
