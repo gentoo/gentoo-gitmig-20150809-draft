@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langother
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langother/ChangeLog,v 1.44 2012/01/29 20:10:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langother/ChangeLog,v 1.45 2012/03/02 20:02:57 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-langother-2011.ebuild:
+  Marking texlive-langother-2011 ppc stable for bug 395735
 
   29 Jan 2012; Markus Meier <maekke@gentoo.org> texlive-langother-2011.ebuild:
   arm stable, bug #395735
