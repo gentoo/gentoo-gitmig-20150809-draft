@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrmanager/files/rc-addon.sh,v 1.2 2012/03/02 22:14:14 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrmanager/files/rc-addon.sh,v 1.3 2012/03/02 23:33:49 hd_brummy Exp $
 #
 # rc-addon plugin-startup-skript for vdr-vdrmanager
 #
@@ -15,6 +15,9 @@ plugin_pre_vdr_start() {
 
         add_plugin_param "-p${VDRMANAGER_PORT}"
 		add_plugin_param "-P${VDRMANAGER_PASS}"
+
+	if yesno ${SVDRPHOSTS_CHECK:-no}; then
 		add_plugin_param "-s"
+	fi
 }
 
