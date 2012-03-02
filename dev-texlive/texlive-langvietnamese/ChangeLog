@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langvietnamese
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langvietnamese/ChangeLog,v 1.43 2012/01/29 20:26:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langvietnamese/ChangeLog,v 1.44 2012/03/02 20:07:36 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org>
+  texlive-langvietnamese-2011.ebuild:
+  Marking texlive-langvietnamese-2011 ppc stable for bug 395735
 
   29 Jan 2012; Markus Meier <maekke@gentoo.org>
   texlive-langvietnamese-2011.ebuild:
