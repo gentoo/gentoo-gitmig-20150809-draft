@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-MemInfo/Sys-MemInfo-0.910.0.ebuild,v 1.2 2012/03/02 13:44:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-MemInfo/Sys-MemInfo-0.910.0.ebuild,v 1.3 2012/03/02 15:01:18 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="Memory informations"
 # sources specify LGPL-2.1, README "same terms as Perl itself"
 LICENSE="LGPL-2.1 ${LICENSE}"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${PN}
