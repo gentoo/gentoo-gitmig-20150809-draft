@@ -1,0 +1,10 @@
+# ChangeLog for games-misc/nyancat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/nyancat/ChangeLog,v 1.1 2012/03/02 04:20:34 ssuominen Exp $
+
+*nyancat-0.20120302 (02 Mar 2012)
+
+  02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +nyancat-0.20120302.ebuild:
+  Initial commit.
+
