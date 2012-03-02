@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.36 2012/02/16 13:27:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.37 2012/03/02 08:57:11 djc Exp $
+
+*redis-2.4.8 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.8.ebuild:
+  Version bump to 2.4.8 for bug 406493 (thanks Johan Bergstroem).
 
   16 Feb 2012; Agostino Sarubbo <ago@gentoo.org> redis-2.4.4-r1.ebuild:
   Stable for amd64, wrt bug #404083
