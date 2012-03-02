@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0-r2.ebuild,v 1.8 2012/02/01 17:37:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0-r2.ebuild,v 1.9 2012/03/02 22:59:11 klausman Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.xmission.com/~georgeps/Tk_Theme/other/${PN}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ppc ~sparc x86"
 IUSE="debug examples static-libs threads"
 
 DEPEND="
