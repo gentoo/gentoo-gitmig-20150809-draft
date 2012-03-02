@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.58 2012/02/21 07:19:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.59 2012/03/02 09:43:03 djc Exp $
+
+*beautifulsoup-3.2.1 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +beautifulsoup-3.2.1.ebuild:
+  Version bump to 3.2.1.
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org>
   beautifulsoup-3.1.0.1-r1.ebuild, beautifulsoup-3.2.0.ebuild:
