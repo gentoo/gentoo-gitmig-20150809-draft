@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tlslite
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.11 2009/12/31 16:29:12 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.12 2012/03/02 12:55:40 sbriesen Exp $
+
+*tlslite-0.4.0 (02 Mar 2012)
+
+  02 Mar 2012; Stefan Briesenick <sbriesen@gentoo.org> +tlslite-0.4.0.ebuild:
+  version bump, solving bug #405329.
 
   31 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   tlslite-0.3.8-r2.ebuild:
