@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.168 2012/02/29 20:37:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.169 2012/03/02 20:24:40 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> tar-1.26.ebuild:
+  Marking tar-1.26 ppc64 for bug 358749
 
   29 Feb 2012; Markus Meier <maekke@gentoo.org> tar-1.26.ebuild:
   arm stable, bug #358749
