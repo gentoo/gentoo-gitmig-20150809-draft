@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/qimageblitz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qimageblitz/ChangeLog,v 1.8 2012/02/28 22:46:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qimageblitz/ChangeLog,v 1.9 2012/03/02 20:35:36 ssuominen Exp $
+
+  02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> qimageblitz-0.0.6.ebuild:
+  ppc64 stable wrt #392799
 
   28 Feb 2012; Brent Baude <ranger@gentoo.org> qimageblitz-0.0.6.ebuild:
   Marking qimageblitz-0.0.6 ppc for bug 392799
