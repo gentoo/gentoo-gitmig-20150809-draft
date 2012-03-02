@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.68 2012/03/02 09:51:03 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.69 2012/03/02 11:32:33 tove Exp $
 
   02 Mar 2012; Naohiro Aota <naota@gentoo.org> nokogiri-1.5.0-r2.ebuild:
   Add ~x86-fbsd, bug #330283
@@ -23,7 +23,7 @@
   06 Nov 2011; Hans de Graaff <graaff@gentoo.org> +nokogiri-1.5.0-r1.ebuild:
   Readd jruby support. Work around ruby19 test failures.
 
-  02 Oct 2011; Ra炭l Porcel <armin76@gentoo.org> nokogiri-1.4.4-r1.ebuild:
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> nokogiri-1.4.4-r1.ebuild:
   ia64/sparc stable wrt #369573
 
   14 Sep 2011; Jeroen Roovers <jer@gentoo.org> nokogiri-1.4.4-r1.ebuild:
@@ -81,7 +81,7 @@
   -nokogiri-1.4.3.1.ebuild, -nokogiri-1.4.3.1-r1.ebuild:
   Remove old versions.
 
-  02 Feb 2011; Diego E. Petten嘆 <flameeyes@gentoo.org> nokogiri-1.4.4.ebuild:
+  02 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> nokogiri-1.4.4.ebuild:
   Add missing racc dependency; skip tests for JRuby since they require
   libraries we don't have (weakling).
 
@@ -119,12 +119,12 @@
   28 Sep 2010; Brent Baude <ranger@gentoo.org> nokogiri-1.4.3.1.ebuild:
   Marking nokogiri-1.4.3.1 ~ppc for bug 330283
 
-  19 Sep 2010; Ra炭l Porcel <armin76@gentoo.org> nokogiri-1.4.1.ebuild,
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org> nokogiri-1.4.1.ebuild,
   nokogiri-1.4.1-r1.ebuild, nokogiri-1.4.3.1.ebuild,
   nokogiri-1.4.3.1-r1.ebuild:
   Add ~ia64
 
-  18 Sep 2010; Ra炭l Porcel <armin76@gentoo.org> nokogiri-1.4.3.1.ebuild,
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> nokogiri-1.4.3.1.ebuild,
   nokogiri-1.4.3.1-r1.ebuild:
   Add ~sparc wrt #330283
 
@@ -140,7 +140,7 @@
 
 *nokogiri-1.4.3.1 (30 Jul 2010)
 
-  30 Jul 2010; Diego E. Petten嘆 <flameeyes@gentoo.org>
+  30 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +nokogiri-1.4.3.1.ebuild:
   Version bump (upstream fixed 1.9.2 in a different way).
 
@@ -151,18 +151,18 @@
   nokogiri-1.4.2.ebuild:
   keyworded ~arch for x86, bug 330283
 
-  28 Jul 2010; Diego E. Petten嘆 <flameeyes@gentoo.org>
+  28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   nokogiri-1.4.2.ebuild, +files/nokogiri-1.4.2+ruby-1.9.2.patch:
   Fix building with Ruby 1.9.2 (bug #330275).
 
 *nokogiri-1.4.2 (19 Jun 2010)
 
-  19 Jun 2010; Diego E. Petten嘆 <flameeyes@gentoo.org>
+  19 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +nokogiri-1.4.2.ebuild, metadata.xml:
   Version bump, add ffi USE flag to use the ffi interface rather than the
   compiled extension even on MRI.
 
-  22 May 2010; Diego E. Petten嘆 <flameeyes@gentoo.org>
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   nokogiri-1.4.0.ebuild:
   Various cleanups.
 
@@ -170,14 +170,14 @@
   -nokogiri-1.3.3.ebuild:
   Remove old versions.
 
-  30 Jan 2010; Ra炭l Porcel <armin76@gentoo.org> nokogiri-1.4.1.ebuild,
+  30 Jan 2010; Raúl Porcel <armin76@gentoo.org> nokogiri-1.4.1.ebuild,
   nokogiri-1.4.1-r1.ebuild:
   Add ~sparc
 
   18 Jan 2010; Alex Legler <a3li@gentoo.org> nokogiri-1.4.1-r1.ebuild:
   Add dev-ruby/hoe as dependency
 
-  18 Jan 2010; Diego E. Petten嘆 <flameeyes@gentoo.org>
+  18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   nokogiri-1.4.1-r1.ebuild:
   Enable support for JRuby.
 
@@ -193,7 +193,7 @@
 
 *nokogiri-1.4.1-r1 (15 Jan 2010)
 
-  15 Jan 2010; Diego E. Petten嘆 <flameeyes@gentoo.org>
+  15 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +nokogiri-1.4.1-r1.ebuild, +files/nokogiri-1.4.1-ruby19.patch:
   Add a new revision of nokogiri that works with Ruby 1.9, but which depends
   on newly-added rexical.
@@ -211,13 +211,13 @@
   nokogiri-1.4.1.ebuild:
   Transfer Prefix keywords
 
-  21 Dec 2009; Diego E. Petten嘆 <flameeyes@gentoo.org>
+  21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   nokogiri-1.4.1.ebuild:
   Fix compile step.
 
 *nokogiri-1.4.1 (21 Dec 2009)
 
-  21 Dec 2009; Diego E. Petten嘆 <flameeyes@gentoo.org>
+  21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   +nokogiri-1.4.1.ebuild:
   Version bump and port to fakegem.
 
@@ -272,7 +272,7 @@
   Bug #253002 - Remove unicode characters from DESCRIPTION since metadata is
   required to be plain ASCII. Move the unicode characters to metadata.xml.
 
-  28 Dec 2008; Diego E. Petten嘆 <flameeyes@gentoo.org>
+  28 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   nokogiri-1.0.6.ebuild, nokogiri-1.1.0.ebuild:
   Fix DESCRIPTION's encoding, thanks to Arfrever Frehtes Taifersar Arahesis
   in bug #252748.
