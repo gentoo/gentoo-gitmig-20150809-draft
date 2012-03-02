@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.859 2012/02/29 20:31:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.860 2012/03/02 20:34:39 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> gcc-4.3.6-r1.ebuild:
+  Marking gcc-4.3.6-r1 ppc64 for bug 405845
 
   29 Feb 2012; Markus Meier <maekke@gentoo.org> gcc-4.5.3-r2.ebuild:
   arm stable, bug #402847
