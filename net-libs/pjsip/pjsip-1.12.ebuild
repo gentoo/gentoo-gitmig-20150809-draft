@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-1.12.ebuild,v 1.2 2012/03/02 15:08:44 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-1.12.ebuild,v 1.3 2012/03/02 15:10:00 elvanor Exp $
 
 EAPI="2"
 
@@ -74,7 +74,7 @@ src_compile() {
 src_install() {
 	DESTDIR="${D}" emake install || die "emake install failed."
 
-	if use python; then
+	if use cli; then
 		dobin pjsip-apps/bin/pjsua
 	fi
 
