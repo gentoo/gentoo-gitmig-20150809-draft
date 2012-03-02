@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.372 2012/03/01 03:18:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.373 2012/03/02 00:51:33 idl0r Exp $
+
+  02 Mar 2012; Christian Ruppert <idl0r@gentoo.org> bind-9.9.0.ebuild:
+  New geoip patch, fixes bug 406397. Remove some old dodoc calls.
 
   01 Mar 2012; Mike Gilbert <floppym@gentoo.org> bind-9.9.0.ebuild:
   doc/draft and doc/rfc do not exist.
