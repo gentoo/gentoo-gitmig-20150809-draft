@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdfminer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfminer/ChangeLog,v 1.1 2011/06/20 12:41:04 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfminer/ChangeLog,v 1.2 2012/03/02 08:02:46 djc Exp $
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Replace hwoarang with python herd.
 
 *pdfminer-20110515 (20 Jun 2011)
 
