@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.10.ebuild,v 1.1 2011/10/04 17:08:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.10.ebuild,v 1.2 2012/03/02 17:20:55 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit autotools eutils multilib toolchain-funcs prefix
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/tcl/${MY_P}-src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="debug threads truetype aqua xscreensaver"
+IUSE="debug static-libs threads truetype aqua xscreensaver"
 
 RDEPEND="
 	!aqua? (
@@ -60,8 +60,7 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${S}"/unix
-	emake || die
+	cd "${S}"/unix && emake
 }
 
 src_install() {
@@ -70,7 +69,7 @@ src_install() {
 	v1=${PV%.*}
 
 	cd "${S}"/unix
-	S= emake DESTDIR="${D}" install || die
+	S= emake DESTDIR="${D}" install
 
 	# normalize $S path, bug #280766 (pkgcore)
 	local nS="$(cd "${S}"; pwd)"
@@ -93,20 +92,25 @@ src_install() {
 
 	# install private headers
 	insinto /usr/${mylibdir}/tk${v1}/include/unix
-	doins "${S}"/unix/*.h || die
+	doins "${S}"/unix/*.h
 	insinto /usr/${mylibdir}/tk${v1}/include/generic
-	doins "${S}"/generic/*.h || die
+	doins "${S}"/generic/*.h
 	rm -f "${ED}"/usr/${mylibdir}/tk${v1}/include/generic/tk.h
 	rm -f "${ED}"/usr/${mylibdir}/tk${v1}/include/generic/tkDecls.h
 	rm -f "${ED}"/usr/${mylibdir}/tk${v1}/include/generic/tkPlatDecls.h
 
 	# install symlink for libraries
 	#dosym libtk${v1}.a /usr/${mylibdir}/libtk.a
-	dosym libtk${v1}$(get_libname) /usr/${mylibdir}/libtk$(get_libname) || die
-	dosym libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a || die
+	dosym libtk${v1}$(get_libname) /usr/${mylibdir}/libtk$(get_libname)
 
-	dosym wish${v1} /usr/bin/wish || die
+	if use static-libs; then
+		dosym libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a
+	else
+		rm -f "${ED}"/usr/${mylibdir}/*.a || die
+	fi
+
+	dosym wish${v1} /usr/bin/wish
 
 	cd "${S}"
-	dodoc ChangeLog* README changes || die
+	dodoc ChangeLog* README changes
 }
