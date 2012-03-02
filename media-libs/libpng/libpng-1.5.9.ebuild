@@ -1,9 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.9.ebuild,v 1.7 2012/03/02 13:45:11 klausman Exp $
-
-# WARNING: media-gfx/optipng is shipping internal copy of libpng14. Look out for
-# security.
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.9.ebuild,v 1.8 2012/03/02 17:11:46 ssuominen Exp $
 
 EAPI=4
 
