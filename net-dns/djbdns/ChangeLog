@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/djbdns
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.124 2011/04/11 13:08:57 c1pher Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.125 2012/03/02 22:57:00 hwoarang Exp $
+
+*djbdns-1.05-r25 (02 Mar 2012)
+
+  02 Mar 2012; Markos Chandras <hwoarang@gentoo.org> +djbdns-1.05-r25.ebuild,
+  metadata.xml:
+  Add missing nofiles group. Bug #388537. Add proxy-maintainers herd
 
   11 Apr 2011; Dane Smith <c1pher@gentoo.org> djbdns-1.05-r24.ebuild,
   +files/makefile-parallel.patch:
