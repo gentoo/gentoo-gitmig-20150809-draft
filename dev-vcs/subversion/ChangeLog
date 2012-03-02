@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.70 2012/02/11 19:37:08 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.71 2012/03/02 21:24:59 grobian Exp $
+
+  02 Mar 2012; Fabian Groffen <grobian@gentoo.org> subversion-1.7.2.ebuild:
+  Drop Solaris flag trickery for neon, neon itself is fixed now
 
   11 Feb 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   -subversion-1.6.17.ebuild, -subversion-1.6.17-r6.ebuild:
