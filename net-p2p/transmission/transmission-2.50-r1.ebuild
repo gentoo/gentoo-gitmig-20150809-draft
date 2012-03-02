@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.1 2012/03/02 03:10:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.2 2012/03/02 09:30:04 ssuominen Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
@@ -13,7 +13,7 @@ SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
 LICENSE="GPL-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="ayatana gtk kde nls qt4 xfs"
+IUSE="ayatana gtk lightweight nls qt4 xfs"
 
 RDEPEND="
 	>=dev-libs/libevent-2.0.10
@@ -33,21 +33,21 @@ RDEPEND="
 		x11-libs/qt-gui:4[dbus]
 		)"
 
-DEPEND="${RDEPEND}
+EAUTORECONF_DEPEND="
 	dev-util/intltool
+	sys-devel/gettext"
+
+DEPEND="${RDEPEND}
+	${EAUTORECONF_DEPEND}
 	dev-util/pkgconfig
-	sys-devel/gettext
 	virtual/os-headers
 	nls? (
-		>=dev-util/intltool-0.40
+		dev-util/intltool
 		sys-devel/gettext
 		)
 	xfs? ( sys-fs/xfsprogs )"
-# note: gettext is always a depend with eautoreconf
 
-REQUIRED_USE="
-	ayatana? ( gtk )
-	kde? ( qt4 )"
+REQUIRED_USE="ayatana? ( gtk )"
 
 DOCS="AUTHORS NEWS qt/README.txt"
 
@@ -57,7 +57,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build-with-natpmp1.patch
+	epatch "${FILESDIR}"/${P}-build-with-natpmp1.patch #376647
 
 	sed -i -e '/CFLAGS/s:-ggdb3::' configure.ac
 	use ayatana || sed -i -e '/^LIBAPPINDICATOR_MINIMUM/s:=.*:=9999:' configure.ac
@@ -67,12 +67,12 @@ src_prepare() {
 
 	eautoreconf
 
-	if use kde; then
+	if use qt4; then
 		cat <<-EOF > "${T}"/${PN}-magnet.protocol
 		[Protocol]
-		exec=transmission-qt '%u'
+		exec=${PN}-qt '%u'
 		protocol=magnet
-		Icon=transmission
+		Icon=${PN}
 		input=none
 		output=none
 		helper=true
@@ -91,14 +91,31 @@ src_configure() {
 	econf \
 		--enable-external-natpmp \
 		$(use_enable nls) \
+		$(use_enable lightweight) \
 		$(use_with gtk)
 
-	use qt4 && cd qt && eqmake4 qtr.pro
+	if use qt4; then
+		pushd qt >/dev/null
+		eqmake4 qtr.pro
+		popd >/dev/null
+	fi
 }
 
 src_compile() {
-	emake
-	use qt4 && cd qt && emake
+	default
+
+	if use qt4; then
+		pushd qt >/dev/null
+		emake
+
+		local l
+		for l in ${LANGS}; do
+			if use linguas_${l}; then
+				lrelease translations/${PN}_${l}.ts
+			fi
+		done
+		popd >/dev/null
+	fi
 }
 
 src_install() {
@@ -109,8 +126,8 @@ src_install() {
 	newinitd "${FILESDIR}"/${PN}-daemon.initd.8 ${PN}-daemon
 	newconfd "${FILESDIR}"/${PN}-daemon.confd.3 ${PN}-daemon
 
-	keepdir /var/{transmission/{config,downloads},log/transmission}
-	fowners -R transmission:transmission /var/{transmission/{,config,downloads},log/transmission}
+	keepdir /var/{${PN}/{config,downloads},log/${PN}}
+	fowners -R ${PN}:${PN} /var/{${PN}/{,config,downloads},log/${PN}}
 
 	if use qt4; then
 		pushd qt >/dev/null
@@ -119,20 +136,17 @@ src_install() {
 		domenu ${PN}-qt.desktop
 		doicon icons/${PN}-qt.png
 
+		insinto /usr/share/kde4/services
+		doins "${T}"/${PN}-magnet.protocol
+
 		if use nls; then
 			insinto /usr/share/qt4/translations
-			local lang
-			for lang in ${LANGS}; do
-				if use linguas_${lang}; then
-					lrelease translations/${PN}_${lang}.ts || die
-					doins translations/${PN}_${lang}.qm
+			local l
+			for l in ${LANGS}; do
+				if use linguas_${l}; then
+					doins translations/${PN}_${l}.qm
 				fi
 			done
-		fi
-
-		if use kde; then
-			insinto /usr/share/kde4/services
-			doins "${T}"/${PN}-magnet.protocol
 		fi
 		popd >/dev/null
 	fi
@@ -146,20 +160,16 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
 
-	ewarn "If you use transmission-daemon, please, set 'rpc-username' and"
-	ewarn "'rpc-password' (in plain text, transmission-daemon will hash it on"
-	ewarn "start) in settings.json file located at /var/transmission/config or"
-	ewarn "any other appropriate config directory."
+	elog "If you use ${PN}-daemon, please, set 'rpc-username' and"
+	elog "'rpc-password' (in plain text, ${PN}-daemon will hash it on"
+	elog "start) in settings.json file located at /var/${PN}/config or"
+	elog "any other appropriate config directory."
 	elog
-	elog "To enable sound emerge media-libs/libcanberra and check that at least"
-	elog "some sound them is selected. For this go:"
-	elog "Gnome/system/preferences/sound themes tab and 'sound theme: default'"
-	elog
-	ewarn "Since uTP is enabled ${PN} needs large kernel buffers for the UDP socket."
-	ewarn "Please, add into /etc/sysctl.conf following lines:"
-	ewarn " net.core.rmem_max = 4194304"
-	ewarn " net.core.wmem_max = 1048576"
-	ewarn "and run sysctl -p"
+	elog "Since µTP is enabled by default, ${PN} needs large kernel buffers for"
+	elog "the UDP socket. You can append following lines into /etc/sysctl.conf:"
+	elog " net.core.rmem_max = 4194304"
+	elog " net.core.wmem_max = 1048576"
+	elog "and run sysctl -p"
 }
 
 pkg_postrm() {
