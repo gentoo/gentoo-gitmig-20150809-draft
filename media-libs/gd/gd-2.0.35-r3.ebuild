@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.13 2012/02/27 20:17:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.14 2012/03/02 06:59:29 ulm Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://libgd.org/ http://www.boutell.com/gd/"
 SRC_URI="http://libgd.org/releases/${P}.tar.bz2"
 
-LICENSE="|| ( as-is BSD )"
+LICENSE="as-is BSD"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="fontconfig jpeg png static-libs truetype xpm zlib"
