@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ga/ispell-ga-4.4.ebuild,v 1.6 2012/02/17 11:04:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ga/ispell-ga-4.4.ebuild,v 1.7 2012/03/02 22:49:30 klausman Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://borel.slu.edu/ispell/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~mips ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 hppa ~mips ppc ~sparc x86"
 IUSE=""
 
 DEPEND="app-text/ispell"

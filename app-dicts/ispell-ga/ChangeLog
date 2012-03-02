@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-ga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ga/ChangeLog,v 1.14 2012/02/17 11:04:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ga/ChangeLog,v 1.15 2012/03/02 22:49:30 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> ispell-ga-4.4.ebuild:
+  Stable on alpha, bug #396781
 
   17 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ispell-ga-4.4.ebuild:
   x86 stable wrt bug #396781
