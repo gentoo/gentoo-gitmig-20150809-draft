@@ -5,7 +5,7 @@ diff -ruN qtiplot-0.9.8.9-origin/qtiplot/exportEMF.pro qtiplot-0.9.8.9/qtiplot/e
  
  INCLUDEPATH	+= $$QWT_INCLUDEPATH
  INCLUDEPATH	+= $$GSL_INCLUDEPATH
-+INCLUDEPATH	+= /usr/include/libEMF
++INCLUDEPATH	+= $$EMF_INCLUDEPATH
  
  include(src/core/core.pri)
  include(src/lib/libqti.pri)

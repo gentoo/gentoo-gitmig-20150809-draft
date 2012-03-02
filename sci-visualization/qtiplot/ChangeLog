@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.88 2012/01/30 12:12:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.89 2012/03/02 11:11:53 jlec Exp $
+
+  02 Mar 2012; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.8.9-r1.ebuild,
+  files/qtiplot-0.9.8.9-origin-2.patch:
+  Add some more prefix awareness
 
   30 Jan 2012; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.8.9.ebuild,
   qtiplot-0.9.8.9-r1.ebuild, +files/qtiplot-0.9.8.9-qt48.patch:
