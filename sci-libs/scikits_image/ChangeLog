@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/scikits_image
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.3 2011/12/20 06:34:06 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.4 2012/03/02 06:12:25 bicatali Exp $
+
+*scikits_image-0.5 (02 Mar 2012)
+
+  02 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +scikits_image-0.5.ebuild:
+  Version bump
 
 *scikits_image-0.4.2 (20 Dec 2011)
 
