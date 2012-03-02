@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-nn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nn/ChangeLog,v 1.24 2012/02/17 11:05:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nn/ChangeLog,v 1.25 2012/03/02 22:50:34 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
+  myspell-nn-20080310.ebuild:
+  Stable on alpha, bug #396787
 
   17 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   myspell-nn-20080310.ebuild:
