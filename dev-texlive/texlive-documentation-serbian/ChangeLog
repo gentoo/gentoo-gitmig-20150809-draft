@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-serbian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.18 2012/01/29 18:27:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.19 2012/03/02 19:37:22 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org>
+  texlive-documentation-serbian-2011.ebuild:
+  Marking texlive-documentation-serbian-2011 ppc stable for bug 395735
 
   29 Jan 2012; Markus Meier <maekke@gentoo.org>
   texlive-documentation-serbian-2011.ebuild:
