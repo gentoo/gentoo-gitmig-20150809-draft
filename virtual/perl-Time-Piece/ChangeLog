@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Time-Piece
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.24 2012/02/19 17:31:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.25 2012/03/02 20:59:36 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> perl-Time-Piece-1.20.ebuild:
+  Marking perl-Time-Piece-1.20 ppc64 for bug 400097
 
   19 Feb 2012; Raúl Porcel <armin76@gentoo.org> perl-Time-Piece-1.20.ebuild:
   alpha/ia64/sparc/x86 stable wrt #397201
