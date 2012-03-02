@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MRO-Compat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MRO-Compat/ChangeLog,v 1.19 2012/02/25 17:51:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MRO-Compat/ChangeLog,v 1.20 2012/03/02 21:01:13 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> MRO-Compat-0.110.0.ebuild:
+  Marking MRO-Compat-0.110.0 ppc64 for bug 400097
 
   25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
   MRO-Compat-0.110.0.ebuild:
