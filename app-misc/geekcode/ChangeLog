@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geekcode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.31 2012/03/02 21:02:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.32 2012/03/02 22:51:56 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> geekcode-1.7.3-r1.ebuild:
+  Stable on alpha, bug #396815
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> geekcode-1.7.3-r1.ebuild:
   Marking geekcode-1.7.3-r1 ppc64 for bug 396815
