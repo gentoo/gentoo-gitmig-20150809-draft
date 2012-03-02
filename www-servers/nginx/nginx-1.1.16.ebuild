@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.1.16.ebuild,v 1.1 2012/03/02 03:19:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.1.16.ebuild,v 1.2 2012/03/02 09:27:19 patrick Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ HTTP_UPLOAD_PROGRESS_MODULE_URI="http://github.com/masterzen/nginx-upload-progre
 # http_headers_more (http://github.com/agentzh/headers-more-nginx-module, BSD license)
 HTTP_HEADERS_MORE_MODULE_PV="0.16"
 HTTP_HEADERS_MORE_MODULE_P="ngx_http_headers_more-${HTTP_HEADERS_MORE_MODULE_PV}"
-HTTP_HEADERS_MORE_MODULE_SHA1="137855d"
+HTTP_HEADERS_MORE_MODULE_SHA1="de77fd2"
 HTTP_HEADERS_MORE_MODULE_URI="http://github.com/agentzh/headers-more-nginx-module/tarball/v${HTTP_HEADERS_MORE_MODULE_PV}"
 
 # http_push (http://pushmodule.slact.net/, MIT license)
