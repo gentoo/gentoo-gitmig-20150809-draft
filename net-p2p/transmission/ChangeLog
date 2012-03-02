@@ -1,18 +1,18 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.178 2012/03/02 10:28:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.179 2012/03/02 19:34:39 ssuominen Exp $
 
 *transmission-9999 (02 Mar 2012)
 
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   +transmission-9999.ebuild:
-  Temporarily support live ebuild for Transmission while testing some issues.
+  Version control ebuild for testing.
 
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   transmission-2.50-r1.ebuild, metadata.xml:
-  Remove USE="kde" and always install transmission-magnet.protocol file.
-  USE="lightweight" for low-resource systems. Run lrelease in compile phase
-  instead of install phase.
+  Remove USE="kde" and always install transmission-magnet.protocol file when
+  USE="qt4" is enabled. USE="lightweight" for low-resource systems.
+  Run `lrelease` command in src_compile() instead of src_install() phase.
 
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/transmission-2.33-0001-configure.ac.patch,
@@ -28,14 +28,15 @@
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   +transmission-2.50-r1.ebuild,
   +files/transmission-2.50-build-with-natpmp1.patch:
-  Fix regression from 2.42 ebuild series and use external libnatpmp again.
+  Fix regression introduced in ebuild version 2.50 by restoring
+  use of system libnatpmp.
 
 *transmission-2.50 (01 Mar 2012)
 
   01 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   +transmission-2.50.ebuild:
-  Version bump wrt #405569 by Alejandro Ojeda and Qt4 translation install
-  patch from #403027 by Nikoli
+  Version bump wrt #405569 using Qt4 translation patch from #403027.
+  Thanks to Alejandro Ojeda and "Nikoli".
 
   14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   ayatana is now global per http://archives.gentoo.org/gentoo-
@@ -46,7 +47,7 @@
   Rekeyword ~ppc/~ppc64 wrt #400929
 
   26 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
-  Maintain transmission too.
+  Help to maintain transmission.
 
   26 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -transmission-2.31.ebuild, -transmission-2.31-r1.ebuild,
