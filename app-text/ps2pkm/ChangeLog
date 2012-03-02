@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ps2pkm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.20 2012/01/29 16:56:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.21 2012/03/02 19:21:13 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> ps2pkm-1.5_p20110705.ebuild:
+  Marking ps2pkm-1.5_p20110705 ppc stable for bug 395735
 
   29 Jan 2012; Markus Meier <maekke@gentoo.org> ps2pkm-1.5_p20110705.ebuild:
   arm stable, bug #395735
