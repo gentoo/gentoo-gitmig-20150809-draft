@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Time-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/ChangeLog,v 1.32 2012/02/12 18:24:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/ChangeLog,v 1.33 2012/03/02 21:42:09 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> Time-modules-2011.51.700.ebuild:
+  Marking Time-modules-2011.51.700 ppc64 for bug 396957
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> Time-modules-2006.0814.ebuild,
   Time-modules-2011.51.700.ebuild:
