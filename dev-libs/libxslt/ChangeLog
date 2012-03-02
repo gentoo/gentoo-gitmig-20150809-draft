@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.227 2012/02/28 19:52:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.228 2012/03/02 20:05:57 ssuominen Exp $
+
+  02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> libxslt-1.1.26-r3.ebuild:
+  ppc64 stable wrt #402861
 
   28 Feb 2012; Brent Baude <ranger@gentoo.org> libxslt-1.1.26-r3.ebuild:
   Marking libxslt-1.1.26-r3 ppc for bug 402861
