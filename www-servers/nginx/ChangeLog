@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.306 2012/02/11 10:17:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.307 2012/03/02 03:19:32 patrick Exp $
+
+*nginx-1.1.16 (02 Mar 2012)
+
+  02 Mar 2012; Patrick Lauer <patrick@gentoo.org> +nginx-1.1.16.ebuild,
+  -nginx-1.1.13.ebuild:
+  Bump, closes #403329
 
 *nginx-1.1.14 (11 Feb 2012)
 *nginx-1.0.12 (11 Feb 2012)
