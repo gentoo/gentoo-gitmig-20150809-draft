@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/ChangeLog,v 1.7 2012/02/24 15:14:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/ChangeLog,v 1.8 2012/03/02 15:44:40 maksbotan Exp $
+
+*libee-0.4.0 (02 Mar 2012)
+
+  02 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> +libee-0.4.0.ebuild:
+  Bump to 0.4.0. Thanks to slepnoga.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libee-0.3.2-r1.ebuild:
   x86 stable wrt bug #402161
