@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nltk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.10 2012/02/25 16:25:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.11 2012/03/02 07:58:20 djc Exp $
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Replace hwoarang with python herd.
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> nltk-2.0.1_rc1.ebuild,
   nltk-2.0_beta9.ebuild:

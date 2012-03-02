@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/hcs-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hcs-utils/ChangeLog,v 1.2 2011/09/13 14:49:03 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hcs-utils/ChangeLog,v 1.3 2012/03/02 07:56:13 djc Exp $
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Replace hwoarang with python herd.
 
 *hcs-utils-1.2 (13 Sep 2011)
 
