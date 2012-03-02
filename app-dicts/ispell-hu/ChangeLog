@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-hu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.17 2012/02/17 11:04:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.18 2012/03/02 22:49:50 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> ispell-hu-1.4.ebuild:
+  Stable on alpha, bug #396783
 
   17 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ispell-hu-1.4.ebuild:
   x86 stable wrt bug #396783
