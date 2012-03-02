@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.102 2012/02/25 17:39:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.103 2012/03/02 21:33:31 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> DBD-Pg-2.18.1.ebuild:
+  Marking DBD-Pg-2.18.1 ppc64 for bug 396921
 
   25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> DBD-Pg-2.18.1.ebuild:
   Stable on alpha, bug #396921
