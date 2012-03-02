@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.384 2012/02/24 17:56:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.385 2012/03/02 17:24:28 lu_zero Exp $
+
+*mesa-8.0.1-r1 (02 Mar 2012)
+
+  02 Mar 2012; Luca Barbato <lu_zero@gentoo.org> +mesa-8.0.1-r1.ebuild:
+  Support switching GLES implementations as well, fix bug #406501
 
   24 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-8.0.1.ebuild:
@@ -1298,7 +1303,7 @@
   +files/6.5-re-order-context-destruction.patch, +mesa-6.5-r1.ebuild:
   Add some upstream fixes that re-order GL context destruction in the ati
   drivers to avoid a possible NULL dereference.
-  
+
   I've also restored the entire ChangeLog, as it appears to have been truncated
   during Diego's last commit.
 
@@ -1653,7 +1658,7 @@
   Add ~alpha
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *mesa-3.5 (22 Jul 2002)
 
   22 Jul 2002; Seemant Kulleen <seemant@gentoo.org> mesa-3.5.ebuild
@@ -1665,7 +1670,7 @@
 *mesa-3.4.2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
