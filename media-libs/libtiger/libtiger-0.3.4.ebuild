@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/libtiger-0.3.4.ebuild,v 1.5 2012/02/15 16:47:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/libtiger-0.3.4.ebuild,v 1.6 2012/03/02 21:02:45 ssuominen Exp $
 
-EAPI=2
-
+EAPI=4
 inherit libtool
 
 DESCRIPTION="A rendering library for Kate streams using Pango and Cairo"
@@ -12,7 +11,7 @@ SRC_URI="http://libtiger.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="x11-libs/pango
@@ -31,7 +30,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc THANKS README ChangeLog AUTHORS || die
-	find "${D}" -name '*.la' -delete
+	emake DESTDIR="${D}" install
+	dodoc THANKS README ChangeLog AUTHORS
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
