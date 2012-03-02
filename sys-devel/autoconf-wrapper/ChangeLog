@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.91 2012/03/01 23:44:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.92 2012/03/02 19:21:55 maekke Exp $
+
+  02 Mar 2012; Markus Meier <maekke@gentoo.org> autoconf-wrapper-12.ebuild:
+  arm stable, bug #400501
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> autoconf-wrapper-12.ebuild:
   Marking autoconf-wrapper-12 ppc for bug 400501
