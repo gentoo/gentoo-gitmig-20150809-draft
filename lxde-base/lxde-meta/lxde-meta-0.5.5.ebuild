@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.5.ebuild,v 1.4 2011/10/09 16:51:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.5.ebuild,v 1.5 2012/03/02 22:53:19 hwoarang Exp $
 
 EAPI="2"
 
@@ -27,7 +27,8 @@ RDEPEND="=lxde-base/lxappearance-0.5*
 	media-gfx/gpicview
 	x11-misc/pcmanfm
 	x11-wm/openbox
-	|| ( <=x11-misc/obconf-2.0.3-r1 >x11-misc/obconf-2.0.3-r1[lxde] )"
+	|| ( <=x11-misc/obconf-2.0.3-r1 >x11-misc/obconf-2.0.3-r1[lxde]
+	>=x11-misc/obconf-2.3.0_p20111019 )"
 
 pkg_postinst() {
 	elog "For your convenience you can review the LXDE Configuration HOWTO at"
