@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.48 2012/01/04 18:12:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.49 2012/03/02 21:45:38 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> muttprint-0.72d-r3.ebuild:
+  Marking muttprint-0.72d-r3 ppc64 for bug 394727
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   muttprint-0.72d-r3.ebuild:
