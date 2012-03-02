@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ptexenc-1.2.0_p20110705.ebuild,v 1.7 2012/01/29 16:50:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ptexenc-1.2.0_p20110705.ebuild,v 1.8 2012/03/02 19:21:53 ranger Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/texlive-${PV#*_p}-source.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE="iconv static-libs"
 
 DEPEND="iconv? ( virtual/libiconv )
