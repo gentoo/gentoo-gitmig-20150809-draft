@@ -2,9 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>hwoarang@gentoo.org</email>
-		<name>Markos Chandras</name>
-		<description>Proxy maintainer. CC him on bugs</description>
+		<email>grobian@gentoo.org</email>
+		<name>Fabian Groffen</name>
 	</maintainer>
 	<maintainer>
 		<email>corentin.labbe@geomatys.fr</email>
