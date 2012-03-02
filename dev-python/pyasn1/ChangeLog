@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyasn1
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.31 2011/07/29 21:39:06 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.32 2012/03/02 09:53:38 djc Exp $
+
+*pyasn1-0.1.2 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +pyasn1-0.1.2.ebuild:
+  Version bump to 0.1.2 for bug 404559.
 
 *pyasn1-0.0.13 (29 Jul 2011)
 
