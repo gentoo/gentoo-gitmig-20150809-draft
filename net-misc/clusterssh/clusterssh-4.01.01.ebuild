@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.01.01.ebuild,v 1.1 2012/02/26 13:43:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.01.01.ebuild,v 1.2 2012/03/02 13:35:29 ultrabug Exp $
 
 EAPI=2
 
@@ -26,6 +26,7 @@ RDEPEND="
 	dev-perl/Test-Pod-Coverage
 	dev-perl/Test-Trap
 	dev-perl/Test-DistManifest
+	dev-perl/Try-Tiny
 	dev-perl/perl-tk
 	dev-perl/Config-Simple
 	dev-perl/X11-Protocol
