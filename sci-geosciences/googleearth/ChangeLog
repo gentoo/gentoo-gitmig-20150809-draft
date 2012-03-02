@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.27 2012/03/01 23:07:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.28 2012/03/02 22:38:52 caster Exp $
+
+*googleearth-6.2.1.6014-r1 (02 Mar 2012)
+
+  02 Mar 2012; Vlastimil Babka <caster@gentoo.org>
+  +googleearth-6.2.1.6014-r1.ebuild:
+  Correct exec path in desktop file, bug #406629 by 'jospezial'.
 
 *googleearth-6.2.1.6014 (01 Mar 2012)
 
