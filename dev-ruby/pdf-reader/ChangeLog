@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-reader
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.21 2012/02/06 17:28:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.22 2012/03/02 12:17:33 naota Exp $
+
+  02 Mar 2012; Naohiro Aota <naota@gentoo.org> pdf-reader-0.10.1.ebuild:
+  Add ~x86-fbsd
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> pdf-reader-0.10.0.ebuild:
   Marking pdf-reader-0.10.0 ~ppc for bug 388357
