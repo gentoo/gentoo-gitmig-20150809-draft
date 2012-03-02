@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.87 2012/03/01 20:37:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.88 2012/03/02 22:19:50 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> ImageInfo-1.310.0.ebuild:
+  Marking ImageInfo-1.310.0 ppc64 for bug 400151
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> ImageInfo-1.310.0.ebuild:
   Marking ImageInfo-1.310.0 ppc for bug 400151
