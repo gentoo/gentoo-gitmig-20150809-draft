@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.42 2012/02/27 15:22:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.43 2012/03/02 19:49:02 maekke Exp $
+
+  02 Mar 2012; Markus Meier <maekke@gentoo.org> mock-0.7.2.ebuild:
+  arm stable, bug #400331
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> mock-0.7.2.ebuild:
   Marking mock-0.7.2 ppc for bug 400331
