@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.59 2012/02/14 03:35:33 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.60 2012/03/02 18:25:27 rich0 Exp $
+
+  02 Mar 2012; Richard Freeman <rich0@gentoo.org> -eternal-lands-1.9.0.ebuild,
+  -eternal-lands-1.9.0_p20100717.ebuild, -eternal-lands-1.9.1.ebuild:
+  Remove obsolete versions.
 
 *eternal-lands-1.9.3 (14 Feb 2012)
 
