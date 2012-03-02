@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/blobby-0.9c.ebuild,v 1.3 2012/01/04 17:56:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/blobby-0.9c.ebuild,v 1.4 2012/03/02 22:40:00 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils eutils games
@@ -19,7 +19,8 @@ RDEPEND=">=dev-games/physfs-2[zip]
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	dev-libs/boost
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	app-arch/zip" #406667
 
 S=${WORKDIR}/${PN}-beta-${PV}
 
