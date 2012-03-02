@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.347 2012/02/24 14:51:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.348 2012/03/02 20:46:10 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> dovecot-2.0.17.ebuild:
+  Marking dovecot-2.0.17 ppc64 for bug 403849
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dovecot-2.0.17.ebuild:
   x86 stable wrt bug #403849
