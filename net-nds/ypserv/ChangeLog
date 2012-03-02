@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.58 2012/02/24 19:25:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.59 2012/03/02 21:10:36 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> ypserv-2.26.ebuild:
+  Marking ypserv-2.26 ppc64 for bug 400453
 
   24 Feb 2012; Brent Baude <ranger@gentoo.org> ypserv-2.26.ebuild:
   Marking ypserv-2.26 ppc for bug 400453
