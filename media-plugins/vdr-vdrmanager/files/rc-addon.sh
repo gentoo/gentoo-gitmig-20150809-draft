@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrmanager/files/rc-addon.sh,v 1.1 2012/02/24 21:44:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrmanager/files/rc-addon.sh,v 1.2 2012/03/02 22:14:14 hd_brummy Exp $
 #
 # rc-addon plugin-startup-skript for vdr-vdrmanager
 #
@@ -6,7 +6,7 @@
 : ${VDRMANAGER_PORT:=6420}
 
 if [[ -z ${VDRMANAGER_PASS} ]]; then
-	eerror "No password in /etc/conf.d/vdr.manager"
+	eerror "No password in /etc/conf.d/vdr.vdrmanager"
 	logger -t vdr "ERROR: need password for plugin vdr-manager"
 fi
 
