@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ispell-de
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ChangeLog,v 1.17 2012/02/17 11:02:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ChangeLog,v 1.18 2012/03/02 22:48:59 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
+  ispell-de-20071211.ebuild:
+  Stable on alpha, bug #396779
 
   17 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ispell-de-20071211.ebuild:
