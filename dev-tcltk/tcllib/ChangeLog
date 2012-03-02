@@ -1,6 +1,16 @@
 # ChangeLog for dev-tcltk/tcllib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.32 2010/01/02 18:32:40 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.33 2012/03/02 15:20:56 jlec Exp $
+
+  02 Mar 2012; Justin Lecher <jlec@gentoo.org> +tcllib-1.14.ebuild,
+  metadata.xml:
+  Version Bump
+
+*tcllib-1.14 (02 Mar 2012)
+
+  02 Mar 2012; Justin Lecher <jlec@gentoo.org> +tcllib-1.14.ebuild,
+  metadata.xml:
+  Version Bump
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> tcllib-1.11.1.ebuild:
   Transfer Prefix keywords
