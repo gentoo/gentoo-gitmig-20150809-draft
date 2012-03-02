@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.4.ebuild,v 1.5 2012/02/06 18:37:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.4.ebuild,v 1.6 2012/03/02 21:21:10 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.thc.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="ssl"
 
 DEPEND="

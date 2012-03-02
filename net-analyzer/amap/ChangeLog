@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.51 2012/02/06 18:37:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.52 2012/03/02 21:21:10 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> amap-5.4.ebuild:
+  Marking amap-5.4 ppc64 for bug 397121
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> amap-5.4.ebuild:
   Marking amap-5.4 ppc for bug 397121
