@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.9.3.ebuild,v 1.1 2012/02/28 15:19:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.9.3.ebuild,v 1.2 2012/03/02 17:48:28 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -42,7 +42,7 @@ RDEPEND="dev-libs/popt
 	jingle? ( dev-libs/iksemel )
 	ldap? ( net-nds/openldap )
 	lua? ( dev-lang/lua )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	newt? ( dev-libs/newt )
 	odbc? ( dev-db/unixODBC )
 	osplookup? ( net-libs/osptoolkit )
