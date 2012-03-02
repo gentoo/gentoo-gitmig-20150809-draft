@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-RSA
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.81 2012/03/01 20:11:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.82 2012/03/02 21:57:41 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org>
+  Crypt-OpenSSL-RSA-0.280.0.ebuild:
+  Marking Crypt-OpenSSL-RSA-0.280.0 ppc64 for bug 400067
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org>
   Crypt-OpenSSL-RSA-0.280.0.ebuild:
