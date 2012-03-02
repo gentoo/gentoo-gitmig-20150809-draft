@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.76 2012/03/02 15:02:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.77 2012/03/02 18:04:57 jer Exp $
+
+  02 Mar 2012; Jeroen Roovers <jer@gentoo.org> logwatch-7.4.0.ebuild:
+  Stable for HPPA (bug #356387).
 
   02 Mar 2012; Agostino Sarubbo <ago@gentoo.org> logwatch-7.4.0.ebuild:
   Stable for amd64, wrt bug #356387
