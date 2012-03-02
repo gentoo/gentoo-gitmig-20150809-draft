@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cssutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.22 2012/02/05 13:43:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.23 2012/03/02 08:31:05 djc Exp $
+
+*cssutils-0.9.9 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +cssutils-0.9.9.ebuild:
+  Version bump to 0.9.9 for bug 381983 (thanks to Johan Bergstroem).
 
   05 Feb 2012; Brent Baude <ranger@gentoo.org> cssutils-0.9.7.ebuild:
   Marking cssutils-0.9.7 ppc for bug 386729
