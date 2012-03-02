@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Trigger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.44 2012/03/01 20:05:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.45 2012/03/02 21:55:05 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> Class-Trigger-0.140.0.ebuild:
+  Marking Class-Trigger-0.140.0 ppc64 for bug 400055
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> Class-Trigger-0.140.0.ebuild:
   Marking Class-Trigger-0.140.0 ppc for bug 400055
