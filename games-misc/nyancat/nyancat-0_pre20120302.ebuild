@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/nyancat/nyancat-0.20120302.ebuild,v 1.1 2012/03/02 04:20:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/nyancat/nyancat-0_pre20120302.ebuild,v 1.1 2012/03/02 04:25:04 ssuominen Exp $
 
 EAPI=2
 inherit games
@@ -15,11 +15,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 src_compile() {
-	emake LFLAGS="${LDFLAGS} ${CFLAGS}"
+	emake LFLAGS="${LDFLAGS} ${CFLAGS}" || die
 }
 
 src_install() {
-	dogamesbin src/${PN}
+	dogamesbin src/${PN} || die
 	dodoc README.md
 	prepgamesdirs
 }
