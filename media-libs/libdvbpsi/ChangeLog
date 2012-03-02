@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.53 2012/02/04 22:39:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.54 2012/03/02 20:42:48 ssuominen Exp $
+
+  02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> libdvbpsi-0.2.1.ebuild:
+  ppc64 stable wrt #386701
 
   04 Feb 2012; Brent Baude <ranger@gentoo.org> libdvbpsi-0.2.1.ebuild:
   Marking libdvbpsi-0.2.1 ppc for bug 386701
