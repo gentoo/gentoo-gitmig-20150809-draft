@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/vblade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.31 2012/03/01 23:43:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.32 2012/03/02 20:29:08 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> vblade-20.ebuild:
+  Marking vblade-20 ppc64 for bug 400497
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> vblade-20.ebuild:
   Marking vblade-20 ppc for bug 400497
