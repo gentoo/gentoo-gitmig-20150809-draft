@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-9999.ebuild,v 1.11 2011/09/20 22:30:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-9999.ebuild,v 1.12 2012/03/02 21:01:54 hwoarang Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://git.openbox.org/dana/obconf.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="lxde nls"
+IUSE="nls"
 
 RDEPEND="gnome-base/libglade:2.0
 	x11-libs/gtk+:2
@@ -25,9 +25,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	if use lxde; then
-		sed -i -e "/^Exec/s:obconf.*$:obconf-lxde:" ${PN}.desktop || die
-	fi
 	eautopoint
 	eautoreconf
 }
@@ -38,9 +35,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	if use lxde; then
-		dobin "${FILESDIR}"/${PN}-lxde || die
-	fi
 	dodoc AUTHORS CHANGELOG README || die "dodoc failed"
 }
 
