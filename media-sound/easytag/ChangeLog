@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.151 2012/02/27 11:09:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.152 2012/03/02 21:56:56 radhermit Exp $
+
+*easytag-2.1.7-r1 (02 Mar 2012)
+
+  02 Mar 2012; Tim Harder <radhermit@gentoo.org> -easytag-2.1.7.ebuild,
+  +easytag-2.1.7-r1.ebuild:
+  Revbump to re-add patch and remove old.
 
   27 Feb 2012; Justin Lecher <jlec@gentoo.org> easytag-2.1.7.ebuild,
   +files/easytag-2.1.7-gold.patch:

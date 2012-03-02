@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.7.ebuild,v 1.2 2012/02/27 11:09:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.7-r1.ebuild,v 1.1 2012/03/02 21:56:56 radhermit Exp $
 
 EAPI=4
 inherit eutils fdo-mime
@@ -31,7 +31,8 @@ DEPEND="${RDEPEND}
 DOCS=( ChangeLog README THANKS TODO USERS-GUIDE )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gold.patch
+	epatch "${FILESDIR}"/${P}-gold.patch \
+		"${FILESDIR}"/${PN}-2.1.6-load-from-txt.patch
 }
 
 src_configure() {
