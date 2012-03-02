@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/spork
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.7 2012/01/28 10:39:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.8 2012/03/02 13:38:51 naota Exp $
+
+  02 Mar 2012; Naohiro Aota <naota@gentoo.org> spork-0.9.0.ebuild:
+  Add ~x86-fbsd
 
 *spork-0.9.0 (28 Jan 2012)
 
