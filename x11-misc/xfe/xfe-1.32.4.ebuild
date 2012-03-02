@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.4.ebuild,v 1.5 2012/03/01 23:31:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.4.ebuild,v 1.6 2012/03/02 19:44:36 ssuominen Exp $
 
 EAPI=4
 
@@ -12,11 +12,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="debug nls startup-notification"
 
 RDEPEND="
-	media-libs/libpng
+	media-libs/libpng:0
 	startup-notification? ( x11-libs/startup-notification )
 	x11-libs/fox:1.6[truetype,png]
 	x11-libs/libX11
