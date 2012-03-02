@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-SHA1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.66 2012/03/01 20:22:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.67 2012/03/02 22:05:26 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> Digest-SHA1-2.130.0.ebuild:
+  Marking Digest-SHA1-2.130.0 ppc64 for bug 400093
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> Digest-SHA1-2.130.0.ebuild:
   Marking Digest-SHA1-2.130.0 ppc for bug 400093
