@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Reload
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Reload/ChangeLog,v 1.16 2012/02/27 15:05:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Reload/ChangeLog,v 1.17 2012/03/02 21:46:30 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> Apache-Reload-0.110.0.ebuild:
+  Marking Apache-Reload-0.110.0 ppc64 for bug 400029
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> Apache-Reload-0.110.0.ebuild:
   Marking Apache-Reload-0.110.0 ppc for bug 400029
