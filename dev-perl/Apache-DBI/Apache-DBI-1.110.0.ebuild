@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/Apache-DBI-1.110.0.ebuild,v 1.4 2012/02/25 17:42:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/Apache-DBI-1.110.0.ebuild,v 1.5 2012/03/02 21:44:45 ranger Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Apache::DBI module for perl"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-perl/Digest-SHA1-2.01
