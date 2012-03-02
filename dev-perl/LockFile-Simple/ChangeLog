@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/LockFile-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LockFile-Simple/ChangeLog,v 1.27 2012/02/27 15:53:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LockFile-Simple/ChangeLog,v 1.28 2012/03/02 22:25:00 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> LockFile-Simple-0.207.0.ebuild:
+  Marking LockFile-Simple-0.207.0 ppc64 for bug 400163
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> LockFile-Simple-0.207.0.ebuild:
   Marking LockFile-Simple-0.207.0 ppc for bug 400163
