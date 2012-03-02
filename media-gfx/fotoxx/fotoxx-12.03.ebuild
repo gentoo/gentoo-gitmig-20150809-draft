@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.01.2.ebuild,v 1.1 2012/01/06 10:45:28 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.03.ebuild,v 1.1 2012/03/02 21:26:14 grozin Exp $
 EAPI=3
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/gtk+:2
+DEPEND="x11-libs/gtk+:3
 	media-libs/tiff"
 RDEPEND="${DEPEND}
 	media-libs/exiftool
