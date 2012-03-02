@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.56 2012/02/21 23:44:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.57 2012/03/02 19:57:21 maekke Exp $
+
+  02 Mar 2012; Markus Meier <maekke@gentoo.org> vnstat-1.11-r2.ebuild:
+  arm stable, bug #403019
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> vnstat-1.11-r2.ebuild:
   Stable for HPPA (bug #403019).

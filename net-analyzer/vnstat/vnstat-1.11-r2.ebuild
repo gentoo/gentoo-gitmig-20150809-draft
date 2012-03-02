@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11-r2.ebuild,v 1.3 2012/02/21 23:44:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11-r2.ebuild,v 1.4 2012/03/02 19:57:21 maekke Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://humdi.net/vnstat/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 arm hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gd"
 
 DEPEND="
