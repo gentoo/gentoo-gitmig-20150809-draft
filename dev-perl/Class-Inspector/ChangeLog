@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Inspector
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.71 2012/02/27 15:34:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.72 2012/03/02 21:53:23 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> Class-Inspector-1.250.0.ebuild:
+  Marking Class-Inspector-1.250.0 ppc64 for bug 400053
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> Class-Inspector-1.250.0.ebuild:
   Marking Class-Inspector-1.250.0 ppc for bug 400053
