@@ -2,11 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>forensics</herd>
-<maintainer>
-  <email>forensics@gentoo.org</email>
-</maintainer>
 <use>
-  <flag name='dbtool'>Add patch for dbtool interface from PyFlag</flag>
   <flag name='aff'>Enable extra aff formats</flag>
   <flag name='ewf'>Enable libewf support</flag>
 </use>
