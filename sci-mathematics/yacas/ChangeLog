@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/yacas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.30 2011/11/25 17:58:04 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.31 2012/03/02 05:59:05 bicatali Exp $
+
+*yacas-1.3.2 (02 Mar 2012)
+
+  02 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> +yacas-1.3.2.ebuild:
+  Version bump
 
 *yacas-1.3.1 (25 Nov 2011)
 
