@@ -1,19 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-9999.ebuild,v 1.1 2012/03/02 10:28:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-9999.ebuild,v 1.2 2012/03/02 10:53:17 ssuominen Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
 
+unset _live_inherits
+
 if [[ ${PV} == *9999* ]]; then
 	ESVN_REPO_URI="svn://svn.transmissionbt.com/Transmission/trunk"
-	inherit subversion
+	_live_inherits=subversion
 else
 	SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
-inherit autotools eutils fdo-mime gnome2-utils qt4-r2
+inherit autotools eutils fdo-mime gnome2-utils qt4-r2 ${_live_inherits}
 
 DESCRIPTION="A Fast, Easy and Free BitTorrent client"
 HOMEPAGE="http://www.transmissionbt.com/"
@@ -64,7 +66,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	[[ ${PV} == *9999* ]] && subversion_src_unpack
+	if [[ ${PV} == *9999* ]]; then
+		subversion_src_unpack
+	else
+		default
+	fi
 }
 
 src_prepare() {
@@ -151,7 +157,12 @@ src_install() {
 		emake INSTALL_ROOT="${D}"/usr install
 
 		domenu ${PN}-qt.desktop
-		doicon icons/${PN}-qt.png
+
+		local res
+		for res in 16 22 24 32 48; do
+			insinto /usr/share/icons/hicolor/${res}x${res}/apps
+			newins icons/hicolor_apps_${res}x${res}_transmission.png ${PN}-qt.png
+		done
 
 		insinto /usr/share/kde4/services
 		doins "${T}"/${PN}-magnet.protocol

@@ -1,18 +1,27 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.2 2012/03/02 09:30:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.3 2012/03/02 10:53:17 ssuominen Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
-inherit autotools eutils fdo-mime gnome2-utils qt4-r2
+
+unset _live_inherits
+
+if [[ ${PV} == *9999* ]]; then
+	ESVN_REPO_URI="svn://svn.transmissionbt.com/Transmission/trunk"
+	_live_inherits=subversion
+else
+	SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+fi
+
+inherit autotools eutils fdo-mime gnome2-utils qt4-r2 ${_live_inherits}
 
 DESCRIPTION="A Fast, Easy and Free BitTorrent client"
 HOMEPAGE="http://www.transmissionbt.com/"
-SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
 
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="ayatana gtk lightweight nls qt4 xfs"
 
 RDEPEND="
@@ -56,8 +65,21 @@ pkg_setup() {
 	enewuser ${PN} -1 -1 -1 ${PN}
 }
 
+src_unpack() {
+	if [[ ${PV} == *9999* ]]; then
+		subversion_src_unpack
+	else
+		default
+	fi
+}
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build-with-natpmp1.patch #376647
+	if [[ ${PV} == *9999* ]]; then
+		subversion_src_prepare
+		./update-version-h.sh
+	fi
+
+	epatch "${FILESDIR}"/${PN}-2.50-build-with-natpmp1.patch #376647
 
 	sed -i -e '/CFLAGS/s:-ggdb3::' configure.ac
 	use ayatana || sed -i -e '/^LIBAPPINDICATOR_MINIMUM/s:=.*:=9999:' configure.ac
@@ -66,6 +88,7 @@ src_prepare() {
 	sed -i -e 's|noinst\(_PROGRAMS = $(TESTS)\)|check\1|' lib${PN}/Makefile.am || die
 
 	eautoreconf
+	intltoolize --copy --force --automake || die
 
 	if use qt4; then
 		cat <<-EOF > "${T}"/${PN}-magnet.protocol
@@ -134,7 +157,12 @@ src_install() {
 		emake INSTALL_ROOT="${D}"/usr install
 
 		domenu ${PN}-qt.desktop
-		doicon icons/${PN}-qt.png
+
+		local res
+		for res in 16 22 24 32 48; do
+			insinto /usr/share/icons/hicolor/${res}x${res}/apps
+			newins icons/hicolor_apps_${res}x${res}_transmission.png ${PN}-qt.png
+		done
 
 		insinto /usr/share/kde4/services
 		doins "${T}"/${PN}-magnet.protocol
