@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-TableExtract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.47 2012/03/01 20:34:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.48 2012/03/02 22:18:30 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org>
+  HTML-TableExtract-2.110.0.ebuild:
+  Marking HTML-TableExtract-2.110.0 ppc64 for bug 400139
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org>
   HTML-TableExtract-2.110.0.ebuild:
