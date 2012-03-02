@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/slony1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.27 2012/02/22 11:28:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.28 2012/03/02 15:04:40 ago Exp $
+
+  02 Mar 2012; Agostino Sarubbo <ago@gentoo.org> slony1-2.1.0.ebuild:
+  Stable for amd64, wrt bug #406411
 
 *slony1-2.1.1 (22 Feb 2012)
 
