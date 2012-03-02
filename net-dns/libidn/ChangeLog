@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.155 2012/02/15 13:38:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.156 2012/03/02 20:57:29 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> libidn-1.23.ebuild:
+  Marking libidn-1.23 ppc64 for bug 398849
 
   14 Feb 2012; Brent Baude <ranger@gentoo.org> libidn-1.23.ebuild:
   Marking libidn-1.23 ppc for bug 398849
