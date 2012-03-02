@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.157 2012/03/02 17:20:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.158 2012/03/02 20:20:05 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> tk-8.5.10.ebuild:
+  Marking tk-8.5.10 ppc64 for bug 406607
 
   02 Mar 2012; Justin Lecher <jlec@gentoo.org> tk-8.5.10.ebuild:
   Add missing dies, remove unnessecary dies, handle static-libs
