@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/amqplib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/ChangeLog,v 1.2 2011/12/25 14:54:35 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/ChangeLog,v 1.3 2012/03/02 22:15:19 neurogeek Exp $
+
+  02 Mar 2012; Jesus Rivero <neurogeek@gentoo.org> amqplib-1.0.2.ebuild,
+  +files/amqplib-1.0.2-unicode_tests_py3.patch:
+  Added Python3 support and some patches to the tests
 
 *amqplib-1.0.2 (25 Dec 2011)
 

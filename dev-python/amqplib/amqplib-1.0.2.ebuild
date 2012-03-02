@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/amqplib-1.0.2.ebuild,v 1.1 2011/12/25 14:54:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/amqplib-1.0.2.ebuild,v 1.2 2012/03/02 22:15:19 neurogeek Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2 3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
@@ -20,11 +20,10 @@ IUSE="examples extras test"
 RDEPEND=""
 DEPEND="${RDEPEND}"
 
-RESTRICT_PYTHON_ABIS="3.*"
-
 src_prepare() {
 	if use test; then
 		epatch "${FILESDIR}/${PN}-0.6.1_disable_socket_tests.patch"
+		epatch "${FILESDIR}/${P}-unicode_tests_py3.patch"
 	fi
 }
 
