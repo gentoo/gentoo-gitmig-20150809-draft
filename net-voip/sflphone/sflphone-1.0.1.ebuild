@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-1.0.1.ebuild,v 1.2 2011/11/30 22:38:34 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-1.0.1.ebuild,v 1.3 2012/03/02 14:58:32 elvanor Exp $
 
 EAPI="3"
 
@@ -53,6 +53,7 @@ CDEPEND="dev-cpp/commoncpp2
 
 DEPEND="${CDEPEND}
 		>=dev-util/astyle-1.24
+		doxygen? ( app-doc/doxygen )
 		gnome? ( app-text/gnome-doc-utils )"
 
 RDEPEND="${CDEPEND}"
