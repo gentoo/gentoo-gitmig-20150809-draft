@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/aplpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/ChangeLog,v 1.5 2012/03/02 05:37:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/ChangeLog,v 1.6 2012/03/02 10:40:26 xarthisius Exp $
+
+  02 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> -aplpy-0.9.6.ebuild:
+  Version bump, drop old
 
 *aplpy-0.9.7 (02 Mar 2012)
 
