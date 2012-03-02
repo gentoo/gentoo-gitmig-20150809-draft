@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.21 2012/03/01 11:31:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.22 2012/03/02 16:39:04 tommy Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -40,6 +40,10 @@ REQUIRED_USE="
 	"
 
 src_configure() {
+	#let the build system decide which AS to use (it honours $AS but
+	#then feeds it with yasm flags without checking...) bug 345161
+	unset AS
+
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
 	addpredict /usr/share/snmp/mibs/.index
 

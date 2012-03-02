@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.41 2012/03/01 11:31:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.42 2012/03/02 16:39:04 tommy Exp $
+
+  02 Mar 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> libvpx-1.0.0.ebuild,
+  libvpx-9999.ebuild:
+  unset AS as requested by Alexis Ballier, let the build system decide which AS
+  to use (it honours but then feeds it with yasm flags without checking...)
 
   01 Mar 2012; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
   sync keywords with 1.0.0 so that keywords wont get dropped by mistake again
