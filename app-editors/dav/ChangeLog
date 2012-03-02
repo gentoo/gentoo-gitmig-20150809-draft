@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/dav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/ChangeLog,v 1.16 2012/02/17 11:06:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/ChangeLog,v 1.17 2012/03/02 22:50:53 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> dav-0.8.5-r1.ebuild:
+  Stable on alpha, bug #396791
 
   17 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dav-0.8.5-r1.ebuild:
   x86 stable wrt bug #396791
