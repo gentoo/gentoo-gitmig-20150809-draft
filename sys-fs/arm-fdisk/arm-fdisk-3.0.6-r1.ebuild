@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/arm-fdisk-3.0.6-r1.ebuild,v 1.7 2012/02/22 22:06:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/arm-fdisk-3.0.6-r1.ebuild,v 1.8 2012/03/02 23:00:37 klausman Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.arm.linux.org.uk/pub/armlinux/source/other/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ~s390 ~sh ~sparc x86"
 IUSE=""
 
 DEPEND=""
