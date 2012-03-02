@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-pkgconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.37 2012/02/27 22:02:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.38 2012/03/02 19:30:18 maekke Exp $
+
+  02 Mar 2012; Markus Meier <maekke@gentoo.org>
+  extutils-pkgconfig-1.120.0.ebuild:
+  arm stable, bug #400285
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org>
   extutils-pkgconfig-1.120.0.ebuild:
