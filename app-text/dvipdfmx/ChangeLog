@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.65 2012/02/01 10:17:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.66 2012/03/02 22:52:18 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> dvipdfmx-20110311.ebuild:
+  Stable on alpha, bug #396831
 
   01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> dvipdfmx-20110311.ebuild:
   ppc/ppc64 stable wrt #396831
