@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28-r3.ebuild,v 1.4 2012/02/16 19:34:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28-r3.ebuild,v 1.5 2012/03/02 23:02:25 klausman Exp $
 
 EAPI=2
 inherit eutils pam
@@ -11,7 +11,7 @@ SRC_URI="http://voins.program.ru/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ~ppc64 ~sparc x86"
 IUSE="truetype pam selinux"
 
 COMMON_DEPEND=">=x11-wm/windowmaker-0.70.0
