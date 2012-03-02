@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.116 2012/02/06 18:24:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.117 2012/03/02 19:59:17 ssuominen Exp $
+
+  02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> mtr-0.81.ebuild:
+  ppc64 stable wrt #393241
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> mtr-0.81.ebuild:
   Marking mtr-0.81 ppc for bug 393241
