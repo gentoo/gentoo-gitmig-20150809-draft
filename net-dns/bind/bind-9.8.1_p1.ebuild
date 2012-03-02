@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.8 2012/02/29 19:05:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.9 2012/03/02 21:15:55 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -238,6 +238,11 @@ src_install() {
 	rm -f "${D}"/usr/share/man/man8/{dnssec-keygen,nsupdate}.8*
 	rm -f "${D}"/usr/bin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 	rm -f "${D}"/usr/sbin/{dig,host,nslookup,dnssec-keygen,nsupdate}
+
+	# bug 405251, library archives aren't properly handled by --enable/disable-static
+	if ! use static-libs; then
+		find "${D}" -type f -name '*.la' -delete || die
+	fi
 
 	dosym /var/bind/named.cache /var/bind/root.cache || die
 	dosym /var/bind/pri /etc/bind/pri || die

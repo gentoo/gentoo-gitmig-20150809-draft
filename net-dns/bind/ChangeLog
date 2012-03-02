@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.373 2012/03/02 00:51:33 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.374 2012/03/02 21:15:55 idl0r Exp $
+
+  02 Mar 2012; Christian Ruppert <idl0r@gentoo.org> bind-9.8.1_p1.ebuild:
+  Improve static-libs.. Actually that was meant for >=9.9.0 only but for some
+  reason I added it to 9.8.1 as well so .. :/
 
   02 Mar 2012; Christian Ruppert <idl0r@gentoo.org> bind-9.9.0.ebuild:
   New geoip patch, fixes bug 406397. Remove some old dodoc calls.
