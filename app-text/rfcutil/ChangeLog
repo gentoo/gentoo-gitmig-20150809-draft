@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rfcutil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.30 2012/02/24 19:34:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.31 2012/03/02 21:12:20 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> rfcutil-3.2.3-r1.ebuild:
+  Marking rfcutil-3.2.3-r1 ppc64 for bug 404619
 
   24 Feb 2012; Brent Baude <ranger@gentoo.org> rfcutil-3.2.3-r1.ebuild:
   Marking rfcutil-3.2.3-r1 ppc for bug 404619
