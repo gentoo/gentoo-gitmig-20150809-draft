@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-xetex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/ChangeLog,v 1.51 2012/01/29 21:05:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/ChangeLog,v 1.52 2012/03/02 20:18:26 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-xetex-2011.ebuild:
+  Marking texlive-xetex-2011 ppc stable for bug 395735
 
   29 Jan 2012; Markus Meier <maekke@gentoo.org> texlive-xetex-2011.ebuild:
   arm stable, bug #395735
