@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/prawn-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.8 2012/01/14 10:50:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.9 2012/03/02 13:02:38 naota Exp $
+
+  02 Mar 2012; Naohiro Aota <naota@gentoo.org> prawn-core-0.8.4-r2.ebuild:
+  Add ~x86-fbsd
 
 *prawn-core-0.8.4-r2 (14 Jan 2012)
 
