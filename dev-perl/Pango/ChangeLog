@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.21 2012/02/27 16:20:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.22 2012/03/02 00:32:33 robbat2 Exp $
+
+*Pango-1.223.0 (02 Mar 2012)
+
+  02 Mar 2012; Robin H. Johnson <robbat2@gentoo.org> +Pango-1.223.0.ebuild:
+  Version bump via perl-bump experimental tool.
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> Pango-1.222.0.ebuild:
   Marking Pango-1.222.0 ppc for bug 400201
