@@ -1,10 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.4.ebuild,v 1.8 2011/12/13 13:11:40 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.4.ebuild,v 1.9 2012/03/02 11:10:55 jlec Exp $
 
-EAPI=2
+EAPI=4
 
-inherit autotools eutils
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils
 
 MY_P="${P/emf/EMF}"
 DESCRIPTION="Library implementation of ECMA-234 API for the generation of enhanced metafiles."
@@ -14,23 +16,18 @@ SRC_URI="mirror://sourceforge/libemf/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="doc"
-
-DEPEND=""
+IUSE="doc static-libs"
 
 S=${WORKDIR}/${MY_P}
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-amd64-alpha.patch
-	eautoreconf # or libtool tries to link against the gcc it was built with
-}
+PATCHES=( "${FILESDIR}"/${P}-amd64-alpha.patch )
 
 src_configure() {
-	econf --enable-editing
+	local myeconfargs=( --enable-editing )
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	autotools-utils_src_install
 	use doc && dohtml doc/html/*
-	dodoc README NEWS AUTHORS ChangeLog
 }
