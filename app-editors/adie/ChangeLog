@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/adie
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.37 2010/07/27 01:34:17 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.38 2012/03/02 22:54:19 mabi Exp $
+
+*adie-1.7.32 (02 Mar 2012)
+
+  02 Mar 2012; Matti Bickel <mabi@gentoo.org> +adie-1.7.32.ebuild,
+  -adie-1.6.35.ebuild:
+  version bump (bug #403977)
 
   27 Jul 2010; Jeroen Roovers <jer@gentoo.org> adie-1.6.36.ebuild:
   Stable for HPPA (bug #309199).
