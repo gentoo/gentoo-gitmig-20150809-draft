@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0-r1.ebuild,v 1.2 2012/02/09 05:06:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0-r1.ebuild,v 1.3 2012/03/02 09:40:33 jlec Exp $
 
 EAPI=3
 
@@ -133,11 +133,11 @@ src_install() {
 	doins CMake/FLTK*.cmake
 
 	echo "LDPATH=${LIBDIR}" > 99fltk-${SLOT}
-	echo "FLTK_DOCDIR=/usr/share/doc/${PF}/html" >> 99fltk-${SLOT}
+	echo "FLTK_DOCDIR=${EPREFIX}/usr/share/doc/${PF}/html" >> 99fltk-${SLOT}
 	doenvd 99fltk-${SLOT}
 
 	if ! use static-libs; then
-		rm "${D}"/usr/lib*/fltk-1/*.a || die
+		rm "${ED}"/usr/lib*/fltk-1/*.a || die
 	fi
 }
 
