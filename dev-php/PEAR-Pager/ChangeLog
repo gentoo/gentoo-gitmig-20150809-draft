@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Pager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.36 2012/03/01 20:00:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.37 2012/03/02 21:54:14 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> PEAR-Pager-2.4.8.ebuild:
+  Marking PEAR-Pager-2.4.8 ppc64 for bug 396993
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> PEAR-Pager-2.4.8.ebuild:
   Marking PEAR-Pager-2.4.8 ppc for bug 396993
