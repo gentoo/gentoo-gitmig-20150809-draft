@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.71 2012/02/16 19:48:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.72 2012/03/02 21:58:32 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> PEAR-DB-1.7.14.ebuild:
+  Marking PEAR-DB-1.7.14 ppc64 for bug 402253
 
   16 Feb 2012; Markus Meier <maekke@gentoo.org> PEAR-DB-1.7.14.ebuild:
   arm stable, bug #402253
