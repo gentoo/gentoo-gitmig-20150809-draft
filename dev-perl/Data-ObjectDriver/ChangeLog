@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-ObjectDriver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ObjectDriver/ChangeLog,v 1.18 2012/02/12 18:05:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ObjectDriver/ChangeLog,v 1.19 2012/03/02 21:34:23 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> Data-ObjectDriver-0.90.0.ebuild:
+  Marking Data-ObjectDriver-0.90.0 ppc64 for bug 396923
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> Data-ObjectDriver-0.07.ebuild,
   Data-ObjectDriver-0.90.0.ebuild:
