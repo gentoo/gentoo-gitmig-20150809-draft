@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.9.3.ebuild,v 1.5 2011/08/07 15:53:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.9.3.ebuild,v 1.6 2012/03/02 08:11:33 williamh Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.7"
@@ -17,7 +17,7 @@ else
 	S="${WORKDIR}/williamh-pybugz-${GITHUB_COMMIT}"
 fi
 
-inherit $vcs bash-completion distutils
+inherit $vcs bash-completion-r1 distutils
 
 DESCRIPTION="Command line interface to (Gentoo) Bugzilla"
 HOMEPAGE="http://www.github.com/williamh/pybugz"
@@ -38,7 +38,7 @@ src_install() {
 	distutils_src_install
 
 	doman man/bugz.1
-	dobashcompletion contrib/bash-completion bugz
+	newbashcomp contrib/bash-completion bugz
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
