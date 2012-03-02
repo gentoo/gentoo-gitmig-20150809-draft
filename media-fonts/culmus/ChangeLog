@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.73 2012/03/01 23:58:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.74 2012/03/02 19:46:00 maekke Exp $
+
+  02 Mar 2012; Markus Meier <maekke@gentoo.org> culmus-0.120-r3.ebuild:
+  arm stable, bug #400369
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> culmus-0.120-r3.ebuild:
   Marking culmus-0.120-r3 ppc for bug 400369
