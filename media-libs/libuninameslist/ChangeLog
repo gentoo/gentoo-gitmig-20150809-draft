@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuninameslist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.37 2012/03/02 19:51:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.38 2012/03/02 20:41:40 ssuominen Exp $
+
+  02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libuninameslist-20091231.ebuild:
+  ppc64 stable wrt #400383
 
   02 Mar 2012; Markus Meier <maekke@gentoo.org>
   libuninameslist-20091231.ebuild:
