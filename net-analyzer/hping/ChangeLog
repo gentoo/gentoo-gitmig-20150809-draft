@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.57 2012/03/01 23:32:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.58 2012/03/02 17:45:39 jer Exp $
+
+  02 Mar 2012; Jeroen Roovers <jer@gentoo.org> -hping-2.0.0_rc3-r1.ebuild,
+  -hping-2.0.0_rc3-r2.ebuild, -files/hping-2.0.0_rc3-gentoo.patch,
+  -files/hping-bridge.patch, -files/wlan-header-fix.patch:
+  Old.
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> hping-3_pre20051105-r3.ebuild:
   Marking hping-3_pre20051105-r3 ppc for bug 396501
