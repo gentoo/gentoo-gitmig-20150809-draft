@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.2 2012/02/12 18:26:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.3 2012/03/02 20:24:15 maekke Exp $
+
+  02 Mar 2012; Markus Meier <maekke@gentoo.org> wayland-0.85.0.ebuild:
+  add ~arm, bug #403015
 
   12 Feb 2012; Jeroen Roovers <jer@gentoo.org> wayland-0.85.0.ebuild:
   Marked ~hppa (bug #403015).
