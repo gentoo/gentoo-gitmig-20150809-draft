@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-9999.ebuild,v 1.2 2012/03/02 10:53:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-9999.ebuild,v 1.3 2012/03/02 10:56:14 ssuominen Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
@@ -161,7 +161,7 @@ src_install() {
 		local res
 		for res in 16 22 24 32 48; do
 			insinto /usr/share/icons/hicolor/${res}x${res}/apps
-			newins icons/hicolor_apps_${res}x${res}_transmission.png ${PN}-qt.png
+			newins icons/hicolor_apps_${res}x${res}_${PN}.png ${PN}-qt.png
 		done
 
 		insinto /usr/share/kde4/services
