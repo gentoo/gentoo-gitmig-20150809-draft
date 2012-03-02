@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.169 2012/02/21 01:06:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.170 2012/03/02 18:23:33 pesa Exp $
+
+  02 Mar 2012; Davide Pesavento <pesa@gentoo.org> PyQt4-4.9.1.ebuild:
+  Don't enable QtAssistant module because it was removed in qt-4.7 and we
+  already depend on 4.7.2 or later.
 
   21 Feb 2012; Davide Pesavento <pesa@gentoo.org> -PyQt4-4.7.3.ebuild,
   PyQt4-4.8.1.ebuild, PyQt4-4.8.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.3 2012/02/21 00:46:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.4 2012/03/02 18:23:33 pesa Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -118,8 +118,6 @@ src_configure() {
 			$(pyqt4_use_enable X QtDesigner) $(use X || echo --no-designer-plugin)
 			$(pyqt4_use_enable X QtScriptTools)
 			$(pyqt4_use_enable X QtTest)
-			# QtAssistant module is not available with Qt >=4.7.0.
-			$(pyqt4_use_enable assistant QtAssistant)
 			$(pyqt4_use_enable assistant QtHelp)
 			$(pyqt4_use_enable dbus QtDBus)
 			$(pyqt4_use_enable declarative QtDeclarative)
