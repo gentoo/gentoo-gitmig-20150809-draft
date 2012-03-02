@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.73 2012/03/01 21:09:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.74 2012/03/02 21:13:11 radhermit Exp $
+
+  02 Mar 2012; Tim Harder <radhermit@gentoo.org> files/config.layout-gentoo:
+  Add missing directory to install layout (bug #406635 by Akos Szalkai).
 
 *rt-3.8.11 (01 Mar 2012)
 
