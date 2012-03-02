@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.92 2012/02/27 18:49:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.93 2012/03/02 19:17:59 maekke Exp $
+
+  02 Mar 2012; Markus Meier <maekke@gentoo.org> URI-1.590.0.ebuild:
+  arm stable, bug #400253
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> URI-1.590.0.ebuild:
   Marking URI-1.590.0 ppc for bug 400253
