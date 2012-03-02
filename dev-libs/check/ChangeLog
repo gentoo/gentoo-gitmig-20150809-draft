@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.75 2012/01/05 15:33:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.76 2012/03/02 20:41:42 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> check-0.9.8-r1.ebuild:
+  Marking check-0.9.8-r1 ppc64 for bug 392773
 
   05 Jan 2012; Brent Baude <ranger@gentoo.org> check-0.9.8-r1.ebuild:
   Marking check-0.9.8-r1 ppc for bug 392773
