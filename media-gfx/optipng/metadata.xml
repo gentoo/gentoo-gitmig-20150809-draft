@@ -5,4 +5,8 @@
 		<email>tristan@gentoo.org</email>
 		<name>Tristan Heaven</name>
 	</maintainer>
+	<maintainer>
+		<email>sping@gentoo.org</email>
+		<name>Sebastian Pipping</name>
+	</maintainer>
 </pkgmetadata>
