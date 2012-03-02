@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.400 2012/03/01 16:58:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.401 2012/03/02 15:19:15 ago Exp $
+
+  02 Mar 2012; Agostino Sarubbo <ago@gentoo.org> vim-7.3.409.ebuild:
+  Stable for amd64, wrt bug #406427
 
   01 Mar 2012; Jeroen Roovers <jer@gentoo.org> vim-7.3.409.ebuild:
   Stable for HPPA (bug #406427).
