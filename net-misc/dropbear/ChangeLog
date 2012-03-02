@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.90 2012/02/29 21:08:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.91 2012/03/02 13:45:55 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> dropbear-2012.55.ebuild:
+  Stable on alpha, bug #405607
 
   29 Feb 2012; Jeff Horelick <jdhore@gentoo.org> dropbear-2012.55.ebuild:
   marked x86 per security bug 405607
