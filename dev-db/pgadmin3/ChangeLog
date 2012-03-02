@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.76 2012/03/01 02:52:22 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.77 2012/03/02 15:05:46 ago Exp $
+
+  02 Mar 2012; Agostino Sarubbo <ago@gentoo.org> pgadmin3-1.14.1-r1.ebuild:
+  Stable for amd64, wrt bug #394447
 
 *pgadmin3-1.14.2 (01 Mar 2012)
 
