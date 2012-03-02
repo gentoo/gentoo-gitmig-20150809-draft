@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.29 2012/01/29 21:37:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.30 2012/03/02 19:23:14 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> mh-20111011.ebuild:
+  Marking mh-20111011 ppc stable for bug 395735
 
   29 Jan 2012; Markus Meier <maekke@gentoo.org> mh-20111011.ebuild:
   arm stable, bug #395735
