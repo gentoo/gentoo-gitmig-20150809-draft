@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.163 2012/03/01 23:52:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.164 2012/03/02 20:50:30 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> debootstrap-1.0.38.ebuild:
+  Marking debootstrap-1.0.38 ppc64 for bug 405365
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> debootstrap-1.0.38.ebuild:
   Marking debootstrap-1.0.38 ppc for bug 405365
