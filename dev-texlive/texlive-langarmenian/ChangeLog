@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langarmenian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.43 2012/01/29 19:23:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.44 2012/03/02 19:49:28 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org>
+  texlive-langarmenian-2011.ebuild:
+  Marking texlive-langarmenian-2011 ppc stable for bug 395735
 
   29 Jan 2012; Markus Meier <maekke@gentoo.org>
   texlive-langarmenian-2011.ebuild:
