@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13534 2012/03/01 16:20:05 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13535 2012/03/02 09:41:55 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -91,10 +91,6 @@ app-text/notecase-pro
 # Project was renamed to x11-wm/spectrwm
 # See bug 404315 for details and update installations
 x11-wm/scrotwm
-
-# Justin Lecher <jlec@gentoo.org> (10 Feb 2012)
-# is included in current pymol
-sci-chemistry/pymol-plugins-cealign
 
 # Bernard Cafarelli <voyageur@gentoo.org> (14 Feb 2012)
 # Does not compile with new Objective-C runtimes
