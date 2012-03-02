@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP_Request2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request2/ChangeLog,v 1.9 2012/02/21 23:29:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request2/ChangeLog,v 1.10 2012/03/02 22:55:56 klausman Exp $
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
+  PEAR-HTTP_Request2-2.0.0.ebuild:
+  Stable on alpha, bug #396981
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-HTTP_Request2-2.0.0.ebuild:
   Stable for HPPA (bug #396981).
