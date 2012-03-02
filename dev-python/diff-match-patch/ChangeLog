@@ -1,9 +1,9 @@
 # ChangeLog for dev-python/diff-match-patch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/ChangeLog,v 1.5 2012/03/02 07:52:01 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/ChangeLog,v 1.6 2012/03/02 07:53:17 aidecoe Exp $
 
   02 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
-  dev-python/diff-match-patch: Added python herd.
+  Added python herd.
 
   23 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
   diff-match-patch-20110725.1.ebuild:
