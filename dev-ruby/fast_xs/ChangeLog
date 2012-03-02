@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fast_xs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.4 2012/01/25 01:19:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.5 2012/03/02 16:19:49 naota Exp $
+
+  02 Mar 2012; Naohiro Aota <naota@gentoo.org> fast_xs-0.8.0.ebuild:
+  Add ~x86-fbsd
 
   25 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/fast_xs-0.8.0+ruby-1.9.patch, fast_xs-0.8.0.ebuild:
