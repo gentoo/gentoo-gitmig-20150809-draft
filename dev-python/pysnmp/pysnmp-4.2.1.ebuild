@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.2.1.ebuild,v 1.1 2011/12/25 10:31:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.2.1.ebuild,v 1.2 2012/03/02 09:57:44 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ IUSE="examples"
 
 DEPEND="dev-python/setuptools"
 RDEPEND="
-	>=dev-python/pyasn1-0.0.13_alpha
+	>=dev-python/pyasn1-0.1.2
 	dev-python/pycrypto
 "
 

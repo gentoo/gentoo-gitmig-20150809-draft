@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.50 2011/12/25 10:31:48 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.51 2012/03/02 09:57:44 djc Exp $
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> pysnmp-4.2.1.ebuild:
+  Fix pyasn1 dependency to require later version (bug 397533).
 
 *pysnmp-4.2.1 (25 Dec 2011)
 
