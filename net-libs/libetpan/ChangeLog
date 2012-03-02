@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.98 2012/02/05 18:13:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.99 2012/03/02 21:19:21 ranger Exp $
+
+  02 Mar 2012; Brent Baude <ranger@gentoo.org> libetpan-1.1.ebuild:
+  Marking libetpan-1.1 ppc64 for bug 391109
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> libetpan-1.1.ebuild:
   alpha/sparc stable wrt #391109
