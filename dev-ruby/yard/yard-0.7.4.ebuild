@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.7.4.ebuild,v 1.5 2012/01/03 18:15:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.7.4.ebuild,v 1.6 2012/03/02 16:41:37 naota Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://yardoc.org/"
 
 LICENSE="as-is" # truly
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "doc? ( || ( dev-ruby/bluecloth dev-ruby/maruku dev-ruby/rdiscount dev-ruby/kramdown ) )"
