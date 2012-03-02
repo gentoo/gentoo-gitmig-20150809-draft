@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6.ebuild,v 1.9 2012/03/02 21:07:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6.ebuild,v 1.10 2012/03/02 21:17:03 grobian Exp $
 
 EAPI="3"
 
@@ -70,6 +70,9 @@ src_configure() {
 	elif use ssl; then
 		myconf+=" --with-ssl=openssl"
 	fi
+
+	# work around broken check, we really need -lintl on Solaris
+	[[ ${CHOST} == *-solaris* ]] && export ne_cv_libsfor_bindtextdomain=-lintl
 
 	econf \
 		--enable-shared \
