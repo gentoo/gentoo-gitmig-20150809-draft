@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.12-r1.ebuild,v 1.2 2012/02/07 12:46:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.12-r1.ebuild,v 1.3 2012/03/02 20:02:43 ssuominen Exp $
 
 # this ebuild is only for the libmikmod.so.2 SONAME for ABI compat
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mikmod/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 LGPL-2 )"
 SLOT="2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+oss raw"
 
 src_prepare() {
