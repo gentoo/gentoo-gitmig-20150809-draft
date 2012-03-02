@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-opengl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.90 2011/10/03 17:45:54 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.91 2012/03/02 16:10:31 lu_zero Exp $
+
+*eselect-opengl-1.2.5 (02 Mar 2012)
+
+  02 Mar 2012; Luca Barbato <lu_zero@gentoo.org> +eselect-opengl-1.2.5.ebuild:
+  Support GLES as well, fix bug #406501
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> eselect-opengl-1.2.4.ebuild:
   Marked ppc/ppc64 stable for bug #380421.
