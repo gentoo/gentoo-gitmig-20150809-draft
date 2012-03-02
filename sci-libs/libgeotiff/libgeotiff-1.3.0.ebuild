@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.3.0.ebuild,v 1.3 2011/06/11 13:30:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.3.0.ebuild,v 1.4 2012/03/02 17:05:46 grobian Exp $
 
 EAPI=4
 inherit base
@@ -13,7 +13,7 @@ SRC_URI="http://download.osgeo.org/geotiff/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="debug doc static-libs"
 
 RDEPEND="
@@ -33,8 +33,8 @@ src_configure() {
 	econf \
 		$(use_enable static-libs static) \
 		--enable-debug=$(use debug && echo yes || echo no) \
-		--with-jpeg=/usr/ \
-		--with-zip=/usr/
+		--with-jpeg="${EPREFIX}"/usr/ \
+		--with-zip="${EPREFIX}"/usr/
 
 }
 src_compile() {
