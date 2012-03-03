@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.1.4-r8.ebuild,v 1.1 2012/03/02 23:21:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.1.4-r8.ebuild,v 1.2 2012/03/03 21:51:25 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="4"
@@ -61,6 +61,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/0002-Respect-LDFLAGS.patch
 	# this should be included in next release, plugin doesn't work without it
 	epatch "${FILESDIR}"/fix-plugin-in-icedtea-7.patch
+	rm netx/net/sourceforge/jnlp/runtime/AppThreadGroup.java || die
 	eautoreconf
 }
 
