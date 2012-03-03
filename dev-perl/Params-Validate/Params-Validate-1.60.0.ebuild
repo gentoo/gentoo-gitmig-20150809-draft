@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-1.60.0.ebuild,v 1.3 2012/02/15 15:57:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-1.60.0.ebuild,v 1.4 2012/03/03 14:54:26 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="A module to provide a flexible system for validation method/functio
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd"
 IUSE="test"
 
 RDEPEND="
