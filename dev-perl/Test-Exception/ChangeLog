@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.69 2012/02/29 21:35:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.70 2012/03/03 14:25:51 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> Test-Exception-0.310.0.ebuild:
+  Marking Test-Exception-0.310.0 ppc64 for bug 400231
 
   29 Feb 2012; Markus Meier <maekke@gentoo.org> Test-Exception-0.310.0.ebuild:
   arm stable, bug #400231
