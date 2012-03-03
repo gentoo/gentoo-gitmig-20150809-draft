@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/ted
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.46 2011/10/23 20:02:52 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.47 2012/03/03 19:18:38 pacho Exp $
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org> +files/ted-2.21-make.patch,
+  ted-2.21.ebuild:
+  Make rtf2pdf.sh accessible from /usr/bin (bug #347926 by James Broadhead) and
+  fix parallel make (bug 385485 by Ian Delaney).
 
   23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -ted-2.20.ebuild,
   -files/ted-2.20-libpng14.patch:
