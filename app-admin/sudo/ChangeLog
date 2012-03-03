@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.303 2012/02/29 16:25:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.304 2012/03/03 14:37:03 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> sudo-1.8.3_p2.ebuild:
+  Marking sudo-1.8.3_p2 ppc64 for bug 401533
 
 *sudo-1.8.4_p2 (29 Feb 2012)
 
