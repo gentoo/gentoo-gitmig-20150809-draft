@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/ogre
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.72 2011/09/04 21:49:53 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.73 2012/03/03 21:00:39 vapier Exp $
+
+*ogre-1.7.4 (03 Mar 2012)
+
+  03 Mar 2012; Mike Frysinger <vapier@gentoo.org> +ogre-1.7.4.ebuild,
+  +files/ogre-1.7.4-gcc46.patch, +files/ogre-1.7.4-threading.patch,
+  metadata.xml:
+  Version bump #307205 by Christoph Brill, Myckel Habets, and hasufell.
 
   04 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.6.5.ebuild:
   needs <dev-games/cegui-0.7.5 to build (bug #375503)

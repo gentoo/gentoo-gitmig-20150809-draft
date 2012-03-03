@@ -1,0 +1,10 @@
+--- a/OgreMain/include/OgreOptimisedUtil.h
++++ b/OgreMain/include/OgreOptimisedUtil.h
+@@ -29,6 +29,7 @@ Torus Knot Software Ltd.
+ #ifndef __OptimisedUtil_H__
+ #define __OptimisedUtil_H__
+ 
++#include <cstddef>
+ #include "OgrePrerequisites.h"
+ #include "OgreEdgeListBuilder.h"
+ 
