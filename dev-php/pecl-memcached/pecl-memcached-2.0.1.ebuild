@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/pecl-memcached-2.0.0.ebuild,v 1.1 2012/03/03 10:33:14 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/pecl-memcached-2.0.1.ebuild,v 1.1 2012/03/03 15:01:24 olemarkus Exp $
 
 EAPI="4"
 PHP_EXT_NAME="memcached"
