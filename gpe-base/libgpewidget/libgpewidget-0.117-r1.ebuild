@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/libgpewidget-0.117-r1.ebuild,v 1.7 2011/05/15 22:21:30 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/libgpewidget-0.117-r1.ebuild,v 1.8 2012/03/03 20:14:56 miknix Exp $
 
 EAPI=2
 GPE_TARBALL_SUFFIX="bz2"
@@ -34,6 +34,9 @@ GPE_DOCS="ChangeLog"
 GPECONF="$(use_enable cairo)"
 
 src_prepare() {
+	# Fix LINGUAS bug #406419
+	epatch "${FILESDIR}/${P}-linguas.patch"
+
 	# Fix underlinking, bug #367421
 	sed -i -e 's/^infoprint_LDADD =/infoprint_LDADD = -lX11/' Makefile.am \
 		|| die 'Failed to sed Makefile.am'

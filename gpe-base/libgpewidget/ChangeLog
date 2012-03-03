@@ -1,6 +1,10 @@
 # ChangeLog for gpe-base/libgpewidget
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/ChangeLog,v 1.9 2011/05/15 22:21:30 miknix Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/ChangeLog,v 1.10 2012/03/03 20:14:56 miknix Exp $
+
+  03 Mar 2012; Angelo Arrifano <miknix@gentoo.org>
+  libgpewidget-0.117-r1.ebuild, +files/libgpewidget-0.117-linguas.patch:
+  Fix "ignored LINGUAS" bug 406419
 
   15 May 2011; Angelo Arrifano <miknix@gentoo.org>
   libgpewidget-0.117-r1.ebuild:
