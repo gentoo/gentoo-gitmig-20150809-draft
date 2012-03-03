@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.27 2011/11/16 16:01:11 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.28 2012/03/03 11:42:59 grobian Exp $
+
+  03 Mar 2012; Fabian Groffen <grobian@gentoo.org> fortune-mod-1.99.1-r2.ebuild:
+  Fix fortunes location used at runtime, bug #405191
 
   16 Nov 2011; Jeremy Olexa <darkside@gentoo.org> fortune-mod-1.99.1-r2.ebuild:
   Migrate Gentoo Prefix modifications from overlay. EAPI, arch-specific fixes,

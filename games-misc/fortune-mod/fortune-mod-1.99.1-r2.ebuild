@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r2.ebuild,v 1.10 2011/11/16 16:01:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r2.ebuild,v 1.11 2012/03/03 11:42:59 grobian Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -48,7 +48,7 @@ src_prepare() {
 src_compile() {
 	local myrex=
 	[[ ${CHOST} == *-interix* ]] && myrex="REGEXDEFS=-DNO_REGEX"
-	emake CC="$(tc-getCC)" $myrex || die "emake failed"
+	emake prefix="${EPREFIX}" CC="$(tc-getCC)" $myrex || die "emake failed"
 }
 
 src_install() {
