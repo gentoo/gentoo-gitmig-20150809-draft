@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langlatvian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.24 2012/03/02 20:00:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.25 2012/03/03 13:45:27 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-langlatvian-2011.ebuild:
+  Marking texlive-langlatvian-2011 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-langlatvian-2011.ebuild:
   Marking texlive-langlatvian-2011 ppc stable for bug 395735
