@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.186 2012/02/28 20:23:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.187 2012/03/03 16:02:57 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> zsh-4.3.15.ebuild:
+  Marking zsh-4.3.15 ppc64 for bug 401931
 
   28 Feb 2012; Brent Baude <ranger@gentoo.org> zsh-4.3.15.ebuild:
   Marking zsh-4.3.15 ppc for bug 401931
