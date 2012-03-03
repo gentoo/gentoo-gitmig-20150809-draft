@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-latexrecommended
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.57 2012/03/02 20:10:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.58 2012/03/03 13:55:19 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org>
+  texlive-latexrecommended-2011.ebuild:
+  Marking texlive-latexrecommended-2011 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org>
   texlive-latexrecommended-2011.ebuild:
