@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.520 2012/03/03 02:29:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.521 2012/03/03 02:47:11 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1058,9 +1058,13 @@ gcc_do_configure() {
 	tc_version_is_at_least "4.3" && confgcc+=" $(use_enable fixed-point)"
 
 	# Graphite support was added in 4.4, which depends on external libraries
-	# for optimizations.  Up to 4.6 we use cloog-ppl (cloog fork with Parma PPL
-	# backend).  Later versions will use upstream cloog with the ISL backend.  We
-	# disable the PPL version check so we can use >=ppl-0.11.
+	# for optimizations.  Current versions use cloog-ppl (cloog fork with Parma
+	# PPL backend).  Sometime in the future we will use upstream cloog with the
+	# ISL backend (note: PPL will still be a requirement).  cloog-ppl's include
+	# path was modified to prevent collisions between the two packages (library
+	# names are different).
+	#
+	# We disable the PPL version check so we can use >=ppl-0.11.
 	if tc_version_is_at_least "4.4"; then
 		confgcc+=" $(use_with graphite ppl)"
 		confgcc+=" $(use_with graphite cloog)"
