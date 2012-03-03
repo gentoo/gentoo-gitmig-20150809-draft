@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-music
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/ChangeLog,v 1.45 2012/03/02 20:12:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/ChangeLog,v 1.46 2012/03/03 13:58:03 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-music-2011.ebuild:
+  Marking texlive-music-2011 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-music-2011.ebuild:
   Marking texlive-music-2011 ppc stable for bug 395735
