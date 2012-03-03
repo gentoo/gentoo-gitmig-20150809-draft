@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-nodeps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.28 2012/02/18 22:13:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.29 2012/03/03 22:53:27 caster Exp $
+
+  03 Mar 2012; Vlastimil Babka <caster@gentoo.org> ant-nodeps-1.8.2.ebuild:
+  Don't depend on JDK/JRE since there's no building anymore.
 
 *ant-nodeps-1.8.2 (18 Feb 2012)
 
