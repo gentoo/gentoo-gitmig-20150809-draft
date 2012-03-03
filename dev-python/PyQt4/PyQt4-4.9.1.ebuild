@@ -1,14 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.4 2012/03/02 18:23:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.5 2012/03/03 11:48:59 pesa Exp $
 
-EAPI="3"
+EAPI=4
+
 PYTHON_DEPEND="*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
 
-inherit python qt4-r2 toolchain-funcs
+inherit toolchain-funcs qt4-r2 python
 
 # Minimal supported version of Qt.
 QT_VER="4.7.2"
@@ -27,7 +28,18 @@ fi
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="X assistant +dbus debug declarative doc examples kde multimedia opengl phonon sql svg webkit xmlpatterns"
+IUSE="X assistant dbus debug declarative doc examples kde multimedia opengl phonon sql svg webkit xmlpatterns"
+
+REQUIRED_USE="
+	assistant? ( X )
+	declarative? ( X )
+	multimedia? ( X )
+	opengl? ( X )
+	phonon? ( X )
+	sql? ( X )
+	svg? ( X )
+	webkit? ( X )
+"
 
 RDEPEND="
 	>=dev-python/sip-4.13.1
@@ -71,7 +83,7 @@ PYTHON_VERSIONED_EXECUTABLES=("/usr/bin/pyuic4")
 
 src_prepare() {
 	if ! use dbus; then
-		sed -e "s/^\([[:blank:]]\+\)check_dbus()/\1pass/" -i configure.py || die "sed configure.py failed"
+		sed -e 's/^\([[:blank:]]\+\)check_dbus()/\1pass/' -i configure.py || die
 	fi
 
 	# Support qreal for arm architecture (bug #322349).
@@ -80,12 +92,12 @@ src_prepare() {
 	qt4-r2_src_prepare
 
 	# Use proper include directory.
-	sed -e "s:/usr/include:${EPREFIX}/usr/include:g" -i configure.py || die "sed configure.py failed"
+	sed -e "s:/usr/include:${EPREFIX}/usr/include:g" -i configure.py || die
 
 	python_copy_sources
 
 	preparation() {
-		if [[ "$(python_get_version -l --major)" == "3" ]]; then
+		if [[ $(python_get_version -l --major) == 3 ]]; then
 			rm -fr pyuic/uic/port_v2
 		else
 			rm -fr pyuic/uic/port_v3
@@ -136,7 +148,7 @@ src_configure() {
 			CXXFLAGS="${CXXFLAGS}"
 			LFLAGS="${LDFLAGS}")
 		echo "${myconf[@]}"
-		"${myconf[@]}" || return 1
+		"${myconf[@]}" || die
 
 		local mod
 		for mod in QtCore \
@@ -165,10 +177,6 @@ src_configure() {
 	python_execute_function -s configuration
 }
 
-src_compile() {
-	python_src_compile
-}
-
 src_install() {
 	installation() {
 		# INSTALL_ROOT is used by designer/Makefile, other Makefiles use DESTDIR.
@@ -177,15 +185,15 @@ src_install() {
 	python_execute_function -s installation
 	python_merge_intermediate_installation_images "${T}/images"
 
-	dodoc NEWS THANKS || die "dodoc failed"
+	dodoc NEWS THANKS
 
 	if use doc; then
-		dohtml -r doc/html/* || die "dohtml failed"
+		dohtml -r doc/html/*
 	fi
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die "doins failed"
+		doins -r examples
 	fi
 }
 

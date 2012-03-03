@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.171 2012/03/02 18:34:25 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.172 2012/03/03 11:48:59 pesa Exp $
+
+  03 Mar 2012; Davide Pesavento <pesa@gentoo.org> PyQt4-4.9.1.ebuild:
+  Switch to EAPI 4, add REQUIRED_USE.
 
   02 Mar 2012; Davide Pesavento <pesa@gentoo.org> PyQt4-4.8.1.ebuild,
   PyQt4-4.8.4.ebuild:
