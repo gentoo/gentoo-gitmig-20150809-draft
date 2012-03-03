@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13538 2012/03/03 11:21:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13539 2012/03/03 13:38:07 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,7 +34,6 @@
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (01 Jan 2012)
 # Mask for breaking compile against glu.h, bug #406641
 =media-libs/mesa-8.0.1-r1
-=app-admin/eselect-opengl-1.2.5
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Feb 2012)
 # The old version of gnunet in portage is broken with the
