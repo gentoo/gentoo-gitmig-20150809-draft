@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 if [ "${SVCNAME}" = "puppetmaster" ] ; then
@@ -24,7 +24,7 @@ depend() {
 }
 
 start_pre() {
-	checkpath --dir --owner puppet:puppet "${PUPPETMASTER_PID_DIR}"
+	checkpath --directory --owner puppet:puppet "${PUPPETMASTER_PID_DIR}"
 }
 
 reload() {
