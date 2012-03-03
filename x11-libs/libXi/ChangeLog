@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.135 2012/02/19 15:05:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.136 2012/03/03 16:30:55 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> libXi-1.4.3-r1.ebuild:
+  Marking libXi-1.4.3-r1 ppc64 stable for bug 394393
 
   19 Feb 2012; Raúl Porcel <armin76@gentoo.org> libXi-1.4.3-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #394393
