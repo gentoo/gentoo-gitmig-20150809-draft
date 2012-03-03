@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.94 2012/03/03 14:44:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.95 2012/03/03 15:40:15 maekke Exp $
+
+  03 Mar 2012; Markus Meier <maekke@gentoo.org> XML-Writer-0.615.0.ebuild:
+  arm stable, bug #404339
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> XML-Writer-0.615.0.ebuild:
   Marking XML-Writer-0.615.0 ppc64 for bug 404339
