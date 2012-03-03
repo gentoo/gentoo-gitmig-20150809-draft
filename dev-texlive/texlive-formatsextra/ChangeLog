@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-formatsextra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.48 2012/03/02 19:44:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.49 2012/03/03 13:29:20 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org>
+  texlive-formatsextra-2011.ebuild:
+  Marking texlive-formatsextra-2011 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org>
   texlive-formatsextra-2011.ebuild:
