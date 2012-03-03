@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.521 2012/03/03 02:47:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.522 2012/03/03 22:42:47 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -12,7 +12,7 @@ RESTRICT="strip" # cross-compilers need controlled stripping
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib fixheadtails pax-utils
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test pkg_preinst src_install pkg_postinst pkg_prerm pkg_postrm
-DESCRIPTION="Based on the ${ECLASS} eclass"
+DESCRIPTION="The GNU Compiler Collection"
 
 FEATURES=${FEATURES/multilib-strict/}
 #----<< eclass stuff >>----
@@ -262,7 +262,7 @@ get_gcc_src_uri() {
 		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/prerelease-${PRERELEASE}/gcc-${PRERELEASE}.tar.bz2"
 	elif [[ -n ${SNAPSHOT} ]] ; then
 		GCC_SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT}.tar.bz2"
-	else
+	elif [[ ${PV} != *9999* ]] ; then
 		GCC_SRC_URI="mirror://gnu/gcc/gcc-${GCC_PV}/gcc-${GCC_RELEASE_VER}.tar.bz2"
 		# we want all branch updates to be against the main release
 		[[ -n ${BRANCH_UPDATE} ]] && \
@@ -533,6 +533,13 @@ copy_minispecs_gcc_specs() {
 
 #---->> pkg_* <<----
 toolchain_pkg_setup() {
+	if [[ -n ${PRERELEASE}${SNAPSHOT} || ${PV} == *9999* ]] &&
+	   [[ -z ${I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS} ]]
+	then
+		die "Please \`export I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS=1\` or define it in your make.conf if you want to use this version." \
+			"This is to try and cut down on people filing bugs for a compiler we do not currently support."
+	fi
+
 	# Setup variables which would normally be in the profile
 	if is_crosscompile ; then
 		multilib_env ${CTARGET}
