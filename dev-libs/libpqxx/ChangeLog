@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.82 2012/03/03 14:21:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.83 2012/03/03 21:24:57 klausman Exp $
+
+  03 Mar 2012; Tobias Klausmann <klausman@gentoo.org> libpqxx-4.0-r1.ebuild:
+  Stable on alpha, bug #396483
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> libpqxx-4.0-r1.ebuild:
   Marking libpqxx-4.0-r1 ppc64 for bug 396483
