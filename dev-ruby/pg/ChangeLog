@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.47 2012/02/06 19:22:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.48 2012/03/03 15:58:29 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> pg-0.11.0.ebuild:
+  Marking pg-0.11.0 ppc64 for bug 387915
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> pg-0.11.0.ebuild:
   Marking pg-0.11.0 ppc for bug 387915
