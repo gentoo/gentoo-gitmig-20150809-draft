@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.72 2012/03/03 12:53:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.73 2012/03/03 13:17:54 sping Exp $
+
+  03 Mar 2012; Sebastian Pipping <sping@gentoo.org> optipng-0.7.ebuild:
+  Add zlib dependency, reported by Agostino Sarubbo
 
   03 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> optipng-0.7.ebuild:
   x86 stable wrt bug #355739
