@@ -1,6 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/selfdhcp-0.2a.ebuild,v 1.5 2010/10/28 11:08:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/selfdhcp-0.2a-r1.ebuild,v 1.1 2012/03/03 15:44:30 pacho Exp $
+
+EAPI=4
+inherit eutils
 
 DESCRIPTION="a small stealth network autoconfigure software."
 HOMEPAGE="http://selfdhcp.sourceforge.net"
@@ -16,12 +19,15 @@ DEPEND="dev-libs/popt
 	>=net-libs/libnet-1.0.2
 	net-libs/libpcap"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}/${P}-buffer-overflow.patch"
+}
+
+src_configure() {
 	econf --sysconfdir=/etc --sbindir=/sbin
-	emake || die
 }
 
 src_install() {
-	einstall sbindir="${D}"/sbin || die
+	einstall sbindir="${D}"/sbin
 	dodoc AUTHORS ChangeLog README TODO
 }

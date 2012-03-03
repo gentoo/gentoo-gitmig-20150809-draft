@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/selfdhcp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/ChangeLog,v 1.7 2007/02/22 02:45:17 peper Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/ChangeLog,v 1.8 2012/03/03 15:44:30 pacho Exp $
+
+*selfdhcp-0.2a-r1 (03 Mar 2012)
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/selfdhcp-0.2a-buffer-overflow.patch, +selfdhcp-0.2a-r1.ebuild,
+  -selfdhcp-0.2a.ebuild:
+  Fix overflow, bug #337520 by flameeyes and fix by Kevin McCarthy.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
