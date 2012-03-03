@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.5.0-r1.ebuild,v 1.5 2011/03/20 18:23:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.5.0-r1.ebuild,v 1.6 2012/03/03 16:07:21 ssuominen Exp $
 
 EAPI=2
 inherit multilib
@@ -21,6 +21,6 @@ src_install() {
 	emake DESTDIR="${D}" libdir="/usr/$(get_libdir)" install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
-	insinto /$(get_libdir)/udev/rules.d
+	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/75-rio.rules
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.5.0-r2.ebuild,v 1.1 2012/03/03 16:00:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.5.0-r2.ebuild,v 1.2 2012/03/03 16:07:21 ssuominen Exp $
 
 EAPI=4
 inherit multilib eutils
@@ -18,7 +18,7 @@ RDEPEND="virtual/libusb:0"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-buffer-overflow.patch"
+	epatch "${FILESDIR}"/${P}-buffer-overflow.patch
 }
 
 src_configure() {
@@ -27,9 +27,9 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" libdir="/usr/$(get_libdir)" install
-	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
+	find "${ED}" -name '*.la' -exec rm -f {} +
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
-	insinto /$(get_libdir)/udev/rules.d
+	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/75-rio.rules
 }

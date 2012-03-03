@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/rioutil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.29 2012/03/03 16:00:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.30 2012/03/03 16:07:21 ssuominen Exp $
+
+  03 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> rioutil-1.5.0-r1.ebuild,
+  rioutil-1.5.0-r2.ebuild:
+  Use correct udev rules.d directory; /lib/udev/rules.d
 
 *rioutil-1.5.0-r2 (03 Mar 2012)
 
