@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.210 2012/03/02 20:56:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.211 2012/03/03 18:01:34 jer Exp $
+
+  03 Mar 2012; Jeroen Roovers <jer@gentoo.org> -libevent-2.0.12.ebuild:
+  Old.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> libevent-2.0.16.ebuild:
   Marking libevent-2.0.16 ppc64 for bug 397483
