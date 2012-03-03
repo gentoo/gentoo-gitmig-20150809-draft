@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libestr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.7 2012/03/02 13:06:55 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.8 2012/03/03 00:06:33 hwoarang Exp $
+
+  03 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  remove myself from metadata
 
   02 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
   Add slepnoga and maksbotan as maintainers

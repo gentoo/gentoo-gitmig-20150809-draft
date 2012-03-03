@@ -10,9 +10,5 @@
 	<email>maksbotan@gentoo.org</email>
 	<name>Maxim Koltsov</name>
 </maintainer>
-<maintainer>
-	<email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
-</maintainer>
 </pkgmetadata>
 
