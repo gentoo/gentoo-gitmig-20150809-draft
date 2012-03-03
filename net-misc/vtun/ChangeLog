@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vtun
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.41 2010/09/18 03:12:18 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.42 2012/03/03 19:29:39 pacho Exp $
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org> -vtun-3.0.1.ebuild,
+  vtun-3.0.2-r1.ebuild:
+  Parallel make fails, bug 364923; drop old.
 
 *vtun-3.0.2-r1 (18 Sep 2010)
 

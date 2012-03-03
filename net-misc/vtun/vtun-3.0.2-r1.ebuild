@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-3.0.2-r1.ebuild,v 1.1 2010/09/18 03:12:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-3.0.2-r1.ebuild,v 1.2 2012/03/03 19:29:39 pacho Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils
 
@@ -38,8 +38,13 @@ src_configure() {
 		--enable-shaper
 }
 
+src_compile() {
+	# Parallel make fails, bug 364923
+	emake -j1
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install
 	dodoc ChangeLog Credits FAQ README README.Setup README.Shaper TODO
 	newinitd "${FILESDIR}"/vtun.rc vtun
 	insinto etc
