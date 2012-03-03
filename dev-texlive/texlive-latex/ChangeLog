@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-latex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/ChangeLog,v 1.60 2012/03/02 20:08:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/ChangeLog,v 1.61 2012/03/03 13:53:28 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-latex-2011.ebuild:
+  Marking texlive-latex-2011 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-latex-2011.ebuild:
   Marking texlive-latex-2011 ppc stable for bug 395735
