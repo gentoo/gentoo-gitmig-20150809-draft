@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.319 2012/02/06 17:19:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.320 2012/03/03 14:14:29 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> syslog-ng-3.2.5.ebuild:
+  Marking syslog-ng-3.2.5 ppc64 for bug 394621
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> syslog-ng-3.2.5.ebuild:
   Marking syslog-ng-3.2.5 ppc for bug 394621
