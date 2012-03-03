@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.40 2012/01/25 01:01:51 tristan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.41 2012/03/03 21:25:22 vapier Exp $
+
+*cegui-0.7.6-r1 (03 Mar 2012)
+
+  03 Mar 2012; Mike Frysinger <vapier@gentoo.org> +cegui-0.7.6-r1.ebuild:
+  Build against system minizip #389863. Re-enable ogre support #406475 by
+  hasufell.
 
 *cegui-0.7.6 (25 Jan 2012)
 
