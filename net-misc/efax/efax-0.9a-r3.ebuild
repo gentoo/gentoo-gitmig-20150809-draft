@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/efax-0.9a-r3.ebuild,v 1.1 2012/03/03 15:24:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/efax-0.9a-r3.ebuild,v 1.2 2012/03/03 21:28:50 pacho Exp $
 
 EAPI=4
 
@@ -20,7 +20,9 @@ LICENSE="GPL-2"
 
 src_prepare () {
 	epatch "${WORKDIR}/${PN}_${PV}-19.diff"
-	epatch "${FILESDIR}/${P}-segfault.patch"
+	rm -f "${S}"/${P}/debian/patches/series "${S}"/${P}/debian/patches/00list
+	EPATCH_FORCE="yes" epatch "${S}"/${P}/debian/patches/*
+
 	epatch "${FILESDIR}/${P}-fax-command.patch" #327737
 
 	# remove strip command as per bug #240932

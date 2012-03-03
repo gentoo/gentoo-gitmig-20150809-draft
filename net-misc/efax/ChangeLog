@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/efax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.14 2012/03/03 15:24:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.15 2012/03/03 21:28:50 pacho Exp $
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org> efax-0.9a-r3.ebuild:
+  Really apply debian patches.
 
 *efax-0.9a-r3 (03 Mar 2012)
 
