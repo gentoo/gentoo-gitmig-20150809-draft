@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/efax
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.13 2011/12/21 08:36:34 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.14 2012/03/03 15:24:42 pacho Exp $
+
+*efax-0.9a-r3 (03 Mar 2012)
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org> +efax-0.9a-r3.ebuild,
+  +files/efax-0.9a-fax-command.patch, -efax-0.9a-r1.ebuild:
+  Apply debian patches, fix fax command (bug #327737 by John Hardin), drop old.
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> efax-0.9a-r2.ebuild:
   x86 stable wrt bug #394029
