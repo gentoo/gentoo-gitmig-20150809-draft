@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.379 2012/01/02 22:52:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.380 2012/03/03 12:29:38 grobian Exp $
+
+*perl-5.12.4-r2 (03 Mar 2012)
+
+  03 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/perl-5.10.1-cleanup-paths.patch, +files/perl-5.10.1-hpux.patch,
+  +files/perl-5.12.3-aix-soname.patch, +files/perl-5.12.3-interix.patch,
+  +files/perl-5.12.3-mint.patch, +files/perl-5.14.1-cleanup-paths.patch,
+  +files/perl-5.8.8-darwin-cc-ld.patch,
+  +files/perl-5.8.8-solaris-relocation.patch, +files/perl-5.8.8-solaris11.patch,
+  +files/perl-5.8.8-usr-local.patch, +perl-5.12.4-r2.ebuild, perl-5.14.2.ebuild:
+  Revbump of 5.12.4 for Prefix changes, same changes in 5.14.2, transferred
+  Prefix keywords, bug #395685
 
   02 Jan 2012; Zac Medico <zmedico@gentoo.org> perl-5.10.1.ebuild,
   perl-5.12.3-r1.ebuild, perl-5.12.4-r1.ebuild, perl-5.12.4.ebuild,

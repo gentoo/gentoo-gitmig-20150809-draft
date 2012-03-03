@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.14.2.ebuild,v 1.4 2012/03/03 12:29:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.4-r2.ebuild,v 1.1 2012/03/03 12:29:38 grobian Exp $
 
 EAPI=4
 
@@ -8,8 +8,7 @@ inherit eutils alternatives flag-o-matic toolchain-funcs multilib
 
 PATCH_VER=1
 
-PERL_OLDVERSEN="5.14.0 5.14.1"
-MODULE_AUTHOR=FLORA
+PERL_OLDVERSEN="5.12.3 5.12.2 5.12.1 5.12.0"
 
 SHORT_PV="${PV%.*}"
 MY_P="perl-${PV/_rc/-RC}"
@@ -19,7 +18,7 @@ DESCRIPTION="Larry Wall's Practical Extraction and Report Language"
 
 SRC_URI="
 	mirror://cpan/src/${MY_P}.tar.bz2
-	mirror://cpan/authors/id/${MODULE_AUTHOR:0:1}/${MODULE_AUTHOR:0:2}/${MODULE_AUTHOR}/${MY_P}.tar.bz2
+	mirror://cpan/authors/id/L/LB/LBROCARD/${MY_P}.tar.bz2
 	mirror://gentoo/${MY_P}-${PATCH_VER}.tar.bz2
 	http://dev.gentoo.org/~tove/distfiles/${CATEGORY}/${PN}/${MY_P}-${PATCH_VER}.tar.bz2"
 #	mirror://cpan/src/${MY_P}.tar.bz2
@@ -31,41 +30,32 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-aix ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="berkdb build debug doc gdbm ithreads"
 
-COMMON_DEPEND="
-	berkdb? ( sys-libs/db )
+COMMON_DEPEND="berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )
+	>=sys-devel/libperl-5.10.1
+	!!<sys-devel/libperl-5.10.1
 	app-arch/bzip2
-	sys-libs/zlib
-"
+	sys-libs/zlib"
 DEPEND="${COMMON_DEPEND}
-	!prefix? ( elibc_FreeBSD? ( sys-freebsd/freebsd-mk-defs ) )
-"
-RDEPEND="${COMMON_DEPEND}
-"
+	!prefix? ( elibc_FreeBSD? ( sys-freebsd/freebsd-mk-defs ) )"
+RDEPEND="${COMMON_DEPEND}"
 PDEPEND=">=app-admin/perl-cleaner-2.5"
 
 S="${WORKDIR}/${MY_P}"
 
 dual_scripts() {
-	src_remove_dual      perl-core/Archive-Tar        1.760.0      ptar ptardiff ptargrep
-	src_remove_dual      perl-core/Digest-SHA         5.610.0      shasum
-	src_remove_dual      perl-core/CPAN               1.960.1_rc   cpan
-	src_remove_dual      perl-core/CPANPLUS           0.910.300    cpanp cpan2dist
-	src_remove_dual_file perl-core/CPANPLUS           0.910.300    /usr/bin/cpanp-run-perl
-	src_remove_dual      perl-core/Encode             2.420.100_rc enc2xs piconv
-	src_remove_dual      perl-core/ExtUtils-MakeMaker 6.570.500_rc instmodsh
-	src_remove_dual      perl-core/ExtUtils-ParseXS   2.221.0      xsubpp
-	src_remove_dual      perl-core/JSON-PP            2.271.50     json_pp
-	src_remove_dual      perl-core/Module-Build       0.380.0      config_data
-	src_remove_dual      perl-core/Module-CoreList    2.490.200_rc corelist
-	src_remove_dual      perl-core/PodParser          1.370.0      pod2usage podchecker podselect
-	src_remove_dual      perl-core/Test-Harness       3.230.0      prove
-	src_remove_dual      perl-core/podlators          2.4.0        pod2man pod2text
-	src_remove_dual_man  perl-core/podlators          2.4.0        /usr/share/man/man1/perlpodstyle.1
-}
-
-pkg_pretend() {
-	check_rebuild
+	src_remove_dual_scripts perl-core/Archive-Tar        1.54      ptar ptardiff
+	src_remove_dual_scripts perl-core/Digest-SHA         5.47      shasum
+	src_remove_dual_scripts perl-core/CPAN               1.945.600 cpan
+	src_remove_dual_scripts perl-core/CPANPLUS           0.900.0   cpanp cpan2dist cpanp-run-perl
+	src_remove_dual_scripts perl-core/Encode             2.39      enc2xs piconv
+	src_remove_dual_scripts perl-core/ExtUtils-MakeMaker 6.56      instmodsh
+	src_remove_dual_scripts perl-core/ExtUtils-ParseXS   2.210.0   xsubpp
+	src_remove_dual_scripts perl-core/Module-Build       0.3603    config_data
+	src_remove_dual_scripts perl-core/Module-CoreList    2.500.0   corelist
+	src_remove_dual_scripts perl-core/PodParser          1.370.0   pod2usage podchecker podselect
+	src_remove_dual_scripts perl-core/Test-Harness       3.17      prove
+	src_remove_dual_scripts perl-core/podlators          2.3.1     pod2man pod2text
 }
 
 pkg_setup() {
@@ -92,8 +82,8 @@ pkg_setup() {
 	LIBPERL="libperl$(get_libname ${MY_PV} )"
 	PRIV_LIB="/usr/$(get_libdir)/perl5/${MY_PV}"
 	ARCH_LIB="/usr/$(get_libdir)/perl5/${MY_PV}/${myarch}${mythreading}"
-	SITE_LIB="/usr/local/$(get_libdir)/perl5/${MY_PV}"
-	SITE_ARCH="/usr/local/$(get_libdir)/perl5/${MY_PV}/${myarch}${mythreading}"
+	SITE_LIB="/usr/$(get_libdir)/perl5/site_perl/${MY_PV}"
+	SITE_ARCH="/usr/$(get_libdir)/perl5/site_perl/${MY_PV}/${myarch}${mythreading}"
 	VENDOR_LIB="/usr/$(get_libdir)/perl5/vendor_perl/${MY_PV}"
 	VENDOR_ARCH="/usr/$(get_libdir)/perl5/vendor_perl/${MY_PV}/${myarch}${mythreading}"
 
@@ -106,11 +96,6 @@ pkg_setup() {
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 	fi
-	check_rebuild
-	dual_scripts
-}
-
-check_rebuild() {
 	if has_version "<dev-lang/perl-${SHORT_PV}" ; then
 		echo ""
 		ewarn "UPDATE THE PERL MODULES:"
@@ -132,6 +117,7 @@ check_rebuild() {
 			ewarn "Use: perl-cleaner --modules ; perl-cleaner --force --libperl"
 		fi
 	fi
+	dual_scripts
 }
 
 src_prepare_update_patchlevel_h() {
@@ -154,19 +140,22 @@ src_prepare() {
 	# pod/perltoc.pod fails
 	# lib/ExtUtils/t/Embed.t fails
 	if ! tc-is-static-only ; then
-		ln -s ${LIBPERL} libperl$(get_libname ${SHORT_PV}) || die
-		ln -s ${LIBPERL} libperl$(get_libname ) || die
+		ln -s ${LIBPERL} libperl$(get_libname ${SHORT_PV})
+		ln -s ${LIBPERL} libperl$(get_libname )
 	fi
 
 	epatch "${FILESDIR}"/${PN}-5.12.3-aix-soname.patch
 	epatch "${FILESDIR}"/${PN}-5.8.8-solaris-relocation.patch
 	epatch "${FILESDIR}"/${PN}-5.8.8-solaris11.patch
-	epatch "${FILESDIR}"/${PN}-5.14.1-cleanup-paths.patch
+	epatch "${FILESDIR}"/${PN}-5.10.1-cleanup-paths.patch
 	epatch "${FILESDIR}"/${PN}-5.8.8-usr-local.patch
 	epatch "${FILESDIR}"/${PN}-5.10.1-hpux.patch
 	epatch "${FILESDIR}"/${PN}-5.8.8-darwin-cc-ld.patch
 	epatch "${FILESDIR}"/${PN}-5.12.3-mint.patch
 	epatch "${FILESDIR}"/${PN}-5.12.3-interix.patch
+
+	# Fix build on OSX Lion (10.7)
+	sed -i -e '/^usenm=/s/true/false/' hints/darwin.sh
 
 	# rest of usr-local patch
 	sed -i \
@@ -248,7 +237,7 @@ src_configure() {
 
 	if [[ -n ${PERL_OLDVERSEN} ]] ; then
 		local inclist=$(for v in ${PERL_OLDVERSEN}; do echo -n "${v}/${myarch}${mythreading} ${v} "; done )
-		myconf -Dinc_version_list="${inclist}"
+		myconf -Dinc_version_list="$inclist"
 	fi
 
 	[[ ${ELIBC} == "FreeBSD" ]] && myconf "-Dlibc=/usr/$(get_libdir)/libc.a"
@@ -262,15 +251,18 @@ src_configure() {
 		local paths=""
 		echo "int main() {}" > "${T}"/t.c
 		# need to ensure dirs contain compatible libs, bug #358875
-		for ldir in /lib /usr/lib /lib64 /lib/64 /usr/lib64 /usr/lib/64 /lib32 /usr/lib32 ; do
+		for ldir in /lib64 /lib/64 /usr/lib64 /usr/lib/64 /lib32 /usr/lib32 /lib /usr/lib ; do
 			[[ -d ${ldir} ]] || continue
-			# find a random lib from here
-			llib=( ${ldir}/*$(get_libname) )
-			[[ -e ${llib[0]} ]] || continue
-			$(tc-getCC) -o "${T}"/t "${T}"/t.c ${llib[0]} >& /dev/null \
-				&& paths="${paths} ${ldir}"
+			# look for libc, which should be somewhere
+			llib=${ldir}/libc$(get_libname)
+			[[ -e ${llib} ]] || continue
+			if $(tc-getCC) -o "${T}"/t "${T}"/t.c ${llib} >& /dev/null ; then
+				ldir=${ldir#/usr}
+				paths="${ldir} /usr${ldir}"
+				break
+			fi
 		done
-		myconf "-Dlibpth=${EPREFIX}/$(get_libdir) ${EPREFIX}/usr/$(get_libdir) ${paths}"
+		myconf "-Dlibpth=${EPREFIX}/$(get_libdir) ${EPREFIX}/usr/$(get_libdir) ${paths:-/lib /usr/lib}"
 	elif [[ $(get_libdir) != "lib" ]] ; then
 		# We need to use " and not ', as the written config.sh use ' ...
 		myconf "-Dlibpth=/usr/local/$(get_libdir) /$(get_libdir) /usr/$(get_libdir)"
@@ -319,6 +311,11 @@ src_configure() {
 		"${myconf[@]}" || die "Unable to configure"
 }
 
+src_compile() {
+	# bug 331113
+	emake -j1 || die "emake failed"
+}
+
 src_test() {
 	if [[ ${EUID} == 0 ]] ; then
 		ewarn "Test fails with a sandbox error (#328793) if run as root. Skipping tests..."
@@ -333,23 +330,27 @@ src_install() {
 	local i
 	local coredir="${ARCH_LIB}/CORE"
 
+#	# Fix for "stupid" modules and programs
+#	dodir ${SITE_ARCH} ${SITE_LIB}
+#	keepdir "${VENDOR_ARCH}" #338802 for enc2xs
+
 	local installtarget=install
 	if use build ; then
 		installtarget=install.perl
 	fi
-	emake DESTDIR="${D}" ${installtarget}
+	make DESTDIR="${D}" ${installtarget} || die "Unable to make ${installtarget}"
 
 	rm -f "${ED}"/usr/bin/perl
-	ln -s perl${MY_PV} "${ED}"/usr/bin/perl || die
+	ln -s perl${MY_PV} "${ED}"/usr/bin/perl
 
 	if ! tc-is-static-only ; then
-		dolib.so "${ED}"${coredir}/${LIBPERL}
-		rm -f "${ED}"${coredir}/${LIBPERL}
-		ln -sf ${LIBPERL} "${ED}"/usr/$(get_libdir)/libperl$(get_libname ${SHORT_PV}) || die
-		ln -sf ${LIBPERL} "${ED}"/usr/$(get_libdir)/libperl$(get_libname) || die
-		ln -sf ../../../../../$(get_libdir)/${LIBPERL} "${ED}"${coredir}/${LIBPERL} || die
-		ln -sf ../../../../../$(get_libdir)/${LIBPERL} "${ED}"${coredir}/libperl$(get_libname ${SHORT_PV}) || die
-		ln -sf ../../../../../$(get_libdir)/${LIBPERL} "${ED}"${coredir}/libperl$(get_libname) || die
+		dolib.so "${ED}"/${coredir}/${LIBPERL} || die
+		dosym ${LIBPERL} /usr/$(get_libdir)/libperl$(get_libname ${SHORT_PV}) || die
+		dosym ${LIBPERL} /usr/$(get_libdir)/libperl$(get_libname) || die
+		rm -f "${ED}"/${coredir}/${LIBPERL}
+		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/${LIBPERL}
+		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname ${SHORT_PV})
+		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname)
 	fi
 
 	rm -rf "${ED}"/usr/share/man/man3 || die "Unable to remove module man pages"
@@ -372,7 +373,7 @@ src_install() {
 	# ( use berkdb && has_version '=sys-libs/db-1*' ) ||
 	#	find "${ED}" -name "*NDBM*" | xargs rm -f
 
-	dodoc Changes* README AUTHORS
+	dodoc Changes* README AUTHORS || die
 
 	if use doc ; then
 		# HTML Documentation
@@ -399,7 +400,7 @@ pkg_postinst() {
 
 	if [[ "${ROOT}" = "/" ]] ; then
 		local INC DIR file
-		INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${SHORT_PV}'|etc|local|perl$/; print "$line\n" }')
+		INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${MY_PV}'|etc|local|perl$/; print "$line\n" }')
 		einfo "Removing old .ph files"
 		for DIR in ${INC} ; do
 			if [[ -d "${DIR}" ]] ; then
@@ -415,10 +416,10 @@ pkg_postinst() {
 				find "${DIR}" -depth -type d -print0 | xargs -0 -r rmdir &> /dev/null
 			fi
 		done
-#		if ! use build ; then
-#			ebegin "Generating ConfigLocal.pm (ignore any error)"
-#			enc2xs -C
-#		fi
+		if ! use build ; then
+			ebegin "Generating ConfigLocal.pm (ignore any error)"
+			enc2xs -C
+		fi
 
 		einfo "Converting C header files to the corresponding Perl format (ignore any error)"
 		# Prefix note: unprefixed as this is all kernel/libc stuff that we never provide
@@ -468,71 +469,42 @@ cleaner_msg() {
 	eerror ""
 }
 
-src_remove_dual_file() {
-	local i pkg ver
-	pkg="$1"
-	ver="$2"
-	shift 2
-	case "${EBUILD_PHASE:-none}" in
-		postinst|postrm)
-			for i in "$@" ; do
-				alternatives_auto_makesym "${i}" "${i}-[0-9]*"
-			done
-			;;
-		setup)
-			for i in "$@" ; do
-				if [[ -f ${EROOT}${i} && ! -h ${EROOT}${i} ]] ; then
-					has_version ${pkg} && ewarn "You must reinstall ${pkg} !"
-					break
-				fi
-			done
-			;;
-		install)
-			for i in "$@" ; do
-				if ! [[ -f "${ED}"${i} ]] ; then
-					use build || ewarn "${i} does not exist!"
-					continue
-				fi
-				mv "${ED}"${i}{,-${ver}-${P}} || die
-			done
-			;;
-	esac
-}
+src_remove_dual_scripts() {
 
-src_remove_dual_man() {
 	local i pkg ver ff
 	pkg="$1"
 	ver="$2"
 	shift 2
-	case "${EBUILD_PHASE:-none}" in
-		postinst|postrm)
-			for i in "$@" ; do
-				ff=`echo "${EROOT}${i%.[0-9]}-${ver}-${P}${i#${i%.[0-9]}}"*`
-				ff=${ff##*${i#${i%.[0-9]}}}
-				alternatives_auto_makesym "${i}${ff}" "${i%.[0-9]}-[0-9]*"
-			done
-			;;
-		install)
-			for i in "$@" ; do
-				if ! [[ -f "${ED}"${i} ]] ; then
-					use build || ewarn "${i} does not exist!"
-					continue
-				fi
-				mv "${ED}"${i} "${ED}"${i%.[0-9]}-${ver}-${P}${i#${i%.[0-9]}} || die
-			done
-			;;
-	esac
-}
-
-src_remove_dual() {
-	local i pkg ver
-	pkg="$1"
-	ver="$2"
-	shift 2
-	for i in "$@" ; do
-		src_remove_dual_file  "${pkg}" "${ver}" "/usr/bin/${i}"
-		src_remove_dual_man   "${pkg}" "${ver}" "/usr/share/man/man1/${i}.1"
-	done
+	if has "${EBUILD_PHASE:-none}" "postinst" "postrm" ;then
+		for i in "$@" ; do
+			alternatives_auto_makesym "/usr/bin/${i}" "/usr/bin/${i}-[0-9]*"
+			if [[ ${i} != cpanp-run-perl ]] ; then
+				ff=`echo ${EROOT}/usr/share/man/man1/${i}-${ver}-${P}.1*`
+				ff=${ff##*.1}
+				alternatives_auto_makesym "/usr/share/man/man1/${i}.1${ff}" "/usr/share/man/man1/${i}-[0-9]*"
+			fi
+		done
+	elif has "${EBUILD_PHASE:-none}" "setup" ; then
+		for i in "$@" ; do
+			if [[ -f ${EROOT}/usr/bin/${i} && ! -h ${EROOT}/usr/bin/${i} ]] ; then
+				has_version ${pkg} && ewarn "You must reinstall $pkg !"
+				break
+			fi
+		done
+	else
+		for i in "$@" ; do
+			if ! [[ -f "${ED}"/usr/bin/${i} ]] ; then
+				use build || ewarn "/usr/bin/${i} does not exist!"
+				continue
+			fi
+			mv "${ED}"/usr/bin/${i}{,-${ver}-${P}} || die
+			if [[ -f ${ED}/usr/share/man/man1/${i}.1 ]] ; then
+				mv "${ED}"/usr/share/man/man1/${i}{.1,-${ver}-${P}.1} || die
+			else
+				echo "/usr/share/man/man1/${i}.1 does not exist!"
+			fi
+		done
+	fi
 }
 
 src_remove_extra_files() {
@@ -576,7 +548,6 @@ src_remove_extra_files() {
 	.${PRIV_LIB}/ExtUtils/MM_Unix.pm
 	.${PRIV_LIB}/ExtUtils/MY.pm
 	.${PRIV_LIB}/ExtUtils/MakeMaker.pm
-	.${PRIV_LIB}/ExtUtils/MakeMaker/Config.pm
 	.${PRIV_LIB}/ExtUtils/Manifest.pm
 	.${PRIV_LIB}/ExtUtils/Miniperl.pm
 	.${PRIV_LIB}/ExtUtils/Mkbootstrap.pm
@@ -709,7 +680,7 @@ src_remove_extra_files() {
 	# Remove empty directories
 	find . -depth -type d -print0 | xargs -0 -r rmdir &> /dev/null
 	#for f in ${MINIMAL_PERL_INSTALL} ; do
-	#	[[ -e ${f} ]] || ewarn "${f} unused in MINIMAL_PERL_INSTALL"
+	#	[[ -e $f ]] || ewarn "$f unused in MINIMAL_PERL_INSTALL"
 	#done
 	popd > /dev/null
 }
