@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.22 2012/03/02 20:59:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.23 2012/03/03 13:39:36 johu Exp $
+
+  03 Mar 2012; Johannes Huber <johu@gentoo.org> -gmm-3.1.ebuild:
+  Remove old.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> gmm-4.1.ebuild:
   Marking gmm-4.1 ppc64 for bug 391651
