@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gnuconfig
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.59 2011/09/21 08:39:50 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.60 2012/03/03 22:23:19 vapier Exp $
+
+  03 Mar 2012; Mike Frysinger <vapier@gentoo.org> gnuconfig-20110814.ebuild:
+  Stabilize for all.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> gnuconfig-99999999.ebuild:
   Migrate to git-2.
