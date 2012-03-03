@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/delay
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.26 2012/02/01 17:30:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.27 2012/03/03 16:01:11 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> delay-1.6-r1.ebuild:
+  Marking delay-1.6-r1 ppc64 for bug 399937
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> delay-1.6-r1.ebuild:
   Marking delay-1.6-r1 ppc for bug 399937
