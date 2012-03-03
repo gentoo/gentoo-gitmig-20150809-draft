@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/rioutil
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.28 2011/03/20 18:23:42 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.29 2012/03/03 16:00:27 pacho Exp $
+
+*rioutil-1.5.0-r2 (03 Mar 2012)
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/rioutil-1.5.0-buffer-overflow.patch, +rioutil-1.5.0-r2.ebuild:
+  Fix overflow, bug 339451 by Kevin McCarthy.
 
   20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> rioutil-1.5.0-r1.ebuild:
   Fix libusb depend to correct SLOT and install udev rules to /lib/udev instead
