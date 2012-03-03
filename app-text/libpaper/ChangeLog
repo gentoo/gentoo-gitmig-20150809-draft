@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.50 2012/02/16 18:28:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.51 2012/03/03 14:15:21 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> libpaper-1.1.24-r1.ebuild:
+  Marking libpaper-1.1.24-r1 ppc64 for bug 401085
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libpaper-1.1.24-r1.ebuild:
