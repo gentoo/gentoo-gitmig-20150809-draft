@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.79 2012/03/03 10:15:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.80 2012/03/03 10:20:04 radhermit Exp $
+
+  03 Mar 2012; Tim Harder <radhermit@gentoo.org> drupal-6.24.ebuild,
+  drupal-7.12.ebuild:
+  Update php use flag dependencies.
 
   03 Mar 2012; Tim Harder <radhermit@gentoo.org> -drupal-5.23.ebuild,
   -drupal-6.22.ebuild, -drupal-7.10.ebuild:

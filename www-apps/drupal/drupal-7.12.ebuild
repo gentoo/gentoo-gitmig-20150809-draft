@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.12.ebuild,v 1.1 2012/02/05 05:53:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.12.ebuild,v 1.2 2012/03/03 10:20:04 radhermit Exp $
 
 EAPI=4
 
@@ -17,9 +17,9 @@ KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="+mysql postgres sqlite"
 
 RDEPEND="virtual/httpd-php
-	dev-lang/php[pdo,postgres?,sqlite?,xml]
+	dev-lang/php[gd,pdo,postgres?,xml]
 	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )
-	|| ( dev-lang/php[gd] dev-lang/php[gd-external] )"
+	sqlite? ( dev-lang/php[sqlite3] )"
 
 need_httpd_cgi
 
