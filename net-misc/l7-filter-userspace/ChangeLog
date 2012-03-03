@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/l7-filter-userspace
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.12 2011/07/20 14:54:17 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.13 2012/03/03 15:31:46 pacho Exp $
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/l7-filter-userspace-0.11-arm-ppc-getopt-help-fix.patch,
+  +files/l7-filter-userspace-0.11-map-access-threadsafe.patch,
+  +files/l7-filter-userspace-0.11-pattern-loading-leak.patch,
+  l7-filter-userspace-0.11.ebuild:
+  Include fixes from debian and ppc/arm compatibility, bug #329397 (by Gavin
+  Pryke).
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
