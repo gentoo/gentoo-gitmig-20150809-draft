@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.519 2012/03/02 05:56:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.520 2012/03/03 02:29:41 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -91,7 +91,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
 
 	if tc_version_is_at_least 3 ; then
-		IUSE+=" bootstrap doc gcj gtk hardened libffi multilib objc"
+		IUSE+=" bootstrap doc gcj gtk hardened multilib objc"
 
 		tc_version_is_at_least "4.0" && IUSE+=" objc-gc mudflap"
 		tc_version_is_at_least "4.1" && IUSE+=" libssp objc++"
@@ -722,14 +722,6 @@ toolchain_src_unpack() {
 
 	use hardened && make_gcc_hard
 
-	if is_libffi ; then
-		# move the libffi target out of gcj and into all
-		sed -i \
-			-e '/^libgcj=/s:target-libffi::' \
-			-e '/^target_lib/s:=":="target-libffi :' \
-			"${S}"/configure || die
-	fi
-
 	# install the libstdc++ python into the right location
 	# http://gcc.gnu.org/PR51368
 	if tc_version_is_at_least 4.5 ; then
@@ -779,6 +771,10 @@ toolchain_src_unpack() {
 	if tc_version_is_at_least 3.3 && ! tc_version_is_at_least 4.0 ; then
 		do_gcc_rename_java_bins
 	fi
+
+	# Prevent libffi from being installed
+	sed -i -e 's/\(install.*:\) install-.*recursive/\1/' "${S}"/libffi/Makefile.in
+	sed -i -e 's/\(install-data-am:\).*/\1/' "${S}"/libffi/include/Makefile.in
 
 	# Fixup libtool to correctly generate .la files with portage
 	cd "${S}"
@@ -1494,17 +1490,6 @@ toolchain_src_install() {
 		fi
 	done
 
-	# I do not know if this will break gcj stuff, so I'll only do it for
-	#	objc for now; basically "ffi.h" is the correct file to include,
-	#	but it gets installed in .../GCCVER/include and yet it does
-	#	"#include <ffitarget.h>" which (correctly, as it's an "extra" file)
-	#	is installed in .../GCCVER/include/libffi; the following fixes
-	#	ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
-	if [[ -d ${D}${LIBPATH}/include/libffi ]] ; then
-		mv -i "${D}"${LIBPATH}/include/libffi/* "${D}"${LIBPATH}/include || die
-		rm -r "${D}"${LIBPATH}/include/libffi || die
-	fi
-
 	# Now do the fun stripping stuff
 	env RESTRICT="" CHOST=${CHOST} prepstrip "${D}${BINPATH}"
 	env RESTRICT="" CHOST=${CTARGET} prepstrip "${D}${LIBPATH}"
@@ -2003,10 +1988,6 @@ is_gcj() {
 is_go() {
 	gcc-lang-supported go || return 1
 	use cxx && use_if_iuse go
-}
-
-is_libffi() {
-	use_if_iuse libffi
 }
 
 is_objc() {
