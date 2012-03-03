@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.98.ebuild,v 1.1 2012/03/01 11:38:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.98.ebuild,v 1.2 2012/03/03 13:52:31 johu Exp $
 
 EAPI=4
 KDE_LINGUAS="de en_GB es et fr km nds pl pt ru sv tr uk"
 KDE_LINGUAS_DIR=( applet/locale containment/locale )
+KDE_MINIMAL="4.8"
 inherit kde4-base
 
 DESCRIPTION="Task and launch representation plasmoid"
