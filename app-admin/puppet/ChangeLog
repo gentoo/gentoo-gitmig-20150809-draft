@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.101 2012/03/03 00:08:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.102 2012/03/03 12:54:24 phajdan.jr Exp $
+
+  03 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> puppet-2.7.11.ebuild:
+  x86 stable wrt bug #403963
 
   03 Mar 2012; MATSUU Takuto <matsuu@gentoo.org> files/puppetmaster-2.7.6.init:
   Fixed checkpath args. The patch was submitted by Eric Martin, wrt bug
