@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.54 2012/03/03 10:32:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.55 2012/03/03 10:34:48 radhermit Exp $
+
+  03 Mar 2012; Tim Harder <radhermit@gentoo.org> phpsysinfo-3.0.15.ebuild:
+  Update php deps and drop depend.php eclass usage.
 
   03 Mar 2012; Tim Harder <radhermit@gentoo.org> -phpsysinfo-3.0.12.ebuild,
   -phpsysinfo-3.0.13.ebuild, -phpsysinfo-3.0.14.ebuild:
