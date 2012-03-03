@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-context
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.53 2012/03/02 19:25:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.54 2012/03/03 13:10:28 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-context-2011.ebuild:
+  Marking texlive-context-2011 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-context-2011.ebuild:
   Marking texlive-context-2011 ppc stable for bug 395735
