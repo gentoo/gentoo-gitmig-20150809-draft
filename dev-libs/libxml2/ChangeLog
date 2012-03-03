@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.334 2012/03/02 13:45:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.335 2012/03/03 14:33:36 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> libxml2-2.7.8-r5.ebuild:
+  Marking libxml2-2.7.8-r5 ppc64 for bug 405261
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> libxml2-2.7.8-r5.ebuild:
   Stable on alpha, bug #405261
