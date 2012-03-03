@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/fsvs-1.2.2.ebuild,v 1.1 2010/07/09 19:43:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/fsvs-1.2.4.ebuild,v 1.1 2012/03/03 15:13:52 pacho Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-vcs/subversion-1.2
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/fsvs-1.2.1-as-needed.patch"
+	epatch "${FILESDIR}/fsvs-1.2.4-as-needed.patch"
 }
 
 src_install() {
