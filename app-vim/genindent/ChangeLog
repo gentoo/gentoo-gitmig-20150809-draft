@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/genindent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.24 2012/03/02 22:53:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.25 2012/03/03 16:07:17 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> genindent-1.1.ebuild:
+  Marking genindent-1.1 ppc64 for bug 396851
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> genindent-1.1.ebuild:
   Stable on alpha, bug #396851
