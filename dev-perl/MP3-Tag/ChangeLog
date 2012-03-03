@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MP3-Tag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.50 2012/02/12 15:03:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.51 2012/03/03 14:17:06 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> MP3-Tag-1.130.0.ebuild:
+  Marking MP3-Tag-1.130.0 ppc64 for bug 400165
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> MP3-Tag-1.12.ebuild,
   MP3-Tag-1.130.0.ebuild:
