@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.101 2012/02/19 09:09:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.102 2012/03/03 14:15:10 pesa Exp $
+
+*smplayer-0.7.1 (03 Mar 2012)
+
+  03 Mar 2012; Davide Pesavento <pesa@gentoo.org> +smplayer-0.7.1.ebuild:
+  Version bump by Ben de Groot <yngwin@gmail.com>.
 
   18 Feb 2012; Tobias Klausmann <klausman@gentoo.org> smplayer-0.6.9-r2.ebuild:
   Keyworded on alpha, bug #383945
