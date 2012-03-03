@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.9 2012/03/02 21:15:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.10 2012/03/03 12:56:17 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -42,7 +42,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb caps dlz doc geoip gost gssapi idn ipv6 ldap mysql odbc pkcs11 postgres rpz sdb-ldap
-selinux ssl static-libs threads urandom xml"
+selinux ssl threads urandom xml"
 
 REQUIRED_USE="postgres? ( dlz )
 	berkdb? ( dlz )
@@ -168,7 +168,6 @@ src_configure() {
 		$(use_with pkcs11) \
 		$(use_enable caps linux-caps) \
 		$(use_with gost) \
-		$(use_enable static-libs static) \
 		${myconf}
 
 	# bug #151839
@@ -238,11 +237,6 @@ src_install() {
 	rm -f "${D}"/usr/share/man/man8/{dnssec-keygen,nsupdate}.8*
 	rm -f "${D}"/usr/bin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 	rm -f "${D}"/usr/sbin/{dig,host,nslookup,dnssec-keygen,nsupdate}
-
-	# bug 405251, library archives aren't properly handled by --enable/disable-static
-	if ! use static-libs; then
-		find "${D}" -type f -name '*.la' -delete || die
-	fi
 
 	dosym /var/bind/named.cache /var/bind/root.cache || die
 	dosym /var/bind/pri /etc/bind/pri || die
