@@ -1,0 +1,17 @@
+#DPATCHLEVEL=1
+--- svgalib-1.4.3.orig/src/Makefile
++++ svgalib-1.4.3/src/Makefile
+@@ -471,9 +471,11 @@
+ vga.o: vga.c
+ 	$(CC) $(CFLAGS) $(VGA_DEFINES) -c -o $@ $<
+ 
+-#lrmi must NOT be compiled as -fPIC
++# XXX: Upstream used this so it may break, disabled to close an RC
++# lrmi must NOT be compiled as -fPIC
+ lrmi.o: lrmi.c
+-	$(CC) $(CFLAGS:-fPIC=) -c -o $@ $<
++	$(CC) $(CFLAGS) -c -o $@ $<
++#	$(CC) $(CFLAGS:-fPIC=) -c -o $@ $<
+ 
+ $(RAMDAC): %.o: %.c
+ 	$(CC) $(CFLAGS) $(RAMDAC_DEFINES) -c -o $@ $<
