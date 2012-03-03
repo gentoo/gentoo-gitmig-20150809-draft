@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_LDAP2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/ChangeLog,v 1.11 2012/03/01 19:54:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/ChangeLog,v 1.12 2012/03/03 20:30:37 klausman Exp $
+
+  03 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
+  PEAR-Net_LDAP2-2.0.12.ebuild:
+  Stable on alpha, bug #394067
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> PEAR-Net_LDAP2-2.0.12.ebuild:
   Marking PEAR-Net_LDAP2-2.0.12 ppc for bug 394067

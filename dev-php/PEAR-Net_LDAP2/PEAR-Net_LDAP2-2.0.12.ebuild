@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/PEAR-Net_LDAP2-2.0.12.ebuild,v 1.5 2012/03/01 19:54:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/PEAR-Net_LDAP2-2.0.12.ebuild,v 1.6 2012/03/03 20:30:37 klausman Exp $
 
 EAPI="4"
 
 inherit php-pear-r1
 
-KEYWORDS="~alpha amd64 hppa ppc ~sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ~sparc x86"
 
 DESCRIPTION="OO interface for searching and manipulating LDAP-entries"
 LICENSE="LGPL-2.1"
