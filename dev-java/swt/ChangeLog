@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/swt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.138 2011/11/17 23:23:50 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.139 2012/03/03 22:10:27 caster Exp $
+
+*swt-3.7.2 (03 Mar 2012)
+
+  03 Mar 2012; Vlastimil Babka <caster@gentoo.org> +swt-3.7.2.ebuild:
+  Version bump.
 
 *swt-3.7.1 (17 Nov 2011)
 
