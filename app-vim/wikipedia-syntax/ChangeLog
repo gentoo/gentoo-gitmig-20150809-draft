@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/wikipedia-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/wikipedia-syntax/ChangeLog,v 1.18 2012/02/01 21:00:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/wikipedia-syntax/ChangeLog,v 1.19 2012/03/03 16:06:25 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org>
+  wikipedia-syntax-20101113.ebuild:
+  Marking wikipedia-syntax-20101113 ppc64 for bug 393721
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org>
   wikipedia-syntax-20101113.ebuild:
