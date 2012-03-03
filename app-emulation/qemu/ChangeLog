@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.106 2012/03/01 23:38:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.107 2012/03/03 17:19:52 lu_zero Exp $
+
+*qemu-1.0.1 (03 Mar 2012)
+
+  03 Mar 2012; Luca Barbato <lu_zero@gentoo.org> +qemu-1.0.1.ebuild:
+  New version
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> qemu-0.11.1.ebuild:
   Marking qemu-0.11.1 ppc for bug 356685
