@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.20 2012/02/24 19:30:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.21 2012/03/03 15:49:27 maekke Exp $
+
+  03 Mar 2012; Markus Meier <maekke@gentoo.org> pax-3.4.12.16.ebuild:
+  arm stable, bug #404599
 
   24 Feb 2012; Brent Baude <ranger@gentoo.org> pax-3.4.12.16.ebuild:
   Marking pax-3.4.12.16 ppc for bug 404599
