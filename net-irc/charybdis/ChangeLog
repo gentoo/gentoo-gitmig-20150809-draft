@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/charybdis
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.12 2012/03/03 06:14:56 binki Exp $
+
+*charybdis-3.3.0 (03 Mar 2012)
+
+  03 Mar 2012; Nathan Phillip Brink <binki@gentoo.org> +charybdis-3.3.0.ebuild,
+  +files/charybdis.confd, +files/charybdis.initd, +metadata.xml:
+  Add net-irc/charybdis-3.3.0, a ratbox-based IRCd from atheme, for bug
+  #340611.
+
