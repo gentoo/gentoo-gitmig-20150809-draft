@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/shadowircd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/shadowircd/ChangeLog,v 1.2 2012/03/03 07:10:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/shadowircd/ChangeLog,v 1.3 2012/03/03 10:53:56 jdhore Exp $
+
+  03 Mar 2012; Jeff Horelick <jdhore@gentoo.org> files/shadowircd.initd:
+  Fix a small typo.
 
   03 Mar 2012; Jeff Horelick <jdhore@gentoo.org> files/shadowircd.confd,
   files/shadowircd.initd, shadowircd-6.3.2.1.ebuild:
