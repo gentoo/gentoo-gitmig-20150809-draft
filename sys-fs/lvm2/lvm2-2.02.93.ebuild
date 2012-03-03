@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.93.ebuild,v 1.1 2012/03/01 06:25:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.93.ebuild,v 1.2 2012/03/03 07:39:22 ssuominen Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -34,7 +34,8 @@ RDEPEND="${RDEPEND}
 
 DEPEND="${DEPEND_COMMON}
 		dev-util/pkgconfig
-		>=sys-devel/binutils-2.20.1-r1"
+		>=sys-devel/binutils-2.20.1-r1
+		static? ( || ( >=sys-fs/udev-181[static-libs] <sys-fs/udev-181 ) )"
 
 S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
 
