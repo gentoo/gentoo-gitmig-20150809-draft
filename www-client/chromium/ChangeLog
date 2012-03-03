@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.569 2012/03/02 21:03:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.570 2012/03/03 06:47:00 phajdan.jr Exp $
+
+  03 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-glib-r0.patch:
+  Add missing patch, reported by floppym.
 
   02 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-18.0.1025.45.ebuild:
