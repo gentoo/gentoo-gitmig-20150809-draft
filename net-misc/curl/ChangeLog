@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.203 2012/02/04 15:30:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.204 2012/03/03 15:30:40 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> curl-7.24.0.ebuild:
+  Marking curl-7.24.0 ppc64 for bug 400799
 
   04 Feb 2012; Raúl Porcel <armin76@gentoo.org> curl-7.24.0.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #400799
