@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby-enterprise
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ChangeLog,v 1.13 2012/01/14 17:25:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ChangeLog,v 1.14 2012/03/03 08:21:53 graaff Exp $
+
+*ruby-enterprise-1.8.7.2012.02 (03 Mar 2012)
+
+  03 Mar 2012; Hans de Graaff <graaff@gentoo.org>
+  +ruby-enterprise-1.8.7.2012.02.ebuild:
+  Version bump.
 
   14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   tcmalloc is now global
