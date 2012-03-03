@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-basic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.61 2012/03/02 19:23:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.62 2012/03/03 13:09:05 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-basic-2011-r1.ebuild:
+  Marking texlive-basic-2011-r1 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-basic-2011-r1.ebuild:
   Marking texlive-basic-2011-r1 ppc stable for bug 395735
