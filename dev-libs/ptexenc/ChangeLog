@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ptexenc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.23 2012/03/02 19:21:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.24 2012/03/03 13:07:04 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> ptexenc-1.2.0_p20110705.ebuild:
+  Marking ptexenc-1.2.0_p20110705 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> ptexenc-1.2.0_p20110705.ebuild:
   Marking ptexenc-1.2.0_p20110705 ppc stable for bug 395735
