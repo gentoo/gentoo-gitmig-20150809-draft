@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-texinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/ChangeLog,v 1.50 2012/03/02 20:17:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/ChangeLog,v 1.51 2012/03/03 14:02:56 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-texinfo-2011.ebuild:
+  Marking texlive-texinfo-2011 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-texinfo-2011.ebuild:
   Marking texlive-texinfo-2011 ppc stable for bug 395735
