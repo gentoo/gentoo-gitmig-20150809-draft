@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6267 2012/03/03 08:17:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6268 2012/03/03 08:21:24 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,9 @@
 
   03 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> updates/1Q-2012:
   konq-plugins is in kde-base now
+
+  03 Mar 2012; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Fix broken atom.
 
   03 Mar 2012; Hans de Graaff <graaff@gentoo.org> package.mask:
   Add new ruby-enterprise release to the test mask.
