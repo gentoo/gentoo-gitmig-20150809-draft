@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.37 2012/02/14 23:06:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.38 2012/03/03 14:47:11 maekke Exp $
+
+  03 Mar 2012; Markus Meier <maekke@gentoo.org> byacc-20120115.ebuild:
+  arm stable, bug #402039
 
   14 Feb 2012; Tim Harder <radhermit@gentoo.org> byacc-20120115.ebuild:
   Add ~arm to new version as well.
