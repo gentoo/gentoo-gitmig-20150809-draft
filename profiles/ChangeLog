@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6271 2012/03/03 15:04:58 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6272 2012/03/03 16:25:23 nelchael Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org> package.mask:
+  Remove mask for dev-python/pisa.
 
   03 Mar 2012; Ole Markus With <olemarkus@gentoo.org> package.mask:
   Removing mask of unstable pecl-memcached

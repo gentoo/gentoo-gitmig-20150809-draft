@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13540 2012/03/03 15:04:58 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13541 2012/03/03 16:25:23 nelchael Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -250,11 +250,6 @@ www-apps/twiki
 # in 60 days.
 # Alternatives: dev-db/pgadmin3 or dev-db/phppgadmin
 dev-db/pgaccess
-
-# Krzysztof Pawlik <nelchael@gentoo.org> (27 Jan 2012)
-# Deprecated, please migrate your code to dev-python/xhtml2pdf.
-# Removal by end of February.
-dev-python/pisa
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jan 2012)
 # Mask compiz for last-rites unless someone steps up
