@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/openlierox-0.58_rc1.ebuild,v 1.3 2010/05/27 17:56:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/openlierox-0.58_rc1.ebuild,v 1.4 2012/03/03 01:28:03 sping Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="X breakpad debug joystick"
 
 RDEPEND="media-libs/sdl-mixer
 	media-libs/sdl-image
-	media-libs/gd[png]
+	media-libs/gd[jpeg,png]
 	dev-libs/libxml2
 	dev-libs/libzip
 	net-misc/curl

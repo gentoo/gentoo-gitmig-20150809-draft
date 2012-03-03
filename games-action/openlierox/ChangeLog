@@ -1,6 +1,12 @@
 # ChangeLog for games-action/openlierox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/ChangeLog,v 1.9 2011/07/28 21:25:51 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/ChangeLog,v 1.10 2012/03/03 01:28:03 sping Exp $
+
+  03 Mar 2012; Sebastian Pipping <sping@gentoo.org>
+  openlierox-0.58_beta9-r1.ebuild, openlierox-0.58_rc1.ebuild,
+  openlierox-0.58_rc1-r1.ebuild, openlierox-0.58_rc3.ebuild:
+  Ensure JPEG support from GD. Patch and report by Piotr Szymaniak (bug
+  #406671)
 
 *openlierox-0.58_rc3 (28 Jul 2011)
 
