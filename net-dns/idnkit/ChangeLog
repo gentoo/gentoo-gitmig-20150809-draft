@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.39 2012/03/02 20:58:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.40 2012/03/03 18:17:01 jer Exp $
+
+  03 Mar 2012; Jeroen Roovers <jer@gentoo.org> -idnkit-1.0-r1.ebuild:
+  Old.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> idnkit-1.0-r2.ebuild:
   Marking idnkit-1.0-r2 ppc64 for bug 400433
