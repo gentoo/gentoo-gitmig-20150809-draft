@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.204 2012/03/02 20:30:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.205 2012/03/03 15:38:01 maekke Exp $
+
+  03 Mar 2012; Markus Meier <maekke@gentoo.org> findutils-4.4.2-r1.ebuild:
+  arm stable, bug #404199
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> findutils-4.4.2-r1.ebuild:
   Marking findutils-4.4.2-r1 ppc64 for bug 404199
