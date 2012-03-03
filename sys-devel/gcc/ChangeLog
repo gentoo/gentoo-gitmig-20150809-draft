@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.861 2012/03/02 20:35:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.862 2012/03/03 16:00:19 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> gcc-4.5.3-r2.ebuild:
+  Marking gcc-4.5.3-r2 ppc64 for bug 402847
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> gcc-4.4.6-r1.ebuild:
   Marking gcc-4.4.6-r1 ppc64 for bug 405849
