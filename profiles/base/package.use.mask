@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.316 2012/02/25 20:57:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.317 2012/03/03 07:28:31 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -292,10 +292,6 @@ media-video/totem tracker
 # Broken on so many setups it is just insane.
 # Unmask if you really know what you are doing.
 <sys-apps/groff-1.20.1-r2 linguas_ja
-
-# Samuli Suominen <ssuominen@gentoo.org) (14 Oct 2009)
-# Conflict with dev-libs/libffi in ld.so.conf.
-sys-devel/gcc libffi
 
 # Samuli Suominen <ssuominen@gentoo.org> (09 Oct 2009)
 # log4cxx has known memory leaking issues wrt bug #287697,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.91 2012/01/31 22:09:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.92 2012/03/03 07:29:34 ssuominen Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -77,10 +77,6 @@ media-gfx/imagemagick openmp
 # Jeroen Roovers <jer@gentoo.org> (06 May 2009)
 # Mask webkit-gtk dependency for net-libs/libproxy:
 net-libs/libproxy webkit
-
-# Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
-# build fails (bug #210880):
-<sys-devel/gcc-4.3 libffi
 
 # Jeroen Roovers <jer@gentoo.org> (15 Apr 2008)
 # media-sound/fluidsynth fails to build with stable libtool, so it can't be
