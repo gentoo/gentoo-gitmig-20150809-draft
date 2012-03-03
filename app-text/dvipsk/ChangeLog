@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipsk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.23 2012/03/02 19:20:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.24 2012/03/03 13:05:45 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org>
+  dvipsk-5.991_p20110705-r1.ebuild:
+  Marking dvipsk-5.991_p20110705-r1 ppc64 stable for bug 395735
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org>
   dvipsk-5.991_p20110705-r1.ebuild:
