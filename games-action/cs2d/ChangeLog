@@ -1,6 +1,9 @@
 # ChangeLog for games-action/cs2d
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/ChangeLog,v 1.1 2011/09/18 12:53:25 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/ChangeLog,v 1.2 2012/03/03 13:39:26 maksbotan Exp $
+
+  03 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> cs2d-0119.ebuild:
+  Add app-arch/unzip DEPEND, bug #406677. Thanks to szarpaj@grubelek.pl
 
 *cs2d-0119 (18 Sep 2011)
 
