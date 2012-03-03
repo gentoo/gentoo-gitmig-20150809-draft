@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.80 2012/02/18 18:05:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.81 2012/03/03 12:09:31 pacho Exp $
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org> beecrypt-4.2.1.ebuild:
+  Run java-pkg-opt-2_pkg_setup to use jdk when compiling, bug #401803 by DrSlony
+  and fix by Ralph Sennhauser.
 
   18 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> beecrypt-4.2.1.ebuild:
   Add mising python_pkg_setup wrt bug#404385.
