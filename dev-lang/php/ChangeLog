@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.569 2012/03/03 15:32:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.570 2012/03/03 15:53:00 olemarkus Exp $
+
+  03 Mar 2012; Ole Markus With <olemarkus@gentoo.org> -php-5.3.9.ebuild,
+  -php-5.4.0_rc8.ebuild:
+  Removed older versions
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> php-5.3.10.ebuild:
   Marking php-5.3.10 ppc64 for bug 401997
