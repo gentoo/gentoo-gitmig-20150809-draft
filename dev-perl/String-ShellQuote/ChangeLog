@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/String-ShellQuote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-ShellQuote/ChangeLog,v 1.37 2012/02/27 16:39:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-ShellQuote/ChangeLog,v 1.38 2012/03/03 14:23:15 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> String-ShellQuote-1.40.0.ebuild:
+  Marking String-ShellQuote-1.40.0 ppc64 for bug 400219
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> String-ShellQuote-1.40.0.ebuild:
   Marking String-ShellQuote-1.40.0 ppc for bug 400219
