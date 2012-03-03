@@ -1,10 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r3.ebuild,v 1.1 2008/04/02 07:56:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r4.ebuild,v 1.1 2012/03/03 12:53:16 pacho Exp $
 
-inherit eutils
+EAPI=4
+inherit eutils autotools
 
-IUSE="clamav"
+IUSE="clamav ssl transparent"
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -16,28 +17,39 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="clamav? ( >=app-antivirus/clamav-0.80 )"
+DEPEND="clamav? ( >=app-antivirus/clamav-0.80 )
+	ssl? ( dev-libs/openssl )
+	kernel_linux? ( >=sys-kernel/linux-headers-2.6 )"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	enewgroup ftpproxy
 	enewuser ftpproxy -1 -1 /var/spool/frox ftpproxy
+
+	use clamav && ewarn "Virus scanner potentialy broken in chroot - see bug #81035"
 }
 
-src_compile() {
+src_prepare () {
+	epatch "${FILESDIR}"/${PV}-respect-CFLAGS.patch
+	epatch "${FILESDIR}"/${PV}-netfilter-includes.patch
 
+	eautoreconf
+}
+
+src_configure() {
 	econf \
-		--sbindir=/usr/sbin \
-		--localstatedir=/var/run \
-		--sysconfdir=/etc \
 		--enable-http-cache --enable-local-cache \
-		--enable-transparent-data \
-		$(use_enable clamav virus-scan) || die "bad ./configure"
-
-	emake || die "compile problem"
+		--enable-procname \
+		--enable-configfile=/etc/frox.conf \
+		$(use_enable !kernel_linux libiptc) \
+		$(use_enable clamav virus-scan) \
+		$(use_enable ssl) \
+		$(use_enable transparent transparent-data) \
+		$(use_enable !transparent ntp)
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install
 
 	keepdir /var/run/frox
 	keepdir /var/spool/frox
@@ -63,11 +75,10 @@ src_install() {
 	cd src
 	epatch ${FILESDIR}/config-${PV}.patch || die "config patch failed"
 
-	if use clamav; then
-		sed -e "s:^# VirusScanner.*:# VirusScanner '\"/usr/bin/clamscan\" \"%s\"':" \
-			frox.conf > ${D}/etc/frox.conf.example
-		ewarn "Virus scanner potentialy broken in chroot - see bug #81035."
-	else
-		cp frox.conf ${D}/etc/frox.conf.example
+	cp frox.conf ${D}/etc/frox.conf.example
+	if use clamav ; then
+		sed -i \
+		  -e "s:^# VirusScanner.*:# VirusScanner '\"/usr/bin/clamscan\" \"%s\"':" \
+			${D}/etc/frox.conf.example || die
 	fi
 }

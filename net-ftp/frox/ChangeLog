@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/frox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.16 2011/07/20 14:44:12 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.17 2012/03/03 12:53:16 pacho Exp $
+
+*frox-0.7.18-r4 (03 Mar 2012)
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/0.7.18-netfilter-includes.patch, +files/0.7.18-respect-CFLAGS.patch,
+  +frox-0.7.18-r4.ebuild, -frox-0.7.18-r3.ebuild, metadata.xml:
+  Respect CFLAGS, add transparent support and more fixes, bug #406483 by
+  Bertrand Jacquin. Drop old.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
