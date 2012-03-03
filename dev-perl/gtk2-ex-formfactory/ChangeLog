@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-ex-formfactory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/ChangeLog,v 1.32 2012/02/27 22:06:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/ChangeLog,v 1.33 2012/03/03 14:37:57 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org>
+  gtk2-ex-formfactory-0.670.0.ebuild:
+  Marking gtk2-ex-formfactory-0.670.0 ppc64 for bug 400293
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org>
   gtk2-ex-formfactory-0.670.0.ebuild:
