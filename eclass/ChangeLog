@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.152 2012/03/03 02:29:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.153 2012/03/03 22:39:14 caster Exp $
+
+  03 Mar 2012; Vlastimil Babka <caster@gentoo.org> ant-tasks.eclass:
+  Add support for ANT_TASK_DISABLE_VM_DEPS variable - when enabled, the jdk/jre
+  deps are not added by eclass.
 
   03 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Prevent bundled libffi from being installed with gcj or gccgo (bug #354903 by

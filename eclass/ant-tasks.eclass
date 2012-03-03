@@ -1,9 +1,9 @@
 # Eclass for building dev-java/ant-* packages
 #
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Vlastimil Babka <caster@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.10 2012/02/16 22:25:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.11 2012/03/03 22:39:14 caster Exp $
 
 # we set ant-core dep ourselves, restricted
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
@@ -60,6 +60,13 @@ ANT_TASK_NAME="${PN#ant-}"
 ANT_TASK_DEPNAME=${ANT_TASK_DEPNAME-${ANT_TASK_NAME}}
 
 # -----------------------------------------------------------------------------
+# @variable-preinherit ANT_TASK_DISABLE_VM_DEPS
+# @variable-default unset
+#
+# If set, no JDK/JRE deps are added.
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
 # @variable-internal ANT_TASK_PV
 # @variable-default Just the number in $PV without any beta/RC suffixes
 #
@@ -99,10 +106,15 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=virtual/jre-${ANT_TASK_JREVER}
-	~dev-java/ant-core-${PV}"
-DEPEND=">=virtual/jdk-${ANT_TASK_JDKVER}
-	${RDEPEND}"
+RDEPEND="~dev-java/ant-core-${PV}"
+DEPEND="${RDEPEND}"
+
+if [[ -z "${ANT_TASK_DISABLE_VM_DEPS}" ]]; then
+	RDEPEND=">=virtual/jre-${ANT_TASK_JREVER}
+		${DEPEND}"
+	DEPEND=">=virtual/jdk-${ANT_TASK_JDKVER}
+		${RDEPEND}"
+fi
 
 # we need direct blockers with old ant-tasks for file collisions - bug #252324
 if version_is_at_least 1.7.1 ; then
