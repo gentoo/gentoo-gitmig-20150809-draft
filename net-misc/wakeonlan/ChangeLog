@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wakeonlan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.23 2012/03/02 14:43:03 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.24 2012/03/03 00:08:14 hwoarang Exp $
+
+  03 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  remove myself from metadata
 
   02 Mar 2012; Ian Stakenvicius <axs@gentoo.org> metadata.xml:
   added new maintainer to metadata

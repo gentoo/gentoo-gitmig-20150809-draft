@@ -6,9 +6,4 @@
   <name>Ian Stakenvicius</name>
   <description>Primary maintainer</description>
 </maintainer>
-<maintainer>
-  <email>hwoarang@gentoo.org</email>
-  <name>Markos Chandras</name>
-  <description>Previous maintainer</description>
-</maintainer>
 </pkgmetadata>
