@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.35 2012/03/02 21:00:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.36 2012/03/03 13:19:31 johu Exp $
+
+  03 Mar 2012; Johannes Huber <johu@gentoo.org> -libzip-0.10.ebuild:
+  Remove old.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> libzip-0.10-r1.ebuild:
   Marking libzip-0.10-r1 ppc64 for bug 396903
