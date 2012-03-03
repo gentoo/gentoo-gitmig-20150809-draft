@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/extutils-depends
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.60 2012/03/02 19:32:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.61 2012/03/03 14:36:14 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> extutils-depends-0.304.0.ebuild:
+  Marking extutils-depends-0.304.0 ppc64 for bug 400283
 
   02 Mar 2012; Markus Meier <maekke@gentoo.org>
   extutils-depends-0.304.0.ebuild:
