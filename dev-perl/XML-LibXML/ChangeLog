@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.124 2012/03/03 14:45:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.125 2012/03/03 14:54:39 maekke Exp $
+
+  03 Mar 2012; Markus Meier <maekke@gentoo.org> XML-LibXML-1.900.0.ebuild:
+  arm stable, bug #404343
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> XML-LibXML-1.900.0.ebuild:
   Marking XML-LibXML-1.900.0 ppc64 for bug 404343
