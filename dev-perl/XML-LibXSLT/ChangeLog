@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.82 2012/02/26 08:50:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.83 2012/03/03 14:45:00 ranger Exp $
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> XML-LibXSLT-1.760.0.ebuild:
+  Marking XML-LibXSLT-1.760.0 ppc64 for bug 404341
 
 *XML-LibXSLT-1.770.0 (26 Feb 2012)
 
