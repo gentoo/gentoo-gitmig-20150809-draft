@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.324 2012/02/10 19:31:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.325 2012/03/03 13:26:09 pacho Exp $
+
+  03 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop pauldv from metadata as talked with him.
 
 *db-5.1.29 (10 Feb 2012)
 
