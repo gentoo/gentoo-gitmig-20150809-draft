@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.52 2012/02/29 23:09:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.53 2012/03/04 21:23:33 floppym Exp $
 
 EAPI=4
 
@@ -170,13 +170,6 @@ src_prepare() {
 	local i j
 
 	epatch_user
-
-	# fix texinfo file name, as otherwise the grub2.info file will be
-	# useless
-	sed -i \
-		-e '/setfilename/s:grub.info:grub2.info:' \
-		-e 's:(grub):(grub2):' \
-		docs/grub.texi
 
 	# autogen.sh does more than just run autotools
 	if [[ -n ${DO_AUTORECONF} ]] ; then

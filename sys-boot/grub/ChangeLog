@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.181 2012/02/29 23:09:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.182 2012/03/04 21:23:33 floppym Exp $
+
+  04 Mar 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00_beta0.ebuild,
+  grub-9999.ebuild:
+  Dont mess with grub.texi; this is causing the live ebuild to not generate any
+  info page at all.
 
   29 Feb 2012; Mike Gilbert <floppym@gentoo.org> grub-0.92-r1.ebuild,
   grub-0.94-r1.ebuild, grub-0.96-r1.ebuild, grub-0.96-r2.ebuild,
