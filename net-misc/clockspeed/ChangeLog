@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/clockspeed
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.28 2011/07/20 17:25:33 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.29 2012/03/04 10:21:29 pacho Exp $
+
+  04 Mar 2012; Pacho Ramos <pacho@gentoo.org> -files/leapsecs.dat.20081114,
+  clockspeed-0.62-r6.ebuild:
+  Move binary file away from CVS tree
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
