@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r300.ebuild,v 1.2 2012/02/11 03:04:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r300.ebuild,v 1.3 2012/03/04 21:09:15 tetromino Exp $
 
 EAPI="4"
 
@@ -84,6 +84,10 @@ src_prepare() {
 
 	# Required for webgl; https://bugs.webkit.org/show_bug.cgi?id=69085
 	mkdir -p DerivedSources/ANGLE
+
+	# Build-time segfaults under PaX with USE="introspection jit", bug #404215
+	epatch "${FILESDIR}/${PN}-1.6.3-paxctl-introspection.patch"
+	cp "${FILESDIR}/gir-paxctl-lt-wrapper" "${S}/" || die
 
 	# We need to reset some variables to prevent permissions problems and failures
 	# like https://bugs.webkit.org/show_bug.cgi?id=35471 and bug #323669

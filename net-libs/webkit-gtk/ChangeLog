@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.140 2012/02/11 03:04:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.141 2012/03/04 21:09:15 tetromino Exp $
+
+  04 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-1.6.3-r200.ebuild, webkit-gtk-1.6.3-r300.ebuild,
+  +files/webkit-gtk-1.6.3-paxctl-introspection.patch,
+  +files/gir-paxctl-lt-wrapper:
+  Fix build problems on PaX with USE="introspection jit" (bug #404215, thanks
+  to Grant and Magnus Granberg) by having g-ir-scanner call a libtool wrapper
+  that disables secure memory protection on generated gir dumper binaries.
 
   11 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   webkit-gtk-1.6.3-r300.ebuild:
