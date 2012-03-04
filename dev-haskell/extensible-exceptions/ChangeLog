@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/extensible-exceptions
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/extensible-exceptions/ChangeLog,v 1.1 2012/03/04 03:11:43 gienah Exp $
+
+*extensible-exceptions-0.1.1.4 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org>
+  +extensible-exceptions-0.1.1.4.ebuild, +metadata.xml:
+  Add extensible-exceptions, with same keywords (except ia64) as ghc 7.4.1 as
+  extensible-exceptions is included in ghc 7.4.1
+
