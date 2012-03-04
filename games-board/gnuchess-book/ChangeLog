@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnuchess-book
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/ChangeLog,v 1.10 2012/03/04 17:43:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/ChangeLog,v 1.11 2012/03/04 17:55:14 sping Exp $
+
+  04 Mar 2012; Sebastian Pipping <sping@gentoo.org> gnuchess-book-1.01.ebuild:
+  Book 1.01 crashes gnuchess 5.9.91/6.0.2 in contrast to book 1.02. So I adjust
+  depencencies of book 1.01 so it cannot be used with these versions of
+  gnuchess
 
 *gnuchess-book-1.02 (04 Mar 2012)
 

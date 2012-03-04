@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/gnuchess-book-1.01.ebuild,v 1.3 2011/03/21 02:47:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/gnuchess-book-1.01.ebuild,v 1.4 2012/03/04 17:55:14 sping Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ppc ppc64 x86"
 IUSE=""
 RESTRICT="userpriv" # bug #112898
 
-DEPEND="games-board/gnuchess"
+DEPEND="<games-board/gnuchess-5.9"
 
 S=${WORKDIR}
 
