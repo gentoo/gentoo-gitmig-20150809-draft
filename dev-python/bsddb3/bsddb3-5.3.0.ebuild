@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-5.3.0.ebuild,v 1.1 2012/03/01 16:42:21 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-5.3.0.ebuild,v 1.2 2012/03/04 11:56:29 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2 3:3.1"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.0 *-jython"
+RESTRICT_PYTHON_ABIS="3.0 *-jython 2.7-pypy-*"
 
 inherit db-use distutils multilib
 
