@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/time
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.25 2012/02/24 09:46:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.26 2012/03/04 04:59:15 gienah Exp $
+
+*time-1.4 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> +time-1.4.ebuild:
+  Bump time to 1.4, with same keywords as ghc 7.4.1 as time 1.4 is included in
+  ghc 7.4.1
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> time-1.2.0.3.ebuild:
   Stable for amd64, wrt bug #399991
