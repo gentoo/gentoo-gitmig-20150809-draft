@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.12.ebuild,v 1.3 2012/02/05 13:45:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.12.ebuild,v 1.4 2012/03/04 10:33:08 pacho Exp $
 
-EAPI="3"
-
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Log parsing and notification program"
@@ -26,8 +25,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-create-mandir.patch"
-	# Fix for bug #218042
-	epatch "${FILESDIR}/${PN}-openrc-init.patch"
+	epatch "${FILESDIR}/${PN}-openrc-init.patch" #218042
+	epatch "${FILESDIR}/${PN}-openrc-init-r1.patch" #398987
 
 	# Fix for bug #241254
 	sed -i 's:^docdir =.*:docdir = /usr/share/doc/${PF}:' \
@@ -35,7 +34,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	fowners tenshi:root /etc/tenshi/tenshi.conf
 	dodir /var/lib/tenshi
 	fowners tenshi:root /var/lib/tenshi
