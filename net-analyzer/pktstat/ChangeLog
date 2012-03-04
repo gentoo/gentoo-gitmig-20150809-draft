@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pktstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.22 2012/03/04 22:22:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.23 2012/03/04 22:25:08 radhermit Exp $
+
+  04 Mar 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove duplicate longdescription that matches DESCRIPTION.
 
 *pktstat-1.8.5 (04 Mar 2012)
 
