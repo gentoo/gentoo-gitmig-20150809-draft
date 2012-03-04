@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.45 2012/02/05 12:14:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.46 2012/03/04 22:48:18 radhermit Exp $
+
+  04 Mar 2012; Tim Harder <radhermit@gentoo.org> -dspam-web-3.8.0-r1.ebuild,
+  -files/htaccess, -files/htpasswd:
+  Remove old.
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> dspam-web-3.8.0-r1.ebuild,
   dspam-web-3.10.1.ebuild:
