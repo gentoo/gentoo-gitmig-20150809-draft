@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.10.ebuild,v 1.5 2012/03/02 19:39:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.10.ebuild,v 1.6 2012/03/04 20:11:13 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/tcl/${MY_P}-src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x86-solaris"
-IUSE="debug static-libs threads"
+IUSE="debug threads"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -95,11 +95,7 @@ src_install() {
 
 	# install symlink for libraries
 	dosym libtcl${v1}$(get_libname) /usr/${mylibdir}/libtcl$(get_libname)
-	if use static-libs; then
-		dosym libtclstub${v1}.a /usr/${mylibdir}/libtclstub.a
-	else
-		rm -f "${ED}"/usr/${mylibdir}/*.a || die
-	fi
+	dosym libtclstub${v1}.a /usr/${mylibdir}/libtclstub.a
 
 	dosym tclsh${v1} /usr/bin/tclsh
 

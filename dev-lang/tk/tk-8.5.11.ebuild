@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.11.ebuild,v 1.1 2012/03/02 15:31:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.11.ebuild,v 1.2 2012/03/04 20:13:49 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit autotools eutils multilib toolchain-funcs prefix
 
@@ -61,8 +61,7 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${S}"/unix
-	emake || die
+	cd "${S}"/unix && emake
 }
 
 src_install() {
@@ -71,7 +70,7 @@ src_install() {
 	v1=${PV%.*}
 
 	cd "${S}"/unix
-	S= emake DESTDIR="${D}" install || die
+	S= emake DESTDIR="${D}" install
 
 	# normalize $S path, bug #280766 (pkgcore)
 	local nS="$(cd "${S}"; pwd)"
@@ -94,20 +93,20 @@ src_install() {
 
 	# install private headers
 	insinto /usr/${mylibdir}/tk${v1}/include/unix
-	doins "${S}"/unix/*.h || die
+	doins "${S}"/unix/*.h
 	insinto /usr/${mylibdir}/tk${v1}/include/generic
-	doins "${S}"/generic/*.h || die
+	doins "${S}"/generic/*.h
 	rm -f "${ED}"/usr/${mylibdir}/tk${v1}/include/generic/tk.h
 	rm -f "${ED}"/usr/${mylibdir}/tk${v1}/include/generic/tkDecls.h
 	rm -f "${ED}"/usr/${mylibdir}/tk${v1}/include/generic/tkPlatDecls.h
 
 	# install symlink for libraries
 	#dosym libtk${v1}.a /usr/${mylibdir}/libtk.a
-	dosym libtk${v1}$(get_libname) /usr/${mylibdir}/libtk$(get_libname) || die
-	dosym libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a || die
+	dosym libtk${v1}$(get_libname) /usr/${mylibdir}/libtk$(get_libname)
+	dosym libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a
 
-	dosym wish${v1} /usr/bin/wish || die
+	dosym wish${v1} /usr/bin/wish
 
 	cd "${S}"
-	dodoc ChangeLog* README changes || die
+	dodoc ChangeLog* README changes
 }

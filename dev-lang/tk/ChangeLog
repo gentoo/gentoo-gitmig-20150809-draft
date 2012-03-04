@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.158 2012/03/02 20:20:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.159 2012/03/04 20:13:49 jlec Exp $
+
+  04 Mar 2012; Justin Lecher <jlec@gentoo.org> tk-8.5.10.ebuild,
+  tk-8.5.11.ebuild:
+  Revert static-libs handling, #406905; push changes from 8.5.10 to .11
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> tk-8.5.10.ebuild:
   Marking tk-8.5.10 ppc64 for bug 406607
