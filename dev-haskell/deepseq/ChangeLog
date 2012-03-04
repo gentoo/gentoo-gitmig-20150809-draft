@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/deepseq
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq/ChangeLog,v 1.3 2011/10/13 11:42:37 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq/ChangeLog,v 1.4 2012/03/04 03:02:27 gienah Exp $
+
+*deepseq-1.3.0.0 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> +deepseq-1.3.0.0.ebuild:
+  Bump deepseq to 1.3.0.0, with same keywords (except ia64) as ghc 7.4.1 as
+  deepseq is included in ghc 7.4.1
 
   13 Oct 2011; Naohiro Aota <naota@gentoo.org> deepseq-1.1.0.2.ebuild:
   Add ~x86-fbsd
