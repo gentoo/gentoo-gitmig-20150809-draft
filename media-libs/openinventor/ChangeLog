@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openinventor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.31 2011/09/13 17:50:43 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.32 2012/03/04 09:52:45 jlec Exp $
+
+  04 Mar 2012; Justin Lecher <jlec@gentoo.org> openinventor-2.1.5.10-r3.ebuild:
+  Adopt deps to unbundled x11-libs/libGLw situation
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #99651
