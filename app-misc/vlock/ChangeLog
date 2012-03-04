@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vlock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.47 2012/03/02 20:37:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.48 2012/03/04 07:31:06 jlec Exp $
+
+  04 Mar 2012; Justin Lecher <jlec@gentoo.org> -vlock-2.2.2-r2.ebuild:
+  Clean old
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> vlock-2.2.3.ebuild:
   Marking vlock-2.2.3 ppc64 for bug 392351
