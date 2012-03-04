@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/npapi-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.11 2012/02/21 16:32:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.12 2012/03/04 19:56:40 mgorny Exp $
+
+  04 Mar 2012; Michał Górny <mgorny@gentoo.org> npapi-sdk-0.27.1.ebuild,
+  npapi-sdk-9999.ebuild:
+  Fix broken SRC_URI.
 
 *npapi-sdk-0.27.1 (21 Feb 2012)
 
