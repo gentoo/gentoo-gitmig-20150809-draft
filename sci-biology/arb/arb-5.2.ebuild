@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.2.ebuild,v 1.3 2011/08/11 21:36:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.2.ebuild,v 1.4 2012/03/04 09:55:06 jlec Exp $
 
 EAPI=4
 
@@ -27,7 +27,9 @@ CDEPEND="app-text/sablotron
 	opengl? (
 		media-libs/glew
 		media-libs/freeglut
-		media-libs/mesa[motif] )"
+		|| (
+			media-libs/mesa[motif]
+			( media-libs/mesa x11-libs/libGLw ) ) )"
 DEPEND="${CDEPEND}
 	sys-process/time"
 RDEPEND="${CDEPEND}

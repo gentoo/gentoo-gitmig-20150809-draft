@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.4 2011/06/20 07:34:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.5 2012/03/04 09:55:06 jlec Exp $
 
 EAPI=2
 
@@ -29,7 +29,9 @@ DEPEND="
 	opengl? (
 		media-libs/glew
 		media-libs/freeglut
-		media-libs/mesa[motif] )"
+		|| (
+			media-libs/mesa[motif]
+			( media-libs/mesa x11-libs/libGLw ) ) )"
 RDEPEND="${DEPEND}
 	sci-visualization/gnuplot"
 # Recommended: libmotif3 gv xfig xterm treetool java

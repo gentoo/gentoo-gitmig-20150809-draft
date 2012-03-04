@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/arb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/ChangeLog,v 1.6 2011/08/11 21:36:06 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/ChangeLog,v 1.7 2012/03/04 09:55:06 jlec Exp $
+
+  04 Mar 2012; Justin Lecher <jlec@gentoo.org> arb-5.1-r1.ebuild,
+  arb-5.2.ebuild:
+  Adopt deps to unbundled x11-libs/libGLw situation
 
   11 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   +files/5.2-libpng15.patch, arb-5.2.ebuild:
