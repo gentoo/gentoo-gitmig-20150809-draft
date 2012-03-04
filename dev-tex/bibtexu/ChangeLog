@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/bibtexu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.23 2012/03/03 13:07:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.24 2012/03/04 15:38:30 klausman Exp $
+
+  04 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
+  bibtexu-3.71_p20110705.ebuild:
+  Stable on alpha, bug #395735
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> bibtexu-3.71_p20110705.ebuild:
   Marking bibtexu-3.71_p20110705 ppc64 stable for bug 395735
