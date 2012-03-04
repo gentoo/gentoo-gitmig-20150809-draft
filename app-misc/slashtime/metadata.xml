@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>java</herd>
 	<maintainer>
-		<email>ken69267@gentoo.org</email>
-		<name>Kenneth Prugh</name>
-	</maintainer>
-	<maintainer>
 		<email>serkan@gentoo.org</email>
 		<name>Serkan Kaba</name>
 	</maintainer>
