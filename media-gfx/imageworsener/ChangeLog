@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imageworsener
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.14 2012/02/26 17:27:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.15 2012/03/04 12:20:07 pacho Exp $
+
+  04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #206112
 
 *imageworsener-0.9.8 (26 Feb 2012)
 
