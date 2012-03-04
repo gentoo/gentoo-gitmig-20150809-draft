@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>tools-portage</herd>
 	<maintainer>
-		<email>brian.dolbec@gmail.com</email>
+		<email>dolsen@gentoo.org</email>
 		<name>Brian Dolbec</name>
 		<description>Upstream Maintainer (please CC on bugs)</description>
 	</maintainer>
