@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.387 2012/03/04 09:40:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.388 2012/03/04 21:09:15 chithanh Exp $
+
+  04 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -mesa-8.0.1-r1.ebuild:
+  Drop broken revision, bug #406641.
 
   04 Mar 2012; Justin Lecher <jlec@gentoo.org> mesa-7.9.2.ebuild,
   mesa-7.10.3.ebuild, mesa-7.11.ebuild, mesa-7.11.2.ebuild:
