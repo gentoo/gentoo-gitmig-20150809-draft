@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12.ebuild,v 1.3 2012/02/08 18:41:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12.ebuild,v 1.4 2012/03/04 05:51:05 mr_bones_ Exp $
 
 EAPI=4
+inherit eutils
 
 MY_P=${P/sdl-/SDL_}
 DESCRIPTION="Simple Direct Media Layer Mixer Library"
@@ -26,6 +27,10 @@ DEPEND=">=media-libs/libsdl-1.2.10
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 media-libs/libogg )"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-wav.patch
+}
 
 src_configure() {
 	econf \

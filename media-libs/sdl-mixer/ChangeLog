@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.87 2012/02/08 18:41:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.88 2012/03/04 05:51:05 mr_bones_ Exp $
+
+  04 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> sdl-mixer-1.2.12.ebuild,
+  +files/sdl-mixer-1.2.12-wav.patch:
+  add upstream patch for failure to load wav situation (bug #406739)
 
   08 Feb 2012; Michael Sterrett <mr_bones_@gentoo.org> sdl-mixer-1.2.12.ebuild:
   correct modplug configure option (bug #402735)
