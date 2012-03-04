@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13542 2012/03/03 18:48:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13543 2012/03/04 00:46:21 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -68,10 +68,6 @@ www-client/arora
 # Dead upstream. Bug 396977. Removing in 30 days.
 dev-php/PEAR-Image_Color
 dev-php/PEAR-Image_Canvas
-
-# Doug Goldstein <cardoe@gentoo.org> (20 Feb 2012)
-# Installs stuff over the top of nvidia-drivers
-=media-video/nvidia-settings-295.20
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Feb 2012)
 # Mask what will be the Xfce Desktop Environment 4.10 for testing
