@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.28 2012/02/06 21:45:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.29 2012/03/04 11:35:07 pacho Exp $
+
+  04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #112268
 
 *debhelper-9.20120115 (06 Feb 2012)
 
