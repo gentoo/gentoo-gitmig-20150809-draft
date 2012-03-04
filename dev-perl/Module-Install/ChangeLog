@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Module-Install
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.14 2012/02/28 15:08:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.15 2012/03/04 14:06:26 tove Exp $
+
+*Module-Install-1.60.0 (04 Mar 2012)
+
+  04 Mar 2012; Torsten Veller <tove@gentoo.org> +Module-Install-1.60.0.ebuild:
+  Version bump
 
 *Module-Install-1.50.0 (28 Feb 2012)
 
