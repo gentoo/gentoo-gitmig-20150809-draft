@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.386 2012/03/03 12:33:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.387 2012/03/04 09:40:23 jlec Exp $
+
+  04 Mar 2012; Justin Lecher <jlec@gentoo.org> mesa-7.9.2.ebuild,
+  mesa-7.10.3.ebuild, mesa-7.11.ebuild, mesa-7.11.2.ebuild:
+  block x11-libs/libGLw with USE=motif
 
 *mesa-8.0.1-r2 (03 Mar 2012)
 

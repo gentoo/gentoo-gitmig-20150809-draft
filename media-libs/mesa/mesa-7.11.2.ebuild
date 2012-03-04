@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.8 2012/02/19 14:20:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.9 2012/03/04 09:40:23 jlec Exp $
 
 EAPI=3
 
@@ -70,7 +70,9 @@ RDEPEND="${EXTERNAL_DEPEND}
 	x11-libs/libXi
 	x11-libs/libXmu
 	x11-libs/libXxf86vm
-	motif? ( x11-libs/openmotif )
+	motif? (
+		x11-libs/openmotif
+		!x11-libs/libGLw )
 	gallium? (
 		llvm? ( >=sys-devel/llvm-2.8 )
 	)
