@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.523 2012/03/04 05:40:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.524 2012/03/04 18:46:55 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1500,13 +1500,15 @@ toolchain_src_install() {
 		[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
 
 		if [[ -f ${CTARGET}-${x} ]] ; then
-			ln -sf ${CTARGET}-${x} ${x}
+			if ! is_crosscompile ; then
+				ln -sf ${CTARGET}-${x} ${x}
+				dosym ${BINPATH}/${CTARGET}-${x} \
+					/usr/bin/${x}-${GCC_CONFIG_VER}
+			fi
 
 			# Create version-ed symlinks
 			dosym ${BINPATH}/${CTARGET}-${x} \
 				/usr/bin/${CTARGET}-${x}-${GCC_CONFIG_VER}
-			dosym ${BINPATH}/${CTARGET}-${x} \
-				/usr/bin/${x}-${GCC_CONFIG_VER}
 		fi
 
 		if [[ -f ${CTARGET}-${x}-${GCC_CONFIG_VER} ]] ; then
