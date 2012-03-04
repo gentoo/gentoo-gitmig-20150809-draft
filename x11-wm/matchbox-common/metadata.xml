@@ -5,8 +5,4 @@
 <use>
 	<flag name='pda'>Support for pda folders</flag>
 </use>
-<maintainer>
-<email>yvasilev@gentoo.org</email>
-<name>Yuri Vasilevski</name>
-</maintainer>
 </pkgmetadata>

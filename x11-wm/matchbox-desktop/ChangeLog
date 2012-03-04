@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/matchbox-desktop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-desktop/ChangeLog,v 1.8 2012/02/21 16:11:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-desktop/ChangeLog,v 1.9 2012/03/04 11:51:14 pacho Exp $
+
+  04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #112268
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> matchbox-desktop-0.9.1.ebuild:
   Stable for amd64, wrt bug #309407
