@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/text
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.5 2012/01/12 17:09:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.6 2012/03/04 12:53:21 slyfox Exp $
+
+  04 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> text-0.11.1.12.ebuild:
+  Keyworded ~alpha/~ia64/~ppc/~ppc64/~sparc (dev-vcs/darcs-2.5 depend)
 
   12 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> text-0.11.1.12.ebuild:
   Restored accidentally dropped ~x86-fbsd ~x86-macos keywords.
