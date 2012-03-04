@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.15 2011/09/14 11:31:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.16 2012/03/04 09:16:22 pacho Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/oob-segfault-fbv-${PV}.diff \
-		"${FILESDIR}"/${P}-libpng15.patch
+		"${FILESDIR}"/${P}-libpng15.patch \
+		"${FILESDIR}"/${P}-cc.patch
 
 	sed -i -e 's:-lungif:-lgif:g' configure Makefile || die
 }
@@ -35,6 +36,8 @@ src_configure() {
 	use jpeg || myconf="${myconf} --without-libjpeg"
 
 	./configure \
+		--cc="$(tc-getCC)" \
+		--libs="${LDFLAGS}" \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
