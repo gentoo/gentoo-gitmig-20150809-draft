@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1.ebuild,v 1.1 2012/03/04 05:49:54 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1.ebuild,v 1.2 2012/03/04 14:32:50 gienah Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -525,7 +525,7 @@ src_install() {
 
 		dodoc "${S}/README" "${S}/ANNOUNCE" "${S}/LICENSE" "${S}/VERSION"
 
-		dobashcompletion "${FILESDIR}/ghc-bash-completion"
+		dobashcomp "${FILESDIR}/ghc-bash-completion"
 
 	fi
 
@@ -567,8 +567,6 @@ pkg_postinst() {
 		ewarn "\e[1;31m************************************************************************\e[0m"
 		ewarn
 	fi
-
-	bash-completion_pkg_postinst
 }
 
 pkg_prerm() {
