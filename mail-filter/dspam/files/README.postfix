@@ -1,7 +1,0 @@
-Postfix will deliver to mailbox_transport as user 'nobody'. 
-This is set by the option 'default_privs'.
-
-Postfix is installed setuid root setgid dspam.
-Add 'nobody' to /etc/mail/dspam/trusted.users
-
-mailbox_transport = /usr/bin/dspam --user %u --deliver=innocent --mode=teft --feature=chained,noise,whitelist
