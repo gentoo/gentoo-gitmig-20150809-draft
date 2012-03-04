@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/httpd-shed
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/httpd-shed/ChangeLog,v 1.1 2012/03/04 03:50:41 gienah Exp $
+
+*httpd-shed-0.4 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> +httpd-shed-0.4.ebuild,
+  +metadata.xml:
+  Add httpd-shed, which is used in testing http. With same keywords as http as
+  http is a darcs dependency.
+
