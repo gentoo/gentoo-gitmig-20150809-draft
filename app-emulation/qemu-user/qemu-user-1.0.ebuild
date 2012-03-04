@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.0.ebuild,v 1.1 2012/02/28 13:55:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.0.ebuild,v 1.2 2012/03/04 05:02:22 mr_bones_ Exp $
 
 EAPI=4
 
@@ -26,7 +26,6 @@ IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 for target in ${IUSE_USER_TARGETS}; do
 	IUSE="${IUSE} +qemu_user_targets_${target}"
 done
-
 
 DEPEND="app-text/texi2html
 	dev-util/pkgconfig
