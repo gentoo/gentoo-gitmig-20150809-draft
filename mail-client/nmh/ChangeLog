@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nmh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.29 2011/08/11 11:04:01 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.30 2012/03/04 15:20:28 eras Exp $
+
+  04 Mar 2012; Eray Aslan <eras@gentoo.org> metadata.xml:
+  add net-mail to maintainers
 
   11 Aug 2011; Ulrich Mueller <ulm@gentoo.org> nmh-1.3-r3.ebuild:
   Update dependency following package move of editor-wrapper. Use wrapper
