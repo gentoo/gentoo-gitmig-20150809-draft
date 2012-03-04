@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2.ebuild,v 1.4 2011/10/11 21:28:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2.ebuild,v 1.5 2012/03/04 20:22:27 tupone Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -31,9 +31,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		x11-libs/libXxf86vm
 		opengl? ( virtual/opengl
 			virtual/glu )
-	)
-	!media-libs/allegrogl
-	!media-libs/jpgalleg"
+	)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	X? (
@@ -46,6 +44,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-shared.patch \
 		"${FILESDIR}"/${P}-underlink.patch \
+		"${FILESDIR}"/${P}-gentoo.patch \
 		"${FILESDIR}"/${P}-rpath.patch
 
 	sed -i \
