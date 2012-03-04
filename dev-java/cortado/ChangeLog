@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cortado
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cortado/ChangeLog,v 1.2 2012/03/03 20:39:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cortado/ChangeLog,v 1.3 2012/03/04 15:16:54 tupone Exp $
+
+  04 Mar 2012; Tupone Alfredo <tupone@gentoo.org> cortado-0.6.0.ebuild:
+  Removing git usage. Should fix bug #356441 comment 6 by Sander Sweers
 
   03 Mar 2012; Tupone Alfredo <tupone@gentoo.org> cortado-0.6.0.ebuild:
   Adding ~amd64 keyword

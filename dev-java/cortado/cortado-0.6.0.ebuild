@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cortado/cortado-0.6.0.ebuild,v 1.2 2012/03/03 20:39:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cortado/cortado-0.6.0.ebuild,v 1.3 2012/03/04 15:16:54 tupone Exp $
 
 EAPI=2
 
@@ -25,6 +25,11 @@ DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
 
 EANT_BUILD_TARGET=stripped
+
+src_prepare() {
+	echo "#!/bin/sh" > scripts/get-revision
+	echo "echo ${PV}"    >> scripts/get-revision
+}
 
 src_install() {
 	java-pkg_newjar output/dist/applet/${PN}-ovt-stripped-${PV}.jar
