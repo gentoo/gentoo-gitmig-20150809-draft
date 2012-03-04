@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r1.ebuild,v 1.1 2012/02/28 22:55:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r1.ebuild,v 1.2 2012/03/04 03:55:25 blueness Exp $
 
 EAPI="4"
 
@@ -139,7 +139,7 @@ src_install() {
 	keepdir /var/lib/racoon
 	newconfd "${FILESDIR}"/racoon.conf.d racoon
 	newinitd "${FILESDIR}"/racoon.init.d racoon
-	newpamd "${FILESDIR}"/racoon.pam.d racoon
+	use pam && newpamd "${FILESDIR}"/racoon.pam.d racoon
 
 	dodoc ChangeLog README NEWS
 	dodoc -r src/racoon/samples
