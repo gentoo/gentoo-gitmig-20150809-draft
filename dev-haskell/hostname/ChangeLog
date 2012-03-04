@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hostname
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hostname/ChangeLog,v 1.1 2012/01/22 13:56:09 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hostname/ChangeLog,v 1.2 2012/03/04 04:28:14 gienah Exp $
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> hostname-1.0.ebuild:
+  Add ~ppc64 keyword, EAPI=4
 
 *hostname-1.0 (22 Jan 2012)
 
