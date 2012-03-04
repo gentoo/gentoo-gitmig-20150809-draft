@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.9 2012/02/09 12:17:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.10 2012/03/04 11:13:57 maksbotan Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Azoth, the modular IM client for LeechCraft."
 SLOT="0"
 KEYWORDS=""
 IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
-		+depester +embedmedia +herbicide +hili +isterique +juick +lastseen
+		+depester +embedmedia +herbicide +hili +isterique +juick +keeso +lastseen
 		+metacontacts +modnok +nativeemoticons +otroid +p100q +rosenthal
 		+standardstyles +xoox +xtazy +zheet"
 
@@ -26,6 +26,10 @@ DEPEND="~net-misc/leechcraft-core-${PV}
 		crypt? ( app-crypt/qca app-crypt/qca-gnupg )
 		zheet? ( net-libs/libmsn )"
 RDEPEND="${DEPEND}
+	astrality? (
+		net-im/telepathy-mission-control
+		net-voip/telepathy-haze
+	)
 	modnok? (
 		|| (
 			media-gfx/imagemagick
@@ -39,6 +43,7 @@ src_configure() {
 		$(cmake-utils_use_enable crypt CRYPT)
 		$(cmake-utils_use_enable acetamide AZOTH_ACETAMIDE)
 		$(cmake-utils_use_enable adiumstyles AZOTH_ADIUMSTYLES)
+		$(cmake-utils_use_enable astrality AZOTH_ASTRALITY)
 		$(cmake-utils_use_enable autoidler AZOTH_AUTOIDLER)
 		$(cmake-utils_use_enable autopaste AZOTH_AUTOPASTE)
 		$(cmake-utils_use_enable chathistory AZOTH_CHATHISTORY)
@@ -48,6 +53,7 @@ src_configure() {
 		$(cmake-utils_use_enable hili AZOTH_HILI)
 		$(cmake-utils_use_enable isterique AZOTH_ISTERIQUE)
 		$(cmake-utils_use_enable juick AZOTH_JUICK)
+		$(cmake-utils_use_enable keeso AZOTH_KEESO)
 		$(cmake-utils_use_enable lastseen AZOTH_LASTSEEN)
 		$(cmake-utils_use_enable metacontacts AZOTH_LASTSEEN)
 		$(cmake-utils_use_enable modnok AZOTH_MODNOK)
