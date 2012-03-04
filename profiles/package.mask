@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13548 2012/03/04 18:50:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13549 2012/03/04 21:21:28 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,10 +44,6 @@
 >=dev-haskell/extensible-exceptions-0.1.1.4_pre20111218
 >=dev-haskell/hpc-0.5.1.1_pre20111218
 >=dev-vcs/git-annex-3.20120227
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (01 Jan 2012)
-# Mask for breaking compile against glu.h, bug #406641
-=media-libs/mesa-8.0.1-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Feb 2012)
 # The old version of gnunet in portage is broken with the
@@ -342,7 +338,6 @@ www-client/opera-next
 =x11-base/xorg-server-1.11.99*
 =x11-libs/libX11-1.4.99*
 =x11-libs/libXi-1.5.99*
-=x11-proto/inputproto-2.1.99*
 
 # Hanno Boeck <hanno@gentoo.org> (15 Dec 2011)
 # Breaks pam_mount, which is its only user in the tree.
