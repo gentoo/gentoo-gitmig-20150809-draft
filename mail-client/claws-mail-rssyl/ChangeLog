@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-rssyl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.101 2012/03/04 12:15:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.102 2012/03/04 16:05:59 klausman Exp $
+
+  04 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
+  claws-mail-rssyl-0.32.ebuild:
+  Stable on alpha, bug #387547
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #206112
