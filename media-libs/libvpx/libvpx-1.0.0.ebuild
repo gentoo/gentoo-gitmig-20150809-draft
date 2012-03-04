@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.0.0.ebuild,v 1.4 2012/03/02 16:39:04 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.0.0.ebuild,v 1.5 2012/03/04 17:22:19 lu_zero Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs
+inherit multilib toolchain-funcs eutils
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -38,7 +38,9 @@ DEPEND="amd64? ( dev-lang/yasm )
 REQUIRED_USE="
 	sse2? ( mmx )
 	"
-
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-support-arm.patch
+}
 src_configure() {
 	#let the build system decide which AS to use (it honours $AS but
 	#then feeds it with yasm flags without checking...) bug 345161

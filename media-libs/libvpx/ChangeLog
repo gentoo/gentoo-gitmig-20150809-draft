@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.42 2012/03/02 16:39:04 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.43 2012/03/04 17:22:19 lu_zero Exp $
+
+  04 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libvpx-1.0.0.ebuild,
+  +files/libvpx-1.0.0-support-arm.patch:
+  Remove overzealous assumption regarding arm, unbreak compilation
 
   02 Mar 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> libvpx-1.0.0.ebuild,
   libvpx-9999.ebuild:
