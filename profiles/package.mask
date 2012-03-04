@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13544 2012/03/04 03:51:50 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13545 2012/03/04 09:32:29 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -231,11 +231,6 @@ app-emulation/lib765
 # Dead upstream
 # Bug #276412. Removal in 30 days
 sys-kernel/kerneloops
-
-# Markos Chandras <hwoarang@gentoo.org> (04 Feb 2012)
-# No maintainer. Functionality is now embedded in portage
-# Bug #398935. Removal in 30 days
-app-portage/autounmask
 
 # Jeff Horelick <jdhore@gentoo.org> (31 Jan 2011)
 # Masking alpha release series.
