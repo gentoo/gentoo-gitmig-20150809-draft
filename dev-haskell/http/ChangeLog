@@ -1,8 +1,16 @@
 # ChangeLog for dev-haskell/http
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.19 2011/12/04 17:26:32 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.20 2012/03/04 03:37:58 gienah Exp $
 
-*http-4000.1.2 (04 Dec 2011)
+*http-4000.2.2 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> +http-4000.2.2.ebuild:
+  Add http-4000.2.2 for ghc 7.4.1
+
+*http-4000.1.2 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> http-4000.1.2.ebuild,
+  Fix http-4000.1.2 build with ghc 7.4.1.
 
   04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> +http-4000.1.2.ebuild:
   Version bump.
