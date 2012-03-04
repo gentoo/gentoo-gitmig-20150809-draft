@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/etc-proposals
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.17 2012/02/09 10:24:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.18 2012/03/04 04:30:05 dolsen Exp $
+
+  04 Mar 2012; Brian Dolbec <brian.dolbec@gmail.com> metadata.xml:
+  Update metadata.xml. Take over as maintainer.
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926
