@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/openbabel-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.7 2011/09/14 05:06:41 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.8 2012/03/04 10:29:38 jlec Exp $
+
+*openbabel-python-2.3.1 (04 Mar 2012)
+
+  04 Mar 2012; Justin Lecher <jlec@gentoo.org> openbabel-python-2.3.0.ebuild,
+  +openbabel-python-2.3.1.ebuild,
+  +files/openbabel-python-2.3.1-system_openbabel.patch:
+  Import Version Bump from sci overlay prepared by Reinis Danne; restrict pypy
 
   14 Sep 2011; Justin Lecher <jlec@gentoo.org> openbabel-python-2.3.0.ebuild:
   Corrected the right variable (DISTUTILS_SETUP_FILES) to an array, revert the
