@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-10.0.2.ebuild,v 1.5 2012/02/27 06:46:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-10.0.2.ebuild,v 1.6 2012/03/04 19:57:38 jdhore Exp $
 
 EAPI="4"
 
@@ -87,7 +87,7 @@ EOF
 	# Plugins dir
 	share_plugins_dir
 
-	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{thunderbird-bin,thunderbird,plugin-container}
+	pax-mark mr "${ED}"/${MOZILLA_FIVE_HOME}/{thunderbird-bin,thunderbird,plugin-container}
 }
 
 pkg_preinst() {
