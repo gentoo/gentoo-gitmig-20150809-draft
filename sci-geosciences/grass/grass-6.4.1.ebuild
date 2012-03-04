@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.9 2011/11/15 04:05:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.10 2012/03/04 09:50:16 jlec Exp $
 
 EAPI=3
 
@@ -60,7 +60,10 @@ RDEPEND="
 		x11-libs/libXt
 		motif? (
 			>=x11-libs/openmotif-2.3:0
-			opengl? ( media-libs/mesa[motif] )
+			opengl? (
+				|| (
+					media-libs/mesa[motif]
+					( media-libs/mesa x11-libs/libGLw ) ) )
 		)
 		opengl? (
 			virtual/opengl
