@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.5.2-r1.ebuild,v 1.2 2012/03/04 12:56:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.5.2-r1.ebuild,v 1.3 2012/03/04 14:17:07 gienah Exp $
 
 EAPI="4"
 CABAL_FEATURES="bin lib profile haddock hscolour"
@@ -103,7 +103,7 @@ src_test() {
 
 src_install() {
 	cabal_src_install
-	dobashcompletion "${S}/contrib/darcs_completion" "${PN}"
+	newbashcomp "${S}/contrib/darcs_completion" "${PN}"
 
 	rm "${ED}/usr/bin/unit" 2> /dev/null
 
@@ -117,7 +117,6 @@ src_install() {
 
 pkg_postinst() {
 	ghc-package_pkg_postinst
-	bash-completion_pkg_postinst
 
 	ewarn "NOTE: in order for the darcs send command to work properly,"
 	ewarn "you must properly configure your mail transport agent to relay"
