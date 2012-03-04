@@ -1,14 +1,16 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.3 2011/06/13 11:57:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.4 2012/03/04 10:16:05 pacho Exp $
 
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Perl based e-mail filtering tool, sensitive to html tags, mime types and attachments"
 HOMEPAGE="http://mailtools.anomy.net/"
 SRC_URI="
 	http://dev.gentoo.org/~jlec/distfiles/sample_e-mail-architecture.png.tar
-	http://mailtools.anomy.net/dist/${PN}-${PV}.tar.gz"
+	http://mailtools.anomy.net/dist/${PN}-${PV}.tar.gz
+	http://dev.gentoo.org/~pacho/maintainer-needed/sample_e-mail-architektur.flw"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,7 +39,7 @@ src_install() {
 	mv "${S}/contrib" "${D}/usr/share/doc/${PF}/"
 
 	insinto /usr/share/doc/${PF}/examples
-	doins "${FILESDIR}"/*.{sh,flw} "${WORKDIR}"/*.png
+	doins "${FILESDIR}"/*.sh "${WORKDIR}"/*.png "${DISTDIR}"/*.flw
 
 	keepdir ${SANI_CONFDIR}
 	insinto ${SANI_CONFDIR}
