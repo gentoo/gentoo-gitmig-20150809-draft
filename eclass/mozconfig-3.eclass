@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.29 2012/02/28 05:04:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.30 2012/03/04 14:19:47 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -49,7 +49,7 @@ mozconfig_config() {
 	mozconfig_use_enable dbus
 	mozconfig_use_enable debug
 	mozconfig_use_enable debug tests
-	mozconfig_use_enable debug debugger-info-modeules
+	mozconfig_use_enable debug debugger-info-modules
 	if has +ipc ${IUSE}; then
 		mozconfig_use_enable ipc
 	fi
