@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXfont
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.154 2011/08/15 15:26:25 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.155 2012/03/04 21:03:40 chithanh Exp $
+
+*libXfont-1.4.5 (04 Mar 2012)
+
+  04 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXfont-1.4.5.ebuild:
+  Version bump.
 
   15 Aug 2011; Raúl Porcel <armin76@gentoo.org> libXfont-1.4.4.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #378797
