@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13545 2012/03/04 09:32:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13546 2012/03/04 09:33:03 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -226,11 +226,6 @@ app-emulation/lib765
 # Sébastien Fabbro <bicatali@gentoo.org> (05 Feb 2012)
 # still beta software
 >=sci-libs/fftw-3.3.1_beta1
-
-# Markos Chandras <hwoarang@gentoo.org> (04 Feb 2012)
-# Dead upstream
-# Bug #276412. Removal in 30 days
-sys-kernel/kerneloops
 
 # Jeff Horelick <jdhore@gentoo.org> (31 Jan 2011)
 # Masking alpha release series.
