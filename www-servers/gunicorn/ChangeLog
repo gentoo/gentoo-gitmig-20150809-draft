@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/gunicorn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.14 2012/01/28 15:16:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.15 2012/03/04 01:25:15 rafaelmartins Exp $
+
+*gunicorn-0.14.0 (04 Mar 2012)
+
+  04 Mar 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -gunicorn-0.12.2.ebuild, +gunicorn-0.14.0.ebuild,
+  +files/gunicorn-0.14.0-noegg.patch, metadata.xml:
+  Version bump, removed old. Removed 'examples' use flag. Added Johan as 
+  Co-Maintainer. Bug #406669.
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gunicorn-0.13.4.ebuild:
   x86 stable wrt bug #400527
