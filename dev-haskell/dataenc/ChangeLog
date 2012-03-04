@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/dataenc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.13 2011/12/04 17:03:55 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.14 2012/03/04 02:45:42 gienah Exp $
+
+*dataenc-0.14.0.3 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> +dataenc-0.14.0.3.ebuild:
+  Bump dataenc to 0.14.0.3 for ghc 7.4.1
 
 *dataenc-0.14.0.2 (04 Dec 2011)
 
