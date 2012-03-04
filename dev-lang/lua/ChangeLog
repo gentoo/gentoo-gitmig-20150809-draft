@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.153 2012/01/24 21:44:53 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.154 2012/03/04 22:58:29 mabi Exp $
+
+*lua-5.2.0 (04 Mar 2012)
+
+  04 Mar 2012; Matti Bickel <mabi@gentoo.org> +files/configure.in,
+  +files/lua-5.2-make.patch, +files/lua.pc, +lua-5.2.0.ebuild:
+  version bump (bug #395057). also now uses local libtool (bug #336167)
 
 *lua-5.1.4-r8 (24 Jan 2012)
 
