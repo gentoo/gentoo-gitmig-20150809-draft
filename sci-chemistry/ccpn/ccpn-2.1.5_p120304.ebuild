@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.1_p120109.ebuild,v 1.2 2012/03/04 09:18:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p120304.ebuild,v 1.1 2012/03/04 09:18:53 jlec Exp $
 
 EAPI="3"
 
@@ -15,9 +15,9 @@ MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
+HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 SRC_URI="http://www-old.ccpn.ac.uk/download/${MY_PN}/analysis${MY_PV}.tar.gz"
 	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.xz"
-HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 
 SLOT="0"
 LICENSE="|| ( CCPN LGPL-2.1 )"
@@ -29,7 +29,7 @@ RDEPEND="
 	>=dev-python/numpy-1.4
 	>=dev-tcltk/tix-8.4.3
 	=sci-libs/ccpn-data-"${MY_MAJOR}"*
-	>=sci-libs/ccpn-data-2.2.1_p111011
+	>=sci-libs/ccpn-data-2.1.5_p111011
 	sci-biology/psipred
 	x11-libs/libXext
 	x11-libs/libX11
@@ -41,7 +41,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 PDEPEND="
 	extendnmr? (
-		>=sci-chemistry/aria-2.3.2-r1
+		<=sci-chemistry/aria-2.3.2
 		sci-chemistry/prodecomp )"
 
 RESTRICT="mirror"
@@ -122,7 +122,7 @@ src_install() {
 	libdir=$(get_libdir)
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 
-	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara xeasy2azara"
+	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara"
 	use extendnmr && _wrapper="${_wrapper} extendNmr"
 	for wrapper in ${_wrapper}; do
 		sed \
