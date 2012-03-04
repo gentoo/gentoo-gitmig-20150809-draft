@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.35.ebuild,v 1.2 2011/10/04 19:42:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.35.ebuild,v 1.3 2012/03/04 18:52:19 vapier Exp $
 
 EAPI=3
 
@@ -8,14 +8,14 @@ GENTOO_PATCH=2
 
 DESCRIPTION="A somewhat comprehensive collection of Linux man pages"
 HOMEPAGE="http://www.kernel.org/doc/man-pages/"
-SRC_URI="mirror://kernel/linux/docs/manpages/Archive/${P}.tar.gz
+SRC_URI="mirror://kernel/linux/docs/man-pages/Archive/${P}.tar.gz
 	http://man7.org/linux/man-pages/download/${P}.tar.gz
 	mirror://gentoo/man-pages-gentoo-${GENTOO_PATCH}.tar.bz2
 	http://dev.gentoo.org/~cardoe/files/man-pages-gentoo-${GENTOO_PATCH}.tar.bz2"
 
 LICENSE="as-is GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE_LINGUAS=" cs da de fr it ja nl pl ro ru zh_CN"
 IUSE="nls ${IUSE_LINGUAS// / linguas_}"
 RESTRICT="binchecks"
