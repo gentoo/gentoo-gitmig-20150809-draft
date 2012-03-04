@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xmonad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.22 2011/11/22 18:05:59 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.23 2012/03/04 05:04:16 gienah Exp $
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> xmonad-0.10.ebuild:
+  Add ~ppc64 keywords to xmonad 0.10, thanks to EM3RY for testing.
 
 *xmonad-0.10 (22 Nov 2011)
 
