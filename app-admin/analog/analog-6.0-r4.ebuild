@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r4.ebuild,v 1.9 2011/07/15 15:25:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r4.ebuild,v 1.10 2012/03/04 10:27:52 pacho Exp $
 
 EAPI=4
 
@@ -24,6 +24,8 @@ src_prepare() {
 	cd src/
 	epatch "${FILESDIR}/${PN}-5.1-gentoo.diff"
 	epatch "${FILESDIR}/${P}-bzip2.patch"
+	epatch "${FILESDIR}/${P}-undefined-macro.patch"
+
 	sed -i Makefile \
 		-e 's| -o | $(LDFLAGS)&|g' \
 		|| die "sed Makefile"
@@ -33,11 +35,11 @@ src_compile() {
 	tc-export CC
 	# emake in main dir just executes "cd src && make",
 	# i.e. MAKEOPTS are ignored
-	emake -C src || die "make failed"
+	emake -C src
 }
 
 src_install() {
-	dobin analog || die "dobin failed"
+	dobin analog
 	newman analog.man analog.1
 
 	dodoc README.txt Licence.txt analog.cfg
