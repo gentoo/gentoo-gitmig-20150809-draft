@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.30 2012/02/29 10:18:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.31 2012/03/04 12:08:28 lu_zero Exp $
 
 EAPI=4
 
@@ -111,7 +111,6 @@ src_configure() {
 	myconf="
 		$(use_enable gpl)
 		$(use_enable gpl version3)
-		--enable-postproc
 		--enable-avfilter
 	"
 
