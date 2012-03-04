@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.128 2012/02/27 06:47:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.129 2012/03/04 20:01:10 jdhore Exp $
+
+  04 Mar 2012; Jeff Horelick <jdhore@gentoo.org> seamonkey-bin-2.7.2.ebuild:
+  Add a -r pax-mark wrt bug 403689
 
   27 Feb 2012; Jeff Horelick <jdhore@gentoo.org> seamonkey-bin-2.7.2.ebuild:
   Add a RDEPEND on virtual/freedesktop-icon-theme to resolve bug 341697

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.7.2.ebuild,v 1.5 2012/02/27 06:47:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.7.2.ebuild,v 1.6 2012/03/04 20:01:10 jdhore Exp $
 
 EAPI="4"
 
@@ -87,7 +87,7 @@ EOF
 	share_plugins_dir
 
 	# Required in order to use plugins and even run seamonkey on hardened.
-	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin,plugin-container}
+	pax-mark mr "${ED}"/${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin,plugin-container}
 }
 
 pkg_preinst() {

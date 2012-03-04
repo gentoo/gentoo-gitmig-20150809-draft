@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.93 2012/02/27 06:46:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.94 2012/03/04 20:00:00 jdhore Exp $
+
+  04 Mar 2012; Jeff Horelick <jdhore@gentoo.org> firefox-bin-10.0.2.ebuild:
+  Add a -r pax-mark wrt bug 403689
 
   27 Feb 2012; Jeff Horelick <jdhore@gentoo.org> firefox-bin-10.0.2.ebuild:
   Add a RDEPEND on virtual/freedesktop-icon-theme to resolve bug 341697
