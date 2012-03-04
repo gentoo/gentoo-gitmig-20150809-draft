@@ -12,7 +12,6 @@
     <name>Samuli Suominen</name>
   </maintainer> 
   <use>
-    <flag name="ayatana">Build in support for Ayatana notification using the libindicate-qt plugin.</flag>
 	<flag name="kde">Enable plasma krunner global search</flag>
 	<flag name="ofa">Support for Open Fingerprint Architecture (OFA)</flag>
 	<flag name="lastfm">Enable Last.fm streaming services support through <pkg>media-libs/liblastfm</pkg></flag>
