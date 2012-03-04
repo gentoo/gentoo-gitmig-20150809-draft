@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gdb-apple
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.17 2011/11/05 16:50:13 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.18 2012/03/04 16:15:04 grobian Exp $
+
+*gdb-apple-1752 (04 Mar 2012)
+
+  04 Mar 2012; Fabian Groffen <grobian@gentoo.org> +gdb-apple-1752.ebuild:
+  Bump to version from Developer Tools 4.3
 
 *gdb-apple-1708 (05 Nov 2011)
 
