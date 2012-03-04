@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11-xft/x11-xft-0.3.ebuild,v 1.3 2012/03/04 05:02:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11-xft/x11-xft-0.3.ebuild,v 1.4 2012/03/04 05:12:57 gienah Exp $
 
 EAPI="4"
 
 CABAL_FEATURES="lib profile haddock"
-inherit haskell-cabal
+inherit base haskell-cabal
 
 MY_PN="X11-xft"
 MY_P="${MY_PN}-${PV}"
@@ -28,3 +28,5 @@ DEPEND="${RDEPEND}
 		dev-haskell/cabal"
 
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=("${FILESDIR}/${PN}-0.3-ghc72.patch")
