@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/gnuchess-book-1.02.ebuild,v 1.1 2012/03/04 17:43:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/gnuchess-book-1.02.ebuild,v 1.2 2012/03/04 18:21:53 sping Exp $
 
 inherit games
 
@@ -14,17 +14,17 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 RESTRICT="userpriv" # bug #112898
 
-DEPEND="games-board/gnuchess"
+DEPEND=">=games-board/gnuchess-6"
 
 S=${WORKDIR}
 
 src_compile() {
-	echo -e "book add book_${PV}.pgn"$'\n'"quit" | "${GAMES_BINDIR}"/gnuchess \
-		|| die "generation failed"
+	"${GAMES_BINDIR}"/gnuchess --addbook=book_${PV}.pgn \
+			|| die "generation failed"
 }
 
 src_install() {
 	insinto "${GAMES_DATADIR}/gnuchess"
-	doins book.dat || die "doins failed"
+	doins book.bin || die "doins failed"
 	prepgamesdirs
 }
