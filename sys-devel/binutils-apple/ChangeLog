@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.28 2012/02/19 19:37:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.29 2012/03/04 15:44:48 grobian Exp $
+
+  04 Mar 2012; Fabian Groffen <grobian@gentoo.org> binutils-apple-4.2.ebuild:
+  Avoid the need for vers_string program that seems no longer to be installed
+  with recent Xcode on Lion
 
   19 Feb 2012; Fabian Groffen <grobian@gentoo.org> binutils-apple-4.2.ebuild:
   Use append-cppflags instead of too generic append-flags to avoid F77 and FC

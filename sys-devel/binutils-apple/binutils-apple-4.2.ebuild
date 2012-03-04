@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.5 2012/02/19 19:37:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.6 2012/03/04 15:44:48 grobian Exp $
 
 EAPI="3"
 
@@ -108,6 +108,27 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.1-no-headers.patch
 	epatch "${FILESDIR}"/${PN}-4.0-no-oss-dir.patch
 	epatch "${FILESDIR}"/${PN}-4.2-lto.patch
+
+	local program
+	for program in ar efitools gprof libmacho misc otool ; do
+		VER_STR="@(#)PROGRAM:${program}  PROJECT:${CCTOOLS} (Gentoo ${PN}-${PVR}) DEVELOPER:${PORTAGE_ROOT_USER}  BUILT:$(date)"
+		cat > ${program}/vers.c <<- _EOF
+			#include <sys/cdefs.h>
+			__IDSTRING(SGS_VERS,"${VER_STR}\n");
+		_EOF
+		[[ ${program} != "libmacho" ]] && \
+			echo '__IDSTRING(VERS_NUM,"apple");' >> ${program}/vers.c
+	done
+
+	VER_STR="${CCTOOLS} (Gentoo ${PN}-${PVR})"
+	echo "const char apple_version[] = \"${VER_STR}\";" \
+		>> as/apple_version.c || die
+	echo "const char apple_version[] = \"${VER_STR})\";" \
+		>> efitools/vers.c || die
+	echo "const char apple_version[] = \"${VER_STR})\";" \
+		>> ld/ld_vers.c || die
+	echo "const char apple_version[] = \"${VER_STR})\";" \
+		>> misc/vers.c || die
 
 	# clean up test suite
 	cd "${S}"/${LD64}
