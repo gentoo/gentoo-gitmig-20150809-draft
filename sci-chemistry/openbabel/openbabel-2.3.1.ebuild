@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.1.ebuild,v 1.1 2012/03/04 10:18:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.1.ebuild,v 1.2 2012/03/04 10:32:17 jlec Exp $
 
 EAPI=4
 
@@ -33,9 +33,6 @@ PDEPEND="
 DOCS="AUTHORS ChangeLog NEWS README THANKS doc/*.inc doc/README* doc/*.mol2"
 
 PATCHES=( "${FILESDIR}"/${PN}-2.3.0-test_lib_path.patch )
-#src_prepare() {
-#	epatch \
-#}
 
 src_configure() {
 	local mycmakeargs=""
@@ -47,10 +44,10 @@ src_configure() {
 }
 
 src_install() {
-	dohtml doc/{*.html,*.png} || die
+	dohtml doc/{*.html,*.png}
 	if use doc ; then
 		insinto /usr/share/doc/${PF}/API/html
-		doins doc/API/html/* || die
+		doins doc/API/html/*
 	fi
 	cmake-utils_src_install
 }
