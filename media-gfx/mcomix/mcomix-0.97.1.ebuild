@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.97.1.ebuild,v 1.3 2012/02/26 05:00:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.97.1.ebuild,v 1.4 2012/03/04 05:03:28 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -26,7 +26,6 @@ RDEPEND="${DEPEND}
 	>=dev-python/pygtk-2.14
 	virtual/jpeg
 	!media-gfx/comix"
-
 
 src_install() {
 	distutils_src_install
