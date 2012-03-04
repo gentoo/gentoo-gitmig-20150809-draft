@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dragbox/dragbox-0.4.0.ebuild,v 1.2 2011/03/28 17:15:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dragbox/dragbox-0.4.0.ebuild,v 1.3 2012/03/04 09:26:19 pacho Exp $
 
-EAPI="2"
+EAPI=4
 PYTHON_DEPEND="2"
 inherit python
 
@@ -24,15 +24,25 @@ DEPEND="dev-python/pygtk:2
 	x11-libs/gtk+:2"
 RDEPEND="${DEPEND}"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	python_clean_py-compile_files
+	python_convert_shebangs 2 dragbox
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/Dragbox
+	python_mod_optimize Dragbox
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/Dragbox
+	python_mod_cleanup Dragbox
 }
