@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-fancy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fancy/ChangeLog,v 1.34 2012/02/25 21:13:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fancy/ChangeLog,v 1.35 2012/03/04 12:08:28 pacho Exp $
+
+  04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #206112
 
   25 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   claws-mail-fancy-0.9.15.ebuild:

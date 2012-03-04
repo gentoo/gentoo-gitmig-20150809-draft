@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-att-remover
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.43 2012/02/25 21:13:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.44 2012/03/04 12:06:31 pacho Exp $
+
+  04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #206112
 
   25 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   claws-mail-att-remover-1.0.13.ebuild:

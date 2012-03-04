@@ -6,10 +6,6 @@
 	  <email>fauli@gentoo.org</email>
 	  <name>Christian Faulhammer</name>
 	</maintainer>
-	<maintainer>
-	  <email>ken69267@gentoo.org</email>
-	  <name>Kenneth Prugh</name>
-	</maintainer>
 	<use>
 		<flag name='bogofilter'>Build <pkg>mail-filter/bogofilter</pkg>
 			plugin</flag>
