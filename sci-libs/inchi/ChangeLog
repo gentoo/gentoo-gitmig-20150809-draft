@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/inchi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/ChangeLog,v 1.1 2011/03/26 15:18:23 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/ChangeLog,v 1.2 2012/03/04 13:22:18 jlec Exp $
+
+*inchi-1.04 (04 Mar 2012)
+
+  04 Mar 2012; Justin Lecher <jlec@gentoo.org> +inchi-1.04.ebuild,
+  metadata.xml:
+  Import Version Bump from sci overlay prepared by Reinis Danne
 
 *inchi-1.03 (26 Mar 2011)
 
