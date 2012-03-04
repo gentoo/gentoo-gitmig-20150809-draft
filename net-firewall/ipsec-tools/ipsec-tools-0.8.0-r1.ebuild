@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r1.ebuild,v 1.2 2012/03/04 03:55:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r1.ebuild,v 1.3 2012/03/04 18:18:27 blueness Exp $
 
 EAPI="4"
 
@@ -33,44 +33,97 @@ DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.30"
 
 pkg_setup() {
-	get_version
-	if kernel_is -ge 2 6 19 ; then
-		einfo "Checking for suitable kernel configuration (Networking | Networking support | Networking options)"
+	linux-info_pkg_setup
 
-		if use nat; then
-			CONFIG_CHECK="${CONFIG_CHECK} ~NETFILTER_XT_MATCH_POLICY"
-			export WARNING_NETFILTER_XT_MATCH_POLICY="NAT support may fail weirdly unless you enable this option in your kernel"
+	get_version
+
+	if linux_config_exists && kernel_is -ge 2 6 19; then
+		ewarn
+		ewarn "\033[1;33m**************************************************\033[1;33m"
+		ewarn
+		ewarn "Checking kernel configuration in /usr/src/linux or"
+		ewarn "or /proc/config.gz for compatibility with ${PN}."
+		ewarn
+		ewarn "WARNING: If your *configured* and *running* kernel"
+		ewarn "differ either now or in the future, then these checks"
+		ewarn "may lead to misleading results."
+
+		# Check options for all flavors of IPSec
+		local msg=""
+		for i in XFRM_USER NET_KEY; do
+			if ! linux_chkconfig_present ${i}; then
+				msg="${msg} ${i}"
+			fi
+		done
+		if [[ ! -z "$msg" ]]; then
+			ewarn
+			ewarn "ALL IPSec may fail. CHECK:"
+			ewarn "${msg}"
 		fi
 
-		for i in XFRM_USER NET_KEY; do
-			CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
-			eval "export WARNING_${i}='No tunnels will be available at all'"
-		done
+		# Check unencrypted IPSec
+		if ! linux_chkconfig_present CRYPTO_NULL; then
+			ewarn
+			ewarn "Unencrypted IPSec may fail. CHECK:"
+			ewarn " CRYPTO_NULL"
+		fi
 
-		for i in INET_IPCOMP INET_AH INET_ESP \
+		# Check IPv4 IPSec
+		msg=""
+		for i in \
+			INET_IPCOMP INET_AH INET_ESP \
 			INET_XFRM_MODE_TRANSPORT \
 			INET_XFRM_MODE_TUNNEL \
-			INET_XFRM_MODE_BEET ; do
-			CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
-			eval "export WARNING_${i}='IPv4 tunnels will not be available'"
+			INET_XFRM_MODE_BEET
+		do
+			if ! linux_chkconfig_present ${i}; then
+				msg="${msg} ${i}"
+			fi
 		done
+		if [[ ! -z "$msg" ]]; then
+			ewarn
+			ewarn "IPv4 IPSec may fail. CHECK:"
+			ewarn "${msg}"
+		fi
 
-		for i in INET6_IPCOMP INET6_AH INET6_ESP \
-			INET6_XFRM_MODE_TRANSPORT \
-			INET6_XFRM_MODE_TUNNEL \
-			INET6_XFRM_MODE_BEET ; do
-			CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
-			eval "export WARNING_${i}='IPv6 tunnels will not be available'"
-		done
+		# Check IPv6 IPSec
+		if use ipv6; then
+			msg=""
+			for i in INET6_IPCOMP INET6_AH INET6_ESP \
+				INET6_XFRM_MODE_TRANSPORT \
+				INET6_XFRM_MODE_TUNNEL \
+				INET6_XFRM_MODE_BEET
+			do
+				if ! linux_chkconfig_present ${i}; then
+					msg="${msg} ${i}"
+				fi
+			done
+			if [[ ! -z "$msg" ]]; then
+				ewarn
+				ewarn "IPv6 IPSec may fail. CHECK:"
+				ewarn "${msg}"
+			fi
+		fi
 
-		CONFIG_CHECK="${CONFIG_CHECK} ~CRYPTO_NULL"
-		export WARNING_CRYPTO_NULL="Unencrypted tunnels will not be available"
-		export CONFIG_CHECK
+		# Check IPSec behind NAT
+		if use nat; then
+			if ! linux_chkconfig_present NETFILTER_XT_MATCH_POLICY; then
+				ewarn
+				ewarn "IPSec behind NAT may fail.  CHECK:"
+				ewarn " NETFILTER_XT_MATCH_POLICY"
+			fi
+		fi
 
-		check_extra_config
+		ewarn
+		ewarn "\033[1;33m**************************************************\033[1;33m"
+		ewarn
 	else
-		eerror "You must have a kernel >=2.6.19 to run ipsec-tools."
-		eerror "Building now, assuming that you will run on a different kernel"
+		eerror
+		eerror "\033[1;31m**************************************************\033[1;31m"
+		eerror "Make sure that your *running* kernel is/will be >=2.6.19."
+		eerror "Building ${PN} now, assuming that you know what you're doing."
+		eerror "\033[1;31m**************************************************\033[1;31m"
+		eerror
 	fi
 }
 
