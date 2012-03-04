@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.0.4.ebuild,v 1.5 2012/03/04 05:49:54 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1.ebuild,v 1.1 2012/03/04 05:49:54 gienah Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -28,9 +28,9 @@
 # re-emerge ghc (or ghc-bin). People using vanilla gcc can switch between
 # gcc-3.x and 4.x with no problems.
 
-EAPI="3"
+EAPI="4"
 
-inherit base autotools bash-completion eutils flag-o-matic multilib toolchain-funcs ghc-package versionator pax-utils
+inherit base autotools bash-completion-r1 eutils flag-o-matic multilib toolchain-funcs ghc-package versionator pax-utils
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -39,14 +39,14 @@ HOMEPAGE="http://www.haskell.org/ghc/"
 arch_binaries=""
 
 # sorted!
-arch_binaries="$arch_binaries alpha? ( http://code.haskell.org/~slyfox/ghc-alpha/ghc-bin-${PV}-alpha.tbz2 )"
-arch_binaries="$arch_binaries arm? ( http://code.haskell.org/~slyfox/ghc-arm/ghc-bin-${PV}-arm.tbz2 )"
-arch_binaries="$arch_binaries amd64? ( http://code.haskell.org/~slyfox/ghc-amd64/ghc-bin-${PV}-amd64.tbz2 )"
+#arch_binaries="$arch_binaries alpha? ( http://code.haskell.org/~slyfox/ghc-alpha/ghc-bin-${PV}-alpha.tbz2 )"
+#arch_binaries="$arch_binaries arm? ( http://code.haskell.org/~slyfox/ghc-arm/ghc-bin-${PV}-arm.tbz2 )"
+#arch_binaries="$arch_binaries amd64? ( http://code.haskell.org/~slyfox/ghc-amd64/ghc-bin-${PV}-amd64.tbz2 )"
 #arch_binaries="$arch_binaries ia64?  ( http://code.haskell.org/~slyfox/ghc-ia64/ghc-bin-${PV}-ia64-fixed-fiw.tbz2 )"
-arch_binaries="$arch_binaries ppc? ( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )"
+#arch_binaries="$arch_binaries ppc? ( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )"
 #arch_binaries="$arch_binaries ppc64? ( mirror://gentoo/ghc-bin-${PV}-ppc64.tbz2 )"
-arch_binaries="$arch_binaries sparc? ( http://code.haskell.org/~slyfox/ghc-sparc/ghc-bin-${PV}-sparc.tbz2 )"
-arch_binaries="$arch_binaries x86? ( http://code.haskell.org/~slyfox/ghc-x86/ghc-bin-${PV}-x86.tbz2 )"
+#arch_binaries="$arch_binaries sparc? ( http://code.haskell.org/~slyfox/ghc-sparc/ghc-bin-${PV}-sparc.tbz2 )"
+#arch_binaries="$arch_binaries x86? ( http://code.haskell.org/~slyfox/ghc-x86/ghc-bin-${PV}-x86.tbz2 )"
 
 # various ports:
 #arch_binaries="$arch_binaries x86-fbsd? ( http://code.haskell.org/~slyfox/ghc-x86-fbsd/ghc-bin-${PV}-x86-fbsd.tbz2 )"
@@ -54,25 +54,22 @@ arch_binaries="$arch_binaries x86? ( http://code.haskell.org/~slyfox/ghc-x86/ghc
 # 0 - yet
 yet_binary() {
 	case "${ARCH}" in
-		alpha)
-			return 0
-			;;
-		arm)
-			ewarn "ARM binary is built on armv5tel-eabi toolchain. Use with caution."
-			return 0
-			;;
-		amd64)
-			return 0
-			;;
-		sparc)
-			return 0
-			;;
-		x86)
-			return 0
-			;;
-		ppc)
-			return 0
-			;;
+		#alpha)
+		#	return 0
+		#	;;
+		#arm)
+		#	ewarn "ARM binary is built on armv5tel-eabi toolchain. Use with caution."
+		#	return 0
+		#	;;
+		#amd64)
+		#	return 0
+		#	;;
+		##sparc)
+		#	return 0
+		#	;;
+		#x86)
+		#	return 0
+		#	;;
 		*)
 			return 1
 			;;
@@ -89,7 +86,6 @@ IUSE="doc ghcbootstrap llvm"
 IUSE+=" binary" # don't forget about me later!
 
 RDEPEND="
-	!dev-lang/ghc-bin
 	!kernel_Darwin? ( >=sys-devel/gcc-2.95.3 )
 	kernel_linux? ( >=sys-devel/binutils-2.17 )
 	kernel_SunOS? ( >=sys-devel/binutils-2.17 )
@@ -104,7 +100,9 @@ RDEPEND="
 # built against gmp-4
 
 DEPEND="${RDEPEND}
-	ghcbootstrap? (	doc? (	app-text/docbook-xml-dtd:4.2
+	ghcbootstrap? (		>=dev-haskell/alex-2.3
+						>=dev-haskell/happy-1.18
+				doc? (	app-text/docbook-xml-dtd:4.2
 				app-text/docbook-xml-dtd:4.5
 				app-text/docbook-xsl-stylesheets
 				>=dev-libs/libxslt-1.1.2 ) )"
@@ -114,6 +112,7 @@ DEPEND="${RDEPEND}
 PDEPEND="!ghcbootstrap? ( =app-admin/haskell-updater-1.2* )"
 PDEPEND="
 	${PDEPEND}
+	dev-haskell/random
 	dev-haskell/syb
 	llvm? ( sys-devel/llvm )"
 
@@ -182,6 +181,18 @@ ghc_setup_cflags() {
 	# currently ghc fails to build haddock
 	# http://osdir.com/ml/gnu.binutils.bugs/2004-10/msg00050.html
 	use ia64 && append-ghc-cflags compile -G0
+
+	# Unfortunately driver/split/ghc-split.lprl is dumb
+	# enough to preserve stack marking for each split object
+	# and it flags stack marking violation:
+	# * !WX --- --- usr/lib64/ghc-7.4.1/base-4.5.0.0/libHSbase-4.5.0.0.a:Fingerprint__1.o
+	# * !WX --- --- usr/lib64/ghc-7.4.1/base-4.5.0.0/libHSbase-4.5.0.0.a:Fingerprint__2.o
+	# * !WX --- --- usr/lib64/ghc-7.4.1/base-4.5.0.0/libHSbase-4.5.0.0.a:Fingerprint__3.o
+	case $($(tc-getAS) -v 2>&1 </dev/null) in
+		*"GNU Binutils"*) # GNU ld
+			append-ghc-cflags compile assemble -Wa,--noexecstack
+			;;
+	esac
 }
 
 # substitutes string $1 to $2 in files $3 $4 ...
@@ -360,18 +371,18 @@ src_prepare() {
 
 		cd "${S}" # otherwise epatch will break
 
-		epatch "${FILESDIR}/ghc-7.0.2-CHOST.patch"
 		epatch "${FILESDIR}/ghc-7.0.4-CHOST-prefix.patch"
-		epatch "${FILESDIR}/ghc-7.0.4-CHOST-softfloat.patch"
 
 		epatch "${FILESDIR}"/${PN}-7.0.4-darwin8.patch
-		epatch "${FILESDIR}"/${PN}-6.12.3-mach-o-relocation-limit.patch
-		epatch "${FILESDIR}"/${PN}-7.0.4-nxstack.patch
-		epatch "${FILESDIR}/ghc-7.0.4-fix-ppc-linker.patch"
+		# failed to apply. FIXME
+		#epatch "${FILESDIR}"/${PN}-6.12.3-mach-o-relocation-limit.patch
+
+		epatch "${FILESDIR}"/${PN}-7.4-rc2-macos-prefix-respect-gcc.patch
+		epatch "${FILESDIR}"/${PN}-7.2.1-freebsd-CHOST.patch
 
 		if use prefix; then
 			# Make configure find docbook-xsl-stylesheets from Prefix
-			sed -i -e '/^FP_DIR_DOCBOOK_XSL/s:\[.*\]:['"${EPREFIX}"'/usr/share/sgml/docbook/xsl-stylesheets/]:' configure.ac || die
+			sed -i -e '/^FP_DIR_DOCBOOK_XSL/s:\[.*\]:['"${EPREFIX}"'/usr/share/sgml/docbook/xsl-stylesheets/]:' utils/haddock/doc/configure.ac || die
 		fi
 
 		# as we have changed the build system
@@ -472,9 +483,7 @@ src_configure() {
 
 src_compile() {
 	if ! use binary; then
-		# unfortunately ghc-7.0 still fails under parallel load:
-		# bug #326347 (and i think bug #373947)
-		emake -j1 all || die "make failed"
+		emake all || die "make failed"
 	fi # ! use binary
 }
 
