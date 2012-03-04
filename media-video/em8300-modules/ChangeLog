@@ -1,6 +1,11 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.57 2012/03/04 03:56:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.58 2012/03/04 18:48:04 hd_brummy Exp $
+
+  04 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  em8300-modules-0.18.0_p20120124.ebuild:
+  src_uri fixed; config_check fixed; disabled the hg versioning, mercurial
+  install needed
 
 *em8300-modules-0.18.0_p20120124 (04 Mar 2012)
 

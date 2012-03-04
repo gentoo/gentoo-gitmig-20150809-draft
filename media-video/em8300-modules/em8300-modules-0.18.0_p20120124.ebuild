@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.18.0_p20120124.ebuild,v 1.1 2012/03/04 03:56:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.18.0_p20120124.ebuild,v 1.2 2012/03/04 18:48:04 hd_brummy Exp $
 
 EAPI=2
 inherit eutils linux-mod
@@ -8,8 +8,9 @@ inherit eutils linux-mod
 MY_P=${P/-modules}
 
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
-HOMEPAGE="http://dxr3.sourceforge.net"
-SRC_URI="http://vdr.websitec.de/download/${MY_P}.tar.gz"
+HOMEPAGE="http://dxr3.hg.sourceforge.net/hgweb/dxr3/em8300/"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz
+		http://vdr.websitec.de/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,10 +20,16 @@ IUSE=""
 RDEPEND=""
 DEPEND="virtual/linux-sources"
 
-CONFIG_CHECK="I2C"
+CONFIG_CHECK="I2C_ALGOBIT"
 MODULE_NAMES="em8300(video:) bt865(video:) adv717x(video:)"
 
 S=${WORKDIR}/${MY_P}/modules
+
+src_prepare() {
+	# disable the hg versioning, mercurial install needed
+	rm "${S}/update_em8300_version.sh"
+	echo "#define EM8300_VERSION \"20120124\"" > "${S}/em8300_version.h"
+}
 
 src_compile() {
 	set_arch_to_kernel
