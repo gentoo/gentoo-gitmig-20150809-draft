@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.67 2012/02/24 09:41:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.68 2012/03/04 02:33:04 gienah Exp $
+
+*cabal-1.14.0 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> +cabal-1.14.0.ebuild:
+  Bump cabal to 1.14.0 for ghc 7.4.1
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> cabal-1.10.2.0.ebuild:
   Stable for amd64, wrt bug #399973
