@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.39 2012/01/22 13:10:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.40 2012/03/05 16:38:03 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> libgee-0.6.3.ebuild:
+  Marking libgee-0.6.3 ppc64 stable for bug 393007
 
 *libgee-0.7.2 (22 Jan 2012)
 *libgee-0.6.4 (22 Jan 2012)
