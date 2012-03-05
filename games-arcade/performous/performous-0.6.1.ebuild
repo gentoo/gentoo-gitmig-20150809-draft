@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.2 2012/02/27 09:15:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.3 2012/03/05 08:07:59 tupone Exp $
 
 EAPI=3
 
@@ -28,6 +28,10 @@ LICENSE="GPL-2
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="songs tools"
+LANGS="da de es fi fr hu it ja nl sv"
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
 
 RDEPEND="dev-cpp/glibmm
 	dev-cpp/libxmlpp
@@ -67,6 +71,11 @@ src_prepare() {
 		-e "s:@GENTOO_BINDIR@:${GAMES_BINDIR}:" \
 		game/CMakeLists.txt \
 		|| die "sed failed"
+	cd lang
+	for X in $LANGS
+	do
+		use linguas_$X || rm $X.po
+	done
 }
 
 src_configure() {
