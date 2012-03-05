@@ -4,9 +4,6 @@
 	<maintainer>
 		<email>qiaomuf@gentoo.org</email>
 	</maintainer>
-	<maintainer>
-		<email>betelgeuse@gentoo.org</email>
-	</maintainer>
 	<use>
 	  <flag name='debugger'>Compiles debug info into the library</flag>
 	</use>
