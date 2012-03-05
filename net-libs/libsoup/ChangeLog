@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.270 2012/01/30 20:03:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.271 2012/03/05 16:48:10 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> libsoup-2.36.1.ebuild:
+  Marking libsoup-2.36.1 ppc64 stable for bug 393007
 
   30 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   libsoup-2.34.3.ebuild, libsoup-2.36.1.ebuild, libsoup-2.36.1-r1.ebuild:
