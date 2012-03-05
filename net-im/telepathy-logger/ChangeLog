@@ -1,6 +1,9 @@
 # ChangeLog for net-im/telepathy-logger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/ChangeLog,v 1.31 2012/02/18 08:22:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/ChangeLog,v 1.32 2012/03/05 22:10:53 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> telepathy-logger-0.2.12.ebuild:
+  Marking telepathy-logger-0.2.12 ppc stable for bug 393007
 
   18 Feb 2012; Pacho Ramos <pacho@gentoo.org> telepathy-logger-0.2.12-r1.ebuild:
   Introspection option was being ignored at configure time, bug #403567 by
