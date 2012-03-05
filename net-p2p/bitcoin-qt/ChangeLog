@@ -1,6 +1,15 @@
-# ChangeLog for sys-kernel/hardened-sources
+# ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.9 2012/02/29 21:32:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.10 2012/03/05 21:48:00 blueness Exp $
+
+*bitcoin-qt-0.5.3_rc3 (05 Mar 2012)
+*bitcoin-qt-0.5.0.4_rc3 (05 Mar 2012)
+
+  05 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.0.3.ebuild, -bitcoin-qt-0.5.0.4_rc2-r1.ebuild,
+  +bitcoin-qt-0.5.0.4_rc3.ebuild, -bitcoin-qt-0.5.2.ebuild,
+  -bitcoin-qt-0.5.3_rc2-r1.ebuild, +bitcoin-qt-0.5.3_rc3.ebuild:
+  Version bumps and removed older
 
   29 Feb 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog, Manifest:
   Fixed the Header for ChangeLog
