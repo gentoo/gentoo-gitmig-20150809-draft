@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.7_pre20120207.ebuild,v 1.1 2012/02/12 11:59:19 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.7_pre20120207.ebuild,v 1.2 2012/03/05 19:29:37 gurligebis Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -17,12 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=net-firewall/iptables-1.4.6
-	sys-apps/lsb-release
-	>=sys-kernel/linux-headers-2.6.31"
+RDEPEND=">=net-firewall/iptables-1.4.6"
 DEPEND="${RDEPEND}
 	sys-apps/util-linux
-	"
+	sys-apps/lsb-release"
 
 src_prepare() {
 	mv Makefile.linux Makefile
