@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.143 2012/03/05 16:49:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.144 2012/03/05 22:15:14 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> webkit-gtk-1.6.1-r201.ebuild,
+  webkit-gtk-1.6.1-r301.ebuild:
+  Marking webkit-gtk-1.6.1-r301 ppc stable for bug 393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> webkit-gtk-1.6.1-r201.ebuild,
   webkit-gtk-1.6.1-r301.ebuild:
