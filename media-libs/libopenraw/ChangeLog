@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.56 2012/03/02 20:40:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.57 2012/03/05 21:08:28 maekke Exp $
+
+  05 Mar 2012; Markus Meier <maekke@gentoo.org> libopenraw-0.0.9.ebuild:
+  arm stable, bug #404793
 
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> libopenraw-0.0.9.ebuild:
   ppc64 stable wrt #404793
