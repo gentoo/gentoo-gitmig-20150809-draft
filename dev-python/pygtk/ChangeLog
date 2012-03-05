@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.272 2012/02/22 11:19:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.273 2012/03/05 16:39:36 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> pygtk-2.24.0-r2.ebuild:
+  Marking pygtk-2.24.0-r2 ppc64 stable for bug 393007
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pygtk-2.24.0-r1.ebuild,
   pygtk-2.24.0-r2.ebuild:
