@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.153 2012/03/03 22:39:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.154 2012/03/05 08:20:52 patrick Exp $
+
+  05 Mar 2012; Patrick Lauer <patrick@gentoo.org> apache-2.eclass:
+  Don't set eapi in eclass, #405911
 
   03 Mar 2012; Vlastimil Babka <caster@gentoo.org> ant-tasks.eclass:
   Add support for ANT_TASK_DISABLE_VM_DEPS variable - when enabled, the jdk/jre
