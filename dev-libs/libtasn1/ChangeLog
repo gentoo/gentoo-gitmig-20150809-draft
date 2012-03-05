@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.153 2012/02/23 17:15:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.154 2012/03/05 08:08:36 jdhore Exp $
+
+  05 Mar 2012; Jeff Horelick <jdhore@gentoo.org> libtasn1-2.11.ebuild:
+  marked x86 per bug 404653
 
   23 Feb 2012; Brent Baude <ranger@gentoo.org> libtasn1-2.11.ebuild:
   Marking libtasn1-2.11 ppc for bug 404653
