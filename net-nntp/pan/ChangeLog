@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.94 2012/03/05 16:49:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.95 2012/03/05 22:16:03 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> pan-0.135.ebuild:
+  Marking pan-0.135 ppc stable for bug 393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> pan-0.135.ebuild:
   Marking pan-0.135 ppc64 stable for bug 393007
