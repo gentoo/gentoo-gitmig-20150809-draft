@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.566 2012/03/05 16:51:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.567 2012/03/05 22:19:35 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> gtk+-2.24.8-r1.ebuild:
+  Marking gtk+-2.24.8-r1 ppc stable for bug 393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> gtk+-2.24.8-r1.ebuild:
   Marking gtk+-2.24.8-r1 ppc64 stable for bug 393007
