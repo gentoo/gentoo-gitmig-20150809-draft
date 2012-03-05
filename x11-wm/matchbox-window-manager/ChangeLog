@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/matchbox-window-manager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/ChangeLog,v 1.16 2012/03/04 11:52:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/ChangeLog,v 1.17 2012/03/05 11:11:55 tomka Exp $
+
+  05 Mar 2012; Thomas Kahle <tomka@gentoo.org>
+  matchbox-window-manager-1.2.ebuild:
+  marked x86 per bug 309407
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #112268
