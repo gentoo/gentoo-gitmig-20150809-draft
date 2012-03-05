@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.2.0.ebuild,v 1.1 2012/03/04 22:58:29 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.2.0.ebuild,v 1.2 2012/03/05 22:01:15 mabi Exp $
 
 EAPI=4
 
@@ -57,16 +57,14 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC
-	myflags=
+
 	# what to link to liblua
 	liblibs="-lm"
 	liblibs="${liblibs} $(dlopen_lib)"
 
 	# what to link to the executables
 	mylibs=
-	if use readline; then
-		mylibs="-lreadline"
-	fi
+	use readline && mylibs="-lreadline"
 
 	cd src
 
@@ -74,6 +72,7 @@ src_compile() {
 	use deprecated && legacy="-DLUA_COMPAT_ALL"
 
 	emake CC="${CC}" CFLAGS="-DLUA_USE_LINUX ${legacy} ${CFLAGS}" \
+			SYSLDFLAGS="${LDFLAGS}"
 			RPATH="${EPREFIX}/usr/$(get_libdir)/" \
 			LUA_LIBS="${mylibs}" \
 			LIB_LIBS="${liblibs}" \
