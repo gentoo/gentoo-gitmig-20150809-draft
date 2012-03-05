@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.1.ebuild,v 1.2 2011/12/30 13:47:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.1.ebuild,v 1.3 2012/03/05 14:17:00 scarabeus Exp $
 
 EAPI=4
 
@@ -17,17 +17,11 @@ HOMEPAGE="http://bluefish.openoffice.nl/"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE="gtk3 nls python spell"
+IUSE="nls python spell"
 
 RDEPEND="
-	gtk3? (
-		x11-libs/gtk+:3
-		gnome-extra/gucharmap:2.90
-	)
-	!gtk3? (
-		>=x11-libs/gtk+-2.12:2
-		gnome-extra/gucharmap:0
-	)
+	x11-libs/gtk+:3
+	gnome-extra/gucharmap:2.90
 	spell? ( app-text/enchant )"
 DEPEND="${RDEPEND}
 	>=dev-libs/glib-2.16:2
@@ -62,7 +56,6 @@ src_configure() {
 		--disable-xml-catalog-update \
 		$(use_enable nls) \
 		$(use_enable spell spell-check) \
-		$(use_with !gtk3 gtk2) \
 		$(use_enable python)
 }
 
