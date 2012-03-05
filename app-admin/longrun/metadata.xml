@@ -3,11 +3,6 @@
 
 <pkgmetadata>
 <herd>mobile</herd>
-<maintainer>
-	<email>betelgeuse@gentoo.org</email>
-	<name>Petteri Räty</name>
-	<description>Assign to herd and CC me</description>
-</maintainer>
 <longdescription>
 Longrun is a user space utility program for controlling the Longrun
 thermal and power save functionalities found in the processors made
