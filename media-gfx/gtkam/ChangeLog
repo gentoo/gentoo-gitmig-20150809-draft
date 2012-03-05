@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.75 2012/01/31 09:05:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.76 2012/03/05 22:08:42 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> gtkam-0.1.17.ebuild:
+  Marking gtkam-0.1.17 ppc stable for bug 393007
 
 *gtkam-0.1.18 (31 Jan 2012)
 
