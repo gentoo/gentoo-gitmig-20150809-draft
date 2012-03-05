@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.60 2012/01/18 20:37:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.61 2012/03/05 16:50:07 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org>
+  gnome-disk-utility-3.0.2-r200.ebuild:
+  Marking gnome-disk-utility-3.0.2-r200 ppc64 stable for bug 393007
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org>
   gnome-disk-utility-3.0.2-r200.ebuild:
