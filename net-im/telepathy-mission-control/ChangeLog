@@ -1,6 +1,10 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.64 2012/03/05 18:44:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.65 2012/03/05 22:11:18 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org>
+  telepathy-mission-control-5.10.1.ebuild:
+  Marking telepathy-mission-control-5.10.1 ppc stable for bug 393007
 
   05 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   telepathy-mission-control-5.10.1.ebuild:
