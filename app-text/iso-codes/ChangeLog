@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.117 2012/01/18 19:57:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.118 2012/03/05 16:32:05 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> iso-codes-3.30.ebuild:
+  Marking iso-codes-3.30 ppc64 stable for bug 393007
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> iso-codes-3.30.ebuild:
   arm stable, bug #393007
