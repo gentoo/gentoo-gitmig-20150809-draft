@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.30 2012/03/04 16:16:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.31 2012/03/05 11:47:13 grobian Exp $
+
+  05 Mar 2012; Fabian Groffen <grobian@gentoo.org> binutils-apple-4.3.ebuild:
+  Remove PowerPC tweaks, Apple removed entire PowerPC support from ld in
+  ld64-128.2.  Removed ppc-macos keyword, 4.2 will be the last release for
+  PowerPC users.
 
 *binutils-apple-4.3 (04 Mar 2012)
 

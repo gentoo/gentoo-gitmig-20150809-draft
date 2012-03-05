@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3.ebuild,v 1.1 2012/03/04 16:16:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3.ebuild,v 1.2 2012/03/05 11:47:13 grobian Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ SRC_URI="http://www.opensource.apple.com/tarballs/ld64/${LD64}.tar.gz
 	http://www.gentoo.org/~grobian/distfiles/libunwind-llvm-115426.tar.bz2"
 
 LICENSE="APSL-2"
-KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~x64-macos ~x86-macos"
 IUSE="lto test"
 
 RDEPEND="sys-devel/binutils-config
@@ -66,7 +66,6 @@ src_prepare() {
 	cd "${S}"/${LD64}/src
 	cp "${FILESDIR}"/ld64-128.2-Makefile Makefile
 	epatch "${FILESDIR}"/ld64-127.2-lto.patch
-	epatch "${FILESDIR}"/ld64-127.2-ppc-range-warning.patch
 
 	ln -s ../../${CCTOOLS}/include
 	cp other/prune_trie.h include/mach-o/ || die
@@ -90,11 +89,6 @@ src_prepare() {
 	echo "char ldVersionString[] = ${VER_STR};" > version.cpp
 
 	epatch "${FILESDIR}"/ld64-123.2-debug-backtrace.patch
-	if [[ ${CHOST} == powerpc*-darwin* ]] ; then
-		epatch "${FILESDIR}"/ld64-123.2-darwin8-no-mlong-branch-warning.patch
-		sed -i -e '/#include <mach-o\/loader.h>/a\#include <mach/i386/thread_status.h>' \
-			ld/HeaderAndLoadCommands.hpp || die
-	fi
 	if use !lto ; then
 		sed -i -e '/#define LTO_SUPPORT 1/d' other/ObjectDump.cpp || die
 	fi
