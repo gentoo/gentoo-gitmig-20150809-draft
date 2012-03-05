@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.8 2010/11/02 02:56:36 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.9 2012/03/05 20:02:05 pacho Exp $
 
 EAPI=1
 
@@ -32,7 +32,8 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libICE
 	xinerama? ( x11-libs/libXinerama )
 	esd? ( media-sound/esound )
-	gnome? ( gnome-base/gnome-desktop:2 )
+	gnome? ( gnome-base/gnome-desktop:2
+		gnome-base/libgnomeui )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )
