@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-MemInfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-MemInfo/ChangeLog,v 1.13 2012/03/02 18:04:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-MemInfo/ChangeLog,v 1.14 2012/03/05 21:54:59 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> Sys-MemInfo-0.910.0.ebuild:
+  Marking Sys-MemInfo-0.910.0 ppc for bug 356387
 
   02 Mar 2012; Jeroen Roovers <jer@gentoo.org> Sys-MemInfo-0.910.0.ebuild:
   Stable for HPPA (bug #356387).
