@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.8 2012/03/05 04:03:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.9 2012/03/05 04:10:47 xmw Exp $
 
 EAPI=4
 
@@ -53,5 +53,5 @@ src_install() {
 		domenu debian/mupdf.desktop
 		doicon debian/mupdf.xpm
 	fi
-	dodoc README
+	dodoc README doc/{example.c,overview.txt}
 }
