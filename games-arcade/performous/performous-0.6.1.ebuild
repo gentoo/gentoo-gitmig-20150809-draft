@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.3 2012/03/05 08:07:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.4 2012/03/05 21:47:20 vapier Exp $
 
-EAPI=3
+EAPI="3"
 
 inherit flag-o-matic base cmake-utils games
 
@@ -26,12 +26,8 @@ LICENSE="GPL-2
 		CCPL-Attribution-NonCommercial-NoDerivs-2.5
 	)"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="songs tools"
-LANGS="da de es fi fr hu it ja nl sv"
-for X in ${LANGS} ; do
-	IUSE="${IUSE} linguas_${X}"
-done
 
 RDEPEND="dev-cpp/glibmm
 	dev-cpp/libxmlpp
@@ -56,33 +52,31 @@ DEPEND="${RDEPEND}
 	media-libs/glew
 	sys-apps/help2man"
 
-S="${WORKDIR}"/${MY_P}-Source
+S=${WORKDIR}/${MY_P}-Source
 
 PATCHES=(
 	"${FILESDIR}"/${P}-ffmpeg.patch
 	"${FILESDIR}"/${P}-libpng.patch
 	"${FILESDIR}"/${P}-gentoo.patch
+	"${FILESDIR}"/${P}-linguas.patch
 )
-append-cppflags -DBOOST_FILESYSTEM_VERSION=2
 
 src_prepare() {
 	base_src_prepare
 	sed -i \
 		-e "s:@GENTOO_BINDIR@:${GAMES_BINDIR}:" \
 		game/CMakeLists.txt \
-		|| die "sed failed"
-	cd lang
-	for X in $LANGS
-	do
-		use linguas_$X || rm $X.po
-	done
+		|| die
+	append-cppflags -DBOOST_FILESYSTEM_VERSION=2
+
+	strip-linguas -u lang
 }
 
 src_configure() {
-	local mycmakeargs="
+	local mycmakeargs=(
 		$(cmake-utils_use_enable tools TOOLS)
 		-DSHARE_INSTALL="${GAMES_DATADIR}"/${PN}
-	"
+	)
 	cmake-utils_src_configure
 }
 
@@ -92,12 +86,10 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-	if use songs; then
+	if use songs ; then
 		insinto "${GAMES_DATADIR}"/${PN}
-		doins -r "${S}/songs" || die "doins failed"
+		doins -r "${S}/songs" || die
 	fi
-	cd docs
-	dodoc {Authors,DeveloperReadme,instruments,TODO}.txt \
-		|| die "dodoc failed"
+	dodoc docs/{Authors,DeveloperReadme,instruments,TODO}.txt
 	prepgamesdirs
 }
