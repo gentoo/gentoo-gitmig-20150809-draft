@@ -1,11 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.31 2012/02/28 10:55:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.32 2012/03/05 14:28:47 hd_brummy Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
 
 # SECTION: Unmask
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (05. Mar 2012)
+# Unmask, works with v4l2, #350211
+-dxr3
 
 # Justin Lecher <jlec@gentoo.org> (04. Feb 2012)
 # Unmask because deps are keyworded
