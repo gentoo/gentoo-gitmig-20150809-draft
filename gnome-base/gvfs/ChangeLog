@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.166 2012/01/30 23:49:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.167 2012/03/05 16:42:25 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> gvfs-1.10.1.ebuild:
+  Marking gvfs-1.10.1 ppc64 stable for bug 393007
 
   30 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gvfs-1.10.1.ebuild,
   +files/gvfs-1.10.1-unneeded-include.patch:
