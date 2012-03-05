@@ -4,9 +4,6 @@
 <maintainer>
   <email>robbat2@gentoo.org</email>
 </maintainer>
-<maintainer>
-  <email>betelgeuse@gentoo.org</email>
-</maintainer>
 <use>
   <flag name="bazaar">Support for dev-vcs/bzr</flag>
   <flag name="git">Support for dev-vcs/git</flag>
