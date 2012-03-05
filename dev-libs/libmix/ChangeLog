@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.30 2012/03/02 21:13:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.31 2012/03/05 20:49:33 maekke Exp $
+
+  05 Mar 2012; Markus Meier <maekke@gentoo.org> libmix-2.05-r6.ebuild:
+  arm stable, bug #404651
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> libmix-2.05-r6.ebuild:
   Marking libmix-2.05-r6 ppc64 for bug 404651
