@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-0.6.10.ebuild,v 1.1 2012/01/15 14:36:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-0.6.10.ebuild,v 1.2 2012/03/05 10:29:56 tomka Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -19,7 +19,7 @@ RUBY_S="opscode-${PN}-*"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/rspec:2 dev-ruby/sigar )"

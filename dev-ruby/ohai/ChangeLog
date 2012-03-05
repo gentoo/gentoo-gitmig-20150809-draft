@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ohai
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.8 2012/01/15 14:36:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.9 2012/03/05 10:29:56 tomka Exp $
+
+  05 Mar 2012; Thomas Kahle <tomka@gentoo.org> ohai-0.6.10.ebuild:
+  marked ~x86 per bug 398989
 
 *ohai-0.6.10 (15 Jan 2012)
 
