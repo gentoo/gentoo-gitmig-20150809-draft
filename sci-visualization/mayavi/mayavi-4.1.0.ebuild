@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.1.0.ebuild,v 1.2 2012/03/05 10:26:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.1.0.ebuild,v 1.3 2012/03/05 10:43:14 jlec Exp $
 
 EAPI=4
 
@@ -25,10 +25,10 @@ RDEPEND="
 	dev-python/traitsui
 	dev-python/envisage
 	dev-python/apptools
-	dev-python/numpy
-	sci-libs/vtk[python]"
-
+	dev-python/numpy"
+CDEPEND="sci-libs/vtk[python]"
 DEPEND="
+	${CDEPEND}
 	dev-python/setuptools
 	test? (
 		${RDEPEND}
