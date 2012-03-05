@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9.ebuild,v 1.1 2012/02/23 10:04:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9.ebuild,v 1.2 2012/03/05 22:19:51 radhermit Exp $
 
 EAPI="4"
 
@@ -36,11 +36,25 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
+has_xop() {
+	echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep -q "#define __XOP__ 1"
+}
+
+has_avx() {
+	echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep -q "#define __AVX__ 1"
+}
+
 get_target() {
 	if use alpha; then
 		echo "linux-alpha"
 	elif use amd64; then
-		echo "linux-x86-64"
+		if has_xop; then
+			echo "linux-x86-64-xop"
+		elif has_avx; then
+			echo "linux-x86-64-avx"
+		else
+			echo "linux-x86-64"
+		fi
 	elif use ppc; then
 		#if use altivec; then
 		#	echo "linux-ppc32-altivec"
@@ -58,7 +72,11 @@ get_target() {
 	elif use sparc; then
 		echo "linux-sparc"
 	elif use x86; then
-		if use sse2; then
+		if has_xop; then
+			echo "linux-x86-xop"
+		elif has_avx; then
+			echo "linux-x86-avx"
+		elif use sse2; then
 			echo "linux-x86-sse2"
 		elif use mmx; then
 			echo "linux-x86-mmx"
