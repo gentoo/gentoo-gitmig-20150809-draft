@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_usb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.21 2012/02/09 09:55:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.22 2012/03/05 20:35:14 hwoarang Exp $
+
+  05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove betelgeuse
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Herd is primary maintainer.
