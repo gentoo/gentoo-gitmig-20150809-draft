@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.10-r4.ebuild,v 1.1 2012/03/05 14:46:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.10-r4.ebuild,v 1.2 2012/03/05 23:44:38 cardoe Exp $
 
 BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -100,6 +100,17 @@ src_prepare() {
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
 
+	if [[ ${PV} = *9999* ]]; then
+		# git checkouts require bootstrapping to create the configure script.
+		# Additionally the submodules must be cloned to the right locations
+		# bug #377279
+		./bootstrap || die "bootstrap failed"
+		(
+			git submodule status | sed 's/^[ +-]//;s/ .*//'
+			git hash-object bootstrap.conf
+		) >.git-module-status
+	fi
+
 	[[ -n ${AUTOTOOLIZE} ]] && eautoreconf
 }
 
@@ -193,6 +204,12 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		--with-remote \
 		--localstatedir=/var
+
+	if [[ ${PV} = *9999* ]]; then
+		# Restore gnulib's config.sub and config.guess
+		# bug #377279
+		(cd .gnulib && git reset --hard > /dev/null)
+	fi
 }
 
 src_test() {
