@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.401 2012/03/05 20:21:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.402 2012/03/05 21:44:23 hwoarang Exp $
+
+  05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> eix-0.23.10.ebuild:
+  Stable on amd64 wrt bug #406853
 
   05 Mar 2012; Jeroen Roovers <jer@gentoo.org> eix-0.23.10.ebuild:
   Stable for HPPA (bug #406853).
