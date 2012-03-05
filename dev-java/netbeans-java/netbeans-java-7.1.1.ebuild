@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.1-r1.ebuild,v 1.1 2012/02/19 12:32:24 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.1.1.ebuild,v 1.1 2012/03/05 14:15:47 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -9,11 +9,11 @@ inherit eutils java-pkg-2 java-ant-2
 DESCRIPTION="Netbeans Java Cluster"
 HOMEPAGE="http://netbeans.org/projects/java"
 SLOT="7.1"
-SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.1/final/zip/netbeans-7.1-201112071828-src.zip"
+SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.1.1/final/zip/netbeans-7.1.1-201203012225-src.zip"
 SRC_URI="${SOURCE_URL}
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-9999-r1-build.xml.patch.bz2
 	http://hg.netbeans.org/binaries/FF23DBB427D09AAEC3998B50D740C42B6A3FCD61-ant-libs-1.8.2.zip
-	http://hg.netbeans.org/binaries/A511890049A6A9B8D675F4417721337580CBD2F9-apache-maven-3.0.3-bin.zip
+	http://hg.netbeans.org/binaries/29CFD351206016B67DD0D556098513D2B259C69B-apache-maven-3.0.4-bin.zip
 	http://hg.netbeans.org/binaries/F7BD95641780C2AAE8CB9BED1686441A1CE5E749-beansbinding-1.2.1-doc.zip
 	http://hg.netbeans.org/binaries/BC0919190ADD3A7FB764C8412D10A2B026CD9563-eclipselink-2.3.0.jar
 	http://hg.netbeans.org/binaries/7C60F22D32F56478AC25A732038E9DD7DFECF5DD-eclipselink-jpa-modelgen-2.3.0.jar
@@ -65,7 +65,6 @@ RDEPEND=">=virtual/jdk-1.6
 	dev-java/jsr250:0
 	dev-java/jta:0
 	dev-java/jtidy:0
-	>=dev-java/maven-bin-3.0.3:3.0
 	dev-java/saaj:0
 	dev-java/stax-ex:0
 	dev-java/xmlstreambuffer:0"
@@ -78,6 +77,29 @@ EANT_EXTRA_ARGS="-Drebuild.cluster.name=nb.cluster.java -Dext.binaries.downloade
 EANT_FILTER_COMPILER="ecj-3.3 ecj-3.4 ecj-3.5 ecj-3.6 ecj-3.7"
 JAVA_PKG_BSFIX="off"
 
+pkg_pretend() {
+	local die_now=""
+
+	if [ -n "$(find /usr/share/netbeans-java-${SLOT}/ant -type l)" ]; then
+		eerror "Please remove following symlinks and run emerge again:"
+		find /usr/share/netbeans-java-${SLOT}/ant -type l
+		die_now="1"
+	fi
+
+	if [ -L /usr/share/netbeans-java-${SLOT}/maven ]; then
+		if [ -z "${die_now}" ]; then
+			eerror "Please remove following symlinks and run emerge again:"
+		fi
+
+		echo "/usr/share/netbeans-java-${SLOT}/maven"
+		die_now="1"
+	fi
+
+	if [ -n "${die_now}" ]; then
+		die "Symlinks exist"
+	fi
+}
+
 src_unpack() {
 	unpack $(basename ${SOURCE_URL})
 
@@ -88,7 +110,7 @@ src_unpack() {
 
 	pushd "${S}" >/dev/null || die
 	ln -s "${DISTDIR}"/FF23DBB427D09AAEC3998B50D740C42B6A3FCD61-ant-libs-1.8.2.zip o.apache.tools.ant.module/external/ant-libs-1.8.2.zip || die
-	ln -s "${DISTDIR}"/A511890049A6A9B8D675F4417721337580CBD2F9-apache-maven-3.0.3-bin.zip maven.embedder/external/apache-maven-3.0.3-bin.zip || die
+	ln -s "${DISTDIR}"/29CFD351206016B67DD0D556098513D2B259C69B-apache-maven-3.0.4-bin.zip maven.embedder/external/apache-maven-3.0.4-bin.zip || die
 	ln -s "${DISTDIR}"/F7BD95641780C2AAE8CB9BED1686441A1CE5E749-beansbinding-1.2.1-doc.zip o.jdesktop.beansbinding/external/beansbinding-1.2.1-doc.zip || die
 	ln -s "${DISTDIR}"/BC0919190ADD3A7FB764C8412D10A2B026CD9563-eclipselink-2.3.0.jar j2ee.eclipselink/external/eclipselink-2.3.0.jar || die
 	ln -s "${DISTDIR}"/7C60F22D32F56478AC25A732038E9DD7DFECF5DD-eclipselink-jpa-modelgen-2.3.0.jar j2ee.eclipselinkmodelgen/external/eclipselink-jpa-modelgen-2.3.0.jar || die
@@ -168,21 +190,21 @@ src_install() {
 	grep -E "/java$" ../moduleCluster.properties > "${D}"/${INSTALL_DIR}/moduleCluster.properties || die
 
 	doins -r *
-	rm -fr "${D}"/${INSTALL_DIR}/ant/* || die
+	#rm -fr "${D}"/${INSTALL_DIR}/ant/* || die
 	#rm -fr "${D}"/${INSTALL_DIR}/maven || die
 	#dosym /usr/share/maven-bin-3.0 ${INSTALL_DIR}/maven
 	chmod 755 "${D}"/${INSTALL_DIR}/maven/bin/mvn* || die
 	rm -fr "${D}"/${INSTALL_DIR}/maven/bin/*.bat || die
 
-	insinto ${INSTALL_DIR}/ant
-	dosym /usr/share/ant/bin ${INSTALL_DIR}/ant/bin
-	dosym /usr/share/ant/etc ${INSTALL_DIR}/ant/etc
-	doins -r ant/extra
-	dosym /usr/share/ant/lib ${INSTALL_DIR}/ant/lib
-	doins -r ant/nblib
-	dosym /usr/share/ant/tasks ${INSTALL_DIR}/ant/tasks
-	local vertasks=$(ls -d /usr/share/ant/tasks-*)
-	dosym ${vertasks} ${INSTALL_DIR}/ant/$(basename ${vertasks}) # it would be better if ant would have tasks-current dir
+	#insinto ${INSTALL_DIR}/ant
+	#dosym /usr/share/ant/bin ${INSTALL_DIR}/ant/bin
+	#dosym /usr/share/ant/etc ${INSTALL_DIR}/ant/etc
+	#doins -r ant/extra
+	#dosym /usr/share/ant/lib ${INSTALL_DIR}/ant/lib
+	#doins -r ant/nblib
+	#dosym /usr/share/ant/tasks ${INSTALL_DIR}/ant/tasks
+	#local vertasks=$(ls -d /usr/share/ant/tasks-*)
+	#dosym ${vertasks} ${INSTALL_DIR}/ant/$(basename ${vertasks}) # it would be better if ant would have tasks-current dir
 
 	popd >/dev/null || die
 
@@ -293,10 +315,4 @@ src_install() {
 	popd >/dev/null || die
 
 	dosym ${INSTALL_DIR} /usr/share/netbeans-nb-${SLOT}/java
-}
-
-pkg_postinst() {
-	elog "Note that if you change your version of ant, you have to re-emerge"
-	elog "this package to get updated the link to ant tasks of that specific"
-	elog "version."
 }
