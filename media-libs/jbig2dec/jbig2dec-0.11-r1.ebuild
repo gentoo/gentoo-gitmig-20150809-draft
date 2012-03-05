@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11-r1.ebuild,v 1.8 2012/02/20 19:24:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11-r1.ebuild,v 1.9 2012/03/05 07:45:47 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -16,7 +16,8 @@ KEYWORDS="amd64 ~arm ~hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE="png static-libs test"
 
 RDEPEND="png? ( >=media-libs/libpng-1.2:0 )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? ( app-arch/unzip )"
 
 RESTRICT="test"
 # bug 324275
