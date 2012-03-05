@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/netbeans-platform-7.1.ebuild,v 1.1 2012/01/06 10:45:26 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/netbeans-platform-7.1.1.ebuild,v 1.1 2012/03/05 14:07:39 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -9,7 +9,7 @@ inherit eutils java-pkg-2 java-ant-2
 DESCRIPTION="Netbeans Platform"
 HOMEPAGE="http://netbeans.org/features/platform/"
 SLOT="7.1"
-SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.1/final/zip/netbeans-7.1-201112071828-src.zip"
+SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.1.1/final/zip/netbeans-7.1.1-201203012225-src.zip"
 SRC_URI="${SOURCE_URL}
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-9999-r1-build.xml.patch.bz2
 	http://hg.netbeans.org/binaries/F1C19117B73A6819FA91EB646ECBA7F41073DC2A-felix-3.2.2.jar
