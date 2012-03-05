@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.372 2012/03/05 16:20:01 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.373 2012/03/05 22:09:34 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> gvim-7.3.409.ebuild:
+  Marking gvim-7.3.409 ppc for bug 406427
 
 *gvim-7.3.462 (05 Mar 2012)
 
