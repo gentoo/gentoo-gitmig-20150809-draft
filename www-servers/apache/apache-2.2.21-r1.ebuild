@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.21-r1.ebuild,v 1.7 2011/10/29 18:46:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.21-r1.ebuild,v 1.8 2012/03/05 08:17:32 patrick Exp $
+
+EAPI="2"
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20111018"
