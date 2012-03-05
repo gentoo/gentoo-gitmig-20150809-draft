@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisage/envisage-4.0.0.ebuild,v 1.2 2012/02/25 15:18:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisage/envisage-4.0.0.ebuild,v 1.3 2012/03/05 10:38:14 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.5 3.* *-jython 2.7-pypy-*"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils virtualx
