@@ -1,6 +1,14 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.277 2012/02/14 04:19:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.278 2012/03/05 03:03:09 tetromino Exp $
+
+*epiphany-3.2.1-r1 (05 Mar 2012)
+
+  05 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +epiphany-3.2.1-r1.ebuild, +files/epiphany-3.2.1-paxctl-introspection.patch,
+  +files/gir-paxctl-lt-wrapper, +files/paxctl.sh:
+  Fix build problems on PaX with USE=introspection and mark /usr/bin/epiphany
+  so that it runs on PaX when webkit-gtk was built with USE=jit.
 
   14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   epiphany-3.2.1.ebuild:
