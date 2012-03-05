@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.27 2012/01/18 20:33:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.28 2012/03/05 16:41:07 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> dconf-0.10.0.ebuild:
+  Marking dconf-0.10.0 ppc64 stable for bug 393007
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> dconf-0.10.0.ebuild:
   arm stable, bug #393007
