@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/libixp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.20 2011/12/04 21:43:19 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.21 2012/03/05 13:36:50 ssuominen Exp $
+
+*libixp-0.5_p20110208-r3 (05 Mar 2012)
+
+  05 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +libixp-0.5_p20110208-r3.ebuild:
+  Change typedef of ulong from uint32_t to unsigned long wrt #393299 to make
+  libixp compatible with x11-wm/wmii-3.9.2 on x86_64 wrt #393299 by Luíza D.
+  Utsch and others
 
   04 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
   -libixp-0.5_p20110208-r1.ebuild:
