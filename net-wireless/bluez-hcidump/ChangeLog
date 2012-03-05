@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-hcidump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.62 2012/02/25 15:19:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.63 2012/03/05 20:34:09 hwoarang Exp $
+
+  05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove betelgeuse
 
   25 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> bluez-hcidump-2.2.ebuild:
   ppc stable wrt #399745

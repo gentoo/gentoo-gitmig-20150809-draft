@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mobile</herd>
-<maintainer>
-  <email>betelgeuse@gentoo.org</email>
-  <name>Petteri Räty</name>
-  <description>Assign to herd and CC me</description>
-</maintainer>
 <longdescription>
 Firmware for Intersil Prism2/2.5/3 based IEEE 802.11b wireless LAN products.
 These wireless cards need a separate firmware which is downloaded by the init

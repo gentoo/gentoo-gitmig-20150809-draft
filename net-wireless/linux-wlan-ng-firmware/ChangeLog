@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/linux-wlan-ng-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/ChangeLog,v 1.6 2012/02/09 09:51:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/ChangeLog,v 1.7 2012/03/05 20:34:37 hwoarang Exp $
+
+  05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove betelgeuse
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Herd is primary maintainer.
