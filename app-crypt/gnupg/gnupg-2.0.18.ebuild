@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.18.ebuild,v 1.5 2012/03/05 04:31:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.18.ebuild,v 1.6 2012/03/05 05:21:04 radhermit Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ DEPEND="${COMMON_DEPEND_LIBS}
 		>=dev-libs/libgpg-error-1.7[static-libs]
 		>=dev-libs/libksba-1.0.7[static-libs]
 		>=dev-libs/pth-1.3.7[static-libs]
-		sys-libs/zlib[static-libs]
+		|| ( sys-libs/zlib[static-libs] <sys-libs/zlib-1.2.5.1-r2 )
 	)
 	nls? ( sys-devel/gettext )
 	doc? ( sys-apps/texinfo )"
