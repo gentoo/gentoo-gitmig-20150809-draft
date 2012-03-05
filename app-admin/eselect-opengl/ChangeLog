@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.91 2012/03/02 16:10:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.92 2012/03/05 10:53:35 scarabeus Exp $
+
+*eselect-opengl-1.2.5-r1 (05 Mar 2012)
+
+  05 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +eselect-opengl-1.2.5-r1.ebuild, -eselect-opengl-1.2.5.ebuild:
+  Revision bump wrt updating gl{x,}ext.h header files. You should do this every
+  time you bump the package or at least once every year.
 
 *eselect-opengl-1.2.5 (02 Mar 2012)
 

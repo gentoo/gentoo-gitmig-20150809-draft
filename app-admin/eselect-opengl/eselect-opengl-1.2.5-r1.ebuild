@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.2.5.ebuild,v 1.1 2012/03/02 16:10:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.2.5-r1.ebuild,v 1.1 2012/03/05 10:53:35 scarabeus Exp $
 
 EAPI=4
 
@@ -12,8 +12,8 @@ HOMEPAGE="http://www.gentoo.org/"
 # Source:
 # http://www.opengl.org/registry/api/glext.h
 # http://www.opengl.org/registry/api/glxext.h
-GLEXT="67"
-GLXEXT="32"
+GLEXT="75"
+GLXEXT="33"
 
 MIRROR="http://dev.gentooexperimental.org/~scarabeus/"
 SRC_URI="${MIRROR}/glext.h.${GLEXT}.xz
