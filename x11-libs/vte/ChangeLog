@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.307 2012/02/10 02:47:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.308 2012/03/05 16:52:25 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> vte-0.28.2-r202.ebuild:
+  Marking vte-0.28.2-r202 ppc64 stable for bug 393007
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> vte-0.28.1-r200.ebuild,
   vte-0.28.2-r200.ebuild, vte-0.28.2-r202.ebuild, vte-0.28.2-r203.ebuild:
