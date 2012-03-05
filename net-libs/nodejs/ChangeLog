@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.28 2012/03/01 20:14:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.29 2012/03/05 06:37:08 patrick Exp $
+
+*nodejs-0.6.12 (05 Mar 2012)
+
+  05 Mar 2012; Patrick Lauer <patrick@gentoo.org> +nodejs-0.6.12.ebuild:
+  Bump
 
   01 Mar 2012; Fabian Groffen <grobian@gentoo.org> nodejs-0.6.11.ebuild:
   Fixed for Darwin, Prefix, marked ~x64-macos
