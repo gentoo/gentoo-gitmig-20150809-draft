@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.210 2012/03/05 16:51:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.211 2012/03/05 22:18:39 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> gnome-icon-theme-3.2.1.2.ebuild:
+  Marking gnome-icon-theme-3.2.1.2 ppc stable for bug 393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> gnome-icon-theme-3.2.1.2.ebuild:
   Marking gnome-icon-theme-3.2.1.2 ppc64 stable for bug 393007
