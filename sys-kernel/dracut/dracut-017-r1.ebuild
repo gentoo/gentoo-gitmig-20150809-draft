@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-017-r1.ebuild,v 1.1 2012/03/01 08:40:44 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-017-r1.ebuild,v 1.2 2012/03/05 07:29:05 aidecoe Exp $
 
 EAPI=4
 
@@ -242,6 +242,16 @@ pkg_postinst() {
 		done
 
 		check_extra_config
+		echo
+	else
+		echo
+		ewarn "Your kernel configuration couldn't be checked.  Do you have"
+		ewarn "/usr/src/linux/.config file there?  Please check manually if"
+		ewarn "following options are enabled:"
+		ewarn ""
+		ewarn "  CONFIG_BLK_DEV_INITRD"
+		ewarn "  CONFIG_DEVTMPFS"
+		ewarn "  CONFIG_MODULES"
 		echo
 	fi
 
