@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.3.ebuild,v 1.1 2012/02/23 15:17:56 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.3.ebuild,v 1.2 2012/03/05 15:38:44 axs Exp $
 
 EAPI=4
 
@@ -46,6 +46,8 @@ src_prepare() {
 
 	# Upstream bug #15287 (still not fixed in codebase)
 	epatch "${FILESDIR}"/15287-fix-pam-authentication-with-pam_unix2.patch
+	# Gentoo bug 405579, Upstream bug #18552
+	epatch "${FILESDIR}"/405579-fix-numlock.patch
 }
 
 src_configure() {
