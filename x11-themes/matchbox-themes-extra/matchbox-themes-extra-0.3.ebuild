@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/matchbox-themes-extra/matchbox-themes-extra-0.3.ebuild,v 1.8 2012/02/21 16:14:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/matchbox-themes-extra/matchbox-themes-extra-0.3.ebuild,v 1.9 2012/03/05 11:12:49 tomka Exp $
 
 inherit versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://matchbox-project.org/sources/${PN}/$(get_version_component_range
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc x86"
 IUSE=""
 
 DEPEND=""
