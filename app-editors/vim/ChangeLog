@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.403 2012/03/03 15:52:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.404 2012/03/05 10:19:48 jdhore Exp $
+
+  05 Mar 2012; Jeff Horelick <jdhore@gentoo.org> vim-7.3.409.ebuild:
+  marked x86 per bug 406427
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> vim-7.3.409.ebuild:
   Marking vim-7.3.409 ppc64 for bug 406427

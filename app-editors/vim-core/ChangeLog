@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.389 2012/03/03 15:53:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.390 2012/03/05 10:21:52 jdhore Exp $
+
+  05 Mar 2012; Jeff Horelick <jdhore@gentoo.org> vim-core-7.3.409.ebuild:
+  marked x86 per bug 406427
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> vim-core-7.3.409.ebuild:
   Marking vim-core-7.3.409 ppc64 for bug 406427
