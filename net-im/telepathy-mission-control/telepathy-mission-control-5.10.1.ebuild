@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.10.1.ebuild,v 1.3 2012/01/14 17:33:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.10.1.ebuild,v 1.4 2012/03/05 18:44:51 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -22,7 +22,7 @@ RDEPEND=">=net-libs/telepathy-glib-0.13.14
 	>=dev-libs/dbus-glib-0.82
 	gnome-keyring? ( gnome-base/libgnome-keyring )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
-	upower? ( sys-power/upower )"
+	upower? ( >=sys-power/upower-0.9.11 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt"
