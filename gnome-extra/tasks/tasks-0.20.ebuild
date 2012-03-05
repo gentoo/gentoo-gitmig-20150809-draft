@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/tasks-0.20.ebuild,v 1.3 2012/01/14 17:11:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/tasks-0.20.ebuild,v 1.4 2012/03/05 22:06:56 ranger Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://pimlico-project.org/tasks.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=gnome-extra/evolution-data-server-1.8

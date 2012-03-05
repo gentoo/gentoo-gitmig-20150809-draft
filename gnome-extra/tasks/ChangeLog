@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/tasks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/ChangeLog,v 1.13 2012/01/14 17:11:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/ChangeLog,v 1.14 2012/03/05 22:06:56 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> tasks-0.20.ebuild:
+  Marking tasks-0.20 ppc stable for bug 393007
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> tasks-0.20.ebuild:
   x86 stable, bug #393007
