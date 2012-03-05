@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.0.3.ebuild,v 1.8 2012/02/25 15:03:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.0.3.ebuild,v 1.9 2012/03/05 08:59:26 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -33,6 +33,10 @@ DEPEND="${RDEPEND}
 		)"
 
 DOCS="NEWS README"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-nozlib.patch
+}
 
 src_configure() {
 	export ac_cv_header_ext2fs_ext2_fs_h=$(usex e2fsprogs) #354923
