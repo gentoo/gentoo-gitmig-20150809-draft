@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.501 2012/02/17 17:19:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.502 2012/03/05 16:35:13 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> glib-2.30.2.ebuild:
+  Marking glib-2.30.2 ppc64 stable for bug 393007
 
   17 Feb 2012; Tobias Klausmann <klausman@gentoo.org> glib-2.30.2-r1.ebuild:
   Stable on alpha, bug #401513
