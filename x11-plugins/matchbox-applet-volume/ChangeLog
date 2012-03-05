@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/matchbox-applet-volume
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/ChangeLog,v 1.11 2012/03/04 11:47:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/ChangeLog,v 1.12 2012/03/05 11:13:14 tomka Exp $
+
+  05 Mar 2012; Thomas Kahle <tomka@gentoo.org>
+  matchbox-applet-volume-0.1.ebuild:
+  marked x86 per bug 309407
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #112268

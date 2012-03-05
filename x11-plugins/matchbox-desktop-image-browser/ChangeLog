@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/matchbox-desktop-image-browser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.8 2012/03/04 11:48:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.9 2012/03/05 11:10:00 tomka Exp $
+
+  05 Mar 2012; Thomas Kahle <tomka@gentoo.org>
+  matchbox-desktop-image-browser-0.2-r1.ebuild:
+  marked x86 per bug 309407
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #112268
