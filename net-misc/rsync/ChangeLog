@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.220 2012/03/02 20:33:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.221 2012/03/05 21:10:06 vapier Exp $
+
+  05 Mar 2012; Mike Frysinger <vapier@gentoo.org> rsync-3.0.9-r1.ebuild:
+  Make sure libs we build against have USE=static-libs enabled when we have
+  USE=static #406109 by Jeff Horelick.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> rsync-3.0.9.ebuild:
   Marking rsync-3.0.9 ppc64 for bug 406055
