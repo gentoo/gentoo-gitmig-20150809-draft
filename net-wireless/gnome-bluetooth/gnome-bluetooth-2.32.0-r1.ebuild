@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0-r1.ebuild,v 1.3 2012/01/14 17:54:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0-r1.ebuild,v 1.4 2012/03/05 22:17:21 ranger Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc +introspection nautilus test"
 
 COMMON_DEPEND=">=dev-libs/glib-2.26.1-r1:2
