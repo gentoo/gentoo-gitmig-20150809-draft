@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.55 2012/03/05 16:38:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.56 2012/03/05 22:00:45 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> libunique-3.0.2.ebuild:
+  Marking libunique-3.0.2 ppc stable for bug 393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> libunique-3.0.2.ebuild:
   Marking libunique-3.0.2 ppc64 stable for bug 393007
