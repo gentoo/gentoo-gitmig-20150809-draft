@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>betelgeuse@gentoo.org</email>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Sitemap Gen is a python script which will generate an xml Sitemap for
