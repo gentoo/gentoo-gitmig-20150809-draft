@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.159 2012/03/04 20:13:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.160 2012/03/05 10:36:30 ago Exp $
+
+  05 Mar 2012; Agostino Sarubbo <ago@gentoo.org> tk-8.5.10.ebuild:
+  Stable for amd64, wrt bug #406607
 
   04 Mar 2012; Justin Lecher <jlec@gentoo.org> tk-8.5.10.ebuild,
   tk-8.5.11.ebuild:
