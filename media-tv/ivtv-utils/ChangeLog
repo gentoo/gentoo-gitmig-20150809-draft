@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/ivtv-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ChangeLog,v 1.15 2011/06/26 15:19:24 lxnay Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ChangeLog,v 1.16 2012/03/05 05:47:10 ssuominen Exp $
+
+*ivtv-utils-1.4.1 (05 Mar 2012)
+
+  05 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +ivtv-utils-1.4.1.ebuild,
+  +files/ivtv-utils-1.4.1-overflow.patch:
+  Version bump wrt #332059 by "df". Patch for overflow(s) wrt #339405 by Kevin
+  Pyle. Stop using linux-mod.eclass wrt #283368 by Mike Auty.
 
   26 Jun 2011; Fabio Erculiani <lxnay@gentoo.org> ivtv-utils-1.4.0-r2.ebuild:
   sys-kernel/linux-firmware blocks ivtv-firmware making impossible to have
