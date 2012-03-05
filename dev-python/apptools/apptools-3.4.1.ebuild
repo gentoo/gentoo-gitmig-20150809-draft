@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.4.1.ebuild,v 1.5 2012/03/05 10:39:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.4.1.ebuild,v 1.6 2012/03/05 10:49:04 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils virtualx
