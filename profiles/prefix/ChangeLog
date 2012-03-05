@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.330 2012/02/20 07:51:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.331 2012/03/05 11:50:06 grobian Exp $
+
+  05 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/arch/ppc/package.mask:
+  Mask binutils-apple-4.3 on PowerPC profiles, since Apple dropped entire
+  PowerPC support and hence the linker is not able to link any code
 
   20 Feb 2012; Fabian Groffen <grobian@gentoo.org> packages:
   Update packages to reflect same baselayout atom as in base profile, thanks
