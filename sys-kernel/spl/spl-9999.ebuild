@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.10 2012/02/27 01:28:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.11 2012/03/05 00:37:21 floppym Exp $
 
 EAPI="4"
 
@@ -23,11 +23,14 @@ AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 pkg_setup() {
-	CONFIG_CHECK="MODULES
-		!PREEMPT
+	CONFIG_CHECK="
 		!DEBUG_LOCK_ALLOC
+		!PREEMPT
+		MODULES
+		KALLSYMS
 		ZLIB_DEFLATE
-		ZLIB_INFLATE"
+		ZLIB_INFLATE
+	"
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 	check_extra_config
 }
