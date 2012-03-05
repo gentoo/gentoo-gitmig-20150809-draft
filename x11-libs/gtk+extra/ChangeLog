@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+extra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.39 2012/01/14 17:57:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.40 2012/03/05 16:50:34 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> gtk+extra-3.0.1.ebuild:
+  Marking gtk+extra-3.0.1 ppc64 stable for bug 393007
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> gtk+extra-3.0.1.ebuild:
   x86 stable, bug #393007
