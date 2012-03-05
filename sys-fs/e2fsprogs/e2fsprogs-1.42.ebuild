@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.ebuild,v 1.8 2012/03/03 15:08:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.ebuild,v 1.9 2012/03/05 05:40:58 vapier Exp $
 
 case ${PV} in
 *_pre*) UP_PV="${PV%_pre*}-WIP-${PV#*_pre}" ;;
@@ -44,6 +44,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.41.12-getpagesize.patch
 	epatch "${FILESDIR}"/${PN}-1.40-fbsd.patch
 	epatch "${FILESDIR}"/${PN}-1.42-no-quota.patch
+	epatch "${FILESDIR}"/${PN}-1.42-no-fallocate.patch #406609
 	# use symlinks rather than hardlinks
 	sed -i \
 		-e 's:$(LN) -f $(DESTDIR).*/:$(LN_S) -f :' \

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.1.ebuild,v 1.2 2012/02/27 20:54:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.1.ebuild,v 1.3 2012/03/05 05:40:58 vapier Exp $
 
 case ${PV} in
 *_pre*) UP_PV="${PV%_pre*}-WIP-${PV#*_pre}" ;;
@@ -43,6 +43,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.41.8-makefile.patch
 	epatch "${FILESDIR}"/${PN}-1.40-fbsd.patch
 	epatch "${FILESDIR}"/${PN}-1.42-no-quota.patch
+	epatch "${FILESDIR}"/${PN}-1.42-no-fallocate.patch #406609
 	epatch "${FILESDIR}"/${PN}-1.42.1-libext2fs-gettimeofday.patch
 	epatch "${FILESDIR}"/${PN}-1.42.1-libext2fs-config.patch
 	# use symlinks rather than hardlinks
