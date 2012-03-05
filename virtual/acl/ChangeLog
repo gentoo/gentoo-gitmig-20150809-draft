@@ -1,6 +1,11 @@
 # ChangeLog for virtual/acl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/acl/ChangeLog,v 1.3 2011/11/11 00:06:15 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/acl/ChangeLog,v 1.4 2012/03/05 21:08:58 vapier Exp $
+
+*acl-0-r1 (05 Mar 2012)
+
+  05 Mar 2012; Mike Frysinger <vapier@gentoo.org> +acl-0-r1.ebuild:
+  Pass through IUSE=static-libs #406109 by Jeff Horelick.
 
   11 Nov 2011; Jeroen Roovers <jer@gentoo.org> acl-0.ebuild:
   Drop HPPA keywording (bug #212517).
