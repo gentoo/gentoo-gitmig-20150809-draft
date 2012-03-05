@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-7.1-r1.ebuild,v 1.1 2012/01/06 12:31:45 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-7.1.1.ebuild,v 1.1 2012/03/05 14:21:47 fordfrog Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -8,9 +8,9 @@ inherit eutils java-pkg-2 java-ant-2
 DESCRIPTION="Netbeans IDE"
 HOMEPAGE="http://netbeans.org/"
 SLOT="7.1"
-SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.1/final/zip/netbeans-7.1-201112071828-src.zip"
+SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.1.1/final/zip/netbeans-7.1.1-201203012225-src.zip"
 PATCHES_URL="http://dev.gentoo.org/~fordfrog/distfiles/netbeans-9999-r1-build.xml.patch.bz2"
-L10N_URL="http://dev.gentoo.org/~fordfrog/distfiles/netbeans-l10n-7.1-20111205215624.tar.bz2"
+L10N_URL="http://dev.gentoo.org/~fordfrog/distfiles/netbeans-l10n-7.1.1-20120214091350.tar.bz2"
 ALL_URLS="${SOURCE_URL} ${PATCHES_URL} ${L10N_URL}"
 SRC_URI="linguas_af? ( ${ALL_URLS} )
 	linguas_ar? ( ${ALL_URLS} )
