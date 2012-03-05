@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unarj
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.28 2010/01/01 19:51:02 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.29 2012/03/05 20:10:49 hwoarang Exp $
+
+  05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy maintainer
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> unarj-2.65.ebuild:
   Transfer Prefix keywords

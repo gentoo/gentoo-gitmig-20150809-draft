@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lha
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.48 2010/04/06 05:46:49 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.49 2012/03/05 20:10:42 hwoarang Exp $
+
+  05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy maintainer
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org> lha-114i-r7.ebuild:
   Bump to EAPI=3, add prefix keywords
