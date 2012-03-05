@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.1.0.ebuild,v 1.2 2012/03/05 10:26:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.1.0-r1.ebuild,v 1.1 2012/03/05 10:26:35 jlec Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DISTUTILS_SRC_TEST="nosetests"
 inherit distutils eutils virtualx
 
 DESCRIPTION="Enthought Tool Suite: Scientific data 3-dimensional visualizer"
-HOMEPAGE="http://code.enthought.com/projects/mayavi/ http://pypi.python.org/pypi/mayavi"
+HOMEPAGE="http://code.enthought.com/projects/mayavi/ http://pypi.python.org/pypi/mayavi/"
 SRC_URI="http://www.enthought.com/repo/ets/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -42,6 +42,12 @@ DOCS="docs/*.txt"
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	# upstream backport
+	epatch "${FILESDIR}"/${P}-vtkQt.patch
+	distutils_src_prepare
 }
 
 src_compile() {

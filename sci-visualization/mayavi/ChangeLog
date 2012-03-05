@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.25 2012/02/15 19:13:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.26 2012/03/05 10:26:35 jlec Exp $
+
+*mayavi-4.1.0-r1 (05 Mar 2012)
+
+  05 Mar 2012; Justin Lecher <jlec@gentoo.org> -mayavi-3.4.1.ebuild,
+  -mayavi-4.0.0.ebuild, mayavi-4.1.0.ebuild, +mayavi-4.1.0-r1.ebuild,
+  +files/mayavi-4.1.0-vtkQt.patch:
+  Drop old, #322191; restrict multiabi installation, #405541; include backport
+  patch from upstream, fixes compilation with newer vtk, #399537
 
   15 Feb 2012; Justin Lecher <jlec@gentoo.org> mayavi-3.4.1.ebuild,
   metadata.xml:
