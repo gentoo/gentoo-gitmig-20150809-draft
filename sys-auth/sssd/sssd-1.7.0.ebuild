@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.7.0.ebuild,v 1.1 2012/02/24 20:16:32 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.7.0.ebuild,v 1.2 2012/03/05 18:00:21 maksbotan Exp $
 
 EAPI=4
 
@@ -30,6 +30,7 @@ COMMON_DEP="
 	sys-libs/tevent
 	sys-libs/ldb
 	>=net-nds/openldap-2.4.19
+	!!~net-nds/openldap-2.4.28
 	dev-libs/libpcre
 	>=app-crypt/mit-krb5-1.9.1
 	sys-apps/keyutils

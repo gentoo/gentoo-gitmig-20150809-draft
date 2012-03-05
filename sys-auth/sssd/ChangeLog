@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.15 2012/03/02 15:42:25 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.16 2012/03/05 18:00:21 maksbotan Exp $
+
+  05 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> sssd-1.6.4.ebuild,
+  sssd-1.7.0.ebuild, sssd-1.8.0.ebuild:
+  Block ~net-nds/openldap-2.4.28, bug #405343. Thanks to slepnoga
 
 *sssd-1.8.0 (02 Mar 2012)
 
