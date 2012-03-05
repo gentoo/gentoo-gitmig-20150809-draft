@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.1.0.ebuild,v 1.3 2012/03/05 10:43:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.1.0.ebuild,v 1.4 2012/03/05 10:53:04 jlec Exp $
 
 EAPI=4
 
@@ -19,13 +19,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples test"
 
 RDEPEND="
+	dev-python/apptools
 	dev-python/configobj
+	dev-python/envisage
 	dev-python/ipython
+	dev-python/numpy
 	dev-python/pyface
 	dev-python/traitsui
-	dev-python/envisage
-	dev-python/apptools
-	dev-python/numpy"
+	dev-python/wxpython"
 CDEPEND="sci-libs/vtk[python]"
 DEPEND="
 	${CDEPEND}

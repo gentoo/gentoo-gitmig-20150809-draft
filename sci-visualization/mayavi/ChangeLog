@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.27 2012/03/05 10:43:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.28 2012/03/05 10:53:03 jlec Exp $
+
+  05 Mar 2012; Justin Lecher <jlec@gentoo.org> mayavi-4.1.0.ebuild,
+  mayavi-4.1.0-r1.ebuild:
+  Add missing RDEP on dev-python/wxpython
 
   05 Mar 2012; Justin Lecher <jlec@gentoo.org> mayavi-4.1.0.ebuild,
   mayavi-4.1.0-r1.ebuild:
