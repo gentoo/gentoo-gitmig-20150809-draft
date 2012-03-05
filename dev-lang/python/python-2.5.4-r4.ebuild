@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r4.ebuild,v 1.31 2011/12/14 23:05:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r4.ebuild,v 1.32 2012/03/05 02:04:19 ssuominen Exp $
 
 EAPI="1"
 
@@ -60,10 +60,6 @@ pkg_setup() {
 		ewarn "\"bsddb\" module is out-of-date and no longer maintained inside dev-lang/python. It has"
 		ewarn "been additionally removed in Python 3. You should use external, still maintained \"bsddb3\""
 		ewarn "module provided by dev-python/bsddb3 which supports both Python 2 and Python 3."
-	fi
-
-	if built_with_use sys-devel/gcc libffi; then
-		die "Reinstall sys-devel/gcc with \"libffi\" USE flag disabled"
 	fi
 }
 
