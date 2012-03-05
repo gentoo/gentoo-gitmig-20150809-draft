@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.2.ebuild,v 1.1 2012/01/11 15:46:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.0.4_rc3.ebuild,v 1.1 2012/03/05 21:37:24 blueness Exp $
 
 EAPI=4
 
@@ -10,14 +10,15 @@ inherit db-use eutils versionator
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
+SRC_URI="http://gitorious.org/bitcoin/${PN}-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
+	bip17? ( http://luke.dashjr.org/programs/bitcoin/files/bip17/bip17_v0.5.0.3.patch -> bip17_v0.5.0.3_r2.patch )
 	eligius? ( http://luke.dashjr.org/programs/bitcoin/files/0.5.2-eligius_sendfee.patch.xz )
 "
 
 LICENSE="MIT ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+eligius examples ssl upnp"
+IUSE="+bip17 +eligius examples ssl upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0
@@ -31,7 +32,7 @@ DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-S="${WORKDIR}/bitcoin-bitcoind-stable"
+S="${WORKDIR}/bitcoin-${PN}-stable"
 
 pkg_setup() {
 	local UG='bitcoin'
@@ -41,6 +42,7 @@ pkg_setup() {
 
 src_prepare() {
 	cd src || die
+	use bip17 && epatch "${DISTDIR}/bip17_v0.5.0.3_r2.patch"
 	use eligius && epatch "${WORKDIR}/0.5.2-eligius_sendfee.patch"
 }
 
