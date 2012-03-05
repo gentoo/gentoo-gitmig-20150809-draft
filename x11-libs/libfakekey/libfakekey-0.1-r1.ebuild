@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1-r1.ebuild,v 1.2 2012/02/21 16:14:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1-r1.ebuild,v 1.3 2012/03/05 11:11:25 tomka Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://matchbox-project.org/sources/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc x86"
 IUSE="debug doc"
 
 RDEPEND="x11-libs/libXtst"

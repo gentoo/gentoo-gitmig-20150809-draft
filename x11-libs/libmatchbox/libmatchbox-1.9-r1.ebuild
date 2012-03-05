@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9-r1.ebuild,v 1.3 2012/02/21 16:10:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9-r1.ebuild,v 1.4 2012/03/05 11:09:38 tomka Exp $
 
 EAPI=4
 inherit eutils libtool
@@ -11,7 +11,7 @@ SRC_URI="http://matchbox-project.org/sources/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~mips ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~mips ~ppc x86"
 IUSE="debug doc jpeg pango png static-libs test truetype X xsettings"
 
 RDEPEND="x11-libs/libXext
