@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r200.ebuild,v 1.2 2012/03/04 21:09:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r200.ebuild,v 1.3 2012/03/05 07:16:51 tetromino Exp $
 
 EAPI="4"
 
-inherit autotools eutils flag-o-matic eutils virtualx gnome2-utils toolchain-funcs
+inherit autotools eutils flag-o-matic eutils virtualx gnome2-utils pax-utils toolchain-funcs
 
 MY_P="webkit-${PV}"
 DESCRIPTION="Open source web browser engine"
@@ -158,4 +158,7 @@ src_install() {
 
 	# Remove .la files
 	find "${D}" -name '*.la' -exec rm -f '{}' +
+
+	# Prevents crashes on PaX systems
+	pax-mark m "${ED}usr/bin/jsc-1"
 }
