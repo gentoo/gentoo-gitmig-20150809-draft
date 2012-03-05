@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-HTML_Common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.49 2012/03/02 21:59:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.50 2012/03/05 20:56:27 maekke Exp $
+
+  05 Mar 2012; Markus Meier <maekke@gentoo.org> PEAR-HTML_Common-1.2.5.ebuild:
+  arm stable, bug #404703
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> PEAR-HTML_Common-1.2.5.ebuild:
   Marking PEAR-HTML_Common-1.2.5 ppc64 for bug 404703
