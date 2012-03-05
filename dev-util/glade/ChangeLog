@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.150 2012/01/18 20:32:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.151 2012/03/05 16:40:28 ranger Exp $
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> glade-3.8.1.ebuild,
+  glade-3.10.2.ebuild:
+  Marking glade-3.10.2 ppc64 stable for bug 393007
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> glade-3.8.1.ebuild:
+  Marking glade-3.8.1 ppc64 stable for bug 393007
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org> glade-3.10.2.ebuild:
   arm stable, bug #393007
