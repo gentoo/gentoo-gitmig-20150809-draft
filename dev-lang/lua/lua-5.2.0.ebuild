@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.2.0.ebuild,v 1.2 2012/03/05 22:01:15 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.2.0.ebuild,v 1.3 2012/03/05 23:25:29 zmedico Exp $
 
 EAPI=4
 
@@ -72,7 +72,7 @@ src_compile() {
 	use deprecated && legacy="-DLUA_COMPAT_ALL"
 
 	emake CC="${CC}" CFLAGS="-DLUA_USE_LINUX ${legacy} ${CFLAGS}" \
-			SYSLDFLAGS="${LDFLAGS}"
+			SYSLDFLAGS="${LDFLAGS}" \
 			RPATH="${EPREFIX}/usr/$(get_libdir)/" \
 			LUA_LIBS="${mylibs}" \
 			LIB_LIBS="${liblibs}" \
