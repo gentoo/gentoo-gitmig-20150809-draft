@@ -1,6 +1,11 @@
 # ChangeLog for app-office/homebank
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.24 2011/11/20 12:19:50 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.25 2012/03/06 16:14:31 calchan Exp $
+
+*homebank-4.4 (06 Mar 2012)
+
+  06 Mar 2012; Denis Dupeyron <calchan@gentoo.org> +homebank-4.4.ebuild:
+  Version bump, thanks to Carles, Alexandre and Brandon (bug #356473).
 
   20 Nov 2011; Pacho Ramos <pacho@gentoo.org> homebank-4.3.ebuild:
   Drop DEPRECATED flags, bug #367251
