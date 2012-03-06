@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.218 2012/02/21 14:13:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.219 2012/03/06 23:35:11 dilfridge Exp $
+
+*ark-4.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ark-4.8.1.ebuild:
+  Version bump KDE SC 4.8.1
 
   21 Feb 2012; Johannes Huber <johu@gentoo.org>
   -files/ark-4.6.5-CVE-2011-2725.patch,

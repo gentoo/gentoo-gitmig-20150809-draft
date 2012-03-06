@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.101 2012/02/18 16:24:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.102 2012/03/06 23:35:17 dilfridge Exp $
+
+*qtruby-4.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> +qtruby-4.8.1.ebuild:
+  Version bump KDE SC 4.8.1
 
   18 Feb 2012; nixnut <nixnut@gentoo.org> qtruby-4.7.4.ebuild:
   ppc stable #396359

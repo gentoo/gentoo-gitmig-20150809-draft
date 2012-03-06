@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.828 2012/02/23 15:28:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.829 2012/03/06 23:35:18 dilfridge Exp $
+
+*kdelibs-4.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> +kdelibs-4.8.1.ebuild:
+  Version bump KDE SC 4.8.1
 
   23 Feb 2012; Johannes Huber <johu@gentoo.org> kdelibs-4.7.4-r10.ebuild,
   kdelibs-4.7.4-r11.ebuild, kdelibs-4.7.4-r12.ebuild, kdelibs-4.7.4.ebuild,

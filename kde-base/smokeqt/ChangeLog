@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/smokeqt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/ChangeLog,v 1.16 2012/02/18 16:27:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/ChangeLog,v 1.17 2012/03/06 23:35:01 dilfridge Exp $
+
+*smokeqt-4.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> +smokeqt-4.8.1.ebuild:
+  Version bump KDE SC 4.8.1
 
   18 Feb 2012; nixnut <nixnut@gentoo.org> smokeqt-4.7.4.ebuild:
   ppc stable #396359

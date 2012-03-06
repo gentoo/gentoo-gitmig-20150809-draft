@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.128 2012/02/21 15:39:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.129 2012/03/06 23:35:06 dilfridge Exp $
+
+*marble-4.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> +marble-4.8.1.ebuild:
+  Version bump KDE SC 4.8.1
 
   21 Feb 2012; Johannes Huber <johu@gentoo.org> -files/marble-4.5.5-gpsd.patch,
   -files/marble-4.6.2-magic.patch:
