@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_limitipconn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_limitipconn/ChangeLog,v 1.6 2011/12/26 12:37:06 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_limitipconn/ChangeLog,v 1.7 2012/03/06 14:15:09 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> mod_limitipconn-0.23.ebuild:
+  Marking mod_limitipconn-0.23 ppc for bug 394083
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> mod_limitipconn-0.23.ebuild:
   x86 stable, bug #394083
