@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leechcraft-pintab
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-pintab/ChangeLog,v 1.1 2012/03/06 18:07:55 maksbotan Exp $
+
+*leechcraft-pintab-9999 (06 Mar 2012)
+
+  06 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-pintab-9999.ebuild, +metadata.xml:
+  Add net-misc/leechraft-pintab-9999, thanks to 0xd34df00d
+
