@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/smixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.17 2012/02/05 15:08:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.18 2012/03/06 14:31:27 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> smixer-1.0.4.ebuild:
+  Marking smixer-1.0.4 ppc for bug 392847
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> smixer-1.0.1.ebuild,
   smixer-1.0.4.ebuild:
