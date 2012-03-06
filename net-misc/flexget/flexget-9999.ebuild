@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.16 2012/03/06 03:27:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.17 2012/03/06 06:25:27 mr_bones_ Exp $
 
 EAPI=4
 
@@ -60,7 +60,6 @@ if [[ ${PV} == 9999 ]]; then
 else
 	S="${WORKDIR}/${MY_P}"
 fi
-
 
 src_prepare() {
 	# Prevent setup from grabbing nose from pypi
