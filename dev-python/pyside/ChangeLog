@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.25 2012/02/23 18:56:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.26 2012/03/06 23:57:06 pesa Exp $
+
+*pyside-1.1.0-r1 (06 Mar 2012)
+
+  06 Mar 2012; Davide Pesavento <pesa@gentoo.org> +pyside-1.1.0-r1.ebuild,
+  metadata.xml:
+  Revbump: ebuild rewritten to support multiple python ABIs (bug #401549 by
+  Rafał Mużyło), thanks to Ian Delaney for initial testing.
 
   23 Feb 2012; Markos Chandras <hwoarang@gentoo.org> pyside-1.1.0.ebuild:
   Fix tests. Thanks to Ian Delaney <johneed@hotmail.com>. Bug #403061

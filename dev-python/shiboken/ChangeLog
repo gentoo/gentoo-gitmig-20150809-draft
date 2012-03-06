@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.16 2012/01/15 11:23:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.17 2012/03/06 23:54:20 pesa Exp $
+
+*shiboken-1.1.0-r1 (06 Mar 2012)
+
+  06 Mar 2012; Davide Pesavento <pesa@gentoo.org> +shiboken-1.1.0-r1.ebuild,
+  metadata.xml:
+  Revbump: ebuild rewritten to support multiple python ABIs (bug #401549 by
+  Rafał Mużyło), thanks to Ian Delaney for initial testing.
 
 *shiboken-1.1.0 (15 Jan 2012)
 
