@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Probe-Perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.15 2012/03/02 21:07:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.16 2012/03/06 19:03:38 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> Probe-Perl-0.10.0.ebuild:
+  Marking Probe-Perl-0.10.0 ppc for bug 400117
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> Probe-Perl-0.10.0.ebuild:
   Marking Probe-Perl-0.10.0 ppc64 for bug 400117
