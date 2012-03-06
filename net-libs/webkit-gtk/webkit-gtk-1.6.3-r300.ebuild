@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r300.ebuild,v 1.4 2012/03/05 07:16:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r300.ebuild,v 1.5 2012/03/06 16:23:45 tetromino Exp $
 
 EAPI="4"
 
@@ -48,6 +48,7 @@ RDEPEND="
 
 	webgl? ( virtual/opengl )
 "
+# paxctl needed for bug #407085
 DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.33
 	sys-devel/gettext
@@ -55,6 +56,7 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	dev-util/pkgconfig
 	dev-util/gtk-doc-am
+	sys-apps/paxctl
 	test? ( x11-themes/hicolor-icon-theme )
 "
 
