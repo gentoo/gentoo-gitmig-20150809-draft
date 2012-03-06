@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24_p20100226-r2.ebuild,v 1.1 2011/10/06 20:31:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24_p20100226-r2.ebuild,v 1.2 2012/03/06 21:39:45 jer Exp $
 
 EAPI="4"
 
@@ -26,6 +26,13 @@ RDEPEND="
 "
 
 src_prepare() {
+	restore_config config.h
+cp -av config.h{,.org}
+	sed -i config.h \
+		-e 's:"sort | dmenu -i -b":"-i -b":g' \
+		-e 's:sed.*exec.*-i::g' \
+		|| die
+diff -u config.h{.org,}
 	epatch \
 		"${FILESDIR}"/${PN}-0.9.24-make.patch \
 		"${FILESDIR}"/${PN}-0.9.24_p20100226-dmenu-4.4.patch
@@ -37,7 +44,6 @@ src_prepare() {
 		fi
 	done
 
-	restore_config config.h
 	tc-export CC
 }
 

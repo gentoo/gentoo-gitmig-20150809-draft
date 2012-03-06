@@ -1,21 +1,6 @@
 https://bugs.archlinux.org/task/25232
 https://bugs.launchpad.net/musca/+bug/816890
 
-diff --git a/config.h b/config.h
-index f27e122..dcad60f 100644
---- a/config.h
-+++ b/config.h
-@@ -39,7 +39,7 @@ setting settings[] = {
- 	// optional startup file of musca commands, one per line
- 	{ "startup",                 mst_str,   { .s = ".musca_start" }, ".+" },
- 	// customize the dmenu command.
--	{ "dmenu",                   mst_str,   { .s = "sort | dmenu -i -b"  }, ".+" },
-+	{ "dmenu",                   mst_str,   { .s = "-i -b"  }, ".+" },
- 	// customize the actions of dmenu driven window/group/command menus.  by default we
- 	// just spit commands back to musca, but you can wrap or redirect stuff.  the $MUSCA
- 	// environment variable is set to argv[0] in setup().  -i means execute stdin.
-diff --git a/musca.c b/musca.c
-index 7f1d6a3..794bb9c 100644
 --- a/musca.c
 +++ b/musca.c
 @@ -2162,8 +2162,16 @@ void launch(char *cmd)
