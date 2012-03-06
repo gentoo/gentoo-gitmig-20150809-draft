@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.128 2012/03/05 15:33:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.129 2012/03/06 10:47:49 ssuominen Exp $
+
+  06 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> awesome-3.4.11.ebuild:
+  Remove restriction of dev-lang/lua since it's not slotted wrt #406985
 
   05 Mar 2012; Alex Alexander <wired@gentoo.org> awesome-3.4.8.ebuild,
   awesome-3.4.9.ebuild, awesome-3.4.9-r1.ebuild, awesome-3.4.10.ebuild,
