@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/qrencode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.14 2012/01/05 10:34:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.15 2012/03/06 11:07:11 jlec Exp $
+
+*qrencode-3.2.0 (06 Mar 2012)
+
+  06 Mar 2012; Justin Lecher <jlec@gentoo.org> +qrencode-3.2.0.ebuild,
+  +files/qrencode-3.2.0-pngregenfix.patch:
+  Version Bump
 
   05 Jan 2012; Michael Weber <xmw@gentoo.org> qrencode-3.1.1.ebuild:
   ppc stable (bug 393415)
