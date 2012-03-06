@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.100 2012/03/06 09:53:26 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.101 2012/03/06 21:44:46 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> ibus-1.4.1.ebuild:
+  Marking ibus-1.4.1 ppc64 for bug 405777
 
   06 Mar 2012; Naohiro Aota <naota@gentoo.org> ibus-1.4.1.ebuild:
   Add missing dependency dev-util/intltool
