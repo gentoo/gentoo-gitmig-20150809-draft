@@ -1,0 +1,262 @@
+From 86b36782d0e5ab6e811dd2d0968b87e4eee38e7d Mon Sep 17 00:00:00 2001
+From: Jeremy Olexa <darkside@gentoo.org>
+Date: Tue, 20 Dec 2011 15:35:16 +0000
+Subject: [PATCH] s:/etc/make.conf:/etc/portage/make.conf:g - Use new location
+
+Tested with stage building only (not livecd)
+---
+ examples/livecd-stage2_template.spec |    2 +-
+ examples/stage4_template.spec        |    2 +-
+ modules/generic_stage_target.py      |   18 +++++++++---------
+ modules/stage3_target.py             |    6 +++++-
+ targets/stage1/stage1-chroot.sh      |   12 ++++++------
+ targets/stage1/stage1-controller.sh  |    2 +-
+ targets/support/chroot-functions.sh  |   16 ++++++++--------
+ targets/support/kmerge.sh            |    6 +++---
+ targets/support/livecdfs-update.sh   |   12 ++++++------
+ 9 files changed, 40 insertions(+), 36 deletions(-)
+
+diff --git a/examples/livecd-stage2_template.spec b/examples/livecd-stage2_template.spec
+index b957688..18a06a4 100644
+--- a/examples/livecd-stage2_template.spec
++++ b/examples/livecd-stage2_template.spec
+@@ -345,5 +345,5 @@ livecd/empty:
+ # This option tells catalyst to clean specific files from the filesystem and is
+ # very usefu in cleaning up stray files in /etc left over after livecd/unmerge.
+ # example:
+-# livecd/rm: /lib/*.a /usr/lib/*.a /usr/lib/gcc-lib/*/*/libgcj* /etc/dispatch-conf.conf /etc/etc-update.conf /etc/*- /etc/issue* /etc/make.conf /etc/man.conf /etc/*.old /root/.viminfo /usr/sbin/bootsplash* /usr/sbin/fb* /usr/sbin/fsck.cramfs /usr/sbin/fsck.minix /usr/sbin/mkfs.minix /usr/sbin/mkfs.bfs /usr/sbin/mkfs.cramfs /lib/security/pam_access.so /lib/security/pam_chroot.so /lib/security/pam_debug.so /lib/security/pam_ftp.so /lib/security/pam_issue.so /lib/security/pam_mail.so /lib/security/pam_motd.so /lib/security/pam_mkhomedir.so /lib/security/pam_postgresok.so /lib/security/pam_rhosts_auth.so /lib/security/pam_userdb.so /usr/share/consolefonts/1* /usr/share/consolefonts/7* /usr/share/consolefonts/8* /usr/share/consolefonts/9* /usr/share/consolefonts/A* /usr/share/consolefonts/C* /usr/share/consolefonts/E* /usr/share/consolefonts/G* /usr/share/consolefonts/L* /usr/share/consolefonts/M* /usr/share/consolefonts/R* /usr/share/consolefonts/a* /usr/share/consolefonts/c* /usr/share/consolefonts/dr* /usr/share/consolefonts/g* /usr/share/consolefonts/i* /usr/share/consolefonts/k* /usr/share/consolefonts/l* /usr/share/consolefonts/r* /usr/share/consolefonts/s* /usr/share/consolefonts/t* /usr/share/consolefonts/v* /etc/splash/livecd-2006.1/16* /etc/splash/livecd-2006.1/12* /etc/splash/livecd-2006.1/6* /etc/splash/livecd-2006.1/8* /etc/splash/livecd-2006.1/images/silent-16* /etc/splash/livecd-2006.1/images/silent-12* /etc/splash/livecd-2006.1/images/silent-6* /etc/splash/livecd-2006.1/images/silent-8* /etc/splash/livecd-2006.1/images/verbose-16* /etc/splash/livecd-2006.1/images/verbose-12* /etc/splash/livecd-2006.1/images/verbose-6* /etc/splash/livecd-2006.1/images/verbose-8* /etc/make.conf.example /etc/make.globals /etc/resolv.conf
++# livecd/rm: /lib/*.a /usr/lib/*.a /usr/lib/gcc-lib/*/*/libgcj* /etc/dispatch-conf.conf /etc/etc-update.conf /etc/*- /etc/issue* /etc/portage/make.conf /etc/man.conf /etc/*.old /root/.viminfo /usr/sbin/bootsplash* /usr/sbin/fb* /usr/sbin/fsck.cramfs /usr/sbin/fsck.minix /usr/sbin/mkfs.minix /usr/sbin/mkfs.bfs /usr/sbin/mkfs.cramfs /lib/security/pam_access.so /lib/security/pam_chroot.so /lib/security/pam_debug.so /lib/security/pam_ftp.so /lib/security/pam_issue.so /lib/security/pam_mail.so /lib/security/pam_motd.so /lib/security/pam_mkhomedir.so /lib/security/pam_postgresok.so /lib/security/pam_rhosts_auth.so /lib/security/pam_userdb.so /usr/share/consolefonts/1* /usr/share/consolefonts/7* /usr/share/consolefonts/8* /usr/share/consolefonts/9* /usr/share/consolefonts/A* /usr/share/consolefonts/C* /usr/share/consolefonts/E* /usr/share/consolefonts/G* /usr/share/consolefonts/L* /usr/share/consolefonts/M* /usr/share/consolefonts/R* /usr/share/consolefonts/a* /usr/share/consolefonts/c* /usr/share/consolefonts/dr* /usr/share/consolefonts/g* /usr/share/consolefonts/i* /usr/share/consolefonts/k* /usr/share/consolefonts/l* /usr/share/consolefonts/r* /usr/share/consolefonts/s* /usr/share/consolefonts/t* /usr/share/consolefonts/v* /etc/splash/livecd-2006.1/16* /etc/splash/livecd-2006.1/12* /etc/splash/livecd-2006.1/6* /etc/splash/livecd-2006.1/8* /etc/splash/livecd-2006.1/images/silent-16* /etc/splash/livecd-2006.1/images/silent-12* /etc/splash/livecd-2006.1/images/silent-6* /etc/splash/livecd-2006.1/images/silent-8* /etc/splash/livecd-2006.1/images/verbose-16* /etc/splash/livecd-2006.1/images/verbose-12* /etc/splash/livecd-2006.1/images/verbose-6* /etc/splash/livecd-2006.1/images/verbose-8* /etc/portage/make.conf.example /etc/make.globals /etc/resolv.conf
+ livecd/rm:
+diff --git a/examples/stage4_template.spec b/examples/stage4_template.spec
+index c5cd65c..9da5e5e 100644
+--- a/examples/stage4_template.spec
++++ b/examples/stage4_template.spec
+@@ -254,5 +254,5 @@ stage4/empty:
+ # This option tells catalyst to clean specific files from the filesystem and is
+ # very usefu in cleaning up stray files in /etc left over after stage4/unmerge.
+ # example:
+-# stage4/rm: /lib/*.a /usr/lib/*.a /usr/lib/gcc-lib/*/*/libgcj* /etc/dispatch-conf.conf /etc/etc-update.conf /etc/*- /etc/issue* /etc/make.conf /etc/man.conf /etc/*.old /root/.viminfo /usr/sbin/fb* /usr/sbin/fsck.cramfs /usr/sbin/fsck.minix /usr/sbin/mkfs.minix /usr/sbin/mkfs.bfs /usr/sbin/mkfs.cramfs /lib/security/pam_access.so /lib/security/pam_chroot.so /lib/security/pam_debug.so /lib/security/pam_ftp.so /lib/security/pam_issue.so /lib/security/pam_mail.so /lib/security/pam_motd.so /lib/security/pam_mkhomedir.so /lib/security/pam_postgresok.so /lib/security/pam_rhosts_auth.so /lib/security/pam_userdb.so /usr/share/consolefonts/1* /usr/share/consolefonts/7* /usr/share/consolefonts/8* /usr/share/consolefonts/9* /usr/share/consolefonts/A* /usr/share/consolefonts/C* /usr/share/consolefonts/E* /usr/share/consolefonts/G* /usr/share/consolefonts/L* /usr/share/consolefonts/M* /usr/share/consolefonts/R* /usr/share/consolefonts/a* /usr/share/consolefonts/c* /usr/share/consolefonts/dr* /usr/share/consolefonts/g* /usr/share/consolefonts/i* /usr/share/consolefonts/k* /usr/share/consolefonts/l* /usr/share/consolefonts/r* /usr/share/consolefonts/s* /usr/share/consolefonts/t* /usr/share/consolefonts/v* /etc/splash/livecd-2006.1/16* /etc/splash/livecd-2006.1/12* /etc/splash/livecd-2006.1/6* /etc/splash/livecd-2006.1/8* /etc/splash/livecd-2006.1/images/silent-16* /etc/splash/livecd-2006.1/images/silent-12* /etc/splash/livecd-2006.1/images/silent-6* /etc/splash/livecd-2006.1/images/silent-8* /etc/splash/livecd-2006.1/images/verbose-16* /etc/splash/livecd-2006.1/images/verbose-12* /etc/splash/livecd-2006.1/images/verbose-6* /etc/splash/livecd-2006.1/images/verbose-8* /etc/make.conf.example /etc/make.globals /etc/resolv.conf
++# stage4/rm: /lib/*.a /usr/lib/*.a /usr/lib/gcc-lib/*/*/libgcj* /etc/dispatch-conf.conf /etc/etc-update.conf /etc/*- /etc/issue* /etc/portage/make.conf /etc/man.conf /etc/*.old /root/.viminfo /usr/sbin/fb* /usr/sbin/fsck.cramfs /usr/sbin/fsck.minix /usr/sbin/mkfs.minix /usr/sbin/mkfs.bfs /usr/sbin/mkfs.cramfs /lib/security/pam_access.so /lib/security/pam_chroot.so /lib/security/pam_debug.so /lib/security/pam_ftp.so /lib/security/pam_issue.so /lib/security/pam_mail.so /lib/security/pam_motd.so /lib/security/pam_mkhomedir.so /lib/security/pam_postgresok.so /lib/security/pam_rhosts_auth.so /lib/security/pam_userdb.so /usr/share/consolefonts/1* /usr/share/consolefonts/7* /usr/share/consolefonts/8* /usr/share/consolefonts/9* /usr/share/consolefonts/A* /usr/share/consolefonts/C* /usr/share/consolefonts/E* /usr/share/consolefonts/G* /usr/share/consolefonts/L* /usr/share/consolefonts/M* /usr/share/consolefonts/R* /usr/share/consolefonts/a* /usr/share/consolefonts/c* /usr/share/consolefonts/dr* /usr/share/consolefonts/g* /usr/share/consolefonts/i* /usr/share/consolefonts/k* /usr/share/consolefonts/l* /usr/share/consolefonts/r* /usr/share/consolefonts/s* /usr/share/consolefonts/t* /usr/share/consolefonts/v* /etc/splash/livecd-2006.1/16* /etc/splash/livecd-2006.1/12* /etc/splash/livecd-2006.1/6* /etc/splash/livecd-2006.1/8* /etc/splash/livecd-2006.1/images/silent-16* /etc/splash/livecd-2006.1/images/silent-12* /etc/splash/livecd-2006.1/images/silent-6* /etc/splash/livecd-2006.1/images/silent-8* /etc/splash/livecd-2006.1/images/verbose-16* /etc/splash/livecd-2006.1/images/verbose-12* /etc/splash/livecd-2006.1/images/verbose-6* /etc/splash/livecd-2006.1/images/verbose-8* /etc/portage/make.conf.example /etc/make.globals /etc/resolv.conf
+ stage4/rm:
+diff --git a/modules/generic_stage_target.py b/modules/generic_stage_target.py
+index 6e0bc33..8aa2075 100644
+--- a/modules/generic_stage_target.py
++++ b/modules/generic_stage_target.py
+@@ -938,7 +938,7 @@ class generic_stage_target(generic_target):
+ 
+ 	def chroot_setup(self):
+ 		self.makeconf=read_makeconf(self.settings["chroot_path"]+\
+-			"/etc/make.conf")
++			"/etc/portage/make.conf")
+ 		self.override_cbuild()
+ 		self.override_chost()
+ 		self.override_cflags()
+@@ -950,7 +950,7 @@ class generic_stage_target(generic_target):
+ 		else:
+ 			print "Setting up chroot..."
+ 			
+-			#self.makeconf=read_makeconf(self.settings["chroot_path"]+"/etc/make.conf")
++			#self.makeconf=read_makeconf(self.settings["chroot_path"]+"/etc/portage/make.conf")
+ 			
+ 			cmd("cp /etc/resolv.conf "+self.settings["chroot_path"]+"/etc",\
+ 				"Could not copy resolv.conf into place.",env=self.env)
+@@ -997,10 +997,10 @@ class generic_stage_target(generic_target):
+ 					"Could not copy /etc/hosts",env=self.env)
+ 
+ 			""" Modify and write out make.conf (for the chroot) """
+-			cmd("rm -f "+self.settings["chroot_path"]+"/etc/make.conf",\
++			cmd("rm -f "+self.settings["chroot_path"]+"/etc/portage/make.conf",\
+ 				"Could not remove "+self.settings["chroot_path"]+\
+-				"/etc/make.conf",env=self.env)
+-			myf=open(self.settings["chroot_path"]+"/etc/make.conf","w")
++				"/etc/portage/make.conf",env=self.env)
++			myf=open(self.settings["chroot_path"]+"/etc/portage/make.conf","w")
+ 			myf.write("# These settings were set by the catalyst build script that automatically\n# built this stage.\n")
+ 			myf.write("# Please consult /usr/share/portage/config/make.conf.example for a more\n# detailed example.\n")
+ 			if self.settings.has_key("CFLAGS"):
+@@ -1046,9 +1046,9 @@ class generic_stage_target(generic_target):
+ 				myf.write('PORTDIR_OVERLAY="/usr/local/portage"\n')
+ 
+ 			myf.close()
+-			cmd("cp "+self.settings["chroot_path"]+"/etc/make.conf "+\
+-				self.settings["chroot_path"]+"/etc/make.conf.catalyst",\
+-				"Could not backup /etc/make.conf",env=self.env)
++			cmd("cp "+self.settings["chroot_path"]+"/etc/portage/make.conf "+\
++				self.settings["chroot_path"]+"/etc/portage/make.conf.catalyst",\
++				"Could not backup /etc/portage/make.conf",env=self.env)
+ 			touch(self.settings["autoresume_path"]+"chroot_setup")
+ 
+ 	def fsscript(self):
+@@ -1093,7 +1093,7 @@ class generic_stage_target(generic_target):
+ 			cmd("rm -rf "+self.settings["chroot_path"]+"/usr/local/portage",\
+ 				"Could not remove /usr/local/portage",env=self.env)
+ 			cmd("sed -i '/^PORTDIR_OVERLAY/d' "+self.settings["chroot_path"]+\
+-				"/etc/make.conf",\
++				"/etc/portage/make.conf",\
+ 				"Could not remove PORTDIR_OVERLAY from make.conf",env=self.env)
+ 
+ 		""" Clean up old and obsoleted files in /etc """
+diff --git a/modules/stage3_target.py b/modules/stage3_target.py
+index 351ad0c..f5ad9e2 100644
+--- a/modules/stage3_target.py
++++ b/modules/stage3_target.py
+@@ -22,8 +22,12 @@ class stage3_target(generic_stage_target):
+ 
+ 	def set_cleanables(self):
+ 		generic_stage_target.set_cleanables(self)
+-		# Not sure where /etc/make.profile is being created
++		# Not sure where /etc/make.profile is being created (unless it is a
++		# leftover from the seed?)
+ 		self.settings["cleanables"].extend(["/etc/make.profile"])
++		# Not sure where /etc/make.conf is being created (unless it is a
++		# leftover from the seed?)
++		self.settings["cleanables"].extend(["/etc/make.conf"])
+ 
+ def register(foo):
+ 	foo.update({"stage3":stage3_target})
+diff --git a/targets/stage1/stage1-chroot.sh b/targets/stage1/stage1-chroot.sh
+index 976515d..e238012 100644
+--- a/targets/stage1/stage1-chroot.sh
++++ b/targets/stage1/stage1-chroot.sh
+@@ -20,19 +20,19 @@ fi
+ 
+ ## START BUILD
+ # First, we drop in a known-good baselayout
+-[ -e /etc/make.conf ] && \
+-	echo 'USE="${USE} -build"' >> /etc/make.conf
++[ -e /etc/portage/make.conf ] && \
++	echo 'USE="${USE} -build"' >> /etc/portage/make.conf
+ run_merge "--oneshot --nodeps sys-apps/baselayout"
+-sed -i '/USE="${USE} -build"/d' /etc/make.conf
++sed -i '/USE="${USE} -build"/d' /etc/portage/make.conf
+ 
+ # Next, we install the package manager
+ clst_root_path=/ setup_pkgmgr
+ make_destpath /tmp/stage1root
+ 
+ # Now, we install our packages
+-[ -e /etc/make.conf ] && \
++[ -e /etc/portage/make.conf ] && \
+ 	echo "USE=\"-* bindist build ${BOOTSTRAP_USE} ${clst_HOSTUSE}\"" \
+-	>> /etc/make.conf
++	>> /etc/portage/make.conf
+ run_merge "--oneshot ${clst_buildpkgs}"
+ sed -i "/USE=\"-* bindist build ${BOOTSTRAP_USE} ${clst_HOSTUSE}\"/d" \
+-	/etc/make.conf
++	/etc/portage/make.conf
+diff --git a/targets/stage1/stage1-controller.sh b/targets/stage1/stage1-controller.sh
+index 1f72067..3c348ce 100644
+--- a/targets/stage1/stage1-controller.sh
++++ b/targets/stage1/stage1-controller.sh
+@@ -12,7 +12,7 @@ case $1 in
+ 		install -d ${clst_chroot_path}/${clst_root_path}/etc
+ 		
+ 		# Setup make.conf and make.profile link in "ROOT in chroot":
+-		copy_to_chroot ${clst_chroot_path}/etc/make.conf /${clst_root_path}/etc
++		copy_to_chroot ${clst_chroot_path}/etc/portage/make.conf /${clst_root_path}/etc
+ 		copy_to_chroot ${clst_chroot_path}/etc/portage/make.profile \
+ 			/${clst_root_path}/etc
+ 
+diff --git a/targets/support/chroot-functions.sh b/targets/support/chroot-functions.sh
+index 277fdc2..18cf49e 100644
+--- a/targets/support/chroot-functions.sh
++++ b/targets/support/chroot-functions.sh
+@@ -72,8 +72,8 @@ setup_myfeatures(){
+ 	then
+ 		export clst_myfeatures="${clst_myfeatures} distcc"
+ 		export DISTCC_HOSTS="${clst_distcc_hosts}"
+-		[ -e /etc/make.conf ] && \
+-			echo 'USE="${USE} -avahi -gtk -gnome"' >> /etc/make.conf
++		[ -e /etc/portage/make.conf ] && \
++			echo 'USE="${USE} -avahi -gtk -gnome"' >> /etc/portage/make.conf
+ 		# We install distcc to / on stage1, then use --noreplace, so we need to
+ 		# have some way to check if we need to reinstall distcc without being
+ 		# able to rely on USE, so we check for the distcc user and force a
+@@ -84,7 +84,7 @@ setup_myfeatures(){
+ 		else
+ 			clst_root_path=/ run_merge --oneshot --nodeps --noreplace sys-devel/distcc || exit 1
+ 		fi
+-		sed -i '/USE="${USE} -avahi -gtk -gnome"/d' /etc/make.conf
++		sed -i '/USE="${USE} -avahi -gtk -gnome"/d' /etc/portage/make.conf
+ 		mkdir -p /etc/distcc
+ 		echo "${clst_distcc_hosts}" > /etc/distcc/hosts
+ 
+@@ -163,11 +163,11 @@ setup_gcc(){
+ 
+ setup_pkgmgr(){
+ 	# We need to merge our package manager with USE="build" set in case it is
+-	# portage to avoid frying our /etc/make.conf file.  Otherwise, we could
++	# portage to avoid frying our /etc/portage/make.conf file.  Otherwise, we could
+ 	# just let emerge system could merge it.
+-	[ -e /etc/make.conf ] && echo 'USE="${USE} build"' >> /etc/make.conf
++	[ -e /etc/portage/make.conf ] && echo 'USE="${USE} build"' >> /etc/portage/make.conf
+ 	run_merge --oneshot --nodeps sys-apps/portage
+-	sed -i '/USE="${USE} build"/d' /etc/make.conf
++	sed -i '/USE="${USE} build"/d' /etc/portage/make.conf
+ }
+ 
+ cleanup_distcc() {
+@@ -233,11 +233,11 @@ die() {
+ 
+ make_destpath() {
+ 	# ROOT is / by default, so remove any ROOT= settings from make.conf
+-	sed -i '/ROOT=/d' /etc/make.conf
++	sed -i '/ROOT=/d' /etc/portage/make.conf
+ 	export ROOT=/
+ 	if [ "${1}" != "/" -a -n "${1}" ] 
+ 	then
+-		echo "ROOT=\"${1}\"" >> /etc/make.conf
++		echo "ROOT=\"${1}\"" >> /etc/portage/make.conf
+ 		export ROOT=${1}
+ 	fi
+ 	if [ ! -d ${ROOT} ]
+diff --git a/targets/support/kmerge.sh b/targets/support/kmerge.sh
+index d3201bb..f57508f 100644
+--- a/targets/support/kmerge.sh
++++ b/targets/support/kmerge.sh
+@@ -191,8 +191,8 @@ then
+ 	fi
+ fi
+ 
+-[ -e /etc/make.conf ] && \
+-	echo "USE=\"\${USE} ${clst_kernel_use} build\"" >> /etc/make.conf
++[ -e /etc/portage/make.conf ] && \
++	echo "USE=\"\${USE} ${clst_kernel_use} build\"" >> /etc/portage/make.conf
+ 
+ if [ -n "${clst_KERNCACHE}" ]
+ then
+@@ -232,7 +232,7 @@ then
+ fi
+ 
+ build_kernel
+-sed -i "/USE=\"\${USE} ${clst_kernel_use} build\"/d" /etc/make.conf
++sed -i "/USE=\"\${USE} ${clst_kernel_use} build\"/d" /etc/portage/make.conf
+ # grep out the kernel version so that we can do our modules magic
+ VER=`grep ^VERSION\ \= /usr/src/linux/Makefile | awk '{ print $3 };'`
+ PAT=`grep ^PATCHLEVEL\ \= /usr/src/linux/Makefile | awk '{ print $3 };'`
+diff --git a/targets/support/livecdfs-update.sh b/targets/support/livecdfs-update.sh
+index ad2f8b7..a7aad5f 100644
+--- a/targets/support/livecdfs-update.sh
++++ b/targets/support/livecdfs-update.sh
+@@ -112,12 +112,12 @@ fi
+ 
+ # Tweak the livecd make.conf so that users know not to edit it
+ # http://bugs.gentoo.org/show_bug.cgi?id=144647
+-mv /etc/make.conf /etc/make.conf.old
+-echo "####################################################" >> /etc/make.conf
+-echo "## ATTENTION: THIS IS THE MAKE.CONF ON THE LIVECD ##" >> /etc/make.conf
+-echo "## PLEASE EDIT /mnt/gentoo/etc/make.conf INSTEAD  ##" >> /etc/make.conf
+-echo "####################################################" >> /etc/make.conf
+-cat /etc/make.conf.old >> /etc/make.conf
++mv /etc/portage/make.conf /etc/portage/make.conf.old
++echo "####################################################" >> /etc/portage/make.conf
++echo "## ATTENTION: THIS IS THE MAKE.CONF ON THE LIVECD ##" >> /etc/portage/make.conf
++echo "## PLEASE EDIT /mnt/gentoo/etc/portage/make.conf INSTEAD  ##" >> /etc/portage/make.conf
++echo "####################################################" >> /etc/portage/make.conf
++cat /etc/portage/make.conf.old >> /etc/portage/make.conf
+ 
+ # devfs tweaks
+ [ -e /etc/devfsd.conf ] && sed -i '/dev-state/ s:^:#:' /etc/devfsd.conf
+-- 
+1.7.3.4
+
