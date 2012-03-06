@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/insight
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.47 2008/07/12 12:21:10 tester Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.48 2012/03/06 13:39:07 scarabeus Exp $
+
+*insight-6.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +insight-6.8.1.ebuild,
+  -insight-6.8.ebuild:
+  Version bump to latest. Fixes bug#343189 and bug#342321.
 
 *insight-6.8 (12 Jul 2008)
 
