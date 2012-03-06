@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0.ebuild,v 1.2 2012/03/02 15:44:20 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0.ebuild,v 1.3 2012/03/06 08:05:46 olemarkus Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ function php_get_uri ()
 			echo "http://download.suhosin.org/${2}"
 		;;
 		"olemarkus")
-			echo "http://olemarkus.org/~olemarkus/gentoo/${2}"
+			echo "http://dev.gentoo.org/~olemarkus/php/${2}"
 		;;
 		"gentoo")
 			echo "mirror://gentoo/${2}"
