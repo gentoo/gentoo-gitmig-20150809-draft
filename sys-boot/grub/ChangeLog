@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.183 2012/03/06 00:58:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.184 2012/03/06 01:35:58 floppym Exp $
+
+  06 Mar 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00_beta0.ebuild,
+  grub-9999.ebuild:
+  Add runtime dep on efibootmgr for efi platforms.
 
   06 Mar 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00_beta0.ebuild,
   grub-9999.ebuild:
