@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/greybird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.6 2012/01/31 23:43:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.7 2012/03/06 18:13:33 ssuominen Exp $
+
+*greybird-0.5 (06 Mar 2012)
+
+  06 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +greybird-0.5.ebuild:
+  Version bump.
 
   31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> greybird-0.4.ebuild:
   Missing CCPL-Attribution-ShareAlike-NonCommercial-3.0
