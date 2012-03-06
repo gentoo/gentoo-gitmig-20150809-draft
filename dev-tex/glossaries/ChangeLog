@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.46 2011/11/05 18:16:54 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.47 2012/03/06 14:18:42 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> glossaries-3.01.ebuild:
+  Marking glossaries-3.01 ppc for bug 387579
 
   05 Nov 2011; Raúl Porcel <armin76@gentoo.org> glossaries-3.01.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #387579
