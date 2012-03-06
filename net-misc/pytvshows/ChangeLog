@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/pytvshows
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/ChangeLog,v 1.10 2011/04/05 18:57:21 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/ChangeLog,v 1.11 2012/03/06 09:39:35 pacho Exp $
+
+  06 Mar 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/pytvshows-0.2-feedurl.patch, +files/pytvshows-0.2-improved-re.patch,
+  pytvshows-0.2-r1.ebuild:
+  Apply fixes and improvements to get it working again, bug #379621 by Sumant
+  Oemrawsingh.
 
   05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pytvshows-0.2-r1.ebuild:
