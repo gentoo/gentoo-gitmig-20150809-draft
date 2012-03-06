@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.55 2012/03/03 10:34:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.56 2012/03/06 14:11:43 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> phpsysinfo-3.0.15.ebuild:
+  Marking phpsysinfo-3.0.15 ppc for bug 404869
 
   03 Mar 2012; Tim Harder <radhermit@gentoo.org> phpsysinfo-3.0.15.ebuild:
   Update php deps and drop depend.php eclass usage.
