@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/insight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.49 2012/03/06 13:40:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.50 2012/03/06 13:42:42 scarabeus Exp $
+
+  06 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> insight-6.8.1.ebuild:
+  Kill whitespace warning.
 
   06 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> insight-6.8.1.ebuild:
   Static libs were only for debug purposes.
