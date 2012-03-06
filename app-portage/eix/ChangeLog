@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.403 2012/03/06 01:24:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.404 2012/03/06 14:13:27 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> eix-0.23.10.ebuild:
+  Marking eix-0.23.10 ppc for bug 406853
 
   06 Mar 2012; Jeff Horelick <jdhore@gentoo.org> eix-0.23.10.ebuild:
   marked x86 per bug 406853
