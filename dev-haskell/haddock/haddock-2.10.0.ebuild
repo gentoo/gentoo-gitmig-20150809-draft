@@ -1,23 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0_pre20120202.ebuild,v 1.1 2012/03/04 03:24:53 gienah Exp $
-
-# haddock-2.9.4 on hackage does not work with ghc-7.4.1
-# this ebuild uses a tarball of what's distributed with ghc-7.4.1
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0.ebuild,v 1.1 2012/03/06 05:31:21 gienah Exp $
 
 EAPI="4"
 
-#CABAL_FEATURES="bin lib profile haddock hscolour"
-CABAL_FEATURES="bin lib profile hscolour"
-inherit haskell-cabal pax-utils versionator
-
-MY_PV=$(get_version_component_range '1-3')
-MY_P="${MY_PN}-${PV}"
+CABAL_FEATURES="bin lib profile haddock hscolour"
+inherit haskell-cabal pax-utils
 
 DESCRIPTION="A documentation-generation tool for Haskell libraries"
 HOMEPAGE="http://www.haskell.org/haddock/"
-#SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
-SRC_URI="http://dev.gentoo.org/~gienah/snapshots/${P}.tar.gz"
+SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -32,13 +24,11 @@ RDEPEND="dev-haskell/ghc-paths[profile?]
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.10"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
-
 RESTRICT="test" # avoid depends on QC
 
 CABAL_EXTRA_BUILD_FLAGS="--ghc-options=-rtsopts"
 
-# haddock is disabled as Cabal seems to be buggy about building docks with itself.
+# haddock is disabled as Cabal seems to be buggy about building docs with itself.
 # however, other packages seem to work
 src_configure() {
 	# create a fake haddock executable. it'll set the right version to cabal

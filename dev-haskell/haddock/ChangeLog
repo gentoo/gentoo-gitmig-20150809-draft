@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.86 2012/03/04 03:24:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.87 2012/03/06 05:31:21 gienah Exp $
+
+*haddock-2.10.0 (06 Mar 2012)
+
+  06 Mar 2012; Mark Wright <gienah@gentoo.org>
+  -haddock-2.10.0_pre20120202.ebuild, +haddock-2.10.0.ebuild:
+  Bump to 2.10.0, which is the same version included in ghc 7.4.1. Remove
+  haddock-2.10.0_pre20120202, since the haddock 2.10.0 included in ghc 7.4.1 is
+  now on hackage.
 
 *haddock-2.10.0_pre20120202 (04 Mar 2012)
 
