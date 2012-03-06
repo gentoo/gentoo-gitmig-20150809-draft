@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-9999.ebuild,v 1.3 2012/03/02 10:56:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-9999.ebuild,v 1.4 2012/03/06 09:28:09 ssuominen Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.transmissionbt.com/"
 
 LICENSE="GPL-2 MIT"
 SLOT="0"
-IUSE="ayatana gtk lightweight nls qt4 xfs"
+IUSE="ayatana gtk lightweight qt4 xfs"
 
 RDEPEND="
 	>=dev-libs/libevent-2.0.10
@@ -42,18 +42,11 @@ RDEPEND="
 		x11-libs/qt-gui:4[dbus]
 		)"
 
-EAUTORECONF_DEPEND="
-	dev-util/intltool
-	sys-devel/gettext"
-
 DEPEND="${RDEPEND}
-	${EAUTORECONF_DEPEND}
+	dev-util/intltool
 	dev-util/pkgconfig
+	sys-devel/gettext
 	virtual/os-headers
-	nls? (
-		dev-util/intltool
-		sys-devel/gettext
-		)
 	xfs? ( sys-fs/xfsprogs )"
 
 REQUIRED_USE="ayatana? ( gtk )"
@@ -113,7 +106,6 @@ src_configure() {
 
 	econf \
 		--enable-external-natpmp \
-		$(use_enable nls) \
 		$(use_enable lightweight) \
 		$(use_with gtk)
 
@@ -167,15 +159,13 @@ src_install() {
 		insinto /usr/share/kde4/services
 		doins "${T}"/${PN}-magnet.protocol
 
-		if use nls; then
-			insinto /usr/share/qt4/translations
-			local l
-			for l in ${LANGS}; do
-				if use linguas_${l}; then
-					doins translations/${PN}_${l}.qm
-				fi
-			done
-		fi
+		insinto /usr/share/qt4/translations
+		local l
+		for l in ${LANGS}; do
+			if use linguas_${l}; then
+				doins translations/${PN}_${l}.qm
+			fi
+		done
 		popd >/dev/null
 	fi
 }

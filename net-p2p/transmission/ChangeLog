@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.180 2012/03/03 15:47:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.181 2012/03/06 09:28:09 ssuominen Exp $
+
+  06 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  transmission-2.50-r1.ebuild, transmission-9999.ebuild:
+  Remove pointless USE="nls" wrt #407045 by Luis Carrera
 
   03 Mar 2012; Markus Meier <maekke@gentoo.org> transmission-2.42-r1.ebuild:
   add ~arm, bug #400929
