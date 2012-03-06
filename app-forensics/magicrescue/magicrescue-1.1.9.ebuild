@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/magicrescue-1.1.9.ebuild,v 1.4 2012/02/17 07:52:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/magicrescue-1.1.9.ebuild,v 1.5 2012/03/06 07:30:06 patrick Exp $
 
 EAPI=4
 
@@ -15,7 +15,15 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
+DEPEND="sys-libs/gdbm"
+RDEPEND="${DEPEND}"
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 	tc-export CC
+}
+
+src_configure() {
+	# Not autotools, just looks like it sometimes
+	./configure --prefix=/usr
 }
