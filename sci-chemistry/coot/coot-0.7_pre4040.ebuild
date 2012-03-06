@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2-r1.ebuild,v 1.3 2012/03/06 15:31:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.7_pre4040.ebuild,v 1.1 2012/03/06 15:31:19 jlec Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="2"
 
 AUTOTOOLS_AUTORECONF="true"
 
-inherit autotools-utils flag-o-matic python toolchain-funcs versionator
+inherit autotools-utils python toolchain-funcs versionator
 
 MY_S2_PV=$(replace_version_separator 2 - ${PV})
 MY_S2_P=${PN}-${MY_S2_PV/pre1/pre-1}
@@ -19,7 +19,7 @@ MY_P=${PN}-${MY_PV}
 DESCRIPTION="Crystallographic Object-Oriented Toolkit for model building, completion and validation"
 HOMEPAGE="http://www.biop.ox.ac.uk/coot/"
 SRC_URI="
-	http://www.biop.ox.ac.uk/coot/software/source/releases/${MY_P}.tar.gz
+	http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz
 	test? ( http://dev.gentoo.org/~jlec/distfiles/greg-data-${PV}.tar.gz  )"
 
 SLOT="0"
@@ -47,6 +47,7 @@ XDEPS="
 	media-libs/libpng
 	media-libs/freeglut
 	x11-libs/gtk+:2
+	x11-libs/goocanvas:0
 	x11-libs/gtkglext"
 
 SCHEMEDEPS="
@@ -65,36 +66,47 @@ RDEPEND="
 	>=net-misc/curl-7.19.6
 	net-dns/libidn"
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.4-r2
 	dev-lang/swig
 	sys-devel/bc
 	test? ( dev-scheme/greg )"
 
-S="${WORKDIR}/${MY_P}"
-
 pkg_setup() {
 	if use openmp; then
 		tc-has-openmp || die "Please use an OPENMP capable compiler"
-		has_version '<sys-devel/libtool-2.4-r2' && append-ldflags $(no-as-needed)
 	fi
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 PATCHES=(
-	"${FILESDIR}"/${PV}-clipper-config.patch
-	"${FILESDIR}"/${PV}-mmdb-config.patch
-	"${FILESDIR}"/${PV}-gl.patch
-	"${FILESDIR}"/${PV}-test.patch
-	"${FILESDIR}"/${PV}-ssm.patch
-	"${FILESDIR}"/${PV}-libpng15.patch
+	"${FILESDIR}"/${P}-clipper-config.patch
+	"${FILESDIR}"/${P}-goocanvas.patch
+	"${FILESDIR}"/${P}-gl.patch
+	"${FILESDIR}"/${P}-mmdb-config.patch
+	"${FILESDIR}"/${P}-test.patch
+	"${FILESDIR}"/${P}-ssm.patch
+	"${FILESDIR}"/${P}-libpng-1.5.patch
 	)
+
+src_prepare() {
+	autotools-utils_src_prepare
+
+	cat >> src/svn-revision.cc <<- EOF
+	extern "C" {
+	int svn_revision() {
+		return  ${ESVN_WC_REVISION:-0};
+	}
+	}
+	EOF
+}
 
 src_configure() {
 	# All the --with's are used to activate various parts.
 	# Yes, this is broken behavior.
 	local myeconfargs=(
 		--includedir='${prefix}/include/coot'
-		--with-gtkcanvas-prefix="${EPREFIX}/usr"
-		--with-gtkgl-prefix="${EPREFIX}/usr"
+		--with-goocanvas-prefix="${EPREFIX}/usr"
 		--with-guile
 		--with-python="${EPREFIX}/usr"
 		--with-guile-gtk
@@ -118,12 +130,12 @@ src_test() {
 	export COOT_STANDARD_RESIDUES="${S}/standard-residues.pdb"
 	export COOT_SCHEME_DIR="${S}/scheme/"
 	export COOT_RESOURCES_FILE="${S}/cootrc"
-	export COOT_PIXMAPS_DIR="${S}/pixmaps"
-	export COOT_DATA_DIR="${S}"
-	export COOT_PYTHON_DIR="${S}/python"
+	export COOT_PIXMAPS_DIR="${S}/pixmaps/"
+	export COOT_DATA_DIR="${S}/"
+	export COOT_PYTHON_DIR="${S}/python/"
 	export PYTHONPATH="${COOT_PYTHON_DIR}:${PYTHONPATH}"
-	export PYTHONHOME="${EPREFIX}"/usr
-	export CCP4_SCR="${T}"/coot_test
+	export PYTHONHOME="${EPREFIX}"/usr/
+	export CCP4_SCR="${T}"/coot_test/
 	export CLIBD_MON="${EPREFIX}/usr/share/ccp4/data/monomers/"
 	export SYMINFO="${S}/syminfo.lib"
 
