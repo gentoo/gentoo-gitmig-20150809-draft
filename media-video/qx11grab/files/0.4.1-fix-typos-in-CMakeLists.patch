@@ -1,0 +1,24 @@
+diff -Naur qx11grab-0.4.1.orig/CMakeLists.txt qx11grab-0.4.1/CMakeLists.txt
+--- qx11grab-0.4.1.orig/CMakeLists.txt	2012-03-06 14:30:53.127203576 +0100
++++ qx11grab-0.4.1/CMakeLists.txt	2012-03-06 14:31:40.214614902 +0100
+@@ -393,7 +393,7 @@
+ MESSAGE ("")
+ MESSAGE ("Optional Packages:")
+ summary (PULSE_FOUND "pulseaudio" TRUE)
+-summary (KDE_FOUND "kde4" TRUE)
++summary (KDE4_FOUND "kde4" TRUE)
+ MESSAGE ("")
+ 
+ ## EOF
+diff -Naur qx11grab-0.4.1.orig/src/filters/watermark/CMakeLists.txt qx11grab-0.4.1/src/filters/watermark/CMakeLists.txt
+--- qx11grab-0.4.1.orig/src/filters/watermark/CMakeLists.txt	2012-03-06 14:30:53.147203326 +0100
++++ qx11grab-0.4.1/src/filters/watermark/CMakeLists.txt	2012-03-06 14:32:00.158365566 +0100
+@@ -35,7 +35,7 @@
+ TARGET_LINK_LIBRARIES (${target_plugin}
+   ${QT_QTCORE_LIBRARY}
+   ${QT_QTGUI_LIBRARY}
+-  ${QT_QTBUS_LIBRARY}
++  ${QT_QTDBUS_LIBRARY}
+   qx11grabinterface
+ )
+ 

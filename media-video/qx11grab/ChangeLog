@@ -1,6 +1,13 @@
 # ChangeLog for media-video/qx11grab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.14 2012/03/01 22:30:24 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.15 2012/03/06 14:02:28 pesa Exp $
+
+*qx11grab-0.4.1 (06 Mar 2012)
+
+  06 Mar 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/0.4.1-fix-typos-in-CMakeLists.patch,
+  +files/0.4.1-optional-pulseaudio.patch, +qx11grab-0.4.1.ebuild:
+  Version bump.
 
   01 Mar 2012; Davide Pesavento <pesa@gentoo.org>
   -files/qx11grab-0.2.2-ffmpeg.patch, -qx11grab-0.2.2.ebuild,
