@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyopencl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.13 2012/02/25 01:56:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.14 2012/03/06 19:01:32 neurogeek Exp $
+
+  06 Mar 2012; Jesus Rivero <neurogeek@gentoo.org> pyopencl-2011.2-r1.ebuild,
+  pyopencl-9999.ebuild:
+  Dropped boots-thread config line and fixed deps on virtual/opencl-0-r1 on
+  both versions
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyopencl-2011.2-r1.ebuild,
   pyopencl-2011.2.ebuild, pyopencl-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-2011.2-r1.ebuild,v 1.3 2012/02/25 01:56:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-2011.2-r1.ebuild,v 1.4 2012/03/06 19:01:32 neurogeek Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -21,7 +21,7 @@ IUSE="examples opengl"
 RDEPEND=">=dev-libs/boost-1.48[python]
 	dev-python/numpy
 	dev-python/pytools
-	virtual/opencl"
+	>=virtual/opencl-0-r1"
 DEPEND="${RDEPEND}"
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
@@ -38,7 +38,6 @@ src_configure()
 		"$(PYTHON)" configure.py \
 			--boost-compiler=gcc \
 			--boost-python-libname=boost_python-${PYTHON_ABI}-mt \
-			--boost-thread-libname=boost_thread-mt \
 			--no-use-shipped-boost \
 			"${myconf[@]}"
 	}
