@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.54 2012/03/01 23:52:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.55 2012/03/06 21:47:20 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> nettle-2.4.ebuild:
+  Marking nettle-2.4 ppc64 for bug 400019
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> nettle-2.4.ebuild:
   Marking nettle-2.4 ppc for bug 400019
