@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/musca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.21 2012/03/06 21:39:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.22 2012/03/06 21:44:23 jer Exp $
+
+  06 Mar 2012; Jeroen Roovers <jer@gentoo.org>
+  musca-0.9.24_p20100226-r2.ebuild:
+  Remove testing cruft.
 
   06 Mar 2012; Jeroen Roovers <jer@gentoo.org>
   musca-0.9.24_p20100226-r2.ebuild,
