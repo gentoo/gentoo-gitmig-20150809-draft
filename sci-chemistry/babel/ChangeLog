@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/babel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/ChangeLog,v 1.12 2011/12/21 08:30:45 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/ChangeLog,v 1.13 2012/03/06 16:11:28 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> babel-1.6-r1.ebuild:
+  Marking babel-1.6-r1 ppc for bug 393887
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> babel-1.6-r1.ebuild:
   x86 stable wrt bug #393887
