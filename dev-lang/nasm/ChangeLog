@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/nasm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.88 2011/11/07 07:39:23 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.89 2012/03/06 20:40:01 mr_bones_ Exp $
+
+*nasm-2.10_rc14 (06 Mar 2012)
+
+  06 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> -nasm-2.10_rc8.ebuild,
+  +nasm-2.10_rc14.ebuild:
+  masked dev bump
 
 *nasm-2.10_rc8 (07 Nov 2011)
 
