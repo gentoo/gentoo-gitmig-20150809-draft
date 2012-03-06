@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13549 2012/03/04 21:21:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13550 2012/03/06 10:32:34 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,86 @@
 
 #--- END OF EXAMPLES ---
 
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Mask for removal as it fails to compile with recent
+# kernels. Use kernel driver instead, bug #209474
+# Removal in a month.
+net-wireless/orinoco-sn
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Doesn't work with recent kernels, use kernel driver
+# instead, bug #214164. Removal in a month.
+net-wireless/zd1201
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Doesn't work with recent kernels, use kernel driver
+# instead, bug #246986. Removal in a month.
+net-wireless/hostap-driver
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Our version is old and buggy, nobody willing to
+# update due deep changes in its way to be installed,
+# download it directly from upstream instead, bug #248588
+# Removal in a month.
+x11-misc/periodic-calendar
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Pre-stripped files, no update since 2002, nothing
+# needs it, bug #251955. Removal in a month.
+media-libs/libswf
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Old, unmaintained and with security bug #269922
+# Removal in a month.
+net-misc/ajaxterm
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Bundles some libraries, has an overflow, installs
+# broken symlinks, security issues. See bug #332649
+# Removal in a month
+media-gfx/swftools
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Outdated, hard to bump and nobody willing to take
+# care of it. See bug #334927. Removal in a month.
+dev-dotnet/mysql-connector-net
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Doesn't respect LDFLAGS, old and replaced by kernel
+# driver for years, bug #339655. Removal in a month.
+app-laptop/acpi4asus
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Replaced by gnome-extra/panflute, bug #354245.
+# Removal in a month.
+gnome-extra/music-applet
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# It spams dmesg, use kernel >= 3.0 driver instead.
+# See bug #367483, removal in a month.
+net-wireless/rtl8192se
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Our current version is too old, nobody wants to take
+# care of this package and upstream have changed their 
+# build system completely, bug #372449. Removal in a month.
+dev-dotnet/edtftpnet
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Broken with gcc-4.6, old, unmaintained, upstream dead,
+# nothing needs it, bug #374803. Removal in a month.
+dev-python/PyQrcodec
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# Broken for some time (bug #383933), upstream dead,
+# last release from 2008. Removal in a month.
+net-ftp/twoftpd
+
+# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
+# No upstream, outdated, see bug #403377. Removal in a
+# month.
+app-i18n/man-pages-cs
+ 
 # Sergei Trofimovich <slyfox@gentoo.org> (04 Mar 2012)
 # The experimental ghc-7.4 branch. time is masked as haskell98 and random use them (ghc core)
 >=dev-lang/ghc-7.2
