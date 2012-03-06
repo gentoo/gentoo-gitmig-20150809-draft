@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/text
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.6 2012/03/04 12:53:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.7 2012/03/06 05:48:02 gienah Exp $
+
+*text-0.11.1.13-r1 (06 Mar 2012)
+
+  06 Mar 2012; Mark Wright <gienah@gentoo.org> +text-0.11.1.13-r1.ebuild:
+  Bump text to 0.11.1.13-r1 (as in gentoo-haskell overlay), sync keywords with
+  its reverse dependency darcs-2.5.2.
 
   04 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> text-0.11.1.12.ebuild:
   Keyworded ~alpha/~ia64/~ppc/~ppc64/~sparc (dev-vcs/darcs-2.5 depend)
