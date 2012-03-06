@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/cream
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.56 2011/10/08 18:25:22 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.57 2012/03/06 14:12:34 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> cream-0.43.ebuild:
+  Marking cream-0.43 ppc for bug 384135
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> cream-0.43.ebuild:
+  Marking cream-0.43 ppc for bug 384135
 
   08 Oct 2011; Raúl Porcel <armin76@gentoo.org> cream-0.43.ebuild:
   alpha/ia64/sparc stable wrt #384135

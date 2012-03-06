@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.43.ebuild,v 1.6 2011/10/08 18:25:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.43.ebuild,v 1.7 2012/03/06 14:12:34 ranger Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 IUSE="linguas_en linguas_fr linguas_es linguas_de"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
 
 DEPEND="
 	>=app-editors/gvim-7.0
