@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.20 2012/01/27 13:42:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.21 2012/03/06 09:11:26 voyageur Exp $
 
-EAPI="3"
-inherit subversion eutils flag-o-matic multilib toolchain-funcs
+EAPI="4"
+PYTHON_DEPEND="2"
+inherit subversion eutils flag-o-matic multilib toolchain-funcs python
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
@@ -32,6 +33,10 @@ RDEPEND="dev-lang/perl
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
 pkg_setup() {
+	# llvm strictly requires python-2 for building
+	python_set_active_version 2
+	python_pkg_setup
+
 	# need to check if the active compiler is ok
 
 	broken_gcc=" 3.2.2 3.2.3 3.3.2 4.1.1 "
@@ -87,6 +92,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-2.6-commandguide-nops.patch
 	epatch "${FILESDIR}"/${PN}-2.9-nodoctargz.patch
+	epatch "${FILESDIR}"/${PN}-3.0-PPC_macro.patch
 }
 
 src_configure() {
@@ -123,15 +129,15 @@ src_configure() {
 		append-cppflags "$(pkg-config --cflags libffi)"
 	fi
 	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
-	econf ${CONF_FLAGS} || die "econf failed"
+	econf ${CONF_FLAGS}
 }
 
 src_compile() {
-	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1 || die "emake failed"
+	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1
 }
 
 src_install() {
-	emake KEEP_SYMBOLS=1 DESTDIR="${D}" install || die "install failed"
+	emake KEEP_SYMBOLS=1 DESTDIR="${D}" install
 
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax

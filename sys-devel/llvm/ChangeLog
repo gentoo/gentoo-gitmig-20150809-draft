@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.62 2012/02/03 13:11:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.63 2012/03/06 09:11:26 voyageur Exp $
+
+  06 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild:
+  Set python-2 to build, thanks Matthias Dahl in bug #406155 for report and
+  patch. Also add PPC support patch and switch to EAPI4
 
 *llvm-3.0-r1 (03 Feb 2012)
 
