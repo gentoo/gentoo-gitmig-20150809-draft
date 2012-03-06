@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tinycdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.29 2012/02/27 03:25:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.30 2012/03/06 21:08:47 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> tinycdb-0.77-r1.ebuild:
+  Marking tinycdb-0.77-r1 ppc for bug 399963
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> tinycdb-0.77-r1.ebuild:
   Stable for HPPA (bug #399963).
