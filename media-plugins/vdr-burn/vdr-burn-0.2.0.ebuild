@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.1 2012/02/15 21:21:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.2 2012/03/06 20:20:59 hd_brummy Exp $
 
 EAPI="4"
 
@@ -51,6 +51,8 @@ src_prepare() {
 	sed -i Makefile \
 		-e 's:^TMPDIR = .*$:TMPDIR = /tmp:' \
 		-e 's:^ISODIR=.*$:ISODIR=/var/vdr/video/dvd-images:'
+
+	sed -i Makefile -e 's:DEFINES += -DTTXT_SUBTITLES:#DEFINES += -DTTXT_SUBTITLES:'
 
 	fix_vdr_libsi_include scanner.c
 }
