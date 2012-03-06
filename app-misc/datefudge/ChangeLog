@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/datefudge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.18 2012/02/24 14:46:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.19 2012/03/06 14:27:12 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> datefudge-1.17.ebuild:
+  Marking datefudge-1.17 ppc for bug 405123
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> datefudge-1.17.ebuild:
   x86 stable wrt bug #405123
