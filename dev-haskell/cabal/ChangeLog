@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.68 2012/03/04 02:33:04 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.69 2012/03/06 21:00:18 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> cabal-1.10.2.0.ebuild:
+  Marking cabal-1.10.2.0 ppc for bug 399973
 
 *cabal-1.14.0 (04 Mar 2012)
 
