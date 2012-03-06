@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.1 2012/02/19 06:52:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.2 2012/03/06 06:06:30 radhermit Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${P}-source"
 
 #See bug 241650.
 pkg_nofetch() {
-	elog "Please download ${P}-linux-{86,64}.tar.gz source from:"
+	elog "Please download the source archive \"TrueCrypt ${PV} Source.tar.gz\" from:"
 	elog "http://www.truecrypt.org/downloads2"
 	elog "Then put the file in ${DISTDIR}/${P}.tar.gz"
 }
