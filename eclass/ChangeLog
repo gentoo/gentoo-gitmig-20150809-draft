@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.154 2012/03/05 08:20:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.155 2012/03/06 22:23:51 dilfridge Exp $
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> kde4-base.eclass,
+  kde4-meta.eclass:
+  Update from kde overlay
 
   05 Mar 2012; Patrick Lauer <patrick@gentoo.org> apache-2.eclass:
   Don't set eapi in eclass, #405911

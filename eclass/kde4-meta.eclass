@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.59 2011/12/18 00:00:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.60 2012/03/06 22:23:51 dilfridge Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -210,8 +210,13 @@ kde4-meta_src_extract() {
 	else
 		local abort tarball tarfile f extractlist postfix
 
-		KMTARPARAMS+=" --bzip2"
-		postfix="bz2"
+		if [[ ${PV} == 4.8.1 ]]; then
+			postfix="xz"
+			KMTARPARAMS+=" --xz"
+		else
+			postfix="bz2"
+			KMTARPARAMS+=" --bzip2"
+		fi
 
 		case ${KMNAME} in
 			kdebase-apps)

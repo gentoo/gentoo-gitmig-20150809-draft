@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.112 2012/01/17 11:20:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.113 2012/03/06 22:23:51 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -83,7 +83,7 @@ case ${KDEBASE} in
 					KDEVELOP_VERSION=${PV}
 					KDEVPLATFORM_VERSION="$(($(get_major_version)-3)).$(get_after_major_version)"
 					;;
-				kdevplatform)
+				kdevplatform|kdevelop-php*)
 					KDEVELOP_VERSION="$(($(get_major_version)+3)).$(get_after_major_version)"
 					KDEVPLATFORM_VERSION=${PV}
 					;;
@@ -199,7 +199,10 @@ esac
 # @ECLASS-VARIABLE: QT_MINIMAL
 # @DESCRIPTION:
 # Determine version of qt we enforce as minimal for the package.
-if version_is_at_least 4.7.80 "${KDE_MINIMAL}"; then
+if version_is_at_least 4.8.50 "${KDE_MINIMAL}"; then
+	# Upstream has added an *undeclared* dependency on Qt 4.8...
+	QT_MINIMAL="${QT_MINIMAL:-4.8.0}"
+elif version_is_at_least 4.7.80 "${KDE_MINIMAL}"; then
 	QT_MINIMAL="${QT_MINIMAL:-4.7.4}"
 else
 	QT_MINIMAL="${QT_MINIMAL:-4.7.0}"
@@ -284,29 +287,18 @@ case ${CPPUNIT_REQUIRED} in
 esac
 unset cppuintdepend
 
-
-# WebKit use dependencies
-case ${KDE_REQUIRED} in
-	always)
-		qtwebkitusedeps="[kde]"
-		;;
-	optional)
-		qtwebkitusedeps="[kde?]"
-		;;
-	*) ;;
-esac
 # KDE dependencies
 # Qt accessibility classes are needed in various places, bug 325461
 kdecommondepend="
 	dev-lang/perl
 	>=x11-libs/qt-core-${QT_MINIMAL}:4[qt3support,ssl]
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4[accessibility,dbus]
-	>=x11-libs/qt-qt3support-${QT_MINIMAL}:4[accessibility,kde]
+	>=x11-libs/qt-qt3support-${QT_MINIMAL}:4[accessibility]
 	>=x11-libs/qt-script-${QT_MINIMAL}:4
 	>=x11-libs/qt-sql-${QT_MINIMAL}:4[qt3support]
 	>=x11-libs/qt-svg-${QT_MINIMAL}:4
 	>=x11-libs/qt-test-${QT_MINIMAL}:4
-	>=x11-libs/qt-webkit-${QT_MINIMAL}:4${qtwebkitusedeps}
+	>=x11-libs/qt-webkit-${QT_MINIMAL}:4
 	!aqua? (
 		x11-libs/libXext
 		x11-libs/libXt
@@ -449,25 +441,19 @@ _calculate_src_uri() {
 	case ${KDEBASE} in
 		kde-base)
 			case ${PV} in
+				4.4.11.1)
+					# KDEPIM 4.4, special case
+					# TODO: Remove this part when KDEPIM 4.4 gets out of the tree
+					SRC_URI="mirror://kde/stable/kdepim-${PV}/src/${_kmname_pv}.tar.bz2" ;;
 				4.[456789].8[05] | 4.[456789].9[0235678])
 					# Unstable KDE SC releases
-					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2"
-					if ! version_is_at_least 4.6.80 ${PV}
-					then
-						# KDEPIM IS SPECIAL
-						[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/unstable/kdepim/${PV}/${_kmname_pv}.tar.bz2"
-					fi
-					;;
+					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2" ;;
+				4.8.1)
+					# Stable KDE SC releases with .xz support
+					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.xz" ;;
 				*)
 					# Stable KDE SC releases
-					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.bz2"
-					if ! version_is_at_least 4.6.80 ${PV}
-					then
-						# KDEPIM IS SPECIAL
-						# TODO: It might not be with KDE 4.7 (see above)
-						[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/stable/kdepim-${PV}/src/${_kmname_pv}.tar.bz2"
-					fi
-						;;
+					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.bz2" ;;
 			esac
 			;;
 		koffice)
@@ -476,8 +462,11 @@ _calculate_src_uri() {
 				*) SRC_URI="mirror://kde/stable/${_kmname_pv}/${_kmname_pv}.tar.bz2" ;;
 			esac
 			;;
-		kdevelop)
-			SRC_URI="mirror://kde/stable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.bz2"
+		kdevelop|kdevelop-php*|kdevplatform)
+			case ${KDEVELOP_VERSION} in
+				4.[12].[6-9]*) SRC_URI="mirror://kde/unstable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.bz2" ;;
+				*) SRC_URI="mirror://kde/stable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.bz2" ;;
+			esac
 			;;
 	esac
 }
