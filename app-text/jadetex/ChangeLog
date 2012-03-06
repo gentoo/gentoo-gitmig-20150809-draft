@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.57 2011/12/04 16:17:38 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.58 2012/03/06 14:20:25 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> jadetex-3.13-r3.ebuild:
+  Marking jadetex-3.13-r3 ppc for bug 391465
 
   04 Dec 2011; Raúl Porcel <armin76@gentoo.org> jadetex-3.13-r3.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #391465
