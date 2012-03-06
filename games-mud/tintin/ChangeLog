@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tintin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.121 2012/02/16 18:50:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.122 2012/03/06 20:43:12 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> tintin-2.00.8.ebuild:
+  Marking tintin-2.00.8 ppc for bug 402913
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tintin-2.00.8.ebuild:
   x86 stable wrt bug #402913
