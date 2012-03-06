@@ -1,6 +1,16 @@
 # ChangeLog for dev-haskell/x11
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.23 2011/11/28 12:31:14 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.24 2012/03/06 07:53:46 gienah Exp $
+
+*x11-1.5.0.1 (06 Mar 2012)
+
+  06 Mar 2012; Mark Wright <gienah@gentoo.org> x11-1.5.0.0.ebuild,
+  x11-1.5.0.0-r1.ebuild, +x11-1.5.0.1.ebuild:
+  Bump x11 to 1.5.0.1
+
+  06 Mar 2012; Mark Wright <gienah@gentoo.org> x11-1.5.0.0.ebuild,
+  x11-1.5.0.0-r1.ebuild:
+  Add ~ppc64 keywords to x11 1.5.0.0, thanks to EM3RY for testing.
 
 *x11-1.5.0.0-r1 (28 Nov 2011)
 
