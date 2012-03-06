@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/mmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/ChangeLog,v 1.15 2012/02/24 09:45:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/ChangeLog,v 1.16 2012/03/06 21:04:32 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> mmap-0.5.7.ebuild:
+  Marking mmap-0.5.7 ppc for bug 399987
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> mmap-0.5.7.ebuild:
   Stable for amd64, wrt bug #399987
