@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.219 2012/02/28 04:03:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.220 2012/03/06 22:03:06 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> exim-4.77.ebuild:
+  Marking exim-4.77 ppc64 for bug 391237
 
   28 Feb 2012; Christian Ruppert <idl0r@gentoo.org> files/exim.rc7:
   Don't use --quiet in the init script
