@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r1.ebuild,v 1.1 2012/02/29 19:13:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r1.ebuild,v 1.2 2012/03/06 01:50:53 chithanh Exp $
 
 EAPI=4
 CMAKE_REQUIRED="never"
@@ -27,14 +27,15 @@ fi
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X +agg cairo cygnal dbus directfb doc egl fbcon +ffmpeg gconf gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl openvg python sdl +sdl-sound ssh ssl test vaapi"
-REQUIRED_USE="fbcon? ( agg )
+IUSE="X +agg cairo cygnal dbus directfb doc dump egl fbcon +ffmpeg gconf gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl openvg python sdl +sdl-sound ssh ssl test vaapi"
+REQUIRED_USE="dump? ( agg ffmpeg )
+	fbcon? ( agg )
 	nsplugin? ( gtk )
 	openvg? ( egl )
 	python? ( gtk )
 	vaapi? ( agg ffmpeg )
 	|| ( agg cairo opengl openvg )
-	|| ( fbcon kde gtk sdl )
+	|| ( dump fbcon gtk kde sdl )
 	"
 
 # gnash fails if obsolete boost is installed, bug #334259
@@ -201,8 +202,9 @@ src_configure() {
 	use gstreamer && media+=",gst"
 
 	# Set gui.
-	use gtk && gui=",gtk"
+	use dump && gui="${gui},dump"
 	use fbcon && gui="${gui},fb"
+	use gtk && gui=",gtk"
 	use kde && gui="${gui},kde4"
 	use sdl && gui="${gui},sdl"
 

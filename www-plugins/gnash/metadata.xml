@@ -7,8 +7,9 @@
 	</maintainer>
 	<use>
 	  <flag name='agg'>Rendering based on the Anti-Grain Geometry Rendering Engine library</flag>
-	  <flag name='egl'>Enable EGL support for the OpenVG, OpenGL and X11 renderers</flag>
 	  <flag name='cygnal'>Enable building of the cygnal server</flag>
+	  <flag name='dump'>Enable dump output module for creating video from SWF</flag>
+	  <flag name='egl'>Enable EGL support for the OpenVG, OpenGL and X11 renderers</flag>
 	  <flag name='gconf'>Enable GConf configuration backend</flag>
 	  <flag name='openvg'>Rendering based on the OpenVG graphics acceleration API</flag>
 	  <flag name='sdl-sound'>Enable SDL audio output for the standalone player</flag>
