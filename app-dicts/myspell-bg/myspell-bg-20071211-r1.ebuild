@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/myspell-bg-20071211-r1.ebuild,v 1.6 2012/01/04 20:42:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/myspell-bg-20071211-r1.ebuild,v 1.7 2012/03/06 21:34:27 ranger Exp $
 
 # 20071211 is a 4.1 version from sf.net released on 20071211
 
@@ -22,7 +22,7 @@ DESCRIPTION="Bulgarian dictionaries for myspell/hunspell"
 LICENSE="GPL-2"
 HOMEPAGE="http://lingucomponent.openoffice.org/ http://bgoffice.sourceforge.net/"
 
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ~ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 src_unpack() {

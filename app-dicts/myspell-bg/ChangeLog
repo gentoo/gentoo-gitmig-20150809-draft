@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-bg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.23 2012/01/04 20:42:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.24 2012/03/06 21:34:27 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> myspell-bg-20071211-r1.ebuild:
+  Marking myspell-bg-20071211-r1 ppc64 for bug 394001
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> myspell-bg-20071211-r1.ebuild:
   Marking myspell-bg-20071211-r1 ppc for bug 394001
