@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-ecj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.17 2012/01/15 15:44:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.18 2012/03/06 21:11:25 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> eselect-ecj-0.7.ebuild:
+  Marking eselect-ecj-0.7 ppc for bug 396513
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> eselect-ecj-0.7.ebuild:
   x86 stable wrt bug #396513
