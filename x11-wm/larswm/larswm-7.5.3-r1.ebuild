@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/larswm-7.5.3-r1.ebuild,v 1.4 2012/03/02 23:03:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/larswm-7.5.3-r1.ebuild,v 1.5 2012/03/06 21:54:57 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://larswm.fnurt.net/${P}.tar.gz"
 LICENSE="9wm"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
