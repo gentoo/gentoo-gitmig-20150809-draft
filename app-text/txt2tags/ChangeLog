@@ -1,6 +1,9 @@
 # ChangeLog for app-text/txt2tags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.46 2012/02/05 18:23:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.47 2012/03/06 16:09:50 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> txt2tags-2.6.ebuild:
+  Marking txt2tags-2.6 ppc for bug 357995
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> txt2tags-2.3-r1.ebuild,
   txt2tags-2.5.ebuild, txt2tags-2.6.ebuild:
