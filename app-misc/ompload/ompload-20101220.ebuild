@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ompload-20101220.ebuild,v 1.5 2011/04/17 15:05:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ompload-20101220.ebuild,v 1.6 2012/03/06 10:29:38 xmw Exp $
 
 EAPI=3
 
-DESCRIPTION="CLI script for uploading files to http://omploader.org/"
+DESCRIPTION="CLI script for uploading files to http://ompldr.org/"
 HOMEPAGE="http://ompldr.org/"
 SRC_URI="mirror://gentoo/${P}"
 
