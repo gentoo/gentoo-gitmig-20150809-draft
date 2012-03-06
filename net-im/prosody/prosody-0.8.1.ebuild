@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.8.1.ebuild,v 1.1 2011/06/06 11:42:39 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.8.1.ebuild,v 1.2 2012/03/06 10:40:57 klausman Exp $
 
 EAPI="2"
 
@@ -18,6 +18,7 @@ IUSE="libevent mysql postgres sqlite ssl zlib"
 
 DEPEND="net-im/jabber-base
 		>=dev-lang/lua-5.1
+		!>=dev-lang/lua-5.2.0
 		>=net-dns/libidn-1.1
 		>=dev-libs/openssl-0.9.8"
 RDEPEND="${DEPEND}
