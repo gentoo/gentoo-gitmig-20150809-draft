@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.1.ebuild,v 1.7 2011/11/13 11:43:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.1.ebuild,v 1.8 2012/03/06 00:17:38 zmedico Exp $
 
 EAPI=2
 inherit cmake-utils flag-o-matic multilib
@@ -63,6 +63,14 @@ src_prepare() {
 	# - ePdfError_UnsupportedFontFormat
 	sed -e 's:CPPUNIT_TEST( testFonts ://\0:' \
 		-i test/unit/FontTest.h || die
+
+	# Bug #407015: fix to compile with Lua 5.2
+	if has_version '>=dev-lang/lua-5.2' ; then
+		sed -e 's: lua_open(: luaL_newstate(:' \
+			-e 's: luaL_getn(: lua_rawlen(:' -i \
+			tools/podofocolor/luaconverter.cpp \
+			tools/podofoimpose/planreader_lua.cpp || die
+	fi
 }
 
 src_configure() {

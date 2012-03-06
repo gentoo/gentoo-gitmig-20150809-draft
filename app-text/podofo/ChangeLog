@@ -1,6 +1,9 @@
 # ChangeLog for app-text/podofo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.29 2011/11/13 11:43:45 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.30 2012/03/06 00:17:38 zmedico Exp $
+
+  06 Mar 2012; Zac Medico <zmedico@gentoo.org> podofo-0.9.1.ebuild:
+  Bug #407015: fix to compile with Lua 5.2
 
   13 Nov 2011; Justin Lecher <jlec@gentoo.org> podofo-0.9.1.ebuild:
   Corrected Slotting of media-libs/tiff and media-libs/libpng
