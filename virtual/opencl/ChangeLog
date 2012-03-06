@@ -1,6 +1,13 @@
 # ChangeLog for virtual/opencl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.4 2012/02/15 09:58:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.5 2012/03/06 18:29:37 xarthisius Exp $
+
+*opencl-0-r2 (06 Mar 2012)
+
+  06 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> +opencl-0-r2.ebuild,
+  -opencl-0-r1.ebuild:
+  Fix deps to include proper revbumps for graphics drivers. Thanks to neurogeek
+  for spotting
 
   15 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> opencl-0-r1.ebuild:
   Remove dependency on opencl useflag since it was dropped in ati-drivers. Fixes
