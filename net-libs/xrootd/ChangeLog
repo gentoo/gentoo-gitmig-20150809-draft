@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xrootd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.1 2011/12/19 19:36:35 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.2 2012/03/06 17:04:22 bicatali Exp $
+
+*xrootd-3.1.1 (06 Mar 2012)
+
+  06 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> +xrootd-3.1.1.ebuild:
+  Version bump
 
   19 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org> +xrootd-3.1.0.ebuild,
   +files/cmsd.confd, +files/cmsd.initd, +files/frm_purged.initd,
