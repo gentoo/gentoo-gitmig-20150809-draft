@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.200 2012/02/14 20:57:41 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.201 2012/03/06 21:27:26 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> sane-backends-1.0.22-r1.ebuild:
+  Marking sane-backends-1.0.22-r1 ppc for bug 384307
 
   14 Feb 2012; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.22-r2.ebuild:
