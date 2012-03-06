@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.10.ebuild,v 1.6 2012/03/05 22:32:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.10.ebuild,v 1.7 2012/03/06 10:25:18 jlec Exp $
 
 EAPI=4
 
@@ -103,12 +103,6 @@ src_install() {
 	#dosym libtk${v1}.a /usr/${mylibdir}/libtk.a
 	dosym libtk${v1}$(get_libname) /usr/${mylibdir}/libtk$(get_libname)
 	dosym libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a
-
-	if use static-libs; then
-		dosym libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a
-	else
-		rm -f "${ED}"/usr/${mylibdir}/*.a || die
-	fi
 
 	dosym wish${v1} /usr/bin/wish
 
