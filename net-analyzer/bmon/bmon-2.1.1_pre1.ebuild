@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.4 2011/10/27 17:22:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.5 2012/03/06 19:07:32 jer Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ MY_PV="${PV/_pre/-pre}"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="interface bandwidth monitor"
-HOMEPAGE="http://people.suug.ch/~tgr/bmon/"
+HOMEPAGE="http://www.infradead.org/~tgr/bmon/"
 SRC_URI="http://people.suug.ch/~tgr/bmon/files/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="MIT"
