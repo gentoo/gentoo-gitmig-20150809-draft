@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/lgeneral
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.37 2011/10/08 16:30:27 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.38 2012/03/06 14:52:50 mr_bones_ Exp $
+
+  06 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/lgeneral-1.2-as-needed.patch, -files/lgeneral-1.2-build.patch,
+  -files/lgeneral-1.2-gentoo-path.patch, -files/lgeneral-1.2-make-382.patch,
+  -files/lgeneral-1.2.1-as-needed.patch, -files/lgeneral-1.2.1-build.patch,
+  -files/lgeneral-1.2.1-gentoo-path.patch, -files/lgeneral-1.2.1-make-382.patch,
+  -lgeneral-1.2.1.ebuild, -lgeneral-1.2.ebuild:
+  old
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> lgeneral-1.2.2.ebuild:
   x86 stable wrt bug #385893
