@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/entropy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.19 2012/02/12 07:22:32 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.20 2012/03/06 22:19:20 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> entropy-1.0_rc87.ebuild:
+  Marking entropy-1.0_rc87 ~ppc for bug 387959
 
 *entropy-1.0_rc87 (12 Feb 2012)
 
