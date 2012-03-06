@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/realtime-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/ChangeLog,v 1.12 2012/03/03 20:34:43 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/ChangeLog,v 1.13 2012/03/06 15:57:47 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> realtime-base-0.1.ebuild:
+  Marking realtime-base-0.1 ppc for bug 388171
 
   03 Mar 2012; Tobias Klausmann <klausman@gentoo.org> realtime-base-0.1.ebuild:
   Stable on alpha, bug #388171
