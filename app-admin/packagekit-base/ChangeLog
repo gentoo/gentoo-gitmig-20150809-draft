@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/packagekit-base
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.10 2011/11/07 13:28:16 lxnay Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.11 2012/03/06 22:31:34 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> packagekit-base-0.6.20.ebuild:
+  Marking packagekit-base-0.6.20 ~ppc for bug 387959
 
 *packagekit-base-0.6.20 (07 Nov 2011)
 
