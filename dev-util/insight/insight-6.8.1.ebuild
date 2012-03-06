@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1.ebuild,v 1.1 2012/03/06 13:39:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1.ebuild,v 1.2 2012/03/06 13:40:35 scarabeus Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://sources.redhat.com/pub/${PN}/releases/${MY_P}a.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="nls static-libs"
+IUSE="nls"
 
 RDEPEND="
 	dev-libs/expat
@@ -74,7 +74,7 @@ src_configure() {
 	# there will be warning about undefined options
 	# because it is passed only to some subdir configures
 	econf \
-		$(use_enable static-libs static) \
+		--disable-static \
 		--with-system-readline \
 		--disable-rpath \
 		--disable-werror \
@@ -91,7 +91,7 @@ src_install() {
 	# the tcl-related subdirs are not parallel safe
 	emake -j1 DESTDIR="${D}" install
 
-	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	dodoc gdb/gdbtk/{README,TODO}
 
