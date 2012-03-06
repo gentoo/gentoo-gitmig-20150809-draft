@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.45-r1.ebuild,v 1.5 2012/03/06 21:12:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.45-r1.ebuild,v 1.6 2012/03/06 21:24:43 hwoarang Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs prefix
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86 ~x86-linux"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 ~x86 ~x86-linux"
 IUSE="+doc +perl"
 
 RDEPEND="
@@ -54,6 +54,8 @@ src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" INSTALL_BIN=install install
 
 	# sys-process is more advanced than parallel from moreutils, rename it
-	mv -vf "${ED}"usr/share/man/man1/{,${PN}_}parallel.1 || die
+	if use doc; then
+		mv -vf "${ED}"usr/share/man/man1/{,${PN}_}parallel.1 || die
+	fi
 	mv -vf "${ED}"usr/bin/{,${PN}_}parallel || die
 }
