@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.5 2012/03/06 06:19:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.6 2012/03/06 23:33:42 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -299,7 +299,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${ED}" install || die "make install failed"
 
 	if [[ -n ${softmmu_targets} ]]; then
 		insinto /lib/udev/rules.d/
@@ -329,15 +329,15 @@ src_install() {
 	# FIXME: Need to come up with a solution for non-x86 based systems
 	if use x86 || use amd64; then
 		# Remove SeaBIOS since we're using the SeaBIOS packaged one
-		rm "${D}/usr/share/qemu/bios.bin"
+		rm "${ED}/usr/share/qemu/bios.bin"
 		dosym ../seabios/bios.bin /usr/share/qemu/bios.bin
 
 		# Remove vgabios since we're using the vgabios packaged one
-		rm "${D}/usr/share/qemu/vgabios.bin"
-		rm "${D}/usr/share/qemu/vgabios-cirrus.bin"
-		rm "${D}/usr/share/qemu/vgabios-qxl.bin"
-		rm "${D}/usr/share/qemu/vgabios-stdvga.bin"
-		rm "${D}/usr/share/qemu/vgabios-vmware.bin"
+		rm "${ED}/usr/share/qemu/vgabios.bin"
+		rm "${ED}/usr/share/qemu/vgabios-cirrus.bin"
+		rm "${ED}/usr/share/qemu/vgabios-qxl.bin"
+		rm "${ED}/usr/share/qemu/vgabios-stdvga.bin"
+		rm "${ED}/usr/share/qemu/vgabios-vmware.bin"
 		dosym ../vgabios/vgabios.bin /usr/share/qemu/vgabios.bin
 		dosym ../vgabios/vgabios-cirrus.bin /usr/share/qemu/vgabios-cirrus.bin
 		dosym ../vgabios/vgabios-qxl.bin /usr/share/qemu/vgabios-qxl.bin
