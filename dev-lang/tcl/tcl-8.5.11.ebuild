@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.11.ebuild,v 1.2 2012/03/04 20:11:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.11.ebuild,v 1.3 2012/03/06 07:52:42 grobian Exp $
 
 EAPI=4
 
@@ -79,10 +79,12 @@ src_install() {
 		-e "s,^TCL_BUILD_STUB_LIB_PATH='.*/unix,TCL_BUILD_STUB_LIB_PATH='${EPREFIX}/usr/${mylibdir}," \
 		-e "s,^TCL_LIB_FILE='libtcl${v1}..TCL_DBGX..so',TCL_LIB_FILE=\"libtcl${v1}\$\{TCL_DBGX\}.so\"," \
 		"${ED}"/usr/${mylibdir}/tclConfig.sh || die
-	[[ ${CHOST} != *-darwin* && ${CHOST} != *-mint* ]] && sed -i \
-		-e "s,^TCL_CC_SEARCH_FLAGS='\(.*\)',TCL_CC_SEARCH_FLAGS='\1:${EPREFIX}/usr/${mylibdir}'," \
-		-e "s,^TCL_LD_SEARCH_FLAGS='\(.*\)',TCL_LD_SEARCH_FLAGS='\1:${EPREFIX}/usr/${mylibdir}'," \
-		"${ED}"/usr/${mylibdir}/tclConfig.sh || die
+	if [[ ${CHOST} != *-darwin* && ${CHOST} != *-mint* ]] ; then
+		sed -i \
+			-e "s,^TCL_CC_SEARCH_FLAGS='\(.*\)',TCL_CC_SEARCH_FLAGS='\1:${EPREFIX}/usr/${mylibdir}'," \
+			-e "s,^TCL_LD_SEARCH_FLAGS='\(.*\)',TCL_LD_SEARCH_FLAGS='\1:${EPREFIX}/usr/${mylibdir}'," \
+			"${ED}"/usr/${mylibdir}/tclConfig.sh || die
+	fi
 
 	# install private headers
 	insinto /usr/${mylibdir}/tcl${v1}/include/unix

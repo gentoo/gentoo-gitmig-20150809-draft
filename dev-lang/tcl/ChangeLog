@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.147 2012/03/05 10:35:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.148 2012/03/06 07:52:42 grobian Exp $
+
+  06 Mar 2012; Fabian Groffen <grobian@gentoo.org> tcl-8.5.10.ebuild,
+  tcl-8.5.11.ebuild:
+  Fix logix after added || die from rev 1.4, thanks Charles Davis in bug #407059
 
   05 Mar 2012; Agostino Sarubbo <ago@gentoo.org> tcl-8.5.10.ebuild:
   Stable for amd64, wrt bug #406607
