@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/curve/curve-1.16.ebuild,v 1.3 2012/02/16 18:36:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/curve/curve-1.16.ebuild,v 1.4 2012/03/06 14:24:40 ranger Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 IUSE="doc examples"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 
 TEXMF=/usr/share/texmf-site
 
