@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.85 2012/03/06 00:12:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.86 2012/03/06 00:18:07 blueness Exp $
+
+  06 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  -ipsec-tools-0.8.0.ebuild:
+  Remove ebuild that doesn't address bugs #210826 and #335510
 
 *ipsec-tools-0.8.0-r2 (06 Mar 2012)
 
