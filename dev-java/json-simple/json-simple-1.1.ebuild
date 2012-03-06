@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/json-simple-1.1.ebuild,v 1.3 2012/02/24 09:47:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/json-simple-1.1.ebuild,v 1.4 2012/03/06 21:16:45 ranger Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="source test"
@@ -16,7 +16,7 @@ SRC_URI="http://json-simple.googlecode.com/files/${MY_P}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
