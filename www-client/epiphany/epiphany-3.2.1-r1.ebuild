@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.2.1-r1.ebuild,v 1.1 2012/03/05 03:03:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.2.1-r1.ebuild,v 1.2 2012/03/06 16:24:34 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -43,11 +43,13 @@ COMMON_DEPEND=">=dev-libs/glib-2.30.0:2
 RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-icon-theme-symbolic
 	networkmanager? ( >=net-misc/networkmanager-0.8.997 )"
+# paxctl needed for bug #407085
 DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
 	>=dev-util/gdbus-codegen-2.30.0
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
+	sys-apps/paxctl
 	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1 )"
 
