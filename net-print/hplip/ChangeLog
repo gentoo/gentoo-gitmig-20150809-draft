@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.214 2012/02/28 17:56:09 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.215 2012/03/06 15:50:51 calchan Exp $
+
+  06 Mar 2012; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml.
 
 *hplip-3.12.2-r2 (28 Feb 2012)
 

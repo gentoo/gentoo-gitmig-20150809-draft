@@ -6,10 +6,6 @@
 		<email>billie@gentoo.org</email>
 		<name>Daniel Pielmeier</name>
 	</maintainer>
-	<maintainer>
-		<email>calchan@gentoo.org</email>
-		<name>Denis Dupeyron</name>
-	</maintainer>
 	<use>
 		<flag name="doc">Build documentation</flag>
 		<flag name="fax">Enable fax on multifunction devices which support it</flag>
