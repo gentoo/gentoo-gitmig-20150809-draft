@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Time-Piece
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.25 2012/03/02 20:59:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.26 2012/03/06 18:59:00 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> perl-Time-Piece-1.20.ebuild:
+  Marking perl-Time-Piece-1.20 ppc for bug 400097
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> perl-Time-Piece-1.20.ebuild:
   Marking perl-Time-Piece-1.20 ppc64 for bug 400097
