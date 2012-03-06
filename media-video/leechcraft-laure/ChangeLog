@@ -1,0 +1,10 @@
+# ChangeLog for media-video/leechcraft-laure
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/leechcraft-laure/ChangeLog,v 1.1 2012/03/06 18:04:37 maksbotan Exp $
+
+*leechcraft-laure-9999 (06 Mar 2012)
+
+  06 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-laure-9999.ebuild, +metadata.xml:
+  Add media-video/leecraft-laure-9999, thanks to 0xd34df00d
+
