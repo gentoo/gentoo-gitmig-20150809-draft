@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-unikey
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-unikey/ChangeLog,v 1.5 2011/11/17 14:10:02 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-unikey/ChangeLog,v 1.6 2012/03/06 08:15:59 naota Exp $
+
+  06 Mar 2012; Naohiro Aota <naota@gentoo.org> ibus-unikey-0.6.0.ebuild:
+  Add missing dependency dev-util/intltool and sys-devel/gettext #406863
 
 *ibus-unikey-0.6.0 (17 Nov 2011)
 
