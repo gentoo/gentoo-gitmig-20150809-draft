@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sary
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.34 2012/03/01 23:49:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.35 2012/03/06 21:43:49 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> sary-1.2.0-r1.ebuild:
+  Marking sary-1.2.0-r1 ppc64 for bug 399959
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> sary-1.2.0-r1.ebuild:
   Marking sary-1.2.0-r1 ppc for bug 399959
