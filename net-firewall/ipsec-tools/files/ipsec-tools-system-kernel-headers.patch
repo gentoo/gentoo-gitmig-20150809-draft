@@ -1,0 +1,34 @@
+From: Anthony G. Basile <blueness@gentoo.org>
+
+ipsec-tools tries to make use of the kernel headers in /usr/src/linux/include/linux.
+This is not a good idea because these are not the system exported linux header files.
+Unfortunately the configure.ac option which says where to look for these headers
+doesn't point to the directory itself, usually /usr/include/linux, but to its parent!
+
+Our solution then, although less than satifying, is to remove the --with-kernel-headers
+switch and hard code KERNEL_INCLUDE="/usr/include".
+
+diff -Naur ipsec-tools-0.8.0.orig/configure.ac ipsec-tools-0.8.0/configure.ac
+--- ipsec-tools-0.8.0.orig/configure.ac	2012-03-05 18:46:54.000000000 -0500
++++ ipsec-tools-0.8.0/configure.ac	2012-03-05 18:53:56.000000000 -0500
+@@ -66,18 +66,11 @@
+ 
+ case "$host_os" in
+  *linux*)
+-    AC_ARG_WITH(kernel-headers,
+-	AC_HELP_STRING([--with-kernel-headers=/lib/modules/<uname>/build/include],
+-		       [where your Linux Kernel headers are installed]),
+-	    [ KERNEL_INCLUDE="$with_kernel_headers" 
+-	      CONFIGURE_AMFLAGS="--with-kernel-headers=$with_kernel_headers"
+-	      AC_SUBST(CONFIGURE_AMFLAGS) ],
+-	    [ KERNEL_INCLUDE="/lib/modules/`uname -r`/build/include" ])
+-
++    KERNEL_INCLUDE="/usr/include"
+     AC_CHECK_HEADER($KERNEL_INCLUDE/linux/pfkeyv2.h, ,
+ 	[ AC_CHECK_HEADER(/usr/src/linux/include/linux/pfkeyv2.h,
+ 	  KERNEL_INCLUDE=/usr/src/linux/include ,
+-	  [ AC_MSG_ERROR([Unable to find linux-2.6 kernel headers. Aborting.]) ] ) ] )
++	  [ AC_MSG_ERROR([Unable to find linux kernel headers. Aborting.]) ] ) ] )
+     AC_SUBST(KERNEL_INCLUDE)
+     # We need the configure script to run with correct kernel headers.
+     # However we don't want to point to kernel source tree in compile time,
