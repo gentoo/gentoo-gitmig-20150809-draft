@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.126 2012/03/05 20:52:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.127 2012/03/06 20:54:14 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> libcdio-0.83.ebuild:
+  Marking libcdio-0.83 ppc for bug 404649
 
   05 Mar 2012; Markus Meier <maekke@gentoo.org> libcdio-0.83.ebuild:
   arm stable, bug #404649
