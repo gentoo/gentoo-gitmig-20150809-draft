@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.203 2012/02/29 15:27:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.204 2012/03/06 20:46:50 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> alsa-tools-1.0.25.ebuild:
+  Marking alsa-tools-1.0.25 ppc64 stable for bug 406101
 
   29 Feb 2012; Agostino Sarubbo <ago@gentoo.org> alsa-tools-1.0.25.ebuild:
   Stable for amd64, wrt bug #406101
