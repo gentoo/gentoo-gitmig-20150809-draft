@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.1.ebuild,v 1.1 2012/02/05 16:33:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.1.ebuild,v 1.2 2012/03/06 09:53:26 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -39,6 +39,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
 	dev-perl/XML-Parser
+	dev-util/intltool
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
 	nls? ( >=sys-devel/gettext-0.16.1 )"
