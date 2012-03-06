@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tnftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.39 2012/02/05 18:43:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.40 2012/03/06 14:28:03 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> tnftp-20100108.ebuild:
+  Marking tnftp-20100108 ppc for bug 397147
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> tnftp-20070806.ebuild,
   tnftp-20090520.ebuild, tnftp-20090606.ebuild, tnftp-20091122.ebuild,
