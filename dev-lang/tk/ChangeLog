@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.162 2012/03/06 10:25:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.163 2012/03/06 11:45:52 jlec Exp $
+
+*tk-8.5.10-r1 (06 Mar 2012)
+
+  06 Mar 2012; Justin Lecher <jlec@gentoo.org> -tk-8.5.10.ebuild,
+  +tk-8.5.10-r1.ebuild:
+  Revbump to force rebuild, which is needed because of the removed static
+  archives
 
   06 Mar 2012; Justin Lecher <jlec@gentoo.org> tk-8.5.10.ebuild:
   Remove last bit of bad handling of static-libs, #407083
