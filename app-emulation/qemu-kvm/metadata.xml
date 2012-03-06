@@ -6,6 +6,7 @@
     <flag name='aio'>Enables support for Linux's Async IO</flag>
     <flag name='alsa'>Enable alsa output for sound emulation</flag>
     <flag name='brltty'>Adds support for braille displays using brltty</flag>
+	<flag name='curl'>Support ISOs / -cdrom directives vis HTTP or HTTPS.</flag>
     <flag name='esd'>Enable esound output for sound emulation</flag>
     <flag name='fdt'>Enables firmware device tree support</flag>
     <flag name='jpeg'>Enable JPEG compression for the VNC console server</flag>

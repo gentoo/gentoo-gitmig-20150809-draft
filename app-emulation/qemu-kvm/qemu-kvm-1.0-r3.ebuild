@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.4 2012/02/25 23:12:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.5 2012/03/06 06:19:28 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty curl debug esd fdt ncurses \
+IUSE="+aio alsa bluetooth brltty +curl debug esd fdt ncurses \
 opengl pulseaudio qemu-ifup rbd sasl sdl smartcard spice static test
 +threads tls usbredir vde +vhost-net xattr xen"
 
