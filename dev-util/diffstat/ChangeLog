@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.117 2012/03/06 16:06:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.118 2012/03/06 18:23:20 jlec Exp $
+
+  06 Mar 2012; Justin Lecher <jlec@gentoo.org> -diffstat-1.53.ebuild,
+  metadata.xml:
+  Drop Old
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> diffstat-1.54.ebuild:
   Marking diffstat-1.54 ppc for bug 395691
