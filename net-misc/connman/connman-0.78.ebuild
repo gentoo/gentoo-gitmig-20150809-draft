@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.78.ebuild,v 1.1 2011/12/25 12:33:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.78.ebuild,v 1.2 2012/03/06 22:29:06 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="bluetooth +caps debug doc examples +ethernet google ofono ntpd openvpn policykit threads tools vpnc +wifi wimax"
 # gps meego ospm openconnect
 

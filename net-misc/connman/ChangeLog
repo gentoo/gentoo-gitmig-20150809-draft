@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/connman
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.43 2011/12/25 12:34:20 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.44 2012/03/06 22:29:06 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> connman-0.78.ebuild:
+  Marking connman-0.78 ~ppc for bug 387959
 
   25 Dec 2011; Tony Vroon <chainsaw@gentoo.org> metadata.xml:
   Taking maintainership whilst dagger is away.
