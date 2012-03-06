@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.50 2012/02/01 17:03:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.51 2012/03/06 21:39:36 ranger Exp $
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> epdfview-0.1.8.ebuild:
+  Marking epdfview-0.1.8 ppc64 for bug 400807
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> epdfview-0.1.8.ebuild:
   Marking epdfview-0.1.8 ppc for bug 400807
