@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p27077.ebuild,v 1.5 2012/02/15 18:23:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p27077.ebuild,v 1.6 2012/03/07 13:37:29 pesa Exp $
 
 EAPI=3
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -29,7 +29,7 @@ RDEPEND="media-fonts/corefonts
 	>=x11-libs/qt-gui-4.4:4[dbus?,qt3support,tiff?]
 	>=x11-libs/qt-sql-4.4:4[qt3support,mysql]
 	>=x11-libs/qt-opengl-4.4:4[qt3support]
-	>=x11-libs/qt-webkit-4.4:4[dbus?]
+	>=x11-libs/qt-webkit-4.4:4
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
