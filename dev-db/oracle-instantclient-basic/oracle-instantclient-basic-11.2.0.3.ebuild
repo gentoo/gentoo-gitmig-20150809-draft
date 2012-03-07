@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.1 2012/03/07 14:07:46 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.2 2012/03/07 15:22:15 haubi Exp $
 
 EAPI="4"
 
@@ -46,7 +46,7 @@ need_sdk_for_abi() {
 abi_list() {
 	if use multilib; then
 		echo ${MULTILIB_ABIS}
-	elif [[ ${DEFAULT_MULTILIB} == default ]]; then
+	elif [[ ${DEFAULT_ABI} == 'default' ]]; then
 		# no multilib-able platform
 		echo ${ARCH}
 	else
