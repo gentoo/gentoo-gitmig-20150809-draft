@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1-r3.ebuild,v 1.1 2012/03/07 13:46:24 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1-r3.ebuild,v 1.2 2012/03/07 16:12:39 tomka Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X ambiance +gtk ioctl libnotify mac4lin ncurses nls +pm-utils"
 
-DEPEND="dev-python/Babel"
+DEPEND="nls? ( dev-python/Babel )"
 # Maybe virtual/dhcp would work, but there are enough problems with
 # net-misc/dhcp that I want net-misc/dhcpcd to be guarenteed to be considered
 # first if none are installed.
@@ -71,11 +71,13 @@ src_prepare() {
 	# Need to ensure that generated scripts use Python 2 at run time.
 	sed -e "s:self.python = '/usr/bin/python':self.python = '/usr/bin/python2':" \
 	  -i setup.py || die "sed failed"
-	# Compile the translations
-	./setup.py compile_translations || die
-	# Asturian is known to fail, so we just give them japanese :)
-	# (https://bugs.launchpad.net/wicd/+bug/928589)
-	cp translations/ja/LC_MESSAGES/wicd.mo translations/ast/LC_MESSAGES/wicd.mo || die
+	if use nls; then
+		# Compile the translations
+		./setup.py compile_translations || die
+		# Asturian is known to fail, so we just give them japanese :)
+		# (https://bugs.launchpad.net/wicd/+bug/928589)
+		cp translations/ja/LC_MESSAGES/wicd.mo translations/ast/LC_MESSAGES/wicd.mo || die
+	fi
 	python_copy_sources
 }
 
