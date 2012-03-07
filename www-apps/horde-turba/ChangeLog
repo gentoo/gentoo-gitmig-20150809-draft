@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-turba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.54 2012/03/02 23:02:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.55 2012/03/07 19:52:21 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> horde-turba-2.3.5.ebuild:
+  Marking horde-turba-2.3.5 ppc for bug 397249
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> horde-turba-2.3.5.ebuild:
   Stable on alpha, bug #397249
