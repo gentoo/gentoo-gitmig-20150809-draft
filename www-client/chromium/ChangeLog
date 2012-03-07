@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.574 2012/03/07 12:53:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.575 2012/03/07 16:26:34 tomka Exp $
+
+  07 Mar 2012; Thomas Kahle <tomka@gentoo.org> chromium-17.0.963.66.ebuild:
+  marked x86 per bug 406975
 
   07 Mar 2012; Agostino Sarubbo <ago@gentoo.org> chromium-17.0.963.66.ebuild:
   Stable for amd64, wrt bug #406975
