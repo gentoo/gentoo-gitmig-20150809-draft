@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.5 2012/03/03 11:48:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.6 2012/03/07 18:54:33 pesa Exp $
 
 EAPI=4
 
@@ -200,8 +200,8 @@ src_install() {
 pkg_postinst() {
 	python_mod_optimize PyQt4
 
-	ewarn "When updating dev-python/PyQt4, you usually need to rebuild packages, which depend on"
-	ewarn "dev-python/PyQt4, such as dev-python/qscintilla-python. If you have app-portage/gentoolkit"
+	ewarn "When updating dev-python/PyQt4, you usually need to rebuild packages that depend on it,"
+	ewarn "such as dev-python/qscintilla-python and kde-base/pykde4. If you have app-portage/gentoolkit"
 	ewarn "installed, you can find these packages with \`equery d dev-python/PyQt4\`."
 }
 
