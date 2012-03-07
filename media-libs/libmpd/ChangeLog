@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.64 2011/10/09 16:47:50 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.65 2012/03/07 18:57:19 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> libmpd-11.8.17.ebuild:
+  Marking libmpd-11.8.17 ppc for bug 381219
 
   09 Oct 2011; Markus Meier <maekke@gentoo.org> libmpd-11.8.17.ebuild:
   x86 stable, bug #381219
