@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0.1.ebuild,v 1.1 2012/03/03 17:19:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0.1.ebuild,v 1.2 2012/03/07 17:10:57 slyfox Exp $
 
 EAPI=4
 
@@ -134,6 +134,9 @@ src_prepare() {
 	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" \
 	EPATCH_EXCLUDE="0033-PPC-Fix-linker-scripts-on-ppc-hosts.patch" \
 	EPATCH_FORCE="yes" epatch
+
+	epatch "${FILESDIR}"/${PN}-1.0-unmagic-debug.patch
+	epatch "${FILESDIR}"/${PN}-1.0-unmagic-xfsctl.patch
 
 	# prevent docs to get automatically installed
 	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
