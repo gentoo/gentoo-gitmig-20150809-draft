@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.4.ebuild,v 1.1 2012/03/07 02:26:43 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.4.ebuild,v 1.2 2012/03/07 03:03:17 jsbronder Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info autotools
@@ -13,12 +13,13 @@ LICENSE="torque-2.5"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cpusets +crypt doc drmaa kernel_linux munge server +syslog threads tk"
+IUSE="cpusets +crypt doc drmaa kernel_linux munge nvidia server +syslog threads tk"
 
 # ed is used by makedepend-sh
 DEPEND_COMMON="sys-libs/ncurses
 	sys-libs/readline
 	munge? ( sys-auth/munge )
+	nvidia? ( >=x11-drivers/nvidia-drivers-275 )
 	tk? ( dev-lang/tk )
 	syslog? ( virtual/logger )
 	!games-util/qstat"
@@ -80,8 +81,6 @@ src_configure() {
 
 	use crypt && myconf="--with-rcp=scp"
 
-	# Note:  Nvidia GPU support is currently disabled pending user
-	# interest and ability to test.
 	econf \
 		$(use_enable tk gui) \
 		$(use_enable syslog) \
@@ -89,6 +88,7 @@ src_configure() {
 		$(use_enable drmaa) \
 		$(use_enable threads high-availability) \
 		$(use_enable munge munge-auth) \
+		$(use_enable nvidia nvidia-gpus) \
 		--with-server-home=${PBS_SERVER_HOME} \
 		--with-environ=/etc/pbs_environment \
 		--with-default-server=${PBS_SERVER_NAME} \

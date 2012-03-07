@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.138 2012/03/07 02:26:43 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.139 2012/03/07 03:03:17 jsbronder Exp $
+
+  07 Mar 2012; Justin Bronder <jsbronder@gentoo.org> torque-3.0.4.ebuild,
+  metadata.xml:
+  Enable nvidia gpu support re #400991
 
 *torque-3.0.4 (07 Mar 2012)
 
