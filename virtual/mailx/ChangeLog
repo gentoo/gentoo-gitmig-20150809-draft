@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mailx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mailx/ChangeLog,v 1.1 2011/03/20 12:59:18 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/mailx/ChangeLog,v 1.2 2012/03/07 04:11:36 darkside Exp $
+
+  07 Mar 2012; Jeremy Olexa <darkside@gentoo.org> mailx-0.ebuild:
+  add ~x64-macos, bug 395011
 
 *mailx-0 (20 Mar 2011)
 
