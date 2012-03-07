@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-2.1.4-r1.ebuild,v 1.1 2012/01/29 03:09:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-2.1.4-r1.ebuild,v 1.2 2012/03/07 21:02:27 blueness Exp $
 
 EAPI="4"
 
@@ -57,10 +57,10 @@ pkg_setup() {
 
 	if [[ ${DB_COUNT} -eq 0 ]]; then
 		eerror
-		eerror "\033[1;31m**************************************************\033[1;31m"
+		eerror "\033[1;31m**************************************************\033[00m"
 		eerror "No database selected in your USE flags,"
 		eerror "You must select at least one."
-		eerror "\033[1;31m**************************************************\033[1;31m"
+		eerror "\033[1;31m**************************************************\033[00m"
 		eerror
 		die
 	fi
@@ -68,10 +68,10 @@ pkg_setup() {
 	if [[ ${DB_COUNT} -gt 1 ]]; then
 		MYDB=""
 		ewarn
-		ewarn "\033[1;33m**************************************************\033[1;33m"
+		ewarn "\033[1;33m**************************************************\033[00m"
 		ewarn "Multiple databases selected in your USE flags,"
 		ewarn "You will have to choose your database manually."
-		ewarn "\033[1;33m**************************************************\033[1;33m"
+		ewarn "\033[1;33m**************************************************\033[00m"
 		ewarn
 	fi
 }
@@ -115,12 +115,12 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "\033[1;32m**************************************************\033[1;32m"
+	einfo "\033[1;32m**************************************************\033[00m"
 	einfo
 	einfo "To see the post install instructions, do"
 	einfo
 	einfo "    webapp-config --show-postinst ${PN} ${PVR}"
 	einfo
-	einfo "\033[1;32m**************************************************\033[1;32m"
+	einfo "\033[1;32m**************************************************\033[00m"
 	einfo
 }
