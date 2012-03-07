@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.337 2012/03/07 13:37:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.338 2012/03/07 16:17:17 pesa Exp $
+
+  07 Mar 2012; Davide Pesavento <pesa@gentoo.org>
+  mythtv-0.24.1_p20110524.ebuild:
+  Stop inheriting deprecated qt4.eclass, it was unused anyway.
 
   07 Mar 2012; Davide Pesavento <pesa@gentoo.org> mythtv-0.23.1_p27077.ebuild:
   Latest qt-webkit no longer has a dbus USE flag, thus drop the USE dependency.

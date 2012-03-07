@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.24.1_p20110524.ebuild,v 1.2 2012/02/15 18:23:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.24.1_p20110524.ebuild,v 1.3 2012/03/07 16:17:17 pesa Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ MYTHTV_BRANCH="fixes/0.24"
 MYTHTV_REV="347cd2477ad82a7aa75ebe7c686db77465f415dc"
 MYTHTV_SREV="347cd24"
 
-inherit flag-o-matic multilib eutils qt4 toolchain-funcs python linux-info versionator
+inherit flag-o-matic multilib eutils toolchain-funcs python linux-info versionator
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
@@ -251,7 +251,6 @@ src_configure() {
 }
 
 src_compile() {
-#	eqmake4 mythtv.pro -o "Makefile" || die "eqmake4 failed"
 	emake || die "emake failed"
 }
 
