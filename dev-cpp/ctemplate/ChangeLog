@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/ctemplate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.20 2012/02/13 16:29:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.21 2012/03/07 19:07:34 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> ctemplate-2.0.ebuild:
+  Marking ctemplate-2.0 ppc for bug 394729
 
   13 Feb 2012; Mike Frysinger <vapier@gentoo.org> ctemplate-1.0.ebuild:
   Mark arm stable.
