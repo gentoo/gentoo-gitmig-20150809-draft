@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.9 2012/02/16 19:31:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.10 2012/03/07 20:54:12 ranger Exp $
 
 EAPI=4
 inherit eutils base autotools toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
 SLOT="0"
 IUSE="curl doc fftw +glpk +imagemagick opengl openmp +qhull +qrupdate
 	readline +sparse static-libs X zlib"
-KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 hppa ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="dev-libs/libpcre
 	app-text/ghostscript-gpl

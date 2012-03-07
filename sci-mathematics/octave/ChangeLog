@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.120 2012/02/27 18:27:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.121 2012/03/07 20:54:12 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> octave-3.4.3-r1.ebuild:
+  Marking octave-3.4.3-r1 ppc for bug 402199
 
 *octave-3.6.1 (27 Feb 2012)
 
