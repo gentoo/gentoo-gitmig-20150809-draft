@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.248 2012/03/01 13:14:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.249 2012/03/07 11:15:44 scarabeus Exp $
+
+  07 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.5.9999.ebuild:
+  Always disable gtk3 on 3.5 series as it is highly experimental.
 
   01 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/libreoffice-system-pyuno.patch, libreoffice-3.5.9999.ebuild,
