@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.8.0.ebuild,v 1.1 2012/01/25 18:17:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.8.0.ebuild,v 1.2 2012/03/07 02:36:13 patrick Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="*:2.5"
-RESTRICT_PYTHON_ABIS="*-jython 2.4"
+RESTRICT_PYTHON_ABIS="*-jython 2.4 2.7-pypy-*"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
 
