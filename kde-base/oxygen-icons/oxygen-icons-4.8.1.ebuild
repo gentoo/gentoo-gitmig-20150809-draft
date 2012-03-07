@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.8.1.ebuild,v 1.1 2012/03/06 23:35:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.8.1.ebuild,v 1.2 2012/03/07 01:22:42 dilfridge Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.oxygen-icons.org/"
 # filename of one of the tarballs
 [[ ${PV} == *9999 ]] || \
 SRC_URI="
-	!bindist? ( http://dev.gentoo.org/~alexxy/distfiles/${MY_P}.tar.xz )
+	!bindist? ( http://dev.gentoo.org/~dilfridge/distfiles/${MY_P}.repacked.tar.xz )
 	bindist? ( ${SRC_URI//${PV}/${MY_PV}} )
 "
 
