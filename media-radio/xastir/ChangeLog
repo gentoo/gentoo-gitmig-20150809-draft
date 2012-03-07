@@ -1,6 +1,13 @@
 # ChangeLog for media-radio/xastir
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.19 2011/01/22 17:17:28 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.20 2012/03/07 16:07:40 tomjbe Exp $
+
+*xastir-2.0.0-r2 (07 Mar 2012)
+
+  07 Mar 2012; Thomas Beierlein <tomjbe@gentoo.org> +xastir-2.0.0-r2.ebuild,
+  +files/xastir-2.0.0-scripts.diff:
+  Fixed scripts location (bug #407185). Thanks szarpaj@grubelek.pl for pointing
+  it out
 
   22 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   xastir-2.0.0-r1.ebuild:
