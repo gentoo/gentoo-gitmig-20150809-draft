@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.44 2012/02/09 14:22:51 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.45 2012/03/07 14:07:46 haubi Exp $
+
+*oracle-instantclient-basic-11.2.0.3 (07 Mar 2012)
+
+  07 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
+  +files/11.2.0.3-makefile.patch, +oracle-instantclient-basic-11.2.0.3.ebuild:
+  Revbump. Use EAPI 4. Update homepage. Drop useless postinst info.
+  Add multilib support.
+  Fix installed makefile template for bug#165834 again.
 
   09 Feb 2012; Michael Haubenwallner <haubi@gentoo.org> metadata.xml:
   Taking over maintainership.
