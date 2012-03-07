@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/oracle-instantclient-jdbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.31 2012/03/07 15:33:54 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.32 2012/03/07 16:25:45 haubi Exp $
+
+  07 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
+  oracle-instantclient-jdbc-11.2.0.3.ebuild:
+  must not set ABI for non-multilib-able archs at all
 
   07 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
   oracle-instantclient-jdbc-11.2.0.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-11.2.0.3.ebuild,v 1.2 2012/03/07 15:33:54 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-11.2.0.3.ebuild,v 1.3 2012/03/07 16:25:45 haubi Exp $
 
 EAPI="4"
 
@@ -53,8 +53,10 @@ set_abivars() {
 	MY_A=${!MY_A}
 	# abi sourcedir
 	MY_S="${S}/${abi}/instantclient_11_2"
+	# ABI might not need to be set at all
+	[[ -n ${ABI} ]] && MY_ABI=${abi} || MY_ABI=
 	# abi libdir
-	MY_LIBDIR=$(ABI=${abi} get_libdir)
+	MY_LIBDIR=$(ABI=${MY_ABI} get_libdir)
 }
 
 pkg_nofetch() {
@@ -96,7 +98,7 @@ src_install() {
 
 		cd "${MY_S}" || die
 
-		ABI=${abi} dolib.so lib*$(get_libname)*
+		ABI=${MY_ABI} dolib.so lib*$(get_libname)*
 
 		insinto "${oracle_home}"/${MY_LIBDIR}
 		doins *.jar
