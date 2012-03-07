@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.5.ebuild,v 1.9 2011/08/27 10:28:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.5.ebuild,v 1.10 2012/03/07 11:42:28 patrick Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 inherit waf-utils python multilib
 
 DESCRIPTION="Samba talloc library"

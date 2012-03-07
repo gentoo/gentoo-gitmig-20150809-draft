@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.32 2012/03/07 11:40:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.33 2012/03/07 11:42:28 patrick Exp $
+
+  07 Mar 2012; Patrick Lauer <patrick@gentoo.org> talloc-2.0.5.ebuild:
+  Restrict py3 #354587
 
   07 Mar 2012; Patrick Lauer <patrick@gentoo.org> talloc-2.0.7.ebuild:
   Restrict py3 #354587
