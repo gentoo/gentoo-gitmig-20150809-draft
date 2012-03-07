@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/st
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.4 2012/03/07 18:09:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.5 2012/03/07 18:17:30 jer Exp $
+
+  07 Mar 2012; Jeroen Roovers <jer@gentoo.org> st-0.1.1.ebuild,
+  st-0.2.1.ebuild, st-9999.ebuild:
+  Do not install installation instructions (README).
 
 *st-0.2.1 (07 Mar 2012)
 

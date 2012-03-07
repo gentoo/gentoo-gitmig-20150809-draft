@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-0.1.1.ebuild,v 1.4 2012/03/07 18:09:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-0.1.1.ebuild,v 1.5 2012/03/07 18:17:30 jer Exp $
 
 EAPI=3
 
@@ -39,7 +39,7 @@ src_prepare() {
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}"/usr install || die
 	tic -s -o "${ED}"/usr/share/terminfo st.info || die
-	dodoc README TODO || die
+	dodoc TODO || die
 
 	save_config config.h
 }
