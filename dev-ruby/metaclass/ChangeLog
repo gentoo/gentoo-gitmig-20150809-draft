@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/metaclass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.5 2012/03/05 10:12:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.6 2012/03/07 18:30:37 naota Exp $
+
+  07 Mar 2012; Naohiro Aota <naota@gentoo.org> metaclass-0.0.1.ebuild:
+  Add ~x86-fbsd
 
   05 Mar 2012; Thomas Kahle <tomka@gentoo.org> metaclass-0.0.1.ebuild:
   marked ~x86 per bug 398985
