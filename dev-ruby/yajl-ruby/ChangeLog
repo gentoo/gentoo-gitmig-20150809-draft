@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yajl-ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.16 2012/02/06 18:22:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.17 2012/03/07 14:15:02 naota Exp $
+
+  07 Mar 2012; Naohiro Aota <naota@gentoo.org> yajl-ruby-1.1.0.ebuild:
+  Add ~x86-fbsd.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> yajl-ruby-1.1.0.ebuild:
   Marking yajl-ruby-1.1.0 ~ppc for bug 396043
