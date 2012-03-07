@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.175 2012/03/07 18:54:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.176 2012/03/07 21:47:34 dilfridge Exp $
+
+  07 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> PyQt4-4.8.1.ebuild,
+  PyQt4-4.8.4.ebuild:
+  PyQt4-4.8 does not build with sip-4.13, bug 407291
 
   07 Mar 2012; Davide Pesavento <pesa@gentoo.org> PyQt4-4.9.1.ebuild:
   Slightly improve the ewarn message in pkg_postinst().
