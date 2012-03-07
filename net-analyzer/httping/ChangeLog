@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.74 2012/03/02 21:22:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.75 2012/03/07 20:51:01 jer Exp $
+
+  07 Mar 2012; Jeroen Roovers <jer@gentoo.org> -httping-1.4.4.ebuild:
+  Old.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> httping-1.5.2.ebuild:
   Marking httping-1.5.2 ppc64 for bug 400421
