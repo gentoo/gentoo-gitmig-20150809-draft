@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-6.0.4.ebuild,v 1.1 2012/03/03 00:03:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-6.0.4-r1.ebuild,v 1.1 2012/03/07 00:23:30 ulm Exp $
 
 EAPI=4
 
@@ -17,8 +17,6 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~x86 ~x86-fbsd ~x86-free
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
-# remove XEmacs specific file
-ELISP_REMOVE="highlight-indentation.el"
 SITEFILE="50${PN}-gentoo.el"
 DOCS="NEWS"
 
