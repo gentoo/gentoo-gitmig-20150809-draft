@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.8.1.ebuild,v 1.1 2012/03/06 23:35:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.8.1.ebuild,v 1.2 2012/03/07 21:37:24 dilfridge Exp $
 
 EAPI=4
 
@@ -62,6 +62,7 @@ src_configure() {
 		$(cmake-utils_use_with semantic-desktop SharedDesktopOntologies)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
+		$(cmake-utils_use !semantic-desktop KALARM_USE_KRESOURCES)
 		$(cmake-utils_use_with prison Prison)
 	)
 
