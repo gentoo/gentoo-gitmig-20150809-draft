@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.13.2-r1.ebuild,v 1.1 2012/02/23 21:32:39 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.13.2-r1.ebuild,v 1.2 2012/03/07 22:10:46 pesa Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*"
@@ -65,9 +65,9 @@ src_install() {
 pkg_postinst() {
 	python_mod_optimize sipconfig.py sipdistutils.py
 
-	ewarn "When updating dev-python/sip, you usually need to rebuild packages, which depend on dev-python/sip,"
-	ewarn "such as dev-python/PyQt4 and dev-python/qscintilla-python. If you have app-portage/gentoolkit"
-	ewarn "installed, you can find these packages with \`equery d dev-python/sip dev-python/PyQt4\`."
+	ewarn "When updating dev-python/sip, you usually need to rebuild packages that depend on it,"
+	ewarn "such as PyQt4, qscintilla-python and pykde4. If you have app-portage/gentoolkit"
+	ewarn "installed, you can find these packages with \`equery d dev-python/sip\`."
 }
 
 pkg_postrm() {

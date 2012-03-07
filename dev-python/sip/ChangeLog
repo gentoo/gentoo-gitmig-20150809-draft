@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.210 2012/02/23 21:32:39 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.211 2012/03/07 22:10:46 pesa Exp $
+
+  07 Mar 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml,
+  sip-4.13.2-r1.ebuild:
+  Slightly improve the ewarn message in pkg_postinst(). Put qt as primary herd
+  in metadata.
 
 *sip-4.13.2-r1 (23 Feb 2012)
 
