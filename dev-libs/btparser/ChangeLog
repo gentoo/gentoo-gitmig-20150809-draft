@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/btparser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/ChangeLog,v 1.3 2012/01/14 15:55:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/ChangeLog,v 1.4 2012/03/07 07:18:29 tetromino Exp $
+
+*btparser-0.16 (07 Mar 2012)
+
+  07 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +btparser-0.16.ebuild:
+  Version bump. Now with python bindings, similarity metrics, and better thread
+  parsing.
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> btparser-0.13.ebuild:
   x86 stable, bug #393007
