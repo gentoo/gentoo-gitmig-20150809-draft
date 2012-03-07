@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.112 2012/03/03 14:13:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.113 2012/03/07 20:23:07 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> pycrypto-2.4.1.ebuild:
+  Marking pycrypto-2.4.1 ppc for bug 406439
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> pycrypto-2.4.1.ebuild:
   Marking pycrypto-2.4.1 ppc64 for bug 406439
