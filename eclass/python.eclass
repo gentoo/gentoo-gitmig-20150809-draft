@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.151 2012/02/27 03:57:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.152 2012/03/07 04:13:27 floppym Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1021,10 +1021,12 @@ python_execute_function() {
 			}
 		elif [[ "${EBUILD_PHASE}" == "test" ]]; then
 			python_default_function() {
-				if emake -j1 -n check &> /dev/null; then
-					emake -j1 check "$@"
-				elif emake -j1 -n test &> /dev/null; then
-					emake -j1 test "$@"
+				# Stolen from portage's _eapi0_src_test()
+				local emake_cmd="${MAKE:-make} ${MAKEOPTS} ${EXTRA_EMAKE}"
+				if ${emake_cmd} -j1 -n check &> /dev/null; then
+					${emake_cmd} -j1 check "$@"
+				elif ${emake_cmd} -j1 -n test &> /dev/null; then
+					${emake_cmd} -j1 test "$@"
 				fi
 			}
 		elif [[ "${EBUILD_PHASE}" == "install" ]]; then
