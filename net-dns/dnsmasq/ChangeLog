@@ -1,6 +1,16 @@
 # ChangeLog for net-dns/dnsmasq
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.211 2011/12/04 10:28:47 swegener Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.212 2012/03/07 21:59:18 chutzpah Exp $
+
+*dnsmasq-2.60 (07 Mar 2012)
+
+  07 Mar 2012; Patrick McLean <chutzpah@gentoo.org> -dnsmasq-2.52.ebuild,
+  -dnsmasq-2.55.ebuild, -dnsmasq-2.56.ebuild, dnsmasq-2.57.ebuild,
+  dnsmasq-2.57-r1.ebuild, dnsmasq-2.59.ebuild, +dnsmasq-2.60.ebuild,
+  +files/dnsmasq-init-r2, -files/resolvconf.dnsmasq, metadata.xml:
+  Version bump, rework configuration a bit to use a helper function. Add lua
+  and script USE flags, and enable dhcpv6 if both the dhcp and ipv6 USE flags
+  are enabled. Drop some older versions. Update copyright headers.
 
   04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/dnsmasq-init,
   files/dnsmasq-init-r1:

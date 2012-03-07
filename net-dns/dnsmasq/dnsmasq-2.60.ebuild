@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.59.ebuild,v 1.2 2012/03/07 21:59:18 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.60.ebuild,v 1.1 2012/03/07 21:59:18 chutzpah Exp $
 
 EAPI=4
 
@@ -15,10 +15,11 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.lzma"
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="conntrack dbus +dhcp idn ipv6 nls tftp"
+IUSE="conntrack dbus +dhcp idn ipv6 lua nls script tftp"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	idn? ( net-dns/libidn )
+	lua? ( dev-lang/lua )
 	conntrack? ( net-libs/libnetfilter_conntrack )
 	nls? (
 		sys-devel/gettext
@@ -31,6 +32,25 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
+REQUIRED_USE="lua? ( script )"
+
+use_have() {
+	local NO_ONLY=""
+	if [ $1 == '-n' ]; then
+		NO_ONLY=1
+		shift
+	fi
+
+	local UWORD=${2:-$1}
+	UWORD=${UWORD^^*}
+
+	if ! use ${1}; then
+		echo " -DNO_${UWORD}"
+	elif [ -z "${NO_ONLY}" ]; then
+		echo " -DHAVE_${UWORD}"
+	fi
+}
+
 pkg_setup() {
 	enewgroup dnsmasq
 	enewuser dnsmasq -1 -1 /dev/null dnsmasq
@@ -39,16 +59,19 @@ pkg_setup() {
 src_prepare() {
 	# dnsmasq on FreeBSD wants the config file in a silly location, this fixes
 	epatch "${FILESDIR}/${PN}-2.47-fbsd-config.patch"
+	sed -i -r 's:lua5.[0-9]+:lua:' Makefile
 }
 
 src_configure() {
-	COPTS=""
-	use conntrack && COPTS+=" -DHAVE_CONNTRACK"
-	use tftp || COPTS+=" -DNO_TFTP"
-	use dhcp || COPTS+=" -DNO_DHCP"
-	use ipv6 || COPTS+=" -DNO_IPV6"
-	use dbus && COPTS+=" -DHAVE_DBUS"
-	use idn  && COPTS+=" -DHAVE_IDN"
+	COPTS="$(use_have conntrack)"
+	COPTS+="$(use_have dbus)"
+	COPTS+="$(use_have -n dhcp)"
+	COPTS+="$(use_have idn)"
+	COPTS+="$(use_have -n ipv6)"
+	COPTS+="$(use_have lua luascript)"
+	COPTS+="$(use_have -n script)"
+	COPTS+="$(use_have -n tftp)"
+	COPTS+="$(use ipv6 && use dhcp || echo " -DNO_DHCP6")"
 }
 
 src_compile() {
@@ -67,11 +90,15 @@ src_install() {
 		DESTDIR="${D}" \
 		install$(use nls && echo "-i18n")
 
+	dodoc CHANGELOG CHANGELOG.archive FAQ
+	dodoc -r logo
+
 	dodoc CHANGELOG FAQ
 	dohtml *.html
 
-	newinitd "${FILESDIR}"/dnsmasq-init-r1 dnsmasq
+	newinitd "${FILESDIR}"/dnsmasq-init-r2 dnsmasq
 	newconfd "${FILESDIR}"/dnsmasq.confd-r1 dnsmasq
+
 	insinto /etc
 	newins dnsmasq.conf.example dnsmasq.conf
 
