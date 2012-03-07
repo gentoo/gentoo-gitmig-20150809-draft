@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/oracle-instantclient-jdbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.29 2012/02/09 14:24:42 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.30 2012/03/07 14:25:23 haubi Exp $
+
+*oracle-instantclient-jdbc-11.2.0.3 (07 Mar 2012)
+
+  07 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
+  +oracle-instantclient-jdbc-11.2.0.3.ebuild:
+  Revbump. Use EAPI 4. Update homepage. Drop useless postinst info.
+  Add multilib support.
+  RDEPEND on _same_ version of oracle-instantclient-basic.
 
   09 Feb 2012; Michael Haubenwallner <haubi@gentoo.org> metadata.xml:
   Taking over maintainership.
