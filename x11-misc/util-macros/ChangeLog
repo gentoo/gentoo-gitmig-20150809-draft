@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/util-macros
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.113 2012/01/25 17:35:41 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.114 2012/03/07 21:23:55 chithanh Exp $
+
+*util-macros-1.16.2 (07 Mar 2012)
+
+  07 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +util-macros-1.16.2.ebuild:
+  Version bump.
 
 *util-macros-1.16.1 (25 Jan 2012)
 
