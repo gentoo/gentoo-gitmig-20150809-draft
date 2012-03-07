@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/oracle-instantclient-odbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/ChangeLog,v 1.6 2012/02/09 14:25:40 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/ChangeLog,v 1.7 2012/03/07 14:23:05 haubi Exp $
+
+*oracle-instantclient-odbc-11.2.0.3 (07 Mar 2012)
+
+  07 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
+  +oracle-instantclient-odbc-11.2.0.3.ebuild:
+  Revbump. Use EAPI 4. Update homepage.
+  Add multilib support.
+  RDEPEND on _same_ version of oracle-instantclient-basic.
 
   09 Feb 2012; Michael Haubenwallner <haubi@gentoo.org> metadata.xml:
   Taking over maintainership.
