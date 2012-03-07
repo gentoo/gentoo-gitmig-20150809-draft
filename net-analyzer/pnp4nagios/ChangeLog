@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.37 2012/03/02 21:23:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.38 2012/03/07 20:22:15 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> pnp4nagios-0.6.14.ebuild:
+  Marking pnp4nagios-0.6.14 ppc for bug 400425
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> pnp4nagios-0.6.14.ebuild:
   Marking pnp4nagios-0.6.14 ppc64 for bug 400425
