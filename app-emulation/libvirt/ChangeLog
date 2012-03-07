@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.164 2012/03/05 23:44:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.165 2012/03/07 12:29:39 tomka Exp $
+
+  07 Mar 2012; Thomas Kahle <tomka@gentoo.org> libvirt-0.9.10-r4.ebuild:
+  marked x86 per bug 398355
 
   05 Mar 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.10-r4.ebuild,
   libvirt-9999.ebuild:
