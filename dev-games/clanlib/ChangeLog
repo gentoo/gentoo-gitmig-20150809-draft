@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.51 2012/02/07 10:02:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.52 2012/03/07 15:58:04 mr_bones_ Exp $
+
+  07 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> clanlib-0.8.1.ebuild:
+  Adjust X deps (bug #407273)
 
   07 Feb 2012; Tupone Alfredo <tupone@gentoo.org> clanlib-2.3.4.ebuild:
   mikmod and vorbis require sound

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.9 2011/09/15 02:31:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.10 2012/03/07 15:58:04 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic eutils
@@ -23,7 +23,7 @@ RDEPEND="media-libs/libpng
 		media-libs/libsdl
 		media-libs/sdl-gfx
 	)
-	x11-libs/libXt
+	x11-libs/libXi
 	x11-libs/libXmu
 	x11-libs/libXxf86vm
 	media-libs/alsa-lib
