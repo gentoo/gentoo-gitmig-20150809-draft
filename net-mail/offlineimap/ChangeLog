@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.82 2012/02/25 02:41:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.83 2012/03/07 20:35:09 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> offlineimap-6.3.4.ebuild:
+  Marking offlineimap-6.3.4 ppc for bug 389703
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> offlineimap-6.3.1-r1.ebuild,
   offlineimap-6.3.2.2.ebuild, offlineimap-6.3.4.ebuild,

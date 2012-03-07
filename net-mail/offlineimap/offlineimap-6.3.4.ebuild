@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.3.4.ebuild,v 1.4 2012/02/25 02:41:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.3.4.ebuild,v 1.5 2012/03/07 20:35:09 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/nicolas33/offlineimap/tarball/v${MY_PV} -> ${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~ia64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc ssl"
 
 DEPEND="doc? ( dev-python/docutils )"
