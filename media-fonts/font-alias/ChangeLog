@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-alias
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.43 2011/02/14 12:56:00 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.44 2012/03/07 04:21:09 darkside Exp $
+
+  07 Mar 2012; Jeremy Olexa <darkside@gentoo.org> font-alias-1.0.3.ebuild:
+  add ~x64-macos, bug 395011
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   font-alias-1.0.3.ebuild:
