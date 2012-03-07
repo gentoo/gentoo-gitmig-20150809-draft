@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.84 2011/10/09 16:48:49 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.85 2012/03/07 19:54:57 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> gmpc-11.8.16.ebuild:
+  Marking gmpc-11.8.16 ppc for bug 381219
 
   09 Oct 2011; Markus Meier <maekke@gentoo.org> gmpc-11.8.16.ebuild:
   x86 stable, bug #381219
