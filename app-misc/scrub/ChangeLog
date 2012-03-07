@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/scrub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scrub/ChangeLog,v 1.5 2012/02/24 15:22:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scrub/ChangeLog,v 1.6 2012/03/07 08:59:36 dev-zero Exp $
+
+  07 Mar 2012; Tiziano Müller <dev-zero@gentoo.org> -scrub-2.4.ebuild,
+  scrub-2.4.1.ebuild:
+  Dropped old. Added ~sparc keyword since tested on my sparc to scrub it.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> scrub-2.4.1.ebuild:
   x86 stable wrt bug #403935
