@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.4.ebuild,v 1.7 2012/03/02 18:34:25 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.4.ebuild,v 1.8 2012/03/07 18:43:03 pesa Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -55,7 +55,7 @@ PATCHES=(
 
 src_prepare() {
 	if ! use dbus; then
-		sed -e "s/^\([[:blank:]]\+\)check_dbus()/\1pass/" -i configure.py || die "sed configure.py failed"
+		sed -e 's/^\([[:blank:]]\+\)check_dbus()/\1pass/' -i configure.py || die
 	fi
 
 	# Support qreal for arm architecture (bug #322349).
@@ -64,12 +64,12 @@ src_prepare() {
 	qt4-r2_src_prepare
 
 	# Use proper include directory.
-	sed -e "s:/usr/include:${EPREFIX}/usr/include:g" -i configure.py || die "sed configure.py failed"
+	sed -e "s:/usr/include:${EPREFIX}/usr/include:g" -i configure.py || die
 
 	python_copy_sources
 
 	preparation() {
-		if [[ "$(python_get_version --major)" == "3" ]]; then
+		if [[ $(python_get_version -l --major) == 3 ]]; then
 			rm -fr pyuic/uic/port_v2
 		else
 			rm -fr pyuic/uic/port_v3
@@ -122,14 +122,19 @@ src_configure() {
 		"${myconf[@]}" || return 1
 
 		local mod
-		for mod in QtCore $(use X && echo QtDesigner QtGui) $(use declarative && echo QtDeclarative); do
-			# Run eqmake4 inside the qpy subdirectories to respect CC, CXX, CFLAGS, CXXFLAGS and LDFLAGS and avoid stripping.
+		for mod in QtCore \
+				$(use X && echo QtDesigner QtGui) \
+				$(use declarative && echo QtDeclarative) \
+				$(use opengl && echo QtOpenGL); do
+			# Run eqmake4 inside the qpy subdirectories to respect
+			# CC, CXX, CFLAGS, CXXFLAGS, LDFLAGS and avoid stripping.
 			pushd qpy/${mod} > /dev/null || return 1
 			eqmake4 $(ls w_qpy*.pro)
 			popd > /dev/null || return 1
 
 			# Fix insecure runpaths.
-			sed -e "/^LFLAGS[[:space:]]*=/s:-Wl,-rpath,${BUILDDIR}/qpy/${mod}::" -i ${mod}/Makefile || die "Fixing of runpaths failed"
+			sed -e "/^LFLAGS[[:space:]]*=/s:-Wl,-rpath,${BUILDDIR}/qpy/${mod}::" \
+				-i ${mod}/Makefile || die "Failed to fix runpath for ${mod}"
 		done
 
 		# Avoid stripping of libpythonplugin.so.
