@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.0-r1.ebuild,v 1.1 2012/02/24 19:02:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.0-r1.ebuild,v 1.2 2012/03/07 15:02:56 pesa Exp $
 
 EAPI="3"
 inherit qt4-build flag-o-matic toolchain-funcs
@@ -23,7 +23,9 @@ DEPEND="
 	)"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${P}-c++0x-fix.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-c++0x-fix.patch"
+)
 
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="
@@ -55,10 +57,10 @@ src_prepare() {
 
 src_configure() {
 	myconf+="
-		-webkit -system-sqlite
+		-webkit
+		-system-sqlite
 		$(qt_use jit javascript-jit)
-		-DENABLE_VIDEO=$(use gstreamer && echo 1 || echo 0)
-		-DGST_DISABLE_DEPRECATED"
-
+		$(use gstreamer || echo -DENABLE_VIDEO=0)
+	"
 	qt4-build_src_configure
 }

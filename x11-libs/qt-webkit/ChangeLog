@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.132 2012/02/24 19:02:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.133 2012/03/07 15:02:56 pesa Exp $
+
+  07 Mar 2012; Davide Pesavento <pesa@gentoo.org> qt-webkit-4.8.0-r1.ebuild:
+  Fix build with USE=gstreamer (bug 405701).
 
 *qt-webkit-4.8.0-r1 (24 Feb 2012)
 
