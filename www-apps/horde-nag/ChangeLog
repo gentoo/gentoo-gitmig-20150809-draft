@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-nag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.47 2012/03/02 23:01:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.48 2012/03/07 19:51:30 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> horde-nag-2.3.6.ebuild:
+  Marking horde-nag-2.3.6 ppc for bug 397247
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> horde-nag-2.3.6.ebuild:
   Stable on alpha, bug #397247
