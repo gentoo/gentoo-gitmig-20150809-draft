@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.9.ebuild,v 1.1 2012/03/05 22:43:02 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.9-r1.ebuild,v 1.1 2012/03/07 01:29:13 reavertm Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ IUSE="gnome-keyring"
 RESTRICT="test"
 
 RDEPEND="
-	~app-admin/system-config-printer-common-${PV}
+	=app-admin/system-config-printer-common-${PVR}
 	dev-python/notify-python
 	>=dev-python/pycups-1.9.60
 	>=dev-python/pygtk-2.4
@@ -53,7 +53,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.3.5-split.patch"
+	epatch "${FILESDIR}/${PN}-1.3.9-split.patch"
 	eautoreconf
 }
 
