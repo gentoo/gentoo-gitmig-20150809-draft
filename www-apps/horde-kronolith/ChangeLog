@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-kronolith
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.60 2012/03/02 23:01:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.61 2012/03/07 19:50:39 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> horde-kronolith-2.3.5.ebuild:
+  Marking horde-kronolith-2.3.5 ppc for bug 397245
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
   horde-kronolith-2.3.5.ebuild:
