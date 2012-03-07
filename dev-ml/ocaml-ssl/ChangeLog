@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-ssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.22 2012/03/06 20:55:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.23 2012/03/07 09:16:10 aballier Exp $
+
+  07 Mar 2012; Alexis Ballier <aballier@gentoo.org> -ocaml-ssl-0.4.3.ebuild,
+  -ocaml-ssl-0.4.4.ebuild, -ocaml-ssl-0.4.5.ebuild:
+  remove old
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> ocaml-ssl-0.4.6.ebuild:
   Marking ocaml-ssl-0.4.6 ppc for bug 404657
