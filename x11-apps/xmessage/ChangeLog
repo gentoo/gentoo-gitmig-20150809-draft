@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xmessage
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmessage/ChangeLog,v 1.51 2011/10/04 21:20:18 chithanh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmessage/ChangeLog,v 1.52 2012/03/07 04:23:06 darkside Exp $
+
+  07 Mar 2012; Jeremy Olexa <darkside@gentoo.org> xmessage-1.0.3.ebuild:
+  add ~x64-macos, bug 395011
 
   04 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xmessage-1.0.3.ebuild:
