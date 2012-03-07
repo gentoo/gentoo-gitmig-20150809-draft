@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-3.1_rc1.ebuild,v 1.1 2012/03/06 18:49:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-3.1_rc1.ebuild,v 1.2 2012/03/07 06:57:33 jer Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf
+	default
 	if use ipv6; then
 		cd "${S}-6"
 		append-flags -DIPV6
@@ -35,7 +35,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	default
 	if use ipv6; then
 		cd "${S}-6"
 		emake
@@ -43,12 +43,12 @@ src_compile() {
 }
 
 src_install () {
-	dosbin "${S}"/${PN}
+	dosbin "${S}"/src/${PN}
 	fperms 4555 /usr/sbin/fping #241930
 	if use ipv6; then
-		newsbin "${S}"-6/fping fping6
+		newsbin "${S}"-6/src/fping fping6
 		fperms 4555 /usr/sbin/fping6
 	fi
-	doman fping.8
+	doman doc/fping.8
 	dodoc ChangeLog README
 }

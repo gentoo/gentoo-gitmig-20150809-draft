@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.39 2012/03/06 18:49:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.40 2012/03/07 06:57:33 jer Exp $
+
+  07 Mar 2012; Jeroen Roovers <jer@gentoo.org> fping-3.1_rc1.ebuild:
+  Fix file paths in src_install(). Use some EAPI 4 defaults.
 
 *fping-3.1_rc1 (06 Mar 2012)
 
