@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.114 2012/02/27 21:04:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.115 2012/03/07 13:46:24 tomka Exp $
+
+*wicd-1.7.1-r3 (07 Mar 2012)
+
+  07 Mar 2012; Thomas Kahle <tomka@gentoo.org> +wicd-1.7.1-r3.ebuild:
+  Fix language support (bug 407035), thanks Michael
 
 *wicd-1.7.1-r2 (27 Feb 2012)
 
