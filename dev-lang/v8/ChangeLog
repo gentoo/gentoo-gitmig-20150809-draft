@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.144 2012/03/06 22:04:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.145 2012/03/07 12:52:33 ago Exp $
+
+  07 Mar 2012; Agostino Sarubbo <ago@gentoo.org> v8-3.7.12.28.ebuild:
+  Stable for amd64, wrt bug #406975
 
 *v8-3.7.12.28 (06 Mar 2012)
 
