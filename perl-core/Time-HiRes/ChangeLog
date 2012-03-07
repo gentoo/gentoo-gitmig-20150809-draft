@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-HiRes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.77 2012/02/02 15:56:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.78 2012/03/07 22:00:30 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> Time-HiRes-1.972.200.ebuild:
+  Marking Time-HiRes-1.972.200 ppc64 for bug 391567
 
   02 Feb 2012; Brent Baude <ranger@gentoo.org> Time-HiRes-1.972.200.ebuild:
   Marking Time-HiRes-1.972.200 ppc for bug 391567
