@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/mtl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.43 2011/12/05 18:58:27 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.44 2012/03/07 20:58:45 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> mtl-1.1.1.1.ebuild:
+  Marking mtl-1.1.1.1 ppc64 for bug 399983
 
 *mtl-2.0.1.0 (05 Dec 2011)
 
