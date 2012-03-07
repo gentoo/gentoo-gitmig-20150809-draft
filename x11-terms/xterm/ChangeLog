@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.350 2012/03/03 16:34:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.351 2012/03/07 04:15:12 darkside Exp $
+
+  07 Mar 2012; Jeremy Olexa <darkside@gentoo.org> xterm-278.ebuild:
+  add ~x64-macos, bug 395011
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> xterm-276.ebuild:
   Marking xterm-276 ppc64 stable for bug 394393
