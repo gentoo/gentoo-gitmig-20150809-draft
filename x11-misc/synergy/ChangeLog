@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.76 2012/02/19 13:24:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.77 2012/03/07 16:05:09 darkside Exp $
+
+*synergy-1.4.7 (07 Mar 2012)
+
+  07 Mar 2012; Jeremy Olexa <darkside@gentoo.org> +synergy-1.4.7.ebuild:
+  version bump from upstream with many bug fixes
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> synergy-1.3.6.ebuild:
   Stable on alpha, bug #391393
