@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.237 2011/12/21 17:39:41 matsuu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.238 2012/03/07 16:09:17 naota Exp $
+
+  07 Mar 2012; Naohiro Aota <naota@gentoo.org> uim-1.7.1-r1.ebuild:
+  Add missing dependency dev-util/intltool. #407247 Patch-By: Piotr Szymaniak
 
 *uim-1.7.1-r1 (21 Dec 2011)
 
