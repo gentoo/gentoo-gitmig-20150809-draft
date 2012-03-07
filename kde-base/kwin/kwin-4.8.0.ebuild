@@ -1,19 +1,20 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.8.0.ebuild,v 1.1 2012/01/25 18:17:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.8.0.ebuild,v 1.2 2012/03/07 17:14:06 dilfridge Exp $
 
 EAPI=4
 
 KMNAME="kde-workspace"
-OPENGL_REQUIRED="optional"
+OPENGL_REQUIRED="always"
 inherit kde4-meta
 
 DESCRIPTION="KDE window manager"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug gles xinerama"
+IUSE="debug gles opengl xinerama"
 
 COMMONDEPEND="
 	$(add_kdebase_dep kactivities)
+	$(add_kdebase_dep kdelibs opengl)
 	$(add_kdebase_dep kephal)
 	$(add_kdebase_dep libkworkspace)
 	$(add_kdebase_dep liboxygenstyle)
@@ -51,11 +52,8 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.4.2-xinerama_cmake_automagic.patch"
 )
 
-# normally, you can use just gles or opengl or none
-#REQUIRED_USE="opengl? ( !gles ) gles? ( !opengl )"
-
-# right now, upstream requires opengl to always be enabled with gles
-REQUIRED_USE="gles? ( opengl )"
+# you need one of these
+REQUIRED_USE="!opengl? ( gles ) !gles? ( opengl )"
 
 src_configure() {
 	# FIXME Remove when activity API moved away from libkworkspace
