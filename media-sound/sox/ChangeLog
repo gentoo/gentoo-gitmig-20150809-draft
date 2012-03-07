@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.139 2012/02/08 20:39:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.140 2012/03/07 00:02:09 radhermit Exp $
+
+*sox-14.4.0 (07 Mar 2012)
+
+  07 Mar 2012; Tim Harder <radhermit@gentoo.org> +sox-14.4.0.ebuild,
+  +files/sox-14.4.0-ffmpeg.patch, metadata.xml:
+  Version bump.
 
   08 Feb 2012; Fabian Groffen <grobian@gentoo.org> sox-14.3.2-r1.ebuild:
   Marked ~x64-macos
