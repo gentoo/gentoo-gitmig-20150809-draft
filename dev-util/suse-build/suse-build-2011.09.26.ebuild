@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-2011.01.20.ebuild,v 1.3 2012/03/07 13:36:56 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-2011.09.26.ebuild,v 1.1 2012/03/07 13:36:56 miska Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://gitorious.org/opensuse/build.git"
-OPENSUSE_RELEASE="11.4"
+OPENSUSE_RELEASE="12.1"
 MY_PN="build"
 OBS_PACKAGE="${MY_PN}"
 

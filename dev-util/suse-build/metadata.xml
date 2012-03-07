@@ -5,6 +5,10 @@
 <email>miska@gentoo.org</email>
 <name>Michal Hrušecký</name>
 </maintainer>
+<maintainer>
+<email>tampakrap@gentoo.org</email>
+<name>Theo Chatzimichos</name>
+</maintainer>
 <longdescription lang="en">
 Script for building RPMs for SUSE Linux in a chroot environment.
 </longdescription>
