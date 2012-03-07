@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.173 2012/03/07 18:43:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.174 2012/03/07 18:46:36 pesa Exp $
+
+  07 Mar 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Put qt as the primary herd in metadata.
 
   07 Mar 2012; Davide Pesavento <pesa@gentoo.org> PyQt4-4.8.4.ebuild:
   Fix insecure RUNPATH in qpy/QtOpenGL, thanks to Steve L
