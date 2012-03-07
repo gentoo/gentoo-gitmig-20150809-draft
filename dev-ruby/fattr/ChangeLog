@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fattr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fattr/ChangeLog,v 1.8 2010/11/17 06:30:04 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fattr/ChangeLog,v 1.9 2012/03/07 16:23:47 naota Exp $
+
+  07 Mar 2012; Naohiro Aota <naota@gentoo.org> fattr-2.2.0.ebuild:
+  Add ~x86-fbsd
 
 *fattr-2.2.0 (17 Nov 2010)
 

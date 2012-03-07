@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arrayfields/arrayfields-4.7.4-r1.ebuild,v 1.1 2010/01/26 07:31:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arrayfields/arrayfields-4.7.4-r1.ebuild,v 1.2 2012/03/07 16:25:36 naota Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -16,7 +16,7 @@ HOMEPAGE="http://rubyforge.org/projects/codeforpeople/"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="examples"
 
 each_ruby_test() {
