@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/ganeti-htools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ChangeLog,v 1.9 2011/03/12 19:11:19 ramereth Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ChangeLog,v 1.10 2012/03/07 17:56:06 slyfox Exp $
+
+  07 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ganeti-htools-0.2.8-use-QC-1.patch, ganeti-htools-0.2.8.ebuild,
+  ganeti-htools-0.3.0.ebuild, ganeti-htools-0.3.1.ebuild, metadata.xml:
+  Fixed USE=test to use QuickCheck-1.* (fixes bug #316629 by Diego Elio Pettenò
+  and others). Added package to haskell herd as well.
 
 *ganeti-htools-0.3.1 (12 Mar 2011)
 
