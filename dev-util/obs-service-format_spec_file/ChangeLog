@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/obs-service-format_spec_file
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-format_spec_file/ChangeLog,v 1.2 2012/02/29 13:13:28 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-format_spec_file/ChangeLog,v 1.3 2012/03/07 14:52:33 miska Exp $
+
+  07 Mar 2012; Michal Hrusecky <miska@gentoo.org> metadata.xml,
+  obs-service-format_spec_file-0.1.ebuild,
+  obs-service-format_spec_file-9999.ebuild:
+  * Using upstream description directly from spec file * Added co-maintainer
 
 *obs-service-format_spec_file-0.1 (29 Feb 2012)
 

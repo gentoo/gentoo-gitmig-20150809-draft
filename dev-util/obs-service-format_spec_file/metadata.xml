@@ -5,7 +5,17 @@
 <email>miska@gentoo.org</email>
 <name>Michal Hrušecký</name>
 </maintainer>
+<maintainer>
+<email>tampakrap@gentoo.org</email>
+<name>Theo Chatzimichos</name>
+</maintainer>
 <longdescription lang="en">
-This is a source service for Open Build Service. This source service is formating the spec file to SUSE standard. The rational behind is to make it easier to review spec files from unknown packagers. This should be used in "trylocal" mode, so that osc is adapting the existing spec file instead of creating a new one.
+This is a source service for openSUSE Build Service.
+
+This source service is formating the spec file to SUSE standard. The rational
+behind is to make it easier to review spec files from unknown packagers.
+
+This should be used in "trylocal" mode, so that osc is adapting the existing
+spec file instead of creating a new one.
 </longdescription>
 </pkgmetadata>
