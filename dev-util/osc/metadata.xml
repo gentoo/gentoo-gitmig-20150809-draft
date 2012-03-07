@@ -5,6 +5,10 @@
 <email>miska@gentoo.org</email>
 <name>Michal Hrušecký</name>
 </maintainer>
+<maintainer>
+<email>tampakrap@gentoo.org</email>
+<name>Theo Chatzimichos</name>
+</maintainer>
 <longdescription lang="en">
 Subversion-like client for Open Build Service - http://open-build-service.org/ It serves as client for the source code repository part of the build service, and it is used to edit metadata or query about build results.
 </longdescription>

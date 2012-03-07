@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.130.1.ebuild,v 1.3 2012/03/07 12:56:19 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.132.6.ebuild,v 1.1 2012/03/07 12:56:19 miska Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://gitorious.org/opensuse/osc.git"
-OPENSUSE_RELEASE="11.4"
+OPENSUSE_RELEASE="12.1"
 OBS_PACKAGE="${PN}"
 
 if [[ "${PV}" == "9999" ]]; then
