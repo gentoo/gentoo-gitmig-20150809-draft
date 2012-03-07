@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Pod-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.47 2012/03/04 13:38:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.48 2012/03/07 21:59:13 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org>
+  perl-Pod-Simple-3.160.0-r2.ebuild:
+  Marking perl-Pod-Simple-3.160.0-r2 ppc64 for bug 391499
 
 *perl-Pod-Simple-3.200.0 (04 Mar 2012)
 
