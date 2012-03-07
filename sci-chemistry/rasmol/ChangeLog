@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/rasmol
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.30 2011/12/26 12:40:28 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.31 2012/03/07 20:52:22 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> rasmol-2.7.5.1.ebuild:
+  Marking rasmol-2.7.5.1 ppc for bug 394085
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> rasmol-2.7.5.1.ebuild:
   x86 stable, bug #394085
