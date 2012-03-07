@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.7.12.28.ebuild,v 1.2 2012/03/07 12:52:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.7.12.28.ebuild,v 1.3 2012/03/07 16:27:49 tomka Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86 ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~arm x86 ~x64-macos ~x86-macos"
 IUSE=""
 
 pkg_pretend() {
