@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.35.ebuild,v 1.4 2012/01/04 18:13:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.35.ebuild,v 1.5 2012/03/07 20:04:50 ranger Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SRC_URI="mirror://mysql/Downloads/MySQLGUITools/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc nls readline static-libs"
 
 CDEPEND="dev-db/sqlite:3
