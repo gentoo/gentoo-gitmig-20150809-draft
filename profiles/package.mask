@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13553 2012/03/06 23:48:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13554 2012/03/07 15:22:45 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -187,11 +187,6 @@ dev-php/PEAR-Image_Canvas
 # Illegal license. Bug #390205
 # Removal in 30 days
 app-text/notecase-pro
-
-# Davide Pesavento <pesa@gentoo.org> (19 Feb 2012)
-# Masked until all reverse dependencies are fixed. Bug #404493
-=x11-libs/qt-qt3support-4.8.0-r1
-=x11-libs/qt-webkit-4.8.0-r1
 
 # Michael Weber <xmw@gentoo.org> (18 Feb 2012)
 # Project was renamed to x11-wm/spectrwm
