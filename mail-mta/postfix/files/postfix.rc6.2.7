@@ -1,10 +1,15 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.7,v 1.1 2012/03/06 15:03:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.7,v 1.2 2012/03/07 10:27:37 eras Exp $
+
+extra_started_commands="reload abort flush"
+
+description_reload="Re-read configuration files. Running processes terminate at their earliest convenience."
+description_abort="Stop the Postfix mail system abruptly. Running processes are signaled to stop immediately."
+description_flush="Force delivery: attempt to deliver every message in the deferred mail queue."
 
 # Please read http://www.postfix.org/MULTI_INSTANCE_README.html for multi instance support
-
 CONF_DIR="/etc/postfix"
 CONF_OPT="${SVCNAME##*.}"
 if [ -n ${CONF_OPT} -a ${SVCNAME} != "postfix" ]; then
@@ -18,12 +23,6 @@ else
 	CONF_MESSAGE="(${CONF_DIR})"
 fi
 
-extra_started_commands="reload abort flush"
-
-description_reload="Re-read configuration files. Running processes terminate at their earliest convenience."
-description_abort="Stop the Postfix mail system abruptly. Running processes are signaled to stop immediately."
-description_flush="Force delivery: attempt to deliver every message in the deferred mail queue."
-
 depend() {
 	use logger dns ypbind amavisd antivirus postfix_greylist net saslauthd
 	if [ "${SVCNAME}" = "postfix" ]; then
@@ -32,7 +31,6 @@ depend() {
 }
 
 start() {
-	local _retval
 	if [ ! -z "${CONF_PARAM}" ]; then
 		einfo "Please consider updating your config for postmulti support."
 	fi
@@ -42,20 +40,27 @@ start() {
 		return 1
 	fi
 	/usr/sbin/postfix ${CONF_PARAM} start >/dev/null 2>&1
-	_retval=$?
-	# check that master started correctly
-	if [ "${_retval}" ]; then
-		sleep 1
-		/usr/sbin/postfix ${CONF_PARAM} status >/dev/null 2>&1
-		_retval=$?
-	fi
-	eend "${_retval}"
+	eend $?
 }
 
 stop() {
 	ebegin "Stopping postfix ${CONF_MESSAGE}"
 	/usr/sbin/postfix ${CONF_PARAM} stop >/dev/null 2>&1
-	eend $?
+	eend
+}
+
+status() {
+	local _retval
+	einfon ""
+	/usr/sbin/postfix ${CONF_PARAM} status
+	_retval=$?
+	if [ x${_retval} = 'x0' ]; then
+		mark_service_started "${SVCNAME}"
+		eend 0
+	else
+		mark_service_stopped "${SVCNAME}"
+		eend 3
+	fi
 }
 
 reload() {

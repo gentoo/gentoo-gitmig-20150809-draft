@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.342 2012/03/06 15:03:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.343 2012/03/07 10:27:37 eras Exp $
+
+*postfix-2.10_pre20120305-r1 (07 Mar 2012)
+
+  07 Mar 2012; Eray Aslan <eras@gentoo.org>
+  +postfix-2.10_pre20120305-r1.ebuild, +files/postfix_master-monitor.patch,
+  files/postfix.rc6.2.7:
+  Do not return success in init script with a broken configuration.
 
   06 Mar 2012; Eray Aslan <eras@gentoo.org> +files/postfix.rc6.2.7:
   add checking to start() in init script
