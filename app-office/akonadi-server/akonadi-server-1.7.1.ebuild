@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.7.1.ebuild,v 1.1 2012/03/07 13:53:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.7.1.ebuild,v 1.2 2012/03/07 22:02:54 dilfridge Exp $
 
 EAPI=4
 
@@ -34,6 +34,9 @@ RDEPEND="${CDEPEND}
 REQUIRED_USE="|| ( sqlite mysql postgres )"
 
 S=${WORKDIR}/${P/-server/}
+
+RESTRICT=test
+# bug 401139
 
 pkg_setup() {
 	# Set default storage backend in order: SQLite, MySQL, PostgreSQL
