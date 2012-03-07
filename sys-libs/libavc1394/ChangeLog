@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libavc1394
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.33 2007/05/16 15:52:56 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.34 2012/03/07 07:32:10 radhermit Exp $
+
+*libavc1394-0.5.4 (07 Mar 2012)
+
+  07 Mar 2012; Tim Harder <radhermit@gentoo.org> +libavc1394-0.5.4.ebuild:
+  Version bump. Add static-libs use flag.
 
   16 May 2007; Raúl Porcel <armin76@gentoo.org> libavc1394-0.5.3.ebuild:
   alpha stable wrt #146794
