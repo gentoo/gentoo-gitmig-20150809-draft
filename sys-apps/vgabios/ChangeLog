@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vgabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/ChangeLog,v 1.7 2012/01/29 21:53:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/ChangeLog,v 1.8 2012/03/07 22:55:09 cardoe Exp $
+
+*vgabios-0.6c-r1 (07 Mar 2012)
+
+  07 Mar 2012; Doug Goldstein <cardoe@gentoo.org> +vgabios-0.6c-r1.ebuild:
+  Add support for 1280x768 as a valid resolution.
 
   29 Jan 2012; Doug Goldstein <cardoe@gentoo.org> vgabios-0.6c.ebuild,
   vgabios-0.7a.ebuild:
