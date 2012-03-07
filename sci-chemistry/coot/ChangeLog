@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.51 2012/03/06 15:31:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.52 2012/03/07 19:33:39 jlec Exp $
+
+  07 Mar 2012; Justin Lecher <jlec@gentoo.org> coot-0.6.2.ebuild,
+  coot-0.6.2-r1.ebuild, coot-0.7_pre4040.ebuild:
+  Fix sandbox violation, #407311
 
 *coot-0.7_pre4040 (06 Mar 2012)
 
