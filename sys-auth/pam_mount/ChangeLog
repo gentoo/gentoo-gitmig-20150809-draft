@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_mount
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.63 2011/12/24 10:57:46 hanno Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.64 2012/03/07 19:14:10 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> pam_mount-2.11.ebuild:
+  Marking pam_mount-2.11 ppc for bug 380783
 
   24 Dec 2011; Hanno Boeck <hanno@gentoo.org> pam_mount-2.13.ebuild:
   Needs mount / util-linux 2.20 or later.
