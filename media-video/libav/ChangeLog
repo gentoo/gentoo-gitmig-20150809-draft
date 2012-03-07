@@ -1,6 +1,10 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.57 2012/03/04 12:08:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.58 2012/03/07 21:37:11 lu_zero Exp $
+
+  07 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8.ebuild,
+  libav-0.8.9999.ebuild, libav-9999.ebuild:
+  Make sure librtmp requires network enabled
 
   04 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
   libpostproc spun off

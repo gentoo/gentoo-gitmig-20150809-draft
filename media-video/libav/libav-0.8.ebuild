@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.ebuild,v 1.6 2012/02/29 10:18:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.ebuild,v 1.7 2012/03/07 21:37:11 lu_zero Exp $
 
 EAPI=4
 
@@ -93,7 +93,8 @@ DEPEND="${RDEPEND}
 # amr and aac require at least lgpl3
 # x264 requires gpl2
 REQUIRED_USE="bindist? ( !faac !openssl )
-	amr? ( gpl ) aac? ( gpl ) x264? ( gpl )"
+			  rtmp? ( network )
+			  amr? ( gpl ) aac? ( gpl ) x264? ( gpl )"
 
 RESTRICT="test"
 
