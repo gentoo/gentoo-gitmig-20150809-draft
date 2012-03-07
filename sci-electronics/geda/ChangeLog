@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.73 2012/02/05 17:48:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.74 2012/03/07 20:53:15 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> geda-1.6.2.ebuild:
+  Marking geda-1.6.2 ppc for bug 395797
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> geda-1.6.1.ebuild,
   geda-1.6.2.ebuild:
