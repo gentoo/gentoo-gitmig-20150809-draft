@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9.ebuild,v 1.1 2012/03/05 22:41:50 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9-r1.ebuild,v 1.1 2012/03/07 01:25:30 reavertm Exp $
 
 EAPI="3"
 
@@ -28,6 +28,7 @@ COMMON_DEPEND="
 	dev-libs/libxml2[python]
 	dev-python/dbus-python
 	>=dev-python/pycups-1.9.60
+	dev-python/pycurl
 	>=dev-python/pygobject-2.21.5:2
 	>=net-print/cups-1.4.6[dbus]
 	>=sys-fs/udev-164-r2
@@ -39,8 +40,7 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( dev-python/epydoc )
 "
 RDEPEND="${COMMON_DEPEND}
-	!app-admin/system-config-printer:0
-	!<app-admin/system-config-printer-gnome-${PV}
+	!<app-admin/system-config-printer-gnome-${PVR}
 	policykit? ( sys-auth/polkit )
 "
 
@@ -51,7 +51,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.3.5-split.patch"
+	epatch "${FILESDIR}/${PN}-1.3.9-split.patch"
 	eautoreconf
 }
 
