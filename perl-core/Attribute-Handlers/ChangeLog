@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Attribute-Handlers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.24 2012/02/02 19:32:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.25 2012/03/07 22:07:44 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org>
+  Attribute-Handlers-0.910.0.ebuild:
+  Marking Attribute-Handlers-0.910.0 ppc64 for bug 394039
 
   02 Feb 2012; Brent Baude <ranger@gentoo.org>
   Attribute-Handlers-0.910.0.ebuild:
