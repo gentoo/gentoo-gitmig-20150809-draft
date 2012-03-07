@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.124 2012/03/05 20:02:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.125 2012/03/07 12:31:20 ago Exp $
+
+  07 Mar 2012; Agostino Sarubbo <ago@gentoo.org> kadu-0.11.1.ebuild:
+  Stable for amd64, wrt bug #406015
 
 *kadu-0.11.1 (05 Mar 2012)
 
