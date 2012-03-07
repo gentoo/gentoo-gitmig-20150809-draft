@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.8.ebuild,v 1.1 2012/03/07 07:21:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.8.ebuild,v 1.2 2012/03/07 14:16:27 tetromino Exp $
 
 PYTHON_DEPEND="2:2.6"
 EAPI="4"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-COMMON_DEPEND="dev-libs/btparser
+COMMON_DEPEND=">=dev-libs/btparser-0.16
 	>=dev-libs/glib-2.21:2
 	>=dev-libs/libreport-2.0.9
 	dev-libs/libxml2
