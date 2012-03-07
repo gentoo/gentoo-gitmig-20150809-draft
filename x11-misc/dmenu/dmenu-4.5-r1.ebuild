@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r1.ebuild,v 1.4 2012/03/06 21:56:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r1.ebuild,v 1.5 2012/03/07 12:53:46 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://dl.suckless.org/tools/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ~ppc ppc64 ~x86 ~x86-fbsd"
 IUSE="xft xinerama"
 
 DEPEND="
