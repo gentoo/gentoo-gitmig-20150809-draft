@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libreport
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.5 2012/01/14 15:54:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.6 2012/03/07 07:19:31 tetromino Exp $
+
+*libreport-2.0.9 (07 Mar 2012)
+
+  07 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libreport-2.0.9.ebuild, +files/libreport-2.0.9-gentoo.patch,
+  +files/libreport-2.0.9-no-bugzilla.patch:
+  Version bump with assorted bugfixes.
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> libreport-2.0.7.ebuild:
   x86 stable, bug #393007
