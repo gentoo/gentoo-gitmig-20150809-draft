@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.31 2012/02/17 11:54:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.32 2012/03/07 20:29:10 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> gorg-0.6.4-r1.ebuild:
+  Marking gorg-0.6.4-r1 ppc for bug 403103
 
   17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> gorg-0.6.4-r1.ebuild:
   Stable for amd64, wrt bug #403103
