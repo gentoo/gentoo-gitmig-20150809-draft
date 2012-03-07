@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.35 2012/02/09 08:58:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.36 2012/03/07 18:06:58 naota Exp $
+
+  07 Mar 2012; Naohiro Aota <naota@gentoo.org> bundler-1.0.22.ebuild:
+  Add ~x86-fbsd
 
 *bundler-1.0.22 (09 Feb 2012)
 
