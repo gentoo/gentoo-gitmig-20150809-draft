@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmltidy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.60 2011/09/16 18:37:08 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.61 2012/03/07 04:08:47 darkside Exp $
+
+  07 Mar 2012; Jeremy Olexa <darkside@gentoo.org> htmltidy-20090325-r1.ebuild:
+  add ~x64-macos, bug 395011
 
   16 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -htmltidy-20090325.ebuild, htmltidy-20090325-r1.ebuild:
