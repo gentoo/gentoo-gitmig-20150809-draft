@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.119 2012/03/03 14:12:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.120 2012/03/07 20:24:00 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> lxml-2.3.2.ebuild:
+  Marking lxml-2.3.2 ppc for bug 406431
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> lxml-2.3.2.ebuild:
   Marking lxml-2.3.2 ppc64 for bug 406431
