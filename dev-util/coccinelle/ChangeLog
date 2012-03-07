@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.14 2012/03/05 11:04:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.15 2012/03/07 07:05:56 radhermit Exp $
+
+  07 Mar 2012; Tim Harder <radhermit@gentoo.org> -coccinelle-0.2.5-r2.ebuild:
+  Remove old.
 
 *coccinelle-1.0.0_rc10 (05 Mar 2012)
 
