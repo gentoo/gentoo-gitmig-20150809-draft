@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/qla-fc-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.27 2012/02/05 15:00:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.28 2012/03/07 20:27:26 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> qla-fc-firmware-20101015.ebuild:
+  Marking qla-fc-firmware-20101015 ppc for bug 391589
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org>
   qla-fc-firmware-20101015.ebuild:
