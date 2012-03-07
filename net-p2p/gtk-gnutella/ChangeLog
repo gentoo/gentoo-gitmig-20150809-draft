@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.133 2012/02/23 20:22:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.134 2012/03/07 20:00:24 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> gtk-gnutella-0.97.1.ebuild:
+  Marking gtk-gnutella-0.97.1 ppc for bug 387007
 
   23 Feb 2012; Brent Baude <ranger@gentoo.org> gtk-gnutella-0.98.2.ebuild:
   Marking gtk-gnutella-0.98.2 ppc for bug 401369
