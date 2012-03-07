@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libhx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.37 2011/12/15 20:00:49 hanno Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.38 2012/03/07 19:12:17 ranger Exp $
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org> libhx-3.11.ebuild:
+  Marking libhx-3.11 ppc for bug 380783
 
 *libhx-3.12.1 (15 Dec 2011)
 
