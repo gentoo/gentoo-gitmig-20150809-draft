@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libraw1394
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.60 2011/09/03 09:09:33 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.61 2012/03/07 07:26:56 radhermit Exp $
+
+*libraw1394-2.0.8 (07 Mar 2012)
+
+  07 Mar 2012; Tim Harder <radhermit@gentoo.org> +libraw1394-2.0.8.ebuild:
+  Version bump. Add static-libs use flag.
 
   03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> libraw1394-2.0.7.ebuild,
   metadata.xml:
