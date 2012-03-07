@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.155 2012/03/04 21:03:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.156 2012/03/07 04:25:39 darkside Exp $
+
+  07 Mar 2012; Jeremy Olexa <darkside@gentoo.org> libXfont-1.4.5.ebuild:
+  add ~x64-macos, bug 395011
 
 *libXfont-1.4.5 (04 Mar 2012)
 
