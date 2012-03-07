@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6_rc1.ebuild,v 1.6 2012/02/22 07:53:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6_rc1.ebuild,v 1.7 2012/03/07 00:33:49 ulm Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ RDEPEND="
 		lua? (
 			dev-tex/pgf
 			>=dev-texlive/texlive-latexrecommended-2008-r2 ) )
-	lua? ( dev-lang/lua )
+	lua? ( <dev-lang/lua-5.2 )
 	plotutils? ( media-libs/plotutils )
 	qt4? ( >=x11-libs/qt-core-4.5
 		>=x11-libs/qt-gui-4.5
