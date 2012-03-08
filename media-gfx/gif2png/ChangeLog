@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gif2png
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.30 2012/02/03 07:32:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.31 2012/03/08 12:36:01 ssuominen Exp $
+
+*gif2png-2.5.6 (08 Mar 2012)
+
+  08 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +gif2png-2.5.6.ebuild:
+  Version bump.
 
 *gif2png-2.5.5 (03 Feb 2012)
 
