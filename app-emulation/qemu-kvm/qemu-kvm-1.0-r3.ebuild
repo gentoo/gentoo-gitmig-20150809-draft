@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.8 2012/03/08 16:40:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.9 2012/03/08 18:20:32 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -144,20 +144,20 @@ pkg_pretend() {
 		if ! linux_config_exists; then
 			eerror "Unable to check your kernel for KVM support"
 		else
-			CONFIG_CHECK="KVM ~KVM_AMD ~KVM_INTEL ~TUN ~BRIDGE"
+			CONFIG_CHECK="~KVM ~KVM_AMD ~KVM_INTEL ~TUN ~BRIDGE"
 			ERROR_KVM="You must enable KVM in your kernel to continue"
-			ERROR_KVM_AMD="If you have an AMD CPU, you must enable KVM_AMD in \
-				your kernel configuration."
-			ERROR_KVM_INTEL="If you have an Intel CPU, you must enable \
-				KVM_INTEL in your kernel configuration."
-			ERROR_TUN="You will need the Universal TUN/TAP driver compiled \
-				into your kernel or loaded as a module to use the virtual \
-				network device if using -net tap."
-			ERROR_BRIDGE="You will also need support for 802.1d \
-				Ethernet Bridging for some network configurations."
+			ERROR_KVM_AMD="If you have an AMD CPU, you must enable KVM_AMD in "
+			ERROR_KVM_AMD+="your kernel configuration."
+			ERROR_KVM_INTEL="If you have an Intel CPU, you must enable "
+			ERROR_KVM_INTEL+="KVM_INTEL in your kernel configuration."
+			ERROR_TUN="You will need the Universal TUN/TAP driver compiled "
+			ERROR_TUN+="into your kernel or loaded as a module to use the "
+			ERROR_TUN+="virtual network device if using -net tap."
+			ERROR_BRIDGE="You will also need support for 802.1d "
+			ERROR_BRIDGE+="Ethernet Bridging for some network configurations."
 			use vhost-net && CHECK_CHECK+="~VHOST_NET"
-			ERROR_VHOST_NET="You must enable VHOST_NET to have vhost-net \
-				support"
+			ERROR_VHOST_NET="You must enable VHOST_NET to have vhost-net "
+			ERROR_VHOST_NET+="support"
 
 			# Now do the actual checks setup above
 			check_extra_config

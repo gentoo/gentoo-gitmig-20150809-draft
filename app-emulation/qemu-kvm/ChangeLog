@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.107 2012/03/08 16:40:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.108 2012/03/08 18:20:32 cardoe Exp $
+
+  08 Mar 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.0-r3.ebuild:
+  Remove the backslash gluing which was causing odd spacing. Make KVM optional
+  in the kernel for mgorny.
 
   08 Mar 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.0-r3.ebuild:
   Warn about KVM_INTEL and KVM_AMD and don't require both to be present bug
