@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtester
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.41 2012/03/02 20:27:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.42 2012/03/08 08:45:31 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> memtester-4.2.2.ebuild:
+  x86 stable wrt bug #400489
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> memtester-4.2.2.ebuild:
   Marking memtester-4.2.2 ppc64 for bug 400489
