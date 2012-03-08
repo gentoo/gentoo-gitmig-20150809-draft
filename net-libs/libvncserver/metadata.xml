@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
-  </maintainer>
-  <longdescription>
+	<maintainer>
+		<email>floppym@gentoo.org</email>
+		<name>Mike Gilbert</name>
+	</maintainer>
+	<longdescription>
 If you don't know VNC, have a look at the original VNC or at Tridia 
 VNC, who also have commercial support for it.
 
@@ -15,7 +16,7 @@ surfing the internet.
 Now that you want to make a VNC server, that is, a server which speaks 
 the RFB protocol, you can download this library from sourceforge.
 </longdescription>
-  <use>
-    <flag name="no24bpp">disable 24bpp support</flag>
-  </use>
+	<use>
+		<flag name="no24bpp">disable 24bpp support</flag>
+	</use>
 </pkgmetadata>

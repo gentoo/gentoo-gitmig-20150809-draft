@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.49 2011/11/16 02:17:31 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.50 2012/03/08 02:49:25 floppym Exp $
+
+  08 Mar 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Make myself the maintainer.
 
   16 Nov 2011; Michael Weber <xmw@gentoo.org> -libvncserver-0.9.1.ebuild,
   libvncserver-0.9.8.2.ebuild:
