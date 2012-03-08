@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.173 2012/02/23 08:25:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.174 2012/03/08 07:26:48 ssuominen Exp $
+
+  08 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> inkscape-0.48.3.1.ebuild:
+  Replace dev-python/pyxml dependency with python.eclass and
+  PYTHON_USE_WITH="xml" wrt #367761
 
 *inkscape-0.48.3.1 (23 Feb 2012)
 

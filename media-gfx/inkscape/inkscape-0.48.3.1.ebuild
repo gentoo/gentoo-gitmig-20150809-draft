@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.1 2012/02/23 08:25:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.2 2012/03/08 07:26:48 ssuominen Exp $
 
 EAPI=4
-inherit eutils flag-o-matic autotools gnome2
+
+PYTHON_DEPEND="*"
+PYTHON_USE_WITH="xml"
+
+inherit autotools eutils flag-o-matic gnome2 python
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -40,7 +44,6 @@ COMMON_DEPEND="
 	x11-libs/libX11
 	>=x11-libs/gtk+-2.10.7:2
 	>=x11-libs/pango-1.4.0
-	|| ( dev-lang/python[xml] dev-python/pyxml )
 	gnome? ( >=gnome-base/gnome-vfs-2.0 )
 	lcms? ( media-libs/lcms:2 )
 	spell? (
