@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-1.0_rc87.ebuild,v 1.2 2012/03/06 22:19:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-1.0_rc87.ebuild,v 1.3 2012/03/08 23:40:07 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.sabayon.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 IUSE=""
 SRC_URI="mirror://sabayon/${CATEGORY}/${P}.tar.bz2"
