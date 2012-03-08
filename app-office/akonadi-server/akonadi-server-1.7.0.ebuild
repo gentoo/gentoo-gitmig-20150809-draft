@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.7.0.ebuild,v 1.1 2012/01/25 14:51:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.7.0.ebuild,v 1.2 2012/03/08 02:14:43 dilfridge Exp $
 
 EAPI=4
 
@@ -32,6 +32,9 @@ RDEPEND="${CDEPEND}
 "
 
 REQUIRED_USE="|| ( sqlite mysql postgres )"
+
+RESTRICT=test
+# bug 401139
 
 S=${WORKDIR}/${P/-server/}
 
