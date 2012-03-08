@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.200 2012/03/06 20:44:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.201 2012/03/08 08:46:46 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> wesnoth-1.10.ebuild:
+  x86 stable wrt bug #405359
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> wesnoth-1.10.ebuild:
   Marking wesnoth-1.10 ppc for bug 405359
