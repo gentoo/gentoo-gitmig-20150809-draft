@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.171 2012/03/08 07:59:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.172 2012/03/08 09:48:21 sochotnicky Exp $
+
+  08 Mar 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  rtorrent-0.9.0.ebuild:
+  Add correct minimal version of net-libs/libtorrent
 
   08 Mar 2012; Justin Lecher <jlec@gentoo.org> rtorrent-0.9.0.ebuild,
   +files/rtorrent-0.9.0-gold.patch:
