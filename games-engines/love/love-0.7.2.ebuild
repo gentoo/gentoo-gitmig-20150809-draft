@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.7.2.ebuild,v 1.1 2011/11/05 19:29:17 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.7.2.ebuild,v 1.2 2012/03/08 00:01:40 chithanh Exp $
 
 EAPI=3
 
@@ -15,20 +15,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-games/physfs
+RDEPEND="dev-games/physfs
 	dev-lang/lua
-	media-libs/devil
+	media-libs/devil[mng,tiff]
 	media-libs/freetype
-	media-libs/libmng
 	media-libs/libmodplug
-	media-libs/libsdl[joystick]
+	media-libs/libsdl[joystick,opengl]
 	media-libs/libvorbis
 	media-libs/openal
-	media-libs/sdl-sound
-	media-libs/tiff
 	media-sound/mpg123
 	virtual/opengl"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	media-libs/libmng
+	media-libs/tiff"
 
 S=${WORKDIR}/${PN}-HEAD
 

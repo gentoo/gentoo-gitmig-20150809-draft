@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-9999.ebuild,v 1.1 2012/03/05 22:57:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-9999.ebuild,v 1.2 2012/03/08 00:01:40 chithanh Exp $
 
 EAPI=3
 
@@ -23,20 +23,19 @@ LICENSE="ZLIB"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-games/physfs
+RDEPEND="dev-games/physfs
 	dev-lang/lua
-	media-libs/devil
+	media-libs/devil[mng,tiff]
 	media-libs/freetype
-	media-libs/libmng
 	media-libs/libmodplug
-	media-libs/libsdl[joystick]
+	media-libs/libsdl[joystick,opengl]
 	media-libs/libvorbis
 	media-libs/openal
-	media-libs/sdl-sound
-	media-libs/tiff
 	media-sound/mpg123
 	virtual/opengl"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	media-libs/libmng
+	media-libs/tiff"
 
 DOCS=( "readme.md" "changes.txt" )
 
