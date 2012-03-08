@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi/acpi-1.6.ebuild,v 1.1 2012/01/30 14:31:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi/acpi-1.6.ebuild,v 1.2 2012/03/08 21:45:43 hwoarang Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/acpiclient/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DOCS="AUTHORS ChangeLog README"
