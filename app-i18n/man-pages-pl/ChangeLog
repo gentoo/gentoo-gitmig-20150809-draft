@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.22 2012/02/23 23:05:59 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.23 2012/03/08 14:54:49 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> man-pages-pl-20070628-r1.ebuild:
+  Marking man-pages-pl-20070628-r1 ppc64 for bug 399935
 
   23 Feb 2012; Krzysztof Pawlik <nelchael@gentoo.org>
   man-pages-pl-20070628-r2.ebuild:
