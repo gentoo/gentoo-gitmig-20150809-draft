@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop-php
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.26 2011/08/08 19:23:35 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.27 2012/03/08 01:25:46 reavertm Exp $
+
+  08 Mar 2012; Maciej Mrozowski <reavertm@gentoo.org> kdevelop-php-1.2.3.ebuild:
+  Workaround paraller compilation issue in automoc (prepends namespace twice),
+  restrict kdevelop-pg-qt version.
 
   08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> kdevelop-php-1.2.3.ebuild:
   Stable on amd64 wrt bug #368739
