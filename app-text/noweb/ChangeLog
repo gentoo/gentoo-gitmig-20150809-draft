@@ -1,6 +1,9 @@
 # ChangeLog for app-text/noweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.54 2012/03/06 14:22:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.55 2012/03/08 21:20:49 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> noweb-2.11b-r2.ebuild:
+  Marking noweb-2.11b-r2 ppc64 for bug 396843
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> noweb-2.11b-r2.ebuild:
   Marking noweb-2.11b-r2 ppc for bug 396843
