@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.45.ebuild,v 1.8 2012/02/27 17:40:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.45.ebuild,v 1.9 2012/03/08 15:14:10 ranger Exp $
 
 EAPI=2
 inherit flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 SLOT="0"
 IUSE="doc examples gmp odbc mysql static-libs"
-KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="sys-libs/zlib
 	odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )
