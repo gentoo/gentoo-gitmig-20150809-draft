@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Business-UPS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-UPS/ChangeLog,v 1.14 2012/02/24 09:55:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-UPS/ChangeLog,v 1.15 2012/03/08 12:01:55 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Business-UPS-2.10.0.ebuild:
+  x86 stable wrt bug #400043
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Business-UPS-2.10.0.ebuild:
   Stable for amd64, wrt bug #400043
