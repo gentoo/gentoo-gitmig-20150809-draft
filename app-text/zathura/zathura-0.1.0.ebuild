@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.1.0.ebuild,v 1.1 2012/03/08 09:00:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.1.0.ebuild,v 1.2 2012/03/08 09:10:45 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -14,14 +14,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/girara:3"
+RDEPEND="dev-libs/girara:2"
 DEPEND="${RDEPEND}
 	dev-python/docutils
 	dev-util/pkgconfig"
 
 pkg_setup() {
 	myzathuraconf=(
-		ZATHURA_GTK_VERSION=3
+		ZATHURA_GTK_VERSION=2
 		PLUGINDIR='${PREFIX}'/$(get_libdir)/${PN}
 		CC="$(tc-getCC)"
 		SFLAGS=""
