@@ -1,5 +1,9 @@
 
 
+  08 Mar 2012; Anthony G. Basile <blueness@gentoo.org> -torsocks-1.1a.ebuild,
+  -torsocks-1.2-r1.ebuild:
+  Remove older unstable versions
+
 *torsocks-1.2-r2 (08 Mar 2012)
 
   08 Mar 2012; Anthony G. Basile <blueness@gentoo.org> +torsocks-1.2-r2.ebuild,
