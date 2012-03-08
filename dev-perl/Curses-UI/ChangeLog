@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Curses-UI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.35 2012/03/02 22:01:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.36 2012/03/08 12:20:38 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Curses-UI-0.960.900.ebuild:
+  x86 stable wrt bug #400069
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> Curses-UI-0.960.900.ebuild:
   Marking Curses-UI-0.960.900 ppc64 for bug 400069
