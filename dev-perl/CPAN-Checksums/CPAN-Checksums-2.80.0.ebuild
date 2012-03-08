@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Checksums/CPAN-Checksums-2.80.0.ebuild,v 1.2 2012/02/24 09:55:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Checksums/CPAN-Checksums-2.80.0.ebuild,v 1.3 2012/03/08 12:03:11 phajdan.jr Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Write a CHECKSUMS file for a directory as on CPAN"
 
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~sparc x86"
 IUSE="test"
 
 RDEPEND="virtual/perl-IO-Compress
