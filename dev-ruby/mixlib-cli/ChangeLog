@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mixlib-cli
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-cli/ChangeLog,v 1.2 2011/09/11 06:31:27 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-cli/ChangeLog,v 1.3 2012/03/08 00:34:28 naota Exp $
+
+  08 Mar 2012; Naohiro Aota <naota@gentoo.org> mixlib-cli-1.2.2.ebuild:
+  Add ~x86-fbsd.
 
 *mixlib-cli-1.2.2 (11 Sep 2011)
 
