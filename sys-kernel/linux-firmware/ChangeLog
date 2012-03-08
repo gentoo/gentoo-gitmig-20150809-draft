@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.34 2012/02/29 17:37:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.35 2012/03/08 21:29:06 hwoarang Exp $
+
+  08 Mar 2012; Markos Chandras <hwoarang@gentoo.org>
+  linux-firmware-20120125.ebuild:
+  Stable on amd64 wrt bug #406931
 
   29 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   linux-firmware-20110731.ebuild, linux-firmware-20110818.ebuild,
