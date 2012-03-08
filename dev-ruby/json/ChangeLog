@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.81 2012/02/12 18:32:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.82 2012/03/08 23:01:12 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> json-1.5.4.ebuild:
+  Marking json-1.5.4 ppc64 for bug 398947
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> json-1.5.4.ebuild:
   alpha/ia64/sparc stable wrt #398947
