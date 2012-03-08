@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.0-r1.ebuild,v 1.2 2012/03/07 15:02:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.0-r1.ebuild,v 1.3 2012/03/08 15:25:07 pesa Exp $
 
 EAPI="3"
 inherit qt4-build flag-o-matic toolchain-funcs
@@ -12,6 +12,7 @@ IUSE="+gstreamer +jit"
 
 DEPEND="
 	dev-db/sqlite:3
+	dev-libs/icu
 	x11-libs/libXrender
 	~x11-libs/qt-core-${PV}[aqua=,c++0x=,qpa=,debug=,ssl]
 	~x11-libs/qt-gui-${PV}[aqua=,c++0x=,qpa=,debug=]
@@ -49,7 +50,11 @@ src_prepare() {
 	[[ $(tc-arch) == "ppc64" ]] && append-flags -mminimal-toc #241900
 	use c++0x && append-cxxflags -fpermissive
 
-	sed -i -e '/QMAKE_CXXFLAGS[[:blank:]]*+=/s:-Werror::g' \
+	# Always enable icu to avoid build failure, bug 407315
+	sed -i -e '/CONFIG\s*+=\s*text_breaking_with_icu/ s:^#\s*::' \
+		src/3rdparty/webkit/Source/JavaScriptCore/JavaScriptCore.pri || die
+
+	sed -i -e '/QMAKE_CXXFLAGS\s*+=/ s:-Werror::g' \
 		src/3rdparty/webkit/Source/WebKit.pri || die
 
 	qt4-build_src_prepare
@@ -58,7 +63,7 @@ src_prepare() {
 src_configure() {
 	myconf+="
 		-webkit
-		-system-sqlite
+		-icu -system-sqlite
 		$(qt_use jit javascript-jit)
 		$(use gstreamer || echo -DENABLE_VIDEO=0)
 	"
