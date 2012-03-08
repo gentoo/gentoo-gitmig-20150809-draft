@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/httperf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/ChangeLog,v 1.15 2012/02/24 09:31:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/ChangeLog,v 1.16 2012/03/08 08:56:23 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> httperf-0.9.0-r1.ebuild:
+  x86 stable wrt bug #399917
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> httperf-0.9.0-r1.ebuild:
   Stable for amd64, wrt bug #399917
