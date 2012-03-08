@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.8.ebuild,v 1.1 2012/01/12 16:05:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.8.ebuild,v 1.2 2012/03/08 17:14:12 sping Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://k9copy.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug mplayer"
 
 DEPEND="
 	media-libs/libdvdread
@@ -31,7 +31,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	media-video/dvdauthor
-	media-video/mplayer
+	mplayer? ( media-video/mplayer )
 "
 DOCS=( README )
 
