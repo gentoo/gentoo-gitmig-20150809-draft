@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.23 2012/02/25 07:08:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.24 2012/03/08 01:54:59 williamh Exp $
+
+*kmod-6 (08 Mar 2012)
+
+  08 Mar 2012; William Hubbs <williamh@gentoo.org> +kmod-6.ebuild,
+  kmod-9999.ebuild:
+  version bump for bug #406887
 
   25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> kmod-5.ebuild,
   kmod-9999.ebuild:
