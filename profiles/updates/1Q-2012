@@ -10,3 +10,4 @@ move app-shells/prll sys-process/prll
 move net-wireless/wispy-tools net-wireless/spectools
 slotmove dev-ruby/syslogger 3 0
 move kde-misc/konq-plugins kde-base/konq-plugins
+slotmove <gnome-extra/nautilus-actions-3.2.2 0 2
