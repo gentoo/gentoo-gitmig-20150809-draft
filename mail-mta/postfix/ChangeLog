@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.345 2012/03/08 15:03:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.346 2012/03/08 15:17:20 eras Exp $
+
+*postfix-2.7.8 (08 Mar 2012)
+
+  08 Mar 2012; Eray Aslan <eras@gentoo.org> +postfix-2.7.8.ebuild:
+  version bump
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> postfix-2.8.7.ebuild:
   Marking postfix-2.8.7 ppc64 for bug 395289
