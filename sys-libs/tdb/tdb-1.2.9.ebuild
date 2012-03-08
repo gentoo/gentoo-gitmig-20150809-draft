@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.9.ebuild,v 1.4 2012/02/25 16:37:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.9.ebuild,v 1.5 2012/03/08 06:14:28 patrick Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit waf-utils python
 
@@ -23,10 +24,8 @@ DEPEND="dev-lang/python
 WAF_BINARY="${S}/buildtools/bin/waf"
 
 pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_configure() {
