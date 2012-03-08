@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.26 2012/02/28 09:09:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.27 2012/03/08 16:37:54 voyageur Exp $
 
 EAPI=4
 
@@ -25,8 +25,9 @@ RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
 S="${WORKDIR}/llvm"
 
 src_unpack() {
-	# Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
+	# Fetching LLVM and subprojects
 	ESVN_PROJECT=llvm subversion_fetch "http://llvm.org/svn/llvm-project/llvm/trunk"
+	ESVN_PROJECT=compiler-rt S="${S}"/projects/compiler-rt subversion_fetch "http://llvm.org/svn/llvm-project/compiler-rt/trunk"
 	ESVN_PROJECT=clang S="${S}"/tools/clang subversion_fetch
 }
 
@@ -38,6 +39,9 @@ src_prepare() {
 	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
 		-i tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
+	sed -e "/PROJ_resources/s#lib/clang#$(get_libdir)/clang#" \
+		-i tools/clang/runtime/compiler-rt/Makefile \
+		|| die "compiler-rt Makefile failed"
 	# fix the static analyzer for in-tree install
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i tools/clang/tools/scan-view/scan-view \
@@ -51,6 +55,7 @@ src_prepare() {
 		|| die "gold plugin path sed failed"
 	# Specify python version
 	python_convert_shebangs 2 tools/clang/tools/scan-view/scan-view
+	python_convert_shebangs 2 projects/compiler-rt/lib/asan/scripts/asan_symbolize.py
 
 	# From llvm src_prepare
 	einfo "Fixing install dirs"
@@ -134,6 +139,9 @@ src_install() {
 		}
 		python_execute_function install-scan-view
 	fi
+
+	# AddressSanitizer symbolizer (currently separate)
+	dobin "${S}"/projects/compiler-rt/lib/asan/scripts/asan_symbolize.py
 
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
