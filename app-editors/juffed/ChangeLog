@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/juffed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.24 2012/03/07 20:24:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.25 2012/03/08 11:59:40 johu Exp $
+
+  08 Mar 2012; Johannes Huber <johu@gentoo.org> -juffed-0.6.1.ebuild:
+  Remove old.
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> juffed-0.8.1.ebuild:
   Marking juffed-0.8.1 ppc for bug 393989
