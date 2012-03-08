@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.170 2012/03/08 04:34:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.171 2012/03/08 07:59:22 jlec Exp $
+
+  08 Mar 2012; Justin Lecher <jlec@gentoo.org> rtorrent-0.9.0.ebuild,
+  +files/rtorrent-0.9.0-gold.patch:
+  Add patch to link with gold
 
 *rtorrent-0.9.0 (08 Mar 2012)
 
