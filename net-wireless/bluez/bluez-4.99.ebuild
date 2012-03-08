@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98-r1.ebuild,v 1.8 2012/02/12 04:03:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.99.ebuild,v 1.1 2012/03/08 09:49:48 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -13,13 +13,13 @@ HOMEPAGE="http://www.bluez.org/"
 # Because of oui.txt changing from time to time without noticement, we need to supply it
 # ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly.
 # See bugs #345263 and #349473 for reference.
-OUIDATE="20120113"
+OUIDATE="20120308"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz
 	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="alsa caps +consolekit cups debug gstreamer pcmcia test-programs usb readline"
 
 CDEPEND="
