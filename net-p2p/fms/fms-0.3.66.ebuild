@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.63-r1.ebuild,v 1.1 2012/02/13 19:32:12 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.66.ebuild,v 1.1 2012/03/08 21:20:24 tommy Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="frost"
 
 RDEPEND="virtual/libiconv
-	frost? ( >=dev-libs/libtomcrypt-1.17-r6 )
+	frost? ( net-libs/polarssl )
 	>=dev-libs/poco-1.2.9
 	>=dev-db/sqlite-3.6.15
 	<dev-libs/libpcre-8.13"
@@ -34,10 +34,7 @@ pkg_setup() {
 
 src_prepare() {
 	edos2unix src/http/pages/showfilepage.cpp
-	epatch "${FILESDIR}"/${PN}-use-system-libs.patch
-	sed -i "s:LTC_PKCS:LTC_LTC_PKCS:g" src/freenet/frostidentity.cpp
-	sed -i 's:"../../../include/fmsapp.h":"../include/fmsapp.h":' src/*.cpp
-	sed -i 's:"../../../include/fmsapp.h":"../../include/fmsapp.h":' src/*/*.cpp
+	epatch "${FILESDIR}"/${PN}-use-system-libs2.patch
 }
 
 src_configure() {
@@ -45,7 +42,6 @@ src_configure() {
 		-DUSE_BUNDLED_SQLITE=OFF \
 		-DDO_CHARSET_CONVERSION=ON \
 		$(cmake-utils_use frost FROST_SUPPORT)"
-	use frost && append-flags -DLTM_DESC
 	cmake-utils_src_configure
 }
 
