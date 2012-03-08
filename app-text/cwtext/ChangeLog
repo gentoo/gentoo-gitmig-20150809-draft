@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cwtext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.26 2012/03/06 14:16:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.27 2012/03/08 21:25:06 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> cwtext-0.96.ebuild:
+  Marking cwtext-0.96 ppc64 for bug 393803
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> cwtext-0.96.ebuild:
   Marking cwtext-0.96 ppc for bug 393803
