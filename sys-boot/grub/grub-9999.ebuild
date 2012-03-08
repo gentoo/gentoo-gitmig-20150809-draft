@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.56 2012/03/08 05:28:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.57 2012/03/08 10:23:34 mr_bones_ Exp $
 
 EAPI=4
 
@@ -134,7 +134,7 @@ grub_src_configure() {
 		guessed) ;;
 		*) with_platform="--with-platform=${platform}" ;;
 	esac
-			
+
 	ECONF_SOURCE="${S}" \
 	econf \
 		--disable-werror \
