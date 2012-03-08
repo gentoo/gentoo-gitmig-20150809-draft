@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.105 2012/02/06 03:43:24 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.106 2012/03/08 23:04:42 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> gromacs-4.5.5-r1.ebuild:
+  Marking gromacs-4.5.5-r1 ppc64 for bug 391147
 
   06 Feb 2012; Christoph Junghans <ottxor@gentoo.org> gromacs-4.5.4-r1.ebuild,
   gromacs-4.5.5-r1.ebuild:
