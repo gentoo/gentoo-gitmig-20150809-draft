@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mongoid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/ChangeLog,v 1.7 2012/02/22 23:56:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/ChangeLog,v 1.8 2012/03/08 01:56:25 flameeyes Exp $
+
+*mongoid-2.4.6 (08 Mar 2012)
+
+  08 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> +mongoid-2.4.6.ebuild:
+  Version bump.
 
 *mongoid-2.4.5 (22 Feb 2012)
 
