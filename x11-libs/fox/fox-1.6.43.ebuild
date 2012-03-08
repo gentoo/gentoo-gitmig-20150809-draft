@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.43.ebuild,v 1.3 2012/02/12 18:29:55 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.43.ebuild,v 1.4 2012/03/08 16:36:22 naota Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils fox
 
 LICENSE="LGPL-2.1"
 SLOT="1.6"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 jpeg opengl png tiff truetype zlib"
 
 RDEPEND="x11-libs/libXrandr

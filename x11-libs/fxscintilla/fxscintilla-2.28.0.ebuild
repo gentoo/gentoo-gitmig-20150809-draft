@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-2.28.0.ebuild,v 1.1 2012/03/01 22:48:48 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-2.28.0.ebuild,v 1.2 2012/03/08 16:41:05 naota Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://savannah.nongnu.org/download/fxscintilla/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="|| ( x11-libs/fox:1.6 x11-libs/fox:1.7 )"
