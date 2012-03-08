@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.24.ebuild,v 1.3 2012/03/02 00:53:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.24.ebuild,v 1.4 2012/03/08 09:02:29 phajdan.jr Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/autopsy/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ~x86"
+KEYWORDS="amd64 ~hppa ppc x86"
 IUSE=""
 
 # Runtime depend on grep and file deliberate
