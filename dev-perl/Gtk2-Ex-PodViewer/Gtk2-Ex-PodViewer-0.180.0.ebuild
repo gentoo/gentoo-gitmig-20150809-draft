@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/Gtk2-Ex-PodViewer-0.180.0.ebuild,v 1.2 2012/02/24 10:15:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/Gtk2-Ex-PodViewer-0.180.0.ebuild,v 1.3 2012/03/08 15:16:16 phajdan.jr Exp $
 
 EAPI=4
 MODULE_AUTHOR=GBROWN
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="a Gtk2 widget for displaying Plain old Documentation (POD)."
 
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~sparc x86"
 IUSE=""
 
 #SRC_TEST="do"
