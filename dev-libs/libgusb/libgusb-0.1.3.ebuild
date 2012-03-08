@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.3.ebuild,v 1.3 2012/03/06 22:12:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.3.ebuild,v 1.4 2012/03/08 23:04:31 ranger Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.freedesktop.org/~hughsient/releases/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="static-libs"
 
 # udev is effectively a required dependency: configuring with --disable-gudev
