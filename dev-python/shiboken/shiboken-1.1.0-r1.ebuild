@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.0-r1.ebuild,v 1.1 2012/03/06 23:54:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.0-r1.ebuild,v 1.2 2012/03/08 22:54:51 pesa Exp $
 
 EAPI=4
 
@@ -21,11 +21,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND=">=dev-python/apiextractor-0.10.10
+RDEPEND="
+	>=dev-python/apiextractor-0.10.10
 	>=dev-python/generatorrunner-0.6.16
-	>=x11-libs/qt-core-4.7.0:4"
-RDEPEND="${DEPEND}
-	!dev-python/boostpythongenerator"
+	>=x11-libs/qt-core-4.7.0:4
+"
+DEPEND="${RDEPEND}"
 
 DOCS=( ChangeLog )
 
