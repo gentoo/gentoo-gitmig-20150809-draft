@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/digest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.12 2012/03/06 21:02:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.13 2012/03/08 09:32:06 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> digest-0.0.0.9.ebuild:
+  x86 stable wrt bug #399979
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> digest-0.0.0.9.ebuild:
   Marking digest-0.0.0.9 ppc for bug 399979
