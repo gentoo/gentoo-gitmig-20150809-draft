@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.249 2012/03/07 11:15:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.250 2012/03/08 14:53:56 scarabeus Exp $
+
+  08 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.4.5.2.ebuild:
+  Use internal vigra even on 3.4.
 
   07 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.5.9999.ebuild:
   Always disable gtk3 on 3.5 series as it is highly experimental.

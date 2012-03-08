@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.5.2.ebuild,v 1.9 2012/02/29 15:21:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.5.2.ebuild,v 1.10 2012/03/08 14:53:56 scarabeus Exp $
 
 EAPI=4
 
@@ -52,6 +52,7 @@ unset DEV_URI
 
 # addons
 # FIXME: actually review which one of these are used
+ADDONS_SRC+=" ${ADDONS_URI}/ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/128cfc86ed5953e57fe0f5ae98b62c2e-libtextcat-2.2.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip"
 ADDONS_SRC+=" ${ADDONS_URI}/bd30e9cf5523cdfc019b94f5e1d7fd19-cppunit-1.12.1.tar.gz"
@@ -92,7 +93,6 @@ COMMON_DEPEND="
 	>=dev-libs/redland-1.0.14[ssl]
 	media-libs/freetype:2
 	>=media-libs/fontconfig-2.8.0
-	>=media-libs/vigra-1.7
 	>=media-libs/libpng-1.4
 	net-print/cups
 	sci-mathematics/lpsolve
@@ -344,6 +344,7 @@ src_configure() {
 		--without-system-hsqldb
 		--without-system-cppunit
 		--without-system-sane-header
+		--without-system-vigra
 	"
 
 	# When building without java some things needs to be done
