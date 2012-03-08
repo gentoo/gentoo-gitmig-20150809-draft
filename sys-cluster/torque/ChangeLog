@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.139 2012/03/07 03:03:17 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.140 2012/03/08 22:58:29 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> torque-2.4.16.ebuild:
+  Marking torque-2.4.16 ppc64 for bug 397831
 
   07 Mar 2012; Justin Bronder <jsbronder@gentoo.org> torque-3.0.4.ebuild,
   metadata.xml:
