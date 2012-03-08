@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.169 2012/03/07 21:51:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.170 2012/03/08 04:34:37 patrick Exp $
+
+*rtorrent-0.9.0 (08 Mar 2012)
+
+  08 Mar 2012; Patrick Lauer <patrick@gentoo.org>
+  +files/rtorrent-0.9.0-canvas-fix.patch, +files/rtorrent-0.9.0-ncurses.patch,
+  +rtorrent-0.9.0.ebuild:
+  Bump for #396243
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> rtorrent-0.8.9.ebuild:
   Marking rtorrent-0.8.9 ppc64 for bug 389817
