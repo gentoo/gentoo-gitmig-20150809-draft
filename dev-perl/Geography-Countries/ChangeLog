@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Geography-Countries
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.26 2012/03/02 22:15:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.27 2012/03/08 15:14:52 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Geography-Countries-2009041301.0.0.ebuild:
+  x86 stable wrt bug #400127
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org>
   Geography-Countries-2009041301.0.0.ebuild:
