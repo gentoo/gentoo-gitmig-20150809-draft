@@ -1,0 +1,88 @@
+Description: Backport upstream patch to build against qt4.8
+Author: Jan Struyf <jstruyf34@struyf-ye.org>
+Origin: upstream, http://glx.git.sourceforge.net/git/gitweb.cgi?p=glx/gle;a=patch;h=b0cf21c1d6fbad25da849f658feb82b433091977
+Bug-Ubuntu: https://launchpad.net/bugs/935114
+
+Index: gle-graphics/configure.ac
+===================================================================
+--- gle-graphics.orig/configure.ac	2012-02-24 19:39:59.000000000 +0100
++++ gle-graphics/configure.ac	2012-02-24 19:39:59.000000000 +0100
+@@ -73,8 +73,10 @@
+ HAVE_CYGWIN=0
+ HAVE_MINGW=0
+ HAVE_LIBZ=0
++HAVE_LIBGLU_H=0
+ QT_CONFIG="CONFIG += release"
+ QT_RPATH=
++QT_LIBGLU_LIB=
+ 
+ HAVE_STATIC_LIBPNG=0
+ HAVE_STATIC_LIBTIFF=0
+@@ -574,6 +576,14 @@
+         HAVE_QT=1
+         QMAKE_VERS=`$QMAKE_PROG -v | tail -n 1`
+     fi
++    
++    AC_CHECK_HEADERS(GL/glu.h,
++    [AC_DEFINE(HAVE_LIBGLU_H)],
++    [])
++    
++    AC_CHECK_LIB(GLU,gluLookAt,
++    [QT_LIBGLU_LIB=-lGLU],
++    [])
+ fi
+ 
+ if test "x$HAVE_RPATH" != "x0"; then
+@@ -805,6 +815,7 @@
+ AC_SUBST(MAKE_AUTOPACKAGE)
+ AC_SUBST(QT_CONFIG)
+ AC_SUBST(QT_RPATH)
++AC_SUBST(QT_LIBGLU_LIB)
+ AC_SUBST(HAVE_EXTRA_FONTS)
+ 
+ AC_CONFIG_FILES([Makefile src/gle/Makefile src/gle/bitmap/Makefile src/gle/letzfitz/Makefile src/gle/surface/Makefile src/gle/tokens/Makefile src/fbuild/Makefile src/makefmt/Makefile src/manip/Makefile src/TeX/Makefile src/gui/MakefileAC src/gui/qgle.pro src/doc/gle.1 platform/autoconf/gle-graphics.pc platform/autopackage/gle4.apspec])
+Index: gle-graphics/src/config.h.in
+===================================================================
+--- gle-graphics.orig/src/config.h.in	2012-02-24 19:39:59.000000000 +0100
++++ gle-graphics/src/config.h.in	2012-02-24 19:39:59.000000000 +0100
+@@ -72,6 +72,7 @@
+ #undef HAVE_STDINT_H
+ #undef HAVE_INTTYPES_H
+ #undef HAVE_SYS_PARAM_H
++#undef HAVE_LIBGLU_H
+ 
+ #undef HAVE_NCURSES_H
+ #undef HAVE_CURSES_H
+Index: gle-graphics/src/gui/3dviewer.cpp
+===================================================================
+--- gle-graphics.orig/src/gui/3dviewer.cpp	2012-02-24 19:39:59.000000000 +0100
++++ gle-graphics/src/gui/3dviewer.cpp	2012-02-24 19:39:59.000000000 +0100
+@@ -23,9 +23,15 @@
+ #include "../gle/cutils.h"
+ #include "../gle/gle-block.h"
+ #include "../gle/surface/gsurface.h"
++#include "../config.h"
+ 
+ #include <math.h>
+ 
++#ifdef HAVE_LIBGLU_H
++       #include <GL/glu.h>
++#endif
++
++
+ QGLE3DWidget::QGLE3DWidget(QWidget *parent, GLEInterface* iface)
+      : QGLWidget(parent)
+ {
+Index: gle-graphics/src/gui/qgle.pro.in
+===================================================================
+--- gle-graphics.orig/src/gui/qgle.pro.in	2012-02-24 18:48:09.857237000 +0100
++++ gle-graphics/src/gui/qgle.pro.in	2012-02-24 19:54:34.345962872 +0100
+@@ -176,7 +176,7 @@
+ 
+ # add the "lib" directory to the search path of the linker
+ unix {
+-	LIBS += @QT_RPATH@
++	LIBS += @QT_RPATH@ @QT_LIBGLU_LIB@
+ }
+ 
+ # vim:et

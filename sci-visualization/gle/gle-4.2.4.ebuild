@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.4.ebuild,v 1.1 2012/01/09 07:05:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.4.ebuild,v 1.2 2012/03/08 11:27:27 grozin Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils elisp-common qt4-r2 flag-o-matic autotools
 
 DESCRIPTION="Graphics Layout Engine"
@@ -34,6 +34,7 @@ S="${WORKDIR}"/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-parallel.patch
+	epatch "${FILESDIR}"/${P}-qt-4.8.patch
 	eaclocal
 	eautoconf
 }
@@ -52,7 +53,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 	if use emacs; then
 		cd contrib/editors/highlighting
 		mv ${PN}-emacs.el ${PN}-mode.el
@@ -62,8 +63,7 @@ src_compile() {
 
 src_install() {
 	# -jN failed to install some data files
-	emake -j1 DESTDIR="${D}" install || die "emake install failed"
-	#emake DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" install
 	rmdir "${D}"/usr/share/doc/gle-graphics || die "rmdir gle-graphics failed"
 	dodoc README.txt
 
@@ -91,11 +91,11 @@ src_install() {
 		cd contrib/editors/highlighting/vim
 		chmod 644 ftplugin/* indent/* syntax/*
 		insinto /usr/share/vim/vimfiles/ftplugins
-		doins ftplugin/* || die
+		doins ftplugin/*
 		insinto /usr/share/vim/vimfiles/indent
-		doins indent/* || die
+		doins indent/*
 		insinto /usr/share/vim/vimfiles/syntax
-		doins syntax/* || die
+		doins syntax/*
 	fi
 }
 
