@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.0-r1.ebuild,v 1.3 2012/03/08 15:25:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.0-r1.ebuild,v 1.4 2012/03/08 15:34:40 pesa Exp $
 
 EAPI="3"
-inherit qt4-build flag-o-matic toolchain-funcs
+inherit qt4-build flag-o-matic
 
 DESCRIPTION="The WebKit module for the Qt toolkit"
 SLOT="4"
@@ -47,7 +47,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	[[ $(tc-arch) == "ppc64" ]] && append-flags -mminimal-toc #241900
 	use c++0x && append-cxxflags -fpermissive
 
 	# Always enable icu to avoid build failure, bug 407315
