@@ -1,5 +1,11 @@
 
 
+*torsocks-1.2-r2 (08 Mar 2012)
+
+  08 Mar 2012; Anthony G. Basile <blueness@gentoo.org> +torsocks-1.2-r2.ebuild,
+  +files/suppress-false-error-msgs.patch:
+  Patch to suppress warning messages about symbols not found in shared library
+
   27 Dec 2011; Anthony G. Basile <blueness@gentoo.org> torsocks-1.2-r1.ebuild:
   Added README TODO INSTALL ChangeLog to docs
 
