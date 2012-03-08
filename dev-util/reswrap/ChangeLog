@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/reswrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.17 2012/03/02 21:01:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.18 2012/03/08 15:42:59 naota Exp $
+
+  08 Mar 2012; Naohiro Aota <naota@gentoo.org> reswrap-4.0.0.ebuild:
+  Add ~x86-fbsd.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> reswrap-4.0.0.ebuild:
   Marking reswrap-4.0.0 ppc64 for bug 400351
