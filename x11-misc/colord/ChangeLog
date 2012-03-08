@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.18 2012/03/06 22:13:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.19 2012/03/08 23:31:54 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> colord-0.1.16.ebuild:
+  Marking colord-0.1.16 ~ppc64 for bug 387959
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> colord-0.1.16.ebuild:
   Marking colord-0.1.16 ~ppc for bug 387959
