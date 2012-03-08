@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.32 2012/03/07 20:29:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.33 2012/03/08 06:30:51 graaff Exp $
+
+  08 Mar 2012; Hans de Graaff <graaff@gentoo.org> -gorg-0.6.3-r2.ebuild,
+  -gorg-0.6.4.ebuild:
+  Remove old versions.
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> gorg-0.6.4-r1.ebuild:
   Marking gorg-0.6.4-r1 ppc for bug 403103
