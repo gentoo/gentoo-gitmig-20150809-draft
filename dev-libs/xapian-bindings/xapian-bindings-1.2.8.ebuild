@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.8.ebuild,v 1.4 2012/02/25 02:06:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.8.ebuild,v 1.5 2012/03/08 09:29:46 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -20,7 +20,7 @@ SRC_URI="http://oligarchy.co.uk/xapian/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="java lua mono perl php python ruby tcl"
 
 COMMONDEPEND="=dev-libs/xapian-${PV}*
