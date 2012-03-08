@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.71 2012/02/19 07:21:53 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.72 2012/03/08 17:14:27 williamh Exp $
 
 EAPI=4
 
@@ -29,11 +29,10 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="build selinux debug +rule_generator hwdb acl gudev introspection
+IUSE="build selinux debug +rule_generator hwdb gudev introspection
 	keymap floppy edd doc static-libs"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
-	acl? ( sys-apps/acl dev-libs/glib:2 )
 	gudev? ( dev-libs/glib:2 )
 	introspection? ( dev-libs/gobject-introspection )
 	>=sys-apps/kmod-5
@@ -60,7 +59,6 @@ fi
 
 RDEPEND="${COMMON_DEPEND}
 	hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils[-zlib] )
-	acl? ( sys-apps/coreutils[acl] )
 	sys-fs/udev-init-scripts
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
@@ -117,7 +115,7 @@ src_prepare()
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
-		-i rules/{rules.d,arch}/*.rules \
+		-i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
 
 	if [ ! -e configure ]
@@ -153,7 +151,6 @@ src_configure()
 		$(use_enable hwdb) \
 		--with-pci-ids-path=/usr/share/misc/pci.ids \
 		--with-usb-ids-path=/usr/share/misc/usb.ids \
-		$(use_enable acl udev_acl) \
 		$(use_enable gudev) \
 		$(use_enable introspection) \
 		$(use_enable keymap) \
@@ -185,14 +182,6 @@ src_install()
 	# Now install rules
 	insinto /lib/udev/rules.d/
 
-	# support older kernels
-	doins rules/misc/30-kernel-compat.rules
-
-	# add arch specific rules
-	if [[ -f rules/arch/40-${ARCH}.rules ]]
-	then
-		doins "rules/arch/40-${ARCH}.rules"
-	fi
 }
 
 # 19 Nov 2008
@@ -355,6 +344,10 @@ pkg_postinst()
 		ewarn "For a more detailed explanation, see the following URL:"
 		ewarn "http://www.freedesktop.org/wiki/Software/systemd/separate-usr-is-broken"
 	fi
+
+	ewarn
+	ewarn "The udev-acl functionality has been removed from udev."
+	ewarn "This functionality will appear in a future version of consolekit."
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"
