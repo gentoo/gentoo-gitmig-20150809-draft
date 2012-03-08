@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>rox</herd>
-	<longdescription lang="en">
-	</longdescription>
-	<use>
-		<flag name="gtk3">Use gtk3 instead of gtk2 (and associated version of x11-libs/vte)</flag>
-	</use>
+<herd>rox</herd>
 </pkgmetadata>
-
