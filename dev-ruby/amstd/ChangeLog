@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amstd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.34 2012/03/08 16:48:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.35 2012/03/08 17:47:03 naota Exp $
+
+  08 Mar 2012; Naohiro Aota <naota@gentoo.org> amstd-2.0.0-r2.ebuild:
+  Add ~x86-fbsd.
 
   08 Mar 2012; Hans de Graaff <graaff@gentoo.org> -amstd-2.0.0-r1.ebuild:
   Remove old version.
