@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13557 2012/03/07 22:05:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13558 2012/03/08 17:38:11 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -115,6 +115,7 @@ gnome-extra/music-applet
 # It spams dmesg, use kernel >= 3.0 driver instead.
 # See bug #367483, removal in a month.
 net-wireless/rtl8192se
+net-wireless/rtl8192se-firmware
 
 # Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
 # Our current version is too old, nobody wants to take

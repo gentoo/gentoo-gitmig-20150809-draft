@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6289 2012/03/08 05:03:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6290 2012/03/08 17:38:11 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Mask rtl8192se-firmware which is not useful on its own (in-kernel driver uses
+  other firmware).
 
   08 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> updates/1Q-2012:
   Slotmove the former sunrise overlay version of nautilus-actions to prevent
