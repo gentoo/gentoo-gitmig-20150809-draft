@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Finance-YahooQuote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/ChangeLog,v 1.27 2012/03/01 20:29:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/ChangeLog,v 1.28 2012/03/08 15:11:03 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Finance-YahooQuote-0.240.0.ebuild:
+  x86 stable wrt bug #400119
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org>
   Finance-YahooQuote-0.240.0.ebuild:
