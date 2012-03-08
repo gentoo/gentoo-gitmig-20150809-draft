@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ttfquery-1.0.4.ebuild,v 1.2 2010/12/26 15:47:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ttfquery-1.0.5.ebuild,v 1.1 2012/03/08 12:46:02 scarabeus Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
