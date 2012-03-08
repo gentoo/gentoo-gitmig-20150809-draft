@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.49 2012/02/10 21:29:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.50 2012/03/08 15:00:25 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (8 Mar 2012)
+# The crash reporting facility in www-client/firefox does not compile
+crashreporter
 
 # Jeroen Roovers <jer@gentoo.org> (4 Jan 2012)
 # dvb is untested on HPPA
