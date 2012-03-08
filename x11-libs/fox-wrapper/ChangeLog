@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox-wrapper
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox-wrapper/ChangeLog,v 1.19 2011/12/21 08:34:42 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox-wrapper/ChangeLog,v 1.20 2012/03/08 15:40:40 naota Exp $
+
+  08 Mar 2012; Naohiro Aota <naota@gentoo.org> fox-wrapper-3.ebuild:
+  Add ~x86-fbsd.
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> fox-wrapper-3.ebuild:
   x86 stable wrt bug #393897
