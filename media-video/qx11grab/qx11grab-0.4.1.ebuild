@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.1.ebuild,v 1.1 2012/03/06 14:02:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.1.ebuild,v 1.2 2012/03/08 00:35:20 pesa Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://qx11grab.hjcms.de/downloads/${PV}/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="kde opengl pulseaudio"
+IUSE="opengl pulseaudio"
 
 RDEPEND="
 	>=media-libs/alsa-lib-1.0.24
@@ -33,8 +33,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 "
 PDEPEND="
-	kde? ( >=kde-base/oxygen-icons-4.6 )
-	!kde? ( virtual/freedesktop-icon-theme )
+	virtual/freedesktop-icon-theme
 "
 
 PATCHES=(
@@ -52,7 +51,6 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_enable kde KDE_SUPPORT)
 		$(cmake-utils_use_enable opengl)
 		$(cmake-utils_use_enable pulseaudio PULSE)
 	)
