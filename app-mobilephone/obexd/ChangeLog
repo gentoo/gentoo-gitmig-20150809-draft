@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.52 2012/02/25 15:21:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.53 2012/03/08 09:53:18 pacho Exp $
+
+*obexd-0.45 (08 Mar 2012)
+
+  08 Mar 2012; Pacho Ramos <pacho@gentoo.org> +obexd-0.45.ebuild,
+  -obexd-0.42.ebuild:
+  Version bump, remove old.
 
   25 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> obexd-0.44.ebuild:
   ppc stable wrt #399745
