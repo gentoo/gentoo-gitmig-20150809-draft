@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.12 2011/12/18 13:27:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.13 2012/03/08 10:29:06 naota Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -22,7 +22,6 @@ ev6
 gpm
 lirc
 multilib
-sysfs
 lm_sensors
 nodroproot
 caps
