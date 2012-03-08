@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sary
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.36 2012/03/07 15:50:11 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.37 2012/03/08 09:20:00 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> sary-1.2.0-r1.ebuild:
+  x86 stable wrt bug #399959
 
   07 Mar 2012; Naohiro Aota <naota@gentoo.org> sary-1.2.0-r1.ebuild:
   Add ~x86-fbsd
