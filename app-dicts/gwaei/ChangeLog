@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/gwaei
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.23 2011/08/30 23:07:15 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.24 2012/03/08 05:20:49 tetromino Exp $
+
+  08 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gwaei-3.0.2.ebuild:
+  Non-maintainer commit: do not use gnome2_schemas_update --uninstall (bug
+  #394731).
 
 *gwaei-3.0.2 (30 Aug 2011)
 
