@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/datefudge-1.17.ebuild,v 1.6 2012/03/06 14:27:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/datefudge-1.17.ebuild,v 1.7 2012/03/08 13:37:06 naota Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs
+inherit multilib toolchain-funcs eutils
 
 DESCRIPTION="A program (and preload library) to fake system date"
 HOMEPAGE="http://packages.qa.debian.org/d/datefudge.html"
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 src_prepare() {
@@ -23,6 +23,7 @@ src_prepare() {
 	if use prefix; then
 		sed -i -e '/-o root -g root/d' Makefile || die
 	fi
+	use userland_BSD && epatch "${FILESDIR}"/${P}-bsd.patch
 }
 
 src_compile() {
