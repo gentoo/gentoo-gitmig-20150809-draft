@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.40 2012/03/08 06:14:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.41 2012/03/08 06:18:13 patrick Exp $
+
+  08 Mar 2012; Patrick Lauer <patrick@gentoo.org> tdb-1.2.9.ebuild:
+  Python dependency fix
 
   08 Mar 2012; Patrick Lauer <patrick@gentoo.org> tdb-1.2.9.ebuild:
   Build fix for #401291
