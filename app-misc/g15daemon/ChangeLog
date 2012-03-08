@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.40 2012/02/27 18:34:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.41 2012/03/08 15:17:35 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> g15daemon-1.9.5.3-r5.ebuild:
+  Marking g15daemon-1.9.5.3-r5 ppc64 for bug 399941
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> g15daemon-1.9.5.3-r5.ebuild:
   Marking g15daemon-1.9.5.3-r5 ppc for bug 399941
