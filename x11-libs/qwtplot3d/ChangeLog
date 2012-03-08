@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qwtplot3d
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.22 2011/07/20 16:09:40 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.23 2012/03/08 16:56:28 jlec Exp $
+
+*qwtplot3d-0.2.7-r2 (08 Mar 2012)
+
+  08 Mar 2012; Justin Lecher <jlec@gentoo.org> +files/qwtplot3d-qt48.patch,
+  +qwtplot3d-0.2.7-r2.ebuild, metadata.xml:
+  Add fix for qt4.8, #407385; move to EAPI=4 and qt4-r2.eclass
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #70723
