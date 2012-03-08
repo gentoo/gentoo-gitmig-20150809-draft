@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xsnap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.43 2012/02/23 17:20:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.44 2012/03/08 02:25:12 binki Exp $
+
+  08 Mar 2012; Nathan Phillip Brink <binki@gentoo.org> xsnap-1.5.10.ebuild,
+  +files/xsnap-1.5.10-prefix.patch:
+  Add support for gentoo-prefix by patching IMakefile (bug #406193). Add
+  ~amd64-linux keyword: tested on ubuntu 10.04.3 LTS.
 
   23 Feb 2012; Brent Baude <ranger@gentoo.org> xsnap-1.5.10.ebuild:
   Marking xsnap-1.5.10 ppc for bug 404897
