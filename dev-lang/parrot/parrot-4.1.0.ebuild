@@ -1,15 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-3.6.0.ebuild,v 1.2 2011/08/29 17:32:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-4.1.0.ebuild,v 1.1 2012/03/08 04:18:42 patrick Exp $
 
 EAPI=3
+
+# There's multiple small issues at the moment, so ...
+RESTRICT="test"
 
 inherit eutils multilib
 
 DESCRIPTION="Virtual machine designed to efficiently compile and execute bytecode for dynamic languages"
 HOMEPAGE="http://www.parrot.org/"
-#SRC_URI="ftp://ftp.parrot.org/pub/parrot/releases/supported/${PV}/${P}.tar.bz2"
-SRC_URI="ftp://ftp.parrot.org/pub/parrot/releases/stable/${PV}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.parrot.org/pub/parrot/releases/devel/${PV}/${P}.tar.bz2"
 
 LICENSE="Artistic-2"
 SLOT="0"
@@ -29,8 +31,8 @@ DEPEND="dev-lang/perl[doc?]
 	${RDEPEND}"
 
 src_prepare() {
-	# skip fink and macports detection, Gentoo Prefix is much better
-	sed -i -e '/_probe_for_libraries(/d' config/init/hints/darwin.pm || die
+	# Fix for #404195 - pcre detection is wonky
+	sed -i 's:libpcre.so.0:libpcre.so.1:' runtime/parrot/library/pcre.pir || die "Couldn't fix pcre location"
 }
 
 src_configure() {
@@ -69,7 +71,7 @@ src_test() {
 
 src_install() {
 	emake -j1 install-dev DESTDIR="${D}" DOC_DIR="${EPREFIX}/usr/share/doc/${PF}" || die
-	dodoc CREDITS DONORS.pod NEWS PBC_COMPAT PLATFORMS RESPONSIBLE_PARTIES TODO || die
+	dodoc CREDITS DONORS.pod PBC_COMPAT PLATFORMS RESPONSIBLE_PARTIES TODO || die
 	if use examples; then
 		insinto "/usr/share/doc/${PF}/examples"
 		doins -r examples/* || die
