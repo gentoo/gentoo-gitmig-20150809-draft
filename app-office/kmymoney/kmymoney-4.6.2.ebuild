@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.0-r1.ebuild,v 1.1 2011/10/21 22:45:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.2.ebuild,v 1.1 2012/03/08 02:45:10 dilfridge Exp $
 
 EAPI=4
 
@@ -27,9 +27,9 @@ IUSE="debug calendar doc hbci ofx quotes test"
 
 COMMON_DEPEND="
 	app-crypt/gpgme
-	>=app-office/libalkimia-4.3.1
+	>=app-office/libalkimia-4.3.2
 	dev-cpp/glibmm:2
-	dev-cpp/libxmlpp
+	dev-cpp/libxmlpp:2.6
 	dev-libs/boost
 	dev-libs/glib:2
 	dev-libs/gmp
@@ -54,8 +54,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-4.5.3-underlinking.patch"
-	"${FILESDIR}/${PN}-4.6.0-gnucash.patch"
+	"${FILESDIR}/${PN}-4.6.1-qt48.patch"
 )
 
 src_configure() {
