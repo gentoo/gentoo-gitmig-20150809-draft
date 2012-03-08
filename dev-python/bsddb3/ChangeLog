@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.76 2012/03/07 20:28:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.77 2012/03/08 09:05:59 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bsddb3-5.2.0.ebuild:
+  x86 stable wrt bug #406453
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> bsddb3-5.2.0.ebuild:
   Marking bsddb3-5.2.0 ppc for bug 406453
