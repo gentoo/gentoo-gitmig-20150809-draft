@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.68 2012/02/06 19:34:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.69 2012/03/08 15:22:06 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> minitest-2.6.2.ebuild:
+  Marking minitest-2.6.2 ppc64 for bug 394781
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> minitest-2.6.2.ebuild:
   Marking minitest-2.6.2 ppc for bug 394781
