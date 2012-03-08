@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.18.01.ebuild,v 1.1 2012/03/01 16:30:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.18.01.ebuild,v 1.2 2012/03/08 11:48:40 grobian Exp $
 
 EAPI="3"
 
@@ -57,11 +57,11 @@ src_prepare() {
 
 src_configure() {
 	# make tcsh look and live along the lines of the prefix
-	append-flags -D_PATH_DOTCSHRC="'"'"${EPREFIX}/etc/csh.cshrc"'"'"
-	append-flags -D_PATH_DOTLOGIN="'"'"${EPREFIX}/etc/csh.login"'"'"
-	append-flags -D_PATH_DOTLOGOUT="'"'"${EPREFIX}/etc/csh.logout"'"'"
-	append-flags -D_PATH_USRBIN="'"'"${EPREFIX}/usr/bin"'"'"
-	append-flags -D_PATH_BIN="'"'"${EPREFIX}/bin"'"'"
+	append-cppflags -D_PATH_DOTCSHRC="'"'"${EPREFIX}/etc/csh.cshrc"'"'"
+	append-cppflags -D_PATH_DOTLOGIN="'"'"${EPREFIX}/etc/csh.login"'"'"
+	append-cppflags -D_PATH_DOTLOGOUT="'"'"${EPREFIX}/etc/csh.logout"'"'"
+	append-cppflags -D_PATH_USRBIN="'"'"${EPREFIX}/usr/bin"'"'"
+	append-cppflags -D_PATH_BIN="'"'"${EPREFIX}/bin"'"'"
 
 	econf \
 		--prefix="${EPREFIX:-/}" \

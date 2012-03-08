@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.111 2012/03/02 20:52:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.112 2012/03/08 11:48:40 grobian Exp $
+
+  08 Mar 2012; Fabian Groffen <grobian@gentoo.org> -tcsh-6.16.ebuild,
+  tcsh-6.18.01.ebuild:
+  Fix complaints from append-flags, drop old
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> tcsh-6.17-r1.ebuild:
   Marking tcsh-6.17-r1 ppc64 for bug 389013
