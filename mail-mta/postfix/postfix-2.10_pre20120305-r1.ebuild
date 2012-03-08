@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120305-r1.ebuild,v 1.1 2012/03/07 10:27:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120305-r1.ebuild,v 1.2 2012/03/08 10:23:03 mr_bones_ Exp $
 
 EAPI=4
 
@@ -76,7 +76,7 @@ src_prepare() {
 	if ! use berkdb; then
 		epatch "${FILESDIR}/${PN}_no-berkdb.patch"
 	fi
-	
+
 	# wait for master to initialize properly for postfix start
 	epatch "${FILESDIR}/${PN}_master-monitor.patch"
 
