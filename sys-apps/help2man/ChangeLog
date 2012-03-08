@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.71 2012/03/02 20:32:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.72 2012/03/08 11:52:51 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> help2man-1.40.5.ebuild:
+  x86 stable wrt bug #405377
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> help2man-1.40.5.ebuild:
   Marking help2man-1.40.5 ppc64 for bug 405377
