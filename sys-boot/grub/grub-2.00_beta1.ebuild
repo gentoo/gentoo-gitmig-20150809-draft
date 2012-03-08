@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_beta1.ebuild,v 1.1 2012/03/07 04:01:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_beta1.ebuild,v 1.2 2012/03/08 05:28:57 floppym Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ GRUB_PLATFORMS=(
 	ieee1275
 	# amd64, x86:
 	coreboot multiboot efi-32 pc qemu
-	# amd64:
+	# amd64, ia64:
 	efi-64
 )
 IUSE+=" ${GRUB_PLATFORMS[@]/#/grub_platforms_}"
@@ -117,33 +117,32 @@ grub_run_phase() {
 
 grub_src_configure() {
 	local platform=$1
-	local target
-	local with_platform
+	local target=
+	local with_platform=
 
 	[[ -z ${platform} ]] && die "${FUNCNAME} [platform]"
 
 	# check if we have to specify the target (EFI)
 	# or just append correct --with-platform
-	if [[ ${platform} == efi* ]]; then
-		# EFI platform hack
-		[[ ${platform/*-} == 32 ]] && target=i386
-		[[ ${platform/*-} == 64 ]] && target=x86_64
-		# program-prefix is required empty because otherwise it is equal to
-		# target variable, which we do not want at all
-		with_platform="
-			--with-platform=${platform/-*}
-			--target=${target}
-			--program-prefix=
-		"
-	elif [[ ${platform} != "guessed" ]]; then
-		with_platform=" --with-platform=${platform}"
+	if [[ ${platform} == efi-32 ]]; then
+		# Build 32-bit EFI on 64-bit system
+		target="--target=i386"
 	fi
 
+	case ${platform} in
+		efi-*) with_platform="--with-platform=${platform%-*}" ;;
+		guessed) ;;
+		*) with_platform="--with-platform=${platform}" ;;
+	esac
+			
 	ECONF_SOURCE="${S}" \
 	econf \
 		--disable-werror \
+		--program-prefix= \
 		--program-transform-name="s,grub,grub2," \
 		--with-grubdir=grub2 \
+		${target} \
+		${with_platform} \
 		$(use_enable debug mm-debug) \
 		$(use_enable debug grub-emu-usb) \
 		$(use_enable device-mapper) \
@@ -152,8 +151,7 @@ grub_src_configure() {
 		$(use_enable nls) \
 		$(use_enable truetype grub-mkfont) \
 		$(use_enable libzfs) \
-		$(use sdl && use_enable debug grub-emu-sdl) \
-		${with_platform}
+		$(use sdl && use_enable debug grub-emu-sdl)
 }
 
 grub_src_compile() {
