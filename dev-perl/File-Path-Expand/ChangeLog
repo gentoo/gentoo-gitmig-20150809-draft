@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Path-Expand
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Path-Expand/ChangeLog,v 1.10 2012/02/27 15:12:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Path-Expand/ChangeLog,v 1.11 2012/03/08 08:44:17 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  File-Path-Expand-1.20.0.ebuild:
+  x86 stable wrt bug #405969
 
   27 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   File-Path-Expand-1.20.0.ebuild:
