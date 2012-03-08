@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amstd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.32 2012/02/06 19:25:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.33 2012/03/08 15:18:26 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> amstd-2.0.0-r2.ebuild:
+  Marking amstd-2.0.0-r2 ppc64 for bug 391625
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> amstd-2.0.0-r2.ebuild:
   Marking amstd-2.0.0-r2 ppc for bug 391625
