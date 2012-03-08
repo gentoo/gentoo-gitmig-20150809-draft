@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.5.2.ebuild,v 1.1 2012/02/28 20:40:35 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.5.2.ebuild,v 1.2 2012/03/08 15:09:27 ssuominen Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -13,14 +13,14 @@ SRC_URI="mirror://sourceforge/roxterm/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="nls +gtk3"
+IUSE="nls"
 
 RDEPEND="dev-libs/dbus-glib
 	>=dev-libs/glib-2.16
-	gtk3?  ( x11-libs/gtk+:3 x11-libs/vte:2.90 )
-	!gtk3? ( x11-libs/gtk+:2 x11-libs/vte:0    )
+	x11-libs/gtk+:3
 	x11-libs/libICE
-	x11-libs/libSM"
+	x11-libs/libSM
+	x11-libs/vte:2.90"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	dev-util/pkgconfig
@@ -49,7 +49,6 @@ src_prepare() {
 src_configure() {
 	local myconf=( --prefix=/usr --docdir=/usr/share/doc/${PF} --destdir="${D}" )
 	use nls || myconf+=( --disable-gettext --disable-po4a --disable-translations )
-	use gtk3 || myconf+=( --disable-gtk3 )
 	./mscript.py configure "${myconf[@]}"
 }
 
