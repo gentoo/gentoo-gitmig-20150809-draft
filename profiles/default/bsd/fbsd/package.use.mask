@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.18 2012/03/08 10:20:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.19 2012/03/08 18:28:49 naota Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -111,3 +111,4 @@ dev-java/proguard j2me
 # Naohiro Aota <naota@gentoo.org> (20 Feb 2012)
 # Upstream does not support FreeBSD wifi nor crashreporter
 net-libs/xulrunner wifi crashreporter
+www-client/firefox wifi crashreporter
