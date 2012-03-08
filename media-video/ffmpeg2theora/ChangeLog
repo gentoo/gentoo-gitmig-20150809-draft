@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.51 2012/02/25 16:38:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.52 2012/03/08 11:35:22 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ffmpeg2theora-0.28-r1.ebuild:
+  x86 stable wrt bug #405745
 
   25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ffmpeg2theora-0.28-r1.ebuild:
   Stable for amd64, wrt bug #405745
