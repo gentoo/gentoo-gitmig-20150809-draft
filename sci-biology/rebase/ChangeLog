@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.113 2012/03/07 20:49:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.114 2012/03/08 07:15:15 jlec Exp $
+
+  08 Mar 2012; Justin Lecher <jlec@gentoo.org> -rebase-1006.ebuild,
+  -rebase-1105.ebuild:
+  Dropped old
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> rebase-1111.ebuild:
   Marking rebase-1111 ppc for bug 402053
