@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/edox-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/ChangeLog,v 1.19 2012/02/01 21:45:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/ChangeLog,v 1.20 2012/03/08 23:06:26 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> edox-data-0.16.8.0.2.ebuild:
+  Marking edox-data-0.16.8.0.2 ppc64 for bug 393927
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> edox-data-0.16.8.0.2.ebuild:
   Marking edox-data-0.16.8.0.2 ppc for bug 393927
