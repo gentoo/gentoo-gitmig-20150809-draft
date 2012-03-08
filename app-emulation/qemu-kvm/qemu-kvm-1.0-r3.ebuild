@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.6 2012/03/06 23:33:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.7 2012/03/08 01:16:27 cardoe Exp $
 
 #BACKPORTS=1
 
-EAPI="3"
+EAPI="4"
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
@@ -82,7 +82,7 @@ RDEPEND="
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( static? ( >=media-libs/libsdl-1.2.11[static-libs,X] )
 		!static? ( >=media-libs/libsdl-1.2.11[X] ) )
-	static? ( sys-libs/zlib[static-libs] )
+	static? ( sys-libs/zlib[static-libs(+)] )
 	!static? ( sys-libs/zlib )
 	smartcard? ( dev-libs/nss )
 	spice? ( >=app-emulation/spice-0.9.0
