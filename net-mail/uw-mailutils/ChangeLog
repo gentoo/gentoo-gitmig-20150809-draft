@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-mailutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.39 2012/01/04 22:05:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.40 2012/03/08 14:59:57 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> uw-mailutils-2007f.ebuild:
+  Marking uw-mailutils-2007f ppc64 for bug 391353
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> uw-mailutils-2007f.ebuild:
   Marking uw-mailutils-2007f ppc for bug 391353
