@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/php-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.55 2012/03/02 21:56:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.56 2012/03/08 08:58:49 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  php-docs-20101029-r1.ebuild:
+  x86 stable wrt bug #399923
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> php-docs-20101029-r1.ebuild:
   Marking php-docs-20101029-r1 ppc64 for bug 399923
