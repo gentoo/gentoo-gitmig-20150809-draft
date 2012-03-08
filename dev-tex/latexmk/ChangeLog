@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.44 2012/03/06 14:26:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.45 2012/03/08 21:23:20 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> latexmk-427a.ebuild:
+  Marking latexmk-427a ppc64 for bug 404727
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> latexmk-427a.ebuild:
   Marking latexmk-427a ppc for bug 404727
