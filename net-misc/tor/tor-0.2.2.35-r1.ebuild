@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.35-r1.ebuild,v 1.1 2012/02/07 21:11:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.35-r1.ebuild,v 1.2 2012/03/08 16:14:22 blueness Exp $
 
-EAPI=4
+EAPI="4"
 
 inherit autotools eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.torproject.org/dist/${PN}-${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc tor-hardening +transparent-proxy threads selinux"
+IUSE="tor-hardening +transparent-proxy threads selinux"
 
 DEPEND="dev-libs/openssl
 	>=dev-libs/libevent-2.0
@@ -38,8 +38,9 @@ src_configure() {
 	# will break tor, but does recommend against -fstrict-aliasing.
 	# We'll filter-flags them here as we encounter them.
 	filter-flags -fstrict-aliasing
-	econf --docdir=/usr/share/doc/${PF}				\
-		$(use_enable doc asciidoc)					\
+	econf \
+		--enable-asciidoc \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_enable tor-hardening gcc-hardening)	\
 		$(use_enable tor-hardening linker-hardening)\
 		$(use_enable transparent-proxy transparent)	\

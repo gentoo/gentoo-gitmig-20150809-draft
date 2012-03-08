@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.12_alpha-r1.ebuild,v 1.1 2012/02/14 22:32:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.12_alpha-r1.ebuild,v 1.2 2012/03/08 16:14:22 blueness Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_PF}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="+bufferevents doc nat-pmp tor-hardening transparent-proxy threads upnp selinux"
+IUSE="+bufferevents nat-pmp tor-hardening transparent-proxy threads upnp selinux"
 
 DEPEND="dev-libs/openssl
 	>=dev-libs/libevent-2.0.14
@@ -40,9 +40,10 @@ src_configure() {
 	# will break tor, but does recommend against -fstrict-aliasing.
 	# We'll filter-flags them here as we encounter them.
 	filter-flags -fstrict-aliasing
-	econf --docdir=/usr/share/doc/${PF} \
+	econf \
+		--enable-asciidoc \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_enable bufferevents) \
-		$(use_enable doc asciidoc) \
 		$(use_enable nat-pmp) \
 		$(use_enable tor-hardening gcc-hardening) \
 		$(use_enable tor-hardening linker-hardening) \
@@ -54,7 +55,9 @@ src_configure() {
 src_install() {
 	newconfd "${FILESDIR}"/tor.confd tor
 	newinitd "${FILESDIR}"/tor.initd-r6 tor
+
 	emake DESTDIR="${D}" install
+
 	keepdir /var/lib/tor
 
 	dodoc README ChangeLog ReleaseNotes \

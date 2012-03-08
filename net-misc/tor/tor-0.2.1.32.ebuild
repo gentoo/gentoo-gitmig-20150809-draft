@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.32.ebuild,v 1.3 2012/02/07 21:11:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.32.ebuild,v 1.4 2012/03/08 16:14:22 blueness Exp $
 
-EAPI=4
+EAPI="4"
 
 inherit autotools eutils flag-o-matic
 
