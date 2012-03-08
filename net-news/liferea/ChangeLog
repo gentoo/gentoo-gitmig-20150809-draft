@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.217 2012/02/28 21:35:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.218 2012/03/08 23:07:20 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> liferea-1.8.0.ebuild:
+  Marking liferea-1.8.0 ppc64 for bug 403901
 
   28 Feb 2012; Brent Baude <ranger@gentoo.org> liferea-1.8.0.ebuild:
   Marking liferea-1.8.0 ppc for bug 403901
