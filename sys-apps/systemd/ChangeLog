@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.24 2012/03/05 08:50:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.25 2012/03/08 18:13:14 mgorny Exp $
+
+  08 Mar 2012; Michał Górny <mgorny@gentoo.org> systemd-43.ebuild:
+  Restore UI parts in the ebuild.
 
   05 Mar 2012; Michał Górny <mgorny@gentoo.org> -systemd-37-r1.ebuild,
   -systemd-37-r4.ebuild, -systemd-38-r1.ebuild:
