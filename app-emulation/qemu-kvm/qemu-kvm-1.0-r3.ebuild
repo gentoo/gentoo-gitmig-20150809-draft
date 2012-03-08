@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.7 2012/03/08 01:16:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.8 2012/03/08 16:40:50 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -144,7 +144,7 @@ pkg_pretend() {
 		if ! linux_config_exists; then
 			eerror "Unable to check your kernel for KVM support"
 		else
-			CONFIG_CHECK="KVM KVM_AMD KVM_INTEL ~TUN ~BRIDGE"
+			CONFIG_CHECK="KVM ~KVM_AMD ~KVM_INTEL ~TUN ~BRIDGE"
 			ERROR_KVM="You must enable KVM in your kernel to continue"
 			ERROR_KVM_AMD="If you have an AMD CPU, you must enable KVM_AMD in \
 				your kernel configuration."
