@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/girara
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.1 2012/03/08 08:37:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.2 2012/03/08 09:08:32 ssuominen Exp $
+
+*girara-0.1.0-r200 (08 Mar 2012)
+
+  08 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +girara-0.1.0-r200.ebuild, girara-0.1.0-r300.ebuild:
+  Drop keywording for GTK+-3 version for now because zathura-pdf-poppler
+  plug-in is still requiring GTK+-2.
 
 *girara-0.1.0-r300 (08 Mar 2012)
 
