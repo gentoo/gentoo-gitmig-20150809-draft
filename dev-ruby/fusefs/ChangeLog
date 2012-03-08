@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fusefs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fusefs/ChangeLog,v 1.16 2012/03/08 15:16:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fusefs/ChangeLog,v 1.17 2012/03/08 16:43:52 graaff Exp $
+
+  08 Mar 2012; Hans de Graaff <graaff@gentoo.org> -fusefs-0.6.0.ebuild:
+  Remove old version.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> fusefs-0.6.0-r1.ebuild:
   Marking fusefs-0.6.0-r1 ppc64 for bug 391513
