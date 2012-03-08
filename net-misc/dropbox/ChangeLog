@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.17 2012/03/03 11:57:51 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.18 2012/03/08 08:49:09 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  dropbox-1.2.48-r1.ebuild:
+  x86 stable wrt bug #399559
 
   03 Mar 2012; Richard Freeman <rich0@gentoo.org> dropbox-1.2.48-r1.ebuild:
   amd64 stable - 399599
