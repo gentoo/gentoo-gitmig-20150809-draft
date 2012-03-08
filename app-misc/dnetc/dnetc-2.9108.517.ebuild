@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9108.517.ebuild,v 1.3 2012/02/24 09:36:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9108.517.ebuild,v 1.4 2012/03/08 09:08:24 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils
@@ -18,7 +18,7 @@ SRC_URI="${SRC_URI_amd64} ${SRC_URI_ppc} ${SRC_URI_x86} ${SRC_URI_sparc}"
 
 LICENSE="distributed.net"
 SLOT="0"
-KEYWORDS="amd64 ~x86" # ppc not available for this version
+KEYWORDS="amd64 x86" # ppc not available for this version
 IUSE=""
 RESTRICT="mirror"
 
