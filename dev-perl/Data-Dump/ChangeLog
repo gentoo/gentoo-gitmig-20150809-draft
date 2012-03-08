@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Dump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/ChangeLog,v 1.23 2012/03/01 20:13:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/ChangeLog,v 1.24 2012/03/08 12:23:58 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Data-Dump-1.210.0.ebuild:
+  x86 stable wrt bug #400073
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> Data-Dump-1.210.0.ebuild:
   Marking Data-Dump-1.210.0 ppc for bug 400073

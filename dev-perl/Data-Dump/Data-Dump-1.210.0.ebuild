@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/Data-Dump-1.210.0.ebuild,v 1.5 2012/03/01 20:13:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/Data-Dump-1.210.0.ebuild,v 1.6 2012/03/08 12:23:58 phajdan.jr Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Pretty printing of data structures"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ~sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 SRC_TEST=do
