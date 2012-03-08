@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/term-ansicolor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.24 2011/12/31 18:08:03 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.25 2012/03/08 01:19:43 naota Exp $
+
+  08 Mar 2012; Naohiro Aota <naota@gentoo.org> term-ansicolor-1.0.7.ebuild:
+  Add ~x86-fbsd.
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> term-ansicolor-1.0.7.ebuild:
   Add Prefix keywords, bug #396547
