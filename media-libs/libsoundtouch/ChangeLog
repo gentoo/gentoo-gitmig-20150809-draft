@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsoundtouch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.53 2012/03/07 20:33:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.54 2012/03/08 03:30:07 radhermit Exp $
+
+  08 Mar 2012; Tim Harder <radhermit@gentoo.org> -libsoundtouch-1.5.0.ebuild,
+  -files/libsoundtouch-1.5.0-flags_and_version.patch:
+  Remove old.
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> libsoundtouch-1.6.0.ebuild:
   Marking libsoundtouch-1.6.0 ppc for bug 387769
