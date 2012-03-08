@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.76 2012/03/08 12:46:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.77 2012/03/08 17:59:56 jer Exp $
+
+  08 Mar 2012; Jeroen Roovers <jer@gentoo.org> -unetbootin-565.ebuild:
+  Old.
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> unetbootin-568.ebuild:
   x86 stable wrt bug #406073
