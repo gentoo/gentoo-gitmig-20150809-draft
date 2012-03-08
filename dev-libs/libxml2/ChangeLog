@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.336 2012/03/03 19:45:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.337 2012/03/08 06:59:48 tetromino Exp $
+
+  08 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libxml2-2.7.8-r5.ebuild, +files/libxml2-2.7.8-windows-thread_t.patch:
+  Fix building against pthreads-win32 (bug #407371, thanks to Nathan Phillip
+  Brink (binki)).
 
   03 Mar 2012; Raúl Porcel <armin76@gentoo.org> libxml2-2.7.8-r5.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #405261

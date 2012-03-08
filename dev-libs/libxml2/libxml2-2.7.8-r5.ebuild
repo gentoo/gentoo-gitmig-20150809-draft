@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8-r5.ebuild,v 1.8 2012/03/03 19:45:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8-r5.ebuild,v 1.9 2012/03/08 06:59:48 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -92,6 +92,9 @@ src_prepare() {
 
 	# Make hash functions less predictable to prevent DoS
 	epatch "${FILESDIR}/${P}-hash-randomization.patch"
+
+	# Fix building against pthreads-win32, bug #407371
+	epatch "${FILESDIR}/${P}-windows-thread_t.patch"
 
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.
