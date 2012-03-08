@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Tree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.69 2012/02/02 20:27:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.70 2012/03/08 15:09:49 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> HTML-Tree-4.200.0.ebuild:
+  Marking HTML-Tree-4.200.0 ppc64 for bug 392789
 
   02 Feb 2012; Brent Baude <ranger@gentoo.org> HTML-Tree-4.200.0.ebuild:
   Marking HTML-Tree-4.200.0 ppc for bug 392789
