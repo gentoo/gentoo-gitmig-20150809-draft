@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.643 2012/03/07 22:06:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.644 2012/03/08 14:51:50 ranger Exp $
 
 *xorg-server-1.12.0 (07 Mar 2012)
 
@@ -11,6 +11,9 @@
   01 Mar 2012; <swift@gentoo.org> xorg-server-1.11.3.ebuild,
   xorg-server-1.11.4.ebuild, xorg-server-1.11.99.903.ebuild:
   Adding USE=selinux dependency towards selinux-xserver
+
+  03 Mar 2012; Brent Baude <ranger@gentoo.org> xorg-server-1.11.2-r2.ebuild:
+  Marking xorg-server-1.11.2-r2 ppc64 stable for bug 394393
 
 *xorg-server-1.11.99.903 (24 Feb 2012)
 
