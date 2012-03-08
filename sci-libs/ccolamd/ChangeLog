@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.27 2012/03/01 19:46:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.28 2012/03/08 23:09:03 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> ccolamd-2.7.3.ebuild:
+  Marking ccolamd-2.7.3 ppc64 for bug 393945
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> ccolamd-2.7.3.ebuild:
   Marking ccolamd-2.7.3 ppc for bug 393945
