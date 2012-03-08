@@ -1,5 +1,9 @@
 
 
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xapian-omega-1.2.8.ebuild:
+  x86 stable wrt bug #402189
+
   05 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
   xapian-omega-1.2.8.ebuild:
   Removed DEPEND on sys-apps/file since its in @system
