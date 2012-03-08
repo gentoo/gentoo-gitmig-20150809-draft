@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.57 2012/03/02 20:28:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.58 2012/03/08 11:42:55 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xinetd-2.3.14-r1.ebuild:
+  x86 stable wrt bug #400493
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> xinetd-2.3.14-r1.ebuild:
   Marking xinetd-2.3.14-r1 ppc64 for bug 400493
