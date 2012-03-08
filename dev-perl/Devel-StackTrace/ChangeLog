@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-StackTrace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.78 2012/03/01 20:20:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.79 2012/03/08 12:35:31 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Devel-StackTrace-1.270.0.ebuild:
+  x86 stable wrt bug #400089
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> Devel-StackTrace-1.270.0.ebuild:
   Marking Devel-StackTrace-1.270.0 ppc for bug 400089
