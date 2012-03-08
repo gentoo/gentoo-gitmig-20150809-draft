@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.82 2012/03/06 14:19:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.83 2012/03/08 21:18:16 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> latex-beamer-3.11.ebuild:
+  Marking latex-beamer-3.11 ppc64 for bug 387573
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> latex-beamer-3.11.ebuild:
   Marking latex-beamer-3.11 ppc for bug 387573
