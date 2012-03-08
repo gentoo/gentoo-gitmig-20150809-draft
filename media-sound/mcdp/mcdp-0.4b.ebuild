@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.4b.ebuild,v 1.2 2012/02/24 09:29:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.4b.ebuild,v 1.3 2012/03/08 08:43:04 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mcmilk.de/projects/mcdp/dl/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 src_prepare() {

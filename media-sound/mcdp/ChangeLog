@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mcdp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.22 2012/02/24 09:29:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.23 2012/03/08 08:43:04 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mcdp-0.4b.ebuild:
+  x86 stable wrt bug #400401
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> mcdp-0.4b.ebuild:
   Stable for amd64, wrt bug #400401
