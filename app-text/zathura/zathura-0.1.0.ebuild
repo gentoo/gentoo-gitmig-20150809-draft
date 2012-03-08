@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.1.0.ebuild,v 1.2 2012/03/08 09:10:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.1.0.ebuild,v 1.3 2012/03/08 14:43:57 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -31,6 +31,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# http://bt.pwmt.org/view.php?id=140
+	# http://bt.pwmt.org/view.php?id=141
 	sed -i \
 		-e "s:lib/pkg:$(get_libdir)/pkg:" \
 		-e 's:rst2man:&.py:' \
