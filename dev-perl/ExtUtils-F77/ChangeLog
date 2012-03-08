@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-F77
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.47 2012/03/01 20:27:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.48 2012/03/08 12:52:58 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ExtUtils-F77-1.170.0.ebuild:
+  x86 stable wrt bug #400111
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> ExtUtils-F77-1.170.0.ebuild:
   Marking ExtUtils-F77-1.170.0 ppc for bug 400111
