@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Astro-FITS-Header
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.24 2012/02/29 20:51:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.25 2012/03/08 11:57:05 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Astro-FITS-Header-3.30.0.ebuild:
+  x86 stable wrt bug #400035
 
   29 Feb 2012; Markus Meier <maekke@gentoo.org>
   Astro-FITS-Header-3.30.0.ebuild:
