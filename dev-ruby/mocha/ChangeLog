@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.52 2012/03/05 10:13:26 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.53 2012/03/08 23:02:06 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> mocha-0.9.12.ebuild:
+  Marking mocha-0.9.12 ppc64 for bug 399799
 
   05 Mar 2012; Thomas Kahle <tomka@gentoo.org> mocha-0.10.0.ebuild:
   marked ~x86 per bug 398985
