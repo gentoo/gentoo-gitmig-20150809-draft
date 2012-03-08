@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Domain-TLD
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/ChangeLog,v 1.27 2012/02/02 20:25:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/ChangeLog,v 1.28 2012/03/08 15:08:57 ranger Exp $
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> Net-Domain-TLD-1.690.0.ebuild:
+  Marking Net-Domain-TLD-1.690.0 ppc64 for bug 391635
 
   02 Feb 2012; Brent Baude <ranger@gentoo.org> Net-Domain-TLD-1.690.0.ebuild:
   Marking Net-Domain-TLD-1.690.0 ppc for bug 391635
