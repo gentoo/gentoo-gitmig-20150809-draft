@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2011.12.ebuild,v 1.3 2012/02/16 08:16:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2012.02.ebuild,v 1.1 2012/03/08 04:31:03 patrick Exp $
 
 EAPI=3
 
-PARROT_VERSION="3.11.0"
+PARROT_VERSION="4.1.0"
 NQP_VERSION="${PV}"
 
 inherit eutils multilib
