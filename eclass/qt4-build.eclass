@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.122 2012/03/01 15:19:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.123 2012/03/08 14:24:40 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -8,6 +8,11 @@
 # @BLURB: Eclass for Qt4 split ebuilds.
 # @DESCRIPTION:
 # This eclass contains various functions that are used when building Qt4.
+
+case ${EAPI} in
+	2|3|4)	: ;;
+	*)	die "qt4-build.eclass requires EAPI 2, 3 or 4." ;;
+esac
 
 inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 
@@ -86,13 +91,13 @@ qt4-build_pkg_setup() {
 		fi
 	fi
 
-	if [[ ${PN} == "qt-webkit" ]]; then
+	if [[ ${PN} == qt-webkit ]]; then
 		eshopts_push -s extglob
 		if is-flagq '-g?(gdb)?([1-9])'; then
 			echo
-			ewarn "You have enabled debug info (probably have -g or -ggdb in your \$C{,XX}FLAGS)."
+			ewarn "You have enabled debug info (probably have -g or -ggdb in your CFLAGS/CXXFLAGS)."
 			ewarn "You may experience really long compilation times and/or increased memory usage."
-			ewarn "If compilation fails, please try removing -g{,gdb} before reporting a bug."
+			ewarn "If compilation fails, please try removing -g/-ggdb before reporting a bug."
 			ewarn "For more info check out bug #307861"
 			echo
 		fi
@@ -112,16 +117,8 @@ qt4-build_pkg_setup() {
 				${QT4_EXTRACT_DIRECTORIES}"
 	fi
 
-	# Make sure ebuilds use the required EAPI
-	if [[ ${EAPI} != [234] ]]; then
-		eerror "The qt4-build eclass requires EAPI 2,3 or 4 but this ebuild is using"
-		eerror "EAPI=${EAPI:-0}. The ebuild author or editor failed. This ebuild needs to be"
-		eerror "fixed. Using qt4-build eclass without EAPI 2,3 or 4 will fail."
-		die "qt4-build eclass requires EAPI 2,3 or 4"
-	fi
-
 	if ! version_is_at_least 4.1 $(gcc-version); then
-		ewarn "Using a GCC version lower than 4.1 is not supported!"
+		ewarn "Using a GCC version lower than 4.1 is not supported."
 	fi
 }
 
@@ -175,7 +172,7 @@ qt4-build_src_prepare() {
 	setqtenv
 	cd "${S}"
 
-	if version_is_at_least "4.7"; then
+	if version_is_at_least 4.7; then
 		# fix libX11 dependency on non X packages
 		local nolibx11_pkgs="qt-core qt-dbus qt-script qt-sql qt-test qt-xmlpatterns"
 		has ${PN} ${nolibx11_pkgs} && qt_nolibx11
@@ -210,11 +207,13 @@ qt4-build_src_prepare() {
 	fi
 
 	if use_if_iuse c++0x; then
+		echo
 		ewarn "You are about to build Qt4 using the C++11 standard. Even though"
 		ewarn "this is an official standard, some of the reverse dependencies"
 		ewarn "may fail to compile or link againt the Qt4 libraries. Before"
 		ewarn "reporting a bug, make sure your bug is reproducible with c++0x"
 		ewarn "disabled."
+		echo
 		append-flags -std=c++0x
 	fi
 
@@ -391,11 +390,11 @@ qt4-build_src_configure() {
 	fi
 
 	if use_if_iuse qpa; then
-		ewarn
+		echo
 		ewarn "The qpa useflag enables the Qt Platform Abstraction, formely"
 		ewarn "known as Qt Lighthouse. If you are not sure what that is, then"
 		ewarn "disable it before reporting any bugs related to this useflag."
-		ewarn
+		echo
 		conf+=" -qpa"
 	fi
 
@@ -444,7 +443,7 @@ qt4-build_src_compile() {
 # Runs tests only in target directories.
 qt4-build_src_test() {
 	# QtMultimedia does not have any test suite (bug #332299)
-	[[ ${PN} == "qt-multimedia" ]] && return
+	[[ ${PN} == qt-multimedia ]] && return
 
 	for dir in ${QT4_TARGET_DIRECTORIES}; do
 		emake -j1 check -C ${dir}
@@ -612,7 +611,7 @@ install_qconfigs() {
 # @DESCRIPTION:
 # Generates gentoo-specific qconfig.{h,pri}.
 generate_qconfigs() {
-	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} || -n ${QCONFIG_DEFINE} || ${CATEGORY}/${PN} == x11-libs/qt-core ]]; then
+	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} || -n ${QCONFIG_DEFINE} || ${PN} == qt-core ]]; then
 		local x qconfig_add qconfig_remove qconfig_new
 		for x in "${ROOT}${QTDATADIR}"/mkspecs/gentoo/*-qconfig.pri; do
 			[[ -f ${x} ]] || continue
@@ -808,10 +807,10 @@ qt_mkspecs_dir() {
 # Since Qt 4.7.4 this function is a no-op.
 qt_assistant_cleanup() {
 	# apply patching to qt-assistant ebuilds only
-	[[ ${PN} != "qt-assistant" ]] && return
+	[[ ${PN} != qt-assistant ]] && return
 
 	# no longer needed for 4.7.4 and later
-	version_is_at_least "4.7.4" && return
+	version_is_at_least 4.7.4 && return
 
 	# different versions (and branches...) may need different handling,
 	# add a case if you need special handling
