@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/bignum
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.35 2012/03/02 20:02:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.36 2012/03/08 08:40:05 phajdan.jr Exp $
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bignum-0.290.0.ebuild:
+  x86 stable wrt bug #400479
 
   02 Mar 2012; Markus Meier <maekke@gentoo.org> bignum-0.290.0.ebuild:
   arm stable, bug #400479

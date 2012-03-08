@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/bignum-0.290.0.ebuild,v 1.5 2012/03/02 20:02:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/bignum-0.290.0.ebuild,v 1.6 2012/03/08 08:40:05 phajdan.jr Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Transparent BigNumber/BigRational support for Perl"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~s390 ~sh ~sparc ~x86 ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~s390 ~sh ~sparc x86 ~ppc-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND=">=perl-core/Math-BigInt-1.88
