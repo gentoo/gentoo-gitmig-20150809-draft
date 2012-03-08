@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.20-r1.ebuild,v 1.8 2012/03/08 15:24:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.20-r1.ebuild,v 1.9 2012/03/08 17:02:13 naota Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.fxruby.org/"
 
 LICENSE="LGPL-2.1"
 SLOT="1.6"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="examples doc"
 
 DEPEND="x11-libs/fox:1.6
