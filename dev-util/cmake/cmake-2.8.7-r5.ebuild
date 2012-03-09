@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.7-r3.ebuild,v 1.1 2012/02/06 13:52:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.7-r5.ebuild,v 1.1 2012/03/09 01:22:06 dilfridge Exp $
 
 EAPI=4
 
@@ -55,10 +55,10 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.4-FindPythonLibs.patch
 	"${FILESDIR}"/${PN}-2.8.3-more-no_host_paths.patch
 	"${FILESDIR}"/${PN}-2.8.4-FindBoost.patch
-	"${FILESDIR}"/${PN}-2.8.6-FindBLAS-2.patch
-	"${FILESDIR}"/${PN}-2.8.6-FindLAPACK-2.patch
 	"${FILESDIR}"/${PN}-2.8.7-FindBoost-python.patch
 	"${FILESDIR}"/${PN}-2.8.7-FindOpenMP.patch
+	"${FILESDIR}"/${PN}-2.8.7-FindBLAS.patch
+	"${FILESDIR}"/${PN}-2.8.7-FindLAPACK.patch
 )
 cmake_src_bootstrap() {
 	# Cleanup args to extract only JOBS.

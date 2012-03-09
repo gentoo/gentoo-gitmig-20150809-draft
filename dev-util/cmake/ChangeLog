@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.189 2012/03/08 04:45:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.190 2012/03/09 01:22:06 dilfridge Exp $
+
+*cmake-2.8.7-r5 (09 Mar 2012)
+
+  09 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -cmake-2.8.7-r3.ebuild, +cmake-2.8.7-r5.ebuild,
+  +files/cmake-2.8.7-FindLAPACK.patch:
+  Respect pkg-config library path also in FindLAPACK, bug 399755; thanks to
+  Christoph Junghans for the patches
 
 *cmake-2.8.7-r4 (08 Mar 2012)
 
