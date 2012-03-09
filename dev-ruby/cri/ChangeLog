@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.2 2012/03/01 06:38:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.3 2012/03/09 09:45:23 naota Exp $
+
+  09 Mar 2012; Naohiro Aota <naota@gentoo.org> cri-2.2.0.ebuild:
+  Add ~x86-fbsd.
 
   01 Mar 2012; Hans de Graaff <graaff@gentoo.org> cri-2.2.0.ebuild:
   Add ruby19. Thanks to Shunsuke Shimizu in bug 406369.
