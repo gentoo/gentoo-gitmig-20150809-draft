@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20120114.ebuild,v 1.1 2012/03/09 00:35:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20120114.ebuild,v 1.2 2012/03/09 23:25:19 hd_brummy Exp $
 
 EAPI="4"
 
@@ -68,25 +68,7 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	if use ssl ; then
-		if path_exists -a "${ROOT}"/etc/vdr/plugins/live/live.key; then
-			einfo "SSL cert exists"
-			einfo ""
-			einfo "simply to create a new SSL cert remove:"
-			einfo "/etc/vdr/plugins/live/{live.key,live.crt}"
-			einfo "and reinstall ${P}"
-		else
-			einfo "Create SSL cert"
-			make_live_cert
-			local base=$(get_base 1)
-			local keydir="/etc/vdr/plugins/live"
-			install -d "${ROOT}${keydir}"
-			install -m0400 "${base}.key" "${ROOT}${keydir}/live.key"
-			install -m0444 "${base}.crt" "${ROOT}${keydir}/live.crt"
-			chown vdr:vdr "${ROOT}"/etc/vdr/plugins/live/live.*
-		fi
-	fi
+	vdr-plugin_pkg_postinst
 
 	elog "To be able to use all functions of vdr-live"
 	elog "you should emerge and enable"
@@ -101,5 +83,29 @@ pkg_postinst() {
 	einfo "On problems, use the stable amd64, x86 versions of"
 	einfo "dev-libs/tntnet dev-libs/cxxtools media-plugins/vdr-live"
 
-	vdr-plugin_pkg_postinst
+	if use ssl ; then
+		if path_exists -a "${ROOT}"/etc/vdr/plugins/live/live.key; then
+			einfo "found SSL cert"
+			einfo ""
+			einfo "to create a new SSL cert, run:"
+			einfo ""
+			einfo "emerge --config ${PN}"
+		else
+			einfo "NO SSL cert found"
+			einfo ""
+			einfo "Create SSL cert, now ..."
+			pkg_config
+		fi
+	fi
+}
+
+pkg_config() {
+
+			make_live_cert
+			local base=$(get_base 1)
+			local keydir="/etc/vdr/plugins/live"
+			install -d "${ROOT}${keydir}"
+			install -m0400 "${base}.key" "${ROOT}${keydir}/live.key"
+			install -m0444 "${base}.crt" "${ROOT}${keydir}/live.crt"
+			chown vdr:vdr "${ROOT}"/etc/vdr/plugins/live/live.*
 }
