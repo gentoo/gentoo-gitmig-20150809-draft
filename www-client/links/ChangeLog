@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.160 2012/03/07 20:25:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.161 2012/03/09 08:39:55 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> links-2.5.ebuild:
+  x86 stable wrt bug #405781
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> links-2.5.ebuild:
   Marking links-2.5 ppc for bug 405781
