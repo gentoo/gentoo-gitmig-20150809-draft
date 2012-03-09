@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Interface
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.26 2012/03/08 15:30:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.27 2012/03/09 08:38:32 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  IO-Interface-1.60.0.ebuild:
+  x86 stable wrt bug #400147
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   IO-Interface-1.60.0.ebuild:
