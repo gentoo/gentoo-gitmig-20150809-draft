@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Ogg-Vorbis-Header-PurePerl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ogg-Vorbis-Header-PurePerl/ChangeLog,v 1.16 2012/02/24 10:29:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ogg-Vorbis-Header-PurePerl/ChangeLog,v 1.17 2012/03/09 09:11:10 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Ogg-Vorbis-Header-PurePerl-1.0.0.ebuild:
+  x86 stable wrt bug #400195
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
   Ogg-Vorbis-Header-PurePerl-1.0.0.ebuild:
