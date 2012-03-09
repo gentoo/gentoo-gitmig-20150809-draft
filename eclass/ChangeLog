@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.158 2012/03/09 22:01:11 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.159 2012/03/09 22:44:58 hd_brummy Exp $
+
+  09 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
+  removed vdr-plugin_pkg_config function, unused, changed on 2008 to eselect
+  vdrplugin handling
 
   09 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
   Drop haddock from DEPENDS when USE=doc haddock. haddock-2.9.2+ can be used
