@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.96 2012/03/03 09:28:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.97 2012/03/09 06:51:22 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -30,7 +30,7 @@ RDEPEND="app-arch/bzip2
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.9.4
+	>=dev-lang/v8-3.9.13
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
@@ -66,7 +66,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81-r2
 	test? (
 		dev-python/pyftpdlib
-		>=dev-python/tlslite-0.4.0
 	)"
 RDEPEND+="
 	!=www-client/chromium-9999
@@ -262,6 +261,7 @@ src_prepare() {
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jsoncpp/*' \
+		\! -path 'third_party/json_minify/*' \
 		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/leveldb/*' \
@@ -286,6 +286,7 @@ src_prepare() {
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tcmalloc/*' \
+		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/v8-i18n/*' \
 		\! -path 'third_party/webdriver/*' \

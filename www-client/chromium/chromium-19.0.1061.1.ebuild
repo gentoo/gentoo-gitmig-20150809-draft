@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-19.0.1049.3.ebuild,v 1.1 2012/02/24 17:30:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-19.0.1061.1.ebuild,v 1.1 2012/03/09 06:51:22 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -30,7 +30,7 @@ RDEPEND="app-arch/bzip2
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.9.4
+	>=dev-lang/v8-3.9.13
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
@@ -64,7 +64,9 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
-	test? ( dev-python/pyftpdlib )"
+	test? (
+		dev-python/pyftpdlib
+	)"
 RDEPEND+="
 	!=www-client/chromium-9999
 	x11-misc/xdg-utils
@@ -203,6 +205,7 @@ src_prepare() {
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jsoncpp/*' \
+		\! -path 'third_party/json_minify/*' \
 		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/leveldb/*' \
