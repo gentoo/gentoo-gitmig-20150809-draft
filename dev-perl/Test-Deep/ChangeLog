@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Deep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.51 2012/02/29 21:29:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.52 2012/03/09 09:33:37 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Test-Deep-0.108.0.ebuild:
+  x86 stable wrt bug #400229
 
   29 Feb 2012; Markus Meier <maekke@gentoo.org> Test-Deep-0.108.0.ebuild:
   arm stable, bug #400229
