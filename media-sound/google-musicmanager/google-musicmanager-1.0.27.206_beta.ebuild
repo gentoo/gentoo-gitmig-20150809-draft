@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.24.7712_beta.ebuild,v 1.2 2012/03/09 01:13:48 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.27.206_beta.ebuild,v 1.1 2012/03/09 01:13:48 ottxor Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils unpacker
 
 MY_URL="http://dl.google.com/linux/musicmanager/deb/pool/main/${P:0:1}/${PN}-beta"
 MY_PKG="${PN}-beta_${PV/_beta}-r0_i386.deb"
@@ -53,19 +53,9 @@ QA_DT_HASH="${INSTALL_BASE}/.*"
 S="${WORKDIR}/${INSTALL_BASE}"
 
 pkg_nofetch() {
-	elog "This version is no longer available from Google and the license prevents mirroring."
-	elog "This ebuild is intended for users who already downloaded it previously and have problems"
-	elog "with ${PV}+. If you can get the distfile from e.g. another computer of yours, or search"
-	use amd64 && MY_PKG="${MY_PKG/i386/amd64}"
-	elog "it with google: http://www.google.com/search?q=intitle:%22index+of%22+${MY_PKG}"
-	elog "and copy the file ${MY_PKG} to ${DISTDIR}."
-}
-
-src_unpack() {
-	# Avoid automagic usage of deb2targz (bug #384147, #375969#c22)
-	echo ">>> Unpacking ${A} to ${PWD}"
-	ar x "${DISTDIR}/${A}" || die
-	unpack ./data.tar.lzma
+	einfo "This version is no longer available from Google."
+	einfo "Note that Gentoo cannot mirror the distfiles due to license reasons, so we have to follow the bump."
+	einfo "Please file a version bump bug on http://bugs.gentoo.org (search existing bugs for ${PN} first!)."
 }
 
 src_install() {
