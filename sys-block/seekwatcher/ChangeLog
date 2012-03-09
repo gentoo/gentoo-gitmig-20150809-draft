@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/seekwatcher
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.7 2009/11/04 08:23:42 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.8 2012/03/09 18:48:42 slyfox Exp $
+
+*seekwatcher-0.12_p20091015 (09 Mar 2012)
+
+  09 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/seekwatcher-0.12_p20091015-dash-fix.patch,
+  +seekwatcher-0.12_p20091015.ebuild:
+  Bump up to latest snapshot from upstream mercurial tree (latest release did
+  not work). Approved by robbat2.
 
 *seekwatcher-0.12 (04 Nov 2009)
 
