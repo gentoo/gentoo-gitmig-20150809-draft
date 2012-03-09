@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmountains
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.20 2012/02/23 17:19:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.21 2012/03/09 11:11:09 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xmountains-2.9.ebuild:
+  x86 stable wrt bug #404895
 
   23 Feb 2012; Brent Baude <ranger@gentoo.org> xmountains-2.9.ebuild:
   Marking xmountains-2.9 ppc for bug 404895
