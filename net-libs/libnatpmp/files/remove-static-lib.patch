@@ -1,14 +1,5 @@
-diff -Naur libnatpmp-20110715.orig//Makefile libnatpmp-20110715/Makefile
---- libnatpmp-20110715.orig//Makefile	2011-07-22 14:57:49.000000000 -0400
-+++ libnatpmp-20110715/Makefile	2011-07-22 14:59:41.000000000 -0400
-@@ -21,7 +21,6 @@
- 
- OBJS = $(LIBOBJS) testgetgateway.o natpmpc.o
- 
--STATICLIB = libnatpmp.a
- ifeq ($(OS), Darwin)
-   SHAREDLIB = libnatpmp.dylib
-   SONAME = $(basename $(SHAREDLIB)).$(APIVERSION).dylib
+--- libnatpmp-20110715/Makefile
++++ libnatpmp-20110715/Makefile
 @@ -33,7 +32,7 @@
  
  HEADERS = natpmp.h
@@ -30,15 +21,7 @@ diff -Naur libnatpmp-20110715.orig//Makefile libnatpmp-20110715/Makefile
  	python setup.py build
  	touch $@
  
-@@ -55,18 +54,17 @@
- 	python setup.py install
- 
- clean:
--	$(RM) $(OBJS) $(EXECUTABLES) $(STATICLIB) $(SHAREDLIB)
-+	$(RM) $(OBJS) $(EXECUTABLES) $(SHAREDLIB)
- 	$(RM) pythonmodule
- 	$(RM) -r build/ dist/
- 
+@@ -55,11 +54,10 @@
  depend:
  	makedepend -f$(MAKEFILE_LIST) -Y $(OBJS:.o=.c) 2>/dev/null
  
@@ -51,7 +34,7 @@ diff -Naur libnatpmp-20110715.orig//Makefile libnatpmp-20110715/Makefile
  	$(INSTALL) -m 644 $(SHAREDLIB) $(INSTALLDIRLIB)/$(SONAME)
  	$(INSTALL) -d $(INSTALLDIRBIN)
  	$(INSTALL) -m 755 natpmpc-shared $(INSTALLDIRBIN)/natpmpc
-@@ -76,19 +74,12 @@
+@@ -76,7 +74,6 @@
  	$(RM) $(addprefix $(INSTALLDIRINC), $(HEADERS))
  	$(RM) $(INSTALLDIRLIB)/$(SONAME)
  	$(RM) $(INSTALLDIRLIB)/$(SHAREDLIB)
@@ -59,15 +42,3 @@ diff -Naur libnatpmp-20110715.orig//Makefile libnatpmp-20110715/Makefile
  
  testgetgateway:	testgetgateway.o getgateway.o
  
--natpmpc-static:	natpmpc.o $(STATICLIB)
--	$(CC) $(LDFLAGS) -o $@ $^
--
- natpmpc-shared:	natpmpc.o $(SHAREDLIB)
- 	$(CC) $(LDFLAGS) -o $@ $^
- 
--$(STATICLIB):	$(LIBOBJS)
--	$(AR) crs $@ $?
--
- $(SHAREDLIB):	$(LIBOBJS)
- ifeq ($(OS), Darwin)
- 	$(CC) -dynamiclib -Wl,-install_name,$(SONAME) -o $@ $^

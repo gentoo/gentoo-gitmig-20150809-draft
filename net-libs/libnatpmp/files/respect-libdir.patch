@@ -1,14 +1,13 @@
-diff -Naur libnatpmp-20110808.orig//Makefile libnatpmp-20110808/Makefile
---- libnatpmp-20110808.orig//Makefile	2011-12-17 06:58:13.000000000 -0500
-+++ libnatpmp-20110808/Makefile	2011-12-17 06:58:54.000000000 -0500
+--- libnatpmp-20110808/Makefile
++++ libnatpmp-20110808/Makefile
 @@ -6,6 +6,7 @@
+ # (c) 2007-2011 Thomas Bernard
+ # http://miniupnp.free.fr/libnatpmp.html
  
- GENTOO_CFLAGS := $(CFLAGS)
- GENTOO_LDFLAGS := $(LDFLAGS)
-+GENTOO_LIBDIR ?= "lib"
- 
++GENTOO_LIBDIR ?= lib
  OS = $(shell uname -s)
  CC ?= gcc
+ INSTALL = install
 @@ -36,7 +37,7 @@
  
  INSTALLPREFIX ?= $(PREFIX)/usr
