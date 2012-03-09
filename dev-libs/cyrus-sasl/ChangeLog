@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.243 2012/03/08 15:01:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.244 2012/03/09 14:18:07 eras Exp $
+
+  09 Mar 2012; Eray Aslan <eras@gentoo.org> -cyrus-sasl-2.1.23-r1.ebuild,
+  -cyrus-sasl-2.1.23-r2.ebuild, -cyrus-sasl-2.1.23-r3.ebuild,
+  -cyrus-sasl-2.1.23-r4.ebuild, -cyrus-sasl-2.1.23-r5.ebuild:
+  remove old
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> cyrus-sasl-2.1.23-r6.ebuild:
   Marking cyrus-sasl-2.1.23-r6 ppc64 for bug 393387
