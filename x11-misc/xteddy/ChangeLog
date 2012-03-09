@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xteddy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.7 2011/11/19 04:20:20 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.8 2012/03/09 10:56:17 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xteddy-2.2.ebuild:
+  x86 stable wrt bug #404899
 
 *xteddy-2.2 (19 Nov 2011)
 
