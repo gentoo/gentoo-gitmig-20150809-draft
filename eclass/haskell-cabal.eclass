@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.27 2012/02/07 12:47:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.28 2012/03/09 22:01:11 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -95,7 +95,9 @@ done
 
 if [[ -n "${CABAL_USE_HADDOCK}" ]]; then
 	IUSE="${IUSE} doc"
-	DEPEND="${DEPEND} doc? ( dev-haskell/haddock )"
+	# don't require depend on itself to build docs.
+	# ebuild bootstraps docs from just built binary
+	[[ ${CATEGORY}/${PN} = "dev-haskell/haddock" ]] || DEPEND="${DEPEND} doc? ( dev-haskell/haddock )"
 fi
 
 if [[ -n "${CABAL_USE_HSCOLOUR}" ]]; then
