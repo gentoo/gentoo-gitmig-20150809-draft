@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.69 2012/03/06 21:18:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.70 2012/03/09 14:24:27 ranger Exp $
+
+  09 Mar 2012; Brent Baude <ranger@gentoo.org> junit-4.8.2-r1.ebuild:
+  Marking junit-4.8.2-r1 ppc64 for bug 403161
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> junit-4.8.2-r1.ebuild:
   Marking junit-4.8.2-r1 ppc for bug 403161
