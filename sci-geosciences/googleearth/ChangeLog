@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.28 2012/03/02 22:38:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.29 2012/03/09 19:22:58 caster Exp $
+
+  09 Mar 2012; Vlastimil Babka <caster@gentoo.org>
+  googleearth-6.2.1.6014-r1.ebuild:
+  Restore QA_DT_HASH variable, thanks to Oschtan, bug #401297.
 
 *googleearth-6.2.1.6014-r1 (02 Mar 2012)
 

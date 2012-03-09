@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-6.2.1.6014-r1.ebuild,v 1.1 2012/03/02 22:38:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-6.2.1.6014-r1.ebuild,v 1.2 2012/03/09 19:22:58 caster Exp $
 
 EAPI="4"
 
@@ -97,6 +97,8 @@ opt/googleearth/libcollada.so
 opt/googleearth/libbasicingest.so
 opt/googleearth/libbase.so
 opt/googleearth/libauth.so"
+
+QA_DT_HASH="opt/googleearth/.*"
 
 pkg_setup() {
 	GCC_VER="$(gcc-version)"
