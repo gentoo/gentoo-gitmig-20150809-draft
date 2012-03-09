@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.217 2012/03/06 20:29:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.218 2012/03/09 15:51:33 jer Exp $
+
+*sysstat-10.0.4 (09 Mar 2012)
+
+  09 Mar 2012; Jeroen Roovers <jer@gentoo.org>
+  files/sysstat-10.0.0-flags.patch, files/sysstat-10.0.0-nls.patch,
+  files/sysstat-10.0.1-nls.patch, +sysstat-10.0.4.ebuild,
+  +files/sysstat-10.0.4-flags.patch:
+  Version bump. Clean up patches.
 
   06 Mar 2012; Jeroen Roovers <jer@gentoo.org> -sysstat-10.0.1.ebuild:
   Old.

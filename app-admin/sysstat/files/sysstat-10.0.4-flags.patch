@@ -7,7 +7,7 @@
 -CFLAGS = @CFLAGS@ -Wall -Wstrict-prototypes -pipe -O2
 +CFLAGS = @CFLAGS@ -Wall -Wstrict-prototypes 
  DFLAGS = @DFLAGS@
--LFLAGS =  -s
+-LFLAGS = @STRIP@
  DFLAGS += -DSA_DIR=\"$(SA_DIR)\" -DSADC_PATH=\"$(SADC_PATH)\"
  DFLAGS += $(DFSENSORS)
  

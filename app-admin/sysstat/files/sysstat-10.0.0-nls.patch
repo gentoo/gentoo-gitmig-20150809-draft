@@ -1,5 +1,5 @@
---- a/Makefile.in	2011-03-06 16:46:23.000000000 +0100
-+++ b/Makefile.in	2011-03-15 17:19:36.000000000 +0100
+--- a/Makefile.in
++++ b/Makefile.in
 @@ -290,62 +290,14 @@
  
  install_nls: locales
