@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tie-IxHash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.33 2012/03/03 14:29:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.34 2012/03/09 09:43:04 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Tie-IxHash-1.220.0.ebuild:
+  x86 stable wrt bug #400243
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> Tie-IxHash-1.220.0.ebuild:
   Marking Tie-IxHash-1.220.0 ppc64 for bug 400243
