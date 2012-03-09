@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.87 2012/03/06 05:31:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.88 2012/03/09 21:55:22 slyfox Exp $
+
+  09 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/haddock-2.6.1-cabal-1.8.patch, haddock-2.6.1.ebuild:
+  Fix build failure against system's cabal-1.10 (use cabal bundled with ghc).
+  Fixes bug #383707 by Niklas Johansson and others.
 
 *haddock-2.10.0 (06 Mar 2012)
 
