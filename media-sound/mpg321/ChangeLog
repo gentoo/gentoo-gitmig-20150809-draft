@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.78 2012/01/03 20:58:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.79 2012/03/09 20:26:40 ssuominen Exp $
+
+*mpg321-0.3.1 (09 Mar 2012)
+
+  09 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +mpg321-0.3.1.ebuild:
+  Version bump.
 
   03 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> mpg321-0.3.0.ebuild:
   Pull in more recent media-libs/libao wrt #397529 by "MageSlayer"
