@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.321 2012/02/27 04:43:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.322 2012/03/09 14:44:33 ssuominen Exp $
+
+  09 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> dbus-1.4.18.ebuild:
+  amd64/ppc/ppc64 stable wrt #403843
 
   27 Feb 2012; Jeroen Roovers <jer@gentoo.org> dbus-1.4.18.ebuild:
   Stable for HPPA (bug #403843).
