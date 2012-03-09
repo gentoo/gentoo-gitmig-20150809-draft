@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-cbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.71 2012/03/03 14:35:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.72 2012/03/09 10:05:46 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  crypt-cbc-2.300.0.ebuild:
+  x86 stable wrt bug #400279
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> crypt-cbc-2.300.0.ebuild:
   Marking crypt-cbc-2.300.0 ppc64 for bug 400279
