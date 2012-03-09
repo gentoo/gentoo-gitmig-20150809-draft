@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.0.3.ebuild,v 1.10 2012/03/04 05:02:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.1.2.ebuild,v 1.1 2012/03/09 11:44:43 scarabeus Exp $
 
 EAPI=4
 
@@ -69,7 +69,7 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding +cups dbus debug eds gnome +graphite gstreamer +gtk gtk3
+IUSE="binfilter +branding +cups dbus debug eds gnome +graphite gstreamer +gtk
 jemalloc kde mysql +nsplugin odk opengl pdfimport postgres svg test +vba
 +webdav +xmlsec"
 LICENSE="LGPL-3"
@@ -117,7 +117,6 @@ COMMON_DEPEND="
 		gnome-base/orbit
 	)
 	gtk? ( >=x11-libs/gtk+-2.24:2 )
-	gtk3? ( >=x11-libs/gtk+-3.2:3 )
 	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
@@ -145,6 +144,7 @@ RDEPEND="${COMMON_DEPEND}
 	!app-office/openoffice
 	media-fonts/libertine-ttf
 	media-fonts/liberation-fonts
+	media-fonts/urw-fonts
 	cups? ( net-print/cups )
 	java? ( >=virtual/jre-1.6 )
 "
@@ -190,6 +190,8 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
+	# this can't be upstreamed :(
+	"${FILESDIR}/${PN}-system-pyuno.patch"
 )
 
 REQUIRED_USE="
@@ -296,6 +298,13 @@ src_prepare() {
 	eautoreconf
 	# hack in the autogen.sh
 	touch autogen.lastrun
+	# system pyuno mess
+	sed \
+		-e "s:%eprefix%:${EPREFIX}:g" \
+		-e "s:%libdir%:$(get_libdir):g" \
+		-i pyuno/source/module/uno.py \
+		-i scripting/source/pyprov/officehelper.py || die
+
 }
 
 src_configure() {
@@ -384,6 +393,7 @@ src_configure() {
 		--enable-randr-link \
 		--enable-release-build \
 		--enable-unix-qstart-libpng \
+		--enable-mergelibs \
 		--disable-ccache \
 		--disable-crashdump \
 		--disable-dependency-tracking \
@@ -435,7 +445,7 @@ src_configure() {
 		$(use_enable graphite) \
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
-		$(use_enable gtk3) \
+		--disable-gtk3 \
 		$(use_enable gtk systray) \
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
@@ -495,9 +505,8 @@ pkg_postinst() {
 
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 
-	if ! use cups ; then
-		ewarn 'You will need net-print/cups to be able to print with libreoffice.'
-	fi
+	use cups || \
+		ewarn 'You will need net-print/cups to be able to print and export to PDF with libreoffice.'
 }
 
 pkg_postrm() {
