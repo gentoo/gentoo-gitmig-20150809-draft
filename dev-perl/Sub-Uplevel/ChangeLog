@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Uplevel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.74 2012/03/03 14:24:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.75 2012/03/09 09:28:54 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Sub-Uplevel-0.220.0.ebuild:
+  x86 stable wrt bug #400223
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> Sub-Uplevel-0.220.0.ebuild:
   Marking Sub-Uplevel-0.220.0 ppc64 for bug 400223
