@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/chntpw
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.19 2011/05/16 16:09:59 c1pher Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.20 2012/03/09 08:35:48 radhermit Exp $
+
+  09 Mar 2012; Tim Harder <radhermit@gentoo.org> chntpw-110511.ebuild:
+  Update to EAPI 4, only build static binaries when the static use flag is set,
+  and add dependency on openssl[static-libs] for static builds (fixes bug
+  #402629).
 
 *chntpw-110511 (16 May 2011)
 

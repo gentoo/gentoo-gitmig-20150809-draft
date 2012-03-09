@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/chntpw-110511.ebuild,v 1.1 2011/05/16 16:09:59 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/chntpw-110511.ebuild,v 1.2 2012/03/09 08:35:48 radhermit Exp $
 
-EAPI=2
+EAPI=4
 inherit toolchain-funcs
 
 DESCRIPTION="Offline Windows NT Password & Registry Editor"
@@ -16,29 +16,32 @@ IUSE="static"
 
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}
-	app-arch/unzip"
+	app-arch/unzip
+	static? ( dev-libs/openssl[static-libs] )"
 
 src_prepare() {
-	sed -i \
-		-e '/-o/s:$(CC):$(CC) $(LDFLAGS):' \
-		Makefile || die
+	sed -i -e '/-o/s:$(CC):$(CC) $(LDFLAGS):' Makefile || die
 
-	emake clean || die
+	if ! use static ; then
+		sed -i -e "/^all:/s/ \(chntpw\|reged\).static//g" Makefile || die
+	fi
+
+	emake clean
 }
 
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS} -DUSEOPENSSL -Wall" \
-		LIBS="-lcrypto" || die
+		LIBS="-lcrypto"
 }
 
 src_install() {
-	dobin chntpw cpnt reged || die
+	dobin chntpw cpnt reged
 
 	if use static; then
-		dobin {chntpw,reged}.static || die
+		dobin {chntpw,reged}.static
 	fi
 
-	dodoc {HISTORY,README,regedit,WinReg}.txt || die
+	dodoc {HISTORY,README,regedit,WinReg}.txt
 }
