@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/rtkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.23 2012/03/06 21:57:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.24 2012/03/09 11:05:21 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> rtkit-0.10.ebuild:
+  x86 stable wrt bug #400495
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> rtkit-0.10.ebuild:
   Marking rtkit-0.10 ppc64 for bug 400495
