@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.75 2012/03/09 09:21:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.76 2012/03/09 14:27:56 ranger Exp $
+
+  09 Mar 2012; Brent Baude <ranger@gentoo.org> SOAP-Lite-0.714.0.ebuild:
+  Marking SOAP-Lite-0.714.0 ppc64 for bug 400211
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   SOAP-Lite-0.714.0.ebuild:
