@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/Lingua-Stem-0.840.0.ebuild,v 1.2 2012/02/24 10:22:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/Lingua-Stem-0.840.0.ebuild,v 1.3 2012/03/09 08:46:03 phajdan.jr Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Porter's stemming algorithm for 'generic' English"
 
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-perl/Snowball-Norwegian
