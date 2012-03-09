@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-wnck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.53 2012/02/27 22:05:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.54 2012/03/09 10:13:54 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome2-wnck-0.160.0.ebuild:
+  x86 stable wrt bug #400291
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> gnome2-wnck-0.160.0.ebuild:
   Marking gnome2-wnck-0.160.0 ppc for bug 400291
