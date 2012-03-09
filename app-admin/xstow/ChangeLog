@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xstow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.14 2012/02/23 17:30:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.15 2012/03/09 11:16:32 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xstow-1.0.0-r1.ebuild:
+  x86 stable wrt bug #404595
 
   23 Feb 2012; Brent Baude <ranger@gentoo.org> xstow-1.0.0-r1.ebuild:
   Marking xstow-1.0.0-r1 ppc for bug 404595
