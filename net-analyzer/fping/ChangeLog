@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.42 2012/03/08 21:28:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.43 2012/03/09 14:27:02 ranger Exp $
+
+  09 Mar 2012; Brent Baude <ranger@gentoo.org> fping-3.0.ebuild:
+  Marking fping-3.0 ppc64 for bug 407153
 
   08 Mar 2012; Markos Chandras <hwoarang@gentoo.org> fping-3.0.ebuild:
   Stable on amd64 wrt bug #407153
