@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.82 2012/03/09 22:44:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.83 2012/03/09 23:14:46 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin.eclass
 # @MAINTAINER:
@@ -588,6 +588,10 @@ vdr-plugin_pkg_postinst() {
 
 vdr-plugin_pkg_postrm() {
 	delete_orphan_plugindb_file
+}
+
+vdr-plugin_pkg_config() {
+:
 }
 
 case "${EAPI:-0}" in
