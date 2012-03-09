@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.177 2012/02/26 04:10:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.178 2012/03/09 12:15:12 radhermit Exp $
+
+*mediawiki-1.19.0_beta1 (09 Mar 2012)
+
+  09 Mar 2012; Tim Harder <radhermit@gentoo.org>
+  +mediawiki-1.19.0_beta1.ebuild:
+  Version bump.
 
   26 Feb 2012; Tim Harder <radhermit@gentoo.org> mediawiki-1.18.1.ebuild,
   +files/postinstall-1.18-en.txt:
