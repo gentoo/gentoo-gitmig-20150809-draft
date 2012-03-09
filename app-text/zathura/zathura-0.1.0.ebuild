@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.1.0.ebuild,v 1.3 2012/03/08 14:43:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.1.0.ebuild,v 1.4 2012/03/09 11:26:30 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -46,4 +46,8 @@ src_compile() {
 src_install() {
 	emake "${myzathuraconf[@]}" install
 	dodoc AUTHORS
+}
+
+pkg_postinst() {
+	elog "You need to install app-text/zathura-pdf-poppler to get PDF support."
 }

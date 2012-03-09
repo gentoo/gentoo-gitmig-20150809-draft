@@ -1,6 +1,10 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.25 2012/03/08 09:10:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.26 2012/03/09 11:26:30 ssuominen Exp $
+
+  09 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> zathura-0.1.0.ebuild:
+  pkg_postinst() message about the separate app-text/zathura-pdf-poppler
+  plug-in wrt #405289, Comment #5 by Ben Kohler
 
   08 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> zathura-0.1.0.ebuild:
   Use GTK+-2 for now because zathura-pdf-poppler plug-in is still GTK+-2.
