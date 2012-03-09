@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/spyder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.25 2012/02/25 01:58:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.26 2012/03/09 09:12:03 patrick Exp $
+
+*spyder-2.1.7 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> +spyder-2.1.7.ebuild:
+  Bump
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> spyder-2.1.2.ebuild,
   spyder-2.1.6.ebuild:
