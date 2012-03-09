@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-CRC
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.8 2012/03/01 16:17:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.9 2012/03/09 10:33:25 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Digest-CRC-0.180.0.ebuild:
+  x86 stable wrt bug #405621
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)
