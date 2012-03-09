@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/yolk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.13 2011/07/20 17:55:39 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.14 2012/03/09 08:08:55 patrick Exp $
+
+*yolk-0.4.3 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> +yolk-0.4.3.ebuild:
+  Bump for 405605
 
   20 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> -yolk-0.4.1.ebuild:
   Removed older version
