@@ -1,16 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20110118-r1.ebuild,v 1.2 2011/02/07 22:21:51 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20120114.ebuild,v 1.1 2012/03/09 00:35:58 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit vdr-plugin ssl-cert
 
 DESCRIPTION="VDR Plugin: Web Access To Settings"
 HOMEPAGE="http://live.vdr-developer.org"
-#SRC_URI="http://live.vdr-developer.org/downloads/${P}.tar.gz"
-SRC_URI="mirror://gentoo/${P}.tar.gz
-		http://vdr.websitec.de/download/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +17,8 @@ IUSE="ssl"
 
 DEPEND="media-video/vdr
 	>=dev-libs/tntnet-2.0[ssl=,sdk]
-	>=dev-libs/cxxtools-2.0"
+	>=dev-libs/cxxtools-2.0
+	>=dev-libs/libpcre-8.12[cxx]"
 
 RDEPEND="${DEPEND}"
 
@@ -51,6 +50,8 @@ src_prepare() {
 
 	sed -e "s/ERROR:/WARNING:/" -i tntconfig.cpp
 
+	sed -i "s:^HAVE_LIBPCRECPP:#HAVE_LIBPCRECPP:" Makefile
+
 	if ! has_version ">=media-video/vdr-1.7.13"; then
 	sed -i "s:-include \$(VDRDIR)/Make.global:#-include \$(VDRDIR)/Make.global:" Makefile
 	fi
@@ -67,23 +68,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	vdr-plugin_pkg_postinst
 
-	elog "To be able to use all functions of vdr-live"
-	elog "you should emerge and enable"
-	elog "=media-plugins/vdr-epgsearch-0.9.25_beta* to search the EPG,"
-	elog "media-plugins/vdr-streamdev-0.5.0 for Live-TV streaming"
-	echo
-	elog "On first install use login:pass"
-	elog "\tadmin:live"
-	echo
-	ewarn "This is a developer snapshot"
-	einfo "On problems, use the stable amd64, x86 versions of"
-	einfo "dev-libs/tntnet dev-libs/cxxtools media-plugins/vdr-live"
-
-	# Do not install live.{key,crt) SSL certificates if they already exist
-	if use ssl && [[ ! -f "${ROOT}"/etc/vdr/plugins/live/live.key \
-		&& ! -f "${ROOT}"/etc/vdr/plugins/live/live.crt ]] ; then
+	if use ssl ; then
+		if path_exists -a "${ROOT}"/etc/vdr/plugins/live/live.key; then
+			einfo "SSL cert exists"
+			einfo ""
+			einfo "simply to create a new SSL cert remove:"
+			einfo "/etc/vdr/plugins/live/{live.key,live.crt}"
+			einfo "and reinstall ${P}"
+		else
+			einfo "Create SSL cert"
 			make_live_cert
 			local base=$(get_base 1)
 			local keydir="/etc/vdr/plugins/live"
@@ -91,5 +85,21 @@ pkg_postinst() {
 			install -m0400 "${base}.key" "${ROOT}${keydir}/live.key"
 			install -m0444 "${base}.crt" "${ROOT}${keydir}/live.crt"
 			chown vdr:vdr "${ROOT}"/etc/vdr/plugins/live/live.*
+		fi
 	fi
+
+	elog "To be able to use all functions of vdr-live"
+	elog "you should emerge and enable"
+	elog "=media-plugins/vdr-epgsearch-0.9.25_beta* to search the EPG,"
+	elog "media-plugins/vdr-streamdev-0.5.0 for Live-TV streaming"
+
+	elog "On first install use login:pass"
+	elog "\tadmin:live"
+
+	ewarn "\t\tWARNiNG!!!"
+	ewarn "This is a developer snapshot"
+	einfo "On problems, use the stable amd64, x86 versions of"
+	einfo "dev-libs/tntnet dev-libs/cxxtools media-plugins/vdr-live"
+
+	vdr-plugin_pkg_postinst
 }
