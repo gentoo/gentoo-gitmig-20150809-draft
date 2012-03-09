@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1.ebuild,v 1.2 2011/08/25 17:59:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1.ebuild,v 1.3 2012/03/09 18:14:14 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 inherit autotools-utils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://people.freedesktop.org/~cbrill/${PN}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RESTRICT="bindist"
@@ -36,7 +36,9 @@ src_compile() {
 
 src_install() {
 	foreachabi autotools-utils_src_install
-	remove_libtool_files all
+	#remove_libtool_files all
+	# above spits boring warning
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
