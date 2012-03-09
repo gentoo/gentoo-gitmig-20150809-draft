@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.83 2012/03/08 21:18:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.84 2012/03/09 11:30:45 radhermit Exp $
+
+  09 Mar 2012; Tim Harder <radhermit@gentoo.org> -latex-beamer-3.10-r1.ebuild,
+  -files/latex-beamer-3.10-polish-translator.patch:
+  Remove old.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> latex-beamer-3.11.ebuild:
   Marking latex-beamer-3.11 ppc64 for bug 387573

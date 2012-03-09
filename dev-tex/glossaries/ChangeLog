@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.48 2012/03/08 21:19:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.49 2012/03/09 11:31:52 radhermit Exp $
+
+  09 Mar 2012; Tim Harder <radhermit@gentoo.org> -glossaries-2.07.ebuild:
+  Remove old.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> glossaries-3.01.ebuild:
   Marking glossaries-3.01 ppc64 for bug 387579
