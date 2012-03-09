@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.17 2012/02/24 10:57:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.18 2012/03/09 10:32:19 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> icalendar-2.2.ebuild:
+  x86 stable wrt bug #400327
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> icalendar-2.2.ebuild:
   Stable for amd64, wrt bug #400327
