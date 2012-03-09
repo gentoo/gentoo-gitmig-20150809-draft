@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.91 2012/03/03 20:05:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.92 2012/03/09 02:47:49 naota Exp $
+
+  09 Mar 2012; Naohiro Aota <naota@gentoo.org>
+  +files/minicom-2.6-etimeout.patch, minicom-2.6.ebuild:
+  Add ~x86-fbsd; Add upstream patch to use ETIMEOUT instead of ETIME. Bug
+  #397747
 
   03 Mar 2012; Tim Harder <radhermit@gentoo.org> -minicom-2.4.ebuild:
   Remove old.
