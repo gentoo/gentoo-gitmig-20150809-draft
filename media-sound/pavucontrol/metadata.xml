@@ -6,9 +6,4 @@
     <email>ford_prefect@gentoo.org</email>
     <name>Arun Raghavan</name>
   </maintainer>
-  <use>
-    <flag name="gtk3">
-	  Build against GTK+ 3 rather than 2 (which is the default).
-    </flag>
-  </use>
 </pkgmetadata>
