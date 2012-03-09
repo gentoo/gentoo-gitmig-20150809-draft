@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/config-general
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.73 2012/03/03 14:33:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.74 2012/03/09 10:02:07 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  config-general-2.500.0.ebuild:
+  x86 stable wrt bug #400275
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> config-general-2.500.0.ebuild:
   Marking config-general-2.500.0 ppc64 for bug 400275
