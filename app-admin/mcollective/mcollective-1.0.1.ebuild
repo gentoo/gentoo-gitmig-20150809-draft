@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/mcollective-1.0.1.ebuild,v 1.1 2011/03/01 02:18:33 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/mcollective-1.0.1.ebuild,v 1.2 2012/03/09 05:20:10 ramereth Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://puppetlabs.com/downloads/mcollective/${P}.tgz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc +client"
 
 DEPEND=""
