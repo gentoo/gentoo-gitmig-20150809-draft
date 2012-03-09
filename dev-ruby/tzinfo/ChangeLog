@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.99 2012/03/08 15:20:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.100 2012/03/09 06:52:03 graaff Exp $
+
+  09 Mar 2012; Hans de Graaff <graaff@gentoo.org> -tzinfo-0.3.27.ebuild:
+  Remove old version.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> tzinfo-0.3.31.ebuild:
   Marking tzinfo-0.3.31 ppc64 for bug 393667

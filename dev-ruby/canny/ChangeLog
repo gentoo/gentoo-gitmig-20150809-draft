@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/canny
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.13 2012/03/08 17:34:18 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.14 2012/03/09 06:54:16 graaff Exp $
+
+  09 Mar 2012; Hans de Graaff <graaff@gentoo.org> -canny-0.1.0.ebuild:
+  Remove old version.
 
   08 Mar 2012; Naohiro Aota <naota@gentoo.org> canny-0.1.0-r1.ebuild:
   Add ~x86-fbsd.
