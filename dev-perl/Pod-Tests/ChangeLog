@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Tests
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.23 2012/02/27 16:23:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.24 2012/03/09 09:18:20 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Pod-Tests-1.190.0.ebuild:
+  x86 stable wrt bug #400205
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> Pod-Tests-1.190.0.ebuild:
   Marking Pod-Tests-1.190.0 ppc for bug 400205
