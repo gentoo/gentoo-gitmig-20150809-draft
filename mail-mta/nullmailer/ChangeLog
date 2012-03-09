@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.42 2012/02/27 21:57:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.43 2012/03/09 11:09:57 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nullmailer-1.05.ebuild:
+  x86 stable wrt bug #400367
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> nullmailer-1.05.ebuild:
   Marking nullmailer-1.05 ppc for bug 400367
