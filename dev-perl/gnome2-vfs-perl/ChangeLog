@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.48 2012/02/27 22:04:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.49 2012/03/09 10:12:45 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome2-vfs-perl-1.81.0.ebuild:
+  x86 stable wrt bug #400289
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> gnome2-vfs-perl-1.81.0.ebuild:
   Marking gnome2-vfs-perl-1.81.0 ppc for bug 400289

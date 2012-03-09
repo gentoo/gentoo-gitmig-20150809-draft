@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.81.0.ebuild,v 1.3 2012/02/27 22:04:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.81.0.ebuild,v 1.4 2012/03/09 10:12:46 phajdan.jr Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="Perl interface to the 2.x series of the Gnome Virtual File System l
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=gnome-base/gnome-vfs-2
