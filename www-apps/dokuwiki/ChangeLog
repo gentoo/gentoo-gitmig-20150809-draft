@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/dokuwiki
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.56 2011/08/19 16:29:45 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.57 2012/03/09 04:56:24 ramereth Exp $
+
+*dokuwiki-20120125 (09 Mar 2012)
+
+  09 Mar 2012; Lance Albertson <ramereth@gentoo.org> +dokuwiki-20120125.ebuild:
+  Version bump
 
   19 Aug 2011; Thomas Kahle <tomka@gentoo.org> dokuwiki-20110525a.ebuild:
   x86 stable per bug 372283
