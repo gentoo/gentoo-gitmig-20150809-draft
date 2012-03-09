@@ -16,6 +16,7 @@
     <flag name="amr">Enables Adaptive Multi-Rate Audio support</flag>
 	<flag name="aviocat">Install aviocat: cat's an URL to another one, useful for dumping streams.</flag>
     <flag name="avx">Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)</flag>
+	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
     <flag name="cdio">Enables audio CD grabbing with <pkg>dev-libs/libcdio</pkg>.</flag>
 	<flag name="celt">Adds Xiph CELT audio decoding support via <pkg>media-libs/celt</pkg></flag>
     <flag name="cpudetection">Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)</flag>

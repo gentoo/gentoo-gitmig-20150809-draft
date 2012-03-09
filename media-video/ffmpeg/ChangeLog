@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.526 2012/02/28 21:01:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.527 2012/03/09 09:46:50 aballier Exp $
+
+  09 Mar 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add bluray useflag
 
   28 Feb 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
   metadata.xml:
