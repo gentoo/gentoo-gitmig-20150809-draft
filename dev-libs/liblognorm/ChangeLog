@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liblognorm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.9 2012/02/24 20:02:00 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.10 2012/03/09 09:48:56 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  liblognorm-0.3.2-r1.ebuild:
+  x86 stable wrt bug #402163
 
 *liblognorm-0.3.3 (24 Feb 2012)
 
