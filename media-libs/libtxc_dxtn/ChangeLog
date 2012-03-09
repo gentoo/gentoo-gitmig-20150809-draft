@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtxc_dxtn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/ChangeLog,v 1.3 2012/03/09 18:14:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/ChangeLog,v 1.4 2012/03/09 18:39:32 mgorny Exp $
+
+  09 Mar 2012; Michał Górny <mgorny@gentoo.org> libtxc_dxtn-1.0.1.ebuild:
+  Remove pointless no-op find call. Please learn to read comments on bugs
+  first, and test your very stupid changes before committing.
 
   09 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> libtxc_dxtn-1.0.1.ebuild:
   Stable 1.0.1 on both amd64 and x86 as it does what it should.
