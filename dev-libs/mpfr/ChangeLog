@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/mpfr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.146 2011/12/29 21:57:48 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.147 2012/03/09 19:57:25 vapier Exp $
+
+*mpfr-3.1.0_p7 (09 Mar 2012)
+
+  09 Mar 2012; Mike Frysinger <vapier@gentoo.org> +files/3.1.0/patch01,
+  +files/3.1.0/patch02, +files/3.1.0/patch03, +files/3.1.0/patch04,
+  +files/3.1.0/patch05, +files/3.1.0/patch06, +files/3.1.0/patch07,
+  +mpfr-3.1.0_p7.ebuild:
+  Version bump #407551 by Samuli Suominen.
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> mpfr-3.0.1_p4.ebuild:
   Stable for ppc/ppc64; bug #380673
