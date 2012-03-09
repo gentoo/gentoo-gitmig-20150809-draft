@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.3 2012/02/27 21:42:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.4 2012/03/09 15:11:59 scarabeus Exp $
+
+*libcdr-0.0.4 (09 Mar 2012)
+
+  09 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libcdr-0.0.4.ebuild:
+  Add some release as i forgot to do this.
 
   27 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcdr-9999.ebuild:
   Use actual slot.
