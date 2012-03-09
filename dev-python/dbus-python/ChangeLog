@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.88 2012/02/29 16:51:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.89 2012/03/09 14:48:12 ssuominen Exp $
+
+  09 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> dbus-python-1.0.0.ebuild:
+  amd64/ppc/ppc64 stable wrt #403843
 
   29 Feb 2012; Mike Gilbert <floppym@gentoo.org>
   +files/dbus-python-1.0.0-test-socket-tmpdir.patch, dbus-python-1.0.0.ebuild:
