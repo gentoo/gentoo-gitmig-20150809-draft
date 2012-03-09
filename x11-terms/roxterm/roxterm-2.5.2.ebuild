@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.5.2.ebuild,v 1.2 2012/03/08 15:09:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.5.2.ebuild,v 1.3 2012/03/09 12:09:32 ssuominen Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
-inherit gnome2-utils python
+inherit gnome2-utils python toolchain-funcs
 
 DESCRIPTION="A terminal emulator designed to integrate with the ROX environment"
 HOMEPAGE="http://roxterm.sourceforge.net/"
@@ -41,13 +41,14 @@ src_prepare() {
 	sed -i -e '/ctx.install_doc/s:COPYING ::' mscript.py || die
 	sed -i -e "/CFLAGS/s:-O2 -g:${CFLAGS}:" {maitch,mscript}.py || die
 	sed -i \
+		-e 's:gcc:${CC}:' \
 		-e "/LDFLAGS/s:'':'${LDFLAGS}':" \
 		-e 's:--mode=link:--mode=link --tag=CC:' \
 		maitch.py || die
 }
 
 src_configure() {
-	local myconf=( --prefix=/usr --docdir=/usr/share/doc/${PF} --destdir="${D}" )
+	local myconf=( GCC="$(tc-getCC)" --prefix=/usr --docdir=/usr/share/doc/${PF} --destdir="${D}" )
 	use nls || myconf+=( --disable-gettext --disable-po4a --disable-translations )
 	./mscript.py configure "${myconf[@]}"
 }
