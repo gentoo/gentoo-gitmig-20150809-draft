@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/servlet-api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.37 2012/03/08 11:28:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.38 2012/03/09 14:23:35 ranger Exp $
+
+  09 Mar 2012; Brent Baude <ranger@gentoo.org> servlet-api-2.5-r1.ebuild:
+  Marking servlet-api-2.5-r1 ppc64 for bug 405439
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   servlet-api-2.5-r1.ebuild:
