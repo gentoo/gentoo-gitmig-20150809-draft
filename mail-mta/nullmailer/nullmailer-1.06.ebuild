@@ -1,13 +1,16 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.04.ebuild,v 1.9 2011/03/28 09:34:54 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.06.ebuild,v 1.1 2012/03/09 14:28:32 eras Exp $
 
 inherit eutils flag-o-matic autotools
 
 MY_P="${P/_rc/RC}"
 S=${WORKDIR}/${MY_P}
-DEBIAN_PV="1"
-DEBIAN_SRC="${MY_P/-/_}-${DEBIAN_PV}.diff.gz"
+DEBIAN_PV=1.04
+DEBIAN_PR="1"
+DEBIAN_P="${PN}-${DEBIAN_PV}"
+DEBIAN_PF="${DEBIAN_P/-/_}-${DEBIAN_PR}"
+DEBIAN_SRC="${DEBIAN_PF}.diff.gz"
 DESCRIPTION="Simple relay-only local mail transport agent"
 SRC_URI="http://untroubled.org/${PN}/archive/${MY_P}.tar.gz
 		mirror://debian/pool/main/n/${PN}/${DEBIAN_SRC}"
@@ -15,7 +18,7 @@ HOMEPAGE="http://untroubled.org/nullmailer/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
@@ -64,7 +67,7 @@ src_compile() {
 
 src_install () {
 	einstall localstatedir="${D}"/var/nullmailer || die "einstall failed"
-	dodoc AUTHORS BUGS HOWTO INSTALL ChangeLog NEWS README YEAR2000 TODO
+	dodoc AUTHORS BUGS HOWTO INSTALL ChangeLog NEWS README TODO
 	# A small bit of sample config
 	insinto /etc/nullmailer
 	newins "${FILESDIR}"/remotes.sample-1.04 remotes
