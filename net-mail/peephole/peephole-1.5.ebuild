@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/peephole-1.5.ebuild,v 1.2 2012/03/07 20:30:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/peephole-1.5.ebuild,v 1.3 2012/03/09 09:40:39 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/peephole/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/openssl-0.9.7d-r1"

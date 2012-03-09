@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/peephole
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/ChangeLog,v 1.13 2012/03/07 20:30:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/ChangeLog,v 1.14 2012/03/09 09:40:39 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> peephole-1.5.ebuild:
+  x86 stable wrt bug #400445
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> peephole-1.5.ebuild:
   Marking peephole-1.5 ppc for bug 400445
