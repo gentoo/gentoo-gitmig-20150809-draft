@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyside-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.13 2011/12/21 17:59:43 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.14 2012/03/09 00:13:23 pesa Exp $
+
+*pyside-tools-0.2.13-r1 (09 Mar 2012)
+
+  09 Mar 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/0.2.13-fix-pysideuic-test-and-install.patch,
+  +pyside-tools-0.2.13-r1.ebuild, metadata.xml, pyside-tools-0.2.13.ebuild:
+  Revbump: ebuild rewritten to support multiple python ABIs (bug #401549).
 
   21 Dec 2011; Mike Gilbert <floppym@gentoo.org> pyside-tools-0.2.13.ebuild:
   Call python_mod_optimize to byte-compile python modules. Patch by Chris Mayo
