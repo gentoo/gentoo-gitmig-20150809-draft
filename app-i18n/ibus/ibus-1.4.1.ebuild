@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.1.ebuild,v 1.5 2012/03/09 14:43:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.1.ebuild,v 1.6 2012/03/09 19:33:27 ssuominen Exp $
 
-EAPI="3"
+EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
+
 inherit confutils eutils gnome2-utils multilib python autotools
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
@@ -13,12 +14,12 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
-IUSE="dconf doc +gconf gtk gtk3 introspection nls +python vala X"
+IUSE="dconf doc +gconf gtk gtk3 +introspection nls +python vala X"
 
-RDEPEND=">=dev-libs/glib-2.26:2
+RDEPEND=">=dev-libs/glib-2.26
 	dconf? ( >=gnome-base/dconf-0.7.5 )
 	gconf? ( >=gnome-base/gconf-2.12:2 )
-	gnome-base/librsvg:2
+	gnome-base/librsvg
 	sys-apps/dbus[X?]
 	app-text/iso-codes
 	gtk? ( x11-libs/gtk+:2 )
@@ -38,7 +39,6 @@ RDEPEND=">=dev-libs/glib-2.26:2
 #	vala? ( dev-lang/vala )
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
-	dev-perl/XML-Parser
 	dev-util/intltool
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
@@ -50,6 +50,8 @@ RDEPEND="${RDEPEND}
 	)"
 
 RESTRICT="test"
+
+DOCS="AUTHORS ChangeLog NEWS README"
 
 update_gtk_immodules() {
 	local GTK2_CONFDIR="/etc/gtk-2.0"
@@ -81,11 +83,13 @@ pkg_setup() {
 
 src_prepare() {
 	>py-compile #397497
-	echo "ibus/_config.py" >> po/POTFILES.skip || die
+	echo ibus/_config.py >> po/POTFILES.skip
 
 	epatch \
+		"${FILESDIR}"/${PN}-gconf-2.m4.patch \
 		"${FILESDIR}"/${PN}-1.4.0-machine-id-fallback.patch
-	use gconf || epatch "${FILESDIR}/${P}-no-gconf.patch"
+
+	use gconf || epatch "${FILESDIR}"/${P}-no-gconf.patch
 
 	eautoreconf
 }
@@ -104,21 +108,18 @@ src_configure() {
 		$(use_enable python) \
 		$(use_enable vala) \
 		$(use_enable X xim) \
-		PYTHON="$(PYTHON)" || die
+		PYTHON="$(PYTHON)"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
-	find "${ED}" -name '*.la' -type f -delete || die
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	insinto /etc/X11/xinit/xinput.d
-	newins xinput-ibus ibus.conf || die
+	newins xinput-ibus ibus.conf
 
-	# bug 289547
-	keepdir /usr/share/ibus/{engine,icons} || die
-
-	dodoc AUTHORS ChangeLog NEWS README || die
+	keepdir /usr/share/ibus/{engine,icons} #289547
 }
 
 pkg_preinst() {
