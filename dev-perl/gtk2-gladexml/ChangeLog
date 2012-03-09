@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-gladexml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.47 2012/03/03 14:40:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.48 2012/03/09 10:17:34 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gtk2-gladexml-1.7.0.ebuild:
+  x86 stable wrt bug #400297
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> gtk2-gladexml-1.7.0.ebuild:
   Marking gtk2-gladexml-1.7.0 ppc64 for bug 400297
