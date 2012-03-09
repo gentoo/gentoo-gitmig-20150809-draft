@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Number-Compare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Compare/ChangeLog,v 1.26 2012/03/03 14:20:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Compare/ChangeLog,v 1.27 2012/03/09 09:10:00 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Number-Compare-0.30.0.ebuild:
+  x86 stable wrt bug #400193
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> Number-Compare-0.30.0.ebuild:
   Marking Number-Compare-0.30.0 ppc64 for bug 400193
