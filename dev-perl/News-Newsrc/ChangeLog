@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/News-Newsrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.20 2012/02/25 18:00:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.21 2012/03/09 09:06:31 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  News-Newsrc-1.90.0.ebuild:
+  x86 stable wrt bug #400189
 
   25 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
   News-Newsrc-1.90.0.ebuild:
