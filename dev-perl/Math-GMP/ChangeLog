@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-GMP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/ChangeLog,v 1.28 2012/02/27 16:02:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/ChangeLog,v 1.29 2012/03/09 08:56:12 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> Math-GMP-2.60.0.ebuild:
+  x86 stable wrt bug #400173
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> Math-GMP-2.60.0.ebuild:
   Marking Math-GMP-2.60.0 ppc for bug 400173
