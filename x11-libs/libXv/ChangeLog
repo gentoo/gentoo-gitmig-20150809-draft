@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.68 2011/02/14 23:08:48 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.69 2012/03/09 00:02:18 chithanh Exp $
+
+*libXv-1.0.7 (09 Mar 2012)
+
+  09 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXv-1.0.7.ebuild:
+  Version bump.
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> libXv-1.0.6.ebuild:
   ppc stable wrt #344827, #354237

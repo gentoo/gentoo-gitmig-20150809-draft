@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.100 2011/06/22 18:33:06 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.101 2012/03/08 23:57:17 chithanh Exp $
+
+*libXt-1.1.2 (08 Mar 2012)
+
+  08 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXt-1.1.2.ebuild:
+  Version bump.
 
   22 Jun 2011; Fabian Groffen <grobian@gentoo.org> libXt-1.1.1.ebuild:
   Marked ~x64-macos, bug #371861
