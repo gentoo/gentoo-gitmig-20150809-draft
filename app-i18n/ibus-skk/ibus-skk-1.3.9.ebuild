@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-1.3.9.ebuild,v 1.3 2012/03/09 19:56:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-1.3.9.ebuild,v 1.4 2012/03/09 19:56:43 ssuominen Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="mirror://github/ueno/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND=">=app-i18n/ibus-1.3
