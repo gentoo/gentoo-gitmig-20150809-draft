@@ -1,12 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.18.ebuild,v 1.3 2012/03/09 14:44:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.18.ebuild,v 1.4 2012/03/09 21:43:57 ssuominen Exp $
 
 EAPI=4
-
-PYTHON_DEPEND="test? 2:2.7"
-PYTHON_USE_WITH_OPT="test"
-
 inherit autotools eutils multilib flag-o-matic python systemd virtualx
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
@@ -34,8 +30,10 @@ DEPEND="${RDEPEND}
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/xmlto
 		)
-	test? ( >=dev-libs/glib-2.28 )
-	!<dev-libs/glib-2.30.1-r2:2"
+	test? (
+		>=dev-libs/glib-2.28
+		dev-lang/python:2.7
+		)"
 
 # out of sources build directory
 BD=${WORKDIR}/${P}-build
