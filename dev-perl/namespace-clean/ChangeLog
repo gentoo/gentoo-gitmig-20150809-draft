@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/namespace-clean
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.21 2012/03/07 19:23:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.22 2012/03/09 10:23:23 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  namespace-clean-0.210.0.ebuild:
+  x86 stable wrt bug #400307
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> namespace-clean-0.210.0.ebuild:
   Marking namespace-clean-0.210.0 ~ppc for bug 400307
