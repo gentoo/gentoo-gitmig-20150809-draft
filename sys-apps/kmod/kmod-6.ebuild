@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-6.ebuild,v 1.1 2012/03/08 01:54:59 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-6.ebuild,v 1.2 2012/03/09 23:51:10 williamh Exp $
 
 EAPI=4
 
@@ -20,9 +20,7 @@ HOMEPAGE="http://git.kernel.org/?p=utils/kernel/kmod/kmod.git"
 
 LICENSE="LGPL-2"
 SLOT="0"
-IUSE="+compat doc debug lzma static-libs +tools zlib"
-
-REQUIRED_USE="compat? ( tools )"
+IUSE="doc debug lzma static-libs +tools zlib"
 
 COMMON_DEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
@@ -65,7 +63,7 @@ src_install()
 	# we have a .pc file for people to use
 	find "${D}" -name libkmod.la -delete
 
-	if use compat && use tools; then
+	if use tools; then
 	dodir /bin
 dosym /usr/bin/kmod /bin/lsmod
 		dodir /sbin
