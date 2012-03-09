@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.9 2012/03/05 21:37:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.10 2012/03/09 08:51:24 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bitcoind-0.5.1.ebuild:
+  x86 stable wrt bug #405211
 
 *bitcoind-0.5.3_rc3 (05 Mar 2012)
 *bitcoind-0.5.0.4_rc3 (05 Mar 2012)
