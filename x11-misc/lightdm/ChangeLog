@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.29 2012/03/09 21:08:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.30 2012/03/09 21:29:06 hwoarang Exp $
+
+  09 Mar 2012; Markos Chandras <hwoarang@gentoo.org> lightdm-1.1.7.ebuild:
+  remove vala dependency. Thanks to ssuominen@gentoo.org
 
 *lightdm-1.1.7 (09 Mar 2012)
 
