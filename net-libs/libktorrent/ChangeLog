@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libktorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.28 2012/01/04 18:17:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.29 2012/03/09 15:59:15 ranger Exp $
+
+  09 Mar 2012; Brent Baude <ranger@gentoo.org> libktorrent-1.1.2.ebuild:
+  Marking libktorrent-1.1.2 ppc for bug 394867
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libktorrent-1.1.2.ebuild:
