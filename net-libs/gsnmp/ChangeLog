@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gsnmp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.4 2011/11/28 06:11:55 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.5 2012/03/09 16:48:24 jer Exp $
+
+  09 Mar 2012; Jeroen Roovers <jer@gentoo.org> gsnmp-0.3.0.ebuild,
+  +files/gsnmp-0.3.0-g_access.patch:
+  Add missing include.
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org> gsnmp-0.3.0.ebuild:
   Bump to EAPI 4 and fix autotools-utils usage (bug #392107).
