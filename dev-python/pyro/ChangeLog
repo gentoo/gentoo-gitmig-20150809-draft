@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.56 2012/02/27 15:25:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.57 2012/03/09 09:26:53 patrick Exp $
+
+*pyro-4.12 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> +pyro-4.12.ebuild:
+  Bump
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> pyro-4.8.ebuild:
   Marking pyro-4.8 ppc for bug 400335
