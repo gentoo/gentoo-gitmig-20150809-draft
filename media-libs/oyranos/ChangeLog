@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/oyranos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.2 2012/02/08 05:49:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.3 2012/03/09 19:26:45 xmw Exp $
+
+*oyranos-0.4.0 (09 Mar 2012)
+
+  09 Mar 2012; Michael Weber <xmw@gentoo.org> +oyranos-0.4.0.ebuild,
+  +files/oyranos-0.4.0-buildsystem.patch:
+  Version bump (thanks Andreas Sturmlechner, bug 407485)
 
   08 Feb 2012; Michael Weber <xmw@gentoo.org> oyranos-0.3.2.ebuild,
   +files/oyranos-0.3.2-test.patch:
