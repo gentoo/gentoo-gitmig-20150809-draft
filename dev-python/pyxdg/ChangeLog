@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.77 2011/02/08 22:53:16 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.78 2012/03/09 01:01:05 patrick Exp $
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> pyxdg-0.19.ebuild:
+  Python dependency fix for #407221
 
   08 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -pyxdg-0.17-r2.ebuild, -files/pyxdg-0.17-respect_XDG_MENU_PREFIX.patch,

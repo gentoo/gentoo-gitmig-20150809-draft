@@ -1,9 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.19.ebuild,v 1.7 2011/02/08 22:28:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.19.ebuild,v 1.8 2012/03/09 01:01:05 patrick Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
+PYTHON_DEPEND="2"
 
 inherit distutils eutils
 
@@ -18,7 +20,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="xdg"
 DOCS="AUTHORS"
