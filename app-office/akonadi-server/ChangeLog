@@ -1,6 +1,9 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.73 2012/03/08 02:14:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.74 2012/03/09 14:26:12 ranger Exp $
+
+  09 Mar 2012; Brent Baude <ranger@gentoo.org> akonadi-server-1.6.2-r1.ebuild:
+  Marking akonadi-server-1.6.2-r1 ppc64 for bug 399661
 
   08 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   akonadi-server-1.7.0.ebuild:
