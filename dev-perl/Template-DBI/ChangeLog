@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Template-DBI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.27 2012/03/03 14:25:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.28 2012/03/09 09:30:08 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Template-DBI-2.650.0.ebuild:
+  x86 stable wrt bug #400225
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> Template-DBI-2.650.0.ebuild:
   Marking Template-DBI-2.650.0 ppc64 for bug 400225
