@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.174 2012/03/02 21:26:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.175 2012/03/09 10:36:11 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> icu-4.8.1.1-r1.ebuild:
+  x86 stable wrt bug #405965
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> icu-4.8.1.1-r1.ebuild:
   Marking icu-4.8.1.1-r1 ppc64 for bug 405965
