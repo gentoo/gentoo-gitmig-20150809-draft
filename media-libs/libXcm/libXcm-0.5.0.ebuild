@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.0.ebuild,v 1.1 2012/03/09 17:51:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.0.ebuild,v 1.2 2012/03/09 18:47:12 xmw Exp $
 
 EAPI=4
 
@@ -17,17 +17,28 @@ IUSE="X doc static-libs"
 
 RDEPEND="X? ( x11-libs/libXmu
 		x11-libs/libXfixes
-		x11-libs/libX11 )"
+		x11-libs/libX11 
+		x11-proto/xproto )"
 DEPEND="${RDEPEND}
 	app-doc/doxygen"
 
+pkg_setup() {
+	if ! use X ; then
+		die "must be build with X support, upstream broken"
+	fi
+}
+
+#src_prepare() {
+#	if ! use X ; then
+#		sed -e "/HAVE_X11/s:\"#define HAVE_X11 1\"::" \
+#			-e "/PKG_CONFIG_PRIVATE_X11/s:xproto x11::" \
+#			-i configure
+#	fi
+#}
+
 src_configure() {
-	econf --enable-verbose \
-		$(use_enable static-libs static) \
-		$(use_enable X libXfixes) \
-		$(use_enable X libXmu) \
-		$(use_enable X libX11) \
-		$(use_with X x)
+	econf --disable-silent-rules \
+		$(use_enable static-libs static)
 }
 
 src_install() {
