@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/srm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.29 2012/03/07 00:32:41 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.30 2012/03/09 15:06:19 ranger Exp $
+
+  09 Mar 2012; Brent Baude <ranger@gentoo.org> srm-1.2.11-r2.ebuild:
+  Marking srm-1.2.11-r2 ~ppc64 for bug 388957
 
   07 Mar 2012; Aaron W. Swenson <titanofold@gentoo.org> -srm-1.2.8-r1.ebuild,
   -srm-1.2.10.ebuild, -srm-1.2.11.ebuild, -srm-1.2.11-r1.ebuild:
