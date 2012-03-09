@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.0.6.ebuild,v 1.2 2011/01/22 20:05:06 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.0.6.ebuild,v 1.3 2012/03/09 04:48:43 ramereth Exp $
 
 EAPI=2
 
-inherit eutils confutils bash-completion
+inherit eutils confutils bash-completion-r1
 
 DESCRIPTION="Ganeti is a virtual server management software tool"
 HOMEPAGE="http://code.google.com/p/ganeti/"
@@ -50,7 +50,7 @@ src_configure () {
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	newinitd "${FILESDIR}"/ganeti2.initd ganeti
-	dobashcompletion doc/examples/bash_completion ganeti
+	newbashcomp doc/examples/bash_completion ganeti
 	dodoc DEVNOTES INSTALL NEWS README doc/*.rst doc/*.txt
 	rm -rf "${D}"/usr/share/doc/ganeti
 	docinto examples

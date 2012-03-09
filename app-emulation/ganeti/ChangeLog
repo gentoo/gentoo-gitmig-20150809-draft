@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/ganeti
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.56 2011/10/27 16:57:55 ramereth Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.57 2012/03/09 04:48:43 ramereth Exp $
+
+*ganeti-2.5.0_rc5 (09 Mar 2012)
+
+  09 Mar 2012; Lance Albertson <ramereth@gentoo.org> ganeti-2.0.6.ebuild,
+  ganeti-2.1.8.ebuild, ganeti-2.2.2.ebuild, ganeti-2.3.1.ebuild,
+  ganeti-2.4.3.ebuild, ganeti-2.4.4.ebuild, -ganeti-2.5.0_rc1.ebuild,
+  +ganeti-2.5.0_rc5.ebuild:
+  Version bump, fix bash-completion
 
 *ganeti-2.4.5 (27 Oct 2011)
 

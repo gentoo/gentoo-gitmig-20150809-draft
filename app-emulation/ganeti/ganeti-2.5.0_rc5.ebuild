@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.5.0_rc1.ebuild,v 1.1 2011/10/04 15:52:30 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.5.0_rc5.ebuild,v 1.1 2012/03/09 04:48:43 ramereth Exp $
 
 EAPI="4"
 
-inherit eutils confutils bash-completion
+inherit eutils confutils bash-completion-r1
 
 MY_PV="${PV/_rc/~rc}"
 #MY_PV="${PV/_beta/~beta}"
@@ -45,10 +45,6 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 		dev-haskell/json
 		dev-haskell/curl
 		dev-haskell/network
-		|| (
-			dev-haskell/parallel:1
-			dev-haskell/parallel:2
-			)
 		dev-haskell/parallel )
 	dev-libs/openssl
 	dev-python/paramiko
@@ -109,7 +105,7 @@ src_install () {
 	newconfd "${FILESDIR}"/ganeti.confd ganeti
 	use kvm && newinitd "${FILESDIR}"/ganeti-kvm-poweroff.initd ganeti-kvm-poweroff
 	use kvm && newconfd "${FILESDIR}"/ganeti-kvm-poweroff.confd ganeti-kvm-poweroff
-	dobashcompletion doc/examples/bash_completion ganeti
+	newbashcomp doc/examples/bash_completion ganeti
 	dodoc INSTALL UPGRADE NEWS README doc/*.rst
 	rm -rf "${D}"/usr/share/doc/ganeti
 	docinto examples
