@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.4 2012/03/07 16:18:23 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.5 2012/03/09 17:04:41 haubi Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils multilib
 
 MY_PLAT_x86="Linux x86"
 MY_BITS_x86=32
@@ -29,62 +29,39 @@ KEYWORDS="~x86 ~amd64"
 RESTRICT="fetch"
 IUSE="multilib"
 
+EMULTILIB_PKG="true"
+
 DEPEND="app-arch/unzip"
-RDEPEND="dev-libs/libaio"
+RDEPEND="
+	dev-libs/libaio
+	multilib? ( >=dev-libs/libaio-0.3.109-r3 )
+"
 
 S="${WORKDIR}"
 
-default_abi() {
-	[[ ${DEFAULT_ABI} == 'default' ]] && echo ${ARCH} || echo ${DEFAULT_ABI}
-}
+set_my_abivars() {
+	S="${WORKDIR}/${ABI}/instantclient_11_2"
 
-# install SDK for the default ABI only
-need_sdk_for_abi() {
-	[[ $1 == $(default_abi) ]]
-}
+	local abi=${ABI}
+	[[ ${abi} == 'default' ]] && abi=${ARCH}
+	MY_PLAT=MY_PLAT_${abi}; MY_PLAT=${!MY_PLAT} # platform name
+	MY_BITS=MY_BITS_${abi}; MY_BITS=${!MY_BITS} # platform bitwidth
+	MY_A=MY_A_${abi}      ; MY_A=${!MY_A}       # runtime distfile
+	MY_ASDK=MY_ASDK_${abi}; MY_ASDK=${!MY_ASDK} # sdk distfile
 
-abi_list() {
-	if use multilib; then
-		echo ${MULTILIB_ABIS}
-	else
-		default_abi
-	fi
-	return 0
-}
-
-set_abivars() {
-	local abi=$1
-	# platform name
-	MY_PLAT=MY_PLAT_${abi}
-	MY_PLAT=${!MY_PLAT}
-	# platform bitwidth
-	MY_BITS=MY_BITS_${abi}
-	MY_BITS=${!MY_BITS}
-	# runtime distfile
-	MY_A=MY_A_${abi}
-	MY_A=${!MY_A}
-	# sdk distfile
-	MY_ASDK=MY_ASDK_${abi}
-	MY_ASDK=${!MY_ASDK}
-	# abi sourcedir
-	MY_S="${S}/${abi}/instantclient_11_2"
-	# ABI might not need to be set at all
-	[[ -n ${ABI} ]] && MY_ABI=${abi} || MY_ABI=
-	# abi libdir
-	MY_LIBDIR=$(ABI=${MY_ABI} get_libdir)
+	[[ -n ${MY_PLAT} ]]
 }
 
 pkg_nofetch() {
 	eerror "Please go to"
 	eerror "  ${HOMEPAGE%/*}/index-097480.html"
 	eerror "  and download"
-	local abi
-	for abi in $(abi_list)
+	for ABI in $(get_install_abis)
 	do
-		set_abivars ${abi}
+		set_my_abivars || continue
 		eerror "Instant Client for ${MY_PLAT}"
 		eerror "    Basic: ${MY_A}"
-		if need_sdk_for_abi ${abi}; then
+		if is_final_abi; then
 			eerror "    SDK:   ${MY_ASDK}"
 		fi
 	done
@@ -93,22 +70,22 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	local abi
-	for abi in $(abi_list)
+	for ABI in $(get_install_abis)
 	do
-		set_abivars ${abi}
-		mkdir -p "${MY_S%/*}" || die
-		cd "${MY_S%/*}" || die
+		set_my_abivars || continue
+		mkdir "${WORKDIR}"/${ABI} || die
+		cd "${WORKDIR}"/${ABI} || die
 		unpack ${MY_A}
-		if need_sdk_for_abi ${abi}; then
+		if is_final_abi; then
 			unpack ${MY_ASDK}
 		fi
 	done
 }
 
 src_prepare() {
-	set_abivars $(default_abi)
-	cd "${MY_S}" || die
+	# need to patch for the final ABI only
+	set_my_abivars || die "${ABI} ABI not supported!"
+	cd "${S}" || die
 	epatch "${FILESDIR}"/11.2.0.3-makefile.patch
 }
 
@@ -117,44 +94,44 @@ src_install() {
 	local oracle_home=/usr/$(get_libdir)/oracle/${PV}/client
 	into "${oracle_home}"
 
-	local abi ldpath=
-	for abi in $(abi_list)
+	local ldpath=
+	for ABI in $(get_install_abis) # last iteration is final ABI
 	do
-		set_abivars ${abi}
+		if ! set_my_abivars; then
+			elog "Skipping unsupported ABI ${ABI}."
+			continue
+		fi
 		einfo "Installing runtime for ${MY_PLAT} ..."
 
-		cd "${MY_S}" || die
+		cd "${S}" || die
 
 		# shared libraries
-		ABI=${MY_ABI} dolib.so lib*$(get_libname)*
+		dolib.so lib*$(get_libname)*
 
 		# ensure to be linkable
 		[[ -e libocci$(get_libname) ]] ||
 		dosym libocci$(get_libname 11.1) \
-			"${oracle_home}"/${MY_LIBDIR}/libocci$(get_libname)
+			"${oracle_home}"/$(get_libdir)/libocci$(get_libname)
 		[[ -e libclntsh$(get_libname) ]] ||
 		dosym libclntsh$(get_libname 11.1) \
-			"${oracle_home}"/${MY_LIBDIR}/libclntsh$(get_libname)
+			"${oracle_home}"/$(get_libdir)/libclntsh$(get_libname)
 
 		# java archives
-		insinto "${oracle_home}"/${MY_LIBDIR}
+		insinto "${oracle_home}"/$(get_libdir)
 		doins *.jar
 
 		# runtime library path
-		ldpath+=${ldpath:+:}${oracle_home}/${MY_LIBDIR}
+		ldpath+=${ldpath:+:}${oracle_home}/$(get_libdir)
 
 		eend $?
 	done
 
 	# ensure ORACLE_HOME/lib exists
-	[[ -e ${D}${oracle_home}/lib ]] ||
+	[[ -e ${ED}${oracle_home}/lib ]] ||
 	dosym $(get_libdir) "${oracle_home}"/lib
 
-	# SDK is for the default abi only
-	set_abivars $(default_abi)
-
 	einfo "Installing SDK ..."
-	cd "${MY_S}"/sdk || die
+	cd "${S}"/sdk || die
 
 	# SDK makefile, for #165834
 	# As we change the relative filesystem layout compared
@@ -182,7 +159,7 @@ src_install() {
 
 	# Add OCI libs to library path
 	{
-		echo "ORACLE_HOME=${oracle_home}"
+		echo "ORACLE_HOME=${EPREFIX}${oracle_home}"
 		echo "LDPATH=${ldpath}"
 # who does need this?
 #		echo "C_INCLUDE_PATH=${oracle_home}/include"
@@ -192,7 +169,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "TNS_ADMIN has been set to ${ROOT}etc/oracle by default,"
+	elog "TNS_ADMIN has been set to ${EROOT}etc/oracle by default,"
 	elog "put your tnsnames.ora there or configure TNS_ADMIN"
 	elog "to point to your user specific configuration."
 }
