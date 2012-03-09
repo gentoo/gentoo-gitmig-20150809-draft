@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/wscr-1.2-r1.ebuild,v 1.5 2012/02/24 19:26:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/wscr-1.2-r1.ebuild,v 1.6 2012/03/09 16:03:09 jer Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="A Lightweight and Fast Anagram Solver"
-HOMEPAGE="http://gentoo.org"
+HOMEPAGE="http://www.gentoo.org"
 SRC_URI="ftp://hood.sjfn.nb.ca/pub/eddie/${P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
