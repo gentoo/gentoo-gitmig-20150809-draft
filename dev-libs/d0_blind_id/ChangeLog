@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/d0_blind_id
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/ChangeLog,v 1.6 2011/11/27 17:40:33 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/ChangeLog,v 1.7 2012/03/09 18:11:08 scarabeus Exp $
+
+*d0_blind_id-0.5 (09 Mar 2012)
+
+  09 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +d0_blind_id-0.5.ebuild:
+  Version bump for new xonotic. No technical changes, just cp.
 
   27 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> d0_blind_id-0.3.ebuild:
   use more autotools-utils (bug #392173)
