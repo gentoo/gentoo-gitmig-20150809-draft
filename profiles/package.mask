@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13559 2012/03/08 23:49:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13560 2012/03/09 00:06:26 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -37,15 +37,12 @@
 =x11-base/xorg-server-1.12*
 =x11-base/xorg-drivers-1.12
 
-# Davide Pesavento <pesa@gentoo.org> (07 Mar 2012)
-# Fails to build, bug 407315.
-=x11-libs/qt-webkit-4.8.0-r1
-
 # Davide Pesavento <pesa@gentoo.org> (06 Mar 2012)
 # Rewritten ebuilds with support for multiple python ABIs.
 # Masked to allow proper testing of all reverse deps.
 =dev-python/shiboken-1.1.0-r1
 =dev-python/pyside-1.1.0-r1
+=dev-python/pyside-tools-0.2.13-r1
 
 # Johannes Huber <johu@gentoo.org> (06 Mar 2012)
 # Masked for removal in 30 days. Superseded by

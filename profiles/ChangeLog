@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6291 2012/03/08 23:49:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6292 2012/03/09 00:06:26 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Mar 2012; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Mask rewritten dev-python/pyside-tools ebuild too. Unmask qt-webkit, bug
+  407315 is fixed.
 
   08 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
