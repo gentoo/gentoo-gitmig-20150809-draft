@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/dbix-searchbuilder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.73 2012/02/24 16:44:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.74 2012/03/09 10:06:57 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  dbix-searchbuilder-1.610.0.ebuild:
+  x86 stable wrt bug #400281
 
   24 Feb 2012; Jeroen Roovers <jer@gentoo.org>
   dbix-searchbuilder-1.610.0.ebuild:
