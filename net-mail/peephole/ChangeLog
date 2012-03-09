@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/peephole
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/ChangeLog,v 1.14 2012/03/09 09:40:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/ChangeLog,v 1.15 2012/03/09 14:21:52 eras Exp $
+
+  09 Mar 2012; Eray Aslan <eras@gentoo.org> -peephole-1.4.ebuild:
+  remove old
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> peephole-1.5.ebuild:
   x86 stable wrt bug #400445
