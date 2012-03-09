@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-db
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-db/ChangeLog,v 1.1 2012/01/27 17:58:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-db/ChangeLog,v 1.2 2012/03/09 14:51:52 ssuominen Exp $
+
+  09 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  emul-linux-x86-db-20120127.ebuild:
+  amd64 stable wrt #405779
 
 *emul-linux-x86-db-20120127 (27 Jan 2012)
 
