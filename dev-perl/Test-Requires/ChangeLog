@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Requires
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.14 2012/02/27 17:42:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.15 2012/03/09 09:39:30 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Test-Requires-0.60.0.ebuild:
+  x86 stable wrt bug #400237
 
   27 Feb 2012; Brent Baude <ranger@gentoo.org> Test-Requires-0.60.0.ebuild:
   Marking Test-Requires-0.60.0 ppc for bug 400237
