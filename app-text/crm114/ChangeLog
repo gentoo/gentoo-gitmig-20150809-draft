@@ -1,6 +1,9 @@
 # ChangeLog for app-text/crm114
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.50 2012/03/06 14:29:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.51 2012/03/09 11:27:13 radhermit Exp $
+
+  09 Mar 2012; Tim Harder <radhermit@gentoo.org> -crm114-20090807.ebuild:
+  Remove old.
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> crm114-20100106.ebuild:
   Marking crm114-20100106 ppc for bug 401275
