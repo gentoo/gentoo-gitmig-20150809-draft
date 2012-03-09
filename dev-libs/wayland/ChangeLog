@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.3 2012/03/02 20:24:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.4 2012/03/09 14:13:20 ranger Exp $
+
+  09 Mar 2012; Brent Baude <ranger@gentoo.org> wayland-0.85.0.ebuild:
+  Marking wayland-0.85.0 ~ppc64 for bug 403015
 
   02 Mar 2012; Markus Meier <maekke@gentoo.org> wayland-0.85.0.ebuild:
   add ~arm, bug #403015
