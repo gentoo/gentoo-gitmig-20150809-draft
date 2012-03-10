@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/stsci-distutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/ChangeLog,v 1.4 2012/03/02 10:36:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/ChangeLog,v 1.5 2012/03/10 14:33:11 jlec Exp $
+
+  10 Mar 2012; Justin Lecher <jlec@gentoo.org> stsci-distutils-0.3.ebuild:
+  Restrict pypy, because of sandbox violations
 
 *stsci-distutils-0.3 (02 Mar 2012)
 
