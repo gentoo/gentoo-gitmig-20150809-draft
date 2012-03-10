@@ -1,21 +1,22 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.6.ebuild,v 1.2 2012/02/20 15:26:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.6.ebuild,v 1.3 2012/03/10 17:15:24 ssuominen Exp $
 
-EAPI="2"
+EAPI=4
+
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.7-pypy-*"
 
-inherit eutils autotools flag-o-matic python
+inherit autotools eutils flag-o-matic python
 
 DESCRIPTION="POSIX 1003.1e capabilities"
 HOMEPAGE="http://people.redhat.com/sgrubb/libcap-ng/"
-SRC_URI="http://people.redhat.com/sgrubb/libcap-ng/${P}.tar.gz"
+SRC_URI="http://people.redhat.com/sgrubb/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="python"
+IUSE="python static-libs"
 
 RDEPEND="sys-apps/attr
 	python? ( dev-lang/python )"
@@ -31,10 +32,10 @@ pkg_setup() {
 
 src_prepare() {
 	# Disable byte-compilation of Python modules.
-	echo "#!/bin/sh" > py-compile
+	>py-compile
 
 	# Python bindings are built/tested/installed manually.
-	sed -e "/^SUBDIRS/s/ python//" -i bindings/Makefile.am
+	sed -i -e "/^SUBDIRS/s/ python//" bindings/Makefile.am || die
 
 	eautoreconf
 
@@ -42,7 +43,9 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_with python)
+	econf \
+		$(use_enable static-libs static) \
+		$(use_with python)
 }
 
 src_compile() {
@@ -84,7 +87,7 @@ src_test() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	if use python; then
 		installation() {
@@ -100,7 +103,9 @@ src_install() {
 		python_clean_installation_image
 	fi
 
-	dodoc ChangeLog README
+	dodoc AUTHORS ChangeLog README
+
+	rm -f "${ED}"/usr/lib*/${PN}.la
 }
 
 pkg_postinst() {
