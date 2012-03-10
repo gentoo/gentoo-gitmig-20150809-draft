@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.45.ebuild,v 1.1 2012/03/08 09:53:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.45.ebuild,v 1.2 2012/03/10 08:46:42 pacho Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ IUSE="-eds nokia -server usb"
 
 RDEPEND="eds? ( gnome-extra/evolution-data-server )
 	!eds? ( dev-libs/libical )
-	net-wireless/bluez
+	>=net-wireless/bluez-4.99
 	>=dev-libs/openobex-1.4
 	>=dev-libs/glib-2.16:2
 	sys-apps/dbus
