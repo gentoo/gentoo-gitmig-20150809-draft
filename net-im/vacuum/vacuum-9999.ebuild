@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.3 2011/12/04 22:09:03 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.4 2012/03/10 20:20:13 vapier Exp $
 
 EAPI="4"
 LANGS="de pl ru uk"
@@ -42,20 +42,20 @@ RDEPEND="
 	adiummessagestyle? ( >=x11-libs/qt-webkit-4.5:4 )
 	net-dns/libidn
 	x11-libs/libXScrnSaver
+	sys-libs/zlib[minizip]
 "
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS CHANGELOG README TRANSLATORS"
 
-pkg_setup() {
-	if use vcs-revision; then
-		ewarn "Anyone will be able to see your VCS revision of ${PN}, it is insecure."
-	fi
+src_prepare() {
+	# Force usage of system libraries
+	rm -rf src/thirdparty/{idn,minizip,zlib}
 }
 
 src_configure() {
 	# linguas
-	local langs="none;"
+	local langs="none;" x
 	for x in ${LANGS}; do
 		use linguas_${x} && langs+="${x};"
 	done
@@ -65,7 +65,7 @@ src_configure() {
 		-DINSTALL_SDK=ON
 		-DLANGS="${langs}"
 		-DINSTALL_DOCS=OFF
-		-DFORCE_BUNDLED_MINIZIP=ON
+		-DFORCE_BUNDLED_MINIZIP=OFF
 	)
 
 	for x in ${PLUGINS}; do
