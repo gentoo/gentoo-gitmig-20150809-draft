@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.527 2012/03/10 20:01:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.528 2012/03/10 20:48:22 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -60,7 +60,7 @@ GCCMICRO=$(get_version_component_range 3 ${GCC_PV})
 GCC_CONFIG_VER=${GCC_CONFIG_VER:-$(replace_version_separator 3 '-' ${GCC_PV})}
 
 # Pre-release support
-if [[ ${GCC_PV} != ${GCC_PV/_pre/-} && ${GCC_PV} != *9999* ]] ; then
+if [[ ${GCC_PV} != ${GCC_PV/_pre/-} ]] ; then
 	PRERELEASE=${GCC_PV/_pre/-}
 fi
 # make _alpha and _beta ebuilds automatically use a snapshot
@@ -720,7 +720,11 @@ do_gcc_rename_java_bins() {
 toolchain_src_unpack() {
 	[[ -z ${UCLIBC_VER} ]] && [[ ${CTARGET} == *-uclibc* ]] && die "Sorry, this version does not support uClibc"
 
-	[[ ${PV} == *9999* ]] && git-2_src_unpack || gcc_quick_unpack
+	if [[ ${PV} == *9999* ]]; then
+		git-2_src_unpack
+	else
+		gcc_quick_unpack
+	fi
 
 	export BRANDING_GCC_PKGVERSION="Gentoo ${GCC_PVR}"
 	cd "${S}"
