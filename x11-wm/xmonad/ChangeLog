@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.23 2012/03/04 05:04:16 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.24 2012/03/10 16:26:55 slyfox Exp $
+
+  10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml,
+  xmonad-0.10.ebuild:
+  Added USE=default-term to be frendlier to user. Default config contains xterm
+  by default. Added x11-apps/xmessage depend (used to show configuration build
+  error).
 
   04 Mar 2012; Mark Wright <gienah@gentoo.org> xmonad-0.10.ebuild:
   Add ~ppc64 keywords to xmonad 0.10, thanks to EM3RY for testing.
