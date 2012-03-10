@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.0-r1.ebuild,v 1.4 2012/03/08 15:34:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.0-r1.ebuild,v 1.5 2012/03/10 16:05:31 pesa Exp $
 
 EAPI="3"
 inherit qt4-build flag-o-matic
@@ -48,6 +48,10 @@ pkg_setup() {
 
 src_prepare() {
 	use c++0x && append-cxxflags -fpermissive
+
+	# Fix version number in generated pkgconfig file, bug 406443
+	sed -i -e 's/^isEmpty(QT_BUILD_TREE)://' \
+		src/3rdparty/webkit/Source/WebKit/qt/QtWebKit.pro || die
 
 	# Always enable icu to avoid build failure, bug 407315
 	sed -i -e '/CONFIG\s*+=\s*text_breaking_with_icu/ s:^#\s*::' \

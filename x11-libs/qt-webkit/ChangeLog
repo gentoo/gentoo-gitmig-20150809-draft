@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.135 2012/03/08 15:34:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.136 2012/03/10 16:05:31 pesa Exp $
+
+  10 Mar 2012; Davide Pesavento <pesa@gentoo.org> -qt-webkit-4.8.0.ebuild,
+  qt-webkit-4.8.0-r1.ebuild:
+  Fix bug #406443. Remove old.
 
   08 Mar 2012; Davide Pesavento <pesa@gentoo.org> qt-webkit-4.8.0-r1.ebuild:
   No need to append -mminimal-toc for ppc64, it's already added by
