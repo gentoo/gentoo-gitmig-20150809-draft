@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.524 2012/03/04 18:46:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.525 2012/03/10 17:49:56 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -17,7 +17,7 @@ if [[ ${PV} == *9999* ]] ; then
 	# gcc-9999 -> master
 	# gcc-4.7_pre9999 -> 4.7 branch
 	if [[ ${PV} == *_pre9999* ]] ; then
-		EGIT_BRANCH="${PN}_${PV%_pre9999}_branch"
+		EGIT_BRANCH="${PN}-${PV%_pre9999}-branch"
 		EGIT_BRANCH=${EGIT_BRANCH//./_}
 	fi
 	inherit git-2
@@ -58,7 +58,7 @@ GCCMICRO=$(get_version_component_range 3 ${GCC_PV})
 GCC_CONFIG_VER=${GCC_CONFIG_VER:-$(replace_version_separator 3 '-' ${GCC_PV})}
 
 # Pre-release support
-if [[ ${GCC_PV} != ${GCC_PV/_pre/-} ]] ; then
+if [[ ${GCC_PV} != ${GCC_PV/_pre/-} && ${GCC_PV} != *9999* ]] ; then
 	PRERELEASE=${GCC_PV/_pre/-}
 fi
 # make _alpha and _beta ebuilds automatically use a snapshot
