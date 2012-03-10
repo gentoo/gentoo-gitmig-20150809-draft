@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/base64-bytestring
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base64-bytestring/ChangeLog,v 1.1 2012/03/10 15:51:52 slyfox Exp $
+
+*base64-bytestring-0.1.1.1 (10 Mar 2012)
+
+  10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +base64-bytestring-0.1.1.1.ebuild, +files/Tests.hs, +metadata.xml:
+  Initial version. Fast base64 encoding and deconding for ByteStrings for
+  haskell. A depend for app-text/pandoc-1.9.
+
