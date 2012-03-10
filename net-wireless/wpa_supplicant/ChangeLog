@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.177 2012/03/09 14:17:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.178 2012/03/10 17:15:41 ranger Exp $
+
+  10 Mar 2012; Brent Baude <ranger@gentoo.org> wpa_supplicant-0.7.3-r5.ebuild:
+  Marking wpa_supplicant-0.7.3-r5 ppc for bug 386129
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> wpa_supplicant-0.7.3-r5.ebuild:
   Marking wpa_supplicant-0.7.3-r5 ppc64 for bug 386129
