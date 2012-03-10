@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.10-r1.ebuild,v 1.2 2012/03/06 18:12:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.10-r1.ebuild,v 1.3 2012/03/10 16:12:27 jlec Exp $
 
 EAPI=4
 
-inherit autotools eutils flag-o-matic multilib toolchain-funcs
+inherit versionator autotools eutils flag-o-matic multilib toolchain-funcs
 
 MY_P="${PN}${PV/_beta/b}"
 
@@ -106,12 +106,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	ewarn "If you're upgrading from <dev-lang/tcl-8.5, you must recompile the other"
-	ewarn "packages on your system that link with tcl after the upgrade"
-	ewarn "completes.  To perform this action, please run revdep-rebuild"
-	ewarn "in package app-portage/gentoolkit."
-	ewarn "If you have dev-lang/tk and dev-tcltk/tclx installed you should"
-	ewarn "upgrade them before this recompilation, too,"
-	echo
+	for version in ${REPLACING_VERSIONS}; do
+		if ! version_is_at_least 8.5 ${version}; then
+			echo
+			ewarn "You're upgrading from <dev-lang/tcl-8.5, you must recompile the other"
+			ewarn "packages on your system that link with tcl after the upgrade"
+			ewarn "completes. To perform this action, please run revdep-rebuild"
+			ewarn "in package app-portage/gentoolkit."
+			ewarn "If you have dev-lang/tk and dev-tcltk/tclx installed you should"
+			ewarn "upgrade them before this recompilation, too,"
+			echo
+		fi
+	done
 }
