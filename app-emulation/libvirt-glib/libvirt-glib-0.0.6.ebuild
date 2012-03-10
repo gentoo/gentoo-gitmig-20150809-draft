@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.0.6.ebuild,v 1.1 2012/03/07 15:38:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.0.6.ebuild,v 1.2 2012/03/10 04:49:52 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -18,10 +18,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc +introspection python +vala"
 REQUIRED_USE="vala? ( introspection )"
 
-# 0.9.8 is needed for VIR_DOMAIN_EVENT_SHUTDOWN
 RDEPEND="
 	dev-libs/libxml2:2
-	>=app-emulation/libvirt-0.9.8
+	>=app-emulation/libvirt-0.9.10
 	>=dev-libs/glib-2.10:2
 	introspection? ( >=dev-libs/gobject-introspection-0.10.8 )"
 DEPEND="${RDEPEND}

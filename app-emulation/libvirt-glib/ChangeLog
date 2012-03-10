@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/ChangeLog,v 1.8 2012/03/07 15:38:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/ChangeLog,v 1.9 2012/03/10 04:49:52 nirbheek Exp $
+
+  10 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  libvirt-glib-0.0.6.ebuild:
+  Fix libvirt dep to match configure.ac
 
 *libvirt-glib-0.0.6 (07 Mar 2012)
 
