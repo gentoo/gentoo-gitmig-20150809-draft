@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.162 2012/03/10 19:32:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.163 2012/03/10 20:01:05 dirtyepic Exp $
+
+  10 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  We need micro versions on live ebuilds in order for tc_version_is_at_least()
+  to work properly.
 
   10 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Tweak live ebuild bits.

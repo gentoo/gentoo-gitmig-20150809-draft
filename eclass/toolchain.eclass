@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.526 2012/03/10 19:32:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.527 2012/03/10 20:01:05 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -15,9 +15,11 @@ if [[ ${PV} == *9999* ]] ; then
 	EGIT_REPO_URI="git://gcc.gnu.org/git/gcc.git"
 	# naming style:
 	# gcc-9999 -> master
-	# gcc-4.7_pre9999 -> gcc-4_7-branch
+	# gcc-4.7.1_pre9999 -> gcc-4_7-branch
+	#  Note that we need the micro version in order for tc_version_is_at_least
+	#  to work.
 	if [[ ${PV} == *_pre9999* ]] ; then
-		EGIT_BRANCH="${PN}-${PV%_pre9999}-branch"
+		EGIT_BRANCH="${PN}-${PV%.?_pre9999}-branch"
 		EGIT_BRANCH=${EGIT_BRANCH//./_}
 	fi
 	inherit git-2
