@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.43 2012/03/04 17:22:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.44 2012/03/10 16:57:32 ranger Exp $
+
+  10 Mar 2012; Brent Baude <ranger@gentoo.org> libvpx-1.0.0.ebuild:
+  Marking libvpx-1.0.0 ppc for bug 405955
 
   04 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libvpx-1.0.0.ebuild,
   +files/libvpx-1.0.0-support-arm.patch:
