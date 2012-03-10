@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.71 2012/03/03 16:33:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.72 2012/03/10 00:08:40 chithanh Exp $
+
+*xcb-proto-1.7-r1 (10 Mar 2012)
+
+  10 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xcb-proto-1.7-r1.ebuild:
+  Works with python 3 now.
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> xcb-proto-1.6-r2.ebuild:
   Marking xcb-proto-1.6-r2 ppc64 stable for bug 394393
