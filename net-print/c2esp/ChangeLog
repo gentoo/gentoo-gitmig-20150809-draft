@@ -1,6 +1,10 @@
 # ChangeLog for net-print/c2esp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/c2esp/ChangeLog,v 1.2 2012/03/10 15:53:54 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/c2esp/ChangeLog,v 1.3 2012/03/10 15:56:06 binki Exp $
+
+  10 Mar 2012; Nathan Phillip Brink <binki@gentoo.org> -c2esp-18.ebuild,
+  -files/c2esp-18-ldflags.patch:
+  Drop old c2esp-18.
 
 *c2esp-24 (10 Mar 2012)
 
