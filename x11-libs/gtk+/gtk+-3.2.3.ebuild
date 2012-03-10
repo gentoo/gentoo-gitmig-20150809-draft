@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.3.ebuild,v 1.1 2011/12/28 04:54:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.3.ebuild,v 1.2 2012/03/10 07:44:23 tetromino Exp $
 
 EAPI="4"
 
@@ -150,6 +150,15 @@ src_configure() {
 }
 
 src_test() {
+	# Tests require a new gnome-themes-standard, but adding it to DEPEND
+	# would result in circular dependencies.
+	# bug #398789, https://bugzilla.gnome.org/show_bug.cgi?id=669562
+	if ! has_version '=x11-themes/gnome-themes-standard-3.2*'; then
+		ewarn "Tests will be skipped beecause =gnome-themes-standard-3.2*"
+		ewarn "is not installed. Please re-run tests after installing the"
+		ewarn "required version of gnome-themes-standard."
+		return 0
+	fi
 	unset DBUS_SESSION_BUS_ADDRESS
 	# Exporting HOME fixes tests using XDG directories spec since all defaults
 	# are based on $HOME. It is also backward compatible with functions not
