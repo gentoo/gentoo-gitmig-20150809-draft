@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-1.3.10.ebuild,v 1.1 2011/11/01 18:11:36 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-1.3.10.ebuild,v 1.2 2012/03/10 17:28:48 ssuominen Exp $
 
-EAPI="3"
+EAPI=3
 inherit cmake-utils
 
 MY_P="${P}-Source"
@@ -25,10 +25,21 @@ DEPEND="${RDEPEND}
 	dev-util/cmake-fedora
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 CMAKE_IN_SOURCE_BUILD=1
 
-PATCHES=( "${FILESDIR}/${P}-cflags.patch" )
+PATCHES=(
+	"${FILESDIR}"/${P}-cflags.patch
+	"${FILESDIR}"/${P}-ibus-1.4.patch
+	)
 
 DOCS="AUTHORS ChangeLog ChangeLog.prev README RELEASE-NOTES.txt USER-GUIDE"
+
+src_install() {
+	cmake-utils_src_install
+
+	# Move /gconf to /etc/gconf
+	dodir /etc
+	mv -vf "${ED}"/gconf "${ED}"/etc
+}
