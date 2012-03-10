@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.104 2012/03/10 09:12:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.105 2012/03/10 17:07:41 ranger Exp $
+
+  10 Mar 2012; Brent Baude <ranger@gentoo.org> DBD-Pg-2.19.0.ebuild:
+  Marking DBD-Pg-2.19.0 ppc for bug 407549
 
 *DBD-Pg-2.19.0 (10 Mar 2012)
 
