@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.1.0_beta2.ebuild,v 1.1 2012/03/09 13:22:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.1.0_beta2.ebuild,v 1.2 2012/03/10 17:51:46 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool toolchain-funcs
@@ -24,6 +24,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-move_setContext_call.patch #407555
+
 	elibtoolize
 	epunt_cxx
 
