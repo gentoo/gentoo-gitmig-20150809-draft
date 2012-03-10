@@ -1,3 +1,5 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=6805
+
 --- xfburn/xfburn-data-composition.c
 +++ xfburn/xfburn-data-composition.c
 @@ -1852,26 +1852,29 @@
