@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13564 2012/03/10 14:42:17 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13565 2012/03/10 14:57:17 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -51,13 +51,6 @@ app-pda/syncevolution
 # made depend on the correct version
 =x11-base/xorg-server-1.12*
 =x11-base/xorg-drivers-1.12
-
-# Davide Pesavento <pesa@gentoo.org> (06 Mar 2012)
-# Rewritten ebuilds with support for multiple python ABIs.
-# Masked to allow proper testing of all reverse deps.
-=dev-python/shiboken-1.1.0-r1
-=dev-python/pyside-1.1.0-r1
-=dev-python/pyside-tools-0.2.13-r2
 
 # Johannes Huber <johu@gentoo.org> (06 Mar 2012)
 # Masked for removal in 30 days. Superseded by
