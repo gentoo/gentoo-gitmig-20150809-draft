@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-2.0.1.ebuild,v 1.2 2012/01/15 14:12:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-2.0.1.ebuild,v 1.3 2012/03/10 11:54:10 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -44,6 +44,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gold.patch
 	# Do not build demos
 	sed -e 's/^\(SUBDIRS =.*\)demo\(.*\)$/\1\2/' \
 		-i Makefile.am Makefile.in || die "sed failed"

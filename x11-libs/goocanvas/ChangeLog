@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.26 2012/01/15 14:12:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.27 2012/03/10 11:54:10 jlec Exp $
+
+  10 Mar 2012; Justin Lecher <jlec@gentoo.org> goocanvas-2.0.1.ebuild,
+  +files/goocanvas-2.0.1-gold.patch:
+  Add fix for underlinking detected by gold
 
   15 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> goocanvas-2.0.1.ebuild:
   Empty py-compile script instead of symlinking it to /path/to/true for
