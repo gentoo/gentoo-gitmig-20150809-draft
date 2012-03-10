@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.286 2012/03/06 22:00:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.287 2012/03/10 21:32:49 robbat2 Exp $
+
+*genkernel-3.4.25 (10 Mar 2012)
+
+  10 Mar 2012; Robin H. Johnson <robbat2@gentoo.org> +genkernel-3.4.25.ebuild:
+  New release of genkernel. Adds many features including: /usr mounting, ZFS
+  (contributed by ryao), initramfs compression control (based on work by ryao
+  and Pentoo), sdcard devices, virtio devices, improved library copying,
+  device-mapper -> LVM2 update, dmraid update w/ portage patches, cross-compile
+  improvements.
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> genkernel-3.4.20.ebuild:
   Marking genkernel-3.4.20 ppc64 for bug 400539
