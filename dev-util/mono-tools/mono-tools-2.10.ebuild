@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.10.ebuild,v 1.5 2012/02/16 12:15:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.10.ebuild,v 1.6 2012/03/10 20:55:38 pacho Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.mono-project.com/"
 LICENSE="GPL-2 MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="+webkit gtkhtml xulrunner"
+IUSE="+webkit gtkhtml"
 
 RDEPEND="=virtual/monodoc-${GO_MONO_REL_PV}*
 	>=dev-dotnet/gtk-sharp-2.12.6:2
@@ -20,7 +20,6 @@ RDEPEND="=virtual/monodoc-${GO_MONO_REL_PV}*
 	>=dev-dotnet/gconf-sharp-2:2
 	gtkhtml? ( >=dev-dotnet/gtkhtml-sharp-2.24.0:2 )
 	webkit? ( >=dev-dotnet/webkit-sharp-0.2-r1 )
-	xulrunner? ( >=dev-dotnet/gluezilla-2.6 )
 	"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -33,9 +32,9 @@ PATCHES=( "${FILESDIR}/${PN}-2.8-html-renderer-fixes.patch"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
-	if ! use webkit && ! use gtkhtml && ! use xulrunner
+	if ! use webkit && ! use gtkhtml
 	then
-		die "You must USE either webkit, gtkhtml or xulrunner"
+		die "You must USE either webkit or gtkhtml"
 	fi
 }
 
@@ -53,5 +52,5 @@ src_configure() {
 		--disable-gecko \
 		$(use_enable gtkhtml) \
 		$(use_enable webkit) \
-		$(use_enable xulrunner monowebbrowser)
+		--disable-monowebbrowser
 }
