@@ -1,0 +1,19 @@
+# ChangeLog for dev-php/yaml
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/ChangeLog,v 1.1 2012/03/10 14:33:53 olemarkus Exp $
+
+  28 Jun 2011; Ole Markus With <olemarkus@gentoo.org> yaml-1.0.5.ebuild:
+  Added missing PHP_PEAR_URI
+
+  24 May 2011; Markos Chandras <hwoarang@gentoo.org> yaml-1.0.5.ebuild:
+  Stable on amd64 wrt bug #368293
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> yaml-1.0.5.ebuild:
+  x86 stable wrt bug #368293
+
+*yaml-1.0.5 (26 Mar 2011)
+
+  26 Mar 2011; Ole Markus With <olemarkus@gentoo.org> +yaml-1.0.5.ebuild,
+  +metadata.xml:
+  Initial version
+
