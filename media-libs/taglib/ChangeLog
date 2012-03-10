@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.106 2012/03/10 17:07:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.107 2012/03/10 22:13:59 jdhore Exp $
+
+  10 Mar 2012; Jeff Horelick <jdhore@gentoo.org> taglib-1.7-r1.ebuild:
+  marked x86 per bug 407673
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org> taglib-1.7-r1.ebuild:
   Marking taglib-1.7-r1 ppc for bug 407673
