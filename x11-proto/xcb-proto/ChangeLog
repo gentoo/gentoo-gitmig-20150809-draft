@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.72 2012/03/10 00:08:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.73 2012/03/10 00:58:56 chithanh Exp $
+
+  10 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xcb-proto-1.7-r1.ebuild:
+  Update ebuild with suggestions from Arfrever.
 
 *xcb-proto-1.7-r1 (10 Mar 2012)
 

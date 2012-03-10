@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.7-r1.ebuild,v 1.1 2012/03/10 00:08:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.7-r1.ebuild,v 1.2 2012/03/10 00:58:56 chithanh Exp $
 
 EAPI=4
+PYTHON_DEPEND="*"
 
 inherit python xorg-2
 
@@ -19,9 +20,9 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	dev-libs/libxml2"
 
-src_install() {
-	xorg-2_src_install
-	python_clean_installation_image
+src_prepare() {
+	python_clean_py-compile_files
+	xorg-2_src_prepare
 }
 
 pkg_postinst() {
