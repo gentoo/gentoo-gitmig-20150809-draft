@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swing-layout
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.19 2011/03/17 10:00:03 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.20 2012/03/10 17:13:05 ranger Exp $
+
+  10 Mar 2012; Brent Baude <ranger@gentoo.org> swing-layout-1.0.4.ebuild:
+  Marking swing-layout-1.0.4 ppc for bug 356929
 
   17 Mar 2011; Thomas Kahle <tomka@gentoo.org> swing-layout-1.0.4.ebuild:
   x86 stable per bug 356553
