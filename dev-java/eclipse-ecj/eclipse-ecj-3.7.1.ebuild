@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.7.1.ebuild,v 1.3 2011/12/14 17:48:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.7.1.ebuild,v 1.4 2012/03/10 16:13:17 ranger Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/${DMF}/${MY_PN}src-
 IUSE="+ant userland_GNU"
 
 LICENSE="EPL-1.0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 SLOT="3.7"
 
 CDEPEND=">=app-admin/eselect-ecj-0.3"
