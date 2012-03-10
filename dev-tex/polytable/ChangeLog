@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/polytable
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/ChangeLog,v 1.18 2008/03/12 13:03:23 phreak Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/ChangeLog,v 1.19 2012/03/10 18:00:58 slyfox Exp $
+
+  10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> polytable-0.7.2.ebuild,
+  polytable-0.8.2.ebuild:
+  QA: explicitely set RDEPEND="${DEPEND}".
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andres Loeh (kosmikus, #200333) from metadata.xml.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/polytable-0.7.2.ebuild,v 1.10 2006/06/28 11:05:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/polytable-0.7.2.ebuild,v 1.11 2012/03/10 18:00:58 slyfox Exp $
 
 inherit latex-package
 
@@ -14,5 +14,5 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 DEPEND=">=dev-tex/lazylist-1.0a"
-#RDEPEND=""
+RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
