@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.6.ebuild,v 1.3 2012/03/10 17:15:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.6.ebuild,v 1.4 2012/03/10 18:58:29 ssuominen Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
 inherit autotools eutils flag-o-matic python
 
