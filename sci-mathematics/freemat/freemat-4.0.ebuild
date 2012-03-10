@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-4.0.ebuild,v 1.4 2012/03/10 10:33:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-4.0.ebuild,v 1.5 2012/03/10 10:36:03 ssuominen Exp $
 
 EAPI="2"
 inherit eutils cmake-utils fdo-mime
@@ -24,6 +24,7 @@ RDEPEND="dev-libs/libpcre
 	sci-libs/umfpack
 	sys-libs/ncurses
 	virtual/lapack
+	virtual/glu
 	virtual/opengl
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
