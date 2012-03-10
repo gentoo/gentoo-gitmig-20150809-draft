@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/phpunit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.7 2012/02/26 13:12:31 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.8 2012/03/10 14:35:13 olemarkus Exp $
+
+  10 Mar 2012; Ole Markus With <olemarkus@gentoo.org> phpunit-3.5.13.ebuild,
+  phpunit-3.6.0.ebuild:
+  Moving dev-php/yaml to dev-php/YAML
 
   26 Feb 2012; Ole Markus With <olemarkus@gentoo.org> -phpunit-3.4.13.ebuild,
   -phpunit-3.5.0-r1.ebuild, -phpunit-3.5.14.ebuild:

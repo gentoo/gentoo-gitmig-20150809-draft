@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.6.0.ebuild,v 1.1 2011/11/03 09:43:18 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.6.0.ebuild,v 1.2 2012/03/10 14:35:13 olemarkus Exp $
 
 EAPI="2"
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 	>=dev-php/phpunit-mockobject-1.1.0
 	>=dev-php/phpunit-selenium-1.0.1
 	>=dev-php/file-iterator-1.2.3
-	>=dev-php/yaml-1.0.2"
+	>=dev-php/YAML-1.0.2"
 
 pkg_postinst() {
 	elog "${PN} can optionally use json, pdo-sqlite and pdo-mysql features."
