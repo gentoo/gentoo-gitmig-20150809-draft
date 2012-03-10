@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcm-gtk-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-gtk-config/ChangeLog,v 1.13 2012/01/11 15:16:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-gtk-config/ChangeLog,v 1.14 2012/03/10 17:12:14 ranger Exp $
+
+  10 Mar 2012; Brent Baude <ranger@gentoo.org> kcm-gtk-config-1.7.ebuild:
+  Marking kcm-gtk-config-1.7 ppc for bug 398517
 
   11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> kcm-gtk-config-1.7.ebuild:
   Stable for X86, wrt bug #398517
