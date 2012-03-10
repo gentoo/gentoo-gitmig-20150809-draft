@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pdb2pqr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.34 2011/06/21 16:02:05 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.35 2012/03/10 14:20:09 jlec Exp $
+
+  10 Mar 2012; Justin Lecher <jlec@gentoo.org> pdb2pqr-1.7.0-r1.ebuild,
+  metadata.xml:
+  Restrict pypy, move to EAPI=4
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> pdb2pqr-1.5.0-r2.ebuild,
   pdb2pqr-1.7.0.ebuild, pdb2pqr-1.7.0-r1.ebuild:

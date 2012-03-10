@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r1.ebuild,v 1.7 2011/06/21 16:02:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r1.ebuild,v 1.8 2012/03/10 14:20:09 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+RESTRICT_PYTHON_ABIS="2.4 3.* 2.7-pypy-*"
 
 inherit autotools eutils fortran-2 flag-o-matic python toolchain-funcs versionator
 
@@ -44,16 +44,25 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.4.0-ldflags.patch
-	epatch "${FILESDIR}"/${PN}-1.4.0-automagic.patch
-	epatch "${FILESDIR}"/${PV}-install.patch
-	sed '50,200s:CWD:DESTDIR:g' -i Makefile.am \
-		|| die "Failed to fix Makefile.am"
+	epatch \
+		"${FILESDIR}"/${PN}-1.4.0-ldflags.patch \
+		"${FILESDIR}"/${PN}-1.4.0-automagic.patch \
+		"${FILESDIR}"/${PV}-install.patch
+	sed \
+		-e '50,200s:CWD:DESTDIR:g' \
+		-i Makefile.am || die
+
 	python_src_prepare
+
 	preparation() {
+		sed \
+			-e "s:python\$PY_VERSION:$(PYTHON):g" \
+			-i configure.ac || die
+
 		eautoreconf
 	}
 	python_execute_function -s preparation
+
 	tc-export CC
 }
 
@@ -76,16 +85,12 @@ src_configure() {
 }
 
 src_compile() {
-	compilation() {
-		emake || die
-	}
-	python_execute_function -s compilation
+	python_execute_function -d -s
 }
 
 src_test() {
 	testing() {
-		emake -j1 test \
-			|| die "tests failed"
+		emake -j1 test
 	}
 	python_execute_function -s testing
 }
@@ -94,7 +99,7 @@ src_install() {
 	installation() {
 		dodir $(python_get_sitedir)/${PN}
 		emake -j1 DESTDIR="${ED}$(python_get_sitedir)/${PN}" \
-			PREFIX=""  install || die "install failed"
+			PREFIX="" install
 
 		INPATH="$(python_get_sitedir)/${PN}"
 
@@ -109,36 +114,23 @@ src_install() {
 			$(PYTHON) ${EPREFIX}${INPATH}/pdb2pka/pka.py \$*
 		EOF
 
-		dobin "${T}"/{${PN},pdb2pka}-$(python_get_version) || die "Failed to install pdb2pqr wrapper."
+		dobin "${T}"/{${PN},pdb2pka}-$(python_get_version)
 
-		insinto "${INPATH}"
-		doins __init__.py || \
-			die "Setting up the pdb2pqr site-package failed."
+		insinto "${INPATH}" && doins __init__.py
 
-		exeinto "${INPATH}"
-		doexe ${PN}.py || die "Installing pdb2pqr failed."
+		exeinto "${INPATH}" && doexe ${PN}.py
 
-		insinto "${INPATH}"/dat
-		doins dat/* || die "Installing data failed."
+		insinto "${INPATH}"/dat && doins dat/*
 
-		exeinto "${INPATH}"/extensions
-		doexe extensions/* || \
-			die "Failed to install extensions."
+		exeinto "${INPATH}"/extensions && doexe extensions/*
 
-		insinto "${INPATH}"/src
-		doins src/*.py || die "Installing of python scripts failed."
+		insinto "${INPATH}"/src && doins src/*.py
 
-		exeinto "${INPATH}"/propka
-		doexe propka/_propkalib.so || \
-			die "Failed to install propka."
+		exeinto "${INPATH}"/propka && doexe propka/_propkalib.so
 
-		insinto "${INPATH}"/propka
-		doins propka/propkalib.py propka/__init__.py || \
-			die "Failed to install propka."
+		insinto "${INPATH}"/propka && doins propka/propkalib.py propka/__init__.py
 
-		insinto "${INPATH}"/pdb2pka
-		doins pdb2pka/*.{py,so,DAT,h} || \
-			die "Failed to install pdb2pka."
+		insinto "${INPATH}"/pdb2pka && doins pdb2pka/*.{py,so,DAT,h}
 
 		dosym ../../apbs/_apbslib.so "${INPATH}"/pdb2pka/_apbslib.so
 		dosym ../../apbs/apbslib.py "${INPATH}"/pdb2pka/apbslib.py
@@ -151,21 +143,17 @@ src_install() {
 	dosym pdb2pka-$(python_get_version -f) /usr/bin/pdb2pka
 
 	if use doc; then
-		cd doc
-		sh genpydoc.sh \
-			|| die "genpydoc failed"
-		dohtml -r *.html images pydoc \
-			|| die "failed to install html docs"
-		cd -
+		pushd doc > /dev/null
+		sh genpydoc.sh || die "genpydoc failed"
+		dohtml -r *.html images pydoc
+		popd > /dev/null
 	fi
 
-	if use examples; then
-		insinto /usr/share/${PN}/
-		doins -r examples || die "Failed to install examples."
-	fi
+	use examples && \
+		insinto /usr/share/${PN}/ && \
+		doins -r examples
 
-	dodoc ChangeLog NEWS README AUTHORS || \
-		die "Failed to install docs"
+	dodoc ChangeLog NEWS README AUTHORS
 }
 
 pkg_postinst() {
