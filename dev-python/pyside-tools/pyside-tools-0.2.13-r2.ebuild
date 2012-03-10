@@ -1,23 +1,22 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.13-r1.ebuild,v 1.1 2012/03/09 00:13:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.13-r2.ebuild,v 1.1 2012/03/10 14:43:31 pesa Exp $
 
 EAPI=4
 
 CMAKE_IN_SOURCE_BUILD="1"
 
-PYTHON_DEPEND="2:2.6 3:3.2"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.1 *-jython 2.7-pypy-*"
-PYTHON_TESTS_RESTRICTED_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
 
 inherit eutils cmake-utils python
 
-DESCRIPTION="PySide development tools"
+DESCRIPTION="PySide development tools (lupdate, rcc, uic)"
 HOMEPAGE="http://www.pyside.org/"
 SRC_URI="http://www.pyside.org/files/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
@@ -31,8 +30,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	test? ( dev-util/pkgconfig )
 "
-
-DOCS=( AUTHORS ChangeLog )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-fix-pysideuic-test-and-install.patch
@@ -79,6 +76,8 @@ src_install() {
 	}
 	python_execute_function -s installation
 	python_merge_intermediate_installation_images "${T}/images"
+
+	dodoc AUTHORS ChangeLog
 }
 
 pkg_postinst() {
