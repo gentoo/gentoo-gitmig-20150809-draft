@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.6.ebuild,v 1.3 2012/03/10 15:11:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.6.ebuild,v 1.4 2012/03/10 16:00:49 jlec Exp $
 
 EAPI=4
 PYTHON_DEPEND="*"
@@ -32,15 +32,12 @@ src_prepare() {
 	# http://pysvn.tigris.org/source/browse/pysvn?view=rev&revision=1469
 	sed -e "s/PYSVN_HAS_SVN_CLIENT_CTX_T__CONFLICT_FUNC_16/PYSVN_HAS_SVN_CLIENT_CTX_T__CONFLICT_FUNC_1_6/" -i Source/pysvn_svnenv.hpp
 
-	# Fix harmless SyntaxErrors with Python 3.
-	sed -e "/^DISTDIR=/d" -i Source/pysvn_common.mak
-
 	python_copy_sources
 
 	preparation() {
 		cd Source
-		if has "${PYTHON_ABI}" 2.4 2.5; then
-			"$(PYTHON)" setup.py backport || die "Backport failed"
+		if [[ "$(python_get_version -l)" == "2.5" ]]; then
+			python_execute "$(PYTHON)" setup.py backport || die "Backport failed"
 		fi
 	}
 	python_execute_function -s preparation
