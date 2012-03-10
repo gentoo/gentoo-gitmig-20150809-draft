@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.335 2012/02/20 08:18:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.336 2012/03/10 16:40:08 pacho Exp $
+
+  10 Mar 2012; Pacho Ramos <pacho@gentoo.org> -totem-3.2.1.ebuild, metadata.xml,
+  totem-2.32.0-r2.ebuild:
+  Drop galago support as it's dead and will go away soon. Remove old.
 
   20 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org> totem-3.2.2.ebuild:
   Do not fail on USE=-python (bug #404975, thanks to Rion for reporting).

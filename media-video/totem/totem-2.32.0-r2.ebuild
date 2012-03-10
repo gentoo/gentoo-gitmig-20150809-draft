@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.10 2012/01/22 01:34:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.11 2012/03/10 16:40:08 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -19,7 +19,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
-IUSE="bluetooth debug doc galago iplayer lirc nautilus nsplugin python tracker upnp +youtube" #zeroconf
+IUSE="bluetooth debug doc iplayer lirc nautilus nsplugin python tracker upnp +youtube" #zeroconf
 
 # TODO:
 # Cone (VLC) plugin needs someone with the right setup (remi ?)
@@ -58,7 +58,6 @@ RDEPEND=">=dev-libs/glib-2.25.11:2
 	>=x11-libs/libXxf86vm-1.0.1
 
 	bluetooth? ( net-wireless/bluez )
-	galago? ( >=dev-libs/libgalago-0.5.2 )
 	iplayer? (
 		dev-python/pygobject:2
 		dev-python/pygtk:2
@@ -118,7 +117,6 @@ pkg_setup() {
 
 	local plugins="properties,thumbnail,screensaver,ontop,gromit,media-player-keys,skipto,brasero-disc-recorder,screenshot,chapters"
 	use bluetooth && plugins="${plugins},bemused"
-	use galago && plugins="${plugins},galago"
 	use iplayer && plugins="${plugins},iplayer"
 	use lirc && plugins="${plugins},lirc"
 	use python && plugins="${plugins},opensubtitles,jamendo,pythonconsole,dbus-service"

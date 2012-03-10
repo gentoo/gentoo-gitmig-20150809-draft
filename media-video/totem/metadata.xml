@@ -10,8 +10,6 @@ Totem is movie player for the GNOME desktop. It features a playlist, fullscreen 
 	<use>
 		<flag name="bluetooth">Enable support for user-presence detection via the
 		user's bluetooth handset using <pkg>net-wireless/bluez</pkg></flag>
-		<flag name="galago">Allow Totem to set your IM client to "away" when a movie
-		is playing in fullscreen using <pkg>dev-libs/libgalago</pkg></flag>
 		<flag name="grilo">Use <pkg>media-libs/grilo</pkg> to browse media content
 		from various sources</flag>
 		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
