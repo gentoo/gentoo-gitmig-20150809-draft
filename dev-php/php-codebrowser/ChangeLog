@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-codebrowser
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codebrowser/ChangeLog,v 1.1 2011/03/31 16:40:06 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codebrowser/ChangeLog,v 1.2 2012/03/10 16:41:25 olemarkus Exp $
+
+  10 Mar 2012; Ole Markus With <olemarkus@gentoo.org>
+  php-codebrowser-1.0.0.ebuild:
+  Moving dev-php/file-iterator to dev-php/File_Iterator
 
 *php-codebrowser-1.0.0 (31 Mar 2011)
 
