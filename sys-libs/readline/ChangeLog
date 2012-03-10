@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.176 2012/01/06 21:34:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.177 2012/03/10 18:32:40 vapier Exp $
+
+*readline-6.2_p1-r1 (10 Mar 2012)
+
+  10 Mar 2012; Mike Frysinger <vapier@gentoo.org> +readline-6.2_p1-r1.ebuild:
+  Add USE=static-libs support #378299 by Agostino Sarubbo.
 
   06 Jan 2012; Mark Loeser <halcy0n@gentoo.org> readline-6.2_p1.ebuild:
   Stable for ppc64; bug #384463
