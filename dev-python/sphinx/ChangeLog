@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.96 2012/02/20 14:19:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.97 2012/03/10 13:48:58 jlec Exp $
+
+  10 Mar 2012; Justin Lecher <jlec@gentoo.org> sphinx-0.6.7.ebuild,
+  sphinx-1.0.7.ebuild, sphinx-1.1.ebuild, sphinx-1.1.2.ebuild:
+  Restrict pypy as dev-python/jinja doesn't support it
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> sphinx-0.6.7.ebuild,
   sphinx-1.0.7.ebuild, sphinx-1.1.2.ebuild, sphinx-1.1.ebuild:
