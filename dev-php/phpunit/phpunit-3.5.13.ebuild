@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.5.13.ebuild,v 1.11 2012/03/10 15:30:26 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.5.13.ebuild,v 1.12 2012/03/10 16:47:40 olemarkus Exp $
 
 EAPI="2"
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
@@ -21,8 +21,8 @@ RDEPEND="${DEPEND}
 	>=dev-lang/php-5.2.7[simplexml,xml,tokenizer]
 	>=dev-php/PEAR-Image_GraphViz-1.2.1
 	>=dev-php/PEAR-Log-1.8.7-r1
-	>=dev-php/dbunit-1.0.0
-	>=dev-php/php-texttemplate-1.0.0
+	>=dev-php/DBUnit-1.0.0
+	>=dev-php/Text_Template-1.0.0
 	>=dev-php/PHP_CodeCoverage-1.0.2
 	>=dev-php/PHP_Timer-1.0.0
 	>=dev-php/PHPUnit_MockObject-1.0.3
