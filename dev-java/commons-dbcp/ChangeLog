@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-dbcp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.56 2011/10/19 00:59:22 fordfrog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.57 2012/03/10 16:17:03 ranger Exp $
+
+  10 Mar 2012; Brent Baude <ranger@gentoo.org> commons-dbcp-1.4-r1.ebuild:
+  Marking commons-dbcp-1.4-r1 ppc for bug 395923
 
   19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> -commons-dbcp-1.4.ebuild:
   Removed obsolete ebuild
