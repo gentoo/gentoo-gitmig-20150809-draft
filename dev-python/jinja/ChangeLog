@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.57 2012/02/21 04:11:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.58 2012/03/10 17:48:40 jlec Exp $
+
+  10 Mar 2012; Justin Lecher <jlec@gentoo.org> jinja-2.6.ebuild, metadata.xml:
+  Move to EAPI=4 and import pypy fixes from progress overlay, thanks Arfrever
+  for the work
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org> jinja-2.5.5.ebuild,
   jinja-2.6.ebuild:

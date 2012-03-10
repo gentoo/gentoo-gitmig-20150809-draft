@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<herd>python</herd>
 	<use>
-		<flag name='i18n'>Enables support for i18n with <pkg>dev-python/Babel</pkg></flag>
+		<flag name="i18n">Enables support for i18n with <pkg>dev-python/Babel</pkg></flag>
 	</use>
 </pkgmetadata>
