@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.150 2012/03/06 18:12:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.151 2012/03/10 15:34:30 betelgeuse Exp $
+
+  10 Mar 2012; Petteri Räty <betelgeuse@gentoo.org> tcl-8.5.11.ebuild:
+  Use EAPI 4 to make use of REPLACING_VERSIONS which enables us to show
+  pkg_postinst warnings only when they are needed.
 
   06 Mar 2012; Jeroen Roovers <jer@gentoo.org> tcl-8.5.10-r1.ebuild:
   Stable for HPPA (bug #406607).
