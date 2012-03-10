@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/gatling
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.8 2010/08/13 11:20:01 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.9 2012/03/10 00:30:22 sping Exp $
+
+*gatling-0.12-r1 (10 Mar 2012)
+
+  10 Mar 2012; Sebastian Pipping <sping@gentoo.org> +gatling-0.12-r1.ebuild,
+  metadata.xml:
+  Fix compilation on amd64, make dietlibc optional (bug #314115), allow
+  optional SSL
 
   13 Aug 2010; Patrick Lauer <patrick@gentoo.org> gatling-0.12.ebuild:
   Fixing init.d install quoting so it actually does something. Thanks to

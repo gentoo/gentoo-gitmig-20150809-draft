@@ -9,4 +9,11 @@
 		<email>vostorga@gentoo.org</email>
 		<name>Víctor Ostorga</name>
 	</maintainer>
+	<maintainer>
+		<email>sping@gentoo.org</email>
+		<name>Sebastian Pipping</name>
+	</maintainer>
+	<use>
+		<flag name="diet">Compile against <pkg>dev-libs/dietlibc</pkg></flag>
+	</use>
 </pkgmetadata>
