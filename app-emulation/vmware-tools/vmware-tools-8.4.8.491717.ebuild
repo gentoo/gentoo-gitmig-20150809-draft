@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-tools/vmware-tools-8.4.8.491717.ebuild,v 1.1 2011/10/08 18:05:37 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-tools/vmware-tools-8.4.8.491717.ebuild,v 1.2 2012/03/10 14:19:04 vadimk Exp $
 
 inherit versionator vmware-bundle
 
@@ -16,7 +16,7 @@ KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="mirror"
 IUSE=""
 
-DEPEND="!<app-emulation/vmware-workstation-7"
+DEPEND=""
 RDEPEND=""
 
 IUSE_VMWARE_GUEST="freebsd linux netware solaris windows winPre2k"

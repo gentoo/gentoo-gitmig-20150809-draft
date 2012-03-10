@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-workstation
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.232 2011/12/11 14:23:38 vadimk Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.233 2012/03/10 14:20:59 vadimk Exp $
+
+*vmware-workstation-8.0.2.591240 (10 Mar 2012)
+
+  10 Mar 2012; Vadim Kuznetsov <vadimk@gentoo.org>
+  +vmware-workstation-8.0.2.591240.ebuild:
+  vmware desktop version bump
 
   11 Dec 2011; Vadim Kuznetsov <vadimk@gentoo.org> -files/90vmware-workstation,
   -files/vmware-workstation.xml:
