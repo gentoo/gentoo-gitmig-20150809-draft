@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.6.ebuild,v 1.4 2012/03/10 16:00:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.6.ebuild,v 1.5 2012/03/10 16:03:23 jlec Exp $
 
 EAPI=4
 PYTHON_DEPEND="*"
@@ -18,10 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-freebsd ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE="doc examples"
 
-RDEPEND=">=dev-python/pycxx-6.2.0
+DEPEND="
+	>=dev-python/pycxx-6.2.0
 	<dev-vcs/subversion-1.8"  # (bug #395533)
-DEPEND="${RDEPEND}
-	dev-python/setuptools"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# Don't use internal copy of dev-python/pycxx.
