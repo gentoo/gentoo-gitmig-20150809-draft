@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-pdf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.47 2011/11/11 05:54:48 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.48 2012/03/10 17:18:15 ranger Exp $
+
+  10 Mar 2012; Brent Baude <ranger@gentoo.org> cups-pdf-2.6.1.ebuild:
+  Marking cups-pdf-2.6.1 ppc for bug 404845
 
 *cups-pdf-2.6.1 (11 Nov 2011)
 
