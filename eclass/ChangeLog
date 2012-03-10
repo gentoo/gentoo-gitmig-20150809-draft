@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.164 2012/03/10 20:48:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.165 2012/03/10 21:21:30 dirtyepic Exp $
+
+  10 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Rev. 1.527 fixed 4.7 without me noticing. Add comments about the format of
+  gcc/BASE-VER to prevent future confusion.
 
   10 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Revert PRERELEASE setting for live ebuilds. It seems 4.7 treats BASE-VER

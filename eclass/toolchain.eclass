@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.528 2012/03/10 20:48:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.529 2012/03/10 21:21:30 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -17,7 +17,7 @@ if [[ ${PV} == *9999* ]] ; then
 	# gcc-9999 -> master
 	# gcc-4.7.1_pre9999 -> gcc-4_7-branch
 	#  Note that we need the micro version in order for tc_version_is_at_least
-	#  to work.
+	#  to work.  gcc/BASE-VER also requires it.
 	if [[ ${PV} == *_pre9999* ]] ; then
 		EGIT_BRANCH="${PN}-${PV%.?_pre9999}-branch"
 		EGIT_BRANCH=${EGIT_BRANCH//./_}
@@ -191,8 +191,6 @@ S=$(
 		echo ${WORKDIR}/gcc-${PRERELEASE}
 	elif [[ -n ${SNAPSHOT} ]] ; then
 		echo ${WORKDIR}/gcc-${SNAPSHOT}
-	elif [[ ${GCC_PV} == *9999* ]] ; then
-		echo ${WORKDIR}/${P}
 	else
 		echo ${WORKDIR}/gcc-${GCC_RELEASE_VER}
 	fi
@@ -770,6 +768,9 @@ toolchain_src_unpack() {
 	gcc_version_patch
 	if tc_version_is_at_least 4.1 ; then
 		if [[ -n ${SNAPSHOT} || -n ${PRERELEASE} ]] ; then
+			# BASE-VER must be a three-digit version number
+			# followed by an optional -pre string
+			#   eg. 4.5.1, 4.6.2-pre20120213, 4.7.0-pre9999
 			echo ${PV/_/-} > "${S}"/gcc/BASE-VER
 		fi
 	fi
