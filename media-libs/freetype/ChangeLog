@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/freetype
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.320 2011/12/18 21:50:05 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.321 2012/03/10 01:38:21 dirtyepic Exp $
+
+*freetype-2.4.9 (10 Mar 2012)
+
+  10 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> -freetype-2.4.7.ebuild,
+  +freetype-2.4.9.ebuild:
+  Version bump for CVE-2012-1126, CVE-2012-1127, CVE-2012-1128, CVE-2012-1129,
+  CVE-2012-1130, CVE-2012-1131, CVE-2012-1132, CVE-2012-1133, CVE-2012-1134,
+  CVE-2012-1135, CVE-2012-1136, CVE-2012-1137, CVE-2012-1138, CVE-2012-1139,
+  CVE-2012-1140, CVE-2012-1141, CVE-2012-1142, CVE-2012-1143, and
+  CVE-2012-1144 (bug #407257).  You should probably upgrade.
+  
+  Stop using autotools-utils.eclass (bug #392099).  Remove old.
 
   18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> freetype-2.4.8.ebuild:
   Stable for ppc/ppc64; bug #390623

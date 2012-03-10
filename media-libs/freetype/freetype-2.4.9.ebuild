@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.7.ebuild,v 1.6 2011/10/23 08:29:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.9.ebuild,v 1.1 2012/03/10 01:38:21 dirtyepic Exp $
 
 EAPI="4"
 
-inherit autotools autotools-utils eutils flag-o-matic libtool multilib
+inherit autotools eutils flag-o-matic libtool multilib
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
@@ -14,8 +14,8 @@ SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 
 LICENSE="FTL GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
-IUSE="X auto-hinter bindist bzip2 debug doc fontforge static-libs utils"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+IUSE="X auto-hinter bindist bzip2 debug doc fontforge utils"
 
 DEPEND="sys-libs/zlib
 	bzip2? ( app-arch/bzip2 )
@@ -86,7 +86,6 @@ src_configure() {
 			"${S}"/builds/unix/configure
 
 	econf \
-		$(use_enable static-libs static) \
 		$(use_with bzip2)
 }
 
@@ -124,10 +123,6 @@ src_install() {
 			mkdir -p "${ED}/usr/include/freetype2/internal4fontforge/$(dirname ${header})"
 			cp ${header} "${ED}/usr/include/freetype2/internal4fontforge/$(dirname ${header})"
 		done
-	fi
-
-	if ! use static-libs; then
-		 remove_libtool_files || die "failed removing libtool files"
 	fi
 }
 
