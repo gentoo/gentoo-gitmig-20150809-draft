@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.107 2012/02/08 21:05:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.108 2012/03/10 08:05:22 billie Exp $
+
+  10 Mar 2012; Daniel Pielmeier <billie@gentoo.org> libburn-1.2.0.ebuild,
+  metadata.xml:
+  Introduce cdio use flag now that libcdio-0.83 is available.
 
   08 Feb 2012; Markus Meier <maekke@gentoo.org> libburn-1.1.8.ebuild:
   arm stable, bug #400017
