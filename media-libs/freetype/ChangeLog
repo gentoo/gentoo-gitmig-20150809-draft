@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.321 2012/03/10 01:38:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.322 2012/03/10 18:02:22 dirtyepic Exp $
+
+  10 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> freetype-2.4.9.ebuild:
+  Add back static-libs USE flag for bug #407663.
 
 *freetype-2.4.9 (10 Mar 2012)
 
