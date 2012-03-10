@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.7.0.0.ebuild,v 1.1 2011/11/17 23:27:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.7.0.2.ebuild,v 1.1 2012/03/10 06:00:57 dirtyepic Exp $
 
 EAPI=2
 
@@ -83,7 +83,7 @@ java_prepare() {
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
-EANT_GENTOO_CLASSPATH="swt-3.6,bcprov-1.3,json-simple,log4j,commons-cli-1"
+EANT_GENTOO_CLASSPATH="swt-3.7,bcprov-1.3,json-simple,log4j,commons-cli-1"
 
 src_compile() {
 	local mem
@@ -130,10 +130,10 @@ pkg_postinst() {
 	elog "Using this config file you can start the console UI."
 	elog
 
-	if ! has_version dev-java/swt:3.6[xulrunner]; then
+	if ! has_version dev-java/swt:3.7[webkit]; then
 		elog
-		elog "Your dev-java/swt:3.6 was built without xulrunner support. Features such as Vuze HD Network will not work."
-		elog "Rebuild swt with USE=xulrunner (needs xulrunner-1.9) to use these features."
+		elog "Your dev-java/swt:3.7 was built without xulrunner support. Features such as Vuze HD Network will not work."
+		elog "Rebuild swt with USE=webkit (needs net-libs/webkit-gtk:2) to use these features."
 	fi
 
 	fdo-mime_desktop_database_update
