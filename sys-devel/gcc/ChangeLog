@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.863 2012/03/09 17:59:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.864 2012/03/10 16:28:29 phajdan.jr Exp $
+
+  10 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcc-4.4.6-r1.ebuild:
+  x86 stable wrt bug #405849
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcc-4.3.6-r1.ebuild:
   x86 stable wrt bug #405845
