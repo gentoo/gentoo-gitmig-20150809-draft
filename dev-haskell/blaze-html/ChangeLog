@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/blaze-html
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-html/ChangeLog,v 1.1 2012/03/10 17:25:27 slyfox Exp $
+
+*blaze-html-0.4.3.1 (10 Mar 2012)
+
+  10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +blaze-html-0.4.3.1.ebuild, +metadata.xml:
+  Initial version. Fast HTML generation library from haskell values. A depend
+  for app-text/pandoc-1.9.
+
