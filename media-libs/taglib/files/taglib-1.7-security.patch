@@ -1,0 +1,30 @@
+http://bugs.gentoo.org/407673
+
+CVE-2012-1107
+http://github.com/taglib/taglib/commit/77d61c6eca4d08b9b025738acf6b926cc750db23
+
+CVE-2012-1108
+http://github.com/taglib/taglib/commit/ab8a0ee8937256311e649a88e8ddd7c7f870ad59
+
+--- taglib/ape/apeproperties.cpp
++++ taglib/ape/apeproperties.cpp
+@@ -193,7 +193,7 @@
+   uint blocksPerFrame = header.mid(4, 4).toUInt(false);
+   uint finalFrameBlocks = header.mid(8, 4).toUInt(false);
+   uint totalBlocks = totalFrames > 0 ? (totalFrames -  1) * blocksPerFrame + finalFrameBlocks : 0;
+-  d->length = totalBlocks / d->sampleRate;
++  d->length = d->sampleRate > 0 ? totalBlocks / d->sampleRate : 0;
+   d->bitrate = d->length > 0 ? ((d->streamLength * 8L) / d->length) / 1000 : 0;
+ }
+ 
+--- taglib/ogg/xiphcomment.cpp
++++ taglib/ogg/xiphcomment.cpp
+@@ -287,7 +287,7 @@
+ 
+   int pos = 0;
+ 
+-  int vendorLength = data.mid(0, 4).toUInt(false);
++  uint vendorLength = data.mid(0, 4).toUInt(false);
+   pos += 4;
+ 
+   d->vendorID = String(data.mid(pos, vendorLength), String::UTF8);

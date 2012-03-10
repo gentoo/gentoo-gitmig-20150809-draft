@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.104 2012/02/03 19:02:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.105 2012/03/10 13:13:21 ssuominen Exp $
+
+*taglib-1.7-r1 (10 Mar 2012)
+
+  10 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +taglib-1.7-r1.ebuild,
+  +files/taglib-1.7-security.patch:
+  Backport upstream commits for CVE-2012-1107 and CVE-2012-1108 wrt #407673 by
+  Michael Harrison
 
   03 Feb 2012; Johannes Huber <johu@gentoo.org> -taglib-1.6.3.ebuild:
   Remove old.
