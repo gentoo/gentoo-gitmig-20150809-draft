@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.149 2012/01/04 01:27:17 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.150 2012/03/10 23:34:58 dolsen Exp $
+
+  10 Mar 2012; Brian Dolbec <dolsen@gentoo.org> layman-1.4.1.ebuild,
+  layman-1.4.2-r2.ebuild, -layman-2.0.0_rc1-r1.ebuild,
+  -layman-2.0.0_rc2.ebuild,
+  -files/layman-2.0.0_rc1-fix-mistracking-success.patch:
+  Update the python dependency for the 1.4* versions, fixes bug 399167.
+  Remove old rc candidates.
 
   04 Jan 2012; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Brian Dolbec is the new primary maintainer of layman
