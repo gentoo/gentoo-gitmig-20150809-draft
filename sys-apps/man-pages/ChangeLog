@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.168 2012/03/06 10:31:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.169 2012/03/10 17:21:16 vapier Exp $
+
+*man-pages-3.37 (10 Mar 2012)
+
+  10 Mar 2012; Mike Frysinger <vapier@gentoo.org> +man-pages-3.37.ebuild:
+  Version bump.
 
   06 Mar 2012; Pacho Ramos <pacho@gentoo.org> man-pages-3.28.ebuild,
   man-pages-3.29.ebuild, man-pages-3.30.ebuild, man-pages-3.31.ebuild,
