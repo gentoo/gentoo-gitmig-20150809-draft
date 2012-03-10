@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.8.1.ebuild,v 1.1 2012/03/10 00:10:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.8.1.ebuild,v 1.2 2012/03/10 01:13:39 chithanh Exp $
 
 EAPI=4
 
 XORG_DOC=doc
-inherit python xorg-2
+inherit xorg-2
 
 DESCRIPTION="X C-language Bindings library"
 HOMEPAGE="http://xcb.freedesktop.org/"
@@ -20,6 +20,7 @@ RDEPEND="dev-libs/libpthread-stubs
 	x11-libs/libXau
 	x11-libs/libXdmcp"
 DEPEND="${RDEPEND}
+	dev-lang/python[xml]
 	dev-libs/libxslt
 	>=x11-proto/xcb-proto-1.7-r1"
 

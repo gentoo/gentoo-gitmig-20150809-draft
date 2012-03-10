@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.87 2012/03/10 00:10:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.88 2012/03/10 01:13:39 chithanh Exp $
+
+  10 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libxcb-1.8.1.ebuild:
+  Update ebuild with suggestions from Arfrever.
 
 *libxcb-1.8.1 (10 Mar 2012)
 
