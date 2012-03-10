@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.53 2012/03/07 20:04:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.54 2012/03/10 12:54:45 graaff Exp $
+
+  10 Mar 2012; Hans de Graaff <graaff@gentoo.org>
+  -mysql-workbench-5.2.34.ebuild, -mysql-workbench-5.2.36.ebuild:
+  Remove old versions.
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> mysql-workbench-5.2.35.ebuild:
   Marking mysql-workbench-5.2.35 ppc for bug 394729
