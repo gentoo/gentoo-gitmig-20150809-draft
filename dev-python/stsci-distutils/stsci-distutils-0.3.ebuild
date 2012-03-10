@@ -1,11 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/stsci-distutils-0.3.ebuild,v 1.2 2012/03/10 14:33:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/stsci-distutils-0.3.ebuild,v 1.3 2012/03/10 16:15:48 jlec Exp $
 
 EAPI=3
 
 SUPPORT_PYTHON_ABIS="1"
-RESTRCIT_PYTHON_ABIS="2.7-pypy-*"
 MY_PN=${PN/-/.}
 MY_P=${MY_PN}-${PV}
 
