@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18-r1.ebuild,v 1.6 2012/02/05 18:36:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18-r1.ebuild,v 1.7 2012/03/10 16:32:49 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.packetfactory.net/Projects/libnids/dist/${P/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1.1"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap
