@@ -7,15 +7,16 @@
 	</maintainer>
 	<longdescription>
 		highlighting-kate is a syntax highlighting library
-		with support for over one hundred languages. The syntax
+		with support for nearly one hundred languages. The syntax
 		parsers are automatically generated from Kate
-		syntax descriptions (http://kate-editor.org/),
+		syntax descriptions (&lt;http://kate-editor.org/&gt;),
 		so any syntax supported by Kate can be added.
 		An (optional) command-line program is provided, along
 		with a utility for generating new parsers from Kate
 		XML syntax descriptions.
 	</longdescription>
-	<use>
-		<flag name="executable">Build the Highlight executable</flag>
-	</use>
+<use>
+  <flag name='executable'>Build the Highlight executable.</flag>
+  <flag name='pcre-light'>Use the pcre-light library instead of regex-pcre-builtin.</flag>
+</use>
 </pkgmetadata>
