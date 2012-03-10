@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pandoc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.2 2011/05/03 19:35:58 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.3 2012/03/10 17:54:46 slyfox Exp $
+
+*pandoc-1.9.1.2 (10 Mar 2012)
+
+  10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> +pandoc-1.9.1.2.ebuild:
+  Version bump (requested by #406835 by jorro).
 
 *pandoc-1.8.1.1-r1 (03 May 2011)
 
