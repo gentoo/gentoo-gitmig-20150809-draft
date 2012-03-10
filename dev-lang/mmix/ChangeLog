@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mmix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.20 2012/02/16 18:48:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.21 2012/03/10 17:09:35 ranger Exp $
+
+  10 Mar 2012; Brent Baude <ranger@gentoo.org> mmix-20110605.ebuild:
+  Marking mmix-20110605 ppc for bug 400003
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mmix-20110605.ebuild:
   x86 stable wrt bug #400003

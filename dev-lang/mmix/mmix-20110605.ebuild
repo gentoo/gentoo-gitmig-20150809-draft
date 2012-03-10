@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20110605.ebuild,v 1.2 2012/02/16 18:48:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20110605.ebuild,v 1.3 2012/03/10 17:09:35 ranger Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="mmix"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc"
 
 S="${WORKDIR}"
