@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.237 2012/03/09 13:45:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.238 2012/03/10 16:27:18 ranger Exp $
+
+  10 Mar 2012; Brent Baude <ranger@gentoo.org> openbox-3.5.0-r1.ebuild:
+  Marking openbox-3.5.0-r1 ppc for bug 383475
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> openbox-3.5.0-r1.ebuild:
   Marking openbox-3.5.0-r1 ppc64 for bug 383475
