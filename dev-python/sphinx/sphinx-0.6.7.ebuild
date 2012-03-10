@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.7.ebuild,v 1.7 2012/03/10 13:48:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.7.ebuild,v 1.8 2012/03/10 17:50:10 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
@@ -13,7 +13,7 @@ inherit distutils
 MY_PN="Sphinx"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Tool to create documentation for Python projects"
+DESCRIPTION="Python documentation generator"
 HOMEPAGE="http://sphinx.pocoo.org/ http://pypi.python.org/pypi/Sphinx"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
