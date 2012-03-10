@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.5.ebuild,v 1.4 2012/02/27 23:12:46 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.5.ebuild,v 1.5 2012/03/10 13:08:55 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
 
 inherit python toolchain-funcs
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.23 2012/03/09 08:00:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.24 2012/03/10 13:08:55 jlec Exp $
+
+  10 Mar 2012; Justin Lecher <jlec@gentoo.org> pysvn-1.7.5.ebuild,
+  pysvn-1.7.6.ebuild:
+  Restrict pypy
 
 *pysvn-1.7.6 (09 Mar 2012)
 
