@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.5 2012/03/06 09:28:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.6 2012/03/10 12:52:57 ssuominen Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
@@ -73,6 +73,7 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-2.50-build-with-natpmp1.patch #376647
+	epatch "${FILESDIR}"/${PN}-2.50-punt_broken_CXX_check.patch #407137
 
 	sed -i -e '/CFLAGS/s:-ggdb3::' configure.ac
 	use ayatana || sed -i -e '/^LIBAPPINDICATOR_MINIMUM/s:=.*:=9999:' configure.ac
