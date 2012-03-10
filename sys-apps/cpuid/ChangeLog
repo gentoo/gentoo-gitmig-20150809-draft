@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/cpuid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuid/ChangeLog,v 1.3 2012/03/06 04:39:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuid/ChangeLog,v 1.4 2012/03/10 06:03:39 dirtyepic Exp $
+
+*cpuid-20120225 (10 Mar 2012)
+
+  10 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> +cpuid-20120225.ebuild:
+  Version bump.
 
   06 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Add myself to metadata.xml.
