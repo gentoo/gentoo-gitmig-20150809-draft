@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.9 2012/02/29 02:21:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.10 2012/03/10 09:19:20 ssuominen Exp $
 
 EAPI="2"
 
@@ -44,9 +44,10 @@ DEPEND="${RDEPEND}
 	sys-devel/bison"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-zlib-1.2.5.2.patch
 	# FIX: missing @includedir@
 	# https://sf.net/tracker/?func=detail&aid=2923415&group_id=59462&atid=491094
-	epatch "${FILESDIR}/${P}-autotools.patch"
+	epatch "${FILESDIR}"/${P}-autotools.patch
 	eautoreconf
 
 	# FIX: removing pre-compiled shaders
