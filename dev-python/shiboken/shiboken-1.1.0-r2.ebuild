@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.0-r1.ebuild,v 1.2 2012/03/08 22:54:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.0-r2.ebuild,v 1.1 2012/03/11 16:53:24 jlec Exp $
 
 EAPI=4
 
@@ -43,6 +43,8 @@ src_configure() {
 	configuration() {
 		local mycmakeargs=(
 			$(cmake-utils_use_build test TESTS)
+			-DPYTHON_SUFFIX=-$(PYTHON)
+			-DPYTHON_EXECUTABLE=$(PYTHON -a)
 		)
 
 		if [[ $(python_get_version -l --major) == 3 ]]; then
