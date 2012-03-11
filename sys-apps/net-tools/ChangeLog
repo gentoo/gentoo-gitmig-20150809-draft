@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.122 2012/03/10 18:52:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.123 2012/03/11 20:00:53 vapier Exp $
+
+  11 Mar 2012; Mike Frysinger <vapier@gentoo.org>
+  net-tools-1.60_p20120127084908.ebuild:
+  Drop KEYWORDS until openrc is fixed #407757.
 
 *net-tools-1.60_p20120127084908 (10 Mar 2012)
 
