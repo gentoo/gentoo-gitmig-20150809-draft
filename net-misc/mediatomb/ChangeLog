@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mediatomb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.26 2011/12/07 16:59:52 je_fro Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.27 2012/03/11 04:36:12 darkside Exp $
+
+  11 Mar 2012; Jeremy Olexa <darkside@gentoo.org> mediatomb-0.12.1-r1.ebuild:
+  stabilize for amd64/x86 (compilation failure that didn't need to be a
+  revbump) bug 405725
 
 *mediatomb-0.12.1-r1 (07 Dec 2011)
 
