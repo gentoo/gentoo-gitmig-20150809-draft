@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/uconv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.18 2012/02/06 19:39:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.19 2012/03/11 13:49:16 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> uconv-0.5.3.ebuild:
+  Marking uconv-0.5.3 ppc64 for bug 396041
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> uconv-0.5.3.ebuild:
   Marking uconv-0.5.3 ppc for bug 396041
