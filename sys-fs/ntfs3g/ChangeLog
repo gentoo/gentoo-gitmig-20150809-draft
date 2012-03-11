@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.121 2012/01/23 18:32:01 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.122 2012/03/11 19:08:25 ssuominen Exp $
+
+*ntfs3g-2012.1.15-r1 (11 Mar 2012)
+
+  11 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +ntfs3g-2012.1.15-r1.ebuild:
+  Move udev rules from /etc/udev/rules.d to /lib/udev/rules.d. Enable
+  USE="ntfsprogs" by default wrt #384865. Create mount.ntfs symlink wrt #374197
+  by Claudio Roberto França Pereira. Move everything to /usr wrt #398069 by
+  Michał Górny.
 
 *ntfs3g-2012.1.15 (23 Jan 2012)
 
