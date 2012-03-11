@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.2.1.ebuild,v 1.1 2012/03/11 14:01:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.2.1.ebuild,v 1.2 2012/03/11 14:23:21 kumba Exp $
 
 EAPI="2"
 inherit eutils autotools multilib
@@ -17,7 +17,7 @@ IUSE="static +dynamicplugin +zlib +gre +mpls +targetbased +decoder-preprocessor-
 aruba mysql odbc postgres selinux"
 
 DEPEND=">=net-libs/libpcap-1.0.0
-	>=net-libs/daq-0.5
+	>=net-libs/daq-0.6
 	>=dev-libs/libpcre-6.0
 	dev-libs/libdnet
 	postgres? ( dev-db/postgresql-base )
