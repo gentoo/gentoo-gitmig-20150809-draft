@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/multi_json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.14 2012/03/07 14:16:38 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.15 2012/03/11 13:07:26 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> multi_json-1.0.4.ebuild:
+  Marking multi_json-1.0.4 ~ppc64 for bug 396043
 
   07 Mar 2012; Naohiro Aota <naota@gentoo.org> multi_json-1.0.4.ebuild:
   Add ~x86-fbsd.
