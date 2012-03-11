@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.30 2012/03/07 19:57:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.31 2012/03/11 14:48:05 ago Exp $
+
+  11 Mar 2012; Agostino Sarubbo <ago@gentoo.org> debhelper-9.20120115.ebuild:
+  Stable for amd64, wrt bug #368627
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> debhelper-9.20120115.ebuild:
   Marking debhelper-9.20120115 ppc for bug 368627
