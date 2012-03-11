@@ -1,0 +1,33 @@
+diff -urN utrac-0.3.0.orig/Makefile utrac-0.3.0/Makefile
+--- utrac-0.3.0.orig/Makefile	2005-02-25 18:07:49.000000000 +0100
++++ utrac-0.3.0/Makefile	2012-03-11 15:16:32.072358827 +0100
+@@ -19,17 +19,17 @@
+ # along with this program; if not, write to the Free Software
+ # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ 
+-CC = gcc
++CC ?= gcc
+ 
+ #release :
+-CFLAGS = -Wall -O2 -DUT_DEBUG=1
++CFLAGS += -Wall -DUT_DEBUG=1
+ 
+ # debug
+ #CFLAGS = -Wall -g -DUT_DEBUG=1
+ 
+ LIBS = -lm
+ 
+-PREFIX_PATH = /usr/local
++PREFIX_PATH = ${DESTTREE}
+ LIB_PATH = ${PREFIX_PATH}/lib
+ INC_PATH = ${PREFIX_PATH}/include
+ BIN_PATH = ${PREFIX_PATH}/bin
+@@ -102,7 +102,7 @@
+ ###### COMMAND #####
+ 
+ utrac: utrac_cmd.o libutrac.a
+-	$(CC) $^ $(LIBS) -o $@
++	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
+ 
+ 
+ ##### LIB #######
