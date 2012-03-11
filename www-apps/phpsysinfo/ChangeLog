@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.58 2012/03/08 15:21:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.59 2012/03/11 14:43:31 ago Exp $
+
+  11 Mar 2012; Agostino Sarubbo <ago@gentoo.org> phpsysinfo-3.0.15.ebuild:
+  Stable for amd64, wrt bug #404869
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   phpsysinfo-3.0.15.ebuild:
