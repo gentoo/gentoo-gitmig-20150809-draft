@@ -1,6 +1,11 @@
 # ChangeLog for app-text/djvu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.125 2011/11/13 10:54:12 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.126 2012/03/11 16:13:40 ssuominen Exp $
+
+  11 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  files/djvu-3.5.24-gcc46.patch:
+  Include stddef.h in the installed headers to fix building of reverse
+  dependencies.
 
   13 Nov 2011; Justin Lecher <jlec@gentoo.org> djvu-3.5.22-r1.ebuild,
   djvu-3.5.23.ebuild, djvu-3.5.24.ebuild:
