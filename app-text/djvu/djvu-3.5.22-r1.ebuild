@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.22-r1.ebuild,v 1.9 2011/11/13 10:54:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.22-r1.ebuild,v 1.10 2012/03/11 16:14:54 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 inherit fdo-mime autotools flag-o-matic
 
 MY_P="${PN}libre-${PV#*_p}"
