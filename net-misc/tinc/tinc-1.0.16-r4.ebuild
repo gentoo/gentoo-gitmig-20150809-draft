@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.16-r4.ebuild,v 1.1 2012/02/02 20:29:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.16-r4.ebuild,v 1.2 2012/03/11 14:08:26 blueness Exp $
 
 EAPI="4"
 
@@ -29,12 +29,12 @@ src_prepare() {
 
 	if [[ ${COUNT} -gt 1 ]]; then
 		eerror
-		eerror "\033[1;31m**************************************************\033[1;31m"
+		eerror "\033[1;31m**************************************************\033[00m"
 		eerror
 		eerror "\033[1;31m If you selected either raw, uml or vde,\033[1;31m"
 		eerror "\033[1;31m you can select only one.\033[1;31m"
 		eerror
-		eerror "\033[1;31m**************************************************\033[1;31m"
+		eerror "\033[1;31m**************************************************\033[00m"
 		eerror
 		die
 	fi
