@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.1 2012/02/29 09:05:27 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.2 2012/03/11 07:33:16 vapier Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic toolchain-funcs
@@ -19,7 +19,8 @@ IUSE="ada +cxx debug doc gpm minimal profile static-libs trace unicode"
 
 DEPEND="gpm? ( sys-libs/gpm )"
 #	berkdb? ( sys-libs/db )"
-RDEPEND="!<x11-terms/rxvt-unicode-9.06-r3"
+RDEPEND="${DEPEND}
+	!<x11-terms/rxvt-unicode-9.06-r3"
 
 S=${WORKDIR}/${MY_P}
 
