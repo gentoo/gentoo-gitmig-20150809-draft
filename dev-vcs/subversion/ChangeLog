@@ -1,6 +1,19 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.71 2012/03/02 21:24:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.72 2012/03/11 15:37:26 tommy Exp $
+
+*subversion-1.7.4 (11 Mar 2012)
+
+  11 Mar 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +subversion-1.7.4.ebuild,
+  +files/subversion-fix-parallel-build-support-for-perl-bindings.patch:
+  Version bump, fixes bug 404939 and bug 404527, add workaround for linking
+  issue during cross-compilation, when upgrading from 1.6 to 1.7, fixes bug
+  387057, restrict ruby dependency to 1.8 and force usage of that version,
+  fixes bug 399105, add patch for parallel make issue with perl module, fixes
+  bug 388607, also adjust xinetd.d script with USE=apache2 disabled, fixes bug
+  381385, remove enewgroup and enewuser from pkg_config, fixes bug 404499,
+  remove files for languages not in LINGUAS var, fixes bug 402299
 
   02 Mar 2012; Fabian Groffen <grobian@gentoo.org> subversion-1.7.2.ebuild:
   Drop Solaris flag trickery for neon, neon itself is fixed now
