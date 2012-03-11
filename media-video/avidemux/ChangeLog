@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.188 2012/01/02 14:56:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.189 2012/03/11 10:33:49 hwoarang Exp $
+
+  11 Mar 2012; Markos Chandras <hwoarang@gentoo.org> avidemux-2.5.6.ebuild:
+  Add opengl useflag. Bug #406955. Patch by Ian Delaney
 
 *avidemux-2.5.6 (02 Jan 2012)
 

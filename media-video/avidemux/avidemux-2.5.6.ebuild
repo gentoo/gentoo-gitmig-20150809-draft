@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6.ebuild,v 1.1 2012/01/02 14:56:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6.ebuild,v 1.2 2012/03/11 10:33:49 hwoarang Exp $
 
 EAPI="4"
 
@@ -15,8 +15,8 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
-IUSE="+aac +aften +alsa amr +dts esd jack libsamplerate +mp3 nls oss
-	pulseaudio +sdl +truetype +vorbis +x264 +xv +xvid gtk +qt4"
+IUSE="+aac +aften +alsa amr +dts esd jack libsamplerate +mp3 nls opengl
+	oss pulseaudio +sdl +truetype +vorbis +x264 +xv +xvid gtk +qt4"
 
 RDEPEND="dev-libs/libxml2
 	aac? (
@@ -42,7 +42,9 @@ RDEPEND="dev-libs/libxml2
 	xv? ( x11-libs/libXv )
 	xvid? ( media-libs/xvid )
 	gtk? ( x11-libs/gtk+:2 )
-	qt4? ( x11-libs/qt-gui:4 )"
+	qt4? ( x11-libs/qt-gui:4
+		opengl? ( x11-libs/qt-opengl:4 )
+	)"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-lang/yasm
@@ -124,6 +126,7 @@ src_configure() {
 		$(cmake-utils_use truetype FONTCONFIG)
 		$(cmake-utils_use xvid)
 		$(cmake-utils_use x264)
+		$(cmake-utils_use_use opengl)
 	"
 
 	cmake-utils_src_configure
