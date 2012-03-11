@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.212 2012/01/02 20:15:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.213 2012/03/11 14:11:35 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> rails-3.1.3.ebuild:
+  Marking rails-3.1.3 ~ppc64 for bug 396547
 
 *rails-3.1.3-r1 (02 Jan 2012)
 
