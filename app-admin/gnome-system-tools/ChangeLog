@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.111 2012/03/05 21:50:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.112 2012/03/11 14:16:54 eva Exp $
+
+*gnome-system-tools-2.32.0-r3 (11 Mar 2012)
+
+  11 Mar 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-system-tools-2.32.0-r3.ebuild,
+  +files/gnome-system-tools-2.32.0-libtool-intermediate-libs.patch,
+  +files/gnome-system-tools-2.32.0-missing-atk.patch,
+  +files/gnome-system-tools-2.32.0-missing-m.patch:
+  Fix build failures due to atk underlinking.
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org>
   gnome-system-tools-2.32.0-r2.ebuild:
