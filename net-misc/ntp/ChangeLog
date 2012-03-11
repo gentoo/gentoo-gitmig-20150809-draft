@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ntp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.175 2011/12/31 07:42:00 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.176 2012/03/11 09:09:45 pacho Exp $
+
+*ntp-4.2.6_p5-r1 (11 Mar 2012)
+
+  11 Mar 2012; Pacho Ramos <pacho@gentoo.org> +ntp-4.2.6_p5-r1.ebuild:
+  Drop mDNSResponder dep as it will go away, bug 405397.
 
 *ntp-4.2.6_p5 (31 Dec 2011)
 
