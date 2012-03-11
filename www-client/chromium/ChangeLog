@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.580 2012/03/11 03:38:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.581 2012/03/11 11:58:14 phajdan.jr Exp $
+
+  11 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-17.0.963.79.ebuild:
+  x86 stable wrt security bug #407755
 
 *chromium-17.0.963.79 (11 Mar 2012)
 
