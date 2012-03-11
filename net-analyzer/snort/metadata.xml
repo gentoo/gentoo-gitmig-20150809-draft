@@ -43,23 +43,10 @@
 			and rules library. This is required if you want to use shared 
 			object (SO) snort rules.
 		</flag>
-		<flag name='flexresp'>
-			(DEPRECIATED) Original method for enabling connection tearing for 
-			inline deployments. Replaced with flexresp3 in Snort-2.9.0.
-		</flag>
-		<flag name='flexresp2'>
-			(DEPRECIATED) Replaced flexresp for enabling connection tearing for
-			inline deployments. Replaced with flexresp3 in Snort-2.9.0.
-		</flag>
 		<flag name='gre'>
 			Enable support for inspecting and processing Generic Routing 
 			Encapsulation (GRE) packet headders. Only needed if you are
 			monitoring GRE tunnels.
-		</flag>
-		<flag name='inline'>
-			(DEPRECIATED) Enables support for deploying snort inline. Uses
-			<pkg>net-firewall/iptables</pkg>, via libipq, rather than
-			<pkg>net-libs/libpcap</pkg>. Replaced by DAQ in Snort-2.9.0
 		</flag>
 		<flag name='inline-init-failopen'>
 			Enables support to allow traffic to pass (fail-open) through
@@ -96,14 +83,6 @@
 			and should define the IP address, operating system, and services
 			for all hosts on the monitored network. This is cumbersome, but
 			can improve intrusion detection accuracy.
-		</flag>
-		<flag name='timestats'>
-			(DEPRECIATED) Enables support for printing packet stats on a per
-			hour and per protocol breakdown. Depreciated in Snort-2.9.0.
-		</flag>
-		<flag name='reload'>
-			Enables support for reloading a configuration without restarting
-			snort.
 		</flag>
 		<flag name='reload-error-restart'>
 			Enables support for completely restarting snort if an error is 
