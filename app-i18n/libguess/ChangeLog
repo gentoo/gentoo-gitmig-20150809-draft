@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libguess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.19 2012/03/10 16:59:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.20 2012/03/11 13:50:55 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> libguess-1.0.ebuild:
+  Marking libguess-1.0 ppc64 for bug 383991
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org> libguess-1.0.ebuild:
   Marking libguess-1.0 ppc for bug 383991
