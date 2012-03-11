@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/arel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.20 2012/01/14 07:32:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.21 2012/03/11 14:03:12 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> arel-2.2.1-r1.ebuild:
+  Marking arel-2.2.1-r1 ~ppc64 for bug 396547
 
 *arel-3.0.0 (14 Jan 2012)
 
