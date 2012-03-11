@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.73 2012/01/19 13:58:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.74 2012/03/11 22:36:08 chainsaw Exp $
+
+  11 Mar 2012; Tony Vroon <chainsaw@gentoo.org> kdenlive-0.8.2.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Maurizio "k01" Camisaschi &
+  Elijah "Armageddon" El Lazkani in bug #407149.
 
   19 Jan 2012; Johannes Huber <johu@gentoo.org>
   +files/kdenlive-0.8.2.1-qt48.patch, kdenlive-0.8.2.1.ebuild:
