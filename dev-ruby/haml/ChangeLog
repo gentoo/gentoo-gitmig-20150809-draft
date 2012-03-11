@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.72 2012/01/25 00:46:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.73 2012/03/11 14:12:37 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> haml-3.1.4-r3.ebuild:
+  Marking haml-3.1.4-r3 ~ppc64 for bug 396291
 
 *haml-3.1.4-r3 (25 Jan 2012)
 
