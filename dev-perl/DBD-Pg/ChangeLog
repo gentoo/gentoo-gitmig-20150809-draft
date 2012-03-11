@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.107 2012/03/11 13:52:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.108 2012/03/11 15:38:26 ago Exp $
+
+  11 Mar 2012; Agostino Sarubbo <ago@gentoo.org> DBD-Pg-2.19.0.ebuild:
+  Stable for amd64, wrt bug #407549
 
   11 Mar 2012; Brent Baude <ranger@gentoo.org> DBD-Pg-2.19.0.ebuild:
   Marking DBD-Pg-2.19.0 ppc64 for bug 407549
