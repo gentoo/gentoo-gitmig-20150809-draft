@@ -1,13 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.6.ebuild,v 1.11 2011/08/27 20:06:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.6.ebuild,v 1.12 2012/03/11 15:25:35 ssuominen Exp $
 
-EAPI=3
-
+EAPI=4
 inherit autotools eutils
 
-DESCRIPTION="Library to render Postscript documents."
-HOMEPAGE="http://libspectre.freedesktop.org/wiki/"
+DESCRIPTION="A library for rendering Postscript documents"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/libspectre"
 SRC_URI="http://libspectre.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -24,6 +23,8 @@ DEPEND="${RDEPEND}
 # does not actually test anything, see bug 362557
 RESTRICT="test"
 
+DOCS="NEWS README TODO"
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.2.0-interix.patch
 	eautoreconf # need new libtool for interix
@@ -31,7 +32,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable debug asserts) \
 		$(use_enable debug checks) \
 		$(use_enable static-libs static) \
@@ -39,20 +39,14 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
-
+	emake
 	if use doc; then
-		doxygen || die "doxygen failed"
+		doxygen || die
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc NEWS README TODO || die "installing docs failed"
-	if use doc; then
-		dohtml -r "${S}"/doc/html/* || die "dohtml failed"
-	fi
-
-	find "${D}" -name "*.la" -exec rm -v {} + || die
+	default
+	use doc && dohtml -r doc/html/*
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
