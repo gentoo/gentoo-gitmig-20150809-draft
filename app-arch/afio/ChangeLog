@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/afio
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/ChangeLog,v 1.19 2009/10/12 16:30:48 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/ChangeLog,v 1.20 2012/03/11 13:43:30 wschlich Exp $
+
+*afio-2.5.1 (11 Mar 2012)
+
+  11 Mar 2012; Wolfram Schlich <wschlich@gentoo.org> +files/Makefile-r1.patch,
+  +afio-2.5.1.ebuild:
+  version bump, respect LDFLAGS wrt bug #334911
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> afio-2.4.7.ebuild,
   afio-2.5.ebuild:
