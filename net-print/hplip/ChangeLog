@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.215 2012/03/06 15:50:51 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.216 2012/03/11 13:53:06 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> hplip-3.11.10.ebuild:
+  Marking hplip-3.11.10 ppc64 for bug 388655
 
   06 Mar 2012; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
   Remove myself from metadata.xml.
