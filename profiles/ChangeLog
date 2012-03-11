@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6298 2012/03/11 12:06:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6299 2012/03/11 18:40:43 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite gecko-sharp, Gtk2-MozEmbed and ntfsprogs.
 
   11 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Mask sys-apps/hardened-shadow (new package), early upstream release.
