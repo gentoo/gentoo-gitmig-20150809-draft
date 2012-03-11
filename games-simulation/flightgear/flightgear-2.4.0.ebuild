@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.4.0.ebuild,v 1.2 2011/10/19 06:36:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.4.0.ebuild,v 1.3 2012/03/11 22:42:19 chainsaw Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://flightgear/Source/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug sdl"
 
 COMMON_DEPEND="

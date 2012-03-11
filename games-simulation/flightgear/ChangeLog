@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/flightgear
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.51 2011/10/19 06:36:06 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.52 2012/03/11 22:42:19 chainsaw Exp $
+
+  11 Mar 2012; Tony Vroon <chainsaw@gentoo.org> flightgear-2.4.0.ebuild:
+  Marked stable on AMD64 based on arch testing by Maurizio "k01" Camisaschi &
+  Elijah "Armageddon" El Lazkani in bug #405665.
 
   19 Oct 2011; Tupone Alfredo <tupone@gentoo.org> flightgear-2.4.0.ebuild,
   +files/flightgear-2.4.0-svn.patch:
