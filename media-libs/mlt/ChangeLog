@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.86 2012/02/26 15:28:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.87 2012/03/11 22:35:00 chainsaw Exp $
+
+  11 Mar 2012; Tony Vroon <chainsaw@gentoo.org> mlt-0.7.6-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Maurizio "k01" Camisaschi &
+  Elijah "Armageddon" El Lazkani in bug #405753.
 
   26 Feb 2012; Alexis Ballier <aballier@gentoo.org> mlt-0.7.6-r1.ebuild,
   mlt-0.7.8.ebuild:
