@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmidecode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.32 2012/01/01 10:10:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.33 2012/03/11 12:59:04 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> dmidecode-2.11.ebuild:
+  Marking dmidecode-2.11 ~ppc64 for bug 394785
 
   01 Jan 2012; Fabian Groffen <grobian@gentoo.org> dmidecode-2.11.ebuild:
   Fix for Prefix, keyword ~x86-solaris and add usage instructions
