@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbig2dec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.19 2012/03/05 07:45:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.20 2012/03/11 20:01:43 leio Exp $
+
+  11 Mar 2012; Mart Raudsepp <leio@gentoo.org> jbig2dec-0.11-r1.ebuild:
+  Add ~mips keyword, unbundled in newer ghostscript-gpl wrt #401853
 
   05 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> jbig2dec-0.11-r1.ebuild:
   Missing app-arch/unzip DEPEND for USE="test" wrt #406793 by Toralf Förster
