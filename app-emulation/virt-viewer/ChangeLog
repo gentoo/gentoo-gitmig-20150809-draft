@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virt-viewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.13 2012/01/19 20:20:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.14 2012/03/11 00:50:09 cardoe Exp $
+
+*virt-viewer-0.5.2 (10 Mar 2012)
+
+  10 Mar 2012; Doug Goldstein <cardoe@gentoo.org> virt-viewer-0.4.2.ebuild,
+  +virt-viewer-0.5.2.ebuild:
+  Version bump. Switch to REQUIRED_USE instead of a pkg_pretend check.
 
   19 Jan 2012; Doug Goldstein <cardoe@gentoo.org> virt-viewer-0.4.2.ebuild:
   USE=nsplugin relies on GTK+ 2.0, but when someone has USE=gtk3, we won't pull
