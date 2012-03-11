@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.73 2012/03/11 01:44:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.74 2012/03/11 23:38:27 williamh Exp $
 
 EAPI=4
 
@@ -68,11 +68,6 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25"
 
-# required kernel options
-CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~HOTPLUG ~INOTIFY_USER ~NET ~PROC_FS
-	~SIGNALFD ~SYSFS ~TMPFS_POSIX_ACL
-	~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
-
 udev_check_KV()
 {
 	if kernel_is lt ${KV_min//./ }
@@ -84,6 +79,11 @@ udev_check_KV()
 
 pkg_setup()
 {
+	# required kernel options
+	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~HOTPLUG ~INOTIFY_USER ~NET ~PROC_FS
+		~SIGNALFD ~SYSFS
+		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
+
 	linux-info_pkg_setup
 
 	# always print kernel version requirements
