@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/submux-dvd-0.5.1.ebuild,v 1.4 2012/03/11 19:08:16 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/submux-dvd-0.5.2.ebuild,v 1.1 2012/03/11 19:08:15 lordvan Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,6 +23,6 @@ src_compile() {
 src_install() {
 	# just 2 files not worth a makefile patch
 	dobin submux-dvd vob2sub || die
-	dodoc CHANGES FORMAT README ${P}.lsm || die
+	dodoc CHANGES FORMAT INSTALL README ${P}.lsm || die
 	dohtml spu.html || die
 }
