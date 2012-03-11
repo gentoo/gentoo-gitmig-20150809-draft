@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2011.4.12.ebuild,v 1.7 2011/12/29 20:37:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2011.4.12.ebuild,v 1.8 2012/03/11 19:10:08 ssuominen Exp $
 
 EAPI=2
 inherit linux-info
