@@ -1,4 +1,5 @@
 http://bugs.gentoo.org/407695
+http://code.google.com/p/ibus/issues/detail?id=1427
 
 --- src/IBusChewingEngine.gob
 +++ src/IBusChewingEngine.gob
