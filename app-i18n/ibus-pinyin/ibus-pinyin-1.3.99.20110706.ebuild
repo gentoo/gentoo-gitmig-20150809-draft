@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20110706.ebuild,v 1.2 2012/03/11 08:53:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20110706.ebuild,v 1.3 2012/03/11 08:57:31 ssuominen Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="sqlite"
 
-inherit python eutils
+inherit python
 
 PYDB_TAR="pinyin-database-1.2.99.tar.bz2"
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
@@ -38,7 +38,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/data/db/open-phrase/ || die
+	cp "${DISTDIR}"/${PYDB_TAR} data/db/open-phrase/ || die
 	>py-compile
 }
 
