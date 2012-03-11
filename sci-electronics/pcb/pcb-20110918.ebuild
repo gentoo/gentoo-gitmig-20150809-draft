@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20110918.ebuild,v 1.1 2012/03/10 13:30:27 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20110918.ebuild,v 1.2 2012/03/11 16:10:56 tomjbe Exp $
 
 EAPI="3"
 
-inherit fdo-mime gnome2-utils
+inherit autotools eutils fdo-mime gnome2-utils
 
 DESCRIPTION="GPL Electronic Design Automation: Printed Circuit Board editor"
 HOMEPAGE="http://www.gpleda.org/"
@@ -76,9 +76,14 @@ src_prepare() {
 		fi
 	fi
 	# Backport from upstream
-	# http://git.gieda-project.org/pcb/commit/?id=a34b40add60310a51780f359cc90d9c5ee75752c
+	# http://git.geda-project.org/pcb/commit/?id=a34b40add60310a51780f359cc90d9c5ee75752c
 	# (do not install static GTS library)
 	sed -i -e 's/lib_LIBRARIES/noinst_LIBRARIES/' -e 's/include_HEADERS/noinst_HEADERS/' gts/Makefile.am || die
+
+	# fix bad syntax in Makefile.am and configure.ac before running eautoreconf
+	sed -i -e 's/:=/=/' Makefile.am || die
+	epatch "${FILESDIR}"/${P}-fix-config.diff
+	eautoreconf
 }
 
 src_configure() {
