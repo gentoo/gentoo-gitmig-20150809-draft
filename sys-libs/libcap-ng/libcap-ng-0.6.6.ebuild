@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.6.ebuild,v 1.4 2012/03/10 18:58:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.6.ebuild,v 1.5 2012/03/11 09:49:02 ssuominen Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="sys-apps/attr
 	python? ( dev-lang/python )"
 DEPEND="${RDEPEND}
 	sys-kernel/linux-headers
-	python? ( dev-lang/swig )"
+	python? ( >=dev-lang/swig-2 )"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
