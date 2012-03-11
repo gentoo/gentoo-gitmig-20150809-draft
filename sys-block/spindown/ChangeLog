@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/spindown
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/ChangeLog,v 1.8 2012/03/11 11:38:51 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/ChangeLog,v 1.9 2012/03/11 11:44:45 wschlich Exp $
+
+  11 Mar 2012; Wolfram Schlich <wschlich@gentoo.org> -spindown-0.4.0-r2.ebuild,
+  -files/spindownd.confd, -files/spindownd.initd:
+  removed old version
 
 *spindown-0.4.0-r4 (11 Mar 2012)
 
