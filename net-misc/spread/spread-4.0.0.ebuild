@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.0.0.ebuild,v 1.4 2010/02/22 18:20:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.0.0.ebuild,v 1.5 2012/03/11 23:56:11 kumba Exp $
 
+EAPI=4
 inherit eutils
 
 MY_PN="spread-src"
@@ -12,7 +13,7 @@ SRC_URI="mirror://gentoo/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="Spread-1.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND=""
@@ -25,17 +26,13 @@ pkg_setup() {
 	enewgroup spread
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# don't strip binaries
 	sed -i -e 's/0755 -s/0755/g' daemon/Makefile.in examples/Makefile.in
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}" -j1 install \
-		|| die "emake install failed"
-	newinitd "${FILESDIR}"/spread.init.d spread || die "newinitd failed"
-	dodir /var/run/spread || die "dodir failed"
+	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}" install
+	newinitd "${FILESDIR}"/spread.init.d spread
+	dodir /var/run/spread
 }

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/spread
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.7 2011/09/05 07:05:23 kumba Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.8 2012/03/11 23:56:11 kumba Exp $
+
+  11 Mar 2012; Joshua Kinard <kumba@gentoo.org> spread-4.0.0.ebuild,
+  spread-4.1.0.ebuild:
+  Update the ebuilds to EAPI 4 and mark both versions stable. They've been
+  around for a long time with no reported issues.
 
 *spread-4.1.0 (05 Sep 2011)
 
