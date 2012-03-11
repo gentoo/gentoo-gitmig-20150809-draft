@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-protection
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-protection/ChangeLog,v 1.3 2012/01/28 08:01:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-protection/ChangeLog,v 1.4 2012/03/11 14:14:49 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> rack-protection-1.2.0.ebuild:
+  Marking rack-protection-1.2.0 ~ppc64 for bug 396291
 
 *rack-protection-1.2.0 (28 Jan 2012)
 
