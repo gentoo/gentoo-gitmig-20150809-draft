@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13565 2012/03/10 14:57:17 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13566 2012/03/11 12:06:29 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (11 Mar 2012)
+# Early upstream release, NOT ready for production use.
+# Testers and contributors are welcome, please visit the project page:
+# http://code.google.com/p/hardened-shadow/
+sys-apps/hardened-shadow
 
 # Samuli Suominen <ssuominen@gentoo.org> (09 Mar 2012)
 # Fails to build with GCC-4.6 wrt #380767. A lot has changed
