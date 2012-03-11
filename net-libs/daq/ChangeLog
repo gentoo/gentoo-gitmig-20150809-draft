@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.14 2012/01/11 07:58:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.15 2012/03/11 14:21:24 kumba Exp $
+
+  11 Mar 2012; Joshua Kinard <kumba@gentoo.org> -daq-0.2.ebuild,
+  -daq-0.3.ebuild, -daq-0.4.ebuild, -daq-0.6.1.ebuild, daq-0.6.2.ebuild:
+  Drop older versions, but keep 0.5 and 0.6.2 around. Also marked 0.6.2 stable
+  on x86/amd64, as it was a minor bugfix only. Added ~mips.
 
 *daq-0.6.2 (11 Jan 2012)
 
