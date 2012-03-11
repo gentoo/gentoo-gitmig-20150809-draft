@@ -1,5 +1,5 @@
---- src/Makefile.in.org	2010-03-01 22:13:17.000000000 +0100
-+++ src/Makefile.in	2010-04-01 22:59:21.000000000 +0200
+--- a/src/Makefile.in
++++ b/src/Makefile.in
 @@ -65,7 +65,7 @@
  	ar -cr $@ $(OBJS)
  	$(RANLIB) $@

@@ -1,5 +1,5 @@
---- src/checksum.c.orig	2003-09-20 22:40:44.000000000 +0200
-+++ src/checksum.c	2004-11-02 20:36:59.290981656 +0100
+--- a/src/checksum.c
++++ b/src/checksum.c
 @@ -29,6 +29,7 @@
  	movl 16(%esp),%ecx	# Function arg: int len
          movl 12(%esp),%esi	# Function arg: u_char *buff*/

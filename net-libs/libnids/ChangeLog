@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.51 2012/03/10 16:34:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.52 2012/03/11 18:25:54 jer Exp $
+
+  11 Mar 2012; Jeroen Roovers <jer@gentoo.org> -libnids-1.18.ebuild,
+  files/libnids-1.18-chksum.c-ebx.patch, files/libnids-1.18-elif.patch,
+  -libnids-1.24.ebuild, files/libnids-1.24-ldflags.patch:
+  Clean up patches. Remove old.
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org> libnids-1.24-r1.ebuild:
   Marking libnids-1.24-r1 ppc for bug 397159

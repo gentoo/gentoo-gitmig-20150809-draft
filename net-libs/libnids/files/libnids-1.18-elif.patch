@@ -1,5 +1,5 @@
---- a/src/killtcp.c	2002-08-21 18:19:40.000000000 +0200
-+++ b/src/killtcp.c	2012-01-07 19:15:45.451020838 +0100
+--- a/src/killtcp.c
++++ b/src/killtcp.c
 @@ -100,6 +100,6 @@
      if (initialized)
  	abort();
