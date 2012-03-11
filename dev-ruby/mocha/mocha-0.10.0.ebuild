@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.10.0.ebuild,v 1.4 2012/03/05 10:13:26 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.10.0.ebuild,v 1.5 2012/03/11 14:07:30 ranger Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -20,7 +20,7 @@ HOMEPAGE="http://mocha.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "
