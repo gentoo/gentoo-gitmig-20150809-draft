@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.226 2012/02/18 17:42:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.227 2012/03/11 14:43:01 ago Exp $
+
+  11 Mar 2012; Agostino Sarubbo <ago@gentoo.org> kdevelop-4.2.3.ebuild:
+  Stable for amd64, wrt bug #368739
 
   18 Feb 2012; Maciej Mrozowski <reavertm@gentoo.org> kdevelop-4.2.3.ebuild:
   QMake is no longer being supported.
