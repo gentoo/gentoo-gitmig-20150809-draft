@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.18 2011/12/31 20:19:29 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.19 2012/03/11 14:41:09 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> mail-2.3.0.ebuild:
+  Marking mail-2.3.0 ~ppc64 for bug 396547
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> mail-2.3.0.ebuild:
   Add Prefix keywords, bug #396547

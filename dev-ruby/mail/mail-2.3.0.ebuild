@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/mail-2.3.0.ebuild,v 1.2 2011/12/31 20:19:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/mail-2.3.0.ebuild,v 1.3 2012/03/11 14:41:09 ranger Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -23,7 +23,7 @@ SRC_URI="https://github.com/${GITHUB_USER}/mail/tarball/${COMMIT} -> ${P}.tar.gz
 
 LICENSE="MIT"
 SLOT="2.3"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RUBY_S="${GITHUB_USER}-${PN}-*"
