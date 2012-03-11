@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXft
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.76 2012/03/08 23:58:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.77 2012/03/11 20:10:02 chithanh Exp $
+
+*libXft-2.3.0-r1 (11 Mar 2012)
+
+  11 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/libXft-2.3.0-bold-fonts.patch, +libXft-2.3.0-r1.ebuild:
+  Add patch to fix bold fonts, bug #407751.
 
 *libXft-2.3.0 (08 Mar 2012)
 
