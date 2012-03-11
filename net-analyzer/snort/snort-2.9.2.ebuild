@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.2.ebuild,v 1.1 2012/01/11 08:17:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.2.ebuild,v 1.2 2012/03/11 03:46:08 radhermit Exp $
 
 EAPI="2"
 inherit eutils autotools multilib
@@ -52,7 +52,7 @@ src_prepare() {
 		|| die "sed for sf_engine failed"
 
 	#Multilib fix for the curent set of dynamic-preprocessors
-	for i in ftptelnet smtp ssh dns ssl dcerpc2 sdf imap pop rzb_saac sip reputation; do
+	for i in ftptelnet smtp ssh dns ssl dcerpc2 sdf imap pop rzb_saac sip reputation gtp modbus dnp3; do
 		sed -i -e 's|${exec_prefix}/lib|${exec_prefix}/'$(get_libdir)'|g' \
 			"${WORKDIR}/${P}/src/dynamic-preprocessors/$i/Makefile.am" \
 			|| die "sed for $i failed."

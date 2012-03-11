@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.188 2012/01/11 08:17:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.189 2012/03/11 03:46:08 radhermit Exp $
+
+  11 Mar 2012; Tim Harder <radhermit@gentoo.org> snort-2.9.2.ebuild:
+  Fix multilib issue (bug #403725, patch by Rick Farina).
 
 *snort-2.9.2 (11 Jan 2012)
 
