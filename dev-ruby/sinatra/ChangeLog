@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sinatra
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.28 2011/12/31 19:28:46 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.29 2012/03/11 14:13:19 ranger Exp $
+
+  11 Mar 2012; Brent Baude <ranger@gentoo.org> sinatra-1.3.1.ebuild:
+  Marking sinatra-1.3.1 ~ppc64 for bug 396291
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> sinatra-1.3.1.ebuild:
   Add Prefix keywords, bug #396547
