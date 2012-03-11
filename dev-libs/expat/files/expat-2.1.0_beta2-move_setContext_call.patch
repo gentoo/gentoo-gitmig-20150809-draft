@@ -1,5 +1,5 @@
 http://bugs.gentoo.org/407555
-http://expat.cvs.sourceforge.net/viewvc/expat/expat/lib/xmlparse.c?r1=1.168&r2=1.169
+http://expat.cvs.sourceforge.net/viewvc/expat/expat/lib/xmlparse.c?r1=1.168&r2=1.170
 http://sourceforge.net/tracker/?func=detail&atid=110127&aid=3500861&group_id=10127
 
 --- lib/xmlparse.c
@@ -9,7 +9,7 @@ http://sourceforge.net/tracker/?func=detail&atid=110127&aid=3500861&group_id=101
                 const char *ptr, const char *end);
  
 +static unsigned long generate_hash_secret_salt(void);
-+static XML_Bool parsingSetup(XML_Parser parser);
++static XML_Bool startParsing(XML_Parser parser);
 +
  static XML_Parser
  parserCreate(const XML_Char *encodingName,
@@ -18,13 +18,13 @@ http://sourceforge.net/tracker/?func=detail&atid=110127&aid=3500861&group_id=101
    return rand();
  }
  
-+static XML_Bool
-+parsingSetup(XML_Parser parser)
++static XML_Bool  /* only valid for root parser */
++startParsing(XML_Parser parser)
 +{
 +    /* hash functions must be initialized before setContext() is called */
 +    if (hash_secret_salt == 0)
 +      hash_secret_salt = generate_hash_secret_salt();
-+    if (parser != NULL && ns) {
++    if (ns) {
 +      /* implicit context only set for root parser, since child
 +         parsers (i.e. external entity parsers) will inherit it
 +      */
@@ -68,7 +68,7 @@ http://sourceforge.net/tracker/?func=detail&atid=110127&aid=3500861&group_id=101
    case XML_INITIALIZED:
 -    if (hash_secret_salt == 0)
 -      hash_secret_salt = generate_hash_secret_salt();
-+    if (!parsingSetup(parser)) {
++    if (parentParser == NULL && !startParsing(parser)) {
 +      errorCode = XML_ERROR_NO_MEMORY;
 +      return XML_STATUS_ERROR;
 +    }
@@ -81,7 +81,7 @@ http://sourceforge.net/tracker/?func=detail&atid=110127&aid=3500861&group_id=101
    case XML_INITIALIZED:
 -    if (hash_secret_salt == 0)
 -      hash_secret_salt = generate_hash_secret_salt();
-+    if (!parsingSetup(parser)) {
++    if (parentParser == NULL && !startParsing(parser)) {
 +      errorCode = XML_ERROR_NO_MEMORY;
 +      return XML_STATUS_ERROR;
 +    }
