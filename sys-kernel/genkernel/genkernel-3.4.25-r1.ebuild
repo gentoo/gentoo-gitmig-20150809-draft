@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.32 2012/03/11 22:56:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.25-r1.ebuild,v 1.1 2012/03/11 22:56:37 robbat2 Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -62,7 +62,8 @@ DEPEND="sys-fs/e2fsprogs
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="${DEPEND}
 		app-arch/cpio
-		app-misc/pax-utils"
+		app-misc/pax-utils
+		!<sys-apps/openrc-0.9.9"
 # pax-utils is used for lddtree
 
 if [[ ${PV} == 9999* ]]; then

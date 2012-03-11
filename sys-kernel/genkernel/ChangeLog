@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.288 2012/03/10 21:37:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.289 2012/03/11 22:56:37 robbat2 Exp $
+
+*genkernel-3.4.25-r1 (11 Mar 2012)
+
+  11 Mar 2012; Robin H. Johnson <robbat2@gentoo.org> +files/initramfs.mounts,
+  +genkernel-3.4.25-r1.ebuild, genkernel-9999.ebuild:
+  genkernel 3.4.25 does not actually need this file as it has automatic
+  defaults, but it may be useful for users which complex setups that need to
+  mount more than just /usr before pivot_root.
 
   10 Mar 2012; Robin H. Johnson <robbat2@gentoo.org> genkernel-3.4.25.ebuild:
   You must not use genkernel-3.4.25 with an OpenRC version that fails to
