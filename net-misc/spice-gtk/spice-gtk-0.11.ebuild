@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.11.ebuild,v 1.2 2012/03/09 19:19:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.11.ebuild,v 1.3 2012/03/11 06:48:00 cardoe Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -44,7 +44,7 @@ RDEPEND="pulseaudio? ( !gstreamer? ( media-sound/pulseaudio ) )
 			sys-apps/acl
 			>=sys-auth/polkit-0.101 )
 		>=dev-libs/libusb-1.0.9_rc1
-		>=sys-apps/usbredir-0.3.3
+		>=sys-apps/usbredir-0.4.2
 		sys-fs/udev[gudev] )"
 DEPEND="${RDEPEND}
 	vala? ( dev-lang/vala:0.14 )
@@ -91,7 +91,6 @@ src_configure() {
 		$(use_enable policykit polkit) \
 		$(use_enable vala) \
 		--with-gtk="${gtk}" \
-		--disable-smartcard \
 		--disable-werror
 }
 
