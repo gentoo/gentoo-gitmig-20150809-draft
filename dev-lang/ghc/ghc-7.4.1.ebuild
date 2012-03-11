@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1.ebuild,v 1.2 2012/03/04 14:32:50 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1.ebuild,v 1.3 2012/03/11 18:43:38 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -39,14 +39,14 @@ HOMEPAGE="http://www.haskell.org/ghc/"
 arch_binaries=""
 
 # sorted!
-#arch_binaries="$arch_binaries alpha? ( http://code.haskell.org/~slyfox/ghc-alpha/ghc-bin-${PV}-alpha.tbz2 )"
+arch_binaries="$arch_binaries alpha? ( http://code.haskell.org/~slyfox/ghc-alpha/ghc-bin-${PV}-alpha.tbz2 )"
 #arch_binaries="$arch_binaries arm? ( http://code.haskell.org/~slyfox/ghc-arm/ghc-bin-${PV}-arm.tbz2 )"
-#arch_binaries="$arch_binaries amd64? ( http://code.haskell.org/~slyfox/ghc-amd64/ghc-bin-${PV}-amd64.tbz2 )"
+arch_binaries="$arch_binaries amd64? ( http://code.haskell.org/~slyfox/ghc-amd64/ghc-bin-${PV}-amd64.tbz2 )"
 #arch_binaries="$arch_binaries ia64?  ( http://code.haskell.org/~slyfox/ghc-ia64/ghc-bin-${PV}-ia64-fixed-fiw.tbz2 )"
-#arch_binaries="$arch_binaries ppc? ( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )"
-#arch_binaries="$arch_binaries ppc64? ( mirror://gentoo/ghc-bin-${PV}-ppc64.tbz2 )"
-#arch_binaries="$arch_binaries sparc? ( http://code.haskell.org/~slyfox/ghc-sparc/ghc-bin-${PV}-sparc.tbz2 )"
-#arch_binaries="$arch_binaries x86? ( http://code.haskell.org/~slyfox/ghc-x86/ghc-bin-${PV}-x86.tbz2 )"
+arch_binaries="$arch_binaries ppc? ( http://code.haskell.org/~slyfox/ghc-ppc/ghc-bin-${PV}-ppc.tbz2 )"
+arch_binaries="$arch_binaries ppc64? ( http://code.haskell.org/~slyfox/ghc-ppc64/ghc-bin-${PV}-ppc64.tbz2 )"
+arch_binaries="$arch_binaries sparc? ( http://code.haskell.org/~slyfox/ghc-sparc/ghc-bin-${PV}-sparc.tbz2 )"
+arch_binaries="$arch_binaries x86? ( http://code.haskell.org/~slyfox/ghc-x86/ghc-bin-${PV}-x86.tbz2 )"
 
 # various ports:
 #arch_binaries="$arch_binaries x86-fbsd? ( http://code.haskell.org/~slyfox/ghc-x86-fbsd/ghc-bin-${PV}-x86-fbsd.tbz2 )"
@@ -54,25 +54,17 @@ arch_binaries=""
 # 0 - yet
 yet_binary() {
 	case "${ARCH}" in
-		#alpha)
-		#	return 0
-		#	;;
+		alpha) return 0 ;;
 		#arm)
 		#	ewarn "ARM binary is built on armv5tel-eabi toolchain. Use with caution."
 		#	return 0
-		#	;;
-		#amd64)
-		#	return 0
-		#	;;
-		##sparc)
-		#	return 0
-		#	;;
-		#x86)
-		#	return 0
-		#	;;
-		*)
-			return 1
-			;;
+		#;;
+		amd64) return 0 ;;
+		ppc) return 0 ;;
+		ppc64) return 0 ;;
+		sparc) return 0 ;;
+		x86) return 0 ;;
+		*) return 1 ;;
 	esac
 }
 
@@ -112,8 +104,6 @@ DEPEND="${RDEPEND}
 PDEPEND="!ghcbootstrap? ( =app-admin/haskell-updater-1.2* )"
 PDEPEND="
 	${PDEPEND}
-	dev-haskell/random
-	dev-haskell/syb
 	llvm? ( sys-devel/llvm )"
 
 append-ghc-cflags() {
@@ -279,9 +269,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	[[ ${CHOST} != *-darwin* ]] && \
-		source "${FILESDIR}/ghc-apply-gmp-hack" "$(get_libdir)"
-
 	ghc_setup_cflags
 
 	if ! use ghcbootstrap; then
