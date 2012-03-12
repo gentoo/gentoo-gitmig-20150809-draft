@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.38 2012/03/11 15:40:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.39 2012/03/12 16:01:15 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org> libcap-ng-0.6.6.ebuild:
+  Marking libcap-ng-0.6.6 ppc64 for bug 407773
 
   11 Mar 2012; Agostino Sarubbo <ago@gentoo.org> libcap-ng-0.6.6.ebuild:
   Stable for amd64, wrt bug #407773
