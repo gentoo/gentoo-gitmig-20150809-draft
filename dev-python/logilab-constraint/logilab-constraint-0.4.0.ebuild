@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.5 2012/02/01 02:19:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.6 2012/03/12 07:20:30 patrick Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -30,7 +30,9 @@ src_install() {
 	distutils_src_install
 
 	# Avoid conflict with dev-python/logilab-common.
-	rm -f "${D}"usr/$(get_libdir)/python*/site-packages/logilab/__init__.py
+	rm -f "${D}"usr/$(get_libdir)/python*/site-packages/logilab/__init__.py || die
+	rm -f "${D}"usr/$(get_libdir)/pypy*/site-packages/logilab/__init__.py || die
+	rm -f "${D}"usr/$(get_libdir)/jython*/site-packages/logilab/__init__.py || die
 
 	if use doc; then
 		dohtml doc/documentation.html

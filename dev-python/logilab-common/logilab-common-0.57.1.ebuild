@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.57.1.ebuild,v 1.1 2012/02/14 04:38:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.57.1.ebuild,v 1.2 2012/03/12 07:19:51 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -51,6 +51,11 @@ src_test() {
 
 src_install() {
 	distutils_src_install
+
+	# Avoid conflict with dev-python/logilab-common. wrt Bug 405535
+	rm -f "${D}"usr/$(get_libdir)/python*/site-packages/logilab/__init__.py || die
+	rm -f "${D}"usr/$(get_libdir)/pypy*/site-packages/logilab/__init__.py || die
+	rm -f "${D}"usr/$(get_libdir)/jython*/site-packages/logilab/__init__.py || die
 
 	python_generate_wrapper_scripts -E -f -q "${ED}usr/bin/pytest"
 
