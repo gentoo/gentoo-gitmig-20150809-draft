@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme-symbolic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.10 2012/01/15 00:11:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.11 2012/03/12 15:16:50 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org>
+  gnome-icon-theme-symbolic-3.2.2.ebuild:
+  Marking gnome-icon-theme-symbolic-3.2.2 ppc64 stable for bug 407643
 
 *gnome-icon-theme-symbolic-3.2.2 (15 Jan 2012)
 
