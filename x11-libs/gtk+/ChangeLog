@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.568 2012/03/10 07:44:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.569 2012/03/12 15:15:59 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org> gtk+-3.2.3.ebuild:
+  Marking gtk+-3.2.3 ppc64 stable for bug 407643
 
   10 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gtk+-3.2.3.ebuild:
   Skip tests if gnome-themes-standard-3.2 is not installed (see bug #398789,
