@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.230 2011/10/23 17:09:03 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.231 2012/03/12 15:14:34 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org> atk-2.2.0.ebuild:
+  Marking atk-2.2.0 ppc64 stable for bug 407643
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> atk-1.32.0-r1.ebuild:
   s390 stable
