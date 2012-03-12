@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-standard
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.11 2011/12/09 01:08:20 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.12 2012/03/12 15:16:24 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org>
+  gnome-themes-standard-3.2.1.ebuild:
+  Marking gnome-themes-standard-3.2.1 ppc64 stable for bug 407643
 
   09 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-themes-standard-3.0.2.ebuild, gnome-themes-standard-3.2.1.ebuild:
