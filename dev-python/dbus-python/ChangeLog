@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.89 2012/03/09 14:48:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.90 2012/03/12 06:43:36 jdhore Exp $
+
+  12 Mar 2012; Jeff Horelick <jdhore@gentoo.org> dbus-python-1.0.0.ebuild:
+  marked x86 per bug 403843
 
   09 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> dbus-python-1.0.0.ebuild:
   amd64/ppc/ppc64 stable wrt #403843
