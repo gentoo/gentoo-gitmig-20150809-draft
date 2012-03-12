@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/speed-dreams
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/ChangeLog,v 1.9 2011/06/14 22:00:20 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/ChangeLog,v 1.10 2012/03/12 13:02:05 tupone Exp $
+
+  12 Mar 2012; Alfredo Tupone <tupone@gentoo.org> speed-dreams-1.4.0.ebuild:
+  Make it build with new automake
 
   14 Jun 2011; Michael Sterrett <mr_bones_@gentoo.org>
   speed-dreams-1.4.0.ebuild, +files/speed-dreams-1.4.0-libpng15.patch:
