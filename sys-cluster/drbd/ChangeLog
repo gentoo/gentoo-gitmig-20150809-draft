@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.116 2012/01/04 17:42:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.117 2012/03/12 20:47:00 xarthisius Exp $
+
+  12 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> drbd-8.3.12.ebuild,
+  drbd-8.3.8.1-r1.ebuild, drbd-8.4.0.ebuild:
+  Extend multilib fixes wrt bug 407961 by Robin Johnson <robbat2@gentoo.org>
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> drbd-8.3.11-r1.ebuild:
   x86 stable wrt bug #396207

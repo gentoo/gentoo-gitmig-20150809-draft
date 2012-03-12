@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.8.1-r1.ebuild,v 1.1 2011/01/18 18:55:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.8.1-r1.ebuild,v 1.2 2012/03/12 20:47:00 xarthisius Exp $
 
 EAPI="2"
 
@@ -21,7 +21,10 @@ src_prepare() {
 	sed -i -e "s/\$(CC) -o/\$(CC) \$(LDFLAGS) -o/" user/Makefile.in || die
 	# respect multilib
 	sed -i -e "s:/lib/:/$(get_libdir)/:g" \
-		scripts/{Makefile.in,global_common.conf,drbd.conf.example} || die
+		Makefile.in scripts/{Makefile.in,global_common.conf,drbd.conf.example} || die
+	sed -e "s:@prefix@/lib:@prefix@/$(get_libdir):" \
+		-e "s:(DESTDIR)/lib:(DESTDIR)/$(get_libdir):" \
+		-i user/{,legacy/}Makefile.in || die
 	# correct install paths
 	sed -i -e "s:\$(sysconfdir)/bash_completion.d:/usr/share/bash-completion:" \
 		scripts/Makefile.in || die
