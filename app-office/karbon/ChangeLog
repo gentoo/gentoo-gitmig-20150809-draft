@@ -1,6 +1,9 @@
 # ChangeLog for app-office/karbon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.130 2012/03/09 09:08:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.131 2012/03/12 10:28:15 johu Exp $
+
+  12 Mar 2012; Johannes Huber <johu@gentoo.org> -karbon-2.3.3.ebuild:
+  Remove old.
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> karbon-2.3.3-r1.ebuild:
   x86 stable wrt bug #405869
