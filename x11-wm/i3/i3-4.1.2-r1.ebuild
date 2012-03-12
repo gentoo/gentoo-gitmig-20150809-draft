@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.1.2.ebuild,v 1.1 2012/01/28 16:21:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.1.2-r1.ebuild,v 1.1 2012/03/12 08:15:57 xarthisius Exp $
 
 EAPI=4
 
@@ -42,10 +42,17 @@ src_prepare() {
 	sed -i common.mk \
 		-e "/DEBUG=/ s/1/0/" \
 		-e '/O2\|reorder\-blocks\|SILENT/d' || die
+
+	cat <<- EOF > "${T}"/i3wm
+		#!/bin/sh
+		exec /usr/bin/i3
+	EOF
 }
 
 src_install() {
 	default
 	dohtml -r docs/*
 	doman i3bar/doc/i3bar.1 man/*.1
+	exeinto /etc/X11/Sessions
+	doexe "${T}"/i3wm
 }
