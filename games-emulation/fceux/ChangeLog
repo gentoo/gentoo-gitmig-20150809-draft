@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fceux
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.14 2011/08/01 19:15:07 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.15 2012/03/12 19:12:43 mr_bones_ Exp $
+
+  12 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> fceux-2.1.5.ebuild,
+  +files/fceux-2.1.5-gcc46.patch:
+  build with newer gcc (bug #406471) with patch from Markus Rathgeb
 
   01 Aug 2011; Markus Meier <maekke@gentoo.org> fceux-2.1.5.ebuild:
   amd64/x86 stable, bug #375715
