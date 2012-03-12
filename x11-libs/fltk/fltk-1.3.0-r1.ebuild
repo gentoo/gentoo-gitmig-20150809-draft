@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0-r1.ebuild,v 1.3 2012/03/02 09:40:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0-r1.ebuild,v 1.4 2012/03/12 07:10:07 ssuominen Exp $
 
 EAPI=3
 
@@ -25,6 +25,7 @@ RDEPEND="
 	x11-libs/libSM
 	x11-libs/libXext
 	x11-libs/libXt
+	cairo? ( x11-libs/cairo )
 	opengl? ( virtual/opengl )
 	xinerama? ( x11-libs/libXinerama )
 	xft? ( x11-libs/libXft )"
@@ -39,7 +40,7 @@ DEPEND="${RDEPEND}
 INCDIR=${EPREFIX}/usr/include/fltk-${SLOT}
 LIBDIR=${EPREFIX}/usr/$(get_libdir)/fltk-${SLOT}
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	rm -rf zlib jpeg png || die
