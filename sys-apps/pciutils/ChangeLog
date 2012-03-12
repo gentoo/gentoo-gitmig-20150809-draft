@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.187 2012/01/31 16:05:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.188 2012/03/12 16:05:55 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org> pciutils-3.1.9-r1.ebuild:
+  Marking pciutils-3.1.9-r1 ppc64 for bug 407831
 
 *pciutils-3.1.9-r1 (31 Jan 2012)
 
