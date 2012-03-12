@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9-r1.ebuild,v 1.2 2010/11/08 18:45:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9-r2.ebuild,v 1.1 2012/03/12 13:05:10 alexxy Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
@@ -23,11 +23,11 @@ DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
 RDEPEND="${CDEPEND}"
 
+REQUIRED_USE="^^ ( opengl mpi )"
+
 S="${WORKDIR}/${PN}/unix"
 
 # TODO: Test on alpha, ia64, ppc
-# TODO: MPI: Depend on lam or virtual ? Test MPI
-# TODO: Check for threads dependencies
 # TODO: add other architectures
 # TODO: X, Motif, MBOX, Open Media Framework, Spaceball I/O, MGF ?
 
@@ -37,9 +37,6 @@ pkg_setup() {
 	if use threads ; then
 		if use opengl ; then
 			TACHYON_MAKE_TARGET=linux-thr-ogl
-			if use mpi ; then
-				die "tachyon does not support MPI with OpenGL and threads"
-			fi
 		elif use mpi ; then
 			TACHYON_MAKE_TARGET=linux-mpi-thr
 		else
@@ -48,17 +45,11 @@ pkg_setup() {
 
 		# TODO: Support for linux-athlon-thr ?
 	else
-		if use opengl ; then
-			# TODO: Support target: linux-lam-64-ogl
-
-			die "OpenGL is only available with USE=threads!"
-		elif use mpi ; then
+		if use mpi ; then
 				TACHYON_MAKE_TARGET=linux-mpi
 		else
 			TACHYON_MAKE_TARGET=linux
 		fi
-
-		# TODO: Support for linux-p4, linux-athlon, linux-ps2 ?
 	fi
 
 	if [[ -z "${TACHYON_MAKE_TARGET}" ]]; then
