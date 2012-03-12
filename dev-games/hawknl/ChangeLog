@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/hawknl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.11 2010/09/10 10:01:59 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.12 2012/03/12 16:38:44 vapier Exp $
+
+*hawknl-1.68-r2 (12 Mar 2012)
+
+  12 Mar 2012; Mike Frysinger <vapier@gentoo.org> +hawknl-1.68-r2.ebuild,
+  files/hawknl-1.68-build.patch:
+  Fix libNL SONAME #407785 by Alain B.
 
   10 Sep 2010; Tupone Alfredo <tupone@gentoo.org> hawknl-1.68-r1.ebuild,
   files/hawknl-1.68-build.patch:

@@ -26,7 +26,7 @@
  OPTFLAGS = -funroll-all-loops -ffast-math -fomit-frame-pointer -O2 -D_GNU_SOURCE -D_REENTRANT
  CFLAGS = -Wall -fPIC $(INCLUDE) $(OPTFLAGS)
 -LIBFLAGS = -shared -Wl,-soname,NL.so.$(MAJOR_VERSION).$(MINOR_VERSION) -rdynamic -lpthread
-+LIBFLAGS = ${LDFLAGS} -shared -Wl,-soname,NL.so.$(MAJOR_VERSION).$(MINOR_VERSION) -rdynamic -lpthread
++LIBFLAGS = ${LDFLAGS} -shared -Wl,-soname,libNL.so.$(MAJOR_VERSION).$(MINOR_VERSION) -rdynamic -lpthread
  OBJECTS = crc.o errorstr.o nl.o sock.o group.o loopback.o err.o thread.o mutex.o condition.o nltime.o
  
  all: $(OBJECTS)
