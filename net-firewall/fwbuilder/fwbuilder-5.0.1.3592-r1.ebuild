@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.1.3592.ebuild,v 1.4 2012/01/30 22:52:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.1.3592-r1.ebuild,v 1.1 2012/03/12 06:56:40 kumba Exp $
 
 EAPI="4"
 
@@ -24,6 +24,11 @@ PATCHES=(
 )
 
 src_prepare() {
+	# Fix a compile bug that affects some x86_64 platforms.
+	# Addressed in the upcoming 5.0.2.3596 release.
+	# Closes #395151.
+	epatch "${FILESDIR}/${P}-stdc-format-macros.patch"
+
 	qt4-r2_src_prepare
 	sed -i -e '/dnl.*AM_INIT_AUTOMAKE/d' configure.in || die #398743
 	eautoreconf
