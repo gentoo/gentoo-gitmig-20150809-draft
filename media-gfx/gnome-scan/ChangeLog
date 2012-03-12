@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gnome-scan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.9 2011/09/04 17:31:26 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.10 2012/03/12 00:13:57 tetromino Exp $
+
+  12 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-scan-0.7.2.ebuild:
+  Add missing gnome-common dependency (bug #407851, thanks to Piotr Szymaniak
+  for reporting).
 
   04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gnome-scan-0.7.2.ebuild:
   x86 stable wrt bug #375669

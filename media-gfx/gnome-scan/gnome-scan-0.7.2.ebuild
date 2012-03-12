@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/gnome-scan-0.7.2.ebuild,v 1.4 2011/09/04 17:31:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/gnome-scan-0.7.2.ebuild,v 1.5 2012/03/12 00:13:57 tetromino Exp $
 
 EAPI="3"
 
@@ -21,10 +21,12 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	>=media-gfx/gimp-2.3
 	gnome-base/gconf:2"
 DEPEND="${RDEPEND}
+	gnome-base/gnome-common
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.7 )"
+# eautoreconf requires gnome-base/gnome-common
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
