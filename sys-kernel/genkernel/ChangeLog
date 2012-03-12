@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.290 2012/03/12 19:40:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.291 2012/03/12 20:43:21 robbat2 Exp $
+
+  12 Mar 2012; Robin H. Johnson <robbat2@gentoo.org>
+  -files/busybox-1.7.4-make-3.82.patch, -genkernel-3.4.10-r1.ebuild,
+  -genkernel-3.4.10-r2.ebuild, -genkernel-3.4.10.906.ebuild,
+  -genkernel-3.4.10.907-r1.ebuild, -genkernel-3.4.10.907.ebuild,
+  -genkernel-3.4.10.908.ebuild, -genkernel-3.4.12.6-r2.ebuild,
+  -genkernel-3.4.14-r1.ebuild, -genkernel-3.4.15.ebuild,
+  -genkernel-3.4.23.ebuild, -genkernel-3.4.25-r1.ebuild,
+  -genkernel-3.4.25.ebuild:
+  Clean up old versions.
 
 *genkernel-3.4.25.1 (12 Mar 2012)
 
