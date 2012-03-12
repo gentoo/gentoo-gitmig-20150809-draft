@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.62 2012/03/09 16:12:46 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.63 2012/03/12 07:57:39 haubi Exp $
+
+  12 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
+  libaio-0.3.109-r3.ebuild:
+  Fix for cross-compile support of multilib-portage, bug#407687
 
 *libaio-0.3.109-r3 (09 Mar 2012)
 

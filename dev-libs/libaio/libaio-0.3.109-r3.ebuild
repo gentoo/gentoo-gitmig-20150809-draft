@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.1 2012/03/09 16:12:46 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.2 2012/03/12 07:57:39 haubi Exp $
 
 EAPI="3"
 
@@ -17,17 +17,24 @@ IUSE="static-libs"
 
 EMULTILIB_PKG="true"
 
+aio_get_install_abis() {
+	use multilib && get_install_abis || echo ${ABI:-default}
+}
+
 src_unpack() {
-	for ABI in $(get_install_abis)
+	local OABI=${ABI}
+	for ABI in $(aio_get_install_abis)
 	do
 		mkdir -p "${WORKDIR}"/${ABI} || die
 		cd "${WORKDIR}"/${ABI} || die
 		unpack ${A}
 	done
+	ABI=${OABI}
 }
 
 src_prepare() {
-	for ABI in $(get_install_abis)
+	local OABI=${ABI}
+	for ABI in $(aio_get_install_abis)
 	do
 		einfo "Preparing ${ABI} ABI ..."
 		cd "${WORKDIR}"/${ABI}/${P} || die
@@ -44,6 +51,7 @@ src_prepare() {
 			-e '/:=.*strip.*shell.*git/s:=.*:=:' \
 			src/Makefile Makefile || die
 	done
+	ABI=${OABI}
 }
 
 emake_libaio() {
@@ -56,16 +64,19 @@ emake_libaio() {
 }
 
 src_compile() {
-	for ABI in $(get_install_abis)
+	local OABI=${ABI}
+	for ABI in $(aio_get_install_abis)
 	do
 		einfo "Compiling ${ABI} ABI ..."
 		cd "${WORKDIR}"/${ABI}/${P} || die
 		emake_libaio || die
 	done
+	ABI=${OABI}
 }
 
 src_test() {
-	for ABI in $(get_install_abis)
+	local OABI=${ABI}
+	for ABI in $(aio_get_install_abis)
 	do
 		einfo "Testing ${ABI} ABI ..."
 		cd "${WORKDIR}"/${ABI}/${P}/harness || die
@@ -73,10 +84,12 @@ src_test() {
 		# 'make check' breaks with sandbox, 'make partcheck' works
 		emake_libaio partcheck prefix="${S}/src" libdir="${S}/src" || die
 	done
+	ABI=${OABI}
 }
 
 src_install() {
-	for ABI in $(get_install_abis)
+	local OABI=${ABI}
+	for ABI in $(aio_get_install_abis)
 	do
 		einfo "Installing ${ABI} ABI ..."
 		cd "${WORKDIR}"/${ABI}/${P} || die
@@ -96,6 +109,7 @@ src_install() {
 		# move crap to / for multipath-tools #325355
 		gen_usr_ldscript -a aio
 	done
+	ABI=${OABI}
 
 	if ! use static-libs ; then
 		rm "${ED}"usr/lib*/*.a || die
