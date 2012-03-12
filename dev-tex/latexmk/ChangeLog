@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.46 2012/03/09 10:34:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.47 2012/03/12 19:28:50 maekke Exp $
+
+  12 Mar 2012; Markus Meier <maekke@gentoo.org> latexmk-427a.ebuild:
+  arm stable, bug #404727
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> latexmk-427a.ebuild:
   x86 stable wrt bug #404727
