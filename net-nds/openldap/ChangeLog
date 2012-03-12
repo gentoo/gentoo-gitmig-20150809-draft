@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.408 2012/03/02 21:35:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.409 2012/03/12 19:25:23 robbat2 Exp $
+
+*openldap-2.4.30 (12 Mar 2012)
+
+  12 Mar 2012; Robin H. Johnson <robbat2@gentoo.org> +openldap-2.4.30.ebuild:
+  Version bump for security bug #407941.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> openldap-2.4.28-r1.ebuild:
   Marking openldap-2.4.28-r1 ppc64 for bug 388605
