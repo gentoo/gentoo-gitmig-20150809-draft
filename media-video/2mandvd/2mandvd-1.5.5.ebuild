@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.5.5.ebuild,v 1.2 2011/05/08 01:51:38 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.5.5.ebuild,v 1.3 2012/03/12 17:38:00 pesa Exp $
 
 EAPI="2"
 LANGS="cs de en it"
