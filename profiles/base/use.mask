@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.136 2012/02/28 10:52:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.137 2012/03/12 17:21:02 ssuominen Exp $
+
+# not ready for primetime
+packagekit
 
 # masking here, and unmasking in arch/x86/use.mask
 vidix
