@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/entropy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.22 2012/03/12 15:13:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.23 2012/03/12 17:24:07 ssuominen Exp $
+
+  12 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> entropy-1.0_rc87.ebuild:
+  Revert back to ~ppc64 because this is not ready to be stabilized.
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> entropy-1.0_rc87.ebuild:
   Marking entropy-1.0_rc87 ppc64 stable for bug 407643
