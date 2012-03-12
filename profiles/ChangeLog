@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6300 2012/03/12 09:13:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6301 2012/03/12 10:33:29 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> prefix/package.provided:
+  Remove virtual/shadow from package.provided, portage(5) says it should not be
+  there. Reported by grobian.
 
   12 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> base/packages,
   default/bsd/package.mask, default/bsd/packages, default/linux/packages.build,
