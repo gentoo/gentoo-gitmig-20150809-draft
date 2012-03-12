@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.79 2012/03/07 11:11:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.80 2012/03/12 19:19:21 maekke Exp $
+
+  12 Mar 2012; Markus Meier <maekke@gentoo.org> logwatch-7.4.0.ebuild:
+  arm stable, bug #356387
 
   07 Mar 2012; Thomas Kahle <tomka@gentoo.org> logwatch-7.4.0.ebuild:
   marked x86 per bug 356387
