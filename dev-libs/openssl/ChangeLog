@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.428 2012/03/12 18:03:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.429 2012/03/12 22:52:51 vapier Exp $
+
+  12 Mar 2012; Mike Frysinger <vapier@gentoo.org>
+  files/openssl-0.9.8h-ldflags.patch, files/openssl-1.0.0a-ldflags.patch:
+  Drop useless -rpath flags.
 
 *openssl-1.0.0h (12 Mar 2012)
 *openssl-0.9.8u (12 Mar 2012)
