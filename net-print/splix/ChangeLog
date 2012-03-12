@@ -1,6 +1,11 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.25 2012/01/30 11:52:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.26 2012/03/12 19:08:54 scarabeus Exp $
+
+  12 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  splix-2.0.0_p20111206.ebuild:
+  Update the cms file from the samsung driver and place the cms to proper
+  folder. Makes this work on my clp315.
 
 *splix-2.0.0_p20111206 (30 Jan 2012)
 

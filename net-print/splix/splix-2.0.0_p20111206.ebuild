@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-2.0.0_p20111206.ebuild,v 1.1 2012/01/30 11:52:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-2.0.0_p20111206.ebuild,v 1.2 2012/03/12 19:08:54 scarabeus Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -8,7 +8,13 @@ inherit eutils toolchain-funcs
 DESCRIPTION="A set of CUPS printer drivers for SPL (Samsung Printer Language) printers"
 HOMEPAGE="http://splix.sourceforge.net/"
 SRC_URI="http://dev.gentoo.org/~voyageur/distfiles/${P}.tar.bz2
-	http://splix.ap2c.org/samsung_cms.tar.bz2"
+	http://dev.gentooexperimental.org/~scarabeus/samsung-cms-20120312.tar.xz"
+
+# If you can't find your printer cms open the new bug if you recheck the
+# cms home and it is contained there. Otherwise bummer.
+# The cms can be found here:
+#    http://www.bchemnet.com/suldr/smfpv3.html
+# It is stored int he unifieddriver tarball and repacked.
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -40,11 +46,15 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	gzip "${D}"/$(cups-config --datadir)/model/*/*.ppd || die "ppd gzip failed"
+	gzip "${ED}"/$(cups-config --datadir)/model/*/*.ppd || die "ppd gzip failed"
 
-	#insinto $(cups-config --datadir)/model/samsung
-	#doins -r "${WORKDIR}"/cms
-	emake DESTDIR="${D}" CMSDIR="${WORKDIR}"/cms installcms
+	# it is expected to be at:
+	#    /usr/share/cups/profiles/{samsung,xerox,dell}
+	# instead it is only at:
+	#    /usr/share/cups/profiles/samsung
+	emake DESTDIR="${D}" CMSDIR="${WORKDIR}"/cms MANUFACTURER=samsung installcms
+	dosym $(cups-config --datadir)/profiles/samsung $(cups-config --datadir)/profiles/xerox
+	dosym $(cups-config --datadir)/profiles/samsung $(cups-config --datadir)/profiles/dell
 }
 
 pkg_postinst() {
