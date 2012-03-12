@@ -1,6 +1,10 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.26 2012/03/12 19:08:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.27 2012/03/12 19:10:48 scarabeus Exp $
+
+  12 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  splix-2.0.0_p20111206.ebuild:
+  Stabilise 2.0.0_p20111206 per latest commit on amd64 and x86.
 
   12 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   splix-2.0.0_p20111206.ebuild:
