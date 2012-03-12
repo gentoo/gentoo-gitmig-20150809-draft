@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/irssi-xmpp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-xmpp/ChangeLog,v 1.5 2011/12/04 16:19:51 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-xmpp/ChangeLog,v 1.6 2012/03/12 13:24:27 xarthisius Exp $
+
+*irssi-xmpp-0.52 (12 Mar 2012)
+
+  12 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> +irssi-xmpp-0.52.ebuild:
+  Version bump
 
   04 Dec 2011; Kacper Kowalik <xarthisius@gentoo.org> irssi-xmpp-0.51.ebuild:
   Don't depend on loudmouth with debug enabled wrt bug 392613 by Adrian
