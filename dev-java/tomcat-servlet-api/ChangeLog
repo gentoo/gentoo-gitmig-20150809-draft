@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.123 2012/03/10 16:19:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.124 2012/03/12 15:10:17 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org>
+  tomcat-servlet-api-7.0.23.ebuild:
+  Marking tomcat-servlet-api-7.0.23 ppc64 for bug 395923
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org>
   tomcat-servlet-api-6.0.35.ebuild:
