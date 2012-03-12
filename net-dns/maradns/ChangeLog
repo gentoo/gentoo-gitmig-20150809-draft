@@ -1,6 +1,18 @@
 # ChangeLog for net-dns/maradns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.46 2012/02/01 17:14:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.47 2012/03/12 12:24:50 kumba Exp $
+
+*maradns-2.0.06 (12 Mar 2012)
+*maradns-1.4.11 (12 Mar 2012)
+
+  12 Mar 2012; Joshua Kinard <kumba@gentoo.org> -maradns-1.4.06.ebuild,
+  +maradns-1.4.11.ebuild, +maradns-2.0.06.ebuild,
+  +files/maradns-2.0.06-askmara-tcp.patch,
+  +files/maradns-2.0.06-duende-man.patch, +files/maradns-2.0.06-groff.patch,
+  +files/deadwood, +files/maradns2, +files/zoneserver2, files/maradns.rc6,
+  files/zoneserver.rc6:
+  Remove 1.4.06, and add 1.4.11. Also add 2.0.06 in, as well as several patches
+  from Debian and newer init scripts.
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> maradns-1.4.09.ebuild:
   Marking maradns-1.4.09 ppc for bug 397431
