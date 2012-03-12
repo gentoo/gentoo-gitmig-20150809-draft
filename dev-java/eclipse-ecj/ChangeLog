@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.80 2012/03/10 16:13:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.81 2012/03/12 15:13:26 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org> eclipse-ecj-3.7.1.ebuild:
+  Marking eclipse-ecj-3.7.1 ppc64 for bug 392391
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org> eclipse-ecj-3.7.1.ebuild:
   Marking eclipse-ecj-3.7.1 ppc for bug 392391
