@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/packagekit-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.13 2012/03/12 15:14:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.14 2012/03/12 17:22:18 ssuominen Exp $
+
+  12 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  packagekit-base-0.6.20.ebuild:
+  Revert back to ~ppc64 because this is not ready to be stabilized.
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> packagekit-base-0.6.20.ebuild:
   Marking packagekit-base-0.6.20 ppc64 stable for bug 407643
