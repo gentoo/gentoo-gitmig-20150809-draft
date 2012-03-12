@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.4.0.ebuild,v 1.1 2011/06/07 20:29:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.6.1.ebuild,v 1.1 2012/03/12 18:55:58 mr_bones_ Exp $
 
 EAPI=2
 inherit toolchain-funcs cmake-utils games
 
 DESCRIPTION="Atari ST emulator"
 HOMEPAGE="http://hatari.berlios.de/"
-SRC_URI="mirror://berlios/hatari/${P}.tar.bz2"
+SRC_URI="http://download.tuxfamily.org/hatari/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,6 +25,9 @@ RDEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	# build with newer zlib (bug #387829)
+	sed -i -e '1i#define OF(x) x' src/includes/unzip.h || die
+	sed -i -e '/Encoding/d' ./python-ui/hatariui.desktop || die
 	rm -f doc/CMakeLists.txt
 }
 
