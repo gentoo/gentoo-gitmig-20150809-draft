@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.331 2012/02/15 03:47:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.332 2012/03/12 15:15:01 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org> pango-1.29.4.ebuild:
+  Marking pango-1.29.4 ppc64 stable for bug 407643
 
   15 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   pango-1.28.3-r1.ebuild, pango-1.28.4.ebuild, pango-1.29.4.ebuild:
