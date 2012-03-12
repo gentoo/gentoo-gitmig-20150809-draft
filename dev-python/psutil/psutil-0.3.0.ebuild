@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/psutil-0.3.0.ebuild,v 1.5 2012/02/21 09:16:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/psutil-0.3.0.ebuild,v 1.6 2012/03/12 19:15:15 marienz Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_TESTS_RESTRICTED_ABIS="3.*"
-PYTHON_RESTRICT_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="*-jython"
 
 inherit distutils
 
