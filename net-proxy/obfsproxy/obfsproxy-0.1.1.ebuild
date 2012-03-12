@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.1.0.ebuild,v 1.1 2012/03/11 14:46:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.1.1.ebuild,v 1.1 2012/03/12 20:39:09 blueness Exp $
 
 EAPI="4"
 
 DESCRIPTION="obfsproxy is a tor-compliant pluggable transports proxy"
 HOMEPAGE="https://www.torproject.org/projects/obfsproxy.html.en"
-SRC_URI="https://www.torproject.org/dist/obfsproxy/obfsproxy-0.1.0.tar.gz"
+SRC_URI="https://www.torproject.org/dist/obfsproxy/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
