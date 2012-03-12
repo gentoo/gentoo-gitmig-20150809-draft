@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.184 2012/02/27 06:36:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.185 2012/03/12 19:47:02 maekke Exp $
+
+  12 Mar 2012; Markus Meier <maekke@gentoo.org> libsdl-1.2.15.ebuild:
+  arm stable, bug #405217
 
   27 Feb 2012; Jeff Horelick <jdhore@gentoo.org> libsdl-1.2.15.ebuild:
   marked x86 per bug 405217
