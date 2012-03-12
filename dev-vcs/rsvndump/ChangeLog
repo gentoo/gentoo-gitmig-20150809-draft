@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/rsvndump
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.8 2011/11/22 01:00:51 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.9 2012/03/12 16:04:10 sping Exp $
+
+*rsvndump-0.5.8 (12 Mar 2012)
+
+  12 Mar 2012; Sebastian Pipping <sping@gentoo.org> +rsvndump-0.5.8.ebuild:
+  Bump to 0.5.8, looks trivial
 
 *rsvndump-0.5.7 (22 Nov 2011)
 
