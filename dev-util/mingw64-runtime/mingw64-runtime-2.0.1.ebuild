@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/mingw64-runtime-20100730.ebuild,v 1.1 2010/08/14 01:08:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/mingw64-runtime-2.0.1.ebuild,v 1.1 2012/03/12 05:26:31 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -14,7 +14,7 @@ inherit flag-o-matic eutils
 
 DESCRIPTION="Free Win64 runtime and import library definitions"
 HOMEPAGE="http://mingw-w64.sourceforge.net/"
-SRC_URI="mirror://sourceforge/mingw-w64/mingw-w64-v1.0-snapshot-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/mingw-w64/mingw-w64-v${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="crosscompile_opts_headers-only"
 RESTRICT="strip"
 
-S=${WORKDIR}/mingw-w64-v1.0-${PV}/mingw-w64-crt
+S=${WORKDIR}/mingw-w64-v${PV}/mingw-w64-crt
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
@@ -45,7 +45,7 @@ src_unpack() {
 src_compile() {
 	# install the local headers as the crt step wants latest
 	pushd ../mingw-w64-headers >/dev/null
-	CHOST=${CTARGET} econf --with-sdk || die
+	CHOST=${CTARGET} econf --enable-sdk || die
 	emake install DESTDIR="${WORKDIR}/sysroot" || die
 	popd >/dev/null
 
