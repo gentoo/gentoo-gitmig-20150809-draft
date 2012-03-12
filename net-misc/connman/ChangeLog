@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.45 2012/03/08 23:41:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.46 2012/03/12 15:13:15 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org> connman-0.78.ebuild:
+  Marking connman-0.78 ppc64 stable for bug 407643
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> connman-0.78.ebuild:
   Marking connman-0.78 ~ppc64 for bug 387959
