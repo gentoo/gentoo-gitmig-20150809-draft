@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.286 2012/03/12 15:16:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.287 2012/03/12 15:19:01 ranger Exp $
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org> tomcat-6.0.35.ebuild:
+  Marking tomcat-6.0.35 ppc64 for bug 395933
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> tomcat-7.0.23-r3.ebuild:
   Marking tomcat-7.0.23-r3 ppc64 for bug 395933
