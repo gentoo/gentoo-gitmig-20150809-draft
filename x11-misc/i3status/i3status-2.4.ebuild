@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/i3status-2.4.ebuild,v 1.2 2012/03/13 12:11:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/i3status-2.4.ebuild,v 1.3 2012/03/13 21:38:32 xarthisius Exp $
 
 EAPI=4
 
@@ -68,7 +68,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e "/@echo/d" -e "s:@\$(:\$(:g" -e "/setcap/d" Makefile || die
+	sed -e "/@echo/d" -e "s:@\$(:\$(:g" -e "/setcap/d" \
+		-e '/CFLAGS+=-g/d' -i Makefile || die
 }
 
 pkg_postinst() {
