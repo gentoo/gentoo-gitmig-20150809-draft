@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.18 2012/02/12 17:49:28 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.19 2012/03/13 14:48:28 ford_prefect Exp $
 
 EAPI=4
 
@@ -27,10 +27,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.20
 	)
 	caps? ( sys-libs/libcap )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.1-r1 )
-	alsa? (
-		>=media-libs/alsa-lib-1.0.19
-		media-plugins/alsa-plugins[pulseaudio]
-	)
+	alsa? ( >=media-libs/alsa-lib-1.0.19 )
 	glib? ( >=dev-libs/glib-2.4.0 )
 	avahi? ( >=net-dns/avahi-0.6.12[dbus] )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.117 )
@@ -63,6 +60,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	system-wide? ( || ( dev-util/unifdef sys-freebsd/freebsd-ubin ) )
 	dev-util/intltool"
+# This is a PDEPEND to avoid a circular dep
+PDEPEND="media-plugins/alsa-plugins[pulseaudio]"
 
 # alsa-utils dep is for the alsasound init.d script (see bug #155707)
 # bluez dep is for the bluetooth init.d script
