@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.50.ebuild,v 1.3 2011/06/21 14:32:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.62.ebuild,v 1.1 2012/03/13 17:05:08 bicatali Exp $
 
 EAPI=4
 
@@ -19,9 +19,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples +hepmc static-libs"
 
 DEPEND="hepmc? ( sci-physics/hepmc )"
-RDEPEND="
-	virtual/fortran
-${DEPEND}"
+RDEPEND="virtual/fortran
+	${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -48,7 +47,7 @@ src_configure() {
 }
 
 src_test() {
-	cd "${S}"/examples
+	cd examples
 	# use emake for parallel instead of long runmains
 	emake main0{1..9}
 	for i in main0{1..9}*.exe; do
@@ -56,11 +55,9 @@ src_test() {
 			./${i} > ${i}.out || die "test ${i} failed"
 	done
 	if use hepmc; then
-		emake main31 main32
+		emake main31
 		LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" \
 			./main31.exe > main31.exe.out || die
-		LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" \
-			./main32.exe main32.cmnd hepmcout32.dat > main32.exe.out || die
 	fi
 	emake clean && rm -f main*out
 }
@@ -75,6 +72,7 @@ src_install() {
 	# xmldoc needed by root
 	insinto /usr/share/${PN}
 	doins -r xmldoc
+
 	echo "PYTHIA8DATA=${EROOT}usr/share/${PN}/xmldoc" >> 99pythia8
 	doenvd 99pythia8
 
