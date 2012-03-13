@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.135 2012/02/09 17:39:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.136 2012/03/13 13:08:02 ago Exp $
+
+  13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> xfsprogs-3.1.7.ebuild:
+  Stable for amd64, wrt bug #408021
 
 *xfsprogs-3.1.7 (09 Feb 2012)
 
