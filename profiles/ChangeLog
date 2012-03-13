@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6305 2012/03/12 17:00:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6306 2012/03/13 09:31:36 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> base/package.use.mask,
+  package.mask:
+  Remove mask for lilypond and dependencies since it's fixed.
 
   12 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
   Removed masking of beta version of sci-libs/metis, now gone
