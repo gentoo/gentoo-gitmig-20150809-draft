@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.30.ebuild,v 1.1 2012/03/12 01:46:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.30.ebuild,v 1.2 2012/03/13 12:10:48 ago Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="http://www.codemonkey.org.uk/projects/x86info/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE=""
 
 RDEPEND="sys-apps/pciutils"
