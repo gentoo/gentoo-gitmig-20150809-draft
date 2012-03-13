@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.133 2012/01/06 10:32:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.134 2012/03/13 20:06:00 ssuominen Exp $
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> thunar-1.2.3.ebuild:
+  Enable USE="dbus" by default to satisfy REQUIRED_USE by Jeremy Olexa.
 
   06 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -thunar-1.2.1.ebuild:
   old
