@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.1.ebuild,v 1.6 2011/11/02 21:46:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.1.ebuild,v 1.7 2012/03/13 11:50:11 phajdan.jr Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND="!<app-admin/gnome-system-tools-1.1.91
 	>=dev-perl/Net-DBus-0.33.4
 	dev-lang/perl
 	>=sys-auth/polkit-0.94
-	userland_GNU? ( sys-apps/shadow )"
+	userland_GNU? ( virtual/shadow )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
