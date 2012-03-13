@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopencl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.14 2012/03/06 19:01:32 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.15 2012/03/13 02:51:57 floppym Exp $
+
+  13 Mar 2012; Mike Gilbert <floppym@gentoo.org> pyopencl-9999.ebuild:
+  Synchronize ebuilds. Patch by Arfrever.
 
   06 Mar 2012; Jesus Rivero <neurogeek@gentoo.org> pyopencl-2011.2-r1.ebuild,
   pyopencl-9999.ebuild:
