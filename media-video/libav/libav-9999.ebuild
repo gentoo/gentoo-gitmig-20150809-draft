@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.32 2012/03/07 21:37:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.33 2012/03/13 23:52:10 lu_zero Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cdio cpudetection
 	  static-libs test theora threads v4l vaapi vdpau vorbis vpx X x264 xvid
 	  +zlib"
 
-CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 ssse3 vis neon iwmmxt"
+CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 ssse3 vis neon"
 
 for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
