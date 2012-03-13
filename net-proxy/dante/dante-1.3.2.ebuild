@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.3.2.ebuild,v 1.2 2011/12/16 22:18:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.3.2.ebuild,v 1.3 2012/03/13 12:07:02 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND="pam? ( virtual/pam )
 	kerberos? ( virtual/krb5 )
 	selinux? ( sec-policy/selinux-dante )
 	tcpd? ( sys-apps/tcp-wrappers )
-	userland_GNU? ( sys-apps/shadow )"
+	userland_GNU? ( virtual/shadow )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison"
