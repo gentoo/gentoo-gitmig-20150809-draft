@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r1.ebuild,v 1.5 2012/03/13 13:29:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r1.ebuild,v 1.6 2012/03/13 15:07:05 polynomial-c Exp $
 
 EAPI=4
 
@@ -17,6 +17,7 @@ IUSE="pam"
 
 DEPEND="virtual/mta
 	>=sys-devel/autoconf-2.64
+	sys-devel/bison
 	>=sys-devel/flex-2.5.4a
 	pam? ( virtual/pam )"
 RDEPEND="virtual/mta
