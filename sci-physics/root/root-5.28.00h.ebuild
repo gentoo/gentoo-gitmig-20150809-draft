@@ -1,14 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00d.ebuild,v 1.5 2012/03/13 12:11:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00h.ebuild,v 1.1 2012/03/13 17:02:31 bicatali Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="python? 2"
 
-inherit versionator eutils fortran-2 elisp-common fdo-mime python toolchain-funcs flag-o-matic
+inherit elisp-common eutils fdo-mime fortran-2 python toolchain-funcs
 
-#DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 DOC_PV=5_26
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4.03
@@ -28,8 +27,8 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~x86"
 IUSE="afs avahi clarens doc emacs examples fits fftw graphviz kerberos ldap
-	llvm +math mpi mysql ncurses odbc +opengl openmp oracle postgres pythia6
-	pythia8	python +reflex ruby qt4 ssl xft xml xinetd xrootd"
+	+math mpi mysql ncurses odbc +opengl openmp oracle postgres pythia6
+	pythia8	python qt4 +reflex ruby ssl xft xinetd xml xrootd"
 
 CDEPEND="
 	>=dev-lang/cfortran-4.4-r2
@@ -39,8 +38,8 @@ CDEPEND="
 	media-libs/glew
 	media-libs/libpng:0
 	media-libs/tiff:0
-	virtual/jpeg
 	virtual/shadow
+	virtual/jpeg
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXft
@@ -55,7 +54,6 @@ CDEPEND="
 	graphviz? ( media-gfx/graphviz )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
-	llvm? ( sys-devel/llvm )
 	math? ( sci-libs/gsl sci-mathematics/unuran mpi? ( virtual/mpi ) )
 	mysql? ( virtual/mysql )
 	ncurses? ( sys-libs/ncurses )
@@ -122,7 +120,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-${PATCH_PV}-asneeded.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV}-nobyte-compile.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV}-glibc212.patch \
-		"${FILESDIR}"/${PN}-${PATCH_PV}-unuran.patch
+		"${FILESDIR}"/${PN}-${PATCH_PV}-unuran.patch \
+		"${FILESDIR}"/${P}-explicit-functions.patch
 
 	# make sure we use system libs and headers
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc
@@ -205,7 +204,6 @@ src_configure() {
 		$(use_enable graphviz gviz) \
 		$(use_enable kerberos krb5) \
 		$(use_enable ldap) \
-		$(use_enable llvm cling) \
 		$(use_enable math gsl-shared) \
 		$(use_enable math genvector) \
 		$(use_enable math mathmore) \
@@ -244,7 +242,7 @@ doc_install() {
 	cd "${S}"
 	if use doc; then
 		einfo "Installing user's guides"
-		dodoc "${DISTDIR}"/Users_Guide_${DOC_PV}.pdf \
+		dodoc "${DISTDIR}"/Users_Guide_${DOC_PV}.pdf
 		use math && dodoc \
 			"${DISTDIR}"/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf \
 			"${DISTDIR}"/TMVAUsersGuide-v${TMVA_DOC_PV}.pdf
@@ -323,7 +321,7 @@ src_install() {
 	rm -rf "${ED}"/etc/root/daemons
 	popd > /dev/null
 	# these should be in PATH
-	mv "${ED}"usr/share/root/proof/utils/pq2/pq2* \
+	mv "${ED}"etc/root/proof/utils/pq2/pq2* \
 		"${ED}"usr/bin
 }
 

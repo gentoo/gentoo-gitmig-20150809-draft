@@ -1,12 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.00-r2.ebuild,v 1.2 2012/03/13 12:11:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.01-r2.ebuild,v 1.1 2012/03/13 17:02:31 bicatali Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
-inherit versionator eutils fortran-2 elisp-common fdo-mime python toolchain-funcs flag-o-matic
+inherit elisp-common eutils fdo-mime fortran-2 python toolchain-funcs
 
-#DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 DOC_PV=5_26
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4.03
@@ -25,8 +24,8 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+X afs avahi clarens doc emacs examples fits fftw graphviz kerberos ldap
-	llvm +math mpi mysql ncurses odbc +opengl openmp oracle postgres prefix
-	pythia6	pythia8	python +reflex ruby qt4 ssl xft xml xinetd xrootd"
+	+math mpi mysql ncurses odbc +opengl openmp oracle postgres prefix
+	pythia6	pythia8	python qt4 +reflex ruby ssl xft xinetd xml xrootd"
 
 CDEPEND="
 	app-arch/xz-utils
@@ -65,7 +64,6 @@ CDEPEND="
 	graphviz? ( media-gfx/graphviz )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
-	llvm? ( sys-devel/llvm )
 	math? ( sci-libs/gsl sci-mathematics/unuran mpi? ( virtual/mpi ) )
 	mysql? ( virtual/mysql )
 	ncurses? ( sys-libs/ncurses )
@@ -129,7 +127,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-${PATCH_PV}-glibc212.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV}-unuran.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-afs.patch \
-		"${FILESDIR}"/${PN}-${PATCH_PV2}-cfitsio.patch
+		"${FILESDIR}"/${PN}-${PATCH_PV2}-cfitsio.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV2}-explicit-functions.patch
 
 	# make sure we use system libs and headers
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc
@@ -139,7 +138,7 @@ src_prepare() {
 	rm -rf graf3d/glew/{inc,src}
 	rm -rf core/pcre/src
 	rm -rf math/unuran/src/unuran-*.tar.gz
-	find core/zip -type f -name "[a-z]*" | xargs rm
+	LANG=C LC_ALL=C find core/zip -type f -name "[a-z]*" | xargs rm
 	rm -rf core/lzma/src/*.tar.gz
 	rm graf3d/gl/{inc,src}/gl2ps.*
 	sed -i -e 's/^GLLIBS *:= .* $(OPENGLLIB)/& -lgl2ps/' graf3d/gl/Module.mk
@@ -176,6 +175,7 @@ src_configure() {
 		--with-cc=$(tc-getCC) \
 		--with-cxx=$(tc-getCXX) \
 		--with-f77=$(tc-getFC) \
+		--with-afs-shared=yes \
 		--with-sys-iconpath="${EPREFIX}"/usr/share/pixmaps \
 		--disable-builtin-afterimage \
 		--disable-builtin-freetype \
@@ -184,6 +184,7 @@ src_configure() {
 		--disable-builtin-pcre \
 		--disable-builtin-zlib \
 		--disable-builtin-lzma \
+		--disable-cling \
 		--enable-astiff \
 		--enable-exceptions	\
 		--enable-explicitlink \
@@ -194,7 +195,6 @@ src_configure() {
 		--enable-soversion \
 		--enable-table \
 		--fail-on-missing \
-		--with-afs-shared=yes \
 		$(use_enable X x11) \
 		$(use_enable X asimage) \
 		$(use_enable afs) \
@@ -207,7 +207,6 @@ src_configure() {
 		$(use_enable graphviz gviz) \
 		$(use_enable kerberos krb5) \
 		$(use_enable ldap) \
-		$(use_enable llvm cling) \
 		$(use_enable math gsl-shared) \
 		$(use_enable math genvector) \
 		$(use_enable math mathmore) \
@@ -325,7 +324,7 @@ src_install() {
 	rm -rf "${ED}"/etc/root/daemons
 	popd > /dev/null
 	# these should be in PATH
-	mv "${ED}"usr/share/root/proof/utils/pq2/pq2* \
+	mv "${ED}"etc/root/proof/utils/pq2/pq2* \
 		"${ED}"usr/bin
 }
 

@@ -1,6 +1,47 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.94 2012/03/13 12:11:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.95 2012/03/13 17:02:31 bicatali Exp $
+
+
+  13 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> +root-5.26.00g.ebuild,
+  +files/root-5.26.00g-explicit-functions.patch, -root-5.28.00d.ebuild,
+  +root-5.28.00h.ebuild, +files/root-5.28.00h-explicit-functions.patch,
+  -root-5.32.00-r2.ebuild, +files/root-5.32.00-explicit-functions.patch,
+  -root-5.32.01.ebuild, +root-5.32.01-r2.ebuild, files/olbd.initd,
+  files/xrootd.initd:
+  Imported changed from bircoph into main tree
+
+*root-5.32.01-r2 (09 Mar 2012)
+
+  09 Mar 2012; Andrew Savchenko <bircoph@gmail.com> root-5.26.00g.ebuild,
+  root-5.28.00h.ebuild, -root-5.32.01-r1.ebuild, +root-5.32.01-r2.ebuild
+  Remove llvm (cling) support from everywhere but live ebuild.
+  Current cling code highly depends on particular llvm trunk
+  revisions, there is no way to support it for regular ebuilds yet.
+  Order inherit arguments alphabetically.
+
+*root-5.32.01-r1 (09 Mar 2012)
+
+  09 Mar 2012; Andrew Savchenko <bircoph@gmail.com> root-5.26.00g.ebuild,
+  root-5.28.00h.ebuild, -root-5.32.01.ebuild, +root-5.32.01-r1.ebuild,
+  metadata.xml:
+  Fix llvm support per bug 407097. Patch by Marek Szuba with some
+  changes. cling atm depends on live llvm and clang, so it may fail
+  to build, disabled by default. Fix USE flags ordering in ebuilds.
+
+*root-5.28.00h (09 Mar 2012)
+*root-5.26.00g (09 Mar 2012)
+
+  09 Mar 2012; Andrew Savchenko <bircoph@gmail.com>
+  +root-5.26.00g.ebuild,
+  +files/root-5.26.00g-explicit-functions.patch,
+  +root-5.28.00h.ebuild,
+  +files/root-5.28.00h-explicit-functions.patch,
+  +files/root-5.32.00-explicit-functions.patch:
+  Version bump for 5.26 and 5.28 branches to the latest patchlevels.
+  Fix bug 386905 for all branches by applying upstream fix. Thanks
+  gcc and ROOT developers for their hard work.
+  Fix pq2 files installation.
 
   13 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> root-5.26.00e-r1.ebuild,
   root-5.28.00d.ebuild, root-5.32.00-r2.ebuild, root-5.32.01.ebuild:
