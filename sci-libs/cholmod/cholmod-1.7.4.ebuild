@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.7.4.ebuild,v 1.2 2012/01/26 19:40:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.7.4.ebuild,v 1.3 2012/03/13 04:15:24 bicatali Exp $
 
 EAPI=4
 
@@ -44,6 +44,10 @@ src_prepare() {
 	epatch "${WORKDIR}"/${PN}-${PPV}-autotools.patch
 	cd "${S}"
 	use debug && epatch "${FILESDIR}"/${P}-debug.patch
+	# bug #399483 does not build with parmetis-3.2
+	has_version "=sci-libs/parmetis-3.2*" && \
+		epatch "${FILESDIR}"/${P}-parmetis32.patch
+
 	# We need to take care of cholmod.h here as well depending on
 	# the USE flags, otherwise the installed file will reference
 	# headers that we may not have included.

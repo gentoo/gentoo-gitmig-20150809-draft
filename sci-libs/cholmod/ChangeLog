@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.27 2012/01/26 19:40:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.28 2012/03/13 04:15:24 bicatali Exp $
+
+  13 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> -cholmod-1.7.1.ebuild,
+  -cholmod-1.7.3.ebuild, cholmod-1.7.4.ebuild,
+  +files/cholmod-1.7.4-parmetis32.patch:
+  Fixed for parmetis-3.2, bug #399483
 
   26 Jan 2012; Justin Lecher <jlec@gentoo.org> cholmod-1.7.4.ebuild,
   +files/cholmod-1.7.4-debug.patch, metadata.xml:
