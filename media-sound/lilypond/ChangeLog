@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.114 2012/03/12 23:56:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.115 2012/03/13 09:29:19 ssuominen Exp $
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -lilypond-2.12.2.ebuild,
+  -lilypond-2.12.2-r1.ebuild, -files/lilypond-2.12.2-dont-install-pyc.patch,
+  -files/lilypond-2.12.2-glibc-2.10.patch, -lilypond-2.12.3.ebuild,
+  -files/lilypond-2.12.3-gcc45.patch,
+  -files/lilypond-2.12.3-python-cflags.patch,
+  -files/lilypond-2.12.3-qa_pyc_fix.patch:
+  old
 
   12 Mar 2012; Tim Harder <radhermit@gentoo.org> lilypond-2.14.2.ebuild:
   Remove unnecessary python convert shebangs line.
