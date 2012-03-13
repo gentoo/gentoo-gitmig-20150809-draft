@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.1.2-r1.ebuild,v 1.1 2012/03/12 08:15:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.1.2-r1.ebuild,v 1.2 2012/03/13 12:11:39 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://i3wm.org/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 CDEPEND="dev-libs/libev
