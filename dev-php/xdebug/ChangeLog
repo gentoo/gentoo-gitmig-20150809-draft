@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/xdebug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.37 2012/02/25 18:35:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.38 2012/03/13 13:20:26 olemarkus Exp $
+
+*xdebug-2.1.4 (13 Mar 2012)
+
+  13 Mar 2012; Ole Markus With <olemarkus@gentoo.org> +xdebug-2.1.4.ebuild:
+  Version bump
 
   25 Feb 2012; Raúl Porcel <armin76@gentoo.org> xdebug-2.1.2.ebuild:
   alpha/ia64/sparc stable wrt #400323
