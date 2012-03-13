@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.01.ebuild,v 1.1 2012/03/02 05:34:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.01.ebuild,v 1.2 2012/03/13 12:11:52 phajdan.jr Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -36,9 +36,9 @@ CDEPEND="
 	media-libs/giflib
 	media-libs/libpng:0
 	media-libs/tiff:0
-	sys-apps/shadow
 	sys-libs/zlib
 	virtual/jpeg
+	virtual/shadow
 	X? (
 		media-libs/ftgl
 		media-libs/glew
