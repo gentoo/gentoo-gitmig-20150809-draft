@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.430 2012/03/13 11:26:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.431 2012/03/13 13:23:48 ranger Exp $
+
+  13 Mar 2012; Brent Baude <ranger@gentoo.org> openssl-0.9.8u.ebuild,
+  openssl-1.0.0h.ebuild:
+  Marking openssl-0.9.8u and openssl-1.0.0h ppc and ppc64 for bug 406199 
 
   13 Mar 2012; Jeroen Roovers <jer@gentoo.org> openssl-1.0.0h.ebuild:
   Stable for HPPA (bug #406199).
