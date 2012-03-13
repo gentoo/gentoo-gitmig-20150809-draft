@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/sugarcrm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sugarcrm/ChangeLog,v 1.1 2012/02/25 14:29:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sugarcrm/ChangeLog,v 1.2 2012/03/13 17:45:19 maksbotan Exp $
+
+  13 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> +files/postinstall-en.txt:
+  Add files/postinstall-en.txt, thanks to slepnoga
 
 *sugarcrm-6.4.0 (25 Feb 2012)
 
