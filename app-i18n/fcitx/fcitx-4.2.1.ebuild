@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.1.2-r1.ebuild,v 1.1 2012/02/24 01:49:21 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.1.ebuild,v 1.1 2012/03/13 01:58:10 qiaomuf Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ inherit cmake-utils eutils
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
-SRC_URI="http://fcitx.googlecode.com/files/${P}_all.tar.bz2"
+SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,6 +25,7 @@ RDEPEND="x11-libs/libX11
 	cairo? ( x11-libs/cairo[X] )
 	dbus? ( sys-apps/dbus )"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	x11-proto/xproto
 	dev-util/pkgconfig"
 
