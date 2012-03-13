@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.569 2012/03/12 15:15:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.570 2012/03/13 13:11:13 ago Exp $
+
+  13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> gtk+-3.2.3.ebuild:
+  Stable for amd64, wrt bug #407643
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> gtk+-3.2.3.ebuild:
   Marking gtk+-3.2.3 ppc64 stable for bug 407643
