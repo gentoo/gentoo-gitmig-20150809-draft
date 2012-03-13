@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-connection-managers/telepathy-connection-managers-1.ebuild,v 1.1 2011/11/22 00:55:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-connection-managers/telepathy-connection-managers-1.ebuild,v 1.2 2012/03/13 14:13:20 tester Exp $
 
 DESCRIPTION="Meta-package for Telepathy Connection Managers"
 
@@ -16,7 +16,7 @@ IUSE="msn irc yahoo icq jabber sip zeroconf"
 DEPEND=""
 # These version support the 0.18.0 Telepathy specification
 # They work with Mission Control 5.2
-RDEPEND="msn? ( >=net-voip/telepathy-butterfly-0.5.0 )
+RDEPEND="msn? ( >=net-voip/telepathy-haze-0.3.2 )
 	jabber? ( >=net-voip/telepathy-gabble-0.8.0 )
 	sip? ( >=net-voip/telepathy-sofiasip-0.5.18 )
 	zeroconf? ( >=net-voip/telepathy-salut-0.3.10 )
