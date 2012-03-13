@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.15 2012/03/08 13:48:39 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.16 2012/03/13 07:20:26 radhermit Exp $
+
+*p11-kit-0.12 (13 Mar 2012)
+
+  13 Mar 2012; Tim Harder <radhermit@gentoo.org> +p11-kit-0.12.ebuild:
+  Version bump.
 
   08 Mar 2012; Naohiro Aota <naota@gentoo.org> p11-kit-0.11.ebuild:
   Add ~x86-fbsd wrt #402959
