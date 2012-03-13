@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.137 2012/02/19 15:42:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.138 2012/03/13 18:38:10 ssuominen Exp $
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> libffi-3.0.11_rc2.ebuild,
+  +files/libffi-3.0.11_rc2-fix-ppc64-compile.patch:
+  Fix building for PowerPC64 using patch from libffi-discuss ML.
 
   19 Feb 2012; Raúl Porcel <armin76@gentoo.org> libffi-3.0.10.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #387063
