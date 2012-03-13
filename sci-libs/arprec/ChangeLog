@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/arprec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.8 2012/03/06 18:00:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.9 2012/03/13 16:43:11 bicatali Exp $
+
+*arprec-2.2.10 (13 Mar 2012)
+
+  13 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> -arprec-2.2.2.ebuild,
+  -files/arprec-2.2.2-gcc44.patch, -arprec-2.2.7.ebuild, -arprec-2.2.8.ebuild,
+  -files/arprec-2.2.8-autotools.patch, +arprec-2.2.10.ebuild:
+  Version bump
 
 *arprec-2.2.9 (06 Mar 2012)
 

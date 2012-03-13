@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.8.ebuild,v 1.1 2012/01/13 04:35:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.10.ebuild,v 1.1 2012/03/13 16:43:11 bicatali Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-autotools.patch
+	epatch "${FILESDIR}"/${PN}-2.2.9-autotools.patch
 	eautoreconf
 }
 
