@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.27-r1.ebuild,v 1.1 2011/08/31 14:16:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.27-r1.ebuild,v 1.2 2012/03/13 12:46:11 jlec Exp $
 
 EAPI="4"
 
-inherit eutils qt4-r2 toolchain-funcs
+inherit eutils flag-o-matic qt4-r2 toolchain-funcs
 
 DESCRIPTION="A better i7 (and now i3, i5) reporting tool for Linux"
 HOMEPAGE="http://code.google.com/p/i7z/"
@@ -31,6 +31,7 @@ src_prepare() {
 src_compile() {
 	default
 	if use X; then
+		append-cxxflags -fno-inline-small-functions -fno-caller-saves
 		cd GUI
 		eqmake4 GUI.pro
 		emake
