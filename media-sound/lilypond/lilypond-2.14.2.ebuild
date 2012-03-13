@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.14.2.ebuild,v 1.2 2012/03/12 23:56:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.14.2.ebuild,v 1.3 2012/03/13 18:45:11 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
-inherit elisp-common python
+inherit elisp-common python autotools
 
 DESCRIPTION="GNU Music Typesetter"
 SRC_URI="http://download.linuxaudio.org/lilypond/sources/v${PV:0:4}/${P}.tar.gz"
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 	app-text/t1utils
 	dev-lang/perl
 	dev-texlive/texlive-metapost
+	dev-util/pkgconfig
 	media-gfx/fontforge
 	>=sys-apps/texinfo-4.11
 	>=sys-devel/bison-2.0
@@ -46,6 +47,10 @@ src_prepare() {
 	if ! use vim-syntax ; then
 		sed -i -e "s/vim//" GNUmakefile.in || die
 	fi
+
+	sed -i -e "s/OPTIMIZE -g/OPTIMIZE/" aclocal.m4 || die
+
+	eautoreconf
 }
 
 src_configure() {
@@ -55,6 +60,8 @@ src_configure() {
 	econf \
 		--with-ncsb-dir=/usr/share/fonts/urw-fonts \
 		--disable-documentation \
+		--disable-optimising \
+		--disable-pipe \
 		$(use_enable debug debugging) \
 		$(use_enable profile profiling)
 }

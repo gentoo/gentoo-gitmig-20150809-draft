@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.115 2012/03/13 09:29:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.116 2012/03/13 18:45:11 radhermit Exp $
+
+  13 Mar 2012; Tim Harder <radhermit@gentoo.org> lilypond-2.14.2.ebuild:
+  Add build dep on pkgconfig and respect CFLAGS (bug #383515).
 
   13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -lilypond-2.12.2.ebuild,
   -lilypond-2.12.2-r1.ebuild, -files/lilypond-2.12.2-dont-install-pyc.patch,
