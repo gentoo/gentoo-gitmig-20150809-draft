@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.9.ebuild,v 1.1 2012/03/07 07:19:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.9.ebuild,v 1.2 2012/03/13 12:08:58 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -13,7 +13,7 @@ SRC_URI="https://fedorahosted.org/released/abrt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.21:2
