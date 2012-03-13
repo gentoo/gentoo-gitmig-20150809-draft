@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.277 2012/02/21 21:31:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.278 2012/03/13 22:15:27 ssuominen Exp $
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> mpd-0.16.7.ebuild,
+  mpd-9999.ebuild:
+  Install systemd mpd.service file wrt #407921 by Milan Berger and Michał
+  Górny
 
 *mpd-0.16.7 (21 Feb 2012)
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-9999.ebuild,v 1.3 2012/01/20 12:27:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-9999.ebuild,v 1.4 2012/03/13 22:15:27 ssuominen Exp $
 
 EAPI=4
-inherit autotools eutils flag-o-matic linux-info multilib git-2
+inherit autotools eutils flag-o-matic linux-info multilib systemd git-2
 
 DESCRIPTION="The Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
@@ -150,6 +150,7 @@ src_configure() {
 		$(use_enable wildmidi) \
 		$(use_enable zip zzip) \
 		$(use_with zeroconf zeroconf avahi) \
+		"$(systemd_with_unitdir)" \
 		${mpdconf}
 }
 
