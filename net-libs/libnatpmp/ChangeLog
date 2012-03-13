@@ -1,5 +1,9 @@
 
 
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libnatpmp-20110808-r1.ebuild:
+  amd64 stable wrt #406035
+
   09 Mar 2012; Mike Frysinger <vapier@gentoo.org> libnatpmp-20110808-r1.ebuild,
   files/remove-static-lib.patch, files/respect-FLAGS.patch,
   files/respect-libdir.patch:

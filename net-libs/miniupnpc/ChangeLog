@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.16 2012/03/03 15:45:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.17 2012/03/13 14:25:10 ssuominen Exp $
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> miniupnpc-1.6-r1.ebuild:
+  amd64 stable wrt #406035
 
   03 Mar 2012; Markus Meier <maekke@gentoo.org> miniupnpc-1.6-r1.ebuild:
   add ~arm, bug #400929
