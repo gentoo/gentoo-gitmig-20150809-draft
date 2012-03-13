@@ -1,9 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.297 2012/03/13 12:09:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.298 2012/03/13 12:15:09 ago Exp $
 
   13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> bash-4.2_p20.ebuild:
-  Stable for amd64, wrt bug #407397
+  Stable for amd64, wrt bug #407937
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> bash-4.2_p20.ebuild:
   Marking bash-4.2_p20 ppc64 for bug 407937
