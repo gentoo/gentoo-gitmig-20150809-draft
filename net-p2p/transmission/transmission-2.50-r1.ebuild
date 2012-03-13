@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.7 2012/03/12 19:07:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.8 2012/03/13 14:25:49 ssuominen Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
@@ -12,7 +12,7 @@ if [[ ${PV} == *9999* ]]; then
 	_live_inherits=subversion
 else
 	SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+	KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 ${_live_inherits}
