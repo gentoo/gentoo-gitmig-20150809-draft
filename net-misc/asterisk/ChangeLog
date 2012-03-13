@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.373 2012/03/02 17:48:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.374 2012/03/13 11:51:32 chainsaw Exp $
+
+*asterisk-10.2.0 (13 Mar 2012)
+
+  13 Mar 2012; Tony Vroon <chainsaw@gentoo.org> +asterisk-10.2.0.ebuild:
+  Add correct divisor to trunk frequency for IAX2 channels, from an upstream
+  commit by seanbright. Chained certificate support & correct handling of
+  non-blocking I/O for TLS/SSL, as reported by Matthias Nagl in bugs #407781 &
+  #407919. Upstream has fixed the port number in outbound SIP NOTIFY packets,
+  included iLBC, fixed the caller ID in originated calls and stopped UDPTL from
+  being created unneccesarily. Also the SIP timer should no longer be stopped
+  prematurely.
 
   02 Mar 2012; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.8.2.ebuild,
   asterisk-1.8.9.2.ebuild, asterisk-1.8.9.3.ebuild, asterisk-10.0.1.ebuild,
