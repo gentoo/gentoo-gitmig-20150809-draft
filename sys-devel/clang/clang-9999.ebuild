@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.27 2012/03/08 16:37:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.28 2012/03/13 17:08:38 voyageur Exp $
 
 EAPI=4
 
@@ -55,6 +55,7 @@ src_prepare() {
 		|| die "gold plugin path sed failed"
 	# Specify python version
 	python_convert_shebangs 2 tools/clang/tools/scan-view/scan-view
+	python_convert_shebangs -r 2 test/Scripts
 	python_convert_shebangs 2 projects/compiler-rt/lib/asan/scripts/asan_symbolize.py
 
 	# From llvm src_prepare
@@ -111,10 +112,14 @@ src_test() {
 	cd "${S}"/tools/clang || die "cd clang failed"
 
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
-	if ! emake -j1 VERBOSE=1 test; then
-		has test $FEATURES && die "Make test failed. See above for details."
-		has test $FEATURES || eerror "Make test failed. See above for details."
-	fi
+
+	testing() {
+		if ! emake -j1 VERBOSE=1 test; then
+			has test $FEATURES && die "Make test failed. See above for details."
+			has test $FEATURES || eerror "Make test failed. See above for details."
+		fi
+	}
+	python_execute_function testing
 }
 
 src_install() {

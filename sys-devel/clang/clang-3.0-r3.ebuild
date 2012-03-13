@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r3.ebuild,v 1.3 2012/02/28 09:09:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r3.ebuild,v 1.4 2012/03/13 17:08:38 voyageur Exp $
 
 EAPI=3
 
@@ -52,6 +52,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0-gentoo-binutils-apple.patch
 	# Specify python version
 	python_convert_shebangs 2 tools/clang/tools/scan-view/scan-view
+	python_convert_shebangs -r 2 test/Scripts
 
 	# From llvm src_prepare
 	einfo "Fixing install dirs"
@@ -125,10 +126,14 @@ src_test() {
 	rm -f test/Driver/linux-ld.c
 
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
-	if ! emake -j1 VERBOSE=1 test; then
-		has test $FEATURES && die "Make test failed. See above for details."
-		has test $FEATURES || eerror "Make test failed. See above for details."
-	fi
+
+	testing() {
+		if ! emake -j1 VERBOSE=1 test; then
+			has test $FEATURES && die "Make test failed. See above for details."
+			has test $FEATURES || eerror "Make test failed. See above for details."
+		fi
+	}
+	python_execute_function testing
 }
 
 src_install() {
