@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.165 2012/03/10 21:21:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.166 2012/03/13 10:05:46 sera Exp $
+
+  13 Mar 2012; Ralph Sennhauser <sera@gentoo.org> java-utils-2.eclass:
+  Add JAVA_PKG_WANT_BUILD_VM to allow limiting build VM by VM handle. The main 
+  aim is to allow respecting the system VM, if possible, for a subset of VMs 
+  provided by the jdk virtuals.
+  Thanks to Vlastimil Babka <caster@gentoo.org> for contributing the variable 
+  name and review.
 
   10 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Rev. 1.527 fixed 4.7 without me noticing. Add comments about the format of
