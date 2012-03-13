@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.8.3.ebuild,v 1.1 2012/03/02 09:19:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.8.3.ebuild,v 1.2 2012/03/13 02:59:05 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils eutils
+inherit distutils
 
 MY_PN="Werkzeug"
 MY_P="${MY_PN}-${PV}"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.32 2012/03/02 09:19:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.33 2012/03/13 02:59:05 floppym Exp $
+
+  13 Mar 2012; Mike Gilbert <floppym@gentoo.org> werkzeug-0.8.3.ebuild:
+  Don't inherit unused eclass. Patch by Arfrever.
 
 *werkzeug-0.8.3 (02 Mar 2012)
 
