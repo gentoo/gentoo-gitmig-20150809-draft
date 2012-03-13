@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mhash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.60 2012/03/04 14:41:46 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.61 2012/03/13 14:57:17 ssuominen Exp $
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> mhash-0.9.9.9-r1.ebuild:
+  ppc64 stable wrt #287397
 
   04 Mar 2012; Tobias Klausmann <klausman@gentoo.org> mhash-0.9.9.9-r1.ebuild:
   Stable on alpha, bug #287397
