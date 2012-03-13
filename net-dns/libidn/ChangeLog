@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.159 2012/03/09 14:25:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.160 2012/03/13 11:31:12 jer Exp $
+
+  13 Mar 2012; Jeroen Roovers <jer@gentoo.org> libidn-1.24.ebuild:
+  Stable for HPPA (bug #407303).
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> libidn-1.24.ebuild:
   Marking libidn-1.24 ppc64 for bug 407303
