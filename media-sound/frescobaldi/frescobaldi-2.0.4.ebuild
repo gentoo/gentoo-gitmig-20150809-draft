@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/frescobaldi-2.0.4.ebuild,v 1.4 2012/03/13 13:55:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/frescobaldi-2.0.4.ebuild,v 1.5 2012/03/13 14:01:17 ssuominen Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="portmidi"
 
 RDEPEND="dev-python/python-poppler-qt4
-	dev-python/PyQt4
+	dev-python/PyQt4[X]
 	>=media-sound/lilypond-2.14.2
 	portmidi? ( media-libs/portmidi )"
 DEPEND="${RDEPEND}"
