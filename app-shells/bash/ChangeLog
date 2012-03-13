@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.299 2012/03/13 13:20:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.300 2012/03/13 14:43:10 vapier Exp $
+
+  13 Mar 2012; Mike Frysinger <vapier@gentoo.org> bash-4.2_p20.ebuild,
+  bash-4.2_p24.ebuild:
+  Avoid regenerating bash info page #407985 by Jory A. Pratt.
 
   13 Mar 2012; Brent Baude <ranger@gentoo.org> bash-4.2_p20.ebuild:
   Marking bash-4.2_p20 ppc for bug 

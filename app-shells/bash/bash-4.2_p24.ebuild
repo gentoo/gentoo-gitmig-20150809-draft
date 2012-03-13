@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p24.ebuild,v 1.1 2012/03/12 14:57:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p24.ebuild,v 1.2 2012/03/13 14:43:10 vapier Exp $
 
 EAPI="1"
 
@@ -71,6 +71,10 @@ src_unpack() {
 	rm -rf lib/{readline,termcap}/*
 	touch lib/{readline,termcap}/Makefile.in # for config.status
 	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[a-z]*.h::g' Makefile.in || die
+
+	# Avoid regenerating docs after patches #407985
+	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die
+	touch -r . doc/*
 
 	epatch "${FILESDIR}"/${PN}-4.2-execute-job-control.patch #383237
 	epatch "${FILESDIR}"/${PN}-4.2-parallel-build.patch
