@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.124 2012/03/11 20:16:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.125 2012/03/13 15:55:56 ssuominen Exp $
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  net-tools-1.60_p20120127084908.ebuild:
+  Wrap sys-apps/openrc RDEPEND around USE ! prefix by Jeremy Olexa.
 
   11 Mar 2012; Robin H. Johnson <robbat2@gentoo.org>
   net-tools-1.60_p20120127084908.ebuild:

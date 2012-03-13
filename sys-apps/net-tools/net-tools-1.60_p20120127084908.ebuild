@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20120127084908.ebuild,v 1.3 2012/03/11 20:16:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20120127084908.ebuild,v 1.4 2012/03/13 15:55:56 ssuominen Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="nls old-output static"
 
-RDEPEND=">=sys-apps/openrc-0.9.9.3"
+RDEPEND="!prefix? ( >=sys-apps/openrc-0.9.9.3 )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
