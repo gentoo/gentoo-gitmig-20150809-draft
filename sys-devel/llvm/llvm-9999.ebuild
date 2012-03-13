@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.21 2012/03/06 09:11:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.22 2012/03/13 15:37:28 voyageur Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -33,7 +33,7 @@ RDEPEND="dev-lang/perl
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
 pkg_setup() {
-	# llvm strictly requires python-2 for building
+	# Required for test and build
 	python_set_active_version 2
 	python_pkg_setup
 
@@ -89,6 +89,9 @@ src_prepare() {
 		sed -e 's,\$(SharedLibDir),'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
 			-i tools/gold/Makefile || die "gold rpath sed failed"
 	fi
+
+	# Specify python version
+	python_convert_shebangs -r 2 test/Scripts
 
 	epatch "${FILESDIR}"/${PN}-2.6-commandguide-nops.patch
 	epatch "${FILESDIR}"/${PN}-2.9-nodoctargz.patch
