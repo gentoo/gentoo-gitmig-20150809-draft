@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/abrt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.7 2012/03/07 14:16:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.8 2012/03/13 12:08:31 ago Exp $
+
+  13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> abrt-2.0.8.ebuild:
+  Stable for amd64, wrt bug #407011
 
   07 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> abrt-2.0.8.ebuild:
   Depend on btparser-0.16 (bug #407251, thanks to Agostino Sarubbo).
