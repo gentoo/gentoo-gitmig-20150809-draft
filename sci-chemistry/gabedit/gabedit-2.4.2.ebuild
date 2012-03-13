@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.9.ebuild,v 1.1 2011/07/24 09:09:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.4.2.ebuild,v 1.1 2012/03/13 16:33:06 jlec Exp $
 
 EAPI=4
 
-inherit toolchain-funcs versionator
+inherit eutils toolchain-funcs versionator
 
 MY_PN=${PN/g/G}
 MY_PV=$(delete_all_version_separators)
@@ -12,7 +12,7 @@ MY_P="${MY_PN}Src${MY_PV}"
 
 DESCRIPTION="GUI for computational chemistry packages"
 HOMEPAGE="http://gabedit.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/GabeditDevloppment/${MY_PN}${MY_PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
@@ -36,6 +36,9 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	tc-export CC
+
+	epatch "${FILESDIR}"/${P}-gold.patch
+
 	sed -i "/rmdir tmp/d" "${S}"/Makefile
 	sed \
 		-e "/GTK_DISABLE_DEPRECATED/s:define:undef:g" \
