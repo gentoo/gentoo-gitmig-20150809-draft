@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/frescobaldi-2.0.4.ebuild,v 1.3 2012/03/13 13:52:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/frescobaldi-2.0.4.ebuild,v 1.4 2012/03/13 13:55:22 ssuominen Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ DESCRIPTION="A LilyPond sheet music text editor"
 HOMEPAGE="http://www.frescobaldi.org/"
 SRC_URI="mirror://github/wbsoft/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2 public-domain"
+LICENSE="GPL-2 public-domain" # public-domain is for bundled Tango icons
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="portmidi"
