@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.49 2012/01/29 23:28:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.50 2012/03/13 00:05:32 pesa Exp $
+
+*qt-multimedia-4.8.0-r1 (13 Mar 2012)
+
+  13 Mar 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/qt-multimedia-4.8.0-alsa.patch, +qt-multimedia-4.8.0-r1.ebuild:
+  Added 'alsa' USE flag (bug #341593), removed useless 'iconv'. Major cleanup of
+  src_configure().
 
   29 Jan 2012; Joseph Jezak <josejx@gentoo.org> qt-multimedia-4.7.4.ebuild:
   Marked ppc ppc64 stable for bug #390963.
