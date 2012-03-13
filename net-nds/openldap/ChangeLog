@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.410 2012/03/13 12:13:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.411 2012/03/13 15:25:51 ranger Exp $
+
+  13 Mar 2012; Brent Baude <ranger@gentoo.org> openldap-2.4.30.ebuild:
+  Marking openldap-2.4.30 ppc and ppc64 for bug 407941
 
   13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> openldap-2.4.30.ebuild:
   Stable for amd64, wrt bug #407941
