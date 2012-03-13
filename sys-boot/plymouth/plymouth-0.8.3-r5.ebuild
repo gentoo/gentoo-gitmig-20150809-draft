@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r5.ebuild,v 1.3 2011/10/27 12:37:00 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r5.ebuild,v 1.4 2012/03/13 11:27:36 aidecoe Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_intel video_cards_nouveau video_cards_radeon"
-IUSE="${IUSE_VIDEO_CARDS} gdm +openrc +pango static-libs"
+IUSE="${IUSE_VIDEO_CARDS} debug gdm +openrc +pango static-libs"
 
 COMMON_DEPEND=">=media-libs/libpng-1.2.16
 	>=x11-libs/gtk+-2.12:2
@@ -49,6 +49,7 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		--localstatedir=/var
+		$(use_enable debug tracing)
 		$(use_enable pango)
 		$(use_enable gdm gdm-transition)
 		$(use_enable video_cards_intel libdrm_intel)
