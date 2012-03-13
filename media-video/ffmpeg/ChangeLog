@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.527 2012/03/09 09:46:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.528 2012/03/13 23:17:00 aballier Exp $
+
+  14 Mar 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  drop iwmmxt useflag as it has been removed upstream
 
   09 Mar 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
   metadata.xml:
