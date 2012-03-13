@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/utelnetd-0.1.9-r1.ebuild,v 1.1 2008/12/21 23:35:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/utelnetd-0.1.9-r1.ebuild,v 1.2 2012/03/13 12:00:10 phajdan.jr Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~s390 ~sparc ~x86"
 IUSE=""
 
-DEPEND="sys-apps/shadow"
+DEPEND="virtual/shadow"
 
 src_unpack() {
 	unpack ${A}

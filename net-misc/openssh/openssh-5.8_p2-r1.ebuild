@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.8_p2-r1.ebuild,v 1.3 2011/11/03 01:00:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.8_p2-r1.ebuild,v 1.4 2012/03/13 11:57:18 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
@@ -36,7 +36,7 @@ RDEPEND="pam? ( virtual/pam )
 	>=sys-libs/zlib-1.2.3
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	X? ( x11-apps/xauth )
-	userland_GNU? ( sys-apps/shadow )"
+	userland_GNU? ( virtual/shadow )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	virtual/os-headers
