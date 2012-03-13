@@ -1,6 +1,17 @@
 # ChangeLog for sci-physics/geant
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.55 2011/12/18 07:13:04 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.56 2012/03/13 21:52:56 bicatali Exp $
+
+*geant-4.9.5-r1 (13 Mar 2012)
+
+  13 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  files/geant-4.9.4-zlib.patch, +geant-4.9.5-r1.ebuild:
+  Fixed more zlib issues. The geant3 flag is now only for unit conversion (if
+  geant3 is needed, geant:3 has to be installed from user). The data is now
+  fetched (building needs network) to ease maintenance and set up the proper
+  env variables in the geant4*sh scripts. Removed a use dawn duplicate. Thanks
+  Marek Szuba for his suggestions (bug #407517 and bug #359673). Added a
+  message for backward compatibility (bug #360285)
 
 *geant-4.9.5 (18 Dec 2011)
 *geant-4.9.4_p03 (18 Dec 2011)
