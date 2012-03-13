@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r1.ebuild,v 1.4 2012/03/13 13:18:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r1.ebuild,v 1.5 2012/03/13 13:29:09 polynomial-c Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ src_configure() {
 }
 
 src_install() {
-	make install IROOT="${D}" || die
+	emake install IROOT="${D}" || die
 
 	newinitd "${FILESDIR}"/atd.rc6 atd
 	newconfd "${FILESDIR}"/atd.confd atd
