@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/PEAR-Mail_Mime-1.8.3.ebuild,v 1.1 2012/03/12 09:48:42 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/PEAR-Mail_Mime-1.8.3.ebuild,v 1.2 2012/03/13 13:17:27 kumba Exp $
 
 EAPI="4"
 
@@ -15,10 +15,7 @@ IUSE=""
 
 PDEPEND="dev-php/PEAR-Mail_mimeDecode"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# see Bug 125451; http://pear.php.net/bugs/bug.php?id=5333
-	epatch "${FILESDIR}"/1.5.2-php-pass-by-reference-fix.patch
+	epatch "${FILESDIR}"/${PV}-php-pass-by-reference-fix.patch
 }
