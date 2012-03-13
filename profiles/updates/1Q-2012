@@ -20,3 +20,4 @@ move dev-php/php-timer dev-php/PHP_Timer
 move dev-php/php-codecoverage dev-php/PHP_CodeCoverage
 move dev-php/yaml dev-php/YAML
 move dev-php/dbunit dev-php/DBUnit
+slotmove media-sound/frescobaldi 4 0
