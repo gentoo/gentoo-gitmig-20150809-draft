@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtpfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/ChangeLog,v 1.6 2012/02/29 16:03:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/ChangeLog,v 1.7 2012/03/13 13:05:50 ago Exp $
+
+  13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> mtpfs-1.0.ebuild:
+  Stable for amd64, wrt bug #406293
 
   29 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml,
   mtpfs-1.1.ebuild:
