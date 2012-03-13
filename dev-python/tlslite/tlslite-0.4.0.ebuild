@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.4.0.ebuild,v 1.1 2012/03/02 12:55:40 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.4.0.ebuild,v 1.2 2012/03/13 02:56:35 floppym Exp $
 
 EAPI=4
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
 
-inherit eutils distutils
+inherit distutils
 
 DESCRIPTION="TLS Lite is a free python library that implements SSL 3.0 and TLS 1.0/1.1"
 HOMEPAGE="http://trevp.net/tlslite/ http://pypi.python.org/pypi/tlslite"
@@ -32,6 +32,6 @@ src_install(){
 	distutils_src_install
 
 	if use doc; then
-		dohtml -r docs/ || die "dohtml failed"
+		dohtml -r docs/
 	fi
 }

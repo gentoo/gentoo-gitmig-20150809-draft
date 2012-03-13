@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tlslite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.12 2012/03/02 12:55:40 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.13 2012/03/13 02:56:35 floppym Exp $
+
+  13 Mar 2012; Mike Gilbert <floppym@gentoo.org> tlslite-0.4.0.ebuild:
+  Fix dependencies. Don't inherit unused eclass. Patch by Arfrever.
 
 *tlslite-0.4.0 (02 Mar 2012)
 
