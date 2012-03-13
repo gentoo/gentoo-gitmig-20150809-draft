@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/i3lock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/ChangeLog,v 1.3 2012/01/09 13:12:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/ChangeLog,v 1.4 2012/03/13 12:12:20 ago Exp $
+
+  13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> i3lock-2.2.ebuild:
+  Stable for amd64, wrt bug #407899
 
   09 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> i3lock-2.2.ebuild:
   Fix typo
