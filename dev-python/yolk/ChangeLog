@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/yolk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.14 2012/03/09 08:08:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.15 2012/03/13 03:04:52 floppym Exp $
+
+  13 Mar 2012; Mike Gilbert <floppym@gentoo.org> yolk-0.4.3.ebuild:
+  Use EAPI=4. Don't inherit unused eclass. Fix dependencies. Patch by Arfrever.
 
 *yolk-0.4.3 (09 Mar 2012)
 

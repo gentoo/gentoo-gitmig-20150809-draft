@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/yolk-0.4.3.ebuild,v 1.1 2012/03/09 08:08:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/yolk-0.4.3.ebuild,v 1.2 2012/03/13 03:04:52 floppym Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils distutils
+inherit distutils
 
 DESCRIPTION="Tool and library for querying PyPI and locally installed Python packages"
 HOMEPAGE="http://pypi.python.org/pypi/yolk"
@@ -18,18 +18,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND="dev-python/setuptools"
-RDEPEND="dev-python/yolk-portage"
+DEPEND="dev-python/setuptools
+	dev-python/yolk-portage"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	distutils_src_install
 
 	if use examples; then
 		docinto examples/plugins
-		dodoc examples/plugins/*
-		docinto examples/plugins/yolk_portage
-		dodoc examples/plugins/yolk_portage/*
-		docinto examples/plugins/yolk_pkg_manager
-		dodoc examples/plugins/yolk_pkg_manager/*
+		dodoc -r examples/plugins/*
 	fi
 }
