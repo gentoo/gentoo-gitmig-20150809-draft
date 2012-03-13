@@ -2,5 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sound</herd>
-  <herd>kde</herd>
+  <herd>python</herd>
+  <use>
+    <flag name='portmidi'>Enable <pkg>media-libs/portmidi</pkg> support</flag>
+  </use>
 </pkgmetadata>
