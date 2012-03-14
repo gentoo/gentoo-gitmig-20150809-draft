@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/x2goclient
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.6 2011/08/19 09:55:55 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.7 2012/03/14 22:27:01 voyageur Exp $
+
+*x2goclient-3.0.1.18 (14 Mar 2012)
+
+  14 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goclient-3.0.1.18.ebuild, -x2goclient-3.01.5.ebuild,
+  -files/x2goclient-3.01.5-noldap.patch:
+  Version bump, new homepage and source, clean ebuild, new versioning. Bug
+  #408105
 
   19 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org>
   x2goclient-3.01.5.ebuild:
