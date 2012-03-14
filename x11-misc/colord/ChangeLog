@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.19 2012/03/08 23:31:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.20 2012/03/14 03:03:41 tetromino Exp $
+
+*colord-0.1.17 (14 Mar 2012)
+
+  14 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +colord-0.1.17.ebuild, +files/colord-0.1.17-glib-2.30.patch:
+  Bump, now supports LED-backlit displays. Switch back to using polkit instead
+  of dbus security; it should work properly with recent polkit versions.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> colord-0.1.16.ebuild:
   Marking colord-0.1.16 ~ppc64 for bug 387959
