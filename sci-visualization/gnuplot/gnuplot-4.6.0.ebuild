@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6_rc1.ebuild,v 1.7 2012/03/07 00:33:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.0.ebuild,v 1.1 2012/03/14 01:00:05 ottxor Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ if [[ -z ${PV%%*9999} ]]; then
 	inherit autotools cvs
 	ECVS_SERVER="gnuplot.cvs.sourceforge.net:/cvsroot/gnuplot"
 	ECVS_MODULE="gnuplot"
-	ECVS_BRANCH="HEAD"
+	ECVS_BRANCH="branch-4-6-stable"
 	ECVS_USER="anonymous"
 	ECVS_CVS_OPTIONS="-dP"
 	MY_P="${PN}"
@@ -29,8 +29,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd
 IUSE="bitmap cairo doc emacs examples +gd ggi latex lua plotutils qt4 readline svga thin-splines wxwidgets X xemacs"
 RESTRICT="wxwidgets? ( test )"
 
-REQUIRED_USE="svga? ( bitmap )"
-
 RDEPEND="
 	cairo? (
 		x11-libs/cairo
@@ -43,7 +41,7 @@ RDEPEND="
 		lua? (
 			dev-tex/pgf
 			>=dev-texlive/texlive-latexrecommended-2008-r2 ) )
-	lua? ( <dev-lang/lua-5.2 )
+	lua? ( dev-lang/lua )
 	plotutils? ( media-libs/plotutils )
 	qt4? ( >=x11-libs/qt-core-4.5
 		>=x11-libs/qt-gui-4.5
