@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>gnustep</herd>
-<longdescription>
-Gridlock is a collection of several grid-based strategy games. The games include Ataxx, Reversi, Checkers, Gomoku, Connect Four, Breakthrough, Glass Bead, and Life; they are individually described in the "Games" section.
-</longdescription>
-</pkgmetadata>
