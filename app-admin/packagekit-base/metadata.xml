@@ -17,8 +17,6 @@
 		<flag name="pm-utils">
 			Add pm-utils (suspend/resume) functionalities
 		</flag>
-		<flag name="static-libs">Compile static archives</flag>
-		<flag name="udev">Add support for <pkg>sys-fs/udev</pkg></flag>
 	</use>
 </pkgmetadata>
 
