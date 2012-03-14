@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.364 2012/03/14 09:21:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.365 2012/03/14 20:11:53 polynomial-c Exp $
+
+  14 Mar 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.8.ebuild:
+  Fixed dependencies.
 
   14 Mar 2012; Lars Wendler <polynomial-c@gentoo.org>
   -files/enigmail/enigmail-1.3.3-bug373733.patch,
