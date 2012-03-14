@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.301 2012/03/13 20:49:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.302 2012/03/14 05:08:15 jer Exp $
+
+  14 Mar 2012; Jeroen Roovers <jer@gentoo.org> bash-4.2_p20.ebuild:
+  Stable for HPPA (bug #407937).
 
   13 Mar 2012; Jeff Horelick <jdhore@gentoo.org> bash-4.2_p20.ebuild:
   marked x86 per bug 407937
