@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.2.0.ebuild,v 1.2 2012/02/14 04:24:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.2.2.ebuild,v 1.1 2012/03/14 07:00:23 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/GnomeScreensaver"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug doc pam"
+IUSE="debug doc pam systemd"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="
@@ -34,6 +34,7 @@ RDEPEND="
 	x11-themes/gnome-icon-theme-symbolic
 
 	pam? ( virtual/pam )
+	systemd? ( >=sys-apps/systemd-31 )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
@@ -54,11 +55,15 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable doc docbook-docs)
 		$(use_enable pam locking)
+		$(use_with systemd)
 		--with-mit-ext
 		--with-pam-prefix=/etc
 		--with-xf86gamma-ext
 		--with-kbd-layout-indicator
 		--disable-schemas-compile"
+	# Do not use --without-console-kit, it would provide no benefit: there is
+	# no build-time or run-time check for consolekit, $PN merely listens to
+	# consolekit's messages over dbus.
 	# xscreensaver and custom screensaver capability removed
 	# poke and inhibit commands were also removed, bug 579430
 }
