@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.529 2012/03/10 21:21:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.530 2012/03/14 20:46:35 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1500,7 +1500,9 @@ toolchain_src_install() {
 	# These should be symlinks
 	dodir /usr/bin
 	cd "${D}"${BINPATH}
-	for x in cpp gcc g++ c++ g77 gcj gcjh gfortran gccgo ; do
+	# Ugh: we really need to auto-detect this list.
+	#      It's constantly out of date.
+	for x in cpp gcc g++ c++ gcov g77 gcj gcjh gfortran gccgo ; do
 		# For some reason, g77 gets made instead of ${CTARGET}-g77...
 		# this should take care of that
 		[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
