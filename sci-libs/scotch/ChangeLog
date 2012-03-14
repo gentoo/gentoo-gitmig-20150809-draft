@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/scotch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.6 2011/06/26 10:08:23 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.7 2012/03/14 07:11:17 patrick Exp $
+
+*scotch-5.1.12b (14 Mar 2012)
+
+  14 Mar 2012; Patrick Lauer <patrick@gentoo.org>
+  +files/scotch-5.1.12b-as-needed.patch, +scotch-5.1.12b.ebuild, metadata.xml:
+  Bump, borrowed from sci overlay, thanks to bicatali
 
   26 Jun 2011; Justin Lecher <jlec@gentoo.org> scotch-5.1.7.ebuild,
   scotch-5.1.11.ebuild, metadata.xml:

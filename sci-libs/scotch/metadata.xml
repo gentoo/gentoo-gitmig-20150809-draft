@@ -10,6 +10,10 @@
 		<email>oli.borm@web.de</email>
 		<name>Oliver Borm</name>
 	</maintainer>
+	<use>
+		<flag name='int64'>Build the 64 bits integer library (needed for > 2^31 vertices)</flag>
+		<flag name='tools'>Build and install extra exec tools</flag>
+	</use>
 	<longdescription lang="en">
   SCOTCH is a software package and libraries for graph, mesh and
   hypergraph partitioning, static mapping, and sparse matrix block
