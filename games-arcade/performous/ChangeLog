@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/performous
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.4 2012/03/05 21:47:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.5 2012/03/14 19:46:34 tupone Exp $
+
+  14 Mar 2012; Tupone Alfredo <tupone@gentoo.org> performous-0.6.1.ebuild:
+  Fix install of songs. Bug #408167 by lexofleviafan@gmail.com
 
   05 Mar 2012; Mike Frysinger <vapier@gentoo.org> performous-0.6.1.ebuild,
   +files/performous-0.6.1-linguas.patch:

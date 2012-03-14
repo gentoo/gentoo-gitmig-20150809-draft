@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.4 2012/03/05 21:47:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.5 2012/03/14 19:46:34 tupone Exp $
 
 EAPI="3"
 
@@ -88,7 +88,7 @@ src_install() {
 	cmake-utils_src_install
 	if use songs ; then
 		insinto "${GAMES_DATADIR}"/${PN}
-		doins -r "${S}/songs" || die
+		doins -r "${WORKDIR}/songs" || die
 	fi
 	dodoc docs/{Authors,DeveloperReadme,instruments,TODO}.txt
 	prepgamesdirs
