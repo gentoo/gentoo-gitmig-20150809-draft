@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qterm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.39 2011/08/18 02:48:34 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.40 2012/03/14 03:43:44 naota Exp $
+
+  14 Mar 2012; Naohiro Aota <naota@gentoo.org> qterm-0.5.12.ebuild:
+  Add missing dependency: kde-base/kdelibs and x11-libs/qt-assistant. Bug
+  #405577
 
 *qterm-0.5.12 (18 Aug 2011)
 
