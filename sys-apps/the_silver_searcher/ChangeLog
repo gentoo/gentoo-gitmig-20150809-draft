@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/the_silver_searcher
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.3 2012/03/04 18:22:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.4 2012/03/14 03:41:42 jdhore Exp $
+
+*the_silver_searcher-0.2 (14 Mar 2012)
+
+  14 Mar 2012; Jeff Horelick <jdhore@gentoo.org>
+  +the_silver_searcher-0.2.ebuild:
+  Version bump. Adds a manpage, stdin searching, performance improvements and
+  more.
 
   04 Mar 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
   Drop the proxy-maintainers herd as i maintain this package now.
