@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.152 2012/02/13 18:34:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.153 2012/03/14 04:00:30 floppym Exp $
+
+*setuptools-0.6.25 (14 Mar 2012)
+
+  14 Mar 2012; Mike Gilbert <floppym@gentoo.org> +setuptools-0.6.25.ebuild:
+  Version bump for bug 408095. EAPI=4. Replace find | xargs with find -exec.
 
   13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> setuptools-0.6.21.ebuild:
   ppc64 stable wrt #386061
