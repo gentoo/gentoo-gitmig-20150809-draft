@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/egypt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/egypt/ChangeLog,v 1.4 2011/04/21 13:35:57 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/egypt/ChangeLog,v 1.5 2012/03/14 05:41:09 patrick Exp $
+
+*egypt-1.9 (14 Mar 2012)
+
+  14 Mar 2012; Patrick Lauer <patrick@gentoo.org> +egypt-1.9.ebuild:
+  Bump
 
 *egypt-1.8 (21 Apr 2011)
 
