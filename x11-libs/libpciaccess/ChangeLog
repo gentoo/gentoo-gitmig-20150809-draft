@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.73 2012/03/04 21:04:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.74 2012/03/14 17:52:12 mattst88 Exp $
+
+  14 Mar 2012; Matt Turner <mattst88@gentoo.org> libpciaccess-0.13.ebuild,
+  +files/libpciaccess-0.13-fix-out-bwl-macros.patch:
+  Add patch to fix bug 407299.
 
 *libpciaccess-0.13 (04 Mar 2012)
 
