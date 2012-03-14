@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.7.5.7.ebuild,v 1.1 2010/08/26 15:22:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.9.2.0.ebuild,v 1.1 2012/03/14 03:25:43 patrick Exp $
 
 inherit eutils
 
@@ -11,9 +11,10 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}.zip"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+# this is a pre-release, so no keywords for now
+KEYWORDS=""
 
-IUSE="ldap spf srs ssl syslog"
+IUSE="ipv6 ldap sasl spf srs ssl syslog"
 
 DEPEND="app-arch/unzip"
 
@@ -26,8 +27,11 @@ RDEPEND="dev-lang/perl
 	dev-perl/Email-Valid
 	dev-perl/libwww-perl
 	dev-perl/mime-construct
+	dev-perl/Net-CIDR-Lite
 	virtual/perl-Digest-MD5
 	virtual/perl-Time-HiRes
+	ipv6? ( dev-perl/IO-Socket-INET6 )
+	sasl? ( dev-perl/Authen-SASL )
 	spf? ( dev-perl/Mail-SPF )
 	srs? ( dev-perl/Mail-SRS )
 	ssl? ( dev-perl/IO-Socket-SSL )
@@ -47,7 +51,6 @@ src_unpack() {
 
 	local FILES="
 		assp.pl
-		move2num.pl
 		rebuildspamdb.pl
 		stat.pl
 	"
@@ -88,9 +91,6 @@ src_unpack() {
 		-e 's|$base/$bf|/etc/assp/$bf|g' \
 		-e 's|rebuildrun.txt|/var/lib/assp/rebuildrun.txt|' \
 		assp.pl || die
-
-	# sed move2num.pl
-	sed -i -e 's|assp.cfg|/etc/assp/assp.cfg|' move2num.pl || die
 
 	# sed rebuildspamdb.pl
 	sed -i -e 's|assp.cfg|/etc/assp/assp.cfg|' \
