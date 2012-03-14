@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/x2goserver
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.7 2010/07/01 13:22:10 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.8 2012/03/14 22:30:45 voyageur Exp $
+
+*x2goserver-3.1.0.1 (14 Mar 2012)
+
+  14 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org> files/x2goserver.init,
+  -x2goserver-3.0.1.5.ebuild, -x2goserver-3.0.1.5-r1.ebuild,
+  +x2goserver-3.1.0.1.ebuild,
+  -files/x2goserver-mountdirs_no_desktop_icon.patch:
+  Version bump, cleaned ebuild and adapted to new server system. Fixes bug
+  #408105
 
 *x2goserver-3.0.1.5-r1 (01 Jul 2010)
 

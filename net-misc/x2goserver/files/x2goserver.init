@@ -1,14 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/files/x2goserver.init,v 1.1 2009/03/13 12:44:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/files/x2goserver.init,v 1.2 2012/03/14 22:30:45 voyageur Exp $
 
 DAEMON=/usr/sbin/x2gocleansessions
-
-depend() {
-	need postgresql
-	use sshd
-}
 
 start() {
 	ebegin "Starting ${SVCNAME}"
