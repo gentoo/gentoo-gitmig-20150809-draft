@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.1.5.ebuild,v 1.1 2012/03/14 19:18:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.1.5.ebuild,v 1.2 2012/03/14 19:19:28 ssuominen Exp $
 
 # TODO: waf-utils.eclass ?
 
@@ -51,7 +51,7 @@ src_configure() {
 
 	tc-export AR CC CPP CXX RANLIB
 
-	local backend=gtkhtml 
+	local backend=gtkhtml
 	use webkit && backend=webkit
 
 	CCFLAGS="${CFLAGS}" \
