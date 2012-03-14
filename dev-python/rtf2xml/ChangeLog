@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rtf2xml
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/ChangeLog,v 1.5 2011/08/19 17:21:42 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/ChangeLog,v 1.6 2012/03/14 05:32:03 patrick Exp $
+
+*rtf2xml-1.33 (14 Mar 2012)
+
+  14 Mar 2012; Patrick Lauer <patrick@gentoo.org> +rtf2xml-1.33.ebuild:
+  Bump
 
   19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   remove radek from metadata.xml
