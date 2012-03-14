@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.7.ebuild,v 1.2 2012/02/07 21:59:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.8.ebuild,v 1.1 2012/03/14 09:17:45 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
 # This list can be updated with scripts/get_langs.sh from the mozilla overlay
-MOZ_LANGS=(be ca cs de en en-GB en-US es-AR es-ES fi fr gl hu it ja lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN)
+MOZ_LANGS=(be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it ja lt nb-NO nl pl
+	    pt-PT ru sk sv-SE tr zh-CN)
 
 MOZ_PV="${PV/_pre*}"
 MOZ_PV="${MOZ_PV/_alpha/a}"
@@ -15,7 +16,8 @@ MOZ_PV="${MOZ_PV/_rc/rc}"
 MOZ_P="${PN}-${MOZ_PV}"
 
 if [[ ${PV} == *_pre* ]] ; then
-	MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${PN}/nightly/${MOZ_PV}-candidates/build${PV##*_pre}"
+	MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/nightly/${MOZ_PV}-candidates/build${PV##*_pre}"
+	MOZ_LANGPACK_PREFIX="linux-i686/xpi/"
 	# And the langpack stuff stays at eclass defaults
 else
 	MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/${MOZ_PV}"
@@ -25,8 +27,9 @@ fi
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
 
-PATCH="${PN}-2.7-patches-02"
-EMVER="1.3.5"
+PATCHFF="firefox-11.0-patches-0.1"
+PATCH="${PN}-2.7-patches-03"
+EMVER="1.4"
 
 DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
@@ -38,7 +41,7 @@ if [[ ${PV} == *_pre* ]] ; then
 else
 	# This is where arch teams should change the KEYWORDS.
 
-	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86"
 fi
 
 SLOT="0"
@@ -47,7 +50,8 @@ IUSE="+alsa +chatzilla +crypt +ipc +roaming system-sqlite +webm"
 
 SRC_URI+="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
-	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
 	crypt? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz )"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
@@ -65,7 +69,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	virtual/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,unlock-notify,debug=] )
 	crypt? ( >=app-crypt/gnupg-1.4 )
-	webm? ( >=media-libs/libvpx-0.9.7
+	webm? ( >=media-libs/libvpx-1.0.0
 		media-libs/alsa-lib )"
 
 DEPEND="${RDEPEND}
@@ -100,20 +104,14 @@ src_prepare() {
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
-	epatch "${WORKDIR}/_seamonkey"
+	epatch "${WORKDIR}/seamonkey"
 
 	# browser patches go here
 	pushd "${S}"/mozilla &>/dev/null || die
+	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
-	epatch "${WORKDIR}/_mozilla"
-	popd &>/dev/null || die
-
-	# mailnews patches go here
-	pushd "${S}"/mailnews &>/dev/null || die
-	EPATCH_SUFFIX="patch" \
-	EPATCH_FORCE="yes" \
-	epatch "${WORKDIR}/_mailnews"
+	epatch "${WORKDIR}/firefox"
 	popd &>/dev/null || die
 
 	# Allow user to apply any additional patches without modifing ebuild
@@ -121,11 +119,8 @@ src_prepare() {
 
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
-		cd "${S}"/mailnews/extensions/enigmail || die
-		./makemake -r 2&>/dev/null
-		sed -e 's:@srcdir@:${S}/mailnews/extensions/enigmail:' \
-			-i Makefile.in || die
-		cd "${S}"
+		#cd "${S}"/mailnews/extensions/enigmail || die
+		#cd "${S}"
 	fi
 
 	#Ensure we disable javaxpcom by default to prevent configure breakage
@@ -137,6 +132,8 @@ src_prepare() {
 		|| die "Failed to remove gnomevfs extension"
 
 	eautoreconf
+	cd "${S}"/mozilla
+	eautoconf
 }
 
 src_configure() {
@@ -164,6 +161,8 @@ src_configure() {
 		MEXTENSIONS+=",-sroaming"
 	fi
 
+	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --disable-gconf
 	mozconfig_annotate '' --enable-jsd
@@ -176,8 +175,15 @@ src_configure() {
 	mozconfig_use_enable system-sqlite
 	mozconfig_use_enable methodjit
 
+	# Use an objdir to keep things organized.
+	echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/seamonk" \
+		>> "${S}"/.mozconfig
+
 	# Finalize and report settings
 	mozconfig_final
+
+	# Work around breakage in makeopts with --no-print-directory
+	MAKEOPTS="${MAKEOPTS/--no-print-directory/}"
 
 	if [[ $(gcc-major-version) -lt 4 ]] ; then
 		append-cxxflags -fno-stack-protector
@@ -186,32 +192,33 @@ src_configure() {
 			append-flags -mno-avx
 		fi
 	fi
-
-	####################################
-	#
-	#  Configure and build
-	#
-	####################################
-
-	# Work around breakage in makeopts with --no-print-directory
-	MAKEOPTS="${MAKEOPTS/--no-print-directory/}"
-
-	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" PYTHON="$(PYTHON)" econf
 }
 
 src_compile() {
-	emake || die
+	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
+	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
+	emake -f client.mk || die
 
 	# Only build enigmail extension if conditions are met.
 	if use crypt ; then
-		emake -C "${S}"/mailnews/extensions/enigmail || die "make enigmail failed"
-		emake -j1 -C "${S}"/mailnews/extensions/enigmail xpi || die "make enigmail xpi failed"
+		cd "${S}"/mailnews/extensions/enigmail || die
+		./makemake -r 2&> /dev/null
+		cd "${S}"/seamonk/mailnews/extensions/enigmail
+		emake || die "make enigmail failed"
+		emake xpi || die "make enigmail xpi failed"
 	fi
 }
 
 src_install() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 	declare emid
+	local obj_dir="seamonk"
+	cd "${S}/${obj_dir}"
+
+	# Copy our preference before omnijar is created.
+	sed "s|SEAMONKEY_PVR|${PVR}|" "${FILESDIR}"/all-gentoo-1.js > \
+		"${S}/${obj_dir}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
+		|| die
 
 	pax-mark m "${S}"/dist/bin/xpcshell
 
@@ -220,12 +227,14 @@ src_install() {
 
 	if use crypt ; then
 		cd "${T}" || die
-		unzip "${S}"/mozilla/dist/bin/enigmail*.xpi install.rdf || die
+		unzip "${S}"/${obj_dir}/mozilla/dist/bin/enigmail*.xpi install.rdf || die
 		emid=$(sed -n '/<em:id>/!d; s/.*\({.*}\).*/\1/; p; q' install.rdf)
 
 		dodir ${MOZILLA_FIVE_HOME}/extensions/${emid} || die
 		cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid} || die
-		unzip "${S}"/mozilla/dist/bin/enigmail*.xpi || die
+		unzip "${S}"/${obj_dir}/mozilla/dist/bin/enigmail*.xpi || die
+
+		cd "${S}" || die
 	fi
 
 	sed 's|^\(MimeType=.*\)$|\1text/x-vcard;text/directory;application/mbox;message/rfc822;x-scheme-handler/mailto;|' \
@@ -246,18 +255,13 @@ src_install() {
 		|| die
 	domenu "${T}"/${PN}.desktop || die
 
-	# Add our default prefs
-	sed "s|SEAMONKEY_PVR|${PVR}|" "${FILESDIR}"/all-gentoo-1.js \
-		> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js \
-			|| die
-
-	# Required in order to use plugins and even run firefox on hardened.
+	# Required in order to use plugins and even run seamonkey on hardened.
 	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin,plugin-container}
 
 	# Handle plugins dir through nsplugins.eclass
 	share_plugins_dir
 
-	doman "${S}"/suite/app/${PN}.1 || die
+	doman "${S}"/${obj_dir}/suite/app/${PN}.1 || die
 }
 
 pkg_preinst() {
