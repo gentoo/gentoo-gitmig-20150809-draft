@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.406 2012/03/09 14:35:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.407 2012/03/14 14:45:54 darkside Exp $
+
+*eix-0.25.3 (14 Mar 2012)
+
+  14 Mar 2012; Jeremy Olexa <darkside@gentoo.org> +eix-0.25.3.ebuild:
+  Version bump from upstream. Due to filesystem layout changes, there WILL be a
+  file collision for /var/cache/eix. It is safe to remove this file and then
+  regenerate it with 'eix-update'
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> eix-0.23.10.ebuild:
   Marking eix-0.23.10 ppc64 for bug 406853
