@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.1.ebuild,v 1.1 2011/12/26 03:40:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.3.ebuild,v 1.1 2012/03/14 06:41:11 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
