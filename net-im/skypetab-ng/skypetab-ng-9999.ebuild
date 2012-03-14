@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-9999.ebuild,v 1.1 2012/02/11 10:47:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-9999.ebuild,v 1.2 2012/03/14 17:03:17 slyfox Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ DEPEND="
 	amd64? ( app-emulation/emul-linux-x86-qtlibs )
 "
 RDEPEND="${DEPEND}
-	net-im/skype
+	net-im/skype[-qt-static]
 "
 
 S=${WORKDIR}/${MY_P}
