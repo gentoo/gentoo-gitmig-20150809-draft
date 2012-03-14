@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.127 2012/03/03 16:32:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.128 2012/03/14 18:06:52 mattst88 Exp $
+
+  14 Mar 2012; Matt Turner <mattst88@gentoo.org> pixman-0.24.4.ebuild:
+  Drop code to disable sse2 if <gcc-4.2 or if MMX is disabled.
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> pixman-0.24.0.ebuild:
   Marking pixman-0.24.0 ppc64 stable for bug 394393
