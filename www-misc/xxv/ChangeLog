@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/xxv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.18 2012/02/07 10:37:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.19 2012/03/14 19:57:04 hd_brummy Exp $
+
+  14 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org> -files/xxv.utf8-v4,
+  files/xxv.utf8-v5:
+  cleanup, moved paramerte -c to -u in start-stop-daemon
 
   07 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org> -xxv-1.4.ebuild,
   -xxv-1.5.ebuild, -xxv-1.6.ebuild, xxv-1.6.1.ebuild:
