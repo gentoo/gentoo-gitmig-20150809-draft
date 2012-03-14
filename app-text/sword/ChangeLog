@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sword
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.59 2011/06/11 17:52:00 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.60 2012/03/14 18:19:46 ssuominen Exp $
+
+  14 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> sword-1.6.2.ebuild:
+  Fix building with net-misc/curl >= 7.21.7 wrt #378055 by Andrew Savchenko
 
 *sword-1.6.2 (11 Jun 2011)
 

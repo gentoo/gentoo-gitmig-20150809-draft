@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.1 2011/06/11 17:52:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.2 2012/03/14 18:19:46 ssuominen Exp $
 
 EAPI="3"
 
@@ -22,6 +22,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
+	sed -i -e '/^#inc.*curl.*types/d' src/mgr/curl*.cpp || die #378055
+
 	cat > "${T}"/sword.conf <<- _EOF
 		[Install]
 		DataPath=${EPREFIX}/usr/share/sword/
