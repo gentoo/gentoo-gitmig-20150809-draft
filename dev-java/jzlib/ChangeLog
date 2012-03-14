@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jzlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.35 2011/12/31 13:54:24 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.36 2012/03/14 15:39:46 sera Exp $
+
+*jzlib-1.1.1 (14 Mar 2012)
+
+  14 Mar 2012; Ralph Sennhauser <sera@gentoo.org> +jzlib-1.1.1.ebuild:
+  Version bump, thanks to James Le Cuirot <chewi@aura-online.co.uk> for the
+  ebuild. Restricting test due to missing keywords on scala.
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> jzlib-1.0.7-r1.ebuild:
   Drop ia64 support #345433
