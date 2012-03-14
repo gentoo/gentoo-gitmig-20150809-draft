@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13575 2012/03/13 09:31:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13576 2012/03/14 00:56:54 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -448,6 +448,7 @@ x11-plugins/wsoundserver
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (01 Jan 2012)
 # Mask until dependencies are keyworded, bug #396669
 >=x11-drivers/xf86-input-evdev-2.6.99
+>=x11-drivers/xf86-input-synaptics-1.5.99
 
 # Sebastien Fabbro <bicatali@gentoo.org> (29 Dec 2011)
 # Hard to maintain. Missing files in source, broken packaging.
