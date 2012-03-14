@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.1-r2.ebuild,v 1.1 2012/03/03 12:33:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.1-r2.ebuild,v 1.2 2012/03/14 16:59:58 chithanh Exp $
 
 EAPI=4
 
@@ -47,7 +47,7 @@ for card in ${VIDEO_CARDS}; do
 done
 
 IUSE="${IUSE_VIDEO_CARDS}
-	bindist +classic d3d debug +egl g3dvl +gallium gbm gles1 gles2 +llvm +nptl openvg osmesa pax_kernel pic selinux shared-dricore +shared-glapi vdpau wayland xvmc kernel_FreeBSD"
+	bindist +classic d3d debug +egl g3dvl +gallium gbm gles1 gles2 +llvm +nptl openvg osmesa pax_kernel pic selinux shared-dricore +shared-glapi vdpau wayland xa xvmc kernel_FreeBSD"
 
 REQUIRED_USE="
 	d3d?    ( gallium )
@@ -57,6 +57,7 @@ REQUIRED_USE="
 	gbm?    ( shared-glapi )
 	g3dvl? ( || ( vdpau xvmc ) )
 	vdpau? ( g3dvl )
+	xa?    ( gallium )
 	xvmc?  ( g3dvl )
 	video_cards_intel?  ( || ( classic gallium ) )
 	video_cards_i915?   ( || ( classic gallium ) )
@@ -208,6 +209,7 @@ src_configure() {
 			$(use_enable llvm gallium-llvm)
 			$(use_enable openvg)
 			$(use_enable vdpau)
+			$(use_enable xa)
 			$(use_enable xvmc)
 		"
 		gallium_enable swrast
