@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.570 2012/03/13 13:11:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.571 2012/03/14 02:25:34 tetromino Exp $
+
+*gtk+-3.2.4 (14 Mar 2012)
+
+  14 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +gtk+-3.2.4.ebuild:
+  Version bump; fixes various bugs and improves window iconification.
 
   13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> gtk+-3.2.3.ebuild:
   Stable for amd64, wrt bug #407643
