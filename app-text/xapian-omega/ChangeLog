@@ -1,5 +1,9 @@
 
 
+  14 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  xapian-omega-1.2.9.ebuild:
+  Tested on ppc/ppc64
+
 *xapian-omega-1.2.9 (13 Mar 2012)
 
   13 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
