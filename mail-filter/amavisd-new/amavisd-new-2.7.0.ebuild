@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0.ebuild,v 1.5 2012/01/19 12:32:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0.ebuild,v 1.6 2012/03/14 09:33:57 eras Exp $
 
 EAPI=4
 
@@ -57,7 +57,7 @@ RDEPEND="${DEPEND}
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
 	razor? ( mail-filter/razor )
-	snmp? ( net-analyzer/net-snmp )
+	snmp? ( net-analyzer/net-snmp[perl] )
 	spamassassin? ( mail-filter/spamassassin )"
 
 AMAVIS_ROOT="/var/amavis"
