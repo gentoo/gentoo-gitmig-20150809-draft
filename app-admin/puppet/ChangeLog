@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.103 2012/03/03 20:26:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.104 2012/03/14 16:33:33 matsuu Exp $
+
+*puppet-2.7.12 (14 Mar 2012)
+
+  14 Mar 2012; MATSUU Takuto <matsuu@gentoo.org> -puppet-2.6.12.ebuild,
+  -puppet-2.7.9.ebuild, +puppet-2.7.12.ebuild:
+  Version bumped. Fixed emacs and xemacs related issue, bug #406053. Added
+  ruby19 and ree18 to USE_RUBY. Removed old versions.
 
   03 Mar 2012; Raúl Porcel <armin76@gentoo.org> puppet-2.7.11.ebuild:
   sparc stable wrt #403963
