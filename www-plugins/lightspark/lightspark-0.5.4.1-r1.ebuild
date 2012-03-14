@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.4.1-r1.ebuild,v 1.1 2012/02/29 19:03:58 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.4.1-r1.ebuild,v 1.2 2012/03/14 22:24:31 chithanh Exp $
 
 EAPI=4
 inherit cmake-utils nsplugins multilib versionator
@@ -38,7 +38,6 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	virtual/opengl
 	nsplugin? (
 		dev-libs/nspr
-		net-libs/xulrunner
 		x11-libs/gtk+:2
 		x11-libs/gtkglext
 	)
