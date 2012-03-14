@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.93.ebuild,v 1.2 2012/03/03 07:39:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.93.ebuild,v 1.3 2012/03/14 05:57:35 robbat2 Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -232,7 +232,9 @@ src_install() {
 	#newins "${FILESDIR}"/64-device-mapper.rules-2.02.56-r3 64-device-mapper.rules || die
 
 	# do not rely on /lib -> /libXX link
-	sed -e "s-/lib/rcscripts/-/$(get_libdir)/rcscripts/-" -i "${ED}"/etc/init.d/*
+	sed -i \
+		-e "s|/lib/rcscripts/|/$(get_libdir)/rcscripts/|" \
+		"${ED}"/etc/init.d/* || die
 
 	elog "USE flag nocman is deprecated and replaced"
 	elog "with the cman USE flag."
