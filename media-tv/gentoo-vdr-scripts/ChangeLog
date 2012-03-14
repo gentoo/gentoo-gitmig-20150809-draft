@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.118 2012/02/24 04:43:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.119 2012/03/14 15:11:00 hd_brummy Exp $
+
+*gentoo-vdr-scripts-0.5.2 (14 Mar 2012)
+
+  14 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +gentoo-vdr-scripts-0.5.2.ebuild:
+  bump, minor fixes, new --rcu handling for >=media-video/vdr-1.7.25 in plugin
+  media-plugins/vdr-rcu
 
 *gentoo-vdr-scripts-0.5.1 (24 Feb 2012)
 
