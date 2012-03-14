@@ -1,24 +1,28 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/generatorrunner/generatorrunner-0.6.16.ebuild,v 1.1 2012/01/15 11:19:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/generatorrunner/generatorrunner-0.6.16.ebuild,v 1.2 2012/03/14 13:59:38 pesa Exp $
 
 EAPI=4
 
 inherit cmake-utils
 
-DESCRIPTION="A tool that controls bindings generation"
+DESCRIPTION="A tool to control bindings generation"
 HOMEPAGE="http://www.pyside.org/"
 SRC_URI="http://www.pyside.org/files/${P}.tar.bz2"
 
-LICENSE="LGPL-2.1"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug test"
 
-RDEPEND=">=dev-python/apiextractor-0.10
-	>=x11-libs/qt-core-4.7.0"
-DEPEND="${DEPEND}
-	test? ( >=x11-libs/qt-test-4.7.0 )
+QT_PV="4.7.0:4"
+
+RDEPEND="
+	>=dev-python/apiextractor-0.10.10
+	>=x11-libs/qt-core-${QT_PV}
+"
+DEPEND="${RDEPEND}
+	test? ( >=x11-libs/qt-test-${QT_PV} )
 "
 
 DOCS=( AUTHORS ChangeLog )
