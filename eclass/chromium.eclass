@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.1 2012/03/14 15:54:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.2 2012/03/14 19:15:44 floppym Exp $
 
 # @ECLASS: chromium.eclass
 # @MAINTAINER:
@@ -161,6 +161,9 @@ chromium_pkg_die() {
 	if is-flagq '-g?(gdb)?([1-9])'; then
 		ewarn
 		ewarn "You have enabled debug info (i.e. -g or -ggdb in your CFLAGS/CXXFLAGS)."
+		ewarn "This produces very large build files causes the linker to consume large"
+		ewarn "amounts of memory."
+		ewarn
 		ewarn "Please try removing -g{,gdb} before reporting a bug."
 		ewarn
 	fi
