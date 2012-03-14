@@ -1,0 +1,4 @@
+# Here you can specify options that are passed directyl to tgt daemon
+TGTD_OPTS=""
+
+# vim: ft=gentoo-conf-d

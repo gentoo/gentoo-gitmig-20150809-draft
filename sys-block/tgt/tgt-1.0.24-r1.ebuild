@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.24.ebuild,v 1.1 2012/02/04 16:54:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.24-r1.ebuild,v 1.1 2012/03/14 10:07:11 xarthisius Exp $
 
 EAPI=4
 
-inherit flag-o-matic linux-info
+inherit flag-o-matic linux-info toolchain-funcs
 
 MY_TREE="e039354"
 
@@ -26,19 +26,20 @@ DEPEND="dev-perl/config-general
 RDEPEND="${DEPEND}
 	sys-apps/sg3_utils"
 
-S="${WORKDIR}"/fujita-tgt-"${MY_TREE}"
+S=${WORKDIR}/fujita-tgt-${MY_TREE}
 
 pkg_setup() {
 	CONFIG_CHECK="~SCSI_TGT"
 	WARNING_SCSI_TGT="Your kernel needs CONFIG_SCSI_TGT"
 	linux-info_pkg_setup
+	tc-export CC
 }
 
 src_prepare() {
-	sed -i -e 's:\($(CC)\):\1 $(LDFLAGS):' usr/Makefile || die "sed failed"
+	sed -i -e 's:\($(CC)\) $^:\1 $(LDFLAGS) $^:' usr/Makefile || die
 
 	# make sure xml docs are generated before trying to install them
-	sed -i -e "s@install: @install: all @g" doc/Makefile || die
+	sed -i -e "s@install: @& all @g" doc/Makefile || die
 }
 
 src_compile() {
@@ -54,7 +55,8 @@ src_compile() {
 src_install() {
 	emake  install-programs install-scripts install-doc DESTDIR="${D}" \
 		docdir=/usr/share/doc/${PF}
-	doinitd "${FILESDIR}/tgtd"
+	newinitd "${FILESDIR}"/tgtd-${PV}.initd tgtd
+	newconfd "${FILESDIR}"/tgtd-${PV}.confd tgtd
 	dodir /etc/tgt
 	keepdir /etc/tgt
 }

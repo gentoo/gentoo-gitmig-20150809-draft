@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/tgt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.18 2012/02/04 16:54:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.19 2012/03/14 10:07:11 xarthisius Exp $
+
+*tgt-1.0.24-r1 (14 Mar 2012)
+
+  14 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> +files/tgtd-1.0.24.confd,
+  +files/tgtd-1.0.24.initd, +tgt-1.0.24-r1.ebuild, -tgt-1.0.24.ebuild:
+  Allow to pass options to daemon via confd file. Fixes 408107 bug by Christian
+  Bricart <christian@bricart.de> Improve sed to add LDFLAGS only where they're
+  needed, respect CC properly
 
 *tgt-1.0.24 (04 Feb 2012)
 
