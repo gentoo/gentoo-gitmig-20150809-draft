@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/upx-ucl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.22 2011/01/06 03:25:23 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.23 2012/03/14 04:43:07 patrick Exp $
+
+*upx-ucl-3.08 (14 Mar 2012)
+
+  14 Mar 2012; Patrick Lauer <patrick@gentoo.org> +upx-ucl-3.08.ebuild,
+  -upx-ucl-3.04.ebuild:
+  Bump
 
   06 Jan 2011; Mike Frysinger <vapier@gentoo.org> upx-ucl-3.07.ebuild:
   Block newer upx-bin package and tweak DEPEND.
