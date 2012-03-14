@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/apiextractor-0.10.10.ebuild,v 1.1 2012/01/15 11:18:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/apiextractor-0.10.10.ebuild,v 1.2 2012/03/14 13:45:07 pesa Exp $
 
 EAPI=4
 
@@ -15,15 +15,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug test"
 
-RDEPEND="
-	dev-libs/libxml2
-	dev-libs/libxslt
-	>=x11-libs/qt-core-4.7.0
-	>=x11-libs/qt-xmlpatterns-4.7.0"
+QT_PV="4.7.0:4"
 
+RDEPEND="
+	>=dev-libs/libxml2-2.6.32
+	>=dev-libs/libxslt-1.1.19
+	>=x11-libs/qt-core-${QT_PV}
+	>=x11-libs/qt-xmlpatterns-${QT_PV}
+"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	test? ( >=x11-libs/qt-test-4.7.0 )"
+	test? (
+		>=x11-libs/qt-gui-${QT_PV}
+		>=x11-libs/qt-test-${QT_PV}
+	)"
 
 DOCS=( AUTHORS ChangeLog )
 
