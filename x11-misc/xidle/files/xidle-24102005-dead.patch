@@ -1,5 +1,5 @@
---- xidle.c.orig	2005-10-24 16:42:09.000000000 +0200
-+++ xidle.c	2008-11-12 07:06:01.000000000 +0100
+--- a/xidle.c
++++ b/xidle.c
 @@ -87,10 +87,10 @@
  void	close_x(struct xinfo *);
  void	init_x(const char *, struct xinfo *, int, int);
