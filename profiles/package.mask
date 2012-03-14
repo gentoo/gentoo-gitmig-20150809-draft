@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13576 2012/03/14 00:56:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13577 2012/03/14 23:28:56 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -236,15 +236,6 @@ app-text/notecase-pro
 # Project was renamed to x11-wm/spectrwm
 # See bug 404315 for details and update installations
 x11-wm/scrotwm
-
-# Bernard Cafarelli <voyageur@gentoo.org> (14 Feb 2012)
-# Does not compile with new Objective-C runtimes
-# Dead upstreams (last releases in 2002, 2005 or 2006)
-# Removal in a month, bug #380433
-gnustep-libs/objcunit
-gnustep-apps/cynthiune
-gnustep-apps/gridlock
-gnustep-apps/talksoup
 
 # Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
 # Outdated, useless, hard to bump, without maintainer.
