@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-0.4.9_pre20111124.ebuild,v 1.2 2012/03/14 17:03:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-0.4.9_pre20111124-r1.ebuild,v 1.1 2012/03/14 17:04:48 slyfox Exp $
 
 EAPI=4
 
