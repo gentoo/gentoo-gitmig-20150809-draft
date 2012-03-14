@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.19 2012/03/06 09:24:22 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.20 2012/03/14 16:54:54 sera Exp $
+
+  14 Mar 2012; Ralph Sennhauser <sera@gentoo.org> icedtea-web-1.2.ebuild,
+  icedtea-web-1.2-r7.ebuild:
+  Use JAVA_PKG_WANT_BUILD_VM for selecting VM. Obsoletes handle migration code.
 
 *icedtea-web-1.2-r7 (06 Mar 2012)
 *icedtea-web-1.2 (06 Mar 2012)

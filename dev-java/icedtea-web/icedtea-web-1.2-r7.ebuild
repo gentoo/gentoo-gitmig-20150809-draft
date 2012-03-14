@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.2-r7.ebuild,v 1.1 2012/03/06 09:24:22 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.2-r7.ebuild,v 1.2 2012/03/14 16:54:54 sera Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="4"
@@ -26,28 +26,11 @@ DEPEND="${RDEPEND}
 			>=net-libs/xulrunner-1.9.1 ) )
 	test? (	>=dev-java/junit-4.8:4 )"
 
-# a bit of hack so the VM switching is triggered without causing dependency troubles
-JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.6"
-JAVA_PKG_WANT_SOURCE="1.6"
-JAVA_PKG_WANT_TARGET="1.6"
-
 pkg_setup() {
-	[[ "${MERGE_TYPE}" == "binary" ]] && return # bug 258423
+	JAVA_PKG_WANT_BUILD_VM="icedtea-7 icedtea7"
+	JAVA_PKG_WANT_SOURCE="1.6"
+	JAVA_PKG_WANT_TARGET="1.6"
 
-	# quite a hack since java-config does not provide a way for a package
-	# to limit supported VM's for building and their preferred order
-	if [[ -n "${JAVA_PKG_FORCE_VM}" ]]; then
-		einfo "Honoring user-set JAVA_PKG_FORCE_VM"
-	else
-		# migration logic
-		if [[ -L /usr/lib/jvm/icedtea${SLOT} ]]; then
-			JAVA_PKG_FORCE_VM="icedtea${SLOT}"
-		else
-			JAVA_PKG_FORCE_VM="icedtea-${SLOT}"
-		fi
-	fi
-
-	einfo "Forced vm ${JAVA_PKG_FORCE_VM}"
 	java-vm-2_pkg_setup
 	java-pkg-2_pkg_setup
 }
