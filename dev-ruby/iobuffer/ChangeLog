@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/iobuffer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.5 2012/01/13 07:54:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.6 2012/03/14 15:06:42 matsuu Exp $
+
+*iobuffer-1.1.2 (14 Mar 2012)
+
+  14 Mar 2012; MATSUU Takuto <matsuu@gentoo.org> +iobuffer-1.1.2.ebuild:
+  Version bumped. Clean up.
 
   13 Jan 2012; Hans de Graaff <graaff@gentoo.org> iobuffer-1.0.0.ebuild:
   Add ruby19.
