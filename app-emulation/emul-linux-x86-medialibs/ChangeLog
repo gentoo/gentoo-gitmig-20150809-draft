@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.56 2012/03/09 14:53:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.57 2012/03/14 09:51:28 ssuominen Exp $
+
+  14 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  emul-linux-x86-medialibs-20110928.ebuild,
+  emul-linux-x86-medialibs-20120127.ebuild:
+  Block old version of app-emulation/emul-linux-x86-soundlibs for file
+  collision with liboil-0.3.* wrt #408137 by Martin Mokrejš
 
   09 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   emul-linux-x86-medialibs-20120127.ebuild:

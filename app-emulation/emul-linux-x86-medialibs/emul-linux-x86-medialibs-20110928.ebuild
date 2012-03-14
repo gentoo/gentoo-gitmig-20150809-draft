@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20110928.ebuild,v 1.5 2011/10/16 12:10:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20110928.ebuild,v 1.6 2012/03/14 09:51:28 ssuominen Exp $
 
 EAPI="4"
 
@@ -12,7 +12,8 @@ KEYWORDS="-* amd64"
 DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-xlibs-${PV}
-	!<=app-emulation/emul-linux-x86-sdl-20081109"
+	!<=app-emulation/emul-linux-x86-sdl-20081109
+	!<=app-emulation/emul-linux-x86-soundlibs-20110101"
 PDEPEND="~app-emulation/emul-linux-x86-soundlibs-${PV}
 	~app-emulation/emul-linux-x86-sdl-${PV}"
 # sdl pdep should be dropped once bug #299324 is solved
