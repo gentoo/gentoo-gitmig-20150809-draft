@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-color-manager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.14 2012/03/07 23:04:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.15 2012/03/14 03:46:32 tetromino Exp $
+
+*gnome-color-manager-3.2.2-r2 (14 Mar 2012)
+
+  14 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-color-manager-3.2.2-r1.ebuild, +gnome-color-manager-3.2.2-r2.ebuild,
+  files/gnome-color-manager-3.2.2-argyll-prefix.patch:
+  Fix the argyll-dispcal patch so it works properly (bug #407319).
 
 *gnome-color-manager-3.2.2-r1 (07 Mar 2012)
 

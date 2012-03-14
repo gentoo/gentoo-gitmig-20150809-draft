@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.2.2-r1.ebuild,v 1.1 2012/03/07 23:04:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.2.2-r2.ebuild,v 1.1 2012/03/14 03:46:32 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -64,7 +64,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# argyllcms executables are prefixed with "argyll-" in Gentoo; bug #407319
+	# argyllcms executables are prefixed with "argyll-" in Gentoo; bug #407319,
+	# https://bugzilla.gnome.org/show_bug.cgi?id=672028
 	epatch "${FILESDIR}/${PN}-3.2.2-argyll-prefix.patch"
 
 	gnome2_src_prepare
