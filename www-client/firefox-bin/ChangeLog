@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.94 2012/03/04 20:00:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.95 2012/03/14 08:34:40 jdhore Exp $
+
+*firefox-bin-11.0 (14 Mar 2012)
+
+  14 Mar 2012; Jeff Horelick <jdhore@gentoo.org> +firefox-bin-11.0.ebuild:
+  Version bump.
 
   04 Mar 2012; Jeff Horelick <jdhore@gentoo.org> firefox-bin-10.0.2.ebuild:
   Add a -r pax-mark wrt bug 403689
