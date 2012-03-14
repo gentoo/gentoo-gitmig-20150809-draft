@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/vanessa-logger-0.0.6.ebuild,v 1.10 2009/09/23 16:57:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/vanessa-logger-0.0.10.ebuild,v 1.1 2012/03/14 03:33:02 patrick Exp $
 
 MY_PN="${PN/-/_}"
 MY_P="${MY_PN}-${PV}"
@@ -10,7 +10,7 @@ SRC_URI="http://www.vergenet.net/linux/vanessa/download/${MY_PN}/${PV}/${MY_P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ia64 ~ppc"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
