@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.8 2012/03/15 07:58:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.9 2012/03/15 08:39:44 ssuominen Exp $
 
 EAPI=4
 
@@ -75,7 +75,7 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
-	>=sys-apps/baselayout-1.12.5"
+	>=sys-apps/baselayout-2"
 
 if [[ ${PV} == "9999" ]]
 then
