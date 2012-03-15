@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.5.1,v 1.1 2012/02/29 20:16:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.5.1,v 1.2 2012/03/15 01:16:44 vapier Exp $
 
 # Format of /etc/env.d/gcc/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -651,9 +651,9 @@ for x in "$@" ; do
 			rcsfile="$RCSfile: gcc-config-1.5.1,v $"
 			rcsfile=${rcsfile#: }
 			rcsfile=${rcsfile%,v*}
-			cvsrev="$Revision: 1.1 $"
+			cvsrev="$Revision: 1.2 $"
 			cvsrev=${cvsrev#: }
-			cvsdate="$Date: 2012/02/29 20:16:56 $"
+			cvsdate="$Date: 2012/03/15 01:16:44 $"
 			cvsdate=${cvsdate#: }
 			echo "${rcsfile} (r${cvsrev% *} @ ${cvsdate% *})"
 			exit 0
@@ -731,7 +731,11 @@ if [[ ${DOIT} != "get_current_profile" ]] ; then
 	source_var GCC_VER "${GCC_ENV_D}/${CC_COMP}"
 
 	CC_COMP_VERSION=${GCC_VER:-$(chop_gcc_ver_spec ${CC_COMP})}
-	CC_COMP_TARGET=${CC_COMP%-${CC_COMP_VERSION}*}
+	CC_COMP_TARGET=$(show_var CTARGET "${GCC_ENV_D}/${CC_COMP}")
+	if [[ -z ${CC_COMP_TARGET} ]] ; then
+		# Native configs don't have CTARGET in there.
+		CC_COMP_TARGET=${CC_COMP%-${CC_COMP_VERSION}*}
+	fi
 
 	if [[ ! -d ${ROOT}/${GCC_LIB}/${CC_COMP_TARGET}/${CC_COMP_VERSION} ]]; then
 		CC_COMP_VERSION=${CC_COMP_VERSION%-*}

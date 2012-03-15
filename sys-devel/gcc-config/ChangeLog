@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.204 2012/03/06 14:14:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.205 2012/03/15 01:16:44 vapier Exp $
+
+*gcc-config-1.5.1-r1 (15 Mar 2012)
+
+  15 Mar 2012; Mike Frysinger <vapier@gentoo.org> files/gcc-config-1.5.1,
+  +gcc-config-1.5.1-r1.ebuild:
+  Use CTARGET from the env.d file by default to better work with custom
+  GCC_VER.
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> gcc-config-1.5-r2.ebuild:
   Marking gcc-config-1.5-r2 ppc for bug 406351
