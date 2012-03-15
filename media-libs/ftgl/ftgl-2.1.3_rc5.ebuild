@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.15 2011/05/20 09:24:18 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.16 2012/03/15 18:18:25 scarabeus Exp $
+
+EAPI=4
 
 inherit eutils flag-o-matic autotools
 
@@ -17,14 +18,17 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE=""
+IUSE="static-libs"
 
 DEPEND=">=media-libs/freetype-2.0.9
 	virtual/opengl
 	virtual/glu
 	media-libs/freeglut"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P2}
+
+DOCS="AUTHORS BUGS ChangeLog INSTALL NEWS README TODO docs/projects_using_ftgl.txt"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch \
@@ -35,12 +39,13 @@ src_prepare() {
 
 src_configure() {
 	strip-flags # ftgl is sensitive - bug #112820
-	econf
+	econf \
+		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	rm -rf "${D}"/usr/share/doc/ftgl
-	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README TODO \
-		docs/projects_using_ftgl.txt
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
