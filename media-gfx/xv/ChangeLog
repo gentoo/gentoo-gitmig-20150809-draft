@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.112 2011/10/23 16:29:53 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.113 2012/03/15 18:45:04 ssuominen Exp $
+
+  15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> xv-3.10a-r16.ebuild,
+  -files/xv.png:
+  Move xv.png to mirrors wrt #370905 by Matt Turner
 
   23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -xv-3.10a-r15.ebuild:
   old
