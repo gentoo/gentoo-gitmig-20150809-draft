@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2-r1.ebuild,v 1.1 2011/03/15 21:27:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2-r1.ebuild,v 1.2 2012/03/15 18:28:34 bicatali Exp $
 
 EAPI=4
 inherit eutils elisp-common autotools
@@ -20,7 +20,7 @@ RDEPEND="sci-libs/gsl
 	sys-libs/zlib
 	dev-libs/libxml2:2
 	emacs? ( virtual/emacs )
-	gtk? ( x11-libs/gtk+:2 gnome-base/libglade:2.0 )
+	gtk? ( x11-libs/gtk+:2 gnome-base/libglade:2.0 gnome-extra/yelp )
 	ncurses? ( sys-libs/ncurses )
 	plotutils? ( media-libs/plotutils )
 	postgres? ( dev-db/postgresql-server )"
