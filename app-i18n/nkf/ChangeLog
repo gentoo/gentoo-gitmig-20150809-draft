@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/nkf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.51 2011/11/20 15:15:34 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.52 2012/03/15 01:47:50 naota Exp $
+
+*nkf-2.1.2-r1 (15 Mar 2012)
+
+  15 Mar 2012; Naohiro Aota <naota@gentoo.org> +nkf-2.1.2-r1.ebuild:
+  Change nkf-python upstream address. Update LICENSE. Bug #405235
 
 *nkf-2.1.2 (20 Nov 2011)
 
