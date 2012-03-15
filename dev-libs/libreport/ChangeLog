@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libreport
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.7 2012/03/13 12:08:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.8 2012/03/15 18:09:16 phajdan.jr Exp $
+
+  15 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libreport-2.0.9.ebuild:
+  x86 stable wrt bug #407011
 
   13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> libreport-2.0.9.ebuild:
   Stable for amd64, wrt bug #407011
