@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.4 2012/01/15 14:07:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.5 2012/03/15 06:37:01 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ SRC_URI="http://launchpad.net/${PN}/${MY_MAJORV}/${PV}/+download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="libnotify mpd"
+IUSE="mpd"
 
 # This ebuild is far from perfect, it does a lot of automagic detection
 RDEPEND="
@@ -29,8 +29,8 @@ RDEPEND="
 	>=x11-libs/pango-1.6
 	>=dev-python/gconf-python-2.14
 	>=dev-python/gnome-applets-python-2.14
+	>=dev-python/notify-python-0.1.1-r2 
 	>=dev-python/pygtk-2.16:2
-	libnotify? ( >=dev-python/notify-python-0.1.1-r2 )
 	mpd? ( >=dev-python/python-mpd-0.2.1 )
 	!gnome-extra/music-applet
 "
