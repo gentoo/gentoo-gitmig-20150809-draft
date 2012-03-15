@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xmonad-contrib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.14 2012/03/06 08:05:28 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.15 2012/03/15 08:54:14 gienah Exp $
+
+  15 Mar 2012; Mark Wright <gienah@gentoo.org> xmonad-contrib-0.10.ebuild:
+  added dev-haskell/random depend (reported by styx)
 
   06 Mar 2012; Mark Wright <gienah@gentoo.org> xmonad-contrib-0.10.ebuild:
   Add ~ppc64 keywords to xmonad-contrib 0.10, thanks to EM3RY for testing.
