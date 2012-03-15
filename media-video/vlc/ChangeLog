@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.784 2012/02/23 10:05:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.785 2012/03/15 08:57:48 aballier Exp $
+
+  15 Mar 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.0.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  depend on ncurses[unicode] by Dylan in bug #408223
 
   23 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.0.ebuild,
   vlc-2.0.9999.ebuild, vlc-9999.ebuild, metadata.xml:
