@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.9 2012/03/15 08:39:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.10 2012/03/15 08:48:05 ssuominen Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ fi
 SRC_URI="${SRC_URI} mirror://gentoo/${scriptname}.tar.bz2"
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html http://git.kernel.org/?p=linux/hotplug/udev.git;a=summary"
 
 LICENSE="GPL-2"
 SLOT="0"
