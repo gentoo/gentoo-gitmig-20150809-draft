@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.32 2012/03/12 19:22:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.33 2012/03/15 02:14:53 jer Exp $
+
+  15 Mar 2012; Jeroen Roovers <jer@gentoo.org> debhelper-9.20120115.ebuild:
+  Stable for HPPA (bug #368627).
 
   12 Mar 2012; Markus Meier <maekke@gentoo.org> debhelper-9.20120115.ebuild:
   arm stable, bug #368627
