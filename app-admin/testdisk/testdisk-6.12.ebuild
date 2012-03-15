@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.5 2012/01/05 22:17:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.6 2012/03/15 21:32:51 ssuominen Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="static reiserfs ntfs jpeg"
 # you MUST use progsreiserfs-0.3.1_rc8 (the last version ever released).
 DEPEND=">=sys-libs/ncurses-5.2
 		jpeg? ( virtual/jpeg )
-	  	ntfs? ( || ( >=sys-fs/ntfsprogs-2.0.0 sys-fs/ntfs3g ) )
+	  	ntfs? ( sys-fs/ntfs3g )
 	  	reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )
 	  	>=sys-fs/e2fsprogs-1.35
 		sys-libs/zlib"
