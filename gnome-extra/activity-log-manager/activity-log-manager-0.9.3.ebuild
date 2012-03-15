@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/activity-log-manager-0.9.3.ebuild,v 1.1 2012/03/13 13:06:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/activity-log-manager-0.9.3.ebuild,v 1.2 2012/03/15 06:53:46 jlec Exp $
 
 EAPI=4
 
@@ -18,10 +18,14 @@ IUSE=""
 VALASLOT="0.10"
 
 RDEPEND="
-	gnome-extra/zeitgeist
-	x11-libs/gtk+:3
+	dev-libs/libzeitgeist
 	dev-libs/libgee:0
-	dev-libs/glib:2"
+	dev-libs/glib:2
+	gnome-extra/zeitgeist
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf
+	x11-libs/gtk+:3
+	x11-libs/pango"
 DEPEND="${RDEPEND}
 	dev-lang/vala:${VALASLOT}
 	dev-util/intltool
