@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/imageworsener-0.9.8.ebuild,v 1.1 2012/02/26 17:27:18 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/imageworsener-0.9.8.ebuild,v 1.2 2012/03/15 20:31:51 sping Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils autotools
 
 MY_P="${PN}-src-${PV}"
 MY_PN="imagew"
@@ -25,6 +25,11 @@ DEPEND="png? ( media-libs/libpng:0 )
 RDEPEND="${DEPEND}"
 
 REQUIRED_USE="test? ( jpeg png webp zlib )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libm.patch
+	eautoreconf
+}
 
 src_configure() {
 	local switch=

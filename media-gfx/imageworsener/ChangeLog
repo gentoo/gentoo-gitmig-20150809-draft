@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imageworsener
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.15 2012/03/04 12:20:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.16 2012/03/15 20:31:51 sping Exp $
+
+  15 Mar 2012; Sebastian Pipping <sping@gentoo.org> imageworsener-0.9.8.ebuild,
+  +files/imageworsener-0.9.8-libm.patch:
+  Fix underlinking reported by Piotr Szymaniak (bug #408303)
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #206112
