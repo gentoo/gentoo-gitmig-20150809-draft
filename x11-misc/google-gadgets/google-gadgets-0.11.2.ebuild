@@ -1,10 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.12 2011/10/04 13:48:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.13 2012/03/15 02:47:00 ssuominen Exp $
 
-EAPI=2
-
-inherit base autotools multilib eutils fdo-mime
+EAPI=4
+inherit autotools eutils fdo-mime multilib
 
 MY_PN=${PN}-for-linux
 MY_P=${MY_PN}-${PV}
@@ -16,7 +15,7 @@ SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 x86"
-IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification webkit +xulrunner"
+IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification webkit"
 
 # Weird things happen when we start mix-n-matching, so for the time being
 # I've just locked the deps to the versions I had as of Summer 2008. With any
@@ -53,15 +52,16 @@ RDEPEND="
 	soup? ( >=net-libs/libsoup-2.26:2.4 )
 	startup-notification? ( x11-libs/startup-notification )
 	webkit? ( >=net-libs/webkit-gtk-1.0.3:2 )
-	xulrunner? ( =net-libs/xulrunner-1.9*:1.9 )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20
 "
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 RESTRICT="test"
+
+DOCS="ChangeLog README"
 
 pkg_setup() {
 	# If a non-google, non-qt4 and non-gtk host system for google-gadgets is ever developed,
@@ -93,7 +93,8 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="--disable-dependency-tracking \
+	econf \
+		--disable-dependency-tracking \
 		--disable-update-desktop-database \
 		--disable-update-mime-database \
 		--disable-werror \
@@ -120,21 +121,9 @@ src_configure() {
 		$(use_enable qt4 qt-system-framework) \
 		$(use_enable qt4 qtwebkit-browser-element) \
 		$(use_enable qt4 qt-xml-http-request) \
-		$(use_enable qt4 qt-script-runtime)"
-	if use xulrunner; then
-		myconf="${myconf} \
-			$(use_enable gtk gtkmoz-browser-element) \
-			--with-gtkmozembed=libxul \
-			--enable-smjs-script-runtime \
-			--with-smjs-cppflags=-I/usr/include/nspr \
-			--with-smjs-libdir=/usr/$(get_libdir)/xulrunner-1.9 \
-			--with-smjs-incdir=/usr/include/xulrunner-1.9/unstable"
-	else
-		myconf="${myconf} --disable-gtkmoz-browser-element \
-			--disable-smjs-script-runtime"
-	fi
-
-	econf ${myconf}
+		$(use_enable qt4 qt-script-runtime) \
+		--disable-gtkmoz-browser-element \
+		--disable-smjs-script-runtime
 }
 
 src_test() {
@@ -143,12 +132,12 @@ src_test() {
 	make check &> "${WORKDIR}"/check
 }
 
-src_install() {
-	base_src_install
-	dodoc ChangeLog README
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
 
-pkg_postinst() {
+pkg_postrm() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
