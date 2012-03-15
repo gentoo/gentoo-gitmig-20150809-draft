@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20120127.ebuild,v 1.2 2012/03/09 14:49:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20120127.ebuild,v 1.3 2012/03/15 04:25:43 floppym Exp $
 
 EAPI="4"
 
@@ -16,6 +16,8 @@ DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2" # bug 168507
 
 QA_DT_HASH="usr/lib32/.*"
+
+PYTHON_UPDATER_IGNORE="1"
 
 src_prepare() {
 	export ALLOWED="(${S}/lib32/security/pam_filter/upperLOWER|${S}/etc/env.d|${S}/lib32/security/pam_ldap.so)"
