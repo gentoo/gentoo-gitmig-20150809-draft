@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.99 2012/03/15 07:26:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-18.0.1025.58.ebuild,v 1.1 2012/03/15 07:26:02 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -10,15 +10,15 @@ CHROMIUM_LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he
 	sv sw ta te th tr uk vi zh_CN zh_TW"
 
 inherit chromium eutils flag-o-matic multilib \
-	pax-utils portability python subversion toolchain-funcs versionator virtualx
+	pax-utils portability python toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-ESVN_REPO_URI="http://src.chromium.org/svn/trunk/src"
+SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
 
 LICENSE="BSD"
-SLOT="live"
-KEYWORDS=""
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="bindist cups custom-cflags gnome gnome-keyring kerberos pulseaudio"
 
 RDEPEND="app-arch/bzip2
@@ -26,7 +26,7 @@ RDEPEND="app-arch/bzip2
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.9.13
+	>=dev-lang/v8-3.8.9.4
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
@@ -38,7 +38,7 @@ RDEPEND="app-arch/bzip2
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/flac
-	>=media-libs/libjpeg-turbo-1.2.0-r1
+	virtual/jpeg
 	media-libs/libpng
 	>=media-libs/libwebp-0.1.3
 	media-libs/speex
@@ -54,76 +54,17 @@ DEPEND="${RDEPEND}
 	>=dev-lang/nacl-toolchain-newlib-0_p7311
 	dev-lang/perl
 	dev-lang/yasm
-	dev-python/ply
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
-	test? (
-		dev-python/pyftpdlib
-	)"
+	test? ( dev-python/pyftpdlib )"
 RDEPEND+="
 	!=www-client/chromium-9999
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
-
-gclient_config() {
-	einfo "gclient config -->"
-	# Allow the user to keep their config if they know what they are doing.
-	if ! grep -q KEEP .gclient; then
-		cp -f "${FILESDIR}/dot-gclient" .gclient || die
-	fi
-	cat .gclient || die
-}
-
-gclient_sync() {
-	einfo "gclient sync -->"
-	[[ -n "${ESVN_UMASK}" ]] && eumask_push "${ESVN_UMASK}"
-	# Only use a single job to prevent hangs.
-	"${WORKDIR}/depot_tools/gclient" sync --nohooks --jobs=1 \
-		--delete_unversioned_trees || die
-	[[ -n "${ESVN_UMASK}" ]] && eumask_pop
-}
-
-gclient_runhooks() {
-	# Run all hooks except gyp_chromium.
-	einfo "gclient runhooks -->"
-	cp src/DEPS src/DEPS.orig || die
-	sed -e 's:"python", "src/build/gyp_chromium":"true":' -i src/DEPS || die
-	"${WORKDIR}/depot_tools/gclient" runhooks
-	local ret=$?
-	mv src/DEPS.orig src/DEPS || die
-	[[ ${ret} -eq 0 ]] || die "gclient runhooks failed"
-}
-
-src_unpack() {
-	# First grab depot_tools.
-	ESVN_REVISION= subversion_fetch "http://src.chromium.org/svn/trunk/tools/depot_tools"
-	mv "${S}" "${WORKDIR}"/depot_tools || die
-
-	cd "${ESVN_STORE_DIR}/${PN}" || die
-
-	gclient_config
-	gclient_sync
-
-	# Disabled so that we do not download nacl toolchain.
-	#gclient_runhooks
-	# Remove any lingering nacl toolchain files.
-	rm -rf src/native_client/toolchain/linux_x86_newlib
-
-	subversion_wc_info
-
-	mkdir -p "${S}" || die
-	einfo "Copying source to ${S}"
-	rsync -rlpgo --exclude=".svn/" src/ "${S}" || die
-
-	# Display correct svn revision in about box, and log new version.
-	echo "${ESVN_WC_REVISION}" > "${S}"/build/LASTCHANGE.in || die
-	. src/chrome/VERSION
-	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH} (Developer Build ${ESVN_WC_REVISION})"
-}
 
 if ! has chromium-pkg_die ${EBUILD_DEATH_HOOKS}; then
 	EBUILD_DEATH_HOOKS+=" chromium_pkg_die";
@@ -162,12 +103,27 @@ src_prepare() {
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
 		chrome/common/zip*.cc || die
 
+	# Revert WebKit changeset responsible for Gentoo bug #393471.
+	epatch "${FILESDIR}/${PN}-revert-jpeg-swizzle-r2.patch"
+
+	# Prevent gyp failures caused by target type 'settings' instead of 'none'.
+	epatch "${FILESDIR}/${PN}-gyp-settings-r0.patch"
+
+	# Prevent compilation failures caused by missing zlib #include
+	# and dependency.
+	epatch "${FILESDIR}/${PN}-webkit-zlib-r0.patch"
+
+	# Fix crashes on illegal instructions, bug #401537.
+	epatch "${FILESDIR}/${PN}-media-no-sse-r0.patch"
+
+	# Backport fix for bug #395773.
+	epatch "${FILESDIR}/${PN}-glib-r0.patch"
+
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
-		\! -path 'third_party/adobe/*' \
 		\! -path 'third_party/angle/*' \
 		\! -path 'third_party/cacheinvalidation/*' \
 		\! -path 'third_party/cld/*' \
@@ -179,7 +135,6 @@ src_prepare() {
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jsoncpp/*' \
-		\! -path 'third_party/json_minify/*' \
 		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/leveldb/*' \
@@ -274,11 +229,6 @@ src_configure() {
 	myconf+="
 		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
 		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
-
-	# Never use bundled gold binary. Disable gold linker flags for now.
-	myconf+="
-		-Dlinux_use_gold_binary=0
-		-Dlinux_use_gold_flags=0"
 
 	# if host-is-pax; then
 	#	# Prevent the build from failing (bug #301880). The performance
