@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.3.ebuild,v 1.1 2012/02/09 19:41:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.3.ebuild,v 1.2 2012/03/15 22:09:57 alexxy Exp $
 
 EAPI=4
 
@@ -30,6 +30,7 @@ DEPEND="
 	>=sys-apps/hwloc-1.1.1-r1
 	"
 RDEPEND="${DEPEND}
+	dev-libs/libcgroup
 	maui? ( sys-cluster/maui[slurm] )
 	"
 
