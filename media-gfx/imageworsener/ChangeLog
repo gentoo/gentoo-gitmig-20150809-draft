@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imageworsener
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.16 2012/03/15 20:31:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.17 2012/03/15 20:54:40 sping Exp $
+
+  15 Mar 2012; Sebastian Pipping <sping@gentoo.org>
+  files/imageworsener-0.9.8-libm.patch:
+  Use _LIBADD rather than _LDFLAGS as advised by Samuli (bug #408303, comment
+  4)
 
   15 Mar 2012; Sebastian Pipping <sping@gentoo.org> imageworsener-0.9.8.ebuild,
   +files/imageworsener-0.9.8-libm.patch:
