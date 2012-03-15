@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6311 2012/03/15 08:00:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6312 2012/03/15 12:44:24 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  hardened/linux/amd64/use.mask, hardened/linux/x86/use.mask:
+  Vdpau actually works with the mesa implementation too. Bug#408267.
 
   15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   targets/desktop/package.use:
