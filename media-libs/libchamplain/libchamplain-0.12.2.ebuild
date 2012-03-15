@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.0-r1.ebuild,v 1.1 2011/11/02 21:26:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.2.ebuild,v 1.1 2012/03/15 18:50:21 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -32,14 +32,14 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
-	vala? ( dev-lang/vala:0.14[vapigen] )"
+	vala? ( >=dev-lang/vala-0.14.2-r1:0.14[vapigen] )"
 # segfaults with vala:0.12
+# vala-0.14.2-r1 required for bug #402013
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	# Vala demos are only built, so just disable them
 	G2CONF="${G2CONF}
-		--disable-maintainer-mode
 		--disable-static
 		--disable-maemo
 		--disable-vala-demos
@@ -58,11 +58,7 @@ src_prepare() {
 	sed -e "s/^DOC_MODULE.*/DOC_MODULE = ${PN}-gtk-${SLOT}/" \
 		-i docs/reference-gtk/Makefile.{am,in} || die "sed (2) failed"
 	mv "${S}"/docs/reference/${PN}{,-${SLOT}}-docs.sgml || die "mv (1) failed"
-	mv "${S}"/docs/reference-gtk/${PN}-gtk{,-${SLOT}}-docs.sgml || die "mv (1) failed"
-
-	# Upstream patch from master branch to fix scale redrawing issues;
-	# not in 0.12 branch yet.
-	epatch "${FILESDIR}/${PN}-0.12.0-redrawing.patch"
+	mv "${S}"/docs/reference-gtk/${PN}-gtk{,-${SLOT}}-docs.sgml || die "mv (2) failed"
 
 	gnome2_src_prepare
 }
