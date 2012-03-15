@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.1.ebuild,v 1.1 2012/02/02 22:16:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.1.ebuild,v 1.2 2012/03/15 21:04:59 pesa Exp $
 
-EAPI="4"
+EAPI=4
+
 LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
 
 inherit multilib eutils flag-o-matic qt4-r2
@@ -21,16 +22,17 @@ QTC_PLUGINS=(bazaar cmake:cmakeprojectmanager cvs fakevim
 	git madde mercurial perforce subversion valgrind)
 IUSE="+botan-bundled debug doc examples ${QTC_PLUGINS[@]%:*}"
 
-QTVER="4.7.4:4"
+QT_PV="4.7.4:4"
+
 CDEPEND="
-	>=x11-libs/qt-core-${QTVER}[private-headers(+)]
-	>=x11-libs/qt-declarative-${QTVER}[private-headers(+)]
-	>=x11-libs/qt-gui-${QTVER}[private-headers(+)]
-	>=x11-libs/qt-script-${QTVER}[private-headers(+)]
-	>=x11-libs/qt-sql-${QTVER}
-	>=x11-libs/qt-svg-${QTVER}
-	debug? ( >=x11-libs/qt-test-${QTVER} )
-	>=x11-libs/qt-assistant-${QTVER}[doc?]
+	>=x11-libs/qt-assistant-${QT_PV}[doc?]
+	>=x11-libs/qt-core-${QT_PV}[private-headers(+)]
+	>=x11-libs/qt-declarative-${QT_PV}[private-headers(+)]
+	>=x11-libs/qt-gui-${QT_PV}[private-headers(+)]
+	>=x11-libs/qt-script-${QT_PV}[private-headers(+)]
+	>=x11-libs/qt-sql-${QT_PV}
+	>=x11-libs/qt-svg-${QT_PV}
+	debug? ( >=x11-libs/qt-test-${QT_PV} )
 	!botan-bundled? ( =dev-libs/botan-1.8* )
 "
 DEPEND="${CDEPEND}
@@ -38,7 +40,7 @@ DEPEND="${CDEPEND}
 "
 RDEPEND="${CDEPEND}
 	sys-devel/gdb[python]
-	examples? ( >=x11-libs/qt-demo-${QTVER} )
+	examples? ( >=x11-libs/qt-demo-${QT_PV} )
 "
 PDEPEND="
 	bazaar? ( dev-vcs/bzr )
@@ -65,11 +67,11 @@ src_prepare() {
 	done
 
 	if use perforce; then
-		ewarn
+		echo
 		ewarn "You have enabled the perforce plugin."
 		ewarn "In order to use it, you need to manually download the perforce client from"
 		ewarn "  http://www.perforce.com/perforce/downloads/index.html"
-		ewarn
+		echo
 	fi
 
 	# fix translations
@@ -78,8 +80,7 @@ src_prepare() {
 
 	if ! use botan-bundled; then
 		# identify system botan and pkg-config file
-		local botan_version=$(best_version dev-libs/botan | cut -d '-' -f3 | \
-			cut -d '.' -f1,2)
+		local botan_version=$(best_version dev-libs/botan | cut -d '-' -f3 | cut -d '.' -f1,2)
 		local lib_botan=$(pkg-config --libs botan-${botan_version})
 		einfo "Major version of system's botan library to be used: ${botan_version}"
 
@@ -112,21 +113,23 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install
+	emake INSTALL_ROOT="${ED}usr" install
 
+	# Install documentation
 	if use doc; then
-		emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install_docs
+		insinto /usr/share/doc/${PF}
+		doins share/doc/qtcreator/qtcreator{,-dev}.qch
 	fi
 
 	# Install icon & desktop file
-	doicon src/plugins/coreplugin/images/logo/128/qtcreator.png || die
-	make_desktop_entry qtcreator 'Qt Creator' qtcreator 'Qt;Development;IDE' || die
+	doicon src/plugins/coreplugin/images/logo/128/qtcreator.png
+	make_desktop_entry qtcreator 'Qt Creator' qtcreator 'Qt;Development;IDE'
 
 	# Remove unneeded translations
 	local lang
 	for lang in ${LANGS}; do
 		if ! has ${lang} ${LINGUAS}; then
-			rm "${D}"/usr/share/qtcreator/translations/qtcreator_${lang}.qm \
+			rm "${ED}"usr/share/qtcreator/translations/qtcreator_${lang}.qm \
 				|| eqawarn "failed to remove ${lang} translation"
 		fi
 	done
