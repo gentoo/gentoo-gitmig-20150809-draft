@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.111 2012/03/13 06:55:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.112 2012/03/15 12:28:54 ago Exp $
+
+  15 Mar 2012; Agostino Sarubbo <ago@gentoo.org> qemu-kvm-1.0-r3.ebuild:
+  Stable for amd64, wrt bug #373997
 
   13 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
   -files/qemu-kvm-9999-fix-nonkvm-arches.patch, qemu-kvm-9999.ebuild:
