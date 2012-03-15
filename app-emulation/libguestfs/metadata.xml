@@ -16,5 +16,8 @@ modifying virtual machine (VM) disk images</longdescription>
 	<flag name="fuse">Enable image mount support via fuse</flag>
 	<flag name="javadoc">Install java docs</flag>
 	<flag name="haskell">Install GHC binding</flag>
+	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for introspection</flag>
+	<flag name="erlang">Install Erlang bindings</flag>
+	<flag name="systemtap">Use <pkg>dev-util/systemtap</pkg> to trace programs</flag>
 </use>
 </pkgmetadata>

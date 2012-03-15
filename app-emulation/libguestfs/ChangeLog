@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.5 2012/02/05 01:35:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.6 2012/03/15 11:21:12 maksbotan Exp $
+
+*libguestfs-1.17.14 (15 Mar 2012)
+
+  15 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> +libguestfs-1.17.14.ebuild,
+  metadata.xml:
+  Bump to 1.17.14, thanks to slepnoga. Bug #408045
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> libguestfs-1.8.16.ebuild:
   Inherit multilib.
