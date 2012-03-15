@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.81 2012/03/14 22:18:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.82 2012/03/15 10:02:24 chithanh Exp $
+
+  15 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.10-r2.ebuild:
+  Move dependencies for nsplugin building to RDEPEND, bug #408259.
 
 *gnash-0.8.10-r2 (14 Mar 2012)
 

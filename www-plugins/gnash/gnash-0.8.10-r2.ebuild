@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r2.ebuild,v 1.1 2012/03/14 22:18:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r2.ebuild,v 1.2 2012/03/15 10:02:24 chithanh Exp $
 
 EAPI=4
 CMAKE_REQUIRED="never"
@@ -90,12 +90,6 @@ RDEPEND=">=dev-libs/boost-1.41.0
 	openvg? (
 		media-libs/mesa[openvg]
 	)
-	nsplugin? (
-		|| (
-			net-misc/npapi-sdk
-			>=net-libs/xulrunner-1.9.2:1.9
-		)
-	)
 	sdl? ( media-libs/libsdl[X] )
 	sdl-sound? ( media-libs/libsdl )
 	media-libs/speex[ogg]
@@ -112,6 +106,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )
 	gnome? ( app-text/rarian )
+	nsplugin? (
+		|| (
+			net-misc/npapi-sdk
+			>=net-libs/xulrunner-1.9.2:1.9
+		)
+	)
 	test? ( dev-util/dejagnu )"
 # Tests hang with sandbox, bug #321017
 RESTRICT="test"
