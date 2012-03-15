@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/npapi-vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.5 2012/02/23 10:18:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.6 2012/03/15 18:35:24 ssuominen Exp $
+
+  15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> npapi-vlc-2.0.0.ebuild,
+  npapi-vlc-9999.ebuild:
+  Move npapi-sdk from RDEPEND to DEPEND since it's only headers wrt #408257
 
 *npapi-vlc-2.0.0 (23 Feb 2012)
 
