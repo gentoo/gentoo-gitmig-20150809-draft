@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/jay-1.1.1-r2.ebuild,v 1.4 2009/10/25 21:26:13 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/jay-1.1.1-r2.ebuild,v 1.5 2012/03/15 17:27:18 sera Exp $
 
 EAPI="2"
 
@@ -25,6 +25,7 @@ RDEPEND="
 DEPEND="
 	${COMMON_DEPEND}
 	java? ( >=virtual/jdk-1.4 )
+	app-arch/unzip
 	"
 
 S="${WORKDIR}/${PN}"
