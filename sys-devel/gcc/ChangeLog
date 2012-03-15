@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.864 2012/03/10 16:28:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.865 2012/03/15 20:21:44 vapier Exp $
+
+  15 Mar 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.6.0.ebuild,
+  gcc-4.6.1-r1.ebuild, gcc-4.6.2.ebuild:
+  Drop gcc-config dep now that the toolchain.eclass forces it.
 
   10 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcc-4.4.6-r1.ebuild:
   x86 stable wrt bug #405849
