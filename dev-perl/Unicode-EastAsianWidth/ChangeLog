@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Unicode-EastAsianWidth
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.1 2012/03/15 18:58:55 ssuominen Exp $
+
+*Unicode-EastAsianWidth-1.30 (15 Mar 2012)
+
+  15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +Unicode-EastAsianWidth-1.30.ebuild:
+  Initial commit wrt #408125. This will be used by app-text/texi2html.
+
