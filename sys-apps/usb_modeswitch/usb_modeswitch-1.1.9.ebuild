@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.1.9.ebuild,v 1.3 2011/10/04 21:31:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.1.9.ebuild,v 1.4 2012/03/15 07:07:08 ssuominen Exp $
 
-EAPI="4"
-inherit multilib toolchain-funcs
+EAPI=4
+inherit toolchain-funcs
 
-MY_PN="${PN/_/-}"
-MY_P="${MY_PN}-${PV}"
-DATA_VER="20110805"
+MY_PN=${PN/_/-}
+MY_P=${MY_PN}-${PV}
+DATA_VER=20110805
 
 DESCRIPTION="USB_ModeSwitch is a tool for controlling 'flip flop' (multiple devices) USB gear like UMTS sticks"
 HOMEPAGE="http://www.draisberghof.de/usb_modeswitch/"
@@ -23,10 +23,10 @@ DEPEND="virtual/libusb:0"
 RDEPEND="${DEPEND}
 	dev-lang/tcl" # usb_modeswitch script is tcl
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	sed -i -e 's/-s //' Makefile || die 'sed failed.'
+	sed -i -e 's/-s //' Makefile || die
 }
 
 src_compile() {
@@ -34,7 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	local udevdir="${D}/$(get_libdir)/udev"
+	local udevdir="${D}/lib/udev"
 	emake DESTDIR="${D}" UDEVDIR="${udevdir}" install
 
 	cd ../"${MY_PN}-data-${DATA_VER}"
