@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/engauge
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.7 2010/03/22 02:08:33 yngwin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.8 2012/03/15 15:53:26 calchan Exp $
+
+  15 Mar 2012; Denis Dupeyron <calchan@gentoo.org> engauge-4.1-r1.ebuild:
+  Add dependancy to x11-libs/libXft. Thanks to Piotr Szymaniak (bug #408317).
 
   22 Mar 2010; Ben de Groot <yngwin@gentoo.org> -engauge-4.1.ebuild:
   Remove qt-3 and revdeps, bug #283429 (tracker) and #301746 (engauge)
