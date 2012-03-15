@@ -1,19 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.3 2012/03/15 12:55:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.4 2012/03/15 15:35:46 ssuominen Exp $
 
-EAPI="3"
-
+EAPI=4
 inherit flag-o-matic
 
 DESCRIPTION="Library for Bible reading software."
 HOMEPAGE="http://www.crosswire.org/sword/"
-SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/source/v1.6/${P}.tar.gz"
-LICENSE="GPL-2"
+SRC_URI="http://www.crosswire.org/ftpmirror/pub/${PN}/source/v${PV%.*}/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd ~ppc-macos"
-IUSE="curl debug doc icu"
+IUSE="curl debug doc icu static-libs"
 
 RDEPEND="sys-libs/zlib
 	curl? ( net-misc/curl )
@@ -21,43 +20,55 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+DOCS="AUTHORS CODINGSTYLE ChangeLog README"
+
 src_prepare() {
+	sed -i \
+		-e '/FLAGS/s:-g3::' -e '/FLAGS/s:-O0::' \
+		-e '/FLAGS/s:-O2::' -e '/FLAGS/s:-O3::' \
+		configure || die
+
+	sed -i -e '/FLAGS/s:-Werror::' configure || die #408289
 	sed -i -e '/^#inc.*curl.*types/d' src/mgr/curl*.cpp || die #378055
 
-	cat > "${T}"/sword.conf <<- _EOF
-		[Install]
-		DataPath=${EPREFIX}/usr/share/sword/
-	_EOF
+	cat <<-EOF > "${T}"/${PN}.conf
+	[Install]
+	DataPath=${EPREFIX}/usr/share/${PN}/
+	EOF
 }
 
 src_configure() {
+	# TODO: Why is this here and can we remove it?
 	strip-flags
-	econf --with-zlib \
-		--with-conf \
-		$(use_with curl) \
+
+	econf \
+		$(use_enable static-libs static) \
 		$(use_enable debug) \
-		$(use_with icu) || die "configure failed"
+		--with-zlib \
+		$(use_with icu) \
+		--with-conf \
+		$(use_with curl)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS CODINGSTYLE ChangeLog README
-	if use doc ;then
+	default
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
+
+	if use doc; then
 		rm -rf examples/.cvsignore
 		rm -rf examples/cmdline/.cvsignore
 		rm -rf examples/cmdline/.deps
-		cp -R samples examples "${ED}/usr/share/doc/${PF}/"
+		cp -R samples examples "${ED}"/usr/share/doc/${PF}/
 	fi
-	# global configuration file
+
 	insinto /etc
-	doins "${T}/sword.conf"
+	doins "${T}"/${PN}.conf
 }
 
 pkg_postinst() {
-	echo
 	elog "Check out http://www.crosswire.org/sword/modules/"
 	elog "to download modules that you would like to use with SWORD."
 	elog "Follow module installation instructions found on"
-	elog "the web or in ${EPREFIX}/usr/share/doc/${PF}/"
-	echo
+	elog "the web or in ${EROOT}/usr/share/doc/${PF}/"
 }
