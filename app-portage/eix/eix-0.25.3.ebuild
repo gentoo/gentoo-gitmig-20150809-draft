@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.25.3.ebuild,v 1.1 2012/03/14 14:45:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.25.3.ebuild,v 1.2 2012/03/15 03:46:50 darkside Exp $
 
 EAPI=4
 
@@ -21,6 +21,13 @@ RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	nls? ( sys-devel/gettext )"
+
+pkg_setup() {
+	if has_version "<${CATEGORY}/${PN}-0.25.3"; then
+	    local eixcache="${EROOT}"/var/cache/${PN}
+	    [[ -f ${eixcache} ]] && rm -f "${eixcache}"
+	fi
+}
 
 src_configure() {
 	econf $(use_with sqlite) $(use_with doc extra-doc) \
@@ -50,5 +57,5 @@ pkg_postinst() {
 	# merging changes this owner/group back to root.
 	use prefix || chown portage:portage "${EROOT}var/cache/${PN}"
 	local obs="${EROOT}var/cache/eix.previous"
-	! test -f "${obs}" || ewarn "Found obsolete ${obs}"
+	! test -f "${obs}" || ewarn "Found obsolete ${obs}, please remove it"
 }
