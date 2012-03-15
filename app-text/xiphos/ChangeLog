@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xiphos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.10 2012/03/14 19:18:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.11 2012/03/15 15:57:33 ssuominen Exp $
+
+  15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> xiphos-3.1.5.ebuild:
+  GtkHtml is required even when building with USE="webkit" wrt #348057, Comment
+  #54 by "Derk W te Bokkel"
 
 *xiphos-3.1.5 (14 Mar 2012)
 

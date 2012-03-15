@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.1.5.ebuild,v 1.3 2012/03/14 19:34:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.1.5.ebuild,v 1.4 2012/03/15 15:57:33 ssuominen Exp $
 
 # TODO: waf-utils.eclass ?
 
@@ -20,10 +20,10 @@ RDEPEND=">=app-text/sword-1.6.1
 	>=dev-libs/glib-2
 	dev-libs/libxml2
 	gnome-base/gconf
+	gnome-extra/gtkhtml:4.0
 	>=gnome-extra/libgsf-1.14
 	x11-libs/gtk+:3
 	dbus? ( dev-libs/dbus-glib )
-	!webkit? ( gnome-extra/gtkhtml:4.0 )
 	webkit? ( net-libs/webkit-gtk:3 )"
 DEPEND="${RDEPEND}
 	app-text/docbook2X
