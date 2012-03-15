@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.95.2.ebuild,v 1.1 2012/02/14 20:26:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.95.2.ebuild,v 1.2 2012/03/15 14:03:52 voyageur Exp $
 
 EAPI=4
 
@@ -16,6 +16,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-inter
 
 DEPEND="media-libs/fontconfig
 	>=x11-libs/libXft-2.1.0
+	x11-libs/libXmu
 	x11-libs/libXt
 	x11-libs/libXv
 	gif? ( >=media-libs/giflib-4.1.0-r3 )

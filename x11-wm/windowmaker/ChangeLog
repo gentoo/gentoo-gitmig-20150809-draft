@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.131 2012/02/14 20:26:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.132 2012/03/15 14:03:52 voyageur Exp $
+
+  15 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  windowmaker-0.95.1.ebuild, windowmaker-0.95.2.ebuild:
+  Add missing libXmu dependency, thanks Piotr Szymaniak in bug #408325
 
 *windowmaker-0.95.2 (14 Feb 2012)
 
