@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gocr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.63 2011/04/20 07:47:53 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.64 2012/03/15 12:54:46 ago Exp $
+
+  15 Mar 2012; Agostino Sarubbo <ago@gentoo.org> gocr-0.49.ebuild:
+  Stable for amd64, wrt bug #408165
 
 *gocr-0.49 (20 Apr 2011)
 
