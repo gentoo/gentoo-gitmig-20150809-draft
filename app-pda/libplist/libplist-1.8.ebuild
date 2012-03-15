@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.8.ebuild,v 1.3 2012/03/11 15:40:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.8.ebuild,v 1.4 2012/03/15 08:15:19 jdhore Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.libimobiledevice.org/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc64 x86"
 IUSE="cython python"
 
 RDEPEND="dev-libs/libxml2
