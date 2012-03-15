@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.4.ebuild,v 1.5 2012/02/21 16:02:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.4.ebuild,v 1.6 2012/03/15 18:38:48 ssuominen Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://tellico-project.org/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="addressbook cddb debug +handbook musicbrainz pdf scanner semantic-desktop taglib v4l xmp yaz"
+IUSE="addressbook cddb debug +handbook pdf scanner semantic-desktop taglib v4l xmp yaz"
 
 DEPEND="
 	dev-libs/libxml2
@@ -27,7 +27,6 @@ DEPEND="
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	cddb? ( $(add_kdebase_dep libkcddb) )
 	pdf? ( >=app-text/poppler-0.12.3-r3[qt4] )
-	musicbrainz? ( media-libs/musicbrainz:1 )
 	scanner? ( $(add_kdebase_dep libksane) )
 	semantic-desktop? ( dev-libs/soprano[raptor,redland] )
 	taglib? ( >=media-libs/taglib-1.5 )
