@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libcacard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libcacard/ChangeLog,v 1.2 2012/03/09 19:12:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libcacard/ChangeLog,v 1.3 2012/03/15 12:27:39 ago Exp $
+
+  15 Mar 2012; Agostino Sarubbo <ago@gentoo.org> libcacard-0.1.2.ebuild:
+  Stable for amd64, wrt bug #407357
 
   09 Mar 2012; Jeff Horelick <jdhore@gentoo.org> libcacard-0.1.2.ebuild:
   Keyworded ~x86 wrt bug 402721
