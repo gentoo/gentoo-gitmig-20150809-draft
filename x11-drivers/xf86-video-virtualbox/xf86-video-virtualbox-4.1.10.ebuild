@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.10.ebuild,v 1.1 2012/03/15 10:02:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.10.ebuild,v 1.2 2012/03/15 16:51:38 polynomial-c Exp $
 
 EAPI=2
 
@@ -42,7 +42,7 @@ BUILD_TARGETS="all"
 BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxvideo(misc:${WORKDIR}/vboxvideo_drm:${WORKDIR}/vboxvideo_drm)"
 
-S="${WORKDIR}/${MY_P}_OSE"
+S="${WORKDIR}/${MY_P}"
 
 QA_TEXTRELS_x86="usr/lib/VBoxOGL.so"
 
