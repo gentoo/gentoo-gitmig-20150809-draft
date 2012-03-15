@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.5 2012/03/14 19:46:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.6 2012/03/15 03:53:43 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -32,7 +32,7 @@ IUSE="songs tools"
 RDEPEND="dev-cpp/glibmm
 	dev-cpp/libxmlpp
 	media-libs/portaudio
-	dev-libs/boost
+	>=dev-libs/boost-1.36
 	dev-libs/glib
 	dev-libs/libxml2
 	gnome-base/librsvg
@@ -70,11 +70,27 @@ src_prepare() {
 	append-cppflags -DBOOST_FILESYSTEM_VERSION=2
 
 	strip-linguas -u lang
+
+	# how do I hate boost? Let me count the ways...
+	local boost_ver=$(best_version ">=dev-libs/boost-1.36")
+
+	boost_ver=${boost_ver/*boost-/}
+	boost_ver=${boost_ver%.*}
+	boost_ver=${boost_ver/./_}
+
+	einfo "Using boost version ${boost_ver}"
+	append-cxxflags \
+		-I/usr/include/boost-${boost_ver}
+	append-ldflags \
+		-L/usr/$(get_libdir)/boost-${boost_ver}
+	export BOOST_INCLUDEDIR="/usr/include/boost-${boost_ver}"
+	export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
 }
 
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_enable tools TOOLS)
+		-DCMAKE_VERBOSE_MAKEFILE=TRUE
 		-DSHARE_INSTALL="${GAMES_DATADIR}"/${PN}
 	)
 	cmake-utils_src_configure
