@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-19.0.1068.0_alpha126342.ebuild,v 1.2 2012/03/15 05:07:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-19.0.1068.0_alpha126342.ebuild,v 1.3 2012/03/15 05:30:43 floppym Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ CHROMIUM_LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he
 	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt_BR pt_PT ro ru sk sl sr
 	sv sw ta te th tr uk vi zh_CN zh_TW"
 
-inherit chromium eutils multilib pax-utils
+inherit chromium eutils multilib pax-utils unpacker
 
 DESCRIPTION="The web browser from Google"
 HOMEPAGE="http://www.google.com/chrome"
@@ -83,23 +83,6 @@ done
 
 QA_PREBUILT="*"
 S=${WORKDIR}
-
-chrome_unpack() {
-	local x
-	for x in "${@}"; do
-		if [[ ${x} == *.deb ]]; then
-			# Avoid automagic usage of deb2targz.
-			echo ">>> Unpacking ${x} to ${PWD}"
-			ar x "${DISTDIR}/${x}" data.tar.lzma || die
-		else
-			unpack "${x}"
-		fi
-	done
-}
-
-src_unpack() {
-	chrome_unpack ${A} ./data.tar.lzma
-}
 
 src_install() {
 	CHROME_HOME="opt/google/chrome/"
