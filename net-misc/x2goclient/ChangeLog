@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/x2goclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.7 2012/03/14 22:27:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.8 2012/03/15 12:10:25 voyageur Exp $
+
+  15 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goclient-3.0.1.18.ebuild, +files/x2goclient-3.0.1.18-cups1.5.patch:
+  Support both cups 1.4 and 1.5, reported by luis in bug #408105
 
 *x2goclient-3.0.1.18 (14 Mar 2012)
 

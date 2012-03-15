@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-3.0.1.18.ebuild,v 1.1 2012/03/14 22:27:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-3.0.1.18.ebuild,v 1.2 2012/03/15 12:10:25 voyageur Exp $
 
 EAPI=4
 inherit qt4-r2
@@ -28,7 +28,7 @@ S=${WORKDIR}/${P/-/_}
 src_prepare() {
 	# qmake looks for these files in the main directory
 	mv x2goclient/* . && rmdir x2goclient || die
-	sed -e "s#cups/cups.h#cups/ppd.h#" -i cupsprint.h || die
+	epatch "${FILESDIR}"/${P}-cups1.5.patch
 	if ! use ldap; then
 		sed -e "s/-lldap//" -i x2goclient.pro || die
 		sed -e "s/#define USELDAP//" -i x2goclientconfig.h || die
