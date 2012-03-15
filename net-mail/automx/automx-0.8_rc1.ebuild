@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.8_beta1.ebuild,v 1.2 2012/02/28 14:42:58 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.8_rc1.ebuild,v 1.1 2012/03/15 10:58:21 mschiff Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6:2.7"
