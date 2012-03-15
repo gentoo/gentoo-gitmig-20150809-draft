@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.2.ebuild,v 1.5 2011/10/28 08:48:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.2.ebuild,v 1.6 2012/03/15 00:09:38 voyageur Exp $
 
 EAPI=4
 inherit flag-o-matic toolchain-funcs eutils
@@ -33,12 +33,15 @@ src_prepare() {
 	use debug && append-cppflags -DDEBUG
 	use stl && append-cppflags -DTIXML_USE_STL
 
+	if ! use static-libs; then
+		sed -e "/^all:/s/\$(name).a //" -i Makefile || die
+	fi
+
 	tc-export AR CXX RANLIB
 }
 
 src_install() {
 	dolib.so *.so*
-	use static-libs && dolib.a *.a
 
 	insinto /usr/include
 	doins *.h
