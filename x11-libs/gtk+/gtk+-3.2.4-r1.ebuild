@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.4.ebuild,v 1.2 2012/03/15 15:00:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.4-r1.ebuild,v 1.1 2012/03/15 15:00:27 tetromino Exp $
 
 EAPI="4"
 
@@ -90,6 +90,9 @@ src_prepare() {
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
 	strip-flags
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=654108
+	epatch "${FILESDIR}/${PN}-3.2.4-fallback-theme.patch"
 
 	# Non-working test in gentoo's env
 	sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10-r1.ebuild,v 1.2 2012/02/14 00:11:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10-r1.ebuild,v 1.3 2012/03/15 15:00:27 tetromino Exp $
 
 EAPI="4"
 
@@ -89,6 +89,10 @@ src_prepare() {
 
 	# fix building with gir #372953, upstream bug #642085
 	epatch "${FILESDIR}"/${PN}-2.24.7-darwin-quartz-introspection.patch
+
+	# marshalers code was pre-generated with glib-2.31, upstream bug #671763
+	rm -v gdk/gdkmarshalers.c gtk/gtkmarshal.c gtk/gtkmarshalers.c \
+		perf/marshalers.c || die
 
 	# Stop trying to build unmaintained docs, bug #349754
 	strip_builddir SUBDIRS tutorial docs/Makefile.am docs/Makefile.in

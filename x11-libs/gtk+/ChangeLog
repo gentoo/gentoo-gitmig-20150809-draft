@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.571 2012/03/14 02:25:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.572 2012/03/15 15:00:27 tetromino Exp $
+
+*gtk+-3.2.4-r1 (15 Mar 2012)
+
+  15 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gtk+-2.24.10.ebuild, gtk+-2.24.10-r1.ebuild, gtk+-3.2.4.ebuild,
+  +gtk+-3.2.4-r1.ebuild, +files/gtk+-3.2.4-fallback-theme.patch:
+  For 3.2.4-r1, fall back to the theme in /etc/gtk-3.0/settings.ini if the
+  theme specified by gnome-settings-daemon does not support gtk3 (provides a
+  better gtk3 experience for gnome2 users). Regenerate marshalers code that had
+  been generated with glib-2.31 (fixes g_value_get_schar errors).
 
 *gtk+-3.2.4 (14 Mar 2012)
 
