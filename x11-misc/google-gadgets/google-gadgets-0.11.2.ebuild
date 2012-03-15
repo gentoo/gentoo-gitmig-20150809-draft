@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.13 2012/03/15 02:47:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.14 2012/03/15 02:54:35 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime multilib
@@ -83,18 +83,17 @@ pkg_setup() {
 src_prepare() {
 	sed -i -r \
 		-e '/^GGL_SYSDEPS_INCLUDE_DIR/ c\GGL_SYSDEPS_INCLUDE_DIR=$GGL_INCLUDE_DIR' \
-		configure.ac||die "404"
+		configure.ac || die
 
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 385477.
-	sed -i '1i#define OF(x) x' \
-		third_party/unzip/ioapi.h || die "zlib sed failed"
+	has_version '>=sys-libs/zlib-1.2.5.1-r1' && sed -i -e \
+		'1i#define OF(x) x' third_party/unzip/ioapi.h
 
 	eautoreconf
 }
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		--disable-update-desktop-database \
 		--disable-update-mime-database \
 		--disable-werror \

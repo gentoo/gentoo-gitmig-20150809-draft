@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.43 2012/03/15 02:47:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.44 2012/03/15 02:54:35 ssuominen Exp $
+
+  15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  google-gadgets-0.11.2.ebuild:
+  Fix bug 385477 correctly since the change is not backwards compatible.
 
   15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   google-gadgets-0.11.2.ebuild:
