@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/yum
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.15 2011/08/31 16:21:47 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.16 2012/03/15 18:18:50 floppym Exp $
+
+  15 Mar 2012; Mike Gilbert <floppym@gentoo.org> yum-3.4.3.ebuild:
+  Convert python shebangs.
 
 *yum-3.4.3 (31 Aug 2011)
 
