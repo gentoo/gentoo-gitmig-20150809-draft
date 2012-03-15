@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/udpxy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpxy/ChangeLog,v 1.1 2012/03/15 14:33:59 pva Exp $
+
+*udpxy-1.0.21.2 (15 Mar 2012)
+
+  15 Mar 2012; Peter Volkov <pva@gentoo.org> +udpxy-1.0.21.2.ebuild,
+  +files/udpxy-1.0.21.2-LDFLAGS.patch, +metadata.xml:
+  Initial commit, bug #257807. Thank Nikoli and Drew for this job.
+
