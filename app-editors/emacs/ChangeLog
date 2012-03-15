@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.479 2012/03/02 20:43:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.480 2012/03/15 22:17:04 maekke Exp $
+
+  15 Mar 2012; Markus Meier <maekke@gentoo.org> emacs-23.4-r1.ebuild:
+  arm stable, bug #406223
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> emacs-23.4-r1.ebuild:
   Marking emacs-23.4-r1 ppc64 for bug 406223
