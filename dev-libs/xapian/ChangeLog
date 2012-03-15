@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.75 2012/03/15 10:03:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.76 2012/03/15 10:05:41 blueness Exp $
+
+  15 Mar 2012; Anthony G. Basile <blueness@gentoo.org> xapian-1.2.5.ebuild:
+  Drop keywords in favor of newer stable ebuild
 
   15 Mar 2012; Anthony G. Basile <blueness@gentoo.org> -xapian-1.2.7-r1.ebuild,
   -xapian-1.2.7-r3.ebuild:
