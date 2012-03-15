@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.0.0.ebuild,v 1.1 2012/01/25 08:42:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.0.2.ebuild,v 1.1 2012/03/15 06:05:12 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -56,7 +56,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	!x11-misc/expocity"
 
-S="${WORKDIR}/linuxmint-muffin-079b5bf"
+S="${WORKDIR}/linuxmint-muffin-08ffc65"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README* *.txt doc/*.txt"
