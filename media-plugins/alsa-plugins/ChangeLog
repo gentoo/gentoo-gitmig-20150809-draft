@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.146 2012/03/15 09:35:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.147 2012/03/15 22:12:20 maekke Exp $
+
+  15 Mar 2012; Markus Meier <maekke@gentoo.org> alsa-plugins-1.0.25-r1.ebuild:
+  arm stable, bug #406101
 
   15 Mar 2012; Jeff Horelick <jdhore@gentoo.org> alsa-plugins-1.0.25-r1.ebuild:
   marked x86 per bug 406101
