@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cppi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppi/ChangeLog,v 1.6 2012/01/26 06:42:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppi/ChangeLog,v 1.7 2012/03/15 14:22:36 jer Exp $
+
+  15 Mar 2012; Jeroen Roovers <jer@gentoo.org> -cppi-1.14.ebuild,
+  -cppi-1.15.ebuild:
+  Old.
 
   26 Jan 2012; Jeroen Roovers <jer@gentoo.org> cppi-1.16.ebuild:
   Add LINGUAS support.
