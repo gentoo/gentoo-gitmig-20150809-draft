@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.102 2012/03/01 05:12:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.103 2012/03/15 18:31:12 scarabeus Exp $
 
 EAPI="4"
+
+# Does not work with py3 here
+# It might work with py:2.5 but I didn't test that
+PYTHON_DEPEND="2:2.6"
 
 inherit eutils python
 
@@ -95,6 +99,11 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xineramaproto
 	dev-util/cmake
 	x86? ( dev-lang/nasm )"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then

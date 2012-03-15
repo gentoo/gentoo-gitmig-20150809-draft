@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.118 2012/03/01 05:14:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.119 2012/03/15 18:31:12 scarabeus Exp $
+
+*xbmc-11.0_rc2 (15 Mar 2012)
+
+  15 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +xbmc-11.0_rc2.ebuild,
+  -xbmc-11.0_rc1.ebuild, xbmc-9999.ebuild:
+  Non-maintainer commit. Version bump to next rc which fixes serious regression.
+  Check for py2 in pkg_setup as py3 is borked. No other factical changes.
 
 *xbmc-11.0_rc1 (01 Mar 2012)
 
