@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.5 2012/03/15 06:37:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.6 2012/03/15 15:46:36 mr_bones_ Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -29,7 +29,7 @@ RDEPEND="
 	>=x11-libs/pango-1.6
 	>=dev-python/gconf-python-2.14
 	>=dev-python/gnome-applets-python-2.14
-	>=dev-python/notify-python-0.1.1-r2 
+	>=dev-python/notify-python-0.1.1-r2
 	>=dev-python/pygtk-2.16:2
 	mpd? ( >=dev-python/python-mpd-0.2.1 )
 	!gnome-extra/music-applet
