@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.6 2012/03/15 03:53:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.7 2012/03/15 03:54:46 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -46,8 +46,7 @@ RDEPEND="dev-cpp/glibmm
 	sys-libs/zlib
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	x11-libs/pango
-	!games-arcade/ultrastar-ng"
+	x11-libs/pango"
 DEPEND="${RDEPEND}
 	media-libs/glew
 	sys-apps/help2man"
