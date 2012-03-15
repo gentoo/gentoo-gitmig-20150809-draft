@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.9 2012/02/21 01:33:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.10 2012/03/15 06:05:24 tetromino Exp $
+
+*cinnamon-1.4 (15 Mar 2012)
+
+  15 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cinnamon-1.2-r1.ebuild, +cinnamon-1.4.ebuild:
+  Version bump, see http://cinnamon.linuxmint.com/?p=182 for the release notes.
+  Drop old.
 
 *cinnamon-1.3.1 (21 Feb 2012)
 
