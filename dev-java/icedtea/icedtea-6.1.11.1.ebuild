@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.11.1.ebuild,v 1.2 2012/02/24 18:43:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.11.1.ebuild,v 1.3 2012/03/15 16:52:50 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -124,31 +124,13 @@ PDEPEND="webstart? ( dev-java/icedtea-web:6 )
 
 S="${WORKDIR}"/${ICEDTEA_PKG}
 
-# a bit of hack so the VM switching is triggered without causing dependency troubles
-JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.5"
-JAVA_PKG_WANT_SOURCE="1.5"
-JAVA_PKG_WANT_TARGET="1.5"
-
 pkg_setup() {
-	# quite a hack since java-config does not provide a way for a package
-	# to limit supported VM's for building and their preferred order
-	if [[ -n "${JAVA_PKG_FORCE_VM}" ]]; then
-		einfo "Honoring user-set JAVA_PKG_FORCE_VM"
-	elif has_version "<=dev-java/icedtea-6.1.10.4:6"; then
-		JAVA_PKG_FORCE_VM="icedtea6"
-	elif has_version ">dev-java/icedtea-6.1.10.4:6"; then
-		JAVA_PKG_FORCE_VM="icedtea-6"
-	elif has_version "<dev-java/icedtea-bin-6.1.10.4:6"; then
-		JAVA_PKG_FORCE_VM="icedtea6-bin"
-	elif has_version ">=dev-java/icedtea-bin-6.1.10.4:6"; then
-		JAVA_PKG_FORCE_VM="icedtea-bin-6"
-	elif has_version dev-java/gcj-jdk; then
-		JAVA_PKG_FORCE_VM="gcj-jdk"
-	else
-		die "Unable to find a supported VM for building"
-	fi
+	JAVA_PKG_WANT_BUILD_VM="
+		icedtea-6 icedtea-bin-6 icedtea6 icedtea6-bin
+		gcj-jdk"
+	JAVA_PKG_WANT_SOURCE="1.5"
+	JAVA_PKG_WANT_TARGET="1.5"
 
-	einfo "Forced vm ${JAVA_PKG_FORCE_VM}"
 	java-vm-2_pkg_setup
 	java-pkg-2_pkg_setup
 }

@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.66 2012/02/25 06:12:50 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.67 2012/03/15 16:52:50 sera Exp $
+
+  15 Mar 2012; Ralph Sennhauser <sera@gentoo.org> icedtea-6.1.10.6.ebuild,
+  icedtea-6.1.11.1.ebuild, icedtea-7.2.0.1.ebuild,
+  +files/icedtea-7.2.0-explicit-gthread.patch, icedtea-7.2.1.ebuild:
+  - Use JAVA_PKG_WANT_BUILD_VM to limit build VM. This now respects system VM
+  setting if usable and simplifies pkg_setup.
+  - Add JamVM for alternative archs with IcedTea 7
+  - Fix building against >=glib-2.31. #402481
+  Thanks to Marien Zwart <marienz@gentoo.org> for the patch.
+  - Simplify USE=jbootstrap logic for icedtea-7.
 
   25 Feb 2012; Ralph Sennhauser <sera@gentoo.org>
   +files/icedtea-7.2.0_pax_kernel_support.patch:

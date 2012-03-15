@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.1.ebuild,v 1.1 2012/02/24 18:43:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.1.ebuild,v 1.2 2012/03/15 16:52:50 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -20,6 +20,7 @@ JAXP_TARBALL="1cf75c0e2c96.tar.gz"
 JAXWS_TARBALL="7edfbfe974f2.tar.gz"
 JDK_TARBALL="50f6f276a06c.tar.gz"
 LANGTOOLS_TARBALL="b534c4c6cd9b.tar.gz"
+JAMVM_TARBALL="jamvm-4617da717ecb05654ea5bb9572338061106a414d.tar.gz"
 
 DESCRIPTION="A harness to build OpenJDK using Free Software build tools and dependencies"
 HOMEPAGE="http://icedtea.classpath.org"
@@ -31,7 +32,10 @@ SRC_URI="
 	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_VER}/jaxws/archive/${JAXWS_TARBALL}
 	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_VER}/jdk/archive/${JDK_TARBALL}
 	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_VER}/hotspot/archive/${HOTSPOT_TARBALL}
-	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_VER}/langtools/archive/${LANGTOOLS_TARBALL}"
+	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_VER}/langtools/archive/${LANGTOOLS_TARBALL}
+	!amd64? ( !sparc? ( !x86? (
+		http://icedtea.classpath.org/download/drops/jamvm/${JAMVM_TARBALL}
+	) ) )"
 
 LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 MPL-1.0 MPL-1.1 public-domain W3C"
 SLOT="7"
@@ -131,37 +135,14 @@ PDEPEND="webstart? ( dev-java/icedtea-web:7 )
 
 S="${WORKDIR}"/${ICEDTEA_PKG}
 
-# a bit of hack so the VM switching is triggered without causing dependency troubles
-JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.5"
-JAVA_PKG_WANT_SOURCE="1.5"
-JAVA_PKG_WANT_TARGET="1.5"
-
 pkg_setup() {
-	# quite a hack since java-config does not provide a way for a package
-	# to limit supported VM's for building and their preferred order
-	if [[ -n "${JAVA_PKG_FORCE_VM}" ]]; then
-		einfo "Honoring user-set JAVA_PKG_FORCE_VM"
-	elif has_version "<=dev-java/icedtea-7.2.0:7"; then
-		JAVA_PKG_FORCE_VM="icedtea7"
-	elif has_version ">dev-java/icedtea-7.2.0:7"; then
-		JAVA_PKG_FORCE_VM="icedtea-7"
-	elif has_version "dev-java/icedtea-bin:7"; then
-		JAVA_PKG_FORCE_VM="icedtea-bin-7"
-	elif has_version "<=dev-java/icedtea-6.1.10.4:6"; then
-		JAVA_PKG_FORCE_VM="icedtea6"
-	elif has_version ">dev-java/icedtea-6.1.10.4:6"; then
-		JAVA_PKG_FORCE_VM="icedtea-6"
-	elif has_version "<dev-java/icedtea-bin-6.1.10.4:6"; then
-		JAVA_PKG_FORCE_VM="icedtea6-bin"
-	elif has_version ">=dev-java/icedtea-bin-6.1.10.4:6"; then
-		JAVA_PKG_FORCE_VM="icedtea-bin-6"
-	elif has_version dev-java/gcj-jdk; then
-		JAVA_PKG_FORCE_VM="gcj-jdk"
-	else
-		die "Unable to find a supported VM for building"
-	fi
+	JAVA_PKG_WANT_BUILD_VM="
+		icedtea-7 icedtea-bin-7 icedtea7
+		icedtea-6 icedtea-bin-6 icedtea6 icedtea6-bin
+		gcj-jdk"
+	JAVA_PKG_WANT_SOURCE="1.5"
+	JAVA_PKG_WANT_TARGET="1.5"
 
-	einfo "Forced vm ${JAVA_PKG_FORCE_VM}"
 	java-vm-2_pkg_setup
 	java-pkg-2_pkg_setup
 }
@@ -178,7 +159,13 @@ java_prepare() {
 	export LANG="C" LC_ALL="C"
 
 	epatch "${FILESDIR}"/${PN}-7.2.0_pax_kernel_support.patch #389751
+	epatch "${FILESDIR}"/${PN}-7.2.0-explicit-gthread.patch #402481
 	eautoreconf
+}
+
+bootstrap_impossible() {
+	# Fill this according to testing what works and what not
+	has "${1}" icedtea7 icedtea-7 icedtea-bin-7 icedtea6 icedtea-6 icedtea6-bin icedtea-bin-6
 }
 
 src_configure() {
@@ -186,31 +173,29 @@ src_configure() {
 	local vm=$(java-pkg_get-current-vm)
 
 	# Whether to bootstrap
-	if has "${vm}" icedtea7 icedtea-7 icedtea-bin-7; then
-		if use jbootstrap; then
-			einfo "We can't currently bootstrap with a IcedTea7 JVM :("
-			einfo "bootstrap forced off, ignoring use jbootstrap"
+	bootstrap="disable"
+	if use jbootstrap; then
+		if bootstrap_impossible "${vm}"; then
+			einfo "Bootstrap with ${vm} is currently not possible and thus disabled, ignoring USE=jbootstrap"
+		else
+			bootstrap="enable"
 		fi
-	elif has "${vm}" icedtea6 icedtea-6 icedtea6-bin icedtea-bin-6; then
-		if use jbootstrap; then
-			einfo "We can't currently bootstrap with a IcedTea6 JVM :("
-			einfo "bootstrap forced off, ignoring use jbootstrap"
-		fi
-	elif has "${vm}" gcj-jdk; then
-		# gcj-jdk ensures ecj is present.
-		use jbootstrap || einfo "bootstrap forced on for ${vm}, ignoring use jbootstrap"
-		bootstrap=yes
-		local ecj_jar="$(readlink "${EPREFIX}"/usr/share/eclipse-ecj/ecj.jar)"
-		config="${config} --with-ecj-jar=${ecj_jar}"
-	else
-		eerror "IcedTea must be built with either a JDK based on GNU Classpath or an existing build of IcedTea."
-		die "Install a GNU Classpath JDK (gcj-jdk)"
 	fi
 
-	if [[ ${bootstrap} ]]; then
-		config="${config} --enable-bootstrap"
-	else
-		config="${config} --disable-bootstrap"
+	if has "${vm}" gcj-jdk; then
+		# gcj-jdk ensures ecj is present.
+		use jbootstrap || einfo "bootstrap is necessary when building with ${vm}, ignoring USE=\"-jbootstrap\""
+		bootstrap="enable"
+		local ecj_jar="$(readlink "${EPREFIX}"/usr/share/eclipse-ecj/ecj.jar)"
+		config="${config} --with-ecj-jar=${ecj_jar}"
+	fi
+
+	config="${config} --${bootstrap}-bootstrap"
+
+	# Always use HotSpot as the primary VM if available. #389521 #368669 #357633 ...
+	# Otherwise use JamVM as it's the only possibility right now
+	if ! has "${ARCH}" amd64 sparc x86; then
+		config="${config} --enable-jamvm --with-jamvm-src-zip=${DISTDIR}/${JAMVM_TARBALL}"
 	fi
 
 	# OpenJDK-specific parallelism support. Bug #389791, #337827
