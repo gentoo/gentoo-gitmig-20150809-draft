@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.10.ebuild,v 1.1 2012/03/15 10:02:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.10.ebuild,v 1.2 2012/03/15 16:52:24 polynomial-c Exp $
 
 EAPI=2
 
@@ -43,7 +43,7 @@ BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxguest(misc:${WORKDIR}/vboxguest:${WORKDIR}/vboxguest)
 			vboxsf(misc:${WORKDIR}/vboxsf:${WORKDIR}/vboxsf)"
 
-S="${WORKDIR}/${MY_P}_OSE"
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 		linux-mod_pkg_setup
