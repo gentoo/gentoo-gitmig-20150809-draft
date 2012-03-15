@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.62 2012/03/15 07:29:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.63 2012/03/15 07:39:07 ssuominen Exp $
+
+  15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -roxterm-2.2.2.ebuild,
+  -roxterm-2.3.1.ebuild:
+  old
 
   15 Mar 2012; Jeff Horelick <jdhore@gentoo.org> roxterm-2.3.4.ebuild:
   marked x86 per bug 407429
