@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.1-r1.ebuild,v 1.3 2011/10/09 16:43:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.2-r1.ebuild,v 1.4 2012/03/15 16:05:10 voyageur Exp $
 
-EAPI=2
-inherit flag-o-matic toolchain-funcs
+EAPI=4
+inherit flag-o-matic toolchain-funcs eutils multilib
 
 DESCRIPTION="a simple, small, C++ XML parser that can be easily integrating into other programs"
 HOMEPAGE="http://www.grinninglizard.com/tinyxml/index.html"
@@ -11,8 +11,8 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV//./_}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
-IUSE="debug doc stl"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc x86 ~x64-macos ~x86-macos"
+IUSE="debug doc static-libs +stl"
 
 RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
@@ -26,30 +26,31 @@ src_prepare() {
 
 	sed -e "s:@MAJOR_V@:$major_v:" \
 	    -e "s:@MINOR_V@:$minor_v:" \
-		"${FILESDIR}"/Makefile-2 > Makefile || die
+		"${FILESDIR}"/Makefile-3 > Makefile || die
 
-	epatch "${FILESDIR}"/${P}-entity.patch
-}
+	epatch "${FILESDIR}"/${PN}-2.6.1-entity.patch
 
-src_compile() {
 	use debug && append-cppflags -DDEBUG
 	use stl && append-cppflags -DTIXML_USE_STL
 
+	if ! use static-libs; then
+		sed -e "/^all:/s/\$(name).a //" -i Makefile || die
+	fi
+
 	tc-export AR CXX RANLIB
 
-	emake || die "emake failed"
+	[[ ${CHOST} == *-darwin* ]] && export LIBDIR="${EPREFIX}"/usr/$(get_libdir)
 }
 
 src_install() {
-	dolib.so *.so* || die "dolib.so failed"
-	dolib.a *.a || die "dolib.a failed"
+	dolib.so *$(get_libname)*
 
 	insinto /usr/include
-	doins *.h || die "doins failed"
+	doins *.h
 
-	dodoc {changes,readme}.txt || die "dodoc failed"
+	dodoc {changes,readme}.txt
 
 	if use doc; then
-		dohtml -r docs/* || die "dohtml failed"
+		dohtml -r docs/*
 	fi
 }
