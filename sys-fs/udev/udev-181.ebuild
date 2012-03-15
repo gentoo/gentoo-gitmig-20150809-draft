@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.5 2012/03/15 07:58:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.6 2012/03/15 08:21:51 ssuominen Exp $
 
 EAPI=4
 
@@ -90,7 +90,7 @@ pkg_setup()
 		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
 
 	if use acl; then
-		CONFIG_CHECK += " ~TMPFS_POSIX_ACL"
+		CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
 	fi
 
 	linux-info_pkg_setup
@@ -160,7 +160,6 @@ src_configure()
 		$(use_with selinux) \
 		$(use_enable debug) \
 		$(use_enable rule_generator) \
-		$(use_enable hwdb) \
 		--with-pci-ids-path=/usr/share/misc/pci.ids \
 		--with-usb-ids-path=/usr/share/misc/usb.ids \
 		$(use_enable acl udev_acl) \
@@ -170,12 +169,14 @@ src_configure()
 		$(use_enable floppy) \
 		$(use_enable edd) \
 		$(use_enable doc gtk-doc) \
-		$(systemd_with_unitdir)
+		"$(systemd_with_unitdir)"
 }
 
 src_install()
 {
 	emake DESTDIR="${D}" docdir="/usr/share/doc/${P}" install
+
+	find "${ED}" -type f -name '*.la' -exec rm -f {} +
 
 	# documentation
 	dodoc ChangeLog README TODO
