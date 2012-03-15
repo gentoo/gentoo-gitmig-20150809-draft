@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/virtualenvwrapper-3.0.1.ebuild,v 1.1 2012/03/09 09:06:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/virtualenvwrapper-3.0.1.ebuild,v 1.2 2012/03/15 17:40:27 patrick Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="2:2.6 3:3.1"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.5 *-jython 2.7-pypy-*"
 
-inherit distutils
-inherit python
+inherit distutils python
 
 DESCRIPTION="virtualenvwrapper is a set of extensions to Ian Bicking's virtualenv tool"
 HOMEPAGE="http://www.doughellmann.com/projects/virtualenvwrapper http://pypi.python.org/pypi/virtualenvwrapper"
@@ -24,13 +24,17 @@ DEPEND="${DEPEND}
 	dev-python/setuptools
 	test? ( dev-python/tox )"
 
-#src_test() {
-#	testing() {
-#		PYTHON_MAJOR="$(python_get_version --major)"
-#		PYTHON_MINOR="$(python_get_version --minor)"
-#		cp ${FILESDIR}/tox.ini .
-#		export TMPDIR=${T}
-#		tox -e py${PYTHON_MAJOR}${PYTHON_MINOR} tests/test_cp.sh
-#	}
-#	python_execute_function testing
-#}
+src_prepare() {
+	sed -e 's:-o shwordsplit::' -i tests/run_tests || die
+}
+
+src_test() {
+	testing() {
+		PYTHON_MAJOR="$(python_get_version --major)"
+		PYTHON_MINOR="$(python_get_version --minor)"
+		cp "${FILESDIR}/tox.ini" .
+		export TMPDIR=${T}
+		tox -e py${PYTHON_MAJOR}${PYTHON_MINOR} tests/test_cp.sh
+	}
+	python_execute_function testing
+}
