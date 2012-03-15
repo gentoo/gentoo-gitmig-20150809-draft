@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.40 2012/03/13 13:17:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.41 2012/03/15 02:16:08 jer Exp $
+
+  15 Mar 2012; Jeroen Roovers <jer@gentoo.org> libcap-ng-0.6.6.ebuild:
+  Stable for HPPA (bug #407773).
 
   13 Mar 2012; Brent Baude <ranger@gentoo.org> libcap-ng-0.6.6.ebuild:
   Marking libcap-ng-0.6.6 ppc for bug 407773
