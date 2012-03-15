@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>desktop-misc</herd>
+  <herd>proxy-maintainers</herd>
+  <maintainer>
+    <email>julian.ospald@googlemail.com</email>
+    <name>Julian Ospald</name>
+    <description>hasufell at Freenode</description>
+  </maintainer>
+</pkgmetadata>
