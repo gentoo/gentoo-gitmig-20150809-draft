@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.12.0.ebuild,v 1.1 2012/03/07 16:46:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.12.0.ebuild,v 1.2 2012/03/15 21:30:58 ssuominen Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -41,9 +41,7 @@ RDEPEND="${COMMON_DEPEND}
 		sys-fs/hfsutils )
 	jfs? ( sys-fs/jfsutils )
 	mdadm? ( sys-fs/mdadm )
-	ntfs? ( || (
-		>=sys-fs/ntfs3g-2011.4.12[ntfsprogs]
-		sys-fs/ntfsprogs ) )
+	ntfs? ( >=sys-fs/ntfs3g-2011.4.12[ntfsprogs] )
 	reiserfs? ( sys-fs/reiserfsprogs )
 	reiser4? ( sys-fs/reiser4progs )
 	xfs? ( sys-fs/xfsprogs sys-fs/xfsdump )"
