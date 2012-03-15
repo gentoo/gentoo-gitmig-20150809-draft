@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.58 2012/03/07 09:28:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.59 2012/03/15 18:21:29 phajdan.jr Exp $
+
+  15 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ocamlnet-3.5.ebuild:
+  x86 stable wrt bug #405959
 
 *ocamlnet-3.5.1 (07 Mar 2012)
 
