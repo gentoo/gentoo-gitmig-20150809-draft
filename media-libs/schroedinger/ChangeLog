@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/schroedinger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.57 2012/02/15 10:09:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.58 2012/03/15 17:43:16 grobian Exp $
+
+  15 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/schroedinger-1.0.11-darwin-compile.patch, schroedinger-1.0.11.ebuild:
+  Fix build on Darwin with upstream patches, bug #404231
 
 *schroedinger-1.0.11 (15 Feb 2012)
 
