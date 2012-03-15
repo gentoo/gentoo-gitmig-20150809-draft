@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/gprof2dot-0_p20100216.ebuild,v 1.3 2010/10/21 00:45:46 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/gprof2dot-0_p20100216.ebuild,v 1.4 2012/03/15 20:16:55 sping Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="*"
 PYTHON_USE_WITH="xml"
 
-inherit python
+inherit eutils python
 
 DESCRIPTION="Converts profiling output to dot graphs"
 HOMEPAGE="http://code.google.com/p/jrfonseca/wiki/Gprof2Dot"
@@ -20,6 +20,10 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-python3.patch
+}
 
 src_install() {
 	abi_specific_install() {
