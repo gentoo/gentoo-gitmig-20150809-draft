@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.330 2012/03/15 09:39:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.331 2012/03/15 22:05:38 maekke Exp $
+
+  15 Mar 2012; Markus Meier <maekke@gentoo.org> alsa-lib-1.0.25-r1.ebuild:
+  arm stable, bug #406101
 
   15 Mar 2012; Jeff Horelick <jdhore@gentoo.org> alsa-lib-1.0.25-r1.ebuild:
   marked x86 per bug 406101
