@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/usb_modeswitch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/ChangeLog,v 1.22 2012/01/01 17:50:04 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/ChangeLog,v 1.23 2012/03/15 07:03:05 ssuominen Exp $
+
+*usb_modeswitch-1.2.3 (15 Mar 2012)
+
+  15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +usb_modeswitch-1.2.3.ebuild:
+  Version bump wrt #407237 and display a warning if CONFIG_USB_SERIAL is unset
+  #407241 by Pacho Ramos. Use /lib/udev instead of /$(get_libdir)/udev and yes,
+  this is really correct. Install ChangeLog and README.
 
 *usb_modeswitch-1.2.1 (01 Jan 2012)
 
