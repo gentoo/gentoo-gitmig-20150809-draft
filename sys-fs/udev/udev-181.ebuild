@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.4 2012/03/11 23:38:27 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.5 2012/03/15 07:58:26 ssuominen Exp $
 
 EAPI=4
 
@@ -59,7 +59,10 @@ else
 fi
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils[-zlib] )
+	hwdb? (
+		>=sys-apps/usbutils-0.82
+		|| ( >=sys-apps/pciutils-3.1.9-r1[-compress-db] <sys-apps/pciutils-3.1.9-r1[-zlib] )
+		)
 	acl? ( sys-apps/coreutils[acl] )
 	sys-fs/udev-init-scripts
 	!sys-apps/coldplug
