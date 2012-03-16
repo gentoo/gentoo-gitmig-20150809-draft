@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r1.ebuild,v 1.2 2012/02/05 01:39:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r1.ebuild,v 1.3 2012/03/16 20:18:39 bicatali Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SUPPORT_PYTHON_ABIS="1"
 
 inherit cmake-utils eutils wxwidgets python toolchain-funcs virtualx
 
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
 
 DESCRIPTION="Interactive Data Language compatible incremental compiler"
 HOMEPAGE="http://gnudatalanguage.sourceforge.net/"
