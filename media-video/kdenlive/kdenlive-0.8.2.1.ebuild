@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.8.2.1.ebuild,v 1.3 2012/03/11 22:36:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.8.2.1.ebuild,v 1.4 2012/03/16 18:01:34 tomka Exp $
 
 EAPI=4
 KDE_LINGUAS="ca cs da de el es et fi fr gl he hr hu it nl pl pt pt_BR ru sl tr
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~x86-linux"
 IUSE="debug semantic-desktop"
 
 RDEPEND="
