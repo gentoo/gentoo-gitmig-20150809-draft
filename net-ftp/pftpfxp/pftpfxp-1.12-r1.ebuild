@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-1.12.ebuild,v 1.1 2012/03/03 19:38:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-1.12-r1.ebuild,v 1.1 2012/03/16 16:48:38 jer Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -17,29 +17,43 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="ssl"
 
-DEPEND="app-arch/unzip
-	ssl? ( >=dev-libs/openssl-0.9.6c )"
+RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )"
+DEPEND="
+	app-arch/unzip
+	${RDEPEND}
+"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "$FILESDIR/1.11-gcc43.patch"
+
+	# do no strip
+	# look for the correct library (bug #408231)
+	sed -i configure \
+		-e 's|[^D]*DO.*||g' \
+		-e 's|libssl.a|libssl.so|g' \
+		|| die
+
+	#fix permissions of configure script
+	chmod +x configure
+
+	# use CXX not CPP
+	# respect LDFLAGS
+	sed -i src/Makefile.in \
+		-e 's/CPP/CXX/g' \
+		-e 's|$(CXX) -o |$(CXX) $(GENTOO_LDFLAGS) -o |g' \
+		|| die
 }
 
 src_configure() {
-	#fix permissions of configure script
-	chmod +x configure
-	# no stripping
-	sed -i -e 's/[^D]*DO.*//g' configure
-	sed -i -e 's/CPP/CXX/g' src/Makefile.in
-	#note: not a propper autoconf
-	./configure || die "configure failed"
+	#note: not a proper autoconf
+	./configure $(use ssl || echo --nossl) || die "configure failed"
 	sed -i -e 's:$<:$(CPPFLAGS) $<:' -e 's/LINKFLAGS/LDFLAGS/g'  src/Makefile
 }
 
 src_compile() {
-	tc-export CXX
-	emake
+	emake GENTOO_LDFLAGS="${LDFLAGS}" CXX=$(tc-getCXX)
 }
 
 src_install() {
