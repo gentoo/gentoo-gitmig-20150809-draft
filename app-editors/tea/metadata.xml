@@ -8,9 +8,7 @@
     It can also read lots of 'other' filetypes.
   </longdescription>
   <use>
-    <flag name='aspell'>Enable spell checking using aspell</flag>
-    <flag name='enchant'>Enable spell checking using enchant</flag>
-    <flag name='hacking'>Enable hacking support</flag>
-    <flag name='hunspell'>Enable spellchecking using hunspell</flag>
+    <flag name="aspell">Enable spellchecking using <pkg>app-text/aspell</pkg></flag>
+    <flag name="hunspell">Enable spellchecking using <pkg>app-text/hunspell</pkg></flag>
   </use>
 </pkgmetadata>
