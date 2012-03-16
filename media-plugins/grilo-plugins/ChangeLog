@@ -1,6 +1,20 @@
 # ChangeLog for media-plugins/grilo-plugins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.6 2011/11/07 00:39:33 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.7 2012/03/16 03:34:47 tetromino Exp $
+
+*grilo-plugins-0.1.18 (16 Mar 2012)
+
+  16 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -grilo-plugins-0.1.16.ebuild,
+  -files/grilo-plugins-0.1.16-local-metadata-leak.patch,
+  -files/grilo-plugins-0.1.16-youtube-c90.patch,
+  -files/grilo-plugins-0.1.16-youtube-libgdata-0.9.patch,
+  -files/grilo-plugins-0.1.16-youtube-missing-case.patch,
+  -files/grilo-plugins-0.1.16-youtube-variable-shadowing.patch,
+  -grilo-plugins-0.1.17.ebuild, -grilo-plugins-0.1.17-r1.ebuild,
+  +grilo-plugins-0.1.18.ebuild, +files/grilo-plugins-0.1.18-tracker-0.14.patch:
+  Version bump with some bugfixes. Add patch for tracker-0.14 support. Drop
+  old.
 
 *grilo-plugins-0.1.17-r2 (07 Nov 2011)
 
