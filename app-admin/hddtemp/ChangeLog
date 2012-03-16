@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.109 2012/02/15 11:57:21 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.110 2012/03/16 14:25:14 aidecoe Exp $
+
+  16 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddtemp-conf.d:
+  Use long options and set /dev/sd* by default instead of /dev/hd*. Fixes
+  bug #408269 and also bug #390275 btw.
 
   15 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
   Added Hitachi HTS725050A9A364. Fixes bug #403127.
