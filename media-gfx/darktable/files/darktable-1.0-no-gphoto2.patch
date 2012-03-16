@@ -1,0 +1,28 @@
+--- darktable-1.0/src/libs/import.c
++++ darktable-1.0/src/libs/import.c
+@@ -28,13 +28,13 @@
+ #include "dtgtk/button.h"
+ #include "gui/accelerators.h"
+ #include "gui/gtk.h"
++#ifdef HAVE_GPHOTO2
+ #include "gui/camera_import_dialog.h"
++#endif
+ #include "libs/lib.h"
+ 
+ DT_MODULE(1)
+ 
+-// #ifdef HAVE_GPHOTO2
+-
+ 
+ #ifdef HAVE_GPHOTO2
+ /** helper function to update ui with available cameras and ther actionbuttons */
+@@ -44,7 +44,9 @@
+ 
+ typedef struct dt_lib_import_t
+ {
++#ifdef HAVE_GPHOTO2
+   dt_camctl_listener_t camctl_listener;
++#endif
+   GtkButton *import_file;
+   GtkButton *import_directory;
+   GtkButton *import_camera;
