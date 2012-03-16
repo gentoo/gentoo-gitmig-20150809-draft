@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.4.ebuild,v 1.2 2012/02/17 19:53:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.4.ebuild,v 1.3 2012/03/16 07:29:11 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -31,7 +31,7 @@ src_test() {
 
 		for test in testlex.py testyacc.py; do
 			einfo "Running ${test}..."
-			if ! "$(PYTHON)" testlex.py; then
+			if ! "$(PYTHON)" ${test}; then
 				ewarn "${test} failed with $(python_get_implementation) $(python_get_version)"
 				exit_status="1"
 			fi

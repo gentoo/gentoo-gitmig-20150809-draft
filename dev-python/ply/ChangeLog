@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ply
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.15 2012/02/17 19:53:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.16 2012/03/16 07:29:11 patrick Exp $
+
+  16 Mar 2012; Patrick Lauer <patrick@gentoo.org> ply-3.4.ebuild:
+  Test fix for #408145
 
   17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ply-3.4.ebuild:
   Stable for amd64, wrt bug #403759
