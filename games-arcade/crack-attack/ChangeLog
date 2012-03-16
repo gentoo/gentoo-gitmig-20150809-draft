@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/crack-attack
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.26 2010/09/16 16:51:56 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.27 2012/03/16 16:21:35 mr_bones_ Exp $
+
+  16 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  crack-attack-1.1.14-r1.ebuild:
+  take out unused libXmu mention (bug #408457)
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   crack-attack-1.1.14-r1.ebuild:
