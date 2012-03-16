@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/language-c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.15 2012/03/08 14:48:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.16 2012/03/16 21:36:22 slyfox Exp $
+
+*language-c-0.3.2.1-r1 (16 Mar 2012)
+
+  16 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +language-c-0.3.2.1-r1.ebuild:
+  Added missing dev-haskell/syb depend (really needed only for ghc-7.0+). Found
+  by Ian Delaney at bug #405155.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> language-c-0.3.2.1.ebuild:
   Marking language-c-0.3.2.1 ppc64 for bug 399985
