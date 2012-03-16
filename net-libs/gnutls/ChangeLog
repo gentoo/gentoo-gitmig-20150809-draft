@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.339 2012/03/16 23:02:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.340 2012/03/16 23:03:33 radhermit Exp $
+
+  16 Mar 2012; Tim Harder <radhermit@gentoo.org> -gnutls-2.12.16.ebuild,
+  -gnutls-3.0.13.ebuild, -files/gnutls-3.0.13-test-kill.patch,
+  -gnutls-3.0.14.ebuild:
+  Remove old.
 
 *gnutls-3.0.16 (16 Mar 2012)
 
