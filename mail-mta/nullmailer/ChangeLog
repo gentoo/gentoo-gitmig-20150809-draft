@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.44 2012/03/09 14:28:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.45 2012/03/16 11:21:18 phajdan.jr Exp $
+
+  16 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nullmailer-1.05.ebuild,
+  nullmailer-1.06.ebuild:
+  Switch to virtual/shadow.
 
 *nullmailer-1.06 (09 Mar 2012)
 

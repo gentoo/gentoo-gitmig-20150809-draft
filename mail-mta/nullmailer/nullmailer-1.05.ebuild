@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.05.ebuild,v 1.4 2012/03/09 11:09:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.05.ebuild,v 1.5 2012/03/16 11:21:18 phajdan.jr Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -23,7 +23,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="sys-apps/groff"
-RDEPEND="sys-apps/shadow
+RDEPEND="virtual/shadow
 	virtual/logger
 	!mail-mta/courier
 	!mail-mta/esmtp
