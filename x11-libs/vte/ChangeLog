@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.311 2012/03/13 13:10:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.312 2012/03/16 06:39:01 jdhore Exp $
+
+  16 Mar 2012; Jeff Horelick <jdhore@gentoo.org> vte-0.30.1-r3.ebuild:
+  marked x86 per bug 407643
 
   13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> vte-0.30.1-r3.ebuild:
   Stable for amd64, wrt bug #407643
