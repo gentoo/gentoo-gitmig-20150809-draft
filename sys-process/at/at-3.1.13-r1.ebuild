@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r1.ebuild,v 1.7 2012/03/13 23:17:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r1.ebuild,v 1.8 2012/03/16 16:53:46 polynomial-c Exp $
 
 EAPI=4
 
@@ -34,6 +34,8 @@ src_prepare() {
 	# fix parallel make issues, bug #244884
 	epatch "${FILESDIR}"/${PN}-3.1.10.2-Makefile.in-parallel-make-fix.patch
 	epatch "${FILESDIR}"/${P}-configure.in-fix-PAM-automagick-dep.patch
+	# Fix parallel make issue (bug #408375)
+	epatch "${FILESDIR}"/${PN}-3.1.13-parallel-make-fix.patch
 
 	eautoconf
 }

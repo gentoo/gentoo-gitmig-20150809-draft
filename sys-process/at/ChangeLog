@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.38 2012/03/13 23:17:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.39 2012/03/16 16:53:46 polynomial-c Exp $
+
+  16 Mar 2012; Lars Wendler <polynomial-c@gentoo.org> at-3.1.13-r1.ebuild,
+  +files/at-3.1.13-parallel-make-fix.patch:
+  Fixed parallel make issue (bug #408375).
 
   13 Mar 2012; Jeroen Roovers <jer@gentoo.org> at-3.1.13-r1.ebuild:
   Stable for HPPA (bug #407947).
