@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.2.1.ebuild,v 1.1 2012/03/16 10:39:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.2.1.ebuild,v 1.2 2012/03/16 19:21:16 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -24,6 +24,8 @@ RDEPEND="dev-db/sqlite:3
 	dev-libs/popt
 	dev-libs/libxml2
 	dev-libs/openssl
+	sys-libs/ncurses
+	sys-libs/zlib
 	ais? ( sys-cluster/openais )
 	alsa? ( media-libs/alsa-lib )
 	bluetooth? ( net-wireless/bluez )
