@@ -18,12 +18,15 @@ Index: ffmpegthumbs-4.8.1/ffmpegthumbs/ffmpegthumbnailer/moviedecoder.cpp
          kDebug() <<  "Could not open input file: " << fileInfo.absoluteFilePath();
          return;
      }
-@@ -89,7 +91,7 @@ void MovieDecoder::destroy()
+@@ -89,7 +91,11 @@ void MovieDecoder::destroy()
      }
  
      if ((!m_FormatContextWasGiven) && m_pFormatContext) {
--        av_close_input_file(m_pFormatContext);
++#if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(54,0,0)
+         av_close_input_file(m_pFormatContext);
++#else
 +        avformat_close_input(&m_pFormatContext);
++#endif
          m_pFormatContext = NULL;
      }
  

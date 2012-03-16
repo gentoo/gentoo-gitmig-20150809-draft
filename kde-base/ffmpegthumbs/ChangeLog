@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ffmpegthumbs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.46 2012/03/09 09:55:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.47 2012/03/16 00:05:50 aballier Exp $
+
+  16 Mar 2012; Alexis Ballier <aballier@gentoo.org>
+  files/ffmpegthumbs-4.8.1-ffmpeg.patch:
+  add some more ifdefery to the patch, by Fabian Kislat, bug #407607
 
   09 Mar 2012; Alexis Ballier <aballier@gentoo.org> ffmpegthumbs-4.8.1.ebuild,
   +files/ffmpegthumbs-4.8.1-ffmpeg.patch:
