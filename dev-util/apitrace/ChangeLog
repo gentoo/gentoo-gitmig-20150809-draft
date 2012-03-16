@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/apitrace
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.6 2011/12/15 07:28:36 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.7 2012/03/16 22:32:50 radhermit Exp $
+
+*apitrace-3.0 (16 Mar 2012)
+
+  16 Mar 2012; Tim Harder <radhermit@gentoo.org> +apitrace-3.0.ebuild,
+  +files/apitrace-3.0-glxtrace-only.patch,
+  +files/apitrace-3.0-system-libs.patch, metadata.xml:
+  Version bump. Add egl use flag.
 
 *apitrace-2.0-r1 (15 Dec 2011)
 
