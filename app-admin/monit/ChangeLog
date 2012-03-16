@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/monit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.65 2012/03/15 12:53:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.66 2012/03/16 19:04:51 ranger Exp $
+
+  16 Mar 2012; Brent Baude <ranger@gentoo.org> monit-5.3.2.ebuild:
+  Marking monit-5.3.2 ppc for bug 408113
 
   15 Mar 2012; Agostino Sarubbo <ago@gentoo.org> monit-5.3.2.ebuild:
   Stable for amd64, wrt bug #408113
