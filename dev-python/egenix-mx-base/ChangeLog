@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.66 2012/03/09 09:54:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.67 2012/03/16 07:44:33 patrick Exp $
+
+*egenix-mx-base-3.2.3 (16 Mar 2012)
+
+  16 Mar 2012; Patrick Lauer <patrick@gentoo.org> +egenix-mx-base-3.2.3.ebuild,
+  -egenix-mx-base-3.2.1.ebuild, -egenix-mx-base-3.2.2.ebuild:
+  Bump for #404177
 
 *egenix-mx-base-3.2.2 (09 Mar 2012)
 
