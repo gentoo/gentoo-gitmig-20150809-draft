@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sinfo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.7 2011/12/13 21:07:30 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.8 2012/03/16 23:19:44 radhermit Exp $
+
+*sinfo-0.0.45 (16 Mar 2012)
+
+  16 Mar 2012; Tim Harder <radhermit@gentoo.org> +sinfo-0.0.45.ebuild:
+  Version bump.
 
   13 Dec 2011; Tim Harder <radhermit@gentoo.org> -sinfo-0.0.43-r1.ebuild,
   -files/sinfo-0.0.43-librpc-linking.patch,
