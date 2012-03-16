@@ -9,7 +9,7 @@
 +AC_CONFIG_SRCDIR([Make-config.in])
  AC_CONFIG_HEADERS(config.h)
 -AM_INIT_AUTOMAKE(speed-dreams, 1.4.0-r2307)
-+AC_DEFINE(VERSION, ["1.4.0-r2307"])
++AC_DEFINE(VERSION, ["1.4.0-r2307"], [Version])
  
  dnl Checks for programs.
  AC_PROG_CC

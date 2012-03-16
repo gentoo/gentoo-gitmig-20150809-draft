@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/speed-dreams-1.4.0.ebuild,v 1.7 2012/03/13 13:01:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/speed-dreams-1.4.0.ebuild,v 1.8 2012/03/16 20:04:54 tupone Exp $
 
 EAPI=2
 inherit autotools eutils versionator games
@@ -27,6 +27,13 @@ RDEPEND="virtual/opengl
 DEPEND="${RDEPEND}
 	>=media-libs/plib-1.8.3
 	x11-proto/xproto
+	x11-libs/libXext
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libXt
+	x11-libs/libXi
+	x11-libs/libXmu
+	x11-libs/libXrender
 	xrandr? ( x11-proto/randrproto )"
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)-src
