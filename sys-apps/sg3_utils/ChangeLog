@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.73 2012/01/19 19:10:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.74 2012/03/16 18:22:55 ranger Exp $
+
+  16 Mar 2012; Brent Baude <ranger@gentoo.org> sg3_utils-1.33.ebuild:
+  Marking sg3_utils-1.33 ppc64 for bug 405067
 
 *sg3_utils-1.33 (19 Jan 2012)
 
