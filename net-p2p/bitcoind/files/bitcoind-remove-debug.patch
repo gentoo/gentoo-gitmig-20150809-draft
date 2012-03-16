@@ -1,0 +1,12 @@
+diff -Naur bitcoin-bitcoind-stable.orig//src/makefile.unix bitcoin-bitcoind-stable/src/makefile.unix
+--- bitcoin-bitcoind-stable.orig//src/makefile.unix	2012-03-11 22:21:06.000000000 -0400
++++ bitcoin-bitcoind-stable/src/makefile.unix	2012-03-16 08:28:27.000000000 -0400
+@@ -85,7 +85,7 @@
+ 
+ DEBUGFLAGS=-g
+ CXXFLAGS=-O2
+-xCXXFLAGS=-pthread -Wno-invalid-offsetof -Wformat $(DEBUGFLAGS) $(DEFS) $(HARDENING) $(CXXFLAGS)
++xCXXFLAGS=-pthread -Wno-invalid-offsetof -Wformat $(DEFS) $(HARDENING) $(CXXFLAGS)
+ HEADERS = \
+     base58.h \
+     bignum.h \
