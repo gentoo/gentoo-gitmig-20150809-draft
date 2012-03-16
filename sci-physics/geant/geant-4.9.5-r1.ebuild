@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5-r1.ebuild,v 1.1 2012/03/13 21:52:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5-r1.ebuild,v 1.2 2012/03/16 21:03:59 bicatali Exp $
 
 EAPI=4
 
@@ -39,6 +39,7 @@ PATCHES=( "${FILESDIR}"/${PN}-4.9.4-zlib.patch )
 src_configure() {
 	mycmakeargs=(
 		-DGEANT4_USE_SYSTEM_CLHEP=ON
+		$(use openinventor && echo "-DINVENTOR_SOXT_LIBRARY=${EROOT}usr/$(get_libdir)/libInventorXt.so")
 		$(cmake-utils_use data GEANT4_INSTALL_DATA)
 		$(cmake-utils_use dawn GEANT4_USE_NETWORKDAWN)
 		$(cmake-utils_use gdml GEANT4_USE_GDML)
