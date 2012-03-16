@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.134 2012/03/06 20:54:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.135 2012/03/16 02:20:11 anarchy Exp $
+
+*firefox-11.0 (16 Mar 2012)
+
+  16 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> +firefox-11.0.ebuild:
+  Security bump, 10.0.3esr to follow for stable
 
   06 Mar 2012; Jeroen Roovers <jer@gentoo.org> firefox-10.0.1-r1.ebuild:
   Marked ~hppa (bug #360427).
