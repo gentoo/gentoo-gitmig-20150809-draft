@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.1.10.ebuild,v 1.1 2012/03/15 09:54:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.1.10.ebuild,v 1.2 2012/03/16 19:53:04 floppym Exp $
 
 EAPI=2
 
@@ -58,7 +58,6 @@ RDEPEND="!!app-emulation/virtualbox
 			dev-lang/python:2.7
 			dev-lang/python:2.6
 			dev-lang/python:2.5
-			dev-lang/python:2.4
 		) )"
 
 S=${WORKDIR}
@@ -71,13 +70,9 @@ QA_TEXTRELS_x86="opt/VirtualBox/VBoxGuestPropSvc.so
 	opt/VirtualBox/VBoxDD2.so
 	opt/VirtualBox/VBoxOGLrenderspu.so
 	opt/VirtualBox/VBoxPython.so
-	opt/VirtualBox/VBoxPython2_3.so
-	opt/VirtualBox/VBoxPython2_4.so
 	opt/VirtualBox/VBoxPython2_5.so
 	opt/VirtualBox/VBoxPython2_6.so
 	opt/VirtualBox/VBoxPython2_7.so
-	opt/VirtualBox/VBoxPython3_0.so
-	opt/VirtualBox/VBoxPython3_1.so
 	opt/VirtualBox/VBoxDD.so
 	opt/VirtualBox/VBoxVRDP.so
 	opt/VirtualBox/VBoxDDU.so
@@ -118,13 +113,9 @@ QA_PRESTRIPPED="opt/VirtualBox/VBoxDD.so
 	opt/VirtualBox/VBoxOGLhosterrorspu.so
 	opt/VirtualBox/VBoxOGLrenderspu.so
 	opt/VirtualBox/VBoxPython.so
-	opt/VirtualBox/VBoxPython2_3.so
-	opt/VirtualBox/VBoxPython2_4.so
 	opt/VirtualBox/VBoxPython2_5.so
 	opt/VirtualBox/VBoxPython2_6.so
 	opt/VirtualBox/VBoxPython2_7.so
-	opt/VirtualBox/VBoxPython3_0.so
-	opt/VirtualBox/VBoxPython3_1.so
 	opt/VirtualBox/VBoxREM.so
 	opt/VirtualBox/VBoxREM32.so
 	opt/VirtualBox/VBoxREM64.so
@@ -156,6 +147,8 @@ QA_PRESTRIPPED="opt/VirtualBox/VBoxDD.so
 	opt/VirtualBox/libQtNetworkVBox.so.4
 	opt/VirtualBox/libQtOpenGLVBox.so.4
 	opt/VirtualBox/vboxwebsrv"
+
+PYTHON_UPDATER_IGNORE="1"
 
 src_unpack() {
 	unpack_makeself ${MY_P}_${ARCH}.run
@@ -244,7 +237,7 @@ src_install() {
 
 	if use python; then
 		local pyver
-		for pyver in 2.4 2.5 2.6 2.7 3.0 3.1 ; do
+		for pyver in 2.5 2.6 2.7; do
 			if has_version "=dev-lang/python-${pyver}*" && [ -f "${S}/VBoxPython${pyver/./_}.so" ] ; then
 				doins VBoxPython${pyver/./_}.so || die
 			fi
