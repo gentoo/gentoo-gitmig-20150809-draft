@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.5.1.0.ebuild,v 1.1 2012/03/01 22:07:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.5.1.0.ebuild,v 1.2 2012/03/16 08:31:48 radhermit Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs bash-completion-r1
+inherit eutils toolchain-funcs bash-completion-r1 flag-o-matic
 
 DESCRIPTION="GREYC's Magic Image Converter"
 HOMEPAGE="http://gmic.sourceforge.net/"
@@ -48,7 +48,13 @@ src_prepare() {
 
 	use graphicsmagick || { sed -i -r -e "s/^(MAGICK_(C|LD)FLAGS =).*/\1/" Makefile || die ; }
 	use openexr || { sed -i -r -e "s/^(EXR_(C|LD)FLAGS =).*/\1/" Makefile || die ; }
-	use X || { sed -i -r -e "s/^((X11|XSHM)_(C|LD)FLAGS =).*/\1/" Makefile || die ; }
+
+	if ! use X ; then
+		sed -i -r -e "s/^((X11|XSHM)_(C|LD)FLAGS =).*/\1/" Makefile || die
+
+		# Disable display capabilities when X support is disabled
+		append-flags -Dcimg_display=0
+	fi
 }
 
 src_compile() {
