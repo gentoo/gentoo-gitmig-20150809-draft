@@ -1,6 +1,9 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.75 2012/03/12 09:53:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.76 2012/03/16 09:19:50 scarabeus Exp $
+
+  16 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> akonadi-server-1.7.1.ebuild:
+  Stable on amd64 and x86. Wrt bug#408485.
 
   12 Mar 2012; Johannes Huber <johu@gentoo.org> -akonadi-server-1.5.2.ebuild:
   Remove old.
