@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libprojectm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.35 2010/07/29 22:11:16 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.36 2012/03/16 09:46:07 scarabeus Exp $
+
+  16 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> libprojectm-2.0.1-r1.ebuild:
+  Use patches array rather than prepare phase.
 
   29 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   libprojectm-2.0.1-r1.ebuild:
