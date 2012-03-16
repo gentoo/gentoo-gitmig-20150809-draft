@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/unicode-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.22 2012/03/15 13:08:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.23 2012/03/16 15:26:29 jer Exp $
+
+  16 Mar 2012; Jeroen Roovers <jer@gentoo.org> unicode-data-6.0.0.ebuild:
+  Stable for HPPA (bug #408347).
 
   15 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> unicode-data-6.0.0.ebuild:
   Stable on amd64 and x86 wrt bug#408347.
