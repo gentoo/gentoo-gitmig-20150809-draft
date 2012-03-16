@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/grilo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.5 2011/10/20 17:04:00 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.6 2012/03/16 03:34:31 tetromino Exp $
+
+*grilo-0.1.18 (16 Mar 2012)
+
+  16 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -grilo-0.1.16.ebuild, +grilo-0.1.18.ebuild:
+  Version bump fixing some network errors; drop old.
 
   20 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> grilo-0.1.16.ebuild,
   grilo-0.1.17.ebuild:

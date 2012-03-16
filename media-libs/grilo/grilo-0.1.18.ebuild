@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.1.16.ebuild,v 1.2 2011/10/20 17:04:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.1.18.ebuild,v 1.1 2012/03/16 03:34:31 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -55,9 +55,6 @@ src_prepare() {
 	# Don't build examples
 	sed -e '/SUBDIRS/s/examples//' \
 		-i Makefile.am -i Makefile.in || die
-
-	# Various patches from upstream trunk
-	epatch "${FILESDIR}/${P}-media-source-infinite-loop.patch"
 
 	# Fix Test-UI automagic gtk2/gtk3 selection
 	epatch "${FILESDIR}/${PN}-0.1.16-fix-automagic-test-ui.patch"
