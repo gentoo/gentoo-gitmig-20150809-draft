@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.2.ebuild,v 1.1 2012/03/16 19:43:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.2.ebuild,v 1.2 2012/03/16 19:46:20 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="python? 2:2.6"
 
@@ -39,6 +39,8 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig"
 
+DOCS="AUTHORS NEWS README* TROUBLESHOOTING"
+
 pkg_setup() {
 	if use python; then
 		python_set_active_version 2
@@ -52,7 +54,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable static-libs static) \
 		$(use_enable udev) \
 		$(use_enable gtk gdk-pixbuf) \
@@ -65,9 +66,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS NEWS README* TROUBLESHOOTING
-
+	default
 	find "${D}" -name '*.la' -exec rm -f {} +
 }
 
