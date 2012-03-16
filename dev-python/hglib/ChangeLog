@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/hglib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hglib/ChangeLog,v 1.2 2012/02/22 05:40:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hglib/ChangeLog,v 1.3 2012/03/16 07:25:07 patrick Exp $
+
+*hglib-0.2 (16 Mar 2012)
+
+  16 Mar 2012; Patrick Lauer <patrick@gentoo.org> +hglib-0.2.ebuild:
+  Bump for #407413
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> hglib-0.1.ebuild:
   Restricting pypy
