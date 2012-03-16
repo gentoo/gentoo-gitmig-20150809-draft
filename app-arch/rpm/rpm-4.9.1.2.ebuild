@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.1.2.ebuild,v 1.7 2012/03/11 14:45:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.1.2.ebuild,v 1.8 2012/03/16 23:01:03 sochotnicky Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND=">=sys-libs/db-4.5
 	dev-libs/nss
 	python? ( >=dev-lang/python-2.3 )
 	nls? ( virtual/libintl )
-	lua? ( >=dev-lang/lua-5.1.0 )
+	lua? ( >=dev-lang/lua-5.1.0[deprecated] )
 	acl? ( virtual/acl )
 	caps? ( >=sys-libs/libcap-2.0 )"
 
