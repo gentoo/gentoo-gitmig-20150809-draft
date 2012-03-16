@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.376 2012/03/16 10:39:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.377 2012/03/16 10:45:50 chainsaw Exp $
+
+*asterisk-1.8.10.1 (16 Mar 2012)
+
+  16 Mar 2012; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.9.2.ebuild,
+  -asterisk-1.8.9.3.ebuild, -asterisk-1.8.10.0.ebuild,
+  +asterisk-1.8.10.1.ebuild:
+  Security update, fixing a remote DoS (no code execution, AST-2012-002) in
+  app_milliwatt and a stack buffer overflow in the HTTP manager interface
+  (remote code injection, AST-2012-003). As per bug #408431 by Tim Sammut.
+  Actually honour the IAX2 trunk frequency, as per Jaco Kroon in bug #408033.
+  Remove vulnerable ebuilds up to last stable from tree.
 
 *asterisk-10.2.1 (16 Mar 2012)
 
