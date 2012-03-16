@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/libvisual-projectm-2.0.1.ebuild,v 1.1 2009/12/10 20:00:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/libvisual-projectm-2.0.1.ebuild,v 1.2 2012/03/16 09:30:46 scarabeus Exp $
+
+EAPI=4
 
 inherit cmake-utils
 
@@ -24,3 +26,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 DOCS="AUTHORS ChangeLog"
+
+PATCHES=(
+	"${FILESDIR}/${PV}-gcc4.6.patch"
+)
