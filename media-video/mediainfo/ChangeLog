@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mediainfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.38 2012/02/05 01:34:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.39 2012/03/16 07:12:12 radhermit Exp $
+
+*mediainfo-0.7.54 (16 Mar 2012)
+
+  16 Mar 2012; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.54.ebuild:
+  Version bump.
 
   05 Feb 2012; Tim Harder <radhermit@gentoo.org> mediainfo-0.7.53.ebuild:
   Update directory name (bug #402221).
