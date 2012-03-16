@@ -1,0 +1,10 @@
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -446,6 +446,7 @@
+ 	${QT_LIBRARIES}
+ 	${QT_QTMAIN_LIBRARY}
+ 	${QUTIM_LIBS}
++	-lX11
+ 	)
+ 
+ SET (module_install_dir "${CMAKE_ROOT}/Modules")
