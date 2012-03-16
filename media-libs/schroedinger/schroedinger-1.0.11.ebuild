@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.11.ebuild,v 1.2 2012/03/15 17:43:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.11.ebuild,v 1.3 2012/03/16 00:01:32 mr_bones_ Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# from upstream, drop at next release
-	epatch "${FILESDIR}"/${P}-darwin-compile.patch 
+	epatch "${FILESDIR}"/${P}-darwin-compile.patch
 
 	sed -i \
 		-e '/AS_COMPILER_FLAG(-O3/d' \
