@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/phpvirtualbox
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.1 2012/03/16 22:44:27 hwoarang Exp $
+
+*phpvirtualbox-4.1.7 (16 Mar 2012)
+
+  16 Mar 2012; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +phpvirtualbox-4.1.7.ebuild:
+  Moved from my overlay. Bug #338804. Thanks to Florian Knodt
+  <f.knodt@yotaweb.de> for the original ebuild
+
