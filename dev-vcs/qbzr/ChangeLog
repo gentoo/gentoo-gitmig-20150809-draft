@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/qbzr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.29 2012/02/22 08:42:06 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.30 2012/03/16 23:44:01 fauli Exp $
+
+*qbzr-0.22.1 (16 Mar 2012)
+
+  16 Mar 2012; Christian Faulhammer <fauli@gentoo.org> +qbzr-0.22.1.ebuild:
+  version bump
 
   22 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove python herd.
