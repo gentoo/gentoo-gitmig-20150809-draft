@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.829 2012/03/06 23:35:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.830 2012/03/16 12:23:27 johu Exp $
+
+*kdelibs-4.8.1-r1 (16 Mar 2012)
+
+  16 Mar 2012; Johannes Huber <johu@gentoo.org>
+  +files/kdelibs-4.8.1-nepomuk-kmail.patch, +kdelibs-4.8.1-r1.ebuild:
+  Revision bump adds upstream patch to fix crashes in kmail caused by nepomuk
+  concurrency problems. This is issue is fixed in KDE SC 4.8.2. Patch spotted by
+  Volker Hemmann <volkerarmin@googlemail.com>. Fixes bug #408421.
 
 *kdelibs-4.8.1 (06 Mar 2012)
 
