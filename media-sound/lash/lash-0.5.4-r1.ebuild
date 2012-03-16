@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.12 2011/03/29 06:56:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.13 2012/03/16 02:37:57 floppym Exp $
 
 EAPI=2
 
-inherit eutils libtool
+inherit autotools eutils
 
 DESCRIPTION="LASH Audio Session Handler"
 HOMEPAGE="http://www.nongnu.org/lash/"
@@ -27,7 +27,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-glibc2.8.patch"
-	elibtoolize
+	epatch "${FILESDIR}/${P}-swig_version_comparison.patch"
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_configure() {
