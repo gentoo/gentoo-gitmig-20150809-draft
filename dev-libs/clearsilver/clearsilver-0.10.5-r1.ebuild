@@ -1,13 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r1.ebuild,v 1.4 2011/03/26 10:37:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r1.ebuild,v 1.5 2012/03/16 02:32:59 floppym Exp $
 
 # Please note: apache, java, mono and ruby support disabled for now.
 # Fill a bug if you need it.
 #
 # dju@gentoo.org, 4th July 2005
 
-inherit eutils perl-app multilib autotools
+EAPI="4"
+GENTOO_DEPEND_ON_PERL="no"
+PYTHON_DEPEND="python? 2"
+
+inherit autotools eutils multilib perl-app python
 
 DESCRIPTION="Clearsilver is a fast, powerful, and language-neutral HTML template system."
 HOMEPAGE="http://www.clearsilver.net/"
@@ -18,20 +22,22 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="perl python zlib"
 
-DEPEND="python? ( dev-lang/python )
-	perl? ( dev-lang/perl )
+DEPEND="perl? ( dev-lang/perl )
 	zlib? ( sys-libs/zlib )"
+RDEPEND="${DEPEND}"
 
-DOCS="README INSTALL"
+DOCS=(README INSTALL)
 
-if use python ; then
-	DOCS="${DOCS} README.python"
-fi
+pkg_setup() {
+	if use python; then
+		DOCS+=(README.python)
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
 
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-perl_installdir.patch
 
 	use zlib && epatch "${FILESDIR}"/${P}-libz.patch
@@ -44,7 +50,7 @@ src_unpack() {
 	[[ "${ARCH}" == FreeBSD ]] && touch ${S}/features.h ${S}/cgi/features.h
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable perl) \
 		$(use_with perl perl /usr/bin/perl) \
@@ -54,16 +60,15 @@ src_compile() {
 		"--disable-apache" \
 		"--disable-ruby" \
 		"--disable-java" \
-		"--disable-csharp" \
-		|| die "./configure failed"
+		"--disable-csharp"
+}
 
-	emake || die "emake failed"
+src_compile() {
+	default
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
-
-	dodoc ${DOCS} || die "dodoc failed"
+	default
 
 	if use perl ; then
 		fixlocalpod || die "fixlocalpod failed"
