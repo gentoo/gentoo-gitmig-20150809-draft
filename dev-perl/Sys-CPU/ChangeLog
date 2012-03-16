@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-CPU
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.18 2012/03/12 19:14:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.19 2012/03/16 18:16:14 ranger Exp $
+
+  16 Mar 2012; Brent Baude <ranger@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  Marking Sys-CPU-0.520.0 ppc64 for bug 356387
 
   12 Mar 2012; Markus Meier <maekke@gentoo.org> Sys-CPU-0.520.0.ebuild:
   arm stable, bug #356387
