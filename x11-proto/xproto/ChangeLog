@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/xproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.133 2012/02/23 18:52:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.134 2012/03/16 23:33:18 chithanh Exp $
+
+*xproto-7.0.23 (16 Mar 2012)
+
+  16 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xproto-7.0.23.ebuild:
+  Version bump.
 
   23 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> -xproto-7.0.20.ebuild,
   -xproto-7.0.21.ebuild:
