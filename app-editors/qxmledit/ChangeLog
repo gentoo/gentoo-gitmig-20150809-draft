@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/qxmledit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.22 2012/03/12 21:06:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.23 2012/03/16 14:42:39 pesa Exp $
+
+*qxmledit-0.8.0-r1 (16 Mar 2012)
+
+  16 Mar 2012; Davide Pesavento <pesa@gentoo.org> +qxmledit-0.8.0-r1.ebuild,
+  -qxmledit-0.6.1.ebuild, -qxmledit-0.7.0.ebuild, -qxmledit-0.8.0.ebuild,
+  metadata.xml:
+  Fix bug #408201, patch by Ben Kohler <bkohler@gmail.com>. Add missing dep on
+  qt-sql. Remove old and broken versions.
 
 *qxmledit-0.8.0 (12 Mar 2012)
 

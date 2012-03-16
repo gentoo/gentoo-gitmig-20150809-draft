@@ -7,8 +7,7 @@
 		<name>Markos Chandras</name>
 	</maintainer>
 	<longdescription lang="en">
-		QXmlEdit is a simple XML editor written in qt4, it is not a complete and
+		QXmlEdit is a simple XML editor written in Qt4, it is not a complete and
 		full featured editor.
 	</longdescription>
 </pkgmetadata>
-
