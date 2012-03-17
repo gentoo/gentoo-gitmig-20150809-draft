@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ispell-da
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.72 2012/03/17 23:13:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.73 2012/03/17 23:14:36 mattst88 Exp $
+
+  17 Mar 2012; Matt Turner <mattst88@gentoo.org> ispell-da-1.4.48.ebuild,
+  ispell-da-1.4.54.ebuild, ispell-da-1.6.0.ebuild, ispell-da-1.6.18.ebuild:
+  Define RDEPEND.
 
   17 Mar 2012; Matt Turner <mattst88@gentoo.org> ispell-da-1.4.54.ebuild,
   ispell-da-1.6.0.ebuild:

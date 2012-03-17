@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.6.18.ebuild,v 1.8 2012/02/05 17:52:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.6.18.ebuild,v 1.9 2012/03/17 23:14:36 mattst88 Exp $
 
 inherit multilib
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND="app-text/ispell"
+RDEPEND=""
 
 src_compile() {
 	emake || die
