@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/viewer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/ChangeLog,v 1.10 2010/09/16 17:11:04 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/ChangeLog,v 1.11 2012/03/17 11:07:42 pacho Exp $
+
+  17 Mar 2012; Pacho Ramos <pacho@gentoo.org> viewer-0.8.0.ebuild:
+  Add missing deps, bug #408295 by Piotr Szymaniak.
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> viewer-0.8.0.ebuild:
   virtual/glut -> media-libs/glut
