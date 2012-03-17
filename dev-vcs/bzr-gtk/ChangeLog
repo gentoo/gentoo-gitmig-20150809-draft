@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.15 2012/02/05 15:46:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.16 2012/03/17 10:02:21 fauli Exp $
+
+*bzr-gtk-0.103.0 (17 Mar 2012)
+
+  17 Mar 2012; Christian Faulhammer <fauli@gentoo.org> +bzr-gtk-0.103.0.ebuild:
+  version bump, GTK+/Gnome 3 support
 
   05 Feb 2012; Christian Faulhammer <fauli@gentoo.org> bzr-gtk-0.100.0.ebuild:
   Do not install Nautilus extension if USE=nautilus is disabled, also block if
