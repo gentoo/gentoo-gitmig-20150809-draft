@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/digest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.14 2012/03/08 14:43:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.15 2012/03/17 22:28:40 slyfox Exp $
+
+  17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> digest-0.0.0.9.ebuild:
+  alpha/ia64/sparc stable (bug #399979).
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> digest-0.0.0.9.ebuild:
   Marking digest-0.0.0.9 ppc64 for bug 399979
