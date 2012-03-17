@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.1.ebuild,v 1.1 2012/03/09 11:44:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.1-r1.ebuild,v 1.1 2012/03/17 17:33:56 scarabeus Exp $
 
 EAPI=4
 
-MY_PV="3.5.0"
+MY_PV="3.5.1"
 
-RC_VERSION="rc3" # CHECK ME WITH EVERY BUMP!
+RC_VERSION="rc2" # CHECK ME WITH EVERY BUMP!
 BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/${MY_PV}/rpm"
 
 OO_EXTENSIONS=(
@@ -28,8 +28,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="offlinehelp templates"
 
 LANGUAGES_HELP="bg bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA eo es et eu
-fi fr gl gu he hi hr hu id is it ja ka km ko lb mk nb ne nl nn om pl pt_BR pt
-ru si sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
+fi fr gl gu he hi hr hu id is it ja ka km ko lb mk nb ne nl nn om pl pt_BR pt ru
+si sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
 LANGUAGES="${LANGUAGES_HELP} af ar as ast be br brx cy dgo fa ga gd kk kn kok ks
 ku lo lt lv mai ml mn mni mr my nr nso oc or pa_IN ro rw sa_IN sat sd sh sr ss
 st sw_TZ ta te th tn ts uz ve xh zu"
