@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/drift
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.25 2012/03/12 16:08:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.26 2012/03/17 21:50:13 slyfox Exp $
+
+  17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> drift-2.2.3.ebuild:
+  alpha/ia64/sparc stable (bug #399981).
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> drift-2.2.3.ebuild:
   Marking drift-2.2.3 ppc64 for bug 399981
