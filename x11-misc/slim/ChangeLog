@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.81 2012/03/05 15:38:44 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.82 2012/03/17 18:08:05 armin76 Exp $
+
+  17 Mar 2012; Raúl Porcel <armin76@gentoo.org> slim-1.3.2-r7.ebuild:
+  sparc stable wrt #401135
 
   05 Mar 2012; Ian Stakenvicius <axs@gentoo.org>
   +files/405579-fix-numlock.patch, slim-1.3.3.ebuild:
