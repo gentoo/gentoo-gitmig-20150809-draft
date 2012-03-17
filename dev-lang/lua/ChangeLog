@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.157 2012/03/05 23:25:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.158 2012/03/17 20:41:46 mabi Exp $
+
+*lua-5.1.5 (17 Mar 2012)
+
+  17 Mar 2012; Matti Bickel <mabi@gentoo.org> +lua-5.1.5.ebuild:
+  version bump for lua-5.1
 
   05 Mar 2012; Zac Medico <zmedico@gentoo.org> lua-5.2.0.ebuild:
   Add missing newline escape in src_compile emake command.
