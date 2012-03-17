@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.213 2012/03/16 19:09:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.214 2012/03/17 23:00:25 mattst88 Exp $
+
+  17 Mar 2012; Matt Turner <mattst88@gentoo.org> doxygen-1.4.7.ebuild:
+  Drop mips keyword. ~mips was dropped in 2006, and no one ever added it back
+  to newer versions.
 
   16 Mar 2012; Brent Baude <ranger@gentoo.org> doxygen-1.7.6.1.ebuild:
   Marking doxygen-1.7.6.1 ppc for bug 323647
