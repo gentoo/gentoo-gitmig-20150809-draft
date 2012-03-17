@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/mmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/ChangeLog,v 1.18 2012/03/08 14:45:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/ChangeLog,v 1.19 2012/03/17 20:49:11 slyfox Exp $
+
+  17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> mmap-0.5.7.ebuild:
+  alpha/ia64/sparc stable (bug #399987).
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> mmap-0.5.7.ebuild:
   Marking mmap-0.5.7 ppc64 for bug 399987
