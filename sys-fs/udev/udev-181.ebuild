@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.8 2012/03/15 08:48:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.9 2012/03/17 19:42:56 mattst88 Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd l
 
 if [[ ${PV} != "9999" ]]
 then
-	KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 	if [[ -n "${patchversion}" ]]
 	then

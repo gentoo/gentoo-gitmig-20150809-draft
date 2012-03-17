@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.654 2012/03/15 08:48:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.655 2012/03/17 19:42:56 mattst88 Exp $
+
+  17 Mar 2012; Matt Turner <mattst88@gentoo.org> udev-181.ebuild:
+  Added ~mips, bug 397769.
 
   15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> udev-171-r5.ebuild,
   udev-181.ebuild, udev-9999.ebuild:
