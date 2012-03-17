@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-de
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.23 2011/01/18 18:56:39 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.24 2012/03/17 23:02:37 mattst88 Exp $
+
+  17 Mar 2012; Matt Turner <mattst88@gentoo.org>
+  aspell-de-0.60_pre20030222.ebuild:
+  Added ~mips. How did this get dropped?
 
   18 Jan 2011; Fabian Groffen <grobian@gentoo.org>
   aspell-de-0.60_pre20030222.ebuild:
