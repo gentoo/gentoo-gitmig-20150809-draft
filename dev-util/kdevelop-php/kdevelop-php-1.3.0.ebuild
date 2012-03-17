@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.3.0.ebuild,v 1.2 2012/03/17 13:14:28 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.3.0.ebuild,v 1.3 2012/03/17 13:36:38 reavertm Exp $
 
 EAPI=4
 
@@ -8,7 +8,6 @@ KDE_LINGUAS="ca ca@valencia da de en_GB es et fi fr gl it nb nds nl pl pt pt_BR
 sv th uk zh_CN zh_TW"
 VIRTUALX_REQUIRED=test
 KMNAME="kdevelop"
-KMMODULE="php"
 KDE_SCM="git"
 EGIT_REPONAME="kdev-php"
 
