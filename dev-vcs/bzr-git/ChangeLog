@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr-git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/ChangeLog,v 1.8 2012/01/23 16:48:54 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/ChangeLog,v 1.9 2012/03/17 10:58:49 fauli Exp $
+
+  17 Mar 2012; Christian Faulhammer <fauli@gentoo.org> -bzr-git-0.5.2.ebuild:
+  clean up
 
   23 Jan 2012; Thomas Kahle <tomka@gentoo.org> bzr-git-0.6.2.ebuild:
   x86 stable per bug 383751
