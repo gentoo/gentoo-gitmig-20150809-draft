@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.44 2012/02/18 23:11:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.45 2012/03/17 01:57:23 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -122,6 +122,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	einfo "Producing ChangeLog from Git history..."
+	pushd "${S}/.git" >/dev/null || die
+	git log ebcf8975b37a8aae9735eb491a9b4cb63549bd5d^.. \
+		> "${S}"/ChangeLog || die
+	popd >/dev/null || die
+
 	local _version=$(cd "${S}/.git" && git describe --tags | sed -e 's|-\([0-9]\+\)-.\+$|_p\1|')
 	_version=${_version:1}
 	einfo "Setting portage.VERSION to ${_version} ..."
@@ -187,30 +193,33 @@ src_prepare() {
 		echo -e '\nFEATURES="${FEATURES} force-prefix"' >> cnf/make.globals \
 			|| die "failed to append to make.globals"
 	fi
+
+	cd "${S}/cnf" || die
+	if [ -f "make.conf.${ARCH}".diff ]; then
+		patch make.conf "make.conf.${ARCH}".diff || \
+			die "Failed to patch make.conf.example"
+	else
+		eerror ""
+		eerror "Portage does not have an arch-specific configuration for this arch."
+		eerror "Please notify the arch maintainer about this issue. Using generic."
+		eerror ""
+	fi
+
+	# BSD and OSX need a sed wrapper so that find/xargs work properly
+	if use userland_GNU; then
+		rm -f "${S}"/bin/ebuild-helpers/sed || \
+			die "Failed to remove sed wrapper"
+	fi
 }
 
 src_compile() {
 	if use doc; then
-		cd "${S}"/doc
-		touch fragment/date
-		make xhtml xhtml-nochunks || die "failed to make docs"
+		emake docbook || die
 	fi
 
 	if use epydoc; then
 		einfo "Generating api docs"
-		mkdir "${WORKDIR}"/api
-		local my_modules epydoc_opts=""
-		my_modules="$(find "${S}/pym" -name "*.py" \
-			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
-			 -e 's:/:.:g' | sort)" || die "error listing modules"
-		# workaround for bug 282760
-		> "$S/pym/pysqlite2.py"
-		PYTHONPATH=${S}/pym:${PYTHONPATH:+:}${PYTHONPATH} \
-			epydoc -o "${WORKDIR}"/api \
-			-qqqqq --no-frames --show-imports $epydoc_opts \
-			--name "${PN}" --url "${HOMEPAGE}" \
-			${my_modules} || die "epydoc failed"
-		rm "$S/pym/pysqlite2.py"
+		emake epydoc || die
 	fi
 }
 
@@ -219,119 +228,14 @@ src_test() {
 }
 
 src_install() {
-	local libdir=$(get_libdir)
-	local portage_base="/usr/${libdir}/portage"
-	local portage_share_config=/usr/share/portage/config
+	emake DESTDIR="${D}" \
+		sysconfdir="${EPREFIX}/etc" \
+		prefix="${EPREFIX}/usr" \
+		libdir="${EPREFIX}/usr/$(get_libdir)" \
+		install || die
 
-	cd "${S}"/cnf
-	insinto /etc
-	doins etc-update.conf dispatch-conf.conf || die
-
-	insinto "$portage_share_config/sets"
-	doins "$S"/cnf/sets/*.conf || die
-	insinto "$portage_share_config"
-	doins "$S/cnf/make.globals" || die
-	if [ -f "make.conf.${ARCH}".diff ]; then
-		patch make.conf "make.conf.${ARCH}".diff || \
-			die "Failed to patch make.conf.example"
-		newins make.conf make.conf.example || die
-	else
-		eerror ""
-		eerror "Portage does not have an arch-specific configuration for this arch."
-		eerror "Please notify the arch maintainer about this issue. Using generic."
-		eerror ""
-		newins make.conf make.conf.example || die
-	fi
-
-	dosym ..${portage_share_config}/make.globals /etc/make.globals
-
-	insinto /etc/logrotate.d
-	doins "${S}"/cnf/logrotate.d/elog-save-summary || die
-
-	# BSD and OSX need a sed wrapper so that find/xargs work properly
-	if use userland_GNU; then
-		rm "${S}"/bin/ebuild-helpers/sed || die "Failed to remove sed wrapper"
-	fi
-
-	local x symlinks files
-
-	cd "$S" || die "cd failed"
-	for x in $(find bin -type d) ; do
-		exeinto $portage_base/$x || die "exeinto failed"
-		cd "$S"/$x || die "cd failed"
-		files=$(find . -mindepth 1 -maxdepth 1 -type f ! -type l)
-		if [ -n "$files" ] ; then
-			doexe $files || die "doexe failed"
-		fi
-		symlinks=$(find . -mindepth 1 -maxdepth 1 -type l)
-		if [ -n "$symlinks" ] ; then
-			cp -P $symlinks "${ED}$portage_base/$x" || die "cp failed"
-		fi
-	done
-
-	cd "$S" || die "cd failed"
-	for x in $(find pym/* -type d ! -path "pym/portage/tests*") ; do
-		insinto $portage_base/$x || die "insinto failed"
-		cd "$S"/$x || die "cd failed"
-		# __pycache__ directories contain no py files
-		[[ "*.py" != $(echo *.py) ]] || continue
-		doins *.py || die "doins failed"
-		symlinks=$(find . -mindepth 1 -maxdepth 1 -type l)
-		if [ -n "$symlinks" ] ; then
-			cp -P $symlinks "${ED}$portage_base/$x" || die "cp failed"
-		fi
-	done
-
-	# We install some minimal tests for use as a preinst sanity check.
-	# These tests must be able to run without a full source tree and
-	# without relying on a previous portage instance being installed.
-	cd "$S" || die "cd failed"
-	exeinto $portage_base/pym/portage/tests || die
-	doexe pym/portage/tests/runTests || die
-	insinto $portage_base/pym/portage/tests || die
-	doins pym/portage/tests/*.py || die
-	insinto $portage_base/pym/portage/tests/lint || die
-	doins pym/portage/tests/lint/*.py || die
-	doins pym/portage/tests/lint/__test__ || die
-
-	# Symlinks to directories cause up/downgrade issues and the use of these
-	# modules outside of portage is probably negligible.
-	for x in "${ED}${portage_base}/pym/"{cache,elog_modules} ; do
-		[ ! -L "${x}" ] && continue
-		die "symlink to directory will cause upgrade/downgrade issues: '${x}'"
-	done
-
-	doman "${S}"/man/*.[0-9]
-
-	echo 'Producing ChangeLog from Git history...'
-	( cd "${S}/.git" && git log > "${S}"/ChangeLog )
-	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES} || die 'dodoc failed'
-	use doc && dohtml -r "${S}"/doc/*
-	use epydoc && dohtml -r "${WORKDIR}"/api
-
-	dodir /usr/bin
-	for x in ebuild egencache emerge portageq quickpkg repoman ; do
-		dosym ../${libdir}/portage/bin/${x} /usr/bin/${x}
-	done
-
-	dodir /usr/sbin
-	local my_syms="archive-conf
-		dispatch-conf
-		emaint
-		emerge-webrsync
-		env-update
-		etc-update
-		fixpackages
-		regenworld"
-	local x
-	for x in ${my_syms}; do
-		dosym ../${libdir}/portage/bin/${x} /usr/sbin/${x}
-	done
-	dosym env-update /usr/sbin/update-env
-	dosym etc-update /usr/sbin/update-etc
-
-	dodir /etc/portage
-	keepdir /etc/portage
+	# Use dodoc for compression, since the Makefile doesn't do that.
+	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES}
 }
 
 pkg_preinst() {
