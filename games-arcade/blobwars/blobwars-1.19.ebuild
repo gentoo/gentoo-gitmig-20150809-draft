@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.19.ebuild,v 1.4 2012/01/04 17:38:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.19.ebuild,v 1.5 2012/03/17 16:44:32 ssuominen Exp $
 
-EAPI="3"
-
+EAPI=2
 inherit eutils gnome2-utils games
 
 DESCRIPTION="Platform game about a blob and his quest to rescue MIAs from an alien invader"
@@ -26,8 +25,11 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.19-linking-order.patch"
-	epatch "${FILESDIR}/${PN}-1.19-ldflags.patch"
+	epatch \
+		"${FILESDIR}"/${PN}-1.19-linking-order.patch \
+		"${FILESDIR}"/${PN}-1.19-ldflags.patch \
+		"${FILESDIR}"/${PN}-1.19-zlib-1.2.5.2.patch
+
 	sed -i -e "/-Werror/d" makefile || die
 }
 
@@ -49,11 +51,13 @@ src_install() {
 		ICONDIR="/usr/share/icons/hicolor/" \
 		DESKTOPDIR="/usr/share/applications/" \
 		LOCALEDIR="/usr/share/locale/" \
-			install || die
+		install || die
 
-	# now make the docs Gentoo friendly.
-	dodoc "${ED}/usr/share/doc/${PF}/html/"{changes,hacking,porting,readme} || die
-	rm -f "${ED}/usr/share/doc/${PF}/html/"{changes,hacking,porting,readme} || die
+	mv -vf \
+		"${D}"/usr/share/doc/${PF}/html/{changes,hacking,porting,readme} \
+		"${D}"/usr/share/doc/${PF}/
+	prepalldocs
+
 	prepgamesdirs
 }
 

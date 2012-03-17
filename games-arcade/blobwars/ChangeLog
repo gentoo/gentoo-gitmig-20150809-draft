@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/blobwars
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.43 2012/01/04 17:38:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.44 2012/03/17 16:44:32 ssuominen Exp $
+
+  17 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> blobwars-1.19.ebuild,
+  +files/blobwars-1.19-zlib-1.2.5.2.patch:
+  Fix building with sys-libs/zlib >= 1.2.5.2 wrt #408459 by Piotr Szymaniak
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> blobwars-1.19.ebuild:
   x86 stable wrt bug #394435
