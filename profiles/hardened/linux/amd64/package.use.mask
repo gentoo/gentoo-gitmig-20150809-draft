@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.use.mask,v 1.18 2011/08/04 11:21:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.use.mask,v 1.19 2012/03/17 05:35:03 radhermit Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -14,6 +14,10 @@
 ## # foo stuff to work properly again (bug 12345)
 ## =media-video/mplayer-0.90_pre5 foo
 ## =media-video/mplayer-0.90_pre5-r1 foo
+
+# Tim Harder <radhermit@gentoo.org> (17 Mar 2012)
+# skype doesn't work on hardened
+net-im/bitlbee skype
 
 # Kacper Kowalik <xarthisius@gentoo.org> (29 Jul 2011)
 # mask assembler as it currently doesn't work
