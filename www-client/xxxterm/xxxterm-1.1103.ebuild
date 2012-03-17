@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-9999.ebuild,v 1.3 2012/03/17 21:54:12 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.1103.ebuild,v 1.1 2012/03/17 21:54:12 rafaelmartins Exp $
 
 EAPI="4"
 

@@ -1,6 +1,12 @@
 # ChangeLog for www-client/xxxterm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.5 2011/10/24 20:22:05 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.6 2012/03/17 21:54:12 rafaelmartins Exp $
+
+*xxxterm-1.1103 (17 Mar 2012)
+
+  17 Mar 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +xxxterm-1.1103.ebuild, xxxterm-9999.ebuild:
+  Version bump. 1.1103 == 1.11.3 (upstream).
 
   24 Oct 2011; Markus Meier <maekke@gentoo.org> xxxterm-1.518.ebuild:
   x86 stable, bug #387929
