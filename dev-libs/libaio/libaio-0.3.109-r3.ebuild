@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.3 2012/03/12 07:59:59 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.4 2012/03/17 11:03:57 pacho Exp $
 
-EAPI="3"
+EAPI=3
 
 inherit eutils multilib toolchain-funcs
 
@@ -45,10 +45,21 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-0.3.109-install.patch
 		epatch "${FILESDIR}"/${PN}-0.3.109-x32.patch
 		epatch "${FILESDIR}"/${PN}-0.3.109-testcase-8.patch
+		declare -a extra_sed
+		if ! use static-libs; then
+			extra_sed[${#extra_sed[@]}]='-e'
+			extra_sed[${#extra_sed[@]}]='/\tinstall .*\/libaio.a/d'
+			# Tests require the static library to be built.
+			if ! use test; then
+				extra_sed[${#extra_sed[@]}]='-e'
+				extra_sed[${#extra_sed[@]}]='/^all_targets +=/s/ libaio.a//'
+			fi
+		fi
 		sed -i \
 			-e "/^libdir=/s:lib$:$(get_libdir):" \
 			-e "/^prefix=/s:/usr:${EPREFIX}/usr:" \
 			-e '/:=.*strip.*shell.*git/s:=.*:=:' \
+			"${extra_sed[@]}" \
 			src/Makefile Makefile || die
 	done
 	ABI=${OABI}
@@ -60,7 +71,7 @@ emake_libaio() {
 	CC="$(tc-getCC) $(get_abi_CFLAGS)" \
 	AR=$(tc-getAR) \
 	RANLIB=$(tc-getRANLIB) \
-	emake "$@"
+	emake "$@" || die
 }
 
 src_compile() {
@@ -69,7 +80,7 @@ src_compile() {
 	do
 		einfo "Compiling ${ABI} ABI ..."
 		cd "${WORKDIR}"/${ABI}/${P} || die
-		emake_libaio || die
+		emake_libaio
 	done
 	ABI=${OABI}
 }
@@ -82,7 +93,7 @@ src_test() {
 		cd "${WORKDIR}"/${ABI}/${P}/harness || die
 		mkdir testdir || die
 		# 'make check' breaks with sandbox, 'make partcheck' works
-		emake_libaio partcheck prefix="${S}/src" libdir="${S}/src" || die
+		emake_libaio partcheck prefix="${S}/src" libdir="${S}/src"
 	done
 	ABI=${OABI}
 }
@@ -96,7 +107,7 @@ src_install() {
 
 		# Don't use ED for emake, src_prepare already inserts EPREFIX in the correct
 		# place
-		emake_libaio install DESTDIR="${D}" || die
+		emake_libaio install DESTDIR="${D}"
 
 		if is_final_abi; then
 			doman man/*
@@ -111,10 +122,6 @@ src_install() {
 	done
 	ABI=${OABI}
 
-	if ! use static-libs ; then
-		rm "${ED}"usr/lib*/*.a || die
-	fi
-
 	# remove stuff provided by man-pages now
-	rm "${ED}"usr/share/man/man3/{lio_listio,aio_{cancel,error,fsync,init,read,return,suspend,write}}.*
+	rm "${ED}"usr/share/man/man3/{lio_listio,aio_{cancel,error,fsync,init,read,return,suspend,write}}.* || die
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.63 2012/03/12 07:57:39 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.64 2012/03/17 11:03:57 pacho Exp $
+
+  17 Mar 2012; Pacho Ramos <pacho@gentoo.org> -libaio-0.3.109-r1.ebuild,
+  libaio-0.3.109-r3.ebuild:
+  Don't build static libs, bug #408265 by Kevin Pyle; drop old.
 
   12 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
   libaio-0.3.109-r3.ebuild:
