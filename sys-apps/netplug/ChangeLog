@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/netplug
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.24 2011/10/11 08:49:38 polynomial-c Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.25 2012/03/17 22:49:47 mattst88 Exp $
+
+  17 Mar 2012; Matt Turner <mattst88@gentoo.org> netplug-1.2.9.2-r1.ebuild:
+  Added ~mips, bug 374731.
 
 *netplug-1.2.9.2-r1 (11 Oct 2011)
 
