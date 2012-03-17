@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.341 2012/03/17 00:39:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.342 2012/03/17 03:20:38 naota Exp $
+
+  17 Mar 2012; Naohiro Aota <naota@gentoo.org> gnutls-2.12.18.ebuild:
+  Add ~x86-fbsd. #402959
 
   17 Mar 2012; Tim Harder <radhermit@gentoo.org> gnutls-3.0.16.ebuild:
   Use local variable.
