@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.33 2012/03/09 11:07:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.34 2012/03/17 18:17:31 scarabeus Exp $
 
 EAPI=4
 
@@ -198,7 +198,7 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	# this can't be upstreamed :(
-	"${FILESDIR}/${PN}-system-pyuno.patch"
+	"${FILESDIR}/${PN}-3.6-system-pyuno.patch"
 )
 
 REQUIRED_USE="
@@ -495,6 +495,12 @@ src_install() {
 		insinto /usr/$(get_libdir)/${PN}/program
 		newins "${WORKDIR}/branding-sofficerc" sofficerc
 	fi
+
+	# Hack for offlinehelp, this needs fixing upstream at some point.
+	# It is broken because we send --without-help
+	# https://bugs.freedesktop.org/show_bug.cgi?id=46506
+	insinto /usr/$(get_libdir)/libreoffice/help
+	doins xmlhelp/util/main_transform.xsl
 }
 
 pkg_preinst() {

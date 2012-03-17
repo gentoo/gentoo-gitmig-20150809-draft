@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.253 2012/03/09 13:50:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.254 2012/03/17 18:17:31 scarabeus Exp $
+
+  17 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/libreoffice-3.6-system-pyuno.patch, libreoffice-3.5.1.2.ebuild,
+  libreoffice-3.5.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Fix broken patch on live wrt bug#408059. Also fix offlinehelp wrt bug#404551.
 
   09 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/libreoffice-3.5.1-kde-4.8.1-namespace.patch,
