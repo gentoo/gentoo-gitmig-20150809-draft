@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-MemInfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-MemInfo/ChangeLog,v 1.17 2012/03/16 18:16:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-MemInfo/ChangeLog,v 1.18 2012/03/17 17:56:15 armin76 Exp $
+
+  17 Mar 2012; Raúl Porcel <armin76@gentoo.org> Sys-MemInfo-0.910.0.ebuild:
+  sparc stable wrt #356387
 
   16 Mar 2012; Brent Baude <ranger@gentoo.org> Sys-MemInfo-0.910.0.ebuild:
   Marking Sys-MemInfo-0.910.0 ppc64 for bug 356387
