@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/ansi-terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.14 2012/03/08 14:40:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.15 2012/03/17 19:18:36 slyfox Exp $
+
+  17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  ansi-terminal-0.5.5.ebuild:
+  alpha/ia64/sparc stable (bug #399967).
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> ansi-terminal-0.5.5.ebuild:
   Marking ansi-terminal-0.5.5 ppc64 for bug 399967
