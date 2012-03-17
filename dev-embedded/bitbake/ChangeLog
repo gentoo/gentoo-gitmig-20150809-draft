@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/bitbake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.42 2012/02/17 21:49:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.43 2012/03/17 10:25:33 radhermit Exp $
+
+*bitbake-1.15.1-r1 (17 Mar 2012)
+
+  17 Mar 2012; Tim Harder <radhermit@gentoo.org> +bitbake-1.15.1-r1.ebuild:
+  Revbump to add dependency on futures (fixes bug #406945).
 
   17 Feb 2012; Tim Harder <radhermit@gentoo.org> bitbake-1.14.0.ebuild,
   bitbake-1.15.1.ebuild:
