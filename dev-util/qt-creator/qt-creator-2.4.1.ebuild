@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.1.ebuild,v 1.2 2012/03/15 21:04:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.1.ebuild,v 1.3 2012/03/17 10:59:24 pesa Exp $
 
 EAPI=4
 
@@ -119,6 +119,7 @@ src_install() {
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins share/doc/qtcreator/qtcreator{,-dev}.qch
+		docompress -x /usr/share/doc/${PF}/qtcreator{,-dev}.qch
 	fi
 
 	# Install icon & desktop file
@@ -130,7 +131,7 @@ src_install() {
 	for lang in ${LANGS}; do
 		if ! has ${lang} ${LINGUAS}; then
 			rm "${ED}"usr/share/qtcreator/translations/qtcreator_${lang}.qm \
-				|| eqawarn "failed to remove ${lang} translation"
+				|| eqawarn "Failed to remove ${lang} translation"
 		fi
 	done
 }

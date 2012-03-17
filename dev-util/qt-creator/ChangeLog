@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.109 2012/03/15 21:04:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.110 2012/03/17 10:59:24 pesa Exp $
+
+  17 Mar 2012; Davide Pesavento <pesa@gentoo.org> qt-creator-2.4.1.ebuild:
+  Add missing 'docompress -x' call wrt bug 408129 by Jaak Ristioja
+  <jaak@ristioja.ee>.
 
   15 Mar 2012; Davide Pesavento <pesa@gentoo.org> -qt-creator-2.4.0-r1.ebuild,
   qt-creator-2.4.1.ebuild:
