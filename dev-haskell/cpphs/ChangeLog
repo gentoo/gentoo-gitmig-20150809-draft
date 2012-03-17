@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cpphs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.30 2012/03/08 14:43:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.31 2012/03/17 22:16:09 slyfox Exp $
+
+  17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> cpphs-1.12.ebuild:
+  alpha/ia64/sparc stable (bug #399975).
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> cpphs-1.12.ebuild:
   Marking cpphs-1.12 ppc64 for bug 399975
