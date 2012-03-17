@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.16.ebuild,v 1.1 2012/03/16 23:02:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.16.ebuild,v 1.2 2012/03/17 00:39:40 radhermit Exp $
 
 EAPI=4
 
@@ -47,7 +47,7 @@ S="${WORKDIR}/${P%_pre*}"
 DOCS=( AUTHORS ChangeLog NEWS README THANKS doc/TODO )
 
 src_prepare() {
-	local dir
+	local dir file
 
 	# tests/suite directory is not distributed.
 	sed -i \
@@ -64,8 +64,8 @@ src_prepare() {
 	find . -name ltmain.sh -exec rm {} \;
 
 	# force regeneration of autogen-ed files
-	for i in $(grep -l AutoGen-ed src/*.c) ; do
-		rm src/$(basename ${i} .c).{c,h} || die
+	for file in $(grep -l AutoGen-ed src/*.c) ; do
+		rm src/$(basename ${file} .c).{c,h} || die
 	done
 
 	# support user patches
