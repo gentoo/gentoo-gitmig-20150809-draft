@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0h.ebuild,v 1.4 2012/03/13 14:23:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0h.ebuild,v 1.5 2012/03/17 17:40:59 armin76 Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 
 LICENSE="openssl"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test zlib"
 
 # Have the sub-libs in RDEPEND with [static-libs] since, logically,

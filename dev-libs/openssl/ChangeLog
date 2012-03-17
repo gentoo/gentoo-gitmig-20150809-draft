@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.434 2012/03/15 18:11:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.435 2012/03/17 17:40:59 armin76 Exp $
+
+  17 Mar 2012; Raúl Porcel <armin76@gentoo.org> openssl-1.0.0h.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #406199
 
   15 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> openssl-0.9.8u.ebuild:
   x86 stable wrt bug #406199
