@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.57 2012/03/08 10:23:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.58 2012/03/17 22:30:14 floppym Exp $
 
 EAPI=4
 
@@ -122,15 +122,27 @@ grub_src_configure() {
 
 	[[ -z ${platform} ]] && die "${FUNCNAME} [platform]"
 
-	# check if we have to specify the target (EFI)
-	# or just append correct --with-platform
-	if [[ ${platform} == efi-32 ]]; then
-		# Build 32-bit EFI on 64-bit system
-		target="--target=i386"
-	fi
+	# Used below for efi cross-building
+	tc-export CC NM OBJCOPY STRIP
+	unset TARGET_CC TARGET_CFLAGS TARGET_CPPFLAGS
 
 	case ${platform} in
-		efi-*) with_platform="--with-platform=${platform%-*}" ;;
+		efi-32)
+			if [[ ${CHOST} == x86_64* ]]; then
+				target="--target=i386"
+				export TARGET_CC="${CC}"
+			fi
+			with_platform="--with-platform=efi"
+			;;
+		efi-64)
+			if [[ ${CHOST} == i?86* ]]; then
+				target="--target=x86_64"
+				export TARGET_CC="${CC}"
+				export TARGET_CFLAGS="-march=x86-64"
+				export TARGET_CPPFLAGS="-march=x86-64"
+			fi
+			with_platform="--with-platform=efi"
+			;;
 		guessed) ;;
 		*) with_platform="--with-platform=${platform}" ;;
 	esac
