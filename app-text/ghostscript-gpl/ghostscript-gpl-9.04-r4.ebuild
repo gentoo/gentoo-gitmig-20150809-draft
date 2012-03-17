@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r4.ebuild,v 1.5 2012/01/14 22:43:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r4.ebuild,v 1.6 2012/03/17 12:04:25 ssuominen Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ IUSE="bindist cups dbus djvu gtk idn jpeg2k static-libs X"
 COMMON_DEPEND="
 	app-text/libpaper
 	media-libs/fontconfig
-	media-libs/freetype:2
+	>=media-libs/freetype-2.4.2:2
 	media-libs/lcms:0
 	media-libs/libpng:0
 	media-libs/tiff:0
