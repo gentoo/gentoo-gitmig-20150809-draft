@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.3.0.ebuild,v 1.1 2012/03/12 15:56:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.3.0.ebuild,v 1.2 2012/03/17 13:14:28 reavertm Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ else
 fi
 
 DEPEND="
-	>=dev-util/kdevelop-pg-qt-0.9.82
+	>=dev-util/kdevelop-pg-qt-1.0.0
 "
 RDEPEND="
 	dev-util/kdevelop
