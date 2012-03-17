@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.184 2012/03/03 16:31:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.185 2012/03/17 02:05:26 mattst88 Exp $
+
+*libdrm-2.4.32 (17 Mar 2012)
+
+  17 Mar 2012; Matt Turner <mattst88@gentoo.org> +libdrm-2.4.32.ebuild:
+  Version bump. Fixes bug 371899.
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> libdrm-2.4.27.ebuild:
   Marking libdrm-2.4.27 ppc64 stable for bug 394393
