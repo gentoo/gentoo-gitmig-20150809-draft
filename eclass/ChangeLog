@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.169 2012/03/15 16:51:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.170 2012/03/17 00:01:59 mpagano Exp $
+
+  17 Mar 2012; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
+  Fix eclass for rc kernels, and fix testing tarball download location. bug
+  #407869
 
   15 Mar 2012; Patrick Lauer <patrick@gentoo.org> distutils.eclass:
   Fixing #407495
