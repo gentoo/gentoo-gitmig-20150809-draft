@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.9.6-r1.ebuild,v 1.1 2011/02/10 21:35:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.9.6-r1.ebuild,v 1.2 2012/03/17 18:07:10 armin76 Exp $
 
 WANT_AUTOCONF="2.5"
 WX_GTK_VER=2.8
@@ -11,7 +11,7 @@ HOMEPAGE="http://rapidsvn.tigris.org/"
 SRC_URI="http://www.rapidsvn.org/download/release/${PV}/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="doc static"
 
 COMMON_DEP=">=dev-vcs/subversion-1.4.4
