@@ -1,6 +1,12 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.152 2012/02/23 16:20:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.153 2012/03/17 05:46:06 radhermit Exp $
+
+*bitlbee-3.0.5-r1 (17 Mar 2012)
+
+  17 Mar 2012; Tim Harder <radhermit@gentoo.org> +bitlbee-3.0.5-r1.ebuild,
+  +files/bitlbee-3.0.5-parallel-make.patch, metadata.xml:
+  Revbump to add support for building skype plugin (bug #405043).
 
   23 Feb 2012; Brent Baude <ranger@gentoo.org> bitlbee-3.0.4.ebuild:
   Marking bitlbee-3.0.4 ppc for bug 405011
