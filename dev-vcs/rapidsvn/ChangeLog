@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/rapidsvn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.8 2012/03/17 19:42:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.9 2012/03/17 19:43:40 jlec Exp $
+
+  17 Mar 2012; Justin Lecher <jlec@gentoo.org> -files/rapidsvn-0.9.8-sar.patch,
+  -files/rapidsvn-sar.patch:
+  Cleaned patches
 
   17 Mar 2012; Justin Lecher <jlec@gentoo.org> -rapidsvn-0.9.6-r1.ebuild,
   rapidsvn-0.12.0.ebuild:
