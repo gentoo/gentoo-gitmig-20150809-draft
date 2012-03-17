@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.0.4.ebuild,v 1.1 2012/03/15 16:46:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.0.4.ebuild,v 1.2 2012/03/17 23:27:31 blueness Exp $
 
 EAPI=4
 
@@ -45,9 +45,10 @@ src_prepare() {
 }
 
 src_compile() {
-	local OPTS=()
+	OPTS=()
 	local BOOST_PKG BOOST_VER BOOST_INC
 
+	OPTS+=("DEBUGFLAGS=")
 	OPTS+=("CXXFLAGS=${CXXFLAGS}")
 	OPTS+=("LDFLAGS=${LDFLAGS}")
 
@@ -70,6 +71,12 @@ src_compile() {
 
 	cd src || die
 	emake -f makefile.unix "${OPTS[@]}" ${PN}
+}
+
+src_test() {
+	cd src || die
+	emake -f makefile.unix "${OPTS[@]}" test_bitcoin
+	./test_bitcoin || die 'Tests failed'
 }
 
 src_install() {
