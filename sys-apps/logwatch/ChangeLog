@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.81 2012/03/16 18:17:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.82 2012/03/17 17:57:48 armin76 Exp $
+
+  17 Mar 2012; Raúl Porcel <armin76@gentoo.org> logwatch-7.4.0.ebuild:
+  sparc stable wrt #356387
 
   16 Mar 2012; Brent Baude <ranger@gentoo.org> logwatch-7.4.0.ebuild:
   Marking logwatch-7.4.0 ppc64 for bug 356387
