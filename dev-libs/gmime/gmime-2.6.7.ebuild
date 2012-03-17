@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.4.ebuild,v 1.1 2012/01/20 10:21:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.7.ebuild,v 1.1 2012/03/17 10:34:34 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools gnome2 eutils mono
+inherit gnome2 eutils mono
 
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/"
@@ -27,9 +27,9 @@ DEPEND="${RDEPEND}
 	doc? (
 		>=dev-util/gtk-doc-1.8
 		app-text/docbook-sgml-utils )
-	mono? ( dev-dotnet/gtk-sharp-gapi:2 )
+	mono? ( dev-dotnet/gtk-sharp-gapi:2 )"
 
-	dev-util/gtk-doc-am"
+#	dev-util/gtk-doc-am"
 # eautoreconf requires dev-util/gtk-doc-am
 
 pkg_setup() {
@@ -39,13 +39,6 @@ pkg_setup() {
 		--disable-strict-parser
 		$(use_enable mono)
 		$(use_enable static-libs static)"
-}
-
-src_prepare() {
-	# https://bugzilla.gnome.org/show_bug.cgi?id=667070
-	epatch "${FILESDIR}/${P}-fix-tutorial.patch" # needs eautoreconf
-	eautoreconf
-	gnome2_src_prepare
 }
 
 src_compile() {
@@ -64,8 +57,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}/tutorial
 		doins docs/tutorial/html/*
 	fi
-
-	# rename these two, so they don't conflict with slot 0
-	mv "${ED}/usr/bin/gmime-uuencode"{,-${SLOT}} || die
-	mv "${ED}/usr/bin/gmime-uudecode"{,-${SLOT}} || die
 }
