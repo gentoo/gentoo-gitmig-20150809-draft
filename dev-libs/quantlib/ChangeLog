@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/quantlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.36 2012/03/17 08:52:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.37 2012/03/17 08:54:35 ssuominen Exp $
+
+  17 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> quantlib-1.2.ebuild:
+  Revert all keywording back to ~arch only and for amd64/x86. This package has
+  no maintainer or reverse dependencies.
 
   17 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -quantlib-0.3.10.ebuild,
   -quantlib-0.3.12.ebuild, -quantlib-0.3.14.ebuild, -quantlib-0.3.14-r1.ebuild,
