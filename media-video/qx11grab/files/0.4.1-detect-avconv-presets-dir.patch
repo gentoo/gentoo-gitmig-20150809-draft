@@ -1,0 +1,29 @@
+--- qx11grab-0.4.1.orig/CMakeLists.txt	2012-03-17 18:01:02.533911733 +0100
++++ qx11grab-0.4.1/CMakeLists.txt	2012-03-17 18:01:37.014480664 +0100
+@@ -155,8 +155,8 @@
+ 
+ SET (FFMPEG_INCLUDEDIR ${FFMPEG_STATIC_INCLUDE_DIRS})
+ 
+-FIND_PATH (_ffmpeg_sharedir
+-  NAMES ffmpeg
++FIND_FILE (FFMPEG_SHAREDIR
++  NAMES ffmpeg avconv
+   PATH_SUFFIXES ${FFMPEG_SUFFIX}
+   PATHS
+     /usr/share
+@@ -165,15 +165,8 @@
+     $ENV{AVCONV_DATADIR}
+   DOC "Find FFmpeg data directory for ffpreset files"
+   NO_DEFAULT_PATH
+-  NO_SYSTEM_ENVIRONMENT_PATH
+-  NO_CMAKE_PATH
+ )
+ 
+-IF (_ffmpeg_sharedir)
+-  SET (FFMPEG_SHAREDIR "${_ffmpeg_sharedir}/ffmpeg" CACHE PATH
+-    "FFmpeg data directory for ffpreset files (PATH)")
+-ENDIF (_ffmpeg_sharedir)
+-
+ ##############################################################
+ ## PulseAudio 
+ ##############################################################
