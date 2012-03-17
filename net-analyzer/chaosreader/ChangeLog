@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/chaosreader
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/ChangeLog,v 1.13 2010/05/26 16:11:43 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/ChangeLog,v 1.14 2012/03/17 10:44:09 pacho Exp $
+
+*chaosreader-0.94-r1 (17 Mar 2012)
+
+  17 Mar 2012; Pacho Ramos <pacho@gentoo.org> +chaosreader-0.94-r1.ebuild:
+  Include some upstream fixes, bug #408017 by rainbow.
 
   26 May 2010; Jonathan Callen <abcd@gentoo.org> chaosreader-0.94.ebuild:
   Bump to EAPI=2, fix QA violations, add prefix keywords
