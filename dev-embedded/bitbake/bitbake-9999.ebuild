@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-9999.ebuild,v 1.9 2011/06/09 01:17:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-9999.ebuild,v 1.10 2012/03/17 10:28:26 radhermit Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.5"
 
 inherit distutils
@@ -13,7 +13,7 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
+	SRC_URI="http://cgit.openembedded.org/cgit.cgi/${PN}/snapshot/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~ppc ~x86"
 fi
 
@@ -24,7 +24,14 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc"
 
-RDEPEND="|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] >=dev-python/pysqlite-2.3.2 )
+RDEPEND="
+	|| (
+		dev-lang/python:2.7[sqlite]
+		dev-lang/python:2.6[sqlite]
+		dev-lang/python:2.5[sqlite]
+		>=dev-python/pysqlite-2.3.2
+	)
+	dev-python/futures
 	dev-python/ply
 	dev-python/progressbar"
 DEPEND="${RDEPEND}
@@ -38,9 +45,9 @@ pkg_setup() {
 src_prepare() {
 	if ! use doc ; then
 		sed -i -e 's:doctype = "html":doctype = "none":' \
-			-e 's:("share/doc/bitbake-%s/manual.*))::' setup.py
-		echo "none:" >> doc/manual/Makefile
+			-e 's:("share/doc/bitbake-%s/manual.*))::' setup.py || die
+		echo "none:" >> doc/manual/Makefile || die
 	else
-	    sed -i -e "s:\(share/doc/bitbake-%s.* %\) __version__:\1 \"${PV}\":" setup.py
+	    sed -i -e "s:\(share/doc/bitbake-%s.* %\) __version__:\1 \"${PV}\":" setup.py || die
 	fi
 }
