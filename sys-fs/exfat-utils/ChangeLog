@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/exfat-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/exfat-utils/ChangeLog,v 1.1 2011/06/14 13:49:50 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/exfat-utils/ChangeLog,v 1.2 2012/03/17 15:19:30 ssuominen Exp $
+
+*exfat-utils-0.9.7 (17 Mar 2012)
+
+  17 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +exfat-utils-0.9.7.ebuild:
+  Version bump wrt #400745 by teidakankan. Move everything from / to /usr.
 
 *exfat-utils-0.9.5 (14 Jun 2011)
 
