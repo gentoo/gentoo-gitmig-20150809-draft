@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.50 2012/03/08 14:42:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.51 2012/03/17 18:31:48 slyfox Exp $
+
+  17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> alex-2.3.5.ebuild:
+  alpha/ia64/sparc stable (bug #399965). Passed upstream tests.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> alex-2.3.5.ebuild:
   Marking alex-2.3.5 ppc64 for bug 399965
