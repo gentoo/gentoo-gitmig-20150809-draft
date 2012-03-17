@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.7.1.ebuild,v 1.2 2012/03/08 08:49:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.7.1.ebuild,v 1.3 2012/03/17 21:30:46 chainsaw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ SRC_URI="http://www.dropbox.com/download?dl=packages/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86 ~x86-linux"
+KEYWORDS="amd64 x86 ~x86-linux"
 IUSE="debug"
 
 RDEPEND="gnome-base/nautilus
