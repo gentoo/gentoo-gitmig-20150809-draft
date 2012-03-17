@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monkey-bubble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.29 2012/01/07 16:38:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.30 2012/03/17 20:39:30 tupone Exp $
+
+  17 Mar 2012; Tupone Alfredo <tupone@gentoo.org> monkey-bubble-0.4.0.ebuild:
+  Add dependency on app-text/gnome-doc-utils. Should fix bug #408455 by
+  Piotr Szymaniak
 
   07 Jan 2012; Michael Sterrett <mr_bones_@gentoo.org>
   monkey-bubble-0.4.0.ebuild, files/monkey-bubble-0.4.0-asneeded.patch,

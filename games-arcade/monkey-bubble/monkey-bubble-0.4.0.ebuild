@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.10 2012/01/07 16:38:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.11 2012/03/17 20:39:30 tupone Exp $
 
 EAPI=2
 inherit autotools eutils gnome2
@@ -24,10 +24,10 @@ RDEPEND="x11-libs/gtk+:2
 	>=dev-libs/libxml2-2.6.7"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
+	app-text/gnome-doc-utils
 	dev-util/intltool"
 
 src_prepare() {
-	gnome2_src_prepare
 	epatch \
 		"${FILESDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${P}-gnome-doc.patch \
@@ -37,6 +37,7 @@ src_prepare() {
 		-e 's/ -Werror//' \
 		$(find . -name Makefile.am) \
 		|| die "sed failed"
-	eautoreconf
+	AT_NOELIBTOOLIZE=yes eautoreconf
+	gnome2_src_prepare
 	intltoolize --force || die "intltoolize failed" #bug 180458
 }
