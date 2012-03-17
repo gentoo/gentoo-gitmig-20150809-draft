@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haskell-src
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.43 2012/03/08 14:44:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.44 2012/03/17 21:38:44 slyfox Exp $
+
+  17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  haskell-src-1.0.1.4.ebuild:
+  alpha/ia64/sparc stable (bug #399983).
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> haskell-src-1.0.1.4.ebuild:
   Marking haskell-src-1.0.1.4 ppc64 for bug 399983
