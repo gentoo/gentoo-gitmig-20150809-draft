@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/shared-color-profiles
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shared-color-profiles/ChangeLog,v 1.10 2012/03/08 23:02:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shared-color-profiles/ChangeLog,v 1.11 2012/03/17 21:24:12 tetromino Exp $
+
+*shared-color-profiles-0.1.5 (17 Mar 2012)
+
+  17 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +shared-color-profiles-0.1.5.ebuild:
+  Version bump.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org>
   shared-color-profiles-0.1.4.ebuild:
