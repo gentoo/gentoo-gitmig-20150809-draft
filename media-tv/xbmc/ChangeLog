@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.120 2012/03/15 18:49:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.121 2012/03/17 16:32:01 ssuominen Exp $
+
+  17 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> xbmc-9999.ebuild:
+  Stop applying -libpng-1.5.patch because upstream commit
+  http://github.com/xbmc/xbmc/commit/29f93361a12e5de882f4fb88754914b1d6e3862c
+  replaced it.
 
   15 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/xbmc-11.0-libav-0.8.patch, xbmc-11.0_rc2.ebuild:
