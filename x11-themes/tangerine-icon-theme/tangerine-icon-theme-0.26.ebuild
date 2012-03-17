@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.9 2010/05/30 14:18:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.10 2012/03/17 18:00:38 armin76 Exp $
 
 EAPI=2
 inherit autotools gnome2-utils
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${PN}_${PV}.tar.gz
 
 LICENSE="CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="amd64 x86"
 IUSE="png"
 
 RDEPEND=">=x11-themes/gnome-icon-theme-2.24"
