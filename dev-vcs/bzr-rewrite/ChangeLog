@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr-rewrite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/ChangeLog,v 1.13 2012/01/23 16:48:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/ChangeLog,v 1.14 2012/03/17 10:05:15 fauli Exp $
+
+  17 Mar 2012; Christian Faulhammer <fauli@gentoo.org>
+  -bzr-rewrite-0.6.1.ebuild:
+  clean up
 
   23 Jan 2012; Thomas Kahle <tomka@gentoo.org> bzr-rewrite-0.6.2.ebuild:
   x86 stable per bug 383751
