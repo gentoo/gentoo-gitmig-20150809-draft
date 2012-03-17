@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r200.ebuild,v 1.4 2012/03/06 16:23:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r200.ebuild,v 1.5 2012/03/17 19:22:58 tetromino Exp $
 
 EAPI="4"
 
@@ -72,6 +72,8 @@ src_prepare() {
 	# https://bugs.webkit.org/show_bug.cgi?id=19775
 	# TODO: FAILS TO APPLY!
 	#use sparc && epatch "${FILESDIR}"/${PN}-1.2.3-fix-pool-sparc.patch
+	# bug #389963
+	epatch "${FILESDIR}/${PN}-1.6.1-sparc-needs-alignment.patch"
 
 	# intermediate MacPorts hack while upstream bug is not fixed properly
 	# https://bugs.webkit.org/show_bug.cgi?id=28727
@@ -115,7 +117,7 @@ src_configure() {
 	use alpha && append-ldflags "-Wl,--no-relax"
 
 	# Sigbuses on SPARC with mcpu and co.
-	use sparc && filter-flags "-mcpu=*" "-mvis" "-mtune=*"
+	use sparc && filter-flags "-mvis"
 
 	# https://bugs.webkit.org/show_bug.cgi?id=42070 , #301634
 	use ppc64 && append-flags "-mminimal-toc"
