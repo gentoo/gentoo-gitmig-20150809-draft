@@ -1,0 +1,25 @@
+diff -Naur qx11grab-0.4.1.orig/CMakeLists.txt qx11grab-0.4.1/CMakeLists.txt
+--- qx11grab-0.4.1.orig/CMakeLists.txt	2012-03-17 20:12:08.421574605 +0100
++++ qx11grab-0.4.1/CMakeLists.txt	2012-03-17 20:24:11.833530710 +0100
+@@ -318,7 +318,7 @@
+ 
+ INSTALL (FILES
+   ${ARCHIVE_OUTPUT_PATH}/qx11grab.1
+-  DESTINATION share/man/man1/qx11grab.1
++  DESTINATION share/man/man1/
+ )
+ 
+ ##############################################################
+diff -Naur qx11grab-0.4.1.orig/icons/CMakeLists.txt qx11grab-0.4.1/icons/CMakeLists.txt
+--- qx11grab-0.4.1.orig/icons/CMakeLists.txt	2012-03-17 20:12:08.410574742 +0100
++++ qx11grab-0.4.1/icons/CMakeLists.txt	2012-03-17 20:19:27.200089116 +0100
+@@ -20,7 +20,8 @@
+ ## Pixmaps
+ INSTALL (FILES
+   qx11grab_36.png
+-  DESTINATION share/pixmaps/qx11grab.png
++  DESTINATION share/pixmaps/
++  RENAME qx11grab.png
+   COMPONENT data
+ )
+ 
