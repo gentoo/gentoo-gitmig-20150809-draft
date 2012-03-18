@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r6.ebuild,v 1.11 2011/10/30 15:36:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r6.ebuild,v 1.12 2012/03/18 14:04:17 ssuominen Exp $
 
 DESCRIPTION="Meta ebuild to pull in gst plugins for apps"
 HOMEPAGE="http://www.gentoo.org"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gentoo.org"
 LICENSE="GPL-2"
 SLOT="0.10"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="aac a52 alsa dts dv dvb dvd esd ffmpeg flac lame mms mp3 mpeg musepack mythtv ogg oss pulseaudio taglib theora v4l vcd vorbis vpx wavpack X xv"
+IUSE="aac a52 alsa dts dv dvb dvd ffmpeg flac lame mms mp3 mpeg musepack mythtv ogg oss pulseaudio taglib theora v4l vcd vorbis vpx wavpack X xv"
 
 RDEPEND="=media-libs/gstreamer-0.10*
 	=media-libs/gst-plugins-base-0.10*
@@ -27,7 +27,6 @@ RDEPEND="=media-libs/gstreamer-0.10*
 		>=media-plugins/gst-plugins-dvdread-0.10
 		>=media-plugins/gst-plugins-mpeg2dec-0.10
 		>=media-plugins/gst-plugins-resindvd-0.10.14 )
-	esd? ( >=media-plugins/gst-plugins-esd-0.10 )
 	ffmpeg? ( >=media-plugins/gst-plugins-ffmpeg-0.10 )
 	flac? ( >=media-plugins/gst-plugins-flac-0.10 )
 	lame? ( >=media-plugins/gst-plugins-lame-0.10 )
