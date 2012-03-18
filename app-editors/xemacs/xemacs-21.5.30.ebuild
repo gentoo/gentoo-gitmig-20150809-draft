@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.30.ebuild,v 1.2 2011/08/02 05:43:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.30.ebuild,v 1.3 2012/03/18 12:58:08 ssuominen Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -19,7 +19,7 @@ SRC_URI="http://ftp.xemacs.org/xemacs-21.5/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="alsa debug eolconv esd gif gpm pop postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna xft xim athena neXt Xaw3d gdbm berkdb"
+IUSE="alsa debug eolconv gif gpm pop postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna xft xim athena neXt Xaw3d gdbm berkdb"
 
 X_DEPEND="x11-libs/libXt x11-libs/libXmu x11-libs/libXext x11-misc/xbitmaps"
 
@@ -33,7 +33,6 @@ RDEPEND="
 	postgres? ( dev-db/postgresql-base )
 	ldap? ( net-nds/openldap )
 	alsa? ( media-libs/alsa-lib )
-	esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
 	X? ( $X_DEPEND !Xaw3d? ( !neXt? ( x11-libs/libXaw ) ) )
 	dnd? ( x11-libs/dnd )
@@ -143,7 +142,6 @@ src_configure() {
 
 	# This determines how these sounds should be played
 	use nas	&& soundconf="${soundconf},nas"
-	use esd && soundconf="${soundconf},esd"
 	use alsa && soundconf="${soundconf},alsa"
 
 	myconf="${myconf} --with-sound=${soundconf}"
