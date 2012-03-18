@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.32.1.ebuild,v 1.8 2011/04/10 12:41:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.32.1.ebuild,v 1.9 2012/03/18 13:49:35 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://library.gnome.org/devel/libgnome/stable/"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
-IUSE="branding doc esd"
+IUSE="branding doc"
 
 SRC_URI="${SRC_URI}
 	branding? ( mirror://gentoo/gentoo-gdm-theme-r3.tar.bz2 )"
@@ -23,10 +23,7 @@ RDEPEND=">=gnome-base/gconf-2
 	>=gnome-base/gnome-vfs-2.5.3
 	>=gnome-base/libbonobo-2.13
 	>=dev-libs/popt-1.7
-	media-libs/libcanberra
-	esd? (
-		>=media-sound/esound-0.2.26
-		>=media-libs/audiofile-0.2.3 )"
+	media-libs/libcanberra"
 
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
@@ -41,7 +38,7 @@ pkg_setup() {
 		--disable-static
 		--disable-schemas-install
 		--enable-canberra
-		$(use_enable esd)"
+		--disable-esd"
 	DOCS="AUTHORS ChangeLog NEWS README"
 }
 
