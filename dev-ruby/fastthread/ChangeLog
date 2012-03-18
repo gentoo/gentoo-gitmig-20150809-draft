@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/fastthread
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.47 2011/04/24 18:01:11 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.48 2012/03/18 10:34:33 graaff Exp $
+
+*fastthread-1.0.7-r2 (08 Jan 2012)
+
+  08 Jan 2012; Hans de Graaff <graaff@gentoo.org> +fastthread-1.0.7-r2.ebuild:
+  Add ruby19 target. Handle compilation directly instead of via echoe, and only
+  do this for ruby18 as per the extconf.rb file. Install a noop file for all
+  other targets.
 
   24 Apr 2011; Hans de Graaff <graaff@gentoo.org> -fastthread-1.0.7.ebuild:
   Remove old version.
