@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/ufdbguard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.25 2012/01/19 20:51:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.26 2012/03/18 19:25:31 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #391429.
 
 *ufdbguard-1.28 (19 Jan 2012)
 
