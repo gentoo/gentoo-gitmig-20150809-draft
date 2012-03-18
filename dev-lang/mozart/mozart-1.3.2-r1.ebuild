@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2-r1.ebuild,v 1.6 2009/08/11 07:04:33 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2-r1.ebuild,v 1.7 2012/03/18 15:41:16 armin76 Exp $
 
 inherit elisp-common eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.mozart-oz.org/download/mozart-ftp/store/1.3.2-2006-06-15-tar
 LICENSE="Mozart"
 
 SLOT="0"
-KEYWORDS="-amd64 ~ppc -ppc64 ~sparc ~x86"
+KEYWORDS="-amd64 ~ppc -ppc64 ~x86"
 IUSE="doc emacs gdbm static tcl threads tk"
 
 RDEPEND="dev-lang/perl
