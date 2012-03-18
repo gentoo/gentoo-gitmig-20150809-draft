@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.170 2012/03/17 00:01:59 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.171 2012/03/18 23:33:49 hd_brummy Exp $
+
+  18 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
+  move eerror to ewarn, make the gettext warning less importend
 
   17 Mar 2012; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Fix eclass for rc kernels, and fix testing tarball download location. bug
