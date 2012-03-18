@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.16 2012/03/18 00:19:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.17 2012/03/18 20:05:58 blueness Exp $
+
+  18 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  bitcoin-qt-0.6.0_rc4.ebuild:
+  Readd dropped locales: ca_ES, cs_CZ, eu_ES, fa_IR, fr_FR, ro_RO
 
   18 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
   bitcoin-qt-0.5.0.4.ebuild:
