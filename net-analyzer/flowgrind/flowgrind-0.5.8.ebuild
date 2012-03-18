@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flowgrind/flowgrind-0.5.8.ebuild,v 1.1 2012/03/18 22:42:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flowgrind/flowgrind-0.5.8.ebuild,v 1.2 2012/03/18 22:46:59 radhermit Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="debug gsl pcap"
 
 RDEPEND="dev-libs/xmlrpc-c[abyss,curl]
 	gsl? ( sci-libs/gsl )
-	pcap? ( sys-libs/libcap )"
+	pcap? ( net-libs/libpcap )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
