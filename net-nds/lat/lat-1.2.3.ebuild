@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.3 2010/07/28 13:00:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.4 2012/03/18 19:24:02 pacho Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ SLOT="0"
 RDEPEND=">=dev-lang/mono-1.1.13
 	>=dev-dotnet/gtk-sharp-2.8
 	>=dev-dotnet/gnome-sharp-2.8
-	|| ( dev-dotnet/gtk-sharp[glade] >=dev-dotnet/glade-sharp-2.8 )
+	>=dev-dotnet/glade-sharp-2.8
 	>=dev-dotnet/gconf-sharp-2.8
 	>=gnome-base/gnome-keyring-0.4
 	sys-apps/dbus
