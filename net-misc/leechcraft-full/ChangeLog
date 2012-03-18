@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.12 2012/03/06 18:10:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.13 2012/03/18 19:34:32 maksbotan Exp $
+
+  18 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-full-9999.ebuild:
+  Remove media-video/leechcraft-laure from 9999 RDEPEND
 
   06 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-full-9999.ebuild:
   Add pintab and laure plugins to 9999, thanks to 0xd34df00d
