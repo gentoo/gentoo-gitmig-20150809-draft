@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-ingo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.34 2012/03/06 14:10:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.35 2012/03/18 19:37:37 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> horde-ingo-1.1.2.ebuild,
+  horde-ingo-1.2.3.ebuild, horde-ingo-1.2.5.ebuild:
+  Drop sparc keywords
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> horde-ingo-1.2.5.ebuild:
   Marking horde-ingo-1.2.5 ppc for bug 397243
