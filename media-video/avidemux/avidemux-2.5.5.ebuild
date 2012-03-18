@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.5.ebuild,v 1.1 2011/08/24 02:44:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.5.ebuild,v 1.2 2012/03/18 13:57:59 ssuominen Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
-IUSE="+aac +aften +alsa amr +dts esd jack libsamplerate +mp3 nls oss
+IUSE="+aac +aften +alsa amr +dts jack libsamplerate +mp3 nls oss
 	pulseaudio +sdl +truetype +vorbis +x264 +xv +xvid gtk +qt4"
 
 RDEPEND="dev-libs/libxml2
@@ -28,7 +28,6 @@ RDEPEND="dev-libs/libxml2
 	amr? ( media-libs/opencore-amr )
 	dts? ( media-libs/libdca )
 	mp3? ( media-sound/lame )
-	esd? ( media-sound/esound )
 	jack? ( media-sound/jack-audio-connection-kit )
 	libsamplerate? ( media-libs/libsamplerate )
 	pulseaudio? ( media-sound/pulseaudio )
@@ -110,7 +109,7 @@ src_configure() {
 		$(cmake-utils_use sdl)
 		$(cmake-utils_use xv XVIDEO)
 		$(cmake-utils_use alsa)
-		$(cmake-utils_use esd)
+		-DUSE_ESD=OFF
 		$(cmake-utils_use jack)
 		$(cmake-utils_use oss)
 		$(cmake-utils_use pulseaudio PULSEAUDIOSIMPLE)
