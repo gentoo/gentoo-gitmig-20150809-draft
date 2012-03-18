@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.1.ebuild,v 1.10 2008/10/21 19:30:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.1.ebuild,v 1.11 2012/03/18 18:00:00 armin76 Exp $
 
 inherit eutils toolchain-funcs depend.php
 
@@ -13,7 +13,7 @@ SRC_URI="http://monkeyd.sourceforge.net/versions/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ppc sparc x86"
+KEYWORDS="~amd64 ~mips ppc x86"
 IUSE="php"
 
 RDEPEND="php? ( virtual/httpd-php )"

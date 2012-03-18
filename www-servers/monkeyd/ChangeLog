@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.29 2012/02/28 21:56:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.30 2012/03/18 18:00:00 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> monkeyd-0.9.1.ebuild,
+  monkeyd-0.31.0.ebuild, monkeyd-0.32.0.ebuild, monkeyd-0.33.0.ebuild:
+  Drop sparc keywords
 
   28 Feb 2012; Brent Baude <ranger@gentoo.org> monkeyd-0.31.0.ebuild:
   Marking monkeyd-0.31.0 ppc for bug 403717
