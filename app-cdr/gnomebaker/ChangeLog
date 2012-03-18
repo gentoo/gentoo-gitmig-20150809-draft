@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gnomebaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.62 2012/02/25 00:02:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.63 2012/03/18 17:57:18 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> gnomebaker-0.6.4-r1.ebuild:
+  ia64/sparc stable wrt #399921
 
   25 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
   gnomebaker-0.6.4-r1.ebuild:
