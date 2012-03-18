@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15_beta4.ebuild,v 1.1 2012/03/18 09:35:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15_beta4.ebuild,v 1.2 2012/03/18 14:49:00 jlec Exp $
 
 EAPI=4
 
@@ -89,7 +89,7 @@ src_configure() {
 src_install() {
 	default
 
-	rm "${D}/usr/share/doc/${PF}/COPYING" || die
+	rm "${D}/usr/share/doc/${PF}/README.html" || die
 	dohtml README.html
 }
 
