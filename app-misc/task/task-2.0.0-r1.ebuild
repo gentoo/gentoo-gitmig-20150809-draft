@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-2.0.0.ebuild,v 1.1 2012/03/18 03:57:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-2.0.0-r1.ebuild,v 1.1 2012/03/18 04:19:01 radhermit Exp $
 
 EAPI=4
 
@@ -44,6 +44,11 @@ src_install() {
 	cmake-utils_src_install
 
 	newbashcomp scripts/bash/task_completion.sh task
+
+	if use lua ; then
+		insinto /usr/share/${PN}/extensions
+		doins scripts/extensions/*
+	fi
 
 	if use vim-syntax ; then
 		rm scripts/vim/README
