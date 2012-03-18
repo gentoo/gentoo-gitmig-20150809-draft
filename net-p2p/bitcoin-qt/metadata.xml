@@ -10,6 +10,8 @@
 		<name>Luke Dashjr</name>
 	</maintainer>
 	<use>
+		<flag name="1stclassmsg">Enable First Class Messaging</flag>
+		<flag name="qrcode">Enable QR Code symbol support</flag>
 		<flag name='eligius'>Enable using lower fees accepted by Eligius</flag>
 		<flag name='upnp'>Enable Universal Plug and Play</flag>
 	</use>
