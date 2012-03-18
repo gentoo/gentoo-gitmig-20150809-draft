@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gscanbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/ChangeLog,v 1.14 2012/02/24 14:28:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/ChangeLog,v 1.15 2012/03/18 17:48:26 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> gscanbus-0.7.1.ebuild,
+  gscanbus-0.8.ebuild:
+  Drop sparc keywords
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gscanbus-0.8.ebuild:
   x86 stable wrt bug #404853
