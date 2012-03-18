@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/9libs-1.0-r2.ebuild,v 1.2 2012/02/16 18:15:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/9libs-1.0-r2.ebuild,v 1.3 2012/03/18 15:43:50 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://www.netlib.org/research/9libs/${P}.tar.bz2"
 
 LICENSE="PLAN9"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=x11-proto/xproto-7.0.4

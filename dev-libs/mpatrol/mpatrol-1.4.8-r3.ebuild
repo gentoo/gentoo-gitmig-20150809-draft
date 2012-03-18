@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r3.ebuild,v 1.4 2012/02/16 18:08:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r3.ebuild,v 1.5 2012/03/18 15:40:56 armin76 Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cbmamiga.demon.co.uk/mpatrol/files/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="~amd64 x86"
 IUSE="X"
 
 S="${WORKDIR}/${PN}"
