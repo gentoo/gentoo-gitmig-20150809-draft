@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.8.ebuild,v 1.1 2012/01/22 11:55:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.8.ebuild,v 1.2 2012/03/18 13:07:07 pacho Exp $
 
 EAPI="4"
 
@@ -175,18 +175,6 @@ pkg_postinst() {
 	elog "	FirebirdSql.Data.Firebird"
 	elog "Also read:"
 	elog "http://www.mono-project.com/Firebird_Interbase"
-	elog ""
-	elog "=dev-dotnet/gluezilla-${GO_MONO_REL_PV}*"
-	elog "	Mono.Mozilla"
-	elog "	Mono.Mozilla.WebBrowser"
-	elog "	Mono.Mozilla.Widget"
-	elog "	Interop.SHDocVw"
-	elog "	AxInterop.SHDocVw"
-	elog "	Interop.mshtml.dll"
-	elog "	System.Windows.Forms.WebBrowser"
-	elog "	Microsoft.IE"
-	elog "Also read:"
-	elog "http://www.mono-project.com/WebBrowser"
 	elog ""
 	elog "dev-db/sqlite:3"
 	elog "	Mono.Data.Sqlite"
