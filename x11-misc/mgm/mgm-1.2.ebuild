@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.2.ebuild,v 1.3 2012/02/16 19:34:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.2.ebuild,v 1.4 2012/03/18 15:52:58 armin76 Exp $
 
 DESCRIPTION="Moaning Goat Meter: load and status meter written in Perl"
 HOMEPAGE="http://www.linuxmafia.com/mgm"
 SRC_URI="http://downloads.xiph.org/releases/mgm/${P}.tgz"
 
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ppc x86"
 SLOT="0"
 LICENSE="as-is"
 IUSE=""

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1_p14506.ebuild,v 1.3 2010/07/21 14:54:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1_p14506.ebuild,v 1.4 2012/03/18 15:52:58 armin76 Exp $
 
 inherit eutils versionator
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.linuxmafia.com/mgm/index.html"
 #SRC_URI="http://www.linuxmafia.com/mgm/${P}.tgz"
 SRC_URI="mirror://gentoo/${P}.tar.bz2" # FIXME
 
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="as-is"
 IUSE=""
