@@ -1,0 +1,69 @@
+From 9f9b55ab55ed5251c1607c59d8817231d076d82c Mon Sep 17 00:00:00 2001
+From: Peter Hutterer <peter.hutterer@who-t.net>
+Date: Mon, 12 Dec 2011 01:35:37 +0000
+Subject: test: fix build errors introduced by upstream server change
+
+Introduced by upstream change xorg-server-1.11.99.1-33-g09e4b78,
+    Fix gcc -Wwrite-strings warnings in xf86 ddx
+
+Signed-off-by: Peter Hutterer <peter.hutterer@who-t.net>
+---
+diff --git a/test/fake-symbols.c b/test/fake-symbols.c
+index a312aa0..2d94622 100644
+--- a/test/fake-symbols.c
++++ b/test/fake-symbols.c
+@@ -44,7 +44,7 @@ xf86ReplaceIntOption(OPTTYPE optlist, const char *name, const int val)
+ }
+ 
+ _X_EXPORT char *
+-xf86SetStrOption(OPTTYPE optlist, const char *name, char *deflt)
++xf86SetStrOption(OPTTYPE optlist, const char *name, CONST char *deflt)
+ {
+     return NULL;
+ }
+@@ -60,7 +60,7 @@ xf86AddNewOption(OPTTYPE head, const char *name, const char *val)
+ {
+     return NULL;
+ }
+-_X_EXPORT char *
++_X_EXPORT CONST char *
+ xf86FindOptionValue(OPTTYPE options, const char *name)
+ {
+     return NULL;
+diff --git a/test/fake-symbols.h b/test/fake-symbols.h
+index 7c74f7a..a297d28 100644
+--- a/test/fake-symbols.h
++++ b/test/fake-symbols.h
+@@ -3,8 +3,10 @@
+ 
+ #if GET_ABI_MAJOR(ABI_XINPUT_VERSION) >= 14
+ #define OPTTYPE XF86OptionPtr
++#define CONST const
+ #else
+ #define OPTTYPE pointer
++#define CONST 
+ #endif
+ 
+ extern int xf86ReadSerial (int fd, void *buf, int count);
+@@ -17,15 +19,16 @@ extern int xf86SetSerialSpeed (int fd, int speed);
+ extern OPTTYPE xf86ReplaceIntOption(OPTTYPE optlist, const char *name, const int val);
+ extern OPTTYPE xf86AddNewOption(OPTTYPE head, const char *name, const char *val);
+ extern char* xf86OptionName(OPTTYPE opt);
+-extern char* xf86FindOptionValue(OPTTYPE options, const char *name);
++extern CONST char* xf86FindOptionValue(OPTTYPE options, const char *name);
+ extern int xf86NameCmp(const char *s1, const char *s2);
+ extern char* xf86CheckStrOption(OPTTYPE optlist, const char *name, char *deflt);
+ 
+ 
+-extern char * xf86SetStrOption(OPTTYPE optlist, const char *name, char *deflt);
++extern char * xf86SetStrOption(OPTTYPE optlist, const char *name, CONST char *deflt);
++extern _X_EXPORT char *xf86SetStrOption(XF86OptionPtr optlist, const char *name, const char *deflt);
+ extern int xf86SetBoolOption(OPTTYPE optlist, const char *name, int deflt);
+ extern OPTTYPE xf86AddNewOption(OPTTYPE head, const char *name, const char *val);
+-extern char* xf86FindOptionValue(OPTTYPE options, const char *name);
++extern CONST char* xf86FindOptionValue(OPTTYPE options, const char *name);
+ extern char* xf86OptionName(OPTTYPE opt);
+ extern char *xf86OptionValue(OPTTYPE opt);
+ extern int xf86NameCmp(const char *s1, const char *s2);
+--
+cgit v0.9.0.2-2-gbebe

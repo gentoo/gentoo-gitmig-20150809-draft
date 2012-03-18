@@ -1,0 +1,27 @@
+From c861d4568c2c6cc56db8e683a8d7035bef711262 Mon Sep 17 00:00:00 2001
+From: Peter Hutterer <peter.hutterer@who-t.net>
+Date: Tue, 03 Jan 2012 01:03:14 +0000
+Subject: test: fix build error introduced in 9f9b55ab55ed5
+
+Bad search/replace, ended up in two xf86SetStrOption declarations which
+differed on ABIs < 14.
+
+Fixes https://bugs.freedesktop.org/show_bug.cgi?id=44335
+
+Signed-off-by: Peter Hutterer <peter.hutterer@who-t.net>
+Reviewed-by: Chase Douglas <chase.douglas@canonical.com>
+---
+diff --git a/test/fake-symbols.h b/test/fake-symbols.h
+index a297d28..1fa1716 100644
+--- a/test/fake-symbols.h
++++ b/test/fake-symbols.h
+@@ -25,7 +25,6 @@ extern char* xf86CheckStrOption(OPTTYPE optlist, const char *name, char *deflt);
+ 
+ 
+ extern char * xf86SetStrOption(OPTTYPE optlist, const char *name, CONST char *deflt);
+-extern _X_EXPORT char *xf86SetStrOption(XF86OptionPtr optlist, const char *name, const char *deflt);
+ extern int xf86SetBoolOption(OPTTYPE optlist, const char *name, int deflt);
+ extern OPTTYPE xf86AddNewOption(OPTTYPE head, const char *name, const char *val);
+ extern CONST char* xf86FindOptionValue(OPTTYPE options, const char *name);
+--
+cgit v0.9.0.2-2-gbebe
