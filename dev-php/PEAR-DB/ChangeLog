@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.73 2012/03/18 18:28:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.74 2012/03/18 18:44:09 mabi Exp $
+
+  18 Mar 2012; Matti Bickel <mabi@gentoo.org> -PEAR-DB-1.7.12.ebuild,
+  -PEAR-DB-1.7.14_rc1.ebuild:
+  remove old
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> PEAR-DB-1.7.14.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #402253
