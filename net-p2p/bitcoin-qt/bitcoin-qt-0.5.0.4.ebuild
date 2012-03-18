@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.5.0.4.ebuild,v 1.1 2012/03/15 17:02:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.5.0.4.ebuild,v 1.2 2012/03/18 00:19:29 blueness Exp $
 
 EAPI=4
 
@@ -70,7 +70,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local OPTS=()
+	OPTS=()
 	local BOOST_PKG BOOST_VER
 
 	use dbus && OPTS+=("USE_DBUS=1")
@@ -95,6 +95,12 @@ src_configure() {
 
 src_compile() {
 	emake
+}
+
+src_test() {
+	cd src || die
+	emake -f makefile.unix "${OPTS[@]}" test_bitcoin
+	./test_bitcoin || die 'Tests failed'
 }
 
 src_install() {
