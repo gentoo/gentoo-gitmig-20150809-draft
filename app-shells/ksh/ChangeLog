@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/ksh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.46 2012/03/18 03:54:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.47 2012/03/18 04:01:39 floppym Exp $
+
+*ksh-93.20071105 (18 Mar 2012)
+
+  18 Mar 2012; Mike Gilbert <floppym@gentoo.org> +ksh-93.20071105.ebuild:
+  Restore last version with stable keywords.
 
 *ksh-93.20120229 (18 Mar 2012)
 
