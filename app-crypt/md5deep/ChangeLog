@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.63 2012/02/01 21:39:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.64 2012/03/18 15:11:26 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> md5deep-3.4.ebuild,
+  md5deep-3.7.ebuild, md5deep-3.9.ebuild, md5deep-3.9.1.ebuild,
+  md5deep-4.0.0.ebuild, md5deep-4.0.1.ebuild:
+  Drop sparc keywords
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> md5deep-3.9.1.ebuild:
   Marking md5deep-3.9.1 ppc for bug 396777
