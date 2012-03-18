@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p24.ebuild,v 1.2 2012/03/13 14:43:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p24.ebuild,v 1.3 2012/03/18 23:57:59 vapier Exp $
 
 EAPI="1"
 
@@ -70,7 +70,7 @@ src_unpack() {
 	# Clean out local libs so we know we use system ones
 	rm -rf lib/{readline,termcap}/*
 	touch lib/{readline,termcap}/Makefile.in # for config.status
-	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[a-z]*.h::g' Makefile.in || die
+	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
 
 	# Avoid regenerating docs after patches #407985
 	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die

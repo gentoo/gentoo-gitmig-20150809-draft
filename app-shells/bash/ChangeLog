@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.302 2012/03/14 05:08:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.303 2012/03/18 23:57:59 vapier Exp $
+
+  18 Mar 2012; Mike Frysinger <vapier@gentoo.org> bash-4.2_p20.ebuild,
+  bash-4.2_p24.ebuild:
+  Use :alpha: rather than a-z in sed #408369 by step.
 
   14 Mar 2012; Jeroen Roovers <jer@gentoo.org> bash-4.2_p20.ebuild:
   Stable for HPPA (bug #407937).
