@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/snd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.63 2012/02/20 23:52:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.64 2012/03/18 13:24:51 ssuominen Exp $
+
+  18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> snd-9.11.ebuild:
+  Remove USE="esd" because media-sound/esound isn't in tree anymore.
 
   20 Feb 2012; Tim Harder <radhermit@gentoo.org> snd-12.7.ebuild,
   snd-12.8.ebuild:
