@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.392 2012/03/05 22:06:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.393 2012/03/18 19:36:05 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> vim-core-7.3.409.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #406427
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> vim-core-7.3.409.ebuild:
   Marking vim-core-7.3.409 ppc for bug 406427
