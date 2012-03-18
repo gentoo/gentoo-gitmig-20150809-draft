@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/oclock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/oclock/ChangeLog,v 1.27 2012/02/24 15:35:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/oclock/ChangeLog,v 1.28 2012/03/18 01:40:55 chithanh Exp $
+
+  18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  oclock-1.0.3.ebuild:
+  Fix dependencies, bug #408625.
 
 *oclock-1.0.3 (24 Feb 2012)
 
