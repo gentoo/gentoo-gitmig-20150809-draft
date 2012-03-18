@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portato
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.32 2011/10/27 20:58:09 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.33 2012/03/18 18:24:26 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug 118003.
 
   27 Oct 2011; Thomas Kahle <tomka@gentoo.org> portato-0.14.1.ebuild:
   dropping x11-misc/ktsuss from deps per bug 384449
