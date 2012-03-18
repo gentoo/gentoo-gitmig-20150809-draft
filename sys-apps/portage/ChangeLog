@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.978 2012/03/17 20:41:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.979 2012/03/18 00:16:11 zmedico Exp $
+
+*portage-2.2.0_alpha91 (18 Mar 2012)
+
+  18 Mar 2012; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha91.ebuild:
+  2.2.0_alpha91 version bump. This fixes bug #335320 (add Makefile for portage
+  to install itself), bug #388259 (show restricted fetch instructions
+  immediately after the merge list), bug #406407 (internal whirlpool digest
+  incorrect for gsl-1.15.tar.gz), bug #406749 (QA Notice for install of non
+  UTF-8 file names), bug #406875 (repoman --digest option), bug #406877 (make
+  repoman ignore irrelevant temp files), and bug #407449 (repoman triggers
+  erroneous QA Notice about illegally inherited eclass). Bug #210077 tracks all
+  bugs fixed since portage-2.1.x.
 
   17 Mar 2012; Tony Vroon <chainsaw@gentoo.org> portage-2.1.10.49.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
