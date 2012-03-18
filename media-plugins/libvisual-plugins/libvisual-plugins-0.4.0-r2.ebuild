@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.11 2012/02/08 14:56:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.12 2012/03/18 13:19:17 ssuominen Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -16,11 +16,10 @@ LICENSE="GPL-2"
 
 SLOT="0.4"
 KEYWORDS="amd64 ~hppa ~mips ppc ppc64 x86 ~x86-fbsd"
-IUSE="alsa debug esd gtk jack mplayer opengl"
+IUSE="alsa debug gtk jack mplayer opengl"
 
 RDEPEND="~media-libs/libvisual-${PV}
 	opengl? ( virtual/opengl )
-	esd? ( media-sound/esound )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
 	gtk? ( x11-libs/gtk+:2 )
 	alsa? ( media-libs/alsa-lib )
@@ -43,7 +42,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable debug) \
+	econf \
+		$(use_enable debug) \
 		$(use_enable debug inputdebug) \
 		$(use_enable gtk gdkpixbuf-plugin) \
 		$(use_enable alsa) \
@@ -52,11 +52,11 @@ src_compile() {
 		$(use_enable opengl flower) \
 		$(use_enable opengl nastyfft) \
 		$(use_enable mplayer) \
-		$(use_enable esd) \
+		--disable-esd \
 		$(use_enable jack) \
-		--enable-static --disable-gstreamer-plugin \
-		|| die "econf failed"
-	emake || die "emake failed"
+		--enable-static --disable-gstreamer-plugin
+
+	emake || die
 }
 
 src_install() {
