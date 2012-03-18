@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.0.ebuild,v 1.1 2012/03/07 22:06:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.0.ebuild,v 1.2 2012/03/18 16:24:40 chithanh Exp $
 
 EAPI=4
 
 XORG_DOC=doc
-inherit xorg-2 multilib versionator
+inherit xorg-2 multilib versionator flag-o-matic
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 
 DESCRIPTION="X.Org X servers"
@@ -170,6 +170,9 @@ pkg_setup() {
 		ln -s "${EROOT}usr/$(get_libdir)/opengl/global/include/$i.h" "${T}/mesa-symlinks/GL/$i.h" || die
 	done
 	append-cppflags "-I${T}/mesa-symlinks"
+
+	# Make breakage less obvious, bug #402285.
+	replace-flags -O3 -O2
 }
 
 src_install() {
@@ -185,7 +188,7 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}"/xdm-setup.initd-1 xdm-setup
-	newinitd "${FILESDIR}"/xdm.initd-5 xdm
+	newinitd "${FILESDIR}"/xdm.initd-6 xdm
 	newconfd "${FILESDIR}"/xdm.confd-4 xdm
 
 	# install the @x11-module-rebuild set for Portage

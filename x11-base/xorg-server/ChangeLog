@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.644 2012/03/08 14:51:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.645 2012/03/18 16:24:40 chithanh Exp $
+
+  18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xdm.initd-6, xorg-server-1.12.0.ebuild:
+  Fix bug #366753, workaround bug #402285.
 
 *xorg-server-1.12.0 (07 Mar 2012)
 
