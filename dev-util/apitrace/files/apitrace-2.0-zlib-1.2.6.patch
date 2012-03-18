@@ -1,0 +1,44 @@
+--- apitrace-apitrace-e2c4320/common/trace_file.cpp
++++ apitrace-apitrace-e2c4320/common/trace_file.cpp
+@@ -132,35 +132,35 @@
+ 
+ bool ZLibFile::rawWrite(const void *buffer, size_t length)
+ {
+-    return gzwrite(m_gzFile, buffer, length) != -1;
++    return gzwrite((gzFile)m_gzFile, buffer, length) != -1;
+ }
+ 
+ bool ZLibFile::rawRead(void *buffer, size_t length)
+ {
+-    return gzread(m_gzFile, buffer, length) != -1;
++    return gzread((gzFile)m_gzFile, buffer, length) != -1;
+ }
+ 
+ int ZLibFile::rawGetc()
+ {
+-    return gzgetc(m_gzFile);
++    return gzgetc((gzFile)m_gzFile);
+ }
+ 
+ void ZLibFile::rawClose()
+ {
+     if (m_gzFile) {
+-        gzclose(m_gzFile);
++        gzclose((gzFile)m_gzFile);
+         m_gzFile = NULL;
+     }
+ }
+ 
+ void ZLibFile::rawFlush()
+ {
+-    gzflush(m_gzFile, Z_SYNC_FLUSH);
++    gzflush((gzFile)m_gzFile, Z_SYNC_FLUSH);
+ }
+ 
+ File::Offset ZLibFile::currentOffset()
+ {
+-    return File::Offset(gztell(m_gzFile));
++    return File::Offset(gztell((gzFile)m_gzFile));
+ }
+ 
+ bool ZLibFile::supportsOffsets() const
