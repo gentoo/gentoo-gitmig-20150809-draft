@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/stm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/ChangeLog,v 1.11 2011/02/13 20:28:09 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/ChangeLog,v 1.12 2012/03/18 15:01:03 slyfox Exp $
+
+*stm-2.3 (18 Mar 2012)
+
+  18 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> +stm-2.3.ebuild,
+  -stm-2.1.1.0.ebuild, -stm-2.1.1.2.ebuild:
+  Version bump. Removed old.
 
   13 Feb 2011; Sergei Trofimovich <slyfox@gentoo.org> stm-2.1.2.2.ebuild:
   sparc stable (bug #339155)
