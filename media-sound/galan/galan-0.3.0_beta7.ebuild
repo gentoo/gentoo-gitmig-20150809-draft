@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.5 2011/07/29 09:47:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.6 2012/03/18 13:23:16 ssuominen Exp $
 
 EAPI=4
 inherit flag-o-matic toolchain-funcs
@@ -12,13 +12,12 @@ SRC_URI="mirror://sourceforge/galan/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="vorbis alsa opengl esd jack"
+IUSE="vorbis alsa opengl jack"
 
 RDEPEND="x11-libs/gtk+:2
 	vorbis? ( >=media-sound/vorbis-tools-1.0 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 )
 	opengl? ( >=x11-libs/gtkglarea-1.99.0:2 )
-	esd? ( media-sound/esound )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.80.0 )
 	media-libs/liblrdf
 	media-libs/ladspa-sdk
