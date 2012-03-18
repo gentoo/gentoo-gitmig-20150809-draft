@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.4-r1.ebuild,v 1.7 2011/10/27 06:35:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.4-r1.ebuild,v 1.8 2012/03/18 08:58:56 jlec Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite xml"
@@ -18,10 +18,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gmail gnome idle jingle libnotify networkmanager nls spell srv X xhtml"
 
-# needs EAPI=4
-#REQUIRED_USE="
-#	libnotify? ( dbus )
-#	avahi? ( dbus )"
+REQUIRED_USE="
+	libnotify? ( dbus )
+	avahi? ( dbus )"
 
 COMMON_DEPEND="
 	dev-python/pygtk:2
@@ -63,16 +62,6 @@ RDEPEND="${COMMON_DEPEND}
 	xhtml? ( dev-python/docutils )"
 
 pkg_setup() {
-	if ! use dbus; then
-		if use libnotify; then
-			eerror "The dbus USE flag is required for libnotify support"
-			die "USE=\"dbus\" needed for libnotify support"
-		fi
-		if use avahi; then
-			eerror "The dbus USE flag is required for avahi support"
-			die "USE=\"dbus\" needed for avahi support"
-		fi
-	fi
 	python_set_active_version 2
 	python_pkg_setup
 }
@@ -95,7 +84,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
 	rm "${D}/usr/share/doc/${PF}/"{README.html,COPYING} || die
 	dohtml README.html || die
