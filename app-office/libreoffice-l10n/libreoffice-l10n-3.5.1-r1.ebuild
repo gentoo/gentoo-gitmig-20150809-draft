@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.1-r1.ebuild,v 1.1 2012/03/17 17:33:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.1-r1.ebuild,v 1.2 2012/03/18 09:13:45 scarabeus Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ fi fr gl gu he hi hr hu id is it ja ka km ko lb mk nb ne nl nn om pl pt_BR pt ru
 si sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
 LANGUAGES="${LANGUAGES_HELP} af ar as ast be br brx cy dgo fa ga gd kk kn kok ks
 ku lo lt lv mai ml mn mni mr my nr nso oc or pa_IN ro rw sa_IN sat sd sh sr ss
-st sw_TZ ta te th tn ts uz ve xh zu"
+st sw_TZ ta te th tn ts tt uz ve xh zu"
 
 for lang in ${LANGUAGES}; do
 	helppack=""

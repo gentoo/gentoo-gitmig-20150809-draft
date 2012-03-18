@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.35 2012/03/17 17:33:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.36 2012/03/18 09:13:45 scarabeus Exp $
+
+  18 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-l10n-3.5.1-r1.ebuild:
+  Add tatar lang.
 
 *libreoffice-l10n-3.5.1-r1 (17 Mar 2012)
 
