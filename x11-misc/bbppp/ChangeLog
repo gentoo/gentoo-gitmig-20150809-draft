@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbppp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.17 2012/02/16 18:27:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.18 2012/03/18 15:44:48 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> bbppp-0.2.3.ebuild,
+  bbppp-0.2.5.ebuild:
+  Drop sparc keywords
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bbppp-0.2.5.ebuild:
   x86 stable wrt bug #397257

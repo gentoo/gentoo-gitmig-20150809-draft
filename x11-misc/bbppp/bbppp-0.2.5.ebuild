@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/bbppp-0.2.5.ebuild,v 1.4 2012/02/16 18:27:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/bbppp-0.2.5.ebuild,v 1.5 2012/03/18 15:44:48 armin76 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bbtools/${PN}/${P}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="x11-libs/libX11"
