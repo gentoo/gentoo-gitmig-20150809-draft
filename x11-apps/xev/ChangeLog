@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xev/ChangeLog,v 1.53 2012/02/24 15:37:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xev/ChangeLog,v 1.54 2012/03/18 01:43:01 chithanh Exp $
+
+  18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xev-1.2.0.ebuild:
+  Fix dependencies, bug #408627.
 
 *xev-1.2.0 (24 Feb 2012)
 
