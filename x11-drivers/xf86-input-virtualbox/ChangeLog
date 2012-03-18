@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.76 2011/10/12 21:34:06 polynomial-c Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.77 2012/03/18 18:49:43 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118003.
 
   12 Oct 2011; Lars Wendler <polynomial-c@gentoo.org>
   -xf86-input-virtualbox-4.1.4.ebuild:
