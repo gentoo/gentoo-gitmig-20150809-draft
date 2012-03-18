@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.8 2010/08/31 08:51:59 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.9 2012/03/18 13:27:38 ssuominen Exp $
 
 inherit eutils
 
-IUSE="esd"
+IUSE=""
 
 DESCRIPTION="WindowMaker sound server"
 SRC_URI="http://largo.windowmaker.org/files/${P}.tar.gz"
@@ -12,7 +12,6 @@ HOMEPAGE="http://largo.windowmaker.org/"
 
 RDEPEND=">=x11-wm/windowmaker-0.80.2-r1
 	>=x11-libs/libPropList-0.10.1-r3
-	esd? ( >=media-sound/esound-0.2.34 )
 	>=media-sound/wmsound-data-1.0.0"
 
 DEPEND="${RDEPEND}
@@ -29,7 +28,6 @@ src_unpack()
 	cd "${S}"
 	epatch "${FILESDIR}/wmsound-config.patch"
 	epatch "${FILESDIR}/wmsound-ComplexProgramTargetNoMan.patch"
-	use esd && epatch "${FILESDIR}/wmsound-esd.patch"
 
 	#Fix compilation with --as-needed.
 	sed -i 's:-lPropList $(WMSOUNDLIB):$(WMSOUNDLIB) -lPropList:' src/Imakefile
