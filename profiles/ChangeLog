@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6329 2012/03/18 19:58:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6330 2012/03/18 20:36:31 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite dev-cpp/cppserv and dev-cpp/sptk wrt #402149, Comment #9.
 
   18 Mar 2012; Anthony G. Basile <blueness@gentoo.org> desc/linguas.desc:
   Added some country specific locales

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13589 2012/03/18 19:50:08 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13590 2012/03/18 20:36:31 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (18 Mar 2012)
+# The only working versions got declared obsolete by upstream
+# See, http://bugs.gentoo.org/show_bug.cgi?id=402149#c9
+dev-cpp/cppserv
+dev-cpp/sptk
+
 # Matti Bickel <mabi@gentoo.org> (18 Mar 2012)
 # masked for removal in 30 days, ~15 Apr 2012
 # unmaintained upstream (bug #396963)
