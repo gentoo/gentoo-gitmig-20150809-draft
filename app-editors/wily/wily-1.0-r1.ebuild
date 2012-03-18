@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/wily-1.0-r1.ebuild,v 1.5 2008/09/20 09:10:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/wily-1.0-r1.ebuild,v 1.6 2012/03/18 15:41:48 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://www.netlib.org/research/9libs/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="sparc x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="dev-libs/9libs
