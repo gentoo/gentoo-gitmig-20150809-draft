@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <maintainer>
-  <email>jokey@gentoo.org</email>
-</maintainer>
-<maintainer>
   <email>jabra@ccs.neu.edu</email>
 </maintainer>
 </pkgmetadata>

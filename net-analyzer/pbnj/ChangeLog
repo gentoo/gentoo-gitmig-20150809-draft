@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pbnj
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pbnj/ChangeLog,v 1.7 2008/06/27 21:10:38 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pbnj/ChangeLog,v 1.8 2012/03/18 18:37:46 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118003.
 
   27 Jun 2008; Raúl Porcel <armin76@gentoo.org> -pbnj-2.02.ebuild,
   pbnj-2.04.ebuild:
