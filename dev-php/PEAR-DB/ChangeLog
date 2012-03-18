@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.72 2012/03/02 21:58:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.73 2012/03/18 18:28:48 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> PEAR-DB-1.7.14.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #402253
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> PEAR-DB-1.7.14.ebuild:
   Marking PEAR-DB-1.7.14 ppc64 for bug 402253
