@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk-g729
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.4 2012/01/26 10:02:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.5 2012/03/18 22:00:26 chainsaw Exp $
+
+  18 Mar 2012; Tony Vroon <chainsaw@gentoo.org>
+  asterisk-g729-10.0.3.1.5.ebuild:
+  As pointed out by Michael "Mr. Bones" Sterret, it is no longer possible to
+  depend on 10.0.* versions of Asterisk.
 
 *asterisk-g729-1.8.4.3.1.5-r2 (26 Jan 2012)
 

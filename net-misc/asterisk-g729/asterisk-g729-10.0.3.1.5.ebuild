@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-10.0.3.1.5.ebuild,v 1.1 2012/01/03 13:29:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-10.0.3.1.5.ebuild,v 1.2 2012/03/18 22:00:26 chainsaw Exp $
 
 EAPI="4"
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://store.digium.com/productview.php?product_code=G729CODEC"
 
 BENCH_PV=1.0.8
 
-AST_DPV=10.0
 AST_PV=10.0
 MY_PV=$(replace_version_separator 2 _)
 
@@ -55,7 +54,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND} =net-misc/asterisk-${AST_DPV-${AST_PV}}*"
+RDEPEND="${DEPEND} =net-misc/asterisk-10*"
 
 RESTRICT="mirror strip"
 
