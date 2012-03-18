@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.19.ebuild,v 1.15 2011/10/09 16:31:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.19.ebuild,v 1.16 2012/03/18 13:44:40 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic toolchain-funcs multilib
@@ -26,7 +26,7 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
-IUSE="-aalib -libcaca esd win32codecs nls +css +X directfb +vorbis +alsa
+IUSE="-aalib -libcaca win32codecs nls +css +X directfb +vorbis +alsa
 gnome sdl speex +theora ipv6 altivec opengl aac -fbcon +xv xvmc
 -samba dxr3 vidix mng -flac -oss +v4l xinerama vcd +a52 +mad -imagemagick +dts
 +modplug -gtk pulseaudio -mmap -truetype wavpack +musepack +xcb -jack
@@ -38,7 +38,6 @@ RDEPEND="X? ( x11-libs/libXext
 	xvmc? ( x11-libs/libXvMC )
 	xinerama? ( x11-libs/libXinerama )
 	win32codecs? ( >=media-libs/win32codecs-0.50 )
-	esd? ( media-sound/esound )
 	css? ( >=media-libs/libdvdcss-1.2.7 )
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
@@ -155,7 +154,7 @@ src_configure() {
 		$(use_enable oss) \
 		$(use_with alsa) \
 		--without-arts \
-		$(use_with esd esound) \
+		--without-esound \
 		$(use_with pulseaudio) \
 		$(use_with jack) \
 		$(use_enable vcd) --without-internal-vcdlibs \
