@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nat-traverse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nat-traverse/ChangeLog,v 1.5 2012/02/13 12:56:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nat-traverse/ChangeLog,v 1.6 2012/03/18 18:42:46 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118003.
 
 *nat-traverse-0.5 (13 Feb 2012)
 

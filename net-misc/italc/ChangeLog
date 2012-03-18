@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/italc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.24 2011/02/28 18:02:57 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.25 2012/03/18 18:42:07 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118003.
 
   28 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> italc-1.0.9.ebuild:
   Use virtual/jpeg.
