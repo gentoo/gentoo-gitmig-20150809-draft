@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ccze
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.31 2012/02/16 19:29:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.32 2012/03/18 15:51:16 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> ccze-0.2.1-r2.ebuild,
+  ccze-0.2.1-r3.ebuild:
+  Drop sparc keywords
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ccze-0.2.1-r3.ebuild:
   x86 stable wrt bug #396745

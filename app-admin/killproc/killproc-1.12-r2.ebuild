@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.25 2009/01/03 17:19:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.26 2012/03/18 15:52:28 armin76 Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.suse.com/pub/projects/init/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 src_unpack() {
