@@ -1,12 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/libflashsupport-1.2.ebuild,v 1.5 2010/05/03 15:02:39 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/libflashsupport-1.2.ebuild,v 1.6 2012/03/18 13:36:54 ssuominen Exp $
 
 EAPI="3"
 inherit eutils multilib toolchain-funcs
 
-DESCRIPTION="Adds pulseaudio/esd/oss audio output and HTTPS/RTMPS support to
-Adobe Flash 9"
+DESCRIPTION="Adds pulseaudio/oss audio output and HTTPS/RTMPS support to Adobe Flash 9"
 HOMEPAGE="http://pulseaudio.org/wiki/FlashPlayer9Solution"
 SRC_URI="https://svn.revolutionlinux.com/MILLE/XTERM/trunk/libflashsupport/Tarballs/${P}.tar.bz2"
 
@@ -16,14 +15,13 @@ KEYWORDS="~amd64 ~x86"
 
 # Note: gnutls overrides 'ssl' if both are set.  If only 'ssl' is set, openssl
 # is used.
-IUSE="pulseaudio esd oss ssl gnutls"
+IUSE="pulseaudio oss ssl gnutls"
 
 DEPEND="gnutls? ( net-libs/gnutls )
 	!gnutls? ( ssl? ( dev-libs/openssl ) )
 	pulseaudio? ( media-sound/pulseaudio )"
 
-RDEPEND="${DEPEND}
-	esd? ( media-sound/esound )"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i -e 's:/var/lib/run/pulse/native:/var/run/pulse/native:' \
@@ -43,13 +41,9 @@ src_compile() {
 		export PULSE=""
 	fi
 
-	if use esd; then
-		export LIBESDPATH="-DLIBESDPATH='\"libesd.so.0\"'"
-		export ESD="-DESD"
-	else
-		export LIBESDPATH=""
-		export ESD=""
-	fi
+	# There is no media-sound/esound in tree anymore
+	export LIBESDPATH=""
+	export ESD=""
 
 	if use oss; then
 		export OSS="-DOSS"

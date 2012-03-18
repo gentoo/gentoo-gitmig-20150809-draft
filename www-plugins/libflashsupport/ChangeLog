@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/libflashsupport
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/ChangeLog,v 1.5 2010/05/03 15:02:39 lack Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/ChangeLog,v 1.6 2012/03/18 13:36:54 ssuominen Exp $
+
+  18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libflashsupport-1.2.ebuild:
+  Remove USE="esd" because media-soudn/esound isn't in tree anymore.
 
   03 May 2010; Jim Ramsay <lack@gentoo.org> libflashsupport-1.2.ebuild:
   Removing flash-player block (Bug #300294) and using ewarn instead.
