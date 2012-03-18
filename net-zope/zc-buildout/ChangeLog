@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zc-buildout
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/ChangeLog,v 1.6 2010/10/16 21:03:37 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/ChangeLog,v 1.7 2012/03/18 17:03:13 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Move from net-zope to python herd as talked in gentoo-dev ML.
 
 *zc-buildout-1.5.2 (16 Oct 2010)
 
