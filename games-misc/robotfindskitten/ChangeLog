@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/robotfindskitten
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.10 2012/03/06 20:38:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.11 2012/03/18 19:40:25 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  robotfindskitten-1.4142135.349.ebuild, robotfindskitten-1.7320508.406.ebuild:
+  Drop sparc keywords
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org>
   robotfindskitten-1.7320508.406.ebuild:
