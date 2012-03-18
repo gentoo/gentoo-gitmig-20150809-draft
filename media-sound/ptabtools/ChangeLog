@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ptabtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.16 2012/02/16 18:54:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.17 2012/03/18 15:48:42 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> ptabtools-0.4.3.ebuild,
+  ptabtools-0.5.0.ebuild:
+  Drop sparc keywords
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ptabtools-0.5.0.ebuild:
   x86 stable wrt bug #397105
