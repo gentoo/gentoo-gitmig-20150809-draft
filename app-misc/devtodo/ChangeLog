@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.84 2011/01/04 17:55:28 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.85 2012/03/18 18:21:13 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug 118003.
 
   04 Jan 2011; Justin Lecher <jlec@gentoo.org> devtodo-0.1.20.ebuild:
   Some Clean up
