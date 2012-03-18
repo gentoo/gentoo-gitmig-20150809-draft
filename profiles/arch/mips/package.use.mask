@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.45 2012/02/21 06:45:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.46 2012/03/18 14:07:17 ssuominen Exp $
 
 # Zac Medico <zmedico@gentoo.org> (21 Feb 2012)
 # Bug #402215: Mask USE=xattr for sys-apps/portage, pending ~mips keyword for
@@ -34,7 +34,7 @@ dev-libs/apr-util mysql
 # Stuart Longland <redhatter@gentoo.org> (07 Sep 2007)
 # mplayer not tested with these flags yet.  I may remove these slowly as I test
 # more functions of mplayer.
-media-video/mplayer bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca esd joystick live mad openal pnm pvr radio rar rtc svga tga xanim xinerama zoran
+media-video/mplayer bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca joystick live mad openal pnm pvr radio rar rtc svga tga xanim xinerama zoran
 
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # gdm depends on zenity which is not keyworded
