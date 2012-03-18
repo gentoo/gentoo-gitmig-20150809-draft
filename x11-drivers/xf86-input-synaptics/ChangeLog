@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.65 2012/03/14 01:10:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.66 2012/03/18 17:08:05 chithanh Exp $
+
+  18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-input-synaptics-1.5.99.901.ebuild:
+  Drop ppc/pp64 keywords, bug #396669.
 
 *xf86-input-synaptics-1.5.99.901 (14 Mar 2012)
 
