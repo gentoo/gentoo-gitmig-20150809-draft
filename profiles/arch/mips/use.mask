@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.53 2012/03/18 14:05:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.54 2012/03/18 18:56:42 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -28,7 +28,6 @@ openexr
 # Ryan Hill <dirtyepic@gentoo.org>
 # Various Gnome flags
 beagle
-gstreamer
 gtkhtml
 gnome
 
