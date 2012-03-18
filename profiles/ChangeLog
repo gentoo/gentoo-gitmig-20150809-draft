@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6321 2012/03/18 04:01:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6322 2012/03/18 09:11:16 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> desc/linguas.desc:
+  Add locale tt for Tatar (can be written in latin, cyrillic, and arabic)
 
   18 Mar 2012; Tim Harder <radhermit@gentoo.org> package.mask:
   Drop old app-misc/task mask.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.56 2012/02/27 05:27:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.57 2012/03/18 09:11:16 dilfridge Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -177,6 +177,7 @@ tl - Tagalog locale
 tn - Tswana locale
 tr - Turkish locale
 ts - Tsonga locale
+tt - Tatar locale
 ug - Uighur locale
 uk - Ukrainian locale
 ur - Urdu locale
