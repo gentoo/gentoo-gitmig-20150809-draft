@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13581 2012/03/17 14:39:15 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13582 2012/03/18 04:01:32 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -604,10 +604,6 @@ dev-perl/perl-PBS
 # soprano-2.[67].1 as it introduces major breakage.
 ~dev-libs/soprano-2.6.1
 ~dev-libs/soprano-2.7.1
-
-# Tim Harder <radhermit@gentoo.org> (19 Sep 2011)
-# Mask development releases
-=app-misc/task-2*
 
 # Anthony G. Basile <blueness@gentoo.org> (18 Sep 2011)
 # Masked while testing potentially dangerous utility
