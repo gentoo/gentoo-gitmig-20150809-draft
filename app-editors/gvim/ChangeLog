@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.373 2012/03/05 22:09:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.374 2012/03/18 19:39:39 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> gvim-7.3.409.ebuild:
+  alpha/arm/ia64/sparc stable wrt #406427
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> gvim-7.3.409.ebuild:
   Marking gvim-7.3.409 ppc for bug 406427
