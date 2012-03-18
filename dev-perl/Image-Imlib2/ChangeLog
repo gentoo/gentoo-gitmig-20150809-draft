@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Image-Imlib2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.53 2012/03/01 20:36:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.54 2012/03/18 18:04:01 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> Image-Imlib2-2.02.ebuild,
+  Image-Imlib2-2.30.0.ebuild:
+  Drop ia64/sparc keywords
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> Image-Imlib2-2.30.0.ebuild:
   Marking Image-Imlib2-2.30.0 ppc for bug 400149
