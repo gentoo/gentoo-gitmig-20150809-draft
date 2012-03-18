@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-DesktopEntry
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.30 2011/09/26 02:53:24 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.31 2012/03/18 02:15:30 mattst88 Exp $
+
+  18 Mar 2012; Matt Turner <mattst88@gentoo.org>
+  File-DesktopEntry-0.40.0.ebuild:
+  Added ~mips.
 
   26 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   File-DesktopEntry-0.40.0.ebuild:
