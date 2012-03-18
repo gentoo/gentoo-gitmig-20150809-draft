@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmess
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.66 2011/07/08 10:53:23 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.67 2012/03/18 13:14:01 ssuominen Exp $
+
+  18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> xmess-0.106.ebuild:
+  Remove USE="esd" because media-sound/esound isn't in tree anymore.
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> xmess-0.106.ebuild:
   Convert from "useq" to "use".

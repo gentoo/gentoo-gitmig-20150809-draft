@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.13 2011/07/08 10:53:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.14 2012/03/18 13:14:01 ssuominen Exp $
 EAPI=2
 
 inherit flag-o-matic toolchain-funcs eutils games
@@ -14,14 +14,13 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 LICENSE="XMAME"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
-IUSE="alsa dga esd expat ggi joystick lirc mmx net opengl sdl svga X xinerama xv"
+IUSE="alsa dga expat ggi joystick lirc mmx net opengl sdl svga X xinerama xv"
 
 RDEPEND="sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
 	dga? (
 		x11-libs/libXxf86dga
 		x11-libs/libXxf86vm )
-	esd? ( >=media-sound/esound-0.2.29 )
 	expat? ( dev-libs/expat )
 	ggi? ( media-libs/libggi )
 	lirc? ( app-misc/lirc )
@@ -104,7 +103,7 @@ EOF
 	toggle_feature2 joystick X XINPUT_DEVICES
 	use net && ewarn "Network support is currently (${PV}) broken :("
 	#toggle_feature net XMAME_NET # Broken
-	toggle_feature esd SOUND_ESOUND
+	#toggle_feature esd SOUND_ESOUND # No esound in portage anymore
 	toggle_feature alsa SOUND_ALSA
 	#toggle_feature arts SOUND_ARTS # Deprecated
 	toggle_feature dga X11_DGA
