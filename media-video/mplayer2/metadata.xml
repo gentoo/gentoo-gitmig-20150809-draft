@@ -39,7 +39,6 @@
 	<flag name="mp3">Enable support for mp3 decoding over <pkg>media-sound/mpg123</pkg> instead of relying on ffmpeg support.</flag>
 	<flag name="network">Enables network streaming support</flag>
 	<flag name="nut">Enables support for the NUT container format</flag>
-	<flag name="osdmenu">Enables support for on-screen display (OSD) menus</flag>
 	<flag name="pnm">Add PNM video output option, to create PPM/PGM/PGMYUV images</flag>
 	<flag name="pvr">Enable Video4Linux2 MPEG PVR</flag>
 	<flag name="radio">Enable V4L2 radio interface and support</flag>
@@ -52,6 +51,5 @@
 	<flag name="vdpau">Enables experimental VDPAU support (requires nVidia video cards) to offload MPEG2/MPEG4/VC1/WMV CPU processing to video card</flag>
 	<flag name="symlink">Copy all binaries and configuration into locations occupied by <pkg>media-video/mplayer</pkg> and thus act like drop-in replacement.</flag>
     <flag name="xanim">Enables support for xanim based codecs</flag>
-	<flag name="xvmc">Enables X-Video Motion Compensation support</flag>
 </use>
 </pkgmetadata>
