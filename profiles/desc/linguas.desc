@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.57 2012/03/18 09:11:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.58 2012/03/18 19:58:48 blueness Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -25,10 +25,12 @@ br - Breton locale
 brx - Bodo locale for India
 bs - Bosnian locale
 ca - Catalan locale
+ca_ES - Catalan locale for Spain
 ca_XV - Asturian and Catalan locale (Valencia)
 ca@valencia - Catalan locale (Valencia)
 crh - Crimean Tatar (Crimean Turkish) locale
 cs - Czech locale
+cs_CZ - Czech locale for Czech Republic
 csb - Kashubian locale
 cy - Welsh locale
 da - Danish locale
@@ -55,12 +57,15 @@ es_MX - Spanish locale for Mexico
 et - Estonian locale
 et_EE - Estonian locale
 eu - Basque locale
+eu_ES - Basque locale for Spain
 fa - Persian locale
+fa_IR - Persian locale for Iran
 fi - Finnish locale
 fil - Filipino locale
 fo -  Faroese locale
 fr - French locale
 fr_CA - French locale for Canada
+fr_FR - French locale for France
 fy - Frisian locale
 fy_NL - Frisian language locale for the Netherlands
 ga - Irish locale
@@ -138,6 +143,7 @@ pt_BR - Portuguese locale for Brasil
 pt_PT - Portuguese locale for Portugal
 rm - Romansh locale
 ro - Romanian locale
+ro_RO - Romanian locale for Romania
 ru - Russian locale
 rw - Kinyarwanda locale
 sa_IN - Sanskrit locale
