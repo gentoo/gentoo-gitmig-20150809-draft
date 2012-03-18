@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.88 2012/03/09 21:55:22 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.89 2012/03/18 19:42:44 slyfox Exp $
+
+  18 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/haddock-2.9.2-cabal-1.10.patch, haddock-2.9.2.ebuild:
+  dev-haskell/haddock: restrict haddock down to cabal-1.10 (fails with 1.14)
 
   09 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/haddock-2.6.1-cabal-1.8.patch, haddock-2.6.1.ebuild:
