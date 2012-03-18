@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.60 2012/03/02 21:43:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.61 2012/03/18 18:32:27 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> Time-Local-1.200.0.ebuild:
+  ia64/m68k/s390/sh/sparc/x86 stable wrt #397199
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> Time-Local-1.200.0.ebuild:
   Marking Time-Local-1.200.0 ppc64 for bug 397199
