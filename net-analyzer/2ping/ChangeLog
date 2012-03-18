@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/2ping
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/2ping/ChangeLog,v 1.1 2012/03/18 12:55:41 blueness Exp $
+
+*2ping-1.2.3 (18 Mar 2012)
+
+  18 Mar 2012; Anthony G. Basile <blueness@gentoo.org> +files/2pingd,
+  +2ping-1.2.3.ebuild, +files/2pingd.conf, +metadata.xml:
+  Initial commit
+
