@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.142 2012/03/03 16:26:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.143 2012/03/18 19:14:13 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> xdm-1.1.11-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #403727
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> xdm-1.1.11.ebuild:
   Marking xdm-1.1.11 ppc64 stable for bug 394393
