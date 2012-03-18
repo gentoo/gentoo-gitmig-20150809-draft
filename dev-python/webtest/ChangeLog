@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.30 2012/02/01 21:05:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.31 2012/03/18 15:08:26 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> webtest-1.3.ebuild:
+  Add ~sparc wrt #383195
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> webtest-1.3.ebuild:
   Marking webtest-1.3 ~ppc for bug 383195
