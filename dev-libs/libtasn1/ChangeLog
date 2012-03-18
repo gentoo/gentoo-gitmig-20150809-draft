@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.156 2012/03/06 21:49:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.157 2012/03/18 19:55:36 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> libtasn1-2.11.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #404653
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> libtasn1-2.11.ebuild:
   Marking libtasn1-2.11 ppc64 for bug 404653
