@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.6-r1.ebuild,v 1.11 2012/03/18 13:21:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.6-r1.ebuild,v 1.12 2012/03/18 13:22:02 ssuominen Exp $
 
 EAPI="1"
 
@@ -57,7 +57,7 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	insinto /usr/share/applications
 	doins gg2.desktop
 	dodoc AUTHORS ChangeLog NEWS README TODO
