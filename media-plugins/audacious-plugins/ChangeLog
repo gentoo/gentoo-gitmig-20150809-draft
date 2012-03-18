@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.238 2012/03/11 13:49:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.239 2012/03/18 15:17:59 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  audacious-plugins-2.5.4.ebuild:
+  alpha/sparc stable wrt #380575
 
   11 Mar 2012; Brent Baude <ranger@gentoo.org> audacious-plugins-3.1.ebuild:
   Marking audacious-plugins-3.1 ppc64 for bug 383991
