@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.13 2011/10/27 06:38:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.14 2012/03/18 13:21:14 ssuominen Exp $
 
 EAPI="1"
 
-IUSE="debug dbus tlen esd oss xosd jabber perl spell gnutls"
+IUSE="debug dbus tlen oss xosd jabber perl spell gnutls"
 
 inherit eutils
 
@@ -23,7 +23,6 @@ RDEPEND="net-libs/libgadu
 	jabber? ( >=net-libs/loudmouth-0.17 )
 	xosd? ( x11-libs/xosd )
 	perl? ( dev-lang/perl dev-perl/XML-Parser )
-	esd? ( media-sound/esound )
 	tlen? ( net-libs/libtlen )
 	spell? ( app-text/gtkspell:2 app-text/aspell )
 	gnutls? ( net-libs/gnutls )
@@ -47,7 +46,7 @@ src_compile() {
 	econf ${myconf} \
 		`use_enable debug` \
 		`use_with oss` \
-		`use_with esd` \
+		--without-esd \
 		`use_with xosd` \
 		--without-arts \
 		`use_with perl` \

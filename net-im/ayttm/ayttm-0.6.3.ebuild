@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.6.3.ebuild,v 1.2 2011/02/21 20:14:56 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.6.3.ebuild,v 1.3 2012/03/18 13:17:27 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils multilib
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ayttm/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="crypt esd icq irc jabber lj msn nls oscar smtp webcam xscreensaver yahoo"
+IUSE="crypt icq irc jabber lj msn nls oscar smtp webcam xscreensaver yahoo"
 
 CDEPEND="app-text/enchant
 	dev-libs/glib:2
@@ -24,7 +24,6 @@ CDEPEND="app-text/enchant
 	x11-libs/libXpm
 	x11-libs/pango
 	crypt? ( app-crypt/gpgme )
-	esd? ( media-sound/esound )
 	webcam? ( media-libs/jasper )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 	yahoo? ( net-libs/libyahoo2 )"
@@ -44,7 +43,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable crypt aycryption) \
-		$(use_enable esd) \
+		--disable-esd \
 		$(use_enable icq) \
 		$(use_enable irc) \
 		$(use_enable jabber) \
