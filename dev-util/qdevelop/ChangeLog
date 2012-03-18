@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qdevelop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.17 2012/02/02 16:17:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.18 2012/03/18 18:32:16 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118003.
 
   02 Feb 2012; Johannes Huber <johu@gentoo.org>
   -files/qdevelop-0.25-gcc43.patch:
