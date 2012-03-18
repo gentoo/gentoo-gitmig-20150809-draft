@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ytree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.13 2012/01/30 17:21:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.14 2012/03/18 18:22:11 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> -ytree-1.92-r2.ebuild,
+  -ytree-1.94.ebuild, metadata.xml:
+  Drop maintainer due retirement, bug 118003. Drop old.
 
 *ytree-1.97 (30 Jan 2012)
 
