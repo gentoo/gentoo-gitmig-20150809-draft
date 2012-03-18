@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-routed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.19 2012/03/02 23:00:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.20 2012/03/18 18:51:52 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> netkit-routed-0.17-r4.ebuild:
+  sparc stable wrt #397175
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
   netkit-routed-0.17-r4.ebuild:
