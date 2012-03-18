@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbig2dec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.20 2012/03/11 20:01:43 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.21 2012/03/18 17:37:53 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> jbig2dec-0.11-r1.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #401853
 
   11 Mar 2012; Mart Raudsepp <leio@gentoo.org> jbig2dec-0.11-r1.ebuild:
   Add ~mips keyword, unbundled in newer ghostscript-gpl wrt #401853
