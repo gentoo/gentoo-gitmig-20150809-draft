@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/zsh-lovers/zsh-lovers-0.8.3.ebuild,v 1.7 2012/02/02 15:19:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/zsh-lovers/zsh-lovers-0.8.3.ebuild,v 1.8 2012/03/18 19:15:32 armin76 Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://deb.grml.org/pool/main/z/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND="
