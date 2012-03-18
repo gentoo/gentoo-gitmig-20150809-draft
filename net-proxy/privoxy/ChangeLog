@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/privoxy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.65 2011/03/01 15:18:05 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.66 2012/03/18 14:19:33 tove Exp $
+
+*privoxy-3.0.19 (18 Mar 2012)
+
+  18 Mar 2012; Torsten Veller <tove@gentoo.org> +privoxy-3.0.19.ebuild,
+  +files/privoxy-3.0.19-gentoo.patch:
+  Version bump (#391853,#405517). Move to EAPI=4 (#382533)
 
   01 Mar 2011; Brent Baude <ranger@gentoo.org> privoxy-3.0.17.ebuild:
   stable ppc64, bug 353284
