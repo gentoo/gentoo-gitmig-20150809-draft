@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/root-tail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.49 2012/03/02 21:11:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.50 2012/03/18 18:15:46 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> root-tail-1.2-r2.ebuild,
+  root-tail-1.2-r3.ebuild:
+  Drop alpha/sparc keywords
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> root-tail-1.2-r3.ebuild:
   Marking root-tail-1.2-r3 ppc64 for bug 403987
