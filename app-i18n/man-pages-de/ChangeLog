@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-de
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.18 2012/03/02 22:51:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.19 2012/03/18 18:51:04 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> man-pages-de-0.8.ebuild:
+  ia64/m68k/s390/sh/sparc stable wrt #396811
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> man-pages-de-0.8.ebuild:
   Stable on alpha, bug #396811
