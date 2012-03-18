@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.29 2012/03/08 16:31:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.30 2012/03/18 23:10:35 floppym Exp $
+
+*remmina-1.0.0_p20120309 (18 Mar 2012)
+
+  18 Mar 2012; Mike Gilbert <floppym@gentoo.org>
+  +remmina-1.0.0_p20120309.ebuild, remmina-9999.ebuild:
+  Add a snapshot to resolve #406025.
 
   08 Mar 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml,
   remmina-9999.ebuild:
