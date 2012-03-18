@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.31 2012/03/05 20:49:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.32 2012/03/18 19:23:53 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> libmix-2.05-r6.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #404651
 
   05 Mar 2012; Markus Meier <maekke@gentoo.org> libmix-2.05-r6.ebuild:
   arm stable, bug #404651
