@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tuxcards
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.30 2012/02/16 17:49:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.31 2012/03/18 15:39:16 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> tuxcards-2.2.ebuild,
+  tuxcards-2.2.1.ebuild:
+  Drop sparc keywords
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tuxcards-2.2.1.ebuild:
   x86 stable wrt bug #396847
