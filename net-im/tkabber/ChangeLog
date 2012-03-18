@@ -1,6 +1,10 @@
 # ChangeLog for net-im/tkabber
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.44 2011/11/26 21:51:21 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.45 2012/03/18 15:32:53 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> tkabber-0.9.9.ebuild,
+  tkabber-0.11.0.ebuild, tkabber-0.11.1.ebuild:
+  Drop alpha/sparc keywords
 
   26 Nov 2011; Mike Gilbert <floppym@gentoo.org> tkabber-0.9.9.ebuild:
   Fix build failure due to removal of expat use flag on dev-tcltk/tclxml-3.2-r1.
