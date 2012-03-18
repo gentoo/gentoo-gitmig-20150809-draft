@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.36 2012/03/18 12:24:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.37 2012/03/18 13:36:48 scarabeus Exp $
 
 EAPI=4
 
@@ -415,7 +415,6 @@ src_configure() {
 		--disable-rpath \
 		--disable-strip-solver \
 		--disable-zenity \
-		--disable-crashdump \
 		--with-alloc=$(use jemalloc && echo "jemalloc" || echo "system") \
 		--with-build-version="Gentoo official package" \
 		--enable-extension-integration \
