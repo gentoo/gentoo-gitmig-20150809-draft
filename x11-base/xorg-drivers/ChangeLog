@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.66 2012/03/07 22:06:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.67 2012/03/18 16:39:43 chithanh Exp $
+
+  18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-drivers-1.12.ebuild:
+  Update dependencies for drivers that fail to build against xorg-server-1.12.
 
 *xorg-drivers-1.12 (07 Mar 2012)
 
