@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/intel-gpu-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/ChangeLog,v 1.6 2012/02/24 15:34:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/ChangeLog,v 1.7 2012/03/18 01:57:44 chithanh Exp $
+
+  18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  intel-gpu-tools-1.2.ebuild:
+  Fix dependencies, bug #408631.
 
 *intel-gpu-tools-1.2 (24 Feb 2012)
 
