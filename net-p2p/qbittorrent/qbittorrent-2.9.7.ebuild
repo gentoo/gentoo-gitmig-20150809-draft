@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.9.6.ebuild,v 1.1 2012/03/18 10:41:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.9.7.ebuild,v 1.1 2012/03/18 18:02:48 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
