@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.14 2009/07/23 16:49:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.15 2012/03/18 13:43:36 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,10 +13,9 @@ SRC_URI="http://www.festvox.org/packed/festival/latest/${MY_P}.tar.gz"
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="esd nas X"
+IUSE="nas X"
 
-RDEPEND="esd? ( media-sound/esound )
-	nas? ( media-libs/nas )
+RDEPEND="nas? ( media-libs/nas )
 	X? ( x11-libs/libX11
 		x11-libs/libXt )
 	!<app-accessibility/festival-1.96_beta
@@ -39,7 +38,6 @@ src_unpack() {
 	# enable building shared libraries
 	sed -i -e "s/#.*\(SHARED=2\)/\1/" ${CONFIG}
 
-	use esd && sed -i -e "s/#.*\(INCLUDE_MODULES += ESD_AUDIO\)/\1/" ${CONFIG}
 	use nas && sed -i -e "s/#.*\(INCLUDE_MODULES += NAS_AUDIO\)/\1/" ${CONFIG}
 	use X || sed -i -e "s/-lX11 -lXt//" "${S}"/config/modules/esd_audio.mak
 }

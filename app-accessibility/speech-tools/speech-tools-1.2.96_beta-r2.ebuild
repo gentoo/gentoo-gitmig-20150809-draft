@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta-r2.ebuild,v 1.3 2010/07/01 12:39:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta-r2.ebuild,v 1.4 2012/03/18 13:43:36 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,10 +16,9 @@ SRC_URI="http://www.festvox.org/packed/festival/1.96/${MY_P}.tar.gz
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="esd nas X"
+IUSE="nas X"
 
-DEPEND="esd? ( media-sound/esound )
-	nas? ( media-libs/nas )
+DEPEND="nas? ( media-libs/nas )
 	X? ( x11-libs/libX11
 		x11-libs/libXt )
 	!<app-accessibility/festival-1.96_beta
@@ -36,9 +35,6 @@ src_prepare() {
 src_configure() {
 	local CONFIG=config/config.in
 	sed -i -e 's/@COMPILERTYPE@/gcc42/' ${CONFIG}
-	if use esd; then
-		sed -i -e "s/#.*\(INCLUDE_MODULES += ESD_AUDIO\)/\1/" ${CONFIG}
-	fi
 	if use nas; then
 		sed -i -e "s/#.*\(INCLUDE_MODULES += NAS_AUDIO\)/\1/" ${CONFIG}
 	fi
