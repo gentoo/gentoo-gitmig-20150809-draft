@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkTheme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.28 2012/03/02 22:59:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.29 2012/03/18 18:34:57 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> tkTheme-1.0-r1.ebuild,
+  tkTheme-1.0-r2.ebuild:
+  Drop sparc keywords
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> tkTheme-1.0-r2.ebuild:
   Stable on alpha, bug #397011
