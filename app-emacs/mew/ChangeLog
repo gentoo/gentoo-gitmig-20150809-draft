@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mew
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.81 2012/02/24 14:25:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.82 2012/03/18 17:46:12 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> mew-6.2.ebuild,
+  mew-6.3.ebuild, mew-6.4-r1.ebuild:
+  Drop alpha/sparc keywords
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mew-6.4-r1.ebuild:
   x86 stable wrt bug #404603
