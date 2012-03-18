@@ -14,7 +14,6 @@
     <flag name='brltty'>Adds support for braille displays using brltty</flag>
     <flag name='curl'>Adds support for read-only block device emulation based on files
         located on http and ftp servers</flag>
-    <flag name='esd'>Enable esound output for sound emulation</flag>
     <flag name='fdt'>Enables firmware device tree support</flag>
     <flag name='gnutls'>Enable TLS support for the VNC console server</flag>
     <flag name='kqemu'>Enables the kernel acceleration module on a x86/x86-64 cpu</flag>

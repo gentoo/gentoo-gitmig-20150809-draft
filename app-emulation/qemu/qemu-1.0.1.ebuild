@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0.1.ebuild,v 1.2 2012/03/07 17:10:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0.1.ebuild,v 1.3 2012/03/18 13:41:00 ssuominen Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.qemu.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg kvm ncurses nss
+IUSE="+aio alsa bluetooth brltty curl fdt hardened jpeg kvm ncurses nss
 opengl png pulseaudio qemu-ifup rbd sasl sdl spice ssl static threads usbredir vde
 +vhost-net xattr xen xfs"
 
@@ -53,7 +53,6 @@ RDEPEND="
 	bluetooth? ( net-wireless/bluez )
 	brltty? ( app-accessibility/brltty )
 	curl? ( net-misc/curl )
-	esd? ( media-sound/esound )
 	fdt? ( >=sys-apps/dtc-1.2.0 )
 	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
@@ -212,7 +211,6 @@ src_configure() {
 	# audio options
 	audio_opts="oss"
 	use alsa && audio_opts="alsa ${audio_opts}"
-	use esd && audio_opts="esd ${audio_opts}"
 	use pulseaudio && audio_opts="pa ${audio_opts}"
 	use sdl && audio_opts="sdl ${audio_opts}"
 

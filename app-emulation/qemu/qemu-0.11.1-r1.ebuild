@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1-r1.ebuild,v 1.1 2012/01/28 11:45:00 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1-r1.ebuild,v 1.2 2012/03/18 13:41:00 ssuominen Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/qemu/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="alsa bluetooth esd gnutls ncurses pulseaudio sasl +sdl vde kqemu kvm"
+IUSE="alsa bluetooth gnutls ncurses pulseaudio sasl +sdl vde kqemu kvm"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k mips mipsel mips64 mips64el ppc ppc64 sh4 sh4eb sparc"
 
@@ -32,7 +32,6 @@ RDEPEND="
 	!app-emulation/qemu-user
 	sys-libs/zlib
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
-	esd? ( media-sound/esound )
 	pulseaudio? ( media-sound/pulseaudio )
 	gnutls? ( net-libs/gnutls )
 	ncurses? ( sys-libs/ncurses )
@@ -93,7 +92,6 @@ src_configure() {
 
 		audio_opts="oss"
 		use alsa && audio_opts="alsa $audio_opts"
-		use esd && audio_opts="esd $audio_opts"
 		use pulseaudio && audio_opts="pa $audio_opts"
 		use sdl && audio_opts="sdl $audio_opts"
 	else
