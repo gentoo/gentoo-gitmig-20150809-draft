@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.123 2012/03/12 00:37:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.124 2012/03/18 06:26:56 zmedico Exp $
+
+  18 Mar 2012; Zac Medico <zmedico@gentoo.org> ntfs3g-2012.1.15-r1.ebuild:
+  Bug #408679: Move ntfsprogs blocker from DEPEND to RDEPEND, as required due to
+  file collisions.
 
   12 Mar 2012; Mike Gilbert <floppym@gentoo.org> ntfs3g-2012.1.15-r1.ebuild:
   Fix fperms call.
