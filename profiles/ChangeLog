@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6327 2012/03/18 18:08:03 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6328 2012/03/18 19:50:08 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Drop some x11 masks.
 
   18 Mar 2012; Matti Bickel <mabi@gentoo.org> package.mask:
   masked dev-php/PEAR-DB_DataObject_FormBuilder for removal, bug 396963
