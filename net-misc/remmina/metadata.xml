@@ -2,12 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>tristan@gentoo.org</email>
-		<name>Tristan Heaven</name>
-	</maintainer>
-	<maintainer>
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
+	</maintainer>
+	<maintainer>
+		<email>tristan@gentoo.org</email>
+		<name>Tristan Heaven</name>
 	</maintainer>
 	<use>
 		<flag name="freerdp">Add support for the net-misc/freerdp application</flag>
