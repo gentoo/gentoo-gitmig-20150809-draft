@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.65 2012/02/13 21:28:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.66 2012/03/18 15:29:51 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> libical-0.48.ebuild:
+  alpha/ia64/sparc stable wrt #401303
 
   13 Feb 2012; Markus Meier <maekke@gentoo.org> libical-0.48.ebuild:
   arm stable, bug #401303
