@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test-Harness
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.67 2012/03/02 21:43:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.68 2012/03/18 18:28:00 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> Test-Harness-3.230.0.ebuild:
+  ia64/m68k/s390/sh/sparc/x86 stable wrt #397197
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> Test-Harness-3.230.0.ebuild:
   Marking Test-Harness-3.230.0 ppc64 for bug 397197
