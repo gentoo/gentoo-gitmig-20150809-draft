@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/pkg-config-1.1.2.ebuild,v 1.4 2011/12/04 14:06:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/pkg-config-1.1.2.ebuild,v 1.5 2012/03/18 15:23:01 ranger Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19 ree18"
@@ -17,7 +17,7 @@ DESCRIPTION="A pkg-config implementation by Ruby"
 HOMEPAGE="https://github.com/rcairo/pkg-config"
 LICENSE="|| ( LGPL-2 LGPL-2.1 LGPL-3 )"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE=""
 
