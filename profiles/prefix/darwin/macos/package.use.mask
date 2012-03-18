@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.11 2012/02/09 19:11:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.12 2012/03/18 14:06:41 ssuominen Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (30 Oct 2009)
 # X and linux only
 media-video/mplayer xvmc xv dga X xinerama
-media-video/mplayer dvb esd lirc svga jack joystick matrox
+media-video/mplayer dvb lirc svga jack joystick matrox
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Feb 2009)
 # Doesn't work with python support, bug 257572

@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.334 2012/03/12 14:33:53 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.335 2012/03/18 14:06:41 ssuominen Exp $
+
+  18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  darwin/macos/package.use.mask, darwin/package.use.mask:
+  Remove mask for USE="esd" because there is no such flag in tree anymore.
 
   12 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
   +aix/7.1.0.0/package.provided, +aix/7.1.0.0/parent,

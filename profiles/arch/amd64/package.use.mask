@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.118 2012/02/27 13:17:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.119 2012/03/18 14:08:40 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -116,8 +116,8 @@ www-client/icecat -ipc
 sys-power/pm-utils -video_cards_intel -video_cards_radeon
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Feb 2009)
-# esd (#301824), gstreamer (#346077)
-app-emulation/wine esd gstreamer
+# See bug #346077 for gstreamer
+app-emulation/wine gstreamer
 
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka clozurecl) is only available on x86 and amd64

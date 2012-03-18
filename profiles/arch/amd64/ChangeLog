@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.165 2012/03/17 06:42:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.166 2012/03/18 14:08:40 ssuominen Exp $
+
+  18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove mask for USE="esd" because there is no such flag in tree anymore.
 
   17 Mar 2012; Tim Harder <radhermit@gentoo.org> no-multilib/package.use.mask:
   Mask USE="skype" for bitlbee on non-multilib systems.
