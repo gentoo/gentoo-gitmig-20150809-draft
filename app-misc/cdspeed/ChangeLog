@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cdspeed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.29 2012/03/02 22:51:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.30 2012/03/18 18:47:08 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> cdspeed-0.4.ebuild,
+  cdspeed-0.4-r1.ebuild:
+  Drop sparc keywords
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> cdspeed-0.4-r1.ebuild:
   Stable on alpha, bug #396813
