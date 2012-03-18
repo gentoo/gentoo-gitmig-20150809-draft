@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.137 2012/03/12 17:21:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.138 2012/03/18 14:11:20 ssuominen Exp $
 
 # not ready for primetime
 packagekit
@@ -13,9 +13,6 @@ tcb
 
 # Mask as long its not available everywhere
 zeitgeist
-
-# esd is finally being purged from the tree
-esd
 
 # vdpau is currently only available with binary nvidia-drivers, thus amd64/x86*
 vdpau
