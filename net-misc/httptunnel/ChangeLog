@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/httptunnel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.19 2012/02/24 19:28:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.20 2012/03/18 17:50:04 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> httptunnel-3.0.5.ebuild,
+  httptunnel-3.3.ebuild, httptunnel-3.3-r1.ebuild:
+  Drop sparc keywords
 
   24 Feb 2012; Brent Baude <ranger@gentoo.org> httptunnel-3.3-r1.ebuild:
   Marking httptunnel-3.3-r1 ppc for bug 397169
