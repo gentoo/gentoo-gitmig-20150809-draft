@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>bass@gentoo.org</email>
-  <name>José Alberto Suárez López</name>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 MIDAS is a cross platform Monitoring and NIDS server. The goal of this project is to build a robust and complete network/system monitoring suite that is capable of scaling to very large networks.

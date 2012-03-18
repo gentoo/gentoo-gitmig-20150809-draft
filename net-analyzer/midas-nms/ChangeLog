@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/midas-nms
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.14 2011/04/02 12:53:17 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.15 2012/03/18 19:20:19 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #391429.
 
   02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> midas-nms-2.2f-r1.ebuild:
   Use net-libs/libpcap instead of virtual/libpcap wrt #358835.
