@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.190 2012/03/18 13:57:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.191 2012/03/18 20:21:36 pesa Exp $
+
+*avidemux-2.5.6-r1 (18 Mar 2012)
+
+  18 Mar 2012; Davide Pesavento <pesa@gentoo.org> +avidemux-2.5.6-r1.ebuild,
+  metadata.xml:
+  Use system copy of dev-lang/spidermonkey, remove obsolete dts USE flag, add
+  vpx USE flag, add missing deps, general ebuild cleanup.
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> avidemux-2.5.4-r2.ebuild,
   avidemux-2.5.5.ebuild, avidemux-2.5.6.ebuild:
