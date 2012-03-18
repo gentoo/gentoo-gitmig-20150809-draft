@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Diff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.25 2012/03/02 21:41:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.26 2012/03/18 18:26:09 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> Text-Diff-0.35.ebuild,
+  Text-Diff-1.410.0.ebuild:
+  Drop ia64/sparc keywords
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> Text-Diff-1.410.0.ebuild:
   Marking Text-Diff-1.410.0 ppc64 for bug 396955
