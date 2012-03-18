@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_DNS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.42 2012/02/16 19:11:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.43 2012/03/18 15:50:44 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> PEAR-Net_DNS-1.0.7.ebuild:
+  alpha/ia64/sparc stable wrt #399315
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   PEAR-Net_DNS-1.0.7.ebuild:
