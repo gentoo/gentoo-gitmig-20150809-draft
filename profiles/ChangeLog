@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6325 2012/03/18 14:12:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6326 2012/03/18 17:54:07 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  masked for removal, bug 380697
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> use.desc:
   Remove description for USE="esd" because nothing is using it.

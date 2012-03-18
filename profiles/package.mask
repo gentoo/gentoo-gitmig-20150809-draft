@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13585 2012/03/18 13:10:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13586 2012/03/18 17:54:07 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+# Joerg Bornkessel <hd_brummy@gentoo.org> (18 Mar 2012)
+# masked for removel in 30 days, ~ 15 Apr 2012
+# technical issues on gcc-4.6
+# bug 380697
+media-plugins/vdr-games
 
 # Pacho Ramos <pacho@gentoo.org> (18 Mar 2012)
 # Broken in several ways, removal in 30 days.
