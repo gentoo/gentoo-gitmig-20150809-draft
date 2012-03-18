@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.257 2012/03/11 13:52:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.258 2012/03/18 15:15:56 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> audacious-2.5.4.ebuild:
+  alpha/sparc stable wrt #380575
 
   11 Mar 2012; Brent Baude <ranger@gentoo.org> audacious-3.1.ebuild:
   Marking audacious-3.1 ppc64 for bug 383991
