@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xwd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.44 2012/02/24 15:38:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.45 2012/03/18 01:55:15 chithanh Exp $
+
+  18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xwd-1.0.5.ebuild:
+  Fix dependencies, bug #408629.
 
 *xwd-1.0.5 (24 Feb 2012)
 
