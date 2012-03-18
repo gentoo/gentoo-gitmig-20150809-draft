@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/qbzr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.30 2012/03/16 23:44:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.31 2012/03/18 18:34:21 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118003.
 
 *qbzr-0.22.1 (16 Mar 2012)
 

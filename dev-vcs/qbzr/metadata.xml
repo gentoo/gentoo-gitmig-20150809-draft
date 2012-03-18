@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>bazaar</herd>
-<maintainer>
-    <email>jokey@gentoo.org</email>
-    <name>Markus Ullmann</name>
-</maintainer>
 </pkgmetadata>
