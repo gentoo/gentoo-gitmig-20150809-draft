@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/epplets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.19 2012/02/19 14:08:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.20 2012/03/18 12:37:38 ssuominen Exp $
+
+  18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> epplets-0.10.ebuild,
+  epplets-0.11.ebuild, epplets-0.12.ebuild:
+  Remove no-op USE="esd" because media-sound/esound isn't in tree anymore.
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> epplets-0.12.ebuild:
   Stable on alpha, bug #393909
