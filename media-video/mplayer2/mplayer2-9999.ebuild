@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.23 2012/02/23 18:36:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.24 2012/03/18 13:48:26 ssuominen Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ else
 fi
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
 bluray bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts
-debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca esd +faad fbcon ftp
+debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad fbcon ftp
 gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc +live
 mad md5sum +mmx mmxext mng +mp3 nas +network nut +opengl oss png pnm pulseaudio
 pvr +quicktime radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3 tga
@@ -109,7 +109,6 @@ RDEPEND+="
 		>=media-libs/libdvdread-4.1.3
 		dvdnav? ( >=media-libs/libdvdnav-4.1.3 )
 	)
-	esd? ( media-sound/esound )
 	enca? ( app-i18n/enca )
 	faad? ( media-libs/faad2 )
 	gif? ( media-libs/giflib )
@@ -428,7 +427,8 @@ src_configure() {
 	# Audio Output #
 	################
 	myconf+=" --disable-rsound" # media-sound/rsound is in pro-audio overlay only
-	uses="alsa esd jack ladspa nas"
+	myconf+=" --disable-esd"
+	uses="alsa jack ladspa nas"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
