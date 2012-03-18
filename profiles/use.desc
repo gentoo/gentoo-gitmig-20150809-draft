@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.478 2012/02/14 19:44:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.479 2012/03/18 14:12:48 ssuominen Exp $
 
 # Keep them sorted
 
@@ -86,7 +86,6 @@ emacs - Adds support for GNU Emacs
 emboss - Adds support for the European Molecular Biology Open Software Suite
 encode - Adds support for encoding of audio or video files
 enscript - Add enscript support to colourize code stored in the repository
-esd - Adds support for media-sound/esound (Enlightened Sound Daemon)
 evo - Adds support for mail-client/evolution
 examples - Install examples, usually source code
 exif - Adds support for reading EXIF headers from JPEG and TIFF images
