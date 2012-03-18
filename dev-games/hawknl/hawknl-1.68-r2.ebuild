@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation, 2004 Richard Garand <richard@garandnet.net>
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68-r2.ebuild,v 1.1 2012/03/12 16:38:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68-r2.ebuild,v 1.2 2012/03/18 19:23:30 robbat2 Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils multilib
