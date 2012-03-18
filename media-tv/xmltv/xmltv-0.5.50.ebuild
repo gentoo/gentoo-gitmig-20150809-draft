@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.50.ebuild,v 1.9 2009/07/19 17:58:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.50.ebuild,v 1.10 2012/03/18 19:44:45 armin76 Exp $
 
 inherit eutils perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xmltv//${P}.tar.bz2"
 IUSE="ar be brnet ch dtvla uk_rt uk_bleb it na_dd na_icons fi es es_laguiatv ee re nc nl nl_wolf huro dk jp se_swedb hr no_gf fr no pt za eu_epg tv_combiner tv_pick_cgi tv_check na_dtv"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc x86"
 PREFIX="/usr"
 
 # NOTE: you can customize the xmltv installation by

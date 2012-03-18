@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.88 2009/12/26 10:22:05 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.89 2012/03/18 19:44:45 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> xmltv-0.5.50.ebuild,
+  xmltv-0.5.53.ebuild, xmltv-0.5.54.ebuild, xmltv-0.5.55.ebuild:
+  Drop sparc keywords
 
   26 Dec 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove mattepiu from metadata (#130820)
