@@ -5,10 +5,6 @@
 		<email>kumba@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
-	<maintainer>
-		<email>iluxa@gentoo.org</email>
-		<description>co-maintainer</description>
-	</maintainer>
 	<herd>perl</herd>
 	<herd>net-mail</herd>
 	<longdescription>Perl Mai-to-HTML Convertor</longdescription>
