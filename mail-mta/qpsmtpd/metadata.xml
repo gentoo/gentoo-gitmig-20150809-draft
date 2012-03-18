@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-mail</herd>
-<maintainer>
-  <email>jokey@gentoo.org</email>
-  <name>Markus Ullmann</name>
-</maintainer>
 <use>
         <flag name='async'>Add deps + support for asynchronous mail reception/processing as well as preforked daemon</flag>
         <flag name='postfix'>create user with permissions for proper postfix interaction</flag>
