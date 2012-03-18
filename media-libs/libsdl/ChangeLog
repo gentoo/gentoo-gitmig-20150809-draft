@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.185 2012/03/12 19:47:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.186 2012/03/18 13:54:55 ssuominen Exp $
+
+  18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -libsdl-1.2.13-r1.ebuild,
+  -files/libsdl-1.2.13-cld.patch, -files/libsdl-1.2.13-libcaca-new-api.patch,
+  -files/libsdl-1.2.13-pulseaudio.patch,
+  -files/libsdl-1.2.13-xinerama-head-0.patch:
+  old
 
   12 Mar 2012; Markus Meier <maekke@gentoo.org> libsdl-1.2.15.ebuild:
   arm stable, bug #405217
