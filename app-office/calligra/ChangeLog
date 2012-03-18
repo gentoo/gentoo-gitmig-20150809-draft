@@ -1,6 +1,10 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.23 2012/02/24 22:01:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.24 2012/03/18 09:12:12 scarabeus Exp $
+
+  18 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/calligra-2.3.85-asneeded.patch:
+  Remove unused patch.
 
   24 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   calligra-2.3.87.ebuild, calligra-9999.ebuild:
