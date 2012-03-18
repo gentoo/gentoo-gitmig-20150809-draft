@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1-r1.ebuild,v 1.6 2012/02/16 19:09:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1-r1.ebuild,v 1.7 2012/03/18 13:34:51 ssuominen Exp $
 
 #BACKPORTS=1
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses nss \
+IUSE="+aio alsa bluetooth brltty curl debug fdt hardened jpeg ncurses nss \
 png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
 +vhost-net xattr xen"
 # static, depends on libsdl being built with USE=static-libs, which can not
@@ -73,7 +73,6 @@ RDEPEND="
 	bluetooth? ( net-wireless/bluez )
 	brltty? ( app-accessibility/brltty )
 	curl? ( >=net-misc/curl-7.15.4 )
-	esd? ( media-sound/esound )
 	fdt? ( >=sys-apps/dtc-1.2.0 )
 	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
@@ -220,7 +219,6 @@ src_configure() {
 	# audio options
 	audio_opts="oss"
 	use alsa && audio_opts="alsa ${audio_opts}"
-	use esd && audio_opts="esd ${audio_opts}"
 	use pulseaudio && audio_opts="pa ${audio_opts}"
 	use sdl && audio_opts="sdl ${audio_opts}"
 	./configure --prefix=/usr \

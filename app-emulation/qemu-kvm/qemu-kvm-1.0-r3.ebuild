@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.12 2012/03/15 12:28:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0-r3.ebuild,v 1.13 2012/03/18 13:34:51 ssuominen Exp $
 
 #BACKPORTS=1
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty +curl debug esd fdt ncurses \
+IUSE="+aio alsa bluetooth brltty +curl debug fdt ncurses \
 opengl pulseaudio qemu-ifup rbd sasl sdl smartcard spice static test
 +threads tls usbredir vde +vhost-net xattr xen"
 
@@ -72,7 +72,6 @@ RDEPEND="
 	bluetooth? ( net-wireless/bluez )
 	brltty? ( app-accessibility/brltty )
 	curl? ( >=net-misc/curl-7.15.4 )
-	esd? ( media-sound/esound )
 	fdt? ( >=sys-apps/dtc-1.2.0 )
 	ncurses? ( sys-libs/ncurses )
 	opengl? ( virtual/opengl )
@@ -247,7 +246,6 @@ src_configure() {
 	# audio options
 	audio_opts="oss"
 	use alsa && audio_opts="alsa ${audio_opts}"
-	use esd && audio_opts="esd ${audio_opts}"
 	use pulseaudio && audio_opts="pa ${audio_opts}"
 	use sdl && audio_opts="sdl ${audio_opts}"
 
