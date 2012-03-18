@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.4.8.ebuild,v 1.6 2012/02/02 16:11:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.4.8.ebuild,v 1.7 2012/03/18 15:43:26 armin76 Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.hyperrealm.com/libconfig/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc ppc64 ~sparc x86 ~x86-linux"
+KEYWORDS="amd64 ~mips ppc ppc64 sparc x86 ~x86-linux"
 IUSE="examples static-libs"
 
 DEPEND="
