@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/xf86-input-evdev-2.7.0.ebuild,v 1.1 2012/03/18 17:09:04 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/xf86-input-evdev-2.7.0.ebuild,v 1.2 2012/03/18 20:01:50 chithanh Exp $
 
 EAPI=4
 inherit xorg-2
@@ -14,3 +14,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/inputproto-2.1.99.3
 	>=sys-kernel/linux-headers-2.6
 	sys-libs/mtdev"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-2.7.0-horizontal-scrolling.patch
+)
