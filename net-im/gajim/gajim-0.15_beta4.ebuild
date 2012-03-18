@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.4-r2.ebuild,v 1.3 2012/03/18 09:35:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15_beta4.ebuild,v 1.1 2012/03/18 09:35:51 jlec Exp $
 
 EAPI=4
 
@@ -11,12 +11,12 @@ inherit eutils python versionator
 
 DESCRIPTION="Jabber client written in PyGTK"
 HOMEPAGE="http://www.gajim.org/"
-SRC_URI="http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${P}.tar.bz2"
+SRC_URI="http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${P/_beta/-beta}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi crypt dbus gmail gnome idle jingle libnotify networkmanager nls spell srv X xhtml"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="avahi crypt dbus gmail gnome kde idle jingle libnotify networkmanager nls spell srv X xhtml"
 
 REQUIRED_USE="
 	libnotify? ( dbus )
@@ -30,6 +30,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gettext-0.17-r1"
 RDEPEND="${COMMON_DEPEND}
+	dev-python/pyasn1
 	dev-python/pyopenssl
 	crypt? (
 		app-crypt/gnupg
@@ -49,6 +50,7 @@ RDEPEND="${COMMON_DEPEND}
 		)
 	idle? ( x11-libs/libXScrnSaver )
 	jingle? ( net-libs/farsight2[python] )
+	kde? ( kde-base/kwallet )
 	networkmanager? (
 			dev-python/dbus-python
 			net-misc/networkmanager
@@ -61,6 +63,8 @@ RDEPEND="${COMMON_DEPEND}
 	spell? ( app-text/gtkspell:2 )
 	xhtml? ( dev-python/docutils )"
 
+S="${WORKDIR}"/${P/_beta/-beta}
+
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
@@ -69,14 +73,8 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/0.14-python-version.patch \
-		"${FILESDIR}"/0.14.1-testing.patch \
-		"${FILESDIR}"/${P}-debian_patches_unicode.patch
+		"${FILESDIR}"/0.14.1-testing.patch
 	echo '#!/bin/sh' > config/py-compile
-
-	cat >> po/POTFILES.in <<- EOF
-	src/command_system/implementation/custom.py
-	src/command_system/implementation/standard.py
-	EOF
 }
 
 src_configure() {
@@ -91,7 +89,7 @@ src_configure() {
 src_install() {
 	default
 
-	rm "${D}/usr/share/doc/${PF}/"{README.html,COPYING} || die
+	rm "${D}/usr/share/doc/${PF}/COPYING" || die
 	dohtml README.html
 }
 
