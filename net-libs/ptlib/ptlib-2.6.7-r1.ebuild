@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.9 2012/01/09 12:14:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.10 2012/03/18 13:15:42 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,13 +16,12 @@ LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 # default enabled are features from 'minsize', the most used according to ptlib
-IUSE="alsa +asn +audio debug doc dtmf esd examples ffmpeg ftp http ipv6
+IUSE="alsa +asn +audio debug doc dtmf examples ffmpeg ftp http ipv6
 jabber ldap mail odbc oss pch qos remote sasl sdl serial shmvideo snmp soap
 socks ssl static-libs +stun telnet tts v4l +video vxml wav xml xmlrpc"
 
 CDEPEND="
-	audio? ( alsa? ( media-libs/alsa-lib )
-		esd? ( media-sound/esound ) )
+	audio? ( alsa? ( media-libs/alsa-lib ) )
 	ldap? ( net-nds/openldap )
 	odbc? ( dev-db/unixODBC )
 	sasl? ( dev-libs/cyrus-sasl:2 )
@@ -169,7 +168,7 @@ src_configure() {
 		$(use_enable debug memcheck) \
 		$(use_enable debug tracing) \
 		$(use_enable dtmf) \
-		$(use_enable esd) \
+		--disable-esd \
 		$(use_enable ffmpeg ffvdev) \
 		$(use_enable ftp) \
 		$(use_enable http) \
