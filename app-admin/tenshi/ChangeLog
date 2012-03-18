@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.66 2012/03/04 10:33:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.67 2012/03/18 15:16:47 armin76 Exp $
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> tenshi-0.10-r3.ebuild,
+  tenshi-0.12.ebuild:
+  Drop sparc keywords
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org>
   +files/tenshi-openrc-init-r1.patch, tenshi-0.12.ebuild:
