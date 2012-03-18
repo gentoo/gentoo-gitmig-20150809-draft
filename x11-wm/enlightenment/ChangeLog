@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/enlightenment
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.152 2011/11/20 08:11:27 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.153 2012/03/18 14:02:54 ssuominen Exp $
+
+  18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  enlightenment-0.16.9999.ebuild, enlightenment-1.0.2.ebuild,
+  enlightenment-1.0.6.ebuild, enlightenment-1.0.7.ebuild,
+  enlightenment-1.0.8.ebuild, enlightenment-1.0.9.ebuild,
+  enlightenment-1.0.10.ebuild:
+  Remove USE="esd" because media-sound/esound isn't in tree anymore.
 
 *enlightenment-1.0.10 (20 Nov 2011)
 
