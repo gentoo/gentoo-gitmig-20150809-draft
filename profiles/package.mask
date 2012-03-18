@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13587 2012/03/18 18:08:03 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13588 2012/03/18 19:02:03 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -273,10 +273,6 @@ x11-wm/scrotwm
 # Fails to build and unmaintained, bug #385295
 media-libs/libdlna
 media-video/ushare
-
-# Michael Weber <xmw@gentoo.org> (13 Feb 2012)
-# Maked for testing
->=app-laptop/thinkfan-0.8_alpha2
 
 # Tim Harder <radhermit@gentoo.org> (10 Feb 2012)
 # Masked for testing
