@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/htbinit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.16 2012/01/01 00:56:46 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.17 2012/03/18 19:22:25 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> -htbinit-0.8.5-r3.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #391429. Drop old.
 
 *htbinit-0.8.5-r5 (01 Jan 2012)
 *htbinit-0.8.5-r4 (01 Jan 2012)

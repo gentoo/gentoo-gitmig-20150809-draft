@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>bass@gentoo.org</email>
-    <name>José Alberto Suárez López</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription>
 HTB.init is a shell script derived from CBQ.init that allows for easy setup of HTB-based traffic control on Linux. HTB (Hierachical Token Bucket) is a new queueing discipline which attempts to address the weaknesses of current CBQ implementation.
