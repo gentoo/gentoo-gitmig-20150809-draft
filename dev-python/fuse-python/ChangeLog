@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fuse-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.15 2012/02/22 07:26:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.16 2012/03/18 18:29:09 pacho Exp $
+
+  18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug 118003.
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> fuse-python-0.2-r1.ebuild,
   fuse-python-0.2.1.ebuild, fuse-python-0.2.ebuild:
