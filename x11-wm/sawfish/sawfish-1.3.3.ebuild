@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.10 2011/09/12 14:13:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.11 2012/03/18 13:03:02 ssuominen Exp $
 
 EAPI=1
 
@@ -25,13 +25,12 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
-IUSE="gnome esd nls audiofile pango"
+IUSE="gnome nls audiofile pango"
 
 RDEPEND=">=x11-libs/rep-gtk-0.17
 	=dev-libs/librep-0.17*
 	>=x11-libs/gtk+-2.0.8:2
 	audiofile? ( >=media-libs/audiofile-0.2.3 )
-	esd? ( >=media-sound/esound-0.2.23 )
 	nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
@@ -62,7 +61,7 @@ src_compile() {
 		--disable-themer \
 		--with-gdk-pixbuf \
 		$(use_with audiofile) \
-		$(use_with esd) \
+		--without-esd \
 		$(use_with pango)
 
 	if use gnome; then

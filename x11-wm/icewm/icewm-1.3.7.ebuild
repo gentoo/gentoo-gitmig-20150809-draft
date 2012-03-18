@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.7.ebuild,v 1.2 2011/11/03 21:03:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.7.ebuild,v 1.3 2012/03/18 13:01:01 ssuominen Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug esd gnome minimal nls truetype uclibc xinerama"
+IUSE="debug gnome minimal nls truetype uclibc xinerama"
 
 #fix for icewm preversion package names
 S=${WORKDIR}/${P/_}
@@ -26,7 +26,6 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libICE
 	xinerama? ( x11-libs/libXinerama )
-	esd? ( media-sound/esound )
 	gnome? ( gnome-base/gnome-desktop:2 )
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )
@@ -74,7 +73,7 @@ src_configure() {
 		$(use_enable nls)
 		$(use_enable x86 x86-asm)
 		$(use_enable xinerama)
-		$(use_with esd esd-config /usr/bin/esd-config)"
+		--without-esd-config"
 
 	CXXFLAGS="${CXXFLAGS}" econf ${myconf}
 

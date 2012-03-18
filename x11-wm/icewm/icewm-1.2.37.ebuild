@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.9 2012/03/05 20:02:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.10 2012/03/18 13:01:01 ssuominen Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ SLOT="0"
 
 KEYWORDS="~alpha amd64 ppc ~ppc64 sparc x86"
 
-IUSE="esd gnome imlib nls truetype xinerama minimal debug uclibc"
+IUSE="gnome imlib nls truetype xinerama minimal debug uclibc"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXrandr
@@ -31,7 +31,6 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libICE
 	xinerama? ( x11-libs/libXinerama )
-	esd? ( media-sound/esound )
 	gnome? ( gnome-base/gnome-desktop:2
 		gnome-base/libgnomeui )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
@@ -83,7 +82,7 @@ src_compile() {
 		--with-libdir=/usr/share/icewm
 		--with-cfgdir=/etc/icewm
 		--with-docdir=/usr/share/doc/${PF}/html
-		$(use_with esd esd-config /usr/bin/esd-config)
+		--without-esd-config
 		$(use_enable gnome menus-gnome2)
 		$(use_enable nls)
 		$(use_enable nls i18n)
