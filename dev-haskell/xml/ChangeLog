@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml/ChangeLog,v 1.2 2012/03/04 04:30:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml/ChangeLog,v 1.3 2012/03/18 13:15:40 slyfox Exp $
+
+  18 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> xml-1.3.12.ebuild:
+  ~alpha/~ia64/~ppc/~sparc/~x86-fbsd keyworded (test-framework-0.5 rekeywording)
 
 *xml-1.3.12 (04 Mar 2012)
 
