@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skincurses/vdr-skincurses-0.1.7.ebuild,v 1.2 2009/03/29 16:58:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skincurses/vdr-skincurses-0.1.7.ebuild,v 1.3 2012/03/18 17:37:32 pacho Exp $
 
+EAPI=4
 IUSE=""
 
 inherit vdr-plugin
@@ -19,3 +20,8 @@ LICENSE="GPL-2"
 DEPEND=">=media-video/vdr-1.6.0"
 
 S=${WORKDIR}/vdr-${VDR_V}/PLUGINS/src/${VDRPLUGIN}
+
+src_prepare() {
+	vdr-plugin_src_prepare
+	epatch "${FILESDIR}/vdr-skincurses-0.1.7-gcc46.patch"
+}
