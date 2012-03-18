@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.35 2012/03/18 12:12:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.36 2012/03/18 12:24:42 scarabeus Exp $
 
 EAPI=4
 
@@ -70,7 +70,7 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding +cups dbus debug eds gnome +graphite gstreamer +gtk gtk3
+IUSE="binfilter +branding +cups dbus eds gnome +graphite gstreamer +gtk gtk3
 jemalloc kde mysql +nsplugin odk opengl pdfimport postgres svg test +vba
 +webdav +xmlsec"
 LICENSE="LGPL-3"
@@ -215,7 +215,7 @@ pkg_pretend() {
 
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		CHECKREQS_MEMORY="512M"
-		use debug && CHECKREQS_DISK_BUILD="10G" || CHECKREQS_DISK_BUILD="6G"
+		CHECKREQS_DISK_BUILD="6G"
 		check-reqs_pkg_pretend
 
 		if [[ $(gcc-major-version) -lt 4 ]]; then
@@ -415,6 +415,7 @@ src_configure() {
 		--disable-rpath \
 		--disable-strip-solver \
 		--disable-zenity \
+		--disable-crashdump \
 		--with-alloc=$(use jemalloc && echo "jemalloc" || echo "system") \
 		--with-build-version="Gentoo official package" \
 		--enable-extension-integration \
@@ -440,7 +441,6 @@ src_configure() {
 		--without-sun-templates \
 		$(use_enable binfilter) \
 		$(use_enable dbus) \
-		$(use_enable debug crashdump) \
 		$(use_enable eds evolution2) \
 		$(use_enable gnome gconf) \
 		$(use_enable gnome gio) \
