@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.246 2012/03/06 21:56:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.247 2012/03/19 18:52:18 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> mc-4.8.1-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #401157
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> mc-4.8.1-r1.ebuild:
   Marking mc-4.8.1-r1 ppc64 for bug 401157
