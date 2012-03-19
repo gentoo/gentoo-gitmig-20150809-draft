@@ -1,16 +1,12 @@
- src/ui/Makefile.am |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
-
-diff --git a/src/ui/Makefile.am b/src/ui/Makefile.am
-index 3790ed2..78686ee 100644
---- a/src/ui/Makefile.am
-+++ b/src/ui/Makefile.am
-@@ -42,7 +42,7 @@ synapse_LDADD = \
+=== modified file 'src/ui/Makefile.am'
+--- src/ui/Makefile.am	2012-03-18 19:55:48 +0000
++++ src/ui/Makefile.am	2012-03-18 19:57:30 +0000
+@@ -40,6 +40,7 @@
  	$(top_builddir)/src/core/libsynapsecore.la \
  	$(top_builddir)/src/plugins/libplugins.la \
  	$(top_builddir)/src/tile-view/libtileview.la \
--	$(NULL)
-+	$(NULL) -lm
++	-lm
+ 	$(NULL)
  
  if HAVE_INDICATOR
- synapse_VALAFLAGS += --pkg appindicator-0.1 -D HAVE_INDICATOR
+

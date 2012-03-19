@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/synapse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.13 2012/02/15 18:47:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.14 2012/03/19 08:04:07 jlec Exp $
+
+*synapse-0.2.10 (19 Mar 2012)
+
+  19 Mar 2012; Justin Lecher <jlec@gentoo.org>
+  files/synapse-0.2.8.2-underlinking.patch,
+  files/synapse-0.2.8.2-zeitgeist.patch, +synapse-0.2.10.ebuild:
+  Version Bump, clean backport of patches against underlinking and
+  unconditional linking, #403345
 
   15 Feb 2012; Justin Lecher <jlec@gentoo.org> synapse-0.2.8.2.ebuild,
   +files/synapse-0.2.8.2-zeitgeist.patch:
