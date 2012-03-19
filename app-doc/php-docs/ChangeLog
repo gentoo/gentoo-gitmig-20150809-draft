@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/php-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.56 2012/03/08 08:58:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.57 2012/03/19 19:08:08 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> php-docs-20101029-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #399923
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   php-docs-20101029-r1.ebuild:
