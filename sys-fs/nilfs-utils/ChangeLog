@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/nilfs-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.14 2012/02/22 18:57:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.15 2012/03/19 15:10:41 naota Exp $
+
+  19 Mar 2012; Naohiro Aota <naota@gentoo.org> nilfs-utils-2.1.0.ebuild:
+  Check POSIX_MQUEUE kernel config. #396159
 
   22 Feb 2012; Jeroen Roovers <jer@gentoo.org> nilfs-utils-2.1.0.ebuild:
   Marked ~hppa (bug #276410).
