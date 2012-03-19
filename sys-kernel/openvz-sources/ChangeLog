@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.177 2012/03/19 04:41:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.178 2012/03/19 04:42:52 pva Exp $
+
+  19 Mar 2012; Peter Volkov <pva@gentoo.org>
+  -openvz-sources-2.6.32.39.11.ebuild, -openvz-sources-2.6.32.39.11-r1.ebuild,
+  -openvz-sources-2.6.32.44.11.ebuild, openvz-sources-2.6.32.49.6.ebuild:
+  amd64/x86 stable, bug #198632. Drop old.
 
 *openvz-sources-2.6.18.028.099.3 (19 Mar 2012)
 
