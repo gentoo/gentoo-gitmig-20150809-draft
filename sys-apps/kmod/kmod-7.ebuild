@@ -1,16 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-7.ebuild,v 1.1 2012/03/19 13:47:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-7.ebuild,v 1.2 2012/03/19 13:49:04 ssuominen Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/${PN}/${PN}.git"
 
-[[ ${PV} == "9999" ]] && vcs=git-2
+[[ ${PV} == *9999* ]] && vcs=git-2
 inherit ${vcs} autotools eutils toolchain-funcs
 unset vcs
 
-if [[ ${PV} != "9999" ]] ; then
+if [[ ${PV} != *9999* ]] ; then
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 fi
