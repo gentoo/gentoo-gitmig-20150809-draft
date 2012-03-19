@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mcdp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.23 2012/03/08 08:43:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.24 2012/03/19 19:05:17 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> mcdp-0.4a.ebuild,
+  mcdp-0.4b.ebuild:
+  Drop sparc keywords
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mcdp-0.4b.ebuild:
   x86 stable wrt bug #400401
