@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/the_silver_searcher-0.1.ebuild,v 1.1 2012/01/13 19:23:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/the_silver_searcher-0.3.ebuild,v 1.1 2012/03/19 00:17:43 jdhore Exp $
 
 EAPI=4
 inherit autotools
@@ -18,11 +18,6 @@ RDEPEND="dev-libs/libpcre"
 DEPEND="${RDEPEND}"
 
 DOCS="README.md"
-
-src_unpack() {
-	unpack ${A}
-	mv *-${PN}-* "${S}"
-}
 
 src_prepare() {
 	eautoreconf
