@@ -1,16 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.16 2012/03/19 13:49:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.17 2012/03/19 22:51:42 williamh Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/${PN}/${PN}.git"
 
-[[ ${PV} == *9999* ]] && vcs=git-2
+[[ ${PV} == 9999 ]] && vcs=git-2
 inherit ${vcs} autotools eutils toolchain-funcs
 unset vcs
 
-if [[ ${PV} != *9999* ]] ; then
+if [[ ${PV} != 9999 ]] ; then
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
@@ -26,14 +26,16 @@ COMMON_DEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
 	lzma? ( app-arch/xz-utils )
 	zlib? ( sys-libs/zlib )"
-RDEPEND="${COMMON_DEPEND}"
+
 DEPEND="${COMMON_DEPEND}
 	doc? ( dev-util/gtk-doc )"
+RDEPEND="${COMMON_DEPEND}"
 
-src_prepare() {
+src_prepare()
+{
 	if [ ! -e configure ]; then
 		if use doc; then
-			gtkdocize --copy --docdir libkmod/docs || die
+			gtkdocize --copy --docdir libkmod/docs ||  die "gtkdocize failed"
 		else
 			touch libkmod/docs/gtk-doc.make
 		fi
@@ -43,9 +45,10 @@ src_prepare() {
 	fi
 }
 
-src_configure() {
+src_configure()
+{
 	local myconf
-	[[ ${PV} == *9999* ]] && myconf="$(use_enable doc gtk-doc)"
+	[[ ${PV} == 9999 ]] && myconf="$(use_enable doc gtk-doc)"
 
 	econf \
 		$(use_enable static-libs static) \
@@ -56,7 +59,8 @@ src_configure() {
 		${myconf}
 }
 
-src_install() {
+src_install()
+{
 	default
 
 	find "${D}" -name libkmod.la -exec rm -f {} +
