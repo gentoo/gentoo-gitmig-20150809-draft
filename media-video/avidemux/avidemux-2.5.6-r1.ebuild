@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r1.ebuild,v 1.1 2012/03/18 20:21:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r1.ebuild,v 1.2 2012/03/19 22:18:08 pesa Exp $
 
 EAPI=4
 
@@ -16,10 +16,9 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
 IUSE="aac aften alsa amr gtk jack +mp3 nls opengl oss pulseaudio
-	+qt4 sdl +truetype vorbis vpx +x264 +xv +xvid"
+	qt4 sdl +truetype vorbis vpx +x264 +xv +xvid"
 
 RDEPEND="
-	dev-lang/spidermonkey
 	dev-libs/libxml2
 	sys-libs/zlib
 	aac? (
@@ -121,7 +120,6 @@ src_configure() {
 		-DAVIDEMUX_CORECONFIG_DIR="${BUILD_S}/config"
 		-DARTS=OFF
 		-DESD=OFF
-		-DUSE_SYSTEM_SPIDERMONKEY=ON
 		$(cmake-utils_use aac FAAC)
 		$(cmake-utils_use aac FAAD)
 		$(cmake-utils_use aften)
