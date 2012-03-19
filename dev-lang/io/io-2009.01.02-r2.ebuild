@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2009.01.02-r1.ebuild,v 1.3 2011/07/08 10:51:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2009.01.02-r2.ebuild,v 1.1 2012/03/19 10:05:26 pacho Exp $
 
 DESCRIPTION="Io is a small, prototype-based programming language."
 HOMEPAGE="http://www.iolanguage.com"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="doc readline mysql cairo postgres dbi opengl ncurses sqlite sqlite3 zlib lzo"
+IUSE="doc readline mysql cairo postgres dbi opengl ncurses sqlite zlib lzo"
 DEPEND="lzo? ( dev-libs/lzo )
 		readline? ( sys-libs/readline )
 		mysql? ( virtual/mysql )
@@ -19,8 +19,7 @@ DEPEND="lzo? ( dev-libs/lzo )
 		opengl? ( virtual/opengl )
 		dbi? ( dev-db/libdbi )
 		ncurses? ( sys-libs/ncurses )
-		sqlite? ( dev-db/sqlite )
-		sqlite3? ( >=dev-db/sqlite-3.0.0 )
+		sqlite? ( >=dev-db/sqlite-3.0.0 )
 		zlib? ( sys-libs/zlib )"
 RDEPEND=""
 
@@ -34,8 +33,7 @@ src_compile() {
 	use opengl && make OpenGL
 	use dbi && make DBI
 	use ncurses && make Curses
-	use sqlite && make SQLite
-	use sqlite3 && make SQLite3
+	use sqlite && make SQLite3
 	use zlib && make Zlib
 	use lzo && make LZO
 }
