@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.291 2012/03/12 20:43:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.292 2012/03/19 18:53:22 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> genkernel-3.4.20.ebuild:
+  alpha/ia64/s390/sparc stable wrt #400539
 
   12 Mar 2012; Robin H. Johnson <robbat2@gentoo.org>
   -files/busybox-1.7.4-make-3.82.patch, -genkernel-3.4.10-r1.ebuild,
