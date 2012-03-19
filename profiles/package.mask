@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13592 2012/03/19 00:46:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13593 2012/03/19 06:57:33 naota Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -389,14 +389,6 @@ dev-util/febootstrap
 # Tim Harder <radhermit@gentoo.org> (29 Nov 2011)
 # Masked until gcc-4.6 is unmasked
 >=media-video/mkvtoolnix-5.1.0
-
-# Naohiro Aota <naota@gentoo.org> (24 Nov 2011)
-# Masked for removal in 30 days
-# due to end of support (upstream) and
-# security issue: bug 390769
-app-text/chasen
-app-dicts/ipadic
-dev-ruby/ruby-chasen
 
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
