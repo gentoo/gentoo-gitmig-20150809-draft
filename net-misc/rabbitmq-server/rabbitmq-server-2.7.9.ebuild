@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.7.9.ebuild,v 1.1 2012/03/16 09:37:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.7.9.ebuild,v 1.2 2012/03/19 09:17:57 hollow Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -18,6 +18,8 @@ IUSE=""
 
 RDEPEND="dev-lang/erlang"
 DEPEND="${RDEPEND}
+	app-arch/zip
+	app-arch/unzip
 	app-text/docbook-xml-dtd:4.5
 	app-text/xmlto
 	dev-libs/libxslt
@@ -27,8 +29,8 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	enewgroup rabbitmq
 	enewuser rabbitmq -1 -1 /var/lib/rabbitmq rabbitmq
-        python_set_active_version 2
-        python_pkg_setup
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_compile() {
