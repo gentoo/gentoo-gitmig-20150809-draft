@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.67 2012/03/11 13:48:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.68 2012/03/19 06:35:17 graaff Exp $
+
+*libxml-2.3.0 (19 Mar 2012)
+
+  19 Mar 2012; Hans de Graaff <graaff@gentoo.org> +libxml-2.3.0.ebuild:
+  Version bump.
 
   11 Mar 2012; Brent Baude <ranger@gentoo.org> libxml-2.2.1.ebuild:
   Marking libxml-2.2.1 ppc64 for bug 395991
