@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.79 2012/03/19 14:54:36 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.80 2012/03/19 16:21:49 williamh Exp $
 
 EAPI=4
 
@@ -83,7 +83,7 @@ udev_check_KV()
 pkg_setup()
 {
 	# required kernel options
-	CONFIG_CHECK="~BLK_DEV_BSG DEVTMPFS ~HOTPLUG ~INOTIFY_USER ~NET ~PROC_FS
+	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~HOTPLUG ~INOTIFY_USER ~NET ~PROC_FS
 		~SIGNALFD ~SYSFS
 		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
 
