@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.31 2012/03/18 23:12:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.32 2012/03/19 15:15:28 floppym Exp $
+
+  19 Mar 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0_p20120309.ebuild,
+  remmina-9999.ebuild:
+  Update freerdp dep for #408809 by Rion.
 
   18 Mar 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Reorder mainainters.
