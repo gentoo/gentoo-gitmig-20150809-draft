@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/gwaei
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.24 2012/03/08 05:20:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.25 2012/03/19 16:49:48 naota Exp $
+
+  19 Mar 2012; Naohiro Aota <naota@gentoo.org> gwaei-3.0.2.ebuild:
+  Add missing dependency: dev-util/intltool and app-text/rarian. #399343
 
   08 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gwaei-3.0.2.ebuild:
   Non-maintainer commit: do not use gnome2_schemas_update --uninstall (bug

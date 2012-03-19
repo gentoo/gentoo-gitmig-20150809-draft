@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-3.0.2.ebuild,v 1.2 2012/03/08 05:20:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-3.0.2.ebuild,v 1.3 2012/03/19 16:49:48 naota Exp $
 
 EAPI="4"
 
@@ -31,6 +31,8 @@ DEPEND="${RDEPEND}
 		app-text/scrollkeeper
 	)
 	nls? ( >=sys-devel/gettext-0.17 )
+	app-text/rarian
+	dev-util/intltool
 	dev-util/pkgconfig"
 
 REQUIRED_USE="unique? ( gtk )"
