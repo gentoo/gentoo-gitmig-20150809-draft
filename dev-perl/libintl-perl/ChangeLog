@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.32 2012/03/14 20:40:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.33 2012/03/19 08:51:21 leio Exp $
+
+  19 Mar 2012; Mart Raudsepp <leio@gentoo.org> libintl-perl-1.200.0.ebuild:
+  Add ~mips keyword, needed by newer app-text/texi2html wrt #408399
 
   14 Mar 2012; Jeroen Roovers <jer@gentoo.org> libintl-perl-1.200.0.ebuild:
   Marked ~hppa (bug #408119).
