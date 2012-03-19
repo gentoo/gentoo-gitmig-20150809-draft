@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.134 2012/03/16 23:01:03 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.135 2012/03/19 21:32:52 maekke Exp $
+
+  19 Mar 2012; Markus Meier <maekke@gentoo.org> rpm-4.9.1.2.ebuild:
+  arm stable, bug #406479
 
   16 Mar 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   rpm-4.9.1.2.ebuild:
