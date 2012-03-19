@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/maintainer-helper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.13 2012/03/18 18:23:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.14 2012/03/19 15:54:51 fuzzyray Exp $
+
+  19 Mar 2012; Paul Varner <fuzzyray@gentoo.org> metadata.xml:
+  Added to the tools-portage herd, left maintainer-needed as the maintainer.
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug 118003.
