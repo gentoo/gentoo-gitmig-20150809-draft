@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libktorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.30 2012/03/12 09:44:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.31 2012/03/19 17:15:57 johu Exp $
+
+*libktorrent-1.2.0 (19 Mar 2012)
+
+  19 Mar 2012; Johannes Huber <johu@gentoo.org> +libktorrent-1.2.0.ebuild:
+  Version bump by Pavlos Ratis <dastergon@gmail.com> wrt bug #407993.
 
   12 Mar 2012; Johannes Huber <johu@gentoo.org> -libktorrent-1.1.1.ebuild:
   Remove old.
