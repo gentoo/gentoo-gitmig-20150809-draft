@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/CPAN-Mini-Inject-0.310.0.ebuild,v 1.1 2012/02/29 08:58:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/CPAN-Mini-Inject-0.310.0.ebuild,v 1.2 2012/03/19 19:27:17 armin76 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Inject modules into a CPAN::Mini mirror. "
 
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # Disabled

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-W3CDTF
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-W3CDTF/ChangeLog,v 1.24 2012/03/08 12:31:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-W3CDTF/ChangeLog,v 1.25 2012/03/19 19:46:57 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  DateTime-Format-W3CDTF-0.04.ebuild, DateTime-Format-W3CDTF-0.60.0.ebuild:
+  Drop ia64/sparc keywords
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   DateTime-Format-W3CDTF-0.60.0.ebuild:

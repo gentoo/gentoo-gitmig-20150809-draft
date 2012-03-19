@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-RSS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.92 2012/03/02 21:17:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.93 2012/03/19 19:45:17 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> XML-RSS-1.48.ebuild,
+  XML-RSS-1.490.0.ebuild:
+  Drop ia64/sparc keywords
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> XML-RSS-1.490.0.ebuild:
   Marking XML-RSS-1.490.0 ppc64 for bug 396959

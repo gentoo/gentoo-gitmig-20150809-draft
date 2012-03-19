@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/Authen-NTLM-1.80.0.ebuild,v 1.1 2011/04/07 11:32:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/Authen-NTLM-1.80.0.ebuild,v 1.2 2012/03/19 19:25:54 armin76 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="An NTLM authentication module"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="test"
 
 RDEPEND=">=virtual/perl-MIME-Base64-3.00

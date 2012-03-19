@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/File-Flat-1.40.0.ebuild,v 1.2 2011/09/03 21:04:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/File-Flat-1.40.0.ebuild,v 1.3 2012/03/19 19:31:17 armin76 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Implements a flat filesystem"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ~ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha ~amd64 hppa ~mips ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND=">=dev-perl/Class-Autouse-1

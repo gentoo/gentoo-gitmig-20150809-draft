@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/Authen-NTLM-1.02.ebuild,v 1.17 2007/01/14 22:26:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/Authen-NTLM-1.02.ebuild,v 1.18 2012/03/19 19:25:54 armin76 Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://cpan.org/modules/by-module/Authen/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=virtual/perl-MIME-Base64-3.00

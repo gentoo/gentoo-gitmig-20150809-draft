@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Curses-UI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.36 2012/03/08 12:20:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.37 2012/03/19 19:35:21 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> Curses-UI-0.960.700.ebuild,
+  Curses-UI-0.960.800.ebuild, Curses-UI-0.960.900.ebuild:
+  Drop ia64/sparc keywords
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Curses-UI-0.960.900.ebuild:

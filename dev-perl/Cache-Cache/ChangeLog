@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cache-Cache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.53 2012/03/08 12:04:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.54 2012/03/19 19:28:16 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> Cache-Cache-1.05.ebuild,
+  Cache-Cache-1.60.0.ebuild:
+  Drop ia64/sparc keywords
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Cache-Cache-1.60.0.ebuild:

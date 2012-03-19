@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBI-Shell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/ChangeLog,v 1.19 2012/03/08 12:22:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/ChangeLog,v 1.20 2012/03/19 19:35:44 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> DBI-Shell-11.93.ebuild,
+  DBI-Shell-11.950.0.ebuild:
+  Drop ia64/sparc keywords
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   DBI-Shell-11.950.0.ebuild:
