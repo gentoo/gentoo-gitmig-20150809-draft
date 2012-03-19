@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.173 2012/03/18 20:01:50 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.174 2012/03/19 22:27:23 chithanh Exp $
+
+  19 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-input-evdev-2.7.0.ebuild:
+  Put sys-libs/mtdev in RDEPEND too, bug #408921.
 
   18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/xf86-input-evdev-2.7.0-horizontal-scrolling.patch,
