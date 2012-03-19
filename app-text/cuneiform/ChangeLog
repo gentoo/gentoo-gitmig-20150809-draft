@@ -1,6 +1,14 @@
 # ChangeLog for app-text/cuneiform
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cuneiform/ChangeLog,v 1.5 2011/09/12 06:01:11 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cuneiform/ChangeLog,v 1.6 2012/03/19 06:09:27 pva Exp $
+
+*cuneiform-1.1.0-r1 (19 Mar 2012)
+
+  19 Mar 2012; Peter Volkov <pva@gentoo.org> +cuneiform-1.1.0-r1.ebuild,
+  +files/c-assert.diff, +files/cuneiform.1, +files/graphicsmagick.diff,
+  +files/libm.diff, metadata.xml:
+  Depend on graphicsmagick by pulling some debian patches, bug 314231, thank
+  yaleks for this job.
 
   12 Sep 2011; Peter Volkov <pva@gentoo.org> -cuneiform-0.8.0.ebuild,
   -cuneiform-1.0.0.ebuild:
