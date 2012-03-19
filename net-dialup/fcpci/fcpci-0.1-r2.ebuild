@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-0.1-r2.ebuild,v 1.3 2011/06/06 06:25:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-0.1-r2.ebuild,v 1.4 2012/03/19 19:05:20 ulm Exp $
 
 #EAPI=2  # currently not possible because of linux-mod
 
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND="!net-dialup/fritzcapi"
 RDEPEND="${DEPEND} net-dialup/capi4k-utils"
 
-RESTRICT="primaryuri"  # because we can't use EAPI=2
+RESTRICT="mirror primaryuri"  # because we can't use EAPI=2
 
 S="${WORKDIR}/fritz"
 
