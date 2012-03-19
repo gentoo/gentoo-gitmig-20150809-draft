@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.5.ebuild,v 1.1 2012/03/17 20:41:46 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.5.ebuild,v 1.2 2012/03/19 20:49:45 mabi Exp $
 
 EAPI=4
 
@@ -34,8 +34,9 @@ src_prepare() {
 	sed -i -e 's:\(/README\)\("\):\1.gz\2:g' doc/readme.html
 
 	if ! use deprecated ; then
-		epatch "${FILESDIR}"/${P}-deprecated.patch
-		epatch "${FILESDIR}"/${P}-test.patch
+		# patches from 5.1.4 still apply
+		epatch "${FILESDIR}"/${PN}-5.1.4-deprecated.patch
+		epatch "${FILESDIR}"/${PN}-5.1.4-test.patch
 	fi
 
 	if ! use readline ; then
