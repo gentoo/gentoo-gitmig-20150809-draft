@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.8.4-r1.ebuild,v 1.2 2011/10/27 13:34:28 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.8.4-r1.ebuild,v 1.3 2012/03/19 14:51:15 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
 
-inherit eutils multilib scons-utils versionator
+inherit eutils multilib pax-utils scons-utils versionator
 
 MY_P=${PN}-src-r${PV/_rc/-rc}
 
@@ -56,6 +56,8 @@ src_install() {
 	escons ${scons_opts} --full --nostrip install --prefix="${D}"/usr
 
 	use static-libs || rm "${D}/usr/$(get_libdir)/libmongoclient.a"
+
+	use v8 && pax-mark m "${D}"/usr/bin/{mongo,mongod}
 
 	for x in /var/{lib,log,run}/${PN}; do
 		keepdir "${x}"

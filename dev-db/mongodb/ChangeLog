@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.32 2012/02/29 11:31:11 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.33 2012/03/19 14:51:15 ultrabug Exp $
+
+  19 Mar 2012; Ultrabug <ultrabug@gentoo.org> mongodb-1.8.4-r1.ebuild,
+  mongodb-2.0.2.ebuild, mongodb-2.0.3.ebuild:
+  PaX mark mongo/mongod for v8 installations, fix #399605.
 
 *mongodb-2.0.3 (29 Feb 2012)
 
