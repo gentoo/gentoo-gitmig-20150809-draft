@@ -1,6 +1,9 @@
 # ChangeLog for app-text/passivetex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.32 2010/10/02 12:46:47 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.33 2012/03/19 05:50:49 leio Exp $
+
+  19 Mar 2012; Mart Raudsepp <leio@gentoo.org> passivetex-1.25.ebuild:
+  Add ~mips keyword, needed by app-text/texlive[xml]
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org> passivetex-1.25.ebuild:
   Marked ~x64-macos, bug #333981
