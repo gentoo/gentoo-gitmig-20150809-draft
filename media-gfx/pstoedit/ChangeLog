@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pstoedit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.69 2011/09/21 05:02:57 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.70 2012/03/19 09:08:49 naota Exp $
+
+  19 Mar 2012; Naohiro Aota <naota@gentoo.org> +files/pstoedit-3.60-libdl.patch,
+  pstoedit-3.60.ebuild:
+  Add patch to link against proper dlopen libraly. #395347
 
 *pstoedit-3.60 (21 Sep 2011)
 

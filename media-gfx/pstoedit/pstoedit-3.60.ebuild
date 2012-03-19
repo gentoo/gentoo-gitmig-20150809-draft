@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.60.ebuild,v 1.1 2011/09/21 05:02:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.60.ebuild,v 1.2 2012/03/19 09:08:49 naota Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -30,7 +30,8 @@ src_prepare() {
 		-e 's:-pedantic::' \
 		configure.ac || die
 
-	epatch "${FILESDIR}"/${P}-parallel.patch
+	epatch "${FILESDIR}"/${P}-parallel.patch \
+		"${FILESDIR}"/${P}-libdl.patch
 
 	eautoreconf
 }
