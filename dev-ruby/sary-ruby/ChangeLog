@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sary-ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.48 2012/03/06 21:41:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.49 2012/03/19 18:54:49 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> sary-ruby-1.2.0-r2.ebuild:
+  ia64/sparc stable wrt #391587
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> sary-ruby-1.2.0-r2.ebuild:
   Marking sary-ruby-1.2.0-r2 ppc64 for bug 391587

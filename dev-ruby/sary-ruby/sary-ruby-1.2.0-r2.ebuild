@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-1.2.0-r2.ebuild,v 1.8 2012/03/06 21:41:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-1.2.0-r2.ebuild,v 1.9 2012/03/19 18:54:49 armin76 Exp $
 
 EAPI="2"
 # jruby: mkmf issue
@@ -12,7 +12,7 @@ HOMEPAGE="http://sary.sourceforge.net/"
 SRC_URI="http://sary.sourceforge.net/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 IUSE=""
 
