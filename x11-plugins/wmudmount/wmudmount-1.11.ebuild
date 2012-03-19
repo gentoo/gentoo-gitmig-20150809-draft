@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/wmudmount-1.11.ebuild,v 1.1 2012/03/19 20:21:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/wmudmount-1.11.ebuild,v 1.2 2012/03/19 21:01:00 ssuominen Exp $
 
 EAPI=4
-inherit flag-o-matic gnome2-utils
+inherit gnome2-utils
 
 DESCRIPTION="A filesystem mounter that uses udisks to handle notification and mounting"
 HOMEPAGE="http://sourceforge.net/projects/wmudmount/"
@@ -25,7 +25,6 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_with libnotify) \
 		$(use_with gnome-keyring)
 }
