@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.236 2012/03/06 16:31:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.237 2012/03/19 21:03:34 zmedico Exp $
+
+  19 Mar 2012; Zac Medico <zmedico@gentoo.org>
+  files/0001-Add-new-T-purgetmponly-option.patch:
+  Fix indentation error in 0001-Add-new-T-purgetmponly-option.patch.
 
 *catalyst-2.0.7.1-r1 (06 Mar 2012)
 
