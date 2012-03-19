@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.75 2012/02/21 02:57:00 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.76 2012/03/19 09:54:03 pacho Exp $
+
+  19 Mar 2012; Pacho Ramos <pacho@gentoo.org> zabbix-1.8.10-r1.ebuild,
+  zabbix-1.9.5-r1.ebuild:
+  Move from sqlite3 USE flag to sqlite, bug #251394 (fixed with Patrick
+  permission).
 
   21 Feb 2012; Matthew Marlowe <mattm@gentoo.org> -zabbix-1.8.7-r2.ebuild,
   -zabbix-1.8.7-r3.ebuild, -zabbix-1.8.8-r2.ebuild, -zabbix-1.8.8-r3.ebuild,

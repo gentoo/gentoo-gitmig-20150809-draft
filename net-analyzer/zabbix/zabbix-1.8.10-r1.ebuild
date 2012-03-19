@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.10-r1.ebuild,v 1.3 2012/01/08 19:52:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.10-r1.ebuild,v 1.4 2012/03/19 09:54:03 pacho Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 KEYWORDS="amd64 x86"
-IUSE="agent curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server -ssh snmp +sqlite3"
+IUSE="agent curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server -ssh snmp +sqlite"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? (
@@ -25,7 +25,7 @@ COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 		net-libs/gnutls
 	)
 	mysql? ( virtual/mysql )
-	sqlite3? ( =dev-db/sqlite-3* )
+	sqlite? ( =dev-db/sqlite-3* )
 	postgres? ( dev-db/postgresql-base )
 	oracle? ( dev-db/oracle-instantclient-basic )
 	jabber? ( dev-libs/iksemel )
@@ -202,7 +202,7 @@ src_configure() {
 		$(use_with mysql) \
 		$(use_with postgres pgsql) \
 		$(use_with oracle) \
-		$(use_with sqlite3) \
+		$(use_with sqlite sqlite3) \
 		$(use_with jabber) \
 		$(use_with curl libcurl) \
 		$(use_with openipmi openipmi) \
