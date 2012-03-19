@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/howm-1.3.8.ebuild,v 1.4 2010/10/14 16:46:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/howm-1.3.9.2.ebuild,v 1.1 2012/03/19 17:39:56 ulm Exp $
 
-EAPI=3
+EAPI=4
 
 inherit elisp
 
@@ -12,7 +12,7 @@ SRC_URI="http://howm.sourceforge.jp/a/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 SITEFILE="50${PN}-gentoo.el"
@@ -22,7 +22,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 </dev/null || die "emake failed"
+	emake -j1 </dev/null
 }
 
 src_install() {
@@ -30,11 +30,9 @@ src_install() {
 		DESTDIR="${D}" \
 		PREFIX="${EPREFIX}/usr" \
 		LISPDIR="${EPREFIX}${SITELISP}/${PN}" \
-		install </dev/null \
-		|| die "emake install failed"
+		install </dev/null
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
-	dodoc ChangeLog || die "dodoc failed"
-	prepalldocs
+	dodoc ChangeLog
 }
 
 pkg_postinst() {
