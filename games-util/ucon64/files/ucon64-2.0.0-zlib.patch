@@ -23,3 +23,23 @@
  
  #if defined(STRICTUNZIP) || defined(STRICTZIPUNZIP)
  /* like the STRICT of WIN32, we define a pointer that cannot be converted
+--- libdiscmage/misc_z.c.old	2012-03-19 08:39:41.975022496 +0100
++++ libdiscmage/misc_z.c	2012-03-19 08:40:13.109803301 +0100
+@@ -27,6 +27,7 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <sys/stat.h>
++#define Z_SOLO
+ #include <zlib.h>
+ #include "misc_z.h"
+ #include "misc.h"
+--- misc/archive.c.old	2012-03-19 08:41:06.478999810 +0100
++++ misc/archive.c	2012-03-19 08:41:24.134741668 +0100
+@@ -27,6 +27,7 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <sys/stat.h>
++#define Z_SOLO
+ #include <zlib.h>
+ #ifdef  HAVE_BYTESWAP_H
+ #include <byteswap.h>
