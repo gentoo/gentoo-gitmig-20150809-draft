@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xvile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.24 2011/12/13 22:07:53 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.25 2012/03/19 06:46:42 radhermit Exp $
+
+*xvile-9.8g (19 Mar 2012)
+
+  19 Mar 2012; Tim Harder <radhermit@gentoo.org> +xvile-9.8g.ebuild:
+  Version bump.
 
   13 Dec 2011; Tim Harder <radhermit@gentoo.org> xvile-9.8e.ebuild:
   Remove unnecessary eutils usage.
