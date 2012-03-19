@@ -18,5 +18,6 @@
   <flag name="old-hd-rules">Install rules for /dev/hd* devices, removed upstream at udev-148</flag>
   <flag name="rule_generator">enable persistent network and optical device rule generator</flag>
   <flag name="acl">apply ACLs for users with local forground sessions</flag>
+  <flag name="openrc">install the OpenRC init scripts</flag>
 </use>
 </pkgmetadata>

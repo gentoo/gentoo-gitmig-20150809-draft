@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.81 2012/03/19 17:04:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.82 2012/03/19 20:30:24 williamh Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html ht
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="build selinux debug +rule_generator hwdb gudev introspection
-	keymap floppy edd doc static-libs"
+	keymap floppy edd doc static-libs +openrc"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	gudev? ( dev-libs/glib:2 )
@@ -62,11 +62,11 @@ RDEPEND="${COMMON_DEPEND}
 		>=sys-apps/usbutils-0.82
 		|| ( >=sys-apps/pciutils-3.1.9-r1[-compress-db]  <sys-apps/pciutils-3.1.9-r1[-zlib] )
 		)
-	sys-fs/udev-init-scripts
+	openrc? ( sys-fs/udev-init-scripts
+		!<sys-apps/openrc-0.9.9 )
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
-	!<sys-apps/openrc-0.9.9
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25"
 
@@ -187,6 +187,7 @@ src_install()
 
 	# Now install rules
 	insinto /lib/udev/rules.d/
+doins ${FILESDIR}/40-gentoo.rules
 
 }
 
