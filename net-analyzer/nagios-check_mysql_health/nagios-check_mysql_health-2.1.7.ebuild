@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_mysql_health/nagios-check_mysql_health-2.1.1.ebuild,v 1.2 2010/05/20 17:24:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_mysql_health/nagios-check_mysql_health-2.1.7.ebuild,v 1.1 2012/03/19 08:56:55 hollow Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit multilib autotools
 
 DESCRIPTION="A nagios plugin for checking MySQL server health"
 HOMEPAGE="http://labs.consol.de/lang/de/nagios/check_mysql_health/"
-SRC_URI="http://labs.consol.de/wp-content/uploads/2010/03/check_mysql_health-${PV}.tar.gz"
+SRC_URI="http://labs.consol.de/wp-content/uploads/2011/08/check_mysql_health-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
