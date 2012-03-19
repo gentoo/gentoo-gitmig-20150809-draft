@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nstats
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nstats/ChangeLog,v 1.20 2012/03/18 17:49:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nstats/ChangeLog,v 1.21 2012/03/19 12:01:09 jer Exp $
+
+  19 Mar 2012; Jeroen Roovers <jer@gentoo.org> -nstats-0.4-r1.ebuild:
+  Old.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> nstats-0.4-r1.ebuild,
   nstats-0.4-r2.ebuild:
