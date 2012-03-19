@@ -1,9 +1,0 @@
-[Unit]
-Description=X-Window Display Manager
-After=systemd-user-sessions.service
-
-[Service]
-ExecStart=/usr/bin/xdm -nodaemon
-
-[Install]
-Alias=graphical.target.wants/xdm.service
