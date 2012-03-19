@@ -1,6 +1,16 @@
 # ChangeLog for app-text/yagf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.8 2011/09/12 13:18:16 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.9 2012/03/19 06:12:15 pva Exp $
+
+*yagf-0.9 (19 Mar 2012)
+
+  19 Mar 2012; Peter Volkov <pva@gentoo.org> -yagf-0.8.4.ebuild,
+  -yagf-0.8.5.ebuild, -yagf-0.8.6.ebuild, +yagf-0.9.ebuild,
+  +files/yagf-0.9-mdv-linkage.patch, metadata.xml:
+  Version bump, bug #395509, thank yaleks for this job. Drop old.
+
+  08 Mar 2012; Aleksandr Yakimov <yaleks@gentoo.ru> +yagf-0.9.ebuild, metadata.xml:
+  Version bump to 0.9
 
   12 Sep 2011; Peter Volkov <pva@gentoo.org> yagf-0.8.7.ebuild, metadata.xml:
   Add tesseract/pdf support thank Yaleks for this job.

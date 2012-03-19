@@ -10,14 +10,18 @@
   <name>Aleksandr Yakimov</name>
 </maintainer>
 	<longdescription lang="en">
-	YAGF is a graphical interface for the cuneiform text recognition program on
-	the Linux platform. With YAGF you can scan images via XSane, perform images
-	preprocessing and recognize texts using cuneiform from a single command
-	centre. YAGF also makes it easy to scan and recognize several images
-	sequentially.
+		YAGF is a graphical front-end for cuneiform and tesseract OCR tools.
+		With YAGF you can open already scanned image files or obtain new images
+		via XSane (scanning results are automatically passed to YAGF).
+		Once you have a scanned image you can prepare it for recognition, select
+		particular image areas for recognition, set the recognition language and
+		so no. Recognized text is displayed in a editor window where it can be
+		corrected, saved to disk or copied to clipboard.
+		YAGF also provides some facilities for a multi-page recognition (see
+		the online help for more details).
 	</longdescription>
 	<use>
 		<flag name='cuneiform'>Enable support for the <pkg>app-text/cuneiform</pkg> OCR engine.</flag>
-		<flag name='tesseract'>Enable support for the tesseract OCR engine</flag>
+		<flag name='tesseract'>Enable support for the <pkg>app-text/tesseract</pkg> OCR engine.</flag>
 	</use>
 </pkgmetadata>
