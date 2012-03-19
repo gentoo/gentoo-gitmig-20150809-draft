@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.0.ebuild,v 1.3 2012/03/19 15:10:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.0.ebuild,v 1.4 2012/03/19 17:04:18 mr_bones_ Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ pkg_setup() {
 	ebegin "Checking for POSIX MQUEUE support"
 	linux_chkconfig_present POSIX_MQUEUE
 	eend $?
-	
+
 	if [[ $? -ne 0 ]]; then
 		eerror "Plese enable POSIX Message Queues support"
 		eerror
