@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-en-ja/stardict-jmdict-en-ja-2.4.2-r1.ebuild,v 1.5 2009/01/23 13:18:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-en-ja/stardict-jmdict-en-ja-2.4.2-r1.ebuild,v 1.6 2012/03/19 05:33:54 naota Exp $
 
 FROM_LANG="English"
 TO_LANG="Japanese"
@@ -17,8 +17,3 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-
-src_install() {
-	stardict_src_install
-	dodoc README
-}

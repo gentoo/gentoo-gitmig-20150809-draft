@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-jmdict-en-ja
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-en-ja/ChangeLog,v 1.12 2009/01/23 13:18:39 pva Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-en-ja/ChangeLog,v 1.13 2012/03/19 05:33:54 naota Exp $
+
+  19 Mar 2012; Naohiro Aota <naota@gentoo.org>
+  stardict-jmdict-en-ja-2.4.2-r1.ebuild:
+  Don't dodoc on missing file README. Patch by Christophe LEFEBVRE. #298450
 
   23 Jan 2009; Peter Volkov <pva@gentoo.org>
   stardict-jmdict-en-ja-2.4.2-r1.ebuild:
