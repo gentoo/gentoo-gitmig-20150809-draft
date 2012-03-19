@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.20-r1.ebuild,v 1.1 2012/02/15 09:53:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.20-r1.ebuild,v 1.2 2012/03/19 18:53:54 cardoe Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ IUSE="acpi custom-cflags gtk multilib kernel_linux"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
-COMMON="<x11-base/xorg-server-1.11.99
+COMMON="<x11-base/xorg-server-1.12.99
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	>=app-admin/eselect-opengl-1.0.9
