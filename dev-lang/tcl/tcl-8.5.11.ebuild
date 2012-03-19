@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.11.ebuild,v 1.4 2012/03/10 15:34:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.11.ebuild,v 1.5 2012/03/19 08:08:52 jlec Exp $
 
 EAPI=4
 
@@ -71,7 +71,7 @@ src_install() {
 	S= emake DESTDIR="${D}" install
 
 	# fix the tclConfig.sh to eliminate refs to the build directory
-	local mylibdir=$(get_libdir) ; mylibdir=${mylibdir//\/}
+	local mylibdir=$(get_libdir)
 	sed -i \
 		-e "s,^TCL_BUILD_LIB_SPEC='-L.*/unix,TCL_BUILD_LIB_SPEC='-L${EPREFIX}/usr/${mylibdir}," \
 		-e "s,^TCL_SRC_DIR='.*',TCL_SRC_DIR='${EPREFIX}/usr/${mylibdir}/tcl${v1}/include'," \

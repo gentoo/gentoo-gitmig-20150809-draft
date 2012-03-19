@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.165 2012/03/11 07:35:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.166 2012/03/19 08:10:12 jlec Exp $
+
+  19 Mar 2012; Justin Lecher <jlec@gentoo.org> tk-8.5.11.ebuild:
+  Drop unnessecary stripping of slashes, #408261, thanks Kevin Pyle for the
+  patch
 
   11 Mar 2012; Jeff Horelick <jdhore@gentoo.org> tk-8.5.10-r1.ebuild:
   marked x86 per bug 406607

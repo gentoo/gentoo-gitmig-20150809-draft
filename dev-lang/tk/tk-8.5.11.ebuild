@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.11.ebuild,v 1.2 2012/03/04 20:13:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.11.ebuild,v 1.3 2012/03/19 08:10:12 jlec Exp $
 
 EAPI=4
 
@@ -49,7 +49,7 @@ src_configure() {
 	tc-export CC
 	cd "${S}"/unix
 
-	local mylibdir=$(get_libdir) ; mylibdir=${mylibdir//\/}
+	local mylibdir=$(get_libdir)
 
 	econf \
 		--with-tcl="${EPREFIX}/usr/${mylibdir}" \
@@ -76,7 +76,7 @@ src_install() {
 	local nS="$(cd "${S}"; pwd)"
 
 	# fix the tkConfig.sh to eliminate refs to the build directory
-	local mylibdir=$(get_libdir) ; mylibdir=${mylibdir//\/}
+	local mylibdir=$(get_libdir)
 	sed -i \
 		-e "s,^\(TK_BUILD_LIB_SPEC='-L\)${nS}/unix,\1${EPREFIX}/usr/${mylibdir}," \
 		-e "s,^\(TK_SRC_DIR='\)${nS}',\1${EPREFIX}/usr/${mylibdir}/tk${v1}/include'," \

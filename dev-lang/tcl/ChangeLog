@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.153 2012/03/11 07:36:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.154 2012/03/19 08:08:52 jlec Exp $
+
+  19 Mar 2012; Justin Lecher <jlec@gentoo.org> tcl-8.5.11.ebuild:
+  Drop unnessecary stripping of slashes, #408261, thanks Kevin Pyle for the
+  patch
 
   11 Mar 2012; Jeff Horelick <jdhore@gentoo.org> tcl-8.5.10-r1.ebuild:
   marked x86 per bug 406607
