@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.14.ebuild,v 1.1 2011/11/28 02:13:40 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.14-r1.ebuild,v 1.1 2012/03/19 07:24:58 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -45,7 +45,8 @@ src_prepare() {
 		-e 's|	make |	$(MAKE) |g' \
 		|| die "sed Makefile.in"
 
-	epatch "${FILESDIR}"/${PN}-0.52.13-gold.patch
+	epatch "${FILESDIR}"/${PN}-0.52.13-gold.patch \
+		"${FILESDIR}"/${P}-snack.patch
 	eautoreconf
 }
 
