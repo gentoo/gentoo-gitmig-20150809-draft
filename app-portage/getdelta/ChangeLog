@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/getdelta
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.19 2010/05/24 09:25:00 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.20 2012/03/19 03:10:24 patrick Exp $
+
+*getdelta-0.7.9 (19 Mar 2012)
+
+  19 Mar 2012; Patrick Lauer <patrick@gentoo.org> +files/getdelta-0.7.9.patch,
+  +getdelta-0.7.9.ebuild:
+  Bump and fix for #239439
 
   24 May 2010; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Taking over from Mr. Maintainer-Needed
