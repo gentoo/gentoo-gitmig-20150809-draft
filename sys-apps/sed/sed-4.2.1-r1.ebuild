@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.1-r1.ebuild,v 1.4 2012/03/15 01:37:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.1-r1.ebuild,v 1.5 2012/03/19 11:00:34 ssuominen Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,8 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="acl nls selinux static"
 
 RDEPEND="acl? ( virtual/acl )
-	nls? ( virtual/libintl )
-	selinux? ( sys-libs/libselinux )"
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
