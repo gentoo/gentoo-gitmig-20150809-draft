@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.953 2012/03/13 23:37:16 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.954 2012/03/19 18:51:20 mpagano Exp $
+
+*gentoo-sources-3.3.0 (19 Mar 2012)
+
+  19 Mar 2012; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.3.0.ebuild:
+  Linux patch 3.3.0. Zero copy for infiniband psm userspace driver. fbcondecor
+  patchset.
 
 *gentoo-sources-3.2.11 (13 Mar 2012)
 
