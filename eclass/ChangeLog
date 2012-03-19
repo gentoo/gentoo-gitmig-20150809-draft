@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.172 2012/03/19 08:38:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.173 2012/03/19 08:52:49 mgorny Exp $
+
+  19 Mar 2012; Michał Górny <mgorny@gentoo.org> vcs-snapshot.eclass:
+  Fix old eclass name in die-message.
 
   19 Mar 2012; Michał Górny <mgorny@gentoo.org> +vcs-snapshot.eclass:
   Introduce vcs-snapshot eclass to simplify working with github, bitbucket

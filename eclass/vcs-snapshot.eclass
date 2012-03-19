@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vcs-snapshot.eclass,v 1.1 2012/03/19 08:38:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vcs-snapshot.eclass,v 1.2 2012/03/19 08:52:49 mgorny Exp $
 
 # @ECLASS: vcs-snapshot.eclass
 # @MAINTAINER:
@@ -31,7 +31,7 @@
 case ${EAPI:-0} in
 	0|1) die "EAPI ${EAPI} unsupported.";; # default(), SRC_URI arrows
 	2|3|4) ;;
-	*) die "github-snapshot.eclass API in EAPI ${EAPI} not yet established."
+	*) die "vcs-snapshot.eclass API in EAPI ${EAPI} not yet established."
 esac
 
 EXPORT_FUNCTIONS src_unpack
