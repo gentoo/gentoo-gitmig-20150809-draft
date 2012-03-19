@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.13 2012/03/19 21:57:00 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182.ebuild,v 1.1 2012/03/19 21:57:00 williamh Exp $
 
 EAPI=4
 
@@ -29,11 +29,10 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html ht
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="build selinux debug +rule_generator hwdb acl gudev introspection
-	keymap floppy edd doc static-libs"
+IUSE="build selinux debug +rule_generator hwdb gudev introspection
+	keymap floppy edd doc static-libs +openrc"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
-	acl? ( sys-apps/acl dev-libs/glib:2 )
 	gudev? ( dev-libs/glib:2 )
 	introspection? ( dev-libs/gobject-introspection )
 	>=sys-apps/kmod-5
@@ -61,14 +60,13 @@ fi
 RDEPEND="${COMMON_DEPEND}
 	hwdb? (
 		>=sys-apps/usbutils-0.82
-		|| ( >=sys-apps/pciutils-3.1.9-r1[-compress-db] <sys-apps/pciutils-3.1.9-r1[-zlib] )
+		|| ( >=sys-apps/pciutils-3.1.9-r1[-compress-db]  <sys-apps/pciutils-3.1.9-r1[-zlib] )
 		)
-	acl? ( sys-apps/coreutils[acl] )
-	=sys-fs/udev-init-scripts-9
+	openrc? ( >=sys-fs/udev-init-scripts-10
+		!<sys-apps/openrc-0.9.9 )
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
-	!<sys-apps/openrc-0.9.9
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25"
 
@@ -87,10 +85,6 @@ pkg_setup()
 	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~HOTPLUG ~INOTIFY_USER ~NET ~PROC_FS
 		~SIGNALFD ~SYSFS
 		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
-
-	if use acl; then
-		CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
-	fi
 
 	linux-info_pkg_setup
 
@@ -126,7 +120,7 @@ src_prepare()
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
-		-i rules/{rules.d,arch}/*.rules \
+		-i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
 
 	if [ ! -e configure ]
@@ -161,7 +155,6 @@ src_configure()
 		$(use_enable rule_generator) \
 		--with-pci-ids-path=/usr/share/misc/pci.ids \
 		--with-usb-ids-path=/usr/share/misc/usb.ids \
-		$(use_enable acl udev_acl) \
 		$(use_enable gudev) \
 		$(use_enable introspection) \
 		$(use_enable keymap) \
@@ -194,15 +187,7 @@ src_install()
 
 	# Now install rules
 	insinto /lib/udev/rules.d/
-
-	# support older kernels
-	doins rules/misc/30-kernel-compat.rules
-
-	# add arch specific rules
-	if [[ -f rules/arch/40-${ARCH}.rules ]]
-	then
-		doins "rules/arch/40-${ARCH}.rules"
-	fi
+	doins "${FILESDIR}"/40-gentoo.rules
 }
 
 # 19 Nov 2008
@@ -365,6 +350,10 @@ pkg_postinst()
 		ewarn "For a more detailed explanation, see the following URL:"
 		ewarn "http://www.freedesktop.org/wiki/Software/systemd/separate-usr-is-broken"
 	fi
+
+	ewarn
+	ewarn "The udev-acl functionality has been removed from udev."
+	ewarn "This functionality will appear in a future version of consolekit."
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"

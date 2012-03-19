@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.82 2012/03/19 20:30:24 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.83 2012/03/19 21:57:00 williamh Exp $
 
 EAPI=4
 
@@ -62,7 +62,7 @@ RDEPEND="${COMMON_DEPEND}
 		>=sys-apps/usbutils-0.82
 		|| ( >=sys-apps/pciutils-3.1.9-r1[-compress-db]  <sys-apps/pciutils-3.1.9-r1[-zlib] )
 		)
-	openrc? ( sys-fs/udev-init-scripts
+	openrc? ( >=sys-fs/udev-init-scripts-10
 		!<sys-apps/openrc-0.9.9 )
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
@@ -187,8 +187,7 @@ src_install()
 
 	# Now install rules
 	insinto /lib/udev/rules.d/
-doins ${FILESDIR}/40-gentoo.rules
-
+	doins "${FILESDIR}"/40-gentoo.rules
 }
 
 # 19 Nov 2008
