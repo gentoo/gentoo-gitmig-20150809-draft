@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.9.ebuild,v 1.3 2012/03/19 07:56:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.9.ebuild,v 1.4 2012/03/19 07:57:57 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="dynamic deltup client"
 HOMEPAGE="http://linux01.gwdg.de/~nlissne/"
@@ -9,8 +11,6 @@ SLOT="0"
 IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~sparc ~x86"
-
-inherit eutils
 
 RDEPEND="app-portage/deltup
 	dev-util/bdelta"
