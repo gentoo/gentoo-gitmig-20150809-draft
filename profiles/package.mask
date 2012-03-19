@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13591 2012/03/18 20:37:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13592 2012/03/19 00:46:54 williamh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -409,16 +409,6 @@ dev-ruby/ruby-chasen
 # Nathan Phillip Brink <binki@gentoo.org> (8 Nov 2011)
 # Masking alpha release series.
 >=net-irc/atheme-services-7.0.0_alpha1
-
-# William Hubbs <williamh@gentoo.org> (6 Nov 2011)
-# Masking this version of udev and its dependencies until we have a default
-# solution for the following issue:
-#
-# http://www.freedesktop.org/wiki/Software/systemd/separate-usr-is-broken
-~sys-fs/udev-181
-<sys-apps/kmod-9999
-<sys-fs/udev-init-scripts-9999
->=sys-apps/systemd-30
 
 # Michael Weber <xmw@gentoo.org> (04 Nov 2011)
 # Masked due security issue bug 385967
