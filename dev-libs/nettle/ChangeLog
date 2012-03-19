@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.56 2012/03/06 22:37:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.57 2012/03/19 18:54:05 armin76 Exp $
+
+  19 Mar 2012; Raúl Porcel <armin76@gentoo.org> nettle-2.4.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #400019
 
   06 Mar 2012; Jeff Horelick <jdhore@gentoo.org> nettle-2.4.ebuild:
   marked x86 per bug 400019
