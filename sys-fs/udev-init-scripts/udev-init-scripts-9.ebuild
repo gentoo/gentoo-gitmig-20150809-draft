@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-9.ebuild,v 1.2 2012/03/19 17:06:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-9.ebuild,v 1.3 2012/03/19 20:54:06 williamh Exp $
 
 EAPI=4
 
@@ -23,8 +23,7 @@ if [ "${PV}" != "9999" ]; then
 fi
 
 DEPEND=""
-RDEPEND=">=sys-fs/udev-181
-	!<sys-fs/udev-181
+RDEPEND="=sys-fs/udev-181
 	sys-apps/openrc"
 
 	src_compile()
