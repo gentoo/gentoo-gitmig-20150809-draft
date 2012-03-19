@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r2.ebuild,v 1.3 2012/02/28 13:22:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r3.ebuild,v 1.1 2012/03/19 15:57:14 pesa Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -45,6 +45,10 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	!~x11-themes/qgtkstyle-4.7.2"
 PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,c++0x=,qpa=,debug=] )"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.7.3-cups.patch"
+)
 
 pkg_setup() {
 	# this belongs to pkg_pretend, we have to upgrade to EAPI 4 :)
@@ -123,12 +127,13 @@ src_configure() {
 		$(qt_use gtkstyle)
 		$(qt_use xinerama)"
 
-	use gif || myconf="${myconf} -no-gif"
-	use nas	&& myconf="${myconf} -system-nas-sound"
+	use gif || myconf+=" -no-gif"
+	use nas	&& myconf+=" -system-nas-sound"
 
-	[[ x86_64-apple-darwin* ]] && myconf="${myconf} -no-ssse3" #367045
+	[[ x86_64-apple-darwin* ]] && myconf+=" -no-ssse3" #367045
 
-	myconf="${myconf} -system-libpng -system-libjpeg
+	myconf+="
+		-system-libpng -system-libjpeg
 		-no-sql-mysql -no-sql-psql -no-sql-ibase -no-sql-sqlite -no-sql-sqlite2
 		-no-sql-odbc -xrender -xrandr -xkb -xshape -sm -no-svg -no-webkit
 		-no-phonon -no-opengl"
@@ -140,8 +145,7 @@ src_configure() {
 		sed "s:-I/usr/include/qt4 ::" -i src/gui/Makefile ||
 			die "sed failed"
 	fi
-	einfo "patching the Makefile to fix bug #361277"
-	sed "s:-I/usr/include/qt4/QtGui ::" -i src/gui/Makefile ||
+	sed -i -e "s:-I/usr/include/qt4/QtGui ::" src/gui/Makefile ||
 		die "sed failed"
 }
 
@@ -177,40 +181,28 @@ src_install() {
 	doins "${S}"/tools/designer/src/lib/shared/* || die
 	doins "${S}"/tools/designer/src/lib/sdk/* || die
 
-	# touch the available graphics systems
-	mkdir -p "${ED}/usr/share/qt4/graphicssystems/" ||
-		die "could not create ${ED}/usr/share/qt4/graphicssystems/"
-	echo "default" > "${ED}/usr/share/qt4/graphicssystems/raster" ||
-		die "could not touch ${ED}/usr/share/qt4/graphicssystems/raster"
-	touch "${ED}/usr/share/qt4/graphicssystems/native" ||
-		die "could not touch ${ED}/usr/share/qt4/graphicssystems/native"
-
 	# install private headers
 	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
 		insinto "${QTLIBDIR#${EPREFIX}}"/QtGui.framework/Headers/private/
 	else
 		insinto "${QTHEADERDIR#${EPREFIX}}"/QtGui/private
 	fi
-	find "${S}"/src/gui -type f -name "*_p.h" -exec doins {} \;
+	find "${S}"/src/gui -type f -name '*_p.h' -exec doins {} +
 
 	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
 		# rerun to get links to headers right
 		fix_includes
 	fi
 
-	# install correct designer and linguist icons, bug 241208
-	doicon tools/linguist/linguist/images/icons/linguist-128-32.png \
-		tools/designer/src/designer/images/designer.png \
-		|| die "doicon failed"
-	# Note: absolute image path required here!
-	make_desktop_entry linguist Linguist \
-			"${EPREFIX}"/usr/share/pixmaps/linguist-128-32.png \
-			'Qt;Development;GUIDesigner' \
-			|| die "linguist make_desktop_entry failed"
-	make_desktop_entry designer Designer \
-			"${EPREFIX}"/usr/share/pixmaps/designer.png \
-			'Qt;Development;GUIDesigner' \
-			|| die "designer make_desktop_entry failed"
+	# touch the available graphics systems
+	mkdir -p "${ED}"/usr/share/qt4/graphicssystems || die
+	echo "default" > "${ED}"/usr/share/qt4/graphicssystems/raster || die
+	touch "${ED}"/usr/share/qt4/graphicssystems/native || die
+
+	doicon tools/designer/src/designer/images/designer.png \
+		tools/linguist/linguist/images/icons/linguist-128-32.png || die
+	make_desktop_entry designer Designer designer 'Qt;Development;GUIDesigner'
+	make_desktop_entry linguist Linguist linguist-128-32 'Qt;Development;GUIDesigner'
 }
 
 pkg_postinst() {
@@ -220,5 +212,5 @@ pkg_postinst() {
 	elog "by using a new eselect module called qtgraphicssystem."
 	elog "Run"
 	elog "  eselect qtgraphicssystem"
-	elog "for more information"
+	elog "for more information."
 }
