@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.13.ebuild,v 1.1 2011/09/22 08:25:22 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.15.ebuild,v 1.1 2012/03/19 08:47:38 grozin Exp $
 EAPI=4
 inherit autotools
 MY_P=${P/tex/TeX}-src
