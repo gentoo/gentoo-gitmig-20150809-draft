@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.171 2012/03/18 23:33:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.172 2012/03/19 08:38:45 mgorny Exp $
+
+  19 Mar 2012; Michał Górny <mgorny@gentoo.org> +vcs-snapshot.eclass:
+  Introduce vcs-snapshot eclass to simplify working with github, bitbucket
+  and similar snapshots.
 
   18 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
   move eerror to ewarn, make the gettext warning less importend
