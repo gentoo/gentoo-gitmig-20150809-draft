@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.82 2012/03/17 18:08:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.83 2012/03/19 06:06:54 ssuominen Exp $
+
+  19 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -slim-1.3.2-r6.ebuild,
+  -files/slim-1.3.2-r2-config.diff, -files/Xsession-r2:
+  old
 
   17 Mar 2012; Raúl Porcel <armin76@gentoo.org> slim-1.3.2-r7.ebuild:
   sparc stable wrt #401135
