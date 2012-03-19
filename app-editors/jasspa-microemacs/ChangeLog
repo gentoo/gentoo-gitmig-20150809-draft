@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/jasspa-microemacs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.48 2011/08/18 21:26:25 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.49 2012/03/19 17:27:26 ulm Exp $
+
+*jasspa-microemacs-20091011-r2 (19 Mar 2012)
+
+  19 Mar 2012; Ulrich Müller <ulm@gentoo.org>
+  +jasspa-microemacs-20091011-r2.ebuild:
+  Include latest updates for macros. Change EAPI to 4.
 
   18 Aug 2011; Ulrich Mueller <ulm@gentoo.org> +files/20091011-linux3.patch,
   jasspa-microemacs-20091011-r1.ebuild:
