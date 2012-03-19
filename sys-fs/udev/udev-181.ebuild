@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.11 2012/03/19 16:21:49 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.12 2012/03/19 17:04:17 ssuominen Exp $
 
 EAPI=4
 
@@ -68,7 +68,6 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
-	>=sys-apps/baselayout-2
 	!<sys-apps/openrc-0.9.9
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25"
