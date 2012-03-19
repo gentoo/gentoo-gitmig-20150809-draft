@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmudmount
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.6 2012/03/19 20:11:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.7 2012/03/19 20:21:33 voyageur Exp $
+
+*wmudmount-1.11 (19 Mar 2012)
+
+  19 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org> +wmudmount-1.11.ebuild:
+  And version bump, spotted by ssuominen
 
   19 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org> wmudmount-1.8.ebuild:
   Requires convert at build time, thanks Piotr Szymaniak in bug #408649
