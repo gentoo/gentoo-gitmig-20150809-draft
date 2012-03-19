@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.214 2012/03/17 23:00:25 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.215 2012/03/19 21:37:56 maekke Exp $
+
+  19 Mar 2012; Markus Meier <maekke@gentoo.org> doxygen-1.7.6.1.ebuild:
+  arm stable, bug #323647
 
   17 Mar 2012; Matt Turner <mattst88@gentoo.org> doxygen-1.4.7.ebuild:
   Drop mips keyword. ~mips was dropped in 2006, and no one ever added it back
