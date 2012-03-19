@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.135 2012/03/05 22:19:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.136 2012/03/19 05:45:43 naota Exp $
+
+  19 Mar 2012; Naohiro Aota <naota@gentoo.org> johntheripper-1.7.8.ebuild:
+  Support Gentoo/FreeBSD. #319445
 
   05 Mar 2012; Tim Harder <radhermit@gentoo.org> johntheripper-1.7.9.ebuild:
   Use correct targets when xop and avx instructions sets are enabled (bugs
