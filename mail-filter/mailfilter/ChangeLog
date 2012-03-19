@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/mailfilter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.30 2010/08/01 14:27:53 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.31 2012/03/19 09:01:10 xarthisius Exp $
+
+  19 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> +files/0.8.2-gcc46.patch,
+  mailfilter-0.8.2.ebuild:
+  Apply relevant part of debian patch to fix building with gcc-4.6 wrt #366191
+  by Diego Elio Pettenò <flameeyes@gentoo.org>
 
   01 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
   mailfilter-0.8.2.ebuild, +files/0.8.2-openssl-1.patch:

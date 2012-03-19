@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/mailfilter-0.8.2.ebuild,v 1.5 2010/08/01 14:27:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/mailfilter-0.8.2.ebuild,v 1.6 2012/03/19 09:01:10 xarthisius Exp $
 
 EAPI=2
 inherit eutils
@@ -19,7 +19,8 @@ RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/0.8.2-gcc44.patch \
-		"${FILESDIR}"/0.8.2-openssl-1.patch
+		"${FILESDIR}"/0.8.2-openssl-1.patch \
+		"${FILESDIR}"/${PV}-gcc46.patch
 }
 
 src_compile() {
