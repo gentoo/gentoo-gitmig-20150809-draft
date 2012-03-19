@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sigil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.3 2012/02/20 04:21:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.4 2012/03/19 12:50:52 sbriesen Exp $
+
+*sigil-0.5.3 (19 Mar 2012)
+
+  19 Mar 2012; Stefan Briesenick <sbriesen@gentoo.org> +sigil-0.5.3.ebuild:
+  version bump. solving bug #407815.
 
   20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Drop no-herd.
