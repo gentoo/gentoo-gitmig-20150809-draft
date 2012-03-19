@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.9 2012/03/17 19:42:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-181.ebuild,v 1.10 2012/03/19 14:54:36 williamh Exp $
 
 EAPI=4
 
@@ -85,7 +85,7 @@ udev_check_KV()
 pkg_setup()
 {
 	# required kernel options
-	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~HOTPLUG ~INOTIFY_USER ~NET ~PROC_FS
+	CONFIG_CHECK="~BLK_DEV_BSG DEVTMPFS ~HOTPLUG ~INOTIFY_USER ~NET ~PROC_FS
 		~SIGNALFD ~SYSFS
 		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
 
