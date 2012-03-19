@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/wmudmount-1.8.ebuild,v 1.2 2011/01/29 14:17:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/wmudmount-1.8.ebuild,v 1.3 2012/03/19 20:11:21 voyageur Exp $
 
 EAPI=2
 inherit flag-o-matic gnome2-utils
@@ -20,7 +20,8 @@ RDEPEND=">=x11-libs/gtk+-2.18:2
 	gnome-keyring? ( gnome-base/libgnome-keyring )
 	libnotify? ( x11-libs/libnotify )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
