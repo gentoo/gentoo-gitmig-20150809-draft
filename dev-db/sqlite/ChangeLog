@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.400 2012/03/20 16:14:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.401 2012/03/20 16:43:27 ssuominen Exp $
+
+  20 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> sqlite-2.8.16-r5.ebuild:
+  Revert ${ED} to ${D} because of EAPI="0" by Agostino Sarubbo
 
   20 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> sqlite-2.8.16-r5.ebuild,
   +files/sqlite-2.8.16-exit.patch:
