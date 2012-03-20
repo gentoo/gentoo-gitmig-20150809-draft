@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.85 2012/03/20 06:14:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.86 2012/03/20 06:20:48 ssuominen Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html ht
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="build selinux debug +rule_generator hwdb gudev introspection
-	keymap floppy edd doc static-libs +openrc"
+	keymap floppy doc static-libs +openrc"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	gudev? ( dev-libs/glib:2 )
@@ -159,7 +159,6 @@ src_configure()
 		$(use_enable introspection) \
 		$(use_enable keymap) \
 		$(use_enable floppy) \
-		$(use_enable edd) \
 		$(use_enable doc gtk-doc) \
 		"$(systemd_with_unitdir)"
 }
