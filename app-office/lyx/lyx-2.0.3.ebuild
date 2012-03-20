@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.3.ebuild,v 1.2 2012/03/20 09:50:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.3.ebuild,v 1.3 2012/03/20 09:54:31 aballier Exp $
 
 EAPI=3
 
@@ -111,7 +111,9 @@ src_configure() {
 		$(use_with hunspell) \
 		$(use_with aspell) \
 		$(use_with enchant) \
-		--without-included-boost --disable-stdlib-debug
+		--without-included-boost \
+		--disable-stdlib-debug \
+		--with-packaging=posix
 }
 
 src_install() {
@@ -138,7 +140,7 @@ src_install() {
 	# fonts needed for proper math display, see also bug #15629
 	font_src_install
 
-	python_convert_shebangs -r 2 "${D}"/usr/share/${PN}
+	python_convert_shebangs -r 2 "${ED}"/usr/share/${PN}
 
 	if use hunspell ; then
 		dosym /usr/share/myspell /usr/share/lyx/dicts
