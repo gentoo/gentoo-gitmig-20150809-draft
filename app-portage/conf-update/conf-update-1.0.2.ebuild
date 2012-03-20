@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.2.ebuild,v 1.2 2012/02/20 15:56:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.2.ebuild,v 1.3 2012/03/20 08:25:27 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~x86"
 IUSE="colordiff"
 
 RDEPEND=">=dev-libs/glib-2.6
