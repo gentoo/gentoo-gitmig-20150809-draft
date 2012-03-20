@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.36 2012/03/20 12:00:34 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.37 2012/03/20 13:19:11 aidecoe Exp $
+
+  20 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  notmuch-0.10.2-r2.ebuild, notmuch-0.11.1-r2.ebuild, notmuch-0.12.ebuild:
+  Renamed Python bindings README to README-python, because it used to overwrite
+  main Notmuch README file.
 
 *notmuch-0.12 (20 Mar 2012)
 
