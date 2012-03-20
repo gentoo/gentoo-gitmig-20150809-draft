@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.78 2012/03/20 12:37:22 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.79 2012/03/20 13:25:20 mattm Exp $
+
+  20 Mar 2012; Matthew Marlowe <mattm@gentoo.org> metadata.xml:
+  Received patricks ok to remove him from maintainer list in metadata
 
 *zabbix-1.8.11 (20 Mar 2012)
 

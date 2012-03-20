@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>patrick@gentoo.org</email>
-<name>Patrick Lauer</name>
-</maintainer>
-<maintainer>
 <email>mattm@gentoo.org</email>
 <name>Matthew Marlowe</name>
 </maintainer>
