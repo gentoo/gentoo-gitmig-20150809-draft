@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.399 2012/03/20 08:28:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.400 2012/03/20 16:14:35 ssuominen Exp $
+
+  20 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> sqlite-2.8.16-r5.ebuild,
+  +files/sqlite-2.8.16-exit.patch:
+  Include stdlib.h for function exit() in temp.c generation.
 
   20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.10.ebuild:
   Stable for amd64, wrt bug #408385

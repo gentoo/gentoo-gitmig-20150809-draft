@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r5.ebuild,v 1.1 2011/09/09 18:15:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r5.ebuild,v 1.2 2012/03/20 16:14:35 ssuominen Exp $
 
 inherit eutils alternatives toolchain-funcs
 
@@ -42,7 +42,9 @@ src_unpack() {
 
 	use hppa && epatch "${FILESDIR}"/${PN}-2.8.15-alignement-fix.patch
 
-	epatch "${FILESDIR}"/${P}-multilib.patch
+	epatch \
+		"${FILESDIR}"/${P}-multilib.patch \
+		"${FILESDIR}"/${P}-exit.patch
 
 	epunt_cxx
 
