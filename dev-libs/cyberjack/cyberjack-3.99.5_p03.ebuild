@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03.ebuild,v 1.2 2012/03/20 08:27:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03.ebuild,v 1.3 2012/03/20 21:13:10 ssuominen Exp $
 
 EAPI=4
-inherit toolchain-funcs
+inherit linux-info toolchain-funcs
 
 MY_P=pcsc-${PN}_${PV/_p/final.SP}
 
@@ -28,6 +28,13 @@ DEPEND="${COMMON_DEPEND}
 S=${WORKDIR}/${MY_P/_/-}
 
 DOCS="ChangeLog NEWS doc/*.txt"
+
+pkg_setup() {
+	if use kernel_linux; then
+		CONFIG_CHECK="~USB_SERIAL_CYBERJACK"
+		linux-info_pkg_setup
+	fi
+}
 
 src_configure() {
 	econf \

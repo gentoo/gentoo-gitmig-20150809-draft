@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cyberjack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.25 2012/03/20 08:27:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.26 2012/03/20 21:13:10 ssuominen Exp $
+
+  20 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  cyberjack-3.99.5_p03.ebuild:
+  Display a warning if kernel option USB_SERIAL_CYBERJACK is missing, see:
+  http://forums.gentoo.org/viewtopic-p-6990566.html
 
   20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> cyberjack-3.99.5_p03.ebuild:
   Stable for amd64, wrt bug #408441
