@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.7.9999.ebuild,v 1.5 2012/02/08 19:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.7.9999.ebuild,v 1.6 2012/03/20 22:58:59 lu_zero Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
 
-LICENSE="LGPL-2 gpl? ( GPL-3 )"
+LICENSE="LGPL-2.1 gpl? ( GPL-3 )"
 SLOT="0"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos

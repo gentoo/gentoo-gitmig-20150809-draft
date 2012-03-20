@@ -33,6 +33,7 @@
 	<flag name="schroedinger">Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).</flag>
 	<flag name="ssl">Enable SSL/TLS support using <pkg>dev-libs/openssl</pkg> or <pkg>dev-libs/gnutls</pkg>.</flag>
 	<flag name="ssse3">faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips).</flag>
+	<flag name="tools">Build and install small tools like aviocat, cws2fws, graph2dot, ismindex, qt-faststart.</flag>
 	<flag name="vaapi">Enable VAAPI (Video Acceleration API) for hardware decoding.</flag>
 	<flag name="vdpau">Enable VDPAU decoders (requires nVidia video cards to offload CPU processing to video card.</flag>
 	<flag name="vis"> Adds support for SIMD optimizations for UltraSPARC processors.</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.34 2012/03/16 20:18:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.35 2012/03/20 22:58:59 lu_zero Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
 
-LICENSE="LGPL-2 gpl? ( GPL-3 )"
+LICENSE="LGPL-2.1  gpl? ( GPL-3 )"
 SLOT="0"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
@@ -30,9 +30,8 @@ SLOT="0"
 IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cdio cpudetection
 	  custom-cflags debug dirac doc +encode faac truetype frei0r +gpl gsm
 	  +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network openssl
-	  oss pic pulseaudio +qt-faststart rtmp schroedinger sdl speex ssl +ssse3
-	  static-libs test theora threads v4l vaapi vdpau vorbis vpx X x264 xvid
-	  +zlib"
+	  oss pic pulseaudio rtmp schroedinger sdl speex ssl +ssse3 static-libs
+	  test theora threads tools v4l vaapi vdpau vorbis vpx X x264 xvid +zlib"
 
 CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 ssse3 vis neon"
 
@@ -105,6 +104,8 @@ src_prepare() {
 	fi
 }
 
+TOOLS="aviocat graph2dot ismindex qt-faststart"
+
 src_configure() {
 	local myconf="${EXTRA_FFMPEG_CONF}"
 	local uses i
@@ -114,6 +115,8 @@ src_configure() {
 		$(use_enable gpl version3)
 		--enable-avfilter
 	"
+
+	use zlib && TOOLS+=" cws2fws"
 
 	# enabled by default
 	uses="debug doc network zlib"
@@ -262,21 +265,27 @@ src_configure() {
 src_compile() {
 	emake
 
-	if use qt-faststart; then
+	if use tools; then
 		tc-export CC
-		emake tools/qt-faststart
+		local i
+		for i in ${TOOLS}; do
+			emake tools/${i}
+		done
 	fi
 }
 
 src_install() {
+	local i
 	emake DESTDIR="${D}" install install-man
 
 	dodoc Changelog README INSTALL
 	dodoc doc/*.txt
 	use doc && dodoc doc/*.html
 
-	if use qt-faststart; then
-		dobin tools/qt-faststart
+	if use tools; then
+		for i in ${TOOLS}; do
+			dobin tools/${i}
+		done
 	fi
 
 	for i in $(usex sdl avplay "") $(usex network avserver "") avprobe; do
@@ -288,8 +297,7 @@ pkg_postinst() {
 	elog "Please note that the programs formerly known as ffplay, ffserver"
 	elog "and ffprobe are now called avplay, avserver and avprobe."
 	elog
-	elog "ffmpeg had been replaced by the feature incompatible avconv thus"
-	elog "the legacy ffmpeg is provided for compatibility with older scripts"
+	elog "ffmpeg had been replaced by the feature incompatible avconv"
 }
 
 src_test() {
