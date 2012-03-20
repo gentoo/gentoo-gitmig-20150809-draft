@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/haskell-updater
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.25 2012/03/12 15:58:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.26 2012/03/20 13:06:55 ago Exp $
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org>
+  haskell-updater-1.2.0.5.ebuild:
+  Stable for amd64, wrt bug #407835
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> haskell-updater-1.2.0.5.ebuild:
   Marking haskell-updater-1.2.0.5 ppc64 for bug 407835
