@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.13 2012/03/18 19:34:32 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.14 2012/03/20 12:43:29 maksbotan Exp $
+
+*leechcraft-full-0.5.60 (20 Mar 2012)
+
+  20 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-full-0.5.60.ebuild:
+  Bump LeechCraft to 0.5.60, thank to 0xd34df00d
 
   18 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-full-9999.ebuild:
   Remove media-video/leechcraft-laure from 9999 RDEPEND
