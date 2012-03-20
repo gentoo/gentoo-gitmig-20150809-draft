@@ -1,6 +1,6 @@
-# Copyright 2011-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/gtk-engines-unico-1.0.1.ebuild,v 1.1 2011/10/19 04:47:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/gtk-engines-unico-1.0.1.ebuild,v 1.2 2012/03/20 08:27:28 ago Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_PN}-${MY_PV}"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 RDEPEND=">=dev-libs/glib-2.26.0:2
 	>=x11-libs/cairo-1.10[glib]
