@@ -1,32 +1,30 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r2.ebuild,v 1.10 2010/03/29 23:43:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r4.ebuild,v 1.1 2012/03/20 08:15:02 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 
 inherit autotools eutils toolchain-funcs
 
-PATCH_LEVEL=4
+PATCH_LEVEL=10
 
 DESCRIPTION="Utility for opening arj archives"
 HOMEPAGE="http://arj.sourceforge.net"
 SRC_URI="mirror://debian/pool/main/a/arj/${P/-/_}.orig.tar.gz
-	mirror://debian/pool/main/a/arj/${P/-/_}-${PATCH_LEVEL}.diff.gz"
+	mirror://debian/pool/main/a/arj/${P/-/_}-${PATCH_LEVEL}.debian.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE=""
 
-DEPEND=""
-
 src_prepare() {
-	epatch "${WORKDIR}"/${P/-/_}-${PATCH_LEVEL}.diff \
-		"${FILESDIR}"/${P}-implicit-declarations.patch
-	epatch "${FILESDIR}/${P}-glibc2.10.patch"
+	epatch \
+		"${FILESDIR}"/${P}-implicit-declarations.patch \
+		"${FILESDIR}/${P}-glibc2.10.patch"
 
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
-		epatch debian/patches
+		epatch "${WORKDIR}"/debian/patches
 
 	epatch "${FILESDIR}"/${P}-darwin.patch
 	epatch "${FILESDIR}"/${P}-interix.patch
@@ -46,6 +44,7 @@ src_compile() {
 	ARJLIBDIR="${EPREFIX}/usr/$(get_libdir)"
 
 	emake CC=$(tc-getCC) libdir="${ARJLIBDIR}" \
+		ADD_LDFLAGS="${LDFLAGS}" \
 		pkglibdir="${ARJLIBDIR}" all || die "emake failed."
 }
 
