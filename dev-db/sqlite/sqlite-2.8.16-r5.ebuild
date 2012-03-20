@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r5.ebuild,v 1.3 2012/03/20 16:43:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r5.ebuild,v 1.4 2012/03/20 16:51:35 ssuominen Exp $
 
 inherit eutils alternatives toolchain-funcs
 
@@ -61,6 +61,11 @@ src_unpack() {
 		-e "s:@@RANLIB@@:$(tc-getRANLIB):g" \
 		-e "s:@@ENCODING@@:${ENCODING}:g" \
 		"${S}"/Makefile.linux-gcc
+	
+	sed -i \
+		-e '/^LTLINK/s:$(TCC):& $(LDFLAGS):' \
+		-e '/lemon/s:-o:$(LDFLAGS) &:' \
+		"${S}"/{main.mk,Makefile.in}
 }
 
 src_compile() {
