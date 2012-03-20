@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.81 2012/03/13 23:17:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.82 2012/03/20 09:42:57 aballier Exp $
 
 EAPI="4"
 
@@ -110,6 +110,7 @@ DEPEND="${RDEPEND}
 # faac is license-incompatible with ffmpeg
 REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
 	libv4l? ( v4l )
+	cws2fws? ( zlib )
 	test? ( encode zlib )"
 
 S=${WORKDIR}/${P/_/-}
