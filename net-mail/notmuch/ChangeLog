@@ -1,6 +1,47 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.35 2012/03/20 08:23:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.36 2012/03/20 12:00:34 aidecoe Exp $
+
+*notmuch-0.12 (20 Mar 2012)
+
+  20 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +notmuch-0.12.ebuild:
+  Version bump.
+
+  Notmuch 0.12 is compatible with both GMime 2.4 and 2.6, but ebuild depends
+  only on >=2.6.7.  Python bindings are compatible with Python 3.2.
+
+  NEWS
+  ~~~~
+  (Extracted headlines from NEWS file. See it for details.)
+
+  Command-Line Interface
+  - Reply to sender (ability to create a reply template just to the sender)
+  - Mail store folder/file ignore
+  - Unified help and manual pages
+  - Manual page for notmuch configuration options
+
+  Emacs Interface
+  - Reply to sender
+  - More flexible and consistent tagging operations
+  - Refreshing the show view ('=' by default) no longer opens or closes
+    messages
+  - Attachment buttons can be used to view or save attachments.
+  - New functions
+  - Fix MML tag quoting in replies
+  - Show view archiving key binding changes
+  - Support text/calendar MIME type
+  - Generate inline patch fake attachment file names from message subject
+  - Enable `notmuch-search-line-faces' by default
+
+  Library changes
+  - New functions
+
+  Python bindings changes
+  - Python 3.2 compatibility
+  - Added missing unicode conversions
+
+  Build fixes
+  - Compatibility with GMime 2.6 (>=2.6.7)
 
   20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> notmuch-0.11.1-r2.ebuild:
   Stable for amd64, wrt bug #408577
