@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.252 2012/03/19 18:57:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.253 2012/03/20 09:50:38 aballier Exp $
+
+  20 Mar 2012; Alexis Ballier <aballier@gentoo.org> lyx-2.0.3.ebuild:
+  drop extra and useless X deps, bug #392195
 
   19 Mar 2012; Raúl Porcel <armin76@gentoo.org> lyx-2.0.2.ebuild:
   alpha/ia64/sparc stable wrt #401863
