@@ -1,6 +1,12 @@
 # ChangeLog for www-client/leechcraft-poshuku
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.8 2012/02/09 11:51:20 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.9 2012/03/20 13:09:21 maksbotan Exp $
+
+*leechcraft-poshuku-0.5.60 (20 Mar 2012)
+
+  20 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-poshuku-0.5.60.ebuild:
+  Bump LeechCraft to 0.5.60, thank to 0xd34df00d
 
 *leechcraft-poshuku-0.5.0 (09 Feb 2012)
 
