@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3-r1.ebuild,v 1.5 2011/11/06 16:30:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3-r1.ebuild,v 1.6 2012/03/20 14:41:32 jer Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="idea ipv6 pam rc5 readline selinux ldap kerberos nat hybrid iconv selinux"
+IUSE="hybrid iconv idea ipv6 kerberos ldap nat pam rc5 readline selinux"
 
 DEPEND_COMMON="
 	selinux? ( sys-libs/libselinux )
