@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.9 2012/03/20 14:09:42 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.10 2012/03/20 14:38:44 jer Exp $
+
+  20 Mar 2012; Jeroen Roovers <jer@gentoo.org> libguestfs-1.8.16.ebuild:
+  Sort IUSE entries. Remove IUSE=nls duplicate by zvasylvv (bug #408871).
 
   20 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org>
   +files/1.17/0001-configure_ac_automagic.patch, +files/env.file:

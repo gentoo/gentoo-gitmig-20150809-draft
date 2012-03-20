@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.8.16.ebuild,v 1.2 2012/02/05 01:35:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.8.16.ebuild,v 1.3 2012/03/20 14:38:44 jer Exp $
 
 EAPI="3"
 
@@ -32,7 +32,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # Upstream NOT supported 32-bit version, keyword in own risk
 KEYWORDS="~amd64"
-IUSE="fuse +ocaml perl python ruby haskell +readline nls php debug doc nls source javadoc"
+IUSE="debug doc fuse haskell javadoc nls +ocaml perl php python +readline ruby source"
 
 COMMON_DEPEND="
 	virtual/perl-Getopt-Long
