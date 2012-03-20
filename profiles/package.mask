@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13596 2012/03/19 22:21:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13597 2012/03/20 02:51:30 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,8 +34,10 @@
 # William Hubbs <williamh@gentoo.org> (19 Mar 2012)
 # Masked because the udev-acl function was dropped and is moving to
 # consolekit.
+# udev-init-scripts depends on 182, masking too- patrick
 # Bug 408713.
 =sys-fs/udev-182
+=sys-fs/udev-init-scripts-10
 
 # Samuli Suominen <ssuominen@gentoo.org> (18 Mar 2012)
 # The only working versions got declared obsolete by upstream
