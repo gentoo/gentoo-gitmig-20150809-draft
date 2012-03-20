@@ -1,6 +1,10 @@
 # ChangeLog for net-print/pykota
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.28 2012/01/31 22:30:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.29 2012/03/20 14:46:11 jer Exp $
+
+  20 Mar 2012; Jeroen Roovers <jer@gentoo.org> pykota-1.25_p2437-r1.ebuild,
+  pykota-1.26.ebuild:
+  Sort IUSE entries. Remove IUSE=snmp duplicate by zvasylvv (bug #408871).
 
 *pykota-1.26 (31 Jan 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.26.ebuild,v 1.1 2012/01/31 22:30:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.26.ebuild,v 1.2 2012/03/20 14:46:11 jer Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ldap mysql postgres snmp sqlite snmp xml"
+IUSE="ldap mysql postgres snmp sqlite xml"
 
 DEPEND="dev-lang/python
 	dev-python/egenix-mx-base
