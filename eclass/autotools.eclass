@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.123 2012/03/20 15:29:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.124 2012/03/20 15:32:02 ssuominen Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -41,7 +41,7 @@ inherit eutils libtool
 # If a newer version is stable on any arch, and is NOT reflected in this list,
 # then circular dependencies may arise during emerge @system bootstraps.
 # Do NOT change this variable in your ebuilds!
-_LATEST_AUTOMAKE='1.11.1'
+_LATEST_AUTOMAKE='1.11'
 
 _automake_atom="sys-devel/automake"
 _autoconf_atom="sys-devel/autoconf"
