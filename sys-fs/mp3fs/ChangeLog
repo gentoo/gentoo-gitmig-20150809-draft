@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mp3fs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.14 2011/12/15 18:43:02 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.15 2012/03/20 19:11:21 sping Exp $
+
+*mp3fs-0.31 (20 Mar 2012)
+
+  20 Mar 2012; Sebastian Pipping <sping@gentoo.org> +mp3fs-0.31.ebuild:
+  Bump to 0.31, looks trivial
 
   15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> mp3fs-0.30.ebuild:
   Stable for AMD64, wrt bug #392781
