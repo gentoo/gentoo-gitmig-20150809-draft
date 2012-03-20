@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.2 2012/03/20 16:42:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.3 2012/03/20 17:09:10 bicatali Exp $
 
 EAPI=4
 inherit eutils versionator toolchain-funcs
@@ -32,12 +32,11 @@ S="${WORKDIR}/${MYP}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0.104-tests.patch
 	# use fully qualified compilers. do not force pentium4 for x86 users
-	local CC="$(tc-getCC)"
 	sed -i \
 		-e "s/-O2/${CXXFLAGS}/g" \
-		-e 's/^\(CPLUS = \)g++ $/\1'"$(tc-getCXX)/" \
-		-e 's/^\(CONLY = \)gcc$/\1'"${CC}/" \
-		-e 's/\(shell \)gcc\( --version\)/\1'"${CC}"'\2/' \
+		-e "/CPLUS/s/g++/$(tc-getCXX)/g" \
+		-e "/CONLY/s/gcc/$(tc-getCC)/g" \
+		-e "s/gcc -/$(tc-getCC) -v/g" \
 		-e '/CPLUS_FLAGS +=/s/-march=pentium4//' \
 		build/*.inc || die
 	# - Strip the $(shell ... >$(NUL) 2>$(NUL)) wrapping, leaving just the
