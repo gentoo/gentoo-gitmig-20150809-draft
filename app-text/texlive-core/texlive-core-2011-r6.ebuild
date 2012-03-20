@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011-r6.ebuild,v 1.1 2012/02/13 11:43:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011-r6.ebuild,v 1.2 2012/03/20 10:41:24 aballier Exp $
 
 EAPI=3
 
@@ -82,7 +82,7 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	!<dev-texlive/texlive-basic-2009
 	!<dev-texlive/texlive-metapost-2011
 	!app-text/dvibook
-	>=sys-libs/zlib-1.2.6
+	sys-libs/zlib
 	>=media-libs/libpng-1.2.43-r2:0
 	>=app-text/poppler-0.12.3-r3
 	xetex? (
