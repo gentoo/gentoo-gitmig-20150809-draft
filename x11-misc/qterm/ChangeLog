@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.41 2012/03/14 23:55:04 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.42 2012/03/20 13:25:44 ago Exp $
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> qterm-0.5.12.ebuild:
+  Stable for amd64, wrt bug #400531
 
   14 Mar 2012; Naohiro Aota <naota@gentoo.org> qterm-0.5.11.ebuild:
   Add workaround patch to drop cmake 2.6.x compatible statement. Bug #407997
