@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.5.ebuild,v 1.2 2012/01/25 22:05:07 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.7.ebuild,v 1.1 2012/03/20 17:57:16 mschiff Exp $
 
 EAPI=4
 
@@ -156,7 +156,7 @@ src_install() {
 	default
 
 	# remove useless .la files
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${ED}" -name '*.la' -delete
 
 	# Remove subversion tags from config files to avoid useless config updates
 	sed -i \
@@ -189,5 +189,31 @@ pkg_postinst() {
 		elog "    echo \"0:/var/lib/opendnssec/softhsm_slot0.db\" >> /etc/softhsm.conf"
 		elog "    softhsm --init-token --slot 0 --label OpenDNSSEC"
 		elog "    chown opendnssec:opendnssec /var/lib/opendnssec/softhsm_slot0.db"
+	fi
+
+	# caution if upgrading to 1.3.7
+	if [[ -d /var/lib/opencryptoki ]]; then
+		ewarn
+		ewarn "WARNING:"
+		ewarn "It seems that you have dev-libs/opencryptoki installed."
+		ewarn "If you are using a Sun Crypto Accelerator 6000 (SCA/6000):"
+		ewarn
+		ewarn "Press Ctrl-C now and read the following upstream message"
+		ewarn "carefully before you continue:"
+		ewarn
+		ewarn "HSM SCA 6000 in combination with OpenCryptoki can return RSA key"
+		ewarn "material with leading zeroes. DNSSEC does not allow leading zeroes"
+		ewarn "in key data. You are affected by this bug if your DNSKEY RDATA e.g."
+		ewarn "begins with 'BAABA'."
+		ewarn "Normal keys begin with e.g. 'AwEAA'."
+		ewarn "OpenDNSSEC will now sanitize incoming data before adding it to the"
+		ewarn "DNSKEY. Do not upgrade to this version if you are affected by the bug."
+		ewarn "You first need to go unsigned, then do the upgrade, and finally sign"
+		ewarn "your zone again. SoftHSM and other HSM:s will not produce data with"
+		ewarn "leading zeroes and the bug will thus not affect you."
+		ewarn
+		echo -n " * "
+		for i in {10..1}; do echo -n "$i "; sleep 1; done
+		echo
 	fi
 }
