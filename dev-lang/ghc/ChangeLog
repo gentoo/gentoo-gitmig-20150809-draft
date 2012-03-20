@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.214 2012/03/11 18:43:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.215 2012/03/20 13:06:29 ago Exp $
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> ghc-6.12.3-r2.ebuild:
+  Stable for amd64, wrt bug #407835
 
   11 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.4.1.ebuild:
   Added binaries for alpha/amd64/ppc/ppc64/x86 platforms. Dropped dev-
