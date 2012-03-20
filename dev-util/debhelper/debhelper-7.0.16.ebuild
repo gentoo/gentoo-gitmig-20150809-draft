@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.0.16.ebuild,v 1.6 2008/11/04 09:40:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.0.16.ebuild,v 1.7 2012/03/20 21:28:42 jer Exp $
 
 inherit eutils
 
@@ -22,13 +22,11 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"/${PN}
 
-PATCH_VER=7.0.9
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-${PATCH_VER}-conditional-nls.patch
+	epatch "${FILESDIR}"/${PN}-7.0.9-conditional-nls.patch
 }
 
 src_compile() {
