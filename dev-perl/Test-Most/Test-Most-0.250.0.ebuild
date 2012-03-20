@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Most/Test-Most-0.250.0.ebuild,v 1.3 2012/03/20 08:46:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Most/Test-Most-0.250.0.ebuild,v 1.4 2012/03/20 22:17:02 jer Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Most commonly needed test functions and features"
 
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~x86"
+KEYWORDS="amd64 hppa ~x86"
 IUSE=""
 
 RDEPEND="

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.536.ebuild,v 1.6 2012/03/20 08:46:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.536.ebuild,v 1.7 2012/03/20 22:19:59 jer Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://sdl.perl.org/"
 
 LICENSE="GPL-2 OFL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~x86"
+KEYWORDS="amd64 hppa ~x86"
 IUSE=""
 
 RDEPEND="dev-perl/Alien-SDL
