@@ -1,6 +1,10 @@
 # ChangeLog for media-video/rtmpdump
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.19 2011/08/10 10:41:25 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.20 2012/03/20 23:31:29 flameeyes Exp $
+
+  20 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> rtmpdump-2.3.ebuild,
+  rtmpdump-2.4.ebuild, rtmpdump-9999.ebuild:
+  Fix license identification.
 
 *rtmpdump-9999 (10 Aug 2011)
 *rtmpdump-2.4 (10 Aug 2011)
