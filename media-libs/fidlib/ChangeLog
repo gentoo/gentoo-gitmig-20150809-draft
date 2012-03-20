@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/fidlib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fidlib/ChangeLog,v 1.1 2012/03/20 21:27:25 radhermit Exp $
+
+*fidlib-0.9.10 (20 Mar 2012)
+
+  20 Mar 2012; Tim Harder <radhermit@gentoo.org> +fidlib-0.9.10.ebuild,
+  +files/fidlib-0.9.10-cpp-extern.patch, +metadata.xml:
+  Initial import. Ebuild by me.
+
