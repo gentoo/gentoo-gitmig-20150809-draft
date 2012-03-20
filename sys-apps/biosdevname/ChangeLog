@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/biosdevname
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/ChangeLog,v 1.6 2012/01/13 11:23:24 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/ChangeLog,v 1.7 2012/03/20 09:01:54 ago Exp $
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> biosdevname-0.3.11-r1.ebuild:
+  Stable for amd64, wrt bug #406569
 
 *biosdevname-0.3.11-r1 (13 Jan 2012)
 
