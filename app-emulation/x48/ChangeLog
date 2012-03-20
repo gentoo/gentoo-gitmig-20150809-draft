@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/x48
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.20 2011/12/15 22:39:54 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.21 2012/03/20 20:52:56 nimiux Exp $
+
+  20 Mar 2012; Chema Alonso <nimiux@gentoo.org> metadata.xml:
+  Added myself as maintainer
 
   15 Dec 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #353461
