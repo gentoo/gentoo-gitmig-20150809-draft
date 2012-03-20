@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.126 2012/03/20 17:36:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.127 2012/03/20 18:53:07 ssuominen Exp $
+
+*cryptsetup-1.4.1-r1 (20 Mar 2012)
+
+  20 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +cryptsetup-1.4.1-r1.ebuild:
+  Don't enable USE="static" by default anymore because initramfs is required
+  with latest udev for separate /usr in anycase. This was a workaround for
+  cross / and /usr linking.
 
   20 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   cryptsetup-1.2.0-r1.ebuild, cryptsetup-1.4.1.ebuild:
