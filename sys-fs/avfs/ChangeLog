@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.38 2012/03/09 10:38:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.39 2012/03/20 13:25:12 ago Exp $
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> avfs-1.0.0.ebuild:
+  Stable for amd64, wrt bug #400503
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> avfs-1.0.0.ebuild:
   x86 stable wrt bug #400503
