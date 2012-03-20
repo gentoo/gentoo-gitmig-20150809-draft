@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.87.ebuild,v 1.4 2012/02/24 22:01:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.87.ebuild,v 1.5 2012/03/20 08:31:42 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -40,7 +40,7 @@ REQUIRED_USE="
 	calligra_features_kexi? ( calligra_features_tables )
 	calligra_features_words? ( calligra_features_tables )
 	calligra_features_krita? ( eigen exif lcms )
-	calligra_features_plan? ( kdepim )
+	calligra_features_plan? ( kdepim semantic-desktop )
 	calligra_features_tables? ( eigen )
 	test? ( calligra_features_karbon )
 "
@@ -94,7 +94,7 @@ RDEPEND="
 		dev-db/postgresql-base
 		=dev-libs/libpqxx-3*
 	)
-	semantic-desktop? ( dev-libs/soprano )
+	semantic-desktop? ( dev-libs/soprano $(add_kdebase_dep kdelibs semantic-desktop) )
 	ssl? ( dev-libs/openssl )
 	sybase? ( dev-db/freetds )
 	tiff? ( media-libs/tiff )
