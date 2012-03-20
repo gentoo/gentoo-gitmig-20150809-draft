@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.9.5-r1.ebuild,v 1.2 2012/03/19 09:54:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.10-r2.ebuild,v 1.1 2012/03/20 11:55:36 mattm Exp $
 
 EAPI="2"
 
@@ -10,11 +10,12 @@ inherit eutils flag-o-matic webapp depend.php autotools
 
 DESCRIPTION="ZABBIX is software for monitoring of your applications, network and servers."
 HOMEPAGE="http://www.zabbix.com/"
-SRC_URI="http://prdownloads.sourceforge.net/zabbix/${P}.tar.gz"
+MY_P=${P/_/}
+SRC_URI="http://prdownloads.sourceforge.net/zabbix/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="agent curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server -ssh snmp +sqlite"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
@@ -26,6 +27,7 @@ COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-3* )
 	postgres? ( dev-db/postgresql-base )
+	oracle? ( dev-db/oracle-instantclient-basic )
 	jabber? ( dev-libs/iksemel )
 	curl? ( net-misc/curl )
 	openipmi? ( sys-libs/openipmi )
@@ -44,13 +46,13 @@ DEPEND="${COMMON_DEPEND}
 use frontend && need_php_httpd
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.8.3-as-needed.patch"
+	epatch "${FILESDIR}/${PN}-1.8.9-as-needed.patch"
 	eautoreconf
 }
 
 pkg_setup() {
 	if use server || use proxy ; then
-		local dbnum dbtypes="mysql oracle postgres sqlite3" dbtype
+		local dbnum dbtypes="mysql oracle postgres sqlite" dbtype
 		declare -i dbnum=0
 		for dbtype in ${dbtypes}; do
 			use ${dbtype} && let dbnum++
@@ -198,7 +200,7 @@ src_configure() {
 		$(use_with ldap) \
 		$(use_with snmp net-snmp) \
 		$(use_with mysql) \
-		$(use_with postgres postgresql) \
+		$(use_with postgres pgsql) \
 		$(use_with oracle) \
 		$(use_with sqlite sqlite3) \
 		$(use_with jabber) \
