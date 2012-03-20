@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Auth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.45 2012/01/18 17:52:10 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.46 2012/03/20 19:15:43 ssuominen Exp $
+
+  20 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> PEAR-Auth-1.6.4.ebuild:
+  Fix syntax for has_version wrt #408723, Comment #1 by Elijah El Lazkani
 
 *PEAR-Auth-1.6.4 (18 Jan 2012)
 
