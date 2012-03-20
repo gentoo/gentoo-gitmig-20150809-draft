@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.1 2012/02/27 02:28:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.2 2012/03/20 16:42:51 ago Exp $
 
 EAPI=4
 inherit eutils versionator toolchain-funcs
@@ -22,7 +22,7 @@ SRC_URI="http://www.threadingbuildingblocks.org/uploads/${MYU}/${PV1}.${PV2}${MY
 LICENSE="GPL-2-with-exceptions"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug doc examples"
 
 DEPEND=""
