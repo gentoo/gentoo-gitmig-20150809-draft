@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/extensible-exceptions
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/extensible-exceptions/ChangeLog,v 1.1 2012/03/04 03:11:43 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/extensible-exceptions/ChangeLog,v 1.2 2012/03/20 15:55:37 slyfox Exp $
+
+  20 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  extensible-exceptions-0.1.1.4.ebuild:
+  Fix build breakage on <ghc-7.4.
 
 *extensible-exceptions-0.1.1.4 (04 Mar 2012)
 
