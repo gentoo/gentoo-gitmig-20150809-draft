@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/ebookmerge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.13 2012/03/18 19:16:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.14 2012/03/20 10:35:02 pacho Exp $
+
+*ebookmerge-0.9.3-r1 (20 Mar 2012)
+
+  20 Mar 2012; Pacho Ramos <pacho@gentoo.org> +ebookmerge-0.9.3-r1.ebuild,
+  +files/ebookmerge-0.9.3-updates.patch:
+  Update to use new upstream, bug #388927 by Steve Arnold.
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #391429.
