@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182.ebuild,v 1.1 2012/03/19 21:57:00 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182.ebuild,v 1.2 2012/03/20 03:37:45 williamh Exp $
 
 EAPI=4
 
@@ -130,7 +130,7 @@ src_prepare()
 	else
 		# Make sure there are no sudden changes to upstream rules file
 		# (more for my own needs than anything else ...)
-		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
+		MD5=$(md5sum < "${S}/rules/50-udev-default.rules")
 		MD5=${MD5/  -/}
 		if [[ ${MD5} != ${udev_rules_md5} ]]
 		then
