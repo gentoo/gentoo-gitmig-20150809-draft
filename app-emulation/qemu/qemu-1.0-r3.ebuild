@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0-r3.ebuild,v 1.3 2012/03/18 13:41:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0-r3.ebuild,v 1.4 2012/03/20 14:57:32 cardoe Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} = *9999* ]]; then
 	GIT_ECLASS="git-2"
 fi
 
-inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs
+inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs python
 
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="http://wiki.qemu.org/download/${P}.tar.gz
@@ -125,6 +125,8 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 
 pkg_setup() {
 	use qemu_softmmu_targets_x86_64 || ewarn "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
+
+	python_set_active_version 2
 }
 
 src_prepare() {
