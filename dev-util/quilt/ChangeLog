@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/quilt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.51 2011/12/29 23:43:14 mpagano Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.52 2012/03/20 08:26:41 ago Exp $
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> quilt-0.50.ebuild:
+  Stable for amd64, wrt bug #408755
 
   29 Dec 2011; Michael Pagano <mpagano@gentoo.org> -quilt-0.42-r1.ebuild,
   -files/quilt-0.42-no-graphviz.patch,
