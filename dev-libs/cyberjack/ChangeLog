@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyberjack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.24 2012/01/23 09:44:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.25 2012/03/20 08:27:07 ago Exp $
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> cyberjack-3.99.5_p03.ebuild:
+  Stable for amd64, wrt bug #408441
 
   23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   cyberjack-3.99.5_p02-r1.ebuild:
