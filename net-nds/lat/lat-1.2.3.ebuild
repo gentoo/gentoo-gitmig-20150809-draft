@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.4 2012/03/18 19:24:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.5 2012/03/20 10:42:06 pacho Exp $
 
-EAPI=2
-
+EAPI=4
 GCONF_DEBUG=no
 
 inherit gnome2 mono versionator
@@ -24,24 +23,29 @@ RDEPEND=">=dev-lang/mono-1.1.13
 	>=dev-dotnet/gconf-sharp-2.8
 	>=gnome-base/gnome-keyring-0.4
 	sys-apps/dbus
-	avahi? ( net-dns/avahi )"
+	avahi? ( net-dns/avahi[mono] )"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig"
 
+src_prepare() {
+	# Fix tests, bug #295889
+	echo lat/plugins/ActiveDirectoryCoreViews/dialogs.glade >> po/POTFILES.in
+	echo lat/plugins/JpegAttributeViewer/dialog.glade >> po/POTFILES.in
+	echo lat/plugins/PosixCoreViews/dialogs.glade >> po/POTFILES.in
+}
+
 src_configure() {
-	econf \
-		$(use_enable avahi) \
-		|| die "econf failed"
+	econf $(use_enable avahi)
 }
 
 src_compile() {
 	# bug #330203
-	emake -j1 || die "emake failed"
+	emake -j1
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
 
