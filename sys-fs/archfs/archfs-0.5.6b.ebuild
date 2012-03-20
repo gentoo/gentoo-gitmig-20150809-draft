@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/archfs/archfs-0.5.6b.ebuild,v 1.1 2010/02/25 19:46:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/archfs/archfs-0.5.6b.ebuild,v 1.2 2012/03/20 10:08:15 pacho Exp $
 
 EAPI="2"
 
 inherit autotools
 
 DESCRIPTION="Filesystem for rdiff-backup'ed folders"
-HOMEPAGE="http://code.google.com/p/archfs"
+HOMEPAGE="http://code.google.com/p/rdiff-backup-fs/"
 SRC_URI="http://archfs.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
