@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5-r3.ebuild,v 1.1 2012/03/20 07:39:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5-r3.ebuild,v 1.2 2012/03/20 22:58:10 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils linux-info pam systemd
@@ -21,7 +21,11 @@ RDEPEND=">=dev-libs/dbus-glib-0.98
 	>=dev-libs/glib-2.22
 	sys-libs/zlib
 	x11-libs/libX11
-	kernel_linux? ( acl? ( sys-apps/acl >=sys-fs/udev-182 ) )
+	acl? (
+		sys-apps/acl
+		sys-apps/coreutils[acl]
+		>=sys-fs/udev-182
+		)
 	pam? ( virtual/pam )
 	policykit? ( >=sys-auth/polkit-0.101-r1 )
 	!<sys-fs/udev-182"
@@ -34,9 +38,11 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	# This is required to get login-session-id string with pam_ck_connector.so
-	if use pam && use kernel_linux; then
-		CONFIG_CHECK="~AUDITSYSCALL"
+	if use kernel_linux; then
+		# This is from http://bugs.gentoo.org/376939
+		use acl && CONFIG_CHECK="~TMPFS_POSIX_ACL"
+		# This is required to get login-session-id string with pam_ck_connector.so
+		use pam && CONFIG_CHECK+=" ~AUDITSYSCALL"
 		linux-info_pkg_setup
 	fi
 }
@@ -54,9 +60,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-	use kernel_linux && myconf="$(use_enable acl udev-acl)"
-
 	econf \
 		XMLTO_FLAGS="--skip-validation" \
 		--localstatedir="${EPREFIX}"/var \
@@ -64,10 +67,10 @@ src_configure() {
 		$(use_enable doc docbook-docs) \
 		$(use_enable debug) \
 		$(use_enable policykit polkit) \
+		$(use_enable acl udev-acl) \
 		--with-dbus-services="${EPREFIX}"/usr/share/dbus-1/services \
 		--with-pam-module-dir=$(getpam_mod_dir) \
-		"$(systemd_with_unitdir)" \
-		${myconf}
+		"$(systemd_with_unitdir)"
 }
 
 src_install() {
