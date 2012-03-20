@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/radeon-ucode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.21 2011/09/04 12:07:54 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.22 2012/03/20 23:56:33 chithanh Exp $
+
+*radeon-ucode-20120320 (20 Mar 2012)
+
+  20 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20120320.ebuild:
+  Add newly released Southern Islands and Trinity ucode.
 
   04 Sep 2011; Markus Meier <maekke@gentoo.org> radeon-ucode-20110531.ebuild:
   x86 stable, bug #380421
