@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-7.ebuild,v 1.4 2012/03/20 06:01:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-7.ebuild,v 1.5 2012/03/20 17:08:34 williamh Exp $
 
 EAPI=4
 
@@ -30,6 +30,12 @@ COMMON_DEPEND="!sys-apps/module-init-tools
 DEPEND="${COMMON_DEPEND}
 	doc? ( dev-util/gtk-doc )"
 RDEPEND="${COMMON_DEPEND}"
+
+# Upstream does not support running the test suite with custom configure flags.
+# I was also told that the test suite is intended for kmod developers.
+# So we have to restrict it.
+# See bug #408915.
+RESTRICT="test"
 
 src_prepare()
 {
