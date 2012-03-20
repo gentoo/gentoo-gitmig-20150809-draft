@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/recursos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/ChangeLog,v 1.6 2012/03/18 19:15:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/ChangeLog,v 1.7 2012/03/20 10:20:28 pacho Exp $
+
+  20 Mar 2012; Pacho Ramos <pacho@gentoo.org> recursos-2.0.ebuild:
+  RDEPEND on graphicsmagick also, bug #314203 by Wojciech Porczyk.
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #391429.
