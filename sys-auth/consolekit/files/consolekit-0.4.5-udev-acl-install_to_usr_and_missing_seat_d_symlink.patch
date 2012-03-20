@@ -1,8 +1,14 @@
-This was mailed to mbiebl@debian.org and is pending review.
+The symlink to $(DESTDIR)$(prefix)/lib/ConsoleKit/run-seat.d/udev-acl.ck part
+of this patch was accepted and committed to ~mbiebl/ConsoleKit repository at
+freedesktop.org.
+
+The part where udev-acl gets moved from $(UDEVDIR) to $(libexecdir) was
+rejected but we do this anyway since udev-acl is linking to libglib-2.0
+which reside in /usr too.
 
 --- tools/Makefile.am
 +++ tools/Makefile.am
-@@ -144,15 +144,19 @@
+@@ -144,15 +144,20 @@
  	$(NULL)
  
  if ENABLE_UDEV_ACL
@@ -19,6 +25,7 @@ This was mailed to mbiebl@debian.org and is pending review.
 +
 +install-exec-hook:
 +	mkdir -p $(DESTDIR)$(prefix)/lib/ConsoleKit/run-seat.d
++	mkdir -p $(DESTDIR)$(UDEVDIR)
 +	ln -sf $(libexecdir)/udev-acl $(DESTDIR)$(prefix)/lib/ConsoleKit/run-seat.d/udev-acl.ck
 +	ln -sf $(libexecdir)/udev-acl $(DESTDIR)$(UDEVDIR)/udev-acl
  endif

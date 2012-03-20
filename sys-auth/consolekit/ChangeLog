@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.115 2012/03/20 07:39:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.116 2012/03/20 10:02:55 ssuominen Exp $
+
+  20 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  files/consolekit-0.4.5-udev-acl-install_to_usr_and_missing_seat_d_symlink.pat
+  ch:
+  Missing mkdir -p for $(DESTDIR)$(UDEVDIR) wrt #408973 by Richard Grenville
 
 *consolekit-0.4.5-r3 (20 Mar 2012)
 
