@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.152 2012/03/07 04:13:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.153 2012/03/20 20:37:21 floppym Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -96,6 +96,18 @@ _python_check_python_abi_matching() {
 			fi
 		done <<< "${patterns}"
 
+		return 1
+	fi
+}
+
+_python_implementation() {
+	if [[ "${CATEGORY}/${PN}" == "dev-lang/python" ]]; then
+		return 0
+	elif [[ "${CATEGORY}/${PN}" == "dev-java/jython" ]]; then
+		return 0
+	elif [[ "${CATEGORY}/${PN}" == "dev-python/pypy" ]]; then
+		return 0
+	else
 		return 1
 	fi
 }
@@ -245,8 +257,11 @@ _python_parse_PYTHON_DEPEND() {
 	fi
 }
 
-DEPEND=">=app-admin/eselect-python-20091230"
-RDEPEND="${DEPEND}"
+if _python_implementation; then
+	DEPEND=">=app-admin/eselect-python-20091230"
+	RDEPEND="${DEPEND}"
+	PDEPEND="app-admin/python-updater"
+fi
 
 if [[ -n "${PYTHON_DEPEND}" ]]; then
 	_python_parse_PYTHON_DEPEND
@@ -295,8 +310,8 @@ if ! has "${EAPI:-0}" 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR
 	if [[ -n "${PYTHON_USE_WITH_OPT}" ]]; then
 		_PYTHON_USE_WITH_ATOMS="${PYTHON_USE_WITH_OPT}? ( ${_PYTHON_USE_WITH_ATOMS} )"
 	fi
-	DEPEND+=" ${_PYTHON_USE_WITH_ATOMS}"
-	RDEPEND+=" ${_PYTHON_USE_WITH_ATOMS}"
+	DEPEND+="${DEPEND:+ }${_PYTHON_USE_WITH_ATOMS}"
+	RDEPEND+="${RDEPEND:+ }${_PYTHON_USE_WITH_ATOMS}"
 	unset _PYTHON_ATOM _PYTHON_USE_WITH_ATOMS _PYTHON_USE_WITH_ATOMS_ARRAY
 fi
 
@@ -305,18 +320,6 @@ unset _PYTHON_ATOMS
 # ================================================================================================
 # =================================== MISCELLANEOUS FUNCTIONS ====================================
 # ================================================================================================
-
-_python_implementation() {
-	if [[ "${CATEGORY}/${PN}" == "dev-lang/python" ]]; then
-		return 0
-	elif [[ "${CATEGORY}/${PN}" == "dev-java/jython" ]]; then
-		return 0
-	elif [[ "${CATEGORY}/${PN}" == "dev-python/pypy" ]]; then
-		return 0
-	else
-		return 1
-	fi
-}
 
 _python_abi-specific_local_scope() {
 	[[ " ${FUNCNAME[@]:2} " =~ " "(_python_final_sanity_checks|python_execute_function|python_mod_optimize|python_mod_cleanup)" " ]]
