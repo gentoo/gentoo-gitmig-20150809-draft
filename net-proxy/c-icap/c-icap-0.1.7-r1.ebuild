@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.1.7-r1.ebuild,v 1.4 2012/03/08 09:15:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.1.7-r1.ebuild,v 1.5 2012/03/20 14:48:44 jer Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ~arm x86"
-IUSE="berkdb ldap ipv6 ldap"
+IUSE="berkdb ipv6 ldap"
 
 RDEPEND="berkdb? ( sys-libs/db )
 	ldap? ( net-nds/openldap )
