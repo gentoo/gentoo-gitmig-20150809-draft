@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10.ebuild,v 1.7 2012/03/11 13:53:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10.ebuild,v 1.8 2012/03/20 10:39:43 ssuominen Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner 
 COMMON_DEPEND="
 	virtual/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
-	acl? ( || ( >=sys-fs/udev-171[acl] >=sys-fs/udev-145[extras] ) )
+	acl? ( || ( >=sys-auth/consolekit-0.4.5-r3[acl] >=sys-fs/udev-171-r5[acl] <sys-fs/udev-171-r5[extras] ) )
 	snmp? (
 		net-analyzer/net-snmp
 		dev-libs/openssl
