@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/platinfo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/platinfo/ChangeLog,v 1.3 2011/12/27 15:07:36 aidecoe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/platinfo/ChangeLog,v 1.4 2012/03/20 09:02:14 ago Exp $
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> platinfo-0.15.0.ebuild:
+  Stable for amd64, wrt bug #406539
 
   27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   platinfo-0.15.0.ebuild:
