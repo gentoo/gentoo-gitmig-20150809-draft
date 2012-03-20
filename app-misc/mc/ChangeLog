@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.247 2012/03/19 18:52:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.248 2012/03/20 19:58:49 slyfox Exp $
+
+*mc-4.8.2 (20 Mar 2012)
+
+  20 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.2-missing-do_panel_cd_stub_env.c, +mc-4.8.2.ebuild,
+  mc-9999.ebuild, metadata.xml:
+  Version bump. Don't require user to choose from ncurses/slang (bug #353679 by
+  Ulrich Müller and others); use slang by default as less buggy implementation.
+  New release among others fixes crash when ~/.config is not a dir (bug #406315
+  by Marcin Mirosław).
 
   19 Mar 2012; Raúl Porcel <armin76@gentoo.org> mc-4.8.1-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #401157
