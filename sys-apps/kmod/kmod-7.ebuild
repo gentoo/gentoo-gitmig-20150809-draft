@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-7.ebuild,v 1.3 2012/03/19 22:51:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-7.ebuild,v 1.4 2012/03/20 06:01:13 ssuominen Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ src_prepare()
 {
 	if [ ! -e configure ]; then
 		if use doc; then
-			gtkdocize --copy --docdir libkmod/docs ||  die "gtkdocize failed"
+			gtkdocize --copy --docdir libkmod/docs || die
 		else
 			touch libkmod/docs/gtk-doc.make
 		fi
