@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.8 2012/03/18 18:25:42 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.9 2012/03/20 14:09:42 maksbotan Exp $
+
+  20 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/1.17/0001-configure_ac_automagic.patch, +files/env.file:
+  Add missing files, bugs #408797 and #408619
 
 *libguestfs-1.16.10 (18 Mar 2012)
 
