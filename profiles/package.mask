@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13599 2012/03/20 16:04:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13600 2012/03/20 21:34:56 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -637,10 +637,6 @@ net-analyzer/ncrack
 # Peter Volkov <pva@gentoo.org> (29 Oct 2010)
 # mask beta release
 =net-analyzer/tcpreplay-3.4.5*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (28 Oct 2010)
-# testing mask for upcoming nasm releases
->=dev-lang/nasm-2.09.999
 
 # Markos Chandras <hwoarang@gentoo.org> (26 Oct 2010)
 # master branch is heavily broken at the moment. Use
