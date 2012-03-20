@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.7 2012/02/27 22:58:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.8.0.ebuild,v 1.8 2012/03/20 14:51:41 jer Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ SRC_URI="
 LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="boost cg doc examples ffmpeg java mpi mysql odbc patented postgres python qt4 tk theora tk threads video_cards_nvidia R X"
+IUSE="boost cg doc examples ffmpeg java mpi mysql odbc patented postgres python qt4 R theora threads tk video_cards_nvidia X"
 
 RDEPEND="
 	dev-libs/expat

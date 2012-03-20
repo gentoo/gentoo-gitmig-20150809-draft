@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.96 2012/02/27 22:58:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.97 2012/03/20 14:51:41 jer Exp $
+
+  20 Mar 2012; Jeroen Roovers <jer@gentoo.org> vtk-5.8.0.ebuild:
+  Sort IUSE entries. Remove IUSE=tk duplicate by zvasylvv (bug #408871).
 
   27 Feb 2012; Justin Lecher <jlec@gentoo.org> vtk-5.8.0.ebuild:
   Fix typo in Changelog and commit fix for #401839
