@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.84 2012/03/20 03:37:45 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.85 2012/03/20 06:14:26 ssuominen Exp $
 
 EAPI=4
 
@@ -175,7 +175,7 @@ src_install()
 
 	if use keymap
 	then
-		dodoc src/extras/keymap/README.keymap.txt
+		dodoc src/keymap/README.keymap.txt
 	fi
 
 	# udevadm is now in /usr/bin.
