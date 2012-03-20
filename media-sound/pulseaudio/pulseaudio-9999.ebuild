@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.19 2012/03/13 14:48:28 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.20 2012/03/20 23:49:11 flameeyes Exp $
 
 EAPI=4
 
@@ -11,10 +11,14 @@ HOMEPAGE="http://www.pulseaudio.org/"
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/pulseaudio/pulseaudio.git"
 
-LICENSE="LGPL-2 GPL-2"
+# libpulse-simple and libpulse link to libpulse-core; this is daemon's
+# library and can link to gdbm and other GPL-only libraries. In this
+# cases, we have a fully GPL-2 package. Leaving the rest of the
+# GPL-forcing USE flags for those who use them.
+LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 SLOT="0"
 KEYWORDS=""
-IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc ssl"
+IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc ssl +gdbm"
 
 RDEPEND=">=media-libs/libsndfile-1.0.20
 	X? (
@@ -46,7 +50,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.20
 	orc? ( >=dev-lang/orc-0.4.9 )
 	ssl? ( dev-libs/openssl )
 	>=media-libs/speex-1.2_rc1
-	sys-libs/gdbm
+	gdbm? ( sys-libs/gdbm )
 	dev-libs/json-c
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
 
@@ -90,6 +94,14 @@ src_configure() {
 	# proper dependency and fix this up. — flameeyes
 	append-ldflags $(no-as-needed)
 
+	if use gdbm; then
+		myconf+=" --with-database=gdbm"
+	#elif use tdb; then
+	#	myconf+=" --with-database=tdb"
+	else
+		myconf+=" --with-database=simple"
+	fi
+
 	econf \
 		--enable-largefile \
 		$(use_enable glib glib2) \
@@ -116,8 +128,8 @@ src_configure() {
 		$(use_with equalizer fftw) \
 		--disable-esound \
 		--localstatedir="${EPREFIX}"/var \
-		--with-database=gdbm \
-		--with-udev-rules-dir="${EPREFIX}/lib/udev/rules.d"
+		--with-udev-rules-dir="${EPREFIX}/lib/udev/rules.d" \
+		${myconf}
 
 	if use doc; then
 		pushd doxygen

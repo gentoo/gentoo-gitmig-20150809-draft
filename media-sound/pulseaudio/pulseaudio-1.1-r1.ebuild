@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.1-r1.ebuild,v 1.10 2012/03/12 07:13:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.1-r1.ebuild,v 1.11 2012/03/20 23:49:11 flameeyes Exp $
 
 EAPI=4
 
@@ -11,10 +11,14 @@ HOMEPAGE="http://www.pulseaudio.org/"
 
 SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 
-LICENSE="LGPL-2 GPL-2"
+# libpulse-simple and libpulse link to libpulse-core; this is daemon's
+# library and can link to gdbm and other GPL-only libraries. In this
+# cases, we have a fully GPL-2 package. Leaving the rest of the
+# GPL-forcing USE flags for those who use them.
+LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh ~sparc x86 ~amd64-linux ~x86-linux"
-IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc ssl"
+IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc ssl +gdbm"
 
 RDEPEND="app-admin/eselect-esd
 	X? (
@@ -47,7 +51,7 @@ RDEPEND="app-admin/eselect-esd
 	ssl? ( dev-libs/openssl )
 	>=media-libs/speex-1.2_rc1
 	>=media-libs/libsndfile-1.0.20
-	sys-libs/gdbm
+	gdbm? ( sys-libs/gdbm )
 	dev-libs/json-c
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
 
@@ -94,6 +98,14 @@ src_configure() {
 	# proper dependency and fix this up. — flameeyes
 	append-ldflags $(no-as-needed)
 
+	if use gdbm; then
+		myconf+=" --with-database=gdbm"
+	#elif use tdb; then
+	#	myconf+=" --with-database=tdb"
+	else
+		myconf+=" --with-database=simple"
+	fi
+
 	econf \
 		--enable-largefile \
 		$(use_enable glib glib2) \
@@ -119,8 +131,8 @@ src_configure() {
 		$(use_with caps) \
 		$(use_with equalizer fftw) \
 		--localstatedir="${EPREFIX}"/var \
-		--with-database=gdbm \
-		--with-udev-rules-dir="${EPREFIX}/lib/udev/rules.d"
+		--with-udev-rules-dir="${EPREFIX}/lib/udev/rules.d" \
+		${myconf}
 
 	if use doc; then
 		pushd doxygen
