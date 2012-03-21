@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<!-- 
-$Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/metadata.xml,v 1.1 2012/03/21 13:47:43 jlec Exp $
-
-This is the example metadata file.
-The root element of this file is <pkgmetadata>. Within this element a 
-number of subelements are allowed: herd, maintainer, and 
-longdescription. herd is a required subelement.
-
-For a full description look at:
-http://www.gentoo.org/proj/en/devrel/handbook/handbook.xml?part=2&chap=4
-
-
-Before committing, please remove the comments from this file. They are 
-not relevant for general metadata.xml files.
--->
 <pkgmetadata>
-	<!-- <herd>some-herd</herd> -->
+	<herd>sci-chemistry</herd>
 	<maintainer>
-		<email>@gentoo.org</email>
-		<!--  <description>Description of the maintainership</description> -->
+		<email>jlec@gentoo.org</email>
 	</maintainer>
-	<!-- <longdescription>Long description of the package</longdescription> -->
-	<!--
-<use>
-  <flag name='flag'>Description of how USE='flag' affects this package</flag>
-  <flag name='userland_GNU'>Description of how USERLAND='GNU' affects this
-	  package</flag>
-  <flag name='aspell'>Uses <pkg>app-text/aspell</pkg> for spell checking.
-	  Requires an installed dictionary from <cat>app-dicts</cat></flag>
-</use>
--->
+	<longdescription>
+A fortran program in which Tirion's model (also called the Elastic Network 
+Model) is implemented. Within the frame of this model, atoms (particles) 
+less than cutoff (angstroms) away from each others are linked by springs of 
+same strength. Alternatively, a list of interacting atoms can be given to the 
+program.
+Requirements: a file with the coordinates of the system, in PDB (Protein Data 
+Bank) or "x y z mass" format.
+
+Output: the hessian (the mass-weighted second derivatives of energy matrix), 
+in the "i j non-zero-ij-matrix-element" format.
+
+Diagstd, a fortran program with a standard diagonalization routine, can next 
+be used in order to obtain the corresponding normal modes of the system. If 
+the system is large, the RTB approximation can prove usefull (see below).
+</longdescription>
 </pkgmetadata>

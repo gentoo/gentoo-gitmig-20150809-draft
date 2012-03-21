@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pdbmat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/ChangeLog,v 1.1 2012/03/21 13:47:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/ChangeLog,v 1.2 2012/03/21 13:55:28 jlec Exp $
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
 *pdbmat-3.89 (21 Mar 2012)
 
