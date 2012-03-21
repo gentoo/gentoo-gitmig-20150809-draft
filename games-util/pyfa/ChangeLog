@@ -1,6 +1,12 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.6 2012/03/14 06:41:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.7 2012/03/21 21:13:33 tetromino Exp $
+
+*pyfa-1.1.4 (21 Mar 2012)
+
+  21 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.2.ebuild,
+  +pyfa-1.1.4.ebuild:
+  Bump with UI improvements and afterburner fixes. Drop old.
 
 *pyfa-1.1.3 (14 Mar 2012)
 
