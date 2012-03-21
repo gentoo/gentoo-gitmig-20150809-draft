@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.40 2012/02/02 19:43:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.41 2012/03/21 20:14:11 jer Exp $
+
+  21 Mar 2012; Jeroen Roovers <jer@gentoo.org> JSON-2.530.0.ebuild:
+  Marked ~hppa (bug #408399).
 
   02 Feb 2012; Brent Baude <ranger@gentoo.org> JSON-2.530.0.ebuild:
   Marking JSON-2.530.0 ppc stable for bug 393397
