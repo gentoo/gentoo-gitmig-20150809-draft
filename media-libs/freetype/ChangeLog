@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.329 2012/03/17 19:24:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.330 2012/03/21 04:24:42 dirtyepic Exp $
+
+*freetype-2.4.9-r1 (21 Mar 2012)
+
+  21 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> +freetype-2.4.9-r1.ebuild,
+  +files/freetype-2.4.9-type1-incremental.patch:
+  Fix bug #408513 (error converting PS to PDF with ghostscript).
 
   17 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> -freetype-2.4.8.ebuild:
   Remove vulnerable version.
