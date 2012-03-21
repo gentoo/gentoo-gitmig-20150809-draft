@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Benchmark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.49 2012/01/18 18:03:46 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.50 2012/03/21 18:57:08 mabi Exp $
+
+  21 Mar 2012; Matti Bickel <mabi@gentoo.org> PEAR-Benchmark-1.2.9.ebuild:
+  package2.xml doesnt need to be copied anymore (bug #408815), also fix a
+  has_version syntax error
 
 *PEAR-Benchmark-1.2.9 (18 Jan 2012)
 
