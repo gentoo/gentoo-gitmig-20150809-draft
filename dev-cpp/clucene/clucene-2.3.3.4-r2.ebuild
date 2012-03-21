@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4-r1.ebuild,v 1.1 2011/12/08 12:41:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4-r2.ebuild,v 1.1 2012/03/21 10:20:32 scarabeus Exp $
 
 EAPI=4
 
 MY_PN="${PN}"-core
 MY_P="${MY_PN}"-"${PV}"
 
-inherit cmake-utils
+inherit cmake-utils multilib
 
 DESCRIPTION="High-performance, full-featured text search engine based off of lucene in C++"
 HOMEPAGE="http://clucene.sourceforge.net/"
@@ -29,6 +29,11 @@ DOCS=(AUTHORS ChangeLog README README.PACKAGE REQUESTS)
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+PATCHES=(
+	"${FILESDIR}/${P}-contrib.patch"
+	"${FILESDIR}/${P}-pkgconfig.patch"
+)
+
 src_configure() {
 	# Disabled threads: see upstream bug
 	# https://sourceforge.net/tracker/?func=detail&aid=3237301&group_id=80013&atid=558446
@@ -36,6 +41,9 @@ src_configure() {
 		-DENABLE_ASCII_MODE=OFF
 		-DENABLE_PACKAGING=OFF
 		-DDISABLE_MULTITHREADING=OFF
+		-DBUILD_CONTRIBS_LIB=ON
+		"-DLIB_DESTINATION=${EPREFIX}/usr/$(get_libdir)"
+		"-DLUCENE_SYS_INCLUDES=${EPREFIX}/usr/$(get_libdir)"
 		$(cmake-utils_use_enable debug)
 		$(cmake-utils_use_enable doc CLDOCS)
 		$(cmake-utils_use_build static-libs STATIC_LIBRARIES)
