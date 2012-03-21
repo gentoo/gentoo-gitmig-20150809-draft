@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/zeitgeist-datahub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/ChangeLog,v 1.4 2012/02/15 17:55:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/ChangeLog,v 1.5 2012/03/21 06:31:14 jlec Exp $
+
+*zeitgeist-datahub-0.8.2 (21 Mar 2012)
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> +zeitgeist-datahub-0.8.2.ebuild:
+  Version Bump
 
 *zeitgeist-datahub-0.8.1 (15 Feb 2012)
 
