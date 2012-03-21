@@ -1,6 +1,9 @@
 # ChangeLog for app-office/orage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.59 2012/02/13 21:34:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.60 2012/03/21 06:25:51 ssuominen Exp $
+
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> orage-4.8.2.ebuild:
+  Use gentoo mirrors.
 
   13 Feb 2012; Markus Meier <maekke@gentoo.org> orage-4.8.3.ebuild:
   arm stable, bug #401229
