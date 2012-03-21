@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.0.4.ebuild,v 1.1 2012/03/09 15:11:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.0.5.ebuild,v 1.1 2012/03/21 21:40:31 scarabeus Exp $
 
 EAPI=4
 
