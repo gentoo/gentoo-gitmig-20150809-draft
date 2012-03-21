@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.167 2012/03/20 10:41:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.168 2012/03/21 11:58:51 ago Exp $
+
+  21 Mar 2012; Agostino Sarubbo <ago@gentoo.org> texlive-core-2011-r6.ebuild:
+  Stable for amd64, wrt bug #408993
 
   20 Mar 2012; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2011-r6.ebuild:
