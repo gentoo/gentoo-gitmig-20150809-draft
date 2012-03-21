@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.40 2012/03/13 01:58:10 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.41 2012/03/21 01:54:50 qiaomuf Exp $
+
+  21 Mar 2012; Mu Qiao <qiaomuf@gentoo.org> fcitx-4.2.0-r2.ebuild,
+  fcitx-4.2.1.ebuild, metadata.xml:
+  Add qt and table use flag for >=fcitx-4.2.0 (bug #408955)
 
 *fcitx-4.2.1 (13 Mar 2012)
 

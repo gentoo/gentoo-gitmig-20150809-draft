@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.0-r2.ebuild,v 1.1 2012/02/24 06:23:07 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.0-r2.ebuild,v 1.2 2012/03/21 01:54:50 qiaomuf Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cairo dbus debug gtk gtk3 opencc pango"
+IUSE="cairo dbus debug gtk gtk3 opencc pango qt table"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXrender
@@ -59,9 +59,11 @@ src_configure() {
 		$(cmake-utils_use_enable debug)
 		$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
 		$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
+		$(cmake-utils_use_enable qt QT_IM_MODULE)
 		$(cmake-utils_use_enable opencc)
-		$(cmake-utils_use_enable pango)"
-		cmake-utils_src_configure
+		$(cmake-utils_use_enable pango)
+		$(cmake-utils_use_enable table)"
+	cmake-utils_src_configure
 }
 
 src_install() {
