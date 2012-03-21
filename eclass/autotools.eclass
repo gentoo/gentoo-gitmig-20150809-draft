@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.125 2012/03/21 03:27:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.126 2012/03/21 08:19:22 ssuominen Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -52,7 +52,7 @@ if [[ -n ${WANT_AUTOMAKE} ]]; then
 		none)   _automake_atom="" ;; # some packages don't require automake at all
 		# if you change the "latest" version here, change also autotools_run_tool
 		# this MUST reflect the latest stable major version for each arch!
-		latest) _automake_atom="|| ( `printf '=sys-devel/automake-%s* ' ${_LATEST_AUTOMAKE[@]/%:*}` )" ;;
+		latest) _automake_atom="|| ( `printf '>=sys-devel/automake-%s ' ${_LATEST_AUTOMAKE[@]/%:*}` )" ;;
 		*)      _automake_atom="=sys-devel/automake-${WANT_AUTOMAKE}*" ;;
 	esac
 	export WANT_AUTOMAKE
