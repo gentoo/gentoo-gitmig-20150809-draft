@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.101 2012/02/10 04:11:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.102 2012/03/21 15:18:18 patrick Exp $
+
+*youtube-dl-2012.02.27 (21 Mar 2012)
+
+  21 Mar 2012; Patrick Lauer <patrick@gentoo.org> +youtube-dl-2012.02.27.ebuild,
+  -youtube-dl-2011.08.04.ebuild, -youtube-dl-2011.11.23.ebuild,
+  -youtube-dl-2011.12.18.ebuild:
+  Bump
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> youtube-dl-2011.08.04.ebuild:
   Changing python deps in preparation for 2.4 removal
