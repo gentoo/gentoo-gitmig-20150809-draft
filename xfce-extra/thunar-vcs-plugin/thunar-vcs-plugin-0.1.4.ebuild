@@ -1,14 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.4.ebuild,v 1.3 2011/10/29 20:30:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.4.ebuild,v 1.4 2012/03/21 06:26:51 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
 
 DESCRIPTION="adds Subversion and GIT actions to the context menu of thunar"
 HOMEPAGE="http://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin"
-SRC_URI="mirror://xfce/src/thunar-plugins/${PN}/0.1/${P}.tar.bz2
-	http://dev.gentoo.org/~ssuominen/${P}-ru.po.bz2"
+SRC_URI="mirror://xfce/src/thunar-plugins/${PN}/${PV%.*}/${P}.tar.bz2
+	mirror://gentoo/${P}-ru.po.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
