@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/theseus/theseus-1.6.2.ebuild,v 1.1 2012/03/21 13:17:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/theseus/theseus-1.6.2-r1.ebuild,v 1.1 2012/03/21 16:11:49 jlec Exp $
 
 EAPI=4
 
@@ -18,6 +18,10 @@ IUSE="examples"
 RDEPEND="
 	sci-libs/gsl
 	|| (
+		sci-biology/probcons
+		sci-biology/mafft
+		sci-biology/t-coffee
+		sci-biology/kalign
 		sci-biology/clustalw
 		sci-biology/muscle
 		)"
@@ -46,6 +50,11 @@ src_prepare() {
 		-e 's|theseus:|theseus: libs|g' \
 		-e '/-o theseus/s:$(CC):$(CC) ${LDFLAGS}:g' \
 		-i Makefile || die
+
+	sed \
+		-e 's:/usr/local/bin/::g' \
+		-e 's:/usr/bin/::g' \
+		-i theseus_align || die
 }
 
 src_install() {
