@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.44 2012/03/10 16:57:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.45 2012/03/21 11:28:26 ssuominen Exp $
+
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> libvpx-1.0.0.ebuild:
+  ./configure with LC_ALL=C for compability with et_EE locale wrt #379659 by
+  Priit Laes
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org> libvpx-1.0.0.ebuild:
   Marking libvpx-1.0.0 ppc for bug 405955

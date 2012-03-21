@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.0.0.ebuild,v 1.6 2012/03/10 16:57:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.0.0.ebuild,v 1.7 2012/03/21 11:28:26 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs eutils
@@ -50,6 +50,8 @@ src_configure() {
 	addpredict /usr/share/snmp/mibs/.index
 
 	tc-export CC
+	# http://bugs.gentoo.org/379659 http://gerrit.chromium.org/gerrit/#change,18142
+	LC_ALL=C \
 	./configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
