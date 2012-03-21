@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libhangul
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.29 2012/03/13 13:04:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.30 2012/03/21 15:59:05 tomka Exp $
+
+  21 Mar 2012; Thomas Kahle <tomka@gentoo.org> libhangul-0.1.0.ebuild:
+  marked x86 per bug 407691
 
   13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> libhangul-0.1.0.ebuild:
   Stable for amd64, wrt bug #407691
