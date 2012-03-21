@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.1-r1.ebuild,v 1.1 2012/03/21 09:10:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.1-r1.ebuild,v 1.2 2012/03/21 09:22:41 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils
@@ -23,7 +23,7 @@ COMMON_DEPEND="dev-libs/gdl:3
 	>=x11-libs/gtk+-3.0.8:3
 	aac? (
 		media-libs/faad2
-		media-libs/libmp4v2
+		>=media-libs/libmp4v2-1.9.1
 		)
 	clutter? ( media-libs/clutter-gtk:1.0 )
 	curl? ( >=net-misc/curl-7.10 )
