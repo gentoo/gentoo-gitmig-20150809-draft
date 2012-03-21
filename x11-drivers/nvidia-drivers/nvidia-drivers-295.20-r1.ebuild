@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.20-r1.ebuild,v 1.3 2012/03/20 13:05:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.20-r1.ebuild,v 1.4 2012/03/21 08:45:09 ssuominen Exp $
 
 EAPI="2"
 
@@ -282,6 +282,11 @@ src_prepare() {
 			"${NV_SRC}"/Makefile.kbuild
 
 		epatch "${FILESDIR}"/256.35-unified-arch.patch
+
+		# Fix building with Linux 3.3.x wrt #408841
+		sed -i \
+			-e '/CFLAGS="$CFLAGS/s:-I$SOURCES/arch/x86/include:& -I$SOURCES/arch/x86/include/generated:' \
+			kernel/conftest.sh || die
 
 		# If you set this then it's your own fault when stuff breaks :)
 		use custom-cflags && sed -i "s:-O:${CFLAGS}:" "${NV_SRC}"/Makefile.*

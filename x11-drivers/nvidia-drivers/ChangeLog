@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.323 2012/03/20 13:05:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.324 2012/03/21 08:45:09 ssuominen Exp $
+
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  nvidia-drivers-295.20-r1.ebuild:
+  Fix building with Linux 3.3.x wrt #408841
 
   20 Mar 2012; Agostino Sarubbo <ago@gentoo.org>
   nvidia-drivers-295.20-r1.ebuild:
