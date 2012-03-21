@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-11.0.ebuild,v 1.2 2012/03/21 05:24:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.3.ebuild,v 1.1 2012/03/21 05:24:43 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
-MOZ_ESR="0"
+MOZ_ESR="1"
 
 # This list can be updated using scripts/get_langs.sh from the mozilla overlay
 MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et eu fi
@@ -20,7 +20,7 @@ fi
 MOZ_P="${PN}-${MOZ_PV}"
 
 # Enigmail version
-EMVER="1.4"
+EMVER="1.3.5"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -36,7 +36,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist gconf +crashreporter +crypt +ipc +lightning +minimal mozdom +webm"
 
 PATCH="thunderbird-10.0-patches-0.1"
-PATCHFF="firefox-11.0-patches-0.1"
+PATCHFF="firefox-10.0-patches-0.6"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
@@ -47,8 +47,8 @@ SRC_URI="${SRC_URI}
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 RDEPEND=">=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.3
-	>=dev-libs/nspr-4.9
+	>=dev-libs/nss-3.13.1
+	>=dev-libs/nspr-4.8.8
 	>=dev-libs/glib-2.26
 	crashreporter? ( net-misc/curl )
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
@@ -74,17 +74,12 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	webm? ( x86? ( ${ASM_DEPEND} )
-		amd64? ( ${ASM_DEPEND} )
-		virtual/opengl )"
+		amd64? ( ${ASM_DEPEND} ) )"
 
-if [[ ${PV} =~ beta ]]; then
-	S="${WORKDIR}/comm-beta"
+if [[ ${MOZ_ESR} == 1 ]]; then
+	S="${WORKDIR}/comm-esr${PV%%.*}"
 else
-	if [[ ${MOZ_ESR} == 1 ]]; then
-		S="${WORKDIR}/comm-esr${PV%%.*}"
-	else
-		S="${WORKDIR}/comm-release"
-	fi
+	S="${WORKDIR}/comm-release"
 fi
 
 pkg_setup() {
@@ -141,7 +136,6 @@ src_prepare() {
 	epatch_user
 
 	eautoreconf
-	# Ensure we run eautoreconf in mozilla to regenerate configure
 	cd "${S}"/mozilla
 	eautoconf
 }
@@ -245,7 +239,7 @@ src_install() {
 		newmenu "${FILESDIR}"/icon/${PN}-unbranded.desktop \
 			${PN}.desktop
 
-		sed -i -e "s:Mozilla\ Thunderbird:EarlyBird:g" \
+		sed -i -e "s:Mozilla\ Thunderbird:Lanikai:g" \
 			"${ED}"/usr/share/applications/${PN}.desktop
 	fi
 
