@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.83 2012/03/15 12:15:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.84 2012/03/21 16:47:06 tomka Exp $
+
+  21 Mar 2012; Thomas Kahle <tomka@gentoo.org> gnash-0.8.10-r2.ebuild:
+  marked x86 per bug 408209
 
   15 Mar 2012; Agostino Sarubbo <ago@gentoo.org> gnash-0.8.10-r2.ebuild:
   Stable for amd64, wrt bug #408209
