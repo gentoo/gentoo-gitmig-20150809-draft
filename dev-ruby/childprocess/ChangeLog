@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.13 2012/01/14 08:06:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.14 2012/03/21 06:43:04 graaff Exp $
+
+*childprocess-0.3.1 (21 Mar 2012)
+
+  21 Mar 2012; Hans de Graaff <graaff@gentoo.org> +childprocess-0.3.1.ebuild:
+  Version bump, bug 409067.
 
 *childprocess-0.3.0 (14 Jan 2012)
 
