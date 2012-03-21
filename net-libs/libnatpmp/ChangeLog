@@ -1,5 +1,9 @@
 
 
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libnatpmp-20110808-r1.ebuild:
+  ppc/ppc64/x86 stable wrt #406035
+
   13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   libnatpmp-20110808-r1.ebuild:
   amd64 stable wrt #406035
