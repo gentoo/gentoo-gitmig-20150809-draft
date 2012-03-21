@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.127 2012/03/21 17:12:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.128 2012/03/21 21:51:32 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@
 if [[ ${___ECLASS_ONCE_AUTOTOOLS} != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_AUTOTOOLS="recur -_+^+_- spank"
 
-inherit eutils libtool versionator
+inherit eutils libtool
 
 # @ECLASS-VARIABLE: WANT_AUTOCONF
 # @DESCRIPTION:
@@ -37,11 +37,13 @@ inherit eutils libtool versionator
 # @INTERNAL
 # @DESCRIPTION:
 # CONSTANT!
-# The latest major-minor version/slot of automake available on each arch.  #312315
+# The latest major version/slot of automake available on each arch.  #312315
 # If a newer slot is stable on any arch, and is NOT reflected in this list,
 # then circular dependencies may arise during emerge @system bootstraps.
 # Do NOT change this variable in your ebuilds!
-_LATEST_AUTOMAKE=1.11.1
+# If you want to force a newer minor version, you can specify the correct
+# WANT value by using a colon:  <PV>[:<WANT_AUTOMAKE>]
+_LATEST_AUTOMAKE=( 1.11.1:1.11 )
 
 _automake_atom="sys-devel/automake"
 _autoconf_atom="sys-devel/autoconf"
@@ -51,14 +53,14 @@ if [[ -n ${WANT_AUTOMAKE} ]]; then
 		# if you change the "latest" version here, change also autotools_run_tool
 		# this MUST reflect the latest stable major version for each arch!
 		latest)
-			if [[ ${EAPI:-0} != 0 ]]; then
-				_automake_atom=">=sys-devel/automake-${_LATEST_AUTOMAKE}:$(get_version_component_range 1-2 ${_LATEST_AUTOMAKE})"
+			# Use SLOT deps if we can.  For EAPI=0, we get pretty close.
+			if [[ ${EAPI:-0} != 0 ]] ; then
+				_automake_atom="|| ( `printf '>=sys-devel/automake-%s:%s ' ${_LATEST_AUTOMAKE[@]/:/ }` )"
 			else
-				_automake_atom=">=sys-devel/automake-${_LATEST_AUTOMAKE} =sys-devel/automake-$(get_version_component_range 1-2 ${_LATEST_AUTOMAKE})*"
+				_automake_atom="|| ( `printf '>=sys-devel/automake-%s ' ${_LATEST_AUTOMAKE[@]/%:*}` )"
 			fi
 			;;
-		*)
-			_automake_atom="=sys-devel/automake-${WANT_AUTOMAKE}*" ;;
+		*)      _automake_atom="=sys-devel/automake-${WANT_AUTOMAKE}*" ;;
 	esac
 	export WANT_AUTOMAKE
 fi
@@ -351,10 +353,12 @@ autotools_env_setup() {
 	# We do the "latest" → version switch here because it solves
 	# possible order problems, see bug #270010 as an example.
 	if [[ ${WANT_AUTOMAKE} == "latest" ]]; then
-		# has_version respects ROOT, but in this case, we don't want it to,
-		# thus "ROOT=/" prefix:
-		ROOT=/ has_version "=sys-devel/automake-$(get_version_component_range 1-2 ${_LATEST_AUTOMAKE})*" && export WANT_AUTOMAKE="$(get_version_component_range 1-2 ${_LATEST_AUTOMAKE})"
-
+		local pv
+		for pv in ${_LATEST_AUTOMAKE[@]/#*:} ; do
+			# has_version respects ROOT, but in this case, we don't want it to,
+			# thus "ROOT=/" prefix:
+			ROOT=/ has_version "=sys-devel/automake-${pv}*" && export WANT_AUTOMAKE="${pv}"
+		done
 		[[ ${WANT_AUTOMAKE} == "latest" ]] && \
 			die "Cannot find the latest automake! Tried ${_LATEST_AUTOMAKE}"
 	fi
