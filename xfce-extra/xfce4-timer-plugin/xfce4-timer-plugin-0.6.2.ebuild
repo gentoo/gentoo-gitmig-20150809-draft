@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/xfce4-timer-plugin-0.6.2.ebuild,v 1.11 2012/01/06 11:04:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/xfce4-timer-plugin-0.6.2.ebuild,v 1.12 2012/03/21 06:13:52 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
 
 DESCRIPTION="A simple timer plug-in for the Xfce desktop environment"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin"
-SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.6/${P}.tar.bz2
-	http://dev.gentoo.org/~ssuominen/${P}-ca.po.bz2
-	http://dev.gentoo.org/~ssuominen/${P}-hr.po.bz2
-	http://dev.gentoo.org/~ssuominen/${P}-nl.po.bz2
-	http://dev.gentoo.org/~ssuominen/${P}-sk.po.bz2"
+SRC_URI="mirror://xfce/src/panel-plugins/${PN}/${PV%.*}/${P}.tar.bz2
+	mirror://gentoo/${P}-ca.po.bz2
+	mirror://gentoo/${P}-hr.po.bz2
+	mirror://gentoo/${P}-nl.po.bz2
+	mirror://gentoo/${P}-sk.po.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
