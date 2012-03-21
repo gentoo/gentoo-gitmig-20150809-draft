@@ -1,4 +1,5 @@
-Fix loading of libmp4v2.so.2 from mp4v2-1.9.1_p497
+Fix loading of libmp4v2.so.2 from mp4v2-1.9.1_p497.
+See, http://gtkpod.org/bugs/index.php?do=details&task_id=93
 
 --- plugins/filetype_mp4/mp4file.c
 +++ plugins/filetype_mp4/mp4file.c
