@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/log4r-1.1.10.ebuild,v 1.1 2012/01/03 07:18:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/log4r-1.1.10.ebuild,v 1.2 2012/03/21 06:47:56 graaff Exp $
 
 EAPI="2"
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
