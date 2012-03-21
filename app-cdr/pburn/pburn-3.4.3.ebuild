@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/pburn/pburn-3.4.3.ebuild,v 1.1 2012/01/03 11:08:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/pburn/pburn-3.4.3.ebuild,v 1.2 2012/03/21 06:52:36 ssuominen Exp $
 
 # wget --user puppy --password linux "http://www.meownplanet.net/zigbert/${P}.pet"
 
@@ -9,7 +9,7 @@ inherit eutils
 
 DESCRIPTION="A burning tool with GTK+ frontend"
 HOMEPAGE="http://murga-linux.com/puppy/viewtopic.php?t=23881"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.pet"
+SRC_URI="mirror://gentoo/${P}.pet"
 
 LICENSE="GPL-2"
 SLOT="0"
