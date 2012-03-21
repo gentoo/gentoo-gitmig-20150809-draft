@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.37 2012/03/21 09:21:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.38 2012/03/21 09:24:12 jdhore Exp $
+
+  21 Mar 2012; Jeff Horelick <jdhore@gentoo.org>
+  -atheme-services-6.0.9-r1.ebuild:
+  Remove old, vulnerable version (see security bug 409103)
 
   21 Mar 2012; Jeff Horelick <jdhore@gentoo.org> atheme-services-6.0.10.ebuild:
   Stable on x86/amd64 wrt security bug 409103
