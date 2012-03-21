@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.4.0.ebuild,v 1.3 2012/03/21 15:58:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.4.0.ebuild,v 1.4 2012/03/21 17:04:39 ssuominen Exp $
 
-EAPI="3"
+EAPI=4
+
 PYTHON_DEPEND="2:2.5"
 
-inherit eutils python
+inherit python
 
 DESCRIPTION="The Hangul engine for IBus input platform"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -16,14 +17,19 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="nls"
 
-RDEPEND=">=app-i18n/ibus-1.3.99
-	dev-python/pygobject
-	dev-python/pygtk
+RDEPEND=">=app-i18n/ibus-1.4
+	=dev-python/pygobject-2*
+	=dev-python/pygtk-2*
 	>=app-i18n/libhangul-0.1
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	nls? ( >=sys-devel/gettext-0.17 )"
+	nls? (
+		dev-util/intltool
+		>=sys-devel/gettext-0.17
+		)"
+
+DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -31,19 +37,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	mv py-compile py-compile.orig || die
-	ln -s "$(type -P true)" py-compile || die
-	sed -i -e "s:python:$(PYTHON -2):" setup/ibus-setup-hangul.in || die
+	>py-compile
+	python_convert_shebangs 2 setup/ibus-setup-hangul.in
 }
 
 src_configure() {
-	econf $(use_enable nls) || die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-
-	dodoc AUTHORS ChangeLog NEWS README || die
+	econf $(use_enable nls)
 }
 
 pkg_postinst() {
