@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.28-r1.ebuild,v 1.12 2012/01/07 00:38:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.28-r1.ebuild,v 1.13 2012/03/21 09:03:36 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="static-libs"
 
-RDEPEND=">=media-libs/libmp4v2-1.9.0"
+RDEPEND="~media-libs/libmp4v2-1.9.1"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
