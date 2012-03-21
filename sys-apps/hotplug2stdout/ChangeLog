@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hotplug2stdout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug2stdout/ChangeLog,v 1.1 2012/01/03 10:22:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug2stdout/ChangeLog,v 1.2 2012/03/21 06:56:33 ssuominen Exp $
+
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  hotplug2stdout-1.2.1.ebuild:
+  Use gentoo mirrors.
 
 *hotplug2stdout-1.2.1 (03 Jan 2012)
 

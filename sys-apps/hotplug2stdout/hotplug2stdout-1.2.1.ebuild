@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug2stdout/hotplug2stdout-1.2.1.ebuild,v 1.1 2012/01/03 10:22:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug2stdout/hotplug2stdout-1.2.1.ebuild,v 1.2 2012/03/21 06:56:33 ssuominen Exp $
 
 # wget --user puppy --password linux "http://bkhome.org/sources/alphabetical/h/${P}.tar.gz"
 
@@ -9,7 +9,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="A tool for reading kernel uevent(s) to stdout"
 HOMEPAGE="http://www.bellut.net/projects.html"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
