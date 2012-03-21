@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ytree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.14 2012/03/18 18:22:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.15 2012/03/21 15:22:43 tomka Exp $
+
+  21 Mar 2012; Thomas Kahle <tomka@gentoo.org> ytree-1.97.ebuild:
+  marked x86 per bug 306307
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> -ytree-1.92-r2.ebuild,
   -ytree-1.94.ebuild, metadata.xml:
