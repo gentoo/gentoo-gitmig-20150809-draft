@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.80 2012/03/21 02:12:53 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.81 2012/03/21 06:01:49 mattm Exp $
+
+  21 Mar 2012; Matthew Marlowe <mattm@gentoo.org>
+  -files/zabbix-1.8.2-as-needed.patch, -files/zabbix-1.8.3-as-needed.patch,
+  zabbix-1.8.11.ebuild, -files/zabbix-as-needed.patch:
+  Removed legacy unused patches
+
+  21 Mar 2012; Matthew Marlowe <mattm@gentoo.org> zabbix-1.8.11.ebuild:
+  zabbix-1.8.11 ebuild working fine on dev boxes, pushing out to testing on
+  amd64 and x86 arches
 
   21 Mar 2012; Matthew Marlowe <mattm@gentoo.org> zabbix-1.8.11.ebuild:
   1.8.11 seems to no longer require the as-needed patch as all the automake
