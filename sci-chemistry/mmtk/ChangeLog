@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/mmtk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mmtk/ChangeLog,v 1.1 2012/03/21 11:45:27 jlec Exp $
+
+*mmtk-2.7.5 (21 Mar 2012)
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> +mmtk-2.7.5.ebuild,
+  +metadata.xml:
+  Initital addition, written by me
+
