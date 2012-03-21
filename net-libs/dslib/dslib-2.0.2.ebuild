@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/dslib/dslib-2.0.ebuild,v 1.1 2012/02/28 15:06:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/dslib/dslib-2.0.2.ebuild,v 1.1 2012/03/21 21:36:43 scarabeus Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit distutils
 
 DESCRIPTION="Library to access Czech eGov system \"Datove schranky\""
 HOMEPAGE="http://labs.nic.cz/page/969/datovka/"
-SRC_URI="http://www.nic.cz/public_media/datove_schranky/releases/datovka-2.0/src/${P}.tar.gz"
+SRC_URI="http://www.nic.cz/public_media/datove_schranky/releases/datovka-2.0.2/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
