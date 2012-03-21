@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/libhangul
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.30 2012/03/21 15:59:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.31 2012/03/21 17:49:24 ssuominen Exp $
+
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> libhangul-0.1.0.ebuild:
+  Remove libhangul.la libtool archive in favour of libhangul.pc pkg-config
+  file.
 
   21 Mar 2012; Thomas Kahle <tomka@gentoo.org> libhangul-0.1.0.ebuild:
   marked x86 per bug 407691
