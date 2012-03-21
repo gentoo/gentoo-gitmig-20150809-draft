@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/greybird-0.6.ebuild,v 1.1 2012/03/18 03:20:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/greybird-0.6.ebuild,v 1.2 2012/03/21 06:23:55 ssuominen Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://github.com/shimmerproject/${MY_PN}/tarball/v${PV} -> ${P}.tar.gz
 
 LICENSE="CCPL-Attribution-ShareAlike-NonCommercial-3.0 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=x11-themes/gtk-engines-murrine-0.90
