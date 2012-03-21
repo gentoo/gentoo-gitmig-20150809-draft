@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/radeontool
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.24 2010/05/26 09:58:02 bangert Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.25 2012/03/21 18:42:30 robbat2 Exp $
+
+*radeontool-1.6.3 (21 Mar 2012)
+
+  21 Mar 2012; Robin H. Johnson <robbat2@gentoo.org> +radeontool-1.6.3.ebuild:
+  Version bump so I can poke my R600 HDMI more.
 
 *radeontool-1.6.1 (26 May 2010)
 
