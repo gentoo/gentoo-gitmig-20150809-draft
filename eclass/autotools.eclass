@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.124 2012/03/20 15:32:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.125 2012/03/21 03:27:47 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -37,11 +37,13 @@ inherit eutils libtool
 # @INTERNAL
 # @DESCRIPTION:
 # CONSTANT!
-# The latest major version/slot of automake available on each arch.
+# The latest major version/slot of automake available on each arch.  #312315
 # If a newer version is stable on any arch, and is NOT reflected in this list,
 # then circular dependencies may arise during emerge @system bootstraps.
+# If you want to force a newer minor version, you can specify the correct
+# WANT value by using a colon:  <PV>[:<WANT_AUTOMAKE>]
 # Do NOT change this variable in your ebuilds!
-_LATEST_AUTOMAKE='1.11'
+_LATEST_AUTOMAKE=( 1.11.1:1.11 )
 
 _automake_atom="sys-devel/automake"
 _autoconf_atom="sys-devel/autoconf"
@@ -50,7 +52,7 @@ if [[ -n ${WANT_AUTOMAKE} ]]; then
 		none)   _automake_atom="" ;; # some packages don't require automake at all
 		# if you change the "latest" version here, change also autotools_run_tool
 		# this MUST reflect the latest stable major version for each arch!
-		latest) _automake_atom="|| ( `printf '=sys-devel/automake-%s* ' ${_LATEST_AUTOMAKE}` )" ;;
+		latest) _automake_atom="|| ( `printf '=sys-devel/automake-%s* ' ${_LATEST_AUTOMAKE[@]/%:*}` )" ;;
 		*)      _automake_atom="=sys-devel/automake-${WANT_AUTOMAKE}*" ;;
 	esac
 	export WANT_AUTOMAKE
@@ -345,10 +347,10 @@ autotools_env_setup() {
 	# possible order problems, see bug #270010 as an example.
 	if [[ ${WANT_AUTOMAKE} == "latest" ]]; then
 		local pv
-		for pv in ${_LATEST_AUTOMAKE} ; do
+		for pv in ${_LATEST_AUTOMAKE[@]/#*:} ; do
 			# has_version respects ROOT, but in this case, we don't want it to,
 			# thus "ROOT=/" prefix:
-			ROOT=/ has_version "=sys-devel/automake-${pv}*" && export WANT_AUTOMAKE="$pv"
+			ROOT=/ has_version "=sys-devel/automake-${pv}*" && export WANT_AUTOMAKE="${pv}"
 		done
 		[[ ${WANT_AUTOMAKE} == "latest" ]] && \
 			die "Cannot find the latest automake! Tried ${_LATEST_AUTOMAKE}"
