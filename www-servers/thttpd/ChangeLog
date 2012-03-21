@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thttpd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.32 2011/08/03 20:34:00 zmedico Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.33 2012/03/21 11:36:32 pacho Exp $
+
+  21 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop www-server herd as discussed in gentoo-dev ML.
 
   03 Aug 2011; Zac Medico <zmedico@gentoo.org> thttpd-2.25b-r8.ebuild:
   Fix for prefix.

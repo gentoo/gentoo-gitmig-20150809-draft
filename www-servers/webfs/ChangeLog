@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/webfs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.22 2009/07/26 10:44:35 bangert Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.23 2012/03/21 11:37:59 pacho Exp $
+
+  21 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop www-server herd as discussed in gentoo-dev ML.
 
   26 Jul 2009; Thilo Bangert <bangert@gentoo.org> -webfs-1.20.ebuild,
   -webfs-1.21.ebuild:

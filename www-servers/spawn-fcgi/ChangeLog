@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/spawn-fcgi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.29 2010/10/22 17:51:58 bangert Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.30 2012/03/21 11:36:27 pacho Exp $
+
+  21 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop www-server herd as discussed in gentoo-dev ML.
 
   22 Oct 2010; Thilo Bangert <bangert@gentoo.org> files/spawn-fcgi.initd:
   POSIX compatibility (#331487)

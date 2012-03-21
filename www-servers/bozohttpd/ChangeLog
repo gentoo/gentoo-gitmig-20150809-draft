@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/bozohttpd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.14 2010/09/06 06:52:18 s4t4n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.15 2012/03/21 11:26:51 pacho Exp $
+
+  21 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop www-server herd as discussed in gentoo-dev ML.
 
   06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> bozohttpd-20060517.ebuild:
   Wiped out older version, see bug #332065.
