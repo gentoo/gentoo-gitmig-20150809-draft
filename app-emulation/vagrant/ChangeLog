@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vagrant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/ChangeLog,v 1.1 2012/03/21 07:08:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/ChangeLog,v 1.2 2012/03/21 10:05:10 radhermit Exp $
+
+*vagrant-1.0.1 (21 Mar 2012)
+
+  21 Mar 2012; Tim Harder <radhermit@gentoo.org> +vagrant-1.0.1.ebuild:
+  Version bump.
 
 *vagrant-1.0.0 (21 Mar 2012)
 
