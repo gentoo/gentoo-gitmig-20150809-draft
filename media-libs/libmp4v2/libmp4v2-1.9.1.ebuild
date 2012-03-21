@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.1.ebuild,v 1.16 2011/11/19 12:44:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.1.ebuild,v 1.17 2012/03/21 09:02:13 ssuominen Exp $
 
 EAPI=4
 inherit multilib libtool
@@ -16,7 +16,6 @@ IUSE="static-libs utils"
 
 RDEPEND=""
 DEPEND="utils? ( sys-apps/help2man )
-	!media-video/mpeg4ip
 	sys-apps/sed"
 
 RESTRICT="test" # This will need dejagnu, and is only fixed in trunk.
