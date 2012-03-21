@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.3.ebuild,v 1.1 2012/03/14 06:41:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.4-r1.ebuild,v 1.1 2012/03/21 22:45:57 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -26,7 +26,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+graph"
 
 RDEPEND="dev-python/sqlalchemy
-	>=dev-python/wxpython-2.8
+	dev-python/wxpython:2.8
 	graph? ( dev-python/matplotlib[wxwidgets] dev-python/numpy )"
 DEPEND=""
 
@@ -40,6 +40,9 @@ pkg_setup() {
 src_prepare() {
 	# make staticPath settable from configforced again
 	epatch "${FILESDIR}/${PN}-1.1-staticPath.patch"
+
+	# use correct slot of wxpython, http://trac.evefit.org/ticket/475
+	epatch "${FILESDIR}/${PN}-1.1.4-wxversion.patch"
 
 	python_convert_shebangs -r -x 2 .
 	sed -e "s:%%SITEDIR%%:$(python_get_sitedir):" \

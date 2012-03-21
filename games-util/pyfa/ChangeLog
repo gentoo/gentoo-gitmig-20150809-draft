@@ -1,6 +1,14 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.7 2012/03/21 21:13:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.8 2012/03/21 22:45:57 tetromino Exp $
+
+*pyfa-1.1.4-r1 (21 Mar 2012)
+
+  21 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.3.ebuild,
+  -pyfa-1.1.4.ebuild, +pyfa-1.1.4-r1.ebuild, +files/pyfa-1.1.4-wxversion.patch:
+  Pyfa only supports wxpython:2.8. Fix dependency, add patch to select correct
+  slot of wxpython at runtime, and drop broken versions. Thanks to Samuli
+  Suominen for noticing.
 
 *pyfa-1.1.4 (21 Mar 2012)
 
