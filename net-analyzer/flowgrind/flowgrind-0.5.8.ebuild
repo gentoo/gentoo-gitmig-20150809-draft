@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flowgrind/flowgrind-0.5.8.ebuild,v 1.2 2012/03/18 22:46:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flowgrind/flowgrind-0.5.8.ebuild,v 1.3 2012/03/21 05:01:40 radhermit Exp $
 
 EAPI="4"
 
 inherit eutils autotools
 
 DESCRIPTION="Network performance measurement tool"
-HOMEPAGE="http://www.umic-mesh.net/research/flowgrind"
-SRC_URI="http://www.umic-mesh.net/downloads/files/${P}.tar.bz2"
+HOMEPAGE="https://launchpad.net/flowgrind"
+SRC_URI="https://launchpad.net/${PN}/trunk/${P}/+download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
