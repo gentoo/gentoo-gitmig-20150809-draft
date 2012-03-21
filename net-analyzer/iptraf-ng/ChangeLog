@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/iptraf-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.25 2012/03/16 19:07:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.26 2012/03/21 19:05:42 jer Exp $
+
+*iptraf-ng-1.1.1.20120321 (21 Mar 2012)
+
+  21 Mar 2012; Jeroen Roovers <jer@gentoo.org>
+  +iptraf-ng-1.1.1.20120321.ebuild:
+  Bump to add PPP/TUN interfaces back by Pinkbyte (bug #408203 comment #7).
 
   16 Mar 2012; Brent Baude <ranger@gentoo.org> iptraf-ng-1.1.1.ebuild:
   Marking iptraf-ng-1.1.1 ppc for bug 408203
