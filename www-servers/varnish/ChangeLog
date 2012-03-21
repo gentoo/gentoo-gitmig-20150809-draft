@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/varnish
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.43 2011/12/14 22:55:13 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.44 2012/03/21 11:37:53 pacho Exp $
+
+  21 Mar 2012; Pacho Ramos <pacho@gentoo.org> -varnish-2.1.5.ebuild,
+  -varnish-3.0.1.ebuild, -varnish-3.0.2.ebuild, metadata.xml:
+  Drop www-server herd as discussed in gentoo-dev ML. Drop old.
 
 *varnish-3.0.2-r1 (14 Dec 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.30 2012/03/18 18:00:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.31 2012/03/21 11:33:43 pacho Exp $
+
+  21 Mar 2012; Pacho Ramos <pacho@gentoo.org> -monkeyd-0.32.0.ebuild,
+  -monkeyd-0.9.1.ebuild, metadata.xml:
+  Drop www-server herd as discussed in gentoo-dev ML. Drop old.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> monkeyd-0.9.1.ebuild,
   monkeyd-0.31.0.ebuild, monkeyd-0.32.0.ebuild, monkeyd-0.33.0.ebuild:

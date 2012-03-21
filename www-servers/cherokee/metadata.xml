@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>www-servers</herd>
-  <use>
+<maintainer>
+	<email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<use>
 	  <flag name='admin'>Install web based cherokee conf tool</flag>
 	  <flag name='coverpage'>Installs the default cherokee coverpage</flag>
 	  <flag name='rrdtool'>Enable rrdtool support</flag>
-  </use>
+</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/publicfile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.14 2011/01/29 23:30:17 bangert Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.15 2012/03/21 11:35:35 pacho Exp $
+
+  21 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop www-server herd as discussed in gentoo-dev ML. Drop old.
 
   29 Jan 2011; Thilo Bangert <bangert@gentoo.org> -publicfile-0.52.ebuild,
   publicfile-0.52-r1.ebuild, publicfile-0.52-r2.ebuild:
