@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r16.ebuild,v 1.10 2012/03/15 18:45:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r16.ebuild,v 1.11 2012/03/21 06:27:25 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic
@@ -10,7 +10,7 @@ DESCRIPTION="An interactive image manipulation program that supports a wide vari
 HOMEPAGE="http://www.trilon.com/xv/index.html http://www.sonic.net/~roelofs/greg_xv.html"
 SRC_URI="mirror://sourceforge/png-mng/${P}-jumbo-patches-${JUMBOV}.tar.gz
 	ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz
-	http://dev.gentoo.org/~ssuominen/${P}.png.bz2"
+	mirror://gentoo/${P}.png.bz2"
 
 LICENSE="xv"
 SLOT="0"
