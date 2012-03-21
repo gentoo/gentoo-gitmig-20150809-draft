@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/datovka/datovka-2.0.ebuild,v 1.1 2012/02/28 15:07:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/datovka/datovka-2.0.2.ebuild,v 1.1 2012/03/21 21:37:45 scarabeus Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DEPEND="
 	dev-python/reportlab
 	dev-python/sqlalchemy
 	media-fonts/dejavu
-	>=net-libs/dslib-1.7
+	>=net-libs/dslib-2.0
 "
 RDEPEND="${DEPEND}"
 
