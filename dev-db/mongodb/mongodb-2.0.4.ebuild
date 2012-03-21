@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.2.ebuild,v 1.4 2012/03/19 14:51:15 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.4.ebuild,v 1.1 2012/03/21 09:05:48 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -47,6 +47,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0-fix-scons.patch"
+	epatch "${FILESDIR}/${P}-fix-utils.patch"
 
 	# drop -Werror
 	sed -i -e '/Werror/d' SConstruct || die
@@ -58,6 +59,7 @@ src_prepare() {
 }
 
 src_compile() {
+	echo $LDFLAGS
 	escons ${scons_opts} all
 }
 
