@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.664 2012/03/20 15:15:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.665 2012/03/21 05:22:24 zmedico Exp $
+
+  21 Mar 2012; Zac Medico <zmedico@gentoo.org> udev-182.ebuild,
+  udev-9999.ebuild:
+  Block <udev-init-scripts-10 due to file collision with
+  /lib/udev/rules.d/40-gentoo.rules.
 
   20 Mar 2012; William Hubbs <williamh@gentoo.org> -udev-181.ebuild:
   remove old version
