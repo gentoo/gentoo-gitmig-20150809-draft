@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-9999.ebuild,v 1.4 2012/03/20 12:35:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-9999.ebuild,v 1.5 2012/03/21 19:51:58 williamh Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/udev-gentoo-scripts.git"
 
-[ "${PV}" = "9999" ] && vcs=git-2
-inherit $vcs
-unset vcs
+if [ "${PV}" = "9999" ]; then
+	inherit git-2
+fi
 
 DESCRIPTION="udev startup scripts for openrc"
 HOMEPAGE="http://www.gentoo.org"
