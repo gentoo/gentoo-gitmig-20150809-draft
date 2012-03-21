@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.79 2012/03/20 13:25:20 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.80 2012/03/21 02:12:53 mattm Exp $
+
+  21 Mar 2012; Matthew Marlowe <mattm@gentoo.org> zabbix-1.8.11.ebuild:
+  1.8.11 seems to no longer require the as-needed patch as all the automake
+  changes in the patch appear to be implemented in the release
 
   20 Mar 2012; Matthew Marlowe <mattm@gentoo.org> metadata.xml:
   Received patricks ok to remove him from maintainer list in metadata

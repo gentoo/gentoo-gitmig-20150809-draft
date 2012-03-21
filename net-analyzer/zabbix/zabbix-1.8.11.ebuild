@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.11.ebuild,v 1.1 2012/03/20 12:37:23 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.11.ebuild,v 1.2 2012/03/21 02:12:53 mattm Exp $
 
 EAPI="2"
 
@@ -46,7 +46,6 @@ DEPEND="${COMMON_DEPEND}
 use frontend && need_php_httpd
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.8.9-as-needed.patch"
 	eautoreconf
 }
 
