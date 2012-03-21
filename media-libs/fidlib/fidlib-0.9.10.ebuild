@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fidlib/fidlib-0.9.10.ebuild,v 1.2 2012/03/21 16:29:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fidlib/fidlib-0.9.10.ebuild,v 1.3 2012/03/21 16:47:26 radhermit Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ src_compile() {
 		-fPIC -shared fidlib.c -lm -o libfidlib.so.${PV:0:1}
 
 	# build command-line tool
-	doecho $(tc-getCC) ${CFLAGS} ${LDFLAGS} -L. firun.c -lm ./libfidlib.so.${PV:0:1} -o firun
+	doecho $(tc-getCC) ${CFLAGS} ${LDFLAGS} firun.c -lm ./libfidlib.so.${PV:0:1} -o firun
 }
 
 src_install() {
