@@ -1,0 +1,13 @@
+diff -urN rpm-4.9.1.2.old/rpm.am rpm-4.9.1.2/rpm.am
+--- rpm-4.9.1.2.old/rpm.am	2012-03-21 19:57:33.942448288 +0100
++++ rpm-4.9.1.2/rpm.am	2012-03-21 20:06:19.045419773 +0100
+@@ -1,7 +1,5 @@
+ # Internal binaries
+-## HACK: It probably should be $(libexecdir)/rpm or $(libdir)/rpm
+-rpmlibexecdir = $(prefix)/lib/rpm
++rpmlibexecdir = $(pkglibexecdir)
+ 
+ # Host independent config files
+-## HACK: it probably should be $(datadir)/rpm
+-rpmconfigdir = $(prefix)/lib/rpm
++rpmconfigdir = $(pkglibexecdir)
