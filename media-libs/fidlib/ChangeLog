@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fidlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fidlib/ChangeLog,v 1.1 2012/03/20 21:27:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fidlib/ChangeLog,v 1.2 2012/03/21 16:29:15 radhermit Exp $
+
+  21 Mar 2012; Tim Harder <radhermit@gentoo.org> fidlib-0.9.10.ebuild:
+  Link against newly built library (bug #409195 by Gavin Pryke).
 
 *fidlib-0.9.10 (20 Mar 2012)
 
