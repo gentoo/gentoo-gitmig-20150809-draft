@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/theseus
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/theseus/ChangeLog,v 1.1 2012/03/21 13:17:03 jlec Exp $
+
+*theseus-1.6.2 (21 Mar 2012)
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> +theseus-1.6.2.ebuild,
+  +metadata.xml:
+  New addition, written by me
+
