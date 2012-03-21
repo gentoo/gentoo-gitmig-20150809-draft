@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/simpy-2.3.ebuild,v 1.6 2012/02/28 21:26:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/simpy-2.3.ebuild,v 1.7 2012/03/21 17:55:26 jlec Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ IUSE="test doc"
 
 RDEPEND=""
 DEPEND="
-	doc? ( <=dev-python/sphinx-1.0.7 )
+	doc? ( dev-python/sphinx )
 	test? ( dev-python/pytest )"
 S="${WORKDIR}/${MY_P}"
 
