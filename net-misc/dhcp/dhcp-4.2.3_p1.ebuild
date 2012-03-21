@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.3_p1.ebuild,v 1.7 2012/01/01 15:03:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.3_p1.ebuild,v 1.8 2012/03/21 00:31:14 flameeyes Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x8
 IUSE="+client ipv6 kernel_linux ldap selinux +server ssl vim-syntax"
 
 DEPEND="selinux? ( sec-policy/selinux-dhcp )
-	kernel_linux? ( sys-apps/net-tools )
+	client? ( kernel_linux? ( sys-apps/net-tools ) )
 	ldap? (
 		net-nds/openldap
 		ssl? ( dev-libs/openssl )
