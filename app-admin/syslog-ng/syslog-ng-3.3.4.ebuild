@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.4.ebuild,v 1.2 2012/03/04 22:16:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.4.ebuild,v 1.3 2012/03/21 20:54:04 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -20,8 +20,9 @@ LIBS_DEPEND="
 	spoof-source? ( net-libs/libnet )
 	ssl? ( dev-libs/openssl )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	!static? ( >=dev-libs/eventlog-0.2.12 )
-	>=dev-libs/glib-2.10.1:2
+	!static? (
+		>=dev-libs/eventlog-0.2.12
+		>=dev-libs/glib-2.10.1:2 )
 	json? ( >=dev-libs/json-glib-0.12 )
 	caps? ( sys-libs/libcap )
 	sql? ( >=dev-db/libdbi-0.8.3 )"
@@ -32,7 +33,9 @@ RDEPEND="
 	)"
 DEPEND="${RDEPEND}
 	${LIBS_DEPEND}
-	static? ( >=dev-libs/eventlog-0.2.12[static-libs] )
+	static? (
+		>=dev-libs/eventlog-0.2.12[static-libs]
+		>=dev-libs/glib-2.10.1:2[static-libs] )
 	dev-util/pkgconfig
 	sys-devel/flex"
 

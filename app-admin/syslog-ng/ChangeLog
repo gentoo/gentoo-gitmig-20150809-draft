@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.321 2012/03/04 22:16:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.322 2012/03/21 20:54:04 mr_bones_ Exp $
+
+  21 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.3.4.ebuild:
+  adjust for newer glib static lib building (bug #409217)
 
   04 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.3.4.ebuild:
   work around underlinking with gold linker (bug #405381)
