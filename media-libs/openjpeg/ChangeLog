@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/openjpeg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.56 2011/11/13 11:24:33 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.57 2012/03/21 19:35:02 ssuominen Exp $
+
+*openjpeg-1.5.0 (21 Mar 2012)
+
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +openjpeg-1.5.0.ebuild,
+  +files/openjpeg-1.5.0-build.patch:
+  Version bump wrt #409203 by Agostino Sarubbo
 
   13 Nov 2011; Justin Lecher <jlec@gentoo.org> openjpeg-1.4-r1.ebuild:
   Corrected Slotting of media-libs/tiff and media-libs/libpng
