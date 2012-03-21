@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/live
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.143 2012/03/20 10:05:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.144 2012/03/21 12:01:58 ago Exp $
+
+  21 Mar 2012; Agostino Sarubbo <ago@gentoo.org> live-2012.01.07.ebuild:
+  Stable for amd64, wrt bug #408983
 
 *live-2012.02.29 (20 Mar 2012)
 
