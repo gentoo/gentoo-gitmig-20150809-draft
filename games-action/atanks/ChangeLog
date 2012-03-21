@@ -1,6 +1,14 @@
 # ChangeLog for games-action/atanks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.72 2012/01/10 20:26:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.73 2012/03/21 20:12:48 mr_bones_ Exp $
+
+*atanks-5.3 (21 Mar 2012)
+
+  21 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> -atanks-4.7.ebuild,
+  -files/atanks-4.7-build.patch, -atanks-5.1.ebuild,
+  -files/atanks-5.1-build.patch, files/atanks-5.2-build.patch,
+  +atanks-5.3.ebuild, +files/atanks-5.3-build.patch:
+  version bump
 
   10 Jan 2012; Brent Baude <ranger@gentoo.org> atanks-5.2.ebuild:
   Marking atanks-5.2 ppc for bug 390559

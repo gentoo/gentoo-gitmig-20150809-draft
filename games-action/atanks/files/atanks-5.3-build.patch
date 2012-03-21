@@ -1,6 +1,5 @@
-diff -ru atanks-4.6.orig/src/Makefile atanks-4.6/src/Makefile
---- atanks-4.6.orig/src/Makefile	2010-05-24 12:30:23.000000000 -0400
-+++ atanks-4.6/src/Makefile	2010-06-02 03:22:25.112064819 -0400
+--- atanks-5.3.orig/src/Makefile
++++ atanks-5.3/src/Makefile
 @@ -4,9 +4,6 @@
            missile.o perlin.o physobj.o player.o satellite.o sky.o tank.o team.o teleport.o virtobj.o \
            update.o network.o floattext.o land.o text.o client.o gameloop.o
@@ -18,7 +17,7 @@ diff -ru atanks-4.6.orig/src/Makefile atanks-4.6/src/Makefile
 -LDFLAGS =  `allegro-config --libs`
 +LDFLAGS +=  `allegro-config --libs` -lm -lpthread
  
--CFLAGS += -g -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
+-CFLAGS += -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
 +CXXFLAGS += -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
  
  SRCS  = $(MODULES:.o=.cpp)
