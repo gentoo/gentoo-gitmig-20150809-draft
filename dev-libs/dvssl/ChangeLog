@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dvssl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.19 2010/04/12 19:21:01 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.20 2012/03/21 10:21:29 ssuominen Exp $
+
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> dvssl-0.6.1.ebuild:
+  Revert back to ~arch for x86 because there is no reverse dependencies.
+  USE="static-libs" and empty dependency_libs to synchronize with current
+  behavior of dvutil and dvnet ebuild(s).
 
   12 Apr 2010; Markus Meier <maekke@gentoo.org> dvssl-0.6.1.ebuild:
   x86 stable, bug #309169
