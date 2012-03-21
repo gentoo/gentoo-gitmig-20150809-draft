@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/distorm64
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.7 2012/02/24 11:50:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.8 2012/03/21 22:17:29 ikelos Exp $
+
+  21 Mar 2012; Mike Auty <ikelos@gentoo.org> distorm64-3.1.ebuild:
+  Add in dependency on app-arch/unzip fixing bug 409123.
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> distorm64-3.1.ebuild:
   Restrict py 2.5

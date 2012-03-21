@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/distorm64-3.1.ebuild,v 1.3 2012/02/24 11:50:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/distorm64-3.1.ebuild,v 1.4 2012/03/21 22:17:29 ikelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,6 +15,9 @@ HOMEPAGE="http://www.ragestorm.net/distorm/"
 # This is not nice - hardcoding is bad
 SRC_URI="http://distorm.googlecode.com/files/distorm3-1.0.zip"
 S="${WORKDIR}/distorm3-1.0"
+
+DEPEND="app-arch/unzip"
+RDEPEND=""
 
 LICENSE="GPL-3"
 SLOT="0"
