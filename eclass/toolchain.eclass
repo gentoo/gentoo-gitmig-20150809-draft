@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.531 2012/03/15 20:18:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.532 2012/03/22 06:07:08 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -11,17 +11,15 @@ RESTRICT="strip" # cross-compilers need controlled stripping
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib fixheadtails pax-utils
 
-if [[ ${PV} == *9999* ]] ; then
+if [[ ${PV} == *_pre9999* ]] ; then
 	EGIT_REPO_URI="git://gcc.gnu.org/git/gcc.git"
 	# naming style:
-	# gcc-9999 -> master
 	# gcc-4.7.1_pre9999 -> gcc-4_7-branch
-	#  Note that we need the micro version in order for tc_version_is_at_least
-	#  to work.  gcc/BASE-VER also requires it.
-	if [[ ${PV} == *_pre9999* ]] ; then
-		EGIT_BRANCH="${PN}-${PV%.?_pre9999}-branch"
-		EGIT_BRANCH=${EGIT_BRANCH//./_}
-	fi
+	#  Note that the micro version is required or lots of stuff will break.
+	#  To checkout master set gcc_LIVE_BRANCH="master" in the ebuild before
+	#  inheriting this eclass.
+	EGIT_BRANCH="${PN}-${PV%.?_pre9999}-branch"
+	EGIT_BRANCH=${EGIT_BRANCH//./_}
 	inherit git-2
 fi
 
@@ -771,6 +769,8 @@ toolchain_src_unpack() {
 			# BASE-VER must be a three-digit version number
 			# followed by an optional -pre string
 			#   eg. 4.5.1, 4.6.2-pre20120213, 4.7.0-pre9999
+			# If BASE-VER differs from ${PV/_/-} then libraries get installed in
+			# the wrong directory.
 			echo ${PV/_/-} > "${S}"/gcc/BASE-VER
 		fi
 	fi
