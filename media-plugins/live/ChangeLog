@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/live
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.144 2012/03/21 12:01:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.145 2012/03/22 01:49:50 aballier Exp $
+
+  22 Mar 2012; Alexis Ballier <aballier@gentoo.org> -live-2012.02.29.ebuild:
+  remove latest version: it breaks api, abi hasnt been bumped, and mplayer
+  fails to build, bug #409043, we will readd a newer version when things will
+  be saner
 
   21 Mar 2012; Agostino Sarubbo <ago@gentoo.org> live-2012.01.07.ebuild:
   Stable for amd64, wrt bug #408983
