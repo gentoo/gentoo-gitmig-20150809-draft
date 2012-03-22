@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/spacenavd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.4 2012/02/20 01:29:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.5 2012/03/22 14:04:19 sping Exp $
+
+  22 Mar 2012; Sebastian Pipping <sping@gentoo.org> spacenavd-0.5-r2.ebuild,
+  +files/spacenavd-0.5-no-x11.patch:
+  Fix compilation for USE=-X (bug #409143) reported by Piotr Szymaniak, patch
+  by Anthoine Bourgeois
 
   20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Drop no-herd.
