@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.166 2012/03/18 14:08:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.167 2012/03/22 16:59:00 radhermit Exp $
+
+  22 Mar 2012; Tim Harder <radhermit@gentoo.org> no-multilib/package.use.mask:
+  Remove redundant use flag mask.
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Remove mask for USE="esd" because there is no such flag in tree anymore.
