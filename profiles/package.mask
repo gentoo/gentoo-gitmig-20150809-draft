@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13600 2012/03/20 21:34:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13601 2012/03/22 10:30:30 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Lars Wendler <polynomial-c@gentoo.org> (23 Mar 2012)
+# Upstream is dead. Masked for removal in 30 days.
+www-client/icecat
 
 # Samuli Suominen <ssuominen@gentoo.org> (18 Mar 2012)
 # The only working versions got declared obsolete by upstream

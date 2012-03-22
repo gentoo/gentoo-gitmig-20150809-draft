@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6339 2012/03/20 16:04:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6340 2012/03/22 10:30:30 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Mar 2012; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Masked www-client/icecat for removal.
 
   20 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
   Unmask testing dev-haskell/cabal-1.14 and packages coming with ghc-7.4 (but
