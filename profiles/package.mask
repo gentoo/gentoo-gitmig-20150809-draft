@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13601 2012/03/22 10:30:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13602 2012/03/22 10:38:05 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Lars Wendler <polynomial-c@gentoo.org> (23 Mar 2012)
+# Samuli Suominen <ssuominen@gentoo.org> (22 Mar 2012)
+# Fails to compile. No upstream. Blocking xulrunner removal.
+# See bugs 333895 and 403415. Removal in 30 days.
+www-client/galeon
+
+# Lars Wendler <polynomial-c@gentoo.org> (22 Mar 2012)
 # Upstream is dead. Masked for removal in 30 days.
 www-client/icecat
 
