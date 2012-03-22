@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/maradns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.47 2012/03/12 12:24:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.48 2012/03/22 17:20:04 matsuu Exp $
+
+*maradns-1.4.12 (22 Mar 2012)
+
+  22 Mar 2012; MATSUU Takuto <matsuu@gentoo.org> +maradns-1.4.12.ebuild:
+  Version bumped, bug #408883.
 
 *maradns-2.0.06 (12 Mar 2012)
 *maradns-1.4.11 (12 Mar 2012)
