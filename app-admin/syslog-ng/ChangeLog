@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.322 2012/03/21 20:54:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.323 2012/03/22 15:13:04 mr_bones_ Exp $
+
+  22 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.3.4.ebuild,
+  +files/syslog-ng-3.3.4-memleak.patch:
+  add upstream patch for memory leak caused by messages that couldn't be
+  flushed right away.
 
   21 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.3.4.ebuild:
   adjust for newer glib static lib building (bug #409217)
