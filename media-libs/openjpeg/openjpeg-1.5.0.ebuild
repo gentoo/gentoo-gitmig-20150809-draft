@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/openjpeg-1.5.0.ebuild,v 1.1 2012/03/21 19:35:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/openjpeg-1.5.0.ebuild,v 1.2 2012/03/22 04:37:50 ssuominen Exp $
 
 EAPI=4
 inherit cmake-utils multilib
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS CHANGES NEWS README THANKS )
 
 PATCHES=( "${FILESDIR}"/${P}-build.patch )
+
+RESTRICT="test" #409263
 
 src_configure() {
 	local mycmakeargs=(
