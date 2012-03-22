@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/torcs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.34 2011/05/30 01:57:46 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.35 2012/03/22 15:05:44 vapier Exp $
+
+  22 Mar 2012; Mike Frysinger <vapier@gentoo.org> torcs-1.3.1.ebuild,
+  files/torcs-1.3.1-libpng15.patch, +files/torcs-1.3.1-no-automake.patch:
+  Do not use automake macros #408473 by Piotr Szymaniak.
 
   30 May 2011; Michael Sterrett <mr_bones_@gentoo.org> torcs-1.3.1.ebuild,
   +files/torcs-1.3.1-libpng15.patch:

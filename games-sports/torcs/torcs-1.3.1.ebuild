@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.1.ebuild,v 1.9 2011/05/30 01:57:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.1.ebuild,v 1.10 2012/03/22 15:05:44 vapier Exp $
 
 EAPI=2
 inherit autotools eutils multilib games
@@ -29,7 +29,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-as-needed.patch \
-		"${FILESDIR}"/${P}-libpng15.patch
+		"${FILESDIR}"/${P}-libpng15.patch \
+		"${FILESDIR}"/${P}-no-automake.patch
 	eautoreconf
 	ecvs_clean
 }
