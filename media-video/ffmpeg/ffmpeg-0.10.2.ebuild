@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.10.2.ebuild,v 1.1 2012/03/18 13:54:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.10.2.ebuild,v 1.2 2012/03/22 11:33:27 aballier Exp $
 
 EAPI="4"
 
@@ -47,7 +47,7 @@ done
 FFTOOLS="aviocat cws2fws ffeval graph2dot ismindex pktdumper qt-faststart trasher"
 
 for i in ${FFTOOLS}; do
-	IUSE="${IUSE} +$i"
+	IUSE="${IUSE} +fftools_$i"
 done
 
 RDEPEND="
@@ -109,6 +109,7 @@ DEPEND="${RDEPEND}
 # faac is license-incompatible with ffmpeg
 REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
 	libv4l? ( v4l )
+	fftools_cws2fws? ( zlib )
 	test? ( encode zlib )"
 
 S=${WORKDIR}/${P/_/-}
@@ -256,7 +257,7 @@ src_compile() {
 	emake
 
 	for i in ${FFTOOLS} ; do
-		if use $i ; then
+		if use fftools_$i ; then
 			emake tools/$i
 		fi
 	done
@@ -269,7 +270,7 @@ src_install() {
 	dodoc -r doc/*
 
 	for i in ${FFTOOLS} ; do
-		if use $i ; then
+		if use fftools_$i ; then
 			dobin tools/$i
 		fi
 	done
