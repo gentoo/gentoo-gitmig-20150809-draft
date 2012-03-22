@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.1.9.ebuild,v 1.2 2012/02/23 16:38:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.1.9.ebuild,v 1.3 2012/03/22 11:30:06 johu Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}
 	doc? ( || ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] ) )
+	test? ( >=x11-libs/qt-test-4.5.0:4 )
 "
 RDEPEND="${COMMON_DEPEND}"
 
@@ -29,6 +30,8 @@ DOCS=(AUTHORS CHANGELOG GOALS README)
 
 # Some tests fail
 RESTRICT="test"
+
+PATCHES=( "${FILESDIR}/${P}-qt-test-optional.patch" )
 
 src_configure() {
 	mycmakeargs=(
