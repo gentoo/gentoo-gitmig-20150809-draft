@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.787 2012/03/20 10:43:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.788 2012/03/22 01:53:28 aballier Exp $
+
+  22 Mar 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild:
+  fix switcher build, patch from upstream based on the one from Richard
+  Grenville <pyxlcy@gmail.com> in bug #409001
 
   20 Mar 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild:
   allow stable zlib too, vlc will build its bundled minizip version with it
