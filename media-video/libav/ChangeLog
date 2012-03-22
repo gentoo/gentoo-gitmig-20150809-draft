@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.62 2012/03/22 00:55:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.63 2012/03/22 01:08:51 flameeyes Exp $
+
+  22 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> libav-0.7.4.ebuild,
+  libav-0.7.9999.ebuild, libav-0.8.1.ebuild, libav-0.8.9999.ebuild,
+  libav-0.8.ebuild, libav-9999.ebuild:
+  Complete rename on live ebuilds, and fix overwriting of the variable on all.
 
   22 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
   Use EXTRA_LIBAV_CONF instead of EXTRA_FFMPEG_CONF
