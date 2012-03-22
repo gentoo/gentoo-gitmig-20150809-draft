@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.2.4.ebuild,v 1.4 2011/07/18 07:37:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.2.4.ebuild,v 1.5 2012/03/22 13:27:46 sera Exp $
 
 EAPI=2
 
@@ -23,6 +23,7 @@ RDEPEND="virtual/libffi
 	>=virtual/jre-1.4"
 
 DEPEND="virtual/libffi
+	dev-util/pkgconfig
 	!test? ( >=virtual/jdk-1.4 )
 	test? (
 		dev-java/junit:0

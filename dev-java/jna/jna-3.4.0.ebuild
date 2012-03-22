@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.1 2011/12/25 14:23:57 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.2 2012/03/22 13:27:46 sera Exp $
 
 EAPI="4"
 
@@ -18,11 +18,13 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+awt +nio-buffers"
 S="${WORKDIR}/twall-jna-3e5b84f"
 
-RDEPEND="virtual/libffi
+COMMON_DEP="
+	virtual/libffi"
+RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.6"
-
-DEPEND="virtual/libffi
+DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.6
+	dev-util/pkgconfig
 	test? (
 		dev-java/junit:0
 		dev-java/ant-junit:0
