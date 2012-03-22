@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r8.ebuild,v 1.8 2012/02/25 15:06:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r8.ebuild,v 1.9 2012/03/22 12:33:36 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -12,13 +12,15 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
-IUSE="doc"
+IUSE="doc static-libs"
 
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 RESTRICT="test"
+
+DOCS="AUTHORS ChangeLog HISTORY README THANKS TODO"
 
 S=${WORKDIR}/${P/_}
 
@@ -30,24 +32,27 @@ src_prepare() {
 		"${FILESDIR}"/${P}-doxyinput.patch \
 		"${FILESDIR}"/${P}-unicode16.patch \
 		"${FILESDIR}"/${P}-gcc-4.3.patch \
-		"${FILESDIR}"/${P}-missing_nullpointer_check.patch
-
-	# Security fix for bug 189610.
-	epatch "${FILESDIR}"/${P}-security.patch
+		"${FILESDIR}"/${P}-missing_nullpointer_check.patch \
+		"${FILESDIR}"/${P}-security.patch
 
 	AT_M4DIR="${S}/m4" eautoreconf
 }
 
+src_configure() {
+	econf $(use_enable static-libs static)
+}
+
 src_compile() {
-	emake
+	default
 	if use doc; then
-		cd doc
+		pushd doc >/dev/null
 		doxygen Doxyfile || die
+		popd >/dev/null
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog HISTORY README THANKS TODO
+	default
+	use static-libs || rm -f "${ED}"/usr/lib*/lib*.la
 	use doc && dohtml -r doc
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.79 2012/02/25 15:07:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.80 2012/03/22 12:33:36 ssuominen Exp $
+
+  22 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> id3lib-3.8.3-r8.ebuild:
+  USE="static-libs" and remove libid3.la when it's disabled.
 
   25 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -id3lib-3.8.3-r7.ebuild:
   old

@@ -1,6 +1,7 @@
-diff -ur id3lib-3.8.3.orig/src/tag_file.cpp id3lib-3.8.3/src/tag_file.cpp
---- id3lib-3.8.3.orig/src/tag_file.cpp	2003-03-02 02:23:00.000000000 +0200
-+++ id3lib-3.8.3/src/tag_file.cpp	2007-08-20 19:40:16.000000000 +0300
+http://bugs.gentoo.org/189610
+
+--- src/tag_file.cpp
++++ src/tag_file.cpp
 @@ -242,8 +242,8 @@
      strcpy(sTempFile, filename.c_str());
      strcat(sTempFile, sTmpSuffix.c_str());
