@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/libehca
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libehca/ChangeLog,v 1.2 2011/07/02 20:30:16 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libehca/ChangeLog,v 1.3 2012/03/22 17:08:43 alexxy Exp $
+
+  22 Mar 2012; Alexey Shvetsov <alexxy@gentoo.org> libehca-1.2.2.ebuild:
+  [sys-infiniband/libehca] Drop duplicated keywords line bug #409337
 
   02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> libehca-1.2.2.ebuild:
   Add ~amd64-linux keywrod
