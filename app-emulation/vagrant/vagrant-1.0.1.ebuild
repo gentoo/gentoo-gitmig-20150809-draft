@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.0.1.ebuild,v 1.1 2012/03/21 10:05:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.0.1.ebuild,v 1.2 2012/03/22 10:46:20 radhermit Exp $
 
 EAPI="4"
 USE_RUBY="ruby18 ruby19"
@@ -16,14 +16,14 @@ HOMEPAGE="http://vagrantup.com/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE="test"
 
 # Missing ebuild for contest
 RESTRICT="test"
 
 RDEPEND="${RDEPEND}
-	|| ( app-emulation/virtualbox app-emulation/virtualbox-bin )"
+	!x64-macos? ( || ( app-emulation/virtualbox app-emulation/virtualbox-bin ) )"
 
 ruby_add_rdepend "
 	~dev-ruby/archive-tar-minitar-0.5.2
@@ -42,13 +42,23 @@ ruby_add_bdepend "
 "
 
 all_ruby_prepare() {
-	# Remove bundler support
+	# remove bundler support
 	sed -i -e '/[Bb]undler/d' Rakefile || die
 	rm Gemfile || die
 
-	# Loosen unslotted dependencies
+	# loosen unslotted dependencies
 	sed -i -e '/json\|net-ssh/s/~>/>=/' ${PN}.gemspec || die
 
-	# Remove a runtime dependency that we can't satisfy
+	# avoid calling git
 	sed -i -e '/git ls-files/d' ${PN}.gemspec || die
+}
+
+pkg_postinst() {
+	if use x64-macos ; then
+		ewarn
+		ewarn "For Mac OS X prefixes, you must install the virtualbox"
+		ewarn "package specifically for OS X which can be found at:"
+		ewarn "https://www.virtualbox.org/wiki/Downloads"
+		ewarn
+	fi
 }
