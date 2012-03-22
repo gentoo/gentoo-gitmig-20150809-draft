@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.0.2.ebuild,v 1.2 2012/02/23 17:04:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.1.0.ebuild,v 1.1 2012/03/22 03:45:19 ottxor Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit autotools-utils savedconfig
 DESCRIPTION="Extensible Simulation Package for Research on Soft matter"
 HOMEPAGE="http://www.espressomd.org"
 
-if [ "${PV%9999}" != "${PV}" ]; then
+if [[ ${PV} = 9999 ]]; then
 	EGIT_REPO_URI="git://git.savannah.nongnu.org/espressomd.git"
 	EGIT_BRANCH="master"
 	inherit git-2
@@ -33,8 +33,9 @@ RDEPEND="
 	X? ( x11-libs/libX11 )"
 
 DEPEND="${RDEPEND}
+	dev-lang/python
 	doc? (
-		|| ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] )
+		app-doc/doxygen[-nodot]
 		virtual/latex-base )"
 
 DOCS=( AUTHORS NEWS README ChangeLog )
@@ -57,10 +58,13 @@ src_configure() {
 
 src_compile() {
 	autotools-utils_src_compile
-	use doc && autotools-utils_src_compile doc
+	use doc && autotools-utils_src_compile ug doxygen tutorials
+	[[ ${PV} = 9999 ]] && use doc && autotools-utils_src_compile dg
 }
 
 src_install() {
+	local i
+
 	autotools-utils_src_install
 
 	insinto /usr/share/${PN}
@@ -69,11 +73,13 @@ src_install() {
 	save_config ${AUTOTOOLS_BUILD_DIR}/src/myconfig-final.h
 
 	if use doc; then
-		local where="."
-		[ "${PV%9999}" != "${PV}" ] && where="${AUTOTOOLS_BUILD_DIR}"
-		newdoc ${where}/doc/ug/ug.pdf user_guide.pdf
-		dohtml -r ${AUTOTOOLS_BUILD_DIR}/doc/dg/html/*
-		newdoc ${where}/doc/tutorials/tut2/tut2.pdf tutorial.pdf
+		[[ ${PV} = 9999 ]] && \
+			newdoc ${AUTOTOOLS_BUILD_DIR}/doc/dg/dg.pdf developer_guide.pdf
+		newdoc ${AUTOTOOLS_BUILD_DIR}/doc/ug/ug.pdf user_guide.pdf
+		dohtml -r ${AUTOTOOLS_BUILD_DIR}/doc/doxygen/html/*
+		for i in ${AUTOTOOLS_BUILD_DIR}/doc/tutorials/*/[0-9]*.pdf; do
+			newdoc ${i} tutorial_${i##*/}
+		done
 	fi
 
 	if use examples; then
