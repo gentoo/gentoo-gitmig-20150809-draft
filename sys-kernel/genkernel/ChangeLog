@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.292 2012/03/19 18:53:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.293 2012/03/22 03:16:35 sping Exp $
+
+*genkernel-3.4.26 (22 Mar 2012)
+
+  22 Mar 2012; Sebastian Pipping <sping@gentoo.org> +genkernel-3.4.26.ebuild:
+  Bump to 3.4.26
 
   19 Mar 2012; Raúl Porcel <armin76@gentoo.org> genkernel-3.4.20.ebuild:
   alpha/ia64/s390/sparc stable wrt #400539
