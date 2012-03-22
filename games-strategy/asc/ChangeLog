@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/asc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.36 2011/02/28 18:10:28 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.37 2012/03/22 08:12:15 tupone Exp $
+
+  22 Mar 2012; Tupone Alfredo <tupone@gentoo.org> asc-2.4.0.0.ebuild:
+  Need zip to build asc. Bug #409113 by Piotr Szymaniak
 
   28 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> asc-2.4.0.0.ebuild:
   Use virtual/jpeg.
