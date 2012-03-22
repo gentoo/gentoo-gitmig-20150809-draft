@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4-r2.ebuild,v 1.1 2012/03/21 10:20:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4-r3.ebuild,v 1.1 2012/03/22 11:35:53 scarabeus Exp $
 
 EAPI=4
 
@@ -43,7 +43,6 @@ src_configure() {
 		-DDISABLE_MULTITHREADING=OFF
 		-DBUILD_CONTRIBS_LIB=ON
 		"-DLIB_DESTINATION=${EPREFIX}/usr/$(get_libdir)"
-		"-DLUCENE_SYS_INCLUDES=${EPREFIX}/usr/$(get_libdir)"
 		$(cmake-utils_use_enable debug)
 		$(cmake-utils_use_enable doc CLDOCS)
 		$(cmake-utils_use_build static-libs STATIC_LIBRARIES)

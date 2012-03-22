@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/clucene
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.43 2011/12/08 12:41:18 johu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.44 2012/03/22 11:35:53 scarabeus Exp $
+
+*clucene-2.3.3.4-r3 (22 Mar 2012)
+
+  22 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +clucene-2.3.3.4-r3.ebuild,
+  -clucene-2.3.3.4-r2.ebuild, files/clucene-2.3.3.4-pkgconfig.patch:
+  Do not put includes into libdir. Fixes the bug#409205. Altho it is caused
+  because the dovecot does not use the .pc file.
 
 *clucene-2.3.3.4-r1 (08 Dec 2011)
 
