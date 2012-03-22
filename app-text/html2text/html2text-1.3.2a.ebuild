@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/html2text-1.3.2a.ebuild,v 1.1 2012/03/22 16:41:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/html2text-1.3.2a.ebuild,v 1.2 2012/03/22 16:57:35 floppym Exp $
 
 EAPI=4
 
@@ -8,7 +8,8 @@ inherit eutils toolchain-funcs
 
 DESCRIPTION="A HTML to text converter"
 HOMEPAGE="http://www.mbayer.de/html2text/"
-SRC_URI="http://www.mbayer.de/html2text/downloads/${P}.tar.gz"
+SRC_URI="http://www.mbayer.de/html2text/downloads/${P}.tar.gz
+	http://www.mbayer.de/html2text/downloads/patch-utf8-${P}.diff"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,9 +19,14 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
+src_unpack() {
+	unpack ${P}.tar.gz
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-compiler.patch
 	epatch "${FILESDIR}"/${P}-urlistream-get.patch
+	epatch "${DISTDIR}"/patch-utf8-${P}.diff
 }
 
 src_configure() {
