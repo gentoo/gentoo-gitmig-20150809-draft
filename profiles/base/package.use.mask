@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.322 2012/03/20 08:51:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.323 2012/03/22 16:53:32 radhermit Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Tim Harder <radhermit@gentoo.org> (22 Mar 2012)
+# Masked since skype isn't stable
+net-im/bitlbee skype
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Mar 2012)
 # This is for udev-acl. Unmasked in default/linux/package.use.mask.
