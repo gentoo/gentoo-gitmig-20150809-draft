@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/numactl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.20 2011/12/07 21:25:40 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.21 2012/03/22 19:13:11 vapier Exp $
+
+  22 Mar 2012; Mike Frysinger <vapier@gentoo.org> numactl-2.0.7-r1.ebuild:
+  Fix libdir handling and update to EAPI=4 #379849 by Agostino Sarubbo.
 
   07 Dec 2011; Kacper Kowalik <xarthisius@gentoo.org> numactl-2.0.7-r1.ebuild:
   Marked ~ppc64 wrt #381313
