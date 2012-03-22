@@ -1,15 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.2.0-r1.ebuild,v 1.6 2012/01/02 13:03:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.2.0-r1.ebuild,v 1.7 2012/03/22 06:45:34 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
-inherit xfconf
+inherit multilib xfconf
 
-DESCRIPTION="Places menu plug-in for panel, like GNOME's"
+DEBIAN_REVISION=3
+
+DESCRIPTION="A panel plug-in to provide quick access to files, folders and removable media"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-places-plugin"
-SRC_URI="mirror://xfce/src/panel-plugins/${PN}/1.2/${P}.tar.bz2
-	mirror://debian/pool/main/x/${PN}/${PN}_${PV}-3.debian.tar.gz"
+SRC_URI="mirror://xfce/src/panel-plugins/${PN}/${PV%.*}/${P}.tar.bz2
+	mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}-${DEBIAN_REVISION}.debian.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,6 +31,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=(
+		--libexecdir="${EPREFIX}"/usr/$(get_libdir)
 		$(use_enable libnotify notifications)
 		$(xfconf_use_debug)
 		)
