@@ -1,0 +1,10 @@
+# ChangeLog for www-misc/urlwatch
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/ChangeLog,v 1.1 2012/03/22 19:02:31 radhermit Exp $
+
+*urlwatch-1.14 (22 Mar 2012)
+
+  22 Mar 2012; Tim Harder <radhermit@gentoo.org> +urlwatch-1.14.ebuild,
+  +files/urlwatch-xmpp.patch, +metadata.xml:
+  Initial import. Ebuild by me.
+
