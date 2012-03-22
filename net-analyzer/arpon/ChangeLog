@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/arpon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.9 2011/10/04 17:19:13 nativemad Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.10 2012/03/22 21:03:44 hwoarang Exp $
+
+*arpon-2.7-r1 (22 Mar 2012)
+
+  22 Mar 2012; Markos Chandras <hwoarang@gentoo.org> +arpon-2.7-r1.ebuild,
+  +files/arpon.confd, +files/arpon.initd:
+  revbump to add init script. Thanks to Tobias Wallura
+  <Tobias.Wallura@gmail.com>. Bug #387193
 
   04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> arpon-2.7.ebuild:
   x86 stable, bug 384913
