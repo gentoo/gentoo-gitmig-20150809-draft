@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/sleepyhead
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sleepyhead/ChangeLog,v 1.1 2012/03/19 22:39:03 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sleepyhead/ChangeLog,v 1.2 2012/03/22 13:27:26 rich0 Exp $
+
+  22 Mar 2012; Richard Freeman <rich0@gentoo.org> sleepyhead-0.9.2.2.ebuild,
+  +files/zlib-of.patch:
+  fix 409255 - patch for now until upstream direction is clear
 
 *sleepyhead-0.9.2.2 (19 Mar 2012)
 
