@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpxy/udpxy-1.0.21.2-r1.ebuild,v 1.1 2012/03/22 11:12:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpxy/udpxy-1.0.21.2-r1.ebuild,v 1.2 2012/03/22 11:14:46 pva Exp $
 
 EAPI="4"
 
@@ -34,6 +34,6 @@ src_install() {
 	dosym udpxy /usr/bin/udpxrec
 
 	dodoc README CHANGES
-	newinitd ${FILESDIR}/${PN}.initd ${PN}
-	newconfd ${FILESDIR}/${PN}.confd ${PN}
+	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 }
