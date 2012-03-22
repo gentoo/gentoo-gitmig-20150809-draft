@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/liquidwar
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.26 2011/10/14 06:15:38 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.27 2012/03/22 01:20:56 mr_bones_ Exp $
+
+  22 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> liquidwar-5.6.4.ebuild:
+  add X use dep for allegro (bug #409115)
 
   14 Oct 2011; Mike Frysinger <vapier@gentoo.org> liquidwar-5.6.4.ebuild:
   Use a SLOT dep instead of "<" for allegro.
