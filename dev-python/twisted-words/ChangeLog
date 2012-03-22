@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.71 2012/01/02 01:03:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.72 2012/03/22 07:10:05 patrick Exp $
+
+*twisted-words-12.0.0 (22 Mar 2012)
+
+  22 Mar 2012; Patrick Lauer <patrick@gentoo.org> +twisted-words-12.0.0.ebuild:
+  Bump
 
   02 Jan 2012; Mike Gilbert <floppym@gentoo.org> twisted-words-11.0.0.ebuild,
   twisted-words-11.1.0.ebuild:

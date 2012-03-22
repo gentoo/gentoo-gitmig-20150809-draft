@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.79 2012/02/25 02:00:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.80 2012/03/22 07:04:01 patrick Exp $
+
+*twisted-conch-12.0.0 (22 Mar 2012)
+
+  22 Mar 2012; Patrick Lauer <patrick@gentoo.org> +twisted-conch-12.0.0.ebuild:
+  Bump
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> twisted-conch-11.1.0.ebuild:
   Fixing accidental double asterisk

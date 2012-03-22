@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-names
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.65 2011/12/27 07:09:41 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.66 2012/03/22 07:06:12 patrick Exp $
+
+*twisted-names-12.0.0 (22 Mar 2012)
+
+  22 Mar 2012; Patrick Lauer <patrick@gentoo.org> +twisted-names-12.0.0.ebuild:
+  Bump
 
 *twisted-names-11.1.0 (27 Dec 2011)
 
