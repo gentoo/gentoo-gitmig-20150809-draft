@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.90 2012/03/22 15:42:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.91 2012/03/22 17:11:41 williamh Exp $
 
 EAPI=4
 
@@ -146,23 +146,23 @@ src_configure()
 {
 	filter-flags -fprefetch-loop-arrays
 	econf \
-		--with-rootprefix=/ \
-		--libdir=/usr/$(get_libdir) \
 		--libexecdir=/lib \
+		--libdir=/usr/$(get_libdir) \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_enable static-libs static) \
-		$(use_with selinux) \
+		$(use_enable doc gtk-doc) \
 		$(use_enable debug) \
-		$(use_enable rule_generator) \
-		--with-pci-ids-path=/usr/share/misc/pci.ids \
-		--with-usb-ids-path=/usr/share/misc/usb.ids \
 		$(use_enable gudev) \
 		$(use_enable introspection) \
 		$(use_enable keymap) \
+		$(use_enable rule_generator) \
 		$(use_enable floppy) \
-		$(use_enable doc gtk-doc) \
-		"$(systemd_with_unitdir)" \
-		--docdir=/usr/share/doc/${PF} \
-		--with-html-dir=/usr/share/doc/${PF}/html
+		--with-html-dir=/usr/share/doc/${PF}/html \
+		--with-rootprefix=/ \
+		$(use_with selinux) \
+		--with-usb-ids-path=/usr/share/misc/usb.ids \
+		--with-pci-ids-path=/usr/share/misc/pci.ids \
+		"$(systemd_with_unitdir)"
 }
 
 src_install()
