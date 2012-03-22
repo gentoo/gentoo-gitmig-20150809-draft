@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.96 2012/03/21 18:22:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.97 2012/03/22 13:34:07 ago Exp $
+
+  22 Mar 2012; Agostino Sarubbo <ago@gentoo.org> firefox-bin-10.0.3.ebuild:
+  Stable for amd64, wrt bug #408161
 
 *firefox-bin-10.0.3 (21 Mar 2012)
 
