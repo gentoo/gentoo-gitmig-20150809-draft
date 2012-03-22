@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.63 2012/03/22 01:08:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.64 2012/03/22 01:32:51 flameeyes Exp $
+
+  22 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> libav-0.6.5.ebuild,
+  libav-0.7.4.ebuild, libav-0.8.1.ebuild, libav-0.8.ebuild:
+  Rename the variable on all ebuilds, since it could never have worked before
+  anyway.
 
   22 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> libav-0.7.4.ebuild,
   libav-0.7.9999.ebuild, libav-0.8.1.ebuild, libav-0.8.9999.ebuild,

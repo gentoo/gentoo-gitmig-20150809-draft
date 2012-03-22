@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.ebuild,v 1.10 2012/03/22 01:08:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.ebuild,v 1.11 2012/03/22 01:32:51 flameeyes Exp $
 
 EAPI=4
 
@@ -106,7 +106,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="${EXTRA_FFMPEG_CONF}"
+	local myconf="${EXTRA_LIBAV_CONF}"
 	local uses i
 
 	myconf+="
