@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.95 2012/01/22 11:46:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.96 2012/03/22 11:03:18 ssuominen Exp $
+
+  22 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> monodevelop-2.6.ebuild,
+  monodevelop-2.8.2.ebuild, monodevelop-2.8.5.1.ebuild:
+  Remove net-libs/xulrunner from || () wrt #403415
 
 *monodevelop-2.8.5.1 (22 Jan 2012)
 
