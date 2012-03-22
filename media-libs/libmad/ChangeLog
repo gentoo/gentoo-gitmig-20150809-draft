@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.64 2012/03/15 17:33:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.65 2012/03/22 12:11:02 jer Exp $
+
+  22 Mar 2012; Jeroen Roovers <jer@gentoo.org> libmad-0.15.1b-r7.ebuild:
+  Stable for HPPA (bug #408383).
 
   15 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> libmad-0.15.1b-r7.ebuild:
   Slightly polish the ebuild as it is supposed to be eapi4 so it does not need
