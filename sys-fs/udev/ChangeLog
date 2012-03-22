@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.665 2012/03/21 05:22:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.666 2012/03/22 05:59:38 ssuominen Exp $
+
+  22 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> udev-182.ebuild,
+  udev-9999.ebuild:
+  Move gtk-doc documentation to /usr/share/doc/${PF}/html with symlink(s) back
+  to /usr/share/gtk-doc/html wrt #312373
 
   21 Mar 2012; Zac Medico <zmedico@gentoo.org> udev-182.ebuild,
   udev-9999.ebuild:
