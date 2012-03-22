@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.1.2.ebuild,v 1.6 2012/03/18 12:12:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.1.2.ebuild,v 1.7 2012/03/22 15:07:05 scarabeus Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DEV_URI="
 EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
-BRANDING="${PN}-branding-gentoo-0.3.tar.xz"
+BRANDING="${PN}-branding-gentoo-0.4.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
