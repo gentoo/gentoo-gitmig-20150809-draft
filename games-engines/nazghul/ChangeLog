@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/nazghul
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/ChangeLog,v 1.4 2010/06/27 18:56:23 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/ChangeLog,v 1.5 2012/03/22 01:50:37 mr_bones_ Exp $
+
+*nazghul-0.7.1 (22 Mar 2012)
+
+  22 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> +nazghul-0.7.1.ebuild:
+  version bump
 
   27 Jun 2010; Pacho Ramos <pacho@gentoo.org> nazghul-0.7.0.ebuild:
   amd64 stable, bug 316437
