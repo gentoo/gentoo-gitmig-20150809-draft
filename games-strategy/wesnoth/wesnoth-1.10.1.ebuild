@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.8.5.ebuild,v 1.5 2011/10/04 01:27:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.1.ebuild,v 1.1 2012/03/22 00:35:59 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils multilib toolchain-funcs flag-o-matic games
@@ -11,8 +11,8 @@ SRC_URI="mirror://sourceforge/wesnoth/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
-IUSE="dbus dedicated doc nls server tinygui"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="dbus dedicated doc nls server"
 
 RDEPEND=">=media-libs/libsdl-1.2.7[video,X]
 	media-libs/sdl-net
@@ -22,7 +22,7 @@ RDEPEND=">=media-libs/libsdl-1.2.7[video,X]
 	!dedicated? (
 		dbus? ( sys-apps/dbus )
 	)
-	>=dev-libs/boost-1.35
+	>=dev-libs/boost-1.36
 	sys-libs/zlib
 	x11-libs/pango
 	dev-lang/lua
@@ -30,14 +30,6 @@ RDEPEND=">=media-libs/libsdl-1.2.7[video,X]
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	!dedicated? (
-		tinygui? (
-			|| (
-				media-gfx/imagemagick[jpeg,png]
-				media-gfx/graphicsmagick[imagemagick,jpeg,png]
-			)
-		)
-	)
 	sys-devel/gettext"
 
 src_prepare() {
@@ -57,7 +49,7 @@ src_prepare() {
 			|| die "sed failed"
 	fi
 	# how do I hate boost? Let me count the ways...
-	local boost_ver=$(best_version ">=dev-libs/boost-1.35")
+	local boost_ver=$(best_version ">=dev-libs/boost-1.36")
 
 	boost_ver=${boost_ver/*boost-/}
 	boost_ver=${boost_ver%.*}
@@ -97,12 +89,10 @@ src_configure() {
 		$(cmake-utils_use_enable !dedicated ENABLE_DESKTOP_ENTRY)
 		$(cmake-utils_use_enable nls NLS)
 		$(cmake-utils_use_enable dbus NOTIFICATIONS)
-		"-DGUI=$(use tinygui && echo tiny || echo normal)"
 		"-DCMAKE_VERBOSE_MAKEFILE=TRUE"
 		"-DENABLE_FRIBIDI=FALSE"
 		"-DENABLE_STRICT_COMPILATION=FALSE"
 		"-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX}"
-		"-DPREFERENCES_DIR=.wesnoth"
 		"-DDATAROOTDIR=${GAMES_DATADIR}"
 		"-DBINDIR=${GAMES_BINDIR}"
 		"-DICONDIR=/usr/share/pixmaps"
