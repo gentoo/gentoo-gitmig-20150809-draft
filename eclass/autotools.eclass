@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.129 2012/03/22 15:14:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.130 2012/03/22 19:16:22 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -107,26 +107,12 @@ unset _automake_atom _autoconf_atom
 # Additional options to pass to automake during
 # eautoreconf call.
 
-# @ECLASS-VARIABLE: AT_NOEACLOCAL
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Don't run eaclocal command if set to 'yes',
-# useful when eaclocal needs to be ran with
-# particular options
-
-# @ECLASS-VARIABLE: AT_NOEAUTOCONF
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Don't run eautoconf command if set to 'yes',
-# useful when eautoconf needs to be ran with
-# particular options
-
 # @ECLASS-VARIABLE: AT_NOEAUTOMAKE
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# Don't run eautomake command if set to 'yes',
-# useful when eautomake needs to be ran with
-# particular options
+# Don't run eautomake command if set to 'yes'; only used to workaround
+# broken packages.  Generally you should, instead, fix the package to
+# not call AM_INIT_AUTOMAKE if it doesn't actually use automake.
 
 # @ECLASS-VARIABLE: AT_NOELIBTOOLIZE
 # @DEFAULT_UNSET
@@ -172,19 +158,17 @@ eautoreconf() {
 
 	auxdir=$(autotools_get_auxdir)
 
-	if  [[ ${AT_NOEACLOCAL} != "yes" ]]; then
-		einfo "Running eautoreconf in '${PWD}' ..."
-		[[ -n ${auxdir} ]] && mkdir -p ${auxdir}
-		eaclocal
-	fi
+	einfo "Running eautoreconf in '${PWD}' ..."
+	[[ -n ${auxdir} ]] && mkdir -p ${auxdir}
+	eaclocal
 	[[ ${CHOST} == *-darwin* ]] && g=g
 	if ${LIBTOOLIZE:-${g}libtoolize} -n --install >& /dev/null ; then
 		_elibtoolize --copy --force --install
 	else
 		_elibtoolize --copy --force
 	fi
-	[[ ${AT_NOEAUTOCONF} != "yes" ]] && eautoconf
-	[[ ${AT_NOEAUTOHEADER} != "yes" ]] && eautoheader
+	eautoconf
+	eautoheader
 	[[ ${AT_NOEAUTOMAKE} != "yes" ]] && FROM_EAUTORECONF="yes" eautomake ${AM_OPTS}
 
 	[[ ${AT_NOELIBTOOLIZE} == "yes" ]] && return 0
