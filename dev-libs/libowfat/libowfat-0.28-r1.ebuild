@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.7 2012/01/31 22:10:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.8 2012/03/22 05:52:13 patrick Exp $
 
 EAPI=2
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="reimplement libdjb - excellent libraries from Dan Bernstein."
 SRC_URI="http://dl.fefe.de/${P}.tar.bz2"
@@ -29,16 +29,17 @@ src_prepare() {
 		-e "s:^prefix.*:prefix=/usr:" \
 		-e "s:^INCLUDEDIR.*:INCLUDEDIR=\${prefix}/include/libowfat:" \
 		-i GNUmakefile || die "sed failed"
+	epatch "${FILESDIR}/libowfat-0.28-GNUmakefile.patch"
 }
 
 src_compile() {
-	emake \
+	emake -j1 \
 		CC=$(tc-getCC) \
 		$( use diet || echo 'DIET=' )
 }
 
 src_install () {
-	emake \
+	emake -j1 \
 		LIBDIR="${D}/usr/lib" \
 		MAN3DIR="${D}/usr/share/man/man3" \
 		INCLUDEDIR="${D}/usr/include/libowfat" \
