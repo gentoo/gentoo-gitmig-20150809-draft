@@ -4,12 +4,6 @@
     <maintainer>
 		<email>nimiux@gentoo.org</email>
 		<name>Chema Alonso</name>
-		<description>Proxy-Maintainer. Assign him the bugs.</description>
-	</maintainer>
-	<maintainer>
-		<email>c1pher@gentoo.org</email>
-		<name>Dane Smith</name>
-		<description>Proxy. CC on bugs</description>
 	</maintainer>
     <maintainer>
         <email>brain@brainbox.cc</email>
