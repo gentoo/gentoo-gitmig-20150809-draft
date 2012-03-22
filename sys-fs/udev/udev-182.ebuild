@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182.ebuild,v 1.6 2012/03/22 05:59:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182.ebuild,v 1.7 2012/03/22 15:25:22 williamh Exp $
 
 EAPI=4
 
@@ -64,7 +64,6 @@ RDEPEND="${COMMON_DEPEND}
 		)
 	openrc? ( >=sys-fs/udev-init-scripts-10
 		!<sys-apps/openrc-0.9.9 )
-	!<sys-fs/udev-init-scripts-10
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
