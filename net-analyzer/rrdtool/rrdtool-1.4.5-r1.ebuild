@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.5-r1.ebuild,v 1.8 2012/01/31 19:33:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.5-r1.ebuild,v 1.9 2012/03/22 03:24:47 jer Exp $
 
 EAPI="3"
 
@@ -110,17 +110,17 @@ src_install() {
 pkg_postinst() {
 	use python && distutils_pkg_postinst
 
-	ewarn "rrdtool dump 1.3 does emit completely legal xml. Basically this means that"
-	ewarn "it contains an xml header and a DOCTYPE definition. Unfortunately this"
-	ewarn "causes older versions of rrdtool restore to be unhappy."
+	ewarn "Since version 1.3, rrdtool dump emits completely legal xml. Basically this"
+	ewarn "means that it contains an xml header and a DOCTYPE definition. Unfortunately"
+	ewarn "this causes older versions of rrdtool restore to be unhappy."
 	ewarn
 	ewarn "To restore a new dump with an old rrdtool restore version, either remove"
 	ewarn "the xml header and the doctype by hand (both on the first line of the dump)"
 	ewarn "or use rrdtool dump --no-header."
 	ewarn
-	ewarn "Note: rrdtool-1.3.x doesn't have any default font bundled. Thus if you've"
-	ewarn "upgraded from rrdtool-1.2.x and don't have any font installed to make"
-	ewarn "lables visible, please, install some font, e.g. media-fonts/dejavu."
+	ewarn ">=net-analyzer/rrdtool-1.3 does not have any default font bundled. Thus if"
+	ewarn ">you've upgraded from rrdtool-1.2.x and don't have any font installed to make"
+	ewarn ">lables visible, please, install some font, e.g. media-fonts/dejavu."
 }
 
 pkg_postrm() {
