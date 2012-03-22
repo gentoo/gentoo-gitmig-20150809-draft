@@ -1,59 +1,49 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.8 2012/03/22 21:56:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.13.ebuild,v 1.1 2012/03/22 21:56:14 hwoarang Exp $
 
 EAPI="4"
-ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/griffith/trunk"
 
-inherit eutils python multilib subversion
+PYTHON_DEPEND="2"
+
+inherit eutils versionator python multilib
 
 ARTWORK_PV="0.9.4"
 
 DESCRIPTION="Movie collection manager"
 HOMEPAGE="http://griffith.berlios.de/"
-SRC_URI="mirror://berlios/griffith/${PN}-extra-artwork-${ARTWORK_PV}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz
+	mirror://berlios/griffith/${PN}-extra-artwork-${ARTWORK_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="dev-python/imaging
-	dev-util/glade:3
+	gnome-base/libglade
 	dev-python/pyxml
 	>=dev-python/pygtk-2.6.1:2
 	dev-python/pygobject:2
 	dev-python/pysqlite:2
 	>=dev-python/sqlalchemy-0.5.2
-	>=dev-python/reportlab-1.19
-	>=dev-python/sqlalchemy-0.4.6"
+	>=dev-python/reportlab-1.19"
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook2X )"
 
 pkg_setup() {
-	ewarn "This version is _not_ compatible with databases created with previous versions"
-	ewarn "of griffith and the database upgrade is currently (16 Aug 2008) broken."
-	ewarn "Please move your ~/.griffith away before starting."
-}
-
-src_unpack() {
-	subversion_src_unpack
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
 	sed -i \
 		-e 's#/pl/#/pl.UTF-8/#' \
-		docs/pl/Makefile || die "sed failed"
+		"${S}"/docs/pl/Makefile || die "sed failed"
 
 	sed -i \
 		-e 's/ISO-8859-1/UTF-8/' \
-		lib/gconsole.py || die "sed failed"
-
-	sed -i \
-		-e "s|locations\['lib'\], '..')|locations\['lib'\], '..', '..', 'share', 'griffith')|" \
-		lib/initialize.py || die "sed failed"
-
-	# this patch has to go upstream
-	epatch "${FILESDIR}"/fix_lib_path.patch
+		"${S}"/lib/gconsole.py || die "sed failed"
+	epatch "${FILESDIR}/0.10-fix_lib_path.patch"
 }
 
 src_compile() {
@@ -64,7 +54,6 @@ src_compile() {
 src_install() {
 	use doc || { sed -i -e '/docs/d' Makefile || die ; }
 
-	python_version
 	emake \
 		LIBDIR="${D}/usr/$(get_libdir)/griffith" \
 		DESTDIR="${D}" DOC2MAN=docbook2man.pl install
