@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>base-system</herd>
 	<maintainer>
 		<email>chutzpah@gentoo.org</email>
 		<name>Patrick McLean</name>
+	</maintainer>
+	<maintainer>
+		<email>ssuominen@gentoo.org</email>
+		<name>Samuli Suominen</name>
 	</maintainer>
 	<longdescription lang="en">
 The ntfs-3g driver is an open source, GPL licensed, third generation Linux 
