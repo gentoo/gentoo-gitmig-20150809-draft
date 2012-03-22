@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/moleinvasion-0.4-r1.ebuild,v 1.4 2011/06/14 20:18:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/moleinvasion-0.4-r1.ebuild,v 1.5 2012/03/22 00:22:39 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="music"
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[opengl,video]
+	virtual/opengl
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf"
