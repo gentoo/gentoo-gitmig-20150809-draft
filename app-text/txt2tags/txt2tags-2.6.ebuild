@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.6.ebuild,v 1.8 2012/03/06 16:09:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.6.ebuild,v 1.9 2012/03/22 21:49:41 floppym Exp $
 
 EAPI="2"
 PYTHON_USE_WITH="tk"
 PYTHON_USE_WITH_OPT="tk"
+PYTHON_DEPEND="2"
 
 inherit eutils elisp-common python
 
@@ -38,7 +39,6 @@ src_compile() {
 }
 
 src_install() {
-	python_convert_shebangs 2 txt2tags
 	dobin txt2tags || die
 
 	dodoc README ChangeLog* || die
@@ -78,6 +78,8 @@ src_install() {
 		insinto /usr/share/vim/vimfiles/ftdetect
 		doins "${T}/${PN}.vim" || die
 	fi
+
+	python_convert_shebangs -r 2 "${D}"
 }
 
 pkg_postinst() {

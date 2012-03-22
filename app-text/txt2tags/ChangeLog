@@ -1,6 +1,10 @@
 # ChangeLog for app-text/txt2tags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.47 2012/03/06 16:09:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.48 2012/03/22 21:49:41 floppym Exp $
+
+  22 Mar 2012; Mike Gilbert <floppym@gentoo.org> -txt2tags-2.3-r1.ebuild,
+  -txt2tags-2.5.ebuild, txt2tags-2.6.ebuild:
+  Set PYTHON_DEPEND=2, bug 312125. Remove old.
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> txt2tags-2.6.ebuild:
   Marking txt2tags-2.6 ppc for bug 357995
