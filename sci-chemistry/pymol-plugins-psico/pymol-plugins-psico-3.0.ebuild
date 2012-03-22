@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-psico/pymol-plugins-psico-3.0.ebuild,v 1.1 2012/03/21 17:16:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-psico/pymol-plugins-psico-3.0.ebuild,v 1.2 2012/03/22 19:24:11 jlec Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://github.com/speleo3/pymol-psico/"
 SRC_URI="https://github.com/speleo3/pymol-psico/tarball/${PV} -> ${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD-2"
 IUSE="minimal"
 
