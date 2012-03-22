@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.2-r1.ebuild,v 1.1 2012/03/22 14:34:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.2-r1.ebuild,v 1.2 2012/03/22 14:37:17 wired Exp $
 
 EAPI=4
 
@@ -40,7 +40,7 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	cp "${FILESDIR}"/${P}-missing-do_panel_cd_stub_env.c \
 		tests/src/filemanager/do_panel_cd_stub_env.c || die
-	
+
 	# bug 409107
 	epatch "${FILESDIR}"/"${P}"-mcedit-without-file-param-fix.patch
 }
