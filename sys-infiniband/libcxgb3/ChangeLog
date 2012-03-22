@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/libcxgb3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libcxgb3/ChangeLog,v 1.2 2011/07/02 20:30:15 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libcxgb3/ChangeLog,v 1.3 2012/03/22 17:09:51 alexxy Exp $
+
+  22 Mar 2012; Alexey Shvetsov <alexxy@gentoo.org> libcxgb3-1.2.5.ebuild:
+  [sys-infiniband/libcxgb3] Drop duplicated keywords line bug #409337
 
   02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> libcxgb3-1.2.5.ebuild:
   Add ~amd64-linux keywrod
