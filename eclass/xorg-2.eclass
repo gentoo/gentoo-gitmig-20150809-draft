@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.51 2011/11/01 13:51:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.52 2012/03/22 06:57:46 mgorny Exp $
 
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -37,8 +37,9 @@ if [[ ${PN} == font* \
 	FONT_ECLASS="font"
 fi
 
-inherit autotools-utils eutils libtool multilib toolchain-funcs flag-o-matic autotools \
-	${FONT_ECLASS} ${GIT_ECLASS}
+# we need to inherit autotools first to get the deps
+inherit autotools autotools-utils eutils libtool multilib toolchain-funcs \
+	flag-o-matic ${FONT_ECLASS} ${GIT_ECLASS}
 
 EXPORTED_FUNCTIONS="src_unpack src_compile src_install pkg_postinst pkg_postrm"
 case "${EAPI:-0}" in
@@ -313,7 +314,6 @@ xorg-2_patch_source() {
 	EPATCH_SUFFIX=${EPATCH_SUFFIX:=patch}
 
 	[[ -d "${EPATCH_SOURCE}" ]] && epatch
-	autotools-utils_src_prepare "$@"
 }
 
 # @FUNCTION: xorg-2_reconf_source
@@ -325,11 +325,13 @@ xorg-2_reconf_source() {
 	case ${CHOST} in
 		*-interix* | *-aix* | *-winnt*)
 			# some hosts need full eautoreconf
-			[[ -e "./configure.ac" || -e "./configure.in" ]] && eautoreconf || ewarn "Unable to autoreconf the configure script. Things may fail."
+			[[ -e "./configure.ac" || -e "./configure.in" ]] \
+				&& AUTOTOOLS_AUTORECONF=1
 			;;
 		*)
 			# elibtoolize required for BSD
-			[[ ${XORG_EAUTORECONF} != no && ( -e "./configure.ac" || -e "./configure.in" ) ]] && eautoreconf || elibtoolize
+			[[ ${XORG_EAUTORECONF} != no && ( -e "./configure.ac" || -e "./configure.in" ) ]] \
+				&& AUTOTOOLS_AUTORECONF=1
 			;;
 	esac
 }
@@ -342,6 +344,7 @@ xorg-2_src_prepare() {
 
 	xorg-2_patch_source
 	xorg-2_reconf_source
+	autotools-utils_src_prepare "$@"
 }
 
 # @FUNCTION: xorg-2_font_configure
