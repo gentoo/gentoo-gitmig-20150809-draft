@@ -1,6 +1,12 @@
 # ChangeLog for app-office/calligra-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.7 2012/01/14 14:51:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.8 2012/03/22 07:27:28 scarabeus Exp $
+
+*calligra-l10n-2.3.92 (22 Mar 2012)
+
+  22 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +calligra-l10n-2.3.92.ebuild, -calligra-l10n-2.3.85.ebuild:
+  Add l10n for RC2 release.
 
 *calligra-l10n-2.3.86 (14 Jan 2012)
 
