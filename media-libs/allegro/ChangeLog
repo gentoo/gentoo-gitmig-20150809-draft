@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.118 2012/03/04 20:22:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.119 2012/03/22 12:52:05 ssuominen Exp $
+
+*allegro-4.4.2-r1 (22 Mar 2012)
+
+  22 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +allegro-4.4.2-r1.ebuild:
+  Prepend allegro- to every manpage (key.3 will become allegro-key.3 for
+  example) wrt #409305 by Chris Reffett
 
   04 Mar 2012; Tupone Alfredo <tupone@gentoo.org> allegro-4.4.2.ebuild,
   +files/allegro-4.4.2-gentoo.patch:
