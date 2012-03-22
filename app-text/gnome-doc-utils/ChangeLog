@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.194 2012/02/21 12:05:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.195 2012/03/22 05:13:48 tetromino Exp $
+
+*gnome-doc-utils-0.20.9 (22 Mar 2012)
+
+  22 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-doc-utils-0.20.9.ebuild:
+  Version bump; gnome-doc-utils.make no longer validates documentation against
+  Mallard RNG definitions. Parallel make appears to work fine now.
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org> gnome-doc-utils-0.20.6.ebuild:
   Restricting pypy
