@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/numactl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.21 2012/03/22 19:13:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.22 2012/03/22 21:50:02 xarthisius Exp $
+
+*numactl-2.0.7-r2 (22 Mar 2012)
+
+  22 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/numactl-2.0.7-static_libs.patch, +numactl-2.0.7-r2.ebuild,
+  -numactl-2.0.7-r1.ebuild:
+  Build static library without -fPIC and make it optional wrt #379849 by
+  Agostino Sarubbo <ago@gentoo.org>
 
   22 Mar 2012; Mike Frysinger <vapier@gentoo.org> numactl-2.0.7-r1.ebuild:
   Fix libdir handling and update to EAPI=4 #379849 by Agostino Sarubbo.

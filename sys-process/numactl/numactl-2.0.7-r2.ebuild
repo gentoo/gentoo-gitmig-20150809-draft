@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.7-r1.ebuild,v 1.3 2012/03/22 19:13:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.7-r2.ebuild,v 1.1 2012/03/22 21:50:02 xarthisius Exp $
 
 EAPI="4"
 
@@ -13,16 +13,18 @@ SRC_URI="ftp://oss.sgi.com/www/projects/libnuma/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux"
-IUSE="perl"
+IUSE="perl static-libs"
 
 RDEPEND="perl? ( dev-lang/perl )"
 
 src_prepare() {
 	echo "printf $(get_libdir)" > getlibdir
+	epatch "${FILESDIR}"/${P}-static_libs.patch
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" BENCH_CFLAGS=""
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" BENCH_CFLAGS="" \
+		BUILD_STATIC=$(usex static-libs)
 }
 
 src_test() {
@@ -37,7 +39,7 @@ src_test() {
 }
 
 src_install() {
-	emake install prefix="${ED}/usr"
+	emake install prefix="${ED}/usr" BUILD_STATIC=$(usex static-libs)
 	# delete man pages provided by the man-pages package #238805
 	rm -rf "${ED}"/usr/share/man/man[25]
 	doman *.8 # makefile doesnt get them all
