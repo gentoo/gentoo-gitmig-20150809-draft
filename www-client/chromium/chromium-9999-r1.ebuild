@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.99 2012/03/15 07:26:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.100 2012/03/23 19:59:52 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -19,7 +19,7 @@ ESVN_REPO_URI="http://src.chromium.org/svn/trunk/src"
 LICENSE="BSD"
 SLOT="live"
 KEYWORDS=""
-IUSE="bindist cups custom-cflags gnome gnome-keyring kerberos pulseaudio"
+IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio"
 
 RDEPEND="app-arch/bzip2
 	cups? (
