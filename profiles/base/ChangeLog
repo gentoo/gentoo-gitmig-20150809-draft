@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.362 2012/03/22 16:53:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.363 2012/03/23 08:08:47 johu Exp $
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Mask broken upnp use flag in kde-base/kdelibs for upcoming stabilization.
 
   22 Mar 2012; Tim Harder <radhermit@gentoo.org> package.use.mask:
   Mask USE="skype" for bitlbee since skype has no stable versions.
