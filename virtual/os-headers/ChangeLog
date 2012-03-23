@@ -1,6 +1,9 @@
 # ChangeLog for virtual/os-headers
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/os-headers/ChangeLog,v 1.4 2011/09/25 21:46:38 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/os-headers/ChangeLog,v 1.5 2012/03/23 02:32:51 darkside Exp $
+
+  23 Mar 2012; Jeremy Olexa <darkside@gentoo.org> os-headers-0.ebuild:
+  fix up some linux dependency issues for Gentoo Prefix, bug 409357
 
   25 Sep 2011; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Remove myself as maintainer.
