@@ -5,7 +5,4 @@
 	<maintainer>
 		<email>trapni@gentoo.org</email>
 	</maintainer>
-	<use>
-		<flag name='math'>Ads math rendering support</flag>
-	</use>
 </pkgmetadata>
