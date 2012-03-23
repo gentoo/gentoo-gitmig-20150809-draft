@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/difffilter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/difffilter/ChangeLog,v 1.12 2011/10/15 23:57:17 binki Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/difffilter/ChangeLog,v 1.13 2012/03/23 05:53:01 binki Exp $
+
+*difffilter-0.3.3 (23 Mar 2012)
+
+  23 Mar 2012; Nathan Phillip Brink <binki@gentoo.org>
+  +difffilter-0.3.3.ebuild:
+  Bump to difffilter-0.3.3 which properly handles the presence of `\ No newline
+  at end of file' in diffs.
 
   16 Oct 2011; Nathan Phillip Brink <binki@gentoo.org> -difffilter-0.3.ebuild:
   Drop old difffilter-0.3.
