@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/urlwatch-1.14.ebuild,v 1.1 2012/03/22 19:02:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/urlwatch-1.14.ebuild,v 1.2 2012/03/23 19:43:52 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5 3:3.2"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="xmpp"
 
 RDEPEND="xmpp? ( dev-python/xmpppy )
-	|| ( >=dev-lang/python-3.2 dev-python/futures )"
+	dev-python/futures"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
