@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/samsung-tools-1.4.ebuild,v 1.2 2012/03/23 19:59:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/samsung-tools-2.1.ebuild,v 1.1 2012/03/23 19:59:35 angelos Exp $
 
-EAPI=3
+EAPI=4
 PYTHON_DEPEND=2
 inherit fdo-mime python
 
@@ -20,12 +20,14 @@ DEPEND="app-laptop/easy-slow-down-manager
 	dev-python/notify-python
 	dev-python/pygtk
 	net-wireless/rfkill
+	sys-apps/vbetool
 	sys-power/pm-utils
 	x11-misc/xbindkeys"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -37,7 +39,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
+	newinitd "${FILESDIR}"/${PN}.init ${PN}
 }
 
 pkg_postinst() {
