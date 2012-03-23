@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.2 2012/03/14 19:15:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.3 2012/03/23 19:53:51 floppym Exp $
 
 # @ECLASS: chromium.eclass
 # @MAINTAINER:
@@ -12,6 +12,10 @@
 inherit eutils fdo-mime gnome2-utils linux-info
 
 EXPORT_FUNCTIONS pkg_preinst pkg_postinst pkg_postrm
+
+if [[ ${PN} == chromium ]]; then
+	IUSE+=" custom-cflags"
+fi
 
 # @FUNCTION: chromium_check_kernel_config
 # @USAGE:
