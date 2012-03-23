@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ytree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.15 2012/03/21 15:22:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.16 2012/03/23 14:21:36 ago Exp $
+
+  23 Mar 2012; Agostino Sarubbo <ago@gentoo.org> ytree-1.97.ebuild:
+  Add ~amd64, wrt bug #408847
 
   21 Mar 2012; Thomas Kahle <tomka@gentoo.org> ytree-1.97.ebuild:
   marked x86 per bug 306307
