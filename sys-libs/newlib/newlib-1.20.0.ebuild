@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.20.0.ebuild,v 1.1 2012/01/14 10:32:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.20.0.ebuild,v 1.2 2012/03/23 23:09:33 vapier Exp $
+
+EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -36,12 +38,11 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	mkdir -p "${NEWLIBBUILD}"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cris-install.patch
 }
 
-src_compile() {
+src_configure() {
 	# we should fix this ...
 	unset LDFLAGS
 	CHOST=${CTARGET} strip-unsupported-flags
@@ -55,20 +56,23 @@ src_compile() {
 		&& myconf="${myconf} --disable-newlib-multithread" \
 		|| myconf="${myconf} $(use_enable threads newlib-multithread)"
 
+	mkdir -p "${NEWLIBBUILD}"
 	cd "${NEWLIBBUILD}"
 
 	ECONF_SOURCE=${S} \
 	econf \
 		$(use_enable unicode newlib-mb) \
 		$(use_enable nls) \
-		${myconf} \
-		|| die "econf failed"
-	emake || die "emake failed"
+		${myconf}
+}
+
+src_compile() {
+	emake -C "${NEWLIBBUILD}"
 }
 
 src_install() {
 	cd "${NEWLIBBUILD}"
-	emake -j1 DESTDIR="${D}" install || die
+	emake -j1 DESTDIR="${D}" install
 #	env -uRESTRICT CHOST=${CTARGET} prepallstrip
 	# minor hack to keep things clean
 	rm -fR "${D}"/usr/share/info
