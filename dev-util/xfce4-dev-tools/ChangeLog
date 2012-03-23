@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xfce4-dev-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.50 2012/01/16 21:15:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.51 2012/03/23 21:11:11 angelos Exp $
+
+  23 Mar 2012; Christoph Mende <angelos@gentoo.org>
+  xfce4-dev-tools-4.9.1.ebuild:
+  Add slot dep on glib
 
   16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -xfce4-dev-tools-4.8.0.ebuild:
