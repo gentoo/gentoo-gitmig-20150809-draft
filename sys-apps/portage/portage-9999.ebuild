@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.45 2012/03/17 01:57:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.46 2012/03/23 19:02:17 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -235,7 +235,7 @@ src_install() {
 		install || die
 
 	# Use dodoc for compression, since the Makefile doesn't do that.
-	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES}
+	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES} || die
 }
 
 pkg_preinst() {
