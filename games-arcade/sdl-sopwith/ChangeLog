@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/sdl-sopwith
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.14 2010/10/15 13:50:25 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.15 2012/03/23 10:18:31 tupone Exp $
+
+  23 Mar 2012; Tupone Alfredo <tupone@gentoo.org> sdl-sopwith-1.7.4.ebuild,
+  +files/sdl-sopwith-1.7.4-nogtk.patch:
+  Removing gtk usage from configure. Fix bug #409111 by Piotr Szymaniak
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> sdl-sopwith-1.7.4.ebuild:
   stable ppc, bug 340447
