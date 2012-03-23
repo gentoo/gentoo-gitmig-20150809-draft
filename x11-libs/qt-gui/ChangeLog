@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.167 2012/03/19 15:57:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.168 2012/03/23 17:06:36 pesa Exp $
+
+  23 Mar 2012; Davide Pesavento <pesa@gentoo.org> -qt-gui-4.7.4.ebuild,
+  qt-gui-4.7.4-r1.ebuild, qt-gui-4.8.0-r3.ebuild:
+  Fix typo, bug #408895 by BRULE Herman <alpha_one_x86@first-world.info>. Remove
+  old.
 
 *qt-gui-4.8.0-r3 (19 Mar 2012)
 
