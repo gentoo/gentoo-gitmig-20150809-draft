@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.217 2012/03/20 22:02:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.218 2012/03/23 08:23:24 jdhore Exp $
+
+  23 Mar 2012; Jeff Horelick <jdhore@gentoo.org> doxygen-1.7.6.1.ebuild:
+  marked x86 per bug 323647
 
   20 Mar 2012; Jeroen Roovers <jer@gentoo.org> doxygen-1.7.6.1.ebuild:
   Stable for HPPA (bug #323647).
