@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2-r1.ebuild,v 1.3 2012/02/17 17:19:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2-r1.ebuild,v 1.4 2012/03/23 16:02:41 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
 # Avoid runtime dependency on python when USE=test
 
-inherit autotools gnome.org libtool eutils flag-o-matic multilib pax-utils python toolchain-funcs virtualx
+inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python toolchain-funcs virtualx
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -197,11 +197,12 @@ src_install() {
 }
 
 src_test() {
+	gnome2_environment_reset
+
 	unset DBUS_SESSION_BUS_ADDRESS
 	export XDG_CONFIG_DIRS=/etc/xdg
 	export XDG_DATA_DIRS=/usr/local/share:/usr/share
 	export G_DBUS_COOKIE_SHA1_KEYRING_DIR="${T}/temp"
-	export XDG_DATA_HOME="${T}"
 	unset GSETTINGS_BACKEND # bug 352451
 
 	# Related test is a bit nitpicking

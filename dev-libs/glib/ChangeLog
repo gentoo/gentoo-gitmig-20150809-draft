@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.505 2012/03/14 01:58:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.506 2012/03/23 16:02:41 tetromino Exp $
+
+  23 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.30.2.ebuild,
+  glib-2.30.2-r1.ebuild, glib-2.30.3.ebuild:
+  Add gnome2_environment_reset to fix test failures (partially resolves bug
+  #409313 reported by Patrick Lauer).
 
   14 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -glib-2.30.1-r2.ebuild:
