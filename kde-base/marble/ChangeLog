@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.131 2012/03/23 09:48:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.132 2012/03/23 09:49:59 johu Exp $
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org> marble-4.8.1.ebuild:
+  Whitespace.
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> marble-4.8.1.ebuild:
   Add required use by Ian Delaney <johneed@hotmail.com> fixes bug #405469.
