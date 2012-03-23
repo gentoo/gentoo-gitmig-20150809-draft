@@ -1,0 +1,99 @@
+From cc6282b77e6f1284d1381e02511720ae2adc7c96 Mon Sep 17 00:00:00 2001
+From: Anthony G. Basile <blueness@gentoo.org>
+Date: Thu, 22 Mar 2012 12:09:40 -0400
+Subject: [PATCH] Fix compile error against miniupnpc-1.6 when --enable-upnp
+
+The bump from miniupnpc-1.5 to 1.6 changes the definition of
+two functions used by tor-fw-helper-upnp.c, upnpDiscover() and
+UPNP_AddPortMapping().  This patch addresses this and adds a
+check in configure.in for backwards compatibility.
+
+Thanks to Nickolay Kolchin-Semyonov for some hints.
+
+X-Tor-Bug-URL: https://trac.torproject.org/projects/tor/ticket/5434
+X-Gentoo-Bug-URL: https://bugs.gentoo.org/show_bug.cgi?id=376621
+Signed-off-by: Anthony G. Basile <blueness@gentoo.org>
+---
+ configure.in                                 |   37 +++++++++++++++++++------
+ src/tools/tor-fw-helper/tor-fw-helper-upnp.c |    8 +++++
+ 2 files changed, 36 insertions(+), 9 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 7415ce8..946f780 100644
+--- a/configure.in
++++ b/configure.in
+@@ -592,15 +592,34 @@ dnl There are no packages for Debian or Redhat as of this patch
+ 
+ if test "$upnp" = "true"; then
+     AC_DEFINE(MINIUPNPC, 1, [Define to 1 if we are building with UPnP.])
+-    TOR_SEARCH_LIBRARY(libminiupnpc, $trylibminiupnpcdir, [-lminiupnpc $TOR_LIB_WS32 $TOR_LIB_IPHLPAPI],
+-        [#include <miniupnpc/miniwget.h>
+-         #include <miniupnpc/miniupnpc.h>
+-         #include <miniupnpc/upnpcommands.h>],
+-        [void upnpDiscover(int delay, const char * multicastif,
+-         const char * minissdpdsock, int sameport);],
+-        [upnpDiscover(1, 0, 0, 0); exit(0);],
+-        [--with-libminiupnpc-dir],
+-        [/usr/lib/])
++
++    dnl Before we call TOR_SEARCH_LIBRARY we'll do a quick compile test
++    dnl to see if we have miniupnpc-1.5 or -1.6
++    AC_COMPILE_IFELSE([AC_LANG_PROGRAM([#include <miniupnpc/miniupnpc.h>],
++        [upnpDiscover(1, 0, 0, 0);exit(0);])],[miniupnpc15="true"],[miniupnpc15="false"])
++
++    if test "$miniupnpc15" = "true" ; then
++        AC_DEFINE([MINIUPNPC15],[1],[libminiupnpc version 1.5 found])
++        TOR_SEARCH_LIBRARY(libminiupnpc, $trylibminiupnpcdir, [-lminiupnpc $TOR_LIB_WS32 $TOR_LIB_IPHLPAPI],
++            [#include <miniupnpc/miniwget.h>
++             #include <miniupnpc/miniupnpc.h>
++             #include <miniupnpc/upnpcommands.h>],
++            [void upnpDiscover(int delay, const char * multicastif,
++             const char * minissdpdsock, int sameport);],
++            [upnpDiscover(1, 0, 0, 0); exit(0);],
++            [--with-libminiupnpc-dir],
++            [/usr/lib/])
++    else
++        TOR_SEARCH_LIBRARY(libminiupnpc, $trylibminiupnpcdir, [-lminiupnpc $TOR_LIB_WS32 $TOR_LIB_IPHLPAPI],
++            [#include <miniupnpc/miniwget.h>
++             #include <miniupnpc/miniupnpc.h>
++             #include <miniupnpc/upnpcommands.h>],
++            [void upnpDiscover(int delay, const char * multicastif,
++             const char * minissdpdsock, int sameport, int ipv6, int * error);],
++            [upnpDiscover(1, 0, 0, 0, 0, 0); exit(0);],
++            [--with-libminiupnpc-dir],
++            [/usr/lib/])
++    fi
+ fi
+ 
+ AC_SYS_LARGEFILE
+diff --git a/src/tools/tor-fw-helper/tor-fw-helper-upnp.c b/src/tools/tor-fw-helper/tor-fw-helper-upnp.c
+index 442eae5..ee56f71 100644
+--- a/src/tools/tor-fw-helper/tor-fw-helper-upnp.c
++++ b/src/tools/tor-fw-helper/tor-fw-helper-upnp.c
+@@ -78,7 +78,11 @@ tor_upnp_init(tor_fw_options_t *options, void *backend_state)
+   memset(&(state->data), 0, sizeof(struct IGDdatas));
+   state->init = 0;
+ 
++#ifdef MINIUPNPC15
+   devlist = upnpDiscover(UPNP_DISCOVER_TIMEOUT, NULL, NULL, 0);
++#else
++  devlist = upnpDiscover(UPNP_DISCOVER_TIMEOUT, NULL, NULL, 0, 0, NULL);
++#endif
+   if (NULL == devlist) {
+     fprintf(stderr, "E: upnpDiscover returned: NULL\n");
+     return UPNP_ERR_NODEVICESFOUND;
+@@ -178,7 +182,11 @@ tor_upnp_add_tcp_mapping(tor_fw_options_t *options, void *backend_state)
+   r = UPNP_AddPortMapping(state->urls.controlURL,
+                           state->data.first.servicetype,
+                           external_port_str, internal_port_str,
++#ifdef MINIUPNPC15
+                           state->lanaddr, UPNP_DESC, "TCP", 0);
++#else
++                          state->lanaddr, UPNP_DESC, "TCP", 0, 0);
++#endif
+   if (r != UPNPCOMMAND_SUCCESS)
+     return UPNP_ERR_ADDPORTMAPPING;
+ 
+-- 
+1.7.3.4
+
