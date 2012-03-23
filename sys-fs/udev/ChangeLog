@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.669 2012/03/22 17:11:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.670 2012/03/23 16:55:46 williamh Exp $
+
+  23 Mar 2012; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
+  Remove some cruft from the live ebuild: The fix_old_persistent_net_rules
+  function has been there since 2008 and is not documented. This code fixed an
+  issue with very old persistent net rules which should be taken care of by now
+  since we have had several stable udev versions with this fix. The ebuild
+  should not touch things in ${ROOT}/lib/udev/devices; remove the code that does
+  this. Remove the code that removes ${ROOT}/etc/dev.d.
 
   22 Mar 2012; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   re-order the econf options to match udev help.

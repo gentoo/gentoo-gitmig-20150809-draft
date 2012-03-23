@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.91 2012/03/22 17:11:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.92 2012/03/23 16:55:46 williamh Exp $
 
 EAPI=4
 
@@ -60,7 +60,7 @@ fi
 RDEPEND="${COMMON_DEPEND}
 	hwdb? (
 		>=sys-apps/usbutils-0.82
-		|| ( >=sys-apps/pciutils-3.1.9-r1[-compress-db]  <sys-apps/pciutils-3.1.9-r1[-zlib] )
+		|| ( >=sys-apps/pciutils-3.1.9-r1[-compress-db] <sys-apps/pciutils-3.1.9-r1[-zlib] )
 		)
 	openrc? ( >=sys-fs/udev-init-scripts-10
 		!<sys-apps/openrc-0.9.9 )
@@ -193,24 +193,6 @@ src_install()
 	doins "${FILESDIR}"/40-gentoo.rules
 }
 
-# 19 Nov 2008
-fix_old_persistent_net_rules()
-{
-	local rules="${ROOT}"/etc/udev/rules.d/70-persistent-net.rules
-	[[ -f ${rules} ]] || return
-
-	elog
-	elog "Updating persistent-net rules file"
-
-	# Change ATTRS to ATTR matches, Bug #246927
-	sed -i -e 's/ATTRS{/ATTR{/g' "${rules}"
-
-	# Add KERNEL matches if missing, Bug #246849
-	sed -ri \
-		-e '/KERNEL/ ! { s/NAME="(eth|wlan|ath)([0-9]+)"/KERNEL=="\1*", NAME="\1\2"/}' \
-		"${rules}"
-}
-
 # See Bug #129204 for a discussion about restarting udevd
 restart_udevd()
 {
@@ -264,7 +246,6 @@ ismounted()
 pkg_postinst()
 {
 	mkdir -p "${ROOT}"/run
-	fix_old_persistent_net_rules
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
@@ -279,23 +260,6 @@ pkg_postinst()
 
 	# people want reminders, I'll give them reminders.  Odds are they will
 	# just ignore them anyway...
-
-	# Removing some device-nodes we thought we need some time ago, 25 Jan 2007
-	if [[ -d ${ROOT}/lib/udev/devices ]]
-	then
-		rm -f "${ROOT}"/lib/udev/devices/{null,zero,console,urandom}
-	fi
-
-	# Try to remove /etc/dev.d as that is obsolete, 23 Apr 2007
-	if [[ -d ${ROOT}/etc/dev.d ]]
-	then
-		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/default "${ROOT}"/etc/dev.d 2>/dev/null
-		if [[ -d ${ROOT}/etc/dev.d ]]
-		then
-			ewarn "You still have the directory /etc/dev.d on your system."
-			ewarn "This is no longer used by udev and can be removed."
-		fi
-	fi
 
 	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
 	# remove it if user don't has sys-fs/device-mapper installed, 27 Jun 2007
