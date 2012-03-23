@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.386 2012/03/01 22:10:50 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.387 2012/03/23 02:33:49 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -527,7 +527,8 @@ epatch() {
 # Applies user-provided patches to the source tree. The patches are
 # taken from /etc/portage/patches/<CATEGORY>/<PF|P|PN>/, where the first
 # of these three directories to exist will be the one to use, ignoring
-# any more general directories which might exist as well.
+# any more general directories which might exist as well. They must end
+# in ".patch" to be applied.
 #
 # User patches are intended for quick testing of patches without ebuild
 # modifications, as well as for permanent customizations a user might
