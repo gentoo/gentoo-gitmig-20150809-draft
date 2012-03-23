@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.984 2012/03/22 20:58:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.985 2012/03/23 00:31:34 zmedico Exp $
+
+*portage-2.1.10.50 (23 Mar 2012)
+
+  23 Mar 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.50.ebuild:
+  2.1.10.50 version bump. This fixes bug #335320 (add Makefile for portage to
+  install itself), bug #361759 (QA warning for files installed to
+  /etc/udev/rules.d), bug #373009 (make emerge --changelog show some more
+  entries), bug #388259 (show restricted fetch instructions immediately after
+  the merge list), bug #399863 (autounmask message shows wrong parent atom), bug
+  #402577 (repoman support for PORTAGE_CONFIGROOT), bug #406407 (internal
+  whirlpool digest incorrect for gsl-1.15.tar.gz), bug #406749 (QA Notice for
+  install of non UTF-8 file names), bug #406875 (repoman --digest option), bug
+  #406877 (make repoman ignore irrelevant temp files), bug #407449 (repoman
+  triggers erroneous QA Notice about illegally inherited eclass), bug #409085
+  (map emerge --buildpkg=n map to FEATURES=-buildpkg), and bug #409179 (show
+  nested package.mask file names in masking messages). Bug #409383 tracks all
+  bugs fixed since portage-2.1.10.49.
 
   22 Mar 2012; Jeff Horelick <jdhore@gentoo.org> portage-2.1.10.49.ebuild:
   marked x86 per bug 408391
