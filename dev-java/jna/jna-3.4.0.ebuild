@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.2 2012/03/22 13:27:46 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.3 2012/03/23 15:27:47 sera Exp $
 
 EAPI="4"
 
 JAVA_PKG_IUSE="test doc source"
 WANT_ANT_TASKS="ant-nodeps"
 
-inherit java-pkg-2 java-ant-2 toolchain-funcs flag-o-matic
+inherit java-pkg-2 java-ant-2 toolchain-funcs flag-o-matic vcs-snapshot
 
 DESCRIPTION="Java Native Access (JNA)"
 HOMEPAGE="https://github.com/twall/jna#readme"
@@ -16,7 +16,6 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+awt +nio-buffers"
-S="${WORKDIR}/twall-jna-3e5b84f"
 
 COMMON_DEP="
 	virtual/libffi"
@@ -35,27 +34,24 @@ JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_BUILD_TARGET="jar contrib-jars"
 
 java_prepare() {
-	# delete bundled jars
-	find -name "*.jar" | xargs rm -v
+	# delete bundled jars and copy of libffi
+	find -name "*.jar" -exec rm -v {} + || die
+	rm -r native/libffi || die
 
 	# respect CFLAGS, don't inhibit warnings, honour CC
 	# fix build.xml file
 	epatch "${FILESDIR}/${PV}-makefile-flags.patch" "${FILESDIR}/${PV}-build.xml.patch"
 
-	# Fetch our own prebuilt libffi.
-	mkdir -p build/native/libffi/.libs || die
-	ln -snf "/usr/$(get_libdir)/libffi.so" \
-		build/native/libffi/.libs/libffi_convenience.a || die
-
 	# Build to same directory on 64-bit archs.
+	mkdir build || die
 	ln -snf build build-d64 || die
 
 	if ! use awt ; then
-		sed -i -E "s/^(CDEFINES=.*)/\1 -DNO_JAWT/g" "${S}"/native/Makefile || die
+		sed -i -E "s/^(CDEFINES=.*)/\1 -DNO_JAWT/g" native/Makefile || die
 	fi
 
 	if ! use nio-buffers ; then
-		sed -i -E "s/^(CDEFINES=.*)/\1 -DNO_NIO_BUFFERS/g" "${S}"/native/Makefile || die
+		sed -i -E "s/^(CDEFINES=.*)/\1 -DNO_NIO_BUFFERS/g" native/Makefile || die
 	fi
 }
 
