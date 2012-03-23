@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.671 2012/03/23 17:34:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.672 2012/03/23 19:16:37 williamh Exp $
+
+*udev-182-r1 (23 Mar 2012)
+
+  23 Mar 2012; William Hubbs <williamh@gentoo.org> +udev-182-r1.ebuild:
+  revision bump for bug #409359
 
   23 Mar 2012; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   Remove warnings about devfs-compatible rules from the live ebuild
