@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.42 2012/03/22 15:45:15 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.43 2012/03/23 10:27:13 nimiux Exp $
+
+*inspircd-2.0.5-r1 (23 Mar 2012)
+
+  23 Mar 2012; Chema Alonso <nimiux@gentoo.org> +inspircd-2.0.5-r1.ebuild,
+  +files/inspircd-2.0.5-r1-fix-make-config.patch,
+  +files/inspircd-2.0.5-r1-init, metadata.xml:
+  Revision bump to include workaround for CVE-2012-1836 wrt bug #409159 and
+  fix inspircd launcher script wrt bug #379911. Missing use flags included
+  in metadata.
 
   22 Mar 2012; Chema Alonso <nimiux@gentoo.org> metadata.xml:
   Removed Dane Smith (c1pher) as maintainer (Proxy)
