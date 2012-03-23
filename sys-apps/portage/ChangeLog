@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.986 2012/03/23 00:36:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.987 2012/03/23 18:59:13 zmedico Exp $
+
+*portage-2.1.10.51 (23 Mar 2012)
+
+  23 Mar 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.51.ebuild,
+  -portage-2.1.10.50.ebuild:
+  2.1.10.51 version bump. This fixes bug #382407 (disable repoman
+  dependency.unknown warnings for blocker atoms), bug #402323 (clarify copy
+  error message for FEATURES=xattr), and bug #409359 (clarify error message for
+  collisions between symlinks and directories). Bug #409383 tracks all bugs
+  fixed since portage-2.1.10.49.
 
 *portage-2.2.0_alpha94 (23 Mar 2012)
 
