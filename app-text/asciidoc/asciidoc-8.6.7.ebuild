@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.6.7.ebuild,v 1.1 2012/03/19 01:28:00 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.6.7.ebuild,v 1.2 2012/03/23 14:24:25 floppym Exp $
 
 EAPI="3"
 
@@ -53,7 +53,7 @@ pkg_setup() {
 
 src_prepare() {
 	if ! use vim-syntax; then
-		sed -i -e '/^install/s/install-vim//' Makefile.in
+		sed -i -e '/^install/s/install-vim//' Makefile.in || die
 	else
 		sed -i\
 			-e "/^vimdir/s:@sysconfdir@/vim:${EPREFIX}/usr/share/vim/vimfiles:" \
