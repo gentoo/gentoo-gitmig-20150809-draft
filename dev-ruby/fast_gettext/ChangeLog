@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/fast_gettext
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_gettext/ChangeLog,v 1.8 2011/12/18 08:58:57 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_gettext/ChangeLog,v 1.9 2012/03/23 07:24:52 graaff Exp $
+
+*fast_gettext-0.6.4-r1 (23 Mar 2012)
+
+  23 Mar 2012; Hans de Graaff <graaff@gentoo.org>
+  +fast_gettext-0.6.4-r1.ebuild:
+  Fix tests to use the proper interpreter and drop potential jeweler
+  dependency. Add ruby19 and drop x86 as a consequence, bug 409399.
 
 *fast_gettext-0.6.4 (18 Dec 2011)
 
