@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.12 2012/03/23 15:27:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.13 2012/03/23 16:33:05 sera Exp $
+
+  23 Mar 2012; Ralph Sennhauser <sera@gentoo.org> jna-3.4.0.ebuild:
+  Fix running tests. #294289
 
   23 Mar 2012; Ralph Sennhauser <sera@gentoo.org> jna-3.4.0.ebuild:
   Use vcs-snapshot eclass for github download.

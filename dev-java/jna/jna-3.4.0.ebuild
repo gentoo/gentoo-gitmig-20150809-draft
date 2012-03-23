@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.3 2012/03/23 15:27:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.4 2012/03/23 16:33:05 sera Exp $
 
 EAPI="4"
 
@@ -16,6 +16,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+awt +nio-buffers"
+REQUIRED_USE="test? ( awt nio-buffers )"
 
 COMMON_DEP="
 	virtual/libffi"
@@ -57,21 +58,31 @@ java_prepare() {
 
 EANT_EXTRA_ARGS="-Ddynlink.native=true"
 
+EANT_TEST_ANT_TASKS="ant-junit ant-nodeps ant-trax"
+src_test() {
+	local sysprops=""
+
+	# crashes vm (segfault)
+	sed -i -e 's|testRegisterMethods|no&|' test/com/sun/jna/DirectTest.java || die
+
+	# crashes vm, java 7 only (icedtea-7,  oracle-jdk-bin-1.7)
+	sed -i -e 's|testGCCallbackOnFinalize|no&|' test/com/sun/jna/CallbacksTest.java || die
+
+	sysprops+=" -Djava.awt.headless=true"
+	sysprops+=" -Djava.io.tmpdir=${T}" #to ensure exec mount
+
+	mkdir -p lib || die
+	java-pkg_jar-from --into lib --build-only junit
+
+	# need to use _JAVA_OPTIONS or add them to the build.xml. ANT_OPTS won't
+	# survive the junit task.
+	_JAVA_OPTIONS="${sysprops}" java-pkg-2_src_test
+}
+
 src_install() {
 	java-pkg_dojar build/${PN}.jar
 	java-pkg_dojar contrib/platform/dist/platform.jar
 	java-pkg_doso build/native/libjnidispatch.so
 	use source && java-pkg_dosrc src/com
 	use doc && java-pkg_dojavadoc doc/javadoc
-}
-
-src_test() {
-	unset DISPLAY
-
-	mkdir -p lib
-	java-pkg_jar-from --into lib --build-only junit
-
-	ANT_TASKS="ant-junit ant-nodeps ant-trax" \
-		ANT_OPTS="-Djava.awt.headless=true" eant \
-		${EANT_EXTRA_ARGS} test
 }
