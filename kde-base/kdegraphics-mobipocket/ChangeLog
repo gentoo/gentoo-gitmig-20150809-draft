@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-mobipocket
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.3 2012/03/06 23:35:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.4 2012/03/23 07:37:08 johu Exp $
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org>
+  -kdegraphics-mobipocket-4.8.0.ebuild:
+  Remove KDE SC 4.8.0
 
 *kdegraphics-mobipocket-4.8.1 (06 Mar 2012)
 

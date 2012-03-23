@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ffmpegthumbs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.47 2012/03/16 00:05:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.48 2012/03/23 07:37:13 johu Exp $
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org> -ffmpegthumbs-4.8.0.ebuild:
+  Remove KDE SC 4.8.0
 
   16 Mar 2012; Alexis Ballier <aballier@gentoo.org>
   files/ffmpegthumbs-4.8.1-ffmpeg.patch:
