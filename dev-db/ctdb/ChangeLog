@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/ctdb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.24 2011/09/21 08:49:14 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.25 2012/03/23 10:55:46 scarabeus Exp $
+
+*ctdb-1.13 (23 Mar 2012)
+
+  23 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +ctdb-1.13.ebuild,
+  +files/ctdb-1.13-ldflags.patch, ctdb-1.0.114_p1.ebuild, ctdb-9999.ebuild:
+  Version bump to 1.13 and clean up the live ebuild. The ldflag patch was not
+  upstreamed and the thing still needs an initscript.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> ctdb-9999.ebuild:
   Migrate to git-2.
