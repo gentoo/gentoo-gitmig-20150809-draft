@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.5.99.901.ebuild,v 1.2 2012/03/18 17:08:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.5.99.902.ebuild,v 1.1 2012/03/23 15:27:32 chithanh Exp $
 
 EAPI=4
 
