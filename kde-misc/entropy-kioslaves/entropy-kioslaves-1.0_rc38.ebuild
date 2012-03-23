@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/entropy-kioslaves/entropy-kioslaves-1.0_rc38.ebuild,v 1.1 2011/08/12 09:33:09 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/entropy-kioslaves/entropy-kioslaves-1.0_rc38.ebuild,v 1.2 2012/03/23 16:24:15 lxnay Exp $
 
 EAPI="3"
 KDE_MINIMAL="4.2"
+CMAKE_REQUIRED=never
 inherit eutils kde4-base
 
 DESCRIPTION="Entropy Package Manager KDE kioslaves support"

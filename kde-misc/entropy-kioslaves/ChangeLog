@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/entropy-kioslaves
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/entropy-kioslaves/ChangeLog,v 1.18 2012/03/23 14:21:52 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/entropy-kioslaves/ChangeLog,v 1.19 2012/03/23 16:24:15 lxnay Exp $
+
+  23 Mar 2012; Fabio Erculiani <lxnay@gentoo.org>
+  entropy-kioslaves-1.0_rc38.ebuild, entropy-kioslaves-1.0_rc43.ebuild,
+  entropy-kioslaves-1.0_rc53.ebuild, entropy-kioslaves-1.0_rc59.ebuild,
+  entropy-kioslaves-1.0_rc76.ebuild, entropy-kioslaves-1.0_rc77.ebuild,
+  entropy-kioslaves-1.0_rc80.ebuild, entropy-kioslaves-1.0_rc87.ebuild,
+  entropy-kioslaves-1.0_rc90.ebuild:
+  export CMAKE_REQUIRED=never as per Gentoo bug #409367
 
 *entropy-kioslaves-1.0_rc90 (23 Mar 2012)
 
