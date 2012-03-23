@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.18 2012/03/11 14:47:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.19 2012/03/23 19:54:11 alexxy Exp $
+
+*ceph-0.44 (23 Mar 2012)
+
+  23 Mar 2012; Alexey Shvetsov <alexxy@gentoo.org> +ceph-0.44.ebuild:
+  [sys-cluster/ceph] Version bump
 
   11 Mar 2012; Agostino Sarubbo <ago@gentoo.org> ceph-0.41.ebuild:
   Stable for amd64, wrt bug #369625
