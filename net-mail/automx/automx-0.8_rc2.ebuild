@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.8_rc1.ebuild,v 1.1 2012/03/15 10:58:21 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.8_rc2.ebuild,v 1.1 2012/03/23 06:57:44 mschiff Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6:2.7"
@@ -14,12 +14,13 @@ SRC_URI="${HOMEPAGE}/download/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +tools"
+IUSE="doc sql +tools"
 
 DEPEND=""
 RDEPEND="
 	dev-python/lxml
 	|| ( www-apache/mod_wsgi www-servers/uwsgi )
+	sql? ( dev-python/sqlalchemy )
 	tools? ( net-dns/bind-tools )
 	tools? ( net-misc/wget )
 	"
