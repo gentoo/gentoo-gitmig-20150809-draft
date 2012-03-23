@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/samsung-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/ChangeLog,v 1.4 2012/03/23 19:59:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/ChangeLog,v 1.5 2012/03/23 20:02:40 angelos Exp $
+
+  23 Mar 2012; Christoph Mende <angelos@gentoo.org> -samsung-tools-1.4.ebuild,
+  -samsung-tools-1.5.ebuild:
+  Remove old
 
 *samsung-tools-2.1 (23 Mar 2012)
 
