@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.17 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.18 2012/03/23 06:16:15 floppym Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 
@@ -59,13 +59,7 @@ sgml-catalog_pkg_postrm() {
 	for entry in ${SGML_TOINSTALL}; do
 		arg1=${entry%%:*}
 		arg2=${entry#*:}
-		if [ -e "${EPREFIX}"${arg2} ]
-		then
-			ewarn "${EPREFIX}${arg2} still exists!  Not removing from ${EPREFIX}${arg1}"
-			ewarn "This is normal behavior for an upgrade ..."
-			continue
-		fi
-		einfo "Now removing ${EPREFIX}${arg1} from ${EPREFIX}${arg2} and ${EPREFIX}/etc/sgml/catalog"
+		einfo "Now removing ${EPREFIX}${arg2} from ${EPREFIX}${arg1} and ${EPREFIX}/etc/sgml/catalog"
 		sgml-catalog_cat_doremove ${arg1} ${arg2}
 	done
 }

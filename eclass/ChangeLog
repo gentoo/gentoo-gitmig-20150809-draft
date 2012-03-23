@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.180 2012/03/22 12:03:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.181 2012/03/23 06:16:15 floppym Exp $
+
+  23 Mar 2012; Mike Gilbert <floppym@gentoo.org> sgml-catalog.eclass:
+  PMS says that postrm runs before postinst, so remove workaround in
+  sgml-catalog_pkg_postrm. Fix order of arguments in einfo message.
 
   22 Mar 2012; Alexis Ballier <aballier@gentoo.org> texlive-module.eclass:
   Drop support for pre-2010 TeX Live versions
