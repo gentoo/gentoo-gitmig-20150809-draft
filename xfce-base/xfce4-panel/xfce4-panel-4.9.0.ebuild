@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.9.0.ebuild,v 1.1 2012/02/20 20:39:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.9.0.ebuild,v 1.2 2012/03/23 21:24:25 angelos Exp $
 
 EAPI=4
 inherit xfconf
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-
 IUSE="debug"
 
 RDEPEND=">=dev-libs/dbus-glib-0.90
-	>=dev-libs/glib-2.18
+	>=dev-libs/glib-2.18:2
 	>=x11-libs/cairo-1
 	>=x11-libs/gtk+-2.14:2
 	x11-libs/libX11

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.8.1.ebuild,v 1.5 2012/02/13 21:41:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.8.1.ebuild,v 1.6 2012/03/23 21:29:28 angelos Exp $
 
 EAPI=4
 inherit xfconf
@@ -15,7 +15,7 @@ KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-fr
 IUSE="debug perl"
 
 RDEPEND=">=dev-libs/dbus-glib-0.90
-	>=dev-libs/glib-2.18
+	>=dev-libs/glib-2.18:2
 	>=xfce-base/libxfce4util-4.8
 	perl? ( dev-perl/glib-perl )"
 DEPEND="${RDEPEND}

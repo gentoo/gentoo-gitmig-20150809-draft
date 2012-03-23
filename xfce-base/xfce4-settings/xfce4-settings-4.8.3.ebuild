@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.3.ebuild,v 1.8 2012/01/06 10:43:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.3.ebuild,v 1.9 2012/03/23 21:27:03 angelos Exp $
 
 EAPI=4
 inherit xfconf
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~
 IUSE="debug libcanberra libnotify +xklavier"
 
 RDEPEND=">=dev-libs/dbus-glib-0.90
-	>=dev-libs/glib-2.16
+	>=dev-libs/glib-2.16:2
 	>=gnome-base/libglade-2
 	>=x11-libs/gtk+-2.14:2
 	x11-libs/libX11
