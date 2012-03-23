@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6344 2012/03/23 08:55:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6345 2012/03/23 17:54:32 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Remove obsolete ati-drivers entry.
 
   23 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask kde-misc/kgtk because of brokenness
