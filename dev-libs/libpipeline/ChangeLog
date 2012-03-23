@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpipeline
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.8 2011/07/09 16:30:07 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.9 2012/03/23 07:45:47 radhermit Exp $
+
+*libpipeline-1.2.1 (23 Mar 2012)
+
+  23 Mar 2012; Tim Harder <radhermit@gentoo.org> +libpipeline-1.2.1.ebuild:
+  Version bump. Update to EAPI 4.
 
   09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> libpipeline-1.2.0.ebuild:
   Marked ~ppc64 wrt #371687
