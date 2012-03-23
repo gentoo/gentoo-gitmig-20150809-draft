@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha94.ebuild,v 1.1 2012/03/23 00:36:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha95.ebuild,v 1.1 2012/03/23 19:01:04 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -253,7 +253,7 @@ src_install() {
 		install || die
 
 	# Use dodoc for compression, since the Makefile doesn't do that.
-	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES}
+	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES} || die
 
 	if use linguas_pl; then
 		doman -i18n=pl "${S_PL}"/man/pl/*.[0-9] || die
