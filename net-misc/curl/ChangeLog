@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.204 2012/03/03 15:30:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.205 2012/03/23 23:11:49 blueness Exp $
+
+  23 Mar 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Added myself as maintainer
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> curl-7.24.0.ebuild:
   Marking curl-7.24.0 ppc64 for bug 400799
