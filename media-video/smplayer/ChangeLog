@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.103 2012/03/03 14:19:17 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.104 2012/03/23 14:04:59 naota Exp $
+
+  23 Mar 2012; Naohiro Aota <naota@gentoo.org> smplayer-0.7.1.ebuild:
+  Add ~x86-fbsd. #383945
 
   03 Mar 2012; Davide Pesavento <pesa@gentoo.org> -smplayer-0.6.8.ebuild:
   Remove old version using deprecated qt4 eclass.
