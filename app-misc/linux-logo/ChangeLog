@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linux-logo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.82 2011/11/06 23:07:28 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.83 2012/03/23 19:59:20 nimiux Exp $
+
+  23 Mar 2012; Chema Alonso <nimiux@gentoo.org> metadata.xml:
+  Removed Dane Smith (c1pher) as maintainer (Proxy)
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> linux-logo-5.11-r1.ebuild:
   Marking linux-logo-5.11-r1 ppc for bug 373493
