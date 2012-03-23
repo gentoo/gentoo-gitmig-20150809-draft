@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.92 2012/03/23 16:55:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.93 2012/03/23 17:34:05 williamh Exp $
 
 EAPI=4
 
@@ -290,13 +290,6 @@ pkg_postinst()
 	ewarn "mount options for directory /dev are no longer"
 	ewarn "set in /etc/udev/udev.conf, but in /etc/fstab"
 	ewarn "as for other directories."
-
-	ewarn
-	ewarn "If you use /dev/md/*, /dev/loop/* or /dev/rd/*,"
-	ewarn "then please migrate over to using the device names"
-	ewarn "/dev/md*, /dev/loop* and /dev/ram*."
-	ewarn "The devfs-compat rules have been removed."
-	ewarn "For reference see Bug #269359."
 
 	ewarn
 	ewarn "Rules for /dev/hd* devices have been removed"
