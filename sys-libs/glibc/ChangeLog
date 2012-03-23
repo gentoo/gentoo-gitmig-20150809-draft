@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.824 2012/03/23 03:08:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.825 2012/03/23 17:39:06 vapier Exp $
+
+  23 Mar 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.14.1-r1.ebuild,
+  glibc-2.14.1-r2.ebuild, glibc-2.15.ebuild:
+  Make sure we disable the x32 patch for non-x86_64 targets too.
 
   23 Mar 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.15.ebuild:
   Update hashes to match official release tarballs.
