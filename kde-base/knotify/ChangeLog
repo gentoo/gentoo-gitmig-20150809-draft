@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.114 2012/03/23 07:37:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.115 2012/03/23 23:31:36 johu Exp $
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org> knotify-4.8.1.ebuild:
+  Restore ~x86-fbsd.
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> -knotify-4.8.0.ebuild:
   Remove KDE SC 4.8.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/solid-runtime-4.8.1.ebuild,v 1.1 2012/03/06 23:35:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/solid-runtime-4.8.1.ebuild,v 1.2 2012/03/23 23:20:01 johu Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KMNOMODULE=true
 inherit kde4-meta
 
 DESCRIPTION="KDE SC solid runtime modules (autoeject, automounter and others)"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 KMEXTRA="
