@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thc-ipv6/thc-ipv6-1.8.ebuild,v 1.1 2012/03/21 18:57:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thc-ipv6/thc-ipv6-1.8.ebuild,v 1.2 2012/03/23 19:42:34 mr_bones_ Exp $
 
 EAPI=4
 
@@ -22,7 +22,6 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4-Makefile.patch
 }
-
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install
