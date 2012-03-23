@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/nemesis
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.17 2008/01/25 21:27:09 armin76 Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.18 2012/03/23 21:24:58 hwoarang Exp $
+
+*nemesis-1.4-r1 (23 Mar 2012)
+
+  23 Mar 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/nemesis-1.4-fileio.patch, +files/nemesis-1.4-libnet-1.0.patch,
+  +files/nemesis-1.4-prototcp.patch, +nemesis-1.4-r1.ebuild, metadata.xml:
+  Revbump. Multiple fixes. EAPI4. Bug #408023. Thanks to rainbow
+  <rainbow@irh.it>
 
   25 Jan 2008; Raúl Porcel <armin76@gentoo.org> nemesis-1.4.ebuild:
   alpha/sparc/x86 stable
