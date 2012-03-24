@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.43 2012/03/08 15:07:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.44 2012/03/24 15:36:11 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org> SGMLSpm-1.03-r6.ebuild:
+  Marked ~x64-macos
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> SGMLSpm-1.03-r6.ebuild:
   Marking SGMLSpm-1.03-r6 ppc64 for bug 391505
