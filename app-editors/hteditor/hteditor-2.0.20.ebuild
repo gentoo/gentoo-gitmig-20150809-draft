@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.19.ebuild,v 1.1 2012/03/14 04:48:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.20.ebuild,v 1.1 2012/03/24 11:54:34 pacho Exp $
 
-EAPI=3
+EAPI=4
 
 MY_P=${P/editor}
 
@@ -37,7 +37,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog KNOWNBUGS README TODO
 	dohtml doc/*.html
 	doinfo doc/*.info
