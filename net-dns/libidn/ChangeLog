@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.161 2012/03/13 13:04:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.162 2012/03/24 16:56:26 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libidn-1.24.ebuild:
+  x86 stable wrt bug #407303
 
   13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> libidn-1.24.ebuild:
   Stable for amd64, wrt bug #407303

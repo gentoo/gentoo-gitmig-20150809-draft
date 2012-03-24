@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.24.ebuild,v 1.7 2012/03/13 13:04:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.24.ebuild,v 1.8 2012/03/24 16:56:26 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/libidn/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="doc emacs java mono nls static-libs"
 
 DOCS=( AUTHORS ChangeLog FAQ NEWS README THANKS TODO )
