@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-cgi/httpd-cgi-0.ebuild,v 1.8 2011/06/24 08:10:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-cgi/httpd-cgi-0.ebuild,v 1.9 2012/03/24 12:28:04 pacho Exp $
 
 DESCRIPTION="Virtual for CGI-enabled webservers"
 HOMEPAGE=""
@@ -18,7 +18,6 @@ RDEPEND="|| (
 	www-servers/bozohttpd
 	www-servers/cherokee
 	www-servers/fnord
-	www-servers/mini_httpd
 	www-servers/monkeyd
 	www-servers/nginx
 	www-servers/resin
