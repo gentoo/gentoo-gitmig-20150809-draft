@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.86.ebuild,v 1.4 2010/10/14 19:05:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.93.ebuild,v 1.1 2012/03/24 12:02:33 pacho Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ch-werner.de/sqliteodbc/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-db/sqlite-3.6
@@ -27,11 +27,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.83-respect_LDFLAGS.patch"
+	epatch "${FILESDIR}/${PN}-0.93-respect_LDFLAGS.patch"
+}
+
+src_configure() {
+	econf --disable-static
 }
 
 src_install() {
 	dodir "/usr/$(get_libdir)"
-	einstall || die "einstall failed"
+	einstall
+	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 	dodoc ChangeLog README
 }
