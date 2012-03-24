@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR-Dist
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.61 2011/11/06 08:16:59 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.62 2012/03/24 15:19:02 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org> PAR-Dist-0.480.0.ebuild:
+  Marked ~x64-macos
 
 *PAR-Dist-0.480.0 (06 Nov 2011)
 
