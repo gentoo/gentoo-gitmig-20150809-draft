@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/kstart-4.1.ebuild,v 1.2 2012/03/21 12:02:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/kstart-4.1.ebuild,v 1.3 2012/03/24 17:30:35 phajdan.jr Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://archives.eyrie.org/software/kerberos/${P}.tar.gz"
 
 LICENSE="|| ( MIT Stanford ISC )"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="afs"
 
 DEPEND="virtual/krb5

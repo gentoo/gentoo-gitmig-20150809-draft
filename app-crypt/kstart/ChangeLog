@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/kstart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/ChangeLog,v 1.15 2012/03/21 12:02:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/ChangeLog,v 1.16 2012/03/24 17:30:35 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> kstart-4.1.ebuild:
+  x86 stable wrt bug #409049
 
   21 Mar 2012; Agostino Sarubbo <ago@gentoo.org> kstart-4.1.ebuild:
   Stable for amd64, wrt bug #409049
