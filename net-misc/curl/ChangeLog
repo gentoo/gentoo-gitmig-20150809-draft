@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.205 2012/03/23 23:11:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.206 2012/03/24 16:08:45 gregkh Exp $
+
+  24 Mar 2012; Greg Kroah-Hartman <gregkh@gentoo.org> metadata.xml:
+  add me as co-maintainer
 
   23 Mar 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Added myself as maintainer

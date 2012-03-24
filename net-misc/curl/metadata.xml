@@ -5,6 +5,10 @@
     <email>blueness@gentoo.org</email>
     <name>Anthony G. Basile</name>
   </maintainer>
+  <maintainer>
+    <email>gregkh@gentoo.org</email>
+    <name>Greg Kroah-Hartman</name>
+  </maintainer>
   <use>
     <flag name="ares">Enabled c-ares dns support</flag>
     <flag name="ssh">Enabled SSH urls in curl using libssh2</flag>
