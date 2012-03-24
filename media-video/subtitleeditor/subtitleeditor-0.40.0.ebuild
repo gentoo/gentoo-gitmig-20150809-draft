@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.38.0.ebuild,v 1.2 2011/03/29 06:04:16 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.40.0.ebuild,v 1.1 2012/03/24 14:32:07 pacho Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils versionator flag-o-matic
 
@@ -35,6 +35,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig"
 
+DOCS="AUTHORS ChangeLog NEWS README TODO"
+
 src_configure() {
 	export GST_REGISTRY="${T}/home/registry.cache.xml"
 
@@ -48,8 +50,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+	default
 
 	# plugins are loaded without the help of libtool files
 	find "${D}" -name '*.la' -delete || die "failed to remove *.la files"
