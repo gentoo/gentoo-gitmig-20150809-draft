@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.6.ebuild,v 1.1 2012/01/30 06:47:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.6.ebuild,v 1.2 2012/03/24 01:24:17 zmedico Exp $
 
 AUTOTOOLS_AUTO_DEPEND="no"
 inherit autotools eutils toolchain-funcs
