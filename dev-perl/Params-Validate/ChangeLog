@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Params-Validate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.103 2012/03/18 18:21:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.104 2012/03/24 13:11:33 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  Params-Validate-1.60.0.ebuild:
+  Add Prefix keywords, bug #403413
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> Params-Validate-1.0.0.ebuild:
   ia64/s390/sh/sparc stable wrt #396941
