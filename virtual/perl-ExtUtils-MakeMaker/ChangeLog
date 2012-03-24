@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-MakeMaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.42 2012/02/14 11:26:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.43 2012/03/24 12:32:21 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  perl-ExtUtils-MakeMaker-6.620.0.ebuild:
+  Add Prefix keywords
 
   14 Feb 2012; Alexis Ballier <aballier@gentoo.org>
   perl-ExtUtils-MakeMaker-6.620.0.ebuild:
