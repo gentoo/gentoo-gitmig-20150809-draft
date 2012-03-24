@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.825 2012/03/23 17:39:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.826 2012/03/24 07:14:51 vapier Exp $
+
+  24 Mar 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.14.1-r2.ebuild:
+  Should build for alpha/arm/hppa now.
 
   23 Mar 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.14.1-r1.ebuild,
   glibc-2.14.1-r2.ebuild, glibc-2.15.ebuild:
