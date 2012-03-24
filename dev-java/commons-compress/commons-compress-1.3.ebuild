@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/commons-compress-1.3.ebuild,v 1.3 2012/03/10 20:40:26 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/commons-compress-1.3.ebuild,v 1.4 2012/03/24 17:23:46 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Commons Compress defines an API for working with ar, cpio, tar, zip
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5"

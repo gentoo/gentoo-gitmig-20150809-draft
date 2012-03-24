@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-compress
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/ChangeLog,v 1.4 2012/03/10 20:40:26 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/ChangeLog,v 1.5 2012/03/24 17:23:46 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  commons-compress-1.3.ebuild:
+  x86 stable wrt bug #405069
 
   10 Mar 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   commons-compress-1.3.ebuild:
