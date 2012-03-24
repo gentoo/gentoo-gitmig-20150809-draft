@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.101.ebuild,v 1.1 2011/10/20 17:10:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.101-r1.ebuild,v 1.1 2012/03/24 11:26:35 pacho Exp $
 
-EAPI="3"
+EAPI=4
 PYTHON_DEPEND="admin? 2"
 PYTHON_USE_WITH="threads"
 
@@ -108,15 +108,11 @@ src_configure() {
 		--with-cgiroot="${EPREFIX}/var/www/localhost/cgi-bin" \
 		--with-wwwuser=cherokee \
 		--with-wwwgroup=cherokee \
-		${myconf} || die "configure failed"
-}
-
-src_test() {
-	emake test || die
+		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 
 	if ! use static-libs ; then
 		find "${ED}" -name '*.la' -delete || die
@@ -124,14 +120,14 @@ src_install() {
 		find "${ED}/usr/$(get_libdir)/cherokee" '(' -name '*.la' -o -name '*.a' ')' -delete || die
 	fi
 
-	dodoc AUTHORS ChangeLog README || die
+	dodoc AUTHORS ChangeLog README
 
 	if use pam ; then
 		pamd_mimic system-auth cherokee auth account session || die
 	fi
 
-	newinitd "${FILESDIR}/${PN}-initd-1.2.99" ${PN} || die "newinitd ${PN} failed"
-	newconfd "${FILESDIR}/${PN}-confd-1.2.98" ${PN} || die "newconfd ${PN} failed"
+	newinitd "${FILESDIR}/${PN}-initd-1.2.99" ${PN}
+	newconfd "${FILESDIR}/${PN}-confd-1.2.98" ${PN}
 
 	if ! use admin ; then
 		rm -r \
@@ -142,20 +138,20 @@ src_install() {
 	fi
 
 	exeinto /usr/share/doc/${PF}/contrib
-	doexe contrib/{bin2buffer.py,make-cert.sh,make-dh_params.sh,tracelor.py} || die
+	doexe contrib/{bin2buffer.py,make-cert.sh,make-dh_params.sh,tracelor.py}
 
 	keepdir \
 		/var/www/localhost/htdocs \
 		/var/log/cherokee \
-		/var/lib/cherokee/graphs/images || die
+		/var/lib/cherokee/graphs/images
 	fowners cherokee:cherokee \
 		/var/log/cherokee \
 		/var/lib/cherokee/graphs \
-		/var/lib/cherokee/graphs/images || die
+		/var/lib/cherokee/graphs/images
 
 	# logrotate
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/${PN}.logrotate ${PN} || die
+	newins "${FILESDIR}"/${PN}.logrotate-r1 ${PN}
 
 	if ! use coverpage ; then
 		rm -r "${ED}"/var/www/localhost/htdocs/* || die
