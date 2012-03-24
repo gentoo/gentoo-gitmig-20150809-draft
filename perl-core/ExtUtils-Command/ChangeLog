@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-Command
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Command/ChangeLog,v 1.18 2012/03/18 17:59:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Command/ChangeLog,v 1.19 2012/03/24 12:26:35 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  ExtUtils-Command-1.170.0.ebuild:
+  Add Prefix keywords
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org>
   ExtUtils-Command-1.170.0.ebuild:
