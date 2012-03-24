@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.59 2012/03/10 17:11:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.60 2012/03/24 17:19:26 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> vnstat-1.11-r2.ebuild:
+  x86 stable wrt bug #403019
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org> vnstat-1.11-r2.ebuild:
   Marking vnstat-1.11-r2 ppc for bug 403019
