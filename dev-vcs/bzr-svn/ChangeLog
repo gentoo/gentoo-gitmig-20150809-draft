@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr-svn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-svn/ChangeLog,v 1.14 2012/03/16 23:54:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-svn/ChangeLog,v 1.15 2012/03/24 07:43:11 serkan Exp $
+
+  24 Mar 2012; Serkan Kaba <serkan@gentoo.org> bzr-svn-1.2.1.ebuild:
+  Bump subverty dependency.
 
 *bzr-svn-1.2.1 (16 Mar 2012)
 
