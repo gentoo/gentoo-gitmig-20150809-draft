@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycxx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.37 2011/12/23 05:59:45 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.38 2012/03/24 11:55:22 ago Exp $
+
+  24 Mar 2012; Agostino Sarubbo <ago@gentoo.org> pycxx-6.2.3-r3.ebuild:
+  Stable for amd64, wrt bug #409029
 
   23 Dec 2011; Mike Gilbert <floppym@gentoo.org>
   files/pycxx-6.2.3-python-3.2-Py_hash_t.patch, pycxx-6.2.3-r3.ebuild:
