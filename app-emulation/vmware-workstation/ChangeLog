@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.234 2012/03/24 12:43:43 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.235 2012/03/24 13:50:09 vadimk Exp $
+
+  24 Mar 2012; Vadim Kuznetsov <vadimk@gentoo.org>
+  vmware-workstation-7.1.5.491717.ebuild:
+  added x11-themes/hicolor-icon-theme dependency. bug 287842
 
   24 Mar 2012; Vadim Kuznetsov <vadimk@gentoo.org>
   -vmware-workstation-8.0.1.528992-r2.ebuild:
