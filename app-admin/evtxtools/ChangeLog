@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/evtxtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/evtxtools/ChangeLog,v 1.5 2012/02/25 16:40:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/evtxtools/ChangeLog,v 1.6 2012/03/24 17:37:20 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> evtxtools-1.1.0.ebuild:
+  x86 stable wrt bug #405625
 
   25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> evtxtools-1.1.0.ebuild:
   Stable for amd64, wrt bug #405625
