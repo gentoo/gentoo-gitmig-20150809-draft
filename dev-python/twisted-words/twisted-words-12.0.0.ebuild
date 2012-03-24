@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-12.0.0.ebuild,v 1.1 2012/03/22 07:10:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-12.0.0.ebuild,v 1.2 2012/03/24 22:22:59 floppym Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
@@ -20,10 +20,3 @@ DEPEND="=dev-python/twisted-$(get_version_component_range 1-2)*
 RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="twisted/plugins twisted/words"
-
-src_prepare() {
-	distutils_src_prepare
-
-	# Delete documentation for no longer available "im" script.
-	rm -fr doc/man
-}
