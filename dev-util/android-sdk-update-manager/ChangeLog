@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/android-sdk-update-manager
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.32 2011/12/26 12:28:40 rich0 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.33 2012/03/24 09:29:59 rich0 Exp $
+
+*android-sdk-update-manager-17 (24 Mar 2012)
+
+  24 Mar 2012; Richard Freeman <rich0@gentoo.org>
+  +android-sdk-update-manager-17.ebuild:
+  bump - 409249
 
 *android-sdk-update-manager-16 (26 Dec 2011)
 
