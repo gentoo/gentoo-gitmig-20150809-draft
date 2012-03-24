@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/lifted-base
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.1 2012/03/24 14:24:01 slyfox Exp $
+
+*lifted-base-0.1.0.3-r1 (24 Mar 2012)
+
+  24 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +lifted-base-0.1.0.3-r1.ebuild, +metadata.xml:
+  Initial version. lifted IO operations from the base library. A depend of
+  >=dev-vcs/git-annex-3.20120315.
+
