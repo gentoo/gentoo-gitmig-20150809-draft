@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.38 2012/03/13 13:03:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.39 2012/03/24 17:11:35 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> virtinst-0.600.1.ebuild:
+  x86 stable wrt bug #407557
 
   13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> virtinst-0.600.1.ebuild:
   Stable for amd64, wrt bug #407557
