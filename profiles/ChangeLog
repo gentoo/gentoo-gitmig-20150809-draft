@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6345 2012/03/23 17:54:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6346 2012/03/24 09:58:20 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Maskapp-arch/createrepo for removal. Bug #396067
 
   23 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
