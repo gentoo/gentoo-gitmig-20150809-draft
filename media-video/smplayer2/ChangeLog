@@ -1,6 +1,12 @@
 # ChangeLog for media-video/smplayer2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/ChangeLog,v 1.1 2011/12/01 18:10:28 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/ChangeLog,v 1.2 2012/03/24 09:32:47 hwoarang Exp $
+
+*smplayer2-0.7.1_p20120301 (24 Mar 2012)
+
+  24 Mar 2012; Markos Chandras <hwoarang@gentoo.org>
+  +smplayer2-0.7.1_p20120301.ebuild:
+  New snapshot. Bug #409453. Nikoli <nikoli@lavabit.com>
 
 *smplayer2-9999 (01 Dec 2011)
 *smplayer2-0.7.0_pre20111120 (01 Dec 2011)
