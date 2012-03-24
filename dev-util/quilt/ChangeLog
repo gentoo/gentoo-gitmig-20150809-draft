@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/quilt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.53 2012/03/20 19:37:42 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.54 2012/03/24 17:32:06 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> quilt-0.50.ebuild:
+  x86 stable wrt bug #408755
 
 *quilt-0.60 (20 Mar 2012)
 
