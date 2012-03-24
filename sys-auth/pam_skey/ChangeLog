@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_skey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.21 2012/03/24 16:55:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.22 2012/03/24 17:34:17 ulm Exp $
+
+  24 Mar 2012; Ulrich Müller <ulm@gentoo.org> -pam_skey-1.1.5-r2.ebuild:
+  Remove old.
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pam_skey-1.1.5-r3.ebuild:
