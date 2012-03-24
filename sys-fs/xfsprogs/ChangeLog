@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.138 2012/03/15 02:13:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.139 2012/03/24 17:27:19 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xfsprogs-3.1.7.ebuild:
+  x86 stable wrt bug #408021
 
   15 Mar 2012; Jeroen Roovers <jer@gentoo.org> xfsprogs-3.1.7.ebuild:
   Stable for HPPA (bug #408021).
