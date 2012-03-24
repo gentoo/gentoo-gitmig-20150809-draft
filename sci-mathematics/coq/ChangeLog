@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.68 2012/02/23 21:15:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.69 2012/03/24 13:59:39 gienah Exp $
+
+  24 Mar 2012; Mark Wright <gienah@gentoo.org> coq-8.3_p2.ebuild,
+  coq-8.3_p3.ebuild:
+  Fix coq 8.3_p2 and 8.3_p3 builds with dev-ml/camlp5-6.05. Stdpp.Exc_located
+  is an alias for Ploc.Exc, it has been deprecated for a while, and was removed
+  in dev-ml/camlp5-6.05. Fixed by upstream in svn repo:
+  https://coq.inria.fr/bugs/show_bug.cgi?id=2728
 
 *coq-8.3_p3 (23 Feb 2012)
 

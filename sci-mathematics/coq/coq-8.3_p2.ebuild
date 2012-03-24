@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.3_p2.ebuild,v 1.2 2011/10/05 18:54:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.3_p2.ebuild,v 1.3 2012/03/24 13:59:39 gienah Exp $
 
 EAPI="2"
 
@@ -40,6 +40,30 @@ src_prepare() {
 	# wild sed which replaces \"$LABLGTKLIB\" by $LABLGTKLIB.  Note
 	# during pl2-bump: Hmm, my patch did not get applied upstream?
 	sed -i "s/\\\\\"\\\$LABLGTKLIB\\\\\"/\\\$LABLGTKLIB/" configure
+	# Stdpp.Exc_located is an alias for Ploc.Exc, it has been
+	# deprecated for a while, and was removed in dev-ml/camlp5-6.05
+	# Fixed by upstream in svn repo:
+	# https://coq.inria.fr/bugs/show_bug.cgi?id=2728
+	sed -e 's@Stdpp.Exc_located@Ploc.Exc@g' \
+		-i "${S}/checker/checker.ml" \
+		-i "${S}/ide/coq.ml" \
+		-i "${S}/lib/util.ml" \
+		-i "${S}/lib/util.mli" \
+		-i "${S}/parsing/ppvernac.ml" \
+		-i "${S}/plugins/subtac/subtac_obligations.ml" \
+		-i "${S}/pretyping/cases.ml" \
+		-i "${S}/pretyping/pretype_errors.ml" \
+		-i "${S}/pretyping/typeclasses_errors.ml" \
+		-i "${S}/proofs/logic.ml" \
+		-i "${S}/proofs/refiner.ml" \
+		-i "${S}/tactics/class_tactics.ml4" \
+		-i "${S}/tactics/extratactics.ml4" \
+		-i "${S}/tactics/rewrite.ml4" \
+		-i "${S}/tactics/tacinterp.ml" \
+		-i "${S}/toplevel/cerrors.ml" \
+		-i "${S}/toplevel/toplevel.ml" \
+		-i "${S}/toplevel/vernac.ml" \
+		|| die "Could not rename deprecated Stdpp.Exc_located to Ploc.Exc"
 }
 
 src_configure() {
