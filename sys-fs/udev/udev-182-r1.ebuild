@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182-r1.ebuild,v 1.2 2012/03/24 00:14:52 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182-r1.ebuild,v 1.3 2012/03/24 00:31:35 williamh Exp $
 
 EAPI=4
 
@@ -258,8 +258,8 @@ pkg_preinst()
 {
 	local htmldir
 	for htmldir in gudev libudev; do
-		if [[ -d ${ROOT}usr/share/doc/${PF}/html/${htmldir} ]]; then
-			rm -rf ${ROOT}usr/share/doc/${PF}/html/${htmldir}
+		if [[ -d ${ROOT}usr/share/gtk-doc/html/${htmldir} ]]; then
+			rm -rf "${ROOT}"usr/share/gtk-doc/html/${htmldir}
 		fi
 		if [[ -d ${D}/usr/share/doc/${PF}/html/${htmldir} ]]; then
 			dosym /usr/share/doc/${PF}/html/${htmldir} \
