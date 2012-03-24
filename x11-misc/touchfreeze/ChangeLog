@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/touchfreeze
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.13 2012/01/30 14:52:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.14 2012/03/24 11:13:55 ago Exp $
+
+  24 Mar 2012; Agostino Sarubbo <ago@gentoo.org> touchfreeze-0.2.5-r1.ebuild:
+  Stable for amd64, wrt bug #409319
 
 *touchfreeze-0.2.5-r1 (30 Jan 2012)
 
