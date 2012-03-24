@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.129 2012/03/02 20:20:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.130 2012/03/24 15:14:51 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org> slang-2.2.4.ebuild:
+  Fix for Prefix, add Prefix keywords
 
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/slang-2.1.2-slsh-libs.patch, -slang-2.2.2.ebuild, -slang-2.2.3.ebuild:
