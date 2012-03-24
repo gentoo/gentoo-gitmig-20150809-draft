@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9-r2.ebuild,v 1.1 2012/03/12 13:05:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9-r2.ebuild,v 1.2 2012/03/24 16:12:53 grobian Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://jedi.ks.uiuc.edu/~johns/raytracer/files/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x64-macos ~x86-macos"
 IUSE="doc examples jpeg mpi opengl png threads"
 
 CDEPEND="jpeg? ( virtual/jpeg )
@@ -34,21 +34,28 @@ S="${WORKDIR}/${PN}/unix"
 TACHYON_MAKE_TARGET=
 
 pkg_setup() {
+	local ostarget
+	case ${CHOST} in
+		powerpc*-darwin*)   ostarget=macosx      ;;
+		*86*-darwin*)       ostarget=macosx-x86  ;;
+		*)					ostarget=linux       ;;
+	esac
+
 	if use threads ; then
 		if use opengl ; then
-			TACHYON_MAKE_TARGET=linux-thr-ogl
+			TACHYON_MAKE_TARGET=${ostarget}-thr-ogl
 		elif use mpi ; then
-			TACHYON_MAKE_TARGET=linux-mpi-thr
+			TACHYON_MAKE_TARGET=${ostarget}-mpi-thr
 		else
-			TACHYON_MAKE_TARGET=linux-thr
+			TACHYON_MAKE_TARGET=${ostarget}-thr
 		fi
 
 		# TODO: Support for linux-athlon-thr ?
 	else
 		if use mpi ; then
-				TACHYON_MAKE_TARGET=linux-mpi
+			TACHYON_MAKE_TARGET=${ostarget}-mpi
 		else
-			TACHYON_MAKE_TARGET=linux
+			TACHYON_MAKE_TARGET=${ostarget}
 		fi
 	fi
 
