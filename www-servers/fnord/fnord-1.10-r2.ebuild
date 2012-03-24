@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.5 2011/03/04 01:11:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.6 2012/03/24 10:50:33 pacho Exp $
 
 EAPI="3"
 
@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}
 	sys-apps/ucspi-tcp"
 
 pkg_setup() {
+	enewgroup nofiles 200
 	enewuser fnord -1 -1 /etc/fnord nofiles
 	enewuser fnordlog -1 -1 /etc/fnord nofiles
 }
