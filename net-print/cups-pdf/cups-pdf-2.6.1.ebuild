@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.6.1.ebuild,v 1.3 2012/03/11 14:45:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.6.1.ebuild,v 1.4 2012/03/24 17:34:38 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cups-pdf.de/src/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND="net-print/cups

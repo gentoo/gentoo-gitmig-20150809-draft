@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-pdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.49 2012/03/11 14:45:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.50 2012/03/24 17:34:38 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> cups-pdf-2.6.1.ebuild:
+  x86 stable wrt bug #404845
 
   11 Mar 2012; Agostino Sarubbo <ago@gentoo.org> cups-pdf-2.6.1.ebuild:
   Stable for amd64, wrt bug #404845
