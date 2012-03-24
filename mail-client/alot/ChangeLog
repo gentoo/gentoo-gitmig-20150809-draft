@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/alot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.2 2011/12/27 11:23:56 aidecoe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.3 2012/03/24 17:11:16 aidecoe Exp $
+
+*alot-0.3 (24 Mar 2012)
+
+  24 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +alot-0.3.ebuild:
+  Version bump. Dependencies has been changed. VERSION file is no longer used
+  by setup. Added postinst warning about change in format of config file.
+  vcs-snapshot is used in the ebuild instead of custom src_unpack().
 
 *alot-0.21-r1 (27 Dec 2011)
 
