@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/torsocks-1.2-r2.ebuild,v 1.1 2012/03/08 18:41:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/torsocks-1.2-r2.ebuild,v 1.2 2012/03/24 11:56:23 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${PN}-1.2.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="static-libs"
 
 # We do not depend on tor which might be running on a different box

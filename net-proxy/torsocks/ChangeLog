@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/torsocks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.9 2012/03/11 14:51:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.10 2012/03/24 11:56:23 ago Exp $
+
+  24 Mar 2012; Agostino Sarubbo <ago@gentoo.org> torsocks-1.2-r2.ebuild:
+  Stable for amd64, wrt bug #395215
 
   11 Mar 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog, Manifest:
   Fixed ChangeLog Header
