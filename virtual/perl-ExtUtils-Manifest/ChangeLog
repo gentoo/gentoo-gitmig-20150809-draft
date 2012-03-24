@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Manifest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.16 2012/02/14 11:21:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.17 2012/03/24 12:22:27 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  perl-ExtUtils-Manifest-1.600.0.ebuild:
+  Add Prefix keywords
 
   14 Feb 2012; Alexis Ballier <aballier@gentoo.org>
   perl-ExtUtils-Manifest-1.600.0.ebuild:
