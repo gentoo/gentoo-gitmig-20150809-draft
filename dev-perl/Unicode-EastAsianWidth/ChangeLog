@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-EastAsianWidth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.3 2012/03/24 15:16:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.4 2012/03/24 16:20:22 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  Unicode-EastAsianWidth-1.30.ebuild:
+  Add Prefix keywords, bug #408399
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
   Unicode-EastAsianWidth-1.30.ebuild:
