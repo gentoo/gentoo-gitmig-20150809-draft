@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Attribute-Handlers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.25 2012/03/07 22:07:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.26 2012/03/24 13:02:34 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  Attribute-Handlers-0.930.0.ebuild:
+  Add Prefix keywords, bug #403413
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org>
   Attribute-Handlers-0.910.0.ebuild:
