@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kanyremote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.21 2012/03/11 14:46:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.22 2012/03/24 17:12:27 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> kanyremote-5.13.ebuild:
+  x86 stable wrt bug #404771
 
   11 Mar 2012; Agostino Sarubbo <ago@gentoo.org> kanyremote-5.13.ebuild:
   Stable for amd64, wrt bug #404771
