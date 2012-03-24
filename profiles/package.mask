@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13610 2012/03/24 17:58:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13611 2012/03/24 23:13:16 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (19 Dec 2011)
+# Causes font corruption, bug #409593.
+=x11-libs/cairo-1.12.0
 
 # Pacho Ramos <pacho@gentoo.org>
 # Fails to build (#239789), dead project (#303695).
