@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skkfep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/ChangeLog,v 1.12 2012/03/18 08:25:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/ChangeLog,v 1.13 2012/03/24 17:32:48 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> skkfep-0.87-r1.ebuild:
+  x86 stable wrt bug #408681
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> skkfep-0.87-r1.ebuild,
   +files/skkfep-0.87-LDFLAGS.patch:
