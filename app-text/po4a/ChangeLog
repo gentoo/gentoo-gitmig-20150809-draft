@@ -1,6 +1,9 @@
 # ChangeLog for app-text/po4a
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.54 2011/05/29 08:03:38 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.55 2012/03/24 15:43:50 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org> po4a-0.41.ebuild:
+  Marked ~x64-macos
 
   29 May 2011; Torsten Veller <tove@gentoo.org> +files/0.41-po4a-build.patch,
   po4a-0.41.ebuild:
