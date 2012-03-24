@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r2.ebuild,v 1.2 2011/01/29 23:30:17 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r3.ebuild,v 1.1 2012/03/24 10:39:13 pacho Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -48,7 +48,8 @@ src_test() {
 
 src_install() {
 	exeinto /usr/bin
-	doexe ftpd httpd
+	newexe ftpd publicfile-ftpd
+	newexe httpd publicfile-httpd
 	newexe configure publicfile-conf
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION
 }
@@ -70,8 +71,8 @@ pkg_postinst() {
 		/usr/bin/publicfile-conf ftp ftplog /home/public `hostname`
 	fi
 	echo
-	einfo "httpd and ftpd are serving out of /home/public."
-	einfo "Remember to start the servers with:"
-	einfo "  ln -s /home/public/httpd /home/public/ftpd /service"
+	einfo "publichtml-httpd and public-html ftpd are serving out"
+	einfo "of /home/public. Remember to start the servers with:"
+	einfo "  ln -s /home/public/public-httpd /home/public/public-ftpd /service"
 	echo
 }
