@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/lxc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.29 2011/10/19 17:51:49 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.30 2012/03/24 00:29:00 flameeyes Exp $
+
+*lxc-0.8.0_rc1 (24 Mar 2012)
+
+  24 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> +files/lxc.initd.2,
+  +lxc-0.8.0_rc1.ebuild:
+  Version bump; change init script as the path is changed. Assume a modern
+  OpenRC is used.
 
 *lxc-0.7.5-r3 (19 Oct 2011)
 
