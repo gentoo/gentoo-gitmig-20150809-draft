@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.76 2012/03/09 14:27:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.77 2012/03/24 19:46:27 armin76 Exp $
+
+  24 Mar 2012; Raúl Porcel <armin76@gentoo.org> SOAP-Lite-0.711.ebuild,
+  SOAP-Lite-0.712.0.ebuild, SOAP-Lite-0.714.0.ebuild:
+  Drop ia64/sparc keywords
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> SOAP-Lite-0.714.0.ebuild:
   Marking SOAP-Lite-0.714.0 ppc64 for bug 400211
