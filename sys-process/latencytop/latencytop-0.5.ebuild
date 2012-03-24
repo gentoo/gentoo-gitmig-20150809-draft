@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.5.ebuild,v 1.2 2009/12/29 06:31:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.5.ebuild,v 1.3 2012/03/24 11:14:38 ago Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.latencytop.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="gtk unicode"
 
 RDEPEND="=dev-libs/glib-2*
