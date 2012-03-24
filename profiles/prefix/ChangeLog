@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.336 2012/03/24 07:21:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.337 2012/03/24 12:43:17 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Revert back to masked Perl 5.14
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
   Undo Perl 5.14 mask in Prefix
