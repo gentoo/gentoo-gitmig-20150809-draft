@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/x86info
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.33 2012/03/13 12:10:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.34 2012/03/24 16:54:37 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> x86info-1.30.ebuild:
+  x86 stable wrt bug #407917
 
   13 Mar 2012; Agostino Sarubbo <ago@gentoo.org> x86info-1.30.ebuild:
   Stable for amd64, wrt bug #407917
