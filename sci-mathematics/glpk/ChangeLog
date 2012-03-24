@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.55 2012/03/08 15:14:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.56 2012/03/24 14:33:55 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org> glpk-4.47.ebuild:
+  Marked ~x{86,64}-macos, bug #408497
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> glpk-4.45.ebuild:
   Marking glpk-4.45 ppc64 for bug 391517
