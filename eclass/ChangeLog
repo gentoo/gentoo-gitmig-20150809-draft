@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.183 2012/03/23 19:53:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.184 2012/03/24 20:44:51 dilfridge Exp $
+
+  24 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> kde4-meta.eclass:
+  Make opengl dependency soft in kde-workspace (except kwin)
 
   23 Mar 2012; Mike Gilbert <floppym@gentoo.org> chromium.eclass:
   Set IUSE=custom-cflags in the eclass so we can reference it in the die hook.
