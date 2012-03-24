@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-ast
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/ChangeLog,v 1.19 2011/09/04 12:16:25 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/ChangeLog,v 1.20 2012/03/24 16:25:55 chithanh Exp $
+
+*xf86-video-ast-0.93.10 (24 Mar 2012)
+
+  24 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-ast-0.93.10.ebuild:
+  Version bump.
 
   04 Sep 2011; Markus Meier <maekke@gentoo.org> xf86-video-ast-0.93.9.ebuild:
   x86 stable, bug #380421
