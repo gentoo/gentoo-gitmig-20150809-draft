@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.3.ebuild,v 1.5 2012/03/18 15:21:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.3.ebuild,v 1.6 2012/03/24 17:13:07 jer Exp $
 
 EAPI=2
 
@@ -24,8 +24,10 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-asneeded.patch
-	sed -i -e "s/man_DATA/man1_MANS/" \
-		-e "/^mandir/d" doc/Makefile.am || die
+	gunzip doc/*.gz || die
+	sed -i doc/Makefile.am \
+		-e "s:man_DATA:man1_MANS:;s:.gz::g;/^mandir/d" \
+		|| die
 	eautoreconf
 }
 
