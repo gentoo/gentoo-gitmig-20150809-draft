@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-264.2.ebuild,v 1.1 2012/03/10 14:17:50 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-264.2.ebuild,v 1.2 2012/03/24 12:37:01 vadimk Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="hardened"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -64,6 +64,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV_MAJOR}-jobserver.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-netdevice.patch"
 	epatch "${FILESDIR}/${PV}-3.2.0.patch"
+	use hardened && epatch "${FILESDIR}/hardened.patch"
 }
 
 src_install() {
