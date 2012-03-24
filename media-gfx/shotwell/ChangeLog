@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/shotwell
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.30 2011/11/11 16:20:30 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.31 2012/03/24 12:21:34 hwoarang Exp $
+
+  24 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Adopt package
 
 *shotwell-0.11.6 (10 Nov 2011)
 
