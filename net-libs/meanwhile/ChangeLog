@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/meanwhile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.54 2011/02/06 12:24:36 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.55 2012/03/24 11:38:04 pacho Exp $
+
+*meanwhile-1.0.2-r1 (24 Mar 2012)
+
+  24 Mar 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/meanwhile-1.0.2-glib2.31.patch, +meanwhile-1.0.2-r1.ebuild:
+  Fix glib-2.31 building, bug #409081 by Bjoern Thorwirth; also drop static
+  stuff.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> meanwhile-1.0.2.ebuild:
   Drop to ~mips
