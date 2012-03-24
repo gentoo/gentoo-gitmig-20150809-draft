@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.34 2012/03/21 12:21:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.35 2012/03/24 02:59:02 blueness Exp $
+
+*thttpd-2.25b-r9 (24 Mar 2012)
+
+  24 Mar 2012; Anthony G. Basile <blueness@gentoo.org> +thttpd-2.25b-r9.ebuild,
+  +files/thttpd-2.25b-additional-input-validation.patch,
+  +files/thttpd-2.25b-default-to-octet-stream.patch,
+  +files/thttpd-2.25b-fix-buffer-overflow.patch,
+  +files/thttpd-2.25b-fix-insecure-tmp-creation.patch,
+  +files/thttpd-2.25b-ogg-mime-type.patch, +files/thttpd.conf.sample,
+  +files/thttpd.confd, +files/thttpd.init:
+  Address bugs #370373, #373629, #373631, #406243. Clean up init scripts.
 
   21 Mar 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Will give it love, added myself as maintainer
