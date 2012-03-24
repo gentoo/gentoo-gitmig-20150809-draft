@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.12.ebuild,v 1.3 2012/03/20 13:25:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.12.ebuild,v 1.4 2012/03/24 17:02:04 phajdan.jr Exp $
 
 EAPI=3
 inherit cmake-utils eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qterm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/qt-gui-4.5:4[qt3support]
