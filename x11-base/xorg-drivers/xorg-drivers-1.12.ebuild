@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.12.ebuild,v 1.2 2012/03/18 16:39:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.12.ebuild,v 1.3 2012/03/24 16:30:25 chithanh Exp $
 
 EAPI=4
 
@@ -32,12 +32,14 @@ IUSE_INPUT_DEVICES="
 "
 IUSE_VIDEO_CARDS="
 	video_cards_ark
+	video_cards_ast
 	video_cards_cirrus
 	video_cards_dummy
 	video_cards_epson
 	video_cards_fbdev
 	video_cards_geode
 	video_cards_glint
+	video_cards_i128
 	video_cards_i740
 	video_cards_intel
 	video_cards_mach64
@@ -53,6 +55,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_s3
 	video_cards_savage
 	video_cards_siliconmotion
+	video_cards_sis
 	video_cards_sunbw2
 	video_cards_suncg14
 	video_cards_suncg3
@@ -60,7 +63,9 @@ IUSE_VIDEO_CARDS="
 	video_cards_sunffb
 	video_cards_sunleo
 	video_cards_suntcx
+	video_cards_tdfx
 	video_cards_tga
+	video_cards_trident
 	video_cards_v4l
 	video_cards_vesa
 	video_cards_via
@@ -92,11 +97,13 @@ PDEPEND="
 	input_devices_wacom?       ( x11-drivers/xf86-input-wacom )
 
 	video_cards_ark?           ( x11-drivers/xf86-video-ark )
+	video_cards_ast?           ( x11-drivers/xf86-video-ast )
 	video_cards_cirrus?        ( x11-drivers/xf86-video-cirrus )
 	video_cards_dummy?         ( x11-drivers/xf86-video-dummy )
 	video_cards_fbdev?         ( x11-drivers/xf86-video-fbdev )
 	video_cards_geode?         ( x11-drivers/xf86-video-geode )
 	video_cards_glint?         ( x11-drivers/xf86-video-glint )
+	video_cards_i128?          ( x11-drivers/xf86-video-i128 )
 	video_cards_i740?          ( x11-drivers/xf86-video-i740 )
 	video_cards_intel?         ( x11-drivers/xf86-video-intel )
 	video_cards_mach64?        ( x11-drivers/xf86-video-mach64 )
@@ -114,13 +121,16 @@ PDEPEND="
 	video_cards_s3?            ( x11-drivers/xf86-video-s3 )
 	video_cards_savage?        ( x11-drivers/xf86-video-savage )
 	video_cards_siliconmotion? ( x11-drivers/xf86-video-siliconmotion )
+	video_cards_sis?           ( x11-drivers/xf86-video-sis )
 	video_cards_suncg14?       ( x11-drivers/xf86-video-suncg14 )
 	video_cards_suncg3?        ( x11-drivers/xf86-video-suncg3 )
 	video_cards_suncg6?        ( x11-drivers/xf86-video-suncg6 )
 	video_cards_sunffb?        ( x11-drivers/xf86-video-sunffb )
 	video_cards_sunleo?        ( x11-drivers/xf86-video-sunleo )
 	video_cards_suntcx?        ( x11-drivers/xf86-video-suntcx )
+	video_cards_tdfx?          ( x11-drivers/xf86-video-tdfx )
 	video_cards_tga?           ( x11-drivers/xf86-video-tga )
+	video_cards_trident?       ( x11-drivers/xf86-video-trident )
 	video_cards_v4l?           ( x11-drivers/xf86-video-v4l )
 	video_cards_vesa?          ( x11-drivers/xf86-video-vesa )
 	video_cards_via?           ( x11-drivers/xf86-video-openchrome )
@@ -130,18 +140,13 @@ PDEPEND="
 
 	!x11-drivers/xf86-input-citron
 	!<=x11-drivers/xf86-video-apm-1.2.3
-	!<=x11-drivers/xf86-video-ast-0.93.9
 	!<=x11-drivers/xf86-video-chips-1.2.4
 	!x11-drivers/xf86-video-cyrix
-	!<=x11-drivers/xf86-video-i128-1.3.4
 	!x11-drivers/xf86-video-impact
 	!x11-drivers/xf86-video-nsc
 	!<=x11-drivers/xf86-video-rendition-4.2.4
 	!<=x11-drivers/xf86-video-s3virge-1.10.4
-	!<=x11-drivers/xf86-video-sis-0.10.3
 	!<=x11-drivers/xf86-video-sisusb-0.9.4
 	!x11-drivers/xf86-video-sunbw2
-	!<=x11-drivers/xf86-video-tdfx-1.4.3
-	!<=x11-drivers/xf86-video-trident-1.3.4
 	!<=x11-drivers/xf86-video-tseng-1.2.4
 "
