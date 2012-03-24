@@ -1,6 +1,12 @@
 # ChangeLog for www-client/conkeror
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.24 2012/02/24 14:53:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.25 2012/03/24 17:41:47 ulm Exp $
+
+*conkeror-1.0_pre20120223 (24 Mar 2012)
+
+  24 Mar 2012; Ulrich Müller <ulm@gentoo.org> -conkeror-0.9.3-r1.ebuild,
+  -conkeror-0.9.3_p20110401.ebuild, +conkeror-1.0_pre20120223.ebuild:
+  Add new snapshot, support firefox as alternative dependency. Remove old.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   conkeror-0.9.4-r1.ebuild:
