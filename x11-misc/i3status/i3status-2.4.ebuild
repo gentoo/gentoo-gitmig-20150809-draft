@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/i3status-2.4.ebuild,v 1.3 2012/03/13 21:38:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/i3status-2.4.ebuild,v 1.4 2012/03/24 17:28:33 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://i3wm.org/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+caps"
 
 RDEPEND="dev-libs/confuse

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/i3status
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.5 2012/03/13 21:38:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.6 2012/03/24 17:28:33 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> i3status-2.4.ebuild:
+  x86 stable wrt bug #407897
 
   13 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> i3status-2.4.ebuild:
   Drop -g flag
