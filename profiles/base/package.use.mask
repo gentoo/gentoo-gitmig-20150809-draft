@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.324 2012/03/23 08:08:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.325 2012/03/24 23:24:14 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -240,7 +240,8 @@ media-libs/mesa llvm
 # Tomáš Chvátal <scarabeus@gentoo.org> (8 Sep 2010)
 # drm don't even build here so mask everywhere expect live.
 # openvg require openvg-1.1 implemenatation so mask until there is some
-<x11-libs/cairo-9999 drm openvg
+<x11-libs/cairo-9999 drm
+<x11-libs/1.12 openvg
 
 # Alex Legler <a3li@gentoo.org> (1 Sep 2010)
 # This feature is marked as experimental by upstream.

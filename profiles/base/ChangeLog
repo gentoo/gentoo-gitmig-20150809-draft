@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.363 2012/03/23 08:08:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.364 2012/03/24 23:24:14 chithanh Exp $
+
+  24 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Allow USE="openvg" for latest cairo release.
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> package.use.mask:
   Mask broken upnp use flag in kde-base/kdelibs for upcoming stabilization.
