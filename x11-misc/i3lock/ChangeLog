@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/i3lock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/ChangeLog,v 1.6 2012/03/17 23:12:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/ChangeLog,v 1.7 2012/03/24 17:37:45 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> i3lock-2.2.ebuild:
+  x86 stable wrt bug #407899
 
   17 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> i3lock-2.3.1.ebuild:
   Add missing dependency on dev-libs/ev wrt 408479 by Helmut Jarausch
