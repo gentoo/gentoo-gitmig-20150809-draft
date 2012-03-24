@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP_Client
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Client/ChangeLog,v 1.10 2009/08/22 19:48:43 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Client/ChangeLog,v 1.11 2012/03/24 17:12:58 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  PEAR-HTTP_Client-1.2.1.ebuild:
+  x86 stable wrt bug #408723
 
 *PEAR-HTTP_Client-1.2.1 (22 Aug 2009)
 
