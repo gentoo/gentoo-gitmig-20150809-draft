@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182-r1.ebuild,v 1.1 2012/03/23 19:16:37 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182-r1.ebuild,v 1.2 2012/03/24 00:14:52 williamh Exp $
 
 EAPI=4
 
@@ -174,13 +174,6 @@ src_install()
 	dodoc ChangeLog NEWS README TODO
 	use keymap && dodoc src/keymap/README.keymap.txt
 
-	local htmldir
-	for htmldir in gudev libudev; do
-		[[ -d ${ED}/usr/share/doc/${PF}/html/${htmldir} ]] &&
-			dosym /usr/share/doc/${PF}/html/${htmldir} \
-				/usr/share/gtk-doc/html/${htmldir}
-	done
-
 	# udevadm is now in /usr/bin.
 	dosym /usr/bin/udevadm /sbin/udevadm
 
@@ -259,6 +252,20 @@ ismounted()
 		[ "$m" = "$1" ] && return 0
 	done < "${ROOT}"/proc/mounts
 	return 1
+}
+
+pkg_preinst()
+{
+	local htmldir
+	for htmldir in gudev libudev; do
+		if [[ -d ${ROOT}usr/share/doc/${PF}/html/${htmldir} ]]; then
+			rm -rf ${ROOT}usr/share/doc/${PF}/html/${htmldir}
+		fi
+		if [[ -d ${D}/usr/share/doc/${PF}/html/${htmldir} ]]; then
+			dosym /usr/share/doc/${PF}/html/${htmldir} \
+				/usr/share/gtk-doc/html/${htmldir}
+		fi
+	done
 }
 
 pkg_postinst()
