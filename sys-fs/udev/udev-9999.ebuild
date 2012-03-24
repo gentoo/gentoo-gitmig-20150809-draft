@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.93 2012/03/23 17:34:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.94 2012/03/24 03:48:30 williamh Exp $
 
 EAPI=4
 
@@ -174,23 +174,30 @@ src_install()
 	dodoc ChangeLog NEWS README TODO
 	use keymap && dodoc src/keymap/README.keymap.txt
 
-	local htmldir
-	for htmldir in gudev libudev; do
-		[[ -d ${D}/usr/share/doc/${PF}/html/${htmldir} ]] &&
-			dosym /usr/share/doc/${PF}/html/${htmldir} \
-				/usr/share/gtk-doc/html/${htmldir}
-	done
-
 	# udevadm is now in /usr/bin.
 	dosym /usr/bin/udevadm /sbin/udevadm
 
 	# create symlinks for these utilities to /sbin
 	# where multipath-tools expect them to be (Bug #168588)
-	dosym /lib/udevd/scsi_id /sbin/scsi_id
+	dosym /lib/udev/scsi_id /sbin/scsi_id
 
 	# Now install rules
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/40-gentoo.rules
+}
+
+pkg_preinst()
+{
+	local htmldir
+	for htmldir in gudev libudev; do
+		if [[ -d ${ROOT}usr/share/gtk-doc/html/${htmldir} ]]; then
+			rm -rf "${ROOT}"usr/share/gtk-doc/html/${htmldir}
+		fi
+		if [[ -d ${D}/usr/share/doc/${PF}/html/${htmldir} ]]; then
+			dosym /usr/share/doc/${PF}/html/${htmldir} \
+				/usr/share/gtk-doc/html/${htmldir}
+		fi
+	done
 }
 
 # See Bug #129204 for a discussion about restarting udevd
