@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/kportagetray
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.11 2011/10/29 01:06:37 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.12 2012/03/24 19:40:56 dilfridge Exp $
+
+*kportagetray-0.2.4-r1 (24 Mar 2012)
+
+  24 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kportagetray-0.2.4-r1.ebuild,
+  +files/kportagetray-0.2.4-fix_class_name.patch,
+  +files/kportagetray-0.2.4-kdesu46.patch:
+  Add several improvements, thanks to Andreas Sturmlechner in bug 405893
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kportagetray-0.2.4.ebuild:
   Bump to EAPI=4; cleanup
