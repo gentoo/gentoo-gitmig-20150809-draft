@@ -1,11 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/libgxps-0.2.0.ebuild,v 1.1 2011/11/23 20:25:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/libgxps-0.2.2.ebuild,v 1.1 2012/03/24 10:17:38 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
+GCONF_DEBUG="yes"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Library for handling and rendering XPS documents"
 HOMEPAGE="http://live.gnome.org/libgxps"
@@ -30,9 +31,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
 		app-text/docbook-xml-dtd:4.1.2
-		>=dev-util/gtk-doc-1.14 )
+		>=dev-util/gtk-doc-1.14 )"
 
-	dev-util/gtk-doc-am"
 # eautoreconf requires: dev-util/gtk-doc-am
 
 # There is no automatic test suite, only an interactive test application
@@ -49,15 +49,4 @@ pkg_setup() {
 		$(use_enable static-libs static)
 		$(use_with tiff libtiff)"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-}
-
-src_prepare() {
-	# Upstream patch to fix linking, in next release, requires eautoreconf
-	epatch "${FILESDIR}/${P}-libm.patch"
-
-	# https://bugzilla.gnome.org/show_bug.cgi?id=664666
-	epatch "${FILESDIR}/${PN}-0.2.0-libpng15.patch"
-
-	eautoreconf
-	gnome2_src_prepare
 }
