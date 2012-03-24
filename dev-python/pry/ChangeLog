@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pry
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pry/ChangeLog,v 1.1 2012/03/24 23:36:00 radhermit Exp $
+
+*pry-0.2.1_p20090810 (24 Mar 2012)
+
+  24 Mar 2012; Tim Harder <radhermit@gentoo.org> +pry-0.2.1_p20090810.ebuild,
+  +files/pry-0.2.1-exit-status.patch, +metadata.xml:
+  Initial import required for running mitmproxy tests. Ebuild by me.
+
