@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.44 2012/03/21 11:37:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.45 2012/03/24 14:31:21 blueness Exp $
+
+  24 Mar 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Adopt package
 
   21 Mar 2012; Pacho Ramos <pacho@gentoo.org> -varnish-2.1.5.ebuild,
   -varnish-3.0.1.ebuild, -varnish-3.0.2.ebuild, metadata.xml:
