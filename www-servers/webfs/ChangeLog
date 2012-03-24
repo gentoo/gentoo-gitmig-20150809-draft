@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/webfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.23 2012/03/21 11:37:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.24 2012/03/24 10:44:48 pacho Exp $
+
+*webfs-1.21-r2 (24 Mar 2012)
+
+  24 Mar 2012; Pacho Ramos <pacho@gentoo.org> +files/webfs.initd-r1,
+  +webfs-1.21-r2.ebuild:
+  Fix init script, bug #360547 by Joseph L.
 
   21 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop www-server herd as discussed in gentoo-dev ML.
