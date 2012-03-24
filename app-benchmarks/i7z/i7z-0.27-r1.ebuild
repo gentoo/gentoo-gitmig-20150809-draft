@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.27-r1.ebuild,v 1.2 2012/03/13 12:46:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.27-r1.ebuild,v 1.3 2012/03/24 17:18:53 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="X"
 
 RDEPEND="
