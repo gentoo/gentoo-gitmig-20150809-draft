@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/vicious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/vicious/ChangeLog,v 1.7 2012/03/17 21:38:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/vicious/ChangeLog,v 1.8 2012/03/24 17:06:39 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> vicious-2.0.3.ebuild:
+  x86 stable wrt bug #399691
 
   17 Mar 2012; Tony Vroon <chainsaw@gentoo.org> vicious-2.0.3.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
