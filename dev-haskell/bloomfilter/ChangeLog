@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/bloomfilter
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/ChangeLog,v 1.1 2012/03/24 14:26:16 slyfox Exp $
+
+*bloomfilter-1.2.6.8 (24 Mar 2012)
+
+  24 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +bloomfilter-1.2.6.8.ebuild, +metadata.xml:
+  Initial version. Pure and impure Bloom Filter haskell implementations. A
+  depend of >=dev-vcs/git-annex-3.20120315.
+
