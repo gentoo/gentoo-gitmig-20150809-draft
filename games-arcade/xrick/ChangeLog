@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xrick
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/ChangeLog,v 1.14 2011/02/11 03:01:06 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/ChangeLog,v 1.15 2012/03/24 15:27:32 tupone Exp $
+
+  24 Mar 2012; Tupone Alfredo <tupone@gentoo.org>
+  +files/xrick-021212-zlib.patch:
+  Fix build with new zlib. Bug #408451 by Piotr Szymaniak
 
   11 Feb 2011; Michael Sterrett <mr_bones_@gentoo.org>
   xrick-021212-r1.ebuild, +files/xrick-021212-exit.patch,
