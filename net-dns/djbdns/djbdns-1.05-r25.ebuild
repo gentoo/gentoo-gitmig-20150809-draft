@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r25.ebuild,v 1.1 2012/03/02 22:57:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r25.ebuild,v 1.2 2012/03/24 09:26:17 hwoarang Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs
@@ -118,7 +118,7 @@ src_install() {
 
 	dobin "${FILESDIR}/dnscache-setup" || die
 	dobin "${FILESDIR}/tinydns-setup" || die
-	newbin "${FILESDIR}/djbdns-setup-r17" djbdns-setup || die
+	dobin "${FILESDIR}/djbdns-setup" || die
 }
 
 pkg_preinst() {
