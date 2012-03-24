@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.377 2012/03/12 19:37:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.378 2012/03/24 17:11:10 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bind-9.8.1_p1.ebuild:
+  x86 stable wrt bug #405149
 
   12 Mar 2012; Markus Meier <maekke@gentoo.org> bind-9.8.1_p1.ebuild:
   arm stable, bug #405149
