@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.112 2012/03/20 08:28:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.113 2012/03/24 17:16:10 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qt-creator-2.4.1.ebuild:
+  x86 stable wrt bug #408711
 
   20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> qt-creator-2.4.1.ebuild:
   Stable for amd64, wrt bug #408711
