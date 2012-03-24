@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Implementation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Implementation/ChangeLog,v 1.4 2012/03/03 14:50:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Implementation/ChangeLog,v 1.5 2012/03/24 13:00:09 grobian Exp $
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  Module-Implementation-0.60.0.ebuild:
+  Add Prefix keywords, bug #403413
 
   03 Mar 2012; Markus Meier <maekke@gentoo.org>
   Module-Implementation-0.60.0.ebuild:
