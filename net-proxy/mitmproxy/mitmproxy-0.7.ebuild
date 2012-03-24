@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/mitmproxy/mitmproxy-0.7.ebuild,v 1.1 2012/03/21 09:50:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/mitmproxy/mitmproxy-0.7.ebuild,v 1.2 2012/03/24 23:45:23 radhermit Exp $
 
 EAPI="4"
 
@@ -18,11 +18,21 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples"
+IUSE="doc examples test"
 
 RDEPEND="dev-libs/openssl
 	>=dev-python/urwid-0.9.8"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? ( dev-python/pry )"
+
+src_test() {
+	cd test
+
+	testing() {
+		PYTHONPATH="../build-${PYTHON_ABI}/lib" "$(PYTHON)" "${EROOT}"/usr/bin/pry
+	}
+	python_execute_function testing
+}
 
 src_install() {
 	distutils_src_install
