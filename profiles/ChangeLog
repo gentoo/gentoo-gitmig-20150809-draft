@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6348 2012/03/24 10:41:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6349 2012/03/24 12:48:50 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2012; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask some packages for removal.
 
   24 Mar 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Revert my commit as lightdm-unity-greeter requires >=valac-0.15 which we
