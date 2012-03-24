@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.3.ebuild,v 1.2 2012/03/24 17:38:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.3.ebuild,v 1.3 2012/03/24 20:12:50 hwoarang Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/project/mod-security/${MY_PN}/${MY_PV}/${MY_P}.tar
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="geoip curl lua"
 
 DEPEND=">=dev-libs/libxml2-2.7.8
