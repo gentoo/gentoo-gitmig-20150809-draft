@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.32 2012/03/23 00:44:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.33 2012/03/24 11:40:48 blueness Exp $
+
+  24 Mar 2012; Anthony G. Basile <blueness@gentoo.org> -paxctl-0.6.ebuild:
+  Removed buggy version, bug #408377
 
 *paxctl-0.7 (23 Mar 2012)
 
