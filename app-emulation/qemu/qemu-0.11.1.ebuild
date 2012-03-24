@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1.ebuild,v 1.8 2012/03/18 13:41:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1.ebuild,v 1.9 2012/03/24 22:49:33 slyfox Exp $
 
 EAPI="2"
 
@@ -61,6 +61,7 @@ src_prepare() {
 	# Append CFLAGS while linking
 	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
+	epatch "${FILESDIR}"/${P}-cfg-pulse.patch #384847
 }
 
 src_configure() {

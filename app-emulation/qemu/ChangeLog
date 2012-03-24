@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.110 2012/03/20 14:57:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.111 2012/03/24 22:49:33 slyfox Exp $
+
+  24 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/qemu-0.11.1-cfg-pulse.patch, qemu-0.11.1-r1.ebuild, qemu-0.11.1.ebuild:
+  Fixed configure failure against pulseaudio-1.1 (bug #384847 by Ian Abbott,
+  fixed by Ian Abbott and Nathan Phillip Brink).
 
   20 Mar 2012; Doug Goldstein <cardoe@gentoo.org> qemu-1.0-r3.ebuild,
   qemu-1.0.1.ebuild:
