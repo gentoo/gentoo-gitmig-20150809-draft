@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/open-vm-tools-kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.23 2012/03/17 17:23:45 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.24 2012/03/24 12:55:45 vadimk Exp $
+
+*open-vm-tools-kmod-8.8.2.590212 (24 Mar 2012)
+*open-vm-tools-kmod-2012.03.13.651368 (24 Mar 2012)
+
+  24 Mar 2012; Vadim Kuznetsov <vadimk@gentoo.org>
+  +open-vm-tools-kmod-2012.03.13.651368.ebuild,
+  +open-vm-tools-kmod-8.8.2.590212.ebuild, -files/moduleparam.patch,
+  -files/setnlink.patch, -open-vm-tools-kmod-8.8.1.528969.ebuild:
+  version bump
 
   17 Mar 2012; Vadim Kuznetsov <vadimk@gentoo.org>
   -open-vm-tools-kmod-0.0.20111026.514583.ebuild:
