@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.2.5-r1.ebuild,v 1.1 2012/03/05 10:53:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.2.5-r1.ebuild,v 1.2 2012/03/24 19:15:12 grobian Exp $
 
 EAPI=4
 
@@ -32,6 +32,13 @@ pkg_postinst() {
 	local impl="$(eselect opengl show)"
 	if [[ -n "${impl}"  && "${impl}" != '(none)' ]] ; then
 		eselect opengl set "${impl}"
+	fi
+}
+
+src_prepare() {
+	# don't die on Darwin users
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		sed -i -e 's/libGL\.so/libGL.dylib/' opengl.eselect || die
 	fi
 }
 
