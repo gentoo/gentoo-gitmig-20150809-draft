@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Math-GMP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/ChangeLog,v 1.29 2012/03/09 08:56:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/ChangeLog,v 1.30 2012/03/25 16:39:43 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Math-GMP-2.04.ebuild,
+  Math-GMP-2.60.0.ebuild:
+  Drop ia64/sparc
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> Math-GMP-2.60.0.ebuild:
   x86 stable wrt bug #400173
