@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/webscarab
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/ChangeLog,v 1.15 2007/11/02 16:03:29 mrness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/ChangeLog,v 1.16 2012/03/25 07:25:05 radhermit Exp $
+
+  25 Mar 2012; Tim Harder <radhermit@gentoo.org> webscarab-20070504.ebuild:
+  Update HOMEPAGE (bug #387243).
 
   02 Nov 2007; Alin Năstac <mrness@gentoo.org> -webscarab-20060718.ebuild,
   webscarab-20070504.ebuild:
