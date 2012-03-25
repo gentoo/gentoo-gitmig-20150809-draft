@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.83.ebuild,v 1.10 2012/03/08 14:53:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.83.ebuild,v 1.11 2012/03/25 06:52:41 radhermit Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh ~sparc x86 ~sparc-fbsd ~x86-
 IUSE="cddb +cxx minimal static-libs"
 
 RDEPEND="cddb? ( >=media-libs/libcddb-1.0.1 )
-	>=sys-libs/ncurses-5.7-r7
+	!minimal? ( >=sys-libs/ncurses-5.7-r7 )
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	sys-devel/gettext

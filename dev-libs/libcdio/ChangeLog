@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.128 2012/03/08 14:53:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.129 2012/03/25 06:52:41 radhermit Exp $
+
+  25 Mar 2012; Tim Harder <radhermit@gentoo.org> libcdio-0.83.ebuild:
+  Only add ncurses dep when the minimal use flag is disabled (bug #409589).
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> libcdio-0.83.ebuild:
   Marking libcdio-0.83 ppc64 for bug 404649
