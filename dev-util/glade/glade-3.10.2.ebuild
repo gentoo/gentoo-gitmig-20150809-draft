@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.10.2.ebuild,v 1.7 2012/03/05 22:02:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.10.2.ebuild,v 1.8 2012/03/25 16:14:46 armin76 Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://glade.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="3.10"
-KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc +introspection python"
 
 RDEPEND=">=x11-libs/gtk+-3.0.2:3
