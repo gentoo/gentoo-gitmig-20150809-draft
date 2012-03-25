@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.89 2012/03/09 08:41:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.90 2012/03/25 16:16:24 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> ImageInfo-1.30.ebuild,
+  ImageInfo-1.310.0.ebuild, ImageInfo-1.320.0.ebuild:
+  Drop ia64/sparc keywords
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ImageInfo-1.310.0.ebuild:
