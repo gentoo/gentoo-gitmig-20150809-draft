@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hotot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.6 2011/10/15 09:23:18 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.7 2012/03/25 22:46:51 xmw Exp $
+
+  25 Mar 2012; Michael Weber <xmw@gentoo.org> hotot-9999.ebuild, metadata.xml:
+  Update live build, new VCS repo, cmake-utils, use flags (bug 407933)
 
 *hotot-0.9.6_p20111015 (15 Oct 2011)
 
