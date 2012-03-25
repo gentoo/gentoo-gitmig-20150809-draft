@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/subtitleripper-0.3.4-r3.ebuild,v 1.9 2009/05/31 01:15:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/subtitleripper-0.3.4-r3.ebuild,v 1.10 2012/03/25 15:49:53 armin76 Exp $
 
 inherit versionator eutils
 
@@ -9,7 +9,7 @@ MY_PV="$(replace_version_separator 2 "-")"
 DESCRIPTION="DVD Subtitle Ripper for Linux"
 HOMEPAGE="http://subtitleripper.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tgz"
 SLOT="0"
 IUSE=""
