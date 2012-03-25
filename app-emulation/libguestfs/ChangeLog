@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.11 2012/03/23 19:05:38 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.12 2012/03/25 10:40:16 maksbotan Exp $
+
+*libguestfs-1.16.12 (25 Mar 2012)
+
+  25 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> +libguestfs-1.16.12.ebuild:
+  Bump to 1.16.12, thanks to slepnoga
 
 *libguestfs-1.17.21 (23 Mar 2012)
 *libguestfs-1.16.11 (23 Mar 2012)
