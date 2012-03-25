@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.32.1-r2.ebuild,v 1.1 2012/03/25 09:12:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.32.1-r2.ebuild,v 1.2 2012/03/25 11:47:09 pacho Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~amd64-l
 
 #	>=media-gfx/eog-2.30.2
 
-RDEPEND="!<x11-libs/gtk+-3.2.4-r1
+RDEPEND="!<x11-libs/gtk+-3.2.4-r1:3
 	!gnome-base/gnome
 
 	>=dev-libs/glib-2.26.1:2
