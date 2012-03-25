@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.168 2012/03/23 17:06:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.169 2012/03/25 18:52:09 grobian Exp $
+
+  25 Mar 2012; Fabian Groffen <grobian@gentoo.org> qt-gui-4.7.4-r1.ebuild,
+  qt-gui-4.8.0-r3.ebuild:
+  Extend SSSE Darwin fix to all Intel-based targets
 
   23 Mar 2012; Davide Pesavento <pesa@gentoo.org> -qt-gui-4.7.4.ebuild,
   qt-gui-4.7.4-r1.ebuild, qt-gui-4.8.0-r3.ebuild:

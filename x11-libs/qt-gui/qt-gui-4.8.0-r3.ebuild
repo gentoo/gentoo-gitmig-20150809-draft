@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r3.ebuild,v 1.2 2012/03/23 17:06:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r3.ebuild,v 1.3 2012/03/25 18:52:09 grobian Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -130,7 +130,7 @@ src_configure() {
 	use gif || myconf+=" -no-gif"
 	use nas	&& myconf+=" -system-nas-sound"
 
-	[[ ${CHOST} == x86_64-apple-darwin* ]] && myconf+=" -no-ssse3" #367045
+	[[ ${CHOST} == *86*-apple-darwin* ]] && myconf+=" -no-ssse3" #367045
 
 	myconf+="
 		-system-libpng -system-libjpeg
