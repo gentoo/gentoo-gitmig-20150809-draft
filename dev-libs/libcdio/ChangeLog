@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.129 2012/03/25 06:52:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.130 2012/03/25 14:47:01 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> libcdio-0.83.ebuild:
+  alpha/ia64/sh/sparc stable wrt #404649
 
   25 Mar 2012; Tim Harder <radhermit@gentoo.org> libcdio-0.83.ebuild:
   Only add ncurses dep when the minimal use flag is disabled (bug #409589).
