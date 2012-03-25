@@ -5,6 +5,7 @@
 	<maintainer>
 		<email>volkmar@gentoo.org</email>
 		<name>Mounir Lamouri</name>
+		<description>Assign to herd and CC me</description>
 	</maintainer>
 	<use>
 		<flag name='20ms-frames'>enable 20ms frame size (default is 30ms). Some
