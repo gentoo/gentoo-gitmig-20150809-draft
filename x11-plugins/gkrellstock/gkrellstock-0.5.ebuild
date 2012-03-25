@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.5.ebuild,v 1.14 2007/03/12 16:29:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.5.ebuild,v 1.15 2012/03/25 15:16:06 armin76 Exp $
 
 inherit gkrellm-plugin
 
@@ -15,7 +15,7 @@ RDEPEND="dev-perl/libwww-perl
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc amd64"
+KEYWORDS="amd64 ppc x86"
 
 src_install () {
 	gkrellm-plugin_src_install

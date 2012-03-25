@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-plugins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.18 2011/08/24 18:40:07 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.19 2012/03/25 15:14:59 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> gkrellm-plugins-2.0.ebuild:
+  Drop sparc keywords
 
   24 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gkrellm-plugins-2.0.ebuild:

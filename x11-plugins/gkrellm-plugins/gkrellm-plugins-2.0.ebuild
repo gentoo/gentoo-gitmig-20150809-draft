@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-2.0.ebuild,v 1.9 2011/08/24 18:40:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-2.0.ebuild,v 1.10 2012/03/25 15:14:59 armin76 Exp $
 
 DESCRIPTION="emerge this package to install all of the gkrellm plugins"
 HOMEPAGE="http://www.gkrellm.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc sparc ~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="wifi"
 
 RDEPEND="!<app-admin/gkrellm-2
