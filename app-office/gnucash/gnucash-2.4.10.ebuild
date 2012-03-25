@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.10.ebuild,v 1.1 2012/02/13 10:31:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.10.ebuild,v 1.2 2012/03/25 09:01:45 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -38,7 +38,7 @@ RDEPEND=">=dev-libs/glib-2.13:2
 	x11-libs/pango
 	cxx? ( dev-cpp/gtkmm:2.4 )
 	ofx? ( >=dev-libs/libofx-0.9.1 )
-	hbci? ( >=net-libs/aqbanking-5[gtk]
+	hbci? ( >=net-libs/aqbanking-5[gtk,ofx?]
 		sys-libs/gwenhywfar[gtk]
 		chipcard? ( sys-libs/libchipcard )
 	)
