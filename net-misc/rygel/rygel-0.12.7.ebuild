@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.12.7.ebuild,v 1.1 2012/02/12 17:50:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.12.7.ebuild,v 1.2 2012/03/25 09:04:47 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,6 +29,7 @@ RDEPEND="
 	>=net-libs/gupnp-av-0.9
 	>=net-libs/libsoup-2.34:2.4
 	>=sys-libs/e2fsprogs-libs-1.41.3
+	x11-misc/shared-mime-info
 	sqlite? ( >=dev-db/sqlite-3.5:3 )
 	tracker? ( >=app-misc/tracker-0.8.17 )
 	transcode? (
