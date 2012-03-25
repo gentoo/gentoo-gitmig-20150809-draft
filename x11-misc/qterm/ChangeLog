@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.43 2012/03/24 17:02:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.44 2012/03/25 14:40:00 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> qterm-0.5.12.ebuild:
+  Marking qterm-0.5.12 ppc for bug 400531
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qterm-0.5.12.ebuild:
   x86 stable wrt bug #400531
