@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.82 2012/03/04 17:29:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.83 2012/03/25 17:59:08 pesa Exp $
+
+  25 Mar 2012; Davide Pesavento <pesa@gentoo.org>
+  qscintilla-python-2.4.5.ebuild, qscintilla-python-2.4.6.ebuild,
+  qscintilla-python-2.5.1.ebuild, qscintilla-python-2.6.1.ebuild,
+  qscintilla-python-2.6.ebuild:
+  Drop ~x86-fbsd because of missing keyword on dev-python/PyQt4.
 
 *qscintilla-python-2.6.1 (04 Mar 2012)
 
