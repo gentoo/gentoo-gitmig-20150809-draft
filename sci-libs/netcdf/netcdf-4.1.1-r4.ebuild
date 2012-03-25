@@ -1,10 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1-r4.ebuild,v 1.12 2011/06/21 15:08:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1-r4.ebuild,v 1.13 2012/03/25 10:35:22 jlec Exp $
 
 EAPI=3
 
-inherit autotools autotools-utils fortran-2
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils fortran-2
 
 DESCRIPTION="Scientific library and interface for array oriented data access"
 HOMEPAGE="http://www.unidata.ucar.edu/software/netcdf/"
@@ -57,7 +59,6 @@ src_prepare() {
 		sed -i -e "/\$(NC_TEST4)/ s/man4//" Makefile.am || die
 	fi
 	autotools-utils_src_prepare
-	eautoreconf
 }
 
 src_configure() {

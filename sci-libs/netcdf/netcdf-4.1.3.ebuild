@@ -1,10 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.1 2011/08/04 17:01:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.2 2012/03/25 10:35:22 jlec Exp $
 
 EAPI=4
 
-inherit autotools autotools-utils fortran-2
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils fortran-2
 
 DESCRIPTION="Scientific library and interface for array oriented data access"
 HOMEPAGE="http://www.unidata.ucar.edu/software/netcdf/"
@@ -15,7 +17,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 IUSE="cxx dap doc fortran hdf5 static-libs"
 
-RDEPEND="fortran? ( virtual/fortran )
+RDEPEND="
+	fortran? ( virtual/fortran )
 	dap? ( net-misc/curl )
 	hdf5? ( >=sci-libs/hdf5-1.8.6[zlib,szip,fortran?] )"
 
@@ -54,7 +57,6 @@ src_prepare() {
 		sed -i -e "/\$(NC_TEST4)/ s/man4//" Makefile.am || die
 	fi
 	autotools-utils_src_prepare
-	eautoreconf
 }
 
 src_configure() {
