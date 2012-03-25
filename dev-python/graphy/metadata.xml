@@ -5,5 +5,5 @@
 		<email>volkmar@gentoo.org</email>
 		<name>Mounir Lamouri</name>
 	</maintainer>
+	<herd>python</herd>
 </pkgmetadata>
-
