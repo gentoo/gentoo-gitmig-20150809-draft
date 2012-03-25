@@ -5,6 +5,7 @@
 	<maintainer>
 		<email>volkmar@gentoo.org</email>
 		<name>Mounir Lamouri</name>
+		<description>Assign to herd and CC me</description>
 	</maintainer>
 	<use>
 		<flag name='video'>Enable video support (display/capture)</flag>

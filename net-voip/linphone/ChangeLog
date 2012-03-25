@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.64 2012/01/06 15:06:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.65 2012/03/25 10:23:25 pacho Exp $
+
+  25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Set herd as primary maintainer as talked with volkmar.
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> linphone-3.4.3.ebuild:
   Marking linphone-3.4.3 ppc stable for bug 363311
