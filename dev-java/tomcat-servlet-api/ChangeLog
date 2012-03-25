@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.125 2012/03/12 15:17:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.126 2012/03/25 16:59:35 ago Exp $
+
+  25 Mar 2012; Agostino Sarubbo <ago@gentoo.org>
+  tomcat-servlet-api-7.0.26.ebuild:
+  Stable for amd64, wrt bug #409609
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org>
   tomcat-servlet-api-6.0.35.ebuild:
