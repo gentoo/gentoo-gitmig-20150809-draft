@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/cantata
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.1 2012/03/25 10:36:46 dilfridge Exp $
+
+*cantata-0.5.1 (25 Mar 2012)
+
+  25 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> +cantata-0.5.1.ebuild,
+  +metadata.xml:
+  New application, bug 408051. Ebuild by Pavlos Ratis.
+
