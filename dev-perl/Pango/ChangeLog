@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.24 2012/03/09 09:16:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.25 2012/03/25 16:56:33 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Pango-1.222.0.ebuild:
+  ia64/sparc stable wrt #400201
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> Pango-1.222.0.ebuild:
   x86 stable wrt bug #400201
