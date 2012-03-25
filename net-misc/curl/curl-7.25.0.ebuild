@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0.ebuild,v 1.1 2012/03/24 17:49:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0.ebuild,v 1.2 2012/03/25 20:57:15 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -72,7 +72,7 @@ src_configure() {
 
 	# These configuration options are organized alphabetically
 	# within each category.  This should make it easier if we ever
-	# decide to make any of these contingent on USE flags.  
+	# decide to make any of these contingent on USE flags.
 	# 1) protocols first.  To see them all do
 	# 'grep SUPPORT_PROTOCOLS configure.ac'
 	# 2) --enable/disable options second.
