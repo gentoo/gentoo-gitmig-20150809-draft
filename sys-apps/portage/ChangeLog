@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.989 2012/03/23 19:02:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.990 2012/03/25 15:43:20 maekke Exp $
+
+  25 Mar 2012; Markus Meier <maekke@gentoo.org> portage-2.1.10.49.ebuild:
+  arm stable, bug #408391
 
   23 Mar 2012; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Add die for dodoc failure.
