@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.69 2012/03/04 17:30:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.70 2012/03/25 18:05:49 pesa Exp $
+
+  25 Mar 2012; Davide Pesavento <pesa@gentoo.org> qscintilla-2.4.5.ebuild,
+  qscintilla-2.4.6.ebuild, qscintilla-2.5.1.ebuild, qscintilla-2.6.1.ebuild,
+  qscintilla-2.6.ebuild:
+  Drop ~x86-fbsd because of missing keyword on dev-python/qscintilla-python.
 
 *qscintilla-2.6.1 (04 Mar 2012)
 
