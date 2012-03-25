@@ -1,6 +1,6 @@
-diff -urN icu.old/source/layout/LESwaps.h icu/source/layout/LESwaps.h
---- icu.old/source/layout/LESwaps.h	2012-02-27 19:04:13.090199788 +0100
-+++ icu/source/layout/LESwaps.h	2012-02-27 19:07:02.046202727 +0100
+https://ssl.icu-project.org/trac/ticket/8764
+--- layout/LESwaps.h
++++ layout/LESwaps.h
 @@ -45,8 +45,8 @@
  public:
  
