@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13615 2012/03/25 03:37:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13616 2012/03/25 03:43:25 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,6 +39,7 @@
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Mar 2012)
 # This is now the GNOME 3.4 mask
 =dev-libs/glib-2.32*:2
+=dev-util/gdbus-codegen-2.32*
 =x11-libs/gtk+-3.4*:3
 # New clutter API breaks almost everything
 =media-libs/cogl-1.10*
