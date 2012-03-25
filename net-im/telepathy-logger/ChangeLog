@@ -1,6 +1,10 @@
 # ChangeLog for net-im/telepathy-logger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/ChangeLog,v 1.32 2012/03/05 22:10:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/ChangeLog,v 1.33 2012/03/25 17:04:13 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  telepathy-logger-0.2.12.ebuild:
+  alpha/ia64/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> telepathy-logger-0.2.12.ebuild:
   Marking telepathy-logger-0.2.12 ppc stable for bug 393007
