@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.131 2012/03/22 13:38:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.132 2012/03/25 15:31:51 tomka Exp $
+
+  25 Mar 2012; Thomas Kahle <tomka@gentoo.org> seamonkey-bin-2.8.ebuild:
+  marked x86 per bug 408161
 
   22 Mar 2012; Agostino Sarubbo <ago@gentoo.org> seamonkey-bin-2.8.ebuild:
   Stable for amd64, wrt bug #408161
