@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/NetAddr-IP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.41 2012/03/10 09:26:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.42 2012/03/25 16:32:33 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> NetAddr-IP-4.028.ebuild,
+  NetAddr-IP-4.58.0.ebuild, NetAddr-IP-4.59.0.ebuild:
+  s390/sh stable
 
 *NetAddr-IP-4.59.0 (10 Mar 2012)
 
