@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/skey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.24 2012/03/25 19:05:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.25 2012/03/25 20:44:17 ulm Exp $
+
+  25 Mar 2012; Ulrich Müller <ulm@gentoo.org> skey-1.1.5-r8.ebuild:
+  Fix SRC_URI.
 
   25 Mar 2012; Ulrich Müller <ulm@gentoo.org> -skey-1.1.5-r7.ebuild,
   -files/skey-1.1.5-binary-search.patch, -files/skey-1.1.5-bind-now.patch,

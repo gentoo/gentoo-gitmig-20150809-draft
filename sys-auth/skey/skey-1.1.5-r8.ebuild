@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r8.ebuild,v 1.9 2012/03/25 15:43:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r8.ebuild,v 1.10 2012/03/25 20:44:17 ulm Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit flag-o-matic eutils toolchain-funcs
 DESCRIPTION="Linux Port of OpenBSD Single-key Password System"
 HOMEPAGE="http://www.openbsd.org/faq/faq8.html#SKey"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
-	mirror://gentoo/skey-1.1.5-patches-2.tar.xz"
+	mirror://gentoo/${P}-patches-2.tar.xz"
 
 LICENSE="BSD MIT RSA-MD4 RSA-MD5 BEER-WARE"
 SLOT="0"
