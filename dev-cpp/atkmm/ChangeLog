@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/atkmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.30 2012/03/05 21:55:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.31 2012/03/25 14:55:51 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> atkmm-2.22.6.ebuild:
+  alpha/ia64/sh/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> atkmm-2.22.6.ebuild:
   Marking atkmm-2.22.6 ppc stable for bug 393007
