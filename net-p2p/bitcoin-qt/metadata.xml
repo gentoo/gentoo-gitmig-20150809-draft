@@ -10,9 +10,10 @@
 		<name>Luke Dashjr</name>
 	</maintainer>
 	<use>
-		<flag name="1stclassmsg">Enable First Class Messaging</flag>
-		<flag name="qrcode">Enable QR Code symbol support</flag>
+		<flag name='1stclassmsg'>Enable first-class Bitcoin message tools</flag>
+		<flag name='bip16'>Enable backported support for relaying and mining new BIP16 pay-to-script-hash transactions</flag>
 		<flag name='eligius'>Enable using lower fees accepted by Eligius</flag>
+		<flag name='qrcode'>Enable generation of QR Codes for receiving payments</flag>
 		<flag name='upnp'>Enable Universal Plug and Play</flag>
 	</use>
 </pkgmetadata>
