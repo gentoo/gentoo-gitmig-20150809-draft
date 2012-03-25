@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-pkgconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.40 2012/03/09 10:09:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.41 2012/03/25 17:33:46 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  extutils-pkgconfig-1.120.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #400285
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   extutils-pkgconfig-1.120.0.ebuild:
