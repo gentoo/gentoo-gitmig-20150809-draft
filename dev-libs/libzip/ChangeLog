@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.39 2012/03/23 14:37:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.40 2012/03/25 09:25:12 dilfridge Exp $
+
+  25 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> libzip-0.10.1.ebuild:
+  Fix autoconf/automake dependencies, bug 409451
 
   23 Mar 2012; Jeroen Roovers <jer@gentoo.org> libzip-0.10.1.ebuild:
   Stable for HPPA (bug #409117).

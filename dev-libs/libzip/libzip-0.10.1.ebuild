@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10.1.ebuild,v 1.3 2012/03/23 14:37:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10.1.ebuild,v 1.4 2012/03/25 09:25:12 dilfridge Exp $
 
 EAPI=4
 
 MY_P=${P/_}
+
+AUTOTOOLS_AUTORECONF=1
 inherit autotools-utils
 
 DESCRIPTION="Library for manipulating zip archives"
