@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.48 2012/02/19 10:09:27 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.49 2012/03/25 03:29:51 nirbheek Exp $
+
+*clutter-1.10.0 (25 Mar 2012)
+
+  25 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +clutter-1.10.0.ebuild:
+  Bump to 1.10.0, p.masked, do not use yet
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> clutter-1.8.4.ebuild:
   Keyworded on alpha, bug #379649
