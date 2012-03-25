@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-FillInForm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/ChangeLog,v 1.26 2012/03/08 15:18:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/ChangeLog,v 1.27 2012/03/25 15:22:21 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> HTML-FillInForm-2.0.0.ebuild,
+  HTML-FillInForm-2.100.0.ebuild:
+  Drop ia64/sparc keywords
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   HTML-FillInForm-2.100.0.ebuild:

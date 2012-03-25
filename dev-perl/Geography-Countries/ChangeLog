@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Geography-Countries
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.27 2012/03/08 15:14:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.28 2012/03/25 15:10:38 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  Geography-Countries-1.4.ebuild, Geography-Countries-2009041301.0.0.ebuild:
+  Drop ia64/sparc keywords
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Geography-Countries-2009041301.0.0.ebuild:

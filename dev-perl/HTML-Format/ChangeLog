@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Format
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/ChangeLog,v 1.23 2012/03/08 15:20:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/ChangeLog,v 1.24 2012/03/25 15:22:55 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> HTML-Format-2.04.ebuild,
+  HTML-Format-2.100.0.ebuild:
+  Drop ia64/sparc keywords
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   HTML-Format-2.100.0.ebuild:
