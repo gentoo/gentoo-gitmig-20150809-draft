@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.61 2012/03/24 17:04:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.62 2012/03/25 14:44:36 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> openjpeg-1.5.0.ebuild:
+  Marking openjpeg-1.5.0 ppc64 for bug 409203
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> openjpeg-1.5.0.ebuild:
   x86 stable wrt bug #409203
