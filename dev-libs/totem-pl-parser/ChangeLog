@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.112 2012/01/18 20:25:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.113 2012/03/25 15:51:23 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  totem-pl-parser-2.32.6-r1.ebuild:
+  alpha/ia64/sparc stable wrt #393007
 
   18 Jan 2012; Markus Meier <maekke@gentoo.org>
   totem-pl-parser-2.32.6-r1.ebuild:
