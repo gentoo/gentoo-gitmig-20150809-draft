@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.58 2012/03/05 21:56:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.59 2012/03/25 15:03:37 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> pangomm-2.28.4.ebuild:
+  alpha/ia64/sh/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> pangomm-2.28.4.ebuild:
   Marking pangomm-2.28.4 ppc stable for bug 393007
