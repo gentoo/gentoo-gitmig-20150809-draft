@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.430 2011/12/07 07:36:52 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.431 2012/03/25 09:16:09 pacho Exp $
+
+*gnome-2.32.1-r2 (25 Mar 2012)
+
+  25 Mar 2012; Pacho Ramos <pacho@gentoo.org> +gnome-2.32.1-r2.ebuild:
+  Force people to use a gtk+-3 fixed version for getting proper fallback theming
+  instead of relying on workarounds.
 
   07 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-2.32.1-r1.ebuild:
