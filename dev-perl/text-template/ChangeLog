@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/text-template
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.21 2012/03/09 09:57:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.22 2012/03/25 17:25:07 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> text-template-1.44.ebuild,
+  text-template-1.450.0.ebuild:
+  alpha stable and drop ia64/sparc wrt #400315
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   text-template-1.450.0.ebuild:
