@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.123 2012/03/23 07:37:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.124 2012/03/25 09:14:42 dilfridge Exp $
+
+  25 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdeplasma-addons-4.8.1.ebuild, metadata.xml:
+  Add useflags for ibus and fcitx, bug 409413
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> -kdeplasma-addons-4.8.0.ebuild:
   Remove KDE SC 4.8.0

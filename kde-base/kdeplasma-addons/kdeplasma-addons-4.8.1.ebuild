@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.8.1.ebuild,v 1.1 2012/03/06 23:35:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.8.1.ebuild,v 1.2 2012/03/25 09:14:42 dilfridge Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2 LGPL-2"
 
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="attica debug desktopglobe exif qalculate qwt scim semantic-desktop"
+IUSE="attica debug desktopglobe exif fcitx ibus qalculate qwt scim semantic-desktop"
 
 # krunner is only needed to generate dbus interface for lancelot
 COMMON_DEPEND="
@@ -25,6 +25,8 @@ COMMON_DEPEND="
 	attica? ( dev-libs/libattica )
 	desktopglobe? ( $(add_kdebase_dep marble) )
 	exif? ( $(add_kdebase_dep libkexiv2) )
+	fcitx? ( app-i18n/fcitx[dbus] )
+	ibus? ( app-i18n/ibus )
 	qalculate? ( sci-libs/libqalculate )
 	qwt? ( x11-libs/qwt:5 )
 	scim? ( app-i18n/scim )
@@ -50,6 +52,7 @@ src_configure() {
 		$(cmake-utils_use_with attica LibAttica)
 		$(cmake-utils_use_with desktopglobe Marble)
 		$(cmake-utils_use_with exif Kexiv2)
+		$(cmake-utils_use_with ibus)
 		$(cmake-utils_use_with qalculate)
 		$(cmake-utils_use_with qwt)
 		$(cmake-utils_use_with semantic-desktop KdepimLibs)
