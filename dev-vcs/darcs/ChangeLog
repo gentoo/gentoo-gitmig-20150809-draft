@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.27 2012/03/06 07:33:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.28 2012/03/25 19:27:36 slyfox Exp $
+
+  25 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.5.2-r1.ebuild,
+  darcs-2.5.2.ebuild:
+  Add missing dev-haskell/random depend. Noticed by Alexis Ballier in bug
+  #409655.
 
   06 Mar 2012; Mark Wright <gienah@gentoo.org> darcs-2.5.2.ebuild:
   Set the darcs-2.5.2 keywords the same as darcs-2.5.2-r1
