@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.122 2012/03/08 23:11:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.123 2012/03/25 15:55:06 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> octave-3.2.4-r1.ebuild,
+  octave-3.4.3-r1.ebuild, octave-3.6.0.ebuild, octave-3.6.1.ebuild:
+  Drop ia64/sparc
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> octave-3.2.4-r1.ebuild,
+  octave-3.4.3-r1.ebuild, octave-3.6.0.ebuild, octave-3.6.1.ebuild:
+  Drop alpha/sparc keywords
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> octave-3.4.3-r1.ebuild:
   Marking octave-3.4.3-r1 ppc64 for bug 402199

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.1.ebuild,v 1.1 2012/02/27 18:27:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.1.ebuild,v 1.2 2012/03/25 15:55:06 armin76 Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
 SLOT="0"
 IUSE="curl doc fftw +glpk gnuplot +imagemagick opengl +qhull +qrupdate
 	readline +sparse static-libs X zlib"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="dev-libs/libpcre
 	app-text/ghostscript-gpl
