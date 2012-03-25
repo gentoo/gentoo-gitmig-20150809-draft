@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Load
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.24 2012/03/24 13:14:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.25 2012/03/25 14:10:28 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> Class-Load-0.170.0.ebuild:
+  Marking Class-Load-0.170.0 ~ppc for bug 403413
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org> Class-Load-0.170.0.ebuild:
   Add Prefix keywords, bug #403413
