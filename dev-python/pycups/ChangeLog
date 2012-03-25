@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.49 2012/03/08 15:12:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.50 2012/03/25 15:04:05 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> pycups-1.9.60.ebuild:
+  alpha/ia64/sh/sparc stable wrt #400333
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> pycups-1.9.60.ebuild:
   Marking pycups-1.9.60 ppc64 for bug 400333
