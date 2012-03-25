@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.56 2012/03/05 22:00:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.57 2012/03/25 15:49:53 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> libunique-3.0.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> libunique-3.0.2.ebuild:
   Marking libunique-3.0.2 ppc stable for bug 393007
