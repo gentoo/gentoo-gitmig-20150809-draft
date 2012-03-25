@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/skey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.22 2012/03/08 21:26:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.23 2012/03/25 15:43:48 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> skey-1.1.5-r8.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #402041
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> skey-1.1.5-r8.ebuild:
   Marking skey-1.1.5-r8 ppc64 for bug 402041
