@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.21 2012/03/13 11:27:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.22 2012/03/25 19:42:56 a3li Exp $
+
+*plymouth-0.8.4 (25 Mar 2012)
+
+  25 Mar 2012; Alex Legler <a3li@gentoo.org>
+  -files/0.9_pre20111013-gentoo-fb-path.patch, +plymouth-0.8.4.ebuild,
+  -plymouth-0.9_pre20111013-r1.ebuild:
+  Version bump. Removing 0.9 pre snapshot as upstream decided to go on with the
+  0.8 series.
 
   13 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
   plymouth-0.8.3-r5.ebuild, plymouth-0.9_pre20111013-r1.ebuild:

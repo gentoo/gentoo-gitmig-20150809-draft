@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.9_pre20111013-r1.ebuild,v 1.4 2012/03/13 11:27:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.4.ebuild,v 1.1 2012/03/25 19:42:56 a3li Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit autotools-utils
 DESCRIPTION="Graphical boot animation (splash) and logger"
 HOMEPAGE="http://cgit.freedesktop.org/plymouth/"
 SRC_URI="
-	http://dev.gentoo.org/~aidecoe/distfiles/${CATEGORY}/${PN}/${P}.tar.bz2
+	http://www.freedesktop.org/software/plymouth/releases/${P}.tar.bz2
 	http://dev.gentoo.org/~aidecoe/distfiles/${CATEGORY}/${PN}/gentoo-logo.png"
 
 LICENSE="GPL-2"
@@ -35,9 +35,6 @@ RDEPEND="${CDEPEND}
 	"
 
 DOCS=(AUTHORS README TODO)
-PATCHES=(
-	"${FILESDIR}"/${PV}-gentoo-fb-path.patch
-	)
 
 src_prepare() {
 	autotools-utils_src_prepare
