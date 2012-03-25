@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qxmledit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.25 2012/03/24 17:25:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.26 2012/03/25 12:30:39 johu Exp $
+
+  25 Mar 2012; Johannes Huber <johu@gentoo.org> -qxmledit-0.4.9.ebuild:
+  Remove old.
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qxmledit-0.7.2.ebuild:
   x86 stable wrt bug #408913
