@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.13 2012/03/23 16:33:05 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.14 2012/03/25 20:34:42 fordfrog Exp $
+
+  25 Mar 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/3.2.7-build.xml.patch, -files/3.2.7-makefile-flags.patch,
+  -files/3.3.0-build.xml.patch, -jna-3.2.7.ebuild,
+  -files/3.3.0-makefile-flags.patch, -jna-3.3.0.ebuild:
+  Removed obsolete versions
 
   23 Mar 2012; Ralph Sennhauser <sera@gentoo.org> jna-3.4.0.ebuild:
   Fix running tests. #294289
