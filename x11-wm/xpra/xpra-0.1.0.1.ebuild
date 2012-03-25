@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.0.7.32.ebuild,v 1.1 2011/12/17 21:01:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.1.0.1.ebuild,v 1.1 2012/03/25 23:56:12 xmw Exp $
 
 EAPI=3
 
