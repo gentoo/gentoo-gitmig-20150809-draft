@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.10 2012/03/20 08:31:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.11 2012/03/25 08:48:33 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -30,18 +30,18 @@ gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl o
 +wmf word-perfect xbase +xml +xslt"
 
 # please do not sort here, order is same as in CMakeLists.txt
-CAL_FTS="kexi words flow plan stage tables krita karbon braindump"
+CAL_FTS="kexi words flow plan stage sheets krita karbon braindump"
 for cal_ft in ${CAL_FTS}; do
 	IUSE+=" calligra_features_${cal_ft}"
 done
 unset cal_ft
 
 REQUIRED_USE="
-	calligra_features_kexi? ( calligra_features_tables )
-	calligra_features_words? ( calligra_features_tables )
+	calligra_features_kexi? ( calligra_features_sheets )
+	calligra_features_words? ( calligra_features_sheets )
 	calligra_features_krita? ( eigen exif lcms )
 	calligra_features_plan? ( kdepim semantic-desktop )
-	calligra_features_tables? ( eigen )
+	calligra_features_sheets? ( eigen )
 	test? ( calligra_features_karbon )
 "
 
