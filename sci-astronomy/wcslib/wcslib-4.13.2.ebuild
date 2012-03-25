@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.12.ebuild,v 1.1 2012/03/02 05:41:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.13.2.ebuild,v 1.1 2012/03/25 09:24:08 xarthisius Exp $
 
 EAPI=4
 
@@ -18,7 +18,8 @@ IUSE="fortran fits pgplot static-libs"
 RDEPEND="fortran? ( virtual/fortran )
 	fits? ( sci-libs/cfitsio )
 	pgplot? ( sci-libs/pgplot )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/flex"
 
 pkg_setup() {
 	use fortran && fortran-2_pkg_setup
