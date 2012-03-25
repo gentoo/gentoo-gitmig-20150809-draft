@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.506 2012/03/23 16:02:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.507 2012/03/25 03:42:44 nirbheek Exp $
+
+*glib-2.32.0 (25 Mar 2012)
+
+  25 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/glib-2.31.x-external-gdbus-codegen.patch, +glib-2.32.0.ebuild:
+  Bump to 2.32, used by clutter and GNOME 3.4; package.masked because it breaks
+  a lot of stuff
 
   23 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.30.2.ebuild,
   glib-2.30.2-r1.ebuild, glib-2.30.3.ebuild:
