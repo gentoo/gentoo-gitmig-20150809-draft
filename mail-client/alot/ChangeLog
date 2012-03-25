@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/alot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.4 2012/03/25 08:33:46 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.5 2012/03/25 08:45:09 aidecoe Exp $
+
+  25 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> alot-0.2.1-r1.ebuild:
+  vcs-snapshot is used in the ebuild instead of custom src_unpack().
 
 *alot-0.2.1-r1 (25 Mar 2012)
 

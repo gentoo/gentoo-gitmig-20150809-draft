@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.2.1-r1.ebuild,v 1.1 2012/03/25 08:33:46 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.2.1-r1.ebuild,v 1.2 2012/03/25 08:45:09 aidecoe Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2:2.7"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[456] 3.*"
 
-inherit distutils versionator
+inherit distutils vcs-snapshot versionator
 
 MY_PV=$(replace_version_separator 2 '')
 MY_P="${PN}-${MY_PV}"
@@ -32,11 +32,6 @@ RDEPEND="
 	"
 
 DOCS="CUSTOMIZE FAQ"
-
-src_unpack() {
-	unpack ${A}
-	mv *-${PN}-* "${S}"
-}
 
 src_prepare() {
 	distutils_src_prepare
