@@ -1,6 +1,9 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.78 2012/03/16 19:02:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.79 2012/03/25 14:44:19 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> akonadi-server-1.7.1.ebuild:
+  Marking akonadi-server-1.7.1 ppc for bug 408485
 
   16 Mar 2012; Brent Baude <ranger@gentoo.org> akonadi-server-1.7.1.ebuild:
   Marking akonadi-server-1.7.1 ~ppc for bug 408485
