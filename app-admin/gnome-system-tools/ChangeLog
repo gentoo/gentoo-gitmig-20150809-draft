@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.112 2012/03/11 14:16:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.113 2012/03/25 14:40:48 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  gnome-system-tools-2.32.0-r2.ebuild:
+  alpha/ia64/sparc stable wrt #393007
 
 *gnome-system-tools-2.32.0-r3 (11 Mar 2012)
 
