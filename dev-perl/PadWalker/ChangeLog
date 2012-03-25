@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PadWalker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/ChangeLog,v 1.31 2012/03/09 09:13:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/ChangeLog,v 1.32 2012/03/25 16:55:06 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> PadWalker-1.9.ebuild,
+  PadWalker-1.920.0.ebuild, PadWalker-1.930.0.ebuild:
+  Drop sparc keywords
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   PadWalker-1.920.0.ebuild:
