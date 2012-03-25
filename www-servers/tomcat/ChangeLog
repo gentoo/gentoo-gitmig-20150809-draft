@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.287 2012/03/12 15:19:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.288 2012/03/25 16:58:40 ago Exp $
+
+  25 Mar 2012; Agostino Sarubbo <ago@gentoo.org> tomcat-7.0.26.ebuild:
+  Stable for amd64, wrt bug #409609
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> tomcat-6.0.35.ebuild:
   Marking tomcat-6.0.35 ppc64 for bug 395933
