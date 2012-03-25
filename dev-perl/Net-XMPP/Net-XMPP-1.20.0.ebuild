@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/Net-XMPP-1.20.0.ebuild,v 1.7 2012/03/09 09:05:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/Net-XMPP-1.20.0.ebuild,v 1.8 2012/03/25 16:47:23 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="XMPP Perl Library"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-perl/XML-Stream-1.22
