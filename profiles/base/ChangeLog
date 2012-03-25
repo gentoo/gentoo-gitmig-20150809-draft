@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.365 2012/03/25 00:08:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.366 2012/03/25 18:42:52 nelchael Exp $
+
+  25 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org> make.defaults:
+  Add PYTHON_TARGETS to USE_EXPAND.
 
   25 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
