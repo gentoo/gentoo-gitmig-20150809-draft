@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.13 2012/03/14 01:40:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.14 2012/03/25 03:44:23 nirbheek Exp $
+
+*gdbus-codegen-2.32.0 (25 Mar 2012)
+
+  25 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gdbus-codegen-2.32.0.ebuild:
+  Bump to 2.32, used by clutter and GNOME 3.4; package.masked because it breaks
+  a lot of stuff
 
 *gdbus-codegen-2.30.3 (14 Mar 2012)
 
