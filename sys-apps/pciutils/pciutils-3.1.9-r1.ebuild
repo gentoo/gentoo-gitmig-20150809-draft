@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.9-r1.ebuild,v 1.6 2012/03/15 07:45:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.9-r1.ebuild,v 1.7 2012/03/25 15:43:46 maekke Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="compress-db network-cron static-libs zlib"
 REQUIRED_USE="compress-db? ( zlib )"
 
