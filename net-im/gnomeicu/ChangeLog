@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.57 2012/03/05 22:10:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.58 2012/03/25 16:54:33 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> gnomeicu-0.99.16.ebuild:
+  alpha/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> gnomeicu-0.99.16.ebuild:
   Marking gnomeicu-0.99.16 ppc stable for bug 393007
