@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3-r1.ebuild,v 1.13 2012/03/25 16:04:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3-r1.ebuild,v 1.14 2012/03/25 19:40:37 naota Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ics.com/openmotif/${PV%.*}/${PV}/${P}.tar.gz"
 
 LICENSE="MOTIF MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc examples jpeg png static-libs unicode xft"
 # license allows distribution only for "open source operating systems"
 RESTRICT="!kernel_linux? (
@@ -29,7 +29,7 @@ RDEPEND="x11-libs/libXmu
 	png? ( >=media-libs/libpng-1.4 )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
-	dev-util/byacc
+	|| ( dev-util/byacc sys-freebsd/freebsd-ubin )
 	x11-misc/xbitmaps"
 RDEPEND="${RDEPEND}
 	doc? ( app-doc/openmotif-manual )"
