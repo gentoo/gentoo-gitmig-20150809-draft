@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.11.ebuild,v 1.1 2011/12/29 19:52:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.11.ebuild,v 1.2 2012/03/25 11:39:42 jlec Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils java-pkg-opt-2 python flag-o-matic toolchain-funcs
 
-DESCRIPTION="Library for Support Vector Mahcines"
+DESCRIPTION="Library for Support Vector Machines"
 HOMEPAGE="http://www.csie.ntu.edu.tw/~cjlin/libsvm/"
 SRC_URI="http://www.csie.ntu.edu.tw/~cjlin/libsvm/${P}.tar.gz"
 
