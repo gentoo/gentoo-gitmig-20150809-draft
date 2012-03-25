@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20110808-r1.ebuild,v 1.6 2012/03/21 06:15:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20110808-r1.ebuild,v 1.7 2012/03/25 22:59:25 naota Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs multilib
@@ -11,7 +11,7 @@ SRC_URI="http://miniupnp.free.fr/files/download.php?file=${P}.tar.gz -> ${P}.tar
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd"
 IUSE="static-libs"
 
 src_prepare() {
