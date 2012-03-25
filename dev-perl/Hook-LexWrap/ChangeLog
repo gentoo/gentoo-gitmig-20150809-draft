@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Hook-LexWrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hook-LexWrap/ChangeLog,v 1.28 2012/03/08 15:29:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hook-LexWrap/ChangeLog,v 1.29 2012/03/25 15:41:11 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Hook-LexWrap-0.22.ebuild,
+  Hook-LexWrap-0.240.0.ebuild:
+  Drop ia64/sparc keywords
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Hook-LexWrap-0.240.0.ebuild:
