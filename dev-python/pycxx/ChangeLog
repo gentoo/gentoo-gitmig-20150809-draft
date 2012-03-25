@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.38 2012/03/24 11:55:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.39 2012/03/25 14:43:23 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> pycxx-6.2.3-r3.ebuild:
+  Marking pycxx-6.2.3-r3 ppc for bug 409029
 
   24 Mar 2012; Agostino Sarubbo <ago@gentoo.org> pycxx-6.2.3-r3.ebuild:
   Stable for amd64, wrt bug #409029
