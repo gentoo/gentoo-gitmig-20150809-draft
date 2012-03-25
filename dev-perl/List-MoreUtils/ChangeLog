@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-MoreUtils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.37 2012/03/09 08:47:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.38 2012/03/25 16:25:14 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> List-MoreUtils-0.330.0.ebuild:
+  ia64/s390/sh/sparc stable wrt #400161
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   List-MoreUtils-0.330.0.ebuild:
