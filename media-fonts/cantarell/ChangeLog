@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/cantarell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/ChangeLog,v 1.8 2012/03/05 22:07:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/ChangeLog,v 1.9 2012/03/25 16:46:19 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> cantarell-0.0.7.ebuild:
+  alpha/ia64/sh/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> cantarell-0.0.7.ebuild:
   Marking cantarell-0.0.7 ppc stable for bug 393007
