@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.170 2012/03/23 14:27:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.171 2012/03/25 14:47:07 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-core-2011-r6.ebuild:
+  Marking texlive-core-2011-r6 ppc for bug 408993
 
   23 Mar 2012; Jeroen Roovers <jer@gentoo.org> texlive-core-2011-r6.ebuild:
   Stable for HPPA (bug #408993).
