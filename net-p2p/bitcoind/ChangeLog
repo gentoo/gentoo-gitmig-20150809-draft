@@ -1,6 +1,24 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.17 2012/03/17 23:27:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.18 2012/03/25 01:13:12 blueness Exp $
+
+*bitcoind-0.5.4_rc1 (25 Mar 2012)
+*bitcoind-0.5.3-r2 (25 Mar 2012)
+*bitcoind-0.5.0.6_rc1 (25 Mar 2012)
+*bitcoind-0.5.0.5-r1 (25 Mar 2012)
+*bitcoind-0.5.0.4-r1 (25 Mar 2012)
+*bitcoind-0.4.5_rc1 (25 Mar 2012)
+*bitcoind-0.4.4-r1 (25 Mar 2012)
+
+  25 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.4.4+bip16-eligius_sendfee.patch, -bitcoind-0.4.4.ebuild,
+  +bitcoind-0.4.4-r1.ebuild, +bitcoind-0.4.5_rc1.ebuild,
+  -bitcoind-0.5.0.4.ebuild, +bitcoind-0.5.0.4-r1.ebuild,
+  +bitcoind-0.5.0.5-r1.ebuild, +bitcoind-0.5.0.6_rc1.ebuild,
+  +files/0.5.0.5+bip16-eligius_sendfee.patch, bitcoind-0.5.1.ebuild,
+  -bitcoind-0.5.3-r1.ebuild, +bitcoind-0.5.3-r2.ebuild,
+  +bitcoind-0.5.4_rc1.ebuild, metadata.xml:
+  Updates to support BIP16 required by April 1, 2012
 
   17 Mar 2012; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.5.0.4.ebuild:
   Backport src_test() to 0.5.0.4

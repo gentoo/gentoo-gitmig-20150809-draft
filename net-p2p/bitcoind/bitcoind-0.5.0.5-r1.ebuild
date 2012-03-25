@@ -1,23 +1,27 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.3-r1.ebuild,v 1.1 2012/03/17 23:23:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.0.5-r1.ebuild,v 1.1 2012/03/25 01:13:12 blueness Exp $
 
 EAPI="4"
 
 DB_VER="4.8"
 
-inherit db-use eutils versionator toolchain-funcs
+inherit db-use eutils versionator
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
-	eligius? ( http://luke.dashjr.org/programs/bitcoin/files/0.5.2-eligius_sendfee.patch.xz )
+SRC_URI="http://gitorious.org/bitcoin/${PN}-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
+	http://luke.dashjr.org/programs/bitcoin/files/bip16/${PV}-Minimal-support-for-validating-BIP16-pay-to-script-h.patch.xz
+	bip16? ( http://luke.dashjr.org/programs/bitcoin/files/bip16/${PV}-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch.xz )
+	eligius? (
+		!bip16? ( http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.5.0.6rc1-eligius_sendfee.patch.xz )
+	)
 "
 
 LICENSE="MIT ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+eligius examples ssl upnp"
+IUSE="+bip16 +eligius examples ssl upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0
@@ -31,7 +35,7 @@ DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-S="${WORKDIR}/bitcoin-bitcoind-stable"
+S="${WORKDIR}/bitcoin-${PN}-stable"
 
 pkg_setup() {
 	local UG='bitcoin'
@@ -41,7 +45,13 @@ pkg_setup() {
 
 src_prepare() {
 	cd src || die
-	use eligius && epatch "${WORKDIR}/0.5.2-eligius_sendfee.patch"
+	epatch "${WORKDIR}/${PV}-Minimal-support-for-validating-BIP16-pay-to-script-h.patch"
+	if use bip16; then
+		epatch "${WORKDIR}/${PV}-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch"
+		use eligius && epatch "${FILESDIR}/${PV}+bip16-eligius_sendfee.patch"
+	else
+		use eligius && epatch "${WORKDIR}/0.5.0.6rc1-eligius_sendfee.patch"
+	fi
 }
 
 src_compile() {
@@ -70,12 +80,12 @@ src_compile() {
 	fi
 
 	cd src || die
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" ${PN}
+	emake -f makefile.unix "${OPTS[@]}" ${PN}
 }
 
 src_test() {
 	cd src || die
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" test_bitcoin
+	emake -f makefile.unix "${OPTS[@]}" test_bitcoin
 	./test_bitcoin || die 'Tests failed'
 }
 
