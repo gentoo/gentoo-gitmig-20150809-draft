@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-video-effects
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.5 2012/03/05 22:10:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.6 2012/03/25 16:54:23 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  gnome-video-effects-0.3.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org>
   gnome-video-effects-0.3.0.ebuild:
