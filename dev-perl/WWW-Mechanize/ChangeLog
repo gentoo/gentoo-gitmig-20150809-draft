@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.82 2012/02/29 09:16:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.83 2012/03/25 15:34:44 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> WWW-Mechanize-1.66.ebuild,
+  WWW-Mechanize-1.700.0.ebuild, WWW-Mechanize-1.710.0.ebuild,
+  WWW-Mechanize-1.720.0.ebuild:
+  Drop sparc keywords
 
 *WWW-Mechanize-1.720.0 (29 Feb 2012)
 

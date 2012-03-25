@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PPIx-Regexp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.28 2012/02/25 07:44:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.29 2012/03/25 15:36:40 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> PPIx-Regexp-0.25.0.ebuild,
+  PPIx-Regexp-0.26.0.ebuild:
+  Drop sparc keywords
 
 *PPIx-Regexp-0.26.0 (25 Feb 2012)
 
