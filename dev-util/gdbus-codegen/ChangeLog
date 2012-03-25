@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.14 2012/03/25 03:44:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.15 2012/03/25 15:12:45 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> gdbus-codegen-2.30.2.ebuild:
+  ia64/m68k/s390/sparc stable 
 
 *gdbus-codegen-2.32.0 (25 Mar 2012)
 
