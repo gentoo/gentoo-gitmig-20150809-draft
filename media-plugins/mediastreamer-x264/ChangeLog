@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mediastreamer-x264
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.16 2012/01/06 15:07:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.17 2012/03/25 10:16:23 pacho Exp $
+
+  25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Set herd as primary maintainer as talked with volkmar.
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> mediastreamer-x264-1.4.1.ebuild:
   Marking mediastreamer-x264-1.4.1 ppc stable for bug 363311
