@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.54 2012/03/24 17:14:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.55 2012/03/25 14:37:23 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> coverage-3.5.1.ebuild:
+  Marking coverage-3.5.1 ppc for bug 408787
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> coverage-3.5.1.ebuild:
   x86 stable wrt bug #408787
