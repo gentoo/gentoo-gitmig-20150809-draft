@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.29.02.ebuild,v 1.1 2012/03/25 08:21:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.29.02.ebuild,v 1.2 2012/03/25 20:56:35 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -62,7 +62,7 @@ src_prepare() {
 }
 
 src_configure() {
-	#Disable libwww support due GBZ #409549 and #320253	
+	#Disable libwww support due GBZ #409549 and #320253
 
 	econf --disable-wininet-client \
 		$(use_enable libxml2 libxml2-backend) \
