@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.367 2012/03/25 15:34:17 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.368 2012/03/25 23:15:42 polynomial-c Exp $
+
+*seamonkey-2.8-r1 (25 Mar 2012)
+
+  25 Mar 2012; Lars Wendler <polynomial-c@gentoo.org> +seamonkey-2.8-r1.ebuild:
+  Revbump for latest ff-11 patchset (v0.3).
 
   25 Mar 2012; Thomas Kahle <tomka@gentoo.org> seamonkey-2.8.ebuild:
   marked x86 per bug 408161
