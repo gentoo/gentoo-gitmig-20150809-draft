@@ -3,12 +3,12 @@
 <pkgmetadata>
 	<herd>voip</herd>
 	<maintainer>
-		<email>volkmar@gentoo.org</email>
-		<name>Mounir Lamouri</name>
-	</maintainer>
-	<maintainer>
 		<email>pva@gentoo.org</email>
 		<name>Peter Volkov</name>
+	</maintainer>
+	<maintainer>
+		<email>volkmar@gentoo.org</email>
+		<name>Mounir Lamouri</name>
 	</maintainer>
 	<use>
 		<flag name="amr">Use of AMR Narrow Band codec plugin</flag>
