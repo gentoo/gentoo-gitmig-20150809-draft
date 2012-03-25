@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mftrace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.67 2012/01/06 16:52:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.68 2012/03/25 07:42:25 radhermit Exp $
+
+  25 Mar 2012; Tim Harder <radhermit@gentoo.org> -mftrace-1.2.13.ebuild,
+  -mftrace-1.2.13-r1.ebuild, -files/mftrace-1.2.13-python-2.6.patch,
+  -mftrace-1.2.16.ebuild:
+  Remove old.
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> mftrace-1.2.17.ebuild:
   Marking mftrace-1.2.17 ppc for bug 390661
