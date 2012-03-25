@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.364 2012/03/24 23:24:14 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.365 2012/03/25 00:08:26 chithanh Exp $
+
+  25 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Fix cairo mask.
 
   24 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
