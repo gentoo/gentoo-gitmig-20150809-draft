@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.77 2012/03/09 09:58:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.78 2012/03/25 17:26:21 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> XML-DT-0.47.ebuild,
+  XML-DT-0.560.0.ebuild:
+  alpha stable and drop ia64/sparc keywords wrt #400265
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> XML-DT-0.560.0.ebuild:
   x86 stable wrt bug #400265
