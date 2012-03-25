@@ -1,6 +1,9 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.61 2012/03/05 21:53:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.62 2012/03/25 14:51:22 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> glabels-3.0.0.ebuild:
+  sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> glabels-3.0.0.ebuild:
   Marking glabels-3.0.0 ppc stable for bug 393007
