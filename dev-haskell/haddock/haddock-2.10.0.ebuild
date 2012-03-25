@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0.ebuild,v 1.1 2012/03/06 05:31:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0.ebuild,v 1.2 2012/03/25 14:25:09 slyfox Exp $
 
 EAPI="4"
 
 CABAL_FEATURES="bin lib profile haddock hscolour"
-inherit haskell-cabal pax-utils
+inherit eutils haskell-cabal pax-utils
 
 DESCRIPTION="A documentation-generation tool for Haskell libraries"
 HOMEPAGE="http://www.haskell.org/haddock/"
@@ -22,14 +22,22 @@ RDEPEND="dev-haskell/ghc-paths[profile?]
 		=dev-haskell/xhtml-3000.2*[profile?]
 		>=dev-lang/ghc-7.4"
 DEPEND="${RDEPEND}
-		>=dev-haskell/cabal-1.10"
+		>=dev-haskell/cabal-1.14"
 
 RESTRICT="test" # avoid depends on QC
 
 CABAL_EXTRA_BUILD_FLAGS="--ghc-options=-rtsopts"
 
-# haddock is disabled as Cabal seems to be buggy about building docs with itself.
-# however, other packages seem to work
+src_prepare() {
+	# we would like to avoid happy and alex depends
+	epatch "${FILESDIR}"/${P}-drop-tools.patch
+
+	for f in Lex Parse; do
+		rm "src/Haddock/$f."*
+		mv "dist/build/haddock/haddock-tmp/Haddock/$f.hs" src/Haddock/
+	done
+}
+
 src_configure() {
 	# create a fake haddock executable. it'll set the right version to cabal
 	# configure, but will eventually get overwritten in src_compile by
