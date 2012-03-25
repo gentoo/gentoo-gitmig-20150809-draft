@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-Map
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.26 2012/03/09 09:51:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.27 2012/03/25 17:20:26 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Unicode-Map-0.112.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #400255
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Unicode-Map-0.112.0.ebuild:
