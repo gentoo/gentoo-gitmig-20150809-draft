@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.61 2012/03/05 21:58:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.62 2012/03/25 15:42:13 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  gobject-introspection-1.30.0-r2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org>
   gobject-introspection-1.30.0-r2.ebuild:
