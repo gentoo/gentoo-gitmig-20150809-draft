@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/atool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.38 2012/03/09 09:38:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.39 2012/03/25 17:11:25 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> atool-0.37.0.ebuild,
+  atool-0.38.0.ebuild:
+  Drop sparc keywords
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> atool-0.38.0.ebuild:
   x86 stable wrt bug #405347
