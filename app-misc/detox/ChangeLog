@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/detox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.27 2012/02/15 18:41:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.28 2012/03/25 09:14:54 jlec Exp $
+
+*detox-1.2.0-r2 (25 Mar 2012)
+
+  25 Mar 2012; Justin Lecher <jlec@gentoo.org> +detox-1.2.0-r2.ebuild,
+  +files/detox-1.2.0-change-default-sequence-to-use-utf8-table.patch,
+  +files/detox-1.2.0-install-missing-file.patch:
+  Fix typo in manpage, #407923 &
+  http://sourceforge.net/tracker/?func=detail&aid=3034084&group_id=101612&atid=
+  630103 ; import some patches from debian, including moving default encoding
+  to utf8
 
 *detox-1.2.0-r1 (15 Feb 2012)
 
