@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/String-ShellQuote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-ShellQuote/ChangeLog,v 1.39 2012/03/09 09:26:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-ShellQuote/ChangeLog,v 1.40 2012/03/25 17:03:50 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> String-ShellQuote-1.03.ebuild,
+  String-ShellQuote-1.40.0.ebuild:
+  Drop ia64/sparc keywords
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   String-ShellQuote-1.40.0.ebuild:

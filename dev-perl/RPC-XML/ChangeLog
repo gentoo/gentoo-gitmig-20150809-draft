@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.65 2012/03/09 09:20:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.66 2012/03/25 16:59:44 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> RPC-XML-0.73.ebuild,
+  RPC-XML-0.740.0.ebuild, RPC-XML-0.760.0.ebuild:
+  Drop ia64/sparc keywords
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> RPC-XML-0.760.0.ebuild:
   x86 stable wrt bug #400209
