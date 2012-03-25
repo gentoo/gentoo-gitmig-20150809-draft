@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.234 2012/03/23 16:26:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.235 2012/03/25 15:46:04 maekke Exp $
+
+  25 Mar 2012; Markus Meier <maekke@gentoo.org> atk-2.2.0.ebuild:
+  arm stable, bug #407643
 
   23 Mar 2012; Jeroen Roovers <jer@gentoo.org> atk-2.2.0.ebuild:
   Stable for HPPA (bug #407643).
