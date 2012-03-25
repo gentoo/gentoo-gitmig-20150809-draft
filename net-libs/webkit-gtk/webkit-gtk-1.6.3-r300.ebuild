@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r300.ebuild,v 1.6 2012/03/17 19:22:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.3-r300.ebuild,v 1.7 2012/03/25 00:14:19 tetromino Exp $
 
 EAPI="4"
 
@@ -56,8 +56,9 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	dev-util/pkgconfig
 	dev-util/gtk-doc-am
-	sys-apps/paxctl
-	test? ( x11-themes/hicolor-icon-theme )
+	introspection? ( jit? ( sys-apps/paxctl ) )
+	test? ( x11-themes/hicolor-icon-theme
+		jit? ( sys-apps/paxctl ) )
 "
 
 S="${WORKDIR}/${MY_P}"
@@ -90,8 +91,10 @@ src_prepare() {
 	mkdir -p DerivedSources/ANGLE
 
 	# Build-time segfaults under PaX with USE="introspection jit", bug #404215
-	epatch "${FILESDIR}/${PN}-1.6.3-paxctl-introspection.patch"
-	cp "${FILESDIR}/gir-paxctl-lt-wrapper" "${S}/" || die
+	if use introspection && use jit; then
+		epatch "${FILESDIR}/${PN}-1.6.3-paxctl-introspection.patch"
+		cp "${FILESDIR}/gir-paxctl-lt-wrapper" "${S}/" || die
+	fi
 
 	# We need to reset some variables to prevent permissions problems and failures
 	# like https://bugs.webkit.org/show_bug.cgi?id=35471 and bug #323669
@@ -140,6 +143,9 @@ src_configure() {
 }
 
 src_test() {
+	# Prevents test failures on PaX systems
+	use jit && pax-mark m $(list-paxables Programs/unittests/test*) \
+		Programs/unittests/.libs/test*
 	unset DISPLAY
 	# Tests need virtualx, bug #294691, bug #310695
 	# Parallel tests sometimes fail
@@ -164,5 +170,5 @@ src_install() {
 	find "${D}" -name '*.la' -exec rm -f '{}' +
 
 	# Prevents crashes on PaX systems
-	pax-mark m "${ED}usr/bin/jsc-3"
+	use jit && pax-mark m "${ED}usr/bin/jsc-3"
 }
