@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/project
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/project/ChangeLog,v 1.1 2009/04/16 01:11:42 volkmar Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/project/ChangeLog,v 1.2 2012/03/25 10:10:54 pacho Exp $
+
+  25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Set herd as primary maintainer as told with volkmar.
 
 *project-1.4.1 (16 Apr 2009)
 
