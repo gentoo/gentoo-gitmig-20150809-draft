@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ImageSize
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ChangeLog,v 1.73 2012/03/09 08:42:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ChangeLog,v 1.74 2012/03/25 16:20:21 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> ImageSize-3.2.2.0.ebuild,
+  ImageSize-3.230.0.ebuild:
+  Drop ia64/sparc
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ImageSize-3.230.0.ebuild:
