@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.13.7.ebuild,v 1.1 2012/03/25 23:42:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.13.7.ebuild,v 1.2 2012/03/25 23:44:54 radhermit Exp $
 
 EAPI=4
 inherit toolchain-funcs libtool
@@ -46,7 +46,7 @@ src_configure() {
 
 	if [[ $(tc-arch) == amd64 || ${ARCH} == x64-* ]]; then
 		use sse && _cpu=x86-64
-	elif	use x86 && gcc-specs-pie ; then
+	elif use x86 && gcc-specs-pie ; then
 		# Don't use any mmx, 3dnow, sse and 3dnowext #bug 164504
 		_cpu=generic_fpu
 	else
