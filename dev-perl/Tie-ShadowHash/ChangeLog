@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tie-ShadowHash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-ShadowHash/ChangeLog,v 1.5 2012/03/09 09:44:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-ShadowHash/ChangeLog,v 1.6 2012/03/25 17:14:45 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Tie-ShadowHash-0.07.ebuild,
+  Tie-ShadowHash-1.0.0.ebuild:
+  Drop ia64/sparc keywords
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Tie-ShadowHash-1.0.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/Tree-Simple-1.17.ebuild,v 1.6 2008/11/18 15:41:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/Tree-Simple-1.17.ebuild,v 1.7 2012/03/25 17:17:49 armin76 Exp $
 
 # this is an RT dependency
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://search.cpan.org/~stevan/${P}/"
 SRC_TEST="do"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="amd64 ia64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="${RDEPEND}
 	>=virtual/perl-Module-Build-0.28"

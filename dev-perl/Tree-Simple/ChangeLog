@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tree-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.32 2012/03/09 09:47:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.33 2012/03/25 17:17:49 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Tree-Simple-1.17.ebuild,
+  Tree-Simple-1.180.0.ebuild:
+  Drop ia64/sparc keywords
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Tree-Simple-1.180.0.ebuild:
