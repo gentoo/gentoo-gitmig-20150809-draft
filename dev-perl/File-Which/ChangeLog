@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Which
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.29 2012/03/08 15:05:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.30 2012/03/25 14:57:15 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> File-Which-1.90.0.ebuild:
+  ia64/s390/sh/sparc stable wrt #400117
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   File-Which-1.90.0.ebuild:
