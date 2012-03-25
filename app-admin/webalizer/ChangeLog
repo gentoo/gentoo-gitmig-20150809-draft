@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.86 2012/03/18 19:36:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.87 2012/03/25 14:53:15 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> webalizer-2.21.02.ebuild:
+  Marking webalizer-2.21.02 ppc64 for bug 287931
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> webalizer-2.21.02.ebuild:
   sparc/x86 stable wrt #287931
