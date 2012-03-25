@@ -3,8 +3,9 @@
 <pkgmetadata>
   <herd>voip</herd>
   <maintainer>
-	  <email>volkmar@gentoo.org</email>
-	  <name>Mounir Lamouri</name>
+	<email>volkmar@gentoo.org</email>
+	<name>Mounir Lamouri</name>
+	<description>Assign to herd and CC me</description>
   </maintainer>
   <use>
 	  <flag name='srtp'>Add support for Secure RTP</flag>

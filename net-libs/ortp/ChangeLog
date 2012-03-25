@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.71 2012/01/06 15:05:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.72 2012/03/25 10:19:50 pacho Exp $
+
+  25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Set herd as primary maintainer as talked with volkmar.
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> ortp-0.16.5.ebuild:
   Marking ortp-0.16.5 ppc stable for bug 363311
