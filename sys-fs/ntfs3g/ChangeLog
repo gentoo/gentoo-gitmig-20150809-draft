@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.127 2012/03/24 17:17:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.128 2012/03/25 14:34:48 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> ntfs3g-2012.1.15-r1.ebuild:
+  Marking ntfs3g-2012.1.15-r1 ppc for bug 409273
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ntfs3g-2012.1.15-r1.ebuild:
