@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.3 2012/02/19 10:10:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.4 2012/03/25 02:26:18 nirbheek Exp $
+
+*cogl-1.10.0 (25 Mar 2012)
+
+  25 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +cogl-1.10.0.ebuild:
+  Bump to 1.10.0, p.masked, do not use yet
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> cogl-1.8.2.ebuild:
   Keyworded on alpha, bug #379649
