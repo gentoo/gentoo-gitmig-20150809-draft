@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.184 2012/03/24 20:44:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.185 2012/03/25 15:31:01 eva Exp $
+
+  25 Mar 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-python-common.eclass:
+  Replace old py-compile trick by the one from python eclass.
 
   24 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> kde4-meta.eclass:
   Make opengl dependency soft in kde-workspace (except kwin)
