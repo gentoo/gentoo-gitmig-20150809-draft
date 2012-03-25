@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.88 2012/03/13 09:50:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.89 2012/03/25 18:47:04 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> soprano-2.7.4.ebuild:
+  Marking soprano-2.7.4 ppc64 for bug 406013
 
 *soprano-2.7.5 (13 Mar 2012)
 
