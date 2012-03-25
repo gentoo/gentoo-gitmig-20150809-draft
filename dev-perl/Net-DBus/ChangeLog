@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DBus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.22 2012/03/09 09:02:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.23 2012/03/25 16:41:15 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Net-DBus-1.0.0.ebuild:
+  ia64/sparc stable wrt #400181
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> Net-DBus-1.0.0.ebuild:
   x86 stable wrt bug #400181
