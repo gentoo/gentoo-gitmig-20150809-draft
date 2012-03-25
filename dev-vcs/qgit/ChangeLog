@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/qgit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/ChangeLog,v 1.6 2012/03/25 14:41:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/ChangeLog,v 1.7 2012/03/25 18:46:03 ranger Exp $
+
+  25 Mar 2012; Brent Baude <ranger@gentoo.org> qgit-2.4.ebuild:
+  Marking qgit-2.4 ppc64 for bug 408709
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> qgit-2.4.ebuild:
   Marking qgit-2.4 ppc for bug 408709
