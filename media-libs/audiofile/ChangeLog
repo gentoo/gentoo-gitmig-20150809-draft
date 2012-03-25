@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.100 2012/03/05 22:09:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.101 2012/03/25 16:47:47 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> audiofile-0.3.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> audiofile-0.3.2.ebuild:
   Marking audiofile-0.3.2 ppc stable for bug 393007
