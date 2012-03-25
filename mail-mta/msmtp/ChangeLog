@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.123 2012/03/08 15:05:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.124 2012/03/25 14:56:08 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> msmtp-1.4.27.ebuild:
+  alpha/ia64/sparc stable wrt #402637
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> msmtp-1.4.27.ebuild:
   Marking msmtp-1.4.27 ppc64 for bug 402637
