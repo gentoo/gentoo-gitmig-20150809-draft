@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsrtp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.14 2011/08/29 18:42:29 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.15 2012/03/25 10:17:33 pacho Exp $
+
+  25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Set herd as primary maintainer as talked with volkmar.
 
   29 Aug 2011; Fabian Groffen <grobian@gentoo.org> libsrtp-1.4.4-r1.ebuild:
   Marked ~x64-macos
