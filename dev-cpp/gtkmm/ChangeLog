@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.223 2012/03/23 16:28:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.224 2012/03/25 16:23:22 maekke Exp $
+
+  25 Mar 2012; Markus Meier <maekke@gentoo.org> gtkmm-3.2.0.ebuild:
+  arm stable, bug #407643
 
   23 Mar 2012; Jeroen Roovers <jer@gentoo.org> gtkmm-3.2.0.ebuild:
   Stable for HPPA (bug #407643).
