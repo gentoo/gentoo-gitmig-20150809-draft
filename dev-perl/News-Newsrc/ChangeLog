@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/News-Newsrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.21 2012/03/09 09:06:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.22 2012/03/25 16:49:18 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> News-Newsrc-1.08.ebuild,
+  News-Newsrc-1.90.0.ebuild:
+  Drop ia64/sparc
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   News-Newsrc-1.90.0.ebuild:
