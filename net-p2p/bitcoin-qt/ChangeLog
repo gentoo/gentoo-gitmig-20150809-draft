@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.18 2012/03/25 01:46:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.19 2012/03/25 10:33:33 tomka Exp $
+
+  25 Mar 2012; Thomas Kahle <tomka@gentoo.org> bitcoin-qt-0.5.3.ebuild:
+  marked x86 per bug 407793
 
 *bitcoin-qt-0.5.4_rc1 (25 Mar 2012)
 *bitcoin-qt-0.5.3-r2 (25 Mar 2012)
