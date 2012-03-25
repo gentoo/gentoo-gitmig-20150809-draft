@@ -10,4 +10,3 @@
 		<flag name="python">Build swig-based python bindings</flag>
 	</use>
 </pkgmetadata>
-
