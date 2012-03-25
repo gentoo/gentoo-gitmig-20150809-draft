@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.82 2012/03/05 22:13:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.83 2012/03/25 17:09:35 armin76 Exp $
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> gtk-vnc-0.4.4.ebuild:
+  alpha/ia64/sparc stable wrt #393007
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> gtk-vnc-0.4.4.ebuild:
   Marking gtk-vnc-0.4.4 ppc stable for bug 393007
