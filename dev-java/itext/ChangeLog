@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/itext
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.91 2010/05/11 13:19:46 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.92 2012/03/26 07:21:27 sera Exp $
+
+*itext-5.2.0 (26 Mar 2012)
+
+  26 Mar 2012; Ralph Sennhauser <sera@gentoo.org> +itext-5.2.0.ebuild:
+  Version bump. #352246
 
   11 May 2010; Joseph Jezak <josejx@gentoo.org> itext-2.1.5.ebuild:
   Marked ppc/ppc64 stable for bug #275176.
