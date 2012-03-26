@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.14.2-r300.ebuild,v 1.1 2012/01/25 10:52:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.14.3-r300.ebuild,v 1.1 2012/03/26 09:00:00 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -23,6 +23,7 @@ RDEPEND=">=dev-libs/glib-2.28.0:2
 	>=dev-libs/libunique-1.1.2:1
 
 	media-libs/libpng:0
+	sys-libs/zlib
 	x11-libs/libSM
 
 	cdr? ( >=app-cdr/brasero-2.28
