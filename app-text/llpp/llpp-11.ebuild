@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-11.ebuild,v 1.1 2012/03/25 23:27:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-11.ebuild,v 1.2 2012/03/26 07:18:59 xmw Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs
 
 DESCRIPTION="a graphical PDF viewer which aims to superficially resemble less(1)"
 HOMEPAGE="http://repo.or.cz/w/llpp.git"
-SRC_URI=" http://repo.or.cz/w/llpp.git/snapshot/c51fadb15f683d7e5c0350e25a22aacb91e88b2a.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
