@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13617 2012/03/25 18:40:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13618 2012/03/26 02:32:57 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -51,6 +51,8 @@
 =media-libs/cogl-1.10*
 =media-libs/clutter-1.10*
 =media-libs/clutter-gtk-1.2*
+=media-libs/clutter-gst-1.5*
+=media-libs/clutter-gst-1.6*
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Mar 2012)
 # Causes font corruption, bug #409593.
