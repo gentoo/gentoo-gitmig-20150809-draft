@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.3.0.1-r1.ebuild,v 1.1 2011/12/13 04:15:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.3.0.1-r1.ebuild,v 1.2 2012/03/26 11:58:27 tupone Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -24,8 +24,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="X sdl"
 
-DEPEND="app-arch/unzip
-	X? ( x11-libs/libX11 )
+RDEPEND="X? ( x11-libs/libX11 )
 	!sdl? ( x11-libs/libX11 )
 	sdl? (
 		>=media-libs/libsdl-1.2.3[joystick,video]
@@ -34,6 +33,10 @@ DEPEND="app-arch/unzip
 		>=media-libs/sdl-image-1.2.2[gif]
 		media-libs/smpeg
 	)"
+DEPEND="${RDEPEND}
+	app-arch/unzip
+	X? ( x11-libs/libXt )
+	!sdl? ( x11-libs/libXt )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
