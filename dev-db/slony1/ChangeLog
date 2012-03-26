@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/slony1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.30 2012/03/09 11:07:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.31 2012/03/26 20:49:33 titanofold Exp $
+
+  26 Mar 2012; Aaron W. Swenson <titanofold@gentoo.org> -slony1-1.2.10.ebuild,
+  -slony1-1.2.22.ebuild, -slony1-2.0.6.ebuild, -slony1-2.0.7.ebuild,
+  -slony1-2.0.7-r1.ebuild:
+  Remove old versions that do not build against PostgreSQL 9.1.
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> slony1-2.1.0.ebuild:
   x86 stable wrt bug #406411
