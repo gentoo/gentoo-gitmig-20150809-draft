@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.4.0-r1.ebuild,v 1.3 2011/01/29 17:26:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.4.0-r1.ebuild,v 1.4 2012/03/26 10:04:16 johu Exp $
 
 EAPI=3
 KDE_LINGUAS="cs da de es ga lt nds pt pt_BR ru sv uk"
 inherit kde4-base
 
 DESCRIPTION="Simple touchpad management service for KDE"
-HOMEPAGE="http://synaptiks.lunaryorn.de/"
+HOMEPAGE="http://synaptiks.readthedocs.org"
 SRC_URI="http://bitbucket.org/lunar/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD-2"
