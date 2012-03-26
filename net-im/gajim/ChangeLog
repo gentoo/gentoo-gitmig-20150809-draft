@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.133 2012/03/18 14:59:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.134 2012/03/26 23:13:11 naota Exp $
+
+  26 Mar 2012; Naohiro Aota <naota@gentoo.org> gajim-0.15.ebuild:
+  Add ~x86-fbsd. #408687
 
 *gajim-0.15 (18 Mar 2012)
 
