@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6358 2012/03/25 18:42:11 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6359 2012/03/26 05:19:40 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  Add telepathy-farstream-0.2 to the GNOME 3 mask because it causes a blocker
+  with farsight2
 
   25 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org>
   +desc/python_targets.desc:
