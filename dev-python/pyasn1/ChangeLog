@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.32 2012/03/02 09:53:38 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.33 2012/03/26 22:16:50 naota Exp $
+
+  26 Mar 2012; Naohiro Aota <naota@gentoo.org> pyasn1-0.1.2.ebuild:
+  Add ~x86-fbsd. #408687
 
 *pyasn1-0.1.2 (02 Mar 2012)
 
