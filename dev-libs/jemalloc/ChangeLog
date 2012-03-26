@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.10 2012/02/26 04:05:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.11 2012/03/26 15:46:06 ranger Exp $
+
+  26 Mar 2012; Brent Baude <ranger@gentoo.org> jemalloc-2.2.5.ebuild:
+  Marking jemalloc-2.2.5 ppc64 for bug 398521
 
 *jemalloc-2.2.5-r1 (26 Feb 2012)
 
