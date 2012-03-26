@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/farstream
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/ChangeLog,v 1.1 2012/03/26 05:24:14 nirbheek Exp $
+
+*farstream-0.1.2 (26 Mar 2012)
+
+  26 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +farstream-0.1.2.ebuild,
+  +metadata.xml:
+  New package farstream, rename of farsight2
+
