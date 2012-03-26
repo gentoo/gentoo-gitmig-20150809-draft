@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.39 2012/03/25 16:02:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.40 2012/03/26 15:43:11 haubi Exp $
+
+  26 Mar 2012; Michael Haubenwallner <haubi@gentoo.org> byacc-20120115.ebuild:
+  keyword ~ppc-aix ~ia64-hpux ~x86-interix, bug#397819
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> byacc-1.9-r3.ebuild,
   byacc-20120115.ebuild:
