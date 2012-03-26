@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tinc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.31 2012/03/11 14:08:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.32 2012/03/26 01:44:07 blueness Exp $
+
+*tinc-1.0.18 (26 Mar 2012)
+
+  26 Mar 2012; Anthony G. Basile <blueness@gentoo.org> +tinc-1.0.18.ebuild,
+  +files/fix-ac-arg-enable.patch:
+  Version bump with patch to fix AC_ARG_ENABLE
 
 *tinc-1.0.17 (11 Mar 2012)
 
