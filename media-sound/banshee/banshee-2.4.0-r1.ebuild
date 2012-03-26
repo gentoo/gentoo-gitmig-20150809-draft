@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.4.0.ebuild,v 1.1 2012/03/24 10:11:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.4.0-r1.ebuild,v 1.1 2012/03/26 09:09:54 pacho Exp $
 
 EAPI="4"
 
@@ -55,7 +55,7 @@ RDEPEND=">=dev-lang/mono-2.4.3
 		media-plugins/gst-plugins-taglib:0.10
 	)
 	ios? (
-		>=media-libs/libgpod-0.7.95[mono]
+		>=media-libs/libgpod-0.8.2[mono]
 		gnome-base/gvfs[ios]
 	)
 	mtp? (
@@ -83,6 +83,12 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 src_prepare () {
+	# UPnPServerSource: Fix crash when getting the root object (bgo#672744)
+	epatch "${FILESDIR}/${P}-upnp-crash.patch"
+
+	# Fix build against libgpod-sharp 0.8.2
+	epatch "${FILESDIR}/${PN}-2.4.0-libgpod-082.patch"
+
 	# Don't build BPM extension when not wanted
 	if ! use bpm; then
 		sed -i -e 's:Banshee.Bpm:$(NULL):g' src/Extensions/Makefile.am || die
