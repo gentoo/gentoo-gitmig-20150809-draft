@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.9-r2.ebuild,v 1.2 2011/11/17 17:05:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.9-r2.ebuild,v 1.3 2012/03/26 12:09:57 jlec Exp $
 
 EAPI=2
 
@@ -40,6 +40,7 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.3.5.1-system-hyphen.patch"
+	"${FILESDIR}/${P}-cups-1.5.patch"
 	)
 
 DOCS="AUTHORS ChangeLog* LINKS NEWS README TODO TRANSLATION"
