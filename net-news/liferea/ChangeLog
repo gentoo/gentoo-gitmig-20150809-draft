@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.218 2012/03/08 23:07:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.219 2012/03/26 20:50:31 vostorga Exp $
+
+*liferea-1.8.3 (26 Mar 2012)
+
+  26 Mar 2012; Víctor Ostorga <vostorga@gentoo.org> +liferea-1.8.3.ebuild:
+  Upstream stable 1.8.3 release, which fixes sqlite3 performance
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> liferea-1.8.0.ebuild:
   Marking liferea-1.8.0 ppc64 for bug 403901
