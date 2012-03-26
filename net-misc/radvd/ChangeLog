@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/radvd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.77 2011/12/30 17:29:07 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.78 2012/03/26 00:29:51 xmw Exp $
+
+*radvd-1.8.5 (26 Mar 2012)
+
+  26 Mar 2012; Michael Weber <xmw@gentoo.org> +radvd-1.8.5.ebuild:
+  Version bump, thanks Conrad Kostecki (bug 404515)
 
   30 Dec 2011; <swift@gentoo.org> radvd-1.8.3.ebuild:
   Adding SELinux dependency towards sec-policy/selinux-radvd, fixes bug #396221
