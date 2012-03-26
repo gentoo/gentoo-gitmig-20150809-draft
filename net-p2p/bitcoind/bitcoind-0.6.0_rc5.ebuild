@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.6.0_rc4.ebuild,v 1.1 2012/03/17 23:23:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.6.0_rc5.ebuild,v 1.1 2012/03/26 22:42:16 blueness Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ inherit db-use eutils versionator toolchain-funcs
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="https://nodeload.github.com/bitcoin/bitcoin/tarball/v0.6.0rc4 -> bitcoin-v${PV}.tgz
+SRC_URI="https://nodeload.github.com/bitcoin/bitcoin/tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
 "
 
 LICENSE="MIT ISC"
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-S="${WORKDIR}/bitcoin-bitcoin-e52182e"
+S="${WORKDIR}/bitcoin-bitcoin-5b22438"
 
 pkg_setup() {
 	local UG='bitcoin'

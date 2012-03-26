@@ -1,8 +1,8 @@
 diff --git a/src/main.cpp b/src/main.cpp
-index f78133b..0574f4c 100644
+index d795ca1..d7f5da8 100644
 --- a/src/main.cpp
 +++ b/src/main.cpp
-@@ -464,8 +464,10 @@ bool CTransaction::AcceptToMemoryPool(CTxDB& txdb, bool fCheckInputs, bool* pfMi
+@@ -472,8 +472,10 @@ bool CTransaction::AcceptToMemoryPool(CTxDB& txdb, bool fCheckInputs, bool* pfMi
      if ((int64)nLockTime > std::numeric_limits<int>::max())
          return error("AcceptToMemoryPool() : not accepting nLockTime beyond 2038 yet");
  
@@ -14,7 +14,7 @@ index f78133b..0574f4c 100644
          return error("AcceptToMemoryPool() : nonstandard transaction type");
  
      // Do we already have it?
-@@ -520,7 +522,7 @@ bool CTransaction::AcceptToMemoryPool(CTxDB& txdb, bool fCheckInputs, bool* pfMi
+@@ -528,7 +530,7 @@ bool CTransaction::AcceptToMemoryPool(CTxDB& txdb, bool fCheckInputs, bool* pfMi
          }
  
          // Check for non-standard pay-to-script-hash in inputs
@@ -23,7 +23,7 @@ index f78133b..0574f4c 100644
              return error("AcceptToMemoryPool() : nonstandard transaction input");
  
          // Note: if you modify this code to accept non-standard transactions, then
-@@ -530,6 +532,9 @@ bool CTransaction::AcceptToMemoryPool(CTxDB& txdb, bool fCheckInputs, bool* pfMi
+@@ -538,6 +540,9 @@ bool CTransaction::AcceptToMemoryPool(CTxDB& txdb, bool fCheckInputs, bool* pfMi
          int64 nFees = GetValueIn(mapInputs)-GetValueOut();
          unsigned int nSize = ::GetSerializeSize(*this, SER_NETWORK);
  
@@ -33,7 +33,7 @@ index f78133b..0574f4c 100644
          // Don't accept it if it can't get into a block
          if (nFees < GetMinFee(1000, true, GMF_RELAY))
              return error("AcceptToMemoryPool() : not enough fees");
-@@ -559,6 +564,8 @@ bool CTransaction::AcceptToMemoryPool(CTxDB& txdb, bool fCheckInputs, bool* pfMi
+@@ -567,6 +572,8 @@ bool CTransaction::AcceptToMemoryPool(CTxDB& txdb, bool fCheckInputs, bool* pfMi
              }
          }
  
@@ -42,7 +42,7 @@ index f78133b..0574f4c 100644
          // Check against previous transactions
          // This is done last to help prevent CPU exhaustion denial-of-service attacks.
          if (!ConnectInputs(mapInputs, mapUnused, CDiskTxPos(1,1,1), pindexBest, false, false))
-@@ -3070,6 +3077,9 @@ CBlock* CreateNewBlock(CReserveKey& reservekey)
+@@ -3136,6 +3143,9 @@ CBlock* CreateNewBlock(CReserveKey& reservekey)
              // Priority is sum(valuein * age) / txsize
              dPriority /= ::GetSerializeSize(tx, SER_NETWORK);
  
@@ -52,7 +52,7 @@ index f78133b..0574f4c 100644
              if (porphan)
                  porphan->dPriority = dPriority;
              else
-@@ -3108,7 +3118,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey)
+@@ -3174,7 +3184,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey)
  
              // Transaction fee required depends on block size
              bool fAllowFree = (nBlockSize + nTxSize < 4000 || CTransaction::AllowFree(dPriority));
@@ -62,10 +62,10 @@ index f78133b..0574f4c 100644
              // Connecting shouldn't fail due to dependency on other memory pool transactions
              // because we're already processing them in order of dependency
 diff --git a/src/main.h b/src/main.h
-index 908ada7..1179f19 100644
+index 6be5a8b..f217648 100644
 --- a/src/main.h
 +++ b/src/main.h
-@@ -573,6 +573,42 @@ public:
+@@ -551,6 +551,42 @@ public:
  
          unsigned int nBytes = ::GetSerializeSize(*this, SER_NETWORK);
          unsigned int nNewBlockSize = nBlockSize + nBytes;
@@ -108,7 +108,7 @@ index 908ada7..1179f19 100644
          int64 nMinFee = (1 + (int64)nBytes / 1000) * nBaseFee;
  
          if (fAllowFree)
-@@ -598,6 +634,8 @@ public:
+@@ -576,6 +612,8 @@ public:
                  if (txout.nValue < CENT)
                      nMinFee = nBaseFee;
  
@@ -118,14 +118,14 @@ index 908ada7..1179f19 100644
          if (nBlockSize != 1 && nNewBlockSize >= MAX_BLOCK_SIZE_GEN/2)
          {
 diff --git a/src/net.cpp b/src/net.cpp
-index f0ea550..5d81c48 100644
+index 37e73c4..5f6b5d9 100644
 --- a/src/net.cpp
 +++ b/src/net.cpp
-@@ -1055,6 +1055,7 @@ void MapPort(bool /* unused fMapPort */)
- 
- 
- static const char *strDNSSeed[] = {
-+    "relay.eligius.st",
-     "bitseed.xf2.org",
-     "dnsseed.bluematt.me",
-     "seed.bitcoin.sipa.be",
+@@ -1052,6 +1052,7 @@ void MapPort(bool /* unused fMapPort */)
+ // The first name is used as information source for addrman.
+ // The second name should resolve to a list of seed addresses.
+ static const char *strDNSSeed[][2] = {
++    {"eligius.st", "relay.eligius.st"},
+     {"xf2.org", "bitseed.xf2.org"},
+     {"bluematt.me", "dnsseed.bluematt.me"},
+     {"bitcoin.sipa.be", "seed.bitcoin.sipa.be"},
