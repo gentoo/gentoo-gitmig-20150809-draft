@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-11.ebuild,v 1.2 2012/03/26 07:18:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-11.ebuild,v 1.3 2012/03/26 07:23:31 xmw Exp $
 
 EAPI=4
 
@@ -44,7 +44,7 @@ src_compile() {
 	ocamlopt.opt -c -o wsi.cmx wsi.ml || die
 	ocamlopt.opt -c -o parser.cmx parser.ml || die
 	ocamlopt.opt -c -o main.cmx -I +lablGL main.ml || die
-    ocamlopt.opt -o llpp -I +lablGL \
+	ocamlopt.opt -o llpp -I +lablGL \
 		str.cmxa unix.cmxa lablgl.cmxa link.o \
 	    -cclib "${mycclib}" help.cmx parser.cmx wsi.cmx main.cmx || die
 }
