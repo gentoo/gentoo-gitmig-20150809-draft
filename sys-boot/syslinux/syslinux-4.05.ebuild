@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.05.ebuild,v 1.3 2012/02/17 09:58:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.05.ebuild,v 1.4 2012/03/26 21:47:07 chithanh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -59,5 +59,5 @@ src_compile() {
 
 src_install() {
 	emake INSTALLSUBDIRS=utils INSTALLROOT="${D}" MANDIR=/usr/share/man install || die
-	dodoc README NEWS doc/* || die
+	dodoc README NEWS doc/*.txt || die
 }
