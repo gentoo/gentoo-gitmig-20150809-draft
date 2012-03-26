@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.1 2012/02/16 18:57:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.2 2012/03/26 16:28:01 nelchael Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI="4"
 
-inherit distutils
+PYTHON_COMPAT="python2_5 python2_6 python2_7 pypy1_7 pypy1_8"
+
+inherit python-distutils-ng
 
 DESCRIPTION="Google's Python argument parsing library."
 HOMEPAGE="http://code.google.com/p/python-gflags/"
@@ -21,9 +20,8 @@ IUSE=""
 DEPEND="dev-python/setuptools"
 RDEPEND=""
 
-PYTHON_MODNAME="gflags.py"
-
-src_prepare() {
-	distutils_src_prepare
-	sed -e 's/data_files=\[("bin", \["gflags2man.py"\])\]/scripts=\["gflags2man.py"\]/' -i setup.py
+python_prepare_all() {
+	sed \
+		-e 's/data_files=\[("bin", \["gflags2man.py"\])\]/scripts=\["gflags2man.py"\]/' \
+		-i setup.py || die "sed failed"
 }
