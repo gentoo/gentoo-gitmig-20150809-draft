@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.33.ebuild,v 1.1 2012/03/23 16:17:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.33.ebuild,v 1.2 2012/03/26 18:11:12 cardoe Exp $
 
 EAPI="2"
 
@@ -213,6 +213,11 @@ pkg_setup() {
 		MODULE_NAMES="nvidia(video:${S}/kernel)"
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} \
 		SYSOUT=${KV_OUT_DIR} CC=$(tc-getBUILD_CC)"
+		# linux-mod_src_compile calls set_arch_to_kernel, which
+		# sets the ARCH to x86 but NVIDIA's wrapping Makefile
+		# expects x86_64 or i386 and then converts it to x86
+		# later on in the build process
+		BUILD_FIXES="ARCH=$(uname -m | sed -e 's/i.86/i386/')"
 		mtrr_check
 		lockdep_check
 	fi
@@ -282,13 +287,6 @@ src_prepare() {
 		sed -i \
 			-e 's:-Wsign-compare::g' \
 			"${NV_SRC}"/Makefile.kbuild
-
-		epatch "${FILESDIR}"/256.35-unified-arch.patch
-
-		# Fix building with Linux 3.3.x wrt #408841
-		sed -i \
-			-e '/CFLAGS="$CFLAGS/s:-I$SOURCES/arch/x86/include:& -I$OUTPUT/arch/x86/include/generated:' \
-			kernel/conftest.sh || die
 
 		# If you set this then it's your own fault when stuff breaks :)
 		use custom-cflags && sed -i "s:-O:${CFLAGS}:" "${NV_SRC}"/Makefile.*
@@ -419,14 +417,14 @@ src_install() {
 
 	# Helper Apps
 	exeinto /opt/bin/
-	dobin ${NV_EXEC}/nvidia-xconfig || die
-	dobin ${NV_EXEC}/nvidia-debugdump || die
+	doexe ${NV_EXEC}/nvidia-xconfig || die
+	doexe ${NV_EXEC}/nvidia-debugdump || die
 	if use gtk; then
-		dobin ${NV_EXEC}/nvidia-settings || die
+		doexe ${NV_EXEC}/nvidia-settings || die
 	fi
-	dobin ${NV_EXEC}/nvidia-bug-report.sh || die
+	doexe ${NV_EXEC}/nvidia-bug-report.sh || die
 	if use kernel_linux; then
-		dobin ${NV_EXEC}/nvidia-smi || die
+		doexe ${NV_EXEC}/nvidia-smi || die
 	fi
 
 	# Desktop entries for nvidia-settings
@@ -509,9 +507,7 @@ src_install-libs() {
 }
 
 pkg_preinst() {
-	if use kernel_linux; then
-		linux-mod_pkg_postinst
-	fi
+	use kernel_linux && linux-mod_pkg_preinst
 
 	# Clean the dynamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
@@ -525,13 +521,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if use kernel_linux; then
-		linux-mod_pkg_postinst
-	fi
+	use kernel_linux && linux-mod_pkg_postinst
 
 	# Switch to the nvidia implementation
-	eselect opengl set --use-old nvidia
-	eselect opencl set --use-old nvidia
+	"${ROOT}"/usr/bin/eselect opengl set --use-old nvidia
+	"${ROOT}"/usr/bin/eselect opencl set --use-old nvidia
 
 	echo
 	elog "You must be in the video group to use the NVIDIA device"
@@ -565,9 +559,11 @@ pkg_postinst() {
 	fi
 }
 
+pkg_prerm() {
+	"${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
+}
+
 pkg_postrm() {
-	if use kernel_linux; then
-		linux-mod_pkg_postrm
-	fi
-	eselect opengl set --use-old xorg-x11
+	use kernel_linux && linux-mod_pkg_postrm
+	"${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
 }
