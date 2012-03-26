@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.5 2012/03/26 19:12:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.6 2012/03/26 20:33:42 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -64,27 +64,6 @@ case "${EAPI}" in
 		die "Unsupported EAPI=${EAPI} (unknown) for python-distutils-ng.eclass" ;;
 esac
 
-# @FUNCTION: _python-distutils-ng_generate_depend
-# @USAGE: implementation
-# @RETURN: Package atom of a Python implementation for *DEPEND.
-# @DESCRIPTION:
-# This function returns the full package atom of a Python implementation.
-#
-# `implementation' has to be one of the valid values for PYTHON_COMPAT.
-_python-distutils-ng_generate_depend() {
-	local impl="${1/_/.}"
-	case "${impl}" in
-		python?.?)
-			echo "dev-lang/python:${impl: -3}" ;;
-		jython?.?)
-			echo "dev-java/jython:${impl: -3}" ;;
-		pypy?.?)
-			echo "dev-python/pypy:${impl: -3}" ;;
-		*)
-			die "Unsupported implementation: ${1}" ;;
-	esac
-}
-
 # @FUNCTION: _python-distutils-ng_get_binary_for_implementation
 # @USAGE: implementation
 # @RETURN: Full path to Python binary for given implementation.
@@ -120,7 +99,18 @@ unset required_use_str
 
 for impl in ${PYTHON_COMPAT}; do
 	IUSE+=" python_targets_${impl}"
-	dep_str="python_targets_${impl}? ( $(_python-distutils-ng_generate_depend "${impl}") )"
+	dep_str="${impl/_/.}"
+	case "${dep_str}" in
+		python?.?)
+			dep_str="dev-lang/python:${impl: -3}" ;;
+		jython?.?)
+			dep_str="dev-java/jython:${impl: -3}" ;;
+		pypy?.?)
+			dep_str="dv-python/pypy:${impl: -3}" ;;
+		*)
+			die "Unsupported implementation: ${impl}" ;;
+	esac
+	dep_str="python_targets_${impl}? ( ${dep_str} )"
 
 	if [[ "${PYTHON_OPTIONAL}" = "yes" ]]; then
 		RDEPEND="${RDEPEND} python? ( ${dep_str} )"

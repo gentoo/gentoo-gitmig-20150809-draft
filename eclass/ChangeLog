@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.190 2012/03/26 19:12:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.191 2012/03/26 20:33:42 nelchael Exp $
+
+  26 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org>
+  python-distutils-ng.eclass:
+  _python-distutils-ng_generate_depend was used only in one place, inline it.
 
   26 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org>
   python-distutils-ng.eclass:
