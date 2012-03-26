@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0.ebuild,v 1.2 2012/03/25 20:57:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0.ebuild,v 1.3 2012/03/26 00:13:23 blueness Exp $
 
 EAPI="4"
 
@@ -15,12 +15,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="ares gnutls idn ipv6 kerberos ldap nss ssh ssl static-libs test threads"
 
+#Note: If we enable more than one of gnutls, ssl or nss, then we will only
+#use one.  gnutls takes priority over ssl which takes priority over nss.
 RDEPEND="ldap? ( net-nds/openldap )
 	gnutls? ( net-libs/gnutls dev-libs/libgcrypt app-misc/ca-certificates )
 	ssl? ( !gnutls? ( dev-libs/openssl ) )
 	nss? ( !gnutls? ( !ssl? ( dev-libs/nss app-misc/ca-certificates ) ) )
 	idn? ( net-dns/libidn )
-	ares? ( >=net-dns/c-ares-1.6 )
+	ares? ( net-dns/c-ares )
 	kerberos? ( virtual/krb5 )
 	ssh? ( net-libs/libssh2 )
 	sys-libs/zlib"
@@ -57,6 +59,7 @@ src_prepare() {
 src_configure() {
 	local myconf=()
 
+	#gnutls takes priority over ssl which takes priority over nss --- see RDEPENED
 	if use gnutls; then
 		myconf+=( --without-ssl --with-gnutls    --without-nss )
 		myconf+=( --with-ca-bundle="${EPREFIX}"/etc/ssl/certs/ca-certificates.crt )
@@ -103,11 +106,11 @@ src_configure() {
 		--enable-manual \
 		--enable-nonblocking \
 		--enable-proxy \
-		--enable-soname-bump \
+		--disable-soname-bump \
 		--disable-sspi \
 		$(use_enable static-libs static) \
 		$(use_enable threads threaded-resolver) \
-		--enable-versioned-symbols \
+		--disable-versioned-symbols \
 		$(use_with idn libidn) \
 		$(use_with kerberos gssapi "${EPREFIX}"/usr) \
 		--without-krb4 \
