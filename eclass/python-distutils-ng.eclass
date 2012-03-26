@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.4 2012/03/26 18:27:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.5 2012/03/26 19:12:28 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -75,11 +75,11 @@ _python-distutils-ng_generate_depend() {
 	local impl="${1/_/.}"
 	case "${impl}" in
 		python?.?)
-			echo "dev-lang/${impl::-3}:${impl: -3}" ;;
+			echo "dev-lang/python:${impl: -3}" ;;
 		jython?.?)
-			echo "dev-java/${impl::-3}:${impl: -3}" ;;
+			echo "dev-java/jython:${impl: -3}" ;;
 		pypy?.?)
-			echo "dev-python/${impl::-3}:${impl: -3}" ;;
+			echo "dev-python/pypy:${impl: -3}" ;;
 		*)
 			die "Unsupported implementation: ${1}" ;;
 	esac
