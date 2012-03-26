@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qtscriptgenerator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.16 2012/01/20 17:03:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.17 2012/03/26 11:07:55 johu Exp $
+
+  26 Mar 2012; Johannes Huber <johu@gentoo.org>
+  qtscriptgenerator-0.1.0-r2.ebuild:
+  Remove unnecessary die's in eapi4 by Maurizio Camisaschi <k01@live.it>.
 
   20 Jan 2012; Johannes Huber <johu@gentoo.org>
   qtscriptgenerator-0.1.0-r2.ebuild, qtscriptgenerator-0.1.0.ebuild:
