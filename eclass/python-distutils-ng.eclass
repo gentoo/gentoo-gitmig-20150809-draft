@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.3 2012/03/26 16:24:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.4 2012/03/26 18:27:58 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -107,19 +107,20 @@ _python-distutils-ng_get_binary_for_implementation() {
 
 required_use_str=""
 for impl in ${PYTHON_COMPAT}; do
-	required_use_str="${required_use_str} python_targets_${impl}"
+	required_use_str+=" python_targets_${impl}"
 done
 required_use_str=" || ( ${required_use_str} )"
 if [[ "${PYTHON_OPTIONAL}" = "yes" ]]; then
-	IUSE+="python"
+	IUSE+=" python"
 	REQUIRED_USE+=" python? ( ${required_use_str} )"
 else
 	REQUIRED_USE+=" ${required_use_str}"
 fi
+unset required_use_str
 
 for impl in ${PYTHON_COMPAT}; do
-	IUSE+=" python_targets_${impl} "
-	local dep_str="python_targets_${impl}? ( $(_python-distutils-ng_generate_depend "${impl}") )"
+	IUSE+=" python_targets_${impl}"
+	dep_str="python_targets_${impl}? ( $(_python-distutils-ng_generate_depend "${impl}") )"
 
 	if [[ "${PYTHON_OPTIONAL}" = "yes" ]]; then
 		RDEPEND="${RDEPEND} python? ( ${dep_str} )"
@@ -128,6 +129,7 @@ for impl in ${PYTHON_COMPAT}; do
 		RDEPEND="${RDEPEND} ${dep_str}"
 		DEPEND="${DEPEND} ${dep_str}"
 	fi
+	unset dep_str
 done
 
 _PACKAGE_SPECIFIC_S="${S#${WORKDIR}/}"

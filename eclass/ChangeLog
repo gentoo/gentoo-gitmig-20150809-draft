@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.188 2012/03/26 16:24:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.189 2012/03/26 18:27:58 nelchael Exp $
+
+  26 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org>
+  python-distutils-ng.eclass:
+  Small fixes: use +=, cleanup used variables, white space.
 
   26 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org>
   python-distutils-ng.eclass:
