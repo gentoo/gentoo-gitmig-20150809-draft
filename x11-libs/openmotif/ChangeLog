@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.276 2012/03/26 18:18:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.277 2012/03/26 19:07:30 ulm Exp $
 
   26 Mar 2012; Ulrich Müller <ulm@gentoo.org> -openmotif-2.3.3.ebuild,
   openmotif-2.3.3-r1.ebuild:
@@ -1068,10 +1068,10 @@
   Added PROVIDE.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *openmotif-2.2.2-r1 (28 Aug 2002)
 
-  28 Aug 2002; Nick Hadaway <raker@gentoo.org> 
+  28 Aug 2002; Nick Hadaway <raker@gentoo.org>
   openmotif-2.2.2-r1.ebuild, files/digest-openmotif-2.2.2-r1,
   files/site.def.2.2.2-r1 :
   Now installs in /usr/X11R6 instead of /usr.  If you are missing
