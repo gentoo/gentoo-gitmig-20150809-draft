@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/pigz
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.17 2011/12/18 20:56:54 spatz Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.18 2012/03/26 05:44:20 radhermit Exp $
+
+*pigz-2.2.4 (26 Mar 2012)
+
+  26 Mar 2012; Tim Harder <radhermit@gentoo.org> +pigz-2.2.4.ebuild:
+  Version bump (bug #408655).
 
 *pigz-2.1.7 (18 Dec 2011)
 
