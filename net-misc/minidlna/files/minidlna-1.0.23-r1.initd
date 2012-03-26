@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/files/minidlna.initd,v 1.1 2010/12/29 16:59:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/files/minidlna-1.0.23-r1.initd,v 1.1 2012/03/26 00:23:14 xmw Exp $
 
 depend() {
 	need net
@@ -11,6 +11,10 @@ start() {
 	ebegin "Starting MiniDLNA"
 	local params=""
 	local stop=0
+
+	checkpath -q -d -m 0755 -o ${M_USER:-nobody}:${M_GROUP:-nogroup} /var/run/minidlna
+
+	params="$params -P /var/run/minidlna/minidlna.pid"
 
 	if [[ "${RESCAN}" = "true" || "{$RESCAN}" = yes ]]; then
 		params="$params -R"
@@ -36,6 +40,7 @@ start() {
 		eend 1
 	else
 		start-stop-daemon --start \
+			--user ${M_USER:-nobody} --group ${M_GROUP:-nogroup} \
 			--exec /usr/sbin/minidlna -- ${params}
 		eend $?
 	fi

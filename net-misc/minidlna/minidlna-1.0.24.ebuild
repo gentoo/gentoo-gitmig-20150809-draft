@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.22.ebuild,v 1.3 2011/11/14 01:48:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.24.ebuild,v 1.1 2012/03/26 00:23:13 xmw Exp $
 
 EAPI=4
 
@@ -39,10 +39,15 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install install-conf
 
-	newconfd "${FILESDIR}"/${PN}.confd ${PN}
-	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	newconfd "${FILESDIR}"/${PN}-1.0.23.confd ${PN}
+	newinitd "${FILESDIR}"/${PN}-1.0.23-r1.initd ${PN}
 
 	dodoc README TODO
+}
+
+pkg_postinst() {
+	ewarn "minidlna no longer runs as root:root, per bug 394373."
+	ewarn "Please edit /etc/conf.d/${PN} to suit your needs."
 }
