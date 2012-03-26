@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/mt_gtk_client-0.1.98.ebuild,v 1.8 2011/01/24 22:25:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/mt_gtk_client-0.1.98.ebuild,v 1.9 2012/03/26 07:34:31 tupone Exp $
 
 EAPI=2
 inherit games
@@ -29,7 +29,9 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	mv "${D}"/${GAMES_DATADIR}/locale "${D}"/usr/share/ || die
+	if [[ -d "${D}"/${GAMES_DATADIR}/locale ]] ; then
+		mv "${D}"/${GAMES_DATADIR}/locale "${D}"/usr/share/ || die
+	fi
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	prepgamesdirs
 }
