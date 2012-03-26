@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.5.2.ebuild,v 1.3 2011/04/09 16:39:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.5.2.ebuild,v 1.4 2012/03/26 08:50:04 tupone Exp $
 
 EAPI=2
 inherit eutils python games
@@ -35,6 +35,7 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-system-libs.patch \
+		"${FILESDIR}"/${P}-gcc46.patch \
 		"${FILESDIR}"/${P}-wavpack.patch
 
 	# fix includes
