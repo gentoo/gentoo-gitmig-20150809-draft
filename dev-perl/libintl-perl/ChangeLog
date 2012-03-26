@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.35 2012/03/24 16:17:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.36 2012/03/26 22:44:13 naota Exp $
+
+  26 Mar 2012; Naohiro Aota <naota@gentoo.org> libintl-perl-1.200.0.ebuild:
+  Add ~x86-fbsd. #408399
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org> libintl-perl-1.200.0.ebuild:
   Add Prefix keywords, bug #408399
