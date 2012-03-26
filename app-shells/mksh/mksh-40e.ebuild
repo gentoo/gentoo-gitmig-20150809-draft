@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-40e.ebuild,v 1.1 2012/03/25 01:37:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-40e.ebuild,v 1.2 2012/03/26 08:00:35 patrick Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ ARC4_VERSION="1.14"
 SRC_URI="http://www.mirbsd.org/MirOS/dist/mir/mksh/${PN}-R${PV}.cpio.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 DEPEND="app-arch/cpio"
 RDEPEND=""
