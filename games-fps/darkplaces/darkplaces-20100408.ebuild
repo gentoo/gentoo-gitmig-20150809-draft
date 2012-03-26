@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20100408.ebuild,v 1.4 2011/02/25 22:22:27 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20100408.ebuild,v 1.5 2012/03/26 13:48:17 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -32,9 +32,7 @@ UIRDEPEND="virtual/jpeg
 	alsa? ( media-libs/alsa-lib )
 	sdl? ( media-libs/libsdl )
 	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	x11-libs/libXext
+	x11-libs/libXpm
 	x11-libs/libXxf86dga
 	x11-libs/libXxf86vm"
 UIDEPEND="x11-proto/xextproto
