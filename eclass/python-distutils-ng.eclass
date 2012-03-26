@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.1 2012/03/25 18:48:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.2 2012/03/26 06:12:53 jlec Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -114,7 +114,7 @@ if [[ "${PYTHON_OPTIONAL}" = "yes" ]]; then
 	IUSE+="python"
 	REQUIRED_USE+=" python? ( ${required_use_str} )"
 else
-	REQUIRED_USE+="${required_use_str}"
+	REQUIRED_USE+=" ${required_use_str}"
 fi
 
 for impl in ${PYTHON_COMPAT}; do
