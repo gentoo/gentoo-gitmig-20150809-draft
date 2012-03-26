@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.104 2012/03/20 01:12:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.105 2012/03/26 02:53:24 radhermit Exp $
+
+*feh-2.5 (26 Mar 2012)
+
+  26 Mar 2012; Tim Harder <radhermit@gentoo.org> +feh-2.5.ebuild:
+  Version bump.
 
   20 Mar 2012; Tim Harder <radhermit@gentoo.org> -feh-1.16.2.ebuild,
   -feh-2.2.ebuild:
