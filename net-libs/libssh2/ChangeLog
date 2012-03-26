@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.55 2012/03/25 18:37:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.56 2012/03/26 23:17:40 radhermit Exp $
+
+  26 Mar 2012; Tim Harder <radhermit@gentoo.org> libssh2-1.4.0.ebuild,
+  +files/libssh2-1.4.0-pkgconfig.patch:
+  Remove LDFLAGS from pkg-config Libs (bug #409661).
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> libssh2-1.4.0.ebuild:
   Marking libssh2-1.4.0 ppc64 for bug 409601

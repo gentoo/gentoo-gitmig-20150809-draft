@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.0.ebuild,v 1.5 2012/03/25 18:37:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.0.ebuild,v 1.6 2012/03/26 23:17:40 radhermit Exp $
 
 EAPI="4"
 
@@ -21,6 +21,8 @@ DEPEND="!gcrypt? ( dev-libs/openssl )
 RDEPEND="${DEPEND}"
 
 DOCS=( README )
+
+PATCHES=( "${FILESDIR}"/${P}-pkgconfig.patch )
 
 src_configure() {
 	local myeconfargs
