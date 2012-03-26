@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.366 2012/03/25 18:42:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.367 2012/03/26 20:22:31 swift Exp $
+
+  26 Mar 2012; <swift@gentoo.org> package.mask:
+  Masking out new selinux-sssd package for non-SELinux systems
 
   25 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org> make.defaults:
   Add PYTHON_TARGETS to USE_EXPAND.
