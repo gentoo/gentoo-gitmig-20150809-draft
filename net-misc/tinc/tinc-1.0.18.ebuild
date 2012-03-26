@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.18.ebuild,v 1.1 2012/03/26 01:44:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.18.ebuild,v 1.2 2012/03/26 12:40:17 blueness Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.tinc-vpn.org/packages/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86 ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="+lzo vde +zlib"
+IUSE="+lzo uml vde +zlib"
 
 DEPEND=">=dev-libs/openssl-0.9.7
 	lzo? ( dev-libs/lzo:2 )
@@ -27,15 +27,12 @@ src_prepare() {
 }
 
 src_configure() {
-	# The new DeviceType option can now be used to select UML or VDE
-	# devices without having to recompile.  So we'll set UML by default
-	# since it doesn't pull in any deps, but VDE needs net-misc/vde,
-	# so we'll keep that contingent on a USE flag.
 	econf \
 		--enable-jumbograms \
-		--enable-uml \
-		$(use_enable vde) \
+		--disable-tunemu  \
 		$(use_enable lzo) \
+		$(use_enable uml) \
+		$(use_enable vde) \
 		$(use_enable zlib)
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tinc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.32 2012/03/26 01:44:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.33 2012/03/26 12:40:17 blueness Exp $
+
+  26 Mar 2012; Anthony G. Basile <blueness@gentoo.org> tinc-1.0.18.ebuild,
+  files/fix-ac-arg-enable.patch:
+  Force disable tunemu, fix bug #409749
 
 *tinc-1.0.18 (26 Mar 2012)
 
