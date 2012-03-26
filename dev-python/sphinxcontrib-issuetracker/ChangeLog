@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/sphinxcontrib-issuetracker
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-issuetracker/ChangeLog,v 1.1 2012/03/26 09:40:14 johu Exp $
+
+*sphinxcontrib-issuetracker-0.9 (26 Mar 2012)
+
+  26 Mar 2012; Johannes Huber <johu@gentoo.org> +metadata.xml,
+  +sphinxcontrib-issuetracker-0.9.ebuild:
+  Initial commit. Imported from kde overlay. Written by Chris Reffett
+  <geekboy72@gmail.com>.
+
