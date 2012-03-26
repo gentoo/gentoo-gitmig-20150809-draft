@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.19 2012/03/25 10:33:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.20 2012/03/26 22:54:24 blueness Exp $
+
+*bitcoin-qt-0.6.0_rc5 (26 Mar 2012)
+
+  26 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  files/9999-eligius_sendfee.patch, -bitcoin-qt-0.6.0_rc4.ebuild,
+  +bitcoin-qt-0.6.0_rc5.ebuild:
+  Bump 0.6.0 to rc5
 
   25 Mar 2012; Thomas Kahle <tomka@gentoo.org> bitcoin-qt-0.5.3.ebuild:
   marked x86 per bug 407793
