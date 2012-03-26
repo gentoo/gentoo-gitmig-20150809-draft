@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.3.ebuild,v 1.11 2011/12/31 07:40:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.3.ebuild,v 1.12 2012/03/26 22:01:17 vapier Exp $
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -86,7 +86,7 @@ src_install() {
 	case $(tc-arch) in
 		ppc*)  devs="hvc0 hvsi0 ttyPSC0";;
 		hppa)  devs="ttyB0";;
-		arm)   devs="ttyFB0 ttySAC0 ttySAC1 ttymxc0 ttymxc1 ttyO0 ttyO1 ttyO2";;
+		arm)   devs="ttyFB0 ttySAC0 ttySAC1 ttySAC2 ttySAC3 ttymxc0 ttymxc1 ttyO0 ttyO1 ttyO2";;
 		sh)    devs="ttySC0 ttySC1";;
 	esac
 	[[ -n ${devs} ]] && printf '%s\n' ${devs} >> "${D}"/etc/securetty
