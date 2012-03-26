@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/telepathy-farstream
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/ChangeLog,v 1.4 2012/01/14 17:47:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/ChangeLog,v 1.5 2012/03/26 05:28:39 nirbheek Exp $
+
+*telepathy-farstream-0.2.3 (26 Mar 2012)
+
+  26 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +telepathy-farstream-0.2.3.ebuild:
+  Bump, uses farstream instead of farsight2. Masked because it blocks farsight2
+  and everything hasn't been ported over yet.
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org>
   telepathy-farstream-0.1.2.ebuild:
