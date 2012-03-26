@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/aplpy-0.9.8.ebuild,v 1.1 2012/03/25 09:39:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/aplpy-0.9.8.ebuild,v 1.2 2012/03/26 05:01:28 mr_bones_ Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SRC_URI="https://github.com/downloads/${PN}/${PN}/${MYP}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 RDEPEND="dev-python/numpy
 	dev-python/matplotlib
