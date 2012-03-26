@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.275 2012/03/25 19:40:37 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.276 2012/03/26 18:18:42 ulm Exp $
+
+  26 Mar 2012; Ulrich Müller <ulm@gentoo.org> -openmotif-2.3.3.ebuild,
+  openmotif-2.3.3-r1.ebuild:
+  Re-add previously dropped keywords for prefix, bug 397819. Remove old.
 
   25 Mar 2012; Naohiro Aota <naota@gentoo.org> openmotif-2.3.3-r1.ebuild:
   Add alternative dependecy for byacc on FreeBSD. Add ~x86-fbsd. #397819
