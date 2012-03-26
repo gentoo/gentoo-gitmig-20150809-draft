@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Crypt_CHAP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_CHAP/ChangeLog,v 1.32 2012/03/25 18:45:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_CHAP/ChangeLog,v 1.33 2012/03/26 19:28:17 jer Exp $
+
+  26 Mar 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Crypt_CHAP-1.5.0.ebuild:
+  Stable for HPPA (bug #408743).
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> PEAR-Crypt_CHAP-1.5.0.ebuild:
   Marking PEAR-Crypt_CHAP-1.5.0 ppc64 for bug 408743
