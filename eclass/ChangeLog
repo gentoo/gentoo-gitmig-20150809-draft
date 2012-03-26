@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.187 2012/03/26 06:12:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.188 2012/03/26 16:24:31 nelchael Exp $
+
+  26 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org>
+  python-distutils-ng.eclass:
+  Include only valid values in REQUIRED_USE.
 
   26 Mar 2012; Justin Lecher <jlec@gentoo.org> python-distutils-ng.eclass:
   Add missing space to new python.eclass
