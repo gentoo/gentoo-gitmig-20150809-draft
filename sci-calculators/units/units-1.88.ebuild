@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-1.88.ebuild,v 1.6 2011/06/12 12:14:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-1.88.ebuild,v 1.7 2012/03/26 11:55:44 jer Exp $
 
 EAPI="2"
 
 inherit eutils
 
 DESCRIPTION="unit conversion program"
-SRC_URI="http://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/units/units.html"
 
 LICENSE="GPL-3"
