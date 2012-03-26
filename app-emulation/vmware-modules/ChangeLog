@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.90 2012/03/24 12:37:01 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.91 2012/03/26 16:14:40 vadimk Exp $
+
+*vmware-modules-264.2-r1 (26 Mar 2012)
+*vmware-modules-238.5-r1 (26 Mar 2012)
+
+  26 Mar 2012; Vadim Kuznetsov vadimk@gentoo.org
+  +vmware-modules-238.5-r1.ebuild, +vmware-modules-264.2-r1.ebuild,
+  -vmware-modules-238.5.ebuild, -vmware-modules-264.2.ebuild:
+  udev rules moved to /lib/udev/rules.d
 
   24 Mar 2012; Vadim Kuznetsov <vadimk@gentoo.org> +files/hardened.patch,
   -vmware-modules-264.1.ebuild, vmware-modules-264.2.ebuild:
