@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.24 2012/03/22 07:05:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.25 2012/03/26 11:53:32 a3li Exp $
+
+  26 Mar 2012; Alex Legler <a3li@gentoo.org> mime-types-1.18.ebuild:
+  Depend on dev-ruby/rubyforge when generating docs or running tests. Closes
+  bug 409617 by onip.
 
 *mime-types-1.18 (22 Mar 2012)
 
