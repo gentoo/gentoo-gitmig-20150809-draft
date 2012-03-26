@@ -1,16 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9_p20120221.ebuild,v 1.1 2012/03/25 23:06:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9_p20120221.ebuild,v 1.2 2012/03/26 07:10:16 xmw Exp $
 
 EAPI=4
-
-EGIT_REPO_URI="git://git.ghostscript.com/mupdf.git"
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="a lightweight PDF viewer and toolkit written in portable C"
 HOMEPAGE="http://mupdf.com/"
-SRC_URI="http://git.ghostscript.com/?p=mupdf.git;a=snapshot;h=c732cd69db005902289829867a71e0d271809aba;sf=tgz -> ${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
