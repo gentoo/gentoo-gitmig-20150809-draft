@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/xtrans-1.2.6.ebuild,v 1.9 2011/03/16 16:10:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/xtrans-1.2.6.ebuild,v 1.10 2012/03/26 06:24:19 floppym Exp $
 
 EAPI=3
 
@@ -15,7 +15,10 @@ IUSE="doc"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	doc? ( app-text/xmlto )"
+	doc? (
+		app-text/xmlto
+		app-text/docbook-xml-dtd:4.3
+	)"
 
 pkg_setup() {
 	CONFIGURE_OPTIONS="$(use_enable doc docs)
