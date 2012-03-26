@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/hdaps_monitor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/hdaps_monitor/ChangeLog,v 1.3 2011/10/29 00:41:28 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/hdaps_monitor/ChangeLog,v 1.4 2012/03/26 07:24:43 scarabeus Exp $
+
+  26 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> hdaps_monitor-0.3.ebuild:
+  Stabilise 0.3 on amd64 and x86.
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> hdaps_monitor-0.3.ebuild:
   Bump to EAPI=4

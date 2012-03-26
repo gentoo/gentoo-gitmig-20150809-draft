@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/hdaps_monitor/hdaps_monitor-0.3.ebuild,v 1.3 2011/10/29 00:41:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/hdaps_monitor/hdaps_monitor-0.3.ebuild,v 1.4 2012/03/26 07:24:43 scarabeus Exp $
 
 EAPI=4
 inherit kde4-base
@@ -11,7 +11,7 @@ SRC_URI="http://www.kde-look.org/CONTENT/content-files/103481-${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="$(add_kdebase_dep plasma-workspace)"
