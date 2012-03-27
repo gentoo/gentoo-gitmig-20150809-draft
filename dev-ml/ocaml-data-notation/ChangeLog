@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-data-notation
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.5 2011/10/06 20:23:26 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.6 2012/03/27 21:33:31 aballier Exp $
+
+  27 Mar 2012; Alexis Ballier <aballier@gentoo.org>
+  ocaml-data-notation-0.0.6.ebuild:
+  convert to oasis.eclass and force type-conv-3
 
   06 Oct 2011; Alexis Ballier <aballier@gentoo.org> +files/typeconv3.patch,
   ocaml-data-notation-0.0.6.ebuild:
