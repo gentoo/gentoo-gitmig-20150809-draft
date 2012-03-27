@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.167 2012/03/22 16:59:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.168 2012/03/27 08:23:21 tetromino Exp $
+
+  27 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Allow networkmanager[systemd] on amd64.
 
   22 Mar 2012; Tim Harder <radhermit@gentoo.org> no-multilib/package.use.mask:
   Remove redundant use flag mask.

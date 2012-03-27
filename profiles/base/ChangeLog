@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.368 2012/03/27 04:42:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.369 2012/03/27 08:23:21 tetromino Exp $
+
+  27 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask USE=systemd for gnome-extra/gnome-screensaver, it requires a systemd
+  version which is keyworded only on two arches.
 
   27 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask x11-libs/gtk+[wayland], requires libxkbcommon from x11 overlay.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.119 2012/03/18 14:08:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.120 2012/03/27 08:23:21 tetromino Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Mar 2012)
+# Masked in base profile, supported on this arch
+net-misc/networkmanager -systemd
 
 # Bernard Cafarelli <voyageur@gentoo.org> (27 Feb 2012)
 # Masked in base profile, supported on this arch

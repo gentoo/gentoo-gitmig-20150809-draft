@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.79 2012/02/27 13:17:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.80 2012/03/27 08:23:21 tetromino Exp $
 
 # This file requires >=portage-2.1.1
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Mar 2012)
+# Masked in base profile, supported on this arch
+net-misc/networkmanager -systemd
 
 # Bernard Cafarelli <voyageur@gentoo.org> (27 Feb 2012)
 # Masked in base profile, supported on this arch
