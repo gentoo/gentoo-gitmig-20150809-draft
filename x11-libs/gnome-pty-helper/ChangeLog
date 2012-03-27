@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gnome-pty-helper
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.10 2011/11/22 16:14:40 zmedico Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.11 2012/03/27 04:46:22 tetromino Exp $
+
+*gnome-pty-helper-0.32.0 (27 Mar 2012)
+
+  27 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-pty-helper-0.32.0.ebuild:
+  Version bump, now uses -fPIE/-pie for the setgid executable by default.
 
   22 Nov 2011; Zac Medico <zmedico@gentoo.org> gnome-pty-helper-0.28.1.ebuild:
   Add ~x86-linux keyword.
