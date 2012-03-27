@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/kccmp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.18 2010/01/04 22:14:51 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.19 2012/03/27 20:37:56 mpagano Exp $
+
+*kccmp-0.3 (27 Mar 2012)
+
+  27 Mar 2012; Michael Pagano <mpagano@gentoo.org> +kccmp-0.3.ebuild:
+  Version bump. bug #409885. Thanks too Michael (kensington).
 
   04 Jan 2010; Markus Meier <maekke@gentoo.org> kccmp-0.2-r2.ebuild:
   x86 stable, bug #299087
