@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/razorqt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/ChangeLog,v 1.1 2012/02/18 11:59:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/ChangeLog,v 1.2 2012/03/27 17:04:03 johu Exp $
+
+*razorqt-0.4.1-r1 (27 Mar 2012)
+
+  27 Mar 2012; Johannes Huber <johu@gentoo.org>
+  +files/razorqt-0.4.1-automagic.patch, +razorqt-0.4.1-r1.ebuild,
+  -razorqt-0.4.1.ebuild:
+  Revision bump. Add missing and fix automagic dependencies by Michael
+  (kensington) <gentoo@scribeofthenile.com>. Fixes bug #405935.
 
 *razorqt-0.4.1 (18 Feb 2012)
 

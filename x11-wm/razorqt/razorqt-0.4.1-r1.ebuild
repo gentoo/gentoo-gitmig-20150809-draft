@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/razorqt-0.4.1.ebuild,v 1.1 2012/02/18 11:59:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/razorqt-0.4.1-r1.ebuild,v 1.1 2012/03/27 17:04:03 johu Exp $
 
 EAPI=4
 
@@ -23,9 +23,18 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc policykit"
 
-COMMON_DEPEND="policykit? ( sys-auth/polkit-qt )
+COMMON_DEPEND="sys-apps/file
+	policykit? (
+		dev-libs/glib:2
+		sys-auth/polkit-qt
+	)
+	sys-libs/zlib
+	x11-libs/libX11
 	x11-libs/libXcomposite
+	x11-libs/libXcursor
 	x11-libs/libXdamage
+	x11-libs/libXfixes
+	x11-libs/libXrender
 	x11-libs/qt-core:4
 	x11-libs/qt-dbus:4
 	x11-libs/qt-gui:4
@@ -46,6 +55,15 @@ RDEPEND="${COMMON_DEPEND}
 		x11-wm/sawfish
 		x11-wm/windowmaker
 		)"
+
+PATCHES=( "${FILESDIR}/${P}-automagic.patch" )
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_enable policykit)
+	)
+	cmake-utils_src_configure
+}
 
 src_compile() {
 	cmake-utils_src_make
