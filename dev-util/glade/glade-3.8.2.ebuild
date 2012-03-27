@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.0.ebuild,v 1.7 2011/10/06 18:40:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.2.ebuild,v 1.1 2012/03/27 08:33:13 pacho Exp $
 
-EAPI="2"
+EAPI="4"
+GCONF_DEBUG="yes"
 GNOME_ORG_MODULE="glade3"
 GNOME2_LA_PUNT="yes"
 
@@ -13,11 +14,11 @@ HOMEPAGE="http://glade.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc gnome python"
 
 RDEPEND=">=dev-libs/glib-2.8:2
-	>=x11-libs/gtk+-2.20:2
+	>=x11-libs/gtk+-2.24:2
 	>=dev-libs/libxml2-2.4:2
 	gnome?	(
 		>=gnome-base/libgnomeui-2
@@ -41,11 +42,6 @@ pkg_setup() {
 		--disable-scrollkeeper
 		$(use_enable gnome)
 		$(use_enable python)"
-}
-
-src_install() {
-	gnome2_src_install
-	find "${ED}"/usr/$(get_libdir)/glade3/modules -name "*.la" -delete
 }
 
 pkg_preinst() {
