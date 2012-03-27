@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mtrack/xf86-input-mtrack-0.2.0.ebuild,v 1.1 2011/06/14 00:41:47 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mtrack/xf86-input-mtrack-0.2.0.ebuild,v 1.2 2012/03/27 00:27:23 naota Exp $
 
 EAPI=4
 
@@ -12,6 +12,8 @@ DESCRIPTION="Xorg Driver for Multitouch Trackpads"
 HOMEPAGE="https://github.com/BlueDragonX/xf86-input-mtrack"
 SRC_URI="http://github.com/BlueDragonX/xf86-input-mtrack/tarball/v${PV/_/-} -> ${P}.tar.gz"
 IUSE="debug"
+
+inherit autotools
 
 S="${WORKDIR}/BlueDragonX-xf86-input-mtrack-4d517e7"
 
@@ -25,6 +27,7 @@ DEPEND="${DEPEND}
 	>=sys-libs/mtdev-1.0"
 
 DOCS=( "README.md" )
+PATCHES=( "${FILESDIR}"/${P}-drop-mtrack-test.patch )
 
 pkg_setup() {
 	xorg-2_pkg_setup
