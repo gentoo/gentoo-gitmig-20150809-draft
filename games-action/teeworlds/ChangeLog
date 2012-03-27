@@ -1,6 +1,15 @@
 # ChangeLog for games-action/teeworlds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.5 2012/03/26 08:50:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.6 2012/03/27 15:16:11 tupone Exp $
+
+*teeworlds-0.6.1 (27 Mar 2012)
+
+  27 Mar 2012; Tupone Alfredo <tupone@gentoo.org>
+  +files/0.6.1/01-use-system-wavpack.patch,
+  +files/0.6.1/02-fixed-wavpack-sound-loading.patch,
+  +files/0.6.1/03-use-system-pnglite.patch, +teeworlds-0.6.1.ebuild,
+  +files/teeworlds-init.d, +files/teeworlds_srv.cfg:
+  Version bump to 0.6.1 Bug #363395 by Bruno 'brubru' Tarquini
 
   26 Mar 2012; Tupone Alfredo <tupone@gentoo.org> teeworlds-0.5.2.ebuild,
   +files/teeworlds-0.5.2-gcc46.patch:
