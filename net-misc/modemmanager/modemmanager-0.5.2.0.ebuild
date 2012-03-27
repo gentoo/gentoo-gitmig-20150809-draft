@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.2.0.ebuild,v 1.1 2012/03/27 09:06:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.2.0.ebuild,v 1.2 2012/03/27 20:20:31 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="ModemManager"
@@ -64,8 +64,8 @@ src_install() {
 pkg_postinst() {
 	if use policykit; then
 		enewgroup plugdev
-		elog "To modify system network connections without needing to enter the"
-		elog "root password, add your user account to the 'plugdev' group."
+		elog "To control your modem without needing to enter the root password,"
+		elog "add your user account to the 'plugdev' group."
 		elog
 	fi
 

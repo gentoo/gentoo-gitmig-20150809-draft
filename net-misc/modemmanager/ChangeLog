@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.23 2012/03/27 09:06:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.24 2012/03/27 20:20:31 tetromino Exp $
+
+  27 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  modemmanager-0.5.2.0.ebuild:
+  Fix pkg_postinst message.
 
 *modemmanager-0.5.2.0 (27 Mar 2012)
 
