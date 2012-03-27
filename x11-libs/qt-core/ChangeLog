@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.152 2012/03/27 18:19:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.153 2012/03/27 18:48:28 johu Exp $
+
+  27 Mar 2012; Johannes Huber <johu@gentoo.org> -files/qt-4.6.2-alpha.patch:
+  Remove unused.
 
   27 Mar 2012; Johannes Huber <johu@gentoo.org> -qt-core-4.6.2-r1.ebuild:
   Drop Qt-4.6.2
