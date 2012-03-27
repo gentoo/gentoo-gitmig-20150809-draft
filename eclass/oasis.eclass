@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/oasis.eclass,v 1.1 2012/03/27 21:01:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/oasis.eclass,v 1.2 2012/03/27 21:24:42 aballier Exp $
 
 # @ECLASS: oasis.eclass
 # @MAINTAINER: 
@@ -24,6 +24,16 @@
 # of the extra dependencies it may need.
 # Set before inheriting the eclass.
 
+# @ECLASS-VARIABLE: OASIS_BUILD_TESTS
+# @DESCRIPTION:
+# Will make oasis_src_configure enable building the tests if the test useflag is
+# enabled. oasis_src_test will then run them.
+# Note that you sometimes need to enable this for src_test to be useful,
+# sometimes not. It has to be enabled on a per-case basis.
+# The eclass takes care of setting test in IUSE but the ebuild should take care
+# of the extra dependencies it may need.
+# Set before inheriting the eclass.
+
 inherit multilib findlib eutils base
 
 case ${EAPI:-0} in
@@ -32,6 +42,7 @@ esac
 
 IUSE="debug +ocamlopt"
 [ -n "${OASIS_BUILD_DOCS}" ] && IUSE="${IUSE} doc"
+[ -n "${OASIS_BUILD_TESTS}" ] && IUSE="${IUSE} test"
 
 RDEPEND=">=dev-lang/ocaml-3.12[ocamlopt?]"
 DEPEND="${RDEPEND}"
@@ -53,6 +64,8 @@ oasis_use_enable() {
 # src_configure phase shared by oasis-based packages.
 # Extra arguments may be passed via oasis_configure_opts.
 oasis_src_configure() {
+	local testargs=""
+	[ -n "${OASIS_BUILD_TESTS}" ] && testargs="$(use_enable test tests)"
 	ocaml setup.ml -configure \
 		--prefix "${EPREFIX}/usr" \
 		--libdir "${EPREFIX}/usr/$(get_libdir)" \
@@ -60,6 +73,7 @@ oasis_src_configure() {
 		--destdir "${D}" \
 		$(oasis_use_enable debug debug) \
 		$(oasis_use_enable ocamlopt is_native) \
+		${testargs} \
 		${oasis_configure_opts} \
 		|| die
 }
