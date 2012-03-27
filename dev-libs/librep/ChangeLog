@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/librep
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.66 2011/10/30 15:08:08 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.67 2012/03/27 09:00:08 pacho Exp $
+
+*librep-0.92.2 (27 Mar 2012)
+
+  27 Mar 2012; Pacho Ramos <pacho@gentoo.org> +librep-0.92.2.ebuild,
+  -librep-0.17-r2.ebuild, -librep-0.90.6.ebuild:
+  Version bump, remove old.
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> librep-0.92.1.ebuild:
   alpha/ia64/sparc stable wrt #385699
