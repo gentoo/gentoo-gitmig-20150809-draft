@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/rep-gtk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.73 2011/10/30 17:44:53 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.74 2012/03/27 08:57:56 pacho Exp $
+
+*rep-gtk-0.90.8 (27 Mar 2012)
+
+  27 Mar 2012; Pacho Ramos <pacho@gentoo.org> +rep-gtk-0.90.8.ebuild,
+  -rep-gtk-0.90.3.ebuild:
+  Version bump, remove old.
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> rep-gtk-0.90.7.ebuild:
   alpha/ia64/sparc stable wrt #385699
