@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/evtest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evtest/ChangeLog,v 1.1 2012/02/10 20:26:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evtest/ChangeLog,v 1.2 2012/03/27 15:47:09 vapier Exp $
+
+  27 Mar 2012; Mike Frysinger <vapier@gentoo.org> evtest-1.29.ebuild:
+  Stabilize for all.
 
 *evtest-1.29 (10 Feb 2012)
 
