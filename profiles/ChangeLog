@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6364 2012/03/27 15:10:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6365 2012/03/27 20:03:42 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask sys-fs/udisks >= 1.90.0 for testing.
 
   27 Mar 2012; Tupone Alfredo <tupone@gentoo.org> package.mask:
   Unmasking newer dev-util/bam

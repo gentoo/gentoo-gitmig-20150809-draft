@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13625 2012/03/27 15:10:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13626 2012/03/27 20:03:43 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -57,6 +57,7 @@
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Mar 2012)
 # This is now the GNOME 3.4 mask
 # Core libraries to be unmasked first:
+>=sys-fs/udisks-1.90.0
 =dev-libs/glib-2.32*:2
 =dev-util/gdbus-codegen-2.32*
 =x11-libs/gdk-pixbuf-2.26*:2
