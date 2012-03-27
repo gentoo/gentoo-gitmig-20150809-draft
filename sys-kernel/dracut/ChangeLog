@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.55 2012/03/26 13:02:15 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.56 2012/03/27 16:00:43 aidecoe Exp $
+
+*dracut-017-r3 (27 Mar 2012)
+
+  27 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-017-r3.ebuild,
+  +files/dracut-017-fstab-sys-no-check-for-dev.patch,
+  +files/dracut-017-fstab-sys-remove-bashism.patch:
+  Fixed fstab-sys not working with dash wrt bug #406755.
+
+  Applied also patch removing check for existing /dev, because "there are a lot
+  of filesystems, which do not need an actual device node".
 
 *dracut-017-r2 (26 Mar 2012)
 

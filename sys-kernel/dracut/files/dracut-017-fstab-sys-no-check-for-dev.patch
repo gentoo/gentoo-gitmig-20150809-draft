@@ -1,0 +1,29 @@
+From 6dd4370eaa5a7e627bbd34535b6779eaa41ae44c Mon Sep 17 00:00:00 2001
+From: Harald Hoyer <harald@redhat.com>
+Date: Tue, 27 Mar 2012 16:00:28 +0200
+Subject: [PATCH 2/2] 95fstab-sys/mount-sys.sh: removed check for existing
+ /dev
+
+there are a lot of filesystems, which do not need an actual device node
+---
+ modules.d/95fstab-sys/mount-sys.sh |    4 ----
+ 1 files changed, 0 insertions(+), 4 deletions(-)
+
+diff --git a/modules.d/95fstab-sys/mount-sys.sh b/modules.d/95fstab-sys/mount-sys.sh
+index 8c9cb29..54415d1 100755
+--- a/modules.d/95fstab-sys/mount-sys.sh
++++ b/modules.d/95fstab-sys/mount-sys.sh
+@@ -11,10 +11,6 @@ fstab_mount() {
+     info "Mounting from $1"
+     while read _dev _mp _fs _opts _dump _pass _rest; do
+         [ -z "${_dev%%#*}" ] && continue # Skip comment lines
+-        if [[ ! "$_fs" =~ "nfs" ]] && [ ! -e "$_dev" ]; then
+-            warn "Device $_dev doesn't exist, skipping mount."
+-            continue
+-        fi
+         if [ "$_pass" -gt 0 ] && ! strstr "$_opts" _netdev; then
+             fsck_single "$_dev" "$_fs"
+         fi
+-- 
+1.7.8.5
+
