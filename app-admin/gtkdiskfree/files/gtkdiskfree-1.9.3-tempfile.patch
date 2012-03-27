@@ -4,8 +4,8 @@ Patch by Tavis Ormandy
 
 http://bugs.gentoo.org/104565
 
---- gtkdiskfree-1.9.3/src/mount.c
-+++ gtkdiskfree-1.9.3/src/mount.c
+--- src/mount.c
++++ src/mount.c
 @@ -31,41 +31,21 @@
  void
  open_cmd_tube (const gchar *cmd, const gchar *mount_point)

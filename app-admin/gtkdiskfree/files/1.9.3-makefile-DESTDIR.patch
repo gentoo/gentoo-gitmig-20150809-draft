@@ -1,5 +1,5 @@
---- gtkdiskfree-1.9.3/po/Makefile.in.in.orig	2004-11-29 20:41:48.448183016 -0500
-+++ gtkdiskfree-1.9.3/po/Makefile.in.in	2004-11-29 20:42:11.534673336 -0500
+--- po/Makefile.in.in
++++ po/Makefile.in.in
 @@ -113,5 +113,5 @@
  	if test -r "$(MKINSTALLDIRS)"; then \
 -	  $(MKINSTALLDIRS) $(datadir); \
