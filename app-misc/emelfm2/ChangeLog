@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/emelfm2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.47 2011/12/29 20:10:20 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.48 2012/03/27 18:28:08 ssuominen Exp $
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> emelfm2-0.7.5.ebuild,
+  emelfm2-0.8.0.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks.
 
 *emelfm2-0.8.0 (29 Dec 2011)
 

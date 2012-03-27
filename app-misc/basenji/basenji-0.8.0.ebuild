@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.8.0.ebuild,v 1.3 2011/12/07 07:33:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.8.0.ebuild,v 1.4 2012/03/27 18:27:08 ssuominen Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ CDEPEND="dev-dotnet/gio-sharp
 DEPEND="${CDEPEND}"
 
 RDEPEND="${CDEPEND}
-	sys-fs/udisks"
+	sys-fs/udisks:0"
 
 src_prepare() {
 	sed -i -e "s/-pkg:mono-cairo/-r:Mono.Cairo/" Basenji/Makefile || die "sed failed."
