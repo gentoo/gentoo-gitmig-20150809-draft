@@ -7,10 +7,7 @@
 		<name>Peter Volkov</name>
 	</maintainer>
 	<use>
-		<flag name="emf">Export support for Windows Enhanced Metafile</flag>
 		<flag name="ods">Import support for OpenOffice .ods sheets</flag>
-		<flag name="origin">Import support for Origin project files</flag>
-		<flag name="xls">Import support for Microsoft office excel sheets</flag>
 	</use>
 	<longdescription>
 	Data analysis and scientific plotting package. This is a clone of the
