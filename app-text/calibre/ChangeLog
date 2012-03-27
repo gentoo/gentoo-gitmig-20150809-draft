@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.192 2012/03/25 21:07:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.193 2012/03/27 18:30:06 ssuominen Exp $
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> calibre-0.8.43.ebuild,
+  calibre-0.8.44.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks
 
 *calibre-0.8.44 (25 Mar 2012)
 
