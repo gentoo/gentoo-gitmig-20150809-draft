@@ -1,20 +1,19 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.2-r1.ebuild,v 1.7 2011/10/30 15:05:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.5.ebuild,v 1.1 2012/03/27 08:36:30 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="bz2"
 
 inherit gnome2
 
 DESCRIPTION="Generic Cascading Style Sheet (CSS) parsing and manipulation toolkit"
-HOMEPAGE="http://freshmeat.net/projects/libcroco"
+HOMEPAGE="http://git.gnome.org/browse/libcroco/"
 
 LICENSE="LGPL-2"
 SLOT="0.6"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="doc test"
 
 RDEPEND="dev-libs/glib:2
