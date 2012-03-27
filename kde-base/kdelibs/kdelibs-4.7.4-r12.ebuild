@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.4-r12.ebuild,v 1.2 2012/02/23 15:28:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.4-r12.ebuild,v 1.3 2012/03/27 18:33:39 ssuominen Exp $
 
 EAPI=4
 
@@ -96,7 +96,7 @@ RDEPEND="${COMMONDEPEND}
 		x11-apps/iceauth
 		x11-apps/rgb
 		>=x11-misc/xdg-utils-1.0.2-r3
-		udisks? ( sys-fs/udisks )
+		udisks? ( sys-fs/udisks:0 )
 		upower? ( sys-power/upower )
 	)
 "

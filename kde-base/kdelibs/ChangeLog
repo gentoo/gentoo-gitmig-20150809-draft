@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.835 2012/03/23 21:41:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.836 2012/03/27 18:33:39 ssuominen Exp $
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> kdelibs-4.7.4.ebuild,
+  kdelibs-4.7.4-r12.ebuild, kdelibs-4.8.1-r1.ebuild, kdelibs-4.8.1-r2.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks.
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> kdelibs-4.8.1-r1.ebuild,
   kdelibs-4.8.1-r2.ebuild:
