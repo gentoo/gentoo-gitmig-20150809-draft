@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r3.ebuild,v 1.3 2012/03/25 18:52:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r4.ebuild,v 1.1 2012/03/27 23:14:20 pesa Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -8,7 +8,7 @@ inherit confutils qt4-build
 DESCRIPTION="The GUI module for the Qt toolkit"
 SLOT="4"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
-IUSE="+accessibility cups dbus egl gif +glib gtkstyle mng nas nis qt3support tiff trace xinerama"
+IUSE="+accessibility cups dbus egl gif +glib gtkstyle mng nas nis qt3support tiff trace xinerama +xv"
 
 RDEPEND="
 	app-admin/eselect-qtgraphicssystem
@@ -20,13 +20,16 @@ RDEPEND="
 	~x11-libs/qt-core-${PV}[aqua=,c++0x=,qpa=,debug=,glib=,qt3support=]
 	~x11-libs/qt-script-${PV}[aqua=,c++0x=,qpa=,debug=]
 	!aqua? (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXrandr
-		x11-libs/libXcursor
-		x11-libs/libXfont
+		x11-libs/libICE
 		x11-libs/libSM
+		x11-libs/libX11
+		x11-libs/libXcursor
+		x11-libs/libXext
 		x11-libs/libXi
+		x11-libs/libXrandr
+		x11-libs/libXrender
+		xinerama? ( x11-libs/libXinerama )
+		xv? ( x11-libs/libXv )
 	)
 	cups? ( net-print/cups )
 	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,c++0x=,qpa=,debug=] )
@@ -35,15 +38,18 @@ RDEPEND="
 	mng? ( >=media-libs/libmng-1.0.9 )
 	nas? ( >=media-libs/nas-1.5 )
 	tiff? ( media-libs/tiff:0 )
-	xinerama? ( x11-libs/libXinerama )"
+"
 DEPEND="${RDEPEND}
 	!aqua? (
-		x11-proto/xextproto
 		x11-proto/inputproto
+		x11-proto/xextproto
+		xinerama? ( x11-proto/xineramaproto )
+		xv? ( x11-proto/videoproto )
 	)
-	xinerama? ( x11-proto/xineramaproto )"
+"
 RDEPEND="${RDEPEND}
-	!~x11-themes/qgtkstyle-4.7.2"
+	!x11-themes/qgtkstyle
+"
 PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,c++0x=,qpa=,debug=] )"
 
 PATCHES=(
@@ -69,7 +75,7 @@ pkg_setup() {
 		eerror "re-enable the disabled use flag and/or reinstall cairo."
 		ewarn
 		echo
-		die "can't build qt-gui with gtkstyle USE if cairo has qt4 USE enabled"
+		die "can't build ${PN} with USE=gtkstyle if cairo has 'qt4' USE flag enabled"
 	fi
 
 	confutils_use_depend_all gtkstyle glib
@@ -89,16 +95,16 @@ pkg_setup() {
 		src
 		tools"
 
+	use accessibility && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/accessible/widgets"
 	use dbus && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} tools/qdbus/qdbusviewer"
 	use mng && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/imageformats/mng"
 	use tiff && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/imageformats/tiff"
-	use accessibility && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/accessible/widgets"
 	use trace && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES}	src/plugins/graphicssystems/trace"
-
-	QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES} ${QT4_EXTRACT_DIRECTORIES}"
 
 	# mac version does not contain qtconfig?
 	[[ ${CHOST} == *-darwin* ]] || QT4_TARGET_DIRECTORIES+=" tools/qtconfig"
+
+	QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES} ${QT4_EXTRACT_DIRECTORIES}"
 
 	qt4-build_pkg_setup
 }
@@ -106,8 +112,11 @@ pkg_setup() {
 src_prepare() {
 	qt4-build_src_prepare
 
+	# Add -xvideo to the list of accepted configure options
+	sed -i -e 's:|-xinerama|:&-xvideo|:' configure
+
 	# Don't build plugins this go around, because they depend on qt3support lib
-	sed -i -e "s:CONFIG(shared:# &:g" "${S}"/tools/designer/src/src.pro
+	sed -i -e 's:CONFIG(shared:# &:g' tools/designer/src/src.pro
 }
 
 src_configure() {
@@ -116,8 +125,10 @@ src_configure() {
 
 	myconf="$(qt_use accessibility)
 		$(qt_use cups)
+		$(use gif || echo -no-gif)
 		$(qt_use glib)
 		$(qt_use mng libmng system)
+		$(qt_use nas nas-sound system)
 		$(qt_use nis)
 		$(qt_use tiff libtiff system)
 		$(qt_use dbus qdbus)
@@ -125,18 +136,16 @@ src_configure() {
 		$(qt_use egl)
 		$(qt_use qt3support)
 		$(qt_use gtkstyle)
-		$(qt_use xinerama)"
-
-	use gif || myconf+=" -no-gif"
-	use nas	&& myconf+=" -system-nas-sound"
-
-	[[ ${CHOST} == *86*-apple-darwin* ]] && myconf+=" -no-ssse3" #367045
+		$(qt_use xinerama)
+		$(qt_use xv xvideo)"
 
 	myconf+="
 		-system-libpng -system-libjpeg
-		-no-sql-mysql -no-sql-psql -no-sql-ibase -no-sql-sqlite -no-sql-sqlite2
-		-no-sql-odbc -xrender -xrandr -xkb -xshape -sm -no-svg -no-webkit
-		-no-phonon -no-opengl"
+		-no-sql-mysql -no-sql-psql -no-sql-ibase -no-sql-sqlite -no-sql-sqlite2 -no-sql-odbc
+		-sm -xshape -xsync -xcursor -xfixes -xrandr -xrender -mitshm -xinput -xkb
+		-fontconfig -no-svg -no-webkit -no-phonon -no-opengl"
+
+	[[ ${CHOST} == *86*-apple-darwin* ]] && myconf+=" -no-ssse3" #367045
 
 	qt4-build_src_configure
 
@@ -150,19 +159,29 @@ src_configure() {
 }
 
 src_install() {
-	QCONFIG_ADD="x11sm xshape xcursor xfixes xrandr xrender xkb fontconfig
-		$(usev accessibility) $(usev xinerama) $(usev cups) $(usev nas)
-		gif png system-png system-jpeg
+	QCONFIG_ADD="
+		mitshm x11sm xcursor xfixes xinput xkb xrandr xrender xshape xsync
+		fontconfig gif png system-png jpeg system-jpeg
+		$(usev accessibility)
+		$(usev cups)
 		$(use mng && echo system-mng)
-		$(use tiff && echo system-tiff)"
-	QCONFIG_REMOVE="no-gif no-png"
+		$(usev nas)
+		$(usev nis)
+		$(use tiff && echo system-tiff)
+		$(usev xinerama)
+		$(use xv && echo xvideo)"
+	QCONFIG_REMOVE="no-gif no-jpeg no-png"
 	QCONFIG_DEFINE="$(use accessibility && echo QT_ACCESSIBILITY)
-			$(use cups && echo QT_CUPS) QT_FONTCONFIG QT_IMAGEFORMAT_JPEG
+			$(use cups && echo QT_CUPS)
+			QT_FONTCONFIG QT_IMAGEFORMAT_JPEG QT_IMAGEFORMAT_PNG
 			$(use mng && echo QT_IMAGEFORMAT_MNG)
 			$(use nas && echo QT_NAS)
-			$(use nis && echo QT_NIS) QT_IMAGEFORMAT_PNG QT_SESSIONMANAGER QT_SHAPE
-			$(use tiff && echo QT_IMAGEFORMAT_TIFF) QT_XCURSOR
-			$(use xinerama && echo QT_XINERAMA) QT_XFIXES QT_XKB QT_XRANDR QT_XRENDER"
+			$(use nis && echo QT_NIS)
+			$(use tiff && echo QT_IMAGEFORMAT_TIFF)
+			QT_SESSIONMANAGER QT_SHAPE QT_XCURSOR QT_XFIXES
+			$(use xinerama && echo QT_XINERAMA)
+			QT_XINPUT QT_XKB QT_XRANDR QT_XRENDER QT_XSYNC
+			$(use xv && echo QT_XVIDEO)"
 
 	qt4-build_src_install
 

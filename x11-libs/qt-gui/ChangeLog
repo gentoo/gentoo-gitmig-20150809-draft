@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.170 2012/03/27 18:24:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.171 2012/03/27 23:14:20 pesa Exp $
+
+*qt-gui-4.8.0-r4 (27 Mar 2012)
+
+  27 Mar 2012; Davide Pesavento <pesa@gentoo.org> +qt-gui-4.8.0-r4.ebuild,
+  -qt-gui-4.8.0-r3.ebuild:
+  Add xv USE flag; update QCONFIG_* handling; add libICE and libXrender deps;
+  remove libXfont dep.
 
   27 Mar 2012; Johannes Huber <johu@gentoo.org> -qt-gui-4.6.2.ebuild,
   -qt-gui-4.6.2-r1.ebuild:
