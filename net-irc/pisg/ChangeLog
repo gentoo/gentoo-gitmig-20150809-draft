@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/pisg
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.59 2008/08/31 15:00:43 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.60 2012/03/27 18:11:50 darkside Exp $
+
+*pisg-0.73 (27 Mar 2012)
+
+  27 Mar 2012; Jeremy Olexa <darkside@gentoo.org> +pisg-0.73.ebuild:
+  version bump with only minor updates
 
   31 Aug 2008; Raúl Porcel <armin76@gentoo.org> -pisg-0.71.ebuild,
   pisg-0.72.ebuild:
