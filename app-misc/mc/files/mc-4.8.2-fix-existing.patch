@@ -1,0 +1,38 @@
+commit 2a5885fb7f5ce7af3576fa17ce697adbd9b61567
+Author: Slava Zanko <slavazanko@gmail.com>
+Date:   Fri Mar 23 13:40:25 2012 +0300
+
+    Ticket #2761: save file on top of existing directory changes dir's permissions
+    
+    Steps to reproduce:
+    
+    mkdir foo
+    chmod 0700 foo
+    mcedit bar
+    ls -ld foo
+    drw-r--r-- 1 slyfox users 0 Mar 22 22:10 foo
+    
+    We've lost dir's permissions.
+    
+    Signed-off-by: Slava Zanko <slavazanko@gmail.com>
+
+diff --git a/src/editor/editcmd.c b/src/editor/editcmd.c
+index 8e6c9a9..d52e48b 100644
+--- a/src/editor/editcmd.c
++++ b/src/editor/editcmd.c
+@@ -1488,6 +1488,15 @@ edit_save_as_cmd (WEdit * edit)
+             if (vfs_path_cmp (edit->filename_vpath, exp_vpath) != 0)
+             {
+                 int file;
++                struct stat sb;
++
++                if (mc_stat (exp_vpath, &sb) == 0 && !S_ISREG (sb.st_mode))
++                {
++                    edit_error_dialog (_("Save as"),
++                                       get_sys_error (_
++                                                      ("Cannot save: destination is not a regular file")));
++                    goto ret;
++                }
+ 
+                 different_filename = 1;
+                 file = mc_open (exp_vpath, O_RDONLY | O_BINARY);

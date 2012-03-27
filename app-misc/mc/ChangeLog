@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.250 2012/03/22 14:37:17 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.251 2012/03/27 16:54:22 slyfox Exp $
+
+*mc-4.8.2-r2 (27 Mar 2012)
+
+  27 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.2-fix-existing.patch, +mc-4.8.2-r2.ebuild, -mc-4.8.2-r1.ebuild,
+  -mc-4.8.2.ebuild:
+  Fix bug #409365 by Marcin Mirosław (broken permissions when attempt to save
+  file on top of directory). Patch picked from upstream.
 
   22 Mar 2012; Alex Alexander <wired@gentoo.org> mc-4.8.2-r1.ebuild:
   removed whitespace
