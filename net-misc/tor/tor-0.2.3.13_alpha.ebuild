@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.12_alpha-r1.ebuild,v 1.2 2012/03/08 16:14:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.13_alpha.ebuild,v 1.1 2012/03/27 15:15:05 blueness Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic versionator
+inherit eutils flag-o-matic versionator autotools
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
@@ -21,7 +21,7 @@ IUSE="+bufferevents nat-pmp tor-hardening transparent-proxy threads upnp selinux
 DEPEND="dev-libs/openssl
 	>=dev-libs/libevent-2.0.14
 	nat-pmp? ( net-libs/libnatpmp )
-	upnp? ( <net-libs/miniupnpc-1.6 )
+	upnp? ( net-libs/miniupnpc )
 	selinux? ( sec-policy/selinux-tor )"
 RDEPEND="${DEPEND}"
 
@@ -32,7 +32,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/torrc.sample.patch
-	epatch "${FILESDIR}"/${P}-fix-tor-fw-helper-natpmp.patch
+	epatch "${FILESDIR}"/${P}-fix-miniupnpc-1.6.patch
+	eautoreconf
 }
 
 src_configure() {

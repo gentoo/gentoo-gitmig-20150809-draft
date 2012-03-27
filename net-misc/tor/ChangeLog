@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.323 2012/03/23 01:00:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.324 2012/03/27 15:15:05 blueness Exp $
+
+*tor-0.2.3.13_alpha (27 Mar 2012)
+
+  27 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  -files/tor-0.2.3.11_alpha-fix-tor-fw-helper-natpmp.patch,
+  -tor-0.2.3.12_alpha-r1.ebuild, -tor-0.2.3.12_alpha-r2.ebuild,
+  -files/tor-0.2.3.12_alpha-fix-miniupnpc-1.6.patch,
+  -files/tor-0.2.3.12_alpha-fix-tor-fw-helper-natpmp.patch,
+  +tor-0.2.3.13_alpha.ebuild,
+  +files/tor-0.2.3.13_alpha-fix-miniupnpc-1.6.patch:
+  Version bump alpha and remove older one
 
 *tor-0.2.3.12_alpha-r2 (23 Mar 2012)
 
