@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/sexplib-7.0.4.ebuild,v 1.1 2011/10/06 20:03:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/sexplib-7.0.4.ebuild,v 1.2 2012/03/27 21:08:38 aballier Exp $
 
 EAPI=3
 
-inherit findlib eutils multilib
+inherit oasis
 
 DESCRIPTION="Library for automated conversion of OCaml-values to and from S-expressions"
 HOMEPAGE="http://forge.ocamlcore.org/projects/sexplib/"
@@ -13,28 +13,16 @@ SRC_URI="http://forge.ocamlcore.org/frs/download.php/699/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc +ocamlopt"
+IUSE="doc"
 
-RDEPEND=">=dev-lang/ocaml-3.12[ocamlopt?]
-	>=dev-ml/type-conv-3.0.4"
+RDEPEND=">=dev-ml/type-conv-3.0.4"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base dev-texlive/texlive-latexextra )"
 
-oasis_use_enable() {
-	echo "--override $2 `use $1 && echo \"true\" || echo \"false\"`"
-}
-
-src_configure() {
-	./configure --prefix usr \
-		--libdir /usr/$(get_libdir) \
-		--destdir "${D}" \
-		$(oasis_use_enable debug debug) \
-		$(oasis_use_enable ocamlopt is_native) \
-		|| die
-}
+DOCS=( "README.txt" "Changelog" )
 
 src_compile() {
-	emake || die
+	oasis_src_compile
 	if use doc ; then
 		cd "${S}/doc"
 		pdflatex README || die
@@ -43,9 +31,8 @@ src_compile() {
 }
 
 src_install() {
-	findlib_src_install
+	oasis_src_install
 
-	dodoc README.txt Changelog || die
 	if use doc; then
 		dodoc doc/README.pdf || die
 	fi
