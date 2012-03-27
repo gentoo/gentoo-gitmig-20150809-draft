@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/cryptokit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/ChangeLog,v 1.9 2012/03/15 18:21:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/ChangeLog,v 1.10 2012/03/27 21:08:33 aballier Exp $
+
+*cryptokit-1.5 (27 Mar 2012)
+
+  27 Mar 2012; Alexis Ballier <aballier@gentoo.org> +cryptokit-1.5.ebuild:
+  version bump
 
   15 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> cryptokit-1.4.ebuild:
   x86 stable wrt bug #405959
