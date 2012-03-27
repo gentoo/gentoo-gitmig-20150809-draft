@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.3.ebuild,v 1.3 2012/02/05 01:56:24 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.3.ebuild,v 1.4 2012/03/27 16:50:51 vostorga Exp $
 
 EAPI=4
 
@@ -20,9 +20,6 @@ IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
 	swat syslog winbind"
 
 DEPEND="dev-libs/popt
-	!net-fs/samba-client
-	!net-fs/samba-libs
-	!net-fs/samba-server
 	>=sys-libs/talloc-2.0.5
 	>=sys-libs/tdb-1.2.9
 	virtual/libiconv
@@ -315,6 +312,12 @@ src_install() {
 		dobin ${prog}
 		doman ../docs/manpages/${prog/bin\/}*
 	done
+
+	# install scripts
+	if use client ; then
+		dobin script/findsmb
+		doman ../docs/manpages/findsmb.1
+	fi
 
 	# install krbplugin
 	if [ -n "${KRBPLUGIN}" ] ; then
