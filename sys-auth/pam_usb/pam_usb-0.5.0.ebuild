@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.4 2011/10/24 06:39:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.5 2012/03/27 18:40:37 ssuominen Exp $
 
 EAPI=4
 inherit eutils pam toolchain-funcs
@@ -23,7 +23,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/dbus-python
 	dev-python/pygobject:2
 	sys-apps/pmount
-	sys-fs/udisks"
+	sys-fs/udisks:0"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
