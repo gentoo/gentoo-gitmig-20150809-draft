@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0_rc2.ebuild,v 1.3 2012/03/19 00:10:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0_rc2.ebuild,v 1.4 2012/03/27 18:37:13 ssuominen Exp $
 
 EAPI="4"
 
@@ -92,7 +92,7 @@ COMMON_DEPEND="virtual/opengl
 	xrandr? ( x11-libs/libXrandr )
 	x11-libs/libXrender"
 RDEPEND="${COMMON_DEPEND}
-	udev? (	sys-fs/udisks sys-power/upower )"
+	udev? (	sys-fs/udisks:0 sys-power/upower )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
 	x11-proto/xineramaproto

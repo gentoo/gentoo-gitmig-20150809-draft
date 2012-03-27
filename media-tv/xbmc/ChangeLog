@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.122 2012/03/19 00:10:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.123 2012/03/27 18:37:13 ssuominen Exp $
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> xbmc-10.1.ebuild,
+  xbmc-11.0_rc2.ebuild, xbmc-9999.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks.
 
   19 Mar 2012; Mike Frysinger <vapier@gentoo.org> xbmc-11.0_rc2.ebuild,
   -files/xbmc-11.0-libav-0.8.patch:
