@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.100 2012/01/29 23:24:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.101 2012/03/27 18:21:16 johu Exp $
+
+  27 Mar 2012; Johannes Huber <johu@gentoo.org> -qt-dbus-4.6.2.ebuild:
+  Drop Qt-4.6.2
 
   29 Jan 2012; Joseph Jezak <josejx@gentoo.org> qt-dbus-4.7.4.ebuild:
   Marked ppc ppc64 stable for bug #390963.

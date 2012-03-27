@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.50 2012/03/13 00:05:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.51 2012/03/27 18:26:00 johu Exp $
+
+  27 Mar 2012; Johannes Huber <johu@gentoo.org> -qt-multimedia-4.6.2.ebuild:
+  Drop Qt-4.6.2
 
 *qt-multimedia-4.8.0-r1 (13 Mar 2012)
 

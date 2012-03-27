@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-xmlpatterns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.98 2012/02/18 18:23:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.99 2012/03/27 18:40:11 johu Exp $
+
+  27 Mar 2012; Johannes Huber <johu@gentoo.org> -qt-xmlpatterns-4.6.2.ebuild:
+  Drop Qt-4.6.2
 
 *qt-xmlpatterns-4.8.0-r1 (18 Feb 2012)
 
