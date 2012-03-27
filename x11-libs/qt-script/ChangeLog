@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.103 2012/03/27 18:32:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.104 2012/03/27 18:55:37 johu Exp $
+
+  27 Mar 2012; Johannes Huber <johu@gentoo.org>
+  -files/qt-script-4.6.2-alpha.patch:
+  Remove unused.
 
   27 Mar 2012; Johannes Huber <johu@gentoo.org> -qt-script-4.6.2.ebuild:
   Drop Qt-4.6.2
