@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.39 2012/03/22 15:07:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.40 2012/03/27 16:08:17 scarabeus Exp $
 
 EAPI=4
 
@@ -318,15 +318,10 @@ src_prepare() {
 src_configure() {
 	local java_opts
 	local internal_libs
-	local themes="default"
 	local jbs=$(sed -ne 's/.*\(-j[[:space:]]*\|--jobs=\)\([[:digit:]]\+\).*/\2/;T;p' <<< "${MAKEOPTS}")
 
 	# recheck that there is some value in jobs
 	[[ -z ${jbs} ]] && jbs="1"
-
-	# expand themes we are going to build based on DE useflags
-	use gnome && themes+=" tango"
-	use kde && themes+=" oxygen"
 
 	# sane: just sane.h header that is used for scan in writer, not
 	#       linked or anything else, worthless to depend on
@@ -425,7 +420,6 @@ src_configure() {
 		--with-lang="" \
 		--with-max-jobs=${jbs} \
 		--with-num-cpus=${jbs} \
-		--with-theme="${themes}" \
 		--with-unix-wrapper=libreoffice \
 		--with-vendor="Gentoo Foundation" \
 		--with-x \
