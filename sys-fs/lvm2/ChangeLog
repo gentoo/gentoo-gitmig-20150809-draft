@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.264 2012/03/26 21:22:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.265 2012/03/27 02:33:37 robbat2 Exp $
+
+*lvm2-2.02.95 (27 Mar 2012)
+
+  27 Mar 2012; Robin H. Johnson <robbat2@gentoo.org> +lvm2-2.02.95.ebuild:
+  Version bump. Include bug #409769: ability to disable udev support. Bug
+  #403263, #382939: updated clvm dependencies.
 
   26 Mar 2012; Mike Frysinger <vapier@gentoo.org> lvm2-2.02.88.ebuild,
   +files/lvm2-2.02.88-respect-cc.patch, lvm2-2.02.92.ebuild,
