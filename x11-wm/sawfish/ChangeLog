@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.108 2012/03/18 13:03:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.109 2012/03/27 09:01:21 pacho Exp $
+
+  27 Mar 2012; Pacho Ramos <pacho@gentoo.org> -sawfish-1.3.3.ebuild,
+  -sawfish-1.6.3.ebuild, metadata.xml:
+  Drop old.
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> sawfish-1.3.3.ebuild:
   Remove USE="esd" because media-sound/esound isn't in tree anymore.
