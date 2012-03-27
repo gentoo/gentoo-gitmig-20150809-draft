@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bashmount/bashmount-1.6.2.ebuild,v 1.1 2012/02/20 11:08:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bashmount/bashmount-1.6.2.ebuild,v 1.2 2012/03/27 18:40:01 ssuominen Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="app-shells/bash
 	sys-apps/dbus
-	sys-fs/udisks"
+	sys-fs/udisks:0"
 DEPEND=""
 
 src_install() {

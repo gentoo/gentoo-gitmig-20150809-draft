@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/traydevice-1.5.2.ebuild,v 1.4 2011/01/01 11:16:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/traydevice-1.5.2.ebuild,v 1.5 2012/03/27 18:41:32 ssuominen Exp $
 
 EAPI=3
 
@@ -22,7 +22,7 @@ IUSE=""
 RDEPEND="dev-python/dbus-python
 	dev-python/lxml
 	dev-python/pyxdg
-	sys-fs/udisks"
+	sys-fs/udisks:0"
 DEPEND="app-text/docbook2X"
 
 src_prepare() {
