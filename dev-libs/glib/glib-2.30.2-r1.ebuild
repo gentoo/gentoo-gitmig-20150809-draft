@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2-r1.ebuild,v 1.5 2012/03/25 15:28:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2-r1.ebuild,v 1.6 2012/03/27 03:16:18 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -39,7 +39,10 @@ DEPEND="${RDEPEND}
 		>=dev-util/gdbus-codegen-${PV}
 		>=sys-apps/dbus-1.2.14 )
 	!<dev-util/gtk-doc-1.15-r2"
-PDEPEND="!<gnome-base/gvfs-1.6.4-r990" # Earlier versions do not work with glib
+PDEPEND="x11-misc/shared-mime-info
+	!<gnome-base/gvfs-1.6.4-r990"
+# shared-mime-info needed for gio/xdgmime, bug #409481
+# Earlier versions of gvfs do not work with glib
 
 pkg_setup() {
 	# Needed for gio/tests/gdbus-testserver.py

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.18 2011/10/18 14:28:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.19 2012/03/27 03:16:18 tetromino Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -31,8 +31,11 @@ DEPEND="${RDEPEND}
 		~app-text/docbook-xml-dtd-4.1.2 )
 	test? ( >=sys-apps/dbus-1.2.14 )
 	!<dev-util/gtk-doc-1.15-r2"
-PDEPEND="introspection? ( dev-libs/gobject-introspection )
-	!<gnome-base/gvfs-1.6.4-r990" # Earlier versions do not work with glib
+PDEPEND="x11-misc/shared-mime-info
+	introspection? ( dev-libs/gobject-introspection )
+	!<gnome-base/gvfs-1.6.4-r990"
+# shared-mime-info needed for gio/xdgmime, bug #409481
+# Earlier versions of gvfs do not work with glib
 
 # XXX: Consider adding test? ( sys-devel/gdb ); assert-msg-test tries to use it
 
