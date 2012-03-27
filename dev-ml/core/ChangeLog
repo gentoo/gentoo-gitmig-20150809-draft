@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.7 2012/02/23 20:29:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.8 2012/03/27 21:33:16 aballier Exp $
+
+  27 Mar 2012; Alexis Ballier <aballier@gentoo.org> core-107.01.ebuild:
+  convert to oasis.eclass
 
   23 Feb 2012; Alexis Ballier <aballier@gentoo.org> -core-0.7.0.ebuild:
   remove old
