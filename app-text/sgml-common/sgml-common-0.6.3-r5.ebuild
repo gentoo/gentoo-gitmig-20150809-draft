@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r5.ebuild,v 1.23 2011/05/03 06:39:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r5.ebuild,v 1.24 2012/03/27 22:35:16 floppym Exp $
 
 EAPI="3"
 
@@ -28,8 +28,13 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-configure.in.patch
 	epatch "${FILESDIR}"/${P}-man_MANS.patch
+	epatch "${FILESDIR}"/${P}-htmldir.patch
 
 	eautoreconf
+}
+
+src_configure() {
+	econf --htmldir="${EPREFIX}/usr/share/doc/${PF}/html"
 }
 
 src_install() {
