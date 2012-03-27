@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.12.1.ebuild,v 1.1 2012/01/08 10:54:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.12.1.ebuild,v 1.2 2012/03/27 09:07:41 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite"
 SUPPORT_PYTHON_ABIS="1"
@@ -36,6 +36,8 @@ src_prepare() {
 	# Use a better meny entry
 	sed -i -e "/^Name/s:${PN}-2:Emesene v2:" \
 		${PN}/data/share/applications/${PN}.desktop || die
+
+	python_convert_shebangs -r 2 .
 	distutils_src_prepare
 }
 
