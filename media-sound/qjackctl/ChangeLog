@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qjackctl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.71 2011/08/12 18:51:07 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.72 2012/03/27 12:13:03 pesa Exp $
+
+  27 Mar 2012; Davide Pesavento <pesa@gentoo.org> qjackctl-0.3.8.ebuild:
+  Migrate to qt4-r2.eclass, ACK'ed by aballier in bug #409705.
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> qjackctl-0.3.2.ebuild,
   qjackctl-0.3.7.ebuild, qjackctl-0.3.8.ebuild:

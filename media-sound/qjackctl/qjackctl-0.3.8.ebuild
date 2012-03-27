@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.8.ebuild,v 1.2 2011/08/12 18:51:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.8.ebuild,v 1.3 2012/03/27 12:13:03 pesa Exp $
 
-EAPI=2
+EAPI=4
 
-inherit qt4
+inherit qt4-r2
 
 DESCRIPTION="A Qt application to control the JACK Audio Connection Kit and ALSA sequencer connections."
 HOMEPAGE="http://qjackctl.sourceforge.net/"
@@ -16,13 +16,16 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="alsa dbus debug portaudio"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
+RDEPEND="
+	>=media-sound/jack-audio-connection-kit-0.109.2
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
-	dbus? ( x11-libs/qt-dbus )
-	portaudio? ( media-libs/portaudio )
-	>=media-sound/jack-audio-connection-kit-0.109.2"
+	alsa? ( media-libs/alsa-lib )
+	dbus? ( x11-libs/qt-dbus:4 )
+	portaudio? ( media-libs/portaudio )"
 DEPEND="${RDEPEND}"
+
+DOCS="AUTHORS ChangeLog README TODO TRANSLATORS"
 
 src_configure() {
 	econf \
@@ -33,15 +36,10 @@ src_configure() {
 
 	# Emulate what the Makefile does, so that we can get the correct
 	# compiler used.
-	eqmake4 ${PN}.pro -o ${PN}.mak || die "eqmake4 failed"
+	eqmake4 ${PN}.pro -o ${PN}.mak
 }
 
 src_compile() {
-	emake -f ${PN}.mak || die "emake failed"
+	emake -f ${PN}.mak
 	lupdate ${PN}.pro || die "lupdate failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc README ChangeLog TODO AUTHORS TRANSLATORS
 }
