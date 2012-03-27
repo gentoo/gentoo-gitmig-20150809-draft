@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.5-r3.ebuild,v 1.1 2011/10/19 17:51:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.5-r3.ebuild,v 1.2 2012/03/27 19:01:25 flameeyes Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 # For init script, so protect with vanilla, they are not strictly
 # needed.
 RDEPEND="${RDEPEND}
-	vanilla? (
+	!vanilla? (
 		sys-apps/util-linux
 		app-misc/pax-utils
 	)"
