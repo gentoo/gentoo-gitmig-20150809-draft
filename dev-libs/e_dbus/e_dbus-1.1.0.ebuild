@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.1.0.ebuild,v 1.1 2012/02/08 21:17:26 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.1.0.ebuild,v 1.2 2012/03/27 18:31:16 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 	sys-apps/dbus
 	connman? ( >=net-misc/connman-0.75 )
 	libnotify? ( >=media-libs/evas-1.0.0_beta )
-	udev? ( sys-power/upower sys-fs/udisks )
+	udev? ( sys-power/upower sys-fs/udisks:0 )
 "
 DEPEND="${RDEPEND}"
 
