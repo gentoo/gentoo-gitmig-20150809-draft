@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.265 2012/03/27 02:33:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.266 2012/03/27 03:20:56 robbat2 Exp $
+
+  27 Mar 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lvm2-start.sh-2.02.95, files/lvm2-start.sh-2.02.67-r1,
+  lvm2-2.02.95.ebuild:
+  Bug #354021: update start.sh for LVM2 speedups.
 
 *lvm2-2.02.95 (27 Mar 2012)
 

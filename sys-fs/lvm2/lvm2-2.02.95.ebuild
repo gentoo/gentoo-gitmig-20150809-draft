@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.95.ebuild,v 1.1 2012/03/27 02:33:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.95.ebuild,v 1.2 2012/03/27 03:20:56 robbat2 Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -192,7 +192,7 @@ src_install() {
 
 	dodoc README VERSION* WHATS_NEW WHATS_NEW_DM doc/*.{conf,c,txt}
 	insinto /$(get_libdir)/rcscripts/addons
-	newins "${FILESDIR}"/lvm2-start.sh-2.02.67-r1 lvm-start.sh || die
+	newins "${FILESDIR}"/lvm2-start.sh-2.02.95 lvm-start.sh || die
 	newins "${FILESDIR}"/lvm2-stop.sh-2.02.67-r1 lvm-stop.sh || die
 	newinitd "${FILESDIR}"/lvm.rc-2.02.67-r1 lvm || die
 	newinitd "${FILESDIR}"/lvm-monitoring.initd-2.02.67-r2 lvm-monitoring || die
