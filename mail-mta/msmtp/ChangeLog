@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.124 2012/03/25 14:56:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.125 2012/03/27 01:04:39 radhermit Exp $
+
+  27 Mar 2012; Tim Harder <radhermit@gentoo.org> -msmtp-1.4.24.ebuild:
+  Remove old.
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> msmtp-1.4.27.ebuild:
   alpha/ia64/sparc stable wrt #402637
