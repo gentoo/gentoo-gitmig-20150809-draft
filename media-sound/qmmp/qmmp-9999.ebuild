@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.18 2011/11/30 22:30:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.19 2012/03/27 18:36:09 ssuominen Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ RDEPEND="x11-libs/qt-qt3support:4
 	projectm? ( media-libs/libprojectm
 		x11-libs/qt-opengl:4 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.9 )
-	udev? ( sys-fs/udisks )
+	udev? ( sys-fs/udisks:0 )
 	wavpack? ( media-sound/wavpack )
 	scrobbler? ( net-misc/curl )
 	sndfile? ( media-libs/libsndfile )"
