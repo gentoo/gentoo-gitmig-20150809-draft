@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.0.2-r200.ebuild,v 1.8 2012/03/25 16:25:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.0.2-r200.ebuild,v 1.9 2012/03/27 18:39:00 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ CDEPEND="
 	>=dev-libs/dbus-glib-0.74
 	>=dev-libs/libunique-2.90.1:3
 	>=x11-libs/gtk+-2.90.7:3
-	=sys-fs/udisks-1.0*[remote-access?]
+	=sys-fs/udisks-1.0*:0[remote-access?]
 	>=dev-libs/libatasmart-0.14
 	>=x11-libs/libnotify-0.6.1
 
