@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.30.1-r2.ebuild,v 1.1 2011/11/18 08:48:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.32.0.ebuild,v 1.1 2012/03/27 04:47:11 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="debug doc glade +introspection"
 
 PDEPEND="x11-libs/gnome-pty-helper"
-RDEPEND=">=dev-libs/glib-2.26:2
+RDEPEND=">=dev-libs/glib-2.31.13:2
 	>=x11-libs/gtk+-3.1.9:3[introspection?]
 	>=x11-libs/pango-1.22.0
 
@@ -36,10 +36,9 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	# Python bindings are via gobject-introspection
 	# Ex: from gi.repository import Vte
+	# Do not disable gnome-pty-helper, bug #401389
 	G2CONF="${G2CONF}
-		--disable-gnome-pty-helper
 		--disable-deprecation
-		--disable-maintainer-mode
 		--disable-static
 		$(use_enable debug)
 		$(use_enable glade glade-catalogue)
@@ -52,4 +51,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.30.1-alt-meta.patch"
 
 	gnome2_src_prepare
+}
+
+src_install() {
+	gnome2_src_install
+	rm -v "${ED}usr/libexec/gnome-pty-helper" || die
 }
