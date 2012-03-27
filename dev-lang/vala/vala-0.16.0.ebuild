@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.14.0.ebuild,v 1.8 2011/11/18 09:51:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.16.0.ebuild,v 1.1 2012/03/27 02:45:12 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,12 +12,13 @@ DESCRIPTION="Vala - Compiler for the GObject type system"
 HOMEPAGE="http://live.gnome.org/Vala"
 
 LICENSE="LGPL-2.1"
-SLOT="0.14"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-linux"
+SLOT="0.16"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-linux"
 IUSE="test +vapigen"
 
 RDEPEND=">=dev-libs/glib-2.16:2"
 DEPEND="${RDEPEND}
+	!${CATEGORY}/${PN}:0
 	sys-devel/flex
 	|| ( sys-devel/bison dev-util/byacc dev-util/yacc )
 	dev-util/pkgconfig
@@ -29,15 +30,15 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-unversioned
-		--disable-maintainer-mode
 		$(use_enable vapigen)"
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 }
 
 src_install() {
 	gnome2_src_install
-	mv "${ED}"/usr/share/aclocal/vala.m4 \
-		"${ED}"/usr/share/aclocal/vala-${SLOT/./-}.m4 || die "failed to move vala m4 macro"
+
+	insinto /usr/share/aclocal
+	newins vala.m4 vala-${SLOT/./-}.m4
 }
 
 pkg_postinst() {
