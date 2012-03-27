@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1.ebuild,v 1.1 2012/03/26 10:18:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1.ebuild,v 1.2 2012/03/27 09:25:06 johu Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}
 	)"
 
 pkg_setup() {
+	python_set_active_version 2
 	python_pkg_setup
 }
 
