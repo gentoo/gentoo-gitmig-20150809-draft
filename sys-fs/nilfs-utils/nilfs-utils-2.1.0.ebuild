@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.0.ebuild,v 1.4 2012/03/19 17:04:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.0.ebuild,v 1.5 2012/03/27 00:28:43 naota Exp $
 
 EAPI=3
 
-inherit multilib linux-mod
+inherit multilib linux-info
 
 DESCRIPTION="A New Implementation of a Log-structured File System for Linux"
 HOMEPAGE="http://www.nilfs.org/"
@@ -19,22 +19,7 @@ RDEPEND="sys-libs/e2fsprogs-libs"
 DEPEND="${DEPEND}
 	sys-kernel/linux-headers"
 
-pkg_setup() {
-	linux-mod_pkg_setup
-	ebegin "Checking for POSIX MQUEUE support"
-	linux_chkconfig_present POSIX_MQUEUE
-	eend $?
-
-	if [[ $? -ne 0 ]]; then
-		eerror "Plese enable POSIX Message Queues support"
-		eerror
-		eerror "  General setup"
-		eerror "    [*] POSIX Message Queues"
-		eerror
-		eerror "and recompile your kernel ..."
-		die "POSIX Message Queues support not detected!"
-	fi
-}
+CONFIG_CHECK="~POSIX_MQUEUE"
 
 src_configure() {
 	econf $(use_enable static-libs static)
