@@ -1,23 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.7.ebuild,v 1.2 2012/02/13 20:32:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.7.ebuild,v 1.3 2012/03/27 11:40:43 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit linux-info
+inherit linux-info autotools
 
 DESCRIPTION="A linux trace/probe tool"
 HOMEPAGE="http://sourceware.org/systemtap/"
-if [[ ${PV} = *_pre* ]] # is this a snaphot?
-then
-	# see configure.ac to get the version of the snapshot
-	SRC_URI="http://sources.redhat.com/${PN}/ftp/snapshots/${PN}-${PV/*_pre/}.tar.bz2
-		mirror://gentoo/${PN}-${PV/*_pre/}.tar.bz2" # upstream only keeps four snapshot distfiles around
-	S="${WORKDIR}"/src
-else
-	SRC_URI="http://sources.redhat.com/${PN}/ftp/releases/${P}.tar.gz"
-	# use default S for releases
-fi
+SRC_URI="http://sources.redhat.com/${PN}/ftp/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,7 +17,7 @@ IUSE="sqlite"
 
 DEPEND=">=dev-libs/elfutils-0.142
 	sys-libs/libcap
-	sqlite? ( =dev-db/sqlite-3* )"
+	sqlite? ( dev-db/sqlite:3 )"
 RDEPEND="${DEPEND}
 	virtual/linux-sources"
 
@@ -35,19 +26,34 @@ ERROR_KPROBES="${PN} requires support for KProbes Instrumentation (KPROBES) - th
 ERROR_RELAY="${PN} works with support for user space relay support (RELAY) - this can be enabled in 'General setup -> Kernel->user space relay support (formerly relayfs)'."
 ERROR_DEBUG_FS="${PN} works best with support for Debug Filesystem (DEBUG_FS) - this can be enabled in 'Kernel hacking -> Debug Filesystem'."
 
+DOCS="AUTHORS HACKING NEWS README"
+
+src_prepare() {
+	sed -i \
+		-e 's:-Werror::g' \
+		configure.ac Makefile.am \
+		grapher/Makefile.am \
+		runtime/staprun/Makefile.am \
+		buildrun.cxx \
+		runtime/bench2/bench.rb \
+		runtime/bench2/Makefile \
+		testsuite/systemtap.unprivileged/unprivileged_probes.exp \
+		testsuite/systemtap.unprivileged/unprivileged_myproc.exp \
+		testsuite/systemtap.base/stmt_rel_user.exp \
+		testsuite/systemtap.base/sdt_va_args.exp \
+		testsuite/systemtap.base/sdt_misc.exp \
+		testsuite/systemtap.base/sdt.exp \
+		scripts/kprobes_test/gen_code.py
+	eautoreconf
+}
+
 src_configure() {
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--without-rpm \
 		--disable-server \
 		--disable-docs \
 		--disable-refdocs \
 		--disable-grapher \
-		$(use_enable sqlite) \
-		|| die "econf failed"
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die "make install failed"
-	dodoc AUTHORS HACKING NEWS README
+		$(use_enable sqlite)
 }
