@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.137 2012/03/27 18:38:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.138 2012/03/27 19:02:36 johu Exp $
+
+  27 Mar 2012; Johannes Huber <johu@gentoo.org>
+  -files/qt-webkit-4.5.3-cve-2010-0046-css-format-mem-corruption.patch,
+  -files/qt-webkit-4.5.3-cve-2010-0049-freed-line-boxes-ltr-rtl.patch,
+  -files/qt-webkit-4.5.3-cve-2010-0050-crash-misnested-style-tags.patch,
+  -files/qt-webkit-4.5.3-cve-2010-0052-destroyed-input-cached.patch,
+  -files/qt-webkit-4.6.2-cve-2010-0051-lax-css-parsing-cross-domain-theft.patch,
+  -files/qt-webkit-4.6.2-cve-2010-0054-image-element-pointer-name-getter.patch:
+  Remove unused.
 
   27 Mar 2012; Johannes Huber <johu@gentoo.org> -qt-webkit-4.6.2.ebuild,
   -qt-webkit-4.6.2-r1.ebuild:
