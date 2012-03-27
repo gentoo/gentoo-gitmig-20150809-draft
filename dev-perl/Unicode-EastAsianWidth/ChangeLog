@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-EastAsianWidth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.4 2012/03/24 16:20:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.5 2012/03/27 00:17:38 naota Exp $
+
+  27 Mar 2012; Naohiro Aota <naota@gentoo.org>
+  Unicode-EastAsianWidth-1.30.ebuild:
+  Add ~x86-fbsd. #408399
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
   Unicode-EastAsianWidth-1.30.ebuild:
