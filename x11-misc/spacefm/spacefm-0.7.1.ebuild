@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.1.ebuild,v 1.1 2012/02/22 22:47:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.1.ebuild,v 1.2 2012/03/27 18:46:54 ssuominen Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/freedesktop-icon-theme
 	x11-misc/shared-mime-info
 	!kernel_linux? ( fam? ( virtual/fam ) )
-	udev? ( sys-fs/udisks
+	udev? ( sys-fs/udisks:0
 		sys-process/lsof )
 	su? (
 		gtk? ( x11-libs/gksu )

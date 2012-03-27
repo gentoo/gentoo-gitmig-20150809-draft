@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.13 2012/03/06 00:10:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.14 2012/03/27 18:46:54 ssuominen Exp $
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> spacefm-0.6.3.ebuild,
+  spacefm-0.7.1.ebuild, spacefm-0.7.2.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks.
 
 *spacefm-0.7.2 (05 Mar 2012)
 
