@@ -30,6 +30,8 @@
 			connections using <pkg>net-dialup/ppp</pkg></flag>
 		<flag name="resolvconf">Use <pkg>net-dns/openresolv</pkg> for managing
 			DNS information</flag>
+		<flag name="systemd">Use <pkg>sys-apps/systemd</pkg> instead of
+			<pkg>sys-auth/consolekit</pkg> for session tracking</flag>
 		<flag name="wimax">Enable support for WiMAX connections using
 			<pkg>net-wireless/wimax</pkg></flag>
 	</use>
