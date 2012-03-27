@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.206 2012/03/18 19:12:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.207 2012/03/27 17:50:37 vapier Exp $
+
+  27 Mar 2012; Mike Frysinger <vapier@gentoo.org> findutils-4.4.2.ebuild,
+  findutils-4.4.2-r1.ebuild, findutils-4.5.8.ebuild, findutils-4.5.9.ebuild,
+  findutils-4.5.10.ebuild, findutils-4.5.10-r1.ebuild:
+  Migrate to gnu-alpha mirror.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> findutils-4.4.2-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #404199
