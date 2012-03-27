@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/unoconv-20110923.ebuild,v 1.1 2011/09/23 13:24:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/unoconv-20120327.ebuild,v 1.1 2012/03/27 16:27:31 scarabeus Exp $
 
 EAPI=3
 
