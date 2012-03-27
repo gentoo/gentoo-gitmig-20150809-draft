@@ -9,4 +9,8 @@
 		<email>nirbheek@gentoo.org</email>
 		<name>Nirbheek Chauhan</name>
 	</maintainer>
+	<maintainer>
+		<email>tetromino@gentoo.org</email>
+		<name>Alexandre Rostovtsev</name>
+	</maintainer>
 </pkgmetadata>
