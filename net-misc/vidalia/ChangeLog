@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.30 2012/03/17 18:08:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.31 2012/03/27 15:28:42 blueness Exp $
+
+*vidalia-0.3.1 (27 Mar 2012)
+
+  27 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  -vidalia-0.3.0_alpha.ebuild, +vidalia-0.3.1.ebuild:
+  Version bump alpha and remove older. Note: all 0.3.x will be alphas.
 
   17 Mar 2012; Raúl Porcel <armin76@gentoo.org> vidalia-0.2.12.ebuild,
   vidalia-0.2.15.ebuild, vidalia-0.2.17.ebuild, vidalia-0.3.0_alpha.ebuild:
