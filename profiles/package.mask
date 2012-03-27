@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13619 2012/03/26 05:19:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13620 2012/03/27 04:42:03 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,9 +44,16 @@
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Mar 2012)
 # This is now the GNOME 3.4 mask
+# Core libraries to be unmasked first:
 =dev-libs/glib-2.32*:2
 =dev-util/gdbus-codegen-2.32*
+=x11-libs/gdk-pixbuf-2.26*:2
 =x11-libs/gtk+-3.4*:3
+=x11-libs/gnome-pty-helper-0.32*
+=x11-libs/pango-1.30*
+=x11-libs/vte-0.32*:2.90
+=x11-themes/gnome-themes-standard-3.4*
+# Other stuff:
 >=net-libs/telepathy-farstream-0.2
 # New clutter API breaks almost everything
 =media-libs/cogl-1.10*

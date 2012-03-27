@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.326 2012/03/25 00:08:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.327 2012/03/27 04:42:03 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Mar 2012)
+# Requires libxkbcommon from the x11 overlay
+x11-libs/gtk+ wayland
 
 # Johannes Huber <johu@gentoo.org> (23 Mar 2012)
 # Broken dep, see bug #389833.
