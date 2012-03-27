@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06.95-r1.ebuild,v 1.2 2011/02/15 12:33:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06.95-r1.ebuild,v 1.3 2012/03/27 18:26:34 vapier Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic
 
 DESCRIPTION="Handy console-based calculator utility"
 HOMEPAGE="http://www.gnu.org/software/bc/bc.html"
-SRC_URI="ftp://alpha.gnu.org/gnu/bc/${P}.tar.bz2
+SRC_URI="mirror://gnu-alpha/bc/${P}.tar.bz2
 	mirror://gnu/bc/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
