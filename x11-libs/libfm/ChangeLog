@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.60 2012/03/06 18:47:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.61 2012/03/27 18:45:36 ssuominen Exp $
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libfm-0.1.15_pre20110422.ebuild, libfm-0.1.15_pre20110614.ebuild,
+  libfm-0.1.16.ebuild, libfm-0.1.17.ebuild, libfm-9999.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks.
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> libfm-0.1.17.ebuild:
   Marking libfm-0.1.17 ppc for bug 382255

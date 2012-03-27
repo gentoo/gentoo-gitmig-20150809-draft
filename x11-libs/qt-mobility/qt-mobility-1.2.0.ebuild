@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.0.ebuild,v 1.1 2011/11/10 23:16:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.0.ebuild,v 1.2 2012/03/27 18:43:29 ssuominen Exp $
 
 EAPI=4
 
@@ -91,7 +91,7 @@ PDEPEND="
 		bluetooth? ( app-mobilephone/obexd )
 	)
 	systeminfo? (
-		sys-fs/udisks
+		sys-fs/udisks:0
 		sys-power/upower
 	)
 "
