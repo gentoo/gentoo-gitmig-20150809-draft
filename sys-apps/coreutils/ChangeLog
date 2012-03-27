@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.334 2012/02/19 14:12:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.335 2012/03/27 17:47:13 vapier Exp $
+
+*coreutils-8.16 (27 Mar 2012)
+
+  27 Mar 2012; Mike Frysinger <vapier@gentoo.org> +coreutils-8.16.ebuild:
+  Version bump.
 
   19 Feb 2012; Raúl Porcel <armin76@gentoo.org> coreutils-8.14.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #397929
