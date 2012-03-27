@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/networkmanagement
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/ChangeLog,v 1.8 2012/02/27 23:38:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/ChangeLog,v 1.9 2012/03/27 08:48:15 dilfridge Exp $
+
+  27 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  networkmanagement-0.8_p20110714.ebuild:
+  Does not work with networkmanager-0.9
 
   27 Feb 2012; Theo Chatzimichos <tampakrap@gentoo.org>
   -networkmanagement-0.8.98.ebuild, -networkmanagement-0.8.99.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.8_p20110714.ebuild,v 1.1 2011/10/30 13:49:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.8_p20110714.ebuild,v 1.2 2012/03/27 08:48:15 dilfridge Exp $
 
 EAPI=4
 
@@ -25,6 +25,7 @@ IUSE="consolekit debug"
 DEPEND="
 	net-misc/mobile-broadband-provider-info
 	>=net-misc/networkmanager-0.8.2-r10
+	<net-misc/networkmanager-0.9
 	$(add_kdebase_dep solid 'networkmanager')
 "
 RDEPEND="${DEPEND}"
