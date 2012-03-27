@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qtgain
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtgain/ChangeLog,v 1.2 2012/02/03 12:22:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtgain/ChangeLog,v 1.3 2012/03/27 15:16:46 johu Exp $
+
+  27 Mar 2012; Johannes Huber <johu@gentoo.org> -qtgain-0.8.0.ebuild:
+  Remove old with deprecated eclass usage.
 
 *qtgain-0.9.5 (03 Feb 2012)
 
