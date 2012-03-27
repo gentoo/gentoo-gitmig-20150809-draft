@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/oasis.eclass,v 1.2 2012/03/27 21:24:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/oasis.eclass,v 1.3 2012/03/27 22:44:41 aballier Exp $
 
 # @ECLASS: oasis.eclass
 # @MAINTAINER: 
@@ -34,13 +34,22 @@
 # of the extra dependencies it may need.
 # Set before inheriting the eclass.
 
+
+# @ECLASS-VARIABLE: OASIS_NO_DEBUG
+# @DESCRIPTION:
+# Disable debug useflag usage. Old oasis versions did not support it so we allow
+# disabling it in those cases.
+# The eclass takes care of setting debug in IUSE.
+# Set before inheriting the eclass.
+
 inherit multilib findlib eutils base
 
 case ${EAPI:-0} in
 	0|1|2) die "You need at least EAPI-3 to use oasis.eclass";;
 esac
 
-IUSE="debug +ocamlopt"
+IUSE="+ocamlopt"
+[ -n "${OASIS_NO_DEBUG}" ]   || IUSE="${IUSE} debug"
 [ -n "${OASIS_BUILD_DOCS}" ] && IUSE="${IUSE} doc"
 [ -n "${OASIS_BUILD_TESTS}" ] && IUSE="${IUSE} test"
 
@@ -64,16 +73,16 @@ oasis_use_enable() {
 # src_configure phase shared by oasis-based packages.
 # Extra arguments may be passed via oasis_configure_opts.
 oasis_src_configure() {
-	local testargs=""
-	[ -n "${OASIS_BUILD_TESTS}" ] && testargs="$(use_enable test tests)"
+	local confargs=""
+	[ -n "${OASIS_BUILD_TESTS}" ] && confargs="${confargs} $(use_enable test tests)"
+	[ -n "${OASIS_NO_DEBUG}"    ] || confargs="${confargs} $(oasis_use_enable debug debug)"
 	ocaml setup.ml -configure \
 		--prefix "${EPREFIX}/usr" \
 		--libdir "${EPREFIX}/usr/$(get_libdir)" \
 		--docdir "${EPREFIX}/usr/share/doc/${PF}/html" \
 		--destdir "${D}" \
-		$(oasis_use_enable debug debug) \
 		$(oasis_use_enable ocamlopt is_native) \
-		${testargs} \
+		${confargs} \
 		${oasis_configure_opts} \
 		|| die
 }
