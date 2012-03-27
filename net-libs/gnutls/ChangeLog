@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.342 2012/03/17 03:20:38 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.343 2012/03/27 14:59:43 phajdan.jr Exp $
+
+  27 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gnutls-2.12.18.ebuild:
+  x86 stable wrt bug #409287
 
   17 Mar 2012; Naohiro Aota <naota@gentoo.org> gnutls-2.12.18.ebuild:
   Add ~x86-fbsd. #402959
