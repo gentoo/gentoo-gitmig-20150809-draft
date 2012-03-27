@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.0.ebuild,v 1.4 2012/01/28 14:02:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.0.ebuild,v 1.5 2012/03/27 18:34:48 ssuominen Exp $
 
 EAPI=4
 
@@ -55,7 +55,7 @@ COMMON_DEPEND="
 # http://code.google.com/p/clementine-player/source/browse/#svn/trunk/3rdparty/libprojectm/patches
 # r1966 "Compile with a static sqlite by default, since Qt 4.7 doesn't seem to expose the symbols we need to use FTS"
 RDEPEND="${COMMON_DEPEND}
-	dbus? ( udev? ( sys-fs/udisks ) )
+	dbus? ( udev? ( sys-fs/udisks:0 ) )
 	mms? ( media-plugins/gst-plugins-libmms:0.10 )
 	mtp? ( gnome-base/gvfs )
 	ofa? ( media-plugins/gst-plugins-ofa )
