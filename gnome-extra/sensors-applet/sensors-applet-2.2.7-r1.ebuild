@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.8 2011/11/28 22:58:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.9 2012/03/27 18:32:19 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 # Requires libxslt only for use by gnome-doc-utils
 
-PDEPEND="hddtemp? ( dbus? ( sys-fs/udisks ) )"
+PDEPEND="hddtemp? ( dbus? ( sys-fs/udisks:0 ) )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 

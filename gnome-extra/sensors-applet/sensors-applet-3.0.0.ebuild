@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-3.0.0.ebuild,v 1.3 2011/11/28 23:23:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-3.0.0.ebuild,v 1.4 2012/03/27 18:32:19 ssuominen Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -27,7 +27,7 @@ CDEPEND=">=dev-libs/glib-2.22
 	video_cards_fglrx? ( x11-drivers/ati-drivers )
 	video_cards_nvidia? ( || ( >=x11-drivers/nvidia-drivers-100.14.09 media-video/nvidia-settings ) )"
 RDEPEND="${CDEPEND}
-	hddtemp? ( udev? ( sys-fs/udisks ) )"
+	hddtemp? ( udev? ( sys-fs/udisks:0 ) )"
 DEPEND="${CDEPEND}
 	app-text/gnome-doc-utils
 	app-text/rarian

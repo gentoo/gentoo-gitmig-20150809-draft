@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/sensors-applet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.60 2011/11/28 23:23:21 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.61 2012/03/27 18:32:19 ssuominen Exp $
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  sensors-applet-2.2.7-r1.ebuild, sensors-applet-3.0.0.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks
 
   28 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   sensors-applet-3.0.0.ebuild:
