@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.39 2012/03/18 13:51:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.40 2012/03/28 07:38:59 scarabeus Exp $
+
+*mplayer2-2.0_p20120309 (28 Mar 2012)
+
+  28 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +mplayer2-2.0_p20120309.ebuild, mplayer2-9999.ebuild:
+  Version bump to new snapshot for libav-0.8.1. Fix some cosmetics and depend on
+  new libav/ffmpeg only. Keywords dropped due lack of keywords on virtual. Fixes
+  bugs #406373, #409457, #407341, #409185. Thanks to Nikoli for all his work on
+  this.
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove unused description(s) for USE osdmenu and xvmc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.25 2012/03/28 07:38:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120309.ebuild,v 1.1 2012/03/28 07:38:59 scarabeus Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.mplayer2.org/"
 if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://git.mplayer2.org/mplayer2.git"
 else
-	RELEASE_URI="http://dev.gentoo.org/~lu_zero/${PN}/${P}.tar.xz"
+	RELEASE_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.xz"
 fi
 SRC_URI="${RELEASE_URI}
 	!truetype? (
@@ -30,7 +30,7 @@ SLOT="0"
 if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+	KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux"
 fi
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
 bluray bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts
