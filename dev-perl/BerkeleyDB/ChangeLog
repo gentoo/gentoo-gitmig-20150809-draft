@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.81 2012/03/20 17:10:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.82 2012/03/28 07:31:23 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> BerkeleyDB-0.500.0.ebuild:
+  Stable for amd64, wrt bug #404663
 
 *BerkeleyDB-0.510.0 (20 Mar 2012)
 
