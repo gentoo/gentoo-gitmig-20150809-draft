@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.425 2012/03/05 05:21:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.426 2012/03/28 03:46:42 radhermit Exp $
+
+*gnupg-2.0.19 (28 Mar 2012)
+
+  28 Mar 2012; Tim Harder <radhermit@gentoo.org> +gnupg-2.0.19.ebuild:
+  Version bump.
 
   05 Mar 2012; Tim Harder <radhermit@gentoo.org> gnupg-2.0.18.ebuild:
   Allow older zlib versions without the static-libs use flag to statisfy the
