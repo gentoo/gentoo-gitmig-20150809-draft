@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/sqlitebrowser
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.11 2010/11/07 15:20:42 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.12 2012/03/28 23:58:33 xmw Exp $
+
+*sqlitebrowser-2.0_beta1-r2 (29 Mar 2012)
+
+  29 Mar 2012; Michael Weber <xmw@gentoo.org>
+  +sqlitebrowser-2.0_beta1-r2.ebuild,
+  +files/sqlitebrowser-2.0_beta1-gold.patch:
+  Revbump to replace qt4.eclass and EAPI-4 (bug 409985) and fix gold linker
+  problem (bug 372129). Thanks Michael (kensington) for the patches.
 
 *sqlitebrowser-2.0_beta1-r1 (07 Nov 2010)
 
