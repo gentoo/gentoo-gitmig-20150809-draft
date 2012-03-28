@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.177 2012/03/05 08:17:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.178 2012/03/28 15:04:37 patrick Exp $
+
+*apache-2.2.22 (28 Mar 2012)
+
+  28 Mar 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.2.22.ebuild:
+  Bump for #401761. init script fix for #389965
 
   05 Mar 2012; Patrick Lauer <patrick@gentoo.org> apache-2.2.21-r1.ebuild,
   apache-2.2.21-r2.ebuild:
