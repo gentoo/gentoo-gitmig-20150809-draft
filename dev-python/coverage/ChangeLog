@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.56 2012/03/25 18:41:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.57 2012/03/28 05:48:19 maekke Exp $
+
+  28 Mar 2012; Markus Meier <maekke@gentoo.org> coverage-3.5.1.ebuild:
+  arm stable, bug #408787
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> coverage-3.5.1.ebuild:
   Marking coverage-3.5.1 ppc64 for bug 408787
