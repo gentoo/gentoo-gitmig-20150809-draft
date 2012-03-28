@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler-data
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.47 2011/11/24 12:36:59 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.48 2012/03/28 03:37:44 dilfridge Exp $
+
+*poppler-data-0.4.5-r1 (28 Mar 2012)
+
+  28 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +poppler-data-0.4.5-r1.ebuild:
+  Add some helper dir for ghostscript, bug 409361
 
   24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #220219
