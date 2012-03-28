@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/locale-maketext-fuzzy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-fuzzy/ChangeLog,v 1.17 2011/12/19 14:26:05 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-fuzzy/ChangeLog,v 1.18 2012/03/28 07:39:26 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org>
+  locale-maketext-fuzzy-0.110.0.ebuild:
+  Stable for amd64, wrt bug #404697
 
 *locale-maketext-fuzzy-0.110.0 (19 Dec 2011)
 
