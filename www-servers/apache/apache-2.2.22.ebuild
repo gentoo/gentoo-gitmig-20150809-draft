@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.22.ebuild,v 1.1 2012/03/28 15:04:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.22.ebuild,v 1.2 2012/03/28 17:18:22 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -100,7 +100,6 @@ RDEPEND="${RDEPEND}
 	>=dev-libs/apr-1.4.5
 	>=dev-libs/openssl-0.9.8m
 	apache2_modules_mime? ( app-misc/mime-types )"
-
 
 # init script fixup - should be rolled into next tarball #389965
 src_prepare() {
