@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.28.03-r1.ebuild,v 1.2 2012/03/25 20:56:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.28.03-r1.ebuild,v 1.3 2012/03/28 20:17:13 ranger Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="abyss +cgi +curl +cxx +libxml2 static-libs threads tools"
 
 REQUIRED_USE="test? ( static-libs abyss curl cxx )"
