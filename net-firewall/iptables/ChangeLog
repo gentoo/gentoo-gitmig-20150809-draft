@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.259 2012/01/06 23:16:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.260 2012/03/28 04:15:30 radhermit Exp $
+
+*iptables-1.4.13 (28 Mar 2012)
+
+  28 Mar 2012; Tim Harder <radhermit@gentoo.org> +iptables-1.4.13.ebuild:
+  Version bump (bug #402217).
 
   06 Jan 2012; Mike Frysinger <vapier@gentoo.org> iptables-1.4.12.1-r1.ebuild:
   Trim core kernel headers from source to fix building with newer kernel
