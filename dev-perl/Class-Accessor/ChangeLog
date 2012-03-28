@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Accessor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/ChangeLog,v 1.62 2011/09/24 13:17:55 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/ChangeLog,v 1.63 2012/03/28 07:31:50 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> Class-Accessor-0.340.0.ebuild:
+  Stable for amd64, wrt bug #404665
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   Class-Accessor-0.340.0.ebuild:
