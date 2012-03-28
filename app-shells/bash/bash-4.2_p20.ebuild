@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p20.ebuild,v 1.11 2012/03/28 16:34:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p20.ebuild,v 1.12 2012/03/28 18:13:09 vapier Exp $
 
 EAPI="1"
 
@@ -105,6 +105,9 @@ src_compile() {
 	# in the PM (and the readline ebuild itself preserves the old
 	# libs during upgrades), linking against the system copy should
 	# be safe.
+	# Exact cached version here doesn't really matter as long as it
+	# is at least what's in the DEPEND up above.
+	export ac_cv_rl_version=6.2
 
 	# Force linking with system curses ... the bundled termcap lib
 	# sucks bad compared to ncurses.  For the most part, ncurses
@@ -113,7 +116,7 @@ src_compile() {
 
 	use plugins && append-ldflags -Wl,-rpath,/usr/$(get_libdir)/bash
 	econf \
-		--with-installed-readline \
+		--with-installed-readline=. \
 		--with-curses \
 		$(use_with afs) \
 		$(use_enable net net-redirections) \
