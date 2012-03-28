@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ostinato-0.5.ebuild,v 1.1 2011/11/05 21:44:59 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ostinato-0.5.ebuild,v 1.2 2012/03/28 07:29:56 ago Exp $
 
 EAPI=2
 inherit qt4-r2
@@ -11,7 +11,7 @@ SRC_URI="http://ostinato.googlecode.com/files/${PN}-src-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/protobuf
