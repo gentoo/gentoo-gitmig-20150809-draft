@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.27 2012/03/10 11:54:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.28 2012/03/28 06:57:22 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> goocanvas-2.0.1.ebuild:
+  Stable for amd64, wrt bug #404875
 
   10 Mar 2012; Justin Lecher <jlec@gentoo.org> goocanvas-2.0.1.ebuild,
   +files/goocanvas-2.0.1-gold.patch:
