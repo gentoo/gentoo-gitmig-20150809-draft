@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Refresh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.21 2011/10/30 09:57:08 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.22 2012/03/28 07:35:18 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> Module-Refresh-0.170.0.ebuild:
+  Stable for amd64, wrt bug #404681
 
 *Module-Refresh-0.170.0 (30 Oct 2011)
 
