@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.1.ebuild,v 1.8 2012/03/28 21:52:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.1.ebuild,v 1.9 2012/03/28 22:10:24 vapier Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit confutils eutils gnome2-utils multilib python autotools
+inherit eutils gnome2-utils multilib python autotools
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -15,6 +15,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
 IUSE="dconf doc +gconf gtk gtk3 +introspection nls +python vala X"
+REQUIRED_USE="|| ( gtk gtk3 X )" #342903
 
 RDEPEND=">=dev-libs/glib-2.26
 	dconf? ( >=gnome-base/dconf-0.7.5 )
@@ -73,8 +74,6 @@ update_gtk3_immodules() {
 }
 
 pkg_setup() {
-	# bug #342903
-	confutils_require_any X gtk gtk3
 	if use python; then
 		python_set_active_version 2
 		python_pkg_setup
@@ -96,6 +95,8 @@ src_prepare() {
 }
 
 src_configure() {
+	# We cannot call $(PYTHON) if we haven't called python_pkg_setup
+	use python && PYTHON=$(PYTHON) || PYTHON=
 	econf \
 		$(use_enable dconf) \
 		$(use_enable doc gtk-doc) \
@@ -109,7 +110,7 @@ src_configure() {
 		$(use_enable python) \
 		$(use_enable vala) \
 		$(use_enable X xim) \
-		PYTHON="$(PYTHON)"
+		PYTHON="${PYTHON}"
 }
 
 src_install() {
