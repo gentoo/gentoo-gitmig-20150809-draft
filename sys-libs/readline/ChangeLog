@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.177 2012/03/10 18:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.178 2012/03/28 21:07:52 vapier Exp $
+
+  28 Mar 2012; Mike Frysinger <vapier@gentoo.org> readline-6.2_p1.ebuild:
+  Drop ancient bash depend in stable ebuild too.
 
 *readline-6.2_p1-r1 (10 Mar 2012)
 
