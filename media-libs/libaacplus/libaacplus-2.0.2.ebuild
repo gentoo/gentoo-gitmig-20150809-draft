@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2.ebuild,v 1.6 2012/03/25 17:02:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2.ebuild,v 1.7 2012/03/28 20:19:47 ranger Exp $
 
 EAPI=4
 inherit autotools
@@ -19,7 +19,7 @@ SRC_URI="http://dev.gentoo.org/~aballier/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ~ppc ppc64 ~x86 ~x86-fbsd"
 IUSE="bindist fftw static-libs"
 
 RESTRICT="mirror"

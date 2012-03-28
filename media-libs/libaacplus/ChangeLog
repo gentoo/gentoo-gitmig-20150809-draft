@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacplus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/ChangeLog,v 1.6 2012/03/25 17:02:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/ChangeLog,v 1.7 2012/03/28 20:19:47 ranger Exp $
+
+  28 Mar 2012; Brent Baude <ranger@gentoo.org> libaacplus-2.0.2.ebuild:
+  Marking libaacplus-2.0.2 ppc64 for bug 401069
 
   25 Mar 2012; Jeroen Roovers <jer@gentoo.org> libaacplus-2.0.2.ebuild:
   Stable for HPPA (bug #401069).
