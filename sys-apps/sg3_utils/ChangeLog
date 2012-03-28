@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.78 2012/03/24 17:22:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.79 2012/03/28 05:33:04 maekke Exp $
+
+  28 Mar 2012; Markus Meier <maekke@gentoo.org> sg3_utils-1.33.ebuild:
+  arm stable, bug #405067
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> sg3_utils-1.33.ebuild:
   x86 stable wrt bug #405067
