@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/qtexengine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/ChangeLog,v 1.4 2012/01/30 08:22:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/ChangeLog,v 1.5 2012/03/28 09:59:44 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> qtexengine-0.3.ebuild:
+  Stable for amd64, wrt bug #409689
 
 *qtexengine-0.3 (30 Jan 2012)
 
