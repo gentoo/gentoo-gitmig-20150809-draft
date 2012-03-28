@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.40 2012/03/28 07:38:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.41 2012/03/28 13:20:32 scarabeus Exp $
+
+  28 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/2.0-ffmpeg.patch,
+  -files/2.0-fmt-conversion.patch:
+  Remove obsolete patches.
 
 *mplayer2-2.0_p20120309 (28 Mar 2012)
 
