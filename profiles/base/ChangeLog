@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.369 2012/03/27 08:23:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.370 2012/03/28 18:41:58 ford_prefect Exp $
+
+  28 Mar 2012; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
+  webrtc-audio-processing is only supported on x86/amd64. Possibly arm can be
+  added.
 
   27 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask USE=systemd for gnome-extra/gnome-screensaver, it requires a systemd

@@ -1,8 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.80 2012/03/27 08:23:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.81 2012/03/28 18:43:26 ford_prefect Exp $
 
 # This file requires >=portage-2.1.1
+
+# Arun Raghavan <ford_prefect@gentoo.org> (29 Mar 2012)
+# webrtc-audio-processing is only supported on x86/amd64. Possibly arm can be
+# added.
+media-sound/pulseaudio -webrtc-aec
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Mar 2012)
 # Masked in base profile, supported on this arch
