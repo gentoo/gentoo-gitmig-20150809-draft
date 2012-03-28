@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6368 2012/03/28 17:06:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6369 2012/03/28 17:26:09 a3li Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Mar 2012; Alex Legler <a3li@gentoo.org> package.mask:
+  Mask various horde ebuilds for removal
 
   28 Mar 2012; Davide Pesavento <pesa@gentoo.org> package.mask:
   www-client/arora is gone from the tree.
