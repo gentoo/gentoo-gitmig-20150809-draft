@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.10.0.ebuild,v 1.1 2012/03/20 21:47:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.10.0.ebuild,v 1.2 2012/03/28 08:29:51 radhermit Exp $
 
 EAPI=4
 
@@ -49,6 +49,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-cflags.patch
 	epatch "${FILESDIR}"/${P}-docs.patch
 	epatch "${FILESDIR}"/${P}-no-bzr.patch
+	epatch "${FILESDIR}"/${P}-libmp4v2_r479_compat.patch
 
 	# use multilib compatible directory for plugins
 	sed -i -e "/unix_lib_path =/s/'lib'/'$(get_libdir)'/" src/SConscript || die
