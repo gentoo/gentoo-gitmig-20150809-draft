@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.132 2012/03/25 15:31:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.133 2012/03/28 01:01:40 anarchy Exp $
+
+  28 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> -thunderbird-11.0.ebuild,
+  thunderbird-11.0-r1.ebuild:
+  remove stale version, fix bug #409747
 
   25 Mar 2012; Thomas Kahle <tomka@gentoo.org> thunderbird-10.0.3.ebuild:
   marked x86 per bug 408161
