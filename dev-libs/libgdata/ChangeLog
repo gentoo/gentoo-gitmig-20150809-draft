@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.49 2012/03/28 05:25:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.50 2012/03/28 06:29:39 jdhore Exp $
+
+  28 Mar 2012; Jeff Horelick <jdhore@gentoo.org> libgdata-0.8.1-r2.ebuild:
+  marked x86 per bug 408245
 
   28 Mar 2012; Markus Meier <maekke@gentoo.org> libgdata-0.8.1-r2.ebuild:
   arm stable, bug #408245
