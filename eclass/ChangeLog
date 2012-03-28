@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.191 2012/03/26 20:33:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.192 2012/03/28 14:21:55 marienz Exp $
+
+  28 Mar 2012; Marien Zwart <marienz@gentoo.org> python-distutils-ng.eclass:
+  Try to unbreak dependency generation.
 
   26 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org>
   python-distutils-ng.eclass:
