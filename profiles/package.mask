@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13626 2012/03/27 20:03:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13627 2012/03/28 00:53:22 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,18 +31,6 @@
 
 #--- END OF EXAMPLES ---
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Mar 2012)
-# NetworkManager-0.9.4, masked for testing
-=gnome-extra/nm-applet-0.9.4*
-=net-misc/modemmanager-0.5.2*
-=net-misc/networkmanager-0.9.4*
-=net-misc/networkmanager-openconnect-0.9.4*
-=net-misc/networkmanager-openswan-0.9.3*
-=net-misc/networkmanager-openswan-0.9.4*
-=net-misc/networkmanager-openvpn-0.9.4*
-=net-misc/networkmanager-pptp-0.9.4*
-=net-misc/networkmanager-vpnc-0.9.4*
-
 # Mike Gilbert <floppym@gentoo.org> (25 Mar 2012)
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (25 Mar 2012)
 # Masked for testing.
@@ -57,9 +45,16 @@
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Mar 2012)
 # This is now the GNOME 3.4 mask
 # Core libraries to be unmasked first:
->=sys-fs/udisks-1.90.0
+=dev-libs/atk-2.4*
+=dev-libs/gjs-1.32*
 =dev-libs/glib-2.32*:2
+=dev-libs/gobject-introspection-1.32*
+=dev-libs/gobject-introspection-common-1.32*
+=dev-python/pygobject-3.2*
 =dev-util/gdbus-codegen-2.32*
+=gnome-base/dconf-0.12*
+=gnome-base/gvfs-1.12*
+>=sys-fs/udisks-1.90.0:2
 =x11-libs/gdk-pixbuf-2.26*:2
 =x11-libs/gtk+-3.4*:3
 =x11-libs/gnome-pty-helper-0.32*
