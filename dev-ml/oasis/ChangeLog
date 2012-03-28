@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/oasis
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/oasis/ChangeLog,v 1.1 2012/03/28 12:45:00 aballier Exp $
+
+*oasis-0.3.0_rc3 (28 Mar 2012)
+
+  28 Mar 2012; Alexis Ballier <aballier@gentoo.org> +oasis-0.3.0_rc3.ebuild,
+  +metadata.xml:
+  initial import, based on ebuild by Vladimir Ivanov in bug #355767 and
+  converted to oasis.eclass
+
