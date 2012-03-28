@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.4-r1.ebuild,v 1.1 2012/03/28 10:09:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.4-r2.ebuild,v 1.1 2012/03/28 12:20:50 jlec Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) CFLAGS="${CFLAGS} ${LDFLAGS}"
+	emake CC=$(tc-getCC) CFLAGS="${CPPFLAGS} ${CFLAGS} ${LDFLAGS}"
 }
 
 src_install() {
