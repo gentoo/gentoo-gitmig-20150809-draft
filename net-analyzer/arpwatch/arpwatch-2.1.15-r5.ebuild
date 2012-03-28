@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r5.ebuild,v 1.8 2011/04/02 12:54:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r5.ebuild,v 1.9 2012/03/28 13:05:50 jer Exp $
 
 inherit eutils versionator
 
@@ -8,7 +8,7 @@ PATCH_VER="0.4"
 
 MY_P="${PN}-$(replace_version_separator 2 'a')"
 DESCRIPTION="An ethernet monitor program that keeps track of ethernet/ip address pairings"
-HOMEPAGE="http://www-nrg.ee.lbl.gov/"
+HOMEPAGE="http://ee.lbl.gov/"
 SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz
 	mirror://gentoo/arpwatch-patchset-${PATCH_VER}.tbz2"
 
