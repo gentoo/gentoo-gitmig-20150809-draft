@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.178 2012/03/28 15:04:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.179 2012/03/28 15:24:54 patrick Exp $
+
+  28 Mar 2012; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Adding Gerrit as proxy-maintainer
 
 *apache-2.2.22 (28 Mar 2012)
 
