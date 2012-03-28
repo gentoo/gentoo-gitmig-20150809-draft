@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/seq24-0.9.2-r1.ebuild,v 1.1 2011/10/27 04:45:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/seq24-0.9.2-r1.ebuild,v 1.2 2012/03/28 07:35:42 ago Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://edge.launchpad.net/seq24/trunk/${PV}/+download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="jack lash"
 
 RDEPEND="media-libs/alsa-lib
