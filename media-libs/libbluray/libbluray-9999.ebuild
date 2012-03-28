@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.8 2012/01/28 04:36:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.9 2012/03/28 04:23:03 radhermit Exp $
 
 EAPI=4
 
@@ -11,13 +11,13 @@ EGIT_REPO_URI="git://git.videolan.org/libbluray.git"
 DESCRIPTION="Blu-ray playback libraries"
 HOMEPAGE="http://www.videolan.org/developers/libbluray.html"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="aacs java static-libs utils"
+IUSE="aacs java static-libs utils +xml"
 
 COMMON_DEPEND="
-	dev-libs/libxml2
+	xml? ( dev-libs/libxml2 )
 "
 RDEPEND="
 	${COMMON_DEPEND}
@@ -35,7 +35,7 @@ DEPEND="
 
 REQUIRED_USE="utils? ( static-libs )"
 
-DOCS=( doc/README README.txt TODO.txt )
+DOCS=( ChangeLog README.txt )
 
 src_prepare() {
 	use java && export JDK_HOME="$(java-config -g JAVA_HOME)"
@@ -51,6 +51,8 @@ src_configure() {
 		append-cflags "$(java-pkg_get-jni-cflags)"
 		myconf="--with-jdk=${JDK_HOME}"
 	fi
+
+	use xml && myconf+=" --enable-libxml2"
 
 	econf \
 		--disable-debug \
