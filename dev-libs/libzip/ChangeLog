@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.42 2012/03/27 15:01:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.43 2012/03/28 20:11:26 ranger Exp $
+
+  28 Mar 2012; Brent Baude <ranger@gentoo.org> libzip-0.10.1.ebuild:
+  Marking libzip-0.10.1 ppc64 for bug 409117
 
   27 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libzip-0.10.1.ebuild:
   x86 stable wrt bug #409117
