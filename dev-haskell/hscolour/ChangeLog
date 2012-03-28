@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hscolour
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.14 2011/11/20 08:35:14 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.15 2012/03/28 07:00:26 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> hscolour-1.19.ebuild:
+  Stable for amd64, wrt bug #404635
 
   20 Nov 2011; Sergei Trofimovich <slyfox@gentoo.org> hscolour-1.17.ebuild:
   fix repoman QA: RDEPEND is not explicitly assigned
