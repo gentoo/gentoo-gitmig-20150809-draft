@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.16.ebuild,v 1.2 2012/03/27 17:49:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.16.ebuild,v 1.3 2012/03/28 04:26:58 vapier Exp $
 
 EAPI="3"
 
@@ -64,6 +64,7 @@ src_prepare() {
 src_configure() {
 	tc-is-cross-compiler && [[ ${CHOST} == *linux* ]] && export fu_cv_sys_stat_statfs2_bsize=yes #311569
 
+	export gl_cv_func_mknod_works=yes #409919
 	use static && append-ldflags -static && sed -i '/elf_sys=yes/s:yes:no:' configure #321821
 	use selinux || export ac_cv_{header_selinux_{context,flash,selinux}_h,search_setfilecon}=no #301782
 	# kill/uptime - procps
