@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Audit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.64 2011/11/19 20:07:35 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.65 2012/03/28 07:34:26 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> Mail-Audit-2.227.0.ebuild:
+  Stable for amd64, wrt bug #404677
 
 *Mail-Audit-2.227.0 (19 Nov 2011)
 
