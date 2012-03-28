@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.24-r1.ebuild,v 1.1 2012/03/14 10:07:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.24-r1.ebuild,v 1.2 2012/03/28 14:01:39 xarthisius Exp $
 
 EAPI=4
 
@@ -17,12 +17,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ibmvio infiniband fcp fcoe"
 
-DEPEND="dev-perl/config-general
+CDEPEND="dev-perl/config-general
 	dev-libs/libxslt
 	infiniband? (
 		sys-infiniband/libibverbs
 		sys-infiniband/librdmacm
 	)"
+DEPEND="${CDEPEND}
+	app-text/docbook-xsl-stylesheets"
 RDEPEND="${DEPEND}
 	sys-apps/sg3_utils"
 
@@ -50,6 +52,7 @@ src_compile() {
 	use fcoe && myconf="${myconf} FCOE=1"
 
 	emake -C usr/ KERNELSRC="${KERNEL_DIR}" ISCSI=1 ${myconf}
+	emake -C doc
 }
 
 src_install() {

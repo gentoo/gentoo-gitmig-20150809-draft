@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/tgt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.19 2012/03/14 10:07:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.20 2012/03/28 14:01:39 xarthisius Exp $
+
+  28 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> tgt-1.0.24-r1.ebuild:
+  Add missing dependency on app-text/docbook-xsl-stylesheets and build doc in
+  proper phase wrt #409831 by Andreis_Vinogradovs ( slepnoga )
+  <andreis.vinogradovs@gmail.com>
 
 *tgt-1.0.24-r1 (14 Mar 2012)
 
