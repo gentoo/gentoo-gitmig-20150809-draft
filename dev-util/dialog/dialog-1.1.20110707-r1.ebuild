@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20110707-r1.ebuild,v 1.12 2012/03/08 14:51:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20110707-r1.ebuild,v 1.13 2012/03/28 20:12:53 vapier Exp $
 
 EAPI="2"
 
@@ -37,6 +37,7 @@ src_configure() {
 	local ncursesw
 	use unicode && ncursesw="w"
 	econf \
+		--disable-rpath-hack \
 		$(use_enable nls) \
 		$(use_with !minimal libtool) \
 		--with-ncurses${ncursesw}
