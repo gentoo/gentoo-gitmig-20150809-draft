@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.304 2012/03/25 16:31:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.305 2012/03/28 16:34:16 vapier Exp $
+
+  28 Mar 2012; Mike Frysinger <vapier@gentoo.org> bash-4.2_p20.ebuild:
+  Mark alpha/ia64/m68k/s390/sh/sparc stable #407937.
 
   25 Mar 2012; Markus Meier <maekke@gentoo.org> bash-4.2_p20.ebuild:
   arm stable, bug #407937
