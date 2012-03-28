@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.132 2011/11/03 08:25:33 hattya Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.133 2012/03/28 06:59:33 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> qdbm-1.8.78-r1.ebuild:
+  Stable for amd64, wrt bug #404629
 
 *qdbm-1.8.78-r1 (03 Nov 2011)
 
