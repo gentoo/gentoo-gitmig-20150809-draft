@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.499 2012/03/27 16:50:51 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.500 2012/03/28 21:02:26 vostorga Exp $
+
+  28 Mar 2012; Víctor Ostorga <vostorga@gentoo.org> samba-3.6.3.ebuild:
+  Fixing DEPEND on ctdb, bug 404409
 
   27 Mar 2012; Víctor Ostorga <vostorga@gentoo.org> samba-3.6.3.ebuild:
   Adding findsmb script when smbclient use flag is enabled, bug 406033

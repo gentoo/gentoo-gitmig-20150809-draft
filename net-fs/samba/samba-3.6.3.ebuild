@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.3.ebuild,v 1.4 2012/03/27 16:50:51 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.3.ebuild,v 1.5 2012/03/28 21:02:26 vostorga Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ DEPEND="dev-libs/popt
 	client? ( !net-fs/mount-cifs
 		dev-libs/iniparser
 		kernel_linux? ( net-fs/cifs-utils ) )
-	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
+	cluster? ( >=dev-db/ctdb-1.13 )
 	cups? ( net-print/cups )
 	debug? ( dev-libs/dmalloc )
 	fam? ( virtual/fam )
