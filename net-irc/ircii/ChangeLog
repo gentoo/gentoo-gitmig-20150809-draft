@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircii
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.35 2012/02/07 18:17:41 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.36 2012/03/28 07:44:14 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> ircii-20111115.ebuild:
+  Stable for amd64, wrt bug #404821
 
   07 Feb 2012; Nathan Phillip Brink <binki@gentoo.org> -ircii-20060725.ebuild:
   Drop old ircii-20060725 as bug #392771 is closed.
