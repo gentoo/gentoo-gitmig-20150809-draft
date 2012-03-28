@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-IMAPClient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/ChangeLog,v 1.64 2012/03/20 17:13:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/ChangeLog,v 1.65 2012/03/28 07:34:54 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org>
+  Mail-IMAPClient-3.300.0.ebuild:
+  Stable for amd64, wrt bug #404679
 
 *Mail-IMAPClient-3.310.0 (20 Mar 2012)
 
