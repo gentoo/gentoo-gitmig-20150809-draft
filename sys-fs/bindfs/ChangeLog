@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/bindfs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/ChangeLog,v 1.1 2011/12/06 12:28:53 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/ChangeLog,v 1.2 2012/03/28 07:59:25 radhermit Exp $
+
+*bindfs-1.10.1 (28 Mar 2012)
+
+  28 Mar 2012; Tim Harder <radhermit@gentoo.org> +bindfs-1.10.1.ebuild,
+  +files/bindfs-1.10.1-cflags.patch:
+  Version bump. Respect CFLAGS and add debug use flag.
 
 *bindfs-1.9 (06 Dec 2011)
 

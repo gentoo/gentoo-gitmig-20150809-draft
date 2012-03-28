@@ -1,0 +1,13 @@
+--- bindfs-1.10.1/configure.ac
++++ bindfs-1.10.1/configure.ac
+@@ -15,10 +15,7 @@
+ 
+ 
+ if test x"$enable_debug" == "xyes" ; then
+-	CFLAGS="${CFLAGS} -g -O0 -DMALLOC_CHECK_=2"
+ 	AC_DEFINE([BINDFS_DEBUG], [1], [Define to 1 to enable debugging messages])
+-else
+-	CFLAGS="${CFLAGS} -O2"
+ fi
+ 
+ if test x"$with_core_foundation" == "xyes" ; then
