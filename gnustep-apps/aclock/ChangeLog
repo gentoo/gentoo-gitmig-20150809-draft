@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/aclock
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/ChangeLog,v 1.15 2011/11/04 15:24:16 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/ChangeLog,v 1.16 2012/03/28 06:58:08 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> aclock-0.4.0.ebuild:
+  Stable for amd64, wrt bug #404767
 
 *aclock-0.4.0 (04 Nov 2011)
 
