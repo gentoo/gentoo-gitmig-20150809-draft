@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/quilt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.56 2012/03/25 18:40:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.57 2012/03/28 05:44:11 maekke Exp $
+
+  28 Mar 2012; Markus Meier <maekke@gentoo.org> quilt-0.50.ebuild:
+  arm stable, bug #408755
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> quilt-0.50.ebuild:
   Marking quilt-0.50 ppc64 for bug 408755
