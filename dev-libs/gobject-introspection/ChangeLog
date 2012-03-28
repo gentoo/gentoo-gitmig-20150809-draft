@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.62 2012/03/25 15:42:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.63 2012/03/28 00:59:16 tetromino Exp $
+
+*gobject-introspection-1.32.0 (28 Mar 2012)
+
+  28 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gobject-introspection-1.30.0.ebuild, +gobject-introspection-1.32.0.ebuild,
+  metadata.xml:
+  Version bump with a new documentation tool and numerous bugfixes. Autotools
+  macros were split off into a separate package, gobject-introspection-common.
+  Drop old.
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
   gobject-introspection-1.30.0-r2.ebuild:

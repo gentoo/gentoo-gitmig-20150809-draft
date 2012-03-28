@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
+<use>
+	<flag name="doctool">Install g-ir-doc-tool for generating documentation
+		from introspected data</flag>
+</use>
 </pkgmetadata>
