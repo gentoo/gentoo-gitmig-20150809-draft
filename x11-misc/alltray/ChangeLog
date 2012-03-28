@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alltray
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.41 2011/11/20 13:11:22 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.42 2012/03/28 07:41:32 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> alltray-0.7.5.1.ebuild:
+  Stable for amd64, wrt bug #404885
 
 *alltray-0.7.4 (20 Nov 2011)
 
