@@ -12,6 +12,7 @@ version</longdescription>
 		<flag name="graphite">Enable support for non-Roman fonts via <pkg>media-gfx/graphite2</pkg></flag>
 		<flag name="gtk3">Enable highly experimental gtk3 frontend</flag>
 		<flag name="jemalloc">Use <pkg>dev-libs/jemalloc</pkg> for allocations</flag>
+		<flag name="nlpsolver">Build extension for non-linear solving in calc</flag>
 		<flag name="odk">Build the Office Development Kit</flag>
 		<flag name="pdfimport">Build pdf-import extension using <pkg>app-text/poppler</pkg>. Note that you don't need this for pdf-export!</flag>
 		<flag name="templates">Enable installation of Sun templates</flag>
