@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.337 2012/03/24 12:43:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.338 2012/03/28 06:26:58 heroxbd Exp $
+
+  28 Mar 2012; XU Benda <heroxbd@gentoo.org> package.provided:
+  use sys-apps/shadow-4.1 to meet virtual/shadow introduced on Mar 11
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
   Revert back to masked Perl 5.14
