@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.95.ebuild,v 1.2 2012/03/27 03:20:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.95.ebuild,v 1.3 2012/03/28 17:17:52 mr_bones_ Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -90,7 +90,7 @@ src_prepare() {
 
 	# Merged upstream
 	#epatch "${FILESDIR}"/${PN}-2.02.73-asneeded.patch
-	
+
 	epatch "${FILESDIR}"/${PN}-2.02.88-respect-cc.patch
 
 	eautoreconf
