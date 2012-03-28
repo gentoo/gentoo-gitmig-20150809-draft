@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.23 2011/07/27 10:24:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.24 2012/03/28 22:32:18 tupone Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -16,9 +16,10 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc sparc x86 ~x86-fbsd"
-IUSE="aalib cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl svga X xatrix"
+IUSE="aalib alsa cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl svga X xatrix"
 
 UIDEPEND="aalib? ( media-libs/aalib )
+	alsa? ( media-libs/alsa-lib )
 	opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
 	sdl? ( media-libs/libsdl[audio,joystick?,video] )
@@ -78,7 +79,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-amd64.patch \
 		"${FILESDIR}"/${P}-gentoo-paths.patch \
 		"${FILESDIR}"/${P}-ldflags.patch \
-		"${FILESDIR}"/${P}-no-asm-io.patch #193107
+		"${FILESDIR}"/${P}-no-asm-io.patch \
+		"${FILESDIR}"/${P}-alsa.patch
 
 	if use xatrix ; then
 		epatch "${FILESDIR}/${P}"-gcc41.patch
@@ -128,7 +130,7 @@ src_compile() {
 			BUILD_QMAX=${BUILD_QMAX} \
 			HAVE_IPV6=$(yesno ipv6) \
 			BUILD_ARTS=NO \
-			BUILD_ALSA=NO \
+			BUILD_ALSA=$(yesno alsa) \
 			SDLDIR=/usr/lib \
 			DEFAULT_BASEDIR="${GAMES_DATADIR}/quake2" \
 			DEFAULT_LIBDIR="$(games_get_libdir)/${PN}${libsuffix}" \
