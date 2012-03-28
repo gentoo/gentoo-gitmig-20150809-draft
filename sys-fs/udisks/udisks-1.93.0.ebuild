@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.93.0.ebuild,v 1.1 2012/03/27 18:23:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.93.0.ebuild,v 1.2 2012/03/28 01:08:50 tetromino Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -24,6 +24,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
+	dev-util/gdbus-codegen
 	dev-util/intltool
 	dev-util/pkgconfig
 	doc? (

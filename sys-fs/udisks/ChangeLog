@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.65 2012/03/27 18:23:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.66 2012/03/28 01:08:50 tetromino Exp $
+
+  28 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  udisks-1.93.0.ebuild:
+  Add gdbus-codegen build-time dep (bug #409923, thanks to Trevor Bowen).
 
 *udisks-1.93.0 (27 Mar 2012)
 
