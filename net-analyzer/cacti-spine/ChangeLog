@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti-spine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.31 2011/12/23 00:02:17 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.32 2012/03/28 07:28:33 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> cacti-spine-0.8.7i.ebuild:
+  Stable for amd64, wrt bug #404807
 
   23 Dec 2011; Mark Loeser <halcy0n@gentoo.org> cacti-spine-0.8.7g.ebuild:
   Drop stable ppc/ppc64
