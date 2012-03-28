@@ -2,14 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>c1pher@gentoo.org</email>
-		<name>Dane Smith</name>
-	</maintainer>
-	<maintainer>
 		<email>nimiux@gentoo.org</email>
 		<name>Chema Alonso</name>
-		<description>Proxy-Maintainer. Assign bugs to him and CC
-			me.</description>
 	</maintainer>
 	<longdescription lang="en">
 		Tripwire is a tool that aids system administrators and users in
