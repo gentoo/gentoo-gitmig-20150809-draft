@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.125 2012/03/25 14:46:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.126 2012/03/28 05:42:21 maekke Exp $
+
+  28 Mar 2012; Markus Meier <maekke@gentoo.org> expat-2.1.0_beta3.ebuild:
+  arm stable, bug #407519
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> expat-2.1.0_beta3.ebuild:
   Marking expat-2.1.0_beta3 ppc64 for bug 407519
