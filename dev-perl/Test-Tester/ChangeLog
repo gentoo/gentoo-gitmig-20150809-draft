@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Tester
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.42 2011/11/30 19:01:39 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.43 2012/03/28 07:38:12 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> Test-Tester-0.108.0.ebuild:
+  Stable for amd64, wrt bug #404691
 
 *Test-Tester-0.108.0 (30 Nov 2011)
 
