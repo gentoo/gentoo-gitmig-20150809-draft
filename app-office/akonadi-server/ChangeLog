@@ -1,6 +1,10 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.81 2012/03/28 05:40:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.82 2012/03/28 06:34:12 johu Exp $
+
+  28 Mar 2012; Johannes Huber <johu@gentoo.org> -akonadi-server-1.6.2-r1.ebuild,
+  -akonadi-server-1.7.0.ebuild:
+  Remove old.
 
   28 Mar 2012; Markus Meier <maekke@gentoo.org> akonadi-server-1.7.1.ebuild:
   add ~arm, bug #408485
