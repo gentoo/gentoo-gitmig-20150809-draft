@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.19.ebuild,v 1.2 2012/02/28 15:03:24 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.1.ebuild,v 1.1 2012/03/28 16:55:15 pesa Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 # 2.4 and 2.5 are restricted to avoid conditional dependency on dev-python/simplejson.
@@ -10,7 +10,8 @@ RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
 
 inherit eutils python
 
-MY_PN="${PN}${PV%%.*}"
+SLOT="4"
+MY_PN="${PN}${SLOT}"
 MY_PV="${PV/_pre/-snapshot-}"
 MY_P="${MY_PN}-${MY_PV}"
 
@@ -20,19 +21,23 @@ BASE_URI="mirror://sourceforge/eric-ide/${MY_PN}/stable/${PV}"
 SRC_URI="${BASE_URI}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
-SLOT="4"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="kde spell"
 
-DEPEND=">=dev-python/sip-4.12.4
+DEPEND="
+	>=dev-python/sip-4.12.4
 	>=dev-python/PyQt4-4.6[assistant,svg,webkit,X]
-	>=dev-python/qscintilla-python-2.2
-	kde? ( kde-base/pykde4 )"
+	>=dev-python/qscintilla-python-2.3
+	kde? ( kde-base/pykde4 )
+"
 RDEPEND="${DEPEND}
 	>=dev-python/chardet-2.0.1
-	dev-python/coverage
-	>=dev-python/pygments-1.1"
-PDEPEND="spell? ( dev-python/pyenchant )"
+	>=dev-python/coverage-3.0.1
+	>=dev-python/pygments-1.3.1
+"
+PDEPEND="
+	spell? ( dev-python/pyenchant )
+"
 
 LANGS="cs de en es fr it ru tr zh_CN"
 for L in ${LANGS}; do
@@ -47,13 +52,15 @@ PYTHON_VERSIONED_EXECUTABLES=("/usr/bin/.*")
 
 src_prepare() {
 	epatch "${FILESDIR}/eric-4.4-no-interactive.patch"
-	epatch "${FILESDIR}/remove_coverage.patch"
 	use kde || epatch "${FILESDIR}/eric-4.4-no-pykde.patch"
 
 	# Delete internal copies of dev-python/chardet, dev-python/coverage,
 	# dev-python/pygments and dev-python/simplejson.
 	rm -fr eric/ThirdParty
 	rm -fr eric/DebugClients/Python{,3}/coverage
+	sed -i -e '\|/coverage/|d' eric/${MY_PN}.e4p || die
+	sed -i -e 's/from DebugClients\.Python3\?\.coverage /from coverage /' \
+		$(grep -lr 'from DebugClients\.Python3\?\.coverage' .) || die
 }
 
 src_install() {
@@ -68,7 +75,7 @@ src_install() {
 	python_execute_function installation
 	python_merge_intermediate_installation_images "${T}/images"
 
-	doicon eric/icons/default/eric.png || die "doicon failed"
+	doicon eric/icons/default/eric.png || die
 	make_desktop_entry "${MY_PN} --nosplash" ${MY_PN} eric "Development;IDE;Qt"
 }
 
