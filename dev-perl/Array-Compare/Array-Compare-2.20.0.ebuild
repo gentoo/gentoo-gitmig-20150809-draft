@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Compare/Array-Compare-2.20.0.ebuild,v 1.1 2011/12/19 16:04:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Compare/Array-Compare-2.20.0.ebuild,v 1.2 2012/03/28 07:30:49 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Perl extension for comparing arrays"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
 SRC_TEST="do"

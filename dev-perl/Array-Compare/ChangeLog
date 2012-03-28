@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Array-Compare
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Compare/ChangeLog,v 1.36 2011/12/19 16:04:01 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Compare/ChangeLog,v 1.37 2012/03/28 07:30:49 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> Array-Compare-2.20.0.ebuild:
+  Stable for amd64, wrt bug #404661
 
 *Array-Compare-2.20.0 (19 Dec 2011)
 
