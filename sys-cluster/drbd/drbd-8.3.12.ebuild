@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.12.ebuild,v 1.2 2012/03/12 20:47:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.12.ebuild,v 1.3 2012/03/28 14:07:24 xarthisius Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ src_prepare() {
 		Makefile.in scripts/{Makefile.in,global_common.conf,drbd.conf.example} || die
 	sed -e "s:@prefix@/lib:@prefix@/$(get_libdir):" \
 		-e "s:(DESTDIR)/lib:(DESTDIR)/$(get_libdir):" \
-		-i user/{,legacy/}Makefile.in || die
+		-i user/Makefile.in || die
 	# correct install paths
 	sed -i -e "s:\$(sysconfdir)/bash_completion.d:/usr/share/bash-completion:" \
 		scripts/Makefile.in || die
