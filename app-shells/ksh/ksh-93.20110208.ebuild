@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20110208.ebuild,v 1.5 2012/03/25 14:47:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20110208.ebuild,v 1.6 2012/03/28 05:46:16 maekke Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="http://dev.gentoo.org/~floppym/distfiles/INIT.${INIT_RELEASE}.tgz
 
 LICENSE="CPL-1.0 EPL-1.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~s390 ~sparc x86"
+KEYWORDS="~alpha amd64 arm ~ia64 ppc ~ppc64 ~s390 ~sparc x86"
 IUSE=""
 
 RDEPEND="!app-shells/pdksh"
