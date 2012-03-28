@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mecab-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.13 2012/01/21 02:58:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.14 2012/03/28 07:41:54 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> mecab-python-0.98.ebuild:
+  Stable for amd64, wrt bug #404713
 
 *mecab-python-0.991 (21 Jan 2012)
 
