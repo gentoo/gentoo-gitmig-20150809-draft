@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/regex-posix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.30 2011/12/04 17:39:20 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.31 2012/03/28 07:02:25 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> regex-posix-0.95.1.ebuild:
+  Stable for amd64, wrt bug #404641
 
   04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> regex-posix-0.95.1.ebuild:
   Restored sccidentally dropped keywords.
