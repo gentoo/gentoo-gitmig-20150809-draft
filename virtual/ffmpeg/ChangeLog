@@ -1,6 +1,12 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.23 2012/02/28 16:39:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.24 2012/03/28 07:32:51 scarabeus Exp $
+
+*ffmpeg-0.10.2 (28 Mar 2012)
+
+  28 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +ffmpeg-0.10.2.ebuild:
+  Add 0.10.2 virtual for libav-0.8.1 and ffmpeg-0.10.2. Needed by mplayer2
+  git/snapshots now.
 
   28 Feb 2012; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.6.90.ebuild:
   Stable for HPPA (bug #405659).
