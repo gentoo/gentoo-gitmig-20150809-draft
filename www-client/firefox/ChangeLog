@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.141 2012/03/28 01:04:29 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.142 2012/03/28 01:21:38 jer Exp $
+
+  28 Mar 2012; Jeroen Roovers <jer@gentoo.org> firefox-11.0-r1.ebuild:
+  Marked ~hppa (bug #409747).
 
   28 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> -firefox-11.0.ebuild,
   firefox-11.0-r1.ebuild:
