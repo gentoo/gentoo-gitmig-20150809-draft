@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.1.9.ebuild,v 1.1 2012/03/28 18:50:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.1.9.ebuild,v 1.2 2012/03/28 22:57:27 flameeyes Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -26,7 +26,8 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
 	gnome-base/gnome-common
-	sys-devel/gettext"
+	sys-devel/gettext
+	dev-util/gtk-doc-am"
 PDEPEND="x11-misc/lightdm-gtk-greeter"
 
 DOCS=( NEWS )
