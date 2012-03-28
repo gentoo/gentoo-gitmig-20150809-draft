@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/yaml-cpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/ChangeLog,v 1.5 2012/02/27 16:38:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/ChangeLog,v 1.6 2012/03/28 09:15:01 scarabeus Exp $
+
+  28 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> yaml-cpp-0.3.0.ebuild:
+  Stable 0.3.0 on amd64 and x86.
 
 *yaml-cpp-0.3.0 (27 Feb 2012)
 
