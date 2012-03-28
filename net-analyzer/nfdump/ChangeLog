@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nfdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.22 2012/02/21 17:20:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.23 2012/03/28 15:21:56 jer Exp $
+
+*nfdump-1.6.6 (28 Mar 2012)
+
+  28 Mar 2012; Jeroen Roovers <jer@gentoo.org> +nfdump-1.6.6.ebuild:
+  Version bump.
 
   21 Feb 2012; Jeroen Roovers <jer@gentoo.org> -nfdump-1.6.2.ebuild,
   -nfdump-1.6.3_p1.ebuild:
