@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.254 2012/03/20 09:54:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.255 2012/03/28 13:29:21 dilfridge Exp $
+
+  28 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> -lyx-1.5.7.ebuild:
+  Remove old
 
   20 Mar 2012; Alexis Ballier <aballier@gentoo.org> lyx-2.0.3.ebuild:
   force posix packaging for OSX and use ED instead of D where it matters, by
