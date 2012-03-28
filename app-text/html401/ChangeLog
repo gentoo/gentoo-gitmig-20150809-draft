@@ -1,6 +1,9 @@
 # ChangeLog for app-text/html401
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.20 2010/09/30 16:04:33 tampakrap Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.21 2012/03/28 09:59:20 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> html401-19991224-r2.ebuild:
+  Stable for amd64, wrt bug #276400
 
   30 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   html401-19991224-r2.ebuild:

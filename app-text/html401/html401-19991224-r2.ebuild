@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/html401-19991224-r2.ebuild,v 1.13 2010/09/30 16:04:33 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/html401-19991224-r2.ebuild,v 1.14 2012/03/28 09:59:20 ago Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.w3.org/TR/html401/html40.tgz"
 
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="~amd64 ppc s390 x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ppc s390 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 DEPEND="app-text/sgml-common"
 RDEPEND=""
