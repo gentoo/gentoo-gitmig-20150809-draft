@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/glusterfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.35 2012/02/07 16:27:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.36 2012/03/28 14:20:52 xarthisius Exp $
+
+*glusterfs-3.2.6 (28 Mar 2012)
+
+  28 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> +glusterfs-3.2.6.ebuild:
+  Version bump wrt #409863 by Rodrigo Severo <rodrigo@fabricadeideias.com>
 
 *glusterfs-3.2.5 (07 Feb 2012)
 
