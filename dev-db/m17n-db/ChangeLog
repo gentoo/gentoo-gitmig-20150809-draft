@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/m17n-db
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.48 2011/11/10 16:06:22 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.49 2012/03/28 06:59:02 ago Exp $
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> m17n-db-1.6.3.ebuild:
+  Stable for amd64, wrt bug #404627
 
   10 Nov 2011; Naohiro Aota <naota@gentoo.org> m17n-db-1.6.3.ebuild:
   Drop do-not-commit-extra-space.patch
