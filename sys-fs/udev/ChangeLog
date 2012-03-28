@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.674 2012/03/24 03:48:30 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.675 2012/03/28 21:54:03 zmedico Exp $
+
+  28 Mar 2012; Zac Medico <zmedico@gentoo.org> udev-182-r2.ebuild,
+  udev-9999.ebuild:
+  Block <udev-init-scripts-10 due to file collision with
+  /lib/udev/rules.d/40-gentoo.rules. Please ignore repoman dependency.unknown
+  warnings about the blocker which are produced by stable portage. The warnings
+  are disabled in latest protage (see bug #382407).
 
   24 Mar 2012; William Hubbs <williamh@gentoo.org> -udev-182-r1.ebuild,
   -udev-182.ebuild, udev-182-r2.ebuild, udev-9999.ebuild:

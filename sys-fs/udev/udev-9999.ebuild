@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.94 2012/03/24 03:48:30 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.95 2012/03/28 21:54:03 zmedico Exp $
 
 EAPI=4
 
@@ -67,6 +67,7 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
+	!<sys-fs/udev-init-scripts-10
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25"
 
