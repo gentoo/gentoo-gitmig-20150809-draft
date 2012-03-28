@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.596 2012/03/28 18:58:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.597 2012/03/28 19:03:47 phajdan.jr Exp $
+
+  28 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-18.0.1025.142.ebuild:
+  x86 stable wrt security bug #410045.
 
 *chromium-18.0.1025.142 (28 Mar 2012)
 
