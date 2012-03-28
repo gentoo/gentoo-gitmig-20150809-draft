@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.990 2012/03/25 15:43:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.991 2012/03/28 01:10:41 zmedico Exp $
+
+*portage-2.1.10.52 (28 Mar 2012)
+
+  28 Mar 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.52.ebuild:
+  2.1.10.52 version bump. This fixes bug #374335 (Bad file descriptor errors
+  triggered by mod_jabber elog module), bug #398843 (suggest dispatch-conf
+  instead of etc-update), bug #409647 (exit status 130 for --ask 'n' answer),
+  bug #409835 (localize 'update portage' message), bug #409839 (fix grabdict
+  docstring), and bug #409849 (fix etc-update to work with emacs diff_command).
+  Bug #409383 tracks all bugs fixed since portage-2.1.10.49.
 
   25 Mar 2012; Markus Meier <maekke@gentoo.org> portage-2.1.10.49.ebuild:
   arm stable, bug #408391
