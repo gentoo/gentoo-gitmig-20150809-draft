@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/urjtag-9999.ebuild,v 1.1 2012/03/12 03:17:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/urjtag-9999.ebuild,v 1.2 2012/03/28 17:30:31 vapier Exp $
 
 # TODO: figure out htf to make python.eclass work
 
@@ -22,9 +22,10 @@ HOMEPAGE="http://urjtag.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ftdi readline static-libs usb"
+IUSE="ftd2xx ftdi readline static-libs usb"
 
 DEPEND="ftdi? ( dev-embedded/libftdi )
+	ftd2xx? ( dev-embedded/libftd2xx )
 	readline? ( sys-libs/readline )
 	usb? ( virtual/libusb:1 )"
 RDEPEND="${DEPEND}
@@ -44,6 +45,7 @@ src_configure() {
 		--disable-python \
 		$(use_with readline) \
 		$(use_with ftdi libftdi) \
+		$(use_with ftd2xx) \
 		$(use_enable static-libs static) \
 		$(use_with usb libusb 1.0)
 }

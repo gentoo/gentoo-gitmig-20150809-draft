@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>dev-embedded</herd>
 <use>
-  <flag name='ftdi'>Enable support for USB FTDI chips
-    (<pkg>dev-embedded/libftdi</pkg>)</flag>
+ <flag name='ftd2xx'>Enable support for USB FTDI chips via <pkg>dev-embedded/libftd2xx</pkg></flag>
+ <flag name='ftdi'>Enable support for USB FTDI chips via <pkg>dev-embedded/libftdi</pkg></flag>
 </use>
 </pkgmetadata>

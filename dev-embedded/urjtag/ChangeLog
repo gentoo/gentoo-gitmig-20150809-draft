@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/urjtag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.13 2012/03/12 03:17:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/ChangeLog,v 1.14 2012/03/28 17:30:30 vapier Exp $
+
+  28 Mar 2012; Mike Frysinger <vapier@gentoo.org> urjtag-9999.ebuild,
+  metadata.xml:
+  Add USE=ftd2xx support by William Robinet.
 
 *urjtag-9999 (12 Mar 2012)
 
