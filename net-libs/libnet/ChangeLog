@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.75 2011/09/19 04:50:45 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.76 2012/03/28 21:38:09 jer Exp $
+
+*libnet-1.1.6_rc3 (28 Mar 2012)
+
+  28 Mar 2012; Jeroen Roovers <jer@gentoo.org> +libnet-1.1.6_rc3.ebuild:
+  Version bump.
 
   19 Sep 2011; Naohiro Aota <naota@gentoo.org> libnet-1.0.2a-r3.ebuild:
   Add ~x86-fbsd for 1.0.2a-r3
