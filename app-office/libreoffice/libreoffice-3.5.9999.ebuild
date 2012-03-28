@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.30 2012/03/28 08:30:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.31 2012/03/28 11:58:26 scarabeus Exp $
 
 EAPI=4
 
@@ -104,6 +104,7 @@ COMMON_DEPEND="
 	media-libs/freetype:2
 	>=media-libs/libpng-1.4
 	media-libs/libvisio
+	>=net-misc/curl-7.21.4
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
 	virtual/jpeg
@@ -168,7 +169,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/mdds
 	>=dev-util/pkgconfig-0.26
 	media-libs/sampleicc
-	>=net-misc/curl-7.21.4
 	net-misc/npapi-sdk
 	net-print/cups
 	>=sys-apps/findutils-4.4.2
