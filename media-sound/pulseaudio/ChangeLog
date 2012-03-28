@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.265 2012/03/20 23:49:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.266 2012/03/28 18:44:16 ford_prefect Exp $
+
+*pulseaudio-1.99.2 (28 Mar 2012)
+
+  28 Mar 2012; Arun Raghavan <ford_prefect@gentoo.org>
+  +pulseaudio-1.99.2.ebuild, pulseaudio-9999.ebuild, metadata.xml:
+  Add a 2.0 RC2 ebuild. Lots of features and fixes (sample rate switching, new
+  echo canceller, jack detection, virtual surround module, Xen support and lots
+  more). Packaging-wise: add support a new echo canceller on-by-default, drop
+  esound support, make ALSA plugins work out of the box.
 
   20 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
   pulseaudio-1.1-r1.ebuild, pulseaudio-9999.ebuild:
