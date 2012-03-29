@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtvplayer/ivtvplayer-0.1.3-r1.ebuild,v 1.3 2011/10/31 17:14:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtvplayer/ivtvplayer-0.1.3-r1.ebuild,v 1.4 2012/03/29 17:51:55 ssuominen Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/ivtvplayer/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk xosd"
 RDEPEND="|| ( media-tv/ivtv media-tv/v4l-utils )
 	 || ( media-video/mplayer[v4l]
