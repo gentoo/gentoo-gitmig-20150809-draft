@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.58 2012/03/18 19:58:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.59 2012/03/29 15:44:22 floppym Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -148,6 +148,7 @@ ru - Russian locale
 rw - Kinyarwanda locale
 sa_IN - Sanskrit locale
 sat - Santali locale
+sco - Scots locale
 sd - Sindhi locale
 se - Northern Saami locale
 sh - Serbo-Croatian locale
