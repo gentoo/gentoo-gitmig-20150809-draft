@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Accessor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/ChangeLog,v 1.63 2012/03/28 07:31:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/ChangeLog,v 1.64 2012/03/29 15:01:29 jer Exp $
+
+  29 Mar 2012; Jeroen Roovers <jer@gentoo.org> Class-Accessor-0.340.0.ebuild:
+  Stable for HPPA (bug #404665).
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> Class-Accessor-0.340.0.ebuild:
   Stable for amd64, wrt bug #404665
