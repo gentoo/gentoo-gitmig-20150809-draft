@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/gspoof
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/ChangeLog,v 1.13 2011/04/26 09:09:21 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/ChangeLog,v 1.14 2012/03/29 04:24:20 jer Exp $
+
+*gspoof-3.2-r2 (29 Mar 2012)
+
+  29 Mar 2012; Jeroen Roovers <jer@gentoo.org> +gspoof-3.2-r2.ebuild:
+  Fix building against net-libs/libnet[-static-libs].
 
   26 Apr 2011; Markos Chandras <hwoarang@gentoo.org> gspoof-3.2-r1.ebuild:
   Stable on amd64 wrt bug #360955
