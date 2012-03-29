@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.49 2012/01/17 12:14:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.50 2012/03/29 12:11:24 johu Exp $
+
+*kplayer-0.7.2 (29 Mar 2012)
+
+  29 Mar 2012; Johannes Huber <johu@gentoo.org> +kplayer-0.7.2.ebuild:
+  Version bump.
 
   17 Jan 2012; Johannes Huber <johu@gentoo.org>
   -files/kplayer-0.7.1-enablefinal.patch, kplayer-0.7.1.ebuild:
