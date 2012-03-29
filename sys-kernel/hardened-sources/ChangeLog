@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.555 2012/03/24 18:12:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.556 2012/03/29 13:40:55 blueness Exp $
+
+*hardened-sources-2.6.32-r97 (29 Mar 2012)
+
+  29 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r97.ebuild:
+  Based on 2.6.32.59 + genpatches-2.6.32-48 +
+  grsecurity-2.9-2.6.32.59-201203251921
 
 *hardened-sources-3.2.12 (24 Mar 2012)
 
