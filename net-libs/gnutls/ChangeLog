@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.348 2012/03/29 04:57:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.349 2012/03/29 05:00:02 radhermit Exp $
+
+  29 Mar 2012; Tim Harder <radhermit@gentoo.org> -gnutls-2.12.17.ebuild,
+  -gnutls-3.0.15.ebuild:
+  Remove old.
 
   29 Mar 2012; Tim Harder <radhermit@gentoo.org> gnutls-3.0.16.ebuild:
   Add pkgconfig build dependency.
