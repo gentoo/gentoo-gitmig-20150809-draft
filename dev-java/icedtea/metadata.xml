@@ -18,7 +18,6 @@
   <flag name="alsa">Make alsa buildtime-only dependency.</flag>
   <flag name="cups">Make CUPS build-only dependency.</flag>
   <flag name="hs20">Use the new version of HotSpot (20).</flag>
-  <flag name="jamvm">Build additionally the JamVM virtual machine.</flag>
   <flag name="jbootstrap">If possible, recompile the final IcedTea executables with itself.</flag>
   <flag name="nss">Enable NSS security provider support.</flag>
   <flag name="nsplugin">Enable browser plugin (NPPlugin), requires also the webstart flag to be enabled.</flag>
