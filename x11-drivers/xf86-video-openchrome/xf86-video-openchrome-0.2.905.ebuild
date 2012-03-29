@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.905.ebuild,v 1.2 2012/03/29 08:33:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.905.ebuild,v 1.3 2012/03/29 13:46:13 jer Exp $
 
 EAPI=4
 XORG_DRI="dri"
@@ -15,10 +15,13 @@ KEYWORDS="amd64 ~x86"
 IUSE="debug viaregtool"
 
 RDEPEND=">=x11-base/xorg-server-1.9"
-DEPEND="${RDEPEND}
+DEPEND="
+	${RDEPEND}
 	x11-libs/libX11
+	x11-libs/libXext
 	x11-libs/libXv
 	x11-libs/libXvMC
+	x11-libs/libdrm
 "
 
 DOCS=( ChangeLog NEWS README )
