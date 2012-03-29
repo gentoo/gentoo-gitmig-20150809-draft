@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.228.ebuild,v 1.1 2012/03/28 18:34:44 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.228.ebuild,v 1.2 2012/03/29 08:36:20 ago Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.adobe.com/products/flashplayer.html"
 IUSE="multilib -32bit +64bit vdpau kde"
 SLOT="0"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 LICENSE="AdobeFlash-10.3"
 RESTRICT="strip mirror"
 
