@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.124 2012/03/29 16:20:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.125 2012/03/29 16:22:51 vapier Exp $
+
+*xbmc-11.0 (29 Mar 2012)
+
+  29 Mar 2012; Mike Frysinger <vapier@gentoo.org>
+  -files/xbmc-10.0-python-2.7.patch, -xbmc-10.1.ebuild,
+  -files/xbmc-10.1-gcc-4.6.patch, -files/xbmc-10.1-headers.patch,
+  -files/xbmc-10.1-libpng-1.5.patch, -xbmc-11.0_rc2.ebuild, +xbmc-11.0.ebuild,
+  xbmc-9999.ebuild:
+  Version bump #409651 by Tomáš Chvátal.
 
   29 Mar 2012; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Disable internal vdpau/ffmpeg checks since we handle this ourselves
