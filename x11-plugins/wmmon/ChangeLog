@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmmon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.24 2010/08/31 09:48:41 s4t4n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.25 2012/03/29 11:28:04 voyageur Exp $
+
+*wmmon-1.2_beta1 (29 Mar 2012)
+
+  29 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/wmmon-1.0_beta2-kernel26.patch, +wmmon-1.2_beta1.ebuild,
+  +files/wmmon-1.2_beta1-Makefile.patch:
+  Version bump, thanks wbk in bug #407325. Rewrote ebuild, updated homepage,
+  install manpage. Also remove lefotver patch
 
   31 Aug 2010; Michele Noberasco <s4t4n@gentoo.org> wmmon-1.0_beta2-r3.ebuild:
   Honour LDFLAGS. Closes bug #334919.
