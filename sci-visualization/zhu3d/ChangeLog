@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/zhu3d
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/ChangeLog,v 1.18 2010/09/16 18:18:35 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/ChangeLog,v 1.19 2012/03/29 18:37:48 bicatali Exp $
+
+*zhu3d-4.2.4 (29 Mar 2012)
+
+  29 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> +zhu3d-4.2.4.ebuild,
+  +files/zhu3d-4.2.4-gold.patch:
+  Version bump. Migrates to qt4-r2.eclass. Respects LINGUAS. Tidies/fixes
+  /usr/share installation. Bump to EAPI4. Minor other improvements. Thanks
+  kensington bug #410157
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> zhu3d-4.2.2.ebuild:
   virtual/glu -> virtual/opengl
