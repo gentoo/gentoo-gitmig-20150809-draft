@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lirc-Client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lirc-Client/ChangeLog,v 1.6 2012/03/29 11:15:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lirc-Client/ChangeLog,v 1.7 2012/03/29 17:50:32 ssuominen Exp $
+
+  29 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  Lirc-Client-1.540.0.ebuild:
+  Keyword ~x86 wrt #407789
 
   29 Mar 2012; Agostino Sarubbo <ago@gentoo.org> Lirc-Client-1.540.0.ebuild:
   Stable for AMD64, wrt bug #407789

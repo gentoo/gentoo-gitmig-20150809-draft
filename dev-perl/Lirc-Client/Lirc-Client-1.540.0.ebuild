@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lirc-Client/Lirc-Client-1.540.0.ebuild,v 1.2 2012/03/29 11:15:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lirc-Client/Lirc-Client-1.540.0.ebuild,v 1.3 2012/03/29 17:50:32 ssuominen Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A client library for the Linux Infrared Remote Control (LIRC)"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-perl/File-Path-Expand
