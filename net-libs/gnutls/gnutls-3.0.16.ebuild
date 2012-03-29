@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.16.ebuild,v 1.2 2012/03/17 00:39:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.16.ebuild,v 1.3 2012/03/29 04:57:02 radhermit Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ RDEPEND=">=dev-libs/libtasn1-0.3.4
 	pkcs11? ( >=app-crypt/p11-kit-0.11 )
 	zlib? ( >=sys-libs/zlib-1.2.3.1 )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-devel/libtool
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )
