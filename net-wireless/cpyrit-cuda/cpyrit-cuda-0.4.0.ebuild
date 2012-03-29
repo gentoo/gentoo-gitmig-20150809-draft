@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-cuda/cpyrit-cuda-0.4.0.ebuild,v 1.1 2012/03/29 16:42:16 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-cuda/cpyrit-cuda-0.4.0.ebuild,v 1.2 2012/03/29 16:50:53 maksbotan Exp $
 
 EAPI=4
 
@@ -24,3 +24,4 @@ DEPEND="
 	net-libs/libpcap
 	dev-util/nvidia-cuda-toolkit"
 RDEPEND="${DEPEND}"
+PDEPEND="~net-wireless/pyrit-${PV}"
