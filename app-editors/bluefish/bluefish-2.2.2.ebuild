@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.1.ebuild,v 1.3 2012/03/05 14:17:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.2.ebuild,v 1.1 2012/03/29 13:19:27 scarabeus Exp $
 
 EAPI=4
 

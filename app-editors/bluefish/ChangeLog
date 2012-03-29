@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/bluefish
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.79 2011/12/30 13:47:48 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.80 2012/03/29 13:19:27 scarabeus Exp $
+
+*bluefish-2.2.2 (29 Mar 2012)
+
+  29 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +bluefish-2.2.2.ebuild,
+  -bluefish-2.2.1.ebuild:
+  Version bump to the latest bugfix release. Drop older as the stablereq is hang
+  on gnome team.
 
   30 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> bluefish-2.2.1.ebuild:
   Restrict tests as they do nothing.
