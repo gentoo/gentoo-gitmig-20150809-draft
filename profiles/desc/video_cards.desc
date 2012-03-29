@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.29 2012/02/25 01:41:14 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.30 2012/03/29 12:17:51 chithanh Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -34,7 +34,8 @@ nouveau - VIDEO_CARDS setting to build reverse-engineered driver for nvidia card
 nsc - VIDEO_CARDS setting to build driver for nsc video cards
 nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
 nv - VIDEO_CARDS setting to build driver for nv video cards
-omapfb - VIDEO_CARDS setting to build driver for omapfb video cards
+omap - VIDEO_CARDS setting to build DRM driver for TI OMAP video cards
+omapfb - VIDEO_CARDS setting to build framebuffer driver for TI OMAP video cards
 qxl - VIDEO_CARDS setting to build driver for qxl (QEMU virtual GPU)
 r100 - VIDEO_CARDS setting to build only r100 based chips code for radeon
 r128 - VIDEO_CARDS setting to build driver for ATI r128 video cards

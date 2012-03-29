@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.370 2012/03/28 18:41:58 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.371 2012/03/29 12:17:50 chithanh Exp $
+
+  29 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  Mask video_cards_omap as it is not useful on most arches.
 
   28 Mar 2012; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
   webrtc-audio-processing is only supported on x86/amd64. Possibly arm can be
