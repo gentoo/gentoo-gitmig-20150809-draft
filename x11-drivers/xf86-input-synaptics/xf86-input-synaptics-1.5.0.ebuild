@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.5.0.ebuild,v 1.2 2012/03/18 19:33:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.5.0.ebuild,v 1.3 2012/03/29 14:44:54 chithanh Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=x11-base/xorg-server-1.8
+	<x11-base/xorg-server-1.11.99
 	>=x11-libs/libXi-1.2
 	>=x11-libs/libXtst-1.1.0"
 DEPEND="${RDEPEND}
@@ -34,9 +34,3 @@ pkg_pretend() {
 		echo
 	fi
 }
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-1.5.0-xf86optionrec.patch
-	"${FILESDIR}"/${PN}-1.5.0-xf86setstroption.patch
-	"${FILESDIR}"/${PN}-1.5.0-abi-lt14.patch
-)

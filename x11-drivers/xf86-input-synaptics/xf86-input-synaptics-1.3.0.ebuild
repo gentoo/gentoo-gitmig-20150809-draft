@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.3.0.ebuild,v 1.6 2011/02/28 18:27:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.3.0.ebuild,v 1.7 2012/03/29 14:44:54 chithanh Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="
-	>=x11-base/xorg-server-1.8
+	<x11-base/xorg-server-1.11.99
 	>=x11-libs/libXi-1.2
 	>=x11-libs/libXtst-1.1.0"
 DEPEND="${RDEPEND}
