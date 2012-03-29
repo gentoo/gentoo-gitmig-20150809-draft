@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.107 2012/03/28 15:27:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.108 2012/03/29 10:41:09 ago Exp $
+
+  29 Mar 2012; Agostino Sarubbo <ago@gentoo.org> apache-tools-2.2.22.ebuild:
+  Stable for amd64, wrt bug #401761
 
   28 Mar 2012; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Adding Gerrit as proxy-maintainer
