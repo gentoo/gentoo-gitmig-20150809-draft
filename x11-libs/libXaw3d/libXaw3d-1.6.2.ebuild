@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6.1-r1.ebuild,v 1.1 2012/03/05 09:42:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6.2.ebuild,v 1.1 2012/03/29 22:52:34 mattst88 Exp $
 
 EAPI=4
 inherit xorg-2
@@ -21,11 +21,9 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${P}-use_after_free.patch )
-
 	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable unicode internationalization)
-		)
+	)
 
 	xorg-2_pkg_setup
 }
