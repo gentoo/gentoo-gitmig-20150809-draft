@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.215 2012/02/14 04:31:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.216 2012/03/29 21:21:22 nirbheek Exp $
+
+*rhythmbox-2.96 (29 Mar 2012)
+
+  29 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +rhythmbox-2.96.ebuild:
+  Bump to 2.96, remove old later
 
   14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   rhythmbox-2.95.ebuild:
