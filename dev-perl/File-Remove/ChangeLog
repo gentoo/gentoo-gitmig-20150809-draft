@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Remove
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.75 2012/03/28 07:32:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.76 2012/03/29 15:02:25 jer Exp $
+
+  29 Mar 2012; Jeroen Roovers <jer@gentoo.org> File-Remove-1.510.0.ebuild:
+  Stable for HPPA (bug #404669).
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> File-Remove-1.510.0.ebuild:
   Stable for amd64, wrt bug #404669
