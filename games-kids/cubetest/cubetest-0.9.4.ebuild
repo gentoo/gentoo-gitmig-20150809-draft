@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.8 2009/06/23 16:58:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.9 2012/03/29 15:11:20 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils qt4 games
+inherit eutils games
 
 DESCRIPTION="A program to train your spatial insight"
 HOMEPAGE="http://www.vandenoever.info/software/cubetest/"

@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/cubetest
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/ChangeLog,v 1.14 2009/09/21 01:26:08 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/ChangeLog,v 1.15 2012/03/29 15:11:20 mr_bones_ Exp $
+
+  29 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> cubetest-0.9.4.ebuild:
+  Remove unused qt eclass (bug #410113)
 
   21 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org>
   files/cubetest-0.9.4-build.patch:
