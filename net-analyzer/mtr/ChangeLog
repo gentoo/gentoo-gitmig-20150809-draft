@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.121 2012/03/25 18:36:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.122 2012/03/29 10:42:18 ago Exp $
+
+  29 Mar 2012; Agostino Sarubbo <ago@gentoo.org> mtr-0.82.ebuild:
+  Stable for amd64, wrt bug #409605
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> mtr-0.82.ebuild:
   Marking mtr-0.82 ppc64 for bug 409605
