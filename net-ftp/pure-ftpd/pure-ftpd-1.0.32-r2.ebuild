@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.32-r2.ebuild,v 1.7 2011/08/20 16:02:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.32-r2.ebuild,v 1.8 2012/03/29 11:33:22 polynomial-c Exp $
 
 EAPI=2
 inherit eutils confutils flag-o-matic
@@ -18,18 +18,18 @@ SLOT="0"
 IUSE="anondel anonperm anonren anonres caps charconv ldap mysql noiplog pam paranoidmsg postgres resolveids selinux ssl sysquota vchroot xinetd"
 
 DEPEND="caps? ( sys-libs/libcap )
-		charconv? ( virtual/libiconv )
-		ldap? ( >=net-nds/openldap-2.0.25 )
-		mysql? ( virtual/mysql )
-		pam? ( virtual/pam )
-		postgres? ( dev-db/postgresql-base )
-		ssl? ( >=dev-libs/openssl-0.9.6g )
-		sysquota? ( sys-fs/quota[-rpc] )
-		xinetd? ( virtual/inetd )"
+	charconv? ( virtual/libiconv )
+	ldap? ( >=net-nds/openldap-2.0.25 )
+	mysql? ( virtual/mysql )
+	pam? ( virtual/pam )
+	postgres? ( dev-db/postgresql-base )
+	ssl? ( >=dev-libs/openssl-0.9.6g )
+	sysquota? ( sys-fs/quota[-rpc] )
+	xinetd? ( virtual/inetd )"
 
 RDEPEND="${DEPEND}
-		net-ftp/ftpbase
-		selinux? ( sec-policy/selinux-ftpd )"
+	net-ftp/ftpbase
+	selinux? ( sec-policy/selinux-ftpd )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.28-pam.patch
