@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.125 2012/03/29 16:22:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.126 2012/03/29 18:07:43 vapier Exp $
+
+  29 Mar 2012; Mike Frysinger <vapier@gentoo.org> xbmc-11.0.ebuild,
+  -files/xbmc-11.0-libpng-1.5.patch, +files/xbmc-11.0-no-exec-stack.patch:
+  Restore exec-stack patch and drop now unused libpng patch.
 
 *xbmc-11.0 (29 Mar 2012)
 
