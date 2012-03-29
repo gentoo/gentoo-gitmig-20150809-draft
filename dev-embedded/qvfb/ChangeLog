@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/qvfb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/ChangeLog,v 1.7 2010/12/12 10:03:11 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/ChangeLog,v 1.8 2012/03/29 18:40:45 hwoarang Exp $
+
+  29 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  assign to maintainer-needed. qt team decided to let this go
 
   12 Dec 2010; Thomas Kahle <tomka@gentoo.org> qvfb-4.6.3.ebuild:
   x86 stable per bug 326371
