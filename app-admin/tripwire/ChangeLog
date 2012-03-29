@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.37 2012/03/28 08:52:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.38 2012/03/29 19:42:31 nimiux Exp $
+
+*tripwire-2.4.2.2 (29 Mar 2012)
+
+  29 Mar 2012; Chema Alonso <nimiux@gentoo.org> +tripwire-2.4.2.2.ebuild,
+  +files/tripwire-2.4.2.2-buildnum.patch:
+  app-admin/tripwire version bump. Included reference to bug #34662 wrt policy
+  file generator script posted by <c.cboldt@gmail.com>.
 
   28 Mar 2012; Chema Alonso <nimiux@gentoo.org> metadata.xml:
   Removed Dane Smith (c1pher) as maintainer (Proxy)
