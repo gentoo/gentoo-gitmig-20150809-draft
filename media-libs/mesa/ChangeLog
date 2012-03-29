@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.391 2012/03/29 15:45:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.392 2012/03/29 21:04:55 chithanh Exp $
+
+  29 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-8.0.1-r2.ebuild, mesa-8.0.1.ebuild, mesa-8.0.2.ebuild, mesa-8.0.ebuild:
+  Require recent enough libXvMC, bug #410185.
 
 *mesa-8.0.2 (29 Mar 2012)
 
