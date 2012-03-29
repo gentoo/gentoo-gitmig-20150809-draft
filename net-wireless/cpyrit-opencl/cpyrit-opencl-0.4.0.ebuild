@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-opencl/cpyrit-opencl-0.4.0.ebuild,v 1.1 2012/03/29 16:43:19 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-opencl/cpyrit-opencl-0.4.0.ebuild,v 1.2 2012/03/29 16:49:18 maksbotan Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="1"
 
 inherit distutils eutils
 
-DESCRIPTION="A sub-package that adds CUDA-capability to Pyrit"
+DESCRIPTION="A sub-package that adds OpenCL-capability to Pyrit"
 HOMEPAGE="http://code.google.com/p/pyrit/"
 SRC_URI="http://pyrit.googlecode.com/files/${P}.tar.gz"
 
@@ -24,3 +24,4 @@ DEPEND="
 	sys-libs/zlib
 	virtual/opencl"
 RDEPEND="${DEPEND}"
+PDEPEND="net-wireless/pyrit"
