@@ -1,16 +1,17 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdf-renderer/pdf-renderer-0.20090523.ebuild,v 1.7 2010/05/11 13:19:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdf-renderer/pdf-renderer-0_pre20090523.ebuild,v 1.1 2012/03/29 11:32:19 sera Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
+MY_P=${PN}-${PV/_pre/.}
 DESCRIPTION="a 100% Java PDF renderer and viewer"
 HOMEPAGE="https://pdf-renderer.dev.java.net/"
 # https://pdf-renderer.dev.java.net/demos/latest/PDFRenderer_src.zip
-SRC_URI="mirror://gentoo/${P}.zip"
+SRC_URI="mirror://gentoo/${MY_P}.zip"
 
 LICENSE="LGPL-3"
 SLOT="0"
