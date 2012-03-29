@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.98 2012/03/10 17:50:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.99 2012/03/29 08:47:16 djc Exp $
+
+  29 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> -sphinx-0.6.7.ebuild,
+  -sphinx-1.1.ebuild:
+  Remove old versions.
 
   10 Mar 2012; Justin Lecher <jlec@gentoo.org> sphinx-0.6.7.ebuild,
   sphinx-1.0.7.ebuild, sphinx-1.1.ebuild, sphinx-1.1.2.ebuild, metadata.xml:
