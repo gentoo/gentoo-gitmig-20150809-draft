@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kmymoney
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.26 2012/03/29 08:02:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.27 2012/03/29 08:06:17 dilfridge Exp $
+
+  29 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> kmymoney-4.6.2.ebuild:
+  restrict tests, bug 399467
 
   29 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> kmymoney-4.6.2.ebuild:
   Add workaround for bug 407611
