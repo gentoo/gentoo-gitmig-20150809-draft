@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.6.3.ebuild,v 1.2 2012/03/27 18:46:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.3.ebuild,v 1.1 2012/03/29 23:43:27 xmw Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -35,6 +35,15 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext"
+
+src_prepare() {
+	# relocate manual file
+	sed -e '/\/usr\/share\/spacefm/s# };#, "/usr/share/doc/'${PF}'/html" };#' \
+		-i src/settings.c || die
+	sed -e '/^filedir/s#spacefm#doc/'${PF}'/html#' \
+		-e '/^uidir/s#$(filedir)#$(datadir)/spacefm#' \
+		-i data/Makefile.in || die
+}
 
 src_configure() {
 	econf \
