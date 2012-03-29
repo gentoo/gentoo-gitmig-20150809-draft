@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.106 2012/03/29 16:18:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.107 2012/03/29 16:20:09 vapier Exp $
 
 EAPI="4"
 
@@ -137,6 +137,10 @@ src_prepare() {
 		eautoreconf
 		popd >/dev/null
 	done
+
+	# Disable internal func checks as our USE/DEPEND
+	# stuff handles this just fine already #408395
+	export ac_cv_lib_avcodec_ff_vdpau_vc1_decode_picture=yes
 
 	local squish #290564
 	use altivec && squish="-DSQUISH_USE_ALTIVEC=1 -maltivec"
