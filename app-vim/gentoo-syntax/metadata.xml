@@ -6,10 +6,6 @@
 		<email>spatz@gentoo.org</email>
 		<name>Dror Levin</name>
 	</maintainer>
-	<maintainer>
-		<email>darkside@gentoo.org</email>
-		<description>Please CC on bugs only.</description>
-	</maintainer>
 	<use>
 		<flag name='ignore-glep31'>Remove GLEP 31 (UTF-8 file encodings) settings
 		</flag>
