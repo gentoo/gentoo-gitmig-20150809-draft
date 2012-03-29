@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.99.2.ebuild,v 1.1 2012/03/28 18:44:16 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.99.2.ebuild,v 1.2 2012/03/29 03:17:38 ford_prefect Exp $
 
 EAPI=4
 
@@ -123,9 +123,9 @@ src_configure() {
 		$(use_enable udev) \
 		$(use_enable ipv6) \
 		$(use_enable ssl openssl) \
+		$(use_enable webrtc-aec) \
 		$(use_with caps) \
 		$(use_with equalizer fftw) \
-		$(use_with webrtc-aec) \
 		--disable-adrian-aec \
 		--disable-esound \
 		--localstatedir="${EPREFIX}"/var \

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.266 2012/03/28 18:44:16 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.267 2012/03/29 03:17:38 ford_prefect Exp $
+
+  29 Mar 2012; Arun Raghavan <ford_prefect@gentoo.org>
+  pulseaudio-1.99.2.ebuild, pulseaudio-9999.ebuild:
+  Fix webrtc-aec usage (was --enable not --with).
 
 *pulseaudio-1.99.2 (28 Mar 2012)
 
