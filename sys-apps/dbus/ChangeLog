@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.325 2012/03/12 19:04:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.326 2012/03/29 20:05:00 ssuominen Exp $
+
+*dbus-1.4.20 (29 Mar 2012)
+
+  29 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +dbus-1.4.20.ebuild:
+  Version bump wrt #410179 by Agostino Sarubbo. Stop keeping deprecated
+  /usr/lib/dbus-1.0/services directory. Create symlink from /etc/machine-id to
+  /var/lib/dbus/machine-id because it's defined through
+  -DDBUS_MACHINE_UUID_FILE for tools/dbus-launch.c and might be used in unknown
+  reverse dependencies.
 
   12 Mar 2012; Markus Meier <maekke@gentoo.org> dbus-1.4.18.ebuild:
   arm stable, bug #403843
