@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.165 2012/03/28 20:13:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.166 2012/03/29 04:52:02 radhermit Exp $
+
+  29 Mar 2012; Tim Harder <radhermit@gentoo.org> -libtasn1-2.11.ebuild:
+  Remove old.
 
   28 Mar 2012; Brent Baude <ranger@gentoo.org> libtasn1-2.12.ebuild:
   Marking libtasn1-2.12 ppc64 for bug 409031
