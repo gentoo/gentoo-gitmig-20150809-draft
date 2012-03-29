@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.153 2012/03/20 20:37:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.154 2012/03/29 12:47:35 marienz Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1307,7 +1307,10 @@ python_shebang_options_re = re.compile(r"^#![ \t]*${EPREFIX}/usr/bin/(?:jython|p
 python_verification_output_re = re.compile("^GENTOO_PYTHON_TARGET_SCRIPT_PATH supported\n$")
 
 pypy_versions_mapping = {
-	"1.5": "2.7"
+	"1.5": "2.7",
+	"1.6": "2.7",
+	"1.7": "2.7",
+	"1.8": "2.7",
 }
 
 def get_PYTHON_ABI(python_interpreter):
