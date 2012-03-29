@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.67 2012/03/15 16:52:50 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.68 2012/03/29 19:26:56 sera Exp $
+
+  29 Mar 2012; Ralph Sennhauser <sera@gentoo.org> icedtea-6.1.11.1.ebuild,
+  +files/icedtea-6.1.11.1-cacao_jvm.cfg.patch:
+  Add upstream patch for builing cacao on ppc(64). #403159
+  Put back ~ppc ~ppc64 for IcedTea 6 1.11 branch.
 
   15 Mar 2012; Ralph Sennhauser <sera@gentoo.org> icedtea-6.1.10.6.ebuild,
   icedtea-6.1.11.1.ebuild, icedtea-7.2.0.1.ebuild,
