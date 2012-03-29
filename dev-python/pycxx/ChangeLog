@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.39 2012/03/25 14:43:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.40 2012/03/29 10:52:46 djc Exp $
+
+*pycxx-6.2.4 (29 Mar 2012)
+
+  29 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +pycxx-6.2.4.ebuild:
+  Version bump to 6.2.4, bug 408589 (thanks to Ian Delaney for testing).
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> pycxx-6.2.3-r3.ebuild:
   Marking pycxx-6.2.3-r3 ppc for bug 409029
