@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/buildbot-slave
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.20 2011/12/26 10:13:55 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.21 2012/03/29 09:34:16 djc Exp $
+
+*buildbot-slave-0.8.6 (29 Mar 2012)
+
+  29 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +buildbot-slave-0.8.6.ebuild:
+  Version bump to 0.8.6.
 
 *buildbot-slave-0.8.5 (26 Dec 2011)
 
