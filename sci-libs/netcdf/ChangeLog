@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.94 2012/03/25 10:35:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.95 2012/03/29 19:01:45 bicatali Exp $
+
+  29 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> netcdf-4.1.3.ebuild:
+  Fixed minimum libtool dependency (bug #409219, thanks dima), fixes a sed for
+  man page, remove redundant lines with autotools-utils eclass
 
   25 Mar 2012; Justin Lecher <jlec@gentoo.org> netcdf-4.1.1-r4.ebuild,
   netcdf-4.1.3.ebuild, metadata.xml:

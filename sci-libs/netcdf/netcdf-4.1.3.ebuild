@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.2 2012/03/25 10:35:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.3 2012/03/29 19:01:45 bicatali Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="
 	hdf5? ( >=sci-libs/hdf5-1.8.6[zlib,szip,fortran?] )"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/libtool-2.2
+	>=sys-devel/libtool-2.4
 	doc? ( virtual/latex-base )
 	fortran? ( dev-lang/cfortran )"
 
@@ -48,13 +48,15 @@ pkg_setup() {
 
 src_prepare() {
 	# use system cfortran
-	rm -f fortran/cfortran.h || die
+	rm -f "${S}"/fortran/cfortran.h || die
 	# check for szip is libsz, not libszip
-	sed -i -e 's/\[szip\]/\[sz\]/' configure.ac || die
-	# we don't build udunits and libcf
-	sed -i -e '/udunits libcf/d' configure.ac || die
+	# we don't build udunits and libcf we take them from system
+	sed -i \
+		-e 's/\[szip\]/\[sz\]/' \
+		-e '/udunits libcf/d' \
+		"${S}"/configure.ac || die
 	if ! use doc; then
-		sed -i -e "/\$(NC_TEST4)/ s/man4//" Makefile.am || die
+		sed -i -e '/$(NC_TEST4) /s/man4//' "${S}"/Makefile.am || die
 	fi
 	autotools-utils_src_prepare
 }
@@ -63,7 +65,6 @@ src_configure() {
 	myeconfargs=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		$(use_enable dap)
-		$(use_enable static-libs static)
 		$(use_enable fortran f77)
 		$(use_enable fortran f90)
 		$(use_enable cxx)
