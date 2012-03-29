@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6372 2012/03/29 15:44:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6373 2012/03/29 18:47:01 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Mar 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask twittare for removal. Bug #379277
 
   29 Mar 2012; Mike Gilbert <floppym@gentoo.org> desc/linguas.desc:
   Add sco - Scots locale.
