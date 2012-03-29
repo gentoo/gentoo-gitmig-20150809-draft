@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.48 2012/03/28 03:37:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.49 2012/03/29 04:13:07 dilfridge Exp $
+
+  29 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  poppler-data-0.4.5-r1.ebuild:
+  Fix path for prefix
 
 *poppler-data-0.4.5-r1 (28 Mar 2012)
 

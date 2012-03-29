@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/poppler-data-0.4.5-r1.ebuild,v 1.1 2012/03/28 03:37:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/poppler-data-0.4.5-r1.ebuild,v 1.2 2012/03/29 04:13:07 dilfridge Exp $
 
 EAPI="4"
 
@@ -18,6 +18,6 @@ src_install() {
 
 	# bug 409361
 	dodir /usr/share/poppler/cMaps
-	cd "${D}"/usr/share/poppler/cMaps || die
+	cd "${D}/${EPREFIX}"/usr/share/poppler/cMaps || die
 	find ../cMap -type f -exec ln -s {} . \; || die
 }
