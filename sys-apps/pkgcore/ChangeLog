@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.150 2012/01/26 15:47:25 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.151 2012/03/29 06:53:13 ferringb Exp $
+
+  29 Mar 2012; Brian Harring <ferringb@gentoo.org> pkgcore-9999.ebuild:
+  Update to match vcs head allowing man pages and html to be optional in
+  generation.
 
 *pkgcore-0.7.7.8 (26 Jan 2012)
 
