@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.1.2.ebuild,v 1.7 2012/03/22 15:07:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.2.2.ebuild,v 1.1 2012/03/30 13:04:58 scarabeus Exp $
 
 EAPI=4
 
@@ -70,9 +70,9 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding +cups dbus debug eds gnome +graphite gstreamer +gtk
-jemalloc kde mysql +nsplugin odk opengl pdfimport postgres svg test +vba
-+webdav +xmlsec"
+IUSE="binfilter +branding +cups dbus eds gnome +graphite gstreamer +gtk
+jemalloc kde mysql nlpsolver +nsplugin odk opengl pdfimport postgres svg test
++vba +webdav +xmlsec"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -104,6 +104,7 @@ COMMON_DEPEND="
 	media-libs/freetype:2
 	>=media-libs/libpng-1.4
 	media-libs/libvisio
+	>=net-misc/curl-7.21.4
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
 	virtual/jpeg
@@ -168,7 +169,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/mdds
 	>=dev-util/pkgconfig-0.26
 	media-libs/sampleicc
-	>=net-misc/curl-7.21.4
 	net-misc/npapi-sdk
 	net-print/cups
 	>=sys-apps/findutils-4.4.2
@@ -194,14 +194,13 @@ PATCHES=(
 	# this can't be upstreamed :(
 	"${FILESDIR}/${PN}-system-pyuno.patch"
 	"${FILESDIR}/${PN}-3.5-propagate-gb_FULLDEPS.patch"
-	"${FILESDIR}/${PN}-3.5-junit.patch"
-	"${FILESDIR}/libreoffice-3.5.1-kde-4.8.1-namespace.patch"
 )
 
 REQUIRED_USE="
 	nsplugin? ( gtk )
 	gnome? ( gtk )
 	eds? ( gnome )
+	nlpsolver? ( java )
 "
 
 S="${WORKDIR}/${PN}-core-${PV}"
@@ -211,7 +210,7 @@ pkg_pretend() {
 
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		CHECKREQS_MEMORY="512M"
-		use debug && CHECKREQS_DISK_BUILD="10G" || CHECKREQS_DISK_BUILD="6G"
+		CHECKREQS_DISK_BUILD="6G"
 		check-reqs_pkg_pretend
 
 		if [[ $(gcc-major-version) -lt 4 ]]; then
@@ -314,15 +313,10 @@ src_prepare() {
 src_configure() {
 	local java_opts
 	local internal_libs
-	local themes="default"
 	local jbs=$(sed -ne 's/.*\(-j[[:space:]]*\|--jobs=\)\([[:digit:]]\+\).*/\2/;T;p' <<< "${MAKEOPTS}")
 
 	# recheck that there is some value in jobs
 	[[ -z ${jbs} ]] && jbs="1"
-
-	# expand themes we are going to build based on DE useflags
-	use gnome && themes+=" tango"
-	use kde && themes+=" oxygen"
 
 	# sane: just sane.h header that is used for scan in writer, not
 	#       linked or anything else, worthless to depend on
@@ -426,7 +420,6 @@ src_configure() {
 		--with-lang="" \
 		--with-max-jobs=${jbs} \
 		--with-num-cpus=2 \
-		--with-theme="${themes}" \
 		--with-unix-wrapper=libreoffice \
 		--with-vendor="Gentoo Foundation" \
 		--with-x \
@@ -441,7 +434,6 @@ src_configure() {
 		--without-sun-templates \
 		$(use_enable binfilter) \
 		$(use_enable dbus) \
-		$(use_enable debug crashdump) \
 		$(use_enable eds evolution2) \
 		$(use_enable gnome gconf) \
 		$(use_enable gnome gio) \
@@ -454,6 +446,7 @@ src_configure() {
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
+		$(use_enable nlpsolver ext-nlpsolver) \
 		$(use_enable nsplugin) \
 		$(use_enable odk) \
 		$(use_enable opengl) \

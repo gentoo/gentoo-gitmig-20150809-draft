@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.267 2012/03/30 11:08:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.268 2012/03/30 13:04:58 scarabeus Exp $
+
+*libreoffice-3.5.2.2 (30 Mar 2012)
+
+  30 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-3.5.2.2.ebuild,
+  -libreoffice-3.5.1.2.ebuild:
+  Add the 3.5.2 release. (actually just 2 weeks after 3.5.1)
 
   30 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.4.5.2.ebuild:
   The patchname for the kde-4.8.1 compat is bit different.
