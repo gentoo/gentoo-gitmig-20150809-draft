@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r4.ebuild,v 1.1 2012/03/27 23:14:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.0-r4.ebuild,v 1.2 2012/03/30 19:53:22 hwoarang Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -46,9 +46,6 @@ DEPEND="${RDEPEND}
 		xinerama? ( x11-proto/xineramaproto )
 		xv? ( x11-proto/videoproto )
 	)
-"
-RDEPEND="${RDEPEND}
-	!x11-themes/qgtkstyle
 "
 PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,c++0x=,qpa=,debug=] )"
 

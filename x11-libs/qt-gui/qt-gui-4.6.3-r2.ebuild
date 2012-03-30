@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.3-r2.ebuild,v 1.6 2011/12/17 19:37:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.3-r2.ebuild,v 1.7 2012/03/30 19:53:22 hwoarang Exp $
 
 EAPI="2"
 inherit confutils eutils qt4-build
@@ -40,9 +40,6 @@ DEPEND="${RDEPEND}
 	)
 	gtk? ( || ( >=x11-libs/cairo-1.10.0[-qt4] <x11-libs/cairo-1.10.0 ) )
 	xinerama? ( x11-proto/xineramaproto )"
-RDEPEND="${RDEPEND}
-	!x11-themes/qgtkstyle
-"
 PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,debug=] )"
 
 PATCHES=( "${FILESDIR}/${PN}-4.6-libpng-1.5.patch" )
