@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.65 2012/03/30 12:11:28 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.66 2012/03/30 13:37:45 haubi Exp $
+
+  30 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
+  libaio-0.3.109-r3.ebuild:
+  Install non-binary files even for the non-default ABI, bug#407687
 
   30 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
   libaio-0.3.109-r3.ebuild:

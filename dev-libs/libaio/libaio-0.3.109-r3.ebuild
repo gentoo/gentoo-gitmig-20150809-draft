@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.5 2012/03/30 12:11:28 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.6 2012/03/30 13:37:45 haubi Exp $
 
 EAPI=3
 
@@ -113,13 +113,8 @@ src_install() {
 		# place
 		emake_libaio install DESTDIR="${D}"
 
-		if is_final_abi; then
-			doman man/*
-			dodoc ChangeLog TODO
-		else
-			# take headers from default abi only
-			rm -rf "${ED}"/usr/include || die
-		fi
+		doman man/*
+		dodoc ChangeLog TODO
 
 		# move crap to / for multipath-tools #325355
 		gen_usr_ldscript -a aio
