@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-9999.ebuild,v 1.20 2012/03/30 21:00:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.3.0.ebuild,v 1.1 2012/03/30 21:00:59 vapier Exp $
 
 EAPI="4"
 
@@ -43,6 +43,7 @@ src_prepare() {
 
 	# build against system headers
 	rm -r include/netinet #include/linux include/ip{,6}tables{,_common}.h include/libiptc
+	sed -i 's:TCPI_OPT_ECN_SEEN:16:' misc/ss.c || die
 
 	# don't build arpd if USE=-berkdb #81660
 	use berkdb || sed -i '/^TARGETS=/s: arpd : :' misc/Makefile
