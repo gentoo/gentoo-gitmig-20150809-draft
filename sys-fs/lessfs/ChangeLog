@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lessfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.52 2012/02/24 10:12:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.53 2012/03/30 20:41:48 hwoarang Exp $
+
+  30 Mar 2012; Markos Chandras <hwoarang@gentoo.org> lessfs-1.5.9.ebuild:
+  Add berkdb use flag. Bug #409859
 
   24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> lessfs-1.5.8.ebuild:
   Stable for amd64, wrt bug #400505

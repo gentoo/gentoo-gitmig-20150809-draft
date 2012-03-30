@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.5.9.ebuild,v 1.1 2012/01/22 19:49:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.5.9.ebuild,v 1.2 2012/03/30 20:41:48 hwoarang Exp $
 
 EAPI="4"
 
@@ -13,9 +13,10 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/${MY_P}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="crypt debug filelog memtrace lzo"
+IUSE="berkdb crypt debug filelog memtrace lzo"
 
-DEPEND=">=dev-db/tokyocabinet-1.4.42
+DEPEND="berkdb? ( sys-libs/db )
+		!berkdb? ( >=dev-db/tokyocabinet-1.4.42 )
 		app-crypt/mhash
 		>=sys-fs/fuse-2.8.0
 		crypt? ( dev-libs/openssl )
@@ -29,7 +30,8 @@ src_configure() {
 	econf \
 		$(use_enable debug) $(use_enable debug lckdebug) \
 		$(use_enable filelog) $(use_with crypt crypto) \
-		$(use_with lzo) $(use_enable memtrace)
+		$(use_with lzo) $(use_enable memtrace) \
+		$(use_with berkdb berkeleydb)
 }
 
 src_install () {
