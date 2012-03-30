@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.133 2012/03/28 01:01:40 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.134 2012/03/30 00:26:25 anarchy Exp $
+
+*thunderbird-11.0.1 (30 Mar 2012)
+
+  30 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> -thunderbird-11.0-r1.ebuild,
+  +thunderbird-11.0.1.ebuild:
+  Fix possible imap issues, fix issue where mail rules might be erronously
+  changed
 
   28 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> -thunderbird-11.0.ebuild,
   thunderbird-11.0-r1.ebuild:
