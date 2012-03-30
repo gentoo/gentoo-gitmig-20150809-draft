@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.60 2012/03/30 12:47:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.61 2012/03/30 12:49:30 aballier Exp $
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org> jadetex-3.13-r3.ebuild:
+  license is MIT, by Andrius Štikonas and Ulrich Müller in bug #398563
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
   -files/80format.jadetex.cnf, -jadetex-3.13-r2.ebuild:

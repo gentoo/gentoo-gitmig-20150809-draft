@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r3.ebuild,v 1.11 2012/03/08 21:19:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r3.ebuild,v 1.12 2012/03/30 12:49:30 aballier Exp $
 
 inherit latex-package texlive-common
 
@@ -8,7 +8,7 @@ DESCRIPTION="TeX macros used by Jade TeX output"
 HOMEPAGE="http://jadetex.sourceforge.net/"
 SRC_URI="mirror://sourceforge/jadetex/${P}.tar.gz"
 
-LICENSE="freedist"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
