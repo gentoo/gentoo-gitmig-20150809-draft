@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/tyxml
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.1 2012/03/30 11:40:53 aballier Exp $
+
+*tyxml-2.0.2 (30 Mar 2012)
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org> +tyxml-2.0.2.ebuild,
+  +metadata.xml:
+  initial import, ebuild by Guillaume Horel in bug #406515
+
