@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13632 2012/03/29 18:47:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13633 2012/03/30 19:41:23 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (30 Mar 2012)
+# Unmaintained. Replaced by x11-libs/qt-gui[gtkstyle]
+# Removal in 30 days
+x11-themes/qgtkstyle
 
 # Markos Chandras <hwoarang@gentoo.org> (29 Mar 2012)
 # Does not work with twitter anymore. Dead upstream
