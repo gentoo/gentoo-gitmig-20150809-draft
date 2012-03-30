@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.375 2012/03/30 20:04:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.376 2012/03/30 20:31:38 vapier Exp $
+
+  30 Mar 2012; Mike Frysinger <vapier@gentoo.org> util-linux-2.21.ebuild,
+  util-linux-2.21.1.ebuild:
+  Drop scanf hack as it is already in 2.21.1 (I read the wrong source tree).
 
   30 Mar 2012; Mike Frysinger <vapier@gentoo.org> util-linux-2.21.ebuild,
   util-linux-2.21.1.ebuild:

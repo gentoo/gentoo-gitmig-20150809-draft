@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.21.ebuild,v 1.2 2012/03/30 20:04:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.21.ebuild,v 1.3 2012/03/30 20:31:38 vapier Exp $
 
 EAPI="3"
 
@@ -70,7 +70,6 @@ src_configure() {
 	lfs_fallocate_test
 	if tc-is-cross-compiler ; then
 		# newer util-linux has this fixed in the configure script already
-		[[ ${PV} != 2.21* ]] && die
 		export scanf_cv_alloc_modifier=no
 		[[ ${CHOST} == *-gnu* ]] && scanf_cv_alloc_modifier=ms
 	fi
