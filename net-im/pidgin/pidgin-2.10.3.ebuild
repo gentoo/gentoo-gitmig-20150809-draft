@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.0-r1.ebuild,v 1.8 2011/10/27 04:56:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.3.ebuild,v 1.1 2012/03/30 17:11:29 polynomial-c Exp $
 
-EAPI=3
+EAPI=4
 
 GENTOO_DEPEND_ON_PERL=no
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 python
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus debug doc eds gadu gnutls +gstreamer +gtk idn meanwhile"
 IUSE+=" networkmanager nls perl silc tcl tk spell sasl ncurses"
 IUSE+=" groupwise prediction python +xscreensaver zephyr zeroconf" # mono"
@@ -132,7 +132,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-utf8-validation.patch"
+	epatch "${FILESDIR}/${PN}-2.10.0-gold.patch"
 }
 
 src_configure() {
@@ -220,6 +220,9 @@ src_install() {
 		done
 	fi
 	use perl && fixlocalpod
+
+	dodoc finch/plugins/pietray.py
+	docompress -x /usr/share/doc/${PF}/pietray.py
 
 	find "${ED}" -type f -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
 }
