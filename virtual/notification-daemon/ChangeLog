@@ -1,6 +1,11 @@
 # ChangeLog for virtual/notification-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/ChangeLog,v 1.3 2012/01/28 02:16:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/ChangeLog,v 1.4 2012/03/30 18:32:33 tommy Exp $
+
+  30 Mar 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  notification-daemon-0.ebuild:
+  Add x11-wm/enlightenment[e_modules_notification] to the list of packages
+  providing a notification daemon (enlightenment is in enlightenment overlay)
 
   28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   notification-daemon-0.ebuild:
