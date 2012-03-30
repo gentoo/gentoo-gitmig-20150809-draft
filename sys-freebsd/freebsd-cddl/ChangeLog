@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-cddl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.16 2012/01/16 16:37:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.17 2012/03/30 09:14:43 naota Exp $
+
+  30 Mar 2012; Naohiro Aota <naota@gentoo.org> freebsd-cddl-9.0.ebuild:
+  Apply patch to add library search path. #409693; Install library proper place
+  according to requesting binaries' (such as /sbin/zfs) path.
 
 *freebsd-cddl-9.0 (16 Jan 2012)
 
