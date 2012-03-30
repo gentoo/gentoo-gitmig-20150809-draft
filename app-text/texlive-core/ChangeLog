@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.172 2012/03/25 18:49:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.173 2012/03/30 17:56:22 maekke Exp $
+
+  30 Mar 2012; Markus Meier <maekke@gentoo.org> texlive-core-2011-r6.ebuild:
+  arm stable, bug #408993
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> texlive-core-2011-r6.ebuild:
   Marking texlive-core-2011-r6 ppc64 for bug 408993
