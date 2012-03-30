@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/compton
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.1 2012/03/15 23:50:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.2 2012/03/30 15:55:35 ssuominen Exp $
+
+*compton-0_pre20120330 (30 Mar 2012)
+
+  30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +compton-0_pre20120330.ebuild:
+  New snapshot with ebuild created by Julian Ospald
 
 *compton-0_pre20120316 (15 Mar 2012)
 
