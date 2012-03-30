@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.25-r1.ebuild,v 1.6 2012/03/15 22:12:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.25-r1.ebuild,v 1.7 2012/03/30 13:38:24 aballier Exp $
 
 EAPI=3
 
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.19-missing-avutil.patch"
 	"${FILESDIR}/${PN}-1.0.23-automagic.patch"
+	"${FILESDIR}/${PN}-1.0.25-avcodec54.patch"
 )
 
 S="${WORKDIR}/${MY_P}"

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.147 2012/03/15 22:12:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.148 2012/03/30 13:38:24 aballier Exp $
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
+  alsa-plugins-1.0.25-r1.ebuild, +files/alsa-plugins-1.0.25-avcodec54.patch:
+  fix build with ffmpeg git
 
   15 Mar 2012; Markus Meier <maekke@gentoo.org> alsa-plugins-1.0.25-r1.ebuild:
   arm stable, bug #406101
