@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Socket-INET6
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.39 2012/03/29 15:03:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.40 2012/03/30 18:02:39 maekke Exp $
+
+  30 Mar 2012; Markus Meier <maekke@gentoo.org> IO-Socket-INET6-2.690.0.ebuild:
+  arm stable, bug #404673
 
   29 Mar 2012; Jeroen Roovers <jer@gentoo.org> IO-Socket-INET6-2.690.0.ebuild:
   Stable for HPPA (bug #404673).
