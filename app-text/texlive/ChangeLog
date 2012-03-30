@@ -1,6 +1,12 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.93 2012/03/04 15:36:49 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.94 2012/03/30 14:17:18 aballier Exp $
+
+*texlive-2011-r1 (30 Mar 2012)
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org> +texlive-2011-r1.ebuild,
+  metadata.xml:
+  new revision depending on epspdf and texlive-pictures without it, bug #369745
 
   04 Mar 2012; Tobias Klausmann <klausman@gentoo.org> texlive-2011.ebuild:
   Stable on alpha, bug #395735
