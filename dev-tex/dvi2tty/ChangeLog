@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dvi2tty
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.27 2012/03/28 07:43:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.28 2012/03/30 18:04:39 maekke Exp $
+
+  30 Mar 2012; Markus Meier <maekke@gentoo.org> dvi2tty-5.3.4.ebuild:
+  arm stable, bug #404725
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> dvi2tty-5.3.4.ebuild:
   Stable for amd64, wrt bug #404725
