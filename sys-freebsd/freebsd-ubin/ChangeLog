@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.75 2012/01/16 16:37:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.76 2012/03/30 15:49:52 aballier Exp $
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-ubin-9.0_rc1.ebuild, -freebsd-ubin-9.0_rc2.ebuild,
+  -freebsd-ubin-9.0_rc3.ebuild:
+  remove old
 
 *freebsd-ubin-9.0 (16 Jan 2012)
 

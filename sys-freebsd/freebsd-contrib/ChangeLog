@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-contrib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.33 2012/01/16 16:37:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.34 2012/03/30 15:45:16 aballier Exp $
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-contrib-9.0_rc1.ebuild, -freebsd-contrib-9.0_rc2.ebuild,
+  -freebsd-contrib-9.0_rc3.ebuild:
+  remove old
 
 *freebsd-contrib-9.0 (16 Jan 2012)
 
