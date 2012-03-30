@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/x48
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.21 2012/03/20 20:52:56 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.22 2012/03/30 11:55:14 nimiux Exp $
+
+*x48-0.6.4 (30 Mar 2012)
+
+  30 Mar 2012; Chema Alonso <nimiux@gentoo.org> +x48-0.6.4.ebuild:
+  Version bump. Released version 0.6.4.
 
   20 Mar 2012; Chema Alonso <nimiux@gentoo.org> metadata.xml:
   Added myself as maintainer
