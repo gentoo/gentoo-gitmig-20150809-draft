@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/libxfce4ui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.33 2012/03/23 21:17:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.34 2012/03/30 20:29:58 ssuominen Exp $
+
+*libxfce4ui-4.9.1 (30 Mar 2012)
+
+  30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +libxfce4ui-4.9.1.ebuild:
+  Version bump to development series.
 
   23 Mar 2012; Christoph Mende <angelos@gentoo.org> libxfce4ui-4.8.1.ebuild,
   libxfce4ui-4.9.0.ebuild:
