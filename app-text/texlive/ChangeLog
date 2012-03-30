@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.94 2012/03/30 14:17:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.95 2012/03/30 14:50:43 aballier Exp $
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org> texlive-2011-r1.ebuild:
+  depend on texlive-langcyrillic for serbian too, by Filip Brcic, bug #400817
 
 *texlive-2011-r1 (30 Mar 2012)
 

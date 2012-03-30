@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2011-r1.ebuild,v 1.1 2012/03/30 14:17:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2011-r1.ebuild,v 1.2 2012/03/30 14:50:43 aballier Exp $
 
 EAPI="2"
 
@@ -180,7 +180,8 @@ RDEPEND="${DEPEND}
 	linguas_is?    ( >=${TEXLIVE_CAT}/texlive-langother-${PV} )
 	linguas_lo?    ( >=${TEXLIVE_CAT}/texlive-langother-${PV} )
 	linguas_ro?    ( >=${TEXLIVE_CAT}/texlive-langother-${PV} )
-	linguas_sr?    ( >=${TEXLIVE_CAT}/texlive-langother-${PV} )
+	linguas_sr?    ( >=${TEXLIVE_CAT}/texlive-langother-${PV}
+	                 >=${TEXLIVE_CAT}/texlive-langcyrillic-${PV} )
 	linguas_sl?    ( >=${TEXLIVE_CAT}/texlive-langother-${PV} )
 	linguas_tr?    ( >=${TEXLIVE_CAT}/texlive-langother-${PV} )
 	linguas_pl?    ( >=${TEXLIVE_CAT}/texlive-langpolish-${PV} )
