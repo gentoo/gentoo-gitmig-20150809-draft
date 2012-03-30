@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.140 2012/03/25 16:29:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.141 2012/03/30 17:06:50 flameeyes Exp $
+
+  30 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> xfsprogs-3.1.4.ebuild,
+  xfsprogs-3.1.5.ebuild, xfsprogs-3.1.6.ebuild, xfsprogs-3.1.7.ebuild:
+  Fix dependencies on util-linux with USE=static (bug #410251, thanks to
+  Fernando V.).
 
   25 Mar 2012; Markus Meier <maekke@gentoo.org> xfsprogs-3.1.7.ebuild:
   arm stable, bug #408021

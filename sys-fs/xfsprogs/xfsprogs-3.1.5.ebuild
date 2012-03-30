@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.5.ebuild,v 1.1 2011/04/12 17:25:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.5.ebuild,v 1.2 2012/03/30 17:06:50 flameeyes Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="libedit nls readline static static-libs"
 
-RDEPEND=">=sys-apps/util-linux-2.17.2
+RDEPEND="!static? ( >=sys-apps/util-linux-2.17.2 )
 	!<sys-fs/xfsdump-3
 	readline? (
 		sys-libs/readline
@@ -24,6 +24,7 @@ RDEPEND=">=sys-apps/util-linux-2.17.2
 	)
 	!readline? ( libedit? ( dev-libs/libedit ) )"
 DEPEND="${RDEPEND}
+	static? ( || ( sys-apps/util-linux[static-libs] <sys-apps/util-linux-2.20 ) )
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
