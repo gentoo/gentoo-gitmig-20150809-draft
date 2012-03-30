@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.8.5.0.ebuild,v 1.1 2012/03/29 14:00:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.8.5.0.ebuild,v 1.2 2012/03/30 00:21:19 ottxor Exp $
 
 EAPI=4
 
@@ -113,5 +113,10 @@ src_install() {
 	if ! use system-libCg; then
 		exeinto "/${INSTALL_BASE}"/lib
 		doexe "${INSTALL_BASE}"/lib/*.so
+	fi
+
+	if has_version x11-drivers/ati-drivers && use system-libCg; then
+		ewarn "There seem to be problems with ati-drivers and nvidia-cg-toolkit"
+		ewarn "please report your experience, good or bad, on bug #402401"
 	fi
 }
