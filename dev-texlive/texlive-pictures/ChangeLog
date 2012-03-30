@@ -1,6 +1,13 @@
 # ChangeLog for dev-texlive/texlive-pictures
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.59 2012/03/04 16:04:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.60 2012/03/30 14:11:40 aballier Exp $
+
+*texlive-pictures-2011-r1 (30 Mar 2012)
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
+  +texlive-pictures-2011-r1.ebuild:
+  new revision without epstopdf for bug #369745, dropping ruby dep and keywords
+  for arches without epspdf keywords so that they dont lose functionality
 
   04 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
   texlive-pictures-2011.ebuild:
