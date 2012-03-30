@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.4 2012/03/17 11:03:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.5 2012/03/30 12:11:28 haubi Exp $
 
 EAPI=3
 
@@ -38,6 +38,10 @@ src_prepare() {
 	do
 		einfo "Preparing ${ABI} ABI ..."
 		cd "${WORKDIR}"/${ABI}/${P} || die
+
+		# remove stuff provided by man-pages now
+		rm man/{lio_listio,aio_{cancel,error,fsync,init,read,return,suspend,write}}.* || die
+
 		epatch "${FILESDIR}"/${PN}-0.3.109-unify-bits-endian.patch
 		epatch "${FILESDIR}"/${PN}-0.3.109-generic-arch.patch
 		epatch "${FILESDIR}"/${PN}-0.3.106-build.patch
@@ -121,7 +125,4 @@ src_install() {
 		gen_usr_ldscript -a aio
 	done
 	ABI=${OABI}
-
-	# remove stuff provided by man-pages now
-	rm "${ED}"usr/share/man/man3/{lio_listio,aio_{cancel,error,fsync,init,read,return,suspend,write}}.* || die
 }
