@@ -1,8 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r1.ebuild,v 1.9 2012/03/30 14:33:47 ssuominen Exp $
-
-# http://libjpeg-turbo.svn.sourceforge.net/viewvc/libjpeg-turbo/branches/1.2.x/?view=tar
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r1.ebuild,v 1.10 2012/03/30 14:35:13 ssuominen Exp $
 
 EAPI=4
 
