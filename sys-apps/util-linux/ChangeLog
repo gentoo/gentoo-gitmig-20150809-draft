@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.373 2012/03/03 15:31:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.374 2012/03/30 18:53:06 vapier Exp $
+
+*util-linux-2.21.1 (30 Mar 2012)
+
+  30 Mar 2012; Mike Frysinger <vapier@gentoo.org> +util-linux-2.21.1.ebuild:
+  Version bump.
 
   03 Mar 2012; Markus Meier <maekke@gentoo.org> util-linux-2.20.1-r1.ebuild:
   arm stable, bug #404179
