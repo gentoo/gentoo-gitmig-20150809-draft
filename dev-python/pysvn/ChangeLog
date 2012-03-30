@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.27 2012/03/10 16:03:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.28 2012/03/30 22:34:26 floppym Exp $
+
+  30 Mar 2012; Mike Gilbert <floppym@gentoo.org> pysvn-1.7.6.ebuild:
+  python_execute does not exist ing gentoo-x86.
 
   10 Mar 2012; Justin Lecher <jlec@gentoo.org> pysvn-1.7.6.ebuild:
   Fix DEPS, remove setuptools which aren't needed

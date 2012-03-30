@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.6.ebuild,v 1.5 2012/03/10 16:03:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.6.ebuild,v 1.6 2012/03/30 22:34:26 floppym Exp $
 
 EAPI=4
 PYTHON_DEPEND="*"
@@ -37,7 +37,7 @@ src_prepare() {
 	preparation() {
 		cd Source
 		if [[ "$(python_get_version -l)" == "2.5" ]]; then
-			python_execute "$(PYTHON)" setup.py backport || die "Backport failed"
+			"$(PYTHON)" setup.py backport || die "Backport failed"
 		fi
 	}
 	python_execute_function -s preparation
