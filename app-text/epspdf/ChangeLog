@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epspdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.1 2012/03/30 14:08:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.2 2012/03/30 15:44:11 aballier Exp $
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org> epspdf-0.5.3.ebuild:
+  keyword ~x86-fbsd
 
 *epspdf-0.5.3 (30 Mar 2012)
 
