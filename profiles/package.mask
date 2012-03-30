@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13634 2012/03/30 19:51:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13635 2012/03/30 21:06:50 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -145,6 +145,7 @@ dev-php/Horde_Yaml
 =dev-libs/atk-2.4*
 =dev-libs/gjs-1.32*
 =dev-libs/glib-2.32*:2
+=net-libs/glib-networking-2.32*
 =dev-libs/gobject-introspection-1.32*
 =dev-libs/gobject-introspection-common-1.32*
 =dev-python/pygobject-3.2*
