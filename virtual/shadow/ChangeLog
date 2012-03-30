@@ -1,6 +1,9 @@
 # ChangeLog for virtual/shadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/shadow/ChangeLog,v 1.2 2012/03/11 17:26:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/shadow/ChangeLog,v 1.3 2012/03/30 02:58:41 heroxbd Exp $
+
+  28 Mar 2012; XU Benda <heroxbd@gentoo.org> shadow-0.ebuild:
+  add keywords for tested prefix
 
   11 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> shadow-0.ebuild:
   Add stable keywords to match sys-apps/shadow.
