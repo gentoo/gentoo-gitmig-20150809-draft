@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/os-prober
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.12 2012/02/14 15:37:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.13 2012/03/30 04:21:10 floppym Exp $
+
+*os-prober-1.51 (30 Mar 2012)
+
+  30 Mar 2012; Mike Gilbert <floppym@gentoo.org> +os-prober-1.51.ebuild:
+  Version bump.
 
   14 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> os-prober-1.47.ebuild:
   Stable on amd64 and x86, works fine and usefull for grub2.
