@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13633 2012/03/30 19:41:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13634 2012/03/30 19:51:57 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -499,6 +499,11 @@ dev-php/PEAR-Image_Canvas
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Feb 2012)
 # Mask what will be the Xfce Desktop Environment 4.10 for testing
+>=xfce-base/libxfce4util-4.9.0
+>=xfce-base/xfconf-4.9.0
+>=xfce-extra/thunar-volman-0.7.0
+>=xfce-base/xfwm4-4.9.0
+>=xfce-base/xfce4-session-4.9.0
 >=xfce-base/thunar-1.3.0
 >=xfce-base/xfdesktop-4.9.0
 >=xfce-base/exo-0.7.0
