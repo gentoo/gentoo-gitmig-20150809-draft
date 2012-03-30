@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20110311.ebuild,v 1.8 2012/03/18 18:45:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20110311.ebuild,v 1.9 2012/03/30 12:58:21 aballier Exp $
 
 EAPI=2
 inherit autotools eutils texlive-common
@@ -17,9 +17,10 @@ IUSE=""
 DEPEND="app-text/libpaper
 	>=media-libs/libpng-1.2:0
 	sys-libs/zlib
-	virtual/tex-base
+	dev-libs/kpathsea
 	app-text/libpaper"
 RDEPEND="${DEPEND}
+	virtual/tex-base
 	>=app-text/poppler-0.12.3-r3
 	app-text/poppler-data"
 
