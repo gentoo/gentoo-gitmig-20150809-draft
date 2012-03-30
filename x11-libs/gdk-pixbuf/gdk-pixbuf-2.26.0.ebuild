@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.0.ebuild,v 1.1 2012/03/27 04:45:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.0.ebuild,v 1.2 2012/03/30 19:29:22 nirbheek Exp $
 
 EAPI="4"
 
@@ -41,8 +41,9 @@ src_prepare() {
 	# This will avoid polluting the pkg-config file with versioned libpng,
 	# which is causing problems with libpng14 -> libpng15 upgrade
 	# See upstream bug #667068
-	sed -i -e 's:libpng15:libpng libpng15:' configure.ac || die
-	eautoreconf
+	sed -e 's:libpng15:libpng libpng15:' \
+		-i configure || die
+	default
 }
 
 src_configure() {
@@ -63,7 +64,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	dodoc AUTHORS NEWS* README*
 
 	# New library, remove .la files
