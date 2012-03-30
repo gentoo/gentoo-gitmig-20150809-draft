@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.8.1.ebuild,v 1.1 2012/03/29 22:09:48 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.8.1.ebuild,v 1.2 2012/03/30 14:48:08 pesa Exp $
 
 EAPI=4
 
@@ -20,6 +20,10 @@ DEPEND="
 	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=,qpa=]
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.7-qdbusintegrator-no-const.patch"
+)
 
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="
