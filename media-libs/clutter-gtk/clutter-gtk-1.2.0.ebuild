@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.2.0.ebuild,v 1.1 2012/03/26 02:31:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.2.0.ebuild,v 1.2 2012/03/30 19:07:58 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -29,7 +29,6 @@ pkg_setup() {
 	DOCS="NEWS README"
 	EXAMPLES="examples/{*.c,redhand.png}"
 	G2CONF="${G2CONF}
-		--with-flavour=x11
 		--disable-maintainer-flags
 		--enable-deprecated
 		$(use_enable introspection)"
