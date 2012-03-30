@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.126 2012/03/29 18:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.127 2012/03/30 18:56:16 vapier Exp $
+
+  30 Mar 2012; Mike Frysinger <vapier@gentoo.org> xbmc-11.0.ebuild,
+  +files/xbmc-11.0-ffmpeg.patch, +files/xbmc-11.0-libav.patch:
+  Add fixes by Tomáš Chvátal to build with libav #406215 by Ben Kohler.
 
   29 Mar 2012; Mike Frysinger <vapier@gentoo.org> xbmc-11.0.ebuild,
   -files/xbmc-11.0-libpng-1.5.patch, +files/xbmc-11.0-no-exec-stack.patch:

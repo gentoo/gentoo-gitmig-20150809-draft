@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.2 2012/03/29 18:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.3 2012/03/30 18:56:16 vapier Exp $
 
 EAPI="4"
 
@@ -124,6 +124,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-9999-nomythtv.patch
 	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
 	epatch "${FILESDIR}"/${PN}-11.0-no-exec-stack.patch
+	epatch "${FILESDIR}"/${PN}-11.0-libav.patch #406215
+	epatch "${FILESDIR}"/${PN}-11.0-ffmpeg.patch #406215
 	# The mythtv patch touches configure.ac, so force a regen
 	rm -f configure
 
