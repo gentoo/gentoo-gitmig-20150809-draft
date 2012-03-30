@@ -1,0 +1,54 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/epspdf-0.5.3.ebuild,v 1.1 2012/03/30 14:08:19 aballier Exp $
+
+EAPI=4
+
+inherit texlive-common eutils
+
+DESCRIPTION="GUI and command-line converter for [e]ps and pdf"
+HOMEPAGE="http://tex.aanhet.net/epspdf/"
+SRC_URI="http://tex.aanhet.net/epspdf/${PN}.${PV}.tgz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64"
+IUSE="doc tk"
+
+DEPEND="sys-apps/texinfo"
+RDEPEND="!<dev-texlive/texlive-pictures-2011-r1
+	dev-lang/ruby
+	tk? ( dev-lang/tk )"
+
+S=${WORKDIR}/${PN}
+INSTALLDIR=/usr/share/${PN}
+FILES="epspdf.rb epspdfrc.rb makegray.pro"
+TKFILES="epspdf.help epspdf.icns epspdf.ico epspdftk.tcl"
+
+#epspdf.info seems broken, rebuild it
+src_compile() {
+	cd "${S}/doc"
+	makeinfo epspdf.texi || die
+}
+
+src_install() {
+	dodir ${INSTALLDIR}
+	cp -p ${FILES} "${ED}/${INSTALLDIR}" || die
+	if use tk ; then
+		cp -p ${TKFILES} "${ED}/${INSTALLDIR}" || die
+	fi
+	dobin_texmf_scripts "${PN}/epspdf.rb"
+	use tk && dobin_texmf_scripts "${PN}/epspdftk.tcl"
+
+	doinfo doc/epspdf.info
+	dodoc doc/Changelog
+	if use doc ; then
+		dodoc doc/epspdf.pdf
+		dohtml -r doc
+	fi
+
+	# give it a .desktop
+	if use tk; then
+		make_desktop_entry epspdftk epspdftk "${INSTALLDIR}/epspdf.ico" "Graphics;ImageProcessing"
+	fi
+}
