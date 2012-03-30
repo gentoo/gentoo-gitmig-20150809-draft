@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.179 2012/03/25 15:35:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.180 2012/03/30 13:32:26 anarchy Exp $
+
+  30 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> nspr-4.9.ebuild:
+  Address bug #406529
 
   25 Mar 2012; Thomas Kahle <tomka@gentoo.org> nspr-4.9.ebuild:
   marked x86 per bug 408161

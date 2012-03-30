@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.9.ebuild,v 1.3 2012/03/25 15:35:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.9.ebuild,v 1.4 2012/03/30 13:32:26 anarchy Exp $
 
 EAPI=3
 WANT_AUTOCONF="2.1"
@@ -58,7 +58,7 @@ src_configure() {
 
 	myconf="${myconf} --libdir=${EPREFIX}/usr/$(get_libdir)"
 
-	ECONF_SOURCE="../mozilla/nsprpub" econf \
+	LC_ALL="C" ECONF_SOURCE="../mozilla/nsprpub" econf \
 		$(use_enable debug) \
 		$(use_enable !debug optimize) \
 		${myconf} || die "econf failed"
