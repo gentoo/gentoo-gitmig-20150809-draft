@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.380 2012/03/24 17:39:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.381 2012/03/30 13:58:04 chainsaw Exp $
+
+*asterisk-10.3.0 (30 Mar 2012)
+
+  30 Mar 2012; Tony Vroon <chainsaw@gentoo.org> +asterisk-10.3.0.ebuild:
+  New upstream bugfix release, addressing a potential buffer overrun & memory
+  leak for sip show peers, ACK routing for non-2xx responses, insufficient
+  locking in res_odbc, blind transfer parking issues, loss of CDR variables
+  when bridging and a desync between analog signalling & DAHDI with regard to
+  the outgoing flag. Trunk frequency fixes now partially applied upstream,
+  still carrying one patch by Jaco Kroon. Downstream patchset down to 12
+  patches now.
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   asterisk-1.8.10.1.ebuild:
