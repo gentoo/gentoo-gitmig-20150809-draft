@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.8 2012/03/28 14:21:55 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.9 2012/03/30 16:41:40 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -25,7 +25,7 @@
 #    implementation
 #  - src_install - you can define python_install function that will be run for
 #    each implementation and python_install_all that will be run in original
-#    directory (so it wil lnot contain any implementation-specific files)
+#    directory (so it will not contain any implementation-specific files)
 
 # @ECLASS-VARIABLE: PYTHON_COMPAT
 # @DESCRIPTION:
@@ -257,7 +257,7 @@ python-distutils-ng_newscript() {
 			break
 		done
 	else
-		use "python_targets_${impl}" || \
+		use "python_targets_${default_impl}" || \
 			die "default implementation ${default_impl} not enabled"
 	fi
 

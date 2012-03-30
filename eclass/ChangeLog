@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.194 2012/03/29 15:35:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.195 2012/03/30 16:41:40 nelchael Exp $
+
+  30 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org>
+  python-distutils-ng.eclass:
+  Fix two small issues, spotted by Sławomir Nizio
+  <slawomir.nizio@sabayon.org>.
 
   29 Mar 2012; Patrick Lauer <patrick@gentoo.org> apache-2.eclass:
   Sanitizing directory permissions #398899
