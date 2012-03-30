@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-opencl/cpyrit-opencl-0.4.0.ebuild,v 1.2 2012/03/29 16:49:18 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-opencl/cpyrit-opencl-0.4.0.ebuild,v 1.3 2012/03/30 08:54:59 maksbotan Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
@@ -24,4 +24,4 @@ DEPEND="
 	sys-libs/zlib
 	virtual/opencl"
 RDEPEND="${DEPEND}"
-PDEPEND="net-wireless/pyrit"
+PDEPEND="~net-wireless/pyrit-${PV}"
