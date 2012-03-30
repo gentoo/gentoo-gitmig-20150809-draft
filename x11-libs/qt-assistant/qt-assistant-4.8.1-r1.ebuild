@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.1.ebuild,v 1.1 2012/03/29 22:08:35 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.1-r1.ebuild,v 1.1 2012/03/30 13:55:10 pesa Exp $
 
 EAPI=4
 
@@ -105,12 +105,12 @@ src_install() {
 	qt4-build_src_install
 
 	emake INSTALL_ROOT="${D}" install_qchdocs
+	# do not compress .qch files
+	docompress -x "${QTDOCDIR}"/qch
 
 	if use doc; then
 		emake INSTALL_ROOT="${D}" install_htmldocs
 	fi
-
-	dobin bin/qdoc3
 
 	doicon tools/assistant/tools/assistant/images/assistant.png
 	make_desktop_entry assistant Assistant assistant 'Qt;Development'
