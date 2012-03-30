@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.268 2012/03/30 13:04:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.269 2012/03/30 13:19:48 scarabeus Exp $
+
+  30 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.5.2.2.ebuild,
+  libreoffice-3.5.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Build with ppds as it is just 2 files anyway and debian does the same. Fixes
+  bug#407833.
 
 *libreoffice-3.5.2.2 (30 Mar 2012)
 

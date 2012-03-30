@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.42 2012/03/28 11:58:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.43 2012/03/30 13:19:48 scarabeus Exp $
 
 EAPI=4
 
@@ -426,7 +426,6 @@ src_configure() {
 		--without-afms \
 		--without-fonts \
 		--without-myspell-dicts \
-		--without-ppds \
 		--without-stlport \
 		--without-system-mozilla \
 		--without-help \
