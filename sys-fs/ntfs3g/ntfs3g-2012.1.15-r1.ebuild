@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r1.ebuild,v 1.8 2012/03/25 18:42:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r1.ebuild,v 1.9 2012/03/30 08:26:18 ssuominen Exp $
 
 EAPI=4
 inherit linux-info
@@ -15,11 +15,14 @@ SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm ppc ppc64 ~sparc x86"
-IUSE="acl crypt debug extras +ntfsprogs suid static-libs xattr +udev +external-fuse"
+IUSE="acl crypt debug +external-fuse extras +ntfsprogs static-libs suid +udev xattr"
 
-RDEPEND="external-fuse? ( >=sys-fs/fuse-2.8.0 )
-	crypt? ( net-libs/gnutls )
-	!sys-fs/ntfsprogs"
+RDEPEND="!sys-fs/ntfsprogs
+	crypt? (
+		>=dev-libs/libgcrypt-1.2.2
+		>=net-libs/gnutls-1.4.4
+		)
+	external-fuse? ( >=sys-fs/fuse-2.8.0 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-apps/attr"
@@ -43,16 +46,16 @@ src_configure() {
 	econf \
 		--exec-prefix=/usr \
 		--docdir=/usr/share/doc/${PF} \
+		$(use_enable debug) \
 		--enable-ldscript \
 		--disable-ldconfig \
-		--with-fuse=$(use external-fuse && echo external || echo internal) \
 		$(use_enable acl posix-acls) \
+		$(use_enable xattr xattr-mappings) \
 		$(use_enable crypt crypto) \
-		$(use_enable extras) \
 		$(use_enable ntfsprogs) \
+		$(use_enable extras) \
 		$(use_enable static-libs static) \
-		$(use_enable xattr xattr-mappings)	\
-		$(use_enable debug)
+		--with-fuse=$(use external-fuse && echo external || echo internal)
 }
 
 src_install() {
