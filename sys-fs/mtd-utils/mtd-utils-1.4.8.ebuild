@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-1.4.8.ebuild,v 1.2 2012/03/28 07:43:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-1.4.8.ebuild,v 1.3 2012/03/30 18:08:16 maekke Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ else
 		MY_PV="${PV}-02ae0aac87576d07202a62d11294ea55b56f450b"
 		SRC_URI="mirror://gentoo/${PN}-snapshot-${MY_PV}.tar.xz"
 	fi
-	KEYWORDS="amd64 ~arm ~mips ~ppc ~x86 ~x86-linux"
+	KEYWORDS="amd64 arm ~mips ~ppc ~x86 ~x86-linux"
 fi
 
 DESCRIPTION="MTD userspace tools (NFTL, JFFS2, NAND, FTL, UBI)"
