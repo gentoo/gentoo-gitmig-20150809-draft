@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.101 2012/03/30 19:07:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.102 2012/03/30 19:11:58 ssuominen Exp $
+
+  30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -redland-1.0.14.ebuild:
+  old
 
   30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> redland-1.0.15.ebuild:
   Fix dependencies for media-libs/raptor >= 2.0.7 where libxml2 support is now
