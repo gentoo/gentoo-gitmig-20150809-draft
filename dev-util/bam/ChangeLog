@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/ChangeLog,v 1.4 2012/03/27 15:06:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/ChangeLog,v 1.5 2012/03/30 16:15:16 jer Exp $
+
+  30 Mar 2012; Jeroen Roovers <jer@gentoo.org> bam-0.4.0.ebuild:
+  Respect CC.
 
 *bam-0.4.0 (27 Mar 2012)
 

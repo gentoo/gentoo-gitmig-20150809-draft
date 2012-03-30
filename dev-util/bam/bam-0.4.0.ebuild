@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/bam-0.4.0.ebuild,v 1.1 2012/03/27 15:06:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/bam-0.4.0.ebuild,v 1.2 2012/03/30 16:15:16 jer Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 
-inherit eutils python
+inherit eutils python toolchain-funcs
 
 DESCRIPTION="Fast and flexible Lua-based build system"
 HOMEPAGE="http://matricks.github.com/bam/"
@@ -31,6 +31,7 @@ src_prepare() {
 	cp "${FILESDIR}"/${PV}/Makefile "${S}"/Makefile || die "cp failed"
 	epatch "${FILESDIR}"/${PV}/${P}-test.py.patch
 	python_convert_shebangs -r 2 .
+	tc-export CC
 }
 
 src_compile() {
