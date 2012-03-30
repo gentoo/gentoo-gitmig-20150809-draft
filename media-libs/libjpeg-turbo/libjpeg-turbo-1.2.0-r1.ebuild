@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r1.ebuild,v 1.8 2012/03/25 15:36:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r1.ebuild,v 1.9 2012/03/30 14:33:47 ssuominen Exp $
 
 # http://libjpeg-turbo.svn.sourceforge.net/viewvc/libjpeg-turbo/branches/1.2.x/?view=tar
 
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~mips ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm hppa ~mips ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="java static-libs"
 
 ASM_DEPEND="|| ( dev-lang/nasm dev-lang/yasm )"
@@ -36,6 +36,8 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	amd64? ( ${ASM_DEPEND} )
 	x86? ( ${ASM_DEPEND} )
+	amd64-fbsd? ( ${ASM_DEPEND} )
+	x86-fbsd? ( ${ASM_DEPEND} )
 	amd64-linux? ( ${ASM_DEPEND} )
 	x86-linux? ( ${ASM_DEPEND} )
 	java? ( >=virtual/jdk-1.5 )"

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.38 2012/03/25 15:36:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.39 2012/03/30 14:33:47 ssuominen Exp $
+
+  30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libjpeg-turbo-1.2.0-r1.ebuild:
+  Insert missing assembler dependencies for ~amd64-fbsd and ~x86-fbsd wrt
+  #409363 by Richard Yao and Alexis Ballier
 
   25 Mar 2012; Markus Meier <maekke@gentoo.org> libjpeg-turbo-1.2.0-r1.ebuild:
   arm stable, bug #407283
