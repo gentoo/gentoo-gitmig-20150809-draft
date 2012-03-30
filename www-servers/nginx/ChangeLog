@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.311 2012/03/15 18:15:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.312 2012/03/30 06:35:42 patrick Exp $
+
+  30 Mar 2012; Patrick Lauer <patrick@gentoo.org> nginx-1.1.17.ebuild:
+  Bump upload_progress module #409099
 
   15 Mar 2012; Agostino Sarubbo <ago@gentoo.org> nginx-1.0.14.ebuild:
   Stable for AMD64/X86, wrt security bug #408367
