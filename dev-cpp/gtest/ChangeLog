@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtest
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.2 2011/12/09 12:29:08 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.3 2012/03/30 15:52:33 vapier Exp $
+
+*gtest-1.6.0 (30 Mar 2012)
+
+  30 Mar 2012; Mike Frysinger <vapier@gentoo.org> +gtest-1.6.0.ebuild:
+  Version bump.
 
   09 Dec 2011; Naohiro Aota <naota@gentoo.org> gtest-1.5.0.ebuild:
   Add ~x86-fbsd

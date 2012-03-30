@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gmock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.5 2012/02/20 04:14:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.6 2012/03/30 15:52:29 vapier Exp $
+
+*gmock-1.6.0 (30 Mar 2012)
+
+  30 Mar 2012; Mike Frysinger <vapier@gentoo.org> +gmock-1.6.0.ebuild:
+  Version bump.
 
   20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Drop no-herd.
