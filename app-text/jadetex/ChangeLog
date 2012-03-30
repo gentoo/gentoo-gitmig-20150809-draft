@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jadetex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.59 2012/03/08 21:19:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.60 2012/03/30 12:47:38 aballier Exp $
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
+  -files/80format.jadetex.cnf, -jadetex-3.13-r2.ebuild:
+  remove old
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> jadetex-3.13-r3.ebuild:
   Marking jadetex-3.13-r3 ppc64 for bug 391465
