@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.101 2012/03/12 16:03:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.102 2012/03/31 17:56:03 armin76 Exp $
+
+  31 Mar 2012; Raúl Porcel <armin76@gentoo.org> openmpi-1.4.3.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #402095
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> openmpi-1.4.3.ebuild:
   Marking openmpi-1.4.3 ppc64 for bug 402095
