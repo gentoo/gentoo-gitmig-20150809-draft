@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.69 2012/03/29 08:37:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.70 2012/03/31 15:17:13 maekke Exp $
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> imaging-1.1.7-r1.ebuild:
+  arm stable, bug #410075
 
   29 Mar 2012; Agostino Sarubbo <ago@gentoo.org> imaging-1.1.7-r1.ebuild:
   Stable for amd64, wrt bug #410075
