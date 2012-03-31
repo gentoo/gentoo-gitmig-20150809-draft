@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-1.42.0.ebuild,v 1.4 2012/03/31 12:04:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-1.42.0.ebuild,v 1.5 2012/03/31 13:59:18 klausman Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://gtk2-perl.sourceforge.net/ ${HOMEPAGE}"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc x86"
+KEYWORDS="alpha amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
