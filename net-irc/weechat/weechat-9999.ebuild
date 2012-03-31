@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.13 2012/02/27 16:33:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.14 2012/03/31 11:30:06 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 USE_RUBY="ruby18 ruby19"
 RUBY_OPTIONAL="yes"
@@ -28,12 +28,14 @@ fi
 NETWORKS="+irc"
 PLUGINS="+alias +charset +fifo +logger +relay +rmodifier +scripts +spell +xfer"
 #INTERFACES="+ncurses gtk"
-SCRIPT_LANGS="lua +perl +python ruby tcl"
+SCRIPT_LANGS="guile lua +perl +python ruby tcl"
 IUSE="${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS} +crypt doc nls +ssl"
 
 RDEPEND="
+	net-misc/curl[ssl]
 	sys-libs/ncurses
 	charset? ( virtual/libiconv )
+	guile? ( dev-scheme/guile )
 	lua? ( dev-lang/lua[deprecated] )
 	perl? ( dev-lang/perl )
 	ruby? ( $(ruby_implementations_depend) )
@@ -68,7 +70,7 @@ src_prepare() {
 src_configure() {
 	# $(cmake-utils_use_enable gtk)
 	# $(cmake-utils_use_enable ncurses)
-	mycmakeargs=(
+	local mycmakeargs=(
 		"-DENABLE_NCURSES=ON"
 		"-DENABLE_LARGEFILE=ON"
 		"-DENABLE_DEMO=OFF"

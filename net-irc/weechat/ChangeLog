@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.101 2012/02/27 16:33:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.102 2012/03/31 11:30:06 scarabeus Exp $
+
+  31 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> weechat-0.3.7.ebuild,
+  weechat-9999.ebuild:
+  Add new dependencies. Fixes bug#401547. Thanks to Marco Paolone for the patch.
 
 *weechat-0.3.7 (27 Feb 2012)
 
