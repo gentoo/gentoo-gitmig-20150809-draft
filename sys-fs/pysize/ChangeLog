@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/pysize
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.5 2012/03/31 16:07:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.6 2012/03/31 16:14:58 jlec Exp $
+
+  31 Mar 2012; Justin Lecher <jlec@gentoo.org> metadata.xml, pysize-0.2.ebuild:
+  Complete removal of psyco support, thanks ssuominen for heads up
 
   31 Mar 2012; Justin Lecher <jlec@gentoo.org> pysize-0.2.ebuild, metadata.xml:
   Drop psyco support, #410363

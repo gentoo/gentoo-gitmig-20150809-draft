@@ -4,7 +4,4 @@
 	<maintainer>
 		<email>jlec@gentoo.org</email>
 	</maintainer>
-	<use>
-		<flag name="psyco">Adds psyco support</flag>
-	</use>
 </pkgmetadata>
