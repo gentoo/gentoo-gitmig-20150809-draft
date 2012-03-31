@@ -5,10 +5,10 @@
 		<email>cedk@gentoo.org</email>
 		<name>Cédric Krier</name>
 	</maintainer>
-	<longdescription lang="en">
-		a package of most common file format parsers written using hachoir-core.
+	<longdescription lang="en">a package of most common file format parsers written using hachoir-core.
 		Not all parsers are complete, some are very good and other are poor
-		(they only parse the first level of the tree for example).
-	</longdescription>
+		(they only parse the first level of the tree for example).</longdescription>
+	<upstream>
+		<remote-id type="pypi">hachoir-parser</remote-id>
+	</upstream>
 </pkgmetadata>
-

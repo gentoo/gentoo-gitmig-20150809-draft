@@ -6,4 +6,7 @@
 		<email>phajdan.jr@gentoo.org</email>
 		<name>Pawel Hajdan jr</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">pyftpdlib</remote-id>
+	</upstream>
 </pkgmetadata>

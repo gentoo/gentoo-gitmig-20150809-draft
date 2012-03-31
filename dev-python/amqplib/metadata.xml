@@ -10,4 +10,7 @@
 		<flag name="extras">Install extra tools to generate initial Python mod 
 		from an AMQP XML file</flag>
 	</use>
+	<upstream>
+		<remote-id type="google-code">py-amqplib</remote-id>
+	</upstream>
 </pkgmetadata>

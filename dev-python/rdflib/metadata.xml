@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>python</herd>
 	<use>
-		<flag name='redland'>enable support for Redland triplestore</flag>
+		<flag name="redland">enable support for Redland triplestore</flag>
 	</use>
+	<upstream>
+		<remote-id type="pypi">rdflib</remote-id>
+	</upstream>
 </pkgmetadata>

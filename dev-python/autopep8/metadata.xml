@@ -6,4 +6,7 @@
 		<name>Kacper Kowalik</name>
 	</maintainer>
 	<longdescription>autopep8 formats Python code based on the output of the pep8 utility</longdescription>
+	<upstream>
+		<remote-id type="pypi">autopep8</remote-id>
+	</upstream>
 </pkgmetadata>

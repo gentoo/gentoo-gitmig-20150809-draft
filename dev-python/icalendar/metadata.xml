@@ -8,4 +8,7 @@
 	<use>
 		<flag name="doc">Generate examples and other extra documentation</flag>
 	</use>
+	<upstream>
+		<remote-id type="pypi">icalendar</remote-id>
+	</upstream>
 </pkgmetadata>

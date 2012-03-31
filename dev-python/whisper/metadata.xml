@@ -6,4 +6,7 @@
 		<email>chutzpah@gentoo.org</email>
 		<name>Patrick McLean</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="pypi">whisper</remote-id>
+	</upstream>
 </pkgmetadata>

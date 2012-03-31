@@ -5,4 +5,7 @@
 		<email>nelchael@gentoo.org</email>
 	</maintainer>
 	<herd>python</herd>
+	<upstream>
+		<remote-id type="pypi">xhtml2pdf</remote-id>
+	</upstream>
 </pkgmetadata>

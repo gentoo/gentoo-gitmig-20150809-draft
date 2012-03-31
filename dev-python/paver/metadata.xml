@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>qt</herd>
 	<herd>python</herd>
+	<upstream>
+		<remote-id type="pypi">Paver</remote-id>
+	</upstream>
 </pkgmetadata>

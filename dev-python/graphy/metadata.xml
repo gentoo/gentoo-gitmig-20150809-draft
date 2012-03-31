@@ -6,4 +6,7 @@
 		<name>Mounir Lamouri</name>
 	</maintainer>
 	<herd>python</herd>
+	<upstream>
+		<remote-id type="google-code">graphy</remote-id>
+	</upstream>
 </pkgmetadata>

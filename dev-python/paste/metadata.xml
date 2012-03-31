@@ -3,15 +3,15 @@
 <pkgmetadata>
 	<herd>python</herd>
 	<use>
-		<flag name='flup'>enable support for flup (and therefore for various
+		<flag name="flup">enable support for flup (and therefore for various
 		wgsi servers and middleware)</flag>
-		<flag name='openid'>enable OpenID support</flag>
+		<flag name="openid">enable OpenID support</flag>
 	</use>
-	<longdescription lang="en">
-	This package provides several pieces of "middleware" (or filters) that can
+	<longdescription lang="en">This package provides several pieces of &quot;middleware&quot; (or filters) that can
 	be nested to build web applications. Each piece of middleware uses the WSGI
 	(PEP 333) interface, and should be compatible with other middleware based on
-	those interfaces.
-	</longdescription>
+	those interfaces.</longdescription>
+	<upstream>
+		<remote-id type="pypi">Paste</remote-id>
+	</upstream>
 </pkgmetadata>
-

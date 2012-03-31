@@ -7,4 +7,7 @@
 		<flag name="git">Add support for Git</flag>
 		<flag name="mercurial">Add support for Mercurial</flag>
 	</use>
+	<upstream>
+		<remote-id type="pypi">anyvc</remote-id>
+	</upstream>
 </pkgmetadata>

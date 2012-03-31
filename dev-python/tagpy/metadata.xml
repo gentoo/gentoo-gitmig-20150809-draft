@@ -5,9 +5,10 @@
 		<email>sbriesen@gentoo.org</email>
 		<name>Stefan Briesenick</name>
 	</maintainer>
-	<longdescription lang="en">
-		TagPy is a Python crust (or a set of Python bindings) for Scott
+	<longdescription lang="en">TagPy is a Python crust (or a set of Python bindings) for Scott
 		Wheeler's TagLib. It builds upon Boost.Python, a wrapper generation
-		library which is part of the Boost set of C++ libraries.
-	</longdescription>
+		library which is part of the Boost set of C++ libraries.</longdescription>
+	<upstream>
+		<remote-id type="pypi">tagpy</remote-id>
+	</upstream>
 </pkgmetadata>

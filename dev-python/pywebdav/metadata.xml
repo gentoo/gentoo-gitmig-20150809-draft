@@ -5,9 +5,10 @@
 		<email>cedk@gentoo.org</email>
 		<name>Cédric Krier</name>
 	</maintainer>
-	<longdescription lang="en">
-		A WebDAV server implementation in python. It's aim is to provide a
+	<longdescription lang="en">A WebDAV server implementation in python. It's aim is to provide a
 		simple interface to webdav services to any application which needs it.
-		It can be run as a daemon on *nix systems
-	</longdescription>
+		It can be run as a daemon on *nix systems</longdescription>
+	<upstream>
+		<remote-id type="google-code">pywebdav</remote-id>
+	</upstream>
 </pkgmetadata>

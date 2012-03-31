@@ -6,9 +6,10 @@
 		<email>grozin@gentoo.org</email>
 		<name>Andrey Grozin</name>
 	</maintainer>
-	<longdescription>
-	  A pure Python module designed to help make
+	<longdescription>A pure Python module designed to help make
 	  the creation and analysis of binary data
-	  as simple and natural as possible
-	</longdescription>
+	  as simple and natural as possible</longdescription>
+	<upstream>
+		<remote-id type="google-code">python-bitstring</remote-id>
+	</upstream>
 </pkgmetadata>

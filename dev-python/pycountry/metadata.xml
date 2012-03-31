@@ -5,9 +5,9 @@
 		<email>cedk@gentoo.org</email>
 		<name>Cédric Krier</name>
 	</maintainer>
-	<longdescription lang="en">
-		ISO country, subdivision, language, currency and script definitions and
-		their translations
-	</longdescription>
+	<longdescription lang="en">ISO country, subdivision, language, currency and script definitions and
+		their translations</longdescription>
+	<upstream>
+		<remote-id type="pypi">pycountry</remote-id>
+	</upstream>
 </pkgmetadata>
-
