@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.8.0.ebuild,v 1.1 2012/03/21 03:04:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.8.0.ebuild,v 1.2 2012/03/31 11:20:35 scarabeus Exp $
 
 EAPI=4
 
@@ -20,16 +20,17 @@ HOMEPAGE="http://quassel-irc.org/"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~sparc-solaris"
 SLOT="0"
-IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl webkit X"
+IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl syslog webkit X"
 
 SERVER_RDEPEND="
+	>=x11-libs/qt-script-${QT_MINIMAL}:4
 	crypt? (
 		app-crypt/qca:2
 		app-crypt/qca-ossl
 	)
 	!postgres? ( >=x11-libs/qt-sql-${QT_MINIMAL}:4[sqlite] dev-db/sqlite[threadsafe,-secure-delete] )
 	postgres? ( >=x11-libs/qt-sql-${QT_MINIMAL}:4[postgres] )
-	>=x11-libs/qt-script-${QT_MINIMAL}:4
+	syslog? ( virtual/logger )
 "
 
 GUI_RDEPEND="
@@ -69,6 +70,7 @@ REQUIRED_USE="
 	|| ( X server monolithic )
 	crypt? ( || ( server monolithic ) )
 	postgres? ( || ( server monolithic ) )
+	syslog? ( || ( server monolithic ) )
 	kde? ( || ( X monolithic ) )
 	phonon? ( || ( X monolithic ) )
 	dbus? ( || ( X monolithic ) )
@@ -97,6 +99,7 @@ src_configure() {
 		$(cmake-utils_use_with kde)
 		$(cmake-utils_use_with dbus)
 		$(cmake-utils_use_with ssl OPENSSL)
+		$(cmake-utils_use_with syslog)
 		$(cmake-utils_use_with !kde OXYGEN)
 		$(cmake-utils_use_with crypt)
 		"-DEMBED_DATA=OFF"
@@ -109,7 +112,7 @@ src_install() {
 	cmake-utils_src_install
 
 	if use server ; then
-		# bug 346255
+		# needs PAX marking wrt bug#346255
 		pax-mark m "${ED}/usr/bin/quasselcore" || die
 
 		# prepare folders in /var/
@@ -135,6 +138,11 @@ pkg_postinst() {
 	if use server; then
 		einfo "If you want to generate SSL certificate remember to run:"
 		einfo "	emerge --config =${CATEGORY}/${PF}"
+	fi
+
+	if use server || use monolithic ; then
+		einfo "Quassel can use net-misc/oidentd package if installed on your system."
+		einfo "Consider installing it if you want to run quassel within identd daemon."
 	fi
 
 	# temporary info mesage
@@ -166,5 +174,4 @@ pkg_config() {
 			einfo "Remove it if you want to create new one."
 		fi
 	fi
-
 }
