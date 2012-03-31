@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.57 2012/03/28 05:40:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.58 2012/03/31 15:09:06 maekke Exp $
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> libssh2-1.4.0.ebuild:
+  arm stable, bug #409601
 
   28 Mar 2012; Jeff Horelick <jdhore@gentoo.org> libssh2-1.4.0.ebuild:
   marked x86 per bug 409601
