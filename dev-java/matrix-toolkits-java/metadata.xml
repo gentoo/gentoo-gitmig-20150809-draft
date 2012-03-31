@@ -6,4 +6,7 @@
 		<name>Andrey Kislyuk</name>
 	</maintainer>
 	<herd>java</herd>
+	<upstream>
+		<remote-id type="google-code">matrix-toolkits-java</remote-id>
+	</upstream>
 </pkgmetadata>
