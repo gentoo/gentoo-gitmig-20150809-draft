@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/autopep8-0.5.2.ebuild,v 1.1 2012/03/12 13:10:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/autopep8-0.5.2.ebuild,v 1.2 2012/03/31 22:31:17 floppym Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.5"
 
 inherit distutils
 
@@ -18,9 +19,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/pep8"
-DEPEND="${RDEPEND}
+RDEPEND="dev-python/pep8
 	dev-python/setuptools"
+DEPEND="${RDEPEND}"
 
 PYTHON_MODNAME="${PN}.py"
 
