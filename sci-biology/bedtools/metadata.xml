@@ -11,4 +11,7 @@
 		<name>Martin Mokrejs</name>
 	</maintainer>
 	<longdescription>BEDTools: a flexible suite of utilities for comparing genomic features.</longdescription>
+	<upstream>
+		<remote-id type="google-code">bedtools</remote-id>
+	</upstream>
 </pkgmetadata>
