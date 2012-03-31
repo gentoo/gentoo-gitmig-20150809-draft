@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>base-system</herd>
 	<use>
-		<flag name='dynamic'>Build cryptsetup dynamically</flag>
+		<flag name="dynamic">Build cryptsetup dynamically</flag>
 	</use>
+	<upstream>
+		<remote-id type="google-code">cryptsetup</remote-id>
+	</upstream>
 </pkgmetadata>

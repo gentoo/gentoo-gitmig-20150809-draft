@@ -5,12 +5,11 @@
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
-	<longdescription lang="en">
-	Utilities to assist running batch processing jobs.
-
+	<longdescription lang="en">Utilities to assist running batch processing jobs.
 	* runalarm: Limit the run time of a process.
 	* runlock: Prevent concurrent runs of a process.
-	* runstat: Export statistics about a process's execution. 
-	</longdescription>
+	* runstat: Export statistics about a process's execution. </longdescription>
+	<upstream>
+		<remote-id type="google-code">cronutils</remote-id>
+	</upstream>
 </pkgmetadata>
-

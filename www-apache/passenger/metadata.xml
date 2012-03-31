@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>apache</herd>
 	<herd>ruby</herd>
+	<upstream>
+		<remote-id type="rubyforge">passenger</remote-id>
+	</upstream>
 </pkgmetadata>

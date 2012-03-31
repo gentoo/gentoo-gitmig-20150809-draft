@@ -8,5 +8,7 @@
 	<use>
 		<flag name="contrib">Install additional contributed scripts</flag>
 	</use>
+	<upstream>
+		<remote-id type="google-code">s3ql</remote-id>
+	</upstream>
 </pkgmetadata>
-
