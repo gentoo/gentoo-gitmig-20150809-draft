@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.73 2012/03/09 15:00:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.74 2012/03/31 17:52:42 armin76 Exp $
+
+  31 Mar 2012; Raúl Porcel <armin76@gentoo.org> gtkwave-3.3.14.ebuild,
+  gtkwave-3.3.23.ebuild, gtkwave-3.3.28.ebuild, gtkwave-3.3.31.ebuild:
+  Drop sparc keywords
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> gtkwave-3.3.28.ebuild:
   Marking gtkwave-3.3.28 straight to ppc64 for bug 402963 
