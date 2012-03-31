@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdmtx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdmtx/ChangeLog,v 1.1 2011/12/23 18:09:21 johu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdmtx/ChangeLog,v 1.2 2012/03/31 14:04:16 maekke Exp $
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> libdmtx-0.7.4.ebuild:
+  add ~arm, bug #402989
 
 *libdmtx-0.7.4 (23 Dec 2011)
 
