@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.16 2012/03/31 11:51:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.17 2012/03/31 15:24:22 scarabeus Exp $
 
 EAPI=3
 
@@ -59,8 +59,8 @@ for X in "${LANGS[@]}" ; do
 done
 
 pkg_setup() {
-	python_pkg_setup
-	ruby-ng_pkg_setup
+	use python && python_pkg_setup
+	use ruby && ruby-ng_pkg_setup
 }
 
 src_prepare() {

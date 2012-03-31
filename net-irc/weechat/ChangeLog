@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.104 2012/03/31 11:51:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.105 2012/03/31 15:24:22 scarabeus Exp $
+
+  31 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> weechat-0.3.7.ebuild,
+  weechat-9999.ebuild:
+  Run the ruby and python phases only when the useflag is enabled wrt
+  bug#410331.
 
   31 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> weechat-0.3.7.ebuild,
   weechat-9999.ebuild:
