@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/datefudge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.22 2012/03/12 19:34:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.23 2012/03/31 18:37:32 armin76 Exp $
+
+  31 Mar 2012; Raúl Porcel <armin76@gentoo.org> datefudge-1.17.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #405123
 
   12 Mar 2012; Markus Meier <maekke@gentoo.org> datefudge-1.17.ebuild:
   arm stable, bug #405123
