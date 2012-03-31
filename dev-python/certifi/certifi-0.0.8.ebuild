@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/certifi/certifi-0.0.8.ebuild,v 1.1 2012/02/27 05:05:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/certifi/certifi-0.0.8.ebuild,v 1.2 2012/03/31 19:39:32 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -25,5 +25,5 @@ src_install() {
 		dosym "${EPREFIX}/etc/ssl/certs/ca-certificates.crt" \
 			"$(python_get_sitedir -b)/certifi/cacert.pem"
 	}
-	python_execute_function installing
+	python_execute_function -q installing
 }
