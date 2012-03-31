@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.2.2.ebuild,v 1.2 2011/12/18 03:24:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.4.0.ebuild,v 1.1 2012/03/31 17:35:24 pacho Exp $
 
 EAPI="4"
 CMAKE_MIN_VERSION="2.6.4"
@@ -15,10 +15,11 @@ HOMEPAGE="http://projects.gnome.org/latexila/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome +latexmk rubber"
+IUSE="gnome +latexmk rubber vala"
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.28:2
+	app-text/gtkspell
+	>=dev-libs/glib-2.30:2
 	dev-libs/libgee:0
 	dev-libs/libunique:1
 	>=x11-libs/gtk+-2.16:2
@@ -27,6 +28,7 @@ COMMON_DEPEND="
 	x11-libs/libX11
 	x11-libs/pango
 	gnome? ( gnome-base/gsettings-desktop-schemas )
+	vala? ( >=dev-lang/vala-0.16.0:0.16 )
 "
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
@@ -41,7 +43,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 pkg_setup() {
-	DOCS="AUTHORS HACKING NEWS README TODO"
+	DOCS="AUTHORS HACKING NEWS README"
 }
 
 src_prepare() {
@@ -58,6 +60,8 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs="
+		VALAC=$(type -p valac-0.16)
+		$(cmake-utils_use_build vala VALA)
 		$(cmake-utils_use_with gnome GNOME)
 		-DCOMPILE_SCHEMA=OFF"
 	cmake-utils_src_configure
