@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.2.ebuild,v 1.1 2012/03/31 15:35:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.2.ebuild,v 1.2 2012/03/31 15:39:16 ssuominen Exp $
 
 EAPI=4
 
@@ -29,6 +29,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	python? ( >=dev-python/cython-0.13 )"
 
+DOCS=( AUTHORS NEWS README )
+
 pkg_setup() {
 	if use python; then
 		python_set_active_version 2
@@ -42,8 +44,8 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-	use python || myconf="--without-cython"
-	use ssl || myconf="--disable-openssl"
+	use python || myconf+=' --without-cython'
+	use ssl || myconf+=' --disable-openssl'
 
 	econf \
 		$(use_enable static-libs static) \
@@ -51,9 +53,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
-	dodoc AUTHORS NEWS README
 	dohtml docs/html/*
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
