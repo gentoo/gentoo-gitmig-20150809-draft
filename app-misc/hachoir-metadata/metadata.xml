@@ -5,9 +5,9 @@
 		<email>cedk@gentoo.org</email>
 		<name>Cédric Krier</name>
 	</maintainer>
-	<longdescription lang="en">
-		tool to extract metadata from multimedia files (sound, video, archives,
-		etc.)
-	</longdescription>
+	<longdescription lang="en">tool to extract metadata from multimedia files (sound, video, archives,
+		etc.)</longdescription>
+	<upstream>
+		<remote-id type="pypi">hachoir-metadata</remote-id>
+	</upstream>
 </pkgmetadata>
-

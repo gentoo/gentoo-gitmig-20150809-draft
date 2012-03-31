@@ -5,8 +5,8 @@
 		<email>cedk@gentoo.org</email>
 		<name>Cédric Krier</name>
 	</maintainer>
-	<longdescription lang="en">
-		a tool based on hachoir-parser to find subfiles in any binary stream.
-	</longdescription>
+	<longdescription lang="en">a tool based on hachoir-parser to find subfiles in any binary stream.</longdescription>
+	<upstream>
+		<remote-id type="pypi">hachoir-subfile</remote-id>
+	</upstream>
 </pkgmetadata>
-
