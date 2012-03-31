@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.836 2012/03/27 18:33:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.837 2012/03/31 14:13:54 maekke Exp $
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> kdelibs-4.8.1-r1.ebuild:
+  add ~arm, bug #402989
 
   27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> kdelibs-4.7.4.ebuild,
   kdelibs-4.7.4-r12.ebuild, kdelibs-4.8.1-r1.ebuild, kdelibs-4.8.1-r2.ebuild:

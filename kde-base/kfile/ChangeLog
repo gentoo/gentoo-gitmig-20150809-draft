@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.113 2012/03/23 22:05:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.114 2012/03/31 14:25:56 maekke Exp $
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> kfile-4.8.1.ebuild:
+  add ~arm, bug #402989
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> kfile-4.8.1.ebuild:
   Restore ~x86-fbsd.
