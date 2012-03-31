@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.128 2012/03/31 12:06:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.129 2012/03/31 19:50:24 scarabeus Exp $
+
+  31 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> xbmc-11.0.ebuild,
+  xbmc-9999.ebuild:
+  Require the opengl useflag on libva, fails configure without it. Reported by
+  Ian (Thev00d00) retested by me. Non-maintainer commit, trivial change.
 
   31 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/xbmc-11.0-ffmpeg-0.10.2.patch, xbmc-11.0.ebuild, xbmc-9999.ebuild:
