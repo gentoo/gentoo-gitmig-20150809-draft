@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-	<email>chutzpah@gentoo.org</email>
-	<name>Patrick McLean</name>
-</maintainer>
-<maintainer>
-	<email>volkmar@gentoo.org</email>
-	<name>Mounir Lamouri</name>
-</maintainer>
-<longdescription lang="en">
-A commercial quality OCR engine originally developed at HP between 1985 and
+	<maintainer>
+		<email>chutzpah@gentoo.org</email>
+		<name>Patrick McLean</name>
+	</maintainer>
+	<maintainer>
+		<email>volkmar@gentoo.org</email>
+		<name>Mounir Lamouri</name>
+	</maintainer>
+	<longdescription lang="en">A commercial quality OCR engine originally developed at HP between 1985 and
 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It was
-open-sourced by HP and UNLV in 2005.
-</longdescription>
+open-sourced by HP and UNLV in 2005.</longdescription>
+	<upstream>
+		<remote-id type="google-code">tesseract-ocr</remote-id>
+	</upstream>
 </pkgmetadata>
-

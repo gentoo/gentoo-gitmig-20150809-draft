@@ -5,4 +5,7 @@
 		<email>dirtyepic@gentoo.org</email>
 		<name>Ryan Hill</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">chmsee</remote-id>
+	</upstream>
 </pkgmetadata>

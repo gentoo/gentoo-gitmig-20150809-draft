@@ -6,4 +6,7 @@
 		<email>spatz@gentoo.org</email>
 		<name>Dror Levin</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">conque</remote-id>
+	</upstream>
 </pkgmetadata>

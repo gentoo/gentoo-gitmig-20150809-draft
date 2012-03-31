@@ -5,4 +5,7 @@
 		<email>radhermit@gentoo.org</email>
 		<name>Tim Harder</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">csvfix</remote-id>
+	</upstream>
 </pkgmetadata>
