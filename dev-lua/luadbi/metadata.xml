@@ -4,4 +4,7 @@
 	<maintainer>
 		<email>djc@gentoo.org</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">luadbi</remote-id>
+	</upstream>
 </pkgmetadata>

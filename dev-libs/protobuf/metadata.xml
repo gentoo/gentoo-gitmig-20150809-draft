@@ -5,4 +5,7 @@
 		<email>nelchael@gentoo.org</email>
 		<name>Krzysztof Pawlik</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">protobuf</remote-id>
+	</upstream>
 </pkgmetadata>
