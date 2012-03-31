@@ -11,13 +11,14 @@
 		<name>Christian Ruppert</name>
 		<description>Secondary maintainer</description>
 	</maintainer>
-	<longdescription>
-maatkit, formerly MySQL Toolkit, is a collection of command-line utilities that
+	<longdescription>maatkit, formerly MySQL Toolkit, is a collection of command-line utilities that
 provide missing functionality for MySQL. Some of the tools implement lacking
 server functionality, such as online consistency checks for master/slave
-replication; others are client-side utilities such as a query profiler.
-	</longdescription>
+replication; others are client-side utilities such as a query profiler.</longdescription>
 	<use>
 		<flag name="udf">Build the MySQL UDFs shipped with maatkit, requires non-minimal MySQL</flag>
 	</use>
+	<upstream>
+		<remote-id type="google-code">maatkit</remote-id>
+	</upstream>
 </pkgmetadata>
