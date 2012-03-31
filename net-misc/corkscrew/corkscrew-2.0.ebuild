@@ -1,20 +1,19 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/corkscrew-2.0.ebuild,v 1.11 2010/07/07 12:33:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/corkscrew-2.0.ebuild,v 1.12 2012/03/31 03:00:27 vapier Exp $
 
-EAPI=3
+EAPI="3"
+
 inherit autotools
 
-DESCRIPTION="a tool for tunneling SSH through HTTP proxies."
+DESCRIPTION="a tool for tunneling SSH through HTTP proxies"
 HOMEPAGE="http://www.agroman.net/corkscrew/"
 SRC_URI="http://www.agroman.net/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~arm ~ppc ~sparc x86"
 IUSE=""
-
-DEPEND=""
 
 src_prepare() {
 	# Christoph Mende <angelos@gentoo.org (23 Jun 2010)
