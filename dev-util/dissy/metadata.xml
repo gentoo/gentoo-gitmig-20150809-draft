@@ -4,9 +4,9 @@
 	<maintainer>
 		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
-	<longdescription lang="en">
-		Dissy is a graphical frontend to the objdump disassembler. Dissy 
-		can be used for debugging and browsing compiler-generated code.
-	</longdescription>
+	<longdescription lang="en">Dissy is a graphical frontend to the objdump disassembler. Dissy 
+		can be used for debugging and browsing compiler-generated code.</longdescription>
+	<upstream>
+		<remote-id type="google-code">dissy</remote-id>
+	</upstream>
 </pkgmetadata>
-
