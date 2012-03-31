@@ -5,10 +5,10 @@
 		<email>idl0r@gentoo.org</email>
 		<name>Christian Ruppert</name>
 	</maintainer>
-	<longdescription lang="en">
-		This project aims to provide an easy way to change the appearance of
+	<longdescription lang="en">This project aims to provide an easy way to change the appearance of
 		tint2. Through an easy-to-use graphical user interface, you can generate
-		configs and apply to them tint2.
-	</longdescription>
+		configs and apply to them tint2.</longdescription>
+	<upstream>
+		<remote-id type="google-code">tintwizard</remote-id>
+	</upstream>
 </pkgmetadata>
-

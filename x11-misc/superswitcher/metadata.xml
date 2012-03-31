@@ -5,9 +5,10 @@
 		<email>swegener@gentoo.org</email>
 		<name>Sven Wegener</name>
 	</maintainer>
-	<longdescription lang="en">
-SuperSwitcher is a (more feature-ful) replacement for the Alt-Tab window
+	<longdescription lang="en">SuperSwitcher is a (more feature-ful) replacement for the Alt-Tab window
 switching behavior and Ctrl-Alt-Left/Right/Up/Down workspace switching behavior
-that is currently provided by Metacity.
-	</longdescription>
+that is currently provided by Metacity.</longdescription>
+	<upstream>
+		<remote-id type="google-code">superswitcher</remote-id>
+	</upstream>
 </pkgmetadata>
