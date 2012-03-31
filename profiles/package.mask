@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13636 2012/03/31 09:41:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13637 2012/03/31 10:02:43 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -518,6 +518,7 @@ dev-php/PEAR-Image_Canvas
 >=xfce-base/xfce4-panel-4.9.0
 >=xfce-base/xfce4-settings-4.9.0
 >=xfce-extra/xfce4-appfinder-4.9.0
+>=xfce-base/libxfcegui4-4.8.1-r1
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Feb 2012)
 # Illegal license. Bug #390205
