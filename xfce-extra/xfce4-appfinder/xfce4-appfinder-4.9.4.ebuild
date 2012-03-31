@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.9.4.ebuild,v 1.2 2012/03/31 05:23:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.9.4.ebuild,v 1.3 2012/03/31 05:50:31 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.98
 	>=xfce-base/libxfce4util-4.9
 	>=xfce-base/libxfce4ui-4.9
 	>=xfce-base/xfconf-4.9
-	!<xfce-base/xfce-utils-4.9"
+	!xfce-base/xfce-utils"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
