@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.17 2012/03/06 06:25:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.18 2012/03/31 18:43:22 floppym Exp $
 
 EAPI=4
 
@@ -63,7 +63,9 @@ fi
 
 src_prepare() {
 	# Prevent setup from grabbing nose from pypi
-	sed -e /setup_requires/d -i pavement.py || die
+	sed -e /setup_requires/d \
+		-e '/requests/s/, <0.11//' \
+		-i pavement.py || die
 
 	if [[ ${PV} == 9999 ]]; then
 		# Generate setup.py
