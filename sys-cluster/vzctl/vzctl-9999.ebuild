@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.8 2011/09/21 09:04:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.9 2012/03/31 05:09:25 pva Exp $
 
 EAPI="4"
 
-inherit bash-completion autotools git-2
+inherit bash-completion-r1 autotools git-2
 
 DESCRIPTION="OpenVZ ConTainers control utility"
 HOMEPAGE="http://openvz.org/"
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://git.openvz.org/pub/${PN}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="bash-completion"
+IUSE=""
 
 RDEPEND="
 	net-firewall/iptables
@@ -34,7 +34,7 @@ src_configure() {
 	econf \
 		--localstatedir=/var \
 		--enable-udev \
-		$(use_enable bash-completion bashcomp) \
+		--enable-bashcomp \
 		--enable-logrotate
 }
 
@@ -43,7 +43,7 @@ src_install() {
 
 	# install the bash-completion script into the right location
 	rm -rf "${ED}"/etc/bash_completion.d
-	dobashcompletion etc/bash_completion.d/vzctl.sh vzctl
+	newbashcomp etc/bash_completion.d/vzctl.sh ${PN}
 
 	# We need to keep some dirs
 	keepdir /vz/{dump,lock,root,private,template/cache}
@@ -51,33 +51,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	bash-completion_pkg_postinst
-	local conf_without_OSTEMPLATE
-	for file in \
-		$(find "${EROOT}/etc/vz/conf/" \( -name *.conf -a \! -name 0.conf \)); do
-		if ! grep '^OSTEMPLATE' $file > /dev/null; then
-			conf_without_OSTEMPLATE+=" $file"
-		fi
-	done
-
-	if [[ -n ${conf_without_OSTEMPLATE} ]]; then
-		ewarn
-		ewarn "OSTEMPLATE default was changed from redhat-like to gentoo."
-		ewarn "This means that any VEID.conf files without explicit or correct"
-		ewarn "OSTEMPLATE set will use gentoo scripts instead of redhat."
-		ewarn "Please check the following configs:"
-		for file in ${conf_without_OSTEMPLATE}; do
-			ewarn "${file}"
-		done
-		ewarn
-	fi
-
 	ewarn "To avoid loosing network to CTs on iface down/up, please, add the"
 	ewarn "following code to /etc/conf.d/net:"
 	ewarn " postup() {"
 	ewarn "     /usr/sbin/vzifup-post \${IFACE}"
 	ewarn " }"
-	ewarn
+
 	ewarn "Starting with 3.0.25 there is new vzeventd service to reboot CTs."
 	ewarn "Please, drop /usr/share/vzctl/scripts/vpsnetclean and"
 	ewarn "/usr/share/vzctl/scripts/vpsreboot from crontab and use"

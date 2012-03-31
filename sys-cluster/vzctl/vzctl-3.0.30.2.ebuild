@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.30.2.ebuild,v 1.1 2012/03/31 05:04:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.30.2.ebuild,v 1.2 2012/03/31 05:09:25 pva Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	# Set default OSTEMPLATE on gentoo added in vzctl-3.0.24 (29 Jun 2010)
+	# Set default OSTEMPLATE on gentoo added
 	sed -e 's:=redhat-:=gentoo-:' -i etc/dists/default || die
 }
 
