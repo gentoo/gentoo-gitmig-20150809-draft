@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.9.0.ebuild,v 1.1 2011/09/28 11:16:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.9.2.ebuild,v 1.1 2012/03/31 17:20:23 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -17,9 +17,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="memoryview"
 
 RDEPEND=">=dev-libs/glib-2.16:2
-	>=dev-cpp/glibmm-2.25.1:2
-	>=dev-cpp/gtkmm-3.0:3.0
-	>=dev-cpp/gtksourceviewmm-3.0:3.0
+	>=dev-cpp/glibmm-2.30:2
+	>=dev-cpp/gtkmm-3:3.0
+	>=dev-cpp/gtksourceviewmm-3:3.0
 	>=gnome-base/gsettings-desktop-schemas-0.0.1
 	>=gnome-base/libgtop-2.19
 	>=x11-libs/vte-0.28:2.90
