@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.62 2012/03/12 15:34:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.63 2012/03/31 10:24:26 dilfridge Exp $
+
+  31 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdevplatform-1.2.2.ebuild, kdevplatform-1.2.3.ebuild,
+  kdevplatform-1.2.3-r1.ebuild, kdevplatform-1.3.0.ebuild:
+  Disable tests as they are intended for a different usecase, bug 276208
 
 *kdevplatform-1.3.0 (12 Mar 2012)
 

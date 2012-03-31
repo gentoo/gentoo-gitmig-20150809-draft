@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.3.0.ebuild,v 1.1 2012/03/12 15:34:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.3.0.ebuild,v 1.2 2012/03/31 10:24:26 dilfridge Exp $
 
 EAPI=4
 
@@ -39,8 +39,6 @@ RDEPEND="${DEPEND}
 	reviewboard? ( dev-libs/qjson )
 	subversion? ( dev-vcs/subversion )
 "
-# Quite few fails and upstream is aware
-RESTRICT="test"
 
 src_prepare() {
 	kde4-base_src_prepare
@@ -66,3 +64,6 @@ src_configure() {
 
 	kde4-base_src_configure
 }
+
+# bug 276208
+src_test() { : ; }
