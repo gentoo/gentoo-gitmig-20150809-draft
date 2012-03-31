@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.81 2012/03/09 14:28:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.82 2012/03/31 13:54:34 klausman Exp $
+
+  31 Mar 2012; Tobias Klausmann <klausman@gentoo.org> XML-Twig-3.390.0.ebuild:
+  Stable on alpha, bug #400271
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> XML-Twig-3.390.0.ebuild:
   Marking XML-Twig-3.390.0 ppc64 for bug 400271
