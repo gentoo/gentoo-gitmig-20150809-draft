@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Interface
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.29 2012/03/28 17:42:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.30 2012/03/31 07:10:29 tove Exp $
+
+  31 Mar 2012; Torsten Veller <tove@gentoo.org> -IO-Interface-1.03.ebuild:
+  Cleanup
 
   28 Mar 2012; Raúl Porcel <armin76@gentoo.org> IO-Interface-1.03.ebuild,
   IO-Interface-1.60.0.ebuild:

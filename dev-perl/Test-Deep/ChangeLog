@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Deep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.53 2012/03/25 17:07:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.54 2012/03/31 06:47:45 tove Exp $
+
+  31 Mar 2012; Torsten Veller <tove@gentoo.org> -Test-Deep-0.106.ebuild:
+  Cleanup
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Test-Deep-0.108.0.ebuild:
   ia64/s390/sh/sparc stable wrt #400229
