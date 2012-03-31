@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libselinux
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.76 2011/11/12 16:31:44 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.77 2012/03/31 11:02:41 swift Exp $
+
+*libselinux-2.1.9 (31 Mar 2012)
+
+  31 Mar 2012; <swift@gentoo.org> +libselinux-2.1.9.ebuild:
+  Bump to version 2.1.9
 
   12 Nov 2011; <swift@gentoo.org> -libselinux-2.0.94.ebuild,
   -libselinux-2.0.98.ebuild:

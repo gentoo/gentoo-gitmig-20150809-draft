@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsemanage
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.44 2011/11/12 16:58:49 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.45 2012/03/31 11:03:00 swift Exp $
+
+*libsemanage-2.1.6 (31 Mar 2012)
+
+  31 Mar 2012; <swift@gentoo.org> +libsemanage-2.1.6.ebuild:
+  Bump to version 2.1.6
 
   12 Nov 2011; <swift@gentoo.org> -libsemanage-2.0.45.ebuild,
   -libsemanage-2.0.46.ebuild:

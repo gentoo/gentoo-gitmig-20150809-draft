@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libsepol
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.45 2011/11/12 18:11:13 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.46 2012/03/31 11:03:18 swift Exp $
+
+*libsepol-2.1.4-r1 (31 Mar 2012)
+
+  31 Mar 2012; <swift@gentoo.org> +libsepol-2.1.4-r1.ebuild,
+  +files/libsepol-2.1.4-fix_role_fix_callback.patch:
+  Bump to version 2.1.4
 
   12 Nov 2011; <swift@gentoo.org> -libsepol-2.0.41.ebuild,
   -libsepol-2.0.42.ebuild:
