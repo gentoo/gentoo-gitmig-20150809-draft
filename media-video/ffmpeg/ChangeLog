@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.534 2012/03/31 09:35:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.535 2012/03/31 09:43:39 ago Exp $
+
+  31 Mar 2012; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.ebuild:
+  reverted to ~amd64
 
   31 Mar 2012; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.ebuild:
   Stable for amd64, wrt bug #401069
