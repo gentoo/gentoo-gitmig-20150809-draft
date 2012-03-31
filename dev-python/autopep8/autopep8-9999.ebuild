@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/autopep8-9999.ebuild,v 1.2 2012/03/31 22:31:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/autopep8-9999.ebuild,v 1.3 2012/03/31 22:47:05 floppym Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5"
+RESTRICT_PYTHON_ABIS="2.5-cpython"
 
 if [ "${PV%9999}" != "${PV}" ] ; then
 	SCM=git-2
