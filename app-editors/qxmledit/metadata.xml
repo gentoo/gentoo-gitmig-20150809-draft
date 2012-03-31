@@ -6,8 +6,9 @@
 		<email>hwoarang@gentoo.org</email>
 		<name>Markos Chandras</name>
 	</maintainer>
-	<longdescription lang="en">
-		QXmlEdit is a simple XML editor written in Qt4, it is not a complete and
-		full featured editor.
-	</longdescription>
+	<longdescription lang="en">QXmlEdit is a simple XML editor written in Qt4, it is not a complete and
+		full featured editor.</longdescription>
+	<upstream>
+		<remote-id type="google-code">qxmledit</remote-id>
+	</upstream>
 </pkgmetadata>
