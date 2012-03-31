@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13637 2012/03/31 10:02:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13638 2012/03/31 21:00:19 tester Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -173,6 +173,9 @@ dev-php/Horde_Yaml
 =media-libs/clutter-gtk-1.2*
 =media-libs/clutter-gst-1.5*
 =media-libs/clutter-gst-1.6*
+# Farsight2 conflicts with Farstream
+# So pidgin needs a patch
+=net-im/pidgin-2.10.3-r100
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Mar 2012)
 # Causes font corruption, bug #409593.

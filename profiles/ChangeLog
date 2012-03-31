@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6375 2012/03/31 09:41:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6376 2012/03/31 21:00:19 tester Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Mar 2012; Olivier Crête <tester@gentoo.org> package.mask:
+  Add farstream port of pidgin to p.mask
 
   31 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Mask sys-auth/tcb for removal.
