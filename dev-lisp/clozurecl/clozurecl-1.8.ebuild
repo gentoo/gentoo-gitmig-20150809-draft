@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/clozurecl-1.6.ebuild,v 1.2 2010/12/17 20:18:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/clozurecl-1.8.ebuild,v 1.1 2012/03/31 10:17:47 grozin Exp $
 
 EAPI=3
 inherit eutils
@@ -27,11 +27,6 @@ S="${WORKDIR}"/${MY_PN}
 
 ENVD="${T}"/50ccl
 
-src_prepare() {
-	find "${S}" -type d -name .svn -exec rm -rf {} ';' &>/dev/null
-	find "${S}" -type f -name .cvsignore -delete &>/dev/null
-}
-
 src_configure() {
 	if use x86; then
 		CCL_RUNTIME=lx86cl; CCL_HEADERS=x86-headers
@@ -50,6 +45,9 @@ src_compile() {
 
 	# remove non-owner write permissions on the full-image
 	chmod go-w ${CCL_RUNTIME}{,.image}
+
+	# remove .svn directories
+	find "${S}" -type d -name .svn -exec rm -rf {} ';' &>/dev/null
 }
 
 src_install() {
