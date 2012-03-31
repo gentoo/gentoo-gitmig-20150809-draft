@@ -1,6 +1,12 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.268 2012/03/30 17:11:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.269 2012/03/31 21:01:55 tester Exp $
+
+*pidgin-2.10.3-r100 (31 Mar 2012)
+
+  31 Mar 2012; Olivier Crête <tester@gentoo.org>
+  +files/port-to-farstream-v5.patch, +pidgin-2.10.3-r100.ebuild:
+  Add package.masked version that uses farstream instead of farsight2
 
 *pidgin-2.10.3 (30 Mar 2012)
 
