@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.2 2012/03/30 09:14:43 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.3 2012/03/31 03:56:51 naota Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ S="${WORKDIR}/cddl"
 
 PATCHES=( "${FILESDIR}/${PN}-9.0-bsdxml.patch"
 	"${FILESDIR}/${PN}-9.0-underlink.patch"
-	"${FILESDIR}/${PN}-8.2-libpaths.patch" )
+	"${FILESDIR}/${PN}-9.0-libpaths.patch" )
 
 src_unpack() {
 	freebsd_src_unpack
