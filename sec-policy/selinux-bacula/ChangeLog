@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-bacula
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bacula/ChangeLog,v 1.2 2012/02/23 18:44:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bacula/ChangeLog,v 1.3 2012/03/31 12:29:43 swift Exp $
+
+*selinux-bacula-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; <swift@gentoo.org> +selinux-bacula-2.20120215.ebuild:
+  Bumping to 2.20120215 policies
 
   23 Feb 2012; <swift@gentoo.org> selinux-bacula-2.20110726.ebuild:
   Stabilizing

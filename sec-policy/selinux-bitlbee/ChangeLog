@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-bitlbee
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bitlbee/ChangeLog,v 1.4 2011/10/23 12:42:56 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bitlbee/ChangeLog,v 1.5 2012/03/31 12:29:11 swift Exp $
+
+*selinux-bitlbee-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; <swift@gentoo.org> +selinux-bitlbee-2.20120215.ebuild:
+  Bumping to 2.20120215 policies
 
   23 Oct 2011; <swift@gentoo.org> selinux-bitlbee-2.20110726.ebuild:
   Stabilization (tracker #384231)

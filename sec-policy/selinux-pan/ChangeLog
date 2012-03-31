@@ -1,5 +1,10 @@
 
 
+*selinux-pan-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; <swift@gentoo.org> +selinux-pan-2.20120215.ebuild:
+  Bumping to 2.20120215 policies
+
   27 Nov 2011; <swift@gentoo.org> selinux-pan-2.20110726-r2.ebuild:
   Stable on x86/amd64
 

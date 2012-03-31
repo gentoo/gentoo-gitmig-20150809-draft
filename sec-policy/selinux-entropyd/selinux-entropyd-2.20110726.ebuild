@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-entropyd/selinux-entropyd-2.20110726.ebuild,v 1.2 2011/10/23 12:42:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-entropyd/selinux-entropyd-2.20110726.ebuild,v 1.3 2012/03/31 12:29:18 swift Exp $
 EAPI="4"
 
 IUSE=""
@@ -11,8 +11,7 @@ inherit selinux-policy-2
 DESCRIPTION="SELinux policy for various entropy daemons (audio-entropyd, haveged, ...)"
 
 KEYWORDS="amd64 x86"
-RDEPEND="!<sec-policy/selinux-audio-entropyd-2.20110726
-		>=sys-apps/policycoreutils-1.30.30
+RDEPEND=">=sys-apps/policycoreutils-1.30.30
 		>=sec-policy/selinux-base-policy-${PV}"
 
 pkg_postinst() {

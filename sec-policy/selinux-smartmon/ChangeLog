@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-smartmon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-smartmon/ChangeLog,v 1.5 2011/11/12 20:53:13 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-smartmon/ChangeLog,v 1.6 2012/03/31 12:29:15 swift Exp $
+
+*selinux-smartmon-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; <swift@gentoo.org> +selinux-smartmon-2.20120215.ebuild:
+  Bumping to 2.20120215 policies
 
   12 Nov 2011; <swift@gentoo.org> -selinux-smartmon-2.20101213.ebuild:
   Removing old policies

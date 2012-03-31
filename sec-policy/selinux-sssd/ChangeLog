@@ -1,0 +1,14 @@
+# ChangeLog for sec-policy/selinux-sssd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sssd/ChangeLog,v 1.1 2012/03/31 12:29:19 swift Exp $
+
+  31 Mar 2012; <swift@gentoo.org> +selinux-sssd-2.20120215.ebuild,
+  +metadata.xml:
+  Bumping to 2.20120215 policies
+
+*selinux-sssd-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; <swift@gentoo.org> +selinux-sssd-2.20120215.ebuild,
+  +metadata.xml:
+  SELinux policy for sssd
+
