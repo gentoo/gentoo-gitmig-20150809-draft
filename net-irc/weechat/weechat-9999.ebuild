@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.15 2012/03/31 11:41:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.16 2012/03/31 11:51:01 scarabeus Exp $
 
-EAPI=4
+EAPI=3
 
 USE_RUBY="ruby18 ruby19"
 RUBY_OPTIONAL="yes"

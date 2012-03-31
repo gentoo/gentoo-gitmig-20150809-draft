@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.7.ebuild,v 1.3 2012/03/31 11:41:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.7.ebuild,v 1.4 2012/03/31 11:51:01 scarabeus Exp $
 
-EAPI=4
+EAPI=3
 
 # Can only add ruby19 support when ruby:1.9 is keyworded.
 #USE_RUBY="ruby18 ruby19"
@@ -72,14 +72,14 @@ src_prepare() {
 	sed -i \
 		-e "s:lib/:$(get_libdir)/:g" \
 		-e "s:lib\":$(get_libdir)\":g" \
-		CMakeLists.txt || die "sed failed"
+		"${S}/CMakeLists.txt" || die "sed failed"
 
 	# install only required translations
 	for i in "${LANGS[@]}" ; do
 		if ! use linguas_${i} ; then
 			sed -i \
 				-e "/${i}.po/d" \
-				po/CMakeLists.txt || die
+				"${S}/po/CMakeLists.txt" || die
 		fi
 	done
 }
