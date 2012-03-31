@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>dotnet</herd>
+	<upstream>
+		<remote-id type="google-code">paint-mono</remote-id>
+	</upstream>
 </pkgmetadata>
