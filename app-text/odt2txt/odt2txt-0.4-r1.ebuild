@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/odt2txt-0.4-r1.ebuild,v 1.5 2011/02/02 15:57:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/odt2txt-0.4-r1.ebuild,v 1.6 2012/03/31 11:59:35 scarabeus Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -15,10 +15,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ~ppc64 sparc x86 ~x86-macos"
 IUSE=""
 
-RDEPEND="sys-libs/zlib
-	virtual/libiconv"
-DEPEND="sys-apps/groff
-	${RDEPEND}"
+RDEPEND="
+	!app-office/unoconv
+	sys-libs/zlib
+	virtual/libiconv
+"
+DEPEND="${RDEPEND}
+	sys-apps/groff
+"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-darwin_iconv.patch
@@ -29,6 +33,6 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" PREFIX=/usr || die
-	doman odt2txt.1 || die
+	emake install DESTDIR="${D}" PREFIX=/usr
+	doman odt2txt.1
 }
