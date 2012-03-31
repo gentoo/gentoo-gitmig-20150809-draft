@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/imageworsener
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.17 2012/03/15 20:54:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.18 2012/03/31 21:17:20 sping Exp $
+
+*imageworsener-0.9.9 (31 Mar 2012)
+
+  31 Mar 2012; Sebastian Pipping <sping@gentoo.org>
+  +imageworsener-0.9.9.ebuild:
+  Bump to 0.9.9
 
   15 Mar 2012; Sebastian Pipping <sping@gentoo.org>
   files/imageworsener-0.9.8-libm.patch:
