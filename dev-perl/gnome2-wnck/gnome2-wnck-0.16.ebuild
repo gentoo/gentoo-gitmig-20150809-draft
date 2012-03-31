@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.16.ebuild,v 1.9 2011/03/21 22:32:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.16.ebuild,v 1.10 2012/03/31 12:07:16 armin76 Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gtk2-perl/${MY_P}.tar.gz"
 HOMEPAGE="http://gtk2-perl.sourceforge.net/"
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="amd64 ia64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 #SRC_TEST="do"
 

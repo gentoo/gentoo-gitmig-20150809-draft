@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-ex-formfactory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/ChangeLog,v 1.34 2012/03/09 10:15:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/ChangeLog,v 1.35 2012/03/31 12:07:55 armin76 Exp $
+
+  31 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  gtk2-ex-formfactory-0.65-r1.ebuild, gtk2-ex-formfactory-0.670.0.ebuild:
+  Drop ia64/sparc keywords
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gtk2-ex-formfactory-0.670.0.ebuild:

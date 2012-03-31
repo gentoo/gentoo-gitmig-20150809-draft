@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-1.042.ebuild,v 1.4 2011/03/29 10:22:53 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-1.042.ebuild,v 1.5 2012/03/31 12:04:59 armin76 Exp $
 
 MODULE_AUTHOR=TSCH
 EAPI=1
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gtk2-perl/Gnome2-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
 
 S=${WORKDIR}/Gnome2-${PV}
