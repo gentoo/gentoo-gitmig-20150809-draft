@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/tie-encryptedhash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/ChangeLog,v 1.22 2012/03/09 10:31:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/ChangeLog,v 1.23 2012/03/31 14:10:41 klausman Exp $
+
+  31 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
+  tie-encryptedhash-1.240.0.ebuild:
+  Stable on alpha, bug #400319
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   tie-encryptedhash-1.240.0.ebuild:
