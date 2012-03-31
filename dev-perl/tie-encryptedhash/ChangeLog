@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/tie-encryptedhash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/ChangeLog,v 1.23 2012/03/31 14:10:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/ChangeLog,v 1.24 2012/03/31 17:13:29 armin76 Exp $
+
+  31 Mar 2012; Raúl Porcel <armin76@gentoo.org> tie-encryptedhash-1.21.ebuild,
+  tie-encryptedhash-1.240.0.ebuild:
+  Drop ia64/sparc keywords
 
   31 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
   tie-encryptedhash-1.240.0.ebuild:
