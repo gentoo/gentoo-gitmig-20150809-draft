@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>cjk</herd>
-<longdescription lang="en">
-The Array 30 Chinese input method for ibus-table.
+	<herd>cjk</herd>
+	<longdescription lang="en">The Array 30 Chinese input method for ibus-table.
 It covers more than 70 thousands Chinese characters,
-which are listed in unicode 3.1,
-</longdescription>
-<longdescription lang="zh_CN">
-使用 ibus-table 的行列输入法。這个版本包含了Unicode 3.1 約七万多字。
-</longdescription>
-<longdescription lang="zh_TW">
-使用 ibus-table 的行列輸入法。這個版本包含了Unicode 3.1 約七萬餘字。
-</longdescription>
+which are listed in unicode 3.1,</longdescription>
+	<longdescription lang="zh_CN">使用 ibus-table 的行列输入法。這个版本包含了Unicode 3.1 約七万多字。</longdescription>
+	<longdescription lang="zh_TW">使用 ibus-table 的行列輸入法。這個版本包含了Unicode 3.1 約七萬餘字。</longdescription>
+	<upstream>
+		<remote-id type="google-code">ibus</remote-id>
+	</upstream>
 </pkgmetadata>

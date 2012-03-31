@@ -6,4 +6,7 @@
 		<email>qiaomuf@gentoo.org</email>
 		<name>Mu Qiao</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">sunpinyin</remote-id>
+	</upstream>
 </pkgmetadata>
