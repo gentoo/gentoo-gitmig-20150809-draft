@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.350 2012/03/31 12:17:02 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.351 2012/03/31 14:53:54 maekke Exp $
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> gnutls-2.12.18.ebuild:
+  arm stable, bug #409287
 
   31 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> gnutls-2.12.18.ebuild:
   Fix p11kit dependency to be >=0.11
