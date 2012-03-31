@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13635 2012/03/30 21:06:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13636 2012/03/31 09:41:23 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (31 Mar 2012)
+# Masked for removal, use sys-apps/hardened-shadow instead.
+# Needs too much special patching to work in Gentoo,
+# bugs: #371167, #408647. Removal in 60 days (31 May 2012).
+sys-auth/tcb
 
 # Markos Chandras <hwoarang@gentoo.org> (30 Mar 2012)
 # Unmaintained. Replaced by x11-libs/qt-gui[gtkstyle]
