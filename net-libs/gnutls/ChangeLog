@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.349 2012/03/29 05:00:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.350 2012/03/31 12:17:02 nirbheek Exp $
+
+  31 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> gnutls-2.12.18.ebuild:
+  Fix p11kit dependency to be >=0.11
 
   29 Mar 2012; Tim Harder <radhermit@gentoo.org> -gnutls-2.12.17.ebuild,
   -gnutls-3.0.15.ebuild:
