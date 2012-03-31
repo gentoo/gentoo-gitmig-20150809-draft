@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/cd-discid-0.9.ebuild,v 1.7 2009/06/16 17:56:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/cd-discid-0.9.ebuild,v 1.8 2012/03/31 17:46:21 armin76 Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://lly.org/~rcw/abcde/page/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 x86"
 
 src_compile() {
 	echo $(tc-getCC) ${CFLAGS} ${LDFLAGS} -o cd-discid cd-discid.c
