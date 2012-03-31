@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.24.0.ebuild,v 1.8 2012/03/31 16:59:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.24.0.ebuild,v 1.9 2012/03/31 18:31:54 blueness Exp $
 
 EAPI="4"
 
@@ -17,8 +17,8 @@ IUSE="ares gnutls idn ipv6 kerberos ldap nss ssh ssl static-libs test threads"
 
 RDEPEND="ldap? ( net-nds/openldap )
 	gnutls? ( net-libs/gnutls dev-libs/libgcrypt app-misc/ca-certificates )
-	ssl? ( dev-libs/openssl )
-	nss? ( dev-libs/nss app-misc/ca-certificates )
+	ssl? ( !gnutls? ( dev-libs/openssl ) )
+	nss? ( !gnutls? ( !ssl? ( dev-libs/nss app-misc/ca-certificates ) ) )
 	idn? ( net-dns/libidn )
 	ares? ( >=net-dns/c-ares-1.6 )
 	kerberos? ( virtual/krb5 )
@@ -37,12 +37,10 @@ DEPEND="${RDEPEND}
 	)"
 # used - but can do without in self test: net-misc/stunnel
 
-# ares must be disabled for threads
-# only zero or one of gnutls, ssl, nss, bug #410305
+# ares must be disabled for threads and both can be disabled
+# one can use wether gnutls or nss if ssl is enabled
 REQUIRED_USE="threads? ( !ares )
-	gnutls? ( !ssl !nss )
-	ssl? ( !nss !gnutls )
-	nss? ( !gnutls !ssl )"
+	nss? ( !gnutls )"
 
 src_prepare() {
 	epatch \
