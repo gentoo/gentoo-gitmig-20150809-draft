@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.20 2011/11/15 21:12:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.21 2012/03/31 08:58:53 swegener Exp $
 
 EAPI="4"
 
@@ -55,8 +55,8 @@ src_configure() {
 	use ftd2xx && LDFLAGS="${LDFLAGS} -L/opt/$(get_libdir)"
 
 	if use blaster; then
-		use ftdi && myconf="${myconf} --use_blaster_libftdi"
-		use ftd2xx && myconf="${myconf} --use_blaster_ftd2xx"
+		use ftdi && myconf="${myconf} --enable-usb_blaster_libftdi"
+		use ftd2xx && myconf="${myconf} --enable-usb_blaster_ftd2xx"
 	fi
 	econf \
 		$(use_enable dummy) \

@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.25 2012/03/11 16:08:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.26 2012/03/31 08:58:53 swegener Exp $
+
+  31 Mar 2012; Sven Wegener <swegener@gentoo.org> openocd-9999.ebuild:
+  Also apply the USB Blaster configure changes to live git version.
 
   11 Mar 2012; Sven Wegener <swegener@gentoo.org> openocd-0.5.0.ebuild:
   Fix configure options for USB Blaster FTDI devices.
