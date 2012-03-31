@@ -10,5 +10,7 @@
 		<flag name="lastfm">Enable support for lastfm cover art fetching and scrobbling</flag>
 		<flag name="lyrics">Enable support for lyrics fetching</flag>
 	</use>
+	<upstream>
+		<remote-id type="google-code">xnoise</remote-id>
+	</upstream>
 </pkgmetadata>
-
