@@ -5,5 +5,7 @@
 		<email>wired@gentoo.org</email>
 		<name>Alex Alexander</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">googlecl</remote-id>
+	</upstream>
 </pkgmetadata>
-
