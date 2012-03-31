@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.169 2012/03/31 10:00:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.170 2012/03/31 10:07:18 ssuominen Exp $
+
+  31 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> libxfcegui4-4.8.1.ebuild:
+  Pin to old version of libxfce4util so it's clear new version needs to be
+  unmasked together with Xfce 4.10.
 
 *libxfcegui4-4.8.1-r1 (31 Mar 2012)
 
