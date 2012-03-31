@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-0.12.ebuild,v 1.1 2012/03/30 12:02:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-0.12.ebuild,v 1.2 2012/03/31 11:13:06 ulm Exp $
 
 EAPI=4
 
@@ -20,10 +20,13 @@ RDEPEND="virtual/man"
 
 S=${WORKDIR}/${MY_P}
 
-DOCS="CHANGES README"
-
 src_compile() { :; }
 
 src_install() {
 	emake MANDIR="${ED}"/usr/share/man/de install
+	dodoc CHANGES README
+
+	# Remove man pages provided by other packages
+	#  - shadow
+	rm "${ED}"/usr/share/man/de/man1/groups.1*
 }
