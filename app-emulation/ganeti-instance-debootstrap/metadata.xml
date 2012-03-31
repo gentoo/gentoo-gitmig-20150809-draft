@@ -6,11 +6,11 @@
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
-	<longdescription lang="en">
-	This is a guest OS definition for Ganeti (http://code.google.com/p/ganeti).
+	<longdescription lang="en">This is a guest OS definition for Ganeti (http://code.google.com/p/ganeti).
 	It will install a minimal version of Debian or Ubuntu via debootstrap (thus
 	it requires network access). This only works if you have a Debian-based node
-	or you have debootstrap installed by hand on another distribution.
-	</longdescription>
+	or you have debootstrap installed by hand on another distribution.</longdescription>
+	<upstream>
+		<remote-id type="google-code">ganeti</remote-id>
+	</upstream>
 </pkgmetadata>
-
