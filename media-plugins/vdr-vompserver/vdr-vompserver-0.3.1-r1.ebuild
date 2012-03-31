@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.3.0.ebuild,v 1.3 2010/12/01 22:52:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.3.1-r1.ebuild,v 1.1 2012/03/31 10:18:22 hd_brummy Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit vdr-plugin
 
@@ -18,12 +18,13 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.2.6"
 RDEPEND="${DEPEND}"
 
-PATCHES="${FILESDIR}/${P}_vdr-1.7.3-compile.diff"
+PATCHES=("${FILESDIR}/rrprocstart.patch")
 
 src_prepare() {
 	vdr-plugin_src_prepare
 
 	sed -i "s:vompserver:vomp:" vompserver.c
+	sed -i "s:char b:// char b:" mediafile.c
 }
 
 src_install() {
@@ -45,7 +46,4 @@ pkg_postinst() {
 	elog "You have to download the dongle file (i.e. firmware) and adapt"
 	elog "the vomp configuration files accordingly."
 	echo
-
-	elog "Please edit up from version ${PN}-0.2.6"
-	elog "all config files in /etc/vdr/plugins/vomp/"
 }

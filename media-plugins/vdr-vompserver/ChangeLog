@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-vompserver
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.15 2010/12/01 22:52:56 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.16 2012/03/31 10:18:22 hd_brummy Exp $
+
+*vdr-vompserver-0.3.1-r1 (31 Mar 2012)
+
+  31 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-vompserver-0.3.0.ebuild, vdr-vompserver-0.3.1.ebuild,
+  +vdr-vompserver-0.3.1-r1.ebuild, +files/rrprocstart.patch:
+  compile fix gcc-4.6; message overran fixed bug #363721
 
   01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-vompserver-0.3.0.ebuild:

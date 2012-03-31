@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.3.1.ebuild,v 1.1 2010/12/01 20:53:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.3.1.ebuild,v 1.2 2012/03/31 10:18:22 hd_brummy Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit vdr-plugin
 
@@ -22,6 +22,7 @@ src_prepare() {
 	vdr-plugin_src_prepare
 
 	sed -i "s:vompserver:vomp:" vompserver.c
+	sed -i "s:char b:// char b:" mediafile.c
 }
 
 src_install() {
