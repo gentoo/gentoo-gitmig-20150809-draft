@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.241 2012/03/23 23:25:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.242 2012/03/31 14:41:54 maekke Exp $
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> kcontrol-4.8.1.ebuild:
+  add ~arm, bug #402989
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> kcontrol-4.8.1.ebuild:
   Restore ~x86-fbsd.

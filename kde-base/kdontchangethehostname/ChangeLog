@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdontchangethehostname
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdontchangethehostname/ChangeLog,v 1.46 2012/03/23 07:37:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdontchangethehostname/ChangeLog,v 1.47 2012/03/31 14:53:02 maekke Exp $
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org>
+  kdontchangethehostname-4.8.1.ebuild:
+  add ~arm, bug #402989
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org>
   -kdontchangethehostname-4.8.0.ebuild:
