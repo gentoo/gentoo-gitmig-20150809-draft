@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/abcmidi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcmidi/ChangeLog,v 1.13 2012/03/25 07:58:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcmidi/ChangeLog,v 1.14 2012/03/31 02:09:51 radhermit Exp $
+
+*abcmidi-2012.03.27 (31 Mar 2012)
+
+  31 Mar 2012; Tim Harder <radhermit@gentoo.org> +abcmidi-2012.03.27.ebuild:
+  Version bump.
 
   25 Mar 2012; Tim Harder <radhermit@gentoo.org> -abcmidi-2012.02.05.ebuild:
   Remove old.
