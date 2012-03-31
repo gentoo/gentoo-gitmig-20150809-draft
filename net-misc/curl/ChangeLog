@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.208 2012/03/26 00:13:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.209 2012/03/31 14:11:13 blueness Exp $
+
+  31 Mar 2012; Anthony G. Basile <blueness@gentoo.org> curl-7.25.0.ebuild:
+  Use REQUIRED_USE for gnutls/ssl/nss, bug #410305
 
   26 Mar 2012; Anthony G. Basile <blueness@gentoo.org> curl-7.25.0.ebuild:
   Forcing a bump to the soname unnecessarily breaks backwards compat

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0.ebuild,v 1.3 2012/03/26 00:13:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0.ebuild,v 1.4 2012/03/31 14:11:13 blueness Exp $
 
 EAPI="4"
 
@@ -15,12 +15,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="ares gnutls idn ipv6 kerberos ldap nss ssh ssl static-libs test threads"
 
-#Note: If we enable more than one of gnutls, ssl or nss, then we will only
-#use one.  gnutls takes priority over ssl which takes priority over nss.
 RDEPEND="ldap? ( net-nds/openldap )
 	gnutls? ( net-libs/gnutls dev-libs/libgcrypt app-misc/ca-certificates )
-	ssl? ( !gnutls? ( dev-libs/openssl ) )
-	nss? ( !gnutls? ( !ssl? ( dev-libs/nss app-misc/ca-certificates ) ) )
+	ssl? ( dev-libs/openssl )
+	nss? ( dev-libs/nss app-misc/ca-certificates )
 	idn? ( net-dns/libidn )
 	ares? ( net-dns/c-ares )
 	kerberos? ( virtual/krb5 )
@@ -40,10 +38,12 @@ DEPEND="${RDEPEND}
 	)"
 # used - but can do without in self test: net-misc/stunnel
 
-# ares must be disabled for threads and both can be disabled
-# one can use wether gnutls or nss if ssl is enabled
+# ares must be disabled for threads
+# only zero or one of gnutls, ssl, nss, bug #410305
 REQUIRED_USE="threads? ( !ares )
-	nss? ( !gnutls )"
+	gnutls? ( !ssl !nss )
+	ssl? ( !nss !gnutls )
+	nss? ( !gnutls !ssl )"
 
 src_prepare() {
 	epatch \
@@ -74,14 +74,14 @@ src_configure() {
 	fi
 
 	# These configuration options are organized alphabetically
-	# within each category.  This should make it easier if we ever
-	# decide to make any of these contingent on USE flags.
+	# within each category.  This should make it easier if we
+	# ever decide to make any of them contingent on USE flags:
 	# 1) protocols first.  To see them all do
 	# 'grep SUPPORT_PROTOCOLS configure.ac'
 	# 2) --enable/disable options second.
-	# 'grep -- --enable configure | grep Check  | awk '{ print $4 }' | sort
+	# 'grep -- --enable configure | grep Check | awk '{ print $4 }' | sort
 	# 3) --with/without options third.
-	# grep -- --with configure | grep Check  | awk '{ print $4 }' | sort
+	# grep -- --with configure | grep Check | awk '{ print $4 }' | sort
 	econf \
 		--enable-dict \
 		--enable-file \
