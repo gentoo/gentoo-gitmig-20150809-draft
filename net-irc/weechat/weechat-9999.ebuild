@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.14 2012/03/31 11:30:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.15 2012/03/31 11:41:05 scarabeus Exp $
 
 EAPI=4
 
@@ -53,17 +53,33 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 #REQUIRED_USE=" || ( ncurses gtk )"
 
+LANGS=( cs de es fr hu it ja pl pt_BR ru )
+for X in "${LANGS[@]}" ; do
+	IUSE="${IUSE} linguas_${X}"
+done
+
 pkg_setup() {
 	python_pkg_setup
 	ruby-ng_pkg_setup
 }
 
 src_prepare() {
+	local i
+
 	# fix libdir placement
 	sed -i \
 		-e "s:lib/:$(get_libdir)/:g" \
 		-e "s:lib\":$(get_libdir)\":g" \
 		CMakeLists.txt || die "sed failed"
+
+	# install only required translations
+	for i in "${LANGS[@]}" ; do
+		if ! use linguas_${i} ; then
+			sed -i \
+				-e "/${i}.po/d" \
+				po/CMakeLists.txt || die
+		fi
+	done
 }
 
 # alias, rmodifier, xfer
