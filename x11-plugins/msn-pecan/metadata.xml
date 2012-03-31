@@ -7,4 +7,7 @@
 		<name>Bernard Cafarelli</name>
 	</maintainer>
 	<longdescription>Alternative MSN protocol plugin for libpurple</longdescription>
+	<upstream>
+		<remote-id type="google-code">msn-pecan</remote-id>
+	</upstream>
 </pkgmetadata>

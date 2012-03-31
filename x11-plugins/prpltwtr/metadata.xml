@@ -5,5 +5,7 @@
 		<email>jdhore@gentoo.org</email>
 		<name>Jeff Horelick</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">prpltwtr</remote-id>
+	</upstream>
 </pkgmetadata>
-

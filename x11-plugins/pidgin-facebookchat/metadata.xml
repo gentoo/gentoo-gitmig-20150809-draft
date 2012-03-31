@@ -7,4 +7,7 @@
 		<name>Bernard Cafarelli</name>
 	</maintainer>
 	<longdescription>Facebook chat plugin for Pidgin and libpurple messengers. It connects to the new Facebook Chat IM service without the need for an API key</longdescription>
+	<upstream>
+		<remote-id type="google-code">pidgin-facebookchat</remote-id>
+	</upstream>
 </pkgmetadata>

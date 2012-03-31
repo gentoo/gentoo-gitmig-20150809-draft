@@ -7,4 +7,7 @@
 		<name>Serkan Kaba</name>
 		<description>Co-maintainer</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="google-code">pidgin-musictracker</remote-id>
+	</upstream>
 </pkgmetadata>
