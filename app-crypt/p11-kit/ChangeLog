@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.21 2012/03/28 20:23:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.22 2012/03/31 14:51:10 maekke Exp $
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> p11-kit-0.12.ebuild:
+  arm stable, bug #409287
 
   28 Mar 2012; Brent Baude <ranger@gentoo.org> p11-kit-0.12.ebuild:
   Marking p11-kit-0.12 ppc64 for bug 409287
