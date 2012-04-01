@@ -1,9 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.237 2012/04/01 17:17:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.238 2012/04/01 18:12:34 armin76 Exp $
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> atk-2.2.0.ebuild:
-  alpha/ia64/sh/sparc stable wrt #407643
+  alpha/ia64/s390/sh/sparc stable wrt #407643
 
 *atk-2.4.0 (28 Mar 2012)
 
