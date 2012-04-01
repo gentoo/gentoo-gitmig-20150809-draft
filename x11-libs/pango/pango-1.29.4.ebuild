@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.29.4.ebuild,v 1.9 2012/04/01 17:18:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.29.4.ebuild,v 1.10 2012/04/01 18:03:09 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -79,5 +79,5 @@ pkg_postinst() {
 	mkdir -p "${PANGO_CONFDIR}"
 	pango-querymodules \
 		"${EROOT}"usr/$(get_libdir)/pango/1.6.0/modules/*.so \
-		> "${PANGO_CONFDIR}"/pango.modules
+		> "${PANGO_CONFDIR}"/pango.modules || die
 }
