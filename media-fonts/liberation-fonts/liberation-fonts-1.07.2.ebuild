@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-1.07.2.ebuild,v 1.5 2012/03/24 17:31:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-1.07.2.ebuild,v 1.6 2012/04/01 15:34:52 armin76 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://fedorahosted.org/liberation-fonts"
 SRC_URI="!fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${PN}-ttf-${PV}.tar.gz )
 fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${P}.tar.gz )"
 
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2-with-exceptions"
 IUSE="fontforge X"
