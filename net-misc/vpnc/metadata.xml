@@ -14,7 +14,6 @@
 		<name>Christian Faulhammer</name>
 	</maintainer>
 	<use>
-		<flag name="openssl">Use <pkg>dev-libs/openssl</pkg> for hybrid-auth instead of <pkg>net-libs/gnutls, may cause license issues when redistributing</pkg>.</flag>
 		<flag name="hybrid-auth">Enable hybrid authentication (certificates), only if not redistributed as compiled binary</flag>
 		<flag name="resolvconf">Enable support for DNS managing framework <pkg>net-dns/openresolv</pkg></flag>
 	</use>

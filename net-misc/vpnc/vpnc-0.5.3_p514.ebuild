@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p514.ebuild,v 1.1 2012/02/14 19:14:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p514.ebuild,v 1.2 2012/04/01 05:41:52 jlec Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${PF}.tar.xz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
-IUSE="resolvconf openssl bindist"
+IUSE="resolvconf +gnutls bindist"
 
 DEPEND="
 	dev-lang/perl
@@ -26,14 +26,14 @@ DEPEND="
 	>=sys-apps/iproute2-2.6.19.20061214[-minimal]
 	bindist? ( net-libs/gnutls )
 	!bindist? (
-		openssl? ( dev-libs/openssl )
-		!openssl? ( net-libs/gnutls )
+		gnutls? ( net-libs/gnutls )
+		!gnutls? ( dev-libs/openssl )
 	)"
 RDEPEND="${DEPEND}
 	resolvconf? ( net-dns/openresolv )"
 
 src_prepare() {
-	if use openssl && ! use bindist; then
+	if ! use gnutls && ! use bindist; then
 		sed -i -e '/^#OPENSSL_GPL_VIOLATION/s:#::g' "${S}"/Makefile	|| die
 		ewarn "Building SSL support with OpenSSL instead of GnuTLS.  This means that"
 		ewarn "you are not allowed to re-distibute the binaries due to conflicts between BSD license and GPL,"
