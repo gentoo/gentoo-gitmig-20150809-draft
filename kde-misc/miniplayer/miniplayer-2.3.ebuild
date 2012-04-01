@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/miniplayer-2.1.ebuild,v 1.1 2012/01/16 17:09:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/miniplayer-2.3.ebuild,v 1.1 2012/04/01 08:32:39 johu Exp $
 
 EAPI=4
 
