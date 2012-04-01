@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0.ebuild,v 1.4 2012/03/31 14:11:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0.ebuild,v 1.5 2012/04/01 13:50:07 blueness Exp $
 
 EAPI="4"
 
@@ -15,10 +15,17 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="ares gnutls idn ipv6 kerberos ldap nss ssh ssl static-libs test threads"
 
+# The logic for Secure Socket Layer support:
+# 1) If USE="ssl" is selected, we definitely get one of gnutls/nss/openssl
+# 2) If USE="-ssl" is selected, we definitely do not get any gnutls/nss/openssl
+# 3) If USE="ssl -gnutls -nss" we get openssl by default
+# 4) Only one of gnutls/nss may be chosen and must be accomanpied by USE="ssl"
 RDEPEND="ldap? ( net-nds/openldap )
-	gnutls? ( net-libs/gnutls dev-libs/libgcrypt app-misc/ca-certificates )
-	ssl? ( dev-libs/openssl )
-	nss? ( dev-libs/nss app-misc/ca-certificates )
+	ssl? (
+		gnutls? ( net-libs/gnutls dev-libs/libgcrypt app-misc/ca-certificates )
+		nss? ( dev-libs/nss app-misc/ca-certificates )
+		!gnutls? ( !nss? ( dev-libs/openssl ) )
+	)
 	idn? ( net-dns/libidn )
 	ares? ( net-dns/c-ares )
 	kerberos? ( virtual/krb5 )
@@ -39,11 +46,9 @@ DEPEND="${RDEPEND}
 # used - but can do without in self test: net-misc/stunnel
 
 # ares must be disabled for threads
-# only zero or one of gnutls, ssl, nss, bug #410305
 REQUIRED_USE="threads? ( !ares )
-	gnutls? ( !ssl !nss )
-	ssl? ( !nss !gnutls )
-	nss? ( !gnutls !ssl )"
+	gnutls? ( ssl !nss )
+	nss? ( ssl !gnutls )"
 
 src_prepare() {
 	epatch \
@@ -59,17 +64,22 @@ src_prepare() {
 src_configure() {
 	local myconf=()
 
-	#gnutls takes priority over ssl which takes priority over nss --- see RDEPENED
-	if use gnutls; then
-		myconf+=( --without-ssl --with-gnutls    --without-nss )
-		myconf+=( --with-ca-bundle="${EPREFIX}"/etc/ssl/certs/ca-certificates.crt )
-	elif use ssl; then
-		myconf+=( --with-ssl    --without-gnutls --without-nss )
-		myconf+=( --without-ca-bundle --with-ca-path="${EPREFIX}"/etc/ssl/certs )
-	elif use nss; then
-		myconf+=( --without-ssl --without-gnutls --with-nss )
-		myconf+=( --with-ca-bundle="${EPREFIX}"/etc/ssl/certs/ca-certificates.crt )
+	if use ssl ; then
+		if use gnutls; then
+			einfo "SSL provided by gnutls"
+			myconf+=( --without-ssl --with-gnutls   --without-nss )
+			myconf+=( --with-ca-bundle="${EPREFIX}"/etc/ssl/certs/ca-certificates.crt )
+		elif use nss; then
+			einfo "SSL provided by nss"
+			myconf+=( --without-ssl --without-gnutls --with-nss )
+			myconf+=( --with-ca-bundle="${EPREFIX}"/etc/ssl/certs/ca-certificates.crt )
+		else #use openssl
+			einfo "SSL provided by openssl"
+			myconf+=( --with-ssl --without-gnutls --without-nss )
+			myconf+=( --without-ca-bundle --with-ca-path="${EPREFIX}"/etc/ssl/certs )
+		fi
 	else
+		einfo "SSL disabled"
 		myconf+=( --without-ssl --without-gnutls --without-nss )
 	fi
 

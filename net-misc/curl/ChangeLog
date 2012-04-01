@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.211 2012/03/31 18:31:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.212 2012/04/01 13:50:07 blueness Exp $
+
+  01 Apr 2012; Anthony G. Basile <blueness@gentoo.org> curl-7.25.0.ebuild:
+  USE="ssl" is no longer openssl specific, bug #410369
 
   31 Mar 2012; Anthony G. Basile <blueness@gentoo.org> curl-7.24.0.ebuild:
   Reverting backport REQUIRED_USE as ssl should refer to any ssl provider,
