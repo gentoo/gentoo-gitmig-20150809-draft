@@ -2,7 +2,7 @@
 
 #
 # source functions.sh for einfo, eerror and ewarn
-. /sbin/functions.sh
+. /etc/init.d/functions.sh
 
 setup() {
 	echo

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #for einfo, ewarn etc..
-. /sbin/functions.sh
+. /etc/init.d/functions.sh
 
 setup() {
 	echo
