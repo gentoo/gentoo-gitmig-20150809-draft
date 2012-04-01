@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-2.1.ebuild,v 1.1 2012/04/01 04:30:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-2.1.ebuild,v 1.2 2012/04/01 17:27:16 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="2.5 *-pypy-*"
 inherit distutils
 
 DESCRIPTION="Extensions to the standard Python datetime module"
-HOMEPAGE="http://labix.org/python-dateutil http://pypi.python.org/pypi/python-dateutil"
+HOMEPAGE="https://launchpad.net/dateutil http://pypi.python.org/pypi/python-dateutil"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
