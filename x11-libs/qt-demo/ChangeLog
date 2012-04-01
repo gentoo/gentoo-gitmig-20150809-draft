@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.82 2012/03/29 22:11:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.83 2012/04/01 15:42:58 pesa Exp $
+
+*qt-demo-4.8.1-r1 (01 Apr 2012)
+
+  01 Apr 2012; Davide Pesavento <pesa@gentoo.org> +qt-demo-4.8.1-r1.ebuild,
+  -qt-demo-4.8.1.ebuild, metadata.xml:
+  Introduce some USE flags to control building of various examples and demos,
+  fixing also bug 410309.
 
 *qt-demo-4.8.1 (29 Mar 2012)
 
