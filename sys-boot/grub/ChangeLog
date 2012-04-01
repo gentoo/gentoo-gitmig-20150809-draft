@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.193 2012/03/24 04:22:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.194 2012/04/01 21:28:06 floppym Exp $
+
+*grub-2.00_beta3 (01 Apr 2012)
+
+  01 Apr 2012; Mike Gilbert <floppym@gentoo.org> +grub-2.00_beta3.ebuild:
+  Version bump.
 
   24 Mar 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00_beta2-r1.ebuild,
   grub-9999.ebuild:
