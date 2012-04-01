@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.4.6.ebuild,v 1.4 2012/03/25 14:46:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.4.6.ebuild,v 1.5 2012/04/01 16:01:52 armin76 Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/zile/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="acl test"
 
 RDEPEND="dev-libs/boehm-gc
