@@ -12,5 +12,6 @@
 	</longdescription>
 	<use>
 		<flag name='acct'>Enable process accounting</flag>
+		<flag name='java'>Enable autorendering to svg via a java interface</flag>
 	</use>
 </pkgmetadata>

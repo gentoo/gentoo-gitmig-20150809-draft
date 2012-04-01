@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bootchart
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.15 2011/01/19 01:06:34 fordfrog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.16 2012/04/01 06:10:10 jlec Exp $
+
+  01 Apr 2012; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Enhance USE decription for java
 
   19 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> bootchart-0.9-r2.ebuild,
   bootchart-0.9-r3.ebuild, bootchart-0.9-r4.ebuild:
