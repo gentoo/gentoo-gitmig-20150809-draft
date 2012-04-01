@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/github2/github2-0.6.0.ebuild,v 1.1 2012/02/18 04:55:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/github2/github2-0.6.0.ebuild,v 1.2 2012/04/01 04:40:16 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -22,6 +22,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND=">=dev-python/httplib2-0.7.0
-	dev-python/python-dateutil:python-2"
+	dev-python/python-dateutil"
 DEPEND="${RDEPEND}
 	test? ( dev-python/coverage )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1-r1.ebuild,v 1.10 2012/01/24 02:56:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1-r1.ebuild,v 1.11 2012/04/01 04:41:19 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -28,7 +28,7 @@ KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~
 LICENSE="BitstreamVera BSD matplotlib MIT OFL-1.1"
 
 CDEPEND="dev-python/numpy
-	dev-python/python-dateutil:python-2
+	dev-python/python-dateutil
 	dev-python/pytz
 	media-libs/freetype:2
 	media-libs/libpng
