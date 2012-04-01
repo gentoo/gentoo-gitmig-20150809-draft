@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-18.0.1025.140.ebuild,v 1.1 2012/03/27 00:22:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-18.0.1025.140.ebuild,v 1.2 2012/04/01 20:35:43 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -66,7 +66,7 @@ RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
-if ! has chromium-pkg_die ${EBUILD_DEATH_HOOKS}; then
+if ! has chromium_pkg_die ${EBUILD_DEATH_HOOKS}; then
 	EBUILD_DEATH_HOOKS+=" chromium_pkg_die";
 fi
 
