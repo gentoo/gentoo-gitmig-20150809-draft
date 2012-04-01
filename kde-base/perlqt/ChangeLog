@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/perlqt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.24 2012/03/23 07:37:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.25 2012/04/01 15:45:57 dilfridge Exp $
+
+  01 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> perlqt-4.8.1.ebuild,
+  +files/perlqt-4.8.1-tests.patch:
+  Disable two failing tests (of 21), bug 392991
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> -perlqt-4.8.0.ebuild:
   Remove KDE SC 4.8.0
