@@ -11,6 +11,5 @@
 	<flag name="mdb">Enable support for Microsoft Access database using 
 		<pkg>app-office/mdbtools</pkg></flag>
 	<flag name="sourceview">Enable support for <pkg>x11-libs/gtksourceview</pkg></flag>
-	<flag name="vala">Enable bindings for <pkg>dev-lang/vala</pkg></flag>
 </use>
 </pkgmetadata>

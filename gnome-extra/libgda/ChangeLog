@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.195 2012/03/25 16:31:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.196 2012/04/01 18:20:25 pacho Exp $
+
+*libgda-5.0.3-r1 (01 Apr 2012)
+
+  01 Apr 2012; Pacho Ramos <pacho@gentoo.org> +libgda-5.0.3-r1.ebuild,
+  -libgda-4.2.9.ebuild, -libgda-5.0.2.ebuild, -libgda-5.0.3.ebuild,
+  metadata.xml:
+  java-pkg-opt-2 default phases were being skipped by accident causing java
+  detection problems like bug #401219 by Maciej Piechotka. Remove old.
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> libgda-4.2.11.ebuild:
   alpha/ia64/sparc stable wrt #393007

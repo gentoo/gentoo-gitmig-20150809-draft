@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3.ebuild,v 1.2 2012/01/26 01:06:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3-r1.ebuild,v 1.1 2012/04/01 18:20:25 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -51,6 +51,8 @@ DEPEND="${RDEPEND}
 #	vala? ( >=dev-lang/vala-0.14:0.14[vapigen] )
 
 pkg_setup() {
+	java-pkg-opt-2_pkg_setup
+
 	DOCS="AUTHORS ChangeLog NEWS README"
 
 	if use canvas || use graphviz || use sourceview; then
@@ -138,6 +140,7 @@ src_prepare() {
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 	gnome2_src_prepare
+	java-pkg-opt-2_src_prepare
 }
 
 pkg_postinst() {
