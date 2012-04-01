@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-net
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.44 2012/03/12 19:44:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.45 2012/04/01 11:12:13 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> sdl-net-1.2.8.ebuild:
+  alpha/ia64/sparc stable wrt #405361
 
   12 Mar 2012; Markus Meier <maekke@gentoo.org> sdl-net-1.2.8.ebuild:
   arm stable, bug #405361
