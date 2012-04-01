@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.12.ebuild,v 1.1 2012/02/02 00:59:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.12.ebuild,v 1.2 2012/04/01 02:25:48 sping Exp $
 
 EAPI="3"
 
@@ -98,6 +98,10 @@ src_prepare() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=372941
 	# https://bugzilla.gnome.org/show_bug.cgi?id=653980#c6
 	epatch "${FILESDIR}"/${PN}-2.6.11-file-uri.patch
+
+	# fix test suite
+	# https://bugs.gentoo.org/show_bug.cgi?id=406625
+	epatch "${FILESDIR}"/${P}-potfiles-skip.patch
 
 	echo '#!/bin/sh' > py-compile
 	gnome2_src_prepare
