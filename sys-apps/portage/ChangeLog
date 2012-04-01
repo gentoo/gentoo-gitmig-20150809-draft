@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.993 2012/03/30 23:23:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.994 2012/04/01 00:04:59 zmedico Exp $
+
+*portage-2.1.10.53 (01 Apr 2012)
+
+  01 Apr 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.53.ebuild:
+  2.1.10.53 version bump. This fixes bug #409627 (document bashrc caveats for
+  variables like FEATURES and INSTALL_MASK) and bug #410315 (dispatch-conf
+  TypeError regression since portage-2.1.10.50). Bug #409383 tracks all bugs
+  fixed since portage-2.1.10.49.
 
   30 Mar 2012; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.51.ebuild,
   -portage-2.2.0_alpha95.ebuild:
