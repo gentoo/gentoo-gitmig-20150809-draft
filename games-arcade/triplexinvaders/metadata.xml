@@ -6,7 +6,4 @@
 In Triplex Invaders, the player pilots a spaceship against a never ending horde
 of enemy ships. It has psychedelic 3d graphics (but 2d gameplay).
 </longdescription>
-  <use>
-    <flag name="psyco">psyco python accelerator</flag>
-  </use>
 </pkgmetadata>
