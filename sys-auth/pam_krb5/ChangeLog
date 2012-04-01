@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.53 2012/03/30 17:51:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.54 2012/04/01 18:34:09 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> pam_krb5-4.5.ebuild:
+  alpha/ia64/sh/sparc stable wrt #409053
 
   30 Mar 2012; Markus Meier <maekke@gentoo.org> pam_krb5-4.5.ebuild:
   arm stable, bug #409053
