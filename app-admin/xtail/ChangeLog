@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/xtail
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.16 2009/04/07 03:12:23 mr_bones_ Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.17 2012/04/01 11:54:41 hwoarang Exp $
+
+*xtail-2.1-r1 (01 Apr 2012)
+
+  01 Apr 2012; Markos Chandras <hwoarang@gentoo.org> +xtail-2.1-r1.ebuild,
+  metadata.xml:
+  EAPI4, more upstream patches. Thanks to Iván <gentoo.power@gmail.com>. Bug
+  #406679
 
   07 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> xtail-2.1.ebuild:
   EAPI=2; respect CC (bug #243326)
