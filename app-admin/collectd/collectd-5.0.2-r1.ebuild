@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.2-r1.ebuild,v 1.1 2012/02/12 16:17:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.2-r1.ebuild,v 1.2 2012/04/01 15:08:54 dilfridge Exp $
 
 EAPI=4
 
@@ -60,7 +60,7 @@ COMMON_DEPEND="
 	collectd_plugins_dns?			( net-libs/libpcap )
 	collectd_plugins_gmond?			( sys-cluster/ganglia )
 	collectd_plugins_ipmi?			( >=sys-libs/openipmi-2.0.16-r1 )
-	collectd_plugins_iptables?		( >=net-firewall/iptables-1.4.9.1-r2 )
+	collectd_plugins_iptables?		( >=net-firewall/iptables-1.4.13 )
 	collectd_plugins_java?			( virtual/jre dev-java/java-config-wrapper )
 	collectd_plugins_libvirt?		( app-emulation/libvirt dev-libs/libxml2 )
 	collectd_plugins_memcachec?		( dev-libs/libmemcached )
