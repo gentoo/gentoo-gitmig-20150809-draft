@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.194 2012/03/30 19:02:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.195 2012/04/01 04:39:20 floppym Exp $
+
+  01 Apr 2012; Mike Gilbert <floppym@gentoo.org> calibre-0.8.44.ebuild,
+  calibre-0.8.45.ebuild:
+  python-dateutil no longer needs a slot dep.
 
 *calibre-0.8.45 (30 Mar 2012)
 
