@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-3.0.ebuild,v 1.6 2012/03/24 17:35:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-3.0.ebuild,v 1.7 2012/04/01 15:36:13 armin76 Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://fping.org/dist/${P}.tar.gz"
 
 LICENSE="fping"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="ipv6"
 
 src_prepare() {
