@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.67 2012/03/25 18:48:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.68 2012/04/01 16:56:50 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> libmad-0.15.1b-r7.ebuild:
+  alpha/ia64/sh/sparc stable wrt #408383
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> libmad-0.15.1b-r7.ebuild:
   Marking libmad-0.15.1b-r7 ppc64 for bug 408383
