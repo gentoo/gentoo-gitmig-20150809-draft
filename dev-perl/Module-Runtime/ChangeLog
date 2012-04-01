@@ -1,10 +1,10 @@
 # ChangeLog for dev-perl/Module-Runtime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Runtime/ChangeLog,v 1.13 2012/04/01 15:52:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Runtime/ChangeLog,v 1.14 2012/04/01 16:12:43 armin76 Exp $
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> Module-Runtime-0.11.0.ebuild,
   Module-Runtime-0.12.0.ebuild, Module-Runtime-0.13.0.ebuild:
-  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #404601
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #403413
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> Module-Runtime-0.13.0.ebuild:
   Marking Module-Runtime-0.13.0 ~ppc64 for bug 403413
