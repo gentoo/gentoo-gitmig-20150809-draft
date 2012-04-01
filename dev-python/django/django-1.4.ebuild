@@ -1,20 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.ebuild,v 1.1 2012/04/01 05:29:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.ebuild,v 1.2 2012/04/01 17:19:53 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit bash-completion-r1 distutils eutils versionator webapp
+inherit bash-completion-r1 distutils versionator webapp
 
 MY_P="Django-${PV}"
 
 DESCRIPTION="High-level Python web framework"
 HOMEPAGE="http://www.djangoproject.com/ http://pypi.python.org/pypi/Django"
-#SRC_URI="http://media.djangoproject.com/releases/$(get_version_component_range 1-2)/${MY_P}.tar.gz"
-SRC_URI="http://www.djangoproject.com/download/1.4/tarball/ -> ${MY_P}.tar.gz"
+SRC_URI="https://www.djangoproject.com/m/releases/$(get_version_component_range 1-2)/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -23,7 +22,7 @@ IUSE="doc mysql postgres sqlite test"
 
 RDEPEND="dev-python/imaging
 	sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) )
-	postgres? ( dev-python/psycopg )
+	postgres? ( dev-python/psycopg:2 )
 	mysql? ( >=dev-python/mysql-python-1.2.1_p2 )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.3 )
@@ -41,7 +40,6 @@ pkg_setup() {
 
 src_prepare() {
 	distutils_src_prepare
-	#epatch "${FILESDIR}/${P}-djangodocs_extension.patch"
 
 	# Disable tests requiring network connection.
 	sed \
@@ -86,8 +84,7 @@ src_install() {
 	fi
 
 	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
-	# gone
-	#doins -r django/contrib/admin/media/* || die "doins failed"
+	doins -r django/contrib/admin/static/admin/* || die "doins failed"
 
 	webapp_src_install
 }
