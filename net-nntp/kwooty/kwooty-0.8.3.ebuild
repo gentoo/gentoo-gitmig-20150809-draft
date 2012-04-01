@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-0.8.1.ebuild,v 1.1 2012/02/02 10:08:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-0.8.3.ebuild,v 1.1 2012/04/01 08:27:43 johu Exp $
 
 EAPI=4
 
-KDE_LINGUAS="cs de"
+KDE_LINGUAS="cs de fr"
 inherit kde4-base
 
 DESCRIPTION="Friendly nzb linux usenet binary client"
