@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qrencode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.16 2012/03/31 14:05:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.17 2012/04/01 07:43:41 scarabeus Exp $
+
+  01 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> qrencode-3.2.0.ebuild:
+  Keyword also latest version with ~arm.
 
   31 Mar 2012; Markus Meier <maekke@gentoo.org> qrencode-3.1.1.ebuild:
   add ~arm, bug #402989
