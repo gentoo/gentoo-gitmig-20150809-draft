@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Unidecode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.12 2012/03/26 22:45:42 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.13 2012/04/01 18:33:29 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> Text-Unidecode-0.40.0.ebuild:
+  Add ~alpha/~arm/~ia64/~s390/~sh/~sparc wrt #408399
 
   26 Mar 2012; Naohiro Aota <naota@gentoo.org> Text-Unidecode-0.40.0.ebuild:
   Add ~x86-fbsd. #408399
