@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.51 2012/03/28 20:24:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.52 2012/04/01 17:29:43 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> ipv6calc-0.92.0.ebuild:
+  sparc/x86 stable wrt #404837
 
   28 Mar 2012; Jeroen Roovers <jer@gentoo.org> ipv6calc-0.92.0.ebuild:
   Stable for HPPA (bug #404837).
