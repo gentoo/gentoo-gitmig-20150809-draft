@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.180 2012/03/29 10:40:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.181 2012/04/01 04:50:02 patrick Exp $
+
+*apache-2.4.1 (01 Apr 2012)
+
+  01 Apr 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.4.1.ebuild:
+  Bump for #405767
 
   29 Mar 2012; Agostino Sarubbo <ago@gentoo.org> apache-2.2.22.ebuild:
   Stable for amd64, wrt bug #401761
