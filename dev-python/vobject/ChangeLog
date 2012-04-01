@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/vobject
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.13 2012/01/24 03:04:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.14 2012/04/01 01:04:50 floppym Exp $
+
+  01 Apr 2012; Mike Gilbert <floppym@gentoo.org> vobject-0.8.1c.ebuild:
+  Add runtime dependency on setuptools.
 
   24 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> vobject-0.8.1c.ebuild:
   Depend on proper slot of dev-python/python-dateutil
