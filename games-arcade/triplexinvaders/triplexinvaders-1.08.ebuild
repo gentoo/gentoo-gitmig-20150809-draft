@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/triplexinvaders/triplexinvaders-1.08.ebuild,v 1.8 2010/02/08 14:04:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/triplexinvaders/triplexinvaders-1.08.ebuild,v 1.9 2012/04/01 04:58:01 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -12,12 +12,11 @@ SRC_URI="http://acm.jhu.edu/~arthur/invaders/${P}.zip"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-IUSE="psyco"
+IUSE=""
 
 DEPEND="app-arch/unzip"
 RDEPEND="dev-python/pygame
-	dev-python/pyopengl
-	psyco? ( dev-python/psyco )"
+	dev-python/pyopengl"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch
