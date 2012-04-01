@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.1-r1.ebuild,v 1.1 2012/04/01 13:30:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.1-r2.ebuild,v 1.1 2012/04/01 16:04:10 patrick Exp $
 
 EAPI="2"
 
@@ -125,4 +125,5 @@ src_install() {
 
 	# well, actually installing things makes them more installed, I guess?
 	cp ${S}/support/apxs ${D}/usr/sbin/apxs || die "Failed to install apxs"
+	chmod 0755 ${D}/usr/sbin/apxs
 }
