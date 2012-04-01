@@ -332,3 +332,5 @@ x-scheme-handler/help=yelp.desktop;
 x-scheme-handler/http=firefox.desktop;epiphany.desktop
 x-scheme-handler/https=firefox.desktop;epiphany.desktop
 x-scheme-handler/mailto=evolution.desktop
+application/x-bittorrent=transmission-gtk.desktop;deluge.desktop
+x-scheme-handler/magnet=transmission-gtk.desktop;deluge.desktop
