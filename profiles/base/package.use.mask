@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.331 2012/03/31 13:33:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.332 2012/04/01 05:34:34 mr_bones_ Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2012)
+# Broken for awhile.  Unmask when dev-util/kdevelop-php-docs is keyworded properly
+dev-util/kdevelop-php doc
 
 # Arun Raghavan <ford_prefect@gentoo.org> (28 Mar 2012)
 # webrtc-audio-processing is only supported on x86/amd64. Possibly arm can be
