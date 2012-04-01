@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.108 2012/03/29 10:41:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.109 2012/04/01 04:51:41 patrick Exp $
+
+*apache-tools-2.4.1 (01 Apr 2012)
+
+  01 Apr 2012; Patrick Lauer <patrick@gentoo.org> +apache-tools-2.4.1.ebuild:
+  Bump for #405767
 
   29 Mar 2012; Agostino Sarubbo <ago@gentoo.org> apache-tools-2.2.22.ebuild:
   Stable for amd64, wrt bug #401761
