@@ -1,6 +1,11 @@
 # ChangeLog for app-text/diffpdf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diffpdf/ChangeLog,v 1.4 2011/09/06 22:56:36 reavertm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/diffpdf/ChangeLog,v 1.5 2012/04/01 17:58:17 reavertm Exp $
+
+*diffpdf-1.9.2 (01 Apr 2012)
+
+  01 Apr 2012; Maciej Mrozowski <reavertm@gentoo.org> +diffpdf-1.9.2.ebuild:
+  Version bump, bug 410233
 
 *diffpdf-1.2.2 (06 Sep 2011)
 
