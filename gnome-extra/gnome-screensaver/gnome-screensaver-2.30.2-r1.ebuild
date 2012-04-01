@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.8 2011/11/28 18:38:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.9 2012/04/01 17:44:54 pacho Exp $
 
 EAPI="2"
 
@@ -64,8 +64,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# libnotify support was removed from trunk, so not needed for next release
 	epatch "${FILESDIR}/${P}-libnotify-0.7.patch"
 
@@ -91,6 +89,7 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {
