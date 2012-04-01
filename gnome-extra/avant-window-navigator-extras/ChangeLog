@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/avant-window-navigator-extras
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.29 2012/01/24 03:07:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.30 2012/04/01 04:44:21 floppym Exp $
+
+  01 Apr 2012; Mike Gilbert <floppym@gentoo.org>
+  avant-window-navigator-extras-0.4.0.ebuild:
+  python-dateutil no longer needs a slot dep.
 
   24 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
   avant-window-navigator-extras-0.4.0.ebuild:
