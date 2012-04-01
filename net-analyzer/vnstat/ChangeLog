@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.60 2012/03/24 17:19:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.61 2012/04/01 15:33:14 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> vnstat-1.11-r2.ebuild:
+  sparc stable wrt #403019
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> vnstat-1.11-r2.ebuild:
   x86 stable wrt bug #403019
