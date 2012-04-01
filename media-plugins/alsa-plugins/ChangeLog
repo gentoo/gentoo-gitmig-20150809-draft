@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.148 2012/03/30 13:38:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.149 2012/04/01 15:15:57 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> alsa-plugins-1.0.25-r1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #406101
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
   alsa-plugins-1.0.25-r1.ebuild, +files/alsa-plugins-1.0.25-avcodec54.patch:
