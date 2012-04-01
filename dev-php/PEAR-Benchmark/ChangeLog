@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Benchmark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.55 2012/03/29 15:22:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.56 2012/04/01 18:16:49 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> PEAR-Benchmark-1.2.9.ebuild:
+  alpha/ia64/sparc stable wrt #408727
 
   29 Mar 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Benchmark-1.2.9.ebuild:
   Stable for HPPA (bug #408727).
