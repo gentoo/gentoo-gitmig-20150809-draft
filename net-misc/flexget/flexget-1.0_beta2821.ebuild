@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta2784.ebuild,v 1.5 2012/04/01 04:46:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta2821.ebuild,v 1.1 2012/04/01 19:06:47 floppym Exp $
 
 EAPI=4
 
