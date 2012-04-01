@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.155 2012/03/19 21:40:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.156 2012/04/01 15:21:37 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> tcl-8.5.10-r1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #406607
 
   19 Mar 2012; Markus Meier <maekke@gentoo.org> tcl-8.5.10-r1.ebuild:
   arm stable, bug #406607
