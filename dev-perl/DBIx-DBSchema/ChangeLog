@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBIx-DBSchema
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/ChangeLog,v 1.47 2012/03/29 15:00:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/ChangeLog,v 1.48 2012/04/01 17:31:57 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> DBIx-DBSchema-0.390.0.ebuild,
+  DBIx-DBSchema-0.400.0.ebuild:
+  Drop ia64/sparc keywords
 
   29 Mar 2012; Jeroen Roovers <jer@gentoo.org> DBIx-DBSchema-0.400.0.ebuild:
   Stable for HPPA (bug #404667).
