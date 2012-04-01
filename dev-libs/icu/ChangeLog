@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.178 2012/03/25 00:37:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.179 2012/04/01 14:47:47 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> icu-4.8.1.1-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #405965
 
 *icu-49.1 (25 Mar 2012)
 
