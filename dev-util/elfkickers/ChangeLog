@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.51 2012/03/16 16:00:45 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.52 2012/04/01 15:12:29 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> elfkickers-3.0a.ebuild:
+  sparc stable wrt #404735
 
   16 Mar 2012; Thomas Kahle <tomka@gentoo.org> elfkickers-3.0a.ebuild:
   marked x86 per bug 404735
