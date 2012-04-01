@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.1.ebuild,v 1.1 2012/04/01 04:50:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.1-r1.ebuild,v 1.1 2012/04/01 13:30:07 patrick Exp $
 
 EAPI="2"
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20120401"
 GENTOO_DEVELOPER="patrick"
+GENTOO_PATCHNAME="gentoo-${P}"
 
 # IUSE/USE_EXPAND magic
 IUSE_MPMS_FORK="itk peruser prefork"
@@ -121,4 +122,7 @@ src_install() {
 	for i in /usr/sbin/{checkgid,fcgistarter,htcacheclean,rotatelogs}; do
 		rm "${D}/"$i || die "Failed to prune apache-tools bits"
 	done
+
+	# well, actually installing things makes them more installed, I guess?
+	cp ${S}/support/apxs ${D}/usr/sbin/apxs || die "Failed to install apxs"
 }
