@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.195 2012/03/30 16:41:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.196 2012/04/01 19:19:40 floppym Exp $
+
+  01 Apr 2012; Mike Gilbert <floppym@gentoo.org> subversion.eclass:
+  ESCM_OFFLINE -> EVCS_OFFLINE. Bug 410471.
 
   30 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org>
   python-distutils-ng.eclass:
