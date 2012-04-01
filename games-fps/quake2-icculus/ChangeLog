@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.43 2012/03/28 22:32:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.44 2012/04/01 17:08:10 tupone Exp $
+
+  01 Apr 2012; Tupone Alfredo <tupone@gentoo.org>
+  quake2-icculus-0.16.1-r1.ebuild,
+  +files/quake2-icculus-0.16.1-gnusource.patch:
+  Fix run on amd64. Bug #158415 by B Douglas Hilton
 
   28 Mar 2012; Tupone Alfredo <tupone@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild, +files/quake2-icculus-0.16.1-alsa.patch:
