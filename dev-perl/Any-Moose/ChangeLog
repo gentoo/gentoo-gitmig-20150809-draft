@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Any-Moose
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.21 2012/03/28 07:30:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.22 2012/04/01 17:26:21 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> Any-Moose-0.180.0.ebuild:
+  alpha/ia64/sparc stable wrt #404659
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> Any-Moose-0.180.0.ebuild:
   Stable for amd64, wrt bug #404659
