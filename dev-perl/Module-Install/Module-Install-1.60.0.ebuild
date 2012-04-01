@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/Module-Install-1.60.0.ebuild,v 1.4 2012/03/27 00:00:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/Module-Install-1.60.0.ebuild,v 1.5 2012/04/01 12:53:56 grobian Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Standalone, extensible Perl module installer"
 
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd ~x64-macos"
+KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
 IUSE="test"
 
 RDEPEND=">=virtual/perl-File-Spec-3.28

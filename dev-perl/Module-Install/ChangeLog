@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Install
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.18 2012/03/27 00:00:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.19 2012/04/01 12:53:56 grobian Exp $
+
+  01 Apr 2012; Fabian Groffen <grobian@gentoo.org> Module-Install-1.60.0.ebuild:
+  Marked ~x86-macos
 
   27 Mar 2012; Naohiro Aota <naota@gentoo.org> Module-Install-1.60.0.ebuild:
   Add ~x86-fbsd. #408399
