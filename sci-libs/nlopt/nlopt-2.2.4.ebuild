@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.6 2012/02/24 15:09:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.7 2012/04/01 05:25:43 jlec Exp $
 
 EAPI=4
 
@@ -48,6 +48,7 @@ src_configure() {
 		$(use_with guile)
 		$(use_with octave)
 		$(use_with python)
+		--without-matlab
 	)
 	use python && python_copy_sources swig
 	autotools-utils_src_configure
