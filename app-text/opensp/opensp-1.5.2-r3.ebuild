@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.2-r3.ebuild,v 1.1 2012/03/30 22:03:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.2-r3.ebuild,v 1.2 2012/04/01 06:06:27 floppym Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -18,9 +18,12 @@ IUSE="doc nls static-libs test"
 DEPEND="nls? ( >=sys-devel/gettext-0.14.5 )
 	doc? (
 		app-text/xmlto
-		~app-text/docbook-xml-dtd-4.1.2
+		app-text/docbook-xml-dtd:4.1.2
 	)
-	test? ( app-text/sgml-common )"
+	test? ( 
+		app-text/openjade
+		app-text/sgml-common
+	)"
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
