@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PAR-Dist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.66 2012/04/01 12:55:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.67 2012/04/01 18:09:37 armin76 Exp $
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org> PAR-Dist-0.46.ebuild,
+  PAR-Dist-0.470.0.ebuild, PAR-Dist-0.480.0.ebuild:
+  Drop ia64/sparc keywords
 
   01 Apr 2012; Fabian Groffen <grobian@gentoo.org> PAR-Dist-0.480.0.ebuild:
   Marked ~x86-macos
