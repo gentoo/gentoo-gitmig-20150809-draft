@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.2.2.ebuild,v 1.2 2012/02/24 07:52:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.2.2.ebuild,v 1.3 2012/04/02 06:03:29 jlec Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,8 +8,8 @@ RESTRICT_PYTHON_ABIS="2.5 3.* *-jython 2.7-pypy-*"
 
 inherit distutils eutils
 
-SLOT=2
-MY_PN=${PN}${SLOT}
+MYSLOT=2
+MY_PN=${PN}${MYSLOT}
 MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Python interface to the R Programming Language"

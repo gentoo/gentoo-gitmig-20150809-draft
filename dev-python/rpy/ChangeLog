@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.60 2012/02/24 07:52:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.61 2012/04/02 06:03:29 jlec Exp $
+
+  02 Apr 2012; Justin Lecher <jlec@gentoo.org> rpy-2.1.9.ebuild,
+  rpy-2.2.2.ebuild, rpy-2.2.4.ebuild, rpy-2.2.5.ebuild:
+  Don't use SLOT outside the ebuild/PMS specific context, #410457
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> rpy-2.1.9.ebuild,
   rpy-2.2.2.ebuild, rpy-2.2.4.ebuild, rpy-2.2.5.ebuild:
