@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/quazip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.12 2012/02/19 09:10:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.13 2012/04/02 16:39:45 ago Exp $
+
+  02 Apr 2012; Agostino Sarubbo <ago@gentoo.org> quazip-0.4.4.ebuild:
+  Stable for amd64, wrt bug #410145
 
   18 Feb 2012; Tobias Klausmann <klausman@gentoo.org> quazip-0.4.4.ebuild:
   Keyworded on alpha, bug #383945
