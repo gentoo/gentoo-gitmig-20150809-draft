@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bootchart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.16 2012/04/01 06:10:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.17 2012/04/02 16:43:24 ago Exp $
+
+  02 Apr 2012; Agostino Sarubbo <ago@gentoo.org> bootchart-0.9-r4.ebuild:
+  Stable for amd64, wrt bug #410097
 
   01 Apr 2012; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Enhance USE decription for java
