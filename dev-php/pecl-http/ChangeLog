@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-http
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.7 2012/03/10 21:04:54 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.8 2012/04/02 11:25:08 olemarkus Exp $
+
+*pecl-http-1.7.4 (02 Apr 2012)
+
+  02 Apr 2012; Ole Markus With <olemarkus@gentoo.org> +pecl-http-1.7.4.ebuild:
+  Version bump
 
 *pecl-http-1.7.3-r1 (10 Mar 2012)
 
