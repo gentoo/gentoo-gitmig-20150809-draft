@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.76 2012/03/30 15:49:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.77 2012/04/02 10:22:58 naota Exp $
+
+*freebsd-ubin-8.2-r1 (02 Apr 2012)
+
+  02 Apr 2012; Naohiro Aota <naota@gentoo.org>
+  +files/freebsd-ubin-8.2-compress.patch, +freebsd-ubin-8.2-r1.ebuild,
+  -freebsd-ubin-8.2.ebuild:
+  Add patch to fix CVE-2011-2895. #408887
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
   -freebsd-ubin-9.0_rc1.ebuild, -freebsd-ubin-9.0_rc2.ebuild,

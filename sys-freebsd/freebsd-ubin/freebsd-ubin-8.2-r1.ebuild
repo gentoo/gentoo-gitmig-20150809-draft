@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-8.2.ebuild,v 1.3 2011/08/13 03:05:39 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-8.2-r1.ebuild,v 1.1 2012/04/02 10:22:58 naota Exp $
 
 EAPI=2
 
@@ -47,7 +47,8 @@ PATCHES=( "${FILESDIR}/${PN}-6.0-bsdcmp.patch"
 	"${FILESDIR}/${PN}-lint-stdarg.patch"
 	"${FILESDIR}/${PN}-6.0-kdump-ioctl.patch"
 	"${FILESDIR}/${PN}-8.0-xinstall.patch"
-	"${FILESDIR}/${PN}-8.0-bsdar.patch" )
+	"${FILESDIR}/${PN}-8.0-bsdar.patch"
+	"${FILESDIR}/${P}-compress.patch" )
 
 # Here we remove some sources we don't need because they are already
 # provided by portage's packages or similar. In order:
