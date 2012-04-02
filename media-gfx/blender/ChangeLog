@@ -1,10 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.222 2012/04/02 13:28:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.223 2012/04/02 13:34:47 ssuominen Exp $
 
-  02 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> blender-2.48a-r3.ebuild,
-  blender-2.49a.ebuild, blender-2.49b-r2.ebuild, blender-2.57-r1.ebuild,
-  blender-2.60a.ebuild:
+  02 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> blender-2.49a.ebuild,
+  blender-2.49b-r2.ebuild, blender-2.57-r1.ebuild, blender-2.60a.ebuild:
   Fix building with media-libs/openjpeg >= 1.5.0 wrt #409283. Every version has
   source/blender/imbuf/intern/jp2.c with parameters->tile_size_on set to false.
 
