@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.96.ebuild,v 1.1 2012/04/02 00:39:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.96.ebuild,v 1.2 2012/04/02 00:42:50 robbat2 Exp $
 
 MY_EXTRAS_VER="20120401-2131Z"
 EAPI="4"
@@ -183,8 +183,6 @@ src_test() {
 				done
 			;;
 		esac
-
-
 
 		# create directories because mysqladmin might make out of order
 		mkdir -p "${S}"/mysql-test/var-{ps,ns}{,/log}
