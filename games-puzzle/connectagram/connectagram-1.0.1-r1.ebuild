@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/connectagram/connectagram-1.0.1-r1.ebuild,v 1.2 2010/02/27 18:12:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/connectagram/connectagram-1.0.1-r1.ebuild,v 1.3 2012/04/02 21:34:58 mr_bones_ Exp $
 
 EAPI=2
-inherit gnome2-utils qt4 games
+inherit gnome2-utils qt4-r2 games
 
 DESCRIPTION="A word unscrambling game"
 HOMEPAGE="http://gottcode.org/connectagram/"
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="x11-libs/qt-core:4
+	x11-libs/qt-gui:4"
 
 src_prepare() {
 	sed -i \
@@ -25,7 +26,7 @@ src_prepare() {
 }
 
 src_configure() {
-	eqmake4
+	qt4-r2_src_configure
 }
 
 src_install() {
