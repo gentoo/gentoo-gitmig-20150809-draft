@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.197 2012/04/02 17:48:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.198 2012/04/02 22:13:57 pacho Exp $
+
+  02 Apr 2012; Pacho Ramos <pacho@gentoo.org> eutils.eclass:
+  Use einfo instead of ewarn as discussed in
+  http://archives.gentoo.org/gentoo-dev/msg_512b5e4049617666f6637618bd62857a.xm
+  l
 
   02 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> darcs.eclass:
   Switch from ESCM_OFFLINE var to EVCS_OFFLINE (bug #410467 by Ulrich Müller).
