@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.43 2012/03/30 13:19:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.44 2012/04/02 07:39:49 scarabeus Exp $
 
 EAPI=4
 
@@ -242,6 +242,8 @@ pkg_setup() {
 
 	python_set_active_version 2
 	python_pkg_setup
+
+	[[ ${MERGE_TYPE} != binary ]] && check-reqs_pkg_pretend
 
 	if ! use gtk; then
 		ewarn "If you want the LibreOffice systray quickstarter to work"

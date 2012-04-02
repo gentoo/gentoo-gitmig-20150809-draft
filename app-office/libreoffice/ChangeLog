@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.270 2012/03/30 13:22:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.271 2012/04/02 07:39:49 scarabeus Exp $
+
+  02 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.5.2.2.ebuild,
+  libreoffice-3.5.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Check for disk/ram constrains even in pkg_setup phase, pretend is there just
+  for initial check. Thanks to Andreas Reichel for spotting the issue.
 
   30 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Fix the usedesc for webdav.
