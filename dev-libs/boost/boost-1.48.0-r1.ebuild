@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.48.0-r1.ebuild,v 1.3 2012/02/14 19:57:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.48.0-r1.ebuild,v 1.4 2012/04/02 00:53:01 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -24,7 +24,7 @@ RDEPEND="icu? ( >=dev-libs/icu-3.3 )
 	mpi? ( || ( sys-cluster/openmpi[cxx] sys-cluster/mpich2[cxx,threads] ) )
 	sys-libs/zlib
 	!!<=dev-libs/boost-1.35.0-r2
-	>=app-admin/eselect-boost-0.3"
+	>=app-admin/eselect-boost-0.4"
 DEPEND="${RDEPEND}
 	>=dev-util/boost-build-1.48.0-r1:${SLOT}"
 
@@ -127,12 +127,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-python_linking.patch"
 	epatch "${FILESDIR}/${P}-disable_icu_rpath.patch"
 	epatch "${FILESDIR}/remove-toolset-${PV}.patch"
-
-	# This enables building the boost.random library with /dev/urandom support
-	if [[ -e /dev/urandom ]]; then
-		mkdir -p libs/random/build || die
-		cp "${FILESDIR}/random-Jamfile-${PV}" libs/random/build/Jamfile.v2 || die
-	fi
 }
 
 src_configure() {
@@ -271,7 +265,7 @@ src_install () {
 	fi
 
 	if use mpi && use python; then
-		_add_line "python=\""
+		_add_line "python_modules=\""
 	fi
 
 	installation() {
@@ -325,8 +319,20 @@ src_install () {
 			if use mpi; then
 				mkdir -p "${D}$(python_get_sitedir)/boost_${MAJOR_PV}" || die
 				mv "${D}usr/$(get_libdir)/mpi.so" "${D}$(python_get_sitedir)/boost_${MAJOR_PV}" || die
-				touch "${D}$(python_get_sitedir)/boost_${MAJOR_PV}/__init__.py" || die
-				_add_line "$(python_get_sitedir)/boost_${MAJOR_PV}/mpi.so"
+				cat << EOF > "${D}$(python_get_sitedir)/boost_${MAJOR_PV}/__init__.py" || die
+import sys
+if sys.platform.startswith('linux'):
+	import DLFCN
+	flags = sys.getdlopenflags()
+	sys.setdlopenflags(DLFCN.RTLD_NOW | DLFCN.RTLD_GLOBAL)
+	from . import mpi
+	sys.setdlopenflags(flags)
+	del DLFCN, flags
+else:
+	from . import mpi
+del sys
+EOF
+				_add_line "$(python_get_sitedir)/mpi.py:boost_${MAJOR_PV}.mpi"
 			fi
 		fi
 	}
