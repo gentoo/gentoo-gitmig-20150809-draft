@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.354 2012/04/01 02:25:48 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.355 2012/04/02 03:47:47 jer Exp $
+
+  02 Apr 2012; Jeroen Roovers <jer@gentoo.org> gimp-2.6.12.ebuild:
+  Stable for HPPA (bug #410403).
 
   01 Apr 2012; Sebastian Pipping <sping@gentoo.org> gimp-2.6.12.ebuild,
   +files/gimp-2.6.12-potfiles-skip.patch:
