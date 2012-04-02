@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.124 2012/03/25 09:14:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.125 2012/04/02 11:25:42 johu Exp $
+
+  02 Apr 2012; Johannes Huber <johu@gentoo.org> kdeplasma-addons-4.8.1.ebuild:
+  Restrict tests bug #410253.
 
   25 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   kdeplasma-addons-4.8.1.ebuild, metadata.xml:
