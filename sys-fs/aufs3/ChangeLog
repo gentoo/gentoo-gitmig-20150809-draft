@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.8 2012/03/29 07:48:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.9 2012/04/02 07:21:11 jlec Exp $
+
+*aufs3-3_p20120402 (02 Apr 2012)
+
+  02 Apr 2012; Justin Lecher <jlec@gentoo.org> files/aufs3-base-x-rcN.patch,
+  files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20120402.ebuild:
+  Version BUmp
 
 *aufs3-3_p20120329 (29 Mar 2012)
 
