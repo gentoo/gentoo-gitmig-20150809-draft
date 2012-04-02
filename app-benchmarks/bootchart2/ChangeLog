@@ -1,0 +1,11 @@
+# ChangeLog for app-benchmarks/bootchart2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.1 2012/04/02 07:19:16 jlec Exp $
+
+*bootchart2-0.14.2 (02 Apr 2012)
+
+  02 Apr 2012; Justin Lecher <jlec@gentoo.org> +bootchart2-0.14.2.ebuild,
+  +metadata.xml:
+  New addition, ebuild after submission by Gustavo Sverzut Barbieri, Lucian
+  Muresan & Henry Gebhardt; #345695
+
