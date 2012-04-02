@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/advancecomp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.38 2011/01/30 09:24:36 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.39 2012/04/02 19:22:50 pacho Exp $
+
+  02 Apr 2012; Pacho Ramos <pacho@gentoo.org> advancecomp-1.15.ebuild:
+  Skip tests as they are broken (#282441 by Diego Elio Pettenò, Mr. Anderson and
+  Paweł Hajdan, Jr.), include some changes suggested in #349489 by Mr. Anderson.
 
   30 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   advancecomp-1.15.ebuild:
