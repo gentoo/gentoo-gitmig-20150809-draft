@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.48 2012/01/18 07:45:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.49 2012/04/02 06:19:32 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -57,9 +57,7 @@ RDEPEND="
 	flickr? ( net-libs/rest:0.7 )
 	gif? ( media-libs/giflib )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.26 )
-	gsf? (
-		app-text/odt2txt
-		>=gnome-extra/libgsf-1.13 )
+	gsf? ( >=gnome-extra/libgsf-1.13 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10.31:0.10
 		upnp? ( >=media-libs/gupnp-dlna-0.5 )

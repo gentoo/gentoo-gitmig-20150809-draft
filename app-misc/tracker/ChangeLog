@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.123 2012/02/16 01:30:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.124 2012/04/02 06:19:32 tetromino Exp $
+
+  02 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  tracker-0.12.9.ebuild, tracker-0.12.10.ebuild, tracker-9999.ebuild:
+  Drop unneeded odt2txt dependency.
 
 *tracker-0.12.10 (16 Feb 2012)
 
