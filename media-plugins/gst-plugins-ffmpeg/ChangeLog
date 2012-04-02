@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.132 2011/11/04 09:44:04 ford_prefect Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.133 2012/04/02 23:07:09 pacho Exp $
+
+  02 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop from metadata as gnome team doesn't maintain this at all now.
 
 *gst-plugins-ffmpeg-0.10.13-r1 (04 Nov 2011)
 
