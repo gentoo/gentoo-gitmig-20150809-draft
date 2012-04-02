@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.183 2011/03/27 13:03:17 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.184 2012/04/02 04:33:35 tetromino Exp $
+
+  02 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/gtk-engines-2.18.3-fix-system-lua-check.patch,
+  -files/gtk-engines-2.20.1-evolution-workaround.patch,
+  -files/gtk-engines-2.20.1-xfce-workaround.patch, gtk-engines-2.20.2.ebuild,
+  +files/gtk-engines-2.20.2-glib.h.patch:
+  Fix building with glib-2.32 (bug #410455, thanks to Tom-Steve Watzke). Drop
+  stale patches.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   -gtk-engines-2.18.5.ebuild, -gtk-engines-2.20.1-r1.ebuild,
