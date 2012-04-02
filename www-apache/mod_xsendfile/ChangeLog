@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_xsendfile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_xsendfile/ChangeLog,v 1.5 2012/02/04 16:13:32 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_xsendfile/ChangeLog,v 1.6 2012/04/02 19:40:22 nativemad Exp $
+
+  02 Apr 2012; Andreas Schuerch <nativemad@gentoo.org>
+  mod_xsendfile-0.12.ebuild:
+  x86 stable, see bug 368265
 
   04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
   Fix maintainer's email in metadata
