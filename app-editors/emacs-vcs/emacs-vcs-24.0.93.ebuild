@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.93.ebuild,v 1.3 2012/02/10 16:54:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.93.ebuild,v 1.4 2012/04/02 17:29:27 ulm Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ if [[ ${PV##*.} = 9999 ]]; then
 	SRC_URI=""
 else
 	SRC_URI="mirror://gentoo/emacs-${PV}.tar.gz
-		ftp://alpha.gnu.org/gnu/emacs/pretest/emacs-${PV}.tar.gz"
+		mirror://gnu-alpha/emacs/pretest/emacs-${PV}.tar.gz"
 	# FULL_VERSION keeps the full version number, which is needed in
 	# order to determine some path information correctly for copy/move
 	# operations later on
