@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1290 2012/03/17 00:15:24 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1291 2012/04/02 00:35:01 mpagano Exp $
+
+*git-sources-3.4_rc1 (02 Apr 2012)
+
+  02 Apr 2012; Michael Pagano <mpagano@gentoo.org> +git-sources-3.4_rc1.ebuild:
+  Version bump
 
   17 Mar 2012; Michael Pagano <mpagano@gentoo.org> git-sources-3.3_rc7.ebuild:
   Fix git to retreive source tarball from mirrors instead of downloading source
