@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.9 2012/02/23 16:57:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.10 2012/04/02 13:28:58 ssuominen Exp $
 
 PYTHON_DEPEND="3:3.2"
 EAPI=4
@@ -148,6 +148,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-libav-0.7.patch
 	epatch "${FILESDIR}"/${P}-CVE-2009-3850-v3.patch
 	epatch "${FILESDIR}"/${P}-enable_site_module.patch
+
+	# Fix building with >=media-libs/openjpeg-1.5.0 (bug #409283)
+	sed -i \
+		-e '/parameters.*tile_size_on/s:false:FALSE:' \
+		source/blender/imbuf/intern/jp2.c || die
 }
 
 src_configure() {

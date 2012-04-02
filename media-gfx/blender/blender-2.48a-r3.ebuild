@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48a-r3.ebuild,v 1.17 2011/10/30 12:59:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48a-r3.ebuild,v 1.18 2012/04/02 13:28:58 ssuominen Exp $
 
 EAPI=2
 
@@ -60,6 +60,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.46-cve-2008-1103-1.patch
 	epatch "${FILESDIR}"/${PN}-2.48-ffmpeg-20081014.patch
 	epatch "${FILESDIR}"/${P}-CVE-2008-4863.patch
+
+	# Fix building with >=media-libs/openjpeg-1.5.0 (bug #409283)
+	sed -i \
+		-e '/parameters.*tile_size_on/s:false:FALSE:' \
+		source/blender/imbuf/intern/jp2.c || die
 }
 
 src_configure() {
