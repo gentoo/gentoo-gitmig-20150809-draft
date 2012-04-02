@@ -1,6 +1,15 @@
 # ChangeLog for x11-themes/gnome-icon-theme-symbolic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.15 2012/04/01 17:32:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.16 2012/04/02 03:41:19 tetromino Exp $
+
+*gnome-icon-theme-symbolic-3.4.0 (02 Apr 2012)
+
+  02 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-icon-theme-symbolic-3.2.1.ebuild,
+  +gnome-icon-theme-symbolic-3.4.0.ebuild:
+  Version bump, drop old. Fixes edit-select-all-symbolic.svg (bug #410483,
+  thanks to Maxim Kammerer for reporting) and several other incorrectly
+  generated icons.
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org>
   gnome-icon-theme-symbolic-3.2.2.ebuild:
