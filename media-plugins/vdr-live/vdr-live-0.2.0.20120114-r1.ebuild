@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20120114.ebuild,v 1.2 2012/03/09 23:25:19 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20120114-r1.ebuild,v 1.1 2012/04/02 20:30:50 idl0r Exp $
 
 EAPI="4"
 
@@ -55,6 +55,8 @@ src_prepare() {
 	if ! has_version ">=media-video/vdr-1.7.13"; then
 	sed -i "s:-include \$(VDRDIR)/Make.global:#-include \$(VDRDIR)/Make.global:" Makefile
 	fi
+
+	epatch "${FILESDIR}/vdr-1.7.27-compatibility.patch"
 }
 
 src_install() {
@@ -78,7 +80,7 @@ pkg_postinst() {
 	elog "On first install use login:pass"
 	elog "\tadmin:live"
 
-	ewarn "\t\tWARNiNG!!!"
+	ewarn "\t\tWARNING!!!"
 	ewarn "This is a developer snapshot"
 	einfo "On problems, use the stable amd64, x86 versions of"
 	einfo "dev-libs/tntnet dev-libs/cxxtools media-plugins/vdr-live"
@@ -100,12 +102,11 @@ pkg_postinst() {
 }
 
 pkg_config() {
-
-			make_live_cert
-			local base=$(get_base 1)
-			local keydir="/etc/vdr/plugins/live"
-			install -d "${ROOT}${keydir}"
-			install -m0400 "${base}.key" "${ROOT}${keydir}/live.key"
-			install -m0444 "${base}.crt" "${ROOT}${keydir}/live.crt"
-			chown vdr:vdr "${ROOT}"/etc/vdr/plugins/live/live.*
+	make_live_cert
+	local base=$(get_base 1)
+	local keydir="/etc/vdr/plugins/live"
+	install -d "${ROOT}${keydir}"
+	install -m0400 "${base}.key" "${ROOT}${keydir}/live.key"
+	install -m0444 "${base}.crt" "${ROOT}${keydir}/live.crt"
+	chown vdr:vdr "${ROOT}"/etc/vdr/plugins/live/live.*
 }
