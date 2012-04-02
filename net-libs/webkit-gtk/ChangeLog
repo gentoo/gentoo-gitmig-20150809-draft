@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.148 2012/03/25 16:14:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.149 2012/04/02 21:58:55 pacho Exp $
+
+  02 Apr 2012; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-1.4.3-r200.ebuild,
+  -webkit-gtk-1.4.3-r300.ebuild, files/webkit-gtk-1.6.1-double-conversion.patch:
+  Update double-conversion.patch to also include ALPHA, bug #410191 by mach1.
+  Remove old.
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> webkit-gtk-1.6.1-r201.ebuild,
   webkit-gtk-1.6.1-r301.ebuild:
