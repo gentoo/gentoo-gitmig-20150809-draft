@@ -1,0 +1,26 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/files/bootchart2.init,v 1.1 2012/04/02 13:06:33 jlec Exp $
+
+depend() {
+	use localmount
+}
+
+start() {
+	if /bin/grep -q "rdinitrd=/sbin/bootchartd" /proc/cmdline; then
+		if /bin/pidof bootchart-collector> /dev/null 2>&1; then
+			ebegin "Scheduling termination of Bootchart"
+			/sbin/bootchartd start
+			/sbin/bootchartd wait &
+		eend $?
+	else
+		elog "No bootchart process found!"
+		eindent
+		elog "This script does not start bootchart, but only schedules its termination."
+		elog "Bootchart should be started from the kernel command line."
+		elog "Please check the README on how to do that."
+		eoutdent
+		eend 0
+	fi	
+}

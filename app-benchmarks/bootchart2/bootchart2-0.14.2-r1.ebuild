@@ -1,12 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.2.ebuild,v 1.1 2012/04/02 07:19:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.2-r1.ebuild,v 1.1 2012/04/02 13:06:32 jlec Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABI="2.7-pypy-*"
 
 inherit linux-info python systemd toolchain-funcs
 
@@ -21,9 +20,9 @@ IUSE="svg"
 
 RDEPEND="
 	!app-benchmarks/bootchart
-	dev-python/pycairo[svg=]"
-DEPEND="${RDEPEND}
-"
+	dev-python/pycairo[svg=]
+	dev-python/pygtk"
+DEPEND="${RDEPEND}"
 
 CONFIG_CHECK="~PROC_EVENTS ~TASKSTATS ~TASK_DELAY_ACCT ~TMPFS"
 
@@ -34,6 +33,13 @@ src_prepare() {
 		-e "/^VER/s:0.14.1:0.14.2:g" \
 		-e "/^SYSTEMD_UNIT_DIR/s:=.*:= $(systemd_get_unitdir):g" \
 		-i Makefile || die
+}
+
+src_test() {
+	testing() {
+		emake test
+	}
+	python_execute_function testing
 }
 
 src_install() {
@@ -52,16 +58,20 @@ src_install() {
 			py-install-compile
 	}
 	python_execute_function installation
-}
 
-src_test() {
-	testing() {
-		emake test
-	}
-	python_execute_function testing
+	newinitd "${FILESDIR}"/${PN}.init ${PN}
 }
 
 pkg_postinst() {
+	elog "Please add the init script to your default runlevel"
+	elog "rc-update add bootchart2 default"
+	echo ""
 	elog "Please review /usr/share/doc/${PF}/README"
 	elog "for further usage informations."
+	echo
+	python_mod_optimize pybootchartgui
+}
+
+pkg_postrm() {
+	python_mod_cleanup pybootchartgui
 }
