@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.81 2012/01/19 22:40:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.82 2012/04/02 00:00:51 floppym Exp $
+
+*boost-build-1.49.0 (02 Apr 2012)
+
+  02 Apr 2012; Mike Gilbert <floppym@gentoo.org> +boost-build-1.49.0.ebuild:
+  Version bump.
 
 *boost-build-1.48.0-r1 (19 Jan 2012)
 
