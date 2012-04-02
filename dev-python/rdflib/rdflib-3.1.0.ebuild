@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-3.1.0.ebuild,v 1.2 2011/09/12 21:20:56 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-3.1.0.ebuild,v 1.3 2012/04/02 16:22:20 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-pypy-*"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="RDF library containing a triple store and parser/serializer"
 HOMEPAGE="http://www.rdflib.net/ http://pypi.python.org/pypi/rdflib"
@@ -24,6 +24,11 @@ RDEPEND="berkdb? ( dev-python/bsddb3 )
 	sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite ) )"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-test.patch
+	distutils_src_prepare
+}
 
 src_test() {
 	testing() {
