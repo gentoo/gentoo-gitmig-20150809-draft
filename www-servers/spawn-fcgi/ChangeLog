@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.30 2012/03/21 11:36:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.31 2012/04/02 18:55:12 pacho Exp $
+
+*spawn-fcgi-1.6.3-r1 (02 Apr 2012)
+
+  02 Apr 2012; Pacho Ramos <pacho@gentoo.org> +files/spawn-fcgi.initd-r1,
+  +spawn-fcgi-1.6.3-r1.ebuild:
+  Don't assume /var/run/spawn-fcgi is always present, bug #400899 by Maxim
+  Kammerer.
 
   21 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop www-server herd as discussed in gentoo-dev ML.
