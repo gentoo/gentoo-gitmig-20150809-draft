@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.676 2012/04/01 01:48:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.677 2012/04/02 04:00:05 jer Exp $
+
+  02 Apr 2012; Jeroen Roovers <jer@gentoo.org> udev-182-r3.ebuild:
+  Marked ~hppa (bug #410401).
 
 *udev-182-r3 (01 Apr 2012)
 
