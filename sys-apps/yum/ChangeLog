@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/yum
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.16 2012/03/15 18:18:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.17 2012/04/02 19:54:18 pacho Exp $
+
+  02 Apr 2012; Pacho Ramos <pacho@gentoo.org> -yum-3.2.27-r1.ebuild,
+  -yum-3.2.29.ebuild, yum-3.4.3.ebuild:
+  Respect get_libdir variable, bug #255698 by Nathan Phillip Brink (binki).
+  Remove old
 
   15 Mar 2012; Mike Gilbert <floppym@gentoo.org> yum-3.4.3.ebuild:
   Convert python shebangs.
