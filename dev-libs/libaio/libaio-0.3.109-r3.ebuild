@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.6 2012/03/30 13:37:45 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r3.ebuild,v 1.7 2012/04/02 20:11:18 pacho Exp $
 
 EAPI=3
 
@@ -65,6 +65,8 @@ src_prepare() {
 			-e '/:=.*strip.*shell.*git/s:=.*:=:' \
 			"${extra_sed[@]}" \
 			src/Makefile Makefile || die
+
+		sed -i -e "s:-Werror::g" harness/Makefile || die
 	done
 	ABI=${OABI}
 }
