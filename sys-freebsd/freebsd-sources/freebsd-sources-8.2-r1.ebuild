@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-8.2.ebuild,v 1.1 2011/07/06 06:09:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-8.2-r1.ebuild,v 1.1 2012/04/02 10:13:19 naota Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -52,6 +52,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-7.1-types.h-fix.patch"
 	epatch "${FILESDIR}/${PN}-8.0-subnet-route-pr40133.patch"
 	epatch "${FILESDIR}/${PN}-7.1-includes.patch"
+	# http://security.FreeBSD.org/patches/SA-11:05/unix2.patch
+	epatch "${FILESDIR}"/${P}-unix2.patch
 
 	# By adding -DGENTOO_LIVECD to CFLAGS activate this stub
 	# vop_whiteout to tmpfs, so it can be used as an overlay
