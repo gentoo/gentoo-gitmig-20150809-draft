@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/base-unicode-symbols
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/ChangeLog,v 1.1 2011/12/04 18:04:10 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/ChangeLog,v 1.2 2012/04/02 17:02:04 slyfox Exp $
+
+*base-unicode-symbols-0.2.2.3 (02 Apr 2012)
+
+  02 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +base-unicode-symbols-0.2.2.3.ebuild, -base-unicode-symbols-0.2.2.2.ebuild:
+  Version bump. Fixes build failure against ghc-7.4 (bug #410539 by Julien
+  Sanchez). Removed old as the loosening dep range was the sole change upstream.
 
 *base-unicode-symbols-0.2.2.2 (04 Dec 2011)
 
