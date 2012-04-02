@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/xdelta
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.62 2011/08/05 22:35:09 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.63 2012/04/02 20:04:21 pacho Exp $
+
+*xdelta-3.0.0-r1 (02 Apr 2012)
+
+  02 Apr 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/01_bigger_print_buffers.patch,
+  +files/02_replace_sprintf_with_snprintf.patch,
+  +files/03_fix_pipe_draining_and_closing.patch, +xdelta-3.0.0-r1.ebuild:
+  Fix overflows with ThePythonicCow's patches, bug #380473 by Marcin Mirosław.
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -xdelta-3.0v.ebuild,
   -xdelta-3.0z.ebuild:
