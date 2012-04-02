@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.31 2012/03/18 15:08:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.32 2012/04/02 13:25:29 naota Exp $
+
+  02 Apr 2012; Naohiro Aota <naota@gentoo.org> webtest-1.3.ebuild:
+  Add ~x86-fbsd
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> webtest-1.3.ebuild:
   Add ~sparc wrt #383195
