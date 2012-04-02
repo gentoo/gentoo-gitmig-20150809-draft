@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.19 2012/03/20 17:08:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.20 2012/04/02 00:28:23 robbat2 Exp $
 
 EAPI=4
 
@@ -24,8 +24,8 @@ IUSE="debug doc lzma static-libs +tools zlib"
 
 COMMON_DEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
-	lzma? ( app-arch/xz-utils )
-	zlib? ( sys-libs/zlib )"
+	lzma? ( app-arch/xz-utils dev-util/pkgconfig )
+	zlib? ( sys-libs/zlib dev-util/pkgconfig )"
 
 DEPEND="${COMMON_DEPEND}
 	doc? ( dev-util/gtk-doc )"
