@@ -1,5 +1,8 @@
 
 
+  02 Apr 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Update luke-jr's email address
+
 *amd-adl-sdk-3.0 (23 Feb 2012)
 
   23 Feb 2012; Anthony G. Basile <blueness@gentoo.org> +amd-adl-sdk-3.0.ebuild,
