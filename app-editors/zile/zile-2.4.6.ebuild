@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.4.6.ebuild,v 1.5 2012/04/01 16:01:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.4.6.ebuild,v 1.6 2012/04/02 07:57:46 ulm Exp $
 
 EAPI=4
 
@@ -17,7 +17,8 @@ RDEPEND="dev-libs/boehm-gc
 	sys-libs/ncurses
 	acl? ( virtual/acl )"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? ( dev-lang/perl )"
 
 src_configure() {
 	econf \
