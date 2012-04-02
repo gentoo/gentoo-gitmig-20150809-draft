@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.9.0.ebuild,v 1.1 2012/03/22 12:57:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.9.1.ebuild,v 1.1 2012/04/02 17:24:54 scarabeus Exp $
 
 EAPI=4
 
@@ -15,12 +15,9 @@ KDE_HANDBOOK="optional"
 VIRTUALX_REQUIRED=test
 inherit kde4-base
 
-#upstream re-released 0.9.0
-MY_P=${P}-1
-
 DESCRIPTION="A browser based on qt-webkit"
 HOMEPAGE="http://rekonq.kde.org/"
-[[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+[[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="4"
@@ -31,8 +28,6 @@ DEPEND="
 	>=x11-libs/qt-dbus-${QT_MINIMAL}:4
 "
 RDEPEND="${DEPEND}"
-
-S=${WORKDIR}/${MY_P}
 
 # All test fails
 RESTRICT="test"
