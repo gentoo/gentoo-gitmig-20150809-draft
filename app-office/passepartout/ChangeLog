@@ -1,6 +1,9 @@
 # ChangeLog for app-office/passepartout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.15 2012/03/25 20:08:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.16 2012/04/02 16:43:56 ago Exp $
+
+  02 Apr 2012; Agostino Sarubbo <ago@gentoo.org> passepartout-0.7.0.ebuild:
+  Stable for amd64, wrt bug #410243
 
   25 Mar 2012; Mike Gilbert <floppym@gentoo.org> passepartout-0.7.0.ebuild:
   Build system calls AC_ARG_WITH incorrectly, causing --without-gnome to enable
