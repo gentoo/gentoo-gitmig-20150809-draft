@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.31 2012/04/02 00:28:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.32 2012/04/02 03:56:00 williamh Exp $
+
+  02 Apr 2012; William Hubbs <williamh@gentoo.org> kmod-7.ebuild,
+  kmod-9999.ebuild:
+  re-work the dependencies since pkgconfig is not a runtime dependency. This
+  moves the dependencies for the lzma and zlib use flags out of common_depend
+  since they are now different for RDEPEND vs DEPEND.
 
   02 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> kmod-7.ebuild,
   kmod-9999.ebuild:

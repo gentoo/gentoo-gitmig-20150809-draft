@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.20 2012/04/02 00:28:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.21 2012/04/02 03:56:00 williamh Exp $
 
 EAPI=4
 
@@ -23,13 +23,15 @@ SLOT="0"
 IUSE="debug doc lzma static-libs +tools zlib"
 
 COMMON_DEPEND="!sys-apps/module-init-tools
-	!sys-apps/modutils
-	lzma? ( app-arch/xz-utils dev-util/pkgconfig )
-	zlib? ( sys-libs/zlib dev-util/pkgconfig )"
+	!sys-apps/modutils"
 
 DEPEND="${COMMON_DEPEND}
-	doc? ( dev-util/gtk-doc )"
-RDEPEND="${COMMON_DEPEND}"
+	doc? ( dev-util/gtk-doc )
+	lzma? ( app-arch/xz-utils dev-util/pkgconfig )
+	zlib? ( sys-libs/zlib dev-util/pkgconfig )"
+RDEPEND="${COMMON_DEPEND}
+lzma? ( app-arch/xz-utils )
+	zlib? ( sys-libs/zlib )"
 
 # Upstream does not support running the test suite with custom configure flags.
 # I was also told that the test suite is intended for kmod developers.
