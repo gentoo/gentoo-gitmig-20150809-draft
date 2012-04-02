@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.31 2012/03/28 01:02:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.32 2012/04/02 03:30:49 tetromino Exp $
+
+  02 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/dconf-0.11.5-automagic-vala.patch, dconf-0.12.0.ebuild:
+  Drop useless support for vala code regeneration.
 
 *dconf-0.12.0 (28 Mar 2012)
 
