@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/xfce4-smartbookmark-plugin-0.4.2.ebuild,v 1.4 2011/05/19 21:40:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/xfce4-smartbookmark-plugin-0.4.2.ebuild,v 1.5 2012/04/02 11:57:35 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -8,7 +8,7 @@ inherit xfconf
 
 DESCRIPTION="Smart bookmark plug-in for the Xfce desktop environment"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin"
-SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.4/${P}.tar.gz"
+SRC_URI="mirror://xfce/src/panel-plugins/${PN}/${PV%.*}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
