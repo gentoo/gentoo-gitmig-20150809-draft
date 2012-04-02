@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.238 2012/04/02 00:53:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.239 2012/04/02 00:54:54 floppym Exp $
+
+  02 Apr 2012; Mike Gilbert <floppym@gentoo.org> -files/random-Jamfile-1.48.0:
+  Drop file.
 
   02 Apr 2012; Mike Gilbert <floppym@gentoo.org> boost-1.48.0-r1.ebuild:
   Fix handling of mpi Python modules (bug #404253). Delete old patch. Backported
