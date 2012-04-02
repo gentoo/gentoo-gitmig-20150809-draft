@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.607 2012/03/03 17:12:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.608 2012/04/02 00:39:27 robbat2 Exp $
+
+*mysql-5.1.62 (02 Apr 2012)
+*mysql-5.0.96 (02 Apr 2012)
+*mysql-5.5.22 (02 Apr 2012)
+
+  02 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.0.96.ebuild,
+  +mysql-5.1.62.ebuild, +mysql-5.5.22.ebuild:
+  Version bump to all series, 5.0, 5.1, 5.5. Please note that 5.0.x is hard-
+  masked, and exists for the upgrade path only. It is not recommended for
+  production use.
 
   03 Mar 2012; Brent Baude <ranger@gentoo.org> mysql-5.1.61.ebuild:
   Marking mysql-5.1.61 ppc64 for bug 399375
