@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.3.ebuild,v 1.3 2011/11/11 12:36:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.4.ebuild,v 1.1 2012/04/02 19:03:59 pacho Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils multilib
 
 DESCRIPTION="A reference open-source implementation of DLNA (Digital Living Network Alliance) standards."
@@ -17,26 +17,22 @@ IUSE=""
 DEPEND=">=virtual/ffmpeg-0.6.90"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-libavcodec-libavformat-include-paths.patch" \
-		"${FILESDIR}/${P}-ffmpeg_api.patch"
-}
-
 src_configure() {
 	# I can't use econf
 	# --host is not implemented in ./configure file
 	./configure \
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
+		--disable-static \
 		|| die "./configure failed"
 }
 
 src_compile() {
 	# not parallel safe, error "cannot find -ldlna"
-	emake -j1 || die "emake failed"
+	emake -j1
 }
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc README AUTHORS ChangeLog || die
-}
+#src_install() {
+#	emake DESTDIR="${D}" install || die "emake install failed."
+#	dodoc README AUTHORS ChangeLog || die
+#}
