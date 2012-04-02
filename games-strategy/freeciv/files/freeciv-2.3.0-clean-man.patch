@@ -1,5 +1,5 @@
---- doc/man/Makefile.in.orig	2011-08-19 14:54:02.163463916 -0400
-+++ doc/man/Makefile.in	2011-08-19 14:54:31.354583970 -0400
+--- doc/man/Makefile.in.orig
++++ doc/man/Makefile.in
 @@ -360,8 +360,7 @@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
