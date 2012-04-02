@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.2 2012/04/01 16:28:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.3 2012/04/02 03:59:20 jer Exp $
+
+  02 Apr 2012; Jeroen Roovers <jer@gentoo.org> hwids-20120401.ebuild:
+  Marked ~hppa (bug #410401).
 
   01 Apr 2012; Naohiro Aota <naota@gentoo.org> hwids-20120401.ebuild:
   Add ~x86-fbsd. #410401
