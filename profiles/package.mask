@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13639 2012/04/01 04:36:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13640 2012/04/02 11:03:05 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -524,7 +524,7 @@ dev-php/PEAR-Image_Canvas
 >=xfce-base/libxfce4ui-4.9.0
 >=xfce-base/xfce4-panel-4.9.0
 >=xfce-base/xfce4-settings-4.9.0
->=xfce-extra/xfce4-appfinder-4.9.0
+>=xfce-base/xfce4-appfinder-4.9.0
 >=xfce-base/libxfcegui4-4.8.1-r1
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Feb 2012)
