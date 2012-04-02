@@ -1,27 +1,27 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/gopenmol-3.00-r2.ebuild,v 1.4 2010/11/08 17:12:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/gopenmol-3.00-r2.ebuild,v 1.5 2012/04/02 06:06:41 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 PYTHON_DEPEND="2"
 
 inherit eutils multilib prefix python
 
 DESCRIPTION="Tool for the visualization and analysis of molecular structures"
-HOMEPAGE="http://www.csc.fi/gopenmol"
+HOMEPAGE="http://www.csc.fi/gopenmol/"
 SRC_URI="${HOMEPAGE}/distribute/${P}-linux.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
-	=dev-lang/tk-8.4*
+	dev-lang/tk
 	dev-tcltk/bwidget
-	virtual/jpeg
 	media-libs/freeglut
+	virtual/jpeg
 	virtual/opengl
 	x11-libs/libICE
 	x11-libs/libXau
@@ -29,47 +29,39 @@ RDEPEND="
 	x11-libs/libXi
 	x11-libs/libXmu
 	x11-libs/libXxf86vm"
-
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/gOpenMol-${PV}/src"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-include-config-for-plugins.patch
-	epatch "${FILESDIR}"/${PV}-multilib.patch
+	epatch \
+		"${FILESDIR}"/${PV}-include-config-for-plugins.patch \
+		"${FILESDIR}"/${PV}-multilib.patch
 
 	sed \
 		-e "s:GENTOOLIBDIR:$(get_libdir):g" \
-		-i config.mk.ac plugins/config.mk.ac
+		-i config.mk.ac plugins/config.mk.ac || die
 	sed "/GOM_TEMP/s:^.*$:GOM_TEMP=\"${EPREFIX}/tmp/:g" -i ../environment.txt || die
 }
 
 src_compile() {
-	emake || die "emake failed"
+	default
 
-	# Plugins are not built by default
-	cd "${S}"/plugins
-	emake || die "emake plugins failed"
-
-	# Utilities are not built by default
-	cd "${S}"/utility
-	emake || die "emake utility failed"
+	# Plugins and Utilities are not built by default
+	cd "${S}"/plugins && emake
+	cd "${S}"/utility && emake
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	einstall
 
-	cd "${S}"/plugins
-	einstall || die "einstall plugins failed"
-
-	cd "${S}"/utility
-	einstall || die "einstall utility failed"
-
-	dosed /usr/bin/rungOpenMol
+	cd "${S}"/plugins && einstall
+	cd "${S}"/utility && einstall
 
 	dosym ../$(get_libdir)/gOpenMol-${PV}/bin/${PN} /usr/bin/${PN}
 
