@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.3.ebuild,v 1.11 2012/01/23 10:53:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.6.ebuild,v 1.1 2012/04/02 03:25:18 jer Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit autotools eutils
 
@@ -12,7 +12,8 @@ SRC_URI="http://ftp.yars.free.net/pub/source/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+
 LFTP_LINGUAS="cs de es fr it ja ko pl pt_BR ru zh_CN zh_HK zh_TW"
 
 IUSE="
@@ -41,14 +42,21 @@ DEPEND="
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )
 "
+
+DOCS=(
+	BUGS ChangeLog FAQ FEATURES MIRRORS NEWS README  README.debug-levels
+	README.dnssec  README.modules THANKS TODO
+)
+
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-4.0.2.91-lafile.patch"
-	epatch "${FILESDIR}/${PN}-4.0.3-autoconf-2.64.patch"
+	epatch \
+		"${FILESDIR}/${PN}-4.0.2.91-lafile.patch" \
+		"${FILESDIR}/${PN}-4.0.3-autoconf-2.64.patch"
 	eautoreconf
 }
 
 src_configure() {
-	local myconf="$(use_enable nls) --enable-packager-mode"
+	local myconf=""
 
 	if use ssl && use gnutls ; then
 		myconf="${myconf} --without-openssl"
@@ -62,14 +70,9 @@ src_configure() {
 		|| myconf="${myconf} --without-socksdante"
 
 	econf \
+		--enable-packager-mode \
 		--sysconfdir=/etc/lftp \
 		--with-modules \
-		${myconf} || die "econf failed"
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die
-
-	dodoc BUGS ChangeLog FAQ FEATURES MIRRORS \
-			NEWS README* THANKS TODO
+		$(use_enable nls) \
+		${myconf}
 }
