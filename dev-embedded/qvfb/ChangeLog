@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/qvfb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/ChangeLog,v 1.8 2012/03/29 18:40:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/ChangeLog,v 1.9 2012/04/02 20:33:44 pacho Exp $
+
+  02 Apr 2012; Pacho Ramos <pacho@gentoo.org> qvfb-4.6.3.ebuild:
+  Drop duplicated -no-opengl option, bug #363045 by Sergey Gusarov.
 
   29 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   assign to maintainer-needed. qt team decided to let this go

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/qvfb-4.6.3.ebuild,v 1.3 2010/12/12 10:03:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/qvfb-4.6.3.ebuild,v 1.4 2012/04/02 20:33:44 pacho Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -29,7 +29,7 @@ src_configure() {
 		-no-nas-sound -no-dbus -iconv -no-cups -no-nis -no-gif -no-libpng
 		-no-libmng -no-libjpeg -no-openssl -system-zlib -no-webkit -no-phonon
 		-no-xmlpatterns -no-freetype -no-libtiff  -no-accessibility
-		-no-glib -no-opengl -no-qt3support -no-svg"
+		-no-glib -no-qt3support -no-svg"
 
 	qt4-build_src_configure
 }
