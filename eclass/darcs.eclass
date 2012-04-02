@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.13 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.14 2012/04/02 17:48:06 slyfox Exp $
 
 # @ECLASS: darcs.eclass
 # @MAINTAINER:
@@ -69,9 +69,9 @@ SRC_URI=""
 # @ECLASS-VARIABLE: EDARCS_OFFLINE
 # @DESCRIPTION:
 # Set this variable to a non-empty value to disable the automatic updating of
-# a darcs repository. this is intended to be set outside the darcs source
-# tree by users.
-: ${EDARCS_OFFLINE:=${ESCM_OFFLINE}}
+# a darcs repository. This is intended to be set outside the darcs source
+# tree by users. Defaults to EVCS_OFFLINE value.
+: ${EDARCS_OFFLINE:=${EVCS_OFFLINE}}
 
 # @ECLASS-VARIABLE: EDARCS_CLEAN
 # @DESCRIPTION:
@@ -82,8 +82,8 @@ SRC_URI=""
 
 # --- end ebuild-configurable settings ---
 
-# add darcs to deps
-DEPEND="dev-vcs/darcs"
+DEPEND="dev-vcs/darcs
+	net-misc/rsync"
 
 # @FUNCTION: darcs_patchcount
 # @DESCRIPTION:
@@ -196,7 +196,7 @@ darcs_src_unpack() {
 	mkdir -p "${WORKDIR}/${P}"
 
 	eshopts_push -s dotglob	# get any dotfiles too.
-	rsync -rlpgo --exclude="_darcs/"  "${EDARCS_TOP_DIR}/${EDARCS_LOCALREPO}"/* "${WORKDIR}/${P}"
+	rsync -rlpgo "${EDARCS_TOP_DIR}/${EDARCS_LOCALREPO}"/* "${WORKDIR}/${P}"
 	eshopts_pop
 
 	einfo "Darcs repository contents are now in ${WORKDIR}/${P}"
