@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/mx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/ChangeLog,v 1.4 2012/02/19 10:10:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/ChangeLog,v 1.5 2012/04/02 19:13:19 jlec Exp $
+
+  02 Apr 2012; Justin Lecher <jlec@gentoo.org> mx-1.4.2.ebuild,
+  +files/mx-1.4.2-gold.patch:
+  Add patch to fix underlinking detected by gold,
+  https://bugzilla.gnome.org/show_bug.cgi?id=673384
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> mx-1.4.2.ebuild:
   Keyworded on alpha, bug #379649

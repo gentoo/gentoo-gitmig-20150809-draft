@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.2.ebuild,v 1.2 2012/02/19 10:10:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.2.ebuild,v 1.3 2012/04/02 19:13:19 jlec Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
@@ -40,6 +40,7 @@ src_prepare() {
 	# Tests are interactive, no use for us
 	sed -e 's/^\(SUBDIRS .*\)tests\(.*\)/\1 \2/g' \
 		-i Makefile.am -i Makefile.in || die
+	epatch "${FILESDIR}"/${P}-gold.patch
 }
 
 src_configure() {
