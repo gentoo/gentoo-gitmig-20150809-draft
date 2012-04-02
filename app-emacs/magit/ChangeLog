@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/magit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.6 2011/04/17 15:32:02 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.7 2012/04/02 17:54:02 ulm Exp $
+
+*magit-1.1.1 (02 Apr 2012)
+
+  02 Apr 2012; Ulrich Müller <ulm@gentoo.org> -magit-0.8.1.ebuild,
+  -magit-0.8.2.ebuild, magit-1.0.0.ebuild, +magit-1.1.1.ebuild, metadata.xml:
+  Version bump, update HOMEPAGE and SRC_URI, bug 410521. Add contrib USE flag.
+  Remove old.
 
 *magit-1.0.0 (17 Apr 2011)
 
