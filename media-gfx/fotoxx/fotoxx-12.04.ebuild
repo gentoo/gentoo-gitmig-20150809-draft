@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.02.ebuild,v 1.1 2012/02/04 15:06:14 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.04.ebuild,v 1.1 2012/04/02 09:16:01 grozin Exp $
 EAPI=3
 inherit eutils toolchain-funcs
 
