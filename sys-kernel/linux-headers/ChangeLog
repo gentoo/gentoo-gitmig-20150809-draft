@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.342 2012/03/22 22:11:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.343 2012/04/02 06:03:07 vapier Exp $
+
+  02 Apr 2012; Mike Frysinger <vapier@gentoo.org> linux-headers-3.3.ebuild:
+  Re-add x32 support from v3.4-rc1.
 
 *linux-headers-3.3 (22 Mar 2012)
 
