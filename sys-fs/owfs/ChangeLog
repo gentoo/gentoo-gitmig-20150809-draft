@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.16 2012/02/25 03:44:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.17 2012/04/02 22:21:41 pacho Exp $
+
+  02 Apr 2012; Pacho Ramos <pacho@gentoo.org> owfs-2.7_p21.ebuild:
+  Drop net-misc/mDNSResponder dependency, bug #405399.
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> owfs-2.7_p21.ebuild:
   Restricting pypy and jython
