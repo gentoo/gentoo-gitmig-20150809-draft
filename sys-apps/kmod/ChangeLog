@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.32 2012/04/02 03:56:00 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.33 2012/04/02 12:40:54 ssuominen Exp $
+
+  02 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> kmod-7.ebuild,
+  kmod-9999.ebuild:
+  Remove temporary COMMON_DEPEND variable usage to simplify dependencies.
 
   02 Apr 2012; William Hubbs <williamh@gentoo.org> kmod-7.ebuild,
   kmod-9999.ebuild:
