@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13640 2012/04/02 11:03:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13641 2012/04/02 20:36:15 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -536,11 +536,6 @@ app-text/notecase-pro
 # Project was renamed to x11-wm/spectrwm
 # See bug 404315 for details and update installations
 x11-wm/scrotwm
-
-# Pacho Ramos <pacho@gentoo.org> (13 Feb 2012)
-# Fails to build and unmaintained, bug #385295
-media-libs/libdlna
-media-video/ushare
 
 # Tim Harder <radhermit@gentoo.org> (10 Feb 2012)
 # Masked for testing
