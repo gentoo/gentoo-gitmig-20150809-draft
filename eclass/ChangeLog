@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.198 2012/04/02 22:13:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.199 2012/04/03 10:32:09 pacho Exp $
+
+  03 Apr 2012; Pacho Ramos <pacho@gentoo.org> git-2.eclass:
+  Reorder git-2.eclass maintainers to get bugs assigned to most active
+  maintainer.
 
   02 Apr 2012; Pacho Ramos <pacho@gentoo.org> eutils.eclass:
   Use einfo instead of ewarn as discussed in
