@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r3.ebuild,v 1.5 2012/03/10 10:12:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r3.ebuild,v 1.6 2012/04/03 11:21:18 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -33,6 +33,7 @@ pkg_setup() {
 	PATCHES=(
 		"${FILESDIR}"/${P}-update_desktop_entry.patch
 		"${FILESDIR}"/${P}-empty_directory_segmentation_fault-2.patch
+		"${FILESDIR}"/${P}-gobject_h.patch
 		)
 
 	XFCONF=(

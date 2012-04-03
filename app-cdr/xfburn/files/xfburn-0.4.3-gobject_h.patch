@@ -1,0 +1,14 @@
+error: unknown type name for GObject, GObjectClass, GType and GTypeInfo
+
+The errors started manifesting after upgrade to Xfce 4.10 pre1 (and to latest glib 2.32.0 etc.)
+
+--- xfburn/xfburn-settings.h
++++ xfburn/xfburn-settings.h
+@@ -24,6 +24,7 @@
+ #endif /* !HAVE_CONFIG_H */
+ 
+ #include <glib.h>
++#include <glib-object.h>
+ 
+ G_BEGIN_DECLS
+ 
