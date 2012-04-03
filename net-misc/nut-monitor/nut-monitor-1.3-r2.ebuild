@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut-monitor/nut-monitor-1.3-r1.ebuild,v 1.1 2012/04/02 19:42:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut-monitor/nut-monitor-1.3-r2.ebuild,v 1.1 2012/04/03 10:09:32 pacho Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -27,6 +27,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-paths.patch
+	epatch "${FILESDIR}"/${P}-paths2.patch
 	python_convert_shebangs -r 2 .
 }
 
