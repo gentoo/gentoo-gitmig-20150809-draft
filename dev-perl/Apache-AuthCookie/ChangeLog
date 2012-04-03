@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-AuthCookie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/ChangeLog,v 1.27 2012/04/02 16:41:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/ChangeLog,v 1.28 2012/04/03 19:39:02 nativemad Exp $
+
+  03 Apr 2012; Andreas Schuerch <nativemad@gentoo.org>
+  Apache-AuthCookie-3.180.0.ebuild:
+  x86 stable, see bug 410151
 
   02 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
   Apache-AuthCookie-3.180.0.ebuild:
