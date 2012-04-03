@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libimobiledevice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.24 2012/04/03 04:35:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.25 2012/04/03 04:56:34 ssuominen Exp $
+
+  03 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libimobiledevice-1.1.2.ebuild:
+  Convert USE="ssl" to IMOBILEDEVICE_BACKEND USE_EXPAND to clarify it's
+  exactly-one-of from gnutls or openssl.
 
   03 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
   libimobiledevice-1.1.1.ebuild:
