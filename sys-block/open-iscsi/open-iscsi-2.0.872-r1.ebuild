@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.872-r1.ebuild,v 1.1 2012/02/09 09:20:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.872-r1.ebuild,v 1.2 2012/04/03 17:13:59 sping Exp $
 
 EAPI=2
 inherit versionator linux-info eutils flag-o-matic toolchain-funcs
@@ -8,7 +8,7 @@ inherit versionator linux-info eutils flag-o-matic toolchain-funcs
 DESCRIPTION="Open-iSCSI is a high performance, transport independent, multi-platform implementation of RFC3720"
 HOMEPAGE="http://www.open-iscsi.org/"
 MY_PV="${PN}-$(replace_version_separator 2 "-" $MY_PV)"
-SRC_URI="mirror://kernel/linux/kernel/people/mnc/open-iscsi/releases/${MY_PV}.tar.gz"
+SRC_URI="http://www.open-iscsi.org/bits/${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"

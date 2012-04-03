@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.43 2012/02/25 06:30:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.44 2012/04/03 17:13:59 sping Exp $
+
+  03 Apr 2012; Sebastian Pipping <sping@gentoo.org> open-iscsi-2.0.872.ebuild,
+  open-iscsi-2.0.872-r1.ebuild:
+  Fix broken SRC_URI x2, reported by David Goulet
 
   25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
   open-iscsi-2.0.870.3-r1.ebuild, open-iscsi-2.0.871-r1.ebuild,
