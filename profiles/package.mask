@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13641 2012/04/02 20:36:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13642 2012/04/03 06:56:09 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -619,7 +619,7 @@ www-client/opera-next
 # SLOTs 21 and 22 of app-editors/emacs, corresponding to
 # GNU Emacs versions 21.4 and 22.3. These versions were
 # released in February 2005 and September 2008, respectively.
-# Please upgrade to app-editors/emacs-23.3 and update your
+# Please upgrade to >=app-editors/emacs-23 and update your
 # Emacs Lisp packages with emacs-updater.
 # Keeping these versions in the tree masked indefinitely,
 # by popular request. Bug 394589.
