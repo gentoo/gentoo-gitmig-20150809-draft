@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6380 2012/04/02 20:36:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6381 2012/04/03 04:58:15 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +desc/imobiledevice_backend.desc:
+  New IMOBILEDEVICE_BACKEND. See base/make.defaults too. Related to
+  app-pda/libimobiledevice.
 
   02 Apr 2012; Pacho Ramos <pacho@gentoo.org> package.mask:
   libdlna and ushare are fixed now
