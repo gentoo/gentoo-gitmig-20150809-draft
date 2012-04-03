@@ -1,0 +1,122 @@
+From 43084e8b30c101a44510b7a8267d5c2b316a17bb Mon Sep 17 00:00:00 2001
+From: Eike Rathke <erack@redhat.com>
+Date: Mon, 02 Apr 2012 20:24:00 +0000
+Subject: only as of ICU 4.9 RBBI the Prepend property is empty
+
+This reverts 0c08a84c04b166ab6479716e2c33cd444d7e3dbe and instead strips the
+Prepend variable during build time.
+---
+diff --git a/config_host.mk.in b/config_host.mk.in
+index ed5f6df..0e896d8 100644
+--- a/config_host.mk.in
++++ b/config_host.mk.in
+@@ -208,6 +208,7 @@ export ICU_MAJOR=@ICU_MAJOR@
+ export ICU_MICRO=@ICU_MICRO@
+ export ICU_MINOR=@ICU_MINOR@
+ export ICU_RECLASSIFIED_CLOSE_PARENTHESIS=@ICU_RECLASSIFIED_CLOSE_PARENTHESIS@
++export ICU_RECLASSIFIED_PREPEND_SET_EMPTY=@ICU_RECLASSIFIED_PREPEND_SET_EMPTY@
+ export ILIB=@ILIB@
+ @x_Cygwin@ export INCLUDE=
+ export INPATH=@INPATH@
+diff --git a/configure.in b/configure.in
+index 0100f97..067fa4f 100644
+--- a/configure.in
++++ b/configure.in
+@@ -7487,6 +7487,7 @@ ICU_MAJOR=
+ ICU_MINOR=
+ ICU_MICRO=
+ ICU_RECLASSIFIED_CLOSE_PARENTHESIS=
++ICU_RECLASSIFIED_PREPEND_SET_EMPTY=
+ AC_MSG_CHECKING([which icu to use])
+ if test "$with_system_icu" = "yes"; then
+     AC_MSG_RESULT([external])
+@@ -7549,6 +7550,9 @@ You can use --with-system-icu-for-build=force to use it anyway.])
+         if test "$ICU_MAJOR" -ge "5" -o "$ICU_MAJOR" = "4" -a "$ICU_MINOR" -ge "4"; then
+             ICU_RECLASSIFIED_CLOSE_PARENTHESIS="YES"
+         fi
++        if test "$ICU_MAJOR" -ge "5" -o "$ICU_MAJOR" = "4" -a "$ICU_MINOR" -ge "9"; then
++            ICU_RECLASSIFIED_PREPEND_SET_EMPTY="YES"
++        fi
+     fi
+ 
+     libo_MINGW_CHECK_DLL([ICUDATA], [icudata][$ICU_MAJOR][$ICU_MINOR])
+@@ -7558,6 +7562,7 @@ else
+     AC_MSG_RESULT([internal])
+     SYSTEM_ICU="NO"
+     ICU_RECLASSIFIED_CLOSE_PARENTHESIS="YES"
++    # ICU_RECLASSIFIED_PREPEND_SET_EMPTY not applied for our internal ICU 4.4.2
+     BUILD_TYPE="$BUILD_TYPE ICU"
+ fi
+ 
+@@ -7569,6 +7574,7 @@ AC_SUBST(ICU_MAJOR)
+ AC_SUBST(ICU_MINOR)
+ AC_SUBST(ICU_MICRO)
+ AC_SUBST(ICU_RECLASSIFIED_CLOSE_PARENTHESIS)
++AC_SUBST(ICU_RECLASSIFIED_PREPEND_SET_EMPTY)
+ AC_SUBST([MINGW_ICUDATA_DLL])
+ AC_SUBST([MINGW_ICUI18N_DLL])
+ AC_SUBST([MINGW_ICUUC_DLL])
+diff --git a/i18npool/CustomTarget_breakiterator.mk b/i18npool/CustomTarget_breakiterator.mk
+index 10dce5f..a8379d7 100644
+--- a/i18npool/CustomTarget_breakiterator.mk
++++ b/i18npool/CustomTarget_breakiterator.mk
+@@ -95,10 +95,16 @@ $(IPBI)/%.brk : $(IPBI)/%.txt $(GENBRKTARGET)
+ 	$(call gb_Helper_abbreviate_dirs_native,\
+ 		$(GENBRK) -r $< -o $@ $(if $(findstring s,$(MAKEFLAGS)),> /dev/null))
+ 
+-# fdo#31271 ")" reclassified in more recent ICU/Unicode Standards
++# fdo#31271 ")" reclassified in more recent Unicode Standards / ICU 4.4
++# Prepend set empty as of Unicode Version 6.1 / ICU 4.9, which bails out if used.
++# NOTE: strips every line with _word_ 'Prepend', including $Prepend
+ $(IPBI)/%.txt : $(SRCDIR)/i18npool/source/breakiterator/data/%.txt | $(IPBI)/.dir
+ ifeq ($(ICU_RECLASSIFIED_CLOSE_PARENTHESIS),YES)
++ifeq ($(ICU_RECLASSIFIED_PREPEND_SET_EMPTY),YES)
++	sed "s#\[:LineBreak =  Close_Punctuation:\]#\[\[:LineBreak =  Close_Punctuation:\] \[:LineBreak = Close_Parenthesis:\]\]#;/\<Prepend\>/d" $< > $@
++else
+ 	sed "s#\[:LineBreak =  Close_Punctuation:\]#\[\[:LineBreak =  Close_Punctuation:\] \[:LineBreak = Close_Parenthesis:\]\]#" $< > $@
++endif
+ else
+ 	cp $< $@
+ endif
+diff --git a/i18npool/source/breakiterator/data/char.txt b/i18npool/source/breakiterator/data/char.txt
+index acb932e..8e49a56 100644
+--- a/i18npool/source/breakiterator/data/char.txt
++++ b/i18npool/source/breakiterator/data/char.txt
+@@ -16,6 +16,7 @@
+ $CR          = [\p{Grapheme_Cluster_Break = CR}];
+ $LF          = [\p{Grapheme_Cluster_Break = LF}];
+ $Control     = [\p{Grapheme_Cluster_Break = Control}];
++$Prepend     = [\p{Grapheme_Cluster_Break = Prepend}];
+ $Extend      = [\p{Grapheme_Cluster_Break = Extend}];
+ $SpacingMark = [\p{Grapheme_Cluster_Break = SpacingMark}];
+ # True Indic wants to move by syllables. Break up SpacingMark. This based on Unicode 6.0 data
+diff --git a/i18npool/source/breakiterator/data/char_in.txt b/i18npool/source/breakiterator/data/char_in.txt
+index 5ad12a7..5e1ed67 100644
+--- a/i18npool/source/breakiterator/data/char_in.txt
++++ b/i18npool/source/breakiterator/data/char_in.txt
+@@ -15,6 +15,7 @@
+ $CR          = [\p{Grapheme_Cluster_Break = CR}];
+ $LF          = [\p{Grapheme_Cluster_Break = LF}];
+ $Control     = [\p{Grapheme_Cluster_Break = Control}];
++$Prepend     = [\p{Grapheme_Cluster_Break = Prepend}];
+ $Extend      = [\p{Grapheme_Cluster_Break = Extend}];
+ $SpacingMark = [\p{Grapheme_Cluster_Break = SpacingMark}];
+ $BengaliLetter = [\u0985-\u09B9 \u09CE \u09DC-\u09E1 \u09F0-\u09F1];
+@@ -71,6 +72,7 @@ $L ($L | $V | $LV | $LVT);
+ [^$Control $CR $LF] $Extend;
+ 
+ [^$Control $CR $LF] $SpacingMark;
++$Prepend [^$Control $CR $LF];
+ 
+ 
+ ## -------------------------------------------------
+@@ -92,6 +94,7 @@ $T ($LVT | $T);
+ 
+ $Extend      [^$Control $CR $LF];
+ $SpacingMark [^$Control $CR $LF];
++[^$Control $CR $LF] $Prepend;
+ 
+ 
+ ## -------------------------------------------------
+--
+cgit v0.9.0.2-2-gbebe
