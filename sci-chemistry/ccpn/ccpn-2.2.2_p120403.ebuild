@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p111220.ebuild,v 1.1 2011/12/20 08:39:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.2_p120403.ebuild,v 1.1 2012/04/03 17:24:27 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="ssl tk"
@@ -15,9 +15,9 @@ MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
-HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
-SRC_URI="http://www.bio.cam.ac.uk/ccpn/download/${MY_PN}/analysis${MY_PV}.tar.gz"
+SRC_URI="http://www-old.ccpn.ac.uk/download/${MY_PN}/analysis${MY_PV}.tar.gz"
 	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.xz"
+HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 
 SLOT="0"
 LICENSE="|| ( CCPN LGPL-2.1 )"
@@ -26,10 +26,9 @@ IUSE="extendnmr +opengl"
 
 RDEPEND="
 	dev-lang/tk[threads]
-	>=dev-python/numpy-1.4
-	>=dev-tcltk/tix-8.4.3
+	dev-python/numpy
+	dev-tcltk/tix
 	=sci-libs/ccpn-data-"${MY_MAJOR}"*
-	>=sci-libs/ccpn-data-2.1.5_p111011
 	sci-biology/psipred
 	x11-libs/libXext
 	x11-libs/libX11
@@ -41,7 +40,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 PDEPEND="
 	extendnmr? (
-		<=sci-chemistry/aria-2.3.2
+		>=sci-chemistry/aria-2.3.2-r1
 		sci-chemistry/prodecomp )"
 
 RESTRICT="mirror"
@@ -50,6 +49,7 @@ S="${WORKDIR}"/${MY_PN}/${MY_PN}$(get_version_component_range 1-2 ${PV})
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -105,11 +105,16 @@ src_prepare() {
 		-e "s|^\(TK_LIB_FLAGS =\).*|\1 -L${EPREFIX}/usr/$(get_libdir)|g" \
 		-e "s|^\(PYTHON_INCLUDE_FLAGS =\).*|\1 -I${EPREFIX}/$(python_get_includedir)|g" \
 		-e "s|^\(PYTHON_LIB =\).*|\1 $(python_get_library -l)|g" \
-		c/environment_default.txt > c/environment.txt
+		c/environment_default.txt > c/environment.txt || die
+
+	sed \
+		-e 's:ln -s:cp -f:g' \
+		-i $(find python -name linkSharedObjs) || die
 }
 
 src_compile() {
-	emake -C c all links || die
+	emake -C c all
+	emake -C c links
 }
 
 src_install() {
@@ -117,12 +122,12 @@ src_install() {
 	local tkver
 	local _wrapper
 
-	find . -name "*.pyc" -type d -delete
+	find . -name "*.pyc" -type f -delete
 
 	libdir=$(get_libdir)
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 
-	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara"
+	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara xeasy2azara"
 	use extendnmr && _wrapper="${_wrapper} extendNmr"
 	for wrapper in ${_wrapper}; do
 		sed \
@@ -130,21 +135,19 @@ src_install() {
 		   -e "s|gentoolibdir|${EPREFIX}/usr/${libdir}|g" \
 			-e "s|gentootk|${EPREFIX}/usr/${libdir}/tk${tkver}|g" \
 			-e "s|gentootcl|${EPREFIX}/usr/${libdir}/tclk${tkver}|g" \
-			-e "s|gentoopython|${EPREFIX}/usr/bin/python|g" \
+			-e "s|gentoopython|$(PYTHON -a)|g" \
 			-e "s|gentoousr|${EPREFIX}/usr|g" \
 			-e "s|//|/|g" \
 			"${FILESDIR}"/${wrapper} > "${T}"/${wrapper} || die "Fail fix ${wrapper}"
-		dobin "${T}"/${wrapper} || die "Failed to install ${wrapper}"
+		dobin "${T}"/${wrapper}
 	done
 
-	local in_path
+	local in_path=$(python_get_sitedir)/${PN}
 	local files
 	local pydocs
 
 	pydocs="$(find python -name doc -type d)"
 	rm -rf ${pydocs} || die
-
-	in_path=$(python_get_sitedir)/${PN}
 
 	for i in python/memops/format/compatibility/{Converters,part2/Converters2}.py; do
 	sed \
@@ -157,52 +160,15 @@ src_install() {
 	dodir ${in_path}/c
 
 	ebegin "Installing main files"
-		doins -r python || die "main files installation failed"
+		doins -r python
 	eend
 
-	einfo "Adjusting permissions"
+	ebegin "Adjusting permissions"
 
-	files="
-		cambridge/c/BayesPeakSeparator.so
-		ccp/c/StructUtil.so
-		ccp/c/StructStructure.so
-		ccp/c/StructBond.so
-		ccp/c/StructAtom.so
-		ccpnmr/c/DyAtomCoord.so
-		ccpnmr/c/DyDistConstraint.so
-		ccpnmr/c/DyDistForce.so
-		ccpnmr/c/AtomCoordList.so
-		ccpnmr/c/DyAtomCoordList.so
-		ccpnmr/c/ContourStyle.so
-		ccpnmr/c/ContourLevels.so
-		ccpnmr/c/SliceFile.so
-		ccpnmr/c/PeakCluster.so
-		ccpnmr/c/Dynamics.so
-		ccpnmr/c/Bacus.so
-		ccpnmr/c/Midge.so
-		ccpnmr/c/DyDistConstraintList.so
-		ccpnmr/c/WinPeakList.so
-		ccpnmr/c/PeakList.so
-		ccpnmr/c/DistConstraint.so
-		ccpnmr/c/CloudUtil.so
-		ccpnmr/c/DistForce.so
-		ccpnmr/c/DistConstraintList.so
-		ccpnmr/c/AtomCoord.so
-		ccpnmr/c/DyDynamics.so
-		ccpnmr/c/ContourFile.so
-		memops/c/ShapeFile.so
-		memops/c/BlockFile.so
-		memops/c/PdfHandler.so
-		memops/c/MemCache.so
-		memops/c/FitMethod.so
-		memops/c/PsHandler.so
-		memops/c/GlHandler.so
-		memops/c/StoreFile.so
-		memops/c/StoreHandler.so
-		memops/c/TkHandler.so"
-	for FILE in ${files}; do
-		fperms 755 ${in_path}/python/${FILE}
+	for _file in $(find "${ED}" -type f -name "*so"); do
+		chmod 755 ${_file}
 	done
+	eend
 }
 
 pkg_postinst() {
