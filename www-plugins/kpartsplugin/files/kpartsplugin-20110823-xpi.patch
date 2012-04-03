@@ -1,0 +1,16 @@
+diff -ruN kpartsplugin-20110823.orif/src/kpartsplugin.cpp kpartsplugin-20110823/src/kpartsplugin.cpp
+--- kpartsplugin-20110823.orif/src/kpartsplugin.cpp	2011-08-23 10:50:41.000000000 +0200
++++ kpartsplugin-20110823/src/kpartsplugin.cpp	2012-04-03 23:21:50.632024095 +0200
+@@ -59,7 +59,11 @@
+ 
+ /// built-in list of mime types that should never be loaded with this plugin
+ /// comparison is done with "startsWith", so "inode/" covers e.g. "inode/directory"
+-static const QStringList builtinBlacklisted = QStringList() << QLatin1String("all/") << QLatin1String("x-") << QLatin1String("inode/") << QLatin1String("application/x-shockwave") << QLatin1String("application/futuresplash") << QLatin1String("application/force-download") << QLatin1String("application/x-force-download") << QLatin1String("application/googletalk") << QLatin1String("interface/") << QLatin1String("message/") << QLatin1String("multipart/") << QLatin1String("application/x-java") << QLatin1String("application/java-archive") << QLatin1String("video/x-javafx");
++static const QStringList builtinBlacklisted = QStringList() << QLatin1String("all/") << QLatin1String("x-") << QLatin1String("inode/") 
++  << QLatin1String("application/x-shockwave") <<  QLatin1String("application/futuresplash") << QLatin1String("application/force-download") 
++  << QLatin1String("application/x-force-download") << QLatin1String("application/googletalk") << QLatin1String("interface/") 
++  << QLatin1String("message/") << QLatin1String("multipart/") <<  QLatin1String("application/x-java") << QLatin1String("application/java-archive") 
++  << QLatin1String("video/x-javafx") << QLatin1String("application/x-xpinstall");
+ 
+ static void initAllMimeTypes()
+ {
