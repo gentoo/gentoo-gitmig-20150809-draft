@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.65 2012/01/31 17:57:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.66 2012/04/03 15:11:10 jer Exp $
+
+*libnl-1.1-r3 (03 Apr 2012)
+
+  03 Apr 2012; Jeroen Roovers <jer@gentoo.org> +libnl-1.1-r3.ebuild,
+  +files/libnl-1.1-inline.patch:
+  Do not inline nl_object_priv by Jiri Denemark (bug #366561).
 
   31 Jan 2012; Jeroen Roovers <jer@gentoo.org> libnl-3.2.3.ebuild,
   libnl-3.2.6.ebuild, libnl-3.2.7.ebuild:
