@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.3-r2.ebuild,v 1.1 2012/04/02 17:08:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.3-r2.ebuild,v 1.2 2012/04/03 15:26:24 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -50,9 +50,10 @@ src_compile() {
 	distutils_src_compile
 
 	if use doc; then
-		pushd doc > /dev/null
 		einfo "Generation of documentation"
-		PYTHONPATH=".." emake SPHINXBUILD="$(PYTHON -f) ../sphinx-build.py" html || die "Generation of documentation failed"
+		sed -e "/import sys/a sys.path.insert(0, '${S}/build-$(PYTHON -f --ABI)/lib')" -i sphinx-build.py
+		pushd doc > /dev/null
+		emake SPHINXBUILD="$(PYTHON -f) ../sphinx-build.py" html || die
 		popd > /dev/null
 	fi
 }
@@ -63,7 +64,6 @@ src_test() {
 		echo PYTHONPATH=lib nosetests --verbosity=1
 		PYTHONPATH=lib nosetests --verbosity=1
 		local rv=$?
-		rm -f lib/sphinx/pycode/Grammar*.pickle
 		popd > /dev/null
 		return $rv
 	}
@@ -73,6 +73,11 @@ src_test() {
 src_install() {
 	distutils_src_install
 	python_generate_wrapper_scripts -E -f -q "${ED}usr/bin/sphinx-build"
+
+	delete_grammar_pickle() {
+		rm -f "${ED}$(python_get_sitedir)/sphinx/pycode/Grammar$(python_get_version -l).pickle"
+	}
+	python_execute_function -q delete_grammar_pickle
 
 	if use doc; then
 		dohtml -A txt -r doc/_build/html/* || die "Installation of documentation failed"
