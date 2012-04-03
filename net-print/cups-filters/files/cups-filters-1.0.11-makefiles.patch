@@ -1,0 +1,184 @@
+diff -urN cups-filters-1.0.11.old/backend/Makefile cups-filters-1.0.11/backend/Makefile
+--- cups-filters-1.0.11.old/backend/Makefile	2012-04-03 17:40:50.326979137 +0200
++++ cups-filters-1.0.11/backend/Makefile	2012-04-03 17:43:59.027982425 +0200
+@@ -74,9 +74,9 @@
+ 
+ install-exec:
+ 	echo Installing backends in $(SERVERBIN)/backend...
+-	$(INSTALL_DIR) -m 755 $(SERVERBIN)/backend
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(SERVERBIN)/backend
+ 	for file in $(BACKENDS); do \
+-		$(INSTALL_BIN) $$file $(SERVERBIN)/backend; \
++		$(INSTALL_BIN) $$file $(DESTDIR)/$(SERVERBIN)/backend; \
+ 	done
+ 
+ 
+diff -urN cups-filters-1.0.11.old/config-scripts/cups-compiler.m4 cups-filters-1.0.11/config-scripts/cups-compiler.m4
+--- cups-filters-1.0.11.old/config-scripts/cups-compiler.m4	2012-04-03 17:40:50.332979138 +0200
++++ cups-filters-1.0.11/config-scripts/cups-compiler.m4	2012-04-03 17:41:23.281979712 +0200
+@@ -23,13 +23,6 @@
+ AC_ARG_WITH(optim, [  --with-optim            set optimization flags ])
+ AC_ARG_ENABLE(debug, [  --enable-debug          build with debugging symbols])
+ 
+-dnl For debugging, keep symbols, otherwise strip them...
+-if test x$enable_debug = xyes; then
+-	OPTIM="-g"
+-else
+-	INSTALL_STRIP="-s"
+-fi
+-
+ dnl Read-only data/program support on Linux...
+ AC_ARG_ENABLE(relro, [  --enable-relro          build with the GCC relro option])
+ 
+diff -urN cups-filters-1.0.11.old/cupsfilters/Makefile cups-filters-1.0.11/cupsfilters/Makefile
+--- cups-filters-1.0.11.old/cupsfilters/Makefile	2012-04-03 17:40:50.330979139 +0200
++++ cups-filters-1.0.11/cupsfilters/Makefile	2012-04-03 17:57:26.362996484 +0200
+@@ -120,9 +120,9 @@
+ 
+ install-headers:
+ 	echo Installing header files into $(INCLUDEDIR)/cupsfilters...
+-	$(INSTALL_DIR) -m 755 $(INCLUDEDIR)/cupsfilters
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(INCLUDEDIR)/cupsfilters
+ 	for file in $(HEADERS); do \
+-		$(INSTALL_DATA) $$file $(INCLUDEDIR)/cupsfilters; \
++		$(INSTALL_DATA) $$file $(DESTDIR)/$(INCLUDEDIR)/cupsfilters; \
+ 	done
+ 
+ 
+@@ -132,16 +132,16 @@
+ 
+ install-libs:
+ 	echo Installing libraries in $(LIBDIR)...
+-	$(INSTALL_DIR) -m 755 $(LIBDIR)
+-	$(INSTALL_LIB) $(LIBCUPSFILTERS) $(LIBDIR)
+-	$(INSTALL_DATA) libcupsfilters.a $(LIBDIR)
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(LIBDIR)
++	$(INSTALL_LIB) $(LIBCUPSFILTERS) $(DESTDIR)/$(LIBDIR)
++	$(INSTALL_DATA) libcupsfilters.a $(DESTDIR)/$(LIBDIR)
+ 	if test $(LIBCUPSFILTERS) = "libcupsfilters.so.1" -o $(LIBCUPSFILTERS) = "libcupsfilters.sl.1"; then \
+-		$(RM) $(LIBDIR)/`basename $(LIBCUPSFILTERS) .1`; \
+-		$(LN) $(LIBCUPSFILTERS) $(LIBDIR)/`basename $(LIBCUPSFILTERS) .1`; \
++		$(RM) $(DESTDIR)/$(LIBDIR)/`basename $(LIBCUPSFILTERS) .1`; \
++		$(LN) $(LIBCUPSFILTERS) $(DESTDIR)/$(LIBDIR)/`basename $(LIBCUPSFILTERS) .1`; \
+ 	fi
+ 	if test $(LIBCUPSFILTERS) = "libcupsfilters.1.dylib"; then \
+-		$(RM) $(LIBDIR)/libcups.dylib; \
+-		$(LN) $(LIBCUPSFILTERS) $(LIBDIR)/libcups.dylib; \
++		$(RM) $(DESTDIR)/$(LIBDIR)/libcups.dylib; \
++		$(LN) $(LIBCUPSFILTERS) $(DESTDIR)/$(LIBDIR)/libcups.dylib; \
+ 	fi
+ 
+ 
+@@ -171,7 +171,7 @@
+ 
+ libcupsfilters.so.1:	$(LIBOBJS)
+ 	echo Linking $@...
+-	$(DSO) $(ARCHFLAGS) $(DSOFLAGS) -o $@ $(LIBOBJS) $(DSOLIBS) $(LINKCUPS) -lm
++	$(DSO) $(LDFLAGS) $(ARCHFLAGS) $(DSOFLAGS) -o $@ $(LIBOBJS) $(DSOLIBS) $(LINKCUPS) -lm
+ 	$(RM) `basename $@ .1`
+ 	$(LN) $@ `basename $@ .1`
+ 
+diff -urN cups-filters-1.0.11.old/filter/Makefile cups-filters-1.0.11/filter/Makefile
+--- cups-filters-1.0.11.old/filter/Makefile	2012-04-03 17:40:50.324979137 +0200
++++ cups-filters-1.0.11/filter/Makefile	2012-04-03 17:53:35.708992459 +0200
+@@ -130,35 +130,35 @@
+ 
+ install-data:
+ 	echo Installing charsets to $(DATADIR)/charsets...
+-	$(INSTALL_DIR) -m 755 $(DATADIR)/charsets
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(DATADIR)/charsets
+ 	for file in $(CHARSETS); do \
+-		$(INSTALL_DATA) $$file $(DATADIR)/charsets; \
++		$(INSTALL_DATA) $$file $(DESTDIR)/$(DATADIR)/charsets; \
+ 	done; \
+-	$(LN) pdf.utf-8.simple $(DATADIR)/charsets/pdf.utf-8
++	$(LN) pdf.utf-8.simple $(DESTDIR)/$(DATADIR)/charsets/pdf.utf-8
+ 	echo Installing data files to $(DATADIR)/data...
+-	$(INSTALL_DIR) -m 755 $(DATADIR)/data
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(DATADIR)/data
+ 	for file in $(DATAFILES); do \
+-		$(INSTALL_DATA) $$file $(DATADIR)/data; \
++		$(INSTALL_DATA) $$file $(DESTDIR)/$(DATADIR)/data; \
+ 	done
+ 	echo Installing banners to $(DATADIR)/banners...
+-	$(INSTALL_DIR) -m 755 $(DATADIR)/banners
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(DATADIR)/banners
+ 	for file in $(BANNERS); do \
+-		$(INSTALL_DATA) $$file $(DATADIR)/banners; \
++		$(INSTALL_DATA) $$file $(DESTDIR)/$(DATADIR)/banners; \
+ 	done
+ 	echo Installing MIME files to $(DATADIR)/mime...
+-	$(INSTALL_DIR) -m 755 $(DATADIR)/mime
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(DATADIR)/mime
+ 	for file in $(MIMEFILES); do \
+-		$(INSTALL_DATA) $$file $(DATADIR)/mime; \
++		$(INSTALL_DATA) $$file $(DESTDIR)/$(DATADIR)/mime; \
+ 	done
+ 	echo Installing DRV files to $(DATADIR)/drv...
+-	$(INSTALL_DIR) -m 755 $(DATADIR)/drv
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(DATADIR)/drv
+ 	for file in $(DRVFILES); do \
+-		$(INSTALL_DATA) $$file $(DATADIR)/drv; \
++		$(INSTALL_DATA) $$file $(DESTDIR)/$(DATADIR)/drv; \
+ 	done
+-	echo Installing PPD files to $(BUILDROOT)${datadir}/ppd/cupsfilters...
+-	$(INSTALL_DIR) -m 755 $(BUILDROOT)${datadir}/ppd/cupsfilters
++	echo Installing PPD files to $(DATADIR)/ppd/cupsfilters...
++	$(INSTALL_DIR) -m 755 $(DESTDIR)$(DATADIR)/ppd/cupsfilters
+ 	for file in $(PPDFILES); do \
+-		$(INSTALL_DATA) $$file $(BUILDROOT)${datadir}/ppd/cupsfilters; \
++		$(INSTALL_DATA) $$file $(DESTDIR)$(DATADIR)/ppd/cupsfilters; \
+ 	done
+ 
+ 
+@@ -168,12 +168,12 @@
+ 
+ install-exec:
+ 	echo Installing filters to $(SERVERBIN)/filter...
+-	$(INSTALL_DIR) -m 755 $(SERVERBIN)/filter
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(SERVERBIN)/filter
+ 	for file in $(TARGETS); do \
+-		$(INSTALL_BIN) $$file $(SERVERBIN)/filter; \
++		$(INSTALL_BIN) $$file $(DESTDIR)/$(SERVERBIN)/filter; \
+ 	done
+ 	for file in $(SCRIPTS); do \
+-		$(INSTALL_SCRIPT) $$file $(SERVERBIN)/filter; \
++		$(INSTALL_SCRIPT) $$file $(DESTDIR)/$(SERVERBIN)/filter; \
+ 	done
+ 
+ 
+diff -urN cups-filters-1.0.11.old/pdftoopvp/Makefile cups-filters-1.0.11/pdftoopvp/Makefile
+--- cups-filters-1.0.11.old/pdftoopvp/Makefile	2012-04-03 17:40:50.331979139 +0200
++++ cups-filters-1.0.11/pdftoopvp/Makefile	2012-04-03 17:54:47.771993722 +0200
+@@ -60,13 +60,13 @@
+ 
+ install-data:	all
+ 	echo Installing configuration files to $(sysconfdir)/fonts/conf.d...
+-	$(INSTALL_DIR) -m 755 $(BUILDROOT)$(sysconfdir)/fonts/conf.d
+-	$(INSTALL_DATA) -m 644 99pdftoopvp.conf $(BUILDROOT)$(sysconfdir)/fonts/conf.d
++	$(INSTALL_DIR) -m 755 $(DESTDIR)$(sysconfdir)/fonts/conf.d
++	$(INSTALL_DATA) -m 644 99pdftoopvp.conf $(DESTDIR)$(sysconfdir)/fonts/conf.d
+ 
+ install-exec:	all
+ 	echo Installing filters to $(SERVERBIN)/filter...
+-	$(INSTALL_DIR) -m 755 $(SERVERBIN)/filter
+-	$(INSTALL_BIN) pdftoopvp $(SERVERBIN)/filter
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(SERVERBIN)/filter
++	$(INSTALL_BIN) pdftoopvp $(DESTDIR)/$(SERVERBIN)/filter
+ 
+ install-headers:
+ 
+diff -urN cups-filters-1.0.11.old/pdftopdf/Makefile cups-filters-1.0.11/pdftopdf/Makefile
+--- cups-filters-1.0.11.old/pdftopdf/Makefile	2012-04-03 17:40:50.328979140 +0200
++++ cups-filters-1.0.11/pdftopdf/Makefile	2012-04-03 17:44:39.759983134 +0200
+@@ -78,8 +78,8 @@
+ 
+ install-exec:	all
+ 	echo Installing filters in $(SERVERBIN)/filter...
+-	$(INSTALL_DIR) -m 755 $(SERVERBIN)/filter
+-	$(INSTALL_BIN) pdftopdf $(SERVERBIN)/filter
++	$(INSTALL_DIR) -m 755 $(DESTDIR)/$(SERVERBIN)/filter
++	$(INSTALL_BIN) pdftopdf $(DESTDIR)/$(SERVERBIN)/filter
+ 
+ install-headers:
+ 
