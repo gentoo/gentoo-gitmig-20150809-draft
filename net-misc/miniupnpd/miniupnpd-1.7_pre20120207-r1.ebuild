@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.7_pre20120207.ebuild,v 1.2 2012/03/05 19:29:37 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.7_pre20120207-r1.ebuild,v 1.1 2012/04/03 09:45:31 gurligebis Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -33,7 +33,12 @@ src_prepare() {
 	sed -i \
 		-e 's/\(strncpy(\([->a-z.]\+\), "[a-zA-Z]\+", \)IPT_FUNCTION_MAXNAMELEN);/\1sizeof(\2));/' \
 		netfilter/iptcrdr.c || die
+
 	emake config.h
+
+	sed -i \
+		-e 's/\/\*#define ENABLE_LEASEFILE\*\//#define ENABLE_LEASEFILE/g' \
+		config.h || die
 }
 
 src_compile() {
