@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.18 2012/02/05 19:14:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.19 2012/04/03 19:16:29 nelchael Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -65,7 +65,7 @@ DEPEND="dev-vcs/mercurial"
 # Set this variable to a non-empty value to disable the automatic updating of
 # a mercurial source tree. This is intended to be set outside the ebuild by
 # users.
-EHG_OFFLINE="${EHG_OFFLINE:-${ESCM_OFFLINE}}"
+EHG_OFFLINE="${EHG_OFFLINE:-${EVCS_OFFLINE}}"
 
 # @FUNCTION: mercurial_fetch
 # @USAGE: [repository_uri] [module] [sourcedir]
