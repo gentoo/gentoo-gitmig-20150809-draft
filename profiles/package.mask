@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13645 2012/04/03 21:05:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13646 2012/04/03 23:19:01 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -149,11 +149,6 @@ dev-php/Horde_Yaml
 # Masked for testing.
 >=dev-libs/boost-1.49
 >=dev-libs/boost-build-1.49
-
-# Mike Gilbert <floppym@gentoo.org> (25 Mar 2012)
-# Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (25 Mar 2012)
-# Masked for testing.
->=dev-libs/icu-49
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Mar 2012)
 # This is now the GNOME 3.4 mask
