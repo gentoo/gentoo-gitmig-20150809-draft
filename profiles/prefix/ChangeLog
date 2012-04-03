@@ -1,8 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.338 2012/03/28 06:26:58 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.339 2012/04/03 11:46:32 heroxbd Exp $
 
-  28 Mar 2012; XU Benda <heroxbd@gentoo.org> package.provided:
+  03 Apr 2012: Benda XU <heroxbd@gentoo.org> linux/arm/make.defaults,
+  let arm prefix use arm instead of arm-linux as its keyword
+
+  28 Mar 2012; Benda XU<heroxbd@gentoo.org> package.provided:
   use sys-apps/shadow-4.1 to meet virtual/shadow introduced on Mar 11
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
