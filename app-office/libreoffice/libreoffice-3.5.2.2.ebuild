@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.2.2.ebuild,v 1.8 2012/04/03 12:53:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.2.2.ebuild,v 1.9 2012/04/03 13:35:28 scarabeus Exp $
 
 EAPI=4
 
@@ -196,7 +196,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-3.5-propagate-gb_FULLDEPS.patch"
 	"${FILESDIR}/${PN}-3.5-doublebuild.patch"
 	"${FILESDIR}/${PN}-3.5.2-icu-49.patch"
-	"${FILESDIR}/${PN}-3.5.2-icu-49-part2.patch"
+	#"${FILESDIR}/${PN}-3.5.2-icu-49-part2.patch"
 	"${FILESDIR}/${PN}-3.5.2-tests-headless.patch"
 )
 
