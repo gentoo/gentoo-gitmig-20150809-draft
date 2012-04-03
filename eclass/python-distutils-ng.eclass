@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.9 2012/03/30 16:41:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.10 2012/04/03 19:12:46 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -51,7 +51,7 @@ fi
 # Set the value to "yes" to skip compilation and/or optimization of Python
 # modules.
 
-EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
+EXPORT_FUNCTIONS pkg_pretend src_prepare src_configure src_compile src_test src_install
 
 case "${EAPI}" in
 	0|1|2|3)
@@ -285,6 +285,17 @@ python-distutils-ng_newscript() {
 		done
 
 		dosym "${destination_file}-${default_impl}" "${destination_directory}/${destination_file}"
+	fi
+}
+
+# Phase function: pkg_pretend
+python-distutils-ng_pkg_pretend() {
+	if has "collision-protect" ${FEATURES}; then
+		eerror "Due to previous eclass compiling Python files outside of src_install"
+		eerror "(and not recording resulting .pyc and .pyo files as owned by any package)"
+		eerror "merging this package with \"collision-protect\" in FEATURES will result"
+		eerror "in an error, please switch to using \"protect-owned\" instead."
+		die "\"collision-protect\" in FEATURES detected"
 	fi
 }
 
