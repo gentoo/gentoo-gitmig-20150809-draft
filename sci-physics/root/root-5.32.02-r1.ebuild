@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.01-r2.ebuild,v 1.2 2012/03/29 18:21:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.02-r1.ebuild,v 1.1 2012/04/03 16:02:52 bicatali Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -44,7 +44,10 @@ CDEPEND="
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXpm
-		|| ( >=media-libs/libafterimage-1.20 >=x11-wm/afterstep-2.2.11 )
+		|| (
+			>=media-libs/libafterimage-1.20[gif,jpeg,png,tiff] 
+			>=x11-wm/afterstep-2.2.11[gif,jpeg,png,tiff]
+		)
 		opengl? ( virtual/opengl virtual/glu x11-libs/gl2ps )
 		qt4? (
 			x11-libs/qt-gui:4

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00h.ebuild,v 1.1 2012/03/13 17:02:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00h-r1.ebuild,v 1.1 2012/04/03 16:02:52 bicatali Exp $
 
 EAPI=3
 
@@ -44,7 +44,10 @@ CDEPEND="
 	x11-libs/libXext
 	x11-libs/libXft
 	x11-libs/libXpm
-	|| ( >=media-libs/libafterimage-1.20 >=x11-wm/afterstep-2.2.11 )
+	|| (
+		>=media-libs/libafterimage-1.20[gif,jpeg,png,tiff] 
+		>=x11-wm/afterstep-2.2.11[gif,jpeg,png,tiff]
+	)
 	afs? ( net-fs/openafs )
 	avahi? ( net-dns/avahi )
 	clarens? ( dev-libs/xmlrpc-c )
