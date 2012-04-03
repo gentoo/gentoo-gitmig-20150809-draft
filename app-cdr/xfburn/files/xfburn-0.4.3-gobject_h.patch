@@ -1,6 +1,8 @@
-error: unknown type name for GObject, GObjectClass, GType and GTypeInfo
+http://bugs.gentoo.org/410565
 
-The errors started manifesting after upgrade to Xfce 4.10 pre1 (and to latest glib 2.32.0 etc.)
+Unknown type name errors with references to GObject, GObjectClass, GType and GTypeInfo
+
+The errors started manifesting after upgrading to Xfce 4.10 pre1 libraries
 
 --- xfburn/xfburn-settings.h
 +++ xfburn/xfburn-settings.h
