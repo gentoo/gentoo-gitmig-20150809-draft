@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nemesis
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.18 2012/03/23 21:24:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.19 2012/04/03 08:37:06 scarabeus Exp $
+
+  03 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Fix metadata typo.
 
 *nemesis-1.4-r1 (23 Mar 2012)
 
