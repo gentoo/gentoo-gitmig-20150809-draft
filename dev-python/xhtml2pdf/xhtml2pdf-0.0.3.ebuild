@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xhtml2pdf/xhtml2pdf-0.0.3.ebuild,v 1.3 2012/01/30 20:11:57 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xhtml2pdf/xhtml2pdf-0.0.3.ebuild,v 1.4 2012/04/03 19:22:57 nelchael Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI="4"
 
-inherit distutils
+PYTHON_COMPAT="python2_5 python2_6 python2_7"
+
+inherit python-distutils-ng
 
 DESCRIPTION="PDF generator using HTML and CSS"
 HOMEPAGE="http://www.xhtml2pdf.com/ http://pypi.python.org/pypi/xhtml2pdf"
@@ -21,8 +20,10 @@ IUSE=""
 DEPEND="dev-python/html5lib
 	dev-python/imaging
 	dev-python/pyPdf
-	dev-python/reportlab
-	!dev-python/pisa"
+	dev-python/reportlab"
 RDEPEND="${DEPEND}"
 
-PYTHON_MODNAME="xhtml2pdf"
+python_install_all() {
+	python-distutils-ng_redoscript "/usr/bin/pisa"
+	python-distutils-ng_redoscript "/usr/bin/xhtml2pdf"
+}
