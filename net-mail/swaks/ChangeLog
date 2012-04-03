@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/swaks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.18 2012/02/09 11:44:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.19 2012/04/03 12:31:43 eras Exp $
+
+*swaks-20120320.0 (03 Apr 2012)
+
+  03 Apr 2012; Eray Aslan <eras@gentoo.org> +swaks-20120320.0.ebuild:
+  version bump
 
 *swaks-20111230.0 (09 Feb 2012)
 
