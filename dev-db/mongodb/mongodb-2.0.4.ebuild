@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.4.ebuild,v 1.1 2012/03/21 09:05:48 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.4.ebuild,v 1.2 2012/04/03 08:48:00 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -53,13 +53,12 @@ src_prepare() {
 	sed -i -e '/Werror/d' SConstruct || die
 
 	sed -i -e "s@jsapi.h@js/jsapi.h@g" \
-			-e "s@jsobj.h@js/jsobj.h@g" \
-			-e "s@jsdate.h@js/jsdate.h@g" \
-			-e "s@jsregexp.h@js/jsregexp.h@g" scripting/engine_spidermonkey.h
+		-e "s@jsobj.h@js/jsobj.h@g" \
+		-e "s@jsdate.h@js/jsdate.h@g" \
+		-e "s@jsregexp.h@js/jsregexp.h@g" scripting/engine_spidermonkey.h || die
 }
 
 src_compile() {
-	echo $LDFLAGS
 	escons ${scons_opts} all
 }
 
