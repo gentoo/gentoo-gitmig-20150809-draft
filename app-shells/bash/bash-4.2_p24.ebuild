@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p24.ebuild,v 1.5 2012/03/28 18:14:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p24.ebuild,v 1.6 2012/04/03 18:22:36 vapier Exp $
 
 EAPI="1"
 
@@ -78,6 +78,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-4.2-execute-job-control.patch #383237
 	epatch "${FILESDIR}"/${PN}-4.2-parallel-build.patch
+	epatch "${FILESDIR}"/${PN}-4.2-no-readline.patch
 }
 
 src_compile() {
@@ -124,6 +125,8 @@ src_compile() {
 		$(use_enable mem-scramble) \
 		$(use_with mem-scramble bash-malloc) \
 		$(use_enable readline) \
+		$(use_enable readline history) \
+		$(use_enable readline bang-history) \
 		${myconf}
 	emake || die
 
