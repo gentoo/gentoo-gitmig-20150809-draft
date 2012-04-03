@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.47 2012/04/02 20:28:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.48 2012/04/03 20:41:03 pacho Exp $
+
+  03 Apr 2012; Pacho Ramos <pacho@gentoo.org> +files/RESERVED_IPS:
+  Commit missing files, #410689 by Alon Bar-Lev
 
 *firehol-1.273-r2 (02 Apr 2012)
 
