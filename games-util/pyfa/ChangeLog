@@ -1,6 +1,11 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.8 2012/03/21 22:45:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.9 2012/04/03 15:40:48 tetromino Exp $
+
+*pyfa-1.1.5 (03 Apr 2012)
+
+  03 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +pyfa-1.1.5.ebuild:
+  Bump, adds Crucible 1.6 updates.
 
 *pyfa-1.1.4-r1 (21 Mar 2012)
 
