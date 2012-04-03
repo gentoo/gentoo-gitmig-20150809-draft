@@ -12,4 +12,8 @@
   features for manipulating and filtering the information in FITS
   files.
 </longdescription>
+<use>
+  <flag name="tools">Build execs fpack, funpack, imcopy, fitscopy, listhead
+  </flag>
+</use>
 </pkgmetadata>

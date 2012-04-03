@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/cfitsio
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.52 2011/08/04 18:44:02 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.53 2012/04/03 16:54:07 bicatali Exp $
+
+*cfitsio-3.290 (03 Apr 2012)
+
+  03 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +cfitsio-3.290.ebuild,
+  metadata.xml:
+  Version bump. Updated upstream fork. Added a tools flag to avoid building
+  some execs.
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
