@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.51 2012/01/22 14:05:49 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.52 2012/04/03 21:34:48 slyfox Exp $
+
+*quickcheck-2.4.2-r1 (03 Apr 2012)
+
+  03 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +quickcheck-2.4.2-r1.ebuild, metadata.xml, quickcheck-1.2.0.0.ebuild,
+  quickcheck-2.4.2.ebuild:
+  Added missing 'random' depend found by Nick Bowler in bug #410709.
 
 *quickcheck-2.4.2 (22 Jan 2012)
 

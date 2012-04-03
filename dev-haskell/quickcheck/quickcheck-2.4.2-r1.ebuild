@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-2.4.2.ebuild,v 1.2 2012/04/03 21:34:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-2.4.2-r1.ebuild,v 1.1 2012/04/03 21:34:48 slyfox Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 LICENSE="BSD"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE=""
+IUSE="+template_haskell"
 
 RDEPEND=">=dev-lang/ghc-6.10.1
 	dev-haskell/random"
@@ -32,3 +32,8 @@ DEPEND="${RDEPEND}
 # and unfortunately have to drop the other arches until we get proper ghc su$
 
 S="${WORKDIR}/${MY_P}"
+
+src_configure() {
+	# GHCi-less platforms do not support Template Haskell
+	cabal_src_configure $(cabal_flag template_haskell templateHaskell)
+}
