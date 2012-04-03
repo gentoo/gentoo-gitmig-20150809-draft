@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-glib2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.84 2012/04/03 11:22:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.85 2012/04/03 11:23:54 graaff Exp $
+
+*ruby-glib2-1.1.2 (03 Apr 2012)
+
+  03 Apr 2012; Hans de Graaff <graaff@gentoo.org> +ruby-glib2-1.1.2.ebuild:
+  Version bump.
 
   03 Apr 2012; Hans de Graaff <graaff@gentoo.org> ruby-glib2-1.1.0.ebuild:
   Move ppc and ppc64 keywords also to latest release.
