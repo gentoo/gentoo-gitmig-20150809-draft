@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.10.ebuild,v 1.1 2010/11/17 23:13:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.10.ebuild,v 1.2 2012/04/03 03:12:04 vapier Exp $
 
 EAPI=2
 
@@ -8,18 +8,18 @@ inherit eutils
 
 DESCRIPTION="AVR Downloader/UploaDEr"
 HOMEPAGE="http://savannah.nongnu.org/projects/avrdude"
-SRC_URI_BASE="http://savannah.nongnu.org/download/${PN}"
-SRC_URI="${SRC_URI_BASE}/${P}.tar.gz
-	doc? ( ${SRC_URI_BASE}/${PN}-doc-${PV}.tar.gz
-		   ${SRC_URI_BASE}/${PN}-doc-${PV}.pdf )"
+SRC_URI="mirror://nongnu/${PN}/${P}.tar.gz
+	doc? (
+		mirror://nongnu/${PN}/${PN}-doc-${PV}.tar.gz
+		mirror://nongnu/${PN}/${PN}-doc-${PV}.pdf
+	)"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~ppc ~ppc64 ~x86"
-
 IUSE="doc"
 
-RDEPEND="virtual/libusb"
+RDEPEND="virtual/libusb:0"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

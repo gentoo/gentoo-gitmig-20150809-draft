@@ -1,15 +1,16 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.11.ebuild,v 1.1 2011/09/02 08:15:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.11.ebuild,v 1.2 2012/04/03 03:12:04 vapier Exp $
 
 EAPI=4
 
 DESCRIPTION="AVR Downloader/UploaDEr"
 HOMEPAGE="http://savannah.nongnu.org/projects/avrdude"
-SRC_URI_BASE="http://savannah.nongnu.org/download/${PN}"
-SRC_URI="${SRC_URI_BASE}/${P}.tar.gz
-	doc? ( ${SRC_URI_BASE}/${PN}-doc-${PV}.tar.gz
-		   ${SRC_URI_BASE}/${PN}-doc-${PV}.pdf )"
+SRC_URI="mirror://nongnu/${PN}/${P}.tar.gz
+	doc? (
+		mirror://nongnu/${PN}/${PN}-doc-${PV}.tar.gz
+		mirror://nongnu/${PN}/${PN}-doc-${PV}.pdf
+	)"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,8 +28,8 @@ src_prepare() {
 }
 
 src_compile() {
-	# The automake target for these files does not use tempfiles or create these
-	# atomically, confusing a parallel build. So we force them first.
+	# The automake target for these files does not use tempfiles or create
+	# these atomically, confusing a parallel build. So we force them first.
 	emake lexer.c config_gram.c config_gram.h
 	emake
 }
