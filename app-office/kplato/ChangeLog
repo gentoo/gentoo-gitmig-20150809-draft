@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kplato
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.96 2011/06/01 21:45:46 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.97 2012/04/03 20:00:55 dilfridge Exp $
+
+  03 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> kplato-2.3.3.ebuild:
+  Add virtualx support to fix the tests, thanks Ian
 
   01 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kplato-2.2.2.ebuild:
   Remove old
