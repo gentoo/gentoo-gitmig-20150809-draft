@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.274 2012/04/03 07:28:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.275 2012/04/03 12:34:21 scarabeus Exp $
+
+  03 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/libreoffice-3.5.2-tests-headless.patch, libreoffice-3.5.2.2.ebuild:
+  Pass headless to test runs. This should solve various dbus/assert crashes and
+  bug#410317.
 
   03 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/libreoffice-3.5.2-icu-49-part2.patch, libreoffice-3.5.2.2.ebuild:
