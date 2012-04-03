@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.103 2012/03/30 14:48:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.104 2012/04/03 21:44:47 jer Exp $
+
+  03 Apr 2012; Jeroen Roovers <jer@gentoo.org> qt-dbus-4.7.4.ebuild:
+  Stable for HPPA (bug #390963).
 
   30 Mar 2012; Davide Pesavento <pesa@gentoo.org>
   +files/qt-dbus-4.7-qdbusintegrator-no-const.patch, qt-dbus-4.7.4.ebuild,

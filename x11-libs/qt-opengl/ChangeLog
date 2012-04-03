@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.103 2012/03/29 22:12:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.104 2012/04/03 21:49:55 jer Exp $
+
+  03 Apr 2012; Jeroen Roovers <jer@gentoo.org> qt-opengl-4.7.4.ebuild:
+  Stable for HPPA (bug #390963).
 
 *qt-opengl-4.8.1 (29 Mar 2012)
 

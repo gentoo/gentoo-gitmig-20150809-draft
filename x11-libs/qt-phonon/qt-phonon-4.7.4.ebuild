@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.7.4.ebuild,v 1.4 2012/01/29 23:30:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.7.4.ebuild,v 1.5 2012/04/03 21:49:25 jer Exp $
 
 EAPI="3"
 inherit qt4-build
 
 DESCRIPTION="The Phonon module for the Qt toolkit"
 SLOT="4"
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ppc ppc64 -sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm hppa ~ia64 ppc ppc64 -sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="dbus qt3support"
 
 DEPEND="~x11-libs/qt-gui-${PV}[aqua=,debug=,qt3support=]
