@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.6 2011/10/16 12:27:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.7 2012/04/03 19:07:06 jlec Exp $
 
 EAPI=3
 
@@ -169,7 +169,15 @@ src_prepare() {
 		-e 's: -rpath $CLIB::g' \
 		-e 's: -I${srcdir}/include/cpp_c_headers::g' \
 		-e 's:sleep 1:sleep .2:g' \
+		-e 's:\\$(XCIF_LIB):-L$srcdir/lib/ccif -lccif:g' \
+		-e 's:\\$(XLAPACK_LIB):${XLAPACK_LIB}:g' \
+		-e 's:\\$(CXX_LIBS):\${CXX_LIBS}:g' \
+		-e 's:\\$(XLDFLAGS):\${XLDFLAGS}:g' \
 		-i configure || die
+
+	sed \
+		-e '/o crunch2/s:$: ${XLAPACK_LIB}:g' \
+		-i src/Makefile* || die
 
 	find "${S}" -name "Makefile.*" \
 		-exec sed -e 's|_FLAGS-|_FLAGS:-|g' -e "s:\(eval \$([[:alnum:]]*)\):\1 \$(GENTOOLDFLAGS):g" -i '{}' \;
