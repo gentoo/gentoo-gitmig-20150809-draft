@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.277 2012/04/03 13:35:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.278 2012/04/03 16:07:36 scarabeus Exp $
+
+  03 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/libreoffice-3.5.2-icu-49-part2.patch,
+  files/libreoffice-3.5.2-icu-49.patch:
+  Deal with the icu49 for good now.
 
   03 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.5.2.2.ebuild:
   Do not apply icu49-patch2 for now as it fails on 3.5 now.
