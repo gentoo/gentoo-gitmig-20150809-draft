@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_perl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.94 2011/11/19 00:27:52 idl0r Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.95 2012/04/03 20:23:27 idl0r Exp $
+
+  03 Apr 2012; Christian Ruppert <idl0r@gentoo.org> mod_perl-2.0.4-r1.ebuild,
+  mod_perl-2.0.5.ebuild:
+  Depend on apache <2.4*
 
   19 Nov 2011; Christian Ruppert <idl0r@gentoo.org> mod_perl-2.0.5.ebuild:
   Add debug useflag to enable/disable MP_TRACE and MP_DEBUG.

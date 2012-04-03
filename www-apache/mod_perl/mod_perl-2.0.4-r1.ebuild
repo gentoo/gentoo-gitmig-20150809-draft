@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.15 2010/03/07 13:19:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.16 2012/04/03 20:23:27 idl0r Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 SLOT="1"
 
-DEPEND=">=dev-perl/Apache-Test-1.27
+DEPEND="<www-servers/apache-2.4
+	>=dev-perl/Apache-Test-1.27
 	>=virtual/perl-CGI-3.08
 	>=virtual/perl-IO-Compress-1.09
 	dev-lang/perl
