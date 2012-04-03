@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.4.ebuild,v 1.1 2012/04/03 05:51:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.4.ebuild,v 1.2 2012/04/03 05:55:55 ssuominen Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -41,6 +41,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_configure() {
 	econf \
+		--htmldir=/usr/share/doc/${PF}/html \
 		--disable-hal \
 		$(use_enable kernel_linux inotify)
 }
