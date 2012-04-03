@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/zeitgeist-datahub-0.8.2.ebuild,v 1.1 2012/03/21 06:31:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/zeitgeist-datahub-0.8.2.ebuild,v 1.2 2012/04/03 10:10:49 jlec Exp $
 
 EAPI=4
 
@@ -21,10 +21,10 @@ CDEPEND="
 	dev-libs/glib:2
 	x11-libs/gtk+:2
 	dev-lang/vala:0.12"
-RDEPEND="${CDEPEND}
-	gnome-extra/zeitgeist"
+RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
+PDEPEND="gnome-extra/zeitgeist"
 
 src_configure() {
 	local myeconfargs=(
