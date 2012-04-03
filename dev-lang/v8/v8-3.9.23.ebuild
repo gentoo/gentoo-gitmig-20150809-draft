@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.9.23.ebuild,v 1.1 2012/03/24 20:38:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.9.23.ebuild,v 1.2 2012/04/03 11:30:53 grobian Exp $
 
 EAPI="4"
 
@@ -47,8 +47,6 @@ src_prepare() {
 	sed -i \
 		-e '/^LINK_COMMANDS_MAC =/,/^SHARED_HEADER =/s#-shared#-dynamiclib -all_load -install_name '"${EPREFIX}/usr/$(get_libdir)/libv8$(get_libname $(get_version_component_range 1-3))"'#' \
 		build/gyp/pylib/gyp/generator/make.py || die
-	# don't force targetting old machines
-	sed -i -e "s/, '-mmacosx-version-min=10.4'//" SConstruct || die
 }
 
 src_compile() {

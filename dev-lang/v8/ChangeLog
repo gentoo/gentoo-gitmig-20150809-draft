@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.159 2012/04/02 12:47:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.160 2012/04/03 11:30:53 grobian Exp $
+
+  03 Apr 2012; Fabian Groffen <grobian@gentoo.org> v8-3.9.23.ebuild,
+  v8-3.9.24.1.ebuild:
+  Drop useless sed for unused SCons buildsystem from all ebuilds for consistency
 
 *v8-3.9.24.1 (02 Apr 2012)
 
