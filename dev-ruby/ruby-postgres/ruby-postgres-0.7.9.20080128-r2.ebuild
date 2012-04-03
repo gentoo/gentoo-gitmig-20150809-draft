@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.9.20080128-r2.ebuild,v 1.6 2011/08/28 19:39:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.9.20080128-r2.ebuild,v 1.7 2012/04/03 17:53:46 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -31,6 +31,12 @@ IUSE=""
 
 RDEPEND="${RDEPEND} dev-db/postgresql-base"
 DEPEND="${DEPEND} dev-db/postgresql-base"
+
+all_ruby_prepare() {
+	# Remove yaml metadata so we supply our own gemspec. There are no
+	# ruby dependencies and this might fix bug 407829.
+	rm ../metadata || die
+}
 
 each_ruby_configure() {
 	${RUBY} -Cext extconf.rb || die
