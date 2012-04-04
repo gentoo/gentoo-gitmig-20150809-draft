@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8-r1.ebuild,v 1.1 2012/01/17 17:36:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8-r2.ebuild,v 1.1 2012/04/04 07:09:52 jlec Exp $
 
 EAPI=4
 
@@ -29,7 +29,8 @@ make_shared_lib() {
 	${2:-$(tc-getCC)} ${LDFLAGS}  \
 		-shared -Wl,-soname="${soname}" \
 		-Wl,--whole-archive "${1}" -Wl,--no-whole-archive \
-		-o $(dirname "${1}")/"${soname}" || return 1
+		-o $(dirname "${1}")/"${soname}" \
+		-lm $(pkg-config --libs blas lapack) || return 1
 }
 
 src_prepare() {
