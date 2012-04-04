@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.601 2012/04/02 12:29:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.602 2012/04/04 19:07:19 floppym Exp $
+
+  04 Apr 2012; Mike Gilbert <floppym@gentoo.org> -chromium-17.0.963.83.ebuild,
+  -chromium-18.0.1025.140.ebuild, chromium-18.0.1025.142.ebuild:
+  Depend on <dev-libs/icu-49 for bug 410777. Remove old.
 
 *chromium-19.0.1084.1 (02 Apr 2012)
 
