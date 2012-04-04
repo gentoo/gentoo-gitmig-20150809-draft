@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/recorder-1.4.5.ebuild,v 1.1 2012/04/04 21:33:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/recorder-1.4.5.ebuild,v 1.2 2012/04/04 21:37:50 ssuominen Exp $
 
 EAPI=4
 
@@ -54,7 +54,7 @@ src_prepare() {
 		done
 	fi
 
-	sed -i -e 's:ar cs es fr pt_BR ru it nl:${MY_NLS}:' Makefile
+	sed -i -e "s:ar cs es fr pt_BR ru it nl:${MY_NLS}:" Makefile || die
 }
 
 pkg_postinst() {
