@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-mobility
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.3 2012/04/04 15:43:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.4 2012/04/04 16:14:23 pesa Exp $
+
+*qt-mobility-1.2.2_p20120403 (04 Apr 2012)
+
+  04 Apr 2012; Davide Pesavento <pesa@gentoo.org>
+  +qt-mobility-1.2.2_p20120403.ebuild:
+  Bump to a more recent snapshot from git, since upstream has stopped doing
+  tarball releases. Fixes compilation against Qt 4.8 (bug 408305). Run 'emake
+  docs' to fix bug 405953. Various code cleanups.
 
   04 Apr 2012; Davide Pesavento <pesa@gentoo.org> qt-mobility-1.2.0.ebuild:
   Restrict qt deps to 4.7.x only, qt-mobility doesn't build against qt 4.8.
