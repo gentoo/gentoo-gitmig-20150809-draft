@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.1.3.ebuild,v 1.3 2012/04/04 09:59:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.0.12.ebuild,v 1.1 2012/04/04 09:59:21 graaff Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby18 ree18"
 
 RUBY_FAKEGEM_TASK_TEST="test:regular"
 RUBY_FAKEGEM_TASK_DOC="generate_guides"
 RUBY_FAKEGEM_DOCDIR="guides/output"
-RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.rdoc"
+RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc"
 
 RUBY_FAKEGEM_GEMSPEC="railties.gemspec"
 
@@ -19,8 +19,8 @@ HOMEPAGE="http://github.com/rails/rails"
 SRC_URI="http://github.com/rails/rails/tarball/v${PV} -> rails-${PV}.tgz"
 
 LICENSE="MIT"
-SLOT="3.1"
-KEYWORDS="~amd64 ~ppc64 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+SLOT="3.0"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RUBY_S="rails-rails-*/railties"
@@ -34,8 +34,7 @@ ruby_add_rdepend "
 	~dev-ruby/activesupport-${PV}
 	~dev-ruby/actionpack-${PV}
 	>=dev-ruby/rdoc-3.4
-	>=dev-ruby/thor-0.14.6
-	>=dev-ruby/rack-ssl-1.3.2:1.3
+	>=dev-ruby/thor-0.14.4
 	>=dev-ruby/rake-0.8.7"
 
 ruby_add_bdepend "
@@ -46,9 +45,3 @@ ruby_add_bdepend "
 	doc? (
 		>=dev-ruby/redcloth-4.1.1
 	)"
-
-all_ruby_prepare() {
-	# Remove items from the common Gemfile that we don't need for this
-	# test run. This also requires handling some gemspecs.
-	sed -i -e '/\(uglifier\|system_timer\|sdoc\|w3c_validators\|pg\)/d' ../Gemfile || die
-}

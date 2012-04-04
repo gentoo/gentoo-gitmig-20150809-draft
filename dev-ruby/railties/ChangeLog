@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/railties
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.18 2011/12/31 21:43:41 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.19 2012/04/04 09:59:21 graaff Exp $
+
+*railties-3.0.12 (04 Apr 2012)
+
+  04 Apr 2012; Hans de Graaff <graaff@gentoo.org> +railties-3.0.12.ebuild,
+  railties-3.1.3.ebuild:
+  Add missing ~ppc64 which was most likely the intention given that rails
+  itself is keyworded.
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> railties-3.1.3.ebuild:
   Add Prefix keywords, bug #396547
