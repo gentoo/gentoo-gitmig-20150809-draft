@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/palapeli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.57 2012/03/23 07:37:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.58 2012/04/04 19:16:32 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> palapeli-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> -palapeli-4.8.0.ebuild:
   Remove KDE SC 4.8.0

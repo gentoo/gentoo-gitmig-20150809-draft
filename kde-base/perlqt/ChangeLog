@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/perlqt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.25 2012/04/01 15:45:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.26 2012/04/04 19:17:49 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> perlqt-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
 
   01 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> perlqt-4.8.1.ebuild,
   +files/perlqt-4.8.1-tests.patch:

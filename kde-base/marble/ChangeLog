@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.132 2012/03/23 09:49:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.133 2012/04/04 19:13:18 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> marble-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org> marble-4.8.1.ebuild:
   Whitespace.

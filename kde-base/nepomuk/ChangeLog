@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nepomuk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.120 2012/04/04 11:01:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.121 2012/04/04 19:14:15 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> nepomuk-4.8.1-r1.ebuild:
+  Stable for amd64, wrt bug #409403
 
 *nepomuk-4.8.1-r1 (04 Apr 2012)
 

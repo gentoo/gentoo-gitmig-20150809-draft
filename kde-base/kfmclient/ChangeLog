@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfmclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/ChangeLog,v 1.83 2012/03/31 14:58:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/ChangeLog,v 1.84 2012/04/04 18:09:29 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> kfmclient-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
 
   31 Mar 2012; Markus Meier <maekke@gentoo.org> kfmclient-4.8.1.ebuild:
   add ~arm, bug #402989
