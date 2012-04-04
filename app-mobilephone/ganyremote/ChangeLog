@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/ganyremote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.17 2012/03/28 06:55:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.18 2012/04/04 21:31:24 jdhore Exp $
+
+  04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> ganyremote-5.13.ebuild:
+  marked x86 per bug 404613
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> ganyremote-5.13.ebuild:
   Stable for amd64, wrt bug #404613
