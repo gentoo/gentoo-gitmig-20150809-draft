@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.134 2012/03/30 18:06:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.135 2012/04/04 17:56:52 jer Exp $
+
+  04 Apr 2012; Jeroen Roovers <jer@gentoo.org> qdbm-1.8.78-r1.ebuild:
+  Stable for HPPA (bug #404629).
 
   30 Mar 2012; Markus Meier <maekke@gentoo.org> qdbm-1.8.78-r1.ebuild:
   arm stable, bug #404629
