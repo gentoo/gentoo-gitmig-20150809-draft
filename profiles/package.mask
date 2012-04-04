@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13647 2012/04/04 10:20:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13648 2012/04/04 14:51:31 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (04 Apr 2012)
+# Alpha versions of dev-libs/libevent are considered unstable
+>dev-libs/libevent-2.1
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Apr 2012)
 # - Still using the obsolete MusicBrainz RDF based database.
