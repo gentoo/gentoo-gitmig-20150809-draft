@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdmtx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdmtx/ChangeLog,v 1.3 2012/04/01 07:35:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdmtx/ChangeLog,v 1.4 2012/04/04 16:40:49 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> libdmtx-0.7.4.ebuild:
+  Stable for amd64, wrt bug #409403
 
   01 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libdmtx-0.7.4.ebuild:
   Make static libs optional and punt the la archive.
