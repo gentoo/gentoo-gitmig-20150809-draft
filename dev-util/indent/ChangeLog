@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/indent
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.54 2010/05/30 18:22:20 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.55 2012/04/04 16:07:42 jer Exp $
+
+*indent-2.2.11-r1 (04 Apr 2012)
+
+  04 Apr 2012; Jeroen Roovers <jer@gentoo.org> +indent-2.2.11-r1.ebuild,
+  +files/2.2.11-texi2html-5.patch:
+  Add texi2html-5 patch by Michael (kensington, bug #410767). Reinstate LINGUAS
+  (bug #94837 revisited).
 
   30 May 2010; Raúl Porcel <armin76@gentoo.org> indent-2.2.11.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #318809
