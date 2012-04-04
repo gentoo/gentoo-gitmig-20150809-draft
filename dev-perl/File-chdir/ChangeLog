@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-chdir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.30 2012/03/28 07:33:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.31 2012/04/04 07:51:49 jdhore Exp $
+
+  04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> File-chdir-0.100.600.ebuild:
+  marked x86 per bug 404671
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> File-chdir-0.100.600.ebuild:
   Stable for amd64, wrt bug #404671
