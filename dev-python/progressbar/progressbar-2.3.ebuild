@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/progressbar-2.3.ebuild,v 1.5 2012/02/22 09:35:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/progressbar-2.3.ebuild,v 1.6 2012/04/04 18:30:31 jdhore Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="http://python-${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 BSD )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="examples"
 
 DEPEND="dev-python/setuptools"
