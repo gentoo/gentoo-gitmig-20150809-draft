@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/rnv-1.7.10-r1.ebuild,v 1.2 2012/03/28 06:57:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/rnv-1.7.10-r1.ebuild,v 1.3 2012/04/04 23:09:21 jdhore Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-libs/expat"
