@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14-r1.ebuild,v 1.9 2012/04/04 03:19:00 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14-r1.ebuild,v 1.10 2012/04/04 03:27:54 floppym Exp $
 
 EAPI=3
 
@@ -37,6 +37,7 @@ DEPEND=">=dev-lang/perl-5
 		www-client/links
 		www-client/elinks
 		virtual/w3m )"
+RDEPEND="${DEPEND}"
 
 # including both xml-simple-dtd 4.1.2.4 and 1.0, to ease
 # transition to simple-dtd 1.0, <obz@gentoo.org>
