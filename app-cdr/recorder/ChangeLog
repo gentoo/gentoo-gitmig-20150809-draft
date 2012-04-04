@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/recorder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/ChangeLog,v 1.5 2010/06/11 21:02:47 yngwin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/ChangeLog,v 1.6 2012/04/04 21:33:24 ssuominen Exp $
+
+*recorder-1.4.5 (04 Apr 2012)
+
+  04 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> +recorder-1.4.5.ebuild:
+  Version bump and use Python 2.x wrt #410743 by Calvin Kruse
 
   11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as maintainer
