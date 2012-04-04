@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mysql2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.16 2012/03/11 14:04:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.17 2012/04/04 09:50:21 graaff Exp $
+
+  04 Apr 2012; Hans de Graaff <graaff@gentoo.org> mysql2-0.3.7.ebuild,
+  mysql2-0.3.11.ebuild:
+  Add ~ppc64 also to latest versions.
 
   11 Mar 2012; Brent Baude <ranger@gentoo.org> mysql2-0.3.6.ebuild:
   Marking mysql2-0.3.6 ~ppc64 for bug 396547
