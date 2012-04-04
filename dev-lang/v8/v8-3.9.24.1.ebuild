@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.9.24.1.ebuild,v 1.2 2012/04/03 11:30:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.9.24.1.ebuild,v 1.3 2012/04/04 01:01:10 floppym Exp $
 
 EAPI="4"
 
@@ -16,15 +16,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x64-macos ~x86-macos"
 IUSE=""
-
-pkg_pretend() {
-	local gccver=$(gcc-fullversion)
-	if [[ ${gccver} = 4.5.2 ]]; then
-		eerror "The currently selected version of gcc is known to segfault when building this"
-		eerror "version of V8. Please use at least gcc-4.5.3."
-		die "gcc-${gccver} detected."
-	fi
-}
 
 pkg_setup() {
 	python_set_active_version 2
