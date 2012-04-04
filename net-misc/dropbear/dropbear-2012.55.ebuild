@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.9 2012/03/03 19:56:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.10 2012/04/04 17:42:56 heroxbd Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux"
 IUSE="bsdpty minimal multicall pam static syslog zlib"
 
 LIB_DEPEND="zlib? ( sys-libs/zlib[static-libs(+)] )"
@@ -71,7 +71,7 @@ src_install() {
 
 	# The multi install target does not install the links
 	if use multicall ; then
-		cd "${D}"/usr/bin
+		cd "${ED}"/usr/bin
 		local x
 		for x in ${progs[@]} ; do
 			ln -s dropbearmulti ${x} || die "ln -s dropbearmulti to ${x} failed"
@@ -84,7 +84,7 @@ src_install() {
 	save_config options.h
 
 	if ! use minimal ; then
-		mv "${D}"/usr/bin/{,db}scp || die
+		mv "${ED}"/usr/bin/{,db}scp || die
 	fi
 
 	pamd_mimic system-remote-login dropbear auth account password session
