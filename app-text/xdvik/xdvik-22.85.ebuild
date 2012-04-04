@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85.ebuild,v 1.1 2012/04/03 12:03:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85.ebuild,v 1.2 2012/04/04 12:04:26 aballier Exp $
 
 EAPI=4
 inherit eutils flag-o-matic elisp-common toolchain-funcs
@@ -32,7 +32,8 @@ TEXMF_PATH=/usr/share/texmf
 S=${WORKDIR}/${P}/texk/xdvik
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-mksedscript.patch"
+	epatch "${FILESDIR}/${P}-mksedscript.patch" \
+		"${FILESDIR}/${P}-mksedscript_gentoo.patch"
 	# Make sure system kpathsea headers are used
 	cd "${WORKDIR}/${P}/texk/kpathsea"
 	for i in *.h ; do echo "#include_next \"$i\"" > $i; done

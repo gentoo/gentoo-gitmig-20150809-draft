@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.81 2012/04/03 12:03:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.82 2012/04/04 12:04:26 aballier Exp $
+
+  04 Apr 2012; Alexis Ballier <aballier@gentoo.org> xdvik-22.85.ebuild,
+  +files/xdvik-22.85-mksedscript_gentoo.patch:
+  add another patch tto mksedscript to fix bug #410695
 
 *xdvik-22.85 (03 Apr 2012)
 
