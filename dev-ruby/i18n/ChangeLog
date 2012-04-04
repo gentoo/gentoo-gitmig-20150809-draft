@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.43 2012/03/11 14:39:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.44 2012/04/04 09:13:56 graaff Exp $
+
+  04 Apr 2012; Hans de Graaff <graaff@gentoo.org> i18n-0.6.0-r1.ebuild:
+  Drop ia64,sparc keywords from the ruby19-specific version to fix the
+  dependency chain. This is already covered by bug 396043.
 
   11 Mar 2012; Brent Baude <ranger@gentoo.org> i18n-0.6.0-r1.ebuild:
   Marking i18n-0.6.0-r1 ~ppc64 for bug 396547
