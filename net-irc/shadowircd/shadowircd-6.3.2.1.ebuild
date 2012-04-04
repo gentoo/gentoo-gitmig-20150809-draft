@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/shadowircd/shadowircd-6.3.2.1.ebuild,v 1.2 2012/03/03 07:10:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/shadowircd/shadowircd-6.3.2.1.ebuild,v 1.3 2012/04/04 03:18:47 jdhore Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug +ipv6 largenet ssl zlib profile"
+IUSE="debug +ipv6 largenet ssl zlib"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )"
@@ -41,11 +41,11 @@ src_prepare() {
 src_configure() {
 	econf \
 		ac_cv_prog_cc_g=no \
+		--disable-gnutls \
 		$(use_enable debug assert soft) \
 		$(use_enable debug iodebug) \
 		$(use_enable ipv6) \
 		$(use_enable !largenet small-net) \
-		$(use_enable profile) \
 		$(use_enable ssl openssl) \
 		$(use_enable zlib) \
 		--with-program-prefix=shadowircd- \
