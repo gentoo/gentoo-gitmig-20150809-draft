@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/arel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.25 2012/04/04 11:12:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.26 2012/04/04 11:21:09 graaff Exp $
+
+  04 Apr 2012; Hans de Graaff <graaff@gentoo.org> arel-2.2.3.ebuild:
+  Fix version number in gemspec.
 
 *arel-2.2.3 (04 Apr 2012)
 
