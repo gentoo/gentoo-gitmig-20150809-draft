@@ -1,8 +1,13 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.63 2012/03/31 08:40:59 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.64 2012/04/04 03:19:00 heroxbd Exp $
 
-  31 Mar 2012: XU Benda <heroxbd@gentoo.org>
+  04 Apr 2010: Benda XU <heroxbd@gentoo.org>
+  docbook-sgml-utils-0.6.14-r1.ebuild:
+  +docbook-utils-0.6.14-prefix.patch
+  patch for prefix, add keywords for ~x86-{macosx,freebsd}, bug #410737
+ 
+  31 Mar 2012: Benda XU <heroxbd@gentoo.org>
   docbook-sgml-utils-0.6.14-r1.ebuild:
   add keywords for ~{amd64,x86}-linux  
 

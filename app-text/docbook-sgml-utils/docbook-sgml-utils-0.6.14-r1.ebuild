@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14-r1.ebuild,v 1.8 2012/03/31 08:40:59 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14-r1.ebuild,v 1.9 2012/04/04 03:19:00 heroxbd Exp $
 
 EAPI=3
 
-inherit eutils
+inherit eutils autotools prefix
 
 MY_PN=${PN/-sgml/}
 MY_P=${MY_PN}-${PV}
@@ -16,7 +16,7 @@ SRC_URI="ftp://sources.redhat.com/pub/docbook-tools/new-trials/SOURCES/${MY_P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="jadetex"
 
 DEPEND=">=dev-lang/perl-5
@@ -44,6 +44,11 @@ DEPEND=">=dev-lang/perl-5
 src_prepare() {
 	epatch "${FILESDIR}"/${MY_P}-elinks.patch
 	epatch "${FILESDIR}"/${P}-grep-2.7.patch
+	if use prefix; then
+		epatch "${FILESDIR}"/${MY_P}-prefix.patch
+		eprefixify doc/{man,HTML}/Makefile.am bin/jw.in backends/txt configure.in
+		eautoreconf
+	fi
 }
 
 src_install() {
