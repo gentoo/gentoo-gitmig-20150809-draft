@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Tester
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.45 2012/03/30 18:10:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.46 2012/04/04 08:45:18 jdhore Exp $
+
+  04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> Test-Tester-0.108.0.ebuild:
+  marked x86 per bug 404691
 
   30 Mar 2012; Markus Meier <maekke@gentoo.org> Test-Tester-0.108.0.ebuild:
   arm stable, bug #404691
