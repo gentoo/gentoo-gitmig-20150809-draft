@@ -1,6 +1,2 @@
 # Unmask the flag which corresponds to ARCH.
 -ppc
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (05. Mar 2012)
-# Unmask, works with v4l2, #350211
--dxr3

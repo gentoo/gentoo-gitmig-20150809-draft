@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.162 2012/03/22 17:00:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.163 2012/04/04 15:45:28 hd_brummy Exp $
+
+  04 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> ppc32/use.mask:
+  removed dxr3 unmask for ppc32
 
   22 Mar 2012; Tim Harder <radhermit@gentoo.org> package.use.mask:
   Remove redundant use flag mask.
