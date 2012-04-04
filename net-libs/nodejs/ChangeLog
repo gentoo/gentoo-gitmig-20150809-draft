@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.33 2012/03/25 14:58:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.34 2012/04/04 10:21:57 patrick Exp $
+
+*nodejs-0.7.7 (04 Apr 2012)
+
+  04 Apr 2012; Patrick Lauer <patrick@gentoo.org> +nodejs-0.7.7.ebuild:
+  Bump, hackaround for upstream forgetting how makefiles work
 
 *nodejs-0.6.14 (25 Mar 2012)
 
