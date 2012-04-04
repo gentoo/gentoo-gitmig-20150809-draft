@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.32 2012/02/15 17:28:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.33 2012/04/04 01:40:34 jer Exp $
+
+  04 Apr 2012; Jeroen Roovers <jer@gentoo.org> phonon-4.5.1-r1.ebuild,
+  phonon-4.6.0-r1.ebuild:
+  Stable for HPPA (bug #401313).
 
   15 Feb 2012; nixnut <nixnut@gentoo.org> phonon-4.5.1-r1.ebuild:
   ppc stable #401313
