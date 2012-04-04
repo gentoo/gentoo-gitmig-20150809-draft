@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.105 2012/04/03 21:28:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.106 2012/04/04 06:26:04 jdhore Exp $
+
+  04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> sphinx-1.1.2.ebuild:
+  marked x86 per bug 410115
 
   03 Apr 2012; Jeroen Roovers <jer@gentoo.org> sphinx-1.1.2.ebuild:
   Stable for HPPA (bug #410115).
