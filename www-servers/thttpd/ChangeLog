@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.35 2012/03/24 02:59:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.36 2012/04/04 12:24:20 blueness Exp $
+
+*thttpd-2.26.2 (04 Apr 2012)
+
+  04 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +thttpd-2.26.2.ebuild:
+  Version bump after I forked the code
 
 *thttpd-2.25b-r9 (24 Mar 2012)
 
