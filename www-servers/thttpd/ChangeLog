@@ -1,6 +1,21 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.36 2012/04/04 12:24:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.37 2012/04/04 15:05:37 blueness Exp $
+
+  04 Apr 2012; Anthony G. Basile <blueness@gentoo.org> -thttpd-2.25b-r8.ebuild,
+  -thttpd-2.25b-r9.ebuild,
+  -files/thttpd-2.25b-additional-input-validation.patch,
+  -files/thttpd-2.25b-default-to-octet-stream.patch,
+  -files/thttpd-2.25b-fix-buffer-overflow.patch,
+  -files/thttpd-2.25b-fix-illegal-path-info.patch,
+  -files/thttpd-2.25b-fix-insecure-tmp-creation.patch,
+  -files/thttpd-2.25b-monolithic-timer.patch,
+  -files/thttpd-2.25b-ogg-mime-type.patch,
+  -files/thttpd-2.25b-respect-CFLAGS--dont-link-static.patch,
+  -files/thttpd-2.25b-use-Status-header.patch,
+  -files/thttpd-2.25b-use-X-Forwarded-For-header.patch,
+  files/thttpd.conf.sample, files/thttpd.confd:
+  Remove older ebuilds and patches migrated into forked code
 
 *thttpd-2.26.2 (04 Apr 2012)
 
