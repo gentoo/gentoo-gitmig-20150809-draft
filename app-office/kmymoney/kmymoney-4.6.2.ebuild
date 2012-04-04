@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.2.ebuild,v 1.3 2012/03/29 08:06:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.2.ebuild,v 1.4 2012/04/04 19:33:33 ago Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ DESCRIPTION="Personal finance manager for KDE"
 HOMEPAGE="http://kmymoney2.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="debug calendar doc hbci ofx quotes test"
 
