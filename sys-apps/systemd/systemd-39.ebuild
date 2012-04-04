@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-39.ebuild,v 1.1 2012/02/02 20:47:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-39.ebuild,v 1.2 2012/04/04 04:09:02 mgorny Exp $
 
 EAPI=4
 
@@ -51,6 +51,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-apps/openrc-0.8.3"
 DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt
 	dev-util/gperf
 	dev-util/intltool
 	gtk? ( dev-lang/vala:${VALASLOT} )

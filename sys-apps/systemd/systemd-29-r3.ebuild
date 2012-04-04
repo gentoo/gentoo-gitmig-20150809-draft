@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r3.ebuild,v 1.3 2012/01/14 21:17:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r3.ebuild,v 1.4 2012/04/04 04:09:02 mgorny Exp $
 
 EAPI=4
 
@@ -45,6 +45,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-apps/openrc-0.8.3
 	!=sys-apps/systemd-29-r4"
 DEPEND="${COMMON_DEPEND}
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt
 	gtk? ( dev-lang/vala:${VALASLOT} )
 	>=sys-kernel/linux-headers-${MINKV}"
 

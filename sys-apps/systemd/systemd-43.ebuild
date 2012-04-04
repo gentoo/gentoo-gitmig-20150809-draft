@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-43.ebuild,v 1.2 2012/03/08 18:13:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-43.ebuild,v 1.3 2012/04/04 04:09:02 mgorny Exp $
 
 EAPI=4
 
@@ -47,6 +47,8 @@ RDEPEND=">=sys-apps/dbus-1.4.10
 
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt
 	dev-util/gperf
 	dev-util/intltool
 	gtk? ( dev-lang/vala:${VALASLOT} )
