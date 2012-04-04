@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.45 2012/03/27 15:00:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.46 2012/04/04 11:52:38 nimiux Exp $
+
+*inspircd-2.0.5-r2 (04 Apr 2012)
+
+  04 Apr 2012; Chema Alonso <nimiux@gentoo.org> +inspircd-2.0.5-r2.ebuild,
+  +files/inspircd-2.0.5-r2-fix-paths-build.patch:
+  Inspircd moving to github.com. Fix openssl flag wrt bug #409159 (comment 10).
+  Fix ligcrypt dependency wrt bug #409159 (comment 13). Fix xline db path wrt
+  bug #410285.
 
   27 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   inspircd-2.0.5-r1.ebuild:
