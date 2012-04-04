@@ -1,0 +1,55 @@
+From 126638803d35491229f05c4dc9bcf4202cc9dd00 Mon Sep 17 00:00:00 2001
+From: Alec Moskvin <alecm@gmx.com>
+Date: Mon, 19 Mar 2012 23:33:07 -0400
+Subject: [PATCH] Make bundling xdg-utils optional
+
+---
+ razorqt-session/CMakeLists.txt |   15 +++++++++++++--
+ razorqt-session/src/main.cpp   |    3 +++
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+
+diff --git razorqt-session/CMakeLists.txt razorqt-session/CMakeLists.txt
+index f0189d9..17f4533 100644
+--- razorqt-session/CMakeLists.txt
++++ razorqt-session/CMakeLists.txt
+@@ -51,8 +51,19 @@ add_dependencies( razor-session razorqt qtxdg)
+ target_link_libraries ( razor-session  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTXML_LIBRARY} ${X11_X11_LIB} razorqt qtxdg)
+ INSTALL(TARGETS razor-session RUNTIME DESTINATION bin)
+ 
+-install(PROGRAMS resources/xdg-open resources/xdg-mime DESTINATION lib${LIB_SUFFIX}/razor-xdg-tools)
+-add_definitions ( -DPATH_PREPEND=\"${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}/razor-xdg-tools\" )
++if (NOT DEFINED BUNDLE_XDG_UTILS)
++    message(STATUS "*********************************************************************")
++    message(STATUS "Bundling our own xdg-utils.")
++    message(STATUS "If you have xdg-utils newer than 2012-03-02, you can set -DBUNDLE_XDG_UTILS=No")
++    message(STATUS "*********************************************************************")
++    set (BUNDLE_XDG_UTILS Yes)
++endif (NOT DEFINED BUNDLE_XDG_UTILS)
++
++if (BUNDLE_XDG_UTILS)
++    install(PROGRAMS resources/xdg-open resources/xdg-mime DESTINATION lib${LIB_SUFFIX}/razor-xdg-tools)
++    add_definitions ( -DPATH_PREPEND=\"${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}/razor-xdg-tools\" )
++endif (BUNDLE_XDG_UTILS)
++
+ install(PROGRAMS src/startrazor DESTINATION bin)
+ 
+ add_subdirectory(config)
+diff --git razorqt-session/src/main.cpp razorqt-session/src/main.cpp
+index 57b361a..7925448 100644
+--- razorqt-session/src/main.cpp
++++ razorqt-session/src/main.cpp
+@@ -73,8 +73,11 @@ int main(int argc, char **argv)
+         }
+     }
+     
++#ifdef PATH_PREPEND
+     // PATH for out own bundled XDG tools
+     razor_setenv_prepend("PATH", PATH_PREPEND);
++#endif // PATH_PREPEND
++
+     // special variable for Razor environment menu
+     razor_setenv("XDG_MENU_PREFIX", "razor-");
+ 
+-- 
+1.7.8.5
+
