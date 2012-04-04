@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbibtex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.41 2011/12/08 12:01:56 johu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.42 2012/04/04 19:34:56 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> kbibtex-0.4.ebuild:
+  Stable for amd64, wrt bug #409403
 
 *kbibtex-0.4 (08 Dec 2011)
 
