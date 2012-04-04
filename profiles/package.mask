@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13646 2012/04/03 23:19:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13647 2012/04/04 10:20:41 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -553,7 +553,9 @@ x11-wm/scrotwm
 
 # Mike Gilbert <floppym@gentoo.org> (09 Feb 2012)
 # Mask v8 versions used for www-client/chromium dev channel releases.
+# newer nodejs depends on it, added - patrick
 >=dev-lang/v8-3.9
+>=net-libs/nodejs-0.7
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Masked for testing
