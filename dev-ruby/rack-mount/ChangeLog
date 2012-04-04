@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack-mount
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.20 2012/01/01 17:31:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.21 2012/04/04 09:35:32 graaff Exp $
+
+  04 Apr 2012; Hans de Graaff <graaff@gentoo.org> rack-mount-0.7.4.ebuild,
+  rack-mount-0.8.3.ebuild:
+  Move ~ppc,~ppc64 keywords forward to latest version.
 
   01 Jan 2012; Fabian Groffen <grobian@gentoo.org> rack-mount-0.8.3.ebuild:
   Add Prefix keywords
