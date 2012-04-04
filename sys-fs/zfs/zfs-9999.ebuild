@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.15 2012/03/04 19:46:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.16 2012/04/04 00:21:49 floppym Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!sys-fs/zfs-fuse
-	sys-fs/udev
+	!prefix? ( sys-fs/udev )
 	test-suite? (
 		sys-apps/gawk
 		sys-apps/util-linux
@@ -45,13 +45,14 @@ AUTOTOOLS_IN_SOURCE_BUILD="1"
 pkg_setup() {
 	CONFIG_CHECK="MODULES
 		!PREEMPT
+		!PREEMPT_VOLUNTARY
 		!DEBUG_LOCK_ALLOC
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 		BLK_DEV_LOOP"
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 	check_extra_config
-	use x86 && ewarn "32-bit kernels are unsupported by ZFSOnLinux upstream. Do	not file bug reports."
+	use x86 && ewarn "32-bit kernels are unsupported by ZFSOnLinux upstream. Do not file bug reports."
 }
 
 src_prepare() {
@@ -66,12 +67,12 @@ src_configure() {
 	use custom-cflags || strip-flags
 	set_arch_to_kernel
 	local myeconfargs=(
-		--bindir=/bin
-		--sbindir=/sbin
+		--bindir=${EPREFIX}/bin
+		--sbindir=${EPREFIX}/sbin
 		--with-config=all
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
-		--with-udevdir=/lib/udev
+		--with-udevdir=${EPREFIX}/lib/udev
 		$(use_enable debug)
 	)
 	autotools-utils_src_configure
