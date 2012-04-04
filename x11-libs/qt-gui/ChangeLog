@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.174 2012/04/03 21:46:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.175 2012/04/04 11:47:17 johu Exp $
+
+*qt-gui-4.8.1-r1 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org>
+  +files/qt-gui-4.8.1-fix-calligra-crash.patch, +qt-gui-4.8.1-r1.ebuild,
+  -qt-gui-4.8.1.ebuild:
+  Revision bump adds upstream patch to fix crash in calligra. Reported in kde
+  packagers ml and requested by dilfridge.
 
   03 Apr 2012; Jeroen Roovers <jer@gentoo.org> qt-gui-4.7.4-r1.ebuild:
   Stable for HPPA (bug #390963).

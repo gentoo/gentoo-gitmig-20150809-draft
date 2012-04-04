@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.1.ebuild,v 1.2 2012/03/30 19:53:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.1-r1.ebuild,v 1.1 2012/04/04 11:47:17 johu Exp $
 
 EAPI=4
 
@@ -56,6 +56,7 @@ PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,c++0x=,debug=,qpa=] )
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.7.3-cups.patch"
+	"${FILESDIR}/${PN}-4.8.1-fix-calligra-crash.patch"
 )
 
 pkg_setup() {
