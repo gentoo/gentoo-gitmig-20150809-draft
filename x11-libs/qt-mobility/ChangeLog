@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-mobility
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.2 2012/03/27 18:43:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.3 2012/04/04 15:43:36 pesa Exp $
+
+  04 Apr 2012; Davide Pesavento <pesa@gentoo.org> qt-mobility-1.2.0.ebuild:
+  Restrict qt deps to 4.7.x only, qt-mobility doesn't build against qt 4.8.
+  Restrict qmf dependency too. Drop false deps on udisks and upower, they're
+  used only on meego.
 
   27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> qt-mobility-1.2.0.ebuild:
   Pin to SLOT="0" of sys-fs/udisks.

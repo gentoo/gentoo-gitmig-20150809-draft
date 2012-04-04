@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.0.ebuild,v 1.2 2012/03/27 18:43:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.0.ebuild,v 1.3 2012/04/04 15:43:36 pesa Exp $
 
 EAPI=4
 
@@ -15,11 +15,6 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-# FIXME
-# Check possible automagic deps in:
-#  - plugins/contacts/serviceactionmanager
-#  - plugins/feedback/mmk
-
 QT_MOBILITY_MODULES="bearer connectivity contacts feedback gallery
 		location messaging multimedia organizer publishsubscribe
 		sensors serviceframework systeminfo versit"
@@ -31,22 +26,23 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=x11-libs/qt-core-4.7.0:4
+	=x11-libs/qt-core-4.7*
 	bearer? (
 		networkmanager? (
 			net-misc/networkmanager
-			>=x11-libs/qt-dbus-4.7.0:4
+			=x11-libs/qt-dbus-4.7*
 		)
 	)
 	connectivity? (
+		=x11-libs/qt-dbus-4.7*
 		bluetooth? ( net-wireless/bluez )
 	)
-	gallery? ( >=x11-libs/qt-dbus-4.7.0:4 )
+	gallery? ( =x11-libs/qt-dbus-4.7* )
 	location? (
-		>=x11-libs/qt-gui-4.7.0:4
-		>=x11-libs/qt-sql-4.7.0:4[sqlite]
+		=x11-libs/qt-gui-4.7*
+		=x11-libs/qt-sql-4.7*[sqlite]
 	)
-	messaging? ( net-libs/qmf )
+	messaging? ( ~net-libs/qmf-2.0_p201143 )
 	multimedia? (
 		media-libs/alsa-lib
 		>=media-libs/gstreamer-0.10.19:0.10
@@ -54,29 +50,30 @@ RDEPEND="
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXv
-		>=x11-libs/qt-gui-4.7.0:4
-		opengl? ( >=x11-libs/qt-opengl-4.7.0:4 )
+		=x11-libs/qt-gui-4.7*
+		opengl? ( =x11-libs/qt-opengl-4.7* )
 		pulseaudio? ( media-sound/pulseaudio[alsa] )
 	)
 	publishsubscribe? (
-		tools? ( >=x11-libs/qt-gui-4.7.0:4 )
+		tools? ( =x11-libs/qt-gui-4.7* )
 	)
-	qml? ( >=x11-libs/qt-declarative-4.7.0:4 )
+	qml? ( =x11-libs/qt-declarative-4.7* )
 	serviceframework? (
-		>=x11-libs/qt-dbus-4.7.0:4
-		>=x11-libs/qt-sql-4.7.0:4[sqlite]
-		tools? ( >=x11-libs/qt-gui-4.7.0:4 )
+		=x11-libs/qt-dbus-4.7*
+		=x11-libs/qt-sql-4.7*[sqlite]
+		tools? ( =x11-libs/qt-gui-4.7* )
 	)
 	systeminfo? (
 		sys-apps/util-linux
 		sys-fs/udev
 		x11-libs/libX11
 		x11-libs/libXrandr
-		>=x11-libs/qt-dbus-4.7.0:4
-		>=x11-libs/qt-gui-4.7.0:4
+		=x11-libs/qt-dbus-4.7*
+		=x11-libs/qt-gui-4.7*
 		bluetooth? ( net-wireless/bluez )
 		networkmanager? ( net-misc/networkmanager )
 	)
+	versit? ( =x11-libs/qt-gui-4.7* )
 "
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -90,13 +87,10 @@ PDEPEND="
 	connectivity? (
 		bluetooth? ( app-mobilephone/obexd )
 	)
-	systeminfo? (
-		sys-fs/udisks:0
-		sys-power/upower
-	)
 "
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
 DOCS="changes-${PV}"
 
 pkg_setup() {
@@ -169,9 +163,8 @@ src_install() {
 	qt4-r2_src_install
 
 	if use doc; then
-		cd "${S}"/doc
-		dohtml -r html/*
-		insinto /usr/share/doc/${PF}
-		doins qch/qtmobility.qch
+		dohtml -r doc/html/*
+		dodoc doc/qch/qtmobility.qch
+		docompress -x /usr/share/doc/${PF}/qtmobility.qch
 	fi
 }
