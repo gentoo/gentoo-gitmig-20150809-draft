@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yawp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/ChangeLog,v 1.10 2012/01/05 17:43:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/ChangeLog,v 1.11 2012/04/04 19:37:15 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> yawp-0.4.2.ebuild:
+  Stable for amd64, wrt bug #409403
 
 *yawp-0.4.2 (05 Jan 2012)
 

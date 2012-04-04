@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/nightmode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/nightmode/ChangeLog,v 1.3 2012/02/22 22:39:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/nightmode/ChangeLog,v 1.4 2012/04/04 19:35:50 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> nightmode-0.3.ebuild:
+  Stable for amd64, wrt bug #409403
 
 *nightmode-0.3 (22 Feb 2012)
 
