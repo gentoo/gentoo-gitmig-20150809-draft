@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.105 2012/03/29 15:04:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.106 2012/04/04 05:33:00 jdhore Exp $
+
+  04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> youtube-dl-2012.01.08.ebuild:
+  marked x86 per bug 409753
 
   29 Mar 2012; Jeroen Roovers <jer@gentoo.org> youtube-dl-2012.01.08.ebuild:
   Stable for HPPA (bug #409753).
