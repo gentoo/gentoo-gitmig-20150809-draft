@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.214 2012/03/18 09:13:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.215 2012/04/04 19:30:58 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> digikam-2.5.0.ebuild:
+  Stable for amd64, wrt bug #409403
 
   18 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   tt (tatar) is now in global linguas list
