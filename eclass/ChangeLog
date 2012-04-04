@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.202 2012/04/03 19:21:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.203 2012/04/04 15:10:20 johu Exp $
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> kde4-base.eclass,
+  kde4-meta.eclass:
+  Use .xz also for 4.8.x with x>1.
 
   03 Apr 2012; Krzysztof Pawlik <nelchael@gentoo.org>
   python-distutils-ng.eclass:
