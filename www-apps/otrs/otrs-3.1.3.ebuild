@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-3.0.10.ebuild,v 1.2 2011/11/02 21:52:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-3.1.3.ebuild,v 1.1 2012/04/04 08:16:02 patrick Exp $
 
 EAPI=2
 
@@ -81,6 +81,10 @@ RDEPEND="${DEPEND}
 OTRS_HOME="/var/lib/otrs"
 
 pkg_setup() {
+	# The enewuser otrs will fail if apache isn't there, but it's an optional dep
+	# so we create the apache user here just in case
+	enewgroup apache 81
+	enewuser apache 81 -1 /var/www apache
 	enewuser otrs -1 -1 ${OTRS_HOME} apache
 	confutils_require_any mysql postgres
 }
@@ -121,8 +125,8 @@ src_prepare() {
 }
 
 src_install() {
-	dodoc CHANGES CREDITS INSTALL README* TODO UPGRADING \
-	 	doc/otrs-database.dia  doc/X-OTRS-Headers.txt || die
+	dodoc CHANGES CREDITS INSTALL README* UPGRADING \
+	 	doc/X-OTRS-Headers.txt || die
 
 	dodoc doc/manual/en/otrs_admin_book.pdf
 
