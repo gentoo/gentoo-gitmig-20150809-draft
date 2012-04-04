@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xpr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.35 2010/01/23 19:15:43 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.36 2012/04/04 12:53:00 chithanh Exp $
+
+*xpr-1.0.4 (04 Apr 2012)
+
+  04 Apr 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xpr-1.0.4.ebuild:
+  Version bump.
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> -xpr-1.0.2.ebuild:
   rm
