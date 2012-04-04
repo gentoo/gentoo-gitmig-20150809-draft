@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.0.ebuild,v 1.1 2012/01/25 08:49:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.0.ebuild,v 1.2 2012/04/04 08:54:34 johu Exp $
 
 EAPI=4
 
@@ -16,8 +16,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug farsight glib test"
 
-# TODO raise dep if version is available:
-# >=net-libs/telepathy-glib-0.17.2
 RDEPEND="
 	dev-python/dbus-python
 	x11-libs/qt-core:4[glib?]
@@ -30,7 +28,7 @@ RDEPEND="
 	)
 	glib? (
 		dev-libs/glib:2
-		>=net-libs/telepathy-glib-0.15.1
+		>=net-libs/telepathy-glib-0.17.2
 	)
 	!net-libs/telepathy-qt4
 "
