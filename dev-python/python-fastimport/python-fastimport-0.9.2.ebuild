@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastimport/python-fastimport-0.9.0.ebuild,v 1.1 2012/02/13 05:13:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastimport/python-fastimport-0.9.2.ebuild,v 1.1 2012/04/04 08:19:31 tetromino Exp $
 
 EAPI="4"
 
