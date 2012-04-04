@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/schedtool-1.3.0-r1.ebuild,v 1.4 2012/03/25 14:42:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/schedtool-1.3.0-r1.ebuild,v 1.5 2012/04/04 21:05:29 jdhore Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://freequaos.host.sk/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="amd64 ~mips ppc ~x86"
+KEYWORDS="amd64 ~mips ppc x86"
 IUSE=""
 
 src_prepare() {
