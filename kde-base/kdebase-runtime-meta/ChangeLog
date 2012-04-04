@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-runtime-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.68 2012/03/31 17:06:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.69 2012/04/04 17:18:10 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  kdebase-runtime-meta-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
 
   31 Mar 2012; Markus Meier <maekke@gentoo.org>
   kdebase-runtime-meta-4.8.1.ebuild:

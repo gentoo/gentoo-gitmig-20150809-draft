@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-menu-icons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu-icons/ChangeLog,v 1.89 2012/03/31 14:24:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu-icons/ChangeLog,v 1.90 2012/04/04 17:16:34 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  kdebase-menu-icons-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
 
   31 Mar 2012; Markus Meier <maekke@gentoo.org>
   kdebase-menu-icons-4.8.1.ebuild:

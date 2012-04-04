@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-sounds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-sounds/ChangeLog,v 1.178 2012/03/23 07:37:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-sounds/ChangeLog,v 1.179 2012/04/04 17:12:49 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  kdeartwork-sounds-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org>
   -kdeartwork-sounds-4.8.0.ebuild:

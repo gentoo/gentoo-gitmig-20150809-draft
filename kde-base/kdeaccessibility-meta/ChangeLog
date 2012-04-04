@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.200 2012/03/23 07:37:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.201 2012/04/04 17:08:53 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  kdeaccessibility-meta-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
 
   23 Mar 2012; Johannes Huber <johu@gentoo.org>
   -kdeaccessibility-meta-4.8.0.ebuild:

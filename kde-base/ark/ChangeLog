@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.221 2012/03/27 09:00:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.222 2012/04/04 16:43:34 ago Exp $
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> ark-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
 
   27 Mar 2012; Johannes Huber <johu@gentoo.org> ark-4.8.1.ebuild:
   Enable tests again based on testing by Ian Delaney, Chris Reffett and me.
