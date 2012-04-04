@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.7 2012/04/01 05:25:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.8 2012/04/04 08:07:04 jlec Exp $
 
 EAPI=4
 
@@ -24,6 +24,8 @@ DEPEND="
 	octave? ( sci-mathematics/octave )
 	python? ( dev-python/numpy )"
 RDEPEND="${DEPEND}"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	if use python; then
@@ -50,19 +52,21 @@ src_configure() {
 		$(use_with python)
 		--without-matlab
 	)
-	use python && python_copy_sources swig
 	autotools-utils_src_configure
 }
 
 src_compile() {
 	autotools-utils_src_compile
 	if use python; then
+		python_copy_sources swig
 		compilation() {
 			autotools-utils_src_compile \
 				PYTHON_CPPFLAGS="-I$(python_get_includedir)" \
 				PYTHON_LDFLAGS="$(python_get_library -l)" \
 				PYTHON_SITE_PKG="$(python_get_sitedir)" \
 				PYTHON_VERSION="$(python_get_version)" \
+				PYTHON_INCLUDES="$(python_get_includedir)" \
+				pythondir="$(python_get_sitedir)" \
 				pyexecdir="$(python_get_sitedir)"
 		}
 		python_execute_function -s --source-dir swig compilation
@@ -73,7 +77,8 @@ src_install() {
 	autotools-utils_src_install
 	if use python; then
 		installation() {
-			autotools-utils_src_install \
+			rm *.la
+			emake DESTDIR=${D} install \
 				pyexecdir="$(python_get_sitedir)" \
 				pythondir="$(python_get_sitedir)"
 		}
