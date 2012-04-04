@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/haskell-updater
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.27 2012/03/24 17:07:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.28 2012/04/04 18:19:34 slyfox Exp $
+
+  04 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  haskell-updater-1.2.0.5.ebuild:
+  alpha/ia64/ppc/sparc stable wrt bug #407835
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   haskell-updater-1.2.0.5.ebuild:
