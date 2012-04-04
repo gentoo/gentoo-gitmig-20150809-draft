@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/bitbake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.45 2012/03/17 10:28:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.46 2012/04/04 18:35:16 jdhore Exp $
+
+  04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> bitbake-1.14.0.ebuild:
+  marked x86 per bug 403759
 
   17 Mar 2012; Tim Harder <radhermit@gentoo.org> bitbake-9999.ebuild:
   Add updates to live ebuild.
