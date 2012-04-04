@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.362 2012/04/03 11:58:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.363 2012/04/04 16:01:32 vapier Exp $
+
+  04 Apr 2012; Mike Frysinger <vapier@gentoo.org> libpng-1.2.49.ebuild,
+  libpng-1.5.10.ebuild:
+  Mark arm/ia64/s390/sh stable #410153.
 
   03 Apr 2012; Thomas Kahle <tomka@gentoo.org> libpng-1.2.49.ebuild,
   libpng-1.5.10.ebuild:
