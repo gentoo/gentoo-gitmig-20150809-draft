@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.203 2012/04/04 15:10:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.204 2012/04/04 16:37:50 pesa Exp $
+
+  04 Apr 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Update from qt overlay, fixes #407523.
 
   04 Apr 2012; Johannes Huber <johu@gentoo.org> kde4-base.eclass,
   kde4-meta.eclass:

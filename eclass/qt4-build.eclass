@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.123 2012/03/08 14:24:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.124 2012/04/04 16:37:50 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -14,26 +14,45 @@ case ${EAPI} in
 	*)	die "qt4-build.eclass requires EAPI 2, 3 or 4." ;;
 esac
 
-inherit base eutils multilib toolchain-funcs flag-o-matic versionator
+inherit base eutils flag-o-matic multilib toolchain-funcs versionator
+
+if [[ ${PV} == *9999* ]]; then
+	QT4_BUILD_TYPE="live"
+	inherit git-2
+else
+	QT4_BUILD_TYPE="release"
+fi
+
+HOMEPAGE="http://qt-project.org/ http://qt.nokia.com/"
+LICENSE="|| ( LGPL-2.1 GPL-3 )"
 
 MY_PV=${PV/_/-}
 MY_P=qt-everywhere-opensource-src-${MY_PV}
 
-HOMEPAGE="http://qt.nokia.com/ http://qt-project.org/"
-SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
-LICENSE="|| ( LGPL-2.1 GPL-3 )"
+case ${QT4_BUILD_TYPE} in
+	live)
+		EGIT_REPO_URI="git://gitorious.org/qt/qt.git
+			https://git.gitorious.org/qt/qt.git"
+		EGIT_BRANCH="${PV%.9999}"
+		;;
+	release)
+		SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
+		;;
+esac
 
 IUSE="aqua debug pch"
-
-[[ ${CATEGORY}/${PN} != x11-libs/qt-xmlpatterns ]] &&
-[[ ${CATEGORY}/${PN} != x11-themes/qgtkstyle ]] &&
+if [[ ${CATEGORY}/${PN} != x11-libs/qt-xmlpatterns ]]; then
 	IUSE+=" +exceptions"
-
-if version_is_at_least 4.7.99999999; then
+fi
+if version_is_at_least 4.8; then
 	IUSE+=" c++0x qpa"
 fi
 
 DEPEND="dev-util/pkgconfig"
+if [[ ${QT4_BUILD_TYPE} == live ]]; then
+	DEPEND+=" dev-lang/perl"
+fi
+
 RDEPEND="
 	!<x11-libs/qt-assistant-${PV}
 	!>x11-libs/qt-assistant-${PV}-r9999
@@ -83,8 +102,10 @@ qt4-build_pkg_setup() {
 	# Downgrading revisions within the same release should be allowed
 	if has_version '>'${CATEGORY}/${P}-r9999; then
 		if [[ -z ${I_KNOW_WHAT_I_AM_DOING} ]]; then
+			eerror
 			eerror "Sanity check to keep you from breaking your system:"
 			eerror "  Downgrading Qt is completely unsupported and will break your system!"
+			eerror
 			die "aborting to save your system"
 		else
 			ewarn "Downgrading Qt is completely unsupported and will break your system!"
@@ -138,17 +159,24 @@ qt4-build_pkg_setup() {
 qt4-build_src_unpack() {
 	setqtenv
 
-	local tarball="${MY_P}.tar.gz" target= targets=
-	for target in configure LICENSE.GPL3 LICENSE.LGPL projects.pro \
-		src/{qbase,qt_targets,qt_install}.pri bin config.tests \
-		mkspecs qmake ${QT4_EXTRACT_DIRECTORIES}
-	do
-		targets+="${MY_P}/${target} "
-	done
+	case ${QT4_BUILD_TYPE} in
+		live)
+			git-2_src_unpack
+			;;
+		release)
+			local tarball="${MY_P}.tar.gz" target= targets=
+			for target in configure LICENSE.GPL3 LICENSE.LGPL projects.pro \
+				src/{qbase,qt_targets,qt_install}.pri bin config.tests \
+				mkspecs qmake ${QT4_EXTRACT_DIRECTORIES}
+			do
+				targets+="${MY_P}/${target} "
+			done
 
-	ebegin "Unpacking parts of ${tarball}:" ${targets//${MY_P}\/}
-	tar -xzf "${DISTDIR}/${tarball}" ${targets}
-	eend $? || die "failed to unpack"
+			ebegin "Unpacking parts of ${tarball}:" ${targets//${MY_P}\/}
+			tar -xzf "${DISTDIR}/${tarball}" ${targets}
+			eend $? || die "failed to unpack"
+			;;
+	esac
 }
 
 # @ECLASS-VARIABLE: PATCHES
@@ -170,7 +198,10 @@ qt4-build_src_unpack() {
 # the build system in order to respect CFLAGS/CXXFLAGS/LDFLAGS specified in /etc/make.conf.
 qt4-build_src_prepare() {
 	setqtenv
-	cd "${S}"
+
+	if [[ ${QT4_BUILD_TYPE} == live ]]; then
+		QTDIR="." ./bin/syncqt || die "syncqt failed"
+	fi
 
 	if version_is_at_least 4.7; then
 		# fix libX11 dependency on non X packages
@@ -196,8 +227,9 @@ qt4-build_src_prepare() {
 	fi
 
 	if [[ ${CHOST} == *86*-apple-darwin* ]]; then
-		# qmake bus errors with -O2 but -O3 works
-		replace-flags -O2 -O3
+		# qmake bus errors with -O2 or -O3 but -O1 works
+		# Bug 373061
+		replace-flags -O[23] -O1
 	fi
 
 	# Bug 178652
@@ -258,17 +290,31 @@ qt4-build_src_prepare() {
 	if [[ ${CHOST} == *-darwin* ]]; then
 		# Set FLAGS *and* remove -arch, since our gcc-apple is multilib
 		# crippled (by design) :/
+		local mac_gpp_conf=
+		if [[ -f mkspecs/common/mac-g++.conf ]]; then
+			# qt < 4.8 has mac-g++.conf
+			mac_gpp_conf="mkspecs/common/mac-g++.conf"
+		elif [[ -f mkspecs/common/g++-macx.conf ]]; then
+			# qt >= 4.8 has g++-macx.conf
+			mac_gpp_conf="mkspecs/common/g++-macx.conf"
+		else
+			die "no known conf file for mac found"
+		fi
 		sed \
 			-e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 			-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 			-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=-headerpad_max_install_names ${LDFLAGS}:" \
 			-e "s:-arch\s\w*::g" \
-			-i mkspecs/common/mac-g++.conf \
-			|| die "sed mkspecs/common/mac-g++.conf failed"
+			-i ${mac_gpp_conf} \
+			|| die "sed ${mac_gpp_conf} failed"
 
 		# Fix configure's -arch settings that appear in qmake/Makefile and also
 		# fix arch handling (automagically duplicates our -arch arg and breaks
 		# pch). Additionally disable Xarch support.
+		local mac_gcc_confs="${mac_gpp_conf}"
+		if [[ -f mkspecs/common/gcc-base-macx.conf ]]; then
+			mac_gcc_confs+=" mkspecs/common/gcc-base-macx.conf"
+		fi
 		sed \
 			-e "s:-arch i386::" \
 			-e "s:-arch ppc::" \
@@ -279,14 +325,14 @@ qt4-build_src_prepare() {
 			-e "s:CFG_MAC_XARCH=yes:CFG_MAC_XARCH=no:g" \
 			-e "s:-Xarch_x86_64::g" \
 			-e "s:-Xarch_ppc64::g" \
-			-i configure mkspecs/common/mac-g++.conf \
+			-i configure ${mac_gcc_confs} \
 			|| die "sed -arch/-Xarch failed"
 
 		# On Snow Leopard don't fall back to 10.5 deployment target.
 		if [[ ${CHOST} == *-apple-darwin10 ]]; then
 			sed -e "s:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET.*:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET 10.6:g" \
 				-e "s:-mmacosx-version-min=10.[0-9]:-mmacosx-version-min=10.6:g" \
-				-i configure mkspecs/common/mac-g++.conf \
+				-i configure ${mac_gpp_conf} \
 				|| die "sed deployment target failed"
 		fi
 	fi
