@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups-pk-helper
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/ChangeLog,v 1.3 2011/11/16 01:50:08 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/ChangeLog,v 1.4 2012/04/04 07:30:21 tetromino Exp $
+
+*cups-pk-helper-0.2.2 (04 Apr 2012)
+
+  04 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cups-pk-helper-0.1.3.ebuild, cups-pk-helper-0.2.1.ebuild,
+  +cups-pk-helper-0.2.2.ebuild:
+  Version bump, update homepage, drop old.
 
 *cups-pk-helper-0.2.1 (16 Nov 2011)
 
