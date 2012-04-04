@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/csound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.11 2012/03/22 01:09:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.12 2012/04/04 22:11:52 radhermit Exp $
+
+  04 Apr 2012; Tim Harder <radhermit@gentoo.org> -csound-5.16.6-r2.ebuild,
+  -files/csound-5.16.6-scons.patch:
+  Remove old.
 
   22 Mar 2012; Tim Harder <radhermit@gentoo.org> -csound-5.16.6-r1.ebuild:
   Remove old.
