@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-2.1.ebuild,v 1.2 2012/04/01 17:27:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-2.1.ebuild,v 1.3 2012/04/04 02:54:29 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 *-pypy-*"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Extensions to the standard Python datetime module"
 HOMEPAGE="https://launchpad.net/dateutil http://pypi.python.org/pypi/python-dateutil"
@@ -27,7 +27,8 @@ DOCS="NEWS README"
 PYTHON_MODNAME="dateutil"
 
 src_prepare() {
-	distutils_src_prepare
+	# Bug 410725.
+	epatch "${FILESDIR}/${P}-open-utf-8.patch"
 
 	# Use zoneinfo in /usr/share/zoneinfo.
 	sed -i -e "s/zoneinfo.gettz/gettz/g" test.py || die
@@ -35,6 +36,8 @@ src_prepare() {
 	# Fix parsing of date in non-English locales.
 	sed -e 's/subprocess.getoutput("date")/subprocess.getoutput("LC_ALL=C date")/' \
 		-i example.py || die
+
+	distutils_src_prepare
 }
 
 src_test() {
