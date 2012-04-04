@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-EncWords
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-EncWords/ChangeLog,v 1.11 2012/03/28 07:33:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-EncWords/ChangeLog,v 1.12 2012/04/04 07:55:31 jdhore Exp $
+
+  04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> MIME-EncWords-1.12.4.ebuild:
+  marked x86 per bug 404675
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> MIME-EncWords-1.12.4.ebuild:
   Stable for amd64, wrt bug #404675
