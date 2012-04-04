@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/sweeper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.106 2012/04/04 19:27:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.107 2012/04/04 23:59:16 johu Exp $
+
+*sweeper-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +sweeper-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> sweeper-4.8.1.ebuild:
   Stable for amd64, wrt bug #409403

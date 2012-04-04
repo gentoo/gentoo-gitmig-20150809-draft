@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.839 2012/04/04 17:22:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.840 2012/04/04 23:59:20 johu Exp $
+
+*kdelibs-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org>
+  +files/kdelibs-4.8.1-norpath.patch, +kdelibs-4.8.2.ebuild,
+  +files/kdelibs-4.8.2-calculator_key.patch:
+  Version bump KDE SC 4.8.2
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> kdelibs-4.8.1-r2.ebuild:
   Stable for amd64, wrt bug #409403

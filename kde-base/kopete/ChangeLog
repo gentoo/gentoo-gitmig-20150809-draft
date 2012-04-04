@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.311 2012/04/04 18:36:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.312 2012/04/04 23:59:35 johu Exp $
+
+*kopete-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +kopete-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> kopete-4.8.1.ebuild:
   Stable for amd64, wrt bug #409403

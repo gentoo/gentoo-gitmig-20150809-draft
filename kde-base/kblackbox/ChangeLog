@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kblackbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/ChangeLog,v 1.199 2012/04/04 17:00:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/ChangeLog,v 1.200 2012/04/04 23:58:59 johu Exp $
+
+*kblackbox-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +kblackbox-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> kblackbox-4.8.1.ebuild:
   Stable for amd64, wrt bug #409403

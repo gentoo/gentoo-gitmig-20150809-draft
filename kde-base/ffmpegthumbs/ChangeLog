@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ffmpegthumbs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.49 2012/04/04 16:49:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.50 2012/04/04 23:59:34 johu Exp $
+
+*ffmpegthumbs-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +ffmpegthumbs-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> ffmpegthumbs-4.8.1.ebuild:
   Stable for amd64, wrt bug #409403

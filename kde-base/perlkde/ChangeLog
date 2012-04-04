@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/perlkde
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.22 2012/04/04 19:17:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.23 2012/04/04 23:59:23 johu Exp $
+
+*perlkde-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +perlkde-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> perlkde-4.8.1.ebuild:
   Stable for amd64, wrt bug #409403

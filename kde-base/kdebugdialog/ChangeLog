@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebugdialog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.188 2012/04/04 17:19:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.189 2012/04/04 23:59:33 johu Exp $
+
+*kdebugdialog-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +kdebugdialog-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> kdebugdialog-4.8.1.ebuild:
   Stable for amd64, wrt bug #409403

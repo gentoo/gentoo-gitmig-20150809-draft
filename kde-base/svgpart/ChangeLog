@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/svgpart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/svgpart/ChangeLog,v 1.111 2012/04/04 19:27:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/svgpart/ChangeLog,v 1.112 2012/04/04 23:59:07 johu Exp $
+
+*svgpart-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +svgpart-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> svgpart-4.8.1.ebuild:
   Stable for amd64, wrt bug #409403
