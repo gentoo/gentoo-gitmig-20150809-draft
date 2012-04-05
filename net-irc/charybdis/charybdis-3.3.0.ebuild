@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/charybdis-3.3.0.ebuild,v 1.2 2012/04/04 03:17:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/charybdis-3.3.0.ebuild,v 1.3 2012/04/05 10:18:19 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.stack.nl/~jilles/irc/${P}.tbz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug +ipv6 largenet ssl zlib"
 
 RDEPEND="ssl? ( dev-libs/openssl )
