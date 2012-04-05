@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.85 2012/02/23 10:11:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.86 2012/04/05 09:30:34 ago Exp $
+
+  05 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  gnustep-back-art-0.22.0.ebuild:
+  Stable for amd64, wrt bug #410601
 
   23 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
   -gnustep-back-art-0.20.1.ebuild:
