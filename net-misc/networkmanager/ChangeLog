@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.129 2012/03/27 09:11:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.130 2012/04/05 03:09:09 qiaomuf Exp $
+
+*networkmanager-0.9.4.0-r1 (05 Apr 2012)
+
+  05 Apr 2012; Mu Qiao <qiaomuf@gentoo.org> -networkmanager-0.9.4.0.ebuild,
+  +networkmanager-0.9.4.0-r1.ebuild,
+  +files/networkmanager-0.9.4.0-fix-quote-handling.patch:
+  Fix quote handling for global data
 
 *networkmanager-0.9.4.0 (27 Mar 2012)
 

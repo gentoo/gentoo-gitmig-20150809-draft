@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0.ebuild,v 1.1 2012/03/27 09:11:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r1.ebuild,v 1.1 2012/04/05 03:09:09 qiaomuf Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -100,6 +100,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9.2.0-init-provide-net-r1.patch"
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
 	epatch "${FILESDIR}/${PN}-0.9.2.0-pre-sleep.patch"
+	# Fix quote handling for global data (Bug #410821)
+	epatch "${FILESDIR}/${PN}-0.9.4.0-fix-quote-handling.patch"
 
 	eautoreconf
 	default
