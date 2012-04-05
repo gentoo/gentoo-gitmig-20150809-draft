@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gmines
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.12 2012/02/14 21:46:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.13 2012/04/05 09:33:58 ago Exp $
+
+  05 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gmines-0.2.ebuild:
+  Stable for amd64, wrt bug #410601
 
 *gmines-0.2 (14 Feb 2012)
 
