@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.115 2012/03/18 15:31:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.116 2012/04/05 07:10:13 ssuominen Exp $
+
+*desktop-file-utils-0.20-r1 (05 Apr 2012)
+
+  05 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +desktop-file-utils-0.20-r1.ebuild,
+  +files/desktop-file-utils-0.20-validate_Categories_XFCE.patch:
+  New main category XFCE for Xfce 4.10 compability.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org>
   desktop-file-utils-0.19.ebuild:
