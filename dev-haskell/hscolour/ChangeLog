@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hscolour
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.15 2012/03/28 07:00:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.16 2012/04/05 20:46:14 phajdan.jr Exp $
+
+  05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> hscolour-1.19.ebuild:
+  x86 stable wrt bug #404635
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> hscolour-1.19.ebuild:
   Stable for amd64, wrt bug #404635
