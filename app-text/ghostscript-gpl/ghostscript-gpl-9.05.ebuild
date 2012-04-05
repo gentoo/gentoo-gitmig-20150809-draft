@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.05.ebuild,v 1.2 2012/02/19 23:55:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.05.ebuild,v 1.3 2012/04/05 19:47:38 dilfridge Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="GPL-3 CPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~s390 ~sh ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bindist cups dbus djvu gtk idn jpeg2k static-libs X"
 
 COMMON_DEPEND="
