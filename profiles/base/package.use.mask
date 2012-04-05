@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.332 2012/04/01 05:34:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.333 2012/04/05 18:08:00 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -61,10 +61,8 @@ sys-apps/portage pypy1_8
 gnome-extra/gnome-screensaver systemd
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2012)
-# Masked for being broken wrt #401327 so ImageMagick can be
-# stabilized for security wrt #402999
-# TODO: Report this to upstream
-media-gfx/imagemagick q64
+# Looks like 6.7.6.4 worksagain wrt bug #401327
+<media-gfx/imagemagick-6.7.6.4 q64
 
 # Bernard Cafarelli <voyageur@gentoo.org> (08 Feb 2012)
 # libobjc2/clang experimental support
