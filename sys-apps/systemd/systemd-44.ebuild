@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-44.ebuild,v 1.1 2012/04/05 11:15:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-44.ebuild,v 1.2 2012/04/05 18:40:59 mgorny Exp $
 
 EAPI=4
 
@@ -101,6 +101,8 @@ src_install() {
 	rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \
 		|| die
 	rm "${D}"/usr/share/man/man1/init.1 || die
+	# collision with -ui
+	rm "${D}"/usr/share/man/man1/systemadm.1 || die
 
 	# Create /run/lock as required by new baselay/OpenRC compat.
 	insinto /usr/lib/tmpfiles.d

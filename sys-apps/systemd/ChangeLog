@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.27 2012/04/05 11:15:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.28 2012/04/05 18:40:59 mgorny Exp $
+
+  05 Apr 2012; Michał Górny <mgorny@gentoo.org> systemd-44.ebuild:
+  Avoid installing duplicate systemadm manpage.
 
 *systemd-44 (05 Apr 2012)
 
