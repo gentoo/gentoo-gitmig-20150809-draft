@@ -1,6 +1,39 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.56 2012/03/27 16:00:43 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.57 2012/04/05 20:01:05 aidecoe Exp $
+
+*dracut-018 (05 Apr 2012)
+
+  05 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-018.ebuild,
+  +files/dracut-018-multipath-udev-rules.patch:
+  Version bump. Fixes btw bug #408669.
+
+  Build time dependencies are no longer required, because man pages and html
+  doc are already built.  Therefore compile phase in empty.
+
+  NEWS
+  ~~~~
+  (Taken from NEWS file. Lines which don't apply to Gentoo package are
+  removed.)
+
+  - lvm: ignore lvm mirrors
+  - lsinitrd: handle LZMA images
+  - iscsi: add rd.iscsi.param
+  - iscsi: add iscsi interface binding
+  - fixed fstab.sys handling
+  - new dracut option "--tmpdir"
+  - new dracut option "--no-hostonly"
+  - nbd: name based nbd connects
+  - write-ifcfg fixes and cleanups
+  - ifup is now done in the initqueue
+  - netroot cleanup
+  - initqueue/online is now for hooks, which require network
+  - no more /tmp/root.info
+  - 98pollcdrom: factored out the ugly cdrom polling in the main loop
+  - simplified rd.luks.uuid testing
+  - removed "egrep" and "ls" calls
+  - speedup kernel module installation
+  - lots of bugfixes
 
 *dracut-017-r3 (27 Mar 2012)
 
