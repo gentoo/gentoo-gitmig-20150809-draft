@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6391 2012/04/05 00:48:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6392 2012/04/05 16:51:32 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask kde-base/ksecrets as it's alpha code
 
   05 Apr 2012; Mike Gilbert <floppym@gentoo.org> package.mask:
   Mask dev-libs/icu-49 again.
