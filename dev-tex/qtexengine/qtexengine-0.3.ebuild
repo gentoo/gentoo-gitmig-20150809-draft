@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/qtexengine-0.3.ebuild,v 1.2 2012/03/28 09:59:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/qtexengine-0.3.ebuild,v 1.3 2012/04/05 20:38:19 phajdan.jr Exp $
 
 EAPI=4
 inherit eutils qt4-r2
@@ -11,7 +11,7 @@ DESCRIPTION="TeX support for Qt"
 HOMEPAGE="http://soft.proindependent.com/qtexengine/"
 SRC_URI="mirror://berlios/qtiplot/${MY_PN}-${PV}-opensource.zip"
 
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="GPL-3"
 IUSE=""
