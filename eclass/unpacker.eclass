@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.5 2012/02/13 20:53:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.6 2012/04/05 03:20:42 vapier Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -311,7 +311,9 @@ _unpacker() {
 	[[ ${arch} != unpack_* ]] && unpack_banner "${a}"
 
 	if [[ -z ${arch} ]] ; then
-		${comp} "${a}" > "${a%.*}"
+		# Need to decompress the file into $PWD #408801
+		local _a=${a%.*}
+		${comp} "${a}" > "${_a##*/}"
 	elif [[ -z ${comp} ]] ; then
 		${arch} "${a}"
 	else
