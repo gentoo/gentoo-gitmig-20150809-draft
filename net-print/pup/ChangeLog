@@ -1,6 +1,10 @@
 # ChangeLog for net-print/pup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pup/ChangeLog,v 1.9 2012/01/30 17:52:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pup/ChangeLog,v 1.10 2012/04/05 19:40:45 dilfridge Exp $
+
+  05 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> pup-1.1.ebuild,
+  pup-1.1-r1.ebuild:
+  Just crashes on amd64, removing keyword
 
   30 Jan 2012; Agostino Sarubbo <ago@gentoo.org> pup-1.1-r1.ebuild:
   With dilfridge's ok: remove toolchain-funcs to inherit, set correct
