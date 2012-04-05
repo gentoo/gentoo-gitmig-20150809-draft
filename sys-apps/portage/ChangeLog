@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1002 2012/04/05 23:23:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1003 2012/04/05 23:25:02 zmedico Exp $
+
+*portage-2.2.0_alpha100 (05 Apr 2012)
+
+  05 Apr 2012; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha100.ebuild:
+  2.2.0_alpha100 version bump. This includes all of the fixes in
+  portage-2.1.10.56. Bug #210077 tracks all bugs fixed since portage-2.1.x.
 
 *portage-2.1.10.56 (05 Apr 2012)
 
