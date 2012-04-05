@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/regex-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/ChangeLog,v 1.32 2012/03/28 07:01:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/ChangeLog,v 1.33 2012/04/05 20:48:44 phajdan.jr Exp $
+
+  05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  regex-base-0.93.2.ebuild:
+  x86 stable wrt bug #404639
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> regex-base-0.93.2.ebuild:
   Stable for amd64, wrt bug #404639
