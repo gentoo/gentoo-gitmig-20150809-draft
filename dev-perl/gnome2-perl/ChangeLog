@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.52 2012/03/31 13:59:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.53 2012/04/05 18:34:07 tove Exp $
+
+  05 Apr 2012; Torsten Veller <tove@gentoo.org> -gnome2-perl-1.041.ebuild,
+  -gnome2-perl-1.042.ebuild:
+  Cleanup
 
   31 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
   gnome2-perl-1.42.0.ebuild:
