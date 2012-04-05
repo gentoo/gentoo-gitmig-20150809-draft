@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.10.ebuild,v 1.2 2012/03/23 20:18:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.10.ebuild,v 1.3 2012/04/05 07:44:41 polynomial-c Exp $
 
 EAPI=4
 
@@ -182,7 +182,7 @@ src_prepare() {
 	# Link to correct gsoap library. Bug #408569
 	# This has been fixed upstream and should be removed when virtualbox is
 	# bumped
-	epatch ${FILESDIR}/${P}-libgsoapssl.patch
+	epatch "${FILESDIR}"/${P}-libgsoapssl.patch
 }
 
 src_configure() {
