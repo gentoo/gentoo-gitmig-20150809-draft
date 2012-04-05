@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/cenonlibrary
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/ChangeLog,v 1.9 2011/08/19 12:37:07 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/ChangeLog,v 1.10 2012/04/05 09:32:13 ago Exp $
+
+  05 Apr 2012; Agostino Sarubbo <ago@gentoo.org> cenonlibrary-3.9.4.ebuild:
+  Stable for amd64, wrt bug #410601
 
 *cenonlibrary-3.9.4 (19 Aug 2011)
 *cenonlibrary-3.8.2 (19 Aug 2011)

@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/dbuskit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/dbuskit/ChangeLog,v 1.4 2012/04/03 20:52:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/dbuskit/ChangeLog,v 1.5 2012/04/05 09:33:18 ago Exp $
+
+  05 Apr 2012; Agostino Sarubbo <ago@gentoo.org> dbuskit-0.1.ebuild:
+  Stable for amd64, wrt bug #410601
 
   03 Apr 2012; Bernard Cafarelli <voyageur@gentoo.org> dbuskit-0.1.ebuild:
   Fix ObjectiveC2 framework path in configure, spotted by ago in bug #410697
