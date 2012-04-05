@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/hylafaxplus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/ChangeLog,v 1.1 2012/04/05 17:57:40 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/ChangeLog,v 1.2 2012/04/05 19:18:22 mattm Exp $
+
+  05 Apr 2012; Matthew Marlowe <mattm@gentoo.org> +hylafaxplus-5.5.1-r1.ebuild:
+  tests for 5.5.1 have been good so far, keywording for ~amd64/~x86
+
+*hylafaxplus-5.5.1-r1 (05 Apr 2012)
+
+  05 Apr 2012; Matthew Marlowe <mattm@gentoo.org> +hylafaxplus-5.5.1-r1.ebuild:
+  hylafax really does require -j1. Repoman is going to be unhappy.
 
   05 Apr 2012; Matthew Marlowe <mattm@gentoo.org> +hylafaxplus-5.5.1.ebuild,
   +files/hylafaxplus-conf, +files/hylafaxplus-init, +files/ldconfig-patch,
