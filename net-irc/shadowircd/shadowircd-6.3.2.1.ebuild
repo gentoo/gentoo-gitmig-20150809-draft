@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/shadowircd/shadowircd-6.3.2.1.ebuild,v 1.3 2012/04/04 03:18:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/shadowircd/shadowircd-6.3.2.1.ebuild,v 1.4 2012/04/05 10:17:24 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://shadowircd.net/downloads/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug +ipv6 largenet ssl zlib"
 
 RDEPEND="ssl? ( dev-libs/openssl )
