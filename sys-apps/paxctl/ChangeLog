@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.36 2012/04/04 20:49:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.37 2012/04/05 09:35:14 ago Exp $
+
+  05 Apr 2012; Agostino Sarubbo <ago@gentoo.org> paxctl-0.7-r1.ebuild:
+  Stable for amd64, wrt bug #410685
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> paxctl-0.7-r1.ebuild:
   marked x86 per bug 410685
