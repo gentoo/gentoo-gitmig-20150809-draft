@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.175 2012/04/04 11:47:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.176 2012/04/05 15:29:07 johu Exp $
+
+  05 Apr 2012; Johannes Huber <johu@gentoo.org> -qt-gui-4.8.0-r4.ebuild:
+  Drop Qt-4.8.0
 
 *qt-gui-4.8.1-r1 (04 Apr 2012)
 

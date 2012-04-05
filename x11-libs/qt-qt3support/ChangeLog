@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-qt3support
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.108 2012/04/03 21:48:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.109 2012/04/05 15:37:23 johu Exp $
+
+  05 Apr 2012; Johannes Huber <johu@gentoo.org> -qt-qt3support-4.8.0-r1.ebuild:
+  Drop Qt-4.8.0
 
   03 Apr 2012; Jeroen Roovers <jer@gentoo.org> qt-qt3support-4.7.4.ebuild:
   Stable for HPPA (bug #390963).

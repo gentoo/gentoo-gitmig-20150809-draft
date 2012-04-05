@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.140 2012/04/04 13:29:25 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.141 2012/04/05 15:47:39 johu Exp $
+
+  05 Apr 2012; Johannes Huber <johu@gentoo.org> -qt-webkit-4.8.0-r1.ebuild:
+  Drop Qt-4.8.0
 
   04 Apr 2012; Davide Pesavento <pesa@gentoo.org>
   +files/qt-webkit-4.8.1+glib-2.31.patch, qt-webkit-4.8.1.ebuild:
