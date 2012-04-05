@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-3.1.4.ebuild,v 1.1 2012/04/04 11:47:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-3.1.4-r1.ebuild,v 1.1 2012/04/05 17:12:52 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -34,4 +34,6 @@ all_ruby_prepare() {
 	# Set test environment to our hand.
 	rm "${S}/../Gemfile" || die "Unable to remove Gemfile"
 	sed -i -e '/\/load_paths/d' test/abstract_unit.rb || die "Unable to remove load paths"
+
+	sed -i -e '/dependency.*mail/s:~>:>=:' "${RUBY_FAKEGEM_GEMSPEC}" || die
 }
