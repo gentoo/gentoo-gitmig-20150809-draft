@@ -1,6 +1,9 @@
 # ChangeLog for virtual/eject
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/eject/ChangeLog,v 1.5 2011/03/31 08:49:52 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/eject/ChangeLog,v 1.6 2012/04/05 18:40:23 vapier Exp $
+
+  05 Apr 2012; Mike Frysinger <vapier@gentoo.org> eject-0.ebuild:
+  Allow newer versions of util-linux to provide eject (since it does).
 
   31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> eject-0.ebuild:
   Remove sys-block/unieject because it's masked.
